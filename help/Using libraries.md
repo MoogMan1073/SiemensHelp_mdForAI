@@ -440,7 +440,7 @@ To display the cross references of an instance in the project, follow these step
 
 1. In the "Types" area, select a type version whose instances you want to display.
 2. Select the instance of the required type version in the "Uses in the project" tab.
-3. Open the "Info > Cross-references" tab in the inspector window.
+3. Open the "Info &gt; Cross-references" tab in the inspector window.
 
    The cross reference of the instance are displayed in the project.
 
@@ -510,7 +510,7 @@ The "Libraries" task card is opened.
 
 To create a new global library, follow these steps:
 
-1. Click the "Create new global library" icon in the toolbar of the "Global libraries" palette or select the command "Global libraries > Create new library" in the "Options" menu.
+1. Click the "Create new global library" icon in the toolbar of the "Global libraries" palette or select the command "Global libraries &gt; Create new library" in the "Options" menu.
 
    The "Create new global library" dialog opens.
 2. Specify the name and the storage location for the new global library.
@@ -611,7 +611,7 @@ The "Libraries" task card is opened.
 
 To open a global library, follow these steps:
 
-1. Click the "Open global library" icon in the toolbar of the "Global libraries" pane or select the command "Global libraries > Open library" in the "Options" menu.
+1. Click the "Open global library" icon in the toolbar of the "Global libraries" pane or select the command "Global libraries &gt; Open library" in the "Options" menu.
 
    The "Open global library" dialog box opens.
 2. Select the global library you want to open. Library files are identified by the file name extension ".al[version number]". This means that global libraries that were saved with the current TIA Portal product version have the file name extension ".al19".
@@ -664,7 +664,7 @@ The "Libraries" task card is opened.
 
 To define the library languages of a global library, follow these steps:
 
-1. Click the "Open global library" icon in the toolbar of the "Global libraries" pane or select the command "Global libraries > Open library" in the "Options" menu.
+1. Click the "Open global library" icon in the toolbar of the "Global libraries" pane or select the command "Global libraries &gt; Open library" in the "Options" menu.
 
    The "Open global library" dialog box opens.
 2. Select the global library you want to open.
@@ -674,7 +674,7 @@ To define the library languages of a global library, follow these steps:
 4. Click "Open".
 
    The global library is displayed.
-5. Open the "Languages & Resources" folder.
+5. Open the "Languages &amp; Resources" folder.
 6. Double-click the "Library languages" entry or select "Open" from the shortcut menu.
 
 #### Result
@@ -737,7 +737,7 @@ Logs are created when you update or clean up global libraries or assign a shared
 To open the logs of a global library, follow these steps:
 
 1. Open the global library in the "Libraries" task card.
-2. Open "Common data > Logs" in the lower-level folder.
+2. Open "Common data &gt; Logs" in the lower-level folder.
 3. Double-click the required log.
 
    The log opens in the work area.
@@ -935,7 +935,7 @@ To archive a global library, follow these steps:
 
    The directory must not be located in a project directory or within the directory of a global library.
 
-   You can set the default directory under "Options > Settings > General > Archive settings > Storage location for library archives".
+   You can set the default directory under "Options &gt; Settings &gt; General &gt; Archive settings &gt; Storage location for library archives".
 7. Click "Archive".
 
 ##### Result
@@ -960,7 +960,7 @@ Before you can use an archived global library, you have to retrieve it. The glob
 
 To extract the archive of a global library, follow these steps:
 
-1. Select the "Global libraries > Open library" command in the "Options" menu.
+1. Select the "Global libraries &gt; Open library" command in the "Options" menu.
 
    The "Open global library" dialog box is displayed.
 2. Select the "Compressed libraries" entry in the "File type" drop-down list.
@@ -1045,7 +1045,7 @@ Below you will learn how you create the XML configuration file and where to save
 To provide a configuration file for corporate libraries, follow these steps:
 
 1. Create an XML configuration file with the content listed below. Use the coding "UTF-8".
-2. Replace the paths mentioned in the example in the "<CorporateLibraryPaths>" section below with the paths where your libraries are stored.
+2. Replace the paths mentioned in the example in the "&lt;CorporateLibraryPaths&gt;" section below with the paths where your libraries are stored.
 3. Save the XML file under the name "CorporateSettings.xml".
 4. Save the file in the following directory on your computer:
 
@@ -1057,83 +1057,83 @@ The XML configuration file must have the following content:
 
 XML
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<Document>
+&lt;Document&gt;
 
-<Settings.Settings ID="0">
+&lt;Settings.Settings ID="0"&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<Settings.General ID="1" AggregationName="General">
+&lt;Settings.General ID="1" AggregationName="General"&gt;
 
-<!-- Here you find the settings for global company libraries, if available. -->
+&lt;!-- Here you find the settings for global company libraries, if available. --&gt;
 
-<!-- Section for corporate libraries -->
+&lt;!-- Section for corporate libraries --&gt;
 
-    <AttributeList>
+    &lt;AttributeList&gt;
 
-     <CorporateLibraryPaths>
+     &lt;CorporateLibraryPaths&gt;
 
-     <!-- Example for two entries -->
+     &lt;!-- Example for two entries --&gt;
 
-     <Item>F:\CorporateLibraries\Corporate_Library_1\Corporate_Library_1.al19</Item>     <Item>F:\CorporateLibraries\Corporate_Library_2\CorporateLibraries.al19</Item>
+     &lt;Item&gt;F:\CorporateLibraries\Corporate_Library_1\Corporate_Library_1.al19&lt;/Item&gt;     &lt;Item&gt;F:\CorporateLibraries\Corporate_Library_2\CorporateLibraries.al19&lt;/Item&gt;
 
-     <!-- Here you enter additional global libraries, if any. -->     </CorporateLibraryPaths>
+     &lt;!-- Here you enter additional global libraries, if any. --&gt;     &lt;/CorporateLibraryPaths&gt;
 
-    </AttributeList>
+    &lt;/AttributeList&gt;
 
-<!-- Section for corporate libraries ends -->
+&lt;!-- Section for corporate libraries ends --&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<!-- Section for user-defined documentation -->
+&lt;!-- Section for user-defined documentation --&gt;
 
-     <Settings.UserDocumentation ID="2" AggregationeName="UserDocumentation">
+     &lt;Settings.UserDocumentation ID="2" AggregationeName="UserDocumentation"&gt;
 
-      <!-- In the following section, you specify the values for display of the user-defined documentation. -->
+      &lt;!-- In the following section, you specify the values for display of the user-defined documentation. --&gt;
 
-      <AttributeList>
+      &lt;AttributeList&gt;
 
-       <!-- Activates or deactivates the display of the access log. -->
+       &lt;!-- Activates or deactivates the display of the access log. --&gt;
 
-       <DisplayLogInformation>
+       &lt;DisplayLogInformation&gt;
 
-        <Value>true</Value>
+        &lt;Value&gt;true&lt;/Value&gt;
 
-       </DisplayLogInformation>
+       &lt;/DisplayLogInformation&gt;
 
-       <!-- Activates or deactivates the search for user-defined documentation in a central directory. -->
+       &lt;!-- Activates or deactivates the search for user-defined documentation in a central directory. --&gt;
 
-       <EnableLookupFromCentralStorageLocation>
+       &lt;EnableLookupFromCentralStorageLocation&gt;
 
-        <Value>true</Value>
+        &lt;Value&gt;true&lt;/Value&gt;
 
-       </EnableLookupFromCentralStorageLocation>
+       &lt;/EnableLookupFromCentralStorageLocation&gt;
 
-       <!-- Specifies the central directory for user-defined documentation. -->
+       &lt;!-- Specifies the central directory for user-defined documentation. --&gt;
 
-       <CentralStorageLocation>
+       &lt;CentralStorageLocation&gt;
 
-        <Value>D:\CorporateDocumentation\UserDocumentation\</Value>
+        &lt;Value&gt;D:\CorporateDocumentation\UserDocumentation\&lt;/Value&gt;
 
-       </CentralStorageLocation>
+       &lt;/CentralStorageLocation&gt;
 
-      </AttributeList>
+      &lt;/AttributeList&gt;
 
-     </Settings.UserDocumentation>
+     &lt;/Settings.UserDocumentation&gt;
 
-<!-- Section for user-defined documentation ends -->
+&lt;!-- Section for user-defined documentation ends --&gt;
 
-    </ObjectList>
+    &lt;/ObjectList&gt;
 
-</Settings.General>
+&lt;/Settings.General&gt;
 
-</ObjectList>
+&lt;/ObjectList&gt;
 
-</Settings.Settings>
+&lt;/Settings.Settings&gt;
 
-</Document>
+&lt;/Document&gt;
 
 ##### Result
 
@@ -1557,7 +1557,7 @@ To create a single master copy for all elements from multiple elements, follow t
 Alternative:
 
 1. Select the desired elements.
-2. Using a drag-and-drop operation, move the elements to the "Master copies" folder or any subfolder of "Master copies". Meanwhile, keep the <Alt> key pressed.
+2. Using a drag-and-drop operation, move the elements to the "Master copies" folder or any subfolder of "Master copies". Meanwhile, keep the &lt;Alt&gt; key pressed.
 
    The elements are pasted in the library as a single master copy. The single master copy contains all selected elements. A type is created automatically in each case from any objects contained (such as referenced blocks).
 
@@ -1581,7 +1581,7 @@ To create a master copy from a folder that contains one or more elements or subf
 Alternative:
 
 1. Select the required folder.
-2. Using a drag-and-drop operation, move the elements to the "Master copies" folder or any subfolder of "Master copies". Meanwhile, keep the <Ctrl> and <Shift> keys pressed.
+2. Using a drag-and-drop operation, move the elements to the "Master copies" folder or any subfolder of "Master copies". Meanwhile, keep the &lt;Ctrl&gt; and &lt;Shift&gt; keys pressed.
 
    Unsupported elements or empty folders cannot be inserted as master copy. You receive a message with additional information.
 
@@ -1895,7 +1895,7 @@ Types for reuse in the project can be created in the project library for various
 - Screens
 - Styles
 
-New types and versions of existing types can be added to the project library with drag-and-drop or copy & paste. Independent of their version number and other properties, type versions can be added to the project library if the GUID of the versions is different. This means, for example, that multiple versions with identical version number can be added to the project library.
+New types and versions of existing types can be added to the project library with drag-and-drop or copy &amp; paste. Independent of their version number and other properties, type versions can be added to the project library if the GUID of the versions is different. This means, for example, that multiple versions with identical version number can be added to the project library.
 
 If you add an element as a type to the project library and this element has dependencies to other elements, the dependent elements are automatically created as a type as well.
 
@@ -2444,7 +2444,7 @@ To discard all versions within a folder, follow these steps:
 
 When you are finished editing a type version, release the version for productive use. Assign a version number for the release. You can also use a multiple selection to release several versions at the same time.
 
-If you have made structural changes to the type version to be released, such as changes at the interfaces, only the types that reference the changed type version and are affected by the change are set to the "In test" or "In work" status. To set all referencing types by default to the "In test" or "In work" status when they are released, select the check box "Set all dependent types to 'In test' status" in the settings under "General > Library settings".
+If you have made structural changes to the type version to be released, such as changes at the interfaces, only the types that reference the changed type version and are affected by the change are set to the "In test" or "In work" status. To set all referencing types by default to the "In test" or "In work" status when they are released, select the check box "Set all dependent types to 'In test' status" in the settings under "General &gt; Library settings".
 
 ##### Requirements
 
@@ -2516,7 +2516,7 @@ To release type versions, follow these steps:
 
 When you are finished editing all types within a folder, release all versions simultaneously.
 
-If you have made incompatible changes to the type version to be released, such as changes at the interfaces, only the types that reference the changed type version and are affected by the change are set to the "In test" or "In work" status. To set all directly referencing types by default to the "In test" or "In work" status when they are released, select the check box "Set all dependent types to 'Processing' status" in the settings under "General > Library settings".
+If you have made incompatible changes to the type version to be released, such as changes at the interfaces, only the types that reference the changed type version and are affected by the change are set to the "In test" or "In work" status. To set all directly referencing types by default to the "In test" or "In work" status when they are released, select the check box "Set all dependent types to 'Processing' status" in the settings under "General &gt; Library settings".
 
 ##### Requirements
 
@@ -2586,7 +2586,7 @@ Each of the following elements can be selected as source for the update:
 >
 > By default, when the project is updated to the latest type instances, unused type instances are deleted from the project.
 >
-> In order to prevent deleting unused type instances from the project, under "General > Library settings" select the check box "Do not remove unused type version instances when updating the project from the library".
+> In order to prevent deleting unused type instances from the project, under "General &gt; Library settings" select the check box "Do not remove unused type version instances when updating the project from the library".
 
 ##### Requirements
 
@@ -2597,7 +2597,7 @@ The "Libraries" task card or the library management is opened.
 To update instances in a project with the contents from the project library, follow these steps:
 
 1. Select the entire project library or elements from it.
-2. Right-click the required elements and select the "Update types > Project" command from the shortcut menu.
+2. Right-click the required elements and select the "Update types &gt; Project" command from the shortcut menu.
 
    The "Update types in the project" dialog box opens.
 3. Select either the entire project or individual devices for the update.
@@ -2649,7 +2649,7 @@ You have made changes to a type in a global library and created a new default ve
 
 The instance of a dependent type in the project references the previous default version (e.g. V0.0.1).
 
-You update the project with the new version from the global library using the function "Update types > Project". Depending on the changes, the referencing types in the project are consistent or inconsistent:
+You update the project with the new version from the global library using the function "Update types &gt; Project". Depending on the changes, the referencing types in the project are consistent or inconsistent:
 
 - If you have made compatible changes to the type in the library, the referencing type is consistent. The default version of the type references the new default version of the dependent type (e.g. V0.0.2). The "Status" column shows the consistent status with a green symbol.
 - If you have made incompatible changes to the type in the library, the referencing type is inconsistent. The default version of the type references the previous default version of the dependent type (e.g. V0.0.1). The "Status" column shows the inconsistent status with a yellow symbol. In this case, you need to correct the inconsistencies.
@@ -2658,7 +2658,7 @@ You update the project with the new version from the global library using the fu
 
 - You have made incompatible changes to a type in the project library or in a global library.
 - You have created a new default version of the changed type.
-- You have run the "Update types > Project" command to update the project.
+- You have run the "Update types &gt; Project" command to update the project.
 - You have received a warning due to an inconsistent state of the project library.
 
 ##### Correcting inconsistencies before updating the project
@@ -2738,7 +2738,7 @@ If you remove the link between the instance and its type, you then edit the obje
 >
 > If you want to prevent instances of your types getting separated in the project, you can also deactivate the "Terminate connection to type" option.
 >
-> Select the option "Shortcut menu entry 'Terminate connection to type'" under "Options > Settings > General > Library settings".
+> Select the option "Shortcut menu entry 'Terminate connection to type'" under "Options &gt; Settings &gt; General &gt; Library settings".
 
 ##### Requirement
 
@@ -2788,7 +2788,7 @@ If a type is selected for replacing instead of a type version, the default versi
 4. Select a version of the target type in the list view in the right-hand part of the dialog.
 5. Confirm your selection by clicking on the green check mark.
 
-   A status message is displayed in the Inspector window in the "Info > General" tab.
+   A status message is displayed in the Inspector window in the "Info &gt; General" tab.
 
 ##### Result
 
@@ -2806,7 +2806,7 @@ This section contains information on the following topics:
 
 Global libraries are used as a central resource when working on multiple projects. Among the types, only the types in the project library can be edited directly. Therefore, use the project library if you want to work on types. When you are finished editing a type in the project library, you can add the type to a global library. Adding types from the project library corresponds to a normal copy process from the project library. The default versions in the target library remain the same.
 
-New types and versions of existing types can be added to global libraries with drag-and-drop or copy & paste. Independent of their version number and other properties, type versions can be added to the global libraries if the GUID of the versions is different. This means, for example, that multiple versions with identical version number can be added to a global library.
+New types and versions of existing types can be added to global libraries with drag-and-drop or copy &amp; paste. Independent of their version number and other properties, type versions can be added to the global libraries if the GUID of the versions is different. This means, for example, that multiple versions with identical version number can be added to a global library.
 
 ##### Requirement
 
@@ -2948,7 +2948,7 @@ The following elements can be selected as source for the updating:
 >
 > By default, when the project is updated to the latest type instances, unused type instances are deleted from the project.
 >
-> In order to prevent deleting unused type instances from the project, under "General > Library settings" select the check box "Do not remove unused type version instances when updating the project from the library".
+> In order to prevent deleting unused type instances from the project, under "General &gt; Library settings" select the check box "Do not remove unused type version instances when updating the project from the library".
 
 ##### Requirements
 
@@ -2960,10 +2960,10 @@ The following elements can be selected as source for the updating:
 To update instances in a project with the contents from a global library, follow these steps:
 
 1. Select the updated global library or the individual elements from it.
-2. To exclude types from the update, right-click on the type and select "Select for updating > No" from the shortcut menu.
+2. To exclude types from the update, right-click on the type and select "Select for updating &gt; No" from the shortcut menu.
 
    Alternatively, or if you want to exclude several types from the update, select the check box for each type in the "Select for updating" column.
-3. Right-click the global library or the required elements and select the "Update types > Project" command from the shortcut menu.
+3. Right-click the global library or the required elements and select the "Update types &gt; Project" command from the shortcut menu.
 
    The "Update types in the project" dialog box opens.
 4. Select either the entire project or individual devices for the update.
@@ -3065,7 +3065,7 @@ The selected type versions are changed as follows:
 - If a version is set as "default" by the user, the new version of the selected type is created from the default version with the specified version number. This newly created version will then have the "default" identifier.
 - The build number of dependent types is incremented to the next free build number as long as the dependent types were not in your selection. If you had selected a dependent type as well, the version number you specified will be assigned.
 
-A log of the changes is created. If you have versioned the types in the project library, you find the log in the project tree under "Common data > Logs". If you have versioned types in a global library, you find the log in the "Common data > Logs" folder in the level below the global library.
+A log of the changes is created. If you have versioned the types in the project library, you find the log in the project tree under "Common data &gt; Logs". If you have versioned types in a global library, you find the log in the "Common data &gt; Logs" folder in the level below the global library.
 
 ---
 
@@ -3128,10 +3128,10 @@ If you want to update a global library, you have to open it with write permissio
 To update a library with the contents of a different library, follow these steps:
 
 1. Select the "Types" folder or individual elements from this folder as source for the update.
-2. To exclude types from the update, right-click on the type and select "Select for updating > No" from the shortcut menu.
+2. To exclude types from the update, right-click on the type and select "Select for updating &gt; No" from the shortcut menu.
 
    Alternatively, or if you want to exclude several types from the update, select the check box for each type in the "Exclude from update" column.
-3. Right-click the source and select the "Update types > Library" command from the shortcut menu.
+3. Right-click the source and select the "Update types &gt; Library" command from the shortcut menu.
 
    The "Update types in a library" dialog box opens.
 4. Select the type of library you want to update:
@@ -3169,9 +3169,9 @@ The following changes were made to the target library:
   - Yellow: The references of the type are inconsistent. The default version of the type does not reference the default version of the dependent type.
 - A log listing all performed changes to the target library was created for the update.
 
-  If you have updated the project library, you can find the log in the project tree under "Common data > Logs".
+  If you have updated the project library, you can find the log in the project tree under "Common data &gt; Logs".
 
-  If you have updated a global library, you can find the log in the "Common data > Logs" folder in the level below the global library.
+  If you have updated a global library, you can find the log in the "Common data &gt; Logs" folder in the level below the global library.
 
 ---
 
@@ -3274,7 +3274,7 @@ Conflicts can occur through updating the server project. Any conflicts are resol
 
 - Naming conflicts
 
-  Two types with identical names cannot be checked in. The names of the respective types automatically receive an extension (<_1>, etc.).
+  Two types with identical names cannot be checked in. The names of the respective types automatically receive an extension (&lt;_1&gt;, etc.).
 
   Two types instances with identical names are not permitted and result in an error when checking in.
 
@@ -3334,7 +3334,7 @@ You can find additional information here: [Select project languages](Editing%20p
 
 In a global library you can define the library languages yourself unless the library has write protection.
 
-You can display the selection of possible languages by double-clicking on the "Library languages" item in the "Languages & Resources" subfolder. For a write-protected library the library languages are displayed as read-only.
+You can display the selection of possible languages by double-clicking on the "Library languages" item in the "Languages &amp; Resources" subfolder. For a write-protected library the library languages are displayed as read-only.
 
 You can find additional information here: [Defining library languages](#defining-library-languages)
 
@@ -3452,14 +3452,14 @@ However, you can also change the project languages for individual type versions 
 
 1. Open or edit a type or master copy.
 2. Open the "Tasks" card.
-3. Under "Languages & resources" either select another project language from the existing editing languages or click "Add new editing language".
+3. Under "Languages &amp; resources" either select another project language from the existing editing languages or click "Add new editing language".
 4. If you click "Add new editing language", the list of all available project languages will be displayed.
 5. Select the editing language you want to use.
 
 #### Defining a project language for a type version
 
 1. Select the appropriate type version from the project library.
-2. Select the command "Tools > Project languages" from the menu bar.
+2. Select the command "Tools &gt; Project languages" from the menu bar.
 
    Shows the list of all available project languages.
 3. Select the editing language you want to use.
@@ -3480,15 +3480,15 @@ If you export texts of type versions and then import them to the same type versi
 
 You have the following options for displaying the changes from imported tests from the project library in the project:
 
-- Delete the instance in the project and then create a new instance of the same version in the project using drag & drop. This procedure is necessary if you want to display imported texts in a different device or object in the project.
+- Delete the instance in the project and then create a new instance of the same version in the project using drag &amp; drop. This procedure is necessary if you want to display imported texts in a different device or object in the project.
 - Import the modified texts directly into the instances in the project. To do this, create test versions of the types in the project library. Export the texts of the test versions with the function "Export project texts" in the "Tools" menu. After you have changed the texts in the exported Microsoft Excel file, import the texts with the function "Import project texts" in the "Tools" menu.
 
 #### Displaying imported texts from global libraries
 
 You can display changes of imported texts from global libraries in the project library or in an instance in the project. For this, create a new version of the imported object, e.g. V 0.0.2. You have the following options for displaying the imported texts:
 
-- To display the imported texts in the project library, update the project library. For this, open the shortcut menu of the object and select the menu entry "Update types > Library".
-- To display the imported texts in the project, update the project. For this, open the shortcut menu of the object and select the menu entry "Update types > Project".
+- To display the imported texts in the project library, update the project library. For this, open the shortcut menu of the object and select the menu entry "Update types &gt; Library".
+- To display the imported texts in the project, update the project. For this, open the shortcut menu of the object and select the menu entry "Update types &gt; Project".
 
 ## Comparing libraries and library elements
 
@@ -3531,9 +3531,9 @@ You can perform a detailed comparison for types and instances. You can start the
 To start a detailed comparison for an instance directly in the project tree, follow these steps:
 
 1. Right-click the instance you want to compare in the project tree.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. In the project library or in a global library, right-click the type that you want to compare with the previously selected instance.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
    The instance and its associated comparison partners are opened in their appropriate editors. The editors are arranged next to each other to provide you with a quick overview of the differences.
 
@@ -3542,9 +3542,9 @@ To start a detailed comparison for an instance directly in the project tree, fol
 To start a detailed comparison for a type directly in the project library or in a global library, follow these steps:
 
 1. In the library, right-click the type that you want to compare.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. In a library or in an instance in the project tree, right-click a type that you want to compare with the previously selected type.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
    The type and its associated comparison partners are opened in their appropriate editors. The editors are arranged next to each other to provide you with a quick overview of the differences.
 
@@ -3565,7 +3565,7 @@ When comparing library elements, you can always switch between automatic and man
 To compare library elements with the device data of a project, follow these steps:
 
 1. In the project tree, select the device whose data you want to compare to a library element and which allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Open the "Libraries" task card.
@@ -3645,7 +3645,7 @@ The following filter templates are available in the "Libraries" task card and in
 The following filter templates are available in the "Libraries" task card for master copies:
 
 - Documentation
-- Devices & networks
+- Devices &amp; networks
 - OPC UA communication
 - PLC programming
 - Visualization
@@ -3844,7 +3844,7 @@ To harmonize the names and the path structure, follow these steps:
 
 Depending on your settings, the names and the path structure in the project are harmonized with the library.
 
-The changes to the project are logged. The log is available under "Common data > Logs" in the project navigation.
+The changes to the project are logged. The log is available under "Common data &gt; Logs" in the project navigation.
 
 ---
 
@@ -3876,7 +3876,7 @@ To clean up the project library, follow these steps:
 
    Depending on your selection, either unused type versions or types are removed from the project library.
 
-   The changes are logged. The log is available under "Common data > Logs" in the project navigation.
+   The changes are logged. The log is available under "Common data &gt; Logs" in the project navigation.
 
 ### Clean up global library
 
@@ -3891,7 +3891,7 @@ To clean up a global library, follow these steps:
 
    Unused type versions are deleted. The default version of a type is always retained.
 
-   The changes are logged. The log is available in the "Common data > Logs" folder in the level below the global library.
+   The changes are logged. The log is available in the "Common data &gt; Logs" folder in the level below the global library.
 
 ---
 

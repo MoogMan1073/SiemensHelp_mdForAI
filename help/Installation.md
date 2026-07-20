@@ -36,11 +36,11 @@ Information that could not be included in the online help and important informat
 
 ### Installation in a virtual environment (private cloud)
 
-You can find instructions on how to install TIA Portal in a virtual environment (private cloud) on the installation data medium in the directory "Documents\Readme\<language directory>". You can open the PDF document "TIAPortalCloudConnectorHowTo<language ID>.pdf" here.
+You can find instructions on how to install TIA Portal in a virtual environment (private cloud) on the installation data medium in the directory "Documents\Readme\&lt;language directory&gt;". You can open the PDF document "TIAPortalCloudConnectorHowTo&lt;language ID&gt;.pdf" here.
 
 ### Automatic installation
 
-A description of automated installation is available on the product DVD in the directory "Documents\Readme\<Language directory>".
+A description of automated installation is available on the product DVD in the directory "Documents\Readme\&lt;Language directory&gt;".
 
 ### Use of the same versions of TIA Portal products during installation
 
@@ -63,7 +63,7 @@ You must confirm the changes to the security settings.
 If you make changes to your operating system after installing it, the security settings can be changed by installing TIA Portal.
 
 You can restore the security settings by installing TIA Portal as follows:   
-"Start > All Programs > Siemens Automation > Security Controller > Restore settings".
+"Start &gt; All Programs &gt; Siemens Automation &gt; Security Controller &gt; Restore settings".
 
 ### Use of antivirus programs
 
@@ -262,11 +262,11 @@ You can find more detailed information in the following table:
 | --- | --- | --- |
 | WinCC Basic V19.x | WinCC Basic | - WinCC Basic V19.x - WinCC Basic V18.x - WinCC Basic V17.x - WinCC Basic V16.x - WinCC Basic V15.x - WinCC Basic V14.x - WinCC Basic V13.x - WinCC Basic V12.x - WinCC Basic V11.x - WinCC Unified Basic V19.x - WinCC Unified Basic V18.x |
 | WinCC Comfort/Advanced V19.x | WinCC Comfort | - WinCC Basic, Comfort V19.x - WinCC Basic, Comfort V18.x - WinCC Basic, Comfort V17.x - WinCC Basic, Comfort V16.x - WinCC Basic, Comfort V15.x - WinCC Basic, Comfort V14.x - WinCC Basic, Comfort V13.x - WinCC Basic, Comfort V12.x - WinCC Basic, Comfort V11.x - WinCC Unified Basic, Comfort V19.x - WinCC Unified Basic, Comfort V18.x - WinCC Unified Comfort V17.x - WinCC Unified Comfort V16.x |
-| WinCC Comfort Combo | - WinCC flexible Compact, Standard >= 2005 - WinCC Basic, Comfort V19.x - WinCC Basic, Comfort V18.x - WinCC Basic, Comfort V17.x - WinCC Basic, Comfort V16.x - WinCC Basic, Comfort V15.x - WinCC Basic, Comfort V14.x - WinCC Basic, Comfort V13.x - WinCC Basic, Comfort V12.x - WinCC Basic, Comfort V11.x - WinCC Unified Basic, Comfort V19.x - WinCC Unified Basic, Comfort V18.x - WinCC Unified Comfort V17.x - WinCC Unified Comfort V16.x |  |
+| WinCC Comfort Combo | - WinCC flexible Compact, Standard &gt;= 2005 - WinCC Basic, Comfort V19.x - WinCC Basic, Comfort V18.x - WinCC Basic, Comfort V17.x - WinCC Basic, Comfort V16.x - WinCC Basic, Comfort V15.x - WinCC Basic, Comfort V14.x - WinCC Basic, Comfort V13.x - WinCC Basic, Comfort V12.x - WinCC Basic, Comfort V11.x - WinCC Unified Basic, Comfort V19.x - WinCC Unified Basic, Comfort V18.x - WinCC Unified Comfort V17.x - WinCC Unified Comfort V16.x |  |
 | WinCC Advanced | - WinCC Basic, Comfort, Advanced V19.x - WinCC Basic, Comfort, Advanced V18.x - WinCC Basic, Comfort, Advanced V17.x - WinCC Basic, Comfort, Advanced V16.x - WinCC Basic, Comfort, Advanced V15.x - WinCC Basic, Comfort, Advanced V14.x - WinCC Basic, Comfort, Advanced V13.x - WinCC Basic, Comfort, Advanced V12.x - WinCC Basic, Comfort, Advanced V11.x - WinCC Unified Basic, Comfort, Unified PC V19.x - WinCC Unified Basic, Comfort, Unified PC V18.x - WinCC Unified Comfort, Unified PC V17.x - WinCC Unified Comfort, Unified PC V16.x |  |
-| WinCC Advanced Combo | - WinCC flexible Compact, Standard, Advanced >= 2005 - WinCC Basic, Comfort, Advanced V19.x - WinCC Basic, Comfort, Advanced V18.x - WinCC Basic, Comfort, Advanced V17.x - WinCC Basic, Comfort, Advanced V16.x - WinCC Basic, Comfort, Advanced V15.x - WinCC Basic, Comfort, Advanced V14.x - WinCC Basic, Comfort, Advanced V13.x - WinCC Basic, Comfort, Advanced V12.x - WinCC Basic, Comfort, Advanced V11.x - WinCC Unified Basic, Comfort, Unified PC V19.x - WinCC Unified Basic, Comfort, Unified PC V18.x - WinCC Unified Comfort, Unified PC V17.x - WinCC Unified Comfort, Unified PC V16.x |  |
+| WinCC Advanced Combo | - WinCC flexible Compact, Standard, Advanced &gt;= 2005 - WinCC Basic, Comfort, Advanced V19.x - WinCC Basic, Comfort, Advanced V18.x - WinCC Basic, Comfort, Advanced V17.x - WinCC Basic, Comfort, Advanced V16.x - WinCC Basic, Comfort, Advanced V15.x - WinCC Basic, Comfort, Advanced V14.x - WinCC Basic, Comfort, Advanced V13.x - WinCC Basic, Comfort, Advanced V12.x - WinCC Basic, Comfort, Advanced V11.x - WinCC Unified Basic, Comfort, Unified PC V19.x - WinCC Unified Basic, Comfort, Unified PC V18.x - WinCC Unified Comfort, Unified PC V17.x - WinCC Unified Comfort, Unified PC V16.x |  |
 | WinCC Professional V19.x | WinCC Professional (512)   WinCC Professional (4096)  WinCC Professional (max.) | - WinCC Basic, Comfort, Advanced, Professional V19.x - WinCC Basic, Comfort, Advanced, Professional V18.x - WinCC Basic, Comfort, Advanced, Professional V17.x - WinCC Basic, Comfort, Advanced, Professional V16.x - WinCC Basic, Comfort, Advanced, Professional V15.x - WinCC Basic, Comfort, Advanced, Professional V14.x - WinCC Basic, Comfort, Advanced, Professional V13.x - WinCC Basic, Comfort, Advanced, Professional V12.x - WinCC Basic, Comfort, Advanced, Professional V11.x - WinCC Unified Basic, Comfort, Unified PC V19.x - WinCC Unified Basic, Comfort, Unified PC V18.x - WinCC Unified Comfort, Unified PC V17.x - WinCC Unified Comfort, Unified PC V16.x |
-| WinCC Professional (512) Combo  WinCC Professional (4096) Combo  WinCC Professional (max.) Combo | - WinCC flexible Compact, Standard, Advanced >= 2008 SP3 - WinCC Basic, Comfort, Advanced, Professional V19.x - WinCC Basic, Comfort, Advanced, Professional V18.x - WinCC Basic, Comfort, Advanced, Professional V17.x - WinCC Basic, Comfort, Advanced, Professional V16.x - WinCC Basic, Comfort, Advanced, Professional V15.x - WinCC Basic, Comfort, Advanced, Professional V14.x - WinCC Basic, Comfort, Advanced, Professional V13.x - WinCC Basic, Comfort, Advanced, Professional V12.x - WinCC Basic, Comfort, Advanced, Professional V11.x - WinCC Unified Basic, Comfort, Unified PC V19.x - WinCC Unified Basic, Comfort, Unified PCV18.x - WinCC Unified Comfort, Unified PC V17.x - WinCC Unified Comfort, Unified PC V16.x |  |
+| WinCC Professional (512) Combo  WinCC Professional (4096) Combo  WinCC Professional (max.) Combo | - WinCC flexible Compact, Standard, Advanced &gt;= 2008 SP3 - WinCC Basic, Comfort, Advanced, Professional V19.x - WinCC Basic, Comfort, Advanced, Professional V18.x - WinCC Basic, Comfort, Advanced, Professional V17.x - WinCC Basic, Comfort, Advanced, Professional V16.x - WinCC Basic, Comfort, Advanced, Professional V15.x - WinCC Basic, Comfort, Advanced, Professional V14.x - WinCC Basic, Comfort, Advanced, Professional V13.x - WinCC Basic, Comfort, Advanced, Professional V12.x - WinCC Basic, Comfort, Advanced, Professional V11.x - WinCC Unified Basic, Comfort, Unified PC V19.x - WinCC Unified Basic, Comfort, Unified PCV18.x - WinCC Unified Comfort, Unified PC V17.x - WinCC Unified Comfort, Unified PC V16.x |  |
 | WinCC Unified Basic V19.x | WinCC Unified Basic ES | - WinCC Basic V19.x - WinCC Basic V18.x - WinCC Unified Basic V19.x - WinCC Unified Basic V18.x |
 | WinCC Unified Comfort V19.x | WinCC Unified Comfort ES | - WinCC Basic, Comfort V19.x - WinCC Basic, Comfort V18.x - WinCC Basic, Comfort V17.x - WinCC Basic, Comfort V16.x - WinCC Unified Basic, Comfort V19.x - WinCC Unified Basic, Comfort V18.x - WinCC Unified Comfort V17.x - WinCC Unified Comfort V16.x |
 | WinCC Unified PC ES V19.x | WinCC Unified PC (10k) ES | - WinCC Basic, Comfort, Advanced V19.x - WinCC Basic, Comfort, Advanced V18.x - WinCC Basic, Comfort, Advanced V17.x - WinCC Basic, Comfort, Advanced V16.x - WinCC Unified Basic, Comfort, Unified PC V19.x - WinCC Unified Basic, Comfort, Unified PC V18.x - WinCC Unified Comfort, Unified PC V17.x - WinCC Unified Comfort, Unified PC V16. |
@@ -300,7 +300,7 @@ When the Trial License expires, the following scenarios can occur:
 
 #### License requirement for simulation In STEP 7
 
-You do not require additional licenses when you use the menu command "Online > Simulation" to start the simulation in STEP 7.
+You do not require additional licenses when you use the menu command "Online &gt; Simulation" to start the simulation in STEP 7.
 
 If the following conditions are met, you need the appropriate licenses for the edition of STEP 7 that you have installed, even for the simulation:
 
@@ -310,7 +310,7 @@ If the following conditions are met, you need the appropriate licenses for the e
 
 If the following conditions are fulfilled, you also need the appropriate licenses for WinCC Runtime and for licensed options for the simulation:
 
-- Start the simulator with the menu command "Online > Simulation > Start".
+- Start the simulator with the menu command "Online &gt; Simulation &gt; Start".
 
 If you do not have a valid license, you can activate the simulation for one hour.
 
@@ -817,7 +817,7 @@ When the trial license has expired, the TIA Portal only runs with restrictions. 
 
 Install the license with the Automation License Manager from the accompanying data storage medium to your PC.
 
-You need additional License Keys to use WinCC Runtime or simulation on the Engineering-PC with the menu command "Online > Simulation > Start". You need to use Automation License Manager for this.
+You need additional License Keys to use WinCC Runtime or simulation on the Engineering-PC with the menu command "Online &gt; Simulation &gt; Start". You need to use Automation License Manager for this.
 
 When you install a license, the relevant License Key will be removed from the original storage location of the License Keys.
 
@@ -854,7 +854,7 @@ Modifying the data medium of the engineering system can destroy the License Key.
 | Symbol | Meaning |
 | --- | --- |
 |  | **Notice** |
-| **Destruction of license keys on PCs**  If one of the following cases applies, first, uninstall all License Keys :  - Format the hard disk - Compress the hard disk - Restore the hard disk - Start an optimization program that moves fixed blocks - Install a new operating system   Read the description of Automation License Manager ("Start > Siemens Automation > Documentation"). Comply with all warnings and notices. |  |
+| **Destruction of license keys on PCs**  If one of the following cases applies, first, uninstall all License Keys :  - Format the hard disk - Compress the hard disk - Restore the hard disk - Start an optimization program that moves fixed blocks - Install a new operating system   Read the description of Automation License Manager ("Start &gt; Siemens Automation &gt; Documentation"). Comply with all warnings and notices. |  |
 
 #### Data backup of operating panels (Backup/Restore)
 
@@ -910,7 +910,7 @@ Its use for other purposes requires an additional license. These include, for ex
 
 **Uninstalling**
 
-After uninstalling WinCC, you must uninstall the "WinCC" SQL server instance. To do this, select the entry "Microsoft SQL Server 20.." under "Control Panel > Programs" and uninstall it.
+After uninstalling WinCC, you must uninstall the "WinCC" SQL server instance. To do this, select the entry "Microsoft SQL Server 20.." under "Control Panel &gt; Programs" and uninstall it.
 
 ---
 
@@ -928,7 +928,7 @@ A license may be required for an add-on for non-PC-based HMI devices. The Licens
 
 In order to license non-PC-based HMI devices with License Keys, the "SIMATIC HMI License Manager Panel Plugin" add-on is needed.
 
-WinCC Setup installs this add-on by default. You open the License Manager Panel Plugin in the Automation License Manager with the "Edit > Connect Target System > Connect HMI Device" menu command.
+WinCC Setup installs this add-on by default. You open the License Manager Panel Plugin in the Automation License Manager with the "Edit &gt; Connect Target System &gt; Connect HMI Device" menu command.
 
 If WinCC is not installed, an installation of ProSave 7.2 or higher is required.
 
@@ -1088,7 +1088,7 @@ The following table shows the minimum software and hardware requirements that ha
 
 ** Only for Basic editions
 
-Some protocols might also support additional Windows versions. You can find more information in the product-specific requirements or check the compatibility with the compatibility tool. The compatibility tool can be found on the Internet at <https://support.industry.siemens.com/compatool/>.
+Some protocols might also support additional Windows versions. You can find more information in the product-specific requirements or check the compatibility with the compatibility tool. The compatibility tool can be found on the Internet at [https://support.industry.siemens.com/compatool/](https://support.industry.siemens.com/compatool/).
 
 #### Recommended PC hardware
 
@@ -1251,8 +1251,8 @@ Before you start the WinCC installation, specify the Windows computer name. Foll
 The following characters are not permitted for the computer name:
 
 - . , ; : ! ? " ' ^ ` ~ _
-- + = / \ | @ * # $ % &
-- ( ) [ ] { } < >
+- + = / \ | @ * # $ % &amp;
+- ( ) [ ] { } &lt; &gt;
 - Space
 
 Follow these recommendations when assigning the Windows computer name:
@@ -1359,7 +1359,7 @@ You can find a list of the ports used by Unified Runtime in the user help SIMATI
 >
 > 1. On the Unified PC, launch "Internet Information Services (IIS) Manager".
 > 2. Click "Default Web Sites" on the right.
-> 3. Select "Remove" or "Manage Website > Exit".
+> 3. Select "Remove" or "Manage Website &gt; Exit".
 
 > **Note**
 >
@@ -1487,8 +1487,8 @@ If you change the Windows computer name, you must uninstall the SQL server and r
 The following characters are not permitted for the computer name:
 
 - . , ; : ! ? " ' ^ ´ ` ~ _
-- + = / \ ¦ @ * # $ % & § °
-- ( ) [ ] { } < >
+- + = / \ ¦ @ * # $ % &amp; § °
+- ( ) [ ] { } &lt; &gt;
 - Blanks
 
 Follow these recommendations when assigning the Windows computer name:
@@ -1582,7 +1582,7 @@ Your computer must have:
   > **Note**
   >
   > - After a reinstallation or a restart, check whether a connection is available from FCC/FMS (FileClientCache/FileManagementSystem) to the "Teamcenter Server 11.2 or higher".
-  > - After a reinstallation or a restart, check the registry key. You can find additional information on checking the registry key in the "TIA Portal Teamcenter Gateway" online help in the section Installing and uninstalling TIA Portal Teamcenter Gateway" > "Checking the **installation** of TIA Portal Teamcenter Gateway".
+  > - After a reinstallation or a restart, check the registry key. You can find additional information on checking the registry key in the "TIA Portal Teamcenter Gateway" online help in the section Installing and uninstalling TIA Portal Teamcenter Gateway" &gt; "Checking the **installation** of TIA Portal Teamcenter Gateway".
   > - After a re-installation or restart, check whether you can save an item type in Teamcenter and if you can add a dataset to the item revision. Additional information on saving element types is available in the "TIA Portal Teamcenter Gateway" online help in the chapter "Managing TIA Portal projects with TIA Portal Teamcenter Gateway" in the section "Saving a TIA Portal project as new item in Teamcenter"**.**
   > - After a reinstallation or a restart, check that a data transfer from Teamcenter Rich Application Client to the Teamcenter server is possible.
 - The supplied data model consisting of several files must be installed on the Teamcenter server.
@@ -2074,7 +2074,7 @@ WinCC ES
 
 | User action | Log entry | Event category | Type of event |
 | --- | --- | --- | --- |
-| OPC UA: Toggle guest authentication | Device {deviceName}: OPC UA guest authentication {enabled | disabled}> | Configuration | Information |
+| OPC UA: Toggle guest authentication | Device {deviceName}: OPC UA guest authentication {enabled | disabled}&gt; | Configuration | Information |
 | OPC UA: Toggle authentication by means of username and password | Device {deviceName}: OPC UA username and password authentication {enabled | disabled} | Configuration | Information |
 | OPC UA server activated or deactivated | Device {deviceName}: OPC UA server {activated | deactivated} | Configuration | Information |
 | OPC UA: Security policies enabled or disabled | Device {deviceName}: OPC UA security policy {policyName} {enabled | disabled} | Configuration | Information |
@@ -2102,7 +2102,7 @@ To centrally collect, analyze and further process events from different systems 
 #### Displaying events in the Event Viewer
 
 1. In Windows, open the Event Viewer.
-2. In the left-hand column, go to the node "Event Viewer (Local) > Application and Services Logs > SiemensAG > Automation > TIAPortal".
+2. In the left-hand column, go to the node "Event Viewer (Local) &gt; Application and Services Logs &gt; SiemensAG &gt; Automation &gt; TIAPortal".
 3. Select the "Operational" log.
 
    The events of the log are displayed in the upper part of the main window.
@@ -2221,7 +2221,7 @@ To install the software packages, follow these steps:
 11. To continue the installation, read and accept all license agreements and click "Next".
 
     The "TIA Portal Help Viewer" dialog opens.
-12. Enter a valid port and confirm it by clicking on the "Confirm" button. This port is used to call up the information system in your standard browser if you have activated the option "Display information system in the web browser" in the settings under "General > information system".
+12. Enter a valid port and confirm it by clicking on the "Confirm" button. This port is used to call up the information system in your standard browser if you have activated the option "Display information system in the web browser" in the settings under "General &gt; information system".
 
     If changes to the security and permission settings are required in order to install the TIA Portal, the security settings dialog opens.
 13. To continue the installation, accept the changes to the security and permissions settings, and click "Next".
@@ -2560,7 +2560,7 @@ To deactivate or reactivate the automatic search for software updates, follow th
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "General > Software Updates" group in the area navigation.
+2. Select the "General &gt; Software Updates" group in the area navigation.
 3. Deselect the "Check for updates daily" check box if you want to deactivate the automatic search for software updates.
 4. Select the "Check for updates daily" check box if you want to reactivate the automatic search for software updates.
 
@@ -2583,7 +2583,7 @@ Or:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "General > Software Updates" group in the area navigation.
+2. Select the "General &gt; Software Updates" group in the area navigation.
 3. Click "Check for updates now".
 
    The TIA Administrator opens.
@@ -2593,7 +2593,7 @@ Or:
 
 Or:
 
-1. Open the TIA Administrator via "Start > All Programs > Siemens Automation > TIA Administrator".
+1. Open the TIA Administrator via "Start &gt; All Programs &gt; Siemens Automation &gt; TIA Administrator".
 2. Click on the "Manage software" tile and on the "Check for updates" button there.
 
    The available updates are displayed.
@@ -2632,7 +2632,7 @@ Another procedure is available for the installation of a support package. To do 
 2. If you want to install a support package that is not in the list, you have the following options:
 
    - If the support package is already on your computer, you can add it to the list by selecting "Add from file system".
-   - If you add a support package from the "Service & Support" page on the Internet, first you download it by selecting "Download from the Internet". Then you can add it from the file system.
+   - If you add a support package from the "Service &amp; Support" page on the Internet, first you download it by selecting "Download from the Internet". Then you can add it from the file system.
 3. Select the support package that you want to install.
 4. Click "Install".
 5. Close and then restart the TIA Portal.
@@ -2769,7 +2769,7 @@ The default website must be created in the directory that contains the 'UpdatesS
 
 ##### Activating virtual directory
 
-1. In the area "Connections > Sites > Default Web site", select the virtual directory you created.
+1. In the area "Connections &gt; Sites &gt; Default Web site", select the virtual directory you created.
 2. In the "Features" view, double-click the item "Directory browsing".
 
    ![Activating virtual directory](images/148104861067_DV_resource.Stream@PNG-en-US.PNG)
@@ -2985,16 +2985,16 @@ As of V15.1, you can use the Support Package Installer to install or upgrade all
 
 To start the installation with the desired options directly via the command line, proceed as follows:
 
-1. Open the Windows command prompt with "Start > Run > cmd".
+1. Open the Windows command prompt with "Start &gt; Run &gt; cmd".
 2. Switch to the directory that contains the "Siemens.Automation.SupportPackageInstaller.exe" file. This is the installation directory of your installed TIA Portal.
 3. In the command prompt, enter the following command:  
-   %Installation directory% > Siemens.Automation.SupportPackageInstaller.exe <Support Package(HSP)-storage directory> [-l <Name of log file>] [-warnaserror]
+   %Installation directory% &gt; Siemens.Automation.SupportPackageInstaller.exe &lt;Support Package(HSP)-storage directory&gt; [-l &lt;Name of log file&gt;] [-warnaserror]
 
-**<Support Package-storage_directory>**
+**&lt;Support Package-storage_directory&gt;**
   
 Mandatory directory containing the support package files (*.isp). This can be either a local folder or a Remote Share.
 
-**-l <Storage location of log file>**
+**-l &lt;Storage location of log file&gt;**
   
 This parameter is optional and specifies the path to the log file. If it is not set, the log file is created in the binary directory. However, you need to have write permissions in the storage folder.
 
@@ -3211,7 +3211,7 @@ By selecting or clearing the options, you can specify if the project server is t
 
 The project server can also be installed as a standalone installation.
 
-A description of automated installation is also available on the product DVD in the directory "Documents\Readme\<language directory>".
+A description of automated installation is also available on the product DVD in the directory "Documents\Readme\&lt;language directory&gt;".
 
 #### Identical TIA Portal versions during installation
 
@@ -3274,7 +3274,7 @@ You install the "TIA Project-Server" as part of the TIA Portal installation or
 
 When installing with TIA Portal, the project server version released for this purpose is always installed. Project server versions that are released afterwards are also released for this TIA Portal version as long as there are no new TIA Portal versions.
 
-A description of automated installation is also available on the product DVD in the directory "Documents\Readme\<language directory>".
+A description of automated installation is also available on the product DVD in the directory "Documents\Readme\&lt;language directory&gt;".
 
 > **Note**
 >
@@ -3316,7 +3316,7 @@ Communication between the project server and the TIA Portal is supported for the
 >
 > Multiuser Engineering does not upgrade the project versions.
 
-#### TIA Portal versions < V18
+#### TIA Portal versions &lt; V18
 
 Up to TIA Portal V18, it is possible for several versions of the project server that use different project versions of TIA Portal to be installed on the same computer.
 
@@ -3356,7 +3356,7 @@ The project server was installed on your computer together with the TIA Portal.
 Follow these steps for installation:
 
 1. Note the requirements for the installation of the project server.
-2. Start the setup for the standalone installation of the project server with a double-click on the self-extracting .exe file "TIA_Portal_Project_Server_V<x.y>.exe".
+2. Start the setup for the standalone installation of the project server with a double-click on the self-extracting .exe file "TIA_Portal_Project_Server_V&lt;x.y&gt;.exe".
 
    You can find these files in the directory "Support" on the corresponding product DVD.
 3. Select the preferred settings and click the "Install" button.
@@ -3527,7 +3527,7 @@ During the installation, a "TIA Administrator V2" shortcut is created in the Sta
 
 To start TIA Administrator locally, follow these steps:
 
-1. Under Windows, select "Start > Siemens Automation > TIA Administrator V2".
+1. Under Windows, select "Start &gt; Siemens Automation &gt; TIA Administrator V2".
 
    Your browser establishes a secure connection using the HTTPS protocol to TIA Administrator.
 2. In the login window, enter your user name and password in the text boxes under "User Login".

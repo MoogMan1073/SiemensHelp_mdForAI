@@ -65,7 +65,7 @@ The project server has the following properties:
 - The project server can be started and administered outside the TIA Portal.
 - You configure and manage the connections from the project server to TIA Portal via the settings in the TIA Portal.
 
-  In the TIA Portal, call the settings for the project server via the command "Options > Settings > Project server".
+  In the TIA Portal, call the settings for the project server via the command "Options &gt; Settings &gt; Project server".
 - The "alias" assigned as the name for the project server is used as an identifier and may not be changed at a later point in time.
 
 ### Microsoft system account for project server
@@ -170,7 +170,7 @@ You can make the following settings in TIA Portal for working with Multiuser Eng
 - Network profiles and compression
 - Storage settings
 
-To do this, open the "Project server" tab under "Options > Settings".
+To do this, open the "Project server" tab under "Options &gt; Settings".
 
 ### Server connections
 
@@ -260,7 +260,7 @@ No compression is used for the network profile "Fast".
 
 To set the network profiles for the project server in TIA Portal, follow these steps:
 
-1. In TIA Portal, select the command "Options > Settings > Project server".
+1. In TIA Portal, select the command "Options &gt; Settings &gt; Project server".
 
    The settings displayed below contain the available options for the network profiles.
 2. From the drop-down list for "Network profiles", select the desired profile.
@@ -520,7 +520,7 @@ By selecting or clearing the options, you can specify if the project server is t
 
 The project server can also be installed as a standalone installation.
 
-A description of automated installation is also available on the product DVD in the directory "Documents\Readme\<language directory>".
+A description of automated installation is also available on the product DVD in the directory "Documents\Readme\&lt;language directory&gt;".
 
 #### Identical TIA Portal versions during installation
 
@@ -692,7 +692,7 @@ You can find information on the TIA Portal versions released for a specific proj
 
 - "[Notes on the compatibility of the project server](#notes-on-the-compatibility-of-the-project-server)"
 
-A description of automated installation is also available on the product DVD in the directory "Documents\Readme\<language directory>".
+A description of automated installation is also available on the product DVD in the directory "Documents\Readme\&lt;language directory&gt;".
 
 More information:
 
@@ -714,7 +714,7 @@ More information:
 >
 > The existing user permissions for the server are applied.
 
-#### TIA Portal versions < V18
+#### TIA Portal versions &lt; V18
 
 Up to TIA Portal V18, it is possible for several versions of the project server that use different project versions of TIA Portal to be installed on the same computer.
 
@@ -754,7 +754,7 @@ The project server was installed on your computer together with the TIA Portal.
 Follow these steps for installation:
 
 1. Note the requirements for the installation of the project server.
-2. Start the setup for the standalone installation of the project server with a double-click on the self-extracting .exe file "TIA_Portal_Project_Server_V<x.y>.exe".
+2. Start the setup for the standalone installation of the project server with a double-click on the self-extracting .exe file "TIA_Portal_Project_Server_V&lt;x.y&gt;.exe".
 
    You can find these files in the directory "Support" on the corresponding product DVD.
 3. Select the preferred settings and click the "Install" button.
@@ -929,7 +929,7 @@ The project server is installed.
 To configure the project server, the following steps are required:
 
 - Open the graphic tool for the server configuration with administrator rights.
-- To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+- To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
 - Click on the entry "TIA Project Server - Configuration" to open the Configuration Tool .
 - Select the language you want from the black highlighted footer.
 - Enter the required configuration data and click "Install service".
@@ -941,7 +941,7 @@ You can find the exact procedure in: [Managing a project server with the graphic
 To administer the project server, the following steps are required:
 
 - Open the graphic tool for the multiuser project server administration.
-- To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+- To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
 - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
 - On the "Administration" tab, insert a connection to the desired project server and enter the data for the administration of the server.
 - On the "Settings" tab, select the language settings and manage confirmations and certificates.
@@ -1042,7 +1042,7 @@ To configure the project server, follow these steps:
 
 1. Open the graphic tool for the server configuration with administrator rights.
 
-   To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
 
    Click on the entry "TIA Project Server - Configuration" to open the Configuration Tool.
 
@@ -1153,7 +1153,7 @@ You have already created projects or global libraries as server projects or serv
 
 Open the graphic tool for the project server administration.
 
-- To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+- To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
 - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
 
 The user interface of the Administration tool has the following appearance:
@@ -1257,7 +1257,7 @@ Proceed as follows:
 
 1. Open the graphic tool for the project server administration.
 
-   To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
 
    Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
 2. Click "Add server connection".
@@ -1486,7 +1486,7 @@ Proceed as follows:
 
 1. Open the graphic tool for the project server administration.
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the AdministrationTool.
 2. Double-click "User administration" below the desired entry on the left side.
 
@@ -1526,7 +1526,7 @@ Proceed as follows:
 
 ##### Introduction
 
-You can use the graphical "Administration Tool" to view and manage existing alerts for the project server in the "Administration" > "Alert" tab. Alerts allow information to be transferred from the server to the administrator.
+You can use the graphical "Administration Tool" to view and manage existing alerts for the project server in the "Administration" &gt; "Alert" tab. Alerts allow information to be transferred from the server to the administrator.
 
 A number in brackets beside the "Alert" entry means there is that number of alerts.
 
@@ -1555,7 +1555,7 @@ Proceed as follows:
 
 1. Open the graphic tool for the project server administration.
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
 2. On the left of the "Administration" tab, click on "Alert".
 
@@ -1590,7 +1590,7 @@ Proceed as follows:
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Open the graphic tool for the project server administration.    - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".    - Click on the entry "TIA Project Server - Administration" to open the AdministrationTool. 2. To display the details on the right side, click the required entry in the navigation area.    The following information about the projects or libraries is displayed:       | Symbol | Meaning |    | --- | --- |    | "Name" | Name of the server project or the server library |    | "Status" | Status: - "Locked" - "Unlocked" |    | "Mode" | Selected mode: - Engineering mode - Commissioning mode |    | "Created by / date" | Creation of the server project or the server library: - User name - Creation date |    | "Last edited by / Date" | Last change in the server project or in the server library: - User name - Date of change |    | "Project version" | TIA Portal version with which the project or the library was created |    | "Number of local sessions" | Number of local sessions which belong to the server project or to the server library |    | "Comment" | Freely editable field for additional information |                ![Managing server projects and server libraries](images/143145424651_DV_resource.Stream@PNG-en-US.png)         ![Managing server projects and server libraries](images/143145424651_DV_resource.Stream@PNG-en-US.png) 3. To delete a project or a library, select the respective entry and click the "Delete" command.    Projects and libraries can only be deleted if no local sessions exist for them.    Confirm the next prompt to delete the project or the library. 4. To unlock a locked project or a locked library, select the entry and then click the "Unlock" command.    Confirm the next prompt to unlock the project or the library. 5. Click the "Multiuser Commissioning" command to switch to "Commissioning mode".    The icon becomes active and has a blue background.    When commissioning mode is activated, the "Check for different data before download (recommended)" option is simultaneously enabled.    Click the "Multiuser Commissioning" command again to exit "Commissioning mode" and switch back to "Engineering mode". 6. To export a server project or a server library, select the entry on the left side.    Click the "Export" command on the right.    In the next dialog, select the desired storage location. 7. To import a server project or a server library, select a server connection on the left side.    Click the "Import" command on the right.    In the next dialog, select the desired server project or server library for the import. |  |
+| 1. Open the graphic tool for the project server administration.    - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".    - Click on the entry "TIA Project Server - Administration" to open the AdministrationTool. 2. To display the details on the right side, click the required entry in the navigation area.    The following information about the projects or libraries is displayed:       | Symbol | Meaning |    | --- | --- |    | "Name" | Name of the server project or the server library |    | "Status" | Status: - "Locked" - "Unlocked" |    | "Mode" | Selected mode: - Engineering mode - Commissioning mode |    | "Created by / date" | Creation of the server project or the server library: - User name - Creation date |    | "Last edited by / Date" | Last change in the server project or in the server library: - User name - Date of change |    | "Project version" | TIA Portal version with which the project or the library was created |    | "Number of local sessions" | Number of local sessions which belong to the server project or to the server library |    | "Comment" | Freely editable field for additional information |                ![Managing server projects and server libraries](images/143145424651_DV_resource.Stream@PNG-en-US.png)         ![Managing server projects and server libraries](images/143145424651_DV_resource.Stream@PNG-en-US.png) 3. To delete a project or a library, select the respective entry and click the "Delete" command.    Projects and libraries can only be deleted if no local sessions exist for them.    Confirm the next prompt to delete the project or the library. 4. To unlock a locked project or a locked library, select the entry and then click the "Unlock" command.    Confirm the next prompt to unlock the project or the library. 5. Click the "Multiuser Commissioning" command to switch to "Commissioning mode".    The icon becomes active and has a blue background.    When commissioning mode is activated, the "Check for different data before download (recommended)" option is simultaneously enabled.    Click the "Multiuser Commissioning" command again to exit "Commissioning mode" and switch back to "Engineering mode". 6. To export a server project or a server library, select the entry on the left side.    Click the "Export" command on the right.    In the next dialog, select the desired storage location. 7. To import a server project or a server library, select a server connection on the left side.    Click the "Import" command on the right.    In the next dialog, select the desired server project or server library for the import. |  |
 
 #### Managing groups on the project server
 
@@ -1614,7 +1614,7 @@ The following special characters are not allowed in the name:
 
 + = / \ @ *
 
-[ ] { } < >
+[ ] { } &lt; &gt;
 
 Blank
 
@@ -1638,7 +1638,7 @@ Proceed as follows:
 
 1. Open the graphic tool for the project server administration.
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
 2. To create a new group, select the server connection and click on "Add group".
 
@@ -1694,7 +1694,7 @@ Proceed as follows:
 
 1. Open the graphic tool for the project server administration.
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the AdministrationTool.
 2. Click "Local sessions" under the required server project or the server library on the left side.
 
@@ -1761,7 +1761,7 @@ Proceed as follows:
 
 1. Open the graphic tool for the project server administration:
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
 2. Click "History" under the desired server project or the server library on the left side.
 
@@ -1789,7 +1789,7 @@ Proceed as follows:
    ![Display and managing history](images/137149781131_DV_resource.Stream@PNG-en-US.png)
 3. You can use the "To roll back selected session" button roll back a selected session to the selected revision.
 
-   A new line is then created showing the new revision with the comment "Rolled back to the revision <number>".
+   A new line is then created showing the new revision with the comment "Rolled back to the revision &lt;number&gt;".
 4. To export the revision as a single-user project, click on the "Export selected revision" button.
 
    Select the desired storage path in the subsequent dialog and click "OK".
@@ -1844,7 +1844,7 @@ Proceed as follows:
 
 1. Select the desired revision or multiple revisions and click the command "Roll back to the selected revision" in the shortcut menu.
 
-   A new line is then created showing the new revision with the comment "Rolled back to the revision <number>".
+   A new line is then created showing the new revision with the comment "Rolled back to the revision &lt;number&gt;".
 
 ##### Export selected revision
 
@@ -1940,7 +1940,7 @@ Proceed as follows:
 
 1. Open the graphic tool for the server administration.
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
 2. Under "Administration", you can find a list of the configured server connections as soon as you have set up a connection to the project server with "Add server connection". On the right side, you receive additional information about the objects selected on the left in a detail view.
 3. On the left side, select the server and the project for which you want to set up commissioning mode.
@@ -1966,7 +1966,7 @@ The "commissioning mode" is switched on by clicking the "Multiuser Commissioning
 
 ##### Introduction
 
-You use the graphical "Administration Tool" to select the required user interface language in the "Settings" > "General" tab.
+You use the graphical "Administration Tool" to select the required user interface language in the "Settings" &gt; "General" tab.
 
 All six TIA Portal languages are available.
 
@@ -1986,9 +1986,9 @@ Proceed as follows:
 
 1. Open the graphic tool for the server administration.
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
-2. Click on the left on the "Settings" > "General" tab.
+2. Click on the left on the "Settings" &gt; "General" tab.
 
    In the "Language" section, select the required user interface language from the drop-down list.
 
@@ -2000,7 +2000,7 @@ The interface texts are displayed in the selected language.
 
 ##### Introduction
 
-In the graphical "Administration Tool", in the "Settings" > "General" tab, select for which actions a confirmation dialog is displayed when working with Multiuser Engineering. To carry out these actions, the operator must confirm the execution.
+In the graphical "Administration Tool", in the "Settings" &gt; "General" tab, select for which actions a confirmation dialog is displayed when working with Multiuser Engineering. To carry out these actions, the operator must confirm the execution.
 
 You can activate confirmations for working in the following areas:
 
@@ -2032,9 +2032,9 @@ Proceed as follows:
 
 1. Open the graphic tool for the server administration.
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
-2. Click on the left on the "Settings" > "General" tab.
+2. Click on the left on the "Settings" &gt; "General" tab.
 3. Go to "Confirmations" and click on the required actions.
 
    - You enable confirmations for all entries using the "All" button.
@@ -2044,7 +2044,7 @@ Proceed as follows:
 
 ##### Introduction
 
-You can use the graphical "Administration Tool" to view and manage existing certificates for the project server on the "Settings" > "Certificate" tab. As soon as you select "https" for the server connection, certificates are used for secure communication.
+You can use the graphical "Administration Tool" to view and manage existing certificates for the project server on the "Settings" &gt; "Certificate" tab. As soon as you select "https" for the server connection, certificates are used for secure communication.
 
 Certificates that are no longer required can be deleted if not in use.
 
@@ -2070,9 +2070,9 @@ Proceed as follows:
 
 1. Open the graphic tool for the server administration.
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
-2. Click on the left on the "Settings" > "Certificates" tab.
+2. Click on the left on the "Settings" &gt; "Certificates" tab.
 
    All existing certificates for the selected project server are displayed with the associated data.
 3. If you no longer need a certificate and wish to delete it, select the certificate and click on the "Remove selected certificate confirmation" button.
@@ -2194,7 +2194,7 @@ The following actions are automatically executed when you input the "Install" co
 
 The project server can then be used.
 
-##### TIA Portal versions < V18
+##### TIA Portal versions &lt; V18
 
 Up to TIA Portal V17, the Administrative Tools were referred to as "Multiuser Administrative Tools" and addressed via the command "musrv".
 
@@ -2268,7 +2268,7 @@ Observe the basic procedures for configuring the project server: [Configuring th
 >
 > The commands as well as the associated help and information texts within the command line are only available in English.
 
-##### TIA Portal versions < V18
+##### TIA Portal versions &lt; V18
 
 Up to TIA Portal V17, the Administrative Tools were referred to as "Multiuser Administrative Tools" and addressed via the command "musrv".
 
@@ -2322,7 +2322,7 @@ Description of the Project Server Power Tools commands:
 
 - [Commands for managing the project server](#commands-for-managing-the-project-server)
 
-**TIA Portal versions < V18**
+**TIA Portal versions &lt; V18**
 
 Up to TIA Portal V17, the "Multiuser Power Tools" were called via the file "start-mupt.bat".
 
@@ -2365,7 +2365,7 @@ The commands for managing the project server are available in the Project Server
 >
 > The commands as well as the associated help and information texts within the command line are only available in English.
 
-##### TIA Portal versions < V18
+##### TIA Portal versions &lt; V18
 
 Up to TIA Portal V17, the Power Tools were referred to as "Multiuser Power Tools" and addressed via the command "mupt".
 
@@ -2389,11 +2389,11 @@ To use the commands in future TIA Portal versions, replace "mupt" in each case 
 
 All "User names" used must comply with this format:
 
-- <domain-or-machine-name>\<account>
+- &lt;domain-or-machine-name&gt;\&lt;account&gt;
 
   Examples: ww004\userTIA01, PC17CLTC\tiaengineer01
 
-  If the <domain-or-machine-name> is not assigned, Windows will automatically propose a corresponding domain for the account.
+  If the &lt;domain-or-machine-name&gt; is not assigned, Windows will automatically propose a corresponding domain for the account.
 
 **Role names**
 
@@ -2419,32 +2419,32 @@ The commands listed below are available.
 
 | Command | Description | Possible entries |
 | --- | --- | --- |
-| "Show projects" | Lists projects and groups of the selected project server. | **Parameters:**   - -s, --server: Project server URL address - -a, --all: Outputs a list with the full hierarchy of all groups and server projects on the server. - -p, --project: (Optional) Name of the server project.   The parameter is only evaluated if revisions can be displayed for a project.   If the command contains the parameter "all", the parameter "project" is ignored. - -v, --revisions: (Optional) Also lists all revisions for the project.   If the command contains the parameter "all", the parameter "revisions" is ignored. - -l, --page: (Optional) Page by page result display - -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary. - -g, --groupName: Name of the group if the server project is contained in a group.   If the command contains the parameter "all", the parameter "groupName" is ignored.    **Examples:**   Full list of the groups and projects:  %InstallDirectory% > pspt project show --server https://localhost:8735 -a  Server projects of the "MyGroup" group:  %InstallDirectory% > pspt project show --server https://localhost:8735 -g MyGroup   **Help:**   - `pspt project show -?` |
-| "Delete project" | Deletes specific projects on the project server.   **Requirements:**   The projects must not contain any local sessions. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project to be deleted. - -f --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt project remove --server https://localhost:8735 --project project155 -g MyGroup   **Help:**   - `pspt project remove -?` |
-| "Create group" | Creates a group on the project server.   **Requirements:**   Users need the "Manager" role for the project server | **Parameters:**   - -s, --server: Project server URL address - -g, --groupName: Name of the group to be created - -c, --comment: Comment with information, for example, the purpose of the group.    **Example:**   %InstallDirectory% > pspt group create --server https://localhost:8735 --g MyGroup --c GroupComment   **Help:**   - `pspt group create -?` |
-| "Get group" | Lists all groups of the selected project server.  To list both the groups and the contained server projects, use the command "project show" with the parameter "all". | **Parameters:**   - -s, --server: Project server URL address    **Example:**   %InstallDirectory% > pspt group get --server https://localhost:8735   **Help:**   - `pspt group get -?` |
-| "Delete group" | Deletes a group on the project server.   **Requirements:**   The group must not contain any server projects.  Users need the "Manager" role for the project server | **Parameters:**   - -s, --server: Project server URL address - -g, --groupName: Name of the group to be deleted - -f, --force: (Optional) Activates the command without further query.   Without the parameter in the command, a confirmation dialog is displayed.    **Example:**   %InstallDirectory% > pspt group delete --server https://localhost:8735 -n MyGroup   **Help:**   - `pspt group delete -?` |
-| "Display sessions" | Lists all local sessions of the selected server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose sessions are listed. - -l, --page: (Optional) Page by page result display - -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt session show --server https://localhost:8735 --project project155 -g MyGroup   **Help:**   - `pspt session show -?` |
-| "Move session" | Updates the storage path of a local session which was moved to another path. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project to which the local session belongs. - -i, --id: ID of the local session to be moved. - -t, --path: Selection of the destination folder to which the local session is to be moved. - -m, --machine: (Optional) Name of computer if the destination folder is on a different PC. - -f, --force: (Optional) Activates the command without further query. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt session move --server https://localhost:8735 -id 1 --project Project1 --path C:\LocalPathForMoving -g MyGroup   **Help:**   - `pspt session move -?` |
-| "Delete session" | Deletes the selected local session on the project server | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose session is to be deleted. - -i, --id: Identification number of the session to be deleted. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt session remove --server https://localhost:8735 --project project155 --id 5 -g MyGroup   **Help:**   - `pspt session remove -?` |
-| "Remove project lock" | Removes the lock for the server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project to be unlocked. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt project unlock --server https://localhost:8735 --project project155 -g MyGroup   **Help:**   - `pspt project unlock -?` |
-| "Show check-in history" | Displays the check-in history for the selected server and the selected local session. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project for whose sessions the check-in history is listed.   If no project name is specified, the history of all projects is listed on the project server. - -f, --from: (Optional) Revision number from which the history of the session is to be listed.   The specified revision number is included in the list.   Without the parameter in the command, the check-in history since the creation of the session is displayed. - -t, --to: (Optional) Revision number up to which the history of the session is to be listed.   The specified revision number is included in the list.   Without the parameter in the command, the check-in history up to the current time is displayed. - -i, --id: (Optional) Identification number of the session whose check-in history is to be listed.   If no session identification number is specified, the history for all sessions of the sever project is listed. - -l, --page: (Optional) Page by page result display - -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt checkin show --server https://localhost:8735 --project project155 --from 5 --to 20 --id 5 -g MyGroup   **Help:**   - `pspt checkin show -?` |
-| "Show server access rights" | Shows the defined user rights for the users of a server, a group or a server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project for which the access rights are listed.   If no project name is specified, the access rights of all projects are listed on the project server. - -l, --page: Results display in page format - -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example**:  %InstallDirectory% > pspt user show --server https://localhost:8735/ -p MYProject -g MyGroup   **Help:**   - `pspt user show -?` |
-| "Modify server access rights" | Changes the access rights for the server, a group or a server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project for which the user is to be granted access rights.   If no project name is specified, the user is granted access rights to the project server. - -u, --users: User names to be used for filtering, separated by commas. - -r, --role: Selecting the role - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt user add --server https://localhost:8735 --project Project1 --users user1,user2 --role Manager -g MyGroup   **Help:**   - `pspt user add -?` |
-| "Remove server access rights" | Removes the access rights for the server, a group or a server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project from whose user administration the user is to be removed.   If no project name is specified, the user is removed from the user administration of the server. - -u, --user: User names to be used for filtering, separated by commas. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt user remove --server https://localhost:8735 --users user1,user2 -g MyGroup   **Help:**   - `pspt user remove -?` |
-| "Show certificates" | Displays all existing multiuser certificates. | **Parameters:**   - -l, --page: (Optional) Option to divide up the pages to display the results.   -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary.    **Example**:  %InstallDirectory% > pspt certificate show   **Help:**   - `pspt certificate show -?` |
-| "Remove certificates" | Removes all certificates from the selected server. | **Parameters:**   - -s, --server: Project server URL address - -f, --force: (Optional) Activates the command without further query    **Example**:  %InstallDirectory% > pspt certificate remove --server https://localhost:8735   **Help:**   - `pspt certificate remove -?` |
-| "Confirm certificate" | Saves the certificate for the selected server in the list of valid certificates. | **Parameters:**   - -s, --server: Project server URL address - -f, --force: (Optional) Activates the command without further query    **Example**:  %InstallDirectory% > pspt certificate confirm --server https://localhost:8735   **Help:**   - `pspt certificate confirm -?` |
-| "Show alerts" | Displays the alerts for the selected server. | **Parameters:**   - -s, --server: Project server URL address    **Example:**   %InstallDirectory% > pspt alert show --server https://localhost:8735   **Help:**   - `pspt alert show -?` |
-| "Remove alerts" | Removes all alerts for the selected server. | **Parameters:**   - -s, --server: Project server URL address - -a, --alert: Name of the alert    **Example:**   %InstallDirectory% > pspt alert remove --server https://localhost:8735 --alert alert1   **Help:**   - `pspt alert remove -?` |
-| "Export of server project" | Exports an existing server project to the destination folder in the specified path. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project to be exported.   If no project name is specified, all projects in the specified server repository are exported. - -t, --path: Selection of the destination folder to which the project is to be exported.   The folder must be empty. - -m, --metadata: (Optional) The server project is exported completely with the entire history and all existing revisions.   Default setting: Without the parameter in the command, the last revision version or the version specified with "revision" is exported. - -v, --revision: (Optional) Defines the revision number which is to be exported.   Default setting: Without specification of a version, the last revision is exported.   If a specific revision is specified, the server project is exported as a single-user project.   If the command contains the parameter "metadata", the parameter "revision" is ignored. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example**:  %InstallDirectory% > pspt project export --server net.tcp://localhost:8637 --project Project55 --path "E:\Exp1" -m -g MyGroup   **Help:**   - `pspt project export -?` |
-| "Import of server project" | Imports a server project from the specified path to the specified project server repository.   **Requirements:**   Only users with the role "Contributor" or "Manager" are permitted to execute this action.   **Rules:**   - You can only import one server project at a time. - The name of the server project to be imported is also used as the name of the destination folder. | **Parameters:**   - -s, --server: Project server URL address - -t, --path: Selection of the storage path from which the project is to be imported. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example**:  %InstallDirectory% > pspt project import --server https://localhost:8735 --path "E:\Exp1" -g MyGroup   **Help:**   - `pspt project import -?` |
-| "Export of server project sessions" | Exports the local sessions of a server project to the specified path. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose associated local sessions are to be exported.   If no project name is specified, all projects in the specified server repository are exported. - -t, --path: Selection of the destination folder to which the local sessions of the server project are to be exported.   The folder must be empty. - -i--id: (Optional) ID of the local session which is to be exported. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt session export --server net.tcp://localhost:8637 --project Project55 --path "E:\Exp1\Sessions" [--id] 1 -g MyGroup   **Help:**   - `pspt session export -?` |
-| "Import of server project sessions" | Imports the exported local sessions to a selected server project.   **Requirements:**   Only users with the role "Contributor" or "Manager" are permitted to execute this action.   **Rule:**   Only the local sessions known to the associated server project are imported. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose associated local sessions are to be imported. - -t, --path: Selection of the storage path from which the local sessions are to be imported. - -a, --alias: (Optional) Alias name of the destination server, if available. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt session import --server https://localhost:8735 --project Project55 --path "E:\Exp1\Sessions" -g MyGroup   **Help:**   - `pspt session import -?` |
-| "Export project history as xml" | Exports the existing project history to an existing file in ".xml" format. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose associated history is to be exported. - -t, --file: Target file and storage path for exporting the history. - -v, --revision: (Optional) Revision number for which the history is to be exported.   If no revision number is specified, the history for all revisions of the sever project is listed. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt project exportHistory -s http://server.com -p Project1 -t "C:\fileName.xml" -v 1,2,3,4 -f -g MyGroup   **Help:**   - `pspt project exportHistory -?` |
-| "Add note to a revision in server project" | Adds a note to a selected revision of a server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project. - -v, --revision: Revision to which a note is to be added.   If no revision number is specified, the note is added to all revisions of the sever project. - -n--note: Note to be added to the revision   Use the parameter "\n" in the text to add a line break.   Escape sequence: If the text contains functional characters, use the character "\" as an escape sequence. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% > pspt revisionnote add -s http://server.com -p Project1 -v 1 -n "MyNoteLine1\nLine2Note" -g MyGroup   **Help:**   - `pspt revisionnote add -?` |
-| "Project Commissioning" | Activates or deactivates commissioning mode for the selected server project.  This command is not available for server libraries. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project for which the commissioning mode is to be activated or deactivated. - -m, --mode: Activates or deactivates the commissioning mode.   - true: Activates the commissioning mode.   - false: Deactivates the commissioning mode.To activate the commissioning mode, add the "mode" parameter in the command.   Without the parameter in the command, the commissioning mode is deactivated.   You decide whether the synchronous or asynchronous commissioning mode is used in the commissioning configuration in the TIA Portal. - -d, --divergent: Activates or deactivates the option "Check for different data before download".   - true: Activates the consistency check.   - false: Deactivates the consistency check.To activate the consistency check, add the "divergent" parameter in the command.   Without the parameter in the command the consistency check remains deactivated. - -n, --groupName: Name of the group to be created    **Example:**   %InstallDirectory% > pspt project commissioning --server https://localhost:8735 -p Project1 -m true -d true -g MyGroup   **Help:**   - `pspt project commissioning -?` |
-| "Project rollback" | Resets the server to an existing older revision.   **Requirements:**   The command can only be executed if the server is not locked. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project that is to be reset to a previous revision. - -v, --revision: Revision number to which the project is to be reset. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example**:  %InstallDirectory% > pspt project rollback --server https://localhost:8735 --project projectName --revision 2 --group MyGroup   **Help:**   - `pspt project rollback -?` |
+| "Show projects" | Lists projects and groups of the selected project server. | **Parameters:**   - -s, --server: Project server URL address - -a, --all: Outputs a list with the full hierarchy of all groups and server projects on the server. - -p, --project: (Optional) Name of the server project.   The parameter is only evaluated if revisions can be displayed for a project.   If the command contains the parameter "all", the parameter "project" is ignored. - -v, --revisions: (Optional) Also lists all revisions for the project.   If the command contains the parameter "all", the parameter "revisions" is ignored. - -l, --page: (Optional) Page by page result display - -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary. - -g, --groupName: Name of the group if the server project is contained in a group.   If the command contains the parameter "all", the parameter "groupName" is ignored.    **Examples:**   Full list of the groups and projects:  %InstallDirectory% &gt; pspt project show --server https://localhost:8735 -a  Server projects of the "MyGroup" group:  %InstallDirectory% &gt; pspt project show --server https://localhost:8735 -g MyGroup   **Help:**   - `pspt project show -?` |
+| "Delete project" | Deletes specific projects on the project server.   **Requirements:**   The projects must not contain any local sessions. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project to be deleted. - -f --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt project remove --server https://localhost:8735 --project project155 -g MyGroup   **Help:**   - `pspt project remove -?` |
+| "Create group" | Creates a group on the project server.   **Requirements:**   Users need the "Manager" role for the project server | **Parameters:**   - -s, --server: Project server URL address - -g, --groupName: Name of the group to be created - -c, --comment: Comment with information, for example, the purpose of the group.    **Example:**   %InstallDirectory% &gt; pspt group create --server https://localhost:8735 --g MyGroup --c GroupComment   **Help:**   - `pspt group create -?` |
+| "Get group" | Lists all groups of the selected project server.  To list both the groups and the contained server projects, use the command "project show" with the parameter "all". | **Parameters:**   - -s, --server: Project server URL address    **Example:**   %InstallDirectory% &gt; pspt group get --server https://localhost:8735   **Help:**   - `pspt group get -?` |
+| "Delete group" | Deletes a group on the project server.   **Requirements:**   The group must not contain any server projects.  Users need the "Manager" role for the project server | **Parameters:**   - -s, --server: Project server URL address - -g, --groupName: Name of the group to be deleted - -f, --force: (Optional) Activates the command without further query.   Without the parameter in the command, a confirmation dialog is displayed.    **Example:**   %InstallDirectory% &gt; pspt group delete --server https://localhost:8735 -n MyGroup   **Help:**   - `pspt group delete -?` |
+| "Display sessions" | Lists all local sessions of the selected server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose sessions are listed. - -l, --page: (Optional) Page by page result display - -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt session show --server https://localhost:8735 --project project155 -g MyGroup   **Help:**   - `pspt session show -?` |
+| "Move session" | Updates the storage path of a local session which was moved to another path. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project to which the local session belongs. - -i, --id: ID of the local session to be moved. - -t, --path: Selection of the destination folder to which the local session is to be moved. - -m, --machine: (Optional) Name of computer if the destination folder is on a different PC. - -f, --force: (Optional) Activates the command without further query. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt session move --server https://localhost:8735 -id 1 --project Project1 --path C:\LocalPathForMoving -g MyGroup   **Help:**   - `pspt session move -?` |
+| "Delete session" | Deletes the selected local session on the project server | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose session is to be deleted. - -i, --id: Identification number of the session to be deleted. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt session remove --server https://localhost:8735 --project project155 --id 5 -g MyGroup   **Help:**   - `pspt session remove -?` |
+| "Remove project lock" | Removes the lock for the server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project to be unlocked. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt project unlock --server https://localhost:8735 --project project155 -g MyGroup   **Help:**   - `pspt project unlock -?` |
+| "Show check-in history" | Displays the check-in history for the selected server and the selected local session. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project for whose sessions the check-in history is listed.   If no project name is specified, the history of all projects is listed on the project server. - -f, --from: (Optional) Revision number from which the history of the session is to be listed.   The specified revision number is included in the list.   Without the parameter in the command, the check-in history since the creation of the session is displayed. - -t, --to: (Optional) Revision number up to which the history of the session is to be listed.   The specified revision number is included in the list.   Without the parameter in the command, the check-in history up to the current time is displayed. - -i, --id: (Optional) Identification number of the session whose check-in history is to be listed.   If no session identification number is specified, the history for all sessions of the sever project is listed. - -l, --page: (Optional) Page by page result display - -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt checkin show --server https://localhost:8735 --project project155 --from 5 --to 20 --id 5 -g MyGroup   **Help:**   - `pspt checkin show -?` |
+| "Show server access rights" | Shows the defined user rights for the users of a server, a group or a server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project for which the access rights are listed.   If no project name is specified, the access rights of all projects are listed on the project server. - -l, --page: Results display in page format - -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example**:  %InstallDirectory% &gt; pspt user show --server https://localhost:8735/ -p MYProject -g MyGroup   **Help:**   - `pspt user show -?` |
+| "Modify server access rights" | Changes the access rights for the server, a group or a server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project for which the user is to be granted access rights.   If no project name is specified, the user is granted access rights to the project server. - -u, --users: User names to be used for filtering, separated by commas. - -r, --role: Selecting the role - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt user add --server https://localhost:8735 --project Project1 --users user1,user2 --role Manager -g MyGroup   **Help:**   - `pspt user add -?` |
+| "Remove server access rights" | Removes the access rights for the server, a group or a server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project from whose user administration the user is to be removed.   If no project name is specified, the user is removed from the user administration of the server. - -u, --user: User names to be used for filtering, separated by commas. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt user remove --server https://localhost:8735 --users user1,user2 -g MyGroup   **Help:**   - `pspt user remove -?` |
+| "Show certificates" | Displays all existing multiuser certificates. | **Parameters:**   - -l, --page: (Optional) Option to divide up the pages to display the results.   -d, --display: (Optional) Result display in different form:   - cascade: Displays the results as cascade.   - tabular: Displays the results as table.   - short: Displays the results as summary.    **Example**:  %InstallDirectory% &gt; pspt certificate show   **Help:**   - `pspt certificate show -?` |
+| "Remove certificates" | Removes all certificates from the selected server. | **Parameters:**   - -s, --server: Project server URL address - -f, --force: (Optional) Activates the command without further query    **Example**:  %InstallDirectory% &gt; pspt certificate remove --server https://localhost:8735   **Help:**   - `pspt certificate remove -?` |
+| "Confirm certificate" | Saves the certificate for the selected server in the list of valid certificates. | **Parameters:**   - -s, --server: Project server URL address - -f, --force: (Optional) Activates the command without further query    **Example**:  %InstallDirectory% &gt; pspt certificate confirm --server https://localhost:8735   **Help:**   - `pspt certificate confirm -?` |
+| "Show alerts" | Displays the alerts for the selected server. | **Parameters:**   - -s, --server: Project server URL address    **Example:**   %InstallDirectory% &gt; pspt alert show --server https://localhost:8735   **Help:**   - `pspt alert show -?` |
+| "Remove alerts" | Removes all alerts for the selected server. | **Parameters:**   - -s, --server: Project server URL address - -a, --alert: Name of the alert    **Example:**   %InstallDirectory% &gt; pspt alert remove --server https://localhost:8735 --alert alert1   **Help:**   - `pspt alert remove -?` |
+| "Export of server project" | Exports an existing server project to the destination folder in the specified path. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project to be exported.   If no project name is specified, all projects in the specified server repository are exported. - -t, --path: Selection of the destination folder to which the project is to be exported.   The folder must be empty. - -m, --metadata: (Optional) The server project is exported completely with the entire history and all existing revisions.   Default setting: Without the parameter in the command, the last revision version or the version specified with "revision" is exported. - -v, --revision: (Optional) Defines the revision number which is to be exported.   Default setting: Without specification of a version, the last revision is exported.   If a specific revision is specified, the server project is exported as a single-user project.   If the command contains the parameter "metadata", the parameter "revision" is ignored. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example**:  %InstallDirectory% &gt; pspt project export --server net.tcp://localhost:8637 --project Project55 --path "E:\Exp1" -m -g MyGroup   **Help:**   - `pspt project export -?` |
+| "Import of server project" | Imports a server project from the specified path to the specified project server repository.   **Requirements:**   Only users with the role "Contributor" or "Manager" are permitted to execute this action.   **Rules:**   - You can only import one server project at a time. - The name of the server project to be imported is also used as the name of the destination folder. | **Parameters:**   - -s, --server: Project server URL address - -t, --path: Selection of the storage path from which the project is to be imported. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example**:  %InstallDirectory% &gt; pspt project import --server https://localhost:8735 --path "E:\Exp1" -g MyGroup   **Help:**   - `pspt project import -?` |
+| "Export of server project sessions" | Exports the local sessions of a server project to the specified path. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose associated local sessions are to be exported.   If no project name is specified, all projects in the specified server repository are exported. - -t, --path: Selection of the destination folder to which the local sessions of the server project are to be exported.   The folder must be empty. - -i--id: (Optional) ID of the local session which is to be exported. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt session export --server net.tcp://localhost:8637 --project Project55 --path "E:\Exp1\Sessions" [--id] 1 -g MyGroup   **Help:**   - `pspt session export -?` |
+| "Import of server project sessions" | Imports the exported local sessions to a selected server project.   **Requirements:**   Only users with the role "Contributor" or "Manager" are permitted to execute this action.   **Rule:**   Only the local sessions known to the associated server project are imported. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose associated local sessions are to be imported. - -t, --path: Selection of the storage path from which the local sessions are to be imported. - -a, --alias: (Optional) Alias name of the destination server, if available. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt session import --server https://localhost:8735 --project Project55 --path "E:\Exp1\Sessions" -g MyGroup   **Help:**   - `pspt session import -?` |
+| "Export project history as xml" | Exports the existing project history to an existing file in ".xml" format. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project whose associated history is to be exported. - -t, --file: Target file and storage path for exporting the history. - -v, --revision: (Optional) Revision number for which the history is to be exported.   If no revision number is specified, the history for all revisions of the sever project is listed. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt project exportHistory -s http://server.com -p Project1 -t "C:\fileName.xml" -v 1,2,3,4 -f -g MyGroup   **Help:**   - `pspt project exportHistory -?` |
+| "Add note to a revision in server project" | Adds a note to a selected revision of a server project. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project. - -v, --revision: Revision to which a note is to be added.   If no revision number is specified, the note is added to all revisions of the sever project. - -n--note: Note to be added to the revision   Use the parameter "\n" in the text to add a line break.   Escape sequence: If the text contains functional characters, use the character "\" as an escape sequence. - -g, --groupName: Name of the group if the server project is contained in a group.    **Example:**   %InstallDirectory% &gt; pspt revisionnote add -s http://server.com -p Project1 -v 1 -n "MyNoteLine1\nLine2Note" -g MyGroup   **Help:**   - `pspt revisionnote add -?` |
+| "Project Commissioning" | Activates or deactivates commissioning mode for the selected server project.  This command is not available for server libraries. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project for which the commissioning mode is to be activated or deactivated. - -m, --mode: Activates or deactivates the commissioning mode.   - true: Activates the commissioning mode.   - false: Deactivates the commissioning mode.To activate the commissioning mode, add the "mode" parameter in the command.   Without the parameter in the command, the commissioning mode is deactivated.   You decide whether the synchronous or asynchronous commissioning mode is used in the commissioning configuration in the TIA Portal. - -d, --divergent: Activates or deactivates the option "Check for different data before download".   - true: Activates the consistency check.   - false: Deactivates the consistency check.To activate the consistency check, add the "divergent" parameter in the command.   Without the parameter in the command the consistency check remains deactivated. - -n, --groupName: Name of the group to be created    **Example:**   %InstallDirectory% &gt; pspt project commissioning --server https://localhost:8735 -p Project1 -m true -d true -g MyGroup   **Help:**   - `pspt project commissioning -?` |
+| "Project rollback" | Resets the server to an existing older revision.   **Requirements:**   The command can only be executed if the server is not locked. | **Parameters:**   - -s, --server: Project server URL address - -p, --project: Name of the server project that is to be reset to a previous revision. - -v, --revision: Revision number to which the project is to be reset. - -f, --force: (Optional) Activates the command without further query - -g, --groupName: Name of the group if the server project is contained in a group.    **Example**:  %InstallDirectory% &gt; pspt project rollback --server https://localhost:8735 --project projectName --revision 2 --group MyGroup   **Help:**   - `pspt project rollback -?` |
 
 ### Confirm certificate for project server
 
@@ -2532,7 +2532,7 @@ To transfer the project server data of a project server to another project serve
 1. Stop the active project server.
 
    - Open the graphic ConfigurationTool for the project server configuration with administrator rights.
-   - Open the start menu by clicking the command "Start" > "All Programs" > "Siemens Automation".
+   - Open the start menu by clicking the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click the "TIA Project Server - Configuration" entry.
 
      This will open the user interface of the Configuration Tool.
@@ -2578,7 +2578,7 @@ The log files are not deleted automatically.
 To read out the error log, follow these steps:
 
 1. Open the directory for the respective project server in your archiving.
-2. Select the desired log file under the path <Repository>\logs.
+2. Select the desired log file under the path &lt;Repository&gt;\logs.
 3. Open the requested log file to check the content
 
 #### Read out error logs for server projects / server libraries
@@ -2588,7 +2588,7 @@ To read out the error log, follow these steps:
 1. Open the directory for the respective project server in your archiving.
 2. Select the desired log file under the following path:
 
-   <Repository>\proj\<Project name or library name>\logs
+   &lt;Repository&gt;\proj\&lt;Project name or library name&gt;\logs
 3. Open the requested log file to check the content.
 
 > **Note**
@@ -2612,7 +2612,7 @@ The following security relevant events relating to the project server also recei
 
 To read out the event view, follow these steps:
 
-1. Click "Start" > "Control Panel" > "System and Security" > "Administration".
+1. Click "Start" &gt; "Control Panel" &gt; "System and Security" &gt; "Administration".
 
    Alternatively, click "Start" and enter "Event view" in the search field.
 2. Double-click to open the Event view.

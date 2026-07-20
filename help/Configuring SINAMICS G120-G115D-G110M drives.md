@@ -146,7 +146,7 @@ Function diagram description
 | Diagram contents |  |  |
 | ⑥ | Signal path number | The signal path number is displayed in the footer. The function diagram is divided into eight (not subdivided) fields. These fields are used for navigation within the diagram. Links to other function diagrams always contain the signal path number in addition to the diagram number so that it is easier to find the link target. |
 | ⑦ | Links to other diagrams | The links to other diagrams can also be seen in the diagram. The structure of the links is as follows:  - Function block number - Signal path number (separated by a dot) |
-| ⑧ | Footnotes | Footnotes are identified in the text by angular brackets, e.g. <1> |
+| ⑧ | Footnotes | Footnotes are identified in the text by angular brackets, e.g. &lt;1&gt; |
 | ⑨ | Sampling Times | If required, the sampling times that apply for this diagram are shown in the diagrams (rounded rectangle). |
 | ⑩ | BICO interconnections | Signals are interconnected via BICO. |
 | ⑪ | Icons | The signal flow in the function diagram is illustrated by various symbols. An overview of these symbols can be found in diagrams 1020 - 1025. |
@@ -245,7 +245,7 @@ The shortcut menu of a drive in the project navigator contains the following ent
 | Go online | Establishes an online connection to the drive. |
 | Go offline | Cancels the online connection, the drive goes offline. |
 | Commissioning | Opens the commissioning editor. |
-| Online & diagnostics | Opens the Online & diagnostics editor; if the drive is not online, Startdrive tries to establish an online connection. |
+| Online &amp; diagnostics | Opens the Online &amp; diagnostics editor; if the drive is not online, Startdrive tries to establish an online connection. |
 | Properties | Opens the Properties dialog box of the drive. You can set, for example, the bus parameters there. |
 
 ### Parameterization
@@ -578,7 +578,7 @@ The specific parameters of the selected element are displayed in the inspector w
 
 ##### Displaying devices in the network view
 
-The network view is opened via the "Devices & networks" entry in the project navigation.
+The network view is opened via the "Devices &amp; networks" entry in the project navigation.
 
 ![Drives in the network view](images/103317405323_DV_resource.Stream@PNG-en-US.png)
 
@@ -745,7 +745,7 @@ The parameter list can be adapted in numerous ways through filters and sorting m
 
 ###### Using filters
 
-There is a drop-down list below the header of every column to edit the filters. "<All>" is displayed as default setting.
+There is a drop-down list below the header of every column to edit the filters. "&lt;All&gt;" is displayed as default setting.
 
 To edit a filter, proceed as follows:
 
@@ -756,7 +756,7 @@ To edit a filter, proceed as follows:
 3. After entering the value, change to another field and press the "Enter" key on the keyboard.
 
    The parameter list is updated.
-4. To display all parameters again, select "<All>" in the relevant drop-down list.
+4. To display all parameters again, select "&lt;All&gt;" in the relevant drop-down list.
 5. As soon as you have set a filter, a check mark is shown at the filter symbol in the first column.
 
 You set the filters in the column headers of the parameter view:
@@ -822,7 +822,7 @@ The standard search is displayed below "Tasks" in the right-hand editor of the p
 
 To use the standard search of the TIA Portal, proceed as follows:
 
-1. Enter <Ctrl+F> via the keyboard to open the search dialog box.
+1. Enter &lt;Ctrl+F&gt; via the keyboard to open the search dialog box.
 2. Enter the parameter number that you want to find.
 
    Or
@@ -830,7 +830,7 @@ To use the standard search of the TIA Portal, proceed as follows:
 4. Click "Find" to start the search.
 
    If the parameter or text is found, the cursor jumps automatically to the position in the parameter list.
-5. Press <F3> to jump to the next search result.
+5. Press &lt;F3&gt; to jump to the next search result.
 
 ###### Search mechanism of the parameter list
 
@@ -996,7 +996,7 @@ If the saved list has different value for the unit parameters (p100, p505, and p
 
 ![Working with unit parameters](images/116719490827_DV_resource.Stream@PNG-en-US.png)
 
-The corresponding parameters units get updated based on the value set in p100, p505, and p595. The parameters which can have different units based on the current setting of p100, p505 & p595 are highlighted in red as shown below:
+The corresponding parameters units get updated based on the value set in p100, p505, and p595. The parameters which can have different units based on the current setting of p100, p505 &amp; p595 are highlighted in red as shown below:
 
 ![Working with unit parameters](images/116719499403_DV_resource.Stream@PNG-en-US.png)
 
@@ -1711,7 +1711,7 @@ The following figure shows the various components of the control panel:
 
 ##### Calling up the control panel
 
-Call up the control panel via "<Drive unit> > Commissioning > Control panel". If there is no online connection, Startdrive attempts to establish a connection.
+Call up the control panel via "&lt;Drive unit&gt; &gt; Commissioning &gt; Control panel". If there is no online connection, Startdrive attempts to establish a connection.
 
 When an online connection has been established, the bar in the header area is shown in color. The control elements are grayed-out apart from the "Activate" button. The remaining control elements become active after you have activated the control panel and set the enables.
 
@@ -2192,7 +2192,7 @@ The parameter values are normally saved as volatile data in the RAM of the drive
 To save the data retentively, proceed as follows:
 
 1. Go online with the converter.
-2. Open "Commissioning > Save/reset".
+2. Open "Commissioning &gt; Save/reset".
 3. ① In the "Save/reset" dialog box, click "Save" under "Save RAM data to EEPROM".
 
    ![RAM data to EEPROM](images/103318931595_DV_resource.Stream@PNG-en-US.png)
@@ -2228,7 +2228,7 @@ Restoring factory settings
 To restore the factory settings, proceed as follows:
 
 1. Go online with the drive.
-2. Select "Commissioning > Save/Reset" in the project navigator.
+2. Select "Commissioning &gt; Save/Reset" in the project navigator.
 3. In the "Save/Reset" dialog box, click "Restore factory settings".
 4. Select "Reset parameters" in the drop-down list.
 5. Click the "Start" button.
@@ -2303,7 +2303,7 @@ To manually back up the settings, proceed as follows:
 1. If required, switch on the converter power supply.
 2. Insert the memory card into the converter.
 3. Go online with the drive.
-4. Select "Commissioning > Save/Reset" in the project navigator.
+4. Select "Commissioning &gt; Save/Reset" in the project navigator.
 5. Select a parameter set at "Parameter set in the drive".
 6. Enter a value at "Parameter set on memory card".
 7. Click "Save" to save the data to the memory card.
@@ -2341,7 +2341,7 @@ To automatically transfer the settings, proceed as follows:
 1. If required, switch on the converter power supply.
 2. Insert the memory card into the converter.
 3. Go online with Startdrive.
-4. Select "Commissioning > Save/Reset".
+4. Select "Commissioning &gt; Save/Reset".
 5. Enter a number for the parameter set at "Parameter set on memory card".
 6. Select a parameter set at "Parameter set in the drive".
 7. Click "Load" to load the data from the memory card to the converter.
@@ -2603,7 +2603,7 @@ Required parameters:
 - r7760[1] "Know-how protection active"
 - p7761 "Write protection"
 
-The parameters to be used are enumeration parameters. Each character of the password must be entered in an enum. The passwords can be up to 30 characters long [0 ... 29]. If you do not enter 30 characters, you must enter "0" in the enum [29]. The parameters require characters in ASCII code. You must therefore convert the characters of the password that you have specified into ASCII code. To do this, use e.g. Windows Character Map ("All programs > Accessories > System Tools > Character Map").
+The parameters to be used are enumeration parameters. Each character of the password must be entered in an enum. The passwords can be up to 30 characters long [0 ... 29]. If you do not enter 30 characters, you must enter "0" in the enum [29]. The parameters require characters in ASCII code. You must therefore convert the characters of the password that you have specified into ASCII code. To do this, use e.g. Windows Character Map ("All programs &gt; Accessories &gt; System Tools &gt; Character Map").
 
 Example: Enter password "G120" in parameter p7767
 
@@ -2696,7 +2696,7 @@ To upgrade the firmware, proceed as follows:
    If the device is already using the latest firmware, the menu item "Change device" is not active.
 3. Select the required firmware version at "New device" in the structure tree.
 4. Confirm your selection with "OK".
-5. Check the successful upgrade in the inspector window at "Info" > "General". Warnings may be displayed.
+5. Check the successful upgrade in the inspector window at "Info" &gt; "General". Warnings may be displayed.
 6. To complete the upgrade, first perform a download and then an upload from the device. The read-only parameters are then displayed with correct values.
 
 ##### Upgrading using drag-and-drop
@@ -2734,7 +2734,7 @@ To upgrade a G120C, proceed as follows:
    If the dialog at "New device" displays an empty list, the device is already using the latest firmware.
 3. Select the required firmware version at "New device" in the structure tree.
 4. Confirm your selection with "OK".
-5. Check the successful upgrade in the inspector window at "Info" > "General". Warnings may be displayed.
+5. Check the successful upgrade in the inspector window at "Info" &gt; "General". Warnings may be displayed.
 6. To complete the upgrade, first perform a download and then an upload from the device. The read-only parameters are then displayed with correct values.
 
 ##### Upgrade using drag-and-drop
@@ -2748,7 +2748,7 @@ This section contains information on the following topics:
 - [Online access/updating accessible devices](#online-accessupdating-accessible-devices)
 - [Entering parameters in the project offline](#entering-parameters-in-the-project-offline)
 - [Go online, upload and download](#go-online-upload-and-download)
-- [Online & diagnostics](#online-diagnostics)
+- [Online &amp; diagnostics](#online-diagnostics)
 - [Fault and alarm concept for SINAMICS drives](#fault-and-alarm-concept-for-sinamics-drives)
 
 ### Online access/updating accessible devices
@@ -2922,7 +2922,7 @@ The device is displayed.
 
 To assign an IP address, proceed as follows:
 
-1. Open "Online & diagnostics" in the appropriate interface under "Online access" in the project navigator.
+1. Open "Online &amp; diagnostics" in the appropriate interface under "Online access" in the project navigator.
 2. Open the "Functions" entry.
 3. Double-click the "Assign IP address" entry in the secondary navigation.
 
@@ -2961,7 +2961,7 @@ An online connection has been established to the device.
 
 To assign a name, proceed as follows:
 
-1. Open "Online & diagnostics" in the appropriate interface under "Online access" in the project navigator.
+1. Open "Online &amp; diagnostics" in the appropriate interface under "Online access" in the project navigator.
 2. Open the "Functions" entry.
 3. Double-click the "Assign name" entry in the secondary navigation.
 
@@ -3140,7 +3140,7 @@ An online connection has been established to the drive.
 
 To restore the factory settings, proceed as follows:
 
-1. Open the "Online & diagnostics" entry at "Online access".
+1. Open the "Online &amp; diagnostics" entry at "Online access".
 2. Double-click the entry.
 3. Open the "Functions" entry.
 4. Double-click the "Restore factory settings" entry in the secondary navigation.
@@ -3170,7 +3170,7 @@ An Ethernet interface is required for the communication between the drive and th
 You have the following functions to assign the PG/PC interface:
 
 - "Go online" function (function is available until the PG/PC interface is set up successfully)
-- "Online & diagnostics" function
+- "Online &amp; diagnostics" function
 - "Online access" function
 
 > **Note**
@@ -3275,7 +3275,7 @@ You must make the following settings:
 
 ###### Result
 
-When you have established an online connection to the drive, check the settings. To do this, select "Online & diagnostics > Diagnostics > Commissioning interface".
+When you have established an online connection to the drive, check the settings. To do this, select "Online &amp; diagnostics &gt; Diagnostics &gt; Commissioning interface".
 
 ![PROFIBUS commissioning interface](images/103320239883_DV_resource.Stream@PNG-en-US.png)
 
@@ -3558,7 +3558,7 @@ To upload a device, proceed as follows:
    Startdrive goes online and searches for devices via the selected interface.
 
    The found devices are displayed below the interface in the project navigator.
-4. Select the device. Then perform "Online > Upload device as new station (hardware and software)".
+4. Select the device. Then perform "Online &gt; Upload device as new station (hardware and software)".
 
    The "Upload preview" dialog box is displayed.
 5. If the requirements for the upload are satisfied, activate the option.
@@ -3581,7 +3581,7 @@ You can then restore your project using runtime data without having the original
 The following cases can occur:
 
 1. Upload of the controller with a proxy object of the drive. If you upload the controller first, a proxy object is created for the drive in the network view. The configuration can be compiled and downloaded again.
-2. Upload of the drive if a proxy object has already been created with the controller. To do this, you must upload the drive using the "Online > Upload device as new station (hardware and software)" function under "Online access". An upload from the network view is not supported.
+2. Upload of the drive if a proxy object has already been created with the controller. To do this, you must upload the drive using the "Online &gt; Upload device as new station (hardware and software)" function under "Online access". An upload from the network view is not supported.
 3. Upload of the controller when the drive has already been loaded.
 
 > **Note**
@@ -3610,14 +3610,14 @@ To upload the configuration, proceed as follows:
 
    Startdrive goes online and searches for devices via the selected interface.
 4. Select the controller found at the interface.
-5. Perform "Online > Upload device as new station (hardware and software)".
+5. Perform "Online &gt; Upload device as new station (hardware and software)".
 
    The controller is uploaded and displayed. The available drives are uploaded as proxy objects (see following figure).
 
    ![Station upload with proxy](images/103320625419_DV_resource.Stream@PNG-en-US.png)
 
    Station upload with proxy
-6. Select the drive at "Go online" and perform "Online > Upload device as new station (hardware and software)".
+6. Select the drive at "Go online" and perform "Online &gt; Upload device as new station (hardware and software)".
 
    The configuration is uploaded and the proxy object replaced by the drive.
 
@@ -3913,7 +3913,7 @@ The following fault reactions are defined:
 | STOP1 | - | - | In preparation |
 | STOP2 | - | n_set = 0 | - The drive is braked along the OFF3 down ramp (p1135) by immediately entering n_set = 0. - The drive remains in closed-loop speed control mode. |
 | IASC/DC BRAKING | - | - | - For synchronous motors, the following applies:   If a fault occurs with this fault reaction, an internal armature short-circuit is triggered.   The conditions for p1231 = 4 must be observed. - For induction motors, the following applies:   If a fault occurs with this fault reaction, DC braking is triggered.   DC braking must have been commissioned (p1232, p1233, p1234). |
-| ENCODER | - | Internal/external pulse disable (p0491) | The fault reaction ENCODER is applied as a function of the setting in p0491.  Factory setting:  p0491 = 0 -> encoder error results in OFF2   **Important**:  When changing p0491, it is imperative that the information in the description of this parameter is carefully observed. |
+| ENCODER | - | Internal/external pulse disable (p0491) | The fault reaction ENCODER is applied as a function of the setting in p0491.  Factory setting:  p0491 = 0 -&gt; encoder error results in OFF2   **Important**:  When changing p0491, it is imperative that the information in the description of this parameter is carefully observed. |
 
 ##### Acknowledgement of faults
 
@@ -3922,7 +3922,7 @@ The list of faults and alarms specifies how to acknowledge each fault after the 
 | Acknowledgement | Description |
 | --- | --- |
 | POWER ON | The fault is acknowledged by a POWER ON process (switch drive unit off and on again).  Note:  If this action has not eliminated the fault cause, the fault is displayed again immediately after power up. |
-| IMMEDIATELY | Faults can be acknowledged on one drive object (Points 1 to 3) or on all drive objects (point 4) as follows:  1. Acknowledging by setting a parameter:    p3981 = 0 -> 1 2. Acknowledging via binector inputs:    p2103 BI: 1. Acknowledge faults    p2104           BI: 2. Acknowledge faults    p2105           BI: 3. Acknowledge faults 3. Acknowledging via a PROFIBUS control signal:    STW1.7 = 0 -> 1 (edge) 4. Acknowledge all faults    p2102 BI: Acknowledge all faults    All of the faults on all of the drive objects of the drive system can be acknowledged using this binector input.   Note:  - These faults can also be acknowledged by a POWER ON operation. - If this action has not eliminated the fault cause, the fault will continue to be displayed after acknowledgement. -  Safety Integrated faults   The "Safe Standstill" (SH) function must be deselected before acknowledging these faults. |
+| IMMEDIATELY | Faults can be acknowledged on one drive object (Points 1 to 3) or on all drive objects (point 4) as follows:  1. Acknowledging by setting a parameter:    p3981 = 0 -&gt; 1 2. Acknowledging via binector inputs:    p2103 BI: 1. Acknowledge faults    p2104           BI: 2. Acknowledge faults    p2105           BI: 3. Acknowledge faults 3. Acknowledging via a PROFIBUS control signal:    STW1.7 = 0 -&gt; 1 (edge) 4. Acknowledge all faults    p2102 BI: Acknowledge all faults    All of the faults on all of the drive objects of the drive system can be acknowledged using this binector input.   Note:  - These faults can also be acknowledged by a POWER ON operation. - If this action has not eliminated the fault cause, the fault will continue to be displayed after acknowledgement. -  Safety Integrated faults   The "Safe Standstill" (SH) function must be deselected before acknowledging these faults. |
 | PULSE INHIBIT | The fault can only be acknowledged with a pulse inhibit (r0899.11 = 0).  The same possibilities are available for acknowledging as described under acknowledge IMMEDIATELY. |
 
 #### Explanations for SINAMICS Faults and Alarms

@@ -42,7 +42,7 @@ Synchronous commissioning is started as default setting when commissioning mode 
 
 For more details, see: [Enabling and disabling commissioning mode](#enabling-and-disabling-commissioning-mode)
 
-You switch between synchronous and asynchronous commissioning in the TIA Portal settings (Options > Settings > Multiuser > Commissioning settings) or by clicking the corresponding button in the project tree.
+You switch between synchronous and asynchronous commissioning in the TIA Portal settings (Options &gt; Settings &gt; Multiuser &gt; Commissioning settings) or by clicking the corresponding button in the project tree.
 
 For the current session, you can switch using the button in the project tree. However, this switch only remains active until the session is closed. When the local session is opened again, the default setting from the TIA Portal settings will be used once more.
 
@@ -149,14 +149,14 @@ By working on different objects, such as different tags, blocks, PLC tags, inter
 
 ### Introduction
 
-The general settings for Multiuser Engineering also apply to working with Multiuser Commissioning . You can make the following settings in the TIA Portal under "Options > Settings" in the "Multiuser" tab:
+The general settings for Multiuser Engineering also apply to working with Multiuser Commissioning . You can make the following settings in the TIA Portal under "Options &gt; Settings" in the "Multiuser" tab:
 
 - General
 - Searching in the project
 - Compilation settings
 - Commissioning settings
 
-As of TIA Portal V16, you can make the following settings for Multiuser Commissioning in the TIA Portal under "Options > Settings" in the "Commissioning" tab:
+As of TIA Portal V16, you can make the following settings for Multiuser Commissioning in the TIA Portal under "Options &gt; Settings" in the "Commissioning" tab:
 
 - Running Multiuser Commissioning in synchronous mode
 
@@ -327,7 +327,7 @@ Proceed as follows:
 
 1. Open the graphic tool for the multiuser server administration.
 
-   - To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+   - To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
    - Click on the entry "TIA Project Server - Administration" to open the Administration Tool.
 2. Under "Administration", you can find a list of the configured server connections as soon as you have set up a connection to the multiuser server with "Add server connection". On the right side, you receive additional information about the objects selected on the left in a detail view.
 3. On the left side, select the server and the project for which you want to set up commissioning mode.
@@ -361,7 +361,7 @@ The "commissioning mode" is switched on by clicking the "Multiuser Commissioning
 
 Multiuser Commissioning is available in "synchronous mode" and "asynchronous mode".
 
-You switch between synchronous and asynchronous commissioning in the TIA Portal settings via Options > Settings > Multiuser > Commissioning settings.
+You switch between synchronous and asynchronous commissioning in the TIA Portal settings via Options &gt; Settings &gt; Multiuser &gt; Commissioning settings.
 
 For the current session, you can switch using the button in the project tree. However, this switch only remains active until the session is closed. When the local session is opened again, the default setting from the TIA Portal settings will be used once more.
 
@@ -403,7 +403,7 @@ Observe the following notes on working in synchronous mode:
 
 As of V16, Multiuser Commissioning is available to you in "synchronous mode" and in "asynchronous mode".
 
-You switch between synchronous and asynchronous commissioning in the TIA Portal settings via Options > Settings > Multiuser > Commissioning settings.
+You switch between synchronous and asynchronous commissioning in the TIA Portal settings via Options &gt; Settings &gt; Multiuser &gt; Commissioning settings.
 
 For the current session, you can switch using the button in the project tree. However, this switch only remains active until the session is closed. When the local session is opened again, the default setting from the TIA Portal settings will be used once more.
 
@@ -440,7 +440,7 @@ Observe the following procedure for working in asynchronous mode:
 - You will also be shown status information, warnings and error messages:
 
   - Compilation errors and download warnings are displayed in the commissioning editor.
-  - Information and warnings are displayed in the Inspector window under the "Info > General" tab. When asynchronous commissioning has been started, a corresponding message is displayed here with a green arrow. When you click on this arrow, the commissioning editor is opened in the foreground.
+  - Information and warnings are displayed in the Inspector window under the "Info &gt; General" tab. When asynchronous commissioning has been started, a corresponding message is displayed here with a green arrow. When you click on this arrow, the commissioning editor is opened in the foreground.
 
 ---
 
@@ -535,7 +535,7 @@ If errors or problems occur during downloading when working in asynchronous mode
 
 ### Opening the commissioning editor
 
-If you are working with asynchronous commissioning and perform a download operation, you will receive the corresponding messages on this as usual in the "Info > General" tab in the Inspector window. As soon as asynchronous commissioning has been started in the background, you receive a corresponding message with an appended green arrow.
+If you are working with asynchronous commissioning and perform a download operation, you will receive the corresponding messages on this as usual in the "Info &gt; General" tab in the Inspector window. As soon as asynchronous commissioning has been started in the background, you receive a corresponding message with an appended green arrow.
 
 You have the following options to open the editor:
 

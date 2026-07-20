@@ -1244,9 +1244,9 @@ When downloading the device parameterization, a parameter back-up file PSxxxyyy.
 associated with a drive object cannot be found.  
 Fault value (r0949, interpret hexadecimal):  
 Byte 1: yyy in the file name PSxxxyyy.ACX  
-yyy = 000 --> consistency back-up file  
-yyy = 001 ... 062 --> drive object number  
-yyy = 099 --> PROFIBUS parameter back-up file  
+yyy = 000 --&gt; consistency back-up file  
+yyy = 001 ... 062 --&gt; drive object number  
+yyy = 099 --&gt; PROFIBUS parameter back-up file  
 Byte 2, 3, 4:  
 Only for internal Siemens troubleshooting.
 
@@ -1307,12 +1307,12 @@ An error has occurred when downloading PSxxxyyy.ACX or PTxxxyyy.ACX files from t
 non-volatile memory.  
 Fault value (r0949, interpret hexadecimal):  
 Byte 1: yyy in the file name PSxxxyyy.ACX  
-yyy = 000 --> consistency back-up file  
-yyy = 001 ... 062 --> drive object number  
-yyy = 099 --> PROFIBUS parameter back-up file  
+yyy = 000 --&gt; consistency back-up file  
+yyy = 001 ... 062 --&gt; drive object number  
+yyy = 099 --&gt; PROFIBUS parameter back-up file  
 Byte 2:  
 255: Incorrect drive object type.  
-254: Topology comparison unsuccessful -> drive object type was not able to be identified.  
+254: Topology comparison unsuccessful -&gt; drive object type was not able to be identified.  
 Reasons could be:  
 - incorrect component type in the actual topology  
 - Component does not exist in the actual topology.  
@@ -1383,16 +1383,16 @@ has the "read only" file attribute and cannot be overwritten.
 Fault value (r0949, interpret hexadecimal):  
 dcba hex  
 a = yyy in the file names PSxxxyyy.***  
-a = 000 --> consistency back-up file  
-a = 001 ... 062 --> drive object number  
-a = 070 --> FEPROM.BIN  
-a = 080 --> DEL4BOOT.TXT  
-a = 099 --> PROFIBUS parameter back-up file  
+a = 000 --&gt; consistency back-up file  
+a = 001 ... 062 --&gt; drive object number  
+a = 070 --&gt; FEPROM.BIN  
+a = 080 --&gt; DEL4BOOT.TXT  
+a = 099 --&gt; PROFIBUS parameter back-up file  
 b = xxx in the file names PSxxxyyy.***  
-b = 000 --> data save started with p0977 = 1 or p0971 = 1  
-b = 010 --> data save started with p0977 = 10  
-b = 011 --> data save started with p0977 = 11  
-b = 012 --> data save started with p0977 = 12  
+b = 000 --&gt; data save started with p0977 = 1 or p0971 = 1  
+b = 010 --&gt; data save started with p0977 = 10  
+b = 011 --&gt; data save started with p0977 = 11  
+b = 012 --&gt; data save started with p0977 = 12  
 d, c:  
 Only for internal Siemens troubleshooting.
 
@@ -3794,7 +3794,7 @@ General note:
 The topology rules should be noted when connecting up DRIVE-CLiQ (refer to the appropriate
 product documentation).  
 The parameters of the sampling times can also be changed with automatic calculations.  
-Example for highest common denominator: 125 s, 125 µs, 62.5 µs --> 62.5 µs
+Example for highest common denominator: 125 s, 125 µs, 62.5 µs --&gt; 62.5 µs
 
 **Remedy:**
   
@@ -3935,10 +3935,10 @@ Only for internal Siemens troubleshooting.
 
 **Remedy:**
   
-For alarm value r2124 < 256, the following applies:  
+For alarm value r2124 &lt; 256, the following applies:  
 - carry out a POWER ON (switch-off/switch-on).  
 - replace the Control Unit.  
-For alarm value r2124 >= 256, the following applies:  
+For alarm value r2124 &gt;= 256, the following applies:  
 - for the drive object with this alarm, clear the fault memory (p0952 = 0).  
 - as an alternative, clear the fault memory of all drive objects (p2147 = 1).  
 - replace the Control Unit.
@@ -4121,7 +4121,7 @@ POWER ON
   
 An error has occurred while accessing the hardware description file on the CompactFlash
 card.  
-Directory and file name: ADDON/SINAMICS/DATA/HW_DESC/<DOType>/DESC0000  
+Directory and file name: ADDON/SINAMICS/DATA/HW_DESC/&lt;DOType&gt;/DESC0000  
 Fault value (r0949, interpret decimal):  
 22: File not found.  
 24: File read access error.  
@@ -4515,7 +4515,7 @@ Component class and connection number are described in F01375.
 - remove the corresponding component.  
 - change the setting "deactivate and not present".  
 Note:  
-Under "Topology --> Topology view", the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view", the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).  
 See also: p0105, p0125, p0145, p0155, p0165
 
@@ -5211,7 +5211,7 @@ a 3 at the last position of the Article No.)).
 system should be connected to a free DRIVE-CLiQ socket of the NX.  
 - for BSR Motor Modules, the following applies: If Safety Extended Functions is enabled,
 and 6 axes are operated on the DRIVE-CLiQ line, then the clock cycle for the actual
-value sensing must be set as follows: p9511 >= 8 * current controller sampling time
+value sensing must be set as follows: p9511 &gt;= 8 * current controller sampling time
 (p0115[0]).  
 For fault value = 8yy in addition:  
 - check the clock cycles settings (p0112, p0115, p4099). Clock cycles on a DRIVE-CLiQ
@@ -5931,7 +5931,7 @@ Connection number:
   
 Output the fault value and remove the specified connection.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### F01380 Topology: Actual topology EEPROM defective
@@ -6105,7 +6105,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01382 Topology: Sensor Module incorrectly inserted
@@ -6231,7 +6231,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01383 Topology: Terminal Module incorrectly inserted
@@ -6357,7 +6357,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01384 Topology: DRIVE-CLiQ Hub Module incorrectly inserted
@@ -6483,7 +6483,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01385 Topology: Controller Extension incorrectly inserted
@@ -6609,7 +6609,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01386 Topology: DRIVE-CLiQ component incorrectly inserted
@@ -6735,7 +6735,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01387 Topology: Option slot component incorrectly inserted
@@ -6861,7 +6861,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01388 Topology: EnDat encoder incorrectly inserted
@@ -6987,7 +6987,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01389 Topology: Motor with DRIVE-CLiQ incorrectly inserted
@@ -7113,7 +7113,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01416 Topology: Component additionally inserted
@@ -7232,7 +7232,7 @@ Adapting topologies:
 - remove the additional component (correct the actual topology).  
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01420 Topology: Component different
@@ -7341,7 +7341,7 @@ Topology comparison - if required, adapt the comparison level:
 - parameterize the topology comparison of all components (p9906).  
 - parameterize the topology comparison of one components (p9907, p9908).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01421 Topology: Comparison different components
@@ -7442,7 +7442,7 @@ cannot be enabled.
 Check the component wiring against the hardware configuration of the drive unit in
 the commissioning tool and correct any differences.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01425 Topology: Serial number different
@@ -7524,10 +7524,10 @@ Adapting topologies:
 - change over the actual topology to match the target topology.  
 - load the target topology that matches the actual topology (commissioning tool).  
 For byte cc:  
-cc = 1 --> can be acknowledged using p9904 or p9905.  
-cc > 1 --> can be acknowledged using p9905 and can be deactivated using p9906 or p9907/p9908.  
+cc = 1 --&gt; can be acknowledged using p9904 or p9905.  
+cc &gt; 1 --&gt; can be acknowledged using p9905 and can be deactivated using p9906 or p9907/p9908.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).  
 See also: p9904 (Topology comparison acknowledge differences), p9905 (Device specialization),
 p9906 (Topology comparison all components comparison level), p9907 (Topology comparison
@@ -7651,7 +7651,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).  
 See also: p9904 (Topology comparison acknowledge differences)
 
@@ -7775,7 +7775,7 @@ Note:
 In the software, a Double Motor Module behaves just like two separate DRIVE-CLiQ nodes.
 If a Double Motor Module is re-inserted, this can result in several differences in
 the actual topology.  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### F01451 Topology: Target topology is invalid
@@ -7938,7 +7938,7 @@ Connection number is described in F01375.
 Read out the fault value and remove one of the specified connections.  
 Then download the target topology again using the commissioning tool.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### F01475 Topology: Target topology duplicate connection between two components
@@ -8054,7 +8054,7 @@ Connection number is described in F01375.
 Read out the fault value and remove one of the two specified connections.  
 Then download the target topology again using the commissioning tool.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01481 (N) Topology: power unit not connected
@@ -8180,7 +8180,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 Reaction upon N:  
@@ -8308,7 +8308,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01483 Topology: Terminal Module not connected
@@ -8430,7 +8430,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01484 Topology: DRIVE-CLiQ Hub Module not connected
@@ -8552,7 +8552,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01485 Topology: Controller Extension not connected
@@ -8674,7 +8674,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01486 Topology: DRIVE-CLiQ component not connected
@@ -8796,7 +8796,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01487 Topology: Option slot component not inserted
@@ -8918,7 +8918,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01488 Topology: EnDat encoder not connected
@@ -9040,7 +9040,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01489 Topology: motor with DRIVE-CLiQ not connected
@@ -9162,7 +9162,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01507 (F, N) BICO: Interconnections to inactive objects present
@@ -10240,7 +10240,7 @@ the process data exchange.
 For alarm value = 2:  
 - check the number of data words for output and input to a drive object.  
 For alarm value = 211:  
-- Ensure offline version <= online version.  
+- Ensure offline version &lt;= online version.  
 For alarm value = 223, 500:  
 - check the setting in p8839 and p8815.  
 - check for inserted but not configured CBE20.  
@@ -10305,24 +10305,24 @@ NONE
   
 Parameterization for isochronous operation is not permissible.  
 Alarm value (r2124, interpret decimal):  
-0: Bus cycle time Tdp < 0.5 ms.  
-1: Bus cycle time Tdp > 32 ms.  
+0: Bus cycle time Tdp &lt; 0.5 ms.  
+1: Bus cycle time Tdp &gt; 32 ms.  
 2: Bus cycle time Tdp is not an integer multiple of the current controller sampling
 time.  
-3: Instant of the actual value sensing Ti > Bus cycle time Tdp or Ti = 0.  
+3: Instant of the actual value sensing Ti &gt; Bus cycle time Tdp or Ti = 0.  
 4: Instant of the actual value sensing Ti is not an integer multiple of the current
 controller sampling time.  
-5: Instant of the setpoint acceptance To >= Bus cycle time Tdp or To = 0.  
+5: Instant of the setpoint acceptance To &gt;= Bus cycle time Tdp or To = 0.  
 6: Instant of the setpoint acceptance To is not an integer multiple of the current
 controller sampling time.  
 7: Master application cycle time Tmapc is not an integer multiple of the speed controller
 sampling time.  
 8: Bus reserve bus cycle time Tdp - data exchange time Tdx less than two current controller
 sampling times.  
-10: Instant of the setpoint acceptance To <= data exchange time Tdx + current controller
+10: Instant of the setpoint acceptance To &lt;= data exchange time Tdx + current controller
 sampling time  
-11: Master application cycle time Tmapc > 14 x Tdp or Tmapc = 0.  
-12: PLL tolerance window Tpll_w > Tpll_w_max.  
+11: Master application cycle time Tmapc &gt; 14 x Tdp or Tmapc = 0.  
+12: PLL tolerance window Tpll_w &gt; Tpll_w_max.  
 13: Bus cycle time Tdp is not a multiple of all basic clock cycles p0110[x].  
 16: For COMM BOARD, the instant in time for the actual value sensing Ti is less than
 two current controller sampling times.
@@ -10897,7 +10897,7 @@ within the PROFIBUS clock cycle.
 **Remedy:**
   
 - check bus configuration.  
-- check parameters for clock cycle synchronization (ensure To > Tdx).  
+- check parameters for clock cycle synchronization (ensure To &gt; Tdx).  
 Note:  
 To: Time of setpoint acceptance  
 Tdx: Data exchange time
@@ -11777,7 +11777,7 @@ The alarm is automatically withdrawn after approx. 30 seconds.
 Alarm value (r2124, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = info. 1, xxxx = info. 2  
 Info 1 = 0: number of RT connections exceeded  
-Info 1 > 0: number of IRT connections exceeded  
+Info 1 &gt; 0: number of IRT connections exceeded  
 Info 2: permitted number of connections
 
 **Remedy:**
@@ -12099,7 +12099,7 @@ The alarm is automatically withdrawn after approx. 30 seconds.
 Alarm value (r2124, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = info. 1, xxxx = info. 2  
 Info 1 = 0: number of RT connections exceeded  
-Info 1 > 0: number of IRT connections exceeded  
+Info 1 &gt; 0: number of IRT connections exceeded  
 Info 2: permitted number of connections
 
 **Remedy:**
@@ -13049,8 +13049,8 @@ Bandwidth_max = 1 / (2 x time slice clock cycle)
 Bandwidth_min = Bandwidth_max / 100000  
 Example:  
 Assumption: p4830 = 125 µs  
---> Bandwidth_max = 1 / (2 x 125 µs) = 4000 Hz  
---> Bandwidth_min = 4000 Hz / 100000 = 0.04 Hz  
+--&gt; Bandwidth_max = 1 / (2 x 125 µs) = 4000 Hz  
+--&gt; Bandwidth_min = 4000 Hz / 100000 = 0.04 Hz  
 Note:  
 p4823: Function generator bandwidth  
 p4830: Function generator time slice clock cycle  
@@ -13376,8 +13376,8 @@ See also: p4723 (Trace time slice cycle)
 
 **Remedy:**
   
-Enter the clock cycle of an existing time slice with a cycle time >= 2 ms for up to
-4 recording channels or >= 4 ms from 5 recording channels per trace.  
+Enter the clock cycle of an existing time slice with a cycle time &gt;= 2 ms for up to
+4 recording channels or &gt;= 4 ms from 5 recording channels per trace.  
 The existing time slices can be read out via p7901.  
 See also: r7901 (Sampling times)
 
@@ -13420,7 +13420,7 @@ See also: p4723 (Trace time slice cycle)
 
 **Remedy:**
   
-Enter the clock cycle of an existing time slice with a cycle time >= 4 ms or reduce
+Enter the clock cycle of an existing time slice with a cycle time &gt;= 4 ms or reduce
 the number of recording channels to 4 per trace.  
 The existing time slices can be read out via p7901.  
 See also: r7901 (Sampling times)
@@ -14849,7 +14849,7 @@ p0408, p0640, p1082, p1300
 **Remedy:**
   
 Modify the parameter indicated in the fault value (r0949) (e.g. p0640 = current limit
-> 0).  
+&gt; 0).  
 See also: p0311, p0341, p0344, p0350, p0354, p0356, p0358, p0360, p0400, p0404, p0408, p0640,
 p1082
 
@@ -15092,8 +15092,8 @@ NONE
   
 As a result of the violation of a parameter limit, the parameter value was automatically
 corrected.  
-Minimum limit violated --> parameter is set to the minimum value.  
-Maximum limit violated --> parameter is set to the maximum value.  
+Minimum limit violated --&gt; parameter is set to the minimum value.  
+Maximum limit violated --&gt; parameter is set to the maximum value.  
 Alarm value (r2124, interpret decimal):  
 Parameter number, whose value had to be adapted.
 
@@ -15484,7 +15484,7 @@ NONE
 
 **Cause:**
   
-The selected command data set is not available (p0836 > p0170). The command data set
+The selected command data set is not available (p0836 &gt; p0170). The command data set
 was not changed over.  
 See also: p0810, p0811, r0836
 
@@ -17372,7 +17372,7 @@ NONE
 The CAN controller has lost a receive message.  
 Alarm value (r2124, interpret decimal):  
 Hardware channel in the CAN controller.  
-0: Firmware version < 5.2 (no reference to the original hardware channel).  
+0: Firmware version &lt; 5.2 (no reference to the original hardware channel).  
 1: NMT command message  
 2: SYNC message  
 3: NMT error control message  
@@ -17683,9 +17683,9 @@ NONE
 For online operation, the appropriate COB-ID must be set invalid before mapping.  
 Example:  
 Mapping for RPDO 1 should be changed (p8710[0]).  
---> set p8700[0] = C00006E0 hex (invalid COB-ID)  
---> set p8710[0] as required.  
---> p8700[0] enter a valid COB-ID
+--&gt; set p8700[0] = C00006E0 hex (invalid COB-ID)  
+--&gt; set p8710[0] as required.  
+--&gt; p8700[0] enter a valid COB-ID
 
 **Remedy:**
   
@@ -19515,7 +19515,7 @@ ddcbaa dec: dd = component number, c = AI/AO, b = fault type, aa = number
 c = 0: analog input (AI)  
 c = 1: analog output (AO)  
 b = 0: No calibration data available.  
-b = 1: Offset too high (> 100 mV).
+b = 1: Offset too high (&gt; 100 mV).
 
 **Remedy:**
   
@@ -19582,8 +19582,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[0] = 1, 4), the
 following applies:  
-- if r4101[0] > 1650 ohms, the temperature r4105[0] = 250 °C  
-- if r4101[0] <= 1650 ohms, the temperature r4105[0] = -50 °C  
+- if r4101[0] &gt; 1650 ohms, the temperature r4105[0] = 250 °C  
+- if r4101[0] &lt;= 1650 ohms, the temperature r4105[0] = -50 °C  
 The temperature actual value is displayed via connector output r4105[0] and can be
 interconnected.  
 Notice:  
@@ -19659,8 +19659,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[1] = 1, 4), the
 following applies:  
-- if r4101[1] > 1650 ohms, the temperature r4105[1] = 250 °C  
-- if r4101[1] <= 1650 ohms, the temperature r4105[1] = -50 °C  
+- if r4101[1] &gt; 1650 ohms, the temperature r4105[1] = 250 °C  
+- if r4101[1] &lt;= 1650 ohms, the temperature r4105[1] = -50 °C  
 The temperature actual value is displayed via connector output r4105[1] and can be
 interconnected.  
 Notice:  
@@ -19736,8 +19736,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[2] = 1, 4), the
 following applies:  
-- if r4101[2] > 1650 ohms, the temperature r4105[2] = 250 °C  
-- if r4101[2] <= 1650 ohms, the temperature r4105[2] = -50 °C  
+- if r4101[2] &gt; 1650 ohms, the temperature r4105[2] = 250 °C  
+- if r4101[2] &lt;= 1650 ohms, the temperature r4105[2] = -50 °C  
 The temperature actual value is displayed via connector output r4105[2] and can be
 interconnected.  
 Notice:  
@@ -19813,8 +19813,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[3] = 1, 4), the
 following applies:  
-- if r4101[3] > 1650 ohms, the temperature r4105[3] = 250 °C  
-- if r4101[3] <= 1650 ohms, the temperature r4105[3] = -50 °C  
+- if r4101[3] &gt; 1650 ohms, the temperature r4105[3] = 250 °C  
+- if r4101[3] &lt;= 1650 ohms, the temperature r4105[3] = -50 °C  
 The temperature actual value is displayed via connector output r4105[3] and can be
 interconnected.  
 Notice:  
@@ -19884,8 +19884,8 @@ The temperature measured using the temperature sensing of the Terminal Module (T
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[0] = 1, 4), the
 following applies:  
-- if r4101[0] > 1650 ohms, the temperature r4105[0] = 250 °C  
-- if r4101[0] <= 1650 ohms, the temperature r4105[0] = -50 °C  
+- if r4101[0] &gt; 1650 ohms, the temperature r4105[0] = 250 °C  
+- if r4101[0] &lt;= 1650 ohms, the temperature r4105[0] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -19949,8 +19949,8 @@ The temperature measured using the temperature sensing of the Terminal Module (T
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[1] = 1, 4), the
 following applies:  
-- if r4101[1] > 1650 ohms, the temperature r4105[1] = 250 °C  
-- if r4101[1] <= 1650 ohms, the temperature r4105[1] = -50 °C  
+- if r4101[1] &gt; 1650 ohms, the temperature r4105[1] = 250 °C  
+- if r4101[1] &lt;= 1650 ohms, the temperature r4105[1] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -20014,8 +20014,8 @@ The temperature measured using the temperature sensing of the Terminal Module (T
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[2] = 1, 4), the
 following applies:  
-- if r4101[2] > 1650 ohms, the temperature r4105[2] = 250 °C  
-- if r4101[2] <= 1650 ohms, the temperature r4105[2] = -50 °C  
+- if r4101[2] &gt; 1650 ohms, the temperature r4105[2] = 250 °C  
+- if r4101[2] &lt;= 1650 ohms, the temperature r4105[2] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -20079,8 +20079,8 @@ The temperature measured using the temperature sensing of the Terminal Module (T
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[3] = 1, 4), the
 following applies:  
-- if r4101[3] > 1650 ohms, the temperature r4105[3] = 250 °C  
-- if r4101[3] <= 1650 ohms, the temperature r4105[3] = -50 °C  
+- if r4101[3] &gt; 1650 ohms, the temperature r4105[3] = 250 °C  
+- if r4101[3] &lt;= 1650 ohms, the temperature r4105[3] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -20189,7 +20189,7 @@ IMMEDIATELY
 A function requested by the Control Unit is not supported by a DRIVE-CLiQ component.  
 Fault value (r0949, interpret decimal):  
 1: Terminal Module 31 does not support the function "Timer for temperature evaluation"
-(X522.7/8, p4103 > 0.000).  
+(X522.7/8, p4103 &gt; 0.000).  
 4: The improved actual value resolution is not supported (p4401.4).  
 5: The improved setpoint resolution is not supported (p4401.5).  
 6: The residual value handling in the setpoint channel cannot be deactivated (p4401.6).  
@@ -20252,8 +20252,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[4] = 1, 4), the
 following applies:  
-- if r4101[4] > 1650 ohms, the temperature r4105[4] = 250 °C  
-- if r4101[4] <= 1650 ohms, the temperature r4105[4] = -50 °C  
+- if r4101[4] &gt; 1650 ohms, the temperature r4105[4] = 250 °C  
+- if r4101[4] &lt;= 1650 ohms, the temperature r4105[4] = -50 °C  
 The temperature actual value is displayed via connector output r4105[4] and can be
 interconnected.  
 Notice:  
@@ -20329,8 +20329,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[5] = 1, 4), the
 following applies:  
-- if r4101[5] > 1650 ohms, the temperature r4105[5] = 250 °C  
-- if r4101[5] <= 1650 ohms, the temperature r4105[5] = -50 °C  
+- if r4101[5] &gt; 1650 ohms, the temperature r4105[5] = 250 °C  
+- if r4101[5] &lt;= 1650 ohms, the temperature r4105[5] = -50 °C  
 The temperature actual value is displayed via connector output r4105[5] and can be
 interconnected.  
 Notice:  
@@ -20406,8 +20406,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[6] = 1, 4), the
 following applies:  
-- if r4101[6] > 1650 ohms, the temperature r4105[6] = 250 °C  
-- if r4101[6] <= 1650 ohms, the temperature r4105[6] = -50 °C  
+- if r4101[6] &gt; 1650 ohms, the temperature r4105[6] = 250 °C  
+- if r4101[6] &lt;= 1650 ohms, the temperature r4105[6] = -50 °C  
 The temperature actual value is displayed via connector output r4105[6] and can be
 interconnected.  
 Notice:  
@@ -20483,8 +20483,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[7] = 1, 4), the
 following applies:  
-- if r4101[7] > 1650 ohms, the temperature r4105[7] = 250 °C  
-- if r4101[7] <= 1650 ohms, the temperature r4105[7] = -50 °C  
+- if r4101[7] &gt; 1650 ohms, the temperature r4105[7] = 250 °C  
+- if r4101[7] &lt;= 1650 ohms, the temperature r4105[7] = -50 °C  
 The temperature actual value is displayed via connector output r4105[7] and can be
 interconnected.  
 Notice:  
@@ -20560,8 +20560,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[8] = 1, 4), the
 following applies:  
-- if r4101[8] > 1650 ohms, the temperature r4105[8] = 250 °C  
-- if r4101[8] <= 1650 ohms, the temperature r4105[8] = -50 °C  
+- if r4101[8] &gt; 1650 ohms, the temperature r4105[8] = 250 °C  
+- if r4101[8] &lt;= 1650 ohms, the temperature r4105[8] = -50 °C  
 The temperature actual value is displayed via connector output r4105[8] and can be
 interconnected.  
 Notice:  
@@ -20637,8 +20637,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[9] = 1, 4), the
 following applies:  
-- if r4101[9] > 1650 ohms, the temperature r4105[9] = 250 °C  
-- if r4101[9] <= 1650 ohms, the temperature r4105[9] = -50 °C  
+- if r4101[9] &gt; 1650 ohms, the temperature r4105[9] = 250 °C  
+- if r4101[9] &lt;= 1650 ohms, the temperature r4105[9] = -50 °C  
 The temperature actual value is displayed via connector output r4105[9] and can be
 interconnected.  
 Notice:  
@@ -20714,8 +20714,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[10] = 1, 4), the
 following applies:  
-- if r4101[10] > 1650 ohms, the temperature r4105[10] = 250 °C  
-- if r4101[10] <= 1650 ohms, the temperature r4105[10] = -50 °C  
+- if r4101[10] &gt; 1650 ohms, the temperature r4105[10] = 250 °C  
+- if r4101[10] &lt;= 1650 ohms, the temperature r4105[10] = -50 °C  
 The temperature actual value is displayed via connector output r4105[10] and can be
 interconnected.  
 Notice:  
@@ -20791,8 +20791,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[11] = 1, 4), the
 following applies:  
-- if r4101[11] > 1650 ohms, the temperature r4105[11] = 250 °C  
-- if r4101[11] <= 1650 ohms, the temperature r4105[11] = -50 °C  
+- if r4101[11] &gt; 1650 ohms, the temperature r4105[11] = 250 °C  
+- if r4101[11] &lt;= 1650 ohms, the temperature r4105[11] = -50 °C  
 The temperature actual value is displayed via connector output r4105[11] and can be
 interconnected.  
 Notice:  
@@ -20861,8 +20861,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[4] = 1, 4), the
 following applies:  
-- if r4101[4] > 1650 ohms, the temperature r4105[4] = 250 °C  
-- if r4101[4] <= 1650 ohms, the temperature r4105[4] = -50 °C  
+- if r4101[4] &gt; 1650 ohms, the temperature r4105[4] = 250 °C  
+- if r4101[4] &lt;= 1650 ohms, the temperature r4105[4] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -20925,8 +20925,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[5] = 1, 4), the
 following applies:  
-- if r4101[5] > 1650 ohms, the temperature r4105[5] = 250 °C  
-- if r4101[5] <= 1650 ohms, the temperature r4105[5] = -50 °C  
+- if r4101[5] &gt; 1650 ohms, the temperature r4105[5] = 250 °C  
+- if r4101[5] &lt;= 1650 ohms, the temperature r4105[5] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -20989,8 +20989,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[6] = 1, 4), the
 following applies:  
-- if r4101[6] > 1650 ohms, the temperature r4105[6] = 250 °C  
-- if r4101[6] <= 1650 ohms, the temperature r4105[6] = -50 °C  
+- if r4101[6] &gt; 1650 ohms, the temperature r4105[6] = 250 °C  
+- if r4101[6] &lt;= 1650 ohms, the temperature r4105[6] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -21053,8 +21053,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[7] = 1, 4), the
 following applies:  
-- if r4101[7] > 1650 ohms, the temperature r4105[7] = 250 °C  
-- if r4101[7] <= 1650 ohms, the temperature r4105[7] = -50 °C  
+- if r4101[7] &gt; 1650 ohms, the temperature r4105[7] = 250 °C  
+- if r4101[7] &lt;= 1650 ohms, the temperature r4105[7] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -21117,8 +21117,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[8] = 1, 4), the
 following applies:  
-- if r4101[8] > 1650 ohms, the temperature r4105[8] = 250 °C  
-- if r4101[8] <= 1650 ohms, the temperature r4105[8] = -50 °C  
+- if r4101[8] &gt; 1650 ohms, the temperature r4105[8] = 250 °C  
+- if r4101[8] &lt;= 1650 ohms, the temperature r4105[8] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -21181,8 +21181,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[9] = 1, 4), the
 following applies:  
-- if r4101[9] > 1650 ohms, the temperature r4105[9] = 250 °C  
-- if r4101[9] <= 1650 ohms, the temperature r4105[9] = -50 °C  
+- if r4101[9] &gt; 1650 ohms, the temperature r4105[9] = 250 °C  
+- if r4101[9] &lt;= 1650 ohms, the temperature r4105[9] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -21245,8 +21245,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[10] = 1, 4), the
 following applies:  
-- if r4101[10] > 1650 ohms, the temperature r4105[10] = 250 °C  
-- if r4101[10] <= 1650 ohms, the temperature r4105[10] = -50 °C  
+- if r4101[10] &gt; 1650 ohms, the temperature r4105[10] = 250 °C  
+- if r4101[10] &lt;= 1650 ohms, the temperature r4105[10] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -21309,8 +21309,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[11] = 1, 4), the
 following applies:  
-- if r4101[11] > 1650 ohms, the temperature r4105[11] = 250 °C  
-- if r4101[11] <= 1650 ohms, the temperature r4105[11] = -50 °C  
+- if r4101[11] &gt; 1650 ohms, the temperature r4105[11] = 250 °C  
+- if r4101[11] &lt;= 1650 ohms, the temperature r4105[11] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -23018,11 +23018,11 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 1630 Ohm (TM150: R > 2170 Ohm), PT100: R > 194 Ohm, PT1000: R > 1720 Ohm
-(TM150: R > 1944 Ohm)  
+KTY84: R &gt; 1630 Ohm (TM150: R &gt; 2170 Ohm), PT100: R &gt; 194 Ohm, PT1000: R &gt; 1720 Ohm
+(TM150: R &gt; 1944 Ohm)  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 50 Ohm (TM150: R < 180 Ohm), PT100: R < 60
-Ohm, PT1000: R < 603 Ohm
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 50 Ohm (TM150: R &lt; 180 Ohm), PT100: R &lt; 60
+Ohm, PT1000: R &lt; 603 Ohm
 
 **Remedy:**
   
@@ -23081,11 +23081,11 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 1630 Ohm (TM150: R > 2170 Ohm), PT100: R > 194 Ohm, PT1000: R > 1720 Ohm
-(TM150: R > 1944 Ohm)  
+KTY84: R &gt; 1630 Ohm (TM150: R &gt; 2170 Ohm), PT100: R &gt; 194 Ohm, PT1000: R &gt; 1720 Ohm
+(TM150: R &gt; 1944 Ohm)  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 50 Ohm (TM150: R < 180 Ohm), PT100: R < 60
-Ohm, PT1000: R < 603 Ohm
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 50 Ohm (TM150: R &lt; 180 Ohm), PT100: R &lt; 60
+Ohm, PT1000: R &lt; 603 Ohm
 
 **Remedy:**
   
@@ -23144,11 +23144,11 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 1630 Ohm (TM150: R > 2170 Ohm), PT100: R > 194 Ohm, PT1000: R > 1720 Ohm
-(TM150: R > 1944 Ohm)  
+KTY84: R &gt; 1630 Ohm (TM150: R &gt; 2170 Ohm), PT100: R &gt; 194 Ohm, PT1000: R &gt; 1720 Ohm
+(TM150: R &gt; 1944 Ohm)  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 50 Ohm (TM150: R < 180 Ohm), PT100: R < 60
-Ohm, PT1000: R < 603 Ohm
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 50 Ohm (TM150: R &lt; 180 Ohm), PT100: R &lt; 60
+Ohm, PT1000: R &lt; 603 Ohm
 
 **Remedy:**
   
@@ -23207,11 +23207,11 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 1630 Ohm (TM150: R > 2170 Ohm), PT100: R > 194 Ohm, PT1000: R > 1720 Ohm
-(TM150: R > 1944 Ohm)  
+KTY84: R &gt; 1630 Ohm (TM150: R &gt; 2170 Ohm), PT100: R &gt; 194 Ohm, PT1000: R &gt; 1720 Ohm
+(TM150: R &gt; 1944 Ohm)  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 50 Ohm (TM150: R < 180 Ohm), PT100: R < 60
-Ohm, PT1000: R < 603 Ohm
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 50 Ohm (TM150: R &lt; 180 Ohm), PT100: R &lt; 60
+Ohm, PT1000: R &lt; 603 Ohm
 
 **Remedy:**
   
@@ -23270,9 +23270,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -23332,9 +23332,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -23394,9 +23394,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -23456,9 +23456,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -23518,9 +23518,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -23580,9 +23580,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -23642,9 +23642,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -23704,9 +23704,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -26777,7 +26777,7 @@ NONE
 CBE20 SINAMICS Link:  
 - telegram word (receive) and address of sender inconsistent. Both values have to
 be either equal to zero or not equal to zero.  
-- address of the sender > maximum project address.  
+- address of the sender &gt; maximum project address.  
 Alarm value (r2124, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = info. 1, xxxx = info. 2  
 Info. 1 (decimal) = Drive object number from p8870, p8872  
@@ -28520,13 +28520,13 @@ See also: r20008 (Hardware sampling times available)
   
 - check number of different hardware sampling times (r20008, r7903).  
 - hardware sampling times are those sampling times that are formed as a multiple of
-the basis hardware sampling times r20002 and are always < r20003.  
+the basis hardware sampling times r20002 and are always &lt; r20003.  
 - For internal purposes, the drive unit always requires at least two (or several,
 depending on the parameterization of p0115 of the drive objects) free hardware sampling
 times. Therefore, the current number of hardware sampling times that are still free
 can be read out in r7903. If r7903=0, no additional sampling time that differs from
 r20008[0...12] can be provided from the Control Unit. If, when selecting in this state,
-a runtime group with a sampling time < r20003 (p20000 <= 255) is to be set in p20000,
+a runtime group with a sampling time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000,
 only runtime groups whose sampling time is already provided in r20008[0...12] can
 be selected.
 
@@ -28574,13 +28574,13 @@ See also: r20008 (Hardware sampling times available)
   
 - check number of different hardware sampling times (r20008, r7903).  
 - hardware sampling times are those sampling times that are formed as a multiple of
-the basis hardware sampling times r20002 and are always < r20003.  
+the basis hardware sampling times r20002 and are always &lt; r20003.  
 - For internal purposes, the drive unit always requires at least two (or several,
 depending on the parameterization of p0115 of the drive objects) free hardware sampling
 times. Therefore, the current number of hardware sampling times that are still free
 can be read out in r7903. If r7903=0, no additional sampling time that differs from
 r20008[0...12] can be provided from the Control Unit. If, when selecting in this state,
-a runtime group with a sampling time < r20003 (p20000 <= 255) is to be set in p20000,
+a runtime group with a sampling time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000,
 only runtime groups whose sampling time is already provided in r20008[0...12] can
 be selected.
 
@@ -29166,13 +29166,13 @@ IMMEDIATELY
 **Cause:**
   
 In the STARTER/SCOUT project that was downloaded, the hardware sampling time of a
-free runtime group (1 <= p20000[i] <= 256) was set to a value that was either too
+free runtime group (1 &lt;= p20000[i] &lt;= 256) was set to a value that was either too
 low or too high.  
 The sampling time must be between 1 ms and the value r20003 - r20002.  
-If the sampling time of the selected free runtime group is < 1 ms, the equivalent
+If the sampling time of the selected free runtime group is &lt; 1 ms, the equivalent
 value of 1 ms is used.  
-If the value >= r20003, then the sampling time is set to the next higher or the same
-software sampling time >= r21003.  
+If the value &gt;= r20003, then the sampling time is set to the next higher or the same
+software sampling time &gt;= r21003.  
 Fault value (r0949, interpret decimal):  
 Number of the p20000 index of the runtime group where the sampling time is incorrectly
 set.  
@@ -29227,13 +29227,13 @@ IMMEDIATELY
 **Cause:**
   
 In the STARTER/SCOUT project that was downloaded, the hardware sampling time of a
-free runtime group (1 <= p20000[i] <= 256) was set to a value that was either too
+free runtime group (1 &lt;= p20000[i] &lt;= 256) was set to a value that was either too
 low or too high.  
 The sampling time must be between 1 ms and the value r20003 - r20002.  
-If the sampling time of the selected free runtime group is < 1 ms, the equivalent
+If the sampling time of the selected free runtime group is &lt; 1 ms, the equivalent
 value of 1 ms is used.  
-If the value >= r20003, then the sampling time is set to the next higher or the same
-software sampling time >= r21003.  
+If the value &gt;= r20003, then the sampling time is set to the next higher or the same
+software sampling time &gt;= r21003.  
 Fault value (r0949, interpret decimal):  
 Number of the p20000 index of the runtime group where the sampling time is incorrectly
 set.  
@@ -29398,16 +29398,16 @@ IMMEDIATELY
 **Cause:**
   
 In the STARTER/SCOUT project that was downloaded, the hardware sampling time of a
-free runtime group (1 <= p21000[i] or p21100+5*(n-1) with Startdrive <= 256) was set
+free runtime group (1 &lt;= p21000[i] or p21100+5*(n-1) with Startdrive &lt;= 256) was set
 to a value that was either too low or too high. n= position of the chart in the chart
 sequence (first chart has position 1). The sampling time must lie between 1 ms and
 the value (r21003 - r21002).  
-If the sampling time of the selected free runtime group is < 1 ms, then the equivalent
+If the sampling time of the selected free runtime group is &lt; 1 ms, then the equivalent
 value of 1 ms is used.  
-If the value >= r21003, then the sampling time is set to the next higher or the same
-software sampling time >= r21003. To prevent the fault, the determined software sampling
-time can be set in the runtime group (1001 <= p21000[i] <= 1096 with STARTER or 1001
-<= p21100+5*(n-1) <= 1096 with Startdrive).  
+If the value &gt;= r21003, then the sampling time is set to the next higher or the same
+software sampling time &gt;= r21003. To prevent the fault, the determined software sampling
+time can be set in the runtime group (1001 &lt;= p21000[i] &lt;= 1096 with STARTER or 1001
+&lt;= p21100+5*(n-1) &lt;= 1096 with Startdrive).  
 At least one block is assigned to the free runtime group involved.  
 After correcting the selection in p21000[i] (p21100+5*(n-1) with Startdrive) in the
 project, if this fault still occurs during download, please check which runtime group
@@ -29599,7 +29599,7 @@ For fault value = 1:
 - For modules D425 or D435, use hardware version D or higher.  
 Note:  
 You can read out the hardware version using SCOUT in online mode under Target system
---> Device diagnostics --> tab "General" in the lower window, 3rd column in the line
+--&gt; Device diagnostics --&gt; tab "General" in the lower window, 3rd column in the line
 of the CPU.
 
 ### F51009 DCC: Project data and block library are incompatible

@@ -46,7 +46,7 @@ The following tags can be monitored and modified:
 
 ### Team engineering in the watch table
 
-As of TIA Portal V13 SP1, within the framework of team engineering with an S7-1500 CPU with firmware version >= 1.7, several Engineering Systems can access the CPU online simultaneously, for example to monitor and modify tags and download blocks. If you use this function, make sure that you keep to the requirements and rules that apply to team engineering as explained in the information system in "Using Team Engineering" in the section "Shared commissioning of projects".
+As of TIA Portal V13 SP1, within the framework of team engineering with an S7-1500 CPU with firmware version &gt;= 1.7, several Engineering Systems can access the CPU online simultaneously, for example to monitor and modify tags and download blocks. If you use this function, make sure that you keep to the requirements and rules that apply to team engineering as explained in the information system in "Using Team Engineering" in the section "Shared commissioning of projects".
 
 ### Possible applications
 
@@ -250,7 +250,7 @@ To copy a watch table, follow these steps:
 3. In the project tree, open the folder structure for the CPU in which you want to paste the copied watch table.
 4. Right-click on the "Watch and force tables" folder.
 5. In the context menu, select "Paste".
-6. Alternatively, you can select the entire contents of the watch table and Drag & Drop it onto another watch table.
+6. Alternatively, you can select the entire contents of the watch table and Drag &amp; Drop it onto another watch table.
 
 #### Result
 
@@ -503,8 +503,8 @@ For the S7-1200 CPU family, all 32-bit data types are permitted (see table above
 
 | Data type | Possible display formats |
 | --- | --- |
-| LREAL | In a project created with TIA Portal < V12:   Floating-point number   Note: The display of LREAL is limited to 13 digits plus exponent. |
-| LREAL | In a project created with TIA Portal >= V12:   Floating-point number, Hex, BCD, Octal, Bin, Character, Unicode_Character, Dec,  Dec+/-, Dec_Sequence, Time of day, Time, Date and time  Note: The display of LREAL is limited to 13 digits plus exponent. |
+| LREAL | In a project created with TIA Portal &lt; V12:   Floating-point number   Note: The display of LREAL is limited to 13 digits plus exponent. |
+| LREAL | In a project created with TIA Portal &gt;= V12:   Floating-point number, Hex, BCD, Octal, Bin, Character, Unicode_Character, Dec,  Dec+/-, Dec_Sequence, Time of day, Time, Date and time  Note: The display of LREAL is limited to 13 digits plus exponent. |
 
 For the S7-1500 CPU family, in addition to 32-bit data types, the 64-bit data types listed in the table are also permitted with the following possible display formats:
 
@@ -560,12 +560,12 @@ If the selected display format cannot be applied, then the last selected display
 
 In addition to the row related comments in the comment column, you can now also create complete comment lines to enhance the structure of the watch table.
 
-The contents of the comment line are stored in the "Languages & Resources" folder in the "Project texts" tab and can be compiled in other project languages.
+The contents of the comment line are stored in the "Languages &amp; Resources" folder in the "Project texts" tab and can be compiled in other project languages.
 
 Alternatively, you have the following options to enter comment lines:
 
 - Using the corresponding icon in the toolbar of the watch table.
-- Using the menu command "Insert > Insert comment line".
+- Using the menu command "Insert &gt; Insert comment line".
 - Using the shortcut menu command "Insert comment line".
 - By entering the string "//" in the "Name" column of the watch table.
 
@@ -577,13 +577,13 @@ To insert comment lines, follow these steps:
 2. Insert a new comment line:
 
    - To do so, click the "Insert comment line" icon in the toolbar of the watch table.
-   - Or click the menu command "Insert > Insert comment line".
+   - Or click the menu command "Insert &gt; Insert comment line".
    - Or click the shortcut menu command "Insert comment line".
 
      Result: A new comment line is inserted above the selected row in the watch table.
 3. Enter the required comment in the comment line. The entered comment is shown in green.
-4. To show all comments you entered, double-click "Project texts" in the project tree under "Languages & Resources".
-5. If you are working in multi-lingual projects and want your comment to be translated into other languages, you can set the project languages required in addition to the editing language in the project tree under "Languages & Resources > Project languages".
+4. To show all comments you entered, double-click "Project texts" in the project tree under "Languages &amp; Resources".
+5. If you are working in multi-lingual projects and want your comment to be translated into other languages, you can set the project languages required in addition to the editing language in the project tree under "Languages &amp; Resources &gt; Project languages".
 
 #### Creating comment lines
 
@@ -594,8 +594,8 @@ To create comment lines, follow these steps:
 
    No comment lines can be created in the other columns.
 3. Enter the required comment in the comment line. The entered comment is shown in green.
-4. To show all comments you entered, double-click "Project texts" in the project tree under "Languages & Resources".
-5. If you are working in multi-lingual projects and want your comment to be translated into other languages, you can set the project languages required in addition to the editing language in the project tree under "Languages & Resources > Project languages".
+4. To show all comments you entered, double-click "Project texts" in the project tree under "Languages &amp; Resources".
+5. If you are working in multi-lingual projects and want your comment to be translated into other languages, you can set the project languages required in addition to the editing language in the project tree under "Languages &amp; Resources &gt; Project languages".
 
 #### Deleting comment lines
 
@@ -671,10 +671,10 @@ The following monitoring and modifying modes are available:
 | Permanent | Permanent  During monitoring: The inputs are monitored at the end of the cycle and the outputs at the start of the cycle.  During modify: The inputs are modified at the start of the cycle and the outputs at the end of the cycle. | RUN | Will be executed until the user stops the action or the online connection to the CPU is interrupted. |
 | Permanently, at start of scan cycle | Permanently, at start of scan cycle | RUN | Will be executed until the user stops the action or the online connection to the CPU is interrupted. |
 | Permanently, at end of scan cycle | Permanently, at end of scan cycle | RUN | Will be executed until the user stops the action or the online connection to the CPU is interrupted. |
-| Permanently, at transition to STOP | Permanently, at transition from RUN to STOP | RUN > STOP | Will be executed until the user stops the action or the online connection to the CPU is interrupted. |
+| Permanently, at transition to STOP | Permanently, at transition from RUN to STOP | RUN &gt; STOP | Will be executed until the user stops the action or the online connection to the CPU is interrupted. |
 | Once only, at start of scan cycle | Once only, at start of scan cycle | RUN | Ends automatically after being executed once. |
 | Once only, at end of scan cycle | Once only, at end of scan cycle | RUN | Ends automatically after being executed once. |
-| Once only, at transition to STOP | Once only, at transition from RUN to STOP | STOP > RUN | Ends automatically after being executed once. |
+| Once only, at transition to STOP | Once only, at transition from RUN to STOP | STOP &gt; RUN | Ends automatically after being executed once. |
 
 #### Special features when using "Permanent" mode
 
@@ -708,7 +708,7 @@ When tags are being modified, the following applies to the trigger points:
 
 #### Note regarding the "Modify now" command
 
-You can modify the values of selected tags immediately using the "Online > Modify >Modify now" command. This command is executed once only and as quickly as possible without reference to a defined position (trigger point) in the user program. This function is used mainly for modifying when the CPU is in STOP mode.
+You can modify the values of selected tags immediately using the "Online &gt; Modify &gt;Modify now" command. This command is executed once only and as quickly as possible without reference to a defined position (trigger point) in the user program. This function is used mainly for modifying when the CPU is in STOP mode.
 
 ### "Monitor all" command for tags
 
@@ -882,7 +882,7 @@ You can assign one-time values to tags independent of the monitoring and modify 
 To modify tags to "0", follow these steps:
 
 1. Enter the desired address in the watch table.
-2. Select the "Online > Modify > Modify to 0" command in order to modify the selected address with the specified value.
+2. Select the "Online &gt; Modify &gt; Modify to 0" command in order to modify the selected address with the specified value.
 
 #### Result
 
@@ -920,7 +920,7 @@ You can assign one-time values to tags independent of the monitoring and modify 
 To modify tags to "1", follow these steps:
 
 1. Enter the desired address in the watch table.
-2. Select the "Online > Modify > Modify to 1" command in order to modify the selected address with the specified value.
+2. Select the "Online &gt; Modify &gt; Modify to 1" command in order to modify the selected address with the specified value.
 
 #### Result
 
@@ -960,7 +960,7 @@ To modify tags immediately, follow these steps:
 1. Enter the desired addresses and modify values in the watch table.
 2. Select the addresses to be modified by selecting the check boxes for modifying in the column after the "Modify value".   
    A yellow triangle appears behind the selected check box, indicating that the address is now selected for modifying but has not yet been modified.
-3. Select the "Online > Modify > Modify once and now" command in order to immediately modify the selected address once only with the specified value.
+3. Select the "Online &gt; Modify &gt; Modify once and now" command in order to immediately modify the selected address once only with the specified value.
 
 #### Result
 
@@ -998,8 +998,8 @@ You can assign one-time values to a selection of tags independently of the monit
 To modify tags immediately, follow these steps:
 
 1. Enter the desired addresses and modify values in the watch table.
-2. Select the addresses to be modified by selecting them with the mouse pointer. To select multiple addresses, use the <Shift> and <Ctrl> keys.
-3. Select the "Online > Modify > Modify selection now" command to immediately modify the selected addresses once with the specified values.
+2. Select the addresses to be modified by selecting them with the mouse pointer. To select multiple addresses, use the &lt;Shift&gt; and &lt;Ctrl&gt; keys.
+3. Select the "Online &gt; Modify &gt; Modify selection now" command to immediately modify the selected addresses once with the specified values.
 
 #### Result
 
@@ -1040,7 +1040,7 @@ To modify tags "with trigger", follow these steps:
 1. Enter the desired addresses and modify values in the watch table.
 2. Select the addresses to be modified by selecting the check boxes for modifying in the column after the "Modify value".   
    A yellow triangle appears behind the selected check box, indicating that the address is now selected for modifying but has not yet been modified.
-3. Switch to expanded mode using the icon "Show/hide advanced settings columns" in the toolbar or the "Online > Expanded mode" command.
+3. Switch to expanded mode using the icon "Show/hide advanced settings columns" in the toolbar or the "Online &gt; Expanded mode" command.
 
    The "Monitor with trigger" and "Modify with trigger" columns are displayed.
 4. In the "Modify with trigger" column, select the desired modify mode from the drop-down list box. The following options are available:
@@ -1052,7 +1052,7 @@ To modify tags "with trigger", follow these steps:
    - Once only, at end of scan cycle
    - Permanently, at transition to STOP
    - Once only, at transition to STOP
-5. Start modifying using the "Online > Modify > Modify with trigger" command.
+5. Start modifying using the "Online &gt; Modify &gt; Modify with trigger" command.
 6. Confirm the prompt with "Yes" if you want to start modifying with trigger.
 
 #### Result
@@ -1100,13 +1100,13 @@ To enable the peripheral outputs in STOP mode, follow these steps:
 1. Enter the desired addresses and modify values in the watch table.
 2. Select the addresses to be modified by selecting the check boxes for modifying in the column after the "Modify value".   
    A yellow triangle appears behind the selected check box, indicating that the address is now selected for modifying but has not yet been modified.
-3. Switch to expanded mode using the icon "Show/hide advanced settings columns" in the toolbar or the "Online > Expanded mode" command.
+3. Switch to expanded mode using the icon "Show/hide advanced settings columns" in the toolbar or the "Online &gt; Expanded mode" command.
 
    The "Monitor with trigger" and "Modify with trigger" columns are displayed.
 4. Change the relevant CPU to STOP using the operator panel.
 5. Right-click to open the shortcut menu and select "Enable peripheral outputs".
 6. Confirm the prompt with "Yes" if you want to unlock the command output disable for the peripheral outputs.
-7. Modify the peripheral outputs using the "Online > Modify > Modify now" command.
+7. Modify the peripheral outputs using the "Online &gt; Modify &gt; Modify now" command.
 
 #### Result
 
@@ -1116,7 +1116,7 @@ The peripheral outputs are modified with the selected modify values. The yellow 
 
 The "Enable peripheral outputs" function remains active until:
 
-- The "Enable peripheral outputs" command is deactivated again via the shortcut menu or via the "Online > Modify > Enable peripheral outputs" command.
+- The "Enable peripheral outputs" command is deactivated again via the shortcut menu or via the "Online &gt; Modify &gt; Enable peripheral outputs" command.
 - The CPU is no longer in STOP mode.
 - The online connection is terminated.
 

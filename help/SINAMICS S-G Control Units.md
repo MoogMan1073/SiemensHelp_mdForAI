@@ -96,10 +96,10 @@ The web server is configured in a screen form. In general, you can perform the c
 
 ##### Calling the screen form
 
-1. Select the "Drive control > Parameterization" menu in the project tree.
+1. Select the "Drive control &gt; Parameterization" menu in the project tree.
 
    The associated details view is displayed on the right-hand side.
-2. Call the "Basic parameterization > Web server" menu in the secondary navigation.
+2. Call the "Basic parameterization &gt; Web server" menu in the secondary navigation.
 
    The details view is refreshed. The settings for the web server become active.
 
@@ -271,8 +271,8 @@ Parameters with attribute "[WRITE_NO_LOCK](#exception-parameters-for-write-prote
 
 ###### Activating/deactivating write protection
 
-1. Select the "Drive control > Parameters" menu in the project tree.
-2. In the secondary navigation, select menu "Basic parameterization > Write and know-how protection".
+1. Select the "Drive control &gt; Parameters" menu in the project tree.
+2. In the secondary navigation, select menu "Basic parameterization &gt; Write and know-how protection".
 3. Click on "Activate write protection"
 
    Write protection is activated. The button labeling has been changed.
@@ -400,7 +400,7 @@ Example: Exception list
 2. To open the exception list, click the icon ![Expanding the exception list (excluding additional parameters from protection)](images/147853502219_DV_resource.Stream@PNG-en-US.png) (exception list) in the parameter view.
 
    The parameter view shows the 2 subtabs: Parameter list and exception list (active).
-3. In the exception list, for every parameter **NOT** to be protected, enter the parameter number in the "Number" column in the <Add new> input field and confirm with Return.
+3. In the exception list, for every parameter **NOT** to be protected, enter the parameter number in the "Number" column in the &lt;Add new&gt; input field and confirm with Return.
 
    - If the parameter that is entered belongs to the general exception parameters, then a message is displayed stating that this parameter is not protected. Adding this parameter to the exception list is then superfluous.
    - If the parameter entered belongs to the previously protected parameters, Startdrive then adds the most important parameter data of the parameter to be protected in the additional column fields of the current line.
@@ -445,8 +445,8 @@ Before activating know-how protection, the following conditions must be met:
 
 ###### Calling know-how protection configuration
 
-1. Select the "Drive control > Parameters" menu in the project tree.
-2. In the secondary navigation, select menu "Basic parameterization > Write and know-how protection".
+1. Select the "Drive control &gt; Parameters" menu in the project tree.
+2. In the secondary navigation, select menu "Basic parameterization &gt; Write and know-how protection".
 
    The "Write and know-how protection" screen form is displayed with the current protection settings of the drive.
 
@@ -668,9 +668,9 @@ WRITE_NO_LOCK
 | [p7761](SINAMICS%20Parameter%20CU.md#p7761-write-protection) | Write protection / Write protection |
 | [p7770](SINAMICS%20Parameter%20ACTIVE%20INFEED%20CONTROL.md#p7770-nvram-action) | NVRAM action / NVRAM action |
 | [p8550](SINAMICS%20Parameter%20CU.md#p8550-aop-localremote) | AOP LOCAL/REMOTE / AOP LOCAL/REMOTE |
-| [p8806](SINAMICS%20Parameter%20CU.md#p8806053-identification-and-maintenance-1)[0...53] | Identification and Maintenance 1 / I&M 1 |
-| [p8807](SINAMICS%20Parameter%20CU.md#p8807015-identification-and-maintenance-2)[0...15] | Identification and Maintenance 2 / I&M 2 |
-| [p8808](SINAMICS%20Parameter%20CU.md#p8808053-identification-and-maintenance-3)[0...53] | Identification and Maintenance 3 / I&M 3 |
+| [p8806](SINAMICS%20Parameter%20CU.md#p8806053-identification-and-maintenance-1)[0...53] | Identification and Maintenance 1 / I&amp;M 1 |
+| [p8807](SINAMICS%20Parameter%20CU.md#p8807015-identification-and-maintenance-2)[0...15] | Identification and Maintenance 2 / I&amp;M 2 |
+| [p8808](SINAMICS%20Parameter%20CU.md#p8808053-identification-and-maintenance-3)[0...53] | Identification and Maintenance 3 / I&amp;M 3 |
 | [p9210](SINAMICS%20Parameter%20CU.md#p9210-flashing-component-number) | Flashing component number / Flash comp no |
 | [p9211](SINAMICS%20Parameter%20CU.md#p9211-flash-function) | Flashing function / Flashing function |
 | p9484 | BICO interconnections search signal source / BICO search s_s |
@@ -713,9 +713,9 @@ KHP_WRITE_NO_LOCK
 | p7761 | Write protection / Write protection |
 | p7770 | NVRAM action / NVRAM action |
 | p8550 | AOP LOCAL/REMOTE / AOP LOCAL/REMOTE |
-| p8806[0...53] | Identification and Maintenance 1 / I&M 1 |
-| p8807[0...15] | Identification and Maintenance 2 / I&M 2 |
-| p8808[0...53] | Identification and Maintenance 3 / I&M 3 |
+| p8806[0...53] | Identification and Maintenance 1 / I&amp;M 1 |
+| p8807[0...15] | Identification and Maintenance 2 / I&amp;M 2 |
+| p8808[0...53] | Identification and Maintenance 3 / I&amp;M 3 |
 | [p8835](SINAMICS%20Parameter%20CU.md#p8835-cbe20-firmware-selection) | CBE20 firmware selection / CBE20 FW selection |
 | [p8839](SINAMICS%20Parameter%20CU.md#p883901-pzd-interface-hardware-assignment)[0...1] | PZD interface hardware assignment / PZD IF HW assign |
 | [p8840](SINAMICS%20Parameter%20CU.md#p8840-comm-board-monitoring-time) | COMM BOARD monitoring time / CB t_mon |
@@ -1249,7 +1249,7 @@ The input signal can also be smoothed to suppress strong fluctuations or short-t
 
    This suppresses the noise of the input signal according to the following function:
 
-   - **|y-x| > noise suppression results in y = x**
+   - **|y-x| &gt; noise suppression results in y = x**
 
      The output value is set to the current input value.
    - **|y-x| ≤ noise suppression results in y = yold**

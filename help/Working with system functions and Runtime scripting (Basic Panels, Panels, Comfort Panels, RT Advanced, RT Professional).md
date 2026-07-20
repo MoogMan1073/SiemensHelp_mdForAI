@@ -123,7 +123,7 @@ You use system functions in a function list or in a user-defined function.
   ![Application](images/51957762443_DV_resource.Stream@PNG-en-US.png)
 - User-defined functions
 
-  If you are using a system function in a user-defined function, you choose it from a selection list. To open the selection list, use the key shortcut <Ctrl+Space> or click ![Application](images/36119289355_DV_resource.Stream@PNG-de-DE.png).
+  If you are using a system function in a user-defined function, you choose it from a selection list. To open the selection list, use the key shortcut &lt;Ctrl+Space&gt; or click ![Application](images/36119289355_DV_resource.Stream@PNG-de-DE.png).
 
   ![Application](images/36119281675_DV_resource.Stream@PNG-de-DE.png)
 
@@ -200,7 +200,7 @@ Customized functions are saved in the project. To protect user-defined functions
   The user-defined functions are listed in a function list under "VB functions" or "C functions".
 - User-defined function
 
-  If you are using a system function in a user-defined function, you choose it from a selection list. To open the selection list, use the key shortcut <Ctrl+Space> or click ![Organization of customized functions](images/36119324171_DV_resource.Stream@PNG-de-DE.png).
+  If you are using a system function in a user-defined function, you choose it from a selection list. To open the selection list, use the key shortcut &lt;Ctrl+Space&gt; or click ![Organization of customized functions](images/36119324171_DV_resource.Stream@PNG-de-DE.png).
 
 ---
 
@@ -365,8 +365,8 @@ Proceed as follows to configure a function list:
 
 1. Open the editor in which the object is located.
 2. Select the object.
-3. Click "Properties > Events" in the Inspector window. Choose the event for which you want to configure the function list.
-4. Mark the "<Add function>" entry in the inspector window in the drop-down list.
+3. Click "Properties &gt; Events" in the Inspector window. Choose the event for which you want to configure the function list.
+4. Mark the "&lt;Add function&gt;" entry in the inspector window in the drop-down list.
 5. Select the desired system function or the desired user-defined function from the selection list. You can also enter the name of the system function or the user-defined function.
 
    ![Procedure](images/51957762443_DV_resource.Stream@PNG-en-US.png)
@@ -417,9 +417,9 @@ The function list is configured and opened.
 
 #### Changing the order of several system functions and customized functions
 
-1. Hold down the <Shift> key.
+1. Hold down the &lt;Shift&gt; key.
 2. Click desired system functions or customized functions one after another with the mouse.
-3. Move the selection to the desired position by drag&drop.
+3. Move the selection to the desired position by drag&amp;drop.
 
 #### Removing a system function or customized function
 
@@ -456,17 +456,17 @@ The "Scripts" editor provides you context-dependent programming support with aut
 
 When you use system functions, the parameters of the function are shown as a tooltip.
 
-#### <Ctrl+J>
+#### &lt;Ctrl+J&gt;
 
-The object list can be called context-specifically by using the shortcut <Ctrl+J>. Use the object list to supply values to system functions, methods, and properties: For example, you select screens, screen objects, tags, or colors. You transfer a selected object from the object list into the code by double-clicking it.
+The object list can be called context-specifically by using the shortcut &lt;Ctrl+J&gt;. Use the object list to supply values to system functions, methods, and properties: For example, you select screens, screen objects, tags, or colors. You transfer a selected object from the object list into the code by double-clicking it.
 
 > **Note**
 >
 > Tags and screens can also be inserted using a drag-and-drop operation. Use, for example, drag-and-drop to assign values to parameters.
 
-#### <Ctrl+Space>
+#### &lt;Ctrl+Space&gt;
 
-With the key combination <Ctrl+Space> you call a list with the following contents:
+With the key combination &lt;Ctrl+Space&gt; you call a list with the following contents:
 
 - Constants and functions of the programming language used in the "Scripts" editor.
 - User-defined functions
@@ -529,7 +529,7 @@ The table shows the preset colors for the most important keywords:
 
 #### Adapting display properties
 
-When you have opened a user-defined function, you can customize the display properties in the editor. Select the "Options > Settings" menu command. Click "General > Text editors" in the "Settings" editor. For example, you can change the colors for syntax highlighting or adapt the indents for code in the work area.
+When you have opened a user-defined function, you can customize the display properties in the editor. Select the "Options &gt; Settings" menu command. Click "General &gt; Text editors" in the "Settings" editor. For example, you can change the colors for syntax highlighting or adapt the indents for code in the work area.
 
 ---
 
@@ -551,15 +551,15 @@ You can call system functions in a customized function. The syntax depends on th
 
 You have the following options for calling a system function in a customized function:
 
-- With <Ctrl+Space> or with ![Introduction](images/36119289355_DV_resource.Stream@PNG-de-DE.png)
+- With &lt;Ctrl+Space&gt; or with ![Introduction](images/36119289355_DV_resource.Stream@PNG-de-DE.png)
 - Direct input
 - With the "Function list" palette
 
-#### With <Ctrl+Space> or with
+#### With &lt;Ctrl+Space&gt; or with
 
-![With <Ctrl+Space> or with](images/36119289355_DV_resource.Stream@PNG-de-DE.png)
+![With &lt;Ctrl+Space> or with](images/36119289355_DV_resource.Stream@PNG-de-DE.png)
 
-Open the selection list with <Ctrl+Space> and select the desired system function.
+Open the selection list with &lt;Ctrl+Space&gt; and select the desired system function.
 
 #### Direct input
 
@@ -615,15 +615,15 @@ The syntax depends on the used programming language. Which programming language 
 
 You have the following options for calling a customized function in a customized function:
 
-- With <Ctrl+Space> or with ![Introduction](images/36119324171_DV_resource.Stream@PNG-de-DE.png)
+- With &lt;Ctrl+Space&gt; or with ![Introduction](images/36119324171_DV_resource.Stream@PNG-de-DE.png)
 - Direct input
 - With the "Function list" palette
 
-#### With <Ctrl+Space> or with
+#### With &lt;Ctrl+Space&gt; or with
 
-![With <Ctrl+Space> or with](images/36119324171_DV_resource.Stream@PNG-de-DE.png)
+![With &lt;Ctrl+Space> or with](images/36119324171_DV_resource.Stream@PNG-de-DE.png)
 
-Open the selection list with <Ctrl+Space> or with ![With <Ctrl+Space> or with](images/36119324171_DV_resource.Stream@PNG-de-DE.png) and select the desired user-defined function.
+Open the selection list with &lt;Ctrl+Space&gt; or with ![With &lt;Ctrl+Space> or with](images/36119324171_DV_resource.Stream@PNG-de-DE.png) and select the desired user-defined function.
 
 #### Direct input
 
@@ -693,7 +693,7 @@ You can also create local tags as counters or buffers. Every local tag must be i
 
   `If BeltDriveOilTemperature > 100 Then [instruction]`
 
-  If the tag name in the project does not match the VBS name conventions, you must reference the tag with the "SmartTags" list. In the following example, the tag name contains the "&" character, which is not allowed according to the VBS naming conventions.
+  If the tag name in the project does not match the VBS name conventions, you must reference the tag with the "SmartTags" list. In the following example, the tag name contains the "&amp;" character, which is not allowed according to the VBS naming conventions.
 
   `'VBS_Example_04`
 
@@ -785,7 +785,7 @@ Proceed as follows to check the syntax:
 
 1. Click ![Procedure](images/36119552395_DV_resource.Stream@PNG-de-DE.png) to start the syntax check.
 
-   The syntax is checked. The result of the syntax check is displayed in the Inspector window under "Info > Compilation." Syntax errors are output with the line number.
+   The syntax is checked. The result of the syntax check is displayed in the Inspector window under "Info &gt; Compilation." Syntax errors are output with the line number.
 2. Correct the errors in the customized function if necessary.
 
 #### Special consideration in the syntax checking of customized functions
@@ -945,13 +945,13 @@ To create a user-defined VB function, follow these steps:
    ![Procedure](images/36119694731_DV_resource.Stream@PNG-en-US.png)
 
    The user-defined VB function is created as a new tab in the work area. The input mask for the configuration settings of the user-defined VB function opens in the Inspector window.
-3. Configure the user-defined VB function in the Inspector window "Properties > General > General".
+3. Configure the user-defined VB function in the Inspector window "Properties &gt; General &gt; General".
 4. Enter a descriptive "Name" for the user-defined VB function.
 5. Select the "Type" of the user-defined VB function.
 
    - "Function" have a return value.
    - "Sub" have no return value.
-6. Click "<Add>" in the "Parameters" list to add parameters. Enter the parameter name and specify the parameter type.
+6. Click "&lt;Add&gt;" in the "Parameters" list to add parameters. Enter the parameter name and specify the parameter type.
 
    You will find further information in "[Transfer and return of values in VBS](#transfer-and-return-of-values-in-vbs-panels-comfort-panels-rt-advanced-rt-professional)".
 
@@ -1002,7 +1002,7 @@ Proceed as follows to rename a user-defined VB function in the project tree:
 Proceed as follows to rename a user-defined VB function in the Inspector window:
 
 1. Open the user-defined VB function in the "Scripts" editor.
-2. In the Inspector window, click "Properties > Properties > General".
+2. In the Inspector window, click "Properties &gt; Properties &gt; General".
 3. Enter the new function name.
 
 #### Result
@@ -1137,7 +1137,7 @@ There is a separate system function with GetProp and SetProp for every data type
 
 #### Addressing an object property
 
-You can open the object list for assigning parameters with <Ctrl+J> and select the available objects and properties from the list. The data types of the transferred parameters are checked for plausibility in a syntax validation.
+You can open the object list for assigning parameters with &lt;Ctrl+J&gt; and select the available objects and properties from the list. The data types of the transferred parameters are checked for plausibility in a syntax validation.
 
 #### Writing an object property
 
@@ -1174,8 +1174,8 @@ You can also:
 
 #### Creating an additional C header file
 
-1. Double click "Add new header" under "Scripts >C headers" in the project tree".
-2. Enter a "Name" for the C header in the Inspector window under "Properties >General >General".
+1. Double click "Add new header" under "Scripts &gt;C headers" in the project tree".
+2. Enter a "Name" for the C header in the Inspector window under "Properties &gt;General &gt;General".
 3. Insert the required declarations of tags and constants in the work area.
 
 #### Using the C header file in a C function
@@ -1191,10 +1191,10 @@ You can also:
 You must specify the Include path to use external C header files. Proceed as follows:
 
 1. Select the required HMI device.
-2. Select the "Options > Settings" menu command.
-3. Select the path for the additional C header in the area navigation under "Visualization > Runtime Scripting".
+2. Select the "Options &gt; Settings" menu command.
+3. Select the path for the additional C header in the area navigation under "Visualization &gt; Runtime Scripting".
 4. Close WinCC and start it again.
-5. Select the "Compile > Software (compile all)" command in the shortcut menu of the HMI device.
+5. Select the "Compile &gt; Software (compile all)" command in the shortcut menu of the HMI device.
 
 > **Note**
 >
@@ -1285,23 +1285,23 @@ Proceed as follows to call functions from DLLs:
 1. Open the user-defined C function in which you want to call DLL functions.
 2. Add the following code to the beginning of the user-defined C function:
 
-#pragma code("<Name>.dll")
+#pragma code("&lt;Name&gt;.dll")
 
 //Declare functions stored in DLL:
 
-<Return value> <Function name 1>(...);
+&lt;Return value&gt; &lt;Function name 1&gt;(...);
 
-<Return value> <Function name 2>(...);
+&lt;Return value&gt; &lt;Function name 2&gt;(...);
 
 ...
 
-<Return value> <Function name n>(...);
+&lt;Return value&gt; &lt;Function name n&gt;(...);
 
 #pragma code
 
 #### Result
 
-The functions <Function name 1> ... <Function name n> from <Name.dll> are declared. You can call the functions in the user-defined C function.
+The functions &lt;Function name 1&gt; ... &lt;Function name n&gt; from &lt;Name.dll&gt; are declared. You can call the functions in the user-defined C function.
 
 #### Example
 
@@ -1315,7 +1315,7 @@ VOID GetLocalTime(LPSYSTEMTIME lpSystemTime);
 
 SYSTEMTIME st;
 
-GetLocalTime(&st);
+GetLocalTime(&amp;st);
 
 ### Set up code page for C function (RT Professional)
 
@@ -1344,13 +1344,13 @@ The following options are available in the runtime settings of the HMI device:
 #### Requirement
 
 - The required languages are enabled in the "Project Languages​​" editor.
-- The required runtime languages ​​are enabled in the "Language & Font" editor.
+- The required runtime languages ​​are enabled in the "Language &amp; Font" editor.
 
 #### Select code page for the HMI device
 
 1. Double-click on "Runtime settings" in the project tree.
-2. Click on "Language & Font".
-3. Under "Language setting for script > Language of C scripts with 'Use device setting'", set the selection window using ![Select code page for the HMI device](images/67834322699_DV_resource.Stream@PNG-de-DE.png):
+2. Click on "Language &amp; Font".
+3. Under "Language setting for script &gt; Language of C scripts with 'Use device setting'", set the selection window using ![Select code page for the HMI device](images/67834322699_DV_resource.Stream@PNG-de-DE.png):
 
    - Selection of all runtime languages
    - Selection of all the other options
@@ -1414,7 +1414,7 @@ Proceed as follows to create a new customized C function:
    ![Procedure](images/67834334091_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/67834334091_DV_resource.Stream@PNG-en-US.png)
-4. Configure the function in the Inspector window "Properties > General > General".
+4. Configure the function in the Inspector window "Properties &gt; General &gt; General".
 5. Enter a descriptive "Name" for the user-defined C function.
 
    Select the "Type" of the user-defined C function. Further information can be found in "Transfer and return of values in C".
@@ -1422,7 +1422,7 @@ Proceed as follows to create a new customized C function:
    - Void: Function has no return value.
    - Tag: Return value is returned as a tag value.
    - Pointer: Return value points on the address of the tag.
-6. Double click "<Add>" in the "Parameters" list to add parameters. Enter the parameter name. Further information can be found in "Transfer and return of values in C".
+6. Double click "&lt;Add&gt;" in the "Parameters" list to add parameters. Enter the parameter name. Further information can be found in "Transfer and return of values in C".
 
    - Tag transfers the parameter value.
    - Pointer transfers the address of the parameter.
@@ -1463,7 +1463,7 @@ Proceed as follows to rename a user-defined C function in the project tree:
 Proceed as follows to rename a user-defined C function in the Inspector window:
 
 1. Open the user-defined C function in the "Scripts" editor.
-2. In the Inspector window, click "Properties > General > General".
+2. In the Inspector window, click "Properties &gt; General &gt; General".
 3. Enter the new function name.
 
 #### Result
@@ -1712,7 +1712,7 @@ The parameters which are transferred to the local script depend on the used prog
 **Item**: Contains the object reference:
 
 - Scheduler (task): No object is transferred.
-- Menu & toolbars: The object that triggers the event is transferred.
+- Menu &amp; toolbars: The object that triggers the event is transferred.
 - Screens (screen object):
 
   - Property list (screen object): In dynamizations, the screen object whose property you dynamize is transferred.
@@ -1987,7 +1987,7 @@ A distinction is made between the following types of error by the debug:
 
   > **Note**
   >
-  > For Runtime Professional you can specify in "Runtime settings > General > Script options" that Runtime will be started even when a function contains syntax errors.
+  > For Runtime Professional you can specify in "Runtime settings &gt; General &gt; Script options" that Runtime will be started even when a function contains syntax errors.
 - Runtime error
 
   A runtime error occurs when an invalid/incorrect command is to be executed, e.g. because a tag is not defined. To intercept runtime errors, you can use the "On Error Resume Next" instruction in a function. This instruction causes the subsequent instruction to be executed after a runtime error. In the subsequent line, the error code can then be checked using the Err object. To switch off the handling of runtime errors in the script, use the "On Error Goto 0" instruction.
@@ -2019,9 +2019,9 @@ If "HMIRectangle" = objScreenItem.Type Then
 
 objScreenItem.RoundCornerHeight = objScreenItem.RoundCornerHeight * 2
 
-If 0 <> Err.Number Then
+If 0 &lt;&gt; Err.Number Then
 
-HMIRuntime.Trace objScreenItem.Name & ": no RoundedRectangle" & vbCrLf
+HMIRuntime.Trace objScreenItem.Name &amp; ": no RoundedRectangle" &amp; vbCrLf
 
 '
 
@@ -2071,7 +2071,7 @@ There are several ways of activating the debugger:
 
 1. Start Runtime.
 2. Open "Microsoft Visual Studio 2008".
-3. In the "File > New" menu, click on "File".
+3. In the "File &gt; New" menu, click on "File".
 4. Select "Windows Script Host" and click on "Open".
 5. In the "Debug" menu, click on "Attach to Process".
 6. Select:  
@@ -2086,7 +2086,7 @@ There are several ways of activating the debugger:
 3. In the tree, click on "Debugging" and "Just-In-Time".
 4. Under "Just-In-Time Debugging", select the "Script" option.
 5. Close Visual Studio.
-6. Start the simulation using "Online > Simulation > With script debugger".
+6. Start the simulation using "Online &gt; Simulation &gt; With script debugger".
 
 #### Stopping the debugger
 
@@ -2116,17 +2116,17 @@ When VBScript files are debugged with a debugger, the VBScript files always open
 
 In the case of the graphical Runtime system, this means that you receive two files per picture:
 
-- <ScreenName>.pdl_events: Contains the event-driven scripts.
-- <ScreenName>.pdl_triggers: Contains the cyclic and tag-driven VBScript files.
+- &lt;ScreenName&gt;.pdl_events: Contains the event-driven scripts.
+- &lt;ScreenName&gt;.pdl_triggers: Contains the cyclic and tag-driven VBScript files.
 
 The following section describes the structure of script files within the graphical Runtime system:
 
-- Content of the VBScript file <ScreenName>.pdl_events
+- Content of the VBScript file &lt;ScreenName&gt;.pdl_events
 
   General code
 
   Event-driven scripts
-- Content of the VBScript file <ScreenName>.pdl_triggers
+- Content of the VBScript file &lt;ScreenName&gt;.pdl_triggers
 
   General code
 
@@ -2161,7 +2161,7 @@ If the composite object name is too long, the syntax check in WinCC returns an e
 
 > **Note**
 >
-> To ascertain the name of an object in Runtime, click <Ctrl+Alt+Shift> and position the mouse over the corresponding object. The screen name and the object name are displayed in a tooltip.
+> To ascertain the name of an object in Runtime, click &lt;Ctrl+Alt+Shift&gt; and position the mouse over the corresponding object. The screen name and the object name are displayed in a tooltip.
 
 ### Breakpoints (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -2173,9 +2173,9 @@ When a VBScript file is updated in the debugger, all the breakpoints are lost.
 
 > **Note**
 >
-> When you set a breakpoint in script file "<Picturename>.pdl_trigger" in Runtime Professional, all trigger-driven procedures are stopped.
+> When you set a breakpoint in script file "&lt;Picturename&gt;.pdl_trigger" in Runtime Professional, all trigger-driven procedures are stopped.
 >
-> When you set a breakpoint in script file "<Picturename>.pdl_event" in Runtime Professional, all event-driven procedures are stopped.
+> When you set a breakpoint in script file "&lt;Picturename&gt;.pdl_event" in Runtime Professional, all event-driven procedures are stopped.
 
 #### Requirement
 
@@ -2226,10 +2226,10 @@ You use the debugger in order to execute your VBScript files (user-defined funct
    The debugger stops at the first break point and marks the current line.
 4. To continue working step-by-step, select one of the following menu commands:
 
-   - "Debug > Step Over": goes to the next code line. If a user-defined function is called in this line, you skip the called user-defined function. The user-defined function is executed but the debugger does not guide you through the individual lines of the function. Instead, you jump to the first line after the function was executed.
-   - "Debug > Step Into": goes to the next code line. If a user-defined function is called in this line, you jump to this function. Execute the called function step-by-step.
-   - Select the "Debug > Step Out" menu command to cancel step-by-step execution of a called function. The function is executed completely. The debugger jumps to the first line after the function was executed.
-5. Go through the document step-by-step until you reach the end, or select the "Debug > Run" menu command to execute the VBScript file to the end.
+   - "Debug &gt; Step Over": goes to the next code line. If a user-defined function is called in this line, you skip the called user-defined function. The user-defined function is executed but the debugger does not guide you through the individual lines of the function. Instead, you jump to the first line after the function was executed.
+   - "Debug &gt; Step Into": goes to the next code line. If a user-defined function is called in this line, you jump to this function. Execute the called function step-by-step.
+   - Select the "Debug &gt; Step Out" menu command to cancel step-by-step execution of a called function. The function is executed completely. The debugger jumps to the first line after the function was executed.
+5. Go through the document step-by-step until you reach the end, or select the "Debug &gt; Run" menu command to execute the VBScript file to the end.
 
 ### Executing commands (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -2245,7 +2245,7 @@ The "Command Window" is used to execute all commands which can also be executed 
 
 > **Note**
 >
-> If you want to determine the name of a WinCC object in WinCC Runtime Professional, press <Ctrl+Alt+Shift> and move the mouse over the corresponding object. The picture name and the object name are then displayed in a tooltip.
+> If you want to determine the name of a WinCC object in WinCC Runtime Professional, press &lt;Ctrl+Alt+Shift&gt; and move the mouse over the corresponding object. The picture name and the object name are then displayed in a tooltip.
 
 #### Requirement
 
@@ -2258,12 +2258,12 @@ The "Command Window" is used to execute all commands which can also be executed 
 2. Change to WinCC Runtime and trigger an action that initiates execution of the VBScript file.
 
    The debugger stops at the first breakpoint.
-3. Select "View > Other Windows > Command Window". "Command Window" opens.
-4. Enter the desired command and confirm with "<Enter>".
+3. Select "View &gt; Other Windows &gt; Command Window". "Command Window" opens.
+4. Enter the desired command and confirm with "&lt;Enter&gt;".
 
 **Note**
 
-An error message will not be generated in runtime if you enter an invalid command in the "Command Window". The "<Script Error>" message will appear in the Command Window instead.
+An error message will not be generated in runtime if you enter an invalid command in the "Command Window". The "&lt;Script Error&gt;" message will appear in the Command Window instead.
 
 #### Example
 
@@ -2271,7 +2271,7 @@ Dim i
 
 For i = 1 to 10
 
-HMIRuntime.Trace i & vbnewline
+HMIRuntime.Trace i &amp; vbnewline
 
 Next
 
@@ -2290,7 +2290,7 @@ You can determine and change the values of tags or properties in the "Command Wi
 
 > **Note**
 >
-> If you want to determine the name of a WinCC object in WinCC Runtime Professional, press <Ctrl+Alt+Shift> and move the mouse over the corresponding object. The screen name and the object name are displayed in a tooltip.
+> If you want to determine the name of a WinCC object in WinCC Runtime Professional, press &lt;Ctrl+Alt+Shift&gt; and move the mouse over the corresponding object. The screen name and the object name are displayed in a tooltip.
 
 #### Requirement
 
@@ -2303,14 +2303,14 @@ You can determine and change the values of tags or properties in the "Command Wi
 2. Change to WinCC Runtime and trigger an action that initiates execution of the VBScript file.
 
    The debugger stops at the first breakpoint.
-3. Select "View > Other Window > Command Window". "Command Window" opens.
+3. Select "View &gt; Other Window &gt; Command Window". "Command Window" opens.
 4. To determine the value of a tag or property, enter the following character string
 
    - ? myTag
    - ? myObject
 
    Note the space in front of the object name.
-5. Press <Enter>.
+5. Press &lt;Enter&gt;.
 
 ### Diagnostics (RT Professional)
 
@@ -2341,7 +2341,7 @@ This can be a dedicated screen which is designed for diagnostics and which is ca
 
 ##### GSC diagnosis of VBS
 
-GSC diagnostics returns the trace methods contained in the local scripts in the order in which they were called. Trace instructions in user-defined VB functions, which are called in local scripts, are also output. Explicit implementation of trace instructions, e.g. for output of the tag values, enables the tracing of script execution and of the functions called within those scripts. You enter the trace instruction in the form "HMIRuntime.Trace(<Output>)". Error situations which result in calling of the OnErrorExecute function are also displayed in the diagnostic window.
+GSC diagnostics returns the trace methods contained in the local scripts in the order in which they were called. Trace instructions in user-defined VB functions, which are called in local scripts, are also output. Explicit implementation of trace instructions, e.g. for output of the tag values, enables the tracing of script execution and of the functions called within those scripts. You enter the trace instruction in the form "HMIRuntime.Trace(&lt;Output&gt;)". Error situations which result in calling of the OnErrorExecute function are also displayed in the diagnostic window.
 
 ##### GSC diagnosis of C
 
@@ -2395,8 +2395,8 @@ To use the GSC Diagnostics, you insert the "Print job/Script diagnostics" object
 Proceed as follows to insert the GSC diagnostics window:
 
 1. Insert the "Print job/Script diagnostics" object from the "Controls" palette of the "Tools" task card into the screen.
-2. Assign a name to the GSC diagnostics window at "Miscellaneous > Name".
-3. Select the "Functions" option in the inspector window under "Properties > Properties > General > Content > Window content".
+2. Assign a name to the GSC diagnostics window at "Miscellaneous &gt; Name".
+3. Select the "Functions" option in the inspector window under "Properties &gt; Properties &gt; General &gt; Content &gt; Window content".
 4. Select the "GSC diagnostics" option under "Template".
 5. Specify the further settings for the GSC diagnostics window under "General", "Layout", and "Miscellaneous".
 
@@ -2555,7 +2555,7 @@ The processing sequence of the previous Example A is adhered to, if you addition
 >
 > Make sure that the user-defined function queue does not overflow; otherwise the system function for the following event may not be executed.
 >
-> An overflow is recognizable by "Overload: Script <name> is rejected" or "Adherence to the expected processing order for user-defined functions and system functions in Runtime cannot always be ensured".
+> An overflow is recognizable by "Overload: Script &lt;name&gt; is rejected" or "Adherence to the expected processing order for user-defined functions and system functions in Runtime cannot always be ensured".
 
 ### Making object properties dynamic in Runtime (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -2637,7 +2637,7 @@ The HMI tags and the VB user-defined function are created.
 ##### Procedure
 
 1. Open the "HMI Tag"editor and click on the "Fahrenheit" tag.
-2. Click the "Properties > Events" tab in the Inspector window. Select the "Value change" event.
+2. Click the "Properties &gt; Events" tab in the Inspector window. Select the "Value change" event.
 3. Configure the user-defined VB function "FahrenheitToCelsius" to the "Value change" event.
 4. Select the tag "Fahrenheit" for the parameter "Fahrenheit".
 5. Select the HMI-tag "Celsius" for the return value "Fahrenheit to Celsius".
@@ -2705,7 +2705,7 @@ The tags and the user-defined VB function are created.
 ##### Procedure
 
 1. Open the "HMI tags" editor and click the "VarInch" tag.
-2. Click "Properties> Events" in the Inspector window. Select the "Value change" event.
+2. Click "Properties&gt; Events" in the Inspector window. Select the "Value change" event.
 3. Configure the user-defined VB function "InchToMeter" to the "Value change" event.
 4. Select the "VarInch" HMI tag for the "Inch" parameter.
 5. Configure an output field in a screen and connect it with the "VarMeter" HMI tag.
@@ -2753,7 +2753,7 @@ Text list:
 
    ![Procedure](images/70594956299_DV_resource.Stream@PNG-en-US.png)
 3. Open the screen and insert a button for which you configure the operating mode change to "online".
-4. Click "Properties> Events" in the Inspector window. Select the "Press" event.
+4. Click "Properties&gt; Events" in the Inspector window. Select the "Press" event.
 5. Configure the "SetDeviceMode" system function for the "Press" event. The system function is found in the selection list under "Settings".
 6. For the "Mode" parameter, select the "Online" entry.
 7. Configure the system function "SetBit" on the event "Press". The system function is found in the selection list under "Bit processing".
@@ -2777,7 +2777,7 @@ You want to display the current set operating mode in an output field on the HMI
 
 ##### Procedure
 
-1. Create a "Symbolic I/O field" in the process image. Click "Properties > Properties" in the Inspector window.
+1. Create a "Symbolic I/O field" in the process image. Click "Properties &gt; Properties" in the Inspector window.
 2. Make the following settings in the "General" group:
 
    - Select "Output" as the "Mode".
@@ -3000,7 +3000,7 @@ objScrWindow.ScreenName = "test"
 
 If you have inserted the Print job/Script diagnostics" object in your screen, you can use the trace command to display diagnostics outputs in the diagnostics window in Runtime.
 
-Print job/Script diagnostics returns the trace methods contained in the user-defined functions in the order in which they were called. This also applies to trace instructions in functions that are called in user-defined functions. The targeted use of trace instructions allows you to trace the flow of user-defined functions and the functions called therein. You enter the trace instruction in the form "HMIRuntime.Trace<Output>".
+Print job/Script diagnostics returns the trace methods contained in the user-defined functions in the order in which they were called. This also applies to trace instructions in functions that are called in user-defined functions. The targeted use of trace instructions allows you to trace the flow of user-defined functions and the functions called therein. You enter the trace instruction in the form "HMIRuntime.Trace&lt;Output&gt;".
 
 The "Print job/Script diagnostics" object displays trace outputs from C and VBS.
 
@@ -3032,15 +3032,15 @@ Set objAlarmControl = ScreenItems("Control2")
 
 For lIndex = 1 To objAlarmControl.GetRowCollection.Count
 
-HMIRuntime.Trace "Row: " & (objAlarmControl.GetRow(lIndex).RowNumber) & " "
+HMIRuntime.Trace "Row: " &amp; (objAlarmControl.GetRow(lIndex).RowNumber) &amp; " "
 
 'enumerate and trace out column titles and cell texts
 
 For lCellIndex = 1 To objAlarmControl.GetRow(lIndex).CellCount
 
-HMIRuntime.Trace objAlarmControl.GetMessageColumn(lCellIndex -1).Name & " "
+HMIRuntime.Trace objAlarmControl.GetMessageColumn(lCellIndex -1).Name &amp; " "
 
-HMIRuntime.Trace objAlarmControl.GetRow(lIndex).CellText(lCellIndex) & " "
+HMIRuntime.Trace objAlarmControl.GetRow(lIndex).CellText(lCellIndex) &amp; " "
 
 Next
 
@@ -3172,17 +3172,17 @@ Set objTag = HMIRuntime.Tags("Tag1")
 
 objTag.Write 9
 
-If 0 <> objTag.LastError Then
+If 0 &lt;&gt; objTag.LastError Then
 
-HMIRuntime.Trace "Error: " & objTag.LastError & vbCrLf & "ErrorDescription: " & objTag.ErrorDescription & vbCrLf
+HMIRuntime.Trace "Error: " &amp; objTag.LastError &amp; vbCrLf &amp; "ErrorDescription: " &amp; objTag.ErrorDescription &amp; vbCrLf
 
 Else
 
 objTag.Read
 
-If &H80 <> objTag.QualityCode Then
+If &amp;H80 &lt;&gt; objTag.QualityCode Then
 
-HMIRuntime.Trace "QualityCode: 0x" & Hex(objTag.QualityCode) & vbCrLf
+HMIRuntime.Trace "QualityCode: 0x" &amp; Hex(objTag.QualityCode) &amp; vbCrLf
 
 End If
 
@@ -3224,7 +3224,7 @@ In the following example, the value of "Tag1" is read and displayed in the Globa
 
 'VBS134
 
-HMIRuntime.Trace "Value: " & HMIRuntime.Tags("Tag1").Read & vbCrLf
+HMIRuntime.Trace "Value: " &amp; HMIRuntime.Tags("Tag1").Read &amp; vbCrLf
 
 This is the simplest form of reading since no object reference is generated.
 
@@ -3238,7 +3238,7 @@ Dim objTag
 
 Set objTag = HMIRuntime.Tags("Tag1")
 
-HMIRuntime.Trace "Value: " & objTag.Read & vbCrLf
+HMIRuntime.Trace "Value: " &amp; objTag.Read &amp; vbCrLf
 
 Referencing offers the advantage of being able to work with the tag object. You can read the tag value, perform calculations, and write the tag value again.
 
@@ -3274,7 +3274,7 @@ Dim objTag
 
 Set objTag = HMIRuntime.Tags("Tag1")
 
-HMIRuntime.Trace "Value: " & objTag.Read(1) & vbCrLf
+HMIRuntime.Trace "Value: " &amp; objTag.Read(1) &amp; vbCrLf
 
 > **Note**
 >
@@ -3298,15 +3298,15 @@ Set objTag = HMIRuntime.Tags("Tag1")
 
 objTag.Read
 
-If &H80 <> objTag.QualityCode
+If &amp;H80 &lt;&gt; objTag.QualityCode
 
   Then
 
-    HMIRuntime.Trace "Error: " & objTag.LastError & vbCrLf & "ErrorDescription: " & objTag.ErrorDescription & vbCrLf & "QualityCode: 0x" & Hex(objTag.QualityCode) & vbCrLf
+    HMIRuntime.Trace "Error: " &amp; objTag.LastError &amp; vbCrLf &amp; "ErrorDescription: " &amp; objTag.ErrorDescription &amp; vbCrLf &amp; "QualityCode: 0x" &amp; Hex(objTag.QualityCode) &amp; vbCrLf
 
   Else
 
-    HMIRuntime.Trace "Value: " & objTag.Value & vbCrLf
+    HMIRuntime.Trace "Value: " &amp; objTag.Value &amp; vbCrLf
 
 End If
 
@@ -3397,7 +3397,7 @@ End Sub
 
 You can reference the screen with the object to be modified via HMIRuntime.Screens. The specification of the screen is defined relative to the root screen via the following access code:
 
-[<Root screen name>.]<Screen window name>[:<Screen name>]... .<Screen window name>[:<Screen name>]
+[&lt;Root screen name&gt;.]&lt;Screen window name&gt;[:&lt;Screen name&gt;]... .&lt;Screen window name&gt;[:&lt;Screen name&gt;]
 
 In the following example, a reference is created to the "Screen2" object contained in the "Rectangle1" picture and the background color is set to red.
 
@@ -3812,21 +3812,21 @@ Set fso = CreateObject("FileCtl.FileSystem")
 
 ' Get first item that matches path
 
-sFileName = fso.Dir(folder & "*.*")
+sFileName = fso.Dir(folder &amp; "*.*")
 
 nFileIndex = 0
 
 'Get the rest of matches
 
-Do While sFileName <> ""
+Do While sFileName &lt;&gt; ""
 
-nFileAttr = fso.GetAttr(folder & sFileName)
+nFileAttr = fso.GetAttr(folder &amp; sFileName)
 
-If (nFileAttr And 16) <> 0 Then
+If (nFileAttr And 16) &lt;&gt; 0 Then
 
-fso.Kill("\flash\simatic\Browsercache\data7\"&sFileName&"\*.*")
+fso.Kill("\flash\simatic\Browsercache\data7\"&amp;sFileName&amp;"\*.*")
 
-If Err.Number <>0 Then
+If Err.Number &lt;&gt;0 Then
 
 Err.Clear
 
@@ -4019,7 +4019,7 @@ ActivateScreenInScreenWindow (screenName, "ScreenWindow", "test");
 
 If you have inserted a GSC diagnostics window in your screen, you can use the trace command to display diagnostics outputs in the diagnostics window in Runtime.
 
-GSC diagnostics returns the trace methods contained in the functions in the order in which they were called. This also applies to trace instructions in functions that are called in user-defined functions. The targeted use of trace instructions allows you to trace the execution of user-defined functions and the functions called therein. You enter the trace instruction in the form "printf(<Output>)".
+GSC diagnostics returns the trace methods contained in the functions in the order in which they were called. This also applies to trace instructions in functions that are called in user-defined functions. The targeted use of trace instructions allows you to trace the execution of user-defined functions and the functions called therein. You enter the trace instruction in the form "printf(&lt;Output&gt;)".
 
 The GSC diagnostics window displays trace outputs of C functions.
 

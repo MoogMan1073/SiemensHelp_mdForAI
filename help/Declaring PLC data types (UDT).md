@@ -157,8 +157,8 @@ To find a PLC data type and then open it, follow these steps:
 
 1. You can start the search process for the following three types:
 
-   - Select the command "Open block/PLC data type" in the project tree in the shortcut menu of the project, a device or the "PLC data types" folder, or press the </F7> button.
-   - Press the <F7> key in the open program editor.
+   - Select the command "Open block/PLC data type" in the project tree in the shortcut menu of the project, a device or the "PLC data types" folder, or press the &lt;/F7&gt; button.
+   - Press the &lt;F7&gt; key in the open program editor.
 
    The "Open block/PLC data type" dialog box opens.
 2. Enter the name of the PLC data type you want to find. You can also enter only parts of the name.
@@ -181,10 +181,10 @@ To copy a PLC data type, follow these steps:
 3. In the project tree, right-click the "PLC data types" folder into which you want to insert the copied PLC data type.
 4. Select the "Paste" command in the shortcut menu.
 
-   - If you paste the PLC data type into the same CPU, the copy is pasted with the name extension "_<consecutive number>".
+   - If you paste the PLC data type into the same CPU, the copy is pasted with the name extension "_&lt;consecutive number&gt;".
    - If you paste the PLC data type into a different CPU where a PLC data type of the same name already exists, the "Paste" dialog box opens. Select the desired option and confirm your selection with "OK".
 
-Alternatively, you can also copy the PLC data type via drag-and-drop while holding down the <Ctrl> key.
+Alternatively, you can also copy the PLC data type via drag-and-drop while holding down the &lt;Ctrl&gt; key.
 
 ### Moving PLC data types
 
@@ -210,7 +210,7 @@ The PLC data type you want to delete is not open.
 To delete a PLC data type, follow these steps:
 
 1. In the project tree, open the "PLC data types" folder.
-2. Select the PLC data type to be deleted. You can also select several PLC data types by clicking on them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking on the first and last data type.
+2. Select the PLC data type to be deleted. You can also select several PLC data types by clicking on them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking on the first and last data type.
 3. Select the "Delete" command in the shortcut menu.
 
 > **Note**
@@ -354,8 +354,8 @@ To enable the expanded mode, follow these steps:
 >
 > Depending on the amount of RAM available on your computer, the following maximum limits apply to expanded mode:
 >
-> - RAM < 8 GB: A maximum of 10,000 rows are displayed.
-> - RAM >= 8 GB: A maximum of 40,000 rows are displayed.
+> - RAM &lt; 8 GB: A maximum of 10,000 rows are displayed.
+> - RAM &gt;= 8 GB: A maximum of 40,000 rows are displayed.
 
 ---
 
@@ -536,7 +536,7 @@ To edit a comment in all project languages, follow these steps:
 >
 > **Editing all project texts in the global "Project texts" table**
 >
-> You can also edit the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts". It contains all translatable texts of the entire project.
+> You can also edit the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts". It contains all translatable texts of the entire project.
 >
 > You can find additional information on translation of texts under [Project text basics](Editing%20project%20data.md#project-text-basics).​
 
@@ -582,7 +582,7 @@ A new empty row will be inserted below the selected row.
 
 To delete a tag, follow these steps:
 
-1. Select the row with the tag to be deleted. You can also select several rows by clicking on them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking on the first and last row.
+1. Select the row with the tag to be deleted. You can also select several rows by clicking on them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking on the first and last row.
 2. Select the "Delete" command in the shortcut menu.
 
 ---

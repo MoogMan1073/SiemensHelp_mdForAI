@@ -112,7 +112,7 @@ In Startdrive, the display of the TypeIdentifier is optional, and deactivated as
 
 ### Activating the display of the TypeIdentifier in Startdrive
 
-1. In the Startdrive project view, select menu "Options > Settings".
+1. In the Startdrive project view, select menu "Options &gt; Settings".
 
    The "Settings" configuration area opens.
 2. Select "Hardware configuration" in the secondary navigation.
@@ -740,7 +740,7 @@ The following table describes the **methods** of the class:
 | --- | --- | --- | --- |
 | `Find` | TechnologyExtension item | string name/identifier | Finds a Technology Extension using the name/identifier. |
 | `Contains` | `bool` | TechnologyExtension item | Determines whether an element is included in `TechnologyExtensionComposition`. |
-| `GetEnumerator` | IEnumerator<TechnologyExtension> | - | Returns an enumerator which runs through a list of available Technology Extensions. |
+| `GetEnumerator` | IEnumerator&lt;TechnologyExtension&gt; | - | Returns an enumerator which runs through a list of available Technology Extensions. |
 
 ---
 
@@ -783,7 +783,7 @@ The following table describes the **properties** of the class:
 
 | Name | Data type | Access | Description |
 | --- | --- | --- | --- |
-| `Identifier` | `string` | ReadOnly | Returns the identifier of the `TechnologyExtensionPackage`. The syntax for definition is: <name>/<version> |
+| `Identifier` | `string` | ReadOnly | Returns the identifier of the `TechnologyExtensionPackage`. The syntax for definition is: &lt;name&gt;/&lt;version&gt; |
 | `Name` | `string` | ReadOnly | Returns the name of the `TechnologyExtensionPackage`. |
 | `DisplayName` | `string` | ReadOnly | Returns the `DisplayName` of the `TechnologyExtensionPackage`. |
 
@@ -1044,7 +1044,7 @@ using Siemens.Engineering.MC.Drives;
 
 DriveObject driveObject = ...
 
-DriveFunctionInterface dfi = driveObject.GetService<DriveFunctionInterface>();
+DriveFunctionInterface dfi = driveObject.GetService&lt;DriveFunctionInterface&gt;();
 
 // dfi can be null in case of the actual driveobject does not support it.
 
@@ -1054,7 +1054,7 @@ using Siemens.Engineering.MC.Drives;
 
 OnlineDriveObject onlineDriveObject = ...
 
-OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService<OnlineDriveFunctionInterface>();
+OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService&lt;OnlineDriveFunctionInterface&gt;();
 
 // onlineDfi can be null in case of the actual onlineDriveObject
 
@@ -1134,7 +1134,7 @@ Project project =  portal.Projects.Open("..."); //Destination folder to open th
 
 DeviceItem item = project.Devices[0].Items[0].Items[0];
 
-DriveObject driveObject = item.GetService<DriveObjectContainer>().DriveObjects[0];
+DriveObject driveObject = item.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];
 
 //S devices
 
@@ -1142,7 +1142,7 @@ Project project =  portal.Projects.Open("..."); //Destination folder to open th
 
 DeviceItem item = project.Devices[0].Items[0];
 
-DriveObject driveObject = item.GetService<DriveObjectContainer>().DriveObjects[0];
+DriveObject driveObject = item.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];
 
 Determining an online drive object
 
@@ -1154,7 +1154,7 @@ Project project =  portal.Projects.Open("..."); //Destination folder to open th
 
 DeviceItem item = project.Devices[0].Items[0].Items[0];
 
-OnlineDriveObject onlineDriveObject = item.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+OnlineDriveObject onlineDriveObject = item.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
 //S devices
 
@@ -1162,7 +1162,7 @@ Project project =  portal.Projects.Open("..."); //Destination folder to open th
 
 DeviceItem item = project.Devices[0].Items[0];
 
-OnlineDriveObject onlineDriveObject = item.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+OnlineDriveObject onlineDriveObject = item.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
 ### Determining the drive object type
 
@@ -1176,7 +1176,7 @@ using Siemens.Engineering.MC.Drives.DFI;
 
 DriveObject driveObject = ...
 
-DriveFunctionInterface dfi = driveObject.GetService<DriveFunctionInterface>();
+DriveFunctionInterface dfi = driveObject.GetService&lt;DriveFunctionInterface&gt;();
 
 DriveObjectTypeHandler driveObjectTypeHandler = dfi.DriveObjectFunctions.DriveObjectTypeHandler;
 
@@ -1534,9 +1534,9 @@ DeviceItem subModulDQInterface = subModul.DeviceItems[0];      //We need th
 
 DeviceItem cuDQInterface = cu.DeviceItems[3];                 //This is the DQ interface of the CU
 
-NetworkPort subModulDQ = ((IEngineeringServiceProvider)subModulDQInterface.DeviceItems[0]).GetService<NetworkPort>(); //We need the DriveCliq port of the DQ interface from the submodul
+NetworkPort subModulDQ = ((IEngineeringServiceProvider)subModulDQInterface.DeviceItems[0]).GetService&lt;NetworkPort&gt;(); //We need the DriveCliq port of the DQ interface from the submodul
 
-NetworkPort cuDQ = ((IEngineeringServiceProvider)cuDQInterface.DeviceItems[0]).GetService<NetworkPort>();                  //We need the DriveCliq port of the DQ interface from the CU
+NetworkPort cuDQ = ((IEngineeringServiceProvider)cuDQInterface.DeviceItems[0]).GetService&lt;NetworkPort&gt;();                  //We need the DriveCliq port of the DQ interface from the CU
 
 cuDQ.DisconnectFromPort(subModulDQ); //Delete the connection between the two ports (automatically created when plugging a modul)
 
@@ -1552,7 +1552,7 @@ using Siemens.Engineering;
 
 // Get the list of the running TIA Portal processes.
 
-IList<TiaPortalProcess> procs = TiaPortal.GetProcesses();
+IList&lt;TiaPortalProcess&gt; procs = TiaPortal.GetProcesses();
 
 TiaPortal portal;
 
@@ -1614,7 +1614,7 @@ Determining whether the required Startdrive version is installed
 
 using Siemens.Engineering;
 
-if (tiaProcess.InstalledSoftware.Any(sw => sw.Name.Equals("SINAMICS Startdrive Advanced") && sw.Version.Equals("V15"))) { Console.WriteLine("Startdrive is available");}
+if (tiaProcess.InstalledSoftware.Any(sw =&gt; sw.Name.Equals("SINAMICS Startdrive Advanced") &amp;&amp; sw.Version.Equals("V15"))) { Console.WriteLine("Startdrive is available");}
 
 // "V15" is the current startdrive version started at December 2017.
 
@@ -1636,9 +1636,9 @@ Setting the encoder type and/or the encoder data set number offline via the hard
 
 DeviceItem cuDeviceItem = m_Device.DeviceItems[1];
 
-DriveObject cuDriveObject = cuDeviceItem.GetService<DriveObjectContainer>().DriveObjects[0];
+DriveObject cuDriveObject = cuDeviceItem.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];
 
-DriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService<DriveFunctionInterface>();
+DriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService&lt;DriveFunctionInterface&gt;();
 
 HardwareProjection hardwareProjection = cuDriveFunctionInterface.HardwareProjection;
 
@@ -1698,9 +1698,9 @@ Setting the encoder type and/or the encoder data set number online via the hardw
 
 DeviceItem cuDeviceItem = m_Device.DeviceItems[1];
 
-OnlineDriveObject cuOnlineDriveObject = cuDeviceItem.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+OnlineDriveObject cuOnlineDriveObject = cuDeviceItem.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
-OnlineDriveFunctionInterface cuDriveFunctionInterface = cuOnlineDriveObject.GetService<OnlineDriveFunctionInterface>();
+OnlineDriveFunctionInterface cuDriveFunctionInterface = cuOnlineDriveObject.GetService&lt;OnlineDriveFunctionInterface&gt;();
 
 HardwareProjection hardwareProjection = cuDriveFunctionInterface.HardwareProjection;
 
@@ -1754,9 +1754,9 @@ Reading out the encoder configuration
 
 DeviceItem cuDeviceItem = m_Device.DeviceItems[1];
 
-DriveObject cuDriveObject = cuDeviceItem.GetService<DriveObjectContainer>().DriveObjects[0];
+DriveObject cuDriveObject = cuDeviceItem.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];
 
-DriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService<DriveFunctionInterface>();
+DriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService&lt;DriveFunctionInterface&gt;();
 
 HardwareProjection encoderProjection = cuDriveFunctionInterface.HardwareProjection;
 
@@ -1792,9 +1792,9 @@ using Siemens.Engineering.MC.Drives.Enums;
 
 DeviceItem cuDeviceItem = m_Device.DeviceItems[1];
 
-DriveObject cuDriveObject = cuDeviceItem.GetService<DriveObjectContainer>().DriveObjects[0];
+DriveObject cuDriveObject = cuDeviceItem.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];
 
-DriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService<DriveFunctionInterface>();
+DriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService&lt;DriveFunctionInterface&gt;();
 
 HardwareProjection hardwareProjection = cuDriveFunctionInterface.HardwareProjection;
 
@@ -1822,7 +1822,7 @@ EncoderConfiguration config = hardwareProjection.GetCurrentEncoderConfiguration(
 
 // Fill out Encoder 1's configuration values.
 
-config.RequiredConfigurationEntries.ToList().ForEach(ce =>
+config.RequiredConfigurationEntries.ToList().ForEach(ce =&gt;
 
 {
 
@@ -1888,9 +1888,9 @@ DeviceItem cuDeviceItemForOnline = m_Device.DeviceItems[0];
 
 // To use these function in Online, you have to use the OnlineDriveFunctionInterface
 
-OnlineDriveObject onlineDriveObject = cuDeviceItem.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+OnlineDriveObject onlineDriveObject = cuDeviceItem.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
-OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService<OnlineDriveFunctionInterface>();
+OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService&lt;OnlineDriveFunctionInterface&gt;();
 
 HardwareProjection hardwareProjection = onlineDfi.HardwareProjection;
 
@@ -1918,7 +1918,7 @@ EncoderConfiguration config = hardwareProjection.GetCurrentEncoderConfiguration(
 
 // Fill out Encoder 1's configuration values.
 
-config.RequiredConfigurationEntries.ToList().ForEach(ce =>
+config.RequiredConfigurationEntries.ToList().ForEach(ce =&gt;
 
 {
 
@@ -2000,8 +2000,8 @@ private bool TestEncoderProjectionForAcxDrives(){
  bool result = false;  
  //Revelant drive already added to project m_Project.Devices[0]  
  DeviceItem motorModule = m_Project.Devices[0].DeviceItems[2]; //get the motor module or power module  
- DriveObject mmDriveObject = motorModule.GetService<DriveObjectContainer>().DriveObjects[0];  
- DriveFunctionInterface mmDriveFunctionInterface = mmDriveObject.GetService<DriveFunctionInterface>();  
+ DriveObject mmDriveObject = motorModule.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];  
+ DriveFunctionInterface mmDriveFunctionInterface = mmDriveObject.GetService&lt;DriveFunctionInterface&gt;();  
  HardwareProjection hwProjection = mmDriveFunctionInterface.HardwareProjection;  
   
  try  
@@ -2009,8 +2009,8 @@ private bool TestEncoderProjectionForAcxDrives(){
  EncoderConfiguration encoderConfiguration = hwProjection.GetCurrentEncoderConfiguration(0);   
  //get EncoderConfiguration for encoder at index 0  
   
- IList<ConfigurationEntry> encoderTypes = encoderConfiguration.EncoderTypes.ToList();  
- //get the type of encoder, this would return only the applicable parameters p404.0 & p404.1  
+ IList&lt;ConfigurationEntry&gt; encoderTypes = encoderConfiguration.EncoderTypes.ToList();  
+ //get the type of encoder, this would return only the applicable parameters p404.0 &amp; p404.1  
   
  bool setEncoderTypeResult = encoderConfiguration.SetEncoderType(RotaryLinearFlag.Linear, AbsoluteIncrementalFlag.Incremental);  
  //SetEncoderType is optional and can be used to change Encoder Type.  
@@ -2019,7 +2019,7 @@ private bool TestEncoderProjectionForAcxDrives(){
   
  if (setEncoderTypeResult)  
  {  
- encoderConfiguration.RequiredConfigurationEntries.ToList().ForEach(e =>  
+ encoderConfiguration.RequiredConfigurationEntries.ToList().ForEach(e =&gt;  
  {  
  if (e.Name.Equals("p404.0"))  
  {  
@@ -2047,8 +2047,8 @@ private bool TestEncoderProjectionForAcxDrives()
  bool result = false;  
  //Revelant drive already added to project m_Project.Devices[0]  
  DeviceItem motorModule = m_Project.Devices[0].DeviceItems[2]; //get the motor module or power module  
- DriveObject mmDriveObject = motorModule.GetService<DriveObjectContainer>().DriveObjects[0];  
- DriveFunctionInterface mmDriveFunctionInterface = mmDriveObject.GetService<DriveFunctionInterface>();  
+ DriveObject mmDriveObject = motorModule.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];  
+ DriveFunctionInterface mmDriveFunctionInterface = mmDriveObject.GetService&lt;DriveFunctionInterface&gt;();  
  HardwareProjection hwProjection = mmDriveFunctionInterface.HardwareProjection;  
   
  try  
@@ -2056,7 +2056,7 @@ private bool TestEncoderProjectionForAcxDrives()
  EncoderConfiguration encoderConfiguration = hwProjection.GetCurrentEncoderConfiguration(0);   
  //get EncoderConfiguration for encoder at index 0  
   
- IList<ConfigurationEntry> encoderTypes = encoderConfiguration.EncoderTypes.ToList();  
+ IList&lt;ConfigurationEntry&gt; encoderTypes = encoderConfiguration.EncoderTypes.ToList();  
  //get the type of encoder, this would return only the applicable parameter p404.0   
   
  bool setEncoderTypeResult = encoderConfiguration.SetEncoderType(RotaryLinearFlag.Linear);  
@@ -2065,7 +2065,7 @@ private bool TestEncoderProjectionForAcxDrives()
   
  if (setEncoderTypeResult)  
  {  
- encoderConfiguration.RequiredConfigurationEntries.ToList().ForEach(e =>  
+ encoderConfiguration.RequiredConfigurationEntries.ToList().ForEach(e =&gt;  
  {  
  if (e.Name.Equals("p404.0"))  
  {  
@@ -2096,7 +2096,7 @@ Configuring S120 and G120 drives offline
 
 DriveObject driveObject = ...
 
-DriveFunctionInterface dfi = driveObject.GetService<DriveFunctionInterface>();
+DriveFunctionInterface dfi = driveObject.GetService&lt;DriveFunctionInterface&gt;();
 
 HardwareProjection hardwareProjection = dfi.HardwareProjection;
 
@@ -2120,7 +2120,7 @@ Configuring S120 and G120 drives online
 
 OnlineDriveObject onlineDriveObject = ...
 
-OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService<OnlineDriveFunctionInterface>();
+OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService&lt;OnlineDriveFunctionInterface&gt;();
 
 HardwareProjection hardwareProjection = onlineDfi.HardwareProjection;
 
@@ -2146,11 +2146,11 @@ using Siemens.Engineering.MC.Drives;
 
 Device s120Drive = m_Project.Devices[1];  
 DeviceItem driveUnit = s120Drive.DeviceItems[0];  
-DriveObjectContainer driveObjectContainer = driveUnit.GetService<DriveObjectContainer>();  
+DriveObjectContainer driveObjectContainer = driveUnit.GetService&lt;DriveObjectContainer&gt;();  
 DriveObject driveObject = driveObjectContainer.DriveObjects[0];  
 Telegram mainTelegram = driveObject.Telegrams[0];  
   
-IList<HwIdentifier> hwIdentifiers = mainTelegram.HwIdentifiers?.ToList(); //get the Hardware Identifier  
+IList&lt;HwIdentifier&gt; hwIdentifiers = mainTelegram.HwIdentifiers?.ToList(); //get the Hardware Identifier  
 long identifier = hwIdentifiers[0].Identifier;
 
 Determining the hardware identifier of a Module Access Point
@@ -2161,35 +2161,35 @@ using Siemens.Engineering.HW.HwIdentifier;
 
 Device s120Drive = m_Project.Devices[1];  
 DeviceItem driveUnit = s120Drive.DeviceItems[0];  
-DriveObjectContainer driveObjectContainer = driveUnit.GetService<DriveObjectContainer>();  
+DriveObjectContainer driveObjectContainer = driveUnit.GetService&lt;DriveObjectContainer&gt;();  
 DriveObject driveObject = driveObjectContainer.DriveObjects[0];  
 Telegram mainTelegram = driveObject.Telegrams[0];  
   
-IList<HwIdentifier> hwIdentifiers = mainTelegram.HwIdentifiers?.ToList(); //get the Hardware Identifier  
+IList&lt;HwIdentifier&gt; hwIdentifiers = mainTelegram.HwIdentifiers?.ToList(); //get the Hardware Identifier  
 long identifier = hwIdentifiers[0].Identifier;  
   
 Device deviceS120 = m_Project.Devices[1]; //S120 with Double Motor Module  
 Device deviceG120 = m_Project.Devices[2]; //G120  
 Device deviceG220 = m_Project.Devices[3]; //G220  
   
-ModuleAccessPoint moduleAccessPointS120 = deviceS120.DeviceItems[1].GetService<ModuleAccessPoint>();  
-IList<HwIdentifier> hwIdentifiersS120 = moduleAccessPointS120.HwIdentifiers.ToList();  
+ModuleAccessPoint moduleAccessPointS120 = deviceS120.DeviceItems[1].GetService&lt;ModuleAccessPoint&gt;();  
+IList&lt;HwIdentifier&gt; hwIdentifiersS120 = moduleAccessPointS120.HwIdentifiers.ToList();  
 long identifierS120 = hwIdentifiersS120[0].Identifier;  
   
-ModuleAccessPoint moduleAccessPointDriveAxis = deviceS120.DeviceItems[2].GetService<ModuleAccessPoint>();  
-IList<HwIdentifier> hwIdentifiersDriveAxis = moduleAccessPointDriveAxis.HwIdentifiers.ToList();  
+ModuleAccessPoint moduleAccessPointDriveAxis = deviceS120.DeviceItems[2].GetService&lt;ModuleAccessPoint&gt;();  
+IList&lt;HwIdentifier&gt; hwIdentifiersDriveAxis = moduleAccessPointDriveAxis.HwIdentifiers.ToList();  
 long identifierDriveAxis = hwIdentifiersDriveAxis[0].Identifier;  
   
-ModuleAccessPoint moduleAccessPointDriveAxisTwo = deviceS120.DeviceItems[3].GetService<ModuleAccessPoint>();  
-IList<HwIdentifier> hwIdentifiersDriveAxisTwo = moduleAccessPointDriveAxisTwo.HwIdentifiers.ToList();  
+ModuleAccessPoint moduleAccessPointDriveAxisTwo = deviceS120.DeviceItems[3].GetService&lt;ModuleAccessPoint&gt;();  
+IList&lt;HwIdentifier&gt; hwIdentifiersDriveAxisTwo = moduleAccessPointDriveAxisTwo.HwIdentifiers.ToList();  
 long identifierDriveAxisTwo = hwIdentifiersDriveAxisTwo[0].Identifier;  
   
-ModuleAccessPoint moduleAccessPointG120 = deviceG120.DeviceItems[1].GetService<ModuleAccessPoint>();  
-IList<HwIdentifier> hwIdentifiersG120 = moduleAccessPointG120.HwIdentifiers.ToList();  
+ModuleAccessPoint moduleAccessPointG120 = deviceG120.DeviceItems[1].GetService&lt;ModuleAccessPoint&gt;();  
+IList&lt;HwIdentifier&gt; hwIdentifiersG120 = moduleAccessPointG120.HwIdentifiers.ToList();  
 long identifierG120 = hwIdentifiersG120[0].Identifier;  
   
-ModuleAccessPoint moduleAccessPointG220 = deviceG220.DeviceItems[1].GetService<ModuleAccessPoint>();  
-IList<HwIdentifier> hwIdentifiersG220 = moduleAccessPointG220.HwIdentifiers.ToList();  
+ModuleAccessPoint moduleAccessPointG220 = deviceG220.DeviceItems[1].GetService&lt;ModuleAccessPoint&gt;();  
+IList&lt;HwIdentifier&gt; hwIdentifiersG220 = moduleAccessPointG220.HwIdentifiers.ToList();  
 long identifierG220 = hwIdentifiersG220[0].Identifier;
 
 ### Creating a component for a drive component (S120 only)
@@ -2374,9 +2374,9 @@ using Siemens.Engineering.MC.Drives.Enums;
 
 DeviceItem cuDeviceItem = m_Device.DeviceItems[1];
 
-DriveObject cuDriveObject = cuDeviceItem.GetService<DriveObjectContainer>().DriveObjects[0];
+DriveObject cuDriveObject = cuDeviceItem.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];
 
-DriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService<DriveFunctionInterface>();
+DriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService&lt;DriveFunctionInterface&gt;();
 
 HardwareProjection hardwareProjection = cuDriveFunctionInterface.HardwareProjection;
 
@@ -2384,7 +2384,7 @@ hardwareProjection.SetMotorType(MotorType.InductionMotor, 0);
 
 MotorConfiguration config = hardwareProjection.GetCurrentMotorConfiguration(0);
 
-config.RequiredConfigurationEntries.ToList().ForEach(ce =>
+config.RequiredConfigurationEntries.ToList().ForEach(ce =&gt;
 
 {
 
@@ -2742,7 +2742,7 @@ using Siemens.Engineering.MC.Drives;
 
 DeviceItem item = ... //device item of the CU (e.g. : project.Devices[0].Items[0].Items[0])
 
-OnlineDriveObject onlineDriveObject = item.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+OnlineDriveObject onlineDriveObject = item.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
 if (onlineDriveObject != null)
 
@@ -2764,9 +2764,9 @@ using Siemens.Engineering.MC.Drives.DFI;
 
 using Siemens.Engineering.MC.Drives.Enums;
 
-OnlineDriveObject onlineDriveObject = item.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+OnlineDriveObject onlineDriveObject = item.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
-OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService<OnlineDriveFunctionInterface>();
+OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService&lt;OnlineDriveFunctionInterface&gt;();
 
 DriveDomainFunctions driveDomainFunctions = onlineDfi.DriveDomainFunctions;
 
@@ -2796,15 +2796,15 @@ using Siemens.Engineering.MC.Drives.Enums;
 
 DeviceItem cuDeviceItem = m_Device.DeviceItems[1];
 
-OnlineDriveObject cuDriveObject = cuDeviceItem.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+OnlineDriveObject cuDriveObject = cuDeviceItem.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
 //In case of S120 and S210 device you should generally get the CU driveobject.
 
-DeviceItem cuDeviceItem = m_Device.DeviceItems[0];OnlineDriveObject cuDriveObject = cuDeviceItem.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+DeviceItem cuDeviceItem = m_Device.DeviceItems[0];OnlineDriveObject cuDriveObject = cuDeviceItem.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
 // To use the function, you have to use the OnlineDriveFunctionInterface.
 
-OnlineDriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService<OnlineDriveFunctionInterface>();
+OnlineDriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService&lt;OnlineDriveFunctionInterface&gt;();
 
 DriveDomainFunctions driveDomainFunctions = cuDriveFunctionInterface.DriveDomainFunctions;
 
@@ -2860,7 +2860,7 @@ public void SetPassword(DownloadPasswordConfiguration downloadPasswordConfigurat
 
                 // Ignore any key out of range.
 
-                if (((int)key.Key) >= 65 && ((int)key.Key <= 90))
+                if (((int)key.Key) &gt;= 65 &amp;&amp; ((int)key.Key &lt;= 90))
 
                 {
 
@@ -2898,8 +2898,8 @@ using Siemens.Engineering.MC.Drives;
 
 using Siemens.Engineering.MC.Drives.DFI;
 
-DriveObject cuDriveObject = cuDeviceItem.GetService<DriveObjectContainer>().DriveObjects[0];  
-DriveFunctionInterface driveFunctionInterface = cuDriveObject .GetService<DriveFunctionInterface>();  
+DriveObject cuDriveObject = cuDeviceItem.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];  
+DriveFunctionInterface driveFunctionInterface = cuDriveObject .GetService&lt;DriveFunctionInterface&gt;();  
   
 if (driveFunctionInterface.SafetyCommissioning == null)  
  {  
@@ -2988,7 +2988,7 @@ Install TechnologyExtensionPackage
 
 string packageFilePath = @"Y:\\TRCDATA_V1_1_0_1.tec";
 
-TechnologyExtensionInstallationProvider tecInstallationProvider = TiaPortal.GetService<TechnologyExtensionInstallationProvider>();
+TechnologyExtensionInstallationProvider tecInstallationProvider = TiaPortal.GetService&lt;TechnologyExtensionInstallationProvider&gt;();
 
 FileInfo packageFile = new FileInfo(packageFilePath);
 
@@ -3032,7 +3032,7 @@ bool confirmUninstallInUse = true;
 
 TechnologyExtensionInstallationProvider tecInstallationProvider =
 
-TiaPortal.GetService<TechnologyExtensionInstallationProvider>();
+TiaPortal.GetService&lt;TechnologyExtensionInstallationProvider&gt;();
 
 TechnologyExtensionPackage tecPackage = tecInstallationProvider.TechnologyExtensionPackages.Find(tecPackageIdentifier);
 
@@ -3076,7 +3076,7 @@ foreach (DeviceItem deviceItem in device.DeviceItems)
 
 {
 
-DriveObjectContainer doContainer = deviceItem.GetService<DriveObjectContainer>();
+DriveObjectContainer doContainer = deviceItem.GetService&lt;DriveObjectContainer&gt;();
 
 // do something
 
@@ -3090,7 +3090,7 @@ foreach (DeviceItem deviceItem in device.DeviceItems)
 
 {
 
-DriveObjectContainer doContainer = deviceItem.GetService<DriveObjectContainer>();
+DriveObjectContainer doContainer = deviceItem.GetService&lt;DriveObjectContainer&gt;();
 
 DriveObjectComposition driveObjects = doContainer.DriveObjects;
 
@@ -3108,7 +3108,7 @@ Navigate to a Technology Extension
 
 DriveObject driveObject = ...
 
-TechnologyExtensionContainer tecContainer = driveObject.GetService<TechnologyExtensionContainer>();
+TechnologyExtensionContainer tecContainer = driveObject.GetService&lt;TechnologyExtensionContainer&gt;();
 
 TechnologyExtensionComposition tecExtensions = tecContainer.TechnologyExtensions;
 
@@ -3124,9 +3124,9 @@ Find TechnologyExtension using TechnologyExtension.Name
 
 DriveObject driveObject = ...;
 
-TechnologyExtensionContainer tecContainer = driveObject.GetService<TechnologyExtensionContainer>();
+TechnologyExtensionContainer tecContainer = driveObject.GetService&lt;TechnologyExtensionContainer&gt;();
 
-TechnologyExtension tecExtension = tecContainer.TechnologyExtensions.FirstOrDefault(x => x.Name == tecExtensionName);
+TechnologyExtension tecExtension = tecContainer.TechnologyExtensions.FirstOrDefault(x =&gt; x.Name == tecExtensionName);
 
 // do something with the TechnologyExtension
 
@@ -3151,15 +3151,15 @@ Connecting technology objects with hardware modules via telegram objects
 private bool Test()  
 {  
  Device plcStation = m_Project.Devices[0];   
- DriveObject driveObject = m_Project.Devices.ElementAt(1).DeviceItems[2].GetService<DriveObjectContainer>().DriveObjects[0];  
+ DriveObject driveObject = m_Project.Devices.ElementAt(1).DeviceItems[2].GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];  
  Telegram telegram = driveObject.Telegrams[0];  
   
  DeviceItem plcDevice = plcStation.DeviceItems[1];  
- SoftwareContainer softwareContainer = plcDevice.GetService<SoftwareContainer>();  
+ SoftwareContainer softwareContainer = plcDevice.GetService&lt;SoftwareContainer&gt;();  
  Software software = softwareContainer.Software;  
   
  TechnologicalInstanceDB techObj0 = ((Siemens.Engineering.SW.PlcSoftware)software).TechnologicalObjectGroup.TechnologicalObjects[0];  
- AxisHardwareConnectionProvider axisHardwareConnectionProvider0 = techObj0.GetService<AxisHardwareConnectionProvider>();  
+ AxisHardwareConnectionProvider axisHardwareConnectionProvider0 = techObj0.GetService&lt;AxisHardwareConnectionProvider&gt;();  
  AxisEncoderHardwareConnectionInterface axisEncoderHardwareConnectionInterfaces0 = axisHardwareConnectionProvider0.ActorInterface;  
   
  try  
@@ -3177,15 +3177,15 @@ Connecting technology objects with a hardware module via a telegram object and C
 private bool Test()  
 {  
  Device plcStation = m_Project.Devices[0];   
- DriveObject driveObject = m_Project.Devices.ElementAt(1).DeviceItems[2].GetService<DriveObjectContainer>().DriveObjects[0];  
+ DriveObject driveObject = m_Project.Devices.ElementAt(1).DeviceItems[2].GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];  
  Telegram telegram = driveObject.Telegrams[0];  
   
  DeviceItem plcDevice = plcStation.DeviceItems[1];  
- SoftwareContainer softwareContainer = plcDevice.GetService<SoftwareContainer>();  
+ SoftwareContainer softwareContainer = plcDevice.GetService&lt;SoftwareContainer&gt;();  
  Software software = softwareContainer.Software;  
   
  TechnologicalInstanceDB techObj0 = ((Siemens.Engineering.SW.PlcSoftware)software).TechnologicalObjectGroup.TechnologicalObjects[0];  
- AxisHardwareConnectionProvider axisHardwareConnectionProvider0 = techObj0.GetService<AxisHardwareConnectionProvider>();  
+ AxisHardwareConnectionProvider axisHardwareConnectionProvider0 = techObj0.GetService&lt;AxisHardwareConnectionProvider&gt;();  
  AxisEncoderHardwareConnectionInterface axisEncoderHardwareConnectionInterfaces0 = axisHardwareConnectionProvider0.ActorInterface;  
   
  try  
@@ -3309,7 +3309,7 @@ using Siemens.Engineering.MC.Drives;
 using Siemens.Engineering.MC.Drives.Security;
 
 DeviceItem cuDeviceItem = device.DeviceItems[0];  
-DriveObject cuDriveObject = cuDeviceItem.GetService<DriveObjectContainer>().DriveObjects[0];  
+DriveObject cuDriveObject = cuDeviceItem.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];  
 Security cusecurity=cuDriveObject.Security;  
 if(cuSecurity == null)
 
@@ -3330,7 +3330,7 @@ using Siemens.Engineering.MC.Drives;
 using Siemens.Engineering.MC.Drives.Security;
 
 //For online  
-OnlineDriveObject cuOnlineDriveObject = device.DeviceItems[itemPosition].GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];  
+OnlineDriveObject cuOnlineDriveObject = device.DeviceItems[itemPosition].GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];  
   
 //Activate the DriveDataEncryption for the drive  
 bool result = cuOnlineDriveObject.Security.DriveDataEncryption.Activate(curpassword);  
@@ -3355,7 +3355,7 @@ using Siemens.Engineering.MC.Drives;
 using Siemens.Engineering.MC.Drives.Security;
 
 //For offline  
-DriveObject driveObject = device.DeviceItems[itemPosition].GetService<DriveObjectContainer>().DriveObjects[0];  
+DriveObject driveObject = device.DeviceItems[itemPosition].GetService&lt;DriveObjectContainer&gt;().DriveObjects[0];  
   
 //Activate the DriveDataEncryption for the drive  
 bool result = driveObject.Security.DriveDataEncryption.Activate(curpassword);  
@@ -3370,7 +3370,7 @@ using Siemens.Engineering.MC.Drives;
 using Siemens.Engineering.MC.Drives.Security;
 
 //For online  
-OnlineDriveObject cuOnlineDriveObject = device.DeviceItems[itemPosition].GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];  
+OnlineDriveObject cuOnlineDriveObject = device.DeviceItems[itemPosition].GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];  
   
 //Activate the DriveDataEncryption for the drive  
 bool result = cuOnlineDriveObject.Security.DriveDataEncryption.Activate(curpassword);  
@@ -3392,7 +3392,7 @@ using Siemens.Engineering.MC.Drives.Enums;
 
 OnlineDriveObject onlineDriveObject = ...
 
-OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService<OnlineDriveFunctionInterface>();
+OnlineDriveFunctionInterface onlineDfi = onlineDriveObject.GetService&lt;OnlineDriveFunctionInterface&gt;();
 
 DriveDomainFunctions driveDomainFunctions = onlineDfi.DriveDomainFunctions;
 
@@ -3412,17 +3412,17 @@ DriveDomainFunctions driveDomainFunctions = onlineDfi.DriveDomainFunctions;
 
 DeviceItem cuDeviceItem = g120Device.DeviceItems[1];
 
-OnlineDriveObject cuDriveObject = cuDeviceItem.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+OnlineDriveObject cuDriveObject = cuDeviceItem.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
 //In case of S120 and S210 devices you should generally get the CU driveobject
 
 DeviceItem cuDeviceItem = s120Device.DeviceItems[0]
 
-OnlineDriveObject cuDriveObject = cuDeviceItem.GetService<OnlineDriveObjectContainer>().OnlineDriveObjects[0];
+OnlineDriveObject cuDriveObject = cuDeviceItem.GetService&lt;OnlineDriveObjectContainer&gt;().OnlineDriveObjects[0];
 
 // To use the function, you have to use the OnlineDriveFunctionInterface
 
-OnlineDriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService<OnlineDriveFunctionInterface>();
+OnlineDriveFunctionInterface cuDriveFunctionInterface = cuDriveObject.GetService&lt;OnlineDriveFunctionInterface&gt;();
 
 DriveDomainFunctions driveDomainFunctions = cuDriveFunctionInterface.DriveDomainFunctions;
 

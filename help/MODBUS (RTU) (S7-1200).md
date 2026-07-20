@@ -176,7 +176,7 @@ Error messages of the Modbus protocol
 | 8381 | 01 | Function code not supported |
 | 8382 | 03 | Data length error |
 | 8383 | 02 | Error in the data address or address outside the valid range of DATA_PTR |
-| 8384 | > 03 | Data value error |
+| 8384 | &gt; 03 | Data value error |
 | 8385 | 03 | Data diagnostic code value not supported (function code 08) |
 | 8386 | - | Function code of the response does not match the function code of the query. |
 | 8387 | - | Response from wrong slave |

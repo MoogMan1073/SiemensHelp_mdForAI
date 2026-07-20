@@ -26,7 +26,7 @@ STEP 7 (TIA Portal) supports you in the configuration, commissioning and diagno
 - In STEP 7 (TIA Portal) you configure the SSI_Absolute_Encoder technology object by entering the encoder parameters.
 - The corresponding SSI_Absolute_Encoder instruction is programmed in the user program. This instruction supplies the control and feedback interface of the technology module.
 
-The SSI_Absolute_Encoder technology object corresponds to the instance DB of the SSI_Absolute_Encoder instruction. The configuration of the position input and measuring functions is saved in the technology object. The technology object is located in the folder "PLC > Technology objects".
+The SSI_Absolute_Encoder technology object corresponds to the instance DB of the SSI_Absolute_Encoder instruction. The configuration of the position input and measuring functions is saved in the technology object. The technology object is located in the folder "PLC &gt; Technology objects".
 
 The SSI_Absolute_Encoder technology object can be used equally for the TM PosInput of the S7-1500, ET 200SP and ET 200eco PN M12-L systems.
 
@@ -362,9 +362,9 @@ You can select from the following options depending on the operating mode:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-position-value-ssi-absolute-value-as-reference-s7-1500) in operating mode "Use position value (SSI absolute value) as reference" | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value <= position value <= maximum position value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value and low limit | The respective digital output is active if: Minimum position value <= Position value <= Comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= position value <= comparison value 1 | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value &lt;= position value &lt;= maximum position value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value and low limit | The respective digital output is active if: Minimum position value &lt;= Position value &lt;= Comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= position value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
 | At comparison value for a pulse duration | The respective digital output is active once for the assigned time and direction of the position value change when the position value is equal to the comparison value or has fallen below or exceeded it. | - Comparison value 0 - Comparison value 1 - Count direction - Pulse duration - Hysteresis (in increments) |
 | After set command from CPU until comparison value | When a set command is sent from the CPU, the respective digital output is active for the assigned direction of the position value change until the position value is equal to the comparison value or has fallen below or exceeded it. | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
 | Use by user program | The respective digital output can be switched by the CPU [via the control interface](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#comparison-values-and-outputs-s7-1500). | — |
@@ -375,10 +375,10 @@ You can select from the following options depending on the operating mode:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-measured-value-as-reference-s7-1500) in operating mode "Use measured value as reference" | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Measured value >= comparison value (default) | The respective digital output is active if the measured value is greater than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
-| Measured value <= comparison value | The respective digital output is active if the measured value is less than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= measured value <= comparison value 1 | - Comparison value 0 - Comparison value 1 |
-| Not between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 1 <= measured value <= comparison value 0 | - Comparison value 0 - Comparison value 1 |
+| Measured value &gt;= comparison value (default) | The respective digital output is active if the measured value is greater than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
+| Measured value &lt;= comparison value | The respective digital output is active if the measured value is less than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= measured value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 |
+| Not between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 1 &lt;= measured value &lt;= comparison value 0 | - Comparison value 0 - Comparison value 1 |
 | Use by user program | The respective digital output can be switched by the CPU [via the control interface](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#comparison-values-and-outputs-s7-1500). | — |
 
 > **Note**

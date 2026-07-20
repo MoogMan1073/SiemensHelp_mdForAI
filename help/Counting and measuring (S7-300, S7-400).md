@@ -356,7 +356,7 @@ Calculation of the update time / integration time:
 | --- | --- | --- | --- | --- |
 | n<sub>min</sub> | n<sub>max</sub> |  |  |  |
 | Non-isochronous mode | Any T<sub>DP</sub> | n × 10 ms | 1 | 1000 <sup>3)</sup> |
-| Isochronous mode <sup>2)</sup> | T<sub>DP</sub> < 10 ms | n × T<sub>DP</sub> | ( 10 ms/T<sub>DP</sub> [ms] ) + 1 <sup>1)</sup> | 1000 <sup>3)</sup> |
+| Isochronous mode <sup>2)</sup> | T<sub>DP</sub> &lt; 10 ms | n × T<sub>DP</sub> | ( 10 ms/T<sub>DP</sub> [ms] ) + 1 <sup>1)</sup> | 1000 <sup>3)</sup> |
 | T<sub>DP</sub> ≥ 10 ms | n x T<sub>DP</sub> | 1 | 10000 <sup>3)</sup> ms/T<sub>DP</sub> [ms] <sup>1)</sup> |  |
 | <sup>1</sup> Any decimal places that result from dividing by T<sub>DP</sub> are omitted.  It is prohibited to exceed these limits. If these limits are violated, the module will generate a parameter assignment error and will not go into isochrone mode.   <sup>2)</sup> not with FM 350‑2   <sup>3)</sup> for period measurement: 120000 |  |  |  |  |
 
@@ -824,7 +824,7 @@ The software gate must be open.
 
 Count pulses will be received and counted by the counter as long as the digital input is set. Resetting the digital input closes the gate. The counter stops and ignores any further count pulses.
 
-If the gate is closed as a result of high limit violated or low limit violated, you open it again by a reset > set cycle at the digital input.
+If the gate is closed as a result of high limit violated or low limit violated, you open it again by a reset &gt; set cycle at the digital input.
 
 The level-controlled hardware gate is activated by the first positive edge at the digital input after you assign parameters.
 

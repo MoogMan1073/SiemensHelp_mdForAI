@@ -607,7 +607,7 @@ Within actions you can call other function blocks and functions in which you per
 
 Use the following syntax for calling a function block:
 
-CALL "<FBName>", "<DBName>" (list of parameters)
+CALL "&lt;FBName&gt;", "&lt;DBName&gt;" (list of parameters)
 
 The following table shows an example of the call of a function block:
 
@@ -621,7 +621,7 @@ The "FB_KOP" function block is called using the "CALL" instruction. The "CALL" i
 
 Use the following syntax for the call of a function:
 
-CALL "<FCName>" (list of parameters)
+CALL "&lt;FCName&gt;" (list of parameters)
 
 The following table shows an example of the call of a function:
 
@@ -677,7 +677,7 @@ You can use timers within actions. Except for "TF", all timers are dependent on 
 
 When the "TL", "TD", and "TF" timers are used, you must specify the duration. Use the following syntax for this:
 
-<Duration> = IWy, QWy, MWy, LWy, DBWy, DIWy; tag of type S5TIME or WORD; S5T#Constant
+&lt;Duration&gt; = IWy, QWy, MWy, LWy, DBWy, DIWy; tag of type S5TIME or WORD; S5T#Constant
 
 y = 0 ... 65534
 
@@ -870,7 +870,7 @@ This section contains information on the following topics:
 
 ##### Interface parameter sets
 
-In the settings "Options > Settings > PLC programming > GRAPH" you can choose between the following interface parameter sets, each of which provides you with a different set of input and output parameters:
+In the settings "Options &gt; Settings &gt; PLC programming &gt; GRAPH" you can choose between the following interface parameter sets, each of which provides you with a different set of input and output parameters:
 
 - Minimum interface parameter set
 
@@ -915,7 +915,7 @@ See also: [Static parameters](#static-parameters-s7-300-s7-400-s7-1500)
 
 ##### Access to interface parameters
 
-Generally, with an S7-1500 CPU, you do not have write access to the GRAPH-internal interface parameters. However, the following components of the "RT_DATA > MOP" structure in the "Static" section that manage the operating modes allow write access:
+Generally, with an S7-1500 CPU, you do not have write access to the GRAPH-internal interface parameters. However, the following components of the "RT_DATA &gt; MOP" structure in the "Static" section that manage the operating modes allow write access:
 
 - AUTO
 - MAN
@@ -1270,8 +1270,8 @@ For an S7-1500 CPU the following static parameters are available in the "RT_DATA
 The static parameters include the step and transition parameters as well as the following information:
 
 - Internal parameters "VERSION", "S_DISPLAY", "S_SEL_OLD", "S_DISPIDX", "T_DISPIDX"
-- "MOP >Operating mode" component
-- "SQ_FLAGS > Sequence bit memory"
+- "MOP &gt;Operating mode" component
+- "SQ_FLAGS &gt; Sequence bit memory"
 - Component "Clock speeds"
 
 > **Note**
@@ -1466,7 +1466,7 @@ To create an extension block and assign it to a GRAPH FB, proceed as follows:
 
 1. Create a new function block (FB) in the "GRAPH" programming language.
 2. Open the block properties of the new GRAPH FB.
-3. Under "General > Version" set the version of the GRAPH FB to >= V4.0.
+3. Under "General &gt; Version" set the version of the GRAPH FB to &gt;= V4.0.
 4. Create a new function block (FB) in the "SCL" programming language. You can assign any name to this FB. This FB serves as an extension block.
 5. Enter the following in/out parameters in the extension block in the block interface in the "InOut" section:
 
@@ -1475,7 +1475,7 @@ To create an extension block and assign it to a GRAPH FB, proceed as follows:
    - "io_G7S", data type "Array[*] of G7_StepPlus_V4" (e.g. for the block version V4.0)
    - "io_G7Arrays", data type "Array[*] of USInt"
 6. Open the block properties of the GRAPH FB.
-7. Enter the name of the SCL function block under "Attributes > Name of extension block".
+7. Enter the name of the SCL function block under "Attributes &gt; Name of extension block".
 8. Instantiate the extension block either as a single instance or multi-instance:
 
    - Single instance:
@@ -1525,10 +1525,10 @@ The following table shows the settings that you can make:
 | --- | --- | --- | --- |
 | View |  | Length of step and transition names | Specifies whether step and transition names are to be displayed in one or two lines. The "Show two lines" setting allows longer names to be viewed. |
 | Load |  | Turn off sequence before downloading DB | All active steps are deactivated before the instance data block is loaded. |
-| Default for time monitoring |  | Uninterrupted step activation time (U) | Activation time for the time monitoring of a step by the "Greater than uninterrupted step activation time" instruction (CMP>U). |
-| Step activation time (T) | Activation time for the time monitoring of a step by the "Greater than step activation time" instruction (CMP>T). |  |  |
-| Maximum step activation time (T_MAX) | Specifies the maximum time allowed to elapse after the activation of a step. You can monitor this time with the instruction "Greater than maximum step activation time" (CMP>T_MAX).   You can also have this value determined by the system.  See also: [Basics of step time monitoring](#basics-of-step-time-monitoring-s7-1500)  This setting is relevant only for CPUs of the S7-1500 series. |  |  |
-| Warning time (T_WARN) | Specifies the time that must elapse after the activation of a step before a warning is output. You can monitor this time with the instruction "Greater than warning time" (CMP>T_WARN).   You can also have this value determined by the system.  See also: [Basics of step time monitoring](#basics-of-step-time-monitoring-s7-1500)  This setting is relevant only for CPUs of the S7-1500 series. |  |  |
+| Default for time monitoring |  | Uninterrupted step activation time (U) | Activation time for the time monitoring of a step by the "Greater than uninterrupted step activation time" instruction (CMP&gt;U). |
+| Step activation time (T) | Activation time for the time monitoring of a step by the "Greater than step activation time" instruction (CMP&gt;T). |  |  |
+| Maximum step activation time (T_MAX) | Specifies the maximum time allowed to elapse after the activation of a step. You can monitor this time with the instruction "Greater than maximum step activation time" (CMP&gt;T_MAX).   You can also have this value determined by the system.  See also: [Basics of step time monitoring](#basics-of-step-time-monitoring-s7-1500)  This setting is relevant only for CPUs of the S7-1500 series. |  |  |
+| Warning time (T_WARN) | Specifies the time that must elapse after the activation of a step before a warning is output. You can monitor this time with the instruction "Greater than warning time" (CMP&gt;T_WARN).   You can also have this value determined by the system.  See also: [Basics of step time monitoring](#basics-of-step-time-monitoring-s7-1500)  This setting is relevant only for CPUs of the S7-1500 series. |  |  |
 | Default settings for new blocks | Editor | Language in networks | Selection of the programming language for the programming of conditions. |
 | Interface | Minimum interface parameters | Inserts the minimum parameter set when creating new GRAPH function blocks. |  |
 | Default interface parameters | Inserts the default parameter set when creating new GRAPH function blocks. |  |  |
@@ -1568,7 +1568,7 @@ To change the settings, follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > GRAPH" group in the area navigation.
+2. Select the "PLC programming &gt; GRAPH" group in the area navigation.
 3. Change the settings.
 
 #### Result
@@ -1710,7 +1710,7 @@ In order to specify the interface parameter set globally for all new GRAPH funct
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > GRAPH" group in the area navigation.
+2. Select the "PLC programming &gt; GRAPH" group in the area navigation.
 3. If you want to use the minimum interface parameter set, select the "Minimum interface parameters" option.
 4. If you want to use the default interface parameter set, select the "Default interface parameters" option.
 5. If you want to use the maximum interface parameter set, select the "Maximum interface parameters" option.
@@ -1719,9 +1719,9 @@ In order to specify the interface parameter set globally for all new GRAPH funct
 
 In order to specify the interface parameter set for an open GRAPH function block, follow these steps:
 
-1. If you want to use the minimum interface parameter set, select the "Minimum interface parameters" command in the "Edit > Interface parameters" menu.
-2. If you want to use the default interface parameter set, select the "Default interface parameters" command in the "Edit > Interface parameters" menu.
-3. If you want to use the maximum interface parameter set, select the "Maximum interface parameters" command in the "Edit > Interface parameters" menu.
+1. If you want to use the minimum interface parameter set, select the "Minimum interface parameters" command in the "Edit &gt; Interface parameters" menu.
+2. If you want to use the default interface parameter set, select the "Default interface parameters" command in the "Edit &gt; Interface parameters" menu.
+3. If you want to use the maximum interface parameter set, select the "Maximum interface parameters" command in the "Edit &gt; Interface parameters" menu.
 
 The block interface of the GRAPH function block is adapted.
 
@@ -1761,7 +1761,7 @@ In order to specify the memory space model globally for all new GRAPH function b
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > GRAPH" group in the area navigation.
+2. Select the "PLC programming &gt; GRAPH" group in the area navigation.
 3. If you want to use a minimized data block, select the "Create minimized DB" option.
 4. If you want to use a data block with the standard memory space model, clear the "Create minimized DB" option.
 
@@ -2282,7 +2282,7 @@ To rename a sequencer, follow these steps:
 
 1. Click the title bar of the sequencer in the sequence view.
 
-   The "<new sequence>" placeholder is provided by default.
+   The "&lt;new sequence&gt;" placeholder is provided by default.
 2. Enter the new name of the sequencer.
 
 ---
@@ -2508,7 +2508,7 @@ A GRAPH function block is open in the sequence view.
 To insert a step, follow these steps:
 
 1. Right-click a position in the sequencer where it is permitted to insert a step.
-2. Select the "Insert element > Step" command from the shortcut menu.
+2. Select the "Insert element &gt; Step" command from the shortcut menu.
 
 Or:
 
@@ -2519,7 +2519,7 @@ Or:
 To insert a transition, follow these steps:
 
 1. Right-click a position in the sequencer where it is permitted to insert a transition.
-2. Select the "Insert element > Transition" command from the shortcut menu.
+2. Select the "Insert element &gt; Transition" command from the shortcut menu.
 
 Or:
 
@@ -2530,7 +2530,7 @@ Or:
 To insert a step and a transition together as a pair, follow these steps:
 
 1. Right-click the position in the sequencer where you want to insert the step and the transition.
-2. Select the "Insert element > Step and transition" command from the shortcut menu.
+2. Select the "Insert element &gt; Step and transition" command from the shortcut menu.
 
 Or:
 
@@ -2694,7 +2694,7 @@ For program-supported renumbering of steps or transitions within a GRAPH functio
 
 #### Renaming steps and transitions (S7-300, S7-400, S7-1500)
 
-When you insert steps and transitions into your sequencer, they are initially named "Step<StepNumber>" and "Trans<StepNumber>". You can change these names in order to make your program easier to understand. Note that the same name must not be assigned more than once.
+When you insert steps and transitions into your sequencer, they are initially named "Step&lt;StepNumber&gt;" and "Trans&lt;StepNumber&gt;". You can change these names in order to make your program easier to understand. Note that the same name must not be assigned more than once.
 
 ##### Requirement
 
@@ -2829,7 +2829,7 @@ To skip steps for which the preceding and subsequent transitions are simultaneou
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > GRAPH" group in the area navigation.
+2. Select the "PLC programming &gt; GRAPH" group in the area navigation.
 3. Select the "Skip steps" option under "Sequence properties".
 
 ---
@@ -2921,7 +2921,7 @@ To display the name of a step in all project languages, follow these steps:
 2. Open the "Properties" tab in the Inspector window.
 3. Open the "Texts" tab.
 
-   If the names of the steps and transitions appear only in the current user interface language, either you have not yet selected any project languages or translations are not yet available. You can enter the translations directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts".
+   If the names of the steps and transitions appear only in the current user interface language, either you have not yet selected any project languages or translations are not yet available. You can enter the translations directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts".
 
 You can find additional information on translation of texts under [Project text basics](Editing%20project%20data.md#project-text-basics).​
 
@@ -3172,7 +3172,7 @@ You can navigate from a jump to the step that you have specified as the jump des
 To navigate from a jump to the step specified as the destination, follow these steps:
 
 1. Right-click on the jump.
-2. Select the "Go to > Jump destination" command in the shortcut menu.
+2. Select the "Go to &gt; Jump destination" command in the shortcut menu.
 
 ---
 
@@ -3234,10 +3234,10 @@ For a better overview of your programmed actions you can show descriptions for t
 In actions you can assign an operand with the value of another operand or mathematical expression or the result of an instruction. Use the following syntax for this:
 
 - Assigning the value of an operand: A:=B
-- Assigning the value of a mathematical expression: A:=B<Operator>C
+- Assigning the value of a mathematical expression: A:=B&lt;Operator&gt;C
 
   You can use the following operators: + (Addition), - (Subtraction), * (Multiplication), / (Division), % (Modulo), AND (AND logic operation), OR (OR logic operation), XOR (Exclusive OR logic operation)
-- Assigning the result of an instruction: A:=<Instruction>(B)
+- Assigning the result of an instruction: A:=&lt;Instruction&gt;(B)
 
   You obtain the available instructions from the "Instructions" task card.
 
@@ -3270,7 +3270,7 @@ When data-type-dependent instructions are called, you must specify a data type. 
 To insert an action in the sequence view, follow these steps:
 
 1. Open the sequence view.
-2. Expand the step in which you want to insert actions. To do so, click the button at the top right corner of the step or select the step and press <Enter>.
+2. Expand the step in which you want to insert actions. To do so, click the button at the top right corner of the step or select the step and press &lt;Enter&gt;.
 3. If you want to enable multi-line input, right-click in the line of the new action and select the "Allow multi-line mode" command in the shortcut menu.
 4. If you want to link the new action with an interlock, click in the cell of the "Interlock" column and select the "-(C)- - Interlock" entry in the drop-down list.
 5. If you want to link the new action with an event, click in the cell of the "Event" column and select the appropriate event in the drop-down list.
@@ -3422,7 +3422,7 @@ To change an action, follow these steps:
 1. If you want to link an action with an interlock, click in the cell of the "Interlock" column and select the "-(C)- - Interlock" entry in the drop-down list.
 2. If you want to cancel the link with an interlock, click in the cell of the "Interlock" column and select the "No condition" entry in the drop-down list.
 3. If you want to link the action with an event or change the linked event, click in the cell of the "Event" column and select the appropriate event in the drop-down list.
-4. If you want to cancel the link with an event, click in the cell of the "Event" column and select the "No event" entry in the drop-down list. If the action identifier requires an event, the background of the cell turns red and "<???>" is displayed. In this case, you must assign an event again or choose a different action identifier.
+4. If you want to cancel the link with an event, click in the cell of the "Event" column and select the "No event" entry in the drop-down list. If the action identifier requires an event, the background of the cell turns red and "&lt;???&gt;" is displayed. In this case, you must assign an event again or choose a different action identifier.
 5. If you want to change the action identifier, click in the cell of the "Qualifier" column and select the new action identifier in the drop-down list.
 6. If you want to change the action, click in the action in the "Action" column and make one of the following changes:
 
@@ -3576,12 +3576,12 @@ Or:
 
 1. Open the interlock network by clicking the small arrow in front of "Interlock -(c)-".
 2. Open the "Instructions" task card.
-3. Navigate to "LAD/FBD > General > Empty box" in the "Basic instructions" pane.
+3. Navigate to "LAD/FBD &gt; General &gt; Empty box" in the "Basic instructions" pane.
 4. Drag the "Empty box" element to the desired position in the network.
 5. Click on "??".
 
    A text box opens.
-6. Either click the autocompletion button or use the shortcut <Ctrl+l>.
+6. Either click the autocompletion button or use the shortcut &lt;Ctrl+l&gt;.
 
    Autocompletion opens. It contains only the permitted elements for the particular context.
 7. Select the desired element from the drop-down list.
@@ -3616,7 +3616,7 @@ You can use up to 32 instructions in your supervision network to which a maximum
 
 > **Note**
 >
-> You can program step time monitoring for CPUs of the S7-1500 series. To do this, you can use the two instructions "Greater than maximum step activation time" (CMP>T_MAX), "Greater than warning time" (CMP>T_WARN) and a warning coil (-(w)-). You can either specify the comparison values for the two instructions manually or have them determined by the system in learning mode.
+> You can program step time monitoring for CPUs of the S7-1500 series. To do this, you can use the two instructions "Greater than maximum step activation time" (CMP&gt;T_MAX), "Greater than warning time" (CMP&gt;T_WARN) and a warning coil (-(w)-). You can either specify the comparison values for the two instructions manually or have them determined by the system in learning mode.
 
 ##### Requirement
 
@@ -3635,12 +3635,12 @@ Or:
 
 1. Open the supervision network by clicking the small arrow in front of "Supervision -(v)-".
 2. Open the "Instructions" task card.
-3. Navigate to "LAD/FBD > General > Empty box" in the "Basic instructions" pane.
+3. Navigate to "LAD/FBD &gt; General &gt; Empty box" in the "Basic instructions" pane.
 4. Drag the "Empty box" element to the desired position in the network.
 5. Click on "??".
 
    A text box opens.
-6. Either click the autocompletion button or use the shortcut <Ctrl+l>.
+6. Either click the autocompletion button or use the shortcut &lt;Ctrl+l&gt;.
 
    Autocompletion opens. It contains only the permitted elements for the particular context.
 7. Select the desired element from the drop-down list.
@@ -3674,11 +3674,11 @@ This section contains information on the following topics:
 
 ###### Introduction
 
-With supervision conditions, you can monitor the step activation time; in other words, the time that has elapsed since activation of the step. To do this, you can specify the maximum time "T_MAX" and use this as a comparison value. To make the comparison, you can use the instruction "Greater than maximum step activation time" (CMP>T_MAX). If the maximum step activation time is exceeded, a supervision error is triggered and a supervision alarm is output, if you have enabled this.
+With supervision conditions, you can monitor the step activation time; in other words, the time that has elapsed since activation of the step. To do this, you can specify the maximum time "T_MAX" and use this as a comparison value. To make the comparison, you can use the instruction "Greater than maximum step activation time" (CMP&gt;T_MAX). If the maximum step activation time is exceeded, a supervision error is triggered and a supervision alarm is output, if you have enabled this.
 
-To receive a warning before the supervision error occurs, you can specify a warning time "T_WARN" and monitor this, once again using a condition. To do this, you can use the instruction "Greater than warning time" (CMP>T_WARN) and a warning coil. If the warning coil is activated, an alarm is output. Note that the alarm is only present in the current cycle, even if the warning coil remains in the "1" state for longer. Therefore, to display the alarm, use the alarm archive or assign the alarm to an alarm class requiring acknowledgment so that the alarm is not moved to the alarm archive until it has been acknowledged.
+To receive a warning before the supervision error occurs, you can specify a warning time "T_WARN" and monitor this, once again using a condition. To do this, you can use the instruction "Greater than warning time" (CMP&gt;T_WARN) and a warning coil. If the warning coil is activated, an alarm is output. Note that the alarm is only present in the current cycle, even if the warning coil remains in the "1" state for longer. Therefore, to display the alarm, use the alarm archive or assign the alarm to an alarm class requiring acknowledgment so that the alarm is not moved to the alarm archive until it has been acknowledged.
 
-Initially, the values specified in the settings in "PLC programming > GRAPH > Default for time monitoring" are used for "T_MAX" and "T_WARN". You have the following options for changing the times for "T_MAX" and "T_WARN":
+Initially, the values specified in the settings in "PLC programming &gt; GRAPH &gt; Default for time monitoring" are used for "T_MAX" and "T_WARN". You have the following options for changing the times for "T_MAX" and "T_WARN":
 
 - [Manually using the "Define time" dialog](#specifying-times-t_max-and-t_warn-manually)
 - [Using the learning mode of the interface](#determining-times-for-t_max-and-t_warn-using-the-learning-mode-of-the-interface-s7-1500)
@@ -3690,7 +3690,7 @@ If you use the learning mode to determine the times during testing, you can, if 
 
 > **Note**
 >
-> For GRAPH blocks with a version lower than 2.0, the learning mode for determining the values of "T_MAX" and "T_WARN" is not available. You can change the version in the properties of the GRAPH block under "General > Block".
+> For GRAPH blocks with a version lower than 2.0, the learning mode for determining the values of "T_MAX" and "T_WARN" is not available. You can change the version in the properties of the GRAPH block under "General &gt; Block".
 
 ---
 
@@ -3698,13 +3698,13 @@ If you use the learning mode to determine the times during testing, you can, if 
 
 [Programming step time monitoring (S7-1500)](#programming-step-time-monitoring-s7-1500)
   
-[CMP>T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
+[CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
   
-[CMP>T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500)
+[CMP&gt;T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500)
   
-[CMP>T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
+[CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
   
-[CMP>T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500-1)
+[CMP&gt;T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500-1)
 
 ##### Programming step time monitoring (S7-1500)
 
@@ -3724,8 +3724,8 @@ To program step time monitoring including a supervision and a warning, follow th
 
 1. Open the supervision network by clicking the small arrow in front of "Supervision -(V)-".
 2. Open the "Instructions" task card.
-3. Insert the instruction "CMP>T_MAX" in the rung with the supervision coil "-(V)-".
-4. Insert the instruction "CMP>T_WARN" in a new rung.
+3. Insert the instruction "CMP&gt;T_MAX" in the rung with the supervision coil "-(V)-".
+4. Insert the instruction "CMP&gt;T_WARN" in a new rung.
 5. Insert the instruction "-(W)-" in the new rung.
 6. Specify the times for "T_MAX" and "T_WARN" either manually or using the learning mode.
 
@@ -3745,13 +3745,13 @@ If the step activation time is greater than the time specified for "T_WARN", a w
   
 [Calculating times for T_MAX and T_WARN when testing (S7-1500)](Testing%20GRAPH%20programs%20%28S7-300%2C%20S7-400%2C%20S7-1500%29.md#calculating-times-for-t_max-and-t_warn-when-testing-s7-1500)
   
-[CMP>T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
+[CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
   
-[CMP>T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500)
+[CMP&gt;T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500)
   
-[CMP>T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
+[CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
   
-[CMP>T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500-1)
+[CMP&gt;T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500-1)
 
 ##### Specifying times T_MAX and T_WARN manually
 
@@ -3783,13 +3783,13 @@ To specify the times for "T_MAX" and "T_WARN", follow these steps:
   
 [Determining times for T_MAX and T_WARN using the learning mode of the interface (S7-1500)](#determining-times-for-t_max-and-t_warn-using-the-learning-mode-of-the-interface-s7-1500)
   
-[CMP>T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
+[CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
   
-[CMP>T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500)
+[CMP&gt;T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500)
   
-[CMP>T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
+[CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
   
-[CMP>T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500-1)
+[CMP&gt;T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500-1)
 
 ##### Determining times for T_MAX and T_WARN using the learning mode of the interface (S7-1500)
 
@@ -3810,10 +3810,10 @@ To define additive thresholds, follow these steps:
 
 1. Insert the "MOVE" instruction in the block that calls the GRAPH function block.
 2. For the "IN" parameter, enter the additive threshold for the supervision as a percentage.
-3. For the "OUT1" parameter, enter the static parameter "RT_DATA > TRESHOLD_SUP" of the instance data block.
+3. For the "OUT1" parameter, enter the static parameter "RT_DATA &gt; TRESHOLD_SUP" of the instance data block.
 4. Insert another "MOVE" instruction.
 5. For the "IN" parameter, enter the additive threshold for the warning as a percentage.
-6. For the "OUT1" parameter, enter the static parameter "RT_DATA > TRESHOLD_WARN" of the instance data block.
+6. For the "OUT1" parameter, enter the static parameter "RT_DATA &gt; TRESHOLD_WARN" of the instance data block.
 
    The additive thresholds are taken into account in the calculation of "T_MAX" and "T_WARN" in learning mode.
 
@@ -3830,14 +3830,14 @@ To activate learning mode via the interface, follow these steps:
 4. Download the block to the device.
 5. In the toolbar, click "Monitoring on/off" to start testing with program status for the calling block.
 6. Right click on the tag you linked to the "EN_LMODE" input parameter.
-7. In the shortcut menu, select the command "Modify > Modify to 1" to obtain a rising edge for the "EN_LMODE" input parameter.
+7. In the shortcut menu, select the command "Modify &gt; Modify to 1" to obtain a rising edge for the "EN_LMODE" input parameter.
 
    The signal state of "LMODE_ENABLED" is set to "1" and the learning mode is activated.
 8. Wait until each step in the GRAPH function block has been active at least once.
 9. Right click again on the tag you linked to the "EN_LMODE" input parameter.
-10. In the shortcut menu, select the command "Modify > Modify to 0" to reset the "EN_LMODE" input parameter.
+10. In the shortcut menu, select the command "Modify &gt; Modify to 0" to reset the "EN_LMODE" input parameter.
 11. Right click again on the tag you linked to the "EN_LMODE" input parameter.
-12. In the shortcut menu, select the command "Modify > Modify to 1" to obtain a rising edge for the "EN_LMODE" input parameter.
+12. In the shortcut menu, select the command "Modify &gt; Modify to 1" to obtain a rising edge for the "EN_LMODE" input parameter.
 
     Learning mode is deactivated. The learned times are entered in the online instance data block of the GRAPH function block.
 
@@ -3851,13 +3851,13 @@ To activate learning mode via the interface, follow these steps:
   
 [Specifying times T_MAX and T_WARN manually](#specifying-times-t_max-and-t_warn-manually)
   
-[CMP>T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
+[CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
   
-[CMP>T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500)
+[CMP&gt;T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500)
   
-[CMP>T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
+[CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
   
-[CMP>T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500-1)
+[CMP&gt;T_WARN: Greater than warning time (S7-1500)](GRAPH%20%28S7-1500%29.md#cmpt_warn-greater-than-warning-time-s7-1500-1)
 
 ### Programming transitions (S7-300, S7-400, S7-1500)
 
@@ -3868,21 +3868,21 @@ You can use up to 32 instructions in your transition network to which a maximum 
 To program transitions in the single step view, follow these steps:
 
 1. Open the single step view.
-2. Open the transition network by clicking the small arrow in front of "<TransitionNumber> - <TransitionName>".
+2. Open the transition network by clicking the small arrow in front of "&lt;TransitionNumber&gt; - &lt;TransitionName&gt;".
 3. Open the "Instructions" task card.
 4. Navigate to the instruction you want to insert.
 5. Drag the instruction to the desired position in the network.
 
 Or:
 
-1. Open the transition network by clicking the small arrow in front of "<TransitionNumber> - <TransitionName>".
+1. Open the transition network by clicking the small arrow in front of "&lt;TransitionNumber&gt; - &lt;TransitionName&gt;".
 2. Open the "Instructions" task card.
-3. Navigate to "LAD/FBD > General > Empty box" in the "Basic instructions" pane.
+3. Navigate to "LAD/FBD &gt; General &gt; Empty box" in the "Basic instructions" pane.
 4. Drag the "Empty box" element to the desired position in the network.
 5. Click on "??".
 
    A text box opens.
-6. Either click the autocompletion button or use the shortcut <Ctrl+l>.
+6. Either click the autocompletion button or use the shortcut &lt;Ctrl+l&gt;.
 
    Autocompletion opens. It contains only the permitted elements for the particular context.
 7. Select the desired element from the drop-down list.
@@ -3892,7 +3892,7 @@ Or:
 To program transitions in the sequence view, follow these steps:
 
 1. Open the sequence view.
-2. Expand the transition you want to program. To do so, click the button next to the transition or select the transition and press <Enter>.
+2. Expand the transition you want to program. To do so, click the button next to the transition or select the transition and press &lt;Enter&gt;.
 3. Open the "Instructions" task card.
 4. Navigate to the instruction you want to insert.
 5. Drag the instruction to the desired position in the network.
@@ -3900,12 +3900,12 @@ To program transitions in the sequence view, follow these steps:
 Or:
 
 1. Open the "Instructions" task card.
-2. Navigate to "LAD/FBD > General > Empty box" in the "Basic instructions" pane.
+2. Navigate to "LAD/FBD &gt; General &gt; Empty box" in the "Basic instructions" pane.
 3. Drag the "Empty box" element to the desired position in the network.
 4. Click on "??".
 
    A text box opens.
-5. Either click the autocompletion button or use the shortcut <Ctrl+l>.
+5. Either click the autocompletion button or use the shortcut &lt;Ctrl+l&gt;.
 
    Autocompletion opens. It contains only the permitted elements for the particular context.
 6. Select the desired element from the drop-down list.
@@ -4021,12 +4021,12 @@ To select a network, follow these steps:
 
 Proceed as follows to select several individual networks:
 
-1. Press and hold down the <Ctrl> key.
+1. Press and hold down the &lt;Ctrl&gt; key.
 2. Click all the networks that you want to select.
 
 To select several successive networks, follow these steps:
 
-1. Press and hold down the <Shift> key.
+1. Press and hold down the &lt;Shift&gt; key.
 2. Click the first network that you want to select.
 3. Click the last network that you want to select.
 
@@ -4204,7 +4204,7 @@ To specify that the network titles are always set automatically, follow these st
 
 To set an individual network title automatically, follow these steps:
 
-1. Right-click "Network <Number of the network>" in the title bar of a network.
+1. Right-click "Network &lt;Number of the network&gt;" in the title bar of a network.
 2. Select the "Set network title automatically" command in the shortcut menu.
 
    The title of the selected network is set based on the comment of the operand if the conditions listed above are fulfilled.
@@ -4236,7 +4236,7 @@ You can navigate straight to a specific position within a block.
 To navigate to a specific position within a block, follow these steps:
 
 1. Right-click in the code area of the programming window.
-2. Select the "Go to > Network/line" command in the shortcut menu.
+2. Select the "Go to &gt; Network/line" command in the shortcut menu.
 
    The "Go to" dialog will open.
 3. Enter the network to which you want to navigate.
@@ -4288,12 +4288,12 @@ To program permanent instructions, follow these steps:
 Or:
 
 1. Open the "Instructions" task card.
-2. Navigate to "General > Empty box" in the "Basic instructions" pane.
+2. Navigate to "General &gt; Empty box" in the "Basic instructions" pane.
 3. Drag the "Empty box" element to the desired position in the network.
 4. Click on "??".
 
    A text box opens.
-5. Either click the autocompletion button or use the shortcut <Ctrl+l>.
+5. Either click the autocompletion button or use the shortcut &lt;Ctrl+l&gt;.
 
    Autocompletion opens. It contains only the permitted elements for the particular context.
 6. Select the desired element from the drop-down list.
@@ -4391,8 +4391,8 @@ To manually insert a block call in an action, follow these steps:
 
 1. Open the GRAPH function block in the single step view.
 2. Click in the cell of the action in the "Action" column.
-3. Enter "CALL <Name of block to be called>" and confirm your entry with the Enter key.
-4. Replace "<Name of block to be called>" with the name of the block you want to call.
+3. Enter "CALL &lt;Name of block to be called&gt;" and confirm your entry with the Enter key.
+4. Replace "&lt;Name of block to be called&gt;" with the name of the block you want to call.
 
    If the block to be called is a function block, the "Call options" dialog opens. In this case, perform steps 5 and 6.
 5. In the dialog, enter whether you want to call the block as a single, multi or parameter instance.
@@ -4535,7 +4535,7 @@ To implicitly update all block calls and uses of PLC data types during compilati
 
 1. Open the project tree.
 2. Select the "Program blocks" folder.
-3. Select the "Compile > Software (rebuild all blocks)" command in the shortcut menu.
+3. Select the "Compile &gt; Software (rebuild all blocks)" command in the shortcut menu.
 
 ---
 
@@ -4555,7 +4555,7 @@ You have the option of changing the called block for a block call. But keep in m
 
 To change the called block of a block call, follow these steps:
 
-1. Click on the name of the called block within the block call and press the <F2> key. Or double-click the name of the called block.
+1. Click on the name of the called block within the block call and press the &lt;F2&gt; key. Or double-click the name of the called block.
 
    A text box opens, and the name of the currently called block is selected.
 2. Enter the name of the block you want to call or select a block in the autocompletion.
@@ -4579,8 +4579,8 @@ To globally enable or disable the alarm view for new GRAPH function blocks, foll
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > GRAPH" group in the area navigation.
-3. If you want to enable the alarm view, select the "Enable alarms" check box in the "Default settings for new blocks > Alarm properties" area. If you want to disable the alarm view, clear the "Enable alarms" check box.
+2. Select the "PLC programming &gt; GRAPH" group in the area navigation.
+3. If you want to enable the alarm view, select the "Enable alarms" check box in the "Default settings for new blocks &gt; Alarm properties" area. If you want to disable the alarm view, clear the "Enable alarms" check box.
 
 #### Enabling or disabling the alarm view locally
 
@@ -4611,10 +4611,10 @@ In addition, you can create step-specific alarm texts for interlocks and supervi
 
 To edit the alarms for all GRAPH function blocks, follow these steps:
 
-1. Double-click the "Common data > Supervision settings" entry in the project tree.
+1. Double-click the "Common data &gt; Supervision settings" entry in the project tree.
 
    The ProDiag supervision settings are opened.
-2. Select the "Alarm texts > GRAPH supervisions" group in the area navigation.
+2. Select the "Alarm texts &gt; GRAPH supervisions" group in the area navigation.
 3. Use drag-and-drop to move the desired alarm text fields from the "Supported alarm text fields" field to the "Alarm text" text frame.
 
    You can change the order of the individual text fields at any time.
@@ -4644,7 +4644,7 @@ To edit the interlock alarm of a single step, follow these steps:
 3. Open the Inspector window and switch to the "Properties" tab, if necessary.
 4. Enter the desired alarm text in the "Alarm text" text box.
 
-   This text is appended to the end of the GRAPH alarm with the "<Step specific field>" alarm text box.
+   This text is appended to the end of the GRAPH alarm with the "&lt;Step specific field&gt;" alarm text box.
 
 #### Editing the supervision alarm of a single step
 
@@ -4655,7 +4655,7 @@ To edit the supervision alarm of a single step, follow these steps:
 3. Open the Inspector window and switch to the "Properties" tab, if necessary.
 4. Enter the desired alarm text in the "Alarm text" text box.
 
-   This text is appended to the end of the GRAPH alarm with the "<Step specific field>" alarm text box. With an S7-1500, the text is also used as a step-specific text for step time monitoring if this is used as a supervision condition.
+   This text is appended to the end of the GRAPH alarm with the "&lt;Step specific field&gt;" alarm text box. With an S7-1500, the text is also used as a step-specific text for step time monitoring if this is used as a supervision condition.
 
 ---
 
@@ -4682,7 +4682,7 @@ This section contains information on the following topics:
 
 #### Requirement
 
-In order to enable initial value acquisition, you need to set a version >= 4.0 in the GRAPH function block.
+In order to enable initial value acquisition, you need to set a version &gt;= 4.0 in the GRAPH function block.
 
 You can find additional information here: [Activating initial value acquisition](#activating-initial-value-acquisition-s7-1500)
 
@@ -4694,7 +4694,7 @@ The signal states are stored for each cycle in the GRAPH instance data block. A 
 
 You can display the actual values with the help of the PLC code view. As soon as an error occurs, you can have the initial values displayed and the bad operands can be immediately recognized (criteria analysis). You can switch between display of the actual values and display of the initial values.
 
-You can find additional information on the visualization of the HMI device here: "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag"
+You can find additional information on the visualization of the HMI device here: "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag"
 
 For the named static parameters of the step or transition structures to be displayed, you need to select the maximum interface parameter set for the block interface.
 
@@ -4733,7 +4733,7 @@ Proceed as follows to activate initial value acquisition:
 1. Right-click the GRAPH function block and select "Properties..." from the shortcut menu.
 
    The properties dialog of the GRAPH function block opens.
-2. Select a version >= V4.0 in the "General > Block" tab.
+2. Select a version &gt;= V4.0 in the "General &gt; Block" tab.
 3. Click on the "Attributes" tab.
 4. Activate "Initial value acquisition".
 5. Click "OK".
@@ -4749,17 +4749,17 @@ The recording of the initial values begins once the user program has been compil
 
 Each GRAPH function block contains the two system-internal parameters "H_IL_ERR" and "H_SV_FLT" in its block parameter set for each individual step. If you have activated the "Initial value acquisition" option in the block properties of the GRAPH function block, the Bit 2 at the "H_IL_ERR" (Interlock) parameter is set to TRUE in the case of an interlock, and the Bit 5 at the "H_SV_FLT" (Transition) parameter is set to TRUE in the case of a monitoring error, as soon as a corresponding event exists in the active step. This enables you to visualize the initial values on your HMI device with the PLC code view.
 
-As of a block version >= 5.0 of a GRAPH function block, you have the option of using input parameter "RESET_CRIT" to reset the signal state of the two static parameters "H_IL_ERR" and "H_SV_FLT" to FALSE again after the criteria analysis. You should use this option, in particular, when you change the programming of interlocks and transitions and you no longer need the initial values that were made obsolete by this. The reprogramming does not automatically reset the signal states back to FALSE.
+As of a block version &gt;= 5.0 of a GRAPH function block, you have the option of using input parameter "RESET_CRIT" to reset the signal state of the two static parameters "H_IL_ERR" and "H_SV_FLT" to FALSE again after the criteria analysis. You should use this option, in particular, when you change the programming of interlocks and transitions and you no longer need the initial values that were made obsolete by this. The reprogramming does not automatically reset the signal states back to FALSE.
 
 #### Procedure
 
 To reset the signal states of the two system-internal static parameters, follow these steps:
 
-1. Check that the version of the GRAPH function block is a version >= 5.0.
+1. Check that the version of the GRAPH function block is a version &gt;= 5.0.
 2. Select the maximum block parameter record:
 
    - When you want to create a new GRAPH function block, first select the maximum block parameter record in the general settings for GRAPH.
-   - If you want to change the parameter record at a GRAPH function block that has already been created, open the block, click in the block interface and in the menu bar select "Edit > Interface parameters > Maximum interface parameters". Or create the RESET_CRIT parameter manually in the IN section.
+   - If you want to change the parameter record at a GRAPH function block that has already been created, open the block, click in the block interface and in the menu bar select "Edit &gt; Interface parameters &gt; Maximum interface parameters". Or create the RESET_CRIT parameter manually in the IN section.
 3. Connect input parameter "RESET_CRIT" in your user program at the call of the GRAPH function block.
 
 #### Result

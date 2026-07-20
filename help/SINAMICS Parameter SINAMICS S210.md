@@ -597,7 +597,7 @@ Bit 16 = 1 (enable signal missing), if:
 - there is an OFF1 fault response. The system is only enabled if the fault is removed
 and was acknowledged and the "switching on inhibited" withdrawn with OFF1 = 0.  
 Bit 17 = 1 (enable signal missing), if:  
-- commissioning mode is selected (p0009 > 0 or p0010 > 0).  
+- commissioning mode is selected (p0009 &gt; 0 or p0010 &gt; 0).  
 - there is an OFF2 fault response.  
 - the drive is inactive (p0105 = 0) or is not operational (r7850[DO-Index]=0).  
 Bit 18 = 1 (enable signal missing), if:  
@@ -1054,13 +1054,13 @@ Vdc_pre = p0210 * 0.82 (DC/AC)
 The undervoltage thresholds for the DC link voltage (Vdc) are calculated from p0210
 as a function of the rated power unit voltage:  
 U_rated = 400 V:  
-- U_min = p0210 * 0.78 (AC/AC) > 330 V, p0210 * 0.60 (DC/AC) > 380 V  
+- U_min = p0210 * 0.78 (AC/AC) &gt; 330 V, p0210 * 0.60 (DC/AC) &gt; 380 V  
 U_rated = 500 V:  
-- U_min = p0210 * 0.76 (AC/AC) > 410 V  
+- U_min = p0210 * 0.76 (AC/AC) &gt; 410 V  
 U_rated = 660 ... 690 V:  
-- U_min = p0210 * 0.82 (AC/AC) > 565 V, p0210 * 0.63 (DC/AC) > 650 V  
+- U_min = p0210 * 0.82 (AC/AC) &gt; 565 V, p0210 * 0.63 (DC/AC) &gt; 650 V  
 U_rated = 500 ... 690 V:  
-- U_min = p0210 * 0.82 (AC/AC) > 420 V, p0210 * 0.63 (DC/AC) > 480 V
+- U_min = p0210 * 0.82 (AC/AC) &gt; 420 V, p0210 * 0.63 (DC/AC) &gt; 480 V
 
 ### p0251[0] Power unit heat sink fan operating hours counter
 
@@ -1241,7 +1241,7 @@ Displays the rated motor torque.
 Sets the torque constant of the synchronous motor.  
 p0316 = 0:  
 The torque constant is calculated from the motor data.  
-p0316 > 0:  
+p0316 &gt; 0:  
 The selected value is used as torque constant.
 
 **Notice:**
@@ -2211,14 +2211,14 @@ r0975
 **Note:**
   
 Example:  
-r0964[0] = 42 --> SIEMENS  
-r0964[1] = 5410 --> SINAMICS S210 PN  
-r0964[2] = 501 --> first part firmware version V05.01 (second part, refer to index
+r0964[0] = 42 --&gt; SIEMENS  
+r0964[1] = 5410 --&gt; SINAMICS S210 PN  
+r0964[2] = 501 --&gt; first part firmware version V05.01 (second part, refer to index
 6)  
-r0964[3] = 2018 --> year 2018  
-r0964[4] = 1705 --> 17th of May  
-r0964[5] = 1 --> 1 drive object  
-r0964[6] = 100 --> second part firmware version (complete version: V05.01.01.00)
+r0964[3] = 2018 --&gt; year 2018  
+r0964[4] = 1705 --&gt; 17th of May  
+r0964[5] = 1 --&gt; 1 drive object  
+r0964[6] = 100 --&gt; second part firmware version (complete version: V05.01.01.00)
 
 ### r0965 PROFIdrive profile number profile version
 
@@ -2316,18 +2316,18 @@ r0964
 **Note:**
   
 Example:  
-r0975[0] = 42 --> SIEMENS  
-r0975[1] = 11 --> SERVO drive object type  
-r0975[2] = 102 --> first part, firmware version V01.02 (second part, refer to index
+r0975[0] = 42 --&gt; SIEMENS  
+r0975[1] = 11 --&gt; SERVO drive object type  
+r0975[2] = 102 --&gt; first part, firmware version V01.02 (second part, refer to index
 10)  
-r0975[3] = 2003 --> year 2003  
-r0975[4] = 1401 --> 14th of January  
-r0975[5] = 1 --> PROFIdrive drive object, type class  
-r0975[6] = 9 --> PROFIdrive drive object sub-type class 1  
-r0975[7] = 2 --> drive object number = 2  
+r0975[3] = 2003 --&gt; year 2003  
+r0975[4] = 1401 --&gt; 14th of January  
+r0975[5] = 1 --&gt; PROFIdrive drive object, type class  
+r0975[6] = 9 --&gt; PROFIdrive drive object sub-type class 1  
+r0975[7] = 2 --&gt; drive object number = 2  
 r0975[8] = 0 (reserved)  
 r0975[9] = 0 (reserved)  
-r0975[10] = 600 --> second part, firmware version (complete version: V01.02.06.00)
+r0975[10] = 600 --&gt; second part, firmware version (complete version: V01.02.06.00)
 
 ### p0976 Reset all parameters
 
@@ -3897,14 +3897,14 @@ documentation.
   
 The buffer parameters are cyclically updated in the background.  
 Alarm buffer structure (general principle):  
-r2122[0], r2124[0], r2123[0], r2125[0] --> alarm 1 (the oldest)  
+r2122[0], r2124[0], r2123[0], r2125[0] --&gt; alarm 1 (the oldest)  
 . . .  
-r2122[7], r2124[7], r2123[7], r2125[7] --> Alarm 8 (the latest)  
+r2122[7], r2124[7], r2123[7], r2125[7] --&gt; Alarm 8 (the latest)  
 When the alarm buffer is full, the alarms that have gone are entered into the alarm
 history:  
-r2122[8], r2124[8], r2123[8], r2125[8] --> Alarm 1 (the latest)  
+r2122[8], r2124[8], r2123[8], r2125[8] --&gt; Alarm 1 (the latest)  
 . . .  
-r2122[63], r2124[63], r2123[63], r2125[63] --> alarm 56 (the oldest)
+r2122[63], r2124[63], r2123[63], r2125[63] --&gt; alarm 56 (the oldest)
 
 ### r2123[0...63] Alarm received in milliseconds
 
@@ -4667,10 +4667,10 @@ The maximum speed controller gain is determined from the identified mechanical c
 system.  
 For bits 03, 04:  
 The measured value buffer length is set using these bits:  
-Bit 04 = 0 and bit 03 = 0 -> buffer length = 256  
-Bit 04 = 0 and bit 03 = 1 -> buffer length = 512  
-Bit 04 = 1 and bit 03 = 0 -> buffer length = 1024  
-Bit 04 = 1 and bit 03 = 1 -> buffer length = 2048  
+Bit 04 = 0 and bit 03 = 0 -&gt; buffer length = 256  
+Bit 04 = 0 and bit 03 = 1 -&gt; buffer length = 512  
+Bit 04 = 1 and bit 03 = 0 -&gt; buffer length = 1024  
+Bit 04 = 1 and bit 03 = 1 -&gt; buffer length = 2048  
 For bit 05:  
 A Hamming window is used to filter the measured time signals.  
 For bit 06:  
@@ -4679,18 +4679,18 @@ into account in the speed controller loop. For high amplitudes in p5298, it is p
 that the measurement is unsuccessful, as the converter reaches its voltage limit.  
 For bits 07, 08, 09:  
 The measurement bandwidth is set using these bits:  
-Bit 09 = 0, bit 08 = 0, bit 07 = 0 -> bandwidth = 50 Hz  
-Bit 09 = 0, bit 08 = 0, bit 07 = 1 -> bandwidth = 100 Hz  
-Bit 09 = 0, bit 08 = 1, bit 07 = 0 -> bandwidth = 200 Hz  
-Bit 09 = 0, bit 08 = 1, bit 07 = 1 -> bandwidth = 400 Hz  
-Bit 09 = 1, bit 08 = 0, bit 07 = 0 -> bandwidth = 800 Hz  
-Bit 09 = 1, bit 08 = 0, bit 07 = 1 -> bandwidth = 1600 Hz  
+Bit 09 = 0, bit 08 = 0, bit 07 = 0 -&gt; bandwidth = 50 Hz  
+Bit 09 = 0, bit 08 = 0, bit 07 = 1 -&gt; bandwidth = 100 Hz  
+Bit 09 = 0, bit 08 = 1, bit 07 = 0 -&gt; bandwidth = 200 Hz  
+Bit 09 = 0, bit 08 = 1, bit 07 = 1 -&gt; bandwidth = 400 Hz  
+Bit 09 = 1, bit 08 = 0, bit 07 = 0 -&gt; bandwidth = 800 Hz  
+Bit 09 = 1, bit 08 = 0, bit 07 = 1 -&gt; bandwidth = 1600 Hz  
 For bits 10, 11:  
 Number of measuring periods.  
-Bit 11 = 0 and bit 10 = 0 -> number of measurements = 1  
-Bit 11 = 0 and bit 10 = 1 -> number of measurements = 2  
-Bit 11 = 1 and bit 10 = 0 -> number of measurements = 4  
-Bit 11 = 1 and bit 10 = 1 -> number of measurements = 8  
+Bit 11 = 0 and bit 10 = 0 -&gt; number of measurements = 1  
+Bit 11 = 0 and bit 10 = 1 -&gt; number of measurements = 2  
+Bit 11 = 1 and bit 10 = 0 -&gt; number of measurements = 4  
+Bit 11 = 1 and bit 10 = 1 -&gt; number of measurements = 8  
 For bit 12:  
 The PRBS signal is switched to the speed setpoint (in front of the filter).  
 For bit 13:  
@@ -4701,7 +4701,7 @@ When the bit is set, a current setpoint filter is used to partially compensate t
 mechanical system.  
 This is recommended for the following machine attributes:  
 - the load moment of inertia is significantly higher than the motor moment of inertia
-(e.g. > 6x).  
+(e.g. &gt; 6x).  
 - the coupling between the machine elements has almost no backlash (no play).  
 - the stiffness of the mechanical transmission elements does not change significantly
 in the traversing range.
@@ -5644,7 +5644,7 @@ in this parameter.
 to the encoder.  
 For safety functions that are not enabled (p9501 = 0), the following applies:  
 - p9515.16 is automatically set when the system powers up.  
-For safety functions that are enabled (p9501 > 0), the following applies:  
+For safety functions that are enabled (p9501 &gt; 0), the following applies:  
 - p9515.16 is checked to see that it matches the encoder.
 
 ### p9516 SI Motion encoder configuration safety functions
@@ -5717,7 +5717,7 @@ F01671
   
 For safety functions that are not enabled (p9501 = 0), the following applies:  
 - p9518 is automatically set when the system powers up.  
-For safety functions that are enabled (p9501 > 0), the following applies:  
+For safety functions that are enabled (p9501 &gt; 0), the following applies:  
 - p9518 is checked to see that it matches the encoder.
 
 ### p9519 SI Motion fine resolution G1_XIST1
@@ -5754,7 +5754,7 @@ F01671
 G1_XIST1: encoder 1 position actual value 1 (PROFIdrive)  
 For safety functions that are not enabled (p9501 = 0), the following applies:  
 - p9519 is automatically set when the system powers up.  
-For safety functions that are enabled (p9501 > 0), the following applies:  
+For safety functions that are enabled (p9501 &gt; 0), the following applies:  
 - p9519 is checked to see that it matches the encoder.
 
 ### p9520 SI Motion spindle pitch
@@ -7451,7 +7451,7 @@ r9770
 **Note:**
   
 Example:  
-r9590[0] = 5, r9590[1] = 10, r9590[2] = 1, r9590[3] = 0 --> SI Motion version V05.10.01.00
+r9590[0] = 5, r9590[1] = 10, r9590[2] = 1, r9590[3] = 0 --&gt; SI Motion version V05.10.01.00
 
 ### p9601 SI enable, functions integrated in the drive
 
@@ -7734,8 +7734,8 @@ to brake along the OFF3 down ramp (p1135).
   
 In order that the drive can completely ramp-down along the OFF3 ramp and a motor holding
 brake that is possibly available can close, then the delay time should be set as follows:  
-Motor holding brake parameterized: delay time >= p1135 + p1228 + p1217  
-Motor holding brake not parameterized: delay time >= p1135 + p1228
+Motor holding brake parameterized: delay time &gt;= p1135 + p1228 + p1217  
+Motor holding brake not parameterized: delay time &gt;= p1135 + p1228
 
 **Dependency:**
   
@@ -8200,28 +8200,28 @@ Result list channel 1
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | Bit | Signal name | 0 signal | 1 signal | Function diagram |
-| 00 | Actual value > upper limit SOS | No | Yes | - |
-| 01 | Actual value > lower limit SOS | No | Yes | - |
-| 06 | Actual value > upper limit SLS1 | No | Yes | - |
-| 07 | Actual value > lower limit SLS1 | No | Yes | - |
-| 08 | Actual value > upper limit SLS2 | No | Yes | - |
-| 09 | Actual value > lower limit SLS2 | No | Yes | - |
-| 10 | Actual value > upper limit SLS3 | No | Yes | - |
-| 11 | Actual value > lower limit SLS3 | No | Yes | - |
-| 12 | Actual value > upper limit SLS4 | No | Yes | - |
-| 13 | Actual value > lower limit SLS4 | No | Yes | - |
-| 14 | Actual value > upper limit test stop | No | Yes | - |
-| 15 | Actual value > lower limit test stop | No | Yes | - |
-| 16 | Actual value > upper limit SAM/SBR | No | Yes | - |
-| 17 | Actual value > lower limit SAM/SBR | No | Yes | - |
-| 18 | Actual value > upper limit SDI positive | No | Yes | - |
-| 19 | Actual value > lower limit SDI positive | No | Yes | - |
-| 20 | Actual value > upper limit SDI negative | No | Yes | - |
-| 21 | Actual value > lower limit SDI negative | No | Yes | - |
-| 22 | Actual value > upper limit SLA1 | No | Yes | - |
-| 23 | Actual value > lower limit SLA1 | No | Yes | - |
-| 24 | Actual value > fine upper limit SLA1 | No | Yes | - |
-| 25 | Actual value > fine lower limit SLA1 | No | Yes | - |
+| 00 | Actual value &gt; upper limit SOS | No | Yes | - |
+| 01 | Actual value &gt; lower limit SOS | No | Yes | - |
+| 06 | Actual value &gt; upper limit SLS1 | No | Yes | - |
+| 07 | Actual value &gt; lower limit SLS1 | No | Yes | - |
+| 08 | Actual value &gt; upper limit SLS2 | No | Yes | - |
+| 09 | Actual value &gt; lower limit SLS2 | No | Yes | - |
+| 10 | Actual value &gt; upper limit SLS3 | No | Yes | - |
+| 11 | Actual value &gt; lower limit SLS3 | No | Yes | - |
+| 12 | Actual value &gt; upper limit SLS4 | No | Yes | - |
+| 13 | Actual value &gt; lower limit SLS4 | No | Yes | - |
+| 14 | Actual value &gt; upper limit test stop | No | Yes | - |
+| 15 | Actual value &gt; lower limit test stop | No | Yes | - |
+| 16 | Actual value &gt; upper limit SAM/SBR | No | Yes | - |
+| 17 | Actual value &gt; lower limit SAM/SBR | No | Yes | - |
+| 18 | Actual value &gt; upper limit SDI positive | No | Yes | - |
+| 19 | Actual value &gt; lower limit SDI positive | No | Yes | - |
+| 20 | Actual value &gt; upper limit SDI negative | No | Yes | - |
+| 21 | Actual value &gt; lower limit SDI negative | No | Yes | - |
+| 22 | Actual value &gt; upper limit SLA1 | No | Yes | - |
+| 23 | Actual value &gt; lower limit SLA1 | No | Yes | - |
+| 24 | Actual value &gt; fine upper limit SLA1 | No | Yes | - |
+| 25 | Actual value &gt; fine lower limit SLA1 | No | Yes | - |
 
 **Dependency:**
   
@@ -8273,12 +8273,12 @@ Result list channel 1
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | Bit | Signal name | 0 signal | 1 signal | Function diagram |
-| 16 | Actual value > upper limit SSM+ | No | Yes | - |
-| 17 | Actual value > lower limit SSM+ | No | Yes | - |
-| 18 | Actual value > upper limit SSM- | No | Yes | - |
-| 19 | Actual value > lower limit SSM- | No | Yes | - |
-| 20 | Actual value > upper limit modulo | No | Yes | - |
-| 21 | Actual value > lower limit modulo | No | Yes | - |
+| 16 | Actual value &gt; upper limit SSM+ | No | Yes | - |
+| 17 | Actual value &gt; lower limit SSM+ | No | Yes | - |
+| 18 | Actual value &gt; upper limit SSM- | No | Yes | - |
+| 19 | Actual value &gt; lower limit SSM- | No | Yes | - |
+| 20 | Actual value &gt; upper limit modulo | No | Yes | - |
+| 21 | Actual value &gt; lower limit modulo | No | Yes | - |
 
 **Dependency:**
   
@@ -8658,7 +8658,7 @@ Value = 0:
 Message A01711 was communicated from the first channel.  
 Value = 1 ... 999:  
 Number of the incorrect date in the data cross-check between the monitoring channels.  
-Value >= 1000:  
+Value &gt;= 1000:  
 Additional diagnostic values of the drive.  
 For index [1]:  
 Displays the value from the first channel that resulted in message A01711.  
@@ -8688,7 +8688,7 @@ A01711
 The significance of the individual message values is described in message A01711.  
 KDV: Data cross-check  
 For index [1, 2]:  
-When message A01711 is output with message value >= 1000, then these indices are not
+When message A01711 is output with message value &gt;= 1000, then these indices are not
 supplied with values.
 
 ### r9733[0...2] SI Motion setpoint speed limit effective
@@ -9135,7 +9135,7 @@ Safety Version (hotfix)
 **Note:**
   
 Example:  
-r9770[0] = 5, r9770[1] = 10, r9770[2] = 1, r9770[3] = 0 --> safety version V05.10.01.00
+r9770[0] = 5, r9770[1] = 10, r9770[2] = 1, r9770[3] = 0 --&gt; safety version V05.10.01.00
 
 ### r9776.0...3 SI diagnostics
 
@@ -10706,14 +10706,14 @@ the calculated value is then present.
   
 For value = 1 ... 256:  
 This value can only be set if, for sampling time T_sample of this runtime group, the
-following applies: 1 ms <= T_sample <= r20003. At download, a value that violates
+following applies: 1 ms &lt;= T_sample &lt;= r20003. At download, a value that violates
 this condition is not rejected, but a permissible equivalent value is set automatically
 and fault F50518 is output.  
 If value = 9003:  
 The fixed runtime groups p20000[x] = 9003 log on with the sampling time of the setpoint
 channel, although the sampling time must be at least 1 ms. If, as a result of this
 limit, the actual sampling time deviates from the sampling time of the setpoint channel
-p0115[3], alarm A20103 is output. Another runtime group with a sampling time >= 1
+p0115[3], alarm A20103 is output. Another runtime group with a sampling time &gt;= 1
 ms should be selected. "Calculate before setpoint channel" means before function diagrams
 3010, 3020, 3030, 3040, etc. are calculated, if the setpoint channel is activated
 (p0108.8 = 1). If, e.g. for SERVO, a setpoint channel has not been configured (p0108.8
@@ -10876,7 +10876,7 @@ Runtime group 9
 
 **Note:**
   
-The runtime group to be measured has to be logged on (p20000[x] > 0).  
+The runtime group to be measured has to be logged on (p20000[x] &gt; 0).  
 The value for the computation time load is calculated in the drive unit using the
 project loaded. As such, the r20005[x] values are not available in the expert list
 in SCOUT/STARTER offline mode.
@@ -10902,7 +10902,7 @@ in SCOUT/STARTER offline mode.
   
 Displays the assignment of the available hardware sampling times of the drive unit.  
 The term "hardware sampling times" refers to those r20002 sampling times that are
-formed as a multiple of the basic sampling time and always < r20003.
+formed as a multiple of the basic sampling time and always &lt; r20003.
 
 **Dependency:**
   
@@ -10918,7 +10918,7 @@ Therefore, the current number of hardware sampling times that are still free can
 read out in r7903.  
 If r7903=0, no additional sampling time that differs from r20008[0...12] can be provided
 from the Control Unit. If, when selecting in this state, a runtime group with a sampling
-time < r20003 (p20000 <= 255) is to be set in p20000, only runtime groups whose sampling
+time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000, only runtime groups whose sampling
 time is already provided in r20008[0...12] can be selected.
 
 **Note:**
@@ -10933,8 +10933,8 @@ It should be noted that the basic system, depending on the selected basic sampli
 times p0115[0], requires at least two (sometimes several) freely assignable hardware
 sampling times for internal functions. The number of hardware sampling times that
 can still be freely assigned can be read out in r7903.  
-r20008[11] = 99999.00000 --> Hardware sampling time is not supported.  
-r20008[12] = 99999.00000 --> Hardware sampling time is not supported.  
+r20008[11] = 99999.00000 --&gt; Hardware sampling time is not supported.  
+r20008[12] = 99999.00000 --&gt; Hardware sampling time is not supported.  
 The sampling time of runtime groups that have been assigned to the PROFIBUS runtime
 groups (p20000 = 4000 ... 4004) is not displayed in r20008. For this sampling time,
 one of the internally and permanently assigned hardware sampling times is used.
@@ -11199,7 +11199,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 0 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 0 of the
 AND function block.
 
 ### p20032 AND 0 runtime group
@@ -11332,7 +11332,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 1 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 1 of the
 AND function block.
 
 ### p20036 AND 1 runtime group
@@ -11465,7 +11465,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 2 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 2 of the
 AND function block.
 
 ### p20040 AND 2 runtime group
@@ -11598,7 +11598,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 3 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 3 of the
 AND function block.
 
 ### p20044 AND 3 runtime group
@@ -14066,7 +14066,7 @@ Div remainder MOD
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 0 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### p20121 DIV 0 runtime group
 
@@ -14227,7 +14227,7 @@ Div remainder MOD
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 1 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### p20126 DIV 1 runtime group
 
@@ -14368,7 +14368,7 @@ with sign evaluation.
   
 Display parameter for signal SN that the input quantity X of instance AVA 0 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### p20131 AVA 0 runtime group
 
@@ -14509,7 +14509,7 @@ with sign evaluation.
   
 Display parameter for signal SN that the input quantity X of instance AVA 1 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### p20136 AVA 1 runtime group
 
@@ -17293,7 +17293,7 @@ Display parameter for the limited output quantity Y of instance LIM 0 of the lim
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20233 BO: LIM 0 input quantity at the lower limit QL
 
@@ -17315,7 +17315,7 @@ Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### p20234 LIM 0 runtime group
 
@@ -17495,7 +17495,7 @@ Display parameter for the limited output quantity Y of instance LIM 1 of the lim
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20241 BO: LIM 1 input quantity at the lower limit QL
 
@@ -17517,7 +17517,7 @@ Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### p20242 LIM 1 runtime group
 
@@ -18071,7 +18071,7 @@ integrator.
 **Description:**
   
 Display parameter for output quantity Y of instance INT 0 of the integrator.  
-If LL>= LU, then the output quantity Y = LU.
+If LL&gt;= LU, then the output quantity Y = LU.
 
 ### r20262 BO: INT 0 integrator at the upper limit QU
 
@@ -18300,7 +18300,7 @@ Setting parameter for hysteresis HY of instance LVM 0 of the double-sided limite
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20271 BO: LVM 0 input quantity within interval QM
 
@@ -18344,7 +18344,7 @@ X lies within the interval.
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### p20273 LVM 0 runtime group
 
@@ -18525,7 +18525,7 @@ Setting parameter for hysteresis HY of instance LVM 1 of the double-sided limite
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20280 BO: LVM 1 input quantity within interval QM
 
@@ -18569,7 +18569,7 @@ X lies within the interval.
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### p20282 LVM 1 runtime group
 
@@ -18907,21 +18907,21 @@ Displays the numbers of safety messages that have occurred.
   
 The messages type "safety message" (Cxxxxx) are entered in the message fault buffer.  
 Message buffer structure (principle):  
-r60047[0], r60048[0], r60049[0], r9753[0], r9754[0], r9755[0], r9756[0] --> actual
+r60047[0], r60048[0], r60049[0], r9753[0], r9754[0], r9755[0], r9756[0] --&gt; actual
 message case, safety message 1  
 ...  
-r60047[7], r60048[7], r60049[7], r9753[7], r9754[7], r9755[7], r9756[7] --> actual
+r60047[7], r60048[7], r60049[7], r9753[7], r9754[7], r9755[7], r9756[7] --&gt; actual
 message case, safety message 8  
-r60047[8], r60048[8], r60049[8], r9753[8], r9754[8], r9755[8], r9756[8] --> 1st acknowledged
+r60047[8], r60048[8], r60049[8], r9753[8], r9754[8], r9755[8], r9756[8] --&gt; 1st acknowledged
 message case, safety message 1  
 ...  
-r60047[15], r60048[15], r60049[15], r9753[15], r9754[15], r9755[15], r9756[15] -->
+r60047[15], r60048[15], r60049[15], r9753[15], r9754[15], r9755[15], r9756[15] --&gt;
 1st acknowledged message case, safety message 8  
 ...  
-r60047[56], r60048[56], r60049[56], r9753[56], r9754[56], r9755[56], r9756[56] -->
+r60047[56], r60048[56], r60049[56], r9753[56], r9754[56], r9755[56], r9756[56] --&gt;
 7th acknowledged message case, safety message 1  
 ...  
-r60047[63], r60048[63], r60049[63], r9753[63], r9754[63], r9755[63], r9756[63] -->
+r60047[63], r60048[63], r60049[63], r9753[63], r9754[63], r9755[63], r9756[63] --&gt;
 7th acknowledged message case, safety message 8  
 Parameter r60047[0...63] has the same content as r60045[0...63].
 
@@ -18950,21 +18950,21 @@ Displays the numbers of safety messages that have occurred.
   
 The messages type "safety message" (Cxxxxx) are entered in the message fault buffer.  
 Message buffer structure (principle):  
-r60047[0], r60048[0], r60049[0], r9753[0], r9754[0], r9755[0], r9756[0] --> actual
+r60047[0], r60048[0], r60049[0], r9753[0], r9754[0], r9755[0], r9756[0] --&gt; actual
 message case, safety message 1  
 ...  
-r60047[7], r60048[7], r60049[7], r9753[7], r9754[7], r9755[7], r9756[7] --> actual
+r60047[7], r60048[7], r60049[7], r9753[7], r9754[7], r9755[7], r9756[7] --&gt; actual
 message case, safety message 8  
-r60047[8], r60048[8], r60049[8], r9753[8], r9754[8], r9755[8], r9756[8] --> 1st acknowledged
+r60047[8], r60048[8], r60049[8], r9753[8], r9754[8], r9755[8], r9756[8] --&gt; 1st acknowledged
 message case, safety message 1  
 ...  
-r60047[15], r60048[15], r60049[15], r9753[15], r9754[15], r9755[15], r9756[15] -->
+r60047[15], r60048[15], r60049[15], r9753[15], r9754[15], r9755[15], r9756[15] --&gt;
 1st acknowledged message case, safety message 8  
 ...  
-r60047[56], r60048[56], r60049[56], r9753[56], r9754[56], r9755[56], r9756[56] -->
+r60047[56], r60048[56], r60049[56], r9753[56], r9754[56], r9755[56], r9756[56] --&gt;
 7th acknowledged message case, safety message 1  
 ...  
-r60047[63], r60048[63], r60049[63], r9753[63], r9754[63], r9755[63], r9756[63] -->
+r60047[63], r60048[63], r60049[63], r9753[63], r9754[63], r9755[63], r9756[63] --&gt;
 7th acknowledged message case, safety message 8  
 Parameter r60047[0...63] has the same content as r60045[0...63].
 

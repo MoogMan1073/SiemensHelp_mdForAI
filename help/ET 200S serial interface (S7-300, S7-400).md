@@ -418,7 +418,7 @@ NDR and ERROR/STATUS are also output after the reset of the S_RCV instruction (
 | R | INPUT | BOOL | Cancel the job  Cancels the job in progress. Receiving is disabled. |
 | LADDR | INPUT | INT | Start address of the ET 200S 1SI module  The start address is taken from STEP 7. |
 | DB_NO | INPUT | INT | Data block number  Receive data block no.: CPU-specific, zero not allowed |
-| DBB_NO | INPUT | INT | Data byte number (received data)   **S7-1500**: 0 ≤ DBB_NO and  DBB_NO + LEN ≤ size of the DB   **S7-300/400**: 0 ≤ DBB_NO and  DBB_NO + LEN < 8190 |
+| DBB_NO | INPUT | INT | Data byte number (received data)   **S7-1500**: 0 ≤ DBB_NO and  DBB_NO + LEN ≤ size of the DB   **S7-300/400**: 0 ≤ DBB_NO and  DBB_NO + LEN &lt; 8190 |
 | NDR <sup>1</sup> | OUTPUT | BOOL | Job completed without errors, data received  STATUS parameter == 16#00 |
 | ERROR <sup>1</sup> | OUTPUT | BOOL | Job canceled with errors  The [STATUS parameter](#status-parameter-s7-300-s7-400)  contains the error information. |
 | LEN <sup>1</sup> | OUTPUT | INT | Length of the message frame received  1 ≤ LEN ≤ 224 specified in number of bytes |
@@ -493,7 +493,7 @@ Output DONE indicates "Job completed without errors" and ERROR indicates error e
 | R | INPUT | BOOL | Cancel the job  Cancels the job in progress. Transmission is disabled. |
 | LADDR | INPUT | INT | Start address of the ET 200S 1SI module  The start address is taken from STEP 7. |
 | DB_NO | INPUT | INT | Data block number  Send DB no.: CPU-specific, zero not allowed |
-| DBB_NO | INPUT | INT | Data byte number (transmit data)   **S7-1500**: 0 ≤ DBB_NO and  DBB_NO + LEN ≤ size of the DB   **S7-300/400**: 0 ≤ DBB_NO and  DBB_NO + LEN < 8190 |
+| DBB_NO | INPUT | INT | Data byte number (transmit data)   **S7-1500**: 0 ≤ DBB_NO and  DBB_NO + LEN ≤ size of the DB   **S7-300/400**: 0 ≤ DBB_NO and  DBB_NO + LEN &lt; 8190 |
 | LEN | INPUT | INT | Data length  1 ≤ LEN ≤ 224 specified in number of bytes |
 | DONE <sup>1</sup> | OUTPUT | BOOL | Job completed without errors  STATUS parameter == 16#00 |
 | ERROR <sup>1</sup> | OUTPUT | BOOL | Job canceled with errors  The [STATUS parameter](#status-parameter-modbus-uss-s7-300-s7-400)  contains the error information. |
@@ -700,11 +700,11 @@ Error messages entered in the SFCERR variable can be found in the system functio
 | ERROR_ No (decimal) | ERROR_INFO | Error Text | Remedy |
 | --- | --- | --- | --- |
 | 0 | 0 | No error |  |
-| 1 | SFC 51->RET_VAL | Error reading the system status list with SFC 51. | Analyze RET_VAL in ERROR_INFO; eliminate the cause. |
-| 2 | S_SEND->STATUS, S_RCV->STATUS | Timeout or error during module initialization (error in S_SEND request). | Check if this interface was assigned parameters for operation with "Modbus slave" protocol. Verify the "ID" specified in the communication instruction. Analyze ERROR_INFO. |
+| 1 | SFC 51-&gt;RET_VAL | Error reading the system status list with SFC 51. | Analyze RET_VAL in ERROR_INFO; eliminate the cause. |
+| 2 | S_SEND-&gt;STATUS, S_RCV-&gt;STATUS | Timeout or error during module initialization (error in S_SEND request). | Check if this interface was assigned parameters for operation with "Modbus slave" protocol. Verify the "ID" specified in the communication instruction. Analyze ERROR_INFO. |
 | 11 | Start address | The driver transferred an invalid start address to the communication instruction. | Check the Modbus address of the Modbus master system. |
 | 12 | Number of registers | The driver transferred an invalid number of registers to the communication instruction.  Number of registers = 0. | Check the number of registers of the Modbus master system. If necessary, restart the module (Mains_ON). |
-| 13 | Number of registers | The driver transferred an invalid number of registers to the communication instruction:  Number of registers > 128. | Check the number of registers of the Modbus master system. If necessary, restart the module (Mains_ON). |
+| 13 | Number of registers | The driver transferred an invalid number of registers to the communication instruction:  Number of registers &gt; 128. | Check the number of registers of the Modbus master system. If necessary, restart the module (Mains_ON). |
 | 14 | Bit memory M –  End address | Attempt to access the SIMATIC flags memory area beyond the end of the area. Notice: The area length in the SIMATIC CPU depends on the type of CPU. | Reduce the length of the Modbus start address or the access length in the Modbus master system. |
 | 15 | Outputs Q –  End address    Inputs I –  End address | Attempt to access the SIMATIC outputs memory area beyond the end of the area. Notice: The area length in the SIMATIC CPU depends on the type of CPU. | Reduce the length of the Modbus start address or the access length in the Modbus master system. |
 | 16 | Timers T –  End address | Attempt to access the SIMATIC timers memory area beyond the end of the area. Notice: The area length in the SIMATIC CPU depends on the type of CPU. | Reduce the length of the Modbus start address or the access length in the Modbus master system. |
@@ -719,8 +719,8 @@ Error messages entered in the SFCERR variable can be found in the system functio
 | 25 | Flag address | Flag is above the upper limit. | Change the upper limits of the flags in the conversion DB. |
 | 26 | Output address | Output is below the lower limit. | Change the lower limits of the outputs in the conversion DB. |
 | 27 | Output address | Output is above the upper limit. | Change the upper limits of the outputs in the conversion DB. |
-| 90 | S_SEND-> STATUS | Error during transmission of an acknowledgement message frame to the driver with S_SEND. | Analyze the STATUS information. |
-| 94 | S_RCV->STATUS | Error reading SYSTAT with S_RCV (STATUS). | Analyze the STATUS information. |
+| 90 | S_SEND-&gt; STATUS | Error during transmission of an acknowledgement message frame to the driver with S_SEND. | Analyze the STATUS information. |
+| 94 | S_RCV-&gt;STATUS | Error reading SYSTAT with S_RCV (STATUS). | Analyze the STATUS information. |
 
 ## ET 200S 1SI for USS (S7-300, S7-400)
 
@@ -752,8 +752,8 @@ The instruction is called once per automation system cycle.
 | Parameters | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | DBPA | INPUT | INT | Block number of the parameter DB  CPU-specific (zero is not allowed) |
-| SYPA | INPUT | INT | Start address of the system parameters in the parameter DB  0 <= SYPA <= 8174 |
-| SLPA | INPUT | INT | Start address of the slave parameters in the parameter DB  0 <= SLPA <= 8184 |
+| SYPA | INPUT | INT | Start address of the system parameters in the parameter DB  0 &lt;= SYPA &lt;= 8174 |
+| SLPA | INPUT | INT | Start address of the slave parameters in the parameter DB  0 &lt;= SLPA &lt;= 8184 |
 
 #### Program structure of S_USST
 
@@ -788,8 +788,8 @@ The instruction is called once per automation system cycle.
 | Parameters | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | DBPA | INPUT | INT | Block number of the parameter DB  CPU-specific (zero is not allowed) |
-| SYPA | INPUT | INT | Start address of the system parameters in the parameter DB  0 <= SYPA <= 8174 |
-| SLPA | INPUT | INT | Start address of the slave parameters in the parameter DB  0 <= SLPA <= 8184 |
+| SYPA | INPUT | INT | Start address of the system parameters in the parameter DB  0 &lt;= SYPA &lt;= 8174 |
+| SLPA | INPUT | INT | Start address of the slave parameters in the parameter DB  0 &lt;= SLPA &lt;= 8184 |
 
 #### Program syntax of S_USSR
 
@@ -849,7 +849,7 @@ The S_USSI instruction must be called once during system startup (OB 100).
 | SANZ | INPUT | INT | Number of slaves with the same network data structure (system parameters in the DBPA)  1 ≤ SANZ ≤ 31 |
 | TNU1 | INPUT | INT | Start node number (station number)  0 ≤ TNU1 ≤ 31 |
 | PKW | INPUT | INT | PKW, number  Number of words of the PKW interface 0, 3 or 4 |
-| PZD | INPUT | INT | PZD, number  Number of words of PZD interface  0 <= PZD <= 16 |
+| PZD | INPUT | INT | PZD, number  Number of words of PZD interface  0 &lt;= PZD &lt;= 16 |
 | DBND | INPUT | INT | Network data DB number  CPU-specific (zero is not allowed)  Permitted range: 60000 to 60999 |
 | DBPA | INPUT | INT | Parameter DB number  CPU-specific (zero is not allowed)  Permitted range: 60000 to 60999 |
 | DBCP | INPUT | INT | Communications processor DB number  CPU-specific (zero is not allowed)  Permitted range: 60000 to 60999 |
@@ -887,7 +887,7 @@ The total length of the network data DB required depends on the number of slaves
 
 Number of data words per slave = 2 x (PKW + PZD) + PKW + 6
 
-where PKW = 0, 3 or 4 and 0 <= PZD <= 16
+where PKW = 0, 3 or 4 and 0 &lt;= PZD &lt;= 16
 
 **Example**: A drive with a PKW area of 3 words and a PZD area of 2 words requires 19 data words in the network data DB.
 

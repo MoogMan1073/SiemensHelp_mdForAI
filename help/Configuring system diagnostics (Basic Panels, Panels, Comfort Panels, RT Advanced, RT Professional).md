@@ -39,7 +39,7 @@ Using system diagnostics, you can display the messages from the diagnostic buffe
 
 The system diagnostics display is an operating and display object that you use in a screen.
 
-You navigate directly to the cause of the error and the associated connection. You have access to all integrated connections that you have configured in the "Devices & networks" editor.
+You navigate directly to the cause of the error and the associated connection. You have access to all integrated connections that you have configured in the "Devices &amp; networks" editor.
 
 #### System diagnostics views (Basic Panels)
 
@@ -104,11 +104,11 @@ For the controller to be able to transfer error messages to the system diagnosti
 
 In a SIMATIC S7-300/400 controller, the system diagnostics is disabled by default but can be enabled in the properties of the controller. In a SIMATIC S7-1200/1500 controller, the system diagnostics is enabled by default and cannot be deactivated.
 
-With an HMI connection to a SIMATIC S7-300/400 controller, the "System diagnostics" option is enabled on the HMI device under "Runtime settings > Alarms > Controller alarms" by default and cannot be disabled. With an HMI connection to a SIMATIC S7-1200/1500 controller, the "System diagnostics" option is enabled by default on the HMI device under "Runtime settings > Alarms > Controller alarms" and cannot be disabled.
+With an HMI connection to a SIMATIC S7-300/400 controller, the "System diagnostics" option is enabled on the HMI device under "Runtime settings &gt; Alarms &gt; Controller alarms" by default and cannot be disabled. With an HMI connection to a SIMATIC S7-1200/1500 controller, the "System diagnostics" option is enabled by default on the HMI device under "Runtime settings &gt; Alarms &gt; Controller alarms" and cannot be disabled.
 
 ##### System diagnostics view
 
-The alarm view shows the status of a PLC while the system diagnostics view gives you an overview of all devices available in your plant: You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices & networks" editor.
+The alarm view shows the status of a PLC while the system diagnostics view gives you an overview of all devices available in your plant: You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices &amp; networks" editor.
 
 ##### System diagnostics window
 
@@ -228,16 +228,16 @@ To activate the system diagnostics in a controller, proceed as follows:
 
 1. Open the "Device configuration" of the controller in the project tree.
 2. In the "Device view" tab, select the CPU on the rack.
-3. Select "Properties > General > System diagnostics" in the Inspector window.
+3. Select "Properties &gt; General &gt; System diagnostics" in the Inspector window.
 4. Activate the option "Activate system diagnostics for this device".
-5. Right-click the controller in the project tree and select "Compile > Hardware (rebuild all)" in the shortcut menu.
+5. Right-click the controller in the project tree and select "Compile &gt; Hardware (rebuild all)" in the shortcut menu.
 
 ##### Activating system diagnostics on the HMI device
 
 To activate the system diagnostics on an HMI device, proceed as follows:
 
 1. Open the "Runtime settings" of the HMI device in the project tree.
-2. Select the option "System diagnostics" under "Alarms > Controller alarms".
+2. Select the option "System diagnostics" under "Alarms &gt; Controller alarms".
 
    The display of system diagnostic alarms is enabled in runtime.
 
@@ -245,7 +245,7 @@ To activate the system diagnostics on an HMI device, proceed as follows:
 >
 > **Special feature system diagnostic alarms SIMATIC S7-300/400**
 >
-> When you deactivate the display class 0 for the respective HMI connection under "Runtime settings > Alarms > Controller alarms > Display classes", the system diagnostic alarms are not transferred to the HMI device by the controller even when the system diagnostics is activated in the controller and on the HMI device.
+> When you deactivate the display class 0 for the respective HMI connection under "Runtime settings &gt; Alarms &gt; Controller alarms &gt; Display classes", the system diagnostic alarms are not transferred to the HMI device by the controller even when the system diagnostics is activated in the controller and on the HMI device.
 
 #### Adding a system diagnostics indicator (Panels, Comfort Panels, RT Advanced)
 
@@ -262,7 +262,7 @@ If an error occurs, the appearance of the object changes. The library object can
 ##### Requirement
 
 - The "Libraries" task card is opened.
-- The global library "Buttons and Switches > Master copies > DiagnosticsButtons" is open.
+- The global library "Buttons and Switches &gt; Master copies &gt; DiagnosticsButtons" is open.
 - A screen is open.
 - A system diagnostics window has been created in the global screen.
 
@@ -277,7 +277,7 @@ If an error occurs, the appearance of the object changes. The library object can
 
    ![Procedure](images/97212885003_DV_resource.Stream@PNG-en-US.png)
 3. Select the library object.
-4. Click "Properties > Events" in the Inspector window.
+4. Click "Properties &gt; Events" in the Inspector window.
 
    The system function "ShowSystemDiagnosticsWindow" is preset for the event "Click".
 
@@ -298,7 +298,7 @@ The system diagnostics indicator changes its appearance if an error message is o
 Configure access protection for the system diagnostics indicator to prevent unauthorized access to the system diagnostics window.
 
 1. Select the "DiagnosticsIndicator" object in the screen.
-2. Select an authorization in "Properties > Properties > Security in Runtime" in the Inspector window.
+2. Select an authorization in "Properties &gt; Properties &gt; Security in Runtime" in the Inspector window.
 
 A logon dialog opens when you click on the system diagnostics indicator in Runtime. The system diagnostics window does not open unless you have the required authorization.
 
@@ -319,13 +319,13 @@ The system diagnostics window gives you an overview of all devices available in 
 ##### Procedure
 
 1. Double-click the "System diagnostics window" object in the "Tools" task card. The object is added to the global screen.
-2. Select "Properties > Properties > Columns > Devices/Detail view" in the Inspector window.
+2. Select "Properties &gt; Properties &gt; Columns &gt; Devices/Detail view" in the Inspector window.
 3. Activate the columns that you require in the device view for Runtime, e.g. Status, Name, Address.
 4. Activate the properties that you require in the Detail view for Runtime, e.g. status, name, higher level designation.
 5. Activate the columns that you require in the diagnostic buffer view, e.g. Status, Name.
 6. Customize the column headers, if necessary.
-7. Enable "Properties >Properties > Layout > Column settings > Columns moveable" to move the columns in Runtime.
-8. Enable "Properties > Properties > Window > Closable" to allow the system diagnostics window to be closed in Runtime.
+7. Enable "Properties &gt;Properties &gt; Layout &gt; Column settings &gt; Columns moveable" to move the columns in Runtime.
+8. Enable "Properties &gt; Properties &gt; Window &gt; Closable" to allow the system diagnostics window to be closed in Runtime.
 
 ##### Result
 
@@ -351,13 +351,13 @@ Instead of using the object "DiagnosticsIndicator" from the library, you can con
 ##### Procedure
 
 1. Double-click the "Button" object in the "Tools" task card. A button will be added to the screen.
-2. In the Inspector window, select "Properties > Properties > General > Mode > Graphic".
-3. Select the bit graphics list under "Graphic > Graphics list".
-4. Select the "@DiagnosticsIndicatorTag" tag under "Properties > Properties > General > Tag" in the Inspector window.
+2. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Mode &gt; Graphic".
+3. Select the bit graphics list under "Graphic &gt; Graphics list".
+4. Select the "@DiagnosticsIndicatorTag" tag under "Properties &gt; Properties &gt; General &gt; Tag" in the Inspector window.
 
 ##### Configuring system function to the button
 
-1. Click "Properties > Events" in the Inspector window.
+1. Click "Properties &gt; Events" in the Inspector window.
 2. Select the "Click" event.
 3. Click on "Add function" in the table.
 4. Select the "ActivateSystemDiagnosticsView" system function.
@@ -393,12 +393,12 @@ You add a System diagnostics view to your project to get an overview of all devi
 ##### Procedure
 
 1. Double-click the "System diagnostics view" object in the "Tools" task card. The object is added to the screen.
-2. Select "Properties > Properties > Columns > Devices/Detail view" in the Inspector window.
+2. Select "Properties &gt; Properties &gt; Columns &gt; Devices/Detail view" in the Inspector window.
 3. Activate the columns that you require in the device view for Runtime, e.g. Status, Name, Slot.
 4. Activate the columns that you require in the detail view for Runtime, e.g. Status, Name, Plant designation.
 5. Activate the columns that you require in the diagnostic buffer view, e.g. Status, Name.
-6. Enable "Properties >Properties > Layout > Column settings > Columns moveable" to move the columns in Runtime.
-7. You can change the column headers under "Properties > Properties > Column headers", if necessary.
+6. Enable "Properties &gt;Properties &gt; Layout &gt; Column settings &gt; Columns moveable" to move the columns in Runtime.
+7. You can change the column headers under "Properties &gt; Properties &gt; Column headers", if necessary.
 
 ##### Result
 
@@ -414,14 +414,14 @@ For an overview of all integrated connections, you insert a system diagnostics v
 
 - A PLC has been created.
 - A Basic Panel has been created.
-- An integrated connection has been created in the "Devices & Networks" editor.
+- An integrated connection has been created in the "Devices &amp; Networks" editor.
 - You have created a screen.
 - The Inspector window is open.
 
 ##### Procedure
 
 1. Double-click the "System diagnostics view" object in the "Tools" task card. The object is added to the screen.
-2. In the Inspector window, select "Properties > Layout".
+2. In the Inspector window, select "Properties &gt; Layout".
 3. Enter a number under "Lines per entry", i.e. 5.
 
 ##### Result
@@ -447,9 +447,9 @@ The system diagnostics view also offers a split view of the display. You have th
 ##### Procedure
 
 1. Double-click the "System diagnostics view" object in the "Tools" task card. The object is added to the screen.
-2. In the Inspector window, click "Properties > Properties > Layout".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Layout".
 3. Activate "Show split view".
-4. Activate "Fit to size > Auto-size".
+4. Activate "Fit to size &gt; Auto-size".
 5. You may also change the number of lines for the "Device view" and the "Detail view" if required.
 
 ##### Result
@@ -495,11 +495,11 @@ For the controller to be able to transfer error messages to the system diagnosti
 
 In a SIMATIC S7-300/400 controller, the system diagnostics is disabled by default but can be enabled in the properties of the controller. In a SIMATIC S7-1200/1500 controller, the system diagnostics is enabled by default and cannot be deactivated.
 
-With an HMI connection to a SIMATIC S7-300/400 controller, the "System diagnostics" option is enabled on the HMI device under "Runtime settings > Alarms > Controller alarms" by default and cannot be disabled. With an HMI connection to a SIMATIC S7-1200/1500 controller, the "System diagnostics" option is enabled by default on the HMI device under "Runtime settings > Alarms > Controller alarms" and cannot be disabled.
+With an HMI connection to a SIMATIC S7-300/400 controller, the "System diagnostics" option is enabled on the HMI device under "Runtime settings &gt; Alarms &gt; Controller alarms" by default and cannot be disabled. With an HMI connection to a SIMATIC S7-1200/1500 controller, the "System diagnostics" option is enabled by default on the HMI device under "Runtime settings &gt; Alarms &gt; Controller alarms" and cannot be disabled.
 
 ##### System diagnostics view
 
-The alarm view shows the status of a PLC while the system diagnostics view gives you an overview of all devices available in your plant: You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices & networks" editor.
+The alarm view shows the status of a PLC while the system diagnostics view gives you an overview of all devices available in your plant: You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices &amp; networks" editor.
 
 ##### System diagnostics indicator
 
@@ -596,16 +596,16 @@ To activate the system diagnostics in a controller, proceed as follows:
 
 1. Open the "Device configuration" of the controller in the project tree.
 2. In the "Device view" tab, select the CPU on the rack.
-3. Select "Properties > General > System diagnostics" in the Inspector window.
+3. Select "Properties &gt; General &gt; System diagnostics" in the Inspector window.
 4. Activate the option "Activate system diagnostics for this device".
-5. Right-click the controller in the project tree and select "Compile > Hardware (rebuild all)" in the shortcut menu.
+5. Right-click the controller in the project tree and select "Compile &gt; Hardware (rebuild all)" in the shortcut menu.
 
 ##### Activating system diagnostics on the HMI device
 
 To activate the system diagnostics on an HMI device, proceed as follows:
 
 1. Open the "Runtime settings" of the HMI device in the project tree.
-2. Select the option "System diagnostics" under "Alarms > Controller alarms".
+2. Select the option "System diagnostics" under "Alarms &gt; Controller alarms".
 
    The display of system diagnostic alarms is enabled in runtime.
 
@@ -613,7 +613,7 @@ To activate the system diagnostics on an HMI device, proceed as follows:
 >
 > **Special feature system diagnostic alarms SIMATIC S7-300/400**
 >
-> When you deactivate the display class 0 for the respective HMI connection under "Runtime settings > Alarms > Controller alarms > Display classes", the system diagnostic alarms are not transferred to the HMI device by the controller even when the system diagnostics is activated in the controller and on the HMI device.
+> When you deactivate the display class 0 for the respective HMI connection under "Runtime settings &gt; Alarms &gt; Controller alarms &gt; Display classes", the system diagnostic alarms are not transferred to the HMI device by the controller even when the system diagnostics is activated in the controller and on the HMI device.
 
 ---
 
@@ -636,7 +636,7 @@ If an error occurs, the appearance of the object changes. The library object can
 ##### Requirement
 
 - The "Libraries" task card is opened.
-- The global library "Buttons and Switches > Master copies > DiagnosticsButtons" is open.
+- The global library "Buttons and Switches &gt; Master copies &gt; DiagnosticsButtons" is open.
 - A screen is open.
 - A system diagnostics window has been created in the global screen.
 
@@ -651,7 +651,7 @@ If an error occurs, the appearance of the object changes. The library object can
 
    ![Procedure](images/97212885003_DV_resource.Stream@PNG-en-US.png)
 3. Select the library object.
-4. Click "Properties > Events" in the Inspector window.
+4. Click "Properties &gt; Events" in the Inspector window.
 
    The system function "ShowSystemDiagnosticsWindow" is preset for the event "Click".
 
@@ -672,7 +672,7 @@ The system diagnostics indicator changes its appearance if an error message is o
 Configure access protection for the system diagnostics indicator to prevent unauthorized access to the system diagnostics window.
 
 1. Select the "DiagnosticsIndicator" object in the screen.
-2. Select an authorization in "Properties > Properties > Security in Runtime" in the Inspector window.
+2. Select an authorization in "Properties &gt; Properties &gt; Security in Runtime" in the Inspector window.
 
 A logon dialog opens when you click on the system diagnostics indicator in Runtime. The system diagnostics window does not open unless you have the required authorization.
 
@@ -694,13 +694,13 @@ Instead of using the object "DiagnosticsIndicator" from the library, you can con
 ##### Procedure
 
 1. Double-click the "Button" object in the "Tools" task card. A button will be added to the screen.
-2. In the Inspector window, select "Properties > Properties > General > Mode > Graphic".
-3. Select the bit graphics list under "Graphic > Graphics list".
-4. Select the "@DiagnosticsIndicatorTag" tag under "Properties > Properties > General > Tag" in the Inspector window.
+2. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Mode &gt; Graphic".
+3. Select the bit graphics list under "Graphic &gt; Graphics list".
+4. Select the "@DiagnosticsIndicatorTag" tag under "Properties &gt; Properties &gt; General &gt; Tag" in the Inspector window.
 
 ##### Configuring system function to the button
 
-1. Click "Properties > Events" in the Inspector window.
+1. Click "Properties &gt; Events" in the Inspector window.
 2. Select the "Click" event.
 3. Click on "Add function" in the table.
 4. Select the "ActivateSystemDiagnosticsView" system function.
@@ -737,12 +737,12 @@ You add a System diagnostics view to your project to get an overview of all devi
 ##### Procedure
 
 1. Double-click the "System diagnostics view" object in the "Tools" task card. The object is added to the screen.
-2. Select "Properties > Properties > Columns > Devices/Detail view" in the Inspector window.
+2. Select "Properties &gt; Properties &gt; Columns &gt; Devices/Detail view" in the Inspector window.
 3. Activate the columns that you require in the device view for Runtime, e.g. Status, Name, Slot.
 4. Activate the columns that you require in the detail view for Runtime, e.g. Status, Name, Plant designation.
 5. Activate the columns that you require in the diagnostic buffer view, e.g. Status, Name.
-6. Select "Properties >Properties > Layout > Column settings > Columns movable" to enable move of the columns in Runtime.
-7. You can change the column headers under "Properties > Properties > Column headers", if necessary.
+6. Select "Properties &gt;Properties &gt; Layout &gt; Column settings &gt; Columns movable" to enable move of the columns in Runtime.
+7. You can change the column headers under "Properties &gt; Properties &gt; Column headers", if necessary.
 
 ##### Result
 
@@ -765,7 +765,7 @@ The system diagnostics view also offers a split view of the display. You have th
 ##### Procedure
 
 1. Double-click the "System diagnostics view" object in the "Tools" task card. The object is added to the screen.
-2. In the Inspector window, click "Properties > Properties > Layout".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Layout".
 3. Activate "Show split view".
 4. You may also change the number of lines for the "Device view" and the "Detail view" if required.
 
@@ -861,7 +861,7 @@ In the following, you will create three screens for displaying various objects.
 3. Open the shortcut menu of the screen and assign the name "Overview SysDiag".
 4. Create another screen named "Alarm".
 5. Open the "Libraries" task card.
-6. Open the global library "Buttons and Switches > Kopiervorlagen > DiagnosticsButtons > RTProfessional".
+6. Open the global library "Buttons and Switches &gt; Kopiervorlagen &gt; DiagnosticsButtons &gt; RTProfessional".
 7. Click the "DiagnosticScreen" object in the global library.
 8. Drag-and-drop the object into the "Screens" folder in the project tree.
 
@@ -903,10 +903,10 @@ The "Tools" task card is open.
 2. Drag-and-drop an "Alarm view" from the "Tools" task card into the screen.
 3. Open the screen "Overview SysDiag".
 4. Drag-and-drop a "Screen window" from the "Tools" task card into the screen.
-5. Enter the name "Alarm" under "Properties > Properties > Miscellaneous > Name" in the Inspector window.
-6. Select the "Alarm" screen under "Properties > Properties > General > Content > Displayed screen".
+5. Enter the name "Alarm" under "Properties &gt; Properties &gt; Miscellaneous &gt; Name" in the Inspector window.
+6. Select the "Alarm" screen under "Properties &gt; Properties &gt; General &gt; Content &gt; Displayed screen".
 7. Create a second screen window named "SysDiag".
-8. Select the "SystemDiagnostics" screen under "Properties > Properties > General > Content > Displayed screen".
+8. Select the "SystemDiagnostics" screen under "Properties &gt; Properties &gt; General &gt; Content &gt; Displayed screen".
 
 ##### Result
 
@@ -935,7 +935,7 @@ If an error occurs, the appearance of the object changes. The library object can
 ##### Requirement
 
 - The "Libraries" task card is opened.
-- The global library "Buttons and Switches > Master copies > DiagnosticsButtons > RT Professional" is open.
+- The global library "Buttons and Switches &gt; Master copies &gt; DiagnosticsButtons &gt; RT Professional" is open.
 - The following three screens have been created:
 
   - Overview SysDiag
@@ -950,7 +950,7 @@ If an error occurs, the appearance of the object changes. The library object can
 
    The library object is inserted.
 3. Select the library object.
-4. Click "Properties > Events" in the Inspector window.
+4. Click "Properties &gt; Events" in the Inspector window.
 
    Three system functions are preset for the "Click" event.
 
@@ -977,7 +977,7 @@ The system diagnostics indicator changes its appearance if an error message is o
 ##### Requirements
 
 - The "Libraries" task card is opened.
-- The global library "Buttons and Switches > Master copies > DiagnosticsButtons > RT Professional" is open.
+- The global library "Buttons and Switches &gt; Master copies &gt; DiagnosticsButtons &gt; RT Professional" is open.
 - The following three screens have been created:
 
   - Overview SysDiag
@@ -989,11 +989,11 @@ The system diagnostics indicator changes its appearance if an error message is o
 ##### Configuring a Goto button in the screen
 
 1. Open the screen "SystemDiagnostic".
-2. Open the global library "Buttons and Switches > Master copies > DiagnosticsButtons".
+2. Open the global library "Buttons and Switches &gt; Master copies &gt; DiagnosticsButtons".
 3. Select the "DiagnosticsGoto" object in the library.
 4. Drag the library object to the screen "Overview SysDiag". The library object is inserted.
 5. Select the library object.
-6. Click "Properties > Events" in the Inspector window.
+6. Click "Properties &gt; Events" in the Inspector window.
 
    Three system functions are preset for the event.
 

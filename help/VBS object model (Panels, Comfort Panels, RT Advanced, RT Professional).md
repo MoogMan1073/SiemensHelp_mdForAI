@@ -50,7 +50,7 @@ Methods which are applied to individual objects can be used to read out tag valu
 
 You can find additional information on the VBS object model in the FAQ with entry ID "53752382" in the SIMATIC Customer Online Support:
 
-<https://support.industry.siemens.com/cs/ww/en/view/53752382>
+[https://support.industry.siemens.com/cs/ww/en/view/53752382](https://support.industry.siemens.com/cs/ww/en/view/53752382)
 
 ## Objects (Panels, Comfort Panels, RT Advanced)
 
@@ -370,7 +370,7 @@ HMIRuntime.Trace strAirPressure
 >
 > `TypeName(SmartTags("FillLevel").value)`
 
-To access the value of an array element, use "SmartTags("<Tag>[Index]")". Set the number of the desired array element for "index", for example, "SmartTags("AirPressure[2]")".
+To access the value of an array element, use "SmartTags("&lt;Tag&gt;[Index]")". Set the number of the desired array element for "index", for example, "SmartTags("AirPressure[2]")".
 
 ## Objects (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -470,7 +470,7 @@ In the following example, log segments from the alarm log are swapped in and the
 
 'VBS187
 
-HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.AlarmLogs.Restore("D:\Folder","2004-09-14","2004-09-20",-1) & vbNewLine
+HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.AlarmLogs.Restore("D:\Folder","2004-09-14","2004-09-20",-1) &amp; vbNewLine
 
 ### DataItem (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -492,7 +492,7 @@ The example shows how the value of 'Motor1' is output as a trace.
 
 'VBS163
 
-HMIRuntime.Trace "motor1: " & HMIRuntime.DataSet("motor1").Value & vbNewLine
+HMIRuntime.Trace "motor1: " &amp; HMIRuntime.DataSet("motor1").Value &amp; vbNewLine
 
 The following example enumerates all DataItem objects of the DataSet list. Name and value are output as a trace.
 
@@ -502,7 +502,7 @@ Dim data
 
 For Each data In HMIRuntime.DataSet
 
-HMIRuntime.Trace data.Name & ": " & data.Value & vbNewLine
+HMIRuntime.Trace data.Name &amp; ": " &amp; data.Value &amp; vbNewLine
 
 Next
 
@@ -537,7 +537,7 @@ In the following example, log segments from the Fast data log are swapped in and
 
 'VBS188
 
-HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.DataLogs.Restore("D:\Folder","2004-09-14","2004-09-20",-1,1) & vbNewLine
+HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.DataLogs.Restore("D:\Folder","2004-09-14","2004-09-20",-1,1) &amp; vbNewLine
 
 ### DataSet (list) (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -618,7 +618,7 @@ The example shows how a value can be entered in the list, read and removed from 
 
 HMIRuntime.DataSet.Add "motor1", 23
 
-HMIRuntime.Trace "motor1: " & HMIRuntime.DataSet("motor1").Value & vbNewLine
+HMIRuntime.Trace "motor1: " &amp; HMIRuntime.DataSet("motor1").Value &amp; vbNewLine
 
 HMIRuntime.DataSet.Remove("motor1")
 
@@ -786,7 +786,7 @@ In the following example, log segments from the alarm log and data log are swapp
 
 'VBS189
 
-HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.Restore("D:\Folder","2004-09-14","2004-09-20",-1) & vbNewLine
+HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.Restore("D:\Folder","2004-09-14","2004-09-20",-1) &amp; vbNewLine
 
 ### Project (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -811,9 +811,9 @@ The following example returns name and path of the current Runtime project as a 
 
 'VBS159
 
-HMIRuntime.Trace "Name: " & HMIRuntime.ActiveProject.Name & vbNewLine
+HMIRuntime.Trace "Name: " &amp; HMIRuntime.ActiveProject.Name &amp; vbNewLine
 
-HMIRuntime.Trace "Path: " & HMIRuntime.ActiveProject.Path & vbNewLine
+HMIRuntime.Trace "Path: " &amp; HMIRuntime.ActiveProject.Path &amp; vbNewLine
 
 ### Screen (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -869,11 +869,11 @@ Dim objScreen
 
 Set objScreen = HMIRuntime.Screens(1)
 
-MsgBox "Screen width before changing: " & objScreen.Width
+MsgBox "Screen width before changing: " &amp; objScreen.Width
 
 objScreen.Width = objScreen.Width + 20
 
-MsgBox "Screen width after changing: " & objScreen.Width
+MsgBox "Screen width after changing: " &amp; objScreen.Width
 
 #### Notes on Cross References
 
@@ -1061,11 +1061,11 @@ End Sub
 
 Several screens can be opened simultaeously in WinCC Runtime by means of the screen window technique, whereby there is only one main screen. The "Screens" list allows access to all open screens in Runtime using the screen name. The screen list contains all hidden screens.
 
-The access key required in the VBS environment in the HMIRuntime.Screens(<access key>) instruction must conform to the following syntax description:
+The access key required in the VBS environment in the HMIRuntime.Screens(&lt;access key&gt;) instruction must conform to the following syntax description:
 
-[<Root screen name>.]<Screen window name>[:<Screen name>] ...
+[&lt;Root screen name&gt;.]&lt;Screen window name&gt;[:&lt;Screen name&gt;] ...
 
-.<Screen window name>[:<Screen name>]
+.&lt;Screen window name&gt;[:&lt;Screen name&gt;]
 
 - The access key represents the screen hierarchy.
 - You can omit the screen name at all locations in the key.
@@ -1154,7 +1154,7 @@ HMIRuntime.Trace strAirPressure
 >
 > `TypeName(SmartTags("FillLevel").value)`
 
-To access the value of an array element, use "SmartTags("<Tag>[Index]")". Set the number of the desired array element for "index", for example, "SmartTags("AirPressure[2]")".
+To access the value of an array element, use "SmartTags("&lt;Tag&gt;[Index]")". Set the number of the desired array element for "index", for example, "SmartTags("AirPressure[2]")".
 
 ### SmartTags (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -1255,7 +1255,7 @@ When creating a tag object, all the properties are initialized with the followin
 
   > **Note**
   >
-  > A summary of possible Quality Codes can be found in WinCC Information System under key word "Communication" > "Diagnostics" or "Communication" > "Quality Codes".
+  > A summary of possible Quality Codes can be found in WinCC Information System under key word "Communication" &gt; "Diagnostics" or "Communication" &gt; "Quality Codes".
 
 #### Usage
 
@@ -4209,7 +4209,7 @@ Properties
 | [DataFormat](#dataformat-panels-comfort-panels-rt-advanced-rt-professional) | RW | - | - | Specifies the display format of an I/O field. |
 | DeviceStyle | - | - | - | - |
 | [EdgeStyle](#edgestyle-panels-comfort-panels-rt-advanced-rt-professional) | RW | RW | RW | Specifies the line style of the selected object. |
-| [EditOnFocus](#editonfocus-panels-comfort-panels-rt-advanced-rt-professional) | RW | - | - | Specifies whether data input is immediately possible if the input field is selected using the <Tab> key. |
+| [EditOnFocus](#editonfocus-panels-comfort-panels-rt-advanced-rt-professional) | RW | - | - | Specifies whether data input is immediately possible if the input field is selected using the &lt;Tab&gt; key. |
 | [Enabled](#enabled-panels-comfort-panels-rt-advanced-rt-professional) | RW | RW | RW | Specifies whether the selected object can be operated in runtime. |
 | FieldLength | - | - | - | - |
 | [FillPatternColor](#fillpatterncolor-panels-comfort-panels-rt-advanced-rt-professional) | RW | - | - | Specifies the color of the fill pattern for the selected object. |
@@ -8990,13 +8990,13 @@ If not objActiveScreen is nothing then
 
 'found an active screen
 
-HmiRuntime.Trace("There is an active screen." & vbCrLf)
+HmiRuntime.Trace("There is an active screen." &amp; vbCrLf)
 
 Else
 
 'found NO active screen
 
-HmiRuntime.Trace("There is NO active screen." & vbCrLf)
+HmiRuntime.Trace("There is NO active screen." &amp; vbCrLf)
 
 End If
 
@@ -9036,13 +9036,13 @@ If Not objActiveScreen Is Nothing Then
 
 'found an active screen
 
-HmiRuntime.Trace("There is an active screen." & vbCrLf)
+HmiRuntime.Trace("There is an active screen." &amp; vbCrLf)
 
 Else
 
 'found NO active screen
 
-HmiRuntime.Trace("There is NO active screen." & vbCrLf)
+HmiRuntime.Trace("There is NO active screen." &amp; vbCrLf)
 
 End If
 
@@ -17331,7 +17331,7 @@ The objects "TextField" and "IOField" support only the line styles:
 
 ##### Description
 
-Specifies whether the data input is immediately possible if the input field is selected using the <Tab> key.
+Specifies whether the data input is immediately possible if the input field is selected using the &lt;Tab&gt; key.
 
 Access in runtime: Read and write
 
@@ -17348,7 +17348,7 @@ Required. A "ScreenItem" object with the following format:
 
 **BOOLEAN**
 
-Optional TRUE, if the data input is immediately possible and the input field has been selected using the <Tab> key.
+Optional TRUE, if the data input is immediately possible and the input field has been selected using the &lt;Tab&gt; key.
 
 ---
 
@@ -17872,11 +17872,11 @@ group.Add "Motor1"
 
 group.Add "Motor2"
 
-HMIRuntime.Trace "ErrorDescription: " & group.ErrorDescription & vbNewLine
+HMIRuntime.Trace "ErrorDescription: " &amp; group.ErrorDescription &amp; vbNewLine
 
 The ErrorDescription property of a tag contained in the list may be accessed as follows:
 
-HMIRuntime.Trace "ErrorDescription: " & group("Motor1").ErrorDescription & vbNewLine
+HMIRuntime.Trace "ErrorDescription: " &amp; group("Motor1").ErrorDescription &amp; vbNewLine
 
 #### Errorflag (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -22597,11 +22597,11 @@ group.Add "Motor1"
 
 group.Add "Motor2"
 
-HMIRuntime.Trace "LastError: " & group.LastError & vbNewLine
+HMIRuntime.Trace "LastError: " &amp; group.LastError &amp; vbNewLine
 
 The LastError property of a tag contained in the list may be accessed as follows:
 
-HMIRuntime.Trace "LastError: " & group("Motor1").LastError & vbNewLine
+HMIRuntime.Trace "LastError: " &amp; group("Motor1").LastError &amp; vbNewLine
 
 #### Layer (RT Professional)
 
@@ -22742,7 +22742,7 @@ strName = objScreen.ScreenItems.Item(lngIndex).ObjectName
 
 Set objScrItem = objScreen.ScreenItems(strName)
 
-lngAnswer = MsgBox(strName & " is in layer  " & objScrItem.Layer,vbOKCancel)
+lngAnswer = MsgBox(strName &amp; " is in layer  " &amp; objScrItem.Layer,vbOKCancel)
 
 If vbCancel = lngAnswer Then Exit For
 
@@ -22874,7 +22874,7 @@ Dim objScreen
 
 Set objScreen = HMIRuntime.Screens("NewPDL1")
 
-HMIRuntime.Trace "Enable: " & objScreen.LayerDeclutteringEnable & vbNewLine
+HMIRuntime.Trace "Enable: " &amp; objScreen.LayerDeclutteringEnable &amp; vbNewLine
 
 #### Layers (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -25702,7 +25702,7 @@ Optional. A value or a constant that specifies the mode for the behavior of a te
 ##### Description
 
 Returns the number of the monitor whose contents are shown in the screen window.   
-The monitor number refers to the number of monitors set in Microsoft Windows: "Control Panel > Display > Settings > Display"
+The monitor number refers to the number of monitors set in Microsoft Windows: "Control Panel &gt; Display &gt; Settings &gt; Display"
 
 Access in runtime: Read and write
 
@@ -25901,7 +25901,7 @@ Dependent on the specified object, the following object names will be returned:
   >
   > Use the "Name" property to address a tag in the Tags" list. Tag names are structured in WinCC according to the following scheme:
   >
-  > <Tag prefix><Name of tag>
+  > &lt;Tag prefix&gt;&lt;Name of tag&gt;
   >
   > If you only specify the tag name, the tag prefix is applied from the screen window shortcut.
 
@@ -25911,7 +25911,7 @@ The following example returns the name of the current Runtime project as Trace:
 
 'VBS160
 
-HMIRuntime.Trace "Name: " & HMIRuntime.ActiveProject.Name & vbNewLine
+HMIRuntime.Trace "Name: " &amp; HMIRuntime.ActiveProject.Name &amp; vbNewLine
 
 #### NameColumnWidth (RT Advanced)
 
@@ -26370,11 +26370,11 @@ Dim objScreen
 
 Set objScreen = HMIRuntime.Screens("NewPDL1")
 
-HMIRuntime.Trace "Min: " & objScreen.ObjectSizeDeclutteringMin & vbNewLine
+HMIRuntime.Trace "Min: " &amp; objScreen.ObjectSizeDeclutteringMin &amp; vbNewLine
 
-HMIRuntime.Trace "Max: " & objScreen.ObjectSizeDeclutteringMax & vbNewLine
+HMIRuntime.Trace "Max: " &amp; objScreen.ObjectSizeDeclutteringMax &amp; vbNewLine
 
-HMIRuntime.Trace "Enable: " & objScreen.LayerDeclutteringEnable & vbNewLine
+HMIRuntime.Trace "Enable: " &amp; objScreen.LayerDeclutteringEnable &amp; vbNewLine
 
 #### ObjectSizeDeclutteringMax (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -26402,11 +26402,11 @@ Dim objScreen
 
 Set objScreen = HMIRuntime.Screens("NewPDL1")
 
-HMIRuntime.Trace "Min: " & objScreen.ObjectSizeDeclutteringMin & vbNewLine
+HMIRuntime.Trace "Min: " &amp; objScreen.ObjectSizeDeclutteringMin &amp; vbNewLine
 
-HMIRuntime.Trace "Max: " & objScreen.ObjectSizeDeclutteringMax & vbNewLine
+HMIRuntime.Trace "Max: " &amp; objScreen.ObjectSizeDeclutteringMax &amp; vbNewLine
 
-HMIRuntime.Trace "Enable: " & objScreen.LayerDeclutteringEnable & vbNewLine
+HMIRuntime.Trace "Enable: " &amp; objScreen.LayerDeclutteringEnable &amp; vbNewLine
 
 #### ObjectSizeDeclutteringMin (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -26434,11 +26434,11 @@ Dim objScreen
 
 Set objScreen = HMIRuntime.Screens("NewPDL1")
 
-HMIRuntime.Trace "Min: " & objScreen.ObjectSizeDeclutteringMin & vbNewLine
+HMIRuntime.Trace "Min: " &amp; objScreen.ObjectSizeDeclutteringMin &amp; vbNewLine
 
-HMIRuntime.Trace "Max: " & objScreen.ObjectSizeDeclutteringMax & vbNewLine
+HMIRuntime.Trace "Max: " &amp; objScreen.ObjectSizeDeclutteringMax &amp; vbNewLine
 
-HMIRuntime.Trace "Enable: " & objScreen.LayerDeclutteringEnable & vbNewLine
+HMIRuntime.Trace "Enable: " &amp; objScreen.LayerDeclutteringEnable &amp; vbNewLine
 
 #### OcxGuid (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -27512,7 +27512,7 @@ The following example returns the project path as Trace:
 
 'VBS161
 
-HMIRuntime.Trace "Path: " & HMIRuntime.ActiveProject.Path & vbNewLine
+HMIRuntime.Trace "Path: " &amp; HMIRuntime.ActiveProject.Path &amp; vbNewLine
 
 ---
 
@@ -30846,7 +30846,7 @@ Optional. A value or a constant that specifies the servers of a distributed syst
 
 Specifies the server on which the screen is located that is displayed in the screen window in runtime or returns the server name.
 
-Enter the server name followed by two colons: "<Server name>::". There is no check whether the server actually exists.
+Enter the server name followed by two colons: "&lt;Server name&gt;::". There is no check whether the server actually exists.
 
 Access in Runtime: Read and write
 
@@ -32795,7 +32795,7 @@ Optional. A value or a constant that specifies the status bar element to be edit
 
 References a status bar element with its element ID. To access the properties of a status bar element, you need to set ""StatusbarElementID"".
 
-The referencing of an element with its element ID does not depend on the actual order of the elements. The element ID are listed in the inspector window of the object under "Properties > Properties > Status bar > Status bar - Elements".
+The referencing of an element with its element ID does not depend on the actual order of the elements. The element ID are listed in the inspector window of the object under "Properties &gt; Properties &gt; Status bar &gt; Status bar - Elements".
 
 Access in runtime Read and write
 
@@ -38184,7 +38184,7 @@ No access in runtime.
 
 ##### Description
 
-Specifies the hot key for the selected object button. Enter the hot key in ASCII coding, e.g. "112" for the <F1> key.
+Specifies the hot key for the selected object button. Enter the hot key in ASCII coding, e.g. "112" for the &lt;F1&gt; key.
 
 Also set "[ToolbarUseHotKeys](#toolbarusehotkeys-panels-comfort-panels-rt-advanced-rt-professional)" to "TRUE".
 
@@ -38227,7 +38227,7 @@ Optional. A value or a constant that specifies the shortcut for the selected but
 
 References a button with its ID. To access the properties of a status bar element, you need to set ""ToolbarButtonID"".
 
-The referencing of a button with its ID does not depend on the actual order of the buttons. The ID are listed in the inspector window of the object under "Properties > Properties > Toolbar > Toolbar - Buttons".
+The referencing of a button with its ID does not depend on the actual order of the buttons. The ID are listed in the inspector window of the object under "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - Buttons".
 
 Access in runtime Read and write
 
@@ -38612,7 +38612,7 @@ Access in runtime Read and write
 
 ##### Syntax
 
-Object.**ToolbarButtonVisible**[=<BOOLEAN>]
+Object.**ToolbarButtonVisible**[=&lt;BOOLEAN&gt;]
 
 **Object**
 
@@ -43054,9 +43054,9 @@ Required. An object of the type "ScreenItem" with the following format:
 
 Optional.
 
-TRUE if the name configured under "Properties > Properties > Trends > Name" is used.
+TRUE if the name configured under "Properties &gt; Properties &gt; Trends &gt; Name" is used.
 
-FALSE if the name configured under "Properties > Properties > Trends > Label" is used.
+FALSE if the name configured under "Properties &gt; Properties &gt; Trends &gt; Label" is used.
 
 ---
 
@@ -43350,11 +43350,11 @@ The example shows how to add a value to a list of tags and output it as a trace.
 
 HMIRuntime.DataSet.Add "motor1", 23
 
-HMIRuntime.Trace "motor1: " & HMIRuntime.DataSet("motor1").Value & vbNewLine
+HMIRuntime.Trace "motor1: " &amp; HMIRuntime.DataSet("motor1").Value &amp; vbNewLine
 
 HMIRuntime.DataSet("motor1").Value = 55
 
-HMIRuntime.Trace "motor1: " & HMIRuntime.DataSet("motor1").Value & vbNewLine
+HMIRuntime.Trace "motor1: " &amp; HMIRuntime.DataSet("motor1").Value &amp; vbNewLine
 
 HMIRuntime.DataSet.Remove("motor1")
 
@@ -48484,17 +48484,17 @@ Set ctrl = ScreenItems("RecipeControl")
 
 Set coll = ctrl.GetColumnCollection
 
-HMIRuntime.Trace "Number of fields:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of fields:" &amp; coll.Count &amp; vbCrLf
 
 For Each field In coll
 
-HMIRuntime.Trace field.Name & vbCrLf
+HMIRuntime.Trace field.Name &amp; vbCrLf
 
-HMIRuntime.Trace field.Type & vbCrLf
+HMIRuntime.Trace field.Type &amp; vbCrLf
 
-HMIRuntime.Trace field.Length & vbCrLf
+HMIRuntime.Trace field.Length &amp; vbCrLf
 
-HMIRuntime.Trace field.Caption & vbCrLf
+HMIRuntime.Trace field.Caption &amp; vbCrLf
 
 Next
 
@@ -48548,17 +48548,17 @@ Set ctrl = ScreenItems("AlarmControl")
 
 Set coll = ctrl.GetHitlistColumnCollection
 
-HMIRuntime.Trace "Number of hitlist columns:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of hitlist columns:" &amp; coll.Count &amp; vbCrLf
 
 For Each hitlistcol In coll
 
-HMIRuntime.Trace hitlistcol.Index & vbCrLf
+HMIRuntime.Trace hitlistcol.Index &amp; vbCrLf
 
-HMIRuntime.Trace hitlistcol.Name & vbCrLf
+HMIRuntime.Trace hitlistcol.Name &amp; vbCrLf
 
-HMIRuntime.Trace hitlistcol.Sort & vbCrLf
+HMIRuntime.Trace hitlistcol.Sort &amp; vbCrLf
 
-HMIRuntime.Trace hitlistcol.SortIndex & vbCrLf
+HMIRuntime.Trace hitlistcol.SortIndex &amp; vbCrLf
 
 Next
 
@@ -48844,17 +48844,17 @@ Set ctrl = ScreenItems("AlarmControl")
 
 Set coll = ctrl.GetMessageColumnCollection
 
-HMIRuntime.Trace "Number of message columns:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of message columns:" &amp; coll.Count &amp; vbCrLf
 
 For Each msgcol In coll
 
-HMIRuntime.Trace msgcol.Index & vbCrLf
+HMIRuntime.Trace msgcol.Index &amp; vbCrLf
 
-HMIRuntime.Trace msgcol.Name & vbCrLf
+HMIRuntime.Trace msgcol.Name &amp; vbCrLf
 
-HMIRuntime.Trace msgcol.Sort & vbCrLf
+HMIRuntime.Trace msgcol.Sort &amp; vbCrLf
 
-HMIRuntime.Trace msgcol.SortIndex & vbCrLf
+HMIRuntime.Trace msgcol.SortIndex &amp; vbCrLf
 
 Next
 
@@ -48964,13 +48964,13 @@ Set coll = ctrl.GetOperatorMessageCollection
 
 For Each opmsg In coll
 
-HMIRuntime.Trace opmsg.Index & vbCrLf
+HMIRuntime.Trace opmsg.Index &amp; vbCrLf
 
-HMIRuntime.Trace opmsg.Name & vbCrLf
+HMIRuntime.Trace opmsg.Name &amp; vbCrLf
 
-HMIRuntime.Trace opmsg.Number & vbCrLf
+HMIRuntime.Trace opmsg.Number &amp; vbCrLf
 
-HMIRuntime.Trace opmsg.Selected & vbCrLf
+HMIRuntime.Trace opmsg.Selected &amp; vbCrLf
 
 Next
 
@@ -49025,15 +49025,15 @@ Set coll = ctrl.GetRowCollection
 
 For lIndex = 1 To coll.Count
 
-HMIRuntime.trace "Row: " & (ctrl.GetRow(lIndex).RowNumber) & " "
+HMIRuntime.trace "Row: " &amp; (ctrl.GetRow(lIndex).RowNumber) &amp; " "
 
 'enumerate and trace out column titles and cell texts
 
 For lCellIndex = 1 To ctrl.GetRow(lIndex).CellCount
 
-HMIRuntime.trace ctrl.GetRow(0).CellText(lCellIndex) & " "
+HMIRuntime.trace ctrl.GetRow(0).CellText(lCellIndex) &amp; " "
 
-HMIRuntime.trace ctrl.GetRow(lIndex).CellText(lCellIndex) & " "
+HMIRuntime.trace ctrl.GetRow(lIndex).CellText(lCellIndex) &amp; " "
 
 Next
 
@@ -49100,21 +49100,21 @@ Set ctrl = ScreenItems("AlarmControl")
 
 Set coll = ctrl.GetRowCollection
 
-HMIRuntime.Trace "Number of message rows:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of message rows:" &amp; coll.Count &amp; vbCrLf
 
 'enumerate and trace out row numbers
 
 For lIndex = 1 To coll.Count
 
-HMIRuntime.Trace "Row: " & (ctrl.GetRow(lIndex).RowNumber) & " "
+HMIRuntime.Trace "Row: " &amp; (ctrl.GetRow(lIndex).RowNumber) &amp; " "
 
 'enumerate and trace out column titles and cell texts
 
 For lCellIndex = 1 To ctrl.GetRow(lIndex).CellCount
 
-HMIRuntime.Trace ctrl.GetMessageColumn(lCellIndex -1).Name & " "
+HMIRuntime.Trace ctrl.GetMessageColumn(lCellIndex -1).Name &amp; " "
 
-HMIRuntime.Trace ctrl.GetRow(lIndex).CellText(lCellIndex) & " "
+HMIRuntime.Trace ctrl.GetRow(lIndex).CellText(lCellIndex) &amp; " "
 
 Next
 
@@ -49344,17 +49344,17 @@ Set ctrl = ScreenItems("RulerControl")
 
 Set coll = ctrl.GetRulerColumnCollection
 
-HMIRuntime.Trace "Number of ruler columns:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of ruler columns:" &amp; coll.Count &amp; vbCrLf
 
 For Each rulercol In coll
 
-HMIRuntime.Trace rulercol.Index & vbCrLf
+HMIRuntime.Trace rulercol.Index &amp; vbCrLf
 
-HMIRuntime.Trace rulercol.Name & vbCrLf
+HMIRuntime.Trace rulercol.Name &amp; vbCrLf
 
-HMIRuntime.Trace rulercol.Sort & vbCrLf
+HMIRuntime.Trace rulercol.Sort &amp; vbCrLf
 
-HMIRuntime.Trace rulercol.SortIndex & vbCrLf
+HMIRuntime.Trace rulercol.SortIndex &amp; vbCrLf
 
 Next
 
@@ -49468,7 +49468,7 @@ lCellCount = headingRow.CellCount
 
 For lCellIndex = 1 To lCellCount
 
-HMIRuntime.trace headingRow.CellText(lCellIndex) & ": "
+HMIRuntime.trace headingRow.CellText(lCellIndex) &amp; ": "
 
 HMIRuntime.trace selectedRow.CellText(lCellIndex)
 
@@ -49546,13 +49546,13 @@ For lRowIndex = 1 To lRowCount
 
 Set selectedRow = selectedRows(lRowIndex)
 
-HMIRuntime.Trace "Row number: " & CStr(lRowIndex) & vbNewLine
+HMIRuntime.Trace "Row number: " &amp; CStr(lRowIndex) &amp; vbNewLine
 
 'enumerate and trace out column titles and cell texts
 
 For lCellIndex = 1 To lCellCount
 
-HMIRuntime.trace headingRow.CellText(lCellIndex) & ": "
+HMIRuntime.trace headingRow.CellText(lCellIndex) &amp; ": "
 
 HMIRuntime.trace selectedRow.CellText(lCellIndex)
 
@@ -49674,17 +49674,17 @@ Set ctrl = ScreenItems("RulerControl")
 
 Set coll = ctrl.GetStatisticAreaColumnCollection
 
-HMIRuntime.Trace "Number of statistic Area columns:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of statistic Area columns:" &amp; coll.Count &amp; vbCrLf
 
 For Each statcol In coll
 
-HMIRuntime.Trace statcol.Index & vbCrLf
+HMIRuntime.Trace statcol.Index &amp; vbCrLf
 
-HMIRuntime.Trace statcol.Name & vbCrLf
+HMIRuntime.Trace statcol.Name &amp; vbCrLf
 
-HMIRuntime.Trace statcol.Sort & vbCrLf
+HMIRuntime.Trace statcol.Sort &amp; vbCrLf
 
-HMIRuntime.Trace statcol.SortIndex & vbCrLf
+HMIRuntime.Trace statcol.SortIndex &amp; vbCrLf
 
 Next
 
@@ -49790,17 +49790,17 @@ Set ctrl = ScreenItems("RulerControl")
 
 Set coll = ctrl.GetStatisticResultColumnCollection
 
-HMIRuntime.Trace "Number of statistic result columns:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of statistic result columns:" &amp; coll.Count &amp; vbCrLf
 
 For Each statcol In coll
 
-HMIRuntime.Trace statcol.Index & vbCrLf
+HMIRuntime.Trace statcol.Index &amp; vbCrLf
 
-HMIRuntime.Trace statcol.Name & vbCrLf
+HMIRuntime.Trace statcol.Name &amp; vbCrLf
 
-HMIRuntime.Trace statcol.Sort & vbCrLf
+HMIRuntime.Trace statcol.Sort &amp; vbCrLf
 
-HMIRuntime.Trace statcol.SortIndex & vbCrLf
+HMIRuntime.Trace statcol.SortIndex &amp; vbCrLf
 
 Next
 
@@ -49912,15 +49912,15 @@ Set ctrl = ScreenItems.Item("Control1")
 
 Set coll = ctrl.GetStatusbarElementCollection
 
-HMIRuntime.Trace "Number of statusbar elements:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of statusbar elements:" &amp; coll.Count &amp; vbCrLf
 
 For Each statelement In coll
 
-HMIRuntime.Trace statelement.Name & vbCrLf
+HMIRuntime.Trace statelement.Name &amp; vbCrLf
 
-HMIRuntime.Trace statelement.Width & vbCrLf
+HMIRuntime.Trace statelement.Width &amp; vbCrLf
 
-HMIRuntime.Trace statelement.Text & vbCrLf
+HMIRuntime.Trace statelement.Text &amp; vbCrLf
 
 Next
 
@@ -50309,11 +50309,11 @@ Dim toolbu
 
 Set toolbu = ctrl.GetToolbarButton ("ShowHelp")
 
-HMIRuntime.Trace "Name: " & toolbu.Name & vbCrLf
+HMIRuntime.Trace "Name: " &amp; toolbu.Name &amp; vbCrLf
 
-HMIRuntime.Trace "Index: " & toolbu.Index & vbCrLf
+HMIRuntime.Trace "Index: " &amp; toolbu.Index &amp; vbCrLf
 
-HMIRuntime.Trace "Hotkey: " & toolbu.HotKey & vbCrLf
+HMIRuntime.Trace "Hotkey: " &amp; toolbu.HotKey &amp; vbCrLf
 
 > **Note**
 >
@@ -50377,15 +50377,15 @@ Set ctrl = ScreenItems( "Control1" )
 
 Set coll = ctrl.GetToolbarButtonCollection
 
-HMIRuntime.Trace "Number of toolbar buttons:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of toolbar buttons:" &amp; coll.Count &amp; vbCrLf
 
 For Each toolbu In coll
 
-HMIRuntime.Trace toolbu.Name & vbCrLf
+HMIRuntime.Trace toolbu.Name &amp; vbCrLf
 
-HMIRuntime.Trace "Hotkey: " & toolbu.HotKey & vbCrLf
+HMIRuntime.Trace "Hotkey: " &amp; toolbu.HotKey &amp; vbCrLf
 
-HMIRuntime.Trace "Authorization: " & toolbu.PasswordLevel & vbCrLf
+HMIRuntime.Trace "Authorization: " &amp; toolbu.PasswordLevel &amp; vbCrLf
 
 Next
 
@@ -51058,13 +51058,13 @@ objXAxis2.Label = "pressure"
 
 Set coll = ctrl.GetXAxisCollection
 
-HMIRuntime.Trace "Number of XAxis:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of XAxis:" &amp; coll.Count &amp; vbCrLf
 
 For Each axes In coll
 
-HMIRuntime.Trace axes.Name & vbCrLf
+HMIRuntime.Trace axes.Name &amp; vbCrLf
 
-HMIRuntime.Trace axes.Label & vbCrLf
+HMIRuntime.Trace axes.Label &amp; vbCrLf
 
 Next
 
@@ -51200,13 +51200,13 @@ objYAxis2.Label = "pressure"
 
 Set coll = ctrl.GetYAxisCollection
 
-HMIRuntime.Trace "Number of YAxis:" & coll.Count & vbCrLf
+HMIRuntime.Trace "Number of YAxis:" &amp; coll.Count &amp; vbCrLf
 
 For Each axes In coll
 
-HMIRuntime.Trace axes.Name & vbCrLf
+HMIRuntime.Trace axes.Name &amp; vbCrLf
 
-HMIRuntime.Trace axes.Label & vbCrLf
+HMIRuntime.Trace axes.Label &amp; vbCrLf
 
 Next
 
@@ -52155,9 +52155,9 @@ group.Add "Motor2"
 
 group.Read
 
-HMIRuntime.Trace "Motor1: " & group("Motor1").Value & vbNewLine
+HMIRuntime.Trace "Motor1: " &amp; group("Motor1").Value &amp; vbNewLine
 
-HMIRuntime.Trace "Motor2: " & group("Motor2").Value & vbNewLine
+HMIRuntime.Trace "Motor2: " &amp; group("Motor2").Value &amp; vbNewLine
 
 If the optional parameter "Readmode" is set to 1, the process tags are not registered but read directly from AS or channel.
 
@@ -52368,13 +52368,13 @@ In the following example, log segments within a certain time period that were sw
 
 'VBS182
 
-HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.Remove("2004-08-22","2004-09-22",-1) & vbNewLine
+HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.Remove("2004-08-22","2004-09-22",-1) &amp; vbNewLine
 
 In the following example, all log segments that were swapped-in (again) after the fact are removed and the return value is output as a trace.
 
 'VBS183
 
-HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.Remove("","",-1) & vbNewLine
+HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.Remove("","",-1) &amp; vbNewLine
 
 #### RemoveAll  (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -52448,9 +52448,9 @@ The connecting/copying of the logs generates a CPU load because the SQL server e
 
 If signature checking is activated, an error message is returned if an unsigned or modified log is to be swapped in. There is always only one error alarm returned, even if several errors occurred during a swap-in process. Additionally, a WinCC system alarm is generated for each log segment. An entry is added to the Windows event viewer in the "Application" section. This provides the opportunity to check which log segments are creating the error.
 
-- With an unsigned log, the return value "0x8004720F" is returned. The event viewer contains the entry "Validation of database <db_name> failed! No signature found!".   
+- With an unsigned log, the return value "0x8004720F" is returned. The event viewer contains the entry "Validation of database &lt;db_name&gt; failed! No signature found!".   
   The log is swapped in.
-- With a changed log, the return value "0x80047207" is returned. The event viewer contains the entry "Validation of database <db_name> failed!".   
+- With a changed log, the return value "0x80047207" is returned. The event viewer contains the entry "Validation of database &lt;db_name&gt; failed!".   
   The log is not swapped in.
 
   > **Note**
@@ -52528,19 +52528,19 @@ In the following example, all log segments since the start of the specified time
 
 'VBS184
 
-HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.Restore("D:\Folder","2004-09-14","",-1) & vbNewLine
+HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.Restore("D:\Folder","2004-09-14","",-1) &amp; vbNewLine
 
 In the following example, all Tag Logging Slow log segments in the specified time period are swapped in again, and the return value is output as a trace.
 
 'VBS185
 
-HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.DataLogs.Restore("D:\Folder","2004-09-14 12:30:05","2004-09-20 18:30",-1,2) & vbNewLine
+HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.DataLogs.Restore("D:\Folder","2004-09-14 12:30:05","2004-09-20 18:30",-1,2) &amp; vbNewLine
 
 In the following example, all Alarm Logging log segments up to the specified time period are swapped in again, and the return value is output as a trace.
 
 'VBS186
 
-HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.AlarmLogs.Remove("","2004-09-20",-1) & vbNewLine
+HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.AlarmLogs.Remove("","2004-09-20",-1) &amp; vbNewLine
 
 ### Methods S-Z (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -52737,7 +52737,7 @@ Dim objBrowser
 
 Set objBrowser= HMIRuntime.Screens("Screen_1").ScreenItems("HTML-Browser_1")
 
-objBrowser.SetHTML "<h1>This is a title</h1><p>This is a <b>bold</b> text.</p>"
+objBrowser.SetHTML "&lt;h1&gt;This is a title&lt;/h1&gt;&lt;p&gt;This is a &lt;b&gt;bold&lt;/b&gt; text.&lt;/p&gt;"
 
 ---
 

@@ -256,7 +256,7 @@ You have the following options:
   > **Giving focus to objects with a transparent background**
   >
   > If an object has a transparent background, click on a visible area of the object.
-- Press <Tab> until the object has the focus.
+- Press &lt;Tab&gt; until the object has the focus.
 
 #### Operating objects with transparent fill (RT Unified)
 
@@ -345,7 +345,7 @@ Double tap to switch from the magnified trend view back to the normal view.
 
 The zooming function is limited to the time axis in the "Trend view" object.
 
-If you have enabled the option "Range > Auto-size" during configuration of the value axes in f(x) trend view, the axes are constantly calculated during zooming.
+If you have enabled the option "Range &gt; Auto-size" during configuration of the value axes in f(x) trend view, the axes are constantly calculated during zooming.
 
 Horizontal scrolling is not supported in the "Trend view" object.
 
@@ -407,12 +407,12 @@ You can lock and unlock individual operator controls or several operator control
 
 1. Configure operator controls of the type I/O field, button or slider.
 2. Select the required operator control(s).
-3. To lock the operator controls, enable the "Require explicit unlock" option under "Properties > Properties > Security".
+3. To lock the operator controls, enable the "Require explicit unlock" option under "Properties &gt; Properties &gt; Security".
 
    ![Procedure](images/142829706507_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/142829706507_DV_resource.Stream@PNG-en-US.png)
-4. To unlock the operator controls, disable the "Require explicit unlock" option under "Properties > Properties > Security".
+4. To unlock the operator controls, disable the "Require explicit unlock" option under "Properties &gt; Properties &gt; Security".
 
 In runtime, locked operator controls can only be operated when a release button is pressed at the same time.
 
@@ -431,12 +431,12 @@ So that you can operate locked operator controls on multi-touch devices, configu
 ###### Procedure
 
 1. Select the screen.
-2. Select the desired button of the screen under "Properties > Security" under "Enable explicit unlock".
+2. Select the desired button of the screen under "Properties &gt; Security" under "Enable explicit unlock".
 
    ![Procedure](images/142819085195_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/142819085195_DV_resource.Stream@PNG-en-US.png)
-3. To turn a release button back into a normal button, select a different button or "None" under "Properties > Security" under "Enable explicit unlock".
+3. To turn a release button back into a normal button, select a different button or "None" under "Properties &gt; Security" under "Enable explicit unlock".
 
 ### Triggering an action (RT Unified)
 
@@ -482,8 +482,8 @@ Depending on the input format, you enter numeric or alphanumeric values in an in
 #### Entering a value
 
 1. Enter the desired value.
-2. To confirm the value and exit the field, press the <Enter> key.
-3. To discard the value and exit the field, press the <Esc> key.
+2. To confirm the value and exit the field, press the &lt;Enter&gt; key.
+3. To discard the value and exit the field, press the &lt;Esc&gt; key.
 
 #### Result
 
@@ -575,7 +575,7 @@ The following tables show the availability of the HTML5 functions in the web bro
 
 | Parsing rules | Available |
 | --- | --- |
-| <!DOCTYPE html> triggers the standard mode | Yes |
+| &lt;!DOCTYPE html&gt; triggers the standard mode | Yes |
 | HTML5 tokenizer | Yes |
 | HTML 5 tree building | Yes |
 | Parsing Inline SVG | Yes |

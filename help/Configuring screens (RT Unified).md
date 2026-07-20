@@ -180,7 +180,7 @@ The "Toolbox" task card contains objects in different palettes:
 - Graphics
 - Dynamic widgets
 
-You paste objects from the palettes into the screens by drag&drop or a double click. The objects available for selection are determined by the features of the HMI device you are configuring.
+You paste objects from the palettes into the screens by drag&amp;drop or a double click. The objects available for selection are determined by the features of the HMI device you are configuring.
 
 You can toggle between the following views in the "Toolbox" task card:
 
@@ -247,13 +247,13 @@ To zoom a screen from the zero point, select one of the following options:
   The screen is enlarged or reduced by 25% with each click.
 - Use the mouse:
 
-  - Press <Ctrl>. Move the mouse wheel up or down at the same time.
+  - Press &lt;Ctrl&gt;. Move the mouse wheel up or down at the same time.
 
     The screen is zoomed into or out of.
 - Use the keyboard:
 
-  - To zoom into the screen, press <Ctrl + Plus>.
-  - To zoom out of the screen, press <Ctrl + Minus>.
+  - To zoom into the screen, press &lt;Ctrl + Plus&gt;.
+  - To zoom out of the screen, press &lt;Ctrl + Minus&gt;.
 
 You zoom into the entire content of the screen. Open pop-up windows are not zoomed.
 
@@ -371,7 +371,7 @@ You can use one of the available styles or configure a specific background color
 
 To configure a background color of the screens, follow these steps:
 
-1. Under "Options > Settings > Visualization > Screens > Colors", deactivate the "Use background color from style (WinCC Unified)" option.
+1. Under "Options &gt; Settings &gt; Visualization &gt; Screens &gt; Colors", deactivate the "Use background color from style (WinCC Unified)" option.
 
    The option is deactivated by default.
 
@@ -410,7 +410,7 @@ You can specify predefined styles for Unified devices. Predefined styles are wri
 To specify a style, follow these steps:
 
 1. Click "Runtime settings" in the project tree.
-2. Select the desired style under "General > Screen":
+2. Select the desired style under "General &gt; Screen":
 
    - Bright style
    - Dark style
@@ -498,13 +498,13 @@ For more information, refer to the document [SIMATIC WinCC Unified Corporate Des
 
 To import a custom style, follow these steps:
 
-1. Create a directory "Styles" in the project folder under "</UserFiles/>".
-2. Place the ".cd19" file in the folder "<Project_Directory>/UserFiles/Styles/".
+1. Create a directory "Styles" in the project folder under "&lt;/UserFiles/&gt;".
+2. Place the ".cd19" file in the folder "&lt;Project_Directory&gt;/UserFiles/Styles/".
 3. Click "Runtime settings..." in the project tree.
-4. Click ![Importing custom styles](images/165797699211_DV_resource.Stream@PNG-de-DE.png) under "General > Screen > Selected style".
+4. Click ![Importing custom styles](images/165797699211_DV_resource.Stream@PNG-de-DE.png) under "General &gt; Screen &gt; Selected style".
 
    The "Styles" directory is searched for accessible corporate design files. All valid styles found are imported into the WinCC Unified device. If a new version of a corporate design that has already been imported exists, it is read in again.
-5. Open the selection box "General > Screen > Selected style" with the arrow.
+5. Open the selection box "General &gt; Screen &gt; Selected style" with the arrow.
 
    ![Importing custom styles](images/172604456715_DV_resource.Stream@PNG-en-US.png)
 
@@ -530,7 +530,7 @@ The default screen size is adjusted to the resolution of the device. You can cha
 To change the screen resolution, follow these steps:
 
 1. Open the runtime settings of the device.
-2. Select the screen resolution under "General > Screen > Screen resolution".
+2. Select the screen resolution under "General &gt; Screen &gt; Screen resolution".
 
 ![Configuring a fixed screen resolution](images/170934264971_DV_resource.Stream@PNG-en-US.png)
 
@@ -570,7 +570,7 @@ You can configure the zooming in runtime in the runtime settings of the device. 
 
 To zoom in runtime without holding down the Control key, follow these steps:
 
-1. Under "Runtime settings > General > Screen", activate the "Zoom without pressing the Ctrl button" option.
+1. Under "Runtime settings &gt; General &gt; Screen", activate the "Zoom without pressing the Ctrl button" option.
 
    The option is deactivated by default.
 
@@ -642,9 +642,9 @@ You can configure the zoom and scroll functions for the main screen window in Ru
 
 To configure the screen for zooming in runtime, follow these steps:
 
-1. Click "Screen management > Main screen window" in the project tree.
+1. Click "Screen management &gt; Main screen window" in the project tree.
 2. Select a screen as the main screen window.
-3. In the Inspector window of the main screen window, activate the "Zoom - allow" property under "Properties > Format".
+3. In the Inspector window of the main screen window, activate the "Zoom - allow" property under "Properties &gt; Format".
 
    The option is activated by default.
 
@@ -662,7 +662,7 @@ You can find more information in the section [Screen window](#screen-window-rt-u
 
 To configure the zooming, follow these steps:
 
-1. Select a zoom factor in the Inspector window under "Properties > Properties > Format > Zoom - factor".
+1. Select a zoom factor in the Inspector window under "Properties &gt; Properties &gt; Format &gt; Zoom - factor".
 2. Set the zoom factor to a number from 0.1 to 8.
 
    If you enter a number that is higher than that, the number is automatically lowered to 8.
@@ -671,10 +671,10 @@ To configure the zooming, follow these steps:
 
 To configure the scrolling, follow these steps:
 
-1. Select the position of the horizontal scroll bar in the Inspector window under "Properties > Format > Horizontal scroll bar - position".
-2. Select the visibility of the horizontal scroll bar under "Properties > Format > Horizontal scroll bar - visibility".
-3. Select the position of the vertical scroll bar under "Properties > Properties > Format > Vertical scroll bar - position".
-4. Select the visibility of the vertical scroll bar under "Properties > Format > Vertical scroll bar - visibility".
+1. Select the position of the horizontal scroll bar in the Inspector window under "Properties &gt; Format &gt; Horizontal scroll bar - position".
+2. Select the visibility of the horizontal scroll bar under "Properties &gt; Format &gt; Horizontal scroll bar - visibility".
+3. Select the position of the vertical scroll bar under "Properties &gt; Properties &gt; Format &gt; Vertical scroll bar - position".
+4. Select the visibility of the vertical scroll bar under "Properties &gt; Format &gt; Vertical scroll bar - visibility".
 
 ## Overview of screen objects (RT Unified)
 
@@ -743,15 +743,15 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 To define a text for the text box, follow these steps:
 
-1. In the Inspector window, click "Properties > Properties > General > Font".
+1. In the Inspector window, click "Properties &gt; Properties &gt; General &gt; Font".
 2. Select a font.
-3. In the Inspector window, click "Properties > Properties > General > Text" .
+3. In the Inspector window, click "Properties &gt; Properties &gt; General &gt; Text" .
 4. Enter a text.
 
 | Symbol | Meaning |
 | --- | --- |
 | ![Text](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for working efficiently** |
-| - Separate the words in the input window "Text" with <Shift+Return>. The words are displayed in individual rows in the text box. |  |
+| - Separate the words in the input window "Text" with &lt;Shift+Return&gt;. The words are displayed in individual rows in the text box. |  |
 
 ##### Direct text input
 
@@ -762,7 +762,7 @@ To change the text in the text box directly via the keyboard, follow these steps
 
 Note the following special information:
 
-- Diacritics, such as ä ê ñ, can only be entered if the keyboard layout provides a key for this character. Key sequences, e.g. <`a> for à, are not recognized.
+- Diacritics, such as ä ê ñ, can only be entered if the keyboard layout provides a key for this character. Key sequences, e.g. &lt;`a&gt; for à, are not recognized.
 - It is not possible to enter Unicode characters using Alt codes.
 - Asian language characters cannot be entered using an Input Method Editor (IME).
 
@@ -770,7 +770,7 @@ If you require such characters in the text, you have the following options:
 
 - Use a keyboard layout on which this character is present as a key.
 - Copy the character or the entire text from any source. Insert the text into the selected object.
-- Edit the text in the Inspector window under "Properties > Properties > General > Text".
+- Edit the text in the Inspector window under "Properties &gt; Properties &gt; General &gt; Text".
 
 ##### Editing text in runtime
 
@@ -778,7 +778,7 @@ The text that you have specified in the text box in the engineering system is re
 
 To edit the text in runtime, follow these steps:
 
-1. Click "Properties > Properties > Miscellaneous >Read-only" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Miscellaneous &gt;Read-only" in the Inspector window.
 2. Disable the option in the "Static value" column.
 
 You can edit the text specified in the engineering system in runtime.
@@ -787,7 +787,7 @@ You can edit the text specified in the engineering system in runtime.
 
 If there is a long text that is not fully displayed in the text field, specify ellipsis characters.
 
-1. In the Inspector window, click "Properties > Properties > Format > Text trimming".
+1. In the Inspector window, click "Properties &gt; Properties &gt; Format &gt; Text trimming".
 2. In the "Static value" column, select the option "With character ellipsis".
 
 The text displayed is truncated with ellipsis.
@@ -796,7 +796,7 @@ The text displayed is truncated with ellipsis.
 
 If there is a long text that is not fully displayed in the text field, activate line breaks. Determine if the text box is large enough for display with line breaks.
 
-1. In the Inspector window, click "Properties > Properties > Format > Text break".
+1. In the Inspector window, click "Properties &gt; Properties &gt; Format &gt; Text break".
 2. Select the option "Word wrap" in the "Static value" column.
 
 The text is displayed in full with line breaks.
@@ -806,9 +806,9 @@ The text is displayed in full with line breaks.
 To dynamize the text box with text list, follow these steps:
 
 1. Create a text box.
-2. Select a resource list in the "Dynamization" column in the Inspector window under "Properties > Properties > General > Text".
-3. Select an existing tag under "Resource list > Settings > Tag". Alternatively, create a new tag using the "Add" button.
-4. Select an existing text list under "Resource list > Settings > Resource list". Alternatively, add a new text list using the "Add" button.
+2. Select a resource list in the "Dynamization" column in the Inspector window under "Properties &gt; Properties &gt; General &gt; Text".
+3. Select an existing tag under "Resource list &gt; Settings &gt; Tag". Alternatively, create a new tag using the "Add" button.
+4. Select an existing text list under "Resource list &gt; Settings &gt; Resource list". Alternatively, add a new text list using the "Add" button.
 
 > **Note**
 >
@@ -856,7 +856,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 ##### Inserting graphics
 
-1. In the Inspector window, click "Properties > Properties > General > Graphic".
+1. In the Inspector window, click "Properties &gt; Properties &gt; General &gt; Graphic".
 2. In the "Static value" column, click the arrow in the text box. Graphics from the graphics collection are displayed in the preview. You have the following options for inserting a graphic:
 
    - Select a graphic from the graphics collection.
@@ -891,7 +891,7 @@ The following modes for scaling graphics are available:
 
 To select a mode for scaling the graphic, proceed as follows:
 
-1. Click "Format > Background graphic - scale" in the Inspector window.
+1. Click "Format &gt; Background graphic - scale" in the Inspector window.
 2. Select the desired mode in the "Static value" column.
 
 ##### Dynamizing a graphic view with graphic list
@@ -899,9 +899,9 @@ To select a mode for scaling the graphic, proceed as follows:
 To dynamize a graphic view with graphic list, follow these steps:
 
 1. Create a graphic view.
-2. Select a resource list in the "Dynamization" column in the Inspector window under "Properties > Properties > General > Graphic".
-3. Select an existing tag under "Resource list > Settings > Tag". Alternatively, create a new tag using the "Add" button.
-4. Select an existing graphic list under "Resource list > Settings > Resource list". Alternatively, add a new graphic list using the "Add" button.
+2. Select a resource list in the "Dynamization" column in the Inspector window under "Properties &gt; Properties &gt; General &gt; Graphic".
+3. Select an existing tag under "Resource list &gt; Settings &gt; Tag". Alternatively, create a new tag using the "Add" button.
+4. Select an existing graphic list under "Resource list &gt; Settings &gt; Resource list". Alternatively, add a new graphic list using the "Add" button.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -931,7 +931,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 ##### Dash type
 
-The layout of the line is specified under "Properties > Properties > Appearance > Line - Type" in the Inspector window. The line is shown without interruption if you select "Solid", for example.
+The layout of the line is specified under "Properties &gt; Properties &gt; Appearance &gt; Line - Type" in the Inspector window. The line is shown without interruption if you select "Solid", for example.
 
 > **Note**
 >
@@ -939,7 +939,7 @@ The layout of the line is specified under "Properties > Properties > Appearance 
 
 ##### Line start and line end
 
-The start and end points of the line are specified under "Properties > Properties > Appearance > Line - start / Line - end" in the Inspector window.
+The start and end points of the line are specified under "Properties &gt; Properties &gt; Appearance &gt; Line - start / Line - end" in the Inspector window.
 
 Use arrow points, for example, as the start and end points of the line. The available start and end points depend on the device.
 
@@ -961,7 +961,7 @@ The "Rectangle" is a closed object which you can fill with a color.
 
 In the Inspector window you can customize the settings for the position, geometry and color of the object. You can adapt the following properties in particular:
 
-- "Corner > Radius": Specifies the horizontal and vertical distance between the corner of the rectangle and the start point of a rounded corner.
+- "Corner &gt; Radius": Specifies the horizontal and vertical distance between the corner of the rectangle and the start point of a rounded corner.
 
 ##### Specifying the corners
 
@@ -969,7 +969,7 @@ The corners of the "Rectangle" object can be rounded to suit your requirements. 
 
 To define the layout of the corners, follow these steps:
 
-1. In the Inspector window, click "Properties > Properties > Appearance > Corners".
+1. In the Inspector window, click "Properties &gt; Properties &gt; Appearance &gt; Corners".
 2. Enter the radius for each corner.
 
 #### Circle (RT Unified)
@@ -992,7 +992,7 @@ The radius of the "Circle" object is specified in the Inspector window. The valu
 
 To specify the radius, follow these steps:
 
-1. In the Inspector window, click "Properties > Size and position > Radius".
+1. In the Inspector window, click "Properties &gt; Size and position &gt; Radius".
 2. Enter a value of between 0 and 2500.
 
 #### Ellipse (RT Unified)
@@ -1014,14 +1014,14 @@ In the Inspector window you customize the settings for the position, geometry, s
 
 The horizontal radius of the "Ellipse" object is specified in the Inspector window. The value is entered in pixels.
 
-1. Click "Properties > Size and position" in the Inspector window.
+1. Click "Properties &gt; Size and position" in the Inspector window.
 2. For "Radius X", enter a value between 0 and 2500.
 
 ##### Radius Y
 
 The vertical radius of the "Ellipse" object is specified in the Inspector window. The value is entered in pixels.
 
-1. Click "Properties > Size and position" in the Inspector window.
+1. Click "Properties &gt; Size and position" in the Inspector window.
 2. Enter a value between 0 and 2500 for "Radius Y".
 
 #### Polyline (RT Unified)
@@ -1047,7 +1047,7 @@ Define the start and end of the line in the "Properties" Inspector window. Use a
 
 The corner points are numbered in the order of their creation. You can change, delete, or add more corner points:
 
-1. In the Inspector window, click "Properties > Size and position > Points".
+1. In the Inspector window, click "Properties &gt; Size and position &gt; Points".
 2. Select the required corner point. Enter a value for "X coordinate" and "Y coordinate".
 3. Click on "Points" in the "Name" column to add or delete a corner point.
 
@@ -1081,7 +1081,7 @@ You configure the "Polyline" object so that it rotates about a reference point i
 
 Enter the values for rotation in degrees:
 
-1. In the Inspector window, click "Properties > Size and position".
+1. In the Inspector window, click "Properties &gt; Size and position".
 2. Enter the required values for the following attributes:
 
    - Pivot point
@@ -1115,7 +1115,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 The corner points are numbered in the order of their creation. You can change, delete, or add more corner points:
 
-1. In the Inspector window, click "Properties > Size and position > Points".
+1. In the Inspector window, click "Properties &gt; Size and position &gt; Points".
 2. Select the required corner point. Enter a value for "X coordinate" and "Y coordinate".
 3. Click on "Points" in the "Name" column to add or delete a corner point.
 
@@ -1139,7 +1139,7 @@ You configure the "Polygon" object so that the object rotates around a reference
 
 Enter the values for rotation in degrees.
 
-1. In the Inspection window, click "Properties > Size and position".
+1. In the Inspection window, click "Properties &gt; Size and position".
 2. Enter values for the following attributes in the "Rotation" area.
 
    - Pivot point
@@ -1178,14 +1178,14 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 You define the radius of the "Circular arc" object in the Inspector window. Enter the value in pixels.
 
-1. Click "Properties > Size and position" in the Inspector window.
+1. Click "Properties &gt; Size and position" in the Inspector window.
 2. Enter a value for "Radius".
 
 ##### Defining the start angle and angle range
 
 You set the length of the circular arc using the "Angle - start" and "Angle - range" attributes. Enter the values using Degrees as the unit.
 
-1. Click "Properties > Size and position" in the Inspector window.
+1. Click "Properties &gt; Size and position" in the Inspector window.
 2. Enter one value each for "Angle - start" and "Angle - range".
 
 #### Elliptical arc (RT Unified)
@@ -1210,7 +1210,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 Define the horizontal and vertical radius of the "Elliptical arc" object in the Inspector window. Enter the values using Pixels as the unit.
 
-1. Click "Properties > Size and position" in the Inspector window.
+1. Click "Properties &gt; Size and position" in the Inspector window.
 2. Enter one value each for "Radius X" and "Radius Y".
 
 ##### Defining the start angle and angle range
@@ -1241,14 +1241,14 @@ In the Inspector window, you customize the settings for the position, geometry, 
 
 You define the radius of the "Circle segment" object in the Inspector window. Enter the value using Pixels as the unit.
 
-1. Click "Properties > Size and position" in the Inspector window.
+1. Click "Properties &gt; Size and position" in the Inspector window.
 2. Enter a value for "Radius".
 
 ##### Defining the start angle and angle range
 
 Set the size of the circle segment using the "Angle - start" and "Angle - range" attributes. Enter the values using Degrees as the unit.
 
-1. Click "Properties > Size and position" in the Inspector window.
+1. Click "Properties &gt; Size and position" in the Inspector window.
 2. Enter one value each for "Angle - start" and "Angle - range".
 
 #### Ellipse segment (RT Unified)
@@ -1272,14 +1272,14 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 Define the horizontal and vertical radius of the "Ellipse segment" object in the Inspector window. Enter the values using Pixels as the unit:
 
-1. Click "Properties > Size and position" in the Inspector window.
+1. Click "Properties &gt; Size and position" in the Inspector window.
 2. Enter one value each for "Radius X" and "Radius Y".
 
 ##### Defining the start angle and angle range
 
 Set the size of the ellipse segment using the "Angle - start" and "Angle - range" attributes. Enter the values using Degrees as the unit.
 
-1. Click "Properties > Size and position" in the Inspector window.
+1. Click "Properties &gt; Size and position" in the Inspector window.
 2. Enter one value each for "Angle - start" and "Angle - range".
 
 #### Example: Configuring a rectangle (RT Unified)
@@ -1300,9 +1300,9 @@ You configure:
 Follow these steps to change the color of the rectangle:
 
 1. Select the rectangle.
-2. Define the background color under "Properties > Appearance > Background - color" in the Inspector window.
+2. Define the background color under "Properties &gt; Appearance &gt; Background - color" in the Inspector window.
 3. Select the "Solid" option under "Background - fill pattern".
-4. Define the border color under "Properties > Appearance > Border - color".
+4. Define the border color under "Properties &gt; Appearance &gt; Border - color".
 5. Enter the value "2" for "Border width".
 
 The rectangle is red and has a black border with a width of two pixels.
@@ -1312,8 +1312,8 @@ The rectangle is red and has a black border with a width of two pixels.
 Follow these steps to change the position and size of the rectangle:
 
 1. Select the rectangle.
-2. Enter the value "20" in each case under "Properties > Size and position > Position - left / Position - top".
-3. Enter the value "100" in each case under "Properties > Size and position > Size - width / Size - height".
+2. Enter the value "20" in each case under "Properties &gt; Size and position &gt; Position - left / Position - top".
+3. Enter the value "100" in each case under "Properties &gt; Size and position &gt; Size - width / Size - height".
 
 ##### Result
 
@@ -1362,7 +1362,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 ##### Mode
 
-You can define the behavior of the IO field in the Inspector window under "Properties > General > Mode".
+You can define the behavior of the IO field in the Inspector window under "Properties &gt; General &gt; Mode".
 
 | Mode | Description |
 | --- | --- |
@@ -1375,7 +1375,7 @@ If you have configured "Output" mode for an IO field, no input is possible. The 
 
 ##### Reaction to input
 
-To define the behavior of the object in runtime, you select one or more of the following options under "Properties > General > Miscellaneous > Reaction to input":
+To define the behavior of the object in runtime, you select one or more of the following options under "Properties &gt; General &gt; Miscellaneous &gt; Reaction to input":
 
 - "Clear last value on focus". The last value is cleared when the IO field is selected.
 - "Input on activate". The IO field changes automatically to input mode and allows an input to be made when the IO field is selected.
@@ -1433,7 +1433,7 @@ The "Read only" option is enabled by default.
 
 While an IO field is in input mode, no events are transmitted to the server for the IO field. This means that no events are triggered and no user code is executed.
 
-Exit input mode with <Enter> or <Esc> so that the events configured for the I/O field in engineering take effect again.
+Exit input mode with &lt;Enter&gt; or &lt;Esc&gt; so that the events configured for the I/O field in engineering take effect again.
 
 ---
 
@@ -1464,7 +1464,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 ##### Mode
 
-The response of the symbolic IO field is specified in the Inspector window in "Properties > Properties > Miscellaneous > Mode".
+The response of the symbolic IO field is specified in the Inspector window in "Properties &gt; Properties &gt; Miscellaneous &gt; Mode".
 
 | Mode | Description |
 | --- | --- |
@@ -1475,7 +1475,7 @@ The response of the symbolic IO field is specified in the Inspector window in "P
 
 To link a text list with the symbolic IO field, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > General > Resource list".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Resource list".
 2. Open the selection list for "Text list" in the "Static value" column.
 3. Select a text list.
 4. Open the "Text and graphic lists" editor in the project tree.
@@ -1492,7 +1492,7 @@ To link a text list with the symbolic IO field, follow these steps:
 
 To link a graphic list with the symbolic IO field, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > General > Resource list".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Resource list".
 2. Open the selection list for "Graphic list" in "Resource list".
 3. Select a graphic list.
 4. Open the "Text and graphic lists" editor in the project tree.
@@ -1509,11 +1509,11 @@ To link a graphic list with the symbolic IO field, follow these steps:
 
 To dynamize the symbolic IO field using a tag, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > General > Process value".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Process value".
 2. Select "Tag" in the "Dynamization" column. The "Tag" page will open.
 3. Select:
 
-   - Select an existing tag under "Tag > Process > Tag", or
+   - Select an existing tag under "Tag &gt; Process &gt; Tag", or
    - Create a new tag using the "Add" button.
 
 | Symbol | Meaning |
@@ -1542,13 +1542,13 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 You specify the number of entries in the Inspector window:
 
-1. In the Inspector window, select "Properties > General > Selection items".
+1. In the Inspector window, select "Properties &gt; General &gt; Selection items".
 2. Click on the selection button in the "Static value" column.
 
    A dialog opens.
 3. Specify the desired number of entries with "Add".
 
-   To delete entries, click in the corresponding line and press the <DEL> key or click ![Defining the number of entries](images/133294505739_DV_resource.Stream@PNG-de-DE.png).
+   To delete entries, click in the corresponding line and press the &lt;DEL&gt; key or click ![Defining the number of entries](images/133294505739_DV_resource.Stream@PNG-de-DE.png).
 4. To change the order of the entries, click in the corresponding line and move the entry using the icons ![Defining the number of entries](images/133295026059_DV_resource.Stream@PNG-de-DE.png).
 
 ##### Specifying the default value of the list entry
@@ -1601,7 +1601,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 In order to display the button as a rectangle or circle, follow these steps:
 
-1. Click "Properties > Appearance > Appearance - style item" in the Inspector window.
+1. Click "Properties &gt; Appearance &gt; Appearance - style item" in the Inspector window.
 2. To display the button as a rectangle, select the option "HmiButton" in the "Static value" column.
 
    To display the button as a circle, select the option "HmiRoundButton" in the "Static value" column.
@@ -1612,7 +1612,7 @@ In order to display the button as a rectangle or circle, follow these steps:
 
 ##### Defining the content
 
-You can specify how the button is displayed under "Properties > General > Content > Type" in the Inspector window.
+You can specify how the button is displayed under "Properties &gt; General &gt; Content &gt; Type" in the Inspector window.
 
 | Type | Description |
 | --- | --- |
@@ -1642,7 +1642,7 @@ The following modes for scaling graphics in buttons are available:
 
 To select a mode for scaling the graphic, proceed as follows:
 
-1. In the Inspector window, select "Properties > General > Content > Background graphic - scale".
+1. In the Inspector window, select "Properties &gt; General &gt; Content &gt; Background graphic - scale".
 2. Select the desired mode in the "Static value" column.
 
 | Symbol | Meaning |
@@ -1652,7 +1652,7 @@ To select a mode for scaling the graphic, proceed as follows:
 
 ##### Text / Graphic
 
-Depending on the "Content" property, define whether the display is static or dynamic. The display is defined under "Properties > General > Text" or "Graphic" in the Inspector window.
+Depending on the "Content" property, define whether the display is static or dynamic. The display is defined under "Properties &gt; General &gt; Text" or "Graphic" in the Inspector window.
 
 Your options for the type "Text" or "Graphic" include the following.
 
@@ -1670,7 +1670,7 @@ To change the labeling in the button directly via the keyboard, follow these ste
 
 Note the following special information:
 
-- Diacritics, such as ä ê ñ, can only be entered if the keyboard layout provides a key for this character. Key sequences such as <`a> for à, are not recognized.
+- Diacritics, such as ä ê ñ, can only be entered if the keyboard layout provides a key for this character. Key sequences such as &lt;`a&gt; for à, are not recognized.
 - It is not possible to enter Unicode characters using Alt codes.
 - Asian language characters cannot be entered using an Input Method Editor (IME).
 
@@ -1678,7 +1678,7 @@ If you need such characters in the label, you have the following options:
 
 - Use a keyboard layout on which this character is present as a key.
 - Copy the character or full label from any source. Insert the character into the selected object.
-- Edit the label in the Inspector window under "Properties > Properties > General > Text".
+- Edit the label in the Inspector window under "Properties &gt; Properties &gt; General &gt; Text".
 
 ##### Configuring a screen change
 
@@ -1734,7 +1734,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 ##### Type of representation
 
-You can specify how the switch is displayed under "Properties > General > Content > Type" in the Inspector window.
+You can specify how the switch is displayed under "Properties &gt; General &gt; Content &gt; Type" in the Inspector window.
 
 | Type | Description |
 | --- | --- |
@@ -1789,13 +1789,13 @@ When the object in the light or dark style does not meet the following dimension
 
 You can use the "Process value indicator - mode" property to select the process value of the selected tag in the bar in runtime:
 
-1. In the Inspector window, click "Properties > Miscellaneous > Process value indicator - mode".
+1. In the Inspector window, click "Properties &gt; Miscellaneous &gt; Process value indicator - mode".
 2. Select another "Indicator" mode in the "Static value" column.
 3. Go to "Process value indicator - foreground color" and select the display color for the process value.
 
 ##### Defining bar segments
 
-You can define the settings for the bar scale under "Properties > General > Scale":
+You can define the settings for the bar scale under "Properties &gt; General &gt; Scale":
 
 - "Scaling type": Specifies how the bar scale is calculated, for example "Linear".
 - "Alignment": Specifies whether the bar is displayed horizontally or vertically.
@@ -1808,7 +1808,7 @@ Use the "Division count" property to define the subdivision count for the bar sc
 
 The "Subdivision count" property defines the number of ticks between the division marks.
 
-1. In the Inspector window, click "Properties > General > Scale".
+1. In the Inspector window, click "Properties &gt; General &gt; Scale".
 2. Enter the required values for the "Division count" and "Subdivision count".
 
 **Note**
@@ -1850,21 +1850,21 @@ When the object in the light or dark style does not meet the following dimension
 
 The top and bottom end values of the scale are specified in the Inspector window.
 
-1. In the Inspector window, click "Properties > Properties > General > Scale".
+1. In the Inspector window, click "Properties &gt; Properties &gt; General &gt; Scale".
 2. Enter a number each at "Scale value - maximum" and "Scale value - minimum". If you select a tag as the end value of the scale, the number will no longer be available.
 
 ##### Show value
 
 Specify that the value of the current position is displayed below the slider in the Inspector window.
 
-1. Click "Properties > Miscellaneous" in the Inspector window.
+1. Click "Properties &gt; Miscellaneous" in the Inspector window.
 2. Select "Value - show".
 
 ##### Process value indicator - mode
 
 Specify a mode for the process value display:
 
-1. In the Inspector window, click "Properties > Miscellaneous > Process value indicator - mode".
+1. In the Inspector window, click "Properties &gt; Miscellaneous &gt; Process value indicator - mode".
 2. Select a mode in the "Static value" column.
 
 | Mode | Description |
@@ -1912,15 +1912,15 @@ When the object in the light or dark style is less than 180 pixels tall or wide 
 
 The "Peak indicator" property can be used to enable a marker function for the maximum or minimum pointer movement in runtime.
 
-1. Click "Properties > Miscellaneous > Peak indicator" in the Inspector window.
+1. Click "Properties &gt; Miscellaneous &gt; Peak indicator" in the Inspector window.
 2. Select the option "High" or "Low" in the "Static value" column.
 
 ##### Scale value - maximum and Scale value - minimum
 
 You can set the top and bottom end values of the scale in the Inspector window.
 
-1. In the Inspector window, click "Properties > General > Scale".
-2. Select a value under "Properties > General > Scala> Output format".
+1. In the Inspector window, click "Properties &gt; General &gt; Scale".
+2. Select a value under "Properties &gt; General &gt; Scala&gt; Output format".
 3. Enter a number each at "Scale value - maximum" and "Scale value - minimum".
 
    If you select a tag as the end value of the scale, the number will no longer be available.
@@ -1931,7 +1931,7 @@ You can set the top and bottom end values of the scale in the Inspector window.
 
 ##### Configuring a scale
 
-1. In the Inspector window, click "Properties > General > Scale".
+1. In the Inspector window, click "Properties &gt; General &gt; Scale".
 2. Under "Angle - start", specify the angle at which the scale is to start. The angle is specified in degrees, starting at the zero position.
 
    The scale runs clockwise. A start value of 0 corresponds to a display of 3 o'clock.
@@ -1964,7 +1964,7 @@ With the default setting, the "Clock" object displays the time of the client.
 
 To display the clock in analog or digital form, follow these steps:
 
-1. Click "Properties > Appearance > Appearance - style item" in the Inspector window.
+1. Click "Properties &gt; Appearance &gt; Appearance - style item" in the Inspector window.
 2. To display the clock in analog form, select the option "HmiClock" in the "Static value" column.
 
    To display the clock in digital form, select the option "HmiDigitalClock" in the "Static value" column.
@@ -1980,13 +1980,13 @@ To display the clock in analog or digital form, follow these steps:
 >
 >
 > 1. the bright or dark style under "Runtime settings".
-> 2. Set the "Size - width" or "Size - height" less than 100 pixels under "Properties > Size and position".
+> 2. Set the "Size - width" or "Size - height" less than 100 pixels under "Properties &gt; Size and position".
 
 ##### Configuring the clock face
 
 In the Inspector window, you can specify how the hour marks are displayed.
 
-1. In the Inspector window, click "Properties > General > Clock face - mode".
+1. In the Inspector window, click "Properties &gt; General &gt; Clock face - mode".
 2. Select "Ticks" to display hours as ticks.
 
    To show the hours numerically in the display, select "Numbers".
@@ -2032,13 +2032,13 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 You specify the number of entries in the Inspector window:
 
-1. In the Inspector window, select "Properties > General > Selection items".
+1. In the Inspector window, select "Properties &gt; General &gt; Selection items".
 2. Click on the selection button in the "Static value" column.
 
    A dialog opens.
 3. Specify the desired number of entries with "Add".
 
-   To delete entries, click in the corresponding line and press the <DEL> key or click ![Defining the number of entries](images/133294505739_DV_resource.Stream@PNG-de-DE.png).
+   To delete entries, click in the corresponding line and press the &lt;DEL&gt; key or click ![Defining the number of entries](images/133294505739_DV_resource.Stream@PNG-de-DE.png).
 4. To change the order of the entries, click in the corresponding line and move the entry using the icons ![Defining the number of entries](images/133295026059_DV_resource.Stream@PNG-de-DE.png).
 
 ##### Using graphics and texts in the selection items
@@ -2052,9 +2052,9 @@ You can mark the selection items with texts or graphics. The following modes are
 
 To configure the CheckBox contents, follow these steps:
 
-1. Under "Properties > Format > Content > Type" select the type for display of the selection items, e.g. "Graphic and text".
-2. Under "General > Selection items > [x] Selection item > Text", enter the text to be displayed in the check box as a selection item.
-3. Under "Selection items > [x] Selection item > Graphic", open the selection list.
+1. Under "Properties &gt; Format &gt; Content &gt; Type" select the type for display of the selection items, e.g. "Graphic and text".
+2. Under "General &gt; Selection items &gt; [x] Selection item &gt; Text", enter the text to be displayed in the check box as a selection item.
+3. Under "Selection items &gt; [x] Selection item &gt; Graphic", open the selection list.
 4. Select the appropriate graphic.
 
 ##### Specifying the default of the check box
@@ -2106,13 +2106,13 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 You specify the number of entries in the Inspector window:
 
-1. In the Inspector window, select "Properties > General > Selection items".
+1. In the Inspector window, select "Properties &gt; General &gt; Selection items".
 2. Click on the selection button in the "Static value" column.
 
    A dialog opens.
 3. Specify the desired number of entries with "Add".
 
-   To delete entries, click in the corresponding line and press the <DEL> key or click ![Defining the number of entries](images/133294505739_DV_resource.Stream@PNG-de-DE.png).
+   To delete entries, click in the corresponding line and press the &lt;DEL&gt; key or click ![Defining the number of entries](images/133294505739_DV_resource.Stream@PNG-de-DE.png).
 4. To change the order of the entries, click in the corresponding line and move the entry using the icons ![Defining the number of entries](images/133295026059_DV_resource.Stream@PNG-de-DE.png).
 
 ##### Using graphics and texts in the selection items
@@ -2126,9 +2126,9 @@ You can mark the selection items with texts or graphics. The following modes are
 
 To configure the contents in the radio button, follow these steps:
 
-1. Under "Properties > Content > Type", select the type for display of the selection items, e.g. "Graphic and text".
-2. Under "Selection items > [x] Selection item > Text" enter the text that is to be shown in the check box as the selection item.
-3. Under "Selection items > [x] Selection item > Graphic", open the selection list.
+1. Under "Properties &gt; Content &gt; Type", select the type for display of the selection items, e.g. "Graphic and text".
+2. Under "Selection items &gt; [x] Selection item &gt; Text" enter the text that is to be shown in the check box as the selection item.
+3. Under "Selection items &gt; [x] Selection item &gt; Graphic", open the selection list.
 4. Select the appropriate graphic.
 
 ##### Specifying the default value of the radio button
@@ -2137,7 +2137,7 @@ Use the "Select item" property of a selection item to specify which radio button
 
 You can only enable one item.
 
-Under "Properties > Selection items", activate the "Select item" property of the item to be activated by default.
+Under "Properties &gt; Selection items", activate the "Select item" property of the item to be activated by default.
 
 ##### Dynamizing a radio button
 
@@ -2182,7 +2182,7 @@ The "Touch Area" object distinguishes between the following gestures:
 
 To distinguish between the gestures, program a J-Script that evaluates the gesture.
 
-1. Click ![Defining gestures](images/130773202443_DV_resource.Stream@PNG-de-DE.png) in the Inspector window under "Properties > Events > Gesture detected".
+1. Click ![Defining gestures](images/130773202443_DV_resource.Stream@PNG-de-DE.png) in the Inspector window under "Properties &gt; Events &gt; Gesture detected".
 2. Copy the code example into the programming window.
 
 Code example
@@ -2282,23 +2282,23 @@ To configure an IO field, follow these steps:
 
 1. Open the "Elements" palette in the "Toolbox" task card.
 2. Drag the "IO field" object onto the screen.
-3. In the Inspector window, navigate to "Properties > Appearance > Background - color".
+3. In the Inspector window, navigate to "Properties &gt; Appearance &gt; Background - color".
 4. In the "Static value" column, select the blue color.
-5. Navigate to "Properties > Appearance > Border - color".
+5. Navigate to "Properties &gt; Appearance &gt; Border - color".
 6. In the "Static value" column, select the gray color.
-7. Select the "Input/output" mode under "Properties > General > Mode".
+7. Select the "Input/output" mode under "Properties &gt; General &gt; Mode".
 
 ###### Connecting the IO field to a tag
 
 To connect the IO field to a tag, follow these steps:
 
-1. In the Inspector window, click "Properties > General > Process value" in the "Dynamization" column.
+1. In the Inspector window, click "Properties &gt; General &gt; Process value" in the "Dynamization" column.
 2. Select the entry "Tag" from the list.
 
    The "Tag" dialog opens.
-3. Click on the selection button under "Tag > Process > Tag". A dialog opens.
+3. Click on the selection button under "Tag &gt; Process &gt; Tag". A dialog opens.
 4. Click the "Add" button to add "MyTag" tag. Click "OK".
-5. Go to "Properties > Miscellaneous > Reaction to input" and set how the values are to be handled in runtime, for example "Accept value after exit".
+5. Go to "Properties &gt; Miscellaneous &gt; Reaction to input" and set how the values are to be handled in runtime, for example "Accept value after exit".
 
 ###### Result
 
@@ -2329,9 +2329,9 @@ With two IO fields, you can display the current value of the tags in the screen.
 To configure the IO fields, follow these steps:
 
 1. Insert the "IO field" object from the "Toolbox" task card into the screen.
-2. Specify the height, width, and position for the object under "Properties > Size and position".
-3. Under "Properties > General > Mode" specify the "Input/output" mode in the "Static value" column.
-4. Click under "Properties > General > Process value". In the drop-down list of the "Dynamization" column, select the entry "Tag".
+2. Specify the height, width, and position for the object under "Properties &gt; Size and position".
+3. Under "Properties &gt; General &gt; Mode" specify the "Input/output" mode in the "Static value" column.
+4. Click under "Properties &gt; General &gt; Process value". In the drop-down list of the "Dynamization" column, select the entry "Tag".
 
    The "Tag" dialog opens.
 5. Under "Tag" specify the "SetValue" tag whose values you want to display and change in runtime.
@@ -2350,9 +2350,9 @@ You can use a slider to intervene in the process and change the displayed proces
 Follow these steps to configure the slider:
 
 1. Add the "Slider" object to the screen from the "Toolbox" task card.
-2. Specify the desired height, width and position for the object under "Properties > Size and position".
-3. Under "Properties > Miscellaneous > Process value indicator - mode", specify the "Detailed indicator" mode in the "Static value" column.
-4. Click under "Properties > General > Process value".
+2. Specify the desired height, width and position for the object under "Properties &gt; Size and position".
+3. Under "Properties &gt; Miscellaneous &gt; Process value indicator - mode", specify the "Detailed indicator" mode in the "Static value" column.
+4. Click under "Properties &gt; General &gt; Process value".
 5. In the drop-down list of the "Dynamization" column, select the entry "Tag".
 
    The "Tag" dialog opens on the right in the Inspector window.
@@ -2412,10 +2412,10 @@ You can operate the controls in runtime using the buttons in the toolbar. The in
 
 To configure the toolbar, follow these steps:
 
-1. In the Inspector window under "Properties > Miscellaneous > Toolbar", configure the general properties of the toolbar, such as background color or visibility.
-2. In the Inspector window, under "Properties > Properties > Miscellaneous > Toolbar > Elements > Button > Visibility", enable the buttons that you need in Runtime.
+1. In the Inspector window under "Properties &gt; Miscellaneous &gt; Toolbar", configure the general properties of the toolbar, such as background color or visibility.
+2. In the Inspector window, under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements &gt; Button &gt; Visibility", enable the buttons that you need in Runtime.
 3. Configure the button display, for example, background color, border and size.
-4. Under "Properties > Properties > Miscellaneous > Toolbar > Elements > Button > Authorization", select the authorization that is required in Runtime to operate the button.
+4. Under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements &gt; Button &gt; Authorization", select the authorization that is required in Runtime to operate the button.
 5. When a button is not operated in Runtime, disable "Allow operator control". You can reactivate a disabled a button by using a script in runtime, for example.
 
 **Note**
@@ -2430,8 +2430,8 @@ If you want to hide an element and still access it, use dynamization, e.g. via a
 
 To configure the information bar, follow these steps:
 
-1. In the Inspector window under "Properties > Properties > Miscellaneous > Information bar", configure the general properties of the information bar, such as background color or visibility.
-2. In the Inspector window under "Properties > Properties > Miscellaneous > Information bar > Elements > State display > Visibility", enable the elements that you need in Runtime.
+1. In the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar", configure the general properties of the information bar, such as background color or visibility.
+2. In the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar &gt; Elements &gt; State display &gt; Visibility", enable the elements that you need in Runtime.
 3. Configure the display of the respective element.
 4. Select the authorization that is required in Runtime to operate the element.
 5. When an element is not operated in Runtime, disable "Allow operator control". You can enable a disabled element again, for example, with a script in Runtime.
@@ -2460,7 +2460,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 To specify the properties of the alarm control, follow these steps:
 
-1. In the Inspector window, click "Properties > Properties > Miscellaneous > Alarm control".
+1. In the Inspector window, click "Properties &gt; Properties &gt; Miscellaneous &gt; Alarm control".
 2. Define settings for the rows and cells, e.g.:
 
    - "Row height": Specifies the height of the lines in the alarm control.
@@ -2475,8 +2475,8 @@ To specify the properties of the alarm control, follow these steps:
 
 To configure the outputs of the alarm control, specify the following properties:
 
-- "General > Alarm source": Specifies which alarms are displayed in this alarm control.
-- "Miscellaneous > Alarms - show current":
+- "General &gt; Alarm source": Specifies which alarms are displayed in this alarm control.
+- "Miscellaneous &gt; Alarms - show current":
 
   If you activate this property, the following applies in runtime:
 
@@ -2485,17 +2485,17 @@ To configure the outputs of the alarm control, specify the following properties:
   - ​The visible area of the alarm control moves automatically, if necessary.
   - Users cannot select the alarms individually or sort them by column.
 
-  If you configure the "Alarms - Show current" button as visible and operable, you can pause and start this behavior in runtime as required. The alarm control always starts with the behavior configured via "Miscellaneous > Alarms - Show current".
-- "Miscellaneous > Alarm statistics settings": Setting options that contribute to the evaluation of the alarm statistics, e.g. start time, maximum number of alarms.
+  If you configure the "Alarms - Show current" button as visible and operable, you can pause and start this behavior in runtime as required. The alarm control always starts with the behavior configured via "Miscellaneous &gt; Alarms - Show current".
+- "Miscellaneous &gt; Alarm statistics settings": Setting options that contribute to the evaluation of the alarm statistics, e.g. start time, maximum number of alarms.
 
 ##### Setting up column sorting
 
 To set up the column sorting, follow these steps:
 
-1. In the Inspector window, click on "Properties > Miscellaneous > Alarm control > Columns > [1] Alarm statistics column".
+1. In the Inspector window, click on "Properties &gt; Miscellaneous &gt; Alarm control &gt; Columns &gt; [1] Alarm statistics column".
 2. Select the sorting direction and sorting order for the individual columns.
 
-Under "Properties > Properties > Format > Default sorting direction", define the sort direction of the alarms in the alarm control, e.g. "Ascending".
+Under "Properties &gt; Properties &gt; Format &gt; Default sorting direction", define the sort direction of the alarms in the alarm control, e.g. "Ascending".
 
 ##### Configuring reordering of the columns
 
@@ -2505,8 +2505,8 @@ You can configure whether operators can rearrange the table columns using drag-a
 
 To configure access protection in runtime, follow these steps:
 
-- Activate the "Operator control - allow" property under "Properties > Properties > Miscellaneous > Toolbar > Elements > [1] Button > Operator control - allow".
-- Define the type of authorization in the "Static value" column under "Properties > Properties > Miscellaneous > Toolbar > Elements > [1] Button > Authorization".
+- Activate the "Operator control - allow" property under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements &gt; [1] Button &gt; Operator control - allow".
+- Define the type of authorization in the "Static value" column under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements &gt; [1] Button &gt; Authorization".
 
 ##### Dynamization of graphic properties with tags or scripts
 
@@ -2517,7 +2517,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 ##### Setting the time zone
 
-Under Properties > Properties > Miscellaneous > Time zone, you set the desired time zone by entering a decimal value for the time zone.
+Under Properties &gt; Properties &gt; Miscellaneous &gt; Time zone, you set the desired time zone by entering a decimal value for the time zone.
 
 - "0" and positive numerical values: The values correspond to the index values of the Microsoft time zones.
 - "-1": The local time zone of the device.
@@ -2530,12 +2530,12 @@ The information bar of the alarm control shows you, for example, the current tim
 
 To configure the information bar, follow these steps:
 
-1. Configure the general properties of the information bar, such as the font and background color, under "Properties > Properties > Miscellaneous > Information bar".
-2. Configure the display of the information bar elements under "Properties > Properties > Miscellaneous > Information bar > Elements".
+1. Configure the general properties of the information bar, such as the font and background color, under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar".
+2. Configure the display of the information bar elements under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar &gt; Elements".
 
 ##### Toolbar
 
-You can define the buttons of the alarm control in runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the alarm control in runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the alarm control:
 
@@ -2633,7 +2633,7 @@ In the simple alarm control, the visibility of the following is disabled:
 
 On devices other than the Unified Basic Panel, you can choose between two alarm control style items:
 
-1. Under "Properties > Properties > Appearance", select the property "Appearance - style item".
+1. Under "Properties &gt; Properties &gt; Appearance", select the property "Appearance - style item".
 2. Select one of the following in the "Static value" column.
 
    - "HmiAlarmControl" for the alarm control.
@@ -2680,7 +2680,7 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 To configure the trend display, follow these steps:
 
-1. Create the following under "Properties > Properties > General > Trend areas":
+1. Create the following under "Properties &gt; Properties &gt; General &gt; Trend areas":
 
    - Common or individual trend areas
    - Common or separate axes
@@ -2688,18 +2688,18 @@ To configure the trend display, follow these steps:
 
    By default, the first trend area [0] is already created in the object. You can create more trend areas using the selection button in the "Static value" column.
 2. Configure the value axes and the time axes.
-3. Open the settings of the time axis under "Properties > General > Time axes bottom > Time axis [0]".
+3. Open the settings of the time axis under "Properties &gt; General &gt; Time axes bottom &gt; Time axis [0]".
 
    Configure the "Time range" of the trend display:
 
    - "Time interval": You define the time range using a starting time and a following time interval.
    - "Start time and end time": You define the time range using a starting time and an end time.
    - "Measuring points": You define the time range using a starting time and a number of measuring points.
-4. Open the settings of the value axis under "Properties > General > Trend areas > Trends > Left value axis > Value axis Y [0]":
+4. Open the settings of the value axis under "Properties &gt; General &gt; Trend areas &gt; Trends &gt; Left value axis &gt; Value axis Y [0]":
 
    - If required, configure the value range, the output format, and the scaling of the value axis.
    - If required, configure the value range, the output format, and the scaling of the value axis.
-5. Go to "Properties > General > Trend areas > Trends" and configure the trends for the trend area.
+5. Go to "Properties &gt; General &gt; Trend areas &gt; Trends" and configure the trends for the trend area.
 
 > **Note**
 >
@@ -2710,11 +2710,11 @@ To configure the trend display, follow these steps:
 
 To configure the trends for each trend area, follow these steps:
 
-1. Select the data supply for the respective trend under "Properties > General > Trend areas > Trends > [0] Trend > Data source Y > Source":
+1. Select the data supply for the respective trend under "Properties &gt; General &gt; Trend areas &gt; Trends &gt; [0] Trend &gt; Data source Y &gt; Source":
 
    - "Logging tag": The trend control is supplied with values from a tag log.
    - "HMI tag": The trend control is supplied with values of a tag.
-2. Select the data supply for the tag under "Properties > General > Trend areas > Trends > Trend [0] > Data source Y > Tag".
+2. Select the data supply for the tag under "Properties &gt; General &gt; Trend areas &gt; Trends &gt; Trend [0] &gt; Data source Y &gt; Tag".
 
    - In the case of an HMI tag, specify the tag name in the "Static value" column.
    - In the case of a logging tag, enter the name of the HMI tag in the "Static value" column first.   
@@ -2741,7 +2741,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 ##### Setting the time zone
 
-Under "Properties > Properties > Miscellaneous > Time zone", you set the desired time zone by entering a decimal value for the time zone.
+Under "Properties &gt; Properties &gt; Miscellaneous &gt; Time zone", you set the desired time zone by entering a decimal value for the time zone.
 
 - "0" and positive numerical values: The values correspond to the index values of the Microsoft time zones.
 - "-1": The local time zone of the device.
@@ -2750,7 +2750,7 @@ You can also set the time zone via a selection list in runtime.
 
 ##### Toolbar
 
-You can define the buttons of the trend control in runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the trend control in runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the trend control:
 
@@ -2822,7 +2822,7 @@ In the simple trend control, the visibility of the following is deactivated:
 
 On devices other than the Unified Basic Panel, you can choose between two trend control style items:
 
-1. Under "Properties > Properties > Appearance", select the property "Appearance - style item".
+1. Under "Properties &gt; Properties &gt; Appearance", select the property "Appearance - style item".
 2. Select one of the following in the "Static value" column.
 
    - "HmiTrendControl" for the trend control.
@@ -2868,16 +2868,16 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 To configure the function trends for each function trend area, follow these steps:
 
-1. Select the data supply for the function trend under "Properties > General > Function trend - area > Function trends > [0] Function trend > Data source X > Source".
+1. Select the data supply for the function trend under "Properties &gt; General &gt; Function trend - area &gt; Function trends &gt; [0] Function trend &gt; Data source X &gt; Source".
 
    - "Logging tag": The trend control is supplied with values from a tag log.
    - "HMI tag": The trend control is supplied with values of a tag.
-2. Enter the tag name under "Properties > General > Function trend - areas > [0] Function trend - area > Function trends > [0] Function trend > Data source X > Tag":
+2. Enter the tag name under "Properties &gt; General &gt; Function trend - areas &gt; [0] Function trend - area &gt; Function trends &gt; [0] Function trend &gt; Data source X &gt; Tag":
 
    - In the case of an HMI tag, specify the tag name in the "Static value" column.
    - In the case of a logging tag, enter the name of the HMI tag in the "Static value" column first. Enter the name of the associated logging tags separated by a colon, for example, "HMITag_1:LoggingTag_1".
 3. Configure the data supply for "Data source Y".
-4. Open the settings of the time axis under "Properties > General > Function trend - area > Function trends > [0] Function trend > Time range".
+4. Open the settings of the time axis under "Properties &gt; General &gt; Function trend - area &gt; Function trends &gt; [0] Function trend &gt; Time range".
 
    Configure the trend display for the "Time range".
 
@@ -2886,8 +2886,8 @@ To configure the function trends for each function trend area, follow these step
    - "Measuring points": You define the time range using a starting time and a number of measuring points.
 5. Configure the value range of the trend display under:
 
-   - "Properties > General > Function trend - areas > [0] Function trend - area > Value axes - left > [0] Value axis Y".
-   - "Properties > General > Function trend - areas > [0] Function trend - area > Value axes - bottom > [0] Value axis X".
+   - "Properties &gt; General &gt; Function trend - areas &gt; [0] Function trend - area &gt; Value axes - left &gt; [0] Value axis Y".
+   - "Properties &gt; General &gt; Function trend - areas &gt; [0] Function trend - area &gt; Value axes - bottom &gt; [0] Value axis X".
 
    Select one of the options:
 
@@ -2911,7 +2911,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 ##### Toolbar
 
-You can define the buttons of the function trend control in runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the function trend control in runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the function trend control:
 
@@ -2967,10 +2967,10 @@ In the Inspector window, you can customize the settings for the position, geomet
 To define the display of values in the trend companion, follow these steps:
 
 1. Configure a trend control or a function trend control.
-2. Select the trend companion. Click "Properties > General > Data source".
+2. Select the trend companion. Click "Properties &gt; General &gt; Data source".
 3. Select the trend control or function trend control as the data source.
 
-To adapt the display to the connected object, select the "Data source - use background color" and "Data source - use font color" options under "Properties > Format".
+To adapt the display to the connected object, select the "Data source - use background color" and "Data source - use font color" options under "Properties &gt; Format".
 
 By default, the format of the connected object is adopted during the configuration for the display format. The size, value range and zoom factor of the object are taken into account to display the optimum number of decimal places.
 
@@ -2980,7 +2980,7 @@ You can configure the display formats for individual values in the Inspector win
 
 To define the mode of the trend companion, follow these steps:
 
-1. Select the mode under "Properties > Properties > General > Trend companion - mode".
+1. Select the mode under "Properties &gt; Properties &gt; General &gt; Trend companion - mode".
 2. Select one of 3 different mode types depending on the data source:
 
    - The "Ruler" mode shows the coordinate values of the trends on the ruler or the values of a selected row in the table.
@@ -3004,7 +3004,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 ##### Setting the time zone
 
-Under Properties > Properties > Miscellaneous > Time zone, you set the desired time zone by entering a decimal value for the time zone.
+Under Properties &gt; Properties &gt; Miscellaneous &gt; Time zone, you set the desired time zone by entering a decimal value for the time zone.
 
 - "0" and positive numerical values: The values correspond to the index values of the Microsoft time zones.
 - "-1": The local time zone of the device.
@@ -3013,7 +3013,7 @@ You can also set the time zone via a selection list in runtime.
 
 ##### Toolbar
 
-You can define the buttons of the trend companion in runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the trend companion in runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the trend companion:
 
@@ -3059,16 +3059,16 @@ To match the size of the embedded screen to the size of the screen window, choos
 
 - You want the embedded screen to appear smaller or larger:
 
-  Set the desired zoom factor in the Inspector window "Properties > Format > Zoom - factor". Enter the value between 0.1 and 8.
+  Set the desired zoom factor in the Inspector window "Properties &gt; Format &gt; Zoom - factor". Enter the value between 0.1 and 8.
 - You want to scroll to a section of the embedded screen:
 
-  - In the "Properties > Format" Inspector window, activate the visibility of the horizontal and vertical scroll bar.
+  - In the "Properties &gt; Format" Inspector window, activate the visibility of the horizontal and vertical scroll bar.
   - Set the position of the scroll bars.
 
     The user can move to details of the embedded screen in runtime.
 - You can adapt the embedded screen to the size of the screen window, or vice versa:
 
-  Select either "Fit window to screen", or "Fit screen to window" under "Properties > Format > Size - fit" in the Inspector window.
+  Select either "Fit window to screen", or "Fit screen to window" under "Properties &gt; Format &gt; Size - fit" in the Inspector window.
 
 ##### Dynamization of screens in screen windows
 
@@ -3092,39 +3092,39 @@ You can dynamize the following property containing a graphic with a tag or with 
 
 To resize a screen window in runtime, follow these steps:
 
-1. Activate the options "Show border" and "Can be sized" in the Inspector window "Properties > Appearance > Window settings".
+1. Activate the options "Show border" and "Can be sized" in the Inspector window "Properties &gt; Appearance &gt; Window settings".
 
    The width of the border is not evaluated.
 
-If the embedded screen is larger than the screen window, you can configure the scroll bars for the screen window under "Properties > Format".
+If the embedded screen is larger than the screen window, you can configure the scroll bars for the screen window under "Properties &gt; Format".
 
 ##### Moving the screen window in runtime
 
 To move a screen window in runtime, follow these steps:
 
-1. Activate the options "Show heading" and "Can be moved" in the Inspector window "Properties > Appearance > Window settings".
+1. Activate the options "Show heading" and "Can be moved" in the Inspector window "Properties &gt; Appearance &gt; Window settings".
 
 ##### Zooming the screen window in runtime
 
 To zoom the screen window in runtime, follow these steps:
 
-1. Under "Properties > Format", activate the "Zoom - allow" property. The property is enabled by default in the Engineering System.
+1. Under "Properties &gt; Format", activate the "Zoom - allow" property. The property is enabled by default in the Engineering System.
 
 In runtime, use:
 
 - Mouse:
 
-  - Press <Ctrl>. Move the mouse wheel up or down at the same time. The screen is zoomed into or out of.
+  - Press &lt;Ctrl&gt;. Move the mouse wheel up or down at the same time. The screen is zoomed into or out of.
 - Keyboard:
 
-  - To zoom into the screen, press <Ctrl + Plus>.
-  - To zoom out of the screen, press <Ctrl + Minus>.
+  - To zoom into the screen, press &lt;Ctrl + Plus&gt;.
+  - To zoom out of the screen, press &lt;Ctrl + Minus&gt;.
 
 ##### Moving a screen section in runtime
 
 To move the displayed screen section, follow these steps:
 
-1. Under "Properties > Format", activate the "Zoom - allow" property. The property is enabled by default in the Engineering System.
+1. Under "Properties &gt; Format", activate the "Zoom - allow" property. The property is enabled by default in the Engineering System.
 
 In runtime, use:
 
@@ -3138,8 +3138,8 @@ In runtime, use:
 
   - Arrow keys: Move left/right and up/down
   - Screen keys: Move up/down
-  - <Home>: Show upper left corner
-  - <End>: Show lower right corner
+  - &lt;Home&gt;: Show upper left corner
+  - &lt;End&gt;: Show lower right corner
 
 ##### Clicking on an object behind the screen window in runtime
 
@@ -3147,8 +3147,8 @@ Screen windows can overlay other objects placed on the screen that users must op
 
 To click on an object placed under the screen window in runtime, follow these steps:
 
-1. Under "Properties > General > Screen", select the screen you want to load into the screen window, for example, "Screen_2".
-2. Set the "Transparent" entry in the "Static value" column under "Appearance > Background - fill pattern" in the properties of the screen selected in step 1.
+1. Under "Properties &gt; General &gt; Screen", select the screen you want to load into the screen window, for example, "Screen_2".
+2. Set the "Transparent" entry in the "Static value" column under "Appearance &gt; Background - fill pattern" in the properties of the screen selected in step 1.
 
 Application example:
 
@@ -3177,15 +3177,15 @@ In the Inspector window, you can change the settings for the position, geometry,
 
 ##### Defining window settings
 
-To resize a faceplate instance in runtime, activate the options "Show border" and "Can be sized" in the Inspector window "Properties > Appearance > Window settings".
+To resize a faceplate instance in runtime, activate the options "Show border" and "Can be sized" in the Inspector window "Properties &gt; Appearance &gt; Window settings".
 
 The width of the border is not evaluated.
 
-To move a faceplate instance in runtime, select the options "Show heading" and "Can be moved" in the Inspector window under "Properties > Appearance > Window settings".
+To move a faceplate instance in runtime, select the options "Show heading" and "Can be moved" in the Inspector window under "Properties &gt; Appearance &gt; Window settings".
 
 ##### Defining the faceplate type
 
-To define the faceplate type, select the faceplate type that is instantiated in the faceplate container under "Properties > Miscellaneous > Faceplate type".
+To define the faceplate type, select the faceplate type that is instantiated in the faceplate container under "Properties &gt; Miscellaneous &gt; Faceplate type".
 
 ##### Dynamization of graphic properties with tags or scripts
 
@@ -3218,13 +3218,13 @@ In the Inspector window, you can change the settings for the position, geometry,
 
 ##### Using a parameter set type
 
-If you only want to use a particular parameter set type with its parameter sets in runtime, select the desired parameter set type under "Properties > General > Fixed parameter set type".
+If you only want to use a particular parameter set type with its parameter sets in runtime, select the desired parameter set type under "Properties &gt; General &gt; Fixed parameter set type".
 
 ##### Configuring the time zone
 
 To configure the time zone, follow these steps:
 
-Under "Properties > Miscellaneous > Time zone", set the desired time zone by entering a numerical value.
+Under "Properties &gt; Miscellaneous &gt; Time zone", set the desired time zone by entering a numerical value.
 
 The numerical value stands for a time zone, for example:
 
@@ -3236,7 +3236,7 @@ The numerical value stands for a time zone, for example:
 
 To specify the editing mode and to enable or disable the buttons, follow these steps:
 
-Under "Properties > Miscellaneous > Editing mode", configure the activation status of the toolbar buttons "Create", "Save", "Save as", "Rename" and "Delete". These toolbar buttons are used to edit parameter sets.
+Under "Properties &gt; Miscellaneous &gt; Editing mode", configure the activation status of the toolbar buttons "Create", "Save", "Save as", "Rename" and "Delete". These toolbar buttons are used to edit parameter sets.
 
 You can select between the following settings:
 
@@ -3258,7 +3258,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 ##### Setting the time zone
 
-Under Properties > Properties > Miscellaneous > Time zone, you set the desired time zone by entering a decimal value for the time zone.
+Under Properties &gt; Properties &gt; Miscellaneous &gt; Time zone, you set the desired time zone by entering a decimal value for the time zone.
 
 - "0" and positive numerical values: The values correspond to the index values of the Microsoft time zones.
 - "-1": The local time zone of the device.
@@ -3269,14 +3269,14 @@ You can also set the time zone via a selection list in runtime.
 
 To configure the information bar, follow these steps:
 
-1. Configure the general properties of the information bar, such as the font and background color, under "Properties > Miscellaneous > Information bar".
-2. To adjust the height of the "Status text" element, specify the height under "Properties > Miscellaneous > Information bar > Elements > [0] Element".
+1. Configure the general properties of the information bar, such as the font and background color, under "Properties &gt; Miscellaneous &gt; Information bar".
+2. To adjust the height of the "Status text" element, specify the height under "Properties &gt; Miscellaneous &gt; Information bar &gt; Elements &gt; [0] Element".
 
 The "Status Text" element is the only status line element of the parameter set control. Status messages are displayed in this element in runtime.
 
 ##### Toolbar
 
-You can define the buttons of the parameter set control in runtime and their operator authorizations in the Inspector window under "Properties > Miscellaneous > Toolbar > Elements". By default, all buttons are displayed in the toolbar. To hide specific buttons, deactivate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the parameter set control in runtime and their operator authorizations in the Inspector window under "Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". By default, all buttons are displayed in the toolbar. To hide specific buttons, deactivate the "Visibility" property in the settings of the corresponding button.
 
 > **Note**
 >
@@ -3339,12 +3339,12 @@ You can configure access protection with the properties "Operator control - allo
 
 To define the properties of the system diagnostics control, follow these steps:
 
-1. Click "Properties > General > Diagnostic view" in the Inspector window.
+1. Click "Properties &gt; General &gt; Diagnostic view" in the Inspector window.
 2. Define the settings for the rows and cells.
 
    - "Row height": Specifies the height of the rows in the system diagnostics control.
    - "Cells - internal spacing": Defines the internal spacing in the cells.
-3. Define the settings for the headers under "Properties > General > Diagnostic view > Header - settings":
+3. Define the settings for the headers under "Properties &gt; General &gt; Diagnostic view &gt; Header - settings":
 
    - "Row header": Defines whether each row has a header.
    - "Column header": Specifies the representation of the column header.
@@ -3355,7 +3355,7 @@ To define the properties of the system diagnostics control, follow these steps:
 
 To set up the column sorting, follow these steps:
 
-1. In the Inspector window, click "Properties > General > Diagnostic view > Columns > [0] Column".
+1. In the Inspector window, click "Properties &gt; General &gt; Diagnostic view &gt; Columns &gt; [0] Column".
 2. Select the sorting direction and sorting order for the individual columns.
 
 ##### Configuring reordering of the columns
@@ -3371,7 +3371,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 ##### Setting the time zone
 
-Under Properties > Properties > Miscellaneous > Time zone, you set the desired time zone by entering a decimal value for the time zone.
+Under Properties &gt; Properties &gt; Miscellaneous &gt; Time zone, you set the desired time zone by entering a decimal value for the time zone.
 
 - "0" and positive numerical values: The values correspond to the index values of the Microsoft time zones.
 - "-1": The local time zone of the device.
@@ -3384,12 +3384,12 @@ The information bar of the system diagnostics control shows the connection statu
 
 To configure the information bar, follow these steps:
 
-1. Configure the general properties of the information bar, such as the font and background color, under "Properties > Miscellaneous > Information bar".
-2. Configure the display of the information bar elements under "Properties > Miscellaneous > Information bar > Elements".
+1. Configure the general properties of the information bar, such as the font and background color, under "Properties &gt; Miscellaneous &gt; Information bar".
+2. Configure the display of the information bar elements under "Properties &gt; Miscellaneous &gt; Information bar &gt; Elements".
 
 ##### Toolbar
 
-You can define the buttons of the system diagnostics control in runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the system diagnostics control in runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the system diagnostics control:
 
@@ -3437,13 +3437,13 @@ In the Inspector window, you can change the settings for the position, geometry,
 
 To configure the columns, follow these steps:
 
-1. Open the settings of the time column under "Properties > Miscellaneous > Process control > Columns > Time range column [0]".
-2. Under "Properties > Miscellaneous > Process control > Columns > [0] Time range column > Time range", select the time range of the table:
+1. Open the settings of the time column under "Properties &gt; Miscellaneous &gt; Process control &gt; Columns &gt; Time range column [0]".
+2. Under "Properties &gt; Miscellaneous &gt; Process control &gt; Columns &gt; [0] Time range column &gt; Time range", select the time range of the table:
 
    - "Time interval": You define the time range using a starting time and a following time interval.
    - "Start time and end time": You define the time range using a starting time and an end time.
    - "Measuring points": You define the time range using a starting time and a number of measuring points.
-3. Open the settings of the respective value column under "Properties > Miscellaneous > Process control > Columns > [1] Column".
+3. Open the settings of the respective value column under "Properties &gt; Miscellaneous &gt; Process control &gt; Columns &gt; [1] Column".
 4. Under "Sort order", define the order in which the columns of the process control are shown.
 5. Set the direction in which the values are sorted under "Sorting direction - default".
 6. Define whether operators can re-arrange the table columns in runtime using drag-and-drop. More information is available in the section [Configuring reordering of the columns](#configuring-reordering-of-the-columns-rt-unified).
@@ -3452,7 +3452,7 @@ To configure the columns, follow these steps:
 
 To define the display of the values in the process control, follow these steps:
 
-Under "Properties > Miscellaneous > Process control > Columns > [1] Column > Data source > Source", select:
+Under "Properties &gt; Miscellaneous &gt; Process control &gt; Columns &gt; [1] Column &gt; Data source &gt; Source", select:
 
 1. Type of data source:
 
@@ -3469,7 +3469,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 ##### Setting the time zone
 
-Under Properties > Properties > Miscellaneous > Time zone, you set the desired time zone by entering a decimal value for the time zone.
+Under Properties &gt; Properties &gt; Miscellaneous &gt; Time zone, you set the desired time zone by entering a decimal value for the time zone.
 
 - "0" and positive numerical values: The values correspond to the index values of the Microsoft time zones.
 - "-1": The local time zone of the device.
@@ -3478,7 +3478,7 @@ You can also set the time zone via a selection list in runtime.
 
 ##### Toolbar
 
-You can define the buttons of the process control in runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the process control in runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the process control:
 
@@ -3537,7 +3537,7 @@ The "browser" object supports the following protocols:
 
 To define the URL, follow these steps:
 
-Define the Internet address in the Inspector window under "Properties > Properties > URL".
+Define the Internet address in the Inspector window under "Properties &gt; Properties &gt; URL".
 
 > **Note**
 >
@@ -3555,7 +3555,7 @@ Please note the following when using the object:
 The "Web control" object has a limited range of functions compared to a standard browser:
 
 - Navigation from the "Web control" object is not supported (top-level navigation).
-- Calls of queries and dialogs (popups and modal dialogs) are only supported if they were activated in the file <Path for the WinCC Unified installation directory>WinCCUnified\WebRH\public\content\custom\CustomSettings.json:
+- Calls of queries and dialogs (popups and modal dialogs) are only supported if they were activated in the file &lt;Path for the WinCC Unified installation directory&gt;WinCCUnified\WebRH\public\content\custom\CustomSettings.json:
 
   `{"CustomSettings": {"HmiWebControl" : {"AllowPopups" : true,"AllowModals" : true}}}`
 
@@ -3574,7 +3574,7 @@ You can view a PDF file in the following ways:
 
 - Copy the PDF files to the directory "C:\Program Files\Siemens\Automation\WinCCUnified\WebRH\public".
 
-  Under "Properties > URL", enter the address "https://localhost/WebRH/<pdfname.pdf>".
+  Under "Properties &gt; URL", enter the address "https://localhost/WebRH/&lt;pdfname.pdf&gt;".
 
   > **Note**
   >
@@ -3583,7 +3583,7 @@ You can view a PDF file in the following ways:
   You can also use the IP address or the PC name instead of "localhost".
 
   If you operate runtime on a different PC than the TIA Portal, also save the PDF files on the runtime PC.
-- Enter a valid Internet address under "Properties > Properties > URL".
+- Enter a valid Internet address under "Properties &gt; Properties &gt; URL".
 
 ##### Influencing how the document is displayed on a Unified PC
 
@@ -3609,7 +3609,7 @@ You can view a PDF file in the following ways:
 - Enter path and file name in the URL input field of the "Browser" operating object.
 - In the configuration of the "Browser" operating object under "Properties", link the URL with a tag of the type WString which contains path and file name.
 
-Syntax: file:///<path>/<filename>.pdf
+Syntax: file:///&lt;path&gt;/&lt;filename&gt;.pdf
 
 Pay attention to uppercase/lowercase spelling.
 
@@ -3626,7 +3626,7 @@ Examples of parameters when opening the PDF file:
 
 - Open file on page 20: file:///media/simatic/X51/UCPManual.pdf?20#page=20
 - Open file with zoom factor 150%: file:///media/simatic/X51/UCPManual.pdf?150#zoom=150
-- Open file on page 20 with zoom factor 150%: file:///media/simatic/X51/UCPManual.pdf?(20,150)#page=20&zoom=150
+- Open file on page 20 with zoom factor 150%: file:///media/simatic/X51/UCPManual.pdf?(20,150)#page=20&amp;zoom=150
 
 ##### Dynamization of graphic properties with tags or scripts
 
@@ -3637,7 +3637,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 ##### Toolbar
 
-You can define the buttons of the browser in runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". The buttons are enabled by default.
+You can define the buttons of the browser in runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". The buttons are enabled by default.
 
 The following buttons are available for the process control:
 
@@ -3688,16 +3688,16 @@ To access a file, follow these steps:
 
 1. Store the file in the Public directory of the WinCC Unified installation, e.g. "C:\Program Files\Siemens\Automation\WinCCUnified\WebRH\public". You can also create a subdirectory, e.g. "MediaFiles".
 2. Open the properties of the Media Player in your TIA Portal project.
-3. Click "Properties > General > URL" in the Inspector window. Enter the URL.
+3. Click "Properties &gt; General &gt; URL" in the Inspector window. Enter the URL.
 
-   You can structure a valid URL according to the following scheme: "https://<ComputerName>.<DomainName>/WebRH/<FileName>".  
+   You can structure a valid URL according to the following scheme: "https://&lt;ComputerName&gt;.&lt;DomainName&gt;/WebRH/&lt;FileName&gt;".  
    Example: "https://mycomputer.siemens.net/WebRH/Twistlock.mp4".
 
    If you have created a subdirectory, e.g. "MediaFiles", enter the URL in the following format: "https://mycomputer.siemens.net/WebRH/MediaFiles/Twistlock.mp4".
 
 Alternatively, you can change the address via a script, e.g.:
 
-Screen.FindItem('MediaControl').Url = https://<ComputerName>.<DomainName>/WebRH/<FileName>
+Screen.FindItem('MediaControl').Url = https://&lt;ComputerName&gt;.&lt;DomainName&gt;/WebRH/&lt;FileName&gt;
 
 ##### Accessing a file on a Unified Comfort Panel in Runtime
 
@@ -3707,16 +3707,16 @@ To access a file, follow these steps:
 
 1. Store the file on an external storage medium, e.g. a USB flash drive connected to the X61 interface.
 2. Open the properties of the Media Player in your TIA Portal project.
-3. Click "Properties > General > URL". Enter the URL.
+3. Click "Properties &gt; General &gt; URL". Enter the URL.
 
-   You form a valid URL according to the following scheme: "file:///media/simatic/<file location>/<file name>".  
+   You form a valid URL according to the following scheme: "file:///media/simatic/&lt;file location&gt;/&lt;file name&gt;".  
    Example: "file:///media/simatic/X61/content/video.mp4".
 
    If you have created a subdirectory, e.g. "MediaFiles", enter the URL in the following format: "file:///media/simatic/X61/MediaFiles/content/video.mp4".
 
 Alternatively, you can change the address via a script, e.g.:
 
-Screen.FindItem('MediaControl').Url = file:///<media>/simatic/X61/content/<file name>
+Screen.FindItem('MediaControl').Url = file:///&lt;media&gt;/simatic/X61/content/&lt;file name&gt;
 
 ##### Dynamization of graphic properties with tags or scripts
 
@@ -3728,7 +3728,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 ##### Toolbar
 
-You can define the buttons of the Media Player in Runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To add more buttons in the display object, activate the "Visibility" property under the settings of the corresponding button.
+You can define the buttons of the Media Player in Runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To add more buttons in the display object, activate the "Visibility" property under the settings of the corresponding button.
 
 The following buttons are available for the Media Player:
 
@@ -3774,7 +3774,7 @@ WinCC supports the display of step names for the GRAPH blocks in multiple langua
 
 In the Inspector window, you can change the settings for the position, geometry, style, and color of the object. You can adapt the following properties in particular:
 
-- "Process > Tag": Assign the tag.
+- "Process &gt; Tag": Assign the tag.
 - "Toolbar": Specifies the buttons of the GRAPH overview.
 
 ##### Operating mode
@@ -3810,7 +3810,7 @@ The symbols displayed in the GRAPH overview are pre-defined:
 
 ##### Toolbar
 
-You can define the buttons of the GRAPH overview in runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". By default, only the "Next Step" button is available. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the GRAPH overview in runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". By default, only the "Next Step" button is available. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the GRAPH overview:
 
@@ -3860,7 +3860,7 @@ In the information area of the PLC code view, you are shown:
 
 ##### Buttons of the toolbar
 
-You can define the buttons of the PLC code view control in runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the PLC code view control in runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the PLC code view:
 
@@ -3974,7 +3974,7 @@ This section contains information on the following topics:
 
 You can use custom web controls in WinCC.
 
-For custom web controls to be displayed in the TIA Portal, store the custom web controls in the folder <project_folder>/UserFiles/CustomControls.
+For custom web controls to be displayed in the TIA Portal, store the custom web controls in the folder &lt;project_folder&gt;/UserFiles/CustomControls.
 
 ##### Requirement
 
@@ -3984,7 +3984,7 @@ For custom web controls to be displayed in the TIA Portal, store the custom web 
 
 ##### Using custom web controls
 
-Custom web controls are stored in the TIA Portal in "Tools > My Controls".
+Custom web controls are stored in the TIA Portal in "Tools &gt; My Controls".
 
 If you want to use a custom web control, follow these steps:
 
@@ -4069,17 +4069,17 @@ In the Inspector window, you can customize the settings for the position, geomet
 
 To define a text for the heading of the Audit Viewer, follow these steps:
 
-1. Activate the "Show heading" option in the Inspector window under "Properties > Appearance > Window settings". The option is activated by default.
-2. Click "Properties > Miscellaneous > Label > Font" in the Inspector window.
+1. Activate the "Show heading" option in the Inspector window under "Properties &gt; Appearance &gt; Window settings". The option is activated by default.
+2. Click "Properties &gt; Miscellaneous &gt; Label &gt; Font" in the Inspector window.
 3. Select a font.
-4. Click "Properties > Miscellaneous > Label > Text" in the Inspector window.
+4. Click "Properties &gt; Miscellaneous &gt; Label &gt; Text" in the Inspector window.
 5. Enter a text.
 
 ###### Resizing in Runtime
 
 To resize the Audit Viewer in Runtime, follow these steps:
 
-1. Activate the options "Show border" and "Can be sized" in the Inspector window under "Properties > Appearance > Window settings". The options are activated by default.
+1. Activate the options "Show border" and "Can be sized" in the Inspector window under "Properties &gt; Appearance &gt; Window settings". The options are activated by default.
 
    The width of the border is not evaluated.
 
@@ -4107,7 +4107,7 @@ If you use the control under Unified Comfort Panel, an error message of the comp
 
 In the Inspector window, you can customize the settings for the position, geometry, style, and color of the object.
 
-To enable navigation between the screens of the plant objects, configure the companion controls under "Properties > Miscellaneous > Interface > Companion controls".
+To enable navigation between the screens of the plant objects, configure the companion controls under "Properties &gt; Miscellaneous &gt; Interface &gt; Companion controls".
 
 ###### Buttons
 
@@ -4165,17 +4165,17 @@ In the Toolbox window of the "Graphic" pane the graphic objects are structured b
 
 ##### Storing graphics in the project graphics
 
-The project graphics can be found in the project tree under "Project > Languages & Resources > Project graphics".
+The project graphics can be found in the project tree under "Project &gt; Languages &amp; Resources &gt; Project graphics".
 
 ![Storing graphics in the project graphics](images/162102390283_DV_resource.Stream@PNG-en-US.png)
 
 You can save graphics in the project graphics:
 
-- Graphic objects from the Tools > Graphics palette:
+- Graphic objects from the Tools &gt; Graphics palette:
 
   When you drag-and-drop the graphics objects from the "Graphics" pane into the work area, these are stored automatically in the project graphics.
 
-  The graphic names are numbered in the order of their creation, for example, "Graphic_1." Use the <F2> function key to rename the graphic.
+  The graphic names are numbered in the order of their creation, for example, "Graphic_1." Use the &lt;F2&gt; function key to rename the graphic.
 - Graphic file with the following formats:
 
   *.bmp, *.ico, *.emf, *.wmf, *.gif, *.tiff, *.png, *.svg, *.jpeg or *.jpg
@@ -4298,14 +4298,14 @@ You can import SVG graphics into the TIA Portal for visualization. You can adapt
 
 To import an SVG graphic into the TIA Portal, follow these steps:
 
-1. In the project tree, under "Languages & Resources", click on "Project graphics".
+1. In the project tree, under "Languages &amp; Resources", click on "Project graphics".
 2. Use drag-and-drop to add an SVG graphic from your storage location into the project graphics.
 3. In the "Default graphic" column, click the added graphic.
-4. Information about the SVG graphic is displayed in the Inspector window under "General > Properties".
+4. Information about the SVG graphic is displayed in the Inspector window under "General &gt; Properties".
 
 ##### Displaying SVG conversion information
 
-You can find the "Show SVG conversion information" button in the Inspector window, under "Properties > General" in the "Standard graphic" area.
+You can find the "Show SVG conversion information" button in the Inspector window, under "Properties &gt; General" in the "Standard graphic" area.
 
 To display the SVG conversion information, follow these steps:
 
@@ -4376,9 +4376,9 @@ The SVG graphics support the SVG 1.2 Tiny standard. Note the following restricti
 
   Specifications for width and height are recommended in pixels. If the width and height are not set, the pixel values entered in the SVG attribute "viewbox" are used. This does not apply to Firefox.
 - Scaled SVG graphics in Chrome: Elements using an SVG graphic that was scaled in the engineering system as background graphic are not displayed correctly in Chrome in Runtime.
-- In an SVG graphic, the vertices of a polyline must be defined directly, e.g. <polyline points="100,100 150,25 150,75 200,0">.
-- In an SVG graphic, the range <defs>...</defs> must be located directly at the beginning of the SVG code.
-- An SVG graphic can be imported only if it contains the <hmi:self> XML element.
+- In an SVG graphic, the vertices of a polyline must be defined directly, e.g. &lt;polyline points="100,100 150,25 150,75 200,0"&gt;.
+- In an SVG graphic, the range &lt;defs&gt;...&lt;/defs&gt; must be located directly at the beginning of the SVG code.
+- An SVG graphic can be imported only if it contains the &lt;hmi:self&gt; XML element.
 
 ### Dynamic widgets (RT Unified)
 
@@ -4392,7 +4392,7 @@ This section contains information on the following topics:
 
 ##### Introduction
 
-You can use dynamic SVG graphics in WinCC. For SVG graphics to be displayed in the TIA Portal, store the graphics in the folder <project_folder>/UserFiles/SVGControls.
+You can use dynamic SVG graphics in WinCC. For SVG graphics to be displayed in the TIA Portal, store the graphics in the folder &lt;project_folder&gt;/UserFiles/SVGControls.
 
 ##### Requirement
 
@@ -4402,7 +4402,7 @@ You can use dynamic SVG graphics in WinCC. For SVG graphics to be displayed in t
 
 ##### Managing dynamic SVG graphics
 
-The dynamic SVG graphics are stored in the TIA Portal in "Tools > Dynamic widgets > Project graphics".
+The dynamic SVG graphics are stored in the TIA Portal in "Tools &gt; Dynamic widgets &gt; Project graphics".
 
 To manage a dynamic SVG graphic, follow these steps:
 
@@ -4506,7 +4506,7 @@ With a multiple selection, you have the following options:
 You have the following options to select multiple objects:
 
 - Draw a selection border around the objects.
-- Hold down the <Shift> key, and click the required objects.
+- Hold down the &lt;Shift&gt; key, and click the required objects.
 
 #### Selection border of a multiple selection
 
@@ -4541,11 +4541,11 @@ To select multiple objects using a selection border, follow these steps:
 1. Position the mouse pointer in the work area close to one of the objects to be selected.
 2. Hold down the mouse button, and draw a selection border around the objects to be selected.
 
-#### Selecting multiple objects using the <Shift> key
+#### Selecting multiple objects using the &lt;Shift&gt; key
 
-To select multiple objects with the <Shift> key, follow these steps:
+To select multiple objects with the &lt;Shift&gt; key, follow these steps:
 
-1. Hold down the <Shift> key.
+1. Hold down the &lt;Shift&gt; key.
 2. Click the relevant objects, working in succession.
 
    All the selected objects are identified by borders.
@@ -4554,7 +4554,7 @@ To select multiple objects with the <Shift> key, follow these steps:
 
 **Note**
 
-To remove an object from the multiple selection, press <Shift>, hold it down and then click the relevant object once again.
+To remove an object from the multiple selection, press &lt;Shift&gt;, hold it down and then click the relevant object once again.
 
 #### Result
 
@@ -4575,15 +4575,15 @@ You can copy objects individually or with a multiple selection.
 To copy an object, follow these steps:
 
 1. Select the object.
-2. Copy the object with <Ctrl + C> or select "Copy" in the shortcut menu.
-3. Paste the object with <Ctrl + V> or select "Paste" in the shortcut menu.
+2. Copy the object with &lt;Ctrl + C&gt; or select "Copy" in the shortcut menu.
+3. Paste the object with &lt;Ctrl + V&gt; or select "Paste" in the shortcut menu.
 4. Drag and drop the copied object to the required position.
 
 If you want to copy multiple objects using multiple selection, draw a selection frame around the desired objects and proceed as described above.
 
 #### Using copied objects with the same spacing
 
-If you want to use the copied object multiple times, proceed as described above. Press <Ctrl + V> or select "Paste" repeatedly to automatically paste the objects in the HMI screen with equal spacing.
+If you want to use the copied object multiple times, proceed as described above. Press &lt;Ctrl + V&gt; or select "Paste" repeatedly to automatically paste the objects in the HMI screen with equal spacing.
 
 The same principle also applies to multiple selection of the objects.
 
@@ -4615,7 +4615,7 @@ You can create the following objects automatically:
 
 In many objects you can adjust the output format for the displayed values or define it yourself. You can process and output the process value that is displayed in the object in different notations.  
 You can select frequently used output formats directly in the user interface. You can adjust the formatting codes or define them yourself.  
-You can define the output of a screen object in "Properties > General > Output format" for the following data:
+You can define the output of a screen object in "Properties &gt; General &gt; Output format" for the following data:
 
 - Floating-point numbers
 - Binary
@@ -4626,7 +4626,7 @@ You can define the output of a screen object in "Properties > General > Output f
 - Percent, currency, unit
 - Numerical values
 
-The definition of the output format is based on UNICODE CLDR. You can find additional information on the CLDR project and on the definitions on the Internet at <http://cldr.unicode.org/>
+The definition of the output format is based on UNICODE CLDR. You can find additional information on the CLDR project and on the definitions on the Internet at [http://cldr.unicode.org/](http://cldr.unicode.org/)
 
 #### Requirement
 
@@ -4884,7 +4884,7 @@ You can combine the output formats:
 
 [Configuring the alarm control (RT Unified)](Configuring%20alarms%20%28RT%20Unified%29.md#configuring-the-alarm-control-rt-unified-1)
   
-<http://cldr.unicode.org/>
+[http://cldr.unicode.org/](http://cldr.unicode.org/)
 
 ### Disable remote control (RT Unified)
 
@@ -4954,13 +4954,13 @@ The default value for a hotkey in the "Static value" column is "None".
 
 You can find the "Hotkey" property in the Inspector window in the "Properties" tab:
 
-- Button: "Properties > Miscellaneous > Hotkey".
-- Controls with one toolbar: "Properties > Miscellaneous > Toolbar > Elements > [0] Button > Hotkey".
+- Button: "Properties &gt; Miscellaneous &gt; Hotkey".
+- Controls with one toolbar: "Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements &gt; [0] Button &gt; Hotkey".
 
 To configure a hotkey for a button, for example, follow these steps:
 
 1. Select the button.
-2. Select "Properties > Miscellaneous > Hotkey".
+2. Select "Properties &gt; Miscellaneous &gt; Hotkey".
 3. In the input field, click in the "Static value" column.
 
    A dialog opens.
@@ -5084,9 +5084,9 @@ The "Filter" function is available in the Inspector window. You can use to edit 
 
 To filter the properties of a screen object, follow these steps:
 
-1. Click on the "Filter" icon ![Filter properties](images/165848560523_DV_resource.Stream@PNG-de-DE.png) in "Properties > Properties" in the Inspector window.
+1. Click on the "Filter" icon ![Filter properties](images/165848560523_DV_resource.Stream@PNG-de-DE.png) in "Properties &gt; Properties" in the Inspector window.
 2. In the "Search" input field, type in the term you are looking for, e.g. "Color" in the "Name" column.
-3. Confirm the input with the <Return> key.
+3. Confirm the input with the &lt;Return&gt; key.
 
    ![Filter properties](images/169595964171_DV_resource.Stream@PNG-en-US.png)
 
@@ -5114,7 +5114,7 @@ The search terms that you have entered in the currently open project are retaine
 
 The "Favorites" function is available in the Inspector window. You can use it to edit the properties efficiently. You can display the system-defined favorites and your own favorite properties for each screen object.
 
-You can find an overview of system-defined favorites under "Settings > Visualization > Favorites screens (WinCC Unified)" in the "Favorites properties" table:
+You can find an overview of system-defined favorites under "Settings &gt; Visualization &gt; Favorites screens (WinCC Unified)" in the "Favorites properties" table:
 
 ![Introduction](images/169559271947_DV_resource.Stream@PNG-en-US.png)
 
@@ -5156,7 +5156,7 @@ To remove a property from the favorites, follow these steps:
    ![Remove property from favorites](images/169559524875_DV_resource.Stream@PNG-en-US.png)
 3. Select "Remove from favorites".
 
-You can find all favorites added or deleted by you in the "Favorite properties" table under "Settings > Visualization > Favorites screens (WinCC Unified)".
+You can find all favorites added or deleted by you in the "Favorite properties" table under "Settings &gt; Visualization &gt; Favorites screens (WinCC Unified)".
 
 ---
 
@@ -5274,7 +5274,7 @@ Some screen objects contain a collection of similar elements under the propertie
 
 To manage the individual properties of the elements in the collection in the table, follow these steps:
 
-1. In a trend control, for instance, click "Properties > General > Trend areas > Trends". The "Trends" table is displayed.
+1. In a trend control, for instance, click "Properties &gt; General &gt; Trend areas &gt; Trends". The "Trends" table is displayed.
 2. Right-click in the row with the property names. The shortcut menu opens.
 
    ![Managing the properties of elements in the collection](images/172316247307_DV_resource.Stream@PNG-en-US.png)
@@ -5315,10 +5315,10 @@ To automatically fill in the property values of the elements in the collection, 
 
 1. Select the collection according to the object, e.g.:
 
-   - For polygons and polylines, click "Properties > Properties > Size and position > Points".
-   - For the elements, e.g. check box, click "Properties > Properties > General > Selection items".
-   - With the controls, e.g. alarm control, click "Properties > Properties > Miscellaneous > Alarm control > Columns".
-   - For controls with a toolbar, click "Properties > Miscellaneous> Toolbar > Elements".
+   - For polygons and polylines, click "Properties &gt; Properties &gt; Size and position &gt; Points".
+   - For the elements, e.g. check box, click "Properties &gt; Properties &gt; General &gt; Selection items".
+   - With the controls, e.g. alarm control, click "Properties &gt; Properties &gt; Miscellaneous &gt; Alarm control &gt; Columns".
+   - For controls with a toolbar, click "Properties &gt; Miscellaneous&gt; Toolbar &gt; Elements".
 2. Select one or more contiguous cells in the collection in the right part of the Inspector window.
 3. Drag the blue border around this cell up or down.
 
@@ -5400,7 +5400,7 @@ The object size is changed.
 | Symbol | Meaning |
 | --- | --- |
 | ![Changing object size with the mouse](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for working effectively** |
-| If you press the <Ctrl + Shift> keys while dragging, the object size is changed according to the aspect ratio. |  |
+| If you press the &lt;Ctrl + Shift&gt; keys while dragging, the object size is changed according to the aspect ratio. |  |
 
 ##### Changing the size of multiple objects with the mouse
 
@@ -5416,13 +5416,13 @@ The size of the selected objects is changed.
 | Symbol | Meaning |
 | --- | --- |
 | ![Changing the size of multiple objects with the mouse](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for working effectively** |
-| If you press the <Ctrl + Shift> keys while dragging, the selected objects are resized according to the aspect ratio. |  |
+| If you press the &lt;Ctrl + Shift&gt; keys while dragging, the selected objects are resized according to the aspect ratio. |  |
 
 ##### Configuring the object size through properties
 
 To change the object size through properties, follow these steps:
 
-1. Select "Properties" > "Properties" > "Size and position".
+1. Select "Properties" &gt; "Properties" &gt; "Size and position".
 2. In the "Static value" column, enter the "Size - width" and "Size - height" coordinates.
 
 The object size is changed.
@@ -5434,8 +5434,8 @@ To change the object size using keys, follow these steps:
 1. Select the object you want to resize.
 2. On the keyboard, press the keys:
 
-   - <Ctrl + Arrow key>
-   - <Ctrl + Shift + Arrow key>
+   - &lt;Ctrl + Arrow key&gt;
+   - &lt;Ctrl + Shift + Arrow key&gt;
 
 The object size is changed depending on the arrow key selected.
 
@@ -5468,7 +5468,7 @@ The object is moved to the new position.
 
 To change the object position using properties, follow these steps:
 
-1. Select "Properties" > "Properties" > "Size and position".
+1. Select "Properties" &gt; "Properties" &gt; "Size and position".
 2. In the "Static value" column, enter the "Position - left" and "Position - top" coordinates.
 
 The position of the object in reference to the screen origin is changed. The zero position is located at the top left-hand corner of the screen.
@@ -5478,7 +5478,7 @@ The position of the object in reference to the screen origin is changed. The zer
 To change the object position using keys, follow these steps:
 
 1. Select the object you want to resize.
-2. On the keyboard, press the <Shift + Arrow> keys
+2. On the keyboard, press the &lt;Shift + Arrow&gt; keys
 
 The object position is changed depending on the arrow key selected.
 
@@ -5528,9 +5528,9 @@ The table below contains the objects and categories of the properties that you c
 
 These properties can be found in the Inspector window under:
 
-- "Properties > General"
-- "Properties > Format"
-- "Properties > Appearance"
+- "Properties &gt; General"
+- "Properties &gt; Format"
+- "Properties &gt; Appearance"
 
 The properties that you cannot transfer to another object are listed in the "With the exception of" column.
 
@@ -5546,48 +5546,48 @@ The properties that you cannot transfer to another object are listed in the "Wit
 | Format |  |  |
 | Appearance |  |  |
 | Symbolic IO field | General | Process value  Resource list |
-| Format | Content > Type |  |
+| Format | Content &gt; Type |  |
 | Appearance |  |  |
-| Button, switch | General | Content > Type |
+| Button, switch | General | Content &gt; Type |
 | Format |  |  |
 | Appearance |  |  |
-| Bar | General | Label > Text  Scale > Scale value - maximum, Scale value - minimum  Process value  Title > Text |
+| Bar | General | Label &gt; Text  Scale &gt; Scale value - maximum, Scale value - minimum  Process value  Title &gt; Text |
 | Appearance |  |  |
-| Slider | General | Label > Text  Title > Text |
+| Slider | General | Label &gt; Text  Title &gt; Text |
 | Appearance |  |  |
-| Gauge | General | Label > Text   Title > Text   Process value  Scale > Output format  Scale > Scale value - maximum, Scale value - minimum |
+| Gauge | General | Label &gt; Text   Title &gt; Text   Process value  Scale &gt; Output format  Scale &gt; Scale value - maximum, Scale value - minimum |
 | Appearance |  |  |
-| Check box, radio button, list box | Format | Content > Type |
+| Check box, radio button, list box | Format | Content &gt; Type |
 | Appearance |  |  |
 | Clock | General |  |
 | Appearance |  |  |
-| Miscellaneous | Name  Time - source  Tab index  Title > Text  Tooltip  Connection quality - show  Connection status |  |
+| Miscellaneous | Name  Time - source  Tab index  Title &gt; Text  Tooltip  Connection quality - show  Connection status |  |
 | Touch area | Appearance |  |
 | Alarm control | Format |  |
 | Appearance |  |  |
-| Miscellaneous | Alarms - show current  Alarms - current  Alarms - displayed  Label > Text  Alarm control > Header - settings, Color mode, Filter - allow, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Alarm statistics - view > Header - settings, Color mode, Filter - allow, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Alarm statistics - settings  Name  Information bar > Operator control - allow, Elements, Tooltips - show  Icon  Function bar > Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
+| Miscellaneous | Alarms - show current  Alarms - current  Alarms - displayed  Label &gt; Text  Alarm control &gt; Header - settings, Color mode, Filter - allow, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Alarm statistics - view &gt; Header - settings, Color mode, Filter - allow, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Alarm statistics - settings  Name  Information bar &gt; Operator control - allow, Elements, Tooltips - show  Icon  Function bar &gt; Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
 | Media Player | Appearance |  |
-| Miscellaneous | Autoplay  Label > Text  Name  Information bar > Operator control - allow, Elements, Tooltips - show  Icon  Function bar > Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Video output |  |
+| Miscellaneous | Autoplay  Label &gt; Text  Name  Information bar &gt; Operator control - allow, Elements, Tooltips - show  Icon  Function bar &gt; Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Video output |  |
 | Screen window | Format |  |
 | Appearance |  |  |
-| Miscellaneous | Label > Text  Screen name  Screen number  Tab order - Continue in screen window  Name  Icon  System  Tab index  Connection status |  |
+| Miscellaneous | Label &gt; Text  Screen name  Screen number  Tab order - Continue in screen window  Name  Icon  System  Tab index  Connection status |  |
 | Trend control | Appearance |  |
-| Miscellaneous | Label > Text  Name  Information bar > Operator control - allow, Elements, Tooltips - show  Icon  Function bar > Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
+| Miscellaneous | Label &gt; Text  Name  Information bar &gt; Operator control - allow, Elements, Tooltips - show  Icon  Function bar &gt; Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
 | Trend companion | Format |  |
 | Appearance |  |  |
-| Miscellaneous | Label > Text  Appearance - trend ruler > Header - settings, Color mode, Filter - allow, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Name  Information bar > Operator control - allow, Elements, Tooltips - show  Icon  Function bar > Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
+| Miscellaneous | Label &gt; Text  Appearance - trend ruler &gt; Header - settings, Color mode, Filter - allow, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Name  Information bar &gt; Operator control - allow, Elements, Tooltips - show  Icon  Function bar &gt; Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
 | Process control | Appearance |  |
-| Miscellaneous | Editing mode  Label > Text  Name  Online  Process control > Header - settings, Color mode, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Information bar > Operator control - allow, Elements, Tooltips - show  Icon  Function bar > Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time factor - average  Time zone |  |
+| Miscellaneous | Editing mode  Label &gt; Text  Name  Online  Process control &gt; Header - settings, Color mode, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Information bar &gt; Operator control - allow, Elements, Tooltips - show  Icon  Function bar &gt; Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time factor - average  Time zone |  |
 | Function trend control | Appearance |  |
-| Miscellaneous | Axes - swap  Label > Text  Name  Online  Information bar > Operator control - allow, Elements, Tooltips - show  Icon  Function bar > Operator control - allow, Elements, Tooltips - show  Tab index  Connection status |  |
+| Miscellaneous | Axes - swap  Label &gt; Text  Name  Online  Information bar &gt; Operator control - allow, Elements, Tooltips - show  Icon  Function bar &gt; Operator control - allow, Elements, Tooltips - show  Tab index  Connection status |  |
 | Web control | Appearance |  |
-| Miscellaneous | Label > Text  Name  Online  Information bar > Operator control - allow, Elements, Tooltips - show  Icon  Function bar > Operator control - allow, Elements, Tooltips - show  Tab index  Connection status |  |
+| Miscellaneous | Label &gt; Text  Name  Online  Information bar &gt; Operator control - allow, Elements, Tooltips - show  Icon  Function bar &gt; Operator control - allow, Elements, Tooltips - show  Tab index  Connection status |  |
 | Parameter set control | Appearance |  |
-| Miscellaneous | Editing mode  Label > Text  Details - hide  Name  Parameter view > Header - settings, Color mode, Filter - allow, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Information bar > Operator control - allow, Elements, Tooltips - show  Icon  Function bar > Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
+| Miscellaneous | Editing mode  Label &gt; Text  Details - hide  Name  Parameter view &gt; Header - settings, Color mode, Filter - allow, Selection - select entire rows, Selection - mode, Sorting - allow, Columns, Row height  Information bar &gt; Operator control - allow, Elements, Tooltips - show  Icon  Function bar &gt; Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
 | Faceplate container | Appearance |  |
-| Miscellaneous | Label > Text  Faceplate type  Name  Interface  Icon  Tab index  Connection status |  |
+| Miscellaneous | Label &gt; Text  Faceplate type  Name  Interface  Icon  Tab index  Connection status |  |
 | System diagnostics control | Appearance |  |
-| Miscellaneous | Label > Text  Name  Information bar > Operator control - allow, Elements, Tooltips - show  Icon  Function bar > Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
+| Miscellaneous | Label &gt; Text  Name  Information bar &gt; Operator control - allow, Elements, Tooltips - show  Icon  Function bar &gt; Operator control - allow, Elements, Tooltips - show  Tab index  Connection status  Time zone |  |
 
 ---
 
@@ -5611,7 +5611,7 @@ For certain objects, you can define a color background, a transparent background
 
 To design the fill pattern of an object, e.g. a circle, follow these steps:
 
-1. In the Inspector window, click "Properties > Properties > Appearance > Background - Fill pattern".
+1. In the Inspector window, click "Properties &gt; Properties &gt; Appearance &gt; Background - Fill pattern".
 2. To define a transparent background for the object, for example, select "Transparent".
 
 | Symbol | Meaning |
@@ -5625,7 +5625,7 @@ The object is shown as transparent.
 
 ##### Additional design options
 
-Additional design options are available in the Inspector window under "Properties > Properties > Appearance". The procedure for using these options is the same as the one described in the examples above.
+Additional design options are available in the Inspector window under "Properties &gt; Properties &gt; Appearance". The procedure for using these options is the same as the one described in the examples above.
 
 ##### Restriction for objects with events
 
@@ -5659,7 +5659,7 @@ Anti-aliasing affects the appearance of the border line at certain border width 
 ##### Change frame width
 
 1. Select the object.
-2. In the Inspector window, click "Properties > Properties > Appearance > Border - width".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Appearance &gt; Border - width".
 3. Enter the desired width.
 
 For elements and text boxes, the border is drawn on the inner edge of the object. For the other basic objects, it is drawn at the inner edge and outer edge. The values of the "Size - width" and "Size - height" properties remain the same.
@@ -5667,7 +5667,7 @@ For elements and text boxes, the border is drawn on the inner edge of the object
 ##### Change frame color
 
 1. Select the object.
-2. Click "Properties > Properties > Border - color" in the Inspector window.
+2. Click "Properties &gt; Properties &gt; Border - color" in the Inspector window.
 3. Enter the RGB values of the color or select a color from the drop-down list.
 
    Select "More colors" in the drop-down list to add custom colors to the selection or set the specifications using HSL.
@@ -5702,7 +5702,7 @@ You have the option of configuring the following table-based controls in such a 
 ##### Procedure
 
 1. Select, for example, an alarm control in the work area.
-2. In the Inspector window, click "Properties > Properties > Miscellaneous > Alarm control > Header - settings".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Miscellaneous &gt; Alarm control &gt; Header - settings".
 3. To allow the columns to be rearranged in runtime, enable the property "Columns - Change sequence".
 
    To prevent reordering, deselect the property.
@@ -6023,7 +6023,7 @@ To move the objects, follow these steps:
 
    - Moving by selecting and dragging with the mouse.
    - Moving using the arrow keys on your keyboard with pixel accuracy.
-   - Coarser move using <Shift> and the arrow keys on your keyboard. The increment depends on the settings that you have configured for the grid under "Options > Settings > Visualization > Screens > Grid".
+   - Coarser move using &lt;Shift&gt; and the arrow keys on your keyboard. The increment depends on the settings that you have configured for the grid under "Options &gt; Settings &gt; Visualization &gt; Screens &gt; Grid".
 
 The same principle also applies to multiple selection of the objects.
 
@@ -6035,7 +6035,7 @@ If you drag-and-drop the object to one of the corners of the screen, automatic s
 
 ##### Introduction
 
-You define the rotation of an object around a pivot point. In the Inspector window of an object, specify the coordinates of the "Pivot point X" and "Pivot point Y". Specify the angle of rotation for the object under "Properties > Rotation - angle".
+You define the rotation of an object around a pivot point. In the Inspector window of an object, specify the coordinates of the "Pivot point X" and "Pivot point Y". Specify the angle of rotation for the object under "Properties &gt; Rotation - angle".
 
 The pivot point can be outside the object.
 
@@ -6047,11 +6047,11 @@ The pivot point can be outside the object.
 
 Defines the rotation of an object around the pivot point. Rotation is specified in degrees. The configured start point corresponds to a value of 0°. The position of an object deviates from its configured initial position by the rotation value. The negative and positive values are allowed.
 
-You can also place an object outside the visible plant complex. You can view objects outside the visible area by using the "Layout > Objects out of range" task card. You change the position of an object in the Inspector window under "Properties".
+You can also place an object outside the visible plant complex. You can view objects outside the visible area by using the "Layout &gt; Objects out of range" task card. You change the position of an object in the Inspector window under "Properties".
 
 ##### Pivot point
 
-Define the pivot point under "Properties > Rotation - Pivot point":
+Define the pivot point under "Properties &gt; Rotation - Pivot point":
 
 - Absolute to the center point: Sets the rotation to around the absolute center of the object.
 - Absolute to screen: Sets the rotation to around the absolute zero point of the screen. The zero point is in the top left corner of the screen.
@@ -6073,7 +6073,7 @@ To configure the rotation of a rectangle, follow these steps:
 
 1. Open the "Basic objects" palette in the "Toolbox" task card.
 2. Drag the "Rectangle" object into the screen.
-3. Click "Properties > Pivot point" in the Inspector window.
+3. Click "Properties &gt; Pivot point" in the Inspector window.
 4. In the "Static value" column, select "Absolute to center point".
 5. Enter a value of 45 for "Rotation".
 
@@ -6101,7 +6101,7 @@ You can design the background color of an object. For certain objects, you can d
 
 To design the background color of an object, follow these steps:
 
-1. In the Inspector window, click "Properties > Properties > Appearance > Background - color".
+1. In the Inspector window, click "Properties &gt; Properties &gt; Appearance &gt; Background - color".
 2. Select a color for the background of the object, for example, yellow.
 
 | Symbol | Meaning |
@@ -6128,10 +6128,10 @@ You can define different color gradients for the objects. Change the category in
 To configure a horizontal color gradient for an object, follow these steps:
 
 1. Select an object, e.g. rectangle.
-2. In the Inspector window, select "Horizontal gradient" under "Properties > Background - fill pattern".
-3. Go to "Properties > Fill direction" and select the direction in which the color is to run, for example "Left to right".
-4. Select a background color for the horizontal color gradient, e.g. orange, under "Properties > Background - color".
-5. Select the other color for the gradient, e.g. yellow, under "Properties > Background - alternative color".
+2. In the Inspector window, select "Horizontal gradient" under "Properties &gt; Background - fill pattern".
+3. Go to "Properties &gt; Fill direction" and select the direction in which the color is to run, for example "Left to right".
+4. Select a background color for the horizontal color gradient, e.g. orange, under "Properties &gt; Background - color".
+5. Select the other color for the gradient, e.g. yellow, under "Properties &gt; Background - alternative color".
 
    ![Configure horizontal color gradient with two colors](images/100726610315_DV_resource.Stream@PNG-de-DE.png)
 
@@ -6164,7 +6164,7 @@ In WinCC Unified, you can change the colors that are used in a project in a cent
 You open the "Change object color" dialog box:
 
 - In the shortcut menu of a device or object
-- In the menu bar under "Tools > Change object color"
+- In the menu bar under "Tools &gt; Change object color"
 
   ![Opening the "Change object color" dialog box](images/152158155659_DV_resource.Stream@PNG-en-US.png)
 
@@ -6285,7 +6285,7 @@ The text has been entered into an object.
 
 The following special features apply to direct input:
 
-- Diacritics, such as ä ê ñ, can only be entered if the keyboard layout provides a key for this character. Key sequences such as <`a> for à, are not recognized.
+- Diacritics, such as ä ê ñ, can only be entered if the keyboard layout provides a key for this character. Key sequences such as &lt;`a&gt; for à, are not recognized.
 - It is not possible to enter Unicode characters using Alt codes.
 - Asian language characters cannot be entered using an Input Method Editor (IME).
 
@@ -6293,9 +6293,9 @@ If you need such characters in labeling the object, you have the following optio
 
 - Use a keyboard layout on which this character is present as a key.
 - Copy the character or full label from any source. Paste the text into the selected object.
-- Edit the label in the Inspector window under "Properties > Properties > General > Text".
+- Edit the label in the Inspector window under "Properties &gt; Properties &gt; General &gt; Text".
 
-Direct text entry also supports multiline text. Enter the line break using the <Shift + Return> shortcut.
+Direct text entry also supports multiline text. Enter the line break using the &lt;Shift + Return&gt; shortcut.
 
 ---
 
@@ -6317,11 +6317,11 @@ For objects with the "Text" property, you can enter the text on multiple lines.
 
 ##### Enable line break
 
-Enter the line break using the <Shift + Return> shortcut.
+Enter the line break using the &lt;Shift + Return&gt; shortcut.
 
 ##### Multiple line text for objects
 
-Enter the multiple line text for the following objects in the Inspector window under "Properties > Properties > General > Text":
+Enter the multiple line text for the following objects in the Inspector window under "Properties &gt; Properties &gt; General &gt; Text":
 
 - Text box
 - Button
@@ -6329,16 +6329,16 @@ Enter the multiple line text for the following objects in the Inspector window u
 
   ![Multiple line text for objects](images/148509488395_DV_resource.Stream@JPG-en-US.jpg)
 
-Enter the multiple line text for the following objects under "Properties > Properties > General > Title > Text".
+Enter the multiple line text for the following objects under "Properties &gt; Properties &gt; General &gt; Title &gt; Text".
 
 The text may only contain 2 lines at a time.
 
 - Bar
 - Slider
 
-For the following objects, enter the multiple line text under "General > Selection items > [x] Selection item> Text".
+For the following objects, enter the multiple line text under "General &gt; Selection items &gt; [x] Selection item&gt; Text".
 
-The text may contain more than 2 lines if the property "Format > Item height" is adjusted accordingly.
+The text may contain more than 2 lines if the property "Format &gt; Item height" is adjusted accordingly.
 
 - Check box
 - Radio button
@@ -6350,9 +6350,9 @@ You can use multiple line texts with a maximum of two lines in the text list for
 
 Alternatively, enter the multiple line text:
 
-- In the Inspector window, under "Properties > Text".
+- In the Inspector window, under "Properties &gt; Text".
 
-  Enter the line break using the <Shift + Return> shortcut. A line break is displayed as a blank.
+  Enter the line break using the &lt;Shift + Return&gt; shortcut. A line break is displayed as a blank.
 
   ![Alternatively, enter the multiple line text](images/148511360395_DV_resource.Stream@PNG-en-US.png)
 - By entering text directly into the object for:
@@ -6375,9 +6375,9 @@ For objects with the dynamization type "Resource list", you can have a text or a
 
 To display a text as the default entry in the object, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > General > Text".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Text".
 2. Select "Resource list" in the "Dynamization" column.
-3. In the "Resource list" dialog, select a text list under "Settings > Resource list".
+3. In the "Resource list" dialog, select a text list under "Settings &gt; Resource list".
 4. Click on the button in the "Resource list" line ![Displaying a text as the default entry in the object](images/148458605323_DV_resource.Stream@PNG-de-DE.png).   
    The selected text list opens.
 5. Select an entry in the "Text list entries" table as the default entry. The text from the default entry is displayed in the object.  
@@ -6387,9 +6387,9 @@ To display a text as the default entry in the object, follow these steps:
 
 To display a graphic as the default entry in the object, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > General > Graphic".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Graphic".
 2. Select "Resource list" in the "Dynamization" column.
-3. In the "Resource list" dialog, select a graphic list under "Settings > Resource list".
+3. In the "Resource list" dialog, select a graphic list under "Settings &gt; Resource list".
 4. Click on the button in the "Resource list" line ![Displaying a graphic as the default entry in the object](images/148458605323_DV_resource.Stream@PNG-de-DE.png).   
    The selected graphic list opens.
 5. Select an entry in the "Graphic list entries" table as the default entry. The graphic from the standard entry is displayed in the object.  
@@ -6431,7 +6431,7 @@ In the message texts, e.g. in the alarm control, the dynamic information may alr
 To configure a tag value in an object, e.g. in a text box, follow these steps:
 
 1. Configure a tag, e.g. "IntTag".
-2. In the Inspector window, select "Properties > Properties > General > Text".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Text".
 3. Enter a text in the "Static value" column in the input field, e.g. "IntTag_Value".
 4. Right-click in the input field. The shortcut menu opens.
 
@@ -6497,7 +6497,7 @@ You can link a text list to the following objects:
 
 To link a text list to an object, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > General > Text".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Text".
 2. Select the "Resource list" option in the "Dynamization" column. The "Resource list" page opens.
 3. Select the text list from which the text is displayed.
 
@@ -6529,7 +6529,7 @@ You can link a graphic list to the following objects:
 
 To link a graphic list to an object, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > General > Graphic".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Graphic".
 2. Select the "Resource list" option in the "Dynamization" column. The "Resource list" page opens.
 3. Select the graphic list from which the graphic is displayed.
 
@@ -6569,9 +6569,9 @@ You can link a tag to the following objects:
 
 To link a tag with an object, proceed as follows:
 
-1. In the Inspector window, select "Properties > Properties > General > Process value".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Process value".
 2. Select "Tag" in the "Dynamization" column. The "Tag" page will open.
-3. Select an existing tag under "Tag > Process > Tag".
+3. Select an existing tag under "Tag &gt; Process &gt; Tag".
 
    Alternatively, create a new tag using the "Add" button.
 
@@ -6608,11 +6608,11 @@ The objects of a single layer are also arranged hierarchically. If you create a 
 
 ##### Principle of the layer technique
 
-Always one layer of the 32 layers is active. New objects you add to the screen are always assigned to the active layer. The active layer is indicated in the "Layout > Layers" task card.
+Always one layer of the 32 layers is active. New objects you add to the screen are always assigned to the active layer. The active layer is indicated in the "Layout &gt; Layers" task card.
 
-When you open a screen, all 32 layers of the screen are displayed. You can hide all layers except for the active layer in the "Layout > Layers" task card. You then explicitly edit objects of the active layer.
+When you open a screen, all 32 layers of the screen are displayed. You can hide all layers except for the active layer in the "Layout &gt; Layers" task card. You then explicitly edit objects of the active layer.
 
-In the "Layout > Layers" task card, you can also manage layers and objects with drag-and-drop and the shortcut menu.
+In the "Layout &gt; Layers" task card, you can also manage layers and objects with drag-and-drop and the shortcut menu.
 
 ##### Application examples
 
@@ -6659,14 +6659,14 @@ By default, newly inserted objects are in the foreground of the active layer. Yo
 
 To move the objects, follow these steps:
 
-1. Select the object in the "Layout > Layers" task card.
+1. Select the object in the "Layout &gt; Layers" task card.
 2. Drag-and-drop the object to the required layer.
 
 ##### Moving objects to another layer in the Inspector window
 
 To move the objects to another layer in the Inspector window, follow these steps:
 
-1. In the drop-down list under "Properties > Miscellaneous > Layer", select the layer to which you want to move the object.
+1. In the drop-down list under "Properties &gt; Miscellaneous &gt; Layer", select the layer to which you want to move the object.
 
    Alternatively, you can enter the name of the layer in the input field.
 
@@ -6685,7 +6685,7 @@ To change the sequence of objects, follow these steps:
 
 ##### Result
 
-The object is arranged according to the selection. In the "Layout > Layers" task card, the order of the objects is displayed as follows: Objects of layer 0 are located in the screen background, while objects of layer 31 are located in the foreground. Within a layer, the objects displayed at the top of the list are in the background of the layer.
+The object is arranged according to the selection. In the "Layout &gt; Layers" task card, the order of the objects is displayed as follows: Objects of layer 0 are located in the screen background, while objects of layer 31 are located in the foreground. Within a layer, the objects displayed at the top of the list are in the background of the layer.
 
 #### Specifying the active layer (RT Unified)
 
@@ -6693,7 +6693,7 @@ The object is arranged according to the selection. In the "Layout > Layers" task
 
 The screen objects are always assigned to one of the 32 layers. There is always an active layer in the screen. New objects you add to the screen are always assigned to the active layer.
 
-The active layer is indicated by a ![Introduction](images/123408364299_DV_resource.Stream@PNG-de-DE.png) icon in the "Layout > Layers" task card.
+The active layer is indicated by a ![Introduction](images/123408364299_DV_resource.Stream@PNG-de-DE.png) icon in the "Layout &gt; Layers" task card.
 
 You can activate a different layer during configuration, if necessary.
 
@@ -6705,7 +6705,7 @@ You can activate a different layer during configuration, if necessary.
 
 To set a layer as active, follow these steps:
 
-1. Select "Layout > Layers" in the "Layout" task card.
+1. Select "Layout &gt; Layers" in the "Layout" task card.
 2. Select the "Set to active" command from the shortcut menu of a layer.
 
 ##### Result
@@ -6726,7 +6726,7 @@ You can show or hide the layers of a screen as required.
 
 To hide or show layers, follow these steps:
 
-1. Select the layer that you want to hide or show in the "Layout > Layers" task card.
+1. Select the layer that you want to hide or show in the "Layout &gt; Layers" task card.
 2. Click one of the icons next to the corresponding layer:
 
 - ![Hiding or showing layers](images/123409730187_DV_resource.Stream@PNG-de-DE.png) A shown layer is hidden.
@@ -6756,9 +6756,9 @@ You can toggle the visibility of layers in runtime in the Engineering System.
 
 To switch the visibility of layers in runtime in the Engineering System, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties, Miscellaneous > Layers".
+1. In the Inspector window, select "Properties &gt; Properties, Miscellaneous &gt; Layers".
 2. Select the layer whose runtime visibility you want to toggle.
-3. Under "Miscellaneous > Levels > [x] Level", select the "Runtime visible" option in the "Static value" column.
+3. Under "Miscellaneous &gt; Levels &gt; [x] Level", select the "Runtime visible" option in the "Static value" column.
 
    ![Toggling the visibility of layers in the Engineering System](images/160251664907_DV_resource.Stream@PNG-en-US.png)
 
@@ -6846,12 +6846,12 @@ You can lock and unlock individual operator controls or several operator control
 
 1. Configure operator controls of the type I/O field, button or slider.
 2. Select the required operator control(s).
-3. To lock the operator controls, enable the "Require explicit unlock" option under "Properties > Properties > Security".
+3. To lock the operator controls, enable the "Require explicit unlock" option under "Properties &gt; Properties &gt; Security".
 
    ![Procedure](images/142829706507_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/142829706507_DV_resource.Stream@PNG-en-US.png)
-4. To unlock the operator controls, disable the "Require explicit unlock" option under "Properties > Properties > Security".
+4. To unlock the operator controls, disable the "Require explicit unlock" option under "Properties &gt; Properties &gt; Security".
 
 In runtime, locked operator controls can only be operated when a release button is pressed at the same time.
 
@@ -6870,12 +6870,12 @@ So that you can operate locked operator controls on multi-touch devices, configu
 ##### Procedure
 
 1. Select the screen.
-2. Select the desired button of the screen under "Properties > Security" under "Enable explicit unlock".
+2. Select the desired button of the screen under "Properties &gt; Security" under "Enable explicit unlock".
 
    ![Procedure](images/142819085195_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/142819085195_DV_resource.Stream@PNG-en-US.png)
-3. To turn a release button back into a normal button, select a different button or "None" under "Properties > Security" under "Enable explicit unlock".
+3. To turn a release button back into a normal button, select a different button or "None" under "Properties &gt; Security" under "Enable explicit unlock".
 
 ## Using groups (RT Unified)
 
@@ -6927,7 +6927,7 @@ You cannot add the following objects to a group:
 
 All objects of a group are located in the same layer. The groups are arranged hierarchically in a layer.
 
-You can also add objects to a group or remove them from a group in the "Layout > Layers" task card using drag-and-drop.
+You can also add objects to a group or remove them from a group in the "Layout &gt; Layers" task card using drag-and-drop.
 
 #### Properties of a group
 
@@ -6962,7 +6962,7 @@ Follow these steps to group objects:
    ![Grouping objects](images/156789394955_DV_resource.Stream@PNG-de-DE.png)
 
    ![Grouping objects](images/156789394955_DV_resource.Stream@PNG-de-DE.png)
-2. Select the "Group > Group" command from the shortcut menu.
+2. Select the "Group &gt; Group" command from the shortcut menu.
 
    ![Grouping objects](images/156789403531_DV_resource.Stream@PNG-en-US.png)
 
@@ -7023,7 +7023,7 @@ To ungroup a group, follow these steps:
 
 1. Select the group.
 2. Right-click to open the shortcut menu.
-3. In the shortcut menu, select the "Group > Ungroup" command.
+3. In the shortcut menu, select the "Group &gt; Ungroup" command.
 
 The group is ungrouped. The objects from the group remain in the screen.
 
@@ -7058,7 +7058,7 @@ The size of the group is changed.
 | Symbol | Meaning |
 | --- | --- |
 | ![Changing the size of the group with the mouse](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for working effectively** |
-| If you press the <Shift> key while dragging, the group is resized according to the aspect ratio. |  |
+| If you press the &lt;Shift&gt; key while dragging, the group is resized according to the aspect ratio. |  |
 
 > **Note**
 >
@@ -7070,7 +7070,7 @@ The size of the group is changed.
 To change the size of the group through properties, follow these steps:
 
 1. Select the group whose size you want to change.
-2. Select "Properties" > "Properties" > "Size and position".
+2. Select "Properties" &gt; "Properties" &gt; "Size and position".
 3. In the "Static value" column, enter the "Size - width" and "Size - height" coordinates.
 
 The object size is changed.
@@ -7092,7 +7092,7 @@ To copy a group, choose one of the following options:
 - Right-click the group in the "Layers" task card. Select "Copy" and "Paste" in the shortcut menu.
 
   ![Copying and pasting a group](images/169750989707_DV_resource.Stream@PNG-en-US.png)
-- Select the group. Copy the group with <Ctrl + C> and paste it with <Ctrl + V>.
+- Select the group. Copy the group with &lt;Ctrl + C&gt; and paste it with &lt;Ctrl + V&gt;.
 
 You can paste the copied group:
 
@@ -7131,7 +7131,7 @@ To ungroup a group, follow these steps:
    ![Ungrouping a group](images/169820243467_DV_resource.Stream@PNG-en-US.png)
 
    ![Ungrouping a group](images/169820243467_DV_resource.Stream@PNG-en-US.png)
-3. In the shortcut menu, select the "Group > Ungroup" command.
+3. In the shortcut menu, select the "Group &gt; Ungroup" command.
 
 The group is ungrouped. The objects from the group remain in the screen.
 
@@ -7154,13 +7154,13 @@ To move the object group, follow these steps:
 
    - Moving by selecting and dragging with the mouse.
    - Moving with pixel accuracy using the arrow keys on your keyboard.
-   - Moving in larger pixel increments using <Shift> and the arrow keys on your keyboard. The increment depends on the settings you configured for the grid under "Options > Settings > Visualization > Screens > Grid".
+   - Moving in larger pixel increments using &lt;Shift&gt; and the arrow keys on your keyboard. The increment depends on the settings you configured for the grid under "Options &gt; Settings &gt; Visualization &gt; Screens &gt; Grid".
 
 #### Moving groups between layers (RT Unified)
 
 ##### Introduction
 
-You can move groups between layers in the "Layout > Layers" task card and change the order of groups within a layer.
+You can move groups between layers in the "Layout &gt; Layers" task card and change the order of groups within a layer.
 
 The objects in the groups are moved to the same layer as the parent group and keep their order.
 
@@ -7204,9 +7204,9 @@ When you select an object within the group, the group goes into editing mode. Wh
 
 To activate editing mode for a group, choose one of the following options:
 
-- Click an object in the group with the left mouse button. Select "Group > Edit group" in the shortcut menu.
+- Click an object in the group with the left mouse button. Select "Group &gt; Edit group" in the shortcut menu.
 - Double-click an object in the group.
-- Select an object within a group by clicking on the object in the "Layout > Layers" task card.
+- Select an object within a group by clicking on the object in the "Layout &gt; Layers" task card.
 - An object in the group can be selected through an error message, cross-reference or search result.
 
 ##### Options in editing mode
@@ -7244,7 +7244,7 @@ The group is updated after size or position changes of the objects it contains.
 
 You can rotate a group and the objects in the group.
 
-You define the rotation of a group around a pivot point. You can specify the "Pivot point X" and "Pivot point Y" coordinates of the pivot point in the Inspector window of the group. You can specify the rotation angle for the rotation of the group under "Properties > Rotation - angle".
+You define the rotation of a group around a pivot point. You can specify the "Pivot point X" and "Pivot point Y" coordinates of the pivot point in the Inspector window of the group. You can specify the rotation angle for the rotation of the group under "Properties &gt; Rotation - angle".
 
 The pivot point can also be located outside the group.
 
@@ -7258,7 +7258,7 @@ The rotation defines the rotation of the group around the pivot point. The value
 
 ##### Pivot point
 
-Define the pivot point under "Properties > Rotation - pivot point":
+Define the pivot point under "Properties &gt; Rotation - pivot point":
 
 - Absolute to center: Specifies that the rotation is an absolute rotation around the center point of the group.
 - Absolute to screen: Specifies that the rotation is an absolute rotation around the zero point of the screen. In this case, the zero point is located at the top left corner of the screen.
@@ -7331,7 +7331,7 @@ To add an object to a group, follow these steps:
    ![Adding an object to a group in the screen editor](images/169830644107_DV_resource.Stream@PNG-en-US.png)
 
    ![Adding an object to a group in the screen editor](images/169830644107_DV_resource.Stream@PNG-en-US.png)
-4. In the shortcut menu, select the "Group > Add to group" command.
+4. In the shortcut menu, select the "Group &gt; Add to group" command.
 
    The object(s) are added to the group.
 
@@ -7341,7 +7341,7 @@ If you have selected objects that are not supported, e.g. a control or another g
 
 ##### Adding an object in a layer to the group
 
-You can also add the objects to a group in the "Layout > Layers" task card using drag-and-drop.
+You can also add the objects to a group in the "Layout &gt; Layers" task card using drag-and-drop.
 
 #### Aligning objects in the group (RT Unified)
 
@@ -7362,7 +7362,7 @@ The reference object is the object that you selected first.
 
 To align selected objects in a group in relation to a reference object, follow these steps:
 
-1. Select the desired objects in the "Layout > Layers" task card.
+1. Select the desired objects in the "Layout &gt; Layers" task card.
 2. Click on the bar above the toolbar.
 
    The icons in the toolbar are displayed.
@@ -7402,7 +7402,7 @@ The size of the group is automatically adapted after changing the position of th
 
 To move an object within the group, follow these steps:
 
-- Move the object in the group in the "Layout > Layers" task card using drag-and-drop.
+- Move the object in the group in the "Layout &gt; Layers" task card using drag-and-drop.
 
   ![Moving an object within the group](images/169830469131_DV_resource.Stream@PNG-en-US.png)
 - Double-click the object.
@@ -7417,7 +7417,7 @@ To move an object within the group, follow these steps:
 
 You can remove one or more objects from the group using multiple selection as follows:
 
-- Drag the object onto a layer in the "Layout > Layers" task card.
+- Drag the object onto a layer in the "Layout &gt; Layers" task card.
 - Drag the object onto another object outside the group.
 - Remove the object via the shortcut menu in the screen editor.
 
@@ -7433,7 +7433,7 @@ The size of the group is automatically adapted after the removal of objects.
 
 To drag an object onto a layer, follow these steps:
 
-1. Select an object in the group, e.g. Button_1, in the "Layout > Layers" task card.
+1. Select an object in the group, e.g. Button_1, in the "Layout &gt; Layers" task card.
 
    ![Dragging the object onto a layer](images/169805871755_DV_resource.Stream@PNG-en-US.png)
 
@@ -7453,7 +7453,7 @@ To drag an object onto a layer, follow these steps:
 
 To drag an object onto another object outside the group, follow these steps:
 
-1. Select an object in the group, e.g. Button_1, in the "Layout > Layers" task card.
+1. Select an object in the group, e.g. Button_1, in the "Layout &gt; Layers" task card.
 
    ![Dragging the object onto another object outside the group](images/169805871755_DV_resource.Stream@PNG-en-US.png)
 
@@ -7481,7 +7481,7 @@ To remove an object via the shortcut menu in the screen editor, follow these ste
    ![Removing the object via the shortcut menu in the screen editor](images/169807758603_DV_resource.Stream@PNG-en-US.png)
 
    ![Removing the object via the shortcut menu in the screen editor](images/169807758603_DV_resource.Stream@PNG-en-US.png)
-3. Select "Group > Remove from group".
+3. Select "Group &gt; Remove from group".
 
    The object is removed from the group and placed outside the group in the screen.
 
@@ -7503,7 +7503,7 @@ To remove an object via the shortcut menu in the screen editor, follow these ste
 
 You can delete one or more objects from the group using multiple selection as follows:
 
-- Delete the object in a layer in the "Layout > Layers" task card.
+- Delete the object in a layer in the "Layout &gt; Layers" task card.
 - Delete the object via the shortcut menu in the screen editor.
 
 A group may also contain a single object. If you delete the last object from the group, the group is automatically deleted.
@@ -7518,7 +7518,7 @@ The size of the group is automatically adapted after the removal of objects.
 
 To delete an object in a layer, follow these steps:
 
-1. Select an object in the group, e.g. Button_1, in the "Layout > Layers" task card.
+1. Select an object in the group, e.g. Button_1, in the "Layout &gt; Layers" task card.
 
    ![Deleting an object in the layer](images/169805871755_DV_resource.Stream@PNG-en-US.png)
 
@@ -7617,7 +7617,7 @@ The following properties affect the entire group.
 
 ##### Introduction
 
-The object properties in the group are displayed as aggregated properties in the Inspector window under "Properties > Miscellaneous > Interface". You can either configure these properties with a static value or dynamize them.
+The object properties in the group are displayed as aggregated properties in the Inspector window under "Properties &gt; Miscellaneous &gt; Interface". You can either configure these properties with a static value or dynamize them.
 
 > **Note**
 >
@@ -7634,7 +7634,7 @@ The following applies for the aggregated properties with a static value:
 - If the static value of a configured property is the same for all objects, the current value is displayed at the group level.
 - If the static value of a configured property is different for the objects, "Ambiguous value" is displayed in the input field in the "Static value" column.
 - If the configured static value of a property of an object is invalid, this is not indicated at the group level. Validation only takes place at the level of the individual objects.
-- When you configure a static value for a property under "Properties > Miscellaneous > Interface", the value is passed to every object in the group that has this property.
+- When you configure a static value for a property under "Properties &gt; Miscellaneous &gt; Interface", the value is passed to every object in the group that has this property.
 - For some properties, e.g. the process value, you cannot configure a static value at the group level.
 
 ![Configuring aggregated properties with a static value](images/170254296715_DV_resource.Stream@PNG-en-US.png)
@@ -7643,7 +7643,7 @@ The following applies for the aggregated properties with a static value:
 
 The following applies to dynamizing aggregated properties on the group level:
 
-- If you configure dynamization for a property under "Properties > Miscellaneous > Interface", this dynamization is only displayed on the group level in the engineering system. The dynamization is not visible in the properties of the objects in the group in the engineering system.
+- If you configure dynamization for a property under "Properties &gt; Miscellaneous &gt; Interface", this dynamization is only displayed on the group level in the engineering system. The dynamization is not visible in the properties of the objects in the group in the engineering system.
 
   In Runtime, the dynamization of the group is applied to all objects in the group.
 
@@ -7741,8 +7741,8 @@ If the property is dynamically configured for multiple selection, the dynamic co
 
 If a multiple selection includes the objects of the topmost level as well as groups, you can change the background color of all objects.
 
-1. Define the background color for the objects of the topmost layer under "Properties > Appearance > Background color".
-2. Define the background color for the grouped objects under "Properties > Miscellaneous > Interface > Background color".
+1. Define the background color for the objects of the topmost layer under "Properties &gt; Appearance &gt; Background color".
+2. Define the background color for the grouped objects under "Properties &gt; Miscellaneous &gt; Interface &gt; Background color".
 
 All objects in the multiple selection have the same background color.
 
@@ -7811,7 +7811,7 @@ Three types are available for the text lists:
 
 ##### Multilingual texts
 
-You can configure multiple languages for the texts in a text list. The texts will then be displayed in the set language in runtime. To this purpose you set the languages in the Project window under "Languages & Resources > Project languages."
+You can configure multiple languages for the texts in a text list. The texts will then be displayed in the set language in runtime. To this purpose you set the languages in the Project window under "Languages &amp; Resources &gt; Project languages."
 
 ##### Configuration steps
 
@@ -7880,7 +7880,7 @@ To assign texts and values to a range text list, follow these steps:
    ![Procedure](images/131309840523_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/131309840523_DV_resource.Stream@PNG-en-US.png)
-2. Select one of the options in the Inspector window "Properties > General > Value" and enter values.
+2. Select one of the options in the Inspector window "Properties &gt; General &gt; Value" and enter values.
 3. Enter the text that is displayed in runtime when the tag has the specified value or lies within the specified range of values under "Text." The text may contain a maximum of 128 characters.
 4. Activate the "Default entry" for all unassigned values. The entered text is always displayed when the tag has an undefined value. Only one default entry is possible per list.
 5. Add additional entries to the text list for additional value ranges.
@@ -7915,10 +7915,10 @@ To assign texts and values to a bit text list, follow these steps:
    ![Procedure](images/131227251595_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/131227251595_DV_resource.Stream@PNG-en-US.png)
-2. Select the setting "Single value" in the Inspector window "Properties > General > Value" and enter "0" as "value".
+2. Select the setting "Single value" in the Inspector window "Properties &gt; General &gt; Value" and enter "0" as "value".
 3. Under "Text", type in the text that is displayed in runtime when the tag has the value "0". The text may contain a maximum of 128 characters.
 4. Click "Add" in the "Text list entries" table. A second list entry is created.
-5. Select the setting "Single value" in the Inspector window "Properties > General > Value" and enter "1" as "value".
+5. Select the setting "Single value" in the Inspector window "Properties &gt; General &gt; Value" and enter "1" as "value".
 6. Under "Text", type in the text that is displayed in runtime when the tag has the value "1".
 
 ##### Result
@@ -7947,7 +7947,7 @@ To assign texts and values to a bit number text list, follow these steps:
    ![Assign texts and values to the bit number text list](images/131237089035_DV_resource.Stream@PNG-en-US.png)
 
    ![Assign texts and values to the bit number text list](images/131237089035_DV_resource.Stream@PNG-en-US.png)
-2. In the Inspector window, select the "Single value" setting under "Properties > General > Value". Enter "5", for example, for "Value".
+2. In the Inspector window, select the "Single value" setting under "Properties &gt; General &gt; Value". Enter "5", for example, for "Value".
 3. For all unassigned values, enable the "Default" option for the default entry. The text appears when the tag assumes an undefined value. Only one default entry is possible per list.
 4. Enter the text under "Text". When the tag has taken the value "5", the text is displayed in runtime.   
    The text may contain a maximum of 128 characters.
@@ -7965,7 +7965,7 @@ A bit number text list is created. Texts that appear in runtime are assigned to 
 
 For objects with the "Text" property, you can enter the text on multiple lines.
 
-Use the <Shift + Return> key combination to enter a line break in the text entry. Line breaks are represented in the text box by the "¶" paragraph mark.
+Use the &lt;Shift + Return&gt; key combination to enter a line break in the text entry. Line breaks are represented in the text box by the "¶" paragraph mark.
 
 ---
 
@@ -7988,9 +7988,9 @@ The output value and value application for text lists are specified in the displ
 
 ##### Procedure
 
-1. In the Inspector window under "Properties > Properties > General > Text" in the "Dynamization" column, select the "Resource list" entry.
-2. Select the tag whose values determine the display in the text box under "Resource list > Settings > Tag".
-3. Select the text list which you want to display in runtime under "Resource list > Settings > Resource list".
+1. In the Inspector window under "Properties &gt; Properties &gt; General &gt; Text" in the "Dynamization" column, select the "Resource list" entry.
+2. Select the tag whose values determine the display in the text box under "Resource list &gt; Settings &gt; Tag".
+3. Select the text list which you want to display in runtime under "Resource list &gt; Settings &gt; Resource list".
 4. Click on the button in the "Resource list" line ![Procedure](images/148458605323_DV_resource.Stream@PNG-de-DE.png).   
    The selected text list opens.
 5. Select an entry in the "Text list entries" table as the default entry. The text from the default entry is displayed in the object.  
@@ -8043,7 +8043,7 @@ To display a text list in an object, e.g. in a text box, follow these steps:
 
 1. Configure a tag, e.g. "IntTag".
 2. Configure a text list, e.g. "Textliste_1".
-3. In the Inspector window, select "Properties > Properties > General > Text".
+3. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Text".
 4. Enter a text in the "Static value" column in the input field, e.g. "Text list".
 5. Right-click in the input field. The shortcut menu opens.
 
@@ -8134,7 +8134,7 @@ Three types are available for the graphic lists:
 
 ##### Multilingual graphics
 
-The graphics in a graphic list can be configured as multilingual. The graphics are then be displayed in the set runtime language. To this purpose you set the languages in the Project window under "Languages & Resources > Project languages".
+The graphics in a graphic list can be configured as multilingual. The graphics are then be displayed in the set runtime language. To this purpose you set the languages in the Project window under "Languages &amp; Resources &gt; Project languages".
 
 ##### Configuration steps
 
@@ -8200,7 +8200,7 @@ The following options are available:
    ![Procedure](images/100732484107_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/100732484107_DV_resource.Stream@PNG-en-US.png)
-2. Select an option in the Inspector window "Properties > General > Value". Enter values.
+2. Select an option in the Inspector window "Properties &gt; General &gt; Value". Enter values.
 3. In the "Graphic" column, select a graphic to be displayed in runtime if the tag has the specified value or is within the specified value range.
 4. For all unassigned values, enable the "Default" option for the default entry. The graphic is displayed when the tag has an undefined value. Only one default entry is possible per list.
 5. Add additional entries to the graphic list for additional value ranges.
@@ -8212,7 +8212,7 @@ Selecting the default entry is not possible in runtime.
 | Symbol | Meaning |
 | --- | --- |
 | ![Procedure](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for an efficient procedure** |
-| Inserting a graphic using drag-and-drop operation:  | Symbol | Meaning | | --- | --- | | 1. Select a graphic in the library or in your file system. 2. Drag-and-drop the graphic into the "Graphic list entries > Graphic" table. |  | |  |
+| Inserting a graphic using drag-and-drop operation:  | Symbol | Meaning | | --- | --- | | 1. Select a graphic in the library or in your file system. 2. Drag-and-drop the graphic into the "Graphic list entries &gt; Graphic" table. |  | |  |
 
 ##### Result
 
@@ -8239,15 +8239,15 @@ For each bit graphic list you specify which graphic is displayed at which bit va
    ![Procedure](images/131279197835_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/131279197835_DV_resource.Stream@PNG-en-US.png)
-2. Select the setting "Single value" in the Inspector window under "Properties > General > Value" and enter "0" as "value".
+2. Select the setting "Single value" in the Inspector window under "Properties &gt; General &gt; Value" and enter "0" as "value".
 3. Click "Add" in the "Graphic list entries" table. A second list entry is created.
-4. Select the setting "Single value" in the Inspector window under "Properties > General > Value" and enter "1" as "value".
+4. Select the setting "Single value" in the Inspector window under "Properties &gt; General &gt; Value" and enter "1" as "value".
 5. Select a graphic that is displayed in runtime when the tag has the value "1".
 
 | Symbol | Meaning |
 | --- | --- |
 | ![Procedure](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for an efficient procedure** |
-| Inserting a graphic using drag-and-drop operation:  | Symbol | Meaning | | --- | --- | | 1. Select a graphic in the library or in your file system. 2. Drag-and-drop the graphic into the "Graphic list entries > Graphic" table. |  | |  |
+| Inserting a graphic using drag-and-drop operation:  | Symbol | Meaning | | --- | --- | | 1. Select a graphic in the library or in your file system. 2. Drag-and-drop the graphic into the "Graphic list entries &gt; Graphic" table. |  | |  |
 
 ##### Result
 
@@ -8276,9 +8276,9 @@ To assign the graphics and values to a bit number graphic list, follow these ste
    ![Assigning graphics and values to the bit number graphic list](images/131279207947_DV_resource.Stream@PNG-en-US.png)
 
    ![Assigning graphics and values to the bit number graphic list](images/131279207947_DV_resource.Stream@PNG-en-US.png)
-2. Select the "Single value" settings in the Inspector window "Properties > General > Value". Enter "5", for example, for "Value".
+2. Select the "Single value" settings in the Inspector window "Properties &gt; General &gt; Value". Enter "5", for example, for "Value".
 3. For all unassigned values, enable the "Default" option for the default entry. The graphic is displayed when the tag has an undefined value. Only one default entry is possible per list.
-4. Enter the graphic under "Properties > General > Graphic". When the tag has taken the value "5", the graph is displayed in runtime.
+4. Enter the graphic under "Properties &gt; General &gt; Graphic". When the tag has taken the value "5", the graph is displayed in runtime.
 5. You can add additional entries to the graphic list for more bit numbers.
 
 **Note**
@@ -8288,7 +8288,7 @@ Selecting the default entry is not possible in runtime.
 | Symbol | Meaning |
 | --- | --- |
 | ![Assigning graphics and values to the bit number graphic list](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for an efficient procedure** |
-| Inserting a graphic using drag-and-drop operation:  | Symbol | Meaning | | --- | --- | | 1. Select a graphic in the library or in your file system. 2. Drag-and-drop the graphic into the "Graphic list entries > Graphic" table. |  | |  |
+| Inserting a graphic using drag-and-drop operation:  | Symbol | Meaning | | --- | --- | | 1. Select a graphic in the library or in your file system. 2. Drag-and-drop the graphic into the "Graphic list entries &gt; Graphic" table. |  | |  |
 
 ##### Result
 
@@ -8309,9 +8309,9 @@ The output value and value application for graphic list are specified in the dis
 
 ##### Procedure
 
-1. In the Inspector window under "Properties > Properties > General > Graphics", in the "Dynamization" column, select the "Resource list" entry.
-2. Under "Resource list > Settings > Tag", select the tag whose values determine the display in the graphic view.
-3. Select the graphic list which you want to have displayed in runtime under "Resource list > Settings > Resource list".
+1. In the Inspector window under "Properties &gt; Properties &gt; General &gt; Graphics", in the "Dynamization" column, select the "Resource list" entry.
+2. Under "Resource list &gt; Settings &gt; Tag", select the tag whose values determine the display in the graphic view.
+3. Select the graphic list which you want to have displayed in runtime under "Resource list &gt; Settings &gt; Resource list".
 4. Click on the button in the "Resource list" line ![Procedure](images/148458605323_DV_resource.Stream@PNG-de-DE.png).   
    The selected graphic list opens.
 5. Select an entry in the "Graphic list entries" table as the default entry. The graphic from the standard entry is displayed in the object.  
@@ -8419,7 +8419,7 @@ To search for a type of dynamization by entering the type of dynamization, follo
 
 1. Click on the "Filter" icon.
 2. Enter a type of dynamization.
-3. Confirm your selection with the <Return> key.
+3. Confirm your selection with the &lt;Return&gt; key.
 
    ![Find type of dynamization by input](images/160122288139_DV_resource.Stream@PNG-en-US.png)
 
@@ -8499,13 +8499,13 @@ When you dynamize an object property via a tag, the object property is changed i
 To dynamize an object property via a tag, follow these steps:
 
 1. Select the object.
-2. Under "Properties > Properties > Dynamization" select the object property in the Inspector window.
+2. Under "Properties &gt; Properties &gt; Dynamization" select the object property in the Inspector window.
 3. Select the "Tag" option. The area for configuring the tags is displayed.
 
    ![Dynamizing an object property via a tag](images/169385421963_DV_resource.Stream@PNG-en-US.png)
 
    ![Dynamizing an object property via a tag](images/169385421963_DV_resource.Stream@PNG-en-US.png)
-4. Select a tag under "Tag > Process > Tag". Only the relevant tags are displayed in the selection dialog. If you want to see all tags, enable "Show all" in the selection dialog.
+4. Select a tag under "Tag &gt; Process &gt; Tag". Only the relevant tags are displayed in the selection dialog. If you want to see all tags, enable "Show all" in the selection dialog.
 5. Define the evaluation type of the tags:
 
    - None
@@ -8552,7 +8552,7 @@ You can use "Copy" and "Paste" to transfer the conditions of an object property 
 
 To transfer the conditions of an object property to the same or similar properties of another object, follow these steps:
 
-1. Select one or more conditions under "Type > Condition".
+1. Select one or more conditions under "Type &gt; Condition".
 2. Select "Copy" in the shortcut menu.
 
    ![Transferring property conditions](images/155660103051_DV_resource.Stream@PNG-en-US.png)
@@ -8584,7 +8584,7 @@ You can automatically fill the properties of tags in the "Range" and "Multiple b
 
 To automatically fill in the property values, follow these steps:
 
-1. Select a cell under "Tag > Type > Condition".
+1. Select a cell under "Tag &gt; Type &gt; Condition".
 2. Drag the blue border up or down. The value is applied to the target cells.
 
    ![Auto-fill property values](images/148801957899_DV_resource.Stream@PNG-en-US.png)
@@ -8621,9 +8621,9 @@ The following example shows the dynamization of a button. The button changes its
 To dynamize an object property with "Range" evaluation type, follow these steps:
 
 1. Select the object, for example, a button.
-2. In the Inspector window under "Properties > Properties > General > Text > Background - Alternative color", dynamize an object property, such as "Background - Alternative color".
+2. In the Inspector window under "Properties &gt; Properties &gt; General &gt; Text &gt; Background - Alternative color", dynamize an object property, such as "Background - Alternative color".
 3. Select "Tag" in the "Dynamization" column.
-4. Select a tag under "Tag > Process > Tag".
+4. Select a tag under "Tag &gt; Process &gt; Tag".
 5. Select "Range" as the evaluation type.
 6. Enter the ranges in the "Condition" column.
 7. Define the alternative background color for each area in the "Background - Alternative Color" column.
@@ -8672,9 +8672,9 @@ The following example shows the dynamization of a button. The button changes its
 To dynamize an object property with the "Multiple bits" evaluation type, follow these steps:
 
 1. Select the object, for example, a button.
-2. In the Inspector window under "Properties > Properties > General > Text > Background - Alternative color", dynamize an object property, such as "Background - Alternative color".
+2. In the Inspector window under "Properties &gt; Properties &gt; General &gt; Text &gt; Background - Alternative color", dynamize an object property, such as "Background - Alternative color".
 3. Select "Tag" in the "Dynamization" column.
-4. Select a tag under "Tag > Process > Tag".
+4. Select a tag under "Tag &gt; Process &gt; Tag".
 5. Select "Multiple bits" as the type.
 6. Enter the bit number.
 7. Define the alternative background colors for the bit number in the "Background - alternative color" column.
@@ -8725,9 +8725,9 @@ The following example shows the dynamization of a button. The button changes its
 To dynamize an object property with the "Single bit" evaluation type, follow these steps:
 
 1. Select the object, for example, a button.
-2. In the Inspector window under "Properties > Properties > General > Text > Background - Alternative color", dynamize an object property, such as "Background - Alternative color".
+2. In the Inspector window under "Properties &gt; Properties &gt; General &gt; Text &gt; Background - Alternative color", dynamize an object property, such as "Background - Alternative color".
 3. Select "Tag" in the "Dynamization" column.
-4. Select a tag under "Tag > Process > Tag".
+4. Select a tag under "Tag &gt; Process &gt; Tag".
 5. Select "Single bit" as the evaluation type.
 6. Select the bit position, for example, "3".
 7. Define the properties for the "0" and "1" value of the condition.
@@ -8769,7 +8769,7 @@ You can dynamize the object properties via a script. The execution of the script
 To dynamize an object property using a script, follow these steps:
 
 1. Select the object, for example, a button.
-2. In the Inspector window under "Properties > Properties > Dynamization", dynamize an object property, such as "Background - Color".
+2. In the Inspector window under "Properties &gt; Properties &gt; Dynamization", dynamize an object property, such as "Background - Color".
 3. In the "Dynamization" column, select the "Script" option. The editor for scripts is displayed. Select one of the following options:
 
    - Create a "Global definition". Click "Global definition". Write the code for the global definition.
@@ -8816,9 +8816,9 @@ You can dynamize the object properties via a resource list. In runtime, the entr
 To dynamize an object property via a resource list, follow these steps:
 
 1. Select the object.
-2. In the Inspector window, select "Properties > Properties > General > Text".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Text".
 3. Select "Resource list" in the "Dynamization" column.
-4. Under "Settings > Resource list" in the "Resource list" dialog, select a text list, for example.
+4. Under "Settings &gt; Resource list" in the "Resource list" dialog, select a text list, for example.
 5. Click on the button in the "Resource list" line ![Dynamizing an object property via a resource list](images/148458605323_DV_resource.Stream@PNG-de-DE.png).
 
    The selected text list is opened directly for editing.
@@ -8933,7 +8933,7 @@ To select an object property for dynamization with an expression, follow these s
 
    ![Select object property](images/160122567179_DV_resource.Stream@PNG-en-US.png)
 
-Alternatively, specify "Expression" as the dynamization type for a property in the "Dynamization" column in the Inspector window, e.g. for "Foreground - Color" under "Properties > Foreground - color".
+Alternatively, specify "Expression" as the dynamization type for a property in the "Dynamization" column in the Inspector window, e.g. for "Foreground - Color" under "Properties &gt; Foreground - color".
 
 ###### Delete object property
 
@@ -8952,7 +8952,7 @@ To delete the selected object property, follow these steps:
 
 To dynamize an object property via an expression, follow these steps:
 
-1. In the "Condition" column, click "<Add>".
+1. In the "Condition" column, click "&lt;Add&gt;".
 2. Click ![Dynamizing an object property with an expression](images/160131120779_DV_resource.Stream@PNG-de-DE.png).
 
    The editor for expressions is displayed.
@@ -9012,8 +9012,8 @@ The parentheses define the evaluation order. The expression inside parentheses i
 
 Examples:
 
-- (TRUE OR FALSE)AND TRUE => (TRUE)AND TRUE => TRUE
-- TRUE OR(FALSE AND TRUE) => TRUE OR(FALSE) => TRUE
+- (TRUE OR FALSE)AND TRUE =&gt; (TRUE)AND TRUE =&gt; TRUE
+- TRUE OR(FALSE AND TRUE) =&gt; TRUE OR(FALSE) =&gt; TRUE
 
 ###### Operator AND
 
@@ -9093,14 +9093,14 @@ You configure:
 
 To add a graphic to the project graphics, follow these steps:
 
-1. In the project tree under "Languages and resources > Project graphics", add a graphic, e.g. "Icon_filter", from your storage location.
+1. In the project tree under "Languages and resources &gt; Project graphics", add a graphic, e.g. "Icon_filter", from your storage location.
 
 ###### Configuring the HMI tag
 
 To configure the HMI tag for die dynamization of the "Graphic" property, follow these steps:
 
 1. Configure a "MyTag" tag of the data type "WString" in the project tree under "HMI tags".
-2. In the Inspector window of the "MyTag" tag under "Properties > Properties > Values", enter the name of the added "Icon_filter" graphic in the "Start value" input field.
+2. In the Inspector window of the "MyTag" tag under "Properties &gt; Properties &gt; Values", enter the name of the added "Icon_filter" graphic in the "Start value" input field.
 
    ![Configuring the HMI tag](images/155920563595_DV_resource.Stream@PNG-en-US.png)
 
@@ -9110,24 +9110,24 @@ To configure the HMI tag for die dynamization of the "Graphic" property, follow 
 
 Follow these steps to dynamize the "Graphic" property at the "Button" object via the "MyTag" tag of the "Range" type:
 
-1. Click "Properties > Properties > General > Graphic" in the Inspector window of the screen editor. In the drop-down list of the "Dynamization" column, select the entry "Tag".
+1. Click "Properties &gt; Properties &gt; General &gt; Graphic" in the Inspector window of the screen editor. In the drop-down list of the "Dynamization" column, select the entry "Tag".
 
    ![Dynamizing the "Graphic" property via tag](images/155849206795_DV_resource.Stream@PNG-en-US.png)
 
    ![Dynamizing the "Graphic" property via tag](images/155849206795_DV_resource.Stream@PNG-en-US.png)
 
    The "Tag" dialog opens.
-2. Click on the selection button ![Dynamizing the "Graphic" property via tag](images/155852251275_DV_resource.Stream@PNG-de-DE.png) under "Tag > Process > Tag".
+2. Click on the selection button ![Dynamizing the "Graphic" property via tag](images/155852251275_DV_resource.Stream@PNG-de-DE.png) under "Tag &gt; Process &gt; Tag".
 
    A dialog opens.
 3. Add the "MyTag" tag.
-4. Select the "Range" type under "Tag > Type". Define the conditions.
+4. Select the "Range" type under "Tag &gt; Type". Define the conditions.
 5. Select the graphic in the "Graphic" column.
 
    ![Dynamizing the "Graphic" property via tag](images/155855063051_DV_resource.Stream@PNG-en-US.png)
 
    ![Dynamizing the "Graphic" property via tag](images/155855063051_DV_resource.Stream@PNG-en-US.png)
-6. Click on the selection button ![Dynamizing the "Graphic" property via tag](images/155862853387_DV_resource.Stream@PNG-de-DE.png) under "Tag > Type" in the "Graphic" column.
+6. Click on the selection button ![Dynamizing the "Graphic" property via tag](images/155862853387_DV_resource.Stream@PNG-de-DE.png) under "Tag &gt; Type" in the "Graphic" column.
 
    A dialog opens.
 
@@ -9166,7 +9166,7 @@ In this example you dynamize the "Graphic" property of the "Trend control" objec
 To dynamize the "Graphic" property of a trend control button via a script, follow these steps:
 
 1. Select the trend control in the "Screens" editor.
-2. In the Inspector window, click on "Properties > Properties > Miscellaneous > Toolbar > Elements > [2] Button > Graphic". In the drop-down list of the "Dynamization" column, select the entry "Script".
+2. In the Inspector window, click on "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements &gt; [2] Button &gt; Graphic". In the drop-down list of the "Dynamization" column, select the entry "Script".
 
    ![Dynamizing the "Graphic" property via script](images/156951171979_DV_resource.Stream@PNG-en-US.png)
 
@@ -9267,7 +9267,7 @@ To dynamize an object property with flashing using a script, follow these steps:
 | Symbol | Meaning |
 | --- | --- |
 | ![Dynamizing an object property with flashing using a script](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for working effectively** |
-| You can find snippets for flashing in the shortcut menu of the "Scripts" editor under "Snippets > HMI Runtime > Screen" |  |
+| You can find snippets for flashing in the shortcut menu of the "Scripts" editor under "Snippets &gt; HMI Runtime &gt; Screen" |  |
 
 ###### Result
 
@@ -9292,13 +9292,13 @@ You select the colors, the condition, and the flashing frequency.
 
 ###### Dynamizing object property with flashing via user-defined function
 
-If you want to enable flashing via a user-defined function at an event, select the condition "Never" for the "Flashing" option at the relevant property under "Properties > Properties > Dynamization".
+If you want to enable flashing via a user-defined function at an event, select the condition "Never" for the "Flashing" option at the relevant property under "Properties &gt; Properties &gt; Dynamization".
 
 To dynamize an object property with flashing via a user-defined function, follow these steps:
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Select the object that is to trigger flashing, e.g. a button. 2. In the Inspector window, under "Events", select the event to trigger flashing, e.g. "Press". 3. Select the "Convert function list to script" button. 4. To enable flashing, enter the following script, for example:      `Screen.Items("flashObject").PropertyFlashing("BackColor", true);`     - `flashObject` is an object that flashes when the user-defined function is triggered.    - `BackColor` represents the property that is flashing.To activate flashing and to define the properties, enter the following script:     - `Screen.Items("flashObject").PropertyFlashing("BackColor", true, HMIRuntime.Math.RGB(255, 0, 0), HMIRuntime.Math.RGB(0, 255, 0), UI.Enums.HmiFlashingRate.Fast);`      | Symbol | Meaning |    | --- | --- |    | ![Dynamizing object property with flashing via user-defined function](images/145494195723_DV_resource.Stream@PNG-de-DE.png)      ![Dynamizing object property with flashing via user-defined function](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for working effectively** |    | You can find snippets for flashing in the shortcut menu of the "Scripts" editor under "Snippets > HMI Runtime > Screen" |  | 5. Select the object that you want to flash. 6. Select the property that is to flash, e.g. the background color. 7. Make the following setting for the property:    - Condition: "Never"    - If not already defined by the script, set different values for color and alternative color.      Define the frequency. |  |
+| 1. Select the object that is to trigger flashing, e.g. a button. 2. In the Inspector window, under "Events", select the event to trigger flashing, e.g. "Press". 3. Select the "Convert function list to script" button. 4. To enable flashing, enter the following script, for example:      `Screen.Items("flashObject").PropertyFlashing("BackColor", true);`     - `flashObject` is an object that flashes when the user-defined function is triggered.    - `BackColor` represents the property that is flashing.To activate flashing and to define the properties, enter the following script:     - `Screen.Items("flashObject").PropertyFlashing("BackColor", true, HMIRuntime.Math.RGB(255, 0, 0), HMIRuntime.Math.RGB(0, 255, 0), UI.Enums.HmiFlashingRate.Fast);`      | Symbol | Meaning |    | --- | --- |    | ![Dynamizing object property with flashing via user-defined function](images/145494195723_DV_resource.Stream@PNG-de-DE.png)      ![Dynamizing object property with flashing via user-defined function](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for working effectively** |    | You can find snippets for flashing in the shortcut menu of the "Scripts" editor under "Snippets &gt; HMI Runtime &gt; Screen" |  | 5. Select the object that you want to flash. 6. Select the property that is to flash, e.g. the background color. 7. Make the following setting for the property:    - Condition: "Never"    - If not already defined by the script, set different values for color and alternative color.      Define the frequency. |  |
 
 The object property is dynamized with flashing via a user-defined function.
 
@@ -9342,7 +9342,7 @@ Follow these steps to configure the HMI tag for dynamization of the property:
 
    - "Int": Dynamization uses the screen number of a screen.
    - "WString": Dynamization uses the name of a screen.
-2. In the Inspector window of the "ScreenNumber" tag under "Properties > Properties > Values", enter the screen number "1" in the "Start value" input field.
+2. In the Inspector window of the "ScreenNumber" tag under "Properties &gt; Properties &gt; Values", enter the screen number "1" in the "Start value" input field.
 
    ![Configuring the HMI tag](images/160962507403_DV_resource.Stream@PNG-en-US.png)
 
@@ -9353,7 +9353,7 @@ Follow these steps to configure the HMI tag for dynamization of the property:
 To configure a screen for display in the screen window, follow these steps:
 
 1. Configure a new screen in the project tree under "Screens".
-2. Enter the screen number "1" in the Inspector window of the "Screens" editor under "Properties > Properties > Miscellaneous > Screen number".
+2. Enter the screen number "1" in the Inspector window of the "Screens" editor under "Properties &gt; Properties &gt; Miscellaneous &gt; Screen number".
 
    ![Configuring a new screen](images/160960936843_DV_resource.Stream@PNG-en-US.png)
 
@@ -9368,14 +9368,14 @@ To configure a screen for display in the screen window, follow these steps:
 Proceed as follows to dynamize the "Screen" property at the "Screen window" object via the "ScreenNumber" tag:
 
 1. In the "Screens" editor of the start screen, select the "Screen window" object.
-2. In the Inspector window, click "Properties > Properties > General > Screen". In the drop-down list of the "Dynamization" column, select the entry "Tag".
+2. In the Inspector window, click "Properties &gt; Properties &gt; General &gt; Screen". In the drop-down list of the "Dynamization" column, select the entry "Tag".
 
    ![Dynamizing the "Screen" property via tag](images/160962497035_DV_resource.Stream@PNG-en-US.png)
 
    ![Dynamizing the "Screen" property via tag](images/160962497035_DV_resource.Stream@PNG-en-US.png)
 
    The "Tag" dialog opens.
-3. Click on the selection button ![Dynamizing the "Screen" property via tag](images/155852251275_DV_resource.Stream@PNG-de-DE.png) under "Tag > Process > Tag".
+3. Click on the selection button ![Dynamizing the "Screen" property via tag](images/155852251275_DV_resource.Stream@PNG-de-DE.png) under "Tag &gt; Process &gt; Tag".
 
    A dialog opens.
 4. Add the "ScreenNumber" tag.
@@ -9431,9 +9431,9 @@ The following table shows the available events:
 | --- | --- |
 | Activated | Mouse operation: Occurs when the operator presses the left or right mouse button.  Touch operation: Occurs when the operator touches the screen with the finger.  Keyboard operation: Occurs when the operator selects an object using the configured tab sequence.   The "Activated" event is only used to detect whether an object was selected. The event does not trigger a password prompt. For this reason, do not use the "Activated" event if you want to configure access protection on the function call of the object. |
 | Deactivated | Occurs when the operator takes the focus off an object by activating a different object.  System functions or user-defined functions on the "Deactivated" event of an object are not executed with a screen change.   The "Deactivated" event is only used to detect whether an object was deselected. The event does not trigger a password prompt. For this reason, do not use the "Deactivated" event if you want to configure access protection on the function call of the object. |
-| Press | Mouse operation: Occurs after the "Activated" event when the operator presses the left or right mouse button.  Touch operation: Occurs when the operator touches the screen with the finger.  Keyboard operation: Occurs when an object has the focus, and the operator presses either the <Return> or <Space> key. |
-| Release | Mouse operation: Occurs when the operator releases the left or right mouse button.  Touch operation: Occurs when the operator takes the finger off the screen. When a motion is detected, the "Release" event is triggered at the limit of a different screen object.  Keyboard operation: Occurs when the operator releases one of the buttons <Return> or <Space>. |
-| Press key | Keyboard operation: Occurs when the operator presses a key on the keyboard. The event is not triggered if one of the buttons <Return> or <Space> is pressed.   The event is not supported for Unified Panel. |
+| Press | Mouse operation: Occurs after the "Activated" event when the operator presses the left or right mouse button.  Touch operation: Occurs when the operator touches the screen with the finger.  Keyboard operation: Occurs when an object has the focus, and the operator presses either the &lt;Return&gt; or &lt;Space&gt; key. |
+| Release | Mouse operation: Occurs when the operator releases the left or right mouse button.  Touch operation: Occurs when the operator takes the finger off the screen. When a motion is detected, the "Release" event is triggered at the limit of a different screen object.  Keyboard operation: Occurs when the operator releases one of the buttons &lt;Return&gt; or &lt;Space&gt;. |
+| Press key | Keyboard operation: Occurs when the operator presses a key on the keyboard. The event is not triggered if one of the buttons &lt;Return&gt; or &lt;Space&gt; is pressed.   The event is not supported for Unified Panel. |
 | Release key | Keyboard operation: Occurs when the operator releases a key on the keyboard.  The event is not supported for Unified Panel. |
 | Trigger hotkey | Occurs when the operator presses a hotkey on the keyboard. |
 | Left-click | Mouse operation: Occurs when the system detects a click with the left mouse button, i.e. shortly after the "Release" event.  Touch operation: Occurs after the "Release" event has occurred and if less than a second has elapsed since the "Press" event. |
@@ -9508,7 +9508,7 @@ You have the following options to trigger the "Press" event:
 
 - Mouse operation: Occurs when you press the left or right mouse button.
 - Touch operation: Occurs when you touch the screen with your finger.
-- Keyboard operation: Occurs when an object has the focus, and you press either the <Return> or <Space> key.
+- Keyboard operation: Occurs when an object has the focus, and you press either the &lt;Return&gt; or &lt;Space&gt; key.
 
 The figure below shows the "Activated" and "Press" events:
 
@@ -9610,7 +9610,7 @@ If you have configured a "Release" event for a screen object, for example for a 
 
 You can trigger the "Press key" and "Release key" events by keyboard action.
 
-The behavior of the <Return> and <Space> keys differs from the behavior of the other keys on the keyboard.
+The behavior of the &lt;Return&gt; and &lt;Space&gt; keys differs from the behavior of the other keys on the keyboard.
 
 #### Using key on the keyboard
 
@@ -9625,27 +9625,27 @@ If you want to trigger the "Release key" event by keyboard action, follow these 
 
 ![Using key on the keyboard](images/151925477387_DV_resource.Stream@PNG-en-US.png)
 
-#### Using the <Return> or <Space> key
+#### Using the &lt;Return&gt; or &lt;Space&gt; key
 
-The keys <Return> and <Space> can trigger direct actions, for example, for button or rectangle.
+The keys &lt;Return&gt; and &lt;Space&gt; can trigger direct actions, for example, for button or rectangle.
 
-When you want to trigger the events through the keys <Return> or <Space>, follow these steps:
+When you want to trigger the events through the keys &lt;Return&gt; or &lt;Space&gt;, follow these steps:
 
 1. Select an object on which you have configured an event.
-2. Press the <Return> or <Space> key.
+2. Press the &lt;Return&gt; or &lt;Space&gt; key.
 
    The "Press" and "Press key" events are triggered.
 3. Release the key.
 
    The "Release key", "Release" and "Click left mouse button" events are triggered.
 
-![Using the <Return> or <Space> key](images/151925494539_DV_resource.Stream@PNG-en-US.png)
+![Using the &lt;Return> or &lt;Space> key](images/151925494539_DV_resource.Stream@PNG-en-US.png)
 
 #### Objects with selection elements
 
-In the objects with selection elements, e.g. check box, the <Return> key behaves like any key.
+In the objects with selection elements, e.g. check box, the &lt;Return&gt; key behaves like any key.
 
-You can use the <Space> key, for example to change the selection from "On" to "Off" or to trigger an event.
+You can use the &lt;Space&gt; key, for example to change the selection from "On" to "Off" or to trigger an event.
 
 ### Trigger "Click left mouse button" event (RT Unified)
 
@@ -9697,7 +9697,7 @@ If you want to trigger the "Input finished" event by mouse action, follow these 
 
 1. Left-click on the "IO field" object.
 2. Enter a value.
-3. Confirm the entry by pressing <Return> or by left-clicking on another object.
+3. Confirm the entry by pressing &lt;Return&gt; or by left-clicking on another object.
 
    Clicking or pressing triggers the "Input finished" event.
 
@@ -9806,7 +9806,7 @@ The "Touch Area" object distinguishes between the following gestures:
 
 To distinguish between the gestures, program a J-Script that evaluates the gesture.
 
-1. Click ![Programming a J-script](images/130773202443_DV_resource.Stream@PNG-de-DE.png) in the Inspector window under "Properties > Events > Gesture detected".
+1. Click ![Programming a J-script](images/130773202443_DV_resource.Stream@PNG-de-DE.png) in the Inspector window under "Properties &gt; Events &gt; Gesture detected".
 2. Copy the code example into the programming window.
 
 Code example
@@ -9948,7 +9948,7 @@ To add the "Click left mouse button" event to the button in "Screen1", follow th
 1. Select the button and click "Click left mouse button" under "Events".
 2. Click "Add script". A "Script" window is opened.
 3. Click on the first curly bracket in the script. The bracket turns green.
-4. Under "Code templates > HMIRuntime > Screen", select the function "Change base screen".
+4. Under "Code templates &gt; HMIRuntime &gt; Screen", select the function "Change base screen".
 5. Drag and drop the function to the bracket. Enter "Screen2" in the script.
 6. Click "OK".
 
@@ -9959,7 +9959,7 @@ To add the "Click left mouse button" to the circle in "Screen2", follow these st
 1. Select the circle and click "Click left mouse button" under "Events".
 2. Click "Add script". A "Script" window is opened.
 3. Click on the first curly bracket in the script. The bracket turns green.
-4. Under "Code templates > HMIRuntime > Screen", select the function "Change base screen".
+4. Under "Code templates &gt; HMIRuntime &gt; Screen", select the function "Change base screen".
 5. Drag and drop the function to the bracket, and write "Screen1" in the script.
 6. Click "OK".
 
@@ -9967,7 +9967,7 @@ To add the "Click left mouse button" to the circle in "Screen2", follow these st
 
 To load the project and start runtime, follow these steps:
 
-1. Load the project under "Project > Device".
+1. Load the project under "Project &gt; Device".
 2. Start runtime.
 3. Click on the button with the left mouse button. You switch to "Screen2".
 
@@ -10341,7 +10341,7 @@ You insert the following objects from the "Tools" task card:
 
 You can find more information in the section [Overview of screen objects](#overview-of-screen-objects-rt-unified).
 
-You can define the properties of the faceplate type and the objects in the Inspector window under "Properties > Properties". Here, you define display name, appearance and size, for example.
+You can define the properties of the faceplate type and the objects in the Inspector window under "Properties &gt; Properties". Here, you define display name, appearance and size, for example.
 
 ##### Assigning names to tags and properties
 
@@ -10361,7 +10361,7 @@ PLC user data types are supported on the interface.
 
 On the "Property interface" tab, you can configure the interface properties of the faceplate type.
 
-The properties configured here are available for the instance of the faceplate type under "Miscellaneous > Interface".
+The properties configured here are available for the instance of the faceplate type under "Miscellaneous &gt; Interface".
 
 You can create interface properties of the following data types:
 
@@ -10386,7 +10386,7 @@ For example, you can use local tags in scripts within the faceplate type.
 
 In the "Event interface" tab, you configure events and associated parameters. You interconnect the events in the "Visualization" tab with the faceplate type or objects in the faceplate type.
 
-On the faceplate container, the events are available under "Properties > Events". You can configure functions of the function list or scripts.
+On the faceplate container, the events are available under "Properties &gt; Events". You can configure functions of the function list or scripts.
 
 ##### Interfaces of faceplate types can be copied
 
@@ -10401,9 +10401,9 @@ This applies to:
 
 Pasting is also possible at the same place in the faceplate type.
 
-To copy and paste, use the shortcut menu or the shortcut keys <Ctrl> + <C> and <Ctrl> + <V>.
+To copy and paste, use the shortcut menu or the shortcut keys &lt;Ctrl&gt; + &lt;C&gt; and &lt;Ctrl&gt; + &lt;V&gt;.
 
-To copy and paste all entries, select the entries by keeping the "Shift" key pressed or by using the keyboard shortcut <Ctrl> + <A> and copy via the shortcut menu or via the keyboard shortcut <Ctrl> + <C>. Insert the entries via the shortcut menu or the keyboard shortcut <Ctrl> + <V>.
+To copy and paste all entries, select the entries by keeping the "Shift" key pressed or by using the keyboard shortcut &lt;Ctrl&gt; + &lt;A&gt; and copy via the shortcut menu or via the keyboard shortcut &lt;Ctrl&gt; + &lt;C&gt;. Insert the entries via the shortcut menu or the keyboard shortcut &lt;Ctrl&gt; + &lt;V&gt;.
 
 #### Lowest device version of a faceplate type (RT Unified)
 
@@ -10470,7 +10470,7 @@ If you select the highest available device version, all functions are available.
 
 ##### Performance improvement in the Engineering System
 
-To improve performance during the engineering process when using numerous faceplates, activate the "Simplified display of Faceplate Containers" option under "Settings > Visualization > Unified Faceplate".
+To improve performance during the engineering process when using numerous faceplates, activate the "Simplified display of Faceplate Containers" option under "Settings &gt; Visualization &gt; Unified Faceplate".
 
 ![Performance improvement in the Engineering System](images/160587084043_DV_resource.Stream@PNG-en-US.png)
 
@@ -10480,7 +10480,7 @@ The faceplates are displayed in a simplified way when this option is activated i
 
 To improve the performance in runtime when using a large number of faceplates, use the "Suspendable" property of faceplate types.
 
-The "Suspendable" property of a faceplate type is deactivated by default. To activate the property, select the "Suspendable" option in the faceplate type under "Properties > Properties > Miscellaneous". Faceplate instances of the faceplate type suspend the execution of scripts if their "Visibility" property has been deactivated.
+The "Suspendable" property of a faceplate type is deactivated by default. To activate the property, select the "Suspendable" option in the faceplate type under "Properties &gt; Properties &gt; Miscellaneous". Faceplate instances of the faceplate type suspend the execution of scripts if their "Visibility" property has been deactivated.
 
 On reactivation of the visibility of a faceplate in runtime, all scripts that are due to be executed for the faceplate are run.
 
@@ -10493,7 +10493,7 @@ Note the following points when upgrading from version V16 to V17 or higher:
 - As of V17, faceplates are located in the project library and are managed and used in types and versions.
 - To prevent inconsistencies when linking data types, you must copy the user data types used in the PLC to the library before upgrading the version from V16 to V17 or higher.
 
-  To do this, use drag-and-drop to move the PLC user data type to the library under "Project library > Types".
+  To do this, use drag-and-drop to move the PLC user data type to the library under "Project library &gt; Types".
 - When upgrading TIA Portal from V16 to V17 or higher, the names of existing faceplate types are automatically converted. In the higher version, the name of the faceplate type is given the version number "_0.0.1" as an extension. If, as a result, the permissible maximum total length of 128 characters is exceeded, an error message is displayed on the HMI device when the project is compiled.
 
   In this case, shorten the name of the faceplate type.
@@ -10707,7 +10707,7 @@ You can rename a faceplate type after it has been created. If you have reference
 
 To enter a new name, select the faceplate type in the library.
 
-1. Press <F2>.
+1. Press &lt;F2&gt;.
 
    - or -
 
@@ -10773,7 +10773,7 @@ To replace all instances of the source type with the selected version of the tar
 5. Select a version of the target type.
 6. Select "OK".
 
-   A status message is displayed in the Inspector window in the "Info > General" tab.
+   A status message is displayed in the Inspector window in the "Info &gt; General" tab.
 
 ###### Result
 
@@ -10823,7 +10823,7 @@ Note the following when deleting faceplate types or versions:
 
 ###### Procedure
 
-1. To delete a faceplate version, select it and press <Del>.
+1. To delete a faceplate version, select it and press &lt;Del&gt;.
 
    - or -
 
@@ -10878,7 +10878,7 @@ Only device versions that are the same as or higher than the original version ca
 
 A library is more clearly structured if types related by content have the same version number. The identical version number reflects the work progress. When you have completed the work on multiple associated faceplate types, you can assign the same version number to these types.
 
-A log of the changes is created automatically. If you have versioned the faceplate types in the project library, you will find the log in the project tree under "Common data > Logs". If you have versioned the faceplate types in a global library, you will find the log in the "Common data > Logs" folder in the level below the global library.
+A log of the changes is created automatically. If you have versioned the faceplate types in the project library, you will find the log in the project tree under "Common data &gt; Logs". If you have versioned the faceplate types in a global library, you will find the log in the "Common data &gt; Logs" folder in the level below the global library.
 
 ###### Requirement
 
@@ -10891,7 +10891,7 @@ To assign the same version to several faceplate types, follow these steps:
 
 1. Select the faceplate types to which you want to assign a common version.
 
-   Press and hold the <Ctrl> key and click on the faceplate types.
+   Press and hold the &lt;Ctrl&gt; key and click on the faceplate types.
 
    If you have organized types in the library into folders, you can select one or more folders.
 2. Select "Assign version" from the shortcut menu.
@@ -10948,7 +10948,7 @@ A faceplate type has been created.
 
    Objects from the palettes "Controls" and "My Controls" are not available or only available to a limited extent.
 
-   For dynamic SVG graphics, drag-and-drop pasting is only available as of version V18. If the device version is changed to a version < V18, you will get an error during the compile.
+   For dynamic SVG graphics, drag-and-drop pasting is only available as of version V18. If the device version is changed to a version &lt; V18, you will get an error during the compile.
 
 All the editing functions that you already know from configuring screens are available.
 
@@ -10960,7 +10960,7 @@ You can copy screen objects from one faceplate type to one or more other facepla
 
 ##### Editing properties
 
-Both the properties of the faceplate type and the properties of the objects used are edited in the Inspector window under "Properties > Properties".
+Both the properties of the faceplate type and the properties of the objects used are edited in the Inspector window under "Properties &gt; Properties".
 
 1. Select the object.
 
@@ -11011,7 +11011,7 @@ The project languages are set in the "Project languages" editor. You specify whi
 
 ##### Procedure
 
-1. Open the "Languages & Resources" menu command in the project tree.
+1. Open the "Languages &amp; Resources" menu command in the project tree.
 
    The lower-level elements are displayed.
 2. Double-click on "Project languages".
@@ -11020,7 +11020,7 @@ The project languages are set in the "Project languages" editor. You specify whi
 3. Enable the relevant project languages or disable the languages that you do not need.
 4. Go to the project library and open the faceplate type for whose objects you want to create multilingual texts.
 5. Select the object for which you want to store a multilingual text.
-6. Open the Inspector window under "Properties > Texts" and create the corresponding texts in the set languages.
+6. Open the Inspector window under "Properties &gt; Texts" and create the corresponding texts in the set languages.
 
 **Note**
 
@@ -11037,7 +11037,7 @@ If you disable a project language, all text and graphic objects you have already
 To activate the set languages in runtime, follow these steps:
 
 1. Double-click on "Runtime settings" in the project tree.
-2. Click on "Language & Font".
+2. Click on "Language &amp; Font".
 3. Enable the required languages.
 
 ---
@@ -11154,7 +11154,7 @@ The tag name must satisfy the following conditions:
 - Beginning with a letter or underscore
 - No special characters:
 
-  , ; . : ! ? " ' ^ ´ ` ~ - + = / \ ¦ @ * # $ % & § ° ( ) [ ] { } < >
+  , ; . : ! ? " ' ^ ´ ` ~ - + = / \ ¦ @ * # $ % &amp; § ° ( ) [ ] { } &lt; &gt;
 - No spaces
 - No JavaScript elements
 
@@ -11176,7 +11176,7 @@ To convert an array into a simple data type, select the arrow in the "Data type"
 
 ###### Deleting an interface tag
 
-To delete an interface tag, select the entry you wish to delete and click ![Deleting an interface tag](images/134621778187_DV_resource.Stream@PNG-de-DE.png). Alternatively, delete the tag interface by pressing the <Del> key.
+To delete an interface tag, select the entry you wish to delete and click ![Deleting an interface tag](images/134621778187_DV_resource.Stream@PNG-de-DE.png). Alternatively, delete the tag interface by pressing the &lt;Del&gt; key.
 
 ###### Changing the order of the interface tags in the editor
 
@@ -11204,7 +11204,7 @@ The local tags are not visible at an instance of the faceplate type and thus can
 
 ###### Defining local tags
 
-1. Double-click on the "<Add>" cell in the "Name" column.
+1. Double-click on the "&lt;Add&gt;" cell in the "Name" column.
 2. If required, change the suggested name of the tag.
 3. Select the data type:
 
@@ -11277,7 +11277,7 @@ These data types can be instantiated in a faceplate container.
 | Floating-point number | You can link properties corresponding to a floating point number with the "Floating point number" data type. You can assign corresponding numerical values in the faceplate instance. In this way you can assign different numerical values to objects in different faceplate instances. |
 | Graphic | You can associate properties that correspond to a graphic with the "Graphic" data type. You link graphics in the "Visualization" tab, for example, with the "Graphic view" and "Switch" screen objects. In the faceplate instance, you can assign graphics from the project's graphics collection or released type versions of the "Graphic" type from the project library. In this way you can assign different graphics to objects in different faceplate instances. |
 | Configuration string | The data type "Configuration string" allows for the flexible assignment of values. A configuration string can include names or numbers, for example, that are addressed in scripts and can be transferred. |
-| Multilingual text | You can link properties of the "Multilingual text" type with texts. In the faceplate instance, you can assign static texts, resource lists, tags or scripts. When entering static texts, use the key combination <Shift + Enter> to insert a line break. In the Inspector window you create texts for the projected languages under "Properties > Texts".  In this way, you can configure different texts in different faceplate instances. |
+| Multilingual text | You can link properties of the "Multilingual text" type with texts. In the faceplate instance, you can assign static texts, resource lists, tags or scripts. When entering static texts, use the key combination &lt;Shift + Enter&gt; to insert a line break. In the Inspector window you create texts for the projected languages under "Properties &gt; Texts".  In this way, you can configure different texts in different faceplate instances. |
 | Resource list | You can link properties of the type "Resource list" with the "Resource list" data type. In the faceplate instance you can then assign elements from the graphic and text lists. In this way you can assign different text and graphic elements to objects in different faceplate instances. |
 | Unsigned 64-bit integer | You can link properties that correspond to an unsigned 64-bit integer with the data type "Unsigned 64-bit integer". You can then assign corresponding numerical values in the faceplate instance. In this way you can assign different numerical values to objects in different faceplate instances. |
 
@@ -11285,7 +11285,7 @@ These data types can be instantiated in a faceplate container.
 
 To delete an interface property, select the property you wish to delete and click![Deleting interface properties](images/134621778187_DV_resource.Stream@PNG-de-DE.png).
 
-Alternatively, press <Delete>.
+Alternatively, press &lt;Delete&gt;.
 
 ---
 
@@ -11310,12 +11310,12 @@ Alternatively, press <Delete>.
 2. Change the values for the name, if required, and select the data type.
 3. Switch to the "Visualization" tab.
 4. Select the screen object that is to be linked to the interface property.
-5. Open the "Properties > Properties" Inspector window.
+5. Open the "Properties &gt; Properties" Inspector window.
 6. Select the "Property interface" method in the "Dynamization" column.
 7. Select the previously created interface property.
 8. Release the version of the faceplate type and change to the project tree to interconnect the interfaces in the screen.
 9. Open the screen and configure a faceplate container by dragging the faceplate type to the screen.
-10. Open the Inspector window of the faceplate container and go to "Properties > Properties > Miscellaneous > Interface".
+10. Open the Inspector window of the faceplate container and go to "Properties &gt; Properties &gt; Miscellaneous &gt; Interface".
 11. Select the created interface property. In the "Static value" column, assign a fixed value to the property. If you make several entries, separate the individual values with a semicolon.
 
     You can also assign values of the following categories to the property in the "Dynamization" column:
@@ -11334,7 +11334,7 @@ The name must satisfy the following conditions:
 - Beginning with a letter or underscore
 - No special characters:
 
-  , ; . : ! ? " ' ^ ´ ` ~ - + = / \ ¦ @ * # $ % & § ° ( ) [ ] { } < >
+  , ; . : ! ? " ' ^ ´ ` ~ - + = / \ ¦ @ * # $ % &amp; § ° ( ) [ ] { } &lt; &gt;
 - No spaces
 - No JavaScript elements
 
@@ -11413,7 +11413,7 @@ You can assign data values to interface properties with the "Configuration strin
 12. Change to the project tree.
 13. Open a screen.
 14. Create a faceplate instance by dragging the faceplate type from the project library to the screen.
-15. Open the Inspector window of the faceplate instance and navigate to "Properties > Properties > Miscellaneous > Interface".
+15. Open the Inspector window of the faceplate instance and navigate to "Properties &gt; Properties &gt; Miscellaneous &gt; Interface".
 16. Navigate to the created interface properties and assign them meaningful values, such as:
 
     - Label_Names: "Label1;Label2;Label3"
@@ -11520,9 +11520,9 @@ The following data types are available for the parameters of interface events:
 | DateTime | Date/time information |
 | DInt | Signed 32-bit value |
 | DWord | Unsigned 32-bit value |
-| HmiEventTrigger | The enumeration "HmiEventTrigger" can have the following values:  - Unknown (0): Unknown - Touch (1): Triggered by touch HMI device - Left (16): Triggered by left mouse button. - Middle (17): Triggered by middle mouse button. - Right (18): Triggered by right mouse button. - Enter (256): Triggered by <Enter>. - Space (257): Triggered by <Space>. - Escape (258): Triggered by <Esc>. |
+| HmiEventTrigger | The enumeration "HmiEventTrigger" can have the following values:  - Unknown (0): Unknown - Touch (1): Triggered by touch HMI device - Left (16): Triggered by left mouse button. - Middle (17): Triggered by middle mouse button. - Right (18): Triggered by right mouse button. - Enter (256): Triggered by &lt;Enter&gt;. - Space (257): Triggered by &lt;Space&gt;. - Escape (258): Triggered by &lt;Esc&gt;. |
 | HmiGesture | The enumeration "HmiGesture" can have the following values:  - Unknown (0): unknown - SwipeLeft (1): Swipe left - SwipeRight (2): Swipe right - SwipeUp (3): Swipe up - SwipeDown (4): Swipe down |
-| HmiKeyboardModifier | The enumeration "HmiKeyboardModifier" can have the following values:  - None (0): None - Control (1): <Ctrl> - Shift (2): <Shift> - Alt (4): <Alt> |
+| HmiKeyboardModifier | The enumeration "HmiKeyboardModifier" can have the following values:  - None (0): None - Control (1): &lt;Ctrl&gt; - Shift (2): &lt;Shift&gt; - Alt (4): &lt;Alt&gt; |
 | Int | Integer |
 | LInt | Signed 32-bit value |
 | LReal | 64-bit floating-point number IEEE 754 |
@@ -11540,23 +11540,23 @@ The following data types are available for the parameters of interface events:
 
 ###### Configuring an interface event
 
-1. On the "<Add>" or select the button ![Configuring an interface event](images/120361298315_DV_resource.Stream@PNG-de-DE.png).
+1. On the "&lt;Add&gt;" or select the button ![Configuring an interface event](images/120361298315_DV_resource.Stream@PNG-de-DE.png).
 
    A new interface event is created.
 2. If required, change the values for the name.
-3. Select "<Add>" below the interface event.
+3. Select "&lt;Add&gt;" below the interface event.
 
    A new parameter is created.
 4. Change the value for the name.
 5. Add more parameters if needed.
 6. Switch to the "Visualization" tab.
 7. Select the faceplate instance or a screen object with which the interface event is to be linked.
-8. Open the "Properties > Events" Inspector window.
+8. Open the "Properties &gt; Events" Inspector window.
 9. Select an event.
 10. Click on ![Configuring an interface event](images/160566469643_DV_resource.Stream@PNG-de-DE.png) "Convert function to script".
 
     A script is created.
-11. In the script, open the shortcut menu and select "Snippets > Faceplate > Raise a custom faceplate event".
+11. In the script, open the shortcut menu and select "Snippets &gt; Faceplate &gt; Raise a custom faceplate event".
 
     The following code is inserted:
 
@@ -11569,7 +11569,7 @@ The following data types are available for the parameters of interface events:
 15. Open the screen of the HMI device.
 16. Create a faceplate instance of the released type version in the screen.
 17. Select the faceplate instance.
-18. Open the Inspector window under "Properties > Events".
+18. Open the Inspector window under "Properties &gt; Events".
 19. Select the interface event in the event list.
 20. Configure a function of the function list or a script to the event.
 
@@ -11582,7 +11582,7 @@ The name must satisfy the following conditions:
 - Beginning with a letter or underscore
 - No special characters:
 
-  , ; . : ! ? " ' ^ ´ ` ~ - + = / \ ¦ @ * # $ % & § ° ( ) [ ] { } < >
+  , ; . : ! ? " ' ^ ´ ` ~ - + = / \ ¦ @ * # $ % &amp; § ° ( ) [ ] { } &lt; &gt;
 - No spaces
 - No JavaScript elements
 
@@ -11607,7 +11607,7 @@ The name must satisfy the following conditions:
 5. Change the name of the parameters.
 6. Switch to the "Visualization" tab.
 7. Select the faceplate instance or screen object linked with the interface event.
-8. In the Inspector window, adapt the script under "Properties > Events":
+8. In the Inspector window, adapt the script under "Properties &gt; Events":
 
    - Change the names of the parameters to match the changes in the "Event interface" tab.
    - Change the interface event names to match the changes in the "Event interface" tab.
@@ -11632,17 +11632,17 @@ With interface events, you define events in the faceplate type which you interco
 ###### Procedure
 
 1. Switch to the "Event interface" tab of the faceplate type.
-2. Click the "<Add>" field or select the ![Procedure](images/120361298315_DV_resource.Stream@PNG-de-DE.png) button.
+2. Click the "&lt;Add&gt;" field or select the ![Procedure](images/120361298315_DV_resource.Stream@PNG-de-DE.png) button.
 
    A new interface event is created.
 3. Change the name of the interface event to "My_Interface_Event".
-4. Select "<Add>" below the interface event.
+4. Select "&lt;Add&gt;" below the interface event.
 
    A new parameter is created.
 
    The data type of the parameter is "Int".
 5. Change the name of the parameter to "Parameter_Int".
-6. Select "<Add>" below the interface event.
+6. Select "&lt;Add&gt;" below the interface event.
 
    A new parameter is created.
 7. Change the name of the parameter to "Parameter_Bool".
@@ -11651,7 +11651,7 @@ With interface events, you define events in the faceplate type which you interco
 10. Add a button.
 11. Change the name of the button to "Button_1".
 12. Select the "Button" screen object.
-13. Open the Inspector window under "Properties > Events".
+13. Open the Inspector window under "Properties &gt; Events".
 14. Create the following script for the "Click left mouse button" event:
 
     `export function Button_1_OnTapped(item, x, y, modifiers, trigger) {`
@@ -11667,7 +11667,7 @@ With interface events, you define events in the faceplate type which you interco
 18. Open the screen of the HMI device.
 19. Create a faceplate instance of the released type version in the screen.
 20. Select the faceplate instance.
-21. Open the Inspector window under "Properties > Events" and select the event "My_Interface_Event".
+21. Open the Inspector window under "Properties &gt; Events" and select the event "My_Interface_Event".
 22. Click on ![Procedure](images/160566469643_DV_resource.Stream@PNG-de-DE.png) "Convert function to script".
 23. Create the following script:
 
@@ -11716,13 +11716,13 @@ In both variants, the created version is checked for missing or faulty reference
 1. Select the version whose consistency you want to check.
 2. Select "Check consistency" from the shortcut menu.
 
-   The result of the consistency check is displayed in the Inspector window in the "Info > General" tab.
+   The result of the consistency check is displayed in the Inspector window in the "Info &gt; General" tab.
 
 ##### Remedying the inconsistency
 
 To remedy any inconsistency, follow these steps:
 
-1. Open the Inspector window under "Information > General".   
+1. Open the Inspector window under "Information &gt; General".   
    An error and an error description are displayed in the Inspector window.
 2. Click the green arrow![Remedying the inconsistency](images/122844867979_DV_resource.Stream@PNG-de-DE.png) in the "Go to" column.   
    You are navigated automatically to the error location.
@@ -11787,7 +11787,7 @@ To eliminate an inconsistency which occurs through the instantiation of a non-de
 
 When you are finished editing a type version, release the version for productive use. Assign a version number for the release. You can also use multiple selection to release several versions at the same time.
 
-If you have made structural changes to the type version to be released, such as changes at the interfaces, only the types that reference the changed type version and are affected by the change are set to the "In progress" status. To set all referencing types to the "In progress" status by default when they are released, select the check box "Set all dependent types to the 'In test' status" in the settings under "General > Library settings" in the "Release type" area.
+If you have made structural changes to the type version to be released, such as changes at the interfaces, only the types that reference the changed type version and are affected by the change are set to the "In progress" status. To set all referencing types to the "In progress" status by default when they are released, select the check box "Set all dependent types to the 'In test' status" in the settings under "General &gt; Library settings" in the "Release type" area.
 
 ##### Introduction
 
@@ -11870,12 +11870,12 @@ The faceplate type is stored in the project library. When you use the faceplate 
    The faceplate container with the faceplate instance is added to the screen.
 
    The version marked with "Default" is always used when you drag the faceplate type to the screen.
-2. Open the Inspector window under "Properties > Properties > Miscellaneous > Interface".
+2. Open the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface".
 3. Connect the faceplate tags to project tags.
 4. Specify the values of the interface properties.
-5. Open the Inspector window under "Properties > Events".
+5. Open the Inspector window under "Properties &gt; Events".
 6. Specify functions of the function list or scripts of the interface events.
-7. Open the Inspector window under "Properties > Properties > Format > Fit to size".
+7. Open the Inspector window under "Properties &gt; Properties &gt; Format &gt; Fit to size".
 8. To adjust the size of the faceplate or the container window, choose between "Fit window to screen" and "Fit screen to window".
 
 **Note**
@@ -11884,18 +11884,18 @@ If you do not select resize, screen objects or navigation elements may not be di
 
 ##### Procedure using the "Faceplate container" control
 
-1. Open the "Toolbox > Controls" task card.
+1. Open the "Toolbox &gt; Controls" task card.
 2. Drag the "Faceplate container" control to the screen.
 
    An instance of the "Faceplate container" control is configured. No faceplate type is linked.
-3. Open the Inspector window of the faceplate container under "Properties > Properties > Miscellaneous".
+3. Open the Inspector window of the faceplate container under "Properties &gt; Properties &gt; Miscellaneous".
 4. Select the desired faceplate type under "Faceplate type" in the "Static value" column.
-5. Open the Inspector window under "Properties > Properties > Miscellaneous > Interface".
+5. Open the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface".
 6. Connect the faceplate tags to project tags.
 7. Specify the values of the interface properties.
-8. Open the Inspector window under "Properties > Events".
+8. Open the Inspector window under "Properties &gt; Events".
 9. Specify functions of the function list or scripts of the interface events.
-10. Open the Inspector window under "Properties > Properties > Format > Fit to size".
+10. Open the Inspector window under "Properties &gt; Properties &gt; Format &gt; Fit to size".
 11. To adjust the size of the faceplate or the container window, choose between "Fit window to screen" and "Fit screen to window".
 
 **Note**
@@ -11909,12 +11909,12 @@ If you do not select resize, screen objects or navigation elements may not be di
 
 ##### Change the faceplate version in the container
 
-You change the link to a faceplate version in the properties of the faceplate container under "Miscellaneous > Faceplate type". The selection window lists the released faceplate versions of all faceplates.
+You change the link to a faceplate version in the properties of the faceplate container under "Miscellaneous &gt; Faceplate type". The selection window lists the released faceplate versions of all faceplates.
 
 | Symbol | Meaning |
 | --- | --- |
 | ![Change the faceplate version in the container](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tip for an efficient procedure** |
-| - Under "Cross-references", you get a quick overview of all used objects within a faceplate container and the use of faceplate versions in screens. - You open the cross-references either in the Inspector window of the container under "Info > Cross-references" or via the shortcut menu of the respective object. - In the shortcut menu of the faceplate container, you can use the "Go to library version" function to jump directly to the referenced faceplate type in the project library. |  |
+| - Under "Cross-references", you get a quick overview of all used objects within a faceplate container and the use of faceplate versions in screens. - You open the cross-references either in the Inspector window of the container under "Info &gt; Cross-references" or via the shortcut menu of the respective object. - In the shortcut menu of the faceplate container, you can use the "Go to library version" function to jump directly to the referenced faceplate type in the project library. |  |
 
 ##### Result
 
@@ -11996,7 +11996,7 @@ If you import a device proxy into a project, the PLC user data types are not imp
    - Define the "PLCUDT" data type.
    - Under "User data type structure", select the PLC user data type.
 
-   Alternatively, you drag-and-drop a version of the PLC user data type from the project library onto the "<Add>" field in the "Tag interface" tab.
+   Alternatively, you drag-and-drop a version of the PLC user data type from the project library onto the "&lt;Add&gt;" field in the "Tag interface" tab.
 
    An interface tag with the data type "PLCUDT" is generated and linked with the version of the PLC user data type.
 5. Release the faceplate type.
@@ -12004,7 +12004,7 @@ If you import a device proxy into a project, the PLC user data types are not imp
 
    - Open the previously created screen and create an instance of the faceplate type.
    - Open the Inspector window of the faceplate instance.
-   - Under "Properties > Properties > Miscellaneous > Interfaces", assign the HMI tags based on the PLC tags to the specific properties in the "Static value" column.
+   - Under "Properties &gt; Properties &gt; Miscellaneous &gt; Interfaces", assign the HMI tags based on the PLC tags to the specific properties in the "Static value" column.
 
 > **Note**
 >
@@ -12047,17 +12047,17 @@ The use of HMI user data types provides the following advantages:
    - Define the "HMIUDT" data type.
    - Under "User data type structure", select the HMI user data type.
 
-   Alternatively, you drag-and-drop a version of an HMI user data type from the project library onto the "<Add>" field in the "Tag interface" tag. An interface tag with the data type "HMIUDT" is generated and linked with the version of the HMI user data type.
+   Alternatively, you drag-and-drop a version of an HMI user data type from the project library onto the "&lt;Add&gt;" field in the "Tag interface" tag. An interface tag with the data type "HMIUDT" is generated and linked with the version of the HMI user data type.
 2. Create an object:
 
    - Drag an object, e.g. an I/O field, from the "Toolbox" task card to the "Visualization" tab.
-   - Under "Properties > Properties > General > Process value", select "Tag" in the Dynamization field and assign an element to the interface tag.
+   - Under "Properties &gt; Properties &gt; General &gt; Process value", select "Tag" in the Dynamization field and assign an element to the interface tag.
    - Release the faceplate type.
 3. Create a faceplate instance:
 
    - Open the previously created screen and create an instance of the faceplate type.
    - Open the Inspector window of the faceplate instance.
-   - Assign the appropriate HMI tag under "Properties > Properties > Miscellaneous > Interfaces".
+   - Assign the appropriate HMI tag under "Properties &gt; Properties &gt; Miscellaneous &gt; Interfaces".
 
 ##### Result
 
@@ -12097,7 +12097,7 @@ You can link the interface tags and interface properties configured in the inner
 
    Alternatively, you can configure the "Faceplate container" control and link the "Faceplate type" property to the inner faceplate type.
 10. Select the inner faceplate type.
-11. Open the Inspector window under "Properties > Properties > Miscellaneous > Interface".
+11. Open the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface".
 12. Link the interface tags and interface properties of the inner faceplate type or the faceplate container to the interface tags and interface properties of the outer faceplate type.
 
     If you use interface tags of the "PLCUDT" or "HMIUDT" data type, only compatible interface tags are displayed in the selection window.
@@ -12106,7 +12106,7 @@ You can link the interface tags and interface properties configured in the inner
 15. Drag and drop the outer faceplate into the screen.
 16. Connect the faceplate tags to project tags.
 17. Specify the values of the interface properties.
-18. Open the Inspector window under "Properties > Events".
+18. Open the Inspector window under "Properties &gt; Events".
 19. Specify system functions of the function list or scripts of the interface events.
 
 **Note**
@@ -12248,9 +12248,9 @@ This section contains information on the following topics:
 
 ##### General
 
-Both the properties of the faceplate type and the properties of the objects used in the "Visualization" tab are dynamized in the Inspector window under "Properties > Properties".
+Both the properties of the faceplate type and the properties of the objects used in the "Visualization" tab are dynamized in the Inspector window under "Properties &gt; Properties".
 
-You link functions of the function list and scripts to the faceplate type or objects of the faceplate type in the "Visualization" tab in the Inspector window under "Properties > Events".
+You link functions of the function list and scripts to the faceplate type or objects of the faceplate type in the "Visualization" tab in the Inspector window under "Properties &gt; Events".
 
 ##### Use
 
@@ -12358,7 +12358,7 @@ A faceplate type has been created.
 > You link the tags defined in the faceplate type with the project tags in the faceplate instance.
 
 1. Select the faceplate type or an object in the faceplate type.
-2. Open the Inspector window under "Properties > Events".
+2. Open the Inspector window under "Properties &gt; Events".
 3. Select an event.
 4. Select a function from the function list or create a script.
 
@@ -12377,7 +12377,7 @@ The "Cleared" event is triggered when the faceplate is already resolved. Therefo
 | Symbol | Meaning |
 | --- | --- |
 | ![Dynamizing events](images/101804624523_DV_resource.Stream@PNG-de-DE.png) | **Tip for working efficiently** |
-| You are supported by snippets when creating scripts; you access these snippets from the shortcut menu under "Snippets > Faceplates". |  |
+| You are supported by snippets when creating scripts; you access these snippets from the shortcut menu under "Snippets &gt; Faceplates". |  |
 
 ##### Dynamizing object properties
 
@@ -12416,7 +12416,7 @@ In the "Screens" editor, you can connect the dynamic properties of the faceplate
 
 You have previously created the tags and scripts in the project.
 
-In the Inspector window under "Properties > Events" you will find the interface events defined in the faceplate type.
+In the Inspector window under "Properties &gt; Events" you will find the interface events defined in the faceplate type.
 
 ##### Requirement
 
@@ -12431,19 +12431,19 @@ A faceplate container with a faceplate instance is inserted in the screen.
 ##### Dynamizing events
 
 1. Select the faceplate container.
-2. Open the Inspector window under "Properties > Events".
+2. Open the Inspector window under "Properties &gt; Events".
 3. Select an event.
 4. Select a function from the function list or create a script.
 
 | Symbol | Meaning |
 | --- | --- |
 | ![Dynamizing events](images/101804624523_DV_resource.Stream@PNG-de-DE.png) | **Tip for working efficiently** |
-| You are supported by snippets when creating scripts; you access these snippets from the shortcut menu under "Snippets > Faceplates". |  |
+| You are supported by snippets when creating scripts; you access these snippets from the shortcut menu under "Snippets &gt; Faceplates". |  |
 
 ##### Dynamizing object properties
 
 1. Select the faceplate instance.
-2. Open "Properties" > "Properties" in the Inspector window of the faceplate instance.
+2. Open "Properties" &gt; "Properties" in the Inspector window of the faceplate instance.
 3. In the "Dynamization" column, select the menu of the property you want to dynamize.
 4. Select the required method:
 
@@ -12499,7 +12499,7 @@ You want to access different HMI tags, e.g. "Engine1" to "Engine10", of a "UDT_1
 To select an interface for the dynamization with a tag parameter, follow these steps:
 
 1. Select the faceplate instance in the screen.
-2. Select an interface tag in the Inspector window under "Properties > Miscellaneous > Interface".
+2. Select an interface tag in the Inspector window under "Properties &gt; Miscellaneous &gt; Interface".
 3. Select "Tag parameter" for the dynamization.
 
    The "Tag parameter" editor window opens in the Inspector window.
@@ -12515,7 +12515,7 @@ To select an interface for the dynamization with a tag parameter, follow these s
 
    > **Note**
    >
-   > You can insert the tag reference by placing the cursor at the desired place and opening the tag selection dialog with <Ctrl+J>.
+   > You can insert the tag reference by placing the cursor at the desired place and opening the tag selection dialog with &lt;Ctrl+J&gt;.
    >
    > Alternatively, you can enter the tag reference manually. Note that no check is performed to verify that the tag actually exists.
 
@@ -12622,7 +12622,7 @@ To configure a faceplate as a pop-up window, for example, to an event of a scree
 6. Release the version of the faceplate type.
 7. Open the screen of the HMI device.
 8. Configure the screen object that is to trigger the event, for example, a button.
-9. Open the Inspector window under "Properties > Events".
+9. Open the Inspector window under "Properties &gt; Events".
 10. Select an event.
 11. Click on ![Open and close pop-up windows outside a faceplate type](images/160566469643_DV_resource.Stream@PNG-de-DE.png) "Convert function to script".
 
@@ -12652,7 +12652,7 @@ To configure a faceplate as a pop-up window, for example, to an event of a scree
       Default: false. The pop-up window is visible.
 15. If required, specify where the pop-up window is opened.
 16. Configure a "Close pop-up" button.
-17. Open the Inspector window of the button under "Properties > Events".
+17. Open the Inspector window of the button under "Properties &gt; Events".
 18. Select an event.
 19. Click on ![Open and close pop-up windows outside a faceplate type](images/160566469643_DV_resource.Stream@PNG-de-DE.png) "Convert function to script".
 
@@ -12729,7 +12729,7 @@ To configure a faceplate as a pop-up window, for example, to an event of a scree
 6. Configure additional objects to visualize the two faceplate types.
 7. Interconnect the tags and properties of both faceplate types.
 8. Select the screen object which is to open the pop-up window.
-9. Open the Inspector window under "Properties > Events".
+9. Open the Inspector window under "Properties &gt; Events".
 10. Select an event.
 11. Click on ![Calling a pop-up window within a faceplate type](images/160566469643_DV_resource.Stream@PNG-de-DE.png) "Convert function to script".
 
@@ -12758,7 +12758,7 @@ To configure a faceplate as a pop-up window, for example, to an event of a scree
     `po.Top = 150;`
 14. Switch to the faceplate type "Popup_1".
 15. Configure a "Close pop-up" button.
-16. Open the Inspector window of the button under "Properties > Events".
+16. Open the Inspector window of the button under "Properties &gt; Events".
 17. Select an event.
 18. Select the "Convert function to script" button.
 
@@ -12895,7 +12895,7 @@ You create the HMI tags required for the project.
 
 ##### Procedure
 
-| 1. Open the "Standard tag table" editor under "HMI Tags" in the project tree. 2. Create the following tags in the "HMI tags" tab:       | Tag name | Data type |    | --- | --- |    | Engine01_CurrentRPM | Int |    | Engine01_SpeedMax | Int |    | Engine01_SpeedMin | Int |    | Engine02_CurrentRPM | Int | 3. Assign valid values to the tags in the Inspector window under "Properties > Properties > Values". |  |
+| 1. Open the "Standard tag table" editor under "HMI Tags" in the project tree. 2. Create the following tags in the "HMI tags" tab:       | Tag name | Data type |    | --- | --- |    | Engine01_CurrentRPM | Int |    | Engine01_SpeedMax | Int |    | Engine01_SpeedMin | Int |    | Engine02_CurrentRPM | Int | 3. Assign valid values to the tags in the Inspector window under "Properties &gt; Properties &gt; Values". |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ##### Result
@@ -13023,7 +13023,7 @@ To assign tags to the created objects in the faceplate types, follow these steps
 
 1. Open the Faceplate type in the "Visualization" tab.
 2. Select the object to which you want to assign a tag.
-3. Open the Inspector window under "Properties > Properties > General".
+3. Open the Inspector window under "Properties &gt; Properties &gt; General".
 4. Under "Process value" in the "Dynamization" column, set the value "Tag".
 
    A screen for selecting the tag is shown on the right-hand side of the Inspector window.
@@ -13080,7 +13080,7 @@ You configure a local tag in the faceplate type "FP_StartStop". Clicking the "Bu
 
 1. Open the "Visualization" tab.
 2. Select the I/O field "IO field_1".
-3. Open the Inspector window under "Properties > Properties > General".
+3. Open the Inspector window under "Properties &gt; Properties &gt; General".
 4. Under "Process value" in the "Dynamization" column, set the value "Tag". A screen for selecting the tag is shown on the right-hand side of the Inspector window.
 5. Assign the local tag "OnOff" to the "Process value" property. If the tag is linked in the project, the object displays the corresponding values in Runtime.
 
@@ -13093,7 +13093,7 @@ You configure a local tag in the faceplate type "FP_StartStop". Clicking the "Bu
 To assign values to the configured local tag when the buttons are clicked, follow these steps:
 
 1. Select the button "Button_1".
-2. Open the Inspector window under "Properties > Events".
+2. Open the Inspector window under "Properties &gt; Events".
 3. Select the event "Click left mouse button" and click the ![Assigning values to local tag](images/151911935115_DV_resource.Stream@PNG-de-DE.png) button.  
    A new script is created.
 4. Define the following script:  
@@ -13191,7 +13191,7 @@ To assign tags to the inner faceplate type "FP_StartStop" from the outer facepla
 
 1. Open the faceplate type "FP_Engine01" in the "Visualization" tab.
 2. Select the faceplate instance from "FP_StartStop".
-3. Open the Inspector window under "Properties > Properties > Miscellaneous > Interface".
+3. Open the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface".
 4. Assign the tag "Engine01_CurrentRPM" to the "Engine01_CurrentRPM" interface.
 
 ##### Result
@@ -13230,7 +13230,7 @@ Design the background color of the I/O field "IO field_3" (display box for the s
 ##### Assign interface property
 
 1. Select the I/O field "IO field_3".
-2. Open the Inspector window under "Properties > Properties > Appearance".
+2. Open the Inspector window under "Properties &gt; Properties &gt; Appearance".
 3. Under "Background - color", in the "Dynamization" column, set the value to "Property interface".
 
    A screen for selecting the interface property is shown on the right side of the Inspector window.
@@ -13272,7 +13272,7 @@ You configure an interface event in the faceplate type "FP_StartStop". To set th
 ##### Assigning an interface event
 
 1. Select the "Button_2" button.
-2. Open the Inspector window under "Properties > Events".
+2. Open the Inspector window under "Properties &gt; Events".
 3. Select the event "Click left mouse button" and click on the button ![Assigning an interface event](images/151911935115_DV_resource.Stream@PNG-de-DE.png).
 4. Define the following script:  
    `export function Button_Stop_OnTapped(item, x, y, modifiers, trigger) {  
@@ -13286,7 +13286,7 @@ You configure an interface event in the faceplate type "FP_StartStop". To set th
 
 1. Open the faceplate type "FP_Engine01".
 2. Select the faceplate instance of the "FP_StartStop" faceplate type.
-3. Open the Inspector window under "Properties > Events".
+3. Open the Inspector window under "Properties &gt; Events".
 4. Select the "Engine_Stop" event and click the button ![Calling an interface event in instance](images/151911935115_DV_resource.Stream@PNG-de-DE.png).
 5. Define the following script:  
    `export function Faceplate_container_1_OnStop_Engine(item, Stop) {  
@@ -13313,7 +13313,7 @@ To increase the speed via the interface tag "Engine01_CurrentRPM", expand the sc
 
 1. In the editor, switch to the "Visualization" tab.
 2. Select the button "Button_1".
-3. Open the Inspector window under "Properties > Events".
+3. Open the Inspector window under "Properties &gt; Events".
 4. Select the event "Click left mouse button" and click on ![Configuring a script](images/151911935115_DV_resource.Stream@PNG-de-DE.png).
 5. Define the following script:  
    `export function Button_Start_OnTapped(item, x, y, modifiers, trigger) {  
@@ -13350,7 +13350,7 @@ You create a script that runs when a button is clicked and transfers values to t
 
 1. In the editor, switch to the "Visualization" tab.
 2. Select the "Button_1" button.
-3. Open the Inspector window under "Properties > Events".
+3. Open the Inspector window under "Properties &gt; Events".
 4. Select the entry "Click left mouse button" and click on the button ![Procedure for creating the script: Opening the faceplate pop-up in the faceplate type](images/151911935115_DV_resource.Stream@PNG-de-DE.png).
 5. Define the following script:  
    `export function Button_1_OnTapped(item, x, y, modifiers, trigger) {  
@@ -13391,7 +13391,7 @@ You create a script that runs when a button is clicked and closes the faceplate 
 
 1. In the editor, switch to the "Visualization" tab.
 2. Select the button.
-3. Open the Inspector window under "Properties > Events".
+3. Open the Inspector window under "Properties &gt; Events".
 4. Select the entry "Click left mouse button" and click on the button ![Procedure for creating the script: Closing the faceplate pop-up](images/151911935115_DV_resource.Stream@PNG-de-DE.png).
 5. Define the following script:  
    `export function Button_1_OnTapped(item, x, y, modifieres, trigger) {  
@@ -13430,13 +13430,13 @@ To avoid error messages about inconsistency, start with the inner faceplate when
 ##### Assigning tags
 
 1. Select the faceplate instance or the faceplate container.
-2. Open the Inspector window under "Properties > Properties > Miscellaneous > Interface".
+2. Open the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface".
 3. Assign the appropriate HMI tag to all existing interface tags.
 
 ##### Assigning interface properties
 
 1. Select the faceplate instance or the faceplate container.
-2. Open the Inspector window under "Properties > Properties > Miscellaneous > Interface".
+2. Open the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface".
 3. Under "BackgroundColor", in the "Dynamization" column, set the value to "Script".
 4. Create the following script:  
    `export function Faceplate_Container_1_Properties_BackgroundColor_Trigger (item) {  
@@ -13456,7 +13456,7 @@ The background color of the I/O field "IO field_3" in faceplate type "FP_Engine0
 ##### Inserting a slider
 
 1. Drag and drop a slider from the "Toolbox" task card into the screen.
-2. Select the slider and open the Inspector window under "Properties > Properties > General".
+2. Select the slider and open the Inspector window under "Properties &gt; Properties &gt; General".
 3. Assign the "Engine01_CurrentRPM" tag to the "Process value" property.
 
 ##### Result
@@ -13510,7 +13510,7 @@ You create a data log with two logging tags. You configure a faceplate type with
 1. Create the faceplate type "FP_TrendView".
 2. Navigate to "Controls" in the "Toolbox" task card.
 3. Add a trend control to the faceplate type using drag-and-drop.
-4. Add another trend to the trend control in the Inspector window in the properties under "General > Trend areas > [0] Trend area > Trends" .
+4. Add another trend to the trend control in the Inspector window in the properties under "General &gt; Trend areas &gt; [0] Trend area &gt; Trends" .
 5. Change the "Display name" property of the trends in "Engine01 - RPM" and "Engine02 - RPM".
 6. Select the color in the "Line - Color" property for both trends.
 7. Deactivate all window settings except "Show border" in the properties under "Appearance" in the Inspector window.
@@ -13540,8 +13540,8 @@ You create a data log with two logging tags. You configure a faceplate type with
 1. Open the configured HMI screen.
 2. Place a faceplate instance of the configured faceplate type from the project library in the HMI screen using drag-and-drop.
 3. Click on the faceplate instance in the HMI screen.
-4. In the properties in the Inspector window, navigate to "Miscellaneous > Interface".
-5. Link the interfaces with the corresponding logging tags in the form: <HMI tag>:<Logging tag>.
+4. In the properties in the Inspector window, navigate to "Miscellaneous &gt; Interface".
+5. Link the interfaces with the corresponding logging tags in the form: &lt;HMI tag&gt;:&lt;Logging tag&gt;.
 
    In this case, this is "Engine01_CurrentRPM:LogTag_Engine01_CurrentRPM" and "Engine02_CurrentRPM:LogTag_Engine02_CurrentRPM".
 
@@ -13587,7 +13587,7 @@ You dynamize the "Interface" object property of a faceplate instance with a tag 
    | Engine04_CurrentRPM | Int |
    | Engine05_CurrentRPM | Int |
    | EngineRef | WString |
-3. Set the start value of the "EngineRef" tag to "01" under "Properties > Properties > Values".
+3. Set the start value of the "EngineRef" tag to "01" under "Properties &gt; Properties &gt; Values".
 
 ##### Configuring a faceplate type
 
@@ -13601,7 +13601,7 @@ You dynamize the "Interface" object property of a faceplate instance with a tag 
 ##### Dynamizing a text box
 
 - Click on the text box.
-- Navigate in the properties to "General > Text".
+- Navigate in the properties to "General &gt; Text".
 - Select a script for dynamization.
 - Insert the following script:
 
@@ -13642,7 +13642,7 @@ You dynamize the "Interface" object property of a faceplate instance with a tag 
 ##### Configuring a faceplate instance
 
 1. Add a faceplate instance of "FP_EngineSwitch" to the screen.
-2. Select the faceplate instance and navigate to "Properties > Properties > Miscellaneous > Interfaces > Engine02_CurrentRPM".
+2. Select the faceplate instance and navigate to "Properties &gt; Properties &gt; Miscellaneous &gt; Interfaces &gt; Engine02_CurrentRPM".
 3. Select "Tag parameter" for dynamization of the interface.
 
    The "Tag parameter" window opens.
@@ -13653,7 +13653,7 @@ You dynamize the "Interface" object property of a faceplate instance with a tag 
    | Symbol | Meaning |
    | --- | --- |
    | ![Configuring a faceplate instance](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tip for working effectively** |
-   | To select the tag reference, click at the desired place in the dynamic tag name and press <Ctrl+J>. |  |
+   | To select the tag reference, click at the desired place in the dynamic tag name and press &lt;Ctrl+J&gt;. |  |
 
    ![Configuring a faceplate instance](images/171624374795_DV_resource.Stream@PNG-en-US.png)
 

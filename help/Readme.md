@@ -101,7 +101,7 @@ Firewalls can block the PN DCP protocol that is used by the TIA Portal for the d
 
 You can find detailed information on configuring a firewall rule, e.g. for McAfee Endpoint Security, under:
 
-<https://support.industry.siemens.com/cs/ww/en/view/109762832>
+[https://support.industry.siemens.com/cs/ww/en/view/109762832](https://support.industry.siemens.com/cs/ww/en/view/109762832)
 
 #### Opening projects with missing software components
 
@@ -163,7 +163,7 @@ Information that could not be included in the online help and important informat
 
 #### Instructions for using TIA Portal in a virtual environment (private cloud)
 
-You can find instructions on how to use TIA Portal in a virtual environment (private cloud) on the installation disk in the directory "Documents\Readme\<language directory>". You can open the PDF document "TIAPortalCloudConnectorHowTo<language ID>.pdf" here.
+You can find instructions on how to use TIA Portal in a virtual environment (private cloud) on the installation disk in the directory "Documents\Readme\&lt;language directory&gt;". You can open the PDF document "TIAPortalCloudConnectorHowTo&lt;language ID&gt;.pdf" here.
 
 The TIA Portal Cloud Connector can be used with the Windows 7 (64-bit) and Windows 10 (64-bit) operating systems.
 
@@ -228,7 +228,7 @@ If you run TIA Portal in a Cloud (for example virtual machine), this system has 
 4. As of TIA Portal Teamcenter Gateway version V18, you can create TIA Portal object structures as new item when saving.
 5. As of TIA Portal Teamcenter Gateway version V18, you can save internal data of a TIA Portal project as a separate unit under an item or revision in Teamcenter with "Save as new item..." or "Save as new revision...".
 6. As of TIA Portal Teamcenter Gateway version V17, the Teamcenter operation "Open in TIA Portal" is available for TIA Portal projects.
-7. As of TIA Portal Teamcenter Gateway version V15, the Teamcenter operation "Teamcenter > Export..." is available for TIA Portal projects and global libraries. With this operation, you create a copy of the current project, which is completely free of any Teamcenter information. If you need to separated from Teamcenter, use this operation instead of the "Save as" operation because "Save as" retains Teamcenter information in the project.
+7. As of TIA Portal Teamcenter Gateway version V15, the Teamcenter operation "Teamcenter &gt; Export..." is available for TIA Portal projects and global libraries. With this operation, you create a copy of the current project, which is completely free of any Teamcenter information. If you need to separated from Teamcenter, use this operation instead of the "Save as" operation because "Save as" retains Teamcenter information in the project.
 
 #### Connecting to Teamcenter
 
@@ -266,7 +266,7 @@ In order to work with Teamcenter version V11.6.0.0, the prerequisite is that you
 
 #### Setting the TIA Portal Teamcenter Gateway cache path
 
-By default, the value entered under "Options > Settings > General > Teamcenter Gateway" in the "TIA Portal Teamcenter Gateway Cache Path" area is taken as "TIA Portal Teamcenter Gateway Cache Path".
+By default, the value entered under "Options &gt; Settings &gt; General &gt; Teamcenter Gateway" in the "TIA Portal Teamcenter Gateway Cache Path" area is taken as "TIA Portal Teamcenter Gateway Cache Path".
 
 By default, this value refers to the project directory path.
 
@@ -352,7 +352,7 @@ If the "Keep local session" option is selected after the check-in, all checked-i
 
 #### Working with different versions of TIA Portal
 
-Local sessions created with <x.y> version of TIA Portal can only be worked on with this version.
+Local sessions created with &lt;x.y&gt; version of TIA Portal can only be worked on with this version.
 
 Example: A local session created with TIA Portal V17 as part of a V17 project cannot be edited with an earlier version of TIA Portal.
 
@@ -363,7 +363,7 @@ Example: A local session created with TIA Portal V17 as part of a V17 project ca
   However, a new revision is not created when objects that cannot be marked have been edited in the local session.
 
   Changes to objects that cannot be marked are lost during check-in and are not downloaded to the CPU.
-- When you start the download to the device from the project tree with the menu command "Download to device > Hardware configuration" in commissioning mode, the dialog informing you that different data exists on the CPU and in the server project is always displayed.
+- When you start the download to the device from the project tree with the menu command "Download to device &gt; Hardware configuration" in commissioning mode, the dialog informing you that different data exists on the CPU and in the server project is always displayed.
 - When you work in Commissioning mode, only S7-1500 CPUs are fully supported.
 
   When using an S7-300/400 CPU, the dialog which informs you that different data exists on the CPU and in the server project is always displayed in Commissioning mode. The reason is that S7-300/400 CPUs do not support synchronization.

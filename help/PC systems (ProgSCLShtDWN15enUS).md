@@ -18,7 +18,7 @@ This section contains information on the following topics:
 
 You can use the instruction "SHUT_DOWN: Shut down target system" to shut down the PC-based automation system and restart the S7 software controller CPU 150xS or the operating system (Windows or Linux) on the PC-based automation system.
 
-The instruction is available in the "Instructions" task card under Basic instructions > Program control > Runtime control.
+The instruction is available in the "Instructions" task card under Basic instructions &gt; Program control &gt; Runtime control.
 
 A restart is, for example, advisable in the following situations:
 

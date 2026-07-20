@@ -128,20 +128,20 @@ When data blocks are downloaded to a device in STOP mode, the next transition of
 - Tags of non-retentive data blocks retain their defined start values.
 - Tags of retentive data blocks only retain their values if the following conditions are met:
 
-  - You loaded the data block by means of "Download to device > Software (changes only)".
+  - You loaded the data block by means of "Download to device &gt; Software (changes only)".
   - You made no changes to the DB structure.
 
   Otherwise the tags of retentive data blocks also retain their defined start values.
 
-### Loading I&M data in PROFINET IO devices to load your modules
+### Loading I&amp;M data in PROFINET IO devices to load your modules
 
-When loaded in a device, you can load I&M data in PROFINET IO devices and their modules in addition to the above-mentioned components.
+When loaded in a device, you can load I&amp;M data in PROFINET IO devices and their modules in addition to the above-mentioned components.
 
 ---
 
 **See also**
 
-[Loading I&M data to PROFINET IO devices and your modules](Device%20and%20network%20diagnostics.md#loading-im-data-to-profinet-io-devices-and-your-modules)
+[Loading I&amp;M data to PROFINET IO devices and your modules](Device%20and%20network%20diagnostics.md#loading-im-data-to-profinet-io-devices-and-your-modules)
 
 ## Downloading blocks in the "RUN" operating state to the device (S7-300, S7-400)
 
@@ -156,7 +156,7 @@ If the requirements are met, you can also load a modified program or program par
 **Basically, there are the following restriction when loading in RUN mode:**
 
 - Depending on the device used, the number and the type of blocks that you can load in RUN mode can be limited.
-- You have the option to download the blocks to the device in RUN over multiple cycles. This is only possible when you use the "Download > Software (only changes)" command.
+- You have the option to download the blocks to the device in RUN over multiple cycles. This is only possible when you use the "Download &gt; Software (only changes)" command.
 - It is not possible to load all the blocks using "Download PLC program to the device and reset".
 - If you have changed the hardware configuration of the device that is to be used as the target of the loading process, loading in RUN mode is not possible.
 
@@ -171,7 +171,7 @@ The following table shows which program or configuration changes can be loaded i
 Explanations on the table:
 
 - RUN: Change can be loaded in the CPU in STOP mode as well as in RUN mode.
-- RUN (< 57): The CPU can integrate up to 56 new or modified objects/blocks in one program cycle. If you download more objects/blocks, they are integrated in several successive program cycles. If you want to load all objects/blocks consistently, you must set the CPU to STOP mode. This number depends on the setting for S7-300 CPUs with configuration option "Process mode/test mode".
+- RUN (&lt; 57): The CPU can integrate up to 56 new or modified objects/blocks in one program cycle. If you download more objects/blocks, they are integrated in several successive program cycles. If you want to load all objects/blocks consistently, you must set the CPU to STOP mode. This number depends on the setting for S7-300 CPUs with configuration option "Process mode/test mode".
 - RUN (init): Change can loaded in RUN mode; loaded data blocks are re-initialized.
 - STOP: Change can only be loaded in the STOP mode.
 - STOP (reset): Change can only be loaded in STOP mode. All data including retentive data is reset.
@@ -185,7 +185,7 @@ Explanations on the table:
 | New/revised text lists (alarms) | **RUN** | **RUN** | STOP | **RUN** **(V1.1 and higher)** |
 | Revised comments (new, revised, deleted) with the exception of comments in the HW configuration | - | - | **RUN** | **RUN** |
 |  |  |  |  |  |
-| Number of blocks downloaded at the same time | **RUN (<17)** | **RUN (<57)** | **RUN (<21)** | **RUN (all)** |
+| Number of blocks downloaded at the same time | **RUN (&lt;17)** | **RUN (&lt;57)** | **RUN (&lt;21)** | **RUN (all)** |
 | Download PLC program to the device and reset | STOP (Reset) | STOP (Reset) | STOP (Reset) | STOP (Reset) |
 | New OB | **RUN** | **RUN** | STOP | **RUN** |
 | Modified OB: Code changes | **RUN** | **RUN** | **RUN** | **RUN** |
@@ -218,7 +218,7 @@ The table below shows the changes you can load in RUN mode and for older CPU fir
 | New/revised text lists (alarms) | STOP | STOP |
 | Revised comments (new, revised, deleted) with the exception of comments in the HW configuration. | STOP | **RUN** |
 |  |  |  |
-| Number of blocks downloaded at the same time | STOP | **RUN (<11)** |
+| Number of blocks downloaded at the same time | STOP | **RUN (&lt;11)** |
 | Download PLC program to the device and reset | STOP (Reset) | STOP (Reset) |
 | New OB | STOP | STOP |
 | Modified OB: Code changes | STOP | **RUN** |
@@ -274,7 +274,7 @@ To load a block from the program editor to the device, follow these steps:
 2. Select the "Download to device" command in the shortcut menu.
 
    - If you have not already established an online connection, the "Extended download to device" dialog opens. In this case, set all parameters required for the connection and click "Load".
-   - You can save your preferred connection parameters as default under "Options > Settings > Online & Diagnostics". When you first load with new connection parameters, a query is automatically displayed whether you want to store it as a default setting. Click "Yes", if you want to save the current connection parameters as default.
+   - You can save your preferred connection parameters as default under "Options &gt; Settings &gt; Online &amp; Diagnostics". When you first load with new connection parameters, a query is automatically displayed whether you want to store it as a default setting. Click "Yes", if you want to save the current connection parameters as default.
    - You have the option of showing all compatible devices by selecting the corresponding option and clicking the "Start search" command. You can also open the "Extended download to device" dialog with the "Online" menu.
 
      See also: [Establishing and terminating an online connection](Using%20online%20and%20diagnostics%20functions.md#establishing-or-changing-an-online-connection)
@@ -302,7 +302,7 @@ To avoid inconsistencies between calling and called blocks, download all affecte
 
 The code for the block is downloaded to the device. If you have selected "Consistent download", then all blocks that are subject to this change will be compiled and downloaded to the device.
 
-The messages under "Info > General" in the Inspector window report indicate whether the loading process was successful.
+The messages under "Info &gt; General" in the Inspector window report indicate whether the loading process was successful.
 
 ---
 
@@ -326,7 +326,7 @@ To load one or more blocks to the device from the project tree, follow these ste
 
 1. Open the "Program blocks" folder in project tree.
 2. Select the blocks you want to download.
-3. Select the "Download to device > Software (only changes)" command from the shortcut menu.
+3. Select the "Download to device &gt; Software (only changes)" command from the shortcut menu.
 
    - If you have not already established an online connection, the "Extended download to device" dialog opens. In this case, set all parameters required for the connection and click "Load". You can also open the "Extended download to device" dialog with the "Online" menu.
 
@@ -384,7 +384,7 @@ To avoid inconsistencies between calling and called blocks, download all affecte
 
 The code for the blocks is downloaded to the device. If the changes affect additional blocks, these will be compiled and also downloaded to the device. Blocks that only exist online in the device are deleted. Inconsistencies between the blocks in the user program are avoided by loading all blocks affected and deleting the unneeded blocks in the device.
 
-The messages under "Info > General" in the Inspector window report indicate whether the loading process was successful.
+The messages under "Info &gt; General" in the Inspector window report indicate whether the loading process was successful.
 
 ---
 
@@ -473,7 +473,7 @@ Make sure that no dangerous situations can arise before you start the actions.
 Or:
 
 1. In the project tree, select the blocks that you want to upload.
-2. Select the "Card Reader/USB memory > Write to memory card" command in the "Project" menu.
+2. Select the "Card Reader/USB memory &gt; Write to memory card" command in the "Project" menu.
 
    The "Select memory card" dialog opens.
 3. Select a memory card that is compatible with the CPU.
@@ -491,7 +491,7 @@ Or:
 
 ### Result
 
-The selected blocks will be downloaded to the memory card. The messages under "Info > General" in the Inspector window report indicate whether the loading process was successful.
+The selected blocks will be downloaded to the memory card. The messages under "Info &gt; General" in the Inspector window report indicate whether the loading process was successful.
 
 ---
 
@@ -540,7 +540,7 @@ To switch off the sequencer globally for each loading operation of an instance d
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > GRAPH" group in the area navigation.
+2. Select the "PLC programming &gt; GRAPH" group in the area navigation.
 3. Select the "Turn off sequence before downloading DB" check box.
 
    For future loading operations, the sequencer is switched off prior to loading of the instance data block.

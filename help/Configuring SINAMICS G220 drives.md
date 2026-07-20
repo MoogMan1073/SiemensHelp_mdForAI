@@ -251,7 +251,7 @@ The network view is one of three working areas of the hardware and network edito
 
 ##### Structure
 
-The network view is opened via the "Devices & networks" entry in the project tree.
+The network view is opened via the "Devices &amp; networks" entry in the project tree.
 
 ![G220 network view](images/152044290443_DV_resource.Stream@PNG-en-US.png)
 
@@ -672,16 +672,16 @@ Symbols for arithmetic and controller functions, not used in a standard Windows 
 
 | Icon | Explanation | Icon | Explanation |
 | --- | --- | --- | --- |
-| ![Figure](images/149085360523_DV_resource.Stream@PNG-de-DE.png) | **NOT element**   Logical inversion (negation) | ![Figure](images/149086551179_DV_resource.Stream@PNG-de-DE.png) | **Threshold switch 1/0**   Outputs a logical "1" at output y if x < S. |
-| ![Figure](images/149086231051_DV_resource.Stream@PNG-de-DE.png) | **AND element**   With logical subdivision of an input | ![Figure](images/149086461579_DV_resource.Stream@PNG-de-DE.png) | **Threshold switch 0/1**   Outputs a logical "1" at output y if x > S. |
-| ![Figure](images/149086188299_DV_resource.Stream@PNG-de-DE.png) | **R/S flip-flop**   S/R = Set input/Reset input   Q = Non-inverted output   Q = Inverted output  In the case of a simultaneous 1 signal at the R input and S input, the S input is dominant. | ![Figure](images/149086615179_DV_resource.Stream@PNG-de-DE.png) | **Threshold switch 1/0 with hysteresis**   Outputs a logical "1" at output y if x < S. If x >= S + H, y returns to 0. |
-| ![Figure](images/149086325003_DV_resource.Stream@PNG-de-DE.png) | **Exclusive OR/XOR**   y = 1 if x1 = x2. | ![Figure](images/149086474379_DV_resource.Stream@PNG-de-DE.png) | **Threshold switch 0/1 with hysteresis**   Outputs a logical "1" at output y if x > S. If x <= S - H, y returns to 0. |
+| ![Figure](images/149085360523_DV_resource.Stream@PNG-de-DE.png) | **NOT element**   Logical inversion (negation) | ![Figure](images/149086551179_DV_resource.Stream@PNG-de-DE.png) | **Threshold switch 1/0**   Outputs a logical "1" at output y if x &lt; S. |
+| ![Figure](images/149086231051_DV_resource.Stream@PNG-de-DE.png) | **AND element**   With logical subdivision of an input | ![Figure](images/149086461579_DV_resource.Stream@PNG-de-DE.png) | **Threshold switch 0/1**   Outputs a logical "1" at output y if x &gt; S. |
+| ![Figure](images/149086188299_DV_resource.Stream@PNG-de-DE.png) | **R/S flip-flop**   S/R = Set input/Reset input   Q = Non-inverted output   Q = Inverted output  In the case of a simultaneous 1 signal at the R input and S input, the S input is dominant. | ![Figure](images/149086615179_DV_resource.Stream@PNG-de-DE.png) | **Threshold switch 1/0 with hysteresis**   Outputs a logical "1" at output y if x &lt; S. If x &gt;= S + H, y returns to 0. |
+| ![Figure](images/149086325003_DV_resource.Stream@PNG-de-DE.png) | **Exclusive OR/XOR**   y = 1 if x1 = x2. | ![Figure](images/149086474379_DV_resource.Stream@PNG-de-DE.png) | **Threshold switch 0/1 with hysteresis**   Outputs a logical "1" at output y if x &gt; S. If x &lt;= S - H, y returns to 0. |
 | ![Figure](images/149086640779_DV_resource.Stream@PNG-de-DE.png) | **Comparator**   y = 1 if x1 = x2. | ![Figure](images/149086333579_DV_resource.Stream@PNG-de-DE.png) | **Limiter**   x is limited to the upper limit value LU and the lower limit value LL and is output at output y.   The binary signals MLU and MLL have the value "1" if upper or lower limiting is active. |
-| ![Figure](images/149086316427_DV_resource.Stream@PNG-de-DE.png) | **Sign reversal**   y = -x | ![Figure](images/149086435979_DV_resource.Stream@PNG-de-DE.png) | **Sample & hold element**   Sample and hold element. y = x if SET = 1  (no retentive memory during POWER OFF) |
+| ![Figure](images/149086316427_DV_resource.Stream@PNG-de-DE.png) | **Sign reversal**   y = -x | ![Figure](images/149086435979_DV_resource.Stream@PNG-de-DE.png) | **Sample &amp; hold element**   Sample and hold element. y = x if SET = 1  (no retentive memory during POWER OFF) |
 | ![Figure](images/149081763339_DV_resource.Stream@PNG-de-DE.png) | **Absolute-value generator**   y = |x| | ![Figure](images/149086627979_DV_resource.Stream@PNG-de-DE.png) | **Monitoring**   Positioning in sheet at bottom right. |
 | ![Figure](images/149085240971_DV_resource.Stream@PNG-de-DE.png) | **Divider**   Y = X<sub>1</sub>/X<sub>2</sub> | ![Figure](images/149086222475_DV_resource.Stream@PNG-de-DE.png) | **Simple change-over switch**   The switch position as per the factory setting of --- is displayed (in this case, switch position 1). |
 | ![Figure](images/149085351947_DV_resource.Stream@PNG-de-DE.png) | **Multiplier**   y = x1 · x2 |  |  |
-| ![Figure](images/149086666379_DV_resource.Stream@PNG-de-DE.png) | **Comparator greater than 0**   y = 1 if analog signal x > 0, i.e. if it is positive. |  |  |
+| ![Figure](images/149086666379_DV_resource.Stream@PNG-de-DE.png) | **Comparator greater than 0**   y = 1 if analog signal x &gt; 0, i.e. if it is positive. |  |  |
 | ![Figure](images/149086384779_DV_resource.Stream@PNG-de-DE.png) | **Differentiator**   Y = dx/dt |  |  |
 
 ## Fundamentals
@@ -734,7 +734,7 @@ The complete project must be saved in order that the settings made are permanent
 1. Click "Save project" in the toolbar.
 
    - Or -
-2. Select the "Project > Save" or "Project > Save as" menu.
+2. Select the "Project &gt; Save" or "Project &gt; Save as" menu.
 
 #### Saving online data in non-volatile storage
 
@@ -743,8 +743,8 @@ If you are connected to the drive online, save your configuration as follows:
 1. In the function view for the active Startdrive project, click on the ![Saving online data in non-volatile storage](images/145959908619_DV_resource.Stream@PNG-de-DE.png) icon (Retentively save data of the complete device).
 
    - Or -
-2. In the project tree of your drive device, double-click on "Online & diagnostics".
-3. In the secondary navigation, select the menu "Functions > Backup/Restore".
+2. In the project tree of your drive device, double-click on "Online &amp; diagnostics".
+3. In the secondary navigation, select the menu "Functions &gt; Backup/Restore".
 4. In the "Retentively save RAM data" area, click on "Save":
 
 The program checks whether a memory card is available. If a matching memory card is detected, the parameter values are saved retentively to this card.
@@ -800,9 +800,9 @@ In the online mode, you can restore the factory settings for the drive.
 2. Click on the ![Procedure](images/145959917067_DV_resource.Stream@PNG-de-DE.png) icon in the function view of the active Startdrive project.
 
    - Or -
-3. In the drive project tree, call function view "Online & diagnostics".
+3. In the drive project tree, call function view "Online &amp; diagnostics".
 
-   - In the secondary navigation, select the menu "Functions > Backup/Restore".
+   - In the secondary navigation, select the menu "Functions &gt; Backup/Restore".
    - Click "Start" in the "Restoring factory settings" area.
 
 ##### Result
@@ -811,7 +811,7 @@ The factory settings are restored.
 
 When performing the reset, the following settings are kept:
 
-- Activation and settings of the User Management (User Management & Access Control)
+- Activation and settings of the User Management (User Management &amp; Access Control)
 - The communication settings "IP configuration" or "Device name" of service interface (X127) and the PROFINET interface (X150)
 - Firmware installed on the converter
 
@@ -1031,7 +1031,7 @@ A firmware update is required if you want to use a new firmware version with an 
   The firmware update is performed directly on the actuator using a memory card with new firmware.
 - [Firmware update via online connection](#updating-the-firmware-via-an-online-connection)
 
-  This firmware update is performed via the "Online & diagnostics" function view in Startdrive. The desired drive is accessed online.
+  This firmware update is performed via the "Online &amp; diagnostics" function view in Startdrive. The desired drive is accessed online.
 
 > **Note**
 >
@@ -1071,7 +1071,7 @@ The firmware has been updated.
 
 Check in the Startdrive catalog information whether the required new firmware version is installed.
 
-Call in secondary navigation in the "General > Catalog information" inspector window.
+Call in secondary navigation in the "General &gt; Catalog information" inspector window.
 
 ---
 
@@ -1085,7 +1085,7 @@ Call in secondary navigation in the "General > Catalog information" inspector wi
 
 ##### Overview
 
-As an alternative to an update using a memory card, you can also update the firmware via the "Online & diagnostics" function view.
+As an alternative to an update using a memory card, you can also update the firmware via the "Online &amp; diagnostics" function view.
 
 ##### Requirements
 
@@ -1098,7 +1098,7 @@ As an alternative to an update using a memory card, you can also update the firm
 
 ##### Procedure
 
-| 1. Call the [Diagnostics view](#overview-7). 2. In the secondary navigation of the function view select the "Functions > Firmware update" menu.     The "Firmware update" function view opens in the diagnostics view. The drive article number and the currently used firmware version are displayed in area "Online data". 3. Click the "Browse" button in the "Firmware loader" area.     A selection dialog opens. 4. Select the firmware file with the required version in the file system of your operating unit.     The firmware file is now displayed in the line with the same name in the "Firmware loader" area.     In fields "Firmware version" and "Status", check again that you have selected the required firmware version, and whether the firmware can be read. 5. Optional: Activate the option "Automatically restart the drive...".     In this case, after updating the firmware, you do not have to restart the drive manually. In this case, step 8 is omitted. 6. To start the update, click on "Start firmware update"     Confirmation dialog "Firmware update" is displayed. 7. Click on "OK" to load the firmware into the drive.    The status of the firmware update is displayed in the "Status" field. The new firmware is being installed. The process takes about 2 minutes.       | RDY | COM | Explanation of LED displays |    | --- | --- | --- |    | ![Procedure](images/164840824843_DV_resource.Stream@PNG-de-DE.png) | ![Procedure](images/164840824843_DV_resource.Stream@PNG-de-DE.png) | Firmware update is active - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |    | ![Procedure](images/164842006539_DV_resource.Stream@PNG-de-DE.png) | - | Firmware update complete | 8. Optional: If the option "Automatically restart the drive..." is not activated, then manually switch the drive off and on again.    The firmware of the connected DRIVE-CLiQ components is updated.        | RDY | Explanation of LED displays |  |    | --- | --- | --- |    | ![Procedure](images/146009085707_DV_resource.Stream@PNG-de-DE.png) | Firmware update of the connected DRIVE-CLiQ components in progress. - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |  |    | ![Procedure](images/146009098379_DV_resource.Stream@PNG-de-DE.png) | Firmware update of the DRIVE-CLiQ components is complete. Waiting for POWER ON of the respective component.  **Remedy**: Turn the component off and on again. |  | |  |  |
+| 1. Call the [Diagnostics view](#overview-7). 2. In the secondary navigation of the function view select the "Functions &gt; Firmware update" menu.     The "Firmware update" function view opens in the diagnostics view. The drive article number and the currently used firmware version are displayed in area "Online data". 3. Click the "Browse" button in the "Firmware loader" area.     A selection dialog opens. 4. Select the firmware file with the required version in the file system of your operating unit.     The firmware file is now displayed in the line with the same name in the "Firmware loader" area.     In fields "Firmware version" and "Status", check again that you have selected the required firmware version, and whether the firmware can be read. 5. Optional: Activate the option "Automatically restart the drive...".     In this case, after updating the firmware, you do not have to restart the drive manually. In this case, step 8 is omitted. 6. To start the update, click on "Start firmware update"     Confirmation dialog "Firmware update" is displayed. 7. Click on "OK" to load the firmware into the drive.    The status of the firmware update is displayed in the "Status" field. The new firmware is being installed. The process takes about 2 minutes.       | RDY | COM | Explanation of LED displays |    | --- | --- | --- |    | ![Procedure](images/164840824843_DV_resource.Stream@PNG-de-DE.png) | ![Procedure](images/164840824843_DV_resource.Stream@PNG-de-DE.png) | Firmware update is active - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |    | ![Procedure](images/164842006539_DV_resource.Stream@PNG-de-DE.png) | - | Firmware update complete | 8. Optional: If the option "Automatically restart the drive..." is not activated, then manually switch the drive off and on again.    The firmware of the connected DRIVE-CLiQ components is updated.        | RDY | Explanation of LED displays |  |    | --- | --- | --- |    | ![Procedure](images/146009085707_DV_resource.Stream@PNG-de-DE.png) | Firmware update of the connected DRIVE-CLiQ components in progress. - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |  |    | ![Procedure](images/146009098379_DV_resource.Stream@PNG-de-DE.png) | Firmware update of the DRIVE-CLiQ components is complete. Waiting for POWER ON of the respective component.  **Remedy**: Turn the component off and on again. |  | |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ##### Result
@@ -1107,7 +1107,7 @@ The firmware has been updated.
 
 Check in the Startdrive catalog information whether the required new firmware version is installed.
 
-Call in secondary navigation in the "General > Catalog information" inspector window.
+Call in secondary navigation in the "General &gt; Catalog information" inspector window.
 
 ### Managing supplementary functions that require a license
 
@@ -1256,7 +1256,7 @@ The Trial License mode can be used for a maximum of three trial periods.
 
 1. Call the license overview page:
 
-   - Double-click on "Online & diagnostics" in the project tree.
+   - Double-click on "Online &amp; diagnostics" in the project tree.
    - Click "License" in the secondary navigation.
 2. Click on the "Activate Trial License mode" button.
 3. To activate the Trial License mode, click the "Activate" button in the query dialog.
@@ -1365,7 +1365,7 @@ In the license overview you can enable additional functions based on additional 
 
 1. Call the license overview page:
 
-   - Double-click on "Online & diagnostics" in the project tree.
+   - Double-click on "Online &amp; diagnostics" in the project tree.
    - Click "License" in the secondary navigation.
 2. In the license overview page, click on "Activate License Key file".
 
@@ -2114,7 +2114,7 @@ Use the standard search function of the TIA Portal to specifically search for pa
 
 The standard search is displayed in the "Tasks" viewlet in the right-hand editor of the program user interface.
 
-1. To skip the search dialog, enter <Ctrl+F> via the keyboard with activated parameter view.
+1. To skip the search dialog, enter &lt;Ctrl+F&gt; via the keyboard with activated parameter view.
 
    ![Searching for parameters](images/149081051019_DV_resource.Stream@PNG-en-US.PNG)
 
@@ -2122,10 +2122,10 @@ The standard search is displayed in the "Tasks" viewlet in the right-hand editor
 
    Searching for parameters
 2. In the "Search" field, enter either the parameter number or a parameter text for which you wish to search.
-3. To start the search, press the <Return> key or click on "Search".
+3. To start the search, press the &lt;Return&gt; key or click on "Search".
 
    If the parameter or text is found, the cursor jumps automatically to the position in the parameter list.
-4. Press <F3> to jump to the next search result.
+4. Press &lt;F3&gt; to jump to the next search result.
 
 #### Comparing parameters
 
@@ -2255,18 +2255,18 @@ You can create and save user-defined lists using icons or context menus. Here is
 
 1. To create a new parameter list, proceed as follows:
 
-   - In the project tree, select entry "User-defined lists" and call menu "Insert > Add new list".
+   - In the project tree, select entry "User-defined lists" and call menu "Insert &gt; Add new list".
 
      - Or -
-   - In the project tree of the drive, call "User-defined lists > Add new list".
+   - In the project tree of the drive, call "User-defined lists &gt; Add new list".
 
    The "User-defined list_#" tab opens (e.g. User-defined list_1, User-defined list_2).
 2. Now compile the required parameters for the parameter list:
 
-   - Enter the parameter number in the "Number" column in the <add new> text box and confirm with Return.
+   - Enter the parameter number in the "Number" column in the &lt;add new&gt; text box and confirm with Return.
 
      - Or -
-   - Enter a part of the parameter number in the "Number" column in the <add new> text box and open the drop-down list of the text box. Click on the required parameter in the list.
+   - Enter a part of the parameter number in the "Number" column in the &lt;add new&gt; text box and open the drop-down list of the text box. Click on the required parameter in the list.
 
    Startdrive now automatically inserts the most important data of the parameter in the column fields of the current row.
 3. Enter further parameters in the parameter list in the same way.
@@ -2284,7 +2284,7 @@ Other options:
 
 ###### Creating a parameter list with selected parameters
 
-1. Select the required parameters from a general parameter list with <Shift key + mouse click> or <Ctrl + mouse click>.
+1. Select the required parameters from a general parameter list with &lt;Shift key + mouse click&gt; or &lt;Ctrl + mouse click&gt;.
 2. Select shortcut menu "Attach to user-defined parameter list".
 
 **Result**
@@ -2335,7 +2335,7 @@ The parameter list is saved as a json file. The assigned name of the json file i
 Using groups and subgroups, you can create and manage several parameter lists for a drive. You can create or import a parameter list in each group and subgroup. You can also archive groups in the project library.
 
 1. Select a folder in project folder "User-defined list".
-2. Open menu "Insert > Group".
+2. Open menu "Insert &gt; Group".
 
    - Or -
 
@@ -2401,7 +2401,7 @@ You can import the parameter lists of the displayed drive saved in the file syst
 
    - Or -
 
-   In the project tree of the drive in the project, call menu "User-defined lists > Import list".
+   In the project tree of the drive in the project, call menu "User-defined lists &gt; Import list".
 
    Dialog "Import user-defined list from file" opens.
 2. Select whether you want to import the user-defined parameter list with or without parameter values.
@@ -2429,7 +2429,7 @@ Proceed as follows to append parameters:
    ![Entering parameters](images/173861188491_DV_resource.Stream@PNG-en-US.PNG)
 
    Entering parameters
-2. Enter the parameter number in the "Add new" input field located in the "Number" column and confirm your entry with <Return>.
+2. Enter the parameter number in the "Add new" input field located in the "Number" column and confirm your entry with &lt;Return&gt;.
 3. Repeat step 2 for all of the parameters you want to enter.
 
 **Result**
@@ -2479,7 +2479,7 @@ Depending on the call, the new row is inserted either before the selected row or
 
 ###### Copying a parameter/comment
 
-You can also copy the contents of a parameter list to another parameter list via Copy & Paste.
+You can also copy the contents of a parameter list to another parameter list via Copy &amp; Paste.
 
 1. Select the parameter/comment or a row of a parameter list.
 
@@ -2879,7 +2879,7 @@ Motor data sets (MDS) - 8575 -
 >
 > If you want to make important settings online, activation of the editing mode is mandatory. Restore points that are required as a return point following a cancellation of the current online parameterization are automatically created by the editing mode in the "guided quick startup" (and in the "Parameterization" area) during configuration.
 >
-> A separate editing mode is not required in the "Rotating & optimizing" area.
+> A separate editing mode is not required in the "Rotating &amp; optimizing" area.
 
 > **Note**
 >
@@ -3111,7 +3111,7 @@ The procedure for closing a project depends on whether the project contains unsa
 
 To close a project, proceed as follows:
 
-1. Call the "Project > Close" menu.
+1. Call the "Project &gt; Close" menu.
 
    - Or -
 
@@ -3209,7 +3209,7 @@ If the version numbers (offline project in Startdrive compared with the drive un
 Alternatively, you can also insert a drive unit via the network view or topology view.
 
 1. Open the network view.
-2. Open the "Drives & starters" entry in the hardware catalog.
+2. Open the "Drives &amp; starters" entry in the hardware catalog.
 3. Open the "SINAMICS drives" entry in the hardware catalog and the corresponding subfolder of the required Control Unit (SINAMICSG/SINAMICS G220).
 4. Drag the drive unit from the hardware catalog and drop it in the network view or the topology view.
 5. The "Security settings Drive unit_X" dialog is open.
@@ -3235,10 +3235,10 @@ You can configure the following details for the SINAMICS G220 drive:
 | General | - Product information   Name data - Catalog information   Brief description, description of the components included, firmware version used |
 | PROFINET interface [X150] | - General - Ethernet addresses   Subnet, IP address, subnet mask, PROFINET names - Telegram configuration   - Telegrams of the closed-loop drive control: Send, receive, Safety Integrated     For details, see [Telegram configuration](Communication%20and%20telegrams.md#telegram-configuration-via-profidrive) - Advanced options   - Interface options   - Media redundancy   - Clock cycle synchronization for local modules (isochronous mode)   - Real time settings   - Port [X150 P1] and port [X150 P2] - Shared device   Enables the connection of multiple controllers at the same PROFINET interface of the drive. |
 | Module parameters | - Activation of channel diagnostics |
-| Protection & Security | - Wizard for security settings - User Management & Access Control - Ports and protocols - Encryption of the drive data  For details, see [Higher-level security settings](User%20administration%20and%20security.md#security-default-settings-for-projects-as-of-sinamics-fw-v61) |
+| Protection &amp; Security | - Wizard for security settings - User Management &amp; Access Control - Ports and protocols - Encryption of the drive data  For details, see [Higher-level security settings](User%20administration%20and%20security.md#security-default-settings-for-projects-as-of-sinamics-fw-v61) |
 | Ethernet commissioning interface [X127] | - General - Ethernet addresses   Subnet, IP address, subnet mask |
 | Device selection G220 PN (**mandatory entry**) | - The selection of the desired performance class is mandatory at this point. The input area is marked with the following indication symbol until the performance class has been selected: ![Overview](images/146582751627_DV_resource.Stream@PNG-de-DE.PNG). |
-| Time synchronization/Time | - Synchronization with an NTP server   If the drive is connected with a control system in the device configuration, option "Use PLC as NTP server" is automatically activated. If the drive is connected to a PLC, the IP address of the PLC is displayed. The following settings can be made:    - IP address (only if option "Use PLC as NTP server" is deactivated)   - Time zone of the NTP server (always) - No synchronization   In this case, no NTP synchronization is managed in the project. You can separately configure this synchronization for the drive in online mode using the Online & Diagnostics function "[Set time](#setting-the-time-of-day)". |
+| Time synchronization/Time | - Synchronization with an NTP server   If the drive is connected with a control system in the device configuration, option "Use PLC as NTP server" is automatically activated. If the drive is connected to a PLC, the IP address of the PLC is displayed. The following settings can be made:    - IP address (only if option "Use PLC as NTP server" is deactivated)   - Time zone of the NTP server (always) - No synchronization   In this case, no NTP synchronization is managed in the project. You can separately configure this synchronization for the drive in online mode using the Online &amp; Diagnostics function "[Set time](#setting-the-time-of-day)". |
 | Hardware settings | - Power Module settings   - Output voltage - Power Module additional data   Output filter   - Motor reactor     Motor reactors reduce the voltage stress on the motor windings and the load placed on the drive as a result of capacitive recharging currents in the cables.   - dv/dt filter      A combination of dv/dt filter and a Voltage Peak Limiter (VPL) – dv/dt filter plus VPL – is available to suppress voltage peaks.   - Sine-wave filter, third-party manufacturer     The sine-wave filter at the drive output limits the voltage rate of rise and the peak voltages at the motor winding. - Braking resistor   A braking resistor must be set if an externally connected braking resistor is to be controlled:    - "External braking resistor" for standard G220 ![Overview](images/146582751627_DV_resource.Stream@PNG-de-DE.PNG)     The maximum braking power is a mandatory entry. The braking resistor can be destroyed if the braking power is incorrectly entered.   - "Siemens braking resistor" or "Third-party braking resistor" ![Overview](images/146582751627_DV_resource.Stream@PNG-de-DE.PNG) for Clean Power G220     It is crucial that detailed entries are made for third-party braking resistors. Incorrect entries can destroy the braking resistor. |
 | Web server | - Permit access to service interface [X127] via the HTTP protocol - Permit access to service interface [X127] via the HTTPS protocol - Enable access to the PROFINET interface [X150]. This is only possible as secure HTTPS connection.  These settings are redundant to the web server settings under "Ports and protocols". |
 
@@ -3373,7 +3373,7 @@ It is only possible to change the motor standard during commissioning. Some exam
 ###### Procedure
 
 1. Select the motor in the device view and open the inspector window.
-2. Select the "Motor details > Motor brake" menu in the inspector window.
+2. Select the "Motor details &gt; Motor brake" menu in the inspector window.
 
    The current configuration of the motor holding brake is displayed in the function view. You can only change this configuration in the basic parameterization.
 
@@ -3665,7 +3665,7 @@ You can configure the following encoder details for measuring systems during com
    The gray fields are corrected automatically in accordance with their setting.
 7. You make additional detailed settings in the basic parameterization via the [Encoder evaluation](#specifying-the-encoder-evaluation).
 
-   - In the work area, select menu "Basic parameterization > Encoder evaluation".
+   - In the work area, select menu "Basic parameterization &gt; Encoder evaluation".
    - Select the encoder usage type, and then make the appropriate basic settings for this.
 
 ###### Result
@@ -4099,14 +4099,14 @@ The properties of this module are displayed in the Inspector window. Then perfor
 In addition to general project information, in the option module properties you can configure the port addresses and the data transfer for IIoT.
 
 1. Select the IIoT option module in the device view and open the inspector window.
-2. In the Inspector window, select menu "Port addresses [X128] > Port addresses".
+2. In the Inspector window, select menu "Port addresses [X128] &gt; Port addresses".
 3. Here, you specify whether the IP address should be defined in the project or via a DHCP server.
 
    Only one of the two options is possible.
 4. Then make the detailed settings for the IP address.
 
    The corresponding text boxes are active.
-5. In the Inspector window, select menu "Port addresses [X128] > Configure data transfer".
+5. In the Inspector window, select menu "Port addresses [X128] &gt; Configure data transfer".
 6. Here, activate the required data transfer for the IIoT option module.
 
    The following are possible:
@@ -4160,7 +4160,7 @@ To insert drive units in the project view via the project tree, proceed as follo
    - PG/PC and HMI communication mode
    - Access level
 
-   Make the necessary settings here (see [Protection & Security](Functional%20description%20of%20S7-1200%20CPUs%20%28S7-1200%29.md#using-the-security-settings-wizard-s7-1200)).
+   Make the necessary settings here (see [Protection &amp; Security](Functional%20description%20of%20S7-1200%20CPUs%20%28S7-1200%29.md#using-the-security-settings-wizard-s7-1200)).
 
 **Variant: Inserting a device via the network view or topology view**
 
@@ -4171,7 +4171,7 @@ To insert drive units in the project view via the project tree, proceed as follo
 
    If the CPU of the PLC to be added supports secure PG/HMI communication, the wizard for security settings "PLC security settings" starts.
 
-   Make the necessary settings here (see [Protection & Security](Functional%20description%20of%20S7-1200%20CPUs%20%28S7-1200%29.md#using-the-security-settings-wizard-s7-1200)).
+   Make the necessary settings here (see [Protection &amp; Security](Functional%20description%20of%20S7-1200%20CPUs%20%28S7-1200%29.md#using-the-security-settings-wizard-s7-1200)).
 
 ###### Result
 
@@ -4202,7 +4202,7 @@ If you have created a controller and a SINAMICS drive in your project, you have 
 
 Proceed as follows to establish the connection between the controller and the SINAMICS drive:
 
-1. To open the network view, double-click the "Devices & Networks" entry in the project tree.
+1. To open the network view, double-click the "Devices &amp; Networks" entry in the project tree.
 
    The network view opens.
 2. Draw a connection between the PROFINET interface of the controller and PROFINET interface X150 of the drive by pressing and holding the mouse button.
@@ -4425,14 +4425,14 @@ Different firmware versions often occur in the following situations:
    - Double-click "Update accessible devices".
 
      The accessible device is displayed with the IP address in the project tree.
-   - In the project tree call the "Online & diagnostics" function for the displayed device.
+   - In the project tree call the "Online &amp; diagnostics" function for the displayed device.
 
      ![Firmware version of the hardware; example S120](images/145960351627_DV_resource.Stream@PNG-en-US.png)
 
      Firmware version of the hardware; example S120
 2. Check the firmware version in the catalog information of the Control Unit in your current Startdrive project.
 
-   - To do so, call the following menu: "Control Unit > Inspector window > General > Catalog information".
+   - To do so, call the following menu: "Control Unit &gt; Inspector window &gt; General &gt; Catalog information".
 
      ![Firmware version of the software; example S120](images/145960826635_DV_resource.Stream@PNG-en-US.png)
 
@@ -4470,10 +4470,10 @@ If the firmware versions are not identical, then the versions must be aligned in
 
 If you prefer to use a specific network interface of your operating unit to establish an online connection, then you can preset this interface:
 
-1. Select the "Options > Settings" menu.
+1. Select the "Options &gt; Settings" menu.
 
    The settings of the TIA Portal are displayed.
-2. Select the "Online & diagnostics" entry in the secondary navigation.
+2. Select the "Online &amp; diagnostics" entry in the secondary navigation.
 3. In the "Preset connection path for online access" area, specify the type of the PG/PC interface as well as the interface.
 4. Enable the option "Display dialog for setting the default connection path for online access".
 
@@ -4512,7 +4512,7 @@ This section contains information on the following topics:
 
 As the Ethernet commissioning interface has already been assigned an IP address, you can go online directly.
 
-If you are not using a new project and devices have already been created, check the IP address of the interface in the project in the inspector window under "Properties > General > Ethernet addresses" and the IP address assigned to the device. The addresses and subnet masks must be identical.
+If you are not using a new project and devices have already been created, check the IP address of the interface in the project in the inspector window under "Properties &gt; General &gt; Ethernet addresses" and the IP address assigned to the device. The addresses and subnet masks must be identical.
 
 ##### Requirements
 
@@ -4700,8 +4700,8 @@ To assign an IP address, proceed as follows:
 3. Double-click "Update accessible devices".
 
    The accessible device is displayed with the IP address in the project tree.
-4. Double-click "Online & diagnostics" in the project tree of the device found.
-5. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+4. Double-click "Online &amp; diagnostics" in the project tree of the device found.
+5. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 6. Select the entry "Assign IP address".
 
    ![Assigning an IP address](images/145961217419_DV_resource.Stream@PNG-en-US.png)
@@ -4783,8 +4783,8 @@ To assign a name, proceed as follows:
 3. Double-click "Update accessible devices".
 
    The accessible device is displayed with the IP address in the project tree.
-4. Double-click "Online & diagnostics" in the project tree of the device found.
-5. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+4. Double-click "Online &amp; diagnostics" in the project tree of the device found.
+5. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 6. Select the entry "Assign PROFINET device name".
 
    ![Assigning names](images/145961422475_DV_resource.Stream@PNG-en-US.png)
@@ -4927,8 +4927,8 @@ To restore the factory settings, proceed as follows:
 3. Double-click "Update accessible devices" in the project tree.
 
    The accessible device is displayed with the IP address in the project tree.
-4. Double-click "Online & diagnostics" in the project tree of the device found.
-5. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+4. Double-click "Online &amp; diagnostics" in the project tree of the device found.
+5. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 6. Select the "Resetting PROFINET interface parameters" entry in the secondary navigation.
 
    ![Resetting the PROFINET interface parameters](images/145961138955_DV_resource.Stream@PNG-en-US.png)
@@ -4937,7 +4937,7 @@ To restore the factory settings, proceed as follows:
 
    Resetting the PROFINET interface parameters
 
-   The option "Retain I&M data" is selected by default. This means the IM0 to IM3 data are retained during resetting and are not deleted. If you want to reset this data too, select the "Delete I&M data" option.
+   The option "Retain I&amp;M data" is selected by default. This means the IM0 to IM3 data are retained during resetting and are not deleted. If you want to reset this data too, select the "Delete I&amp;M data" option.
 7. Click the "Reset" button.
 
    The drive communication settings are reset to the factory settings.
@@ -4962,7 +4962,7 @@ The factory settings of the IP address and the device name are now displayed und
 This section contains information on the following topics:
 
 - [Device diagnostics](#device-diagnostics)
-- [Online & diagnostics](#online-diagnostics)
+- [Online &amp; diagnostics](#online-diagnostics)
 
 ### Device diagnostics
 
@@ -5042,7 +5042,7 @@ In the diagnostics view, you are working in online mode and see the most importa
 
 Proceed as follows to display diagnostics and functions for a drive connected online:
 
-1. Double-click on the "Online & diagnostics" menu in the project tree.
+1. Double-click on the "Online &amp; diagnostics" menu in the project tree.
 
    The diagnostics and diagnostic functions are displayed in the secondary navigation and can be called from here.
 2. Select the "Online access" entry in the secondary navigation.
@@ -5060,7 +5060,7 @@ The online connection to the drive is established. The diagnostics view is displ
 | ① | Secondary navigation |
 | ② | Function view for online diagnostics and important basic functions |
 
-Example: Online & diagnostics made anonymous
+Example: Online &amp; diagnostics made anonymous
 
 ---
 
@@ -5305,10 +5305,10 @@ The "Security" diagnostics view displays a summary of the active security settin
   - No logged-in user, as UMAC is not active
 
     In this case, UMAC activation is recommended.
-- User Management & Access Control settings
+- User Management &amp; Access Control settings
 
   Shows the UMAC settings activated for the drive. Shows, for example, whether UMAC is active and what rights user account "Anonymous" has.
-- Ports & protocols
+- Ports &amp; protocols
 
   Displays the activation state (which interfaces are activated, which interfaces are deactivated) for the interfaces of the following areas:
 
@@ -5374,7 +5374,7 @@ You call the individual functions in the secondary navigation of the diagnostics
 
 ###### Overview
 
-Enter the IP address of the drive and the IP of the subnet mask in the diagnostics view "Online & diagnostics".
+Enter the IP address of the drive and the IP of the subnet mask in the diagnostics view "Online &amp; diagnostics".
 
 > **Note**
 >
@@ -5396,8 +5396,8 @@ Enter the IP address of the drive and the IP of the subnet mask in the diagnosti
 
 To assign an IP address, proceed as follows:
 
-1. In the drive project tree, call function view "Online & diagnostics".
-2. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+1. In the drive project tree, call function view "Online &amp; diagnostics".
+2. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 3. Select the entry "Assign IP address".
 
    ![Assigning an IP address](images/145961217419_DV_resource.Stream@PNG-en-US.png)
@@ -5422,7 +5422,7 @@ The IP address has been assigned to the device. The MAC address is read out auto
 
 In addition to the IP address, the drive also requires a device name in the PROFINET subnet. The project factory setting defines that the device name is automatically generated. The automatically generated device name has the following structure:
 
-<Drive name>.<Interface name>.<IO system name>
+&lt;Drive name&gt;.&lt;Interface name&gt;.&lt;IO system name&gt;
 
 This name can only be indirectly changed by assigning another drive name.
 
@@ -5443,8 +5443,8 @@ Once the PROFINET device name has been defined, you can assign this device name 
 
 To assign a name, proceed as follows:
 
-1. In the drive project tree, call function view "Online & diagnostics".
-2. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+1. In the drive project tree, call function view "Online &amp; diagnostics".
+2. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 3. Select the entry "Assign PROFINET device name".
 
    ![PN device name](images/164931064587_DV_resource.Stream@PNG-en-US.png)
@@ -5486,8 +5486,8 @@ If problems occur when commissioning via PROFINET, it is recommended that the dr
 
 To restore the factory settings, proceed as follows:
 
-1. In the drive project tree, call function view "Online & diagnostics".
-2. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+1. In the drive project tree, call function view "Online &amp; diagnostics".
+2. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 3. Select the "Resetting PROFINET interface parameters" entry in the secondary navigation.
 
    ![Resetting the PROFINET interface parameters](images/145961138955_DV_resource.Stream@PNG-en-US.png)
@@ -5496,7 +5496,7 @@ To restore the factory settings, proceed as follows:
 
    Resetting the PROFINET interface parameters
 
-   The option "Retain I&M data" is selected by default. This means the IM0 to IM3 data are retained during resetting and are not deleted. If you want to reset this data too, select the "Delete I&M data" option.
+   The option "Retain I&amp;M data" is selected by default. This means the IM0 to IM3 data are retained during resetting and are not deleted. If you want to reset this data too, select the "Delete I&amp;M data" option.
 4. Click the "Reset" button.
 
    The drive communication settings are reset to the factory settings.
@@ -5638,12 +5638,12 @@ You have the following options with the "Backup/Restore" function view:
 
   Your user account has the corresponding function rights (see [Access control](User%20administration%20and%20security.md#access-control))
 
-###### Call "Backup/Restore" via Online & diagnostics
+###### Call "Backup/Restore" via Online &amp; diagnostics
 
-1. In the project tree of your drive, double-click on "Online & diagnostics".
+1. In the project tree of your drive, double-click on "Online &amp; diagnostics".
 
    The "Online access" display area is displayed.
-2. In the secondary navigation, select menu "Functions > Backup/Restore".
+2. In the secondary navigation, select menu "Functions &gt; Backup/Restore".
 
    The "Backup/Restore" function view opens.
 3. In the toolbar, click "Go online" and make all of the necessary connection settings.
@@ -5657,10 +5657,10 @@ You have the following options with the "Backup/Restore" function view:
 3. Double-click "Update accessible devices".
 
    The accessible device is displayed with the IP address in the project tree.
-4. In the project tree call the "Online & diagnostics" function for the displayed device.
+4. In the project tree call the "Online &amp; diagnostics" function for the displayed device.
 
    The diagnostics view is displayed.
-5. In the secondary navigation of the diagnostics view, select menu "Functions > Backup/Restore".
+5. In the secondary navigation of the diagnostics view, select menu "Functions &gt; Backup/Restore".
 
    In the diagnostics view, the "Backup/Restore" function view is opened and you can make the required settings.
 
@@ -5674,7 +5674,7 @@ You have called the "Backup/Restore" function view and can now perform the exist
 
 - There is an online connection between the drive and the operating unit.
 - The drive has been switched on and is supplied with power.
-- The "Online & diagnostics" view is displayed.
+- The "Online &amp; diagnostics" view is displayed.
 - With protection activated (UMAC):
 
   Your user account has the corresponding function rights (see [Access control](User%20administration%20and%20security.md#access-control))
@@ -5700,7 +5700,7 @@ The parameter values are normally saved as volatile data in the RAM of the drive
 - There is an online connection between the drive and the operating unit.
 - The drive has been switched on and is supplied with power.
 - Optional memory card is inserted (for parameter backup).
-- The "Online & diagnostics" view is displayed.
+- The "Online &amp; diagnostics" view is displayed.
 - With protection activated (UMAC):
 
   Your user account has the corresponding function rights (see [Access control](User%20administration%20and%20security.md#access-control))
@@ -5737,7 +5737,7 @@ Execute the "Save drive data to backup file" function in the following cases:
 
 - There is an online connection between the drive and the operating unit.
 - The drive has been switched on and is supplied with power.
-- The "Online & diagnostics" view is displayed.
+- The "Online &amp; diagnostics" view is displayed.
 - With protection activated (UMAC):
 
   Your user account has the corresponding function rights (see [Access control](User%20administration%20and%20security.md#access-control))
@@ -5777,7 +5777,7 @@ The following data is contained in the backup file:
 
 - There is an online connection between the drive and the operating unit.
 - The drive has been switched on and is supplied with power.
-- The "Online & diagnostics" view is displayed.
+- The "Online &amp; diagnostics" view is displayed.
 - A backup file of the drive is available on your operating unit.
 - The rated power of the target drive matches the backed-up rated power.
 - With protection activated (UMAC):
@@ -5812,7 +5812,7 @@ We recommend restoring the factory setting in the following cases:
 
 - There is an online connection between the drive and the operating unit.
 - The drive has been switched on and is supplied with power.
-- The "Online & diagnostics" view is displayed.
+- The "Online &amp; diagnostics" view is displayed.
 - With protection activated (UMAC):
 
   Your user account has the corresponding function rights (see [Access control](User%20administration%20and%20security.md#access-control))
@@ -5825,7 +5825,7 @@ We recommend restoring the factory setting in the following cases:
 
 The factory settings of all parameters (including Safety Integrated) are now imported back into the drive.
 
-The I&M data, communication settings and security settings (also certificates with TSL encryption) are retained.
+The I&amp;M data, communication settings and security settings (also certificates with TSL encryption) are retained.
 
 For all other data, the factory settings are restored. Specifically the following data are no longer available:
 
@@ -5853,7 +5853,7 @@ It is not always necessary to reset all of the drive settings. A separate reset 
 
 - There is an online connection between the drive and the operating unit.
 - The drive has been switched on and is supplied with power.
-- The "Online & diagnostics" view is displayed.
+- The "Online &amp; diagnostics" view is displayed.
 - With protection activated (UMAC):
 
   Your user account has the corresponding function rights (see [Access control](User%20administration%20and%20security.md#access-control))

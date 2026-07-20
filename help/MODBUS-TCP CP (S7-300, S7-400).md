@@ -83,7 +83,7 @@ This section contains information on the following topics:
 
 ###### Requirements
 
-- "Devices & Networks" editor is open.
+- "Devices &amp; Networks" editor is open.
 - The following hardware is available in the "Device view":
 
   - S7 300/400, e.g. 315-2 DP or 414-2 DP
@@ -92,7 +92,7 @@ This section contains information on the following topics:
 ###### Assigning CP parameters
 
 1. Select the CP.
-2. Add a subnet to the PROFINET interface of the CP in the Inspector window under "Properties > General > Ethernet addresses".
+2. Add a subnet to the PROFINET interface of the CP in the Inspector window under "Properties &gt; General &gt; Ethernet addresses".
 3. Enter the IP address as well as the subnet mask.
 
 ![Assigning CP parameters](images/85864937611_DV_resource.Stream@PNG-en-US.png)
@@ -111,19 +111,19 @@ This section contains information on the following topics:
 
 ###### Assigning TCP connection parameters
 
-1. Enter the IP address of the partner in the Inspector window under "Properties > General > General".
+1. Enter the IP address of the partner in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Assigning TCP connection parameters](images/85867097739_DV_resource.Stream@PNG-en-US.png)
 
    ![Assigning TCP connection parameters](images/85867097739_DV_resource.Stream@PNG-en-US.png)
-2. Under "Properties > General > Local ID", enter the local ID that you are configuring for the Modbus/TCP connection at the "MODBUSCP" block.
+2. Under "Properties &gt; General &gt; Local ID", enter the local ID that you are configuring for the Modbus/TCP connection at the "MODBUSCP" block.
 
    You also need the value of the "LADDR" parameter for the parameter assignment of the "MODBUSCP" block; see [Parameter data block](#parameter-data-block-s7-300-s7-400).
 
    ![Assigning TCP connection parameters](images/85864928779_DV_resource.Stream@PNG-en-US.png)
 
    ![Assigning TCP connection parameters](images/85864928779_DV_resource.Stream@PNG-en-US.png)
-3. Under "Properties > General > Address details" enter "502" as partner port.
+3. Under "Properties &gt; General &gt; Address details" enter "502" as partner port.
 
    Apply the default value for the local CP port, e.g. 2000.
 
@@ -133,7 +133,7 @@ This section contains information on the following topics:
 
 ###### Requirements
 
-- "Devices & Networks" editor is open.
+- "Devices &amp; Networks" editor is open.
 - The following hardware is available in the "Device view":
 
   - S7 300/400, e.g. 315-2 DP or 414-2 DP
@@ -142,7 +142,7 @@ This section contains information on the following topics:
 ###### Assigning CP parameters
 
 1. Select the CP.
-2. Add a subnet to the PROFINET interface of the CP in the Inspector window under "Properties > General > Ethernet addresses".
+2. Add a subnet to the PROFINET interface of the CP in the Inspector window under "Properties &gt; General &gt; Ethernet addresses".
 3. Enter the IP address as well as the subnet mask.
 
 ![Assigning CP parameters](images/85864937611_DV_resource.Stream@PNG-en-US.png)
@@ -161,14 +161,14 @@ This section contains information on the following topics:
 
 ###### Assigning TCP connection parameters
 
-1. In the Inspector window under "Properties > General > Local ID", enter the local ID that you are configuring for the Modbus/TCP connection at the "MODBUSCP" block.
+1. In the Inspector window under "Properties &gt; General &gt; Local ID", enter the local ID that you are configuring for the Modbus/TCP connection at the "MODBUSCP" block.
 
    You also need the value of the "LADDR" parameter for the parameter assignment of the "MODBUSCP" block; see [Using connections on port 502](#using-connections-on-port-502-s7-300-s7-400).
 
    ![Assigning TCP connection parameters](images/85864928779_DV_resource.Stream@PNG-en-US.png)
 
    ![Assigning TCP connection parameters](images/85864928779_DV_resource.Stream@PNG-en-US.png)
-2. Under "Properties > General > Address details" enter "502" as local CP port.
+2. Under "Properties &gt; General &gt; Address details" enter "502" as local CP port.
 
    ![Assigning TCP connection parameters](images/85909685771_DV_resource.Stream@PNG-en-US.png)
 
@@ -198,9 +198,9 @@ It is not permitted to call the MODBUSCP instruction in OB1 and in a time-contro
 
 ###### Inserting the Modbus block
 
-Open the "Main [OB1]" block or a cyclic block. The MODBUSCP instruction is in the Task Card, palette and "Instructions > Communication > Communication processor" folder. In it, open the "MODBUS TCP" folder and drag the MODBUSCP instruction to the OB block.
+Open the "Main [OB1]" block or a cyclic block. The MODBUSCP instruction is in the Task Card, palette and "Instructions &gt; Communication &gt; Communication processor" folder. In it, open the "MODBUS TCP" folder and drag the MODBUSCP instruction to the OB block.
 
-Under "System blocks > Program resources", the lower-level instructions MB_CPCLI (FB76) and MB_CPSRV (FB77) are displayed in addition to MODBUSCP (FB75). The lower-level instructions may not also be called in an OB. In addition, the internally called communication instructions AG_(L)SEND (FC5/FC50), AG_(L)RECV (FC6/FC60), and AG_CNTRL (FC10) are displayed.
+Under "System blocks &gt; Program resources", the lower-level instructions MB_CPCLI (FB76) and MB_CPSRV (FB77) are displayed in addition to MODBUSCP (FB75). The lower-level instructions may not also be called in an OB. In addition, the internally called communication instructions AG_(L)SEND (FC5/FC50), AG_(L)RECV (FC6/FC60), and AG_CNTRL (FC10) are displayed.
 
 ###### Versions of the PLC blocks
 
@@ -248,7 +248,7 @@ To be able to use this function, the following settings need to be made in the c
 
 - CP is server
 - Port 502 as local port
-- Unspecified TCP connection in "Devices & Networks"
+- Unspecified TCP connection in "Devices &amp; Networks"
 - Passive connection establishment
 
 ###### Number of connections
@@ -257,9 +257,9 @@ Via port 502, the CP can communicate with a maximum of 4 clients at any one time
 
 ###### Displaying the status of the connection
 
-The status of the connection can be displayed in the "Devices & Networks" editor in the Inspector window under "Diagnostics > Device information" and in the special diagnostics of the CP.
+The status of the connection can be displayed in the "Devices &amp; Networks" editor in the Inspector window under "Diagnostics &gt; Device information" and in the special diagnostics of the CP.
 
-Because only one connection is configured in the "Devices & Networks" editor, the display represents the status of all TCP connections to the various clients.
+Because only one connection is configured in the "Devices &amp; Networks" editor, the display represents the status of all TCP connections to the various clients.
 
 If no client has yet established a connection, "Passive connection establishment in progress" is displayed. As soon as a client has established a connection, "Connection established" is displayed. It is not possible to determine how many clients are currently connected to the CP.
 
@@ -292,13 +292,13 @@ The startup of the CP is divided into the following phases:
 
 ##### Parameter assignment of the Modbus communication
 
-For communication over a CP 343 and a CP 443, the connection must be configured in the "Devices & Networks" editor.
+For communication over a CP 343 and a CP 443, the connection must be configured in the "Devices &amp; Networks" editor.
 
 Several connections to different communications partners can be configured and established at the same time. The number of simultaneously established connections depends on the CPU and the CP being used.
 
 **Parameter data block**
 
-The data required for assignment of the connections and processing of the Modbus/TCP frames is defined in the PLC data type MB_CP_PARAM. This PLC data type includes a structure for the connection-specific data and the Modbus parameters. Each instance of the "MODBUSCP" instruction requires a unique connection. Therefore, you create a separate connection to the respective communication partner in the "Devices & Networks" editor for each instance of the instruction.
+The data required for assignment of the connections and processing of the Modbus/TCP frames is defined in the PLC data type MB_CP_PARAM. This PLC data type includes a structure for the connection-specific data and the Modbus parameters. Each instance of the "MODBUSCP" instruction requires a unique connection. Therefore, you create a separate connection to the respective communication partner in the "Devices &amp; Networks" editor for each instance of the instruction.
 
 Each of these connections requires one instance of the PLC data type in a data block. The connection data and the Modbus parameters are defined in this instance. The data block can be expanded for each additional connection or you can create a new data block.
 
@@ -320,7 +320,7 @@ MODBUS_PARAM_CP
 
 - Connection parameters
 
-  In the first block, the connection-specific parameters "id" and "laddr" are defined. Based on these parameters, the connection configured in the "Devices & Networks" editor can be assigned.
+  In the first block, the connection-specific parameters "id" and "laddr" are defined. Based on these parameters, the connection configured in the "Devices &amp; Networks" editor can be assigned.
 - Modbus/TCP parameters
 
   The data required for the mode and address reference is saved in the Modbus/TCP parameters, for example the mode of the S7 as Modbus/TCP server or Modbus/TCP client, the Modbus/TCP register addresses and the numbers of the DBs in which the data is mapped. You must keep to the data structure of the Modbus/TCP parameters because they cannot be processed correctly otherwise.
@@ -347,8 +347,8 @@ The first two parameters of the block are connection parameters that are used in
 
 | Parameter | Description |
 | --- | --- |
-| id | A connection ID is assigned for each configured connection in the TIA Portal ("Devices & Networks" editor). The connection ID uniquely describes the connection from the CPU via the CP to the link partner. The number from the connection configuration is entered here. The range of values for this parameter is 1 to 64. |
-| laddr | The "laddr" parameter is the base address of the CP from the "device view" (I address). The configured value is entered here. The range of values for this parameter depends on the CPU. The "id" and "laddr" parameters can also be taken from the "Properties > General > Local ID" mask of the TCP connection. |
+| id | A connection ID is assigned for each configured connection in the TIA Portal ("Devices &amp; Networks" editor). The connection ID uniquely describes the connection from the CPU via the CP to the link partner. The number from the connection configuration is entered here. The range of values for this parameter is 1 to 64. |
+| laddr | The "laddr" parameter is the base address of the CP from the "device view" (I address). The configured value is entered here. The range of values for this parameter depends on the CPU. The "id" and "laddr" parameters can also be taken from the "Properties &gt; General &gt; Local ID" mask of the TCP connection. |
 
 ##### Modbus/TCP parameters
 
@@ -374,9 +374,9 @@ The remaining parameters specify the mode of the Modbus/TCP communication and th
 
 The MODBUSCP instruction allows communication to be established between a CP 443-1 or CP 343-1 and a partner that supports the Modbus/TCP protocol. The function codes 1, 2, 3, 4, 5, 6, 15 and 16 are supported.
 
-Depending on the parameter assignment, the instruction can be operated both as client and server. It is also possible to operate a CP as client and server at the same time. To do so, two connections configured in the "Devices & Networks" editor and two calls of the instruction are required.
+Depending on the parameter assignment, the instruction can be operated both as client and server. It is also possible to operate a CP as client and server at the same time. To do so, two connections configured in the "Devices &amp; Networks" editor and two calls of the instruction are required.
 
-In terms of the library, there is no limitation regarding the maximum number of Modbus/TCP blocks running at the same time. There is, however, a CPU- and CP-dependent maximum number of PLC function calls that can run at the same time. The maximum number of PLC calls can be found in the CPU manual in "Technical specifications > Communication". The CP manual specifies how many AG_SEND/AG_RECV or AG_LSEND/AG_LRECV blocks can be processed simultaneously by the CP.
+In terms of the library, there is no limitation regarding the maximum number of Modbus/TCP blocks running at the same time. There is, however, a CPU- and CP-dependent maximum number of PLC function calls that can run at the same time. The maximum number of PLC calls can be found in the CPU manual in "Technical specifications &gt; Communication". The CP manual specifies how many AG_SEND/AG_RECV or AG_LSEND/AG_LRECV blocks can be processed simultaneously by the CP.
 
 **Tasks of the blocks**
 
@@ -483,7 +483,7 @@ With the ranges of values of the various parameters, CPU-specific restrictions m
 
 | Parameter | Decl. | Type | Description | Range of values | Init |
 | --- | --- | --- | --- | --- | --- |
-| [id](#id-db_param-and-init-parameters-s7-300-s7-400) | IN | WORD | Connection ID from the "Devices & Networks" editor | 1 to 64 | Yes |
+| [id](#id-db_param-and-init-parameters-s7-300-s7-400) | IN | WORD | Connection ID from the "Devices &amp; Networks" editor | 1 to 64 | Yes |
 | [db_param](#id-db_param-and-init-parameters-s7-300-s7-400) | IN | BLOCK_DB | Number of the parameter DB | Depends on CPU | Yes |
 | [REG_KEY_DB](#licensing-with-the-parameters-ident_code-and-reg_key-s7-300-s7-400) | IN | BLOCK_DB | Data block with the registry key for licensing | Depends on CPU | No |
 | [MONITOR](#enq_enr-and-monitor-parameters-s7-300-s7-400) | IN | TIME | Monitoring time for receiving data from the link partner The minimum time that can be set is 20 ms | T#20ms to T#+24d20h31 m23s647ms | No |
@@ -563,7 +563,7 @@ Proceed as follows to enter the registration key REG_KEY:
   REG_KEY in DB
 - Copy the transmitted 17-digit registration key using copy/paste to the "Start value" column.
 - In the cyclic OB, enter the name "License_DB" at the parameter REG_KEY_DB of the MODBUSCP instruction.
-- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -> RUN is not necessary.
+- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -&gt; RUN is not necessary.
 
 The Modbus/TCP communication using the MODBUSCP instruction is now licensed for this CPU, the output bit LICENSED is TRUE.
 
@@ -639,7 +639,7 @@ Modbus/TCP: Address mapping
 
 **id**
 
-A connection ID is assigned for each configured connection in STEP 7 ("Devices & Networks" editor). The connection ID uniquely describes the connection from the CPU via the CP to the link partner. This connection ID is configured in the connection parameter block included in the parameter data block. This ID must be entered here.
+A connection ID is assigned for each configured connection in STEP 7 ("Devices &amp; Networks" editor). The connection ID uniquely describes the connection from the CPU via the CP to the link partner. This connection ID is configured in the connection parameter block included in the parameter data block. This ID must be entered here.
 
 The range of values for this parameter is 1 to 64.
 
@@ -712,7 +712,7 @@ Below is a listing of the error messages for specific instructions.
 | Read registers | 1 to 125 |  |  |
 | Write holding registers | 1 to 123 |  |  |
 | A006 | The area specified with DATA_TYPE, START_ADDRESS and LENGTH does not exist in data_type_1 to data_type_8.  S7 is server: The CP replies with an exception telegram. |  | S7 is client: Correct the parameter assignment combination DATA_TYPE, START_ ADDRESS and LENGTH. S7 is server: Change the client request or correct the parameter assignment for data_type_x. |
-| A007 | S7 is client: An invalid monitoring time was set for MONITOR. A value >= 20 ms must be entered. |  | Correct the parameter assignment. |
+| A007 | S7 is client: An invalid monitoring time was set for MONITOR. A value &gt;= 20 ms must be entered. |  | Correct the parameter assignment. |
 | A008 | The activated AG_RECV does not signal receipt within the configured monitoring time MONITOR, for example, partner is not ready. The connection is terminated and reestablished. |  | Check the settings and, if applicable, the error messages of the link partner. Check whether the link partner requires a specific UNIT identifier. |
 | A009 | S7 is client: The received Transaction Identifier TI does not match the one sent. The connection is terminated and reestablished. |  | Record frames to check the data of the link partner. |
 | A00A | S7 is client: The received UNIT does not match the one sent. The connection is terminated and reestablished. |  |  |
@@ -730,7 +730,7 @@ Below is a listing of the error messages for specific instructions.
 | A016 | The areas data_type_1 and data_type_6 set in the parameters overlap. |  |  |
 | A017 | The areas data_type_1 and data_type_7 set in the parameters overlap. |  |  |
 | A018 | The areas data_type_1 and data_type_8 set in the parameters overlap. |  |  |
-| A019 | One of the db_x parameters was set to 0 even though the associated data_type_x is set to > 0. DB0 must not be used because it is reserved for the system. |  | Correct the parameter setting at db_x to > 0. If you use a data collector FB, check the parameter assignment in CFC. |
+| A019 | One of the db_x parameters was set to 0 even though the associated data_type_x is set to &gt; 0. DB0 must not be used because it is reserved for the system. |  | Correct the parameter setting at db_x to &gt; 0. If you use a data collector FB, check the parameter assignment in CFC. |
 | A01A | Incorrect length in the header: 3 to 253 bytes are permitted. The connection is terminated and reestablished. |  | Record frames to check the data of the link partner. |
 | A01B | S7 is server and function code 5:  An invalid status for Coil was received. An exception telegram is sent. |  |  |
 | A01E | Invalid data has been received that cannot be assigned. The connection is terminated and reestablished. |  | Check the error message of the link partner. If necessary, check the data by recording frames. |
@@ -805,12 +805,12 @@ The different data types are directly related to the used function codes.
 | Coils | 1 | read | any | irrelevant | 1 |
 | Coils | 1 | write | 1 | TRUE | 5 |
 | Coils | 1 | write | 1 | FALSE | 15 |
-| Coils | 1 | write | > 1 | irrelevant | 15 |
+| Coils | 1 | write | &gt; 1 | irrelevant | 15 |
 | Inputs | 2 | read | any | irrelevant | 2 |
 | Holding register | 3 | read | any | irrelevant | 3 |
 | Holding register | 3 | write | 1 | TRUE | 6 |
 | Holding register | 3 | write | 1 | FALSE | 16 |
-| Holding register | 3 | write | > 1 | irrelevant | 16 |
+| Holding register | 3 | write | &gt; 1 | irrelevant | 16 |
 | Input register | 4 | read | any | irrelevant | 4 |
 
 **START_ADDRESS**
@@ -941,7 +941,7 @@ This section contains information on the following topics:
 
 ###### Requirements
 
-- "Devices & Networks" editor is open.
+- "Devices &amp; Networks" editor is open.
 - The following hardware is available in the "Device view":
 
   - S7 300/400, e.g. 315-2 DP or 414-2 DP
@@ -950,7 +950,7 @@ This section contains information on the following topics:
 ###### Assigning CP parameters
 
 1. Select the CP.
-2. Add a subnet to the PROFINET interface of the CP in the Inspector window under "Properties > General > Ethernet addresses".
+2. Add a subnet to the PROFINET interface of the CP in the Inspector window under "Properties &gt; General &gt; Ethernet addresses".
 3. Enter the IP address as well as the subnet mask.
 
 ![Assigning CP parameters](images/85864937611_DV_resource.Stream@PNG-en-US.png)
@@ -969,19 +969,19 @@ This section contains information on the following topics:
 
 ###### Assigning TCP connection parameters
 
-1. Enter the IP address of the partner in the Inspector window under "Properties > General > General".
+1. Enter the IP address of the partner in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Assigning TCP connection parameters](images/85867097739_DV_resource.Stream@PNG-en-US.png)
 
    ![Assigning TCP connection parameters](images/85867097739_DV_resource.Stream@PNG-en-US.png)
-2. Under "Properties > General > Local ID", enter the local ID that you are configuring for the Modbus/TCP connection at the "MODBUSCP" block.
+2. Under "Properties &gt; General &gt; Local ID", enter the local ID that you are configuring for the Modbus/TCP connection at the "MODBUSCP" block.
 
    You also need the value of the "LADDR" parameter for the parameter assignment of the "MODBUSCP" block; see [Parameter data block](#parameter-data-block-s7-300-s7-400-1).
 
    ![Assigning TCP connection parameters](images/85864928779_DV_resource.Stream@PNG-en-US.png)
 
    ![Assigning TCP connection parameters](images/85864928779_DV_resource.Stream@PNG-en-US.png)
-3. Under "Properties > General > Address details" enter "502" as partner port.
+3. Under "Properties &gt; General &gt; Address details" enter "502" as partner port.
 
    Apply the default value for the local CP port, e.g. 2000.
 
@@ -991,7 +991,7 @@ This section contains information on the following topics:
 
 ###### Requirements
 
-- "Devices & Networks" editor is open.
+- "Devices &amp; Networks" editor is open.
 - The following hardware is available in the "Device view":
 
   - S7 300/400, e.g. 315-2 DP or 414-2 DP
@@ -1000,7 +1000,7 @@ This section contains information on the following topics:
 ###### Assigning CP parameters
 
 1. Select the CP.
-2. Add a subnet to the PROFINET interface of the CP in the Inspector window under "Properties > General > Ethernet addresses".
+2. Add a subnet to the PROFINET interface of the CP in the Inspector window under "Properties &gt; General &gt; Ethernet addresses".
 3. Enter the IP address as well as the subnet mask.
 
 ![Assigning CP parameters](images/85864937611_DV_resource.Stream@PNG-en-US.png)
@@ -1019,14 +1019,14 @@ This section contains information on the following topics:
 
 ###### Assigning TCP connection parameters
 
-1. In the Inspector window under "Properties > General > Local ID", enter the local ID that you are configuring for the Modbus/TCP connection at the "MODBUSCP" block.
+1. In the Inspector window under "Properties &gt; General &gt; Local ID", enter the local ID that you are configuring for the Modbus/TCP connection at the "MODBUSCP" block.
 
    You also need the value of the "LADDR" parameter for the parameter assignment of the "MODBUSCP" block; see [Parameter data block](#parameter-data-block-s7-300-s7-400-1).
 
    ![Assigning TCP connection parameters](images/85864928779_DV_resource.Stream@PNG-en-US.png)
 
    ![Assigning TCP connection parameters](images/85864928779_DV_resource.Stream@PNG-en-US.png)
-2. Under "Properties > General > Address details" enter "502" as local CP port.
+2. Under "Properties &gt; General &gt; Address details" enter "502" as local CP port.
 
    ![Assigning TCP connection parameters](images/85909685771_DV_resource.Stream@PNG-en-US.png)
 
@@ -1059,10 +1059,10 @@ The same instance data block must be used in both. It is not permitted to call t
 
 ###### Inserting the Modbus block
 
-Open the "COMPLETE RESTART [OB100]" block. If this block does not exist in the program blocks, insert it with "Insert new block > Organization block > Startup > COMPLETE RESTART [OB 100]".  
-The MODBUSCP instruction exists in the Task Card, pane and "Instructions > Communication > Other" folder. In it, open the "MODBUS TCP" folder and drag the MODBUSCP instruction into the OB100 block.
+Open the "COMPLETE RESTART [OB100]" block. If this block does not exist in the program blocks, insert it with "Insert new block &gt; Organization block &gt; Startup &gt; COMPLETE RESTART [OB 100]".  
+The MODBUSCP instruction exists in the Task Card, pane and "Instructions &gt; Communication &gt; Other" folder. In it, open the "MODBUS TCP" folder and drag the MODBUSCP instruction into the OB100 block.
 
-Under "System blocks > Program resources", the lower-level instructions MB_CPCLI (FB76) and MB_CPSRV (FB77) are displayed in addition to MODBUSCP (FB75). The lower-level instructions may not also be called in an OB. In addition, the internally called communication instructions AG_(L)SEND (FC5/FC50), AG_(L)RECV (FC6/FC60), and AG_CNTRL (FC10) are displayed.
+Under "System blocks &gt; Program resources", the lower-level instructions MB_CPCLI (FB76) and MB_CPSRV (FB77) are displayed in addition to MODBUSCP (FB75). The lower-level instructions may not also be called in an OB. In addition, the internally called communication instructions AG_(L)SEND (FC5/FC50), AG_(L)RECV (FC6/FC60), and AG_CNTRL (FC10) are displayed.
 
 Open the "Main [OB1]" block or a cyclic block and drag the MODBUSCP [FB75] instruction into the OB. Select the MODBUSCP_DB data block from the OB100 call as instance data block. Do not create a new instance data block.
 
@@ -1112,7 +1112,7 @@ To be able to use this function, the following settings need to be made in the c
 
 - CP is server
 - Port 502 as local port
-- Unspecified TCP connection in "Devices & Networks"
+- Unspecified TCP connection in "Devices &amp; Networks"
 - Passive connection establishment
 
 ###### Number of connections
@@ -1121,9 +1121,9 @@ Via port 502, the CP can communicate with a maximum of 4 clients at any one time
 
 ###### Displaying the status of the connection
 
-The status of the connection can be displayed in the "Devices & Networks" editor in the Inspector window under "Diagnostics > Device information" and in the special diagnostics of the CP.
+The status of the connection can be displayed in the "Devices &amp; Networks" editor in the Inspector window under "Diagnostics &gt; Device information" and in the special diagnostics of the CP.
 
-Because only one connection is configured in the "Devices & Networks" editor, the display represents the status of all TCP connections to the various clients.
+Because only one connection is configured in the "Devices &amp; Networks" editor, the display represents the status of all TCP connections to the various clients.
 
 If no client has yet established a connection, "Passive connection establishment in progress" is displayed. As soon as a client has established a connection, "Connection established" is displayed. It is not possible to determine how many clients are currently connected to the CP.
 
@@ -1156,13 +1156,13 @@ The startup of the CP is divided into the following phases:
 
 ##### Parameter assignment of the Modbus communication
 
-For communication over a CP 343 and a CP 443, the connection must be configured in the "Devices & Networks" editor.
+For communication over a CP 343 and a CP 443, the connection must be configured in the "Devices &amp; Networks" editor.
 
 Several connections to different communications partners can be configured and established at the same time. The number of simultaneously established connections depends on the CPU and the CP being used.
 
 **Parameter data block**
 
-The data required for assignment of the connections and processing of the Modbus/TCP frames is defined in the PLC data type MB_CP_PARAM. This PLC data type includes a structure for the connection-specific data and the Modbus parameters. Each instance of the "MODBUSCP" instruction requires a unique connection. Therefore, you create a separate connection to the respective communication partner in the "Devices & Networks" editor for each instance of the instruction.
+The data required for assignment of the connections and processing of the Modbus/TCP frames is defined in the PLC data type MB_CP_PARAM. This PLC data type includes a structure for the connection-specific data and the Modbus parameters. Each instance of the "MODBUSCP" instruction requires a unique connection. Therefore, you create a separate connection to the respective communication partner in the "Devices &amp; Networks" editor for each instance of the instruction.
 
 Each of these connections requires one instance of the PLC data type in a data block. The connection data and the Modbus parameters are defined in this instance. The data block can be expanded for each additional connection or you can create a new data block.
 
@@ -1184,7 +1184,7 @@ MODBUS_PARAM_CP
 
 - Connection parameters
 
-  In the first block, the connection-specific parameters "id" and "laddr" are defined. Based on these parameters, the connection configured in the "Devices & Networks" editor can be assigned.
+  In the first block, the connection-specific parameters "id" and "laddr" are defined. Based on these parameters, the connection configured in the "Devices &amp; Networks" editor can be assigned.
 - Modbus/TCP parameters
 
   The data required for the mode and address reference is saved in the Modbus/TCP parameters, for example the mode of the S7 as Modbus/TCP server or Modbus/TCP client, the Modbus/TCP register addresses and the numbers of the DBs in which the data is mapped. You must keep to the data structure of the Modbus/TCP parameters because they cannot be processed correctly otherwise.
@@ -1206,7 +1206,7 @@ You have two options for configuring the connection and Modbus/TCP parameters.
 
 **Changing the values**
 
-The values in the parameter data block must not be changed during runtime. The CPU must be restarted with STOP -> RUN after the parameters have been changed.
+The values in the parameter data block must not be changed during runtime. The CPU must be restarted with STOP -&gt; RUN after the parameters have been changed.
 
 ##### Connection parameters
 
@@ -1214,8 +1214,8 @@ The first two parameters of the block are connection parameters that are used in
 
 | Parameter | Description |
 | --- | --- |
-| id | A connection ID is assigned for each configured connection in the TIA Portal ("Devices & Networks" editor). The connection ID uniquely describes the connection from the CPU via the CP to the link partner. The number from the connection configuration is entered here. The range of values for this parameter is 1 to 64. |
-| laddr | The "laddr" parameter is the base address of the CP from the "device view" (I address). The configured value is entered here. The range of values for this parameter depends on the CPU. The "id" and "laddr" parameters can also be taken from the "Properties > General > Local ID" mask of the TCP connection. |
+| id | A connection ID is assigned for each configured connection in the TIA Portal ("Devices &amp; Networks" editor). The connection ID uniquely describes the connection from the CPU via the CP to the link partner. The number from the connection configuration is entered here. The range of values for this parameter is 1 to 64. |
+| laddr | The "laddr" parameter is the base address of the CP from the "device view" (I address). The configured value is entered here. The range of values for this parameter depends on the CPU. The "id" and "laddr" parameters can also be taken from the "Properties &gt; General &gt; Local ID" mask of the TCP connection. |
 
 ##### Modbus/TCP parameters
 
@@ -1241,9 +1241,9 @@ The remaining parameters specify the mode of the Modbus/TCP communication and th
 
 The MODBUSCP instruction allows communication to be established between a CP 443-1 or CP 343-1 and a partner that supports the Modbus/TCP protocol. The function codes 1, 2, 3, 4, 5, 6, 15 and 16 are supported.
 
-Depending on the parameter assignment, the instruction can be operated both as client and server. It is also possible to operate a CP as client and server at the same time. To do so, two connections configured in the "Devices & Networks" editor and two calls of the instruction are required.
+Depending on the parameter assignment, the instruction can be operated both as client and server. It is also possible to operate a CP as client and server at the same time. To do so, two connections configured in the "Devices &amp; Networks" editor and two calls of the instruction are required.
 
-In terms of the library, there is no limitation regarding the maximum number of Modbus/TCP blocks running at the same time. There is, however, a CPU- and CP-dependent maximum number of PLC function calls that can run at the same time. The maximum number of PLC calls can be found in the CPU manual in "Technical specifications > Communication". The CP manual specifies how many AG_SEND/AG_RECV or AG_LSEND/AG_LRECV blocks can be processed simultaneously by the CP.
+In terms of the library, there is no limitation regarding the maximum number of Modbus/TCP blocks running at the same time. There is, however, a CPU- and CP-dependent maximum number of PLC function calls that can run at the same time. The maximum number of PLC calls can be found in the CPU manual in "Technical specifications &gt; Communication". The CP manual specifies how many AG_SEND/AG_RECV or AG_LSEND/AG_LRECV blocks can be processed simultaneously by the CP.
 
 **Tasks of the blocks**
 
@@ -1334,7 +1334,7 @@ The parameters of the MODBUSCP instruction are divided into two groups:
 - Initialization parameters
 
   The initialization parameters are only evaluated and entered in the instance DB when called in OB100. The initialization parameters are identified with "Yes" in the "INIT" column in the table.  
-  A change to the initialization parameters during operation has no effect. The instance DB must to be re-initialized with "STOP > RUN" of the CPU after these parameters have been changed, e.g. in test mode.
+  A change to the initialization parameters during operation has no effect. The instance DB must to be re-initialized with "STOP &gt; RUN" of the CPU after these parameters have been changed, e.g. in test mode.
 - Runtime parameters
 
   Runtime parameters can be changed during cyclic operation.
@@ -1349,7 +1349,7 @@ With the ranges of values of the various parameters, CPU-specific restrictions m
 
 | Parameter | Decl. | Type | Description | Range of values | Init |
 | --- | --- | --- | --- | --- | --- |
-| [id](#id-and-db_param-parameters-s7-300-s7-400) | IN | WORD | Connection ID from the "Devices & Networks" editor | 1 to 64 | Yes |
+| [id](#id-and-db_param-parameters-s7-300-s7-400) | IN | WORD | Connection ID from the "Devices &amp; Networks" editor | 1 to 64 | Yes |
 | [db_param](#id-and-db_param-parameters-s7-300-s7-400) | IN | BLOCK_DB | Number of the parameter DB | Depends on CPU | Yes |
 | [MONITOR](#enq_enr-and-monitor-parameters-s7-300-s7-400-1) | IN | TIME | Monitoring time for receiving data from the link partner The minimum time that can be set is 20 ms | T#20ms to T#+24d20h31 m23s647ms | No |
 | [REG_KEY](#licensing-with-the-parameters-ident_code-and-reg_key-s7-300-s7-400-1) | IN | STRING[17] | Registration key for licensing | Character | No |
@@ -1424,7 +1424,7 @@ Proceed as follows to enter the registration key REG_KEY:
   REG_KEY in DB
 - Copy the transmitted 17-digit registration key using copy/paste to the "Start value" column.
 - Enter the value "License_DB.REG_KEY" in the cyclic OB at the REG_KEY parameter of the MODBUSCP instruction.
-- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -> RUN is not necessary.
+- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -&gt; RUN is not necessary.
 
 The Modbus/TCP communication using the MODBUSCP instruction is now licensed for this CPU, the output bit LICENSED is TRUE.
 
@@ -1500,7 +1500,7 @@ Modbus/TCP: Address mapping
 
 **ID**
 
-A connection ID is assigned for each configured connection in STEP 7 ("Devices & Networks" editor). The connection ID uniquely describes the connection from the CPU via the CP to the link partner. This connection ID is configured in the connection parameter block included in the parameter data block. This ID must be entered here.
+A connection ID is assigned for each configured connection in STEP 7 ("Devices &amp; Networks" editor). The connection ID uniquely describes the connection from the CPU via the CP to the link partner. This connection ID is configured in the connection parameter block included in the parameter data block. This ID must be entered here.
 
 The range of values for this parameter is 1 to 64.
 
@@ -1563,7 +1563,7 @@ This parameter indicates the name of the function that caused the error in the f
 | Read registers | 1 to 125 |  |  |
 | Write holding registers | 1 to 123 |  |  |
 | A006 | The area specified with DATA_TYPE, START_ADDRESS and LENGTH does not exist in data_type_1 to data_type_8.  S7 is server: The CP replies with an exception telegram. |  | S7 is client: Correct the parameter assignment combination DATA_TYPE, START_ ADDRESS and LENGTH. S7 is server: Change the client request or correct the parameter assignment for data_type_x. |
-| A007 | S7 is client: An invalid monitoring time was set for MONITOR. A value >= 20 ms must be entered. |  | Correct the parameter assignment. |
+| A007 | S7 is client: An invalid monitoring time was set for MONITOR. A value &gt;= 20 ms must be entered. |  | Correct the parameter assignment. |
 | A008 | Within the set monitoring time MONITOR, the activated AG_RECV signals no reception, e.g. partner not ready. All connections over port 502 are terminated and re-established. |  | Check the settings and, if applicable, the error messages of the link partner. Check whether the link partner requires a specific UNIT identifier. |
 | A009 | S7 is client: The received Transaction Identifier TI does not match the identifier sent. All connections over port 502 are terminated and re-established. |  | Record frames to check the data of the link partner. |
 | A00A | S7 is client: The received UNIT does not match the one that was sent. All connections over port 502 are terminated and re-established. |  |  |
@@ -1581,7 +1581,7 @@ This parameter indicates the name of the function that caused the error in the f
 | A016 | The areas data_type_1 and data_type_6 set in the parameters overlap. |  |  |
 | A017 | The areas data_type_1 and data_type_7 set in the parameters overlap. |  |  |
 | A018 | The areas data_type_1 and data_type_8 set in the parameters overlap. |  |  |
-| A019 | One of the db_x parameters was set to 0 even though the associated data_type_x is set to > 0. DB0 must not be used because it is reserved for the system. |  | Correct the parameter setting at db_x to > 0. If you use a data collector FB, check the parameter assignment in CFC. |
+| A019 | One of the db_x parameters was set to 0 even though the associated data_type_x is set to &gt; 0. DB0 must not be used because it is reserved for the system. |  | Correct the parameter setting at db_x to &gt; 0. If you use a data collector FB, check the parameter assignment in CFC. |
 | A01A | Incorrect length in the header: 3 to 253 bytes are permitted. All connections over port 502 are terminated and re-established. |  | Record frames to check the data of the link partner. |
 | A01B | S7 is server and function code 5:  An invalid status for Coil was received. An exception telegram is sent. |  |  |
 | A01E | Invalid data was received that could not be assigned. All connections over port 502 are terminated and re-established. |  | Check the error message of the link partner. If necessary, check the data by recording frames. |
@@ -1656,12 +1656,12 @@ The different data types are directly related to the used function codes.
 | Coils | 1 | read | any | irrelevant | 1 |
 | Coils | 1 | write | 1 | TRUE | 5 |
 | Coils | 1 | write | 1 | FALSE | 15 |
-| Coils | 1 | write | > 1 | irrelevant | 15 |
+| Coils | 1 | write | &gt; 1 | irrelevant | 15 |
 | Inputs | 2 | read | any | irrelevant | 2 |
 | Holding register | 3 | read | any | irrelevant | 3 |
 | Holding register | 3 | write | 1 | TRUE | 6 |
 | Holding register | 3 | write | 1 | FALSE | 16 |
-| Holding register | 3 | write | > 1 | irrelevant | 16 |
+| Holding register | 3 | write | &gt; 1 | irrelevant | 16 |
 | Input register | 4 | read | any | irrelevant | 4 |
 
 **START_ADDRESS**

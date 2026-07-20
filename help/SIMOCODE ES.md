@@ -14,14 +14,14 @@ This section contains information on the following topics:
 - [General information](#general-information)
 - [Device configuration](#device-configuration)
 - [Openness for SIMOCODE pro](#openness-for-simocode-pro)
-- [Online & diagnostics](#online-diagnostics)
+- [Online &amp; diagnostics](#online-diagnostics)
 - [Parameterization of the modules](#parameterization-of-the-modules)
 - [Commissioning](#commissioning)
 - [Configuring the communication interface](#configuring-the-communication-interface)
 - [CFCs](#cfcs)
 - [Migrating project files, upgrading a SIMOCODE pro project](#migrating-project-files-upgrading-a-simocode-pro-project)
 - [Mass engineering](#mass-engineering)
-- [Taking over the standard connection path of SIRIUS PROFINET & Ethernet/IP devices in the project](#taking-over-the-standard-connection-path-of-sirius-profinet-ethernetip-devices-in-the-project)
+- [Taking over the standard connection path of SIRIUS PROFINET &amp; Ethernet/IP devices in the project](#taking-over-the-standard-connection-path-of-sirius-profinet-ethernetip-devices-in-the-project)
 - [Importing and exporting parameters](#importing-and-exporting-parameters)
 - [Device comparison with the TIA Portal comparison editor](#device-comparison-with-the-tia-portal-comparison-editor)
 - [Default print settings](#default-print-settings)
@@ -35,7 +35,7 @@ The following new features are available for SIMOCODE ES V18 in the TIA Porta
 - SIMOCODE ES supports the CAx export (*.aml file format) in the TIA Portal for the device parameters.
 - In the function charts, you can set the signal states of inputs for the active function test "cold start" and, in this way, test the device function.
 - The parameter editor now provides you with text boxes for notes for the logic functions (truth tables, signal conditioning, and calculators), which are also considered during printing.
-- For SIMOCODE ES, set the standard connection path for all devices in the project in the TIA settings under Online & Diagnostics. A fast bulk download or online mode is achieved.
+- For SIMOCODE ES, set the standard connection path for all devices in the project in the TIA settings under Online &amp; Diagnostics. A fast bulk download or online mode is achieved.
 - The SIMOCODE pro V PROFIBUS devices are now designated as SIMOCODE pro V PB.
 - General improvement of tooltips and labeling
 - Editorial improvements in the help system of SIMOCODE ES.
@@ -293,7 +293,7 @@ This section contains information on the following topics:
 
 #### Status of the device diagnostics
 
-Select **Devices > Project → S​IMOCODE​ → Commissioning** in the Project navigation view.
+Select **Devices &gt; Project → S​IMOCODE​ → Commissioning** in the Project navigation view.
 
 Diagnostics dialog boxes:
 
@@ -437,7 +437,7 @@ Displays the set PROFIsafe address.
 > At this point, only the PROFIsafe address set on the module is displayed in the online representation.  
 > The PROFIsafe address must be set directly via the DIP switch of the PROFIsafe digital module!
 
-The Profisafe address for the DM-FP module is configured under "Devices & Networks".
+The Profisafe address for the DM-FP module is configured under "Devices &amp; Networks".
 
 ##### Transmission speed
 
@@ -953,7 +953,7 @@ Settings (primary and secondary)
 
 ###### Class
 
-The Class (trip class) defines the maximum time within which SIMOCODE pro must trip from cold at 7.2 times the current setting I<sub>s</sub> (motor protection to IEC 60947). SIMOCODE pro meets the requirements of tolerance band E according to IEC / EN 60947-4-1 in respect of the accuracy of the tripping times. Please note that with startups > "Class 10E", the permissible AC3 current of the contactor may have to be reduced (derated), i.e. you must select a larger contactor.
+The Class (trip class) defines the maximum time within which SIMOCODE pro must trip from cold at 7.2 times the current setting I<sub>s</sub> (motor protection to IEC 60947). SIMOCODE pro meets the requirements of tolerance band E according to IEC / EN 60947-4-1 in respect of the accuracy of the tripping times. Please note that with startups &gt; "Class 10E", the permissible AC3 current of the contactor may have to be reduced (derated), i.e. you must select a larger contactor.
 
 **Overload characteristics for 2nd generation current / voltage measuring modules (e.g. 3UF7110-1AA01-0) and dry-running protection (e.g. 3UF712.-1.A01-0)**
 
@@ -1096,7 +1096,7 @@ You can select whether SIMOCODE pro is to protect a 1-phase or a 3-phase load. 
 
 ###### Delay prewarning
 
-The "Delay" parameter (default: 0.5 s) defines the length of time for which the prewarning level (1.15 x I<sub>s</sub>) must be permanently exceeded before SIMOCODE pro will execute the desired response. If no setting is made, there will be no response. In the event of a loss of phase or an unbalance > 50%, the prewarning level will be reached earlier, at approximately 0.85 x I<sub>s</sub>.
+The "Delay" parameter (default: 0.5 s) defines the length of time for which the prewarning level (1.15 x I<sub>s</sub>) must be permanently exceeded before SIMOCODE pro will execute the desired response. If no setting is made, there will be no response. In the event of a loss of phase or an unbalance &gt; 50%, the prewarning level will be reached earlier, at approximately 0.85 x I<sub>s</sub>.
 
 ###### Reset
 
@@ -1267,13 +1267,13 @@ For dry-running protection of centrifugal pumps by active power monitoring, a tr
 
 Trip level:
 
-- P<sub>TRIP</sub> < (lower limit): 0 - 750000 W (default setting: 0)
+- P<sub>TRIP</sub> &lt; (lower limit): 0 - 750000 W (default setting: 0)
 
 #### Trip level active status
 
 The trip level is active only if the motor is running (the criterion being contactor control), the start-up procedure has been completed, and there is no test position feedback (TPF) (run+).
 
-#### Response to trip level P<sub>TRIP</sub> < (lower limit):
+#### Response to trip level P<sub>TRIP</sub> &lt; (lower limit):
 
 Here, you can set how SIMOCODE pro will respond if the set trip level is undershot:
 
@@ -1312,7 +1312,7 @@ SIMOCODE pro can be used for dry-running protection of centrifugal pumps with a
 
 A pump characteristic curve is progressive when the ratio of the active power P<sub>MIN</sub> with the minimum flow rate Q<sub>MIN</sub> to the active power P<sub>OPT</sub> at the optimum flow rate (working point) Q<sub>OPT</sub> meets the following condition:
 
-P<sub>MIN</sub> / P<sub>OPT</sub> < 0.80
+P<sub>MIN</sub> / P<sub>OPT</sub> &lt; 0.80
 
 This condition is met on nearly all centrifugal pumps with a radial-flow impeller.
 
@@ -1385,7 +1385,7 @@ At the start of the dry-running protection wizard, you open the commissioning ed
 | Symbol | Meaning |
 | --- | --- |
 |  | **Notice** |
-| **The conditions for sufficient distance from dry running and a sufficiently progressive pump characteristic curve must be met**  If you enter the trip level directly via the engineering software, you must take the following measures:  - Check that the conditions for sufficient distance of the trip level from the dry-run state (P<sub>Trip</sub> > 1.1*P<sub>MIN</sub>) are met. - Check that the conditions for a sufficiently progressive pump characteristic curve (P<sub>MIN</sub> / P<sub>OPT</sub> < 0.80) are met by active power measurement - Manually check that the permissible range of current (I<sub>U</sub> < I < I<sub>O</sub>) and voltage (93 V < U < 794 V) have been met using the relevant 3UF7 system   External measuring equipment is not approved for determining the working point parameters. |  |
+| **The conditions for sufficient distance from dry running and a sufficiently progressive pump characteristic curve must be met**  If you enter the trip level directly via the engineering software, you must take the following measures:  - Check that the conditions for sufficient distance of the trip level from the dry-run state (P<sub>Trip</sub> &gt; 1.1*P<sub>MIN</sub>) are met. - Check that the conditions for a sufficiently progressive pump characteristic curve (P<sub>MIN</sub> / P<sub>OPT</sub> &lt; 0.80) are met by active power measurement - Manually check that the permissible range of current (I<sub>U</sub> &lt; I &lt; I<sub>O</sub>) and voltage (93 V &lt; U &lt; 794 V) have been met using the relevant 3UF7 system   External measuring equipment is not approved for determining the working point parameters. |  |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -1405,8 +1405,8 @@ Alternatively, direct input of the trip value is also possible. Procedure:
 - Read off the active power P<sub>OPT</sub> at the operating point
 - Read off the active power P<sub>MIN</sub> at minimum flow rate, set P<sub>TRIP</sub> ≥ 1.1 P<sub>MIN</sub>
 
-  - Read off an alternative active power P<sub>a</sub> at alternative flow rate Q<sub>a</sub> below P<sub>opt</sub> during running operation and derive the trip value while meeting the condition P<sub>opt</sub> > P<sub>trip</sub> > 1.1*P<sub>a</sub> at Pa ≥ P<sub>min</sub>.
-- Manually check for sufficient scope for progression of the active power characteristic (P<sub>MIN</sub> / P<sub>OPT</sub> < 0.80)
+  - Read off an alternative active power P<sub>a</sub> at alternative flow rate Q<sub>a</sub> below P<sub>opt</sub> during running operation and derive the trip value while meeting the condition P<sub>opt</sub> &gt; P<sub>trip</sub> &gt; 1.1*P<sub>a</sub> at Pa ≥ P<sub>min</sub>.
+- Manually check for sufficient scope for progression of the active power characteristic (P<sub>MIN</sub> / P<sub>OPT</sub> &lt; 0.80)
 - Set P<sub>TRIP</sub> ≥ 1.1*P<sub>MIN</sub>.
 
 | Symbol | Meaning |
@@ -1457,8 +1457,8 @@ SIMOCODE pro is suitable for the dry-running protection of centrifugal pumps du
 
 The following effects may also occur during starting of the pump:
 
-- Transient (< 1 s) undershooting of the active power threshold because starting is performed based on active power = 0 and based on electrical effects (e.g. inertia of the motor contactor). False trips are avoided by a start suppression of 500 ms that is permanently in the device and cannot be modified.
-- Transient (< 1 s) starting overcurrent (inrush) during which no dry running can be detected by undershooting a minimum active power threshold. Does not result in false tripping and is therefore non-critical in respect of the Ex protection because of the short duration.
+- Transient (&lt; 1 s) undershooting of the active power threshold because starting is performed based on active power = 0 and based on electrical effects (e.g. inertia of the motor contactor). False trips are avoided by a start suppression of 500 ms that is permanently in the device and cannot be modified.
+- Transient (&lt; 1 s) starting overcurrent (inrush) during which no dry running can be detected by undershooting a minimum active power threshold. Does not result in false tripping and is therefore non-critical in respect of the Ex protection because of the short duration.
 
 #### Logging of the set parameter values
 
@@ -1597,7 +1597,7 @@ After confirmation, the input sequence is exited and the modified parameter valu
 | Symbol | Meaning |
 | --- | --- |
 |  | **Notice** |
-| **Tests performed by the device**  In SIMOCODE pro, the preconditions for the use of the function "dry-running protection" are checked during the teach-in. A check is made to see whether the following conditions are met:  - Progressive pump characteristic curve (P<sub>MIN</sub> / P<sub>OPT</sub> < 0.80) - Current in the permissible range (I<sub>U</sub> < I < I<sub>o</sub>) - Voltage in the permissible range (93 V < U < 794 V)   If one of the above conditions is not met, an error message is output. In this case you must  - close the dry-running protection wizard - eliminate the error and then restart the dry-running protection wizard - if necessary also restart the pump beforehand.   Check the determined absolute values for P<sub>OPT</sub> and P<sub>MIN</sub> for plausibility irrespective of this (where applicable by comparing the pump characteristics). Determine the cause for obvious deviations before activating the dry-running protection function. |  |
+| **Tests performed by the device**  In SIMOCODE pro, the preconditions for the use of the function "dry-running protection" are checked during the teach-in. A check is made to see whether the following conditions are met:  - Progressive pump characteristic curve (P<sub>MIN</sub> / P<sub>OPT</sub> &lt; 0.80) - Current in the permissible range (I<sub>U</sub> &lt; I &lt; I<sub>o</sub>) - Voltage in the permissible range (93 V &lt; U &lt; 794 V)   If one of the above conditions is not met, an error message is output. In this case you must  - close the dry-running protection wizard - eliminate the error and then restart the dry-running protection wizard - if necessary also restart the pump beforehand.   Check the determined absolute values for P<sub>OPT</sub> and P<sub>MIN</sub> for plausibility irrespective of this (where applicable by comparing the pump characteristics). Determine the cause for obvious deviations before activating the dry-running protection function. |  |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -1612,7 +1612,7 @@ After confirmation, the input sequence is exited and the modified parameter valu
 
 ![Example monitoring parameters for the teach‑in illustrated in the characteristic curve of a centrifugal pump with a radial-flow impeller for water at a speed of 1450 rpm (example); source: KSB SE & Co. KGaAExample monitoring parameters for the teach‑in illustrated in the characteristic curve of a centrifugal pump with a radial-flow impeller for water at a speed of 1450 rpm (example); source: KSB SE & Co. KGaA](images/152639682315_DV_resource.Stream@PNG-de-DE.png)
 
-Example monitoring parameters for the teach‑in illustrated in the characteristic curve of a centrifugal pump with a radial-flow impeller for water at a speed of 1450 rpm(example); source: KSB SE & Co. KGaA
+Example monitoring parameters for the teach‑in illustrated in the characteristic curve of a centrifugal pump with a radial-flow impeller for water at a speed of 1450 rpm(example); source: KSB SE &amp; Co. KGaA
 
 **Alternatives when a flow measurement is missing on the discharge side**
 
@@ -1663,13 +1663,13 @@ Dependent on the set control function, up to five different control commands can
 
 Examples of control commands:
 
-- Motor ON (ON>), Motor OFF (OFF) for a direct starter
-- Motor LEFT (ON<), Motor OFF (OFF), Motor RIGHT (ON>) for a reversing starter
-- Motor SLOW (ON>), Motor FAST (ON>>), Motor OFF (OFF) for a Dahlander circuit.
+- Motor ON (ON&gt;), Motor OFF (OFF) for a direct starter
+- Motor LEFT (ON&lt;), Motor OFF (OFF), Motor RIGHT (ON&gt;) for a reversing starter
+- Motor SLOW (ON&gt;), Motor FAST (ON&gt;&gt;), Motor OFF (OFF) for a Dahlander circuit.
 
 The plugs of the "Control Stations" function block must be connected to any sockets (e.g. binary inputs on the basic unit, control bits from the communication bus, etc.) for the control commands to take effect.
 
-Up to five different control commands can come from each control station. Up to five plugs (plug ON<<, ON<, OFF, ON>, ON>>) are available on the function block for each control station. The number of active plugs depends on the control function selected. With a direct starter, for example, only the plugs "ON>" and "OFF" are active.
+Up to five different control commands can come from each control station. Up to five plugs (plug ON&lt;&lt;, ON&lt;, OFF, ON&gt;, ON&gt;&gt;) are available on the function block for each control station. The number of active plugs depends on the control function selected. With a direct starter, for example, only the plugs "ON&gt;" and "OFF" are active.
 
 ##### Control stations:
 
@@ -1690,7 +1690,7 @@ Up to five different control commands can come from each control station. Up to 
   | Symbol | Meaning |
   | --- | --- |
   |  | **Notice** |
-  | **Control commands for speeds and directions of rotation**  Since the operator panel only has four buttons for controlling the motor feeder, one button must be used as a speed changeover button for control functions with two speeds and two directions of rotation. For this purpose, this button must be assigned to the internal control command "[OP]<>/<<>>". |  |
+  | **Control commands for speeds and directions of rotation**  Since the operator panel only has four buttons for controlling the motor feeder, one button must be used as a speed changeover button for control functions with two speeds and two directions of rotation. For this purpose, this button must be assigned to the internal control command "[OP]&lt;&gt;/&lt;&lt;&gt;&gt;". |  |
 
   | Symbol | Meaning |
   | --- | --- |
@@ -1781,13 +1781,13 @@ All the necessary interlocks and logic operations for the respective application
 
 Control functions include:
 
-- Plugs for control commands ON <<, ON <, OFF, ON >, ON >> that are usually connected with the "Enabled control command" sockets.
+- Plugs for control commands ON &lt;&lt;, ON &lt;, OFF, ON &gt;, ON &gt;&gt; that are usually connected with the "Enabled control command" sockets.
 - Auxiliary control inputs (plugs), e.g. Feedback ON
 - Sockets for
 
   - Contactor controls QE1 to QE5.
   - Displays (lamp controls) QL*, QLS.
-  - Status, e.g. "Status - ON <<, Status - ON >>".
+  - Status, e.g. "Status - ON &lt;&lt;, Status - ON &gt;&gt;".
   - Faults, e.g. "Fault - Feedback (FB) On", "Fault - Antivalence"
 - Settings, e.g. interlocking time, non-maintained command mode ON/OFF, etc.
 - A logic component with all necessary interlocks and connections for the control function.
@@ -1817,8 +1817,8 @@ The feeder status feedback is signaled via the status information or the QL lamp
 
 Feeder status feedback:
 
-- Status information, e.g. "Status ON<": These are transmitted, for example, via PROFIBUS DP to the automation system and signal the status of the feeder there.
-- Displays (lamp control) "Display - QLE<": These can, for example, activate a signal lamp or a pushbutton lamp for status display.
+- Status information, e.g. "Status ON&lt;": These are transmitted, for example, via PROFIBUS DP to the automation system and signal the status of the feeder there.
+- Displays (lamp control) "Display - QLE&lt;": These can, for example, activate a signal lamp or a pushbutton lamp for status display.
 
   > **Note**
   >
@@ -1854,9 +1854,9 @@ These feedback signals specify the present status of the corresponding limit swi
 
 - **Deactivated**
     
-  The control command on the corresponding plug of the control stations "ON <, ON <<, ON >, ON >>" is saved. It can only be revoked by an "OFF" control command from the corresponding control station. An auxiliary contact for locking the contactor is not required. Motor feeders are usually operated in locking mode. Locking is preset.
+  The control command on the corresponding plug of the control stations "ON &lt;, ON &lt;&lt;, ON &gt;, ON &gt;&gt;" is saved. It can only be revoked by an "OFF" control command from the corresponding control station. An auxiliary contact for locking the contactor is not required. Motor feeders are usually operated in locking mode. Locking is preset.
 - Activated  
-  Depending on the control function chosen, non-maintained command mode acts on the plugs of all control stations "ON <, ON <<, ON >, ON >>". A control command is only effective as long as there is a "high signal".
+  Depending on the control function chosen, non-maintained command mode acts on the plugs of all control stations "ON &lt;, ON &lt;&lt;, ON &gt;, ON &gt;&gt;". A control command is only effective as long as there is a "high signal".
 
 #### Saving change-over command
 
@@ -1965,8 +1965,8 @@ This section contains information on the following topics:
 - [External ground-fault monitoring with a 3UF7500 ground-fault module and 3UL22 differential current transformer](#external-ground-fault-monitoring-with-a-3uf7500-ground-fault-module-and-3ul22-differential-current-transformer)
 - [External ground-fault monitoring with a 3UF7510 ground-fault module and 3UL23 residual current transformer](#external-ground-fault-monitoring-with-a-3uf7510-ground-fault-module-and-3ul23-residual-current-transformer)
 - [Current limits](#current-limits)
-- [Current limits I> (upper limit)](#current-limits-i-upper-limit)
-- [Current limits I< (lower limit)](#current-limits-i-lower-limit)
+- [Current limits I&gt; (upper limit)](#current-limits-i-upper-limit)
+- [Current limits I&lt; (lower limit)](#current-limits-i-lower-limit)
 - [Voltage monitoring](#voltage-monitoring)
 - [Cos phi monitoring](#cos-phi-monitoring)
 - [Active power monitoring](#active-power-monitoring)
@@ -2007,7 +2007,7 @@ SIMOCODE pro acquires and monitors all three phase currents. By evaluating the r
 It covers two different operating conditions:
 
 - Normal stationary use case up to 2x rated motor current I<sub>s</sub>: Residual currents greater than the value of the set trip/warning levels are detected. Ground-fault monitoring fulfills the accuracy requirements of IEC 60947-1 Class II-B.
-- Temporary starting or overload operation greater than 2x rated motor current I<sub>s</sub>: Responsiveness in the overload range of > 2x rated motor current is reduced to reduce false tripping. Residual currents of > 1/2 * I_trip level/I_s * I_max (of the effective motor current) are detected.
+- Temporary starting or overload operation greater than 2x rated motor current I<sub>s</sub>: Responsiveness in the overload range of &gt; 2x rated motor current is reduced to reduce false tripping. Residual currents of &gt; 1/2 * I_trip level/I_s * I_max (of the effective motor current) are detected.
 
   | Symbol | Meaning |
   | --- | --- |
@@ -2058,8 +2058,8 @@ Setting range: 0 - 25.5 s (**0.1 s**)
 
 It covers two different operating conditions:
 
-- Normal operation to 2x I<sub>s</sub>. The actual operating current must be less than twice the set current I<sub>s</sub>. Fault currents of > 30 % of the set current ls will be detected.
-- Start-up or overload operation to 2x I<sub>s</sub>. The actual operating current is greater than twice the set current I<sub>s</sub>. Residual currents of >15 % of the effective motor current will be detected.
+- Normal operation to 2x I<sub>s</sub>. The actual operating current must be less than twice the set current I<sub>s</sub>. Fault currents of &gt; 30 % of the set current ls will be detected.
+- Start-up or overload operation to 2x I<sub>s</sub>. The actual operating current is greater than twice the set current I<sub>s</sub>. Residual currents of &gt;15 % of the effective motor current will be detected.
 
   | Symbol | Meaning |
   | --- | --- |
@@ -2245,15 +2245,15 @@ The motor current is measured using current measuring modules or current/voltage
 
 **See also**
 
-[Current limits I> (upper limit)](#current-limits-i-upper-limit)
+[Current limits I&gt; (upper limit)](#current-limits-i-upper-limit)
   
-[Current limits I< (lower limit)](#current-limits-i-lower-limit)
+[Current limits I&lt; (lower limit)](#current-limits-i-lower-limit)
 
 #### Current limits I> (upper limit)
 
 ##### Trip level, warning level
 
-When monitoring current limits I> (upper limit), two different response levels, I> (upper limit) trip level and I> (upper limit) warning level, can be parameterized and monitored. If the current of one or more phases exceeds the response level, current limit monitoring responds.
+When monitoring current limits I&gt; (upper limit), two different response levels, I&gt; (upper limit) trip level and I&gt; (upper limit) warning level, can be parameterized and monitored. If the current of one or more phases exceeds the response level, current limit monitoring responds.
 
 - Trip level: **0** to 1020% of l<sub>s</sub> in 4% increments
 - Warning level: **0** to 1020% of l<sub>s</sub> in 4% increments
@@ -2288,7 +2288,7 @@ Setting range: 0 to 25.5 s (**0.5 s**)
 
 Setting range: 0 to 25.5 s (**0.5 s**)
 
-##### Hysteresis for current limits I> (upper limit)
+##### Hysteresis for current limits I&gt; (upper limit)
 
 Setting range: 0 to 15% of the level value in 1% increments (**5%**)
 
@@ -2298,13 +2298,13 @@ Setting range: 0 to 15% of the level value in 1% increments (**5%**)
 
 [Current limits](#current-limits)
   
-Monitoring current limits - Response when warning level I> reached
+Monitoring current limits - Response when warning level I&gt; reached
 
 #### Current limits I< (lower limit)
 
 ##### Trip level, warning level
 
-When monitoring current limits I< (lower limit), two different response levels (trip level, warning level) can be parameterized and monitored. If the current of the phases (I<sub>max</sub>) drops below the response level, the current limit monitor responds.
+When monitoring current limits I&lt; (lower limit), two different response levels (trip level, warning level) can be parameterized and monitored. If the current of the phases (I<sub>max</sub>) drops below the response level, the current limit monitor responds.
 
 - Trip level: **0** to 1020% of l<sub>s</sub> in 4% increments
 - Warning level: **0** to 1020% of l<sub>s</sub> in 4% increments
@@ -2339,7 +2339,7 @@ Setting range: 0 to 25.5 s (**0.5 s**)
 
 Setting range: 0 to 25.5 s (**0.5 s**)
 
-##### Hysteresis for current limits I< (lower limit)
+##### Hysteresis for current limits I&lt; (lower limit)
 
 Setting range: 0 to 15% of the level value in 1% increments (**5%**)
 
@@ -2477,15 +2477,15 @@ With active power monitoring, you can parameterize two different response levels
 
 **Trip level:**
 
-- P> (upper limit)
-- P < (lower limit)
+- P&gt; (upper limit)
+- P &lt; (lower limit)
 
 **Range: 0** to 4294967.295 kW
 
 **Warning level:**
 
-- P> (upper limit) **0** to 4294967.295 kW
-- P < (lower limit)
+- P&gt; (upper limit) **0** to 4294967.295 kW
+- P &lt; (lower limit)
 
 **Range: 0** to 4294967.295 kW
 
@@ -2493,7 +2493,7 @@ With active power monitoring, you can parameterize two different response levels
 
 The trip level/warning level is active only when the motor is running, the start-up procedure has been completed, and there is no test position feedback (TPF) (run+).
 
-##### Response to trip level P> (upper limit), P< (lower limit)
+##### Response to trip level P&gt; (upper limit), P&lt; (lower limit)
 
 - **Deactivated**
 - Signal
@@ -2503,7 +2503,7 @@ The trip level/warning level is active only when the motor is running, the start
 
 Setting range: 0 to 25.5 s (**0.5 s**)
 
-##### Response to warning level P> (upper limit), P< (lower limit)
+##### Response to warning level P&gt; (upper limit), P&lt; (lower limit)
 
 - **Deactivated**
 - Signal
@@ -2529,15 +2529,15 @@ With 0/4 - 20 mA monitoring, you can parameterize two different response leve
 
 **Trip level:**
 
-- 0/4-20> (upper limit)
-- 0/4 - 20< (lower limit)
+- 0/4-20&gt; (upper limit)
+- 0/4 - 20&lt; (lower limit)
 
 Setting range: 0.0 to 23.6 mA / 4.0 to 22.9 mA (0.0 / 4.0 mA)
 
 **Warning level:**
 
-- 0/4-20> (upper limit)
-- 0/4 - 20< (lower limit)
+- 0/4-20&gt; (upper limit)
+- 0/4 - 20&lt; (lower limit)
 
 Setting range 0.0 to 23.6 mA / 4.0 to 22.9 mA (0.0 / 4.0 mA)
 
@@ -2550,7 +2550,7 @@ Here you can specify in which motor operating states the trip level/warning leve
 - If motor is running, except TPF (run): Trip level/warning level only active if the motor is ON and not in the test position
 - If motor is on, except TPF, with startup override (run+) Trip level/warning level only active if the motor is running, the startup procedure has been completed, and no test position (TPF) is detected.
 
-##### Response to trip level 0/4 to 20 mA> (upper limit), 0/4 to 20 mA< (lower limit)
+##### Response to trip level 0/4 to 20 mA&gt; (upper limit), 0/4 to 20 mA&lt; (lower limit)
 
 - **Deactivated**
 - Signal
@@ -2560,7 +2560,7 @@ Here you can specify in which motor operating states the trip level/warning leve
 
 Setting range: 0 to 25.5 s (**0.5 s**).
 
-##### Response to warning level 0/4 to 20 mA> (upper limit), 0/4 to 20 mA< (lower limit)
+##### Response to warning level 0/4 to 20 mA&gt; (upper limit), 0/4 to 20 mA&lt; (lower limit)
 
 - **Deactivated**
 - Signal
@@ -2572,7 +2572,7 @@ Setting range: 0 to 25.5 s (**0.5 s**).
 
 ##### Marking
 
-The marking is saved in the device and assigned and displayed in the Faults/Warnings online dialog. Optional marking for identifying the message, e.g. "0/4 to 20 >". Range: maximum 10 characters.
+The marking is saved in the device and assigned and displayed in the Faults/Warnings online dialog. Optional marking for identifying the message, e.g. "0/4 to 20 &gt;". Range: maximum 10 characters.
 
 ##### Hysteresis for 0/4 - 20 mA
 
@@ -2719,7 +2719,7 @@ You can define the response after the penultimate start here.
 
 ##### Interlocking time
 
-If a new start command is issued within the time range for starts after the last permissible start, this new start command will no longer be executed if the setting "Response to overshoot - trip" has been set. "Fault - No. of starts >" is generated and the set interlocking time activated.
+If a new start command is issued within the time range for starts after the last permissible start, this new start command will no longer be executed if the setting "Response to overshoot - trip" has been set. "Fault - No. of starts &gt;" is generated and the set interlocking time activated.
 
 Interlocking time:**00:00:00** to 18:12:15 hh:mm:ss
 
@@ -2741,17 +2741,17 @@ The following schematic shows the "Temperature TM1 and TM2 monitoring" function 
 
 ![Schematic](images/152649439499_DV_resource.Stream@PNG-en-US.png)
 
-##### Settings trip level T>
+##### Settings trip level T&gt;
 
 - Range:  **- 273 °C** up to 65262 °C
-- Response to trip level T >: Defining the response when the temperature is overshot (see below)
-- Marking for trip level T >: No parameters. Optional marking for identifying the message, e.g. "Temperature>"; range: Maximum. 10 characters
+- Response to trip level T &gt;: Defining the response when the temperature is overshot (see below)
+- Marking for trip level T &gt;: No parameters. Optional marking for identifying the message, e.g. "Temperature&gt;"; range: Maximum. 10 characters
 
-##### Settings warning level T>
+##### Settings warning level T&gt;
 
 - Range:  **- 273 °C** up to 65262 °C
-- Response to warning level T >: Defining the response when the temperature is overshot (see below)
-- Marking warning level T >: No parameters. Optional marking for identifying the message, e.g. "Temperature>"; range: Maximum 10 characters
+- Response to warning level T &gt;: Defining the response when the temperature is overshot (see below)
+- Marking warning level T &gt;: No parameters. Optional marking for identifying the message, e.g. "Temperature&gt;"; range: Maximum 10 characters
 
 ##### Trip level activity/warning level
 
@@ -2759,12 +2759,12 @@ The trip level/warning level is always active, regardless of whether the motor i
 
 ##### Response to overshoot of the trip level/warning level for the temperature
 
-Response to trip level T >:
+Response to trip level T &gt;:
 
 - **Signal**
 - Trip
 
-Response to warning level T >:
+Response to warning level T &gt;:
 
 - **Deactivated**
 - Signal
@@ -2876,9 +2876,9 @@ The operator panel contains buttons 1 to 4 as well as the "TEST/RESET" button. C
 - Buttons 1 to 4, operator panel:  
   Buttons 1 to 4 are usually intended for input of control commands for the motor feeder. Control commands can be, for example:
 
-  - Motor ON (ON>), Motor OFF (OFF) for a direct starter
-  - Motor LEFT (ON <), Motor OFF (OFF), Motor RIGHT (ON >) for a reversing starter
-  - Motor SLOW (ON >), Motor FAST (ON >>), Motor OFF (OFF) for a Dahlander circuit.
+  - Motor ON (ON&gt;), Motor OFF (OFF) for a direct starter
+  - Motor LEFT (ON &lt;), Motor OFF (OFF), Motor RIGHT (ON &gt;) for a reversing starter
+  - Motor SLOW (ON &gt;), Motor FAST (ON &gt;&gt;), Motor OFF (OFF) for a Dahlander circuit.
 
   However, buttons 1 to 4 are not rigidly assigned to the above mentioned control commands, and can be assigned to other functions via different internal connection of the respective function block socket in SIMOCODE pro.
 - "TEST/RESET" button, Operator panel:  
@@ -3249,7 +3249,7 @@ The following table shows the diagnostics data in 3UF50 compatibility mode:
 | 7.6 | Event: Ext. message 2 | 10.6 | Event: Ext. message 2 | Event: Ext. fault 6 |
 | 7.7 | Event: Ext. message 3 | 10.7 | Event: Ext. message 3 | --- |
 | 8.0 | Warning: Ext. warning | 11.0 | Warning: Ext. warning | Warning: Ext. fault 3 |
-| 8.1 | Warning: Unbalance > 40% | 11.1 | Warning: Unbalance > 40% | Warning. Unbalance |
+| 8.1 | Warning: Unbalance &gt; 40% | 11.1 | Warning: Unbalance &gt; 40% | Warning. Unbalance |
 | 8.2 | Event: Failure PLC-CPU | 11.2 | Event: Failure PLC-CPU | Status - PLC/PCS (inverted) |
 | 8.3 | Warning: Sensor short circuit | 11.3 | Warning: Sensor short circuit | Warning - thermistor short circuit |
 | 8.4 | Event: Cooling down period active | 11.4 | Event: Cooling down period active | Status - cooling down period active |
@@ -3259,19 +3259,19 @@ The following table shows the diagnostics data in 3UF50 compatibility mode:
 | 9.0 | Warning: Ground fault | 12.0 | Warning: Ground fault | - Warning - int. ground fault or - Warning - ext. ground fault |
 | 9.1 | Warning: Overload | 12.1 | Warning: Overload | Warning: Overload |
 | 9.2 | Warning: Overload + unbalance | 12.2 | Warning: Overload + unbalance | Warning: Overload + unbalance |
-| 9.3 | Warning: I1 response level overshot | 12.3 | Warning: I1 response level overshot | Warning - Warning level I> |
-| 9.4 | Warning: I1 response level undershot | 12.4 | Warning: I1 response level undershot | Warning - Warning level I< |
+| 9.3 | Warning: I1 response level overshot | 12.3 | Warning: I1 response level overshot | Warning - Warning level I&gt; |
+| 9.4 | Warning: I1 response level undershot | 12.4 | Warning: I1 response level undershot | Warning - Warning level I&lt; |
 | 9.5 | Warning: I2 response level overshot | 12.5 | Warning: I2 response level overshot | --- |
 | 9.6 | Warning: I2 response level undershot | 12.6 | Warning: I2 response level undershot | --- |
-| 9.7 | Warning: Thermistor | 12.7 | Warning: Thermistor | - Warning - thermistor overload - Warning - thermistor open circuit - Warning - TM warning T> - Warning - TM sensor fault - Warning - TM out of range |
+| 9.7 | Warning: Thermistor | 12.7 | Warning: Thermistor | - Warning - thermistor overload - Warning - thermistor open circuit - Warning - TM warning T&gt; - Warning - TM sensor fault - Warning - TM out of range |
 | 10.0 | Trip: Ground fault | 13.0 | Trip: Ground fault | - Fault - int. ground fault or - Fault - ext. ground fault |
 | 10.1 | Trip: Overload | 13.1 | Trip: Overload | Fault - overload |
 | 10.2 | Trip: Overload + unbalance | 13.2 | Trip: Overload + unbalance | Fault - overload + phase failure |
-| 10.3 | Trip: I1 response level overshot | 13.3 | Trip: I1 response level overshot | Fault - trip level I> |
-| 10.4 | Trip: I1 response level undershot | 13.4 | Trip: I1 response level undershot | Fault - trip level I< |
+| 10.3 | Trip: I1 response level overshot | 13.3 | Trip: I1 response level overshot | Fault - trip level I&gt; |
+| 10.4 | Trip: I1 response level undershot | 13.4 | Trip: I1 response level undershot | Fault - trip level I&lt; |
 | 10.5 | Trip: I2 response level overshot | 13.5 | Trip: I2 response level overshot | --- |
 | 10.6 | Trip: I2 response level undershot | 13.6 | Trip: I2 response level undershot | --- |
-| 10.7 | Trip: Thermistor | 13.7 | Trip: Thermistor | - Fault - thermistor overload - Fault - thermistor short circuit - Fault - thermistor open circuit - Fault - TM trip T> - Fault - TM sensor fault - Fault - TM out of range |
+| 10.7 | Trip: Thermistor | 13.7 | Trip: Thermistor | - Fault - thermistor overload - Fault - thermistor short circuit - Fault - thermistor open circuit - Fault - TM trip T&gt; - Fault - TM sensor fault - Fault - TM out of range |
 | 11.0 | Trip: FB ON | 14.0 | Trip: FB ON | Fault - feedback ON |
 | 11.1 | Trip: FB OFF | 14.1 | Trip: FB OFF | Fault - feedback OFF |
 | 11.2 | Trip: Stalled rotor | 14.2 | Trip: Stalled rotor | Fault - stalled rotor |
@@ -3855,9 +3855,9 @@ A SIMOCODE pro function test can also be initialized via the test function.
 
 The test function comprises the following steps:
 
-- Lamp / LED test (test function activated for < 2 s)
+- Lamp / LED test (test function activated for &lt; 2 s)
 - Test of the device functionality (test function activated for 2 s - 5 s)
-- For "Test 1" function block only: Switching off the QE (test function activated > 5 s).
+- For "Test 1" function block only: Switching off the QE (test function activated &gt; 5 s).
 
 ##### Settings for test 1 to 2
 
@@ -3997,7 +3997,7 @@ Furthermore, auto reset can also be activated (see "Settings").
   - Remote reset: Acknowledgment via reset 1-3, DPV1, "Reset" command
   - Auto reset: The fault resets itself after the cause has been eliminated (after removal of the activation signal)
   - Auto command reset: "OFF" control command, resets the fault
-- Labeling: No parameters. Optional marking for designating the event, e.g. "Speed >," e.g. with SIMOCODE ES. Range: Maximum 10 characters.
+- Labeling: No parameters. Optional marking for designating the event, e.g. "Speed &gt;," e.g. with SIMOCODE ES. Range: Maximum 10 characters.
 
   > **Note**
   >
@@ -4785,7 +4785,7 @@ The following display shows a flow chart with the different "active status" para
   - run+, i.e. evaluate only if the motor is running and the start-up procedure is finished (i.e. the "Start active" message is no longer active) and there is no test position feedback (TPF); example: Cos phi monitoring
 - Threshold: Monitor response value. The return value is always determined by the "Limit monitor - Delay" parameter. Range: **0** to 65535
 - Delay - Specifies the time period for which the limit must be constantly overshot before the "Event - Limit" output is set. Range: 0 to 25.5 s (**0.5** s)
-- Labeling: No parameters. Optional marking for identifying the message, e.g. "Limit>"; range: Max. 10 characters.
+- Labeling: No parameters. Optional marking for identifying the message, e.g. "Limit&gt;"; range: Max. 10 characters.
 
   > **Note**
   >
@@ -5211,7 +5211,7 @@ You can copy charts only to the "Master copies" folder of the project library (s
 
 **Conflicts when using charts stored in the "Master copies" folder:**
 
-If you want to use a chart stored in the "Master copies" folder in the current project by means of drag&drop, an automatic check is made to establish whether there are any function blocks and blocks in this chart that are not supported in the current project. In this case, the "Copy conflict" window opens, offering you the following information in the form of a table:
+If you want to use a chart stored in the "Master copies" folder in the current project by means of drag&amp;drop, an automatic check is made to establish whether there are any function blocks and blocks in this chart that are not supported in the current project. In this case, the "Copy conflict" window opens, offering you the following information in the form of a table:
 
 - Block type: Types of function blocks and blocks that cannot be used in the current project
 - Names of the function blocks and blocks that are not supported and that are used in the master copy
@@ -5363,7 +5363,7 @@ The **device wizard** provides preconfigured applications in the standard and sa
 - Click the "Finish" button
 - The "**Parameter Wizard** - Control device_*, Category "Fieldbus interface" window opens
 - Enter the basic type and clear the "Startup parameter block" check box, if necessary
-- Click the "Next <<" button.
+- Click the "Next &lt;&lt;" button.
 - The Category "Configuration" opens.
 
   - Make the necessary settings
@@ -5374,11 +5374,11 @@ The **device wizard** provides preconfigured applications in the standard and sa
 |  | **Notice** |
 | **Changing the preconfigured application**  If you modify the pre-configured application, you may have to modify many protective functions, links and interlocks again manually.  You can select an application in the device wizard, and then receive a new SIMOCODE device with the corresponding sample configuration using the "Add new device" command. |  |
 
-- Click the "Next <<" button.
+- Click the "Next &lt;&lt;" button.
 - The category "Motor protection" opens
 
   - Set the parameters for Overload / Unbalance / Stalled rotor
-- Click the "Next <<" button.
+- Click the "Next &lt;&lt;" button.
 - The category "Motor monitoring" opens
 
   - Set the parameters for the monitoring functions
@@ -5386,7 +5386,7 @@ The **device wizard** provides preconfigured applications in the standard and sa
 
 The configuration is not complete. Before completing the configuration, you can
 
-- move one step forward or back with the "<< Previous" and "Next >>" buttons.
+- move one step forward or back with the "&lt;&lt; Previous" and "Next &gt;&gt;" buttons.
 - cancel the configuration with the "Cancel" button.
 
 ### Automatic generation of I/O variables
@@ -5449,8 +5449,8 @@ Module
 | --- | --- |
 | Short code | Short code of the device |
 | Article number | Article number (MLFB) of the device (MLFB = machine-readable product designation) |
-| HW version | Corresponds to the I&M 0 value: Hardware_Revision <sup>1)</sup> |
-| Firmware version | Corresponds to the I&M 0 value: Software_Revision <sup>1)</sup> |
+| HW version | Corresponds to the I&amp;M 0 value: Hardware_Revision <sup>1)</sup> |
+| Firmware version | Corresponds to the I&amp;M 0 value: Software_Revision <sup>1)</sup> |
 
 1) Manufacturer-internal information
 
@@ -5477,7 +5477,7 @@ Marking
 
 #### Controlling the feeder
 
-The feeder is controlled with the "ON<<, ON<, OFF, ON>, ON>>" buttons.
+The feeder is controlled with the "ON&lt;&lt;, ON&lt;, OFF, ON&gt;, ON&gt;&gt;" buttons.
 
 The number of buttons depends on the control function selected. The buttons are not present on the overload relay. On the direct starter, only the "OFF" and "ON" buttons are shown. The buttons are only active when
 
@@ -5553,18 +5553,18 @@ Different fault messages concerning the following topics are indicated by lamp s
 
 | Display | Meaning/possible fault cause/acknowledgment/fault correction |
 | --- | --- |
-| Trip level I> | The maximum current has overshot the trip level.  Check the application that is being driven by the motor.   Further information: See [Current limits I> (upper limit)](#current-limits-i-upper-limit). |
-| Trip level I< | The maximum current has undershot the trip level.  Check the application that is being driven by the motor.   Further information: See [Current limits I< (lower limit)](#current-limits-i-lower-limit). |
+| Trip level I&gt; | The maximum current has overshot the trip level.  Check the application that is being driven by the motor.   Further information: See [Current limits I&gt; (upper limit)](#current-limits-i-upper-limit). |
+| Trip level I&lt; | The maximum current has undershot the trip level.  Check the application that is being driven by the motor.   Further information: See [Current limits I&lt; (lower limit)](#current-limits-i-lower-limit). |
 | Internal ground fault | Internal ground-fault monitoring has activated. An impermissibly high fault current is flowing.  Check the motor connection cable for damage.  Acknowledge with "Reset".   Further information: See [Internal ground-fault monitoring when using a current measuring module or a 1st generation current / voltage measuring module](#internal-ground-fault-monitoring-when-using-a-current-measuring-module-or-a-1st-generation-current-voltage-measuring-module). |
 | External ground fault | External ground-fault monitoring has activated. An impermissibly high fault current is flowing.  Check the motor connection cable for damage.  Acknowledge with "Reset".   Further information: See [External ground-fault monitoring](#external-ground-fault-monitoring). |
-| Trip level P> | The active power of the motor has overshot the trip level.  Check the application that is being driven by the motor.   Further information: See [Active power monitoring](#active-power-monitoring). |
-| Trip P< | The active power of the motor has undershot the trip level.  Check the application that is being driven by the motor.   Further information: See [Active power monitoring](#active-power-monitoring). |
-| Trip level U< | The voltage in the motor feeder has undershot the trip level.  Possible causes:  - Undervoltage in the network - Fuse has tripped.   Check the motor feeder.   Further information: See [Voltage monitoring](#voltage-monitoring). |
-| Trip level cos phi< | The power factor cos phi has undershot the trip level.  Possible cause: The motor is being operated without a load.  Check the application that is being driven by the motor.   Further information: See [Cos phi monitoring](#cos-phi-monitoring). |
-| Trip level 0 / 4 ‑ 20 mA> | The measured value at the analog input has overshot the trip level.  Check the measuring station.   Further information: See [0 / 4 - 20 mA monitoring](#0-4---20-ma-monitoring). |
-| Trip level 0 / 4 ‑ 20 mA< | The measured value at the analog input has undershot the trip level.  Check the measuring station.   Further information: See [0 / 4 - 20 mA monitoring](#0-4---20-ma-monitoring). |
-| No. of starts > | The permissible number of starts in the monitoring timeframe has already been exceeded. The next start should not be carried out until the interlocking time has expired.   Further information: See [Number of starts monitoring motor](#number-of-starts-monitoring-motor). |
-| Temperature at trip level T> | The temperature warning level has been exceeded.  Check the temperature measuring station.   Further information: See [Temperature monitoring (analog)](#temperature-monitoring-analog). |
+| Trip level P&gt; | The active power of the motor has overshot the trip level.  Check the application that is being driven by the motor.   Further information: See [Active power monitoring](#active-power-monitoring). |
+| Trip P&lt; | The active power of the motor has undershot the trip level.  Check the application that is being driven by the motor.   Further information: See [Active power monitoring](#active-power-monitoring). |
+| Trip level U&lt; | The voltage in the motor feeder has undershot the trip level.  Possible causes:  - Undervoltage in the network - Fuse has tripped.   Check the motor feeder.   Further information: See [Voltage monitoring](#voltage-monitoring). |
+| Trip level cos phi&lt; | The power factor cos phi has undershot the trip level.  Possible cause: The motor is being operated without a load.  Check the application that is being driven by the motor.   Further information: See [Cos phi monitoring](#cos-phi-monitoring). |
+| Trip level 0 / 4 ‑ 20 mA&gt; | The measured value at the analog input has overshot the trip level.  Check the measuring station.   Further information: See [0 / 4 - 20 mA monitoring](#0-4---20-ma-monitoring). |
+| Trip level 0 / 4 ‑ 20 mA&lt; | The measured value at the analog input has undershot the trip level.  Check the measuring station.   Further information: See [0 / 4 - 20 mA monitoring](#0-4---20-ma-monitoring). |
+| No. of starts &gt; | The permissible number of starts in the monitoring timeframe has already been exceeded. The next start should not be carried out until the interlocking time has expired.   Further information: See [Number of starts monitoring motor](#number-of-starts-monitoring-motor). |
+| Temperature at trip level T&gt; | The temperature warning level has been exceeded.  Check the temperature measuring station.   Further information: See [Temperature monitoring (analog)](#temperature-monitoring-analog). |
 
 #### Other - General
 
@@ -5601,7 +5601,7 @@ Different warnings concerning the following topics are indicated by lamp symbols
 
 | Display | Meaning/possible fault cause/acknowledgment/fault correction |
 | --- | --- |
-| Prewarning overload (I>115%Is) | The motor feeder is in overload operation. If this condition continues to persist, the motor feeder will trip within a short period of time due to overload.  Check the motor and the application that is being driven by the motor. |
+| Prewarning overload (I&gt;115%Is) | The motor feeder is in overload operation. If this condition continues to persist, the motor feeder will trip within a short period of time due to overload.  Check the motor and the application that is being driven by the motor. |
 | Unbalance | The unbalance level has been exceeded.  Check the motor and the motor feeder.  The motor can be switched on again after the cooling down period has expired or after an emergency start.   Further information: See [Unbalance protection](#unbalance-protection). |
 | Overload | The motor feeder has been overloaded.  Check the motor and the application that is being driven by the motor.  The motor can be switched on again after the cooling down period has expired or after an emergency start.   Further information: See [Overload protection](#overload-protection-1). |
 | Overload + phase failure | The motor feeder has been overloaded.  Possible cause: Phase failure.  Check the motor and the motor feeder.  The motor can be switched on again after the cooling down period has expired or after an emergency start.   Further information: See overload protection and [Unbalance protection](#unbalance-protection). |
@@ -5621,22 +5621,22 @@ Different warnings concerning the following topics are indicated by lamp symbols
 
 | Display | Meaning/possible fault cause/acknowledgment/fault correction |
 | --- | --- |
-| Warning level I> | The maximum current has overshot the warning level.  Check the application that is being driven by the motor.   Further information: See [Current limits I> (upper limit)](#current-limits-i-upper-limit). |
-| Warning level I< | The maximum current has undershot the warning level.  Check the application that is being driven by the motor.   Further information: See [Current limits I< (lower limit)](#current-limits-i-lower-limit). |
+| Warning level I&gt; | The maximum current has overshot the warning level.  Check the application that is being driven by the motor.   Further information: See [Current limits I&gt; (upper limit)](#current-limits-i-upper-limit). |
+| Warning level I&lt; | The maximum current has undershot the warning level.  Check the application that is being driven by the motor.   Further information: See [Current limits I&lt; (lower limit)](#current-limits-i-lower-limit). |
 | Internal ground fault | Internal ground-fault monitoring has activated. An impermissibly high fault current is flowing.  Check the motor connection cable for damage.   Further information: See [Internal ground-fault monitoring when using a current measuring module or a 1st generation current / voltage measuring module](#internal-ground-fault-monitoring-when-using-a-current-measuring-module-or-a-1st-generation-current-voltage-measuring-module). |
 | External ground fault | External ground-fault monitoring has activated. An impermissibly high fault current is flowing.  Check the motor connection cable for damage.   Further information: See [External ground-fault monitoring](#external-ground-fault-monitoring). |
-| Warning level P> | The active power of the motor has overshot the warning level.  Check the application that is being driven by the motor.   Further information: See [Active power monitoring](#active-power-monitoring). |
-| Warning level P< | The active power of the motor has undershot the warning level.  Check the application that is being driven by the motor.   Further information: See [Active power monitoring](#active-power-monitoring). |
-| Warning level U< | The voltage in the motor feeder has undershot the warning level.  Possible causes:  - Undervoltage in the network - Fuse has tripped.   Check the motor feeder.   Further information: See [Voltage monitoring](#voltage-monitoring). |
-| Warning level cos phi < | The power factor cos phi has undershot the warning level.  Possible cause: The motor is being operated without a load.  Check the application that is being driven by the motor.   Further information: See [Cos phi monitoring](#cos-phi-monitoring). |
-| Warning level 0 / 4 ‑ 20 mA> (analog module 1/2) | The measured value at the analog input has overshot the warning level.  Check the measuring station.   Further information: See [0 / 4 - 20 mA monitoring](#0-4---20-ma-monitoring). |
-| Warning level 0 / 4 ‑ 20 mA< (analog module 1/2) | The measured value at the analog input has undershot the warning level.  Check the measuring station.   Further information: See [0 / 4 - 20 mA monitoring](#0-4---20-ma-monitoring). |
-| No. of starts > | The permissible number of starts in the monitoring timeframe has already been exceeded. The next start should not be carried out until the interlocking time has expired.   Further information: See [Number of starts monitoring motor](#number-of-starts-monitoring-motor). |
+| Warning level P&gt; | The active power of the motor has overshot the warning level.  Check the application that is being driven by the motor.   Further information: See [Active power monitoring](#active-power-monitoring). |
+| Warning level P&lt; | The active power of the motor has undershot the warning level.  Check the application that is being driven by the motor.   Further information: See [Active power monitoring](#active-power-monitoring). |
+| Warning level U&lt; | The voltage in the motor feeder has undershot the warning level.  Possible causes:  - Undervoltage in the network - Fuse has tripped.   Check the motor feeder.   Further information: See [Voltage monitoring](#voltage-monitoring). |
+| Warning level cos phi &lt; | The power factor cos phi has undershot the warning level.  Possible cause: The motor is being operated without a load.  Check the application that is being driven by the motor.   Further information: See [Cos phi monitoring](#cos-phi-monitoring). |
+| Warning level 0 / 4 ‑ 20 mA&gt; (analog module 1/2) | The measured value at the analog input has overshot the warning level.  Check the measuring station.   Further information: See [0 / 4 - 20 mA monitoring](#0-4---20-ma-monitoring). |
+| Warning level 0 / 4 ‑ 20 mA&lt; (analog module 1/2) | The measured value at the analog input has undershot the warning level.  Check the measuring station.   Further information: See [0 / 4 - 20 mA monitoring](#0-4---20-ma-monitoring). |
+| No. of starts &gt; | The permissible number of starts in the monitoring timeframe has already been exceeded. The next start should not be carried out until the interlocking time has expired.   Further information: See [Number of starts monitoring motor](#number-of-starts-monitoring-motor). |
 | Just one start possible | The start after the next one should not be carried out until the interlocking time has expired. |
 | No start permitted | The permissible number of starts in the monitoring timeframe has been attained. The next start should not be carried out until the interlocking time has expired. |
-| Motor operating hours > | The configured limit value for motor operating hours monitoring has been exceeded.  Apply the maintenance measures intended for the feeder. |
-| Stop time > | The configured limit value for stop time monitoring has been exceeded.  Apply the maintenance measures intended for the feeder. If possible, switch on the feeder. |
-| Warning level T > | The temperature warning level (temperature module 1/2) has been exceeded.  Check the temperature measuring station.  Further information: See [Temperature monitoring (analog)](#temperature-monitoring-analog). |
+| Motor operating hours &gt; | The configured limit value for motor operating hours monitoring has been exceeded.  Apply the maintenance measures intended for the feeder. |
+| Stop time &gt; | The configured limit value for stop time monitoring has been exceeded.  Apply the maintenance measures intended for the feeder. If possible, switch on the feeder. |
+| Warning level T &gt; | The temperature warning level (temperature module 1/2) has been exceeded.  Check the temperature measuring station.  Further information: See [Temperature monitoring (analog)](#temperature-monitoring-analog). |
 | DM-F test requirement | The enabling circuits of the DM-F Local / DM-F PROFIsafe have not been opened and closed again within the configured time period.   The function of the enabling circuit relay contacts can only be tested when they are switched.   Apply the maintenance measures prescribed for this scenario. |
 
 #### Other - General
@@ -5674,7 +5674,7 @@ Different warnings concerning the following topics are indicated by lamp symbols
 | No module voltage | Supply voltage on the DM‑F is either too low or there is no voltage.  Check whether the terminals are correctly wired.  The DM‑F module is possibly defective. Replace the module. |
 | Initialization module write-protected | The initialization module is completely write-protected.  Deactivate write protection of the initialization module. |
 | Initialization module write-protected, parameter changes not allowed | The initialization modules is completely or partially write-protected. Reparameterization of SIMOCODE pro is denied because the initialization module is write-protected.  Deactivate write protection of the initialization module. |
-| Initialization module identification data write-protected | The device addressing and the I&M data in the initialization module are write-protected. Parameterization will only be accepted by SIMOCODE if the new parameter set is identical to the data stored in the initialization module at that time.  - Select a parameterization with identical addressing and I&M data - Deactivate the partial write protection of the initialization module. |
+| Initialization module identification data write-protected | The device addressing and the I&amp;M data in the initialization module are write-protected. Parameterization will only be accepted by SIMOCODE if the new parameter set is identical to the data stored in the initialization module at that time.  - Select a parameterization with identical addressing and I&amp;M data - Deactivate the partial write protection of the initialization module. |
 | Initialization module read in | The parameters of the initialization module were read into SIMOCODE. |
 | Initialization module programmed | The reparameterization was accepted in the initialization module. |
 | Initialization module deleted | The initialization module was deleted and is now back in the as-delivered state. |
@@ -5754,14 +5754,14 @@ For temperature measurements, you require SIMOCODE pro V with a temperature modu
 | **Motor** | **Range** |
 | --- | --- |
 | Motor operating hours | 0 to 1193046 h |
-| Motor operating hours > | See [Warnings](#warnings) |
+| Motor operating hours &gt; | See [Warnings](#warnings) |
 | Number of overload trips | 0 to 65535 |
 | Number of starts | 0 to 4294967295 |
 | Permissible starts - actual value | 0 to 255 |
 | Just one start possible | See [Warnings](#warnings) |
 | No start permitted | See [Warnings](#warnings) |
 | Stop time | 0 to 65535 h |
-| Stop time > | See [Warnings](#warnings) |
+| Stop time &gt; | See [Warnings](#warnings) |
 | Consumed energy | 0 to 4294967295 kWh |
 | Time until test required | 0 to 255 w (weeks) |
 | Test required | See [Warnings](#warnings), DM-F test requirement |
@@ -5838,7 +5838,7 @@ The current DIP switch position of the "DM-F Local" and/or the "DM-F PROFIsafe
 | Write protection of the memory module is switched off | With this command you can cancel the write protection of the memory module. |
 | Initialization module write protection on | All contents of the initialization module are write-protected. This prevents any inadvertent changes to the contents of the initialization module and any parameter changes to the connected SIMOCODE pro basic unit.  An inadvertent change of parameters for a motor feeder is prevented.  SIMOCODE pro signals the successful execution of the command with the event "Initialization module write-protected". |
 | Initialization module write protection off | With this command, you can remove the write protection of the initialization module. |
-| Initialization module write protection for identification data on | (Identification & Maintenance) are write-protected. With this command, you can  - prevent inadvertent changes to the parameters (e.g. device names) and the I&M data for the motor feeder. - continue to make parameter changes in the initialization module as well as in the SIMOCODE basic unit if the address data and I&M data are identical to the data already contained in the device when parameters are downloaded.   SIMOCODE pro signals the successful execution of the command with the event "Initialization module identification data write-protected". |
+| Initialization module write protection for identification data on | (Identification &amp; Maintenance) are write-protected. With this command, you can  - prevent inadvertent changes to the parameters (e.g. device names) and the I&amp;M data for the motor feeder. - continue to make parameter changes in the initialization module as well as in the SIMOCODE basic unit if the address data and I&amp;M data are identical to the data already contained in the device when parameters are downloaded.   SIMOCODE pro signals the successful execution of the command with the event "Initialization module identification data write-protected". |
 | Initialization module identification data write protection off | With this command, you can remove the write protection of the identification data of the initialization module. |
 | Clear initialization module | With this command  - all contents of the initialization module are deleted - The initialization module is reset to the as-delivered state.   SIMOCODE pro signals the successful deletion with the "Initialization module cleared" event.  On startup with an empty initialization module, the basic unit signals "Fault - parameterization". The "General Fault" LED of the basic unit flashes red.  Reparameterization of the device, e.g. with SIMOCODE ES, writes valid parameters to the basic unit and the initialization module again. You can then acknowledge the fault message. |
 | Restart/cold start | Initialization of SIMOCODE pro. New start. |
@@ -5889,7 +5889,7 @@ Firmware update via Ethernet has been supported since software version SIMOCODE
 **Update procedure:**
 
 1. Select the module in the device configuration
-2. Select the "Online & diagnostics" command from the shortcut menu
+2. Select the "Online &amp; diagnostics" command from the shortcut menu
 3. Select the "Firmware update" group in the "Functions" folder
 4. Click the "Browse" button to select the path to the firmware update files
 5. Select the firmware file from the folder into which you previously unpacked the download file. The table in the "Firmware update" area lists those modules under "Suitable for modules" for which an update is possible with the selected firmware file.
@@ -5932,7 +5932,7 @@ Assign a password for SIMOCODE pro. This allows the protection in the basic uni
 ### Actual configuration
 
 - Establish a connection with SIMOCODE pro.
-- Select **Devices > Project → S​IMOCODE​ → Commissioning → Actual configuration** in the Project navigation view.
+- Select **Devices &gt; Project → S​IMOCODE​ → Commissioning → Actual configuration** in the Project navigation view.
 - Establish whether or not the set device configuration agrees with the actual device configuration. The following is displayed:
 
   - Which modules are connected
@@ -6118,7 +6118,7 @@ You make changes to values in the parameter editor in offline mode without perfo
 - Under "Device configuration", set control function "direct starter" (direct-on-line starter)
 - The commissioning editor must have been switched to online mode
 - Under "Motor protection → Overload protection", the load type must be set to "three phase"
-- Under "Motor protection → Overload protection", check box "Transformation ratio - active" must be selected and Transformation ratio - primary must be set to "1" and Transformation ratio - secondary must be set to ">0"
+- Under "Motor protection → Overload protection", check box "Transformation ratio - active" must be selected and Transformation ratio - primary must be set to "1" and Transformation ratio - secondary must be set to "&gt;0"
 - Password protection must be deactivated. If password protection is activated, you must deactivate it.
 - If you are using an in initialization module, it must not be write-protected.
 - The startup parameter block under "PROFINET parameters" in the parameter editor must be activated
@@ -6168,7 +6168,7 @@ Next, perform the following steps as you are prompted in the input sequence:
 | Symbol | Meaning |
 | --- | --- |
 |  | **Notice** |
-| **Tests performed by the device**  In SIMOCODE pro, the preconditions for the use of the function "dry-running protection" are checked during the teach-in. A check is made to see whether the following conditions are met:  - Progressive pump characteristic curve (P<sub>MIN</sub> / P<sub>OPT</sub> < 0.80) - Current in the permissible range (I<sub>U</sub> < I < I<sub>o</sub>) - Voltage in the permissible range (93 V < U < 794 V)   If one of the above conditions is not met, an error message is output. In this case you must  - close the dry-running protection wizard - eliminate the error and then restart the dry-running protection wizard.   Check the determined absolute values for P<sub>OPT</sub> and P<sub>MIN</sub> for plausibility irrespective of this (where applicable by comparing the pump characteristics). Determine the cause for obvious deviations before activating the dry-running protection function. |  |
+| **Tests performed by the device**  In SIMOCODE pro, the preconditions for the use of the function "dry-running protection" are checked during the teach-in. A check is made to see whether the following conditions are met:  - Progressive pump characteristic curve (P<sub>MIN</sub> / P<sub>OPT</sub> &lt; 0.80) - Current in the permissible range (I<sub>U</sub> &lt; I &lt; I<sub>o</sub>) - Voltage in the permissible range (93 V &lt; U &lt; 794 V)   If one of the above conditions is not met, an error message is output. In this case you must  - close the dry-running protection wizard - eliminate the error and then restart the dry-running protection wizard.   Check the determined absolute values for P<sub>OPT</sub> and P<sub>MIN</sub> for plausibility irrespective of this (where applicable by comparing the pump characteristics). Determine the cause for obvious deviations before activating the dry-running protection function. |  |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -6314,7 +6314,7 @@ Select a station and click the "Load" button. The configuration is compiled. The
 | --- | --- | --- | --- | --- |
 | Serial interface | PROFIBUS DP | PROFINET | EtherNet/IP |  |
 | PG/PC interface type | SIRIUS PtP | PROFIBUS, PROFINET/Industrial Ethernet (PN/IE), TeleService |  |  |
-| PG/PC interface | COM<x> | e.g. Intel(R) Centrino(R) Advanced-N 6205 |  |  |
+| PG/PC interface | COM&lt;x&gt; | e.g. Intel(R) Centrino(R) Advanced-N 6205 |  |  |
 | Connection with interface/subnet | - | From the drop-down list "Connection with interface/subnet", select the interface or the subnet for the connection. Select a direct connection if no S7 gateway is connected in between. Select the appropriate subnet for the connection to the PG/PC, if the device is accessible via an S7 gateway. Select the entry "Try all interfaces", if the device has several interfaces and you do not know which interface is used for connecting the device to the PG/PC.  If you have selected an MPI or Profibus subnet, the bus parameters that have been set are accepted into the PG/PC interface at this point. |  | - |
 | 1st gateway | - | If the device is accessible via a gateway, select from the "1st Gateway" drop-down list the gateway which interconnects the subnets affected. |  | - |
 
@@ -6407,7 +6407,7 @@ The following table shows the different Toolbar buttons and the associated comma
 | ![Figure](images/148925457547_DV_resource.Stream@PNG-de-DE.png) | Highlight for signal flow |
 | ![Figure](images/148925338251_DV_resource.Stream@PNG-de-DE.png) | View → Show all |
 | ![Figure](images/148925347211_DV_resource.Stream@PNG-de-DE.png) | View → Zoom in |
-| ![Figure](images/148925426315_DV_resource.Stream@PNG-de-DE.png) | View > Zoom dialog |
+| ![Figure](images/148925426315_DV_resource.Stream@PNG-de-DE.png) | View &gt; Zoom dialog |
 | ![Figure](images/148925381771_DV_resource.Stream@PNG-de-DE.png) | View → Zoom out |
 | ![Figure](images/148925390731_DV_resource.Stream@PNG-de-DE.png) | Show/hide unused connections |
 | ![Figure](images/148925399691_DV_resource.Stream@PNG-de-DE.png) | Monitoring On/Off |
@@ -6468,7 +6468,7 @@ Define in the menu the colors of the interconnection lines for data type:
 
 ### Selecting a function block or connection block and using it in the plan
 
-You can drag & drop function blocks and blocks to the chart and then interconnect them.
+You can drag &amp; drop function blocks and blocks to the chart and then interconnect them.
 
 The function blocks are stored hierarchically in the "Function blocks" folder.
 
@@ -6864,7 +6864,7 @@ You can define a shared online access for multiple PROFINET (PN) and EtherNet/IP
 
 ### Procedure
 
-1. Select "Online > Accessible nodes" in the menu. A dialog box opens.
+1. Select "Online &gt; Accessible nodes" in the menu. A dialog box opens.
 2. Set "PN/IE" as the type of PG/PC interface.
 3. Select the required "PG/PC interface" from your local system.
 4. With the "Apply standard connection path to all SIRIUS devices" button, you apply the setting to the Ethernet-based devices in your project.
@@ -7012,7 +7012,7 @@ This provides you with a clear comparison of the device configuration and the de
 #### Procedure
 
 1. In the project navigation, select a device that you want to compare.
-2. Run the command "Compare > Offline/Offline" via the shortcut menu **or** via "Tools" on the menu bar
+2. Run the command "Compare &gt; Offline/Offline" via the shortcut menu **or** via "Tools" on the menu bar
 3. The comparison editor opens and the selected device is displayed in the left-hand area.
 4. Drag a further device into the drop area "Drag the comparison object here..." in the right-hand area.
 
@@ -7361,7 +7361,7 @@ Setting IP parameters and EtherNet/IP device name with SIMOCODE ES via PC cable
 | --- | --- | --- |
 | 1 | Plug the PC cable into the system interface |  |
 | 2 | Start SIMOCODE ES (TIA Portal) |  |
-| 3 | 1st option: Create new project  - In the Project view, create a new project via "Project → New" - Add a new device by double-clicking the button "Add new device" in the project navigator and select the application in the device wizard. See [Application selection](#application-selection) - Check the device configuration and adapt it to the actual configuration, if applicable - Select the communication settings under "Parameters → Ethernet parameters" and set the IP parameters and the device name - Under "Parameters → Motor protection", set the current setting and, if applicable, other parameters - Adapt other parameters in the parameter editor if necessary - Save the project and transfer the device parameters to the device | 2nd option: Do not create a new project  - In the portal view, click on the button "Online & Diagnostics" - Click "Accessible devices". The "Accessible devices" window opens - Click the "Start search" button - Select a station |
+| 3 | 1st option: Create new project  - In the Project view, create a new project via "Project → New" - Add a new device by double-clicking the button "Add new device" in the project navigator and select the application in the device wizard. See [Application selection](#application-selection) - Check the device configuration and adapt it to the actual configuration, if applicable - Select the communication settings under "Parameters → Ethernet parameters" and set the IP parameters and the device name - Under "Parameters → Motor protection", set the current setting and, if applicable, other parameters - Adapt other parameters in the parameter editor if necessary - Save the project and transfer the device parameters to the device | 2nd option: Do not create a new project  - In the portal view, click on the button "Online &amp; Diagnostics" - Click "Accessible devices". The "Accessible devices" window opens - Click the "Start search" button - Select a station |
 | 4 | Select the type of the PG/PC interface (SIRIUS PtP in this case) |  |
 | 5 | Select the PG/PC interface via which the USB PC cable is connected to the computer. |  |
 | 6 | Click on the "Start search" button and load the parameterization into the device.  After successfully transferring the parameters into the device (see message in inspector window), the device is ready to operate. |  |

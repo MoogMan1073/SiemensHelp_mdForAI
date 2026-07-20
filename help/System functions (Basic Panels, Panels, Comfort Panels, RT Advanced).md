@@ -434,7 +434,7 @@ Specifies the bit which is set. Depending on the HMI device, the bit numbers 0 t
 
 #### Description
 
-This system function is used to log user actions that are not automatically logged in the Audit Trail. You can also use this system function to require the user to enter an acknowledgment or an electronic signature and a comment for the operator action. A requirement for the use of the system function is that the GMP-compliant configuration is activated under "Runtime settings > GMP".
+This system function is used to log user actions that are not automatically logged in the Audit Trail. You can also use this system function to require the user to enter an acknowledgment or an electronic signature and a comment for the operator action. A requirement for the use of the system function is that the GMP-compliant configuration is activated under "Runtime settings &gt; GMP".
 
 If you use the "NotifyUserAction" system function in a function, the debugger may open if you cancel your input by clicking "Cancel". To compensate for this reaction, you can use the "On Error Resume Next" statement in a function. With this instruction, the next instruction is executed after a runtime error. If you use the "On Error Resume Next" statement, output of system events is also suppressed.
 
@@ -1263,9 +1263,9 @@ The value which is subtracted from the tag value.
 
 Displays the tooltip configured for the selected object.
 
-If the system function is configured on a function key, the tooltip for the screen object that currently has the focus is displayed. If a tooltip is configured for the screen itself, you can switch to this text by pressing <Enter> or by double-clicking on the help window.
+If the system function is configured on a function key, the tooltip for the screen object that currently has the focus is displayed. If a tooltip is configured for the screen itself, you can switch to this text by pressing &lt;Enter&gt; or by double-clicking on the help window.
 
-If the system function is configured on a button, only the tooltip for the current screen is displayed. If a tooltip is configured on the button itself, initially only the tooltip for the button is displayed. You can press <Enter> or double-click on the help window to switch to the tooltip for the current screen.
+If the system function is configured on a button, only the tooltip for the current screen is displayed. If a tooltip is configured on the button itself, initially only the tooltip for the button is displayed. You can press &lt;Enter&gt; or double-click on the help window to switch to the tooltip for the current screen.
 
 > **Note**
 >
@@ -1277,8 +1277,8 @@ You can close the help window in the following ways:
 
 Using the keys:
 
-- By pressing the <HELP> key again
-- By pressing the <ESC> key
+- By pressing the &lt;HELP&gt; key again
+- By pressing the &lt;ESC&gt; key
 
 Using the touch screen:
 
@@ -1417,7 +1417,7 @@ You also define the displayed width and height of the pop-up screen, which can d
 >
 > **Operation on HMI devices with keys**
 >
-> You scroll in pop-up screens using the keyboard shortcut <ALT>+<arrow key>.
+> You scroll in pop-up screens using the keyboard shortcut &lt;ALT&gt;+&lt;arrow key&gt;.
 
 #### Display only one scroll bar
 
@@ -2051,7 +2051,7 @@ Name of the file which contains the passwords or to which the passwords are writ
 
 > **Note**
 >
-> If a storage card is used as file location, specify the file location as follows: "\StorageCard\<FileName".
+> If a storage card is used as file location, specify the file location as follows: "\StorageCard\&lt;FileName".
 
 **Direction**
 
@@ -2563,7 +2563,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -2658,7 +2658,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -2740,7 +2740,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -2836,7 +2836,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -2996,7 +2996,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -3092,7 +3092,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "& bSaved & "New Value: " & bValue
+strResult="Old Value: "&amp; bSaved &amp; "New Value: " &amp; bValue
 
 myOutputField.Text=strResult
 
@@ -3852,7 +3852,7 @@ Can be used if the configured device supports user-defined functions. For additi
 
 Determines whether and how loud an acoustic signal is emitted:
 
--1 (hmiToggle) = Toggle: Toggles the emission of the acoustic signal as follows: Muted > Quiet > Loud.
+-1 (hmiToggle) = Toggle: Toggles the emission of the acoustic signal as follows: Muted &gt; Quiet &gt; Loud.
 
 0 (hmiMuted) = Mute: no acoustic signal
 
@@ -3872,7 +3872,7 @@ Determines the brightness of the display.
 
 For Basic Panels 2nd Generation, Mobile Panels and Comfort Panels:
 
-The value for the system function "SetBrightness" can be set between 0% and 100%. The set value is transferred to the HMI device. The brightness settings on the HMI device can be viewed and edited in "Start Center > Settings > Display". The HMI devices support a brightness setting between 10% and 100%.
+The value for the system function "SetBrightness" can be set between 0% and 100%. The set value is transferred to the HMI device. The brightness settings on the HMI device can be viewed and edited in "Start Center &gt; Settings &gt; Display". The HMI devices support a brightness setting between 10% and 100%.
 
 If the system function "SetBrightness" is assigned a value of 0%, the display of the HMI device is switched off by default in Runtime. If the operator touches the display, the display switches to the previous brightness setting.
 
@@ -4801,13 +4801,13 @@ The jump from an alarm in the alarm view to the PLC code view is made possible f
 - With global supervisions, only for interlock supervisions (Interlock)
 - With local supervisions, for all basic supervisions at input parameters
 
-You can find more information on supervisions in the section "Programming PLC > Supervising machinery and plants with ProDiag".
+You can find more information on supervisions in the section "Programming PLC &gt; Supervising machinery and plants with ProDiag".
 
 The jump to the PLC code view is possible for all GRAPH alarms. After the jump, the GRAPH sequencer and the faulty step are displayed in the PLC code view.
 
 If a supervision alarm and an interlock alarm are pending simultaneously for the same step, the interlock network is always displayed first after triggering the system function in the PLC code view regardless of whether the supervision alarm or the interlock alarm was selected.
 
-For the versions < V 18 (Professional) or < V 17 Update 6 (Advanced) the following applies: For the jump from a supervision alarm to the PLC code view, the instance name must conform to the following naming convention when using supported local operands in a function block: <FB-Name>_DB. This restriction does not apply to the current version.
+For the versions &lt; V 18 (Professional) or &lt; V 17 Update 6 (Advanced) the following applies: For the jump from a supervision alarm to the PLC code view, the instance name must conform to the following naming convention when using supported local operands in a function block: &lt;FB-Name&gt;_DB. This restriction does not apply to the current version.
 
 The jump to a function or an organization block is only possible if only global operands are used.
 
@@ -5782,9 +5782,9 @@ If you do not enter the file name fully, the response depends on the number of c
 
   the export is aborted with an error message if the folder exists.
 
-If a memory card is used as storage location, specify the storage location as follows: "\StorageCard\<Name>".
+If a memory card is used as storage location, specify the storage location as follows: "\StorageCard\&lt;Name&gt;".
 
-For Basic Panel, enter the file name as follows: "\USB_X60.1\<Name>"
+For Basic Panel, enter the file name as follows: "\USB_X60.1\&lt;Name&gt;"
 
 **Overwrite**
 
@@ -5878,7 +5878,7 @@ Number or name of the recipe data record to be exported. Specify "0" if all reci
 
 Name of the CSV file to which the recipe data records are exported. Enter the path and the file extension e.g. "C:\TEMP\Orange.CSV".
 
-If a storage card is used as storage location, specify the storage location as follows: "\StorageCard\<FileName>".
+If a storage card is used as storage location, specify the storage location as follows: "\StorageCard\&lt;FileName&gt;".
 
 If you define only a file name without specifying a path, the file is saved to the directory from which Runtime was started. If write access to this directory is not enabled in the Windows 7 operating system, the file is saved to the "VirtualStore" folder of the user directory.
 
@@ -5974,9 +5974,9 @@ Can be used if the configured device supports user-defined functions. For additi
 
 Name of the file from which the recipe data records are imported. Also specify the storage location and the file extension (*.csv or *.txt), e.g. "C:\TEMP\Orange.csv".
 
-For a Basic Panel, specify the file name as follows: "\USB_X60.1\<Name>"
+For a Basic Panel, specify the file name as follows: "\USB_X60.1\&lt;Name&gt;"
 
-For additional devices: If a memory card is used as the storage location, specify the storage location as follows: "\StorageCard\<Name>".
+For additional devices: If a memory card is used as the storage location, specify the storage location as follows: "\StorageCard\&lt;Name&gt;".
 
 To import all recipe data records, specify only the path to the storage location without a file name: "C:\TEMP\". The system function imports all CSV files from this storage location.
 
@@ -6047,7 +6047,7 @@ Can be used if the configured device supports user-defined functions. For additi
 
 Name of the CSV file from which the recipe data records are imported. Enter the path and the file extension, for example, "C:\TEMP\Orange.CSV".
 
-If a storage card is used as storage medium, specify the storage location as follows: "\StorageCard\<FileName>".
+If a storage card is used as storage medium, specify the storage location as follows: "\StorageCard\&lt;FileName&gt;".
 
 If you specify a directory instead of an individual CSV file, all files in the specified directory will be imported.
 
@@ -7245,7 +7245,7 @@ Name of the screen object in which the command is executed.
 
 #### Description
 
-Executes the key function <Pagedown> on the HMI device.
+Executes the key function &lt;Pagedown&gt; on the HMI device.
 
 This system function can only be used for function keys.
 
@@ -7267,7 +7267,7 @@ Can be used if the configured device supports user-defined functions. For additi
 
 #### Description
 
-Executes the key function <PageUp> on the HMI device.
+Executes the key function &lt;PageUp&gt; on the HMI device.
 
 This system function can only be used for function keys and tasks with a time trigger.
 
@@ -7289,7 +7289,7 @@ Can be used if the configured device supports user-defined functions. For additi
 
 #### Description
 
-Executes the key function <Home> on the HMI device.
+Executes the key function &lt;Home&gt; on the HMI device.
 
 This system function is used when the HMI device does not have this functionality by default.
 
@@ -7313,7 +7313,7 @@ Can be used if the configured device supports user-defined functions. For additi
 
 #### Description
 
-Executes the key function <End> on the HMI device.
+Executes the key function &lt;End&gt; on the HMI device.
 
 This system function is used when the HMI device does not have this functionality by default.
 

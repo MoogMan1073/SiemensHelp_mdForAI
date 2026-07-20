@@ -75,7 +75,7 @@ The integration of the project data into the master project is required even if 
 The following compatibility rules apply to PLC synchronization performed during shared commissioning:
 
 - If an Engineering System with TIA Portal V13 or later is online on the CPU and performs a download, a second ES cannot establish an online connection, regardless of the version.
-- If an Engineering System with TIA Portal < V13 is online on the CPU, a second ES cannot establish an online connection, regardless of the version.
+- If an Engineering System with TIA Portal &lt; V13 is online on the CPU, a second ES cannot establish an online connection, regardless of the version.
 
 ### Team Engineering
 
@@ -196,7 +196,7 @@ You should also observe the [Rules for PLC synchronization](#rules-for-plc-synch
 
 Manual synchronization of competing changes is performed in the following steps:
 
-1. Start the comparison editor to manually resolve a conflict displayed in the synchronization dialog during download to the CPU. Select the shared CPU in the project tree and select the "Compare > Offline/Online" command in the shortcut menu. You can define certain actions depending on the status of the objects. Note, however, that you can only perform actions in one direction during synchronizing.
+1. Start the comparison editor to manually resolve a conflict displayed in the synchronization dialog during download to the CPU. Select the shared CPU in the project tree and select the "Compare &gt; Offline/Online" command in the shortcut menu. You can define certain actions depending on the status of the objects. Note, however, that you can only perform actions in one direction during synchronizing.
 2. First, select the action "Upload from device" for all blocks that were changed by other editors on the CPU and which you want to apply.
 3. If necessary, perform a detailed comparison of the blocks to identify differences between your offline blocks and the online blocks loaded on the CPU.
 4. Manually correct the competing changes to the blocks.

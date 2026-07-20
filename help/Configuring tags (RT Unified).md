@@ -76,7 +76,7 @@ The number of tags used is displayed differently in different places in WinCC.
 | Default tag table | - In the HMI device: All configured external, internal tags and the system tags. - In the PLC: All configured PLC tags and the system constants. |
 | User-defined tag tables | - In the HMI device: All configured external and internal tags in the tag table. - In the PLC: All PLC tags configured in the tag table. |
 | Compile | When compiling an HMI device, the following information about tags is provided in the Inspector window:  - Number of tags: Addition of all configured, external and internal tags and their subelements from user data types or arrays.   Example: Two external tags of a user data type with five elements and one internal tag of the type "array" with ten elements: 2 + 2*5 + 1 + 1*10 = 23 - Tags used: The configured, external and internal tags or their elements that have a use in the HMI device. |
-| PowerTags | The number of PowerTags of an HMI device in "Settings > General > Information" results from the elements of the lowest level of all configure external tags in the HMI device.  Example: Two external tags of a user data type with five elements: 2*5 = 10 |
+| PowerTags | The number of PowerTags of an HMI device in "Settings &gt; General &gt; Information" results from the elements of the lowest level of all configure external tags in the HMI device.  Example: Two external tags of a user data type with five elements: 2*5 = 10 |
 
 ---
 
@@ -239,7 +239,7 @@ For external tags, the current tag values are transmitted in runtime via the com
 The options for addressing external tags depend on the type of connection between WinCC and the PLC in question. A distinction must be made between the following connection types:
 
 - Integrated connection  
-  Connections of devices which are within a project and were created with the "Devices & Networks" editor are referred to as integrated connections.
+  Connections of devices which are within a project and were created with the "Devices &amp; Networks" editor are referred to as integrated connections.
 - Non-integrated connection  
   Connections of devices which were created with the "Connections" editor are referred to as non-integrated connections. It is not necessary that all of the devices be within a single project.
 
@@ -275,7 +275,7 @@ Symbolic addressing is also available if you have an integrated link.
 
 You can also use absolute addressing with an integrated connection. You have to use absolute addressing for PLC tags from a SIMATIC S7-300/400 PLC. If you have connected an HMI tag with a PLC tag and the address of the PLC tag changes, you only have to recompile the control program to update the new address in WinCC. Then you recompile the WinCC project and load it onto the HMI device.
 
-In WinCC, symbolic addressing is the default method. To change the default setting, select the menu command "Options > Settings > Visualization > HMI tags".
+In WinCC, symbolic addressing is the default method. To change the default setting, select the menu command "Options &gt; Settings &gt; Visualization &gt; HMI tags".
 
 The availability of an integrated connection depends on the PLC used. The following table shows the availability:
 
@@ -286,7 +286,7 @@ The availability of an integrated connection depends on the PLC used. The follow
 | SIMATIC ET 200 CPU | Yes | A validity check of the tag connection is performed in runtime during symbolic addressing. If an address is changed in the PLC, the change is registered and an error message is issued. In the case of absolute addressing, the behavior described for the S7-300/400 applies. |
 | SIMATIC S7-1500 software controller | Yes | A validity check of the tag connection is performed in runtime during symbolic addressing. If an address is changed in the PLC, the change is registered and an error message is issued. In the case of absolute addressing, the behavior described for the S7-300/400 applies. |
 
-Create an integrated connection in the "Devices & Networks" editor. If the PLC is contained in the project and integrated connections are supported, you can then also have the connection created automatically. To do this, when configuring the HMI tag, simply select an existing PLC tag to which you want to connect the HMI tag. The integrated connection is then automatically created by the system.
+Create an integrated connection in the "Devices &amp; Networks" editor. If the PLC is contained in the project and integrated connections are supported, you can then also have the connection created automatically. To do this, when configuring the HMI tag, simply select an existing PLC tag to which you want to connect the HMI tag. The integrated connection is then automatically created by the system.
 
 #### Addressing with non-integrated connections
 
@@ -681,9 +681,9 @@ When a tag is renamed, the new name must be unique for the whole device.
 > - HMI tag is used in a type, for example, to dynamize an object property via a script.
 > - One or more instances of the type are used in the project.
 > - Project is in runtime.
-> - After the renaming, execute the command "Compile > Software (only changes)".
+> - After the renaming, execute the command "Compile &gt; Software (only changes)".
 >
-> Solution: Exit runtime and rename the tag. Execute the "Compile > Software (rebuild all)" command.
+> Solution: Exit runtime and rename the tag. Execute the "Compile &gt; Software (rebuild all)" command.
 
 If you use the "Copy" command to copy a tag to the clipboard, the references are copied along with the tag.
 
@@ -892,12 +892,12 @@ To create an external tag, proceed as follows:
 2. In the "Name" column, double-click "Add" in the tag table.
 
    A new tag is created.
-3. Select the "Properties > Properties >General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field.
+3. Select the "Properties &gt; Properties &gt;General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field.
 
    The tag name must be unique throughout the device.
 4. Select the connection to the required PLC in the "Connection" box.
 
-   If the connection you require is not displayed, you must first create the connection to the PLC. You create the connection to a SIMATIC S7 PLC in the "Devices & Networks" editor. You create the connection to external PLCs in the "Connections" editor.  
+   If the connection you require is not displayed, you must first create the connection to the PLC. You create the connection to a SIMATIC S7 PLC in the "Devices &amp; Networks" editor. You create the connection to external PLCs in the "Connections" editor.  
    If the project contains the PLC and supports integrated connections, you can also have the connection created automatically. To do this, when configuring the HMI tag, simply select an existing PLC tag to which you want to connect the HMI tag. The integrated connection is then automatically created by the system.
 5. If you are working with an integrated connection, click the ![Procedure](images/70487246859_DV_resource.Stream@PNG-de-DE.png) button in the "PLC tag" field and select an already created PLC tag in the object list. Click ![Procedure](images/84603740299_DV_resource.Stream@PNG-de-DE.png) to confirm the selection.
 
@@ -950,7 +950,7 @@ To create an external tag, proceed as follows:
 2. In the "Name" column, double-click "Add" in the tag table.
 
    A new tag is created.
-3. Select the "Properties > Properties >General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field.
+3. Select the "Properties &gt; Properties &gt;General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field.
 
    The tag name must be unique throughout the device.
 4. If required, select the "Display name" field to enter a name to be displayed in runtime.
@@ -992,7 +992,7 @@ For documentation purposes, it is a good idea to enter a comment for every tag.
    Alternatively, create and then open a new tag table.
 2. In the "Name" column, double-click "Add" in the tag table. A new tag is created.
 3. If the Inspector window is not open, select the "Inspector window" option in the "View" menu.
-4. Select the "Properties > Properties >General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field.
+4. Select the "Properties &gt; Properties &gt;General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field.
 5. If required, select the "Display name" field to enter a name to be displayed in runtime.
 
    The name to be displayed is language-specific and can be translated for the required runtime languages. The display name is available for Basic Panels, Panels and Runtime Advanced.
@@ -1005,7 +1005,7 @@ For documentation purposes, it is a good idea to enter a comment for every tag.
 8. In the "Length" field, you can specify the maximum number of characters to be stored in the tag in accordance with the selected data type.
 
    The length is automatically defined by the data type for numerical tags.
-9. As an option, you can enter a comment regarding the use of the tag. To do so, click "Properties > Properties > Comment" in the Inspector window and enter a text.
+9. As an option, you can enter a comment regarding the use of the tag. To do so, click "Properties &gt; Properties &gt; Comment" in the Inspector window and enter a text.
 
 **Note**
 
@@ -1051,7 +1051,7 @@ With indirect addressing, the tag used is first determined during runtime. Inste
 
 To address tags indirectly, proceed as follows:
 
-1. Insert an IO field into the screen and select the following settings for this example in the Inspector window under "Properties > Properties > General":
+1. Insert an IO field into the screen and select the following settings for this example in the Inspector window under "Properties &gt; Properties &gt; General":
 
    - Mode: Output
    - Output format: {I}
@@ -1061,7 +1061,7 @@ To address tags indirectly, proceed as follows:
    ![Procedure](images/172758112011_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/172758112011_DV_resource.Stream@PNG-en-US.png)
-4. Add another I/O field to the screen and select the following setting for this example in the Inspector window under "Properties > Properties > General":
+4. Add another I/O field to the screen and select the following setting for this example in the Inspector window under "Properties &gt; Properties &gt; General":
 
    - Mode: Input/output
 5. Link the process value to a tag.
@@ -1092,7 +1092,7 @@ You can also use the auto fill function to fill table cells below a tag with a s
 
 If you apply the automatic filling in to already filled cells of a tab table, you will be asked whether you want to overwrite the cells or insert new tags.
 
-If you do not want to overwrite already configured tags, activate insert mode. Activate insert mode by keeping the <Ctrl> key pressed during insertion. Already existing entries in the tag table are moved down if insert mode is activated.
+If you do not want to overwrite already configured tags, activate insert mode. Activate insert mode by keeping the &lt;Ctrl&gt; key pressed during insertion. Already existing entries in the tag table are moved down if insert mode is activated.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -1227,7 +1227,7 @@ You can create an array tag as an internal tag or as an external tag.
 To create an array tag, follow these steps:
 
 1. Open the HMI tag table.
-2. Double click <Add> in the "Name" column of the HMI tag table.  
+2. Double click &lt;Add&gt; in the "Name" column of the HMI tag table.  
    A new HMI tag is created.
 
 #### Configuring HMI array tags
@@ -1280,7 +1280,7 @@ When using address multiplexing, you can efficiently access different addresses 
 
 #### Procedure
 
-1. Select the HMI tag for address multiplexing in the tag table, and select "Properties > Properties > General" in the Inspector window.
+1. Select the HMI tag for address multiplexing in the tag table, and select "Properties &gt; Properties &gt; General" in the Inspector window.
 
    The general properties of the tag are displayed.
 
@@ -1356,7 +1356,7 @@ When using address multiplexing, you can efficiently access different addresses 
 
 #### Procedure
 
-1. Select the tag for address multiplexing in the tag table, and select "Properties > Properties > General" in the Inspector window. The general properties of the tag are displayed.
+1. Select the tag for address multiplexing in the tag table, and select "Properties &gt; Properties &gt; General" in the Inspector window. The general properties of the tag are displayed.
 
    ![Procedure](images/172903149067_DV_resource.Stream@PNG-en-US.png)
 
@@ -1417,7 +1417,7 @@ The value of an external tag can be changed in runtime by the PLC to which the t
 
 To configure an acquisition cycle for a tag, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > Settings".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Settings".
 2. Select the acquisition mode for the tag:
 
    - "Cyclic in operation": The tag is updated at regular intervals as long as it is displayed or archived in the screen.
@@ -1474,7 +1474,7 @@ You activate tag persistency in the runtime settings of the respective HMI devic
 
 #### Procedure
 
-1. In the Inspector window, select "Properties > Properties > Settings".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Settings".
 2. Activate the option "Persistency for internal tags" under "Persistency".
 3. Download the full project.
 
@@ -1520,7 +1520,7 @@ For numerical tags, you can specify a value range by defining a low and high lim
 
 To define limits for a tag, proceed as follows:
 
-1. In the Inspector window, select "Properties > Properties > Range". If you want to define one of the limits as a constant value, select "Constant" using the ![Procedure](images/13196575115_DV_resource.Stream@PNG-de-DE.png) button. Enter a number in the relevant field.
+1. In the Inspector window, select "Properties &gt; Properties &gt; Range". If you want to define one of the limits as a constant value, select "Constant" using the ![Procedure](images/13196575115_DV_resource.Stream@PNG-de-DE.png) button. Enter a number in the relevant field.
 
    If you want to define one of the limits as a tag value, select "HMI tag" using the ![Procedure](images/13196575115_DV_resource.Stream@PNG-de-DE.png) button. Use the object list to define the tag for the limit.
 2. To set additional limits for the tag, repeat step 1 with the appropriate settings.
@@ -1585,7 +1585,7 @@ Local session tags
 - A user session on a Panel ends when Runtime stops.
 
   A user change on a Panel does not end the session on the Panel. The value of a session-local tag remains on the Panel in this case.
-- When displayed in a browser, the user session ends when the view is refreshed, for example, by pressing <F5>.
+- When displayed in a browser, the user session ends when the view is refreshed, for example, by pressing &lt;F5&gt;.
 
   A new user session is created. The value of a session-local tag is set to 0 (zero). The currently logged on user remains logged on.
 - The values of the local session tags are not saved and are lost.
@@ -1598,7 +1598,7 @@ Local session tags
 3. Create an internal tag or select an already created internal tag.
 4. In the "Scope" column, select the "Local session" entry.
 
-   You can also make this setting in the Inspector window under "Properties > Properties > Settings".
+   You can also make this setting in the Inspector window under "Properties &gt; Properties &gt; Settings".
 
 #### Result
 
@@ -1753,7 +1753,7 @@ You can define a substitute value for the following cases:
 
 To configure a substitute value, follow these steps:
 
-1. Select the desired tag in the tag table, and select "Properties > Properties > Values" in the Inspector window.
+1. Select the desired tag in the tag table, and select "Properties &gt; Properties &gt; Values" in the Inspector window.
 2. In the "Use substitute value" segment, select when you want WinCC to use this substitute value in the tag.
 3. Enter the required substitute value in the "Substitute value" field.
 
@@ -1785,7 +1785,7 @@ Depending on the PLC selected, you may need to modify the configuration of the t
 
 To change the PLC connection of a tag, proceed as follows:
 
-1. In the Inspector window select "Properties > Properties > General."
+1. In the Inspector window select "Properties &gt; Properties &gt; General."
 2. Select the new connection in the "Connection" field.
 
    The tag properties that you must change will be highlighted in color in the tag table and in the Inspector window.
@@ -1860,7 +1860,7 @@ You add or delete user data type elements in the "HMI user data types" table.
 
 1. Select a communication driver for the HMI user data type.
 
-   - If you select the <Internal communication> entry, you can only assign the HMI user data type to the internal tags as the data type.
+   - If you select the &lt;Internal communication&gt; entry, you can only assign the HMI user data type to the internal tags as the data type.
    - If a connection to a PLC is selected as the communications driver, you can only assign the HMI user data type to tags with a connection to this PLC as the data type.
    - The configured communication driver applies to all user data type elements of an HMI user data type.
 2. Double-click "Add" in the "Name" column of the table. A new user data type element is added to the HMI user data type.
@@ -2023,12 +2023,12 @@ To create a tag of the "User data type" data type, follow these steps:
 
    The selected connection determines which HMI user data types are displayed.
 
-   For internal tags, only HMI user data type versions of the <Internal user data type> type are available.
+   For internal tags, only HMI user data type versions of the &lt;Internal user data type&gt; type are available.
 
    ![Procedure](images/158898974859_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/158898974859_DV_resource.Stream@PNG-en-US.png)
-5. In the "Address" field, enter the address of the PLC that you want to access with the external tag. The specified address must always point to the start data bit, for example, <DB1.DBX0.0>.
+5. In the "Address" field, enter the address of the PLC that you want to access with the external tag. The specified address must always point to the start data bit, for example, &lt;DB1.DBX0.0&gt;.
 
 **Note**
 
@@ -2257,7 +2257,7 @@ You manage the logging tags at various locations:
 #### Procedure
 
 1. Select an existing tag in the tag table.
-2. In the table of the "Logging tag" editor table, double-click "<Add>" in the "Name" column.
+2. In the table of the "Logging tag" editor table, double-click "&lt;Add&gt;" in the "Name" column.
 
    A new logging tag is created.
 
@@ -2268,7 +2268,7 @@ You manage the logging tags at various locations:
    ![Procedure](images/136207635979_DV_resource.Stream@PNG-en-US.png)
 3. Assign a data log to the new logging tag. Every logging tag can be assigned to another log.
 4. Specify the logging mode.
-5. When the "Cyclic" logging mode is set, define the logging cycle and the factor under "Properties > Properties > Cycle".
+5. When the "Cyclic" logging mode is set, define the logging cycle and the factor under "Properties &gt; Properties &gt; Cycle".
 
    The product of logging cycle and factor determines the time interval between two logs. For example, if you define "1 second" as the time basis and "5" as the time factor, the process values are logged every 5 seconds.
 
@@ -2287,7 +2287,7 @@ You manage the logging tags at various locations:
 
 #### Copying logging tags
 
-You can copy logging tags within an HMI device. To do this, use the shortcut menu or the shortcuts <Ctrl + C> and <Ctrl + V>.
+You can copy logging tags within an HMI device. To do this, use the shortcut menu or the shortcuts &lt;Ctrl + C&gt; and &lt;Ctrl + V&gt;.
 
 You copy logging tags, for example, from:
 
@@ -2380,7 +2380,7 @@ When you use the "On demand" and "On change" logging modes, you have the option 
 #### Procedure
 
 1. Select an existing logging tag in the "Logging tags" tab.
-2. In the Inspector window under "Properties > Properties", select the "Tag trigger" area.
+2. In the Inspector window under "Properties &gt; Properties", select the "Tag trigger" area.
 3. Specify a trigger mode:
 
    - None: The tag trigger is not used.
@@ -2438,7 +2438,7 @@ The following limit scopes are available:
 #### Procedure
 
 1. Select an existing logging tag in the "Logging tags" tab.
-2. In the Inspector window under "Properties > Properties", select the "Limit values" area.
+2. In the Inspector window under "Properties &gt; Properties", select the "Limit values" area.
 3. Specify the limit values. You have the following options:
 
    - Use constants.
@@ -2486,11 +2486,11 @@ The process values are only logged in accordance with certain predefined criteri
 >
 > **Smoothing**
 >
-> If the value "No smoothing" is set in the properties of the logging tag under "Smoothing > Mode", the values are nevertheless smoothed.
+> If the value "No smoothing" is set in the properties of the logging tag under "Smoothing &gt; Mode", the values are nevertheless smoothed.
 >
 > **Example:**
 >
-> A logging tag changes its value as follows: "100" > "101" > "101".
+> A logging tag changes its value as follows: "100" &gt; "101" &gt; "101".
 >
 > Even if "No smoothing" is set in the properties of the tag, the values [100, 101] are logged.
 
@@ -2628,7 +2628,6 @@ The following table shows which compression mode supports which data types. You 
 
 | 1. Select one of the following modes:       | Compression mode | Description |    | --- | --- |    | No compression | Every value is logged. Logging receives a time stamp of the interval end. Examples: - If you have not defined any smoothing, every value is logged. - If you have defined the "Compare values" smoothing mode, the value is only logged when the value changes and/or the quality code is changed. |    | Minimum | The minimum of the values determined within the logging interval, including the start value, is logged. The logging receives a time stamp of the interval start. |    | Maximum | The maximum of the values determined within the logging interval, including the start value, is logged. The logging receives a time stamp of the interval start. |    | Minimum with time stamp | The minimum of the values determined within the logging interval, including the start value, is logged. Unlike in the "Minimum" mode, in this mode the logged minimum value receives the time stamp of its occurrence. |    | Maximum with time stamp | The maximum of the values determined within the logging interval, including the start value, is logged. Unlike in the "Maximum" mode, in this mode the logged maximum value receives the time stamp of its occurrence. |    | Total | The total of all values determined within the specified logging interval is logged without the start and end values. |    | Average | The average value of all values determined within the specified logging interval is logged without the start and end values. |    | Time average sloped step by step | The time-weighted average value of all values determined within the specified logging interval without start and end value is logged. |    | End | The last value determined within the specified logging interval is logged. The logging receives a time stamp of the interval start. Examples: - If you have not defined any smoothing, the zero value and the quality code "NoData" will be logged when there are no value changes. - If you have defined the "Compare values" smoothing mode, the value is only logged when the value changes and/or the quality code is changed. |       | Symbol | Meaning |    | --- | --- |    | **Note**  Each value is logged when you select "No smoothing" for the smoothing mode in combination with the compression mode "No compression". This will quickly increase the log size. |  | 2. You have the option of defining a delay. The delay value defines the latest possible time up to which the compression value is logged after the end of a logging cycle. If the time stamp of a value is after the delay value, the value is not logged. 3. Under "Source", you can select an existing logging tag whose values are to be compressed with the selected compression mode. |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
 | Symbol | Meaning |
 | --- | --- |
 | ![Procedure](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tips for an efficient procedure** |
@@ -2778,9 +2777,9 @@ If you configure several time axes to a trend control, the sequence of the time 
 
 If you display several trends simultaneously in the trend control, assign each trend its own value and time axis. Alternatively, you can assign a shared time and/or value axis to several trends.
 
-You configure the axes of a trend control for each individual trend in the Inspector window under "Properties > Trend areas".
+You configure the axes of a trend control for each individual trend in the Inspector window under "Properties &gt; Trend areas".
 
-The axes are assigned to the configured trends in the Inspector window under "Properties > Trend areas > Trends".
+The axes are assigned to the configured trends in the Inspector window under "Properties &gt; Trend areas &gt; Trends".
 
 ##### Representation using different axes
 
@@ -2845,7 +2844,7 @@ In a trend control, you display a trend direction with one of the following mode
 - Stepped
 - Values
 
-Select "Properties > Trend areas > Trends > Trend mode" to configure the trend display in the Inspector window.
+Select "Properties &gt; Trend areas &gt; Trends &gt; Trend mode" to configure the trend display in the Inspector window.
 
 ##### Dots
 
@@ -2927,7 +2926,7 @@ The contents of the trend companion are shown in columns. The available columns 
 You can configure the following properties in the trend companion in line with your requirements:
 
 - Configure the view of the trend companion in the Inspector window:
-- Select the "Mode" of the trend companion under "Properties > General".
+- Select the "Mode" of the trend companion under "Properties &gt; General".
 - Configure the display, labeling and sequence of the columns.
 
 ##### Display modes
@@ -2982,11 +2981,11 @@ The list of elements in a group always starts with 0, for example trend [0] is t
 
 **Note**
 
-To add another trend area, go to "Properties > Trend areas > [0] trend areas > Trends" and click the selection button in the "Static value" column. In the dialog, click "Add".
+To add another trend area, go to "Properties &gt; Trend areas &gt; [0] trend areas &gt; Trends" and click the selection button in the "Static value" column. In the dialog, click "Add".
 
 #### Configuring trends
 
-1. Go to "Trend areas > [0] trend areas > Trends" and click on the selection button in the "Static value" column.
+1. Go to "Trend areas &gt; [0] trend areas &gt; Trends" and click on the selection button in the "Static value" column.
 
    A dialog opens.
 2. Click "Add" in the "Index" column.
@@ -2994,7 +2993,7 @@ To add another trend area, go to "Properties > Trend areas > [0] trend areas > T
    This adds another trend. Close the dialog.
 3. Expand the index number of the first trend [0]. The trend settings are displayed.
 4. Specify the name of the first trend under "Display name", for example "Speed".
-5. Select the entry "Online" under "Data source Y > Source".
+5. Select the entry "Online" under "Data source Y &gt; Source".
 6. Under "Tag" enter the tag "MotorSpeed".
 7. Configure the line color for the trend, for example, blue.
 8. Expand the index number of the second trend [1]. The trend settings are displayed.
@@ -3049,7 +3048,7 @@ You can also compare the trend to a setpoint trend.
 
 **Note**
 
-To add another function trend area, go to "Properties > Function trend area > [0] function trend area > Function trends" and click on the selection button in the "Static value" column. In the dialog, click "Add".
+To add another function trend area, go to "Properties &gt; Function trend area &gt; [0] function trend area &gt; Function trends" and click on the selection button in the "Static value" column. In the dialog, click "Add".
 
 > **Note**
 >
@@ -3059,10 +3058,10 @@ To add another function trend area, go to "Properties > Function trend area > [0
 
 #### Configuring trends
 
-1. Go to "Function trend area > [0] function trend area > Function trends > [0] function trend".
+1. Go to "Function trend area &gt; [0] function trend area &gt; Function trends &gt; [0] function trend".
 2. Specify "Online" as the source type under "Data source X", and enter the name of the process tag "MotorTemperature" under "Tag".
 3. Specify "Online" as the source type under "Data source Y", and enter the name of the process tag "MotorSpeed" under "Tag".
-4. Specify the time range of 1 second under "Properties > Function trend area > Function trends".
+4. Specify the time range of 1 second under "Properties &gt; Function trend area &gt; Function trends".
 
 #### Result
 
@@ -3130,13 +3129,13 @@ A screen is configured.
 1. Add the "Trend control" object to the screen from the "Toolbox" task card.
 
    ![Configuring the bit-triggered trend without a switch buffer](images/142423191947_DV_resource.Stream@PNG-de-DE.png)
-2. Set the desired height, width and position for the object under "Properties > Layout" in the Inspector window.
+2. Set the desired height, width and position for the object under "Properties &gt; Layout" in the Inspector window.
 3. Expand the "Time axis" group under "Properties" and select the "Points" axis mode under "Settings". Under "Range", specify how many values are to be displayed on the X axis. Under "Label", select the scale labeling of the intermediate values, the step size and the number of graduation lines.
 4. Under "Properties", expand the "Trend" group.
 5. In the "Name" column, click the "Add new" entry and specify the name for the trend. If needed, change the style of the trend (color, line, mode).
 6. In the "Trend values" column, specify the number of values. This number depends on how many array tags you have assigned for the "Trend buffers".
 7. In the "Trend type" column, select the "Bit-triggered real time" variant.
-8. Set in the column "Source settings > Data source" the tags for:
+8. Set in the column "Source settings &gt; Data source" the tags for:
 
    - Process values
    - Trend request
@@ -3151,7 +3150,7 @@ A screen is configured.
 The procedure is first the same as before for the configuration of a bit-triggered trend without switch buffer (steps 1-6).
 
 1. Select the variant "Bit-triggered buffer" in the "Trend type" column.
-2. Select in the column "Source settings > Data source" the tags for:
+2. Select in the column "Source settings &gt; Data source" the tags for:
 
    - Process values
    - Trend request
@@ -3184,12 +3183,12 @@ You can use the process control to display the incoming temperature values of a 
 
 1. Add the required process control to the screen from the "Tools" task card.
 2. Enter the label for the process control, for example "MotorTemperatureView", under "Properties" in the Inspector window.
-3. Go to "Properties > Process view > Columns > [0]" and configure the time column with the time ranges for the table.
+3. Go to "Properties &gt; Process view &gt; Columns &gt; [0]" and configure the time column with the time ranges for the table.
 4. Under "Sort order", define the order in which the columns of the process control are shown.
 5. Configure the "Time range" and "Format" of the time display in the time column, for example "Time span".
 6. Set the start time, the basis and the factor for the time range, for example 10 minutes.
 7. If the values in the time column are to be updated automatically, enable "Update".
-8. Go to "Properties > Process view > Columns > [1]" and configure the properties for the value column.
+8. Go to "Properties &gt; Process view &gt; Columns &gt; [1]" and configure the properties for the value column.
 9. Enter the name of the column, for example "Temperature".
 10. Configure the type "Online" for current values under "Data source" and enter the tag "MotorTemperature" under "Tag".
 11. Configure the display of content and the headers for the given value column.
@@ -3224,14 +3223,14 @@ The trend companion allows you to display statistical data, for example mean val
 #### Procedure
 
 1. Add the required trend companion to the screen from the "Toolbox" task card.
-2. Select the relevant control under "Properties > Data source" in the Inspector window to connect the trend companion to the selected control.
+2. Select the relevant control under "Properties &gt; Data source" in the Inspector window to connect the trend companion to the selected control.
 3. To display the trend companion below the selected control, select the option "Dock to data source".
 4. Select the "Trend companion mode" of the trend companion under "Properties", for example "Statistic result".
-5. Configure the appearance of the selected mode under "Properties > Statistic mode appearance":
+5. Configure the appearance of the selected mode under "Properties &gt; Statistic mode appearance":
 
    - Change the colors, row height and fonts in the trend companion if required.
-   - Configure the headers under "Properties > Statistic mode appearance > Header settings" if required.
-6. Configure the trend companion columns under "Properties > Statistic mode appearance > Columns":
+   - Configure the headers under "Properties &gt; Statistic mode appearance &gt; Header settings" if required.
+6. Configure the trend companion columns under "Properties &gt; Statistic mode appearance &gt; Columns":
 
    - Change the display, labels or order of columns if required.
 7. Configure the view of the trend companion in the Inspector window:
@@ -3247,7 +3246,7 @@ The "Print" button [3] is reserved for future versions
 
 If, for example, a user wants to export values from a row, they must select the row. You specify the selection range and colors for selection during configuration. You define the settings for selection for each display mode.
 
-1. In the Inspector window, go to "Properties > Trend ruler appearance" and select the "Selection mode" for the selection range, for example "Multiple elements".
+1. In the Inspector window, go to "Properties &gt; Trend ruler appearance" and select the "Selection mode" for the selection range, for example "Multiple elements".
 2. Select the color mode for selection, for example rows.
 3. If required, select the "Border color" and "Border width" to be displayed around the selection area.
 4. Choose the colors for selection as required.
@@ -3286,18 +3285,18 @@ You can operate the controls in runtime using the buttons in the toolbar. The in
 
 To configure the toolbar, follow these steps:
 
-1. In the Inspector window under "Properties > Miscellaneous > Toolbar", configure the general properties of the toolbar, such as background color or visibility.
-2. In the Inspector window, under "Properties > Properties > Miscellaneous > Toolbar > Elements > Button > Visibility", enable the buttons that you need in Runtime.
+1. In the Inspector window under "Properties &gt; Miscellaneous &gt; Toolbar", configure the general properties of the toolbar, such as background color or visibility.
+2. In the Inspector window, under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements &gt; Button &gt; Visibility", enable the buttons that you need in Runtime.
 3. Configure the button display, for example, background color, border and size.
-4. Under "Properties > Properties > Miscellaneous > Toolbar > Elements > Button > Authorization", select the authorization that is required in Runtime to operate the button.
+4. Under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements &gt; Button &gt; Authorization", select the authorization that is required in Runtime to operate the button.
 5. When a button is not operated in Runtime, disable "Allow operator control". You can reactivate a disabled a button by using a script in runtime, for example.
 
 #### Configuring the information bar
 
 To configure the information bar, follow these steps:
 
-1. In the Inspector window under "Properties > Properties > Miscellaneous > Information bar", configure the general properties of the information bar, such as background color or visibility.
-2. In the Inspector window under "Properties > Properties > Miscellaneous > Information bar > Elements > State display > Visibility", enable the elements that you need in Runtime.
+1. In the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar", configure the general properties of the information bar, such as background color or visibility.
+2. In the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar &gt; Elements &gt; State display &gt; Visibility", enable the elements that you need in Runtime.
 3. Configure the display of the respective element.
 4. Select the authorization that is required in Runtime to operate the element.
 5. When an element is not operated in Runtime, disable "Allow operator control". You can enable a disabled element again, for example, with a script in Runtime.
@@ -3311,7 +3310,7 @@ Using the data source, you define the sources from which the values are displaye
 - Current process values from tags
 - Archived values from logging tags
 
-To set up data supply for the controls over a tag, enter the name of the tag in the "Static value" column under "Data source > Tag".
+To set up data supply for the controls over a tag, enter the name of the tag in the "Static value" column under "Data source &gt; Tag".
 
 #### Requirement
 
@@ -3323,12 +3322,12 @@ To set up data supply for the controls over a tag, enter the name of the tag in 
 
 Proceed as follows to display current process values:
 
-1. Click "Properties > Process view > Columns" in the Inspector window to define the data source for a process control.
+1. Click "Properties &gt; Process view &gt; Columns" in the Inspector window to define the data source for a process control.
 
    The first column is always reserved for the time column. You enter the data source for value columns [1] to [N].
-2. Click "Properties > Trend areas > Trends" in the Inspector window to define the data source for a trend control.
+2. Click "Properties &gt; Trend areas &gt; Trends" in the Inspector window to define the data source for a trend control.
 
-   For the function trend control, click on "Properties > Function trend area > Function trends".
+   For the function trend control, click on "Properties &gt; Function trend area &gt; Function trends".
 3. Configure the "data source":
 
    - Select the entry "Online" as "Source type".
@@ -3346,12 +3345,12 @@ Proceed as follows to display current process values:
 
 Proceed as follows to display values from a log:
 
-1. Click "Properties > Process view > Columns" in the Inspector window to define the data source for a process control.
+1. Click "Properties &gt; Process view &gt; Columns" in the Inspector window to define the data source for a process control.
 
    The first column is always reserved for the time column. You enter the data source for value columns [1] to [N].
-2. Click "Properties > Trend areas > Trends" in the Inspector window to define the data source for a trend control.
+2. Click "Properties &gt; Trend areas &gt; Trends" in the Inspector window to define the data source for a trend control.
 
-   For the function trend control, click on "Properties > Function trend area > Function trends".
+   For the function trend control, click on "Properties &gt; Function trend area &gt; Function trends".
 3. Configure the "data source":
 
    - Select the entry "Logs" as "Source".

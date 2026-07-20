@@ -1036,7 +1036,7 @@ Sets the number of Encoder Data Sets (EDS).
 **Note:**
   
 When parameterizing the drive with "no encoder" there must be at least one encoder
-data set (p0140 >= 1).
+data set (p0140 &gt;= 1).
 
 ### p0141[0...n] Encoder interface (Sensor Module) component number
 
@@ -1491,7 +1491,7 @@ Assign a drive data set (= index) the corresponding encoder data set (EDS) for e
 The value corresponds to the number of the assigned encoder data set.  
 Example:  
 Encoder 1 in drive data set 2 should be assigned to encoder data set 0.  
---> p0187[2] = 0
+--&gt; p0187[2] = 0
 
 **Note:**
   
@@ -1522,7 +1522,7 @@ Assign a drive data set (= index) the corresponding encoder data set (EDS) for e
 The value corresponds to the number of the assigned encoder data set.  
 Example:  
 Encoder 2 in drive data set 2 should be assigned to encoder data set 1.  
---> p0188[2] = 1
+--&gt; p0188[2] = 1
 
 **Note:**
   
@@ -1666,7 +1666,7 @@ Synchronous motor separately excited
 
 **Notice:**
   
-If a catalog motor is selected (p0300 >= 100) and an associated motor code number
+If a catalog motor is selected (p0300 &gt;= 100) and an associated motor code number
 (p0301), then the parameters that are associated with this list cannot be changed
 (write protection). The write protection is canceled if the motor type p0300 is set
 to a non-Siemens motor that matches p0301 (e.g. p0300 = 2 for p0301 = 2xxxx). Write
@@ -1873,7 +1873,7 @@ r0313 = 2: 4-pole motor, etc.
 
 **Dependency:**
   
-For p0314 > 0, the entered value is displayed in r0313.  
+For p0314 &gt; 0, the entered value is displayed in r0313.  
 For p0314 = 0, the pole pair number (r0313) is automatically calculated from the rated
 power (p0307), rated frequency (p0310) and rated speed (p0311).  
   
@@ -1951,17 +1951,17 @@ After the value has been modified, no further parameter modifications can be mad
 and the status is shown in r3996. Modifications can be made again when r3996 = 0.  
 The following parameters are influenced using p0340:  
 p0340 = 1:  
---> All of the parameters influenced for p0340 = 2, 3, 4, 5  
---> p2000, p2001, p2002, p2003  
+--&gt; All of the parameters influenced for p0340 = 2, 3, 4, 5  
+--&gt; p2000, p2001, p2002, p2003  
 p0340 = 2:  
---> all of the parameters influenced for p0340 = 3, 4, 5  
+--&gt; all of the parameters influenced for p0340 = 3, 4, 5  
 p0340 = 3:  
---> All of the parameters influenced for p0340 = 4, 5  
---> p3440ff, p3530, p3531, p3560, p0492  
+--&gt; All of the parameters influenced for p0340 = 4, 5  
+--&gt; p3440ff, p3530, p3531, p3560, p0492  
 p0340 = 4:  
---> all of the parameters influenced for p0340 = 5  
+--&gt; all of the parameters influenced for p0340 = 5  
 p0340 = 5:  
---> p2140, p2150, p2161
+--&gt; p2140, p2150, p2161
 
 **Note:**
   
@@ -1970,7 +1970,7 @@ p0340 = 2 calculates the motor parameters.
 p0340 = 3 contains the calculations of p0340 = 4, 5.  
 p0340 = 4 only calculates the controller parameters.  
 p0340 = 5 only calculates the controller limits.  
-When quick commissioning is exited using p3900 > 0, p0340 is automatically set to
+When quick commissioning is exited using p3900 &gt; 0, p0340 is automatically set to
 1.  
 At the end of the calculations, p0340 is automatically set to 0.
 
@@ -2166,9 +2166,9 @@ Identify encoder (waiting)
 
 **Notice:**
   
-An encoder type with p0400 < 9999 defines an encoder for which there is an encoder
+An encoder type with p0400 &lt; 9999 defines an encoder for which there is an encoder
 parameter list.  
-When selecting a catalog encoder (p0400 < 9999) the parameters from the encoder parameter
+When selecting a catalog encoder (p0400 &lt; 9999) the parameters from the encoder parameter
 list cannot be changed (write protection). To remove write protection, the encoder
 type should be set to a third-party encoder (p0400 = 9999).
 
@@ -2384,7 +2384,7 @@ For square-wave encoders, p0404.3 must also be 1.
 | Bit | Signal name | 0 signal | 1 signal | Function diagram |
 | 00 | Signal | Unipolar | Bipolar | - |
 | 01 | Level | HTL | TTL | - |
-| 02 | Track monitoring | None | A/B <> -A/B | - |
+| 02 | Track monitoring | None | A/B &lt;&gt; -A/B | - |
 | 03 | Zero pulse | 24 V unipolar | Same as A/B track | - |
 | 04 | Switching threshold | Low | High | - |
 | 05 | Pulse/direction | Inactive | Active | - |
@@ -2626,9 +2626,9 @@ value depends on the pulse number (p0408) and the fine resolution (p0419).
 Sets a tolerance window for position tracking.  
 After the system is switched on, the difference between the saved position and the
 actual position is determined, and depending on this, the following is initiated:  
-Difference within the tolerance window --> The position is reproduced as a result
+Difference within the tolerance window --&gt; The position is reproduced as a result
 of the encoder actual value.  
-Difference outside the tolerance window --> An appropriate message is output.
+Difference outside the tolerance window --&gt; An appropriate message is output.
 
 **Dependency:**
   
@@ -3388,9 +3388,9 @@ consecutively.
 - the level set under c applies to all error bits.  
 Example:  
 p0434 = 1013  
---> The evaluation is switched in and the error bit is at position 13 with a low level.  
+--&gt; The evaluation is switched in and the error bit is at position 13 with a low level.  
 p0434 = 1113  
---> The evaluation is switched in and the error bit is at position 13 with a high
+--&gt; The evaluation is switched in and the error bit is at position 13 with a high
 level.
 
 ### p0435[0...n] Encoder SSI alarm bit
@@ -3432,9 +3432,9 @@ consecutively.
 - the level set under c applies to all error bits.  
 Example:  
 p0435 = 1014  
---> The evaluation is switched in and the alarm bit is at position 14 with a low level.  
+--&gt; The evaluation is switched in and the alarm bit is at position 14 with a low level.  
 p0435 = 1114  
---> The evaluation is switched in and the alarm bit is at position 14 with a high
+--&gt; The evaluation is switched in and the alarm bit is at position 14 with a high
 level.
 
 ### p0436[0...n] Encoder SSI parity bit
@@ -3471,9 +3471,9 @@ c: Parity (0: even, 1: uneven).
 d: State of the evaluation (0: Off, 1: On).  
 Example:  
 p0436 = 1015  
---> The evaluation is switched in and the parity bit is at position 15 with even parity.  
+--&gt; The evaluation is switched in and the parity bit is at position 15 with even parity.  
 p0436 = 1115  
---> The evaluation is switched in and the parity bit is at position 15 with uneven
+--&gt; The evaluation is switched in and the parity bit is at position 15 with uneven
 parity.
 
 ### p0437[0...n] Sensor Module configuration extended
@@ -4754,11 +4754,11 @@ p0441, p0442, p0443, p0444, p0445, r0460, r0461, r0462, r0463
 Displays the identification/serial number of encoder 1.  
 Index 0 = first character of the identification number  
 ...  
-Index x = 20 hex (blank) --> separation between the identification number of serial
+Index x = 20 hex (blank) --&gt; separation between the identification number of serial
 number  
-Index x + 1 = 2F hex (slash) --> separation between the identification number of serial
+Index x + 1 = 2F hex (slash) --&gt; separation between the identification number of serial
 number  
-Index x + 2 = 20 hex (blank) --> separation between the identification number of serial
+Index x + 2 = 20 hex (blank) --&gt; separation between the identification number of serial
 number  
 Index x + 3 = first character of the serial number  
 ...  
@@ -4801,11 +4801,11 @@ coded as ASCII characters.
 Displays the identification/serial number of encoder 2.  
 Index 0 = first character of the identification number  
 ...  
-Index x = 20 hex (blank) --> separation between the identification number of serial
+Index x = 20 hex (blank) --&gt; separation between the identification number of serial
 number  
-Index x + 1 = 2F hex (slash) --> separation between the identification number of serial
+Index x + 1 = 2F hex (slash) --&gt; separation between the identification number of serial
 number  
-Index x + 2 = 20 hex (blank) --> separation between the identification number of serial
+Index x + 2 = 20 hex (blank) --&gt; separation between the identification number of serial
 number  
 Index x + 3 = first character of the serial number  
 ...  
@@ -4848,11 +4848,11 @@ coded as ASCII characters.
 Displays the identification/serial number of encoder 3.  
 Index 0 = first character of the identification number  
 ...  
-Index x = 20 hex (blank) --> separation between the identification number of serial
+Index x = 20 hex (blank) --&gt; separation between the identification number of serial
 number  
-Index x + 1 = 2F hex (slash) --> separation between the identification number of serial
+Index x + 1 = 2F hex (slash) --&gt; separation between the identification number of serial
 number  
-Index x + 2 = 20 hex (blank) --> separation between the identification number of serial
+Index x + 2 = 20 hex (blank) --&gt; separation between the identification number of serial
 number  
 Index x + 3 = first character of the serial number  
 ...  
@@ -5396,11 +5396,11 @@ The minimum update time is 1 ms.
 Example 1: infeed, servo  
 Default bus cycle time = KGV(250 µs, 125 µs) = 250 µs  
 Minimum cycle time = 4 * MAX(250 µs, 125 µs) = 4 * 250 µs = 1 ms  
--> update time = 1 ms  
+-&gt; update time = 1 ms  
 Example 2: infeed, servo, vector  
 Default bus cycle time = KGV(250 µs, 125 µs, 400 µs) = 2 ms  
 Minimum cycle time = 4 * MAX(250 µs, 125 µs, 400 µs) = 4 * 400 µs = 1.6 ms  
--> update time = 2 ms
+-&gt; update time = 2 ms
 
 ### r0483[0...2] CO: Encoder actual position value Gn_XIST2
 
@@ -5989,7 +5989,7 @@ Refer to the encoder interface for PROFIdrive.
 The terminal must be set as input (p0728).  
 For p0493 = 0 (factory setting) the following applies:  
 - there is no logic operation between the reference mark search and an input signal.  
-For p0493 > 0, the following applies:  
+For p0493 &gt; 0, the following applies:  
 - the positive edge of the input signal is evaluated. If the negative edge is to be
 evaluated, signal inversion must be parameterized via p0490.  
 - if a parameter change is rejected, a check should be performed as to whether the
@@ -6132,7 +6132,7 @@ during an active measurement.
   
 For CX32, NX10 and NX15, only DI/DO 8, 9, 10, 11 can be selected as fast inputs (refer
 to the Equipment Manual).  
-For p0494 > 0, the setting in p0494 is effective and p0495 is invalid.  
+For p0494 &gt; 0, the setting in p0494 is effective and p0495 is invalid.  
 Regarding the terminal designation:  
 The first designation is valid for CU320-2, the second for CU310-2.
 
@@ -6141,11 +6141,11 @@ The first designation is valid for CU320-2, the second for CU310-2.
 Refer to the encoder interface for PROFIdrive.  
 The terminal must be set as input.  
 For p0495 = 0 (factory setting), the encoder zero mark is evaluated as zero mark.  
-For p0495 > 0, the following applies:  
+For p0495 &gt; 0, the following applies:  
 Depending on the direction of motion, the positive or negative edge at the appropriate
 input is evaluated.  
-- increasing position actual values (r0482) --> the 0/1 edge is evaluated.  
-- decreasing position actual values (r0482) --> the 1/0 edge is evaluated.  
+- increasing position actual values (r0482) --&gt; the 0/1 edge is evaluated.  
+- decreasing position actual values (r0482) --&gt; the 1/0 edge is evaluated.  
 Only one zero mark is supported. If function 2, 3 or 4 is selected, this results in
 a fault message in Gn_ZSW.  
 The inversion of the inputs via p0490 affects the function "referencing with equivalent
@@ -6286,51 +6286,51 @@ Not all combinations are supported.
 
 **Note:**
   
-For p0496 = 1: 360 ° <--> 2^32  
+For p0496 = 1: 360 ° &lt;--&gt; 2^32  
 For p0496 = 7, 8: input voltage in mV  
-For p0496 = 10 (resolver): 2900 mV <--> 26214 dec  
-For p0496 = 10, 20 (sin/cos 1 Vpp, EnDat): 500 mV <--> 21299 dec  
-For p0496 = 11 (resolver): 2900 mV <--> 13107 dec, internal processor offset is corrected  
-For p0496 = 11, 21 (sin/cos 1 Vpp, EnDat): 500 mV <--> 10650 dec, internal processor
+For p0496 = 10 (resolver): 2900 mV &lt;--&gt; 26214 dec  
+For p0496 = 10, 20 (sin/cos 1 Vpp, EnDat): 500 mV &lt;--&gt; 21299 dec  
+For p0496 = 11 (resolver): 2900 mV &lt;--&gt; 13107 dec, internal processor offset is corrected  
+For p0496 = 11, 21 (sin/cos 1 Vpp, EnDat): 500 mV &lt;--&gt; 10650 dec, internal processor
 offset is corrected  
-For p0496 = 12: 180 ° fine position <--> 32768 dec  
-For p0496 = 13 (resolver): 2900 mV <--> 13107 dec  
-For p0496 = 13 (sin/cos 1 Vpp, EnDat): 500 mV <--> 10650 dec  
-For p0496 = 14: 1 ° <--> 286 dec, 100 % <--> 16384 dec  
-For p0496 = 15: 100 % <--> 16384 dec  
-For p0496 = 16 (resolver): channel A: 2900 mV <--> 26214 dec, channel B: 2900 mV <-->
+For p0496 = 12: 180 ° fine position &lt;--&gt; 32768 dec  
+For p0496 = 13 (resolver): 2900 mV &lt;--&gt; 13107 dec  
+For p0496 = 13 (sin/cos 1 Vpp, EnDat): 500 mV &lt;--&gt; 10650 dec  
+For p0496 = 14: 1 ° &lt;--&gt; 286 dec, 100 % &lt;--&gt; 16384 dec  
+For p0496 = 15: 100 % &lt;--&gt; 16384 dec  
+For p0496 = 16 (resolver): channel A: 2900 mV &lt;--&gt; 26214 dec, channel B: 2900 mV &lt;--&gt;
 26214 dec, channel A and channel B can be shifted by one sample (in time)  
-For p0496 = 16: (sin/cos 1 Vpp, EnDat) channel A: 500 mV <--> 21299 dec, channel B:
-500 mV <--> 21299 dec, channel A and channel B can be shifted by one sample (in time)  
-For p0496 = 17 (resolver): absolute value: 2900 mV <--> 13107 dec, number: 1 ... 8  
-For p0496 = 17 (sin/cos 1 Vpp, EnDat): absolute value 500 mV <--> 10650 dec, number:
+For p0496 = 16: (sin/cos 1 Vpp, EnDat) channel A: 500 mV &lt;--&gt; 21299 dec, channel B:
+500 mV &lt;--&gt; 21299 dec, channel A and channel B can be shifted by one sample (in time)  
+For p0496 = 17 (resolver): absolute value: 2900 mV &lt;--&gt; 13107 dec, number: 1 ... 8  
+For p0496 = 17 (sin/cos 1 Vpp, EnDat): absolute value 500 mV &lt;--&gt; 10650 dec, number:
 1 ... 8  
-For p0496 = 18 (resolver): angle: signal period <--> 2^16, absolute value: 2900 mV
-<--> 13107 dec  
-For p0496 = 18 (sin/cos 1 Vpp, EnDat): angle: signal period <--> 2^16, absolute value:
-500 mV <--> 10650 dec  
-For p0496 = 19 (resolver): counter: dec, channel A: 2900 mV <--> 26214 dec  
-For p0496 = 19 (sin/cos 1 Vpp, EnDat): counter: dec, channel A: 500 mV <--> 21299
+For p0496 = 18 (resolver): angle: signal period &lt;--&gt; 2^16, absolute value: 2900 mV
+&lt;--&gt; 13107 dec  
+For p0496 = 18 (sin/cos 1 Vpp, EnDat): angle: signal period &lt;--&gt; 2^16, absolute value:
+500 mV &lt;--&gt; 10650 dec  
+For p0496 = 19 (resolver): counter: dec, channel A: 2900 mV &lt;--&gt; 26214 dec  
+For p0496 = 19 (sin/cos 1 Vpp, EnDat): counter: dec, channel A: 500 mV &lt;--&gt; 21299
 dec  
-For p0496 = 22: 180 ° <--> 32768 dec  
+For p0496 = 22: 180 ° &lt;--&gt; 32768 dec  
 For p0496 = 23, 24: r0497.31 (r0499.15) set for at least 1 current controller sampling
 time when encoder zero mark detected  
-For p0496 = 24, 25: 500 mV <--> 21299 dec  
-For p0496 = 30: Rotary: 1 singleturn measuring step <--> 1 dec, linear: 1 measuring
-step <--> 1 dec  
+For p0496 = 24, 25: 500 mV &lt;--&gt; 21299 dec  
+For p0496 = 30: Rotary: 1 singleturn measuring step &lt;--&gt; 1 dec, linear: 1 measuring
+step &lt;--&gt; 1 dec  
 For p0496 = 31: Absolute position, incremental in 1/4 encoder pulses  
 For p0496 = 32: Zero mark position in 1/4 encoder pulses  
 For p0496 = 33: counter offset absolute value in 1/4 encoder pulses  
-For p0496 = 40: r0498 <--> (R_KTY/1 kOhm - 0.9) * 32768  
-For p0496 = 42: 2500 Ohm <--> 2^32  
-For p0496 = 51: 1 rpm <--> 1000 dec  
+For p0496 = 40: r0498 &lt;--&gt; (R_KTY/1 kOhm - 0.9) * 32768  
+For p0496 = 42: 2500 Ohm &lt;--&gt; 2^32  
+For p0496 = 51: 1 rpm &lt;--&gt; 1000 dec  
 For p0496 = 52: In 1/4 encoder pulses  
 For p0496 = 60: voltage, channel A in mV, voltage, channel B in mV  
-For p0496 = 61: Channel A: encoder periods <--> 2^16, channel B: encoder periods <-->
+For p0496 = 61: Channel A: encoder periods &lt;--&gt; 2^16, channel B: encoder periods &lt;--&gt;
 2^16  
-For p0496 = 62: encoder periods <--> 2^16  
-For p0496 = 70: r: 100% <--> 10000 dec, phase: 180 ° <--> 18000 dec  
-For p0496 = 80, 81, 85, 86: 1V <--> 1000 inc
+For p0496 = 62: encoder periods &lt;--&gt; 2^16  
+For p0496 = 70: r: 100% &lt;--&gt; 10000 dec, phase: 180 ° &lt;--&gt; 18000 dec  
+For p0496 = 80, 81, 85, 86: 1V &lt;--&gt; 1000 inc
 
 ### r0497[0...2] CO: Encoder diagnostic signal double word
 
@@ -7231,7 +7231,7 @@ The model is still calculated but is not limited by the rotor temperature calcul
 from the rotor voltage formula.  
 The monitoring function is only carried out for separately excited synchronous motors
 (p0300 = 5).  
-The following applies to the setting: p0673 < p0674
+The following applies to the setting: p0673 &lt; p0674
 
 ### p0674[0...n] Rotor temperature model fault threshold value
 
@@ -7269,7 +7269,7 @@ The model is still calculated but is not limited by the rotor temperature calcul
 from the rotor voltage formula.  
 The monitoring function is only carried out for separately excited synchronous motors
 (p0300 = 5).  
-The following applies to the setting: p0673 < p0674
+The following applies to the setting: p0673 &lt; p0674
 
 ### p0675[0...n] CI: Motor intake temperature signal source
 
@@ -8533,14 +8533,14 @@ Sets the signal source for the external switching on inhibited.
 The transition from the "switching on inhibited" state to the "ready for switching
 on" state can be influenced using these signals.  
 The signal flow for the external switching on inhibited is as follows:  
-Signal x --> signal source --> state --> inversion --> AND logic operation  
-Signal 0 --> p0876[0] --> r0878.0 --> p0877[0] --> AND logic operation  
+Signal x --&gt; signal source --&gt; state --&gt; inversion --&gt; AND logic operation  
+Signal 0 --&gt; p0876[0] --&gt; r0878.0 --&gt; p0877[0] --&gt; AND logic operation  
 ...  
-Signal 9 --> p0876[9] --> r0878.9 --> p0877[9] --> AND logic operation  
+Signal 9 --&gt; p0876[9] --&gt; r0878.9 --&gt; p0877[9] --&gt; AND logic operation  
 The result of the AND logic operation is taken into account by the sequence control
 as an individual signal.  
-Result of the AND logic operation = 0 --> External switching on inhibited active  
-Result of the AND logic operation = 1 --> External switching on inhibited not active
+Result of the AND logic operation = 0 --&gt; External switching on inhibited active  
+Result of the AND logic operation = 1 --&gt; External switching on inhibited not active
 
 **Dependency:**
   
@@ -8852,19 +8852,19 @@ documentation.
 The buffer parameters are cyclically updated in the background (refer to status signal
 in r2139).  
 Fault buffer structure (general principle):  
-r0945[0], r0949[0], r0948[0], r2109[0], r3115[0] --> actual fault case, fault 1  
+r0945[0], r0949[0], r0948[0], r2109[0], r3115[0] --&gt; actual fault case, fault 1  
 . . .  
-r0945[7], r0949[7], r0948[7], r2109[7], r3115[7] --> actual fault case, fault 8  
-r0945[8], r0949[8], r0948[8], r2109[8], r3115[8] --> 1st acknowledged fault case,
+r0945[7], r0949[7], r0948[7], r2109[7], r3115[7] --&gt; actual fault case, fault 8  
+r0945[8], r0949[8], r0948[8], r2109[8], r3115[8] --&gt; 1st acknowledged fault case,
 fault 1  
 . . .  
-r0945[15], r0949[15], r0948[15], r2109[15], r3115[15] --> 1st acknowledged fault case,
+r0945[15], r0949[15], r0948[15], r2109[15], r3115[15] --&gt; 1st acknowledged fault case,
 fault 8  
 . . .  
-r0945[56], r0949[56], r0948[56], r2109[56], r3115[56] --> 7th acknowledged fault case,
+r0945[56], r0949[56], r0948[56], r2109[56], r3115[56] --&gt; 7th acknowledged fault case,
 fault 1  
 . . .  
-r0945[63], r0949[63], r0948[63], r2109[63], r3115[63] --> 7th acknowledged fault case,
+r0945[63], r0949[63], r0948[63], r2109[63], r3115[63] --&gt; 7th acknowledged fault case,
 fault 8
 
 ### r0947[0...63] Fault number
@@ -9164,18 +9164,18 @@ Firmware patch/hot fix
 **Note:**
   
 Example:  
-r0975[0] = 42 --> SIEMENS  
-r0975[1] = 11 --> SERVO drive object type  
-r0975[2] = 102 --> first part, firmware version V01.02 (second part, refer to index
+r0975[0] = 42 --&gt; SIEMENS  
+r0975[1] = 11 --&gt; SERVO drive object type  
+r0975[2] = 102 --&gt; first part, firmware version V01.02 (second part, refer to index
 10)  
-r0975[3] = 2003 --> year 2003  
-r0975[4] = 1401 --> 14th of January  
-r0975[5] = 1 --> PROFIdrive drive object, type class  
-r0975[6] = 9 --> PROFIdrive drive object sub-type class 1  
-r0975[7] = 2 --> drive object number = 2  
+r0975[3] = 2003 --&gt; year 2003  
+r0975[4] = 1401 --&gt; 14th of January  
+r0975[5] = 1 --&gt; PROFIdrive drive object, type class  
+r0975[6] = 9 --&gt; PROFIdrive drive object sub-type class 1  
+r0975[7] = 2 --&gt; drive object number = 2  
 r0975[8] = 0 (reserved)  
 r0975[9] = 0 (reserved)  
-r0975[10] = 600 --> second part, firmware version (complete version: V01.02.06.00)
+r0975[10] = 600 --&gt; second part, firmware version (complete version: V01.02.06.00)
 
 ### r0979[0...30] PROFIdrive encoder format
 
@@ -9931,7 +9931,7 @@ p2001, p2002, p2003, r2004
 
 **Note:**
   
-For the automatic calculation (p0340 = 1, p3900 > 0) an appropriate pre-assignment
+For the automatic calculation (p0340 = 1, p3900 &gt; 0) an appropriate pre-assignment
 is only made if the parameter is not inhibited from being overwritten using p0573
 = 1.  
 If a BICO interconnection is established between different physical quantities, then
@@ -9976,7 +9976,7 @@ as rms value, but as DC voltage value.
 
 **Note:**
   
-For the automatic calculation (p0340 = 1, p3900 > 0) an appropriate pre-assignment
+For the automatic calculation (p0340 = 1, p3900 &gt; 0) an appropriate pre-assignment
 is only made if the parameter is not inhibited from being overwritten using p0573
 = 1.  
 If a BICO interconnection is established between different physical quantities, then
@@ -10021,19 +10021,19 @@ Example:
 p2002 = 100 A  
 Reference quantity 100 A corresponds to 100 %  
 p0305[0] = 100 A  
-Rated motor current 100 A for MDS0 in DDS0 --> 100 % corresponds to 100 % of the rated
+Rated motor current 100 A for MDS0 in DDS0 --&gt; 100 % corresponds to 100 % of the rated
 motor current  
 p0305[1] = 50 A  
-Rated motor current 50 A for MDS1 in DDS1 --> 100 % corresponds to 200 % of the rated
+Rated motor current 50 A for MDS1 in DDS1 --&gt; 100 % corresponds to 200 % of the rated
 motor current
 
 **Note:**
   
-For the automatic calculation (p0340 = 1, p3900 > 0) an appropriate pre-assignment
+For the automatic calculation (p0340 = 1, p3900 &gt; 0) an appropriate pre-assignment
 is only made if the parameter is not inhibited from being overwritten using p0573
 = 1.  
 SERVO:  
-Pre-assigned value for p0338 > 0.001 is p0338, otherwise 2 * p0305.  
+Pre-assigned value for p0338 &gt; 0.001 is p0338, otherwise 2 * p0305.  
 VECTOR:  
 Pre-assigned value is p0640.  
 If a BICO interconnection is established between different physical quantities, then
@@ -10072,7 +10072,7 @@ word).
 
 **Note:**
   
-For the automatic calculation (p0340 = 1, p3900 > 0) an appropriate pre-assignment
+For the automatic calculation (p0340 = 1, p3900 &gt; 0) an appropriate pre-assignment
 is only made if the parameter is not inhibited from being overwritten using p0573
 = 1.  
 If a BICO interconnection is established between different physical quantities, then
@@ -10149,7 +10149,7 @@ word).
 
 **Note:**
   
-For the automatic calculation (p0340 = 1, p3900 > 0) an appropriate pre-assignment
+For the automatic calculation (p0340 = 1, p3900 &gt; 0) an appropriate pre-assignment
 is only made if the parameter is not inhibited from being overwritten using p0573
 = 1.  
 If a BICO interconnection is established between different physical quantities, then
@@ -10206,13 +10206,13 @@ word).
 
 **Note:**
   
-For the automatic calculation (p0340 = 1, p3900 > 0) an appropriate pre-assignment
+For the automatic calculation (p0340 = 1, p3900 &gt; 0) an appropriate pre-assignment
 is only made if the parameter is not inhibited from being overwritten using p0573
 = 1. If a BICO interconnection is established between different physical quantities,
 then the particular reference quantities are used as internal conversion factor.  
 The reference acceleration is calculated as follows:  
 Reference speed (p2000) converted from 1/min to 1/s divided by 1 s  
---> p2007 = p2000 [rpm] / (60 [s/min] * 1 [s])
+--&gt; p2007 = p2000 [rpm] / (60 [s/min] * 1 [s])
 
 ### r2032 Master control control word effective
 
@@ -11748,13 +11748,13 @@ p0922
 
 **Note:**
   
-For p0922 < 999 the following applies:  
+For p0922 &lt; 999 the following applies:  
 p2079 has the same value and is inhibited. All of the interconnections and extensions
 contained in the telegram are inhibited.  
 For p0922 = 999 the following applies:  
 p2079 can be freely set. If p2079 is also set to 999, then all of the interconnections
 can be set.  
-For p0922 = 999 and p2079 < 999 the following applies:  
+For p0922 = 999 and p2079 &lt; 999 the following applies:  
 The interconnections contained in the telegram are inhibited. However, the telegram
 can be extended.
 
@@ -13216,7 +13216,7 @@ effective after the message has gone.
 The message type can only be changed for messages with the appropriate identification
 (exception, value = 0).  
 Example:  
-F12345(A) --> Fault F12345 can be changed to alarm A12345.  
+F12345(A) --&gt; Fault F12345 can be changed to alarm A12345.  
 In this case, the message number that may be possibly entered in p2100[0...19] and
 p2126[0...19] is automatically removed.
 
@@ -13311,14 +13311,14 @@ documentation.
 The buffer parameters are cyclically updated in the background (refer to status signal
 in r2139).  
 Alarm buffer structure (general principle):  
-r2122[0], r2124[0], r2123[0], r2125[0] --> alarm 1 (the oldest)  
+r2122[0], r2124[0], r2123[0], r2125[0] --&gt; alarm 1 (the oldest)  
 . . .  
-r2122[7], r2124[7], r2123[7], r2125[7] --> Alarm 8 (the latest)  
+r2122[7], r2124[7], r2123[7], r2125[7] --&gt; Alarm 8 (the latest)  
 When the alarm buffer is full, the alarms that have gone are entered into the alarm
 history:  
-r2122[8], r2124[8], r2123[8], r2125[8] --> Alarm 1 (the latest)  
+r2122[8], r2124[8], r2123[8], r2125[8] --&gt; Alarm 1 (the latest)  
 . . .  
-r2122[63], r2124[63], r2123[63], r2125[63] --> alarm 56 (the oldest)
+r2122[63], r2124[63], r2123[63], r2125[63] --&gt; alarm 56 (the oldest)
 
 ### r2123[0...63] Alarm time received in milliseconds
 
@@ -13514,7 +13514,7 @@ effective after the fault has been resolved.
 The acknowledge mode can only be changed for faults with the appropriate identification.  
 Example:  
 F12345 and acknowledge mode = IMMEDIATELY (POWER ON)  
---> The acknowledge mode can be changed from IMMEDIATELY to POWER ON.
+--&gt; The acknowledge mode can be changed from IMMEDIATELY to POWER ON.
 
 ### p2128[0...15] Faults/alarms trigger selection
 
@@ -13598,8 +13598,8 @@ p2128
 
 **Note:**
   
-CO: r2129 = 0 --> None of the selected messages has occurred.  
-CO: r2129 > 0 --> At least one of the selected messages has occurred.
+CO: r2129 = 0 --&gt; None of the selected messages has occurred.  
+CO: r2129 &gt; 0 --&gt; At least one of the selected messages has occurred.
 
 ### r2130[0...63] Fault time received in days
 
@@ -13944,7 +13944,7 @@ SINAMICS functionality.
 
 **Description:**
   
-Sets the hysteresis speed (bandwidth) for the signal "|n_act| <= speed threshold value
+Sets the hysteresis speed (bandwidth) for the signal "|n_act| &lt;= speed threshold value
 2" (BO: r2197.1).
 
 **Dependency:**
@@ -14064,7 +14064,7 @@ A07903
 **Note:**
   
 For bit 06:  
-When the bit is set, with r2199.0 = 1 (n_act < p2161 speed threshold value 3), then
+When the bit is set, with r2199.0 = 1 (n_act &lt; p2161 speed threshold value 3), then
 fault F07822 is output.
 
 ### p2150[0...n] Hysteresis speed 3
@@ -14086,7 +14086,7 @@ fault F07822 is output.
 
 **Description:**
   
-Sets the hysteresis speed (bandwidth) for the signal "|n_act| < speed threshold value
+Sets the hysteresis speed (bandwidth) for the signal "|n_act| &lt; speed threshold value
 3" (BO: r2199.0).
 
 **Dependency:**
@@ -14143,7 +14143,7 @@ r2169
 
 **Description:**
   
-Sets the speed threshold value for the signal "|n_act| <= speed threshold value 2"
+Sets the speed threshold value for the signal "|n_act| &lt;= speed threshold value 2"
 (BO: r2197.1).
 
 **Dependency:**
@@ -14171,7 +14171,7 @@ p2140, r2197
 
 **Description:**
   
-Sets the speed threshold value for the signal "|n_act| < speed threshold value 3"
+Sets the speed threshold value for the signal "|n_act| &lt; speed threshold value 3"
 (BO: r2199.0).
 
 **Dependency:**
@@ -14233,7 +14233,7 @@ Display and BICO output for the first status word of the monitoring functions.
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | Bit | Signal name | 0 signal | 1 signal | Function diagram |
-| 01 | |n_act| <= speed threshold value 2 p2155 | No | Yes | 8020 |
+| 01 | |n_act| &lt;= speed threshold value 2 p2155 | No | Yes | 8020 |
 
 **Note:**
   
@@ -14289,7 +14289,7 @@ Display and BICO output for the third status word of the monitoring functions.
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | Bit | Signal name | 0 signal | 1 signal | Function diagram |
-| 00 | |n_act| < speed threshold value 3 | No | Yes | 8020 |
+| 00 | |n_act| &lt; speed threshold value 3 | No | Yes | 8020 |
 | 12 | Excitation current out of tolerance (only SESM) | No | Yes | 8020 |
 
 **Dependency:**
@@ -14714,9 +14714,9 @@ by 6 bits for multiturn information (maximum number of overflows) and cannot be 
 Sets a tolerance window for position tracking.  
 After the system is switched on, the difference between the saved position and the
 actual position is determined, and depending on this, the following is initiated:  
-Difference within the tolerance window --> The position is reproduced as a result
+Difference within the tolerance window --&gt; The position is reproduced as a result
 of the encoder actual value.  
-Difference outside the tolerance window --> An appropriate message is output.
+Difference outside the tolerance window --&gt; An appropriate message is output.
 
 **Dependency:**
   
@@ -15180,43 +15180,43 @@ The buffer parameters are cyclically updated in the background (refer to status 
 in r2139).  
 The structure of the fault buffer and the assignment of the indices is shown in r0945.  
 For bits 20 ... 16:  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --&gt; PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --&gt; PROFIdrive message class 1: hardware fault/software
 error  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --&gt; PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --&gt; PROFIdrive message class 3: supply voltage
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --&gt; PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --&gt; PROFIdrive message class 5: power electronics
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --&gt; PROFIdrive message class 6: overtemperature
 electronic components  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --&gt; PROFIdrive message class 7: ground fault/phase
 fault detected  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --&gt; PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --&gt; PROFIdrive message class 9: communication
 error to the higher-level control  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --&gt; PROFIdrive message class 10: safe monitoring
 channel has identified an error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --&gt; PROFIdrive message class 11: incorrect
 position actual value/speed actual value or not available  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 12: internal
 (DRIVE-CLiQ) communication error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --&gt; PROFIdrive message class 13: infeed unit
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --&gt; PROFIdrive message class 14: braking controller/Braking
 Module faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --&gt; PROFIdrive message class 15: line filter
 faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --&gt; PROFIdrive message class 16: external
 measured value/signal state outside the permissible range  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --&gt; PROFIdrive message class 17: application/technology
 function faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --&gt; PROFIdrive message class 18: error in
 the parameterization/configuration/commissioning sequence  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --&gt; PROFIdrive message class 19: general drive
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 20: auxiliary
 unit faulted
 
 ### r3123[0...63] Diagnostic attribute alarm
@@ -15273,43 +15273,43 @@ These status bits are used for the classification of internal alarm classes and 
 intended for diagnostic purposes only on certain automation systems with integrated
 SINAMICS functionality.  
 For bits 20 ... 16:  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --&gt; PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --&gt; PROFIdrive message class 1: hardware fault/software
 error  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --&gt; PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --&gt; PROFIdrive message class 3: supply voltage
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --&gt; PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --&gt; PROFIdrive message class 5: power electronics
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --&gt; PROFIdrive message class 6: overtemperature
 electronic components  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --&gt; PROFIdrive message class 7: ground fault/phase
 fault detected  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --&gt; PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --&gt; PROFIdrive message class 9: communication
 error to the higher-level control  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --&gt; PROFIdrive message class 10: safe monitoring
 channel has identified an error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --&gt; PROFIdrive message class 11: incorrect
 position actual value/speed actual value or not available  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 12: internal
 (DRIVE-CLiQ) communication error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --&gt; PROFIdrive message class 13: infeed unit
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --&gt; PROFIdrive message class 14: braking controller/Braking
 Module faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --&gt; PROFIdrive message class 15: line filter
 faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --&gt; PROFIdrive message class 16: external
 measured value/signal state outside the permissible range  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --&gt; PROFIdrive message class 17: application/technology
 function faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --&gt; PROFIdrive message class 18: error in
 the parameterization/configuration/commissioning sequence  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --&gt; PROFIdrive message class 19: general drive
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 20: auxiliary
 unit faulted
 
 ### r3131 CO: Actual fault value
@@ -15758,7 +15758,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the excitation current values:  
-p3440 < p3441 < p3442 < p3443 < p3444  
+p3440 &lt; p3441 &lt; p3442 &lt; p3443 &lt; p3444  
   
 Refer to:
 p3439, p3445
@@ -15799,7 +15799,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the excitation current values:  
-p3440 < p3441 < p3442 < p3443 < p3444  
+p3440 &lt; p3441 &lt; p3442 &lt; p3443 &lt; p3444  
   
 Refer to:
 p3439, p3446
@@ -15833,7 +15833,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the excitation current values:  
-p3440 < p3441 < p3442 < p3443 < p3444  
+p3440 &lt; p3441 &lt; p3442 &lt; p3443 &lt; p3444  
   
 Refer to:
 p3439, p3447
@@ -15867,7 +15867,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the excitation current values:  
-p3440 < p3441 < p3442 < p3443 < p3444  
+p3440 &lt; p3441 &lt; p3442 &lt; p3443 &lt; p3444  
   
 Refer to:
 p3439, p3448
@@ -15906,7 +15906,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the excitation current values:  
-p3440 < p3441 < p3442 < p3443 < p3444  
+p3440 &lt; p3441 &lt; p3442 &lt; p3443 &lt; p3444  
   
 Refer to:
 p3439, p3449
@@ -15938,7 +15938,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the power values:  
-p3445 < p3446 < p3447 < p3448 < p3449  
+p3445 &lt; p3446 &lt; p3447 &lt; p3448 &lt; p3449  
   
 Refer to:
 p0307, p3440
@@ -15974,7 +15974,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the power values:  
-p3445 < p3446 < p3447 < p3448 < p3449  
+p3445 &lt; p3446 &lt; p3447 &lt; p3448 &lt; p3449  
   
 Refer to:
 p0307, p3441
@@ -16006,7 +16006,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the power values:  
-p3445 < p3446 < p3447 < p3448 < p3449  
+p3445 &lt; p3446 &lt; p3447 &lt; p3448 &lt; p3449  
   
 Refer to:
 p0307, p3442
@@ -16038,7 +16038,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the power values:  
-p3445 < p3446 < p3447 < p3448 < p3449  
+p3445 &lt; p3446 &lt; p3447 &lt; p3448 &lt; p3449  
   
 Refer to:
 p0307, p3443
@@ -16074,7 +16074,7 @@ the excitation current and power.
 **Dependency:**
   
 The following applies to the power values:  
-p3445 < p3446 < p3447 < p3448 < p3449  
+p3445 &lt; p3446 &lt; p3447 &lt; p3448 &lt; p3449  
   
 Refer to:
 p0307, p3444
@@ -16898,7 +16898,7 @@ p0970, p3900
 Displays whether writing to parameters is inhibited.  
 r3996[0] = 0:  
 Parameter write not inhibited.  
-0 < r3996[0] < 100:  
+0 &lt; r3996[0] &lt; 100:  
 Parameter write inhibited. The value shows how the calculations are progressing.
 
 **Index:**
@@ -18249,7 +18249,7 @@ p0425, p0437
 **Note:**
   
 The minimum length of the zero mark must be less than the zero mark distance (p4686
-< p0425).  
+&lt; p0425).  
 The parameter is activated using p0437.1 = 1 (zero mark edge detection).
 
 ### p4688[0...2] CO: Zero mark monitoring differential pulse count
@@ -18860,7 +18860,7 @@ r4950, r4951, r4952, p4956, r4957, r4958, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -18905,7 +18905,7 @@ r4950, r4951, r4952, r4955, r4957, r4958, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -18943,7 +18943,7 @@ r4950, r4951, r4952, r4955, p4956, r4958, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -18983,7 +18983,7 @@ r4950, r4951, r4952, r4955, p4956, r4957, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -19027,7 +19027,7 @@ r4950, r4951, r4952, r4955, p4956, r4957, r4958, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -19070,7 +19070,7 @@ r4950, r4951, r4952, r4955, p4956, r4957, r4958, r4959
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -21060,7 +21060,7 @@ The feedback signal within the time in p6675 must indicate that the switch has r
 opened (i.e. bounce can no longer be detected). The monitoring time in p6675 must
 be set greater than the time in p6676 as it additionally takes into account the bounce
 time of the feedback signal.  
-The following applies: p6675 > p6676
+The following applies: p6675 &gt; p6676
 
 **Index:**
   
@@ -21119,7 +21119,7 @@ Sets the maximum permissible opening time of the switch.
 The feedback signal must indicate for the first time that the switch has opened within
 the time in p6676. The feedback signal must be stable within the time in p6675 (i.e.
 bounce can no longer be detected).  
-The following applies: p6675 > p6676
+The following applies: p6675 &gt; p6676
 
 **Index:**
   
@@ -22564,10 +22564,10 @@ Recording with the factor, which extends the record time p6999[1] and the pre-tr
 time p6999[2] 2^n times, and reduces the number of signals 2^n times.  
 Example:  
 p6999[1] = 2000, p6999[2] = 1000, p6999[4] = 4  
---> recording time: 2000 ms * 2^4 = 32 s, pre-trigger time:1000 ms * 2^4 = 16 s, number
+--&gt; recording time: 2000 ms * 2^4 = 32 s, pre-trigger time:1000 ms * 2^4 = 16 s, number
 of signals 128/16 = 8  
 When setting p6999[4] to 0, the results are as follows:  
---> recording time: 2000 ms, pre-trigger time: 1000 ms, number of signals: 128  
+--&gt; recording time: 2000 ms, pre-trigger time: 1000 ms, number of signals: 128  
 The maximum number of signals depends on the drive object.  
 For index [5]:  
 Sets the pretrigger time [ms] of the external trigger. This time is included in the
@@ -22587,7 +22587,7 @@ is deactivated, and a hardware fault means that the recorder is no longer trigge
 For index [8]:  
 Sets the factor for the recording sampling time.  
 Example:  
-p6999[8] = 2 --> sampling time to record/trace signals is 2 x current controller sampling
+p6999[8] = 2 --&gt; sampling time to record/trace signals is 2 x current controller sampling
 time  
 After a power on, this parameter has the same value as before the change.
 
@@ -22646,9 +22646,9 @@ The parameter is reset to 0 at POWER ON.
   
 Ring buffer for faults and alarms that have occurred from power units connected in
 parallel (Motor Module, Active Line Infeed, Voltage Sensing Module).  
-p7101 < 100:  
+p7101 &lt; 100:  
 Displays the Power unit Data Set number (PDS).  
-p7101 >= 100:  
+p7101 &gt;= 100:  
 Displays the Voltage Sensing Module Data Set number (VSMDS)
 
 **Dependency:**
@@ -29296,9 +29296,9 @@ is assigned to controller 2.
 Displays the parameters that were not able to be transferred when reading the parameter
 back-up files (PS files) from the non-volatile memory (e.g. memory card).  
 r9406[0] = 0  
---> All of the parameter values were able to be transferred error-free.  
-r9406[0...x] > 0  
---> indicates the parameter number in the following cases:  
+--&gt; All of the parameter values were able to be transferred error-free.  
+r9406[0...x] &gt; 0  
+--&gt; indicates the parameter number in the following cases:  
 - parameter, whose value was not able to be completely accepted.  
 - indexed parameter, where at least 1 index was not able to be accepted. The first
 index that is not transferred is displayed in r9407.
@@ -29342,9 +29342,9 @@ If, from an indexed parameter, at least one index was not able to be transferred
 then the parameter number is displayed in r9406[n] and the first index that was not
 transferred is displayed in r9407[n].  
 r9406[0] = 0  
---> All of the parameter values were able to be transferred error-free.  
-r9406[n] > 0  
---> Displays r9407[n] the first index of the parameter number r9406[n] that was not
+--&gt; All of the parameter values were able to be transferred error-free.  
+r9406[n] &gt; 0  
+--&gt; Displays r9407[n] the first index of the parameter number r9406[n] that was not
 transferred.
 
 **Dependency:**
@@ -33749,14 +33749,14 @@ the calculated value is then present.
   
 For value = 1 ... 256:  
 This value can only be set if, for sampling time T_sample of this runtime group, the
-following applies: 1 ms <= T_sample <= r20003. At download, a value that violates
+following applies: 1 ms &lt;= T_sample &lt;= r20003. At download, a value that violates
 this condition is not rejected, but a permissible equivalent value is set automatically
 and fault F50518 is output.  
 If value = 9003:  
 The fixed runtime groups p20000[x] = 9003 log on with the sampling time of the setpoint
 channel, although the sampling time must be at least 1 ms. If, as a result of this
 limit, the actual sampling time deviates from the sampling time of the setpoint channel
-p0115[3], alarm A20103 is output. Another runtime group with a sampling time >= 1
+p0115[3], alarm A20103 is output. Another runtime group with a sampling time &gt;= 1
 ms should be selected. "Calculate before setpoint channel" means before function diagrams
 3010, 3020, 3030, 3040, etc. are calculated, if the setpoint channel is activated
 (p0108.8 = 1). If, e.g. for SERVO, a setpoint channel has not been configured (p0108.8
@@ -33919,7 +33919,7 @@ Runtime group 9
 
 **Note:**
   
-The runtime group to be measured has to be logged on (p20000[x] > 0).  
+The runtime group to be measured has to be logged on (p20000[x] &gt; 0).  
 The value for the computation time load is calculated in the drive unit using the
 project loaded. As such, the r20005[x] values are not available in the expert list
 in SCOUT/STARTER offline mode.
@@ -33945,7 +33945,7 @@ in SCOUT/STARTER offline mode.
   
 Displays the assignment of the available hardware sampling times of the drive unit.  
 The term "hardware sampling times" refers to those r20002 sampling times that are
-formed as a multiple of the basic sampling time and always < r20003.
+formed as a multiple of the basic sampling time and always &lt; r20003.
 
 **Dependency:**
   
@@ -33961,7 +33961,7 @@ Therefore, the current number of hardware sampling times that are still free can
 read out in r7903.  
 If r7903=0, no additional sampling time that differs from r20008[0...12] can be provided
 from the Control Unit. If, when selecting in this state, a runtime group with a sampling
-time < r20003 (p20000 <= 255) is to be set in p20000, only runtime groups whose sampling
+time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000, only runtime groups whose sampling
 time is already provided in r20008[0...12] can be selected.
 
 **Note:**
@@ -33976,8 +33976,8 @@ It should be noted that the basic system, depending on the selected basic sampli
 times p0115[0], requires at least two (sometimes several) freely assignable hardware
 sampling times for internal functions. The number of hardware sampling times that
 can still be freely assigned can be read out in r7903.  
-r20008[11] = 99999.00000 --> Hardware sampling time is not supported.  
-r20008[12] = 99999.00000 --> Hardware sampling time is not supported.  
+r20008[11] = 99999.00000 --&gt; Hardware sampling time is not supported.  
+r20008[12] = 99999.00000 --&gt; Hardware sampling time is not supported.  
 The sampling time of runtime groups that have been assigned to the PROFIBUS runtime
 groups (p20000 = 4000 ... 4004) is not displayed in r20008. For this sampling time,
 one of the internally and permanently assigned hardware sampling times is used.
@@ -34242,7 +34242,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 0 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 0 of the
 AND function block.
 
 ### p20032 AND 0 runtime group
@@ -34375,7 +34375,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 1 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 1 of the
 AND function block.
 
 ### p20036 AND 1 runtime group
@@ -34508,7 +34508,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 2 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 2 of the
 AND function block.
 
 ### p20040 AND 2 runtime group
@@ -34641,7 +34641,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 3 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 3 of the
 AND function block.
 
 ### p20044 AND 3 runtime group
@@ -37109,7 +37109,7 @@ Div remainder MOD
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 0 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### p20121 DIV 0 runtime group
 
@@ -37270,7 +37270,7 @@ Div remainder MOD
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 1 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### p20126 DIV 1 runtime group
 
@@ -37411,7 +37411,7 @@ with sign evaluation.
   
 Display parameter for signal SN that the input quantity X of instance AVA 0 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### p20131 AVA 0 runtime group
 
@@ -37552,7 +37552,7 @@ with sign evaluation.
   
 Display parameter for signal SN that the input quantity X of instance AVA 1 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### p20136 AVA 1 runtime group
 
@@ -40336,7 +40336,7 @@ Display parameter for the limited output quantity Y of instance LIM 0 of the lim
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20233 BO: LIM 0 input quantity at the lower limit QL
 
@@ -40358,7 +40358,7 @@ Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### p20234 LIM 0 runtime group
 
@@ -40538,7 +40538,7 @@ Display parameter for the limited output quantity Y of instance LIM 1 of the lim
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20241 BO: LIM 1 input quantity at the lower limit QL
 
@@ -40560,7 +40560,7 @@ Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### p20242 LIM 1 runtime group
 
@@ -41114,7 +41114,7 @@ integrator.
 **Description:**
   
 Display parameter for output quantity Y of instance INT 0 of the integrator.  
-If LL>= LU, then the output quantity Y = LU.
+If LL&gt;= LU, then the output quantity Y = LU.
 
 ### r20262 BO: INT 0 integrator at the upper limit QU
 
@@ -41339,7 +41339,7 @@ Setting parameter for hysteresis HY of instance LVM 0 of the double-sided limite
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20271 BO: LVM 0 input quantity within interval QM
 
@@ -41383,7 +41383,7 @@ X lies within the interval.
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### p20273 LVM 0 runtime group
 
@@ -41564,7 +41564,7 @@ Setting parameter for hysteresis HY of instance LVM 1 of the double-sided limite
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20280 BO: LVM 1 input quantity within interval QM
 
@@ -41608,7 +41608,7 @@ X lies within the interval.
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### p20282 LVM 1 runtime group
 
@@ -41843,7 +41843,7 @@ blocks with a higher run sequence value.
 **Description:**
   
 Allocates properties to runtime groups 1 to 10.  
-This property comprises the sampling time and, for p21000[x] >= 2000, the instant
+This property comprises the sampling time and, for p21000[x] &gt;= 2000, the instant
 of the call within the sampling time.  
 The index x + 1 of p21000 corresponds to the number of the runtime group:  
 - p21000[0] is used to set the property of the runtime group 1  
@@ -42476,15 +42476,15 @@ could result in discontinuous signal transitions.
 For value = 1 ... 256 (free runtime group):  
 This selection value can only be selected online if the following applies for sampling
 time T_sample of this runtime group:  
-1 ms <= T_sample < r21003.  
+1 ms &lt;= T_sample &lt; r21003.  
 At download, a value that violates this condition is not rejected, but a permissible
 equivalent value is set automatically and fault F51004 is output.  
-For value > 2000 (fixed runtime group):  
-The fixed runtime groups p21000[x] >= 2000 log on with the sampling time of the associated
+For value &gt; 2000 (fixed runtime group):  
+The fixed runtime groups p21000[x] &gt;= 2000 log on with the sampling time of the associated
 basic system function, subject to a minimum sampling time of 1 ms. If, as a result
 of this limit, the actual sampling time deviates from the sampling time of the basic
 system function, then fault F51005 (during F51006 download) is output. In this case,
-another runtime group with a sampling time >= 1 ms should be selected. When selecting
+another runtime group with a sampling time &gt;= 1 ms should be selected. When selecting
 the fixed runtime groups, a check is not made as to whether the associated system
 block exists.  
 Example:  
@@ -42661,7 +42661,7 @@ Runtime group 10
 **Note:**
   
 The computing time load can only be displayed for the runtime groups which are logged
-on (p21000[x] > 0). The value for the computing time load is calculated in the drive
+on (p21000[x] &gt; 0). The value for the computing time load is calculated in the drive
 unit based on the project loaded plus DCC chart. Therefore, the values r21005[x] are
 not available in the offline mode of the SCOUT/STARTER.  
   
@@ -42703,7 +42703,7 @@ SINAMICS Parameter VECTORDM 21008 - 21046
   
 Displays the assignment of the available hardware sampling times of the drive unit.  
 The designated sampling times are those created as a multiple of the hardware basis
-sampling time (r21002) and which are always < r21003.
+sampling time (r21002) and which are always &lt; r21003.
 
 **Index:**
   
@@ -42818,7 +42818,7 @@ times. Therefore the current number of free hardware sampling times can be read 
 in r7903.  
 If r7903=0, no additional sampling time different from r21008[0...31] may be provided
 from the Control Unit. When selecting in this state, if a runtime group with a sampling
-time < r21003 (p21000 <= 255) is selected in p21000, only runtime groups whose sampling
+time &lt; r21003 (p21000 &lt;= 255) is selected in p21000, only runtime groups whose sampling
 time is already provided in r21008[0...31] may be selected.
 
 **Note:**

@@ -235,7 +235,7 @@ This section contains information on the following topics:
 - [Function view](#function-view)
 - [Parameter view](#parameter-view)
 - [Inspector window](#inspector-window)
-- [Rotate & optimize screen forms](#rotate-optimize-screen-forms)
+- [Rotate &amp; optimize screen forms](#rotate-optimize-screen-forms)
 - [Icons for arithmetic and controller functions](#icons-for-arithmetic-and-controller-functions)
 
 ### Hardware catalog
@@ -416,7 +416,7 @@ The network view is one of three working areas of the hardware and network edito
 
 ##### Structure
 
-The network view is opened via the "Devices & networks" entry in the project navigation.
+The network view is opened via the "Devices &amp; networks" entry in the project navigation.
 
 ![Network view](images/148040158347_DV_resource.Stream@PNG-en-US.png)
 
@@ -545,7 +545,7 @@ The dialog has the following structure:
 | Universal (vector) | All axes are operated universally. |
 | High dynamic (servo) | All axes are operated high dynamic. |
 | Can be selected | The drive object type can be individually adapted for each motor control. |
-| Parallel connection view | Enables/disables parallel connection view.   In the parallel connection view, only the parallel connection-capable components are displayed. These can be connected in parallel with components of the same type using drag & drop or using the shortcut menu. |
+| Parallel connection view | Enables/disables parallel connection view.   In the parallel connection view, only the parallel connection-capable components are displayed. These can be connected in parallel with components of the same type using drag &amp; drop or using the shortcut menu. |
 | **Columns** | **Explanation** |
 | Module | Drive object (DO) with automatically assigned components. |
 | Drive object type | Control type of the DO |
@@ -622,7 +622,7 @@ The "Parameter view" (expert list) provides a clearly organized display of the p
 
 > **Note**
 >
-> The "Parameter view" is not available for "Rotate & optimize" and "Diagnostics".
+> The "Parameter view" is not available for "Rotate &amp; optimize" and "Diagnostics".
 
 > **Note**
 >
@@ -841,16 +841,16 @@ Icons for arithmetic and controller functions, not used in a standard Windows op
 
 | Icon | Explanation | Icon | Explanation |
 | --- | --- | --- | --- |
-| ![Figure](images/147853723915_DV_resource.Stream@PNG-en-US.png) | **NOT element**   Logical inversion (negation) | ![Figure](images/147992604683_DV_resource.Stream@PNG-en-US.png) | **Threshold switch 1/0**   Outputs a logical "1" at output y if x < S. |
-| ![Figure](images/147992608779_DV_resource.Stream@PNG-en-US.png) | **AND element**   With logical subdivision of an input | ![Figure](images/147992612747_DV_resource.Stream@PNG-en-US.png) | **Threshold switch 0/1**   Outputs a logical "1" at output y if x > S. |
-| ![Figure](images/147992616843_DV_resource.Stream@PNG-en-US.png) | **R/S flip-flop**   S/R = Set input/Reset input   Q = Non-inverted output   Q = Inverted output  In the case of a simultaneous 1 signal at the R input and S input, the S input is dominant. | ![Figure](images/147992620811_DV_resource.Stream@PNG-en-US.png) | **Threshold switch 1/0 with hysteresis**   Outputs a logical "1" at output y if x < S. If x >= S + H, y returns to 0. |
-| ![Figure](images/147992637707_DV_resource.Stream@PNG-en-US.png) | **Exclusive OR/XOR**   y = 1 if x1 = x2. | ![Figure](images/147992641675_DV_resource.Stream@PNG-en-US.png) | **Threshold switch 0/1 with hysteresis**   Outputs a logical "1" at output y if x > S. If x <= S - H, y returns to 0. |
+| ![Figure](images/147853723915_DV_resource.Stream@PNG-en-US.png) | **NOT element**   Logical inversion (negation) | ![Figure](images/147992604683_DV_resource.Stream@PNG-en-US.png) | **Threshold switch 1/0**   Outputs a logical "1" at output y if x &lt; S. |
+| ![Figure](images/147992608779_DV_resource.Stream@PNG-en-US.png) | **AND element**   With logical subdivision of an input | ![Figure](images/147992612747_DV_resource.Stream@PNG-en-US.png) | **Threshold switch 0/1**   Outputs a logical "1" at output y if x &gt; S. |
+| ![Figure](images/147992616843_DV_resource.Stream@PNG-en-US.png) | **R/S flip-flop**   S/R = Set input/Reset input   Q = Non-inverted output   Q = Inverted output  In the case of a simultaneous 1 signal at the R input and S input, the S input is dominant. | ![Figure](images/147992620811_DV_resource.Stream@PNG-en-US.png) | **Threshold switch 1/0 with hysteresis**   Outputs a logical "1" at output y if x &lt; S. If x &gt;= S + H, y returns to 0. |
+| ![Figure](images/147992637707_DV_resource.Stream@PNG-en-US.png) | **Exclusive OR/XOR**   y = 1 if x1 = x2. | ![Figure](images/147992641675_DV_resource.Stream@PNG-en-US.png) | **Threshold switch 0/1 with hysteresis**   Outputs a logical "1" at output y if x &gt; S. If x &lt;= S - H, y returns to 0. |
 | ![Figure](images/147992645771_DV_resource.Stream@PNG-en-US.png) | **Comparator**   y = 1 if x1 = x2. | ![Figure](images/147992662667_DV_resource.Stream@PNG-en-US.png) | **Limiter**   x is limited to the upper limit value LU and the lower limit value LL and is output at output y.   The binary signals MLU and MLL have the value "1" if upper or lower limiting is active. |
-| ![Figure](images/147992666763_DV_resource.Stream@PNG-en-US.png) | **Sign reversal**   y = -x | ![Figure](images/147992670731_DV_resource.Stream@PNG-en-US.png) | **Sample & hold element**   Sample and hold element. y = x if SET = 1  (no retentive memory during POWER OFF) |
+| ![Figure](images/147992666763_DV_resource.Stream@PNG-en-US.png) | **Sign reversal**   y = -x | ![Figure](images/147992670731_DV_resource.Stream@PNG-en-US.png) | **Sample &amp; hold element**   Sample and hold element. y = x if SET = 1  (no retentive memory during POWER OFF) |
 | ![Figure](images/147853746827_DV_resource.Stream@PNG-en-US.png) | **Absolute-value generator**   y = |x| | ![Figure](images/147992687627_DV_resource.Stream@PNG-en-US.png) | **Monitoring**   Positioning in sheet at bottom right. |
 | ![Figure](images/147992691723_DV_resource.Stream@PNG-en-US.png) | **Divider**   Y = X<sub>1</sub>/X<sub>2</sub> | ![Figure](images/147992695691_DV_resource.Stream@PNG-en-US.png) | **Simple change-over switch**   The switch position as per the factory setting of --- is displayed (in this case, switch position 1). |
 | ![Figure](images/147992712459_DV_resource.Stream@PNG-en-US.png) | **Multiplier**   y = x1 · x2 |  |  |
-| ![Figure](images/147992716427_DV_resource.Stream@PNG-en-US.png) | **Comparator greater than 0**   y = 1 if analog signal x > 0, i.e. if it is positive. |  |  |
+| ![Figure](images/147992716427_DV_resource.Stream@PNG-en-US.png) | **Comparator greater than 0**   y = 1 if analog signal x &gt; 0, i.e. if it is positive. |  |  |
 | ![Figure](images/147992720523_DV_resource.Stream@PNG-en-US.png) | **Differentiator**   Y = dx/dt |  |  |
 
 ## Fundamentals
@@ -901,7 +901,7 @@ The complete project must be saved in order that the settings made are permanent
 1. Click "Save project" in the toolbar.
 
    - Or -
-2. Select the "Project > Save" or "Project > Save as" menu.
+2. Select the "Project &gt; Save" or "Project &gt; Save as" menu.
 
 #### Saving online data in non-volatile storage
 
@@ -1080,7 +1080,7 @@ Benefits of a TypeIdentifier:
 
 #### Activating the display of the TypeIdentifier in Startdrive
 
-1. In the Startdrive project view, select menu "Options > Settings".
+1. In the Startdrive project view, select menu "Options &gt; Settings".
 
    The "Settings" configuration area opens.
 2. In the secondary navigation, select entry "Hardware configuration".
@@ -1164,14 +1164,14 @@ Different firmware versions frequently occur in the following cases:
    - Double-click "Update accessible devices".
 
      The accessible device is displayed with the IP address in the project tree.
-   - In the project tree call the "Online & diagnostics" function for the displayed device.
+   - In the project tree call the "Online &amp; diagnostics" function for the displayed device.
 
      ![Firmware version of the hardware; example S120](images/147998327947_DV_resource.Stream@PNG-en-US.PNG)
 
      Firmware version of the hardware; example S120
 2. Check the firmware version in the catalog information of the Control Unit in your current Startdrive project.
 
-   - To do so, call the following menu: "Control Unit > Inspector window > General > Catalog information".
+   - To do so, call the following menu: "Control Unit &gt; Inspector window &gt; General &gt; Catalog information".
 
      ![Firmware version of the software; example S120](images/147998344715_DV_resource.Stream@PNG-en-US.PNG)
 
@@ -1265,7 +1265,7 @@ Use the standard search function of the TIA Portal for the specific search of pa
 
 The standard search is displayed in the "Tasks" viewlet in the right-hand editor of the program user interface.
 
-1. To skip the search dialog, enter <Ctrl+F> via the keyboard with activated parameter view.
+1. To skip the search dialog, enter &lt;Ctrl+F&gt; via the keyboard with activated parameter view.
 
    ![Searching for parameters](images/147993145611_DV_resource.Stream@PNG-en-US.PNG)
 
@@ -1273,10 +1273,10 @@ The standard search is displayed in the "Tasks" viewlet in the right-hand editor
 
    Searching for parameters
 2. In the "Search" field, enter either the parameter number or a parameter text for which you wish to search.
-3. To start the search, press the <Return> key or click on "Search".
+3. To start the search, press the &lt;Return&gt; key or click on "Search".
 
    If the parameter or text is found, the cursor jumps automatically to the position in the parameter list.
-4. Press <F3> to jump to the next search result.
+4. Press &lt;F3&gt; to jump to the next search result.
 
 #### Comparing parameters
 
@@ -1389,7 +1389,7 @@ You can create and save user-defined parameter lists by means of icons or shortc
    Click in a parameter list and open the "Create new user-defined parameter list" shortcut menu.
 
    The "User_list_#" tab card opens (e.g. User_list_1, User_list_2).
-2. In "User_list_#", enter the parameter number in the "Number" column in the <add new> input field and confirm with Return.
+2. In "User_list_#", enter the parameter number in the "Number" column in the &lt;add new&gt; input field and confirm with Return.
 
    Startdrive then automatically inserts the most important parameter data of this parameter in the other column fields of the current row.
 3. Enter additional parameters in the user-defined parameter list in the same way.
@@ -1400,7 +1400,7 @@ A new user-defined parameter list is created and displays the manually inserted 
 
 ###### Creating a user-defined parameter list with selected parameters
 
-1. Select the required parameters from a general parameter list with <Shift key + mouse click> or <Ctrl + mouse click>.
+1. Select the required parameters from a general parameter list with &lt;Shift key + mouse click&gt; or &lt;Ctrl + mouse click&gt;.
 2. Select the "Create new user-defined parameter list" shortcut menu.
 
    - Or -
@@ -1503,7 +1503,7 @@ Proceed as follows to append parameters:
    ![Inserting parameters in the displayed parameter list](images/147993433355_DV_resource.Stream@PNG-en-US.png)
 
    ![Inserting parameters in the displayed parameter list](images/147993433355_DV_resource.Stream@PNG-en-US.png)
-2. Enter the parameter number in the "Add new" input field located in the "Number" column and confirm your entry with <Return>.
+2. Enter the parameter number in the "Add new" input field located in the "Number" column and confirm your entry with &lt;Return&gt;.
 3. Repeat step 2 for all of the parameters you want to enter.
 
 **Result**
@@ -1549,7 +1549,7 @@ A new empty row will be inserted directly below the selected row.
 
 ###### Copying a parameter/comment
 
-You can also copy the contents of a parameter list to another parameter list via Copy & Paste.
+You can also copy the contents of a parameter list to another parameter list via Copy &amp; Paste.
 
 1. Select the parameter/comment or a row of a parameter list.
 
@@ -2316,7 +2316,7 @@ The following rules apply when setting the sampling times:
 **Vector control / V/f control**
 
 - A current controller sampling time between 125 µs and 500 µs can be set for vector control (125 µs ≤ p0115[0] ≤ 500 µs). This also applies for operation with V/f control.
-- For vector control and vector control V/f control, and when using a sine-wave filter ([p0230](SINAMICS%20Parameter%20VECTOR.md#p0230-drive-filter-type-motor-side) > 0), it is only permissible to change the current controller sampling time of the drive object involved in multiple integer steps of the default value on account of the design of the sine-wave filter.
+- For vector control and vector control V/f control, and when using a sine-wave filter ([p0230](SINAMICS%20Parameter%20VECTOR.md#p0230-drive-filter-type-motor-side) &gt; 0), it is only permissible to change the current controller sampling time of the drive object involved in multiple integer steps of the default value on account of the design of the sine-wave filter.
 - The fastest sampling time of a drive object in vector control is obtained as follows:
 
   - T<sub>i</sub> = 250 µs: Max. 3 drive objects in vector control
@@ -2420,12 +2420,12 @@ Factory settings
 | **Active Infeed** |  |  |  |  |
 | Booksize | 1 | 2 (Low) | 250 µs | - |
 | Chassis 400 V / ≤ 300 kW 690 V / ≤ 330 kW | 1 1 | 2 (Low) 2 (Low) | 250 µs 250 µs | - - |
-| Chassis 400 V / > 300 kW 690 V / > 330 kW | 1 1 | 0 (Expert) 1 (xLow) | 375 µs (p0092 = 1) 400 µs (p0092 = 0) | - - |
+| Chassis 400 V / &gt; 300 kW 690 V / &gt; 330 kW | 1 1 | 0 (Expert) 1 (xLow) | 375 µs (p0092 = 1) 400 µs (p0092 = 0) | - - |
 | Chassis-2 | 1 | 2 (Low) | 250 µs | 4 kHz |
 | **Smart Infeed** |  |  |  |  |
 | Booksize | 1 | 2 (Low) | 250 µs | - |
 | Chassis 400 V / ≤ 355 kW 690 V / ≤ 450 kW | 1 1 | 2 (Low) 2 (Low) | 250 µs 250 µs | - - |
-| Chassis 400 V / > 355 kW 690 V / > 450 kW | 1 1 | 0 (Expert) 1 (xLow) | 375 µs (p0092 = 1) 400 µs (p0092 = 0) | - - |
+| Chassis 400 V / &gt; 355 kW 690 V / &gt; 450 kW | 1 1 | 0 (Expert) 1 (xLow) | 375 µs (p0092 = 1) 400 µs (p0092 = 0) | - - |
 | **Basic Infeed** |  |  |  |  |
 | Booksize | 1 | 4 (High) | 250 µs | - |
 | Chassis | 1 | 2 (Low) | 2000 µs | - |
@@ -2439,7 +2439,7 @@ Factory settings
 | Chassis 400 V / ≤ 250 kW |  |  |  |  |
 | Booksize | 4 ... 6 only n_ctrl   7 ... 12 only f_ctrl | 0 (Expert) | 500 µs | 4 kHz |
 | Chassis 400 V / ≤ 250 kW |  |  |  |  |
-| Chassis 400 V / > 250 kW 690 V | 1 ... 4 only n_ctrl 1 ... 5 only V/f 5 ... 6 only n_ctrl | 0 (Expert) 1 (xLow) 0 (Expert) | 375 µs (p0092 = 1) 400 µs (p0092 = 0) 500 µs (p0092 = 1) | 1.333 kHz 1.25 kHz 1.0 kHz |
+| Chassis 400 V / &gt; 250 kW 690 V | 1 ... 4 only n_ctrl 1 ... 5 only V/f 5 ... 6 only n_ctrl | 0 (Expert) 1 (xLow) 0 (Expert) | 375 µs (p0092 = 1) 400 µs (p0092 = 0) 500 µs (p0092 = 1) | 1.333 kHz 1.25 kHz 1.0 kHz |
 | Chassis-2 | 1 ... 4 only n_ctrl 1 ... 5 only V/f 5 ... 6 only n_ctrl | 0 (Expert) 1 (xLow) 0 (Expert) | 375 µs (p0092 = 1) 400 µs (p0092 = 0) 500 µs (p0092 = 0) | 1.333 kHz 2.5 kHz 1.0 kHz |
 
 > **Note**
@@ -2485,7 +2485,7 @@ When commissioning is exited (p0009 = p0010 = 0), the effective pulse frequency 
 
 ##### Setting sampling times
 
-If sampling times are required which cannot be set using [p0112](SINAMICS%20Parameter%20ACTIVE%20INFEED%20CONTROL.md#p0112-sampling-times-pre-setting-p0115) > 1, you can directly set the sampling times in expert mode using [p0115](SINAMICS%20Parameter%20CU.md#p01150-sampling-time-for-supplementary-functions).
+If sampling times are required which cannot be set using [p0112](SINAMICS%20Parameter%20ACTIVE%20INFEED%20CONTROL.md#p0112-sampling-times-pre-setting-p0115) &gt; 1, you can directly set the sampling times in expert mode using [p0115](SINAMICS%20Parameter%20CU.md#p01150-sampling-time-for-supplementary-functions).
 
 If p0115 is changed online, then the values of higher indices are automatically adapted.
 
@@ -2921,8 +2921,8 @@ The main features of parallel connection are:
 - Parallel connection of up to 6 power units of the Chassis-2 format on the infeed side (controlled).
 - A Control Unit, which controls and monitors power units on the line supply and motor sides connected in parallel, can control an additional drive, e.g. an auxiliary drive.
 - Parallel-connected power units must be connected to the same Control Unit.
-- For Line Modules of the Chassis-2 format, no additional drives/infeed units can be connected to a CU if the number of modules connected in parallel is > 4.
-- A Control Unit CU320-2 can simultaneously actuate a maximum of one parallel connection on the grid side and one parallel connection on the motor side if the number of modules connected in parallel is > 4 in each case.
+- For Line Modules of the Chassis-2 format, no additional drives/infeed units can be connected to a CU if the number of modules connected in parallel is &gt; 4.
+- A Control Unit CU320-2 can simultaneously actuate a maximum of one parallel connection on the grid side and one parallel connection on the motor side if the number of modules connected in parallel is &gt; 4 in each case.
 - Components at the line and motor sides for decoupling the parallel-connected power units and for ensuring symmetrical current distribution are recommended.
 - Simple commissioning, because no special parameterization is necessary.
 - Individual power units can be parameterized and diagnosed (troubleshooting) with p7000 ff.
@@ -3651,7 +3651,7 @@ When it is first switched on with a new/modified network, an automatic controlle
 ###### Procedure
 
 1. Select the infeed in the device view and open the inspector window.
-2. Select the "Line Module details > Line Module settings" menu in the inspector window.
+2. Select the "Line Module details &gt; Line Module settings" menu in the inspector window.
 
    The "Line Module settings" screen form is displayed in the inspector window.
 3. To parameterize the device supply voltage, click the ![Procedure](images/147856715147_DV_resource.Stream@PNG-en-US.PNG) icon next to the "Line data/operating mode" entry.
@@ -3866,7 +3866,7 @@ The detailed settings are explained using a Power Module as an example.
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Select the desired Power Module in the device view and open the inspector window. 2. Select the menu "Power Module Details > Power Module Settings" in the inspector window.    The default supply voltage is displayed in the screen form: 3. Enter a new supply voltage as required. 4. If you use the "Universal (vector)" drive object type, you can set further additional data.     Select the menu "Power Module Details > Power Module Additional Data" in the inspector window. 5. Select a desired filter in the "Output filter" drop-down list.       | Symbol | Meaning |    | --- | --- |    |  | **Notice** |    | **Damage to a sine-wave filter through incorrect parameter assignment** If a sine-wave filter is installed in your hardware configuration, the sine-wave filter can be destroyed if it is not set in the additional data of the Motor Module or Power Module.  - Set the installed sine-wave filter in the "Output filter" drop-down list and add the required parameter data of the filter. |  |     Additional display or entry fields are now shown depending on the selected filter. 6. Now parameterize the associated detailed settings for the selected filter. |  |
+| 1. Select the desired Power Module in the device view and open the inspector window. 2. Select the menu "Power Module Details &gt; Power Module Settings" in the inspector window.    The default supply voltage is displayed in the screen form: 3. Enter a new supply voltage as required. 4. If you use the "Universal (vector)" drive object type, you can set further additional data.     Select the menu "Power Module Details &gt; Power Module Additional Data" in the inspector window. 5. Select a desired filter in the "Output filter" drop-down list.       | Symbol | Meaning |    | --- | --- |    |  | **Notice** |    | **Damage to a sine-wave filter through incorrect parameter assignment** If a sine-wave filter is installed in your hardware configuration, the sine-wave filter can be destroyed if it is not set in the additional data of the Motor Module or Power Module.  - Set the installed sine-wave filter in the "Output filter" drop-down list and add the required parameter data of the filter. |  |     Additional display or entry fields are now shown depending on the selected filter. 6. Now parameterize the associated detailed settings for the selected filter. |  |
 
 ###### Result
 
@@ -4098,7 +4098,7 @@ The detailed settings are explained using a Power Module as an example.
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Select the desired Power Module in the device view and open the inspector window. 2. Select the menu "Power Module Details > Power Module Settings" in the inspector window.    The default supply voltage is displayed in the screen form: 3. Enter a new supply voltage as required. 4. If you use the "Universal (vector)" drive object type, you can set further additional data.     Select the menu "Power Module Details > Power Module Additional Data" in the inspector window. 5. Select a desired filter in the "Output filter" drop-down list.       | Symbol | Meaning |    | --- | --- |    |  | **Notice** |    | **Damage to a sine-wave filter through incorrect parameter assignment** If a sine-wave filter is installed in your hardware configuration, the sine-wave filter can be destroyed if it is not set in the additional data of the Motor Module or Power Module.  - Set the installed sine-wave filter in the "Output filter" drop-down list and add the required parameter data of the filter. |  |     Additional display or entry fields are now shown depending on the selected filter. 6. Now parameterize the associated detailed settings for the selected filter. |  |
+| 1. Select the desired Power Module in the device view and open the inspector window. 2. Select the menu "Power Module Details &gt; Power Module Settings" in the inspector window.    The default supply voltage is displayed in the screen form: 3. Enter a new supply voltage as required. 4. If you use the "Universal (vector)" drive object type, you can set further additional data.     Select the menu "Power Module Details &gt; Power Module Additional Data" in the inspector window. 5. Select a desired filter in the "Output filter" drop-down list.       | Symbol | Meaning |    | --- | --- |    |  | **Notice** |    | **Damage to a sine-wave filter through incorrect parameter assignment** If a sine-wave filter is installed in your hardware configuration, the sine-wave filter can be destroyed if it is not set in the additional data of the Motor Module or Power Module.  - Set the installed sine-wave filter in the "Output filter" drop-down list and add the required parameter data of the filter. |  |     Additional display or entry fields are now shown depending on the selected filter. 6. Now parameterize the associated detailed settings for the selected filter. |  |
 
 ###### Result
 
@@ -4223,7 +4223,7 @@ You can configure the following motor details for motors during commissioning:
 ###### Procedure
 
 1. Select the motor in the device view and open the inspector window.
-2. Select the "Motor details > Rating plate values" menu in the inspector window.
+2. Select the "Motor details &gt; Rating plate values" menu in the inspector window.
 
    The "Rating plate values" screen form is displayed in the inspector window.
 3. To perform the basic parameterization for the motor, click the ![Procedure](images/147856715147_DV_resource.Stream@PNG-en-US.PNG) icon next to the "Basic parameterization" entry.
@@ -4231,7 +4231,7 @@ You can configure the following motor details for motors during commissioning:
    The function view of the drive axis opens:
 
    Make the required settings here (see "[Basic parameterization](Servo%20drives%20%28highly%20dynamic%29.md#basic-parameter-assignment)").
-4. Select the "Motor details > Rating plate values" menu again in the inspector window.
+4. Select the "Motor details &gt; Rating plate values" menu again in the inspector window.
 5. If you also want to acquire the optional motor data and circuit diagram data, activate the "Activate the display of the ..." options in the "Rating plate values" screen form.
 
    The additionally activated subareas are displayed in the secondary navigation under "Motor details".
@@ -5061,7 +5061,7 @@ This section contains information on the following topics:
 
 The TB30 Terminal Board allows you to expand the interfaces of the Control Unit (CU). The Terminal Board is inserted into the option slot of the Control Unit. The Terminal Board does not have to be specified any further.
 
-1. Open the "Supplementary system components > Terminal Boards" entry in the hardware catalog. The following entry is displayed:
+1. Open the "Supplementary system components &gt; Terminal Boards" entry in the hardware catalog. The following entry is displayed:
 
    - "TB30 Terminal Board"
 2. Drag the Terminal Board to the DRIVE-CLiQ editor.
@@ -5087,7 +5087,7 @@ This section contains information on the following topics:
 
 With Terminal Modules, you can expand the interfaces of the Control Unit. They are connected to the Control Unit via DRIVE-CLiQ. Terminal Modules do not have to be specified any further.
 
-1. Open the "Supplementary system components > Terminal Modules" entry in the hardware catalog. The following entries are displayed:
+1. Open the "Supplementary system components &gt; Terminal Modules" entry in the hardware catalog. The following entries are displayed:
 
    - "TM15 Terminal Module"
    - "TM31 Terminal Module"
@@ -5135,7 +5135,7 @@ Voltage Sensing Modules (VSM) can be used for two different drive objects:
 
 You add a VSM via the hardware catalog. The VSM does not have to be specified any further.
 
-1. Open the "Supplementary system components > Voltage Sensing Modules" entry in the hardware catalog. The following entries are displayed:
+1. Open the "Supplementary system components &gt; Voltage Sensing Modules" entry in the hardware catalog. The following entries are displayed:
 
    - VSM10 Voltage Sensing Module
 2. Move the VSM into the bottom light-gray area of the Line Module.
@@ -5144,7 +5144,7 @@ You add a VSM via the hardware catalog. The VSM does not have to be specified an
 
    Alternatively, drag the VSM onto a Motor Module of the "Universal (vector)" type.
 
-   Depending on the type and format of the Line Module, you can add up to 3 VSMs by dragging & dropping.
+   Depending on the type and format of the Line Module, you can add up to 3 VSMs by dragging &amp; dropping.
 
 **Note**
 
@@ -5541,8 +5541,8 @@ To assign an IP address, proceed as follows:
 3. Double-click "Update accessible devices".
 
    The accessible device is displayed with the IP address in the project tree.
-4. Double-click "Online & diagnostics" in the project tree of the device found.
-5. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+4. Double-click "Online &amp; diagnostics" in the project tree of the device found.
+5. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 6. Select the entry "Assign IP address".
 
    ![Assigning an IP address](images/147998544651_DV_resource.Stream@PNG-en-US.PNG)
@@ -5619,8 +5619,8 @@ To assign a name, proceed as follows:
 3. Double-click "Update accessible devices".
 
    The accessible device is displayed with the IP address in the project tree.
-4. Double-click "Online & diagnostics" in the project tree of the device found.
-5. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+4. Double-click "Online &amp; diagnostics" in the project tree of the device found.
+5. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 6. Select the entry "Assign PROFINET device name".
 
    ![Assigning names](images/147998628363_DV_resource.Stream@PNG-en-US.png)
@@ -5763,8 +5763,8 @@ To restore the factory settings, proceed as follows:
 3. Double-click "Update accessible devices".
 
    The accessible device is displayed with the IP address in the project tree.
-4. Double-click "Online & diagnostics" in the project tree of the device found.
-5. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+4. Double-click "Online &amp; diagnostics" in the project tree of the device found.
+5. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 6. Select the "Reset to factory settings" entry in the secondary navigation.
 
    ![Resetting factory settings](images/147998802827_DV_resource.Stream@PNG-en-US.PNG)
@@ -5773,7 +5773,7 @@ To restore the factory settings, proceed as follows:
 
    Resetting factory settings
 
-   The option "Retain I&M data" is selected by default. This means the IM0 to IM3 data are retained during resetting and are not deleted. If you want to reset this data too, select the "Delete I&M data" option.
+   The option "Retain I&amp;M data" is selected by default. This means the IM0 to IM3 data are retained during resetting and are not deleted. If you want to reset this data too, select the "Delete I&amp;M data" option.
 7. Click the "Reset" button.
 
    The device communication settings are reset to the factory settings.

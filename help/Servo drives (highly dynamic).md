@@ -13,7 +13,7 @@ This section contains information on the following topics:
 - [Servo control features](#servo-control-features)
 - [Parameterization](#parameterization)
 - [Diagnostics](#diagnostics)
-- [Rotate & optimize](#rotate-optimize)
+- [Rotate &amp; optimize](#rotate-optimize)
 
 ## Servo control features
 
@@ -88,10 +88,10 @@ The usable function modules are presorted into two areas.
 | [Position control](#position-control) (r0108.3) | Activates the "Position controller" functions in the "Technology functions" area. Also complements the "Basic parameterization" area with the "Mechanical system" function. |
 | [Extended torque control](#extended-torque-control-servo) (r0108.1) | Activates the "Extended torque control" function in the "Technology functions" area. |
 | [DSC with spline](#dsc-with-splines-servo) (r0108.6) | Extends the interconnection of the "Speed precontrol" function in the "Open-loop/closed-loop control" area. Adds the "Dynamic Servo Control" secondary screen form. |
-| [Advanced Position Control](#active-oscillation-damping-apc) (APC) (r0108.7)  >>Licensed<< | Activates the "Active oscillation damping (APC)" function in the "Technology functions" area. |
+| [Advanced Position Control](#active-oscillation-damping-apc) (APC) (r0108.7)  &gt;&gt;Licensed&lt;&lt; | Activates the "Active oscillation damping (APC)" function in the "Technology functions" area. |
 | [Extended stop and retract](#extended-stop-and-retract-esr) (r0108.9) | Activates the "Extended stop and retract" function in the "Setpoint channel" area. |
 | [Extended current setpoint filter](#current-setpoint-filter-servo) (r0108.21) | Extends the "Current setpoint filter" function in the "Open-loop/closed-loop control" area by six further filters. |
-| Detent torque compensation (r0108.22)  >>Licensed<< | Activates all parameters of the "Detent torque compensation" parameter group in the parameter view. The detent torque compensation can be parameterized only via the parameter view.    **Note:**   Activation of this function module results in a substantial increase in the required CPU time per drive axis.  Operation of six SERVO axes on one Control Unit cannot be guaranteed in all constellations and should be reduced to five axes. |
+| Detent torque compensation (r0108.22)  &gt;&gt;Licensed&lt;&lt; | Activates all parameters of the "Detent torque compensation" parameter group in the parameter view. The detent torque compensation can be parameterized only via the parameter view.    **Note:**   Activation of this function module results in a substantial increase in the required CPU time per drive axis.  Operation of six SERVO axes on one Control Unit cannot be guaranteed in all constellations and should be reduced to five axes. |
 
 ##### Activating a function module
 
@@ -547,7 +547,7 @@ For the elasticity-based technique, the following notes and supplementary condit
   | Parameter | Name | Information about parameterization |
   | --- | --- | --- |
   | p3090 | Pole ID elasticity-based configuration | The value "0" is preset in the parameter. For motors, where the brake is installed between the motor and encoder, an inversion may be required in order to take into account the relationship between the sign of the deflection and the torque or force. The inversion is set in bit 0 (p3090[0]). |
-  | [p3091](SINAMICS%20Parameter%20SERVO.md#p30910n-polid-elasticity-based-ramp-time) | Pole ID elasticity-based ramp time | The ramp time is preset with 250 ms. This value should only be changed if mechanical oscillations are present. Generally, mechanical oscillations occur if the ramp time is too short (< 250 ms). |
+  | [p3091](SINAMICS%20Parameter%20SERVO.md#p30910n-polid-elasticity-based-ramp-time) | Pole ID elasticity-based ramp time | The ramp time is preset with 250 ms. This value should only be changed if mechanical oscillations are present. Generally, mechanical oscillations occur if the ramp time is too short (&lt; 250 ms). |
   | [p3092](SINAMICS%20Parameter%20SERVO.md#p30920n-polid-elasticity-based-wait-time) | Pole ID elasticity-based wait time | The wait time serves as buffer between the measurement operations. Set a wait time longer than 5 ms in order to make a clear distinction between the individual measuring operations. |
   | [p3093](SINAMICS%20Parameter%20SERVO.md#p30930n-polid-elasticity-based-measurement-number) | Pole ID elasticity-based measurement count | Set 12 measurement steps to achieve a rugged and precise pole position ID. The precision and duration of the measurement increases proportionally with the number of measurement steps. |
   | [p3094](SINAMICS%20Parameter%20SERVO.md#p30940n-polid-elasticity-based-deflection-expected-1) | Pole ID elasticity-based deflection expected | The parameter setting depends heavily on the mechanical design and the drive braking force, and must therefore be set by the customer.  To determine the expected deflection, the technique must be initiated with an already set current (p3096) - and a deflection that has still not been set (p3094). |
@@ -1701,7 +1701,7 @@ If a drive train has interfering points of resonance in the range from 0 rpm to 
 
 You can use the trace technology of the TIA Portal to determine the points of resonance. You may also have noticed a speed range during commissioning in which resonance occurred.
 
-1. Open the trace and select "Configuration > Signals".
+1. Open the trace and select "Configuration &gt; Signals".
 2. Select the actual speed value ([r0062](SINAMICS%20Parameter%20SERVO.md#r0062-co-speed-setpoint-after-the-filter-1)) as the signal to be recorded.
 
    ![Trace with signal r62](images/147855147915_DV_resource.Stream@PNG-en-US.png)
@@ -1808,7 +1808,7 @@ With ramp-function generator tracking, the speed setpoint follows the actual spe
 
 Various enables are required to operate the ramp-function generator.
 
-- "OFF1 enable" and "OFF3 enable" are set via the control word "Sequential control system". Check the individual bits of the control word at "Diagnostics > Control/status words". Check the interconnection at "Diagnostics > Interconnections".
+- "OFF1 enable" and "OFF3 enable" are set via the control word "Sequential control system". Check the individual bits of the control word at "Diagnostics &gt; Control/status words". Check the interconnection at "Diagnostics &gt; Interconnections".
 
   The control inputs of the ramp-function generator take effect as follows:
 
@@ -2367,8 +2367,8 @@ MELDW
 
 | Signal | Meaning | Interconnection parameters |
 | --- | --- | --- |
-| MELDW.2 | 1 = |n_act| < speed threshold value 3 (p2161) | p2082[2] = r2199.0 |
-| MELDW.4 | 1 = Vdc_min controller active (V<sub>dc</sub><p1248) | p2082[4] = r0056.15 |
+| MELDW.2 | 1 = |n_act| &lt; speed threshold value 3 (p2161) | p2082[2] = r2199.0 |
+| MELDW.4 | 1 = Vdc_min controller active (V<sub>dc</sub>&lt;p1248) | p2082[4] = r0056.15 |
 | MELDW.9 | 1 = ESR response initiated / generator operation active | p2082[9] = r0887.12 |
 
 ### Open-loop/closed-loop control
@@ -3257,7 +3257,7 @@ Winder
 
    - "Adaptation factor upper" ([p1459](SINAMICS%20Parameter%20SERVO.md#p14590n-adaptation-factor-upper))
 
-     Adaptation range (> [p1457](SINAMICS%20Parameter%20SERVO.md#p14570n-speed-controller-p-gain-adaptation-upper-starting-point-1)) to additionally adapt the P gain of the speed/velocity controller.
+     Adaptation range (&gt; [p1457](SINAMICS%20Parameter%20SERVO.md#p14570n-speed-controller-p-gain-adaptation-upper-starting-point-1)) to additionally adapt the P gain of the speed/velocity controller.
    - "Adaptation factor lower" ([p1458](SINAMICS%20Parameter%20SERVO.md#p14580n-adaptation-factor-lower))
 
      Adaptation range (0% ... [p1456](SINAMICS%20Parameter%20SERVO.md#p14560n-speed-controller-p-gain-adaptation-lower-starting-point-1)) to additionally adapt the P gain of the speed/velocity controller.
@@ -3274,10 +3274,10 @@ Winder
 
    - "Scaling Kp" ([p1461](SINAMICS%20Parameter%20SERVO.md#p14610n-speed-controller-kp-adaptation-speed-upper-scaling-1))
 
-     P gain of the speed controller for the upper adaptation speed range (> [p1465](SINAMICS%20Parameter%20SERVO.md#p14650n-speed-controller-adaptation-speed-upper-1)).
+     P gain of the speed controller for the upper adaptation speed range (&gt; [p1465](SINAMICS%20Parameter%20SERVO.md#p14650n-speed-controller-adaptation-speed-upper-1)).
    - "Scaling Tn" ([p1463](SINAMICS%20Parameter%20SERVO.md#p14630n-speed-controller-tn-adaptation-speed-upper-scaling-1))
 
-     Integral time of the speed controller after the adaptation speed range (> p1465).
+     Integral time of the speed controller after the adaptation speed range (&gt; p1465).
 9. Enter the desired speed in the "Upper adaptation speed" (p1465) field.
 10. Enter the desired speed in the "Lower adaptation speed" ([p1464](SINAMICS%20Parameter%20SERVO.md#p14640n-speed-controller-adaptation-speed-lower-1)) field.
 
@@ -4108,7 +4108,7 @@ The adaptation function must be activated first for the configuration of the ada
 2. Click the "Adaptation" button.
 
    A dialog with the same name opens.
-3. Correct the factor for the P gain of the current controller in the adaptation range (current > [p0392](SINAMICS%20Parameter%20SERVO.md#p03920n-current-controller-adaptation-starting-point-kp-adapted)) in the "Scaling" ([p0393](SINAMICS%20Parameter%20SERVO.md#p03930n-current-controller-adaptation-p-gain-adaptation)) field.
+3. Correct the factor for the P gain of the current controller in the adaptation range (current &gt; [p0392](SINAMICS%20Parameter%20SERVO.md#p03920n-current-controller-adaptation-starting-point-kp-adapted)) in the "Scaling" ([p0393](SINAMICS%20Parameter%20SERVO.md#p03930n-current-controller-adaptation-p-gain-adaptation)) field.
 4. Enter the application point of the current-dependent current controller adaptation at which the adapted current controller gain takes effect p1715 x p0393 in the "Application point Kp adapted" (p0392) field.
 5. Enter the application point of the current-dependent current controller adaptation at which the current controller gain takes effect p1715 in the "Application point Kp" ([p0391](SINAMICS%20Parameter%20SERVO.md#p03910n-current-controller-adaptation-starting-point-kp)) field.
 6. Once all necessary settings have been made, click "Close".
@@ -4379,7 +4379,7 @@ The following table contains the fault responses and their meanings for the enti
 | OFF1 | ON/OFF | Brake along the ramp-function generator deceleration ramp followed by pulse disable | - Speed control ([p1300](SINAMICS%20Parameter%20SERVO.md#p13000n-open-loopclosed-loop-control-operating-mode-1) = 20, 21)    - The immediate specification of n_set = 0 at the ramp generator deceleration ramp ([p1121](SINAMICS%20Parameter%20SERVO.md#p11210n-ramp-function-generator-ramp-down-time-2)) causes the drive to be braked.   - When standstill is detected, the motor holding brake (if parameterized) is closed ([p1215](SINAMICS%20Parameter%20SERVO.md#p1215-motor-holding-brake-configuration)). The pulses are suppressed after the closing time ([p1217](SINAMICS%20Parameter%20SERVO.md#p1217-motor-holding-brake-closing-time)) has expired.      Standstill is detected when the actual speed value falls below the speed threshold ([p1226](SINAMICS%20Parameter%20SERVO.md#p12260n-threshold-for-zero-speed-detection-1)) or when the monitoring time ([p1227](SINAMICS%20Parameter%20SERVO.md#p1227-zero-speed-detection-monitoring-time)) started when speed setpoint ≤ speed threshold (p1226) has expired. - Torque control (p1300 = 23)   - The following applies for torque control: Response as for OFF2.   - When switching to torque control via [p1501](SINAMICS%20Parameter%20SERVO.md#p15010n-bi-change-over-between-closed-loop-speedtorque-control-1), the following applies:      There is no separate braking response.      If the actual speed value falls below the speed threshold (p1226) or the timer (p1227) has expired, the motor holding brake (if available) is closed. The pulses are suppressed after the closing time (p1217) has expired. |
 | OFF1_DELAYED | - | As for OFF1, but delayed | Faults with this fault response only take effect after the delay time in p3136 has expired. The remaining time until OFF1 is displayed in r3137. |
 | OFF2 | COAST STOP | Internal/external pulse disable | Speed control and torque control   - Immediate pulse suppression, the drive "coasts" to a standstill. - The motor holding brake (if available) is closed immediately. - The "switching on disabled" is activated. |
-| OFF3 | QUICK STOP | Brake along the OFF3 deceleration ramp followed by pulse disable | - Speed control (p1300 = 20, 21)    - The drive is braked along the OFF3 deceleration ramp ([p1135](SINAMICS%20Parameter%20SERVO.md#p11350n-off3-ramp-down-time-1)) by immediately entering n_set = 0.   - When standstill is detected, the motor holding brake (if parameterized) is closed. The pulses are suppressed when the closing time of the holding brake (p1217) expires.      Standstill is detected when the actual speed value falls below the speed threshold (p1226) or when the monitoring time (p1227) started when speed setpoint <= speed threshold (p1226) has expired.   - The "switching on disabled" is activated. - Torque control (p1300 = 23)    - Switchover to speed-controlled operation and other responses as described for speed-controlled operation. |
+| OFF3 | QUICK STOP | Brake along the OFF3 deceleration ramp followed by pulse disable | - Speed control (p1300 = 20, 21)    - The drive is braked along the OFF3 deceleration ramp ([p1135](SINAMICS%20Parameter%20SERVO.md#p11350n-off3-ramp-down-time-1)) by immediately entering n_set = 0.   - When standstill is detected, the motor holding brake (if parameterized) is closed. The pulses are suppressed when the closing time of the holding brake (p1217) expires.      Standstill is detected when the actual speed value falls below the speed threshold (p1226) or when the monitoring time (p1227) started when speed setpoint &lt;= speed threshold (p1226) has expired.   - The "switching on disabled" is activated. - Torque control (p1300 = 23)    - Switchover to speed-controlled operation and other responses as described for speed-controlled operation. |
 | STOP2 | - | n_set = 0 | - The drive is braked along the OFF3 deceleration ramp (p1135) by immediately entering n_set = 0. - The drive remains in speed control. |
 | IASC/DCBRK | - | - | - For synchronous motors, the following applies:    - If a fault occurs with this fault response, an internal armature short-circuit is triggered.   - The conditions for [p1231](SINAMICS%20Parameter%20SERVO.md#p12310n-armature-short-circuit-dc-braking-configuration) = 4 must be observed. - For induction motors, the following applies:    - If a fault occurs with this fault response, DC braking is triggered.   - DC braking must have been commissioned ([p1232](SINAMICS%20Parameter%20SERVO.md#p12320n-dc-braking-braking-current), [p1233](SINAMICS%20Parameter%20SERVO.md#p12330n-dc-braking-time), [p1234](SINAMICS%20Parameter%20SERVO.md#p12340n-speed-at-the-start-of-dc-braking-1)). |
 | ENCODER | - | Internal/external pulse disable ([p0491](SINAMICS%20Parameter%20SERVO.md#p0491-motor-encoder-fault-response-encoder)) | The ENCODER fault response is applied depending on the setting in p0491.   - Factory setting: p0491 = 0 → encoder error results in OFF2     **Notice**    When changing p0491, it is imperative that the information in the description of this parameter is observed. |
@@ -4964,7 +4964,7 @@ With the internal armature short-circuit braking, the motor windings are short-c
 ###### Requirements
 
 - Motor Modules of the Booksize or Chassis format
-- Short-circuit-proof motors ([p0320](SINAMICS%20Parameter%20SERVO.md#p03200n-motor-rated-magnetizing-currentshort-circuit-current) < [p0323](SINAMICS%20Parameter%20SERVO.md#p03230n-maximum-motor-current))
+- Short-circuit-proof motors ([p0320](SINAMICS%20Parameter%20SERVO.md#p03200n-motor-rated-magnetizing-currentshort-circuit-current) &lt; [p0323](SINAMICS%20Parameter%20SERVO.md#p03230n-maximum-motor-current))
 - One of the following motor types is used:
 
   - Rotary permanent-magnet synchronous motor ([p0300](SINAMICS%20Parameter%20SERVO.md#p03000n-motor-type-selection-2) = 2xx)
@@ -5123,22 +5123,22 @@ Comparators are provided for monitoring the actual speed and setpoint thresholds
 
    The "f or n comparison value reached/exceeded" signal is generated under consideration of hysteresis speed 1, speed threshold 1 and the ON delay.
 4. Enter the speed threshold 1 in the "Speed threshold 1" ([p2141](SINAMICS%20Parameter%20SERVO.md#p21410n-speed-threshold-1-1)) field.
-5. Enter the ON delay time for signal |n_act| > speed threshold in the "ON delay" ([p2156](SINAMICS%20Parameter%20SERVO.md#p21560n-on-delay-comparison-value-reached)) field.
+5. Enter the ON delay time for signal |n_act| &gt; speed threshold in the "ON delay" ([p2156](SINAMICS%20Parameter%20SERVO.md#p21560n-on-delay-comparison-value-reached)) field.
 6. Enter the bandwidths for the following messages in the "Hysteresis speed 2" ([p2140](SINAMICS%20Parameter%20SERVO.md#p21400n-hysteresis-speed-2-1)) field:
 
-   - |n_act| < speed threshold 2
-   - |n_set| > speed threshold 2
+   - |n_act| &lt; speed threshold 2
+   - |n_set| &gt; speed threshold 2
 7. Interconnect the following signal sinks with the required parameters:
 
    - |n_act| ≤ speed threshold 2
-   - |n_act| > speed threshold 2
+   - |n_act| &gt; speed threshold 2
 8. Enter speed threshold 2 in the "Speed threshold 2" ([p2155](SINAMICS%20Parameter%20SERVO.md#p21550n-speed-threshold-2-1)) field.
-9. Enter the bandwidths for the n_act > n_max message in the "Hysteresis speed n_act > n_max" ([p2162](SINAMICS%20Parameter%20SERVO.md#p21620n-hysteresis-speed-n_act-n_max-1)) field.
-10. Interconnect the "n_act > n_max" ([r2197](SINAMICS%20Parameter%20SERVO.md#r2197113-cobo-status-word-monitoring-1-1)) signal sink with the required parameters. Several interconnections are possible.
+9. Enter the bandwidths for the n_act &gt; n_max message in the "Hysteresis speed n_act &gt; n_max" ([p2162](SINAMICS%20Parameter%20SERVO.md#p21620n-hysteresis-speed-n_act-n_max-1)) field.
+10. Interconnect the "n_act &gt; n_max" ([r2197](SINAMICS%20Parameter%20SERVO.md#r2197113-cobo-status-word-monitoring-1-1)) signal sink with the required parameters. Several interconnections are possible.
 
     Interconnect binector output:
 
-    Signal n_act > n_max is generated under consideration of hysteresis speed n_act > n_max.
+    Signal n_act &gt; n_max is generated under consideration of hysteresis speed n_act &gt; n_max.
 
     For a negative speed limit, the hysteresis is effective below the limit value and for a positive speed limit, above the limit value.
 
@@ -5167,18 +5167,18 @@ Comparators are provided for monitoring the speed thresholds used to activate mo
 1. Correct the specified bandwidths for the following messages in the "Hysteresis speed 3" ([p2150](SINAMICS%20Parameter%20SERVO.md#p21500n-hysteresis-speed-3-1)[0]) field:
 
    - n_act ≥ 0
-   - |n_act| < speed setpoint 3
-   - n_set < [p2161](SINAMICS%20Parameter%20SERVO.md#p21610n-speed-threshold-3-1)
+   - |n_act| &lt; speed setpoint 3
+   - n_set &lt; [p2161](SINAMICS%20Parameter%20SERVO.md#p21610n-speed-threshold-3-1)
    - n_set ≥ 0
 
    The calculation mode is defined using [p0340](SINAMICS%20Parameter%20ACTIVE%20INFEED%20CONTROL.md#p0340-automatic-calculation-control-parameters).
 2. Interconnect the "n_act ≥ 0" ([r2197](SINAMICS%20Parameter%20SERVO.md#r2197113-cobo-status-word-monitoring-1-1).3) signal sink with the required parameters. Several interconnections are possible.
 
    Signal n_act ≥ 0 is generated considering hysteresis speed 3.
-3. Interconnect the "|n_act| < speed threshold 3" ([r2199](SINAMICS%20Parameter%20SERVO.md#r2199011-cobo-status-word-monitoring-3-1).0) signal sink with the required parameters. Several interconnections are possible.
+3. Interconnect the "|n_act| &lt; speed threshold 3" ([r2199](SINAMICS%20Parameter%20SERVO.md#r2199011-cobo-status-word-monitoring-3-1).0) signal sink with the required parameters. Several interconnections are possible.
 
-   Signal |n_act| < speed threshold 3 is generated considering hysteresis speed 3 and speed threshold 3.
-4. Correct the speed threshold 3 for |n_act| < speed setpoint 3 in the "Speed threshold 3" (p2161) field.
+   Signal |n_act| &lt; speed threshold 3 is generated considering hysteresis speed 3 and speed threshold 3.
+4. Correct the speed threshold 3 for |n_act| &lt; speed setpoint 3 in the "Speed threshold 3" (p2161) field.
 5. Interconnect the "Speed setpoint for messages" ([p2151](SINAMICS%20Parameter%20SERVO.md#p21510n-ci-speed-setpoint-for-messagessignals-1)) signal source for speed setpoint messages.
 6. Interconnect the "Speed setpoint 2" ([p2154](SINAMICS%20Parameter%20SERVO.md#p21540n-ci-speed-setpoint-2-1)) signal source for velocity setpoint 2.
 
@@ -5263,7 +5263,7 @@ During load torque monitoring, the current speed/torque curve is compared with t
 The load torque monitoring is a function module that is, by default, deactivated. When this function module is activated, the monitoring functions are extended as follows:
 
 - Speed setpoint monitoring: |n_set| ≤ [p2161](SINAMICS%20Parameter%20SERVO.md#p21610n-speed-threshold-3-1)
-- Speed setpoint monitoring: n_set > 0
+- Speed setpoint monitoring: n_set &gt; 0
 - Load monitoring (see below)
 
 **Possible responses of the load torque monitoring**
@@ -5392,7 +5392,7 @@ The sensors used are selected as standard from the following four different sens
   A Pt100 or Pt1000 is in principle a PTC with a very linear characteristic, and is suitable for continuous and exact temperature measurements. Not every sensor input is Pt100/Pt1000-capable.
 - **Bimetallic sensor with NC contact** (abbreviated, "bimetal NC contact")
 
-  A bimetallic NC contact actuates a switch at a certain nominal response temperature. The tripping resistance is <100 Ω. Not every sensor input is bimetal NC contact-capable.
+  A bimetallic NC contact actuates a switch at a certain nominal response temperature. The tripping resistance is &lt;100 Ω. Not every sensor input is bimetal NC contact-capable.
 - **Evaluation via temperature channels**
 
   If you use several temperature channels, the sensors are interconnected via BICO.
@@ -6534,7 +6534,7 @@ Definition according to EN 61800-5-2:
 
 **Requirements**
 
-The SSM safety function cannot be selected or deselected by external control signals. SSM is active when you have set a monitoring speed > 0 for SSM.
+The SSM safety function cannot be selected or deselected by external control signals. SSM is active when you have set a monitoring speed &gt; 0 for SSM.
 
 **Evaluating the speed**
 
@@ -6657,7 +6657,7 @@ Overview of stop responses
 | Stop response | Triggered ... | Action | Effect |
 | --- | --- | --- | --- |
 | STOP A<sup>1) </sup>(corresponds to STO<sup>2)</sup>) | - For all acknowledgeable safety faults with pulse cancellation - Subsequent response of STOP B - Configurable subsequent stop p9563 for SLS - Configurable subsequent stop p9566 for SDI - Configurable subsequent stop p9562 for SLP | Immediate pulse cancellation | Drive coasts down |
-| STOP B<sup>1) </sup>(corresponds to SS1<sup>3)</sup>) | Examples:  - Standstill tolerance violated in p9530 (SOS) - Configurable subsequent stop p9563 for SLS - Configurable subsequent stop p9566 for SDI - Configurable subsequent stop p9562 for SLP - Subsequent response of STOP F | Immediate input of speed setpoint = 0 and start of timer t<sub>B  </sub>Once t<sub>B</sub> or n<sub>act</sub> < n<sub>shutdown</sub> has expired, STOP A is triggered. | STOP B with subsequent STOP A.  The drive decelerates along the OFF3 ramp and then switches to STOP A.   **Note:** For "SS1 with external stop" (SS1E), braking is **not** along the OFF3 ramp (see "[Description of Safe Stop 1 (SS1, Extended Functions)](#description-of-safe-stop-1-ss1-extended-functions)") |
+| STOP B<sup>1) </sup>(corresponds to SS1<sup>3)</sup>) | Examples:  - Standstill tolerance violated in p9530 (SOS) - Configurable subsequent stop p9563 for SLS - Configurable subsequent stop p9566 for SDI - Configurable subsequent stop p9562 for SLP - Subsequent response of STOP F | Immediate input of speed setpoint = 0 and start of timer t<sub>B  </sub>Once t<sub>B</sub> or n<sub>act</sub> &lt; n<sub>shutdown</sub> has expired, STOP A is triggered. | STOP B with subsequent STOP A.  The drive decelerates along the OFF3 ramp and then switches to STOP A.   **Note:** For "SS1 with external stop" (SS1E), braking is **not** along the OFF3 ramp (see "[Description of Safe Stop 1 (SS1, Extended Functions)](#description-of-safe-stop-1-ss1-extended-functions)") |
 | STOP C<sup>1) </sup>(corresponds to SS2<sup>4)</sup>) | - Configurable subsequent stop p9563 for SLS - Configurable subsequent stop p9566 for SDI - Configurable subsequent stop p9562 for SLP | Immediate input of speed setpoint = 0 and start of timer t<sub>C</sub>.  Once t<sub>C</sub> has elapsed, SOS is selected. | The drive decelerates along the OFF3 ramp; SOS is then selected. |
 | STOP D<sup>1)</sup> | - Configurable subsequent stop p9563 for SLS - Configurable subsequent stop p9566 for SDI - Configurable subsequent stop p9562 for SLP | Timer t<sub>D</sub> starts.  No drive-integrated response.  SOS is activated on expiration of t<sub>D</sub>. | The drive must be decelerated by the higher-level controller (within the drive group)!  Once t<sub>D</sub> has elapsed, SOS is selected.  An automatic response is only triggered if the standstill tolerance window is violated in SOS. |
 | STOP E<sup>1)</sup> | - Configurable subsequent stop p9563 for SLS - Configurable subsequent stop p9566 for SDI - Configurable subsequent stop p9562 for SLP | SOS triggered after the expiry of p9554 | Controlling the drive-integrated ESR functionality |
@@ -7253,7 +7253,7 @@ Proceed as follows to activate the Safety Integrated settings:
 
 ###### Making basic settings
 
-1. In the secondary navigation, execute "Safety Integrated > Function selection".
+1. In the secondary navigation, execute "Safety Integrated &gt; Function selection".
 2. Select between the following in the first drop-down list:
 
    - No Safety Integrated Function
@@ -7348,8 +7348,8 @@ Extended Functions SS1, SLS, SDI and SSM "without encoder" do not require safety
 - Current controller clocks 31.25 µs and 62.5 μs (for Double Motor Modules with two configured Safety Integrated drives).
 - For the independent setting of the current controller clock and pulse frequency in conjunction with Safety Integrated "without encoder":
 
-  - Double Motor Module: < 125 μs
-  - All other components: < 62.5 μs
+  - Double Motor Module: &lt; 125 μs
+  - All other components: &lt; 62.5 μs
   - p9589 must be set = 3300 to allow the current controller clock and pulse frequency to be independently set.
 - "Shaft generator" functionality
 - Induction motors up to 1000 kW
@@ -7702,7 +7702,7 @@ For the function descriptions, see also:
    - with SAM
    - with SBR
 5. Click "Monitoring" and parameterize the alternative brake monitoring functions "SAM" and "SBR" in the dialog (see "[SAM/SBR (Extended Functions)](#samsbr-extended-functions)").
-6. Enter the required delay time in the "Delay time SS1 -> STO active" (p9556) input field.
+6. Enter the required delay time in the "Delay time SS1 -&gt; STO active" (p9556) input field.
 7. Click the ![Configuring motor deceleration with internal brake response (OFF3)](images/147858154379_DV_resource.Stream@PNG-en-US.png) button (Select STO via onboard terminals) to configure control of the "STO" function.
 
    The "Control" screen form opens. The display of the screen form depends on the basic settings of the Safety Integrated Extended Functions.
@@ -7737,7 +7737,7 @@ For the function descriptions, see also:
 3. The "Control" screen form opens. The display of the screen form depends on the basic settings of the Safety Integrated Extended Functions.
 
    Call the "SS1E" function again.
-4. Enter the required delay time in the "Delay time SS1 -> STO active" (p9556) input field.
+4. Enter the required delay time in the "Delay time SS1 -&gt; STO active" (p9556) input field.
 5. Click the ![Configuring the motor deceleration with external stop](images/147858154379_DV_resource.Stream@PNG-en-US.png) button (Select STO via onboard terminals) to configure control of the "STO" function.
 
    In this screen form, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
@@ -7821,7 +7821,7 @@ The following differences exist:
    - with SAM
    - with SBR
 4. Click "Monitoring" and parameterize the alternative brake monitoring functions "SAM" and "SBR" in the dialog (see "[SAM/SBR (Extended Functions)](#samsbr-extended-functions)").
-5. In the "Delay time SS2 -> SOS active" (p9552) input field select the required delay time.
+5. In the "Delay time SS2 -&gt; SOS active" (p9552) input field select the required delay time.
 6. Enter a value for the standstill tolerance in the "Standstill monitoring" (p9530) field.
 7. Click the ![Configuring motor deceleration with internal brake response (OFF3)](images/147858158475_DV_resource.Stream@PNG-en-US.png) button (brake control) to configure the brake control.
 
@@ -7848,10 +7848,10 @@ The following differences exist:
    > **Note**
    >
    > The "SS2E enable" setting is not available in S120 drives with CU310-2 and Safety Integrated Extended Functions with control via onboard terminals.
-4. In the "Delay time SS2E/stop D -> SOS active" (p9553) input field, select the required delay time.
+4. In the "Delay time SS2E/stop D -&gt; SOS active" (p9553) input field, select the required delay time.
 
    SBR/SAM is not monitored during this delay time. SOS becomes active after this delay time has elapsed.
-5. In the "Delay time Stop E -> SOS active" ([p9554](SINAMICS%20Parameter%20SERVO.md#p9554-si-motion-transition-time-stop-e-to-sos-sbh-control-unit-1)) input field select the required delay time.
+5. In the "Delay time Stop E -&gt; SOS active" ([p9554](SINAMICS%20Parameter%20SERVO.md#p9554-si-motion-transition-time-stop-e-to-sos-sbh-control-unit-1)) input field select the required delay time.
 
    SBR/SAM is not monitored during this delay time. SOS becomes active after this delay time has elapsed.
 6. Enter a value for the standstill tolerance in the "Standstill monitoring" (p9530) field.
@@ -8019,7 +8019,7 @@ If the standstill tolerance is violated in [p9530](SINAMICS%20Parameter%20SERVO.
 
    In this screen form, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
 2. Call the "SOS" function again.
-3. Correct the default value in the "Delay time SOS -> SOS active" field (p9551).
+3. Correct the default value in the "Delay time SOS -&gt; SOS active" field (p9551).
 4. Correct the default value in the "Standstill tolerance" (p9530) field.
 
    Alternatively, you can also click on the "Standstill tolerance SOS" button. A dialog with a graphic display of the standstill monitoring opens. You can also enter the standstill tolerance here.
@@ -8253,7 +8253,7 @@ For the function descriptions, see also:
    The "Control" screen form opens. The way the screen form is displayed depends on the basic settings of the Safety Integrated Function SLS.
 4. In this screen form, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
 5. Call the "SLS" function again.
-6. Correct the prescribed delay time in the "Delay time for selection of SLS -> SLS active" field (p9551).
+6. Correct the prescribed delay time in the "Delay time for selection of SLS -&gt; SLS active" field (p9551).
 7. Correct the default value for level 1 of the speed limit (p9531[0]).
 8. Select the required stop response for level 1 in the drop-down list (p9563[0]).
 9. Click the ![Setting SLS via PROFIsafe with encoder and onboard terminals](images/147858373771_DV_resource.Stream@PNG-en-US.png) icon to open the configuration for level 1.
@@ -8504,7 +8504,7 @@ Example:
 
    In this screen form, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
 2. Call the "SDI" function again.
-3. Correct the prescribed delay time in the "Delay time for selection of SDI -> SDI active" field (p9565).
+3. Correct the prescribed delay time in the "Delay time for selection of SDI -&gt; SDI active" field (p9565).
 4. In the "Monitoring tolerance" (p9564) field, correct the specified monitoring tolerance in mm.
 5. Select the required stop response in the "Selection" drop-down list (p9566).
 6. Click the ![Parameterizing SDI (with encoder)](images/147858373771_DV_resource.Stream@PNG-en-US.png) icon to open an additional configuration screen form for the set stop response.
@@ -8878,7 +8878,7 @@ For the function descriptions, see also:
 
    > **Note**
    >
-   > The smallest possible tolerance band should be selected for the SCA function (< 5 ... 10 mm). It makes sense to parameterize the cam tolerance to be greater than or equal to the actual value tolerance.
+   > The smallest possible tolerance band should be selected for the SCA function (&lt; 5 ... 10 mm). It makes sense to parameterize the cam tolerance to be greater than or equal to the actual value tolerance.
 4. Specify the cam positions you wish to monitor in the list at the bottom end of the screen form.
 
    - Activate the desired cam in the list (= enable).
@@ -9042,7 +9042,7 @@ The PROFIsafe address is required for control of the Safety Integrated Functions
    ![Configuring control via PROFIsafe](images/147856715147_DV_resource.Stream@PNG-en-US.PNG)
 
    The properties of the PROFINET interface are displayed in the inspector window. The "Cyclic data traffic" adjustment range is active. The telegrams for the drive objects can be specified here.
-2. Click in the telegram configuration of the "Drive control telegrams" on the entry <Add telegram>.
+2. Click in the telegram configuration of the "Drive control telegrams" on the entry &lt;Add telegram&gt;.
 3. Select the "Add Safety telegram" option in the drop-down list of the entry.
 
    Then the lines "Send Safety Integrated Telegram (actual value)" and "Receive Safety Integrated Telegram (setpoint)" are inserted. The relevant PROFIsafe telegrams are preassigned.
@@ -9087,7 +9087,7 @@ The PROFIsafe address is required for control of the Safety Integrated Functions
    ![Configuring control via PROFIsafe](images/147856715147_DV_resource.Stream@PNG-en-US.PNG)
 
    The properties of the PROFINET interface are displayed in the inspector window. The "Cyclic data traffic" adjustment range is active. The telegrams for the drive objects can be specified here.
-2. Click in the telegram configuration of the "Drive control telegrams" on the entry <Add telegram>.
+2. Click in the telegram configuration of the "Drive control telegrams" on the entry &lt;Add telegram&gt;.
 3. Select the "Add Safety telegram" option in the drop-down list of the entry.
 
    Then the lines "Send Safety Integrated Telegram (actual value)" and "Receive Safety Integrated Telegram (setpoint)" are inserted. The relevant PROFIsafe telegrams are preassigned.
@@ -9148,7 +9148,7 @@ The PROFIsafe address is required for control of the Safety Integrated Functions
    ![Configuring control via PROFIsafe](images/147856715147_DV_resource.Stream@PNG-en-US.PNG)
 
    The properties of the PROFINET interface are displayed in the inspector window. The "Cyclic data traffic" adjustment range is active. The telegrams for the drive objects can be specified here.
-2. Click in the telegram configuration of the "Drive control telegrams" on the entry <Add telegram>.
+2. Click in the telegram configuration of the "Drive control telegrams" on the entry &lt;Add telegram&gt;.
 3. Select the "Add Safety telegram" option in the drop-down list of the entry.
 
    Then the lines "Send Safety Integrated Telegram (actual value)" and "Receive Safety Integrated Telegram (setpoint)" are inserted. The relevant PROFIsafe telegrams are preassigned.
@@ -10519,7 +10519,7 @@ The following editing modes are available for the actual position value processi
    The proportional gain specifies for which traversing velocity which following error occurs.
 3. Enter a percentage value for the weighting of the speed precontrol value in the "Speed precontrol factor" ([p2534](SINAMICS%20Parameter%20SERVO.md#p25340n-lr-velocity-precontrol-factor-1)) fied.
 
-   The precontrol is automatically activated with a percentage value > 0%.
+   The precontrol is automatically activated with a percentage value &gt; 0%.
 4. Interconnect the "Velocity setpoint" ([p2531](SINAMICS%20Parameter%20SERVO.md#p2531-ci-lr-velocity-setpoint)) signal source for the velocity setpoint of the position controller.
 
    With activated basic positioner, the velocity setpoint is interconnected to [r2666](SINAMICS%20Parameter%20SERVO.md#r2666-co-epos-velocity-setpoint) as standard.
@@ -10591,7 +10591,7 @@ Position control - Position controller (r0108.3 = 1) - 4015 -
 3. Interconnect the "Position controller adaptation" ([p2537](SINAMICS%20Parameter%20SERVO.md#p2537-ci-lr-position-controller-adaptation)) signal source for the adaptation of the proportional gain of the position controller.
 4. Enter the integral time of the position controller in the "Integral time" ([p2539](SINAMICS%20Parameter%20SERVO.md#p25390n-lr-integral-time)) field.
 
-   The I component of the position controller is automatically activated with a percentage value > 0%.
+   The I component of the position controller is automatically activated with a percentage value &gt; 0%.
 5. Once all necessary settings have been made, click "Close".
 
    The dialog closes.
@@ -10660,7 +10660,7 @@ Standstill monitoring
 
 On the basis of a positioning window, the entry of the axis into the specified position at the end of a positioning motion is monitored. This requires the specification of a positioning window and a time interval.
 
-1. Enter a value (value = 0, positioning monitoring is deactivated; value >= 1, positioning monitoring is active) in the "Positioning window" ([p2544](SINAMICS%20Parameter%20SERVO.md#p2544-lr-positioning-window)) field.
+1. Enter a value (value = 0, positioning monitoring is deactivated; value &gt;= 1, positioning monitoring is active) in the "Positioning window" ([p2544](SINAMICS%20Parameter%20SERVO.md#p2544-lr-positioning-window)) field.
 
    The positioning monitoring defines the range around the target position in which the actual position value must lie after the positioning monitoring time has expired.
 2. Enter a value in the "Position monitoring time" ([p2545](SINAMICS%20Parameter%20SERVO.md#p2545-lr-positioning-monitoring-time)) field.
@@ -10997,7 +10997,7 @@ Only those vibrations that can be measured on the direct measuring system can be
 
 The function, for example, is ideal for axes for which the vibration has a limited effect on the motor (e.g. because of a large transmission ratio or a strong gearbox self-locking).
 
-A direct measuring system often causes high-frequency resonances in the range > 100 Hz in the control loop that can cause major problems when setting the APC. In this case, the APC filter must be deployed to ensure the stability of the control loops. The dependency of such resonances, e.g. for axis positions, must also be considered. Such a found parameter assignment must be stable throughout the complete operating range of the machine. Also for this reason, the use of the function without direct measuring system (see Section "[Active Vibration Suppression (APC without sensor on the load side)](#active-vibration-suppression-apc-without-sensor-on-the-load-side)") is often more robust.
+A direct measuring system often causes high-frequency resonances in the range &gt; 100 Hz in the control loop that can cause major problems when setting the APC. In this case, the APC filter must be deployed to ensure the stability of the control loops. The dependency of such resonances, e.g. for axis positions, must also be considered. Such a found parameter assignment must be stable throughout the complete operating range of the machine. Also for this reason, the use of the function without direct measuring system (see Section "[Active Vibration Suppression (APC without sensor on the load side)](#active-vibration-suppression-apc-without-sensor-on-the-load-side)") is often more robust.
 
 Before the function can be optimized, the speed control loop must be optimized first, because it forms the lower-level controlled system.
 

@@ -67,7 +67,7 @@ The configured Runtime version of the HMI device must be separately changed to V
 ### Updating calendar control
 
 1. Open a screen in your project.
-2. Click the "Update" button in the task card "Toolbox > My controls".
+2. Click the "Update" button in the task card "Toolbox &gt; My controls".
 
    ![Updating calendar control](images/141884950027_DV_resource.Stream@PNG-en-US.png)
 
@@ -380,7 +380,7 @@ You can edit the tree structure of the time model as follows:
 Select one of the following procedures:
 
 - Select "Delete" in the shortcut menu of the time category.
-- Select the time category and press <Del>.
+- Select the time category and press &lt;Del&gt;.
 - Select the time category and click "Delete" in the toolbar.
 
 The time category and its children are deleted.
@@ -489,9 +489,9 @@ This section contains information on the following topics:
 
 Alternative procedures:
 
-- Keyboard commands <Ctrl+C> and <Ctrl+V>
+- Keyboard commands &lt;Ctrl+C&gt; and &lt;Ctrl+V&gt;
 - Using the shortcut menu of the calendar and the new owner or the menu bar
-- Drag-and-drop in conjunction with keyboard command <Ctrl>
+- Drag-and-drop in conjunction with keyboard command &lt;Ctrl&gt;
 
 #### Result
 
@@ -749,14 +749,14 @@ Or the property is empty.
   You can find more information in the section "Configuring users and roles" in the WinCC Unified help.
 - The "Allow operator control" option is activated in the control properties under "Security".
 - The "Authorization" option is empty in the control properties under "Security".
-- In the control properties under "Properties > Miscellaneous > Interface", the "Require explicit unlock" option is disabled under the property "Action edit", "Planning edit" and "Full access".
+- In the control properties under "Properties &gt; Miscellaneous &gt; Interface", the "Require explicit unlock" option is disabled under the property "Action edit", "Planning edit" and "Full access".
 
   This control property is for multipoint touch displays and is not supported in V17.
 
 #### Procedure
 
 1. Select the desired control in the screen.
-2. Expand the property "Action edit", "Planning edit" or "Full access" under "Properties > Miscellaneous > Interface".
+2. Expand the property "Action edit", "Planning edit" or "Full access" under "Properties &gt; Miscellaneous &gt; Interface".
 3. Expand the drop-down list in the "Static value" column under "Authorization".
 
    The function rights are displayed.
@@ -769,7 +769,7 @@ Or the property is empty.
 
 To receive configuration data in runtime, you have the option of performing a delta compile and delta download.
 
-You can find more information in the WinCC Unified help under "Visualize processes > Compile and load".
+You can find more information in the WinCC Unified help under "Visualize processes &gt; Compile and load".
 
 ### Configuration changes to calendar data
 
@@ -796,7 +796,7 @@ If validation errors in the plant view, missing or faulty properties of plant ob
 
 ### Solve causes of errors during validation
 
-1. Navigate in the Inspector window to "Info > Compile".
+1. Navigate in the Inspector window to "Info &gt; Compile".
 2. ![Solve causes of errors during validation](images/122765203595_DV_resource.Stream@PNG-de-DE.png) Set the filter so that error messages are displayed.
 
    If a green arrow ![Solve causes of errors during validation](images/122844867979_DV_resource.Stream@PNG-de-DE.png) is displayed in the "Go to" column for a message, you can go directly to the appropriate tab for correcting the cause of the alarm.

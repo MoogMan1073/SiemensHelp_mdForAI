@@ -120,8 +120,8 @@ The following functions are added:
 For all HMI devices that support "GMP-compliant configuration", the WinCC engineering system is extended to include the following configuration options when GMP is enabled:
 
 - The entry "AuditTrail" is added to the "Logs" editor.
-- A "Good Manufacturing Practice Settings" entry is added to "HMI tags" editor in the inspector window of a "Properties > Properties" tag.
-- A "Good Manufacturing Practice" entry is added to "Recipes" editor in the inspector window of a "Properties > Properties" recipe.
+- A "Good Manufacturing Practice Settings" entry is added to "HMI tags" editor in the inspector window of a "Properties &gt; Properties" tag.
+- A "Good Manufacturing Practice" entry is added to "Recipes" editor in the inspector window of a "Properties &gt; Properties" recipe.
 - "NotifyUserAction" system function
 
 ### Scope of logging (Panels, Comfort Panels, RT Advanced)
@@ -156,7 +156,7 @@ The following operations are Audit-relevant and are automatically saved in the A
     >
     > To log alarm texts, select the "Log alarm text in Audit Trail" option in the Audit Trail editor:
     >
-    > "Audit trail > Properties > Settings" in the "Settings" area
+    > "Audit trail &gt; Properties &gt; Settings" in the "Settings" area
 - Log operations
 
   - Starting, stopping and copying a log
@@ -209,7 +209,7 @@ Configure a log in the settings for Audit Trail editor. This log is used to stor
 
 #### Audit trail work area
 
-You define the settings for the Audit Trail in the "Properties > Properties" inspector window.
+You define the settings for the Audit Trail in the "Properties &gt; Properties" inspector window.
 
 You set the name of the log and the storage location and decide whether logging will begin on startup. Also determine if "Forcing" is permitted.
 
@@ -296,7 +296,7 @@ The parameters of an Audit Trail are also displayed and described in more detail
 
 #### General inspector window
 
-You can set the following parameters under "Audit trail > Properties > General":
+You can set the following parameters under "Audit trail &gt; Properties &gt; General":
 
 ![General inspector window](images/22896422283_DV_resource.Stream@PNG-en-US.png)
 
@@ -328,7 +328,7 @@ You can set the following parameters under "Audit trail > Properties > General":
 
 #### Inspector window settings
 
-You can set the following parameters under "Audit trail > Properties > Properties > Settings":
+You can set the following parameters under "Audit trail &gt; Properties &gt; Properties &gt; Settings":
 
 ![Inspector window settings](images/22897633675_DV_resource.Stream@PNG-en-US.png)
 
@@ -424,7 +424,7 @@ This event is triggered if the storage medium to which an Audit Trail is saved p
 ##### Procedure
 
 1. Click on the Audit Trail in the "Audit Trail" editor.
-2. In the Inspector window, click "Properties > General".
+2. In the Inspector window, click "Properties &gt; General".
 3. In the "Free storage space limit in MB" area, select a value that triggers the "Little free space" event.
 4. Click on Events in the Inspector window.
 5. Click on the "Low free storage space" event.
@@ -485,7 +485,7 @@ To create a report, proceed as follows:
 2. Double-click "Add new report".
 
    A new report is created and opened in the "Report" editor.
-3. Drag & drop the "Audit trail report" object under "Tools > Controls" to the report created.
+3. Drag &amp; drop the "Audit trail report" object under "Tools &gt; Controls" to the report created.
 
    ![Procedure](images/114572218507_DV_resource.Stream@PNG-en-US.png)
 
@@ -513,7 +513,7 @@ The "Audit trail report" parameters can be edited in the inspector window.
 
 Click on the "Audit trail report" object.
 
-Change the appearance of the "Audit trail report" object in the appearance area of the Inspector window under "Properties > Properties > Layout".
+Change the appearance of the "Audit trail report" object in the appearance area of the Inspector window under "Properties &gt; Properties &gt; Layout".
 
 ![Inspector window appearance](images/75087548811_DV_resource.Stream@PNG-en-US.png)
 
@@ -525,7 +525,7 @@ It is recommended to set a font size of 16 px for the output.
 
 Click on the "Audit trail report" object.
 
-Change the position and size of the "Audit trail report" object in the appearance area of the Inspector window under "Properties > Properties > Layout".
+Change the position and size of the "Audit trail report" object in the appearance area of the Inspector window under "Properties &gt; Properties &gt; Layout".
 
 ![Inspector window layout](images/75087552779_DV_resource.Stream@PNG-en-US.png)
 
@@ -539,7 +539,7 @@ In the "Visible entries" area, it is determined whether comments are visible on 
 
 Click on the "Audit trail report" object.
 
-Change the name and layer position of the "Audit trail report" object in the appearance area in the Inspector window under "Properties > Properties > Miscellaneous".
+Change the name and layer position of the "Audit trail report" object in the appearance area in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous".
 
 ![Inspector window miscellaneous](images/75104273547_DV_resource.Stream@PNG-en-US.png)
 
@@ -575,7 +575,7 @@ To output an Audit Trail in a report file on the printer, perform the following 
 
 ##### Procedure
 
-1. Add a button to the screen and select "Events > Click" in the Properties window.
+1. Add a button to the screen and select "Events &gt; Click" in the Properties window.
 2. In the function list, configure the "StopLogging" system function at the "Click" event and select your Audit Trail log.
 3. Insert an additional button and assign the "PrintReport" system function to the "Click" event of this button.
 4. Insert an additional button and configure the "StartLogging" system function in the same function list.
@@ -642,7 +642,7 @@ The Audit Viewer allows you to evaluate all Audit Trail data in a table.
 
 1. Start the Audit Viewer on the configuration PC:
 
-   "Start > SIMATIC > Audit Viewer > Audit Viewer"
+   "Start &gt; SIMATIC &gt; Audit Viewer &gt; Audit Viewer"
 
    This path may be different on your operating system version.
 2. Click the ![Procedure](images/22965245451_DV_resource.Stream@PNG-de-DE.png)button.
@@ -672,9 +672,9 @@ Long-term archiving on a server allows an Audit Trail to be checked automaticall
 
 In addition the programmer can integrate the check using the DOS program "HmiCheckLogIntegrity" into the archiving process. "HmiCheckLogIntegrity" then provides the following return values:
 
-- < 0: Different errors, for example, wrong file format or no file exists.
+- &lt; 0: Different errors, for example, wrong file format or no file exists.
 - 1: The checked Audit Trail is valid.
-- > 0: The first line that was manipulated will be returned.
+- &gt; 0: The first line that was manipulated will be returned.
 
 Audit Trail logging is only continued if the return value is "1". In both error cases, the administrator or the shift supervisor can be informed.
 
@@ -682,7 +682,7 @@ Audit Trail logging is only continued if the return value is "1". In both error 
 
 The "HmiCheckLogIntegrity.exe" DOS program is in the installation directory under:
 
-"SIEMENS > Automation > WinCC Runtime Advanced"
+"SIEMENS &gt; Automation &gt; WinCC Runtime Advanced"
 
 ### Audit trail logging concept (Panels, Comfort Panels, RT Advanced)
 
@@ -713,7 +713,7 @@ Selection is dependent on the display program and the runtime language used:
 
   > **Note**
   >
-  > Double quotation marks or several characters are not permitted as list separators for the storage site "File - CSV (ASCII)". You can find the settings for list separators under "Start > Settings > Control Panel > Regional and Language Options".
+  > Double quotation marks or several characters are not permitted as list separators for the storage site "File - CSV (ASCII)". You can find the settings for list separators under "Start &gt; Settings &gt; Control Panel &gt; Regional and Language Options".
 - TXT file
 
   This file format supports all characters that can be used in WinCC. For editing, you will need software that can save files in Unicode, such as Notepad.
@@ -868,7 +868,7 @@ If the user changes the value of a GMP-relevant tag in runtime, the value change
 
 ##### Requirement
 
-- "Configuration conforms to GMP" is activated in "Runtime settings > Good Manufacturing Practice".
+- "Configuration conforms to GMP" is activated in "Runtime settings &gt; Good Manufacturing Practice".
 - The tags for which you want to configure the GMP settings are created.
 - The property view is open.
 
@@ -880,7 +880,7 @@ If the user changes the value of a GMP-relevant tag in runtime, the value change
    ![Procedure](images/22945516811_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/22945516811_DV_resource.Stream@PNG-en-US.png)
-3. Click "GMP relevant" under "Properties > Properties > GMP" in the Inspector window.
+3. Click "GMP relevant" under "Properties &gt; Properties &gt; GMP" in the Inspector window.
 4. Specify how the user must confirm a value change in the "Confirmation type" selection field:
 
    - "None"
@@ -983,7 +983,7 @@ If you export recipe data records in a regulated project, you can assign the rec
    ![Procedure](images/22945526667_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/22945526667_DV_resource.Stream@PNG-en-US.png)
-2. Click "GMP relevant" under "Properties > Properties > GMP" in the Inspector window.
+2. Click "GMP relevant" under "Properties &gt; Properties &gt; GMP" in the Inspector window.
 3. Under "Settings", select the following:
 
    - "Record operations in audit trail:"

@@ -43,7 +43,7 @@ The ethernet interfaces are named differently depending on the HMI device.
 2. Double-click the "Connections" item.
 
    ![Introduction](images/137872107019_DV_resource.Stream@PNG-en-US.png)
-3. Double-click "<Add new>" in the "Connections" editor.
+3. Double-click "&lt;Add new&gt;" in the "Connections" editor.
 4. In the "Communication drivers" column, select the “Mitsubishi iQR/iQF TCP/IP " driver.
 5. Select all necessary connection parameters for the interface in the Inspector window under "Parameter".
 6. Under PLC area:
@@ -183,7 +183,7 @@ To set up the IP address of the HMI device:
 3. Click the Ethernet interface.
 4. Assign the IP address in the inspector window under:
 
-   "General > interface > Ethernet addresses"
+   "General &gt; interface &gt; Ethernet addresses"
 
 **Parameters for the PLC**
 
@@ -262,24 +262,24 @@ This section contains information on the following topics:
 3. Create a new project. A pop-up window appears.
 4. Select **Series** as **RCPU** and **Type** as per the CPU used.
 5. Select the **program language** and click **Ok**.
-6. Select **Online -> Current Connection Destination**.
+6. Select **Online -&gt; Current Connection Destination**.
 7. On the **Connection Destination** window:
 
    - Set **PC side I/F** according to the communication type (USB, Ethernet etc.).
    - Set **PLC side I/F** according to the module in use.
    - Set **Other station setting** based on network.
 8. Execute connection test to check if the active connection link is successful. If the connection is successful, click **Ok**, else check the connectivity.
-9. Select **Online -> Read from PLC**, and execute **read from PLC** by choosing the **Select All** option.
-10. In the project navigation window, select **parameter -> <CPU model used> -> Module Parameter**.
-11. Select **Setting Item List > Basic settings**. Perform the following steps:
+9. Select **Online -&gt; Read from PLC**, and execute **read from PLC** by choosing the **Select All** option.
+10. In the project navigation window, select **parameter -&gt; &lt;CPU model used&gt; -&gt; Module Parameter**.
+11. Select **Setting Item List &gt; Basic settings**. Perform the following steps:
 
-    - Own node settings - > Provide Configuration details such as IP address, Subnet Mask, Default Gateway, Enable Online Edit etc.
+    - Own node settings - &gt; Provide Configuration details such as IP address, Subnet Mask, Default Gateway, Enable Online Edit etc.
     - **External Device Configuration –**
 
       - Double-click **Detailed Setting**. The Ethernet Configuration window appears.
 
       - Configure the protocol as SLMP TCP/IP and enter a valid port number. By default, the remaining fields will get populated based on node settings.
-12. Download the configured details to PLC by executing **Write to PLC > Select All** option.
+12. Download the configured details to PLC by executing **Write to PLC &gt; Select All** option.
 
 ### iQF PLC (RT Unified)
 
@@ -290,24 +290,24 @@ This section contains information on the following topics:
 3. Create a new project. A pop-up window appears.
 4. Select **Series** as **FX5CPU** and **Type** as per the CPU used.
 5. Select the program language, and click **Ok**.
-6. Select **Online->Current Connection** Destination.
+6. Select **Online-&gt;Current Connection** Destination.
 7. On the **Connection Destination** window:
 
    - Set **PC side I/F** according communication type (USB, Ethernet etc).
    - Set **PLC side I/F** according to the module in use.
    - Set **Other station** setting based on network.
 8. Execute **connection test** to check if the active connection link is successful. If the connection is successful, click **Ok,** else check the connectivity.
-9. Select **Online->Read from PLC,** and execute **read from PLC** by choosing the **Select All** option.
-10. In the project navigation window, select **parameter-><CPU model used >->Module Parameter><enable online change>.**
-11. Select **Setting Item List** > **Basic settings.** Perform the following steps:
+9. Select **Online-&gt;Read from PLC,** and execute **read from PLC** by choosing the **Select All** option.
+10. In the project navigation window, select **parameter-&gt;&lt;CPU model used &gt;-&gt;Module Parameter&gt;&lt;enable online change&gt;.**
+11. Select **Setting Item List** &gt; **Basic settings.** Perform the following steps:
 
-    - Own node settings - > Provide Configuration details such as IP addresss,Subnet Mask, Default Gateway ,Enable Online Edit etc.
+    - Own node settings - &gt; Provide Configuration details such as IP addresss,Subnet Mask, Default Gateway ,Enable Online Edit etc.
     - **External Device Configuration** -
 
       - Double-click **Detailed Setting**. The Ethernet Configuration window appears.
 
       - Configure the protocol as SLMP TCP/IP, and enter a valid port number. By default, the remaining fields will get populated based on node settings.
-12. Download the configured details to PLC by executing **Write to PLC >Select All** option.
+12. Download the configured details to PLC by executing **Write to PLC &gt;Select All** option.
 
 ### Address areas for Mitsubishi iQR (RT Unified)
 

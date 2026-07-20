@@ -513,7 +513,7 @@ The following table explains the error codes:
 | 0070_0000 | - | First call without rising edge at REQ, which means job execution is not started |
 | 0070_0100 | - | First call with start of job execution |
 | 0070_0200 | - | Subsequent call |
-| 8003_0000 | OpcUa_BadOutOfMemory | No memory available for the OPC UA client.   As the OPC UA client and OPC UA server share a memory area, you should reduce the memory requirement of the server.  You have the following options:  - Release fewer PLC tags for OPC UA. - Reduce the number of OPC UA clients that are currently connected to the server. - Set up fewer subscriptions. - General: Reduce the number of registered OPC UA elements. Use an OPC UA Server diagnostics tool (such as UaExpert from Unified Automation) to ensure that there are no inactive sessions and subscriptions. As countermeasure you can select corresponding timeouts (Subscription Timeout <= Session Timeout) in the client. |
+| 8003_0000 | OpcUa_BadOutOfMemory | No memory available for the OPC UA client.   As the OPC UA client and OPC UA server share a memory area, you should reduce the memory requirement of the server.  You have the following options:  - Release fewer PLC tags for OPC UA. - Reduce the number of OPC UA clients that are currently connected to the server. - Set up fewer subscriptions. - General: Reduce the number of registered OPC UA elements. Use an OPC UA Server diagnostics tool (such as UaExpert from Unified Automation) to ensure that there are no inactive sessions and subscriptions. As countermeasure you can select corresponding timeouts (Subscription Timeout &lt;= Session Timeout) in the client. |
 | 8005_0000 | OpcUa_BadCommunicationError | Connection timeout.  Possible causes:   - The server address (ServerEndpointURL) is incorrect or incomplete, or the server returns a value that differs from the addressed address. A difference between the addressed and returned address occurs in the following cases:   - The server is located in another subnet and is reached via NAT (Network Address Translation)   - The server responds with its name rather than its IP addressFor an associated application example, see: [How do you configure the OPC UA client of a SIMATIC S7-1500 to establish a connection via FQDN or to bypass the FQDN?](https://support.industry.siemens.com/cs/ww/en/view/109771693) - The server does not accept the buffer size sent by the client during connection establishment.   Remedies:  - Check and correct the ServerEndpointURL. If this error is caused by a difference between the addressed and returned address, change the server configuration so that the server responds with the same ServerEndpointURL with which it is addressed by the client. If the behavior of the server cannot be changed, enter the ServerEndpointURL in the "ConnectInfo.ServerUri" tag ("SessionConnectInfo" parameter). The address returned by the server is then overwritten by this value. This value must also be in the server certificate. - Check the permitted buffer size. The client of the S7-1500 CPU provides 8192 bytes. The server must accept this value. |
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow. - The network load is too high. - The OPC UA server is not available. - The server might not accept the buffer size sent by the client during connection establishment.   Remedies:  - Check the URL of the OPC UA server. - Increase the timeout value of the instruction OPC_UA_Connect. - Check the permitted buffer size. The client of the S7-1500 CPU provides 8192 bytes. The server must support this value. |
 | 803D_0000 | OpcUa_BadNotSupported | Possible causes**:**  - The server address (ServerEndpointURL) is incorrect or incomplete. - Server does not support the requested operation. |
@@ -524,7 +524,7 @@ The following table explains the error codes:
 | B080_0100 | Simatic_BadType_VariantInput1 | Incorrect data type for parameter "ServerEndpointUrl". |
 | B080_0200 | Simatic_BadType_VariantInput2 | Incorrect data type for parameter "SessionConnectInfo". |
 | B080_2200 | Simatic_BadValue_VariantInput2 | Incorrect value of the tags "SessionConnectInfo". |
-| B080_C400 | Simatic_ClientNotEnabled | The OPC UA client is disabled.  Solution: Activate the OPC UA client in the properties of the CPU (OPC UA > Client area). |
+| B080_C400 | Simatic_ClientNotEnabled | The OPC UA client is disabled.  Solution: Activate the OPC UA client in the properties of the CPU (OPC UA &gt; Client area). |
 | B080_C500 | Simatic_NothingToDo | Error during initialization of the client. |
 | B080_C600 | Simatic_ClientNotAvailable | Error during initialization of the client. |
 | C080_C300 | Simatic_OutOfResources | The maximum number of client instructions that can be used at the same time has been exceeded.  Possible remedy:  - Reduce the number of client instructions of the type running parallel, see:  [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
@@ -565,7 +565,7 @@ You can use the instruction "OPC_UA_Connect" to establish an unsecure connection
    In the example, the function block is called "ReadFromProductionline".
 
    Used language: SCL.
-3. Use drag-and-drop to move the instruction "OPC_UA_Connect" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_Connect" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction and calls it "OPC_UA_Connect_Instance".
@@ -617,15 +617,15 @@ END_IF;
 
           Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-          ConnectionHdl => "Productionline_Configuration".Connection.ConnectionHdl,
+          ConnectionHdl =&gt; "Productionline_Configuration".Connection.ConnectionHdl,
 
-          Done => #Done,
+          Done =&gt; #Done,
 
-          Busy => #Busy,
+          Busy =&gt; #Busy,
 
-          Error => #Error,
+          Error =&gt; #Error,
 
-          Status => #Status);
+          Status =&gt; #Status);
 
 IF #Done = TRUE THEN
 
@@ -637,7 +637,7 @@ IF #Error = TRUE THEN
 
 // Did we get a connection handle?
 
-    IF "Productionline_Configuration".Connection.ConnectionHdl <> 0 THEN
+    IF "Productionline_Configuration".Connection.ConnectionHdl &lt;&gt; 0 THEN
 
     // We have to release all resources in the server and disconnect
 
@@ -663,7 +663,7 @@ IF #Error = TRUE THEN
 
           REQ := FALSE,
 
-          ConnectionHdl => "Productionline_Configuration".Connection.ConnectionHdl,
+          ConnectionHdl =&gt; "Productionline_Configuration".Connection.ConnectionHdl,
 
           Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout);
 
@@ -800,7 +800,7 @@ The following table shows a summary of error codes for this instruction:
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
 | 800F_0000 | OpcUa_BadNothingToDo | NamespaceUrisCount is 0 |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_NamespaceGetIndexList" instructions that can be called at the same time per connection has been exceeded (> 1), see:    [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_NamespaceGetIndexList" instructions that can be called at the same time per connection has been exceeded (&gt; 1), see:    [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | 809E_0000 | OpcUa_BadDataUnavailable | The indexes of the namespaces are not currently available. |
 | 80AE_0000 | BadConnectionClosed | The connection with the corresponding ConnectionHdl is in "ShutDown" status (connection terminated). The connection/session could not be "reactivated" automatically. Possible cause: Session deleted on the server, e.g. due to restart or timeout).  In this case, you must explicitly close the connection with the instruction "OPC_UA_Disconnect" and release the connection resources again. In your user program, you must reset the ConnectionHdl that has become invalid for this connection.   Then you have to establish a new connection to the server (see instruction "OPC_UA_Connect"). |
 | 80AF_0000 | BadInvalidState | The connection with the corresponding ConnectionHdl is has the "ConnectinError" status (temporary connection error, connection interrupted). The CPU tries to "reactivate" the connection. If this does not succeed in the set timeout interval (OPC UA Session Timeout), the connection goes into the "Shutdown" state. Requirements for the state transition: The CPU could reach the OPC UA server to check whether or not the session is still active. |
@@ -808,10 +808,10 @@ The following table shows a summary of error codes for this instruction:
 | B080_0100 | Simatic_BadType_VariantInput1 | Incorrect data type for parameter "NamenspaceUris". |
 | B080_0200 | Simatic_BadType_VariantInput2 | Incorrect data type for parameter "StatusList". |
 | B080_0300 | Simatic_BadType_VariantInput3 | Incorrect data type for parameter "NamenspaceIndexes". |
-| B080_1100 | Simatic_ArrayElements_TooMany | NamespaceUrisCount > MAX_ELEMENTS_NAMESPACES |
-| B080_3100 | BadNumElements_VariantInput1 | NamespaceUrisCount > Number of array elements of the "NamespaceUris" parameter. |
-| B080_3200 | BadNumElements_VariantInput2 | NamespaceUrisCount > Number of array elements of the "StatusList" parameter. |
-| B080_3300 | BadNumElements_VariantInput3 | NamespaceUrisCount > Number of array elements of the "NamespaceIndexes" parameter. |
+| B080_1100 | Simatic_ArrayElements_TooMany | NamespaceUrisCount &gt; MAX_ELEMENTS_NAMESPACES |
+| B080_3100 | BadNumElements_VariantInput1 | NamespaceUrisCount &gt; Number of array elements of the "NamespaceUris" parameter. |
+| B080_3200 | BadNumElements_VariantInput2 | NamespaceUrisCount &gt; Number of array elements of the "StatusList" parameter. |
+| B080_3300 | BadNumElements_VariantInput3 | NamespaceUrisCount &gt; Number of array elements of the "NamespaceIndexes" parameter. |
 | B080_C500 | Simatic_NothingToDo | Nothing to do: The instruction is using a list that contains no elements (namespaces). |
 | C080_C300 | Simatic_InsufficientResources | The maximum number of client instructions that can be used at the same time has been exceeded.  Possible remedy:  - Reduce the number of client instructions of the type running parallel, see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | For more error codes, see [Error codes](#error-codes-s7-1500). |  |  |
@@ -880,7 +880,7 @@ To use the instruction, the namespace URI (Uniform Resource Indentifier) must be
    In the example, the function block is called "ReadFromProductionline".
 
    Selected language: SCL
-3. Use drag-and-drop to move the instruction "OPC_UA_NamespaceGetIndexList" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_NamespaceGetIndexList" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction and calls it "OPC_UA_NamespaceGetIndexList_Instance".
@@ -934,13 +934,13 @@ END_IF;
 
           REQ := #Req,
 
-          Done => #Done,
+          Done =&gt; #Done,
 
-          Busy => #Busy,
+          Busy =&gt; #Busy,
 
-          Error => #Error,
+          Error =&gt; #Error,
 
-          Status => #Status);
+          Status =&gt; #Status);
 
 IF #Done = TRUE THEN
 
@@ -1089,7 +1089,7 @@ The following table shows a summary of error codes for this instruction:
 | 8009_0000 | OpcUa_BadUnknownResponse | The server has sent has response that could not be recognized. |
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_NodeGetHandleList" instructions that can be called at the same time per connection has been exceeded (> 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_NodeGetHandleList" instructions that can be called at the same time per connection has been exceeded (&gt; 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | 8033_0000 | OpcUa_BadNodeIdInvalid | The syntax of the node is invalid. |
 | 8034_0000 | OpcUa_BadNodeIdUnknown | The ID of the node (NodeId) refers to a node that does not exist in the address space of the server. |
 | 80AE_0000 | BadConnectionClosed | The connection with the corresponding ConnectionHdl is in "ShutDown" status (connection terminated). The connection/session could not be "reactivated" automatically. Possible cause: Session deleted on the server, e.g. due to restart or timeout).  In this case, you must explicitly close the connection with the instruction "OPC_UA_Disconnect" and release the connection resources again. In your user program, you must reset the ConnectionHdl that has become invalid for this connection.   Then you have to establish a new connection to the server (see instruction "OPC_UA_Connect"). |
@@ -1098,11 +1098,11 @@ The following table shows a summary of error codes for this instruction:
 | B080_0200 | Simatic_BadType_VariantInput2 | Incorrect data type for parameter "NamenspaceIndexes". |
 | B080_0300 | Simatic_BadType_VariantInput3 | Incorrect data type for parameter "NodeStatusList". |
 | B080_0400 | Simatic_BadType_VariantInput4 | Incorrect data type for parameter "NodeHdls". |
-| B080_1100 | Simatic_ArrayElements_TooMany | NodeIDCount > MAX_ELEMENTS_NODELIST |
-| B080_3100 | BadNumElements_VariantInput1 | NodeIDCount > Number of array elements of the "NodeIDs" parameter. |
-| B080_3200 | BadNumElements_VariantInput2 | NamespaceIndexCount > Number of array elements of the "NamespaceIndexes" parameter. |
-| B080_3300 | BadNumElements_VariantInput3 | NodeIDCount > Number of array elements of the "NodeStatusList" parameter. |
-| B080_3400 | BadNumElements_VariantInput4 | NodeIDCount > Number of array elements of the "NodeHdls" parameter. |
+| B080_1100 | Simatic_ArrayElements_TooMany | NodeIDCount &gt; MAX_ELEMENTS_NODELIST |
+| B080_3100 | BadNumElements_VariantInput1 | NodeIDCount &gt; Number of array elements of the "NodeIDs" parameter. |
+| B080_3200 | BadNumElements_VariantInput2 | NamespaceIndexCount &gt; Number of array elements of the "NamespaceIndexes" parameter. |
+| B080_3300 | BadNumElements_VariantInput3 | NodeIDCount &gt; Number of array elements of the "NodeStatusList" parameter. |
+| B080_3400 | BadNumElements_VariantInput4 | NodeIDCount &gt; Number of array elements of the "NodeHdls" parameter. |
 | B080_C400 | Simatic_ClientNotEnabled | The OPC UA client is disabled. |
 | B080_C500 | Simatic_NothingToDo | Nothing to do: The instruction is using a list that contains no elements. |
 | C080_C300 | Simatic_OutOfResources | The maximum number of client instructions that can be used at the same time has been exceeded.  Possible remedy:  - Reduce the number of client instructions of the type running parallel, see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
@@ -1183,7 +1183,7 @@ The instruction returns the following information:
    In the example, the function block is called "ReadFromProductionline".
 
    Selected language: SCL.
-3. Use drag-and-drop to move the instruction "OPC_UA_NodeGetHandleList" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_NodeGetHandleList" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction and calls it "OPC_UA_NodeGetHandleList_Instance".
@@ -1249,13 +1249,13 @@ END_IF;
 
           NodeHdls := "Productionline_Configuration".ReadLists."ReadListProduct".NodeHdls,
 
-          Done => #Done,
+          Done =&gt; #Done,
 
-          Busy => #Busy,
+          Busy =&gt; #Busy,
 
-          Error => #Error,
+          Error =&gt; #Error,
 
-          Status => #Status);
+          Status =&gt; #Status);
 
 **Asynchronous execution**
 
@@ -1431,13 +1431,13 @@ SCL
 
             NodeHdls := #NodeHdls,
 
-            Done => #Done,
+            Done =&gt; #Done,
 
-            Busy => #Busy,
+            Busy =&gt; #Busy,
 
-            Error => #Error,
+            Error =&gt; #Error,
 
-            Status => #Status);
+            Status =&gt; #Status);
 
 **The parameters "NamespaceIndexes" and "NamespaceIndexCount" are optional.**
 
@@ -1479,7 +1479,7 @@ An OPC UA server of a device publishes a server interface that meets the Compani
 
 **Alternative**
 
-STEP 7 (TIA Portal) offers you an alternative to the "OPC_UA_TranslatePathList" instruction. You can create a client interface in STEP 7 under "Project tree", <CPU name>, "OPC UA communication" and configure read, write or method lists. STEP 7 then automatically determines the NodeIds of the node.
+STEP 7 (TIA Portal) offers you an alternative to the "OPC_UA_TranslatePathList" instruction. You can create a client interface in STEP 7 under "Project tree", &lt;CPU name&gt;, "OPC UA communication" and configure read, write or method lists. STEP 7 then automatically determines the NodeIds of the node.
 
 However, this alternative requires that you can reach the OPC UA server of this device online or that you use the OPC UA XML file of the device.
 
@@ -1527,7 +1527,7 @@ The parameters of the instruction "OPC_UA_TranslatePathList"
 
 The "NamespaceIndexes" parameter for converting the namespace indexes is optional.
 
-- If you use this parameter ("NamespaceIndexCount" > 0), the namespace indexes of the parameter "BrowsePaths" are converted (to references, BrowseNames and start nodes).
+- If you use this parameter ("NamespaceIndexCount" &gt; 0), the namespace indexes of the parameter "BrowsePaths" are converted (to references, BrowseNames and start nodes).
 - If you **do not** use this parameter as in the example below ("NamespaceIndexCount" = 0), the namespace indexes in the "BrowsePaths" must be set correctly. This means the instruction "OPC_UA_TranslatePathList" does not evaluate the "NamespaceIndexes"" parameter. If you call the "OPC_UA_NodeGetHandleList" instruction in the next step, you also must not convert the namespace indexes, since they are up to date. Therefore, set the "NamespaceIndexCount" parameter of the instruction "OPC_UA_NodeGetHandleList" to 0. Then you do not have to supply the "NamespaceIndexes" parameter.
 
 ###### Error numbers for Status
@@ -1548,18 +1548,18 @@ The following table shows a summary of error codes for this instruction:
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
 | 800F_0000 | OpcUa_BadNothingToDo | Nothing to do: The OPC UA server received an empty list with no instructions from the OPC UA client. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_TranslatePathList" instructions that can be called at the same time per connection has been exceeded  (> 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_TranslatePathList" instructions that can be called at the same time per connection has been exceeded  (&gt; 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | 80AE_0000 | BadConnectionClosed | The connection with the corresponding ConnectionHdl is in "ShutDown" status (connection terminated). The connection/session could not be "reactivated" automatically. Possible cause: Session deleted on the server, e.g. due to restart or timeout).  In this case, you must explicitly close the connection with the instruction "OPC_UA_Disconnect" and release the connection resources again. In your user program, you must reset the ConnectionHdl that has become invalid for this connection.   Then you have to establish a new connection to the server (see instruction "OPC_UA_Connect"). |
 | 80AF_0000 | BadInvalidState | The connection with the corresponding ConnectionHdl is has the "ConnectinError" status (temporary connection error, connection interrupted). The CPU tries to "reactivate" the connection. If this does not succeed in the set timeout interval (OPC UA Session Timeout), the connection goes into the "Shutdown" state. Requirements for the state transition: The CPU could reach the OPC UA server to check whether or not the session is still active. |
 | B080_0100 | Simatic_BadType_VariantInput1 | Incorrect data type for parameter "BrowsePaths". |
 | B080_0200 | Simatic_BadType_VariantInput2 | Incorrect data type for parameter "NamespaceIndexes". |
 | B080_0300 | Simatic_BadType_VariantInput3 | Incorrect data type for parameter "TargetNodeIDs". |
 | B080_0400 | Simatic_BadType_VariantInput4 | Incorrect data type for parameter "TargetStatusList". |
-| B080_1100 | Simatic_ArrayElements_TooMany | BrowsePathscount > MAX_ELEMENTS_RELATIVEPATH |
-| B080_3100 | BadNumElements_VariantInput1 | BrowsePathsCount > Number of array elements of the "BrowsePaths" parameter. |
-| B080_3200 | BadNumElements_VariantInput2 | NamespaceIndexCount > Number of array elements of the "NamspaceIndexes" parameter. |
-| B080_3300 | BadNumElements_VariantInput3 | BrowsePathsCount > Number of array elements of the "TargetNodeIDs" parameter. |
-| B080_3400 | BadNumElements_VariantInput4 | BrowsePathsCount > Number of array elements of the "TargetStatusList" parameter. |
+| B080_1100 | Simatic_ArrayElements_TooMany | BrowsePathscount &gt; MAX_ELEMENTS_RELATIVEPATH |
+| B080_3100 | BadNumElements_VariantInput1 | BrowsePathsCount &gt; Number of array elements of the "BrowsePaths" parameter. |
+| B080_3200 | BadNumElements_VariantInput2 | NamespaceIndexCount &gt; Number of array elements of the "NamspaceIndexes" parameter. |
+| B080_3300 | BadNumElements_VariantInput3 | BrowsePathsCount &gt; Number of array elements of the "TargetNodeIDs" parameter. |
+| B080_3400 | BadNumElements_VariantInput4 | BrowsePathsCount &gt; Number of array elements of the "TargetStatusList" parameter. |
 | B080_C400 | Simatic_ClientNotEnabled | The OPC UA client is disabled. |
 | B080_C500 | Simatic_NothingToDo | Nothing to do: Parameter "BrowsePathsCount" is not supplied or "BrowsePathsCount" = 0. |
 | B080_C600 | Simatic_ClientNotAvailable | Error during initialization of the client |
@@ -1816,7 +1816,7 @@ IF #FirstCall = TRUE THEN
 
     //set Securtiy Message Mode
 
-    // 1 = None, 2 = Sign, 3 = Sign & Encrypt
+    // 1 = None, 2 = Sign, 3 = Sign &amp; Encrypt
 
     #SessionConnectInfo.SecurityMsgMode := 1;
 
@@ -1846,7 +1846,7 @@ END_IF;
 
 #OPC_UA_Connect_Instance(REQ:=#Req,
 
-          ConnectionHdl=>#ConnectionHdl,
+          ConnectionHdl=&gt;#ConnectionHdl,
 
           ServerEndpointUrl:=#SeverEndpointUrl,
 
@@ -1854,13 +1854,13 @@ END_IF;
 
           Timeout:=T#8S,
 
-          Done=>#Done,
+          Done=&gt;#Done,
 
-          Busy=>#Busy,
+          Busy=&gt;#Busy,
 
-          Error=>#Error,
+          Error=&gt;#Error,
 
-          Status=>#Status);
+          Status=&gt;#Status);
 
 ###### Determining the NodeIds of the DeviceInfo and DeviceStatus nodes
 
@@ -1896,13 +1896,13 @@ END_IF;
 
           TargetStatusList := #TargetStatusList,
 
-          Done => #Done,
+          Done =&gt; #Done,
 
-          Busy => #Busy,
+          Busy =&gt; #Busy,
 
-          Error => #Error,
+          Error =&gt; #Error,
 
-          Status => #Status);
+          Status =&gt; #Status);
 
 IF #Done = TRUE THEN
 
@@ -2081,7 +2081,7 @@ The following table shows a summary of error codes for this instruction:
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
 | 800F_0000 | OpcUa_BadNothingToDo | Nothing to do: The OPC UA server received an empty list with no instructions from the OPC UA client. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_ReadList" instructions that can be called at the same time per connection has been exceeded (> 5), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_ReadList" instructions that can be called at the same time per connection has been exceeded (&gt; 5), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | 8074_0000 | OpcUa_BadTypeMismatch | You are using a data type that does not correspond to the data type in the server. |
 | 80AE_0000 | BadConnectionClosed | The connection with the corresponding ConnectionHdl is in "ShutDown" status (connection terminated). The connection/session could not be "reactivated" automatically. Possible cause: Session deleted on the server, e.g. due to restart or timeout).  In this case, you must explicitly close the connection with the instruction "OPC_UA_Disconnect" and release the connection resources again. In your user program, you must reset the ConnectionHdl that has become invalid for this connection.   Then you have to establish a new connection to the server (see instruction "OPC_UA_Connect"). |
 | 80AF_0000 | BadInvalidState | The connection with the corresponding ConnectionHdl is has the "ConnectinError" status (temporary connection error, connection interrupted). The CPU tries to "reactivate" the connection. If this does not succeed in the set timeout interval (OPC UA Session Timeout), the connection goes into the "Shutdown" state. Requirements for the state transition: The CPU could reach the OPC UA server to check whether or not the session is still active. |
@@ -2090,7 +2090,7 @@ The following table shows a summary of error codes for this instruction:
 | B080_0300 | Simatic_BadType_VariantInput3 | Incorrect data type for parameter "NodeStatusList". |
 | B080_0400 | Simatic_BadType_VariantInput4 | Incorrect data type for parameter "TimeStamps". |
 | B080_0500 | Simatic_BadType_VariantInput5 | Incorrect data type for parameter "Variable" (not UDT). |
-| B080_1100 | Simatic_ArrayElements_TooMany | NodeHdlCount > MAX_ELEMENTS_NODELIST  NamespaceIndexCount > MAX_ELEMENTS_NAMESPACES |
+| B080_1100 | Simatic_ArrayElements_TooMany | NodeHdlCount &gt; MAX_ELEMENTS_NODELIST  NamespaceIndexCount &gt; MAX_ELEMENTS_NAMESPACES |
 | B080_3100 | BadNumElements_VariantInput1 | The "NodeHdlCount" parameter is greater than the number of ARRAY elements in the "NodeHdls" parameter. |
 | B080_3200 | BadNumElements_VariantInput2 | The "NodeHdlCount" parameter is greater than the number of ARRAY elements in the "NodeAddInfos" parameter. |
 | B080_3300 | BadNumElements_VariantInput3 | The "NodeHdlCount" parameter is greater than the number of ARRAY elements in the "NodeStatusList" parameter. |
@@ -2118,7 +2118,7 @@ The following table explains the error codes:
 | 803A_0000 | OpcUa_BadNotReadable | No rights for reading or subscribing (Subscribing) this node. |
 | 803C_0000 | OpcUa_BadOutOfRange | The index value specified in the NodeAddInfos parameter is outside the permitted range. |
 | 803D_0000 | OpcUa_BadNotSupported | The OPC UA server does not support one of the requested functions.  Some OPC UA servers do not allow access to the index ranges of an array. |
-| 80AB_0000 | OpcUa_BadInvalidArgument | StartIndex > EndIndex |
+| 80AB_0000 | OpcUa_BadInvalidArgument | StartIndex &gt; EndIndex |
 | For more error codes, see [Error codes](#error-codes-s7-1500). |  |  |
 
 ###### This is how you use this instruction
@@ -2182,7 +2182,7 @@ The instruction returns the following information:
    In the example, the function block is called "ReadFromProductionline".
 
    Selected language: SCL.
-3. Use drag-and-drop to move the instruction "OPC_UA_ReadList" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_ReadList" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction: "OPC_UA_ReadList_Instance".
@@ -2248,13 +2248,13 @@ OPC_UA_ReadList_Instance(REQ := #Req,
 
              Variable := "Productionline_Data"."ReadListProduct".Variable,
 
-             Done => #Done,
+             Done =&gt; #Done,
 
-             Busy => #Busy,
+             Busy =&gt; #Busy,
 
-             Error => #Error,
+             Error =&gt; #Error,
 
-             Status => #Status);
+             Status =&gt; #Status);
 
 **Asynchronous execution**
 
@@ -2586,7 +2586,7 @@ The following table shows a summary of error codes for this instruction:
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
 | 800F_0000 | OpcUa_BadNothingToDo | Nothing to do: The OPC UA server received an empty list with no instructions from the OPC UA client. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_WriteList" instructions that can be called at the same time per connection has been exceeded (> 5), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_WriteList" instructions that can be called at the same time per connection has been exceeded (&gt; 5), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | 80AE_0000 | BadConnectionClosed | The connection with the corresponding ConnectionHdl is in "ShutDown" status (connection terminated). The connection/session could not be "reactivated" automatically. Possible cause: Session deleted on the server, e.g. due to restart or timeout).  In this case, you must explicitly close the connection with the instruction "OPC_UA_Disconnect" and release the connection resources again. In your user program, you must reset the ConnectionHdl that has become invalid for this connection.   Then you have to establish a new connection to the server (see instruction "OPC_UA_Connect"). |
 | 80AF_0000 | BadInvalidState | The connection with the corresponding ConnectionHdl is has the "ConnectinError" status (temporary connection error, connection interrupted). The CPU tries to "reactivate" the connection. If this does not succeed in the set timeout interval (OPC UA Session Timeout), the connection goes into the "Shutdown" state. Requirements for the state transition: The CPU could reach the OPC UA server to check whether or not the session is still active. |
 | B080_0100 | Simatic_BadType_VariantInput1 | Incorrect data type for parameter "NodeHdls". |
@@ -2686,7 +2686,7 @@ The instruction returns the following information:
    In the example, the function block is called "WriteToProductionline".
 
    Selected language: SCL.
-3. Use drag-and-drop to move the instruction "OPC_UA_WriteList" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_WriteList" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction and calls it "OPC_UA_WriteList_Instance".
@@ -2760,13 +2760,13 @@ OPC_UA_WriteList_Instance(REQ := #Req,
 
              Variable := "Productionline_Data"."WriteListStatus".Variable,
 
-             Done => #Done,
+             Done =&gt; #Done,
 
-             Busy => #Busy,
+             Busy =&gt; #Busy,
 
-             Error => #Error,
+             Error =&gt; #Error,
 
-             Status => #Status);
+             Status =&gt; #Status);
 
 **Asynchronous execution**
 
@@ -2931,7 +2931,7 @@ Proceed as follows to shorten this data type:
 
 1. Open the "PLC data types" folder in the "Project tree".
 2. Open the "System data types" folder.
-3. Copy the data type "<client interface>.<write list>".
+3. Copy the data type "&lt;client interface&gt;.&lt;write list&gt;".
 
    In the example, the data type is named ""Productionline.WriteListStatus".
 4. Paste the copied data type to the "PLC data types" folder.
@@ -2960,7 +2960,7 @@ Proceed as follows to create a new data block:
 
 1. In the "Project tree" area, select the CPU that acts as the client.
 2. Open the "Program blocks" folder
-3. Copy the data type <client interface>_Data
+3. Copy the data type &lt;client interface&gt;_Data
 
    In the example, the data block is named "Productionline_Data"
 4. Paste the copied data block to the "Program blocks" folder.
@@ -3110,7 +3110,7 @@ Only the data values of nodes from user-defined server interfaces can be set. Th
 
 ###### Difference to the previous use of OPC_UA_WriteList
 
-For S7-1500 CPUs with firmware version < V3.0, the instruction "OPC_UA_WriteList" can only be used to write PLC tags of a remote OPC UA server. To do this, other instructions must be called beforehand, including those to establish a connection. In addition, further instructions must be called after the write operation to release resources again.
+For S7-1500 CPUs with firmware version &lt; V3.0, the instruction "OPC_UA_WriteList" can only be used to write PLC tags of a remote OPC UA server. To do this, other instructions must be called beforehand, including those to establish a connection. In addition, further instructions must be called after the write operation to release resources again.
 
 These preparations and post-processing are not necessary if you use the instruction "OPC_UA_WriteList" to set one or more OPC UA-DataValues on the OPC UA server of the local CPU. In this case, "OPC_UA_WriteList" works completely independently.
 
@@ -3144,7 +3144,7 @@ The following table shows the parameters of the instruction "OPC_UA_WriteList" i
 | Busy | Output | Bool | Status parameter with the following values:  - 0: Job not yet started or already completed. - 1: Job not yet completed. A new job with this instance cannot be started. |
 | Error | Output | Bool | Status parameter  - 0: No error occurred. - 1: Error occurred during processing.   The "Status" parameter provides detailed information on the type of error. This state is only displayed for one call. |
 | Status | Output | DWord | Return value or error information of the "OPC_UA_WriteList" instruction, see below. |
-| NodeStatusList | InOut | Variant | Pointer to an array with elements of the DWord type.  The array contains the error codes for the individual OPC UA-DataValues, see below.  Each element indicates whether the OPC UA-DataValue could be set successfully for the associated NodeId. NodeStatusList is valid only if Done is 1. Array elements whose index is >= NodeHdlCount are invalid. |
+| NodeStatusList | InOut | Variant | Pointer to an array with elements of the DWord type.  The array contains the error codes for the individual OPC UA-DataValues, see below.  Each element indicates whether the OPC UA-DataValue could be set successfully for the associated NodeId. NodeStatusList is valid only if Done is 1. Array elements whose index is &gt;= NodeHdlCount are invalid. |
 | Tag | InOut | Variant | Note: This parameter has a different meaning than when writing PLC tags of a remote OPC UA server.  Pointer to a structure or PLC data type (UDT) or to an array of a structure or a PLC data type (UDT). The pointer points to the OPC UA-DataValues to be written.  The rules applicable to the OPC UA-DataValues are described below. |
 
 You can find more information on valid data types under [Overview of the valid data types](Data%20types.md#overview-of-the-valid-data-types)
@@ -3190,7 +3190,7 @@ The following table contains the possible error codes.
 | B080_0200 | Simatic_BadType_VariantInput2 | A value has been assigned to the "NoteAddInfos" parameter. |
 | B080_0300 | Simatic_BadType_VariantInput3 | Incorrect data type for the "NodeStatusList" parameter |
 | B080_0400 | Simatic_BadType_VariantInput4 | Incorrect data type for the "Tag" parameter |
-| B080_1100 | Simatic_ArrayElements_TooMany | NodeHdlCount > MAX_ELEMENTS_NODELIST (300) |
+| B080_1100 | Simatic_ArrayElements_TooMany | NodeHdlCount &gt; MAX_ELEMENTS_NODELIST (300) |
 | B080_C300 | Simatic_InsufficientResources | The OPC UA server cannot be reached, for example, due to insufficient memory space. |
 | B080_C500 | Simatic_NothingToDo | NodeHdlCount has the value 0. |
 | B080_C700 | Simatic_ServerNotEnabled | The OPC UA server is not activated. |
@@ -3299,14 +3299,14 @@ The following table shows a summary of error codes for this instruction:
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
 | 800F_0000 | OpcUa_BadNothingToDo | Nothing to do: The OPC UA server received an empty list with no instructions from the OPC UA client. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_NodeReleaseHandleList" instructions that can be called at the same time per connection has been exceeded (> 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_NodeReleaseHandleList" instructions that can be called at the same time per connection has been exceeded (&gt; 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | 80AE_0000 | BadConnectionClosed | The connection with the corresponding ConnectionHdl is in "ShutDown" status (connection terminated). The connection/session could not be "reactivated" automatically. Possible cause: Session deleted on the server, e.g. due to restart or timeout).  In this case, you must explicitly close the connection with the instruction "OPC_UA_Disconnect" and release the connection resources again. In your user program, you must reset the ConnectionHdl that has become invalid for this connection.   Then you have to establish a new connection to the server (see instruction "OPC_UA_Connect"). |
 | 80AF_0000 | BadInvalidState | The connection with the corresponding ConnectionHdl is has the "ConnectinError" status (temporary connection error, connection interrupted). The CPU tries to "reactivate" the connection. If this does not succeed in the set timeout interval (OPC UA Session Timeout), the connection goes into the "Shutdown" state. Requirements for the state transition: The CPU could reach the OPC UA server to check whether or not the session is still active. |
 | B080_0100 | Simatic_BadType_VariantInput1 | Incorrect data type for parameter "NodeHdls". |
-| B080_1100 | Simatic_ArrayElements_TooMany | NodeHdlCount > MAX_ELEMENTS_NODELIST |
+| B080_1100 | Simatic_ArrayElements_TooMany | NodeHdlCount &gt; MAX_ELEMENTS_NODELIST |
 | B080_0200 | Simatic_BadType_VariantInput2 | Incorrect data type for parameter "NodeStatusList". |
-| B080_3100 | BadNumElements_VariantInput1 | NodeHdlCount > Number of array elements of the "NodeHdls" parameter. |
-| B080_3200 | BadNumElements_VariantInput2 | NodeHdlCount > Number of array elements of the "NodeStatusList" parameter. |
+| B080_3100 | BadNumElements_VariantInput1 | NodeHdlCount &gt; Number of array elements of the "NodeHdls" parameter. |
+| B080_3200 | BadNumElements_VariantInput2 | NodeHdlCount &gt; Number of array elements of the "NodeStatusList" parameter. |
 | B080_C400 | Simatic_ClientNotEnabled | The OPC UA client is disabled. |
 | B080_C500 | Simatic_NothingToDo | Nothing to do: The instruction is using a list that contains no elements. |
 | C080_C300 | Simatic_OutOfResources | The maximum number of client instructions that can be used at the same time has been exceeded.  Possible remedy:  - Reduce the number of client instructions of the type running parallel, see:  [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
@@ -3376,7 +3376,7 @@ The function block returns the following information:
    In the example, the function block is called "ReadFromProductionline".
 
    Selected language: SCL.
-3. Use drag-and-drop to move the instruction "OPC_UA_NodeReleaseHandleList" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_NodeReleaseHandleList" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction and calls it "OPC_UA_NodeReleaseHandleList_Instance".
@@ -3438,13 +3438,13 @@ SCL
 
                   NodeStatusList := "Productionline_Data"."ReadListProduct".NodeStatusList,
 
-                  Done => #Done,
+                  Done =&gt; #Done,
 
-                  Busy => #Busy,
+                  Busy =&gt; #Busy,
 
-                  Error => #Error,
+                  Error =&gt; #Error,
 
-                  Status => #Status);
+                  Status =&gt; #Status);
 
 **Asynchronous execution**
 
@@ -3613,7 +3613,7 @@ The "Status" parameter provides information about errors that occurred during ex
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
 | 800F_0000 | OpcUa_BadNothingToDo | Nothing to do: The OPC UA server received an empty list with no instructions from the OPC UA client. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_Disconnect" instructions that can be called at the same time per connection has been exceeded (> 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_Disconnect" instructions that can be called at the same time per connection has been exceeded (&gt; 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | B080_C400 | Simatic_ClientNotEnabled | The OPC UA client is disabled. |
 | B080_C600 | Simatic_ClientNotAvailable | Error during initialization of the client |
 | C080_C300 | Simatic_OutOfResources | The maximum number of client instructions that can be used at the same time has been exceeded.  Possible remedy:  - Reduce the number of client instructions of the type running parallel, see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
@@ -3648,7 +3648,7 @@ You call the instruction "OPC_UA_Disconnect" to disconnect the connection to an 
    In the example, the function block is called "ReadFromProductionline".
 
    Selected language: SCL.
-3. Use drag-and-drop to move the instruction "OPC_UA_Disconnect" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_Disconnect" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction and calls it "OPC_UA_Disconnect_Instance".
@@ -3690,13 +3690,13 @@ SCL
 
                   Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-                  Done => #Done,
+                  Done =&gt; #Done,
 
-                  Busy => #Busy,
+                  Busy =&gt; #Busy,
 
-                  Error => #Error,
+                  Error =&gt; #Error,
 
-                  Status => #Status);
+                  Status =&gt; #Status);
 
 The example program calls the "OPC_UA_Disconnect" instruction for the following reasons:
 
@@ -3788,7 +3788,7 @@ The following table shows a summary of error codes for this instruction:
 | 8009_0000 | OpcUa_BadUnknownResponse | The server sends an unknown or invalid response. |
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_ConnectionGetStatus" instructions that can be called at the same time per connection has been exceeded (> 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_ConnectionGetStatus" instructions that can be called at the same time per connection has been exceeded (&gt; 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | 8074_0000 | OpcUa_BadTypeMismatch | ServerState / ServiceLevel have unexpected type. |
 | A000_0105 | PLCopenUA_Bad_ConnectionInvalidHdl | The connection handle (ConnectionHdl) is invalid / unknown. You need to establish a new connection. When a connection is released with the "OPC_UA_Disconnect" instruction, the Connection Handle for this connection also becomes invalid. **Note**: For S7-1500 CPUs as of firmware version V2.8, the connection handle is **only** released or invalid when the OPC_UA_Disconnect instruction is called. |
 | B080_C400 | Simatic_ClientNotEnabled | The OPC UA client is disabled. |
@@ -3845,19 +3845,19 @@ SCL
 
                   Timeout := T#6S,
 
-                  Done => #Done,
+                  Done =&gt; #Done,
 
-                  Error => #Error,
+                  Error =&gt; #Error,
 
-                  Busy => #Busy,
+                  Busy =&gt; #Busy,
 
-                  Status => #Status,
+                  Status =&gt; #Status,
 
-                  ConnectionStatus => #ConnectionStatus,
+                  ConnectionStatus =&gt; #ConnectionStatus,
 
-                  ServerState => #ServerState,
+                  ServerState =&gt; #ServerState,
 
-                  ServiceLevel => #ServiceLevel);
+                  ServiceLevel =&gt; #ServiceLevel);
 
     IF #Done = TRUE THEN
 
@@ -3929,7 +3929,7 @@ Your program has the same access rights as a remote OPC UA client with guest aut
 
 ###### Difference to the previous use of OPC_UA_ReadList
 
-For S7-1500 CPUs with firmware version < V3.0, the "OPC_UA_ReadList" instruction can only be used to read PLC tags of a remote OPC UA server. To do this, other instructions must be called beforehand, including those to establish a connection. In addition, further instructions must be called after the read operation in order to release resources again.
+For S7-1500 CPUs with firmware version &lt; V3.0, the "OPC_UA_ReadList" instruction can only be used to read PLC tags of a remote OPC UA server. To do this, other instructions must be called beforehand, including those to establish a connection. In addition, further instructions must be called after the read operation in order to release resources again.
 
 These pre-processing and post-processing steps are not required if you use the instruction "OPC_UA_ReadList" to diagnose the OPC UA server of the local CPU. In this case, "OPC_UA_ReadList" works completely independent.
 
@@ -3983,7 +3983,7 @@ The following table contains the possible error codes.
 | B080_0300 | Simatic_BadType_VariantInput3 | The value assigned to the NodeStatusList parameter points to an element of wrong type. NodeStatusList must be a pointer to an array of the DWORD type. |
 | B080_0400 | Simatic_BadType_VariantInput4 | The value assigned to the TimeStamps parameter points to an element of wrong type. TimeStamps must be a pointer to an array of the LDT type. |
 | B080_0500 | Simatic_BadType_VariantInput5 | The value assigned to the Tag parameter points to an element of wrong type. Tag must be a pointer to a structure or a PLC data type (UDT). |
-| B080_1100 | Simatic_ArrayElements_TooMany | NodeHdlCount > MAX_ELEMENTS_NODELIST (300) |
+| B080_1100 | Simatic_ArrayElements_TooMany | NodeHdlCount &gt; MAX_ELEMENTS_NODELIST (300) |
 | B080_3100 | BadNumElements_VariantInput1 | The value of NodeHdlCount is greater than the size of the array pointed to by NodeHdls. |
 | B080_3200 | BadNumElements_VariantInput2 | The value of NodeHdlCount is greater than the size of the array pointed to by NodeAddInfos. |
 | B080_3300 | BadNumElements_VariantInput3 | The value of NodeHdlCount is greater than the size of the array pointed to by NodeStatusList. |
@@ -3997,7 +3997,7 @@ The following table contains the possible error codes.
 
 ###### "NodeStatusList" parameter
 
-Each element in the "NodeStatusList" parameter indicates whether the value for the associated NodeId in NodeHDls could be successfully read. NodeStatusList is only valid if "Done" has the value TRUE. Elements whose index is >= NodeHdlCount are ignored and are invalid.
+Each element in the "NodeStatusList" parameter indicates whether the value for the associated NodeId in NodeHDls could be successfully read. NodeStatusList is only valid if "Done" has the value TRUE. Elements whose index is &gt;= NodeHdlCount are ignored and are invalid.
 
 > **Note**
 >
@@ -4034,7 +4034,7 @@ You can determine the data specified in the "Comment" column (e. g. "ServerDiagn
 | Determine number of connected clients | CurrentSessionCount (ns=0; i=2277) | Each client creates at least one session. This information could help to determine if all partners of the machine are properly connected. All nodes below (ns=0; i=2275) "ServerDiagnosticsSummary" (of which "CurrentSessionCount" is a component) have a fixed NodeId in ns=0. |
 | Check overall status of the server | ServerState (ns=0; i=2259) | The OPC UA server has an overall status (e.g. failed, running, etc.) that may be of interest to the user program. |
 | Session diagnostics | SessionDiagnosticsArray (ns=0; i=3707) | The OPC UA server keeps track of all sessions. Several parameters can be of interest, e.g. ClientConnectionTime, ClientLastContactTime.  An entry is created in the SessionDiagnosticsArray for each session. In other words, the size of this array is variable. You must either provide a sufficiently large array in your user program or access a subset of this array using the NodeAddInfos parameter (see [Reading array range information with OPC_UA_ReadList](#reading-array-range-information-with-opc_ua_readlist-s7-1500)). To determine the current number of sessions, you read the CurrentSessionCount node (ns=0; i=2277) in the same read job. This allows you to determine how many values in the array are currently valid. You can specify the maximum number of sessions via the device configuration in TIA Portal.  See also below "Additional notes on session diagnostics". |
-| Subscription diagnostics | SubscriptionDiagnosticsArray  (ns=0; i=2290) | The OPC UA server keeps track of all subscriptions and monitored objects. Several parameters can be of interest, e.g. LateSubscriptions, expired subscriptions.  An entry is created in the SubscriptionDiagnosticsArray for each subscription. In other words, the size of this array is variable. You must either provide a sufficiently large array in your user program or access a subset of this array using the NodeAddInfos parameter (see [Reading array range information with OPC_UA_ReadList](#reading-array-range-information-with-opc_ua_readlist-s7-1500)). To determine the current number of subscriptions, read the node CurrentSubscriptionCount (ns=0; i=2285) in the same read job. This allows you to determine how many values in the array are currently valid. If you want to access a single element of the SubscriptionDiagnosticsArray in your program, you need the Subscription ID, because it is part of the NodeId, e.g. ns=1; s=Subscription_<SubscriptionId>.MonitoredItemCount. The Subscription ID is not known at the time of configuration. |
+| Subscription diagnostics | SubscriptionDiagnosticsArray  (ns=0; i=2290) | The OPC UA server keeps track of all subscriptions and monitored objects. Several parameters can be of interest, e.g. LateSubscriptions, expired subscriptions.  An entry is created in the SubscriptionDiagnosticsArray for each subscription. In other words, the size of this array is variable. You must either provide a sufficiently large array in your user program or access a subset of this array using the NodeAddInfos parameter (see [Reading array range information with OPC_UA_ReadList](#reading-array-range-information-with-opc_ua_readlist-s7-1500)). To determine the current number of subscriptions, read the node CurrentSubscriptionCount (ns=0; i=2285) in the same read job. This allows you to determine how many values in the array are currently valid. If you want to access a single element of the SubscriptionDiagnosticsArray in your program, you need the Subscription ID, because it is part of the NodeId, e.g. ns=1; s=Subscription_&lt;SubscriptionId&gt;.MonitoredItemCount. The Subscription ID is not known at the time of configuration. |
 | Static nodes of namespace 3 (standard SIMATIC interface) | - ns=3; s=DeviceManual - ns=3; s=DeviceRevision - ns=3; s=EngineeringRevision - ns=3; s=HardwareRevision - ns=3; s=Manufacturer - ns=3; s=Model - ns=3; s=OperatingMode - ns=3; s=OrderNumber - ns=3; s=RevisionCounter - ns=3; s=SerialNumber - ns=3; s=SoftwareRevision | You can read in your program those nodes that are available if the standard SIMATIC server interface has been deactivated in TIA Portal. |
 
 ###### Additional notes on session diagnostics
@@ -4045,7 +4045,7 @@ Up to and including firmware version V2.9, the size of an array that is part of 
 
 The following applies in regard to compatibility: Accesses that have worked so far will continue to work. Accesses that were previously incorrect may now return values.
 
-If you want to access a single element of the SessionDiagnosticsArray (ns=0;i=3707) in your program, you have to determine the session ID first. The session ID is part of the NodeId and not yet known at the time of configuration. For example, if you want to determine the "ClientLastContactTime" for a certain session, the NodeId looks like this: ns=1; s=Session_<SessionId>. SessionDiagnostic. ClientLastContactTime. One way to determine the session ID is to read the SessionDiagnosticsArray (ns=0; i=3707) and use, for example, the session name to identify the session you are looking for. Both the session name and the session ID are part of the OPC UA "SessionDiagnosticsDataType" and are therefore contained in the SessionDiagnosticsArray (ns=0; i=3707) for each session.
+If you want to access a single element of the SessionDiagnosticsArray (ns=0;i=3707) in your program, you have to determine the session ID first. The session ID is part of the NodeId and not yet known at the time of configuration. For example, if you want to determine the "ClientLastContactTime" for a certain session, the NodeId looks like this: ns=1; s=Session_&lt;SessionId&gt;. SessionDiagnostic. ClientLastContactTime. One way to determine the session ID is to read the SessionDiagnosticsArray (ns=0; i=3707) and use, for example, the session name to identify the session you are looking for. Both the session name and the session ID are part of the OPC UA "SessionDiagnosticsDataType" and are therefore contained in the SessionDiagnosticsArray (ns=0; i=3707) for each session.
 
 ###### More information
 
@@ -4147,7 +4147,7 @@ The following table shows a summary of error codes for this instruction:
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
 | 800F_0000 | OpcUa_BadNothingToDo | Nothing to do: The OPC UA server received an empty list with no instructions from the OPC UA client. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_MethodGetHandleList" instructions that can be called at the same time per connection has been exceeded (> 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_MethodGetHandleList" instructions that can be called at the same time per connection has been exceeded (&gt; 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | 8074_0000 | OpcUa_BadTypeMismatch | You are using a data type that does not correspond to the data type in the server. |
 | B080_0100 | Simatic_BadType_VariantInput1 | Incorrect data type for parameter "ObjectNodeIDs". |
 | B080_0200 | Simatic_BadType_VariantInput2 | Incorrect data type for parameter "MethodNodeIDs". |
@@ -4155,7 +4155,7 @@ The following table shows a summary of error codes for this instruction:
 | B080_0400 | Simatic_BadType_VariantInput4 | Incorrect data type for parameter "StatusList". |
 | B080_0500 | Simatic_BadType_VariantInput5 | Incorrect data type for parameter "MethodHdls". |
 | B080_1100 | Simatic_ArrayElements_TooMany | Maximum number allowed for method list (Max_ELEMENTS_METHODLIST) exceeded. |
-| B080_3100  B080_3200  B080_3300  B080_3400  B080_3500  General:  B080_3N00(N=Nth VARIANT of the instruction) | Simatic_BadNumElements_VariantInput1  Simatic_BadNumElements_VariantInput2  Simatic_BadNumElements_VariantInput3  Simatic_BadNumElements_VariantInput4  Simatic_BadNumElements_VariantInput5  General:   Simatic_BadNumElements_VariantInputN  (N=nth version of the instruction) | - Incorrect number of array elements at the 1st VARIANT parameter (VariantInput1):    NodeIDCount > Number of array elements from ObjectNodeIDs - Incorrect number of array elements at the 2nd VARIANT parameter (VariantInput2):   NodeIDCount > Number of array elements from MethodNodeIDs - Incorrect number of array elements at the 3rd VARIANT parameter (VariantInput3):    NamespaceIndexCount > Number of array elements from NamespaceIndexes - Incorrect number of array elements at the 4th VARIANT parameter (VariantInput4):    NodeIDCount > Number of array elements from StatusList - Incorrect number of array elements at the 5th VARIANT parameter (VariantInput5):    NodeIDCount > Number of array elements from MethodHdls   General: Wrong number of elements for the Nth VARIANT parameter. |
+| B080_3100  B080_3200  B080_3300  B080_3400  B080_3500  General:  B080_3N00(N=Nth VARIANT of the instruction) | Simatic_BadNumElements_VariantInput1  Simatic_BadNumElements_VariantInput2  Simatic_BadNumElements_VariantInput3  Simatic_BadNumElements_VariantInput4  Simatic_BadNumElements_VariantInput5  General:   Simatic_BadNumElements_VariantInputN  (N=nth version of the instruction) | - Incorrect number of array elements at the 1st VARIANT parameter (VariantInput1):    NodeIDCount &gt; Number of array elements from ObjectNodeIDs - Incorrect number of array elements at the 2nd VARIANT parameter (VariantInput2):   NodeIDCount &gt; Number of array elements from MethodNodeIDs - Incorrect number of array elements at the 3rd VARIANT parameter (VariantInput3):    NamespaceIndexCount &gt; Number of array elements from NamespaceIndexes - Incorrect number of array elements at the 4th VARIANT parameter (VariantInput4):    NodeIDCount &gt; Number of array elements from StatusList - Incorrect number of array elements at the 5th VARIANT parameter (VariantInput5):    NodeIDCount &gt; Number of array elements from MethodHdls   General: Wrong number of elements for the Nth VARIANT parameter. |
 | B080_C400 | Simatic_ClientNotEnabled | The OPC UA client is disabled. |
 | B080_C500 | Simatic_NothingToDo | Nothing to do: The instruction is using a list that contains no elements. |
 | C080_C300 | Simatic_OutOfResources | The maximum number of client instructions that can be used at the same time has been exceeded.  Possible remedy:  - Reduce the number of client instructions of the type running parallel, see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
@@ -4207,7 +4207,7 @@ You need these handles for the OPC UA instruction for calling methods, "OPC_UA_M
    In the example, the function block is called "Call_OpenDoor_On_Productionline".
 
    Selected language: SCL.
-3. Use drag-and-drop to move the instruction "OPC_UA_MethodGetHandleList" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_MethodGetHandleList" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction and calls it "OPC_UA_MethodGetHandleList_Instance".
@@ -4266,13 +4266,13 @@ SCL
 
                   NamespaceIndexes := "Productionline_Configuration".Namespaces.ServerNamespaceIndexes,
 
-                  Done => #Done,
+                  Done =&gt; #Done,
 
-                  Busy => #Busy,
+                  Busy =&gt; #Busy,
 
-                  Error => #Error,
+                  Error =&gt; #Error,
 
-                  Status => #Status,
+                  Status =&gt; #Status,
 
                   StatusList := "Productionline_Data"."MethodListOpenDoor".MethodStatusList,
 
@@ -4405,7 +4405,7 @@ The parameters of the instruction "OPC_UA_MethodCall"
 | Busy | Output | BOOL | Execution status parameter:  - **0**: Instruction not being executed - **1**: Instruction currently being executed |
 | Error | Output | BOOL | Error display  - **0**: No error - **1**: An error has occurred. See "Status" parameter. |
 | Status | Output | DWORD | Cause of the error, see "Error numbers for Status" below |
-| MethodResult | InOut | VARIANT | Pointer to a tag of the type DWORD that contains the error code (result) of the server method called.   This error code is provided by the user program of the OPC UA server. In the case of an S7-1500 CPU as OPC UA server, it is the "UAMethod_Result" parameter of the server instruction "OPC_UA_ServerMethodPost" that you can read out with the client instruction "OPC_UA_MethodCall".  If the instruction "OPC_UA_MethodCall" was not executed (Error = true, Status <> 0), no value is set for MethodResult. |
+| MethodResult | InOut | VARIANT | Pointer to a tag of the type DWORD that contains the error code (result) of the server method called.   This error code is provided by the user program of the OPC UA server. In the case of an S7-1500 CPU as OPC UA server, it is the "UAMethod_Result" parameter of the server instruction "OPC_UA_ServerMethodPost" that you can read out with the client instruction "OPC_UA_MethodCall".  If the instruction "OPC_UA_MethodCall" was not executed (Error = true, Status &lt;&gt; 0), no value is set for MethodResult. |
 
 ###### Error numbers for Status
 
@@ -4425,7 +4425,7 @@ The following table explains the error codes:
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
 | 800F_0000 | OpcUa_BadNothingToDo | Nothing to do: The OPC UA server received an empty list with no instructions from the OPC UA client. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_MethodCall" instructions that can be called at the same time per connection has been exceeded (> 5), see:   [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_MethodCall" instructions that can be called at the same time per connection has been exceeded (&gt; 5), see:   [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | 8034_0000 | BadNodeIdUnknown | The node id refers to a node that does not exist in the server address space.  The NamespaceIndex of the specified NodeId might not exist. If the error code is displayed when the instruction "OPC_UA_MethodCall" is called:   Another possible cause is the use of invalid ObjectIDs in the preceding call of OPC_UA_MethodGetHandleList. The instruction "OPC_UA_MethodGetHandleList" does not evaluate the ObjectIDs. |
 | 8074_0000 | OpcUa_BadTypeMismatch | Argument variant has incorrect type. |
 | 8075_0000 | OpcUa_BadMethodInvalid | No registered method for the specified MethodHdl |
@@ -4472,7 +4472,7 @@ You use the instruction "OPC_UA_MethodCall" to call a method that has been relea
    In the example, the function block is called "Call_OpenDoor_On_Productionline".
 
    Selected language: SCL.
-3. Use drag-and-drop to move the instruction "OPC_UA_MethodCall" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_MethodCall" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction and calls it "OPC_UA_MethodCall_Instance".
@@ -4534,7 +4534,7 @@ END_IF;
 
            MethodHdl := "Productionline_Configuration".MethodLists."MethodListOpenDoor".MethodHdls[0],
 
-           Status => "Productionline_Data"."MethodListOpenDoor".MethodStatusList[0],
+           Status =&gt; "Productionline_Data"."MethodListOpenDoor".MethodStatusList[0],
 
            InputArguments := "Productionline_Data"."MethodListOpenDoor"."Method".Inputs,
 
@@ -4542,11 +4542,11 @@ END_IF;
 
            MethodResult := "Productionline_Data"."MethodListOpenDoor".MethodResultList[0],
 
-           Done => #Done,
+           Done =&gt; #Done,
 
-          Busy => #Busy,
+          Busy =&gt; #Busy,
 
-           Error => #Error);
+           Error =&gt; #Error);
 
    //"Productionline_Data"."MethodListOpenDoor".MethodResultList[0]] contains
 
@@ -4585,7 +4585,7 @@ The figure below shows evaluation of the "Done" and "Error" parameters.
 SCL
 
 IF #Done = TRUE THEN  
-    IF "Productionline_Data".MethodListOpenDoor.MethodResultList[0] < 16#8000_0000 THEN
+    IF "Productionline_Data".MethodListOpenDoor.MethodResultList[0] &lt; 16#8000_0000 THEN
 
         #State := #State + 1;
 
@@ -4625,7 +4625,7 @@ IF #Error = TRUE THEN
 
           MethodHdl := "Productionline_Configuration".MethodLists."MethodListOpenDoor".MethodHdls[0],
 
-          Status => "Productionline_Data"."MethodListOpenDoor".MethodStatusList[0],
+          Status =&gt; "Productionline_Data"."MethodListOpenDoor".MethodStatusList[0],
 
           InputArguments := "Productionline_Data"."MethodListOpenDoor"."Method".Inputs,
 
@@ -4633,11 +4633,11 @@ IF #Error = TRUE THEN
 
           MethodResult := "Productionline_Data"."MethodListOpenDoor".MethodResultList[0],
 
-          Done => #Done,
+          Done =&gt; #Done,
 
-          Busy => #Busy,
+          Busy =&gt; #Busy,
 
-          Error => #Error);
+          Error =&gt; #Error);
 
 END_IF;
 
@@ -4714,12 +4714,12 @@ The following table shows a summary of error codes for this instruction:
 | 800A_0000 | OpcUa_BadTimeout | A network timeout occurred.   Possible causes:  - Connection to the OPC UA server is too slow (insufficient capacity) - The network load is too high. - The OPC UA server is not available.   Possible remedy:  - Check the URL of the OPC UA server - Increase the timeout setting (higher value for the Timeout parameter of the function block OPC_UA_Connect). |
 | 800D_0000 | OpcUa_BadServerNotConnected | The server is not connected or the connection handle is incorrect or invalid. |
 | 800F_0000 | OpcUa_BadNothingToDo | Nothing to do: The OPC UA server received an empty list with no instructions from the OPC UA client. |
-| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_MethodReleaseHandleList" instructions that can be called at the same time per connection has been exceeded (> 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
+| 8010_0000 | OpcUa_BadTooManyOperations | Number of "OPC_UA_MethodReleaseHandleList" instructions that can be called at the same time per connection has been exceeded (&gt; 1), see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
 | B080_0100 | Simatic_BadType_VariantInput1 | Incorrect data type for parameter "MethodHdls". |
 | B080_0200 | Simatic_BadType_VariantInput2 | Incorrect data type for parameter "StatusList". |
-| B080_1100 | Simatic_ArrayElements_TooMany | MethodHdlCount > MAX_ELEMENTS_METHOD |
-| B080_3100 | BadNumElements_VariantInput1 | MethodHdlCount > Number of array elements of the "MethodHdls" parameter. |
-| B080_3200 | BadNumElements_VariantInput2 | MethodHdlCount > Number of array elements of the "StatusList" parameter. |
+| B080_1100 | Simatic_ArrayElements_TooMany | MethodHdlCount &gt; MAX_ELEMENTS_METHOD |
+| B080_3100 | BadNumElements_VariantInput1 | MethodHdlCount &gt; Number of array elements of the "MethodHdls" parameter. |
+| B080_3200 | BadNumElements_VariantInput2 | MethodHdlCount &gt; Number of array elements of the "StatusList" parameter. |
 | B080_C400 | Simatic_ClientNotEnabled | The OPC UA client is disabled. |
 | B080_C500 | Simatic_NothingToDo | Nothing to do: The instruction is using a list that contains no elements. |
 | C080_C300 | Simatic_OutOfResources | The maximum number of client instructions that can be used at the same time has been exceeded.  Possible remedy:  - Reduce the number of client instructions of the type running parallel, see: [Number of client instructions that can be used simultaneously](Configuring%20automation%20systems.md#number-of-client-instructions-that-can-be-used-simultaneously-s7-1500-s7-1500t) |
@@ -4768,7 +4768,7 @@ You call the instruction "OPC_UA_MethodReleaseHandleList" to release handles for
    In the example, the function block is called "Call_OpenDoor_On_Productionline".
 
    Selected language: SCL.
-3. Use drag-and-drop to move the instruction "OPC_UA_MethodReleaseHandleList" from the folder "Instructions > Communication > OPC UA > OPC UA Client" to the editor.
+3. Use drag-and-drop to move the instruction "OPC_UA_MethodReleaseHandleList" from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Client" to the editor.
 4. Select the call as multi-instance.
 
    STEP 7 creates an instance of this instruction and calls it "OPC_UA_MethodReleaseHandleList_Instance".
@@ -4824,13 +4824,13 @@ SCL
 
              StatusList := "Productionline_Data"."MethodListOpenDoor".MethodStatusList,
 
-             Done => #Done,
+             Done =&gt; #Done,
 
-             Busy => #Busy,
+             Busy =&gt; #Busy,
 
-             Error => #Error,
+             Error =&gt; #Error,
 
-             Status => #Status);
+             Status =&gt; #Status);
 
 **Asynchronous execution**
 
@@ -4943,15 +4943,15 @@ Parameters of system data type "OPC_UA_SessionConnectInfo"
 | --- | --- | --- |
 | SessionName | WSTRING[64] | Name of the session, which you can enter here. The parameter can be empty.  If you do not enter a name, the OPC UA server assigns one.  The session name is used, for example, to identify the connection for diagnostic purposes. |
 | ApplicationName | WSTRING[64] | Name of the OPC UA client. The application name is a component of the client description, which in turn is a component of the session (see SessionName). It is not possible to set a unique ApplicationName for each session. The STRING **must** be empty, otherwise error code "Simatic_BadValue_VariantInput2 (0xB080_2200)" is returned. The configured application name is used as the ApplicationName for SIMATIC (CPU parameters in the OPC UA area). |
-| SecurityMsgMode | UDINT | Security process  - 0 = Best possible procedure Note: This setting is not permitted! - 1 = None - 2 = Sign - 3 = Sign&Encrypt |
+| SecurityMsgMode | UDINT | Security process  - 0 = Best possible procedure Note: This setting is not permitted! - 1 = None - 2 = Sign - 3 = Sign&amp;Encrypt |
 | SecurityPolicy | UDINT | Securityprofile  - 0 = Best possible security profile Note: This setting is not permitted! - 1 = No security profile - 2 = Basic128Rsa15 - 3 = Basic256 - 4 = Basic256Sha256 |
 | ServerUri | STRING[254] | Only relevant for connections to an OPC UA server via a gateway server.  CPUs with firmware versions ≤ V2.6 do not support gateway servers. This parameter therefore must be supplied with an empty string. |
-| CheckServerCertificate | BOOL | If this bit is set, the client checks the certificate sent by the server against the configured trustworthy certificates. You can access the list of trusted certificates via the properties of the Client CPU > "Protection & Security" area > Certificate Manager. There you can find the "Certificates of the partner devices" table, which you have to fill out.  The requirement for filling is that you have imported the required certificates via the global certificate manager (Project tree > Certificate manager > "Trusted Certificates and Root Certification Authorities" tab).   If the bit is not set, the client does not check the server certificate. |
+| CheckServerCertificate | BOOL | If this bit is set, the client checks the certificate sent by the server against the configured trustworthy certificates. You can access the list of trusted certificates via the properties of the Client CPU &gt; "Protection &amp; Security" area &gt; Certificate Manager. There you can find the "Certificates of the partner devices" table, which you have to fill out.  The requirement for filling is that you have imported the required certificates via the global certificate manager (Project tree &gt; Certificate manager &gt; "Trusted Certificates and Root Certification Authorities" tab).   If the bit is not set, the client does not check the server certificate. |
 | TransportProfile | UDINT | 1 = UATP_UATcp  According to the PLCopen specification, only this transport profile is supported. |
 | UserIdentityTokenType | UDINT | For user authentication data, see the explanation below this table. |
 | UserTokenParam1 | WSTRING[64] | The meaning depends on UserIdentityTokenType (for example user name). |
 | UserTokenParam2 | WSTRING[64] | The meaning depends on UserIdentityTokenType (for example password). |
-| CertificateID | UDINT | The ID of the certificate that you use for the OPC UA client.  You can find the ID in STEP 7 (TIA Portal) under "Global security settings" > "Certificate manager" > "Device certificates" and also in the CPU properties ("Protection & Security" > "Certificate Manager" area). There you can find the "Device certificates" table with the IDs of the certificates.   Proceed as follows to generate a certificate for the client:  1. In the TIA Portal, select the properties of the CPU that is used as the client. 2. If a self-signed certificate is sufficient for you, skip this step. If you want to use a certificate signed by a CA, then select the "Use global security settings for certificate manager" option under "Security" > "Certificate manager" > "Global security settings". 3. Navigate to the "Device certificates" table and double-click on an empty field in the "Certificate holder" column.  A certificate icon appears at the left edge of the row. 4. Click on the "Certificate holder" field again.  A drop-down list opens showing the existing device certificates. 5. Click on the "Add" button. A dialog with setting options for the certificate is displayed. 6. Select "OPC UA Client" or "OPC UA Client & Server" for the use and then "OK". |
+| CertificateID | UDINT | The ID of the certificate that you use for the OPC UA client.  You can find the ID in STEP 7 (TIA Portal) under "Global security settings" &gt; "Certificate manager" &gt; "Device certificates" and also in the CPU properties ("Protection &amp; Security" &gt; "Certificate Manager" area). There you can find the "Device certificates" table with the IDs of the certificates.   Proceed as follows to generate a certificate for the client:  1. In the TIA Portal, select the properties of the CPU that is used as the client. 2. If a self-signed certificate is sufficient for you, skip this step. If you want to use a certificate signed by a CA, then select the "Use global security settings for certificate manager" option under "Security" &gt; "Certificate manager" &gt; "Global security settings". 3. Navigate to the "Device certificates" table and double-click on an empty field in the "Certificate holder" column.  A certificate icon appears at the left edge of the row. 4. Click on the "Certificate holder" field again.  A drop-down list opens showing the existing device certificates. 5. Click on the "Add" button. A dialog with setting options for the certificate is displayed. 6. Select "OPC UA Client" or "OPC UA Client &amp; Server" for the use and then "OK". |
 | SessionTimeout | TIME | Maximum time for which a session is maintained after the connection to the OPC UA server has been interrupted (in milliseconds).  Default setting: 20000 (20 seconds) |
 | MonitorConnection | TIME | Connection monitoring time (in milliseconds)  Time interval for checking a connection over which no data is currently being transferred.  Default setting: 5000 (5 seconds) |
 | LocaleIDs | ARRAY[1..5] of STRING[6] | Optional language and regional identifier acc. to RFC 3066.  0 = no or unknown LocaleID. |
@@ -4964,7 +4964,7 @@ The following table shows the values possible for "UserIdentityTokenType" for S7
 | --- | --- | --- | --- |
 | **0** | Ignored | Ignored | Guest authentication, which means access without authentication.  (Anonymous user) |
 | **1** | User name | Password | Authentication by means of user name and password.  The password is stored in plain text in the corresponding global data block or instance data block and can be read out.  However, an S7-1500 CPU as OPC UA client only permits connection establishment when the security policies ensure that the user name and password are only transmitted encrypted.   Recommendation: Use users from the user administration of the project. |
-| **42** | User name from the user administration of the project (Security settings) | Ignored | Simatic-specific value for UserIdentityTokenType. Authentication only for users from the user administration of the project.  For users from the user administration of the project, you download the password together with the other user data and the configuration data to the client CPU.   This way you protect the password from being accessed from the outside. You must have assigned the function right "User authentication of the OPC UA client" to the user in the project tree (Security settings > Users and roles).  When you make the settings for user authentication in the OPC UA client interface, select the option "User (TIA Portal – Security settings)" and enter a previously configured user name. |
+| **42** | User name from the user administration of the project (Security settings) | Ignored | Simatic-specific value for UserIdentityTokenType. Authentication only for users from the user administration of the project.  For users from the user administration of the project, you download the password together with the other user data and the configuration data to the client CPU.   This way you protect the password from being accessed from the outside. You must have assigned the function right "User authentication of the OPC UA client" to the user in the project tree (Security settings &gt; Users and roles).  When you make the settings for user authentication in the OPC UA client interface, select the option "User (TIA Portal – Security settings)" and enter a previously configured user name. |
 | **65** | User name | Password | Simatic-specific value for UserIdentityTokenType.   The password is stored in plain text in the corresponding global data block or instance data block and can be read out.  An S7-1500 CPU as OPC UA client with this UserIdentityTokenType also permits connection establishment when no encrypted connection is set, and the password is therefore transmitted unencrypted.   **Only use this**  **UserIdentityTokenType**  **when the OPC UA server requires unencrypted transmission and make sure that the transmission takes place in a secured environment.**    Recommendation: Use users from the user administration of the project. |
 
 ---
@@ -5158,7 +5158,7 @@ The table below lists the Siemens error codes for the OPC UA client instructions
 | B080_C500 | SimaticNothingToDo:  Error during initialization of the client |
 | B080_C600 | ClientNotAvailable  Error during initialization of the client |
 | B080_0B00 | ArrayElements_TooMany:  The array has too many elements. |
-| B080_1100 | ArrayElements_TooMany:  General error code. Occurs when an array has too many elements:  NamespaceUrisCount > MAX_ELEMENTS_NAMESPACES  NodeIDCount > MAX_ELEMENTS_NODELIST  BrowsePathscount > MAX_ELEMENTS_RELATIVEPATH  MethodHdlCount > MAX_ELEMENTS_METHODLIST    MAX_ELEMENTS_NAMESPACES = 20  MAX_ELEMENTS_NODELIST = 300  MAX_ELEMENTS_METHODLIST = 100  MAX_ELEMENTS_BROWSEPATH = 10 |
+| B080_1100 | ArrayElements_TooMany:  General error code. Occurs when an array has too many elements:  NamespaceUrisCount &gt; MAX_ELEMENTS_NAMESPACES  NodeIDCount &gt; MAX_ELEMENTS_NODELIST  BrowsePathscount &gt; MAX_ELEMENTS_RELATIVEPATH  MethodHdlCount &gt; MAX_ELEMENTS_METHODLIST    MAX_ELEMENTS_NAMESPACES = 20  MAX_ELEMENTS_NODELIST = 300  MAX_ELEMENTS_METHODLIST = 100  MAX_ELEMENTS_BROWSEPATH = 10 |
 | B080_1200 | ArrayElements_TooFew |
 | B080_2100 | BadValue_VariantInput1:  The value of the tag to which the first variant of the instruction is pointing is incorrect. |
 | B080_2200 | BadValue_VariantInput2:  The value of the tag to which the second variant of the instruction is pointing is incorrect. |
@@ -5223,7 +5223,7 @@ The names and explanations of the errors are listed in the original (English) an
 | Error code (hex) | Name | Meaning |
 | 8001_0000 | BadUnexpectedError | An unexpected error occurred |
 | 8002_0000 | BadInternalError | An internal error occurred as a result of a programming or configuration error.   **Possible cause**:   You have write-accessed a single element of a tag of data type DTL. Write access to tags of data type DTL is only possible to the complete structure. |
-| 8003_0000 | BadOutOfMemory | Not enough memory to complete the operation.   **Possible cause:**   The maximum quantity structure of the OPC UA server has been exceeded.   **Solution:**   Reduce the number of registered OPC UA elements.  Use an OPC UA Server diagnostics tool (such as UaExpert from Unified Automation) to ensure that there are no inactive sessions and subscriptions. As countermeasure you can select corresponding timeouts (Subscription Timeout <= Session Timeout) in the client.  See also the description to the error messages [OPC_UA_Connect: Create connection](#opc_ua_connect-create-connection). |
+| 8003_0000 | BadOutOfMemory | Not enough memory to complete the operation.   **Possible cause:**   The maximum quantity structure of the OPC UA server has been exceeded.   **Solution:**   Reduce the number of registered OPC UA elements.  Use an OPC UA Server diagnostics tool (such as UaExpert from Unified Automation) to ensure that there are no inactive sessions and subscriptions. As countermeasure you can select corresponding timeouts (Subscription Timeout &lt;= Session Timeout) in the client.  See also the description to the error messages [OPC_UA_Connect: Create connection](#opc_ua_connect-create-connection). |
 | 8004_0000 | BadResourceUnavailable | An operating system resource is not available |
 | 8005_0000 | BadCommunicationError | A low level communication error occurred.   **Possible cause:**    The server address (ServerEndpointURL) is incorrect or incomplete.  See also the explanation for this parameter in [OPC_UA_Connect: Create connection](#opc_ua_connect-create-connection). |
 | 8006_0000 | BadEncodingError | Encoding halted because of invalid data in the objects being serialized. |
@@ -5554,7 +5554,7 @@ IF #Run = TRUE THEN
 
            //2 = Sign
 
-           //3 = Sign & Encrypt
+           //3 = Sign &amp; Encrypt
 
            #OPC_UA_SessionConnectInfo_Instance.SecurityMsgMode := 3;
 
@@ -5582,7 +5582,7 @@ IF #Run = TRUE THEN
 
            //Certificate manager is located at
 
-           // "Project tree > Security settings > Security features"
+           // "Project tree &gt; Security settings &gt; Security features"
 
            #OPC_UA_SessionConnectInfo_Instance.CertificateID := 10;
 
@@ -5604,15 +5604,15 @@ IF #Run = TRUE THEN
 
                 SessionConnectInfo := #OPC_UA_SessionConnectInfo_Instance,
 
-                Done => #Done,
+                Done =&gt; #Done,
 
-                Busy => #Busy,
+                Busy =&gt; #Busy,
 
-                Error => #Error,
+                Error =&gt; #Error,
 
-                Status => #Status,
+                Status =&gt; #Status,
 
-                ConnectionHdl => #ConnectionHdl);
+                ConnectionHdl =&gt; #ConnectionHdl);
 
         IF #Done = TRUE THEN
 
@@ -5626,7 +5626,7 @@ IF #Run = TRUE THEN
 
            // Did we get a connection handle?
 
-           IF #ConnectionHdl <> 0 THEN
+           IF #ConnectionHdl &lt;&gt; 0 THEN
 
               // We have to release all resources in the server and disconnect
 
@@ -5666,21 +5666,21 @@ IF #Run = TRUE THEN
 
                ConnectionHdl := #ConnectionHdl,
 
-               ConnectionStatus => #ConnectionStatus,
+               ConnectionStatus =&gt; #ConnectionStatus,
 
-               ServerState => #ServerState,
+               ServerState =&gt; #ServerState,
 
-               ServiceLevel => #ServiceLevel,
+               ServiceLevel =&gt; #ServiceLevel,
 
                Timeout := T#6S,
 
-               Done => #Done,
+               Done =&gt; #Done,
 
-               Busy => #Busy,
+               Busy =&gt; #Busy,
 
-               Error => #Error,
+               Error =&gt; #Error,
 
-               Status => #Status);
+               Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -5718,13 +5718,13 @@ IF #Run = TRUE THEN
 
                Timeout := T#6S,
 
-               Done => #Done,
+               Done =&gt; #Done,
 
-               Busy => #Busy,
+               Busy =&gt; #Busy,
 
-               Error => #Error,
+               Error =&gt; #Error,
 
-               Status => #Status);
+               Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -5804,13 +5804,13 @@ IF #Run = TRUE THEN
 
                  Timeout := T#6S,
 
-                 Done => #Done,
+                 Done =&gt; #Done,
 
-                 Busy => #Busy,
+                 Busy =&gt; #Busy,
 
-                 Error => #Error,
+                 Error =&gt; #Error,
 
-                 Status => #Status);
+                 Status =&gt; #Status);
 
             IF #Done = TRUE THEN
 
@@ -5945,15 +5945,15 @@ CASE #State OF
 
                  Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-                 Done => #Done,
+                 Done =&gt; #Done,
 
-                 Busy => #Busy,
+                 Busy =&gt; #Busy,
 
-                 Error => #Error,
+                 Error =&gt; #Error,
 
-                 Status => #Status,
+                 Status =&gt; #Status,
 
-                 ConnectionHdl => "Productionline_Configuration".Connection.ConnectionHdl);
+                 ConnectionHdl =&gt; "Productionline_Configuration".Connection.ConnectionHdl);
 
     IF #Done = TRUE THEN
 
@@ -5965,7 +5965,7 @@ CASE #State OF
 
         // Did we get a connection handle?
 
-        IF "Productionline_Configuration".Connection.ConnectionHdl <> 0 THEN
+        IF "Productionline_Configuration".Connection.ConnectionHdl &lt;&gt; 0 THEN
 
         // We have to release all resources in the server and disconnect
 
@@ -5993,7 +5993,7 @@ CASE #State OF
 
                Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-               ConnectionHdl => "Productionline_Configuration".Connection.ConnectionHdl);
+               ConnectionHdl =&gt; "Productionline_Configuration".Connection.ConnectionHdl);
 
     END_IF;
 
@@ -6023,13 +6023,13 @@ CASE #State OF
 
                  NamespaceIndexes := "Productionline_Configuration".Namespaces.ServerNamespaceIndexes,
 
-                 Done => #Done,
+                 Done =&gt; #Done,
 
-                 Busy => #Busy,
+                 Busy =&gt; #Busy,
 
-                 Error => #Error,
+                 Error =&gt; #Error,
 
-                 Status => #Status);
+                 Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -6099,13 +6099,13 @@ CASE #State OF
 
                  NodeHdls := "Productionline_Configuration".ReadLists."ReadListProduct".NodeHdls,
 
-                 Done => #Done,
+                 Done =&gt; #Done,
 
-                 Busy => #Busy,
+                 Busy =&gt; #Busy,
 
-                 Error => #Error,
+                 Error =&gt; #Error,
 
-                 Status => #Status);
+                 Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -6184,13 +6184,13 @@ CASE #State OF
 
                  Variable := "Productionline_Data"."ReadListProduct".Variable,
 
-                 Done => #Done,
+                 Done =&gt; #Done,
 
-                 Busy => #Busy,
+                 Busy =&gt; #Busy,
 
-                 Error => #Error,
+                 Error =&gt; #Error,
 
-                 Status => #Status);
+                 Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -6262,13 +6262,13 @@ CASE #State OF
 
                  NodeStatusList := "Productionline_Data"."ReadListProduct".NodeStatusList,
 
-                 Done => #Done,
+                 Done =&gt; #Done,
 
-                 Error => #Error,
+                 Error =&gt; #Error,
 
-                 Busy => #Busy,
+                 Busy =&gt; #Busy,
 
-                 Status => #Status);
+                 Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -6338,13 +6338,13 @@ CASE #State OF
 
                  Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-                 Done => #Done,
+                 Done =&gt; #Done,
 
-                 Busy => #Busy,
+                 Busy =&gt; #Busy,
 
-                 Error => #Error,
+                 Error =&gt; #Error,
 
-                 Status => #Status);
+                 Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -6426,13 +6426,13 @@ CASE #State OF
 
                  Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-                 Done => #Done,
+                 Done =&gt; #Done,
 
-                 Busy => #Busy,
+                 Busy =&gt; #Busy,
 
-                 Error => #Error,
+                 Error =&gt; #Error,
 
-                 Status => #Status);
+                 Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -6561,15 +6561,15 @@ IF #Run = TRUE THEN
 
               Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-              Done => #Done,
+              Done =&gt; #Done,
 
-              Busy => #Busy,
+              Busy =&gt; #Busy,
 
-              Error => #Error,
+              Error =&gt; #Error,
 
-              Status => #Status,
+              Status =&gt; #Status,
 
-              ConnectionHdl => "Productionline_Configuration".Connection.ConnectionHdl);
+              ConnectionHdl =&gt; "Productionline_Configuration".Connection.ConnectionHdl);
 
     IF #Done = TRUE THEN
 
@@ -6581,7 +6581,7 @@ IF #Run = TRUE THEN
 
     // Did we get a connection handle?
 
-        IF "Productionline_Configuration".Connection.ConnectionHdl <> 0 THEN
+        IF "Productionline_Configuration".Connection.ConnectionHdl &lt;&gt; 0 THEN
 
         // We have to release all resources in the server and disconnect
 
@@ -6607,7 +6607,7 @@ IF #Run = TRUE THEN
 
               Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-              ConnectionHdl => "Productionline_Configuration".Connection.ConnectionHdl);
+              ConnectionHdl =&gt; "Productionline_Configuration".Connection.ConnectionHdl);
 
     END_IF;
 
@@ -6637,11 +6637,11 @@ IF #Run = TRUE THEN
 
               NamespaceIndexes := "Productionline_Configuration".Namespaces.ServerNamespaceIndexes,
 
-              Done => #Done,
+              Done =&gt; #Done,
 
-              Busy => #Busy,
+              Busy =&gt; #Busy,
 
-              Error => #Error);
+              Error =&gt; #Error);
 
     IF #Done = TRUE THEN
 
@@ -6717,13 +6717,13 @@ IF #Run = TRUE THEN
 
               NodeHdls := "Productionline_Configuration".WriteLists."WriteListStatus".NodeHdls,
 
-              Done => #Done,
+              Done =&gt; #Done,
 
-              Busy => #Busy,
+              Busy =&gt; #Busy,
 
-              Error => #Error,
+              Error =&gt; #Error,
 
-              Status =>#Status);
+              Status =&gt;#Status);
 
     IF #Done = TRUE THEN
 
@@ -6811,13 +6811,13 @@ IF #Run = TRUE THEN
 
               Variable := "Productionline_Data"."WriteListStatus".Variable,
 
-              Done => #Done,
+              Done =&gt; #Done,
 
-              Busy => #Busy,
+              Busy =&gt; #Busy,
 
-              Error => #Error,
+              Error =&gt; #Error,
 
-              Status => #Status);
+              Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -6887,13 +6887,13 @@ IF #Run = TRUE THEN
 
               NodeStatusList := "Productionline_Data"."WriteListStatus".NodeStatusList,
 
-              Done => #Done,
+              Done =&gt; #Done,
 
-              Busy => #Busy,
+              Busy =&gt; #Busy,
 
-              Error => #Error,
+              Error =&gt; #Error,
 
-              Status => #Status);
+              Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -6961,13 +6961,13 @@ IF #Run = TRUE THEN
 
               Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-              Done => #Done,
+              Done =&gt; #Done,
 
-              Busy => #Busy,
+              Busy =&gt; #Busy,
 
-              Error => #Error,
+              Error =&gt; #Error,
 
-              Status => #Status);
+              Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -7049,13 +7049,13 @@ IF #Run = TRUE THEN
 
               Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-              Done => #Done,
+              Done =&gt; #Done,
 
-              Busy => #Busy,
+              Busy =&gt; #Busy,
 
-              Error => #Error,
+              Error =&gt; #Error,
 
-              Status => #Status);
+              Status =&gt; #Status);
 
     IF #Done = TRUE THEN
 
@@ -7186,7 +7186,7 @@ IF #Run = TRUE THEN
 
            //set Securtiy Message Mode
 
-           // 1 = None, 2 = Sign, 3 = Sign & Encrypt
+           // 1 = None, 2 = Sign, 3 = Sign &amp; Encrypt
 
            #SessionConnectInfo.SecurityMsgMode := 1;
 
@@ -7216,7 +7216,7 @@ IF #Run = TRUE THEN
 
         #OPC_UA_Connect_Instance(REQ:=#Req,
 
-                ConnectionHdl=>#ConnectionHdl,
+                ConnectionHdl=&gt;#ConnectionHdl,
 
                 ServerEndpointUrl:=#SeverEndpointUrl,
 
@@ -7224,13 +7224,13 @@ IF #Run = TRUE THEN
 
                 Timeout:=T#8S,
 
-                Done=>#Done,
+                Done=&gt;#Done,
 
-                Busy=>#Busy,
+                Busy=&gt;#Busy,
 
-                Error=>#Error,
+                Error=&gt;#Error,
 
-                Status=>#Status);
+                Status=&gt;#Status);
 
         IF #Done = TRUE THEN
 
@@ -7244,7 +7244,7 @@ IF #Run = TRUE THEN
 
            // Did we get a connection handle?
 
-           IF #ConnectionHdl <> 0 THEN
+           IF #ConnectionHdl &lt;&gt; 0 THEN
 
                 // We got a connection handle
 
@@ -7314,13 +7314,13 @@ IF #Run = TRUE THEN
 
                 NamespaceIndexes := #NamespaceIndexes,
 
-                Done => #Done,
+                Done =&gt; #Done,
 
-                Busy => #Busy,
+                Busy =&gt; #Busy,
 
-                Error => #Error,
+                Error =&gt; #Error,
 
-                Status => #Status);
+                Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -7504,13 +7504,13 @@ IF #Run = TRUE THEN
 
                 TargetStatusList := #TargetStatusList,
 
-                Done => #Done,
+                Done =&gt; #Done,
 
-                Busy => #Busy,
+                Busy =&gt; #Busy,
 
-                Error => #Error,
+                Error =&gt; #Error,
 
-                Status => #Status);
+                Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -7582,13 +7582,13 @@ IF #Run = TRUE THEN
 
                 NodeHdls := #NodeHdls,
 
-                Done => #Done,
+                Done =&gt; #Done,
 
-                Busy => #Busy,
+                Busy =&gt; #Busy,
 
-                Error => #Error,
+                Error =&gt; #Error,
 
-                Status => #Status);
+                Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -7660,13 +7660,13 @@ IF #Run = TRUE THEN
 
                 Variable := #Variable,
 
-                Done => #Done,
+                Done =&gt; #Done,
 
-                Busy => #Busy,
+                Busy =&gt; #Busy,
 
-                Error => #Error,
+                Error =&gt; #Error,
 
-                Status => #Status);
+                Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -7730,13 +7730,13 @@ IF #Run = TRUE THEN
 
                 NodeStatusList := #NodeStatusList,
 
-                Done => #Done,
+                Done =&gt; #Done,
 
-                Busy => #Busy,
+                Busy =&gt; #Busy,
 
-                Error => #Error,
+                Error =&gt; #Error,
 
-                Status => #Status);
+                Status =&gt; #Status);
 
         IF #NodeStatusList[0] = 0 AND #NodeStatusList[1] = 0
 
@@ -7794,13 +7794,13 @@ IF #Run = TRUE THEN
 
                 Timeout := T#6S,
 
-                Done => #Done,
+                Done =&gt; #Done,
 
-                Busy => #Busy,
+                Busy =&gt; #Busy,
 
-                Error => #Error,
+                Error =&gt; #Error,
 
-                Status => #Status);
+                Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -7884,13 +7884,13 @@ IF #Run = TRUE THEN
 
                 Timeout := T#6S,
 
-                Done => #Done,
+                Done =&gt; #Done,
 
-                Busy => #Busy,
+                Busy =&gt; #Busy,
 
-                Error => #Error,
+                Error =&gt; #Error,
 
-                Status => #Status);
+                Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -8016,15 +8016,15 @@ IF #Run = TRUE THEN
 
         Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-        Done => #Done,
+        Done =&gt; #Done,
 
-        Busy => #Busy,
+        Busy =&gt; #Busy,
 
-        Error => #Error,
+        Error =&gt; #Error,
 
-        Status => #Status,
+        Status =&gt; #Status,
 
-        ConnectionHdl => "Productionline_Configuration".Connection.ConnectionHdl);
+        ConnectionHdl =&gt; "Productionline_Configuration".Connection.ConnectionHdl);
 
         IF #Done = TRUE THEN
 
@@ -8036,7 +8036,7 @@ IF #Run = TRUE THEN
 
            // Did we get a connection handle?
 
-           IF "Productionline_Configuration".Connection.ConnectionHdl <> 0 THEN
+           IF "Productionline_Configuration".Connection.ConnectionHdl &lt;&gt; 0 THEN
 
                // We have to release all resources in the server and disconnect
 
@@ -8062,7 +8062,7 @@ IF #Run = TRUE THEN
 
               Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-              ConnectionHdl => "Productionline_Configuration".Connection.ConnectionHdl);
+              ConnectionHdl =&gt; "Productionline_Configuration".Connection.ConnectionHdl);
 
         END_IF;
 
@@ -8092,13 +8092,13 @@ IF #Run = TRUE THEN
 
                NamespaceIndexes := "Productionline_Configuration".Namespaces.ServerNamespaceIndexes,
 
-               Done => #Done,
+               Done =&gt; #Done,
 
-               Busy => #Busy,
+               Busy =&gt; #Busy,
 
-               Error => #Error,
+               Error =&gt; #Error,
 
-               Status => #Status);
+               Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -8176,13 +8176,13 @@ IF #Run = TRUE THEN
 
                NamespaceIndexes := "Productionline_Configuration".Namespaces.ServerNamespaceIndexes,
 
-               Done => #Done,
+               Done =&gt; #Done,
 
-               Busy => #Busy,
+               Busy =&gt; #Busy,
 
-               Error => #Error,
+               Error =&gt; #Error,
 
-               Status => #Status,
+               Status =&gt; #Status,
 
                StatusList := "Productionline_Data"."MethodListOpenDoor".MethodStatusList,
 
@@ -8276,13 +8276,13 @@ IF #Run = TRUE THEN
 
                OutputArguments := "Productionline_Data"."MethodListOpenDoor"."Method".Outputs,
 
-               Done => #Done,
+               Done =&gt; #Done,
 
-               Busy => #Busy,
+               Busy =&gt; #Busy,
 
-               Error => #Error,
+               Error =&gt; #Error,
 
-               Status => "Productionline_Data"."MethodListOpenDoor".MethodStatusList[0],
+               Status =&gt; "Productionline_Data"."MethodListOpenDoor".MethodStatusList[0],
 
                MethodResult := "Productionline_Data"."MethodListOpenDoor".MethodResultList[0]);
 
@@ -8304,7 +8304,7 @@ IF #Run = TRUE THEN
 
         IF #Done = TRUE THEN
 
-           IF #MethodResult < 16#8000_0000 THEN
+           IF #MethodResult &lt; 16#8000_0000 THEN
 
                #State := #State + 1;
 
@@ -8348,13 +8348,13 @@ IF #Run = TRUE THEN
 
                OutputArguments := "Productionline_Data"."MethodListOpenDoor"."Method".Outputs,
 
-               Done => #Done,
+               Done =&gt; #Done,
 
-               Busy => #Busy,
+               Busy =&gt; #Busy,
 
-               Error => #Error,
+               Error =&gt; #Error,
 
-               Status => "Productionline_Data"."MethodListOpenDoor".MethodStatusList[0],
+               Status =&gt; "Productionline_Data"."MethodListOpenDoor".MethodStatusList[0],
 
                MethodResult := "Productionline_Data"."MethodListOpenDoor".MethodResultList[0]);
 
@@ -8384,13 +8384,13 @@ IF #Run = TRUE THEN
 
                StatusList := "Productionline_Data"."MethodListOpenDoor".MethodStatusList,
 
-               Done => #Done,
+               Done =&gt; #Done,
 
-               Busy => #Busy,
+               Busy =&gt; #Busy,
 
-               Error => #Error,
+               Error =&gt; #Error,
 
-               Status => #Status);
+               Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -8458,13 +8458,13 @@ IF #Run = TRUE THEN
 
                Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-               Done => #Done,
+               Done =&gt; #Done,
 
-               Busy => #Busy,
+               Busy =&gt; #Busy,
 
-               Error => #Error,
+               Error =&gt; #Error,
 
-               Status => #Status);
+               Status =&gt; #Status);
 
         IF #Done = TRUE THEN
 
@@ -8554,13 +8554,13 @@ IF #Run = TRUE THEN
 
                Timeout := "Productionline_Configuration".Connection.ConnectInfo.SessionTimeout,
 
-               Done => #Done,
+               Done =&gt; #Done,
 
-               Busy => #Busy,
+               Busy =&gt; #Busy,
 
-               Error => #Error,
+               Error =&gt; #Error,
 
-               Status => #Status);
+               Status =&gt; #Status);
 
            IF #Done = TRUE THEN
 
@@ -8691,7 +8691,7 @@ The following points are important for the declaration:
   >
   > The multiple instance has to be named "OPC_UA_ServerMethodPre_Instance", otherwise no method is created on the server.
 
-  Use drag-and-drop to move the instruction from the folder "Instructions > Communication > OPC UA > OPC UA Server" to the editor.
+  Use drag-and-drop to move the instruction from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Server" to the editor.
 
   Next, click "Multi-instance".
 - When the server method has one or more input parameters, you must declare a tag with the name "**UAMethod_InParameters**".
@@ -8791,7 +8791,7 @@ The following points are important for the declaration:
   >
   > The multiple instance has to be named "OPC_UA_ServerMethodPost_Instance", otherwise no method is created on the server.
 
-  Use drag-and-drop to move the instruction from the folder "Instructions > Communication > OPC UA > OPC UA Server" to the editor. Next, click "Multi-instance".
+  Use drag-and-drop to move the instruction from the folder "Instructions &gt; Communication &gt; OPC UA &gt; OPC UA Server" to the editor. Next, click "Multi-instance".
 - When the server method has one or more output parameters, you must declare a tag with the name "**UAMethod_OutParameters**".
 
   First, create a PLC data type (UDT) for the output parameters of the server method.
@@ -8900,11 +8900,11 @@ REGION PRE
 
 IF #Started = FALSE AND #Method_Finished = FALSE THEN
 
-#OPC_UA_ServerMethodPre_Instance(Done => #Pre_Done,
+#OPC_UA_ServerMethodPre_Instance(Done =&gt; #Pre_Done,
 
-Error => #Pre_Error,
+Error =&gt; #Pre_Error,
 
-UAMethod_Called => #Method_Called,
+UAMethod_Called =&gt; #Method_Called,
 
 UAMethod_InParameters := #UAMethod_InParameters);
 
@@ -8980,9 +8980,9 @@ REGION POST
 
 UAMethod_Finished := #Method_Finished,
 
-Done => #Post_Done,
+Done =&gt; #Post_Done,
 
-Error => #Post_Error,
+Error =&gt; #Post_Error,
 
 UAMethod_OutParameters := #UAMethod_OutParameters);
 

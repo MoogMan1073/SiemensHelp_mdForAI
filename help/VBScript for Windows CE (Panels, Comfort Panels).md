@@ -27,13 +27,13 @@ On a device with Windows CE the "File" and "FileSystem" control elements and the
 
 You will find fundamental information on VBScript language elements on the Microsoft homepage:
 
-<http://msdn.microsoft.com/en-us/library/t0aew7h6.aspx>
+[http://msdn.microsoft.com/en-us/library/t0aew7h6.aspx](http://msdn.microsoft.com/en-us/library/t0aew7h6.aspx)
 
 ### Local ID (LCID)
 
 An overview of all language codes can be found on the Microsoft homepage:
 
-<http://msdn.microsoft.com/en-us/goglobal/bb964664>
+[http://msdn.microsoft.com/en-us/goglobal/bb964664](http://msdn.microsoft.com/en-us/goglobal/bb964664)
 
 ---
 

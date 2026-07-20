@@ -21,7 +21,7 @@ This section contains information on the following topics:
 
 - [Convention (S7-1500)](#convention-s7-1500)
 - [Configuring a module (S7-1500)](#configuring-a-module-s7-1500)
-- [Online & diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500)
+- [Online &amp; diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500)
 - [Control and feedback interface (TM Count, TM PosInput) (S7-1500)](#control-and-feedback-interface-tm-count-tm-posinput-s7-1500)
 
 ### Convention (S7-1500)
@@ -59,7 +59,7 @@ To add a technology module to the hardware configuration, proceed as follows:
 1. Open the device configuration of the CPU or IM.
 2. Select a module rack.
 3. Select the technology module from the module catalog:  
-   "Technology module > Counting or Position input > Technology module > Article number"
+   "Technology module &gt; Counting or Position input &gt; Technology module &gt; Article number"
 4. Drag the technology module to the required slot in the module rack.
 
 #### Adding a technology module to hardware configuration (Compact CPU) (S7-1500)
@@ -76,7 +76,7 @@ To add a Compact CPU to the project tree, follow these steps:
    The "Add new object" dialog opens.
 2. Select Controller".
 3. Select the Compact CPU:  
-   "SIMATIC S7‑1500 > CPU > Compact CPU > Article number"
+   "SIMATIC S7‑1500 &gt; CPU &gt; Compact CPU &gt; Article number"
 4. Confirm with "OK".
 
 ##### Result
@@ -88,7 +88,7 @@ The new Compact CPU is displayed with the following objects in the project tree.
 |  | Object | Description |
 | --- | --- | --- |
 | ① | [Device configuration](#basic-parameters-s7-1500) | In the Inspector window (per channel):  - [Activation of the counter](#general-s7-1500) - [Assign signals to inputs and outputs](#hardware-inputsoutputs-s7-1500) - [Setting the reaction to CPU STOP](#reaction-to-cpu-stop-s7-1500) - [Enable diagnostic interrupts](#diagnostics-interrupts-compact-cpu-s7-1500) - [Setting the operating mode](#operating-mode-s7-1500) - [Enable hardware interrupts](#hardware-interrupts-s7-1500) - Setting the module addresses |
-| ② | [Online & Diagnostics](#displaying-and-evaluating-diagnostics-s7-1500) | - Hardware diagnostics - Obtain information about the Compact CPU - Run firmware update |
+| ② | [Online &amp; Diagnostics](#displaying-and-evaluating-diagnostics-s7-1500) | - Hardware diagnostics - Obtain information about the Compact CPU - Run firmware update |
 
 #### Adding a technology module to the hardware configuration (ET 200eco PN TM PosInput 2) (S7-1500)
 
@@ -104,7 +104,7 @@ To add a technology module to the hardware configuration, proceed as follows:
 1. Open the device configuration of the CPU.
 2. Select the network view.
 3. Select the technology module from the hardware catalog:  
-   "Distributed I/O systems > ET 200eco PN > Interface modules > Technology modules > Position detection > Module > Article number"
+   "Distributed I/O systems &gt; ET 200eco PN &gt; Interface modules &gt; Technology modules &gt; Position detection &gt; Module &gt; Article number"
 4. Drag-and-drop the technology module to the required location in the network view.
 
 #### Open hardware configuration (S7-1500)
@@ -568,7 +568,7 @@ This parameter determines which digital input of the Compact CPU is to be used a
 
 > **Note**
 >
-> You can configure the input delay for a digital input in the Inspector window of the device configuration under "Properties > DI 16/DQ 16 > Inputs > Channel n".
+> You can configure the input delay for a digital input in the Inspector window of the device configuration under "Properties &gt; DI 16/DQ 16 &gt; Inputs &gt; Channel n".
 
 **HSC DQ0**
 
@@ -896,7 +896,7 @@ You can select from the following input delays:
 
 You use this parameter to suppress interference at the digital inputs of the DIn signals. Changes to the signal are only detected if they remain stable for longer than the configured input delay time.
 
-You can configure the input delay for a digital input of a Compact CPU in the Inspector window of the device configuration under "Properties > DI 16/DQ 16 > Inputs > Channel n".
+You can configure the input delay for a digital input of a Compact CPU in the Inspector window of the device configuration under "Properties &gt; DI 16/DQ 16 &gt; Inputs &gt; Channel n".
 
 You can select from the following input delays:
 
@@ -1000,9 +1000,9 @@ You can select from the following options:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-counter-value-as-reference-s7-1500) in the operating mode "Counting" | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value <= counter value <= high counting limit | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value and low limit | The respective digital output is active if: Low counting limit <= counter value <= comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= counter value <= comparison value 1 | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
+| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value &lt;= counter value &lt;= high counting limit | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value and low limit | The respective digital output is active if: Low counting limit &lt;= counter value &lt;= comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= counter value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
 | At comparison value for a pulse duration | The respective digital output is active once for the configured time and count direction when the counter value reaches the comparison value. | - Comparison value 0 - Comparison value 1 - Count direction - Pulse duration - Hysteresis (in increments) |
 | After set command from CPU until comparison value | When a set command is sent from the CPU, the respective digital output is active until the counter value is equal to the comparison value. | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
 | Use by user program | The respective digital output can be switched by the CPU [via the control interface](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#comparison-values-and-outputs-s7-1500). | — |
@@ -1023,10 +1023,10 @@ You can select from the following options:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-measured-value-as-reference-s7-1500) in the operating mode "Measuring" | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Measured value >= comparison value (default) | The respective digital output is active if the measured value is greater than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
-| Measured value <= comparison value | The respective digital output is active if the measured value is less than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= measured value <= comparison value 1 | - Comparison value 0 - Comparison value 1 |
-| Not between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 1 <= measured value <= comparison value 0 | - Comparison value 0 - Comparison value 1 |
+| Measured value &gt;= comparison value (default) | The respective digital output is active if the measured value is greater than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
+| Measured value &lt;= comparison value | The respective digital output is active if the measured value is less than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= measured value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 |
+| Not between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 1 &lt;= measured value &lt;= comparison value 0 | - Comparison value 0 - Comparison value 1 |
 | Use by user program | The respective digital output can be switched by the CPU [via the control interface](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#comparison-values-and-outputs-s7-1500). | — |
 
 > **Note**
@@ -1381,9 +1381,9 @@ You can select from the following options depending on the operating mode:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-position-value-ssi-absolute-value-as-reference-s7-1500) in the operating mode "Position input" | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value <= position value <= maximum position value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value and low limit | The respective digital output is active if: Minimum position value <= Position value <= Comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= position value <= comparison value 1 | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
+| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value &lt;= position value &lt;= maximum position value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value and low limit | The respective digital output is active if: Minimum position value &lt;= Position value &lt;= Comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= position value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
 | At comparison value for a pulse duration | The respective digital output is active once for the assigned time and direction of the position value change when the position value is equal to the comparison value or has fallen below or exceeded it. | - Comparison value 0 - Comparison value 1 - Count direction - Pulse duration - Hysteresis (in increments) |
 | After set command from CPU until comparison value | When a set command is sent from the CPU, the respective digital output is active for the assigned direction of the position value change until the position value is equal to the comparison value or has fallen below or exceeded it. | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
 | Use by user program | The respective digital output can be switched by the CPU [via the control interface](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#comparison-values-and-outputs-s7-1500). | — |
@@ -1394,10 +1394,10 @@ You can select from the following options depending on the operating mode:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-measured-value-as-reference-s7-1500) in the operating mode "Measuring" | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Measured value >= comparison value (default) | The respective digital output is active if the measured value is greater than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
-| Measured value <= comparison value | The respective digital output is active if the measured value is less than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= measured value <= comparison value 1 | - Comparison value 0 - Comparison value 1 |
-| Not between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 1 <= measured value <= comparison value 0 | - Comparison value 0 - Comparison value 1 |
+| Measured value &gt;= comparison value (default) | The respective digital output is active if the measured value is greater than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
+| Measured value &lt;= comparison value | The respective digital output is active if the measured value is less than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= measured value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 |
+| Not between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 1 &lt;= measured value &lt;= comparison value 0 | - Comparison value 0 - Comparison value 1 |
 | Use by user program | The respective digital output can be switched by the CPU [via the control interface](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#comparison-values-and-outputs-s7-1500). | — |
 
 > **Note**
@@ -1873,9 +1873,9 @@ You can select from the following options:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-counter-value-as-reference-s7-1500) | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value <= counter value <= high counting limit | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value and low limit | The respective digital output is active if: Low counting limit <= counter value <= comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= counter value <= comparison value 1 | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
+| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value &lt;= counter value &lt;= high counting limit | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value and low limit | The respective digital output is active if: Low counting limit &lt;= counter value &lt;= comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= counter value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
 | At comparison value for a pulse duration | The respective digital output is active once for the configured time and count direction when the counter value reaches the comparison value. | - Comparison value 0 - Comparison value 1 - Count direction - Pulse duration - Hysteresis (in increments) |
 | Digital output without function | The respective digital output is set to 0 regardless  of the reaction to CPU STOP. | — |
 
@@ -2082,9 +2082,9 @@ You can select from the following options depending on the operating mode:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-position-value-ssi-absolute-value-as-reference-s7-1500) | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value <= position value <= maximum position value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value and low limit | The respective digital output is active if: Minimum position value <= Position value <= Comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= position value <= comparison value 1 | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
+| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value &lt;= position value &lt;= maximum position value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value and low limit | The respective digital output is active if: Minimum position value &lt;= Position value &lt;= Comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= position value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
 | At comparison value for a pulse duration | The respective digital output is active once for the assigned time and direction of the position value change when the position value is equal to the comparison value or has fallen below or exceeded it. | - Comparison value 0 - Comparison value 1 - Count direction - Pulse duration - Hysteresis (in increments) |
 | Digital output without function | The respective digital output is set to 0 regardless of the reaction to CPU STOP. | — |
 
@@ -2162,7 +2162,7 @@ To open the display editor for the diagnostic functions, follow these steps:
 
 1. Open the device configuration of the CPU or IM.
 2. Select the device view.
-3. Right-click the module and select "Online & Diagnostics".
+3. Right-click the module and select "Online &amp; Diagnostics".
 
 1. Select the required display in the diagnostics navigation.
 
@@ -2172,7 +2172,7 @@ To open the display editor for the diagnostic functions, follow these steps:
 
 1. Open the device configuration of the CPU.
 2. Select the network view.
-3. Right-click the module and select "Online & Diagnostics".
+3. Right-click the module and select "Online &amp; Diagnostics".
 
 1. Select the required display in the diagnostics navigation.
 
@@ -2181,7 +2181,7 @@ To open the display editor for the diagnostic functions, follow these steps:
 To open the display editor for the diagnostic functions, follow these steps:
 
 1. Open the Compact CPU folder in the project tree.
-2. Double-click on the "Online & diagnostics" object.
+2. Double-click on the "Online &amp; diagnostics" object.
 3. Select the required display in the diagnostics navigation.
 
 ##### Additional information
@@ -2284,7 +2284,7 @@ The following table shows the assignment of the feedback interface:
 | COUNT_VALUE | This DINT value shows the current counter value or position value.  If you use an SSI absolute encoder with a position value length of up to 31 bits, the position value is treated unsigned as a positive value and can assume values between 0 and 2<sup>(MSB-LSB+1)</sup>-1. If you use an SSI absolute encoder with a position value length of 32 bits, the MSB of the position value corresponds to the sign and the position value can assume values between -2147483648 and 2147483647. If you use a 32 bit position value for the comparison function, the position value is interpreted as DINT.  A change of the COUNT_VALUE value via LD_SLOT_m has no influence on the MEASURED_VALUE value. |
 | CAPTURED_VALUE | This DINT value indicates the last detected Capture value.  The following external signals can trigger the Capture function:  - Rising or falling edge of a digital input - Both edges of a digital input   The parameter "Frequency of the Capture function" determines if the function is executed for each configured edge or only once after each enable. |
 | MEASURED_ VALUE | This value shows the current measurement value with the REAL data type or the complete SSI frame with the DWORD data type:  - Frequency: The mean frequency is calculated at set measuring intervals on the basis of the time profile of the count pulses or position value changes and returned in Hertz as floating point number. - Period duration: The mean period duration is calculated at set measuring intervals on the basis of the time profile of the count pulses or position value changes and returned in seconds as floating point number. - Velocity: The mean velocity is calculated at set measuring intervals on the basis of the time profile of the count pulses or position value changes and other parameters, and returned in the configured unit of measurement. - Complete SSI frame: Instead of a measured variable, the least significant 32 bits of the unprocessed current SSI frame are returned. This provides you with encoder-specific additional bits, such as error bits, in addition to the position value. If the SSI frame is shorter than 32 bits, the complete SSI frame is returned right-aligned and the top unused bits are returned with "0" in the feedback interface.   The measured values are returned as signed values. The sign indicates whether the counter value or position value increased or decreased during the relevant time period.   The update time is asynchronous to the opening of the internal gate, which means that the update time is not started when the gate is opened. After the internal gate is closed, the last measured value captured is still returned. |
-| LD_ERROR | This bit indicates that an error occurred (latching) during loading via the control interface. The loaded values were not applied. When using an incremental or pulse encoder, one of the following conditions is not fulfilled:  - Low counting limit <= counter value <= high counting limit - Low counting limit <= start value <= high counting limit - Low counting limit <= comparison value 0/1 <= high counting limit   When using an SSI absolute encoder, one of the following conditions is not fulfilled:   - 0 <= position value <= maximum position value - 0 <= comparison value 0/1 <= maximum position value   The bit is reset once you have acknowledged the error with RES_ERROR . |
+| LD_ERROR | This bit indicates that an error occurred (latching) during loading via the control interface. The loaded values were not applied. When using an incremental or pulse encoder, one of the following conditions is not fulfilled:  - Low counting limit &lt;= counter value &lt;= high counting limit - Low counting limit &lt;= start value &lt;= high counting limit - Low counting limit &lt;= comparison value 0/1 &lt;= high counting limit   When using an SSI absolute encoder, one of the following conditions is not fulfilled:   - 0 &lt;= position value &lt;= maximum position value - 0 &lt;= comparison value 0/1 &lt;= maximum position value   The bit is reset once you have acknowledged the error with RES_ERROR . |
 | ENC_ERROR | This bit indicates that one of the following errors has occurred at the encoder signals (retentive) for the respective technology module:  TM Count:  - Wire break of digital input A, B, or N (with push-pull encoder) - Invalid transition of A/B signals (with incremental encoder)   TM PosInput:  - Invalid transition of A/B signals (with incremental encoder) - RS422/TTL error - SSI encoder error or SSI frame error (with SSI absolute encoder)   If you have enabled the diagnostic interrupts, the respective diagnostic interrupt is triggered in the event of encoder signal errors. For information on the meaning of the diagnostic interrupts, refer to the manual for the respective technology module.  The bit is reset once you have acknowledged the error with RES_ERROR . |
 | POWER_ERROR | For an S7‑1500 technology module, this bit indicates that the supply voltage L+ is not available or too low or that the front plug is not plugged in. For an ET 200SP technology module, this bit indicates that the supply voltage L+ is too low.   If you have enabled the diagnostic interrupts, the respective diagnostic interrupt is triggered in the event of errors in the supply voltage. For details on the diagnostic interrupts and the corrective measures they require, refer to the device manual for the respective technology module.  If the supply voltage L+ is available at a sufficient level once again, POWER_ERROR is automatically set to 0. |
 | STS_SW_GATE | This bit indicates the status of the software gate.   0 means: Gate closed  1 means: Gate open |
@@ -2349,7 +2349,7 @@ The figure below shows an example of the procedure of application of values with
 This section contains information on the following topics:
 
 - [Configuring and assigning parameters to the module (S7-1500)](#configuring-and-assigning-parameters-to-the-module-s7-1500)
-- [Online & diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-1)
+- [Online &amp; diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-1)
 
 ### Configuring and assigning parameters to the module (S7-1500)
 
@@ -2372,8 +2372,8 @@ This section contains information on the following topics:
 1. Open the device configuration of the CPU or IM.
 2. Select a module rack.
 3. Select the digital input module from the module catalog:  
-   "DI > Digital input module > Article number" or   
-   "DIQ > Digital input module /Digital output module > Article number"
+   "DI &gt; Digital input module &gt; Article number" or   
+   "DIQ &gt; Digital input module /Digital output module &gt; Article number"
 4. Drag the module to the required slot in the module rack.
 
 #### Open hardware configuration (S7-1500)
@@ -2567,7 +2567,7 @@ To open the display editor for the diagnostic functions, follow these steps:
 
 1. Open the device configuration of the CPU or IM.
 2. Select the device view.
-3. Right-click on the module and select "Online & Diagnostics".
+3. Right-click on the module and select "Online &amp; Diagnostics".
 4. Select the required display in the diagnostics navigation.
 
 ##### Additional information
@@ -2579,7 +2579,7 @@ Additional information on the diagnostic alarms and possible remedies can be fou
 This section contains information on the following topics:
 
 - [Configuration and parameter assignment of SIMATIC Drive Controller (S7-1500)](#configuration-and-parameter-assignment-of-simatic-drive-controller-s7-1500)
-- [Online & diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-2)
+- [Online &amp; diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-2)
 
 ### Configuration and parameter assignment of SIMATIC Drive Controller (S7-1500)
 
@@ -2601,7 +2601,7 @@ The project has been created.
    The "Add new object" dialog opens.
 2. Select "Controller".
 3. Select the SIMATIC Drive Controller:  
-   "SIMATIC Drive Controller > CPU variant > Article number"
+   "SIMATIC Drive Controller &gt; CPU variant &gt; Article number"
 4. With the "Open device view" check box, you define whether the hardware configuration view should be opened after creation of a new device is completed. Leave the check box selected if you want to configure the CPU next.
 5. Confirm with "OK".
 
@@ -2662,7 +2662,7 @@ The online and diagnostics view enables hardware diagnostics. You can also
 To open the display editor for the diagnostic functions of the CPU, follow these steps:
 
 1. Open the CPU folder in the project tree.
-2. Double-click on the "Online & diagnostics" object.
+2. Double-click on the "Online &amp; diagnostics" object.
 3. Select the required display in the diagnostics navigation.
 
 ##### Additional information

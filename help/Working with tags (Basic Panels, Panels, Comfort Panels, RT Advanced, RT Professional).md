@@ -314,7 +314,7 @@ If you want to see the comments for the connected PLC tag, select the column "So
 The options for addressing external tags depend on the type of connection between WinCC and the PLC in question. A distinction must be made between the following connection types:
 
 - Integrated connection  
-  Connections of devices which are within a project and were created with the "Devices & Networks" editor are referred to as integrated connections.
+  Connections of devices which are within a project and were created with the "Devices &amp; Networks" editor are referred to as integrated connections.
 - Non-integrated connection  
   Connections of devices which were created with the "Connections" editor are referred to as non-integrated connections. It is not necessary that all of the devices be within a single project.
 
@@ -355,7 +355,7 @@ Symbolic addressing is also available if you have an integrated link.
 
 You can also use absolute addressing with an integrated connection. You have to use absolute addressing for PLC tags from a SIMATIC S7-300/400 PLC. If you have connected an HMI tag with a PLC tag and the address of the PLC tag changes, you only have to recompile the control program to update the new address in WinCC. Then you recompile the WinCC project and load it onto the HMI device.
 
-In WinCC, symbolic addressing is the default method. To change the default setting, select the menu command "Options > Settings". Select "Visualization > Tags" in the "Settings" dialog. If required, disable the "Symbolic access" option.
+In WinCC, symbolic addressing is the default method. To change the default setting, select the menu command "Options &gt; Settings". Select "Visualization &gt; Tags" in the "Settings" dialog. If required, disable the "Symbolic access" option.
 
 The availability of an integrated connection depends on the PLC used. The following table shows the availability:
 
@@ -367,7 +367,7 @@ The availability of an integrated connection depends on the PLC used. The follow
 | SIMATIC ET 200 CPU | Yes | A validity check of the tag connection is performed in runtime during symbolic addressing. If an address is changed in the PLC, the change is registered and an error message is issued. In the case of absolute addressing, the behavior described for the S7-300/400 applies. |
 | SIMATIC S7-1500 software controller | Yes | A validity check of the tag connection is performed in runtime during symbolic addressing. If an address is changed in the PLC, the change is registered and an error message is issued. In the case of absolute addressing, the behavior described for the S7-300/400 applies. |
 
-Create an integrated connection in the "Devices & Networks" editor. If the PLC is contained in the project and integrated connections are supported, you can then also have the connection created automatically. To do this, when configuring the HMI tag, simply select an existing PLC tag to which you want to connect the HMI tag. The integrated connection is then automatically created by the system.
+Create an integrated connection in the "Devices &amp; Networks" editor. If the PLC is contained in the project and integrated connections are supported, you can then also have the connection created automatically. To do this, when configuring the HMI tag, simply select an existing PLC tag to which you want to connect the HMI tag. The integrated connection is then automatically created by the system.
 
 #### Addressing with non-integrated connections
 
@@ -484,9 +484,9 @@ The following tags are exceptions to this rule: These can be set via scripts, fo
 | System tag | Component | Use |
 | --- | --- | --- |
 | @RM_MASTER and @RM_MASTER_NAME | WinCC redundancy option | You change the value of the redundancy tags via scripts, for example. |
-| @PRF_<...>_RESET | System diagnostics | Use these tags to reset the values of performance tags. |
-| @<Connectionname>@ForceConnectionStateEx | Connection status | You use the system variable of the channel to establish or terminate the connection. |
-| @<Connection name>@ConnectionStateEx* | Connection status | You use the system variable to query the current connection status. |
+| @PRF_&lt;...&gt;_RESET | System diagnostics | Use these tags to reset the values of performance tags. |
+| @&lt;Connectionname&gt;@ForceConnectionStateEx | Connection status | You use the system variable of the channel to establish or terminate the connection. |
+| @&lt;Connection name&gt;@ConnectionStateEx* | Connection status | You use the system variable to query the current connection status. |
 | *To query the connection status to the PLC you can also use the "Connection status" function in WinCC Explorer. |  |  |
 
 > **Note**
@@ -533,8 +533,8 @@ The system tags are assigned to various components:
 | @PRF_REDUNDACY_... | WinCC Redundancy |  |
 | @PRF_TIMESYNC_ | Basic Process Control: Time Synchronization |  |
 | @PRF_CLDCN_... | WinCC/Cloud Connector |  |
-| @PRF_DMRT_CHNCON_ <connection name>_... | WinCC Process communication | As soon as you create a new connection, additional performance tags are created for this connection in the database.  These tags are not visible in the "System tags" tab. |
-| @PRF_ALGRT_CHNCON_ <connection name>_... | WinCC Alarm Logging |  |
+| @PRF_DMRT_CHNCON_ &lt;connection name&gt;_... | WinCC Process communication | As soon as you create a new connection, additional performance tags are created for this connection in the database.  These tags are not visible in the "System tags" tab. |
+| @PRF_ALGRT_CHNCON_ &lt;connection name&gt;_... | WinCC Alarm Logging |  |
 
 #### Types of performance tags
 
@@ -559,8 +559,8 @@ You can find these counters in the following groups:
 | WinCC Alarmlogging Server | @PRF_ALGRT_... |
 | WinCC Redundancy | @PRF_REDUNDACY_... |
 | WinCC Time Synchronization | @PRF_TIMESYNC_ |
-| WinCC DataManager Connections | @PRF_DMRT_CHNCON_ <connection>_... * |
-| WinCC Alarmlogging Connections | @PRF_ALGRT_CHNCON_ <connection name>_... * |
+| WinCC DataManager Connections | @PRF_DMRT_CHNCON_ &lt;connection&gt;_... * |
+| WinCC Alarmlogging Connections | @PRF_ALGRT_CHNCON_ &lt;connection name&gt;_... * |
 | *) The connections are displayed as instances. |  |
 
 **Procedure**
@@ -597,7 +597,7 @@ You use them to evaluate the time response of the server and the communication c
 >
 > **Connection-specific performance tags**
 >
-> When a connection is configured, performance tags are created in the database with the names "@PRF_DMRT_CHNCON_<connection name>_...".
+> When a connection is configured, performance tags are created in the database with the names "@PRF_DMRT_CHNCON_&lt;connection name&gt;_...".
 >
 > These tags are not visible in the "System tags" tab, but can be used just like any other performance tag.
 >
@@ -648,13 +648,13 @@ System tags with the names "@TLGRT_..." are created for process value logs.
 >
 > **Connection-specific performance tags**
 >
-> When a connection is configured, performance tags are created in the database with the names "@PRF_ALGRT_CHNCON_<connection name>_...".
+> When a connection is configured, performance tags are created in the database with the names "@PRF_ALGRT_CHNCON_&lt;connection name&gt;_...".
 >
 > These tags are not visible in the "System tags" tab, but can be used just like any other performance tag.
 >
 > When you link the connection-specific performance tags to objects, the tag assignment will have a red background in the engineering system. However, access in Runtime still works.
 
-Performance tags with the names "@PRF_ALGRT_CHNCON_<connection name>_..." are created for the communication channels in use.
+Performance tags with the names "@PRF_ALGRT_CHNCON_&lt;connection name&gt;_..." are created for the communication channels in use.
 
 | System tag | Description |
 | --- | --- |
@@ -680,7 +680,7 @@ The performance tags @PRF_REDUNDANCY_... map the states of the redundant servers
 | System tag | Description |
 | --- | --- |
 | @PRF_REDUNDANCY_IS_SYNCHRONIZED | Synchronization status:  - 0: Redundant applications are not synchronized. - 1: Redundancy synchronization of all applications is complete.   In addition to WinCC, the status can be influenced by other applications registered for the redundancy, for example, SIMATIC BATCH. |
-| @PRF_REDUNDANCY_VALIDATION | Validation points of the server. The validation value determines which server will be the primary server.  The validation value depends, for example, on the connection and Runtime status.  If the redundancy was configured correctly, the validation value is the same on both redundant servers.  When the validation values are not identical, the server with the greater value will become the primary server.  Typical values:  - 37: The server status is good.   - Runtime is active.   - Redundant connection over serial interface - 35: The server status is good.   - Runtime is active.   - Redundant connection over LAN - < 35: The server has the internal status "FAULT".   Check the connection status or the server status. The "FAULT" status is set for a critical operating state, for example, when a server application no longer responds.   When a server takes on the "FAULT" status, the partner server becomes the primary server.   Example calculations:  - When Runtime is disabled on the server, the validation is reduced by four points. - When the terminal bus cannot be reached, validation is reduced by 20 points. |
+| @PRF_REDUNDANCY_VALIDATION | Validation points of the server. The validation value determines which server will be the primary server.  The validation value depends, for example, on the connection and Runtime status.  If the redundancy was configured correctly, the validation value is the same on both redundant servers.  When the validation values are not identical, the server with the greater value will become the primary server.  Typical values:  - 37: The server status is good.   - Runtime is active.   - Redundant connection over serial interface - 35: The server status is good.   - Runtime is active.   - Redundant connection over LAN - &lt; 35: The server has the internal status "FAULT".   Check the connection status or the server status. The "FAULT" status is set for a critical operating state, for example, when a server application no longer responds.   When a server takes on the "FAULT" status, the partner server becomes the primary server.   Example calculations:  - When Runtime is disabled on the server, the validation is reduced by four points. - When the terminal bus cannot be reached, validation is reduced by 20 points. |
 | @PRF_REDUNDANCY_PARTNER_VALIDATION | Validation points of the redundant partner server  If the redundancy was configured correctly, this value is the same on both redundant servers. |
 | @PRF_REDUNDANCY_AS_COUNT | Number of AS connections on the server  If the redundancy was configured correctly, this value is the same on both redundant servers.  The following conditions cause a redundancy switchover:  - The validation values are identical on the redundant servers. - The number of AS connections is different.   In this case, the server with more AS connections will become the primary server. |
 | @PRF_REDUNDANCY_PARTNER_AS_COUNT | Number of AS connections on the redundant partner server  If the redundancy was configured correctly, this value is the same on both redundant servers. |
@@ -813,9 +813,9 @@ To create an external tag, proceed as follows:
 1. Open the "HMI tags" folder in the project tree and double-click the standard tag table. The tag table open.  
    Alternatively, create a new tag table and then open it.
 2. In the "Name" column, double-click "Add" in the tag table. A new tag is created.
-3. Select the "Properties > Properties >General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field. The tag name must be unique throughout the device.
+3. Select the "Properties &gt; Properties &gt;General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field. The tag name must be unique throughout the device.
 4. If required, select the "Display name" field to enter a name to be displayed in Runtime. The name to be displayed is language-specific and can be translated for the required Runtime languages. The display name is available for Basic Panels, Panels and Runtime Advanced.
-5. Select the connection to the required PLC in the "Connection" box. If the connection you require is not displayed, you must first create the connection to the PLC. You create the connection to a SIMATIC S7 PLC in the "Devices & Networks" editor. You create the connection to external PLCs in the "Connections" editor.  
+5. Select the connection to the required PLC in the "Connection" box. If the connection you require is not displayed, you must first create the connection to the PLC. You create the connection to a SIMATIC S7 PLC in the "Devices &amp; Networks" editor. You create the connection to external PLCs in the "Connections" editor.  
    If the project contains the PLC and supports integrated connections, you can also have the connection created automatically. To do this, when configuring the HMI tag, simply select an existing PLC tag to which you want to connect the HMI tag. The integrated connection is then automatically created by the system.
 6. If you are working with an integrated connection, click the ![Procedure](images/70487246859_DV_resource.Stream@PNG-de-DE.png) button in the "PLC tag" field and select an already created PLC tag in the object list. Click the ![Procedure](images/84603740299_DV_resource.Stream@PNG-de-DE.png) button to confirm the selection.
 
@@ -876,7 +876,7 @@ You have opened the project.
    Alternatively, create and then open a new tag table.
 2. Double-click "Add" in the "Name" column of the tag table. A new tag is created.
 3. If the Inspector window is not open, select the "Inspector window" option in the "View" menu.
-4. Select the "Properties > Properties >General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field. This tag name must be unique throughout the project.
+4. Select the "Properties &gt; Properties &gt;General" category in the Inspector window and, if required, enter a unique tag name in the "Name" field. This tag name must be unique throughout the project.
 5. If required, select the "Display name" field to enter a name to be displayed in Runtime. The name to be displayed is language-specific and can be translated for the required Runtime languages. The display name is available for Basic Panels, Panels and Runtime Advanced.
 
    ![Procedure](images/131117628299_DV_resource.Stream@PNG-en-US.png)
@@ -885,7 +885,7 @@ You have opened the project.
 6. Select "Internal tag" as the connection in the "Connection" field.
 7. Select the required data type in the "Data type" field.
 8. In the "Length" field, you must specify the maximum number of characters to be stored in the tag according to the selected data type. The length is automatically defined by the data type for numerical tags.
-9. As an option, you can enter a comment regarding the use of the tag. To do so, click "Properties > Properties > Comment" in the Inspector window and enter a text.
+9. As an option, you can enter a comment regarding the use of the tag. To do so, click "Properties &gt; Properties &gt; Comment" in the Inspector window and enter a text.
 
 You can also configure all tag properties directly in the tag table. To view hidden columns, activate the column titles using the shortcut menu.
 
@@ -913,7 +913,7 @@ Internal tags that you create on a WinCC client with its own project are always 
 
 ##### Setting the update of the internal tags
 
-1. In the Inspector window, select the category "Properties > Properties > Settings".
+1. In the Inspector window, select the category "Properties &gt; Properties &gt; Settings".
 2. Select the desired update variant:
 
    - Client-/Server-wide
@@ -941,7 +941,7 @@ You can also use the auto fill function to fill table cells below a tag with a s
 
 If you apply the automatic filling in to already filled cells of a tab table, you will be asked whether you want to overwrite the cells or insert new tags.
 
-If you do not want to overwrite already configured tags, activate insert mode. Activate insert mode by keeping the <Ctrl> key pressed during insertion. Already existing entries in the tag table are moved down if insert mode is activated.
+If you do not want to overwrite already configured tags, activate insert mode. Activate insert mode by keeping the &lt;Ctrl&gt; key pressed during insertion. Already existing entries in the tag table are moved down if insert mode is activated.
 
 ##### Requirement
 
@@ -1101,9 +1101,9 @@ If you add the copied tag to another device, the tag is added together with the 
 > - HMI tag is used in a type, for example, to dynamize an object property via a script.
 > - One or more instances of the type are used in the project.
 > - Project is in Runtime.
-> - After the renaming, execute the command "Compile > Software (only changes)".
+> - After the renaming, execute the command "Compile &gt; Software (only changes)".
 >
-> Solution: Exit Runtime and rename the tag. Execute the "Compile > Software (rebuild all)" command.
+> Solution: Exit Runtime and rename the tag. Execute the "Compile &gt; Software (rebuild all)" command.
 
 1. In the "Name" field, select the tag in the tag table.
 2. Select "Rename" from the shortcut menu.
@@ -1128,7 +1128,7 @@ If you add the copied tag to another device, the tag is added together with the 
 
 > **Note**
 >
-> If you want a warning to be output during compiling when HMI tags are deleted in screens, clear the "Do not check deleted HMI tags in screens" check box under "Runtime settings > General > Compiler options". If this option is not activated, the affected field with the deleted tag is marked as invalid.
+> If you want a warning to be output during compiling when HMI tags are deleted in screens, clear the "Do not check deleted HMI tags in screens" check box under "Runtime settings &gt; General &gt; Compiler options". If this option is not activated, the affected field with the deleted tag is marked as invalid.
 
 ##### Export and import of tags
 
@@ -1237,7 +1237,7 @@ In WinCC, you can create multiple I/O fields that are linked with tags in one sc
 
 > **Note**
 >
-> When you move a PLC tag from the detail window to the work area by drag&drop, a network and a connection are created additionally in the "Devices & Networks" editor.
+> When you move a PLC tag from the detail window to the work area by drag&amp;drop, a network and a connection are created additionally in the "Devices &amp; Networks" editor.
 
 ---
 
@@ -1251,7 +1251,7 @@ In WinCC, you can create multiple I/O fields that are linked with tags in one sc
 
 In WinCC, you can map the location of a data value in the structure of a data block in the WinCC tag name. To do this, you synchronize the WinCC tags with the connected PLC tags. If necessary, the PLC name is set as a prefix.
 
-You configure the name matching based on the requirements of your project set under "Runtime Settings > Settings for Tags". WinCC offers you several options for this.
+You configure the name matching based on the requirements of your project set under "Runtime Settings &gt; Settings for Tags". WinCC offers you several options for this.
 
 You specify whether the names are matched and the conditions for this to occur during synchronization.
 
@@ -1436,7 +1436,7 @@ For Runtime Advanced and Panels you can configure the system to process a functi
 
 To define limits for a tag, proceed as follows:
 
-1. In the Inspector window, select "Properties > Properties > Range". If you want to define one of the limits as a constant value, select "Constant" using the ![Procedure](images/13196575115_DV_resource.Stream@PNG-de-DE.png) button. Enter a number in the relevant field.
+1. In the Inspector window, select "Properties &gt; Properties &gt; Range". If you want to define one of the limits as a constant value, select "Constant" using the ![Procedure](images/13196575115_DV_resource.Stream@PNG-de-DE.png) button. Enter a number in the relevant field.
 
    If you want to define one of the limits as a tag value, select "HMI tag" using the ![Procedure](images/13196575115_DV_resource.Stream@PNG-de-DE.png) button. Use the object list to define the tag for the limit.
 2. To set additional limits for the tag, repeat step 1 with the appropriate settings.
@@ -1449,8 +1449,8 @@ You can also configure the limits directly in the tag table. To view hidden colu
 
 When you configure Runtime Advanced and Panels, you can have a function list called up if a high or low limit is violated.
 
-1. If you want to start a function list when the value drops below the value range, click "Properties > Events > On falling below" in the Inspector window. Create a function list in this dialog.
-2. If you want to start a function list when the value exceeds the value range, click "Properties > Events > On exceeding" in the Inspector window. Create a function list in this dialog.
+1. If you want to start a function list when the value drops below the value range, click "Properties &gt; Events &gt; On falling below" in the Inspector window. Create a function list in this dialog.
+2. If you want to start a function list when the value exceeds the value range, click "Properties &gt; Events &gt; On exceeding" in the Inspector window. Create a function list in this dialog.
 
 ###### Result
 
@@ -1501,7 +1501,7 @@ In WinCC you can configure a start value for a numeric tag and a tag for date/ti
 
 To configure a start value, proceed as follows:
 
-1. In the Inspector window select "Properties > Properties > Values."
+1. In the Inspector window select "Properties &gt; Properties &gt; Values."
 2. Enter the desired "Start value."
 
 ###### Alternative procedure
@@ -1538,7 +1538,7 @@ Depending on the PLC selected, you may need to modify the configuration of the t
 
 To change the PLC connection of a tag, proceed as follows:
 
-1. In the Inspector window select "Properties > Properties > General."
+1. In the Inspector window select "Properties &gt; Properties &gt; General."
 2. Select the new connection in the "Connection" field.
 
    The tag properties that you must change will be highlighted in color in the tag table and in the Inspector window.
@@ -1599,7 +1599,7 @@ To apply linear scaling to a tag, you must specify one value range on the HMI de
 
 To apply linear scaling to a tag, follow these steps:
 
-1. In the Inspector window select "Properties > Properties > Linear scaling."
+1. In the Inspector window select "Properties &gt; Properties &gt; Linear scaling."
 2. Click on "Enable" to switch on linear scaling.
 
    Using this option, you can temporarily switch off linear scaling for testing purposes, for example. Settings which were made earlier for linear scaling remain unchanged.
@@ -1798,7 +1798,7 @@ When using address multiplexing, you can efficiently access different addresses 
 
 ###### Procedure
 
-1. Select the tag for address multiplexing in the tag table, and select "Properties > Properties > General" in the Inspector window. The general properties of the tag are displayed.
+1. Select the tag for address multiplexing in the tag table, and select "Properties &gt; Properties &gt; General" in the Inspector window. The general properties of the tag are displayed.
 
    ![Procedure](images/70497360907_DV_resource.Stream@PNG-en-US.png)
 
@@ -1861,7 +1861,7 @@ When using address multiplexing, you can efficiently access different addresses 
 
 ###### Procedure
 
-1. Select the tag for address multiplexing in the tag table, and select "Properties > Properties > General" in the Inspector window. The general properties of the tag are displayed.
+1. Select the tag for address multiplexing in the tag table, and select "Properties &gt; Properties &gt; General" in the Inspector window. The general properties of the tag are displayed.
 
    ![Procedure](images/70501480715_DV_resource.Stream@PNG-en-US.png)
 
@@ -1950,7 +1950,7 @@ With indirect addressing, the tag used is first determined at runtime. Instead o
 
 To address tags indirectly, proceed as follows:
 
-1. In the Inspector window select "Properties > Properties > Multiplexing".
+1. In the Inspector window select "Properties &gt; Properties &gt; Multiplexing".
 2. Select the "Multiplexing" option to activate indirect addressing.
 
    Using this option, you can temporarily switch off indirect addressing for testing purposes, for example. Settings which were made earlier for indirect addressing remain unchanged.
@@ -2003,10 +2003,10 @@ The following events are available for a tag:
 
 To configure a tag with a function list, proceed as follows:
 
-1. Under "Properties > Events >" in the Inspector window, select the event for which you want to create a function list.
+1. Under "Properties &gt; Events &gt;" in the Inspector window, select the event for which you want to create a function list.
 
    The function list associated with the selected event is shown.
-2. Click "<Add function>". The second table column contains a selection button.
+2. Click "&lt;Add function&gt;". The second table column contains a selection button.
 3. Click the selection button and select a system function.
 4. Define the parameter values.
 
@@ -2076,7 +2076,7 @@ The value of an external tag can be changed in Runtime by the PLC to which the t
 
 To configure an acquisition cycle for a tag, follow these steps:
 
-1. In the Inspector window select "Properties > Properties > General."
+1. In the Inspector window select "Properties &gt; Properties &gt; General."
 2. If you want to update the tag at regular intervals as long as it is being displayed on the screen or logged, select "Cyclic in operation" as the acquisition mode.  
    Or:  
    If you want to update the tag at regular intervals even though it is not being displayed on the screen or logged, select "Cyclic continuous" as the acquisition mode.  
@@ -2149,7 +2149,7 @@ You can define a substitute value for the following cases:
 
 To configure a substitute value, follow these steps:
 
-1. Select the desired tag in the tag table, and select "Properties > Properties > Values" in the Inspector window.
+1. Select the desired tag in the tag table, and select "Properties &gt; Properties &gt; Values" in the Inspector window.
 2. In the "Use substitute value" segment, select when you want WinCC to use this substitute value in the tag.
 3. Enter the required substitute value in the "Substitute value" field.
 
@@ -2262,7 +2262,7 @@ With indirect addressing, the tag used is first determined during runtime. Inste
 
 To address tags indirectly, proceed as follows:
 
-1. Add an I/O field to the screen and select the following settings for this example in the information window under "Properties > Properties > General":
+1. Add an I/O field to the screen and select the following settings for this example in the information window under "Properties &gt; Properties &gt; General":
 
    - Mode: Output
    - Display format: Decimal
@@ -2276,7 +2276,7 @@ To address tags indirectly, proceed as follows:
    ![Procedure](images/23025312523_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/23025312523_DV_resource.Stream@PNG-en-US.png)
-4. Add another I/O field to the screen and select the following settings for this example in the information window under "Properties > Properties > General":
+4. Add another I/O field to the screen and select the following settings for this example in the information window under "Properties &gt; Properties &gt; General":
 
    - Mode: Entry
    - Display format: Character string
@@ -2315,10 +2315,10 @@ Use the WinCC performance tags to evaluate the time behavior of a connection.
 
 To specify or determine the status of a connection, create the following system tags for each connection:
 
-- @<Connectionname>@ForceConnectionStateEx
+- @&lt;Connectionname&gt;@ForceConnectionStateEx
 
   Use the tag to establish or terminate the connection in Runtime.
-- @<Connectionname>@ConnectionStateEx
+- @&lt;Connectionname&gt;@ConnectionStateEx
 
   Use the tag to determine the status of the connection in runtime.
 
@@ -2330,9 +2330,9 @@ If you change the name of the connection, the two system tags are also renamed.
 
 | Tag | Use | Value | Explanation |
 | --- | --- | --- | --- |
-| @<...>@ForceConnectionStateEx | Determine the connection state | 1 | Establishment of connection  Start value = 1:  When Runtime is activated, the connection is established. |
+| @&lt;...&gt;@ForceConnectionStateEx | Determine the connection state | 1 | Establishment of connection  Start value = 1:  When Runtime is activated, the connection is established. |
 | 0 | Termination of connection  Start value = 0:  When Runtime is activated, the connection remains deactivated.  The tags of the connection are not archived. |  |  |
-| @<...>@ConnectionStateEx | Determine the current connection status | 1 | The connection is ready to use. |
+| @&lt;...&gt;@ConnectionStateEx | Determine the current connection status | 1 | The connection is ready to use. |
 | 0 | The connection is interrupted or terminated. |  |  |
 
 ###### Procedure
@@ -2340,27 +2340,27 @@ If you change the name of the connection, the two system tags are also renamed.
 1. Create the tag table "ConnectionStates" under "HMI tags"
 2. Create the tags:
 
-   - @<...>@ForceConnectionStateEx
-   - @<...>@ConnectionStateEx
+   - @&lt;...&gt;@ForceConnectionStateEx
+   - @&lt;...&gt;@ConnectionStateEx
 3. Select the connection that is to be activated, deactivated or whose status is to be queried.
 
 ###### Using tags
 
 **Querying the connection status**
 
-To determine the status of the connection, read the value of the tag "@<...>@ConnectionStateEx".
+To determine the status of the connection, read the value of the tag "@&lt;...&gt;@ConnectionStateEx".
 
-If you only want to query whether a certain connection is established or terminated, use the system tag "@<Connection name>@ConnectionStateEx".
+If you only want to query whether a certain connection is established or terminated, use the system tag "@&lt;Connection name&gt;@ConnectionStateEx".
 
 **Terminating a connection**
 
-To deactivate a connection, set the value "0" in the "@<...>@ForceConnectionStateEx" tag.
+To deactivate a connection, set the value "0" in the "@&lt;...&gt;@ForceConnectionStateEx" tag.
 
 The archiving of the associated process tags is stopped.
 
 **Establishing a connection**
 
-To reactivate an interrupted connection, set the value "1" in the "@<...>@ForceConnectionStateEx" tag.
+To reactivate an interrupted connection, set the value "1" in the "@&lt;...&gt;@ForceConnectionStateEx" tag.
 
 The process tags of the connection are archived again.
 
@@ -2502,7 +2502,7 @@ You can create an array tag as an internal tag or as an external tag.
 To create an array tag, follow these steps:
 
 1. Open the HMI tag table.
-2. Double click <Add> in the "Name" column of the HMI tag table.  
+2. Double click &lt;Add&gt; in the "Name" column of the HMI tag table.  
    A new HMI tag is created.
 
 > **Note**
@@ -2673,7 +2673,7 @@ You can create an array tag as an internal tag or as an external tag.
 To create an array tag, follow these steps:
 
 1. Open the HMI tag table.
-2. Double click <Add> in the "Name" column of the HMI tag table.  
+2. Double click &lt;Add&gt; in the "Name" column of the HMI tag table.  
    A new HMI tag is created.
 
 > **Note**
@@ -2832,7 +2832,7 @@ You define user data type elements in the library view. You add or delete elemen
 
 1. Select a communication driver for the user data type.
 
-- If you select the <Internal communication> entry, you can only assign the user data type to the internal tags as the data type.
+- If you select the &lt;Internal communication&gt; entry, you can only assign the user data type to the internal tags as the data type.
 - If a connection to a PLC is selected as the communication driver, the user data type can only be assigned to tags with a connection to this PLC as the data type.
 - The communication type set applies to all user data type elements of a user data type. In a user data type for the"WinCC Runtime Professional" family of devices, you can define for each user data type element whether the configured driver is used for control or internal communication.
 
@@ -2936,14 +2936,14 @@ In connection with a PLC, a user data type can only be used if the absolute addr
 To create a tag of the "User data type" data type, follow these steps:
 
 1. In the "Name" column, double-click "Add" in the tag table. A new tag is created.
-2. In the Inspector window select "Properties > Properties > General".
+2. In the Inspector window select "Properties &gt; Properties &gt; General".
 3. Enter a unique tag name in the "Name" field.
 4. Select the connection to the required PLC in the "Connection" box.
 5. Select the desired version of the user data type in the "Data type" field.
 
    The selected connection determines which user data types will be displayed.
 
-   For internal tags, only user data type versions of the <Internal user data type> type are available.
+   For internal tags, only user data type versions of the &lt;Internal user data type&gt; type are available.
 
    ![Procedure](images/90778524811_DV_resource.Stream@PNG-en-US.png)
 
@@ -2954,7 +2954,7 @@ To create a tag of the "User data type" data type, follow these steps:
    ![Procedure](images/90794347019_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/90794347019_DV_resource.Stream@PNG-en-US.png)
-6. Enter the address of the PLC that you want to access with the external tags in the "Address" field of the "Settings" area. The specified address must always point to the start data bit, for example, <DB1.DBX0.0>.
+6. Enter the address of the PLC that you want to access with the external tags in the "Address" field of the "Settings" area. The specified address must always point to the start data bit, for example, &lt;DB1.DBX0.0&gt;.
 
 #### Result
 
@@ -3201,7 +3201,7 @@ For cycles, define the starting points to start different cycles at different ti
 To define the starting point for a cycle, follow these steps:
 
 1. Select the cycle from the table in the "Cycles" editor.
-2. Click "Properties > Properties > Starting point" in the Inspector window.  
+2. Click "Properties &gt; Properties &gt; Starting point" in the Inspector window.  
    The properties for the starting point of the cycle are displayed.
 3. Select the settings for the starting point.
 4. Save the project.

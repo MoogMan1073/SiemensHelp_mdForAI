@@ -156,7 +156,7 @@ To use the functionality of Exclusive Engineering, follow these steps:
 
 The same hardware and software requirements as for working with TIA Portal apply to working with Exclusive Engineering .
 
-For information about the regulations in place for the products you have installed, go to "Installation" > "System requirements for installation".
+For information about the regulations in place for the products you have installed, go to "Installation" &gt; "System requirements for installation".
 
 > **Note**
 >
@@ -199,7 +199,7 @@ A detailed description of the procedure is available under "[Installing and unin
 
 You have the option of setting the required performance capability for the network profile you are using in the settings for the TIA Portal.
 
-To do so, select the required profile from the drop-down list in TIA Portal under "Options" > "Settings" > "Project sever" > "Server network profiles".
+To do so, select the required profile from the drop-down list in TIA Portal under "Options" &gt; "Settings" &gt; "Project sever" &gt; "Server network profiles".
 
 You will find a detailed description of the network profiles under: [Set network profiles for project server](Working%20with%20the%20TIA%20Project-Server.md#set-network-profiles-for-project-server)
 
@@ -269,7 +269,7 @@ The Exclusive Engineering user interface shows the following icons in the toolba
 | ![Icons in the toolbar](images/125655281931_DV_resource.Stream@PNG-de-DE.png) | **Server status "locked for other users"**   This icon indicates that the associated project server is displayed as "locked" for other users because it is currently being used by you in an exclusive session. |
 | ![Icons in the toolbar](images/88369531915_DV_resource.Stream@PNG-de-DE.png) | **Server status "locked"**   This icon indicates that the associated project server is currently being used by a user and is therefore locked. If you place the mouse pointer on this icon, you will receive additional information about the lock. |
 | ![Icons in the toolbar](images/88369535627_DV_resource.Stream@PNG-de-DE.png) | **Server status "not connected"**   This icon indicates that the associated project server is not connected. |
-| ![Icons in the toolbar](images/103395513995_DV_resource.Stream@PNG-de-DE.png) | **"Work offline" server status**   This symbol indicates that no connection is established to the project server, since you have enabled the "Work offline" function.  Clear the check box under "Project > Project server > Work offline", to re-establish a connection to the project server. |
+| ![Icons in the toolbar](images/103395513995_DV_resource.Stream@PNG-de-DE.png) | **"Work offline" server status**   This symbol indicates that no connection is established to the project server, since you have enabled the "Work offline" function.  Clear the check box under "Project &gt; Project server &gt; Work offline", to re-establish a connection to the project server. |
 
 #### Icons for displaying server projects
 
@@ -361,7 +361,7 @@ Once the project server has been installed and then configured and started with 
 
 #### Manage server projects
 
-When you execute the command "Project > Project server > Manage server projects", all existing server projects and local sessions for the existing server connections are displayed in the next dialog.
+When you execute the command "Project &gt; Project server &gt; Manage server projects", all existing server projects and local sessions for the existing server connections are displayed in the next dialog.
 
 If you have not added a Server project yet, the list is empty.
 
@@ -427,7 +427,7 @@ The TIA Portal and a project server are installed.
 
 To create a Server project, follow these steps:
 
-1. In the TIA Portal, click the menu command "Project > Project server > Manage Server projects".
+1. In the TIA Portal, click the menu command "Project &gt; Project server &gt; Manage Server projects".
 2. In the following dialog, double-click the button "Add project to server".
 3. Select the project which you want to add as Server project.
 
@@ -447,7 +447,7 @@ To create a Server project, follow these steps:
 
 #### Result
 
-The selected single-user project is added as new Server project and displayed under "Project > Project server > Manage server projects".
+The selected single-user project is added as new Server project and displayed under "Project &gt; Project server &gt; Manage server projects".
 
 If the option "Create local multiuser session" was selected, a new local session is created and opened.
 
@@ -457,7 +457,7 @@ If the option "Create local multiuser session" was selected, a new local session
 
 Once the project server has been installed and then configured and started with the help of the Power Tools , you can manage the Server projects in the TIA Portal.
 
-The deletion of a server connection can be carried out in the TIA Portal with the command "Tools > Settings > Project Server" using the "Delete" command.
+The deletion of a server connection can be carried out in the TIA Portal with the command "Tools &gt; Settings &gt; Project Server" using the "Delete" command.
 
 The deletion of a server project is only possible via the Power Tools.
 
@@ -509,7 +509,7 @@ You have created a server project.
 
 To create an exclusive local session, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Project server > Manage server projects".
+1. In the TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 
    The "Manage server projects" dialog box opens.
 
@@ -547,8 +547,8 @@ The exclusive local session is created and displayed in the dialog "Manage serve
 
 You have different options for opening a local session for editing in Exclusive Engineering:
 
-- With "Project > Open" in the TIA Portal or from the list of the most recently opened projects
-- With the command "Project > Project server > Manage server projects" in the TIA Portal.
+- With "Project &gt; Open" in the TIA Portal or from the list of the most recently opened projects
+- With the command "Project &gt; Project server &gt; Manage server projects" in the TIA Portal.
 - When TIA Portal is closed with the Microsoft Windows Explorer project
 - Offline without a server connection
 - Opened local session can be temporarily edited in the "Exclusive Multiuser mode"
@@ -578,7 +578,7 @@ You have created an executable Server project and a valid local session.
 
 To open a recently used local session, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Open".
+1. In the TIA Portal, select the command "Project &gt; Open".
 
    The "Open project" dialog box opens with a list of recently used projects and sessions.
 
@@ -603,7 +603,7 @@ The selected local session is opened.
 
 To open a local session that has been moved to another storage location in the meantime, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Open".
+1. In the TIA Portal, select the command "Project &gt; Open".
 
    The "Open project" dialog box opens with a list of recently used projects and sessions.
 2. Select the preferred local session and click "Open".
@@ -621,12 +621,12 @@ The information about the new storage location is saved in the associated server
 
 To open a local session via the associated server project, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Project server > Manage server projects".
+1. In the TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 
    The "Manage server projects" dialog box opens.
 2. Select the required project server in the drop-down list.
 3. Select the server project required and the exclusive local session from the list.
-4. To also display local sessions which were created on another computer, open the multiuser settings via "Options > Settings > Multiuser".
+4. To also display local sessions which were created on another computer, open the multiuser settings via "Options &gt; Settings &gt; Multiuser".
 
    Activate the option "Show local session created on other systems".
 
@@ -645,7 +645,7 @@ All opened dialog boxes are closed and the selected local session is opened.
 To open a local session with the Microsoft Windows Explorer, follow these steps:
 
 1. When the TIA Portal is closed, navigate to the directory in which your local sessions are stored in Microsoft Windows Explorer.
-2. Select the desired local session with the file extension ".es<version>" and double-click to open it.
+2. Select the desired local session with the file extension ".es&lt;version&gt;" and double-click to open it.
 
 **Result**
 
@@ -655,7 +655,7 @@ The TIA Portal is started and the selected local session is opened.
 >
 > **Closing an exclusive local session**
 >
-> When working with Exclusive Engineering, close the local session with the command "Project > Close".
+> When working with Exclusive Engineering, close the local session with the command "Project &gt; Close".
 
 #### Opening a local session without a server connection
 
@@ -751,7 +751,7 @@ The exclusive session is not saved locally.
 
 #### Introduction
 
-An exclusive local session is saved with Exclusive Engineering with the file identifier ".es<version number of TIA Portal>" when working with.
+An exclusive local session is saved with Exclusive Engineering with the file identifier ".es&lt;version number of TIA Portal&gt;" when working with.
 
 #### Requirement
 
@@ -769,13 +769,13 @@ To save an exclusive local session, follow these steps:
 
 #### Result
 
-The exclusive local session is saved under the current project name with the file identifier ".es<version>".
+The exclusive local session is saved under the current project name with the file identifier ".es&lt;version&gt;".
 
 ### Closing an exclusive local session
 
 #### Introduction
 
-You close an exclusive local session as you would a single-user project with the command "Project > Close".
+You close an exclusive local session as you would a single-user project with the command "Project &gt; Close".
 
 #### Requirement
 
@@ -787,7 +787,7 @@ You have created a Server project and a valid exclusive local session that is op
 
 To close an exclusive local session, follow these steps:
 
-1. In TIA Portal, select the command "Project > Close".
+1. In TIA Portal, select the command "Project &gt; Close".
 2. Confirm the next prompt with "Yes" if you want to save your changes.
 
 #### Result
@@ -806,7 +806,7 @@ Archiving is independent of whether or not you have already transferred the chan
 
 When archiving an open local session, the most recently saved state of the exclusive local session is used for archiving.
 
-The local session archived as an exclusive single-user project has the file identifier ".zap<version number of TIA Portal>".
+The local session archived as an exclusive single-user project has the file identifier ".zap&lt;version number of TIA Portal&gt;".
 
 Archiving the exclusive local session offers the following advantages:
 
@@ -827,7 +827,7 @@ To archive an exclusive local session as a single-user project, follow these ste
 1. Select the "Archive ..." command from the "Project" menu.
 
    The "Archive" dialog opens.
-2. In the "Source path" field, the open local session is displayed with the extension ".als<version>" by default.
+2. In the "Source path" field, the open local session is displayed with the extension ".als&lt;version&gt;" by default.
 
    You can also use the selection box to select a different exclusive local session for archiving.
 3. To create a compressed archive file, select the "Archive as compressed file" option.
@@ -837,14 +837,14 @@ To archive an exclusive local session as a single-user project, follow these ste
 5. To add a date and time automatically, select the "Add date and time to the target name".
 6. In the "Target path" field select the directory where you want to save the archive file or the new directory of the project.
 
-   You can set the default directory under "Options > Settings > General > Archive settings > Storage location for project archives".
+   You can set the default directory under "Options &gt; Settings &gt; General &gt; Archive settings &gt; Storage location for project archives".
 7. Click "Archive".
 
 #### Result
 
 The exclusive local session is archived as a single-user project.
 
-An archive file of the local sessions with the file extension ".zap<version>" is created.
+An archive file of the local sessions with the file extension ".zap&lt;version&gt;" is created.
 
 The archive file contains the complete project directory. The individual files of compressed archives are additionally reduced to the essential components to save space.
 
@@ -883,7 +883,7 @@ You have created an executable Server project and a valid local session.
 
 To open a local session, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Open".
+1. In the TIA Portal, select the command "Project &gt; Open".
 
    The "Open project" dialog box opens with a list of recently used projects and sessions.
 
@@ -929,7 +929,7 @@ To exit working in an open exclusive session, proceed as follows:
 
 To finish working in a closed exclusive session, proceed as follows:
 
-1. Click the command "Project > Manage server projects".
+1. Click the command "Project &gt; Manage server projects".
 
    The "Manage server projects" dialog box opens.
 2. Select the desired exclusive session and click "Exit local session" in the shortcut menu.
@@ -959,7 +959,7 @@ You have created an executable Server project and a valid exclusive local sessio
 
 To display all exclusive local sessions belonging to a server project, follow these steps:
 
-1. In TIA Portal, select the command "Project > Project server > Manage server projects".
+1. In TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 
    The "Manage server projects" dialog opens and displays all existing projects for the selected project server.
 2. Select the required server connection.

@@ -82,7 +82,7 @@ This section contains information on the following topics:
 
 #### Introduction
 
-Configure fail-safe operation in the "Devices & Networks" editor for the following KTP Mobile Panels:
+Configure fail-safe operation in the "Devices &amp; Networks" editor for the following KTP Mobile Panels:
 
 - KTP400F Mobile Panel
 - KTP700F Mobile Panel
@@ -101,15 +101,15 @@ Configure fail-safe operation in the "Devices & Networks" editor for the follo
 
 #### Configuring fail-safe operation for the mobile panel
 
-1. Open the network view in the "Devices & Networks" editor.
+1. Open the network view in the "Devices &amp; Networks" editor.
 2. Select the Mobile Panel in the work area.
-3. Select "Properties > General > Mode > IO device" in the inspector window.
+3. Select "Properties &gt; General &gt; Mode &gt; IO device" in the inspector window.
 4. Assign the fail-safe PLC under "Assigned IO controller".
 
    PROFINET is activated and the transfer areas of the I-device communication are displayed.
-5. In the Inspector window, click "Activate PROFIsafe" under "Properties > General" > PROFIsafe".
+5. In the Inspector window, click "Activate PROFIsafe" under "Properties &gt; General" &gt; PROFIsafe".
 
-   PROFIsafe is activated and the F-parameters are displayed under "Properties > General> PROFIsafe parameters > F-parameters".
+   PROFIsafe is activated and the F-parameters are displayed under "Properties &gt; General&gt; PROFIsafe parameters &gt; F-parameters".
 6. To enter a new F-monitoring time, select "Manual assignment of F-monitoring time".
 7. Enter an F-monitoring time suitable for your HMI device and plant.
 
@@ -201,7 +201,7 @@ In the following example you configure the screen that is displayed when a Mobil
 #### Procedure
 
 1. Select the "MixingPlant" zone from the "Zones" table.
-2. Click "Properties> Events" in the Inspector window.
+2. Click "Properties&gt; Events" in the Inspector window.
 3. Click on the "Connected" event.
 4. Select the "ActivateScreen" system function in the "function list".
 5. Select "MixingPlant_1" as "Screen name".
@@ -245,7 +245,7 @@ The PROFIsafe address is loaded as follows at the start of Runtime:
 
 #### Validity
 
-In the "Runtime Settings > Power Management" editor, configure the energy-saving mode of a Mobile Panel.
+In the "Runtime Settings &gt; Power Management" editor, configure the energy-saving mode of a Mobile Panel.
 
 #### Power Management
 

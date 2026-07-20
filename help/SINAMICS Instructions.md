@@ -174,7 +174,7 @@ During the initial configuration of the block, these are set up with initial val
 | --- | --- | --- | --- |
 | AxisEnabled | BOOL | 0 | Drive is ready and switched on |
 | AxisPosOk | BOOL | 0 | Target position of the axis reached |
-| AxisSpFixed | BOOL | 0 | 1 = Setpoint is stationary (Note: Information dependent on SINAMICS firmware: 1. SINAMICS S/G120 FW <4.8/<4.7.9: Transfer of parameter **r2199.0** 2. SINAMICS S/G120 FW ≥ 4.8/≥ 4.7.9: Transfer of parameter **r2683.2** 3. SINAMICS V90 PN: Transfer of parameter **r2683.2** |
+| AxisSpFixed | BOOL | 0 | 1 = Setpoint is stationary (Note: Information dependent on SINAMICS firmware: 1. SINAMICS S/G120 FW &lt;4.8/&lt;4.7.9: Transfer of parameter **r2199.0** 2. SINAMICS S/G120 FW ≥ 4.8/≥ 4.7.9: Transfer of parameter **r2683.2** 3. SINAMICS V90 PN: Transfer of parameter **r2683.2** |
 | AxisRef | BOOL | 0 | Home position set |
 | AxisWarn | BOOL | 0 | Alarm of the drive effective |
 | AxisError | BOOL | 0 | Drive is faulted |
@@ -318,7 +318,7 @@ The setup mode permits the position-controlled traversing of the axis in a posit
 >
 > The continuous setpoint acceptance is a special function of the preset positioning mode. By means of the parameter p2649 – which can be found in the standard telegram in the EPos STW1 BIT12 – it is possible to accept these values directly in the EPos WITHOUT edge triggering MDI setting values (position, speed, etc.).
 >
-> Access takes place via the input "ConfigEPos". Example: ConfigEPos = 3h (standard) -> ConfigEPos = 103h
+> Access takes place via the input "ConfigEPos". Example: ConfigEPos = 3h (standard) -&gt; ConfigEPos = 103h
 >
 > 259 = (3+(2<sup>8</sup>)) (with direct setpoint acceptance) = 103h.
 
@@ -536,8 +536,8 @@ When an error is detected, the "Error" group error is set and the "Status" error
 >
 > **If error message 8092(hex) occurs at the DIAGID output, the S7-1x00 firmware used must be checked.The following applies:**
 >
-> - S7-1200 -> firmware at least 2.x
-> - S7-1500 -> firmware at least 1.1
+> - S7-1200 -&gt; firmware at least 2.x
+> - S7-1500 -&gt; firmware at least 1.1
 
 ### EPOS telegram 111
 
@@ -574,7 +574,7 @@ When an error is detected, the "Error" group error is set and the "Status" error
 | 10 | LB | Life bit (control request from PLC) | p854 | 2501 |
 | 11 | RefStart | Start homing | p2595 | 3612 |
 | 12 | Bit12 | Reserved |  |  |
-| 13 | Bit13 | External block change (0->1) | <not used>  (p2633) |  |
+| 13 | Bit13 | External block change (0-&gt;1) | &lt;not used&gt;  (p2633) |  |
 | 14 | Bit14 | Reserved |  |  |
 | 15 | Bit15 | Reserved |  |  |
 
@@ -606,7 +606,7 @@ When an error is detected, the "Error" group error is set and the "Status" error
 | 0 | TrkMode | Start follow-up mode | p2655.0 | 3635 |
 | 1 | SetRefPt | Set home position | p2596 | 3612 |
 | 2 | ActRefCam | Activate homing cams | p2612 | 3612 |
-| 3 | Bit3 | Activate fixed stop | <not used> |  |
+| 3 | Bit3 | Activate fixed stop | &lt;not used&gt; |  |
 | 4 | Bit4 | Reserved |  |  |
 | 5 | JogInc | Jog:  0 = continuous traversing  1 = traversing about parameterized path | p2591 | 3610 |
 | 6 | Bit6 | Reserved |  |  |
@@ -628,17 +628,17 @@ When an error is detected, the "Error" group error is set and the "Status" error
 | 2 | DDSBit2 | Drive data set bit 2 | p822.0 | 8565 |
 | 3 | DDSBit3 | Drive data set bit 3 | p823.0 | 8565 |
 | 4 | DDSBit4 | Drive data set bit 4 | p824.0 | 8565 |
-| 5 | GlbStart | Global start | <not used> |  |
-| 6 | ResIComp | Reset I-component of speed controller | <not used> |  |
+| 5 | GlbStart | Global start | &lt;not used&gt; |  |
+| 6 | ResIComp | Reset I-component of speed controller | &lt;not used&gt; |  |
 | 7 | ActPrkAxis | Activate parking axis | p897 |  |
-| 8 | TrvFixedStp | Travel to fixed stop | <not used>  (p1545.0) | <not used>  (8012) |
-| 9 | GlbTrgCom | Global trigger command | <not used> |  |
+| 8 | TrvFixedStp | Travel to fixed stop | &lt;not used&gt;  (p1545.0) | &lt;not used&gt;  (8012) |
+| 9 | GlbTrgCom | Global trigger command | &lt;not used&gt; |  |
 | 10 | Bit10 | Reserved |  |  |
-| 11 | MotSwOver | Motor switchover completed (0->1) | p828.0 | 8575 |
-| 12 | MsZykBit0 | Master sign-of-life bit 0 | <not used> |  |
-| 13 | MsZykBit1 | Master sign-of-life bit 1 | <not used> |  |
-| 14 | MsZykBit2 | Master sign-of-life bit 2 | <not used> |  |
-| 15 | MsZykBit3 | Master sign-of-life bit 3 | <not used> |  |
+| 11 | MotSwOver | Motor switchover completed (0-&gt;1) | p828.0 | 8575 |
+| 12 | MsZykBit0 | Master sign-of-life bit 0 | &lt;not used&gt; |  |
+| 13 | MsZykBit1 | Master sign-of-life bit 1 | &lt;not used&gt; |  |
+| 14 | MsZykBit2 | Master sign-of-life bit 2 | &lt;not used&gt; |  |
+| 15 | MsZykBit3 | Master sign-of-life bit 3 | &lt;not used&gt; |  |
 
 #### Setpoint overview
 
@@ -683,7 +683,7 @@ When an error is detected, the "Error" group error is set and the "Status" error
 | 10 | TargPos | Target position reached | r2684.10 | 4020 |
 | 11 | RefPSet | Home position set | r2684.11 | 3614 |
 | 12 | TrvTskAck | Traversing block activated acknowledgement | r2684.12 | 3646 |
-| 13 | StndStill | |n_act| < speed threshold value 3 [p2161]  This bit is used for standstill detection | r2199.0 | 2537 |
+| 13 | StndStill | |n_act| &lt; speed threshold value 3 [p2161]  This bit is used for standstill detection | r2199.0 | 2537 |
 | 14 | Accel | Axis accelerates | r2684.4 | 3635 |
 | 15 | Decel | Axis decelerates | r2684.5 | 3635 |
 
@@ -722,13 +722,13 @@ When an error is detected, the "Error" group error is set and the "Status" error
 | 5 | BWD | Axis travels backward | r2683.5 | 3635 |
 | 6 | SftSwMinAct | Minus software limit switch approached | r2683.6 | 3635 |
 | 7 | SftSwPlsAct | Plus software limit switch approached | r2683.7 | 3635 |
-| 8 | PosSmCam1 | Actual position value <= cam switching position 1 | r2683.8 | 4025 |
-| 9 | PosSmCam2 | Actual position value <= cam switching position 2 | r2683.9 | 4025 |
+| 8 | PosSmCam1 | Actual position value &lt;= cam switching position 1 | r2683.8 | 4025 |
+| 9 | PosSmCam2 | Actual position value &lt;= cam switching position 2 | r2683.9 | 4025 |
 | 10 | TrvOut1 | Direct output 1 via traversing block | r2683.10 | 3616 |
 | 11 | TrvOut2 | Direct output 2 via traversing block | r2683.11 | 3616 |
-| 12 | FxStpRd | Fixed stop reached | <not used>  (r2683.12) | 3645 |
-| 13 | FxStpTrRd | Fixed stop clamping torque reached | <not used>  (r2683.13) | 3645 |
-| 14 | TrvFxStpAct | Travel to fixed stop active | <not used>  (r2683.14) | 3645 |
+| 12 | FxStpRd | Fixed stop reached | &lt;not used&gt;  (r2683.12) | 3645 |
+| 13 | FxStpTrRd | Fixed stop clamping torque reached | &lt;not used&gt;  (r2683.13) | 3645 |
+| 14 | TrvFxStpAct | Travel to fixed stop active | &lt;not used&gt;  (r2683.14) | 3645 |
 | 15 | CmdAct | Traversing active | r2683.15 | 3645 |
 
 #### Assignment of status word 2
@@ -740,17 +740,17 @@ When an error is detected, the "Error" group error is set and the "Status" error
 | 2 | ActDDSBit2 | Drive data set bit 2 | r51.2 | 8565 |
 | 3 | ActDDSBit3 | Drive data set bit 3 | r51.3 | 8565 |
 | 4 | ActDDSBit4 | Drive data set bit 4 | r51.4 | 8565 |
-| 5 | CmdActRelBrk | Open holding brake active | <not used> |  |
-| 6 | TrqContMode | Torque-controlled operation | <not used> |  |
+| 5 | CmdActRelBrk | Open holding brake active | &lt;not used&gt; |  |
+| 6 | TrqContMode | Torque-controlled operation | &lt;not used&gt; |  |
 | 7 | ParkAxisAct | Parking axis selected | r896.0 |  |
 | 8 | Bit8 | Reserved | r1406.8 |  |
-| 9 | GlbTrgReq | Global trigger request | <not used> |  |
+| 9 | GlbTrgReq | Global trigger request | &lt;not used&gt; |  |
 | 10 | PulsEn | Pulses enabled | r899.11 | 2503 |
 | 11 | MotSwOverAct | Motor data set switchover active | r835.0 | 8575 |
-| 12 | SlvZykBit0 | Slave sign-of-life bit 0 | <not used> |  |
-| 13 | SlvZykBit1 | Slave sign-of-life bit 1 | <not used> |  |
-| 14 | SlvZykBit2 | Slave sign-of-life bit 2 | <not used> |  |
-| 15 | SlvZykBit3 | Slave sign-of-life bit 3 | <not used> |  |
+| 12 | SlvZykBit0 | Slave sign-of-life bit 0 | &lt;not used&gt; |  |
+| 13 | SlvZykBit1 | Slave sign-of-life bit 1 | &lt;not used&gt; |  |
+| 14 | SlvZykBit2 | Slave sign-of-life bit 2 | &lt;not used&gt; |  |
+| 15 | SlvZykBit3 | Slave sign-of-life bit 3 | &lt;not used&gt; |  |
 
 #### Actual value overview
 
@@ -871,10 +871,10 @@ The speed setpoint is specified directly on the block input "SpeedSp" in the REA
 | --- | --- | --- | --- |
 | AxisEnabled | BOOL | 0 | Operating mode is executed or enabled |
 | Lockout | BOOL | 0 | 1 = switch-on inhibit active |
-| ActVelocity | REAL | 0.0[rpm] | Actual speed -> depending on the normalization factor RefSpeed |
+| ActVelocity | REAL | 0.0[rpm] | Actual speed -&gt; depending on the normalization factor RefSpeed |
 | Error | BOOL | 0 | 1 = group fault present |
 | Status | INT | 0 | 16#7002: No error – block is being processed   16#8401: Error in drive   16#8402: Switching on inhibited  16#8600: Error DPRD_DAT   16#8601: Error DPWR_DAT |
-| DiagID | WORD | 0 | Expanded communication error -> SFB call error |
+| DiagID | WORD | 0 | Expanded communication error -&gt; SFB call error |
 
 > **Note**
 >
@@ -1109,7 +1109,7 @@ While this is taking place, the Busy bit is set to "1".
 
 If the parameter to be read is erroneous, the associated parameter error number is also read and entered into the structure. At the same time, the corresponding error bit in the first word of the double word Status is set.
 
-A successful read process is ended with the edge change "1->0" of the Busy bit and an edge change "0->1" of the Done bit. The Error bit must NOT be set during this. If this happens, the double word Status is to be evaluated.
+A successful read process is ended with the edge change "1-&gt;0" of the Busy bit and an edge change "0-&gt;1" of the Done bit. The Error bit must NOT be set during this. If this happens, the double word Status is to be evaluated.
 
 Examples for reading parameters can be found at Siemens Industry Online Support under the following ID: 109758413.
 
@@ -1279,14 +1279,14 @@ The reading or the writing of the parameters is initiated by the edge-triggered 
 | --- | --- | --- | --- |
 | Ready | BOOL | 0 | Checkback signal for connecting in LAcycCom environment; 1 = job ended or job canceled (one cycle long) |
 | Busy | BOOL | 0 | Job in progress if "Busy"=1 |
-| Done | BOOL | 0 | Job ended without errors means edge change from 0->1 |
+| Done | BOOL | 0 | Job ended without errors means edge change from 0-&gt;1 |
 | ValueRead1 | REAL | 0.0 | Value of the read parameter (REAL format) |
 | ValueRead2 | DINT | 0 | Value of the read parameter (DINT format) |
 | Format | INT | 0 | Format of the read parameter |
 | ErrorNo | INT | 0 | Error number according to PROFIdrive profile |
-| Error | BOOL | 0 | Active group error -> "Error" =1 |
-| Status | DWORD | 0 | 1st word -> binary-coded indicating which parameter access is faulted  2nd word: type of fault |
-| DiagId | WORD | 0 | Expanded communication error -> SFB call error |
+| Error | BOOL | 0 | Active group error -&gt; "Error" =1 |
+| Status | DWORD | 0 | 1st word -&gt; binary-coded indicating which parameter access is faulted  2nd word: type of fault |
+| DiagId | WORD | 0 | Expanded communication error -&gt; SFB call error |
 
 ### Use of the various parameter inputs and outputs
 
@@ -1516,4 +1516,4 @@ If the block operates error-free, "Status" = 16#7002 is displayed at the output.
 >
 > **"AckFault" input**
 >
-> The "AckFault" input must be reset by the user because the error acknowledgment is expecting an edge change (0->1).
+> The "AckFault" input must be reset by the user because the error acknowledgment is expecting an edge change (0-&gt;1).

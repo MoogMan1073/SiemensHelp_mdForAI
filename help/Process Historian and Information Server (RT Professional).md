@@ -105,7 +105,7 @@ This section contains information on the following topics:
 
 #### Introduction
 
-To supply tags for long-term logging, configure Process Historian with "Runtime settings > Process Historian". Enter the server name of the server under "Runtime Settings > Process Historian".
+To supply tags for long-term logging, configure Process Historian with "Runtime settings &gt; Process Historian". Enter the server name of the server under "Runtime Settings &gt; Process Historian".
 
 All logging data relevant for Process Historian is stored on the Runtime computer before it is sent to the Process Historian. Under "Store and forward cache", specify a path for caching logging data.
 
@@ -131,7 +131,7 @@ More information on the use of system tags for the Process Historian status disp
 
 #### Procedure
 
-1. Select "Runtime settings > Process Historian" in the project tree.
+1. Select "Runtime settings &gt; Process Historian" in the project tree.
 
    ![Procedure](images/88810599179_DV_resource.Stream@PNG-en-US.png)
 
@@ -190,7 +190,7 @@ To enable long-term logging, assign the relevant logging tags or compressed logg
 
    The tags in this log appear under "Logging tags".
 3. Select one or more logging tags.
-4. Select the "Long-term relevant" checkbox in the Inspector window under "Properties > General".
+4. Select the "Long-term relevant" checkbox in the Inspector window under "Properties &gt; General".
 
    ![Procedure](images/108444478859_DV_resource.Stream@PNG-en-US.png)
 

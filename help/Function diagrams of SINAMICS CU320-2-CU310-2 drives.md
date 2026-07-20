@@ -481,7 +481,7 @@ SI TM54F - Failsafe digital inputs (F-DI 5 ... F-DI 9) - 2894 -
 SI TM54F - Failsafe digital outputs (F-DO 0 ... 3), digital inputs (DI 20 ... 23) - 2895 -
   
 
-SI TM54F - Basic Functions control interface (p9601.2/3 = 0 & p9601.6 = 1) - 2900 -
+SI TM54F - Basic Functions control interface (p9601.2/3 = 0 &amp; p9601.6 = 1) - 2900 -
   
 
 SI TM54F - Basic Functions Safe State selection - 2901 -
@@ -490,7 +490,7 @@ SI TM54F - Basic Functions Safe State selection - 2901 -
 SI TM54F - Basic Functions assignment (F-DO 0 ... F-DO 3) - 2902 -
   
 
-SI TM54F - Extended Functions control interface (p9601.2 = 1 & p9601.3 = 0) - 2905 -
+SI TM54F - Extended Functions control interface (p9601.2 = 1 &amp; p9601.3 = 0) - 2905 -
   
 
 SI TM54F - Extended Functions Safe State selection - 2906 -
@@ -1765,7 +1765,7 @@ SI TM54F - Failsafe digital inputs (F-DI 5 ... F-DI 9) - 2894 -
 SI TM54F - Failsafe digital outputs (F-DO 0 ... 3), digital inputs (DI 20 ... 23) - 2895 -
   
 
-SI TM54F - Basic Functions control interface (p9601.2/3 = 0 & p9601.6 = 1) - 2900 -
+SI TM54F - Basic Functions control interface (p9601.2/3 = 0 &amp; p9601.6 = 1) - 2900 -
   
 
 SI TM54F - Basic Functions Safe State selection - 2901 -
@@ -1774,7 +1774,7 @@ SI TM54F - Basic Functions Safe State selection - 2901 -
 SI TM54F - Basic Functions assignment (F-DO 0 ... F-DO 3) - 2902 -
   
 
-SI TM54F - Extended Functions control interface (p9601.2 = 1 & p9601.3 = 0) - 2905 -
+SI TM54F - Extended Functions control interface (p9601.2 = 1 &amp; p9601.3 = 0) - 2905 -
   
 
 SI TM54F - Extended Functions Safe State selection - 2906 -
@@ -2818,7 +2818,7 @@ SI TM54F - Failsafe digital inputs (F-DI 5 ... F-DI 9) - 2894 -
 SI TM54F - Failsafe digital outputs (F-DO 0 ... 3), digital inputs (DI 20 ... 23) - 2895 -
   
 
-SI TM54F - Basic Functions control interface (p9601.2/3 = 0 & p9601.6 = 1) - 2900 -
+SI TM54F - Basic Functions control interface (p9601.2/3 = 0 &amp; p9601.6 = 1) - 2900 -
   
 
 SI TM54F - Basic Functions Safe State selection - 2901 -
@@ -2827,7 +2827,7 @@ SI TM54F - Basic Functions Safe State selection - 2901 -
 SI TM54F - Basic Functions assignment (F-DO 0 ... F-DO 3) - 2902 -
   
 
-SI TM54F - Extended Functions control interface (p9601.2 = 1 & p9601.3 = 0) - 2905 -
+SI TM54F - Extended Functions control interface (p9601.2 = 1 &amp; p9601.3 = 0) - 2905 -
   
 
 SI TM54F - Extended Functions Safe State selection - 2906 -
@@ -3922,7 +3922,7 @@ SI TM54F - Failsafe digital inputs (F-DI 5 ... F-DI 9) - 2894 -
 SI TM54F - Failsafe digital outputs (F-DO 0 ... 3), digital inputs (DI 20 ... 23) - 2895 -
   
 
-SI TM54F - Basic Functions control interface (p9601.2/3 = 0 & p9601.6 = 1) - 2900 -
+SI TM54F - Basic Functions control interface (p9601.2/3 = 0 &amp; p9601.6 = 1) - 2900 -
   
 
 SI TM54F - Basic Functions Safe State selection - 2901 -
@@ -3931,7 +3931,7 @@ SI TM54F - Basic Functions Safe State selection - 2901 -
 SI TM54F - Basic Functions assignment (F-DO 0 ... F-DO 3) - 2902 -
   
 
-SI TM54F - Extended Functions control interface (p9601.2 = 1 & p9601.3 = 0) - 2905 -
+SI TM54F - Extended Functions control interface (p9601.2 = 1 &amp; p9601.3 = 0) - 2905 -
   
 
 SI TM54F - Extended Functions Safe State selection - 2906 -

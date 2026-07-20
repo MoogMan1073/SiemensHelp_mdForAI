@@ -42,7 +42,7 @@ You configure a connection to a PLC with a Omron Ethernet/IP communication drive
 
    ![Introduction](images/138559449995_DV_resource.Stream@PNG-en-US.png)
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 4. In the "Communication drivers" column, select the “Omron Ethernet/IP" driver.
 5. Select all necessary connection parameters for the interface in the Inspector window under "Parameters".
 6. Under "PLC device" area:
@@ -172,7 +172,7 @@ To set up the IP address of the HMI device:
    ![Parameter to be set](images/138559449995_DV_resource.Stream@PNG-en-US.png)
 2. Open the "Device configuration" editor.
 3. Click the Ethernet interface.
-4. Assign the IP address in the inspector window under: "General > PROFINET (X1) interface > Ethernet addresses"
+4. Assign the IP address in the inspector window under: "General &gt; PROFINET (X1) interface &gt; Ethernet addresses"
 
 **Parameters for the PLC**
 
@@ -216,13 +216,13 @@ This section contains information on the following topics:
 2. Click the toolbar button [New] in CX - programmer.
 3. Select the Device type as CJ1M, CJ2M or CS1H.
 4. Click on setting in device Type area and select the CPU Type and Click **OK**.
-5. Create a new Project under tree structure **Programs -> New Program1 -> Section1.**
-6. Change to Run Mode by clicking **PLC -> Work Online**.
-7. Navigate (Double Click) to IO table and Unit Setup -> Built-In Port -> Ethernet Unit (Based on PLC , e.g. For CJ2M, Ethernet unit is CJ1W-EIP21)
+5. Create a new Project under tree structure **Programs -&gt; New Program1 -&gt; Section1.**
+6. Change to Run Mode by clicking **PLC -&gt; Work Online**.
+7. Navigate (Double Click) to IO table and Unit Setup -&gt; Built-In Port -&gt; Ethernet Unit (Based on PLC , e.g. For CJ2M, Ethernet unit is CJ1W-EIP21)
 8. Set the IP address, Subnet mask and default gateway for the Ethernet Unit and Click **OK**.
 9. Before Program transfer begins, check for errors.
-10. To transfer project to PLC, Select **PLC -> Transfer** -> To PLC. Click **OK**.
-11. To upload project From PLC, Select **PLC -> Transfer** -> From PLC. Click **OK.**
+10. To transfer project to PLC, Select **PLC -&gt; Transfer** -&gt; To PLC. Click **OK**.
+11. To upload project From PLC, Select **PLC -&gt; Transfer** -&gt; From PLC. Click **OK.**
 
 ### Address areas for Omron Ethernet/IP (RT Unified)
 

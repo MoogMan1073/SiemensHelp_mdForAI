@@ -21,7 +21,7 @@ This section contains information on the following topics:
 This section contains information on the following topics:
 
 - [Configuration and parameter assignment of technology module (S7-1500)](#configuration-and-parameter-assignment-of-technology-module-s7-1500)
-- [Online & Diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500)
+- [Online &amp; Diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500)
 
 ### Configuration and parameter assignment of technology module (S7-1500)
 
@@ -50,7 +50,7 @@ To add a technology module to the hardware configuration, proceed as follows:
 1. Open the device configuration of the CPU or IM.
 2. Select a module rack.
 3. Select the technology module from the module catalog:  
-   "Technology modules > Pulse output > TM Pulse 2x24V > Article number"
+   "Technology modules &gt; Pulse output &gt; TM Pulse 2x24V &gt; Article number"
 4. Drag the technology module to the required slot in the module rack.
 
 #### Parameter setting (hardware configuration) Opening (S7-1500)
@@ -416,7 +416,7 @@ To open the display editor for the diagnostic functions, follow these steps:
 
 1. Open the device configuration of the CPU or IM.
 2. Select the device view.
-3. Right-click on the module and select "Online & Diagnostics".
+3. Right-click on the module and select "Online &amp; Diagnostics".
 4. Select the required display in the diagnostics navigation.
 
 ##### Additional information
@@ -428,7 +428,7 @@ Additional information on the diagnostic alarms and possible remedies can be fou
 This section contains information on the following topics:
 
 - [Configuration and parameter assignment of technology module (S7-1500)](#configuration-and-parameter-assignment-of-technology-module-s7-1500-1)
-- [Online & Diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-1)
+- [Online &amp; Diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-1)
 
 ### Configuration and parameter assignment of technology module (S7-1500)
 
@@ -457,7 +457,7 @@ To add a technology module to the hardware configuration, proceed as follows:
 1. Open the device configuration of the CPU or IM.
 2. Select a module rack.
 3. Select the technology module from the module catalog:  
-   "Technology modules > Pulse output > TM PTO 4 > Article number"
+   "Technology modules &gt; Pulse output &gt; TM PTO 4 &gt; Article number"
 4. Drag the technology module to the required slot in the module rack.
 
 #### Parameter setting (hardware configuration) Opening (S7-1500)
@@ -696,7 +696,7 @@ To open the display editor for the diagnostic functions, follow these steps:
 
 1. Open the device configuration of the CPU or IM.
 2. Select the device view.
-3. Right-click on the module and select "Online & Diagnostics".
+3. Right-click on the module and select "Online &amp; Diagnostics".
 4. Select the required display in the diagnostics navigation.
 
 ##### Additional information
@@ -708,7 +708,7 @@ Additional information on the diagnostic alarms and possible remedies can be fou
 This section contains information on the following topics:
 
 - [Configuration and parameter assignment of technology module (S7-1500)](#configuration-and-parameter-assignment-of-technology-module-s7-1500-2)
-- [Online & diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-2)
+- [Online &amp; diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-2)
 
 ### Configuration and parameter assignment of technology module (S7-1500)
 
@@ -736,7 +736,7 @@ To add a technology module to the hardware configuration, proceed as follows:
 1. Open the device configuration of the CPU or IM.
 2. Select a module rack.
 3. Select the technology module from the module catalog:  
-   "Technological modules > Pulse output > TM PTO 2x24V > Article number"
+   "Technological modules &gt; Pulse output &gt; TM PTO 2x24V &gt; Article number"
 4. Drag-and-drop the technology module to the required slot in the module rack.
 
 #### Parameter setting (hardware configuration) Opening (S7-1500)
@@ -930,7 +930,7 @@ To open the display editor for the diagnostic functions, follow these steps:
 
 1. Open the device configuration of the CPU or IM.
 2. Select the device view.
-3. Right-click on the module and select "Online & Diagnostics".
+3. Right-click on the module and select "Online &amp; Diagnostics".
 4. Select the required display in the diagnostics navigation.
 
 ##### Additional information
@@ -942,7 +942,7 @@ Additional information on the diagnostic alarms and possible remedies can be fou
 This section contains information on the following topics:
 
 - [Configuring and assigning parameters for Compact CPU (S7-1500)](#configuring-and-assigning-parameters-for-compact-cpu-s7-1500)
-- [Online & Diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-3)
+- [Online &amp; Diagnostics module (S7-1500)](#online-diagnostics-module-s7-1500-3)
 
 ### Configuring and assigning parameters for Compact CPU (S7-1500)
 
@@ -972,7 +972,7 @@ To add a compact CPU to the hardware configuration, proceed as follows:
    The "Add new device" dialog opens.
 2. Select Controller".
 3. Select the Compact CPU:  
-   "SIMATIC S7‑1500 > CPU > Name of Compact CPU > Article number"
+   "SIMATIC S7‑1500 &gt; CPU &gt; Name of Compact CPU &gt; Article number"
 4. Confirm with "OK".
 
 ##### Result
@@ -984,7 +984,7 @@ The new Compact CPU is displayed with the following objects in the project tree.
 |  | Object | Description |
 | --- | --- | --- |
 | ① | Device configuration | In the Inspector window (per PTO/PWM channel):  - [Setting the operating mode](#operating-mode-s7-1500-3) - [Setting the reaction to CPU STOP](#reaction-to-cpu-stop-s7-1500-1) - [Enable diagnostic interrupts](#diagnostic-interrupts-s7-1500-2) - [Setting parameters for PWM or frequency output](#parameter-pwn-frequency-output-s7-1500) - [Setting axis parameters for PTO modes](#axis-parameters-pto-s7-1500) - [Assign signals to inputs and outputs](#hardware-inputsoutputs-pwn-frequency-output-s7-1500) - Setting the module addresses |
-| ② | [Online & Diagnostics](#displaying-and-evaluating-diagnostics-s7-1500-3) | - Hardware diagnostics - Obtain information about the Compact CPU - Run firmware update |
+| ② | [Online &amp; Diagnostics](#displaying-and-evaluating-diagnostics-s7-1500-3) | - Hardware diagnostics - Obtain information about the Compact CPU - Run firmware update |
 
 #### Compatibility 1511C (pulse generators of the Compact CPU 1512C-1 PN) (S7-1500)
 
@@ -1216,7 +1216,7 @@ The online and diagnostics view enables hardware diagnostics. You can also
 To open the display editor for the diagnostic functions, follow these steps:
 
 1. Open the Compact CPU folder in the project tree.
-2. Double-click on the "Online & diagnostics" object.
+2. Double-click on the "Online &amp; diagnostics" object.
 3. Select the required display in the diagnostics navigation.
 
 ##### Additional information

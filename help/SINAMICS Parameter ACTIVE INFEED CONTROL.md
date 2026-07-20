@@ -231,13 +231,13 @@ states "ready for operation" and "operation".
 **Value:**
   
 0:
-Operation --> r0021, otherwise r0020 <--> r0021  
+Operation --&gt; r0021, otherwise r0020 &lt;--&gt; r0021  
 1:
-Operation --> r0021, otherwise r0020  
+Operation --&gt; r0021, otherwise r0020  
 2:
-Operation --> p0005, otherwise p0005 <--> r0020  
+Operation --&gt; p0005, otherwise p0005 &lt;--&gt; r0020  
 3:
-Operation --> r0002, otherwise r0002 <--> r0020  
+Operation --&gt; r0002, otherwise r0002 &lt;--&gt; r0020  
 4:
 p0005
 
@@ -323,14 +323,14 @@ Activation:
 1. p0003 = 3 (expert).  
 2. p0013[0...49] = requested parameter number.  
 3. If required, enter p0011 = password in order to prevent non-authorized deactivation.  
-4. p0016 = 1 --> activates the selected user-defined list.  
+4. p0016 = 1 --&gt; activates the selected user-defined list.  
 Deactivation/change:  
 1. p0003 = 3 (expert).  
 2. If required, p0012 = p0011, in order to be authorized to change or deactivate the
 list.  
 3. If required p0013[0...49] = required parameter number.  
-4. p0016 = 1 --> activates the modified user-defined list.  
-5. p0003 = 0 --> deactivates the user-defined list.
+4. p0016 = 1 --&gt; activates the modified user-defined list.  
+5. p0003 = 0 --&gt; deactivates the user-defined list.
 
 **Dependency:**
   
@@ -375,7 +375,7 @@ A value of 0 means: Entry is empty.
 Runs the corresponding macro files.  
 The selected macro file must be available on the memory card/device memory.  
 Example:  
-p0015 = 6 --> the macro file PM000006.ACX is run.
+p0015 = 6 --&gt; the macro file PM000006.ACX is run.
 
 **Dependency:**
   
@@ -1062,7 +1062,7 @@ Displays the smoothed actual power factor.
 **Notice:**
   
 For infeed units, the following applies:  
-For active powers < 25 % of the rated power, this does not provide any useful information.
+For active powers &lt; 25 % of the rated power, this does not provide any useful information.
 
 **Note:**
   
@@ -1179,7 +1179,7 @@ Bit 16 = 1 (enable signal missing), if:
 - there is an OFF1 fault response. The system is only enabled if the fault is removed
 and was acknowledged and the "switching on inhibited" withdrawn with OFF1 = 0.  
 Bit 17 = 1 (enable signal missing), if:  
-- the commissioning mode is selected (p0009 > 0 or p0010 > 0) or there is an OFF2
+- the commissioning mode is selected (p0009 &gt; 0 or p0010 &gt; 0) or there is an OFF2
 fault response or the OFF1 signal source (p0840) is changed.  
 Bit 19 = 1 (internal pulse enable missing), if:  
 - synchronization is running between the basic clock cycle, DRIVE-CLiQ clock cycle
@@ -1243,7 +1243,7 @@ Bit 16 = 1 (enable signal missing), if:
 - there is an OFF1 fault response. The system is only enabled if the fault is removed
 and was acknowledged and the "switching on inhibited" withdrawn with OFF1 = 0.  
 Bit 17 = 1 (enable signal missing), if:  
-- the commissioning mode is selected (p0009 > 0 or p0010 > 0) or there is an OFF2
+- the commissioning mode is selected (p0009 &gt; 0 or p0010 &gt; 0) or there is an OFF2
 fault response or the OFF1 signal source (p0840) is changed.  
 Bit 26 = 1 (enable signal missing), if:  
 - the infeed is inactive (p0105 = 0) or is not operational (r7850[DO-Index]=0).  
@@ -1679,7 +1679,7 @@ infeed/regenerative feedback so that the converter always operates with a power 
 of 1 compared to the line. Setpoint r0075 includes the reactive current for a line
 filter that depends on the actual operating point (r3471).  
 If the line phases are reversed and the line voltage therefore has a negative orientation
-(r0066 < 0), it should be noted that the sign of the reactive current is reversed.
+(r0066 &lt; 0), it should be noted that the sign of the reactive current is reversed.
 
 ### r0076 CO: Reactive current actual value
 
@@ -2677,7 +2677,7 @@ A02100
 
 **Note:**
   
-For p0118 <= 0.005 µs, the current controller output is delayed by a complete current
+For p0118 &lt;= 0.005 µs, the current controller output is delayed by a complete current
 controller sampling time (p0115[0]).  
 After p0118 has been changed, we recommend that the current controller is adapted
 (p1715).
@@ -4100,14 +4100,14 @@ p3400
 **Warning:**
   
 If the infeed is continually in the controlled mode with high DC link voltages (p3510
-> 660 V), depending on the particular application, this can damage the connected motors
+&gt; 660 V), depending on the particular application, this can damage the connected motors
 that have not been specified for these high voltages.  
-Before an active infeed with a line supply voltage p0210 > 415 V goes into pulsed
+Before an active infeed with a line supply voltage p0210 &gt; 415 V goes into pulsed
 operation it must be ensured that all of the components connected to the DC link can
 be permanently operated with DC link voltages exceeding 660 V.  
-Controlled operation of booksize power units for p0210 > 415 V is possible if the
+Controlled operation of booksize power units for p0210 &gt; 415 V is possible if the
 maximum steady-state DC link voltage (p0280) is increased as follows:  
-p0280 >= 1.5 x p0210 and p0280 > 660 V  
+p0280 &gt;= 1.5 x p0210 and p0280 &gt; 660 V  
 In this case, the setpoint of the DC link voltage p3510 is not automatically adapted.
 We recommend p3510 = 1.5 x p0210.  
 Closed-loop voltage controlled operation is active with p3400.0 = 0 and p3400.3 =
@@ -4115,17 +4115,17 @@ Closed-loop voltage controlled operation is active with p3400.0 = 0 and p3400.3 
 
 **Notice:**
   
-For p0210 > 415 V for booksize power units with a supply voltage of 3-ph. 380 ...
+For p0210 &gt; 415 V for booksize power units with a supply voltage of 3-ph. 380 ...
 480 V, the Smart Mode is automatically activated (p3400.0 = 1); this is because in
 the voltage-controlled mode, the maximum permissible steady-state DC link voltage
 (p0280) would otherwise be exceeded.  
 For booksize power units with supply voltage of 3-ph. 380 ... 480 V AC, the following
 applies:  
-380 V <= p0210 <= 400 V --> Pre-assignment, setpoint for the DC link voltage: p3510
+380 V &lt;= p0210 &lt;= 400 V --&gt; Pre-assignment, setpoint for the DC link voltage: p3510
 = 600 V  
-401 V <= p0210 <= 415 V --> Pre-assignment, setpoint for the DC link voltage: p3510
+401 V &lt;= p0210 &lt;= 415 V --&gt; Pre-assignment, setpoint for the DC link voltage: p3510
 = 625 V  
-416 V <= p0210 <= 480 V --> Smart Mode with non-regulated DC link voltage: p3510 =
+416 V &lt;= p0210 &lt;= 480 V --&gt; Smart Mode with non-regulated DC link voltage: p3510 =
 1.35 x p0210
 
 **Note:**
@@ -4136,20 +4136,20 @@ p3510 = 1.5 x p0210
 The voltage range for the supply voltage depends on the type and the voltage class
 of the power unit.  
 The following applies for the normal range of the supply voltage:  
-400 V devices: 380 V <= p0210 <= 480 V  
-690 V devices: 660 V <= p0210 <= 690 V  
-500/690 V devices: 500 V <= p0210 <= 690 V  
+400 V devices: 380 V &lt;= p0210 &lt;= 480 V  
+690 V devices: 660 V &lt;= p0210 &lt;= 690 V  
+500/690 V devices: 500 V &lt;= p0210 &lt;= 690 V  
 Further, for the following devices an extended voltage range downwards can be set:  
 Booksize devices:  
-ALM, 400 V device: 180 V <= p0210  
-SLM, 400 V device: 180 V <= p0210  
+ALM, 400 V device: 180 V &lt;= p0210  
+SLM, 400 V device: 180 V &lt;= p0210  
 80 kW / 120 kW ALM with internal and external cooling are excluded.  
 For ALM with 6SL3130-7TE28-0Axx, 6SL3130-7TE31-2Axx, 6SL3131-7TE28-0Axx, 6SL3131-7TE31-2Axx,
 the following applies:  
-380 V <= p0210  
+380 V &lt;= p0210  
 Chassis devices:  
-ALM, 400 V device: 180 V <= p0210 <= 480 V  
-ALM, 500/690 V device: 380 V <= p0210 <= 690 V
+ALM, 400 V device: 180 V &lt;= p0210 &lt;= 480 V  
+ALM, 500/690 V device: 380 V &lt;= p0210 &lt;= 690 V
 
 ### p0210 Drive unit line supply voltage
 
@@ -4196,10 +4196,10 @@ V.
 **Note:**
   
 The supply voltage range depends on the voltage class of the power unit.  
-400 V chassis units: 380 V <= p0210 <= 480 V  
-690 V chassis units: 500 V <= p0210 <= 690 V  
+400 V chassis units: 380 V &lt;= p0210 &lt;= 480 V  
+690 V chassis units: 500 V &lt;= p0210 &lt;= 690 V  
 400 V booksize units can also be connected to 3-ph. 230 V AC:  
-400 V booksize units: 180 V <= p0210 <= 480 V  
+400 V booksize units: 180 V &lt;= p0210 &lt;= 480 V  
 A reduced supply voltage up to 70 V is possible if p0212.0 = 1 has been set.
 
 ### p0211 Rated line frequency
@@ -4435,7 +4435,7 @@ frequency wobbulation is also preassigned (p1810.2, p1810.4, p1811) for which th
 AIM is dimensioned.  
 For the selected filter, controller settings (p3421, p3422, p3424) are newly preassigned
 suitable values. As a consequence, a subsequent line supply and DC link identification
-with automatic controller setting is recommended (p3410 >= 4).
+with automatic controller setting is recommended (p3410 &gt;= 4).
 
 **Value:**
   
@@ -4691,7 +4691,7 @@ For a parallel circuit, the value corresponds to the inductance of a power unit.
 The controller settings (p3421, p3424) are overwritten according to p0223. In the
 case that p0223 is subsequently changed, it is always recommended that a line and
 DC link identification routine with automatic controller setting is carried out (p3410
->= 4).
+&gt;= 4).
 
 ### p0224 Infeed resistance between filter and power unit
 
@@ -4748,7 +4748,7 @@ The value must be, for example, appropriately increased if an additional inducta
 The controller settings (p3421, p3424) are overwritten according to p0225. In the
 case that p0225 is subsequently changed, it is always recommended that a line and
 DC link identification routine with automatic controller setting is carried out (p3410
->= 4).
+&gt;= 4).
 
 ### p0226 Infeed resistance between line supply and filter
 
@@ -4803,7 +4803,7 @@ The total DC link capacitance of a DC link group comprises the sum of the sub-ca
 of all motor/infeed modules and the additional DC link capacitors.  
 The controller setting (p3422) is overwritten according to p0227. In the case that
 p0227 is subsequently changed, it is always recommended that a line and DC link identification
-routine with automatic controller setting is carried out (p3410 >= 4).
+routine with automatic controller setting is carried out (p3410 &gt;= 4).
 
 ### p0228 Infeed filter inductance line side
 
@@ -4837,7 +4837,7 @@ p0228.
 The controller settings (p3421, p3424) are overwritten according to p0228. In the
 case that p0228 is subsequently changed, it is always recommended that a line and
 DC link identification routine with automatic controller setting is carried out (p3410
->= 4).
+&gt;= 4).
 
 ### p0249 Power unit cooling type
 
@@ -4944,7 +4944,7 @@ A30042
 
 **Notice:**
   
-For firmware version < 5.1 of the power unit, the value is limited to 65535 hours.  
+For firmware version &lt; 5.1 of the power unit, the value is limited to 65535 hours.  
 For multi-axis power units, the same value must be entered for all axes.
 
 **Note:**
@@ -5371,10 +5371,10 @@ Cooling unit no leaked liquid
 Cooling unit liquid flow OK  
 [
 6]:
-Cooling unit conductivity < fault threshold  
+Cooling unit conductivity &lt; fault threshold  
 [
 7]:
-Cooling unit conductivity < alarm threshold
+Cooling unit conductivity &lt; alarm threshold
 
 ### r0267.0...7 BO: Cooling unit status word
 
@@ -5530,7 +5530,7 @@ A06800
 **Warning:**
   
 Before increasing the voltage limit for pulsed operation of a controlled booksize
-infeed with line supply voltages p0210 > 415 V it should be checked whether the motors
+infeed with line supply voltages p0210 &gt; 415 V it should be checked whether the motors
 connected to the DC link are specified for the higher motor voltages.  
 The warning information associated with p0210 must be carefully observed.
 
@@ -5817,7 +5817,7 @@ The parameter only applies to booksize and chassis power units.
 Sets the thresholds:  
 - the prerequisite is at least firmware version 2.2 of the power unit.  
 Deactivate ground fault monitoring:  
-- Sequence: --> p0287[1] = 0 --> p0287[0] = 0  
+- Sequence: --&gt; p0287[1] = 0 --&gt; p0287[0] = 0  
 - irrespective of the firmware version of the power unit.
 
 ### p0294 Power unit alarm with I2t overload
@@ -6016,19 +6016,19 @@ After the value has been modified, no further parameter modifications can be mad
 and the status is shown in r3996. Modifications can be made again when r3996 = 0.  
 The following parameters are influenced using p0340:  
 p0340 = 1:  
---> All of the parameters influenced for p0340 = 2  
---> p3421 = p0223, p0225  
---> p3422 = p0227  
---> p3424 = p0225  
---> p3415, p3425, p3555, p3614, p3620, p3622 are reset to the factory settings dependent
+--&gt; All of the parameters influenced for p0340 = 2  
+--&gt; p3421 = p0223, p0225  
+--&gt; p3422 = p0227  
+--&gt; p3424 = p0225  
+--&gt; p3415, p3425, p3555, p3614, p3620, p3622 are reset to the factory settings dependent
 on the particular unit.  
 p0340 = 2:  
---> p3560, p3562, p3564, p3603, p3615 and p3617 are reset to the factory setting.  
+--&gt; p3560, p3562, p3564, p3603, p3615 and p3617 are reset to the factory setting.  
 For S_INF, these control parameters are not available.
 
 **Note:**
   
-When quick commissioning is exited using p3900 > 0, p0340 is automatically set to
+When quick commissioning is exited using p3900 &gt; 0, p0340 is automatically set to
 1.  
 At the end of the calculations, p0340 is automatically set to 0.
 
@@ -6550,11 +6550,11 @@ The measured value is displayed in r0035.
 0:
 No sensor  
 1:
-PTC alarm & timer  
+PTC alarm &amp; timer  
 2:
 KTY84  
 4:
-Bimetallic NC contact alarm & timer  
+Bimetallic NC contact alarm &amp; timer  
 6:
 PT1000
 
@@ -6568,18 +6568,18 @@ r0035
   
 The measured value display depends on the selected sensor type.  
 For p0601 = 0:  
---> r0035 = -200 °C  
+--&gt; r0035 = -200 °C  
 For p0601 = 1:  
-Tripping resistance = 1650 Ohm (lower resistance --> r0035 = -50 °C, higher resistance
---> r0035 = 250 °C).  
+Tripping resistance = 1650 Ohm (lower resistance --&gt; r0035 = -50 °C, higher resistance
+--&gt; r0035 = 250 °C).  
 For p0601 = 2, 6:  
 Displays the temperature in °C.  
 For p0601 = 4:  
 r0035 = -50 °C  
---> The tripping resistance is less than 100 Ohm (bimetallic NC contact is closed
+--&gt; The tripping resistance is less than 100 Ohm (bimetallic NC contact is closed
 or has a short-circuit).  
 r0035 = 250 °C  
---> The tripping resistance is greater than 100 Ohm (bimetallic NC contact is open,
+--&gt; The tripping resistance is greater than 100 Ohm (bimetallic NC contact is open,
 not connected or has a wire breakage).  
 When using the following components, a value of 4 is set as the factory setting and
 can no longer be changed:  
@@ -6611,7 +6611,7 @@ Runs the corresponding macro files.
 The binector inputs of the corresponding command data set are appropriately interconnected.  
 The selected macro file must be available on the memory card/device memory.  
 Example:  
-p0700 = 6 --> macro file PM000006.ACX is run.
+p0700 = 6 --&gt; macro file PM000006.ACX is run.
 
 **Dependency:**
   
@@ -7650,19 +7650,19 @@ documentation.
 The buffer parameters are cyclically updated in the background (refer to status signal
 in r2139).  
 Fault buffer structure (general principle):  
-r0945[0], r0949[0], r0948[0], r2109[0], r3115[0] --> actual fault case, fault 1  
+r0945[0], r0949[0], r0948[0], r2109[0], r3115[0] --&gt; actual fault case, fault 1  
 . . .  
-r0945[7], r0949[7], r0948[7], r2109[7], r3115[7] --> actual fault case, fault 8  
-r0945[8], r0949[8], r0948[8], r2109[8], r3115[8] --> 1st acknowledged fault case,
+r0945[7], r0949[7], r0948[7], r2109[7], r3115[7] --&gt; actual fault case, fault 8  
+r0945[8], r0949[8], r0948[8], r2109[8], r3115[8] --&gt; 1st acknowledged fault case,
 fault 1  
 . . .  
-r0945[15], r0949[15], r0948[15], r2109[15], r3115[15] --> 1st acknowledged fault case,
+r0945[15], r0949[15], r0948[15], r2109[15], r3115[15] --&gt; 1st acknowledged fault case,
 fault 8  
 . . .  
-r0945[56], r0949[56], r0948[56], r2109[56], r3115[56] --> 7th acknowledged fault case,
+r0945[56], r0949[56], r0948[56], r2109[56], r3115[56] --&gt; 7th acknowledged fault case,
 fault 1  
 . . .  
-r0945[63], r0949[63], r0948[63], r2109[63], r3115[63] --> 7th acknowledged fault case,
+r0945[63], r0949[63], r0948[63], r2109[63], r3115[63] --&gt; 7th acknowledged fault case,
 fault 8
 
 ### r0947[0...63] Fault number
@@ -7951,18 +7951,18 @@ Firmware patch/hot fix
 **Note:**
   
 Example:  
-r0975[0] = 42 --> SIEMENS  
-r0975[1] = 11 --> SERVO drive object type  
-r0975[2] = 102 --> first part, firmware version V01.02 (second part, refer to index
+r0975[0] = 42 --&gt; SIEMENS  
+r0975[1] = 11 --&gt; SERVO drive object type  
+r0975[2] = 102 --&gt; first part, firmware version V01.02 (second part, refer to index
 10)  
-r0975[3] = 2003 --> year 2003  
-r0975[4] = 1401 --> 14th of January  
-r0975[5] = 1 --> PROFIdrive drive object, type class  
-r0975[6] = 9 --> PROFIdrive drive object sub-type class 1  
-r0975[7] = 2 --> drive object number = 2  
+r0975[3] = 2003 --&gt; year 2003  
+r0975[4] = 1401 --&gt; 14th of January  
+r0975[5] = 1 --&gt; PROFIdrive drive object, type class  
+r0975[6] = 9 --&gt; PROFIdrive drive object sub-type class 1  
+r0975[7] = 2 --&gt; drive object number = 2  
 r0975[8] = 0 (reserved)  
 r0975[9] = 0 (reserved)  
-r0975[10] = 600 --> second part, firmware version (complete version: V01.02.06.00)
+r0975[10] = 600 --&gt; second part, firmware version (complete version: V01.02.06.00)
 
 ### p1206[0...9] Automatic restart faults not active
 
@@ -8064,7 +8064,7 @@ Restart after fault with additional start attempts
 **Dependency:**
   
 The automatic restart requires an active ON command (e.g., via a digital input). If,
-for p1210 > 1, there is no active ON command, then the automatic restart is interrupted.  
+for p1210 &gt; 1, there is no active ON command, then the automatic restart is interrupted.  
 When using an Advanced Operator Panel (AOP) in the LOCAL Mode, then there is no automatic
 restart.  
   
@@ -8075,7 +8075,7 @@ F30003
 
 **Danger:**
   
-If the automatic restart is activated (p1210 > 1) if there is an ON command (refer
+If the automatic restart is activated (p1210 &gt; 1) if there is an ON command (refer
 to p0840), the drive is switched on as soon as any fault messages that are present
 can be acknowledged. This also occurs after the line supply returns or the Control
 Unit boots if the DC link voltage is again present or the feedback of the line supply
@@ -8086,7 +8086,7 @@ can only be interrupted by withdrawing the ON command.
   
 A change is only accepted and made in the state "initialization" (r1214.0) and "wait
 for alarm" (r1214.1).  
-For p1210 > 1, the infeed is automatically started.
+For p1210 &gt; 1, the infeed is automatically started.
 
 **Note:**
   
@@ -8139,7 +8139,7 @@ Restart after fault with additional start attempts
 **Dependency:**
   
 The automatic restart requires an active ON command (e.g., via a digital input). If,
-for p1210 > 1, there is no active ON command, then the automatic restart is interrupted.  
+for p1210 &gt; 1, there is no active ON command, then the automatic restart is interrupted.  
 When using an Advanced Operator Panel (AOP) in the LOCAL Mode, then there is no automatic
 restart.  
   
@@ -8150,7 +8150,7 @@ F30003
 
 **Danger:**
   
-If the automatic restart is activated (p1210 > 1) if there is an ON command (refer
+If the automatic restart is activated (p1210 &gt; 1) if there is an ON command (refer
 to p0840), the drive is switched on as soon as any fault messages that are present
 can be acknowledged. This also occurs after the line supply returns or the Control
 Unit boots if the DC link voltage is again present or the feedback of the line supply
@@ -8161,7 +8161,7 @@ can only be interrupted by withdrawing the ON command.
   
 A change is only accepted and made in the state "initialization" (r1214.0) and "wait
 for alarm" (r1214.1).  
-For p1210 > 1, the infeed is automatically started.
+For p1210 &gt; 1, the infeed is automatically started.
 
 **Note:**
   
@@ -8211,7 +8211,7 @@ Restart after fault with additional start attempts
 **Dependency:**
   
 The automatic restart requires an active ON command (e.g., via a digital input). If,
-for p1210 > 1, there is no active ON command, then the automatic restart is interrupted.  
+for p1210 &gt; 1, there is no active ON command, then the automatic restart is interrupted.  
 When using an Advanced Operator Panel (AOP) in the LOCAL Mode, then there is no automatic
 restart.  
   
@@ -8222,7 +8222,7 @@ F30003
 
 **Danger:**
   
-If the automatic restart is activated (p1210 > 1) if there is an ON command (refer
+If the automatic restart is activated (p1210 &gt; 1) if there is an ON command (refer
 to p0840), the drive is switched on as soon as any fault messages that are present
 can be acknowledged. This also occurs after the line supply returns or the Control
 Unit boots if the DC link voltage is again present or the feedback of the line supply
@@ -8233,7 +8233,7 @@ can only be interrupted by withdrawing the ON command.
   
 A change is only accepted and made in the state "initialization" (r1214.0) and "wait
 for alarm" (r1214.1).  
-For p1210 > 1, the infeed is automatically started.
+For p1210 &gt; 1, the infeed is automatically started.
 
 **Note:**
   
@@ -8977,10 +8977,10 @@ For bit 14 = 0:
 The phase angle for flattop modulation is independent of the cos phi value (see r0038).  
 For bit 14 = 1 (only permissible for bit 13 = 1 and ALM Chassis-2 devices):  
 The phase angle of the flattop modulation is dependent on the cos phi value (see r0038),
-to guarantee minimum power loss for a high reactive power (r0038 << 1).  
-Angle-dependent modulation is active, if |r0076| > 0.15 * r0207.  
+to guarantee minimum power loss for a high reactive power (r0038 &lt;&lt; 1).  
+Angle-dependent modulation is active, if |r0076| &gt; 0.15 * r0207.  
 Depending on the cos phi value, the offset angle can reach a maximum absolute value
-of 30° if |r0076| > 0.35 * r0207.  
+of 30° if |r0076| &gt; 0.35 * r0207.  
 Offset angle smoothing is set using p1882.  
 For bit 15 = 0:  
 To deactivate the flattop control mode, p3400.1 must also be set to 0.  
@@ -9095,11 +9095,11 @@ For p1816 = -1, the following applies:
 Automatic mode. The phase shift value is automatically determined.  
 For p1816 = 0 ... 16, the following applies:  
 Manual mode. The user should define the phase shift value as follows:  
-1. PWM cycle (1/p1800) > current controller cycle (p0115[0])  
+1. PWM cycle (1/p1800) &gt; current controller cycle (p0115[0])  
 The power unit executes a phase shift from Tshift = current controller cycle (p0115[0])
 * p1816.  
-2. PWM cycle (1/p1800) <= current controller clock cycle (p0115[0])  
-For p1816 >= 1, the power unit executes a phase shift from Tshift = PWM cycle/2.
+2. PWM cycle (1/p1800) &lt;= current controller clock cycle (p0115[0])  
+For p1816 &gt;= 1, the power unit executes a phase shift from Tshift = PWM cycle/2.
 
 **Dependency:**
   
@@ -9395,7 +9395,7 @@ as rms value, but as DC voltage value.
 
 **Note:**
   
-For the automatic calculation (p0340 = 1, p3900 > 0) an appropriate pre-assignment
+For the automatic calculation (p0340 = 1, p3900 &gt; 0) an appropriate pre-assignment
 is only made if the parameter is not inhibited from being overwritten using p0573
 = 1.  
 If a BICO interconnection is established between different physical quantities, then
@@ -9440,19 +9440,19 @@ Example:
 p2002 = 100 A  
 Reference quantity 100 A corresponds to 100 %  
 p0305[0] = 100 A  
-Rated motor current 100 A for MDS0 in DDS0 --> 100 % corresponds to 100 % of the rated
+Rated motor current 100 A for MDS0 in DDS0 --&gt; 100 % corresponds to 100 % of the rated
 motor current  
 p0305[1] = 50 A  
-Rated motor current 50 A for MDS1 in DDS1 --> 100 % corresponds to 200 % of the rated
+Rated motor current 50 A for MDS1 in DDS1 --&gt; 100 % corresponds to 200 % of the rated
 motor current
 
 **Note:**
   
-For the automatic calculation (p0340 = 1, p3900 > 0) an appropriate pre-assignment
+For the automatic calculation (p0340 = 1, p3900 &gt; 0) an appropriate pre-assignment
 is only made if the parameter is not inhibited from being overwritten using p0573
 = 1.  
 SERVO:  
-Pre-assigned value for p0338 > 0.001 is p0338, otherwise 2 * p0305.  
+Pre-assigned value for p0338 &gt; 0.001 is p0338, otherwise 2 * p0305.  
 VECTOR:  
 Pre-assigned value is p0640.  
 If a BICO interconnection is established between different physical quantities, then
@@ -9532,7 +9532,7 @@ word).
 
 **Note:**
   
-For the automatic calculation (p0340 = 1, p3900 > 0) an appropriate pre-assignment
+For the automatic calculation (p0340 = 1, p3900 &gt; 0) an appropriate pre-assignment
 is only made if the parameter is not inhibited from being overwritten using p0573
 = 1.  
 If a BICO interconnection is established between different physical quantities, then
@@ -10124,13 +10124,13 @@ p0922
 
 **Note:**
   
-For p0922 < 999 the following applies:  
+For p0922 &lt; 999 the following applies:  
 p2079 has the same value and is inhibited. All of the interconnections and extensions
 contained in the telegram are inhibited.  
 For p0922 = 999 the following applies:  
 p2079 can be freely set. If p2079 is also set to 999, then all of the interconnections
 can be set.  
-For p0922 = 999 and p2079 < 999 the following applies:  
+For p0922 = 999 and p2079 &lt; 999 the following applies:  
 The interconnections contained in the telegram are inhibited. However, the telegram
 can be extended.
 
@@ -11539,7 +11539,7 @@ effective after the message has gone.
 The message type can only be changed for messages with the appropriate identification
 (exception, value = 0).  
 Example:  
-F12345(A) --> Fault F12345 can be changed to alarm A12345.  
+F12345(A) --&gt; Fault F12345 can be changed to alarm A12345.  
 In this case, the message number that may be possibly entered in p2100[0...19] and
 p2126[0...19] is automatically removed.
 
@@ -11634,14 +11634,14 @@ documentation.
 The buffer parameters are cyclically updated in the background (refer to status signal
 in r2139).  
 Alarm buffer structure (general principle):  
-r2122[0], r2124[0], r2123[0], r2125[0] --> alarm 1 (the oldest)  
+r2122[0], r2124[0], r2123[0], r2125[0] --&gt; alarm 1 (the oldest)  
 . . .  
-r2122[7], r2124[7], r2123[7], r2125[7] --> Alarm 8 (the latest)  
+r2122[7], r2124[7], r2123[7], r2125[7] --&gt; Alarm 8 (the latest)  
 When the alarm buffer is full, the alarms that have gone are entered into the alarm
 history:  
-r2122[8], r2124[8], r2123[8], r2125[8] --> Alarm 1 (the latest)  
+r2122[8], r2124[8], r2123[8], r2125[8] --&gt; Alarm 1 (the latest)  
 . . .  
-r2122[63], r2124[63], r2123[63], r2125[63] --> alarm 56 (the oldest)
+r2122[63], r2124[63], r2123[63], r2125[63] --&gt; alarm 56 (the oldest)
 
 ### r2123[0...63] Alarm time received in milliseconds
 
@@ -11837,7 +11837,7 @@ effective after the fault has been resolved.
 The acknowledge mode can only be changed for faults with the appropriate identification.  
 Example:  
 F12345 and acknowledge mode = IMMEDIATELY (POWER ON)  
---> The acknowledge mode can be changed from IMMEDIATELY to POWER ON.
+--&gt; The acknowledge mode can be changed from IMMEDIATELY to POWER ON.
 
 ### p2128[0...15] Faults/alarms trigger selection
 
@@ -11921,8 +11921,8 @@ p2128
 
 **Note:**
   
-CO: r2129 = 0 --> None of the selected messages has occurred.  
-CO: r2129 > 0 --> At least one of the selected messages has occurred.
+CO: r2129 = 0 --&gt; None of the selected messages has occurred.  
+CO: r2129 &gt; 0 --&gt; At least one of the selected messages has occurred.
 
 ### r2130[0...63] Fault time received in days
 
@@ -13030,43 +13030,43 @@ The buffer parameters are cyclically updated in the background (refer to status 
 in r2139).  
 The structure of the fault buffer and the assignment of the indices is shown in r0945.  
 For bits 20 ... 16:  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --&gt; PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --&gt; PROFIdrive message class 1: hardware fault/software
 error  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --&gt; PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --&gt; PROFIdrive message class 3: supply voltage
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --&gt; PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --&gt; PROFIdrive message class 5: power electronics
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --&gt; PROFIdrive message class 6: overtemperature
 electronic components  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --&gt; PROFIdrive message class 7: ground fault/phase
 fault detected  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --&gt; PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --&gt; PROFIdrive message class 9: communication
 error to the higher-level control  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --&gt; PROFIdrive message class 10: safe monitoring
 channel has identified an error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --&gt; PROFIdrive message class 11: incorrect
 position actual value/speed actual value or not available  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 12: internal
 (DRIVE-CLiQ) communication error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --&gt; PROFIdrive message class 13: infeed unit
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --&gt; PROFIdrive message class 14: braking controller/Braking
 Module faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --&gt; PROFIdrive message class 15: line filter
 faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --&gt; PROFIdrive message class 16: external
 measured value/signal state outside the permissible range  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --&gt; PROFIdrive message class 17: application/technology
 function faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --&gt; PROFIdrive message class 18: error in
 the parameterization/configuration/commissioning sequence  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --&gt; PROFIdrive message class 19: general drive
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 20: auxiliary
 unit faulted
 
 ### r3123[0...63] Diagnostic attribute alarm
@@ -13123,43 +13123,43 @@ These status bits are used for the classification of internal alarm classes and 
 intended for diagnostic purposes only on certain automation systems with integrated
 SINAMICS functionality.  
 For bits 20 ... 16:  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --&gt; PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --&gt; PROFIdrive message class 1: hardware fault/software
 error  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --&gt; PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --&gt; PROFIdrive message class 3: supply voltage
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --&gt; PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --&gt; PROFIdrive message class 5: power electronics
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --&gt; PROFIdrive message class 6: overtemperature
 electronic components  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --&gt; PROFIdrive message class 7: ground fault/phase
 fault detected  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --&gt; PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --&gt; PROFIdrive message class 9: communication
 error to the higher-level control  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --&gt; PROFIdrive message class 10: safe monitoring
 channel has identified an error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --&gt; PROFIdrive message class 11: incorrect
 position actual value/speed actual value or not available  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 12: internal
 (DRIVE-CLiQ) communication error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --&gt; PROFIdrive message class 13: infeed unit
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --&gt; PROFIdrive message class 14: braking controller/Braking
 Module faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --&gt; PROFIdrive message class 15: line filter
 faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --&gt; PROFIdrive message class 16: external
 measured value/signal state outside the permissible range  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --&gt; PROFIdrive message class 17: application/technology
 function faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --&gt; PROFIdrive message class 18: error in
 the parameterization/configuration/commissioning sequence  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --&gt; PROFIdrive message class 19: general drive
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 20: auxiliary
 unit faulted
 
 ### r3131 CO: Actual fault value
@@ -13477,8 +13477,8 @@ been bypassed/buffered (p3402 = 9).
 For bit 03:  
 The present current limit is displayed in r0067.  
 For bit 04:  
-An active current setting r0078 >= 0 means infeed operation in motor mode; an active
-current setting r0078 < 0 means regenerative operation in generator mode.  
+An active current setting r0078 &gt;= 0 means infeed operation in motor mode; an active
+current setting r0078 &lt; 0 means regenerative operation in generator mode.  
 For bit 05:  
 The motor mode inhibit is activated with p3532.  
 For bit 06:  
@@ -13487,10 +13487,10 @@ For bit 07:
 When the alarm threshold is fallen below, alarm A06810 is output and r3405.7 is set
 = 1.  
 The alarm threshold is obtained from the sum of the undervoltage threshold r0296 and
-offset p0279. As a consequence, the alarm threshold is only effective for p0279 >
+offset p0279. As a consequence, the alarm threshold is only effective for p0279 &gt;
 0.  
 Monitoring only takes place when operational.  
-The following applies for states r3402 <= 5 and r3402 = 12: r3405.7 = 0.
+The following applies for states r3402 &lt;= 5 and r3402 = 12: r3405.7 = 0.
 
 ### r3405.7 CO/BO: Infeed status word
 
@@ -13532,10 +13532,10 @@ For bit 07:
 When the alarm threshold is fallen below, alarm A06810 is output and r3405.7 is set
 = 1.  
 The alarm threshold is obtained from the sum of the undervoltage threshold r0296 and
-offset p0279. As a consequence, the alarm threshold is only effective for p0279 >
+offset p0279. As a consequence, the alarm threshold is only effective for p0279 &gt;
 0.  
 Monitoring only takes place when operational.  
-The following applies for states r3402 <= 5 and r3402 = 12: r3405.7 = 0.
+The following applies for states r3402 &lt;= 5 and r3402 = 12: r3405.7 = 0.
 
 ### p3408 Infeed line voltage setting
 
@@ -13694,7 +13694,7 @@ pulse enable the set identification will take place.
 The line and DC link adaptation is not permissible for Smart Line Modules in the chassis
 format.  
 During identification, no additional loads may be switched-in/switched out.  
-Mode p3410 = 6 is only permissible in conjunction with line filters p0220 >= 110.
+Mode p3410 = 6 is only permissible in conjunction with line filters p0220 &gt;= 110.
 
 **Note:**
   
@@ -13721,7 +13721,7 @@ When p3410 = 4 an identification run for the inductance and DC link capacitance 
 initiated when the pulses are next enabled. Data determined during the identification
 (r3411, r3412, r3414) are used, as described under p3410 = 2 for the setting of p3421,
 p3422, p3424, p3425, p3555 as well as p3614, and the controller is re-calculated.
-The line inductance identification is then repeated, if p3415[1] > p3514[0]. If the
+The line inductance identification is then repeated, if p3415[1] &gt; p3514[0]. If the
 inductance measured the second time is lower than the first, the parameters are written
 to the current controller adaptation (p3620, p3622). All of the parameters for the
 infeed module are then automatically stored in a non-volatile memory. The infeed continues
@@ -13737,7 +13737,7 @@ is used to set the Vdc controller (p3422). All of the parameters for the infeed 
 are then automatically stored in a non-volatile fashion. The infeed continues to operate
 without any interruption with the new controller parameters. This identification mode
 is used to achieve a robust closed-loop control setting, and is only permissible in
-conjunction with p0220 > 110.
+conjunction with p0220 &gt; 110.
 
 ### p3410 Infeed identification method
 
@@ -13803,7 +13803,7 @@ pulse enable the set identification will take place.
 The line and DC link adaptation is not permissible for Smart Line Modules in the chassis
 format.  
 During identification, no additional loads may be switched-in/switched out.  
-Mode p3410 = 6 is only permissible in conjunction with line filters p0220 >= 110.
+Mode p3410 = 6 is only permissible in conjunction with line filters p0220 &gt;= 110.
 
 **Note:**
   
@@ -13830,7 +13830,7 @@ When p3410 = 4 an identification run for the inductance and DC link capacitance 
 initiated when the pulses are next enabled. Data determined during the identification
 (r3411, r3412, r3414) are used, as described under p3410 = 2 for the setting of p3421,
 p3422, p3424, p3425, p3555 as well as p3614, and the controller is re-calculated.
-The line inductance identification is then repeated, if p3415[1] > p3514[0]. If the
+The line inductance identification is then repeated, if p3415[1] &gt; p3514[0]. If the
 inductance measured the second time is lower than the first, the parameters are written
 to the current controller adaptation (p3620, p3622). All of the parameters for the
 infeed module are then automatically stored in a non-volatile memory. The infeed continues
@@ -13846,7 +13846,7 @@ is used to set the Vdc controller (p3422). All of the parameters for the infeed 
 are then automatically stored in a non-volatile fashion. The infeed continues to operate
 without any interruption with the new controller parameters. This identification mode
 is used to achieve a robust closed-loop control setting, and is only permissible in
-conjunction with p0220 > 110.
+conjunction with p0220 &gt; 110.
 
 ### r3411[0...1] Infeed identified inductance
 
@@ -13983,7 +13983,7 @@ p3410
 **Notice:**
   
 The value is only automatically determined for the line supply identification (p3410
-> 0), if operation with a Voltage Sensing Module is selected (p3400.5 = 1). Otherwise,
+&gt; 0), if operation with a Voltage Sensing Module is selected (p3400.5 = 1). Otherwise,
 r3414 = 0 is displayed.
 
 **Note:**
@@ -14038,7 +14038,7 @@ p3410, r3411, p3421, p3620, p3622
   
 To correctly identify the current level (p3410 = 4, 5) depending on the reactor inductance,
 the following must apply:  
-p3415[0] < p3415[1]  
+p3415[0] &lt; p3415[1]  
 For A_INF booksize units, the following applies:  
 The interrelationship between the reactor inductance and the current magnitude should
 be measured. Generally, the factory setting of p3415[0] and p3415[1] should be kept.  
@@ -14272,7 +14272,7 @@ p3410, p3421, p3422, p3424, p3614
   
 For index [0, 1]:  
 p3425 is automatically and optimally set when setting the controller parameters with
-the line supply data identification p3410 >= 2.  
+the line supply data identification p3410 &gt;= 2.  
 As the line supply inductance (p3424) increases in comparison to the total inductance
 (p3421), lower values must be selected for p3425. This means that the control is adapted
 to weak line supplies with high relative short-circuit voltage uk or high line supply
@@ -14294,11 +14294,11 @@ For index [4]:
 The dynamic performance of the current control is defined by the scaling p3425[4]
 * p3617.  
 An optimized setting of p3425[4] is automatically realized by setting the controller
-parameters with the line data identification p3410 >= 2.  
+parameters with the line data identification p3410 &gt;= 2.  
 For index [5]:  
 The dynamic performance of the Vdc control is defined by the scaling p3425[5] * p3562.  
 An optimized setting of p3425[5] is automatically realized by setting the controller
-parameters with the line data identification p3410 >= 2.
+parameters with the line data identification p3410 &gt;= 2.
 
 ### p3440 Smart Mode configuration
 
@@ -14750,8 +14750,8 @@ When automatic line supply identification is selected for the Extended Smart Mod
 (p3440.2 = 0), the following applies:  
 - the inductance and DC link capacitance values are calculated at the first pulse
 enable after each POWER ON and saved in p3448[0...1].  
-- the value range of the automatic identification is limited (100 % <= p3448[0...1],
-p3448[0] <= 100 % + 100 % / p0120). As a consequence, the preassigned values for the
+- the value range of the automatic identification is limited (100 % &lt;= p3448[0...1],
+p3448[0] &lt;= 100 % + 100 % / p0120). As a consequence, the preassigned values for the
 commutation inductance (p0223) and the DC link capacitance (p0227) must be correctly
 entered.  
 - values entered manually are overwritten after the next POWER ON.  
@@ -15133,7 +15133,7 @@ mode.
 The ratio between the lowest and highest rms phase current is monitored (r3466). The
 thus defined symmetry relationship decreases with increasing asymmetry – and always
 lies in the range of 0 ... 100 %.  
-In operation (r3452 >= 4) the following applies:  
+In operation (r3452 &gt;= 4) the following applies:  
 If the symmetry relationship is less than threshold p3465[2], then alarm A06206 is
 output and status bit r3405.2 = 1 is set.  
 If the alarm threshold is permanently exceeded for the time p3462[2], then the device
@@ -15149,7 +15149,7 @@ Sets the alarm threshold for the symmetry of the phase currents in the Smart Mod
 The ratio between the lowest and highest rms phase current is monitored (r3466). The
 thus defined symmetry relationship decreases with increasing asymmetry – and always
 lies in the range of 0 ... 100 %.  
-In operation (r3452 >= 4) the following applies:  
+In operation (r3452 &gt;= 4) the following applies:  
 If the symmetry relationship is less than threshold p3465[5], then alarm A06206 is
 output and status bit r3405.2 = 1 is set.  
 If the alarm threshold is permanently exceeded for the time p3462[2], then the device
@@ -15410,7 +15410,7 @@ the power factor (r0038).
 The amount of the reactive current depends on the capacitance (p0221) of the line
 filter that is automatically parameterized when a line filter is selected (p0220).  
 If the line phases are reversed and the line voltage therefore has a negative orientation
-(r0066 < 0), it should be noted that the sign of the reactive current is reversed.
+(r0066 &lt; 0), it should be noted that the sign of the reactive current is reversed.
 
 ### p3472[0...4] Line supply PLL line supply voltage smoothing time
 
@@ -15705,10 +15705,10 @@ sinusoidal oscillation of the voltage and of the current of the fundamental freq
   
 The following definition of the signs corresponds with that used in the relevant standards
 relating to line supplies (e.g. VDE-AR-4105).  
-For under-excited operation (negative reactive current: r0076 < 0), the following
+For under-excited operation (negative reactive current: r0076 &lt; 0), the following
 applies:  
 Lower output voltage or lagging current is identified with a positive sign.  
-For over-excited operation (positive reactive current: r0076 > 0), the following applies:  
+For over-excited operation (positive reactive current: r0076 &gt; 0), the following applies:  
 Higher output voltage or leading current is identified with a negative sign.
 
 ### r3478[0...1] CO: cos phi display absolute actual value
@@ -16066,7 +16066,7 @@ p0210, p0220, p3510
 The maximum step-up factor determines the maximum ratio between the DC link voltage
 setpoint (p3510) and the unit supply voltage (p0210).  
 The input of the DC link voltage setpoint (p3510) is limited corresponding to the
-permissible step-up factor (p3508): p3510 <= p0210 * p3508.  
+permissible step-up factor (p3508): p3510 &lt;= p0210 * p3508.  
 Pre-setting values:  
 380 ... 480 V booksize units without Active Interface Module: 1.60  
 380 ... 480 V booksize units with Active Interface Module (p0220 = 41 ... 45): 2.00  
@@ -16110,7 +16110,7 @@ p0210, p0280, p3400, p3508, p3511
 **Warning:**
   
 Before increasing the voltage limit for pulsed operation of a controlled booksize
-infeed with line supply voltages p0210 > 415 V it should be checked whether the motors
+infeed with line supply voltages p0210 &gt; 415 V it should be checked whether the motors
 connected to the DC link are specified for the higher motor voltages.  
 The warning information associated with p0210 must be carefully observed.
 
@@ -16121,13 +16121,13 @@ i.e. the value entered here is in this case not effective.
 The permissible range of the DC link voltage depends on the parameterized unit supply
 voltage (p0210) and the permissible, maximum continuous DC link voltage (p0280).  
 In voltage-controlled operation (p3400.0 = 0) the following applies:  
-p3510 >= 1.42 * p0210 and  
-p3510 <= p3508 * p0210 and  
-p3510 <= p0280.  
+p3510 &gt;= 1.42 * p0210 and  
+p3510 &lt;= p3508 * p0210 and  
+p3510 &lt;= p0280.  
 In the Smart Mode (p3400.0 = 1) the following applies:  
 The setpoint p3510 for the DC link voltage control is inactive. In order to permit
 an adapted display, deviating from voltage-controlled operation, the lower limit p3510
-is >= 1.2 * p0210.
+is &gt;= 1.2 * p0210.
 
 ### p3511 CI: Infeed DC link voltage supplementary setpoint
 
@@ -16492,7 +16492,7 @@ The effective current limit is obtained from p3524[2] * p3527 * r0209[0].
 
 **Description:**
   
-Sets the limit for the controlled inductive reactive current (r0076 < 0).  
+Sets the limit for the controlled inductive reactive current (r0076 &lt; 0).  
 The value is referred to the maximum current r0209[0].
 
 **Dependency:**
@@ -16520,7 +16520,7 @@ r0209, p3524, r3535, r3536
 
 **Description:**
   
-Sets the limit for the controlled capacitive reactive current (r0076 > 0).  
+Sets the limit for the controlled capacitive reactive current (r0076 &gt; 0).  
 The value is referred to the maximum current r0209[0].
 
 **Dependency:**
@@ -16979,9 +16979,9 @@ PI output
   
 Sets the fast Vdc controller intervention for a step-like decrease of the DC link
 voltage due to a high motor load of the infeed.  
-The Vdc controller fast intervention is deactivated for p3555[5] = 0 % or p3560 <
-100% or p0225 > 0.5 * p0223.  
-For a line supply and DC link identification (p3410 >= 2) the level of the fast controller
+The Vdc controller fast intervention is deactivated for p3555[5] = 0 % or p3560 &lt;
+100% or p0225 &gt; 0.5 * p0223.  
+For a line supply and DC link identification (p3410 &gt;= 2) the level of the fast controller
 intervention (p3555[2]) is automatically adapted to the line supply inductance.
 
 **Recommend.:**
@@ -17028,7 +17028,7 @@ Vdc threshold as a percentage of the rectified value of the actual line supply v
 must be fulfilled to initiate the controller intervention.  
 p3555[2]:  
 Percentage overall level of the fast intervention (scaling factor). For a line supply
-identification with p3410 >= 2, the factor is automatically adapted or, for weak line
+identification with p3410 &gt;= 2, the factor is automatically adapted or, for weak line
 supplies with a high inductance, set to 0.  
 p3555[3]:  
 Percentage correction of the precontrol for a fast voltage dip (dead time compensation).  
@@ -17276,7 +17276,7 @@ then it can also be used for another function.
 **Description:**
   
 Sets the signal source to select the required input value for the multiplexer.  
-CI: p3572 = 0, 1, 2, 3 --> valid values  
+CI: p3572 = 0, 1, 2, 3 --&gt; valid values  
 Fault F06320 is output for other values.
 
 **Dependency:**
@@ -17492,7 +17492,7 @@ for another function.
 **Description:**
   
 Sets the signal source to select the required input value for the multiplexer.  
-CI: p3577 = 0, 1, 2, 3, 4, 5 --> valid values  
+CI: p3577 = 0, 1, 2, 3, 4, 5 --&gt; valid values  
 Fault F06321 is output for other values.
 
 **Dependency:**
@@ -17733,7 +17733,7 @@ Displays the system deviation of the reactive current controller.
 Sets the fixed setpoint for the reactive current.  
 The permissible maximum absolute value for the reactive current is the device rated
 current r0207.  
-The following applies: | p3610 | <= r0207
+The following applies: | p3610 | &lt;= r0207
 
 **Dependency:**
   
@@ -17744,16 +17744,16 @@ r0029, r0075, r0076
 **Notice:**
   
 If the line phases are reversed and the line voltage therefore has a negative orientation
-(r0066 < 0), it should be noted that the sign of the reactive current is also reversed.
+(r0066 &lt; 0), it should be noted that the sign of the reactive current is also reversed.
 The negated value of p3610 is effective in display parameters r0029, r0075, r0076
 as appropriate.
 
 **Note:**
   
-p3610 < 0: Inductive reactive current is produced, i. e. the current follows the voltage.  
-p3610 > 0: Capacitive reactive current is produced, i. e. the current leads the voltage.  
+p3610 &lt; 0: Inductive reactive current is produced, i. e. the current follows the voltage.  
+p3610 &gt; 0: Capacitive reactive current is produced, i. e. the current leads the voltage.  
 This definition applies to 3AC voltage systems both with positive rotational orientation
-(r0066 > 0) and for negative rotational orientation (r0066 < 0).
+(r0066 &gt; 0) and for negative rotational orientation (r0066 &lt; 0).
 
 ### p3611 CI: Infeed reactive current supplementary setpoint
 
@@ -17847,7 +17847,7 @@ For index [0]:
 The PT1 filter with a clock cycle dead time can be used to stabilize the closed-loop
 current control for extremely weak line supplies (with higher relative short-circuit
 voltage uk).  
-For an automatic controller setting with p3410 >= 2, the current actual value filter
+For an automatic controller setting with p3410 &gt;= 2, the current actual value filter
 is automatically pre-set.  
 For index [1]:  
 The PT1 filter without dead time can be used to optimize the closed-loop current control
@@ -17858,7 +17858,7 @@ to stabilize the closed-current control for weak line supplies (with low line fa
 rating).  
 For index [3]:  
 For an automatic controller setting, the PT1 filter without dead time for the system
-deviation (r3606, r3608) is preset with p3410 >= 2.  
+deviation (r3606, r3608) is preset with p3410 &gt;= 2.  
 The filter is only active if the following applies: p3614[2] = 0.
 
 ### p3615 Infeed current controller P gain
@@ -18065,7 +18065,7 @@ p3410, p3415, p3620
   
 The parameter for a line supply identification (p3410 = 4, 5) automatically optimized,
 if the following applies:  
-p3415[1] - p3415[0] > 10 %  
+p3415[1] - p3415[0] &gt; 10 %  
 Otherwise, the measurement result is rejected.  
 For chassis power units, it is generally not necessary to adapt p3620 and p3622 to
 the characteristics of the line supply. However, when required, the current controller
@@ -18304,7 +18304,7 @@ sequence system (p5500.3 = 1). Grid support (p5501) can be activated or deactiva
 Internally, the value range of p3636 is limited depending on p3527.  
 The following applies to the maximum absolute value of the scaling value:  
 (100 % - p3527) * 2  
-The complete value range [-1, 1] assumes that p3527 is set <= 50 %. For p3527 = 100
+The complete value range [-1, 1] assumes that p3527 is set &lt;= 50 %. For p3527 = 100
 %, p3636 is not effective.  
 Contrary to entering setpoint pointers (p3641), the phase current scaling becomes
 active with p3636 after the dynamic grid support has entered a setpoint (p5506, p5509).
@@ -19016,8 +19016,8 @@ When the 100 V input (X521) is used with voltage scaler to measure medium voltag
 the dividing (scaling) factor multiplied by 100% should be entered.  
 Example:  
 1000 V line supply voltage, voltage scaling, 10:1  
---> voltage at the VSM input is 100 V  
---> p3660 = 10 * 100 % = 1000 %
+--&gt; voltage at the VSM input is 100 V  
+--&gt; p3660 = 10 * 100 % = 1000 %
 
 ### r3661 CO: VSM input line supply voltage u1 - u2
 
@@ -19129,7 +19129,7 @@ p3665, r3666, p3667, p3668
 
 **Note:**
   
-If power units are connected in parallel (p0120 > 1), then the individual status words
+If power units are connected in parallel (p0120 &gt; 1), then the individual status words
 are OR'ed and the result displayed (r7305).
 
 ### p3665[0...n] VSM temperature evaluation sensor type
@@ -19218,7 +19218,7 @@ F34207 is output.
 For sensor type PTC (p3665 = 1), the following applies:  
 - below the nominal response temperature, r3666 = -50°C.  
 - above the nominal response temperature, r3666 = 250 °C.  
-If power units are connected in parallel (p0120 > 1), then the maximum value of r7306[0...n]
+If power units are connected in parallel (p0120 &gt; 1), then the maximum value of r7306[0...n]
 is displayed.
 
 ### p3667 VSM line filter overtemperature alarm threshold
@@ -19301,7 +19301,7 @@ For sensor type KTY/PT1000 (p3665 = 2, 6), values 181 ... 300 °C result in faul
 Other temperature limits (see F06255) are applicable for liquid-cooled Active Interface
 Modules (AIM).  
 The monitoring is deactivated for p3668 = 301.  
-For chassis-format AIM (>= 132 kW, see p0220), it is not permissible to deactivate
+For chassis-format AIM (&gt;= 132 kW, see p0220), it is not permissible to deactivate
 monitoring.
 
 ### p3669 VSM line filter overtemperature hysteresis
@@ -19356,7 +19356,7 @@ The parameter specifies the current magnitude in [A] referred to the input volta
 at the VSM in [V].  
 Example:  
 CT with 1 V per 200 A.  
---> p3670 = 200
+--&gt; p3670 = 200
 
 **Dependency:**
   
@@ -19521,7 +19521,7 @@ The monitoring of the filter capacitance is deactivated with p3676 = 0.00 %.
 
 **Recommend.:**
   
-Set the value >= 20 % and dependent on the harmonic content of the line supply.
+Set the value &gt;= 20 % and dependent on the harmonic content of the line supply.
 
 **Dependency:**
   
@@ -19542,7 +19542,7 @@ In order that the measured capacitance is 3x so high, p3670 = 6.7 A must be set 
 the gain factor.  
 p0221[0] = 39 µF  
 r3677[0...2] = 3 x 39 = 117 µF  
---> p3670 = 6.7 A
+--&gt; p3670 = 6.7 A
 
 **Note:**
   
@@ -20203,8 +20203,8 @@ is not supported for "chassis" formats.
 **Description:**
   
 Sets the signal source for the message "Pre-alarm I2t shutdown" of the Braking Module.  
-BI: p3865[0...7] = 1 signal --> no pre-alarm I2t shutdown  
-BI: p3865[0...7] = 0 signal --> pre-alarm I2t shutdown (A06901)
+BI: p3865[0...7] = 1 signal --&gt; no pre-alarm I2t shutdown  
+BI: p3865[0...7] = 0 signal --&gt; pre-alarm I2t shutdown (A06901)
 
 **Dependency:**
   
@@ -20239,9 +20239,9 @@ This function is not supported for the "chassis" format.
   
 Sets the signal source for the "Fault" message of the Braking Module.  
 BI: p3866[0...7] = 1 signal:  
---> no fault.  
+--&gt; no fault.  
 BI: p3866[0...7] = 0 signal:  
---> fault is signaled.  
+--&gt; fault is signaled.  
 An automatic acknowledgment via binector output r3861 at certain time intervals is
 initiated.  
 If, after 375 ms this acknowledgment is not successful, then Alarm A06900 is output.
@@ -20480,7 +20480,7 @@ The number comprises the device-specific and the drive-specific parameters.
 Displays whether writing to parameters is inhibited.  
 r3996[0] = 0:  
 Parameter write not inhibited.  
-0 < r3996[0] < 100:  
+0 &lt; r3996[0] &lt; 100:  
 Parameter write inhibited. The value shows how the calculations are progressing.
 
 **Index:**
@@ -20653,7 +20653,7 @@ r4950, r4951, r4952, p4956, r4957, r4958, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -20698,7 +20698,7 @@ r4950, r4951, r4952, r4955, r4957, r4958, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -20736,7 +20736,7 @@ r4950, r4951, r4952, r4955, p4956, r4958, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -20776,7 +20776,7 @@ r4950, r4951, r4952, r4955, p4956, r4957, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -20820,7 +20820,7 @@ r4950, r4951, r4952, r4955, p4956, r4957, r4958, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -20863,7 +20863,7 @@ r4950, r4951, r4952, r4955, p4956, r4957, r4958, r4959
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -22541,7 +22541,7 @@ Sets the dynamic response for the modulation depth controller.
 
 **Note:**
   
-The modulation depth controller is deactivated with p5431 < p0115[0].
+The modulation depth controller is deactivated with p5431 &lt; p0115[0].
 
 ### p5432[0...1] Modulation depth controller output voltage limits
 
@@ -23648,8 +23648,8 @@ When the 100 V input (X521) is used with voltage scaler to measure medium voltag
 the dividing (scaling) factor multiplied by 100% should be entered.  
 Example:  
 1000 V line supply voltage, voltage scaling, 10:1  
---> voltage at the VSM input is 100 V  
---> p5460 = 10 * 100 % = 1000 %
+--&gt; voltage at the VSM input is 100 V  
+--&gt; p5460 = 10 * 100 % = 1000 %
 
 ### r5461[0...n] CO: VSM2 input line supply voltage u1 - u2
 
@@ -23922,7 +23922,7 @@ The parameter specifies the current magnitude in [A] referred to the input volta
 at VSM2 in [V].  
 Example:  
 CT with 1 V per 200 A.  
---> p5470 = 200
+--&gt; p5470 = 200
 
 **Note:**
   
@@ -24242,7 +24242,7 @@ Continuously permissible line current at cos phi = 1 for I2t monitoring. The I2t
 (r0036) is incremented above this current value with active line droop control (r5402.1
 = 1).  
 The current limit is dependent on the ambient temperature.  
-Derating should be observed for cos phi < 1 in order to avoid overtemperatures.  
+Derating should be observed for cos phi &lt; 1 in order to avoid overtemperatures.  
 For index [5]:  
 Reference value for setting the current limits with p5478[0, 1].  
 The value lies above the maximum current (r0209) of the power unit.
@@ -24326,7 +24326,7 @@ r5482, p5486, r5493, p5494, r5499, p5580
   
 The feedback signal contact of the circuit breaker between the Active Interface Module
 and the island grid must be connected in parallel via binector input p0860.  
-For an active black start (p5580 > 0), a separate transformer magnetization is not
+For an active black start (p5580 &gt; 0), a separate transformer magnetization is not
 performed.
 
 **Note:**
@@ -24508,8 +24508,8 @@ p5480, p5580, p5583
   
 Sets the signal source to enable the circuit breaker.  
 The line-side circuit breaker upstream of the supply transformer is required for the
-functions "Transformer magnetization" (p5480 > 0) and "Island grid black start" (p5580
-> 0).
+functions "Transformer magnetization" (p5480 &gt; 0) and "Island grid black start" (p5580
+&gt; 0).
 
 **Caution:**
   
@@ -24867,12 +24867,12 @@ p5480, p5492
 
 **Notice:**
   
-Overmodulation (r0074 > 97 %) during the measurement as a result of an excessively
+Overmodulation (r0074 &gt; 97 %) during the measurement as a result of an excessively
 low DC link voltage, can have a significant influence on the measurement result. A
 countermeasure, for example, can be to reduce the output voltage using p5494.  
 The measurement result depends very strongly on precisely specifying the filter capacitance
 (p0221).  
-When filter monitoring is active (p3678 > 0), the current measured values of the VSM
+When filter monitoring is active (p3678 &gt; 0), the current measured values of the VSM
 (r3671, r3672) are used to identify the magnetizing inductance. Incorrect VSM measured
 values result in excessively high deviations when determining the magnetizing inductance.
 
@@ -24972,7 +24972,7 @@ r5493.1 = 0.
   
 For bit 00:  
 The signal is used to control the external bridging contactor in the precharging circuit.  
-The external bridging contactor is closed if precharging is complete (r3402 > 5) and
+The external bridging contactor is closed if precharging is complete (r3402 &gt; 5) and
 the circuit breaker has not been activated (r0863.1 = 0).  
 For bit 01:  
 The signal is used to control the circuit breaker between the island grid and the
@@ -25026,7 +25026,7 @@ then the target value for the magnetization can be reduced (p5494[0]).
 When closing the line contactor, the residual magnetization required only causes a
 relatively low recharging current surge that is generally within permissible limits.  
 For index [1]:  
-If, during transformer magnetization, the current limit is exceeded (r0068 > p5494[1]
+If, during transformer magnetization, the current limit is exceeded (r0068 &gt; p5494[1]
 * r0207), then fault F06505 is output.
 
 ### p5495 Transformer operating mode configuration
@@ -25068,7 +25068,7 @@ the measured values of VSM1 (r3661, r3662).
 This means, for example if the transformer properties are not known, a higher accuracy
 of the PLL can be achieved, and in turn the controller stability improved.  
 For booksize drive units, the following applies:  
-Before and during PLL synchronization (r3402 <= 7), p5495.0 is only effective if operation
+Before and during PLL synchronization (r3402 &lt;= 7), p5495.0 is only effective if operation
 with VSM is activated (p3400.5 = 1).
 
 ### r5497[0...1] CO: Transformer secondary current
@@ -25763,12 +25763,12 @@ In order to guarantee that the support reactive current is kept, even when the V
 thresholds p5508 are reached, we recommend p5509[1] = 0.1 %.  
 For index [7]:  
 If a support reactive current is also required for a non-symmetrical grid faults,
-then correspondingly p5509[7] must be set > 0.1 % (typically = 100 %).  
+then correspondingly p5509[7] must be set &gt; 0.1 % (typically = 100 %).  
 For index [8]:  
 If a support reactive current is also required for non-symmetrical grid faults, then
-we recommend p5509[8] > 20 % in order to reduce Vdc oscillation.  
+we recommend p5509[8] &gt; 20 % in order to reduce Vdc oscillation.  
 For index [11]:  
-A value p5509[11] > 30 % can help avoid DC link overvoltages during grid faults.
+A value p5509[11] &gt; 30 % can help avoid DC link overvoltages during grid faults.
 
 **Index:**
   
@@ -25840,13 +25840,13 @@ line voltage (p5505[0], p5505[2]) are overshot.
 For index [1]:  
 Change in the reactive current setpoint (% per ms) when the maximum Vdc threshold
 (p5508) is overshot.  
-To avoid beat phenomena, the following must apply: p5509[1] > p5509[2].  
+To avoid beat phenomena, the following must apply: p5509[1] &gt; p5509[2].  
 The reactive current ramp is deactivated with p5509[1] = 0.1 %. The reactive current
 required for dynamic support is also kept, even when the Vdc threshold is reached.  
 For index [2]:  
 Change in the reactive current setpoint (% per ms) when the maximum Vdc threshold
 (p5508) is undershot.  
-To avoid beat phenomena, the following must apply: p5509[1] > p5509[2].  
+To avoid beat phenomena, the following must apply: p5509[1] &gt; p5509[2].  
 For index [3]:  
 Sets the hysteresis for the line voltage to exit grid support (as a percentage of
 the supply voltage p0210).  
@@ -25882,7 +25882,7 @@ For index [8]:
 Only active for p5500.3 = 1.  
 Sets the maximum negative phase-sequence system absolute current to support the grid
 in the case of line asymmetry (r5502.2 = 1) as a percentage of r0207.  
-For the case p5509[7] = 100 %, we recommend setting p5509[8] > 20 %.  
+For the case p5509[7] = 100 %, we recommend setting p5509[8] &gt; 20 %.  
 For index [9]:  
 Only active for p5500.3 = 1.  
 Sets the minimum value of the voltage asymmetry to impress a negative phase-sequence
@@ -25916,7 +25916,7 @@ when grid support is active (p5501 = 1 signal).
 The value is referred to the rated current r0207.  
 Values greater than 150% cannot be set.  
 Values greater than 105% can only be set if the following applies - r0193.16 = 1 and
-p5509[8] <= 100%.  
+p5509[8] &lt;= 100%.  
 For Active Line Module Booksize devices, the setting value is limited to 105 %.
 
 ### r5510[0...8] CO: Dynamic grid support output
@@ -26852,7 +26852,7 @@ For bit 09:
 The additional voltage and frequency check is activated when switching on. To do this,
 before operation is enabled, a check is made against the limits p5543[2, 3] and p5544[2,
 3], and the system waits until these limits are maintained (r3402 = 7 or r3402 = 12
-when transformer magnetization is active (p5480 > 0)).  
+when transformer magnetization is active (p5480 &gt; 0)).  
 If the voltage and frequency limits are violated, then this is indicated in status
 word r5542 bits 6 to 9.  
 For bit 10 (only effective for p5540.4 = 1 or p5540.7 = 1):  
@@ -28031,7 +28031,7 @@ Grid black start automatic
   
 A black start is only possible when the grid droop control (p5401) is activated.  
 A black start is only possible when the transformer test operation mode is deactivated
-(p5480 <= 1).  
+(p5480 &lt;= 1).  
 The use of feedback signal contacts from the circuit breaker between the Active Interface
 Module and the island grid is urgently recommended (p0860).
 
@@ -28528,7 +28528,7 @@ After this function is activated, the start of asymmetry is delayed until the ph
 angle (r5412) reaches the value of p5589. This means that asymmetrical voltage changes
 can be implemented, which can be synchronized with the basic fundamental of the grid
 voltage - and that are reproducible.  
-With p5589 < 0 °, asymmetry starts immediately with the 0/1 edge, and is therefore
+With p5589 &lt; 0 °, asymmetry starts immediately with the 0/1 edge, and is therefore
 not synchronized with the grid voltage.
 
 ### p5590[0...8] CI: Grid droop control asymmetry setpoint signal sources
@@ -28960,7 +28960,7 @@ Island grid transformer
 
 **Warning:**
   
-Switching-in with a significantly incorrectly parameterized offset angle (> 5 °) can
+Switching-in with a significantly incorrectly parameterized offset angle (&gt; 5 °) can
 cause a peak current intervention and / or triggering the crowbar thyristor.
 
 **Caution:**
@@ -29573,8 +29573,8 @@ point is created in one current controller sampling time.
 Example:  
 The "Recorder" function module is activated on 4 drive objects. The current controller
 sampling time (p0115[0]) is 250 µs.  
---> every drive object can record a maximum of 8000/4 = 2000 measuring points.  
---> the recording time that can be realized is 2000 * 0.250 ms = 500 ms.  
+--&gt; every drive object can record a maximum of 8000/4 = 2000 measuring points.  
+--&gt; the recording time that can be realized is 2000 * 0.250 ms = 500 ms.  
 Note:  
 - the recording time that can be realized is displayed in r6991[1].  
 - if the recording time is set too long, then it is automatically reduced to what
@@ -29596,10 +29596,10 @@ time p6999[2] 2^n times, and reduces the number of signals 2^n times.
 Example:  
 Number of drive objects = 1, p0115[0] = 250 µs, p6999[1] = 2000, p6999[2] = 1000,
 p6999[4] = 4  
---> recording time: 2000 ms * 2^4 = 32 s, pre-trigger time:1000 ms * 2^4 = 16 s, number
+--&gt; recording time: 2000 ms * 2^4 = 32 s, pre-trigger time:1000 ms * 2^4 = 16 s, number
 of signals 64/16 = 4.  
 When setting p6999[4] to 0, the results are as follows:  
---> recording time: 2000 ms, pre-trigger time: 1000 ms, number of signals: 64
+--&gt; recording time: 2000 ms, pre-trigger time: 1000 ms, number of signals: 64
 
 ### r7000 CO: Par_circuit No. of active power units
 
@@ -30329,9 +30329,9 @@ The parameter is reset to 0 at POWER ON.
   
 Ring buffer for faults and alarms that have occurred from power units connected in
 parallel (Motor Module, Active Line Infeed, Voltage Sensing Module).  
-p7101 < 100:  
+p7101 &lt; 100:  
 Displays the Power unit Data Set number (PDS).  
-p7101 >= 100:  
+p7101 &gt;= 100:  
 Displays the Voltage Sensing Module Data Set number (VSMDS)
 
 **Dependency:**
@@ -32001,9 +32001,9 @@ Procedure when replacing valve 1:
 1. Switch off the system and replace valve 1.  
 2. Switch on the system and acknowledge that valve 1 has been replaced (p7786.1 =
 1).  
---> the power cycling counter of valve 1 is then reset (r7740 = 0).  
+--&gt; the power cycling counter of valve 1 is then reset (r7740 = 0).  
 3. Carry out a POWER ON (switch-off/switch-on).  
---> as a consequence p7786.1 is automatically set to 0.
+--&gt; as a consequence p7786.1 is automatically set to 0.
 
 ### r7741[0...n] IGBT power cycling counter valve 2
 
@@ -32045,9 +32045,9 @@ Procedure when replacing valve 2:
 1. Switch off the system and replace valve 2.  
 2. Switch on the system and acknowledge that valve 2 has been replaced (p7786.2 =
 1).  
---> the power cycling counter of valve 2 is reset (r7741 = 0).  
+--&gt; the power cycling counter of valve 2 is reset (r7741 = 0).  
 3. Carry out a POWER ON (switch-off/switch-on).  
---> as a consequence p7786.2 is automatically set to 0.
+--&gt; as a consequence p7786.2 is automatically set to 0.
 
 ### r7742[0...n] IGBT power cycling counter valve 3
 
@@ -32089,9 +32089,9 @@ Procedure when replacing valve 3:
 1. Switch off the system and replace valve 3.  
 2. Switch on the system and acknowledge that valve 3 has been replaced (p7786.3 =
 1).  
---> the power cycling counter of valve 3 is reset (r7742 = 0).  
+--&gt; the power cycling counter of valve 3 is reset (r7742 = 0).  
 3. Carry out a POWER ON (switch-off/switch-on).  
---> as a consequence p7786.3 is automatically set to 0.
+--&gt; as a consequence p7786.3 is automatically set to 0.
 
 ### r7743[0...n] IGBT power cycling counter valve 4
 
@@ -32133,9 +32133,9 @@ Procedure when replacing valve 4:
 1. Switch off the system and replace valve 4.  
 2. Switch on the system and acknowledge that valve 4 has been replaced (p7786.4 =
 1).  
---> the power cycling counter of valve 4 is reset (r7743 = 0).  
+--&gt; the power cycling counter of valve 4 is reset (r7743 = 0).  
 3. Carry out a POWER ON (switch-off/switch-on).  
---> as a consequence p7786.4 is automatically set to 0.
+--&gt; as a consequence p7786.4 is automatically set to 0.
 
 ### r7744[0...n] IGBT power cycling counter valve 5
 
@@ -32177,9 +32177,9 @@ Procedure when replacing valve 5:
 1. Switch off the system and replace valve 5.  
 2. Switch on the system and acknowledge that valve 5 has been replaced (p7786.5 =
 1).  
---> the power cycling counter of valve 5 is reset (r7744 = 0).  
+--&gt; the power cycling counter of valve 5 is reset (r7744 = 0).  
 3. Carry out a POWER ON (switch-off/switch-on).  
---> as a consequence p7786.5 is automatically set to 0.
+--&gt; as a consequence p7786.5 is automatically set to 0.
 
 ### r7745[0...n] IGBT power cycling counter valve 6
 
@@ -32221,9 +32221,9 @@ Procedure when replacing valve 6:
 1. Switch off the system and replace valve 6.  
 2. Switch on the system and acknowledge that valve 6 has been replaced (p7786.6 =
 1).  
---> the power cycling counter of valve 6 is reset (r7745 = 0).  
+--&gt; the power cycling counter of valve 6 is reset (r7745 = 0).  
 3. Carry out a POWER ON (switch-off/switch-on).  
---> as a consequence p7786.6 is automatically set to 0.
+--&gt; as a consequence p7786.6 is automatically set to 0.
 
 ### r7746 IGBT load counter dynamic
 
@@ -34942,9 +34942,9 @@ is assigned to controller 2.
 Displays the parameters that were not able to be transferred when reading the parameter
 back-up files (PS files) from the non-volatile memory (e.g. memory card).  
 r9406[0] = 0  
---> All of the parameter values were able to be transferred error-free.  
-r9406[0...x] > 0  
---> indicates the parameter number in the following cases:  
+--&gt; All of the parameter values were able to be transferred error-free.  
+r9406[0...x] &gt; 0  
+--&gt; indicates the parameter number in the following cases:  
 - parameter, whose value was not able to be completely accepted.  
 - indexed parameter, where at least 1 index was not able to be accepted. The first
 index that is not transferred is displayed in r9407.
@@ -34988,9 +34988,9 @@ If, from an indexed parameter, at least one index was not able to be transferred
 then the parameter number is displayed in r9406[n] and the first index that was not
 transferred is displayed in r9407[n].  
 r9406[0] = 0  
---> All of the parameter values were able to be transferred error-free.  
-r9406[n] > 0  
---> Displays r9407[n] the first index of the parameter number r9406[n] that was not
+--&gt; All of the parameter values were able to be transferred error-free.  
+r9406[n] &gt; 0  
+--&gt; Displays r9407[n] the first index of the parameter number r9406[n] that was not
 transferred.
 
 **Dependency:**
@@ -36150,14 +36150,14 @@ the calculated value is then present.
   
 For value = 1 ... 256:  
 This value can only be set if, for sampling time T_sample of this runtime group, the
-following applies: 1 ms <= T_sample <= r20003. At download, a value that violates
+following applies: 1 ms &lt;= T_sample &lt;= r20003. At download, a value that violates
 this condition is not rejected, but a permissible equivalent value is set automatically
 and fault F50518 is output.  
 If value = 9003:  
 The fixed runtime groups p20000[x] = 9003 log on with the sampling time of the setpoint
 channel, although the sampling time must be at least 1 ms. If, as a result of this
 limit, the actual sampling time deviates from the sampling time of the setpoint channel
-p0115[3], alarm A20103 is output. Another runtime group with a sampling time >= 1
+p0115[3], alarm A20103 is output. Another runtime group with a sampling time &gt;= 1
 ms should be selected. "Calculate before setpoint channel" means before function diagrams
 3010, 3020, 3030, 3040, etc. are calculated, if the setpoint channel is activated
 (p0108.8 = 1). If, e.g. for SERVO, a setpoint channel has not been configured (p0108.8
@@ -36824,14 +36824,14 @@ the calculated value is then present.
   
 For value = 1 ... 256:  
 This value can only be set if, for sampling time T_sample of this runtime group, the
-following applies: 1 ms <= T_sample <= r20003. At download, a value that violates
+following applies: 1 ms &lt;= T_sample &lt;= r20003. At download, a value that violates
 this condition is not rejected, but a permissible equivalent value is set automatically
 and fault F50518 is output.  
 If value = 9003:  
 The fixed runtime groups p20000[x] = 9003 log on with the sampling time of the setpoint
 channel, although the sampling time must be at least 1 ms. If, as a result of this
 limit, the actual sampling time deviates from the sampling time of the setpoint channel
-p0115[3], alarm A20103 is output. Another runtime group with a sampling time >= 1
+p0115[3], alarm A20103 is output. Another runtime group with a sampling time &gt;= 1
 ms should be selected. "Calculate before setpoint channel" means before function diagrams
 3010, 3020, 3030, 3040, etc. are calculated, if the setpoint channel is activated
 (p0108.8 = 1). If, e.g. for SERVO, a setpoint channel has not been configured (p0108.8
@@ -37094,7 +37094,7 @@ Runtime group 9
 
 **Note:**
   
-The runtime group to be measured has to be logged on (p20000[x] > 0).  
+The runtime group to be measured has to be logged on (p20000[x] &gt; 0).  
 The value for the computation time load is calculated in the drive unit using the
 project loaded. As such, the r20005[x] values are not available in the expert list
 in SCOUT/STARTER offline mode.
@@ -37156,7 +37156,7 @@ Runtime group 9
 
 **Note:**
   
-The runtime group to be measured has to be logged on (p20000[x] > 0).  
+The runtime group to be measured has to be logged on (p20000[x] &gt; 0).  
 The value for the computation time load is calculated in the drive unit using the
 project loaded. As such, the r20005[x] values are not available in the expert list
 in SCOUT/STARTER offline mode.
@@ -37182,7 +37182,7 @@ in SCOUT/STARTER offline mode.
   
 Displays the assignment of the available hardware sampling times of the drive unit.  
 The term "hardware sampling times" refers to those r20002 sampling times that are
-formed as a multiple of the basic sampling time and always < r20003.
+formed as a multiple of the basic sampling time and always &lt; r20003.
 
 **Dependency:**
   
@@ -37198,7 +37198,7 @@ Therefore, the current number of hardware sampling times that are still free can
 read out in r7903.  
 If r7903=0, no additional sampling time that differs from r20008[0...12] can be provided
 from the Control Unit. If, when selecting in this state, a runtime group with a sampling
-time < r20003 (p20000 <= 255) is to be set in p20000, only runtime groups whose sampling
+time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000, only runtime groups whose sampling
 time is already provided in r20008[0...12] can be selected.
 
 **Note:**
@@ -37213,8 +37213,8 @@ It should be noted that the basic system, depending on the selected basic sampli
 times p0115[0], requires at least two (sometimes several) freely assignable hardware
 sampling times for internal functions. The number of hardware sampling times that
 can still be freely assigned can be read out in r7903.  
-r20008[11] = 99999.00000 --> Hardware sampling time is not supported.  
-r20008[12] = 99999.00000 --> Hardware sampling time is not supported.  
+r20008[11] = 99999.00000 --&gt; Hardware sampling time is not supported.  
+r20008[12] = 99999.00000 --&gt; Hardware sampling time is not supported.  
 The sampling time of runtime groups that have been assigned to the PROFIBUS runtime
 groups (p20000 = 4000 ... 4004) is not displayed in r20008. For this sampling time,
 one of the internally and permanently assigned hardware sampling times is used.
@@ -37240,7 +37240,7 @@ one of the internally and permanently assigned hardware sampling times is used.
   
 Displays the assignment of the available hardware sampling times of the drive unit.  
 The term "hardware sampling times" refers to those r20002 sampling times that are
-formed as a multiple of the basic sampling time and always < r20003.
+formed as a multiple of the basic sampling time and always &lt; r20003.
 
 **Dependency:**
   
@@ -37256,7 +37256,7 @@ Therefore, the current number of hardware sampling times that are still free can
 read out in r7903.  
 If r7903=0, no additional sampling time that differs from r20008[0...12] can be provided
 from the Control Unit. If, when selecting in this state, a runtime group with a sampling
-time < r20003 (p20000 <= 255) is to be set in p20000, only runtime groups whose sampling
+time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000, only runtime groups whose sampling
 time is already provided in r20008[0...12] can be selected.
 
 **Note:**
@@ -37271,8 +37271,8 @@ It should be noted that the basic system, depending on the selected basic sampli
 times p0115[0], requires at least two (sometimes several) freely assignable hardware
 sampling times for internal functions. The number of hardware sampling times that
 can still be freely assigned can be read out in r7903.  
-r20008[11] = 99999.00000 --> Hardware sampling time is not supported.  
-r20008[12] = 99999.00000 --> Hardware sampling time is not supported.  
+r20008[11] = 99999.00000 --&gt; Hardware sampling time is not supported.  
+r20008[12] = 99999.00000 --&gt; Hardware sampling time is not supported.  
 The sampling time of runtime groups that have been assigned to the PROFIBUS runtime
 groups (p20000 = 4000 ... 4004) is not displayed in r20008. For this sampling time,
 one of the internally and permanently assigned hardware sampling times is used.
@@ -37778,7 +37778,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 0 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 0 of the
 AND function block.
 
 ### r20031 BO: AND 0 output Q
@@ -37800,7 +37800,7 @@ AND function block.
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 0 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 0 of the
 AND function block.
 
 ### p20032 AND 0 runtime group
@@ -38044,7 +38044,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 1 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 1 of the
 AND function block.
 
 ### r20035 BO: AND 1 output Q
@@ -38066,7 +38066,7 @@ AND function block.
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 1 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 1 of the
 AND function block.
 
 ### p20036 AND 1 runtime group
@@ -38310,7 +38310,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 2 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 2 of the
 AND function block.
 
 ### r20039 BO: AND 2 output Q
@@ -38332,7 +38332,7 @@ AND function block.
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 2 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 2 of the
 AND function block.
 
 ### p20040 AND 2 runtime group
@@ -38576,7 +38576,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 3 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 3 of the
 AND function block.
 
 ### r20043 BO: AND 3 output Q
@@ -38598,7 +38598,7 @@ AND function block.
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 3 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 3 of the
 AND function block.
 
 ### p20044 AND 3 runtime group
@@ -43510,7 +43510,7 @@ Div remainder MOD
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 0 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### r20120 BO: DIV 0 divisor is zero QF
 
@@ -43533,7 +43533,7 @@ X1 = 0.0 => QF = 1
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 0 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### p20121 DIV 0 runtime group
 
@@ -43832,7 +43832,7 @@ Div remainder MOD
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 1 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### r20125 BO: DIV 1 divisor is zero QF
 
@@ -43855,7 +43855,7 @@ X1 = 0.0 => QF = 1
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 1 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### p20126 DIV 1 runtime group
 
@@ -44114,7 +44114,7 @@ with sign evaluation.
   
 Display parameter for signal SN that the input quantity X of instance AVA 0 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### r20130 BO: AVA 0 input negative SN
 
@@ -44137,7 +44137,7 @@ X < 0.0 => SN = 1
   
 Display parameter for signal SN that the input quantity X of instance AVA 0 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### p20131 AVA 0 runtime group
 
@@ -44396,7 +44396,7 @@ with sign evaluation.
   
 Display parameter for signal SN that the input quantity X of instance AVA 1 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### r20135 BO: AVA 1 input negative SN
 
@@ -44419,7 +44419,7 @@ X < 0.0 => SN = 1
   
 Display parameter for signal SN that the input quantity X of instance AVA 1 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### p20136 AVA 1 runtime group
 
@@ -49965,7 +49965,7 @@ Display parameter for the limited output quantity Y of instance LIM 0 of the lim
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20232 BO: LIM 0 input quantity at the upper limit QU
 
@@ -49987,7 +49987,7 @@ Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20233 BO: LIM 0 input quantity at the lower limit QL
 
@@ -50009,7 +50009,7 @@ Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### r20233 BO: LIM 0 input quantity at the lower limit QL
 
@@ -50031,7 +50031,7 @@ Display parameter of instance LIM 0 of limiter QL (lower limit reached), i.e. QL
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### p20234 LIM 0 runtime group
 
@@ -50369,7 +50369,7 @@ Display parameter for the limited output quantity Y of instance LIM 1 of the lim
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20240 BO: LIM 1 input quantity at the upper limit QU
 
@@ -50391,7 +50391,7 @@ Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20241 BO: LIM 1 input quantity at the lower limit QL
 
@@ -50413,7 +50413,7 @@ Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### r20241 BO: LIM 1 input quantity at the lower limit QL
 
@@ -50435,7 +50435,7 @@ Display parameter of instance LIM 1 of limiter QL (lower limit reached), i.e. QL
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### p20242 LIM 1 runtime group
 
@@ -51525,7 +51525,7 @@ integrator.
 **Description:**
   
 Display parameter for output quantity Y of instance INT 0 of the integrator.  
-If LL>= LU, then the output quantity Y = LU.
+If LL&gt;= LU, then the output quantity Y = LU.
 
 ### r20261 CO: INT 0 output Y
 
@@ -51547,7 +51547,7 @@ If LL>= LU, then the output quantity Y = LU.
 **Description:**
   
 Display parameter for output quantity Y of instance INT 0 of the integrator.  
-If LL>= LU, then the output quantity Y = LU.
+If LL&gt;= LU, then the output quantity Y = LU.
 
 ### r20262 BO: INT 0 integrator at the upper limit QU
 
@@ -51975,7 +51975,7 @@ Setting parameter for hysteresis HY of instance LVM 0 of the double-sided limite
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20270 BO: LVM 0 input quantity above interval QU
 
@@ -51997,7 +51997,7 @@ X was at least once X > M + L and X is >= M + L - HY.
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20271 BO: LVM 0 input quantity within interval QM
 
@@ -52063,7 +52063,7 @@ X lies within the interval.
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### r20272 BO: LVM 0 input quantity below interval QL
 
@@ -52085,7 +52085,7 @@ X was at least once X < M - L and X is <= M - L + HY.
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### p20273 LVM 0 runtime group
 
@@ -52425,7 +52425,7 @@ Setting parameter for hysteresis HY of instance LVM 1 of the double-sided limite
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20279 BO: LVM 1 input quantity above interval QU
 
@@ -52447,7 +52447,7 @@ X was at least once X > M + L and X is >= M + L - HY.
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20280 BO: LVM 1 input quantity within interval QM
 
@@ -52513,7 +52513,7 @@ X lies within the interval.
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### r20281 BO: LVM 1 input quantity below interval QL
 
@@ -52535,7 +52535,7 @@ X was at least once X < M - L and X is <= M - L + HY.
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### p20282 LVM 1 runtime group
 
@@ -52983,7 +52983,7 @@ blocks with a higher run sequence value.
 **Description:**
   
 Allocates properties to runtime groups 1 to 10.  
-This property comprises the sampling time and, for p21000[x] >= 2000, the instant
+This property comprises the sampling time and, for p21000[x] &gt;= 2000, the instant
 of the call within the sampling time.  
 The index x + 1 of p21000 corresponds to the number of the runtime group:  
 - p21000[0] is used to set the property of the runtime group 1  
@@ -53606,15 +53606,15 @@ could result in discontinuous signal transitions.
 For value = 1 ... 256 (free runtime group):  
 This selection value can only be selected online if the following applies for sampling
 time T_sample of this runtime group:  
-1 ms <= T_sample < r21003.  
+1 ms &lt;= T_sample &lt; r21003.  
 At download, a value that violates this condition is not rejected, but a permissible
 equivalent value is set automatically and fault F51004 is output.  
-For value > 2000 (fixed runtime group):  
-The fixed runtime groups p21000[x] >= 2000 log on with the sampling time of the associated
+For value &gt; 2000 (fixed runtime group):  
+The fixed runtime groups p21000[x] &gt;= 2000 log on with the sampling time of the associated
 basic system function, subject to a minimum sampling time of 1 ms. If, as a result
 of this limit, the actual sampling time deviates from the sampling time of the basic
 system function, then fault F51005 (during F51006 download) is output. In this case,
-another runtime group with a sampling time >= 1 ms should be selected. When selecting
+another runtime group with a sampling time &gt;= 1 ms should be selected. When selecting
 the fixed runtime groups, a check is not made as to whether the associated system
 block exists.  
 Example:  
@@ -53643,7 +53643,7 @@ chart 3095.
 **Description:**
   
 Allocates properties to runtime groups 1 to 10.  
-This property comprises the sampling time and, for p21000[x] >= 2000, the instant
+This property comprises the sampling time and, for p21000[x] &gt;= 2000, the instant
 of the call within the sampling time.  
 The index x + 1 of p21000 corresponds to the number of the runtime group:  
 - p21000[0] is used to set the property of the runtime group 1  
@@ -54264,15 +54264,15 @@ could result in discontinuous signal transitions.
 For value = 1 ... 256 (free runtime group):  
 This selection value can only be selected online if the following applies for sampling
 time T_sample of this runtime group:  
-1 ms <= T_sample < r21003.  
+1 ms &lt;= T_sample &lt; r21003.  
 At download, a value that violates this condition is not rejected, but a permissible
 equivalent value is set automatically and fault F51004 is output.  
-For value > 2000 (fixed runtime group):  
-The fixed runtime groups p21000[x] >= 2000 log on with the sampling time of the associated
+For value &gt; 2000 (fixed runtime group):  
+The fixed runtime groups p21000[x] &gt;= 2000 log on with the sampling time of the associated
 basic system function, subject to a minimum sampling time of 1 ms. If, as a result
 of this limit, the actual sampling time deviates from the sampling time of the basic
 system function, then fault F51005 (during F51006 download) is output. In this case,
-another runtime group with a sampling time >= 1 ms should be selected. When selecting
+another runtime group with a sampling time &gt;= 1 ms should be selected. When selecting
 the fixed runtime groups, a check is not made as to whether the associated system
 block exists.  
 Example:  
@@ -54444,7 +54444,7 @@ Runtime group 10
 **Note:**
   
 The computing time load can only be displayed for the runtime groups which are logged
-on (p21000[x] > 0). The value for the computing time load is calculated in the drive
+on (p21000[x] &gt; 0). The value for the computing time load is calculated in the drive
 unit based on the project loaded plus DCC chart. Therefore, the values r21005[x] are
 not available in the offline mode of the SCOUT/STARTER.  
   
@@ -54482,7 +54482,7 @@ system.
   
 Displays the assignment of the available hardware sampling times of the drive unit.  
 The designated sampling times are those created as a multiple of the hardware basis
-sampling time (r21002) and which are always < r21003.
+sampling time (r21002) and which are always &lt; r21003.
 
 **Index:**
   
@@ -54597,7 +54597,7 @@ times. Therefore the current number of free hardware sampling times can be read 
 in r7903.  
 If r7903=0, no additional sampling time different from r21008[0...31] may be provided
 from the Control Unit. When selecting in this state, if a runtime group with a sampling
-time < r21003 (p21000 <= 255) is selected in p21000, only runtime groups whose sampling
+time &lt; r21003 (p21000 &lt;= 255) is selected in p21000, only runtime groups whose sampling
 time is already provided in r21008[0...31] may be selected.
 
 **Note:**

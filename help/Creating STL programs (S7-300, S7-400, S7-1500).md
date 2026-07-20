@@ -337,12 +337,12 @@ To select a network, follow these steps:
 
 Proceed as follows to select several individual networks:
 
-1. Press and hold down the <Ctrl> key.
+1. Press and hold down the &lt;Ctrl&gt; key.
 2. Click all the networks that you want to select.
 
 To select several successive networks, follow these steps:
 
-1. Press and hold down the <Shift> key.
+1. Press and hold down the &lt;Shift&gt; key.
 2. Click the first network that you want to select.
 3. Click the last network that you want to select.
 
@@ -528,7 +528,7 @@ To specify that the network titles are always set automatically, follow these st
 
 To set an individual network title automatically, follow these steps:
 
-1. Right-click "Network <Number of the network>" in the title bar of a network.
+1. Right-click "Network &lt;Number of the network&gt;" in the title bar of a network.
 2. Select the "Set network title automatically" command in the shortcut menu.
 
    The title of the selected network is set based on the comment of the operand if the conditions listed above are fulfilled.
@@ -603,7 +603,7 @@ You can navigate straight to a specific position within a block.
 To navigate to a specific position within a block, follow these steps:
 
 1. Right-click in the code area of the programming window.
-2. Select the "Go to > Network/line" command in the shortcut menu.
+2. Select the "Go to &gt; Network/line" command in the shortcut menu.
 
    The "Go to" dialog will open.
 3. Enter the network to which you want to navigate.
@@ -809,7 +809,7 @@ After the instruction is closed by pressing the Enter key, the program editor pe
 
 - Syntax check: After the check, faulty entries are displayed in red italics. In addition, you also receive a detailed error message in the "Syntax" tab of the information window.
 - Change of lower and upper case: Instructions are changed to upper case.
-- If you have entered absolute addresses in symbolic programming, these will be converted into symbolic names. If no symbolic name is available, "Tag_< number>" is inserted.
+- If you have entered absolute addresses in symbolic programming, these will be converted into symbolic names. If no symbolic name is available, "Tag_&lt; number&gt;" is inserted.
 - Block call: the necessary parameters are inserted and displayed.
 - An additional line is inserted in the entry field.
 
@@ -866,7 +866,7 @@ After the instruction is closed by pressing the Enter key, the program editor pe
 
 - Syntax check: After the check, faulty entries are displayed in red italics. In addition, you also receive a detailed error message in the information window.
 - Change of lower and upper case: Instructions are changed to upper case.
-- If you have entered absolute addresses in symbolic programming, these will be converted into symbolic names. If no symbolic name is available, "Tag_< number>" is inserted.
+- If you have entered absolute addresses in symbolic programming, these will be converted into symbolic names. If no symbolic name is available, "Tag_&lt; number&gt;" is inserted.
 - Block call: the necessary parameters are inserted and displayed.
 - An additional line is inserted in the entry field.
 
@@ -1136,9 +1136,9 @@ A network is available.
 
 To insert a function call in an STL network, follow these steps:
 
-1. Enter "CALL <Name of the function to be called>".
+1. Enter "CALL &lt;Name of the function to be called&gt;".
 
-   Replace "<Name of the function to be called>" with the name of the function that you want to call.
+   Replace "&lt;Name of the function to be called&gt;" with the name of the function that you want to call.
 2. Confirm your entry with the Enter key.
 
    - If the function already exists, all parameters of the function are inserted in the call.
@@ -1148,9 +1148,9 @@ To insert a function call in an STL network, follow these steps:
 
 To insert the call for a function block (FB), follow these steps:
 
-1. Enter "CALL <Name of the function block to be called>, <Name of the instance data block>".
+1. Enter "CALL &lt;Name of the function block to be called&gt;, &lt;Name of the instance data block&gt;".
 
-   Replace "<Name of the function to be called>" with the name of the function block that you want to call. The instance data block entry is optional.
+   Replace "&lt;Name of the function to be called&gt;" with the name of the function block that you want to call. The instance data block entry is optional.
 2. Confirm your entry with the Enter key.
 
    If you have not specified the instance data block or the instance data block you have specified does not exist, the "Call options" dialog is opened. In this case, perform steps 3 and 4.
@@ -1295,7 +1295,7 @@ Follow these steps to update all block calls and uses of PLC data types during c
 
 1. Open the project tree.
 2. Select the "Program blocks" folder.
-3. Select the command "Compile > Software (rebuild all blocks)" in the shortcut menu.
+3. Select the command "Compile &gt; Software (rebuild all blocks)" in the shortcut menu.
 
 ---
 
@@ -1458,7 +1458,7 @@ To select STL instructions, follow these steps:
 To select all instructions of a network, follow these steps:
 
 1. Click in the network whose instructions you want to select.
-2. Select "Select All" from the "Edit" menu or use the keyboard shortcut <Ctrl+A>.
+2. Select "Select All" from the "Edit" menu or use the keyboard shortcut &lt;Ctrl+A&gt;.
 
 ---
 
@@ -1749,14 +1749,14 @@ The following STL program shows how to implement this example:
 | = #STOR_NOT_EMPTY | // With a count value greater than "0" the display lamp "Storage area not empty" is switched on. |
 | L 50 | // Load the comparison value "50" to accumulator 1. |
 | L "PACKAGECOUNT" | // Move the comparison value to accumulator 2.  // Load the current count value to accumulator 1. |
-| <=I | // Compare values |
+| &lt;=I | // Compare values |
 | = #"STOR_50%_FULL" | // With a count value greater than or equal to "50" the display lamp "Storage area 50% full" is switched on. |
 | L 90 | // Move the counter value to accumulator 2.  // Load the comparison value "90" to accumulator 1. |
-| >=I | // Compare values |
+| &gt;=I | // Compare values |
 | = #"STOR_90%_FULL" | // With a count value greater than or equal to "90" the display lamp "Storage area 90% full" is switched on. |
 | L "PACKAGECOUNT" | // Load the current count value to accumulator 1. |
 | L 100 | // Move the counter value to accumulator 2.  // Load the comparison value "100" to accumulator 1. |
-| >=I | // Compare values |
+| &gt;=I | // Compare values |
 | = #STOR_FULL | // At a count value greater than "100" the display lamp "Storage area full" is switched on. |
 
 ---
@@ -1962,7 +1962,7 @@ The following STL program shows how to implement this example:
 | NEXT: INC 1 | // Jump label "NEXT"  // Increase step number in accumulator 1 by one. |
 | T "NUMBER" | // Transfer step number to operand "NUMBER". |
 | L 3 | // Move the current step number to accumulator 2.  // Load value 3 to accumulator 1. |
-| >I | // Scan to see if current step number is greater than 3. |
+| &gt;I | // Scan to see if current step number is greater than 3. |
 | JC RESET_NUMBER | // With a scan result "1" jump to jump label "RESET_NUMBER" and continue with program processing |
 | BEU | // End block |
 | RESET_NUMBER: L 0 | // Jump label "RESET_NUMBER"  // Load value "0" in accumulator 1. |

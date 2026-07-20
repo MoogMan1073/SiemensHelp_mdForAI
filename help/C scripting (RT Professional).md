@@ -73,7 +73,7 @@ WinCC saves the names of the screens opened by the user during runtime as well 
 
 Can only be used in C scripting.
 
-The maximum size of the screen buffer is specified in the "Runtime settings > Screens > Screen buffer" editor.
+The maximum size of the screen buffer is specified in the "Runtime settings &gt; Screens &gt; Screen buffer" editor.
 
 The ActivateNextScreen system function now opens the screen that was opened before the last call of ActivatePreviousScreen.
 
@@ -139,7 +139,7 @@ WinCC saves the names of the screens opened by the user during runtime as well 
 
 The system function can be used in C scripting only.
 
-The maximum size of the screen buffer is specified in the "Runtime settings > Screens > Screen buffer" editor.
+The maximum size of the screen buffer is specified in the "Runtime settings &gt; Screens &gt; Screen buffer" editor.
 
 The ActivatePreviousScreen system function now opens the screen which was open before the currently open screen.
 
@@ -480,7 +480,7 @@ SYSTEMTIME st_1, st_2;
 
 DATE       d_1, d_2;   // wtypes.h.  DATE type. Visual Studio documnetation.
 
-GetSystemTime( &st_1 );
+GetSystemTime( &amp;st_1 );
 
 printf( "st_1.wYear = %d \r\n", st_1.wYear );
 
@@ -496,7 +496,7 @@ printf( "st_1.wSecond = %d \r\n", st_1.wSecond );
 
 printf( "st_1.wMilliseconds = %d \r\n", st_1.wMilliseconds );
 
-BRet = SystemTimeToDate( st_1, &d_1 );
+BRet = SystemTimeToDate( st_1, &amp;d_1 );
 
 printf( "DATE d = %ld \r\n \r\n", d_1 );
 
@@ -504,7 +504,7 @@ printf( "DATE d = %lf \r\n \r\n", d_1 );
 
 printf( "DATE d = %f \r\n \r\n", d_1 );
 
-BRet = DateToSystemTime( d_1, &st_2 );
+BRet = DateToSystemTime( d_1, &amp;st_2 );
 
 printf( "st_2.wYear = %d \r\n", st_2.wYear );
 
@@ -734,7 +734,7 @@ Pointer to the name of the screen.
 >
 > The syntax of the transferred call parameter "ScreenName" must correspond to that formed by the graphics system for the screen paths:
 >
-> <Screen_name>.<Screen_window_name>:<Screen_name>.<Screen_window_name>:<Screen_name>...
+> &lt;Screen_name&gt;.&lt;Screen_window_name&gt;:&lt;Screen_name&gt;.&lt;Screen_window_name&gt;:&lt;Screen_name&gt;...
 
 #### Principle
 
@@ -890,7 +890,7 @@ char* GetParentScreen(ScreenName);
 
 Pointer to the name of the screen. The syntax of the transferred call parameter Screen name must correspond to that formed by the graphics system for the screen paths:
 
-<Screen_name>.<Screen_window_name>:<Screen_name>.<Screen_window_name>:<Screen_name>...
+&lt;Screen_name&gt;.&lt;Screen_window_name&gt;:&lt;Screen_name&gt;.&lt;Screen_window_name&gt;:&lt;Screen_name&gt;...
 
 > **Note**
 >
@@ -966,7 +966,7 @@ char* GetParentScreenWindow(ScreenName);
 
 Pointer to the name of the screen. The syntax of the transferred Screen name call parameter must correspond to that formed by the graphics system for the screen paths:
 
-<Screen name>.<screen window name>:<screen name>.<screen window name>:<screen name>...The "." character is used to distinguish between screen and screen object names. The ":" character is used for the hierarchy structuring. Therefore, use only the "-" or "_" as a delimiter in the name designations.
+&lt;Screen name&gt;.&lt;screen window name&gt;:&lt;screen name&gt;.&lt;screen window name&gt;:&lt;screen name&gt;...The "." character is used to distinguish between screen and screen object names. The ":" character is used for the hierarchy structuring. Therefore, use only the "-" or "_" as a delimiter in the name designations.
 
 > **Note**
 >
@@ -1376,7 +1376,7 @@ memset(myTagName,0,MAX_DM_VAR_NAME + 1);
 
 //Get the serverprefix the tagprefix and the windowprefix
 
-GetServerTagPrefix(&pszServerPrefix, &pszTagPrefix, &pszWindowPrefix);
+GetServerTagPrefix(&amp;pszServerPrefix, &amp;pszTagPrefix, &amp;pszWindowPrefix);
 
 //If a serverprefix exists
 
@@ -1417,9 +1417,9 @@ if (pszTagPrefix)
 nTagLen = strlen("TagName");
 
 //Check if the lenght of the  
-//ServerPrefix+TagPrefix+VarName + the double points < MAX_DM_VAR_NAME)
+//ServerPrefix+TagPrefix+VarName + the double points &lt; MAX_DM_VAR_NAME)
 
-if (nServerPrefixLen + nTagPrefixLen + nTagLen+2 < MAX_DM_VAR_NAME)
+if (nServerPrefixLen + nTagPrefixLen + nTagLen+2 &lt; MAX_DM_VAR_NAME)
 
 {
 
@@ -1491,7 +1491,7 @@ The following table shows the different GetTag functions for reading the tag val
 
 ##### Syntax
 
-<Type><FunctionName><(Parameter)>;
+&lt;Type&gt;&lt;FunctionName&gt;&lt;(Parameter)&gt;;
 
 Example: BYTE GetTagByte(Tag_Name);
 
@@ -1647,15 +1647,15 @@ WORD lValue5 ;
 
 GetTagMultiStateQCWait(dwState,dwQC,"%d%d%s%f%d",
 
-  "gs_tag_bit",&lValue1,
+  "gs_tag_bit",&amp;lValue1,
 
-  "gs_tag_SByte",&lValue2,
+  "gs_tag_SByte",&amp;lValue2,
 
-  "gs_tag_char",&szValue3,
+  "gs_tag_char",&amp;szValue3,
 
-  "gs_tag_float",&dblValue4,
+  "gs_tag_float",&amp;dblValue4,
 
-  "gs_tag_word",&lValue5);
+  "gs_tag_word",&amp;lValue5);
 
 //User defined code where the
 
@@ -1740,15 +1740,15 @@ WORD lValue5 ;
 
 GetTagMultiStateWait(dwState,"%d%d%s%f%d",
 
-  "gs_tag_bit",&lValue1,
+  "gs_tag_bit",&amp;lValue1,
 
-  "gs_tag_SByte",&lValue2,
+  "gs_tag_SByte",&amp;lValue2,
 
-  "gs_tag_char",&szValue3,
+  "gs_tag_char",&amp;szValue3,
 
-  "gs_tag_float",&dblValue4,
+  "gs_tag_float",&amp;dblValue4,
 
-  "gs_tag_word",&lValue5);
+  "gs_tag_word",&amp;lValue5);
 
 //User defined code where the
 
@@ -1815,11 +1815,11 @@ double dbVar3Value;
 
 BOOL ok;
 
-ok=GetTagMultiWait("%d%s%f", "Ernie_word", &dwVar1Value,
+ok=GetTagMultiWait("%d%s%f", "Ernie_word", &amp;dwVar1Value,
 
-  "Ernie_char", &szVar2Value,
+  "Ernie_char", &amp;szVar2Value,
 
-  "Ernie_double", &dbVar3Value);
+  "Ernie_double", &amp;dbVar3Value);
 
 printf("Word %d, String %s, Double %f\r\n",
 
@@ -1851,7 +1851,7 @@ The following table lists the different GetTagStateXXX functions for reading the
 
 ##### Syntax
 
-<Type><FunctionName><(Parameter)>;
+&lt;Type&gt;&lt;FunctionName&gt;&lt;(Parameter)&gt;;
 
 Example: BOOL GetTagBitState(Tag_Name, lp_dwstate);
 
@@ -1905,7 +1905,7 @@ dwState = 0xFFFFFFFF;
 
 //dwstate is the tag state
 
-bValue = GetTagBitState("gs_tag_bit",&dwState);
+bValue = GetTagBitState("gs_tag_bit",&amp;dwState);
 
 //Create a string which includes the tag value
 
@@ -1969,7 +1969,7 @@ The following table shows the different GetTagStateQC functions for reading the 
 
 ##### Syntax
 
-<Type><FunctionName><(Parameter)>;
+&lt;Type&gt;&lt;FunctionName&gt;&lt;(Parameter)&gt;;
 
 Example: BOOL GetTagBitStateQC(Tag_Name, lp_dwstate, pdwQualityCode);
 
@@ -2029,7 +2029,7 @@ dwState = 0xFFFFFFFF;
 
 //dwstate is the tag state
 
-ok = GetTagBitStateQC("gs_tag_bit",&dwState,&dwQC);
+ok = GetTagBitStateQC("gs_tag_bit",&amp;dwState,&amp;dwQC);
 
 //Create a string which includes the tag value
 
@@ -2093,7 +2093,7 @@ The following table lists the different GetTagStateQCWait functions for reading 
 
 ##### Syntax
 
-<Type><FunctionName><(Parameter)>;
+&lt;Type&gt;&lt;FunctionName&gt;&lt;(Parameter)&gt;;
 
 Example: BOOL GetTagBitStateQC(Tag_Name, lp_dwstate, pdwQualityCode);
 
@@ -2153,7 +2153,7 @@ dwState = 0xFFFFFFFF;
 
 //dwstate is the tag state
 
-bValue = GetTagBitStateQCWait("gs_tag_bit",&dwState,&dwQC);
+bValue = GetTagBitStateQCWait("gs_tag_bit",&amp;dwState,&amp;dwQC);
 
 //Create a string which includes the tag value
 
@@ -2217,7 +2217,7 @@ The following table lists the different GetTagStateWait functions for reading th
 
 ##### Syntax
 
-<Type><FunctionName><(Parameter)>
+&lt;Type&gt;&lt;FunctionName&gt;&lt;(Parameter)&gt;
 
 Example: BOOL GetTagBitStateWait(Tag_Name, lp_dwstate)
 
@@ -2271,7 +2271,7 @@ dwState = 0xFFFFFFFF;
 
 //dwstate is the tag state
 
-bValue = GetTagBitStateWait("gs_tag_bit",&dwState);
+bValue = GetTagBitStateWait("gs_tag_bit",&amp;dwState);
 
 //Create a string which includes the tag value
 
@@ -2363,7 +2363,7 @@ BOOL keyFound;
 
 //Get the tag value
 
-keyFound = GetTagValue(&varKey, &result, &error);
+keyFound = GetTagValue(&amp;varKey, &amp;result, &amp;error);
 
 if (keyFound)
 
@@ -2371,7 +2371,7 @@ if (keyFound)
 
   // print tag value
 
-printf ("Value of varKey: %d\r\n", &varKey);
+printf ("Value of varKey: %d\r\n", &amp;varKey);
 
   ...
 
@@ -2453,7 +2453,7 @@ BOOL keyFound;
 
 //Get the tag value
 
-keyFound = GetTagValueStateQC(&varKey, &result, &error,&dwState,&dwQC);
+keyFound = GetTagValueStateQC(&amp;varKey, &amp;result, &amp;error,&amp;dwState,&amp;dwQC);
 
 if (keyFound)
 
@@ -2543,7 +2543,7 @@ BOOL keyFound;
 
 //Get the tag value
 
-keyFound = GetTagValueStateQC(&varKey, &result, &error,&dwState,&dwQC);
+keyFound = GetTagValueStateQC(&amp;varKey, &amp;result, &amp;error,&amp;dwState,&amp;dwQC);
 
 if (keyFound)
 
@@ -2625,7 +2625,7 @@ BOOL keyFound;
 
 //Get the tag value
 
-keyFound = GetTagValueWait(&varKey, &result, &error);
+keyFound = GetTagValueWait(&amp;varKey, &amp;result, &amp;error);
 
 if (keyFound)
 
@@ -2635,7 +2635,7 @@ if (keyFound)
 
   // print tag value
 
-printf ("Value of varKey: %d\r\n", &varKey);
+printf ("Value of varKey: %d\r\n", &amp;varKey);
 
   ...
 
@@ -2681,7 +2681,7 @@ The following table shows the different GetTagWait functions for reading the tag
 
 ##### Syntax
 
-<Type><FunctionName><(Parameter)>;
+&lt;Type&gt;&lt;FunctionName&gt;&lt;(Parameter)&gt;;
 
 Example: BYTE GetTagByteWait(Tag_Name);
 
@@ -2892,7 +2892,7 @@ int i;
 
 //Count the installed languages
 
-language = InquireLanguage(&count);
+language = InquireLanguage(&amp;count);
 
 printf("##################### INQUIRE LANGUAGE ####################");
 
@@ -2902,7 +2902,7 @@ printf ( "\r\nCount Languages=%d\r\n", count );
 
 //print out which languages are installed
 
-for (i=1;i<=count; i++)
+for (i=1;i&lt;=count; i++)
 
 {
 
@@ -3045,7 +3045,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -3146,7 +3146,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -3365,7 +3365,7 @@ printmethod = GetTagChar("strPrintJobMethod")
 
 //Print job or show preview
 
-ReportJob(&PrintjobName, printmethod);
+ReportJob(&amp;PrintjobName, printmethod);
 
 //error handling
 
@@ -3451,7 +3451,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -3547,7 +3547,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -3665,7 +3665,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -3767,7 +3767,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "& bSaved & "New Value: " & bValue
+strResult="Old Value: "&amp; bSaved &amp; "New Value: " &amp; bValue
 
 myOutputField.Text=strResult
 
@@ -4736,7 +4736,7 @@ The following table shows the different SetTag functions for setting the tag val
 
 ##### Syntax
 
-BOOL<FunctionName><(Parameter)>;
+BOOL&lt;FunctionName&gt;&lt;(Parameter)&gt;;
 
 Example: BOOL SetTagBit(Tag_Name, value);
 
@@ -4905,7 +4905,7 @@ The following program code uses the SetTagMultiStateWait function to set the val
 3. Writing the values of the recently declared tags to the WinCC tags:
 
    - gs_tag_bit including the tag value "lValue1"
-   - gs_tag_SByte including the tag value in the address "&lValue2"
+   - gs_tag_SByte including the tag value in the address "&amp;lValue2"
    - etc.
 
 {
@@ -5026,11 +5026,11 @@ if(ok)
 
 // Get values and print
 
-GetTagMultiWait("%d%s%f", "Ernie_word", &dwVar1Value,
+GetTagMultiWait("%d%s%f", "Ernie_word", &amp;dwVar1Value,
 
-  "Ernie_char", &szVar2Value,
+  "Ernie_char", &amp;szVar2Value,
 
-  "Ernie_double", &dbVar3Value);
+  "Ernie_double", &amp;dbVar3Value);
 
 printf("Word %d, String %s, Double %f\r\n",
 
@@ -5073,11 +5073,11 @@ double dbVar3Value;
 
 BOOL ok;
 
-ok=GetTagMultiWait("%d%s%f", "Ernie_word", &dwVar1Value,
+ok=GetTagMultiWait("%d%s%f", "Ernie_word", &amp;dwVar1Value,
 
-  "Ernie_char", &szVar2Value,
+  "Ernie_char", &amp;szVar2Value,
 
-  "Ernie_double", &dbVar3Value);
+  "Ernie_double", &amp;dbVar3Value);
 
 printf("Word %d, String %s, Double %f\r\n",
 
@@ -5115,7 +5115,7 @@ The following table lists the different SetTagStateXXX functions for reading the
 
 ##### Syntax
 
-BOOL <FunctionName><(Parameter)>;
+BOOL &lt;FunctionName&gt;&lt;(Parameter)&gt;;
 
 Example: BOOL SetTagBitState(Tag_Name, value, lp_dwstate);
 
@@ -5159,7 +5159,7 @@ An error has occurred.
 
 ##### Example
 
-The following program code uses the SetTagBitState function to set the value of the gs_tag_bit tag to TRUE and saves the return value to the ok tag. ""&dwstate" is the address of the tag in which the tag status is stored.
+The following program code uses the SetTagBitState function to set the value of the gs_tag_bit tag to TRUE and saves the return value to the ok tag. ""&amp;dwstate" is the address of the tag in which the tag status is stored.
 
 The saved return value can be processed in the following code.
 
@@ -5177,7 +5177,7 @@ dwstate = 0xFFFFFFFF;
 
 //dwstate is the tag state
 
-ok = SetTagBitState("gs_tag_bit",TRUE,&dwstate);
+ok = SetTagBitState("gs_tag_bit",TRUE,&amp;dwstate);
 
 //error handling
 
@@ -5241,7 +5241,7 @@ The following table lists the different SetTagStateWait functions for setting th
 
 ##### Syntax
 
-BOOL<FunctionName><(Parameter)>;
+BOOL&lt;FunctionName&gt;&lt;(Parameter)&gt;;
 
 Example: BOOL SetTagBitStateWait(Tag_Name, value, lp_dwstate);
 
@@ -5281,7 +5281,7 @@ An error has occurred.
 
 ##### Example
 
-The following program code uses the SetTagBitStateWait function to set the value of the gs_tag_bit tag to TRUE and saves the return value to the ok tag. ""&dwstate" is the address of the tag in which the tag status is stored.
+The following program code uses the SetTagBitStateWait function to set the value of the gs_tag_bit tag to TRUE and saves the return value to the ok tag. ""&amp;dwstate" is the address of the tag in which the tag status is stored.
 
 The saved return value can be processed in the following code.
 
@@ -5299,7 +5299,7 @@ dwstate = 0xFFFFFFFF;
 
 //dwstate is the tag state
 
-ok = SetTagBitStateWait("gs_tag_bit",TRUE,&dwstate);
+ok = SetTagBitStateWait("gs_tag_bit",TRUE,&amp;dwstate);
 
 //error handling
 
@@ -5399,7 +5399,7 @@ CMN_ERROR error:
 
 BOOL keyFound;
 
-ok = SetTagValue(&varKey, &value, &error1);
+ok = SetTagValue(&amp;varKey, &amp;value, &amp;error1);
 
 if (keyFound)
 
@@ -5407,11 +5407,11 @@ if (keyFound)
 
   // succeeded, get the new value
 
-GetTagValue(&varKey, &result, &error);
+GetTagValue(&amp;varKey, &amp;result, &amp;error);
 
   // print tag value
 
-printf ("Value of varKey: %d\r\n", &varKey);
+printf ("Value of varKey: %d\r\n", &amp;varKey);
 
   ...
 
@@ -5497,7 +5497,7 @@ CMN_ERROR error:
 
 BOOL keyFound;
 
-ok = SetTagValueWait(&varKey, &value, &error1);
+ok = SetTagValueWait(&amp;varKey, &amp;value, &amp;error1);
 
 if (keyFound)
 
@@ -5505,11 +5505,11 @@ if (keyFound)
 
   // succeeded, get the new value
 
-GetTagValueWait(&varKey, &result, &error);
+GetTagValueWait(&amp;varKey, &amp;result, &amp;error);
 
   // print tag value
 
-printf ("Value of varKey: %d\r\n", &varKey);
+printf ("Value of varKey: %d\r\n", &amp;varKey);
 
   ...
 
@@ -5555,7 +5555,7 @@ The following table lists the different SetTagWait functions for setting the tag
 
 ##### Syntax
 
-BOOL <FunctionName><(Parameter)>;
+BOOL &lt;FunctionName&gt;&lt;(Parameter)&gt;;
 
 Example: BOOL SetTagBitWait(Tag_Name, value);
 
@@ -6309,7 +6309,7 @@ SYSTEMTIME st_1, st_2;
 
 DATE       d_1, d_2;   // wtypes.h.  DATE type. Visual Studio documnetation.
 
-GetSystemTime( &st_1 );
+GetSystemTime( &amp;st_1 );
 
 printf( "st_1.wYear = %d \r\n", st_1.wYear );
 
@@ -6325,7 +6325,7 @@ printf( "st_1.wSecond = %d \r\n", st_1.wSecond );
 
 printf( "st_1.wMilliseconds = %d \r\n", st_1.wMilliseconds );
 
-BRet = SystemTimeToDate( st_1, &d_1 );
+BRet = SystemTimeToDate( st_1, &amp;d_1 );
 
 printf( "DATE d = %ld \r\n \r\n", d_1 );
 
@@ -6333,7 +6333,7 @@ printf( "DATE d = %lf \r\n \r\n", d_1 );
 
 printf( "DATE d = %f \r\n \r\n", d_1 );
 
-BRet = DateToSystemTime( d_1, &st_2 );
+BRet = DateToSystemTime( d_1, &amp;st_2 );
 
 printf( "st_2.wYear = %d \r\n", st_2.wYear );
 
@@ -6526,7 +6526,7 @@ Handle of the recipe. This handle is generated using uaQueryArchive or uaQueryAr
 
 **`LPCSTR pszWhere`**
 
-This string contains the SQL selection expression. It defines which data records are to be deleted. The expression is equivalent to the SQL instruction "DELETE FROM <archive> WHERE pszWhere".
+This string contains the SQL selection expression. It defines which data records are to be deleted. The expression is equivalent to the SQL instruction "DELETE FROM &lt;archive&gt; WHERE pszWhere".
 
 `Warning!` If this string is empty, the entire recipe will be deleted.
 
@@ -8911,7 +8911,7 @@ Upon access to the value of the VARIANT a ".u." has to be inserted between the n
 
 `myVariant.u.lVal = 233;`
 
-A description of the data type VARIANT can be found in the associated documentation. The VARIANT dmValue must be initialized with VariantInit() before first use and enabled again with VariantClear(&dmValue) after use. For this reason, the structure DM_VAR_UPDATE_STRUCT must not be deleted with ZeroMemory() or memset().
+A description of the data type VARIANT can be found in the associated documentation. The VARIANT dmValue must be initialized with VariantInit() before first use and enabled again with VariantClear(&amp;dmValue) after use. For this reason, the structure DM_VAR_UPDATE_STRUCT must not be deleted with ZeroMemory() or memset().
 
 **dwState**
 
@@ -8959,7 +8959,7 @@ Upon access to the value of the VARIANT a ".u." has to be inserted between the n
 
 `myVariant.u.lVal = 233;`
 
-A description of the data type VARIANT can be found in the associated documentation. The VARIANT dmValue must be initialized with VariantInit() before first use and enabled again with VariantClear(&dmValue) after use. For this reason, the structure DM_VAR_UPDATE_STRUCTEX must not be deleted with ZeroMemory() or memset().
+A description of the data type VARIANT can be found in the associated documentation. The VARIANT dmValue must be initialized with VariantInit() before first use and enabled again with VariantClear(&amp;dmValue) after use. For this reason, the structure DM_VAR_UPDATE_STRUCTEX must not be deleted with ZeroMemory() or memset().
 
 **dwState**
 

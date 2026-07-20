@@ -76,9 +76,9 @@ It is not permitted to call the MODBUSPN instruction in OB1 and in a time-contro
 
 ##### Inserting the Modbus block
 
-Open the "Main [OB1]" block or a cyclic block. The MODBUSPN instruction is in the Task Card, palette and "Instructions > Communication > Other" folder. In it, open the "MODBUS TCP" and drag the MODBUSPN instruction to the OB block.
+Open the "Main [OB1]" block or a cyclic block. The MODBUSPN instruction is in the Task Card, palette and "Instructions &gt; Communication &gt; Other" folder. In it, open the "MODBUS TCP" and drag the MODBUSPN instruction to the OB block.
 
-Under "System blocks > Program resources", the lower-level instructions MOD_CLI (FB72) and MOD_SERV (FB73) are displayed in addition to MODBUSPN (FB70). These may not also be called in an OB. In addition, the internally called communication instructions TSEND (FB63), TRCV (FB64), TCON (FB65) and TDISCON (FB66) are displayed.
+Under "System blocks &gt; Program resources", the lower-level instructions MOD_CLI (FB72) and MOD_SERV (FB73) are displayed in addition to MODBUSPN (FB70). These may not also be called in an OB. In addition, the internally called communication instructions TSEND (FB63), TRCV (FB64), TCON (FB65) and TDISCON (FB66) are displayed.
 
 ##### Versions of T blocks
 
@@ -178,7 +178,7 @@ The values in the parameter data block must not be changed during runtime. After
 | --- | --- | --- |
 | block_length | This parameter defines the length of the connection parameters and may not be altered.  Fixed value:                             W#16#40 |  |
 | id | A new connection ID is assigned for each logical connection. This must be unique in the entire CPU. The ID is specified when the MODBUSPN instruction is called; it is used for internal calls of the T blocks (TCON, TSEND, TRCV and TDISCON).  Value range:                           W#16#1 to W#16#FFF |  |
-| connection_type | The connection type for establishing the connection is defined by the TCON instruction. The CPU determines which value has to be set.  TCP (compatibility mode):       B#16#01 for CPU 315 or 317 <= FW V2.3  TCP:                                         B#16#11 for CPU 315 or 317 >= FW V2.4, IM 151-8 PN/DP CPU, CPU314C, CPU319, CPU412, CPU414 and CPU416  This information can vary depending on the firmware. |  |
+| connection_type | The connection type for establishing the connection is defined by the TCON instruction. The CPU determines which value has to be set.  TCP (compatibility mode):       B#16#01 for CPU 315 or 317 &lt;= FW V2.3  TCP:                                         B#16#11 for CPU 315 or 317 &gt;= FW V2.4, IM 151-8 PN/DP CPU, CPU314C, CPU319, CPU412, CPU414 and CPU416  This information can vary depending on the firmware. |  |
 | active_est | This parameter refers to the type of connection establishment, active or passive. The Modbus client is responsible for the active connection establishment and the Modbus server for passive connection establishment.  Active connection establishment:      TRUE  Passive connection establishment:  FALSE |  |
 | local_device_id | The local_device_id defines the IE interface of the PN CPU in use. Different settings are required depending on the PN CPU type. |  |
 | IM 151-8 PN/DP CPU:    CPU 314C, 315 or 317:                              CPU 319:                                                           CPU 412, 414 or CPU 416 | B#16#1  B#16#2 B#16#3 B#16#5 |  |
@@ -192,7 +192,7 @@ The values in the parameter data block must not be changed during runtime. After
 | rem_subnet_id | This parameter is currently not in use and must be allocated with 0. |  |
 | rem_staddr | The IP address of the remote communication partner is entered in this byte array. No IP address is entered in case of an unspecified connection. The type of representation depends on the connection_type parameter. Example: IP address 192.168.0.1: |  |
 | For connection_type B#16#01: rem_staddr[1] = rem_staddr[2] = rem_staddr[3] =           rem_staddr[4] = rem_staddr[5-6]=  For connection_type B#16#11: rem_staddr[1] = rem_staddr[2] = rem_staddr[3] = rem_staddr[4] =             rem_staddr[5-6]= | B#16#01 (1) B#16#00 (0) B#16#A8 (168) B#16#C0 (192) B#16#00 (reserved)    B#16#C0 (192) B#16#A8 (168) B#16#00 (0) B#16#01 (1) B#16#00 (reserved) |  |
-| rem_tsap_id | You use this parameter to set the remote port number. The type of representation differs depending on the connection_type parameter. The CPU determines the value range. The information is given at rem_tsap_id_len > 0. |  |
+| rem_tsap_id | You use this parameter to set the remote port number. The type of representation differs depending on the connection_type parameter. The CPU determines the value range. The information is given at rem_tsap_id_len &gt; 0. |  |
 | For connection_type B#16#01: rem_tsap_id[1]               rem_tsap_id[2]              rem_tsap_id[3-16]        For connection_type B#16#11: rem_tsap_id[1] rem_tsap_id[2]             rem_tsap_id[3-16] | low byte of the port number in hex format low byte of the port number in hex format B#16#00    high byte of the port number in hex format low byte of the port number in hex format B#16#00 |  |
 | next_staddr | This parameter defines the rack and slot number of the CP in use. This parameter must be set to 0 when you use the integrated PN interface of the CPU. next_staddr[1-6]           B#16#00 |  |
 | spare | This parameter is not in use and must have the default value 0. |  |
@@ -359,7 +359,7 @@ Proceed as follows to enter the registration key REG_KEY:
   REG_KEY in DB
 - Copy the transmitted 17-digit registration key using copy/paste to the "Start value" column.
 - In the cyclic OB, enter the data block number or name of the license DB at the parameter REG_KEY_DB of the MODBUSPNinstruction.
-- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -> RUN is not necessary.
+- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -&gt; RUN is not necessary.
 
 The Modbus/TCP communication using the MODBUSPN instruction is now licensed for this CPU, the output bit LICENSED is TRUE.
 
@@ -482,8 +482,8 @@ The monitoring time RECV_TIMEOUT monitors the receipt of data from the coupling 
 
 The minimum value is 20 ms.
 
-If in the mode "**S7 is** **client**" the RECV_TIMEOUT is set to < 20 ms, a corresponding error message appears and the activated job is rejected.  
-If in the mode "**S7 is** **server**" the RECV_TIMEOUT is set to < 20 ms, the default value of 1.2 s is used. The RECV_TIMEOUT monitors the runtime of the TCP stream. The break in between individual client requests is not taken into consideration.
+If in the mode "**S7 is** **client**" the RECV_TIMEOUT is set to &lt; 20 ms, a corresponding error message appears and the activated job is rejected.  
+If in the mode "**S7 is** **server**" the RECV_TIMEOUT is set to &lt; 20 ms, the default value of 1.2 s is used. The RECV_TIMEOUT monitors the runtime of the TCP stream. The break in between individual client requests is not taken into consideration.
 
 **CONN_TIMEOUT**
 
@@ -493,7 +493,7 @@ The minimum value is 100 ms.
 
 In the mode "**S7 is** **client**", when connect_at_startup = TRUE, a too low configured CONN_TIMEOUT is set to the default value of 5 s is set. In cyclic mode, if a CONN_TIMEOUT is too small, an error message is output and the activated job is rejected.
 
-If in the operating mode "**S7 is** **server**" the CONN_TIMEOUT is set to < 100 ms, the default value of 5 s is used.
+If in the operating mode "**S7 is** **server**" the CONN_TIMEOUT is set to &lt; 100 ms, the default value of 5 s is used.
 
 ---
 
@@ -550,12 +550,12 @@ The different data types are directly related to the used function codes.
 | Coils | 1 | reading | any | irrelevant | 1 |
 | Coils | 1 | writing | 1 | TRUE | 5 |
 | Coils | 1 | writing | 1 | FALSE | 15 |
-| Coils | 1 | writing | > 1 | irrelevant | 15 |
+| Coils | 1 | writing | &gt; 1 | irrelevant | 15 |
 | Inputs | 2 | reading | any | irrelevant | 2 |
 | Holding Register | 3 | reading | any | irrelevant | 3 |
 | Holding Register | 3 | writing | 1 | TRUE | 6 |
 | Holding Register | 3 | writing | 1 | FALSE | 16 |
-| Holding Register | 3 | writing | > 1 | irrelevant | 16 |
+| Holding Register | 3 | writing | &gt; 1 | irrelevant | 16 |
 | Input Register | 4 | reading | any | irrelevant | 4 |
 
 **START_ADDRESS**
@@ -638,7 +638,7 @@ Below is a listing of the error messages for specific instructions.
 | A004 | Only S7 is client:   An invalid combination of DATA_TYPE and WRITE_READ was specified. | Correct the call parameters. Only data types 1 and 3 can be written. |
 | A005 | S7 is client: An invalid value was specified at the LENGTH parameter.  S7 is server: The number of registers/bits is invalid in the request message. The S7 responds with an exception message frame.  Value ranges:  Coils/Inputs reading: 1 to 2000 Coils writing: 1 to 1968 Register reading: 1 to 125 Holding Register writing: 1 to 123 | S7 is client: Correct the LENGTH parameter.  S7 is server: Change the number in the client request message. |
 | A006 | The area specified with DATA_TYPE, START_ADDRESS and LENGTH does not exist in data_type from data_area_1 to data_area_8.  S7 is server: The S7 responds with an exception message frame. | S7 is client: Correct the combination DATA_TYPE, START_ADDRESS and LENGTH. S7 is server: Change the client request or correct the parameter assignment in the parameter DB. |
-| A007 | S7 is client: An invalid monitoring time is configured at RECV_TIMEOUT or CONN_TIMEOUT. For RECV_TIMEOUT a value >= 20 ms must be entered, for CONN_TIMEOUT >= 100 ms. | Correct the parameter assignment. |
+| A007 | S7 is client: An invalid monitoring time is configured at RECV_TIMEOUT or CONN_TIMEOUT. For RECV_TIMEOUT a value &gt;= 20 ms must be entered, for CONN_TIMEOUT &gt;= 100 ms. | Correct the parameter assignment. |
 | A009 | S7 is client: The received Transaction Identifier TI does not match the one sent.  The communication connection is terminated. | Use a message log to check the data of the link partner. |
 | A00A | S7 is client: The received Unit Identifier UNIT does not match the one sent. | Use a message log to check the data of the link partner. |
 | A00B | S7 is client: The received function code does not match the one sent.  S7 is server: An invalid function code was received. The S7 responds with an exception message frame. | S7 is client:  Use a message log to check the data of the link partner.  S7 is server:  Change the client request. The MODBUSPN instruction processes the function codes 1, 2, 3, 4, 5, 6, 15 and 16. |
@@ -655,7 +655,7 @@ Below is a listing of the error messages for specific instructions.
 | A016 | The configured areas data_area_1 and data_area_6 overlap. |  |
 | A017 | The configured areas data_area_1 and data_area_7 overlap. |  |
 | A018 | The configured areas data_area_1 and data_area_8 overlap. |  |
-| A019 | One of the db parameters has been set to 0 even though the associated data_type is configured with > 0. | Correct the parameter assignment in the db parameter to > 0. |
+| A019 | One of the db parameters has been set to 0 even though the associated data_type is configured with &gt; 0. | Correct the parameter assignment in the db parameter to &gt; 0. |
 | A01A | Incorrect length in the header: 1 to 253 bytes are permitted.  The communication connection is terminated. | Use a message log to check the data of the link partner. |
 | A01B | S7 is server and function code 5:  An invalid status was received for coil.  The S7 responds with an exception message frame. | Use a message log to check the data of the link partner. |
 | A023 | The configured areas data_area_2 and data_area_3 overlap. | Correct the parameter assignment in the parameter DB.  The data areas may not have a shared register address area. |
@@ -706,17 +706,17 @@ Below is a listing of the error messages for specific instructions.
 
 | STATUS* (W#16#) | Description | Solution |
 | --- | --- | --- |
-| 7xxx | Consult the online help for detailed information. | See online help (TIA Portal -> Select block -> F1 key) |
+| 7xxx | Consult the online help for detailed information. | See online help (TIA Portal -&gt; Select block -&gt; F1 key) |
 | 80B1 | STATUS_FUNC = 'TEST_DB': The DB does not exist on the CPU. | All data blocks specified at db must be created and transferred to the CPU. |
 | 80B2 | STATUS_FUNC = 'TEST_DB': DB UNLINKED | Do not generate DB as UNLINKED. |
-| 8xxx | Consult the online help for detailed information. | See online help (TIA Portal -> Select block -> F1 key) |
+| 8xxx | Consult the online help for detailed information. | See online help (TIA Portal -&gt; Select block -&gt; F1 key) |
 
 **Parameter STATUS for STATUS_FUNC = 'TCON', 'TSEND', 'TRCV' or 'TDISCON'**
 
 | STATUS* (W#16#) | Description | Solution |
 | --- | --- | --- |
-| 7xxx | See online help. | See online help (TIA Portal -> Select block -> F1 key) |
-| 8xxx | See online help. | See online help (TIA Portal -> Select block -> F1 key) |
+| 7xxx | See online help. | See online help (TIA Portal -&gt; Select block -&gt; F1 key) |
+| 8xxx | See online help. | See online help (TIA Portal -&gt; Select block -&gt; F1 key) |
 
 ---
 
@@ -783,10 +783,10 @@ The same instance data block must be used in both. It is not permitted to call t
 
 ##### Inserting the Modbus block
 
-Open the "COMPLETE RESTART [OB100]" block. If this block does not exist in the program blocks, insert it with "Insert new block > Organization block > Startup > COMPLETE RESTART [OB 100]".  
-The MODBUSPN instruction exists in the Task Card, palette and "Instructions > Communication > Other" folder. In it, open the "MODBUS TCP" folder and drag the MODBUSPN instruction in the OB100 block.
+Open the "COMPLETE RESTART [OB100]" block. If this block does not exist in the program blocks, insert it with "Insert new block &gt; Organization block &gt; Startup &gt; COMPLETE RESTART [OB 100]".  
+The MODBUSPN instruction exists in the Task Card, palette and "Instructions &gt; Communication &gt; Other" folder. In it, open the "MODBUS TCP" folder and drag the MODBUSPN instruction in the OB100 block.
 
-Under "System blocks > Program resources", the lower-level instructions MOD_CLI (FB72), MOD_SERV (FB73) and TCP_COMM (FB71) are displayed in addition to MODBUSPN (FB70). These may not also be called in an OB. In addition, the internally called communication instructions TSEND (FB63), TRCV (FB64), TCON (FB65) and TDISCON (FB66) are displayed.
+Under "System blocks &gt; Program resources", the lower-level instructions MOD_CLI (FB72), MOD_SERV (FB73) and TCP_COMM (FB71) are displayed in addition to MODBUSPN (FB70). These may not also be called in an OB. In addition, the internally called communication instructions TSEND (FB63), TRCV (FB64), TCON (FB65) and TDISCON (FB66) are displayed.
 
 Open the "Main [OB1]" block or a cyclic block and drag the MODBUSPN [FB70] instruction in the OB. Select the MODBUSPN_DB data block from the OB100 call as instance data block. Do not create a new instance data block.
 
@@ -875,7 +875,7 @@ You have two options for configuring the connection and Modbus parameters.
 
 **Changing the values**
 
-You may not change the values in the parameter data block during runtime. The CPU must be restarted with STOP -> RUN after the parameters have been changed.
+You may not change the values in the parameter data block during runtime. The CPU must be restarted with STOP -&gt; RUN after the parameters have been changed.
 
 ##### "Connection settings" connection parameters
 
@@ -883,7 +883,7 @@ You may not change the values in the parameter data block during runtime. The CP
 | --- | --- | --- |
 | block_length | This parameter defines the length of the connection parameters and may not be altered.  Fixed value:                             W#16#40 |  |
 | id | A new connection ID is assigned for each logical connection. It must be unique throughout the entire parameter data block. The ID is specified when the MODBUSPN instruction is called; it is used for internal calls of the T blocks (TCON, TSEND, TRCV and TDISCON).  Value range:                           W#16#1 to W#16#FFF |  |
-| connection_type | The connection type for establishing the connection is defined by the TCON instruction. The CPU determines which value has to be set.  TCP (compatibility mode):       B#16#01 forr CPU 315 or 317 <= FW V2.3  TCP:                                         B#16#11 for CPU 315 or 317 >= FW V2.4, IM 151-8 PN/DP CPU, CPU314C, CPU319, CPU412, CPU414, CPU416 and WinAC RTX  This information can vary depending on the firmware. |  |
+| connection_type | The connection type for establishing the connection is defined by the TCON instruction. The CPU determines which value has to be set.  TCP (compatibility mode):       B#16#01 forr CPU 315 or 317 &lt;= FW V2.3  TCP:                                         B#16#11 for CPU 315 or 317 &gt;= FW V2.4, IM 151-8 PN/DP CPU, CPU314C, CPU319, CPU412, CPU414, CPU416 and WinAC RTX  This information can vary depending on the firmware. |  |
 | active_est | This parameter refers to the type of connection establishment, active or passive. The Modbus client is responsible for the active connection establishment and the Modbus server for passive connection establishment.  Active connection establishment:      TRUE  Passive connection establishment:   FALSE |  |
 | local_device_id | The local_device_id defines the IE interface of the PN CPU in use. Different settings are required depending on the PN CPU type. |  |
 | IM 151-8 PN/DP CPU, WinAC RTX, IF 1:    CPU 314C, 315 or 317:                              CPU 319:                                                           CPU 412, 414 or CPU 416                       WinAC RTX, IF 2                                            WinAC RTX, IF 3                                            WinAC RTX, IF 4 | B#16#1  B#16#2 B#16#3 B#16#5 B#16#6 B#16#B B#16#F |  |
@@ -1062,7 +1062,7 @@ Proceed as follows to enter the registration key REG_KEY:
   REG_KEY in DB
 - Copy the transmitted 17-digit registration key using copy/paste to the "Start value" column.
 - Enter the value "License_DB.REG_KEY" in the cyclic OB at the REG_KEY parameter of the MODBUSPN instruction.
-- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -> RUN is not necessary.
+- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -&gt; RUN is not necessary.
 
 The Modbus/TCP communication using the MODBUSPN instruction is now licensed for this CPU, the output bit LICENSED is TRUE.
 
@@ -1177,8 +1177,8 @@ The monitoring time RECV_TIME monitors the data received from the link partner. 
 
 The minimum value is 20 ms.
 
-If the RECV_TIME is set to < 20 ms in "**S7 is** **client**" operating mode, a corresponding error message is displayed and the active job is rejected.  
-If the RECV_TIME is set to < 20 ms in "**S7 is** **server**" operating mode, the default value 1.2 s is used. The RECV_TIME monitors the runtime of the TCP stream. The break in between individual client requests is not taken into consideration.
+If the RECV_TIME is set to &lt; 20 ms in "**S7 is** **client**" operating mode, a corresponding error message is displayed and the active job is rejected.  
+If the RECV_TIME is set to &lt; 20 ms in "**S7 is** **server**" operating mode, the default value 1.2 s is used. The RECV_TIME monitors the runtime of the TCP stream. The break in between individual client requests is not taken into consideration.
 
 **CONN_TIME**
 
@@ -1188,7 +1188,7 @@ The minimum value is 100 ms.
 
 In "**S7 is** **client**" operating mode, a CONN_TIME that is too short is set to the default value of 5 s for connect_at_startup = TRUE. An error message is output and the activated job rejected in cyclic operationif the CONN_TIME is too short.
 
-The default value of 5 s is also used if the CONN_TIME was set to < 100 ms in "**S7 is** **server**" operating mode.
+The default value of 5 s is also used if the CONN_TIME was set to &lt; 100 ms in "**S7 is** **server**" operating mode.
 
 ---
 
@@ -1245,12 +1245,12 @@ The different data types are directly related to the used function codes.
 | Coils | 1 | reading | any | irrelevant | 1 |
 | Coils | 1 | writing | 1 | TRUE | 5 |
 | Coils | 1 | writing | 1 | FALSE | 15 |
-| Coils | 1 | writing | > 1 | irrelevant | 15 |
+| Coils | 1 | writing | &gt; 1 | irrelevant | 15 |
 | Inputs | 2 | reading | any | irrelevant | 2 |
 | Holding Register | 3 | reading | any | irrelevant | 3 |
 | Holding Register | 3 | writing | 1 | TRUE | 6 |
 | Holding Register | 3 | writing | 1 | FALSE | 16 |
-| Holding Register | 3 | writing | > 1 | irrelevant | 16 |
+| Holding Register | 3 | writing | &gt; 1 | irrelevant | 16 |
 | Input Register | 4 | reading | any | irrelevant | 4 |
 
 **START_ADDRESS**
@@ -1345,7 +1345,7 @@ Below is a listing of the error messages for specific instructions.
 | A004 | Only S7 is client:   An invalid combination of DATA_TYPE and WRITE_READ was specified. | Correct the call parameters. Only data types 1 and 3 can be written. |
 | A005 | S7 is client: An invalid value was specified at the LENGTH parameter.  S7 is server: The number of registers/bits is invalid in the request message. The S7 responds with an exception message frame.  Value ranges:  Coils/Inputs reading: 1 to 2000 Coils writing: 1 to 1968 Register reading: 1 to 125 Holding Register writing: 1 to 123 | S7 is client: Correct the LENGTH parameter.  S7 is server: Change the number in the client request message. |
 | A006 | The area specified with DATA_TYPE, START_ADDRESS and LENGTH does not exist in data_type from data_area_1 to data_area_8.  S7 is server: The S7 responds with an exception message frame. | S7 is client: Correct the combination DATA_TYPE, START_ADDRESS and LENGTH. S7 is server: Change the client request or correct the parameter assignment in the parameter DB. |
-| A007 | S7 is client: An invalid monitoring time was configured at RECV_TIME or CONN_TIME. A value >= 20 ms must be entered for RECV_TIME and a value >= 100 ms for CONN_TIME. | Correct the parameter assignment. |
+| A007 | S7 is client: An invalid monitoring time was configured at RECV_TIME or CONN_TIME. A value &gt;= 20 ms must be entered for RECV_TIME and a value &gt;= 100 ms for CONN_TIME. | Correct the parameter assignment. |
 | A009 | S7 is client: The received Transaction Identifier TI does not match the one sent.  The communication connection is terminated. | Use a message log to check the data of the link partner. |
 | A00A | S7 is client: The received Unit Identifier UNIT does not match the one sent. | Use a message log to check the data of the link partner. |
 | A00B | S7 is client: The received function code does not match the one sent.  S7 is server: An invalid function code was received. The S7 responds with an exception message frame. | S7 is client:  Use a message log to check the data of the link partner.  S7 is server:  Change the client request. The MODBUSPN instruction processes the function codes 1, 2, 3, 4, 5, 6, 15 and 16. |
@@ -1362,7 +1362,7 @@ Below is a listing of the error messages for specific instructions.
 | A016 | The configured areas data_area_1 and data_area_6 overlap. |  |
 | A017 | The configured areas data_area_1 and data_area_7 overlap. |  |
 | A018 | The configured areas data_area_1 and data_area_8 overlap. |  |
-| A019 | One of the db parameters has been set to 0 even though the associated data_type is configured with > 0. | Correct the parameter assignment in the db parameter to > 0. |
+| A019 | One of the db parameters has been set to 0 even though the associated data_type is configured with &gt; 0. | Correct the parameter assignment in the db parameter to &gt; 0. |
 | A01A | Incorrect length in the header: 1 to 253 bytes are permitted.  The communication connection is terminated. | Use a message log to check the data of the link partner. |
 | A01B | S7 is server and function code 5:  An invalid status was received for coil.  The S7 responds with an exception message frame. | Use a message log to check the data of the link partner. |
 | A023 | The configured areas data_area_2 and data_area_3 overlap. | Correct the parameter assignment in the parameter DB.  The data areas may not have a shared register address area. |
@@ -1411,10 +1411,10 @@ Below is a listing of the error messages for specific instructions.
 
 | STATUS* (W#16#) | Description | Solution |
 | --- | --- | --- |
-| 7xxx | Consult the online help for detailed information. | See online help (TIA Portal -> Select block -> F1 key) |
+| 7xxx | Consult the online help for detailed information. | See online help (TIA Portal -&gt; Select block -&gt; F1 key) |
 | 80B1 | STATUS_FUNC = 'TEST_DB': The DB does not exist on the CPU. | All data blocks specified at db must be created and transferred to the CPU. |
 | 80B2 | STATUS_FUNC = 'TEST_DB': DB UNLINKED | Do not generate DB as UNLINKED. |
-| 8xxx | Consult the online help for detailed information. | See online help (TIA Portal -> Select block -> F1 key) |
+| 8xxx | Consult the online help for detailed information. | See online help (TIA Portal -&gt; Select block -&gt; F1 key) |
 
 **STATUS_CONN parameter with STATUS_FUNC = 'MODBUSPN'**
 
@@ -1427,8 +1427,8 @@ Below is a listing of the error messages for specific instructions.
 
 | STATUS* (W#16#) | Description | Solution |
 | --- | --- | --- |
-| 7xxx | See online help. | See online help (TIA Portal -> Select block -> F1 key) |
-| 8xxx | See online help. | See online help (TIA Portal -> Select block -> F1 key) |
+| 7xxx | See online help. | See online help (TIA Portal -&gt; Select block -&gt; F1 key) |
+| 8xxx | See online help. | See online help (TIA Portal -&gt; Select block -&gt; F1 key) |
 
 ---
 

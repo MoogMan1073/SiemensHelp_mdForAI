@@ -214,7 +214,7 @@ The following table shows the parameters of the "GET" instruction:
 | REQ | Input | BOOL | I, Q, M, D, L or constant | Control parameter request, activates the data exchange on a positive edge. |
 | ID | Input | WORD | I, Q, M, D, L or constant | Addressing parameters for specifying the connection to the partner CPU. |
 | NDR | Output | BOOL | I, Q, M, D, L | Status parameter NDR:   - 0: Job not yet started or still running. - 1: Job successfully completed. |
-| ERROR | Output | BOOL | I, Q, M, D, L | Status parameters ERROR and STATUS, error code:  - ERROR=0   STATUS has the value:   - 0000H: Neither warning nor error   - <> 0000H: Warning, STATUS supplies detailed information. - ERROR=1   An error has occurred. STATUS supplies detailed information on the type of error. |
+| ERROR | Output | BOOL | I, Q, M, D, L | Status parameters ERROR and STATUS, error code:  - ERROR=0   STATUS has the value:   - 0000H: Neither warning nor error   - &lt;&gt; 0000H: Warning, STATUS supplies detailed information. - ERROR=1   An error has occurred. STATUS supplies detailed information on the type of error. |
 | STATUS | Output | WORD | I, Q, M, D, L |  |
 | ADDR_1 | InOut | REMOTE | I, Q, M, D | Pointers to the areas on the partner CPU that are to be read.  When the REMOTE pointer accesses a DB, the DB must always be specified.   Example: P#DB10.DBX5.0 Byte 10. |
 | ADDR_2 | InOut | REMOTE |  |  |
@@ -256,7 +256,7 @@ In the following example use an S7 connection and in CPU 1 read out a data recor
 **Requirement**
 
 - Two CPUs of the S7-1500 series are available and connected to each other over PROFINET. The connection is not yet configured.
-- A low protection level under “<CPU> > Properties > Protection“ ensures that read and write access is permitted for the CPUs.
+- A low protection level under “&lt;CPU&gt; &gt; Properties &gt; Protection“ ensures that read and write access is permitted for the CPUs.
 - Access with the PUT/GET instruction is permitted.
 
   ![Example](images/81320890123_DV_resource.Stream@PNG-de-DE.png)
@@ -285,7 +285,7 @@ Network 3: Save the success status of GET as follows.
 
 **Configuration of GET**
 
-To interconnect the input parameter ID, open the wizard of the "GET" instruction with “Properties > Configuration“.
+To interconnect the input parameter ID, open the wizard of the "GET" instruction with “Properties &gt; Configuration“.
 
 Make the following settings for the connection:
 
@@ -300,7 +300,7 @@ Create one tag in a global data block for storing the data record to be sent.
 
 ![Example](images/81320984587_DV_resource.Stream@PNG-de-DE.png)
 
-In “Properties > Attributes“ of the data block disable the optimized block access.
+In “Properties &gt; Attributes“ of the data block disable the optimized block access.
 
 ![Example](images/81324071819_DV_resource.Stream@PNG-de-DE.png)
 
@@ -356,13 +356,13 @@ The following table shows the parameters of the "PUT" instruction:
 | REQ | Input | BOOL | I, Q, M, D, L or constant | Control parameter request, activates the data exchange on a positive edge. |
 | ID | Input | WORD | I, Q, M, D, L or constant | Addressing parameters for specifying the connection to the partner CPU. |
 | DONE | Output | BOOL | I, Q, M, D, L | Status parameter DONE:   - 0: Job not yet started or still executing - 1: Job executed without errors. |
-| ERROR | Output | BOOL | I, Q, M, D, L | Status parameters ERROR and STATUS, error code:  - ERROR=0   STATUS has the value:   - 0000H: Neither warning nor error   - <> 0000H: Warning, STATUS supplies detailed information. - ERROR=1   An error has occurred, STATUS supplies detailed information on the type of error. |
+| ERROR | Output | BOOL | I, Q, M, D, L | Status parameters ERROR and STATUS, error code:  - ERROR=0   STATUS has the value:   - 0000H: Neither warning nor error   - &lt;&gt; 0000H: Warning, STATUS supplies detailed information. - ERROR=1   An error has occurred, STATUS supplies detailed information on the type of error. |
 | STATUS | Output | WORD | I, Q, M, D, L |  |
-| ADDR_1 | InOut | REMOTE | I, Q, M, D | Pointers to the areas on the partner CPU to which the data will be written.  When the REMOTE pointer accesses a DB, the DB must always be specified.   Example: P#DB10.DBX5.0 Byte 10.  When transferring data structures (e.g., Struct, Array) the following data type must be used at the ADDR_i parameters.  - For S7-1200 CPUs of all firmware versions and for S7-1500 CPUs as of firmware version V2.8.2: BYTE, CHAR, WORD, INT, DWORD, DINT or REAL - For S7-1500-CPUs with firmware version < V2.8.2: CHAR   Note: As of firmware version V2.8.2, you can therefore transfer programs that contain the "PUT" instruction from S7-300, S7-400 and S7-1200 CPUs to S7-1500 CPUs. |
+| ADDR_1 | InOut | REMOTE | I, Q, M, D | Pointers to the areas on the partner CPU to which the data will be written.  When the REMOTE pointer accesses a DB, the DB must always be specified.   Example: P#DB10.DBX5.0 Byte 10.  When transferring data structures (e.g., Struct, Array) the following data type must be used at the ADDR_i parameters.  - For S7-1200 CPUs of all firmware versions and for S7-1500 CPUs as of firmware version V2.8.2: BYTE, CHAR, WORD, INT, DWORD, DINT or REAL - For S7-1500-CPUs with firmware version &lt; V2.8.2: CHAR   Note: As of firmware version V2.8.2, you can therefore transfer programs that contain the "PUT" instruction from S7-300, S7-400 and S7-1200 CPUs to S7-1500 CPUs. |
 | ADDR_2 | InOut | REMOTE |  |  |
 | ADDR_3 | InOut | REMOTE |  |  |
 | ADDR_4 | InOut | REMOTE |  |  |
-| SD_1 | InOut | VARIANT | I, Q, M, D, L | Pointers to the areas on the local CPU which contain the data to be sent.  Only the BOOL data types are permitted (not permitted: Bit array), BYTE, CHAR, WORD, INT, DWORD, DINT, REAL.  The following applies to S7-1500 CPUs with firmware version < V2.8.2: When transferring data structures (e.g., Struct, Array) the data type CHAR must be used at the SD_i parameters.  Note: As of firmware version V2.8.2, you can therefore transfer programs that contain the "PUT" instruction from S7-300, S7-400 and S7-1200 CPUs to S7-1500 CPUs. |
+| SD_1 | InOut | VARIANT | I, Q, M, D, L | Pointers to the areas on the local CPU which contain the data to be sent.  Only the BOOL data types are permitted (not permitted: Bit array), BYTE, CHAR, WORD, INT, DWORD, DINT, REAL.  The following applies to S7-1500 CPUs with firmware version &lt; V2.8.2: When transferring data structures (e.g., Struct, Array) the data type CHAR must be used at the SD_i parameters.  Note: As of firmware version V2.8.2, you can therefore transfer programs that contain the "PUT" instruction from S7-300, S7-400 and S7-1200 CPUs to S7-1500 CPUs. |
 | SD_2 | InOut | VARIANT |  |  |
 | SD_3 | InOut | VARIANT |  |  |
 | SD_4 | InOut | VARIANT |  |  |
@@ -400,7 +400,7 @@ In the following example use an S7 connection and transfer a data record from CP
 **Requirement**
 
 - Two CPUs of the S7-1500 series are available and connected to each other over PROFINET. The connection is not yet configured.
-- A low protection level under "<CPU> > Properties > Protection" ensures that read and write access is permitted for the CPUs.
+- A low protection level under "&lt;CPU&gt; &gt; Properties &gt; Protection" ensures that read and write access is permitted for the CPUs.
 - Access with the PUT/GET instruction is permitted.
 
   ![Example](images/81320890123_DV_resource.Stream@PNG-de-DE.png)
@@ -429,7 +429,7 @@ Network 3: Save the success status of PUT as follows.
 
 **Configuration of PUT**
 
-To interconnect the input parameter ID, open the wizard of the "PUT" instruction with "Properties > Configuration".
+To interconnect the input parameter ID, open the wizard of the "PUT" instruction with "Properties &gt; Configuration".
 
 Make the following settings for the connection:
 
@@ -444,7 +444,7 @@ Create one tag in a global data block for storing the data record to be received
 
 ![Example](images/81325963531_DV_resource.Stream@PNG-de-DE.png)
 
-In "Properties > Attributes" of the data block disable the optimized block access.
+In "Properties &gt; Attributes" of the data block disable the optimized block access.
 
 ![Example](images/81324071819_DV_resource.Stream@PNG-de-DE.png)
 
@@ -476,10 +476,10 @@ This section contains information on the following topics:
 
 - [USEND: Send data uncoordinated (S7-1500)](#usend-send-data-uncoordinated-s7-1500)
 - [URCV: Receive data uncoordinated (S7-1500)](#urcv-receive-data-uncoordinated-s7-1500)
-- [Program example for USEND & URCV (S7-1200, S7-1500)](#program-example-for-usend-urcv-s7-1200-s7-1500)
+- [Program example for USEND &amp; URCV (S7-1200, S7-1500)](#program-example-for-usend-urcv-s7-1200-s7-1500)
 - [BSEND: Send data in segments (S7-1500)](#bsend-send-data-in-segments-s7-1500)
 - [BRCV: Receive data in segments (S7-1500)](#brcv-receive-data-in-segments-s7-1500)
-- [Program example for BSEND & BRCV (S7-1200, S7-1500)](#program-example-for-bsend-brcv-s7-1200-s7-1500)
+- [Program example for BSEND &amp; BRCV (S7-1200, S7-1500)](#program-example-for-bsend-brcv-s7-1200-s7-1500)
 
 ### USEND: Send data uncoordinated (S7-1500)
 
@@ -522,7 +522,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 #### Example
 
-You can find the example here: [Program example for USEND & URCV](#program-example-for-usend-urcv-s7-1200-s7-1500).
+You can find the example here: [Program example for USEND &amp; URCV](#program-example-for-usend-urcv-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -577,7 +577,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 #### Example
 
-You can find the example here: [Program example for USEND & URCV](#program-example-for-usend-urcv-s7-1200-s7-1500).
+You can find the example here: [Program example for USEND &amp; URCV](#program-example-for-usend-urcv-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -598,7 +598,7 @@ In the following example you create an S7 connection between two CPUs of the S7-
 - Two CPUs of the S7-1500 series are available and connected to each other over PROFINET. An S7 connection is configured.
 
   ![Requirement](images/94472702091_DV_resource.Stream@PNG-de-DE.png)
-- A low protection level under "<CPU> > Properties > Protection" ensures that read and write access is permitted for the CPUs.
+- A low protection level under "&lt;CPU&gt; &gt; Properties &gt; Protection" ensures that read and write access is permitted for the CPUs.
 
 #### Program of CPU 1
 
@@ -752,7 +752,7 @@ The following table contains all specific error information for "BSEND" that can
 
 #### Example
 
-You can find the example here: [Program example for BSEND & BRCV](#program-example-for-bsend-brcv-s7-1200-s7-1500).
+You can find the example here: [Program example for BSEND &amp; BRCV](#program-example-for-bsend-brcv-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -813,7 +813,7 @@ The following table contains all specific error information for "BRCV" that can 
 
 #### Example
 
-You can find the example here: [Program example for BSEND & BRCV](#program-example-for-bsend-brcv-s7-1200-s7-1500).
+You can find the example here: [Program example for BSEND &amp; BRCV](#program-example-for-bsend-brcv-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -834,7 +834,7 @@ In the following example you create an S7 connection between two CPUs of the S7-
 - Two CPUs of the S7-1500 series are available and connected to each other over PROFINET. An S7 connection is configured.
 
   ![Requirement](images/94472878219_DV_resource.Stream@PNG-de-DE.png)
-- A low protection level under "<CPU> > Properties > Protection" ensures that read and write access is permitted for the CPUs.
+- A low protection level under "&lt;CPU&gt; &gt; Properties &gt; Protection" ensures that read and write access is permitted for the CPUs.
 
 #### Program of CPU 1
 

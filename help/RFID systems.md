@@ -462,11 +462,11 @@ Parameters of the parameter group "Module parameters" of the submodules
 | Transmission speed | 19.2 kBd  57.6 kBd  115.2 kBd  921.6 kBd | 115.2 kBd / 921.6 kBd | Selection depends on the Ident system being used. With this parameter, you set the transmission speed between the communications module and reader.   When an optical reader is connected: The transmission speed selected here must match the transmission speed selected for the reader. |
 | Diagnostics messages | None  Hard errors  Hard/soft errors | None | With this parameter, you determine the extent to which the reader-related diagnostic interrupt messages are to be reported.  - None:   No further interrupts are generated. - Hard errors:   Critical hardware errors are reported by the S7 diagnostics. - Hard/soft errors:   Critical hardware errors and errors that occur during command processing are reported by the S7 diagnostics. |
 
-**Parameters of the parameter group "Module parameters > Frame" of the submodules (connected readers)**
+**Parameters of the parameter group "Module parameters &gt; Frame" of the submodules (connected readers)**
 
 This parameter group is displayed when you have selected the "Freeport" submodule. In this parameter group, you can configure all parameters specific to the "Freeport".
 
-Parameters of the parameter group "Module parameters > Message frame" of the submodules
+Parameters of the parameter group "Module parameters &gt; Message frame" of the submodules
 
 | Parameter | Parameter value | Default value | Description |
 | --- | --- | --- | --- |
@@ -558,7 +558,7 @@ Depending on the Ident device that is connected to the respective interface (X21
 
 With the "Communication" submodule, configurations can be transferred from or to the communications module, and a status query can be performed via the communications module.
 
-Parameters of the parameter group "Module parameters > General parameters" of the submodules
+Parameters of the parameter group "Module parameters &gt; General parameters" of the submodules
 
 | Parameter | Parameter value | Default value | Description |
 | --- | --- | --- | --- |
@@ -569,11 +569,11 @@ Parameters of the parameter group "Module parameters > General parameters" of th
 | IO mode <sup>1)</sup> | Input  Output  IO-Link | Input | You use this parameter to specify the mode of the IO interface of the communication module:  - Input:    Single digital input - Output:    Single digital output - IO-Link:    Mode for connection of an IO-Link device with digital inputs/outputs. |
 | <sup>1)</sup> This parameter is only included for RF18xCI communications modules. |  |  |  |
 
-**Parameters of the parameter group "Module parameters > Frame" of the submodules (connected readers)**
+**Parameters of the parameter group "Module parameters &gt; Frame" of the submodules (connected readers)**
 
 This parameter group is displayed when you have selected the "Freeport" submodule. In this parameter group, you can configure all parameters specific to the "Freeport".
 
-Parameters of the parameter group "Module parameters > Message frame" of the submodules
+Parameters of the parameter group "Module parameters &gt; Message frame" of the submodules
 
 | Parameter | Parameter value | Default value | Description |
 | --- | --- | --- | --- |
@@ -826,7 +826,7 @@ With the "Reader configuration_1" submodule, configurations can be transferred f
 
 Communication between the reader and transponder takes place by means of the "RFID communication_1" submodule.
 
-Parameters of the parameter group "Module parameters > General parameters" of the submodules
+Parameters of the parameter group "Module parameters &gt; General parameters" of the submodules
 
 | Parameter | Parameter value | Default value | Description |
 | --- | --- | --- | --- |

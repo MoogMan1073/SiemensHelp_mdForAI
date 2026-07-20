@@ -72,7 +72,7 @@ The interface configuration and the data configuration can be set for each CM in
 | Symbol | Meaning |
 | --- | --- |
 |  | **Notice** |
-| **Device configuration <-> Configuration instructions**  The device configuration parameters are transferred to the CM upon each Power On of the CPU (return of voltage).   The parameters of the configuration instructions are transferred to the CM as defined in your user program.  The parameters of the device configuration are not synchronized with the parameters of the configuration instructions, which means the parameters of the configuration instructions are not applied to the CPU device configuration.  With your user program, you determine the parameters that apply in the CM and when they apply. |  |
+| **Device configuration &lt;-&gt; Configuration instructions**  The device configuration parameters are transferred to the CM upon each Power On of the CPU (return of voltage).   The parameters of the configuration instructions are transferred to the CM as defined in your user program.  The parameters of the device configuration are not synchronized with the parameters of the configuration instructions, which means the parameters of the configuration instructions are not applied to the CPU device configuration.  With your user program, you determine the parameters that apply in the CM and when they apply. |  |
 
 ### Communication instructions
 
@@ -483,7 +483,7 @@ LENGTH parameter
 | LENGTH | Description |
 | --- | --- |
 | = 0 | The complete content of the memory area specified by BUFFER is transferred.  If BUFFER points to a string, the entire content of the string is transferred, without the bytes with the maximum and actual length. |
-| > 0 | The content up to the configured length of the memory area specified by BUFFER is transferred. |
+| &gt; 0 | The content up to the configured length of the memory area specified by BUFFER is transferred. |
 
 ## Receive_P2P: Receiving data (S7-300, S7-400)
 
@@ -727,7 +727,7 @@ The error messages are provided at the STATUS output of an instruction and can b
 | 16#81AC | Invalid value for "Break detection" | Select a suitable value for "Break detection". The following are valid:   - Break detection deactivated (0) - Break detection activated (1). |
 | 16#81AF | The module does not support this protocol. | Select a valid protocol for the module. |
 | **Error codes of the "Send configuration"** |  |  |
-| 16#81B5 | More than two end delimiters or  end sequence > 5 characters | Select suitable values for "End delimiter" and "End sequence".  The following are valid:   - deactivated (0), - 1 (1) or 2 (2) end delimiters   or   - deactivated (0), - 1 (1) up to 5 (5) characters for the end sequence. |
+| 16#81B5 | More than two end delimiters or  end sequence &gt; 5 characters | Select suitable values for "End delimiter" and "End sequence".  The following are valid:   - deactivated (0), - 1 (1) or 2 (2) end delimiters   or   - deactivated (0), - 1 (1) up to 5 (5) characters for the end sequence. |
 | 16#81B6 | Send configuration rejected because the 3964(R) protocol was selected | Make sure that no send configuration is transmitted if the 3964(R) protocol is set. |
 | **Error codes of the "Receive configuration"** |  |  |
 | 16#81C0 | Invalid start condition | Select a suitable start condition.  The following are valid:   - Send break before frame start - Send Idle Line. |

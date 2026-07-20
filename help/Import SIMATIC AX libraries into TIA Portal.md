@@ -34,7 +34,7 @@ You can find fundamental information on programming with SIMATIC AX in the Help 
 
 To stay up-to-date, you become part of the SIMATIC AX community.
 
-You can find both at: <https://axciteme.siemens.com/>
+You can find both at: [https://axciteme.siemens.com/](https://axciteme.siemens.com/)
 
 ---
 
@@ -59,7 +59,7 @@ You need the following tools:
 
 ### Basic procedure
 
-To import SIMATIC AX libraries into TIA Portal, the following steps are required. You can find a detailed description of the entire workflow in the SIMATIC AX documentation at: <https://axciteme.siemens.com/>
+To import SIMATIC AX libraries into TIA Portal, the following steps are required. You can find a detailed description of the entire workflow in the SIMATIC AX documentation at: [https://axciteme.siemens.com/](https://axciteme.siemens.com/)
 
 1. Programming libraries with SIMATIC AX
 
@@ -111,7 +111,7 @@ The following restrictions apply to SIMATIC AX libraries in the TIA Portal:
 - If you change the name or namespace of an imported program element in TIA Portal, you can no longer debug the program element with SIMATIC AX afterwards.
 - Namespaces in the TIA Portal can only be used within Software Units. If you use an imported program element outside Software Units, it loses its namespace. This means that you cannot debug the program element with SIMATIC AX.
 
-You can find information on additional restrictions in the Help on SIMATIC AX. <https://axciteme.siemens.com/>
+You can find information on additional restrictions in the Help on SIMATIC AX. [https://axciteme.siemens.com/](https://axciteme.siemens.com/)
 
 ## Object-oriented programming in SIMATIC AX libraries
 
@@ -174,7 +174,7 @@ The global library is created in the *.al[version number] format in the specifie
 
 To open a global library, follow these steps:
 
-1. Click the "Open global library" icon in the toolbar of the "Global libraries" pane or select the command "Global libraries > Open library" in the "Options" menu.
+1. Click the "Open global library" icon in the toolbar of the "Global libraries" pane or select the command "Global libraries &gt; Open library" in the "Options" menu.
 
    The "Open global library" dialog box opens.
 2. Select the global library you want to open. Library files are identified by the file name extension ".al[version number]".

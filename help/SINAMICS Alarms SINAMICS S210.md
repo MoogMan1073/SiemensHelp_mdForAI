@@ -908,7 +908,7 @@ The master control was returned to the active BICO interconnection.
 Set the monitoring time higher at the PC or, if required, completely disable the monitoring
 function.  
 The monitoring time is set as follows using the commissioning tool:  
-<Drive> -> Commissioning -> Control panel -> Button "Fetch master control" -> A window
+&lt;Drive&gt; -&gt; Commissioning -&gt; Control panel -&gt; Button "Fetch master control" -&gt; A window
 is displayed to set the monitoring time in milliseconds.  
 Notice:  
 The monitoring time should be set as short as possible. A long monitoring time means
@@ -1144,9 +1144,9 @@ When downloading the device parameterization, a parameter back-up file PSxxxyyy.
 associated with a drive object cannot be found.  
 Fault value (r0949, interpret hexadecimal):  
 Byte 1: yyy in the file name PSxxxyyy.ACX  
-yyy = 000 --> consistency back-up file  
-yyy = 001 ... 062 --> drive object number  
-yyy = 099 --> PROFIBUS parameter back-up file  
+yyy = 000 --&gt; consistency back-up file  
+yyy = 001 ... 062 --&gt; drive object number  
+yyy = 099 --&gt; PROFIBUS parameter back-up file  
 Byte 2, 3, 4:  
 Only for internal Siemens troubleshooting.
 
@@ -1203,16 +1203,16 @@ has the "read only" file attribute and cannot be overwritten.
 Fault value (r0949, interpret hexadecimal):  
 dcba hex  
 a = yyy in the file names PSxxxyyy.***  
-a = 000 --> consistency back-up file  
-a = 001 ... 062 --> drive object number  
-a = 070 --> FEPROM.BIN  
-a = 080 --> DEL4BOOT.TXT  
-a = 099 --> PROFIBUS parameter back-up file  
+a = 000 --&gt; consistency back-up file  
+a = 001 ... 062 --&gt; drive object number  
+a = 070 --&gt; FEPROM.BIN  
+a = 080 --&gt; DEL4BOOT.TXT  
+a = 099 --&gt; PROFIBUS parameter back-up file  
 b = xxx in the file names PSxxxyyy.***  
-b = 000 --> data save started with p0977 = 1 or p0971 = 1  
-b = 010 --> data save started with p0977 = 10  
-b = 011 --> data save started with p0977 = 11  
-b = 012 --> data save started with p0977 = 12  
+b = 000 --&gt; data save started with p0977 = 1 or p0971 = 1  
+b = 010 --&gt; data save started with p0977 = 10  
+b = 011 --&gt; data save started with p0977 = 11  
+b = 012 --&gt; data save started with p0977 = 12  
 d, c:  
 Only for internal Siemens troubleshooting.
 
@@ -2194,10 +2194,10 @@ Only for internal Siemens troubleshooting.
 
 **Remedy:**
   
-For alarm value r2124 < 256, the following applies:  
+For alarm value r2124 &lt; 256, the following applies:  
 - carry out a POWER ON (switch-off/switch-on).  
 - replace the Control Unit.  
-For alarm value r2124 >= 256, the following applies:  
+For alarm value r2124 &gt;= 256, the following applies:  
 - for the drive object with this alarm, clear the fault memory (p0952 = 0).  
 - as an alternative, clear the fault memory of all drive objects (p2147 = 1).  
 - replace the Control Unit.
@@ -2506,7 +2506,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01590 Drive: Motor maintenance interval expired
@@ -4483,10 +4483,10 @@ For xxxx = 9522:
 Correct the corresponding parameter.  
 For xxxx = 9547:  
 With hysteresis/filtering enabled (p9501.16 = 1), the following applies:  
-- set parameters p9546 and p9547 according to the following rule: p9547 <= 0.75 x
+- set parameters p9546 and p9547 according to the following rule: p9547 &lt;= 0.75 x
 p9546;  
 - the following rule must also be adhered to when actual value synchronization (p9501.3
-= 1) is enabled: p9547 >= p9549;  
+= 1) is enabled: p9547 &gt;= p9549;  
 For xxxx = 9578:  
 Increase the acceleration limit (p9578).  
 - The minimum limit is 10x the acceleration resolution (r9790[1]).  
@@ -6785,7 +6785,7 @@ the process data exchange.
 For alarm value = 2:  
 - check the number of data words for output and input to a drive object.  
 For alarm value = 211:  
-- Ensure offline version <= online version.  
+- Ensure offline version &lt;= online version.  
 For alarm value = 223, 500:  
 - check the setting in p8839 and p8815.  
 - check for inserted but not configured CBE20.  
@@ -6837,24 +6837,24 @@ NONE
   
 Parameterization for isochronous operation is not permissible.  
 Alarm value (r2124, interpret decimal):  
-0: Bus cycle time Tdp < 0.5 ms.  
-1: Bus cycle time Tdp > 32 ms.  
+0: Bus cycle time Tdp &lt; 0.5 ms.  
+1: Bus cycle time Tdp &gt; 32 ms.  
 2: Bus cycle time Tdp is not an integer multiple of the current controller sampling
 time.  
-3: Instant of the actual value sensing Ti > Bus cycle time Tdp or Ti = 0.  
+3: Instant of the actual value sensing Ti &gt; Bus cycle time Tdp or Ti = 0.  
 4: Instant of the actual value sensing Ti is not an integer multiple of the current
 controller sampling time.  
-5: Instant of the setpoint acceptance To >= Bus cycle time Tdp or To = 0.  
+5: Instant of the setpoint acceptance To &gt;= Bus cycle time Tdp or To = 0.  
 6: Instant of the setpoint acceptance To is not an integer multiple of the current
 controller sampling time.  
 7: Master application cycle time Tmapc is not an integer multiple of the speed controller
 sampling time.  
 8: Bus reserve bus cycle time Tdp - data exchange time Tdx less than two current controller
 sampling times.  
-10: Instant of the setpoint acceptance To <= data exchange time Tdx + current controller
+10: Instant of the setpoint acceptance To &lt;= data exchange time Tdx + current controller
 sampling time  
-11: Master application cycle time Tmapc > 14 x Tdp or Tmapc = 0.  
-12: PLL tolerance window Tpll_w > Tpll_w_max.  
+11: Master application cycle time Tmapc &gt; 14 x Tdp or Tmapc = 0.  
+12: PLL tolerance window Tpll_w &gt; Tpll_w_max.  
 13: Bus cycle time Tdp is not a multiple of all basic clock cycles p0110[x].  
 16: For COMM BOARD, the instant in time for the actual value sensing Ti is less than
 two current controller sampling times.
@@ -7376,7 +7376,7 @@ The alarm is automatically withdrawn after approx. 30 seconds.
 Alarm value (r2124, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = info. 1, xxxx = info. 2  
 Info 1 = 0: number of RT connections exceeded  
-Info 1 > 0: number of IRT connections exceeded  
+Info 1 &gt; 0: number of IRT connections exceeded  
 Info 2: permitted number of connections
 
 **Remedy:**
@@ -7735,7 +7735,7 @@ IMMEDIATELY
   
 For AC/AC drive units, the measured DC voltage lies outside the tolerance range after
 precharging has been completed.  
-The following applies for the tolerance range: 1.16 * p0210 < r0070 < 1.6 * p0210  
+The following applies for the tolerance range: 1.16 * p0210 &lt; r0070 &lt; 1.6 * p0210  
 Note:  
 The fault can only be acknowledged when the drive is switched off.  
 See also: p0210 (Drive unit line supply voltage)
@@ -8107,8 +8107,8 @@ NONE
   
 As a result of the violation of a parameter limit, the parameter value was automatically
 corrected.  
-Minimum limit violated --> parameter is set to the minimum value.  
-Maximum limit violated --> parameter is set to the maximum value.  
+Minimum limit violated --&gt; parameter is set to the minimum value.  
+Maximum limit violated --&gt; parameter is set to the maximum value.  
 Alarm value (r2124, interpret decimal):  
 Parameter number, whose value had to be adapted.
 
@@ -8455,12 +8455,12 @@ only becomes effective above the changeover speed.
 Fault value (r0949, interpret decimal):  
 SERVO:  
 0: The comparison of the pole position angle from the encoder and motor model resulted
-in an excessively high value (p1778[1] > 80 ° electrical).  
+in an excessively high value (p1778[1] &gt; 80 ° electrical).  
 1: -  
 VECTOR:  
 0: The comparison of the pole position angle from the encoder and motor model resulted
-in an excessively high value (> 45 ° electrical).  
-1: The change in the speed signal from the motor encoder has changed by > p0492 within
+in an excessively high value (&gt; 45 ° electrical).  
+1: The change in the speed signal from the motor encoder has changed by &gt; p0492 within
 a current controller clock cycle.
 
 **Remedy:**
@@ -8477,10 +8477,10 @@ and stator resistance using the motor data sheet, measure the stator resistance,
 using a multimeter - and if required, again identify the values using the stationary
 motor data identification (p1910).  
 - increase the changeover speed for the motor model (p1752). The monitoring is completely
-deactivated for p1752 > p1082 (maximum speed).  
+deactivated for p1752 &gt; p1082 (maximum speed).  
 - with pole position identification activated (p1982 = 1) check the procedure for
 pole position identification (p1980) and force a new pole position identification
-procedure by means of deselection followed by selection (p1982 = 0 -> 1).  
+procedure by means of deselection followed by selection (p1982 = 0 -&gt; 1).  
 Note:  
 For High Dynamic Motors (1FK7xxx-7xxx), for applications with a higher current, if
 necessary, the monitoring should be disabled.
@@ -8600,7 +8600,7 @@ can destroy the converter.
 Limit the maximum speed (p1082) without any additional protection.  
 Note:  
 The maximum speed is calculated as follows:  
-p1082 <= 11.695 * DC link voltage overvoltage threshold/r0316  
+p1082 &lt;= 11.695 * DC link voltage overvoltage threshold/r0316  
 DC link voltage overvoltage threshold:  
 - line connection 1 AC: 410 V  
 - line connection 3 AC: 820 V  
@@ -10543,7 +10543,7 @@ Fault value (r0949, interpret decimal):
 0:  
 - the hardware DC current monitoring has responded.  
 - short-circuit at the braking resistor.  
-> 0:  
+&gt; 0:  
 Absolute value summation current amplitude.
 
 **Remedy:**
@@ -10713,10 +10713,10 @@ yyyyxxxx hex:
 yyyy = power unit state  
 0: Fault status (wait for OFF and fault acknowledgment).  
 1: Restart inhibit (wait for OFF).  
-2: Overvoltage condition detected -> change into the fault state.  
-3: Undervoltage condition detected -> change into the fault state.  
-4: Wait for bridging contactor to open -> change into the fault state.  
-5: Wait for bridging contactor to open -> change into restart inhibit.  
+2: Overvoltage condition detected -&gt; change into the fault state.  
+3: Undervoltage condition detected -&gt; change into the fault state.  
+4: Wait for bridging contactor to open -&gt; change into the fault state.  
+5: Wait for bridging contactor to open -&gt; change into restart inhibit.  
 6: Wait for bypass contactor to open  
 7: Commissioning.  
 8: Ready for precharging.  
@@ -10726,7 +10726,7 @@ yyyy = power unit state
 has been completed.  
 12: Precharging completed, ready for pulse enable.  
 13: It was detected that the STO terminal was energized at the power unit  
-xxxx = Missing internal enable signals, power unit (inverted bit-coded, FFFF hex ->
+xxxx = Missing internal enable signals, power unit (inverted bit-coded, FFFF hex -&gt;
 all internal enable signals available)  
 Bit 0: Power supply of the IGBT gating shut down.  
 Bit 1: Ground fault detected.  
@@ -11351,7 +11351,7 @@ than 21.4 V
 Alarm value (r2124, interpret decimal):  
 Supply voltage fault [0.1 V].  
 Example:  
-Alarm value = 195 --> voltage = 19.5 V
+Alarm value = 195 --&gt; voltage = 19.5 V
 
 **Remedy:**
   
@@ -13943,32 +13943,32 @@ Bit 2: Reserved (lighting).
 Bit 3: Reserved (signal amplitude).  
 Bit 4: Reserved (position value).  
 Bit 5: Reserved (overvoltage).  
-Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--> F3x110, x = 1, 2,
+Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--&gt; F3x110, x = 1, 2,
 3).  
 Bit 7: Reserved (overcurrent)/EnDat encoder withdrawn when not in the parked state
-(--> F3x110, x = 1, 2, 3).  
-Bit 8: Reserved (battery)/overcurrent EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 9: Reserved/overvoltage EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 11: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 12: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 13: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 14: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 15: Internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 16: Lighting (--> F3x135, x = 1, 2, 3).  
-Bit 17: Signal amplitude (--> F3x135, x = 1, 2, 3).  
-Bit 18: Singleturn position 1 (--> F3x135, x = 1, 2, 3).  
-Bit 19: Overvoltage (--> F3x135, x = 1, 2, 3).  
-Bit 20: Undervoltage (--> F3x135, x = 1, 2, 3).  
-Bit 21: Overcurrent (--> F3x135, x = 1, 2, 3).  
-Bit 22: Temperature exceeded (--> F3x405, x = 1, 2, 3).  
+(--&gt; F3x110, x = 1, 2, 3).  
+Bit 8: Reserved (battery)/overcurrent EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 9: Reserved/overvoltage EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 11: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 12: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 13: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 14: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 15: Internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 16: Lighting (--&gt; F3x135, x = 1, 2, 3).  
+Bit 17: Signal amplitude (--&gt; F3x135, x = 1, 2, 3).  
+Bit 18: Singleturn position 1 (--&gt; F3x135, x = 1, 2, 3).  
+Bit 19: Overvoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 20: Undervoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 21: Overcurrent (--&gt; F3x135, x = 1, 2, 3).  
+Bit 22: Temperature exceeded (--&gt; F3x405, x = 1, 2, 3).  
 Bit 23: Singleturn position 2 (safety status display).  
-Bit 24: Singleturn system (--> F3x135, x = 1, 2, 3).  
-Bit 25: Singleturn power down (--> F3x135, x = 1, 2, 3)  
-Bit 26: Multiturn position 1 (--> F3x136, x = 1, 2, 3).  
-Bit 27: Multiturn position 2 (--> F3x136, x = 1, 2, 3).  
-Bit 28: Multiturn system (--> F3x136, x = 1, 2, 3).  
-Bit 29: Multiturn power down (--> F3x136, x = 1, 2, 3).  
-Bit 30: Multiturn overflow/underflow (--> F3x136, x = 1, 2, 3).  
+Bit 24: Singleturn system (--&gt; F3x135, x = 1, 2, 3).  
+Bit 25: Singleturn power down (--&gt; F3x135, x = 1, 2, 3)  
+Bit 26: Multiturn position 1 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 27: Multiturn position 2 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 28: Multiturn system (--&gt; F3x136, x = 1, 2, 3).  
+Bit 29: Multiturn power down (--&gt; F3x136, x = 1, 2, 3).  
+Bit 30: Multiturn overflow/underflow (--&gt; F3x136, x = 1, 2, 3).  
 Bit 31: Multiturn battery (reserved).
 
 **Remedy:**
@@ -14027,32 +14027,32 @@ Bit 2: Reserved (lighting).
 Bit 3: Reserved (signal amplitude).  
 Bit 4: Reserved (position value).  
 Bit 5: Reserved (overvoltage).  
-Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--> F3x110, x = 1, 2,
+Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--&gt; F3x110, x = 1, 2,
 3).  
 Bit 7: Reserved (overcurrent)/EnDat encoder withdrawn when not in the parked state
-(--> F3x110, x = 1, 2, 3).  
-Bit 8: Reserved (battery)/overcurrent EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 9: Reserved/overvoltage EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 11: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 12: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 13: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 14: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 15: Internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 16: Lighting (--> F3x135, x = 1, 2, 3).  
-Bit 17: Signal amplitude (--> F3x135, x = 1, 2, 3).  
-Bit 18: Singleturn position 1 (--> F3x135, x = 1, 2, 3).  
-Bit 19: Overvoltage (--> F3x135, x = 1, 2, 3).  
-Bit 20: Undervoltage (--> F3x135, x = 1, 2, 3).  
-Bit 21: Overcurrent (--> F3x135, x = 1, 2, 3).  
-Bit 22: Temperature exceeded (--> F3x405, x = 1, 2, 3).  
+(--&gt; F3x110, x = 1, 2, 3).  
+Bit 8: Reserved (battery)/overcurrent EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 9: Reserved/overvoltage EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 11: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 12: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 13: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 14: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 15: Internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 16: Lighting (--&gt; F3x135, x = 1, 2, 3).  
+Bit 17: Signal amplitude (--&gt; F3x135, x = 1, 2, 3).  
+Bit 18: Singleturn position 1 (--&gt; F3x135, x = 1, 2, 3).  
+Bit 19: Overvoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 20: Undervoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 21: Overcurrent (--&gt; F3x135, x = 1, 2, 3).  
+Bit 22: Temperature exceeded (--&gt; F3x405, x = 1, 2, 3).  
 Bit 23: Singleturn position 2 (safety status display).  
-Bit 24: Singleturn system (--> F3x135, x = 1, 2, 3).  
-Bit 25: Singleturn power down (--> F3x135, x = 1, 2, 3)  
-Bit 26: Multiturn position 1 (--> F3x136, x = 1, 2, 3).  
-Bit 27: Multiturn position 2 (--> F3x136, x = 1, 2, 3).  
-Bit 28: Multiturn system (--> F3x136, x = 1, 2, 3).  
-Bit 29: Multiturn power down (--> F3x136, x = 1, 2, 3).  
-Bit 30: Multiturn overflow/underflow (--> F3x136, x = 1, 2, 3).  
+Bit 24: Singleturn system (--&gt; F3x135, x = 1, 2, 3).  
+Bit 25: Singleturn power down (--&gt; F3x135, x = 1, 2, 3)  
+Bit 26: Multiturn position 1 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 27: Multiturn position 2 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 28: Multiturn system (--&gt; F3x136, x = 1, 2, 3).  
+Bit 29: Multiturn power down (--&gt; F3x136, x = 1, 2, 3).  
+Bit 30: Multiturn overflow/underflow (--&gt; F3x136, x = 1, 2, 3).  
 Bit 31: Multiturn battery (reserved).
 
 **Remedy:**
@@ -14502,7 +14502,7 @@ xxxx: Difference between the checksum at POWER ON and the actual checksum.
 **Remedy:**
   
 - carry out a POWER ON (switch-off/switch-on).  
-- upgrade firmware to later version (>= V2.6 HF3, >= V4.3 SP2, >= V4.4).  
+- upgrade firmware to later version (&gt;= V2.6 HF3, &gt;= V4.3 SP2, &gt;= V4.4).  
 - check whether the permissible ambient temperature for the component is maintained.  
 - replace the Sensor Module.
 
@@ -14595,15 +14595,15 @@ Bit 6: Mid-voltage matching for track safety B unsuccessful.
 Bit 7: Mid-voltage matching for track C unsuccessful.  
 Bit 8: Mid-voltage matching for track D unsuccessful.  
 Bit 9: Mid-voltage matching for track R unsuccessful.  
-Bit 10: The difference in mid-voltages between A and B is too great (> 0.5 V)  
-Bit 11: The difference in mid-voltages between C and D is too great (> 0.5 V)  
+Bit 10: The difference in mid-voltages between A and B is too great (&gt; 0.5 V)  
+Bit 11: The difference in mid-voltages between C and D is too great (&gt; 0.5 V)  
 Bit 12: The difference in mid-voltages between safety A and safety B is too great
-(> 0.5 V)  
-Bit 13: The difference in mid-voltages between A and safety B is too great (> 0.5
+(&gt; 0.5 V)  
+Bit 13: The difference in mid-voltages between A and safety B is too great (&gt; 0.5
 V)  
-Bit 14: The difference in mid-voltages between B and safety A is too great (> 0.5
+Bit 14: The difference in mid-voltages between B and safety A is too great (&gt; 0.5
 V)  
-Bit 15: The standard deviation of the calculated mid-voltages is too great (> 0.3
+Bit 15: The standard deviation of the calculated mid-voltages is too great (&gt; 0.3
 V)  
 Bit 16: Internal fault - fault when reading a register (CAFE)  
 Bit 17: Internal fault - fault when writing a register (CAFE)  
@@ -15619,13 +15619,13 @@ See also: r20008 (Hardware sampling times available)
   
 - check number of different hardware sampling times (r20008, r7903).  
 - hardware sampling times are those sampling times that are formed as a multiple of
-the basis hardware sampling times r20002 and are always < r20003.  
+the basis hardware sampling times r20002 and are always &lt; r20003.  
 - For internal purposes, the drive unit always requires at least two (or several,
 depending on the parameterization of p0115 of the drive objects) free hardware sampling
 times. Therefore, the current number of hardware sampling times that are still free
 can be read out in r7903. If r7903=0, no additional sampling time that differs from
 r20008[0...12] can be provided from the Control Unit. If, when selecting in this state,
-a runtime group with a sampling time < r20003 (p20000 <= 255) is to be set in p20000,
+a runtime group with a sampling time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000,
 only runtime groups whose sampling time is already provided in r20008[0...12] can
 be selected.
 
@@ -15927,13 +15927,13 @@ IMMEDIATELY
 **Cause:**
   
 In the STARTER/SCOUT project that was downloaded, the hardware sampling time of a
-free runtime group (1 <= p20000[i] <= 256) was set to a value that was either too
+free runtime group (1 &lt;= p20000[i] &lt;= 256) was set to a value that was either too
 low or too high.  
 The sampling time must be between 1 ms and the value r20003 - r20002.  
-If the sampling time of the selected free runtime group is < 1 ms, the equivalent
+If the sampling time of the selected free runtime group is &lt; 1 ms, the equivalent
 value of 1 ms is used.  
-If the value >= r20003, then the sampling time is set to the next higher or the same
-software sampling time >= r21003.  
+If the value &gt;= r20003, then the sampling time is set to the next higher or the same
+software sampling time &gt;= r21003.  
 Fault value (r0949, interpret decimal):  
 Number of the p20000 index of the runtime group where the sampling time is incorrectly
 set.  

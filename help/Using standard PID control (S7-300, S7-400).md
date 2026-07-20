@@ -248,7 +248,7 @@ The message bits are set as follows:
 
 The following has to apply so that the block operates properly:
 
-High alarm < High warning < Low warning < Low alarm
+High alarm &lt; High warning &lt; Low warning &lt; Low alarm
 
 ![Limit values](images/32396518539_DV_resource.Stream@PNG-de-DE.png)
 
@@ -279,10 +279,10 @@ The ramp parameters are identified in accordance with the following scheme:
 
 | Parameter | PV change |
 | --- | --- |
-| Maximum increase in the positive range (PVURLM_P) | PV > 0 and |PV| rising |
-| Maximum decrease in the positive range (PVDRLM_P) | PV > 0 and |PV| falling |
-| Maximum increase in the negative range (PVURLM_N) | PV > 0 and |PV| rising |
-| Maximum decrease in the negative range (PVDRLM_N) | PV < 0 and |PV| falling |
+| Maximum increase in the positive range (PVURLM_P) | PV &gt; 0 and |PV| rising |
+| Maximum decrease in the positive range (PVDRLM_P) | PV &gt; 0 and |PV| falling |
+| Maximum increase in the negative range (PVURLM_N) | PV &gt; 0 and |PV| rising |
+| Maximum decrease in the negative range (PVDRLM_N) | PV &lt; 0 and |PV| falling |
 
 #### Setpoint (S7-300, S7-400)
 
@@ -566,7 +566,7 @@ The SP_ROC function limits the rate of change of the setpoints processed in the 
 
 The limiting for each slope of the ramp function in the positive range and in the negative range of the reference variable is entered in the four inputs SPURLM_P, SPDRLM_P, SPURLM_N, and SPDRLM_N. The slopes refer to a rising or falling slope per second. Faster setpoint changes are ramped down to these maximum rates.
 
-For example, if SPURLM_P is assigned the value 10.0 [engineering value range/s], the following values are added to the "old value" of outv in each sampling cycle for as long as inv > outv:
+For example, if SPURLM_P is assigned the value 10.0 [engineering value range/s], the following values are added to the "old value" of outv in each sampling cycle for as long as inv &gt; outv:
 
 |  |  |  |
 | --- | --- | --- |
@@ -614,7 +614,7 @@ The message bits are set as follows:
 | --- | --- | --- | --- |
 | SP_HLM | TRUE | FALSE | inv ≥ SP_HLM |
 | SP_LLM | FALSE | TRUE | inv ≤ SP_LLM |
-| inv | FALSE | FALSE | SP_HLM < inv < SP_LLM |
+| inv | FALSE | FALSE | SP_HLM &lt; inv &lt; SP_LLM |
 
 ###### Procedure
 
@@ -646,11 +646,11 @@ If the input variable is within the deadband, the value 0 (control deviation = 0
 
 The DEADBAND function operates according to the following functions:
 
-(ER) = inv + DEADB_W for inv < - DEADB_W
+(ER) = inv + DEADB_W for inv &lt; - DEADB_W
 
 (ER) = 0 for -DEADB_W ≤ inv ≤ + DEADB_W
 
-(ER) = inv - DEADB_W for inv > + DEADB_W
+(ER) = inv - DEADB_W for inv &gt; + DEADB_W
 
 ![Signal filtering through deadband function](images/34001804299_DV_resource.Stream@PNG-en-US.png)
 
@@ -683,7 +683,7 @@ The message bits are set as follows:
 
 The following has to apply so that the block operates properly:
 
-High alarm < High warning < Low warning < Low alarm
+High alarm &lt; High warning &lt; Low warning &lt; Low alarm
 
 ![Limit values](images/37711954955_DV_resource.Stream@PNG-en-US.png)
 
@@ -936,15 +936,15 @@ The limited accuracy of the REAL numbers calculated in the CPU means that the fo
 
 This effect can be avoided if the following sizing rule is observed during configuration:
 
-CYCLE > 10<sup>–4</sup> × TI
+CYCLE &gt; 10<sup>–4</sup> × TI
 
 As a result, the integral action still responds to changes in the input values in the range of millionths of one part per thousand of the current output variable:
 
-inv > 10 <sup>–10 </sup>× OUTV
+inv &gt; 10 <sup>–10 </sup>× OUTV
 
 In order for the response characteristic of the integrator algorithm to conform to the analog response, the sampling time should be less than 20% of the specified integral action time or TI should be at least five times the value of the specified sampling time:
 
-CYCLE < 0.2 × TI
+CYCLE &lt; 0.2 × TI
 
 The algorithm permits sampling time values up to CYCLE ≤ 0.5 * TI.
 
@@ -1004,9 +1004,9 @@ To calculate the derivative action correctly, the following conditions must be s
 - TD ≥ CYCLE and
 - TM_LAG ≥ 0.5 × CYCLE
 
-If TD < CYCLE, the derivative action operates as though the TD has the value CYCLE.
+If TD &lt; CYCLE, the derivative action operates as though the TD has the value CYCLE.
 
-If TM_LAG < 0.5 × CYCLE, the derivative action operates without delay. An input step is then multiplied with the factor TD/CYCLE and this value is applied as "needle pulse" at the output. In other words, LMN_D is reset to zero in the subsequent processing cycle.
+If TM_LAG &lt; 0.5 × CYCLE, the derivative action operates without delay. An input step is then multiplied with the factor TD/CYCLE and this value is applied as "needle pulse" at the output. In other words, LMN_D is reset to zero in the subsequent processing cycle.
 
 ##### Coefficient DT1
 
@@ -1127,7 +1127,7 @@ The rate of change of the manipulated variable at the output of the controller i
 
 The limiting for each slope of the ramp function in the positive range and in the negative range of the manipulated variable is entered in the two static variables LMN_URLM and LMN_DRLM. The slopes refer to a rising slope or falling slope in percent per second. Faster manipulated variable changes are ramped down to these maximum rates.
 
-For example, if 'LMN_URLM' is assigned the value 10.0 [%/s], the following values are added to the "old value" of outv in each sampling cycle for as long as |inv| > |outv|:
+For example, if 'LMN_URLM' is assigned the value 10.0 [%/s], the following values are added to the "old value" of outv in each sampling cycle for as long as |inv| &gt; |outv|:
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -1177,7 +1177,7 @@ In the event of violations by input variable inv(t), the associated displays are
 | --- | --- | --- | --- |
 | LMN_HLM | TRUE | FALSE | inv ≥ LMN_HLM |
 | LMN_LLM | FALSE | TRUE | inv ≤ LMN_LLM |
-| inv | FALSE | FALSE | LMN_HLM < inv < LMN_LLM |
+| inv | FALSE | FALSE | LMN_HLM &lt; inv &lt; LMN_LLM |
 
 The effective manipulated value of the controller is displayed at the output, i.e. at the parameter LMN or at the measuring point MP10.
 
@@ -1288,19 +1288,19 @@ On the other hand, for the same absolute value |MP10|, a shorter pulse duration 
 
 ![Three-step control asymmetrical](images/32397373323_DV_resource.Stream@PNG-en-US.png)
 
-Mathematically, this means that when RATIOFAC < 1, the response value for negative pulses is multiplied by the ratio factor and when RATIOFAC > 1, the response value for positive pulses is divided by the ratio factor.
+Mathematically, this means that when RATIOFAC &lt; 1, the response value for negative pulses is multiplied by the ratio factor and when RATIOFAC &gt; 1, the response value for positive pulses is divided by the ratio factor.
 
 > **Note**
 >
 > For asymmetrical three-step control RATIOFAC ≠ 1, you must adapt the manipulated variable limits according to the following formulas:
 >
-> **RATIOFAC < 1:**
+> **RATIOFAC &lt; 1:**
 >
 > LMN_HLM = 100
 >
 > LMN_LLM = –100 * (1 / RATIOFAC)
 >
-> **RATIOFAC > 1:**
+> **RATIOFAC &gt; 1:**
 >
 > LMN_HLM = 100 * RATIOFAC
 >
@@ -1353,7 +1353,7 @@ A new manipulated variable is calculated every second, and the manipulated varia
 
 If a pulse is output and calculate manipulated variable is greater than the previous pulse length/PER_TM_P, the pulse is extended. Otherwise, no more pulse signals are output. If no pulse is output and (100% - calculated manipulated variable) is greater than the previous break length/PER_TM_P, the break is extended. Otherwise, a pulse signal is output.
 
-As a result of a special pulse generation procedure, an increase or decrease in the manipulated variable during the period causes the output pulse to be extended or shortened. In this case (CYCLE < PER_TM_P), if the configured period is so long that it would cause the process value to fluctuate, the effective period of PID_CP is automatically reduced to an appropriate value.
+As a result of a special pulse generation procedure, an increase or decrease in the manipulated variable during the period causes the output pulse to be extended or shortened. In this case (CYCLE &lt; PER_TM_P), if the configured period is so long that it would cause the process value to fluctuate, the effective period of PID_CP is automatically reduced to an appropriate value.
 
 ##### Accuracy of pulse generation
 
@@ -1689,7 +1689,7 @@ The message bits are set as follows:
 
 The following has to apply so that the block operates properly:
 
-High alarm < High warning < Low warning < Low alarm
+High alarm &lt; High warning &lt; Low warning &lt; Low alarm
 
 ![Limit values](images/32396518539_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1720,10 +1720,10 @@ The ramp parameters are identified in accordance with the following scheme:
 
 | Parameter | PV change |
 | --- | --- |
-| Maximum increase in the positive range (PVURLM_P) | PV > 0 and |PV| rising |
-| Maximum decrease in the positive range (PVDRLM_P) | PV > 0 and |PV| falling |
-| Maximum increase in the negative range (PVURLM_N) | PV > 0 and |PV| rising |
-| Maximum decrease in the negative range (PVDRLM_N) | PV < 0 and |PV| falling |
+| Maximum increase in the positive range (PVURLM_P) | PV &gt; 0 and |PV| rising |
+| Maximum decrease in the positive range (PVDRLM_P) | PV &gt; 0 and |PV| falling |
+| Maximum increase in the negative range (PVURLM_N) | PV &gt; 0 and |PV| rising |
+| Maximum decrease in the negative range (PVDRLM_N) | PV &lt; 0 and |PV| falling |
 
 #### Setpoint (S7-300, S7-400)
 
@@ -2013,7 +2013,7 @@ The SP_ROC function limits the rate of change of the setpoints processed in the 
 
 The limiting for each slope of the ramp function in the positive range and in the negative range of the reference variable is entered in the four inputs SPURLM_P, SPDRLM_P, SPURLM_N, and SPDRLM_N. The slopes refer to a rising or falling slope per second. Faster setpoint changes are ramped down to these maximum rates.
 
-For example, if SPURLM_P is assigned the value 10.0 [engineering value range/s], the following values are added to the "old value" of outv in each sampling cycle for as long as inv > outv:
+For example, if SPURLM_P is assigned the value 10.0 [engineering value range/s], the following values are added to the "old value" of outv in each sampling cycle for as long as inv &gt; outv:
 
 |  |  |  |
 | --- | --- | --- |
@@ -2061,7 +2061,7 @@ The message bits are set as follows:
 | --- | --- | --- | --- |
 | SP_HLM | TRUE | FALSE | inv ≥ SP_HLM |
 | SP_LLM | FALSE | TRUE | inv ≤ SP_LLM |
-| inv | FALSE | FALSE | SP_HLM < inv < SP_LLM |
+| inv | FALSE | FALSE | SP_HLM &lt; inv &lt; SP_LLM |
 
 ###### Procedure
 
@@ -2093,11 +2093,11 @@ If the input variable is within the deadband, the value 0 (control deviation = 0
 
 The DEADBAND function operates according to the following functions:
 
-(ER) = inv + DEADB_W for inv < - DEADB_W
+(ER) = inv + DEADB_W for inv &lt; - DEADB_W
 
 (ER) = 0 for -DEADB_W ≤ inv ≤ + DEADB_W
 
-(ER) = inv - DEADB_W for inv > + DEADB_W
+(ER) = inv - DEADB_W for inv &gt; + DEADB_W
 
 ![Signal filtering through deadband function](images/34001804299_DV_resource.Stream@PNG-en-US.png)
 
@@ -2130,7 +2130,7 @@ The message bits are set as follows:
 
 The following has to apply so that the block operates properly:
 
-High alarm < High warning < Low warning < Low alarm
+High alarm &lt; High warning &lt; Low warning &lt; Low alarm
 
 ![Limit values](images/37711954955_DV_resource.Stream@PNG-en-US.png)
 
@@ -2373,15 +2373,15 @@ The limited accuracy of the REAL numbers calculated in the CPU means that the fo
 
 This effect can be avoided if the following sizing rule is observed during configuration:
 
-CYCLE > 10<sup>–4</sup> × TI
+CYCLE &gt; 10<sup>–4</sup> × TI
 
 As a result, the integral action still responds to changes in the input values in the range of millionths of one part per thousand of the current output variable:
 
-inv > 10 <sup>–10 </sup>× OUTV
+inv &gt; 10 <sup>–10 </sup>× OUTV
 
 In order for the response characteristic of the integrator algorithm to conform to the analog response, the sampling time should be less than 20% of the specified integral action time or TI should be at least five times the value of the specified sampling time:
 
-CYCLE < 0.2 × TI
+CYCLE &lt; 0.2 × TI
 
 The algorithm permits sampling time values up to CYCLE ≤ 0.5 * TI.
 
@@ -2439,9 +2439,9 @@ To calculate the derivative action correctly, the following conditions must be s
 - TD ≥ CYCLE and
 - TM_LAG ≥ 0.5 × CYCLE
 
-If TD < CYCLE, the derivative action operates as though the TD has the value CYCLE.
+If TD &lt; CYCLE, the derivative action operates as though the TD has the value CYCLE.
 
-If TM_LAG < 0.5 × CYCLE, the derivative action operates without delay. An input step is then multiplied with the factor TD/CYCLE and this value is applied as "needle pulse" at the output. In other words, LMN_D is reset to zero in the subsequent processing cycle.
+If TM_LAG &lt; 0.5 × CYCLE, the derivative action operates without delay. An input step is then multiplied with the factor TD/CYCLE and this value is applied as "needle pulse" at the output. In other words, LMN_D is reset to zero in the subsequent processing cycle.
 
 ##### Coefficient DT1
 
@@ -2713,7 +2713,7 @@ The numeric values of the limits (in percent) are set in the input parameters fo
 | --- | --- | --- | --- |
 | LMN_HLM | TRUE | FALSE | inv ≥ LMN_HLM |
 | LMN_LLM | FALSE | TRUE | inv ≤ LMN_LLM |
-| inv | FALSE | FALSE | LMN_HLM < inv < LMN_LLM |
+| inv | FALSE | FALSE | LMN_HLM &lt; inv &lt; LMN_LLM |
 
 The effective manipulated value of the controller is displayed at the output, i.e. at the parameter LMN or at the measuring point MP10.
 
@@ -2752,8 +2752,8 @@ The three-step element THREE_ST responds to the input signal INV according to th
 
 | UP | DOWN | Input combination |
 | --- | --- | --- |
-| TRUE | FALSE | |INV| ≥ ThrOn or INV > ThrOff and UP<sub>old</sub> = TRUE |
-| FALSE | TRUE | |INV| ≤ -ThrOn or INV < -ThrOff and DOWN<sub>old</sub> = TRUE |
+| TRUE | FALSE | |INV| ≥ ThrOn or INV &gt; ThrOff and UP<sub>old</sub> = TRUE |
+| FALSE | TRUE | |INV| ≤ -ThrOn or INV &lt; -ThrOff and DOWN<sub>old</sub> = TRUE |
 | FALSE | FALSE | |INV| ≤ ThrOff |
 | ThrOn = Switch-on threshold, ThrOff = Switch-off threshold |  |  |
 

@@ -180,7 +180,7 @@ The following table shows how to configure the parameters:
 
 The efficiency report is stored as a CSV file on the SIMATIC memory card by setting the request parameter of the EnS_EEm_Report instruction.
 
-The name of the CSV file is unique and consists of the machine name and the time stamp in the following format: "<Machine name>_yyyymmdd_NN.csv". "NN" is a sequential number. The maximum number of files created per day is 100 (NN = 99).
+The name of the CSV file is unique and consists of the machine name and the time stamp in the following format: "&lt;Machine name&gt;_yyyymmdd_NN.csv". "NN" is a sequential number. The maximum number of files created per day is 100 (NN = 99).
 
 You can find additional information in the section [EnS_EEm_Report description](#ens_eem_report-description).
 

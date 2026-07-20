@@ -150,7 +150,7 @@ Then compile your WinCC project into a runtime project and download it to the ta
 
 > **Note**
 >
-> Not all changes can be loaded in Runtime with the option "Download to device > Software (only changes)". A list of changes and actions that require complete compiling and complete download can be found under "[Restrictions in compiling and loading changes](#restrictions-in-compiling-and-loading-changes-rt-unified)".
+> Not all changes can be loaded in Runtime with the option "Download to device &gt; Software (only changes)". A list of changes and actions that require complete compiling and complete download can be found under "[Restrictions in compiling and loading changes](#restrictions-in-compiling-and-loading-changes-rt-unified)".
 
 ![Compiling and loading](images/105080401931_DV_resource.Stream@PNG-de-DE.png)
 
@@ -197,8 +197,8 @@ The following components are involved:
 - Runtime on the HMI device
 
   - Unified PC: You manage the "Secure download" option during the installation of the runtime software or in the "WinCC Unified - Configuration" application.
-  - Unified Comfort Panel: You set the password for encrypted transfer to the HMI device in the Control Panel under "Service and Commissioning > Transfer".
-- SIMATIC Runtime Manager (only for Unified PC): The password is specified in the settings of the Runtime Manager under "General > Secure connection".
+  - Unified Comfort Panel: You set the password for encrypted transfer to the HMI device in the Control Panel under "Service and Commissioning &gt; Transfer".
+- SIMATIC Runtime Manager (only for Unified PC): The password is specified in the settings of the Runtime Manager under "General &gt; Secure connection".
 
   If the "Secure download" option is enabled in Runtime, data exchange is only possible if the identical password is stored in the Runtime Manager.
 
@@ -224,7 +224,7 @@ The password must meet the following criteria:
 
 By default, the encrypted transfer is enabled in the runtime settings of the HMI device.
 
-In the runtime settings of the HMI device under "General > Encrypted transfer", make the following settings:
+In the runtime settings of the HMI device under "General &gt; Encrypted transfer", make the following settings:
 
 - Entering a password in the engineering system
 - Allow transfer of initial password via unencrypted loading
@@ -319,7 +319,7 @@ If encrypted transfer is disabled in the runtime settings of the HMI device, a d
 
 #### Compiling and loading changes
 
-Many changes to the configuration can be compiled and loaded in Runtime with the options "Compile > Software (only changes)" or "Download to device > Software (only changes)". After some changes or actions, however, the project must be completely compiled or completely loaded.
+Many changes to the configuration can be compiled and loaded in Runtime with the options "Compile &gt; Software (only changes)" or "Download to device &gt; Software (only changes)". After some changes or actions, however, the project must be completely compiled or completely loaded.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -348,10 +348,10 @@ The following changes or actions require complete compilation or complete loadin
 | Logging | - Creating the first data log by creating system tags - Changing a data log - Deleting a data log - Creating an alarm log - Changing an alarm log - Deleting an alarm log | - Changing a log name - Changing the path when using the backup - Changing the data type of the tag to which the logging tag is linked. - Changing the logging mode - Changing the compression mode - Changing the source for using compression |
 | Audit | - Changing the Audit Trail | - Activating the GMP-compliant configuration - Deactivating the GMP-compliant configuration - Changing the Audit Trail name - Changing the Audit Trail storage medium - Changing the Audit Trail storage directory |
 | Unified Collaboration | - All changes in the Runtime settings under "Collaboration" | - |
-| Language & font | - All changes in the runtime settings under "Language & Font" | - |
+| Language &amp; font | - All changes in the runtime settings under "Language &amp; Font" | - |
 | Identification | - Renaming the WinCC Unified PC RT:   Renaming changes the Runtime ID. The Runtime ID can be viewed in the Runtime settings under "General". | - |
 | UMC (User Management Component) |  | - Creating a local user - Changing a local user - Deleting a local user - Creating a role - Changing a role - Deleting a role - Switching between local and central user management |
-| Alarms | - | - All changes to alarm classes - Changing the alarm class for discrete alarms or analog alarms - Changing the name, alarm class or the range for alarms from OPC UA A&C |
+| Alarms | - | - All changes to alarm classes - Changing the alarm class for discrete alarms or analog alarms - Changing the name, alarm class or the range for alarms from OPC UA A&amp;C |
 | Resource lists | - | - Renaming text lists - Renaming Graphic lists |
 | Simulation | - | - When you load the project in runtime mode and then load the same project in simulation mode, the simulation must be loaded completely. - When you load the project in simulation mode and then load the same project in runtime mode, the project must be loaded completely. |
 | Reporting |  | - Changing the Runtime settings for reporting |
@@ -384,7 +384,7 @@ This section contains information on the following topics:
 - [General (RT Unified)](#general-rt-unified)
 - [Alarms (RT Unified)](#alarms-rt-unified)
 - [Services (RT Unified)](#services-rt-unified)
-- [Language & font (RT Unified)](#language-font-rt-unified)
+- [Language &amp; font (RT Unified)](#language-font-rt-unified)
 - [Remote access (RT Unified)](#remote-access-rt-unified)
 - [Storage system (RT Unified)](#storage-system-rt-unified)
 - [Settings for tags (RT Unified)](#settings-for-tags-rt-unified)
@@ -467,7 +467,7 @@ You can manage the following options:
 
 You specify the state texts of alarms in the runtime settings. The state texts are displayed in runtime in the alarm control.
 
-Specify the state texts in other languages under "Languages & Resources > Project texts".
+Specify the state texts in other languages under "Languages &amp; Resources &gt; Project texts".
 
 ---
 
@@ -495,7 +495,7 @@ Specify the port for SMTP communication.
 
 You configure project languages that are available as runtime languages for the respective device. You also define the order in which the languages are switched.
 
-At Runtime start, the language that has the lowest number in the "Order" column under "Runtime settings > Language & font" in the TIA Portal is used. You change the order with ![Runtime language and font selection](images/134928713995_DV_resource.Stream@PNG-de-DE.png).
+At Runtime start, the language that has the lowest number in the "Order" column under "Runtime settings &gt; Language &amp; font" in the TIA Portal is used. You change the order with ![Runtime language and font selection](images/134928713995_DV_resource.Stream@PNG-de-DE.png).
 
 The fixed font 1 is always provided for the respective HMI device.
 
@@ -738,7 +738,7 @@ You manage central users in the TIA User Management Component (UMC).
 
 ##### User administration configuration
 
-- When you activate the local user management, you use the users and user roles that you have created under "Security settings > Users and roles" for management.
+- When you activate the local user management, you use the users and user roles that you have created under "Security settings &gt; Users and roles" for management.
 - When you activate the central user management, the users, user roles and their rights are applied from the TIA User Management Component (UMC). To access the UMC, you must specify the server address and the server ID.
 
 ---
@@ -909,12 +909,12 @@ A project can be compiled explicitly or implicitly:
 2. There are two ways to start compiling the changes:
 
    - Press the "Compile" button in the toolbar.
-   - Select "Compile > Software (only changes)" from the shortcut menu.
+   - Select "Compile &gt; Software (only changes)" from the shortcut menu.
 
 #### Compiling a project completely
 
 1. Select an HMI device in the "Project tree" area.
-2. Select "Compile > Software (rebuild all)" from the shortcut menu.
+2. Select "Compile &gt; Software (rebuild all)" from the shortcut menu.
 
 > **Note**
 >
@@ -925,12 +925,12 @@ A project can be compiled explicitly or implicitly:
 1. Select the HMI devices using multiple selection in the project tree.
 2. To compile the changes to the projects, select the "Compile" button in the toolbar.
 
-   Alternatively, select "Download to device > Software (only changes)" from the shortcut menu.
-3. To compile the projects completely, select "Download to device" > "Software (rebuild all)" from the shortcut menu.
+   Alternatively, select "Download to device &gt; Software (only changes)" from the shortcut menu.
+3. To compile the projects completely, select "Download to device" &gt; "Software (rebuild all)" from the shortcut menu.
 
 #### Result
 
-The configuration data of the selected HMI devices is being compiled. If errors occur during compilation, the errors are shown in the Inspector window under "Info > Compile". Correct the errors and recompile the project.
+The configuration data of the selected HMI devices is being compiled. If errors occur during compilation, the errors are shown in the Inspector window under "Info &gt; Compile". Correct the errors and recompile the project.
 
 Load the compiled project.
 
@@ -1072,7 +1072,7 @@ The first download of a project is different from any subsequent download proces
 ##### Editing connection parameters before download
 
 1. Select the HMI device in the project tree.
-2. Select "Online > Extended download to device" in the menu.
+2. Select "Online &gt; Extended download to device" in the menu.
 
    The "Extended download" dialog opens.
 3. Configure the interface.
@@ -1095,7 +1095,7 @@ Select whether you want to reset all logs or no log in Runtime.
 ##### Initial loading of a project
 
 1. Select the HMI device in the project tree.
-2. In the toolbar, select the "Download to device" button or select "Download to device" > "Software (all)" from the shortcut menu.
+2. In the toolbar, select the "Download to device" button or select "Download to device" &gt; "Software (all)" from the shortcut menu.
 
    The "Extended download" dialog opens.
 3. Configure the interface. Make sure that the settings match the transfer settings in the HMI device:
@@ -1110,7 +1110,7 @@ Select whether you want to reset all logs or no log in Runtime.
 
    The compilation of the project is checked and missing content is compiled.
 
-   The compilation result is displayed in the Inspector window under "Info > Compile".
+   The compilation result is displayed in the Inspector window under "Info &gt; Compile".
 
    The "Load Preview" dialog is displayed.
 6. Check the displayed default settings and change the settings as necessary:
@@ -1124,13 +1124,13 @@ Select whether you want to reset all logs or no log in Runtime.
 
 **Note**
 
-When you select "Download to device" > "Software (only changes)" from the shortcut menu, the project is still downloaded completely during the initial download.
+When you select "Download to device" &gt; "Software (only changes)" from the shortcut menu, the project is still downloaded completely during the initial download.
 
 ##### Result
 
 The project is downloaded to the selected HMI device with the runtime extensions it contains.
 
-If errors or warnings occur during the download, corresponding alarms are output under "Info > General" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are output under "Info &gt; General" in the Inspector window.
 
 On completion of the successful download of the project, you can execute it on the HMI device.
 
@@ -1179,11 +1179,11 @@ Select whether you want to reset all logs or no log in Runtime.
 ##### Reloading a project
 
 1. Select the HMI device in the project tree.
-2. Select "Download to device > Software (all)" from the shortcut menu.
+2. Select "Download to device &gt; Software (all)" from the shortcut menu.
 
    The compilation of the project is checked and content that has not been compiled is compiled.
 
-   The compilation result is displayed in the Inspector window under "Info > Compile".
+   The compilation result is displayed in the Inspector window under "Info &gt; Compile".
 
    The "Load Preview" dialog is displayed.
 3. Check the displayed default settings and change the settings as necessary:
@@ -1214,7 +1214,7 @@ The project running in runtime is stopped when a project is executed in runtime 
 
 The project with the Runtime add-ons it contains is downloaded to the selected HMI devices.
 
-If errors or warnings occur during the download, corresponding alarms are output under "Info > General" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are output under "Info &gt; General" in the Inspector window.
 
 On completion of the successful download of the project, you can execute it on the HMI device.
 
@@ -1253,11 +1253,11 @@ When you only download changes to a project, the relevant project must be execut
 1. Select the HMI device in the project tree.
 2. Select "Download to device" in the toolbar.
 
-   Alternatively, select "Download to device > Software (only changes)" from the shortcut menu.
+   Alternatively, select "Download to device &gt; Software (only changes)" from the shortcut menu.
 
    The compilation of the project is checked and content that has not been compiled is compiled.
 
-   The compilation result is displayed in the Inspector window under "Info > Compile".
+   The compilation result is displayed in the Inspector window under "Info &gt; Compile".
 
    The "Load Preview" dialog is displayed.
 3. Click "Download".
@@ -1266,7 +1266,7 @@ When you only download changes to a project, the relevant project must be execut
 
 The project with the Runtime add-ons it contains is downloaded to the selected HMI devices.
 
-If errors or warnings occur during the download, corresponding alarms are output under "Info > General" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are output under "Info &gt; General" in the Inspector window.
 
 Runtime continues to be executed.
 
@@ -1299,7 +1299,7 @@ Runtime continues to be executed.
 ##### Connecting HMI devices to the configuration PC
 
 1. Select an HMI device in the project tree.
-2. Select "Online > Extended download to device".
+2. Select "Online &gt; Extended download to device".
 
    The "Extended download" dialog opens.
 3. Configure the interface. Make sure that the settings match the transfer settings in the HMI device:
@@ -1318,12 +1318,12 @@ Runtime continues to be executed.
 1. Select the HMI devices using multiple selection in the project tree.
 2. To download the changes to the projects, select the "Load" button in the toolbar.
 
-   Alternatively, select "Download to device > Software (only changes)" from the shortcut menu.
-3. To download the projects completely, select "Download to device" > "Software (all)" from the shortcut menu.
+   Alternatively, select "Download to device &gt; Software (only changes)" from the shortcut menu.
+3. To download the projects completely, select "Download to device" &gt; "Software (all)" from the shortcut menu.
 
    The compilation of the projects is checked and content that has not been compiled is compiled.
 
-   The result of the compilations is displayed in the Inspector window under "Info > Compile".
+   The result of the compilations is displayed in the Inspector window under "Info &gt; Compile".
 
    The "Load Preview" dialog is displayed. All selected projects are listed in the dialog.
 4. Check the displayed default settings and adjust the settings for each device:
@@ -1372,7 +1372,7 @@ As soon as you have connected the external storage medium to your HMI device, tr
 
    A selection dialog opens.
 4. Select a target directory to save the project.
-5. Drag and drop the folder of the HMI device (e.g. "HMI_1 [<Device type>]") to the added folder.
+5. Drag and drop the folder of the HMI device (e.g. "HMI_1 [&lt;Device type&gt;]") to the added folder.
 
    Alternatively, use copy and paste.
 
@@ -1384,9 +1384,9 @@ As soon as you have connected the external storage medium to your HMI device, tr
 
 ##### Result
 
-Your project is stored as a compressed ZIP folder in the directory "[<Target directory>]\Simatic.HMI\RT_Projects". The file name is made up of the name of the HMI device, the project name and the time stamp, for example "HMI_RT_1[Project1] - Full 2020-04-03 - 14.51.41.zip".
+Your project is stored as a compressed ZIP folder in the directory "[&lt;Target directory&gt;]\Simatic.HMI\RT_Projects". The file name is made up of the name of the HMI device, the project name and the time stamp, for example "HMI_RT_1[Project1] - Full 2020-04-03 - 14.51.41.zip".
 
-If errors or warnings occur during the download, corresponding alarms are output under "Info > General" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are output under "Info &gt; General" in the Inspector window.
 
 You can find information about loading the project from the external storage medium to the Unified Comfort Panel in the operating instructions for the Unified Comfort Panel.
 
@@ -1420,9 +1420,9 @@ The options for compiling and downloading in the server project view, in the exc
 In principle, you can execute all commands for compiling and downloading in multiuser engineering and exclusive engineering:
 
 - "Software (rebuild all)"
-- "Compile > Software (only changes)"
+- "Compile &gt; Software (only changes)"
 - "Software (all)"
-- "Download to device > Software (only changes)"
+- "Download to device &gt; Software (only changes)"
 
 ##### Rules
 
@@ -1482,7 +1482,7 @@ Download failures and possible causes and remedies are listed below.
 
 | Possible cause | Remedy |
 | --- | --- |
-| Conflict between versions of the configuration software used and the operating system of the HMI device | - Synchronize the operating system of the HMI device with the version of the configuration software. - To update the operating system of the HMI device, select the command "Update operating system" in WinCC in the menu "Online > HMI device maintenance" or in the "Load preview" dialog.    You can also use ProSave.  For additional information, refer to the operating instructions for the HMI device. |
+| Conflict between versions of the configuration software used and the operating system of the HMI device | - Synchronize the operating system of the HMI device with the version of the configuration software. - To update the operating system of the HMI device, select the command "Update operating system" in WinCC in the menu "Online &gt; HMI device maintenance" or in the "Load preview" dialog.    You can also use ProSave.  For additional information, refer to the operating instructions for the HMI device. |
 | The configuration PC is connected to a wrong device, e.g. a PLC. | - Check the cabling. - Correct the communication parameters. |
 
 #### Project download fails
@@ -1562,10 +1562,10 @@ There are several ways to reduce the size of the project and save space:
 
   Check if all selected runtime languages are needed.
 
-  If necessary, you can disable the languages that you do not need under "Runtime settings > Language & Font > Runtime language and font selection".
+  If necessary, you can disable the languages that you do not need under "Runtime settings &gt; Language &amp; Font &gt; Runtime language and font selection".
 - "Software (rebuild all)"
 
-  In order to optimize the project data and to clean up obsolete changes, compile the entire project using the "Compile > Software (rebuild all)" command from the shortcut menu of the HMI device.
+  In order to optimize the project data and to clean up obsolete changes, compile the entire project using the "Compile &gt; Software (rebuild all)" command from the shortcut menu of the HMI device.
 - Reduce the number of fonts loaded
 
   Check if the number of user-defined downloaded fonts can be minimized.
@@ -1629,7 +1629,7 @@ The HMI device is delivered with preconfigured firmware and hardware.
 
 ##### Introduction
 
-The "ProSave" service tool is included in the WinCC installation. The ProSave functions are accessed in WinCC with the menu "Online > HMI Device maintenance".
+The "ProSave" service tool is included in the WinCC installation. The ProSave functions are accessed in WinCC with the menu "Online &gt; HMI Device maintenance".
 
 ##### Functional scope
 
@@ -1715,7 +1715,7 @@ A backup includes several files. The master file has the extension ".brf". The n
 
 To back up the HMI device data, follow these steps:
 
-1. Select "Online > HMI device maintenance > Save" in the menu.
+1. Select "Online &gt; HMI device maintenance &gt; Save" in the menu.
 
    The "Create backup" dialog box opens.
 2. Select the type of the PG/PC interface and the target device, and click "Create".
@@ -1731,7 +1731,7 @@ This starts the data backup. The backup operation takes some time, depending on 
 
 To restore the data of the HMI device, follow these steps:
 
-1. Select "Online > HMI device maintenance > Restore" in the menu.
+1. Select "Online &gt; HMI device maintenance &gt; Restore" in the menu.
 
    The "Restore backup" dialog box opens.
 2. Select the type of the PG/PC interface and the target device, and click "Load".
@@ -1798,7 +1798,7 @@ If possible, use the interface providing the highest bandwidth for this connecti
 
 Proceed as follows to update the operating system:
 
-1. Select "Online > HMI device maintenance > Update operating system" in the menu.
+1. Select "Online &gt; HMI device maintenance &gt; Update operating system" in the menu.
 
    The "Update operating system" dialog box opens.
 2. Select the type of the PG/PC interface and the target device, and click "Update".
@@ -1815,7 +1815,7 @@ To reset the HMI device to factory settings, follow these steps:
 
 1. Switch off the power supply for the HMI device.
 2. Connect the HMI device to the configuration PC.
-3. Select the "Update operating system" command from the menu under "Online > HMI Device maintenance" on the configuration PC in WinCC.
+3. Select the "Update operating system" command from the menu under "Online &gt; HMI Device maintenance" on the configuration PC in WinCC.
 
    The "Update operating system" dialog box opens.
 4. Select the type of the PG/PC interface and the target device, and click "Update".
@@ -1848,7 +1848,7 @@ The operating system of the HMI device is operational and up to date.
 
 ##### Introduction
 
-You can update the operating system using a data storage medium. You can find the HMI device image files, for example, in the installation directory of WinCC under: "\Siemens\Automation\Portal V1x\Data\Hmi\Transfer\<HMI device image version>\Images".
+You can update the operating system using a data storage medium. You can find the HMI device image files, for example, in the installation directory of WinCC under: "\Siemens\Automation\Portal V1x\Data\Hmi\Transfer\&lt;HMI device image version&gt;\Images".
 
 | Symbol | Meaning |
 | --- | --- |
@@ -1863,7 +1863,7 @@ You can update the operating system using a data storage medium. You can find th
 ##### Procedure
 
 1. Open the Control Panel on the HMI device.
-2. Select "Service & Commissioning > Update OS".
+2. Select "Service &amp; Commissioning &gt; Update OS".
 3. Select a storage medium under "Select storage media for OS update".
 4. Select the required HMI device image file under "Firmware files on external storage".
 5. Press "Update OS".
@@ -1908,7 +1908,7 @@ This section contains information on the following topics:
 - [Alarms (RT Unified)](#alarms-rt-unified-1)
 - [Process diagnostics (RT Unified)](#process-diagnostics-rt-unified)
 - [Services (RT Unified)](#services-rt-unified-1)
-- [Language & font (RT Unified)](#language-font-rt-unified-1)
+- [Language &amp; font (RT Unified)](#language-font-rt-unified-1)
 - [Collaboration (RT Unified)](#collaboration-rt-unified-1)
 - [Storage system (RT Unified)](#storage-system-rt-unified-1)
 - [Settings for tags (RT Unified)](#settings-for-tags-rt-unified-1)
@@ -1954,7 +1954,7 @@ Select the screen resolution. The setting of the HMI device is used by default.
 >
 > You have defined a start screen in the project and started runtime. When you define another start screen and download only changes to the device, the last active screen is displayed in runtime.
 >
-> After reloading, refresh runtime in the browser with the <F5> key or the "Update" button.
+> After reloading, refresh runtime in the browser with the &lt;F5&gt; key or the "Update" button.
 
 ---
 
@@ -1989,7 +1989,7 @@ You can manage the following options:
 
 You specify the state texts of alarms in the runtime settings. The state texts are displayed in runtime in the alarm control.
 
-Specify the state texts in other languages under "Languages & Resources > Project texts".
+Specify the state texts in other languages under "Languages &amp; Resources &gt; Project texts".
 
 ---
 
@@ -2251,7 +2251,7 @@ You manage central users in the TIA User Management Component (UMC).
 
 ##### Configuration of user management
 
-- When you activate the local user management, you use the users and user roles that you have created under "Security settings > Users and roles" for management.
+- When you activate the local user management, you use the users and user roles that you have created under "Security settings &gt; Users and roles" for management.
 - When you activate the central user management, the users, user roles and their rights are applied from the TIA User Management Component (UMC). To access the UMC, you must specify the server address and the server ID.
 
 ---
@@ -2421,12 +2421,12 @@ A project can be compiled explicitly or implicitly:
 2. There are two ways to start compiling the changes:
 
    - Press the "Compile" button in the toolbar.
-   - Select "Compile > Software (only changes)" from the shortcut menu.
+   - Select "Compile &gt; Software (only changes)" from the shortcut menu.
 
 #### Compiling a project completely
 
 1. Select an HMI device in the "Project tree" area.
-2. Select "Compile > Software (rebuild all)" from the shortcut menu.
+2. Select "Compile &gt; Software (rebuild all)" from the shortcut menu.
 
 > **Note**
 >
@@ -2437,14 +2437,14 @@ A project can be compiled explicitly or implicitly:
 1. Select the HMI devices using multiple selection in the project tree.
 2. To compile the changes to the projects, select the "Compile" button in the toolbar.
 
-   Alternatively, select "Download to device > Software (only changes)" from the shortcut menu.
-3. To compile the projects completely, select "Download to device" > "Software (rebuild all)" from the shortcut menu.
+   Alternatively, select "Download to device &gt; Software (only changes)" from the shortcut menu.
+3. To compile the projects completely, select "Download to device" &gt; "Software (rebuild all)" from the shortcut menu.
 
 #### Result
 
 The configuration data of the selected HMI devices is being compiled.
 
-If errors occur during compilation, the errors are shown in the Inspector window under "Info > Compile".
+If errors occur during compilation, the errors are shown in the Inspector window under "Info &gt; Compile".
 
 1. Correct the errors and recompile the projects.
 2. Load the compiled projects.
@@ -2527,7 +2527,7 @@ To detect and rectify such application cases, the dialog "Load Preview" contains
 
 If the runtime software "WinCC Unified PC RT" is installed on the PC, you can download multiple projects directly to the configuration PC. But you are only executing one runtime project in runtime. You can use the SIMATIC Runtime Manager to start and stop projects.
 
-Example: The "Mixing" project is loaded to the configuration PC and is being executed in runtime. When you change the "Mixing" project, download the changes using "Download to device > Software (only changes)". Runtime continues running.
+Example: The "Mixing" project is loaded to the configuration PC and is being executed in runtime. When you change the "Mixing" project, download the changes using "Download to device &gt; Software (only changes)". Runtime continues running.
 
 When you then download the "Bottling" project completely, the "Mixing" project Runtime is stopped. If you have selected the "Start runtime" option, the "Bottling" project is started.
 
@@ -2585,7 +2585,7 @@ The first download of a project is different from any subsequent download proces
 ##### Editing connection parameters before download
 
 1. Select the HMI device in the project tree.
-2. Select "Online > Extended download to device".
+2. Select "Online &gt; Extended download to device".
 
    The "Extended download" dialog opens.
 3. Enter the IP address or device name of the new target device.
@@ -2626,7 +2626,7 @@ Select whether the IDs of objects in the Engineering System and their relevant R
 ##### Initial loading of a project
 
 1. Select the HMI device in the project tree.
-2. In the toolbar, select the "Download to device" button or select "Download to device" > "Software (all)" from the shortcut menu.
+2. In the toolbar, select the "Download to device" button or select "Download to device" &gt; "Software (all)" from the shortcut menu.
 
    The "Extended download" dialog opens.
 3. Enter the address or the name of the target device. You have the following options:
@@ -2643,7 +2643,7 @@ Select whether the IDs of objects in the Engineering System and their relevant R
 
    The compilation of the project is checked and missing content is compiled.
 
-   The compilation result is displayed in the Inspector window under "Info > Compile".
+   The compilation result is displayed in the Inspector window under "Info &gt; Compile".
 
    The "Load Preview" dialog is displayed.
 6. Check the displayed default settings and change the settings as necessary:
@@ -2658,13 +2658,13 @@ Select whether the IDs of objects in the Engineering System and their relevant R
 
 **Note**
 
-When you select "Download to device" > "Software (only changes)" from the shortcut menu, the project is still downloaded completely during the initial download.
+When you select "Download to device" &gt; "Software (only changes)" from the shortcut menu, the project is still downloaded completely during the initial download.
 
 ##### Result
 
 The project is downloaded onto the selected HMI device under the file path "C:\ProgramData\SCADAProjects".
 
-If errors or warnings occur during the download, corresponding alarms are output under "Info > General" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are output under "Info &gt; General" in the Inspector window.
 
 On completion of the successful download of the project, you can execute it on the HMI device. If you have activated the start of runtime on the target system in the "Load Preview" dialog, the project is started in runtime after loading.
 
@@ -2723,11 +2723,11 @@ Make the following settings in the "Load preview" dialog during reloading:
 ##### Procedure
 
 1. Select the HMI device in the project tree.
-2. Select "Download to device > Software (all)" from the shortcut menu.
+2. Select "Download to device &gt; Software (all)" from the shortcut menu.
 
    The compilation of the project is checked and content that has not been compiled is compiled.
 
-   The compilation result is displayed in the Inspector window under "Info > Compile".
+   The compilation result is displayed in the Inspector window under "Info &gt; Compile".
 
    The "Load Preview" dialog is displayed.
 3. Check the displayed default settings and change the settings as necessary:
@@ -2759,7 +2759,7 @@ To prevent the users created in the user administration from being overwritten i
 
 The project is downloaded onto the selected HMI device under the file path "C:\ProgramData\SCADAProjects".
 
-If errors or warnings occur during the download, corresponding alarms are output under "Info > General" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are output under "Info &gt; General" in the Inspector window.
 
 After the successful download of the runtime project, you can execute it. If you have activated the start of runtime on the target system in the "Load Preview" dialog, the project is started in runtime after loading.
 
@@ -2796,11 +2796,11 @@ When you only download changes to a project, the relevant project must be execut
 1. Select the HMI device in the project tree.
 2. Press the "Download to device" button in the toolbar.
 
-   Alternatively, select "Download to device > Software (only changes)" from the shortcut menu.
+   Alternatively, select "Download to device &gt; Software (only changes)" from the shortcut menu.
 
    The compilation of the project is checked and content that has not been compiled is compiled.
 
-   The compilation result is displayed in the Inspector window under "Info > Compile".
+   The compilation result is displayed in the Inspector window under "Info &gt; Compile".
 
    The "Load Preview" dialog is displayed.
 3. Click "Download".
@@ -2809,11 +2809,11 @@ When you only download changes to a project, the relevant project must be execut
 
 The changes are downloaded onto the selected HMI device under the file path "C:\ProgramData\SCADAProjects".
 
-If errors or warnings occur during the download, corresponding alarms are output under "Info > General" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are output under "Info &gt; General" in the Inspector window.
 
 Runtime continues to be executed.
 
-Update Runtime in the browser with the <F5> key or by pressing the "Update" button to see the changes in runtime.
+Update Runtime in the browser with the &lt;F5&gt; key or by pressing the "Update" button to see the changes in runtime.
 
 ---
 
@@ -2835,7 +2835,7 @@ Update Runtime in the browser with the <F5> key or by pressing the "Update" butt
 ##### Connecting WinCC Unified PCs to the configuration PC
 
 1. Select a WinCC Unified PC in the project tree.
-2. Select "Online > Extended download to device".
+2. Select "Online &gt; Extended download to device".
 
    The "Extended download" dialog opens.
 3. Enter the address or the name of the target device. You have the following options:
@@ -2854,12 +2854,12 @@ Update Runtime in the browser with the <F5> key or by pressing the "Update" butt
 1. Select the WinCC Unified PCs using multiple selection in the project tree.
 2. To download the changes to the projects, select the "Load" button in the toolbar.
 
-   Alternatively, select "Download to device > Software (only changes)" from the shortcut menu.
-3. To download the projects completely, select "Download to device" > "Software (all)" from the shortcut menu.
+   Alternatively, select "Download to device &gt; Software (only changes)" from the shortcut menu.
+3. To download the projects completely, select "Download to device" &gt; "Software (all)" from the shortcut menu.
 
    The compilation of the projects is checked and content that has not been compiled is compiled.
 
-   The result of the compilations is displayed in the Inspector window under "Info > Compile".
+   The result of the compilations is displayed in the Inspector window under "Info &gt; Compile".
 
    The "Load Preview" dialog is displayed. All selected projects are listed in the dialog.
 4. Check the displayed default settings and adjust the settings for each device:
@@ -2917,7 +2917,7 @@ As soon as you have connected the external storage medium to your HMI device, tr
 
    A selection dialog opens.
 3. Select a target directory to save the project.
-4. Drag and drop the HMI device (e.g. "HMI_1 [<Device type>]") to the added folder.
+4. Drag and drop the HMI device (e.g. "HMI_1 [&lt;Device type&gt;]") to the added folder.
 
    Alternatively, use copy and paste.
 
@@ -2932,12 +2932,12 @@ As soon as you have connected the external storage medium to your HMI device, tr
 
 ###### Result
 
-Your project is stored as a compressed ZIP folder in the directory "[<Target directory>]\Simatic.HMI\RT_Projects". The file name is made up of the name of the HMI device, the project name and the time stamp:
+Your project is stored as a compressed ZIP folder in the directory "[&lt;Target directory&gt;]\Simatic.HMI\RT_Projects". The file name is made up of the name of the HMI device, the project name and the time stamp:
 
 - Projects that were created with the option "Full download" receive as file name e.g. "HMI_RT_1[Project1] - Full 2020-04-03 - 14.51.41.zip".
 - Projects that were created with the option "Delta download" receive as file name e.g. "HMI_RT_1[Project1] - Delta 2020-04-03 - 14.53.45.zip".
 
-If errors or warnings occur during the download, corresponding alarms are output under "Info > General" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are output under "Info &gt; General" in the Inspector window.
 
 ---
 
@@ -2985,9 +2985,9 @@ The options for compiling and downloading in the server project view, in the exc
 You can execute all commands for compiling and downloading in multiuser engineering and exclusive engineering:
 
 - "Software (rebuild all)"
-- "Compile > Software (only changes)"
+- "Compile &gt; Software (only changes)"
 - "Software (all)"
-- "Download to device > Software (only changes)"
+- "Download to device &gt; Software (only changes)"
 
 ##### Rules
 
@@ -3096,7 +3096,7 @@ To start the Runtime of the downloaded Runtime project with the SIMATIC Runtime 
 
 You have two options for stopping a project Runtime:
 
-- Select the "Online > Stop runtime/simulation" button in the Engineering System.
+- Select the "Online &gt; Stop runtime/simulation" button in the Engineering System.
 - Select the "Stop" button in the "SIMATIC Runtime Manager".
 
 ---
@@ -3198,7 +3198,7 @@ The configuration is completed.
 
 To test the configuration in runtime, follow these steps:
 
-1. Select the PLC in the project tree and select "Online > Start simulation" in the menu.
+1. Select the PLC in the project tree and select "Online &gt; Start simulation" in the menu.
 
    PLCSIM starts and the "Extended download to device" dialog is displayed.
 2. Start the search with "Start search".
@@ -3207,7 +3207,7 @@ To test the configuration in runtime, follow these steps:
 3. Select the simulated PLC and select the "Download" command.
 
    PLCSIM is now ready for operation.
-4. Select the HMI device in the project tree and select "Online > Download to device" in the menu.
+4. Select the HMI device in the project tree and select "Online &gt; Download to device" in the menu.
 
    The "Load Preview" dialog is displayed.
 5. Select the desired settings and load the project into the HMI device.

@@ -52,8 +52,8 @@ The Motion Control instruction "MC_Power" enables or disables an axis.
 
 For PROFIdrive drive or analog drive connection:
 
-- Cyclic BUS communication is established between controller and encoder ("<Axis name> .StatusSensor[1].CommunicationOK" = TRUE).
-- Cyclic BUS communication is established between controller and drive ("<Axis name> .StatusDrive.CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and encoder ("&lt;Axis name&gt; .StatusSensor[1].CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and drive ("&lt;Axis name&gt; .StatusDrive.CommunicationOK" = TRUE).
 
 ##### Override response
 
@@ -72,7 +72,7 @@ Disabling the axis (input parameter "Enable" = FALSE) aborts all Motion Contro
 | 1 | Enable positioning axis position-controlled *) |  |  |  |  |
 | *) This parameter is ignored when a positioning axis with PTO (Pulse Train Output) drive is used.  The parameter initially takes effect when the positioning axis is enabled (Enable changes from FALSE to TRUE) and when the axis is enabled after successful acknowledgment of an interrupt that caused the axis to be disabled. |  |  |  |  |  |
 | StopMode | INPUT | INT | 0 | 0 | Emergency stop  If a request to disable the axis is pending, the axis brakes at the configured emergency deceleration. The axis is disabled after reaching standstill. |
-| 1 | Immediate stop  If a request to disable the axis is pending, this setpoint zero is output and the axis is disabled. The axis is braked depending on the configuration in the drive, and is brought to a standstill.  With drive connection via PTO (Pulse Train Output): When you disable the axis, the pulse output is stopped with a frequency-dependent deceleration:  - Output frequency ≥ 100 Hz   Deceleration: max. 30 ms - Output frequency < 100 Hz   Deceleration: 30 ms up to max. 1.5 s at 2 Hz |  |  |  |  |
+| 1 | Immediate stop  If a request to disable the axis is pending, this setpoint zero is output and the axis is disabled. The axis is braked depending on the configuration in the drive, and is brought to a standstill.  With drive connection via PTO (Pulse Train Output): When you disable the axis, the pulse output is stopped with a frequency-dependent deceleration:  - Output frequency ≥ 100 Hz   Deceleration: max. 30 ms - Output frequency &lt; 100 Hz   Deceleration: 30 ms up to max. 1.5 s at 2 Hz |  |  |  |  |
 | 2 | Emergency stop with jerk control  If a request to disable the axis is pending, the axis brakes at the configured emergency deceleration. If the jerk control is activated, the configured jerk is taken into account. The axis is disabled after reaching standstill. |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Status of axis enable |  |
 | FALSE | The axis is disabled.  The axis does not execute Motion Control commands and does not accept any new commands (exception: MC_Reset command)  For drive connection via PTO (Pulse Train Output):  The axis is not homed.  Upon disabling, the status does not change to FALSE until the axis reaches a standstill. |  |  |  |  |
@@ -95,14 +95,14 @@ To enable the axis, follow these steps:
 
    The enable output for "Drive enabled" changes to TRUE to enable the power to the drive. The CPU waits for the "Drive ready" signal of the drive.
 
-   When the "Drive ready" signal is available at the configured ready input of the CPU, the axis is enabled. The output parameter "Status" and the variable of the technology object <axis name>.StatusBits.Enable indicate the value TRUE.
+   When the "Drive ready" signal is available at the configured ready input of the CPU, the axis is enabled. The output parameter "Status" and the variable of the technology object &lt;axis name&gt;.StatusBits.Enable indicate the value TRUE.
 
 ##### Enabling an axis without configured drive interface
 
 To enable the axis, follow these steps:
 
 1. Check the requirements indicated above.
-2. Initialize input parameters "StartMode" and "StopMode" with the desired value. Set the input parameter "Enable" to TRUE. The axis is enabled. The output parameter "Status" and the variable of the technology object <axis name>.StatusBits.Enable indicate the value TRUE.
+2. Initialize input parameters "StartMode" and "StopMode" with the desired value. Set the input parameter "Enable" to TRUE. The axis is enabled. The output parameter "Status" and the variable of the technology object &lt;axis name&gt;.StatusBits.Enable indicate the value TRUE.
 
 ##### Disabling an axis
 
@@ -110,9 +110,9 @@ To disable an axis, you can follow the steps described below:
 
 1. Bring the axis to a standstill.
 
-   You can identify when the axis is at a standstill in the variable of the technology object <axis name>.StatusBits.StandStill.
+   You can identify when the axis is at a standstill in the variable of the technology object &lt;axis name&gt;.StatusBits.StandStill.
 2. Set input parameter "Enable" to FALSE after standstill is reached.
-3. If output parameters "Busy" and "Status" and variable of technology object <axis name>.StatusBits.Enable indicate the value FALSE, disabling of the axis is complete.
+3. If output parameters "Busy" and "Status" and variable of technology object &lt;axis name&gt;.StatusBits.Enable indicate the value FALSE, disabling of the axis is complete.
 
 ---
 
@@ -197,7 +197,7 @@ To acknowledge an error, follow these steps:
 
 1. Check the requirements indicated above.
 2. Start the acknowledgment of the error with a rising edge at input parameter "Execute". With MC_Reset as of V7.0 or higher you can acknowledge switch-on prevention errors on the configured encoder or drive before the axis is enabled.
-3. If output parameter "Done" indicates the value TRUE and tag of technology object <Axis name>.StatusBits.Error the value FALSE, the error has been acknowledged.
+3. If output parameter "Done" indicates the value TRUE and tag of technology object &lt;Axis name&gt;.StatusBits.Error the value FALSE, the error has been acknowledged.
 
 > **Note**
 >
@@ -327,10 +327,10 @@ The new MC_Home command aborts the following active Motion Control commands:
 | Mode | INPUT | INT | 0 | Homing mode |  |
 | 0 | Direct homing (absolute)  New axis position is the position value of parameter "Position". |  |  |  |  |
 | 1 | Direct homing (relative)  New axis position is the current axis position + position value of parameter "Position". |  |  |  |  |
-| 2 | Passive homing  Homing according to the axis configuration. Following homing, the value of parameter "Position" is set as the new axis position.  With an already referenced axis <axis name>.StatusBits.HomingDone = TRUE this status bit remains set during an additional passive homing. |  |  |  |  |
+| 2 | Passive homing  Homing according to the axis configuration. Following homing, the value of parameter "Position" is set as the new axis position.  With an already referenced axis &lt;axis name&gt;.StatusBits.HomingDone = TRUE this status bit remains set during an additional passive homing. |  |  |  |  |
 | 3 | Active homing  Homing procedure in accordance with the axis configuration. Following homing, the value of parameter "Position" is set as the new axis position. |  |  |  |  |
-| 6 | Absolute encoder adjustment (relative)  The current axis position is offset by the value of parameter "Position". The calculated absolute value offset is stored retentively in the CPU. (<AxisName>.StatusSensor.AbsEncoderOffset) |  |  |  |  |
-| 7 | Absolute encoder adjustment (absolute)  The current axis position is set to the value of parameter "Position". The calculated absolute value offset is stored retentively in the CPU. (<AxisName>.StatusSensor.AbsEncoderOffset) |  |  |  |  |
+| 6 | Absolute encoder adjustment (relative)  The current axis position is offset by the value of parameter "Position". The calculated absolute value offset is stored retentively in the CPU. (&lt;AxisName&gt;.StatusSensor.AbsEncoderOffset) |  |  |  |  |
+| 7 | Absolute encoder adjustment (absolute)  The current axis position is set to the value of parameter "Position". The calculated absolute value offset is stored retentively in the CPU. (&lt;AxisName&gt;.StatusSensor.AbsEncoderOffset) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Command completed |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The command is being executed |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | During execution, the command was aborted by another command. |
@@ -341,7 +341,7 @@ The new MC_Home command aborts the following active Motion Control commands:
 
 ##### Resetting the "Homed" status
 
-The "Homed" status of a technology object (<Axis name>.StatusBits.HomingDone) is reset under the following conditions:
+The "Homed" status of a technology object (&lt;Axis name&gt;.StatusBits.HomingDone) is reset under the following conditions:
 
 - **Drive connection via** 
   **PTO (Pulse Train Output)**
@@ -378,7 +378,7 @@ To home the axis, follow these stops:
 
 1. Check the requirements indicated above.
 2. Provide the necessary input parameters with values and start the homing operation with a rising edge at input parameter "Execute".
-3. If output parameter "Done" and technology object variable <axis name>.StatusBits.HomingDone indicate the value TRUE, homing is complete. The reference position can be taken from the <axis name>.ReferenceMarkPosition variable.
+3. If output parameter "Done" and technology object variable &lt;axis name&gt;.StatusBits.HomingDone indicate the value TRUE, homing is complete. The reference position can be taken from the &lt;axis name&gt;.ReferenceMarkPosition variable.
 
 ---
 
@@ -491,7 +491,7 @@ The new MC_Halt command aborts the following active Motion Control commands:
 
 ![Function chart](images/103748990731_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 5.0
@@ -550,7 +550,7 @@ The new MC_MoveAbsolute command aborts the following active Motion Control comma
 | Execute | INPUT | BOOL | FALSE | Start of the command with a positive edge |  |
 | Position | INPUT | REAL | 0.0 | Absolute target position  Limit values:   -1.0E12 ≤ Position ≤ 1.0E12 |  |
 | Velocity | INPUT | REAL | 10.0 | Velocity of axis  This velocity is not always reached on account of the configured acceleration and deceleration and the target position to be approached.  Limit values:  Start/stop velocity ≤ Velocity ≤ maximum velocity |  |
-| Direction | INPUT | INT | 1 | Motion direction of the axis  Is only evaluated with "modulo" enabled. "Technology object > Configuration > Extended parameters > Modulo > Enable Modulo"  Parameter is ignored with PTO axes. |  |
+| Direction | INPUT | INT | 1 | Motion direction of the axis  Is only evaluated with "modulo" enabled. "Technology object &gt; Configuration &gt; Extended parameters &gt; Modulo &gt; Enable Modulo"  Parameter is ignored with PTO axes. |  |
 | 0 | The sign for the velocity ("Velocity" parameter) determines the motion direction. |  |  |  |  |
 | 1 | Positive direction  (Target position is approached in a positive direction) |  |  |  |  |
 | 2 | Negative direction  (Target position is approached in a negative direction) |  |  |  |  |
@@ -594,7 +594,7 @@ The new MC_MoveAbsolute command aborts the following active Motion Control comma
 
 ![Function chart](images/104080647691_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 10.0
@@ -691,7 +691,7 @@ The new MC_MoveRelative command aborts the following active Motion Control comma
 
 ![Function chart](images/104081658635_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 10.0
@@ -815,7 +815,7 @@ When the "MC_MoveVelocity" command is started, status bit "SpeedCommand" is set 
 
 ![Function chart](images/104084435211_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 10.0
@@ -916,7 +916,7 @@ The new MC_MoveJog command aborts the following active Motion Control commands:
 
 ![Function chart](images/104088389387_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 5.0
@@ -1049,13 +1049,13 @@ A new MC_ChangeDynamic command does not abort any active Motion Control commands
 | Axis | INPUT | TO_SpeedAxis | - | Axis technology object |  |  |
 | Execute | INPUT | BOOL | FALSE | Start of the command with a positive edge |  |  |
 | ChangeRampUp | INPUT | BOOL | FALSE | TRUE |  | Change ramp-up time in line with input parameter "RampUpTime" |
-| RampUpTime | INPUT | REAL | 5.00 | Time (in seconds) to accelerate axis from standstill to configured maximum velocity without jerk limit.  The change will influence the tag <Axis name>. Config.DynamicDefaults.Acceleration. For the effectiveness of the change, refer to the description of this tag. |  |  |
+| RampUpTime | INPUT | REAL | 5.00 | Time (in seconds) to accelerate axis from standstill to configured maximum velocity without jerk limit.  The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.Acceleration. For the effectiveness of the change, refer to the description of this tag. |  |  |
 | ChangeRampDown | INPUT | BOOL | FALSE | TRUE |  | Change ramp-down time to correspond to input parameter "RampDownTime" |
-| RampDownTime | INPUT | REAL | 5.00 | Time (in seconds) to decelerate axis from the configured maximum velocity to standstill without jerk limiter.  The change will influence the tag <Axis name>. Config.DynamicDefaults.Deceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
+| RampDownTime | INPUT | REAL | 5.00 | Time (in seconds) to decelerate axis from the configured maximum velocity to standstill without jerk limiter.  The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.Deceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
 | ChangeEmergency | INPUT | BOOL | FALSE | TRUE |  | Change emergency stop ramp-down time in line with input parameter "EmergencyRampTime" |
-| EmergencyRampTime | INPUT | REAL | 2.00 | Time (in seconds) to decelerate the axis from configured maximum velocity to standstill without jerk limiter in emergency stop mode.   The change will influence the tag <Axis name>. Config.DynamicDefaults.EmergencyDeceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
+| EmergencyRampTime | INPUT | REAL | 2.00 | Time (in seconds) to decelerate the axis from configured maximum velocity to standstill without jerk limiter in emergency stop mode.   The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.EmergencyDeceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
 | ChangeJerkTime | INPUT | BOOL | FALSE | TRUE |  | Change smoothing time according to the input parameter "JerkTime" |
-| JerkTime | INPUT | REAL | 0.25 | Smoothing time (in seconds) used for the axis acceleration and deceleration ramps  The change will influence the tag <Axis name>. Config.DynamicDefaults.Jerk . For the effectiveness of the change, refer to the description of this tag. |  |  |
+| JerkTime | INPUT | REAL | 0.25 | Smoothing time (in seconds) used for the axis acceleration and deceleration ramps  The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.Jerk . For the effectiveness of the change, refer to the description of this tag. |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | The changed values have been written to the technology data block. The description of the tags will show when the change becomes effective. |  |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred during execution of the command. The cause of the error can be found in parameters "ErrorID" and "ErrorInfo". |  |
 | ErrorID | OUTPUT | WORD | 16#0000 | Error ID for parameter "Error" |  |  |
@@ -1139,7 +1139,7 @@ A new MC_ReadParam command does not abort any active Motion Control commands.
 | --- | --- | --- | --- | --- | --- |
 | Enable | INPUT | BOOL | FALSE | TRUE | Read the tag specified with the "Parameter" and store the value in the destination address specified with "Value". |
 | FALSE | Do not update assigned motion data |  |  |  |  |
-| Parameter | INPUT | VARIANT (REAL) | - | VARIANT pointer to the value to be read. The following tags are permitted:   - <Axis name>.Position - <Axis name>.Velocity - <Axis name>.ActualPosition - <Axis name>.ActualVelocity - <Axis name>.StatusPositioning.<Tag name> - <Axis name>.StatusDrive.<Tag name> - <Axis name>.StatusSensor.<Tag name> - <Axis name>.StatusBits.<Tag name> - <Axis name>.ErrorBits.<Tag name>   The description of the tags named and the tag structures can be found in the Appendix AUTOHOTSPOT. |  |
+| Parameter | INPUT | VARIANT (REAL) | - | VARIANT pointer to the value to be read. The following tags are permitted:   - &lt;Axis name&gt;.Position - &lt;Axis name&gt;.Velocity - &lt;Axis name&gt;.ActualPosition - &lt;Axis name&gt;.ActualVelocity - &lt;Axis name&gt;.StatusPositioning.&lt;Tag name&gt; - &lt;Axis name&gt;.StatusDrive.&lt;Tag name&gt; - &lt;Axis name&gt;.StatusSensor.&lt;Tag name&gt; - &lt;Axis name&gt;.StatusBits.&lt;Tag name&gt; - &lt;Axis name&gt;.ErrorBits.&lt;Tag name&gt;   The description of the tags named and the tag structures can be found in the Appendix AUTOHOTSPOT. |  |
 | Value | INOUT | VARIANT (REAL) | - | VARIANT pointer to the target tag or destination address to which the read value is to be written. |  |
 | Valid | OUTPUT | BOOL | FALSE | TRUE | The read value is valid. |
 | FALSE | The read value is invalid. |  |  |  |  |
@@ -1288,7 +1288,7 @@ Disabling the axis (input parameter "Enable" = FALSE) aborts all Motion Contro
 | Enable | INPUT | BOOL | FALSE | TRUE | The axis is enabled. |
 | FALSE | All current jobs are interrupted in accordance with the "StopMode" configured. The axis is stopped and disabled. |  |  |  |  |
 | StopMode | INPUT | INT | 0 | 0 | Emergency stop  If a request to disable the axis is pending, the axis brakes at the configured emergency deceleration. The axis is disabled after reaching standstill. |
-| 1 | Immediate stop  If a request to disable the axis is pending, this setpoint zero is output and the axis is disabled. The axis is braked depending on the configuration in the drive, and is brought to a standstill.  With drive connection via PTO (Pulse Train Output): When you disable the axis, the pulse output is stopped with a frequency-dependent deceleration:  - Output frequency ≥ 100 Hz   Deceleration: max. 30 ms - Output frequency < 100 Hz   Deceleration: 30 ms up to max. 1.5 s at 2 Hz |  |  |  |  |
+| 1 | Immediate stop  If a request to disable the axis is pending, this setpoint zero is output and the axis is disabled. The axis is braked depending on the configuration in the drive, and is brought to a standstill.  With drive connection via PTO (Pulse Train Output): When you disable the axis, the pulse output is stopped with a frequency-dependent deceleration:  - Output frequency ≥ 100 Hz   Deceleration: max. 30 ms - Output frequency &lt; 100 Hz   Deceleration: 30 ms up to max. 1.5 s at 2 Hz |  |  |  |  |
 | 2 | Emergency stop with jerk control  If a request to disable the axis is pending, the axis brakes at the configured emergency deceleration. If the jerk control is activated, the configured jerk is taken into account. The axis is disabled after reaching standstill. |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Status of axis enable |  |
 | FALSE | The axis is disabled.  The axis does not execute Motion Control commands and does not accept any new commands (exception: MC_Reset command).  For drive connection via PTO (Pulse Train Output):  The axis is not homed.  Upon disabling, the status does not change to FALSE until the axis reaches a standstill. |  |  |  |  |
@@ -1311,14 +1311,14 @@ To enable the axis, follow these steps:
 
    The enable output for "Drive enabled" changes to TRUE to enable the power to the drive. The CPU waits for the "Drive ready" signal of the drive.
 
-   When the "Drive ready" signal is available at the configured ready input of the CPU, the axis is enabled. The output parameter "Status" and the tag of the technology object <Axis name>.StatusBits.Enable indicate the value TRUE.
+   When the "Drive ready" signal is available at the configured ready input of the CPU, the axis is enabled. The output parameter "Status" and the tag of the technology object &lt;Axis name&gt;.StatusBits.Enable indicate the value TRUE.
 
 ##### Enabling an axis without configured drive interface
 
 To enable the axis, follow these steps:
 
 1. Check the requirements indicated above.
-2. Initialize input parameter "StopMode" with the desired value. Set the input parameter "Enable" to TRUE. The axis is enabled. The output parameter "Status" and the tag of the technology object <Axis name>.StatusBits.Enable indicate the value TRUE.
+2. Initialize input parameter "StopMode" with the desired value. Set the input parameter "Enable" to TRUE. The axis is enabled. The output parameter "Status" and the tag of the technology object &lt;Axis name&gt;.StatusBits.Enable indicate the value TRUE.
 
 ##### Disabling an axis
 
@@ -1326,9 +1326,9 @@ To disable an axis, you can follow the steps described below:
 
 1. Bring the axis to a standstill.
 
-   You can identify when the axis is at a standstill in the tag of the technology object <Axis name>.StatusBits.StandStill.
+   You can identify when the axis is at a standstill in the tag of the technology object &lt;Axis name&gt;.StatusBits.StandStill.
 2. Set input parameter "Enable" to FALSE after standstill is reached.
-3. If output parameters "Busy" and "Status" and tag of technology object <Axis name>.StatusBits.Enable indicate the value FALSE, disabling of the axis is complete.
+3. If output parameters "Busy" and "Status" and tag of technology object &lt;Axis name&gt;.StatusBits.Enable indicate the value FALSE, disabling of the axis is complete.
 
 ---
 
@@ -1422,7 +1422,7 @@ To acknowledge an error, follow these steps:
 
 1. Check the requirements indicated above.
 2. Start the acknowledgment of the error with a rising edge at input parameter "Execute".
-3. If output parameter "Done" indicates the value TRUE and tag of technology object <Axis name>.StatusBits.Error the value FALSE, the error has been acknowledged.
+3. If output parameter "Done" indicates the value TRUE and tag of technology object &lt;Axis name&gt;.StatusBits.Error the value FALSE, the error has been acknowledged.
 
 ---
 
@@ -1548,8 +1548,8 @@ The new MC_Home command aborts the following active Motion Control commands:
 | 1 | Direct homing (relative)  New axis position is the current axis position + position value of parameter "Position". |  |  |  |  |
 | 2 | Passive homing  Homing according to the axis configuration. Following homing, the value of parameter "Position" is set as the new axis position. |  |  |  |  |
 | 3 | Active homing  Homing procedure in accordance with the axis configuration. Following homing, the value of parameter "Position" is set as the new axis position. |  |  |  |  |
-| 6 | Absolute encoder adjustment (relative)  The current axis position is offset by the value of parameter "Position". The calculated absolute value offset is stored retentively in the CPU. (<AxisName>.StatusSensor.AbsEncoderOffset) |  |  |  |  |
-| 7 | Absolute encoder adjustment (absolute)  The current axis position is set to the value of parameter "Position". The calculated absolute value offset is stored retentively in the CPU. (<AxisName>.StatusSensor.AbsEncoderOffset) |  |  |  |  |
+| 6 | Absolute encoder adjustment (relative)  The current axis position is offset by the value of parameter "Position". The calculated absolute value offset is stored retentively in the CPU. (&lt;AxisName&gt;.StatusSensor.AbsEncoderOffset) |  |  |  |  |
+| 7 | Absolute encoder adjustment (absolute)  The current axis position is set to the value of parameter "Position". The calculated absolute value offset is stored retentively in the CPU. (&lt;AxisName&gt;.StatusSensor.AbsEncoderOffset) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Command completed |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The command is being executed |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | During execution, the command was aborted by another command. |
@@ -1559,7 +1559,7 @@ The new MC_Home command aborts the following active Motion Control commands:
 
 ##### Resetting the "Homed" status
 
-The "Homed" status of a technology object (<Axis name>.StatusBits.HomingDone) is reset under the following conditions:
+The "Homed" status of a technology object (&lt;Axis name&gt;.StatusBits.HomingDone) is reset under the following conditions:
 
 - **Drive connection via** 
   **PTO (Pulse Train Output)**
@@ -1570,8 +1570,8 @@ The "Homed" status of a technology object (<Axis name>.StatusBits.HomingDone) is
     (After successful completion of the homing operation, the "Homed" status is set again.)
   - Disabling of axis by the "MC_Power" Motion Control instruction
   - Changeover between automatic mode and manual control
-  - After POWER OFF -> POWER ON of the CPU
-  - After CPU restart (RUN-STOP -> STOP-RUN)
+  - After POWER OFF -&gt; POWER ON of the CPU
+  - After CPU restart (RUN-STOP -&gt; STOP-RUN)
 - **Technology objects with incremental actual values:**
 
   - Start an "MC_Home" command for active homing
@@ -1596,7 +1596,7 @@ To home the axis, follow these stops:
 
 1. Check the requirements indicated above.
 2. Provide the necessary input parameters with values and start the homing operation with a rising edge at input parameter "Execute".
-3. If output parameter "Done" and technology object tag <Axis name>.StatusBits.HomingDone indicate the value TRUE, homing is complete.
+3. If output parameter "Done" and technology object tag &lt;Axis name&gt;.StatusBits.HomingDone indicate the value TRUE, homing is complete.
 
 ---
 
@@ -1715,7 +1715,7 @@ The new MC_Halt command aborts the following active Motion Control commands:
 
 ![Function chart](images/88122172043_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 5.0
@@ -1823,7 +1823,7 @@ The new MC_MoveAbsolute command aborts the following active Motion Control comma
 
 ![Function chart](images/59361187339_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 10.0
@@ -1930,7 +1930,7 @@ The new MC_MoveRelative command aborts the following active Motion Control comma
 
 ![Function chart](images/104081658635_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 10.0
@@ -2061,7 +2061,7 @@ When the "MC_MoveVelocity" command is started, status bit "SpeedCommand" is set 
 
 ![Function chart](images/59361525515_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 10.0
@@ -2169,7 +2169,7 @@ The new MC_MoveJog command aborts the following active Motion Control commands:
 
 ![Function chart](images/59361745419_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 5.0
@@ -2310,13 +2310,13 @@ A new MC_ChangeDynamic command does not abort any active Motion Control commands
 | Axis | INPUT | TO_SpeedAxis | - | Axis technology object |  |  |
 | Execute | INPUT | BOOL | FALSE | Start of the command with a positive edge |  |  |
 | ChangeRampUp | INPUT | BOOL | FALSE | TRUE |  | Change ramp-up time in line with input parameter "RampUpTime" |
-| RampUpTime | INPUT | REAL | 5.00 | Time (in seconds) to accelerate axis from standstill to configured maximum velocity without jerk limit.  The change will influence the tag <Axis name>. Config.DynamicDefaults.Acceleration. For the effectiveness of the change, refer to the description of this tag. |  |  |
+| RampUpTime | INPUT | REAL | 5.00 | Time (in seconds) to accelerate axis from standstill to configured maximum velocity without jerk limit.  The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.Acceleration. For the effectiveness of the change, refer to the description of this tag. |  |  |
 | ChangeRampDown | INPUT | BOOL | FALSE | TRUE |  | Change ramp-down time to correspond to input parameter "RampDownTime" |
-| RampDownTime | INPUT | REAL | 5.00 | Time (in seconds) to decelerate axis from the configured maximum velocity to standstill without jerk limiter.  The change will influence the tag <Axis name>. Config.DynamicDefaults.Deceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
+| RampDownTime | INPUT | REAL | 5.00 | Time (in seconds) to decelerate axis from the configured maximum velocity to standstill without jerk limiter.  The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.Deceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
 | ChangeEmergency | INPUT | BOOL | FALSE | TRUE |  | Change emergency stop ramp-down time in line with input parameter "EmergencyRampTime" |
-| EmergencyRampTime | INPUT | REAL | 2.00 | Time (in seconds) to decelerate the axis from configured maximum velocity to standstill without jerk limiter in emergency stop mode.   The change will influence the tag <Axis name>. Config.DynamicDefaults.EmergencyDeceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
+| EmergencyRampTime | INPUT | REAL | 2.00 | Time (in seconds) to decelerate the axis from configured maximum velocity to standstill without jerk limiter in emergency stop mode.   The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.EmergencyDeceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
 | ChangeJerkTime | INPUT | BOOL | FALSE | TRUE |  | Change smoothing time according to the input parameter "JerkTime" |
-| JerkTime | INPUT | REAL | 0.25 | Smoothing time (in seconds) used for the axis acceleration and deceleration ramps  The change will influence the tag <Axis name>. Config.DynamicDefaults.Jerk . For the effectiveness of the change, refer to the description of this tag. |  |  |
+| JerkTime | INPUT | REAL | 0.25 | Smoothing time (in seconds) used for the axis acceleration and deceleration ramps  The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.Jerk . For the effectiveness of the change, refer to the description of this tag. |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | The changed values have been written to the technology data block. The description of the tags will show when the change becomes effective. |  |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred during execution of the command. The cause of the error can be found in parameters "ErrorID" and "ErrorInfo". |  |
 | ErrorID | OUTPUT | WORD | 16#0000 | Error ID for parameter "Error" |  |  |
@@ -2402,7 +2402,7 @@ A new MC_ReadParam command does not abort any active Motion Control commands.
 | --- | --- | --- | --- | --- | --- |
 | Enable | INPUT | BOOL | FALSE | TRUE | Read the tag specified with the "Parameter" and store the value in the destination address specified with "Value". |
 | FALSE | Do not update assigned motion data |  |  |  |  |
-| Parameter | INPUT | VARIANT (REAL) | - | VARIANT pointer to the value to be read. The following tags are permitted:   - <Axis name>.Position - <Axis name>.Velocity - <Axis name>.ActualPosition - <Axis name>.ActualVelocity - <Axis name>.StatusPositioning.<Tag name> - <Axis name>.StatusDrive.<Tag name> - <Axis name>.StatusSensor.<Tag name> - <Axis name>.StatusBits.<Tag name> - <Axis name>.ErrorBits.<Tag name>   The description of the tags named and the tag structures can be found in the Appendix AUTOHOTSPOT. |  |
+| Parameter | INPUT | VARIANT (REAL) | - | VARIANT pointer to the value to be read. The following tags are permitted:   - &lt;Axis name&gt;.Position - &lt;Axis name&gt;.Velocity - &lt;Axis name&gt;.ActualPosition - &lt;Axis name&gt;.ActualVelocity - &lt;Axis name&gt;.StatusPositioning.&lt;Tag name&gt; - &lt;Axis name&gt;.StatusDrive.&lt;Tag name&gt; - &lt;Axis name&gt;.StatusSensor.&lt;Tag name&gt; - &lt;Axis name&gt;.StatusBits.&lt;Tag name&gt; - &lt;Axis name&gt;.ErrorBits.&lt;Tag name&gt;   The description of the tags named and the tag structures can be found in the Appendix AUTOHOTSPOT. |  |
 | Value | INOUT | VARIANT (REAL) | - | VARIANT pointer to the target tag or destination address to which the read value is to be written. |  |
 | Valid | OUTPUT | BOOL | FALSE | TRUE | The read value is valid. |
 | FALSE | The read value is invalid. |  |  |  |  |
@@ -2575,14 +2575,14 @@ To enable the axis, follow these steps:
 
    The enable output for "Drive enabled" changes to TRUE to enable the power to the drive. The CPU waits for the "Drive ready" signal of the drive.
 
-   When the "Drive ready" signal is available at the configured Ready input of the CPU, the axis is enabled. The output parameter "Status" and the tag of the technology object <Axis name>.StatusBits.Enable indicate the value TRUE.
+   When the "Drive ready" signal is available at the configured Ready input of the CPU, the axis is enabled. The output parameter "Status" and the tag of the technology object &lt;Axis name&gt;.StatusBits.Enable indicate the value TRUE.
 
 ##### Enabling an axis without configured drive interface
 
 To enable the axis, follow these steps:
 
 1. Check the requirements indicated above.
-2. Initialize input parameter "StopMode" with the desired value. Set the input parameter "Enable" to TRUE. The axis is enabled. The output parameter "Status" and the tag of the technology object <Axis name>.StatusBits.Enable indicate the value TRUE.
+2. Initialize input parameter "StopMode" with the desired value. Set the input parameter "Enable" to TRUE. The axis is enabled. The output parameter "Status" and the tag of the technology object &lt;Axis name&gt;.StatusBits.Enable indicate the value TRUE.
 
 ##### Disabling an axis
 
@@ -2590,9 +2590,9 @@ To disable an axis, you can follow the steps described below:
 
 1. Bring the axis to a standstill.
 
-   You can identify when the axis is at a standstill in the tag of the technology object <Axis name>.StatusBits.StandStill.
+   You can identify when the axis is at a standstill in the tag of the technology object &lt;Axis name&gt;.StatusBits.StandStill.
 2. Set input parameter "Enable" to FALSE after standstill is reached.
-3. If output parameters "Busy" and "Status" and the tag of technology object <Axis name>.StatusBits.Enable indicate the value FALSE, disabling of the axis is complete.
+3. If output parameters "Busy" and "Status" and the tag of technology object &lt;Axis name&gt;.StatusBits.Enable indicate the value FALSE, disabling of the axis is complete.
 
 ---
 
@@ -2683,7 +2683,7 @@ To acknowledge an error, follow these steps:
 
 1. Check the requirements indicated above.
 2. Start the acknowledgement of the error with a rising edge at input parameter "Execute".
-3. If output parameter "Done" indicates the value TRUE and tag of technology object <Axis name>.StatusBits.Error the value FALSE, the error has been acknowledged.
+3. If output parameter "Done" indicates the value TRUE and tag of technology object &lt;Axis name&gt;.StatusBits.Error the value FALSE, the error has been acknowledged.
 
 ---
 
@@ -2813,8 +2813,8 @@ The new MC_Home command aborts the following active Motion Control commands:
 > - Disabling of axis by the "MC_Power" Motion Control instruction
 > - Changeover between automatic mode and manual control
 > - Upon start of active homing. After successful completion of the homing operation, axis homing is again available.
-> - After POWER OFF -> POWER ON of the CPU
-> - After CPU restart (RUN-STOP -> STOP-RUN)
+> - After POWER OFF -&gt; POWER ON of the CPU
+> - After CPU restart (RUN-STOP -&gt; STOP-RUN)
 
 ##### Homing an axis
 
@@ -2822,7 +2822,7 @@ To home the axis, follow these stops:
 
 1. Check the requirements indicated above.
 2. Initialize the necessary input parameters with values, and start the homing operation with a rising edge at input parameter "Execute"
-3. If output parameter "Done" and technology object tag <Axis name>.StatusBits.HomingDone indicate the value TRUE, homing is complete.
+3. If output parameter "Done" and technology object tag &lt;Axis name&gt;.StatusBits.HomingDone indicate the value TRUE, homing is complete.
 
 ---
 
@@ -2933,7 +2933,7 @@ The new MC_Halt command aborts the following active Motion Control commands:
 
 ![Function chart](images/88122172043_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 5.0
@@ -3037,7 +3037,7 @@ The new MC_MoveAbsolute command aborts the following active Motion Control comma
 
 ![Function chart](images/59361187339_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 10.0
@@ -3140,7 +3140,7 @@ The new MC_MoveRelative command aborts the following active Motion Control comma
 
 ![Function chart](images/104081658635_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 10.0
@@ -3259,7 +3259,7 @@ When the "MC_MoveVelocity" command is started, status bit "SpeedCommand" is set 
 
 ![Function chart](images/59361837963_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 10.0
@@ -3365,7 +3365,7 @@ The new MC_MoveJog command aborts the following active Motion Control commands:
 
 ![Function chart](images/59361745419_DV_resource.Stream@PNG-de-DE.png)
 
-The following values were configured in the configuration window **Dynamics > General**:
+The following values were configured in the configuration window **Dynamics &gt; General**:
 
 - Acceleration: 10.0
 - Deceleration: 5.0
@@ -3502,13 +3502,13 @@ A new MC_ChangeDynamic command does not abort any active Motion Control commands
 | Axis | INPUT | TO_Axis_1 | - | Axis technology object |  |  |
 | Execute | INPUT | BOOL | FALSE | Start of the command with a positive edge |  |  |
 | ChangeRampUp | INPUT | BOOL | FALSE | TRUE |  | Change ramp-up time in line with input parameter "RampUpTime" |
-| RampUpTime | INPUT | REAL | 5.00 | Time (in seconds) to accelerate axis from standstill to configured maximum velocity without jerk limit.  The change will influence the tag <Axis name>. Config.DynamicDefaults.Acceleration. For the effectiveness of the change, refer to the description of this tag. |  |  |
+| RampUpTime | INPUT | REAL | 5.00 | Time (in seconds) to accelerate axis from standstill to configured maximum velocity without jerk limit.  The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.Acceleration. For the effectiveness of the change, refer to the description of this tag. |  |  |
 | ChangeRampDown | INPUT | BOOL | FALSE | TRUE |  | Change ramp-down time in line with input parameter "RampDownTime" |
-| RampDownTime | INPUT | REAL | 5.00 | Time (in seconds) to decelerate axis from the configured maximum velocity to standstill without jerk limiter.  The change will influence the tag <Axis name>. Config.DynamicDefaults.Deceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
+| RampDownTime | INPUT | REAL | 5.00 | Time (in seconds) to decelerate axis from the configured maximum velocity to standstill without jerk limiter.  The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.Deceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
 | ChangeEmergency | INPUT | BOOL | FALSE | TRUE |  | Change emergency stop ramp-down time in line with input parameter "EmergencyRampTime" |
-| EmergencyRampTime | INPUT | REAL | 2.00 | Time (in seconds) to decelerate the axis from configured maximum velocity to standstill without jerk limiter in emergency stop mode.   The change will influence the tag <Axis name>. Config.DynamicDefaults.EmergencyDeceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
+| EmergencyRampTime | INPUT | REAL | 2.00 | Time (in seconds) to decelerate the axis from configured maximum velocity to standstill without jerk limiter in emergency stop mode.   The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.EmergencyDeceleration . For the effectiveness of the change, refer to the description of this tag. |  |  |
 | ChangeJerkTime | INPUT | BOOL | FALSE | TRUE |  | Change smoothing time according to the input parameter "JerkTime" |
-| JerkTime | INPUT | REAL | 0.25 | Smoothing time (in seconds) used for the axis acceleration and deceleration ramps  The change will influence the tag <Axis name>. Config.DynamicDefaults.Jerk . For the effectiveness of the change, refer to the description of this tag. |  |  |
+| JerkTime | INPUT | REAL | 0.25 | Smoothing time (in seconds) used for the axis acceleration and deceleration ramps  The change will influence the tag &lt;Axis name&gt;. Config.DynamicDefaults.Jerk . For the effectiveness of the change, refer to the description of this tag. |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | The changed values have been written to the technology data block. The description of the tags will show when the change becomes effective. |  |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred during execution of the command. The cause of the error can be found in parameters "ErrorID" and "ErrorInfo". |  |
 | ErrorID | OUTPUT | WORD | 16#0000 | Error ID for parameter "Error" |  |  |
@@ -3518,7 +3518,7 @@ A new MC_ChangeDynamic command does not abort any active Motion Control commands
 >
 > At the input parameters "RampUpTime", "RampDownTime", "EmergencyRampTime" and "JerkTime", values can be entered which exceed the admissible limits of the resulting parameters: "Acceleration", "Deceleration", "Emergency stop deceleration" and "Jerk".
 >
-> Please note the equations and limits in "Axis technology object" -> "Configuring the technology object" -> "Dynamics" and ensure that the values you input are within the valid range.
+> Please note the equations and limits in "Axis technology object" -&gt; "Configuring the technology object" -&gt; "Dynamics" and ensure that the values you input are within the valid range.
 
 ---
 

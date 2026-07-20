@@ -152,7 +152,7 @@ p32041, r32043
   
 For p32042 = 1, the following applies:  
 Each recorded data point is output to a trace buffer.  
-For p32042 > 1, the following applies:  
+For p32042 &gt; 1, the following applies:  
 The data points are appropriately combined. p32047 or p32048 is used to set the mode
 when combining.
 
@@ -221,7 +221,7 @@ p32040 = 2 (single)
 p32044 = 65000  
 p32045 = 8  
 p32046 = 2  
---> 65000 * (8 + 2) / 2 = 325000  
+--&gt; 65000 * (8 + 2) / 2 = 325000  
 - - - - - - - - - - - - - - -  
 Example 2 for maximum configuration:  
 Drive object 1 with TRCDATA  
@@ -229,7 +229,7 @@ p32040 = 1 (continuous)
 p32044 = 65000  
 p32045 = 4  
 p32046 = 1  
---> 65000 * (4 + 1) / 1 = 325000  
+--&gt; 65000 * (4 + 1) / 1 = 325000  
 - - - - - - - - - - - - - - -  
 Example 3 for maximum configuration:  
 Drive object 1 with TRCDATA  
@@ -242,9 +242,9 @@ p32040 = 1 (continuous)
 p32044 = 1300  
 p32045 = 20  
 p32046 = 5  
---> drive object 1: 65000 * (8 + 1) / 2 = 292500  
---> drive object 2: 1300 * (20 + 5) / 1 = 32500  
---> drive object 1 + drive object 2: 292500 + 32500 = 325000  
+--&gt; drive object 1: 65000 * (8 + 1) / 2 = 292500  
+--&gt; drive object 2: 1300 * (20 + 5) / 1 = 32500  
+--&gt; drive object 1 + drive object 2: 292500 + 32500 = 325000  
   
 Refer to:
 A53510
@@ -282,7 +282,7 @@ The sum of all configuration attributes may not exceed a value of 325000.
 Refer to parameter p32044 for examples of valid maximum configurations.  
 Parameters r32047 and r32049 are only displayed in the expert list of the STARTER
 commissioning tool  
-if p32045 is > 0.  
+if p32045 is &gt; 0.  
 After changing the value in the online mode, the "Load project to PG" function must
 be executed in the STARTER commissioning tool in order to update the expert list.  
 The expert list is immediately updated when the value is changed in the offline mode.  
@@ -325,7 +325,7 @@ The sum of all configuration attributes may not exceed a value of 325000.
 Refer to parameter p32044 for examples of valid maximum configurations.  
 Parameters r32048 and r32050 are only displayed in the expert list of the STARTER
 commissioning tool  
-if p32046 > 0.  
+if p32046 &gt; 0.  
 After changing the value in the online mode, the "Load project to PG" function must
 be executed in the STARTER commissioning tool in order to update the expert list.  
 The expert list is immediately updated when the value is changed in the offline mode.  
@@ -370,7 +370,7 @@ Mean value
 **Dependency:**
   
 This parameter is only displayed in the expert list of the STARTER commissioning tool
-if the number of float signal sources has been set to greater than 0 (p32045 > 0).
+if the number of float signal sources has been set to greater than 0 (p32045 &gt; 0).
 
 ### p32048[0...n] TRCDATA integer signals compression operation
 
@@ -417,7 +417,7 @@ Mean value unsigned
 **Dependency:**
   
 This parameter is only displayed in the expert list of the STARTER commissioning tool
-if the number of integer signal sources has been set to greater than 0 (p32046 > 0).
+if the number of integer signal sources has been set to greater than 0 (p32046 &gt; 0).
 
 ### p32049[0...n] CI: TRCDATA float signals signal source
 
@@ -451,7 +451,7 @@ the signal source of binector input p32055.
 **Dependency:**
   
 This parameter is only displayed in the expert list of the STARTER commissioning tool
-if the number of float signal sources has been set to greater than 0 (p32045 > 0).  
+if the number of float signal sources has been set to greater than 0 (p32045 &gt; 0).  
   
 Refer to:
 p32041, p32042, r32043, p32045, p32047, p32055
@@ -489,7 +489,7 @@ the signal source of binector input p32055.
 **Dependency:**
   
 This parameter is only displayed in the expert list of the STARTER commissioning tool
-if the number of integer signal sources has been set to greater than 0 (p32046 > 0).  
+if the number of integer signal sources has been set to greater than 0 (p32046 &gt; 0).  
   
 Refer to:
 p32041, p32042, r32043, p32046, p32048, p32055

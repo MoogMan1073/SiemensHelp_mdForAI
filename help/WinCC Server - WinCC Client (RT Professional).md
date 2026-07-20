@@ -153,7 +153,7 @@ This chapter shows the basic procedure for setting up a multiple-station system.
 #### Procedure
 
 1. Configuring servers.
-2. Configuring clients: Start screen, menus & toolbars, language & font
+2. Configuring clients: Start screen, menus &amp; toolbars, language &amp; font
 3. To enable users access to the WinCC server project from a WinCC client: Configure operator authorizations
 4. Download the project to the server.
 
@@ -169,10 +169,10 @@ Set up a project as the WinCC server.
 2. Add "WinCC RT Professional" to the HMI device.
 3. Enter "WinCC Server" as the device name.
 4. Configure the required screens, logs, tags, alarms, custom toolbars, project languages, etc. for the "WinCC Server".
-5. In the Runtime settings under "General", select the start screen, a configuration and design for "Menus & Toolbars".
+5. In the Runtime settings under "General", select the start screen, a configuration and design for "Menus &amp; Toolbars".
 6. Under "Services", activate the server Runtime services you need for the specific configuration. Example: If the server screen displays recipes, select "Recipes".
 7. Go to "Screens" to select the corresponding properties.
-8. Under "Language & Font" select the Runtime languages required on the WinCC server.
+8. Under "Language &amp; Font" select the Runtime languages required on the WinCC server.
 
 #### Result
 
@@ -227,20 +227,20 @@ You create two WinCC clients and link them with the WinCC server.
 
    - WinCC client, device name "WinCC Client1"
    - WinCC client, device name "WinCC Client2"
-2. In the "Devices & Networks" editor, "Relations" tab, link the two WinCC clients with the WinCC server by means of drag-and-drop. A multiple-station system will be created.
+2. In the "Devices &amp; Networks" editor, "Relations" tab, link the two WinCC clients with the WinCC server by means of drag-and-drop. A multiple-station system will be created.
 
    ![Procedure](images/7693912203_DV_resource.Stream@PNG-de-DE.PNG)
 
    ![Procedure](images/7693912203_DV_resource.Stream@PNG-de-DE.PNG)
 3. Select "WinCC-Client1".
-4. In the inspector window, select Properties > Computer name" and enter the physical computer name of the HMI device.
+4. In the inspector window, select Properties &gt; Computer name" and enter the physical computer name of the HMI device.
 
    The computer name identifies the HMI device in the network.
 5. In the Runtime settings, "General" tab, select a screen as the "Start screen" of the WinCC server. In the multiple-station system, the WinCC client then displays this server screen in runtime.
-6. Select a "Menus & Toolbars" configuration that was made on the WinCC server.
+6. Select a "Menus &amp; Toolbars" configuration that was made on the WinCC server.
 7. At "Services", activate the client Runtime services you need for the specific configuration, e.g. the scheduler.
 8. Select additional design features under "Screens".
-9. Select a Runtime language for the WinCC server under "Language & Font". For example, you can configure a separate Runtime language for each WinCC client.
+9. Select a Runtime language for the WinCC server under "Language &amp; Font". For example, you can configure a separate Runtime language for each WinCC client.
 10. Repeat steps 3 to 9 for "WinCC Client2".
 
     ![Procedure](images/24538352267_DV_resource.Stream@PNG-en-US.png)
@@ -263,16 +263,16 @@ You have configured a multiple-station system with a WinCC server and two WinCC 
 
 **See also**
 
-[Configuring an integrated connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](Communicating%20with%20PLCs%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Configuring an integrated connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](Communicating%20with%20PLCs%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 
 ### Downloading the project to the server (RT Professional)
 
 #### Procedure
 
 1. Compile the project using the "Compile" icon in the toolbar.
-2. Once you successfully compiled your project, select "Project tree > WinCC Server" and then select "Download to device" from the shortcut menu of "WinCC RT Professional".
+2. Once you successfully compiled your project, select "Project tree &gt; WinCC Server" and then select "Download to device" from the shortcut menu of "WinCC RT Professional".
 
-For the initial transfer, enter the computer's's target address "\\computer name\<shared folder>" in the next dialog and exit the dialog using the "Transfer" button.
+For the initial transfer, enter the computer's's target address "\\computer name\&lt;shared folder&gt;" in the next dialog and exit the dialog using the "Transfer" button.
 
 A transfer to the WinCC clients is not necessary because the WinCC server provides all necessary data to the WinCC clients.
 
@@ -368,7 +368,7 @@ With different network IP addresses (for example 142.16.xy and 142.11.xy), you n
 
 Test the correct PC addressing with the ping command.
 
-1. To do so, open the command prompt with "Start > Run > cmd".
+1. To do so, open the command prompt with "Start &gt; Run &gt; cmd".
 2. Run the command "ping +IP address" (e.g. "ping 128.0.0.1") for each of the other PCs.
 3. If you get no response, you need to check the entire network configuration and parameter assignment.
 
@@ -394,7 +394,7 @@ Test the correct PC addressing with the ping command.
 
 If you are not using the DHCP service in conjunction with DNS in your network, which automatically assume this task, you must configure the "lmhosts" file for name resolution. When using a DNS and WINS server, the name resolution is also applied by the system.
 
-The "lmhosts" file is located in the following path in Windows: "<Drive>\Windows\system32\drivers\etc\".
+The "lmhosts" file is located in the following path in Windows: "&lt;Drive&gt;\Windows\system32\drivers\etc\".
 
 > **Note**
 >
@@ -422,7 +422,7 @@ The "lmhosts" file is located in the following path in Windows: "<Drive>\Windows
 
 Use the ping command to test if the changes of the name resolution have been successfully applied.
 
-1. Open the command prompt with "Start > Run > cmd".
+1. Open the command prompt with "Start &gt; Run &gt; cmd".
 2. Run the command "ping+PC name" (e.g. "ping WINCCPC01") for all PCs which you have entered in the "lmhosts" file in the previous step.
 
    If you get a response and the PC name is resolved to its IP address, the file is configured correctly and the name resolution in the network works.
@@ -441,7 +441,7 @@ Use the ping command to test if the changes of the name resolution have been suc
   
 [Adapt the security settings for the firewall (RT Professional)](#adapt-the-security-settings-for-the-firewall-rt-professional)
   
-<https://support.microsoft.com/en-us/kb/102725>
+[https://support.microsoft.com/en-us/kb/102725](https://support.microsoft.com/en-us/kb/102725)
 
 #### Configure terminal bus (RT Professional)
 
@@ -458,7 +458,7 @@ Another indicator of a functioning network (accessibility of other PCs) is when 
 
    > **Note**
    >
-   > If no PCs are displayed under "Simatic Shell", check the order of the network adapters in the Control Panel under "Network Connection > Advanced > Advanced Settings".
+   > If no PCs are displayed under "Simatic Shell", check the order of the network adapters in the Control Panel under "Network Connection &gt; Advanced &gt; Advanced Settings".
    >
    > The network adapter for terminal bus communication must always be first in the "Connections" list, even if you are using multiple network adapters in your target station.
 3. Right-click in the "Simatic Shell" navigation window on the entry "Simatic Shell" and select "Settings..." in the shortcut menu.
@@ -499,17 +499,17 @@ The order of network adapters defines the order in which the network services ac
 
 ##### Setting the order of the network adapters
 
-1. Open the setting for the order of the network adapters with "Control Panel > Network Connections > Advanced > Advanced Settings > Adapters and Bindings".
+1. Open the setting for the order of the network adapters with "Control Panel &gt; Network Connections &gt; Advanced &gt; Advanced Settings &gt; Adapters and Bindings".
 2. Set the order of the network adapters.
 
 If you have installed Windows or Windows Server on your PC, follow these steps:
 
 1. Open Windows Explorer.
-2. Show the menu bar with "Organize > Layout".
+2. Show the menu bar with "Organize &gt; Layout".
 3. In the Control Panel, switch to the Network and Sharing Center.
 
    In the left window area, click "Change adapter settings".
-4. Open the setting for the order of the network adapters with "Advanced > Advanced Settings > Adapters and Bindings".
+4. Open the setting for the order of the network adapters with "Advanced &gt; Advanced Settings &gt; Adapters and Bindings".
 5. Set the order of the network adapters.
 
 ---
@@ -722,7 +722,7 @@ Using WinCC RT Start, you enable and disable Runtime on the WinCC server and dis
 
 To open WinCC RT Start, follow these steps:
 
-1. In the Windows Start menu, select "Start > All Programs > Siemens Automation > Runtime Systems > WinCC Runtime Professional V... > WinCC RT Start".
+1. In the Windows Start menu, select "Start &gt; All Programs &gt; Siemens Automation &gt; Runtime Systems &gt; WinCC Runtime Professional V... &gt; WinCC RT Start".
 
 #### Functions
 
@@ -763,7 +763,7 @@ To enable access from a WinCC client to the server project, the server project m
 - The WinCC client and WinCC server are interconnected via network.
 - The server project is stored in the "WinCCProjects" folder, or in a different shared folder.
 
-- WinCCStart is opened via the Windows Start menu, "Start > All Programs > Siemens Automation > Runtime Systems > WinCC Runtime Professional V... > WinCC RT Start".
+- WinCCStart is opened via the Windows Start menu, "Start &gt; All Programs &gt; Siemens Automation &gt; Runtime Systems &gt; WinCC Runtime Professional V... &gt; WinCC RT Start".
 
   ![Requirements](images/110863141387_DV_resource.Stream@PNG-en-US.png)
 
@@ -771,16 +771,16 @@ To enable access from a WinCC client to the server project, the server project m
 
 To activate the server project, proceed as follows:
 
-1. Select the "File > Open" menu command. You can also click the file selection button in the "Project" field.
+1. Select the "File &gt; Open" menu command. You can also click the file selection button in the "Project" field.
 2. Select the server project. The name consists of the project name in the engineering system, e.g. "Project1", and the server name, e.g. "HMI_1".
 3. You can select different diagnostic sources in the "Diagnostics" tab.
-4. Activate the project using the toolbar icon ![Procedure for activating a project](images/23989783179_DV_resource.Stream@PNG-de-DE.png). You can also activate the project using the "File > Start RT" menu. Activation of runtime is indicated by a checkmark leading the "File > Start RT" menu command.
+4. Activate the project using the toolbar icon ![Procedure for activating a project](images/23989783179_DV_resource.Stream@PNG-de-DE.png). You can also activate the project using the "File &gt; Start RT" menu. Activation of runtime is indicated by a checkmark leading the "File &gt; Start RT" menu command.
 
 The WinCC server is started and provides all necessary data to the WinCC clients.
 
 #### Procedure for deactivating a project
 
-1. Deactivate the current project using the toolbar icon ![Procedure for deactivating a project](images/23989979403_DV_resource.Stream@PNG-de-DE.png). The checkmark leading the "File > Start RT" menu command is cleared.
+1. Deactivate the current project using the toolbar icon ![Procedure for deactivating a project](images/23989979403_DV_resource.Stream@PNG-de-DE.png). The checkmark leading the "File &gt; Start RT" menu command is cleared.
 
 The modules for the execution of Runtime will be deactivated. The "WinCC Runtime" program window will be closed.
 
@@ -809,7 +809,7 @@ Use WinCCStart to activate and deactivate runtime on the WinCC clients.
 - The WinCC client and WinCC server are interconnected via network.
 - The is stored in a shared folder on the WinCC server. The "WinCCProjects" folder is released by default and displayed on the network.
 
-- WinCCStart is opened via the Windows Start menu, "Start > All Programs > Siemens Automation > Runtime Systems > WinCC Runtime Professional V... > WinCC RT Start".
+- WinCCStart is opened via the Windows Start menu, "Start &gt; All Programs &gt; Siemens Automation &gt; Runtime Systems &gt; WinCC Runtime Professional V... &gt; WinCC RT Start".
 
   ![Requirement](images/110863141387_DV_resource.Stream@PNG-en-US.png)
 
@@ -818,18 +818,18 @@ Use WinCCStart to activate and deactivate runtime on the WinCC clients.
 To activate the server project, proceed as follows:
 
 1. You can select different diagnostic sources in the "Diagnostics" tab.
-2. Select the "File > Open" menu command. You can also click the file selection button in the "Project" field. The WinCC server "\\computer name\<shared folder>" is visible on the network.
+2. Select the "File &gt; Open" menu command. You can also click the file selection button in the "Project" field. The WinCC server "\\computer name\&lt;shared folder&gt;" is visible on the network.
 3. Select the server project in the shared folder. The name consists of the project name in the engineering system, e.g. "Project1", and the server name, e.g. "HMI_1". A logon dialog opens when you connect to the WinCC server.
 4. Enter the user name and password. Once you're successfully connected, the "Activate" toolbar icon is displayed if the WinCC server is not in runtime.
 
    If the WinCC-Server is in runtime, the runtime of the WinCC client is started automatically. In this case, skip the next step.
-5. Activate the server project using the toolbar icon ![Procedure for activating a project](images/23989783179_DV_resource.Stream@PNG-de-DE.png). You can also activate the server project using the "File > Start RT" menu. Activation of runtime is indicated by a checkmark leading the "File > Start RT" menu command.
+5. Activate the server project using the toolbar icon ![Procedure for activating a project](images/23989783179_DV_resource.Stream@PNG-de-DE.png). You can also activate the server project using the "File &gt; Start RT" menu. Activation of runtime is indicated by a checkmark leading the "File &gt; Start RT" menu command.
 
 Runtime of the WinCC server is started. Runtime of the WinCC client then starts automatically. The WinCC server provides all necessary data to the WinCC clients.
 
 #### Procedure for deactivating a project
 
-1. Deactivate the current runtime of the WinCC client using the toolbar icon ![Procedure for deactivating a project](images/23989979403_DV_resource.Stream@PNG-de-DE.png). The checkmark leading the "File > Start RT" menu command is cleared.
+1. Deactivate the current runtime of the WinCC client using the toolbar icon ![Procedure for deactivating a project](images/23989979403_DV_resource.Stream@PNG-de-DE.png). The checkmark leading the "File &gt; Start RT" menu command is cleared.
 
 The modules for the execution of Runtime will be deactivated. The "WinCC Runtime" program window will be closed.
 
@@ -863,7 +863,7 @@ The following shows how a client without its own project synchronizes the time v
 
 Set up the startup list as follows:
 
-1. Open the "Runtime settings > Services" editor.
+1. Open the "Runtime settings &gt; Services" editor.
 
    ![Procedure](images/59164540939_DV_resource.Stream@PNG-en-US.png)
 
@@ -908,7 +908,7 @@ After you have successfully logged on, server runtime is started automatically a
 
 #### Language change procedure
 
-1. Select the "View > Language" menu command. A dialog that displays all user interface languages available for WinCCStart opens.
+1. Select the "View &gt; Language" menu command. A dialog that displays all user interface languages available for WinCCStart opens.
 2. Select a user interface language.
 
 ---
@@ -991,7 +991,7 @@ Access via the Remote Desktop Protocol may only take place through console trans
 >
 > All "Remote Desktop" users must be included in the "SIMATIC HMI" user group on the target PC.
 
-1. To start a console session, open the "Run" dialog, for example, with <Windows key+R>.
+1. To start a console session, open the "Run" dialog, for example, with &lt;Windows key+R&gt;.
 2. Enter the following command:- `mstsc /v:<Server> /admin`.
 3. Enter the computer name or the IP address as server.
 4. To obtain information on additional parameters, enter the following command: `- mstsc /?`.
@@ -1027,7 +1027,7 @@ The "Component" tab displays the following installed objects:
 
 #### Procedure
 
-1. Select "Help > About". The "About WinCC RT Professional" dialog opens.
+1. Select "Help &gt; About". The "About WinCC RT Professional" dialog opens.
 2. Select a tab.
 
 ## SIMATIC Shell (RT Professional)
@@ -1122,7 +1122,7 @@ After having logged this computer on, all participating computers in the system 
 
 #### Procedure
 
-1. Click on the folder "My Computer > Simatic Shell" in the Windows Explorer of the client computer. The "Simatic Shell" dialog opens.
+1. Click on the folder "My Computer &gt; Simatic Shell" in the Windows Explorer of the client computer. The "Simatic Shell" dialog opens.
 2. In the navigation window of the "Simatic Shell" dialog, select the first entry. In the shortcut menu of this entry, select the menu item "Settings...".
 
    The "Communication Settings" dialog opens.
@@ -1168,7 +1168,7 @@ In order to activate a server project on a client, the following conditions must
 
 #### Procedure
 
-1. In Windows Explorer of the client, select the "Simatic Shell" entry. The "My Computer > Simatic Shell" window will be displayed.   
+1. In Windows Explorer of the client, select the "Simatic Shell" entry. The "My Computer &gt; Simatic Shell" window will be displayed.   
    All the servers and projects available in the network with their current status will be displayed.
 2. Select the project to be enabled.
 3. Select the "Activate remote" command from the shortcut menu.   
@@ -1192,7 +1192,7 @@ In order to deactivate a server project on a client remotely, the following cond
 
 #### Procedure
 
-1. In Windows Explorer of the client, select the "My Computer > Simatic Shell". The "Simatic Shell" window is displayed.   
+1. In Windows Explorer of the client, select the "My Computer &gt; Simatic Shell". The "Simatic Shell" window is displayed.   
    All computers and projects available in the network will be displayed with their current status.
 2. Select the project to be enabled.
 3. Select the "Deactivate remote" command from the shortcut menu. A Login dialog appears.

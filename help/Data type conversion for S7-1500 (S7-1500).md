@@ -123,7 +123,7 @@ To set the IEC check for all new blocks in the project, proceed as follows:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > General" group in the area navigation.
+2. Select the "PLC programming &gt; General" group in the area navigation.
 3. Select or clear the "IEC check for code blocks" check box in the "Default settings for new blocks" group.
 
    The IEC check is enabled or disabled for all new blocks in the program.
@@ -395,7 +395,7 @@ The following table shows the options for the implicit conversion of SINT data t
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
 | LWORD | - | X |  |  |
-| USINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value transfer from SINT #-1 -> INT #-1, not filled with "0".) |  |
+| USINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value transfer from SINT #-1 -&gt; INT #-1, not filled with "0".) |  |
 | INT | X | X |  |  |
 | UINT | - | X |  |  |
 | DINT | X | X |  |  |
@@ -444,7 +444,7 @@ The following table shows the options for the implicit conversion of USINT data 
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
 | LWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from USINT #10 -> DINT #10 or USINT #128 -> SINT #-128) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from USINT #10 -&gt; DINT #10 or USINT #128 -&gt; SINT #-128) |  |
 | INT | X | X |  |  |
 | UINT | X | X |  |  |
 | DINT | X | X |  |  |
@@ -493,7 +493,7 @@ The following table shows the options for the implicit conversion of INT data ty
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
 | LWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from INT #-1 -> SINT #-1, or INT #-32 767 -> UINT #32 769) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from INT #-1 -&gt; SINT #-1, or INT #-32 767 -&gt; UINT #32 769) |  |
 | USINT | - | X |  |  |
 | UINT | - | X |  |  |
 | DINT | X | X |  |  |
@@ -542,7 +542,7 @@ The following table shows the options for the implicit conversion of UINT data t
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
 | LWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from UINT #100 -> DINT #100 or UINT #60 000 -> INT #-5536) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from UINT #100 -&gt; DINT #100 or UINT #60 000 -&gt; INT #-5536) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | DINT | X | X |  |  |
@@ -591,14 +591,14 @@ The following table shows the options for the implicit conversion of DINT data t
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
 | LWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from DINT #-1 -> SINT #-1 or DINT #-1 -> USINT #255) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from DINT #-1 -&gt; SINT #-1 or DINT #-1 -&gt; USINT #255) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |
 | UDINT | - | X |  |  |
 | LINT | X | X |  |  |
 | ULINT | - | X |  |  |
-| REAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from DINT #-1 -> REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
+| REAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from DINT #-1 -&gt; REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
 | LREAL | X | X | The value is converted to the destination data type format. (The value "-1", for example, is converted to the value "-1.0".) |  |
 | TIME | - | X | The bit pattern of the source value is transferred unchanged right-justified to the destination data type. |  |
 | LTIME | - | - | No implicit conversion |  |
@@ -640,14 +640,14 @@ The following table shows the options for the implicit conversion of UDINT data 
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
 | LWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from DINT #-1 -> SINT #-1 or DINT #-1 -> USINT #255) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from DINT #-1 -&gt; SINT #-1 or DINT #-1 -&gt; USINT #255) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |
 | DINT | - | X |  |  |
 | LINT | X | X |  |  |
 | ULINT | X | X |  |  |
-| REAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from DINT #-1 -> REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
+| REAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from DINT #-1 -&gt; REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
 | LREAL | X | X | The value is converted to the destination data type format. (The value "-1", for example, is converted to the value "-1.0".) |  |
 | TIME | - | X | The bit pattern of the source value is transferred unchanged right-justified to the destination data type. |  |
 | LTIME | - | - | No implicit conversion |  |
@@ -689,15 +689,15 @@ The following table shows the options for the implicit conversion of LINT data t
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
 | LWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -> SINT #-1 or LINT #-1 -> USINT #255) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -&gt; SINT #-1 or LINT #-1 -&gt; USINT #255) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |
 | DINT | - | X |  |  |
 | UDINT | - | X |  |  |
 | ULINT | - | X |  |  |
-| REAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -> REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
-| LREAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -> REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 9 007 199 254 740 992) |  |
+| REAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -&gt; REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
+| LREAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -&gt; REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 9 007 199 254 740 992) |  |
 | TIME | - | - | No implicit conversion |  |
 | LTIME | - | X | The bit pattern of the source value is transferred unchanged right-justified to the destination data type. (duration in nanoseconds) |  |
 | S5TIME | - | - | No implicit conversion |  |
@@ -738,15 +738,15 @@ The following table shows the options for the implicit conversion of ULINT data 
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
 | LWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from ULINT #-1 -> SINT #-1 or ULINT #-1 -> USINT #255) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from ULINT #-1 -&gt; SINT #-1 or ULINT #-1 -&gt; USINT #255) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |
 | DINT | - | X |  |  |
 | UDINT | - | X |  |  |
 | LINT | - | X |  |  |
-| REAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -> REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
-| LREAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -> REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 9 007 199 254 740 992) |  |
+| REAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -&gt; REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
+| LREAL | - | X | The bit pattern of the source value is converted and transferred to the destination data type. (for example, value conversion from LINT #-1 -&gt; REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 9 007 199 254 740 992) |  |
 | TIME | - | - | No implicit conversion |  |
 | LTIME | - | X | The bit pattern of the source value is transferred unchanged right-justified to the destination data type. (duration in nanoseconds) |  |
 | S5TIME | - | - | No implicit conversion |  |
@@ -794,7 +794,7 @@ The following table shows the options for the implicit conversion of REAL data t
 | WORD | - | - |  |  |
 | DWORD | - | X | The bit pattern of the source value is transferred unchanged to the destination data type. |  |
 | LWORD | - | - | No implicit conversion |  |
-| SINT | - | X | The bit pattern of the source value is rounded off and converted and transferred to the destination data type. (For example, rounding off and value conversion of  REAL #2.5 -> INT #2,  or negative numbers REAL #-2.5 -> INT #-2 -> USINT #254. With an overflow, the remainder is determined REAL #305.5 -> INT #306 -> USINT #50) |  |
+| SINT | - | X | The bit pattern of the source value is rounded off and converted and transferred to the destination data type. (For example, rounding off and value conversion of  REAL #2.5 -&gt; INT #2,  or negative numbers REAL #-2.5 -&gt; INT #-2 -&gt; USINT #254. With an overflow, the remainder is determined REAL #305.5 -&gt; INT #306 -&gt; USINT #50) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |
@@ -843,7 +843,7 @@ The following table shows the options for the implicit conversion of LREAL data 
 | WORD | - | - |  |  |
 | DWORD | - | - |  |  |
 | LWORD | - | X | The bit pattern of the source value is transferred unchanged to the destination data type. |  |
-| SINT | - | X | The bit pattern of the source value is rounded off and converted and transferred to the destination data type. (For example, rounding off and value conversion of  LREAL #2.5 -> INT #2,  or negative numbers LREAL #-2.5 -> INT #-2 -> USINT #254. With an overflow, the remainder is determined LREAL #305.5 -> INT #306 -> USINT #50) |  |
+| SINT | - | X | The bit pattern of the source value is rounded off and converted and transferred to the destination data type. (For example, rounding off and value conversion of  LREAL #2.5 -&gt; INT #2,  or negative numbers LREAL #-2.5 -&gt; INT #-2 -&gt; USINT #254. With an overflow, the remainder is determined LREAL #305.5 -&gt; INT #306 -&gt; USINT #50) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |

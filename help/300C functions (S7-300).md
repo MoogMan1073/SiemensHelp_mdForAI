@@ -685,7 +685,7 @@ The following functionality is available:
 | SW_EN | Input | BOOL | 4.0 | TRUE/FALSE | FALSE | Software gate for starting/stopping the output |
 | MAN_DO | Input | BOOL | 4.1 | TRUE/FALSE | FALSE | Enable manual output control |
 | SET_DO | Input | BOOL | 4.2 | TRUE/FALSE | FALSE | Control output |
-| OUTP_VAL | Input | INT | 6.0 | in ppm:  0 to 1000  as S7 analog value: 0 to 27648 | 0 | Default output value   if you enter an output value > 1 000 or 27648, the CPU will limit it to 1 000 or 27648 |
+| OUTP_VAL | Input | INT | 6.0 | in ppm:  0 to 1000  as S7 analog value: 0 to 27648 | 0 | Default output value   if you enter an output value &gt; 1 000 or 27648, the CPU will limit it to 1 000 or 27648 |
 | JOB_REQ | Input | BOOL | 8.0 | TRUE/FALSE | FALSE | Job trigger (positive edge) |
 | JOB_ID | Input | WORD | 10 | W#16#0000  = Job without function  W#16#0001 = Write period time  W#16#0002 = Write switch-on delay  W#16#0004 = Write minimum pulse duration  W#16#0081 = Read period time  W#16#0082 = Read switch-on delay  W#16#0084 = Read minimum pulse duration | W#16#0000 | Job number |
 | JOB_VAL | Input | DINT | 12 | -2<sup>31</sup> to+2<sup>31</sup> -1 | 0 | Value for write jobs. |

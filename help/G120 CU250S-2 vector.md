@@ -755,7 +755,7 @@ In "Configuration summary", you can view the overall summary such as general inf
 
 **Exporting the configuration summary**
 
-Click "Configuration summary> Export", to the export the configuration summary in .csv format.
+Click "Configuration summary&gt; Export", to the export the configuration summary in .csv format.
 
 ### G120 CU250S-2 V drive data sets DDS
 
@@ -1577,7 +1577,7 @@ Various enables are required for the ramp-function generator.
 1. "Frequency setpoint enabled" ([p1142](SINAMICS%20Parameter%20G120.md#p11420n-bi-enable-setpointinhibit-setpoint-5)); signal source for enabling the frequency setpoint.
 2. "Start ramp-function generator" ([p1141](SINAMICS%20Parameter%20G120.md#p11410n-bi-continue-ramp-function-generatorfreeze-ramp-function-generator-3)); signal source to start the ramp-function generator.
 
-"OFF1 enable" and "OFF3 enable" are set via the control word "Sequential control system". Check the individual bits of the control word at "Diagnostics>Control/status words". Check the interconnection at "Diagnostics>Interconnections".
+"OFF1 enable" and "OFF3 enable" are set via the control word "Sequential control system". Check the individual bits of the control word at "Diagnostics&gt;Control/status words". Check the interconnection at "Diagnostics&gt;Interconnections".
 
 The control inputs of the ramp-function generator take effect as follows:
 
@@ -2185,7 +2185,7 @@ Synchronous motors do not show this effect and the parameter has no effect here.
 
 ###### Activating the slip compensation
 
-1. Enter the percentage setpoint of the slip compensation in relation to the rated motor slip at "Scaling" ([p1335](SINAMICS%20Parameter%20G120.md#p13350n-slip-compensation-scaling-4)). The slip compensation only becomes active when a scaling > 0.0% is entered.
+1. Enter the percentage setpoint of the slip compensation in relation to the rated motor slip at "Scaling" ([p1335](SINAMICS%20Parameter%20G120.md#p13350n-slip-compensation-scaling-4)). The slip compensation only becomes active when a scaling &gt; 0.0% is entered.
 2. Enter the percentage limitation of the slip compensation in relation to the rated motor slip at "Limit value" ([p1336](SINAMICS%20Parameter%20G120.md#p13360n-slip-compensation-limit-value-1)).
 3. The frequency setpoint is displayed at r20.
 4. The calculated actual speed value is displayed at r63.
@@ -3279,7 +3279,7 @@ Detailed information about the parameterization of the safety inputs/outputs can
 
 **PROFIsafe**
 
-For PROFIsafe, you require a telegram extension that you can set at Cyclic data exchange > Telegram configuration. See also [Editing telegrams](Communication%20and%20telegrams.md#editing-telegrams).
+For PROFIsafe, you require a telegram extension that you can set at Cyclic data exchange &gt; Telegram configuration. See also [Editing telegrams](Communication%20and%20telegrams.md#editing-telegrams).
 
 ##### G120 CU250S-2 function diagrams (FD)
 
@@ -3352,7 +3352,7 @@ The safety commissioning is activated.
 
 After activating the safety functionality, select the safety functionality:
 
-1. In the secondary navigation, select "Safety Integrated > Select safety functionality".
+1. In the secondary navigation, select "Safety Integrated &gt; Select safety functionality".
 2. Select between the following in the drop-down list:
 
    - No safety function
@@ -3658,7 +3658,7 @@ The "Safe Stop 1" (SS1) safety function brakes the motor safely with a subsequen
 
 ###### SS1 with delay time
 
-1. At "Delay time SS1/STOP B -> STO" ([p9556](SINAMICS%20Parameter%20G120.md#p9556-si-motion-pulse-cancellation-delay-time-processor-1)), enter a value for the delay time for the safe pulse suppression after STOP B.
+1. At "Delay time SS1/STOP B -&gt; STO" ([p9556](SINAMICS%20Parameter%20G120.md#p9556-si-motion-pulse-cancellation-delay-time-processor-1)), enter a value for the delay time for the safe pulse suppression after STOP B.
 2. At "Shutdown speed SS1" ([p9560](SINAMICS%20Parameter%20G120.md#p9560-si-motion-pulse-cancellation-shutdown-speed-processor-1)), enter a value for the pulse suppression.
 
    The transition is made to the pulse cancellation state:
@@ -3671,7 +3671,7 @@ The "Safe Stop 1" (SS1) safety function brakes the motor safely with a subsequen
 
 The Safe Brake Ramp function is also provided for SS1 without delay time. The Safe Brake Ramp (SBR) function provides a safe method for monitoring the brake ramp, see also [G120 safe brake ramp (SBR)](#g120-safe-brake-ramp-sbr).
 
-1. At "Delay time SS1/STOP B -> STO" (p9556), enter a value for the delay time for the safe pulse suppression after STOP B.
+1. At "Delay time SS1/STOP B -&gt; STO" (p9556), enter a value for the delay time for the safe pulse suppression after STOP B.
 2. At "Shutdown speed SS1" (p9560), enter a value for the pulse suppression.
 
    The transition is made to the pulse cancellation state:
@@ -3716,7 +3716,7 @@ You can parameterize up to four different speed values for each drive axis. Alth
 ###### Safely-limited speed with delay time
 
 1. Select "With delay time" in the drop-down list.
-2. At "Delay time for selection of SLS -> SLS active" ([p9551](SINAMICS%20Parameter%20G120.md#p9551-si-motion-sls-changeover-delay-time-processor-1)), enter a value.
+2. At "Delay time for selection of SLS -&gt; SLS active" ([p9551](SINAMICS%20Parameter%20G120.md#p9551-si-motion-sls-changeover-delay-time-processor-1)), enter a value.
 3. At "Speed setpoint limit" ([p9533](SINAMICS%20Parameter%20G120.md#p9533-si-motion-sls-setpoint-speed-processor-1)), enter the weighting factor to determine the setpoint limit from the selected speed limit. The active setpoint limit will be displayed.
 4. At "Speed limit values 1-4" ([p9531](SINAMICS%20Parameter%20G120.md#p953103-si-motion-sls-limit-values-processor-1)), enter a value for the speed limit values. The values for levels 1 – 4 are freely settable.
 5. At "SLS-specific stop responses 1-4" ([p9563](SINAMICS%20Parameter%20G120.md#p956303-si-motion-sls-specific-stop-response-processor-1)), select the required stop response when the speed limit value is exceeded.
@@ -3806,7 +3806,7 @@ With SDI (Safe Direction), you check the direction of the drive. Alternatively, 
 ###### Adjustable parameters
 
 1. At "SDI" ([p9501](SINAMICS%20Parameter%20G120.md#p9501-si-motion-enable-safety-functions-processor-1)), select "Enable" from the drop-down list to monitor the safe direction.
-2. At "Delay time for selection of SDI -> SDI active" ([p9565](SINAMICS%20Parameter%20G120.md#p9565-si-motion-sdi-delay-time-processor-1)), enter a delay time for the safe direction. Between the selection of SDI and the activation of SDI, the direction can be reversed by an external controller during the delay time. After the delay time has expired, monitoring of the Safe Direction is started.
+2. At "Delay time for selection of SDI -&gt; SDI active" ([p9565](SINAMICS%20Parameter%20G120.md#p9565-si-motion-sdi-delay-time-processor-1)), enter a delay time for the safe direction. Between the selection of SDI and the activation of SDI, the direction can be reversed by an external controller during the delay time. After the delay time has expired, monitoring of the Safe Direction is started.
 3. At "Tolerance" ([p9564](SINAMICS%20Parameter%20G120.md#p9564-si-motion-sdi-tolerance-processor-1)), enter a value for the position tolerance. If the drive turns in the unsafe direction within the tolerance, the parameterized STOP response is triggered.
 4. Select the response that is to be triggered in the "Stop response" ([p9566](SINAMICS%20Parameter%20G120.md#p9566-si-motion-sdi-stop-response-processor-1)) drop-down list.
 5. At "SDI active during pulse suppression checkback signal" ([p9509](SINAMICS%20Parameter%20G120.md#p9509-si-motion-behavior-during-pulse-cancellation-processor-1)), select whether SDI remains active during a pulse suppression, or becomes inactive.
@@ -4235,8 +4235,8 @@ Specify a regenerative torque for the rotating drive to compensate the existing 
 
 - Select the response for the Vdc_min controller (kinetic buffering). The following are possible:
 
-  - "Support Vdc until undervoltage, n<[p1257](SINAMICS%20Parameter%20G120.md#p12570n-vdc_min-controller-speed-threshold)->F07405"
-  - "Support Vdc at undervoltage, n<p1257-> F07405, t>[p1255](SINAMICS%20Parameter%20G120.md#p12550n-vdc_min-controller-time-threshold)->F07406"
+  - "Support Vdc until undervoltage, n&lt;[p1257](SINAMICS%20Parameter%20G120.md#p12570n-vdc_min-controller-speed-threshold)-&gt;F07405"
+  - "Support Vdc at undervoltage, n&lt;p1257-&gt; F07405, t&gt;[p1255](SINAMICS%20Parameter%20G120.md#p12550n-vdc_min-controller-time-threshold)-&gt;F07406"
 
 #### Dynamic factor ([p1243](SINAMICS%20Parameter%20G120.md#p12430n-vdc_max-controller-dynamic-factor)) (Vdc_max controller)
 
@@ -4281,7 +4281,7 @@ Parameterize the switch-on level of the Vdc controller. When the value falls bel
 
    - 100% means that gain, integral time and derivative time are used in accordance with their basic settings based on a theoretical controller optimization.
    - The dynamic factor can be used if subsequent optimization is required. Gain, integral time and derivative time are rated with a dynamic factor.
-4. Enter a value in [s] for "Fault F7406 if T power failure >" ([p1255](SINAMICS%20Parameter%20G120.md#p12550n-vdc_min-controller-time-threshold)). If this is exceeded, a fault is signaled.
+4. Enter a value in [s] for "Fault F7406 if T power failure &gt;" ([p1255](SINAMICS%20Parameter%20G120.md#p12550n-vdc_min-controller-time-threshold)). If this is exceeded, a fault is signaled.
 
 #### Parameters of the Vdc_max switch-on level
 
@@ -4314,7 +4314,7 @@ The alarms present are acknowledged and the drive is restarted automatically. Th
   | Symbol | Meaning |
   | --- | --- |
   |  | **Warning** |
-  | **Risk of fatal injury from restarting the motor**  When the "automatic restart" function is active ([p1210](SINAMICS%20Parameter%20G120.md#p1210-automatic-restart-mode-3) > 1), the motor automatically starts after a power failure. This is especially critical after longer power failures.   Reduce the risk of accidents in your machine or system to an acceptable level by applying suitable measures, e.g. protective doors or covers. |  |
+  | **Risk of fatal injury from restarting the motor**  When the "automatic restart" function is active ([p1210](SINAMICS%20Parameter%20G120.md#p1210-automatic-restart-mode-3) &gt; 1), the motor automatically starts after a power failure. This is especially critical after longer power failures.   Reduce the risk of accidents in your machine or system to an acceptable level by applying suitable measures, e.g. protective doors or covers. |  |
 
 #### Settings
 
@@ -4502,18 +4502,18 @@ initiate product steps for other plant sections (e.g. open gates for pumps and f
 
    The "f or n comparison value reached/exceeded" signal is generated under consideration of hysteresis speed 1, speed threshold value 1 and the ON delay.
 4. Enter the speed threshold 1 at "Speed threshold 1" ([p2141](SINAMICS%20Parameter%20G120.md#p21410n-speed-threshold-1)).
-5. Enter the ON delay time for signal |n_act| > speed threshold at "ON delay" ([p2156](SINAMICS%20Parameter%20G120.md#p21560n-on-delay-comparison-value-reached)).
+5. Enter the ON delay time for signal |n_act| &gt; speed threshold at "ON delay" ([p2156](SINAMICS%20Parameter%20G120.md#p21560n-on-delay-comparison-value-reached)).
 6. Set the bandwidths for the following messages at "Hysteresis speed 2" ([p2140](SINAMICS%20Parameter%20G120.md#p21400n-hysteresis-speed-2)):
 
-   - |n_act| < speed threshold 2
-   - n_set > speed threshold 2
+   - |n_act| &lt; speed threshold 2
+   - n_set &gt; speed threshold 2
 7. Enter the speed threshold 2 at "Speed threshold 2" ([p2155](SINAMICS%20Parameter%20G120.md#p21550n-speed-threshold-2)).
-8. Set the bandwidths for the for the message n_act > n_max at "Hysteresis speed n_act > n_max" ([p2162](SINAMICS%20Parameter%20G120.md#p21620n-hysteresis-speed-n_act-n_max)).
-9. Select the parameters which are to be interconnected with the n_act > n_max signal at "|n_act| > n_max" ([r2197](SINAMICS%20Parameter%20G120.md#r2197013-cobo-status-word-monitoring-1-1)). Several interconnections are possible.
+8. Set the bandwidths for the for the message n_act &gt; n_max at "Hysteresis speed n_act &gt; n_max" ([p2162](SINAMICS%20Parameter%20G120.md#p21620n-hysteresis-speed-n_act-n_max)).
+9. Select the parameters which are to be interconnected with the n_act &gt; n_max signal at "|n_act| &gt; n_max" ([r2197](SINAMICS%20Parameter%20G120.md#r2197013-cobo-status-word-monitoring-1-1)). Several interconnections are possible.
 
    Interconnect binector output:
 
-   Signal n_act > n_max is generated under consideration of hysteresis speed n_act > n_max.
+   Signal n_act &gt; n_max is generated under consideration of hysteresis speed n_act &gt; n_max.
 
    For a negative speed limit, the hysteresis is effective below the limit value and for a positive speed limit, above the limit value.
 
@@ -4540,20 +4540,20 @@ Comparators are provided for the monitoring of the actual speed and setpoint thr
 
 1. Set the bandwidths for the following messages at "Hysteresis speed 3" ([p2150](SINAMICS%20Parameter%20G120.md#p21500n-hysteresis-speed-3)):
 
-   - |n_act| < speed setpoint 3
-   - n_set >= 0
-   - n_act >= 0
+   - |n_act| &lt; speed setpoint 3
+   - n_set &gt;= 0
+   - n_act &gt;= 0
 
    The calculation mode is defined using [p0340](SINAMICS%20Parameter%20G120.md#p03400n-automatic-calculation-motorcontrol-parameters-2).
-2. Select the parameters which are to be interconnected with the n_act >= 0 signal at "|n_act| >= 0" ([r2197](SINAMICS%20Parameter%20G120.md#r2197013-cobo-status-word-monitoring-1-1)). Several interconnections are possible.
+2. Select the parameters which are to be interconnected with the n_act &gt;= 0 signal at "|n_act| &gt;= 0" ([r2197](SINAMICS%20Parameter%20G120.md#r2197013-cobo-status-word-monitoring-1-1)). Several interconnections are possible.
 
-   Signal n_act >= 0 is generated under consideration of hysteresis speed 3.
-3. Select the parameters which are to be interconnected with the |n_act| < speed threshold 3 signal at "|n_act| < speed threshold 3" ([r2199](SINAMICS%20Parameter%20G120.md#r219905-cobo-status-word-monitoring-3)). Several interconnections are possible.
+   Signal n_act &gt;= 0 is generated under consideration of hysteresis speed 3.
+3. Select the parameters which are to be interconnected with the |n_act| &lt; speed threshold 3 signal at "|n_act| &lt; speed threshold 3" ([r2199](SINAMICS%20Parameter%20G120.md#r219905-cobo-status-word-monitoring-3)). Several interconnections are possible.
 
-   Signal |n_act| < speed threshold 3 is generated under consideration of hysteresis speed 3 and speed threshold 3.
-4. Set the speed threshold 3 for |n_act| < speed setpoint 3 at "Speed threshold 3" ([p2161](SINAMICS%20Parameter%20G120.md#p21610n-speed-threshold-3)).
-5. Select the parameters which are to be interconnected with the |n_act| < p2161 signal at "|n_act| < p2161" ([r2198](SINAMICS%20Parameter%20G120.md#r2198412-cobo-status-word-monitoring-2)). Several interconnections are possible.
-6. Select the parameters which are to be interconnected with the n_set > 0 signal at "n_set > 0" (r2198).
+   Signal |n_act| &lt; speed threshold 3 is generated under consideration of hysteresis speed 3 and speed threshold 3.
+4. Set the speed threshold 3 for |n_act| &lt; speed setpoint 3 at "Speed threshold 3" ([p2161](SINAMICS%20Parameter%20G120.md#p21610n-speed-threshold-3)).
+5. Select the parameters which are to be interconnected with the |n_act| &lt; p2161 signal at "|n_act| &lt; p2161" ([r2198](SINAMICS%20Parameter%20G120.md#r2198412-cobo-status-word-monitoring-2)). Several interconnections are possible.
+6. Select the parameters which are to be interconnected with the n_set &gt; 0 signal at "n_set &gt; 0" (r2198).
 7. Select the signal source for the speed setpoint messages at "n_set / n_set 2" ([p2151](SINAMICS%20Parameter%20G120.md#p21510n-ci-speed-setpoint-for-messagessignals)).
 
 ###### Function diagrams (FD)
@@ -5077,39 +5077,39 @@ The number represents the block number ([p2616](SINAMICS%20Parameter%20G120.md#p
 
 Select one of the following jobs in the "Job" drop-down list:
 
-- [1] POSITIONING -> initiates a traversing motion until the target position is reached.
-- [2] FIXED_STOP -> allows a clamping torque and a clamping force to be entered for the fixed stop; activates the Configuration of fixed stop button, which you can use to call a dialog for configuring the fixed stop parameters.
-- [3] ENDLESS_POS -> accelerates to the defined velocity.
+- [1] POSITIONING -&gt; initiates a traversing motion until the target position is reached.
+- [2] FIXED_STOP -&gt; allows a clamping torque and a clamping force to be entered for the fixed stop; activates the Configuration of fixed stop button, which you can use to call a dialog for configuring the fixed stop parameters.
+- [3] ENDLESS_POS -&gt; accelerates to the defined velocity.
 - Until the software limit switch is reached.
 - Until the travel area limit is reached.
 - Until the motion is interrupted by BB/intermediate stop.
 - Until the motion is aborted by BB/Reject traversing block.
-- [4] ENDLESS_NEG -> see above.
+- [4] ENDLESS_NEG -&gt; see above.
 - [5] WAIT - defines a wait time for the following job.
-- [6] GOTO -> allows you to make jumps within a series of traversal requests. The block number to which the jump is to be made must be specified as request parameter (see below).
-- [7] SET_O -> allows up to two digital outputs to be set at the same time.
-- [8] RESET_O -> allows up to two digital outputs to be reset at the same time.
-- [9] JERK -> enables jerk limitation.
+- [6] GOTO -&gt; allows you to make jumps within a series of traversal requests. The block number to which the jump is to be made must be specified as request parameter (see below).
+- [7] SET_O -&gt; allows up to two digital outputs to be set at the same time.
+- [8] RESET_O -&gt; allows up to two digital outputs to be reset at the same time.
+- [9] JERK -&gt; enables jerk limitation.
 
 **Request parameter**
 
 The supplementary information for the requests is queried here:
 
-- WAIT -> wait time in [ms].
-- GOTO -> block number (see request).
-- SET_O -> set digit output 1, 2 or both (3).
-- RESET_O -> reset digit output 1, 2 or both (3).
-- JERK -> "1" to activate or "0" to deactivate.
-- FIXED_STOP -> input of the clamping torque [0.01 Nm] and clamping force [Nm].
+- WAIT -&gt; wait time in [ms].
+- GOTO -&gt; block number (see request).
+- SET_O -&gt; set digit output 1, 2 or both (3).
+- RESET_O -&gt; reset digit output 1, 2 or both (3).
+- JERK -&gt; "1" to activate or "0" to deactivate.
+- FIXED_STOP -&gt; input of the clamping torque [0.01 Nm] and clamping force [Nm].
 
 **Request mode**
 
 Specify the positioning mode here:
 
-- ABSOLUTE - > travel to the specified position.
-- RELATIVE -> traverse the axis by the specified value.
-- ABS_POS (only for activated modulo correction) -> travel to the specified position in the direction of increasing actual position values.
-- ABS_NEG (only for activated modulo correction) -> travel to the specified position in the direction of decreasing actual position values.
+- ABSOLUTE - &gt; travel to the specified position.
+- RELATIVE -&gt; traverse the axis by the specified value.
+- ABS_POS (only for activated modulo correction) -&gt; travel to the specified position in the direction of increasing actual position values.
+- ABS_NEG (only for activated modulo correction) -&gt; travel to the specified position in the direction of decreasing actual position values.
 
 **Position**
 
@@ -5131,12 +5131,12 @@ Specify the positioning mode here:
 
 The transition specifies the continuation condition when the next traversing block is to be activated. The following settings are possible:
 
-- END -> ends the traversing block; the continuation condition can be used for the pure single operation (each request will be started individually) or for the last traversing block of a sequence.
-- CONTINUE_WITH_STOP -> travel is made to exactly the position specified in the traversing block and the axis will be braked to standstill. The following request will be performed without a restart by the "Activate traversing block" ([p2631](SINAMICS%20Parameter%20G120.md#p2631-bi-epos-activate-traversing-task-0---1)) signal as soon as the actual position lies within the positioning window.
-- CONTINUE_FLYING -> the following traversing block is processed immediately when the time to apply the brake is reached. If a direction reversal needs to be made, the behavior corresponds to that for CONTINUE_WITH_STOP, i.e. it will be braked to standstill.
-- CONTINUE_EXTERNAL -> behavior as with CONTINUE_FLYING, but an immediate block change can be triggered via the signal at the binector input [p2632](SINAMICS%20Parameter%20G120.md#p2632-epos-external-block-change-evaluation) "External block change" up to the time to apply the brake. If an external block change is not triggered, there is a flying change to the next block at the time to apply the brake.
-- CONTINUE_EXTERNAL_WAIT -> a flying change to the next request can be triggered during the entire motion phase via the control signal "External block change". If an "external block change" is not triggered, the axis remains in the parameterized target position until the signal is issued.
-- CONTINUE_EXTERNAL_ALARM -> the behavior is as with CONTINUE_EXTERNAL_WAIT, but warning A07463 "External traversing block change in traversing block x not requested" is output if an "external block change" has not been triggered before standstill is reached. The alarm can be converted to an alarm with a stop response so that block processing can be aborted if the control signal is not issued.
+- END -&gt; ends the traversing block; the continuation condition can be used for the pure single operation (each request will be started individually) or for the last traversing block of a sequence.
+- CONTINUE_WITH_STOP -&gt; travel is made to exactly the position specified in the traversing block and the axis will be braked to standstill. The following request will be performed without a restart by the "Activate traversing block" ([p2631](SINAMICS%20Parameter%20G120.md#p2631-bi-epos-activate-traversing-task-0---1)) signal as soon as the actual position lies within the positioning window.
+- CONTINUE_FLYING -&gt; the following traversing block is processed immediately when the time to apply the brake is reached. If a direction reversal needs to be made, the behavior corresponds to that for CONTINUE_WITH_STOP, i.e. it will be braked to standstill.
+- CONTINUE_EXTERNAL -&gt; behavior as with CONTINUE_FLYING, but an immediate block change can be triggered via the signal at the binector input [p2632](SINAMICS%20Parameter%20G120.md#p2632-epos-external-block-change-evaluation) "External block change" up to the time to apply the brake. If an external block change is not triggered, there is a flying change to the next block at the time to apply the brake.
+- CONTINUE_EXTERNAL_WAIT -&gt; a flying change to the next request can be triggered during the entire motion phase via the control signal "External block change". If an "external block change" is not triggered, the axis remains in the parameterized target position until the signal is issued.
+- CONTINUE_EXTERNAL_ALARM -&gt; the behavior is as with CONTINUE_EXTERNAL_WAIT, but warning A07463 "External traversing block change in traversing block x not requested" is output if an "external block change" has not been triggered before standstill is reached. The alarm can be converted to an alarm with a stop response so that block processing can be aborted if the control signal is not issued.
 
 **Hide**
 
@@ -5496,7 +5496,7 @@ For further information, see also [Optimizing the position controller](Commissio
 ###### Parameters of the closed-loop position control
 
 1. Enter a value for the P-gain ([p2538](SINAMICS%20Parameter%20G120.md#p25380n-lr-proportional-gain)). The P-gain specifies for which traversing speed which following error occurs (without precontrol).
-2. If necessary, enter a value for the integral action time ([p2539](SINAMICS%20Parameter%20G120.md#p25390n-lr-integral-time)) (0 ms = P controller; > 0 ms = PI controller).
+2. If necessary, enter a value for the integral action time ([p2539](SINAMICS%20Parameter%20G120.md#p25390n-lr-integral-time)) (0 ms = P controller; &gt; 0 ms = PI controller).
 
 **Enable the position controller**
 
@@ -5578,14 +5578,14 @@ On the basis of a positioning window, the entry of the axis into the specified p
 
 For further information, see also [Standstill and positioning monitoring](Commissioning%20SINAMICS%20G120-G115D-G110M%20drives.md#standstill-and-positioning-monitoring).
 
-1. At "Positioning window" ([p2544](SINAMICS%20Parameter%20G120.md#p2544-lr-positioning-window)), enter a value (value = 0, positioning monitoring is deactivated; value >= 1, positioning monitoring is active). The positioning monitoring defines the range at the target position in which the actual position value must lie after the positioning monitoring time has expired.
+1. At "Positioning window" ([p2544](SINAMICS%20Parameter%20G120.md#p2544-lr-positioning-window)), enter a value (value = 0, positioning monitoring is deactivated; value &gt;= 1, positioning monitoring is active). The positioning monitoring defines the range at the target position in which the actual position value must lie after the positioning monitoring time has expired.
 2. Enter a value at "Position monitoring time" ([p2545](SINAMICS%20Parameter%20G120.md#p2545-lr-positioning-monitoring-time)). The positioning monitoring time defines the range which after its expiration the following error must lie once within the positioning window.
 
 **Standstill monitoring**
 
 The standstill monitoring monitors the actual position of the axis after a traversing has completed. Two windows are specified for the standstill monitoring.
 
-1. At "Standstill window" ([p2542](SINAMICS%20Parameter%20G120.md#p2542-lr-standstill-window)), enter a value (value = 0, standstill monitoring is deactivated; value >= 1, standstill monitoring is active). The standstill window defines the range at the target position in which the actual position value must lie after the standstill window monitoring time has expired.
+1. At "Standstill window" ([p2542](SINAMICS%20Parameter%20G120.md#p2542-lr-standstill-window)), enter a value (value = 0, standstill monitoring is deactivated; value &gt;= 1, standstill monitoring is active). The standstill window defines the range at the target position in which the actual position value must lie after the standstill window monitoring time has expired.
 2. Enter a value at "Standstill monitoring time" ([p2543](SINAMICS%20Parameter%20G120.md#p2543-lr-standstill-monitoring-time)). The standstill monitoring time defines the range which after its expiration the following error must lie within the standstill window. The standstill window is monitored cyclically.
 
 **Position reached**
@@ -5609,7 +5609,7 @@ The following error is the difference between a ramp-shaped, variable setpoint a
 
 For further information, see also [Following error monitoring](Commissioning%20SINAMICS%20G120-G115D-G110M%20drives.md#following-error-monitoring).
 
-1. At "Maximum dynamic following error" ([p2546](SINAMICS%20Parameter%20G120.md#p25460n-lr-dynamic-following-error-monitoring-tolerance)), enter the maximum deviation between the calculated and the measured actual position value before an error occurs (value = 0, dyn. following error monitoring is deactivated; value >= 1 dyn. following error monitoring is active).
+1. At "Maximum dynamic following error" ([p2546](SINAMICS%20Parameter%20G120.md#p25460n-lr-dynamic-following-error-monitoring-tolerance)), enter the maximum deviation between the calculated and the measured actual position value before an error occurs (value = 0, dyn. following error monitoring is deactivated; value &gt;= 1 dyn. following error monitoring is active).
 2. "Travel to fixed stop active" ([p2552](SINAMICS%20Parameter%20G120.md#p2552-bi-lr-signal-travel-to-fixed-stop-active)); signal source for the "Travel to fixed stop active" message.
 
 **Following error within tolerance**
@@ -6067,16 +6067,16 @@ The block compares two numeric input values of the REAL type. Depending on the r
 **Numeric comparison 0**
 
 - [p20312](SINAMICS%20Parameter%20G120.md#p2031201-ci-ncm-0-inputs)[0]...p20312[1]; input values that are to be compared.
-- [r20313](SINAMICS%20Parameter%20G120.md#r20313-bo-ncm-0-output-qu); output signal if a > b
+- [r20313](SINAMICS%20Parameter%20G120.md#r20313-bo-ncm-0-output-qu); output signal if a &gt; b
 - [r20314](SINAMICS%20Parameter%20G120.md#r20314-bo-ncm-0-output-qe); output signal if a = b
-- [r20315](SINAMICS%20Parameter%20G120.md#r20315-bo-ncm-0-output-ql); output signal if a < b
+- [r20315](SINAMICS%20Parameter%20G120.md#r20315-bo-ncm-0-output-ql); output signal if a &lt; b
 
 **Numeric comparison 1**
 
 - [p20318](SINAMICS%20Parameter%20G120.md#p2031801-ci-ncm-1-inputs)[0]...p20318[1]; input values that are to be compared.
-- [r20319](SINAMICS%20Parameter%20G120.md#r20319-bo-ncm-1-output-qu); output signal if a > b
+- [r20319](SINAMICS%20Parameter%20G120.md#r20319-bo-ncm-1-output-qu); output signal if a &gt; b
 - [r20320](SINAMICS%20Parameter%20G120.md#r20320-bo-ncm-1-output-qe); output signal if a = b
-- [r20321](SINAMICS%20Parameter%20G120.md#r20321-bo-ncm-1-output-ql); output signal if a < b
+- [r20321](SINAMICS%20Parameter%20G120.md#r20321-bo-ncm-1-output-ql); output signal if a &lt; b
 
 ##### Function diagrams (FD)
 

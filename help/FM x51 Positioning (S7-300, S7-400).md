@@ -891,7 +891,7 @@ Operating errors are detected asynchronously to an operation/control. These oper
 | 6 | **Standstill range exited** |  | Yes |
 | Cause | The actual value lies outside of the standstill range. |  |  |
 | 7 | **Positive feedback** |  | Yes |
-| Cause | Actual value change > ½ standstill range in the wrong direction. |  |  |
+| Cause | Actual value change &gt; ½ standstill range in the wrong direction. |  |  |
 | 8 | **Missing or too slight actual value change** |  | Yes |
 | Cause | No actual value change or an actual value change against the desired direction within the monitoring time. |  |  |
 | 9 | **Target overrun (FM 451)** |  | Yes |
@@ -961,9 +961,9 @@ Operating errors are detected synchronously to an operation / control. Data erro
 | 10 | **Zero offset error** |  |  | No |
 | Cause |  | The zero offset is greater than ±100 m or ±1000 m.   After the zero offset, the software limit switches are positioned outside of the traversing range (-100 m to +100 m or -1000 m to +1000 m).  Rotary axis: The zero offset amount is greater than the end of the rotary axis. |  |  |
 | 11 | **Incorrect actual value** |  |  | No |
-| Cause |  | Linear axis: The coordinate is outside the current (possibly shifted) software limit switches.  Rotary axis: The coordinate is < 0 or greater than the end of the rotary axis. |  |  |
+| Cause |  | Linear axis: The coordinate is outside the current (possibly shifted) software limit switches.  Rotary axis: The coordinate is &lt; 0 or greater than the end of the rotary axis. |  |  |
 | 12 | **Incorrect reference point** |  |  | No |
-| Cause |  | Linear axis: The coordinate is outside the current (possibly shifted) software limit switches.  Rotary axis: The coordinate is < 0 or greater than the end of the rotary axis. |  |  |
+| Cause |  | Linear axis: The coordinate is outside the current (possibly shifted) software limit switches.  Rotary axis: The coordinate is &lt; 0 or greater than the end of the rotary axis. |  |  |
 | 20 | **Enable machine data not permitted** |  |  | No |
 | Cause | There are no new (error-free) machine data on the module. |  |  |  |
 | 27 | **Unauthorized bit-coded setting** |  |  | No |
@@ -992,7 +992,7 @@ The diagnostic interrupt is only triggered in the event of a faulty system data 
 | 5 | **Error in hardware interrupt setting** |  | Yes |
 | Cause | You have attempted to select a hardware interrupt that the module does not support. |  |  |
 | 6 | **Incorrect minimum edge distance (FM 451)** |  | Yes |
-| Cause | You have entered a value < 0 or > 10<sup>9</sup> µm as the minimum edge distance. |  |  |
+| Cause | You have entered a value &lt; 0 or &gt; 10<sup>9</sup> µm as the minimum edge distance. |  |  |
 | 7 | **Incorrect system of units** |  | Yes |
 | Cause | The value for the system of units lies outside of the permissible range of 1 to 4 and 6. |  |  |
 | 8 | **Incorrect axis type** |  | Yes |
@@ -1008,7 +1008,7 @@ The diagnostic interrupt is only triggered in the event of a faulty system data 
 | 15 | **Incorrect transmission rate** |  | Yes |
 | Cause | You have specified a transmission rate outside the permitted range of 0 to 3. |  |  |
 | 16 | **Incorrect reference point coordinate** |  | Yes |
-| Cause | The coordinate is outside the range from -100 m to +100 m or from 1000 m to +1000 m (depending on the resolution).  Linear axis: The coordinate lies outside of the operating range.   Rotary axis: The coordinate is < 0 or greater than the end of the rotary axis. |  |  |
+| Cause | The coordinate is outside the range from -100 m to +100 m or from 1000 m to +1000 m (depending on the resolution).  Linear axis: The coordinate lies outside of the operating range.   Rotary axis: The coordinate is &lt; 0 or greater than the end of the rotary axis. |  |  |
 | 17 | **Incorrect absolute encoder adjustment** |  | Yes |
 | Cause | SSI encoder: The value of the absolute encoder adjustment is not in the encoder range: (increments per encoder revolution x number of revolutions - 1). |  |  |
 | 18 | **Incorrect type of reference point approach** |  | Yes |
@@ -1044,7 +1044,7 @@ The diagnostic interrupt is only triggered in the event of a faulty system data 
 | 133 | **Incorrect switch-off difference in direction**  – |  | Yes |
 | Cause | The switch-off difference is greater than the minus changeover difference, less than ½ the target range or outside the valid range from 0 to 100 m or 0 to 1000 m (depending on resolution). |  |  |
 | 200 | **Incorrect resolution** |  | Yes |
-| Cause | You specified a resolution < 0.1 µm/pulse or > 1000 µm/pulse.  You specified a distance / encoder revolution and a number of pulses/encoder revolution, that results in a resolution of < 0.1 or > 1000. |  |  |
+| Cause | You specified a resolution &lt; 0.1 µm/pulse or &gt; 1000 µm/pulse.  You specified a distance / encoder revolution and a number of pulses/encoder revolution, that results in a resolution of &lt; 0.1 or &gt; 1000. |  |  |
 | 201 | **Encoder does not fit the operating range / rotary axis range** |  | Yes |
 | Cause | SSI encoders and rotary axes: The encoder does not precisely cover the rotary axis range.  Linear axis: The encoder does not cover at least the operating range (including software limit switches). |  |  |
 

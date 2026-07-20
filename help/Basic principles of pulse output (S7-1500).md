@@ -110,7 +110,7 @@ The pulse-width modulation (PWM) mode of the compact CPU has the following techn
 | --- | --- | --- | --- | --- | --- | --- |
 |  | **Minimum** |  |  | **Maximum** |  |  |
 | **Standard output** | **High-speed output deactivated** | **High-speed output activated** | **Standard output** | **High-speed output deactivated** | **High-speed output activated** |  |
-| Pulse duration | 100 µs with load > 0.1 A<sup> 1)</sup>  200 µs with load ≥ 2 mA<sup> 1)</sup> | 20 µs with load > 0.1 A<sup> 1)</sup>  40 µs with load ≥ 2 mA<sup> 1)</sup> | 2 µs<sup> 1) </sup> | 10,000,000 µs (10 s) |  |  |
+| Pulse duration | 100 µs with load &gt; 0.1 A<sup> 1)</sup>  200 µs with load ≥ 2 mA<sup> 1)</sup> | 20 µs with load &gt; 0.1 A<sup> 1)</sup>  40 µs with load ≥ 2 mA<sup> 1)</sup> | 2 µs<sup> 1) </sup> | 10,000,000 µs (10 s) |  |  |
 | Cycle duration | 10 ms <sup>2)</sup> | 100 μs <sup>2)</sup> | 10 μs |  |  |  |
 | <sup>1)</sup> A lower value is theoretically possible but, depending on the connected load, the output voltage can no longer be output as complete rectangular pulse   <sup>2)</sup> Load dependent |  |  |  |  |  |  |
 
@@ -139,7 +139,7 @@ You configure the pulse width modulation (PWM) mode in STEP 7 (TIA Portal).
 
 The pulse width modulation mode has the following functions:
 
-- If the "High-speed output (0.1 A)" option is activated, you can generate a minimum pulse duration of 2 μs at a current of 100 mA. If the "High-speed output (0.1 A)" option is not activated, you can generate a minimum pulse duration of 20 µs at a load > 0.1 A and a minimum pulse duration of 40 µs at a load of ≥ 2mA and a current of maximum 0.5 A. If you use a standard output you can generate a minimum pulse duration of 100 µs at a load > 0.1 A and a minimum pulse duration of 200 µs at a load of ≥ 2mA.
+- If the "High-speed output (0.1 A)" option is activated, you can generate a minimum pulse duration of 2 μs at a current of 100 mA. If the "High-speed output (0.1 A)" option is not activated, you can generate a minimum pulse duration of 20 µs at a load &gt; 0.1 A and a minimum pulse duration of 40 µs at a load of ≥ 2mA and a current of maximum 0.5 A. If you use a standard output you can generate a minimum pulse duration of 100 µs at a load &gt; 0.1 A and a minimum pulse duration of 200 µs at a load of ≥ 2mA.
 - You can control the pulse output (DQA) of the channel manually via the control and feedback interface.
 - You can configure the reaction to CPU STOP. Upon change to CPU STOP, the pulse output (DQA) is set to the configured state.
 
@@ -239,8 +239,8 @@ A rectangular signal with an assigned frequency and a constant on-load factor of
 
 The frequency output mode has the following functions:
 
-- If the "High-speed output (0.1 A)" option is activated, you can generate a minimum pulse duration of 2 μs at a current of 100 mA. If the "High-speed output (0.1 A)" option is not activated, you can generate a minimum pulse duration of 20 µs at a load of > 0.1 A and a minimum pulse duration of 40 µs at a load of ≥ 2mA and a current of maximum 0.5 A.   
-  If you use a standard output you can generate a minimum pulse duration of 100 µs at a load > 0.1 A and a minimum pulse duration of 200 µs at a load of ≥ 2mA and current of maximum 0.5 A.
+- If the "High-speed output (0.1 A)" option is activated, you can generate a minimum pulse duration of 2 μs at a current of 100 mA. If the "High-speed output (0.1 A)" option is not activated, you can generate a minimum pulse duration of 20 µs at a load of &gt; 0.1 A and a minimum pulse duration of 40 µs at a load of ≥ 2mA and a current of maximum 0.5 A.   
+  If you use a standard output you can generate a minimum pulse duration of 100 µs at a load &gt; 0.1 A and a minimum pulse duration of 200 µs at a load of ≥ 2mA and current of maximum 0.5 A.
 
 |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -391,7 +391,7 @@ High-speed pulse output (high-speed output) is available for the following opera
 | --- | --- | --- | --- | --- |
 |  | **Minimum** |  | **Maximum** |  |
 | **High-speed output deactivated** | **High-speed output activated** | **High-speed output deactivated** | **High-speed output activated** |  |
-| Pulse duration | 20 µs with load > 0.1 A<sup> 1)</sup>  40 µs with load ≥ 2 mA<sup> 1)</sup> | 2 µs<sup> 1) </sup> | 10,000,000 μs (10 s) |  |
+| Pulse duration | 20 µs with load &gt; 0.1 A<sup> 1)</sup>  40 µs with load ≥ 2 mA<sup> 1)</sup> | 2 µs<sup> 1) </sup> | 10,000,000 μs (10 s) |  |
 | Period duration | 100 μs <sup>2)</sup> | 10 μs |  |  |
 | Frequency | 0.1 Hz |  | 10 kHz <sup>2)</sup> | 100 kHz |
 | <sup>1)</sup> A lower value is theoretically possible but, depending on the connected load, the output voltage can no longer be output as complete rectangular pulse   <sup>2)</sup> Load dependent |  |  |  |  |

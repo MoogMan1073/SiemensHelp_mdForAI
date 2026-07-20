@@ -435,7 +435,7 @@ You have the following options for connecting the Interpreter technology object 
 
 - When adding an "Interpreter" technology object in the "Add technology object" window, select the Kinematics technology object from the "Kinematics (optional)" drop-down list.
 - In the project navigation, drag-and-drop the Interpreter technology object onto the Kinematics technology object.
-- In the configuration of the Interpreter technology object, select the kinematics technology object under "Basic parameters > Connected kinematics".
+- In the configuration of the Interpreter technology object, select the kinematics technology object under "Basic parameters &gt; Connected kinematics".
 
 ##### Result
 
@@ -446,7 +446,7 @@ A link to the connected Interpreter technology object is created in the kinemati
 You have the following options for removing the connection of an Interpreter technology object to a kinematics technology object:
 
 - Delete the link in the kinematics technology object.
-- Remove the selection under "Basic parameters > Connected kinematics" in the configuration of the technology object.
+- Remove the selection under "Basic parameters &gt; Connected kinematics" in the configuration of the technology object.
 
 #### Defining an interpreter program as preferred interpreter program of an interpreter (S7-1500T)
 
@@ -487,9 +487,9 @@ To exchange data between the interpreter program and the user program of the CPU
 
   The clipboard is a reserved area in the interpreter technology object.
 
-  - <TO>.Clipboard.CbBool (Array [1..300] of Bool)
-  - <TO>.Clipboard.CbDint (Array [1..100] of DInt)
-  - <TO>.Clipboard.CbLreal (Array[1..100] of LReal)
+  - &lt;TO&gt;.Clipboard.CbBool (Array [1..300] of Bool)
+  - &lt;TO&gt;.Clipboard.CbDint (Array [1..100] of DInt)
+  - &lt;TO&gt;.Clipboard.CbLreal (Array[1..100] of LReal)
 
   You can read and write to the tags in the clipboard in both the interpreter program and the user program.
 - **Data exchange via mapped tags in global data blocks**
@@ -570,7 +570,7 @@ Example:
 
 To update the start values for the clipboard tags, follow these steps:
 
-1. In the configuration of the interpreter technology object, navigate to "Extended parameters > Clipboard".
+1. In the configuration of the interpreter technology object, navigate to "Extended parameters &gt; Clipboard".
 2. Configure the start values for the clipboard tags:
 
    - BOOL tags [1-300]: In the "Start value project" column, select the start values for the BOOL tags from the drop-down list.
@@ -599,7 +599,7 @@ To update the start values for the clipboard tags, follow these steps:
 
 To map one variable of a global data block in the Interpreter mapping technology object, follow these steps:
 
-1. In the configuration, navigate from the Interpreter mapping technology object to "Mapping > Mapping of variables".
+1. In the configuration, navigate from the Interpreter mapping technology object to "Mapping &gt; Mapping of variables".
 2. In the "Name in Interpreter program" column, click the "Add" cell.
 3. Enter the name with which the variable is addressed in the Interpreter program.
 4. In the "Data block variable" column, select the variable you want to map.
@@ -625,7 +625,7 @@ The variable is mapped.
 
 To map a technology object in the interpreter mapping technology object, follow these steps:
 
-1. In the configuration, navigate from the interpreter mapping technology object to "Mapping > Mapping of technology objects".
+1. In the configuration, navigate from the interpreter mapping technology object to "Mapping &gt; Mapping of technology objects".
 2. In the "Name in interpreter program" column, click the "Add" cell.
 3. Enter the name under which the technology object is addressed in the Interpreter program.
 4. In the "Technology object" column, select the technology object you want to map.
@@ -663,7 +663,7 @@ Program preparation has the advantage that kinematics motions including dynamics
 
 The Interpreter interrupts program preparation in the following situations:
 
-- The maximum number of jobs to be prepared in the Interpreter job sequence (<TO_Interpreter>.Parameter.MaxNumberOfCommands) has been reached. As soon as a job has been executed, program preparation is continued.
+- The maximum number of jobs to be prepared in the Interpreter job sequence (&lt;TO_Interpreter&gt;.Parameter.MaxNumberOfCommands) has been reached. As soon as a job has been executed, program preparation is continued.
 - The maximum number of kinematics jobs (30) has been reached and another kinematics job is to be prepared. As soon as a kinematics job has been executed, program preparation is continued.
 
 If you have to wait for data to be updated during program execution, you can use the following instructions in the Interpreter program to interrupt the program preparation:
@@ -706,9 +706,9 @@ As soon as the Interpreter has finished executing the Interpreter program, the I
 
 #### Interpreter job sequence (S7-1500T)
 
-The length of the Interpreter job sequence specifies the maximum number of jobs that can be prepared by the Interpreter. The Interpreter job sequence includes all jobs of the Interpreter program. You can set the maximum number of jobs to be prepared between 10 and 100 (<TO_Interpreter>.Parameter.MaxNumberOfCommands).
+The length of the Interpreter job sequence specifies the maximum number of jobs that can be prepared by the Interpreter. The Interpreter job sequence includes all jobs of the Interpreter program. You can set the maximum number of jobs to be prepared between 10 and 100 (&lt;TO_Interpreter&gt;.Parameter.MaxNumberOfCommands).
 
-The Interpreter job sequence can contain up to 30 kinematic motion jobs. This limitation is fixed irrespective of the value of the kinematics job sequence configured at the kinematics technology object (<TO_Kinematics>.MotionQueue.MaxNumberOfCommands).
+The Interpreter job sequence can contain up to 30 kinematic motion jobs. This limitation is fixed irrespective of the value of the kinematics job sequence configured at the kinematics technology object (&lt;TO_Kinematics&gt;.MotionQueue.MaxNumberOfCommands).
 
 When loading the Interpreter program and during program execution, the Interpreter prepares the jobs until the maximum number of jobs is reached. During execution of the Interpreter program, the jobs or motion sequences are executed as soon as they are prepared and the previous job is completed.
 
@@ -718,8 +718,8 @@ The Interpreter calculates the jobs in advance during program preparation. The j
 
 To configure the job sequence of the Interpreter, follow these steps:
 
-1. Open the "Extended parameters > Interpreter job sequence" configuration window of the Interpreter technology object.
-2. Enter the desired value in the "Maximum number of jobs to be prepared" field (<TO_Interpreter>.Parameter.MaxNumberOfCommands).
+1. Open the "Extended parameters &gt; Interpreter job sequence" configuration window of the Interpreter technology object.
+2. Enter the desired value in the "Maximum number of jobs to be prepared" field (&lt;TO_Interpreter&gt;.Parameter.MaxNumberOfCommands).
 
 #### Maximum wait time (S7-1500T)
 
@@ -743,8 +743,8 @@ With a maximum wait time of 2.0 s, the execution of the motion sequence starts 
 
 To configure the maximum wait time, follow these steps:
 
-1. Open the configuration window "Extended parameters > Program preparation" of the interpreter technology object.
-2. In the "Maximum wait time" field, enter the desired value (<TO_Interpreter>.Parameter.StartTimeout).
+1. Open the configuration window "Extended parameters &gt; Program preparation" of the interpreter technology object.
+2. In the "Maximum wait time" field, enter the desired value (&lt;TO_Interpreter&gt;.Parameter.StartTimeout).
 
 #### Program override (S7-1500T)
 
@@ -758,8 +758,8 @@ The start value of the program override can be defined in the configuration of t
 
 To configure the start value of the program override, follow these steps:
 
-1. Open the configuration window "Extended parameters > Program preparation" of the Interpreter technology object.
-2. In the "Start value program override" field, enter the desired value (<TO_Interpreter>.Parameter.ProgramOverride).
+1. Open the configuration window "Extended parameters &gt; Program preparation" of the Interpreter technology object.
+2. In the "Start value program override" field, enter the desired value (&lt;TO_Interpreter&gt;.Parameter.ProgramOverride).
 
 #### Examples for preparation and execution of an Interpreter program (S7-1500T)
 
@@ -854,11 +854,11 @@ The following variables of the Interpreter technology object are relevant for th
 
 | Variable | Description |  |
 | --- | --- | --- |
-| <TO>.Parameter.MaxNumberOfCommands | Maximum number of jobs to be prepared in the Interpreter job sequence |  |
-| <TO>.Parameter.StartTimeout | Maximum wait time  Maximum time between the possible and effective start of an order in [s]  An incompletely prepared motion sequence will start after the expiry of the maximum wait time. |  |
+| &lt;TO&gt;.Parameter.MaxNumberOfCommands | Maximum number of jobs to be prepared in the Interpreter job sequence |  |
+| &lt;TO&gt;.Parameter.StartTimeout | Maximum wait time  Maximum time between the possible and effective start of an order in [s]  An incompletely prepared motion sequence will start after the expiry of the maximum wait time. |  |
 | 0.0 | Motion sequences only start when they are fully prepared or the maximum number of jobs to be prepared in the Interpreter job sequence has been reached. |  |
-| <TO>.Parameter.ProgramOverride | Start value of the program override in [%]  The percentage factor acts as the start value of the modal parameter when preparing the dynamic profiles of axis and kinematics motions. |  |
-| <TO>.StatusInterpreter.LevelOfPreparedCommands | Utilization of the program preparation in [%] in 5% steps:  Display of the maximum value of the following criteria:  - Prepared Interpreter jobs - Processed kinematics jobs - Prepared synchronous actions |  |
+| &lt;TO&gt;.Parameter.ProgramOverride | Start value of the program override in [%]  The percentage factor acts as the start value of the modal parameter when preparing the dynamic profiles of axis and kinematics motions. |  |
+| &lt;TO&gt;.StatusInterpreter.LevelOfPreparedCommands | Utilization of the program preparation in [%] in 5% steps:  Display of the maximum value of the following criteria:  - Prepared Interpreter jobs - Processed kinematics jobs - Prepared synchronous actions |  |
 
 ### Executing the interpreter program in the interpreter technology object (S7-1500T)
 
@@ -910,11 +910,11 @@ The "[MC_RunProgram](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md
 
 ##### Start program execution
 
-With "Execute" = TRUE, you can start the "MC_RunProgram" job. Even if the loading process is not yet complete ("<TO>.StatusWord.X9" = TRUE (Loading)), you can already issue an "MC_RunProgram" job. The execution of the interpreter program starts as soon as the interpreter program is prepared and loaded ("<TO>.StatusWord.X10" = TRUE (Loaded)).
+With "Execute" = TRUE, you can start the "MC_RunProgram" job. Even if the loading process is not yet complete ("&lt;TO&gt;.StatusWord.X9" = TRUE (Loading)), you can already issue an "MC_RunProgram" job. The execution of the interpreter program starts as soon as the interpreter program is prepared and loaded ("&lt;TO&gt;.StatusWord.X10" = TRUE (Loaded)).
 
 ##### During program execution
 
-As long as the interpreter technology object is executing the interpreter program, the "MC_RunProgram" job is in progress and "Active" = TRUE ("<TO>.StatusWord.X5" = TRUE (InRun)).
+As long as the interpreter technology object is executing the interpreter program, the "MC_RunProgram" job is in progress and "Active" = TRUE ("&lt;TO&gt;.StatusWord.X5" = TRUE (InRun)).
 
 ##### After program execution
 
@@ -924,15 +924,15 @@ Now you can restart execution of the interpreter program.
 
 #### Stopping execution of the interpreter program (S7-1500T)
 
-You can use the "MC_StopProgram" Motion Control instruction to stop the execution of the Interpreter program in the interpreter technology object. A single axis/kinematics controlled by the interpreter is stopped ("<TO>.StatusInterpreterMotion.StatusWord.X0" = TRUE (ControlledByInterpreter)).
+You can use the "MC_StopProgram" Motion Control instruction to stop the execution of the Interpreter program in the interpreter technology object. A single axis/kinematics controlled by the interpreter is stopped ("&lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0" = TRUE (ControlledByInterpreter)).
 
 > **Note**
 >
 > **Never-ending motion jobs**
 >
-> Note that for motion jobs that do not end automatically, e.g. "move()", the "<TO>.StatusInterpreterMotion.StatusWord.X0" tag (ControlledByInterpreter) of the corresponding technology object is set to "FALSE" as soon as the technology object has reached the specified state, e.g. the specified velocity.
+> Note that for motion jobs that do not end automatically, e.g. "move()", the "&lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0" tag (ControlledByInterpreter) of the corresponding technology object is set to "FALSE" as soon as the technology object has reached the specified state, e.g. the specified velocity.
 >
-> To enable termination of these motion jobs with an "MC_StopProgram" job, use the MCL instruction "[setControlledByInterpreter()](#setcontrolledbyinterpreter-set-controlledbyinterpreter-bit-for-a-technology-object-s7-1500t)" and set the "<TO>.StatusInterpreterMotion.StatusWord.X0" tag (ControlledByInterpreter) back to "TRUE".
+> To enable termination of these motion jobs with an "MC_StopProgram" job, use the MCL instruction "[setControlledByInterpreter()](#setcontrolledbyinterpreter-set-controlledbyinterpreter-bit-for-a-technology-object-s7-1500t)" and set the "&lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0" tag (ControlledByInterpreter) back to "TRUE".
 
 ##### Parameter inputs
 
@@ -952,11 +952,11 @@ With "Mode" = 2, the single axis/kinematics executes the current motion job or
 
 With "Execute" = TRUE you can stop the execution of the interpreter program. The motion of the single axis/kinematics controlled by the interpreter technology object is stopped depending on the specified mode. The "MC_StopProgram" job is processed until the stop motion is complete.
 
-As long as "Execute" = TRUE, additional jobs for the interpreter technology object are rejected ("<TO>.StatusWord.X7" = TRUE (Stopping)).
+As long as "Execute" = TRUE, additional jobs for the interpreter technology object are rejected ("&lt;TO&gt;.StatusWord.X7" = TRUE (Stopping)).
 
 ##### After stopping program execution
 
-As soon as the single axis/kinematics have come to a standstill, the "MC_StopProgram" job is completed ("Done" = TRUE). The corresponding technology object of the single axis/kinematics is then no longer controlled by the interpreter technology object ("<TO>.StatusInterpreterMotion.StatusWord.X0" = FALSE (ControlledByInterpreter)).
+As soon as the single axis/kinematics have come to a standstill, the "MC_StopProgram" job is completed ("Done" = TRUE). The corresponding technology object of the single axis/kinematics is then no longer controlled by the interpreter technology object ("&lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0" = FALSE (ControlledByInterpreter)).
 
 To then release the interpreter technology object for new jobs, reset the "Execute" parameter of the "MC_StopProgram" job to "FALSE".
 
@@ -996,21 +996,21 @@ The following variables of the Interpreter technology object are relevant for ex
 
 | Variable | Description |  |
 | --- | --- | --- |
-| <TO>.ProgramName | Name of the currently loaded technology object Interpreter program |  |
-| <TO>.ProgramSource | Source of the currently loaded Interpreter program |  |
+| &lt;TO&gt;.ProgramName | Name of the currently loaded technology object Interpreter program |  |
+| &lt;TO&gt;.ProgramSource | Source of the currently loaded Interpreter program |  |
 | 0 | No Interpreter program loaded |  |
 | 1 | Interpreter program technology object |  |
-| <TO>.MappingName | Name of the currently loaded Interpreter mapping technology object |  |
-| <TO>.MappingSource | Source of the currently loaded Interpreter mapping |  |
+| &lt;TO&gt;.MappingName | Name of the currently loaded Interpreter mapping technology object |  |
+| &lt;TO&gt;.MappingSource | Source of the currently loaded Interpreter mapping |  |
 | 0 | No Interpreter mapping loaded |  |
 | 1 | Interpreter mapping technology object |  |
-| <TO>.ActualLineNumber | Line number of the currently executed program line or the last executed program line |  |
-| <TO>.StatusWord.X0 (Control) | No Motion Control job is active at the Interpreter technology object. |  |
-| <TO>.StatusWord.X5 (InRun) | The technology object is executing an Interpreter program. |  |
-| <TO>.StatusWord.X6 (Done) | Execution of the Interpreter program has finished. |  |
-| <TO>.StatusWord.X7 (Stopping) | Execution of the Interpreter program will be or has been stopped. |  |
-| <TO>.StatusWord.X9 (Loading) | The technology object is loading the Interpreter program. Interpreter program preparation is running. |  |
-| <TO>.StatusWord.X10 (Loaded) | The Interpreter program is loaded and prepared. |  |
+| &lt;TO&gt;.ActualLineNumber | Line number of the currently executed program line or the last executed program line |  |
+| &lt;TO&gt;.StatusWord.X0 (Control) | No Motion Control job is active at the Interpreter technology object. |  |
+| &lt;TO&gt;.StatusWord.X5 (InRun) | The technology object is executing an Interpreter program. |  |
+| &lt;TO&gt;.StatusWord.X6 (Done) | Execution of the Interpreter program has finished. |  |
+| &lt;TO&gt;.StatusWord.X7 (Stopping) | Execution of the Interpreter program will be or has been stopped. |  |
+| &lt;TO&gt;.StatusWord.X9 (Loading) | The technology object is loading the Interpreter program. Interpreter program preparation is running. |  |
+| &lt;TO&gt;.StatusWord.X10 (Loaded) | The Interpreter program is loaded and prepared. |  |
 
 ##### Technology objects controlled by the Interpreter
 
@@ -1018,9 +1018,9 @@ The following variables of the technology object controlled by the Interpreter a
 
 | Variable | Description |
 | --- | --- |
-| <TO>.StatusInterpreterMotion.Interpreter | For a technology object of an axis:  Controlling Interpreter technology object |
-| <TO>.StatusInterpreterMotion.StatusWord.X0 (ControlledByInterpreter) | Is set to the value "TRUE" when an MCL job is prepared or active, or the bit is set via the MCL instruction "[setControlledByInterpreter()](#setcontrolledbyinterpreter-set-controlledbyinterpreter-bit-for-a-technology-object-s7-1500t)". |
-| <TO>.StatusInterpreterMotion.StatusWord.X1 (MotionByInterpreter) | Is set to the value "TRUE" when an MCL motion job is in effect. |
+| &lt;TO&gt;.StatusInterpreterMotion.Interpreter | For a technology object of an axis:  Controlling Interpreter technology object |
+| &lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0 (ControlledByInterpreter) | Is set to the value "TRUE" when an MCL job is prepared or active, or the bit is set via the MCL instruction "[setControlledByInterpreter()](#setcontrolledbyinterpreter-set-controlledbyinterpreter-bit-for-a-technology-object-s7-1500t)". |
+| &lt;TO&gt;.StatusInterpreterMotion.StatusWord.X1 (MotionByInterpreter) | Is set to the value "TRUE" when an MCL motion job is in effect. |
 
 ## Creating MCL programs (S7-1500T)
 
@@ -1344,7 +1344,7 @@ Arrays have a certain number of components of a data type. Arrays with a fixed n
 
 MCL
 
-<Var_Name> : ARRAY <[index1..indexN]> OF <Type>;
+&lt;Var_Name&gt; : ARRAY &lt;[index1..indexN]&gt; OF &lt;Type&gt;;
 
 | Syntax element | Description |
 | --- | --- |
@@ -1397,11 +1397,11 @@ The anonymous structure must be defined in the declaration unit for the declarat
 MCL
 
 VAR  
-  <VAR_Name> : STRUCT  
-      <Comp1_name> : <Type> [:= <InitValue_1>];  
-      <Comp2_name> : <Type> [:= <InitValue_2>];  
+  &lt;VAR_Name&gt; : STRUCT  
+      &lt;Comp1_name&gt; : &lt;Type&gt; [:= &lt;InitValue_1&gt;];  
+      &lt;Comp2_name&gt; : &lt;Type&gt; [:= &lt;InitValue_2&gt;];  
       ………  
-      <CompN_name> : <Type> [:= <InitValue_N>];  
+      &lt;CompN_name&gt; : &lt;Type&gt; [:= &lt;InitValue_N&gt;];  
    END_STRUCT;  
 END_VAR
 
@@ -1444,11 +1444,11 @@ A new global data type can be used after its declaration in the data type declar
 MCL
 
 TYPE  
-   <Type_Name> : STRUCT  
-      <Comp1_name> : <Type> [:= <InitValue_1>];  
-      <Comp2_name> : <Type> [:= <InitValue_2>];  
+   &lt;Type_Name&gt; : STRUCT  
+      &lt;Comp1_name&gt; : &lt;Type&gt; [:= &lt;InitValue_1&gt;];  
+      &lt;Comp2_name&gt; : &lt;Type&gt; [:= &lt;InitValue_2&gt;];  
       ………  
-      <CompN_name> : <Type> [:= <InitValue_N>];  
+      &lt;CompN_name&gt; : &lt;Type&gt; [:= &lt;InitValue_N&gt;];  
    END_STRUCT;  
 END_TYPE
 
@@ -1523,9 +1523,9 @@ The value range of each variable of this data type depends on the type of kinema
 
 | Instruction | Parameter name | Description |
 | --- | --- | --- |
-| linAbs | <pos> : TO_Struct_Ipr_Position; | Linear motion with absolute position specification |
-| circRel | <pos> : TO_Struct_Ipr_Position;  [auxPos:] TO_Struct_Ipr_Position; | Circular motion with relative target position |
-| ptpAbs | <pos> : TO_Struct_Ipr_Position; | sPTP (synchronous point-to-point) motion with absolute target position in Cartesian coordinates |
+| linAbs | &lt;pos&gt; : TO_Struct_Ipr_Position; | Linear motion with absolute position specification |
+| circRel | &lt;pos&gt; : TO_Struct_Ipr_Position;  [auxPos:] TO_Struct_Ipr_Position; | Circular motion with relative target position |
+| ptpAbs | &lt;pos&gt; : TO_Struct_Ipr_Position; | sPTP (synchronous point-to-point) motion with absolute target position in Cartesian coordinates |
 
 ##### Example
 
@@ -1596,8 +1596,8 @@ The TO_Struct_Ipr_AxPosition data type is used for data types of variables which
 
 | Instruction | Parameter name | Description |
 | --- | --- | --- |
-| ptpAxAbs | <AxPos> : TO_Struct_Ipr_AxPosition; | sPTP (synchronous point-to-point) Motion with absolute target position in machine coordinates |
-| ptpAxRel | <AxPos> : TO_Struct_Ipr_AxPosition; | sPTP (synchronous point-to-point) Motion with relative target position in machine coordinates |
+| ptpAxAbs | &lt;AxPos&gt; : TO_Struct_Ipr_AxPosition; | sPTP (synchronous point-to-point) Motion with absolute target position in machine coordinates |
+| ptpAxRel | &lt;AxPos&gt; : TO_Struct_Ipr_AxPosition; | sPTP (synchronous point-to-point) Motion with relative target position in machine coordinates |
 
 ##### Example
 
@@ -1667,8 +1667,8 @@ The TO_Struct_Ipr_JtPosition data type is used for data types of variables which
 
 | Instruction | Parameter name | Description |
 | --- | --- | --- |
-| ptpJtAbs | <jtPos> : TO_Struct_Ipr_JtPosition; | sPTP motion with absolute target specification in joint coordinates |
-| ptpJtRel | <jtPos> : TO_Struct_Ipr_JtPosition; | sPTP motion with relative target specification in joint coordinates |
+| ptpJtAbs | &lt;jtPos&gt; : TO_Struct_Ipr_JtPosition; | sPTP motion with absolute target specification in joint coordinates |
+| ptpJtRel | &lt;jtPos&gt; : TO_Struct_Ipr_JtPosition; | sPTP motion with relative target specification in joint coordinates |
 
 ##### Example
 
@@ -1727,11 +1727,11 @@ The TO_Struct_Ipr_Frames data type is used for data types of variables which can
 
 | Instruction | Parameter name | Description |
 | --- | --- | --- |
-| defOcs | <frame> : TO_Struct_Ipr_Frame; | Defines one of the three object coordinate systems (OCS) |
-| defTool | <frame> : TO_Struct_Ipr_Frame; | Defines one of the tool coordinate systems (TCS) |
-| trackIn | <origin> : TO_Struct_Ipr_Frame;  <initPos> : TO_Struct_Ipr_Frame; | Provides the functionality for conveyor synchronization |
-| defWsZone | <fr> : TO_Struct_Ipr_Frame; | Definition of work areas |
-| defKinZone | <fr> : TO_Struct_Ipr_Frame; | Definition of the kinematics range |
+| defOcs | &lt;frame&gt; : TO_Struct_Ipr_Frame; | Defines one of the three object coordinate systems (OCS) |
+| defTool | &lt;frame&gt; : TO_Struct_Ipr_Frame; | Defines one of the tool coordinate systems (TCS) |
+| trackIn | &lt;origin&gt; : TO_Struct_Ipr_Frame;  &lt;initPos&gt; : TO_Struct_Ipr_Frame; | Provides the functionality for conveyor synchronization |
+| defWsZone | &lt;fr&gt; : TO_Struct_Ipr_Frame; | Definition of work areas |
+| defKinZone | &lt;fr&gt; : TO_Struct_Ipr_Frame; | Definition of the kinematics range |
 
 ##### Example
 
@@ -2255,9 +2255,9 @@ A variable is accessed in a structured form by a combination of the scope of the
 
 | Syntax | Explanation |  |
 | --- | --- | --- |
-| "<TO_Identifier>.<VarName>" | <TO_Identifier> | As the technology object, the identifier can be:  - Separate technology object "Interpreter instance" - Connected "Kinematics" objects - "Kinematics axis" - References to mapped technology objects (axis)   Note: To access these technology objects you must use the "$" symbol in front of the name of the technology object |
+| "&lt;TO_Identifier&gt;.&lt;VarName&gt;" | &lt;TO_Identifier&gt; | As the technology object, the identifier can be:  - Separate technology object "Interpreter instance" - Connected "Kinematics" objects - "Kinematics axis" - References to mapped technology objects (axis)   Note: To access these technology objects you must use the "$" symbol in front of the name of the technology object |
 | "." | Because a technology object has a structure type ("STRUCT"), the variables of the technology objects are accessed as an element of the structure data type with the symbol "." |  |
-| <VarName> | Symbolic name of the variables of the Structure technology object |  |
+| &lt;VarName&gt; | Symbolic name of the variables of the Structure technology object |  |
 
 Only directly changeable tags (labeled as "Direct (DIR)") can be written in the technology object data block. Reading and writing of corresponding variables is possible in all value assignments and expressions. It is therefore necessary to indicate the preceding range of validity.
 
@@ -2495,7 +2495,7 @@ mySub( in := 1.0 );
   
   
 //assignment Output parameters in function call  
-myFunc( in := 10.0, Out => myVar2);  
+myFunc( in := 10.0, Out =&gt; myVar2);  
   
 //assignment variables of predefined technological structured types  
 $A1.DynamicDefaults.Acceleration := 10.0;  
@@ -2518,10 +2518,10 @@ The table shows the syntax for using this option:
 | Syntax | Description |  |
 | --- | --- | --- |
 | `<` `VAR_Name` `> += <` `Expression` `>;`    `<` `VAR_Name` `> -= <` `Expression` `>;`    `<` `VAR_Name` `> *= <` `Expression` `>;`    `<` `VAR_Name` `> /= <` `Expression` `>;`   These operators assign a value after the arithmetic operation is performed. | `<` `VAR_Name` `>` | Symbolic name of the tag. Free identifier.   The tag can be:  - Tag of an elementary data type - Array element based on an elementary data type - Element of a structured tag, based on an elementary data type - Input parameters of the function when calling functions |
-| `+=` | Combined assignment operator symbol.   Accordingly:  <VAR_Name> = <VAR_Name> + <Expression> |  |
-| `-=` | Combined assignment operator symbol.   Accordingly:  <VAR_Name> = <VAR_Name> - <Expression> |  |
-| `*=` | Combined assignment operator symbol.   Accordingly:  <VAR_Name> = <VAR_Name> * <Expression> |  |
-| `/=` | Combined assignment operator symbol.   Accordingly:  <VAR_Name> = <VAR_Name> / <Expression> |  |
+| `+=` | Combined assignment operator symbol.   Accordingly:  &lt;VAR_Name&gt; = &lt;VAR_Name&gt; + &lt;Expression&gt; |  |
+| `-=` | Combined assignment operator symbol.   Accordingly:  &lt;VAR_Name&gt; = &lt;VAR_Name&gt; - &lt;Expression&gt; |  |
+| `*=` | Combined assignment operator symbol.   Accordingly:  &lt;VAR_Name&gt; = &lt;VAR_Name&gt; * &lt;Expression&gt; |  |
+| `/=` | Combined assignment operator symbol.   Accordingly:  &lt;VAR_Name&gt; = &lt;VAR_Name&gt; / &lt;Expression&gt; |  |
 | `<` `Expression` `>` | An expression represents a value that is calculated when the program is executed. |  |
 | `;` | Semicolon – terminates each expression |  |
 
@@ -2669,12 +2669,12 @@ The meaning of the relational operators is shown in the following table:
 
 | Operator | Meaning |
 | --- | --- |
-| > | First operand is greater than the second operand |
-| < | First operand is less than the second operand |
-| >= | First operand is greater than or equal to the second operand |
-| <= | First operand is less than or equal to the second operand |
+| &gt; | First operand is greater than the second operand |
+| &lt; | First operand is less than the second operand |
+| &gt;= | First operand is greater than or equal to the second operand |
+| &lt;= | First operand is less than or equal to the second operand |
 | = | First operand is equal to second operand |
-| <> | First operand is not equal to the second operand |
+| &lt;&gt; | First operand is not equal to the second operand |
 
 The result of the relational expression is:
 
@@ -2686,11 +2686,11 @@ The following table shows permitted combinations of data types for the two opera
 | Data type |  | Permissible relational operators |
 | --- | --- | --- |
 | First operand | Second operand |  |
-| ANY_NUM | ANY_NUM<sup>1)</sup> | <, >, <=, >=, =, <> |
-| ANY_BIT | ANY_BIT | <, >, <=, >=, =, <> |
-| ARRAY | ARRAY<sup>2)</sup> | =, <> |
-| Structure (STRUCT) | Structure (STRUCT)<sup>2)</sup> | =, <> |
-| Variable of technological, structured type - AXIS_OBJECT | or  NULL | =, <> |
+| ANY_NUM | ANY_NUM<sup>1)</sup> | &lt;, &gt;, &lt;=, &gt;=, =, &lt;&gt; |
+| ANY_BIT | ANY_BIT | &lt;, &gt;, &lt;=, &gt;=, =, &lt;&gt; |
+| ARRAY | ARRAY<sup>2)</sup> | =, &lt;&gt; |
+| Structure (STRUCT) | Structure (STRUCT)<sup>2)</sup> | =, &lt;&gt; |
+| Variable of technological, structured type - AXIS_OBJECT | or  NULL | =, &lt;&gt; |
 | <sup>1)</sup>The comparison is performed in the lowest common data type to which both operands can be implicitly converted.   <sup>2)</sup>Data type of the first operand.   The abbreviations have the following meaning:  ANY_BIT for data types BOOL, DWORD ANY_INT for data types DINT, UDINT  ANY_NUM for data types ANY_INT, LREAL |  |  |
 
 ##### Rules
@@ -2717,9 +2717,9 @@ IF A = 2 THEN
  ; //...  
 END_IF;  
   
-var_1 := B < C; // var_1 of BOOL data type  
+var_1 := B &lt; C; // var_1 of BOOL data type  
   
-IF D < E OR var_2 THEN // var_2 of BOOL data type  
+IF D &lt; E OR var_2 THEN // var_2 of BOOL data type  
  ...  
 END_IF;  
   
@@ -2737,7 +2737,7 @@ END_IF
 // Comparison operator Unequal for variables of predefined
 
 //technological structured type - AXIS_OBJECT  
-IF myAxis <> NULL THEN   
+IF myAxis &lt;&gt; NULL THEN   
 ...  
 END_IF
 
@@ -2745,7 +2745,7 @@ END_IF
 
 ##### Description
 
-With the AND, &, XOR, and OR logical operators it is possible to join operands and expressions of the general data type ANY_BIT (BOOL or DWORD).
+With the AND, &amp;, XOR, and OR logical operators it is possible to join operands and expressions of the general data type ANY_BIT (BOOL or DWORD).
 
 The logical operator NOT allows you to negate operands and expressions of data type ANY_BIT.
 
@@ -2756,7 +2756,7 @@ The table contains information about the available operators:
 | Instruction | Operator | First operand | Second operand | Result |
 | --- | --- | --- | --- | --- |
 | Negation | NOT | ANY_BIT | - | ANY_BIT |
-| Conjunction | AND or & | ANY_BIT | ANY_BIT | ANY_BIT |
+| Conjunction | AND or &amp; | ANY_BIT | ANY_BIT | ANY_BIT |
 | Exclusive disjunction | XOR | ANY_BIT | ANY_BIT | ANY_BIT |
 | Disjunction | OR | ANY_BIT | ANY_BIT | ANY_BIT |
 | The abbreviations have the following meaning: ANY_BIT for data types BOOL, DWORD. |  |  |  |  |
@@ -2768,7 +2768,7 @@ The table contains information about the available operators:
 
 | Operands |  | Result |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- |
-| a | b | NOT a | NOT b | a AND b  a & b | a XOR b | a OR b |
+| a | b | NOT a | NOT b | a AND b  a &amp; b | a XOR b | a OR b |
 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
 | 0 | 1 | 1 | 0 | 0 | 1 | 1 |
 | 1 | 0 | 0 | 1 | 0 | 1 | 1 |
@@ -2781,11 +2781,11 @@ The following examples demonstrate the use of logical operators:
 
 | Expression (n = 10) | Value |
 | --- | --- |
-| (n > 0) AND (n < 20) | TRUE |
-| (n > 0) AND (n < 5) | FALSE |
-| (n > 0) OR (n < 5) | TRUE |
-| (n > 0) XOR (n < 20) | FALSE |
-| NOT ((n > 0) AND (n < 20)) | FALSE |
+| (n &gt; 0) AND (n &lt; 20) | TRUE |
+| (n &gt; 0) AND (n &lt; 5) | FALSE |
+| (n &gt; 0) OR (n &lt; 5) | TRUE |
+| (n &gt; 0) XOR (n &lt; 20) | FALSE |
+| NOT ((n &gt; 0) AND (n &lt; 20)) | FALSE |
 
 | Expression | Value |
 | --- | --- |
@@ -2804,7 +2804,7 @@ The "." operator is used to select an element of the structure. It can only be u
 
 To access (write or read) a specific element of a structure, it is necessary to use the "." symbol. The parent element of the structured tag must be followed by the symbol "." After this symbol, the child element must follow the structure:
 
-<VAR_StructName>.<Parent_name>.<Child_name> := <Value>;
+&lt;VAR_StructName&gt;.&lt;Parent_name&gt;.&lt;Child_name&gt; := &lt;Value&gt;;
 
 ##### Example
 
@@ -2861,17 +2861,17 @@ The following table shows the operators valid in MCL with their execution priori
 | MOD | Modulo (remainder of division) | 4 |
 | + | Addition | 5 |
 | - | Subtraction | 5 |
-| < | Less than | 6 |
+| &lt; | Less than | 6 |
 | ≤ | Less than or equal to | 6 |
-| > | Greater than | 6 |
+| &gt; | Greater than | 6 |
 | ≥ | Greater than or equal to | 6 |
 | = | Equal | 7 |
-| < > | Not equal | 7 |
-| AND or  & | Logical AND | 8 |
+| &lt; &gt; | Not equal | 7 |
+| AND or  &amp; | Logical AND | 8 |
 | XOR | Exclusive OR | 9 |
 | OR | Logical OR | 10 |
 | : = | Assignment value or expression to tag.  This operator assigns a value or expression to a tag. | 11 |
-| => | Assignment of tag to output parameter.   This operator assigns a tag to the output parameter when the function is called. | 11 |
+| =&gt; | Assignment of tag to output parameter.   This operator assigns a tag to the output parameter when the function is called. | 11 |
 | += | Combined value assignment.  This operator assigns a value after performing an arithmetic operation. | 11 |
 | -= | 11 |  |
 | *= | 11 |  |
@@ -2935,7 +2935,7 @@ myAxis := $A1), the tag contains no AXIS_OBJECT and
 has value NULL.  
 *)  
   
-IF myAxis <> NULL THEN //check if myAxis is assigned to AXIS_OBJECT  
+IF myAxis &lt;&gt; NULL THEN //check if myAxis is assigned to AXIS_OBJECT  
   myVar := 1;  
 ELSIF i = 4 THEN   
   myVar := 2;  
@@ -3026,7 +3026,7 @@ The following applies to FOR instructions:
 
 The following rules apply to the FOR instruction:
 
-- The specification "BY" [increment] can be omitted. If no increment is specified, the default value is +1 (positive, end value ≥ start value) or -1 (negative, start value > end value).
+- The specification "BY" [increment] can be omitted. If no increment is specified, the default value is +1 (positive, end value ≥ start value) or -1 (negative, start value &gt; end value).
 - Start value, end value, and increment are expressions. The expression is evaluated once at the beginning of the FOR instruction.
 - The run tag contains the value that causes the loop to terminate, which means that it is incremented before the loop ends.
 - The run tag (current value) as well as the start value, end value, and increment must not be changed during the execution of the loop.
@@ -3093,7 +3093,7 @@ VAR
 END_VAR  
 ...  
   
-WHILE i <= 10 AND isEnabled DO  
+WHILE i &lt;= 10 AND isEnabled DO  
   // command sequence  
   i := i + 1;  
 END_WHILE;  
@@ -3241,9 +3241,9 @@ MCL
 
 ...  
   
-IF i > j THEN  
+IF i &gt; j THEN  
   GOTO myLab1; //GOTO statement  
-ELSIF i > k THEN  
+ELSIF i &gt; k THEN  
   GOTO myLab2; //GOTO statement  
 END_IF;  
 ...  
@@ -3257,7 +3257,7 @@ myLab3 : myVar := 3; // Jump label with statement
   
 FOR i := 1 TO 10 BY 1 DO  
   ...  
-  IF i < 4 THEN  
+  IF i &lt; 4 THEN  
     GOTO myLab4; //GOTO statement  
   END_IF;
 
@@ -3523,7 +3523,7 @@ MCL
 SYNC  
   // main command or sequence to which the synchronous action refers   
   // (e.g. path command or command sequence containing path commands only)  
-ON_POS [sType := <val>] [,p := <val>] [,t := <val>] DO  
+ON_POS [sType := &lt;val&gt;] [,p := &lt;val&gt;] [,t := &lt;val&gt;] DO  
   // position triggered synchronous action  
 END_SYNC;
 
@@ -3810,7 +3810,7 @@ Depending on the type of POE, the source code for a single POE is introduced by 
 | Function | Optional | `FUNCTION <Name> : <Type>`    `……`    `END_FUNCTION`    `or`    `FUNCTION <Name> : VOID`    `……`    `END_FUNCTION` | This POE can contain sequences with instructions.  This POE must be programmed outside the main program: |
 | User-defined data type | Optional | `TYPE`    `……`    `END_TYPE` | Used to declare new data types based on existing data types.  This POE must be programmed outside the main program: |
 
-The order of the organization units of a program for declaring data types and functions is arbitrary, i.e. the "TYPE-END_TYPE" block (for user-defined data types) or "FUNCTION <Name> : <TYPE> - END_FUNCTION" (for functions) can be programmed after the first use.
+The order of the organization units of a program for declaring data types and functions is arbitrary, i.e. the "TYPE-END_TYPE" block (for user-defined data types) or "FUNCTION &lt;Name&gt; : &lt;TYPE&gt; - END_FUNCTION" (for functions) can be programmed after the first use.
 
 ##### Declaration part
 
@@ -3962,9 +3962,9 @@ The syntactic identification of the function starts with the keyword FUNCTION (f
 | Syntax | Description |  |
 | --- | --- | --- |
 | `FUNCTION <Name> : <Type>`    `……`    `END_FUNCTION` | FUNCTION | This keyword marks the starting point of a function. The name is case sensitive. |
-| <Name> | The name of the function follows the keyword FUNCTION.  The symbolic name of the function is a free identifier. The name is case sensitive. |  |
+| &lt;Name&gt; | The name of the function follows the keyword FUNCTION.  The symbolic name of the function is a free identifier. The name is case sensitive. |  |
 | ":" | Delimiter – separates the name of the function and the data type of the return value of the function. |  |
-| <Type> | Specifies the data type of the return value. |  |
+| &lt;Type&gt; | Specifies the data type of the return value. |  |
 | END_FUNCTION | This keyword terminates the function. The name is case sensitive. |  |
 | `FUNCTION <Name> : VOID`    `……`    `END_FUNCTION` | The VOID type indicates that the function does not return a value as a result of its execution. |  |
 
@@ -4121,11 +4121,11 @@ MCL
 // Call function "myFct"  
 // Parameter "in1" - optional (default value is specified in the declaration)  
 // Parameter "in2" - mandatory (default value is not specified in the declaration)  
-myVar1 := myFct( in1 := 1.0, in2 := 2.0, out => myVar3 );  
+myVar1 := myFct( in1 := 1.0, in2 := 2.0, out =&gt; myVar3 );  
 myVar2 := myFct( in2 := 10.0 );  
   
 // Call function "mySub"  
-mySub( in := 1.0, out => myVar3 );
+mySub( in := 1.0, out =&gt; myVar3 );
 
 #### Return values of functions (S7-1500T)
 
@@ -4367,7 +4367,7 @@ Collapsed program sections can be recognized by the ![Code folding](images/17122
 
 ##### Autocomplete
 
-You can activate autocomplete with the keyboard shortcut <Ctrl + spacebar>.
+You can activate autocomplete with the keyboard shortcut &lt;Ctrl + spacebar&gt;.
 
 Autocomplete offers the following suggestions:
 
@@ -4403,7 +4403,7 @@ The following replace options are available:
 
 While editing the Interpreter program, a permanent syntax check takes place in the background. The syntax check detects syntax errors and semantic errors.
 
-The detected errors and warnings are displayed in abbreviated form directly in the programming window. A list of all error messages with details is displayed in the Inspector window under "Info > Syntax".
+The detected errors and warnings are displayed in abbreviated form directly in the programming window. A list of all error messages with details is displayed in the Inspector window under "Info &gt; Syntax".
 
 You can use the list or the toolbar to navigate to the errors in the Interpreter program.
 
@@ -4515,7 +4515,7 @@ There are three types of parameters for configuring an instruction in an MCL pro
 
 MCL
 
-instrName( <nVal1>,…, <nValN> [,omPara1 := <val1>] [,…,omParaN := <valN>] );
+instrName( &lt;nVal1&gt;,…, &lt;nValN&gt; [,omPara1 := &lt;val1&gt;] [,…,omParaN := &lt;valN&gt;] );
 
 | Syntax element | Description |
 | --- | --- |
@@ -4772,7 +4772,7 @@ This section contains information on the following topics:
 
 Modal parameters are initialized with the default values of the kinematics objects and the axes from the corresponding technology object data block when an MCL program is loaded and retain their value until it is changed by specific instructions in the MCL program.
 
-For example, the start value for the velocity for the kinematics path motion is initialized from the "<TO_Kinematics>.DynamicDefaults.Path.Velocity" variable.
+For example, the start value for the velocity for the kinematics path motion is initialized from the "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Velocity" variable.
 
 #### Modal parameters for single-axis instructions (S7-1500T)
 
@@ -4780,14 +4780,14 @@ The following table shows the modal parameters that act on the Axis technology o
 
 | Modal dynamic value for MCL single instructions | Data type | Parameter | MCL instruction | Default value at MCL program start |
 | --- | --- | --- | --- | --- |
-| Velocity | LREAL | v | [`setAxisDyn`](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t) | "<TO_Axis>.DynamicDefaults.Velocity" |
-| Acceleration | LREAL | a | "<TO_Axis>.DynamicDefaults.Acceleration" |  |
-| Deceleration | LREAL | d | "<TO_Axis>.DynamicDefaults.Deceleration" |  |
-| Jerk | LREAL | j | "<TO_Axis>.DynamicDefaults.Jerk" |  |
-| Maximum velocity<sup>1)</sup> | LREAL | v | [`setAxisDynMax`](#setaxisdynmax-set-dynamic-limits-for-single-axis-motions-modally-s7-1500t) | "<TO_Axis>.DynamicLimits.MaxVelocity" |
-| Maximum acceleration<sup>1)</sup> | LREAL | a | "<TO_Axis>.DynamicLimits.MaxAcceleration" |  |
-| Maximum deceleration<sup>1)</sup> | LREAL | d | "<TO_Axis>.DynamicLimits.MaxDeceleration" |  |
-| Maximum jerk<sup>1)</sup> | LREAL | j | "<TO_Axis>.DynamicLimits.MaxJerk" |  |
+| Velocity | LREAL | v | [`setAxisDyn`](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t) | "&lt;TO_Axis&gt;.DynamicDefaults.Velocity" |
+| Acceleration | LREAL | a | "&lt;TO_Axis&gt;.DynamicDefaults.Acceleration" |  |
+| Deceleration | LREAL | d | "&lt;TO_Axis&gt;.DynamicDefaults.Deceleration" |  |
+| Jerk | LREAL | j | "&lt;TO_Axis&gt;.DynamicDefaults.Jerk" |  |
+| Maximum velocity<sup>1)</sup> | LREAL | v | [`setAxisDynMax`](#setaxisdynmax-set-dynamic-limits-for-single-axis-motions-modally-s7-1500t) | "&lt;TO_Axis&gt;.DynamicLimits.MaxVelocity" |
+| Maximum acceleration<sup>1)</sup> | LREAL | a | "&lt;TO_Axis&gt;.DynamicLimits.MaxAcceleration" |  |
+| Maximum deceleration<sup>1)</sup> | LREAL | d | "&lt;TO_Axis&gt;.DynamicLimits.MaxDeceleration" |  |
+| Maximum jerk<sup>1)</sup> | LREAL | j | "&lt;TO_Axis&gt;.DynamicLimits.MaxJerk" |  |
 | <sup>1)</sup>Programmable only at the set instructions of modal parameters |  |  |  |  |
 
 #### Modal parameters for kinematics motions (S7-1500T)
@@ -4798,31 +4798,31 @@ The following tables show the modal parameters that act on the Kinematics techno
 
 | Modal dynamic value for MCL kinematics motions | Data type | Parameter | MCL instruction | Default value at MCL program start |
 | --- | --- | --- | --- | --- |
-| Velocity | LREAL | v | [`setDyn`](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t) | "<TO_Kinematics>.DynamicDefaults.Path.Velocity" |
-| Acceleration | LREAL | a | "<TO_Kinematics>.DynamicDefaults.Path.Acceleration" |  |
-| Deceleration | LREAL | d | "<TO_Kinematics>.DynamicDefaults.Path.Deceleration" |  |
-| Jerk | LREAL | j | "<TO_Kinematics>.DynamicDefaults.Path.Jerk" |  |
-| Maximum velocity<sup>1)</sup> | LREAL | v | [`setDynMax`](#setdynmax-set-dynamic-limits-for-path-motions-modally-s7-1500t) | "<TO_Kinematics>.DynamicLimits.Path.Velocity" |
-| Maximum acceleration<sup>1)</sup> | LREAL | a | "<TO_Kinematics>.DynamicLimits.Path.Acceleration" |  |
-| Maximum deceleration<sup>1)</sup> | LREAL | d | "<TO_Kinematics>.DynamicLimits.Path.Deceleration" |  |
-| Maximum jerk<sup>1)</sup> | LREAL | j | "<TO_Kinematics>.DynamicLimits.Path.Jerk" |  |
+| Velocity | LREAL | v | [`setDyn`](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t) | "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Velocity" |
+| Acceleration | LREAL | a | "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Acceleration" |  |
+| Deceleration | LREAL | d | "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Deceleration" |  |
+| Jerk | LREAL | j | "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Jerk" |  |
+| Maximum velocity<sup>1)</sup> | LREAL | v | [`setDynMax`](#setdynmax-set-dynamic-limits-for-path-motions-modally-s7-1500t) | "&lt;TO_Kinematics&gt;.DynamicLimits.Path.Velocity" |
+| Maximum acceleration<sup>1)</sup> | LREAL | a | "&lt;TO_Kinematics&gt;.DynamicLimits.Path.Acceleration" |  |
+| Maximum deceleration<sup>1)</sup> | LREAL | d | "&lt;TO_Kinematics&gt;.DynamicLimits.Path.Deceleration" |  |
+| Maximum jerk<sup>1)</sup> | LREAL | j | "&lt;TO_Kinematics&gt;.DynamicLimits.Path.Jerk" |  |
 | 2D main plane | DINT | plane | [`setPlane`](#setplane-set-main-plane-of-circle-path-for-circular-path-motions-modally-s7-1500t) | 0 (XZ plane) |
 | Circle path direction | DINT | cDir | [`setCircDir`](#setcircdir-set-orientation-of-circle-path-for-circular-path-motions-modally-s7-1500t) | 0 (positive direction of rotation/shorter positive circle segment) |
-| Mode of dynamic adaptation<sup>1)</sup> | DINT | da | [`setDynAdapt`](#setdynadapt-set-dynamic-adaptation-for-path-motions-modally-s7-1500t) | "<TO_Kinematics>.DynamicDefaults.DynamicAdaption" |
+| Mode of dynamic adaptation<sup>1)</sup> | DINT | da | [`setDynAdapt`](#setdynadapt-set-dynamic-adaptation-for-path-motions-modally-s7-1500t) | "&lt;TO_Kinematics&gt;.DynamicDefaults.DynamicAdaption" |
 | <sup>1)</sup>Programmable only at the set instructions of modal parameters |  |  |  |  |
 
 ##### Orientation motion
 
 | Modal dynamic value for MCL kinematics motions | Data type | Parameter | MCL instruction | Default value at MCL program start |
 | --- | --- | --- | --- | --- |
-| Velocity<sup>1)</sup> | LREAL | v | [`setOriDyn`](#setoridyn-set-dynamic-defaults-for-orientation-motions-modally-s7-1500t) | "<TO_Kinematics>.DynamicDefaults.Orientation.Velocity" |
-| Acceleration<sup>1)</sup> | LREAL | a | "<TO_Kinematics>.DynamicDefaults.Orientation.Acceleration" |  |
-| Deceleration<sup>1)</sup> | LREAL | d | "<TO_Kinematics>.DynamicDefaults.Orientation.Deceleration" |  |
-| Jerk<sup>1)</sup> | LREAL | j | "<TO_Kinematics>.DynamicDefaults.Orientation.Jerk" |  |
-| Maximum velocity<sup>1)</sup> | LREAL | v | [`setOriDynMax`](#setoridynmax-set-dynamic-limits-for-orientation-motions-modally-s7-1500t) | "<TO_Kinematics>.DynamicLimits.Orientation.Velocity" |
-| Maximum acceleration<sup>1)</sup> | LREAL | a | "<TO_Kinematics>.DynamicLimits.Orientation.Acceleration" |  |
-| Maximum deceleration<sup>1)</sup> | LREAL | d | "<TO_Kinematics>.DynamicLimits.Orientation.Deceleration" |  |
-| Maximum jerk<sup>1)</sup> | LREAL | j | "<TO_Kinematics>.DynamicLimits.Orientation.Jerk" |  |
+| Velocity<sup>1)</sup> | LREAL | v | [`setOriDyn`](#setoridyn-set-dynamic-defaults-for-orientation-motions-modally-s7-1500t) | "&lt;TO_Kinematics&gt;.DynamicDefaults.Orientation.Velocity" |
+| Acceleration<sup>1)</sup> | LREAL | a | "&lt;TO_Kinematics&gt;.DynamicDefaults.Orientation.Acceleration" |  |
+| Deceleration<sup>1)</sup> | LREAL | d | "&lt;TO_Kinematics&gt;.DynamicDefaults.Orientation.Deceleration" |  |
+| Jerk<sup>1)</sup> | LREAL | j | "&lt;TO_Kinematics&gt;.DynamicDefaults.Orientation.Jerk" |  |
+| Maximum velocity<sup>1)</sup> | LREAL | v | [`setOriDynMax`](#setoridynmax-set-dynamic-limits-for-orientation-motions-modally-s7-1500t) | "&lt;TO_Kinematics&gt;.DynamicLimits.Orientation.Velocity" |
+| Maximum acceleration<sup>1)</sup> | LREAL | a | "&lt;TO_Kinematics&gt;.DynamicLimits.Orientation.Acceleration" |  |
+| Maximum deceleration<sup>1)</sup> | LREAL | d | "&lt;TO_Kinematics&gt;.DynamicLimits.Orientation.Deceleration" |  |
+| Maximum jerk<sup>1)</sup> | LREAL | j | "&lt;TO_Kinematics&gt;.DynamicLimits.Orientation.Jerk" |  |
 | Direction of orientation motion | DINT | oDirA | [`setOriDirA`](#setoridira-set-direction-of-motion-of-cartesian-orientation-a-for-linear-circular-path-and-sptp-motions-modally-s7-1500t) | 3 (shortest path) |
 | <sup>1)</sup>Programmable only at the set instructions of modal parameters |  |  |  |  |
 
@@ -4830,10 +4830,10 @@ The following tables show the modal parameters that act on the Kinematics techno
 
 | Modal dynamic value for MCL kinematics motions | Data type | Parameter | MCL instruction | Default value at MCL program start |
 | --- | --- | --- | --- | --- |
-| Velocity factor | LREAL | v | [`setPtpDyn`](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t) | "<TO_Kinematics>.DynamicDefaults.MoveDirect.VelocityFactor" |
-| Acceleration factor | LREAL | a | "<TO_Kinematics>.DynamicDefaults.MoveDirect.AccelerationFactor" |  |
-| Deceleration factor | LREAL | d | "<TO_Kinematics>.DynamicDefaults.MoveDirect.DecelerationFactor" |  |
-| Jerk factor | LREAL | j | "<TO_Kinematics>.DynamicDefaults.MoveDirect.JerkFactor" |  |
+| Velocity factor | LREAL | v | [`setPtpDyn`](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t) | "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.VelocityFactor" |
+| Acceleration factor | LREAL | a | "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.AccelerationFactor" |  |
+| Deceleration factor | LREAL | d | "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.DecelerationFactor" |  |
+| Jerk factor | LREAL | j | "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.JerkFactor" |  |
 | Target joint position space | DWORD | lc | [`setLc`](#setlc-setting-target-joint-position-space-for-sptp-motions-modally-s7-1500t) | 16#FFFF_FFFF (Retain current link state) |
 | Joint position area of joint 1 | DINT | tj1 | [`setTurnJoint`](#setturnjoint-setting-target-joint-position-ranges-for-sptp-motions-modally-s7-1500t) | 0 (shortest path) |
 | Joint position area of joint 2 | DINT | tj2 | 0 (shortest path) |  |
@@ -4855,14 +4855,14 @@ The following tables show the modal parameters that act on the Kinematics techno
 | Motion transition | DINT | trans | [`setTrans`](#settrans-setting-motion-transition-for-linear-circular-path-and-sptp-motions-modally-s7-1500t) | 0 (append motion, no blending) |
 | Blending mode | DINT | blend | [`setBlend`](#setblend-set-blending-mode-for-linear-and-circular-path-motions-modally-s7-1500t) | 2 (Polynomial blending) |
 | Blending distance | LREAL | blendDist | [`setBlendDist`](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t) | -1.0 (maximum blending length of kinematics) |
-| Blending factor<sup>1)</sup> | LREAL | blendFactor | [`setBlendFactor`](#setblendfactor-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t) | "<TO_Kinematics>.Transition.FactorBlendingLength" |
+| Blending factor<sup>1)</sup> | LREAL | blendFactor | [`setBlendFactor`](#setblendfactor-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t) | "&lt;TO_Kinematics&gt;.Transition.FactorBlendingLength" |
 | <sup>1)</sup>Programmable only at the set instructions of modal parameters |  |  |  |  |
 
 ##### Program override
 
 | Modal dynamic value for MCL kinematics motions | Data type | Parameter | MCL instruction | Default value at MCL program start |
 | --- | --- | --- | --- | --- |
-| Program override<sup>1)</sup> | LREAL | override | [`setOvr`](#setovr-set-program-override-s7-1500t) | "<TO_Kinematics>.Parameter.ProgramOverride" |
+| Program override<sup>1)</sup> | LREAL | override | [`setOvr`](#setovr-set-program-override-s7-1500t) | "&lt;TO_Kinematics&gt;.Parameter.ProgramOverride" |
 | <sup>1)</sup>Programmable only at the set instructions of modal parameters |  |  |  |  |
 
 #### Using modal parameters in MCL programs (S7-1500T)
@@ -4926,7 +4926,7 @@ If no modal parameter is specified in the MCL instruction and no special instruc
 
 In the following example, the "linAbs()" instruction is used without specifying the modal dynamics parameters (only the required "Pos1" parameter is specified).
 
-Before this MCL instruction, no special MCL instructions are used that can change the value of the modal dynamics parameter. For example, if the start velocity value for the kinematics is 10.0 ("<TO_Kinematics>.DynamicDefaults.Path.Velocity" = 10.0), the kinematics will move at that velocity value ("v" = 10.0).
+Before this MCL instruction, no special MCL instructions are used that can change the value of the modal dynamics parameter. For example, if the start velocity value for the kinematics is 10.0 ("&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Velocity" = 10.0), the kinematics will move at that velocity value ("v" = 10.0).
 
 MCL
 
@@ -4962,8 +4962,8 @@ The values of the dynamics parameters in the MCL program are limited to the lowe
 
 - Value from the technology object data block:
 
-  - Kinematics technology object "<TO_Kinematics>.DynamicLimits.*"
-  - Axis technology object"<TO_Axis>.DynamicLimits.*"
+  - Kinematics technology object "&lt;TO_Kinematics&gt;.DynamicLimits.*"
+  - Axis technology object"&lt;TO_Axis&gt;.DynamicLimits.*"
 - Modal value of the modal dynamics parameter set with a special MCL job
 - Value of the modal dynamics parameter specified in the MCL job for the technology object motion.
 
@@ -4971,7 +4971,7 @@ The values of the dynamics parameters in the MCL program are limited to the lowe
 
 The following examples show limiting the velocity for the linear motion of the kinematics based on the value of the following variable in the technology object data block:
 
-- "<TO_Kinematics>.DynamicLimits.Path.Velocity" = 100.0 mm/s.
+- "&lt;TO_Kinematics&gt;.DynamicLimits.Path.Velocity" = 100.0 mm/s.
 
 The setting for velocity 100 mm/s is effective on the technology object data block and applies as the maximum value for path motions in the MCL program when loaded. Setting to 120.0 mm/s in "setDynMax()" or 110.0 mm/s in "linAbs()" does not cause any change, since the lower value from the technology object data block is still in effect.
 
@@ -5106,11 +5106,11 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-linAbs( <pos> [,v := <value>] [,a := <value>] [,d := <value>] [,j := <value>]
+linAbs( &lt;pos&gt; [,v := &lt;value&gt;] [,a := &lt;value&gt;] [,d := &lt;value&gt;] [,j := &lt;value&gt;]
 
-[,trans := <value>] [,blend := <value>] [,blendDist := <value>] [,cs := <value>]
+[,trans := &lt;value&gt;] [,blend := &lt;value&gt;] [,blendDist := &lt;value&gt;] [,cs := &lt;value&gt;]
 
-[,oDirA := <value>] );
+[,oDirA := &lt;value&gt;] );
 
 ##### Parameters
 
@@ -5126,22 +5126,22 @@ The following table shows the parameters of the instruction "linAbs()":
 | B | LREAL | 0.0 | B coordinate<sup>1)</sup> |  |  |
 | C | LREAL | 0.0 | C coordinate<sup>1)</sup> |  |  |
 | v |  | LREAL | - | Velocity<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Velocity".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Velocity".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | a |  | LREAL | - | Acceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Acceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Acceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | d |  | LREAL | - | Deceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Deceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Deceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | j |  | LREAL | - | Jerk<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Jerk".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Jerk".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |
-| < 0.0 | Not permitted |  |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |  |
 | trans |  | DINT | - | Motion transition to the next job<sup>2)</sup> |  |
 | - | The modal value is used. By default, the "trans" parameter is preset to the value "0".  With [setTrans()](#settrans-setting-motion-transition-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | 0 | Append motion |  |  |  |  |
@@ -5155,7 +5155,7 @@ The following table shows the parameters of the instruction "linAbs()":
 | blendDist |  | LREAL | - | Blending distance<sup>2)</sup> |  |
 | - | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | ≥ 0.0 | The default value is used. |  |  |  |  |
-| < 0.0 | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 | The maximum possible blending distance is used. |  |  |  |  |
 | cs |  | DINT | - | Reference coordinate system<sup>2)</sup> |  |
 | - | The modal value is used. By default, the "cs" parameter is preset to the value "0".  With [setCs()](#setcs-set-reference-coordinate-system-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |
@@ -5244,9 +5244,9 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-linRel( <pos> [,v := <value>] [,a := <value>] [,d := <value>] [,j := <value>]
+linRel( &lt;pos&gt; [,v := &lt;value&gt;] [,a := &lt;value&gt;] [,d := &lt;value&gt;] [,j := &lt;value&gt;]
 
-[,trans := <value>] [,blend := <value>] [,blendDist := <value>] [,cs := <value>] );
+[,trans := &lt;value&gt;] [,blend := &lt;value&gt;] [,blendDist := &lt;value&gt;] [,cs := &lt;value&gt;] );
 
 ##### Parameters
 
@@ -5262,22 +5262,22 @@ The following table shows the parameters of the "linRel()" instruction:
 | B | LREAL | 0.0 | B coordinate<sup>1)</sup> |  |  |  |
 | C | LREAL | 0.0 | C coordinate<sup>1)</sup> |  |  |  |
 | v |  | LREAL | - | Velocity<sup>2)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Velocity".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Velocity".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
 | a |  | LREAL | - | Acceleration<sup>2)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Acceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Acceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
 | d |  | LREAL | - | Deceleration<sup>2)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Deceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Deceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
 | j |  | LREAL | - | Jerk<sup>2)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Jerk".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Jerk".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 0.0 | Not permitted |  |  |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |  |  |
 | trans |  | DINT | - | Motion transition to the next job<sup>2)</sup> |  |  |
 | - | The modal value is used. By default, the "trans" parameter is preset to the value "0".  With [setTrans()](#settrans-setting-motion-transition-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 0 | Append motion |  |  |  |  |  |
@@ -5291,7 +5291,7 @@ The following table shows the parameters of the "linRel()" instruction:
 | blendDist |  | LREAL | - | Blending distance<sup>2)</sup> |  |  |
 | - |  | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | ≥ 0.0 |  | The default value is used. |  |  |  |  |
-| < 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
 | cs |  | DINT | - | Reference coordinate system<sup>2)</sup> |  |  |
 | - |  | The modal value is used. By default, the "cs" parameter is preset to the value "0".  With [setCs()](#setcs-set-reference-coordinate-system-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | 0 |  | World coordinate system (WCS) |  |  |  |  |
@@ -5373,11 +5373,11 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-circAbs( <pos> [,auxPos := <val>] [,mode := <val>] [,arc := <val>] [,cr := <val>]
+circAbs( &lt;pos&gt; [,auxPos := &lt;val&gt;] [,mode := &lt;val&gt;] [,arc := &lt;val&gt;] [,cr := &lt;val&gt;]
 
-[,v := <val>] [,a := <val>] [,d := <val>] [,j := <val>] [,plane := <val>] [,cDir := <val>]
+[,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] [,plane := &lt;val&gt;] [,cDir := &lt;val&gt;]
 
-[,oDirA := <val>] [,trans := <val>] [,blend := <val>] [,blendDist := <val>] [,cs := <val>] );
+[,oDirA := &lt;val&gt;] [,trans := &lt;val&gt;] [,blend := &lt;val&gt;] [,blendDist := &lt;val&gt;] [,cs := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -5408,22 +5408,22 @@ The following table shows the parameters of the "circAbs()" instruction:
 | arc |  | LREAL | 0.0 | Angle of the circular motion<sup>3)</sup> Only relevant for "mode" = 1 |  |
 | cr |  | LREAL | 0.0 | Radius of the circular motion<sup>3)</sup> Only relevant for "mode" = 2 |  |
 | v |  | LREAL | - | Velocity<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Velocity".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Velocity".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | a |  | LREAL | - | Acceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Acceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Acceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | d |  | LREAL | - | Deceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Deceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Deceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | j |  | LREAL | - | Jerk<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Jerk".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Jerk".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |
-| < 0.0 | Not permitted |  |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |  |
 | plane |  | DINT | - | Main plane of the circle path<sup>2)</sup>  Only relevant for "mode" = 1 and "mode" = 2 |  |
 | - | The modal value is used. By default, the "plane" parameter is preset to the value "0".  With [setPlane()](#setplane-set-main-plane-of-circle-path-for-circular-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | 0 | XZ plane |  |  |  |  |
@@ -5455,7 +5455,7 @@ The following table shows the parameters of the "circAbs()" instruction:
 | blendDist |  | LREAL | - | Blending distance<sup>2)</sup> |  |
 | - | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | ≥ 0.0 | The default value is used. |  |  |  |  |
-| < 0.0 | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 | The maximum possible blending distance is used. |  |  |  |  |
 | cs |  | DINT | - | Reference coordinate system<sup>2)</sup> |  |
 | - | The modal value is used. By default, the "cs" parameter is preset to the value "0".  With [setCs()](#setcs-set-reference-coordinate-system-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |
@@ -5537,11 +5537,11 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-circRel( <pos> [,auxPos := <val>] [,mode := <val>] [,arc := <val>] [,cr := <val>]
+circRel( &lt;pos&gt; [,auxPos := &lt;val&gt;] [,mode := &lt;val&gt;] [,arc := &lt;val&gt;] [,cr := &lt;val&gt;]
 
-[,v := <val>] [,a := <val>] [,d := <val>] [,j := <val>] [,plane := <val>]
+[,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] [,plane := &lt;val&gt;]
 
-[,cDir := <val>] [,trans := <val>] [,blend := <val>] [,blendDist := <val>] [,cs := <val>] );
+[,cDir := &lt;val&gt;] [,trans := &lt;val&gt;] [,blend := &lt;val&gt;] [,blendDist := &lt;val&gt;] [,cs := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -5572,22 +5572,22 @@ The following table shows the parameters of the instruction "circRel()":
 | arc |  | LREAL | 0.0 | Angle of the circular motion<sup>3)</sup> Only relevant for "mode" = 1 |  |
 | cr |  | LREAL | 0.0 | Radius of the circular motion<sup>3)</sup> Only relevant for "mode" = 2 |  |
 | v |  | LREAL | - | Velocity<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Velocity".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Velocity".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | a |  | LREAL | - | Acceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Acceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Acceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | d |  | LREAL | - | Deceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Deceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Deceleration".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | j |  | LREAL | - | Jerk<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.Path.Jerk".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Jerk".  With [setDyn()](#setdyn-set-dynamic-defaults-for-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |
-| < 0.0 | Not permitted |  |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |  |
 | plane |  | DINT | - | Main plane of the circle path<sup>2)</sup>  Only relevant for "mode" = 1 and "mode" = 2 |  |
 | - | The modal value is used. By default, the "plane" parameter is preset to the value "0".  With [setPlane()](#setplane-set-main-plane-of-circle-path-for-circular-path-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | 0 | XZ plane |  |  |  |  |
@@ -5614,7 +5614,7 @@ The following table shows the parameters of the instruction "circRel()":
 | blendDist |  | LREAL | - | Blending distance<sup>2)</sup> |  |
 | - | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | ≥ 0.0 | The default value is used. |  |  |  |  |
-| < 0.0 | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 | The maximum possible blending distance is used. |  |  |  |  |
 | cs |  | DINT | - | Reference coordinate system<sup>2)</sup> |  |
 | - | The modal value is used. By default, the "cs" parameter is preset to the value "0".  With [setCs()](#setcs-set-reference-coordinate-system-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |
@@ -5697,13 +5697,13 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-ptpAbs( <pos> [,posMode := <val>] [,lc := <val>] [,cs := <val>] [,v := <val>]
+ptpAbs( &lt;pos&gt; [,posMode := &lt;val&gt;] [,lc := &lt;val&gt;] [,cs := &lt;val&gt;] [,v := &lt;val&gt;]
 
-[,a := <val>] [,d := <val>] [,j := <val>] [,trans := <val>] [,blendDist := <val>]
+[,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] [,trans := &lt;val&gt;] [,blendDist := &lt;val&gt;]
 
-[,oDirA := <val>] [,tj1 := <val>] [,tj2 := <val>] [,tj3 := <val>] [,tj4 := <val>]
+[,oDirA := &lt;val&gt;] [,tj1 := &lt;val&gt;] [,tj2 := &lt;val&gt;] [,tj3 := &lt;val&gt;] [,tj4 := &lt;val&gt;]
 
-[,tj5 := <val>] [,tj6 := <val>] );
+[,tj5 := &lt;val&gt;] [,tj6 := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -5724,7 +5724,7 @@ The following table shows the parameters of the "ptpAbs()" instruction:
 | Only relevant for kinematics types with orientation A.  With more than 4 interpolating kinematics axes: Not relevant |  |  |  |  |  |  |
 | lc |  | DWORD | - | Target joint position space<sup>2)</sup>  The joint position space is specified depending on the respective kinematics type. |  |  |
 | - | The modal value is used. By default, the "lc" parameter is preset to the value "16#FFFF_FFFF".  With [setLc()](#setlc-setting-target-joint-position-space-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 16#0000_0000  ≤ lc <   16#FFFF_FFFF | The specified value is interpreted as a bit field. The meaning of the bits depends on the type of kinematics. 6 axes ($A1, $A2, $A3, $A4, $A5, $A6) correspond to the first 6 bits (bit 0 ... bit 5). All other bits are ignored. |  |  |  |  |  |
+| 16#0000_0000  ≤ lc &lt;   16#FFFF_FFFF | The specified value is interpreted as a bit field. The meaning of the bits depends on the type of kinematics. 6 axes ($A1, $A2, $A3, $A4, $A5, $A6) correspond to the first 6 bits (bit 0 ... bit 5). All other bits are ignored. |  |  |  |  |  |
 | 16#FFFF_FFFF | Keep current joint position space |  |  |  |  |  |
 | cs |  | DINT | - | Reference coordinate system<sup>2)</sup> |  |  |
 | - | The modal value is used. By default, the "cs" parameter is preset to the value "0".  With [setCs()](#setcs-set-reference-coordinate-system-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
@@ -5732,27 +5732,27 @@ The following table shows the parameters of the "ptpAbs()" instruction:
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
 | 2 | Object coordinate system 2 (OCS2) |  |  |  |  |  |
 | 3 | Object coordinate system 2 (OCS3) |  |  |  |  |  |
-| v |  | LREAL | - | Percentage factor for the velocity of the axis movement in relation to the respective maximum velocity of the axes ("<TO_Axis>.DynamicLimits.MaxVelocity")<sup>2)</sup>. |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| v |  | LREAL | - | Percentage factor for the velocity of the axis movement in relation to the respective maximum velocity of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxVelocity")<sup>2)</sup>. |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 1.0 ≤ v ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
-| < 1.0 | Not permitted |  |  |  |  |  |
-| a |  | LREAL | - | Percentage factor for acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("<TO_Axis>.DynamicLimits.MaxAcceleration")<sup>2)</sup>. |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
+| &lt; 1.0 | Not permitted |  |  |  |  |  |
+| a |  | LREAL | - | Percentage factor for acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxAcceleration")<sup>2)</sup>. |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| d |  | LREAL | - | Percentage factor for the deceleration of the axis movement in relation to the respective maximum deceleration of the axes ("<TO_Axis>.DynamicLimits.MaxDeceleration")<sup>2)</sup>. |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| d |  | LREAL | - | Percentage factor for the deceleration of the axis movement in relation to the respective maximum deceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxDeceleration")<sup>2)</sup>. |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| j |  | LREAL | - | Percentage factor for jerk of axis movements in relation to the respective maximum jerk of the axes ("<TO_Axis>.DynamicLimits.MaxJerk")<sup>2)</sup>. |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| j |  | LREAL | - | Percentage factor for jerk of axis movements in relation to the respective maximum jerk of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxJerk")<sup>2)</sup>. |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 10.0 ≤ j ≤ 90.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 10.0 (except 0.0) | Not permitted |  |  |  |  |  |
-| > 90.0 | Not permitted |  |  |  |  |  |
+| &lt; 10.0 (except 0.0) | Not permitted |  |  |  |  |  |
+| &gt; 90.0 | Not permitted |  |  |  |  |  |
 | trans |  | DINT | - | Motion transition to the next job<sup>2)</sup> |  |  |
 | - | The modal value is used. By default, the "trans" parameter is preset to the value "0".  With [setTrans()](#settrans-setting-motion-transition-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 0 | Append motion |  |  |  |  |  |
@@ -5762,7 +5762,7 @@ The following table shows the parameters of the "ptpAbs()" instruction:
 | blendDist |  | LREAL | - | Blending distance<sup>2)</sup> |  |  |
 | - |  | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | ≥ 0.0 |  | The default value is used. |  |  |  |  |
-| < 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
 | oDirA |  | DINT | - | Direction of movement of the Cartesian orientation A<sup>2)</sup>.  Only relevant for:  - Up to 4 interpolating kinematics axes  - "posMode" = 1 - Kinematics types with orientation A and activated modulo functionality |  |  |
 | - | The modal value is used. By default, the "oDirA" parameter is preset to the value "3".  With [setOriDirA()](#setoridira-set-direction-of-motion-of-cartesian-orientation-a-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 1 | Positive direction |  |  |  |  |  |
@@ -5770,16 +5770,16 @@ The following table shows the parameters of the "ptpAbs()" instruction:
 | 3 | Shortest distance  If the target orientation can be reached by two paths of the same length, the motion is in a positive direction. |  |  |  |  |  |
 | tj1,...,tj6 |  | DINT | - | Target joint position range of the J1, ..., J6<sup>2)</sup>  Only relevant for kinematics whose joint coordinate system supports target joint position ranges. |  |  |
 | - | The modal value is used. By default, the "tj1",…, "tj6" parameter is preset to the value "0".  With [setTurnJoint()](#setturnjoint-setting-target-joint-position-ranges-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| m   (m < 0) | -180<sup>o</sup> + m * 360<sup>o</sup> ≤ Position < 180<sup>o</sup> + m * 360<sup>o</sup> |  |  |  |  |  |
+| m   (m &lt; 0) | -180<sup>o</sup> + m * 360<sup>o</sup> ≤ Position &lt; 180<sup>o</sup> + m * 360<sup>o</sup> |  |  |  |  |  |
 | … | … |  |  |  |  |  |
-| -2 | -900<sup>o</sup> ≤ Position < -540<sup>o</sup> |  |  |  |  |  |
-| -1 | -540<sup>o</sup> ≤ Position < -180<sup>o</sup> |  |  |  |  |  |
+| -2 | -900<sup>o</sup> ≤ Position &lt; -540<sup>o</sup> |  |  |  |  |  |
+| -1 | -540<sup>o</sup> ≤ Position &lt; -180<sup>o</sup> |  |  |  |  |  |
 | 0 | Shortest distance |  |  |  |  |  |
-| 1 | -180<sup>o</sup> ≤ Position < 180<sup>o</sup> |  |  |  |  |  |
-| 2 | 180° ≤ Position < 540° |  |  |  |  |  |
-| 3 | 540° ≤ Position < 900° |  |  |  |  |  |
+| 1 | -180<sup>o</sup> ≤ Position &lt; 180<sup>o</sup> |  |  |  |  |  |
+| 2 | 180° ≤ Position &lt; 540° |  |  |  |  |  |
+| 3 | 540° ≤ Position &lt; 900° |  |  |  |  |  |
 | … | … |  |  |  |  |  |
-| n   (n > 0) | -180<sup>o</sup> + (n - 1) * 360<sup>o</sup> ≤ Position < 180<sup>o</sup> + (n - 1) * 360<sup>o</sup> |  |  |  |  |  |
+| n   (n &gt; 0) | -180<sup>o</sup> + (n - 1) * 360<sup>o</sup> ≤ Position &lt; 180<sup>o</sup> + (n - 1) * 360<sup>o</sup> |  |  |  |  |  |
 | <sup>1)</sup> Only relevant with more than 4 interpolating kinematics axes.   <sup>2)</sup> Modal parameter   <sup>3)</sup> Optional parameter with default value |  |  |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -5864,11 +5864,11 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-ptpRel( <pos> [,lc := <val>] [,cs := <val>] [,v := <val>] [,a := <val>] [,d := <val>]
+ptpRel( &lt;pos&gt; [,lc := &lt;val&gt;] [,cs := &lt;val&gt;] [,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;]
 
-[,j := <val>] [,trans := <val>] [,blendDist := <val>] [,tj1 := <val>] [,tj2 := <val>]
+[,j := &lt;val&gt;] [,trans := &lt;val&gt;] [,blendDist := &lt;val&gt;] [,tj1 := &lt;val&gt;] [,tj2 := &lt;val&gt;]
 
-[,tj3 := <val>] [,tj4 := <val>] [,tj5 := <val>] [,tj6 := <val>] );
+[,tj3 := &lt;val&gt;] [,tj4 := &lt;val&gt;] [,tj5 := &lt;val&gt;] [,tj6 := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -5885,34 +5885,34 @@ The following table shows the parameters of the "ptpRel()" instruction:
 | C | LREAL | 0.0 | C coordinate<sup>1)</sup> |  |  |  |
 | lc |  | DWORD | - | Target joint position space<sup>2)</sup>  The joint position space is determined depending on the type of kinematics. |  |  |
 | - | The modal value is used. By default, the "lc" parameter is preset to the value "16#FFFF_FFFF".  With [setLc()](#setlc-setting-target-joint-position-space-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 16#0000_0000   ≤ lc <   16#FFFF_FFFF | The specified value is interpreted as a bit field. The meaning of the bits depends on the type of kinematics. 6 axes ($A1, $A2, $A3, $A4, $A5, $A6) correspond to the first 6 bits (bit 0 ... bit 5). All other bits are ignored. |  |  |  |  |  |
+| 16#0000_0000   ≤ lc &lt;   16#FFFF_FFFF | The specified value is interpreted as a bit field. The meaning of the bits depends on the type of kinematics. 6 axes ($A1, $A2, $A3, $A4, $A5, $A6) correspond to the first 6 bits (bit 0 ... bit 5). All other bits are ignored. |  |  |  |  |  |
 | 16#FFFF_FFFF | Keep current joint position space |  |  |  |  |  |
 | cs |  | DINT | - | Reference coordinate system<sup>2)</sup> |  |  |
 | - | The modal value is used. By default, the "cs" parameter is preset to the value "0".  With [setCs()](#setcs-set-reference-coordinate-system-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
 | 2 | Object coordinate system 2 (OCS2) |  |  |  |  |  |
 | 3 | Object coordinate system 2 (OCS3) |  |  |  |  |  |
-| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes ("<TO_Axis>.DynamicLimits.MaxVelocity")<sup> 2)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxVelocity")<sup> 2)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 1.0 ≤ v ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
-| < 1.0 | Not permitted |  |  |  |  |  |
-| a |  | LREAL | - | Percentage factor for acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("<TO_Axis>.DynamicLimits.MaxAcceleration")<sup>2)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
+| &lt; 1.0 | Not permitted |  |  |  |  |  |
+| a |  | LREAL | - | Percentage factor for acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxAcceleration")<sup>2)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| d |  | LREAL | - | Percentage factor for deceleration of the axis movements in relation to the respective maximum deceleration of the axes ("<TO_Axis>.DynamicLimits.MaxDeceleration")<sup>2)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| d |  | LREAL | - | Percentage factor for deceleration of the axis movements in relation to the respective maximum deceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxDeceleration")<sup>2)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes ("<TO_Axis>.DynamicLimits.MaxJerk")<sup>2)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxJerk")<sup>2)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 10.0 ≤ j ≤ 90.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 10.0 (except 0.0) | Not permitted |  |  |  |  |  |
-| > 90.0 | Not permitted |  |  |  |  |  |
+| &lt; 10.0 (except 0.0) | Not permitted |  |  |  |  |  |
+| &gt; 90.0 | Not permitted |  |  |  |  |  |
 | trans |  | DINT | - | Motion transition to the next job<sup>2)</sup> |  |  |
 | - | The modal value is used. By default, the "trans" parameter is preset to the value "0".  With [setTrans()](#settrans-setting-motion-transition-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 0 | Append motion |  |  |  |  |  |
@@ -5921,19 +5921,19 @@ The following table shows the parameters of the "ptpRel()" instruction:
 | If "trans" = 1 or "trans" = 2: Always polynomial blending between sPTP and path motions. |  |  |  |  |  |  |
 | blendDist |  | LREAL | - | Blending distance<sup>2)</sup> |  |  |
 | - |  | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
-| < 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
 | tj1,...,tj6 |  | DINT | - | Target joint position range of joints J1,...,J6<sup>2)</sup>  Only relevant for kinematics whose joint coordinate system supports target joint position ranges. |  |  |
 | - | The modal value is used. By default, the "tj1",…, "tj6" parameter is preset to the value "0".  With [setTurnJoint()](#setturnjoint-setting-target-joint-position-ranges-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| m   (m < 0) | -180<sup>o</sup> + m * 360<sup>o</sup> ≤ Position < 180<sup>o</sup> + m * 360<sup>o</sup> |  |  |  |  |  |
+| m   (m &lt; 0) | -180<sup>o</sup> + m * 360<sup>o</sup> ≤ Position &lt; 180<sup>o</sup> + m * 360<sup>o</sup> |  |  |  |  |  |
 | … | … |  |  |  |  |  |
-| -2 | -900<sup>o</sup> ≤ Position < -540<sup>o</sup> |  |  |  |  |  |
-| -1 | -540<sup>o</sup> ≤ Position < -180<sup>o</sup> |  |  |  |  |  |
+| -2 | -900<sup>o</sup> ≤ Position &lt; -540<sup>o</sup> |  |  |  |  |  |
+| -1 | -540<sup>o</sup> ≤ Position &lt; -180<sup>o</sup> |  |  |  |  |  |
 | 0 | Shortest distance |  |  |  |  |  |
-| 1 | -180<sup>o</sup> ≤ Position < 180<sup>o</sup> |  |  |  |  |  |
-| 2 | 180° ≤ Position < 540° |  |  |  |  |  |
-| 3 | 540° ≤ Position < 900° |  |  |  |  |  |
+| 1 | -180<sup>o</sup> ≤ Position &lt; 180<sup>o</sup> |  |  |  |  |  |
+| 2 | 180° ≤ Position &lt; 540° |  |  |  |  |  |
+| 3 | 540° ≤ Position &lt; 900° |  |  |  |  |  |
 | … | … |  |  |  |  |  |
-| n   (n > 0) | -180<sup>o</sup> + (n - 1) * 360<sup>o</sup> ≤ Position < 180<sup>o</sup> + (n - 1) * 360<sup>o</sup> |  |  |  |  |  |
+| n   (n &gt; 0) | -180<sup>o</sup> + (n - 1) * 360<sup>o</sup> ≤ Position &lt; 180<sup>o</sup> + (n - 1) * 360<sup>o</sup> |  |  |  |  |  |
 | <sup>1)</sup> Only relevant with more than 4 interpolating kinematics axes.   <sup>2)</sup> Modal parameter |  |  |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -6020,9 +6020,9 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-ptpAxAbs( <axPos> [,v := <val>] [,a := <val>] [,d := <val>] [,j := <val>] [,trans := <val>]
+ptpAxAbs( &lt;axPos&gt; [,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] [,trans := &lt;val&gt;]
 
-[,blendDist := <val>] );
+[,blendDist := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -6037,27 +6037,27 @@ The following table shows the parameters of the "ptpAxAbs()" instruction:
 | a4 | LREAL | 0.0 | Absolute target position of the kinematics axis A4 in the MCS (axis coordinates) |  |  |  |
 | a5 | LREAL | 0.0 | Absolute target position of the kinematics axis A5 in the MCS (axis coordinates) |  |  |  |
 | a6 | LREAL | 0.0 | Absolute target position of the kinematics axis A6 in the MCS (axis coordinates) |  |  |  |
-| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes (<TO_Axis>.DynamicLimits.MaxVelocity)<sup> 1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes (&lt;TO_Axis&gt;.DynamicLimits.MaxVelocity)<sup> 1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 1.0 ≤ v ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
-| < 1.0 | Not permitted |  |  |  |  |  |
-| a |  | LREAL | - | Percentage factor for acceleration of the axis movements in relation to the respective maximum acceleration of the axes (<TO_Axis>.DynamicLimits.MaxAcceleration)<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
+| &lt; 1.0 | Not permitted |  |  |  |  |  |
+| a |  | LREAL | - | Percentage factor for acceleration of the axis movements in relation to the respective maximum acceleration of the axes (&lt;TO_Axis&gt;.DynamicLimits.MaxAcceleration)<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| d |  | LREAL | - | Percentage factor for the deceleration of the axis movements in relation to the respective maximum deceleration of the axes (<TO_Axis>.DynamicLimits.MaxDeceleration)<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| d |  | LREAL | - | Percentage factor for the deceleration of the axis movements in relation to the respective maximum deceleration of the axes (&lt;TO_Axis&gt;.DynamicLimits.MaxDeceleration)<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes (<TO_Axis>.DynamicLimits.MaxJerk)<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes (&lt;TO_Axis&gt;.DynamicLimits.MaxJerk)<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 10.0 ≤ j ≤ 90.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 10.0   (except 0.0) | Not permitted |  |  |  |  |  |
-| > 90.0 | Not permitted |  |  |  |  |  |
+| &lt; 10.0   (except 0.0) | Not permitted |  |  |  |  |  |
+| &gt; 90.0 | Not permitted |  |  |  |  |  |
 | trans |  | DINT | - | Motion transition to the next job<sup>1)</sup> |  |  |
 | - | The modal value is used. By default, the "trans" parameter is preset to the value "0".  With [setTrans()](#settrans-setting-motion-transition-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 0 | Append motion |  |  |  |  |  |
@@ -6067,7 +6067,7 @@ The following table shows the parameters of the "ptpAxAbs()" instruction:
 | blendDist |  | LREAL | - | Blending distance<sup>1)</sup> |  |  |
 | - |  | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | ≥ 0.0 |  | The default value is used. |  |  |  |  |
-| < 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
 | <sup>1)</sup> Modal parameter |  |  |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -6145,9 +6145,9 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-ptpAxRel( <axPos> [,v := <val>] [,a := <val>] [,d := <val>] [,j := <val>] [,tr:= <val>]
+ptpAxRel( &lt;axPos&gt; [,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] [,tr:= &lt;val&gt;]
 
-[,blendDist := <val>] );
+[,blendDist := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -6162,27 +6162,27 @@ The following table shows the parameters of the "ptpAxRel()" instruction:
 | a4 | LREAL | 0.0 | Relative target position of the kinematics axis A4 in the MCS (axis coordinates) |  |  |  |
 | a5 | LREAL | 0.0 | Relative target position of the kinematics axis A5 in the MCS (axis coordinates) |  |  |  |
 | a6 | LREAL | 0.0 | Relative target position of the kinematics axis A6 in the MCS (axis coordinates) |  |  |  |
-| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes ("<TO_Axis>.DynamicLimits.MaxVelocity")<sup> 1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxVelocity")<sup> 1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 1.0 ≤ v ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
-| < 1.0 | Not permitted |  |  |  |  |  |
-| a |  | LREAL | - | Percentage factor for the acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("<TO_Axis>.DynamicLimits.MaxAcceleration")<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
+| &lt; 1.0 | Not permitted |  |  |  |  |  |
+| a |  | LREAL | - | Percentage factor for the acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxAcceleration")<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| d |  | LREAL | - | Percentage factor for the deceleration of the axis movements in relation to the respective maximum deceleration of the axes ("<TO_Axis>.DynamicLimits.MaxDeceleration")<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| d |  | LREAL | - | Percentage factor for the deceleration of the axis movements in relation to the respective maximum deceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxDeceleration")<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes ("<TO_Axis>.DynamicLimits.MaxJerk")<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxJerk")<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 10.0 ≤ j ≤ 90.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 10.0   (except 0.0) | Not permitted |  |  |  |  |  |
-| > 90.0 | Not permitted |  |  |  |  |  |
+| &lt; 10.0   (except 0.0) | Not permitted |  |  |  |  |  |
+| &gt; 90.0 | Not permitted |  |  |  |  |  |
 | trans |  | DINT | - | Motion transition to the next job<sup>1)</sup> |  |  |
 | - | The modal value is used. By default, the "trans" parameter is preset to the value "0".  With [setTrans()](#settrans-setting-motion-transition-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 0 | Append motion |  |  |  |  |  |
@@ -6192,7 +6192,7 @@ The following table shows the parameters of the "ptpAxRel()" instruction:
 | blendDist |  | LREAL | - | Blending distance<sup>1)</sup> |  |  |
 | - |  | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | ≥ 0.0 |  | The default value is used. |  |  |  |  |
-| < 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
 | <sup>1)</sup> Modal parameter |  |  |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -6270,9 +6270,9 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-ptpJtAbs( <jtPos> [,v := <val>] [,a := <val>] [,d := <val>] [,j := <val>] [,trans := <val>]
+ptpJtAbs( &lt;jtPos&gt; [,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] [,trans := &lt;val&gt;]
 
-[,blendDist := <val>] );
+[,blendDist := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -6287,27 +6287,27 @@ The following table shows the parameters of the "ptpJtAbs()" instruction:
 | j4 | LREAL | 0.0 | Absolute target position of joint J4 in the JCS |  |  |  |
 | j5 | LREAL | 0.0 | Absolute target position of joint J5 in the JCS |  |  |  |
 | j6 | LREAL | 0.0 | Absolute target position of joint J6 in the JCS |  |  |  |
-| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes ("<TO_Axis>.DynamicLimits.MaxVelocity")<sup> 1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxVelocity")<sup> 1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 1.0 ≤ v ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
-| < 1.0 | Not permitted |  |  |  |  |  |
-| a |  | LREAL | - | Percentage factor for the acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("<TO_Axis>.DynamicLimits.MaxAcceleration")<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
+| &lt; 1.0 | Not permitted |  |  |  |  |  |
+| a |  | LREAL | - | Percentage factor for the acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxAcceleration")<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| d |  | LREAL | - | Percentage factor for the deceleration of the axis movements in relation to the respective maximum deceleration of the axes ("<TO_Axis>.DynamicLimits.MaxDeceleration")<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| d |  | LREAL | - | Percentage factor for the deceleration of the axis movements in relation to the respective maximum deceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxDeceleration")<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes ("<TO_Axis>.DynamicLimits.MaxJerk")<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxJerk")<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 10.0 ≤ j ≤ 90.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 10.0   (except 0.0) | Not permitted |  |  |  |  |  |
-| > 90.0 | Not permitted |  |  |  |  |  |
+| &lt; 10.0   (except 0.0) | Not permitted |  |  |  |  |  |
+| &gt; 90.0 | Not permitted |  |  |  |  |  |
 | trans |  | DINT | - | Motion transition to the next job<sup>1)</sup> |  |  |
 | - | The modal value is used. By default, the "trans" parameter is preset to the value "0".  With [setTrans()](#settrans-setting-motion-transition-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 0 | Append motion |  |  |  |  |  |
@@ -6317,7 +6317,7 @@ The following table shows the parameters of the "ptpJtAbs()" instruction:
 | blendDist |  | LREAL | - | Blending distance<sup>1)</sup> |  |  |
 | - |  | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | ≥ 0.0 |  | The default value is used. |  |  |  |  |
-| < 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
 | <sup>1)</sup> Modal parameter |  |  |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -6390,9 +6390,9 @@ You can find more information in the "S7-1500T Kinematics functions" documentati
 
 MCL
 
-ptpJtRel( <jtPos> [,v := <val>] [,a := <val>] [,d := <val>] [,j := <val>] [,trans := <val>]
+ptpJtRel( &lt;jtPos&gt; [,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] [,trans := &lt;val&gt;]
 
-[,blendDist := <val>] );
+[,blendDist := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -6407,27 +6407,27 @@ The following table shows the parameters of the "ptpJtRel()" instruction:
 | j4 | LREAL | 0.0 | Relative target position of joint J4 in the JCS |  |  |  |
 | j5 | LREAL | 0.0 | Relative target position of joint J5 in the JCS |  |  |  |
 | j6 | LREAL | 0.0 | Relative target position of joint J6 in the JCS |  |  |  |
-| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes ("<TO_Axis>.DynamicLimits.MaxVelocity")<sup> 1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| v |  | LREAL | - | Percentage factor for the velocity of the axis movements in relation to the respective maximum velocity of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxVelocity")<sup> 1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.VelocityFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 1.0 ≤ v ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
-| < 1.0 | Not permitted |  |  |  |  |  |
-| a |  | LREAL | - | Percentage factor for the acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("<TO_Axis>.DynamicLimits.MaxAcceleration")<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
+| &lt; 1.0 | Not permitted |  |  |  |  |  |
+| a |  | LREAL | - | Percentage factor for the acceleration of the axis movements in relation to the respective maximum acceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxAcceleration")<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.AccelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; a ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |  |
-| d |  | LREAL | - | Percentage factor for the deceleration of the axis movements in relation to the respective maximum deceleration of the axes ("<TO_Axis>.DynamicLimits.MaxDeceleration")<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 0.0 < d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
-| > 100.0 | Not permitted |  |  |  |  |  |
-| <= 0.0 | Not permitted |  |  |  |  |  |
-| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes ("<TO_Axis>.DynamicLimits.MaxJerk")<sup>1)</sup> |  |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Kinematics>.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
-| 10.0 <= j ≤ 90.0 | The specified value is used. |  |  |  |  |  |
+| d |  | LREAL | - | Percentage factor for the deceleration of the axis movements in relation to the respective maximum deceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxDeceleration")<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.DecelerationFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 0.0 &lt; d ≤ 100.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |  |  |
+| &lt;= 0.0 | Not permitted |  |  |  |  |  |
+| j |  | LREAL | - | Percentage factor for the jerk of the axis movements in relation to the respective maximum jerk of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxJerk")<sup>1)</sup> |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.JerkFactor".  With [setPtpDyn()](#setptpdyn-setting-dynamic-defaults-for-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
+| 10.0 &lt;= j ≤ 90.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 10.0   (except 0.0) | Not permitted |  |  |  |  |  |
-| > 90.0 | Not permitted |  |  |  |  |  |
+| &lt; 10.0   (except 0.0) | Not permitted |  |  |  |  |  |
+| &gt; 90.0 | Not permitted |  |  |  |  |  |
 | trans |  | DINT | - | Motion transition to the next job<sup>1)</sup> |  |  |
 | - | The modal value is used. By default, the "trans" parameter is preset to the value "0".  With [setTrans()](#settrans-setting-motion-transition-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |  |
 | 0 | Append motion |  |  |  |  |  |
@@ -6437,7 +6437,7 @@ The following table shows the parameters of the "ptpJtRel()" instruction:
 | blendDist |  | LREAL | - | Blending distance<sup>1)</sup> |  |  |
 | - |  | The modal value is used. By default, the "blendDist" parameter is preset to the value "-1.0".  With [setBlendDist()](#setblenddist-set-blending-distance-for-linear-circular-path-and-sptp-motions-modally-s7-1500t), you can set another value modally. |  |  |  |  |
 | ≥ 0.0 |  | The default value is used. |  |  |  |  |
-| < 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
+| &lt; 0.0 |  | The maximum possible blending distance is used. |  |  |  |  |
 | <sup>1)</sup> Modal parameter |  |  |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -6500,7 +6500,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setDyn( [v := <value>] [,a := <value>] [,d := <value>] [,j := <value>] [,rel := <value>] );
+setDyn( [v := &lt;value&gt;] [,a := &lt;value&gt;] [,d := &lt;value&gt;] [,j := &lt;value&gt;] [,rel := &lt;value&gt;] );
 
 ##### Parameters
 
@@ -6509,26 +6509,26 @@ The following table shows the parameters of the instruction "setDyn()":
 | Parameter | Data type | Default value | Description |  |
 | --- | --- | --- | --- | --- |
 | v | LREAL | - | Modal value of the velocity of the path motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.Path.Velocity). If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE: Absolute default of the velocity |  |  |  |
-| 0.0 < v ≤ 100.0 | With rel := TRUE: Percentage default of the last valid maximum velocity value |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Velocity). If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE: Absolute default of the velocity |  |  |  |
+| 0.0 &lt; v ≤ 100.0 | With rel := TRUE: Percentage default of the last valid maximum velocity value |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | a | LREAL | - | Modal value of the acceleration of the path motion |  |
-| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.Path.Acceleration).   If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE: Absolute default of the acceleration |  |  |  |
-| 0.0 < a ≤ 100.0 | With rel := TRUE: Percentage default of the last valid maximum acceleration value |  |  |  |
+| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Acceleration).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE: Absolute default of the acceleration |  |  |  |
+| 0.0 &lt; a ≤ 100.0 | With rel := TRUE: Percentage default of the last valid maximum acceleration value |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | d | LREAL | - | Modal value of the deceleration of the path motion |  |
-| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.Path.Deceleration).   If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE: Absolute default of the deceleration |  |  |  |
-| 0.0 < d ≤ 100.0 | With rel := TRUE: Percentage default of the last valid maximum deceleration value |  |  |  |
+| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Deceleration).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE: Absolute default of the deceleration |  |  |  |
+| 0.0 &lt; d ≤ 100.0 | With rel := TRUE: Percentage default of the last valid maximum deceleration value |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | j | LREAL | - | Modal value of the jerk of the path motion |  |
-| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.Path.Jerk).   If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE: Absolute default of the jerk |  |  |  |
-| 0.0 < j ≤ 100.0 | With rel := TRUE: Percentage default of the last valid maximum jerk value |  |  |  |
+| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.Path.Jerk).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE: Absolute default of the jerk |  |  |  |
+| 0.0 &lt; j ≤ 100.0 | With rel := TRUE: Percentage default of the last valid maximum jerk value |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
-| < 0.0 | Not permitted |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |
 | rel | BOOL | FALSE | Type of specification of the modal value<sup>1)</sup> |  |
 | FALSE | Absolute specification |  |  |  |
 | TRUE | Percentage specification |  |  |  |
@@ -6593,7 +6593,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setOriDyn( [v := <value>] [,a := <value>] [,d := <value>] [,j := <value>] [,rel := <value>] );
+setOriDyn( [v := &lt;value&gt;] [,a := &lt;value&gt;] [,d := &lt;value&gt;] [,j := &lt;value&gt;] [,rel := &lt;value&gt;] );
 
 ##### Parameters
 
@@ -6602,26 +6602,26 @@ The following table shows the parameters of the instruction "setOriDyn()":
 | Parameter | Data type | Default value | Description |  |
 | --- | --- | --- | --- | --- |
 | v | LREAL | - | Modal value of the velocity of the orientation motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.Orientation.Velocity). If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE:  Absolute default of the velocity |  |  |  |
-| 0.0 < v ≤ 100.0 | With rel := TRUE: Percentage default of the last maximum valid velocity value |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.Orientation.Velocity). If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE:  Absolute default of the velocity |  |  |  |
+| 0.0 &lt; v ≤ 100.0 | With rel := TRUE: Percentage default of the last maximum valid velocity value |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | a | LREAL | - | Modal value of the acceleration of the orientation motion |  |
-| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.Orientation.Acceleration). If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE:  Absolute default of the acceleration |  |  |  |
-| 0.0 < a ≤ 100.0 | With rel := TRUE: Percentage default of the last maximum valid acceleration value |  |  |  |
+| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.Orientation.Acceleration). If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE:  Absolute default of the acceleration |  |  |  |
+| 0.0 &lt; a ≤ 100.0 | With rel := TRUE: Percentage default of the last maximum valid acceleration value |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | d | LREAL | - | Modal value of the deceleration of the orientation motion |  |
-| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.Orientation.Deceleration). If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the deceleration limit |  |  |  |
-| 0.0 < d ≤ 100.0 | With rel := TRUE: Percentage default of the last maximum valid deceleration value |  |  |  |
+| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.Orientation.Deceleration). If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the deceleration limit |  |  |  |
+| 0.0 &lt; d ≤ 100.0 | With rel := TRUE: Percentage default of the last maximum valid deceleration value |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | j | LREAL | - | Modal value of the jerk of the orientation motion |  |
-| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.Orientation.Jerk).   If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE:  Absolute default of the jerk |  |  |  |
-| 0.0 < j ≤ 100.0 | With rel := TRUE:  Percentage default of the last maximum valid jerk value |  |  |  |
+| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.Orientation.Jerk).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE:  Absolute default of the jerk |  |  |  |
+| 0.0 &lt; j ≤ 100.0 | With rel := TRUE:  Percentage default of the last maximum valid jerk value |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
-| < 0.0 | Not permitted |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |
 | rel | BOOL | FALSE | Type of specification of the modal value<sup>1)</sup> |  |
 | FALSE | Absolute specification |  |  |  |
 | TRUE | Percentage specification |  |  |  |
@@ -6687,7 +6687,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setPtpDyn( [v := <value>] [,a := <value>] [,d := <value>] [,j := <value>] );
+setPtpDyn( [v := &lt;value&gt;] [,a := &lt;value&gt;] [,d := &lt;value&gt;] [,j := &lt;value&gt;] );
 
 ##### Parameters
 
@@ -6695,26 +6695,26 @@ The following table shows the parameters of the "setPtpDyn()" instruction:
 
 | Parameter | Data type | Default value | Description |  |
 | --- | --- | --- | --- | --- |
-| v | LREAL | - | Modal value of the percentage factor for the velocity of the sPTP motion related to the respective maximum velocity of the axes ("<TO_Axis>.DynamicLimits.MaxVelocity"). |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.MoveDirect.VelocityFactor).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| v | LREAL | - | Modal value of the percentage factor for the velocity of the sPTP motion related to the respective maximum velocity of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxVelocity"). |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.VelocityFactor).   If the value is not set in the program code, the initialized value is used. |  |  |  |
 | 1.0 ≤ v ≤ 100.0 | Percentage value of the maximum axis velocity. |  |  |  |
-| < 1.0 | Not permitted. |  |  |  |
-| > 100.0 | Not permitted. |  |  |  |
-| a | LREAL | - | Modal value of the percentage factor for the acceleration of the sPTP motion related to the respective maximum acceleration of the axes ("<TO_Axis>.DynamicLimits.MaxAcceleration"). |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.MoveDirect.AccelerationFactor).   If the value is not set in the program code, the initialized value is used. |  |  |  |
-| 0.0 < a ≤ 100.0 | Percentage value of the maximum axis acceleration |  |  |  |
+| &lt; 1.0 | Not permitted. |  |  |  |
+| &gt; 100.0 | Not permitted. |  |  |  |
+| a | LREAL | - | Modal value of the percentage factor for the acceleration of the sPTP motion related to the respective maximum acceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxAcceleration"). |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.AccelerationFactor).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| 0.0 &lt; a ≤ 100.0 | Percentage value of the maximum axis acceleration |  |  |  |
 | ≤ 0.0 | Not permitted. |  |  |  |
-| > 100.0 | Not permitted. |  |  |  |
-| d | LREAL | - | Modal value of the percentage factor for the deceleration of the sPTP motion related to the respective maximum deceleration of the axes ("<TO_Axis>.DynamicLimits.MaxDeceleration"). |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.MoveDirect.DecelerationFactor).   If the value is not set in the program code, the initialized value is used. |  |  |  |
-| 0.0 < d ≤ 100.0 | Percentage value of the maximum axis deceleration |  |  |  |
+| &gt; 100.0 | Not permitted. |  |  |  |
+| d | LREAL | - | Modal value of the percentage factor for the deceleration of the sPTP motion related to the respective maximum deceleration of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxDeceleration"). |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.DecelerationFactor).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| 0.0 &lt; d ≤ 100.0 | Percentage value of the maximum axis deceleration |  |  |  |
 | ≤ 0.0 | Not permitted. |  |  |  |
-| > 100.0 | Not permitted. |  |  |  |
-| j | LREAL | - | Modal value of the percentage factor for the jerk of the sPTP motion related to the respective maximum jerk of the axes ("<TO_Axis>.DynamicLimits.MaxJerk"). |  |
-| - | The modal value remains unchanged.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.MoveDirect.JerkFactor).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 100.0 | Not permitted. |  |  |  |
+| j | LREAL | - | Modal value of the percentage factor for the jerk of the sPTP motion related to the respective maximum jerk of the axes ("&lt;TO_Axis&gt;.DynamicLimits.MaxJerk"). |  |
+| - | The modal value remains unchanged.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.MoveDirect.JerkFactor).   If the value is not set in the program code, the initialized value is used. |  |  |  |
 | 10.0 ≤ j ≤ 90.0 | Percentage value of the maximum axis jerk |  |  |  |
-| < 10.0   (except 0.0) | Not permitted. |  |  |  |
-| > 90.0 | Not permitted. |  |  |  |
+| &lt; 10.0   (except 0.0) | Not permitted. |  |  |  |
+| &gt; 90.0 | Not permitted. |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
 
 ##### Example
@@ -6761,7 +6761,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setDynMax( [v := <value>] [,a := <value>] [,d := <value>] [,j := <value>] );
+setDynMax( [v := &lt;value&gt;] [,a := &lt;value&gt;] [,d := &lt;value&gt;] [,j := &lt;value&gt;] );
 
 ##### Parameters
 
@@ -6770,22 +6770,22 @@ The following table shows the parameters of the instruction "setDynMax()":
 | Parameter | Data type | Default value | Description |  |
 | --- | --- | --- | --- | --- |
 | v | LREAL | - | Modal value of the maximum velocity of the path motion |  |
-| - | The modal value remains unchanged.  The most recent valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicLimits.Path.Velocity).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of velocity limits |  |  |  |
+| - | The modal value remains unchanged.  The most recent valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicLimits.Path.Velocity).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of velocity limits |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | a | LREAL | - | Modal value of the maximum acceleration of the path motion |  |
-| - | The modal value remains unchanged. The most recent valid value set in the program code is used. When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicLimits.Path.Acceleration).   If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the limits of acceleration |  |  |  |
+| - | The modal value remains unchanged. The most recent valid value set in the program code is used. When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicLimits.Path.Acceleration).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the limits of acceleration |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | d | LREAL | - | Modal value of the maximum deceleration of the path motion |  |
-| - | The modal value remains unchanged. The most recent valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicLimits.Path.Deceleration).   If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the deceleration limits |  |  |  |
+| - | The modal value remains unchanged. The most recent valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicLimits.Path.Deceleration).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the deceleration limits |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | j | LREAL | - | Modal value of the maximum jerk of the path motion |  |
-| - | The modal value remains unchanged. The most recent valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicLimits.Path.Jerk).   If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the jerk limits |  |  |  |
+| - | The modal value remains unchanged. The most recent valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicLimits.Path.Jerk).   If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the jerk limits |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
-| < 0.0 | Not permitted |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |
 
 ##### Example
 
@@ -6838,7 +6838,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setOriDynMax( [v := <value>] [,a := <value>] [,d := <value>] [,j := <value>] );
+setOriDynMax( [v := &lt;value&gt;] [,a := &lt;value&gt;] [,d := &lt;value&gt;] [,j := &lt;value&gt;] );
 
 ##### Parameters
 
@@ -6847,22 +6847,22 @@ The following table shows the parameters of the instruction "setOriDynMax()":
 | Parameter | Data type | Default value | Description |  |
 | --- | --- | --- | --- | --- |
 | v | LREAL | - | Modal value of maximum velocity of the orientation motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicLimits.Orientation.Velocity).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the velocity limit |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicLimits.Orientation.Velocity).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the velocity limit |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | a | LREAL | - | Modal value of the maximum acceleration of the orientation motion |  |
-| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicLimits.Orientation.Acceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the acceleration limit |  |  |  |
+| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicLimits.Orientation.Acceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the acceleration limit |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | d | LREAL | - | Modal value of the maximum deceleration of the orientation motion |  |
-| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicLimits.Orientation.Deceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the deceleration limit |  |  |  |
+| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicLimits.Orientation.Deceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the deceleration limit |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | j | LREAL | - | Modal value of the maximum jerk of the orientation motion |  |
-| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicLimits.Orientation.Jerk).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the jerk limit |  |  |  |
+| - | The modal value remains unchanged. The last valid value set in the program code is used.   When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicLimits.Orientation.Jerk).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the jerk limit |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
-| < 0.0 | Not permitted |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |
 
 ##### Examples
 
@@ -6915,7 +6915,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setTrans( <trans> );
+setTrans( &lt;trans&gt; );
 
 ##### Parameters
 
@@ -7002,7 +7002,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setBlend( <blend> );
+setBlend( &lt;blend&gt; );
 
 ##### Parameters
 
@@ -7099,7 +7099,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setBlendDist( < blendDist> );
+setBlendDist( &lt; blendDist&gt; );
 
 ##### Parameters
 
@@ -7109,7 +7109,7 @@ The following table shows the parameters of the instruction "setBlendDist()":
 | --- | --- | --- | --- | --- |
 | blendDist | LREAL | - | Modal value for the blending distance (for linear path and sPTP motions)/the blending radius path (for circular path motions) |  |
 | ≥ 0.0 | The default absolute value is used. |  |  |  |
-| < 0.0 | The maximum possible blending distance is used, which is configured with "blendingFactor" (see also "setBlendFactor()" instruction) |  |  |  |
+| &lt; 0.0 | The maximum possible blending distance is used, which is configured with "blendingFactor" (see also "setBlendFactor()" instruction) |  |  |  |
 
 ##### Examples
 
@@ -7156,7 +7156,7 @@ The input and output blending distance at the blending point remains unchanged.
 
 This factor is only taken into account if the blending distance for the motion is set to the maximum possible blending distance ("blendDist" = -1.0, see also "setBlendDist()" instruction).
 
-The last valid value set in the program code is used for the factor. When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Job sequence" (<TO_Kinematics>.Transition.FactorBlendingLength). If the value is not set in the program code, the initialized value is used.
+The last valid value set in the program code is used for the factor. When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Job sequence" (&lt;TO_Kinematics&gt;.Transition.FactorBlendingLength). If the value is not set in the program code, the initialized value is used.
 
 You can find more information on the blending of motions and the blending distance factor in the sections "[Move kinematics linearly](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#moving-a-kinematics-in-a-linear-manner-s7-1500t)" and "[Move kinematics circularly](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#moving-a-kinematics-in-a-circular-manner-s7-1500t)" of the "S7-1500T Kinematics functions" documentation.
 
@@ -7183,7 +7183,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setBlendFactor( <blendFactor> );
+setBlendFactor( &lt;blendFactor&gt; );
 
 ##### Parameters
 
@@ -7193,7 +7193,7 @@ The following table shows the parameters of the instruction "setBlendFactor()":
 | --- | --- | --- | --- | --- |
 | blendFactor | LREAL | - | Modal value of the blending factor |  |
 | = 0.0 | No blending |  |  |  |
-| 0.0 < blendFactor < 100.0 | Percentage default of the factor for the motion blending. |  |  |  |
+| 0.0 &lt; blendFactor &lt; 100.0 | Percentage default of the factor for the motion blending. |  |  |  |
 | = 100.0 | Maximum blending distance |  |  |  |
 
 ##### Example 1
@@ -7271,7 +7271,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setPlane( <plane> );
+setPlane( &lt;plane&gt; );
 
 ##### Parameters
 
@@ -7352,7 +7352,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setOriDirA( <oDirA> );
+setOriDirA( &lt;oDirA&gt; );
 
 ##### Parameters
 
@@ -7427,9 +7427,9 @@ The modal values for the target joint position range can alternatively be progra
 
 MCL
 
-setTurnJoint( [,tj1 := <val>] [,tj2 := <val>] [,tj3 :=<val>] [,tj4 := <val>]
+setTurnJoint( [,tj1 := &lt;val&gt;] [,tj2 := &lt;val&gt;] [,tj3 :=&lt;val&gt;] [,tj4 := &lt;val&gt;]
 
-[,tj5 := <val>] [,tj6 :=<val>] );
+[,tj5 := &lt;val&gt;] [,tj6 :=&lt;val&gt;] );
 
 ##### Parameters
 
@@ -7439,31 +7439,31 @@ The following table shows the parameters of the "setTurnJoint()" instruction:
 | --- | --- | --- | --- | --- |
 | tj1, ..., tj6 | DINT | - | Modal value for the target joint position range of joints J1, ..., J6 |  |
 | - | The modal value remains unchanged. By default, the "tj1",…, "tj6" parameter is preset to the value "0". |  |  |  |
-| m  (m < 0) | -180<sup>o</sup> + m * 360<sup>o</sup> ≤ Position < 180<sup>o</sup> + m * 360<sup>o</sup> |  |  |  |
+| m  (m &lt; 0) | -180<sup>o</sup> + m * 360<sup>o</sup> ≤ Position &lt; 180<sup>o</sup> + m * 360<sup>o</sup> |  |  |  |
 | … | … |  |  |  |
-| -2 | -900<sup>o</sup> ≤ Position < -540<sup>o</sup> |  |  |  |
-| -1 | -540<sup>o</sup> ≤ Position < -180<sup>o</sup> |  |  |  |
+| -2 | -900<sup>o</sup> ≤ Position &lt; -540<sup>o</sup> |  |  |  |
+| -1 | -540<sup>o</sup> ≤ Position &lt; -180<sup>o</sup> |  |  |  |
 | 0 | Shortest distance |  |  |  |
-| 1 | -180<sup>o</sup> ≤ Position < 180<sup>o</sup> |  |  |  |
-| 2 | 180° ≤ Position < 540° |  |  |  |
-| 3 | 540° ≤ Position < 900° |  |  |  |
+| 1 | -180<sup>o</sup> ≤ Position &lt; 180<sup>o</sup> |  |  |  |
+| 2 | 180° ≤ Position &lt; 540° |  |  |  |
+| 3 | 540° ≤ Position &lt; 900° |  |  |  |
 | … | … |  |  |  |
-| n   (n > 0) | -180<sup>o</sup> + (n - 1) * 360<sup>o</sup> ≤ Position < 180<sup>o</sup> + (n - 1) * 360<sup>o</sup> |  |  |  |
+| n   (n &gt; 0) | -180<sup>o</sup> + (n - 1) * 360<sup>o</sup> ≤ Position &lt; 180<sup>o</sup> + (n - 1) * 360<sup>o</sup> |  |  |  |
 
 ##### Example
 
 MCL
 
 // set the modal value of the turn joint position range of joint 1 to -2   
-// (-900 <= range < -540)   
+// (-900 &lt;= range &lt; -540)   
 setTurnJoint( tj1 := -2 );  
   
 // set the modal values of the turn joint position range of joint 2 to 1   
-// (-180 <= range < 180) and joint 4 to 2 (180 <= range < 540)   
+// (-180 &lt;= range &lt; 180) and joint 4 to 2 (180 &lt;= range &lt; 540)   
 setTurnJoint( tj2 := 1, tj4 := 2 );  
   
 // set the modal values of the turn joint position range of joint 5 to -11   
-// (-4140 <= range < -3780)   
+// (-4140 &lt;= range &lt; -3780)   
 setTurnJoint( tj5 := -11 );
 
 #### setCircDir() Set orientation of circle path for circular path motions modally (S7-1500T)
@@ -7511,7 +7511,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setCircDir( <cDir> );
+setCircDir( &lt;cDir&gt; );
 
 ##### Parameters
 
@@ -7614,7 +7614,7 @@ Alternatively, the target joint position space can be set modally with these MCL
 
 MCL
 
-setLc( <lc> );
+setLc( &lt;lc&gt; );
 
 ##### Parameters
 
@@ -7690,7 +7690,7 @@ The dynamic adaptation limits the path dynamics to the axes dynamics. When dynam
 
 In addition, the dynamic defaults and dynamic limits for velocity, acceleration and deceleration of the orientation motion are taken into account.
 
-The last valid value set in the program code is used for the dynamic adaptation mode. When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Kinematics>.DynamicDefaults.DynamicAdaption). If the value is not set in the program code, the initialized value is used.
+The last valid value set in the program code is used for the dynamic adaptation mode. When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Kinematics&gt;.DynamicDefaults.DynamicAdaption). If the value is not set in the program code, the initialized value is used.
 
 You can find more information on the different modes of dynamic adaptation in the "S7-1500T Kinematics functions" documentation.
 
@@ -7711,7 +7711,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setDynAdapt( <da> );
+setDynAdapt( &lt;da&gt; );
 
 ##### Parameters
 
@@ -7761,12 +7761,12 @@ The "defOcs()" job is added to the queue of the Interpreter job sequence and is 
 
 The following variables of the technology object data block of the Kinematics technology object contain the current coordinates of the object coordinate systems:
 
-- <TO>.StatusOcsFrame[1..3].x
-- <TO>.StatusOcsFrame[1..3].y
-- <TO>.StatusOcsFrame[1..3].z
-- <TO>.StatusOcsFrame[1..3].a
-- <TO>.StatusOcsFrame[1..3].b
-- <TO>.StatusOcsFrame[1..3].c
+- &lt;TO&gt;.StatusOcsFrame[1..3].x
+- &lt;TO&gt;.StatusOcsFrame[1..3].y
+- &lt;TO&gt;.StatusOcsFrame[1..3].z
+- &lt;TO&gt;.StatusOcsFrame[1..3].a
+- &lt;TO&gt;.StatusOcsFrame[1..3].b
+- &lt;TO&gt;.StatusOcsFrame[1..3].c
 
 You can find more information in the "S7-1500 Kinematics functions" documentation.
 
@@ -7783,7 +7783,7 @@ You can find more information in the "S7-1500 Kinematics functions" documentatio
 
 MCL
 
-defOcs( <ocs>, <frame> );
+defOcs( &lt;ocs&gt;, &lt;frame&gt; );
 
 ##### Parameters
 
@@ -7807,7 +7807,7 @@ The following table shows the parameters of the MCL instruction "defOcs()":
 
 ![Description](images/164877580811_DV_resource.Stream@PNG-de-DE.png)
 
-Use the MCL instruction "defTool()" to redefine the [tool frame](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-tool-frames-s7-1500t) of a tool. The configured start values in "<TO_Kinematics>.Tool[1..3]" are not overwritten.
+Use the MCL instruction "defTool()" to redefine the [tool frame](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-tool-frames-s7-1500t) of a tool. The configured start values in "&lt;TO_Kinematics&gt;.Tool[1..3]" are not overwritten.
 
 A "defTool()" job interrupts the program preparation. Program preparation is restarted after the "defTool()" job has been completed.
 
@@ -7825,12 +7825,12 @@ Configure the coordinates depending on the kinematics type used.
 
 The following variables of the technology object data block of the connected kinematics contain the coordinates of tools 1 to 3:
 
-- <TO>.StatusTool.Frame[1..3].x
-- <TO>.StatusTool.Frame[1..3].y
-- <TO>.StatusTool.Frame[1..3].z
-- <TO>.StatusTool.Frame[1..3].a
-- <TO>.StatusTool.Frame[1..3].b
-- <TO>.StatusTool.Frame[1..3].c
+- &lt;TO&gt;.StatusTool.Frame[1..3].x
+- &lt;TO&gt;.StatusTool.Frame[1..3].y
+- &lt;TO&gt;.StatusTool.Frame[1..3].z
+- &lt;TO&gt;.StatusTool.Frame[1..3].a
+- &lt;TO&gt;.StatusTool.Frame[1..3].b
+- &lt;TO&gt;.StatusTool.Frame[1..3].c
 
 You can find more information in the "S7-1500 Kinematics functions" documentation.
 
@@ -7850,7 +7850,7 @@ You can find more information in the "S7-1500 Kinematics functions" documentatio
 
 MCL
 
-defTool( <tool>, <frame> );
+defTool( &lt;tool&gt;, &lt;frame&gt; );
 
 ##### Parameters
 
@@ -7906,12 +7906,12 @@ defTool( 1, myToolFrame );
 
 In the technology object data block of the connected kinematics, the coordinates of Tool 1 are displayed as follows:
 
-- <TO_Kinematics>.StatusTool.Frame[1].x := 20.0
-- <TO_Kinematics>.StatusTool.Frame[1].y := 0.0
-- <TO_Kinematics>.StatusTool.Frame[1].z := 100.0
-- <TO_Kinematics>.StatusTool.Frame[1].a := 0.0
-- <TO_Kinematics>.StatusTool.Frame[1].b := -90.0
-- <TO_Kinematics>.StatusTool.Frame[1].c := 0.0
+- &lt;TO_Kinematics&gt;.StatusTool.Frame[1].x := 20.0
+- &lt;TO_Kinematics&gt;.StatusTool.Frame[1].y := 0.0
+- &lt;TO_Kinematics&gt;.StatusTool.Frame[1].z := 100.0
+- &lt;TO_Kinematics&gt;.StatusTool.Frame[1].a := 0.0
+- &lt;TO_Kinematics&gt;.StatusTool.Frame[1].b := -90.0
+- &lt;TO_Kinematics&gt;.StatusTool.Frame[1].c := 0.0
 
 #### trackIn() Start conveyor tracking (S7-1500T)
 
@@ -7923,7 +7923,7 @@ Use the MCL instruction "trackIn()" to start [conveyor tracking](Using%20S7-1500
 
 With the next kinematics motion job with target position in this OCS, the kinematics moves to the specified position in OCS and couples with the conveyor at the position.
 
-The variable "<TO>.StatusConveyor[1..3].TrackingState" of the technology object data block of the Kinematics technology object contains the status of the conveyor tracking.
+The variable "&lt;TO&gt;.StatusConveyor[1..3].TrackingState" of the technology object data block of the Kinematics technology object contains the status of the conveyor tracking.
 
 You can find more information in the "S7-1500 Kinematics functions" documentation.
 
@@ -7942,7 +7942,7 @@ You can find more information in the "S7-1500 Kinematics functions" documentatio
 
 MCL
 
-trackIn( <axis>, <origin> [,initPos := <val>] [,ocs := <val>] );
+trackIn( &lt;axis&gt;, &lt;origin&gt; [,initPos := &lt;val&gt;] [,ocs := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -7952,7 +7952,7 @@ The following table shows the parameters of the MCL instruction "trackIn()":
 | --- | --- | --- | --- | --- |
 | axis | AXIS_OBJECT | - | Leading-value-capable technology object to which the OCS is coupled:  Leading-value-capable technology objects are:  - Positioning axis - Synchronous axis - External encoder - Leading axis proxy |  |
 | origin | TO_Struct_Ipr_Frame | - | Frame for the OCS reference position on the conveyor |  |
-| initPos | TO_Struct_Ipr_Frame | 0.0 | "initPos.x" contains the differential value on the belt position to determine the tracked position of the OCS in relation to the OCS reference position  Permitted values:  - "initPos.x" <=> 0.0 - "initPos.y" = 0.0 - "initPos.z" = 0.0 - "initPos.a" = 0.0 - "initPos.b" = 0.0 - "initPos.c" = 0.0 |  |
+| initPos | TO_Struct_Ipr_Frame | 0.0 | "initPos.x" contains the differential value on the belt position to determine the tracked position of the OCS in relation to the OCS reference position  Permitted values:  - "initPos.x" &lt;=&gt; 0.0 - "initPos.y" = 0.0 - "initPos.z" = 0.0 - "initPos.a" = 0.0 - "initPos.b" = 0.0 - "initPos.c" = 0.0 |  |
 | ocs | DINT | 1 | Number of the tracked OCS |  |
 | 1 | OCS1 |  |  |  |
 | 2 | OCS2 |  |  |  |
@@ -8053,7 +8053,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setCs( <cs> );
+setCs( &lt;cs&gt; );
 
 ##### Parameters
 
@@ -8118,7 +8118,7 @@ This section contains information on the following topics:
 
 ![Description](images/164877622283_DV_resource.Stream@PNG-de-DE.png)
 
-With the MCL instruction "defWsZone()", you define a [workspace zone](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#brief-description-of-zone-monitoring-s7-1500t) in relation to the world coordinates system or an object coordinate system. The zones (<TO>.WorkspaceZone[1..10]) defined in the Kinematics technology object are not changed and are available again after a restart of the technology object. The variable "<TO>.StatusWorkspaceZone" in the technology object data block of the connected kinematics contains the workspace zones currently in effect.
+With the MCL instruction "defWsZone()", you define a [workspace zone](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#brief-description-of-zone-monitoring-s7-1500t) in relation to the world coordinates system or an object coordinate system. The zones (&lt;TO&gt;.WorkspaceZone[1..10]) defined in the Kinematics technology object are not changed and are available again after a restart of the technology object. The variable "&lt;TO&gt;.StatusWorkspaceZone" in the technology object data block of the connected kinematics contains the workspace zones currently in effect.
 
 The "defWsZone()" job interjects itself in the job sequence on the Kinematics technology object and therefore effective for the following motion jobs.
 
@@ -8145,7 +8145,7 @@ You can find more information in the "S7-1500 Kinematics functions" documentatio
 
 MCL
 
-defWsZone( *<ztype>, <nr>, <geometry> [,p1 := <val>] [,p2 := <val>] [,p3 := <val>] [refCs := <val>] [,fr := <val>] );*
+defWsZone( *&lt;ztype&gt;, &lt;nr&gt;, &lt;geometry&gt; [,p1 := &lt;val&gt;] [,p2 := &lt;val&gt;] [,p3 := &lt;val&gt;] [refCs := &lt;val&gt;] [,fr := &lt;val&gt;] );*
 
 ##### Parameters
 
@@ -8185,7 +8185,7 @@ The following table shows the parameters of the MCL instruction "defWsZone()":
 
 ![Description](images/164877626251_DV_resource.Stream@PNG-de-DE.png)
 
-With the MCL instruction "defKinZone()", you define a [kinematics zone](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#brief-description-of-zone-monitoring-s7-1500t) in relation to the tool and flange coordinate system. The zones (<TO>.KinematicsZone[2..10]) defined in the Kinematics technology object are not changed and are available again after a restart of the technology object.
+With the MCL instruction "defKinZone()", you define a [kinematics zone](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#brief-description-of-zone-monitoring-s7-1500t) in relation to the tool and flange coordinate system. The zones (&lt;TO&gt;.KinematicsZone[2..10]) defined in the Kinematics technology object are not changed and are available again after a restart of the technology object.
 
 The MCL instruction offers you the following options:
 
@@ -8194,7 +8194,7 @@ The MCL instruction offers you the following options:
 
 The "defKinZone()" job is added to the queue of the Interpreter job sequence and therefore affects subsequent motion jobs.
 
-The variable "<TO>.StatusKinematicsZone" in the technology object data block of the connected kinematics contains the kinematics zones currently in effect.
+The variable "&lt;TO&gt;.StatusKinematicsZone" in the technology object data block of the connected kinematics contains the kinematics zones currently in effect.
 
 You can define up to 9 kinematics zones. Kinematics zone 1 is the tool center point (TCP) and cannot be changed.
 
@@ -8214,7 +8214,7 @@ You can find more information in the documentation ["S7-1500 Kinematic Functions
 
 MCL
 
-defKinZone( *<nr>, <geometry> [,p1 := <val>] [,p2 := <val>] [,p3 := <val>] [refCs := <val>] [,fr := <val>] );*
+defKinZone( *&lt;nr&gt;, &lt;geometry&gt; [,p1 := &lt;val&gt;] [,p2 := &lt;val&gt;] [,p3 := &lt;val&gt;] [refCs := &lt;val&gt;] [,fr := &lt;val&gt;] );*
 
 ##### Parameters
 
@@ -8255,7 +8255,7 @@ Use the "mode" parameter to specify whether one or more workspace zones are to b
 
 The "setWsZoneActive" job is added to the queue of the Interpreter job sequence and therefore affects subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" variables in the technology object data block of the connected kinematics contain the current activation status of the zones.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" variables in the technology object data block of the connected kinematics contain the current activation status of the zones.
 
 Several defined blocked zones and signal zones can be active at the same time. Only one defined work zone can be active at a time.
 
@@ -8275,7 +8275,7 @@ You can find more information in the documentation "S7-1500 Kinematic Functions"
 
 MCL
 
-setWsZoneActive( *[mode := <val>] [,nr := <val>] );*
+setWsZoneActive( *[mode := &lt;val&gt;] [,nr := &lt;val&gt;] );*
 
 ##### Parameters
 
@@ -8290,7 +8290,7 @@ The following table shows the parameters of the MCL instruction "setWsZoneActive
 | 3 | Activate all defined signal zones |  |  |  |
 | nr | DINT | 1 | Zone number<sup> 1)</sup> |  |
 | 1 … 10 | Zone 1 ... 10 |  |  |  |
-| If "mode" > 0: The "nr" parameter is ignored |  |  |  |  |
+| If "mode" &gt; 0: The "nr" parameter is ignored |  |  |  |  |
 | <sup>1) </sup>Optional parameter. The absolute value of the specified value is used. If you do not use this parameter in the command call, the default value is used. |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -8309,7 +8309,7 @@ Use the "mode" parameter to specify whether one or more workspace zones are to b
 
 The "setWsZoneInactive()" job is added to the queue of the Interpreter job sequence and therefore affects subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" variables in the technology object data block of the connected kinematics contain the current activation status of the zones.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" variables in the technology object data block of the connected kinematics contain the current activation status of the zones.
 
 You can find more information in the documentation "S7-1500 Kinematic Functions".
 
@@ -8327,7 +8327,7 @@ You can find more information in the documentation "S7-1500 Kinematic Functions"
 
 MCL
 
-setWsZoneInactive( *[mode := <val>] [,nr := <val>] );*
+setWsZoneInactive( *[mode := &lt;val&gt;] [,nr := &lt;val&gt;] );*
 
 ##### Parameters
 
@@ -8343,7 +8343,7 @@ The following table shows the parameters of the MCL instruction "setWsZoneInacti
 | 4 | Deactivate active work zone |  |  |  |
 | nr | DINT | 1 | Zone number<sup> 1)</sup> |  |
 | 1 … 10 | Zone 1 ... 10 |  |  |  |
-| If "mode" > 0: The "nr" parameter is ignored |  |  |  |  |
+| If "mode" &gt; 0: The "nr" parameter is ignored |  |  |  |  |
 | <sup>1) </sup>Optional parameter. The absolute value of the specified value is used. If you do not use this parameter in the command call, the default value is used. |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -8362,7 +8362,7 @@ Use the "mode" parameter to specify whether one or all kinematics zones are to b
 
 The "setKinZoneActive()" job is added to the queue of the Interpreter job sequence and therefore affects subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" variables in the technology object data block of the connected kinematics contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" variables in the technology object data block of the connected kinematics contain the current activation status of the kinematics zones.
 
 You can find more information in the documentation "S7-1500 Kinematic Functions".
 
@@ -8380,7 +8380,7 @@ You can find more information in the documentation "S7-1500 Kinematic Functions"
 
 MCL
 
-setKinZoneActive( *[mode := <val>] [,nr := <val>] );*
+setKinZoneActive( *[mode := &lt;val&gt;] [,nr := &lt;val&gt;] );*
 
 ##### Parameters
 
@@ -8393,7 +8393,7 @@ The following table shows the parameters of the MCL instruction "setKinZoneActiv
 | 1 | All kinematics zones |  |  |  |
 | nr | DINT | 2 | Zone number<sup> 1)</sup> |  |
 | 2 ... 10 | Zone 2 ... 10 |  |  |  |
-| If "mode" > 0: The "nr" parameter is ignored |  |  |  |  |
+| If "mode" &gt; 0: The "nr" parameter is ignored |  |  |  |  |
 | <sup>1) </sup>Optional parameter. The absolute value of the specified value is used. If you do not use this parameter in the command call, the default value is used. |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -8412,7 +8412,7 @@ Use the "mode" parameter to specify whether one or all active kinematics zones a
 
 The "setKinZoneInactive()" job is added to the queue of the Interpreter job sequence and therefore affects subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" variables in the technology object data block of the connected kinematics contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" variables in the technology object data block of the connected kinematics contain the current activation status of the kinematics zones.
 
 You can find more information in the documentation "S7-1500 Kinematic Functions".
 
@@ -8430,7 +8430,7 @@ You can find more information in the documentation "S7-1500 Kinematic Functions"
 
 MCL
 
-setKinZoneInactive( *[mode := <val>] [,nr := <val>] );*
+setKinZoneInactive( *[mode := &lt;val&gt;] [,nr := &lt;val&gt;] );*
 
 ##### Parameters
 
@@ -8443,7 +8443,7 @@ The following table shows the parameters of the MCL instruction "setKinZoneInact
 | 1 | All kinematics zones |  |  |  |
 | nr | DINT | 2 | Zone number<sup> 1)</sup> |  |
 | 2 ... 10 | Zone 2 ... 10 |  |  |  |
-| If "mode" > 0: The "nr" parameter is ignored |  |  |  |  |
+| If "mode" &gt; 0: The "nr" parameter is ignored |  |  |  |  |
 | <sup>1) </sup>Optional parameter. The absolute value of the specified value is used. If you do not use this parameter in the command call, the default value is used. |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -8485,7 +8485,7 @@ You can find more information in the "S7-1500 Kinematics functions" documentatio
 
 MCL
 
-setTool( <toolNr> );
+setTool( &lt;toolNr&gt; );
 
 ##### Parameters
 
@@ -8514,7 +8514,7 @@ setTool( 2 );
 
 In the technology object data block of the connected kinematics, the number of the active tool is displayed in the following variable:
 
-<TO_Kinematics>.StatusTool.ActiveTool := 2
+&lt;TO_Kinematics&gt;.StatusTool.ActiveTool := 2
 
 ### Axes (S7-1500T)
 
@@ -8568,7 +8568,7 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 
 MCL
 
-move( <axis>, <v> [,pCtrl := <val>] [,a := <val>] [,d := <val>] [,j := <val>] );
+move( &lt;axis&gt;, &lt;v&gt; [,pCtrl := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -8582,18 +8582,18 @@ The following table shows the parameters of the "move()" instruction:
 | 0 | Not in position-controlled mode |  |  |  |
 | 1 | Position-controlled mode |  |  |  |
 | a | LREAL | - | Acceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Acceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Acceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | d | LREAL | - | Deceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Deceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Deceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | j | LREAL | - | Jerk<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Jerk".  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Jerk".  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
-| < 0.0 | Not permitted |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |
 | <sup>1)</sup> Optional parameter with default value    <sup>2)</sup> Modal parameter |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -8606,7 +8606,7 @@ The following example shows how an axis can be accelerated or decelerated to the
 
 MCL
 
-// The mapping of <TO_Axis> to "myAxis" tag is done in the <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in the &lt;TO_InterpreterMapping&gt;  
   
 // "myAxis" is accelerated to the velocity setpoint 75.0   
 // and modal dynamics values for parameters a, d, j  
@@ -8653,9 +8653,9 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 
 MCL
 
-posAbs( <axis>, <p> [,dir := <val>] [,v := <val>] [,a := <val>] [,d := <val>]
+posAbs( &lt;axis&gt;, &lt;p&gt; [,dir := &lt;val&gt;] [,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;]
 
-[,j := <val>] );
+[,j := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -8670,22 +8670,22 @@ The following table shows the parameters of the "posAbs()" instruction:
 | 2 | Negative direction |  |  |  |
 | 3 | Shortest distance |  |  |  |
 | v | LREAL | - | Velocity<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Velocity"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Velocity"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | a | LREAL | - | Acceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Acceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Acceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | d | LREAL | - | Deceleration<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Deceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Deceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | j | LREAL | - | Jerk<sup>2)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Jerk".  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Jerk".  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
-| < 0.0 | Not permitted |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |
 | <sup>1)</sup> Optional parameter with default value   <sup>2)</sup> Modal parameter |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -8703,7 +8703,7 @@ VAR
 END_VAR  
 …  
   
-// The mapping of <TO_Axis> to "myAxis" tag is done in the <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in the &lt;TO_InterpreterMapping&gt;  
   
 // Absolute positioning "myAxis" to position 50.0  
 posAbs( myAxis, 50.0 );  
@@ -8748,7 +8748,7 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 
 MCL
 
-posRel( <axis>, <p> [,v := <val>] [,a := <val>] [,d := <val>] [,j := <val>] );
+posRel( &lt;axis&gt;, &lt;p&gt; [,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -8759,22 +8759,22 @@ The following table shows the parameters of the "posRel()" instruction:
 | axis | AXIS_OBJECT | - | Technology object |  |
 | p | LREAL | - | Distance for the positioning process (negative or positive)  The sign of the value determines the direction of movement. |  |
 | v | LREAL | - | Velocity<sup>1)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Velocity"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Velocity"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | a | LREAL | - | Acceleration<sup>1)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Acceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Acceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | d | LREAL | - | Deceleration<sup>1)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Deceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Deceleration"  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | j | LREAL | - | Jerk<sup>1)</sup> |  |
-| - | The modal value is used. The modal value is initialized with "<TO_Axis>.DynamicDefaults.Jerk".  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
-| > 0.0 | The specified value is used. |  |  |  |
+| - | The modal value is used. The modal value is initialized with "&lt;TO_Axis&gt;.DynamicDefaults.Jerk".  With [setAxisDyn()](#setaxisdyn-set-dynamic-defaults-for-single-axis-motions-modally-s7-1500t), you can set another value modally. |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
-| < 0.0 | Not permitted |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |
 | <sup>1)</sup> Modal parameter |  |  |  |  |
 
 ##### Comparable Motion Control instructions
@@ -8792,7 +8792,7 @@ VAR
 END_VAR  
 …  
   
-// The mapping of <TO_Axis> to "myAxis" tag is done in the <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in the &lt;TO_InterpreterMapping&gt;  
   
 // "myAxis" is positioned relatively to the current position,
 
@@ -8842,9 +8842,9 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setAxisDyn( <axis> [,v := <val>] [,a := <val>] [,d := <val>] [,j := <val>]
+setAxisDyn( &lt;axis&gt; [,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;]
 
-[,rel := <val>] );
+[,rel := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -8854,26 +8854,26 @@ The following table shows the parameters of the "setAxisDyn()" instruction:
 | --- | --- | --- | --- | --- |
 | axis | AXIS_OBJECT | - | Technology object |  |
 | v | LREAL | - | Modal value of the velocity of the single-axis motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Axis>.DynamicDefaults.Velocity).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE:  Absolute default setting of the velocity |  |  |  |
-| 0.0 < v ≤  100.0 | With rel := TRUE:  Relative default setting as a percentage of the last valid maximum velocity value |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Axis&gt;.DynamicDefaults.Velocity).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE:  Absolute default setting of the velocity |  |  |  |
+| 0.0 &lt; v ≤  100.0 | With rel := TRUE:  Relative default setting as a percentage of the last valid maximum velocity value |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | a | LREAL | - | Modal value of the acceleration of the single-axis motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Axis>.DynamicDefaults.Acceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE:  Absolute default of the acceleration |  |  |  |
-| 0.0 < a ≤  100.0 | With rel := TRUE:  Relative default setting as a percentage of the last valid maximum acceleration value |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Axis&gt;.DynamicDefaults.Acceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE:  Absolute default of the acceleration |  |  |  |
+| 0.0 &lt; a ≤  100.0 | With rel := TRUE:  Relative default setting as a percentage of the last valid maximum acceleration value |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | d | LREAL | - | Modal value of the deceleration of the single-axis motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Axis>.DynamicDefaults.Deceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE:  Absolute default of the deceleration |  |  |  |
-| 0.0 < d ≤  100.0 | With rel := TRUE:  Relative default setting as a percentage of the last valid maximum deceleration value |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Axis&gt;.DynamicDefaults.Deceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE:  Absolute default of the deceleration |  |  |  |
+| 0.0 &lt; d ≤  100.0 | With rel := TRUE:  Relative default setting as a percentage of the last valid maximum deceleration value |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | j | LREAL | - | Modal value of the jerk of the single-axis motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Axis>.DynamicDefaults.Jerk).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | With rel := FALSE:  Absolute default of the jerk |  |  |  |
-| 0.0 < j ≤  100.0 | With rel := TRUE:  Relative default setting as a percentage of the last valid maximum jerk |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Axis&gt;.DynamicDefaults.Jerk).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | With rel := FALSE:  Absolute default of the jerk |  |  |  |
+| 0.0 &lt; j ≤  100.0 | With rel := TRUE:  Relative default setting as a percentage of the last valid maximum jerk |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
-| < 0.0 | Not permitted |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |
 | rel | BOOL | FALSE | Type of specification of the modal value<sup>1)</sup> |  |
 | FALSE | Absolute specification |  |  |  |
 | TRUE | Percentage specification |  |  |  |
@@ -8885,7 +8885,7 @@ The following example shows how to set the modal values of the dynamic parameter
 
 MCL
 
-// The mapping of <TO_Axis> to "myAxis" tag is done in the <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in the &lt;TO_InterpreterMapping&gt;  
   
 // Set the modal values of the dynamic parameters of "myAxis"  
 setAxisDyn( myAxis, v := 120.0, a := 1000.0, d := 1000.0, j := 0.0 );  
@@ -8928,7 +8928,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setAxisDynMax( <axis> [,v := <val>] [,a := <val>] [,d := <val>] [,j := <val>] );
+setAxisDynMax( &lt;axis&gt; [,v := &lt;val&gt;] [,a := &lt;val&gt;] [,d := &lt;val&gt;] [,j := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -8938,22 +8938,22 @@ The following table shows the parameters of the "setAxisDynMax()" instruction:
 | --- | --- | --- | --- | --- |
 | axis | AXIS_OBJECT | - | Technology object |  |
 | v | LREAL | - | Modal value of the maximum velocity of the single-axis motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Axis>.DynamicLimits.MaxVelocity).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of velocity limits |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Axis&gt;.DynamicLimits.MaxVelocity).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of velocity limits |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | a | LREAL | - | Modal value of the maximum acceleration of the single-axis motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Axis>.DynamicDefaults.MaxAcceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the limits of acceleration |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Axis&gt;.DynamicDefaults.MaxAcceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the limits of acceleration |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | d | LREAL | - | Modal value of the maximum deceleration of the single-axis motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Axis>.DynamicDefaults.MaxDeceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the deceleration limits |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Axis&gt;.DynamicDefaults.MaxDeceleration).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the deceleration limits |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |
 | j | LREAL | - | Modal value of the maximum jerk of the single-axis motion |  |
-| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Dynamics" (<TO_Axis>.DynamicLimits.MaxJerk).  If the value is not set in the program code, the initialized value is used. |  |  |  |
-| > 0.0 | Absolute default of the jerk limits |  |  |  |
+| - | The modal value remains unchanged.  The last valid value set in the program code is used.  When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Dynamics" (&lt;TO_Axis&gt;.DynamicLimits.MaxJerk).  If the value is not set in the program code, the initialized value is used. |  |  |  |
+| &gt; 0.0 | Absolute default of the jerk limits |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |
-| < 0.0 | Not permitted |  |  |  |
+| &lt; 0.0 | Not permitted |  |  |  |
 
 ##### Example
 
@@ -8961,7 +8961,7 @@ The following example shows how to set the maximum limits of the dynamic paramet
 
 MCL
 
-// The mapping of <TO_Axis> to "myAxis" tag is done in the <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in the &lt;TO_InterpreterMapping&gt;  
   
 // Set the maximum values of the dynamic parameters of "myAxis"  
 setAxisDynMax( myAxis, v := 500.0, a := 10000.0, d := 10000.0, j := 70000.0 );  
@@ -8990,11 +8990,11 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 ##### Requirements
 
 - The Axis technology object has been configured correctly
-- "Drive ready" is set in the drive ("<TO_Axis>.StatusDrive.InOperation" = TRUE)
-- Cyclic bus communication is established between controller and encoder ("<TO_Axis>.StatusSensor[1..4].CommunicationOK" = TRUE)
-- Cyclic bus communication is established between controller and drive ("<TO_Axis>.StatusDrive.CommunicationOK" = TRUE)
-- The status of the active encoder is valid ("<TO­_Axis>.StatusSensor[1..4].State" = 2)
-- The optional data adaptation is completed ("<TO>.StatusDrive.AdaptionState" = 2 and "<TO>.StatusSensor[1..4].AdaptionState" = 2)
+- "Drive ready" is set in the drive ("&lt;TO_Axis&gt;.StatusDrive.InOperation" = TRUE)
+- Cyclic bus communication is established between controller and encoder ("&lt;TO_Axis&gt;.StatusSensor[1..4].CommunicationOK" = TRUE)
+- Cyclic bus communication is established between controller and drive ("&lt;TO_Axis&gt;.StatusDrive.CommunicationOK" = TRUE)
+- The status of the active encoder is valid ("&lt;TO­_Axis&gt;.StatusSensor[1..4].State" = 2)
+- The optional data adaptation is completed ("&lt;TO&gt;.StatusDrive.AdaptionState" = 2 and "&lt;TO&gt;.StatusSensor[1..4].AdaptionState" = 2)
 
 ##### Override response
 
@@ -9005,7 +9005,7 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 
 MCL
 
-powerOn( [axis := <val>] [,mode := <val>] );
+powerOn( [axis := &lt;val&gt;] [,mode := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -9029,7 +9029,7 @@ The following example shows how to enable a single axis and all assigned kinemat
 
 MCL
 
-// The mapping of <TO_Axis> to "myAxis" tag is done in <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in &lt;TO_InterpreterMapping&gt;  
   
 // enable mapped "myAxis" and change the control mode to non-position controlled mode  
 powerOn( axis := myAxis, mode := 0 );  
@@ -9063,11 +9063,11 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 ##### Requirements
 
 - The Axis technology object has been configured correctly
-- "Drive ready" is set in the drive ("<TO_Axis>.StatusDrive.InOperation" = TRUE)
-- Cyclic bus communication is established between controller and encoder ("<TO_Axis>.StatusSensor[1..4].CommunicationOK" = TRUE)
-- Cyclic bus communication is established between controller and drive ("<TO_Axis>.StatusDrive.CommunicationOK" = TRUE)
-- The status of the active encoder is valid ("<TO­_Axis>.StatusSensor[1..4].State" = 2)
-- The optional data adaptation is completed ("<TO>.StatusDrive.AdaptionState" = 2 and "<TO>.StatusSensor[1..4].AdaptionState" = 2)
+- "Drive ready" is set in the drive ("&lt;TO_Axis&gt;.StatusDrive.InOperation" = TRUE)
+- Cyclic bus communication is established between controller and encoder ("&lt;TO_Axis&gt;.StatusSensor[1..4].CommunicationOK" = TRUE)
+- Cyclic bus communication is established between controller and drive ("&lt;TO_Axis&gt;.StatusDrive.CommunicationOK" = TRUE)
+- The status of the active encoder is valid ("&lt;TO­_Axis&gt;.StatusSensor[1..4].State" = 2)
+- The optional data adaptation is completed ("&lt;TO&gt;.StatusDrive.AdaptionState" = 2 and "&lt;TO&gt;.StatusSensor[1..4].AdaptionState" = 2)
 
 ##### Override response
 
@@ -9078,7 +9078,7 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 
 MCL
 
-powerOff( [axis := <val>] [,mode := <val>] );
+powerOff( [axis := &lt;val&gt;] [,mode := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -9088,9 +9088,9 @@ The following table shows the parameters of the "powerOff()" instruction:
 | --- | --- | --- | --- | --- |
 | axis | AXIS_OBJECT | NULL | Technology object<sup>1)</sup>  If the optional "axis" parameter is not specified or has the value NULL, the instruction refers to all assigned kinematics axes. |  |
 | mode | DINT | 0 | Stop mode<sup>1)</sup> |  |
-| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop". The drive is then switched off and the technology object is disabled.  (<TO_Axis>.DynamicDefaults.EmergencyDeceleration) |  |  |  |
+| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop". The drive is then switched off and the technology object is disabled.  (&lt;TO_Axis&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |
 | 1 | Immediate stop  When a technology object is disabled, the setpoint zero is output. The axis is decelerated to a standstill according to the configuration in the drive. The drive is then switched off and the technology object is disabled. |  |  |  |
-| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is disabled.  (<TO_Axis>.DynamicLimits.MaxDeceleration; <TO_Axis>.DynamicLimits.MaxJerk) |  |  |  |
+| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is disabled.  (&lt;TO_Axis&gt;.DynamicLimits.MaxDeceleration; &lt;TO_Axis&gt;.DynamicLimits.MaxJerk) |  |  |  |
 | 3 | Stop with specified dynamic response  When the technology object is disabled, the drive is de-energized (pulse inhibit) and goes into the closing lockout state. The drive then coasts to a stop.  If you are using a drive with an analog setpoint interface, the enable output is disabled and the analog output signal is set to 0.0. |  |  |  |
 | <sup>1)</sup> Optional parameter with default value |  |  |  |  |
 
@@ -9102,7 +9102,7 @@ The following table shows the parameters of the "powerOff()" instruction:
 
 MCL
 
-// The mapping of <TO_Axis> to "myAxis" tag is done in <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in &lt;TO_InterpreterMapping&gt;  
   
 // disabling mapped axis "myAxis" with max. dynamics values  
 powerOff( axis := myAxis, mode := 2 );  
@@ -9123,7 +9123,7 @@ powerOff();
 
 With the MCL instruction "home()", you can establish the relationship between the position of the axis and the mechanical position. The position value of the axis is assigned to a homing mark. This homing mark represents a known mechanical position.
 
-With active homing, the default values under "Extended parameters > Dynamic default values" are used for the dynamic values acceleration, deceleration, and jerk.
+With active homing, the default values under "Extended parameters &gt; Dynamic default values" are used for the dynamic values acceleration, deceleration, and jerk.
 
 "home()" is terminated when the reference position is set or reached, depending on the selected mode.
 
@@ -9145,14 +9145,14 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 
 - The Axis technology object has been configured correctly
 - The Axis technology object is enabled (for "mode" = 3, 5)
-- The actual encoder values are valid ("<TO_Axis>.StatusSensor[1..4].State" = 2 for "mode" = 6, 7, 11, 12, 13)
+- The actual encoder values are valid ("&lt;TO_Axis&gt;.StatusSensor[1..4].State" = 2 for "mode" = 6, 7, 11, 12, 13)
 - The axis is in position-controlled mode (for "mode" = 0, 1, 6, 7)
 
 ##### Syntax
 
 MCL
 
-home( <axis> [,mode := <val>] [,sensor := <val>] [,p := <val>] );
+home( &lt;axis&gt; [,mode := &lt;val&gt;] [,sensor := &lt;val&gt;] [,p := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -9165,9 +9165,9 @@ The following table shows the parameters of the "home()" instruction:
 | 0 | Direct homing (absolute)  The current position of the technology object is set to the value of parameter "p".   **Note:** In the case of an axis with several encoders, the offset of the position at the sensors of all encoders is also applied with a position correction with the parameter "mode" = 0. This prevents the sensors from diverging. |  |  |  |
 | 1 | Direct homing (relative)  The current position of the technology object is shifted by the value of parameter "p".   **Note:** In the case of an axis with several encoders, the offset of the position at the sensors of all encoders is also applied with a position correction with the parameter "mode" = 1. This prevents the sensors from diverging. |  |  |  |
 | 3 | Active homing  The technology object performs a homing movement according to the configuration. After completion of the motion, the axis is positioned at the value of the "p" parameter. |  |  |  |
-| 5 | Active homing (home position, parameter "p" ineffective)  The technology object performs a homing movement according to the configuration. After completion of the motion, the axis is positioned at the home position configured under "Technology object > Configuration > Extended parameters > Homing > Active homing" (<TO_Axis>.Homing.HomePosition). |  |  |  |
-| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "p". The calculated absolute value offset is stored retentively in the CPU.  (<TO_Axis>.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |
-| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "p". The calculated absolute value offset is stored retentively in the CPU.  (<TO_Axis>.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |
+| 5 | Active homing (home position, parameter "p" ineffective)  The technology object performs a homing movement according to the configuration. After completion of the motion, the axis is positioned at the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Active homing" (&lt;TO_Axis&gt;.Homing.HomePosition). |  |  |  |
+| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "p". The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO_Axis&gt;.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |
+| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "p". The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO_Axis&gt;.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |
 | 11 | Setting of position setpoint (absolute)  The position setpoint of the technology object is set to the value of the "p" parameter. The following error remains. |  |  |  |
 | 12 | Shift of position setpoint (relative)  The position setpoint of the technology object is shifted by the value of the "p" parameter. The following error remains. |  |  |  |
 | 13 | Incremental encoder adjustment  The current position is set to the value of parameter "p". |  |  |  |
@@ -9187,7 +9187,7 @@ The following example shows how to perform homing with the configured settings.
 
 MCL
 
-// The mapping of <TO_Axis> to "myAxis" tag is done in the <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in the &lt;TO_InterpreterMapping&gt;  
   
 // Homing "myAxis" with default values  
 home( myAxis );  
@@ -9238,7 +9238,7 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
   - P1522 to a fixed value of 100%
   - P1523 to a fixed value of -100% (e.g. through interconnection to fixed value parameter P2902[i])
   - P1544 Torque/force reduction evaluation during travel to fixed stop to 100% (default)
-  - P2194 Threshold value for the parameter "InLimitation" of <100% (default value 90%)
+  - P2194 Threshold value for the parameter "InLimitation" of &lt;100% (default value 90%)
 
 ##### Fixed stop detection applies to
 
@@ -9256,7 +9256,7 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 
 MCL
 
-torqueLimitOn( <axis>, [,limit := <val>] [,mode := <val>] );
+torqueLimitOn( &lt;axis&gt;, [,limit := &lt;val&gt;] [,mode := &lt;val&gt;] );
 
 ##### Parameters
 
@@ -9267,7 +9267,7 @@ The following table shows the parameters of the "torqueLimitOn()" instruction:
 | axis | AXIS_OBJECT | - | Technology object |  |
 | limit | LREAL | -1.0 | Value of force/torque limiting (in the configured unit)<sup>1)</sup>  If the drive and telegram do not support force/torque limiting, the specified value is irrelevant. |  |
 | ≥ 0 | The value specified at the parameter is used. |  |  |  |
-| < 0 | The configured value in the "Torque limit" configuration window is used.  Variable limit value torque:  <TO_Axis>.TorqueLimiting.LimitDefaults.Torque   Variable limit value force:  <TO_Axis>.TorqueLimiting.LimitDefaults.Force |  |  |  |
+| &lt; 0 | The configured value in the "Torque limit" configuration window is used.  Variable limit value torque:  &lt;TO_Axis&gt;.TorqueLimiting.LimitDefaults.Torque   Variable limit value force:  &lt;TO_Axis&gt;.TorqueLimiting.LimitDefaults.Force |  |  |  |
 | mode | DINT | 0 | Force/torque limiting mode<sup>1)</sup>  If the drive and telegram do not support force/torque limiting, the specified value is irrelevant. |  |
 | 0 | Force/torque limiting |  |  |  |
 | 1 | Fixed stop detection  Only relevant for position-controlled axes. |  |  |  |
@@ -9283,7 +9283,7 @@ The following example shows how to activate fixed stop detection.
 
 MCL
 
-// The mapping of <TO_Axis> to "myAxis" tag is done in the <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in the &lt;TO_InterpreterMapping&gt;  
 // The axis is enabled as position-controlled  
   
 // The torque limit with fixed stop detection of the "myAxis" is activated  
@@ -9321,7 +9321,7 @@ You can find more information in the "S7-1500/S7-1500T Axis functions" documenta
 
 MCL
 
-torqueLimitOff( <axis> );
+torqueLimitOff( &lt;axis&gt; );
 
 ##### Parameters
 
@@ -9341,7 +9341,7 @@ The following example shows how to disable torque limiting for an axis.
 
 MCL
 
-// The mapping of <TO_Axis> to "myAxis" tag is done in the <TO_InterpreterMapping>  
+// The mapping of &lt;TO_Axis&gt; to "myAxis" tag is done in the &lt;TO_InterpreterMapping&gt;  
   
 // The torque limit of the "myAxis" is deactivated  
 torqueLimitOff( myAxis );
@@ -9362,7 +9362,7 @@ This section contains information on the following topics:
 
 ##### Description
 
-The "writeVar" instruction in the Interpreter program writes the value of an expression to a variable in the context of program execution. The expression in the <expression> argument is evaluated in the program preparation and used for value assignment in the program execution.
+The "writeVar" instruction in the Interpreter program writes the value of an expression to a variable in the context of program execution. The expression in the &lt;expression&gt; argument is evaluated in the program preparation and used for value assignment in the program execution.
 
 Note that the assigned operation is executed with the ":=" operator in the program preparation.
 
@@ -9375,7 +9375,7 @@ Note that the assigned operation is executed with the ":=" operator in the progr
 
 MCL
 
-writeVar( <var>, <expression> );
+writeVar( &lt;var&gt;, &lt;expression&gt; );
 
 | Parameter | Declaration | Data type | Default value | Description |
 | --- | --- | --- | --- | --- |
@@ -9452,7 +9452,7 @@ The "waitTime" instruction in the Interpreter program enables the execution of t
 
 MCL
 
-waitTime( <time> );
+waitTime( &lt;time&gt; );
 
 | Parameter | Declaration | Data type | Default value | Description |
 | --- | --- | --- | --- | --- |
@@ -9492,7 +9492,7 @@ Expressions are not allowed as event parameters. If more complex operations are 
 
 MCL
 
-waitEvent( <event> [,mode := <val>] [,timeout := <val>] [,timeoutState => <val>] );
+waitEvent( &lt;event&gt; [,mode := &lt;val&gt;] [,timeout := &lt;val&gt;] [,timeoutState =&gt; &lt;val&gt;] );
 
 | Parameter | Declaration | Data type | Default value | Description |  |
 | --- | --- | --- | --- | --- | --- |
@@ -9501,9 +9501,9 @@ waitEvent( <event> [,mode := <val>] [,timeout := <val>] [,timeoutState => <val>]
 | 0 | Event only checked in the program execution. |  |  |  |  |
 | 1 | In addition to mode = "0", the result is checked in the program preparation and in the program execution. |  |  |  |  |
 | timeout | INPUT | TIME | T#-1ms | Maximum wait time<sup>1)</sup>    Wait time from the program execution of the instruction, after which further preparation and execution jobs are continued, regardless of the event condition. |  |
-| < T#0ms | No consideration of the wait time |  |  |  |  |
+| &lt; T#0ms | No consideration of the wait time |  |  |  |  |
 | = T#0ms | Immediate program execution |  |  |  |  |
-| > T#0ms | Maximum wait time |  |  |  |  |
+| &gt; T#0ms | Maximum wait time |  |  |  |  |
 | timeoutState | OUTPUT | BOOL | FALSE | Output variable<sup>1)</sup> |  |
 | FALSE | Wait time not exceeded |  |  |  |  |
 | TRUE | Wait time exceeded |  |  |  |  |
@@ -9551,7 +9551,7 @@ linAbs( pos1, trans := 1 );
 linAbs( pos2, trans := 1 );  
   
 waitEvent( $IPR.Clipboard.cbBool[1], mode := 1,  
-           timeout := T#3s, timeoutState => isTimeout );  
+           timeout := T#3s, timeoutState =&gt; isTimeout );  
   
 linAbs( pos3, trans := 0 );
 
@@ -9654,7 +9654,7 @@ MCL
    linAbs( p1, blend := 2, trans := 1 ); // start movement  
   
    waitEvent( $IPR.clipboard.cbBool[1], mode := 1, // wait for event, check  
-    timeout := T#1s, timeoutState => isTimeout); // starts in preparation  
+    timeout := T#1s, timeoutState =&gt; isTimeout); // starts in preparation  
   
    IF isTimeout THEN  
      linAbs( (x := 0.0, y := 0.0, z := 0.0) );  
@@ -9670,7 +9670,7 @@ MCL
 
 ##### Description
 
-The "setControlledByInterpreter"instruction enables setting or resetting of the "ControlledByInterpreter" Status-Bit (<TO>.StatusInterpreterMotion.StatusWord.X0) of technology objects.
+The "setControlledByInterpreter"instruction enables setting or resetting of the "ControlledByInterpreter" Status-Bit (&lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0) of technology objects.
 
 The "ControlledByInterpreter"-Status-Bit indicates whether the corresponding technology object (Axis or Kinematics) is controlled by the Interpreter technology object (via MCL instructions). The interaction of MCL instructions from the Interpreter program with PLCopen instructions depends on the ControlledByInterpreter status at the axes/kinematics.
 
@@ -9680,13 +9680,13 @@ The "ControlledByInterpreter" status = TRUE means that either a motion job is ac
 
 | Status | Description |
 | --- | --- |
-| <TO>.StatusInterpreterMotion.StatusWord.X0  (ControlledByInterpreter) | - 0 (FALSE): No control of the axis by the Interpreter technology object (no MCL instruction is active). - 1 (TRUE): Control of the axis by the Interpreter technology object (an MCL instruction is active or the bit has been set permanently by "setControlledByInterpreter").  If a PLCopen instruction becomes active on the axis, an alarm is triggered at the Interpreter technology object, causing the Interpreter technology object and thus the execution of the MCL program to be aborted. |
+| &lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0  (ControlledByInterpreter) | - 0 (FALSE): No control of the axis by the Interpreter technology object (no MCL instruction is active). - 1 (TRUE): Control of the axis by the Interpreter technology object (an MCL instruction is active or the bit has been set permanently by "setControlledByInterpreter").  If a PLCopen instruction becomes active on the axis, an alarm is triggered at the Interpreter technology object, causing the Interpreter technology object and thus the execution of the MCL program to be aborted. |
 
 **Status of the connected kinematics:**
 
 | Status | Description |
 | --- | --- |
-| <TO>.StatusInterpreterMotion.StatusWord.X0 (ControlledByInterpreter) | - 0 (FALSE): No control of the kinematics by the Interpreter technology object (no MCL instruction is active). - 1 (TRUE): Control of the kinematics by the Interpreter technology object (an MCL instruction is active or the bit has been set permanently by "setControlledByInterpreter").  If a PLCopen instruction becomes active on the kinematics, an alarm is triggered at the Interpreter technology object, causing the Interpreter technology object and thus the execution of the MCL program to be aborted. |
+| &lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0 (ControlledByInterpreter) | - 0 (FALSE): No control of the kinematics by the Interpreter technology object (no MCL instruction is active). - 1 (TRUE): Control of the kinematics by the Interpreter technology object (an MCL instruction is active or the bit has been set permanently by "setControlledByInterpreter").  If a PLCopen instruction becomes active on the kinematics, an alarm is triggered at the Interpreter technology object, causing the Interpreter technology object and thus the execution of the MCL program to be aborted. |
 
 ##### Applies to
 
@@ -9697,7 +9697,7 @@ The "ControlledByInterpreter" status = TRUE means that either a motion job is ac
 
 MCL
 
-setControlledByInterpreter( [ obj := <val> ] [ ,ctrl := <val> ] );
+setControlledByInterpreter( [ obj := &lt;val&gt; ] [ ,ctrl := &lt;val&gt; ] );
 
 | Parameter | Data type | Default value | Description |  |
 | --- | --- | --- | --- | --- |
@@ -9710,7 +9710,7 @@ setControlledByInterpreter( [ obj := <val> ] [ ,ctrl := <val> ] );
 ##### Rules
 
 - If the optional parameter "obj" is not specified or has the value ZERO, the instruction relates to the connected kinematics.
-- When the Bit <TO>.StatusInterpreterMotion.StatusWord.X0 (ControlledByInterpreter) of a kinematics is set to TRUE, the system automatically sets the Bit <TO>.StatusInterpreterMotion.StatusWord.X0 (ControlledByInterpreter) of the axes associated with the kinematics to TRUE.
+- When the Bit &lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0 (ControlledByInterpreter) of a kinematics is set to TRUE, the system automatically sets the Bit &lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0 (ControlledByInterpreter) of the axes associated with the kinematics to TRUE.
 - Reading the status bit is possible from PLC and Interpreter side.
 
 ##### Example
@@ -9748,7 +9748,7 @@ Use the MCL instruction "setOvr()" to modally set the program override factor, w
 
 The program override factor is taken into account during the preparation of the Interpreter program.
 
-The last valid value set in the program code is used for the program override factor. When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters > Program preparation" (<TO_Interpreter>.Parameter.ProgramOverride). If the value is not set in the program code, the initialized value is used.
+The last valid value set in the program code is used for the program override factor. When the program is loaded, the modal value is initialized with the configuration value stored under "Extended parameters &gt; Program preparation" (&lt;TO_Interpreter&gt;.Parameter.ProgramOverride). If the value is not set in the program code, the initialized value is used.
 
 To prevent override changes from changing the original path, the program override acts initially on the axis velocities. The acceleration of the axes is adapted to the resulting velocities. The velocity override values that are set in the technology object data blocks of the axes or kinematics are also active and affect the dynamic responses of the active motions.
 
@@ -9781,7 +9781,7 @@ The modal parameters apply to the following MCL instructions:
 
 MCL
 
-setOvr( <override> );
+setOvr( &lt;override&gt; );
 
 ##### Parameters
 
@@ -9790,9 +9790,9 @@ The following table shows the parameters of the instruction "setOvr":
 | Parameter | Data type | Default value | Description |  |
 | --- | --- | --- | --- | --- |
 | override | LREAL | - | Modal value of the program override factor. |  |
-| < 1.0 | Not permitted |  |  |  |
+| &lt; 1.0 | Not permitted |  |  |  |
 | 1.0 ≤   override ≤  100.0 | Percentage default of the program override. |  |  |  |
-| > 100.0 | Not permitted |  |  |  |
+| &gt; 100.0 | Not permitted |  |  |  |
 
 ##### Example
 
@@ -10096,7 +10096,7 @@ This section contains information on the following topics:
 
 #### Status and error bits (S7-1500T)
 
-You can use the "Technology object > Diagnostics > Status and error bits" diagnostic function in the TIA Portal to monitor the status and error messages for the technology object. The Diagnostics function is available in online operation.
+You can use the "Technology object &gt; Diagnostics &gt; Status and error bits" diagnostic function in the TIA Portal to monitor the status and error messages for the technology object. The Diagnostics function is available in online operation.
 
 The meaning of the status and error messages is described in the following tables. The associated technology object tag is given in parentheses.
 
@@ -10106,10 +10106,10 @@ The following table shows possible states of the Interpreter technology object:
 
 | Status | Description |
 | --- | --- |
-| Active | The technology object is in operation.  (<TO>.StatusWord.X0 (Control)) |
-| Error | The technology object has been enabled. You can move the axis with motion jobs.  (<TO>.StatusWord.X1 (Error)) |
-| Restart active | The technology object will be reinitialized.  (<TO>.StatusWord.X2 (RestartActive)) |
-| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (<TO>.StatusWord.X3 (OnlineStartValuesChanged)) |
+| Active | The technology object is in operation.  (&lt;TO&gt;.StatusWord.X0 (Control)) |
+| Error | The technology object has been enabled. You can move the axis with motion jobs.  (&lt;TO&gt;.StatusWord.X1 (Error)) |
+| Restart active | The technology object will be reinitialized.  (&lt;TO&gt;.StatusWord.X2 (RestartActive)) |
+| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (&lt;TO&gt;.StatusWord.X3 (OnlineStartValuesChanged)) |
 
 ##### Interpreter program status
 
@@ -10117,11 +10117,11 @@ The following table shows possible states of the interpreter program in the inte
 
 | Status | Description |
 | --- | --- |
-| Loading | The technology object is loading the Interpreter program. Interpreter program preparation is running.  (<TO>.StatusWord.X9 (Loading)) |
-| Loaded | The Interpreter program is loaded and prepared.  (<TO>.StatusWord.X10 (Loaded)) |
-| Running | The technology object is executing an Interpreter program.  (<TO>.StatusWord.X5 (InRun)) |
-| Done (no job running) | Execution of the interpreter program is complete.  (<TO>.StatusWord.X6 (Done)) |
-| Stop | Execution of the Interpreter program will be or has been stopped.  (<TO>.StatusWord.X7 (Stopping)) |
+| Loading | The technology object is loading the Interpreter program. Interpreter program preparation is running.  (&lt;TO&gt;.StatusWord.X9 (Loading)) |
+| Loaded | The Interpreter program is loaded and prepared.  (&lt;TO&gt;.StatusWord.X10 (Loaded)) |
+| Running | The technology object is executing an Interpreter program.  (&lt;TO&gt;.StatusWord.X5 (InRun)) |
+| Done (no job running) | Execution of the interpreter program is complete.  (&lt;TO&gt;.StatusWord.X6 (Done)) |
+| Stop | Execution of the Interpreter program will be or has been stopped.  (&lt;TO&gt;.StatusWord.X7 (Stopping)) |
 
 ##### Errors
 
@@ -10129,12 +10129,12 @@ The following table shows the possible errors:
 
 | Error | Description |
 | --- | --- |
-| System | A system-internal error has occurred.  (<TO>.ErrorWord.X0 (SystemFault)) |
-| Configuration | A configuration error has occurred.  One or more configuration parameters are inconsistent or invalid.  The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (<TO>.ErrorWord.X1 (ConfigFault)) |
-| User program | An error occurred in the user program with a Motion Control instruction or its use.  (<TO>.ErrorWord.X2 (UserFault)) |
-| Job rejected | A job cannot be executed.  You cannot execute any Motion Control instructions because the necessary requirements have not been fulfilled.  (<TO>.ErrorWord.X3 (CommandNotAccepted)) |
-| Current interpreter program | An error has occurred in the current Interpreter program.  (<TO>.ErrorWord.X4 (UserProgramFault)) |
-| Current mapping | An error occurred in the current Interpreter mapping  (<TO>.ErrorWord.X5 (UserMappingFault)) |
+| System | A system-internal error has occurred.  (&lt;TO&gt;.ErrorWord.X0 (SystemFault)) |
+| Configuration | A configuration error has occurred.  One or more configuration parameters are inconsistent or invalid.  The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (&lt;TO&gt;.ErrorWord.X1 (ConfigFault)) |
+| User program | An error occurred in the user program with a Motion Control instruction or its use.  (&lt;TO&gt;.ErrorWord.X2 (UserFault)) |
+| Job rejected | A job cannot be executed.  You cannot execute any Motion Control instructions because the necessary requirements have not been fulfilled.  (&lt;TO&gt;.ErrorWord.X3 (CommandNotAccepted)) |
+| Current interpreter program | An error has occurred in the current Interpreter program.  (&lt;TO&gt;.ErrorWord.X4 (UserProgramFault)) |
+| Current mapping | An error occurred in the current Interpreter mapping  (&lt;TO&gt;.ErrorWord.X5 (UserMappingFault)) |
 
 ##### Warnings
 
@@ -10142,12 +10142,12 @@ The following table shows possible warnings:
 
 | Warning | Description |
 | --- | --- |
-| System | A system-internal warning has occurred.  (<TO>.WarningWord.X0 (SystemWarning)) |
-| Configuration | One or multiple configuration parameters are being temporarily internally adapted.  (<TO>.WarningWord.X1 (ConfigWarning)) |
-| User program | A warning has occurred in the user program.  (<TO>.WarningWord.X2 (UserWarning)) |
-| Job rejected | Job cannot be executed.  You cannot execute any Motion Control instructions because the necessary requirements have not been fulfilled.  (<TO>.WarningWord.X3 (CommandNotAccepted)) |
-| Current interpreter program | A warning has occurred in the current Interpreter program.  (<TO>.WarningWord.X4 (UserProgrammWarning)) |
-| Current mapping | A warning has occurred in the current Interpreter mapping.  (<TO>.WarningWord.X5 (UserMappingWarning)) |
+| System | A system-internal warning has occurred.  (&lt;TO&gt;.WarningWord.X0 (SystemWarning)) |
+| Configuration | One or multiple configuration parameters are being temporarily internally adapted.  (&lt;TO&gt;.WarningWord.X1 (ConfigWarning)) |
+| User program | A warning has occurred in the user program.  (&lt;TO&gt;.WarningWord.X2 (UserWarning)) |
+| Job rejected | Job cannot be executed.  You cannot execute any Motion Control instructions because the necessary requirements have not been fulfilled.  (&lt;TO&gt;.WarningWord.X3 (CommandNotAccepted)) |
+| Current interpreter program | A warning has occurred in the current Interpreter program.  (&lt;TO&gt;.WarningWord.X4 (UserProgrammWarning)) |
+| Current mapping | A warning has occurred in the current Interpreter mapping.  (&lt;TO&gt;.WarningWord.X5 (UserMappingWarning)) |
 
 ##### Alarm display
 
@@ -10159,7 +10159,7 @@ An option for evaluating the individual status bits can be found in the section 
 
 #### Interpreter status (S7-1500T)
 
-You can use the "Technology object > Diagnostics > Interpreter status" diagnostics function to monitor the status of the Interpreter in the TIA Portal. The diagnostics function is available in online operation.
+You can use the "Technology object &gt; Diagnostics &gt; Interpreter status" diagnostics function to monitor the status of the Interpreter in the TIA Portal. The diagnostics function is available in online operation.
 
 ##### "Currently loaded interpreter program" area
 
@@ -10167,10 +10167,10 @@ The following table shows the meaning of the status information:
 
 | Status | Description |
 | --- | --- |
-| Program name | Name of the loaded interpreter program  <TO>.ProgramName |
-| Program mode | Operating mode of interpreter program execution  <TO>.StatusInterpreter.ProgramMode |
+| Program name | Name of the loaded interpreter program  &lt;TO&gt;.ProgramName |
+| Program mode | Operating mode of interpreter program execution  &lt;TO&gt;.StatusInterpreter.ProgramMode |
 | Program status | Status of the loaded Interpreter program |
-| Interpreter mapping | Name of the interpreter mapping technology object used  <TO>.MappingName |
+| Interpreter mapping | Name of the interpreter mapping technology object used  &lt;TO&gt;.MappingName |
 
 ##### "Error‑trigger" area
 
@@ -10178,9 +10178,9 @@ The following table describes the meaning of the error information:
 
 | Status | Description |
 | --- | --- |
-| Program name | Name of the loaded interpreter program  <TO>.ProgramName |
-| Line | Line number of the error that occurred  <TO>.ErrorDetail.LineNumber |
-| Error details | Additional information about the error  <TO>.ErrorDetail.ErrorInfo |
+| Program name | Name of the loaded interpreter program  &lt;TO&gt;.ProgramName |
+| Line | Line number of the error that occurred  &lt;TO&gt;.ErrorDetail.LineNumber |
+| Error details | Additional information about the error  &lt;TO&gt;.ErrorDetail.ErrorInfo |
 
 ## Tags of the technology object data blocks (S7-1500T)
 
@@ -10218,7 +10218,7 @@ This section contains information on the following topics:
 | RON | Read only:  The tag cannot and must not be changed during runtime of the user program. |  |
 | Description | Description of the tag |  |
 
-Access to the tags is with "<TO>.<tag name>". The placeholder <TO> represents the name of the technology object.
+Access to the tags is with "&lt;TO&gt;.&lt;tag name&gt;". The placeholder &lt;TO&gt; represents the name of the technology object.
 
 #### Interpreter program and Interpreter mapping (Interpreter) (S7-1500T)
 
@@ -10245,7 +10245,7 @@ The following variables display information about the Interpreter program and In
 
 #### "Parameter" variable (Interpreter) (S7-1500T)
 
-The tag structure "<TO>.Parameter.<Tag name>" contains parameters for preparation of the Interpreter program.
+The tag structure "&lt;TO&gt;.Parameter.&lt;Tag name&gt;" contains parameters for preparation of the Interpreter program.
 
 ##### Tags
 
@@ -10261,7 +10261,7 @@ The tag structure "<TO>.Parameter.<Tag name>" contains parameters for preparatio
 
 #### "Clipboard" variable (Interpreter) (S7-1500T)
 
-The variable structure "<TO>.Clipboard.<variable name>" contains the clipboard variables of the Interpreter technology object.
+The variable structure "&lt;TO&gt;.Clipboard.&lt;variable name&gt;" contains the clipboard variables of the Interpreter technology object.
 
 ##### Variables
 
@@ -10276,7 +10276,7 @@ The variable structure "<TO>.Clipboard.<variable name>" contains the clipboard v
 
 #### "StatusInterpreter" variable (Interpreter) (S7-1500T)
 
-The variable structure "<TO>.StatusInterpreter.<variable name>" contains status information of the technology object.
+The variable structure "&lt;TO&gt;.StatusInterpreter.&lt;variable name&gt;" contains status information of the technology object.
 
 ##### Variables
 
@@ -10292,7 +10292,7 @@ The variable structure "<TO>.StatusInterpreter.<variable name>" contains status 
 
 #### "StatusWord" variable (Interpreter) (S7-1500T)
 
-The "<TO>.StatusWord" variable contains the status information of the Interpreter technology object.
+The "&lt;TO&gt;.StatusWord" variable contains the status information of the Interpreter technology object.
 
 Information on evaluating individual bits (e.g. bit 2 "RestartActive") can be found in the "[Evaluating StatusWord, ErrorWord, and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control overview" documentation.
 
@@ -10318,7 +10318,7 @@ Information on evaluating individual bits (e.g. bit 2 "RestartActive") can be fo
 
 #### "ErrorWord" tag (interpreter) (S7-1500T)
 
-The "<TO>.ErrorWord" tag indicates technology object errors (technology alarms).
+The "&lt;TO&gt;.ErrorWord" tag indicates technology object errors (technology alarms).
 
 Information on evaluating individual bits (e.g. bit 3 "CommandNotAccepted") can be found in the "[Evaluating StatusWord, ErrorWord, and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control overview" documentation.
 
@@ -10339,7 +10339,7 @@ Information on evaluating individual bits (e.g. bit 3 "CommandNotAccepted") can 
 
 #### "ErrorDetail" tag (interpreter) (S7-1500T)
 
-The tag structure "<TO>.ErrorDetail.<tag name>" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
+The tag structure "&lt;TO&gt;.ErrorDetail.&lt;tag name&gt;" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
 
 You can find a list of the technology alarms and alarm responses in the "[Technology alarms overview](S7-1500-S7-1500T%20Motion%20Control%20alarms%20and%20error%20IDs%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-the-technology-alarms-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control alarms and error IDs" documentation.
 
@@ -10360,7 +10360,7 @@ You can find a list of the technology alarms and alarm responses in the "[Techno
 
 #### "WarningWord" tag (interpreter) (S7-1500T)
 
-The "<TO>.WarningWord" tag indicates pending warnings at the technology object.
+The "&lt;TO&gt;.WarningWord" tag indicates pending warnings at the technology object.
 
 Information on evaluating individual bits (e.g. bit 2 "UserWarning") can be found in the "[Evaluating StatusWord, ErrorWord, and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control overview" documentation.
 
@@ -10381,8 +10381,8 @@ Information on evaluating individual bits (e.g. bit 2 "UserWarning") can be foun
 
 #### "ControlPanel" tag (interpreter) (S7-1500T)
 
-The tag structure "<TO>.ControlPanel.<tag name>" contains no relevant data for you. This tag structure is internally used.
+The tag structure "&lt;TO&gt;.ControlPanel.&lt;tag name&gt;" contains no relevant data for you. This tag structure is internally used.
 
 #### "InternalToTrace" tag (interpreter) (S7-1500T)
 
-The tag structure "<TO>.InternalToTrace.<tag name>" contains no relevant data for you. This tag structure is internally used.
+The tag structure "&lt;TO&gt;.InternalToTrace.&lt;tag name&gt;" contains no relevant data for you. This tag structure is internally used.

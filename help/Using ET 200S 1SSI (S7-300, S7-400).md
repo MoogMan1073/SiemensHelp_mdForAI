@@ -198,7 +198,7 @@ The parameterized monoflop time must be greater than the monoflop time of the ab
 
 The following restriction applies to the monoflop time of the absolute encoder:
 
-(1/transmission rate) < monoflop time of absolute encoder < 64 µs
+(1/transmission rate) &lt; monoflop time of absolute encoder &lt; 64 µs
 
 Select the desired monoflop time in the drop-down box.
 
@@ -347,9 +347,9 @@ You set the two comparators in the "Comparator 1" and "Comparator 2" parameters:
 | Setting | Effect on the result of comparison (CMPx) |
 | --- | --- |
 | inactive | The encoder value is not compared. The feedback bit CMPx = 0 |
-| UP | The encoder value is compared in the up direction (UP).  - If the encoder value ≥ comparison value, feedback bit CMPx = 1. - If the encoder value < comparison value, feedback bit CMPx = 0. - If the direction is down, the feedback bit CMPx remains unchanged. - If no change is detected in the encoder value, the feedback bit CMPx will remain unchanged. |
-| Down | The encoder value is compared in the down direction (DN).  - If the encoder value ≤ comparison value, feedback bit CMPx = 1. - If the encoder value > comparison value, feedback bit CMPx = 0. - If the direction is up, the feedback bit CMPx will remain unchanged. - If no change is detected in the encoder value, the feedback bit CMPx will remain unchanged. |
-| In both directions | The encoder value is compared in both directions.  If the direction is up, the following conditions apply:  - If the encoder value ≥ comparison value, feedback bit CMPx = 1. - If the encoder value < comparison value, feedback bit CMPx = 0. - If no change is detected in the encoder value, the feedback bit CMPx will remain unchanged.   If the direction is down, the following conditions apply:  - If the encoder value ≤ comparison value, feedback bit CMPx = 1. - If encoder value > comparison value, feedback bit CMPx = 0. - If no change is detected in the encoder value, the feedback bit CMPx will remain unchanged. |
+| UP | The encoder value is compared in the up direction (UP).  - If the encoder value ≥ comparison value, feedback bit CMPx = 1. - If the encoder value &lt; comparison value, feedback bit CMPx = 0. - If the direction is down, the feedback bit CMPx remains unchanged. - If no change is detected in the encoder value, the feedback bit CMPx will remain unchanged. |
+| Down | The encoder value is compared in the down direction (DN).  - If the encoder value ≤ comparison value, feedback bit CMPx = 1. - If the encoder value &gt; comparison value, feedback bit CMPx = 0. - If the direction is up, the feedback bit CMPx will remain unchanged. - If no change is detected in the encoder value, the feedback bit CMPx will remain unchanged. |
+| In both directions | The encoder value is compared in both directions.  If the direction is up, the following conditions apply:  - If the encoder value ≥ comparison value, feedback bit CMPx = 1. - If the encoder value &lt; comparison value, feedback bit CMPx = 0. - If no change is detected in the encoder value, the feedback bit CMPx will remain unchanged.   If the direction is down, the following conditions apply:  - If the encoder value ≤ comparison value, feedback bit CMPx = 1. - If encoder value &gt; comparison value, feedback bit CMPx = 0. - If no change is detected in the encoder value, the feedback bit CMPx will remain unchanged. |
 
 The comparison result is deleted and entered in accordance with the directional setting as soon as you load a comparison value.
 
@@ -633,7 +633,7 @@ The parameterized monoflop time must be greater than the monoflop time of the ab
 
 The following restriction applies to the monoflop time of the absolute encoder:
 
-(1/transmission rate) < monoflop time of absolute encoder < 64 µs
+(1/transmission rate) &lt; monoflop time of absolute encoder &lt; 64 µs
 
 Select the desired monoflop time in the drop-down box.
 

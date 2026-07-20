@@ -124,7 +124,7 @@ The following blocks are created:
 - Cyclic OBs (if you have selected this option in the "OB configuration" group box),
 - Optional status DBs
 
-The created blocks (except OBs) are stored in the project tree under "Program blocks > System blocks > Report System Errors".
+The created blocks (except OBs) are stored in the project tree under "Program blocks &gt; System blocks &gt; Report System Errors".
 
 > **Note**
 >

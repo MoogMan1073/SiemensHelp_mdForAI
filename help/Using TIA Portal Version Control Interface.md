@@ -365,7 +365,7 @@ You can access the following workspace area functions over the toolbar:
   Specifies which objects are to be displayed in the workspace area.
 - Refresh workspace
 
-  Updates the workspace area view. You can alternatively press <F5> when the workspace area is in focus.
+  Updates the workspace area view. You can alternatively press &lt;F5&gt; when the workspace area is in focus.
 - Open Windows Explorer
 
   Opens Windows Explorer and displays the directory that is currently active in the workspace area.
@@ -595,7 +595,7 @@ To configure an external comparison program, follow these steps:
 
 1. Open the configuration dialog for the comparison programs:
 
-   - To do so, select the "Settings > Version control interface > Compare" command in the "Options" menu.
+   - To do so, select the "Settings &gt; Version control interface &gt; Compare" command in the "Options" menu.
    - Alternatively, you can also select an object in the workspace editor that differs from its connected workspace file, and click on the "Configure" command in the shortcut menu of the comparison.
 
    The list of comparison programs is displayed in the working area.
@@ -614,7 +614,7 @@ To change the settings of a comparison program that has already been configured,
 
 1. Open the configuration dialog for the comparison programs:
 
-   - To do so, select the "Settings > Version control interface > Compare" command in the "Options" menu.
+   - To do so, select the "Settings &gt; Version control interface &gt; Compare" command in the "Options" menu.
    - Alternatively, you can also select an object in the workspace editor that differs from its connected workspace file, and click on the "Configure" command in the shortcut menu.
 2. The list of comparison programs is displayed in the working area.
 3. Select the comparison program whose settings you want to change from the list.
@@ -630,7 +630,7 @@ To change the sequence of comparison programs in the list and thus also in the w
 
 1. Open the configuration dialog for the comparison programs:
 
-   - To do so, select the "Settings > Version control interface > Compare" command in the "Options" menu.
+   - To do so, select the "Settings &gt; Version control interface &gt; Compare" command in the "Options" menu.
    - Alternatively, you can also select an object in the workspace editor that differs from its connected workspace file, and click on the "Configure" command in the shortcut menu.
 2. The list of comparison programs is displayed in the working area.
 3. Select the comparison program whose position you want to change.
@@ -644,7 +644,7 @@ To delete a configured comparison program, follow these steps:
 
 1. Open the configuration dialog for the comparison programs:
 
-   - To do so, select the "Settings > Version control interface > Compare" command in the "Options" menu.
+   - To do so, select the "Settings &gt; Version control interface &gt; Compare" command in the "Options" menu.
    - Alternatively, you can also select an object in the workspace editor that differs from its connected workspace file, and click on the "Configure" command in the shortcut menu.
 2. The list of comparison programs is displayed in the working area.
 3. Select the comparison program that you want to delete from the list.
@@ -907,7 +907,7 @@ See also: [Connecting objects with workspace files](#connecting-objects-with-wor
 
 #### Project languages
 
-In the case of SIMATIC ML files it is possible that they contain languages that are not enabled as a project language. Importing is not possible for these files. However, you can activate the option "Enable inactive project languages during import" in the settings under "Version Control Interface > Import". As a result such files can then also be imported.
+In the case of SIMATIC ML files it is possible that they contain languages that are not enabled as a project language. Importing is not possible for these files. However, you can activate the option "Enable inactive project languages during import" in the settings under "Version Control Interface &gt; Import". As a result such files can then also be imported.
 
 For more information on the SIMATIC ML files, refer to the documentation on TIA Portal Openness.
 
@@ -1117,7 +1117,7 @@ To change the access path, follow these steps:
 
 Proceed as follows to remove an object connection to a workspace file:
 
-1. Double-click on the "Access path" field of the object whose connection to a workspace file you want to remove. You can alternatively select the field and press <F2>.
+1. Double-click on the "Access path" field of the object whose connection to a workspace file you want to remove. You can alternatively select the field and press &lt;F2&gt;.
 2. Remove the path.
 
    The access path and the workspace file for the object are deleted. The status of synchronization and the drop-down list for actions are also removed. The TIA Portal object is now once again independent of the workspace.
@@ -1159,7 +1159,7 @@ If objects in the project differ from the workspace files connected to them, you
 To compare objects in the project with the associated workspace files, follow these steps:
 
 1. In the project area of the workspace editor, select the objects that you want to compare. You can select multiple files as well as folders.
-2. Click the "Compare to the workspace file >" command from the shortcut menu and select the submenu of the desired comparison program.
+2. Click the "Compare to the workspace file &gt;" command from the shortcut menu and select the submenu of the desired comparison program.
 3. If your selection contains objects that have not been compiled yet, you will receive the message "Compiling required". To run the comparison, click "Yes".
 
    The configured comparison program opens. Depending on your selection and the comparison program, the comparison results are displayed in multiple tabs or instances of the comparison program.
@@ -1248,7 +1248,7 @@ You can either create the C# project and the required classes and methods manual
 
 Use the TIA Portal Add-In Development Tools in Microsoft Visual Studio 2019 or 2022 or in Visual Studio Code.
 
-You can find more information about the TIA Portal Add-In Development Tools and the required installation files on the DVD 2 of the TIA Portal Installation Package under "DVD > Support > TIA_Portal_Add-In_Tools > Development".
+You can find more information about the TIA Portal Add-In Development Tools and the required installation files on the DVD 2 of the TIA Portal Installation Package under "DVD &gt; Support &gt; TIA_Portal_Add-In_Tools &gt; Development".
 
 ---
 
@@ -1374,7 +1374,7 @@ public class VciWorkspaceProvider : VciWorkspaceViewAddInProvider
 
 {
 
-public override IEnumerable<ContextMenuAddIn> GetContextMenuAddIns()
+public override IEnumerable&lt;ContextMenuAddIn&gt; GetContextMenuAddIns()
 
 {
 
@@ -1436,11 +1436,11 @@ protected override void BuildContextMenuItems(ContextMenuAddInRoot addInRootSubm
 
 {
 
-addInRootSubmenu.Items.AddActionItem<WorkspaceFile>("Generic Context Menu", LogClickDelegate);
+addInRootSubmenu.Items.AddActionItem&lt;WorkspaceFile&gt;("Generic Context Menu", LogClickDelegate);
 
 }
 
-private void LogClickDelegate(MenuSelectionProvider<WorkspaceFile> menuSelectionProvider)
+private void LogClickDelegate(MenuSelectionProvider&lt;WorkspaceFile&gt; menuSelectionProvider)
 
 {
 
@@ -1481,7 +1481,7 @@ To program the specific Repository Provider"VciRepositoryAddInProvider", proceed
 2. Add the following two using directives to the class:
 
    - `using Siemens.Engineering.AddIn.VersionControl;`
-   - using <Name of your project>;
+   - using &lt;Name of your project&gt;;
 3. Declare your class as "public" and make the class a subclass of "VciRepositoryAddInProvider":
 
    `public class WorkspaceSpecificRepositoryAddInProvider : VciRepositoryAddInProvider`
@@ -1553,7 +1553,7 @@ public class WorkspaceSpecificRepositoryAddInProvider : VciRepositoryAddInProvid
 
 {
 
-public override IEnumerable<VciRepositoryAddIn> GetVciRepositoryAddIns()
+public override IEnumerable&lt;VciRepositoryAddIn&gt; GetVciRepositoryAddIns()
 
 {
 
@@ -1623,11 +1623,11 @@ protected override void BuildContextMenuItems(ContextMenuAddInRoot addInRootSubm
 
 {
 
-addInRootSubmenu.Items.AddActionItem<WorkspaceFile>("Repo Specific Entry", LogClickDelegate);
+addInRootSubmenu.Items.AddActionItem&lt;WorkspaceFile&gt;("Repo Specific Entry", LogClickDelegate);
 
 }
 
-private void LogClickDelegate(MenuSelectionProvider<WorkspaceFile> menuSelectionProvider)
+private void LogClickDelegate(MenuSelectionProvider&lt;WorkspaceFile&gt; menuSelectionProvider)
 
 {
 
@@ -1873,7 +1873,7 @@ public class VCIWorkflowAddInProvider : VciRepositoryAddInProvider
 
 {
 
-public override IEnumerable<VciRepositoryAddIn> GetVciRepositoryAddIns()
+public override IEnumerable&lt;VciRepositoryAddIn&gt; GetVciRepositoryAddIns()
 
 {
 
@@ -1931,7 +1931,7 @@ public class InitialExportSupport : VciInitialExportSupport
 
 {
 
-public override ExportResult PreExportExecute(IEnumerable<InitialPreExportInfo> itemsToExport,
+public override ExportResult PreExportExecute(IEnumerable&lt;InitialPreExportInfo&gt; itemsToExport,
 
 VciInitialExportAddInContext vciInitialExportAddInContext)
 
@@ -1943,7 +1943,7 @@ return ExportResult.Succeeded;
 
 }
 
-public override ExportResult PostExportExecute(IEnumerable<InitialPostExportInfo> itemsToExport,
+public override ExportResult PostExportExecute(IEnumerable&lt;InitialPostExportInfo&gt; itemsToExport,
 
 VciInitialExportAddInContext vciInitialExportAddInContext)
 
@@ -1973,7 +1973,7 @@ public class SyncExportSupport : VciSyncExportSupport
 
 {
 
-public override ExportResult PreExportExecute(IEnumerable<SyncPreExportInfo> itemsToExport,
+public override ExportResult PreExportExecute(IEnumerable&lt;SyncPreExportInfo&gt; itemsToExport,
 
 VciSyncExportAddInContext vciSyncExportAddInContext)
 
@@ -1985,7 +1985,7 @@ return ExportResult.Succeeded;
 
 }
 
-public override ExportResult PostExportExecute(IEnumerable<SyncPostExportInfo> itemsToExport,
+public override ExportResult PostExportExecute(IEnumerable&lt;SyncPostExportInfo&gt; itemsToExport,
 
 VciSyncExportAddInContext vciSyncExportAddInContext)
 

@@ -105,7 +105,7 @@ In the "Analog inputs" screen form, you can change for the TB30 the interconnect
    The larger the smoothing time constant, the slower the response of the analog input to changes in the measured value.
 6. If you require a noise suppression for the input signal, enter a value in the "Noise suppression" (p4068) field. The noise suppression results as follows:
 
-   - |y-x| > noise suppression   
+   - |y-x| &gt; noise suppression   
      results in y = x
 
      The output value is set to the current input value.

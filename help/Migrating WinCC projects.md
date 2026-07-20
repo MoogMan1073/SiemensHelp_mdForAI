@@ -61,5 +61,5 @@ To open local files in the Chrome browser:
 
 To open local files in the Edge browser:
 
-- In the Internet options, under "Security > Local intranet > Sites > Advanced", specify the local file path.
-- In the browser, under "Settings > Downloads", specify the types of files to be opened automatically after downloading.
+- In the Internet options, under "Security &gt; Local intranet &gt; Sites &gt; Advanced", specify the local file path.
+- In the browser, under "Settings &gt; Downloads", specify the types of files to be opened automatically after downloading.

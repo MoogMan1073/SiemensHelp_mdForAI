@@ -12,7 +12,7 @@ This section contains information on the following topics:
 
 - [Guided quick startup](#guided-quick-startup)
 - [Parameterization](#parameterization)
-- [Rotate & optimize](#rotate-optimize-1)
+- [Rotate &amp; optimize](#rotate-optimize-1)
 
 ## Guided quick startup
 
@@ -24,7 +24,7 @@ This section contains information on the following topics:
 - [Limits](#limits)
 - [I/O configuration](#io-configuration)
 - [Telegrams (only offline)](#telegrams-only-offline)
-- [Rotate & optimize](#rotate-optimize)
+- [Rotate &amp; optimize](#rotate-optimize)
 - [Overview](#overview-1)
 
 ### Overview
@@ -47,7 +47,7 @@ Using "Guided quick startup", you perform the basic settings for the drive in St
 > You can make most of the settings in the guided quick startup offline as well as offline. However, there are a few exceptions:
 >
 > - Telegram settings can only be made offline, as telegrams can only be configured offline.
-> - For Rotate & optimize, it is possible to carry out optimization online once optimization has been set.
+> - For Rotate &amp; optimize, it is possible to carry out optimization online once optimization has been set.
 >
 > All of the other differences are specifically marked in the subsequent description.
 
@@ -92,7 +92,7 @@ You can define the following basic settings in the steps with the same name:
 - [Telegrams](#telegrams-only-offline)
 
   Telegrams are proposed here based on previous presettings. You can define different telegrams and/or make detailed settings. Telegram settings can only be made offline.
-- [Rotate & optimize](#making-the-optimization-settings)
+- [Rotate &amp; optimize](#making-the-optimization-settings)
 
   Here, you specify the basic settings for the motor data identification which then become effective the first time the motor is switched on.
 
@@ -540,7 +540,7 @@ This section contains information on the following topics:
 
 ##### Overview
 
-In the quick startup step "Rotating & optimizing", you define default settings for optimizing the motor data, which are activated the first time the motor is switched on.
+In the quick startup step "Rotating &amp; optimizing", you define default settings for optimizing the motor data, which are activated the first time the motor is switched on.
 
 A motor identification (MotID) provides a means of determining motor data, for example, of third-party motors. The MotID is required to improve the control properties of the motor. Especially for encoderless speed control, as a minimum the stator resistance (including the supply cable resistance) and the power unit parameters must be determined for each drive.
 
@@ -1876,7 +1876,7 @@ The input signal can also be smoothed to suppress strong fluctuations or short-t
 
    This suppresses the noise of the input signal according to the following function:
 
-   - **|y-x| > noise suppression results in y = x**
+   - **|y-x| &gt; noise suppression results in y = x**
 
      The output value is set to the current input value.
    - **|y-x| ≤ noise suppression results in y = yold**
@@ -2914,7 +2914,7 @@ A droop (enabled via c1492) causes the speed setpoint to be reduced proportional
 
 | Symbol | Meaning |
 | --- | --- |
-| ① | Active only when the precontrol has been activated ([p1496](SINAMICS%20Parameter%20G220.md#p14960n-acceleration-precontrol-scaling) > 0) |
+| ① | Active only when the precontrol has been activated ([p1496](SINAMICS%20Parameter%20G220.md#p14960n-acceleration-precontrol-scaling) &gt; 0) |
 | ② | Active only for SLVC |
 
 Speed controller with droop
@@ -3209,7 +3209,7 @@ In order that the speed controller does not counteract the applied torque setpoi
 
 - The drive has been completely created and fully specified in the device configuration.
 - The [extended parameterization](#overview-2) is active.
-- The precontrol balancing becomes active only when P gain [p1460](SINAMICS%20Parameter%20G220.md#p14600n-speed-controller-p-gain) > 0% is set and the reference model is deactivated.
+- The precontrol balancing becomes active only when P gain [p1460](SINAMICS%20Parameter%20G220.md#p14600n-speed-controller-p-gain) &gt; 0% is set and the reference model is deactivated.
 
 ###### Procedure
 
@@ -3357,7 +3357,7 @@ The K<sub>p</sub>/T<sub>n</sub> adaptation enables a completely variable proport
 
    - "Adaptation factor upper" ([p1459](SINAMICS%20Parameter%20G220.md#p14590n-adaptation-factor-upper))
 
-     Adaptation range (> [p1457](SINAMICS%20Parameter%20G220.md#p14570n-speed-controller-p-gain-adaptation-upper-starting-point)) to additionally adapt the P gain of the speed/velocity controller.
+     Adaptation range (&gt; [p1457](SINAMICS%20Parameter%20G220.md#p14570n-speed-controller-p-gain-adaptation-upper-starting-point)) to additionally adapt the P gain of the speed/velocity controller.
    - "Adaptation factor lower" ([p1458](SINAMICS%20Parameter%20G220.md#p14580n-adaptation-factor-lower))
 
      Adaptation range (0% ... [p1456](SINAMICS%20Parameter%20G220.md#p14560n-speed-controller-p-gain-adaptation-lower-starting-point)) to additionally adapt the P gain of the speed/velocity controller.
@@ -3374,10 +3374,10 @@ The K<sub>p</sub>/T<sub>n</sub> adaptation enables a completely variable proport
 
    - "Scaling Kp" ([p1461](SINAMICS%20Parameter%20G220.md#p14610n-speed-controller-kp-adaptation-speed-upper-scaling))
 
-     P gain of the speed controller for the upper adaptation speed range (> [p1465](SINAMICS%20Parameter%20G220.md#p14650n-speed-controller-adaptation-speed-upper)).
+     P gain of the speed controller for the upper adaptation speed range (&gt; [p1465](SINAMICS%20Parameter%20G220.md#p14650n-speed-controller-adaptation-speed-upper)).
    - "Scaling Tn" ([p1463](SINAMICS%20Parameter%20G220.md#p14630n-speed-controller-tn-adaptation-speed-upper-scaling))
 
-     Integral time of the speed controller after the adaptation speed range (> p1465).
+     Integral time of the speed controller after the adaptation speed range (&gt; p1465).
 9. Enter the desired speed in the "Upper adaptation speed" (p1465) field.
 10. Enter the desired speed in the "Lower adaptation speed" ([p1464](SINAMICS%20Parameter%20G220.md#p14640n-speed-controller-adaptation-speed-lower)) field.
 11. If you want to optimize the T<sub>n</sub> component of the speed-dependent adaptation, select the "[1] Yes" option in the "Free T<sub>n</sub> adaptation active" drop-down list (p1400.6).
@@ -3851,8 +3851,8 @@ For this reason, you can specify the various voltage boosts for the U/f characte
 
 | Boost type | Representation |
 | --- | --- |
-| Permanent starting current ([p1310](SINAMICS%20Parameter%20G220.md#p13100n-starting-current-voltage-boost-permanent)) | ![Permanent voltage boost (example: p1300 = 0 and p1310 > 0)](images/148900968459_DV_resource.Stream@PNG-en-US.png)   Permanent voltage boost (example: [p1300](SINAMICS%20Parameter%20G220.md#p13000n-open-loopclosed-loop-control-type) = 0 and p1310 > 0) |
-| Starting current when accelerating ([p1311](SINAMICS%20Parameter%20G220.md#p13110n-starting-current-voltage-boost-when-accelerating)) | ![Voltage boost during acceleration (example: p1300 = 0 and p1311 > 0)](images/148900955659_DV_resource.Stream@PNG-en-US.png)   Voltage boost during acceleration (example: p1300 = 0 and p1311 > 0) |
+| Permanent starting current ([p1310](SINAMICS%20Parameter%20G220.md#p13100n-starting-current-voltage-boost-permanent)) | ![Permanent voltage boost (example: p1300 = 0 and p1310 > 0)](images/148900968459_DV_resource.Stream@PNG-en-US.png)   Permanent voltage boost (example: [p1300](SINAMICS%20Parameter%20G220.md#p13000n-open-loopclosed-loop-control-type) = 0 and p1310 &gt; 0) |
+| Starting current when accelerating ([p1311](SINAMICS%20Parameter%20G220.md#p13110n-starting-current-voltage-boost-when-accelerating)) | ![Voltage boost during acceleration (example: p1300 = 0 and p1311 > 0)](images/148900955659_DV_resource.Stream@PNG-en-US.png)   Voltage boost during acceleration (example: p1300 = 0 and p1311 &gt; 0) |
 | Starting current at startup ([p1312](SINAMICS%20Parameter%20G220.md#p13120n-starting-current-voltage-boost-when-starting)) | - |
 
 > **Note**
@@ -3958,7 +3958,7 @@ The slip compensation ensures that the motor speed is kept constant irrespective
    A dialog with the same name opens.
 2. Enter the percentage setpoint of the slip compensation in relation to the rated motor slip in the "Scaling" ([p1335](SINAMICS%20Parameter%20G220.md#p13350n-slip-compensation-scaling)) field.
 
-   For the slip compensation to become active, a scaling > 0% must be entered.
+   For the slip compensation to become active, a scaling &gt; 0% must be entered.
 3. Correct the specified percentage limitation of the slip compensation in relation to the rated motor slip in the "Limit value" ([p1336](SINAMICS%20Parameter%20G220.md#p13360n-slip-compensation-limit-value)) field.
 4. Once all necessary settings have been made, click "Close".
 
@@ -4628,7 +4628,7 @@ The P gain of the current controller can be reduced via an adaptation depending 
 2. Click the "Adaptation" button.
 
    A dialog with the same name opens.
-3. Correct the factor for the P gain of the current controller in the adaptation range (current > [p0392](SINAMICS%20Parameter%20G220.md#p03920n-current-controller-adaptation-starting-point-kp-adapted)) in the "Scaling" ([p0393](SINAMICS%20Parameter%20G220.md#p03930n-current-controller-adaptation-p-gain-scaling)) field.
+3. Correct the factor for the P gain of the current controller in the adaptation range (current &gt; [p0392](SINAMICS%20Parameter%20G220.md#p03920n-current-controller-adaptation-starting-point-kp-adapted)) in the "Scaling" ([p0393](SINAMICS%20Parameter%20G220.md#p03930n-current-controller-adaptation-p-gain-scaling)) field.
 4. Enter the application point of the current-dependent current controller adaptation at which the adapted current controller gain takes effect p1715 x p0393 in the "Application point Kp adapted" (p0392) field.
 5. Enter the application point of the current-dependent current controller adaptation at which the current controller gain takes effect p1715 in the "Application point Kp" ([p0391](SINAMICS%20Parameter%20G220.md#p03910n-current-controller-adaptation-starting-point-kp)) field.
 6. Once all necessary settings have been made, click "Close".
@@ -5118,7 +5118,7 @@ For internal armature short-circuit braking, the stator windings of the synchron
 ###### Requirements
 
 - The drive has been completely created and fully specified in the device configuration.
-- Short-circuit-proof motors ([p0320](SINAMICS%20Parameter%20G220.md#p03200n-motor-rated-magnetizing-currentshort-circuit-current) < [p0323](SINAMICS%20Parameter%20G220.md#p03230n-maximum-motor-current)) are used.
+- Short-circuit-proof motors ([p0320](SINAMICS%20Parameter%20G220.md#p03200n-motor-rated-magnetizing-currentshort-circuit-current) &lt; [p0323](SINAMICS%20Parameter%20G220.md#p03230n-maximum-motor-current)) are used.
 - One of the following motor types is used:
 
   - Rotary permanent-magnet synchronous motor ([p0300](SINAMICS%20Parameter%20G220.md#p03000n-motor-type-selection) = 2xx)
@@ -5567,7 +5567,7 @@ The drive can be restarted in two ways:
 
   For drives with low inertia loads and load torques where the drive can be brought to a standstill within seconds (such as pump drives with water gauges), the start from standstill is recommended.
 
-If the automatic restart function is activated ([p1210](SINAMICS%20Parameter%20G220.md#p1210-automatic-restart-mode) > 1), the motor can be started automatically when the line supply is restored. This is especially critical, if, after longer line supply failures, motors come to a standstill and it is incorrectly assumed that they have been powered down.
+If the automatic restart function is activated ([p1210](SINAMICS%20Parameter%20G220.md#p1210-automatic-restart-mode) &gt; 1), the motor can be started automatically when the line supply is restored. This is especially critical, if, after longer line supply failures, motors come to a standstill and it is incorrectly assumed that they have been powered down.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -5718,22 +5718,22 @@ Comparators are provided for monitoring the actual speed and setpoint thresholds
 
    The "f or n comparison value reached/exceeded" signal is generated under consideration of hysteresis speed 1, speed threshold 1 and the ON delay.
 4. Enter the speed threshold 1 in the "Speed threshold 1" ([p2141](SINAMICS%20Parameter%20G220.md#p21410n-speed-threshold-1)) field.
-5. Enter the ON delay time for signal |n_act| > speed threshold in the "ON delay" ([p2156](SINAMICS%20Parameter%20G220.md#p21560n-on-delay-comparison-value-reached)) field.
+5. Enter the ON delay time for signal |n_act| &gt; speed threshold in the "ON delay" ([p2156](SINAMICS%20Parameter%20G220.md#p21560n-on-delay-comparison-value-reached)) field.
 6. Enter the bandwidths for the following messages in the "Hysteresis speed 2" ([p2140](SINAMICS%20Parameter%20G220.md#p21400n-hysteresis-speed-2)) field:
 
-   - |n_act| < speed threshold 2
-   - |n_set| > speed threshold 2
+   - |n_act| &lt; speed threshold 2
+   - |n_set| &gt; speed threshold 2
 7. Interconnect the following signal sinks with the required parameters:
 
    - |n_act| ≤ speed threshold 2
-   - |n_act| > speed threshold 2
+   - |n_act| &gt; speed threshold 2
 8. Enter speed threshold 2 in the "Speed threshold 2" ([p2155](SINAMICS%20Parameter%20G220.md#p21550n-speed-threshold-2)) field.
-9. Enter the bandwidths for the n_act > n_max message in the "Hysteresis speed n_act > n_max" ([p2162](SINAMICS%20Parameter%20G220.md#p21620n-hysteresis-speed-n_act-n_max)) field.
-10. Interconnect the "|n_act| > n_max" ([r2197](SINAMICS%20Parameter%20G220.md#r2197013-status-word-monitoring-1)) signal sink with the required parameters. Several interconnections are possible.
+9. Enter the bandwidths for the n_act &gt; n_max message in the "Hysteresis speed n_act &gt; n_max" ([p2162](SINAMICS%20Parameter%20G220.md#p21620n-hysteresis-speed-n_act-n_max)) field.
+10. Interconnect the "|n_act| &gt; n_max" ([r2197](SINAMICS%20Parameter%20G220.md#r2197013-status-word-monitoring-1)) signal sink with the required parameters. Several interconnections are possible.
 
     Interconnect binary signal sink:
 
-    Signal n_act > n_max is generated under consideration of hysteresis speed n_act > n_max.
+    Signal n_act &gt; n_max is generated under consideration of hysteresis speed n_act &gt; n_max.
 
     For a negative speed limit, the hysteresis is effective below the limit value and for a positive speed limit, above the limit value.
 
@@ -5772,8 +5772,8 @@ You can set the speed signals as follows:
 1. Correct the specified bandwidths for the following messages in the "Hysteresis speed 3" ([p2150](SINAMICS%20Parameter%20G220.md#p21500n-hysteresis-speed-3)[0]) field:
 
    - n_act ≥ 0
-   - |n_act| < speed threshold value 3
-   - n_set < [p2161](SINAMICS%20Parameter%20G220.md#p21610n-speed-threshold-3)
+   - |n_act| &lt; speed threshold value 3
+   - n_set &lt; [p2161](SINAMICS%20Parameter%20G220.md#p21610n-speed-threshold-3)
    - n_set ≥ 0
 
    The calculation mode is defined using p0340.
@@ -5782,12 +5782,12 @@ You can set the speed signals as follows:
    - n_act ≥ 0
 
      Signal "n_act ≥ 0" is generated considering hysteresis speed 3.
-   - |n_act| < speed threshold value 3
+   - |n_act| &lt; speed threshold value 3
 
-     Signal |n_act| < speed threshold 3 is generated considering hysteresis speed 3 and speed threshold 3.
-   - n_set < p2161
+     Signal |n_act| &lt; speed threshold 3 is generated considering hysteresis speed 3 and speed threshold 3.
+   - n_set &lt; p2161
    - n_set ≥ 0
-3. Correct the speed threshold 3 for |n_act| < speed setpoint 3 in the "Speed threshold 3" (p2161) field.
+3. Correct the speed threshold 3 for |n_act| &lt; speed setpoint 3 in the "Speed threshold 3" (p2161) field.
 4. Interconnect the "Speed setpoint for messages" (c2151) signal source for speed setpoint messages.
 5. Interconnect the "Speed setpoint 2" (c2154) signal source.
 
@@ -6133,7 +6133,7 @@ The sensors used are selected as standard from the following four different sens
   A Pt100 or Pt1000 is in principle a PTC with a very linear characteristic, and is suitable for continuous and exact temperature measurements. Not every sensor input is Pt100/Pt1000-capable.
 - **Bimetallic sensor with NC contact** (abbreviated, "bimetal NC contact")
 
-  A bimetallic NC contact actuates a switch at a certain nominal response temperature. The tripping resistance is <100 Ω. Not every sensor input is bimetal NC contact-capable.
+  A bimetallic NC contact actuates a switch at a certain nominal response temperature. The tripping resistance is &lt;100 Ω. Not every sensor input is bimetal NC contact-capable.
 - **Evaluation via temperature channels**
 
   If you use several temperature channels, the sensors are interconnected via signals.
@@ -6939,7 +6939,7 @@ Safety functions that can be activated for each control type
 
 ###### Procedure
 
-1. Call the "Safety Integrated > Function selection" menu in the secondary navigation.
+1. Call the "Safety Integrated &gt; Function selection" menu in the secondary navigation.
 2. Click on ![Procedure](images/154401807627_DV_resource.Stream@PNG-en-US.PNG) to activate the editing mode.
 3. Select one of the following from the "Control type" drop-down list:
 
@@ -7268,7 +7268,7 @@ In the "Safe Stop 1" (SS1) function view you make settings for the motor deceler
    In this function view, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control-via-profisafe)").
 2. Select the monitoring type "SAM" in the "Monitoring" drop-down list ([p9606](SINAMICS%20Parameter%20G220.md#p9606-si-ss1-function-specification)).
 3. Click the "Monitoring" button and parameterize the alternative brake monitoring functions "[SAM](#configuring-sam)" in the dialog.
-4. Enter the required delay time in the "Delay time SS1 -> STO active" (p9556) entry field.
+4. Enter the required delay time in the "Delay time SS1 -&gt; STO active" (p9556) entry field.
 5. Enter the shutdown speed for activating STO in the "STO shutdown speed" (p9560) entry field.
 6. Click "Save project" in the toolbar to save the changes in the project.
 
@@ -7815,7 +7815,7 @@ The "SDI active" icon indicates the following states:
 
    You can select the PROFIsafe telegrams in the telegram configuration. This means you also specify the required control word.
 2. Call the "SDI" function view again.
-3. Enter a delay time in ms in the "Delay time for selection of SDI -> SDI active" (p9565) field.
+3. Enter a delay time in ms in the "Delay time for selection of SDI -&gt; SDI active" (p9565) field.
 4. Enter a monitoring tolerance in mm in the "Monitoring tolerance" (p9564) field.
 5. Select the required stop response in the "Selection" drop-down list (p9566).
 6. Click on the icon ![Procedure](images/148900571915_DV_resource.Stream@PNG-de-DE.PNG) to display a function view of the set [stop response](#stop-responses).
@@ -8045,7 +8045,7 @@ The following configuration is required for controlling the Safety Integrated Fu
    The properties of the PROFINET interface are displayed in the Inspector window. The "Cyclic data exchange" setting area is active. The telegrams for the drive objects can be specified here.
 
    The following steps 2 and 3 apply if no PROFIsafe telegram has yet been created (e.g. via the guided quick startup).
-2. Optional: Click in the telegram configuration of the "Drive control telegrams" on the entry <Add telegram>.
+2. Optional: Click in the telegram configuration of the "Drive control telegrams" on the entry &lt;Add telegram&gt;.
 3. Optional: Select the "Add Safety telegram" option in the drop-down list of the entry:
 
    Then the lines "Send Safety Integrated Telegram (actual value)" and "Receive Safety Integrated Telegram (setpoint)" are inserted. PROFIsafe telegram 902 is preset. Alternatively, you can select PROFIsafe telegram 30.
@@ -8148,7 +8148,7 @@ The PROFIsafe address is required for control of the Safety Integrated Functions
    The properties of the PROFINET interface are displayed in the Inspector window. The "Cyclic data exchange" setting area is active. The telegrams for the drive objects can be specified here.
 
    The following steps 2 and 3 apply if no PROFIsafe telegram has yet been created (e.g. via the guided quick startup).
-2. Optional: Click in the telegram configuration of the "Drive control telegrams" on the entry <Add telegram>.
+2. Optional: Click in the telegram configuration of the "Drive control telegrams" on the entry &lt;Add telegram&gt;.
 3. Optional: Select the "Add Safety telegram" option in the drop-down list of the entry:
 
    Then the lines "Send Safety Integrated Telegram (actual value)" and "Receive Safety Integrated Telegram (setpoint)" are inserted. The relevant PROFIsafe telegrams are preassigned.
@@ -8173,7 +8173,7 @@ The routing must also be configured to transfer the F-DI states via PROFIsafe. T
 1. Click the ![Configuring routing](images/148900571915_DV_resource.Stream@PNG-de-DE.PNG) icon "Telegram configuration"
 
    The properties of the PROFINET interface are displayed in the Inspector window. The "Telegram configuration" setting area is active. The telegrams for the drive objects can be specified here.
-2. Click the <Add telegram> entry in the telegram configuration of "Drive axis_x".
+2. Click the &lt;Add telegram&gt; entry in the telegram configuration of "Drive axis_x".
 3. Select the "Add Safety Integrated telegram" option in the drop-down list of the entry.
 
    The "Send Safety Integrated telegram (Actual value)" and "Receive Safety Integrated telegram (Setpoint)" lines are then inserted.
@@ -8329,7 +8329,7 @@ The test signal length and the test cycle cannot be changed.
 
 The following applies to the debounce time:
 
-- p10017 > 2 ms
+- p10017 &gt; 2 ms
 
 The self-test with internal test signals complies with the following requirements:
 
@@ -8351,7 +8351,7 @@ Dark pulses through switchable power supply
 
 The following applies to the debounce time:
 
-- p10017 > dark pulse length (p10018) + 2 ms
+- p10017 &gt; dark pulse length (p10018) + 2 ms
 
 The self-test using entered dark pulses complies with the following requirements:
 
@@ -8371,7 +8371,7 @@ Dark pulses through control
 
 The following applies to the debounce time:
 
-- p10017 > dark pulse length + 2 ms
+- p10017 &gt; dark pulse length + 2 ms
 
   The test pulse length of the external control must be checked and the debounce time must be adapted.
 
@@ -9204,7 +9204,7 @@ The following requirements must be met for drive optimization:
 
 **See also**
 
-[Rotate & optimize](#rotate-optimize)
+[Rotate &amp; optimize](#rotate-optimize)
 
 ### Control panel
 

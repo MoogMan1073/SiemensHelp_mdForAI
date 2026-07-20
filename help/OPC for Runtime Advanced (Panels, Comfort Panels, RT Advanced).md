@@ -146,7 +146,7 @@ The following HMI devices can be used as OPC UA servers:
 
 1. Open the "Runtime settings" of the HMI device in the project tree.
 2. Select the "Operate as OPC server" option under "Service" in the "Runtime settings".
-3. Configure the server settings at "OPC settings > OPC Unified Architecture Server configuration":
+3. Configure the server settings at "OPC settings &gt; OPC Unified Architecture Server configuration":
 
    - Change the "Port number", if required.
    - Activate at least one "SecurityPolicy" and the respective "Message security mode".

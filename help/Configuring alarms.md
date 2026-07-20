@@ -205,7 +205,7 @@ The following graphic shows an example of the components in the alarm editor:
 | --- | --- | --- |
 | 1 |  | Tabular display of the alarms in the work area, see: [Working with the alarm editor](#working-with-the-alarm-editor-s7-300-s7-400-s7-1500) |
 | 2 | ![Layout of the alarm editor](images/41059615115_DV_resource.Stream@PNG-de-DE.png) | "Program alarms" tab: You can edit program alarms here. See [Basics of the work area](Introduction%20to%20the%20TIA%20Portal.md#basics-of-the-work-area) |
-| 3 | ![Layout of the alarm editor](images/41057881227_DV_resource.Stream@PNG-de-DE.png) | "System alarms" tab: System alarms can only be viewed and cannot be edited. These alarms are configured in the device properties (shortcut menu command "Go to Device") as well as in the project navigation under "Common data > System diagnostics settings". |
+| 3 | ![Layout of the alarm editor](images/41057881227_DV_resource.Stream@PNG-de-DE.png) | "System alarms" tab: System alarms can only be viewed and cannot be edited. These alarms are configured in the device properties (shortcut menu command "Go to Device") as well as in the project navigation under "Common data &gt; System diagnostics settings". |
 | 4 |  | The "Alarm instances" table contains the instances (instance DBs) derived from the alarm type (FB). As default, the table is collapsed. |
 | 5 |  | [Inspector window](Introduction%20to%20the%20TIA%20Portal.md#inspector-window) |
 |  | ![Layout of the alarm editor](images/41057891083_DV_resource.Stream@PNG-de-DE.png) | "User diagnostics alarms" tab: User diagnostics alarms can be created and edited here.   The tab is not available for S7-1500 CPUs. |
@@ -215,7 +215,7 @@ You can enter or modify the necessary parameters, texts and attributes in the ta
 
 ### Display of the CPU name in system alarms
 
-As of V15.1, the name of the CPU (or for H or R CPUs, the name of the station) is displayed in the "Additional text 1" column of the system alarms. To do this, you need to compile the hardware of the device in question. If the CPU name is not displayed via the "Compile > Hardware (only changes)" option, use the option "Compile > Hardware (rebuild all)".
+As of V15.1, the name of the CPU (or for H or R CPUs, the name of the station) is displayed in the "Additional text 1" column of the system alarms. To do this, you need to compile the hardware of the device in question. If the CPU name is not displayed via the "Compile &gt; Hardware (only changes)" option, use the option "Compile &gt; Hardware (rebuild all)".
 
 Make sure that loading to the device is actually performed since the message that the hardware is up-to-date is not enough!
 
@@ -268,7 +268,7 @@ You have created a function block.
 To create a program alarm, follow these steps:
 
 1. In the "Program blocks" folder in the project navigation, select the function block (FB) for which you want to create a program alarm and double-click the block to open it.
-2. Click "Extended instructions" > "Alarms" in the "Instructions" task card and drag the required alarm block (e.g., "Alarm_S") into the instruction window or network (depending on the block language).  
+2. Click "Extended instructions" &gt; "Alarms" in the "Instructions" task card and drag the required alarm block (e.g., "Alarm_S") into the instruction window or network (depending on the block language).  
    Result: The instruction part of the FB displays the inputs of the called alarm block, in this case the ALARM_S block.
 3. Fill in the block interface. For each alarm block that will be called in the FB, you will need to declare tags in the calling FB. For this purpose, enter the following tags, for example:
 
@@ -290,7 +290,7 @@ You have created a program alarm.
 
 To edit program alarms, follow these steps:
 
-1. Double-click "PLC supervisions & alarms" in the project navigation. Select the "Alarms" tab. The alarm editor opens.
+1. Double-click "PLC supervisions &amp; alarms" in the project navigation. Select the "Alarms" tab. The alarm editor opens.
 2. Enter the required texts and attributes in the appropriate columns.
 
 ---
@@ -365,7 +365,7 @@ You have already created an FB and created at least one alarm in it.
 To assign instance data blocks (DBs) to an alarm type and to edit the alarms for these DBs for specific instances, follow the steps below:
 
 1. Double-click on "Add new block" in the project navigation, click on the "Data block (DB)" button that appears in the dialog and select the function block (alarm type) to which you want to assign the instance DB from the "Type" drop-down list.
-2. Double-click "PLC supervisions & alarms" in the project navigation. Select the "Alarms" tab to open the alarm configuration.
+2. Double-click "PLC supervisions &amp; alarms" in the project navigation. Select the "Alarms" tab to open the alarm configuration.
 3. Enter the desired changes for the respective alarm instance.
 
 #### Result
@@ -396,7 +396,7 @@ To create a user diagnostics alarm, follow these steps:
 
 1. In the "Program blocks" folder in the project navigation, select the function block (FB) for which you want to create a user diagnostics alarm and double-click the block to open it.
 2. Insert a configuration of the outgoing and incoming user diagnostics alarm in the instruction window of the FB by calling the "WR_USMSG" alarm block twice (each in connection with a negative and a positive edge).
-3. Double-click "PLC supervisions & alarms" in the project navigation. Select the "Alarms" tab to open the alarm editor.
+3. Double-click "PLC supervisions &amp; alarms" in the project navigation. Select the "Alarms" tab to open the alarm editor.
 4. Select the "User diagnostics alarms" tab in the alarm editor.
 5. Click in the table and select "Insert new alarm" in the shortcut menu.
 
@@ -446,7 +446,7 @@ To insert an associated value into an alarm, follow these steps:
 There are 10 associated values whose length is limited to 12 bytes each. They cannot be addressed internally.
 
 1. Configure a block as follows:   
-   @<No. of the associated value><element type>%<format>@.
+   @&lt;No. of the associated value&gt;&lt;element type&gt;%&lt;format&gt;@.
 2. Insert this block at the locations in the alarm text at which the associated value is to be shown.
 
 #### Alarm SFC for the S7-300/400 (e.g. Alarm_S)
@@ -454,7 +454,7 @@ There are 10 associated values whose length is limited to 12 bytes each. They ca
 There is one associated value whose length is limited to 12 bytes. It can be addressed internally with the index and the element type.
 
 1. Configure a block as follows:   
-   @<Index><element type>%<format>@.
+   @&lt;Index&gt;&lt;element type&gt;%&lt;format&gt;@.
 
    Index: Index in the associated value. The index is interpreted as an array index (starting with 1).
 
@@ -507,7 +507,7 @@ Determine the output format for the associated value on the display device. The 
 | %[i]b | Binary number with i digits |
 | %[i][.y]f | Floating-point number with sign with y digits after the decimal point and total number of digits i |
 | %[i]s | String (ANSI string) with i digits  Characters are printed up to the first 0 Byte (00Hex). |
-| %t#<Name of text list> | Access to text list |
+| %t#&lt;Name of text list&gt; | Access to text list |
 
 If the number of digits [i] is too small, the value is nevertheless output in full.
 
@@ -604,7 +604,7 @@ You have created a function block.
 To create a program alarm, follow these steps:
 
 1. In the "Program blocks" folder in the project tree, select the function block (FB) for which you want to create a program alarm and double-click the block to open it.
-2. In the instruction window or network of the FB (depending on the block language), insert the call for the selected alarm block ("Program_Alarm"). It is available in the "Instructions" task card under "Extended instructions" > "Alarms". The block interface is automatically provided with the necessary information in the "Static" area.
+2. In the instruction window or network of the FB (depending on the block language), insert the call for the selected alarm block ("Program_Alarm"). It is available in the "Instructions" task card under "Extended instructions" &gt; "Alarms". The block interface is automatically provided with the necessary information in the "Static" area.
 3. If necessary, change the alarm name in the dialog that opens.
 
    Result: The instruction part of the FB displays the input tags of the called alarm block, in this case the Program_Alarm block.
@@ -639,7 +639,7 @@ You have created a program alarm.
 
 To edit program alarms, follow these steps:
 
-1. Double-click "PLC supervisions & alarms" in the project navigation. Select the "Alarms" tab. The alarm editor opens.
+1. Double-click "PLC supervisions &amp; alarms" in the project navigation. Select the "Alarms" tab. The alarm editor opens.
 2. Enter the required texts and attributes in the appropriate columns.
 
 ---
@@ -722,7 +722,7 @@ You have already created an FB and created at least one alarm in it.
 To assign instance data blocks (DBs) to an alarm type and to edit the alarms for these DBs for specific instances, follow the steps below:
 
 1. Double-click on "Add new block" in the project navigation, click on the "Data block (DB)" button that appears in the dialog and select the function block (alarm type) to which you want to assign the instance DB from the "Type" drop-down list.
-2. Double-click "PLC supervisions & alarms" in the project navigation. Select the "Alarms" tab to open the alarm configuration.
+2. Double-click "PLC supervisions &amp; alarms" in the project navigation. Select the "Alarms" tab to open the alarm configuration.
 3. Enter the desired changes for the respective alarm instance.
 
 #### Result
@@ -776,7 +776,7 @@ You can insert associated values at any location within an alarm text or infotex
 
 1. Insert your "Program_Alarm" block in your PLC program.
 2. Assign the tag whose value you want to display in the "Program_Alarm" alarm text or in the associated infotext to the SD input of the "Program_Alarm" block.
-3. Double-click "PLC supervisions & alarms" in the project tree. Select the "Alarms" > "Program alarms" tab.
+3. Double-click "PLC supervisions &amp; alarms" in the project tree. Select the "Alarms" &gt; "Program alarms" tab.
 4. Select your new "Program_Alarm" and insert the reference to the required associated value in the format "@SD_number%format_information@" at the required location in the alarm text or infotext.
 
 > **Note**
@@ -817,7 +817,7 @@ You select the desired tag in the "Tag" selection box. The address and the alarm
 
 > **Note**
 >
-> Projects created with an older version of the TIA Portal can still contain the manual notation with embedded associated values. This corresponds to the syntax @<Number of the associated value>%<Format specification>@. For information on the "Format specification" parameter, refer to [Structure of associated values](#structure-of-associated-values-s7-300-s7-400).
+> Projects created with an older version of the TIA Portal can still contain the manual notation with embedded associated values. This corresponds to the syntax @&lt;Number of the associated value&gt;%&lt;Format specification&gt;@. For information on the "Format specification" parameter, refer to [Structure of associated values](#structure-of-associated-values-s7-300-s7-400).
 >
 > We recommend that you use only the above described dialog boxes to enter associated values in new projects.
 >
@@ -837,7 +837,7 @@ You select the desired tag in the "Tag" selection box. The address and the alarm
 
 Projects created with an older version of the TIA Portal can contain embedded associated values with different structures in the different project languages. The associated values may have a different order or may be missing in a different language. When a project of this type is upgraded, the order of the associated values is harmonized. It is based on the reference language set in the original project. In this case, it is recommended to have the translated texts checked and corrected.
 
-#### Importing a translated text list < V14
+#### Importing a translated text list &lt; V14
 
 It may occur that you have exported, translated and re-imported a text list for alarms in an older version. If you try to import an old file in a current project (e.g. due to identical names), this is rejected due to data incompatibility.
 
@@ -847,25 +847,25 @@ It may occur that you have exported, translated and re-imported a text list for 
 
 **Keyword:**
 
-<Keyword: CpuName>
+&lt;Keyword: CpuName&gt;
 
 The name of the CPU is entered as an associated value.
 
 **Tag:**
 
-<Tag: #Temperature>
+&lt;Tag: #Temperature&gt;
 
 The value of the "#Temperature" tag is displayed at this point in the alarm text.
 
 **Text list entry:**
 
-<Text list: USER_1: "tag_1">
+&lt;Text list: USER_1: "tag_1"&gt;
 
 The content of the "tag_1" tag is used as index for the "USER_1" text list. The entry from the text list is displayed at this point in the alarm text.
 
 **Text list tag:**
 
-<Text list: "tag_2"(SD_1):Tag: "tag_1"(SD_2)>
+&lt;Text list: "tag_2"(SD_1):Tag: "tag_1"(SD_2)&gt;
 
 "Tag_2" is for the index for the text list to be used, "Tag_1" is used as index for the entry.
 
@@ -938,7 +938,7 @@ You can select or enter the following keywords in event texts, info texts, or ad
 
 Name of the configured PLC.
 
-Example S7-1500: <Keyword: CpuName> = "PLC_1"
+Example S7-1500: &lt;Keyword: CpuName&gt; = "PLC_1"
 
 Example S7-300/S7-400/S7-1500: $$CpuName$$ = "PLC_1"
 
@@ -950,7 +950,7 @@ Example S7-300/S7-400/S7-1500: $$CpuName$$ = "PLC_1"
 
 Location of the alarm instance, usually a data block.
 
-Example S7-1500: <Keyword: Instance> = "Block_3_DB"
+Example S7-1500: &lt;Keyword: Instance&gt; = "Block_3_DB"
 
 Example S7-300/S7-400/S7-1500: $$Instance$$ = "Block_3_DB"
 
@@ -958,7 +958,7 @@ Example S7-300/S7-400/S7-1500: $$Instance$$ = "Block_3_DB"
 
 If you are using nested blocks in the project, the tag path of the alarm-defining block is shown that leads from the function block from which the data block is generated through all multiple instances.
 
-Example S7-1500: <Keyword: Path> = "myFB2\myFB1"
+Example S7-1500: &lt;Keyword: Path&gt; = "myFB2\myFB1"
 
 Example S7-300/S7-400/S7-1500: $$Path$$ = "myFB2\myFB1"
 
@@ -970,7 +970,7 @@ Example S7-300/S7-400/S7-1500: $$Path$$ = "myFB2\myFB1"
 
 Name of the alarm.
 
-Example S7-1500: <Keyword: Name> = "myAlarm"
+Example S7-1500: &lt;Keyword: Name&gt; = "myAlarm"
 
 Example S7-300/S7-400/S7-1500: $$Name$$ = "myAlarm"
 
@@ -1165,7 +1165,7 @@ If a signaling block which references a text list is copied into another program
 >
 > Note that the names of text lists for messages are not permitted to contain any of the following special characters:
 >
-> \ / : * ? " < > | @
+> \ / : * ? " &lt; &gt; | @
 >
 > If you reference a text list that contains one of these characters, a system error is detected. The text is displayed with a red background and must be corrected.
 
@@ -1206,7 +1206,7 @@ Follow the steps below to edit user-defined text lists:
 >
 > Please note that text lists for messages are not permitted to contain any of the following special characters:
 >
-> \ / : * ? " < > | @
+> \ / : * ? " &lt; &gt; | @
 >
 > If you reference a text list that contains one of these characters, a system error is detected. The text is displayed with a red background and must be corrected.
 
@@ -1224,7 +1224,7 @@ You can integrate texts from various text lists in an alarm. The texts can be po
 
 To integrate texts from text lists in alarms, follow the steps below:
 
-1. Double-click "PLC supervisions & alarms" in the project navigation. Select the "Alarms" tab. The alarm editor opens.
+1. Double-click "PLC supervisions &amp; alarms" in the project navigation. Select the "Alarms" tab. The alarm editor opens.
 2. Put an associated value in the format @[Index][Data type]%t#[Text list]@ at the point in the alarm at which you want the text from the text list to appear. The data type must be WORD (W).
 
 **Note**
@@ -1235,7 +1235,7 @@ S7-300/400: [Index] = e.g. 1, where 1 is the first associated value of the alarm
 
 To integrate texts from text lists in alarms, follow the steps below:
 
-1. Double-click "PLC supervisions & alarms" in the project navigation. Select the "Alarms" tab. The alarm editor opens.
+1. Double-click "PLC supervisions &amp; alarms" in the project navigation. Select the "Alarms" tab. The alarm editor opens.
 2. Go to the point in the alarm at which you want the text from the text list to appear, and select "Insert a dynamic parameter (text list)" or "Insert a dynamic parameter (text list tag)" from the shortcut menu to insert a text list or a reference to a text list.
 3. In the "Text list" selection box, first select the tag that will contain the index of the text list in the automation system. Then, in the "Tag" selection field, select the tag that will contain the index of the text list entry in the automation system.
 
@@ -1262,7 +1262,7 @@ If you enter associated values in the alarm editor, you must be in edit mode (cl
 
 S7-300/400: Configured alarm text: Pressure is @2W%t#USER_1@.
 
-S7-1500: Configured alarm text: Pressure has <Text list: USER_1: "tag_1">.
+S7-1500: Configured alarm text: Pressure has &lt;Text list: USER_1: "tag_1"&gt;.
 
 Text list with the name "USER_1":
 
@@ -1348,7 +1348,7 @@ The copied alarm class is appended to the end of the table under a new name.
 
 The name of the new alarm class is made up as follows:
 
-<old name>_<no.>
+&lt;old name&gt;_&lt;no.&gt;
 
 no.: This is the lowest free natural number.
 
@@ -1490,10 +1490,10 @@ The following table specifies the contents expected for the individual columns:
 | --- | --- | --- | --- |
 | Location | Name of the block to which the alarm is assigned. |  | No |
 | Alarm name | Name of the alarm |  | No |
-| "Alarm text" - English (United States) / [en-US] / Event text | Event text of the alarm | The field designation contains a language ID. Alarm texts must be assigned a language ID for import.  An expression with a reference ID will be added to the text for S7-1500 if the alarm text has an associated value. Example: text <field ref="0" />. The associated value is assigned to an alarm text with the ID. | Yes |
+| "Alarm text" - English (United States) / [en-US] / Event text | Event text of the alarm | The field designation contains a language ID. Alarm texts must be assigned a language ID for import.  An expression with a reference ID will be added to the text for S7-1500 if the alarm text has an associated value. Example: text &lt;field ref="0" /&gt;. The associated value is assigned to an alarm text with the ID. | Yes |
 | "Info text" - English (United States) / [en-US] / Info text | Info text of the alarm | Yes |  |
 | "Additional text" - English (United States) / [en-US] / Additional text | Additional text of the alarm | Yes |  |
-| FieldInfo (for S7-1500 only) | Specifies whether the alarm text contains associated values. The settings are separated by a semicolon ";".   Example for associated values with S7-1500:  Tag: <ref id = 0; type = AlarmTag; Tag = Tag1; DisplayType = Decimal; Length = 5;>  Text list: <ref id = 1; type = CommonTextList; TextList = Textlist1; Tag = tag 2; Length = 5;> |  | No |
+| FieldInfo (for S7-1500 only) | Specifies whether the alarm text contains associated values. The settings are separated by a semicolon ";".   Example for associated values with S7-1500:  Tag: &lt;ref id = 0; type = AlarmTag; Tag = Tag1; DisplayType = Decimal; Length = 5;&gt;  Text list: &lt;ref id = 1; type = CommonTextList; TextList = Textlist1; Tag = tag 2; Length = 5;&gt; |  | No |
 
 #### Example for S7-300/400
 

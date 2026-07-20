@@ -64,7 +64,7 @@ To configure a trend view, follow these steps:
    ![Procedure](images/70509893131_DV_resource.Stream@PNG-de-DE.png)
 
    ![Procedure](images/70509893131_DV_resource.Stream@PNG-de-DE.png)
-2. Select the "Trend" category from the "Properties" group in the Inspector window and double-click "<Add>" in the "Name" column.
+2. Select the "Trend" category from the "Properties" group in the Inspector window and double-click "&lt;Add&gt;" in the "Name" column.
 
    ![Procedure](images/89643718667_DV_resource.Stream@PNG-en-US.png)
 
@@ -83,7 +83,7 @@ To configure a trend view, follow these steps:
 
 **Note**
 
-If you hold down the <CTRL> key and double-click the trend view, the trend view is activated. You set the column width and the position of the columns in the table header of the values table in active mode. In order to activate the trend view the zoom factor has to be set to 100 %.
+If you hold down the &lt;CTRL&gt; key and double-click the trend view, the trend view is activated. You set the column width and the position of the columns in the table header of the values table in active mode. In order to activate the trend view the zoom factor has to be set to 100 %.
 
 #### Result
 
@@ -206,7 +206,7 @@ You use a trend view to graphically represent values that a tag assumes during t
 To configure a trend view, follow these steps:
 
 1. Add the "Trend view" object from the toolbox in the "Controls" group to the screen.
-2. Select "Properties . Properties > Trend" in the Inspector window and double-click "Add" in the "Name" field. A new trend is created.
+2. Select "Properties . Properties &gt; Trend" in the Inspector window and double-click "Add" in the "Name" field. A new trend is created.
 3. If required, enter a unique name for the trend in the "Name" field.
 4. In the "Style" column, use the selection button to open the "Style" dialog and select the style of the line.
 5. Select the number of trend values in the "Trend values" column.
@@ -237,7 +237,7 @@ To configure a trend view, follow these steps:
 
 > **Note**
 >
-> If you hold down the <CTRL> key and double-click the trend view, the trend view is activated. You can set the column width and the position of the columns in active mode in the values table. In order to activate the trend view the zoom factor has to be set to 100 %.
+> If you hold down the &lt;CTRL&gt; key and double-click the trend view, the trend view is activated. You can set the column width and the position of the columns in active mode in the values table. In order to activate the trend view the zoom factor has to be set to 100 %.
 
 #### Result
 
@@ -270,7 +270,7 @@ At the end of a shift, for example, an operator wants information about the proc
 To configure a trend view to display values from a data log, follow these steps:
 
 1. Add the "Trend view" object from the toolbox in the "Controls" group to the screen.
-2. Select "Properties . Properties > Trend" in the Inspector window and double-click "Add" in the "Name" field. A new trend is created.
+2. Select "Properties . Properties &gt; Trend" in the Inspector window and double-click "Add" in the "Name" field. A new trend is created.
 3. If required, enter a unique name for the trend in the "Name" field.
 4. In the "Style" column, use the selection button to open the "Style" dialog and select the style of the line.
 5. In the "Trend type" column, select the trend type "Data log".
@@ -279,7 +279,7 @@ To configure a trend view to display values from a data log, follow these steps:
 
 **Note**
 
-If you hold down the <CTRL> key and double-click the trend view, the trend view is activated. You can set the column width and the position of the columns in active mode in the values table. In order to activate the trend view the zoom factor has to be set to 100 %.
+If you hold down the &lt;CTRL&gt; key and double-click the trend view, the trend view is activated. You can set the column width and the position of the columns in active mode in the values table. In order to activate the trend view the zoom factor has to be set to 100 %.
 
 #### Result
 
@@ -367,7 +367,7 @@ If the value needs to be processed using a different program, proceed as follows
 
 The storage location of a log can be a database or a file.
 
-The database is addressed by means of its "Data source name" (DSN). Select the database you want to use in WinCC from the Windows Start menu under "Settings > Control panel > ODBC Data Sources".
+The database is addressed by means of its "Data source name" (DSN). Select the database you want to use in WinCC from the Windows Start menu under "Settings &gt; Control panel &gt; ODBC Data Sources".
 
 To store log data, specify the DSN, rather than a directory name during configuration. With the DSN, you are referencing the database and the storage location.
 
@@ -444,11 +444,11 @@ Set ObjFileSystem = CreateObject("FileCtl.Filesystem")
 
 ' Write header into the new data log
 
-ObjFile.LinePrint(Chr(34)&"VarName"&Chr(34)&";"&Chr(34)&"TimeString"&Chr(34)&";"&Chr(34)&"VarValue"&Chr(34)&";"&Chr(34)&"Validity"&Chr(34)&";"&Chr(34)&"Time_ms"&Chr(34))
+ObjFile.LinePrint(Chr(34)&amp;"VarName"&amp;Chr(34)&amp;";"&amp;Chr(34)&amp;"TimeString"&amp;Chr(34)&amp;";"&amp;Chr(34)&amp;"VarValue"&amp;Chr(34)&amp;";"&amp;Chr(34)&amp;"Validity"&amp;Chr(34)&amp;";"&amp;Chr(34)&amp;"Time_ms"&amp;Chr(34))
 
-If Err.Number <> 0 Then
+If Err.Number &lt;&gt; 0 Then
 
-ShowSystemAlarm "Error: Cannot write to data log. " & Err.Number & " " & Err.Description
+ShowSystemAlarm "Error: Cannot write to data log. " &amp; Err.Number &amp; " " &amp; Err.Description
 
 Err.Clear
 
@@ -488,7 +488,7 @@ Dim Objx
 
 Objx = SmartTags("Input_X")(ObjIndex)
 
-ObjFile.LinePrint(Chr(34)&"Temp_x"&Chr(34)&";"&Chr(34)&"01.01.2010 00:00:00"&Chr(34)&";"&Objx&";1;"&ObjTimeStamp)
+ObjFile.LinePrint(Chr(34)&amp;"Temp_x"&amp;Chr(34)&amp;";"&amp;Chr(34)&amp;"01.01.2010 00:00:00"&amp;Chr(34)&amp;";"&amp;Objx&amp;";1;"&amp;ObjTimeStamp)
 
 ' Write y element to log
 
@@ -496,7 +496,7 @@ Dim Objy
 
 Objy = SmartTags("Input_Y")(ObjIndex)
 
-ObjFile.LinePrint(Chr(34)&"Temp_y"&Chr(34)&";"&Chr(34)&"01.01.2010 00:00:00"&Chr(34)&";"&Objy&";1;"&ObjTimeStamp)
+ObjFile.LinePrint(Chr(34)&amp;"Temp_y"&amp;Chr(34)&amp;";"&amp;Chr(34)&amp;"01.01.2010 00:00:00"&amp;Chr(34)&amp;";"&amp;Objy&amp;";1;"&amp;ObjTimeStamp)
 
 Next
 
@@ -506,7 +506,7 @@ Dim ObjLineCount
 
 ObjLineCount = 41
 
-ObjFile.LinePrint(Chr(34)&"$RT_COUNT$"&Chr(34)&";"&ObjLineCount&";;;;")
+ObjFile.LinePrint(Chr(34)&amp;"$RT_COUNT$"&amp;Chr(34)&amp;";"&amp;ObjLineCount&amp;";;;;")
 
 '###########################################################################
 
@@ -703,7 +703,7 @@ In a trend view, you display a trend curve with one of the following display typ
 - Interpolated
 - Stepped
 
-Select "Properties > Properties > Trend > Style" to configure the properties of the trend display in the Inspector window.
+Select "Properties &gt; Properties &gt; Trend &gt; Style" to configure the properties of the trend display in the Inspector window.
 
 ##### Dots
 
@@ -733,7 +733,7 @@ The following image shows the trend curve with the display form "Stepped":
 
 With the "Trend curve" option, you can specify where the current values for all trend windows are to be entered. Normally, the current values are written in the trend window from the right.
 
-You configure the "trend curve" in the Inspector window under "Properties > Properties > General > Display".
+You configure the "trend curve" in the Inspector window under "Properties &gt; Properties &gt; General &gt; Display".
 
 ---
 
@@ -783,9 +783,9 @@ Configure the time range for all controls. Configure the time range in the time 
 
 If you display several trends simultaneously in the trend view, assign each trend its own value and time axis. Alternatively, you can assign a shared time and/or value axis to several trends.
 
-You configure the axes of a trend view in the Inspector window under "Properties > Properties > Time axis / Value axis".
+You configure the axes of a trend view in the Inspector window under "Properties &gt; Properties &gt; Time axis / Value axis".
 
-The axes are assigned to the configured trends in the Inspector window under "Properties > Properties > Trends".
+The axes are assigned to the configured trends in the Inspector window under "Properties &gt; Properties &gt; Trends".
 
 ##### Representation Using Different Axes
 
@@ -880,9 +880,9 @@ To configure a trend view, follow these steps:
 1. Add the required trend view to the screen from the "Tools" task card.
 2. Configure the appearance of the trend view in the Inspector window:
 
-   - Configure the basic properties of the trend view, e.g. "Time base" or "Trend characteristic", under "Properties > Properties > General".
-   - Configure the appearance of the trend view under "Properties > Properties > Appearance".
-   - Configure the properties of the trend view in Runtime under "Properties > Properties > Window".
+   - Configure the basic properties of the trend view, e.g. "Time base" or "Trend characteristic", under "Properties &gt; Properties &gt; General".
+   - Configure the appearance of the trend view under "Properties &gt; Properties &gt; Appearance".
+   - Configure the properties of the trend view in Runtime under "Properties &gt; Properties &gt; Window".
 3. Configure additional diagrams, if required.
 4. Configure the axes of the trend view in the Inspector window.
 
@@ -943,7 +943,7 @@ The time axis is available only with the f(t) trend display.
 
 To configure the time axis of a trend view, follow these steps:
 
-1. Double-click "Add" in the Inspector window under "Properties > Properties > Time axis" to add a new time axis.
+1. Double-click "Add" in the Inspector window under "Properties &gt; Properties &gt; Time axis" to add a new time axis.
 2. Enter the "Name" and "Display name" of the time axis.
 3. Configure the "axis style".
 4. Select the "diagram" to which the time axis will be assigned.
@@ -1001,7 +1001,7 @@ In the f(x) trend view, the value axis corresponds to both the "X axis" and the 
 
 To configure the value axis of a trend view, follow these steps:
 
-1. Double-click "Add" in the Inspector window under "Properties > Properties > Value axis" to add a new value axis.
+1. Double-click "Add" in the Inspector window under "Properties &gt; Properties &gt; Value axis" to add a new value axis.
 2. Enter the "Name" and "Display name" of the value axis.
 3. Configure the "axis style".
 4. Select the "diagram" to which the value axis will be assigned.
@@ -1041,7 +1041,7 @@ The amount of each range proportion can be calculated from the total number of r
 
 Proceed as follows to subdivide a trend view into several diagrams:
 
-1. Double-click on "Add" under "Properties > Properties > Diagrams" in the Inspector window.
+1. Double-click on "Add" under "Properties &gt; Properties &gt; Diagrams" in the Inspector window.
 
    The diagram is added.
 2. Enter a meaningful "Name" for the diagram.
@@ -1076,7 +1076,7 @@ If you assign several trends to a trend view, the sequence of the trends in the 
 
 To add a trend, follow these steps:
 
-1. Double-click on "Add" under "Properties > Properties > Trends" in the Inspector window.
+1. Double-click on "Add" under "Properties &gt; Properties &gt; Trends" in the Inspector window.
 2. Enter a "label" for the trend.
 3. If required, configure the "style" of the trend.
 
@@ -1120,8 +1120,8 @@ Using the data source, you define the sources from which the values are displaye
 
 Proceed as follows to display current process values:
 
-1. Click "Properties > Properties > Value columns" in the Inspector window to define the data source for a table view.
-2. Click "Properties > Properties > Trends" in the Inspector window to define the data source for a trend view.
+1. Click "Properties &gt; Properties &gt; Value columns" in the Inspector window to define the data source for a table view.
+2. Click "Properties &gt; Properties &gt; Trends" in the Inspector window to define the data source for a trend view.
 3. Configure the "data source":
 
    - Select the entry "Tags" as "Source".
@@ -1133,8 +1133,8 @@ Proceed as follows to display current process values:
 
 Proceed as follows to display values from a log:
 
-1. Click "Properties > Properties > Value columns" in the Inspector window to define the data source for a table view.
-2. Click "Properties > Properties > Trends" in the Inspector window to define the data source for a trend view.
+1. Click "Properties &gt; Properties &gt; Value columns" in the Inspector window to define the data source for a table view.
+2. Click "Properties &gt; Properties &gt; Trends" in the Inspector window to define the data source for a trend view.
 3. Configure the "data source":
 
    - Select the entry "Logging tags" as "Source".
@@ -1147,7 +1147,7 @@ Output values from recipes in a f(x) trend view.
 
 Proceed as follows to display values from a recipe:
 
-1. In the Inspector window, configure the "data source" under "Properties > Properties > Trends":
+1. In the Inspector window, configure the "data source" under "Properties &gt; Properties &gt; Trends":
 
    - Select the entry "Recipe" as "Source".
    - Under "X values" and "Y values" select one recipe element each.
@@ -1158,7 +1158,7 @@ If you want to supply the trend values with data by means of scripts in Runtime,
 
 To create a connection using scripts in Runtime, proceed as follows:
 
-1. In the Inspector window, configure the "data source" under "Properties > Properties > Trends":
+1. In the Inspector window, configure the "data source" under "Properties &gt; Properties &gt; Trends":
 
    - Select the entry "User-defined" as "Source".
    - Connect the script via the API interface to the corresponding trend.
@@ -1194,8 +1194,8 @@ You operate the controls in Runtime using the buttons in the toolbar. The status
 
 Proceed as follows to configure the toolbar:
 
-1. In the Inspector window, configure the general properties of the toolbar, such as orientation and background color, under "Properties > Properties > Toolbar > Toolbar - General".
-2. In the Inspector window, activate the buttons you need in Runtime under "Properties > Properties > Toolbar > Toolbar - Buttons".
+1. In the Inspector window, configure the general properties of the toolbar, such as orientation and background color, under "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - General".
+2. In the Inspector window, activate the buttons you need in Runtime under "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - Buttons".
 
    For information on the functions of the individual buttons, refer to the description of the corresponding WinCC control at "Operation in Runtime".
 3. To set the order of the buttons, select the buttons in the list. You can then move the buttons to the desired position.
@@ -1209,8 +1209,8 @@ Proceed as follows to configure the toolbar:
 
 Proceed as follows to configure the status bar:
 
-1. In the Inspector window, configure the general properties of the status bar, such as orientation and background color, under "Properties > Properties > Status bar > Status bar - General".
-2. In the Inspector window, activate the elements you need in Runtime under "Properties > Properties > Status bar > Status bar - Elements".
+1. In the Inspector window, configure the general properties of the status bar, such as orientation and background color, under "Properties &gt; Properties &gt; Status bar &gt; Status bar - General".
+2. In the Inspector window, activate the elements you need in Runtime under "Properties &gt; Properties &gt; Status bar &gt; Status bar - Elements".
 
    For further information on status bar elements, refer to the descriptions of the corresponding WinCC control at "Operation in runtime".
 3. To set the order of the elements, select the element in the list. You can then move the element to the desired position.
@@ -1247,13 +1247,13 @@ The filename and location of the CSV file are set by the operator on export. Alt
 
 To configure the export of Runtime data, proceed as follows:
 
-1. In the Inspector window, open "Properties > Properties > Data export".
+1. In the Inspector window, open "Properties &gt; Properties &gt; Data export".
 
    The data export settings are already configured.
 2. If necessary, enter your own filename and a path for the export file.
 3. Select the "scope" of the data export.
 4. Configure the "Operation in Runtime".
-5. So that the operator can start the data export, activate "Properties > Properties > Toolbar > Toolbar - Buttons > Export Data" in the Inspector window.
+5. So that the operator can start the data export, activate "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - Buttons &gt; Export Data" in the Inspector window.
 
 ##### Result
 
@@ -1269,7 +1269,7 @@ In Runtime, the operator can export the data of the control via the toolbar.
 
 ##### Introduction
 
-In WinCC you configure the appearance and function of a control in Runtime. In addition, you can allow the operator to configure a control in Runtime. You can set whether changes to configuration in Runtime are retained, such as after a screen change, in the control under "Properties > Properties > Security > Persistence".
+In WinCC you configure the appearance and function of a control in Runtime. In addition, you can allow the operator to configure a control in Runtime. You can set whether changes to configuration in Runtime are retained, such as after a screen change, in the control under "Properties &gt; Properties &gt; Security &gt; Persistence".
 
 - No persistence
 
@@ -1294,7 +1294,7 @@ In WinCC you configure the appearance and function of a control in Runtime. In a
 
 To configure the persistence of data in Runtime, proceed as follows:
 
-1. In the Inspector window, open "Properties > Properties > Security".
+1. In the Inspector window, open "Properties &gt; Properties &gt; Security".
 2. Select "Online configuration".
 3. If needed, select the authorization.
 4. Select the "Behavior on screen change".
@@ -1410,9 +1410,9 @@ Proceed as follows to configure a table view:
 1. Add the required table view to the screen from the "Tools" task card.
 2. Configure the appearance of the table view in the Inspector window:
 
-   - Configure the basic properties of the table view, e.g. "Time base", under "Properties > Properties > General".
-   - Configure the appearance of the table view under "Properties > Properties > Appearance".
-   - Configure the properties of the table view in Runtime under "Properties > Properties > "Window".
+   - Configure the basic properties of the table view, e.g. "Time base", under "Properties &gt; Properties &gt; General".
+   - Configure the appearance of the table view under "Properties &gt; Properties &gt; Appearance".
+   - Configure the properties of the table view in Runtime under "Properties &gt; Properties &gt; "Window".
 3. Configure the columns of the table view in the Inspector window.
 
    - Configure the properties of the columns.
@@ -1476,7 +1476,7 @@ If you assign several time columns to a table view, the sequence of the time col
 
 To configure the time column of a table view, follow these steps:
 
-1. Click "Add" in the Inspector window under "Properties > Properties > Time columns" to add time columns.
+1. Click "Add" in the Inspector window under "Properties &gt; Properties &gt; Time columns" to add time columns.
 2. Enter the "Name" and "Label" of the time column.
 3. Configure the "Style" of the time column.
 4. Configure the "time range" and "format" of the time display of the time column.
@@ -1515,7 +1515,7 @@ If you assign several value columns to a table view, the sequence of the value c
 
 Proceed as follows to configure a value column:
 
-1. Double-click "Add" in the Inspector window under "Properties > Properties > Value columns" to add a new value column.
+1. Double-click "Add" in the Inspector window under "Properties &gt; Properties &gt; Value columns" to add a new value column.
 2. Enter the "Name" and "Label" of the value column.
 3. Configure the data source.
 4. Assign a time column to the value column.
@@ -1551,16 +1551,16 @@ You can adjust the appearance of the table elements to your needs.
 
 Proceed as follows to configure the colors of the table elements:
 
-1. Define the following properties in the Inspector window under "Properties > Properties > Table > Table - Header":
+1. Define the following properties in the Inspector window under "Properties &gt; Properties &gt; Table &gt; Table - Header":
 
    - Visibility of the column headers and row headers
    - Alignment of the column headers and row headers
    - Color design of column headers
-2. Define the following properties in the Inspector window under "Properties > Properties > Table > Table - Structure":
+2. Define the following properties in the Inspector window under "Properties &gt; Properties &gt; Table &gt; Table - Structure":
 
    - Color design of table content, such as different colors for rows for better differentiation
    - Visibility of empty columns and rows
-3. Define the following properties in the Inspector window under "Properties > Properties > Table > Table - Grid":
+3. Define the following properties in the Inspector window under "Properties &gt; Properties &gt; Table &gt; Table - Grid":
 
    - Design of grid lines
    - Character spacing in the table cells
@@ -1605,7 +1605,7 @@ If, for example, an operator wants to export values from a row, he must select t
 
 To configure the selection area, follow these steps:
 
-1. In the Inspector window, select the "type" of selection area under "Properties > Properties > Table > Table - Selection > Selection area".
+1. In the Inspector window, select the "type" of selection area under "Properties &gt; Properties &gt; Table &gt; Table - Selection &gt; Selection area".
 2. If needed, select the "frame" to be displayed around the selection area.
 3. Choose the colors for the "cells", "rows", and "frame" as needed.
 
@@ -1641,11 +1641,11 @@ Depending on the configuration, the operator can sort a table column as follows:
 
 To configure the sorting within a table, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > Table > Table - Sorting > Sort by column header", "Sort with double-click", or "Sort with click".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Table &gt; Table - Sorting &gt; Sort by column header", "Sort with double-click", or "Sort with click".
 2. Select the "Sorting order" option.
 3. If needed, activate "Display sorting icon" and "Display sorting index".
 4. If needed, activate "Display sorting button".
-5. If you use the sorting button, select "Properties > Properties > Window > Scroll > Vertical scrollbar > Always" in the Inspector window.
+5. If you use the sorting button, select "Properties &gt; Properties &gt; Window &gt; Scroll &gt; Vertical scrollbar &gt; Always" in the Inspector window.
 
 ##### Result
 
@@ -1672,8 +1672,8 @@ Using the data source, you define the sources from which the values are displaye
 
 Proceed as follows to display current process values:
 
-1. Click "Properties > Properties > Value columns" in the Inspector window to define the data source for a table view.
-2. Click "Properties > Properties > Trends" in the Inspector window to define the data source for a trend view.
+1. Click "Properties &gt; Properties &gt; Value columns" in the Inspector window to define the data source for a table view.
+2. Click "Properties &gt; Properties &gt; Trends" in the Inspector window to define the data source for a trend view.
 3. Configure the "data source":
 
    - Select the entry "Tags" as "Source".
@@ -1685,8 +1685,8 @@ Proceed as follows to display current process values:
 
 Proceed as follows to display values from a log:
 
-1. Click "Properties > Properties > Value columns" in the Inspector window to define the data source for a table view.
-2. Click "Properties > Properties > Trends" in the Inspector window to define the data source for a trend view.
+1. Click "Properties &gt; Properties &gt; Value columns" in the Inspector window to define the data source for a table view.
+2. Click "Properties &gt; Properties &gt; Trends" in the Inspector window to define the data source for a trend view.
 3. Configure the "data source":
 
    - Select the entry "Logging tags" as "Source".
@@ -1699,7 +1699,7 @@ Output values from recipes in a f(x) trend view.
 
 Proceed as follows to display values from a recipe:
 
-1. In the Inspector window, configure the "data source" under "Properties > Properties > Trends":
+1. In the Inspector window, configure the "data source" under "Properties &gt; Properties &gt; Trends":
 
    - Select the entry "Recipe" as "Source".
    - Under "X values" and "Y values" select one recipe element each.
@@ -1710,7 +1710,7 @@ If you want to supply the trend values with data by means of scripts in Runtime,
 
 To create a connection using scripts in Runtime, proceed as follows:
 
-1. In the Inspector window, configure the "data source" under "Properties > Properties > Trends":
+1. In the Inspector window, configure the "data source" under "Properties &gt; Properties &gt; Trends":
 
    - Select the entry "User-defined" as "Source".
    - Connect the script via the API interface to the corresponding trend.
@@ -1746,8 +1746,8 @@ You operate the controls in Runtime using the buttons in the toolbar. The status
 
 Proceed as follows to configure the toolbar:
 
-1. In the Inspector window, configure the general properties of the toolbar, such as orientation and background color, under "Properties > Properties > Toolbar > Toolbar - General".
-2. In the Inspector window, activate the buttons you need in Runtime under "Properties > Properties > Toolbar > Toolbar - Buttons".
+1. In the Inspector window, configure the general properties of the toolbar, such as orientation and background color, under "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - General".
+2. In the Inspector window, activate the buttons you need in Runtime under "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - Buttons".
 
    For information on the functions of the individual buttons, refer to the description of the corresponding WinCC control at "Operation in Runtime".
 3. To set the order of the buttons, select the buttons in the list. You can then move the buttons to the desired position.
@@ -1761,8 +1761,8 @@ Proceed as follows to configure the toolbar:
 
 Proceed as follows to configure the status bar:
 
-1. In the Inspector window, configure the general properties of the status bar, such as orientation and background color, under "Properties > Properties > Status bar > Status bar - General".
-2. In the Inspector window, activate the elements you need in Runtime under "Properties > Properties > Status bar > Status bar - Elements".
+1. In the Inspector window, configure the general properties of the status bar, such as orientation and background color, under "Properties &gt; Properties &gt; Status bar &gt; Status bar - General".
+2. In the Inspector window, activate the elements you need in Runtime under "Properties &gt; Properties &gt; Status bar &gt; Status bar - Elements".
 
    For further information on status bar elements, refer to the descriptions of the corresponding WinCC control at "Operation in runtime".
 3. To set the order of the elements, select the element in the list. You can then move the element to the desired position.
@@ -1799,13 +1799,13 @@ The filename and location of the CSV file are set by the operator on export. Alt
 
 To configure the export of Runtime data, proceed as follows:
 
-1. In the Inspector window, open "Properties > Properties > Data export".
+1. In the Inspector window, open "Properties &gt; Properties &gt; Data export".
 
    The data export settings are already configured.
 2. If necessary, enter your own filename and a path for the export file.
 3. Select the "scope" of the data export.
 4. Configure the "Operation in Runtime".
-5. So that the operator can start the data export, activate "Properties > Properties > Toolbar > Toolbar - Buttons > Export Data" in the Inspector window.
+5. So that the operator can start the data export, activate "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - Buttons &gt; Export Data" in the Inspector window.
 
 ##### Result
 
@@ -1821,7 +1821,7 @@ In Runtime, the operator can export the data of the control via the toolbar.
 
 ##### Introduction
 
-In WinCC you configure the appearance and function of a control in Runtime. In addition, you can allow the operator to configure a control in Runtime. You can set whether changes to configuration in Runtime are retained, such as after a screen change, in the control under "Properties > Properties > Security > Persistence".
+In WinCC you configure the appearance and function of a control in Runtime. In addition, you can allow the operator to configure a control in Runtime. You can set whether changes to configuration in Runtime are retained, such as after a screen change, in the control under "Properties &gt; Properties &gt; Security &gt; Persistence".
 
 - No persistence
 
@@ -1846,7 +1846,7 @@ In WinCC you configure the appearance and function of a control in Runtime. In a
 
 To configure the persistence of data in Runtime, proceed as follows:
 
-1. In the Inspector window, open "Properties > Properties > Security".
+1. In the Inspector window, open "Properties &gt; Properties &gt; Security".
 2. Select "Online configuration".
 3. If needed, select the authorization.
 4. Select the "Behavior on screen change".
@@ -2008,18 +2008,18 @@ The contents of the value table are shown in columns. The available columns depe
 Proceed as follows to configure a value table:
 
 1. Add the required table view to the screen from the "Tools" task card.
-2. Click "Properties > Properties > General > Data source" in the Inspector window to connect the value table to the selected control.
-3. Select the "mode" of the value table under "Properties > Properties > General".
-4. Configure the properties of the value table columns under "Properties > Properties > Blocks".
-5. Configure the "Properties > Properties > Columns":
+2. Click "Properties &gt; Properties &gt; General &gt; Data source" in the Inspector window to connect the value table to the selected control.
+3. Select the "mode" of the value table under "Properties &gt; Properties &gt; General".
+4. Configure the properties of the value table columns under "Properties &gt; Properties &gt; Blocks".
+5. Configure the "Properties &gt; Properties &gt; Columns":
 
    - Change the "Visibility", if required
    - Change the "Label", if required
    - If required, change the sequence of columns using "Up" and "Down"
 6. Configure the view of the value table in the Inspector window:
 
-   - Configure the view of the value table under "Properties > Properties > Appearance".
-   - Configure the properties of the value table in Runtime under "Properties > Properties > "Window".
+   - Configure the view of the value table under "Properties &gt; Properties &gt; Appearance".
+   - Configure the properties of the value table in Runtime under "Properties &gt; Properties &gt; "Window".
 
 ##### Result
 
@@ -2056,8 +2056,8 @@ You operate the controls in Runtime using the buttons in the toolbar. The status
 
 Proceed as follows to configure the toolbar:
 
-1. In the Inspector window, configure the general properties of the toolbar, such as orientation and background color, under "Properties > Properties > Toolbar > Toolbar - General".
-2. In the Inspector window, activate the buttons you need in Runtime under "Properties > Properties > Toolbar > Toolbar - Buttons".
+1. In the Inspector window, configure the general properties of the toolbar, such as orientation and background color, under "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - General".
+2. In the Inspector window, activate the buttons you need in Runtime under "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - Buttons".
 
    For information on the functions of the individual buttons, refer to the description of the corresponding WinCC control at "Operation in Runtime".
 3. To set the order of the buttons, select the buttons in the list. You can then move the buttons to the desired position.
@@ -2071,8 +2071,8 @@ Proceed as follows to configure the toolbar:
 
 Proceed as follows to configure the status bar:
 
-1. In the Inspector window, configure the general properties of the status bar, such as orientation and background color, under "Properties > Properties > Status bar > Status bar - General".
-2. In the Inspector window, activate the elements you need in Runtime under "Properties > Properties > Status bar > Status bar - Elements".
+1. In the Inspector window, configure the general properties of the status bar, such as orientation and background color, under "Properties &gt; Properties &gt; Status bar &gt; Status bar - General".
+2. In the Inspector window, activate the elements you need in Runtime under "Properties &gt; Properties &gt; Status bar &gt; Status bar - Elements".
 
    For further information on status bar elements, refer to the descriptions of the corresponding WinCC control at "Operation in runtime".
 3. To set the order of the elements, select the element in the list. You can then move the element to the desired position.
@@ -2101,16 +2101,16 @@ You can adjust the appearance of the table elements to your needs.
 
 Proceed as follows to configure the colors of the table elements:
 
-1. Define the following properties in the Inspector window under "Properties > Properties > Table > Table - Header":
+1. Define the following properties in the Inspector window under "Properties &gt; Properties &gt; Table &gt; Table - Header":
 
    - Visibility of the column headers and row headers
    - Alignment of the column headers and row headers
    - Color design of column headers
-2. Define the following properties in the Inspector window under "Properties > Properties > Table > Table - Structure":
+2. Define the following properties in the Inspector window under "Properties &gt; Properties &gt; Table &gt; Table - Structure":
 
    - Color design of table content, such as different colors for rows for better differentiation
    - Visibility of empty columns and rows
-3. Define the following properties in the Inspector window under "Properties > Properties > Table > Table - Grid":
+3. Define the following properties in the Inspector window under "Properties &gt; Properties &gt; Table &gt; Table - Grid":
 
    - Design of grid lines
    - Character spacing in the table cells
@@ -2152,11 +2152,11 @@ Depending on the configuration, the operator can sort a table column as follows:
 
 To configure the sorting within a table, follow these steps:
 
-1. In the Inspector window, select "Properties > Properties > Table > Table - Sorting > Sort by column header", "Sort with double-click", or "Sort with click".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Table &gt; Table - Sorting &gt; Sort by column header", "Sort with double-click", or "Sort with click".
 2. Select the "Sorting order" option.
 3. If needed, activate "Display sorting icon" and "Display sorting index".
 4. If needed, activate "Display sorting button".
-5. If you use the sorting button, select "Properties > Properties > Window > Scroll > Vertical scrollbar > Always" in the Inspector window.
+5. If you use the sorting button, select "Properties &gt; Properties &gt; Window &gt; Scroll &gt; Vertical scrollbar &gt; Always" in the Inspector window.
 
 ##### Result
 
@@ -2189,13 +2189,13 @@ The filename and location of the CSV file are set by the operator on export. Alt
 
 To configure the export of Runtime data, proceed as follows:
 
-1. In the Inspector window, open "Properties > Properties > Data export".
+1. In the Inspector window, open "Properties &gt; Properties &gt; Data export".
 
    The data export settings are already configured.
 2. If necessary, enter your own filename and a path for the export file.
 3. Select the "scope" of the data export.
 4. Configure the "Operation in Runtime".
-5. So that the operator can start the data export, activate "Properties > Properties > Toolbar > Toolbar - Buttons > Export Data" in the Inspector window.
+5. So that the operator can start the data export, activate "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - Buttons &gt; Export Data" in the Inspector window.
 
 ##### Result
 
@@ -2211,7 +2211,7 @@ In Runtime, the operator can export the data of the control via the toolbar.
 
 ##### Introduction
 
-In WinCC you configure the appearance and function of a control in Runtime. In addition, you can allow the operator to configure a control in Runtime. You can set whether changes to configuration in Runtime are retained, such as after a screen change, in the control under "Properties > Properties > Security > Persistence".
+In WinCC you configure the appearance and function of a control in Runtime. In addition, you can allow the operator to configure a control in Runtime. You can set whether changes to configuration in Runtime are retained, such as after a screen change, in the control under "Properties &gt; Properties &gt; Security &gt; Persistence".
 
 - No persistence
 
@@ -2236,7 +2236,7 @@ In WinCC you configure the appearance and function of a control in Runtime. In a
 
 To configure the persistence of data in Runtime, proceed as follows:
 
-1. In the Inspector window, open "Properties > Properties > Security".
+1. In the Inspector window, open "Properties &gt; Properties &gt; Security".
 2. Select "Online configuration".
 3. If needed, select the authorization.
 4. Select the "Behavior on screen change".
@@ -2271,7 +2271,7 @@ This section contains information on the following topics:
 
 You operate the trend and table view using the toolbar buttons.
 
-To operate a button via a script, transfer the "ID" of the button to the script. Use the symbols from the symbol library to label the button. The symbols are available in the "Tools > Graphics" task card under "WinCC graphic folder > Runtime control icons > Trend View".
+To operate a button via a script, transfer the "ID" of the button to the script. Use the symbols from the symbol library to label the button. The symbols are available in the "Tools &gt; Graphics" task card under "WinCC graphic folder &gt; Runtime control icons &gt; Trend View".
 
 ##### Buttons of the f(x) trend view
 
@@ -2283,9 +2283,9 @@ The table below shows the buttons that are available in the f(x) trend view:
 | ![Buttons of the f(x) trend view](images/23942155147_DV_resource.Stream@PNG-de-DE.png) | "Configuration dialog" | Opens the configuration dialog in which you can change the properties of the control | 2 |
 | ![Buttons of the f(x) trend view](images/23942162827_DV_resource.Stream@PNG-de-DE.png) | "Ruler" | Displays a ruler that shows the coordinates of the intersection point with a trend in the value table.   Requirement: The value table is configured with "Ruler window" display mode. | 3 |
 | ![Buttons of the f(x) trend view](images/33643902475_DV_resource.Stream@PNG-de-DE.png) | "Zoom area" | Zooms the trend view area. You define the area by dragging with the mouse.   Use the "Original view" button to return to the original view. | 4 |
-| ![Buttons of the f(x) trend view](images/102270138379_DV_resource.Stream@PNG-de-DE.png) | "Zoom +/-" | Zooms in or out of the trends in the trend view.   Left-click: Zoom in  <Shift + Left-click>: Zoom out  Use the "Original view" button to return to the original view. | 5 |
-| ![Buttons of the f(x) trend view](images/33643905803_DV_resource.Stream@PNG-de-DE.png) | "Zoom X axis + /-" | Zooms in or out on the time axis in the trend view.  Left-click: Zoom in  <Shift + Left-click>: Zoom out  Use the "Original view" button to return to the original view. | 6 |
-| ![Buttons of the f(x) trend view](images/33643909131_DV_resource.Stream@PNG-de-DE.png) | "Zoom Y axis +/-" | Zooms in or out on the value axis in the trend view.  Left-click: Zoom in  <Shift + Left-click>: Zoom out  Use the "Original view" button to return to the original view. | 7 |
+| ![Buttons of the f(x) trend view](images/102270138379_DV_resource.Stream@PNG-de-DE.png) | "Zoom +/-" | Zooms in or out of the trends in the trend view.   Left-click: Zoom in  &lt;Shift + Left-click&gt;: Zoom out  Use the "Original view" button to return to the original view. | 5 |
+| ![Buttons of the f(x) trend view](images/33643905803_DV_resource.Stream@PNG-de-DE.png) | "Zoom X axis + /-" | Zooms in or out on the time axis in the trend view.  Left-click: Zoom in  &lt;Shift + Left-click&gt;: Zoom out  Use the "Original view" button to return to the original view. | 6 |
+| ![Buttons of the f(x) trend view](images/33643909131_DV_resource.Stream@PNG-de-DE.png) | "Zoom Y axis +/-" | Zooms in or out on the value axis in the trend view.  Left-click: Zoom in  &lt;Shift + Left-click&gt;: Zoom out  Use the "Original view" button to return to the original view. | 7 |
 | ![Buttons of the f(x) trend view](images/33643912459_DV_resource.Stream@PNG-de-DE.png) | "Move trend area" | Moves the trend along the value axis and the time axis | 8 |
 | ![Buttons of the f(x) trend view](images/33643992587_DV_resource.Stream@PNG-de-DE.png) | "Move axis range" | Moves the trend along the value axis | 9 |
 | ![Buttons of the f(x) trend view](images/23980203659_DV_resource.Stream@PNG-de-DE.png) | "Original view" | Returns to the original view from the zoomed display | 10 |
@@ -2316,9 +2316,9 @@ The table below shows the buttons that are available in the f(t) trend view:
 | ![Buttons of f(t) trend view](images/102411288715_DV_resource.Stream@PNG-de-DE.png) | "Last data record" | Displays the course of a tag within a specified period ending with the last archived value.  Requirement: Values come from a process value archive. | 6 |
 | ![Buttons of f(t) trend view](images/23942162827_DV_resource.Stream@PNG-de-DE.png) | "Ruler" | Displays a ruler that shows the coordinates of the intersection point with a trend in the value table.  Requirement: The value table is configured with "Ruler window" display mode. | 7 |
 | ![Buttons of f(t) trend view](images/33643902475_DV_resource.Stream@PNG-de-DE.png) | "Zoom area" | Zooms the trend view area. You define the area by dragging with the mouse.  Use the "Original view" button to return to the original view. | 8 |
-| ![Buttons of f(t) trend view](images/102270138379_DV_resource.Stream@PNG-de-DE.png) | "Zoom +/-" | Zooms in or out of the trends in the trend view.  Left-click: Zoom in  <Shift + Left-click>: Zoom out  Use the "Original view" button to return to the original view. | 9 |
-| ![Buttons of f(t) trend view](images/33643905803_DV_resource.Stream@PNG-de-DE.png) | "Zoom time axis +/-" | Zooms in or out on the time axis in the trend view.  Left-click: Zoom in  <Shift + Left-click>: Zoom out  Use the "Original view" button to return to the original view. | 10 |
-| ![Buttons of f(t) trend view](images/33643909131_DV_resource.Stream@PNG-de-DE.png) | "Zoom value axis +/-" | Zooms in or out on the value axis in the trend view.  Left-click: Zoom in  <Shift + Left-click>: Zoom out  Use the "Original view" button to return to the original view. | 11 |
+| ![Buttons of f(t) trend view](images/102270138379_DV_resource.Stream@PNG-de-DE.png) | "Zoom +/-" | Zooms in or out of the trends in the trend view.  Left-click: Zoom in  &lt;Shift + Left-click&gt;: Zoom out  Use the "Original view" button to return to the original view. | 9 |
+| ![Buttons of f(t) trend view](images/33643905803_DV_resource.Stream@PNG-de-DE.png) | "Zoom time axis +/-" | Zooms in or out on the time axis in the trend view.  Left-click: Zoom in  &lt;Shift + Left-click&gt;: Zoom out  Use the "Original view" button to return to the original view. | 10 |
+| ![Buttons of f(t) trend view](images/33643909131_DV_resource.Stream@PNG-de-DE.png) | "Zoom value axis +/-" | Zooms in or out on the value axis in the trend view.  Left-click: Zoom in  &lt;Shift + Left-click&gt;: Zoom out  Use the "Original view" button to return to the original view. | 11 |
 | ![Buttons of f(t) trend view](images/33643912459_DV_resource.Stream@PNG-de-DE.png) | "Move trend area" | Moves the trend along the value axis and the time axis | 12 |
 | ![Buttons of f(t) trend view](images/33643992587_DV_resource.Stream@PNG-de-DE.png) | "Move axis range" | Moves the trend along the value axis | 13 |
 | ![Buttons of f(t) trend view](images/23980203659_DV_resource.Stream@PNG-de-DE.png) | "Original view" | Returns to the original view from the zoomed display | 14 |
@@ -2420,8 +2420,8 @@ The configuration dialog is opened. You can change the table appearance, for exa
 >
 > If you want to print a defined time range, make sure that the following options in the configuration dialog are deactivated:
 >
-> - "Time axes > Update"
-> - "General > Open screen > Launch update".
+> - "Time axes &gt; Update"
+> - "General &gt; Open screen &gt; Launch update".
 
 ###### Changing the data connection
 
@@ -2528,7 +2528,7 @@ Proceed as follows to zoom in or out on a trend:
 
    The updated display is stopped.
 2. To zoom in on a trend, click on the trend with the left mouse button.
-3. To zoom out on a trend, hold down the <Shift> key and click on the trend with the left mouse button.
+3. To zoom out on a trend, hold down the &lt;Shift&gt; key and click on the trend with the left mouse button.
 4. To return to the original view of the trend, click ![Zooming in or out on trends](images/23980203659_DV_resource.Stream@PNG-de-DE.png).
 5. Click on ![Zooming in or out on trends](images/102411248779_DV_resource.Stream@PNG-de-DE.png) to start the update again.
 
@@ -2551,7 +2551,7 @@ Proceed as follows to zoom the time axis or value axis:
 
    The updated display is stopped.
 3. To zoom in on an axis, click on the trend view with the left mouse button.
-4. To zoom out on an axis, hold down the <Shift> key and click on the trend view with the left mouse button.
+4. To zoom out on an axis, hold down the &lt;Shift&gt; key and click on the trend view with the left mouse button.
 5. To return to the original view of the trend, click ![Zooming in on the time axis or value axis](images/23980203659_DV_resource.Stream@PNG-de-DE.png).
 6. Click on ![Zooming in on the time axis or value axis](images/102411248779_DV_resource.Stream@PNG-de-DE.png) to start the update again.
 

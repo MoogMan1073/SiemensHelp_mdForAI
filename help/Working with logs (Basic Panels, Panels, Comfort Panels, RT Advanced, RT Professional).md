@@ -150,15 +150,15 @@ When you configure a log in WinCC, the available storage locations depend on the
 
 Storage card storage location:
 
-- <\Storage Card MMC\My_Archives\TagLogs>: Saves the archive on the MMC storage card to the subdirectory "My_Archives\TagLogs".
+- &lt;\Storage Card MMC\My_Archives\TagLogs&gt;: Saves the archive on the MMC storage card to the subdirectory "My_Archives\TagLogs".
 
 Local file system storage location:
 
-- <C:\My_File_Folder\My_Archives\Machine_1>: Saves the log on the local hard disk drive C: in the subdirectory "My_File_Folder\My_Archives\Machine_1"
+- &lt;C:\My_File_Folder\My_Archives\Machine_1&gt;: Saves the log on the local hard disk drive C: in the subdirectory "My_File_Folder\My_Archives\Machine_1"
 
 Network drive storage location:
 
-- <\\ArchiveServer\My_File_Folder\My_Archives\Machine_1>: Saves the archive on the "ArchiveServer" server to the subdirectory "My_File_Folder\My_Archives\Machine_1".
+- &lt;\\ArchiveServer\My_File_Folder\My_Archives\Machine_1&gt;: Saves the archive on the "ArchiveServer" server to the subdirectory "My_File_Folder\My_Archives\Machine_1".
 
 #### Naming conventions
 
@@ -168,7 +168,7 @@ The log names must be unambiguous in a project. The name of a log must always be
 >
 > The characters which can be used in the name of the data source depend on the storage location.
 >
-> The \ / * ? : " < > | characters are not allowed at the following locations:
+> The \ / * ? : " &lt; &gt; | characters are not allowed at the following locations:
 >
 > - File - RDB
 > - File - CSV (ASCII)
@@ -192,7 +192,7 @@ If you want to read or evaluate logged data without using WinCC Runtime, use the
 
 > **Note**
 >
-> Double quotation marks or multiple characters are not permitted as list separators for the "CSV file" storage location. You can find the settings for list separators under "Start > Settings > Control Panel > Regional and Language Options".
+> Double quotation marks or multiple characters are not permitted as list separators for the "CSV file" storage location. You can find the settings for list separators under "Start &gt; Settings &gt; Control Panel &gt; Regional and Language Options".
 
 > **Note**
 >
@@ -276,7 +276,7 @@ All three log types can be broken down into individual segments. Segmenting can 
 There are two types of logs available for data logs:
 
 - Fast data log  
-  This type of log is used to log process data that change rapidly with a cycle time <= 1 min.
+  This type of log is used to log process data that change rapidly with a cycle time &lt;= 1 min.
 - Slow data logs  
   This type of log is used to log all process data not covered by the "Fast data log" type. In the configuration, you can specify several parameters to define the tag values to be saved in a certain type of log.
 
@@ -294,7 +294,7 @@ The alarm log settings are independent of the data log settings.
 
 #### Introduction
 
-You can configure the basic properties of logs in Runtime Professional, such as the segment size, in the "Runtime settings > Logging" dialog. The settings configured in this dialog apply to all the logs in the project.
+You can configure the basic properties of logs in Runtime Professional, such as the segment size, in the "Runtime settings &gt; Logging" dialog. The settings configured in this dialog apply to all the logs in the project.
 
 You configure the special properties for the individual log types either directly in the table of the respective editor or in the log properties of the Inspector window.
 

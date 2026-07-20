@@ -54,19 +54,19 @@ You can also continue to use projects from previous versions of the TIA Portal. 
 >
 > Migration of complete systems:
 >
-> <http://support.automation.siemens.com/WW/view/en/83558085>
+> [http://support.automation.siemens.com/WW/view/en/83558085](http://support.automation.siemens.com/WW/view/en/83558085)
 >
 > Migration of controllers:
 >
-> <http://support.automation.siemens.com/WW/view/en/83557459>
+> [http://support.automation.siemens.com/WW/view/en/83557459](http://support.automation.siemens.com/WW/view/en/83557459)
 >
 > Migration of visualization:
 >
-> <http://support.automation.siemens.com/WW/view/en/76878921>
+> [http://support.automation.siemens.com/WW/view/en/76878921](http://support.automation.siemens.com/WW/view/en/76878921)
 >
 > Migration of communication:
 >
-> <http://support.automation.siemens.com/WW/view/en/83558087>
+> [http://support.automation.siemens.com/WW/view/en/83558087](http://support.automation.siemens.com/WW/view/en/83558087)
 >
 > If you need further support, please contact SIMATIC Customer Support.
 
@@ -123,7 +123,7 @@ The migration process is divided into the following basic steps:
    Perform the migration within the TIA Portal. For the migration, specify as source either the migration file which you created with the migration tool or the initial project when all required software has been installed.
 3. Checking the migration log
 
-   A migration log is created for each migration. It contains information about modified project parts. You can call the log under "Common data > Logs" in the project tree or in the project history. After completion of the migration, the migration log will be displayed in the TIA Portal. Check the log following completion of the migration.
+   A migration log is created for each migration. It contains information about modified project parts. You can call the log under "Common data &gt; Logs" in the project tree or in the project history. After completion of the migration, the migration log will be displayed in the TIA Portal. Check the log following completion of the migration.
 
    If the migration failed, an XML file is created as a log under "\Logs" in the project directory. You can use any XML editor to open this log and view the reasons why the migration failed.
 4. Correcting the migrated project
@@ -232,7 +232,7 @@ If you are certain that the hardware used in the initial project has a correspon
 
 ##### Starting the migration tool
 
-During the installation, a "Migration to TIA Portal V19" shortcut is created by default in the Start menu under "Siemens Automation > Migration Tool". Click this shortcut.
+During the installation, a "Migration to TIA Portal V19" shortcut is created by default in the Start menu under "Siemens Automation &gt; Migration Tool". Click this shortcut.
 
 Alternatively, you can call the migration tool directly in Windows Explorer. During the installation, the migration tool is saved by default in one of the following folders:
 
@@ -382,7 +382,7 @@ A log is created for each successful migration. The log contains the following i
 
 To display the log file of the migration, follow these steps:
 
-1. Open the "Common data > Logs" folder in the project tree.
+1. Open the "Common data &gt; Logs" folder in the project tree.
 2. Double-click the desired log in the list.
 
    The contents of the log are displayed in the work area.

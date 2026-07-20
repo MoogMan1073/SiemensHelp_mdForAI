@@ -53,7 +53,7 @@ Note the following when using PID_Temp on a CPU 1500 with firmware version V1.7:
 - The integrated dead zone in PID_Temp must not be used on CPU 1500 V1.7.
 
   Do not change the preset 0.0 of the associated parameters Retain.CtrlParams.Heat.DeadZone and Retain.CtrlParams.Cool.DeadZone.
-- If the cooling output is active (PidOutputSum < 0.0, OutputCool <> 0.0) for a closed loop controller with active cooling and PID parameter switchover (Config.ActivateCooling = TRUE, Config.AdvancedCooling = TRUE) while "Pretuning cooling" is started (Mode = 1, Heat.EnableTuning = FALSE, Cool.EnableTuning = TRUE), aborts with error ErrorBits = 16#0040_0000.
+- If the cooling output is active (PidOutputSum &lt; 0.0, OutputCool &lt;&gt; 0.0) for a closed loop controller with active cooling and PID parameter switchover (Config.ActivateCooling = TRUE, Config.AdvancedCooling = TRUE) while "Pretuning cooling" is started (Mode = 1, Heat.EnableTuning = FALSE, Cool.EnableTuning = TRUE), aborts with error ErrorBits = 16#0040_0000.
 
   - In this case use "Fine tuning cooling" (Mode = 2, Heat.EnableTuning = FALSE, Cool.EnableTuning = TRUE)
 

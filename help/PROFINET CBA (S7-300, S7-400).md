@@ -18,8 +18,6 @@ This section contains information on the following topics:
 
 ## Information regarding PN_IN, PN_OUT, and PN_DP (S7-300, S7-400)
 
-### 
-
 > **Note**
 >
 > By default, the operating system updates both the PROFINET CBA component as well as the DP interconnections at the cycle control point. If, however, you have disabled these automatic updates in the configuration (for example to improve the time response of the CPU), you will have to perform the updates yourself. This is done by calling the "[PN_IN](#pn_in-update-the-inputs-of-the-user-program-interface-s7-300-s7-400)", "[PN_OUT](#pn_out-update-the-outputs-of-the-user-program-interface-s7-300-s7-400)" and "[PN_DP](#pn_dp-update-dp-interconnections-s7-300-s7-400)" instructions at appropriate times. These updates can only be disabled as a group and not individually in the configuration.

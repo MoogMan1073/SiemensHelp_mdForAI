@@ -106,9 +106,9 @@ To find out which version of Node.js you are using, follow these steps:
 
    The path may differ depending on the installation settings.
 3. Open the shortcut menu of the file: "node.exe".
-4. You can find the version used under "Details > Product version".
+4. You can find the version used under "Details &gt; Product version".
 
-An overview of the functions that can be used in the individual versions of Node.js can be found under: <https://node.green/>.
+An overview of the functions that can be used in the individual versions of Node.js can be found under: [https://node.green/](https://node.green/).
 
 ### Scripts in WinCC
 
@@ -171,11 +171,11 @@ Tips and tricks in SiePortal: [Tips and tricks for scripting (JavaScript)](https
 Find and replace functions are available in a script.
 
 1. To find strings that appear in a script or in the global definition range, use the global search in the project.
-2. To open the "Find and replace" function, use menu "Edit > Search in project".
+2. To open the "Find and replace" function, use menu "Edit &gt; Search in project".
 
    - or -
 
-   Press <Ctrl> + <F>.
+   Press &lt;Ctrl&gt; + &lt;F&gt;.
 
    ![Global search in scripts](images/160682782731_DV_resource.Stream@PNG-en-US.png)
 
@@ -384,7 +384,7 @@ getPromise()
 
 .catch();
 
-The functions of the `Promise` objects are executed in the order p1 > p2 > p3 and the "catch" method is called in case of error. All tags of the calling function are also available in the internal functions.
+The functions of the `Promise` objects are executed in the order p1 &gt; p2 &gt; p3 and the "catch" method is called in case of error. All tags of the calling function are also available in the internal functions.
 
 ### Support for errors (RT Unified)
 
@@ -524,12 +524,12 @@ The "Scripts" editor can be opened in the following execution contexts:
   You open the "Scripts" editor via the project tree by double-clicking a script.
 - Local scripts which are triggered by events ("Images" editor and Scheduler)
 
-  The "Scripts" editor is opened in the Inspector window under "Properties > Events" as soon as you have selected an event and selected the ![Figure](images/151911935115_DV_resource.Stream@PNG-de-DE.png) "Convert function list to script" button.
+  The "Scripts" editor is opened in the Inspector window under "Properties &gt; Events" as soon as you have selected an event and selected the ![Figure](images/151911935115_DV_resource.Stream@PNG-de-DE.png) "Convert function list to script" button.
 
-  Additional local scripts which are triggered by events can be triggered for each property under "Properties > Properties" for the events "Change" and "Quality code change".
+  Additional local scripts which are triggered by events can be triggered for each property under "Properties &gt; Properties" for the events "Change" and "Quality code change".
 - Local scripts for dynamizing object properties
 
-  The "Scripts" editor is opened in the Inspector window under "Properties > Properties" as soon as you select the "Scripts" entry in the "Dynamization" column.
+  The "Scripts" editor is opened in the Inspector window under "Properties &gt; Properties" as soon as you select the "Scripts" entry in the "Dynamization" column.
 
 #### Different representation formats
 
@@ -642,11 +642,11 @@ While you compose the code, additional information about all objects of the WinC
 
 Autocomplete supports you in entering your code. Suitable objects of the WinCC Unified object model are displayed.
 
-You call up autocomplete using the shortcut <Ctrl + I> or <Ctrl + Spacebar>.
+You call up autocomplete using the shortcut &lt;Ctrl + I&gt; or &lt;Ctrl + Spacebar&gt;.
 
-#### <Ctrl+J>
+#### &lt;Ctrl+J&gt;
 
-The object selection can be called context-specifically by using the shortcut <Ctrl+J>. For example, you select screens, screen objects, tags, or graphics.
+The object selection can be called context-specifically by using the shortcut &lt;Ctrl+J&gt;. For example, you select screens, screen objects, tags, or graphics.
 
 #### Error marking and correction
 
@@ -659,7 +659,7 @@ Errors can occur during compiling or during compiling and loading:
   - To get a tooltip, move the cursor over the marking.
 - Errors during compiling and loading
 
-  Alarms during the compiling and loading of a project are displayed in the Inspector window in the "Info > Compile" tab.
+  Alarms during the compiling and loading of a project are displayed in the Inspector window in the "Info &gt; Compile" tab.
 
   The "Scripts" editor supports you by displaying faulty scripts directly for editing:
 
@@ -772,7 +772,7 @@ To configure a script to an event, follow these steps:
 
 1. Open the relevant editor.
 2. Select the object.
-3. Select the event under "Properties > Events" in the Inspector window.
+3. Select the event under "Properties &gt; Events" in the Inspector window.
 4. Generate the local script.
 5. Write the code.
 6. Perform a syntax check.
@@ -804,7 +804,7 @@ To configure a script to an event, follow these steps:
 
 1. Open the editor of the object in question.
 2. Select the object.
-3. Select the desired object property under "Properties > Properties" in the Inspector window.
+3. Select the desired object property under "Properties &gt; Properties" in the Inspector window.
 4. Dynamize the object property:
 
    - Select the "Script" entry in the "Dynamization" column.
@@ -1078,14 +1078,14 @@ The global functions for generating sine and sawtooth waves use 5 parameters:
 
    Use the source codes from the following sections for the functions:
 
-   - "Example code > Simulate sine wave (global script)"
-   - "Example code > Simulate sawtooth wave (global script)"
+   - "Example code &gt; Simulate sine wave (global script)"
+   - "Example code &gt; Simulate sawtooth wave (global script)"
 3. Create a script for the "Loaded" event for the screen.
 4. Go to the "Global definition" view of the event.
-5. Insert the sample code under "Sample code > Event - Global definition area" in the "Global definition" view of the event.
+5. Insert the sample code under "Sample code &gt; Event - Global definition area" in the "Global definition" view of the event.
 6. If necessary, adapt the copied sample code to your project. For example, if you use more than 2 tags, you must add more lines with the function `ts.Add(...)`.
 7. Go back to the "Function" view of the event.
-8. Insert the source code from "Example code > Event".
+8. Insert the source code from "Example code &gt; Event".
 
 The tags HMI_Tag_1 and HMI_Tag_2 can now be connected to any objects in the screen that can display the values, such as:
 
@@ -1476,7 +1476,7 @@ setOutputFormat(outputFormats[index]);
 
 function setOutputFormat(format) {
 
-for(let i = minScreenItemIndex; i <= maxScreenItemIndex; i++) {
+for(let i = minScreenItemIndex; i &lt;= maxScreenItemIndex; i++) {
 
 let name = screenItemNameBase + i;
 
@@ -1732,7 +1732,7 @@ The example shows how single and multiple bits are masked and set with JavaScrip
 >
 > The methods of the "`Math.Uint64`" object work with all integer data types.
 >
-> - For values < 2<sup>31</sup> use the standard methods of JavaScript.
+> - For values &lt; 2<sup>31</sup> use the standard methods of JavaScript.
 > - For values ≥ 2<sup>31</sup> use `BigInt` of the standard model or the methods of the `Math.Uint64` object.
 >
 > `BigInt` of the standard model is used in the following examples.
@@ -1777,9 +1777,9 @@ const tag1 = Tags('HMI_Tag_1');
 
 const bitNum = 37;
 
-tag1.SetBit(bitNum).then(() => {HMIRuntime.Trace('SetBit succeeded');})
+tag1.SetBit(bitNum).then(() =&gt; {HMIRuntime.Trace('SetBit succeeded');})
 
-.catch((e) => {HMIRuntime.Trace(`SetBit failed, error=${e}`);});
+.catch((e) =&gt; {HMIRuntime.Trace(`SetBit failed, error=${e}`);});
 
 }
 
@@ -1839,7 +1839,7 @@ if(tag1.LastError != 0) {
 
 HMIRuntime.Trace(`Read failed, error=${tag1.LastError}`);
 
-} else if((tag1.QualityCode & 0x80) == 0) {
+} else if((tag1.QualityCode &amp; 0x80) == 0) {
 
 // Check whether QC is 'good' or 'good cascade'
 
@@ -1857,9 +1857,9 @@ newValue |= mask; // Set bits
 
 const ts = Tags.CreateTagSet([[tag1.Name, newValue]]);
 
-ts.WriteAsync().then(()=>{HMIRuntime.Trace('Write succeeded')})
+ts.WriteAsync().then(()=&gt;{HMIRuntime.Trace('Write succeeded')})
 
-.catch((e)=>{HMIRuntime.Trace(`Write failed, error=${e}`)});
+.catch((e)=&gt;{HMIRuntime.Trace(`Write failed, error=${e}`)});
 
 }
 
@@ -1889,7 +1889,7 @@ if(tag1.LastError != 0) {
 
 HMIRuntime.Trace(`Read failed, error=${tag1.LastError}`);
 
-} else if((tag1.QualityCode & 0x80) == 0) {
+} else if((tag1.QualityCode &amp; 0x80) == 0) {
 
 // Check whether QC is 'good' or 'good cascade'
 
@@ -1903,13 +1903,13 @@ HMIRuntime.Trace(
 
 let newValue = BigInt(tag1.Value);
 
-newValue &= mask; // Delete bits
+newValue &amp;= mask; // Delete bits
 
 const ts = Tags.CreateTagSet([[tag1.Name, newValue]]);
 
-ts.WriteAsync().then(()=>{HMIRuntime.Trace('Write succeeded')})
+ts.WriteAsync().then(()=&gt;{HMIRuntime.Trace('Write succeeded')})
 
-.catch((e)=>{HMIRuntime.Trace(`Write failed, error=${e}`)});
+.catch((e)=&gt;{HMIRuntime.Trace(`Write failed, error=${e}`)});
 
 }
 
@@ -1935,7 +1935,7 @@ if(tag1.LastError != 0) {
 
 HMIRuntime.Trace(`Read failed, error=${tag1.LastError}`);
 
-} else if((tag1.QualityCode & 0x80) == 0) {
+} else if((tag1.QualityCode &amp; 0x80) == 0) {
 
 // Check whether QC is 'good' or 'good cascade'
 
@@ -1953,9 +1953,9 @@ newValue ^=mask;
 
 const ts = Tags.CreateTagSet([[tag1.Name, newValue]]);
 
-ts.WriteAsync().then(()=>{HMIRuntime.Trace('Write succeeded')})
+ts.WriteAsync().then(()=&gt;{HMIRuntime.Trace('Write succeeded')})
 
-.catch((e)=>{HMIRuntime.Trace(`Write failed, error=${e}`)});
+.catch((e)=&gt;{HMIRuntime.Trace(`Write failed, error=${e}`)});
 
 }
 
@@ -2319,19 +2319,19 @@ The system functions "CreateSystemInformation", "CreateSystemAlarm" and "CreateO
 
 | ![Introduction](images/101804624523_DV_resource.Stream@PNG-de-DE.png) | Tips for working efficiently |
 | --- | --- |
-| You can find the following snippets for the system function "CreateSystemInformation" in the shortcut menu of the "Scripts" editor under "Snippets > HMI Runtime > Alarming":  - "CreateSystemInformation with monolingual Alarm Text" - "CreateSystemInformation with multilingual Alarm Text and Parameter Value" - "CreateSystemInformation with multilingual Alarm Text and embedded Text List" |  |
+| You can find the following snippets for the system function "CreateSystemInformation" in the shortcut menu of the "Scripts" editor under "Snippets &gt; HMI Runtime &gt; Alarming":  - "CreateSystemInformation with monolingual Alarm Text" - "CreateSystemInformation with multilingual Alarm Text and Parameter Value" - "CreateSystemInformation with multilingual Alarm Text and embedded Text List" |  |
 
 #### Executing an example
 
 1. Create multiple project languages. One of the languages is English.
-2. Activate the desired project languages in the Runtime settings of the HMI device under "Language & Font".
+2. Activate the desired project languages in the Runtime settings of the HMI device under "Language &amp; Font".
 3. Create a text list "Text_list_3" of the type "Value/Area".
 4. Create an entry in the text list.
 5. Set the value to "1".
 6. Specify the English text: "Parameter value 1: @1%s@".  
    "Parameter value 1 :" can be displayed in multiple languages.  
    "@1%s@" is the reference to the parameter "AlarmParameterValue1". "1" indicates the number and "s" the data type. The data type is String.
-7. You can define the text for additional languages under "Properties > Texts" in the Inspector window.
+7. You can define the text for additional languages under "Properties &gt; Texts" in the Inspector window.
 8. Create a text list "Text_list_1" of the type "Value/Area".
 9. Create an entry in the text list.
 10. Set the value to "1".
@@ -2343,7 +2343,7 @@ The system functions "CreateSystemInformation", "CreateSystemAlarm" and "CreateO
 13. Create an entry in the text list.
 14. Set the value to "1".
 15. Specify the English text: "MyText".
-16. You can define the text for additional languages under "Properties > Texts" in the Inspector window.
+16. You can define the text for additional languages under "Properties &gt; Texts" in the Inspector window.
 17. Configuring the buttons "Button_1" and "Button_2".
 18. Configure an alarm control.
 19. Configure the alarm control so that current alarms of the alarm class "SystemAlarm" are displayed.
@@ -2598,7 +2598,7 @@ Application example: The system contains a motor that is controlled with a PLC. 
    - Tag: "PLC_State_Tag"
    - Value: "0" (data type "Int")
 7. Select the screen window.
-8. Under "Properties > Properties > General" in the Inspector window, select the "Screen" property.
+8. Under "Properties &gt; Properties &gt; General" in the Inspector window, select the "Screen" property.
 9. In the "Dynamization" column, select the "Script" option.
 10. Add a trigger.
 11. Select "PLC_State_Tag" as the trigger tag.
@@ -2792,7 +2792,7 @@ You export alarms as trace logs in the following formats:
 
 #### Procedure
 
-1. Open the settings via "Tools > Settings".
+1. Open the settings via "Tools &gt; Settings".
 2. Open the category "External applications".
 3. Double-click in the first empty line.
 
@@ -2802,7 +2802,7 @@ You export alarms as trace logs in the following formats:
 6. Leave the fields "Arguments" and "Start in" empty.
 7. Click "Add" and then close the "Settings" dialog.
 
-The application is now available via the menu "Tools > External applications".
+The application is now available via the menu "Tools &gt; External applications".
 
 ### Tracing with the RTIL Trace Viewer (RT Unified)
 
@@ -2822,20 +2822,20 @@ The "Trace Viewer" are located in the following path:
 #### Procedure
 
 1. Carry out an action in the simulation which starts a JavaScript function.
-2. Filter by the trace messages "Subsystem > ScriptFW".
+2. Filter by the trace messages "Subsystem &gt; ScriptFW".
 3. Define additional filter criteria if required.
 4. Evaluate trace messages if actions in the simulation lead to errors.
 
 **Note**
 
-As long as no JavaScript function was executed in the simulation during the runtime of the Trace Viewer, the entry "ScriptFW" is missing in the "Filter > Subsystem" menu.
+As long as no JavaScript function was executed in the simulation during the runtime of the Trace Viewer, the entry "ScriptFW" is missing in the "Filter &gt; Subsystem" menu.
 
 **Note**
 
 If no messages are displayed in the Trace Viewer despite errors in the simulation, reset the filters:
 
-- Only in the submenu, e.g. "Subsystem": "Filter > Subsystem > Clear filter" menu
-- All filters: "Filter > Clear all filters" menu
+- Only in the submenu, e.g. "Subsystem": "Filter &gt; Subsystem &gt; Clear filter" menu
+- All filters: "Filter &gt; Clear all filters" menu
 
 ![Procedure](images/112795519371_DV_resource.Stream@PNG-de-DE.png)
 
@@ -2898,7 +2898,7 @@ You do not edit the code of your scripts directly in the debugger. When you find
 
 Google Chrome provides the user interface of the debugger. Not all functions of the user interface of the debugger are relevant for debugging WinCC Unified Scripts. Only the functions that are needed to debug scripts in WinCC Unified are explained below.
 
-You can find more information on Chrome DevTools under: <https://developers.google.com/web/tools/chrome-devtools/>.
+You can find more information on Chrome DevTools under: [https://developers.google.com/web/tools/chrome-devtools/](https://developers.google.com/web/tools/chrome-devtools/).
 
 The debugger is divided into two areas:
 
@@ -3047,7 +3047,7 @@ To enable the debugger, follow these steps:
      `<Port number>`
 
    Use the port entered for the Script Debugger in SIMATIC Runtime Manager.
-7. Press <Enter>.
+7. Press &lt;Enter&gt;.
 8. Click "Done".
 9. Under "Remote Target", click "inspect" for the desired target.
 
@@ -3063,7 +3063,7 @@ To enable the debugger, follow these steps:
 The debugger must be updated:
 
 - After starting a new project
-- After restarting a running project, for example, because you have reloaded the project in engineering with "Download to device > Software (all)".
+- After restarting a running project, for example, because you have reloaded the project in engineering with "Download to device &gt; Software (all)".
 - After a screen change in Runtime
 
 The connection to the debugger is lost in each case. Google Chrome therefore shows an error message and asks whether you want to restore the connection.
@@ -3168,7 +3168,7 @@ You have several options to enable or disable all breakpoints:
 
 - Click on the ![Enabling and disabling breakpoints](images/153087832971_DV_resource.Stream@PNG-de-DE.png) "Deactivate breaktpoints" button in the debugging area.
 - Open the shortcut menu of a breakpoint in the debugging area and select "Activate breakpoints" or "Deactivate breakpoints".
-- Press <Ctrl + F8>.
+- Press &lt;Ctrl + F8&gt;.
 
 #### Deleting breakpoints
 
@@ -3208,7 +3208,7 @@ The following options are available to execute your script step-by-step:
 To pause the continuation of a script, you have several options:
 
 - Click on the ![Execute script to the next breakpoint](images/153085429387_DV_resource.Stream@PNG-de-DE.png) "Resume script execution" button in the debugging area.
-- Press the <F8> key.
+- Press the &lt;F8&gt; key.
 
   The script is executed to the next breakpoint. If there is no other breakpoint, the script is executed completely.
 
@@ -3229,7 +3229,7 @@ To ignore the following breakpoints when resuming execution of a paused script, 
 If a line with a breakpoint contains a function that you are not interested in, you can suppress the debugging of this function:
 
 - Click on the ![Execute script to the next function call](images/153077472907_DV_resource.Stream@PNG-de-DE.png) "Step over next function call" button in the debugging area.
-- Press the <F10> key.
+- Press the &lt;F10&gt; key.
 
   The function is executed without the script pausing within the function.
 
@@ -3238,7 +3238,7 @@ If a line with a breakpoint contains a function that you are not interested in, 
 If the script pauses in a line containing a function that interests you, you can pause the script in that function:
 
 - Click on the ![Jumping into a function](images/153087792523_DV_resource.Stream@PNG-de-DE.png) "Step into next function call" button in the debugging area.
-- Press the <F11> key.
+- Press the &lt;F11&gt; key.
 
   The script pauses in the first line of the function.
 
@@ -3251,7 +3251,7 @@ If the script pauses in a line containing a function that interests you, you can
 If the script pauses within a function that you are not interested in, you can suppress further debugging of this function:
 
 - Click on the ![Jump out of a function](images/153087796491_DV_resource.Stream@PNG-de-DE.png) "Step out of current function" button in the debugging area.
-- Press the key combination <Shift + F11>.
+- Press the key combination &lt;Shift + F11&gt;.
 
 > **Note**
 >
@@ -3319,12 +3319,12 @@ The following buttons are available to you:
 
 The values available at the current time can be called in the console.
 
-- You show or hide the console with <Esc>.
+- You show or hide the console with &lt;Esc&gt;.
 
 Call the current values in the console as follows:
 
 1. Enter the name of a local or global value in the console.
-2. Press <Enter>.
+2. Press &lt;Enter&gt;.
 
 ---
 

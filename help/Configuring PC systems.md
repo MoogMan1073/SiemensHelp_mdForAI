@@ -225,7 +225,7 @@ You can find additional information on the S7-1500 Software Controller and WinAC
 
 You can find additional information about the meaning and handling of PC applications and the OPC server in the [SIMATIC NET ‑ Industrial Communication](https://support.industry.siemens.com/cs/de/en/view/https://support.industry.siemens.com/cs/de/de/view/61630799) configuration manual and the [SIMATIC NET ‑ Commissioning PC Stations](https://support.industry.siemens.com/cs/de/en/view/109488960) configuration manual.
 
-You can find more information on communication processors on the[Service&Support](http://w3.siemens.com/mcms/industrial-communication/en/ie/system-interfacing/advanced-controller/Pages/CPs-fuer-advanced-controller.aspx) Web pages.
+You can find more information on communication processors on the[Service&amp;Support](http://w3.siemens.com/mcms/industrial-communication/en/ie/system-interfacing/advanced-controller/Pages/CPs-fuer-advanced-controller.aspx) Web pages.
 
 You can find application examples for changing to the new Software Controller generation in the [Guide for Migrating PC-based Controllers: from SIMATIC WinAC RTX to the SIMATIC S7-1500 Software Controller and TIA Portal](https://support.industry.siemens.com/cs/document/109478804/guide-for-migrating-pc-based-controllers%3A-from-simatic-winac-rtx-to-the-simatic-s7-1500-software-controller-and-tia-portal?dti=0&lc=en-WW).
 
@@ -398,7 +398,7 @@ There is only one difference: They have one hierarchical level more than modular
 
 The following figure shows the diagnostics of the complete PC system in the project tree. The PC station itself is OK (green check mark), but has an underlying component with a fault (exclamation mark in a green check mark). The symbol provides preliminary information about disrupted or missing modules in the underlying structure.
 
-To obtain a more detailed description of the error, double-click on the "Online & Diagnostics" entry in the project tree.
+To obtain a more detailed description of the error, double-click on the "Online &amp; Diagnostics" entry in the project tree.
 
 ![Displaying faults in the project tree](images/78354201483_DV_resource.Stream@PNG-en-US.png)
 
@@ -414,7 +414,7 @@ The following figure shows the two entries in the project tree for starting the 
 | ② | Standard diagnostics (as for S7-1500 CPU) |
 | ② | Visual brackets for the components of the PC station |
 
-"Online & Diagnostics" project navigation
+"Online &amp; Diagnostics" project navigation
 
 #### Additional information
 
@@ -506,7 +506,7 @@ Online operation enables direct loading of the configuration data:
 **Procedure: Online operation - networked**
 
 1. Select the station to be loaded in STEP 7.
-2. Load the configuration data with "Online" > "Download to device".
+2. Load the configuration data with "Online" &gt; "Download to device".
 
 **Note**
 
@@ -519,7 +519,7 @@ Make sure that you set the correct interface with "Set PG/PC Interface" (access 
 The configuration data is transferred over an internal PC connection in this case.
 
 1. Select the station to be loaded in STEP 7.
-2. Load the configuration data with "Online" > "Download to device".
+2. Load the configuration data with "Online" &gt; "Download to device".
 
 ##### Offline mode
 
@@ -569,19 +569,19 @@ Follow these steps to configure a PC station offline using an XDB file and then 
 
 1. Drag a device for a PC station into the network view from the hardware catalog under "PC systems".
 2. Select the PC station.
-3. Change the name of the PC station to suit your needs under "Properties > General" in the Inspector window.
+3. Change the name of the PC station to suit your needs under "Properties &gt; General" in the Inspector window.
 4. Drag-and-drop the additional components required into the PC station from the hardware catalog. An added component is inserted on a new index.
 
    > **Note**
    >
-   > You can change the index of a selected component in the Inspector window under "Properties > General > Position number". There may be gaps in index numbering for this reason. These gaps are not displayed in the graphic representation of the device view. However, gaps are displayed in the tabular area of the device view.
+   > You can change the index of a selected component in the Inspector window under "Properties &gt; General &gt; Position number". There may be gaps in index numbering for this reason. These gaps are not displayed in the graphic representation of the device view. However, gaps are displayed in the tabular area of the device view.
 5. Select the PC station.
-6. Under "Properties > XDB configuration" in the Inspector window, select the "Generate XDB file" check box.
+6. Under "Properties &gt; XDB configuration" in the Inspector window, select the "Generate XDB file" check box.
 
    The connection data and addresses for CPs and applications are saved in the XDB file.
 7. Specify the storage path under "XDB file path".
 8. Select the PC station.
-9. Select the shortcut menu command "Compile > ...".
+9. Select the shortcut menu command "Compile &gt; ...".
 
    When the configuration of a PC station is saved and compiled, system data and the XDB configuration file are generated. This can then be loaded into the target system or be installed.
 
@@ -601,7 +601,7 @@ The controller must be in STOP mode for this to take place.
 
 To create a log file, follow these steps:
 
-1. Select the "New..." command in the "Project > Memory card file" menu.
+1. Select the "New..." command in the "Project &gt; Memory card file" menu.
 
    A dialog opens.
 2. Select the directory in which you want to create the file.
@@ -610,12 +610,12 @@ To create a log file, follow these steps:
 
    > **Note**
    >
-   > You can also create a log file in WinAC with the menu command "File > Archive from CPU".
-5. Select the "Open..." command in the "Project > Memory card file" menu to display the created log file in the project tree.
+   > You can also create a log file in WinAC with the menu command "File &gt; Archive from CPU".
+5. Select the "Open..." command in the "Project &gt; Memory card file" menu to display the created log file in the project tree.
 6. Select the directory in which the log file with the file extension (*.wld) is located.
 7. The log file is displayed in the project tree under "Card Reader/USB memory".
 8. Copy the wld file to a storage medium that can be accessed by the target station.
-9. To restore the log file, select the menu command "File > Download to CPU**".**
+9. To restore the log file, select the menu command "File &gt; Download to CPU**".**
 10. Select the log file with the extension *.wld that you want to restore.
 11. Click "OK" to confirm. The STEP 7 user program and the configuration for the Software Controller are loaded again.
 
@@ -646,7 +646,7 @@ The entire configuration of your PC station is saved in a configuration file fro
 
 To create a configuration file, follow these steps:
 
-1. Select the menu command "Project > PC Station configuration file > New > PC Station configuration file".
+1. Select the menu command "Project &gt; PC Station configuration file &gt; New &gt; PC Station configuration file".
 2. Enter the file name in the "Create memory card file" dialog that opens. To avoid error messages, make sure that the entries are correct:
 
    - Use short, unique name
@@ -677,7 +677,7 @@ The "Memory card file" folder is created in the project tree under "Card Reader/
 
 To load data into the PC system configuration file, you have the following options:
 
-- Load project data to a memory card using Drag&Drop or Copy&Paste
+- Load project data to a memory card using Drag&amp;Drop or Copy&amp;Paste
 - Write project data to a memory card
 
 ###### Requirement
@@ -712,8 +712,8 @@ To load project data to a memory card file, follow these steps:
 or:
 
 1. Select the "PC system" folder in the project tree.
-2. Right-click on the selection and select the "Copy" command from the shortcut menu. Alternatively, you can also use the shortcut <Ctrl+V>.
-3. Right-click on the "*.psc" file level or "PC system" folder in the memory card file and select the "Paste" shortcut menu command. Alternatively, you can also use the shortcut <Ctrl+V>.  
+2. Right-click on the selection and select the "Copy" command from the shortcut menu. Alternatively, you can also use the shortcut &lt;Ctrl+V&gt;.
+3. Right-click on the "*.psc" file level or "PC system" folder in the memory card file and select the "Paste" shortcut menu command. Alternatively, you can also use the shortcut &lt;Ctrl+V&gt;.  
    All other levels are locked. If necessary, the project data is compiled.
 4. Then, the "Load preview" dialog opens. This dialog displays messages and recommends actions necessary for loading.
 5. Check the messages and enable the actions in the "Action" column if necessary. As soon as loading is possible, the "Load" button is enabled.
@@ -723,7 +723,7 @@ or:
 or:
 
 1. Select the "PC system" folder in the project tree.
-2. In the "Project" menu, select the command "Card Reader / USB memory > Write to memory card".  
+2. In the "Project" menu, select the command "Card Reader / USB memory &gt; Write to memory card".  
    The "Select memory card Select" dialog opens.
 3. Select a memory card.  
    A button with a green check mark is enabled in the lower part of the dialog.
@@ -750,7 +750,7 @@ The psc file contains the configuration for all components in corresponding subf
 
 To view a configuration file in the project tree, follow these steps:
 
-1. Select the menu command "Project > PC Station configuration file > Open > PC Station configuration file".
+1. Select the menu command "Project &gt; PC Station configuration file &gt; Open &gt; PC Station configuration file".
 2. Select the directory containing the psc file.
 
 The memory card file appears with the mentioned content under "Card Reader / USB memory" in the project tree.
@@ -778,12 +778,12 @@ The following table provides an overview of the supported command line commands:
 | --- | --- |
 | PCSystem_Control.exe /Help | Displays the help text in the command line editor. |
 | PCSystem_Control.exe /HelpExitCode | Displays the help text for the error codes in the command line editor. |
-| PCSystem_Control.exe /PrintConfig <file.psc*> | Displays the information about the components; output format: Standard |
-| PCSystem_Control.exe /PrintConfig <file.psc*> /xml | Displays the information about the components; output format: XML format |
-| PCSystem_Control.exe /ImportConfig <file.psc*> | The call starts the full import of the psc file. |
+| PCSystem_Control.exe /PrintConfig &lt;file.psc*&gt; | Displays the information about the components; output format: Standard |
+| PCSystem_Control.exe /PrintConfig &lt;file.psc*&gt; /xml | Displays the information about the components; output format: XML format |
+| PCSystem_Control.exe /ImportConfig &lt;file.psc*&gt; | The call starts the full import of the psc file. |
 | PCSystem_Control.exe /GetStatus /ImportConfig | Displays the current status of all the components, the import process; output format: XML format |
 | PCSystem_Control.exe /GetStatus /SimaticComponents | Displays information on all installed Simatic components; output format: XML format |
-| * The <file.psc > parameter stands for the full path and file name, for example, C:\Data\Test.psc |  |
+| * The &lt;file.psc &gt; parameter stands for the full path and file name, for example, C:\Data\Test.psc |  |
 
 ###### Result
 
@@ -801,7 +801,7 @@ Proceed as follows:
 2. This command gives you the following result:
 
    - If error code = 0, there is no error.
-   - If error code > 0, there is an error and it is output as a decimal number.
+   - If error code &gt; 0, there is an error and it is output as a decimal number.
    - For Failsafe: Error code 20899 or 0x51A3, import successful.
 3. The decimal number must be converted into a binary number.
 4. To get an overview of the bit number describing the error, enter the command line command "HelpExitCode".
@@ -889,7 +889,7 @@ Windows 7 Ultimate is installed.
 Follow these steps to enable the Internet Information Services (IIS):
 
 1. Click on the "Start" menu icon.
-2. Select "System Control > Programs and Features > Turn Windows features on or off".
+2. Select "System Control &gt; Programs and Features &gt; Turn Windows features on or off".
 3. Confirm the message for user account control with "Yes".
 4. Navigate to the menu command: "Internet Information Services" and make the following settings:
 
@@ -904,7 +904,7 @@ You can find possible causes and their remedies here:
 - Internet Information Services were enabled after installation of .NET
 - A 64-bit version of Windows is run on the computer
 
-To remedy the problem, you must register a .NET version afterwards in the Internet Information Services (IIS). To do so, execute the following command in the Windows CMD window: C:\Windows\Microsoft.NET\Framework64\v4.0.30319>aspnet_regiis.exe –ir
+To remedy the problem, you must register a .NET version afterwards in the Internet Information Services (IIS). To do so, execute the following command in the Windows CMD window: C:\Windows\Microsoft.NET\Framework64\v4.0.30319&gt;aspnet_regiis.exe –ir
 
 ##### Enabling of Internet Information Services (IIS) for Windows 10
 
@@ -923,7 +923,7 @@ Windows 10 IoT Enterprise (64-bit) is installed.
 Follow these steps to enable the Internet Information Services (IIS):
 
 1. Right-click on the "Start" menu icon.
-2. Select "Programs and Features > Turn Windows features on or off".
+2. Select "Programs and Features &gt; Turn Windows features on or off".
 3. Confirm the message for user account control with "Yes".
 4. Navigate to the menu command: "Internet Information Services" and make the following settings:
 
@@ -936,7 +936,7 @@ You can find possible causes and their remedies here:
 - Internet Information Services were enabled after installation of .NET
 - A 64-bit version of Windows is run on the computer
 
-To remedy the problem, you must register a .NET version afterwards in the Internet Information Services (IIS). To do so, execute the following command in the Windows CMD window: C:\Windows\Microsoft.NET\Framework64\v4.0.30319>aspnet_regiis.exe –ir
+To remedy the problem, you must register a .NET version afterwards in the Internet Information Services (IIS). To do so, execute the following command in the Windows CMD window: C:\Windows\Microsoft.NET\Framework64\v4.0.30319&gt;aspnet_regiis.exe –ir
 
 #### Configuration of the Web server in the TIA Portal
 
@@ -947,7 +947,7 @@ The procedure for configuring the Web server in the TIA Portal is described belo
 To use the Web server, follow these steps:
 
 1. Select the desired PC system.
-2. Select the following settings in the Inspector window under "Properties > General > Web server":
+2. Select the following settings in the Inspector window under "Properties &gt; General &gt; Web server":
 
    - Activate web server on this module
    - Enable automatic update
@@ -1001,7 +1001,7 @@ Proceed as follows:
 2. This command gives you the following result:
 
    - If the error code = 0, there is no error
-   - If the error code > 0, there is an error and it is output as a decimal number
+   - If the error code &gt; 0, there is an error and it is output as a decimal number
 3. The decimal number must be converted into a binary number.
 4. To get an overview of the bit number describing the error, enter the command line command "HelpExitCode".
 
@@ -1041,7 +1041,7 @@ You can find additional information on how to create your own certificate in the
 
 #### Creating your own certificate
 
-If your company does not have a Certification Authority (CA), you can use the procedure described in this section. The key files are created with the "OpenSSL" program. If you have not yet installed OpenSSL on your PC, you can download and install the program for free from the following website: <http://openssl.org/>
+If your company does not have a Certification Authority (CA), you can use the procedure described in this section. The key files are created with the "OpenSSL" program. If you have not yet installed OpenSSL on your PC, you can download and install the program for free from the following website: [http://openssl.org/](http://openssl.org/)
 
 ##### Procedure
 
@@ -1057,7 +1057,7 @@ To create your own certificate, follow these steps:
    The new certificate is displayed in the "Certificate Server" overview.
 7. Switch back to the "Internet Information Services Manager".
 8. In the "Pages" directory, select the website in which the new HTTPS connection shall be created.
-9. On the right side, click on "Edit Page > Binding".  
+9. On the right side, click on "Edit Page &gt; Binding".  
    The dialog box with the available Web pages opens.
 10. Select the connection type "https" and click "Add new".  
     The dialog with the connection properties opens.
@@ -1082,7 +1082,7 @@ In addition to control and visualization tasks, PC systems can also be used for 
 - Plant-level data server
 - Hardware platform for SCADA systems
 - Industrial workstations (for example, at test stations)
-- Process & data analysis on site
+- Process &amp; data analysis on site
 
 #### Integrating SIMATIC IPCs in TIA Portal
 
@@ -1162,8 +1162,8 @@ The following IPCs are supported:
   - Windows 7 SP1 64-bit
 - The following diagnostic software is installed:
 
-  - DiagBase >= V1.5.0 or
-  - DiagMonitor >= V4.5.0
+  - DiagBase &gt;= V1.5.0 or
+  - DiagMonitor &gt;= V4.5.0
 
 #### Restrictions
 
@@ -1233,7 +1233,7 @@ The notification area icon can display the following states:
 
 The icon for the PC Station service in the task bar's notification area gives you the following configuration options via the shortcut menu:
 
-- Import > Import Configuration
+- Import &gt; Import Configuration
 
   This shortcut menu command opens and displays the metadata of a selected PC system configuration file. The user also starts the import of the psc file with this. The feature is not supported for F-CPUs.
 - Configuration
@@ -1257,7 +1257,7 @@ The icon for the PC Station service in the task bar's notification area gives yo
   This shortcut menu command causes all of the PC Station services to be restarted.
 - Exit
 
-  This shortcut menu command causes the PC Station panel to be closed. The icon for the PC Station service in the notification area of the task bar is hidden. Restart the PC Station panel using the following entry in the Windows Start menu: **Siemens Automation > SIMATIC > PC Station > "PC Station"**
+  This shortcut menu command causes the PC Station panel to be closed. The icon for the PC Station service in the notification area of the task bar is hidden. Restart the PC Station panel using the following entry in the Windows Start menu: **Siemens Automation &gt; SIMATIC &gt; PC Station &gt; "PC Station"**
 
 ### Repairing/uninstalling
 
@@ -1279,7 +1279,7 @@ To uninstall the program, you have two options.
 
 **Via the Control Panel**
 
-1. In the Windows taskbar, select **Start > Control Panel > Run Advertised Programs**
+1. In the Windows taskbar, select **Start &gt; Control Panel &gt; Run Advertised Programs**
 2. Select the program "TIA integration for SIMATIC IPC".
 3. Click "Uninstall".
 4. Follow the on-screen instructions during the uninstall process.
@@ -1311,7 +1311,7 @@ You have created a new project in the TIA Portal.
 To create the configuration in the TIA Portal, follow these steps:
 
 1. Double-click "Add new device" in the project tree.
-2. Select "CPU 1515SP PC (+HMI)" under "PC Systems > Open Controller".
+2. Select "CPU 1515SP PC (+HMI)" under "PC Systems &gt; Open Controller".
 3. Select the appropriate version.
 
    The configured Open Controller is displayed in the device view.
@@ -1430,7 +1430,7 @@ To set the startup type, follow these steps:
 3. Change to the project view.
 4. Open the device view.
 5. Select the CPU.
-6. On the "Properties" > "General" tab of the Inspector window, select the "Startup" area.
+6. On the "Properties" &gt; "General" tab of the Inspector window, select the "Startup" area.
 7. Configure the startup characteristics of your CPU.
 
    ![Setting the startup type](images/91750113163_DV_resource.Stream@PNG-en-US.png)
@@ -1565,7 +1565,7 @@ To use the LEDs of the hardware platform for the CPU, follow these steps:
 
 1. Open the network view or device view.
 2. Select the CPU.
-3. Select the "Advanced configuration > Hardware LED" area on the "Properties" tab of the Inspector window.
+3. Select the "Advanced configuration &gt; Hardware LED" area on the "Properties" tab of the Inspector window.
 
    ![Procedure](images/72344085003_DV_resource.Stream@PNG-en-US.png)
 
@@ -1666,9 +1666,9 @@ To assign the interfaces for the communication to the PC station, follow these s
 
 1. Select the PC system.
 2. Select the desired integrated interface in the device view.
-3. In the Inspector window, select the area "General > Interface assignment".
+3. In the Inspector window, select the area "General &gt; Interface assignment".
 4. Assign the interface to the "SIMATIC PC station".
-5. Compile the project with "Edit > Compile".
+5. Compile the project with "Edit &gt; Compile".
 6. Download the hardware configuration of the PC system to the target device.
 
 #### Result
@@ -1681,14 +1681,14 @@ You can find more information on the special aspects of configuring interfaces w
 
 ### SIMATIC NET version
 
-Information on the SIMATIC Net version is available at Service&Support under the [Entry ID:63098071](https://support.industry.siemens.com/cs/document/63098071?lc=en-WW).
+Information on the SIMATIC Net version is available at Service&amp;Support under the [Entry ID:63098071](https://support.industry.siemens.com/cs/document/63098071?lc=en-WW).
 
 #### SIMATIC NET version for onboard interfaces
 
 The SIMATIC NET version of the onboard interfaces can be found as follows:
 
 1. Select the onboard interface.
-2. In the Inspector window, select the area "General > Catalog information".
+2. In the Inspector window, select the area "General &gt; Catalog information".
 
    - For a **V2.x PC system,** STEP 7 automatically sets the version of the PC station once a SIMATIC S7-1500 Software Controller has been configured. This setting should not be changed. SIMATIC NET cannot be used or configured.
    - For a **V1.0 PC system**, the latest version of the SIMATIC NET CD from the hardware catalog is displayed, for example V8.2, see the description text. STEP 7 does not know the SIMATIC NET version actually used because you are installing and configuring PC System V1.0 with S7-RTM (Station Manager) from the SIMATIC NET CD.

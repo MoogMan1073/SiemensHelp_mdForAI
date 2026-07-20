@@ -469,4 +469,4 @@ Procedure for non-integrated connections:
 
 Alternatively, you can export the PLC certificate from the TIA Portal in advance and copy it to the "`...\trusted\certs`" folder before starting Runtime. The certificate file must have the following name:
 
-"S7PlusChannel_<PLC_IP>.der", e.g. "S7PlusChannel_192.168.0.1.der"
+"S7PlusChannel_&lt;PLC_IP&gt;.der", e.g. "S7PlusChannel_192.168.0.1.der"

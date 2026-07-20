@@ -329,20 +329,20 @@ The log names must be unique in an HMI device. Even if different storage locatio
 
 Location of local file system on the Unified PC:
 
-- <C:\My_File_Folder\My_Archives\Machine_1>: Saves the log on the local hard disk drive "C:" in the subdirectory "My_File_Folder\My_Archives\Machine_1"
+- &lt;C:\My_File_Folder\My_Archives\Machine_1&gt;: Saves the log on the local hard disk drive "C:" in the subdirectory "My_File_Folder\My_Archives\Machine_1"
 
 Memory card storage location on the Unified Comfort Panel:
 
-- </media/simatic/data-storage /My_Archives/TagLogs>: Saves the log in the subdirectory "My_Archives\TagLogs"
+- &lt;/media/simatic/data-storage /My_Archives/TagLogs&gt;: Saves the log in the subdirectory "My_Archives\TagLogs"
 
 ### File name
 
-The segments are stored according to the syntax <Unique name of the runtime project>_<Abbreviation of the logging service>_<System ID>_<Start date of the segment>_<Start time of the segment (UTC)> for example, as follows:
+The segments are stored according to the syntax &lt;Unique name of the runtime project&gt;_&lt;Abbreviation of the logging service&gt;_&lt;System ID&gt;_&lt;Start date of the segment&gt;_&lt;Start time of the segment (UTC)&gt; for example, as follows:
 
 - Microsoft SQL: "HMI_RT_1_TLG200_20201106_135307.mdf" and "HMI_RT_1_TLG200_20201106_135307_log.ldf"
 - SQLite: "HMI_RT_1_TLG200_20201106_135307.db3"
 
-The backup files of the segments are stored with the syntax <Unique name of the Runtime project>_<Abbreviation of the logging service>_<System ID>_<Start date of the segment>_<Start time of the segment (UTC)> under the configured path, for example as follows:
+The backup files of the segments are stored with the syntax &lt;Unique name of the Runtime project&gt;_&lt;Abbreviation of the logging service&gt;_&lt;System ID&gt;_&lt;Start date of the segment&gt;_&lt;Start time of the segment (UTC)&gt; under the configured path, for example as follows:
 
 - "HMI_RT_1_TLG200_20201106_135307.bak"
 - "HMI_RT_1_TLG200_20201106_135307_diff.bak"
@@ -438,7 +438,7 @@ To create data logs or alarm logs, follow these steps:
 1. Double-click the "Logs" entry in the project tree below the HMI device.
 
    The "Logs" editor opens.
-2. Double-click "<Add>" in the "Name" column of the "Data logs" or "Alarm logs" tab.  
+2. Double-click "&lt;Add&gt;" in the "Name" column of the "Data logs" or "Alarm logs" tab.  
    A new log is created.
 3. Specify the name of the log.
 
@@ -451,14 +451,14 @@ To create data logs or alarm logs, follow these steps:
 
    - "Local": Enter the storage path for the log under "Storage directory".
    - "Default": Accepts the settings that you have defined in the runtime settings of the HMI device under "Storage system".
-5. In the "Log time period" field, define the maximum time period for logging in the format <day>.<hour>:<minute>:<second>[.<millisecond>].
+5. In the "Log time period" field, define the maximum time period for logging in the format &lt;day&gt;.&lt;hour&gt;:&lt;minute&gt;:&lt;second&gt;[.&lt;millisecond&gt;].
 6. Define the maximum size in megabytes in the "Maximum log size (MB)" field.
-7. In the "Segment" area, define the time period for a single segment in the format <day>.<hour>:<minute>:<second>[.<millisecond>].
+7. In the "Segment" area, define the time period for a single segment in the format &lt;day&gt;.&lt;hour&gt;:&lt;minute&gt;:&lt;second&gt;[.&lt;millisecond&gt;].
 8. Define the maximum segment size.
 9. Define the start time.
 
    The start time defines the time as of which log segments are written to the log.
-10. Set whether data is to be backed up and specify the path for the backup under "Backup > Backup mode".
+10. Set whether data is to be backed up and specify the path for the backup under "Backup &gt; Backup mode".
 
     The backup is created with a delay of approx. 10 minutes.
 

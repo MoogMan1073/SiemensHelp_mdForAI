@@ -49,7 +49,7 @@ You can compare any devices to see the differences between them. When comparing 
 Follow the steps below to compare devices:
 
 1. Select a device in the project tree that allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Open the "Hardware" tab.

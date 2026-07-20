@@ -161,12 +161,12 @@ The Web server offers the following security functions:
 
 ## Reading out service data (S7-300, S7-400, S7-1500)
 
-The web server of an S7-1500 CPU gives you the option of saving service data. In addition to the contents of the diagnostic buffer, service data includes additional information on the internal status of the CPU. If you should encounter a problem with the CPU that you cannot resolve, you have the option of submitting the service data to the Service&Support team.
+The web server of an S7-1500 CPU gives you the option of saving service data. In addition to the contents of the diagnostic buffer, service data includes additional information on the internal status of the CPU. If you should encounter a problem with the CPU that you cannot resolve, you have the option of submitting the service data to the Service&amp;Support team.
 
 ### Procedure
 
 1. Enter the following address in the address bar of your web browser:  
-   "http://<CPU IP address>/save_service_data.html", e.g.,  
+   "http://&lt;CPU IP address&gt;/save_service_data.html", e.g.,  
    "http://192.168.3.141/save_service_data.html"
 2. Your screen displays the service data page with a button for saving the service data.
 
@@ -175,7 +175,7 @@ The web server of an S7-1500 CPU gives you the option of saving service data. In
 
 ### Result
 
-The data is saved into a .dmp file with the following naming convention: "<MLFB><serial number><time stamp>.dmp". The file name can be changed subsequently.
+The data is saved into a .dmp file with the following naming convention: "&lt;MLFB&gt;&lt;serial number&gt;&lt;time stamp&gt;.dmp". The file name can be changed subsequently.
 
 ---
 
@@ -256,7 +256,7 @@ The texts for diagnostic buffer entries and alarms are shown during operation in
 
 To use a CPU web server and set the behavior of the web server, you have to highlight the CPU in the network view, device view or topology view.
 
-Execute the following settings in the Inspector window under "Properties > General > Web server", for example:
+Execute the following settings in the Inspector window under "Properties &gt; General &gt; Web server", for example:
 
 - Enable the web server
 - Limiting web access to secure Hypertext transmission protocol (HTTPS)
@@ -266,7 +266,7 @@ Execute the following settings in the Inspector window under "Properties > Gener
 - Using watch tables in the web server
 - For S7-300/400 CPUs: Selecting the display classes of the alarms
 
-Every PROFINET interface of an S7-1500 CPU or of a PROFINET CP or a PROFINET-CM can also be enabled or disabled for "external" access to the web server. It is simplest to manage this access centrally in the properties of the CPU. To do so, click the "Web server > Overview of interfaces" area in the "Properties" tab of the inspector window and activate the interfaces through which access is allowed.
+Every PROFINET interface of an S7-1500 CPU or of a PROFINET CP or a PROFINET-CM can also be enabled or disabled for "external" access to the web server. It is simplest to manage this access centrally in the properties of the CPU. To do so, click the "Web server &gt; Overview of interfaces" area in the "Properties" tab of the inspector window and activate the interfaces through which access is allowed.
 
 ---
 
@@ -296,11 +296,11 @@ Every PROFINET interface of an S7-1500 CPU or of a PROFINET CP or a PROFINET-CM 
 
 The web server is disabled by default. The corresponding option box must be enabled to have the CPU show websites.
 
-This setting can be found in the Inspector window under "Properties > General > Web server"; optional box "Enable web server for this module".
+This setting can be found in the Inspector window under "Properties &gt; General &gt; Web server"; optional box "Enable web server for this module".
 
 If the web server was activated, a prompt is displayed for S7-300/400 CPUs asking whether the system diagnostics (Report System Errors) should be enabled. Click on "Yes" if the required modules and texts should be generated with "Report System Errors" so that the alarm texts are available in the web browser during operation. For S7-1200/1500 CPUs, system diagnostics is always enabled (cannot be disabled).
 
-In the case of S7-1500 CPUs with several PROFINET interfaces or when CPs with PROFINET interfaces are configured, you additionally have to activate the interfaces through which web server access is to be allowed. This setting is located under "Properties > General > Web server > Overview of interfaces".
+In the case of S7-1500 CPUs with several PROFINET interfaces or when CPs with PROFINET interfaces are configured, you additionally have to activate the interfaces through which web server access is to be allowed. This setting is located under "Properties &gt; General &gt; Web server &gt; Overview of interfaces".
 
 ### Access only through HTTPS (S7-300, S7-400, S7-1500)
 
@@ -325,7 +325,7 @@ For error-free HTTPS access from your Web browser to the Web server of the CPU, 
 
   A valid root certificate (certification authority) is available for download on the "Intro" web page of the Web server under "Download certificate".
 
-  You can find instructions for installing the certificate in the help system of your Web browser and in the [FAQ](https://support.industry.siemens.com/cs/ww/en/view/103528224) with the entry ID 103528224 on the Service&Support Internet page.
+  You can find instructions for installing the certificate in the help system of your Web browser and in the [FAQ](https://support.industry.siemens.com/cs/ww/en/view/103528224) with the entry ID 103528224 on the Service&amp;Support Internet page.
 
 > **Note**
 >
@@ -361,7 +361,7 @@ With the "Automatic updating" check box activated, the web sites are automatical
 
 Proceed as follows to activate the automatic updating:
 
-1. Select the check box "Activate automatic update" under "Properties > General > Web server > Automatic update".
+1. Select the check box "Activate automatic update" under "Properties &gt; General &gt; Web server &gt; Automatic update".
 2. Enter the updating interval.
 
    > **Note**
@@ -380,7 +380,7 @@ To select the regional languages for language-dependent texts which will be down
 2. Activate the required languages for display in the web browser in the first column; the number of selectable languages is specific to the CPU.
 3. Assign the desired project language to the languages of the display / Web server.
 
-   The project languages that are assigned must be activated and the corresponding texts (translations) must be in the project. The project language selection can be found in the project navigation under "Languages & Resources".
+   The project languages that are assigned must be activated and the corresponding texts (translations) must be in the project. The project language selection can be found in the project navigation under "Languages &amp; Resources".
 
    Through these assignments, for example, display texts not available in the CPU will be downloaded in the selected language (with language and country code) when loading the CPU.
 
@@ -437,7 +437,7 @@ You have opened the properties of the CPU (Inspector window).
 
 #### Procedure
 
-The settings for generation of a Web server certificate are located in the CPU properties in the "Web server > Security" area.
+The settings for generation of a Web server certificate are located in the CPU properties in the "Web server &gt; Security" area.
 
 You can generate or select certificates in this area. A distinction is made as to whether or not you are using the certificate manager in the global security settings.
 
@@ -451,7 +451,7 @@ The STEP 7 project itself has a root certificate (CA, Certification Authority) 
 
 Exception:
 
-When you update the firmware of an S7‑1500 CPU or ET 200SP with firmware version < V2.0 to a firmware version ≥ V2.0, a valid server certificate is automatically generated by the CPU and used. The same applies to the replacement parts scenario in which a newer CPU replaces a CPU with firmware version < V2.0.
+When you update the firmware of an S7‑1500 CPU or ET 200SP with firmware version &lt; V2.0 to a firmware version ≥ V2.0, a valid server certificate is automatically generated by the CPU and used. The same applies to the replacement parts scenario in which a newer CPU replaces a CPU with firmware version &lt; V2.0.
 
 In these cases the Web server certificate of STEP 7 is not used.
 
@@ -475,7 +475,7 @@ In these cases the Web server certificate of STEP 7 is not used.
 
 You can also display configured watch tables in the web server.
 
-To do so, you must select the desired watch tables in STEP 7 in the CPU parameter area "Web server > Watch tables" and set which access is to be permitted:
+To do so, you must select the desired watch tables in STEP 7 in the CPU parameter area "Web server &gt; Watch tables" and set which access is to be permitted:
 
 - Read access
 - Read/write access
@@ -490,14 +490,14 @@ When you use watch tables in the web server, these tables must be consistent; th
 
 When you change the variables referenced in the watch tables after creating and downloading the watch tables, follow these steps to prevent inconsistencies:
 
-1. Compile the user program (Compile > Software).
+1. Compile the user program (Compile &gt; Software).
 2. Open all watch tables used by the web server and close them again.
 
    This step updates the references of the watch tables to the tags used.
-3. Compile the hardware configuration (Compile > Hardware …).
+3. Compile the hardware configuration (Compile &gt; Hardware …).
 
    This step updates the web server configuration with the watch tables used.
-4. Load the changes (Download > Hardware and software).
+4. Load the changes (Download &gt; Hardware and software).
 
 ### Display classes of the messages (S7-300, S7-400, S7-1500)
 
@@ -507,7 +507,7 @@ All display classes of the messages are activated in the basic configuration. Th
 
 How to configure the display classes:
 
-- for "Report System Errors" in the Inspector window under "Properties > General > System diagnostics"
+- for "Report System Errors" in the Inspector window under "Properties &gt; General &gt; System diagnostics"
 - for module-related messages in the message editor
 
   > **Note**
@@ -562,9 +562,9 @@ The parameters for an integration of the HTML sources in the TIA Portal are loca
 
 | Parameter | Meaning |
 | --- | --- |
-| HTML directory | Directory of the HTML sources for the web applications. You can input the path directly or navigate to the directory by using the button next to the entry field.   It is advantageous if you integrate your Web pages with relative paths. To do this you have to insert the directory in which you store the HTML sources for the Web application in the STEP 7 project directory, for example, in a new directory "Webpages". You then specify the relative path name as the HTML directory; in the example ".\Webpages".   Advantages of using relative paths:   - The user-defined Web pages are archived together with the STEP 7 project. - The Web pages are copied to the new path with the menu command "Project > Save as...". - When copying the project to another path using the Windows Explorer, it is no longer necessary to adapt the HTML directory path to generate new Web DBs. - Several control systems in a project that use the same HTML pages also have the same HTML directory path information. |
+| HTML directory | Directory of the HTML sources for the web applications. You can input the path directly or navigate to the directory by using the button next to the entry field.   It is advantageous if you integrate your Web pages with relative paths. To do this you have to insert the directory in which you store the HTML sources for the Web application in the STEP 7 project directory, for example, in a new directory "Webpages". You then specify the relative path name as the HTML directory; in the example ".\Webpages".   Advantages of using relative paths:   - The user-defined Web pages are archived together with the STEP 7 project. - The Web pages are copied to the new path with the menu command "Project &gt; Save as...". - When copying the project to another path using the Windows Explorer, it is no longer necessary to adapt the HTML directory path to generate new Web DBs. - Several control systems in a project that use the same HTML pages also have the same HTML directory path information. |
 | Start HTML page | Path to the Start HTML page. You can input the path directly or navigate to the HTML page with the button next to the entry field. The start HTML page is the HTML page to be opened at the start of the web application. |
-| Application name | Optional name for the application. This name is used to further divide or group the web pages. When an application name already exists, the URL is displayed in the following format:"http://a.b.c.d/awp/<Application name>/<Page name>.html" |
+| Application name | Optional name for the application. This name is used to further divide or group the web pages. When an application name already exists, the URL is displayed in the following format:"http://a.b.c.d/awp/&lt;Application name&gt;/&lt;Page name&gt;.html" |
 
 #### Initialization
 
@@ -628,9 +628,9 @@ Web design tools from various companies can be used to create user-defined web p
   Only the AWP commands are parsed in the CPU and, for example, replaced by values from the user program/process image of the CPU.
 - Files containing AWP commands must be coded in UTF-8. In the metadata of the HTML page, therefore, set the attribute charset to UTF-8 and save the file UTF-8 coded.
 - Files containing AWP commands must not contain the following sequence: ]]
-- Files containing AWP commands must not contain the following sequence outside of the "Tag read ranges" (:=<Tag name>:): :=
+- Files containing AWP commands must not contain the following sequence outside of the "Tag read ranges" (:=&lt;Tag name&gt;:): :=
 
-  Tip: Replace the first character of a prohibited sequence with its character coding; for the colon, for example, &#58;.
+  Tip: Replace the first character of a prohibited sequence with its character coding; for the colon, for example, &amp;#58;.
 
 A small example for a custom web page should make clear the basic design.
 
@@ -646,53 +646,53 @@ A small example for a custom web page should make clear the basic design.
 
 The following code for an example web page reads values from the process image and provides them in a table.
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">  
-<html>  
- <head>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;  
+&lt;html&gt;  
+ &lt;head&gt;
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
 
-<title>Mix</title>
+&lt;title&gt;Mix&lt;/title&gt;
 
-</head>
+&lt;/head&gt;
 
-<body>
+&lt;body&gt;
 
-<h1>Mix</h1>
+&lt;h1&gt;Mix&lt;/h1&gt;
 
-<h2> Actual State </h2>
+&lt;h2&gt; Actual State &lt;/h2&gt;
 
-<table border="1">
+&lt;table border="1"&gt;
 
-<tr>
+&lt;tr&gt;
 
-<th>Variable</th>
+&lt;th&gt;Variable&lt;/th&gt;
 
-<th>State</th>
+&lt;th&gt;State&lt;/th&gt;
 
-</tr>
+&lt;/tr&gt;
 
-<tr>
+&lt;tr&gt;
 
-<td>Tank below max</td>
+&lt;td&gt;Tank below max&lt;/td&gt;
 
-<td>:="Tank_below_max":</td>
+&lt;td&gt;:="Tank_below_max":&lt;/td&gt;
 
-</tr>
+&lt;/tr&gt;
 
-<tr>
+&lt;tr&gt;
 
-<td>Tank above min</td>
+&lt;td&gt;Tank above min&lt;/td&gt;
 
-<td>:="Tank_above_min":</td>
+&lt;td&gt;:="Tank_above_min":&lt;/td&gt;
 
-</tr>
+&lt;/tr&gt;
 
-</table>
+&lt;/table&gt;
 
-</body>
+&lt;/body&gt;
 
-</html>
+&lt;/html&gt;
 
 ---
 
@@ -723,7 +723,7 @@ In addition to the default intro page, you can also define the start page of you
 Proceed as follows to define the user pages in STEP 7 as start page of the Web server:
 
 1. Select the CPU in the device configuration.
-2. Open the settings in the Inspector window of the CPU under "Properties > General > Web server".
+2. Open the settings in the Inspector window of the CPU under "Properties &gt; General &gt; Web server".
 3. Select the entry "AWP1" in the area "Entry page" under "Select entry page".
 
 If you now enter the IP address of the CPU in the browser, a connection is automatically established to your user pages.
@@ -732,7 +732,7 @@ If you want to access the web pages of your CPU again, link the web pages from y
 
 Example of link in HTML:
 
-<a href="/Portal/Portal.mwsl?PriNav=Start">SIMATIC web pages</a>
+&lt;a href="/Portal/Portal.mwsl?PriNav=Start"&gt;SIMATIC web pages&lt;/a&gt;
 
 > **Note**
 >
@@ -746,7 +746,7 @@ Just as for the web pages of the CPU, link the service data page e.g. via the UR
 
 Example of link in HTML:
 
-<a href="/save_service_data">Service data</a>
+&lt;a href="/save_service_data"&gt;Service data&lt;/a&gt;
 
 ##### Reference
 
@@ -820,13 +820,13 @@ The AWP commands "AWP_In_Variable" and "AWP_Out_Variable" contain a name attribu
 
 | PLC tag | PLC tag in HTML code |
 | --- | --- |
-| "Velocity" | <!-- AWP_In_Variable Name='"Velocity"' -->  <!-- AWP_In_Variable Name="\"Velocity\"" --> |
-| "abc\de" | <!-- AWP_In_Variable Name='"abc\\de"' --> |
-| "abc'de" | <!-- AWP_In_Variable Name='"abc\'de"' --> |
-| "abc'de" | <!-- AWP_In_Variable Name="abcde" Use'"abc\'de"' --> |
-| "DB name".tag | <!-- AWP_In_Variable Name='"DB name".tag' --> |
-| "Plc1".Data[1].typeDataStruct.value | <!-- AWP_In_Variable Name='"Plc1".Data[1].typeDataStruct.value' --> |
-| - | <!-- AWP_Out_Variable Name=’flag1’ Use='M0.0' --> |
+| "Velocity" | &lt;!-- AWP_In_Variable Name='"Velocity"' --&gt;  &lt;!-- AWP_In_Variable Name="\"Velocity\"" --&gt; |
+| "abc\de" | &lt;!-- AWP_In_Variable Name='"abc\\de"' --&gt; |
+| "abc'de" | &lt;!-- AWP_In_Variable Name='"abc\'de"' --&gt; |
+| "abc'de" | &lt;!-- AWP_In_Variable Name="abcde" Use'"abc\'de"' --&gt; |
+| "DB name".tag | &lt;!-- AWP_In_Variable Name='"DB name".tag' --&gt; |
+| "Plc1".Data[1].typeDataStruct.value | &lt;!-- AWP_In_Variable Name='"Plc1".Data[1].typeDataStruct.value' --&gt; |
+| - | &lt;!-- AWP_Out_Variable Name=’flag1’ Use='M0.0' --&gt; |
 
 ---
 
@@ -844,7 +844,7 @@ These OUT variables (direction of output as viewed from the controller) are inse
 
 ##### Syntax
 
-:=<varname>:
+:=&lt;varname&gt;:
 
 These references are replaced when the Web server is in operation by the current values of the PLC tag in each case.
 
@@ -861,7 +861,7 @@ These references are replaced when the Web server is in operation by the current
 | "DB_name"."var.name" | :="DB_name"."var.name": |
 | "memory" | :="memory": |
 | - | :=I0.0:  :=Q0.0:  :=MW100:  :=%MW100: |
-| "My_Data_Block".flag1 | <!-- AWP_Out_Variable Name='flag1' Use='"My_Data_Block".flag1' -->  ...  :=flag1: |
+| "My_Data_Block".flag1 | &lt;!-- AWP_Out_Variable Name='flag1' Use='"My_Data_Block".flag1' --&gt;  ...  :=flag1: |
 
 - If the PLC tag name contains the character : (colon) or \ (backslash), this character must be designated with the escape sequence \: or \\ as standard character of the PLC tag name.
 
@@ -870,17 +870,17 @@ These references are replaced when the Web server is in operation by the current
 | "abc:de" | :="abc\:de": |
 | "abc\de" | :="abc\\de": |
 
-- Special characters "<, &, >"
+- Special characters "&lt;, &amp;, &gt;"
 
-  Display problems can occur if these characters are contained in the tag name (for example, "a<b").
+  Display problems can occur if these characters are contained in the tag name (for example, "a&lt;b").
 
-  Avoid expressions such as :="a<b": in the HTML page.
+  Avoid expressions such as :="a&lt;b": in the HTML page.
 
   To prevent display problems from occurring, use e.g. an AWP command with a use expression according to the pattern depicted below. The use attribute defines the PLC tag with the problematic character, the name attribute defines the name without problematic character, as it is used in the HTML page.
 
 | PLC tag | PLC tag in HTML code |
 | --- | --- |
-| "a<b" | <!-- AWP_Out_Variable Name='simplename' Use='"a<b"' -->  ...  :=simplename: |
+| "a&lt;b" | &lt;!-- AWP_Out_Variable Name='simplename' Use='"a&lt;b"' --&gt;  ...  :=simplename: |
 
 ---
 
@@ -907,15 +907,15 @@ On your HTML page, you use an expression in which the character string for readi
 
 Possible HTML code used:
 
-<input type="text" name="appfield" value="myvalue">
+&lt;input type="text" name="appfield" value="myvalue"&gt;
 
 If you read the displayed value for the "value" attribute from a PLC tag in this expression, the HTML code appears as follows:
 
-<input type="text" name="appfield" value=":="Varname".MyString:">
+&lt;input type="text" name="appfield" value=":="Varname".MyString:"&gt;
 
 By reading the PLC tag, the Web server outputs the value 'ABC'. In HTML, the code is then represented as follows:
 
-<input type="text" name="appfield" value=" 'ABC' ">
+&lt;input type="text" name="appfield" value=" 'ABC' "&gt;
 
 If you have used single quotation marks instead of double quotation marks in your HTML code to enclose the attributes, the Web server passes on the content of the tags enclosed in two single quotation marks to the browser. As a result of this, the browser does not output the content of the String or Character tag, since two consecutive single quotation marks each form a closed sequence. The values to be read are located between these sequences and are not output by the browser.
 
@@ -944,32 +944,32 @@ The tags are either set in the HTTP header (by cookie or POST method) or in the 
 
 To allow the IN tags to be written to the CPU, the tags must first be defined by an explicit AWP instruction:
 
-<!-- AWP_In_Variable Name='"<Varname1>"' Name='"<Varname2>"' Name='"<Varname3>"' -->
+&lt;!-- AWP_In_Variable Name='"&lt;Varname1&gt;"' Name='"&lt;Varname2&gt;"' Name='"&lt;Varname3&gt;"' --&gt;
 
 Several tags can be defined in an instruction - such as that shown above.
 
 In cases where the name of the tag that you use for the web application is not identical to the name of the PLC tag, the "Use" parameter can be used to assign to a PLC tag.
 
-<!-- AWP_In_Variable Name=’<Varname_Webapp>’ Use=’<PLC_Varname>’
+&lt;!-- AWP_In_Variable Name=’&lt;Varname_Webapp&gt;’ Use=’&lt;PLC_Varname&gt;’
 
 ##### Example
 
 The "AWP_In_Variable" AWP command is indispensable when handling forms.
 
-<form method="post" action="/awp/appl/x.html">  
- <p>  
- <input name='"var1"' type="text">  
- <input value="set" name='"Button1"' type="submit">  
- </p>  
-</form>
+&lt;form method="post" action="/awp/appl/x.html"&gt;  
+ &lt;p&gt;  
+ &lt;input name='"var1"' type="text"&gt;  
+ &lt;input value="set" name='"Button1"' type="submit"&gt;  
+ &lt;/p&gt;  
+&lt;/form&gt;
 
 In the form defined above, tags "var1" and "Button1" are transferred to the web server by "post". The user places the "var1" tag in the form field. The "Button1" tag has the fixed value "set". To allow the "var1" and "Button1" tags to be written to the CPU, the following instruction must be included in the same fragment:
 
-<!-- AWP_In_Variable Name='"var1"' Name='"Button1"' -->
+&lt;!-- AWP_In_Variable Name='"var1"' Name='"Button1"' --&gt;
 
 Because global tags are enclosed in quotation marks, the name must be enclosed in the AWP command by apostrophes or by masked quotation marks (\").
 
-<!-- AWP_In_Variable Name=’"Info".par1’ -->
+&lt;!-- AWP_In_Variable Name=’"Info".par1’ --&gt;
 
 ##### Conditions for write access during operation
 
@@ -1012,7 +1012,7 @@ Use the AWP command "AWP_Out_Variable" to specify which PLC tags are to be trans
 
 Basic structure:
 
-<!-- AWP_Out_Variable Name="<Typ>:<Name>" [Use="<Varname>"] -->
+&lt;!-- AWP_Out_Variable Name="&lt;Typ&gt;:&lt;Name&gt;" [Use="&lt;Varname&gt;"] --&gt;
 
 ##### Parameter description
 
@@ -1021,7 +1021,7 @@ Basic structure:
 
 Example:
 
-<!-- AWP_Out_Variable Name="COOKIE_VALUE:siemens" Use='"info".language' -->
+&lt;!-- AWP_Out_Variable Name="COOKIE_VALUE:siemens" Use='"info".language' --&gt;
 
 ##### Writing a special tag
 
@@ -1046,7 +1046,7 @@ The AWP command "AWP_In_Variable" is used to define which special tags are to be
 
 Basic structure:
 
-<!-- AWP_In_Variable Name="<Typ>:<Name>" [Use="<Varname>"] -->
+&lt;!-- AWP_In_Variable Name="&lt;Typ&gt;:&lt;Name&gt;" [Use="&lt;Varname&gt;"] --&gt;
 
 Parameter description:
 
@@ -1056,15 +1056,15 @@ Use (optional parameter): In cases where the name of the special tag is not iden
 
 ##### Examples:
 
-<!-- AWP_In_Variable Name="COOKIE_VALUE:siemens" Use='"info".language' -->
+&lt;!-- AWP_In_Variable Name="COOKIE_VALUE:siemens" Use='"info".language' --&gt;
 
 The tag name in the HTTP header is replaced by the PLC tag name specified by Use . The cookie is written to the PLC tag "info".language .
 
-<!-- AWP_In_Variable Name='COOKIE_VALUE:siemens' Use='"info".language' -->
+&lt;!-- AWP_In_Variable Name='COOKIE_VALUE:siemens' Use='"info".language' --&gt;
 
 The tag name in the HTTP header is replaced by the PLC tag name specified by Use. The cookie is written to the PLC tag "info".language .
 
-<!-- AWP_In_Variable Name='"COOKIE_VALUE:siemens"' -->
+&lt;!-- AWP_In_Variable Name='"COOKIE_VALUE:siemens"' --&gt;
 
 The HTTP-header variable is written in the same-name PLC variable.
 
@@ -1084,23 +1084,23 @@ Numerical values from the PLC program can be converted into text and vice versa 
 
 Enter an AWP command using the following syntax at the start of the HTML file:
 
-<!-- AWP_Enum_Def Name="<Name of the enum type>" Values='0:"<Text_1>", 1:"<Text_2>", ... , x:"<Text_x>"' -->
+&lt;!-- AWP_Enum_Def Name="&lt;Name of the enum type&gt;" Values='0:"&lt;Text_1&gt;", 1:"&lt;Text_2&gt;", ... , x:"&lt;Text_x&gt;"' --&gt;
 
 For example, for German values to be saved as an HTML file in the "de" folder of the HTML directory:
 
-<!-- AWP_Enum_Def Name="Enum1" Values='0:"an", 1:"aus", 2:"Störung"' -->
+&lt;!-- AWP_Enum_Def Name="Enum1" Values='0:"an", 1:"aus", 2:"Störung"' --&gt;
 
 For example, for English values, to be saved as an HTML file in the "en" folder of the HTML directory:
 
-<!-- AWP_Enum_Def Name="Enum1" Values='0:"on", 1:"off", 2:"error"' -->
+&lt;!-- AWP_Enum_Def Name="Enum1" Values='0:"on", 1:"off", 2:"error"' --&gt;
 
 ##### Assigning enums
 
 Tags are assigned from the user program to the individual enum texts using a special AWP command:
 
-<!-- AWP_Enum_Ref Name="<VarName>" Enum="<EnumTypeName>" -->
+&lt;!-- AWP_Enum_Ref Name="&lt;VarName&gt;" Enum="&lt;EnumTypeName&gt;" --&gt;
 
-<VarName> is thereby the symbolic name from the user program and <EnumTypeName> is the previously set name of the enum type.
+&lt;VarName&gt; is thereby the symbolic name from the user program and &lt;EnumTypeName&gt; is the previously set name of the enum type.
 
 > **Note**
 >
@@ -1112,11 +1112,11 @@ Tags are assigned from the user program to the individual enum texts using a spe
 
 Enum type "state" is defined with values "0" and "1". "0" means "off", "1" means "on":
 
-<!-- AWP_Enum_Def Name="state" Values='0:"off", 1:"on"' -->
+&lt;!-- AWP_Enum_Def Name="state" Values='0:"off", 1:"on"' --&gt;
 
 The following code is contained in the HTML code of the web page to be output:
 
-<!-- AWP_Enum_Ref Name="operating state" Enum="state" -->
+&lt;!-- AWP_Enum_Ref Name="operating state" Enum="state" --&gt;
 
 :=operating state:
 
@@ -1136,17 +1136,17 @@ You create enums as described in the previous section, and you can then utilize 
 
 ##### Creating enums
 
-<!-- AWP_Enum_Def Name="<Name des Enum Typs>" Values='0:"<Text_1>", 1:"<Text_2>", ... , x:"<Text_x>"' -->
+&lt;!-- AWP_Enum_Def Name="&lt;Name des Enum Typs&gt;" Values='0:"&lt;Text_1&gt;", 1:"&lt;Text_2&gt;", ... , x:"&lt;Text_x&gt;"' --&gt;
 
 ##### Utilizing enums in the user program read and write commands
 
-<!-- AWP_In_Variable Name='<Varname>' Enum="<EnumType>" -->
+&lt;!-- AWP_In_Variable Name='&lt;Varname&gt;' Enum="&lt;EnumType&gt;" --&gt;
 
-<!-- AWP_Out_Variable Name='<Varname>' Enum="<EnumType>" -->
+&lt;!-- AWP_Out_Variable Name='&lt;Varname&gt;' Enum="&lt;EnumType&gt;" --&gt;
 
 ##### Example of reading PLC tags
 
-**<!-- AWP_Enum_Def Name='AlarmEnum' Values='0:"No alarms", 1:"Tank is full", 2:"Tank is empty"' --><!-- AWP_Out_Variable Name='"Alarm"' Enum="AlarmEnum" -->...<p>The current value of "Alarm" is :="Alarm":</p>**
+**&lt;!-- AWP_Enum_Def Name='AlarmEnum' Values='0:"No alarms", 1:"Tank is full", 2:"Tank is empty"' --&gt;&lt;!-- AWP_Out_Variable Name='"Alarm"' Enum="AlarmEnum" --&gt;...&lt;p&gt;The current value of "Alarm" is :="Alarm":&lt;/p&gt;**
 
 If the value of "Alarm" in the CPU is "2", the following text will be displayed on the HTML page:
 
@@ -1154,15 +1154,15 @@ If the value of "Alarm" in the CPU is "2", the following text will be displayed 
 
 ##### Example of writing PLC tags
 
-**<!-- AWP_Enum_Def Name='AlarmEnum' Values='0:"No alarms", 1:"Tank is full", 2:"Tank is empty"' --><!-- AWP_In_Variable Name='"Alarm"' Enum='AlarmEnum' -->...**
+**&lt;!-- AWP_Enum_Def Name='AlarmEnum' Values='0:"No alarms", 1:"Tank is full", 2:"Tank is empty"' --&gt;&lt;!-- AWP_In_Variable Name='"Alarm"' Enum='AlarmEnum' --&gt;...**
 
-**<form method="POST">**
+**&lt;form method="POST"&gt;**
 
-**<p><input type="hidden" name='"Alarm"' value="Tank is full" /></p>**
+**&lt;p&gt;&lt;input type="hidden" name='"Alarm"' value="Tank is full" /&gt;&lt;/p&gt;**
 
-**<p><input type="submit" value='Set Tank is full' /></p>**
+**&lt;p&gt;&lt;input type="submit" value='Set Tank is full' /&gt;&lt;/p&gt;**
 
-**</form>**
+**&lt;/form&gt;**
 
 Because the enum definition assigns the string "Tank is full" to the numerical value "1", the value "1" is written to the PLC tag "Alarm".
 
@@ -1176,7 +1176,7 @@ Multidimensional arrays of form array[x][y] are not supported.
 
 ##### Syntax
 
-**<!-- AWP_Start_Array Name='"<DB name>".<array name>' -->**
+**&lt;!-- AWP_Start_Array Name='"&lt;DB name&gt;".&lt;array name&gt;' --&gt;**
 
 **... Content of the array, utilized keywords:** 
 **ArrayIndex**
@@ -1184,15 +1184,15 @@ Multidimensional arrays of form array[x][y] are not supported.
 **value**
 **..**
 
-**<!-- AWP_End_Array -->**
+**&lt;!-- AWP_End_Array --&gt;**
 
 ##### Parameter
 
 | Symbol | Meaning |
 | --- | --- |
-| <Name> | Defines the name of the array whose elements you want to access.   You require the DB name and the name of the array corresponding to the data block structure defined in STEP 7.  The name must be within single or double quotation marks. The DB name is within double quotation marks. |
-| <ArrayIndex> | Index of an array element |
-| <value> | Value of an array element |
+| &lt;Name&gt; | Defines the name of the array whose elements you want to access.   You require the DB name and the name of the array corresponding to the data block structure defined in STEP 7.  The name must be within single or double quotation marks. The DB name is within double quotation marks. |
+| &lt;ArrayIndex&gt; | Index of an array element |
+| &lt;value&gt; | Value of an array element |
 
 ##### Example
 
@@ -1200,14 +1200,14 @@ The example reads all elements of the "MyArray" structure in the "DB_Name" data 
 
 ![Example](images/51976898571_DV_resource.Stream@PNG-en-US.png)
 
-**<!-- AWP_Start_Array Name='"DB_Name".MyArray' -->**
+**&lt;!-- AWP_Start_Array Name='"DB_Name".MyArray' --&gt;**
 
 **Index:** 
 **:=ArrayIndex:** 
 **Value:** 
 **:=value:**
 
-**<!-- AWP_End_Array -->**
+**&lt;!-- AWP_End_Array --&gt;**
 
 The code indicated above generates the following display:
 
@@ -1225,29 +1225,29 @@ The output of arrays of the type BOOL is always filled to the next full 8 bits. 
 
 "DB_1".bitArray is a BOOL array with 5 elements.
 
-<!-- AWP_Start_Array Name='"DB_1".bitArray' -->
+&lt;!-- AWP_Start_Array Name='"DB_1".bitArray' --&gt;
 
-:=ArrayIndex: -> :=value:
+:=ArrayIndex: -&gt; :=value:
 
-<!-- AWP_End_Array -->
+&lt;!-- AWP_End_Array --&gt;
 
 Output:
 
-0 -> value from "DB_1".bitArray[0]
+0 -&gt; value from "DB_1".bitArray[0]
 
-1 -> value from "DB_1".bitArray[1]
+1 -&gt; value from "DB_1".bitArray[1]
 
-2 -> value from "DB_1".bitArray[2]
+2 -&gt; value from "DB_1".bitArray[2]
 
-3 -> value from "DB_1".bitArray[3]
+3 -&gt; value from "DB_1".bitArray[3]
 
-4 -> value from "DB_1".bitArray[4]
+4 -&gt; value from "DB_1".bitArray[4]
 
-5 > 0
+5 &gt; 0
 
-6 > 0
+6 &gt; 0
 
-7 > 0
+7 &gt; 0
 
 ---
 
@@ -1261,17 +1261,17 @@ The Web server provides user program commands for accessing structures in order 
 
 ##### Syntax
 
-**<!-- AWP_Start_Struct Name='"<DB name>".<struct name>' -->**
+**&lt;!-- AWP_Start_Struct Name='"&lt;DB name&gt;".&lt;struct name&gt;' --&gt;**
 
 **... Content of structure ...**
 
-**<!-- AWP_End_Struct -->**
+**&lt;!-- AWP_End_Struct --&gt;**
 
 ##### Parameter
 
 | Symbol | Meaning |
 | --- | --- |
-| <Name> | Defines the name of the structure whose elements you want to access.   You require the DB name and the name of the structure corresponding to the data block structure defined in STEP 7.  The name must be within single or double quotation marks. The DB name is within double quotation marks. |
+| &lt;Name&gt; | Defines the name of the structure whose elements you want to access.   You require the DB name and the name of the structure corresponding to the data block structure defined in STEP 7.  The name must be within single or double quotation marks. The DB name is within double quotation marks. |
 
 ##### Example
 
@@ -1279,7 +1279,7 @@ The example reads elements of the "MyStruct" structure in the "DB_Name" data blo
 
 ![Example](images/51976893323_DV_resource.Stream@PNG-en-US.png)
 
-**<!-- AWP_Start_Struct Name='"DB_Name".MyStruct' -->**
+**&lt;!-- AWP_Start_Struct Name='"DB_Name".MyStruct' --&gt;**
 
 **:=A:**
 
@@ -1287,7 +1287,7 @@ The example reads elements of the "MyStruct" structure in the "DB_Name" data blo
 
 **:=C:**
 
-**<!-- AWP_End_Struct -->**
+**&lt;!-- AWP_End_Struct --&gt;**
 
 The code indicated above corresponds to the following commands:
 
@@ -1335,23 +1335,23 @@ Fragments are usually complete pages but can also be individual elements such as
 
 ##### Defining fragments
 
-<!-- AWP_Start_Fragment Name="<Name>" [Type="<Type>"] [ID="<Id>"] [Mode=<Mode>]-->
+&lt;!-- AWP_Start_Fragment Name="&lt;Name&gt;" [Type="&lt;Type&gt;"] [ID="&lt;Id&gt;"] [Mode=&lt;Mode&gt;]--&gt;
 
 The start of a fragment is specified by this command. A fragment runs to the start of the next fragment or to the end of the file.
 
-- <Name> Indicates the name of the fragment.
+- &lt;Name&gt; Indicates the name of the fragment.
 
   The name must start with a letter [a-zA-Z] or an underscore ( _ ). Letters, underscores or numbers [0-9] can follow after this first character.
-- <Type> Indicates the type of the fragment.
+- &lt;Type&gt; Indicates the type of the fragment.
 
   - "manual" The user program is informed of the request for a fragment; the web page to be returned can be changed by the user program.
   - "automatic" The page is automatically processed (default).
-- <id> A numeric ID can be stipulated for the fragment. If no ID is assigned, the fragment is automatically assigned an ID. For manual pages (<Type>=manual) , the fragment can be addressed in the user program of the CPU by this ID.
+- &lt;id&gt; A numeric ID can be stipulated for the fragment. If no ID is assigned, the fragment is automatically assigned an ID. For manual pages (&lt;Type&gt;=manual) , the fragment can be addressed in the user program of the CPU by this ID.
 
   > **Note**
   >
   > Keep the ID low because the highest ID influences the size of the Web Control DB.
-- <Mode> Fragments support the visible and hidden modes.
+- &lt;Mode&gt; Fragments support the visible and hidden modes.
 
   - "visible" The fragment is a part of the web page. This mode is preset and can also be omitted.
   - "hidden" The fragment is not part of the web page. However, the fragment will be saved in the Web DB and is available to the user program for inserting in a requested web page. You use an exchange of the fragment ID (Web-Control-DB.fragment_index tag) to insert a "hidden" fragment in the requested web page.
@@ -1382,23 +1382,23 @@ There is only one instance of the HTML code for the fragment that displays the c
 
 ##### Syntax
 
-<!-- AWP_Import_Fragment Name = "<name>"-->
+&lt;!-- AWP_Import_Fragment Name = "&lt;name&gt;"--&gt;
 
-- <name> is the name of the fragment to be imported.
+- &lt;name&gt; is the name of the fragment to be imported.
 
 ##### Example
 
 HTML code within a web page that declares a fragment:
 
-<!-- AWP_Start_Fragment Name = "My_Company_Logo" -->
+&lt;!-- AWP_Start_Fragment Name = "My_Company_Logo" --&gt;
 
-<p><img src = "compay_logo.jpg"></p>
+&lt;p&gt;&lt;img src = "compay_logo.jpg"&gt;&lt;/p&gt;
 
 ##### Example
 
 HTML code within another web page that imports the declared fragment:
 
-<!-- AWP_Import_Fragment Name = "My_Company_Logo" -->
+&lt;!-- AWP_Import_Fragment Name = "My_Company_Logo" --&gt;
 
 ---
 
@@ -1418,7 +1418,7 @@ HTML code within another web page that imports the declared fragment:
 To create data blocks from the source files for user-defined web pages in STEP 7, proceed as follows:
 
 1. Select the CPU, for example, in the device configuration.
-2. Select the properties for user-defined web pages in the inspector window under "Properties > General > Web server".
+2. Select the properties for user-defined web pages in the inspector window under "Properties &gt; General &gt; Web server".
 3. As "HTML source", select the folder that contains the source files for the web application.
 4. Enter the HTMP page to be opened on starting the web application as the start HTML page.
 5. Enter a name for the application if required.
@@ -1433,7 +1433,7 @@ To create data blocks from the source files for user-defined web pages in STEP 7
 
 #### Tips for generating the web data blocks
 
-When you click on the "Generate blocks" button in the area "Web server > User-defined pages", STEP 7 checks whether the corresponding web data blocks can be generated.
+When you click on the "Generate blocks" button in the area "Web server &gt; User-defined pages", STEP 7 checks whether the corresponding web data blocks can be generated.
 
 The following causes prevent the generation of web data blocks:
 
@@ -1555,18 +1555,18 @@ With the help of manual fragments, you can make sure that the user program react
 
 To react directly to the received data in the user program, the "manual" fragment type (for "manual sites") must be used for the fragment that the data writes:
 
-<!-- AWP_Start_Fragment Name="testfrag" ID="1" Type="manual" -->
+&lt;!-- AWP_Start_Fragment Name="testfrag" ID="1" Type="manual" --&gt;
 
 The values are always transferred to the Web server of the CPU for automatic and manual pages in the same way:
 
 Example:
 
-<form method="POST" action="">  
-<p>  
-<input type="submit" value="Set new value">  
-<input type="text" name='"Velocity"' size="20">  
-</p>  
-</form>
+&lt;form method="POST" action=""&gt;  
+&lt;p&gt;  
+&lt;input type="submit" value="Set new value"&gt;  
+&lt;input type="text" name='"Velocity"' size="20"&gt;  
+&lt;/p&gt;  
+&lt;/form&gt;
 
 #### User program for manual fragments
 
@@ -1755,97 +1755,97 @@ The example is designed as follows:
 
 The meta data "Content-Language", charset and path to the Java script file are set in the header of the file.
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
 
-<html>
+&lt;html&gt;
 
-<head>
+&lt;head&gt;
 
-<meta http-equiv="Content-Language" content="de">
+&lt;meta http-equiv="Content-Language" content="de"&gt;
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
 
-<title>Language Switch German Site</title>
+&lt;title&gt;Language Switch German Site&lt;/title&gt;
 
-<script type="text/javascript" src="script/lang.js" ></script>
+&lt;script type="text/javascript" src="script/lang.js" &gt;&lt;/script&gt;
 
-</head>
+&lt;/head&gt;
 
 In the body of the file, the language selection occurs with the help of the HTML element "select". The select element activates a selection list and contains the options "de", labeled with "German" and "en", labeled with "English"; "de" is preselected.
 
 With the help of the event handler "onchange", the function "DoLocalLanguageChange(this)" is opened. The "this" parameter transfers the select-object with the selected option to this function. "onchange" executes the option to open the function upon each change.
 
-<!-- Language Selection -->
+&lt;!-- Language Selection --&gt;
 
-<table>
+&lt;table&gt;
 
-<tr>
+&lt;tr&gt;
 
-<td align="right" valign="top" nowrap>
+&lt;td align="right" valign="top" nowrap&gt;
 
-<!-- change language immediately on change of the selection -->
+&lt;!-- change language immediately on change of the selection --&gt;
 
-<select name="Language" onchange="DoLocalLanguageChange(this)" size="1">
+&lt;select name="Language" onchange="DoLocalLanguageChange(this)" size="1"&gt;
 
-<option value="de" selected >German</option>
+&lt;option value="de" selected &gt;German&lt;/option&gt;
 
-<option value="en" >English</option>
+&lt;option value="en" &gt;English&lt;/option&gt;
 
-</select>
+&lt;/select&gt;
 
-</td>
+&lt;/td&gt;
 
-</tr>
+&lt;/tr&gt;
 
-</table>
+&lt;/table&gt;
 
-<!-- Language Selection End-->
+&lt;!-- Language Selection End--&gt;
 
 #### Design of the file "langswitch.html" (folder "en")
 
 The header of the HTML file with English text is designed analog to the HTML file with German text.
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
 
-<html>
+&lt;html&gt;
 
-<head>
+&lt;head&gt;
 
-<meta http-equiv="Content-Language" content="en">
+&lt;meta http-equiv="Content-Language" content="en"&gt;
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
 
-<title>Language switching english page</title>
+&lt;title&gt;Language switching english page&lt;/title&gt;
 
-<script type="text/javascript" src="script/lang.js" ></script>
+&lt;script type="text/javascript" src="script/lang.js" &gt;&lt;/script&gt;
 
 In the body of the file, the language selection occurs with the help of the HTML element "select". In contrast to the German HTML file, the English option is preselected and the text and labels are in English.
 
-<!-- Language Selection -->
+&lt;!-- Language Selection --&gt;
 
-<table>
+&lt;table&gt;
 
-<tr>
+&lt;tr&gt;
 
-<td align="right" valign="top" nowrap>
+&lt;td align="right" valign="top" nowrap&gt;
 
-<!-- change language immediately on change of the selection -->
+&lt;!-- change language immediately on change of the selection --&gt;
 
-<select name="Language" onchange="DoLocalLanguageChange(this)" size="1">
+&lt;select name="Language" onchange="DoLocalLanguageChange(this)" size="1"&gt;
 
-<option value="de" >German</option>
+&lt;option value="de" &gt;German&lt;/option&gt;
 
-<option value="en" selected >English</option>
+&lt;option value="en" selected &gt;English&lt;/option&gt;
 
-</select>
+&lt;/select&gt;
 
-</td>
+&lt;/td&gt;
 
-</tr>
+&lt;/tr&gt;
 
-</table>
+&lt;/table&gt;
 
-<!-- Language Selection End-->
+&lt;!-- Language Selection End--&gt;
 
 #### Design of the "lang.js" file (in the "script" folder)
 
@@ -1932,5 +1932,5 @@ During migration of STEP 7 projects, the sources for the web server user-defined
 After the migration, you must integrate the sources of your user-defined pages in your project. Proceed as follows:
 
 1. Copy the source data to a directory that can be accessed by the TIA Portal.
-2. Enter the paths to the source files in the CPU properties under "Web server > User-defined pages".
+2. Enter the paths to the source files in the CPU properties under "Web server &gt; User-defined pages".
 3. Then compile the hardware configuration.

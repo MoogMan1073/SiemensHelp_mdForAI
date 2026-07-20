@@ -31,7 +31,7 @@ Function diagrams have the following structure:
 | **In the diagram:** |  |
 | ⑤ | The signal path number is displayed in the footer. The function diagram is divided into 8 (not subdivided) fields. These fields are used for navigation within the diagram. Links to other function diagrams always contain the signal path number in addition to the diagram number so that it is easier to find the link target. |
 | ⑥ | The links to other diagrams can also be seen in the diagram. The structure of the links is as follows:  - Function diagram number - Signal path number (separated by a dot) |
-| ⑦ | Footnotes are specifically identified in the text:   - square brackets e.g. <1>. - colored bars |
+| ⑦ | Footnotes are specifically identified in the text:   - square brackets e.g. &lt;1&gt;. - colored bars |
 | ⑧ | Signal interconnections of r parameters (signal sources) or c parameters (signal sinks) |
 | ⑨ | The signal flow in the function diagram is illustrated using various symbols. |
 

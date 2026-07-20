@@ -12,7 +12,7 @@ This section contains information on the following topics:
 
 - [Guided quick startup](#guided-quick-startup)
 - [Parameterization](#parameterization)
-- [Rotate & optimize](#rotate-optimize-1)
+- [Rotate &amp; optimize](#rotate-optimize-1)
 
 ## Guided quick startup
 
@@ -26,7 +26,7 @@ This section contains information on the following topics:
 - [Application settings](#application-settings)
 - [I/O configuration](#io-configuration)
 - [Telegrams (only offline)](#telegrams-only-offline)
-- [Rotate & optimize](#rotate-optimize)
+- [Rotate &amp; optimize](#rotate-optimize)
 - [Overview](#overview-1)
 
 ### Overview
@@ -89,7 +89,7 @@ You can define the following basic settings in the steps with the same name:
 - [Telegrams](#telegrams-only-offline)
 
   Based on the selected control mode, the preferred telegrams are suggested here. You can define different telegrams and/or make detailed settings. Telegram settings can only be made offline.
-- [Rotate & optimize](#rotate-optimize)
+- [Rotate &amp; optimize](#rotate-optimize)
 
   With this step you optimize the motor in online operation. "One Button Tuning" is available for this purpose.
 - [Overview](#overview-1)
@@ -277,7 +277,7 @@ As soon as the S210 drive acts as motion control (default setting), speed contro
 Startdrive defines the default settings of the setup based on what you have specified. The telegrams that match the selected application area are also preset.
 
 When control mode "Positioning" is activated, then the additional quick startup step "Application settings" is activated. In this step, you define the settings for active homing or for an absolute encoder adjustment.   
-You can also configure additional EPOS functions via the function view "[Parameterization > Technology functions > Basic positioner](#basic-positioner-epos)".
+You can also configure additional EPOS functions via the function view "[Parameterization &gt; Technology functions &gt; Basic positioner](#basic-positioner-epos)".
 
 > **Note**
 >
@@ -434,7 +434,7 @@ The settings of the position control words and position status words of telegram
 
 ##### Result
 
-Startdrive defines the default settings of the setup based on what you have specified. These default settings have an impact on the following EPOS settings in the guided quick startup and/or under [Parameterization > Technology functions > Basic positioner](#basic-positioner-epos).
+Startdrive defines the default settings of the setup based on what you have specified. These default settings have an impact on the following EPOS settings in the guided quick startup and/or under [Parameterization &gt; Technology functions &gt; Basic positioner](#basic-positioner-epos).
 
 ##### Additional parameters
 
@@ -647,7 +647,7 @@ The telegrams for communication are configured.
 
 #### Overview
 
-Optimize the converter online in quick startup step "Rotate & Optimize". To do this, use the "One Button Tuning". This step cannot be configured offline.
+Optimize the converter online in quick startup step "Rotate &amp; Optimize". To do this, use the "One Button Tuning". This step cannot be configured offline.
 
 With "One Button Tuning" (OBT), the mechanical drive train is measured using short test signals. This procedure adapts the controller parameters to the existing mechanical system. With this optimization procedure you determine the optimum controller settings with few entries.
 
@@ -655,7 +655,7 @@ With "One Button Tuning" (OBT), the mechanical drive train is measured using sho
 >
 > **Alternatively: Moving the drive via the control panel**
 >
-> If you want to use the control panel in the "Rotate & Optimize" step, click the "Use control panel" button. Instead of the OBT, the control panel is now displayed in the quick startup step. Proceed as described under [Traverse the drive from the control panel by specifying the speed](#traverse-the-drive-from-the-control-panel-by-specifying-the-speed).
+> If you want to use the control panel in the "Rotate &amp; Optimize" step, click the "Use control panel" button. Instead of the OBT, the control panel is now displayed in the quick startup step. Proceed as described under [Traverse the drive from the control panel by specifying the speed](#traverse-the-drive-from-the-control-panel-by-specifying-the-speed).
 
 #### Requirements
 
@@ -1274,7 +1274,7 @@ Safety functions that can be activated for each control type
 
 ###### Procedure
 
-1. Call the "Safety Integrated > Function selection" menu in the secondary navigation.
+1. Call the "Safety Integrated &gt; Function selection" menu in the secondary navigation.
 2. Click on ![Procedure](images/154401807627_DV_resource.Stream@PNG-en-US.PNG) to activate the editing mode.
 3. Select one of the following from the "Control type" drop-down list:
 
@@ -1592,7 +1592,7 @@ In the "Safe Stop 1" (SS1) function view you make settings for the motor deceler
 
    In this function view, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
 2. Select the monitoring type "none" in the "Monitoring" drop-down list ([p9606](SINAMICS%20Parameter%20S210.md#p9606-si-ss1-function-specification)).
-3. Enter the required delay time in the "Delay time SS1 -> STO active" ([p9556](SINAMICS%20Parameter%20S210.md#p9556-si-transition-time-ss1-to-sto)) entry field.
+3. Enter the required delay time in the "Delay time SS1 -&gt; STO active" ([p9556](SINAMICS%20Parameter%20S210.md#p9556-si-transition-time-ss1-to-sto)) entry field.
 4. Click "Save project" in the toolbar to save the changes in the project.
 
 ###### Variant 1: Configuring SS1 with SAM
@@ -1604,7 +1604,7 @@ In the "Safe Stop 1" (SS1) function view you make settings for the motor deceler
    In this function view, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
 2. Select the monitoring type "SAM" in the "Monitoring" drop-down list (p9606).
 3. Click the "Monitoring" button and parameterize the alternative brake monitoring functions "[SAM](#configuring-sam)" in the dialog.
-4. Enter the required delay time in the "Delay time SS1 -> STO active" (p9556) entry field.
+4. Enter the required delay time in the "Delay time SS1 -&gt; STO active" (p9556) entry field.
 5. Enter the shutdown speed for activating STO in the "STO shutdown speed" ([p9560](SINAMICS%20Parameter%20S210.md#p9560-si-sto-shutdown-velocity-1)) entry field.
 6. Click "Save project" in the toolbar to save the changes in the project.
 
@@ -1773,7 +1773,7 @@ With SS1E, the drive is not decelerated at the OFF3 ramp. You are responsible fo
 
    In this function view, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
 2. Select the monitoring type "none" in the "Monitoring" drop-down list ([p9606](SINAMICS%20Parameter%20S210.md#p9606-si-ss1-function-specification)).
-3. Enter the required delay time in the "Delay time SS1E -> STO active" ([p9594](SINAMICS%20Parameter%20S210.md#p9594-si-transition-time-ss1e-to-sto)) entry field.
+3. Enter the required delay time in the "Delay time SS1E -&gt; STO active" ([p9594](SINAMICS%20Parameter%20S210.md#p9594-si-transition-time-ss1e-to-sto)) entry field.
 4. Click "Save project" in the toolbar to save the changes in the project.
 
 ###### Variant 1: Configuring SS1E with SAM
@@ -1785,7 +1785,7 @@ With SS1E, the drive is not decelerated at the OFF3 ramp. You are responsible fo
    In this function view, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
 2. Select the monitoring type "SAM" in the "Monitoring" drop-down list (p9606).
 3. Click the "Monitoring" button and parameterize the alternative brake monitoring functions "[SAM](#configuring-sam)" in the dialog.
-4. Enter the required delay time in the "Delay time SS1E -> STO active" (p9594) entry field.
+4. Enter the required delay time in the "Delay time SS1E -&gt; STO active" (p9594) entry field.
 5. Enter the shutdown speed for activating STO in the "STO shutdown speed" ([p9560](SINAMICS%20Parameter%20S210.md#p9560-si-sto-shutdown-velocity-1)) entry field.
 6. Click "Save project" in the toolbar to save the changes in the project.
 
@@ -1959,7 +1959,7 @@ After braking, the drives remain in speed control mode with the speed setpoint n
    - with SBR
 3. Optionally with activated SAM or SBR:   
    Click on the "Monitoring" button and parameterize the alternative brake monitoring functions "[SAM](#configuring-sam)" or "[SBR](#configuring-sbr)" in the dialog.
-4. Correct the prescribed delay time in the "Delay time SS2 -> SOS active" field (p9552).
+4. Correct the prescribed delay time in the "Delay time SS2 -&gt; SOS active" field (p9552).
 5. Correct the value prescribed for the standstill tolerance in the "Standstill monitoring" field (p9530).
 6. Click "Save project" in the toolbar to save the changes in the project.
 
@@ -2108,7 +2108,7 @@ When SS2E is selected, however, the drive does not brake the motor independently
    - with SBR
 3. Optionally with activated SAM or SBR:   
    Click on the "Monitoring" button and parameterize the alternative brake monitoring functions "[SAM](#configuring-sam)" or "[SBR](#configuring-sbr)" in the dialog.
-4. Correct the prescribed delay time in the "Delay time SS2E -> SOS active" field ([p9553](SINAMICS%20Parameter%20S210.md#p9553-si-transition-time-ss2e-to-sos)).
+4. Correct the prescribed delay time in the "Delay time SS2E -&gt; SOS active" field ([p9553](SINAMICS%20Parameter%20S210.md#p9553-si-transition-time-ss2e-to-sos)).
 
    SBR/SAM is not monitored during this delay time. SOS becomes active after this delay time has elapsed.
 5. Correct the value prescribed for the standstill tolerance in the "Standstill monitoring" field ([p9530](SINAMICS%20Parameter%20S210.md#p9530-si-sos-standstill-tolerance-1)).
@@ -2310,7 +2310,7 @@ If the standstill tolerance is exceeded (in [p9530](SINAMICS%20Parameter%20S210.
 
    You can select the PROFIsafe telegrams in the telegram configuration. This means you also specify the required control word.
 2. Call the "SOS" function view again.
-3. Correct the specified delay time in the field "Delay time SOS -> SOS active" ([p9596](SINAMICS%20Parameter%20S210.md#p9596-si-sos-delay-time)).
+3. Correct the specified delay time in the field "Delay time SOS -&gt; SOS active" ([p9596](SINAMICS%20Parameter%20S210.md#p9596-si-sos-delay-time)).
 4. Enter the required value in the "Standstill tolerance" (p9530) field.
 
    Alternatively, you can also click on the "Standstill tolerance SOS" button. A dialog with a graphic display of the standstill monitoring opens. Then enter the standstill tolerance in the dialog.
@@ -2980,7 +2980,7 @@ The "SDI active" icon indicates the following states:
 
    You can select the PROFIsafe telegrams in the telegram configuration. This means you also specify the required control word.
 2. Call the "SDI" function view again.
-3. Enter a delay time in ms in the "Delay time for selection of SDI -> SDI active" (p9565) field.
+3. Enter a delay time in ms in the "Delay time for selection of SDI -&gt; SDI active" (p9565) field.
 4. Enter a monitoring tolerance in mm in the "Monitoring tolerance" (p9564) field.
 5. Select the required stop response in the "Selection" drop-down list (p9566).
 6. Click on the icon ![Procedure](images/148900571915_DV_resource.Stream@PNG-de-DE.PNG) to display a function view of the set [stop response](#stop-responses).
@@ -3062,7 +3062,7 @@ SLA has no effect with braking.
 
    You can select the PROFIsafe telegrams in the telegram configuration. This means you also specify the required control word.
 2. Call the "SLA" function view again.
-3. Enter a delay time in ms in the "Delay time for selection of SLA -> SLA active" ([p9595](SINAMICS%20Parameter%20S210.md#p9595-si-sla-delay-time)) field.
+3. Enter a delay time in ms in the "Delay time for selection of SLA -&gt; SLA active" ([p9595](SINAMICS%20Parameter%20S210.md#p9595-si-sla-delay-time)) field.
 4. Enter a value for the acceleration limit of the Safely-Limited Acceleration in the "Acceleration limit" field ([p9578](SINAMICS%20Parameter%20S210.md#p9578-si-sla-acceleration-limit-1)).
 
    This limit value applies to a positive and negative direction of rotation. The drive in [r9790](SINAMICS%20Parameter%20S210.md#r979001-si-sla-acceleration-resolution-1) indicates the possible acceleration resolution.
@@ -3191,7 +3191,7 @@ The following configuration is required for controlling the Safety Integrated Fu
    The properties of the PROFINET interface are displayed in the inspector window. The "Cyclic data exchange" setting area is active. The telegrams for the drive objects can be specified here.
 
    The following steps 2 and 3 apply if no PROFIsafe telegram has yet been created (e.g. via the guided quick startup).
-2. Optional: Click in the telegram configuration of the "Drive control telegrams" on the entry <Add telegram>.
+2. Optional: Click in the telegram configuration of the "Drive control telegrams" on the entry &lt;Add telegram&gt;.
 3. Optional: Select the "Add Safety telegram" option in the drop-down list of the entry:
 
    Then the lines "Send Safety Integrated Telegram (actual value)" and "Receive Safety Integrated Telegram (setpoint)" are inserted. PROFIsafe telegram 901 is preset. As an alternative, you can select PROFIsafe telegram 30.
@@ -3218,7 +3218,7 @@ The routing must also be configured to transfer the F-DI states via PROFIsafe. R
 1. Click the ![Configuring routing](images/148900571915_DV_resource.Stream@PNG-de-DE.PNG) icon "Telegram configuration"
 
    The properties of the PROFINET interface are displayed in the inspector window. The "Telegram configuration" setting area is active. The telegrams for the drive objects can be specified here.
-2. Click the <Add telegram> entry in the telegram configuration of "Drive axis_x".
+2. Click the &lt;Add telegram&gt; entry in the telegram configuration of "Drive axis_x".
 3. Select the "Add Safety Integrated telegram" option in the drop-down list of the entry.
 
    The "Send Safety Integrated telegram (Actual value)" and "Receive Safety Integrated telegram (Setpoint)" lines are then inserted.
@@ -3273,7 +3273,7 @@ The PROFIsafe address is required for control of the Safety Integrated Functions
    The properties of the PROFINET interface are displayed in the inspector window. The "Cyclic data exchange" setting area is active. The telegrams for the drive objects can be specified here.
 
    The following steps 2 and 3 apply if no PROFIsafe telegram has yet been created (e.g. via the guided quick startup).
-2. Optional: Click in the telegram configuration of the "Drive control telegrams" on the entry <Add telegram>.
+2. Optional: Click in the telegram configuration of the "Drive control telegrams" on the entry &lt;Add telegram&gt;.
 3. Optional: Select the "Add Safety telegram" option in the drop-down list of the entry:
 
    Then the lines "Send Safety Integrated Telegram (actual value)" and "Receive Safety Integrated Telegram (setpoint)" are inserted. The relevant PROFIsafe telegrams are preassigned.
@@ -3300,7 +3300,7 @@ The routing must also be configured to transfer the F-DI states via PROFIsafe. T
 1. Click the ![Configuring routing](images/148900571915_DV_resource.Stream@PNG-de-DE.PNG) icon "Telegram configuration"
 
    The properties of the PROFINET interface are displayed in the inspector window. The "Telegram configuration" setting area is active. The telegrams for the drive objects can be specified here.
-2. Click the <Add telegram> entry in the telegram configuration of "Drive axis_x".
+2. Click the &lt;Add telegram&gt; entry in the telegram configuration of "Drive axis_x".
 3. Select the "Add Safety Integrated telegram" option in the drop-down list of the entry.
 
    The "Send Safety Integrated telegram (Actual value)" and "Receive Safety Integrated telegram (Setpoint)" lines are then inserted.
@@ -3395,7 +3395,7 @@ The test signal length and the test cycle cannot be changed.
 
 The following applies to the debounce time:
 
-- p10017 > 2 ms
+- p10017 &gt; 2 ms
 
 The self-test with internal test signals complies with the following requirements:
 
@@ -3417,7 +3417,7 @@ Dark pulses through switchable power supply
 
 The following applies to the debounce time:
 
-- p10017 > dark pulse length (p10018) + 2 ms
+- p10017 &gt; dark pulse length (p10018) + 2 ms
 
 The self-test using entered dark pulses complies with the following requirements:
 
@@ -3437,7 +3437,7 @@ Dark pulses through control
 
 The following applies to the debounce time:
 
-- p10017 > dark pulse length + 2 ms
+- p10017 &gt; dark pulse length + 2 ms
 
   The test pulse length of the external control must be checked and the debounce time must be adapted.
 
@@ -4253,7 +4253,7 @@ Monitoring comprises the following parts:
 ###### Procedure
 
 1. Enter a value   
-   (value = 0, positioning monitoring is deactivated; value >= 1, positioning monitoring is activated) in the "Positioning window" ([p2544](SINAMICS%20Parameter%20S210.md#p2544-lr-positioning-window-1)) field.
+   (value = 0, positioning monitoring is deactivated; value &gt;= 1, positioning monitoring is activated) in the "Positioning window" ([p2544](SINAMICS%20Parameter%20S210.md#p2544-lr-positioning-window-1)) field.
 
    The positioning window defines the range around the target position in which the actual position value must lie after the positioning monitoring time has expired.
 2. Enter a value in the "Positioning monitoring time" ([p2545](SINAMICS%20Parameter%20S210.md#p2545-lr-positioning-monitoring-time)) field.

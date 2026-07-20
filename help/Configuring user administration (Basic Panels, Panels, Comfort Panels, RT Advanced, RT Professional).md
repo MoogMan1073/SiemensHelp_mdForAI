@@ -272,7 +272,7 @@ The number of predefined authorizations are fixed. Authorizations that you creat
 
 #### Introduction
 
-In the "Runtime settings > User administration" editor, configure the security settings for users and their passwords in runtime.
+In the "Runtime settings &gt; User administration" editor, configure the security settings for users and their passwords in runtime.
 
 #### Open
 
@@ -354,7 +354,7 @@ The security settings have the following effects in runtime, depending on the co
   >
   > The following special characters are permitted for passwords:
   >
-  > -+.,/*:\"?_()=^!€%∼`§'{}[]<>#$;&|@
+  > -+.,/*:\"?_()=^!€%∼`§'{}[]&lt;&gt;#$;&amp;|@
 
 ---
 
@@ -374,7 +374,7 @@ The security settings have the following effects in runtime, depending on the co
 
 #### Introduction
 
-In the "Runtime settings > User administration" editor, configure the security settings for users and their passwords at runtime.
+In the "Runtime settings &gt; User administration" editor, configure the security settings for users and their passwords at runtime.
 
 #### Open
 
@@ -469,7 +469,7 @@ The security settings have the following effects in runtime, depending on the co
     >
     > The following special characters are permitted for passwords:
     >
-    > -+.,/*:\"?_()=^!€%∼`§'{}[]<>#$;&|@
+    > -+.,/*:\"?_()=^!€%∼`§'{}[]&lt;&gt;#$;&amp;|@
 - "SIMATIC Logon" group
 
   - "Activate SIMATIC Logon" check box selected
@@ -501,7 +501,7 @@ The security settings have the following effects in runtime, depending on the co
 
 #### Introduction
 
-In the "Runtime settings > User administration", editor you specify whether users log on dynamically to an HMI device in runtime. You can also activate a central user administration by means of SIMATIC Logon.
+In the "Runtime settings &gt; User administration", editor you specify whether users log on dynamically to an HMI device in runtime. You can also activate a central user administration by means of SIMATIC Logon.
 
 #### Open
 
@@ -808,7 +808,7 @@ The user name must be unique within the project. Otherwise the input is not acce
 
 **Note**
 
-Do not use special characters such as / " § $ % ? ' & when you enter a user name and a password.
+Do not use special characters such as / " § $ % ? ' &amp; when you enter a user name and a password.
 
 ---
 
@@ -857,18 +857,18 @@ The "Users" work area is open.
 
 1. In the "Users" table, double-click the field in the "Name" column to change the user name.
 2. Change the user name.
-3. Confirm your entry with <Return>.
+3. Confirm your entry with &lt;Return&gt;.
 
-Alternatively, select the user in the work area. Change the user name under "Properties > Properties > General" in the Inspector window.
+Alternatively, select the user in the work area. Change the user name under "Properties &gt; Properties &gt; General" in the Inspector window.
 
 ##### Changing the password of the user
 
 1. Click the ![Changing the password of the user](images/70589889163_DV_resource.Stream@PNG-de-DE.png) button in the "Password" column of the "Users" table. A dialog box for entering the password opens.
 2. In the "Enter password" field, enter the new password.
 3. Enter the new password again in the "Confirm password" field.
-4. Confirm your entry with <Return>.
+4. Confirm your entry with &lt;Return&gt;.
 
-Alternatively, select the user in the work area. Change the password under "Properties > Properties > General" in the Inspector window.
+Alternatively, select the user in the work area. Change the password under "Properties &gt; Properties &gt; General" in the Inspector window.
 
 ##### Displaying invisible columns
 
@@ -879,9 +879,9 @@ Alternatively, select the user in the work area. Change the password under "Prop
 
 1. In the "Users" area, double-click on the field in the "Logoff time" column to change the logoff time.
 2. Change the logoff time.
-3. Confirm your entry with <Return>.
+3. Confirm your entry with &lt;Return&gt;.
 
-Alternatively, select the user in the work area. Change the logoff time under "Properties > Properties > Automatic logoff" in the Inspector window.
+Alternatively, select the user in the work area. Change the logoff time under "Properties &gt; Properties &gt; Automatic logoff" in the Inspector window.
 
 ##### Deleting a user
 
@@ -912,9 +912,9 @@ The "User groups" work area is open.
 
 1. In the "Groups" table, double-click the field in the "Name" column to change the name of the user group.
 2. Change the name of the user group.
-3. Confirm your entry with <Return>.
+3. Confirm your entry with &lt;Return&gt;.
 
-Alternatively, select the user group in the work area. Change the name under "Properties > Properties > General" in the Inspector window.
+Alternatively, select the user group in the work area. Change the name under "Properties &gt; Properties &gt; General" in the Inspector window.
 
 > **Note**
 >
@@ -929,9 +929,9 @@ Alternatively, select the user group in the work area. Change the name under "Pr
 
 1. In the "Groups" table, double-click the field in the "Display name" column to change the display name of the user group.
 2. Change the displayed name of the user group.
-3. Confirm your entry with <Return>.
+3. Confirm your entry with &lt;Return&gt;.
 
-Alternatively, select the user group in the work area. Change the display name under "Properties > Properties > General" in the Inspector window.
+Alternatively, select the user group in the work area. Change the display name under "Properties &gt; Properties &gt; General" in the Inspector window.
 
 ##### Deleting a user group
 
@@ -946,9 +946,9 @@ Predefined user groups cannot be deleted.
 
 1. In the "Authorizations" table, double-click the field in the "Name" column to change the name of the authorization.
 2. Change the name of the authorization.
-3. Confirm your entry with <Return>.
+3. Confirm your entry with &lt;Return&gt;.
 
-Alternatively, select the authorization in the work area. Change the name under "Properties > Properties > General" in the Inspector window.
+Alternatively, select the authorization in the work area. Change the name under "Properties &gt; Properties &gt; General" in the Inspector window.
 
 ##### Deleting authorizations
 
@@ -973,7 +973,7 @@ To assign group-specific rights, edit the number of a user group.
 
 ##### Requirements
 
-- In the "Runtime settings> User administration" editor, "Group-specific rights for user administration" is selected.
+- In the "Runtime settings&gt; User administration" editor, "Group-specific rights for user administration" is selected.
 - The "Operator" user group has been created.
 - A "User administration" authorization has been assigned.
 - The "User groups" work area is open.
@@ -1017,7 +1017,7 @@ If you have activated SIMATIC Logon, dynamic logon is not possible.
 
 **Assignment of the HMI device to the variable**
 
-1. Double-click "Runtime settings > User administration" in the project window.
+1. Double-click "Runtime settings &gt; User administration" in the project window.
 2. Double-click "Add" in the "Dynamic logon" area of the table.
 3. Click the ![Procedure](images/70589889163_DV_resource.Stream@PNG-de-DE.png) button in the "HMI device" column. A dialog box for selecting the HMI device opens.
 4. Select an HMI device.
@@ -1077,7 +1077,7 @@ You do not have to create users in WinCC because they are taken dynamically from
 
 > **Note**
 >
-> SIMATIC Logon is a product requiring a license. For more information on SIMATIC Logon go to <http://support.automation.siemens.com>.
+> SIMATIC Logon is a product requiring a license. For more information on SIMATIC Logon go to &lt;http://support.automation.siemens.com&gt;.
 >
 > Enter the ID "34519648" in the search field and start searching. The "SIMATIC Logon - Electronic Signature" manual is available to download.
 
@@ -1200,7 +1200,7 @@ Users of SIMATIC Logon must be members of a user group of the operating system. 
 
 ##### Procedure
 
-1. Open the "Runtime settings > User administration" editor in the Project window.
+1. Open the "Runtime settings &gt; User administration" editor in the Project window.
 2. Select "Enable SIMATIC Logon".
 3. Select "Windows domain" or "Windows computer", depending on where you administer your users.
 4. Enter the name or IP address of the SIMATIC Logon server in the "Server name" text box.
@@ -1300,7 +1300,7 @@ This allows you to make various sections of a project immediately accessible or 
 1. Double-click the "Runtime settings" editor in the project window.
 2. Click "User administration".
 3. In the "User groups" tab, select the user group "Web operators".
-4. In the Inspector window, select "Properties > Properties > Web options".
+4. In the Inspector window, select "Properties &gt; Properties &gt; Web options".
 5. Under "WebNavigator settings", click the ![Procedure](images/30890839819_DV_resource.Stream@PNG-de-DE.png) button in the "Start screen" selection list.
 
    A dialog box for selecting the start screen opens.
@@ -1358,7 +1358,7 @@ This allows you to make various sections of a project immediately accessible or 
 1. Double-click the "Runtime settings" editor in the project window.
 2. Click "User administration".
 3. In the "Users" tab, select a user for whom you want to make the settings.
-4. In the Inspector window, select "Properties > Properties > Web options".
+4. In the Inspector window, select "Properties &gt; Properties &gt; Web options".
 5. Under "WebNavigator settings", click the ![Procedure](images/30890839819_DV_resource.Stream@PNG-de-DE.png) button in the "Start screen" selection list.
 
    A dialog box for selecting the start screen opens.
@@ -1387,11 +1387,11 @@ Alternatively, you can make these settings in the shortcut menu by selecting the
 
 > **Note**
 >
-> By default, the WebNavigator licenses are used for WebUX. If you want to use these licenses separately, clear the "Use WebNavigator licenses for WebUX" check box under "Runtime settings > Web access".
+> By default, the WebNavigator licenses are used for WebUX. If you want to use these licenses separately, clear the "Use WebNavigator licenses for WebUX" check box under "Runtime settings &gt; Web access".
 
 > **Note**
 >
-> Users can now also log off manually from the WebNavigator client using the ODK function "PWRTLogout()". You can find one description of the function in the Runtime API documentation under "Functions of the user administration > Functions for logon, logoff".
+> Users can now also log off manually from the WebNavigator client using the ODK function "PWRTLogout()". You can find one description of the function in the Runtime API documentation under "Functions of the user administration &gt; Functions for logon, logoff".
 
 ---
 
@@ -1514,9 +1514,9 @@ A screen has been created.
 
 1. Select the "User view" object from the "Controls" category in the toolbox.
 2. Drag-and-drop the "User view" object into the screen.
-3. Click on "Properties > Properties" in the Inspector window.
+3. Click on "Properties &gt; Properties" in the Inspector window.
 4. Specify the appearance of the "User view".
-5. You can, for example, select " "Display mode > Fit to size > Fit object to contents".
+5. You can, for example, select " "Display mode &gt; Fit to size &gt; Fit object to contents".
 
 ##### Result
 
@@ -1556,7 +1556,7 @@ The logon is successful only when the user name entered during the logon matches
 
 > **Note**
 >
-> Do not use special characters such as / " § $ % ? ' & when you enter a user name and a password.
+> Do not use special characters such as / " § $ % ? ' &amp; when you enter a user name and a password.
 
 You assign the user to a user group. The user then has the authorizations of the user group.
 
@@ -1571,19 +1571,19 @@ You assign the user to a user group. The user then has the authorizations of the
 
 ##### Procedure
 
-1. Click "<New User>" in the user view. A dialog opens.
+1. Click "&lt;New User&gt;" in the user view. A dialog opens.
 2. Enter "Foreman" as the user name.
-3. Press the <Return> button.
+3. Press the &lt;Return&gt; button.
 4. Click "Password".
 5. Enter the password of the user.
-6. Press the <Return> button. The password is hidden.
+6. Press the &lt;Return&gt; button. The password is hidden.
 7. Click in the "Group" column.
 8. Select "Group 2" as the "Group".
 
    ![Procedure](images/74766056203_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/74766056203_DV_resource.Stream@PNG-en-US.png)
-9. Press the <Return> button.
+9. Press the &lt;Return&gt; button.
 10. Click in the "Logoff time" column.
 11. Enter the time after which the user is logged off automatically.
 
@@ -1619,35 +1619,35 @@ If you have configured a user view in the engineering system, the users and user
 ##### Changing the user name
 
 1. Enter a new user name in the "Users" column in the user display.
-2. Confirm your entry with <Return>.
+2. Confirm your entry with &lt;Return&gt;.
 
 **Note**
 
-The user can then no longer log on with their previous password in runtime. If you delete the name and press <Return>, the user is deleted.
+The user can then no longer log on with their previous password in runtime. If you delete the name and press &lt;Return&gt;, the user is deleted.
 
 ##### Changing the password of the user
 
 Availability of complex user display in selected devices only.
 
 1. Enter a new password in the "password" column in the user display.
-2. Confirm your entry with <Return>.
+2. Confirm your entry with &lt;Return&gt;.
 
 **Note**
 
 The user can then no longer log on with his previous password in runtime.
 
-If you delete the password in the complex user view and press <Return>, the user will be deleted.
+If you delete the password in the complex user view and press &lt;Return&gt;, the user will be deleted.
 
 ##### Changing the logoff time of the user
 
 1. Enter a new logoff time in the "Logoff time" column in the user display.
-2. Confirm your entry with <Return>.
+2. Confirm your entry with &lt;Return&gt;.
 
 ##### Deleting a user
 
 1. Click the name of the user to be deleted.
 2. Delete the name.
-3. Press the <Return> button.
+3. Press the &lt;Return&gt; button.
 
 **Note**
 
@@ -1657,7 +1657,7 @@ The user can no longer log on in runtime.
 
 1. Activate the user group field for the corresponding user.
 2. Select a user group.
-3. Confirm your selection with <Return>.
+3. Confirm your selection with &lt;Return&gt;.
 
 ---
 
@@ -1671,7 +1671,7 @@ The user can no longer log on in runtime.
 
 ##### Unlock locked out users
 
-The check box "Activate limit for login attempts" is activated in the "Runtime settings > User administration".   
+The check box "Activate limit for login attempts" is activated in the "Runtime settings &gt; User administration".   
 The number 3 is entered in the field "Number of invalid login attempts".
 
 If users have three failed attempts at login, for example by entering an incorrect password, they are assigned to the "Unauthorized" group. The user loses all authorizations. The user can still log on, but no longer has any authorizations. Only a user with administrator rights re-assigns the unauthorized user to a user group.
@@ -1701,7 +1701,7 @@ The logon dialog box is displayed by default during access to a protected object
 
 ##### Requirements
 
-- Under "Runtime settings > User administration" the
+- Under "Runtime settings &gt; User administration" the
 
   - "Enable limit for logon attempts" check box has been selected.
   - The number 3 is entered in the field "Number of incorrect login attempts".
@@ -1730,7 +1730,7 @@ When entering the password, note that it is case sensitive.
 >
 > The following special characters are permitted for passwords:
 >
-> ()€&@$%+#^[]|*-"<>!,.;:/_=\'? `~{}$
+> ()€&amp;@$%+#^[]|*-"&lt;&gt;!,.;:/_=\'? `~{}$
 >
 > If you switch to V14 from an older device version and prohibited special characters were used for the password, the password is deleted. You are informed about this with an error message and have to save a new password.
 
@@ -1853,7 +1853,7 @@ The system function "ExportImportUserAdministration" is not available on all HMI
 ##### Procedure
 
 1. Click the button in the screen.
-2. Click "Properties > Events > Click" in the Inspector window.
+2. Click "Properties &gt; Events &gt; Click" in the Inspector window.
 3. Click the entry "Add function" in the function list.
 4. Select the "ExportImportUserAdministration" system function.
 5. Select "Export" as the "Direction". When exporting, the target file is overwritten with the user data.
@@ -1894,7 +1894,7 @@ The system function "ExportImportUserAdministration" is not available on all HMI
 ##### Procedure
 
 1. Click the button in the screen.
-2. Click "Properties > Events > Click" in the Inspector window.
+2. Click "Properties &gt; Events &gt; Click" in the Inspector window.
 3. Click the entry "Add function" in the function list.
 4. Select the "ExportImportUserAdministration" system function.
 5. Select "Import" as the "Direction." When importing, the user data in the HMI device are overwritten.
@@ -1961,9 +1961,9 @@ An example describes in detail how to configure a command button with access pro
 ##### Procedure
 
 1. Click the button in the screen.
-2. Click "Properties > Properties > Security" in the Inspector window.
+2. Click "Properties &gt; Properties &gt; Security" in the Inspector window.
 3. Select "Stop runtime" as the "Authorization".
-4. In the Inspector window, select "Properties > Events > Click".
+4. In the Inspector window, select "Properties &gt; Events &gt; Click".
 5. Select a system function from the function list, for example, "StopRuntime".
 
 **Note**
@@ -2217,7 +2217,7 @@ In the following example, you configure the "ShowLogonDialog" function for a but
 #### Procedure
 
 1. Click the button in the screen.
-2. Click "Properties > Events > Release" in the Inspector window.
+2. Click "Properties &gt; Events &gt; Release" in the Inspector window.
 3. Click the entry "Add function" in the "Function list" table.
 4. Select the system function "ShowLogonDialog" from the "User administration" group.
 
@@ -2262,7 +2262,7 @@ This system message can be archived. When archiving, the system message is provi
 2. Double-click "Add" in the table of the tasks.
 3. Enter "Logon-Protocol" as the "Name".
 4. Select "User change" as the "Trigger".
-5. Open "Properties > Events" in the Inspector window.
+5. Open "Properties &gt; Events" in the Inspector window.
 6. Click the entry "Add function" in the "Function list" table.
 7. Select the "TraceUserChange" system function.
 
@@ -2377,14 +2377,14 @@ In the following example you use a system function to create a button for a scre
 
 #### Procedure
 
-1. Click "Properties > Properties > General" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; General" in the Inspector window.
 2. Enter "To Recipe view" as the text.
-3. Click "Properties > Events > Click" in the Inspector window.
+3. Click "Properties &gt; Events &gt; Click" in the Inspector window.
 4. Click the "Add function" entry in the first line of the "Function list" table.
 5. Select the "ActivateScreen" system function in the "Screens" group.
 6. Click the ![Procedure](images/30890839819_DV_resource.Stream@PNG-de-DE.png) button in the "Screen name" field. A dialog box for selecting the screen opens.
 7. Select the "Recipes" screen and use the ![Procedure](images/84603740299_DV_resource.Stream@PNG-de-DE.png) button to close the dialog box.
-8. Click "Properties > Properties > Security" in the Inspector window.
+8. Click "Properties &gt; Properties &gt; Security" in the Inspector window.
 9. Select "Change recipe data records" as the "Authorization."
 
 #### Result

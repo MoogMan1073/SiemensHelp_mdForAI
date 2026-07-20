@@ -12,7 +12,7 @@ This section contains information on the following topics:
 
 - [Configuration](#configuration)
 - [Additional information on mobile wireless CPs](#additional-information-on-mobile-wireless-cps)
-- [Online & diagnostics](#online-diagnostics)
+- [Online &amp; diagnostics](#online-diagnostics)
 - [Block library Telecontrol ST7](#block-library-telecontrol-st7)
 
 ## Configuration
@@ -152,7 +152,7 @@ VPN-capable telecontrol CPs can also handle telecontrol communication via the SI
 
 Make the following settings for using SINEMA Remote Connect and telecontrol communication via SINEMA RC:
 
-1. Communication via SINEMA RC: Parameter group "Security > VPN"
+1. Communication via SINEMA RC: Parameter group "Security &gt; VPN"
 
    Activate VPN so that the other parameters become visible.
 2. Telecontrol communication via SINEMA RC: "Communication types" parameter group
@@ -179,7 +179,7 @@ Use cases and parameters to be activated
 | (3) | Off | On | Off |
 | (4) | On | On | Off |
 | (5) | On | On | On |
-| ***** Explanation of the parameter abbreviations:   **SRC** ‑ Security > VPN (activated) > "VPN connection type":          "Automatic OpenVPN configuration via SINEMA Remote Connect Server"   **TC** ‑ Communication types > Telecontrol communication enabled   **TC + SRC** ‑ Communication types >                "Activate telecontrol communication via SINEMA Remote Connect" |  |  |  |
+| ***** Explanation of the parameter abbreviations:   **SRC** ‑ Security &gt; VPN (activated) &gt; "VPN connection type":          "Automatic OpenVPN configuration via SINEMA Remote Connect Server"   **TC** ‑ Communication types &gt; Telecontrol communication enabled   **TC + SRC** ‑ Communication types &gt;                "Activate telecontrol communication via SINEMA Remote Connect" |  |  |  |
 
 ##### Telecontrol communication via SINEMA Remote Connect
 
@@ -193,19 +193,19 @@ Follow the steps below when configuring the CP for use of telecontrol communicat
 2. Change to the "Security" parameter group and enable the security functions.
 
    (In the "Communication types" parameter group the SINEMA RC option appears disabled and grayed out)
-3. Open the "Security > VPN" parameter group and enable VPN.
+3. Open the "Security &gt; VPN" parameter group and enable VPN.
 4. For the parameter "VPN connection type" select the option "Automatic OpenVPN configuration via SINEMA Remote Connect Server" if this is not preset.
 
    (In the "Communication types" parameter group the SINEMA RC option becomes usable.)
 5. Change to the "Communication types" parameter group and set the checkmark for the option "Activate telecontrol communication via SINEMA Remote Connect".
 
    The CP is now prepared for telecontrol communication via SINEMA Remote Connect.
-6. Create the remaining configuration of the SINEMA RC Server in "Security > VPN".
-7. Import the certificate of the SINEMA RC Server in "Security > Certificate manager".
+6. Create the remaining configuration of the SINEMA RC Server in "Security &gt; VPN".
+7. Import the certificate of the SINEMA RC Server in "Security &gt; Certificate manager".
 
 **Configuration of connection establishment**
 
-The connection establishment is configured in the "Security > VPN > Optional settings" parameter group with the parameter "Connection type".
+The connection establishment is configured in the "Security &gt; VPN &gt; Optional settings" parameter group with the parameter "Connection type".
 
 - **Update interval**
 
@@ -338,7 +338,7 @@ For the following CPs, the time can be taken once during startup (commissioning)
 - S7‑1200 as of V3.4
 - ET 200SP as of V2.3
 
-You will find the option in the parameter group "Communication with the CPU > CP time".
+You will find the option in the parameter group "Communication with the CPU &gt; CP time".
 
 **Time synchronization of communications modules**
 
@@ -355,7 +355,7 @@ Depending on the device type and the telecontrol protocol, the following synchro
 
   - S7‑1200
 
-    If the option "CPU synchronizes the modules of the device" is enabled for the CPU under "PROFINET interface > Time synchronization", all CMs/CPs of the station are synchronized with the CPU time.
+    If the option "CPU synchronizes the modules of the device" is enabled for the CPU under "PROFINET interface &gt; Time synchronization", all CMs/CPs of the station are synchronized with the CPU time.
   - ET 200SP
 
     If the time-of-day synchronization of the CP is disabled, CPs with firmware version ≥ V2.1 are automatically synchronized in a cycle of 10 seconds by a CPU with firmware version ≥ V2.0.
@@ -499,7 +499,7 @@ The forwarding of the CP time to the CPU depends on the firmware version of the 
 
   - S7‑1200: CP firmware ≥ V3.0 and CPU firmware ≥ V4.2
 
-    If the option "CPU synchronizes the modules of the device" is enabled for the CPU in "PROFINET interface > Time synchronization", all smart modules of the station are synchronized with the CPU time.
+    If the option "CPU synchronizes the modules of the device" is enabled for the CPU in "PROFINET interface &gt; Time synchronization", all smart modules of the station are synchronized with the CPU time.
   - ET 200SP: CP firmware ≥ V2.1 and CPU firmware ≥ V2.0
 
   Since the CPU automatically adopts the CP time, you no longer require for these firmware versions the forwarding option using the PLC tag.
@@ -510,12 +510,12 @@ The TIM can forward its time of day as follows:
 
 - **To connected networks**
 
-  Configuration with "Time-of-day synchronization" > "Send time" or "Receive time"
+  Configuration with "Time-of-day synchronization" &gt; "Send time" or "Receive time"
 
   The procedure for configuration differs in Ethernet and classic WAN networks, see below.
 - **To the assigned CPU**
 
-  Configuration with "Time-of-day synchronization" > "Send time"
+  Configuration with "Time-of-day synchronization" &gt; "Send time"
 
 ##### Configuration with the TIM and with WAN networks
 
@@ -624,7 +624,7 @@ For security CPs, the "NTP (secure)" method can also be used when security func
 
 The IP address of at least one NTP server must be configured.
 
-The address of the NTP server can also be entered as a URL, e.g. <ntp.server.com>.
+The address of the NTP server can also be entered as a URL, e.g. &lt;ntp.server.com&gt;.
 
 The synchronization interval specifies the cycle of the time-of-day queries to the NTP server. Depending on the selected module, the cycle can be selected from a drop down list or configured within a range of values between 10 seconds and 1 day (86400 seconds).
 
@@ -748,7 +748,7 @@ For the configuration, follow the steps below. Only the most important steps req
 **CPU**
 
 1. Create a station with an R-CPU or a H-CPU.
-2. Configure the required parameters under "Protection & Security".
+2. Configure the required parameters under "Protection &amp; Security".
 3. Assign an IP address to both redundant CPUs.
 4. Assign the shared system IP address.
 
@@ -820,7 +820,7 @@ You cannot configure the following functions and parameters for the backup TIM. 
 
 - Basic settings (except IP routing)
 - Communication with the CPU (cycle idle time, write/read jobs)
-- Subscriber numbers > Assigned CPU
+- Subscriber numbers &gt; Assigned CPU
 - Log settings
 - SNMP
 - Protection
@@ -832,7 +832,7 @@ You cannot configure the following functions and parameters for the backup TIM. 
 The following data must be configured identically for both TIMs of the redundancy group:
 
 - Communication type
-- Basic settings > IP routing
+- Basic settings &gt; IP routing
 - Settings of interfaces, especially DHCP, IPv6 parameters (except address), routing, etc.
 - Web server
 - DNS configuration
@@ -891,7 +891,7 @@ As soon as the configured active connection of the primary TIM returns after a f
 
 If the synchronization connection fails, both TIMs become active.
 
-If the synchronization connection between the two TIMs fails, this can be indicated by sending an event to the master (data point > "Trigger" tab > Station state event type "Status of redundancy synchronization connection changed").
+If the synchronization connection between the two TIMs fails, this can be indicated by sending an event to the master (data point &gt; "Trigger" tab &gt; Station state event type "Status of redundancy synchronization connection changed").
 
 ### Serial interface
 
@@ -919,7 +919,7 @@ Follow the steps below to insert the TS module and to activate the serial interf
    At the same time the catalog view changes. Among other things the Communications modules" directory appears.
 2. Expand the "Communications modules" directory:
 
-   > Industrial Remote Communication > TS Modules
+   &gt; Industrial Remote Communication &gt; TS Modules
 3. Expand the subdirectory of the required TS module.
 4. Select the TS module.
 
@@ -1033,7 +1033,7 @@ The communications module makes the HTML pages of its Web server available for a
 
 Here by selecting the check boxes you specify the interfaces for which access to the WBM of the module is allowed.
 
-The settings for activating the interfaces for Web server access are exchanged between the two parameter groups "Web server" and "Ethernet interface > Access to the Web server".
+The settings for activating the interfaces for Web server access are exchanged between the two parameter groups "Web server" and "Ethernet interface &gt; Access to the Web server".
 
 If no interface is enabled for access, it is not possible to access the WBM of the module.
 
@@ -1323,7 +1323,7 @@ This section contains information on the following topics:
 
 #### CPU scan cycle
 
-Input data points are assigned to the read cycle of the CPU in the data point configuration in the "General > Read cycle" tab.
+Input data points are assigned to the read cycle of the CPU in the data point configuration in the "General &gt; Read cycle" tab.
 
 ##### Parameters of the CPU sampling cycle
 
@@ -1345,7 +1345,7 @@ You will find the structure of the CPU sampling cycle in section [Read cycle](#r
 
 You will find the parameters described below in the following parameter group of modules with the type of communication "ST7":
 
-"Communication with the CPU" > "Partner status"
+"Communication with the CPU" &gt; "Partner status"
 
 The following statuses are monitored and written to PLC tags:
 
@@ -1401,7 +1401,7 @@ The variables to which the statuses are written differ depending on the module t
   | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
   | --- | --- | --- | --- | --- | --- | --- | --- |
   | **Path redundancy** | **Connection mode** | **Temporary connection** ****** | (Reserved) | **Frame memory**  ***** |  | **Path status** | **Partner status** |
-  | 0: No redundancy  1: Redundancy exists | 0: Permanent  1: Temporary | 0: Partner not reachable  1: Partner reachable ***** | ‑ | 0: Send buffer OK  1: Memory allocation > 90%  3: Overflow (memory allocation 100%) |  | 0: Not all paths reachable  1: All paths reachable | 0: Partner not reachable  1: Partner reachable |
+  | 0: No redundancy  1: Redundancy exists | 0: Permanent  1: Temporary | 0: Partner not reachable  1: Partner reachable ***** | ‑ | 0: Send buffer OK  1: Memory allocation &gt; 90%  3: Overflow (memory allocation 100%) |  | 0: Not all paths reachable  1: All paths reachable | 0: Partner not reachable  1: Partner reachable |
 
   ***** Partners that support temporary connections are set to 'reachable' if the partner itself terminates the connection.
 
@@ -1701,7 +1701,7 @@ The structure and contents of the UDT are different for the three protocols:
 | Byte | Group | 1, 2, 3, 4, 10, 11, 20, 21, 22, 23, 30, 31, 32, 33, 34, 40, 41, 42 |
 | Byte | Variation | 0 ... 8 |
 | Word | Start index | 0 ... 65535 |
-| Word | Number of objects | - = 0: Request of all objects with the same Group and Variation   When 0 is set, the start index is irrelevant. - = 1: Request of the object specified by the start index. - > 1: Request of the specified number of objects starting with the start index. |
+| Word | Number of objects | - = 0: Request of all objects with the same Group and Variation   When 0 is set, the start index is irrelevant. - = 1: Request of the object specified by the start index. - &gt; 1: Request of the specified number of objects starting with the start index. |
 
 **Coding of the value range of the "Request type" parameter**
 
@@ -1808,29 +1808,29 @@ You configure the address parameters listed above in the following parameter gro
 
   - TeleControl Basic
 
-    Parameter group "Security > CP identification"
+    Parameter group "Security &gt; CP identification"
   - SINAUT ST7
 
-    Parameter group "Ethernet interface > Station address"
+    Parameter group "Ethernet interface &gt; Station address"
   - DNP3 / IEC 60870-5
 
-    Parameter group "Ethernet interface > Station address"
+    Parameter group "Ethernet interface &gt; Station address"
 - CPU with firmware version V3.0
 
   - TeleControl Basic
 
-    Parameter group "Security > CP identification"
+    Parameter group "Security &gt; CP identification"
   - SINAUT ST7
 
     Parameter group "Subscriber numbers"
   - DNP3 / IEC 60870-5
 
-    Parameter group "Ethernet interface > CP identification"
+    Parameter group "Ethernet interface &gt; CP identification"
 - CPs as of firmware version V3.1
 
   - TeleControl Basic
 
-    Parameter group "Security > CP identification"
+    Parameter group "Security &gt; CP identification"
   - SINAUT ST7
 
     Parameter group "Subscriber numbers"
@@ -1956,7 +1956,7 @@ Required for:
 
   You use TD7onTIM
 
-  See "Basic settings > Configuration > Telecontrol configuration > Configure".
+  See "Basic settings &gt; Configuration &gt; Telecontrol configuration &gt; Configure".
 
   When TD7onCPU is used, it is not necessary to specify the CPU certificate to the TIM.
 
@@ -2017,7 +2017,7 @@ Before an online function is executed, a check is made to establish whether or n
 Example:  
 The module was configured for read access and you want to load new firmware. Since this is write access, the configured password must be entered before the function can be executed.
 
-The access rights to the protected data apply for the duration of the online connection or until the access rights are canceled again manually with "Online > Delete access rights".
+The access rights to the protected data apply for the duration of the online connection or until the access rights are canceled again manually with "Online &gt; Delete access rights".
 
 ---
 
@@ -2095,7 +2095,7 @@ All other settings required for communication with the master station are taken 
 > As of STEP 7 V15.1, you can configure a physical CP with firmware V2.1 in the STEP 7 project with firmware version V3.0:
 >
 > 1. Insert a CP with firmware version V3.0 into the STEP 7 project.
-> 2. Select the "Compatibility mode V2.1" option in the "General > Catalog Information" parameter group of the CP.
+> 2. Select the "Compatibility mode V2.1" option in the "General &gt; Catalog Information" parameter group of the CP.
 >
 > You can then use the CP in telecontrol connections that you configure using the "Network data" editor.
 >
@@ -2105,8 +2105,8 @@ All other settings required for communication with the master station are taken 
 >
 > - Switching the protocol type
 > - Receive time from local station and via NTP
-> - "Communication with the CPU > CP diagnostics"
-> - Online & Diagnostics > "Functions > Save service data"
+> - "Communication with the CPU &gt; CP diagnostics"
+> - Online &amp; Diagnostics &gt; "Functions &gt; Save service data"
 
 ##### Configuration in the "Network data" editor
 
@@ -2158,11 +2158,11 @@ Check the following requirements before you create Telecontrol connections:
     Set the network type to the respective communication protocol: ST7 / DNP3 / IEC 60870‑5
 - TIM 1531 IRC with S7‑1500R/H CPU
 
-  When you assign the TIM 1531 IRC to an S7‑1500R/H CPU, the system IP address of the S7‑1500R/H CPU is used for communication of the TIM with the CPU. An S7 connection is automatically created after applying a telecontrol connection. You can recognize the use of the system IP address in the "Network data" editor > "Connections" tab in the property dialog of the S7 connection: Here you activate the option to use the system IP address in the default setting.
+  When you assign the TIM 1531 IRC to an S7‑1500R/H CPU, the system IP address of the S7‑1500R/H CPU is used for communication of the TIM with the CPU. An S7 connection is automatically created after applying a telecontrol connection. You can recognize the use of the system IP address in the "Network data" editor &gt; "Connections" tab in the property dialog of the S7 connection: Here you activate the option to use the system IP address in the default setting.
 
   Make sure that the system IP address is configured for both CPUs and that the subnet masks of the interfaces are identical.
 
-##### Opening the editor "Network data" > "Telecontrol" tab
+##### Opening the editor "Network data" &gt; "Telecontrol" tab
 
 To open the editor, follow the steps below:
 
@@ -2226,7 +2226,7 @@ Boxes with a missing or bad configuration are shown on a red background, in the 
 
 !["Network data" editor, "Telecontrol > ST7" tab, example of ST7 connections](images/114989519499_DV_resource.Stream@PNG-en-US.png)
 
-"Network data" editor, "Telecontrol > ST7" tab, example of ST7 connections
+"Network data" editor, "Telecontrol &gt; ST7" tab, example of ST7 connections
 
 The connections are displayed somewhat differently in the "DNP3" and "IEC" tabs, see protocol-specific sections under [DNP3 and IEC connections](#dnp3-and-iec-connections).
 
@@ -2239,7 +2239,7 @@ A maximum of 129 characters from the following ASCII character sets (numbers dec
 - **No.**
    **32..126**
 
-  Space , ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~
+  Space , ! " # $ % &amp; ' ( ) * + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ ` { | } ~
 - **No.**
    **128, 130..140, 142, 145..156, 158..159, 161..172**
 
@@ -2418,7 +2418,7 @@ Specify the actual connection path of the created telecontrol connection as foll
 
 If different networks are created between two subscribers in the network configuration, the different connection paths are displayed:
 
-> dialog "Add connection paths" > table "Select a connection path ..."
+&gt; dialog "Add connection paths" &gt; table "Select a connection path ..."
 
 If you only want to use one connection path, only select the desired path and click "Add".
 
@@ -3200,7 +3200,7 @@ The function is supported by the following modules and firmware versions:
 
 - Deactivate the "IP address check" parameter
 
-  - For the communications modules of the stations, open the parameter group "Ethernet interface > Advanced options > Settings DNP3 station".
+  - For the communications modules of the stations, open the parameter group "Ethernet interface &gt; Advanced options &gt; Settings DNP3 station".
   - Set the "IP address check" option to "Do not check IP address".
 
   In this setting, the IP address of the communication partner is not checked. This ensures that any station in the network that is configured with the DNP3 station address of the master may connect to the station module regardless of its IP address.
@@ -3211,7 +3211,7 @@ The function is supported by the following modules and firmware versions:
 
    Do not create any stations for the three masters. These are configured as "Third-party device" in the editor of the telecontrol connections in STEP 7.
 2. Create two DNP3 connections with the CP in the "Network data" task card.
-3. Create two DNP3 connections with the station module in the "Network data > TeleControl > DNP3" task card.
+3. Create two DNP3 connections with the station module in the "Network data &gt; TeleControl &gt; DNP3" task card.
 
    The two connection segments are almost identical but differ in the configuration of the "End interface (red.)" parameter:
 
@@ -3369,11 +3369,11 @@ The following requirements must be met in order to create and assign certificate
 
 - As STEP 7 project user, you have at least the rights of the "NET Administrator" role.
 
-  For more on this, see "Security settings > Users and roles > Assigned roles".
+  For more on this, see "Security settings &gt; Users and roles &gt; Assigned roles".
 - The devices have the required minimum firmware version, see above.
 - The configuration data of the CPU is protected.
 
-  For more on this, see "Protection & Security > Protection of confidential PLC configuration data"
+  For more on this, see "Protection &amp; Security &gt; Protection of confidential PLC configuration data"
 
 To be able to assign your local CPU to the TIM 1531 IRC, the following requirement must be met:
 
@@ -3382,7 +3382,7 @@ To be able to assign your local CPU to the TIM 1531 IRC, the following require
 
 **Certificates of SIMATIC NET devices**
 
-SIMATIC NET communications modules generally use the global certificate manager. You can find this in the project navigation under "Security settings > Security features".
+SIMATIC NET communications modules generally use the global certificate manager. You can find this in the project navigation under "Security settings &gt; Security features".
 
 **Creating the certificate of the CPU**
 
@@ -3395,13 +3395,13 @@ When the CPU is assigned to the TIM (see below), the ID of the newly created CPU
 
 Proceed as follows to create the CPU certificate:
 
-1. For the CPU, select the parameter group "Protection & Security > Certificate manager > Global security settings".
+1. For the CPU, select the parameter group "Protection &amp; Security &gt; Certificate manager &gt; Global security settings".
 2. Enable the "Use global security settings for certificate manager" option.
 
    **Note:**
      
    When the option is enabled, existing certificates of the CPU are deleted.
-3. Go to "Protection & Security > Connection mechanisms > Communication to TIA Portal and HMI".
+3. Go to "Protection &amp; Security &gt; Connection mechanisms &gt; Communication to TIA Portal and HMI".
 4. In the "PLC communication certificate" row, right-click on the icon for the drop-down list.
 5. Click the "Create" button under the open drop-down list.
 
@@ -3419,7 +3419,7 @@ Proceed as follows to create the CPU certificate:
    The newly created TLS certificate is shown in the table of device certificates for the device.
 7. Open the global certificate manager in the project navigation:
 
-   "Security settings > Security features > Certificate manager > Device certificates"
+   "Security settings &gt; Security features &gt; Certificate manager &gt; Device certificates"
 8. Select the newly created certificate of the CPU (see above for ID) and open the "Assign" shortcut menu.
 9. In the list, select the TIM to which the CPU should be assigned.
 10. In the "Used as" row in the ("Not assigned") cell, select the "Trusted certificate" option and click on the green checkmark.
@@ -3462,7 +3462,7 @@ When all certificates of the connection partners are present, the "own certifica
 
 If you want to use secure communication via TLS for telecontrol connections with third-party devices, you need to perform some additional steps.
 
-First, set the secure listener port for TLS or check the setting (Basic settings > Secure listener port). The port number is needed for the connection partner.
+First, set the secure listener port for TLS or check the setting (Basic settings &gt; Secure listener port). The port number is needed for the connection partner.
 
 You must create or import a certificate for the third-party device, apply the ID to the connection parameters, export the certificate and the associated CA certificate and import it into the third-party device.
 
@@ -3493,7 +3493,7 @@ Alternatively, you can make the third-party certificate available to the STEP 7
 
 1. Open the global certificate manager in the project navigation:
 
-   "Security settings > Security features > Certificate manager > Device certificates"
+   "Security settings &gt; Security features &gt; Certificate manager &gt; Device certificates"
 2. Click on the "Create" shortcut menu in a free row.
 
    The "Create certificate" dialog opens.
@@ -3634,7 +3634,7 @@ You configure the data points in STEP 7 in the data point and message editor. Yo
   Shortcut menu "Open the data point and messages editor"
 - Via the project navigation:
 
-  Project > Directory of the station > Local modules > desired communication module
+  Project &gt; Directory of the station &gt; Local modules &gt; desired communication module
 
   ![Open the data point and messages editor](images/86752686347_DV_resource.Stream@PNG-en-US.png)
 
@@ -3650,7 +3650,7 @@ Switching over between the two editors
 
 ##### Creating obects
 
-With the data point or message editor open, create a new object (data point / message) by double clicking "<Add object>" in the first table row with the grayed out entry.
+With the data point or message editor open, create a new object (data point / message) by double clicking "&lt;Add object&gt;" in the first table row with the grayed out entry.
 
 A preset name is written in the cell. You can change the name to suit your purposes but it must be unique within the module.
 
@@ -3705,7 +3705,7 @@ You can create multiple data points in one step in the following way:
    The content is displayed in the "Detail view" window under the project navigation.
 4. In the detail view, select all tags that you want to use for the assignment to data points.
 
-   (Multiple selection with <Shift> or <Ctrl>)
+   (Multiple selection with &lt;Shift&gt; or &lt;Ctrl&gt;)
 5. Drag-and-drop the selected tags into the data point table.
 
 ![Assigning data points to their data source](images/154105951115_DV_resource.Stream@PNG-en-US.png)
@@ -3768,9 +3768,9 @@ If you right-click in the row of an object in the table, you can access this fun
   You can also paste cut or copied objects into tables of other communication modules of the same type and with the same telecontrol protocol.
 - Delete
 
-If you hold down the <Ctrl> key, you can select several rows that are not contiguous.
+If you hold down the &lt;Ctrl&gt; key, you can select several rows that are not contiguous.
 
-With the <Shift> key pressed, you can select the beginning and the end of a contiguous area.
+With the &lt;Shift&gt; key pressed, you can select the beginning and the end of a contiguous area.
 
 ##### Automatic cell filling (ST7 data points only)
 
@@ -3809,8 +3809,8 @@ Depending on the desired content of the target cells, proceed as follows:
 
   You select multiple cells as you would for copying:
 
-  - <Ctrl> key: Selection of multiple cells. The cells must be contiguous.
-  - <Shift> key: Selection of a contiguous area
+  - &lt;Ctrl&gt; key: Selection of multiple cells. The cells must be contiguous.
+  - &lt;Shift&gt; key: Selection of a contiguous area
 - Select multiple start cells with any value block if you want to overwrite the target cells with this value block.
 
   Example: You select three cells with the values 4, 12 and 7. The target cells are then continuously overwritten with blocks of 4, 12 and 7.
@@ -3904,18 +3904,18 @@ The lines of the CSV file have the following content:
 - Line 1: ,Name,Type,
 
   This line must not be changed.
-- Line 2: PLC,<CPU name>, <CPU type>,
+- Line 2: PLC,&lt;CPU name&gt;, &lt;CPU type&gt;,
 
   Meaning: PLC (designation of the station class), CPU name, CPU type
 
-  Only the elements <CPU name> and <CPU type> may be changed.
+  Only the elements &lt;CPU name&gt; and &lt;CPU type&gt; may be changed.
 
   The CPU type must correspond exactly to the name of the CPU in the catalog.
-- Line 3: Module,<module name>,<module type>,
+- Line 3: Module,&lt;module name&gt;,&lt;module type&gt;,
 
   Meaning: Module (Designation of the module class), module type, module name
 
-  Only the elements <module name> and <module type> may be changed.
+  Only the elements &lt;module name&gt; and &lt;module type&gt; may be changed.
 
   Be careful when changing the module names if you want to import data points into several modules (see below).
 
@@ -4198,42 +4198,42 @@ Supported data point types, IEC types and compatible S7 data types
 
 | Format (memory requirements) | Data point type | IEC type | Direction | S7 data types | Operand area |
 | --- | --- | --- | --- | --- | --- |
-| **Bit** | Single-point information | <1> | in | Bool | I, Q, M, DB |
-| Single-point information with time tag CP56Time2a <sup>1)</sup> | <30> | in | Bool | I, Q, M, DB |  |
-| Single command <sup>4)</sup> | <45> | out | Bool | Q, M, DB |  |
-| Single command with time tag CP56Time2a <sup>1)</sup> | <58> | out | Bool | Q, M, DB |  |
-| Double command with time tag CP56Time2a <sup>1)</sup> | <59> | out | Bool | DB <sup>2)</sup> |  |
-| **Byte** | Step position information | <5> | in | Byte, USInt | I, Q, M, DB |
-| Step position information with time tag CP56Time2a <sup>1)</sup> | <32> | in | Byte, USInt | I, Q, M, DB |  |
-| Regulating step command with time tag CP56Time2a <sup>1)</sup> | <60> | out | Byte, USInt | DB <sup>2)</sup> |  |
-| **Integer (16 bits)** | Measured value, normalized value | <9> | in | Int | I, Q, M, DB |
-| Measured value, normalized value with time tag CP56Time2a <sup>1)</sup> | <34> | in | Int | I, Q, M, DB |  |
-| Measured value, scaled value | <11> | in | Int | I, Q, M, DB |  |
-| Measured value, scaled value with time tag CP56Time2a <sup>1)</sup> | <35> | in | Int | I, Q, M, DB |  |
-| Set point command, normalized value | <48> | out | Int | Q, M, DB |  |
-| Set point command, scaled value | <49> | out | Int | Q, M, DB |  |
-| Set point command, normalized value with time tag CP56Time2a <sup>1)</sup> | <61> | out | Int | Q, M, DB |  |
-| Set point command, scaled value with time tag CP56Time2a <sup>1)</sup> | <62> | out | Int | Q, M, DB |  |
-| **Integer (32 bits)** | Bitstring of 32 bits | <7> | in | UDInt, DWord | I, Q, M, DB |
-| Bitstring of 32 bits with time tag CP56Time2a <sup>1)</sup> | <33> | in | UDInt, DWord | I, Q, M, DB |  |
-| Integrated totals | <15> | in | UDInt, DWord | I, Q, M, DB |  |
-| Integrated totals with time tag CP56Time2a <sup>1)</sup> | <37> | in | UDInt, DWord | I, Q, M, DB |  |
-| Bitstring of 32 bits | <51> | out | UDInt, DWord | Q, M, DB |  |
-| Bitstring of 32 bits with time tag CP56Time2a ‑ control direction <sup>1)</sup> | <64> | out | UDInt, DWord | Q, M, DB |  |
-| **Floating-point number (32 bits)** | Measured value, short floating point number | <13> | in | Real | Q, M, DB |
-| Measured value, short floating point number with time tag CP56Time2a <sup>1)</sup> | <36> | in | Real | Q, M, DB |  |
-| Set point command, short floating point number | <50> | out | Real | Q, M, DB |  |
-| Set point command, short floating point with time tag CP56Time2a <sup>1)</sup> | <63> | out | Real | Q, M, DB |  |
-| **Data block**  **(1...2 Bit)**  <sup>2)</sup> | Double-point information | <3> | in | <sup>2)</sup> | DB |
-| Double-point information with time tag CP56Time2a <sup>1)</sup> | <31> | in | <sup>2)</sup> | DB |  |
-| Double command | <46> | out | <sup>2)</sup> | DB |  |
-| Regulating step command | <47> | out | <sup>2)</sup> | DB |  |
-| Double command with time tag CP56Time2a <sup>1)</sup> | <59> | out | <sup>2)</sup> | DB |  |
-| Regulating step command with time tag CP56Time2a <sup>1)</sup> | <60> | out | <sup>2)</sup> | DB |  |
-| **Data block**  **(1...32 Bit)**  <sup>3)</sup> | Bitstring of 32 bits <sup>3)</sup> | <7> | in | <sup>3)</sup> | DB |
-| Bitstring of 32 bits with time tag CP56Time2a <sup>1)</sup><sup>3)</sup> | <33> | in | <sup>3)</sup> | DB |  |
-| Bitstring of 32 bits <sup>3)</sup> | <51> | out | <sup>3)</sup> | DB |  |
-| Bitstring of 32 bits with time tag CP56Time2a ‑ control direction <sup>1)</sup><sup>3)</sup> | <64> | out | <sup>3)</sup> | DB |  |
+| **Bit** | Single-point information | &lt;1&gt; | in | Bool | I, Q, M, DB |
+| Single-point information with time tag CP56Time2a <sup>1)</sup> | &lt;30&gt; | in | Bool | I, Q, M, DB |  |
+| Single command <sup>4)</sup> | &lt;45&gt; | out | Bool | Q, M, DB |  |
+| Single command with time tag CP56Time2a <sup>1)</sup> | &lt;58&gt; | out | Bool | Q, M, DB |  |
+| Double command with time tag CP56Time2a <sup>1)</sup> | &lt;59&gt; | out | Bool | DB <sup>2)</sup> |  |
+| **Byte** | Step position information | &lt;5&gt; | in | Byte, USInt | I, Q, M, DB |
+| Step position information with time tag CP56Time2a <sup>1)</sup> | &lt;32&gt; | in | Byte, USInt | I, Q, M, DB |  |
+| Regulating step command with time tag CP56Time2a <sup>1)</sup> | &lt;60&gt; | out | Byte, USInt | DB <sup>2)</sup> |  |
+| **Integer (16 bits)** | Measured value, normalized value | &lt;9&gt; | in | Int | I, Q, M, DB |
+| Measured value, normalized value with time tag CP56Time2a <sup>1)</sup> | &lt;34&gt; | in | Int | I, Q, M, DB |  |
+| Measured value, scaled value | &lt;11&gt; | in | Int | I, Q, M, DB |  |
+| Measured value, scaled value with time tag CP56Time2a <sup>1)</sup> | &lt;35&gt; | in | Int | I, Q, M, DB |  |
+| Set point command, normalized value | &lt;48&gt; | out | Int | Q, M, DB |  |
+| Set point command, scaled value | &lt;49&gt; | out | Int | Q, M, DB |  |
+| Set point command, normalized value with time tag CP56Time2a <sup>1)</sup> | &lt;61&gt; | out | Int | Q, M, DB |  |
+| Set point command, scaled value with time tag CP56Time2a <sup>1)</sup> | &lt;62&gt; | out | Int | Q, M, DB |  |
+| **Integer (32 bits)** | Bitstring of 32 bits | &lt;7&gt; | in | UDInt, DWord | I, Q, M, DB |
+| Bitstring of 32 bits with time tag CP56Time2a <sup>1)</sup> | &lt;33&gt; | in | UDInt, DWord | I, Q, M, DB |  |
+| Integrated totals | &lt;15&gt; | in | UDInt, DWord | I, Q, M, DB |  |
+| Integrated totals with time tag CP56Time2a <sup>1)</sup> | &lt;37&gt; | in | UDInt, DWord | I, Q, M, DB |  |
+| Bitstring of 32 bits | &lt;51&gt; | out | UDInt, DWord | Q, M, DB |  |
+| Bitstring of 32 bits with time tag CP56Time2a ‑ control direction <sup>1)</sup> | &lt;64&gt; | out | UDInt, DWord | Q, M, DB |  |
+| **Floating-point number (32 bits)** | Measured value, short floating point number | &lt;13&gt; | in | Real | Q, M, DB |
+| Measured value, short floating point number with time tag CP56Time2a <sup>1)</sup> | &lt;36&gt; | in | Real | Q, M, DB |  |
+| Set point command, short floating point number | &lt;50&gt; | out | Real | Q, M, DB |  |
+| Set point command, short floating point with time tag CP56Time2a <sup>1)</sup> | &lt;63&gt; | out | Real | Q, M, DB |  |
+| **Data block**  **(1...2 Bit)**  <sup>2)</sup> | Double-point information | &lt;3&gt; | in | <sup>2)</sup> | DB |
+| Double-point information with time tag CP56Time2a <sup>1)</sup> | &lt;31&gt; | in | <sup>2)</sup> | DB |  |
+| Double command | &lt;46&gt; | out | <sup>2)</sup> | DB |  |
+| Regulating step command | &lt;47&gt; | out | <sup>2)</sup> | DB |  |
+| Double command with time tag CP56Time2a <sup>1)</sup> | &lt;59&gt; | out | <sup>2)</sup> | DB |  |
+| Regulating step command with time tag CP56Time2a <sup>1)</sup> | &lt;60&gt; | out | <sup>2)</sup> | DB |  |
+| **Data block**  **(1...32 Bit)**  <sup>3)</sup> | Bitstring of 32 bits <sup>3)</sup> | &lt;7&gt; | in | <sup>3)</sup> | DB |
+| Bitstring of 32 bits with time tag CP56Time2a <sup>1)</sup><sup>3)</sup> | &lt;33&gt; | in | <sup>3)</sup> | DB |  |
+| Bitstring of 32 bits <sup>3)</sup> | &lt;51&gt; | out | <sup>3)</sup> | DB |  |
+| Bitstring of 32 bits with time tag CP56Time2a ‑ control direction <sup>1)</sup><sup>3)</sup> | &lt;64&gt; | out | <sup>3)</sup> | DB |  |
 | <sup>1)</sup> For information on the format of the time stamp, see below.   <sup>2)</sup> For these data point types, create an array of 2 bool in the data block.   <sup>3)</sup> With these data point types, contiguous memory areas of 32 bits can be transferred. Create an Array[0..31] of Bool in the data block.   <sup>4)</sup> Mirroring possible, see below. |  |  |  |  |  |
 
 **Time stamp of the data with the IEC protocol**
@@ -4244,32 +4244,32 @@ Time stamps are transferred according to the IEC specification in the "CP56Time2
 
 For the following commands, you can activate mirroring of the current value in the station to the master:
 
-- Single Command <45>
+- Single Command &lt;45&gt;
 
 The local value of this data point can be monitored for changes and transferred to the master when changed. A change to a local value can be caused by manual operator input on site, for example.
 
-To allow the value resulting from local events or interventions to be transferred to the master, the data point in question requires a channel for mirroring back. For this, a second data point "Single-point information <1>" is required. Follow the steps below to configure the mirroring function.
+To allow the value resulting from local events or interventions to be transferred to the master, the data point in question requires a channel for mirroring back. For this, a second data point "Single-point information &lt;1&gt;" is required. Follow the steps below to configure the mirroring function.
 
 Create the data points:
 
 - In the master module
 
-  - Single Command <45>
-  - Single-point information <1>
+  - Single Command &lt;45&gt;
+  - Single-point information &lt;1&gt;
 
   On the master, you need to write the mirrored value into a variable. Therefore, assign the two data points to different variables in the master module.
 
   Assign the same index for both data points.
 - In the station module
 
-  - Single Command <45>
-  - Single-point information <1>
+  - Single Command &lt;45&gt;
+  - Single-point information &lt;1&gt;
 
   In the station module, assign the two data points to the same variable.
 
   Assign the same index for both data points.
 
-The value mirrored by the station is written to the "Single-point information <1>" data point type on the master.
+The value mirrored by the station is written to the "Single-point information &lt;1&gt;" data point type on the master.
 
 **Time stamp of the data with the IEC protocol**
 
@@ -4367,7 +4367,7 @@ The following types of transmission are possible:
 
   The values of events are saved in the following situations:
 
-  - The configured trigger conditions are fulfilled (data point configuration > "Trigger" tab, see below)
+  - The configured trigger conditions are fulfilled (data point configuration &gt; "Trigger" tab, see below)
   - The value of a status bit of the status identifiers of the data point changes; see section[Status IDs of the data points](#status-ids-of-the-data-points).
 
     Example:  
@@ -4620,9 +4620,9 @@ The status IDs correspond to the following elements of the specification:
 
 Quality descriptor ‑ IEC 60870 Part 5-101
 
-Bit assignment of status byte for the different objects: Data point type <IEC type>
+Bit assignment of status byte for the different objects: Data point type &lt;IEC type&gt;
 
-Information object <1, 30>
+Information object &lt;1, 30&gt;
 
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -4630,7 +4630,7 @@ Information object <1, 30>
 | **Meaning** | Value is valid | Value not updated | Substitute value | Value blocked | ‑ | ‑ | ‑ | ‑ |
 | **Bit status** | 0 | 1 | 1 | 1 | (always 0) | (always 0) | (always 0) | (always 0) |
 
-Double-point information object <3, 31>
+Double-point information object &lt;3, 31&gt;
 
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -4638,7 +4638,7 @@ Double-point information object <3, 31>
 | **Meaning** | Value is valid | Value not updated | Substitute value | Value blocked | ‑ | ‑ | ‑ |  |
 | **Bit status** | 0 | 1 | 1 | 1 | (always 0) | (always 0) | (always 0) |  |
 
-Step position <5, 32>, Bitstring <7, 33>, Analog input <9, 11, 13, 34, 35, 36>
+Step position &lt;5, 32&gt;, Bitstring &lt;7, 33&gt;, Analog input &lt;9, 11, 13, 34, 35, 36&gt;
 
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -4646,7 +4646,7 @@ Step position <5, 32>, Bitstring <7, 33>, Analog input <9, 11, 13, 34, 35, 36>
 | **Meaning** | Value is valid | Value not updated | Substitute value | Value blocked | ‑ | ‑ | ‑ | Value range exceeded, analog value |
 | **Bit status** | 0 | 1 | 1 | 1 | (always 0) | (always 0) | (always 0) | 1 |
 
-Counter (Integrated totals) <15, 37>
+Counter (Integrated totals) &lt;15, 37&gt;
 
 | Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -4746,7 +4746,7 @@ Validity:
 
 - Module: TIM 1531 IRC
 - Network node type of the interface for telecontrol communication: Station or node station
-- Parameter group: Interface > Advanced options > Settings IEC station > Event settings > Transfer behavior
+- Parameter group: Interface &gt; Advanced options &gt; Settings IEC station &gt; Event settings &gt; Transfer behavior
 
 The joint transfer of event frames in one sequence can be configured for data points without time stamp.
 
@@ -4848,13 +4848,13 @@ The list shows the functions of the data point types as well as the tabs and par
 
 - **Setpoint/parameter input**
 
-  "General" > "Data source" tab:
+  "General" &gt; "Data source" tab:
 
   - Send setpoint to partner
 
     The setpoint is stored in the PLC tag.
 
-  "Local setpoint input" > "Receive" tab:
+  "Local setpoint input" &gt; "Receive" tab:
 
   - Receipt of the 'Local input' setpoint input mode sent by the partner object
 
@@ -4864,13 +4864,13 @@ The list shows the functions of the data point types as well as the tabs and par
     The value mirrored by the partner is transferred to the PLC tag "Mirrored value".
 - **Setpoint/parameter output**
 
-  "General" > "Data source" tab:
+  "General" &gt; "Data source" tab:
 
   - Setpoint received from partner
 
     The setpoint is transferred to the PLC tag.
 
-  "Local setpoint input" > "Send" tab:
+  "Local setpoint input" &gt; "Send" tab:
 
   - Send the 'Local input' local setpoint input mode to the partner object
 
@@ -4984,12 +4984,12 @@ To use these two triggers, you must create a data point whose tag references the
   - Counters: 20 (1, 2); 22 (1, 2, 5, 6)
   - Analog values: 30 (1, 2, 5, 6); 32 (1, 2, 5, 6, 3, 4, 7, 8)
 
-  **IEC 60870‑5: Data point type <IEC type>**
+  **IEC 60870‑5: Data point type &lt;IEC type&gt;**
 
-  - Information objects <1, 3, 5, 30, 31, 32>
-  - Measured value <9, 11, 13, 34, 35, 36>
-  - Integrated totals <15, 37>
-  - Bitstring <7, 33>
+  - Information objects &lt;1, 3, 5, 30, 31, 32&gt;
+  - Measured value &lt;9, 11, 13, 34, 35, 36&gt;
+  - Integrated totals &lt;15, 37&gt;
+  - Bitstring &lt;7, 33&gt;
 
   For coding of the status byte, see section [Status IDs of the data points](#status-ids-of-the-data-points).
 
@@ -5007,12 +5007,12 @@ To use these two triggers, you must create a data point whose tag references the
   - Counters: 22 (5, 6)
   - Analog values: 32 (3, 4, 7, 8)
 
-  **IEC 60870‑5: Data point type <IEC type>**
+  **IEC 60870‑5: Data point type &lt;IEC type&gt;**
 
-  - Information objects <30, 31, 32>
-  - Measured value <34, 35, 36>
-  - Integrated totals <37>
-  - Bitstring <33>
+  - Information objects &lt;30, 31, 32&gt;
+  - Measured value &lt;34, 35, 36&gt;
+  - Integrated totals &lt;37&gt;
+  - Bitstring &lt;33&gt;
 
   **ST7:**
 
@@ -5072,7 +5072,7 @@ With the TIM 1531 IRC you can save the values of triggered data points on the 
   Requirement for enabling the function:
 
   - Enabling the parameter "Enable retentive saving" ("Basic settings" parameter group)
-  - Disabling of the "Master function" (data point editor > "General" tab)
+  - Disabling of the "Master function" (data point editor &gt; "General" tab)
 
 Archiving is possible for the following types of data points:
 
@@ -5094,10 +5094,10 @@ Archiving is possible for the following types of data points:
   - Octet String Event (111)
 - IEC 60870‑5
 
-  - Information objects <1/5/30/32>
-  - Measured value <9/11/13/34/35/36>
-  - Integrated totals <15/37>
-  - Bitstring <7/33>
+  - Information objects &lt;1/5/30/32&gt;
+  - Measured value &lt;9/11/13/34/35/36&gt;
+  - Integrated totals &lt;15/37&gt;
+  - Bitstring &lt;7/33&gt;
 
 ##### Station state events
 
@@ -5112,8 +5112,8 @@ Supported protocols and data types:
   - Binary Input Event (2)
 - IEC 60870‑5
 
-  - Single-point information <1>
-  - Single-point information with time tag CP56Time2a <30>
+  - Single-point information &lt;1&gt;
+  - Single-point information with time tag CP56Time2a &lt;30&gt;
 
 Parameters:
 
@@ -5311,7 +5311,7 @@ The calculation of a new mean value is then started. If the analog value remains
 
 > **Note**
 >
-> **Fault suppression time > 0 configured**
+> **Fault suppression time &gt; 0 configured**
 >
 > If you have configured an error suppression time and then enable mean value generation, the value of the error suppression time is grayed out but no longer used. If mean value generation is enabled, the error suppression time is set to 0 (zero) internally.
 
@@ -5470,13 +5470,13 @@ Input/output ranges of analog modules
 | Range | Raw value (16-bit) |  | Module signal [mA] |  |  | Measuring range [%] |
 | --- | --- | --- | --- | --- | --- | --- |
 | Decimal | Hexadecimal | 0 .. 20  (unipolar) | -20 .. +20  (bipolar) | 4 .. 20  (life zero) |  |  |
-| Overflow | 32767 | 7FFF | > 23.515 | > 23.515 | > 22.81 | > 117.59 |
+| Overflow | 32767 | 7FFF | &gt; 23.515 | &gt; 23.515 | &gt; 22.81 | &gt; 117.59 |
 | Overrange | 32511 ... 27649 | 7EFF ... 6C01 | 23.515 ... 20.001 | 23.515 ... 20.001 | 22.810 ... 20.001 | 117.593 ... 100.004 |
 | Nominal range (unipolar / life zero) | 27648 ... 0 | 6C00 ... 0000 | 20 ... 0 |  | 20 ... 4 | 100 ... 0 |
 | Nominal range (bipolar) | 27648 ...  0  ... -27648 | 6C00 ...  0000  ... 9400 |  | 20 ...  0  ... -20 |  | 100 ...  0  ... -100 |
 | Underrange (unipolar / life zero) | -1 ... -4864 | FFFF ... ED00 | -0.001 ... -3.518 |  | 3.999 ... 1.185 | -0.004 ... -17.59 |
 | Underrange (bipolar) | -27649 ... -32512 | 93FF ... 8100 |  | -20.001 ... -23.516 |  | -100.004 ... -117.593 |
-| Undershoot / wire break | -32768 | 8000 | < -3.518 |  | < 1.185 | < -17.59 |
+| Undershoot / wire break | -32768 | 8000 | &lt; -3.518 |  | &lt; 1.185 | &lt; -17.59 |
 
 ***** The value ranges (underflow / overflow) in PLC tags with different data types are as follows:
 
@@ -5533,7 +5533,7 @@ The functions can be configured for the following data point types:
   Command output (Cmd01B_R)
 - IEC
 
-  Single command <45, 58>
+  Single command &lt;45, 58&gt;
 - DNP3
 
   Binary Command (12)
@@ -5569,19 +5569,19 @@ The output options correspond to the following parts of the specification:
 
   The function is coded by the master via a "Qualifier of command". The following codes are evaluated by the communication module in the station:
 
-  - QU (Type 1.1) <0> no additional definition
+  - QU (Type 1.1) &lt;0&gt; no additional definition
 
     Corresponding parameter for the module: "Pulse control"
-  - QU (Type 1.1) <1> short pulse duration
+  - QU (Type 1.1) &lt;1&gt; short pulse duration
 
     Corresponding parameter for the module: "Short pulse duration"
-  - QU (Type 1.1) <2> long pulse duration
+  - QU (Type 1.1) &lt;2&gt; long pulse duration
 
     Corresponding parameter for the module: "Long pulse duration"
-  - S/E (Type 6) <0> execute
+  - S/E (Type 6) &lt;0&gt; execute
 
     Corresponding parameter for the module: "Command execution mode"
-  - S/E (Type 6) <1> select
+  - S/E (Type 6) &lt;1&gt; select
 
     Corresponding parameter for the module: "Command execution mode"
 
@@ -5679,21 +5679,21 @@ Decoding of the DNP3 control code by the command data point of the station
 | Name: | **Pulse duration replacement time**  **(s)**   (DNP3 only) |
 | Range of values: | 0 ... 65535 |
 | Default: | 0 |
-| Explanation: | Replacement value for the pulse duration  The replacement value is used if the pulse duration received from the master exceeds the value configured in "Max pulse duration".  The parameter is only used when "Max. pulse duration" > 0 is configured.  If the value is 0 (zero), no replacement value is used. |
+| Explanation: | Replacement value for the pulse duration  The replacement value is used if the pulse duration received from the master exceeds the value configured in "Max pulse duration".  The parameter is only used when "Max. pulse duration" &gt; 0 is configured.  If the value is 0 (zero), no replacement value is used. |
 
 | Symbol | Meaning |
 | --- | --- |
 | Name: | **Short pulse duration**  **(s)**   (IEC only) |
 | Range of values: | 0 ... 65535 |
 | Default: | 0 |
-| Explanation: | Commands from the master with the Qualifier of command (QOC) = <1> (short pulse duration) are output by the communication module for the duration configured here.  With the setting 0 (zero), commands with QOC = <1> are rejected by the module. |
+| Explanation: | Commands from the master with the Qualifier of command (QOC) = &lt;1&gt; (short pulse duration) are output by the communication module for the duration configured here.  With the setting 0 (zero), commands with QOC = &lt;1&gt; are rejected by the module. |
 
 | Symbol | Meaning |
 | --- | --- |
 | Name: | **Long pulse duration**  **(s)**   (IEC only) |
 | Range of values: | 0 ... 65535 |
 | Default: | 0 |
-| Explanation: | Commands from the master with the Qualifier of command (QOC) = <2> (long pulse duration) are output by the communication module for the duration configured here.  With the setting 0 (zero), commands with QOC = <2> are rejected by the module. |
+| Explanation: | Commands from the master with the Qualifier of command (QOC) = &lt;2&gt; (long pulse duration) are output by the communication module for the duration configured here.  With the setting 0 (zero), commands with QOC = &lt;2&gt; are rejected by the module. |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -5707,7 +5707,7 @@ Decoding of the DNP3 control code by the command data point of the station
 | Name: | **Command execution mode**   (DNP3 and IEC only) |
 | Range of values: | - Execute directly - Select and operate |
 | Default: | Execute directly |
-| Explanation: | - Execute directly   The command is immediately transmitted to the CPU of the station for execution. - Select and operate   Procedure:   - Trigger the command in the master module     The "select" frame is sent from the master station to the communication module of the station.   - The station acknowledges receipt.   - The master data point sends the execution frame after receiving the acknowledgment from the station.   - The station only forwards the command to the CPU when it receives the "Execution" frame from the master within the configured "Max. time between Select and Operate".     The station must not receive any other data frame between Select and Operate.Note: "Max. time between Select and Operate" is configured in the transmission settings of the respective interface.   Reference to the specifications:   - DNP3     "Select and Operate" is realized via the function codes 03 and 04.     "Direct Operate" is realized via the function codes 05 and 06.   - IEC (Select and Execute)     The communication module acknowledges receipt of the selection ASDU with the Qualifier "S/E (Type 6) <1> select".     After receiving the acknowledgment, the master sends the execution ASDU with the Qualifier "S/E (Type 6) <1> execute". |
+| Explanation: | - Execute directly   The command is immediately transmitted to the CPU of the station for execution. - Select and operate   Procedure:   - Trigger the command in the master module     The "select" frame is sent from the master station to the communication module of the station.   - The station acknowledges receipt.   - The master data point sends the execution frame after receiving the acknowledgment from the station.   - The station only forwards the command to the CPU when it receives the "Execution" frame from the master within the configured "Max. time between Select and Operate".     The station must not receive any other data frame between Select and Operate.Note: "Max. time between Select and Operate" is configured in the transmission settings of the respective interface.   Reference to the specifications:   - DNP3     "Select and Operate" is realized via the function codes 03 and 04.     "Direct Operate" is realized via the function codes 05 and 06.   - IEC (Select and Execute)     The communication module acknowledges receipt of the selection ASDU with the Qualifier "S/E (Type 6) &lt;1&gt; select".     After receiving the acknowledgment, the master sends the execution ASDU with the Qualifier "S/E (Type 6) &lt;1&gt; execute". |
 
 ##### Value mirroring
 
@@ -5745,12 +5745,12 @@ The result is written to the "PLC tag for command result" (Byte) and sent to the
 
 - IEC
 
-  - Single / double / regulating step command <45, 46, 47>
-  - Single / double / regulating step command with time tag CP56Time2a <58, 59, 60>
-  - Set point command, normalized value / scaled value / short floating point value <48, 49, 50>
+  - Single / double / regulating step command &lt;45, 46, 47&gt;
+  - Single / double / regulating step command with time tag CP56Time2a &lt;58, 59, 60&gt;
+  - Set point command, normalized value / scaled value / short floating point value &lt;48, 49, 50&gt;
   - Set point command, normalized value / scaled value / short floating point value   
-    with time tag CP56Time 2a <61, 62, 63>
-  - Bitstring of 32 bits without/with time tag <51, 64>
+    with time tag CP56Time 2a &lt;61, 62, 63&gt;
+  - Bitstring of 32 bits without/with time tag &lt;51, 64&gt;
 - DNP3
 
   - Binary Command (12)
@@ -5766,10 +5766,10 @@ The response must be evaluated in the sending module.
 
   The following results are supported:
 
-  - unknown type identification <44>
-  - unknown cause of transmission <45>
-  - unknown common address of ASDU <46>
-  - unknown information object address <47>
+  - unknown type identification &lt;44&gt;
+  - unknown cause of transmission &lt;45&gt;
+  - unknown common address of ASDU &lt;46&gt;
+  - unknown information object address &lt;47&gt;
 - DNP3
 
   The result is returned in the response using "Internal Indication Byte (IIN)"
@@ -5847,7 +5847,7 @@ Up to 10 messages (e-mail or SMS) can be configured per module.
 You configure the messages in the message editor of the module. Alternatively, you will find it:
 
 - The shortcut menu of the module
-- Via the project navigation: Directory of the station > Local modules > Communications module
+- Via the project navigation: Directory of the station &gt; Local modules &gt; Communications module
 
 ##### Configuring e-mails
 
@@ -5875,7 +5875,7 @@ You create the configuration in the following parameter groups.
     "Global security settings"
   - Using the imported certificate for the module:
 
-    Parameter group "Security" > "Certificate manager"
+    Parameter group "Security" &gt; "Certificate manager"
 
 ##### Configuring SMS messages (mobile wireless CPs)
 
@@ -5887,7 +5887,7 @@ You create the configuration in the following parameter groups.
 
 - Enabling the SMS function
 
-  "Communication types" > "Enable SMS"
+  "Communication types" &gt; "Enable SMS"
 - Configuration of the SMSC
 
   "Mobile wireless communication settings"
@@ -5917,7 +5917,7 @@ Entry of the following permitted characters as ASCII character sets (hexadecimal
   Space
 - 0x21 ... 0x5F
 
-  ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _
+  ! " # $ % &amp; ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _
 - 0x61 ... 0x7E
 
   a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
@@ -5926,7 +5926,7 @@ Entry of the following permitted characters as ASCII character sets (hexadecimal
   | ~
 - Manual line break (↵)
 
-  In message texts, you can insert a line break using <Shift>+<Enter>.
+  In message texts, you can insert a line break using &lt;Shift&gt;+&lt;Enter&gt;.
 
 ##### "Trigger"
 
@@ -6101,10 +6101,10 @@ E-mails: Meaning of the processing status output in hexadecimal format
 | 8450 | Action not executed: Mailbox not available / unreachable. Try again later. |
 | 84xx | Other error message from the e-mail server  Apart from the leading "8", the status corresponds to the three-digit error number of the SMTP protocol. |
 | 8500 | Syntax error: Command unknown.  This also includes the error of having a command chain that is too long. The cause may be that the e-mail server does not support the LOGIN authentication method.  Try sending e-mails without authentication (no user name). |
-| 8501 | Syntax error. Check the following configuration data:  Message configuration > Message parameters:  - Recipient address ("To" or "Cc"). |
-| 8502 | Syntax error. Check the following configuration data:  Message configuration > Message parameters:  - E­mail address (sender) |
+| 8501 | Syntax error. Check the following configuration data:  Message configuration &gt; Message parameters:  - Recipient address ("To" or "Cc"). |
+| 8502 | Syntax error. Check the following configuration data:  Message configuration &gt; Message parameters:  - E­mail address (sender) |
 | 8535 | SMTP authentication incomplete. Check the "User name" and "Password" parameters in the CP configuration. |
-| 8550 | SMTP server cannot be reached. You have no access rights. Check the following configuration data:  - CP configuration > E-mail configuration:   - User name   - Password   - E­mail address (sender) - Message configuration > Message parameters:   - Recipient address ("To" or "Cc"). |
+| 8550 | SMTP server cannot be reached. You have no access rights. Check the following configuration data:  - CP configuration &gt; E-mail configuration:   - User name   - Password   - E­mail address (sender) - Message configuration &gt; Message parameters:   - Recipient address ("To" or "Cc"). |
 | 8554 | Transfer failed |
 | 85xx | Other error message from the e-mail server  Apart from the leading "8", the status corresponds to the three-digit error number of the SMTP protocol. |
 
@@ -6203,7 +6203,7 @@ The following information is required for the STEP 7 configuration of the CP for
 
     A fixed IP address is recommended.
   - Partner port (port number of the listener port of TCSB)
-- Parameters in the "Security > CP identification" parameter group
+- Parameters in the "Security &gt; CP identification" parameter group
 
   - Project number
   - Station number
@@ -6397,7 +6397,7 @@ Communication with the "SINAUT ST7" protocol can run via different paths and sub
 
   For the TIM and the assigned CPU, the subscriber number is configured in the "Subscriber numbers" parameter group of the TIM.
 
-  For the application of the master station PC, the subscriber number is configured in the telecontrol connection: "Network data" editor > "Telecontrol" tab
+  For the application of the master station PC, the subscriber number is configured in the telecontrol connection: "Network data" editor &gt; "Telecontrol" tab
 - **WAN address**
 
   For every networked serial interface in a classic ST7 network a WAN address is assigned. It is unique in the respective WAN network.
@@ -6778,7 +6778,7 @@ You can find the following parameters in the "Settings DNP3 master function" par
 
   The value configured for these parameters is the factor for the Polling basic interval.
 
-  The parameters are configured in the "Network data > Telecontrol > DNP3" connection editor, see [Connection table - DNP3](#connection-table---dnp3).
+  The parameters are configured in the "Network data &gt; Telecontrol &gt; DNP3" connection editor, see [Connection table - DNP3](#connection-table---dnp3).
 - **Max. number of events per call**
 
   Maximum number of events that can be sent in the response telegram of the station after being called by the master station.
@@ -7156,7 +7156,7 @@ Remember the following points when configuring:
 
 - **ACTTERM**
 
-  Activates the sending of acknowledgments with the cause of transmission ACTTERM (cause of transmission <10>).
+  Activates the sending of acknowledgments with the cause of transmission ACTTERM (cause of transmission &lt;10&gt;).
 
   With this, the end of command processing is signaled to the partner.
 
@@ -7248,9 +7248,9 @@ Remember the following points when configuring:
 
 ###### Acknowledgment mechanisms for the protocol IEC 60870‑5‑104
 
-**Configuration: Interface of the module > "**
+**Configuration: Interface of the module &gt; "**
 **Advanced options**
-**" >** 
+**" &gt;** 
 **Transmission settings - IEC 60870-5**
 **"**
 
@@ -7333,7 +7333,7 @@ You can find the following parameters in the "Settings IEC station" parameter gr
 
   - Unsolicited transfer
 
-    The module can send spontaneous ASDUs (cause of transmission <3>).
+    The module can send spontaneous ASDUs (cause of transmission &lt;3&gt;).
   - No spontaneous transfer
 
     The module does not send spontaneous ASDUs.
@@ -7539,7 +7539,7 @@ Depending on the connection type and the triggering server or intermediary TeleS
 
     `TELECONTROL BACKUP`
 
-  The configuration of the telecontrol server for the GPRS CP is set in STEP 7 in "Telecontrol interface > Operating mode > main or substitute telecontrol server".
+  The configuration of the telecontrol server for the GPRS CP is set in STEP 7 in "Telecontrol interface &gt; Operating mode &gt; main or substitute telecontrol server".
 
   > **Note**
   >
@@ -7560,7 +7560,7 @@ Depending on the connection type and the triggering server or intermediary TeleS
 
     `TELESERVICE 2`
 
-  The configuration of the TeleService server for the GPRS CP is set in STEP 7 in "Telecontrol interface > TeleService authorization > 1st or 2nd TeleService server".
+  The configuration of the TeleService server for the GPRS CP is set in STEP 7 in "Telecontrol interface &gt; TeleService authorization &gt; 1st or 2nd TeleService server".
 
 ### Preferred mobile wireless networks
 
@@ -7755,7 +7755,7 @@ The function download to device or upload from device during a TeleService sessi
 Only use the "Download to device" function with the mobile wireless CP via a TeleService connection as follows:
 
 1. Select the CP in STEP 7.
-2. Select the "Online" > "Download to device" menu.
+2. Select the "Online" &gt; "Download to device" menu.
 3. In the "Extended download" dialog that appears, select the TeleService interface.
 4. Download the project data from the "Extended download" dialog.
 
@@ -7809,7 +7809,7 @@ Start TeleService via telecontrol as follows:
 
    - "Connect online" button
    - "Connect online" shortcut menu (right mouse button)
-   - "Online" > "Connect online" menu
+   - "Online" &gt; "Connect online" menu
 
    The "Connect online" dialog box opens.
 3. Select the interface type "TeleService via Telecontrol" in the "Type of PG/PC interface" drop-down list.
@@ -7930,7 +7930,7 @@ The program blocks of the TD7onCPU library are used as a global library for STEP
 The library is available archived and compressed on the Internet at the following address:  
 [Link:](https://support.industry.siemens.com/cs/ww/en/ps/24710/dl)
 
-The file name has the following structure: Telecontrol_ST7_<Version>.exe
+The file name has the following structure: Telecontrol_ST7_&lt;Version&gt;.exe
 
 > **Note**
 >
@@ -7949,9 +7949,9 @@ Proceed as follows:
    The self-extracting library is stored as a zip archive in a selectable directory.
 4. Unzip the file.
 
-   The library is now available as an archived global library under the name "Telecontrol ST7.zal<version>" together with the readme files.
+   The library is now available as an archived global library under the name "Telecontrol ST7.zal&lt;version&gt;" together with the readme files.
 5. Open the STEP 7 project.
-6. In the "Options" menu, select the command "Global libraries > Retrieve library".
+6. In the "Options" menu, select the command "Global libraries &gt; Retrieve library".
 
    The "Retrieve archived global library" dialog opens.
 7. Select the folder and the library archive.
@@ -7968,7 +7968,7 @@ Proceed as follows:
 
 The library is opened after unpacking.
 
-You can find the library in the STEP 7 project in the library view (task card) in the "Global libraries" pane under the name "Telecontrol ST7_<Version>".
+You can find the library in the STEP 7 project in the library view (task card) in the "Global libraries" pane under the name "Telecontrol ST7_&lt;Version&gt;".
 
 ### Structure of the library
 
@@ -8045,7 +8045,7 @@ The following requirements must be met before generating the blocks:
 
 **Different requirements for modules with imported configuration data**
 
-Note the other requirements for communications modules whose SINAUT configuration was imported from a STEP 7 V5 project. With these modules, the option "Telecontrol configuration" is set to "Import" in the parameter group "Basic settings > Configuration".
+Note the other requirements for communications modules whose SINAUT configuration was imported from a STEP 7 V5 project. With these modules, the option "Telecontrol configuration" is set to "Import" in the parameter group "Basic settings &gt; Configuration".
 
 These modules have different requirements for generating the blocks:
 
@@ -8093,7 +8093,7 @@ The TD7onCPU blocks are created and compiled in the selected CPUs under the prog
 
   - Dat256D_S / Dat256D_R
 
-    Copy also the UDT "TransmitBlock" for these typicals from the library (Types > PLC data types (UDT)) into the "PLC data types"directory of the CPU. The UDT is not automatically referenced by the typical.
+    Copy also the UDT "TransmitBlock" for these typicals from the library (Types &gt; PLC data types (UDT)) into the "PLC data types"directory of the CPU. The UDT is not automatically referenced by the typical.
 - **Optional blocks**
 
   You should also use the optional blocks on the CPU depending on the communications tasks of the station.
@@ -8565,9 +8565,9 @@ Depending on the use of the typicals, some parameters are configured differently
 | Explanation: | Subscriber number of the partner  The subscriber number of the partner with which the block communicates must be specified..  - In a station typical, this is normally the subscriber number of the central station or the application of the control station (e.g. ST7cc). - For a typical that is used in a central station, this is normally the subscriber number of a station. |
 | **Effects of the value 0 (zero) on various typical classes** |  |
 |  | - **Sending typicals**    **(1)**    (Bin04B_S, Ana04W_S, Cnt01D_S/Cnt04D_S, Dat12D_S, Dat256D_S)   With the value 0 the data is sent to all subscribers to which an ST7 connection is configured. In this case, the parameter "PartnerObjectNo" is automatically sent with the value zero by the process typical.   If PartnerNo is not found in the administration (DB BasicData), an entry to this effect is made in the diagnostics buffer (event ID B101). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.    **Notes**    - If the"PartnerObjectNo" is missing, there must be a list on the partner CPU from which the missing object number can be recognized (see [ListGenerator1500/300/400 FC](#listgenerator1500300400-fc)).   - Use of the block in a node station     If the CPU of the node station maintains both connections to higher-level subscribers as well as to lower-level stations, a data frame with PartnerNo = 0 is transferred to all subscribers in the direction master station and in the direction stations. |
-|  | - **Sending typicals**    **(2)**    (Cmd01B_S, Set01W_S, Par12D_S)   The value 0 is not permitted!   If "PartnerNo" is < 1 or > 32000, an error message is entered in the diagnostic buffer (event ID B100).   If the configured value is permitted and correct but "PartnerNo" is not found in the administration (DB BasicData), an entry is also made in the diagnostics buffer (event ID B101). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
-|  | - **Receiving typicals**    **(1)**    (Bin04B_R, Ana04W_R, Cnt01D_R/Cnt04D_R, Dat12D_R, Dat256D_R)   The value 0 is not permitted!   If PartnerNo is < 1 or > 32000, an error message is entered in the diagnostic buffer (event ID B100).   If the configured value is permitted and correct but "PartnerNo" is not found in the administration (DB BasicData), an entry is also made in the diagnostics buffer (event ID B101). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.   If the CPU receives a data frame for this typical, a check is made to establish whether the source subscriber number in the data frame is identical to the "PartnerNo" configured here. If the two subscriber numbers are different, the received information is discarded and an error message is entered in the diagnostic buffer (Event ID B130). |
-|  | - **Receiving typicals**    **(2)**    (Cmd01B_R, Set01W_R, Par12D_R)   Set the value 0 if the typical is to receive data from more than one partner, e.g. if it is to receive data from several control centers.   If the CPU receives data for this typical and "PartnerNo" is > 0, a check is made to establish whether the source subscriber number in the data frame is identical to the "PartnerNo" configured here. If the two are different, the received information is discarded and an error message is entered in the diagnostic buffer (Event ID B130).   This check is not made if "PartnerNo" is = 0. Regardless of the sender, each data frame addressed to the typical is passed on to the typical.   If "PartnerNo" is > 0 and this number is not found in the administration (in DB-BasicData), an entry is made in the diagnostic buffer (event ID B101). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.    **Notes**    - If "PartnerNo = 0" is set, make sure that each partner sends the data with a complete destination address (target subscriber no. and target object no.).   - Use of the block in a node station     If the CPU of the node station maintains both connections to higher-level subscribers as well as to lower-level stations, a data frame with PartnerNo = 0 is transferred to all subscribers in the direction master station and in the direction stations. |
+|  | - **Sending typicals**    **(2)**    (Cmd01B_S, Set01W_S, Par12D_S)   The value 0 is not permitted!   If "PartnerNo" is &lt; 1 or &gt; 32000, an error message is entered in the diagnostic buffer (event ID B100).   If the configured value is permitted and correct but "PartnerNo" is not found in the administration (DB BasicData), an entry is also made in the diagnostics buffer (event ID B101). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
+|  | - **Receiving typicals**    **(1)**    (Bin04B_R, Ana04W_R, Cnt01D_R/Cnt04D_R, Dat12D_R, Dat256D_R)   The value 0 is not permitted!   If PartnerNo is &lt; 1 or &gt; 32000, an error message is entered in the diagnostic buffer (event ID B100).   If the configured value is permitted and correct but "PartnerNo" is not found in the administration (DB BasicData), an entry is also made in the diagnostics buffer (event ID B101). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.   If the CPU receives a data frame for this typical, a check is made to establish whether the source subscriber number in the data frame is identical to the "PartnerNo" configured here. If the two subscriber numbers are different, the received information is discarded and an error message is entered in the diagnostic buffer (Event ID B130). |
+|  | - **Receiving typicals**    **(2)**    (Cmd01B_R, Set01W_R, Par12D_R)   Set the value 0 if the typical is to receive data from more than one partner, e.g. if it is to receive data from several control centers.   If the CPU receives data for this typical and "PartnerNo" is &gt; 0, a check is made to establish whether the source subscriber number in the data frame is identical to the "PartnerNo" configured here. If the two are different, the received information is discarded and an error message is entered in the diagnostic buffer (Event ID B130).   This check is not made if "PartnerNo" is = 0. Regardless of the sender, each data frame addressed to the typical is passed on to the typical.   If "PartnerNo" is &gt; 0 and this number is not found in the administration (in DB-BasicData), an entry is made in the diagnostic buffer (event ID B101). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.    **Notes**    - If "PartnerNo = 0" is set, make sure that each partner sends the data with a complete destination address (target subscriber no. and target object no.).   - Use of the block in a node station     If the CPU of the node station maintains both connections to higher-level subscribers as well as to lower-level stations, a data frame with PartnerNo = 0 is transferred to all subscribers in the direction master station and in the direction stations. |
 
 ###### PartnerObjectNo
 
@@ -8581,9 +8581,9 @@ Depending on the use of the typicals, some parameters are configured differently
 | Explanation: | Object number of the partner  The number of the object (= DB number) on the partner with which the block communicates. |
 | **Effects of the value 0 (zero) on various typical classes** |  |
 |  | - **Sending typicals**    **(1)**    (Bin04B_S, Ana04W_S, Cnt01D_S/Cnt04D_S, Dat12D_S, Dat256D_S)   Setting the parameter to 0 makes sense if PartnerNo = 0 was set for the preceding parameter. If the"PartnerObjectNo" is missing, there must be a list on the partner CPU from which the missing object number can be recognized (see FC-ListGenerator).   If the partner is an ST7cc control center specifying the "PartnerObjectNo" for this block can be omitted because in ST7cc there are no DBs as target objects. ST7cc decodes its data solely based on the source address in the data frame. |
-|  | - **Sending typicals**    **(2)**    (Cmd01B_S, Set01W_S, Par12D_S)   The value 0 is not permitted!   If the parameter assignment is incorrect (< 1 or > 32000), an error message is entered in the diagnostic buffer (event ID B102). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
-|  | - **Receiving typicals**    **(1)**    (Bin04B_R, Ana04W_R, Cnt01D_R/Cnt04D_R, Dat12D_R, Dat256D_R)   The value 0 is not permitted!   If the parameter assignment is incorrect (< 1 or > 32000), an error message is entered in the diagnostic buffer (event ID B102). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.   If the CPU receives data for the object configured here, there is a check to establish whether the source object number in the data frame is identical to the "PartnerObjectNo" configured here. If they are different, the received information is discarded. An error message is entered in the diagnostic buffer (event ID B131). |
-|  | - **Receiving typicals**    **(2)**    (Cmd01B_R, Set01W_R, Par12D_R)   0 must be set in the following situations:   - The partner is not an S7 CPU, i.e. there is no DB number as object. This is, for example, the case when the partner is an ST7cc control center.   - There is more than one partner (PartnerNo = 0) from which the typical is to receive data. The corresponding objects of these partners will then generally have different numbers; in other words, no unique number can be specified here.If the CPU receives data for the object configured here and "PartnerObjectNo" is > 0, there is a check to establish whether the source object number in the data frame is identical to the "PartnerObjectNo" configured here. If they are different, the received information is discarded. An error message is entered in the diagnostic buffer (event ID B131).   This check is not made if "PartnerObjectNo" is = 0. Regardless of the sender object, each data frame addressed to the object is also passed on to the receiving object. |
+|  | - **Sending typicals**    **(2)**    (Cmd01B_S, Set01W_S, Par12D_S)   The value 0 is not permitted!   If the parameter assignment is incorrect (&lt; 1 or &gt; 32000), an error message is entered in the diagnostic buffer (event ID B102). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
+|  | - **Receiving typicals**    **(1)**    (Bin04B_R, Ana04W_R, Cnt01D_R/Cnt04D_R, Dat12D_R, Dat256D_R)   The value 0 is not permitted!   If the parameter assignment is incorrect (&lt; 1 or &gt; 32000), an error message is entered in the diagnostic buffer (event ID B102). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.   If the CPU receives data for the object configured here, there is a check to establish whether the source object number in the data frame is identical to the "PartnerObjectNo" configured here. If they are different, the received information is discarded. An error message is entered in the diagnostic buffer (event ID B131). |
+|  | - **Receiving typicals**    **(2)**    (Cmd01B_R, Set01W_R, Par12D_R)   0 must be set in the following situations:   - The partner is not an S7 CPU, i.e. there is no DB number as object. This is, for example, the case when the partner is an ST7cc control center.   - There is more than one partner (PartnerNo = 0) from which the typical is to receive data. The corresponding objects of these partners will then generally have different numbers; in other words, no unique number can be specified here.If the CPU receives data for the object configured here and "PartnerObjectNo" is &gt; 0, there is a check to establish whether the source object number in the data frame is identical to the "PartnerObjectNo" configured here. If they are different, the received information is discarded. An error message is entered in the diagnostic buffer (event ID B131).   This check is not made if "PartnerObjectNo" is = 0. Regardless of the sender object, each data frame addressed to the object is also passed on to the receiving object. |
 
 ###### Enabled
 
@@ -8953,7 +8953,7 @@ Ana04W_S transfers the 4 analog values alternatively:
 | Range of values: | TRUE / FALSE |
 | Default: | FALSE |
 | Explanation: | Mean value generation  If the parameter is enabled the analog values to be acquired are transferred as mean values.  If you select mean value generation, the currently pending analog value is acquired cyclically and accumulated. The acquisition cycle depends on the "SamplingPeriod" parameter (for example 500 ms, see also the description of this parameter). The mean value is calculated from the accumulated values as soon as a transmission is triggered via the "TriggerInput" input. Following this, the accumulation starts again so that the next mean value can be calculated.  The mean value can also be calculated if the transmission of the analog value frame is triggered by a general or single request. The duration of the mean value calculation period is then the time from the last transmission (for example triggered via TriggerInput) to the time of the general or single request. Once again, the accumulation restarts so that the next mean value can be calculated.  If the acquired analog value is above or below the permitted range (7FFFH bzw. 8000H), this value can either be taken into account immediately in the calculation of the mean value or it can be suppressed for a specific period for the calculation of the mean value. The required response can be decided with the "FaultSuppressionTime" parameter: |
-|  | - **FaultSuppressionTime = 0**    Acquisition of a value above or below the over- or underrange results in immediate cancellation of the mean value calculation. The value 7FFF<sub>H</sub> or 8000<sub>H</sub> is saved as an invalid mean value for the current mean value calculation period and sent when the next analog value frame is triggered. The calculation of a new mean value is then started. If the analog value remains in the overshoot or undershoot range, this new value is again saved immediately as an invalid mean value and sent when the next frame is triggered. - **FaultSuppressionTime > 0**    If the acquired analog value is in the overshoot or undershoot range, the bad values are excluded from the calculation of the mean value for a maximum duration as defined by the FaultSuppressionTime. If this time is exceeded, the value 7FFF<sub>H</sub> or 8000<sub>H</sub> is saved as an invalid mean value and sent when the next analog value frame is triggered. The procedure is identical in each new mean value calculation period averaging period; in other words, bad values are again suppressed for the duration of the "FaultSuppressionTime".   The duration of the "FaultSuppressionTime" also indirectly decides the proportion of invalid values per mean value calculation period. For example, if the mean value is calculated every 15 minutes and "FaultSuppressionTime" is set to 5 minutes, the mean value is only sent as invalid when more than 1/3 of the analog values acquired are above or below the overshoot or undershoot range in the current mean value calculation period. |
+|  | - **FaultSuppressionTime = 0**    Acquisition of a value above or below the over- or underrange results in immediate cancellation of the mean value calculation. The value 7FFF<sub>H</sub> or 8000<sub>H</sub> is saved as an invalid mean value for the current mean value calculation period and sent when the next analog value frame is triggered. The calculation of a new mean value is then started. If the analog value remains in the overshoot or undershoot range, this new value is again saved immediately as an invalid mean value and sent when the next frame is triggered. - **FaultSuppressionTime &gt; 0**    If the acquired analog value is in the overshoot or undershoot range, the bad values are excluded from the calculation of the mean value for a maximum duration as defined by the FaultSuppressionTime. If this time is exceeded, the value 7FFF<sub>H</sub> or 8000<sub>H</sub> is saved as an invalid mean value and sent when the next analog value frame is triggered. The procedure is identical in each new mean value calculation period averaging period; in other words, bad values are again suppressed for the duration of the "FaultSuppressionTime".   The duration of the "FaultSuppressionTime" also indirectly decides the proportion of invalid values per mean value calculation period. For example, if the mean value is calculated every 15 minutes and "FaultSuppressionTime" is set to 5 minutes, the mean value is only sent as invalid when more than 1/3 of the analog values acquired are above or below the overshoot or undershoot range in the current mean value calculation period. |
 
 |  |  |  |
 | --- | --- | --- |
@@ -9477,7 +9477,7 @@ For 1-out-of-8 check see below.
 | Data type: | BOOL |
 | Range of values: | TRUE / FALSE |
 | Default: | FALSE |
-| Explanation: | Restore collective command  The restore collective command as a central system memory bit belongs to the organizational SINAUT system commands.  Set the parameter to TRUE if the counted value transfer is to be triggered by a restore collective command.  - When the destination subscriber no. (PartnerNo) = 0 (transfer to all), the restore collective command is taken into account.   When the restore collective command is detected, the currently accumulated counted value is transferred regardless of other triggers for transfer. The restore bit is inverted in this counted value. - If in the typical an explicit destination subscriber no. (PartnerNo > 0) is configured, the restore collective command is evaluated in the corresponding subscriber object in the central administration.   You can use the parameters "GeneralTriggerCommand" and "TriggerInput" at the same time. In this case the transfer is triggered both by an edge change 0 → 1 at "TriggerInput" and when a restore collective command is received. |
+| Explanation: | Restore collective command  The restore collective command as a central system memory bit belongs to the organizational SINAUT system commands.  Set the parameter to TRUE if the counted value transfer is to be triggered by a restore collective command.  - When the destination subscriber no. (PartnerNo) = 0 (transfer to all), the restore collective command is taken into account.   When the restore collective command is detected, the currently accumulated counted value is transferred regardless of other triggers for transfer. The restore bit is inverted in this counted value. - If in the typical an explicit destination subscriber no. (PartnerNo &gt; 0) is configured, the restore collective command is evaluated in the corresponding subscriber object in the central administration.   You can use the parameters "GeneralTriggerCommand" and "TriggerInput" at the same time. In this case the transfer is triggered both by an edge change 0 → 1 at "TriggerInput" and when a restore collective command is received. |
 
 |  |  |  |
 | --- | --- | --- |
@@ -9659,7 +9659,7 @@ With "SendAll" you can also specify whether the transfer always includes all dat
 | Range of values: | See address range |
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBX yy.0 DWORD zz  - xx: Data block number 1...32767 - yy: Byte number - zz: Number of double words 1...12 starting at byte number yy   Example: `P#DB20.DBX 100.0 DWORD 4`  Remember the periods and spaces when entering the pointer!  Note that the default value (null pointer) is not permitted. A pointer with a real address must be specified. |
-| Explanation: | Data input area  The ANY pointer addresses the data area in which the data to be acquired is located. This data area must be within a data block and its length can vary between 1 and 12 data double words.  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length > 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
+| Explanation: | Data input area  The ANY pointer addresses the data area in which the data to be acquired is located. This data area must be within a data block and its length can vary between 1 and 12 data double words.  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length &gt; 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
 
 ##### Data typical Dat12D_R
 
@@ -9696,7 +9696,7 @@ Dat12D_R stores the received data without further processing in the data area sp
 | Range of values: | See address range |
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBX yy.0 DWORD zz  - xx: Data block number 1...32767 - yy: Byte number - zz: Number of double words 1...12 starting at byte number yy   Example: `P#DB20.DBX 100.0 DWORD 4`  Remember the periods and spaces when entering the pointer!  Note that the default value (null pointer) is not permitted. A pointer with a real address must be specified. |
-| Explanation: | Data output area  The ANY pointer addresses the data area in which the received data is saved. This data area must be within a data block and its length can vary between 1 and 12 double words.  For information on the content and formats, refer to the section "Function" above.  Dat12D_R stores the received data without further processing in the data area specified by "DataOutput". You need to evaluate and process the received data with the user program.  When only changed data is sent by the partner object Dat12D_S, it is possible that only part of the data output area is newly written. this is the area in which the changes were detected at the acquisition end  If the parameter assignment is incorrect (null pointer, length > 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
+| Explanation: | Data output area  The ANY pointer addresses the data area in which the received data is saved. This data area must be within a data block and its length can vary between 1 and 12 double words.  For information on the content and formats, refer to the section "Function" above.  Dat12D_R stores the received data without further processing in the data area specified by "DataOutput". You need to evaluate and process the received data with the user program.  When only changed data is sent by the partner object Dat12D_S, it is possible that only part of the data output area is newly written. this is the area in which the changes were detected at the acquisition end  If the parameter assignment is incorrect (null pointer, length &gt; 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -9867,7 +9867,7 @@ Parameter assignment example for "ChnSets": Assignment of seven channels to para
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBXyy.0 TYPE zz  - xx: Data block number - yy: Byte number - TYPE: Data type   Permitted data types are: Bool, Byte, Char, SInt, USInt, Int, UInt, Word, DInt, DWord, Real, UDInt - zz: Length as number (specified data type) as of byte no. yy   Max. length: 1 DWord   Example: `P#DB20.DBX100.0 BYTE 3` Area with 3 bytes in DB20 as of DBB100 |
 | Explanation: | Data input area  The ANY pointer addresses the data area in which the data to be acquired is located. The occupied null pointer is not permitted. Specify a pointer with a real address.  The data area must be in a data block and can have a maximum length of 4 bytes (max. 1 double word). |
-|  | If not all 4 bytes are transferred for a channel or if they are not to be evaluated for triggering of the telegram (SendOnChange), make sure you observe the correct parameter assignment.  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length > 4, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
+|  | If not all 4 bytes are transferred for a channel or if they are not to be evaluated for triggering of the telegram (SendOnChange), make sure you observe the correct parameter assignment.  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length &gt; 4, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
 
 ##### Data typical Dat12x1D_R
 
@@ -9915,7 +9915,7 @@ Dat12x1D_R saves the received data without further processing for specific chann
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBXyy.0 TYPE zz  - xx: Data block number - yy: Byte number - TYPE: Data type   Permitted data types are: Bool, Byte, Char, SInt, USInt, Int, UInt, Word, DInt, DWord, Real, UDInt - zz: Length as number (specified data type) as of byte no. yy   Max. length: 1 DWord   Example: `P#DB20.DBX100.0 BYTE 3` Area with 3 bytes in DB20 as of DBB100 |
 | Explanation: | Data output area  The parameter is available once for each channel (max. 12).  The ANY pointer addresses the data area in which the received data is saved. The occupied null pointer is not permitted. Specify a pointer with a real address.  The data area must be in a data block and can have a maximum length of 4 bytes (max. 1 double word).  If not all 4 bytes are to be output for a channel, make sure you observe the correct parameter assignment.  For information on the content and formats, refer to the section "Function" above. |
-|  | Dat121xD_R stores the received data without further processing in the data area specified at "DataOutput". You need to evaluate and process the received data with the user program.  When only changed data is sent by the partner object Dat121xD_S, it is possible that only part of the data output area is re-written. this is the area in which the changes were detected at the acquisition end You can identify changed areas by "NewData".  If the parameter assignment is incorrect (null pointer, length > 4, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
+|  | Dat121xD_R stores the received data without further processing in the data area specified at "DataOutput". You need to evaluate and process the received data with the user program.  When only changed data is sent by the partner object Dat121xD_S, it is possible that only part of the data output area is re-written. this is the area in which the changes were detected at the acquisition end You can identify changed areas by "NewData".  If the parameter assignment is incorrect (null pointer, length &gt; 4, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
 
 |  |  |  |
 | --- | --- | --- |
@@ -10046,7 +10046,7 @@ If the transfer is incomplete, the data status at the recipient is also "invalid
 | Range of values: | See address range |
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBX yy.0 DWORD zz  - xx: Data block number 1...32767 - yy: Byte number - zz: Number of double words 1...256 starting at byte number yy   Example: `P#DB20.DBX 100.0 DWORD 200`  Remember the periods and spaces when entering the pointer!  Note that the default value (null pointer) is not permitted. A pointer with a real address must be specified. |
-| Explanation: | Data input area  The ANY pointer addresses the data area in which the data to be acquired is located. This data area must be within a data block and its length can vary between 1 and 256 data double words. For information on the possible double word formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length > 256, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.   **Data consistency;**  If a data segment to be transferred consists of a maximum of 48 bytes, data consistency during the transfer is assured. |
+| Explanation: | Data input area  The ANY pointer addresses the data area in which the data to be acquired is located. This data area must be within a data block and its length can vary between 1 and 256 data double words. For information on the possible double word formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length &gt; 256, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.   **Data consistency;**  If a data segment to be transferred consists of a maximum of 48 bytes, data consistency during the transfer is assured. |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -10166,7 +10166,7 @@ Receipt of a sequence can be disrupted by the following causes:
 | Range of values: | See address range |
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBX yy.0 DWORD zz  - xx: Data block number 1...32767 - yy: Byte number - zz: Number of double words 1...256 starting at byte number yy   Example: `P#DB20.DBX 100.0 DWORD 200`  Remember the periods and spaces when entering the pointer!  Note that the default value (null pointer) is not permitted. A pointer with a real address must be specified. |
-| Explanation: | Data output area  The ANY pointer addresses the data area in which the received data is saved. This data area must be within a data block and its length can vary between 1 and 256 data double words. For information on the possible double word formats, refer to the section "Function" above.  Dat256D_R stores the received data without further processing in the data area specified by "DataOutput". You need to evaluate and process the received data with the user program.  When only changed data is sent by the partner object Dat256D_S, it is possible that only part of the data output area is newly written. this is the area in which the changes were detected at the acquisition end  If the parameter assignment is incorrect (null pointer, length > 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
+| Explanation: | Data output area  The ANY pointer addresses the data area in which the received data is saved. This data area must be within a data block and its length can vary between 1 and 256 data double words. For information on the possible double word formats, refer to the section "Function" above.  Dat256D_R stores the received data without further processing in the data area specified by "DataOutput". You need to evaluate and process the received data with the user program.  When only changed data is sent by the partner object Dat256D_S, it is possible that only part of the data output area is newly written. this is the area in which the changes were detected at the acquisition end  If the parameter assignment is incorrect (null pointer, length &gt; 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
 
 |  |  |  |
 | --- | --- | --- |
@@ -10325,7 +10325,7 @@ The sending of the data area defined by "ParameterInput" can be triggered via th
 | Range of values: | See address range |
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBX yy.0 DWORD zz  - xx: Data block number 1...32767 - yy: Byte number - zz: Number of double words 1...12 starting at byte number yy   Example: `P#DB20.DBX 100.0 DWORD 4`  Remember the periods and spaces when entering the pointer!  Note that the default value (null pointer) is not permitted. A pointer with a real address must be specified. |
-| Explanation: | Parameter input area.  The ANY pointer addresses the data area in which the parameter values to be acquired are located. This data area must be within a data block and its length can vary between 1 and 12 data double words.  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length > 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.  How the parameters at ParameterInput are processed depends on whether they are hardware or software entries and how the transfer of this data area is triggered. You will find more information on this in the section "Function" above. |
+| Explanation: | Parameter input area.  The ANY pointer addresses the data area in which the parameter values to be acquired are located. This data area must be within a data block and its length can vary between 1 and 12 data double words.  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length &gt; 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.  How the parameters at ParameterInput are processed depends on whether they are hardware or software entries and how the transfer of this data area is triggered. You will find more information on this in the section "Function" above. |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -10488,7 +10488,7 @@ Sending the data area defined at "ParameterInput" can be triggered by the follow
 | Range of values: | See address range |
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBX yy.0 DWORD zz  - xx: Data block number 1...32767 - yy: Byte number - zz: Number of double words 1...12 starting at byte number yy   Example: `P#DB20.DBX 100.0 DWORD 4`  Remember the periods and spaces when entering the pointer!  Note that the default value (null pointer) is not permitted. A pointer with a real address must be specified. |
-| Explanation: | Parameter input area.  The ANY pointer addresses the data area in which the parameter values to be acquired are located. This data area must be within a data block and its length can vary between 1 and 12 data double words.  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length > 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 7). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.  The way in which the values present at "ParameterInput" are subsequently processed depends on whether it is a hardware or a software input and how the transmission is triggered. You can find more information on this in the "Function" section above and under the "HWmode" parameter. |
+| Explanation: | Parameter input area.  The ANY pointer addresses the data area in which the parameter values to be acquired are located. This data area must be within a data block and its length can vary between 1 and 12 data double words.  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length &gt; 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 7). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.  The way in which the values present at "ParameterInput" are subsequently processed depends on whether it is a hardware or a software input and how the transmission is triggered. You can find more information on this in the "Function" section above and under the "HWmode" parameter. |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -10647,7 +10647,7 @@ Bumpless switchover between the "Local" and "Remote" operating modes is guarante
 | Range of values: | See address range |
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBX yy.0 DWORD zz  - xx: Data block number 1...32767 - yy: Byte number - zz: Number of double words 1...12 starting at byte number yy   Example: `P#DB20.DBX 100.0 DWORD 4`  Remember the periods and spaces when entering the pointer!  Note that the default value (null pointer) is not permitted. A pointer with a real address must be specified. |
-| Explanation: | Local parameter input area  The ANY pointer addresses the data area in which the parameter values to be acquired are located. This data area must be within a data block and its length can vary between 1 and 12 data double words. The length must be identical to the length specified for" ParameterOutput".  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length > 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.  If you do not require the parameter, simply leave it open. |
+| Explanation: | Local parameter input area  The ANY pointer addresses the data area in which the parameter values to be acquired are located. This data area must be within a data block and its length can vary between 1 and 12 data double words. The length must be identical to the length specified for" ParameterOutput".  For information on the content and formats, refer to the section "Function" above.  If the parameter assignment is incorrect (null pointer, length &gt; 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected.  If you do not require the parameter, simply leave it open. |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -10657,7 +10657,7 @@ Bumpless switchover between the "Local" and "Remote" operating modes is guarante
 | Range of values: | See address range |
 | Default: | P#P 0.0 VOID 0 (null pointer) |
 | Address range: | P#DBxx.DBX yy.0 DWORD zz  - xx: Data block number 1...32767 - yy: Byte number - zz: Number of double words 1...12 starting at byte number yy   Example: `P#DB20.DBX 100.0 DWORD 4`  Remember the periods and spaces when entering the pointer!  Note that the preset value (null pointer) is not permitted. A pointer with a real address must be specified. |
-| Explanation: | Parameter output area  The ANY pointer addresses the data area in which the locally entered parameter values or those received from the partner are output. This data area must be within a data block and its length can vary between 1 and 12 double words.  For information on the content and formats, refer to the section "Function" above.  Par12D saves the received data without further processing in the data area specified by "ParameterOutput". You need to evaluate and process the received data with the user program.  When only changed data is sent by the partner object Par12D_S, it is possible that only part of the data output area is newly written. this is the area in which the changes were detected at the acquisition end  If the parameter assignment is incorrect (null pointer, length > 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
+| Explanation: | Parameter output area  The ANY pointer addresses the data area in which the locally entered parameter values or those received from the partner are output. This data area must be within a data block and its length can vary between 1 and 12 double words.  For information on the content and formats, refer to the section "Function" above.  Par12D saves the received data without further processing in the data area specified by "ParameterOutput". You need to evaluate and process the received data with the user program.  When only changed data is sent by the partner object Par12D_S, it is possible that only part of the data output area is newly written. this is the area in which the changes were detected at the acquisition end  If the parameter assignment is incorrect (null pointer, length &gt; 12, data area not a DB), an error message is entered in the diagnostics buffer (event ID B114, [Info2/3] = 11). The CPU does not change to STOP. The block is then no longer processed, however, until the error has been corrected. |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -11251,7 +11251,7 @@ A SINAUT subscriber (partner) can only be an ST7 CPU or an ST7cc to which a conn
 | Declaration: | INPUT |
 | Data type: | INT |
 | Range of values: | - 0 (no limitation) - 1 … 480 [minutes] |
-| Explanation | Maximum duration of a permanent connection  The time specified here (> 0) is activated at the start of a permanent connection (see "PermanentCall_On" parameter).  If the time elapses before the permanent connection is reset, it is automatically disconnected. The time is retriggered as long as the signal 1 is present at the "PermanentCall_On" input.  The time specified here applies to a permanent connection in a dial-up network as well as to a permanent connection (continuous polling) on a dedicated line. |
+| Explanation | Maximum duration of a permanent connection  The time specified here (&gt; 0) is activated at the start of a permanent connection (see "PermanentCall_On" parameter).  If the time elapses before the permanent connection is reset, it is automatically disconnected. The time is retriggered as long as the signal 1 is present at the "PermanentCall_On" input.  The time specified here applies to a permanent connection in a dial-up network as well as to a permanent connection (continuous polling) on a dedicated line. |
 |  |  |
 
 |  |  |  |
@@ -11316,7 +11316,7 @@ A SINAUT subscriber (partner) can only be an ST7 CPU or an ST7cc to which a conn
 | Bit | .11 | Time-of-day synchronization |
 | --- | --- | --- |
 |  | 0 | 0 = The partner CPU received a plausible time during the last synchronization or no time of day has been received since startup. |
-| 1 | 1 = The partner CPU has received an implausible time of day; the last valid time will continue to be used.  (Display only with TimeMask > V1.6) |  |
+| 1 | 1 = The partner CPU has received an implausible time of day; the last valid time will continue to be used.  (Display only with TimeMask &gt; V1.6) |  |
 
 > **Note**
 >
@@ -11663,7 +11663,7 @@ The following table shows the structure of the DB TestCopyData:
 
 A frame block can contain several frames. The frames are saved in the DB TestCopyData according to the following rules:
 
-1. The first entry indicates the time difference in milliseconds (7 decade BCD plus sign) since the last selection of an operating mode > 0.
+1. The first entry indicates the time difference in milliseconds (7 decade BCD plus sign) since the last selection of an operating mode &gt; 0.
 2. This is followed by a separation sign AAAA for sent messages, EEEE for received messages.
 3. Storage of the first message from the frame block.
 4. Separation identifier AAAA, or EEEE:
@@ -11750,7 +11750,7 @@ Along with the mode the coding of DBB0 also includes the transfer direction of t
 
 The functions "SendCopy" and "RecvCopy" can be activated individually or at the same time, however only a common mode is possible for both communication directions.
 
-When a mode > 0 is set in the less significant half byte, this always applies to both communication directions.
+When a mode &gt; 0 is set in the less significant half byte, this always applies to both communication directions.
 
 Only if mode 0 is coded in bit 0...3 (RecvCopy), does the value in bit 4...7 apply (SendCopy).
 
@@ -12181,7 +12181,7 @@ Auxiliary block for putting together the data to be sent and its entry in the re
 
 - **S7‑1500**
 
-  DB BConnectData > BConnection[n]
+  DB BConnectData &gt; BConnection[n]
 - **S7‑400**
 
   DB BComDataXX

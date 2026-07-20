@@ -57,7 +57,7 @@ As of TIA Portal V15, the following CPU families support the setting of breakpoi
 >
 > **Compatibility rules for breakpoints**
 >
-> - S7-1500 CPUs with older firmware versions (<2.5) do not support breakpoints.
+> - S7-1500 CPUs with older firmware versions (&lt;2.5) do not support breakpoints.
 > - Breakpoints are not available for projects with older firmware versions that have been upgraded to the TIA Portal V15.
 > - Breakpoints are also not supported if a CPU S7-1500 with firmware version V2.5 is reset to an older firmware version. In this case, any breakpoints in the code are no longer displayed.
 > - Blocks that were created in older TIA Portal versions must be re-compiled on a CPU S7-1500 as of firmware V2.5 in order to use breakpoints.
@@ -299,7 +299,7 @@ To use the breakpoint functionality, older projects must be re-compiled with the
 
 There are several ways to set breakpoints:
 
-- From the "Online" menu > "Breakpoints" > "Set breakpoint".
+- From the "Online" menu &gt; "Breakpoints" &gt; "Set breakpoint".
 
   This menu command is only visible if the cursor is not placed in the block interface in an open block.
 - Via the shortcut menu "Set breakpoint".
@@ -535,8 +535,8 @@ To navigate to the breakpoints in your program, you can either jump from breakpo
 To navigate from breakpoint to breakpoint in your program, follow these steps:
 
 1. Open a block and select the programming editor.
-2. In the menu "Online > Breakpoints", select "Go to next breakpoint" to jump to the next breakpoint after the current cursor position. When you reach the last breakpoint, you jump to the first breakpoint.
-3. In the menu "Online > Breakpoints", select "Go to previous breakpoint" to jump to the previous breakpoint before the current cursor position. When you reach first breakpoint, you jump to the last breakpoint.
+2. In the menu "Online &gt; Breakpoints", select "Go to next breakpoint" to jump to the next breakpoint after the current cursor position. When you reach the last breakpoint, you jump to the first breakpoint.
+3. In the menu "Online &gt; Breakpoints", select "Go to previous breakpoint" to jump to the previous breakpoint before the current cursor position. When you reach first breakpoint, you jump to the last breakpoint.
 
 ### Navigating to a specific breakpoint
 
@@ -567,7 +567,7 @@ You can delete breakpoints either individually or all together.
 
 Alternatively, you can delete breakpoints as follows:
 
-- From the menu "Online > Breakpoints > Set/delete breakpoints", or "Online > Breakpoints > Delete all".
+- From the menu "Online &gt; Breakpoints &gt; Set/delete breakpoints", or "Online &gt; Breakpoints &gt; Delete all".
 - Via the corresponding shortcut menu commands.
 - Using the corresponding keyboard commands (CTRL+Shift+F9).
 - Using the commands in the "Testing" task card.
@@ -829,13 +829,13 @@ To modify tags in "HOLD", proceed as follows:
 6. Wait until the breakpoint is reached during the program execution and the CPU goes to "HOLD".
 7. Modify the operand to the desired value by clicking on the corresponding command in the shortcut menu.
 
-   - "Modify > Modify to 1"
+   - "Modify &gt; Modify to 1"
 
      Modifies tags of the "BOOL" data type to the value "TRUE".
-   - "Modify > Modify to 0"
+   - "Modify &gt; Modify to 0"
 
      Modifies tags of the "BOOL" data type to the value "FALSE".
-   - "Modify > Modify operand"
+   - "Modify &gt; Modify operand"
 
      If you select "Modify operand", the "Modify operand" dialog opens.
 

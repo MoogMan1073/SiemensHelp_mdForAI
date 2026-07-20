@@ -370,8 +370,8 @@ The PRINT SFB can also be used:
 
 | Name | Brief description |
 | --- | --- |
-| AG_SEND | Sends data via a configured connection to the communication partner (with older CPs and with CPs for S7-400, the following limitation applies to this FC: <= 240 bytes) |
-| AG_RECV | Receives data via a configured connection from the communication partner (with older CPs and with CPs for S7-400, the following limitation applies to this FC:<= 240 bytes, not e-mail) |
+| AG_SEND | Sends data via a configured connection to the communication partner (with older CPs and with CPs for S7-400, the following limitation applies to this FC: &lt;= 240 bytes) |
+| AG_RECV | Receives data via a configured connection from the communication partner (with older CPs and with CPs for S7-400, the following limitation applies to this FC:&lt;= 240 bytes, not e-mail) |
 | AG_LSEND | Sends data via a configured connection to the communication partner |
 | AG_LRECV | Receives data via a configured connection to the communication partner (not e-mail) |
 | AG_LOCK | Lock external data access using FETCH/WRITE (not with UPD, e-mail) |
@@ -436,7 +436,7 @@ The Ethernet CP can transfer the following data volumes via one connection per o
 
 > **Note**
 >
-> Data transfer > 240 byte transfer is supported by the current CPs.
+> Data transfer &gt; 240 byte transfer is supported by the current CPs.
 >
 > CPs with an older product version support the transfer of data with a data length of up to 240 bytes.
 >
@@ -521,7 +521,7 @@ On PC stations, you configure connections with one of the following components a
 >
 > If you assign the "PROFINET onboard [X2]" interface to the CPU 1515SP PC of the SIMATIC PC station, the CPU 1515SP PC can be used as a router for S7 connections. With the setting "None, or a different Windows setting" on the CP interface "PROFINET onboard [X2]" , it is not possible to use the CPU 1515SP PC as a router for routed S7 connections.   
 > An existing S7 connection routed by the CPU 1515SP PC becomes invalid if the assignment of the interface of the CPU 1515SP PC is changed from "SIMATIC PC station" to "None, or a different Windows setting". Since the PLC now no longer handles routing functions for this connection, when the CPU 1515SP PC is compiled, no message relating to the invalid connection is displayed. The invalid routed S7 connection is displayed only when the end points of the connection are compiled.   
-> The interfaces required for routed S7 connections must remain explicitly assigned on the CPU 1515SP PC . You can edit the assignment of the interface of the CPU 1515SP PC in the properties under "PROFINET onboard [X2] > Interface assignment".
+> The interfaces required for routed S7 connections must remain explicitly assigned on the CPU 1515SP PC . You can edit the assignment of the interface of the CPU 1515SP PC in the properties under "PROFINET onboard [X2] &gt; Interface assignment".
 
 ### Special features of the connection configuration with OPC server
 

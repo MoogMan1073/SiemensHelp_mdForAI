@@ -124,7 +124,7 @@ p31211
   
 Example:  
 p31205 = 500 Hz  
---> 100 % corresponds to 500 Hz for the signal to be output.
+--&gt; 100 % corresponds to 500 Hz for the signal to be output.
 
 ### p31206 SETPGEN reference angle
 
@@ -159,8 +159,8 @@ p31213
   
 Example:  
 p31206 = 360 °  
---> 100 % corresponds to a phase offset of 360 ° for the signal to be output.  
---> 50 % corresponds to a phase offset of 180 ° for the signal to be output.
+--&gt; 100 % corresponds to a phase offset of 360 ° for the signal to be output.  
+--&gt; 50 % corresponds to a phase offset of 180 ° for the signal to be output.
 
 ### p31210[0...2] SETPGEN signal waveform
 
@@ -237,9 +237,9 @@ so that the period of the signal to be generated is always greater or equal to 1
 the sampling time (p31200).  
 Example:  
 For sampling time p31200 = 1 and p0115[0] = 125 µs, it follows:  
---> minimum period T = 1250 µs  
---> maximum frequency f = 1/T = 800 Hz  
---> for p31205 = 400 Hz, the signal source of p31211[0...2] may assume a maximum value
+--&gt; minimum period T = 1250 µs  
+--&gt; maximum frequency f = 1/T = 800 Hz  
+--&gt; for p31205 = 400 Hz, the signal source of p31211[0...2] may assume a maximum value
 of 200 %.
 
 **Index:**

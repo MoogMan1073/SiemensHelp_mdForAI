@@ -58,7 +58,7 @@ The device name is automatically derived from the name configured for the device
 
 - The PROFINET device name is made up of the name of the device (for example, the CPU), the name of the interface (only with multiple PROFINET interfaces) and optionally the name of the IO system:
 
-  <CPU name>.<Name of the interface>.<IO system name>
+  &lt;CPU name&gt;.&lt;Name of the interface&gt;.&lt;IO system name&gt;
 
   You cannot change this name directly. You change the PROFINET device name indirectly, by changing the name of the affected CPU, CP or IM in the general properties of the module. This PROFINET device name is also displayed, for example, in the list of accessible devices. If you want to set the PROFINET device name independently of the module name, you have to deactivate the "Generate PROFINET device name automatically" option.
 - A "converted name" is generated from the PROFINET device name. This is the device name that is actually loaded into the device.
@@ -95,7 +95,7 @@ The following table shows how the send clock affects the maximum available bandw
 
 | Send clock | Maximum bandwidth for cyclic IO data |
 | --- | --- |
-| 250 µs – 468.75 µs | << 125 µs |
+| 250 µs – 468.75 µs | &lt;&lt; 125 µs |
 | 500 µs – 968.75 µs | = send clock / 2 |
 | 1 – 4 ms | = 500 µs |
 
@@ -127,12 +127,12 @@ When IRT is configured with an IO controller as sync master, the send clock can 
 To set the send clock on the PROFINET device, follow these steps:
 
 1. Select the PROFINET IO controller in the device or network view.
-2. Change the value for the shortest possible update interval in the properties of the PROFINET interface under "PROFINET Interface > Advanced options > Real-time settings > IO communication > Send clock".
+2. Change the value for the shortest possible update interval in the properties of the PROFINET interface under "PROFINET Interface &gt; Advanced options &gt; Real-time settings &gt; IO communication &gt; Send clock".
 
 The send clock is valid for all PROFINET devices at the IO system. If the synchronization role is set to a value other than "Unsynchronized", you can also set the send clock in the sync domain, in other words, centrally at the PROFINET IO system.
 
 1. Select the IO system using the PROFINET subnet.
-2. Change the value for the send clock in the properties of the sync domain under "Domain management > Sync domains > Sync_domain_1 > Send clock".
+2. Change the value for the send clock in the properties of the sync domain under "Domain management &gt; Sync domains &gt; Sync_domain_1 &gt; Send clock".
 
 ---
 
@@ -167,7 +167,7 @@ A PROFINET IO master system consists of the following components:
 IO device 2 does not support the odd send clock (here: 0.875 ms).
 
 1. Assign the IO devices to the IO controller.
-2. Set the "Sync slave" synchronization role for IO device 1 (inspector window, PROFINET interface area > Advanced options > Realtime settings > Synchronization).
+2. Set the "Sync slave" synchronization role for IO device 1 (inspector window, PROFINET interface area &gt; Advanced options &gt; Realtime settings &gt; Synchronization).
 3. For the IO controller, you set the synchronization role "sync master" in the same way.
 4. Interconnect the ports of the IO controller and IO device 1 (e.g., in the topology view).
 5. IO device 2 remains unsynchronized; the update option is set to "Automatic".
@@ -259,11 +259,11 @@ The table contains the following columns:
 
 | Parameter | Meaning |
 | --- | --- |
-| TM offset | Offset in relation to the first bit in the IO routing area.  The specification has the form <Byte>.<Bit>.  Example: 0.5 |
+| TM offset | Offset in relation to the first bit in the IO routing area.  The specification has the form &lt;Byte&gt;.&lt;Bit&gt;.  Example: 0.5 |
 | Device/module (slot) | Specification of the PROFINET device name of the IO device and its module and slot.  The displayed dialog shows the transfer areas of the IO devices configured in the lower-level IO system. |
 | IO type | Select the IO type from the drop-down list.  This selection is only possible with an IO routing area of the type "Input", and only if a mixed module is selected as "Device/module (slot)".   In this case, you can select whether the inputs are read (Input) or the outputs are read back (Output). |
-| Start | Start address (offset) in the data area of the transfer area in the lower-level IO system.  The specification has the form <Byte>.<Bit>.  Example: 0.0 |
-| End | End address (offset) in the data area of the transfer area in the lower-level IO system.  The specification has the form <Byte>.<Bit>.  Example: 8.0 |
+| Start | Start address (offset) in the data area of the transfer area in the lower-level IO system.  The specification has the form &lt;Byte&gt;.&lt;Bit&gt;.  Example: 0.0 |
+| End | End address (offset) in the data area of the transfer area in the lower-level IO system.  The specification has the form &lt;Byte&gt;.&lt;Bit&gt;.  Example: 8.0 |
 |  |  |
 
 ### PROFINET device diagnostics (S7-300, S7-400, S7-1500, PC)
@@ -378,10 +378,10 @@ If you want to increase the precision of cyclic data exchange via PROFINET IO wi
 Proceed as follows to configure IRT for an existing IO system:
 
 1. Select the PROFINET interface of the **IO controller**.
-2. Navigate to "Advanced options > Realtime settings > Synchronization" in the inspector window.
+2. Navigate to "Advanced options &gt; Realtime settings &gt; Synchronization" in the inspector window.
 3. Assign the IO controller the role of sync master under "Synchronization role".
 4. Now select the PROFINET interfaces of an associated **IO device**.
-5. Navigate to "Advanced options > Realtime settings > Synchronization" in the inspector window.
+5. Navigate to "Advanced options &gt; Realtime settings &gt; Synchronization" in the inspector window.
 6. Activate the RT class "IRT". The IO device is then automatically assigned the synchronization role "sync slave".
 7. You can check and correct your settings at any time using the "Sync domain" button.
 8. Interconnect the ports between the sync slaves and sync master.
@@ -484,7 +484,7 @@ To change the name of a sync domain, adjust the send clock, or set up a default 
 
 1. Select the Ethernet subnet in the network view in which the sync domain is set up.
 2. Open the Ethernet subnet properties.
-3. In the local navigation, choose the entry "Domain management > Sync domains > <Name of sync domain> ".
+3. In the local navigation, choose the entry "Domain management &gt; Sync domains &gt; &lt;Name of sync domain&gt; ".
 4. Enter the changes.
 
    - Enter the desired name of the sync domain in the field "Sync domain name".
@@ -552,7 +552,7 @@ To assign a sync domain to a device, follow these steps:
 
 1. Select the Ethernet subnet in the network view in which the sync domain is set up.
 2. Open the Ethernet subnet properties.
-3. In the local navigation, select the entry "Domain management > Sync domains > <Name of sync domain> > Devices".
+3. In the local navigation, select the entry "Domain management &gt; Sync domains &gt; &lt;Name of sync domain&gt; &gt; Devices".
 4. Click "Add devices" in the "Station / IO System" table.
 
    The "Select IO system" dialog opens.
@@ -566,8 +566,8 @@ To remove a device from a sync domain, follow these steps:
 
 1. Select the Ethernet subnet in the network view in which the sync domain is set up.
 2. Open the Ethernet subnet properties.
-3. In the local navigation, select the entry "Domain management > Sync domains > <Name of sync domain> > Devices".
-4. Select the devices in the table "Station / IO-System" which you would like to remove and press <DEL>.
+3. In the local navigation, select the entry "Domain management &gt; Sync domains &gt; &lt;Name of sync domain&gt; &gt; Devices".
+4. Select the devices in the table "Station / IO-System" which you would like to remove and press &lt;DEL&gt;.
 
 The devices will be deleted and reassigned to the default domain.
 
@@ -594,7 +594,7 @@ Both the sync master and the redundant sync master send sync frames. A sync slav
 To configure a redundant sync master, follow these steps:
 
 1. In the device view or network view, select the device that you want to configure as a redundant master.
-2. Under "PROFINET interface > Advanced options > Real time settings > Synchronization > Synchronization role", select the "Redundant sync master" option.
+2. Under "PROFINET interface &gt; Advanced options &gt; Real time settings &gt; Synchronization &gt; Synchronization role", select the "Redundant sync master" option.
 
 ### Rules and information for IRT configurations (S7-1500, S7-1500T)
 
@@ -769,11 +769,11 @@ The IPO model with application cycle factor = 1 is characterized by the fact tha
 
 #### Program Execution According to the IPO Model with Long Time (S7-1500, S7-1500T)
 
-##### Label of the IPO-model with application cycle factor > 1
+##### Label of the IPO-model with application cycle factor &gt; 1
 
 If the runtime of the isochronous mode OB is longer than one data cycle T_DC, the output must be delayed by one application cycle (OB 6x). For this reason, data output occurs before data input in this model.
 
-The SYNC_PI and SYNC_PO instructions must then be called during the execution window of the first data cycle (only available there when application cycle factor > 1).
+The SYNC_PI and SYNC_PO instructions must then be called during the execution window of the first data cycle (only available there when application cycle factor &gt; 1).
 
 The execution window refers to the time period during which a call of the SYNC_PI and SYNC_PO instructions is possible, i.e., after transfer of cyclic data via PROFINET up to the time shortly before the end of data cycle T_DC.
 
@@ -803,7 +803,7 @@ The IO controller is an S7-1500 CPU.
 - All requirements for an IRT configuration are met, namely:
 
   - The ports of the CPU and the IM are interconnected.
-  - The RT class of the IM is set to "IRT" (area "Advanced options > Real-time settings > Synchronization").
+  - The RT class of the IM is set to "IRT" (area "Advanced options &gt; Real-time settings &gt; Synchronization").
 
 ##### Procedure
 
@@ -841,18 +841,18 @@ The IO controller is an S7-300/400 CPU.
 - All requirements for an IRT configuration are met, namely:
 
   - The ports of the CPU and the IM are interconnected.
-  - The synchronization role of the PROFINET interface is set to "sync master" (properties of the CPU, area "PROFINET interface> Advanced options > Real-time settings > Synchronization").
-  - The RT class of the IM is set to "IRT" (area "PROFINET interface > Advanced options > Real-time settings > Synchronization").
+  - The synchronization role of the PROFINET interface is set to "sync master" (properties of the CPU, area "PROFINET interface&gt; Advanced options &gt; Real-time settings &gt; Synchronization").
+  - The RT class of the IM is set to "IRT" (area "PROFINET interface &gt; Advanced options &gt; Real-time settings &gt; Synchronization").
 
 ##### Procedure
 
 To create an isochronous connection between the I/O and user program, follow these steps:
 
-1. Select the CPU, and navigate to the "Interrupts > Isochronous mode interrupts" area in the inspector window.
+1. Select the CPU, and navigate to the "Interrupts &gt; Isochronous mode interrupts" area in the inspector window.
 2. Select the distributed I/O device (the IM 155-5 PN HF) in the network view, and switch to the device view.
 3. Insert at least one I/O module with isochronous mode capability (module with name extension "HF", e.g., DI 16x24VDC HF - 6ES7 521-1BH00).
 4. Assign a process image partition to the I/O module (inspector window, "I/O addresses" area).
-5. Select the IM in the device view or network view and navigate in the inspector window to the "PROFINET interface > Advanced options > Isochronous mode" area.
+5. Select the IM in the device view or network view and navigate in the inspector window to the "PROFINET interface &gt; Advanced options &gt; Isochronous mode" area.
 
    - Select the "Isochronous mode" option.
    - If you want to change the send clock or the application cycle, click the green link next to the appropriate fields. This takes you to the sync domain where these settings can be centrally changed.
@@ -1088,12 +1088,12 @@ To edit the diagnostics addresses for the I-device communication, follow these s
 
 1. Select the IO controller or the I-device.
 2. In the I/O communication table, select the line showing "I-device" mode.
-3. Edit the diagnostics addresses under "Properties > I-device communication > Diagnostics address of communication" in the Inspector window.
+3. Edit the diagnostics addresses under "Properties &gt; I-device communication &gt; Diagnostics address of communication" in the Inspector window.
 
 Or:
 
 1. Select the I-device.
-2. Edit the diagnostics addresses under "Properties > PROFINET interface > Mode > I-device communication > Diagnostics address of communication" in the Inspector window.
+2. Edit the diagnostics addresses under "Properties &gt; PROFINET interface &gt; Mode &gt; I-device communication &gt; Diagnostics address of communication" in the Inspector window.
 
 You can select and edit the fields containing the values of the diagnostics addresses both for the device and the controller.
 
@@ -1243,7 +1243,7 @@ If you want to use an I-device in another project or if the I-device is used in 
 To export an I-device as GSD file, follow these steps:
 
 1. Select the I-device or its PROFINET interface in the hardware and network editor.
-2. In the Inspector window, select the "Export" command at the PROFINET interface "Operating mode > I-device communication". The dialog for export of the I-device as GSD file opens.
+2. In the Inspector window, select the "Export" command at the PROFINET interface "Operating mode &gt; I-device communication". The dialog for export of the I-device as GSD file opens.
 3. You can now specify the name and a description for the I-device representative and change the storage path of the GSD file.
 
    ![Procedure](images/96922872843_DV_resource.Stream@PNG-en-US.png)
@@ -1284,7 +1284,7 @@ The name of an exported GSD file for I-devices can look as follows:
 
 #### Import of the exported GSD file in another project
 
-You import the GSD file with the exported I-device by installing the GSD file [as described here](Configuring%20devices%20and%20networks.md#installing-the-gsd-file). After you have selected and installed the GSD file with the I-slave under "Options > "Manage general station description files (GSD) > Installed GSDs", you can find the I-device under "Additional field devices > PROFINET IO" in the hardware catalog under the name that you have specified as designation in the export dialog. I-devices with the same name are set as versions of the same device in the hardware catalog. You can identify these different versions with the identifier of the version in the file name or by means of a different description. To display these versions, use the "Version" drop-down list after selection of the I-device.
+You import the GSD file with the exported I-device by installing the GSD file [as described here](Configuring%20devices%20and%20networks.md#installing-the-gsd-file). After you have selected and installed the GSD file with the I-slave under "Options &gt; "Manage general station description files (GSD) &gt; Installed GSDs", you can find the I-device under "Additional field devices &gt; PROFINET IO" in the hardware catalog under the name that you have specified as designation in the export dialog. I-devices with the same name are set as versions of the same device in the hardware catalog. You can identify these different versions with the identifier of the version in the file name or by means of a different description. To display these versions, use the "Version" drop-down list after selection of the I-device.
 
 Selected I-devices can be dragged into the configuration just like other devices of the hardware catalog.
 
@@ -1509,7 +1509,7 @@ In the list of accessible devices the I device will be displayed as a "normal" C
 
 ### Disabling I-device in the user program of the I-device CPU
 
-When a PROFINET interface of a CPU was configured as an I-device in STEP 7, the I-device function is active after a status transition of the CPU from STOP > RUN. If no higher-level IO controller can be reached in this case, the I-device CPU signals an error using its ERROR LED.
+When a PROFINET interface of a CPU was configured as an I-device in STEP 7, the I-device function is active after a status transition of the CPU from STOP &gt; RUN. If no higher-level IO controller can be reached in this case, the I-device CPU signals an error using its ERROR LED.
 
 As of firmware version 2.9 of an S7-1500/ET 200SP/ET 200pro CPU, you can locally disable or enable the I-device function in the user program of the I-device CPU. You use the "D_ACT_DP" instruction for this. After disabling the function, the I-device CPU no longer signals an error using its ERROR LED.
 
@@ -1658,7 +1658,7 @@ To configure more docking units in a docking system, follow these steps:
 
 1. Configure your hardware configuration as usual; first, consider the IO devices which correspond to the changing partners to be normal IO devices.
 2. In the inspector window, open the properties of the ports on which you would like to operate the changing IO devices (changing partner ports).
-3. Under "General > PROFINET interface > Advanced settings > RJ45 100 Mbit Port [Xn Pm] > Port interconnection", select the check box "Alternative partner".
+3. Under "General &gt; PROFINET interface &gt; Advanced settings &gt; RJ45 100 Mbit Port [Xn Pm] &gt; Port interconnection", select the check box "Alternative partner".
 4. Insert the alternative partner in the table, as described in the "Interconnecting ports" chapter.
 
 ---
@@ -1690,7 +1690,7 @@ In the description of the procedure, it is assumed that the configuration matche
 1. Connect all PROFINET interfaces of the devices to each other in the network view.
 2. In the network view or device view, select the docking system (Scalance X200 IRT) whose port you want to interconnect.
 3. Open the device properties in the Inspector window.
-4. Under "Properties > PROFINET interface > Advanced settings > RJ45 100-megabit port [Xn Pm] > Port interconnection" choose the partner port for the CPU (IO controller) from the "Partner port" drop-down list.
+4. Under "Properties &gt; PROFINET interface &gt; Advanced settings &gt; RJ45 100-megabit port [Xn Pm] &gt; Port interconnection" choose the partner port for the CPU (IO controller) from the "Partner port" drop-down list.
 
    The ports of the CPU and the docking system (Scalance) are interconnected.
 5. The docking system is still selected: For any other unconnected port, now select the partner ports for the IO devices:
@@ -1698,7 +1698,7 @@ In the description of the procedure, it is assumed that the configuration matche
    - Select the "Alternative partner" check box.
 
      A table for the partner port is displayed.
-   - Within the table, click the line <Add alternative partner...> to open a drop-down list.
+   - Within the table, click the line &lt;Add alternative partner...&gt; to open a drop-down list.
 
      The drop-down list shows all devices with their unconnected ports for selection.
    - Select the port of the first docking unit.
@@ -1820,13 +1820,13 @@ You can enable the PROFINET function "Prioritized startup" for the IO devices (d
 
 1. Select the IO device in the network view or device view for which you wish to accelerate startup.
 2. Open the IO device properties in the inspector window.
-3. Select "PROFINET interface > Advanced options > Interface options".
+3. Select "PROFINET interface &gt; Advanced options &gt; Interface options".
 4. Select the "Enable prioritized startup" check box.
 5. Download the configuration to the IO controller.
 
 Note:
 
-For devices whose DP mode can be selected, the previously described check box can be found under "PROFINET interface > Operating mode". The CP 1616 for PC stations is one example of this type of device.
+For devices whose DP mode can be selected, the previously described check box can be found under "PROFINET interface &gt; Operating mode". The CP 1616 for PC stations is one example of this type of device.
 
 > **Note**
 >
@@ -1922,7 +1922,7 @@ The time between ring interruption and re-establishment of a functional line top
 
 If the watchdog time of an IO device is shorter than the reconfiguration time of the ring, there is a danger that communication with the IO device will be interrupted (station failure).
 
-Recommendation: When configuring the watchdog time of an IO device, select a time longer than 200 ms (in the properties of the IO device: PROFINET interface > Advanced options > Real time settings).
+Recommendation: When configuring the watchdog time of an IO device, select a time longer than 200 ms (in the properties of the IO device: PROFINET interface &gt; Advanced options &gt; Real time settings).
 
 ---
 
@@ -2040,7 +2040,7 @@ Proceed as follows to create a PROFINET IO configuration with MRP in STEP 7:
 
    ![Configuring MRP](images/90699884683_DV_resource.Stream@PNG-de-DE.png)
 3. Select the PROFINET IO system in the network view.
-4. In the Inspector window, navigate to "Properties" > "General" > "PROFINET" > "MRP domains" in the "Ring interconnection" field.  
+4. In the Inspector window, navigate to "Properties" &gt; "General" &gt; "PROFINET" &gt; "MRP domains" in the "Ring interconnection" field.  
    This field shows you all the topological rings in the IO system with the associated MRP domains.
 5. Select the ring generated above in the "Ring interconnection" field.  
    The table below it shows all PROFINET devices in the ring.
@@ -2109,7 +2109,7 @@ You can respond to these events in the user program by programming the appropria
 If you want to delete unneeded MRP domains, for example, because they no longer contain any devices, select the PROFINET IO system and then select the "MRP domains" area:
 
 1. Navigate to the first table. This is the table in which you select the default domain.
-2. Select the row with the MRP domain to delete and press the <Del> key.
+2. Select the row with the MRP domain to delete and press the &lt;Del&gt; key.
 
 You can delete any MRP domain except the default domain.
 
@@ -2137,7 +2137,7 @@ MRPD is based on IRT and MRP. To realize media redundancy with short update time
 
 - All the devices of the ring must support MRPD, for example interface module IM 155‑6 PN HS as of firmware version 4.0, SCALANCE X300 as of V4.0. (Terminal) devices at the switch that cyclically exchange IRT data with a ring component must also support MRPD.
 
-  Whether or not a device supports MRPD can be seen in the infotext for the device in the STEP 7 hardware catalog (Devices & networks).
+  Whether or not a device supports MRPD can be seen in the infotext for the device in the STEP 7 hardware catalog (Devices &amp; networks).
 - You have configured MRP for all the devices of the ring. You have assigned the MRP role "Not device in the ring" to devices that are not located in the ring.
 - You have configured IRT for all the involved components.
 
@@ -2169,7 +2169,7 @@ The figure below shows the redundancy levels of the IO devices for an example co
 
 The redundancy levels are displayed in addition to other properties of the Sync domain in STEP 7:
 
-"Domain management > Sync domains >... > Devices".
+"Domain management &gt; Sync domains &gt;... &gt; Devices".
 
 #### Application example: Structure of a ring topology based on "MRPD"
 
@@ -2196,13 +2196,13 @@ You can monitor and adjust the media redundancy settings centrally.
 
 To open the MRP domain, follow these steps:
 
-1. Select any PROFINET interface, and select the "Advanced options > Media redundancy" area in the inspector window.
+1. Select any PROFINET interface, and select the "Advanced options &gt; Media redundancy" area in the inspector window.
 2. Click the "Domain settings" button.
 
 or
 
 1. Select the subnet or the IO system.
-2. Navigate to the "PROFINET > Domain management > MRP domains" area in the inspector window.
+2. Navigate to the "PROFINET &gt; Domain management &gt; MRP domains" area in the inspector window.
 
 Here, you can specify centrally which MRP domain is to be the default domain. You can change the names of all domains and check redundancy roles and ring ports.
 
@@ -2213,7 +2213,7 @@ You can have the devices in the ring, including device name, associated MRP doma
 - MRP domains
 
   The list shows you the existing MRP domains of the selected IO system.
-- <Name of MRP domain>
+- &lt;Name of MRP domain&gt;
 
   The list shows you the number of PROFINET interfaces and devices with the respective redundancy roles for the selected MRP domain.
 - Devices
@@ -2263,7 +2263,7 @@ To configure an MRP configuration with multiple rings, follow these steps:
 
 1. In the topology view, interconnect the ring ports of the devices that are intended to belong to an MRP domain to form a ring.
 2. Select the PROFINET IO system in the network view.
-3. In the Inspector window, navigate to "Properties" > "General" > "PROFINET" > "MRP domains" in the "Ring interconnection" field.   
+3. In the Inspector window, navigate to "Properties" &gt; "General" &gt; "PROFINET" &gt; "MRP domains" in the "Ring interconnection" field.   
    This field shows you all the topological rings in the IO system with the associated MRP domains.
 4. Select one of the rings generated above in the "Ring interconnection" field.  
    The table below it shows all PROFINET devices in the selected ring.
@@ -2277,10 +2277,10 @@ This configuration is not consistent.
 
 You have the following options:
 
-- You can manually assign MRP roles according to the rules described for MRP configurations. To do this, edit the properties of the PROFINET IO system, in the area "MRP Domains > Ring interconnection".
+- You can manually assign MRP roles according to the rules described for MRP configurations. To do this, edit the properties of the PROFINET IO system, in the area "MRP Domains &gt; Ring interconnection".
 - You can have the MRP roles assigned automatically by STEP 7.
 
-In both cases, select a configured MRP ring (in the area "MRP domains > Ring interconnection") and click the "Configure MRP automatically" button. Repeat the process for each configured MRP ring.
+In both cases, select a configured MRP ring (in the area "MRP domains &gt; Ring interconnection") and click the "Configure MRP automatically" button. Repeat the process for each configured MRP ring.
 
 The rings are then are assigned new MRP domains and the MRP roles and MRP instances are set. The configuration is consistent.
 
@@ -2315,7 +2315,7 @@ The following figure shows Ring 2 (mrpdomain-2). The participants of the mrpdoma
 If you want to delete unneeded MRP domains, for example, because they no longer contain any devices, select the PROFINET IO system and then select the "MRP Domains" area.
 
 1. Navigate to the first table. This is the table in which you select the default domain.
-2. Select the row with the MRP domain to delete and press the <Del> key.
+2. Select the row with the MRP domain to delete and press the &lt;Del&gt; key.
 
 You can delete any MRP domain except the default domain.
 
@@ -2514,7 +2514,7 @@ Proceed as follows to configure support of PROFIenergy:
 1. Select the PROFINET interface (X1) of the CPU.
 2. Select the required transfer area in the area navigation, for example:
 
-   Operating mode > I-device communication > Transfer_area_1.
+   Operating mode &gt; I-device communication &gt; Transfer_area_1.
 3. Select the "Enable PROFIenergy communication" check box.
 
 Once the I-device is fully configured, generate the GSD file for the I-device and import this file in the project for the I/O controller. The GSD file generated is compatible with GSD version 2.31 and contains an entry that specifies that the I-device supports the PROFIenergy profile.
@@ -2700,7 +2700,7 @@ To create a project with a project-internal shared device, follow these steps:
 5. Add another IO controller (for example, CPU 1513-1 PN) from the hardware catalog.
 6. Assign a name, for example, "PLC_2".
 7. Connect the PROFINET interface X1 of "PLC_1" and "PLC_2" to one another. As a result, the PROFINET interfaces of the CPUs are in the same subnet.
-8. Insert an IO device (for example, IM 155-6 PN ST) from the hardware catalog. You can find the IO devices installed from the GSD files under "Other field devices > PROFINET IO > IO > SIEMENS AG"
+8. Insert an IO device (for example, IM 155-6 PN ST) from the hardware catalog. You can find the IO devices installed from the GSD files under "Other field devices &gt; PROFINET IO &gt; IO &gt; SIEMENS AG"
 9. Double-click the added IO device; the device view opens.
 10. Double-click all the required modules and submodules from the hardware catalog in the device overview table. Also use the modules and submodules installed from the GSD files.
 11. Assign parameters to the individual I/O modules.
@@ -2721,7 +2721,7 @@ Newly added modules or submodules are assigned to that IO controller to which th
 To change the assignment, follow these steps:
 
 1. In the network view or the device view of the project, select the interface module of the project-internal shared device.
-2. In the Inspector window, select the "Shared Device" tab under "Properties > General".
+2. In the Inspector window, select the "Shared Device" tab under "Properties &gt; General".
 
    A table shows which IO controller has access to the respective module or submodule. The default setting for all modules and submodules is the IO controller to which the project-internal shared device was first assigned.
 3. For all modules and submodules that are to remain in this address area, leave the setting "PLC_1" as it is.
@@ -2744,7 +2744,7 @@ By adjusting and validating the settings given below, the following properties a
 To adjust and validate these settings, follow these steps:
 
 1. Select the interface module of the project-internal shared device in the network view.
-2. In the Inspector window, navigate to the "PROFINET interface > Advanced options > Real time settings > IO cycle" area.
+2. In the Inspector window, navigate to the "PROFINET interface &gt; Advanced options &gt; Real time settings &gt; IO cycle" area.
 3. If project-external IO controllers also access this shared device: In the "Shared Device" tab, set the number of project-external IO controllers. The maximum number depends on the IO device (specification in GSD file).
 4. For every IO controller that has access to modules or submodules of the project-internal shared device, you need to adjust the real-time settings on a CPU-specific basis in each case.
 5. You must set the same send clock for each IO controller that has access to modules and submodules of the project-internal shared device:
@@ -2755,10 +2755,10 @@ To adjust and validate these settings, follow these steps:
 
      Select the PROFINET interface of the IO controller.
 
-     Select the "Advanced options > Real time settings > IO communication" area in the Inspector window and set the shared send clock.
+     Select the "Advanced options &gt; Real time settings &gt; IO communication" area in the Inspector window and set the shared send clock.
    - If you configure another project-external IO controller with a different engineering tool:
 
-     Select the PROFINET interface of the shared device in STEP 7 (TIA Portal) and read out the send clock on the shared device ("Advanced options > Real time settings" area)
+     Select the PROFINET interface of the shared device in STEP 7 (TIA Portal) and read out the send clock on the shared device ("Advanced options &gt; Real time settings" area)
 
      Enter the read send clock in the engineering tool.
    - Special consideration: If you configure **all** IO controllers that have access to the shared device in STEP 7 (TIA Portal or V5.5), you can set shorter send clocks on the IO controller than supported by the shared device (send clock adaptation).
@@ -2792,7 +2792,7 @@ To create the first project with a shared device, follow these steps:
 1. Start STEP 7.
 2. Create a new project with the name "Shared-Device-1".
 3. Insert a CPU 1513-1 PN from the hardware catalog in the network view. Name it "PLC1".
-4. Insert an IO device with the "Shared device" function from the hardware catalog (hardware catalog: Other field devices > PROFINET IO > I/O).
+4. Insert an IO device with the "Shared device" function from the hardware catalog (hardware catalog: Other field devices &gt; PROFINET IO &gt; I/O).
 5. Assign the IO controller "PLC1" to the IO device.
 6. Double-click the IO device and insert all required modules and submodules from the hardware catalog in the device overview table.
 7. Assign the module parameters.
@@ -2846,7 +2846,7 @@ To ensure that all IO controllers and shared devices are operated with the appro
 
 1. Select the project whose IO controllers have access to the PROFINET interface and the ports of the shared device.
 2. Select the interface module of the shared device in the network view.
-3. In the Inspector window, navigate to the "PROFINET interface > Advanced options > Real time settings > IO cycle" area.
+3. In the Inspector window, navigate to the "PROFINET interface &gt; Advanced options &gt; Real time settings &gt; IO cycle" area.
 4. In the "Shared device" area, set the number of project-external IO controllers. The maximum number depends on the IO device (default in GSD file).
 5. You must set the same send clock for each IO controller that has access to modules and submodules of the shared device:
 
@@ -2856,10 +2856,10 @@ To ensure that all IO controllers and shared devices are operated with the appro
 
      Select the PROFINET interface of the IO controller.
 
-     Select the "Advanced options > Real time settings > IO communication" area in the Inspector window and set the shared send clock.
+     Select the "Advanced options &gt; Real time settings &gt; IO communication" area in the Inspector window and set the shared send clock.
    - If you configure the IO controller with a different engineering tool:
 
-     Select the PROFINET interface of the shared device in STEP 7 (TIA Portal) and read out the send clock on the shared device ("Advanced options > Real time settings" area)
+     Select the PROFINET interface of the shared device in STEP 7 (TIA Portal) and read out the send clock on the shared device ("Advanced options &gt; Real time settings" area)
 
      Enter the read send clock in the engineering tool.
    - Special note: If you configure **all** IO controllers that have access to the shared device in STEP 7 (TIA Portal or V5.5), you can set shorter send clocks on the IO controller than supported by the shared device (send clock adaptation).
@@ -2915,7 +2915,7 @@ You must install the PROFINET GSD file created from the I-device configuration i
 
 **Each higher-level IO controller with assigned shared I-device transfer area in its own project.**
 
-You configure the I-device as a GSD variant on the PROFINET IO system in the projects involved. In STEP 7 V13, this I-device can be found under "Other field devices > PROFINET IO > PLCs & CPs" following installation.
+You configure the I-device as a GSD variant on the PROFINET IO system in the projects involved. In STEP 7 V13, this I-device can be found under "Other field devices &gt; PROFINET IO &gt; PLCs &amp; CPs" following installation.
 
 You need a separate project for each assignment between the shared I-device and one of the higher-level IO controllers that share the transfer areas.
 
@@ -2952,16 +2952,16 @@ To create the project with a shared I-device, follow these steps:
    In particular, the following settings for the CPU are necessary in the area of the PROFINET interface [X1]:
 
    - Enable the "IO device" option in the "Operating mode" area.
-   - Configure the transfer areas in the "Operating mode" > "I-device configuration" area. The "Address in IO controller" column remains empty because no IO controller is assigned.
+   - Configure the transfer areas in the "Operating mode" &gt; "I-device configuration" area. The "Address in IO controller" column remains empty because no IO controller is assigned.
 
      Note: To change an input area to an output area, and vice versa, you must navigate to the area of the corresponding transfer area.
 
      ![Procedure - Creating the PLC-I-device project](images/104729195787_DV_resource.Stream@PNG-en-US.png)
 
      ![Procedure - Creating the PLC-I-device project](images/104729195787_DV_resource.Stream@PNG-en-US.png)
-   - Select the number of IO controllers that will access the shared I-device during operation ("Mode" > "Real time settings" area, "Shared Device" section).
+   - Select the number of IO controllers that will access the shared I-device during operation ("Mode" &gt; "Real time settings" area, "Shared Device" section).
 6. Save the project.
-7. Click the "Export" button ("Mode" > "I-device configuration" area, "Export general station description file (GSD)" section).
+7. Click the "Export" button ("Mode" &gt; "I-device configuration" area, "Export general station description file (GSD)" section).
 
    If you do not change the name in the Export dialog, the GSD file has a name in the form "GSDML-V2.31-#Siemens-PreConf_PLC-I-Device-20130925-123456", for example.
 
@@ -2973,7 +2973,7 @@ To create the first project with a shared I-device, follow these steps:
 2. Install the PROFINET GSD file from the export of the I-device CPU (PLC-I-Device).
 3. Create a new project with the name "PLC_1".
 4. Insert a CPU 1516-3 PN/DP in the network view. The name of the CPU should be "PLC_1".
-5. Insert the I-device from the hardware catalog (Hardware catalog: Other field devices > PROFINET IO > PLCs & CPs).
+5. Insert the I-device from the hardware catalog (Hardware catalog: Other field devices &gt; PROFINET IO &gt; PLCs &amp; CPs).
 6. Assign the IO controller "PLC_1" to the I-device.
 7. Select the "Shared Device" area in the properties of the I-device.
 
@@ -2990,7 +2990,7 @@ To create the second project with a shared device, follow these steps:
    A new instance of STEP 7 opens.
 2. In the new instance, create a new project with the name "PLC_2".
 3. Insert a CPU 1516-3 PN/DP in the network view. Assign the name "PLC_2".
-4. Insert the I-device from the hardware catalog (Hardware catalog: Other field devices > PROFINET IO > PLCs & CPs).
+4. Insert the I-device from the hardware catalog (Hardware catalog: Other field devices &gt; PROFINET IO &gt; PLCs &amp; CPs).
 5. Assign the IO controller "PLC_2" to the I-device.
 6. Adapt the access to the transfer areas as in the PLC_1 project. Ensure that no duplicate assignments result.
 7. Adapt the parameters of the subnet and PROFINET interface. Because the shared I-device involves the same device in different projects, these data must match.
@@ -3033,10 +3033,10 @@ To ensure that all IO controllers and shared devices are operated with the appro
 
      Select the PROFINET interface of the IO controller.
 
-     Select the "Advanced options > Real time settings > IO communication" area in the Inspector window and set the shared send clock.
+     Select the "Advanced options &gt; Real time settings &gt; IO communication" area in the Inspector window and set the shared send clock.
    - If you configure the IO controller with a different engineering tool:
 
-     Select the PROFINET interface of the shared device in STEP 7 (TIA Portal) and read out the send clock on the shared device ("Advanced options > Real time settings" area)
+     Select the PROFINET interface of the shared device in STEP 7 (TIA Portal) and read out the send clock on the shared device ("Advanced options &gt; Real time settings" area)
 
      Enter the read send clock in the engineering tool.
    - Special note: If you configure **all** IO controllers that have access to the shared I-device in STEP 7 (TIA Portal or V5.5), you can set shorter send clocks on the IO controller than supported by the shared device (send clock adaptation).
@@ -3338,7 +3338,7 @@ To create a standard machine project, follow these steps:
 - The IP protocol of the IO devices is set to "IP address is set by the IO controller during runtime". The IO devices have no IP address initially. If an IO device is not a typical distributed I/O system (e.g., ET 200 systems), but rather another device such as an HMI device, change the option to "IP address is set directly at the device"; see below.
 - The device number for the IO devices is automatically assigned and is used locally for making the IP address unique.
 
-To allow the IO controller to make later changes to the device name for the operator, you must enable the CPU option "Permit overwriting of device names of all assigned IO devices" ("Advanced options > Interface options" in the PROFINET interface properties).
+To allow the IO controller to make later changes to the device name for the operator, you must enable the CPU option "Permit overwriting of device names of all assigned IO devices" ("Advanced options &gt; Interface options" in the PROFINET interface properties).
 
 This option is disabled by default.
 
@@ -3397,7 +3397,7 @@ The following rules apply to the assignment:
 
 - The device names of the IO devices are formed by chaining together the following name components, separated by a period:
 
-  <configured name of the IO device from the standard machine project>.<name of the associated IO controller set on the device>
+  &lt;configured name of the IO device from the standard machine project&gt;.&lt;name of the associated IO controller set on the device&gt;
 - The IP addresses of the IO devices result from the locally configured IP address of the associated IO controller and the device number (sum).
 
 > **Note**
@@ -3415,7 +3415,7 @@ Refer to the figure for the resulting device names and IP addresses.
 | Symbol | Meaning |
 | --- | --- |
 | ① | Set device name and IP address on the IO controller |
-| ② | After startup, the IO devices have an updated device name (<configured device name>.<device name of IO controller>) and an adapted IP address (= <IP address of IO controller> + <device number>) |
+| ② | After startup, the IO devices have an updated device name (&lt;configured device name&gt;.&lt;device name of IO controller&gt;) and an adapted IP address (= &lt;IP address of IO controller&gt; + &lt;device number&gt;) |
 
 ---
 
@@ -3490,7 +3490,7 @@ Due to the control of different actuators, the plant could become hazardous in t
 Proceed as follows to change the "Permit overwriting of device names of all assigned IO devices" option:
 
 1. Select the PROFINET interface of the CPU for which you want to change the option in the network view or in the device view.
-2. Select "Advanced options > Interface options".
+2. Select "Advanced options &gt; Interface options".
 3. Change the option.
 
 ---
@@ -3598,7 +3598,7 @@ A port interconnection between the devices of the IO system that you want to cus
 
 - You have configured IRT.
 - You have configured MRP.
-- You are using STEP 7 <= V15.
+- You are using STEP 7 &lt;= V15.
 
 ##### Procedure
 
@@ -3608,7 +3608,7 @@ To configure an IO device as optional IO device, proceed as follows:
 2. Configure an S7-1500 CPU firmware version V1.7 or higher as IO controller.
 3. Configure the required IO devices and assign the IO devices to the IO controller.
 4. Select the IO device you want to mark as optional.
-5. Select the area "PROFINET interface [X1] > Advanced options".
+5. Select the area "PROFINET interface [X1] &gt; Advanced options".
 6. Enable the "Optional IO device" option.
 
    ![Procedure](images/70435156235_DV_resource.Stream@PNG-en-US.png)
@@ -3659,7 +3659,7 @@ To activate or deactivate optional IO devices, include them in the configuration
 1. Create a data record as described [here](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#reconfigiosystem-reconfigure-io-system-s7-1500).
 2. Call the instruction "ReconfigIOSystem" and select mode 1 to deactivate all IO devices.
 
-   If you set the CPU to STOP or POWER OFF state in order to modify the plant in this status (for example to add an optional IO device), explicit deactivation using "ReconfigIOSystem" with mode 1 is not necessary. In this case, i.e. following a STOP-RUN transition and following a POWER-OFF > POWER-ON transition, all IO devices are deactivated automatically.
+   If you set the CPU to STOP or POWER OFF state in order to modify the plant in this status (for example to add an optional IO device), explicit deactivation using "ReconfigIOSystem" with mode 1 is not necessary. In this case, i.e. following a STOP-RUN transition and following a POWER-OFF &gt; POWER-ON transition, all IO devices are deactivated automatically.
 3. When you have brought the plant to a safe status that allows restructuring without any danger:
 
    Put the plant together according to your intended application. Add the required optional IO devices at the points at which you planned this in the configuration (observe the order!) or remove optional IO devices that you no longer require.
@@ -3721,12 +3721,12 @@ Line 7: Additional data records (optional).
 ##### Rules for the call sequence of "ReconfigIOSystem"
 
 - Always supply the instruction "ReconfigIOSystem" with the same control data record (CTRLREC input parameter)!
-- Call sequence following POWER OFF -> POWER ON transition:
+- Call sequence following POWER OFF -&gt; POWER ON transition:
 
   - ReconfigIOSystem call with mode 1 (optional).
   - ReconfigIOSystem call with mode 2 (mandatory, even without previous reconfiguration!).
   - ReconfigIOSystem call with mode 3 (mandatory).
-- Call sequence following STOP > RUN transition:
+- Call sequence following STOP &gt; RUN transition:
 
   - ReconfigIOSystem call with mode 1 (optional).
   - ReconfigIOSystem call with mode 2 (mandatory, even when configuration was modified in STOP state). Otherwise not required).
@@ -3747,7 +3747,7 @@ Line 7: Additional data records (optional).
   - Version (High Byte =1, Low Byte = 0)
   - Number of optional devices to be activated = 0
   - Number of port interconnections that are set in the user program = 0
-- Following a STOP > RUN transition and following a POWER-OFF > POWER-ON transition, all IO devices are deactivated automatically. For this reason, no ReconfigIOSystem call with mode 1 is required for configuration control to function properly.
+- Following a STOP &gt; RUN transition and following a POWER-OFF &gt; POWER-ON transition, all IO devices are deactivated automatically. For this reason, no ReconfigIOSystem call with mode 1 is required for configuration control to function properly.
 
   If you use your project as a universally valid sample for programming the configuration control, we still recommend to perform the ReconfigIOSystem call with mode 1 prior to any reconfiguration. This way, the sample can also be used for reconfigurations in RUN mode.
 - Commissioning extensive I/O systems (more than 8 optional IO devices) while using IRT at the same time:
@@ -3830,12 +3830,12 @@ For the example in the figure above, the following port settings result:
 | --- | --- | --- | --- |
 | PLC_1 | p1 | p1 (IO device_1) | Partner of PLC_1 at port 1 is IO device_1 (always) |
 | IO device_1 | p1 | p1 (PLC_1) | Partner of IO device_1 at port 1 is PLC_1 (always) |
-| IO device_1 | p2 | Partner is set by user program | Partner of IO device_1 at port 2 is either IO device_2 or IO device_3 => Setting partner by user program |
-| IO device_2 | p1 | Partner is set by user program | Partner of IO device_2 at port 1 is either IO device_1 or IO device_3 => Setting partner by user program |
-| IO device_2 | p2 | Partner is set by user program | Partner of IO device_2 at port 2 is either IO device_3 or IO device_4 => Setting partner by user program |
-| IO device_3 | p1 | Partner is set by user program | Partner of IO device_3 at port 1 is either IO device_2 or IO device_1 => Setting partner by user program |
-| IO device_3 | p2 | Partner is set by user program | Partner of IO device_3 at port 2 is either IO device_4 or IO device_2 => Setting partner by user program |
-| IO device_4 | p1 | Partner is set by user program | Partner of IO device_4 at port 1 is either IO device_3 or IO device_2 => Setting partner by user program |
+| IO device_1 | p2 | Partner is set by user program | Partner of IO device_1 at port 2 is either IO device_2 or IO device_3 =&gt; Setting partner by user program |
+| IO device_2 | p1 | Partner is set by user program | Partner of IO device_2 at port 1 is either IO device_1 or IO device_3 =&gt; Setting partner by user program |
+| IO device_2 | p2 | Partner is set by user program | Partner of IO device_2 at port 2 is either IO device_3 or IO device_4 =&gt; Setting partner by user program |
+| IO device_3 | p1 | Partner is set by user program | Partner of IO device_3 at port 1 is either IO device_2 or IO device_1 =&gt; Setting partner by user program |
+| IO device_3 | p2 | Partner is set by user program | Partner of IO device_3 at port 2 is either IO device_4 or IO device_2 =&gt; Setting partner by user program |
+| IO device_4 | p1 | Partner is set by user program | Partner of IO device_4 at port 1 is either IO device_3 or IO device_2 =&gt; Setting partner by user program |
 | IO device_4 | p2 | any partner | no partner planned at port 2 |
 
 ##### Requirement
@@ -3849,7 +3849,7 @@ For the example in the figure above, the following port settings result:
 To set the partner port for a program controlled interconnection, proceed as follows:
 
 1. Select the PROFINET interface of the device (IO controller or IO device) whose port you want to set.
-2. In the properties of the PROFINET interface, select the area "Port interconnection" (Extended options > Port [...] > Port interconnection).
+2. In the properties of the PROFINET interface, select the area "Port interconnection" (Extended options &gt; Port [...] &gt; Port interconnection).
 3. From the drop-down list, select "Setting partner by user program" as partner port.
 4. Repeat steps 1 to 3 for each port to be interconnected via the user program.
 
@@ -3953,7 +3953,7 @@ In addition, rules and restrictions are listed here which must be considered whe
 
 - System diagnostics:
 
-  From the system diagnostics viewpoint (online view or Online & Diagnostics) a deactivated IO device is shown as "deactivated".
+  From the system diagnostics viewpoint (online view or Online &amp; Diagnostics) a deactivated IO device is shown as "deactivated".
 - Topology view:
 
   Offline view: As configured. No interconnection is shown for ports with partner ports configured as "Setting partner by user program".
@@ -3961,7 +3961,7 @@ In addition, rules and restrictions are listed here which must be considered whe
   Online view: Ports and interconnections with deactivated IO devices are shown in a different shade of green as error-free ports and interconnections of activated IO devices.
 - Representation in the Web server:
 
-  The names of devices are shown as configured (Properties > General > Project information).
+  The names of devices are shown as configured (Properties &gt; General &gt; Project information).
 
   The assigned PROFINET device name for the CPU is shown on the "Communication" website, at the "Parameter" tab.
 
@@ -4062,7 +4062,7 @@ The following figure shows how dynamic frame packing works based on the example 
 
 Dynamic frame packing automatically groups IO devices that support the performance upgrade into DFP groups. To be grouped together in a DFP group. the IO devices must be located one after the other in a line and must have the same update time and watchdog time. As soon as a maximum frame size for the DFP group is exceeded or a maximum number of members for a DFP group is reached, dynamic frame packing automatically opens a new DFP group.
 
-STEP 7 shows the DFP groups in "Domain management" > "Sync domains" > "Name of the sync domain" > "Device" in the "IO devices" box.
+STEP 7 shows the DFP groups in "Domain management" &gt; "Sync domains" &gt; "Name of the sync domain" &gt; "Device" in the "IO devices" box.
 
 ![DFP groups](images/90655231371_DV_resource.Stream@PNG-en-US.png)
 
@@ -4133,7 +4133,7 @@ When you enable the "Make 'high performance' possible" option, this has the foll
 Follow these steps to activate the "Make 'high performance' possible" option:
 
 1. Select the PROFINET IO system in the network view of STEP 7.
-2. In the Inspector window, go to "Properties" > "General" > "PROFINET" > "Domain management" > "Sync domains" > "Name of the sync domain".
+2. In the Inspector window, go to "Properties" &gt; "General" &gt; "PROFINET" &gt; "Domain management" &gt; "Sync domains" &gt; "Name of the sync domain".
 3. Enable the "Make 'high performance' possible" option.
 
    ![Enable the "Make 'high performance' possible" option.](images/90655235211_DV_resource.Stream@PNG-en-US.png)
@@ -4145,7 +4145,7 @@ Requirement: The "Make 'high performance' possible" option is enabled.
 To set more bandwidth for cyclic IO data for your PROFINET IO system, follow these steps:
 
 1. Select your IO system in the network view of STEP 7.
-2. In the Inspector window, go to "Properties" > "General" > "PROFINET" > "Domain management" > "Sync domains" > "Name of the sync domain" > "Details".
+2. In the Inspector window, go to "Properties" &gt; "General" &gt; "PROFINET" &gt; "Domain management" &gt; "Sync domains" &gt; "Name of the sync domain" &gt; "Details".
 3. In the drop-down list, select "Maximum 90% cyclic IO data. Focus on cyclic IO data".
 
    ![Using more bandwidth for cyclic IO data](images/90655239051_DV_resource.Stream@PNG-en-US.png)
@@ -4161,7 +4161,7 @@ To set more bandwidth for cyclic IO data for your PROFINET IO system, follow the
 Requirement: The "Make 'high performance' possible" option is enabled.
 
 1. Select the PROFINET IO system in the network view of STEP 7.
-2. In the Inspector window, go to "Properties" > "General" > "PROFINET" > "Domain management" > "Sync domains" > "Name of the sync domain".
+2. In the Inspector window, go to "Properties" &gt; "General" &gt; "PROFINET" &gt; "Domain management" &gt; "Sync domains" &gt; "Name of the sync domain".
 3. Select the send clock for "Send clock" in the drop-down list.
 
    ![Setting low send clocks](images/90655242763_DV_resource.Stream@PNG-en-US.png)
@@ -4186,7 +4186,7 @@ Requirements:
 Follow these steps to allow fast forwarding:
 
 1. Select the PROFINET IO system in the network view of STEP 7.
-2. In the Inspector window, go to "Properties" > "General" > "PROFINET" > "Domain management" > "Sync domains" > "Name of the sync domain".
+2. In the Inspector window, go to "Properties" &gt; "General" &gt; "PROFINET" &gt; "Domain management" &gt; "Sync domains" &gt; "Name of the sync domain".
 3. Enable the "Allows the use of ‘fast forwarding'" option.
 
 > **Note**
@@ -4199,14 +4199,14 @@ Follow these steps to allow fast forwarding:
 
 #### Optimizing port settings for low send clocks
 
-You can further optimize the bandwidth use in your PROFINET IO system by using cables with a length of < 20 m between the devices or by setting a low signal delay (max. 0.12 µs).
+You can further optimize the bandwidth use in your PROFINET IO system by using cables with a length of &lt; 20 m between the devices or by setting a low signal delay (max. 0.12 µs).
 
-To configure lines with a length < 20 m in STEP 7 or to configure the corresponding signal delay, follow these steps:
+To configure lines with a length &lt; 20 m in STEP 7 or to configure the corresponding signal delay, follow these steps:
 
 1. Select the port in the topology view of STEP 7.
 2. Navigate in the Inspector window to "Port interconnection" in the "Partner port" box.
 3. Enable the "Cable length" option (default setting) or "Signal delay".
-4. Select "< 20 m" in the drop-down list or enter the signal delay.
+4. Select "&lt; 20 m" in the drop-down list or enter the signal delay.
 
 ---
 
@@ -4224,8 +4224,8 @@ The figure below shows a sample configuration with which you can achieve maximum
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Figure](images/88100264459_DV_resource.Stream@PNG-de-DE.png) | Port 2 of the X1 interface and the ports of the interface modules in the line use the following setting: Medium copper, cable length < 20 m. |
-| ![Figure](images/88100239115_DV_resource.Stream@PNG-de-DE.png) | Port 2 of the X1 interface and the ports of the interface modules on the bus use the following setting: Medium copper, cable length < 20 m. |
+| ![Figure](images/88100264459_DV_resource.Stream@PNG-de-DE.png) | Port 2 of the X1 interface and the ports of the interface modules in the line use the following setting: Medium copper, cable length &lt; 20 m. |
+| ![Figure](images/88100239115_DV_resource.Stream@PNG-de-DE.png) | Port 2 of the X1 interface and the ports of the interface modules on the bus use the following setting: Medium copper, cable length &lt; 20 m. |
 | ![Figure](images/88100251787_DV_resource.Stream@PNG-de-DE.png) | Via the interfaces X2 and X3 of the CPU, a PG connection can be established to the CPU. |
 
 Use the following settings for the Sync domain:
@@ -4255,7 +4255,7 @@ Operation of machines and plants without a detailed knowledge of devices and ass
 
 Maintenance requires data for this – data that is extensive and up-to-date as far as possible.
 
-The requirement of greater transparency with regard to the data made available by plant components has been fulfilled by PROFIBUS & PROFINET International (PI): The identification and maintenance data familiar since PROFIBUS times have been extended.
+The requirement of greater transparency with regard to the data made available by plant components has been fulfilled by PROFIBUS &amp; PROFINET International (PI): The identification and maintenance data familiar since PROFIBUS times have been extended.
 
 The current PROFINET fulfills this requirement through the definition of a special data record: the Asset Management Record (AMR).
 
@@ -4265,11 +4265,11 @@ The aim of this definition is to enable you to acquire **all** the components to
 
 **Assets** are components (hardware and software / firmware) of a machine, for example a laser welding machine, or a plant.
 
-A large number of these device components can already be identified through tried-and-tested I&M functions or corresponding data records (I&M0 to I&M5) in the PROFINET context: The device itself as well as its modules and submodules. Meaning all components that can be addressed through the PROFINET device model.
+A large number of these device components can already be identified through tried-and-tested I&amp;M functions or corresponding data records (I&amp;M0 to I&amp;M5) in the PROFINET context: The device itself as well as its modules and submodules. Meaning all components that can be addressed through the PROFINET device model.
 
 Components that **cannot** be addressed via the PROFINET device model, but whose data it should be possible to acquire online for operation and maintenance, can be identified through **asset management** functions. This asset management data (short: AM data) is stored in a defined structure in a special data record, the **asset management record** (AMR) mentioned above.
 
-The PROFINET Guideline "Identification & Maintenance Functions" differentiates here between I&M functions (I&M data) and asset management functions (AM data): The following sections only deal with the AM data.
+The PROFINET Guideline "Identification &amp; Maintenance Functions" differentiates here between I&amp;M functions (I&amp;M data) and asset management functions (AM data): The following sections only deal with the AM data.
 
 The components that can be read additionally online through asset management data records include both hardware components, such as backplane bus modules of a device as well as firmware components such as a drive control unit with own versioning.
 
@@ -4473,7 +4473,7 @@ The following steps are fundamentally required to create the requirements so tha
      ![Activating asset management using a data record](images/103644287627_DV_resource.Stream@PNG-en-US.png)
 
      Activating asset management using a data record
-2. Configure the program routine for compiling the asset management record. The program part collects the required I&M0 data of the plugged central modules and stores them in the corresponding fields of the data record structure of the asset management record.
+2. Configure the program routine for compiling the asset management record. The program part collects the required I&amp;M0 data of the plugged central modules and stores them in the corresponding fields of the data record structure of the asset management record.
 3. Configure the program part for coordinating the data record provision:   
    For this, call the instruction PRVREC (Provide Record) in accordance with the following templates in the corresponding modes:
 
@@ -4500,22 +4500,22 @@ You have various possibilities for compiling the asset management record for an 
   The application is described in this application example
 - You create the asset management record yourself.  
   The following section describes how you can compile an asset management record for an I-device yourself.  
-  The concept assumes you yourself determine the I&M data for each centrally plugged module and fill the asset management record with this information. The I&M0 data of a module contains basic information about the module such as the manufacturer's code, article number, serial number, hardware and firmware version. These are the data that are also required in the AM record for an asset.
+  The concept assumes you yourself determine the I&amp;M data for each centrally plugged module and fill the asset management record with this information. The I&amp;M0 data of a module contains basic information about the module such as the manufacturer's code, article number, serial number, hardware and firmware version. These are the data that are also required in the AM record for an asset.
 
-#### Determine the I&M data of centrally plugged modules
+#### Determine the I&amp;M data of centrally plugged modules
 
 The central structure consists of an optionally plugged power supply unit (Slot 0), followed by the I-device CPU (Slot 1), and then followed by the further modules, such as digital modules, analog modules, etc. (as of Slot 2).
 
-You determine the I&M data with the "Get_IM_Data" instruction for the plugged modules with exception of the CPU:
+You determine the I&amp;M data with the "Get_IM_Data" instruction for the plugged modules with exception of the CPU:
 
 To assign parameters for the "Get_IM_Data" instruction, you require the hardware identifier (LADDR input parameter). You determine the hardware identifier for each occupied slot with the "GEO2LOG" instruction (Determine hardware identifier from slot).
 
 Summary of the theoretical steps:
 
 1. In a loop, determine the hardware identifiers of the plugged modules with the "GEO2LOG" instruction.
-2. For each hardware identifier found, determine the I&M data by using the "Get_IM_Data" instruction and store these data in a data block that you address with the input parameter DATA. Use ARRAY of BYTE for the data storage. This corresponds to the description of the AM record contents in the preceding section.
+2. For each hardware identifier found, determine the I&amp;M data by using the "Get_IM_Data" instruction and store these data in a data block that you address with the input parameter DATA. Use ARRAY of BYTE for the data storage. This corresponds to the description of the AM record contents in the preceding section.
 
-#### Forming an AM record with the determined I&M data
+#### Forming an AM record with the determined I&amp;M data
 
 The following sections are based on the description of the fundamental structure of the AM record, see the preceding section.
 
@@ -4533,17 +4533,17 @@ AM_FullInformationBlock for modules
 
 | Data record element | Description |
 | --- | --- |
-| IM_UniqueIdentifier | Generate a (pseudo) random UUID (hash value) in accordance with ISO 9834-8 as follows:  - Generate an 8-byte hash value across the I&M0 data of the module (as of Slot 2).  Use the algorithm Fowler-Noll-Vo (in short: FNV); an algorithm for generating variance coefficients (hash values) across data field, see corresponding example code in the Internet or online support. - Generate an 8-byte hash value across the I&M0 data of the CPU.  (Use the algorithm Fowler-Noll-Vo (in short: FNV) as described above) - IM_UniqueIdentifier  Byte 0 to 7: Hash value of module I&M0 data Bytes 8 to 15: Hash value for CPU-I&M0 data Required customizations to ISO 9834-8:  Byte 8, Bit 7 has to be set to 1, and Byte 8, Bit 6 to 0 (result of the AND operator with **00**11 1111, subsequent OR operator with **10**00 0000) Byte 6, Bit 4 to 7 have to be set to 0100 (result of the AND operation with 0000 1111, then OR operation with 0001 0000)   Since this algorithm is based on the I&M0 data of the CPU as well as of the modules, it generates a constant IM_UniqueIdentifier for an individual module. When the configuration changes the IM_UniqueIdentifier also changes. |
+| IM_UniqueIdentifier | Generate a (pseudo) random UUID (hash value) in accordance with ISO 9834-8 as follows:  - Generate an 8-byte hash value across the I&amp;M0 data of the module (as of Slot 2).  Use the algorithm Fowler-Noll-Vo (in short: FNV); an algorithm for generating variance coefficients (hash values) across data field, see corresponding example code in the Internet or online support. - Generate an 8-byte hash value across the I&amp;M0 data of the CPU.  (Use the algorithm Fowler-Noll-Vo (in short: FNV) as described above) - IM_UniqueIdentifier  Byte 0 to 7: Hash value of module I&amp;M0 data Bytes 8 to 15: Hash value for CPU-I&amp;M0 data Required customizations to ISO 9834-8:  Byte 8, Bit 7 has to be set to 1, and Byte 8, Bit 6 to 0 (result of the AND operator with **00**11 1111, subsequent OR operator with **10**00 0000) Byte 6, Bit 4 to 7 have to be set to 0100 (result of the AND operation with 0000 1111, then OR operation with 0001 0000)   Since this algorithm is based on the I&amp;M0 data of the CPU as well as of the modules, it generates a constant IM_UniqueIdentifier for an individual module. When the configuration changes the IM_UniqueIdentifier also changes. |
 | AM_Location | Byte 0 = 0x02 (slot-oriented coding), see description in the preceding section. |
 | IM_Annotation | Example: "S7-1500 module" and pad the remaining bytes of IM_Annotation with spaces (0x20). |
-| IM_OrderID | Copy 20 bytes of the I&M0 data of the module (beginning with offset 2 of the I&M0 data). Pad the remaining 44 bytes with spaces (0x20) |
+| IM_OrderID | Copy 20 bytes of the I&amp;M0 data of the module (beginning with offset 2 of the I&amp;M0 data). Pad the remaining 44 bytes with spaces (0x20) |
 | AM_SoftwareRevision | Pad the field with 64 spaces (0x20) |
 | AM_HardwareRevision | Pad the field with 64 spaces (0x20) |
-| IM_Serial_Number | Copy 16 bytes of the I&M0 data of the module (beginning with offset 22 of the I&M0 data) |
-| IM_SoftwareRevision | Copy 4 bytes of the I&M0 data of the module (beginning with offset 40 of the I&M0 data) |
+| IM_Serial_Number | Copy 16 bytes of the I&amp;M0 data of the module (beginning with offset 22 of the I&amp;M0 data) |
+| IM_SoftwareRevision | Copy 4 bytes of the I&amp;M0 data of the module (beginning with offset 40 of the I&amp;M0 data) |
 | AM_DeviceIdentification | Byte 0, 1, 2, 6, 7 = 0x00 Byte 3 = 0x2A (Vendor = Siemens) Byte 4 = 01, Byte 5 = DeviceID (e.g. CPU 15xx = 0x0E) |
-| AM_TypeIdentification | Copy 2 bytes of the I&M0 data of the module (beginning with offset 48 of the I&M0 data) |
-| IM_HardwareRevision | Copy 2 bytes of the I&M0 data of the module (beginning with offset 38 of the I&M0 data) |
+| AM_TypeIdentification | Copy 2 bytes of the I&amp;M0 data of the module (beginning with offset 48 of the I&amp;M0 data) |
+| IM_HardwareRevision | Copy 2 bytes of the I&amp;M0 data of the module (beginning with offset 38 of the I&amp;M0 data) |
 
 ---
 
@@ -4665,7 +4665,7 @@ To set up the communication relation for direct data exchange between two S7‑1
 1. Select the PROFINET interface X1 of the sending S7‑1500 CPU.
 2. Change to the table view of the network view, tab "I/O communication".  
    The PROFINET interface X1 of the CPU is shown in the "Partner 1" column.
-3. In the "Partner 2" column at "<Drop or select the device here>", select the PROFINET interface of the communication partner from the drop-down list as the connection partner.  
+3. In the "Partner 2" column at "&lt;Drop or select the device here&gt;", select the PROFINET interface of the communication partner from the drop-down list as the connection partner.  
    Note the communication direction:
 
    - ←: Communication partner is sender
@@ -4686,8 +4686,8 @@ To configure a transfer area for direct data exchange, follow these steps:
    ![Communication relation for direct data exchange](images/127101620619_DV_resource.Stream@PNG-en-US.png)
 
    Communication relation for direct data exchange
-2. Navigate to the properties of the communication relation to "General" > "Direct data exchange" > "Transfer areas".
-3. Create a new transfer area by double-clicking on "<Add new>". Assign a meaningful name for the transfer area.
+2. Navigate to the properties of the communication relation to "General" &gt; "Direct data exchange" &gt; "Transfer areas".
+3. Create a new transfer area by double-clicking on "&lt;Add new&gt;". Assign a meaningful name for the transfer area.
 
 A transfer area for direct data exchange is created.
 
@@ -4699,7 +4699,7 @@ The communication direction of the transfer area is specified by the communicati
 
 #### Editing the transfer area
 
-Set the properties of the transfer area under "General" > "Direct data exchange" > "Name of transfer area" > "Detail of the transfer area".
+Set the properties of the transfer area under "General" &gt; "Direct data exchange" &gt; "Name of transfer area" &gt; "Detail of the transfer area".
 
 ![Properties of the transfer area](images/127101464971_DV_resource.Stream@PNG-en-US.png)
 
@@ -4744,7 +4744,7 @@ To set up the connection for direct data exchange between multiple S7‑1500 CP
 1. Select the PROFINET interface X1 of the sending CPU.
 2. Change to the table view of the network view, "I/O communication" tab.  
    The PROFINET interface X1 of the CPU is shown in the "Partner 1" column.
-3. In the "Partner 2" column at "<Drop or select the device here>", select the PROFINET interface of the communication partner from the drop-down list as the connection partner.  
+3. In the "Partner 2" column at "&lt;Drop or select the device here&gt;", select the PROFINET interface of the communication partner from the drop-down list as the connection partner.  
    Note the transfer direction:
 
    - ←: Connection partner is sender
@@ -4776,8 +4776,8 @@ To configure a transfer area for direct data exchange, follow these steps:
 
 1. Select the PROFINET interface X1 of the sending CPU and change to the table view, "I/O communication" tab.
 2. In the table view of the network view, select a communication relation for direct data exchange between the sender and receiver 1.
-3. Navigate to the properties of the I/O connection to "General" > "Direct data exchange" > "Transfer areas".
-4. Create a new transfer area by double-clicking on "<Add new>". Assign a meaningful name for the transfer area.
+3. Navigate to the properties of the I/O connection to "General" &gt; "Direct data exchange" &gt; "Transfer areas".
+4. Create a new transfer area by double-clicking on "&lt;Add new&gt;". Assign a meaningful name for the transfer area.
 
    A transfer area for direct data exchange between the sender and receiver 1 is configured.
 
@@ -4792,8 +4792,8 @@ To configure a transfer area for direct data exchange, follow these steps:
 
    Connection for direct data exchange in receiver 2
 7. Select the communication relation.
-8. Navigate to the properties to "General" > "Direct data exchange" > "Transfer areas".
-9. Create a new transfer area by double-clicking on "<Add new>". Assign a meaningful name for the transfer area.
+8. Navigate to the properties to "General" &gt; "Direct data exchange" &gt; "Transfer areas".
+9. Create a new transfer area by double-clicking on "&lt;Add new&gt;". Assign a meaningful name for the transfer area.
 
    A transfer area for direct data exchange is configured.
 10. Select the transfer area.
@@ -4807,7 +4807,7 @@ To configure a transfer area for direct data exchange, follow these steps:
 
 #### Editing the transfer area
 
-Set the properties of the transfer area under "General" > "Direct data exchange" > "Name of transfer area" > "Detail of the transfer area".
+Set the properties of the transfer area under "General" &gt; "Direct data exchange" &gt; "Name of transfer area" &gt; "Detail of the transfer area".
 
 ![Properties of the transfer area](images/127101713803_DV_resource.Stream@PNG-en-US.png)
 
@@ -4868,7 +4868,7 @@ Starting from STEP 7 V19, you can configure SNMP both for CPUs and for IO devic
 To determine whether IO devices support the new configuration of SNMP, refer to the respective Equipment Manuals. IO devices that support the new configuration of SNMP behave as follows during configuration or initial loading of the hardware configuration:
 
 - STEP 7 as of V19: SNMP is disabled by default. Changed SNMP settings do not take effect until the hardware configuration has been loaded.
-- STEP 7 < V19: The IO device adopts the setting "SNMP enabled". When SNMP is enabled, the community strings are set to the following default values:
+- STEP 7 &lt; V19: The IO device adopts the setting "SNMP enabled". When SNMP is enabled, the community strings are set to the following default values:
 
   - Read-only (read-only community string): public
   - Read and write access (read-write community string): private
@@ -4939,7 +4939,7 @@ To learn how to configure SNMP for the various components, see the following sec
 To configure SNMP for an IO controller, follow these steps:
 
 1. Open the Properties of the IO controller in the network view or device view.
-2. Navigate to the "Advanced configuration > SNMP" area in the Inspector window.
+2. Navigate to the "Advanced configuration &gt; SNMP" area in the Inspector window.
 3. If you want to use SNMP, select the "SNMP " option in the "SNMP" area.  
    Once you enable SNMP, a warning message appears informing you of the reduced protection against unauthorized access to functions and data of this device.
 4. If you only need read access for SNMP, also select the option "Enable read-only access for SNMP".
@@ -4971,7 +4971,7 @@ Since STEP 7 V18 you have the option of enabling SNMP in the CPU properties of 
 You configure SNMP when creating an I-device the same as for an IO controller. To access the SNMP configuration options for an I-device, follow these steps:
 
 1. Open the Properties of the CPU that has been configured as an I-device in the network or device view.
-2. Navigate to "Advanced configuration > SNMP" in the Inspector window.
+2. Navigate to "Advanced configuration &gt; SNMP" in the Inspector window.
 3. Select one of the following options from the drop-down list next to "SNMP configuration":
 
    - Set directly in the project:  
@@ -5008,7 +5008,7 @@ If you want to configure SNMP on the DP standard device in another project, make
 
 1. At the PROFINET interface of the CPU that is configured as an I-device:
 
-   - Activate the "Parameter assignment of PN interface by higher-level IO controller" option in the Inspector window under "Properties > Operating mode".
+   - Activate the "Parameter assignment of PN interface by higher-level IO controller" option in the Inspector window under "Properties &gt; Operating mode".
 2. In the SNMP settings of the I-device CPU:
 
    - Select the entry "via PROFINET interface ... (e.g. X1) from higher-level IO controller" from the drop-down list next to "SNMP configuration".  

@@ -42,7 +42,7 @@ See below for ASCII character sets.
 | Parameter | Characters | Number of characters |
 | --- | --- | --- |
 | Name of:  - DB variable ***** | Permitted characters:  - Standard characters (numbers, letters) - Special characters 0x21 .. 0x7E - Special characters ≥ 0x80 |  |
-| CloudConnect *****  - Data point name | Permitted characters:  - Standard characters (numbers, letters) - Special characters ≥ 0x80 - Special characters 0x21 .. 0x60 with exceptions   The following are not permitted:  - Space - ! / . < > ^ \ # ! & = { } - Tabs   The following strings are also not permitted:  - PUBLISH_TIMESTAMP - DATAPOINT_ARRAY - GROUP |  |
+| CloudConnect *****  - Data point name | Permitted characters:  - Standard characters (numbers, letters) - Special characters ≥ 0x80 - Special characters 0x21 .. 0x60 with exceptions   The following are not permitted:  - Space - ! / . &lt; &gt; ^ \ # ! &amp; = { } - Tabs   The following strings are also not permitted:  - PUBLISH_TIMESTAMP - DATAPOINT_ARRAY - GROUP |  |
 | CloudConnect *****  - Topic name   (does not apply to Group) | Permitted characters:  - Standard characters (numbers, letters) - Special characters ≥ 0x80 - Special characters 0x21 .. 0x7E with exceptions   The following are not permitted:  - # + /  - $ as first character in the name |  |
 | CloudConnect *****  - Device name | Permitted characters:  - Standard characters (numbers, letters) - Special characters ≥ 0x80 - Special characters 0x60 - Special characters 0x21 .. 0x7E with exceptions   The following are not permitted:  - " ' / | 1 ... 128 |
 | Name of:  - NTP server - Host - S7 station, CPU, CP | Permitted characters according to RFC1035 and RFC1123:  - Standard characters (numbers, letters)   No station names with digits only - 0x2D ( - ) .. 0x2E ( . ) |  |
@@ -65,14 +65,14 @@ The ASCII characters are listed with their hexadecimal code and the correspondin
 
   a b c d e f g h i j k l m n o p q r s t u v w x y z
 
-**Special characters < 0x80**
+**Special characters &lt; 0x80**
 
 - **0x21 .. 0x2F**
 
-  ! " # $ % & ' ( ) * + , - . /
+  ! " # $ % &amp; ' ( ) * + , - . /
 - **0x3A .. 0x40**
 
-  : ; < = > ? @
+  : ; &lt; = &gt; ? @
 - **0x5B .. 0x60**
 
   [ \ ] ^ _ `
@@ -103,12 +103,12 @@ With a connection to Siemens MindSphere ‑ MindConnect IoT Extension, two par
   The CP is registered with the Onboarding process under this name.
 
   The Device name is displayed in MindConnect IoT Extension at the following location:  
-  Device > Device profile > "NAME"
+  Device &gt; Device profile &gt; "NAME"
 
-  You assign the name in the parameter group "Security > CloudConnect > General" of the CP.
+  You assign the name in the parameter group "Security &gt; CloudConnect &gt; General" of the CP.
 
   The default name is composed as follows:  
-  <PLC name>.<CP name>
+  &lt;PLC name&gt;.&lt;CP name&gt;
 
   Impermissible characters are deleted from the components of the name. Note the rules for assigning names, see [Permitted Characters](#permitted-characters).
 - **Device Type**
@@ -120,7 +120,7 @@ With a connection to Siemens MindSphere ‑ MindConnect IoT Extension, two par
   The parameter is required in MindConnect IoT Extension to determine the device type.
 
   The Device type is displayed in MindConnect IoT Extension at the following location:  
-  Device > Device profile > "Type"
+  Device &gt; Device profile &gt; "Type"
 
 You can find additional information on setting up the IoT Extension on the Internet at:  
 [Link:](https://support.industry.siemens.com/cs/ww/en/ps/15248)

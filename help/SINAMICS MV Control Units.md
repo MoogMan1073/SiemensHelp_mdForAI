@@ -95,10 +95,10 @@ The web server is configured in a screen form. In general, you can perform the c
 
 ##### Calling the screen form
 
-1. Select the "Drive control > Parameterization" menu in the project tree.
+1. Select the "Drive control &gt; Parameterization" menu in the project tree.
 
    The associated details view is displayed on the right-hand side.
-2. Call the "Basic parameterization > Web server" menu in the secondary navigation.
+2. Call the "Basic parameterization &gt; Web server" menu in the secondary navigation.
 
    The details view is refreshed. The settings for the web server become active.
 

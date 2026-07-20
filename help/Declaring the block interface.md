@@ -114,7 +114,7 @@ The following rules apply to the use of block parameters within the block:
 > Why should whole structures instead of many single components be transferred for the S7-1500 when a block is called?
 >
 > ![Using block parameters](images/84907645963_DV_resource.Stream@PNG-de-DE.png)
-> <https://support.industry.siemens.com/cs/ww/en/view/67585079>
+> [https://support.industry.siemens.com/cs/ww/en/view/67585079](https://support.industry.siemens.com/cs/ww/en/view/67585079)
 
 #### Assigning default values to block parameters
 
@@ -141,12 +141,12 @@ The following table shows which parameters can be assigned a default value:
 > When should identifiers and operands be used in "quotation marks" in STEP 7 (TIA Portal)?
 >
 > ![Assigning default values to block parameters](images/84907645963_DV_resource.Stream@PNG-de-DE.png)
-> <https://support.industry.siemens.com/cs/ww/en/view/109477857>
+> [https://support.industry.siemens.com/cs/ww/en/view/109477857](https://support.industry.siemens.com/cs/ww/en/view/109477857)
 >
 > **You can find recommendations for uniform, project-wide tag naming in the programming style guide:**
 >
 > ![Assigning default values to block parameters](images/84907645963_DV_resource.Stream@PNG-de-DE.png)
-> <https://support.industry.siemens.com/cs/ww/en/view/81318674>
+> [https://support.industry.siemens.com/cs/ww/en/view/81318674](https://support.industry.siemens.com/cs/ww/en/view/81318674)
 
 > **Note**
 >
@@ -327,8 +327,8 @@ To configure the representation of the new blocks, proceed as follows:
 
 1. Select the "Settings" command in the "Options" menu.  
     The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > SCL" group in the area navigation.
-3. Select the desired view of the interface under "Default settings for new blocks > Block interface".
+2. Select the "PLC programming &gt; SCL" group in the area navigation.
+3. Select the desired view of the interface under "Default settings for new blocks &gt; Block interface".
 
 When you create new blocks, their interface is shown in the selected view.
 
@@ -491,7 +491,7 @@ To declare a local tag, follow these steps:
 
 1. Insert an instruction in your program.
 
-   The "<???>", "<??.?>" or "..." strings represent operand placeholders.
+   The "&lt;???&gt;", "&lt;??.?&gt;" or "..." strings represent operand placeholders.
 2. Replace an operand placeholder with the name of the tag to be created.
 3. Select the name of the element.
 
@@ -598,7 +598,7 @@ The tag is created but remains collapsed. To expand the ARRAY, click the triangl
 >
 > **Availability of ARRAY[*]**
 >
-> ARRAY[*] is available in optimized blocks for a CPU of the S7-1200 series as of firmware version >= 4.2, and for a CPU of the S7-1500 series as of firmware version >= 2.0. In functions (FC) you can use ARRAY[*] in all declaration subsections. In function blocks (FB) you can declare ARRAY[*] only as an in-out parameter in the "InOut" section.
+> ARRAY[*] is available in optimized blocks for a CPU of the S7-1200 series as of firmware version &gt;= 4.2, and for a CPU of the S7-1500 series as of firmware version &gt;= 2.0. In functions (FC) you can use ARRAY[*] in all declaration subsections. In function blocks (FB) you can declare ARRAY[*] only as an in-out parameter in the "InOut" section.
 
 #### Entering default values of ARRAY elements
 
@@ -634,8 +634,8 @@ To enable the expanded mode, follow these steps:
 >
 > Depending on the amount of RAM available on your computer, the following maximum limits apply to expanded mode:
 >
-> - RAM < 8 GB: A maximum of 10,000 rows are displayed.
-> - RAM >= 8 GB: A maximum of 40,000 rows are displayed.
+> - RAM &lt; 8 GB: A maximum of 10,000 rows are displayed.
+> - RAM &gt;= 8 GB: A maximum of 40,000 rows are displayed.
 
 ---
 
@@ -1039,7 +1039,7 @@ A new empty row will be inserted below the selected row.
 
 To delete a tag, follow these steps:
 
-1. Select the row with the tag to be deleted. You can also select several rows by clicking on them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking on the first and last row.
+1. Select the row with the tag to be deleted. You can also select several rows by clicking on them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking on the first and last row.
 2. Select the "Delete" command in the shortcut menu.
 
 ---
@@ -1109,8 +1109,8 @@ To edit individual tags in external table editors, such as Excel, you can export
 >
 > Depending on the amount of work memory available on your computer, the following maximum limits apply when displaying and copying ARRAYs from the block interface in an Excel table:
 >
-> - RAM < 8 GB: A maximum of 10,000 elements are displayed and copied.
-> - RAM >= 8 GB: A maximum of 40,000 elements are displayed and copied.
+> - RAM &lt; 8 GB: A maximum of 10,000 elements are displayed and copied.
+> - RAM &gt;= 8 GB: A maximum of 40,000 elements are displayed and copied.
 
 ##### Requirements
 
@@ -1187,9 +1187,9 @@ The following syntax is used for the block declaration and the return value:
 
 | Block type | Syntax | Example |
 | --- | --- | --- |
-| Function (FC) | FUNCTION <Name> [:Data type return value>]  <Declaration> | `FUNCTION "My_Function" : Int`     `FUNCTION "My_Function" : Void` |
-| Function block (FB) | FUNCTION_BLOCK <Name>  <Declaration> | `FUNCTION_BLOCK "My_FunctionBlock"` |
-| Organization block (OB) | ORGANIZATION_BLOCK <Name>  <Declaration> | `ORGANIZATION_BLOCK "My_OrganizationBlock"` |
+| Function (FC) | FUNCTION &lt;Name&gt; [:Data type return value&gt;]  &lt;Declaration&gt; | `FUNCTION "My_Function" : Int`     `FUNCTION "My_Function" : Void` |
+| Function block (FB) | FUNCTION_BLOCK &lt;Name&gt;  &lt;Declaration&gt; | `FUNCTION_BLOCK "My_FunctionBlock"` |
+| Organization block (OB) | ORGANIZATION_BLOCK &lt;Name&gt;  &lt;Declaration&gt; | `ORGANIZATION_BLOCK "My_OrganizationBlock"` |
 
 ---
 
@@ -1209,12 +1209,12 @@ The following syntax is used for the declaration section:
 
 | Declaration section | Syntax |
 | --- | --- |
-| Input parameters | VAR_INPUT [<ATTRIBUTE>]    <Declaration>   END_VAR |
-| Output parameters | VAR_OUTPUT [<ATTRIBUTE>]    <Declaration>   END_VAR |
-| In/out parameters | VAR_IN_OUT [<ATTRIBUTE>]    <Declaration>   END_VAR |
-| Temporary local data | VAR_TEMP   <Declaration>   END_VAR |
-| Static local data | VAR [<ATTRIBUTE>]    <Declaration>   END_VAR |
-| Constant | VAR CONSTANT   <Declaration>   END_VAR |
+| Input parameters | VAR_INPUT [&lt;ATTRIBUTE&gt;]    &lt;Declaration&gt;   END_VAR |
+| Output parameters | VAR_OUTPUT [&lt;ATTRIBUTE&gt;]    &lt;Declaration&gt;   END_VAR |
+| In/out parameters | VAR_IN_OUT [&lt;ATTRIBUTE&gt;]    &lt;Declaration&gt;   END_VAR |
+| Temporary local data | VAR_TEMP   &lt;Declaration&gt;   END_VAR |
+| Static local data | VAR [&lt;ATTRIBUTE&gt;]    &lt;Declaration&gt;   END_VAR |
+| Constant | VAR CONSTANT   &lt;Declaration&gt;   END_VAR |
 
 You can find information on the individual declaration sections at:
 
@@ -1265,9 +1265,9 @@ The following syntax is used to declare a variables and constants:
 
 | Declaration | Syntax | Examples |
 | --- | --- | --- |
-| Tag | <Name> : <Data type> [:= <Value>]; | `myBit : BOOL;`     `myBit : BOOL := true;` |
-| Constant | <Name> : <Data type> := <Value>; | `PI : REAL := 3.141592;`     `myInt: INT := INT#16#7FFF;`     `myString: STRING := 'hello';` |
-| AT declaration | <Name> AT <Name of the referenced variable> : <Data type>; | `myReferenceToVar2 AT Var_2 : Int;` |
+| Tag | &lt;Name&gt; : &lt;Data type&gt; [:= &lt;Value&gt;]; | `myBit : BOOL;`     `myBit : BOOL := true;` |
+| Constant | &lt;Name&gt; : &lt;Data type&gt; := &lt;Value&gt;; | `PI : REAL := 3.141592;`     `myInt: INT := INT#16#7FFF;`     `myString: STRING := 'hello';` |
+| AT declaration | &lt;Name&gt; AT &lt;Name of the referenced variable&gt; : &lt;Data type&gt;; | `myReferenceToVar2 AT Var_2 : Int;` |
 
 ---
 
@@ -1299,8 +1299,8 @@ The following syntax is used to declare a STRUCT:
 
 | Declaration | Syntax | Examples |
 | --- | --- | --- |
-| STRUCT | <Name> : Struct   <Element name> : <Data type> [:= <Value>];   <Element name> : <Data type> [:= <Value>];   ...   END_Struct := (<Initialization list>); | `myStruct : Struct`     `mem_1 : Int;`     `mem_2 : Int;`      `mem_3 : BOOL;`     `END_Struct := (6,0, TRUE) ;` |
-| STRUCT based on a PLC data type (UDT) | <Name> : "<UDT name>" := (<initialization list>); | `myStruct : "myType" := (6,0, TRUE);` |
+| STRUCT | &lt;Name&gt; : Struct   &lt;Element name&gt; : &lt;Data type&gt; [:= &lt;Value&gt;];   &lt;Element name&gt; : &lt;Data type&gt; [:= &lt;Value&gt;];   ...   END_Struct := (&lt;Initialization list&gt;); | `myStruct : Struct`     `mem_1 : Int;`     `mem_2 : Int;`      `mem_3 : BOOL;`     `END_Struct := (6,0, TRUE) ;` |
+| STRUCT based on a PLC data type (UDT) | &lt;Name&gt; : "&lt;UDT name&gt;" := (&lt;initialization list&gt;); | `myStruct : "myType" := (6,0, TRUE);` |
 
 > **Note**
 >
@@ -1318,13 +1318,13 @@ The following syntax is used for the initialization list:
 
 | Declaration | Syntax | Examples | Comment |
 | --- | --- | --- | --- |
-| Initialization of STRUCT | <Name> : Struct    <Element name> : <Data type> [:= <Value>];   ...   END_Struct | `myStruct : Struct`     `mem_1 : Int := 1;`     `mem_2 : Int := 2;`      `mem_3 : BOOL := FALSE`    `End_Struct` | The structure elements are initialized as follows:  // mem_1 := 1  // mem_2 := 2  // mem_3 := FALSE |
-| Initialization list for STRUC | := (<Value>,<Value>,<Value>... ) | `myStruct : Struct`      `mem_1 : Int;`     `mem_2 : Int;`      `mem_3 : BOOL`    `End_Struct:=(2,0,TRUE);` | The structure elements are initialized as follows:  // mem_1 := 2  // mem_2 := 0  // mem_3 := TRUE |
-| Initialization list for nested STRUC | := (<Value>,(<Value>,<Value>... )) | `myStruct : Struct`     `mem_1 : Int;`     `mem_2 : Int;`     `mem_3 : Struct`    `mem_4 : BOOL;`    `mem_5 : BOOL;`    `End_Struct;`    `End_Struct:=(2,0, (TRUE,TRUE));` | The structure elements are initialized as follows:  // mem_1 := 2  // mem_2 := 0  // mem_4 := TRUE  // mem_5 := TRUE |
-| Initialization list for STRUCT with element name specification | := (<Element name> := <Value>), (<Element name> := <Value>)... | `myStruct : Struct`     `mem_1 : Int;`     `mem_2 : Int;`    `End_Struct:=(mem_2:=55);` | The structure elements are initialized as follows:  // mem_2 := 55 |
-| Initialization list for PLC data type (UDT) | := (<Value>,<Value>,<Value>... ) | `myStruct : "myType" := (2,0,TRUE);` | The structure elements are initialized as follows:  // mem_1 := 2  // mem_2 := 0  // mem_3 := TRUE |
-| Initialization list for nested PLC data type (UDT) | := (<Value>,(<Value>,<Value>... )) | `myStruct : "myType" := (2,0,(TRUE,TRUE);` | The structure elements are initialized as follows:  // mem_1 := 2  // mem_2 := 0  // mem_3 := TRUE  // mem_4 := TRUE |
-| Initialization list for PLC data type (UDT) with element name specification | := (<Element name> := <Value>), (<Element name> := <Value>)... | `myStruct : "myType" := (mem_1:=22,mem_2:=55);` | The structure elements are initialized as follows:  // mem_1 := 22  // mem_2 := 55 |
+| Initialization of STRUCT | &lt;Name&gt; : Struct    &lt;Element name&gt; : &lt;Data type&gt; [:= &lt;Value&gt;];   ...   END_Struct | `myStruct : Struct`     `mem_1 : Int := 1;`     `mem_2 : Int := 2;`      `mem_3 : BOOL := FALSE`    `End_Struct` | The structure elements are initialized as follows:  // mem_1 := 1  // mem_2 := 2  // mem_3 := FALSE |
+| Initialization list for STRUC | := (&lt;Value&gt;,&lt;Value&gt;,&lt;Value&gt;... ) | `myStruct : Struct`      `mem_1 : Int;`     `mem_2 : Int;`      `mem_3 : BOOL`    `End_Struct:=(2,0,TRUE);` | The structure elements are initialized as follows:  // mem_1 := 2  // mem_2 := 0  // mem_3 := TRUE |
+| Initialization list for nested STRUC | := (&lt;Value&gt;,(&lt;Value&gt;,&lt;Value&gt;... )) | `myStruct : Struct`     `mem_1 : Int;`     `mem_2 : Int;`     `mem_3 : Struct`    `mem_4 : BOOL;`    `mem_5 : BOOL;`    `End_Struct;`    `End_Struct:=(2,0, (TRUE,TRUE));` | The structure elements are initialized as follows:  // mem_1 := 2  // mem_2 := 0  // mem_4 := TRUE  // mem_5 := TRUE |
+| Initialization list for STRUCT with element name specification | := (&lt;Element name&gt; := &lt;Value&gt;), (&lt;Element name&gt; := &lt;Value&gt;)... | `myStruct : Struct`     `mem_1 : Int;`     `mem_2 : Int;`    `End_Struct:=(mem_2:=55);` | The structure elements are initialized as follows:  // mem_2 := 55 |
+| Initialization list for PLC data type (UDT) | := (&lt;Value&gt;,&lt;Value&gt;,&lt;Value&gt;... ) | `myStruct : "myType" := (2,0,TRUE);` | The structure elements are initialized as follows:  // mem_1 := 2  // mem_2 := 0  // mem_3 := TRUE |
+| Initialization list for nested PLC data type (UDT) | := (&lt;Value&gt;,(&lt;Value&gt;,&lt;Value&gt;... )) | `myStruct : "myType" := (2,0,(TRUE,TRUE);` | The structure elements are initialized as follows:  // mem_1 := 2  // mem_2 := 0  // mem_3 := TRUE  // mem_4 := TRUE |
+| Initialization list for PLC data type (UDT) with element name specification | := (&lt;Element name&gt; := &lt;Value&gt;), (&lt;Element name&gt; := &lt;Value&gt;)... | `myStruct : "myType" := (mem_1:=22,mem_2:=55);` | The structure elements are initialized as follows:  // mem_1 := 22  // mem_2 := 55 |
 
 ---
 
@@ -1348,12 +1348,12 @@ The following syntax is used to declare an ARRAY:
 
 | Declaration | Syntax | Examples |
 | --- | --- | --- |
-| ARRAY | <Name> : ARRAY [Low limit..High limit] OF <Data type> := [<Initialization list>]; | `MyARRAY_1 : ARRAY[0..7] OF BOOL;`    `MyARRAY_1 : ARRAY[0..7] OF BOOL := [1,1,0,0,0,1,0,0];` |
-| ARRAY with variable limits | <Name> : ARRAY [*] OF <Data type>; | `MyARRAY_1 : ARRAY[*] OF INT;`    `MyARRAY_2 : ARRAY[*, *, *] OF INT;` |
-| ARRAY with local constants as limits | <Name> : ARRAY [#<Constant name>..#<Constant name>] OF <Data type> := [<Initialization list>]; | `MyARRAY_1 : ARRAY[#LocConst1..#LocConst2] OF INT;`    `MyARRAY_2 : ARRAY[1..#LocConst] OF INT;`    `MyARRAY_3 : ARRAY[1..#LocConst] OF INT := [1,1,0,0];` |
-| ARRAY with global constants as limits | <Name> : ARRAY ["<Constant name>".."<Constant name>"] OF <Data type> := [<Initialization list>]; | `MyARRAY_1 : ARRAY["GlobConst1".."GlobConst2"] OF INT;`    `MyARRAY_2 : ARRAY[1.."GlobConst", 2..5,#l..#u] OF INT;`    `MyARRAY_3 : ARRAY[1.."GlobConst"] OF INT:= [1,1,0,0];` |
-| ARRAY OF STRUCT | <Name> : ARRAY[Low limit..high limit] OF Struct   <Element name> : <Data type>;   <Element name> : <Data type>;  ...  END_Struct := [<Initialization list>]; | `MyARRAY_1 : Array[0..1] OF Struct`     `mem_1 : Int;`     `mem_2 : Int;`    `END_STRUCT := [ (2,4),(22,44) ];` |
-| ARRAY OF UDT | <Name> : ARRAY[Low limit..High limit] OF "<UDT_ Name>" := [<Initialization list>]; | MyARRAY_1 : Array[0..1] OF MyType := [ (2,4),(22,44) ]; |
+| ARRAY | &lt;Name&gt; : ARRAY [Low limit..High limit] OF &lt;Data type&gt; := [&lt;Initialization list&gt;]; | `MyARRAY_1 : ARRAY[0..7] OF BOOL;`    `MyARRAY_1 : ARRAY[0..7] OF BOOL := [1,1,0,0,0,1,0,0];` |
+| ARRAY with variable limits | &lt;Name&gt; : ARRAY [*] OF &lt;Data type&gt;; | `MyARRAY_1 : ARRAY[*] OF INT;`    `MyARRAY_2 : ARRAY[*, *, *] OF INT;` |
+| ARRAY with local constants as limits | &lt;Name&gt; : ARRAY [#&lt;Constant name&gt;..#&lt;Constant name&gt;] OF &lt;Data type&gt; := [&lt;Initialization list&gt;]; | `MyARRAY_1 : ARRAY[#LocConst1..#LocConst2] OF INT;`    `MyARRAY_2 : ARRAY[1..#LocConst] OF INT;`    `MyARRAY_3 : ARRAY[1..#LocConst] OF INT := [1,1,0,0];` |
+| ARRAY with global constants as limits | &lt;Name&gt; : ARRAY ["&lt;Constant name&gt;".."&lt;Constant name&gt;"] OF &lt;Data type&gt; := [&lt;Initialization list&gt;]; | `MyARRAY_1 : ARRAY["GlobConst1".."GlobConst2"] OF INT;`    `MyARRAY_2 : ARRAY[1.."GlobConst", 2..5,#l..#u] OF INT;`    `MyARRAY_3 : ARRAY[1.."GlobConst"] OF INT:= [1,1,0,0];` |
+| ARRAY OF STRUCT | &lt;Name&gt; : ARRAY[Low limit..high limit] OF Struct   &lt;Element name&gt; : &lt;Data type&gt;;   &lt;Element name&gt; : &lt;Data type&gt;;  ...  END_Struct := [&lt;Initialization list&gt;]; | `MyARRAY_1 : Array[0..1] OF Struct`     `mem_1 : Int;`     `mem_2 : Int;`    `END_STRUCT := [ (2,4),(22,44) ];` |
+| ARRAY OF UDT | &lt;Name&gt; : ARRAY[Low limit..High limit] OF "&lt;UDT_ Name&gt;" := [&lt;Initialization list&gt;]; | MyARRAY_1 : Array[0..1] OF MyType := [ (2,4),(22,44) ]; |
 
 #### Initialization of ARRAY
 
@@ -1367,14 +1367,14 @@ The following syntax is used for the initialization list:
 
 | Declaration | Syntax | Examples | Comment |
 | --- | --- | --- | --- |
-| Initialization list | := [<Value>,<Value>,<Value>... ] | myArray : ARRAY[0..2] OF BOOL := [1,1,0]; | The ARRAY elements are initialized as follows:  // myArray[0] := 1  // myArray[1] := 1  // myArray[2] := 0 |
-| Initialization list with repetition factor | := [<Value>,<Repetition factor>(Value),<Value>... ] | myArray : ARRAY[1..2, 1..3] OF INT := [9,8,3(10),6]; | The ARRAY elements are initialized as follows:  // myArray[1,1] := 9  // myArray[1,2] := 8  // myArray[1,3] := 10  // myArray[2,1] := 10  // myArray[2,2] := 10  // myArray[2,3] := 6 |
-| Initialization list for ARRAY of STRUCT | := [(< Value list element 1>), (< Value list element 2>)...] | myArray : Array[0..1] OF Struct    Element1 : Int;    Element2 : Int;   END_Struct := [ (2,4),(22,44) ]; | The ARRAY elements are initialized as follows:  // myArray[0].Element1 := 2  // myArray[0].Element2 := 4  // myArray[1].Element1 := 22  // myArray[1].Element2 := 44 |
-| Initialization list for ARRAY of STRUCT with element name specification | := [(<Element name> := <Value>), (<Element name> := <Value>)...] | myArray : Array[0..1] OF Struct   Element1 : Int;    Element2 : Int;   END_Struct := [ (Element1 := 2 , Element2:=4), (Element1 := 22, Element2:=44) ]; | The ARRAY elements are initialized as follows:  // myArray[0].Element1 := 2  // myArray[0].Element2 := 4  // myArray[1].Element1 := 22  // myArray[1].Element2 := 44 |
-| Initialization list for ARRAY of STRUCT with repetition factor | := [<Repetition factor>(Value list element 1),<Repetition factor>(Value list element 2),... ] | myArray : Array[0..1, 0..1] OF Struct   Element_x : Int;    Element_y : Int;   End_Struct:=[2((1, 11)), 2((2, 22))]; | The ARRAY elements are initialized as follows:  // myArray[0,0].Element_x:= 1  // myArray[0,0].Element_y:= 11  // myArray[0,1].Element_x:= 1  // myArray[0,1].Element_y:= 11  // myArray[1,0].Element_x:= 2  // myArray[1,0].Element_y:= 22  // myArray[1,1].Element_x:= 2  // myArray[1,1].Element_y:= 22 |
-| Initialization list for ARRAY of UDT | := [(Value list element 1>), (<Value list element 2>)...] | myArray : Array[0..1] OF MyType := [ (2,4),(22,44) ]; | The ARRAY elements are initialized as follows:  // myArray[0].UDT-Element1 := 2  // myArray[0].UDT-Element2 := 4  // myArray[1].UDT-Element1 := 22  // myArray[1].UDT-Element2 := 44 |
-| Initialization list for ARRAY of UDT with element name specification | := [(<Element name> := <Value>), (<Element name> := <Value>)...] | myArray : Array[0..1] OF MyType := [ (UDT-Element1 := 2,UDT-Element2:=4),(UDT-Element1 := 22,UDT-Element2:=44) ]; | The ARRAY elements are initialized as follows:  // myArray[0].UDT-Element1 := 2  // myArray[0].UDT-Element2 := 4  // myArray[1].UDT-Element1 := 22  // myArray[1].UDT-Element2 := 44 |
-| Initialization list for ARRAY of UDT with repetition factor | := [<Repetition factor>(Value list element 1),<Repetition factor>(Value list element 2),... ] | myArray : Array[0..1] OF myType :=[2(((),1))]; | The ARRAY elements are initialized as follows:  // myArray[0].UDT-Element1 := 0  // myArray[0].UDT-Element2 := 1  // myArray[1].UDT-Element1 := 0  // myArray[1].UDT-Element2 := 1 |
+| Initialization list | := [&lt;Value&gt;,&lt;Value&gt;,&lt;Value&gt;... ] | myArray : ARRAY[0..2] OF BOOL := [1,1,0]; | The ARRAY elements are initialized as follows:  // myArray[0] := 1  // myArray[1] := 1  // myArray[2] := 0 |
+| Initialization list with repetition factor | := [&lt;Value&gt;,&lt;Repetition factor&gt;(Value),&lt;Value&gt;... ] | myArray : ARRAY[1..2, 1..3] OF INT := [9,8,3(10),6]; | The ARRAY elements are initialized as follows:  // myArray[1,1] := 9  // myArray[1,2] := 8  // myArray[1,3] := 10  // myArray[2,1] := 10  // myArray[2,2] := 10  // myArray[2,3] := 6 |
+| Initialization list for ARRAY of STRUCT | := [(&lt; Value list element 1&gt;), (&lt; Value list element 2&gt;)...] | myArray : Array[0..1] OF Struct    Element1 : Int;    Element2 : Int;   END_Struct := [ (2,4),(22,44) ]; | The ARRAY elements are initialized as follows:  // myArray[0].Element1 := 2  // myArray[0].Element2 := 4  // myArray[1].Element1 := 22  // myArray[1].Element2 := 44 |
+| Initialization list for ARRAY of STRUCT with element name specification | := [(&lt;Element name&gt; := &lt;Value&gt;), (&lt;Element name&gt; := &lt;Value&gt;)...] | myArray : Array[0..1] OF Struct   Element1 : Int;    Element2 : Int;   END_Struct := [ (Element1 := 2 , Element2:=4), (Element1 := 22, Element2:=44) ]; | The ARRAY elements are initialized as follows:  // myArray[0].Element1 := 2  // myArray[0].Element2 := 4  // myArray[1].Element1 := 22  // myArray[1].Element2 := 44 |
+| Initialization list for ARRAY of STRUCT with repetition factor | := [&lt;Repetition factor&gt;(Value list element 1),&lt;Repetition factor&gt;(Value list element 2),... ] | myArray : Array[0..1, 0..1] OF Struct   Element_x : Int;    Element_y : Int;   End_Struct:=[2((1, 11)), 2((2, 22))]; | The ARRAY elements are initialized as follows:  // myArray[0,0].Element_x:= 1  // myArray[0,0].Element_y:= 11  // myArray[0,1].Element_x:= 1  // myArray[0,1].Element_y:= 11  // myArray[1,0].Element_x:= 2  // myArray[1,0].Element_y:= 22  // myArray[1,1].Element_x:= 2  // myArray[1,1].Element_y:= 22 |
+| Initialization list for ARRAY of UDT | := [(Value list element 1&gt;), (&lt;Value list element 2&gt;)...] | myArray : Array[0..1] OF MyType := [ (2,4),(22,44) ]; | The ARRAY elements are initialized as follows:  // myArray[0].UDT-Element1 := 2  // myArray[0].UDT-Element2 := 4  // myArray[1].UDT-Element1 := 22  // myArray[1].UDT-Element2 := 44 |
+| Initialization list for ARRAY of UDT with element name specification | := [(&lt;Element name&gt; := &lt;Value&gt;), (&lt;Element name&gt; := &lt;Value&gt;)...] | myArray : Array[0..1] OF MyType := [ (UDT-Element1 := 2,UDT-Element2:=4),(UDT-Element1 := 22,UDT-Element2:=44) ]; | The ARRAY elements are initialized as follows:  // myArray[0].UDT-Element1 := 2  // myArray[0].UDT-Element2 := 4  // myArray[1].UDT-Element1 := 22  // myArray[1].UDT-Element2 := 44 |
+| Initialization list for ARRAY of UDT with repetition factor | := [&lt;Repetition factor&gt;(Value list element 1),&lt;Repetition factor&gt;(Value list element 2),... ] | myArray : Array[0..1] OF myType :=[2(((),1))]; | The ARRAY elements are initialized as follows:  // myArray[0].UDT-Element1 := 0  // myArray[0].UDT-Element2 := 1  // myArray[1].UDT-Element1 := 0  // myArray[1].UDT-Element2 := 1 |
 
 ---
 
@@ -1452,9 +1452,9 @@ See also:
 
 | Instance | Syntax | Examples | Meaning |
 | --- | --- | --- | --- |
-| Multi-instance | VAR   <Multi-instance name>:"<Block name>";  END_VAR | `VAR`      `instFB : "MyFB";`    `END_VAR` | "instFB" is a multi-instance of the "MyFB" block. |
-| ARRAY of multi-instances | VAR   <Multi-instance name>: ARRAY [n...m] of "<Block name>";  END_VAR | `VAR`     `instArray : ARRAY [0…4] of "MyFB";`    `END_VAR` | "instArray" is an array of multi-instances of the "MyFB" block. |
-| Parameter instance | VAR    <Parameter instance name>:"<Block name>";   END_VAR | `VAR_IN_OUT`     `instParam:"MyFB";`    `END_VAR` | "instParam" is a parameter instance of the "MyFB" block. |
+| Multi-instance | VAR   &lt;Multi-instance name&gt;:"&lt;Block name&gt;";  END_VAR | `VAR`      `instFB : "MyFB";`    `END_VAR` | "instFB" is a multi-instance of the "MyFB" block. |
+| ARRAY of multi-instances | VAR   &lt;Multi-instance name&gt;: ARRAY [n...m] of "&lt;Block name&gt;";  END_VAR | `VAR`     `instArray : ARRAY [0…4] of "MyFB";`    `END_VAR` | "instArray" is an array of multi-instances of the "MyFB" block. |
+| Parameter instance | VAR    &lt;Parameter instance name&gt;:"&lt;Block name&gt;";   END_VAR | `VAR_IN_OUT`     `instParam:"MyFB";`    `END_VAR` | "instParam" is a parameter instance of the "MyFB" block. |
 
 ---
 
@@ -1483,10 +1483,10 @@ The following syntax is used for attributes:
 
 | Attribute | Syntax | Examples |
 | --- | --- | --- |
-| Visible in HMI engineering | <Name> {EXTERNALVISIBLE:=<value>}: <Data type>; | `myInt {EXTERNALVISIBLE:= 'False'} : INT;` |
-| Accessible from HMI/OPC UA/Web API | <Name> {EXTERNALACCESSIBLE:=<value>}: <Data type>; | `myInt {EXTERNALACCESSIBLE:= 'False'} : INT;` |
-| Writable from HMI/OPC UA/Web API | <Name> {EXTERNALWRITABLE:=<value>}: <Data type>; | `myInt {EXTERNALWRITABLE:= 'False'} : INT;` |
-| Setpoint | <Name> {S7_SETPOINT:=<value>}: <Data type>; | `myInt {S7_SETPOINT:= 'False'} : INT;` |
+| Visible in HMI engineering | &lt;Name&gt; {EXTERNALVISIBLE:=&lt;value&gt;}: &lt;Data type&gt;; | `myInt {EXTERNALVISIBLE:= 'False'} : INT;` |
+| Accessible from HMI/OPC UA/Web API | &lt;Name&gt; {EXTERNALACCESSIBLE:=&lt;value&gt;}: &lt;Data type&gt;; | `myInt {EXTERNALACCESSIBLE:= 'False'} : INT;` |
+| Writable from HMI/OPC UA/Web API | &lt;Name&gt; {EXTERNALWRITABLE:=&lt;value&gt;}: &lt;Data type&gt;; | `myInt {EXTERNALWRITABLE:= 'False'} : INT;` |
+| Setpoint | &lt;Name&gt; {S7_SETPOINT:=&lt;value&gt;}: &lt;Data type&gt;; | `myInt {S7_SETPOINT:= 'False'} : INT;` |
 
 ---
 
@@ -1523,8 +1523,8 @@ The following syntax is used for comments:
 
 | Attribute | Syntax | Examples |
 | --- | --- | --- |
-| Line comment | <Declaration>; //<Comment> | `MyInt : INT; //`  `this is my comment` |
-| Comment section | <Declaration>; (*<Comment>*) | `MyInt : INT;`  `(* these are my comments:`     `1st comment`     `2nd comment*)` |
+| Line comment | &lt;Declaration&gt;; //&lt;Comment&gt; | `MyInt : INT; //`  `this is my comment` |
+| Comment section | &lt;Declaration&gt;; (*&lt;Comment&gt;*) | `MyInt : INT;`  `(* these are my comments:`     `1st comment`     `2nd comment*)` |
 
 ---
 
@@ -1561,7 +1561,7 @@ See also: [Formatting SCL code](Creating%20SCL%20programs.md#formatting-scl-code
 1. Click in the line that you want to indent or outdent.
 2. Press the "Indent text", "Outdent text" button into the toolbar of the programming editor.
 
-   You can set the width of the indent in "Options > Settings".
+   You can set the width of the indent in "Options &gt; Settings".
 
 See also: [Formatting SCL code](Creating%20SCL%20programs.md#formatting-scl-code)
 
@@ -1699,9 +1699,9 @@ You can also simultaneously set or reset some properties for multiple selected e
 To change one of these properties for several elements, follow these steps:
 
 1. Open the block interface.
-2. Hold down the <Ctrl> key.
+2. Hold down the &lt;Ctrl&gt; key.
 3. In the required column, select each of the table cells whose value you want to change.
-4. Select the "Set <property>" or "Reset <property>" command in the shortcut menu.
+4. Select the "Set &lt;property&gt;" or "Reset &lt;property&gt;" command in the shortcut menu.
 
 #### Editing properties in the properties window
 
@@ -1806,7 +1806,7 @@ To edit a comment in all project languages, follow these steps:
 >
 > **Editing all project texts in the global "Project texts" table**
 >
-> You can also edit the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts". It contains all translatable texts of the entire project.
+> You can also edit the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts". It contains all translatable texts of the entire project.
 >
 > You can find additional information on translation of texts under [Project text basics](Editing%20project%20data.md#project-text-basics).​
 
@@ -1836,7 +1836,7 @@ Proceed as follows to implicitly update all uses of PLC data types and multiple 
 
 1. Open the project tree.
 2. Select the "Program blocks" folder.
-3. Select the command "Compile > Software (rebuild all blocks)" in the shortcut menu.
+3. Select the command "Compile &gt; Software (rebuild all blocks)" in the shortcut menu.
 
 ---
 

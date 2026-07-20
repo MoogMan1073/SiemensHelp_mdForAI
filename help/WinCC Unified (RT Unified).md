@@ -259,7 +259,7 @@ You can use WinCC Unified PCs and Unified Comfort Panels as needed:
 
 - OPC UA DA server
 - OPC UA DA client
-- OPC UA A&C server
+- OPC UA A&amp;C server
 
 The WinCC Unified security concept guarantees your data security through secure OT/IT connections via OPC UA for connections to 3<sup>rd</sup> party applications.
 
@@ -750,7 +750,7 @@ Logs listing all changes made to the global library are created when global libr
 To open the logs of a global library, follow these steps:
 
 1. Open the global library in the "Libraries" task card.
-2. Open "Common data > Logs" in the lower-level folder.
+2. Open "Common data &gt; Logs" in the lower-level folder.
 3. Double-click on a log.
 
    The log is opened in the editor.
@@ -773,7 +773,7 @@ The "Libraries" task card or the library management is opened.
 ##### Procedure
 
 1. Select a folder within the project library or individual types.
-2. Select "Update types > Project..." from the shortcut menu.
+2. Select "Update types &gt; Project..." from the shortcut menu.
 
    A dialog opens.
 3. Select either the entire project or individual devices for the update.
@@ -808,7 +808,7 @@ Each of the following elements can be selected as source for the update:
 To update a library with the contents of a different library, follow these steps:
 
 1. Select a folder within the library or individual types.
-2. Right-click the source and select the "Update types > Library..." command from the shortcut menu.
+2. Right-click the source and select the "Update types &gt; Library..." command from the shortcut menu.
 
    The "Update library" dialog box opens.
 3. Select the type of library you want to update:
@@ -832,9 +832,9 @@ To update a library with the contents of a different library, follow these steps
   If a more recent version of a type already exists in the target library, the latest version is nevertheless copied from the source library and automatically assigned a newer version number.
 - A log listing all performed changes to the target library is created for the update process.
 
-  If you have updated the project library, you can find the log in the project tree under "Common data > Logs".
+  If you have updated the project library, you can find the log in the project tree under "Common data &gt; Logs".
 
-  If you have updated a global library, you can find the log in the "Common data > Logs" folder in the level below the global library.
+  If you have updated a global library, you can find the log in the "Common data &gt; Logs" folder in the level below the global library.
 
 #### Exporting and importing library texts (RT Unified)
 
@@ -1316,7 +1316,7 @@ In contrast to using SVGs from the "Graphics" task card, using types in faceplat
 >
 > **Version compatibility of dynamic SVG types**
 >
-> Dynamic SVG types have been introduced with WinCC Unified V18. They cannot be used with faceplates < V18. They cannot be used with device versions or project versions < V16.
+> Dynamic SVG types have been introduced with WinCC Unified V18. They cannot be used with faceplates &lt; V18. They cannot be used with device versions or project versions &lt; V16.
 >
 > If you load a project that uses an instance of a dynamic SVG type in a faceplate into a Runtime V17, this results in an error during loading.
 
@@ -1370,7 +1370,7 @@ If you select a file that does not contain a valid dynamic SVG, an error message
 - The dynamization of properties is retentive if the new SVG has the same properties as the previous version when the type is changed.
 
   If the properties of the new SVG differ from the previous version, default values are used. In this case, no dynamization is specified.
-- When a type is instantiated in a screen, the "Contained type - name" property in the Inspector panel under "Properties > Miscellaneous" shows the name and version of the instantiated type.
+- When a type is instantiated in a screen, the "Contained type - name" property in the Inspector panel under "Properties &gt; Miscellaneous" shows the name and version of the instantiated type.
 
 #### Creating a script module as a type (RT Unified)
 
@@ -1401,7 +1401,7 @@ In the editor for script modules, you create functions in which you can define p
 
 To check the syntax, click on ![Working with script modules](images/160610527627_DV_resource.Stream@PNG-de-DE.png) "Syntax check" in the editor.
 
-Error messages that allow you to analyze the script are displayed in the Inspector window under "Info > Compile".
+Error messages that allow you to analyze the script are displayed in the Inspector window under "Info &gt; Compile".
 
 When creating scripts, you are supported by snippets that you access from the shortcut menu under "Snippets" and which contain logic blocks for the following groups:
 
@@ -1550,7 +1550,7 @@ The WinCC version is the WinCC version installed on the configuration PC for TIA
 
 ![WinCC version](images/159648434187_DV_resource.Stream@PNG-en-US.png)
 
-The installed version is displayed under "Help > Installed software …".
+The installed version is displayed under "Help &gt; Installed software …".
 
 ##### Project version
 
@@ -1586,7 +1586,7 @@ When you add a new HMI device to a WinCC project, its pre-selected, configured R
 
 To add a new device with an older version, select the desired version in the "Add new device" dialog.
 
-You can change the configured Runtime version in the "Devices & Networks" editor or the device properties in the project tree.
+You can change the configured Runtime version in the "Devices &amp; Networks" editor or the device properties in the project tree.
 
 ![Configured Runtime version](images/159657520395_DV_resource.Stream@PNG-en-US.png)
 
@@ -2083,7 +2083,7 @@ To replace an HMI device with another HMI device, follow these steps:
 
 1. In the project tree, select the HMI device to be replaced.
 
-   Alternatively, select the HMI device to be exchanged in the "Devices & Networks" editor.
+   Alternatively, select the HMI device to be exchanged in the "Devices &amp; Networks" editor.
 2. Depending on the device, select "Change device / version" or "Change device" from the shortcut menu.
 
    The "Change device" dialog opens.
@@ -2147,7 +2147,7 @@ To connect a PLC to the HMI device again after the device replacement, follow th
 4. Network the interface of the HMI device with the interface of the PLC.
 5. In the table area of the network view, click on the "Connections" table.
 6. Select the connection marked red.
-7. Enter the new interface under "Properties > General > General > Connection path" in the Inspector window.
+7. Enter the new interface under "Properties &gt; General &gt; General &gt; Connection path" in the Inspector window.
 
 ### Upgrading a global library
 
@@ -2191,7 +2191,7 @@ Change, for example, the configured Runtime version of a Unified Comfort Panel f
 
 To change the configured Runtime version, follow these steps:
 
-1. Double-click on "Devices & Networks" in the project tree.
+1. Double-click on "Devices &amp; Networks" in the project tree.
 
    The editor opens.
 2. Select the desired HMI device in the device view.
@@ -2546,16 +2546,16 @@ The cross-references provide an overview of the use of objects and devices withi
 
   - or -
 
-  Press <F11>
+  Press &lt;F11&gt;
 
   - or -
 
-  In the Inspector window, select "About > Cross-references".
+  In the Inspector window, select "About &gt; Cross-references".
 - To open the "Cross-reference information", select "Cross-reference information" in the shortcut menu of an object, tag, alarm, etc.
 
   - or -
 
-  Press <⇑ + F11>.
+  Press &lt;⇑ + F11&gt;.
 
 #### Benefits of cross-references
 
@@ -2693,7 +2693,7 @@ The display of the cross-references for an object is specific to the project and
 
 #### Delete
 
-If you select a source object and "Delete" in the shortcut menu or press <Del>, then the object and not only the cross-reference is deleted.
+If you select a source object and "Delete" in the shortcut menu or press &lt;Del&gt;, then the object and not only the cross-reference is deleted.
 
 A warning is displayed before the deletion.
 
@@ -2705,7 +2705,7 @@ You cannot delete cross-reference lists.
 
 #### Introduction
 
-In the Inspector window, the cross-reference information for a selected object is displayed in the "Info > Cross-references" tab. In this way, you can see at a glance all the cross-references of the respective object without changing the cross-reference list.
+In the Inspector window, the cross-reference information for a selected object is displayed in the "Info &gt; Cross-references" tab. In this way, you can see at a glance all the cross-references of the respective object without changing the cross-reference list.
 
 All included elements and their use in the cross-reference list are displayed for structured tags, user data types and instances of a PLC data type.
 
@@ -2744,7 +2744,7 @@ When the HMI tag is interconnected with a PLC tag or a data block tag, the locat
 
 The instances where and the other objects by which the selected object is being used are displayed.
 
-The table below shows the additional information listed in the "About > Cross-reference" tab:
+The table below shows the additional information listed in the "About &gt; Cross-reference" tab:
 
 | Column | Content/meaning |
 | --- | --- |
@@ -2783,7 +2783,7 @@ To create new cross-reference information, follow these steps:
 
 1. Click the link to restore the cross-reference information in the displayed message.
 
-   As an alternative, you can also navigate to "Cross-references" under "Tools > Settings > General".
+   As an alternative, you can also navigate to "Cross-references" under "Tools &gt; Settings &gt; General".
 2. Click the displayed "Recreate the cross-reference information" button.
 3. Once the restore process is complete, check the message in the Inspector window to see if the operation was successful.
 
@@ -2960,13 +2960,13 @@ If you are configuring on an Asian operating system, you must switch to the Engl
 #### Enabling language support
 
 1. Open "Settings" from the Windows Start menu.
-2. Select "Time & Language > Language".
-3. Select "Preferred languages > Add a language".
+2. Select "Time &amp; Language &gt; Language".
+3. Select "Preferred languages &gt; Add a language".
 4. Select the language.
 
    The "Install language features" dialog box is displayed.
 5. Install the selected language pack and enable additional options, if necessary
-6. Under "Related settings > Administrative language settings", you can find settings for programs that do not support Unicode.
+6. Under "Related settings &gt; Administrative language settings", you can find settings for programs that do not support Unicode.
 
 > **Note**
 >
@@ -2990,10 +2990,10 @@ You can switch between the installed user interface languages during configurati
 
 ##### Procedure
 
-1. Select "Options > Settings" in the menu.
+1. Select "Options &gt; Settings" in the menu.
 
    The "Settings" dialog box is opened.
-2. Select the user interface language under "General > General".
+2. Select the user interface language under "General &gt; General".
 
 ##### Result
 
@@ -3007,7 +3007,7 @@ The project languages are set in the "Project languages" editor. You define whic
 
 ##### Enabling project languages
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The lower-level elements will be displayed.
 2. Double-click on "Project languages".
@@ -3041,9 +3041,9 @@ Several project languages have been activated.
 
 ##### Selecting the reference language and editing language
 
-1. Click the arrow in the drop-down list in the "General > Editing language" section.
+1. Click the arrow in the drop-down list in the "General &gt; Editing language" section.
 2. Click the required language in the drop-down list, for example, German.
-3. Click on the arrow in the drop-down list in the "General > Reference language" section.
+3. Click on the arrow in the drop-down list in the "General &gt; Reference language" section.
 4. Click the required language in the drop-down list, for example, English.
 
 The language selection is displayed in the list box.
@@ -3122,7 +3122,7 @@ In the interests of clarity, a distinction is drawn between user texts and syste
 - User texts are texts created by the user.
 - System texts are texts created automatically and which are a product of configuration in the project.
 
-The project texts are managed in the project text editor. This can be found in the project tree under "Languages & Resources > Project texts".
+The project texts are managed in the project text editor. This can be found in the project tree under "Languages &amp; Resources &gt; Project texts".
 
 ##### Examples of multilingual project texts
 
@@ -3173,7 +3173,7 @@ If you use several languages in your project, you can translate individual texts
 
 Proceed as follows to translate individual texts:
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The elements below this are displayed.
 2. Double-click on "Project texts".
@@ -3217,12 +3217,12 @@ There is at least one translation into a different project language for an input
 
 To display the translation of an input cell in a reference language, follow these steps:
 
-1. Select "Tasks > Languages & resources" in the task card.
+1. Select "Tasks &gt; Languages &amp; resources" in the task card.
 2. Select a reference language from the "Reference language" drop-down list.
 
 ##### Result
 
-The reference language is preset. If you click in a text field, translations that already exist in other project languages are shown in the "Tasks > Reference language" task card.
+The reference language is preset. If you click in a text field, translations that already exist in other project languages are shown in the "Tasks &gt; Reference language" task card.
 
 #### Exporting project texts (RT Unified)
 
@@ -3238,7 +3238,7 @@ You can exchange the file with the translators and import it directly back into 
 
 To export individual project texts, proceed as follows:
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The child elements are displayed.
 2. Double-click on "Project texts". The "Project texts" editor will open.
@@ -3285,7 +3285,7 @@ Once translation is complete, import the xlsx file with the translated texts. Th
 
 To import a file with project texts, proceed as follows:
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The lower-level elements will be displayed.
 2. Double-click on "Project texts".
@@ -3326,7 +3326,7 @@ You use the "Project graphics" editor to manage the configured graphic objects i
 
 ##### Opening the "Project graphics" editor
 
-- Double-click in the project tree on "Languages and resources > Project graphics".
+- Double-click in the project tree on "Languages and resources &gt; Project graphics".
 
 ##### Work area
 
@@ -3369,7 +3369,7 @@ You use the "Graphics" editor to import graphics for use in screen objects in th
 
 ##### Inserting graphics
 
-1. Click "<Add>" in the "Project graphics" table.
+1. Click "&lt;Add&gt;" in the "Project graphics" table.
 
    The dialog for selecting a file opens.
 2. Select the graphic file and click "Open."
@@ -3385,7 +3385,7 @@ You use the "Graphics" editor to import graphics for use in screen objects in th
 
    The language-dependent version of the graphic is inserted in the table.
 
-Alternatively, you can drag&drop a graphic from Windows Explorer to the desired position in the "Project graphics" table.
+Alternatively, you can drag&amp;drop a graphic from Windows Explorer to the desired position in the "Project graphics" table.
 
 ##### Inserting graphics by copying
 
@@ -3402,7 +3402,7 @@ Alternatively, you can drag&drop a graphic from Windows Explorer to the desired 
 1. Select an HMI device in the "Select device for preview" drop-down list in the editor.
 2. Click on a graphic in the table.
 
-   In the Inspector window under "Properties > General > Preview for HMI device", you see the graphic as it will appear in Runtime on the selected HMI device.
+   In the Inspector window under "Properties &gt; General &gt; Preview for HMI device", you see the graphic as it will appear in Runtime on the selected HMI device.
 
 ##### Result
 
@@ -3432,7 +3432,7 @@ To use a graphic created in an external graphics program in screens, you add it 
 2. Select "Replace with object" in the shortcut menu.
 
    The "Insert object" dialog box opens.
-3. Select "Insert object > Create new" and an object type in the dialog.
+3. Select "Insert object &gt; Create new" and an object type in the dialog.
 4. Click "OK."
 
    The graphics program assigned by the operating system opens.
@@ -3492,8 +3492,8 @@ This section contains information on the following topics:
 
 In the Runtime settings, you define which project languages are used in Runtime on a particular HMI device. The number of Runtime languages that are available at one time on the HMI device depends on the device. To enable the operator to switch between languages in Runtime, you need to configure a corresponding operator control.
 
-1. In "Languages & Resources", you configure project languages that are available as Runtime languages for the respective device.
-2. In "Runtime settings > Language & Font", you define the order in which the languages are switched.
+1. In "Languages &amp; Resources", you configure project languages that are available as Runtime languages for the respective device.
+2. In "Runtime settings &gt; Language &amp; Font", you define the order in which the languages are switched.
 
 ![Figure](images/162768083723_DV_resource.Stream@PNG-en-US.png)
 
@@ -3613,7 +3613,7 @@ To start the project in another language, enter the decimal Windows Locale Code 
 
 ##### Introduction
 
-The "Language & Font" editor shows all project languages available in the project. You select which project languages are to be available as Runtime languages on the HMI device.
+The "Language &amp; Font" editor shows all project languages available in the project. You select which project languages are to be available as Runtime languages on the HMI device.
 
 ##### Requirements
 
@@ -3622,7 +3622,7 @@ Multiple languages have been selected in the "Project languages" editor.
 ##### Procedure
 
 1. Double-click on "Runtime settings" in the project tree.
-2. Click on "Language & Font".
+2. Click on "Language &amp; Font".
 3. Select the following languages:
 
    - English
@@ -3648,12 +3648,12 @@ You can standardize the font for all project languages during configuration with
 ##### Requirement
 
 - Multiple languages have been selected in the "Project languages" editor.
-- Multiple languages have been selected in the "Language & font" editor.
+- Multiple languages have been selected in the "Language &amp; font" editor.
 - The same font is defined for the selected runtime languages under "Configured font".
 
 ##### Procedure
 
-1. In the "Options > Settings > Visualization > General" menu, select the "Use same font for all languages" option.
+1. In the "Options &gt; Settings &gt; Visualization &gt; General" menu, select the "Use same font for all languages" option.
 
    ![Procedure](images/102568684939_DV_resource.Stream@PNG-en-US.png)
 
@@ -3679,7 +3679,7 @@ The memory requirement is greater when using Asian languages. Therefore look out
 
 ##### Font size for Asian character sets
 
-Use at least a font size of 10 points to display the text of projects created for Asian languages in Runtime. Asian characters will become illegible if smaller font sizes are used. This also applies to the default font in the Runtime settings under "Language & font".
+Use at least a font size of 10 points to display the text of projects created for Asian languages in Runtime. Asian characters will become illegible if smaller font sizes are used. This also applies to the default font in the Runtime settings under "Language &amp; font".
 
 ## Performance features (RT Unified)
 
@@ -3710,7 +3710,7 @@ An overall rating is output on the basis of the evaluations of the individual re
 #### Procedure
 
 1. Select the HMI device in the topology view, network view or device view.
-2. In the Inspector window, navigate to "Properties > General > Resources Monitor".
+2. In the Inspector window, navigate to "Properties &gt; General &gt; Resources Monitor".
 3. Click "Calculate".
 4. Check the comments and the overall evaluation.
 5. If necessary, reduce the number of used resources of individual types.
@@ -3788,7 +3788,7 @@ Currently, due to an error, tag arrays and tags based on user data types (UDT) a
 | Number of process values per alarm | 10 |
 | Number of queued alarm events | 750 |
 | Number of controller alarms | 160000 |
-| Number of OPC UA A&C alarms | 20000 |
+| Number of OPC UA A&amp;C alarms | 20000 |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -3915,7 +3915,7 @@ Reporting on Unified Basic Panels is currently not supported.
 
 |  | Unified Basic 4-12" |
 | --- | --- |
-| Size of the project files on the device | < 100 MB |
+| Size of the project files on the device | &lt; 100 MB |
 
 #### SIMATIC Unified Comfort Panel (RT Unified)
 
@@ -3949,7 +3949,7 @@ Currently, due to an error, tag arrays and tags based on user data types (UDT) a
 | Number of process values per alarm | 10 |  |
 | Number of queued alarm events | 750 |  |
 | Number of controller alarms | 160000 |  |
-| Number of OPC UA A&C alarms | 20000 |  |
+| Number of OPC UA A&amp;C alarms | 20000 |  |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -4086,7 +4086,7 @@ The maximum number of alarms that can be displayed in runtime depends on the sel
 
 |  | Unified Comfort 7-12" | Unified Comfort 15-22" |
 | --- | --- | --- |
-| Size of the project files on the device | < 500 MB |  |
+| Size of the project files on the device | &lt; 500 MB |  |
 
 #### SIMATIC Unified PC (RT Unified)
 
@@ -4120,7 +4120,7 @@ In addition to the specified limits, allowances must be made for restrictions im
 | Number of queued alarm events | unlimited |
 | Number of alarms for every 10 seconds (alarm burst) | 8000 |
 | Number of controller alarms | 160000 |
-| Number of OPC UA A&C alarms | 20000 |
+| Number of OPC UA A&amp;C alarms | 20000 |
 
 ##### Number of alarms that can be displayed in an alarm view
 
@@ -4264,7 +4264,7 @@ The following table shows the restrictions that must be observed when allocating
 
 | Name | Restriction |
 | --- | --- |
-| Device name | The following constraints apply to the assignment of the device name:  - Do not use the following characters:   - , ; : ! ? " ' ^ ´ ` ~ _+ = / \ ¦ @ * # $ % & § ° ( ) [ ] { } < >   - Spaces - Use upper case only. - The first character must be a letter. - The first 12 characters of the device name must be unique. |
-| Object names | The use of the following special characters is not supported:  - Pipe | - Forward slash / - Inverted slash \ - Dot . - Comma , - Semicolon ; - Colon : - Quotes " - Apostrophe ' - Angle brackets < > - Tilde ~ - Hash # - Dollar $ - Star * - Question mark ?   The use of the following control characters is not supported:  - \x01\x02\x03\x04\x05\x06\x07\x08\x09\x0A\x0B\x0C\x0D\x0E\x0F   \x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1A\x1B\x1C\x1D\x1E\x1F   When creating scripts, also consider the restrictions relating to special characters of the programming language. |
+| Device name | The following constraints apply to the assignment of the device name:  - Do not use the following characters:   - , ; : ! ? " ' ^ ´ ` ~ _+ = / \ ¦ @ * # $ % &amp; § ° ( ) [ ] { } &lt; &gt;   - Spaces - Use upper case only. - The first character must be a letter. - The first 12 characters of the device name must be unique. |
+| Object names | The use of the following special characters is not supported:  - Pipe | - Forward slash / - Inverted slash \ - Dot . - Comma , - Semicolon ; - Colon : - Quotes " - Apostrophe ' - Angle brackets &lt; &gt; - Tilde ~ - Hash # - Dollar $ - Star * - Question mark ?   The use of the following control characters is not supported:  - \x01\x02\x03\x04\x05\x06\x07\x08\x09\x0A\x0B\x0C\x0D\x0E\x0F   \x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1A\x1B\x1C\x1D\x1E\x1F   When creating scripts, also consider the restrictions relating to special characters of the programming language. |
 | User name | The use of the following special characters is not supported:  - Forward slash / - Comma , - Parenthesis { } |
 | Password for Sm@rt Server | The use of the following special character is not supported:  - Hash # |

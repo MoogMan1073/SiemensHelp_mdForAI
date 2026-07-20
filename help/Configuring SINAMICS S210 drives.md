@@ -104,7 +104,7 @@ This section contains information on the following topics:
 - [S210 function view](#s210-function-view)
 - [S210 parameter view](#s210-parameter-view)
 - [S210 inspector window](#s210-inspector-window)
-- [Rotate & optimize screen forms S210](#rotate-optimize-screen-forms-s210)
+- [Rotate &amp; optimize screen forms S210](#rotate-optimize-screen-forms-s210)
 
 ### S210 hardware catalog
 
@@ -200,7 +200,7 @@ The network view is one of three working areas of the hardware and network edito
 
 ##### Structure
 
-The network view is opened via the "Devices & networks" entry in the project navigation.
+The network view is opened via the "Devices &amp; networks" entry in the project navigation.
 
 ![Network view](images/148017575819_DV_resource.Stream@PNG-en-US.png)
 
@@ -363,7 +363,7 @@ The "Parameter view" (expert list) provides a clearly organized display of the p
 
 > **Note**
 >
-> The "Parameter view" is not available for "Rotate & optimize".
+> The "Parameter view" is not available for "Rotate &amp; optimize".
 
 SINAMICS uses two types of parameters:
 
@@ -589,7 +589,7 @@ The complete project must be saved in order that the settings made are permanent
 1. Click "Save project" in the toolbar.
 
    - Or -
-2. Select the "Project > Save" or "Project > Save as" menu.
+2. Select the "Project &gt; Save" or "Project &gt; Save as" menu.
 
 #### Saving online data in non-volatile storage
 
@@ -735,12 +735,12 @@ You can find the available SINAMICS S210 firmware versions on this [website](htt
 
 #### Updating the memory card
 
-| 1. Disconnect your drive unit. 2. Remove the memory card with the old firmware version. 3. Overwrite the memory card with the new firmware version. 4. Insert the memory card with the new firmware version. 5. Switch on your drive unit again.     The new firmware is being installed. This may take up to 5 minutes and longer. The update is complete when both LEDs flash red synchronously at 1 Hz.       | RDY | COM | Explanation of LED displays |    | --- | --- | --- |    | ![Updating the memory card](images/147993054859_DV_resource.Stream@PNG-en-US.png) | ![Updating the memory card](images/147993058955_DV_resource.Stream@PNG-en-US.png) | Firmware update is active - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |    | ![Updating the memory card](images/147993063051_DV_resource.Stream@PNG-en-US.png) | ![Updating the memory card](images/147993063051_DV_resource.Stream@PNG-en-US.png) | Synchronous flashing of LEDs (1 Hz): Converter is waiting for the power supply to be disconnected and reconnected after the firmware update. | 6. Turn the drive unit off and on again.     The firmware of the connected DRIVE-CLiQ components is updated. A restart may be required to complete the update (see Startdrive alarm messages).       | RDY | Explanation of LED displays |  |    | --- | --- | --- |    | ![Updating the memory card](images/147993058955_DV_resource.Stream@PNG-en-US.png)  (0.5 Hz) | Firmware update of the connected DRIVE-CLiQ components in progress. - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |  |    | ![Updating the memory card](images/147993067147_DV_resource.Stream@PNG-en-US.png)  (2 Hz) | Firmware update of the DRIVE-CLiQ components is complete. Waiting for POWER ON of the respective component.  **Remedy**: Turn the component off and on again. |  | 7. Check in the Startdrive catalog information whether the required new firmware version is installed.     Call in secondary navigation in the "General > Catalog information" Inspector window. |  |  |
+| 1. Disconnect your drive unit. 2. Remove the memory card with the old firmware version. 3. Overwrite the memory card with the new firmware version. 4. Insert the memory card with the new firmware version. 5. Switch on your drive unit again.     The new firmware is being installed. This may take up to 5 minutes and longer. The update is complete when both LEDs flash red synchronously at 1 Hz.       | RDY | COM | Explanation of LED displays |    | --- | --- | --- |    | ![Updating the memory card](images/147993054859_DV_resource.Stream@PNG-en-US.png) | ![Updating the memory card](images/147993058955_DV_resource.Stream@PNG-en-US.png) | Firmware update is active - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |    | ![Updating the memory card](images/147993063051_DV_resource.Stream@PNG-en-US.png) | ![Updating the memory card](images/147993063051_DV_resource.Stream@PNG-en-US.png) | Synchronous flashing of LEDs (1 Hz): Converter is waiting for the power supply to be disconnected and reconnected after the firmware update. | 6. Turn the drive unit off and on again.     The firmware of the connected DRIVE-CLiQ components is updated. A restart may be required to complete the update (see Startdrive alarm messages).       | RDY | Explanation of LED displays |  |    | --- | --- | --- |    | ![Updating the memory card](images/147993058955_DV_resource.Stream@PNG-en-US.png)  (0.5 Hz) | Firmware update of the connected DRIVE-CLiQ components in progress. - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |  |    | ![Updating the memory card](images/147993067147_DV_resource.Stream@PNG-en-US.png)  (2 Hz) | Firmware update of the DRIVE-CLiQ components is complete. Waiting for POWER ON of the respective component.  **Remedy**: Turn the component off and on again. |  | 7. Check in the Startdrive catalog information whether the required new firmware version is installed.     Call in secondary navigation in the "General &gt; Catalog information" Inspector window. |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 #### Performing an update via online connection
 
-| 1. Call the [Diagnostics view](#overview-4) . 2. In the secondary navigation of the function view select the "Functions > Firmware update" menu.     The "Firmware update" screen form opens in the diagnostics view. 3. Click the "Browse" button in the "Firmware loader" area.     A selection dialog opens. 4. Select the firmware file in the required version in the file system of your PC/PG.     The firmware file is now displayed in the line with the same name in the "Firmware loader" area.     Check once again in the "Firmware version" field whether you have selected the required firmware version. 5. To start the update, click the "Perform update" button.     The status of the firmware update is displayed in the "Status" field. The new firmware is being installed. This may take up to 5 minutes and longer. The update is complete when both LEDs flash red synchronously at 1 Hz.       | RDY | COM | Explanation of LED displays |    | --- | --- | --- |    | ![Performing an update via online connection](images/147993054859_DV_resource.Stream@PNG-en-US.png) | ![Performing an update via online connection](images/147993058955_DV_resource.Stream@PNG-en-US.png) | Firmware update is active - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |    | ![Performing an update via online connection](images/147993063051_DV_resource.Stream@PNG-en-US.png) | ![Performing an update via online connection](images/147993063051_DV_resource.Stream@PNG-en-US.png) | Synchronous flashing of LEDs (1 Hz): Converter is waiting for the power supply to be disconnected and reconnected after the firmware update. | 6. Turn the drive unit off and on again.    The firmware of the connected DRIVE-CLiQ components is updated. A restart may be required to complete the update (see Startdrive alarm messages).       | RDY | Explanation of LED displays |  |    | --- | --- | --- |    | ![Performing an update via online connection](images/147993058955_DV_resource.Stream@PNG-en-US.png)  (0.5 Hz) | Firmware update of the connected DRIVE-CLiQ components in progress. - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |  |    | ![Performing an update via online connection](images/147993067147_DV_resource.Stream@PNG-en-US.png)  (2 Hz) | Firmware update of the DRIVE-CLiQ components is complete. Waiting for POWER ON of the respective component.  **Remedy**: Turn the component off and on again. |  | 7. Check in the Startdrive catalog information whether the required new firmware version is installed.    Call in secondary navigation in the "General > Catalog information" Inspector window. |  |  |
+| 1. Call the [Diagnostics view](#overview-4) . 2. In the secondary navigation of the function view select the "Functions &gt; Firmware update" menu.     The "Firmware update" screen form opens in the diagnostics view. 3. Click the "Browse" button in the "Firmware loader" area.     A selection dialog opens. 4. Select the firmware file in the required version in the file system of your PC/PG.     The firmware file is now displayed in the line with the same name in the "Firmware loader" area.     Check once again in the "Firmware version" field whether you have selected the required firmware version. 5. To start the update, click the "Perform update" button.     The status of the firmware update is displayed in the "Status" field. The new firmware is being installed. This may take up to 5 minutes and longer. The update is complete when both LEDs flash red synchronously at 1 Hz.       | RDY | COM | Explanation of LED displays |    | --- | --- | --- |    | ![Performing an update via online connection](images/147993054859_DV_resource.Stream@PNG-en-US.png) | ![Performing an update via online connection](images/147993058955_DV_resource.Stream@PNG-en-US.png) | Firmware update is active - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |    | ![Performing an update via online connection](images/147993063051_DV_resource.Stream@PNG-en-US.png) | ![Performing an update via online connection](images/147993063051_DV_resource.Stream@PNG-en-US.png) | Synchronous flashing of LEDs (1 Hz): Converter is waiting for the power supply to be disconnected and reconnected after the firmware update. | 6. Turn the drive unit off and on again.    The firmware of the connected DRIVE-CLiQ components is updated. A restart may be required to complete the update (see Startdrive alarm messages).       | RDY | Explanation of LED displays |  |    | --- | --- | --- |    | ![Performing an update via online connection](images/147993058955_DV_resource.Stream@PNG-en-US.png)  (0.5 Hz) | Firmware update of the connected DRIVE-CLiQ components in progress. - Do not disconnect the power supply. - Do not separate the motor from the frequency converter. |  |    | ![Performing an update via online connection](images/147993067147_DV_resource.Stream@PNG-en-US.png)  (2 Hz) | Firmware update of the DRIVE-CLiQ components is complete. Waiting for POWER ON of the respective component.  **Remedy**: Turn the component off and on again. |  | 7. Check in the Startdrive catalog information whether the required new firmware version is installed.    Call in secondary navigation in the "General &gt; Catalog information" Inspector window. |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ### Using parameter lists
@@ -903,7 +903,7 @@ You can create and save user-defined parameter lists by means of icons or shortc
    Click in a parameter list and open the "Create new user-defined parameter list" shortcut menu.
 
    The "User_list_#" tab card opens (e.g. User_list_1, User_list_2).
-2. In "User_list_#", enter the parameter number in the "Number" column in the <add new> input field and confirm with Return.
+2. In "User_list_#", enter the parameter number in the "Number" column in the &lt;add new&gt; input field and confirm with Return.
 
    Startdrive then automatically inserts the most important parameter data of this parameter in the other column fields of the current row.
 3. Enter additional parameters in the user-defined parameter list in the same way.
@@ -914,7 +914,7 @@ A new user-defined parameter list is created and displays the manually inserted 
 
 ###### Creating a user-defined parameter list with selected parameters
 
-1. Select the required parameters from a general parameter list with <Shift key + mouse click> or <Ctrl + mouse click>.
+1. Select the required parameters from a general parameter list with &lt;Shift key + mouse click&gt; or &lt;Ctrl + mouse click&gt;.
 2. Select the "Create new user-defined parameter list" shortcut menu.
 
    - Or -
@@ -1017,7 +1017,7 @@ Proceed as follows to append parameters:
    ![Inserting parameters in the displayed parameter list](images/147993433355_DV_resource.Stream@PNG-en-US.png)
 
    ![Inserting parameters in the displayed parameter list](images/147993433355_DV_resource.Stream@PNG-en-US.png)
-2. Enter the parameter number in the "Add new" input field located in the "Number" column and confirm your entry with <Return>.
+2. Enter the parameter number in the "Add new" input field located in the "Number" column and confirm your entry with &lt;Return&gt;.
 3. Repeat step 2 for all of the parameters you want to enter.
 
 **Result**
@@ -1063,7 +1063,7 @@ A new empty row will be inserted directly below the selected row.
 
 ###### Copying a parameter/comment
 
-You can also copy the contents of a parameter list to another parameter list via Copy & Paste.
+You can also copy the contents of a parameter list to another parameter list via Copy &amp; Paste.
 
 1. Select the parameter/comment or a row of a parameter list.
 
@@ -1273,7 +1273,7 @@ The Trial License mode can be used for a maximum of three trial periods.
 
 **Note**
 
-For S210 the Trial License can also be configured via "Online & diagnostics". The subsequent steps are the same.
+For S210 the Trial License can also be configured via "Online &amp; diagnostics". The subsequent steps are the same.
 
 **Note**
 
@@ -1786,7 +1786,7 @@ If you leave the "Device view" option activated, the device view opens automatic
 Alternatively, you can also insert a drive unit via the network view or topology view.
 
 1. Open the network view.
-2. Open the "Drives & starters" entry in the hardware catalog.
+2. Open the "Drives &amp; starters" entry in the hardware catalog.
 3. Open the "SINAMICS drives" entry in the hardware catalog and the corresponding subfolder of the desired Control Unit.
 4. Drag the drive unit from the hardware catalog and drop it in the network view or the topology view.
 
@@ -1864,7 +1864,7 @@ You can configure the following details for the S210 Control Unit
   - Catalog information
 
     Brief description, description of the components included, firmware version used
-  - Identification & maintenance
+  - Identification &amp; maintenance
 
     Information and data to identify and localize a drive within a plant or system.
 - PROFINET interface [X150]
@@ -1976,7 +1976,7 @@ You can configure the following motor details for motors during commissioning:
 ###### Procedure
 
 1. Select the motor in the device view and open the inspector window.
-2. Select the "Motor details > Rating plate values" menu in the inspector window.
+2. Select the "Motor details &gt; Rating plate values" menu in the inspector window.
 
    The "Rating plate values" screen form is displayed in the inspector window.
 3. To perform the basic parameterization for the motor, click the ![Procedure](images/147856715147_DV_resource.Stream@PNG-en-US.PNG) icon next to the "Basic parameterization" entry.
@@ -1984,11 +1984,11 @@ You can configure the following motor details for motors during commissioning:
    The function view of the drive axis opens:
 
    Make the required settings here (see "[Basic parameterization](Commissioning%20SINAMICS%20S210%20drives.md#basic-parameter-assignment-1)").
-4. Select the "Motor details > Rating plate values" menu again in the inspector window.
+4. Select the "Motor details &gt; Rating plate values" menu again in the inspector window.
 5. Make the required settings in the white fields.
 
    The gray fields are refreshed automatically in accordance with their setting.
-6. Select the "Motor details > Motor brake" menu in the inspector window.
+6. Select the "Motor details &gt; Motor brake" menu in the inspector window.
 
    The current configuration of the motor holding brake is displayed in the screen form. You can only change this configuration in the basic parameterization.
 7. To change the configuration of the motor holding brake, click the ![Procedure](images/147856715147_DV_resource.Stream@PNG-en-US.PNG) icon next to the "Brake control" entry.
@@ -2279,7 +2279,7 @@ Proceed as follows if you wish to activate time synchronization:
 
 1. In the drive project configuration, select "Device configuration".
 2. Select the drive in the device view and open the Inspector window.
-3. In the Inspector Window under tab "General", select menu "Drive unit_X > Clock synchronization / Time".
+3. In the Inspector Window under tab "General", select menu "Drive unit_X &gt; Clock synchronization / Time".
 4. Select the "Activate time synchronization via NTP server" option (p3103).
 
 **Result:**
@@ -2379,7 +2379,7 @@ Alternatively, you can also insert the controller via the network view.
 1. Open the network view.
 2. Open the "Controllers" entry in the hardware catalog.
 3. Here, open a subentry in the entry "SIMATIC S7-XXXX".
-4. Drag & drop the PLC from the hardware catalog to the network view.
+4. Drag &amp; drop the PLC from the hardware catalog to the network view.
 
 **Variant 2: Inserting a device in the topology view**
 
@@ -2388,7 +2388,7 @@ Alternatively, you can also insert the controller via the topology view.
 1. Open the topology view.
 2. Open the "Controllers" entry in the hardware catalog.
 3. Here, open a subentry in the entry "SIMATIC S7-XXXX".
-4. Drag & drop the PLC from the hardware catalog to the network view.
+4. Drag &amp; drop the PLC from the hardware catalog to the network view.
 
 ##### Result
 
@@ -2416,7 +2416,7 @@ If you have created a controller and a SINAMICS drive in your project, you have 
 
 Proceed as follows to establish the connection between the controller and the SINAMICS drive:
 
-1. To open the network view, double-click the "Devices & Networks" entry in the project navigation.
+1. To open the network view, double-click the "Devices &amp; Networks" entry in the project navigation.
 
    The network view opens.
 2. Draw a connection between the PROFINET interface of the controller and PROFINET interface X150 of the drive by pressing and holding the mouse button.
@@ -2594,10 +2594,10 @@ The firmware in the drive and the project is identical ([consistent](#checking-t
 
 If you prefer to use a specific network interface of your PG/PC to establish an online connection, you can preset this interface.
 
-1. Select the "Options > Settings" menu.
+1. Select the "Options &gt; Settings" menu.
 
    The settings of the TIA Portal are displayed.
-2. Select the "Online & diagnostics" entry in the secondary navigation.
+2. Select the "Online &amp; diagnostics" entry in the secondary navigation.
 3. In the "Preset connection path for online access" area, specify the type of the PG/PC interface as well as the interface.
 4. Enable the option "Display dialog for setting the default connection path for online access".
 
@@ -2635,14 +2635,14 @@ Different firmware versions often occur in the following situations:
    - Double-click "Update accessible devices".
 
      The accessible device is displayed with the IP address in the project tree.
-   - In the project tree call the "Online & diagnostics" function for the displayed device.
+   - In the project tree call the "Online &amp; diagnostics" function for the displayed device.
 
      ![Firmware version of the hardware; example S120](images/147998327947_DV_resource.Stream@PNG-en-US.PNG)
 
      Firmware version of the hardware; example S120
 2. Check the firmware version in the catalog information of the Control Unit in your current Startdrive project.
 
-   - To do so, call the following menu: "Control Unit > Inspector window > General > Catalog information".
+   - To do so, call the following menu: "Control Unit &gt; Inspector window &gt; General &gt; Catalog information".
 
      ![Firmware version of the software; example S120](images/147998344715_DV_resource.Stream@PNG-en-US.PNG)
 
@@ -2675,7 +2675,7 @@ This section contains information on the following topics:
 
 As the Ethernet commissioning interface has already been assigned an IP address, you can go online directly.
 
-If you are not using a new project and devices have already been created, check the IP address of the interface in the project in the Inspector window under "Properties > General > Ethernet addresses" and the IP address assigned to the device. The addresses and subnet masks must be identical.
+If you are not using a new project and devices have already been created, check the IP address of the interface in the project in the Inspector window under "Properties &gt; General &gt; Ethernet addresses" and the IP address assigned to the device. The addresses and subnet masks must be identical.
 
 ##### Requirements
 
@@ -2835,8 +2835,8 @@ To assign an IP address, proceed as follows:
 3. Double-click "Update accessible devices".
 
    The accessible device is displayed with the IP address in the project tree.
-4. Double-click "Online & diagnostics" in the project tree of the device found.
-5. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+4. Double-click "Online &amp; diagnostics" in the project tree of the device found.
+5. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 6. Select the entry "Assign IP address".
 
    ![Assigning an IP address](images/147998544651_DV_resource.Stream@PNG-en-US.PNG)
@@ -2913,8 +2913,8 @@ To assign a name, proceed as follows:
 3. Double-click "Update accessible devices".
 
    The accessible device is displayed with the IP address in the project tree.
-4. Double-click "Online & diagnostics" in the project tree of the device found.
-5. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+4. Double-click "Online &amp; diagnostics" in the project tree of the device found.
+5. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 6. Select the entry "Assign PROFINET device name".
 
    ![Assigning names](images/147998628363_DV_resource.Stream@PNG-en-US.png)
@@ -3057,8 +3057,8 @@ To restore the factory settings, proceed as follows:
 3. Double-click "Update accessible devices" in the project tree.
 
    The accessible device is displayed with the IP address in the project tree.
-4. Double-click "Online & diagnostics" in the project tree of the device found.
-5. Select the "Functions" entry in the secondary navigation of the "Online & diagnostics" working area.
+4. Double-click "Online &amp; diagnostics" in the project tree of the device found.
+5. Select the "Functions" entry in the secondary navigation of the "Online &amp; diagnostics" working area.
 6. Select the "Resetting PROFINET interface parameters" entry in the secondary navigation.
 
    ![Resetting the PROFINET interface parameters](images/148018312459_DV_resource.Stream@PNG-en-US.PNG)
@@ -3067,7 +3067,7 @@ To restore the factory settings, proceed as follows:
 
    Resetting the PROFINET interface parameters
 
-   The option "Retain I&M data" is selected by default. This means the IM0 to IM3 data are retained during resetting and are not deleted. If you want to reset this data too, select the "Delete I&M data" option.
+   The option "Retain I&amp;M data" is selected by default. This means the IM0 to IM3 data are retained during resetting and are not deleted. If you want to reset this data too, select the "Delete I&amp;M data" option.
 7. Click the "Reset" button.
 
    The drive communication settings are reset to the factory settings.
@@ -3093,7 +3093,7 @@ This section contains information on the following topics:
 
 - [Device diagnostics](#device-diagnostics)
 - [DRIVE-CLiQ wiring diagnostics](#drive-cliq-wiring-diagnostics)
-- [Online & diagnostics](#online-diagnostics)
+- [Online &amp; diagnostics](#online-diagnostics)
 
 ### Device diagnostics
 
@@ -3189,7 +3189,7 @@ To display diagnostics and diagnostic functions for a drive unit connected onlin
 4. Establish an online connection to the device.
 
    You can also establish the online connection beforehand.
-5. In the project tree call the "Online & diagnostics" function for the displayed device.
+5. In the project tree call the "Online &amp; diagnostics" function for the displayed device.
 
 ##### Result
 
@@ -3283,19 +3283,19 @@ The "Backup/Restore" screen form offers the following options:
 3. Double-click "Update accessible devices".
 
    The accessible participant is displayed with IP address in the project navigation.
-4. In the project tree call the "Online & diagnostics" function for the displayed device.
+4. In the project tree call the "Online &amp; diagnostics" function for the displayed device.
 
    The diagnostics view is displayed.
-5. In the secondary navigation of the diagnostics view, select menu "Functions > Backup/Restore".
+5. In the secondary navigation of the diagnostics view, select menu "Functions &gt; Backup/Restore".
 
    In the diagnostics view, the "Backup/Restore" screen form is opened and you can make the required settings.
 
-##### Call "Backup/Restore" via Online & diagnostics
+##### Call "Backup/Restore" via Online &amp; diagnostics
 
-1. In the project tree of your drive device, double-click on "Online & diagnostics".
+1. In the project tree of your drive device, double-click on "Online &amp; diagnostics".
 
    The "Online access" display area is displayed.
-2. In the secondary navigation, select menu "Functions > Backup/Restore".
+2. In the secondary navigation, select menu "Functions &gt; Backup/Restore".
 
    The "Backup/Restore" screen form opens.
 3. In the toolbar, click "Go online" and make all of the necessary connection settings.

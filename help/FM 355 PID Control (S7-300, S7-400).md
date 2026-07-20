@@ -193,7 +193,7 @@ During program controlled re-configuring (LOAD_PAR, LOAD_OP) of the controller m
 | QL_ALM | 38.3 | BOOL | FALSE | The process value or the controlled variable is monitored for four limits. Violation of the L_ALM limit is reported at output "Low limit alarm triggered". |
 | QLMN_HLM | 38.4 | BOOL | FALSE | The manipulated value is always limited to a high and a low limit. Violation of the high limit is reported at output "High limit of manipulated value triggered".  (Does not apply to step controllers without analog position feedback) |
 | QLMN_LLM | 38.5 | BOOL | FALSE | The manipulated value is always limited to a high and a low limit. Violation of the low limit is reported at output "Low limit of manipulated value triggered".  (Does not apply to step controllers without analog position feedback) |
-| QPARA_F | 38.6 | BOOL | FALSE | The module checks the validity of the parameters. A parameter assignment error is displayed at the "Parameter assignment error" output. These parameter assignment errors can also be read out in the module's "Online & Diagnostics" dialog. |
+| QPARA_F | 38.6 | BOOL | FALSE | The module checks the validity of the parameters. A parameter assignment error is displayed at the "Parameter assignment error" output. These parameter assignment errors can also be read out in the module's "Online &amp; Diagnostics" dialog. |
 | QCH_F | 38.7 | BOOL | FALSE | The "Channel error" output is set if the controller channel cannot provide valid results. A channel error (for example, wire break) is also set if QPARA_F = 1 or QMOD_F = 1. If QCH_F = TRUE, then the precise error information in the diagnostic data record DS1 of the module is read out. |
 | QUPRLM | 39.0 | BOOL | FALSE | The setpoint is limited to a positive and negative slew rate. If the output "Limit of positive setpoint slew rate triggered" is set, the positive setpoint slew rate is limited. |
 | QDNRLM | 39.1 | BOOL | FALSE | The setpoint is limited to a positive and negative slew rate. If the output "Limit of negative setpoint slew rate triggered" is set, the setpoint fall is limited. |
@@ -211,7 +211,7 @@ During program controlled re-configuring (LOAD_PAR, LOAD_OP) of the controller m
 | QLMNR_LS | 40.6 | BOOL | FALSE | The output "Low endstop signal of position feedback" indicates whether the control valve is at its low endstop. QLMNR_LS = TRUE means: The control valve is at its low endstop.  (For step controllers only) |
 | QLMNR_ON | 40.7 | BOOL | FALSE | Output "Position feedback enabled" indicates the set operating mode "Step controller with position feedback" or "Step controller without position feedback". |
 | QFUZZY | 41.0 | BOOL | FALSE | If the output parameter is QFUZZY =1, the controller operates with the fuzzy algorithm. |
-| QSPLEPV | 41.1 | BOOL | FALSE | The output "Display of FUZZY controller: Setpoint < process value" is set when the fuzzy controller is switched on, if the setpoint is less than the effective process value. |
+| QSPLEPV | 41.1 | BOOL | FALSE | The output "Display of FUZZY controller: Setpoint &lt; process value" is set when the fuzzy controller is switched on, if the setpoint is less than the effective process value. |
 | QSPR | 41.2 | BOOL | FALSE | If the output "Split-range operation" is set, the continuous controller is operating in split-range mode. |
 | QMAN_FC | 41.4 | BOOL | FALSE | The output "QMAN_FC" is set in the following two cases:  The slave controller is in manual mode and the master controller is followed up to the process value of the slave controller.  The I-action of the master controller is stopped because the setpoint or manipulated variable of the slave controller is limited or because the slave controller is in manual mode. |
 | QPARABUB | 41.7 | BOOL | FALSE | This parameter is set by the FM if the operating parameters are changed via the OP. If READ_VAR = TRUE and if this display is set by the FM, the instruction PID_FM reads out the parameters SP_OP_ON, LMNOP_ON, SP_OP and LMN_OP from the FM and saves them in the instance DB. The instruction thus applies over the operating state of the FM. After the reading process the parameter is set to FALSE. |
@@ -255,12 +255,12 @@ During program controlled re-configuring (LOAD_PAR, LOAD_OP) of the controller m
 | PFDB_SEL | 72.1 | BOOL | FALSE   <sup>1)</sup> | In the PID algorithm, the P- and D-actions can be included in the feedback loop. The proportional action is located in the feedback loop when the input "Enable P-action in feedback loop" is set. |
 | MONERSEL | 72.2 | BOOL | FALSE   <sup>1)</sup> | The controller has a limit indicator that can be applied either for the process value or the control deviation. If the input "Monitoring: Process value = 0, control deviation = 1" is set, the control deviation will be monitored. |
 | D_EL_SEL | 74.0 | INT | 0 <sup>1)</sup> | The D-action element in the PID algorithm can be positioned at a separate input. This is selected at the input "D-action element input".  0: Control deviation  1 to 4: Analog input 1 to 4  17: Negative process value, D-action in the feedback |
-| SP_HLM | 76.0 | REAL | 100.0   <sup>1)</sup> | The setpoint is always limited to a high and a low limit. The "Setpoint high limit" input specifies the high limit.   SP_HLM > SP_LLM |
-| SP_LLM | 80.0 | REAL | 0.0   <sup>1)</sup> | The setpoint is always limited to a high and a low limit. The "Setpoint low limit" input specifies the low limit.  SP_LLM < SP_HLM |
-| H_ALM | 84.0 | REAL | 100.0   <sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "High limit interrupt" input specifies the highest limit.   H_ALM > H_WRN |
+| SP_HLM | 76.0 | REAL | 100.0   <sup>1)</sup> | The setpoint is always limited to a high and a low limit. The "Setpoint high limit" input specifies the high limit.   SP_HLM &gt; SP_LLM |
+| SP_LLM | 80.0 | REAL | 0.0   <sup>1)</sup> | The setpoint is always limited to a high and a low limit. The "Setpoint low limit" input specifies the low limit.  SP_LLM &lt; SP_HLM |
+| H_ALM | 84.0 | REAL | 100.0   <sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "High limit interrupt" input specifies the highest limit.   H_ALM &gt; H_WRN |
 | H_WRN | 88.0 | REAL | 90.0   <sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "High limit warning" input specifies the second highest limit.  Values from H_ALM to L_WRN are permitted. |
 | L_WRN | 92.0 | REAL | 10.0   <sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "Low limit warning" input specifies the second lowest limit.  Values from H_WRN to L_ALM are permitted. |
-| L_ALM | 96.0 | REAL | 0.0   <sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "Low limit alarm" input specifies the lowest limit.  L_ALM < L_WRN |
+| L_ALM | 96.0 | REAL | 0.0   <sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "Low limit alarm" input specifies the lowest limit.  L_ALM &lt; L_WRN |
 | HYS | 100.0 | REAL | 1.0   <sup>1)</sup> | To prevent flickering of the monitoring displays, a hysteresis can be configured at the "Hysteresis" input.  HYS ≥ 0.0 |
 | DEADB_W | 104.0 | REAL | 0.0   <sup>1)</sup> | A deadband is applied to the control deviation. The "Deadband width" input determines the size of the deadband.   DEADB_W ≥ 0.0 |
 | GAIN | 108.0 | REAL | 1.0   <sup>1)</sup> | The "Proportional gain" input specifies controller amplification. |
@@ -1002,12 +1002,12 @@ The variable interface of the FM 355 contains four data blocks with the block n
 
 | Parameters | Address | Data type | Default | Description |
 | --- | --- | --- | --- | --- |
-| SP_HLM | 0.0 | REAL | 100.0 | The setpoint is always limited to a high and a low limit. The "Setpoint high limit" input specifies the high limit.  SP_HLM > SP_LLM |
-| SP_LLM | 4.0 | REAL | 0.0 | The setpoint is always limited to a high and a low limit. The "Setpoint low limit" input specifies the low limit.  SP_LLM < SP_HLM |
-| H_ALM | 8.0 | REAL | 100.0 | You can configure four limits for monitoring the process value or error signal. The "High limit interrupt" input specifies the highest limit.  H_ALM > H_WRN |
+| SP_HLM | 0.0 | REAL | 100.0 | The setpoint is always limited to a high and a low limit. The "Setpoint high limit" input specifies the high limit.  SP_HLM &gt; SP_LLM |
+| SP_LLM | 4.0 | REAL | 0.0 | The setpoint is always limited to a high and a low limit. The "Setpoint low limit" input specifies the low limit.  SP_LLM &lt; SP_HLM |
+| H_ALM | 8.0 | REAL | 100.0 | You can configure four limits for monitoring the process value or error signal. The "High limit interrupt" input specifies the highest limit.  H_ALM &gt; H_WRN |
 | H_WRN | 12.0 | REAL | 90.0 | You can configure four limits for monitoring the process value or error signal. The "High limit warning" input specifies the second to highest limit.  Values from H_ALM to L_WRN are permitted. |
 | L_WRN | 16.0 | REAL | 10.0 | You can configure four limits for monitoring the process value or error signal. The "Low limit warning" input specifies the second to lowest limit.  Values from H_WRN to L_ALM are permitted. |
-| L_ALM | 20.0 | REAL | 0.0 | You can configure four limits for monitoring the process value or error signal. The "Low limit alarm" specifies the lowest limit.  L_ALM < L_WRN |
+| L_ALM | 20.0 | REAL | 0.0 | You can configure four limits for monitoring the process value or error signal. The "Low limit alarm" specifies the lowest limit.  L_ALM &lt; L_WRN |
 | HYS | 24.0 | REAL | 1.0 | To prevent flickering of the monitoring displays, a hysteresis can be configured at the "Hysteresis" input.   HYS ≥ 0.0 |
 | DEADB_W | 28.0 | REAL | 0.0 | A dead band is applied to the error signal. The "Dead band width" input determines the size of the dead band.  DEADB_W ≥ 0.0 |
 | GAIN | 32.0 | REAL | 1.0 | The "Proportional gain" input specifies controller gain. |
@@ -1073,7 +1073,7 @@ The variable interface of the FM 355 contains four data blocks with the block n
 | QLMN_HLM | 122.4 | BOOL | FALSE | The manipulated value is always limited to a high and a low limit. Violation of the high limit is reported at output "High limit of manipulated value triggered".  (Does not apply to step controllers without analog position feedback) |
 | QLMN_LLM | 122.5 | BOOL | FALSE | The manipulated value is always limited to a high and a low limit. Violation of the low limit is reported at output "Low limit of manipulated value triggered".  (Does not apply to step controllers without analog position feedback) |
 | QSPINTON | 122.6 | BOOL | FALSE | The output "Internal setpoint on" indicates that SP_INT was transferred to the module. |
-| QPARA_F | 123.0 | BOOL | FALSE | The module checks the validity of the parameters. A parameter assignment error is displayed at the "Parameter assignment error" output. These parameter assignment errors can also be read out in the module's "Online & Diagnostics" dialog. |
+| QPARA_F | 123.0 | BOOL | FALSE | The module checks the validity of the parameters. A parameter assignment error is displayed at the "Parameter assignment error" output. These parameter assignment errors can also be read out in the module's "Online &amp; Diagnostics" dialog. |
 | QCH_F | 123.1 | BOOL | FALSE | The "Channel error" output is set if the controller channel cannot provide valid results. A channel error (for example, wire break) is also set if QPARA_F = 1 or QMOD_F = 1. If QCH_F = TRUE, then the precise error information in the diagnostic data record DS1 of the module is read out. |
 | QUPRLM | 123.2 | BOOL | FALSE | The setpoint is limited to a positive and negative slew rate. If the output "Limit of positive setpoint slew rate triggered" is set, the positive setpoint slew rate is limited. |
 | QDNRLM | 123.3 | BOOL | FALSE | The setpoint is limited to a positive and negative slew rate. If the output "Limit of negative setpoint slew rate triggered" is set, the setpoint fall is limited. |
@@ -1088,7 +1088,7 @@ The variable interface of the FM 355 contains four data blocks with the block n
 | QLMNR_LS | 124.4 | BOOL | FALSE | The output "Low endstop signal of position feedback" indicates whether the control valve is at its low endstop. QLMNR_LS = TRUE means: The control valve is at its low endstop.  (For step controllers only) |
 | QLMNR_ON | 124.5 | BOOL | FALSE | Output "Position feedback enabled" indicates the set operating mode "Step controller with position feedback" or "Step controller without position feedback". |
 | QFUZZY | 124.6 | BOOL | FALSE | If the output "PID algorithm = 0; fuzzy = 1", the controller is working with the fuzzy algorithm. |
-| QSPLEPV | 124.7 | BOOL | FALSE | The output "Display of FUZZY controller: Setpoint < process value" is set when the fuzzy controller is switched on, if the setpoint is less than the effective process value. |
+| QSPLEPV | 124.7 | BOOL | FALSE | The output "Display of FUZZY controller: Setpoint &lt; process value" is set when the fuzzy controller is switched on, if the setpoint is less than the effective process value. |
 | QSPR | 125.0 | BOOL | FALSE | If the output "Split-range operation" is set, the continuous controller is operating in split-range mode. |
 | QLMNUP | 125.1 | BOOL | FALSE | This is the "Manipulated value signal up" output.  (Only in the case of step controllers or pulse controllers) |
 | QLMNDN | 125.2 | BOOL | FALSE | This is the "Manipulated value signal down" output.  (Only in the case of step controllers or pulse controllers) |

@@ -49,7 +49,7 @@ The value pairs in the Points structure define the input and output value range 
 
 SplitRange checks whether the following conditions are met for each call so that valid values are available for the calculation of the output value:
 
-- Points.x1 < Points.x2
+- Points.x1 &lt; Points.x2
 - Points.x1, Points.y1, Points.x2 and Points.y2 are within the permitted value range from -3.402823e+38 to 3.402823e+38
 - Points.x1, Points.y1, Points.x2 and Points.y2 are valid REAL values (≠ NaN e.g. 16#7FFF_FFFF)
 
@@ -104,8 +104,8 @@ The Error parameter indicates if an error is pending. When the error is no longe
 | --- | --- | --- | --- |
 | Input | REAL | 0.0 | Input value |
 | SubstituteOutput | REAL | 0.0 | SubstituteOutput is used as the substitute output value when  - Reset = TRUE   or   - An error with error message ErrorBits ≥ 16#0001_0000 prevents correct calculation of the output value, and the configured value of ErrorMode is 1. |
-| ErrorAck | BOOL | FALSE | Deletes the error messages  - Edge FALSE -> TRUE   ErrorBits is reset |
-| Reset | BOOL | FALSE | Performs a restart of the instruction  - Edge FALSE -> TRUE   ErrorBits is reset. - As long as Reset is set to TRUE, the substitute output value SubstituteOutput is output at the output. - As long as Reset is set to FALSE, the calculation of the output value is performed. |
+| ErrorAck | BOOL | FALSE | Deletes the error messages  - Edge FALSE -&gt; TRUE   ErrorBits is reset |
+| Reset | BOOL | FALSE | Performs a restart of the instruction  - Edge FALSE -&gt; TRUE   ErrorBits is reset. - As long as Reset is set to TRUE, the substitute output value SubstituteOutput is output at the output. - As long as Reset is set to FALSE, the calculation of the output value is performed. |
 
 ## SplitRange output parameters (S7-1200, S7-1500)
 
@@ -120,9 +120,9 @@ The Error parameter indicates if an error is pending. When the error is no longe
 | Tag | Data type | Default | Description |
 | --- | --- | --- | --- |
 | Points | AuxFct_SplitRange_Points | - | Points data |
-| Points.x1 | REAL | 0.0 | x-value of point 1  Permissible value range: Points.x1 < Points.x2 |
+| Points.x1 | REAL | 0.0 | x-value of point 1  Permissible value range: Points.x1 &lt; Points.x2 |
 | Points.y1 | REAL | 0.0 | y-value of point 1 |
-| Points.x2 | REAL | 0.0 | x-value of point 2  Permissible value range: Points.x1 < Points.x2 |
+| Points.x2 | REAL | 0.0 | x-value of point 2  Permissible value range: Points.x1 &lt; Points.x2 |
 | Points.y2 | REAL | 0.0 | y-value of point 2 |
 | ErrorMode | INT | 0 | Selection of the substitute output value following an error  - 0 = Input - 1 = SubstituteOutput - 2 = Last valid output value   Permissible value range: 0 to 2 |
 
@@ -132,12 +132,12 @@ If several errors are pending simultaneously, the values of the ErrorBits are di
 
 For SplitRange, the errors output at the ErrorBits parameter are divided into two categories:
 
-- Errors with error messages ErrorBits < 16#0001_0000
+- Errors with error messages ErrorBits &lt; 16#0001_0000
 - Errors with error messages ErrorBits ≥ 16#0001_0000
 
-### Errors with error messages ErrorBits < 16#0001_0000
+### Errors with error messages ErrorBits &lt; 16#0001_0000
 
-If one or more errors with error messages ErrorBits < 16#0001_0000 are pending, SplitRange reacts as follows:
+If one or more errors with error messages ErrorBits &lt; 16#0001_0000 are pending, SplitRange reacts as follows:
 
 - The output value is determined as follows despite this error:
 
@@ -179,4 +179,4 @@ The output parameter Error is deleted as soon as there are no longer any errors.
 | FALSE | 1 | SubstituteOutput |  |
 | TRUE | - | SubstituteOutput |  |
 | 0002_0000 | **Cause of error:**   The Input parameter has no valid REAL value while the calculation of the output value is being performed (Reset = FALSE).   **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.  When ErrorMode = 0, 0.0 is used as output value.   **Solution:**   Make sure that the parameter Input is a valid REAL value (≠NaN e.g. 16#7FFF_FFFF). |  |  |
-| 0004_0000 | **Possible causes of error:**   - One or more tags in the Points structure have invalid values. - The calculation of the output value yields an invalid REAL value for the Output parameter.    **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.   **Solution:**   Ensure that the following conditions are met:  1. Points.x1 < Points.x2 2. Points.x1, Points.y1, Points.x2 and Points.y2 are within the permitted value range from -3.402823e+38 to 3.402823e+38 3. Points.x1, Points.y1, Points.x2 and Points.y2 are valid REAL values (≠ NaN e.g. 16#7FFF_FFFF)    **Additional information:**   Note that all tags in the Points structure are not retentive. These tags are initialized with the start values after each operating state transition of the CPU from STOP to RUN. |  |  |
+| 0004_0000 | **Possible causes of error:**   - One or more tags in the Points structure have invalid values. - The calculation of the output value yields an invalid REAL value for the Output parameter.    **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.   **Solution:**   Ensure that the following conditions are met:  1. Points.x1 &lt; Points.x2 2. Points.x1, Points.y1, Points.x2 and Points.y2 are within the permitted value range from -3.402823e+38 to 3.402823e+38 3. Points.x1, Points.y1, Points.x2 and Points.y2 are valid REAL values (≠ NaN e.g. 16#7FFF_FFFF)    **Additional information:**   Note that all tags in the Points structure are not retentive. These tags are initialized with the start values after each operating state transition of the CPU from STOP to RUN. |  |  |

@@ -38,13 +38,13 @@ Customers are responsible for preventing unauthorized access to their plants, sy
 
 For more information on protective industrial cybersecurity measures for implementation, visit:
 
-<https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html>
+[https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html)
 
 Siemens’ products and solutions undergo continuous development to make them more secure. Siemens strongly recommends applying product updates as soon as they are available and always using only the latest product versions. Use of product versions that are no longer supported, and failure to apply latest updates may increase customer’s exposure to cyber threats.
 
 To stay informed about product updates at all times, subscribe to the Siemens Industrial Cybersecurity RSS Feed under.
 
-<https://new.siemens.com/global/en/products/services/cert.html>
+[https://new.siemens.com/global/en/products/services/cert.html](https://new.siemens.com/global/en/products/services/cert.html)
 
 ### Network settings
 
@@ -97,7 +97,7 @@ The setup configures the firewall to ensure smooth operation.
 >
 > 1. Start "Internet Information Services (IIS) Manager" on the Unified PC.
 > 2. Right-click "Default Web Site".
-> 3. Select "Remove" or "Manage Website > Stop".
+> 3. Select "Remove" or "Manage Website &gt; Stop".
 
 ## Breaking changes
 
@@ -131,7 +131,7 @@ Runtime now supports panning and zooming with a two-finger gesture.
 | Symbol | Meaning |
 | --- | --- |
 | WinCC Unified V17 | No panning and zooming with two-finger gestures. |
-| As of WinCC Unified V18 | Panning and zooming with two-finger gestures is supported.  Default: Activated   If you want, you can disable this feature by clearing "Format > Allow zoom" property for the screen window. |
+| As of WinCC Unified V18 | Panning and zooming with two-finger gestures is supported.  Default: Activated   If you want, you can disable this feature by clearing "Format &gt; Allow zoom" property for the screen window. |
 
 ### Exclusion of "Uncertain - initial value" quality code as trigger
 
@@ -149,7 +149,7 @@ To enable QualityCode 0xC4 as a trigger in V18 or higher, do the following:
 
    - For scripts in screens: `IOWA_GfxComponentConfigurationSrv.xml`
    - For scheduled tasks: `IOWA_SchedComponentConfiguration.xml`
-3. Delete the line for <Attribute key>:
+3. Delete the line for &lt;Attribute key&gt;:
 
    `<ComponentConfiguration componentKey="GfxTriggerManager" name="Trigger Manager">`
      
@@ -190,7 +190,7 @@ If the HMI device uses a self-signed OPC UA certificate:
      Default: `C:\ProgrammData\SCADAProjects\certstore`​
    - For Unified Panel:
 
-     Select "Control Panel > Security > Certificates" and as the "Certificate store" the entry "My Certificates". Select the certificate and delete it.
+     Select "Control Panel &gt; Security &gt; Certificates" and as the "Certificate store" the entry "My Certificates". Select the certificate and delete it.
 2. Upgrade the HMI device.
 
    For Unified PC: The certificate is automatically generated and installed.
@@ -232,7 +232,7 @@ For more information, refer to the help "SIMATIC Unified PC Installation" under 
 
 ### Access to subnets via TCP/IP Auto
 
-Use the TCP/IP Auto setting on your engineering device (programming device) when you connect the device to a local subnet. (Control Panel > Set PG/PC interface)
+Use the TCP/IP Auto setting on your engineering device (programming device) when you connect the device to a local subnet. (Control Panel &gt; Set PG/PC interface)
 
 The engineering device then allows additional IP addresses from the subnet to be added to its network adapter.
 
@@ -350,7 +350,7 @@ Information that could not be included in the online help and important informat
 
 ### Adaptations to screens and screen objects
 
-The settings that you define under "Settings > Visualization" in the "Resize screen" area have no effect on the HMI devices:
+The settings that you define under "Settings &gt; Visualization" in the "Resize screen" area have no effect on the HMI devices:
 
 - SIMATIC Unified PC
 - SIMATIC Unified Comfort Panel
@@ -434,11 +434,11 @@ Information that could not be included in the online help and important informat
 
 ### Smoothing (Unified Comfort Panel)
 
-The following applies to logging tags and PLC tags: If the value "No smoothing" is set in the Logging tag properties under "Smoothing > Mode", the values are nevertheless smoothed.
+The following applies to logging tags and PLC tags: If the value "No smoothing" is set in the Logging tag properties under "Smoothing &gt; Mode", the values are nevertheless smoothed.
 
 **Example:**
 
-A logging tag changes its value as follows: "100" > "101" > "101".
+A logging tag changes its value as follows: "100" &gt; "101" &gt; "101".
 
 Even if "No smoothing" is set in the properties of the tag, the values [100, 101] are stored in the log.
 
@@ -516,7 +516,7 @@ If you have configured a parameter set control in WinCC V16 without updates, ope
 
 ### Configuring a storage medium for parameter sets
 
-Select the same storage medium that you have configured for tag persistence or alarm logging under "Properties > Information" for parameter set types. If you specify different storage media, the "EjectStorageMedium" system function is not available.
+Select the same storage medium that you have configured for tag persistence or alarm logging under "Properties &gt; Information" for parameter set types. If you specify different storage media, the "EjectStorageMedium" system function is not available.
 
 ## WinCC Unified PC
 
@@ -562,7 +562,7 @@ Runtime now supports panning and zooming with a two-finger gesture.
 | Symbol | Meaning |
 | --- | --- |
 | WinCC Unified V17 | No panning and zooming with two-finger gestures. |
-| As of WinCC Unified V18 | Panning and zooming with two-finger gestures is supported.  Default: Activated   If you want, you can disable this feature by clearing "Format > Allow zoom" property for the screen window. |
+| As of WinCC Unified V18 | Panning and zooming with two-finger gestures is supported.  Default: Activated   If you want, you can disable this feature by clearing "Format &gt; Allow zoom" property for the screen window. |
 
 #### Exclusion of "Uncertain - initial value" quality code as trigger
 
@@ -580,7 +580,7 @@ To enable QualityCode 0xC4 as a trigger in V18 or higher, do the following:
 
    - For scripts in screens: `IOWA_GfxComponentConfigurationSrv.xml`
    - For scheduled tasks: `IOWA_SchedComponentConfiguration.xml`
-3. Delete the line for <Attribute key>:
+3. Delete the line for &lt;Attribute key&gt;:
 
    `<ComponentConfiguration componentKey="GfxTriggerManager" name="Trigger Manager">`
      
@@ -621,7 +621,7 @@ If the HMI device uses a self-signed OPC UA certificate:
      Default: `C:\ProgrammData\SCADAProjects\certstore`​
    - For Unified Panel:
 
-     Select "Control Panel > Security > Certificates" and as the "Certificate store" the entry "My Certificates". Select the certificate and delete it.
+     Select "Control Panel &gt; Security &gt; Certificates" and as the "Certificate store" the entry "My Certificates". Select the certificate and delete it.
 2. Upgrade the HMI device.
 
    For Unified PC: The certificate is automatically generated and installed.
@@ -978,7 +978,7 @@ Some objects such as the trend control or the parameter set control have buttons
 
 ### Alarm control - Displaying logged alarms
 
-Logged alarms are not displayed after starting the Runtime software if the static value "Logged alarms updated" is configured in the properties of the alarm control under "General > Alarm source". To make logged alarms visible in the alarm control, click the "Show logged alarms" or "Show and update logged alarms" button in the alarm control.
+Logged alarms are not displayed after starting the Runtime software if the static value "Logged alarms updated" is configured in the properties of the alarm control under "General &gt; Alarm source". To make logged alarms visible in the alarm control, click the "Show logged alarms" or "Show and update logged alarms" button in the alarm control.
 
 The "Update and display logged alarms" list shows a maximum of 100 alarms.
 
@@ -1009,7 +1009,7 @@ These include:
 
 ### Gauge output format
 
-If you specify the value {H} (Hexadecimal) in the Inspector window of a gauge under "Properties > General > Scale > Output format", negative values in the gauge will not be displayed correctly. If you want to output negative values via a gauge, use {F}, {N} or {I} as output format.
+If you specify the value {H} (Hexadecimal) in the Inspector window of a gauge under "Properties &gt; General &gt; Scale &gt; Output format", negative values in the gauge will not be displayed correctly. If you want to output negative values via a gauge, use {F}, {N} or {I} as output format.
 
 ### Runtime Collaboration - function trend control
 

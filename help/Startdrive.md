@@ -226,7 +226,7 @@ Startdrive software component
 
   - Article number Startdrive Basic V19 (SW with basic license): 6SL3072-4KA02-0XG0
   - Article number Startdrive Advanced V19 (SW and license): 6SL3072-4KA02-0XG5
-  - Article number Startdrive Advanced V19 Upgrade (SW and upgrade license V15..V18 -> V19): 6SL3072-4KA02-0XK5
+  - Article number Startdrive Advanced V19 Upgrade (SW and upgrade license V15..V18 -&gt; V19): 6SL3072-4KA02-0XK5
 - SUS (Software Update Service)
 
   - Article number Startdrive Advanced DVD: 6SL3072-4AA02-0XL8
@@ -372,7 +372,7 @@ Proceed as follows to upgrade a SINAMICS S120 drive from firmware 4.8 to firmwa
 
 1. Connect the SINAMICS S120 drive (type: CU320-2 PN) to the power supply.
 2. Search for the connected Control Unit in the TIA Portal under "Online access".
-3. Open the "Online & diagnostics" screen form, and assign the IP address of the drive to be upgraded to the Control Unit.
+3. Open the "Online &amp; diagnostics" screen form, and assign the IP address of the drive to be upgraded to the Control Unit.
 
    ![Example: Assign IP address](images/159883753611_DV_resource.Stream@PNG-en-US.png)
 
@@ -484,7 +484,7 @@ The following table shows the minimum software and hardware requirements that ha
 
 * Including all security updates up to Microsoft Security Bulletin Summary for August 2023 (MS23-AUG). For more information on the operating systems, refer to the help on Microsoft Windows or the Microsoft homepage.
 
-Certain products may support additional Windows versions. For more information, see the product-specific system requirements or check compatibility with the compatibility tool. The compatibility tool can be found on the Internet at <https://support.industry.siemens.com/kompatool/pages/main/index.jsf?>.
+Certain products may support additional Windows versions. For more information, see the product-specific system requirements or check compatibility with the compatibility tool. The compatibility tool can be found on the Internet at [https://support.industry.siemens.com/kompatool/pages/main/index.jsf?](https://support.industry.siemens.com/kompatool/pages/main/index.jsf?).
 
 #### Recommended PC hardware
 
@@ -570,7 +570,7 @@ If WinCC Professional is installed after Startdrive, you must subsequently insta
 
 You have to remove Startdrive in accordance with the MS Windows guidelines.
 
-For this purpose, remove your software package via the MS Windows "Programs and Features" application (in the MS Windows taskbar via "Start > Control Panel > Programs > Programs and Features").
+For this purpose, remove your software package via the MS Windows "Programs and Features" application (in the MS Windows taskbar via "Start &gt; Control Panel &gt; Programs &gt; Programs and Features").
 
 1. Under "Programs and Features", select the "Siemens Totally Integrated Automation Portal" software package.
 2. Press the right mouse button to perform "uninstallation".
@@ -647,7 +647,7 @@ The following table shows the various layers and protocols that are used.
 | PTCP   Precision Transparent Clock Protocol | Not relevant | (2) Ethernet II and IEEE 802.1Q and Ethertype 0x8892 (PROFINET) | PROFINET   send clock and time synchronisation, based on IEEE 1588 | PTC enables a time delay measurement  between RJ45 ports and therefore the send cycle synchronization and time synchronization.  PTCP uses the special multicast MAC address:  xx-xx-xx-01-0E-CF,   xx-xx-xx = Organizationally Unique Identifier |
 | PROFINET IO data | Not relevant | (2) Ethernet II and IEEE 802.1Q and Ethertype 0x8892 (PROFINET) | PROFINET Cyclic IO data transfer | The PROFINET IO telegrams are used to cyclically transfer IO data between the PROFINET IO controller and IO devices via Ethernet. |
 | PROFINET Context Manager | 34964 | (4) UDP | PROFINET connection less RPC | The PROFINET context manager provides an endpoint mapper in order to establish an application relationship (PROFINET AR). |
-| Network Time Protocol (NTP) | Dynamic | (4) UDP | NTP client; time synchronization | NTP is only supported for onboard PROFINET (X150). An NTP client port (dynamic UDP port > 50000) is only open at this interface. |
+| Network Time Protocol (NTP) | Dynamic | (4) UDP | NTP client; time synchronization | NTP is only supported for onboard PROFINET (X150). An NTP client port (dynamic UDP port &gt; 50000) is only open at this interface. |
 
 #### Connection-oriented communication protocols
 
@@ -674,7 +674,7 @@ The following table shows the various layers and protocols that are used.
 
 | Modbus TCP protocols (server) | Port number | (2) Link layer  (4) Transport layer | Function | Description |
 | --- | --- | --- | --- | --- |
-| Request & Response | 502 | (4) TCP | - | Is used for exchanging data packages.  Is closed when delivered, and is opened when selecting Modbus TCP. |
+| Request &amp; Response | 502 | (4) TCP | - | Is used for exchanging data packages.  Is closed when delivered, and is opened when selecting Modbus TCP. |
 
 ### Network settings TIA Portal
 
@@ -739,7 +739,7 @@ More information can be found on the Internet:
 
 [SINUMERIK / SIMOTION / SINAMICS Industrial Cybersecurity Configuration Manual](https://support.industry.siemens.com/cs/ww/en/view/108862708)
 
-Pay particular attention to the explanatory notes on protective zones in Section "General security measures > Network security > Network segmentation".
+Pay particular attention to the explanatory notes on protective zones in Section "General security measures &gt; Network security &gt; Network segmentation".
 
 #### Industrial Cybersecurity (for SINAMICS firmware V6.1)
 
@@ -785,7 +785,7 @@ More information can be found on the Internet:
 
 [SINUMERIK / SIMOTION / SINAMICS Industrial Cybersecurity Configuration Manual](https://support.industry.siemens.com/cs/ww/en/view/108862708)
 
-Pay particular attention to the explanatory notes on services and ports in Section "General security measures > System integrity > System hardening > Services and ports".
+Pay particular attention to the explanatory notes on services and ports in Section "General security measures &gt; System integrity &gt; System hardening &gt; Services and ports".
 
 #### Industrial Cybersecurity (for SINAMICS firmware V6.1)
 
@@ -795,8 +795,8 @@ More information can be found on the Internet:
 
 Pay particular attention to the explanatory notes on ports and protocols:
 
-- Section "Security functions > Reduction of the attack surface > Least functionality of ports and protocols".
-- Section "System overview > Communication relationships".
+- Section "Security functions &gt; Reduction of the attack surface &gt; Least functionality of ports and protocols".
+- Section "System overview &gt; Communication relationships".
 
 #### Industrial Cybersecurity (for SINAMICS firmware from V6.2)
 
@@ -806,8 +806,8 @@ More information can be found on the Internet:
 
 Pay particular attention to the explanatory notes on ports and protocols:
 
-- Section "Security functions > Reduction of the attack surface > Least functionality of ports and protocols".
-- Section "System overview > Communication relationships".
+- Section "Security functions &gt; Reduction of the attack surface &gt; Least functionality of ports and protocols".
+- Section "System overview &gt; Communication relationships".
 
 ### Product disposal
 

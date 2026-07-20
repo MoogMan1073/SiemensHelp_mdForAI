@@ -180,8 +180,8 @@ You set the parameters of the module as follows in this operating mode:
 | --- | --- |
 | Hardware configuration in STEP 7 (TIA Portal) | 1. Insert the module from the hardware catalog under "Technology modules". 2. Set the "Pulse output" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
 | Hardware configuration in STEP 7 with HSP | 1. Install the corresponding HSP file. You will then find the module in the hardware catalog under "ET 200SP". 2. Set the "Pulse output" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFINET IO > I/O". 2. Set the "Pulse output" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFIBUS DP > I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "Pulse output" mode and the further parameters in the user program using data record 128. |
+| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFINET IO &gt; I/O". 2. Set the "Pulse output" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
+| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFIBUS DP &gt; I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "Pulse output" mode and the further parameters in the user program using data record 128. |
 
 #### Parameters of the TM Pulse 2x24V in "Pulse output" mode
 
@@ -559,7 +559,7 @@ The measuring range and accuracy are dependent on the channel configuration:
 
 |  | Measured value 27648<sub>D</sub> | Maximum measured value 32511<sub>D</sub> | Accuracy<sup>3</sup> |  |
 | --- | --- | --- | --- | --- |
-| Period duration > 333 μs | Period duration < 333 μs |  |  |  |
+| Period duration &gt; 333 μs | Period duration &lt; 333 μs |  |  |  |
 | Two-channel operation | 2 A<sup>1</sup> | 2.37 A<sup>2</sup> | ±40 mA | -40 mA ... +100 mA |
 | One-channel operation  (parallel connection) | 4 A<sup>1</sup> | 4.74 A<sup>2</sup> | ±80 mA | -80 mA ... +200 mA |
 | <sup>1 </sup>May only be exceeded for a short time.   <sup>2 </sup>When this current value is exceeded, the ERR_DQA feedback bit will be set.   <sup>3 </sup>With constant period duration in the respective measuring period. |  |  |  |  |
@@ -704,8 +704,8 @@ You set the parameters of the module as follows in this operating mode:
 | --- | --- |
 | Hardware configuration in STEP 7 (TIA Portal) | 1. Insert the module from the hardware catalog under "Technology modules". 2. Set the "Pulse width modulation PWM" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
 | Hardware configuration in STEP 7 with HSP | 1. Install the corresponding HSP file. You will then find the module in the hardware catalog under "ET 200SP". 2. Set the "Pulse width modulation PWM" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFINET IO > I/O". 2. Set the "Pulse width modulation PWM" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFIBUS DP > I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the parameters in the user program using data record 128. |
+| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFINET IO &gt; I/O". 2. Set the "Pulse width modulation PWM" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
+| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFIBUS DP &gt; I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the parameters in the user program using data record 128. |
 
 #### Parameters of the TM Pulse 2x24V in "Pulse width modulation PWM" mode
 
@@ -1042,7 +1042,7 @@ The measuring range and accuracy are dependent on the channel configuration:
 
 |  | Measured value 27648<sub>D</sub> | Maximum measured value 32511<sub>D</sub> ≙ ... | Accuracy<sup>3</sup> |  |
 | --- | --- | --- | --- | --- |
-| Period duration > 333 μs | Period duration < 333 μs |  |  |  |
+| Period duration &gt; 333 μs | Period duration &lt; 333 μs |  |  |  |
 | Two-channel operation | 2 A<sup>1</sup> | 2.37 A<sup>2</sup> | ±40 mA | -40 mA ... +100 mA |
 | One-channel operation  (parallel connection) | 4 A<sup>1</sup> | 4.74 A<sup>2</sup> | ±80 mA | -80 mA ... +200 mA |
 | <sup>1 </sup>May only be exceeded for a short time.   <sup>2 </sup>When this current value is exceeded, the ERR_DQA feedback bit will be set.   <sup>3 </sup>With constant period duration in the respective measuring period. |  |  |  |  |
@@ -1114,8 +1114,8 @@ You set the parameters of the module as follows in this operating mode:
 | --- | --- |
 | Hardware configuration in STEP 7 (TIA Portal) | 1. Insert the module from the hardware catalog under "Technology modules". 2. Set the "Pulse train" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
 | Hardware configuration in STEP 7 with HSP | 1. Install the corresponding HSP file. You will then find the module in the hardware catalog under "ET 200SP". 2. Set the "Pulse train" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFINET IO > I/O". 2. Set the "Pulse train" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFIBUS DP > I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "Pulse train" mode and the further parameters in the user program using data record 128. |
+| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFINET IO &gt; I/O". 2. Set the "Pulse train" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
+| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFIBUS DP &gt; I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "Pulse train" mode and the further parameters in the user program using data record 128. |
 
 #### Parameters of the TM Pulse 2x24V in "Pulse train" mode
 
@@ -1325,12 +1325,12 @@ Pulses and interpulse periods of digital input DIn.0 whose duration is less than
 
 The pulse or the interpulse period of DIn.0 is also ignored in the following cases:
 
-- Pulse duration < Input delay
+- Pulse duration &lt; Input delay
 - Pulse duration + Off delay ≤ On delay (ERR_PULSE is set)
-- Pulse duration + Off delay + Minimum pulse duration < On delay (ERR_PULSE is set)
-- Interpulse period < Input delay
+- Pulse duration + Off delay + Minimum pulse duration &lt; On delay (ERR_PULSE is set)
+- Interpulse period &lt; Input delay
 - Interpulse period + On delay ≤ Off delay (ERR_PULSE is set)
-- Interpulse period + On delay < Off delay + Minimum interpulse period (ERR_PULSE is set)
+- Interpulse period + On delay &lt; Off delay + Minimum interpulse period (ERR_PULSE is set)
 
 A set ERR_PULSE feedback bit is cleared on the next rising edge at DIn.0.
 
@@ -1338,7 +1338,7 @@ A set ERR_PULSE feedback bit is cleared on the next rising edge at DIn.0.
 
 In the following case, the module cancels the current On delay and restarts it with the next rising edge at digital input DIn.0:
 
-On delay > Pulse duration + Interpulse period
+On delay &gt; Pulse duration + Interpulse period
 
 The following figure shows an example of the retriggering of the On delay:
 
@@ -1350,7 +1350,7 @@ Retriggering the On delay
 
 In the following case, the module cancels the current Off delay and restarts it with the next rising edge at digital input DIn.0:
 
-Off delay > Pulse duration + Interpulse period
+Off delay &gt; Pulse duration + Interpulse period
 
 The following figure shows an example of the retriggering of the Off delay:
 
@@ -1444,8 +1444,8 @@ You set the parameters of the module as follows in this operating mode:
 | --- | --- |
 | Hardware configuration in STEP 7 (TIA Portal) | 1. Insert the module from the hardware catalog under "Technology modules". 2. Set the "On/Off delay" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
 | Hardware configuration in STEP 7 with HSP | 1. Install the corresponding HSP file. You will then find the module in the hardware catalog under "ET 200SP". 2. Set the "On/Off delay" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFINET IO > I/O". 2. Set the "On/Off delay" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFIBUS DP > I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "On/Off delay" mode and the further parameters in the user program using data record 128. |
+| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFINET IO &gt; I/O". 2. Set the "On/Off delay" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
+| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFIBUS DP &gt; I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "On/Off delay" mode and the further parameters in the user program using data record 128. |
 
 #### Parameters of the TM Pulse 2x24V in "On/Off delay" mode
 
@@ -1730,8 +1730,8 @@ You set the parameters of the module as follows in this operating mode:
 | --- | --- |
 | Hardware configuration in STEP 7 (TIA Portal) | 1. Insert the module from the hardware catalog under "Technology modules". 2. Set the "Frequency output" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
 | Hardware configuration in STEP 7 with HSP | 1. Install the corresponding HSP file. You will then find the module in the hardware catalog under "ET 200SP". 2. Set the "Frequency output" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFINET IO > I/O". 2. Set the "Frequency output" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFIBUS DP > I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "Frequency output" mode and the further parameters in the user program using data record 128. |
+| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFINET IO &gt; I/O". 2. Set the "Frequency output" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
+| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFIBUS DP &gt; I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "Frequency output" mode and the further parameters in the user program using data record 128. |
 
 #### Parameters of the TM Pulse 2x24V in "Frequency output" mode
 
@@ -2024,8 +2024,8 @@ You set the parameters of the module as follows in this operating mode:
 | --- | --- |
 | Hardware configuration in STEP 7 (TIA Portal) | 1. Insert the module from the hardware catalog under "Technology modules". 2. Set the "PWM with DC motor" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
 | Hardware configuration in STEP 7 with HSP | 1. Install the corresponding HSP file. You will then find the module in the hardware catalog under "ET 200SP". 2. Set the "PWM with DC motor" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFINET IO > I/O". 2. Set the "PWM with DC motor" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
-| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices > PROFIBUS DP > I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "PWM with DC motor" mode and the further parameters in the user program using data record 128. |
+| Hardware configuration with GSD file for distributed operation on PROFINET IO | 1. Install the latest PROFINET GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFINET IO &gt; I/O". 2. Set the "PWM with DC motor" mode and the further parameters of the module in the hardware configuration. 3. Download the project to the CPU. |
+| Hardware configuration with GSD file for distributed operation on PROFIBUS DP | 1. Install the latest PROFIBUS GSD file. You will then find the module in the hardware catalog under "Other field devices &gt; PROFIBUS DP &gt; I/O". 2. Download the project to the CPU. The parameters of the module are also downloaded with their default settings (see table below). 3. Set the "PWM with DC motor" mode and the further parameters in the user program using data record 128. |
 
 #### Parameters of the TM Pulse 2x24V in "PWM with DC motor" mode
 

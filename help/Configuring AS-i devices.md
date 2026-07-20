@@ -203,7 +203,7 @@ In the event of a slave failure, no I/O area access error is generated because t
 
 In order to achieve the best possible performance, select the length of the I/O range based on the volume of data used by the slaves.
 
-If the length is set to > 32 bytes, the module in the ET 200SP slot uses time division multiplexing to internally transfer data with a block size of 32 bytes.
+If the length is set to &gt; 32 bytes, the module in the ET 200SP slot uses time division multiplexing to internally transfer data with a block size of 32 bytes.
 
 #### **Properties of the I/O range for different configurations**
 
@@ -286,8 +286,8 @@ The digital and analog inputs and outputs of the AS-i slaves can also be transfe
 Further factors affecting the length of the I/O range:
 
 Length of I/O range: 4 ... 256 bytes for configurations with IM 155-6 PN ST from FW V3.1 onwards  
-Length of I/O range: 4 ... 32 bytes for configurations with IM 155-6 PN ST < FW V3.1   
-Restriction when operating under CPU S7-300 FW version < V3 - length of I/O range: max. 224 bytes
+Length of I/O range: 4 ... 32 bytes for configurations with IM 155-6 PN ST &lt; FW V3.1   
+Restriction when operating under CPU S7-300 FW version &lt; V3 - length of I/O range: max. 224 bytes
 
 Length of I/O range: 4 ... 32 bytes for configurations with IM 155-6 DP HF
 
@@ -397,6 +397,6 @@ When you reset the CM 1243-2 AS-i master module to factory settings, the module
 ### Notes on configuration
 
 - The slave configuration in the non-volatile memory of the master is only applied when no slaves are configured in the TIA project.  
-  Using the online function control panel - "Apply AS-i slave configuration (ACTUAL->TARGET)", the AS-i master can apply the slave configuration connected at the terminals ASI+ / ASI- to the non-volatile memory. You can switch from "Configuration Mode" to "Protected Mode" using the online function control panel.
+  Using the online function control panel - "Apply AS-i slave configuration (ACTUAL-&gt;TARGET)", the AS-i master can apply the slave configuration connected at the terminals ASI+ / ASI- to the non-volatile memory. You can switch from "Configuration Mode" to "Protected Mode" using the online function control panel.
 - If slaves are configured in the TIA project, the non-volatile memory of the master is not used (specification of the AS-i slave configuration: TIA project). The slave configuration of the TIA project is also valid after a reset to factory settings and the master remains in "Protected Mode".
 - In "Protected Mode", the master only activates the slaves that are contained in the configuration. Slaves that are included in the configuration but do not exist, are signaled as faulty.

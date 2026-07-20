@@ -136,7 +136,7 @@ In WinCC, symbolic addressing is the default method.
 
 To change the default setting, follow these steps:
 
-1. Select "Options > Settings > Visualization > HMI tags" in the menu.
+1. Select "Options &gt; Settings &gt; Visualization &gt; HMI tags" in the menu.
 2. Activate the "Symbolic access" option.
 
 ---
@@ -337,7 +337,7 @@ The system alarm provides information on the cause of the faulty connection esta
    More information: AUTOHOTSPOT
 
    Connection establishment is not possible with PLCs that do not provide a certificate.
-6. The password given for the PLC in "Device configuration > Properties > General > Access protection" must match the password that is specified for the connection.
+6. The password given for the PLC in "Device configuration &gt; Properties &gt; General &gt; Access protection" must match the password that is specified for the connection.
 
 #### Error messages SIMATIC S7-1200/1500 (RT Unified)
 
@@ -351,7 +351,7 @@ The following alarms are output if the connection cannot be established:
 | 537526275 | The runtime settings of the WinCC Unified Device for controller alarms are configured for "Automatic Update", but the PLC S7-1200/1500 PLC does not support full text alarms. |
 | 537526276 | The S7-1200/1500 PLC communication resources for HMI tags are overloaded. |
 
-You can find the configured alarm texts under [HMI device] > "HMI alarms > System events".
+You can find the configured alarm texts under [HMI device] &gt; "HMI alarms &gt; System events".
 
 More information: [Reference to system events](Configuring%20alarms%20%28RT%20Unified%29.md#reference-rt-unified).
 
@@ -509,18 +509,18 @@ NAMED CONNECTIONS can only be configured for integrated connections.
 
 A "Named connection" has been created in STEP 7.
 
-The following communication partners are configured in the "Devices & Networks" editor:
+The following communication partners are configured in the "Devices &amp; Networks" editor:
 
 - SIMATIC PC with WinCC RT Professional
 - SIMATIC S7-300/400
 
 #### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Click on the HMI device in the "Network view".
-3. Select the entry "S7RTM is installed" in the Inspector window under "Parameters > XDB configuration".
+3. Select the entry "S7RTM is installed" in the Inspector window under "Parameters &gt; XDB configuration".
 
    ![Procedure](images/160543378315_DV_resource.Stream@PNG-en-US.png)
 
@@ -533,7 +533,7 @@ The following communication partners are configured in the "Devices & Networks" 
 7. Click "Highlight HMI connection" and select the HMI connection.
 
    The connection is displayed graphically in the Inspector window.
-8. Select the "NAMED CONNECTION" interface in the Inspector window under "Properties > General > Connection path > Interface" of WinCC RT Professional.
+8. Select the "NAMED CONNECTION" interface in the Inspector window under "Properties &gt; General &gt; Connection path &gt; Interface" of WinCC RT Professional.
 
 **Note**
 
@@ -595,7 +595,7 @@ To enable an HMI connection for cyclic operation, follow these steps:
 2. Select the desired HMI connection.
 
    The parameters of the connection are displayed in the graphic overview.
-3. Activate "PLC > Cyclic operation".
+3. Activate "PLC &gt; Cyclic operation".
 
 ##### Result
 
@@ -678,7 +678,7 @@ The system alarm provides information on the cause of the faulty connection esta
    ![Finding the cause of the error](images/160079814411_DV_resource.Stream@PNG-en-US.png)
 
    If required, select the function "Find connection path" to assign the optimum connection path to the connection.
-5. The password given for the PLC in "Device configuration > Properties > General > Protection" must match the password that is specified for the connection.
+5. The password given for the PLC in "Device configuration &gt; Properties &gt; General &gt; Protection" must match the password that is specified for the connection.
 
 #### SIMATIC S7-300/400 error messages (RT Unified)
 
@@ -692,7 +692,7 @@ The following alarms are output if the connection cannot be established:
 | 537526275 | The runtime settings of the WinCC Unified Device for controller alarms are configured for "Automatic Update" but the PLC S7-300/400 PLC does not support full text alarms. |
 | 537526276 | The communication resources of the S7-300/400 PLC for HMI tags are overloaded. |
 
-You can find the configured alarm texts under [HMI device] > "HMI alarms > System events".
+You can find the configured alarm texts under [HMI device] &gt; "HMI alarms &gt; System events".
 
 More information: [Reference to system events](Configuring%20alarms%20%28RT%20Unified%29.md#reference-rt-unified).
 
@@ -711,7 +711,7 @@ This section describes the communication between a SIMATIC S7-1500 Software Cont
 
 Connections are configured over the Windows-based network or through a virtual network provided together with the Software Controller. A combination of both is possible.
 
-You can configure connections to a SIMATIC S7-1500 Software Controller in the "Devices & Networks" editor.
+You can configure connections to a SIMATIC S7-1500 Software Controller in the "Devices &amp; Networks" editor.
 
 ### Communication via PROFINET (RT Unified)
 
@@ -766,14 +766,14 @@ You configure the internal connection if the Software Controller and Runtime are
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - PC system with WinCC Unified Runtime
 - SIMATIC S7-1500 Software Controller on PC system with PROFINET interface.
 
 ###### Procedure
 
-1. Open the network view in the "Devices & Networks" editor.
+1. Open the network view in the "Devices &amp; Networks" editor.
 2. Drag and drop Runtime of the PC system onto the Software Controller.
 
    ![Procedure](images/164271085323_DV_resource.Stream@PNG-de-DE.png)
@@ -885,7 +885,7 @@ Communication can be configured between the Software Controller and a routed PLC
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with PROFINET or Ethernet interface
 - SIMATIC S7-1500 Software Controller on PC system with PROFINET interface.
@@ -895,7 +895,7 @@ The following communication partners are created in the "Devices & Networks" edi
 
 ###### Procedure
 
-1. Create the PLCs in the "Devices & Networks" editor.
+1. Create the PLCs in the "Devices &amp; Networks" editor.
 
    The devices must support routing.
 2. Create a connection between the routing PLC and the routed PLC.
@@ -935,7 +935,7 @@ Communication can be configured between the Software Controller and multiple PLC
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with PROFINET or Ethernet interface
 - SIMATIC S7-1500 Software Controller on PC system with PROFINET interface.
@@ -945,7 +945,7 @@ The following communication partners are created in the "Devices & Networks" edi
 
 ###### Procedure
 
-1. Create the PLCs in the "Devices & Networks" editor.
+1. Create the PLCs in the "Devices &amp; Networks" editor.
 2. Create the connections between the PC system and the PLCs.
 3. Create integrated HMI connections between Runtime and the PLCs by dragging and dropping Runtime onto the respective PLC.
 
@@ -979,8 +979,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and changing the HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing the HMI connection parameters](images/70061866123_DV_resource.Stream@PNG-en-US.png)
 
@@ -1019,8 +1019,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFINET parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General".
 
    ![Displaying and changing PROFINET parameters of the HMI device](images/67214999563_DV_resource.Stream@PNG-en-US.png)
 
@@ -1060,8 +1060,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFINET parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFINET parameters of the PLC](images/70061907339_DV_resource.Stream@PNG-en-US.png)
 

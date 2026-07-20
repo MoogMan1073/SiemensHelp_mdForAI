@@ -541,7 +541,7 @@ The figure below shows the speed-control mode with a modulo axis.
 | --- | --- |
 | ① | Specification for setpoint frequency |
 | ② | Start of the speed-control mode with frequency F<sub>SS</sub>, acceleration ramp up to the setpoint frequency |
-| ③ | New setpoint frequency (< F<sub>SS</sub>) |
+| ③ | New setpoint frequency (&lt; F<sub>SS</sub>) |
 | ④ | Deceleration ramp up to F<sub>SS</sub>, then stop of pulse output (no stop of speed-control mode) |
 | ⑤ | Specification for setpoint frequency: Continuation of speed-control mode with F<sub>SS</sub>, acceleration ramp up to the setpoint frequency |
 | ⑥ | Specification for invalid setpoint frequency: Stop of speed-control mode |

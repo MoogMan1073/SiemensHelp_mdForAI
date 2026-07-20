@@ -74,7 +74,7 @@ WinCC Unified Runtime for PC is installed on the device.
 
 Double-click the desktop link of SIMATIC Runtime Manage created during the installation of WinCC Unified Runtime.
 
-Alternatively, start the Runtime Manager from a file explorer by double-clicking the following file: "<Path to the Unified installation directory>\bin\SIMATICRuntimeManager.exe"
+Alternatively, start the Runtime Manager from a file explorer by double-clicking the following file: "&lt;Path to the Unified installation directory&gt;\bin\SIMATICRuntimeManager.exe"
 
 For example C:\Program Files\Siemens\Automation\WinCCUnified\bin\SIMATICRuntimeManager.exe
 
@@ -407,7 +407,7 @@ Proceed as follows:
 
 1. Click the ![Changing the user interface language](images/140347454603_DV_resource.Stream@PNG-de-DE.png) button in the toolbar.
 2. Select the "General" tab.
-3. Select a language under "Language > Select language".
+3. Select a language under "Language &gt; Select language".
 4. Click "OK".
 
    Changing the interface language requires you to restart the SIMATIC Runtime Manager. To restart the Runtime Manager directly, confirm the message that opens with "OK".
@@ -558,7 +558,7 @@ In the "OPC UA Export" tab, you can export the tags of the project running in Ru
 
 The export makes it easier for you to apply an existing configuration to a new Runtime system.
 
-You can find a detailed description in the help "OPC UA - Open Platform Communications". To do this, open the following file after installing Runtime: "<Path to the Unified installation directory>\Documentation\<Language folder>\OPCWCCU<Language code>.pdf"
+You can find a detailed description in the help "OPC UA - Open Platform Communications". To do this, open the following file after installing Runtime: "&lt;Path to the Unified installation directory&gt;\Documentation\&lt;Language folder&gt;\OPCWCCU&lt;Language code&gt;.pdf"
 
 For example C:\Program Files\Siemens\Automation\WinCCUnified\Documentation\English\OPCWCCUenUS.pdf
 
@@ -572,7 +572,7 @@ In the "User administration" tab, activate the appropriate user administration. 
 
 **Configuring the user administration**
 
-The user management of a project is configured in the TIA Portal under "Runtime settings > User management". In the SIMATIC Runtime Manager, it is not possible to switch a project from local to central user management.
+The user management of a project is configured in the TIA Portal under "Runtime settings &gt; User management". In the SIMATIC Runtime Manager, it is not possible to switch a project from local to central user management.
 
 You can find information on configuring the user management in the TIA Portal in the TIA Portal online help.
 
@@ -666,9 +666,9 @@ The SIMATIC Runtime Manager has an interface with which you can start numerous f
 
    - Enter the path to the SIMATIC Runtime Manager.exe:
 
-     "<Runtime installation directory>\bin> start /wait SIMATICRuntimeManager.exe"
+     "&lt;Runtime installation directory&gt;\bin&gt; start /wait SIMATICRuntimeManager.exe"
 
-     Example: C:\Program Files\Siemens\Automation\WinCCUnified\bin> start /wait SIMATICRuntimeManager.exe
+     Example: C:\Program Files\Siemens\Automation\WinCCUnified\bin&gt; start /wait SIMATICRuntimeManager.exe
    - Enter the options with which the command line program calls the Runtime Manager.
 
      The last option must be "-c".
@@ -687,16 +687,16 @@ The SIMATIC Runtime Manager has an interface with which you can start numerous f
 
      | Command | Argument | Description |
      | --- | --- | --- |
-     | `start` | <Project ID> | Starts the project. |
-     | `stop` | <Project ID> | Stops the project. |
+     | `start` | &lt;Project ID&gt; | Starts the project. |
+     | `stop` | &lt;Project ID&gt; | Stops the project. |
      | `projectlist` | [ALL] or [RUNNING]  Default: [ALL] | `[ALL]`: Returns a list of projects loaded in the Runtime.   `[RUNNING]`: Returns the project running in Runtime. |
-     | `projectstate` | <Project ID> | Returns the state of the project running in Runtime. |
-     | `remove` | <Project ID> | Removes the project from Runtime.  If the autostart option was previously set for the project: Removes the autostart option. |
-     | `securemode` | <Password> | Sets the password for secure communication with SCS.  Enter the same password that Runtime uses for secure communication. |
-     | `setautostart` | <Project ID> | The project is started when the device is booted.  The project must have the Project type.   The option can only be set for 1 project. |
-     | `removeautostart` | <Project ID> | Removes the autostart of the project. |
-     | `fulldownload` | <Log path> | Starts the full download of a TIA Portal log.  If the project is already running in Runtime, it is stopped first before the full download.  To start the project after successful download, use the command `start`. |
-     | `deltadownload` | <Log path> | Starts the change loading of a TIA Portal log.  Check in advance if the corresponding project is downloaded and running in Runtime. |
+     | `projectstate` | &lt;Project ID&gt; | Returns the state of the project running in Runtime. |
+     | `remove` | &lt;Project ID&gt; | Removes the project from Runtime.  If the autostart option was previously set for the project: Removes the autostart option. |
+     | `securemode` | &lt;Password&gt; | Sets the password for secure communication with SCS.  Enter the same password that Runtime uses for secure communication. |
+     | `setautostart` | &lt;Project ID&gt; | The project is started when the device is booted.  The project must have the Project type.   The option can only be set for 1 project. |
+     | `removeautostart` | &lt;Project ID&gt; | Removes the autostart of the project. |
+     | `fulldownload` | &lt;Log path&gt; | Starts the full download of a TIA Portal log.  If the project is already running in Runtime, it is stopped first before the full download.  To start the project after successful download, use the command `start`. |
+     | `deltadownload` | &lt;Log path&gt; | Starts the change loading of a TIA Portal log.  Check in advance if the corresponding project is downloaded and running in Runtime. |
 
      To run multiple commands, use multiple command line calls.
 3. Press Enter.

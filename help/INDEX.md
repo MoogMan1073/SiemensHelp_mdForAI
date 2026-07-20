@@ -479,13 +479,13 @@ is one content pack; nesting follows the help's own table-of-contents tree.
         - [Using FM 452 (S7-300, S7-400)](Using%20FM%20452%20%28S7-300%2C%20S7-400%29.md) — 89 topics
     - [PID control](PID%20control.md) — 19 topics
       - [Configuring a software controller](Configuring%20a%20software%20controller.md) — 37 topics
-      - [PID control (S7-1200, S7-1500)](PID%20control%20%28S7-1200%2C%20S7-1500%29.md) — 1 topics
+      - [PID control (S7-1200, S7-1500)](PID%20control%20%28S7-1200%2C%20S7-1500%29%20%28TFPIDMain1200enUS%29.md) — 1 topics
         - [Using PID_Compact (S7-1200, S7-1500)](Using%20PID_Compact%20%28S7-1200%2C%20S7-1500%29.md) — 45 topics
         - [Using PID_3Step (S7-1200, S7-1500)](Using%20PID_3Step%20%28S7-1200%2C%20S7-1500%29.md) — 48 topics
         - [Using PID_Temp (S7-1200, S7-1500)](Using%20PID_Temp%20%28S7-1200%2C%20S7-1500%29.md) — 37 topics
       - [PID control (S7-300, S7-400, S7-1500)](PID%20control%20%28S7-300%2C%20S7-400%2C%20S7-1500%29.md) — 1 topics
         - [Using PID basic functions (S7-300, S7-400, S7-1500)](Using%20PID%20basic%20functions%20%28S7-300%2C%20S7-400%2C%20S7-1500%29.md) — 39 topics
-      - [PID control (S7-300, S7-400)](PID%20control%20%28S7-300%2C%20S7-400%29.md) — 1 topics
+      - [PID control (S7-300, S7-400)](PID%20control%20%28S7-300%2C%20S7-400%29%20%28TFPIDMain34enUS%29.md) — 1 topics
         - [Using standard PID control (S7-300, S7-400)](Using%20standard%20PID%20control%20%28S7-300%2C%20S7-400%29.md) — 72 topics
         - [Using modular PID control (S7-300, S7-400)](Using%20modular%20PID%20control%20%28S7-300%2C%20S7-400%29.md) — 20 topics
         - [Using PID Self Tuner (S7-300, S7-400)](Using%20PID%20Self%20Tuner%20%28S7-300%2C%20S7-400%29.md) — 16 topics

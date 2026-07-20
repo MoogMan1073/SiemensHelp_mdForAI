@@ -62,7 +62,7 @@ For G115D, the power unit is not added in this conventional way. It is as mentio
 To insert a power unit, proceed as follows:
 
 1. Open the device view of the drive.
-2. Select "Drives & starters > SINAMICS drives > SINAMICS G120 > Power units" in the hardware catalog.
+2. Select "Drives &amp; starters &gt; SINAMICS drives &gt; SINAMICS G120 &gt; Power units" in the hardware catalog.
 3. Select the power unit.
 4. Drag and drop the power unit to the drive unit in the device view.
 
@@ -84,7 +84,7 @@ Alternatively, you can insert a drive from the hardware catalog using drag and d
 
 While adding G115D devices, the devices are listed for PN, AS-i, and I/O variants. An empty device with the selected variant is plugged in.
 
-On adding a G115D drive an option to configure a Wall mount or a Motor mount is shown in the "Properties"->"Module Selection" tab.
+On adding a G115D drive an option to configure a Wall mount or a Motor mount is shown in the "Properties"-&gt;"Module Selection" tab.
 
 ![Configuring G115D drives](images/134863495691_DV_resource.Stream@PNG-en-US.png)
 
@@ -132,8 +132,8 @@ To find the drive in the network, proceed as follows:
 4. Click "Start search" to search for the accessible devices via the selected interface.
 
    The found devices are displayed under "Accessible devices in the target subnet".
-5. Click "Display" to display the device under "Online access > <interface> > Accessible devices updated".
-6. Select the device and perform "Online > Upload device as new station (hardware and software)".
+5. Click "Display" to display the device under "Online access &gt; &lt;interface&gt; &gt; Accessible devices updated".
+6. Select the device and perform "Online &gt; Upload device as new station (hardware and software)".
 
 #### Using online access
 
@@ -148,7 +148,7 @@ To find a device, proceed as follows:
 3. Click the "Update accessible devices" entry.
 
    The devices that can be accessed via this interface are displayed.
-4. Select the device and perform "Online > Upload device as new station (hardware and software)".
+4. Select the device and perform "Online &gt; Upload device as new station (hardware and software)".
 
 #### Result
 
@@ -156,7 +156,7 @@ The drive is uploaded to the project and displayed. Then parameterize the drive.
 
 > **Note**
 >
-> G115D drives when uploaded, the user can reconfigure the device from "Properties" -> "Module selection" page.
+> G115D drives when uploaded, the user can reconfigure the device from "Properties" -&gt; "Module selection" page.
 
 ## SINAMICS G120 drive functions
 
@@ -1731,7 +1731,7 @@ The converter has four skip frequency bands that prevent continuous motor operat
 
 ###### Minimum speed
 
-The converter prevents continuous motor operation at speeds < minimum speed.
+The converter prevents continuous motor operation at speeds &lt; minimum speed.
 
 ![Minimum speed](images/113780065547_DV_resource.Stream@PNG-en-US.png)
 
@@ -2090,7 +2090,7 @@ If you use encoderless vector control with a pulling load, then the following se
   | p1750 | **Motor model configuration** |  |
   | Bit 07 = 1 | Use speed switchover limits that are less sensitive to external effects |  |
   | p1610 | **Static torque setpoint (encoderless)** (Factory setting: 50 %)  Set a value which is higher than the maximum load torque that occurs. |  |
-- When opening the motor holding brake, enter a speed setpoint > 0.
+- When opening the motor holding brake, enter a speed setpoint &gt; 0.
 
   For speed setpoint = 0, and with the motor holding brake open, the load drops because the induction motor rotates with the slip frequency as a result of the pulling load.
 - Set the ramp-up and ramp-down times ≤ 10 s in the ramp-function generator.
@@ -2235,8 +2235,8 @@ At low speeds, the converter calculates the load torque M<sub>L</sub> from the a
 The calculation takes place under the following conditions:
 
 - Speed ≥ p1226
-- Acceleration setpoint < 8 1/s<sup>2</sup> (≙ speed change 480 rpm per s)
-- Acceleration × moment of inertia (r1493) < 0.9 × p1560
+- Acceleration setpoint &lt; 8 1/s<sup>2</sup> (≙ speed change 480 rpm per s)
+- Acceleration × moment of inertia (r1493) &lt; 0.9 × p1560
 
 **How does the converter calculate the moment of inertia?**
 
@@ -2257,10 +2257,10 @@ If all of the following conditions are met, the converter calculates the moment 
 - ① The rated accelerating torque M<sub>B</sub> must satisfy the following two conditions:
 
   - The sign of M<sub>B</sub> is the same as the direction of the actual acceleration
-  - M<sub>B</sub> > p1560 × rated motor torque (r0333)
-- ② speed > p1755
+  - M<sub>B</sub> &gt; p1560 × rated motor torque (r0333)
+- ② speed &gt; p1755
 - The converter has calculated the load torque in at least one direction of rotation.
-- Acceleration setpoint > 8 1/s<sup>2</sup> (≙ speed change 480 rpm per s)
+- Acceleration setpoint &gt; 8 1/s<sup>2</sup> (≙ speed change 480 rpm per s)
 
 ③ The converter calculates the load torque again after acceleration.
 
@@ -2510,7 +2510,7 @@ The resulting voltage boost using a linear characteristic as example
 
 **Preconditions**
 
-- Set the ramp-up time of the ramp-function generator to a value 1 s (< 1 kW) … 10 s (> 10 kW), depending on the power rating of the motor.
+- Set the ramp-up time of the ramp-function generator to a value 1 s (&lt; 1 kW) … 10 s (&gt; 10 kW), depending on the power rating of the motor.
 - Increase the starting current in steps of ≤ 5%. Excessively high values in p1310 ... p1312 can cause the motor to overheat and switch off (trip) the inverter due to overcurrent.
 
   If message A07409 appears, it is not permissible that you further increase the value of any of the parameters.
@@ -2559,7 +2559,7 @@ The resulting voltage boost using a linear characteristic as example
 
 **Preconditions**
 
-- Set the ramp-up time of the ramp-function generator to a value 1 s (< 1 kW) … 10 s (> 10 kW), depending on the power rating of the motor.
+- Set the ramp-up time of the ramp-function generator to a value 1 s (&lt; 1 kW) … 10 s (&gt; 10 kW), depending on the power rating of the motor.
 - Increase the starting current in steps of ≤ 5%. Excessively high values in p1310 ... p1312 can cause the motor to overheat and switch off (trip) the converter due to overcurrent.
 
   If message A07409 appears, it is not permissible that you further increase the value of any of the parameters.
@@ -2612,7 +2612,7 @@ The converter boosts the voltage corresponding to the starting currents p1310 �
 
 **Preconditions**
 
-- Set the ramp-up time of the ramp-function generator to a value 1 s (< 1 kW) … 10 s (> 10 kW), depending on the power rating of the motor.
+- Set the ramp-up time of the ramp-function generator to a value 1 s (&lt; 1 kW) … 10 s (&gt; 10 kW), depending on the power rating of the motor.
 - Increase the starting current in steps of ≤ 5%. Excessively high values in p1310 ... p1312 can cause the motor to overheat and switch off (trip) the converter due to overcurrent.
 
   If message A07409 appears, it is not permissible that you further increase the value of any of the parameters.
@@ -2676,17 +2676,17 @@ Using a KTY sensor, the inverter monitors the motor temperature and the sensor i
   Use the p0604 or p0605 parameter to set the temperature for the alarm and fault threshold.
 
   - Overtemperature alarm (A07910):  
-    - motor temperature > p0604 and p0610 = 0
+    - motor temperature &gt; p0604 and p0610 = 0
   - Overtemperature fault (F07011):  
     The converter responds with a fault in the following cases:   
-    - motor temperature > p0605  
-    - motor temperature > p0604 and p0610 ≠ 0
+    - motor temperature &gt; p0605  
+    - motor temperature &gt; p0604 and p0610 ≠ 0
 - Sensor monitoring (A07015 or F07016):
 
   - Wire-break:   
-    The converter interprets a resistance > 2120 Ω as a wire-break and outputs the alarm A07015. After 100 milliseconds, the converter changes to the fault state with F07016.
+    The converter interprets a resistance &gt; 2120 Ω as a wire-break and outputs the alarm A07015. After 100 milliseconds, the converter changes to the fault state with F07016.
   - Short-circuit:   
-    The converter interprets a resistance < 50 Ω as a short-circuit and outputs the alarm A07015. After 100 milliseconds, the converter changes to the fault state with F07016
+    The converter interprets a resistance &lt; 50 Ω as a short-circuit and outputs the alarm A07015. After 100 milliseconds, the converter changes to the fault state with F07016
 
 ###### Temperature switch
 
@@ -2698,9 +2698,9 @@ The converter interprets a resistance ≥ 100 Ω as being an opened temperature
 
 ![PTC sensor](images/103440835723_DV_resource.Stream@PNG-en-US.png)
 
-The converter interprets a resistance > 1650 Ω as being an overtemperature and responds according to the setting for p0610.
+The converter interprets a resistance &gt; 1650 Ω as being an overtemperature and responds according to the setting for p0610.
 
-The converter interprets a resistance < 20 Ω as being a short-circuit and responds with alarm A07015. If the alarm is present for longer than 100 milliseconds, the converter shuts down with fault F07016.
+The converter interprets a resistance &lt; 20 Ω as being a short-circuit and responds with alarm A07015. If the alarm is present for longer than 100 milliseconds, the converter shuts down with fault F07016.
 
 ###### Pt1000 sensor
 
@@ -2713,17 +2713,17 @@ Using a Pt1000 sensor, the converter monitors the motor temperature and the sens
   You set the temperature for the alarm and fault thresholds using parameters p0604 and p0605.
 
   - Overtemperature alarm (A07910):  
-    - motor temperature > p0604 and p0610 = 0
+    - motor temperature &gt; p0604 and p0610 = 0
   - Overtemperature fault (F07011):  
     The converter responds with a fault in the following cases:   
-    - motor temperature > p0605  
-    - motor temperature > p0604 and p0610 ≠ 0
+    - motor temperature &gt; p0605  
+    - motor temperature &gt; p0604 and p0610 ≠ 0
 - Sensor monitoring (A07015 or F07016):
 
   - Wire-break:   
-    The converter interprets a resistance > 2120 Ω as a wire-break and outputs the alarm A07015. After 100 milliseconds, the converter changes to the fault state with F07016.
+    The converter interprets a resistance &gt; 2120 Ω as a wire-break and outputs the alarm A07015. After 100 milliseconds, the converter changes to the fault state with F07016.
   - Short-circuit:   
-    The converter interprets a resistance < 603 Ω as a short-circuit and outputs the alarm A07015. After 100 milliseconds, the converter changes to the fault state with F07016.
+    The converter interprets a resistance &lt; 603 Ω as a short-circuit and outputs the alarm A07015. After 100 milliseconds, the converter changes to the fault state with F07016.
 
 ###### Setting parameters for the temperature monitoring
 
@@ -2763,7 +2763,7 @@ The converter monitors its temperature using the following monitoring types:
 
 | Parameter | Description |
 | --- | --- |
-| r0036 | **Power unit overload I** <sup>2</sup> **t** [%]  The I<sup>2</sup>t monitoring calculates the converter utilization based on a current reference value defined in the factory.  - Actual current > reference value: r0036 becomes higher. - Actual current < reference value: r0036 becomes lower or remains = 0. |
+| r0036 | **Power unit overload I** <sup>2</sup> **t** [%]  The I<sup>2</sup>t monitoring calculates the converter utilization based on a current reference value defined in the factory.  - Actual current &gt; reference value: r0036 becomes higher. - Actual current &lt; reference value: r0036 becomes lower or remains = 0. |
 | r0037 | **Power unit temperatures** [°C] |
 | p0290 | **Power unit overload response**   Factory setting and the ability to be changed depends on the hardware. The dependency is described in the List Manual.  A thermal overload is present if the converter temperature is greater than that specified in p0292.  You define how the converter responds if there is a risk of thermal overload using this parameter. The details are described below. |
 | p0292 | **Power unit temperature warning threshold**  (factory setting: Heat sink [0] 5 °C, power semiconductor [1] 15 °C)  The value is set as a difference to the shutdown temperature. |
@@ -3048,7 +3048,7 @@ The converter can feed back up to 100% of its rated power into the line supply (
 
 | Parameter | Description |
 | --- | --- |
-| **Limiting the regenerative feedback for V/f control (p1300 < 20)** |  |
+| **Limiting the regenerative feedback for V/f control (p1300 &lt; 20)** |  |
 | p0640 | **Current limit** (factory setting: 0.00 A, default for quick commissioning)  Sets the current limit |
 | **Limiting feedback with vector control (p1300 ≥ 20)** |  |
 | p1531 | **Power limit generative** (factory setting: -0.01 kW)  The converter calculates the parameter based on the quick commissioning or with p0340 = 5. |
@@ -3063,7 +3063,7 @@ Typical applications for dynamic braking require continuous braking and accelera
 
 ###### Principle of operation
 
-The DC link voltage increases as soon as the motor supplies regenerative power to the converter when braking. The regenerative power means that the DC link voltage in the converter increases. Depending on the DC link voltage, the converter outputs the regenerative power to the braking resistor through the braking chopper. The braking resistor converts the regenerative power into heat, therefore preventing DC link voltages > Vdc_max.
+The DC link voltage increases as soon as the motor supplies regenerative power to the converter when braking. The regenerative power means that the DC link voltage in the converter increases. Depending on the DC link voltage, the converter outputs the regenerative power to the braking resistor through the braking chopper. The braking resistor converts the regenerative power into heat, therefore preventing DC link voltages &gt; Vdc_max.
 
 ![Simplified representation of dynamic braking with respect to time](images/150647428491_DV_resource.Stream@PNG-en-US.png)
 
@@ -3073,7 +3073,7 @@ Simplified representation of dynamic braking with respect to time
 
 | Parameter | Description |  |
 | --- | --- | --- |
-| p0219 | **Braking power of the braking resistor** (factory setting: 0 kW)  For p0219 > 0, the converter deactivates the VDC_max controller.  For vector control, p0219 specifies the regenerative power limit p1531.    ![Set dynamic braking](images/94660379915_DV_resource.Stream@PNG-de-DE.png)   Set with p0219 the maximum braking power that the braking resistor must handle.  The converter extends the ramp-down time of the motor when the braking power is too low.  You can find the technical data of the braking resistor in the Power Module hardware installation manual.  The SIZER PC tool provides support for calculating the braking power. |  |
+| p0219 | **Braking power of the braking resistor** (factory setting: 0 kW)  For p0219 &gt; 0, the converter deactivates the VDC_max controller.  For vector control, p0219 specifies the regenerative power limit p1531.    ![Set dynamic braking](images/94660379915_DV_resource.Stream@PNG-de-DE.png)   Set with p0219 the maximum braking power that the braking resistor must handle.  The converter extends the ramp-down time of the motor when the braking power is too low.  You can find the technical data of the braking resistor in the Power Module hardware installation manual.  The SIZER PC tool provides support for calculating the braking power. |  |
 | p2106 | **BI: External fault 1** |  |
 | p2106 = 722.x | Monitor the signal for overtemperature of the braking resistor with digital input x of the converter. |  |
 
@@ -3260,7 +3260,7 @@ Parameters to enable and set compound braking
 
 | Parameter | Description |
 | --- | --- |
-| P3856 | **Compound braking current (%)**   With the compound braking current, the magnitude of the DC current is defined, which is additionally generated when stopping the motor for operation with V/f control to increase the braking effect.  p3856 = 0 Compound braking locked  p3856 = 1 … 250 Current level of the DC braking current as a % of the rated motor current (p0305)  Recommendation: p3856 < 100% × (r0209 - r0331) / p0305 / 2 |
+| P3856 | **Compound braking current (%)**   With the compound braking current, the magnitude of the DC current is defined, which is additionally generated when stopping the motor for operation with V/f control to increase the braking effect.  p3856 = 0 Compound braking locked  p3856 = 1 … 250 Current level of the DC braking current as a % of the rated motor current (p0305)  Recommendation: p3856 &lt; 100% × (r0209 - r0331) / p0305 / 2 |
 | r3859.0 | **Status word, compound braking**   r3859.0 = 1: Compound braking is active |
 
 | Symbol | Meaning |
@@ -3334,7 +3334,7 @@ The converter interprets the following events as power failure:
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| **Unexpected machine motion caused by the active automatic restart function**  When the "automatic restart" function is active (p1210 > 1), the motor automatically starts after a power failure. Unexpected movement of machine parts can result in serious injury and material damage.  - Block off hazardous areas within the machine to prevent inadvertent access. |  |
+| **Unexpected machine motion caused by the active automatic restart function**  When the "automatic restart" function is active (p1210 &gt; 1), the motor automatically starts after a power failure. Unexpected movement of machine parts can result in serious injury and material damage.  - Block off hazardous areas within the machine to prevent inadvertent access. |  |
 
 If it is possible that the motor is still rotating for a longer period of time after a power failure or after a fault, then you must also activate the "flying restart" function.
 
@@ -3365,7 +3365,7 @@ Setting the automatic restart
 | --- | --- | --- |
 | p1210 | **Automatic restart mode** (factory setting: 0) |  |
 | 0: 1: 4: 6: 14: 16: 26: | Disable automatic restart. Acknowledge all faults without restarting. Restart after power failure without further restart attempts. Restart after fault with further restart attempts. Restart after power failure after manual acknowledgement. Restart after fault after manual acknowledgement. Acknowledgement of all faults and restart with ON/OFF1 = 1 command. |  |
-| p1211 | **Automatic restart start attempts** (factory setting: 3)  This parameter is only effective for the settings p1210 = 4, 6, 14, 16, 26.  You define the maximum number of start attempts using p1211. After each successful acknowledgement, the converter decrements its internal counter of start attempts by 1.  p1211 = 0 or 1: The converter only tries to start once. After an unsuccessful start attempt, the converter issues fault F07320.  p1211 = n, n > 1: The converter tries to start n-times The converter outputs fault F07320 if the nth starting attempt was unsuccessful.  The converter sets the start attempt counter back again to the value of p1211, if one of the following conditions is fulfilled:  - After a successful start attempt, the time in p1213[1] has expired. - After fault F07320, switch off the motor (OFF1) and acknowledge the fault. - You change the start value p1211 or the mode p1210. |  |
+| p1211 | **Automatic restart start attempts** (factory setting: 3)  This parameter is only effective for the settings p1210 = 4, 6, 14, 16, 26.  You define the maximum number of start attempts using p1211. After each successful acknowledgement, the converter decrements its internal counter of start attempts by 1.  p1211 = 0 or 1: The converter only tries to start once. After an unsuccessful start attempt, the converter issues fault F07320.  p1211 = n, n &gt; 1: The converter tries to start n-times The converter outputs fault F07320 if the nth starting attempt was unsuccessful.  The converter sets the start attempt counter back again to the value of p1211, if one of the following conditions is fulfilled:  - After a successful start attempt, the time in p1213[1] has expired. - After fault F07320, switch off the motor (OFF1) and acknowledge the fault. - You change the start value p1211 or the mode p1210. |  |
 | p1212 | **Automatic restart wait time start attempt** (factory setting: 1.0 s)  This parameter is only effective for the settings p1210 = 4, 6, 26.  Examples for setting this parameter:  |  |  |  | | --- | --- | --- | | 1. After a power failure, a certain time must elapse before the motor can be switched-on, e.g. because other machine components are not immediately ready. In this case, set p1212 longer than the time, after which all of the fault causes have been removed. 2. In operation, the converter develops a fault condition. The lower you select p1212, then the sooner the converter attempts to switch-on the motor again. |  |  | |  |
 | p1213[0] | **Automatic restart monitoring time  for restart** (factory setting: 60 s)  This parameter is only effective for the settings p1210 = 4, 6, 14, 16, 26.  With this monitoring function, you limit the time in which the converter may attempt to automatically switch-on the motor again.  The monitoring function starts when a fault is identified and ends with a successful start attempt. If the motor has not successfully started after the monitoring time has expired, fault F07320 is signaled.  Set the monitoring time longer than the sum of the following times:  + p1212 + Time that the converter requires to start the motor on the fly. + Motor magnetizing time (p0346) + 1 second  You deactivate the monitoring function with p1213 = 0. |  |
 | p1213[1] | **Automatic restart monitoring time  to reset the fault counter** (factory setting: 0 s)  This parameter is only effective for the settings p1210 = 4, 6, 14, 16, 26.  Using this monitoring time, you prevent that faults, which continually occur within a certain time period, are automatically acknowledged each time.  The monitoring function starts with a successful start attempt and ends after the monitoring time has expired.  If, during the monitoring time p1213[1], the converter made more successful starting attempts than defined in p1211, the converter interrupts the automatic restart function and signals fault F07320. To switch on the motor again you must acknowledge the fault and switch on the converter (ON/OFFS1 = 1). |  |
@@ -4026,7 +4026,7 @@ Algorithm:
 
 ![Method of operation](images/103444080779_DV_resource.Stream@PNG-en-US.png)
 
-Constraint: LL < LU
+Constraint: LL &lt; LU
 
 ###### PT1 (smoothing element)
 
@@ -4047,7 +4047,7 @@ When t = 3T, the transfer function reaches approximately 95% of its full-scale v
 
 The internally fixed proportional gain is 1 and cannot be changed.
 
-If T/TA is sufficiently large (T/TA > 10), the transfer function has the following characteristic:
+If T/TA is sufficiently large (T/TA &gt; 10), the transfer function has the following characteristic:
 
 Y (t) = X · (1 - e-t/T)
 
@@ -4786,10 +4786,10 @@ p2371 specifies the sequence for activating and deactivating the motors
 
 In order that the "Cascade control" and "Hibernation mode" functions operate together without any conflict, you must make the following settings in the cascade control:
 
-- p2392 < p2373
+- p2392 &lt; p2373
 
   The restart value of the hibernation mode (p2392) must be lower than the activation threshold for the cascade control (p2373).
-- p2373 < p2376
+- p2373 &lt; p2376
 
   The activation threshold for cascade control (p2373) must be lower than the overload threshold for the cascade control (p2376).
 - It is not permissible that the main drive is in the hibernation mode.
@@ -4953,7 +4953,7 @@ If the speed setpoint falls below the bypass speed threshold, the converter swit
 | .07 | 1 signal: Bypass command (for p1266) is active |  |
 | .10 | 1 signal: Bypass in the process operation is active |  |
 | .11 | 1 signal: Bypass is enabled |  |
-| p1262 | **Bypass dead time** (factory setting: 1 s)  Changeover time of the contactor. Setting condition: p1262 > p0347 |  |
+| p1262 | **Bypass dead time** (factory setting: 1 s)  Changeover time of the contactor. Setting condition: p1262 &gt; p0347 |  |
 | p1263 | **Bypass delay time** (factory setting: 1 s)  Delay time for switching from line operation to converter operation. |  |
 | p1264 | **Bypass delay time** (factory setting: 1 s)  Delay time for switching from converter operation to line operation. |  |
 | p1265 | **Bypass speed threshold** (factory setting: 1480 rpm)  Speed threshold for switching to line operation. |  |
@@ -5080,7 +5080,7 @@ Hibernation mode using an external setpoint without boost
 | --- | --- |
 | r2273 | **Display of the setpoint/actual value deviation of the technology controller** |
 | r2397 | **Actual hibernation mode output speed**  Actual boost speed before the pulses are inhibited or the actual start speed after restart. |
-| r2399 | **Hibernation mode status word**  00 Hibernation mode enabled (p2398 <> 0) 01 Hibernation mode active  02 Hibernation mode delay time active  03 Hibernation mode boost active  04 Hibernation mode motor switched off  05 Hibernation mode motor switched off, cyclic restart active 06 Energy-saving mode motor restarts  07 Hibernation mode supplies the total setpoint of the ramp-function generator 08 Hibernation mode bypasses the ramp-function generator in the setpoint channel |
+| r2399 | **Hibernation mode status word**  00 Hibernation mode enabled (p2398 &lt;&gt; 0) 01 Hibernation mode active  02 Hibernation mode delay time active  03 Hibernation mode boost active  04 Hibernation mode motor switched off  05 Hibernation mode motor switched off, cyclic restart active 06 Energy-saving mode motor restarts  07 Hibernation mode supplies the total setpoint of the ramp-function generator 08 Hibernation mode bypasses the ramp-function generator in the setpoint channel |
 
 ### Technology
 
@@ -5368,7 +5368,7 @@ When passing the STOP cam, the converter brakes the axis at the OFF3 ramp-down t
 
 ###### Procedure
 
-- Select the "Limit" -> "Traversing range limitation" screen:
+- Select the "Limit" -&gt; "Traversing range limitation" screen:
 
   ![Procedure](images/127715191307_DV_resource.Stream@PNG-en-US.png)
 - ① Enable the software limit switch.
@@ -5614,8 +5614,8 @@ Parameters for this function
 | --- | --- |
 | p2547 | **Cam switching position 1** |
 | p2548 | **Cam switching position 2** |
-| r2683.8 | **Position actual value <= cam switching position 1** |
-| r2683.9 | **Position actual value <= cam switching position 2** |
+| r2683.8 | **Position actual value &lt;= cam switching position 1** |
+| r2683.9 | **Position actual value &lt;= cam switching position 2** |
 
 ##### Referencing
 
@@ -7346,7 +7346,7 @@ You are online with Startdrive.
 
 ![Figure](images/127624550795_DV_resource.Stream@PNG-en-US.png)
 
-Set a delay time > OFF3 ramp down time.  
+Set a delay time &gt; OFF3 ramp down time.  
 ❒
 
 | Parameter | Description |
@@ -8895,7 +8895,7 @@ The two diagrams show the recommended steps to take during the acceptance test. 
 | 2. | **Switch on the motor** |  |  |  |
 | - Select SLS with the SLS level to be checked. |  |  |  |  |
 | - The converter signals the active function SLS via PROFIsafe (status word 1, bit 4 = 1) or via its fail-safe output. |  |  |  |  |
-| - Specify a speed setpoint < SLS level. |  |  |  |  |
+| - Specify a speed setpoint &lt; SLS level. |  |  |  |  |
 | - Switch on the motor within five seconds of selecting SLS (ON command). Note: If you wait longer than five seconds for the ON command, STO is activated. In this case, deselect SLS and then select it again. |  |  |  |  |
 | - Ensure that the correct motor is running. |  |  |  |  |
 | 3. | **Deactivate the setpoint limitation for the acceptance test** |  |  |  |
@@ -8941,7 +8941,7 @@ Function "Safe Speed Monitor" (SSM)
 | - Signals: r9714[0], r9720 and r9722. |  |  |  |  |
 | - Select the time interval to be recorded and the pre-trigger so that the SS1 selection and the SS1 → STO transition are displayed. |  |  |  |  |
 | 2. | **Switch on the motor** |  |  |  |
-| - Specify a speed setpoint > SSM limit. |  |  |  |  |
+| - Specify a speed setpoint &gt; SSM limit. |  |  |  |  |
 | Upper diagram:  The "speed below limit value" checkback signal remains active when the motor is switched off. |  | Lower diagram:  The "speed below limit value" checkback signal becomes inactive when the motor is switched off. |  |  |
 | - Select STO . |  | - Switch on the motor (ON command). |  |  |
 | - Deselect STO again. |  |  |  |  |
@@ -9304,7 +9304,7 @@ If you still want to change the PROFIsafe address, proceed as described below.
 **Entering the PROFIsafe address in the telegram configuration**
 
 1. In the inspector window, click "Cyclic data exchange" below the respective interface.
-2. Click <Insert telegram> under "Cyclic data exchange".
+2. Click &lt;Insert telegram&gt; under "Cyclic data exchange".
 3. Select the safety telegram that you want to use in the "Telegram" drop-down list.
 4. Click "Safety setpoints / actual values" to display the "Safety setpoints / actual values" dialog box.
 

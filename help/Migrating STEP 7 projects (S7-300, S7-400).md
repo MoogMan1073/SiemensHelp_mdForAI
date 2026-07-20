@@ -483,7 +483,7 @@ Blocks that were know-how protected before the migration remain know-how protect
 The following options are available for disabling a block's know-how protection:
 
 - Prior to the migration, remove the KNOW_HOW_PROTECT attribute from the source and create a block without know-how protection from this. Then migrate this block.
-- Import the source into the TIA Portal and create a block without know-how protection from this. Then use the "Edit > Know-how protection" menu command to provide the block with a password.
+- Import the source into the TIA Portal and create a block without know-how protection from this. Then use the "Edit &gt; Know-how protection" menu command to provide the block with a password.
 
 #### Switch-over from LAD/FBD to STL
 
@@ -725,7 +725,7 @@ During the migration, the marker "%" will be added for a detected absolute data 
 
 #### Logarithmic functions "EXPD" and "LOG"
 
-Logarithmic functions "EXPD" and "LOG" are no longer available in the TIA Portal. All usages of "EXPD" are converted to the standard notation "10**(<expression>)" during the migration. All usages of "LOG" are converted to the standard notation "LN(<expression>)" during the migration.
+Logarithmic functions "EXPD" and "LOG" are no longer available in the TIA Portal. All usages of "EXPD" are converted to the standard notation "10**(&lt;expression&gt;)" during the migration. All usages of "LOG" are converted to the standard notation "LN(&lt;expression&gt;)" during the migration.
 
 #### Mathematical instruction "MAX"
 
@@ -735,7 +735,7 @@ The following example shows how you can find the "larger" of two time data types
 
 | SCL |  |
 | --- | --- |
-| #xs_tod := #xi_tod + #xi_time;   // statt #xstod1 := MAX(IN1:=#xtod1, IN2:=#xstod1);   IF #xs_tod < #xi_tod THEN   #xs_tod := #xi_tod;     END_IF;     // statt #xsd1 := MAX(IN1:=#xd1, IN2:=#xsd1);   IF #xi_date <#xs_date THEN   #xs_date := #xi_date;     END_IF;  #xs_date_time := #xi_date_time + #xi_time;   // statt #xs_date_time := MAX(IN1:=#xi_date_time, IN2:=#xs_date_time);   IF #xi_date_time <#xs_date_time THEN   #xs_date_time := #xi_date_time;     END_IF; |  |
+| #xs_tod := #xi_tod + #xi_time;   // statt #xstod1 := MAX(IN1:=#xtod1, IN2:=#xstod1);   IF #xs_tod &lt; #xi_tod THEN   #xs_tod := #xi_tod;     END_IF;     // statt #xsd1 := MAX(IN1:=#xd1, IN2:=#xsd1);   IF #xi_date &lt;#xs_date THEN   #xs_date := #xi_date;     END_IF;  #xs_date_time := #xi_date_time + #xi_time;   // statt #xs_date_time := MAX(IN1:=#xi_date_time, IN2:=#xs_date_time);   IF #xi_date_time &lt;#xs_date_time THEN   #xs_date_time := #xi_date_time;     END_IF; |  |
 |  |  |
 
 #### Floating point numbers - exponential display
@@ -766,9 +766,9 @@ Use S5TIME_TO_TIME instead of S5TI_TIM (FC 33)
 
 "TAG_TIME" := S5TIME_TO_TIME ("TAG_S5TIME");
 
-Use the comparator operator <> instead of NE_DT (FC 9):
+Use the comparator operator &lt;&gt; instead of NE_DT (FC 9):
 
-IF #D1 <> #D2 THEN "MyOutput" : = 10;
+IF #D1 &lt;&gt; #D2 THEN "MyOutput" : = 10;
 
 END_IF;
 
@@ -780,11 +780,11 @@ END_IF;
 
 #### Interruption of strings with "$"
 
-In STEP 7 Classic, strings in SCL could be interrupted by special characters, e.g., control characters or non-printable characters. These characters were identified by the interruption sequences "$>" and "$<".
+In STEP 7 Classic, strings in SCL could be interrupted by special characters, e.g., control characters or non-printable characters. These characters were identified by the interruption sequences "$&gt;" and "$&lt;".
 
 Example:
 
-#myString := 'Test1$> $<Test1';
+#myString := 'Test1$&gt; $&lt;Test1';
 
 This option no longer exists in the TIA Portal. String interruptions will be deleted during the migration.
 
@@ -849,7 +849,7 @@ PLC alarms are migrated with all parameters and including all alarm classes. Ala
 
 #### Requirement
 
-A requirement is that the CPU-wide assignment of alarm numbers is selected in the initial project. Before the migration, select the "Always assign CPU-oriented unique message numbers" option in the initial project, if necessary, and perform "Save as > With reorganization".
+A requirement is that the CPU-wide assignment of alarm numbers is selected in the initial project. Before the migration, select the "Always assign CPU-oriented unique message numbers" option in the initial project, if necessary, and perform "Save as &gt; With reorganization".
 
 #### Restrictions
 

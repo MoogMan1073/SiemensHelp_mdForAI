@@ -42,13 +42,13 @@ This section contains information on the following topics:
 This section contains information on the following topics:
 
 - [Module access protection / UDP buffering / file system](#module-access-protection-udp-buffering-file-system)
-- [Data transfer > 240 bytes](#data-transfer-240-bytes)
+- [Data transfer &gt; 240 bytes](#data-transfer-240-bytes)
 
 #### Module access protection / UDP buffering / file system
 
 ##### Reference
 
-Making special settings in the "Properties > General > Settings" parameter group
+Making special settings in the "Properties &gt; General &gt; Settings" parameter group
 
 Depending on the CP type, you will find settings relating to the following areas and these are described below:
 
@@ -88,13 +88,13 @@ Enabled: When files are placed in RAM, the CP distinguishes between upper- and l
 
 ##### Reference
 
-Making special settings in the "Properties > General > Settings" parameter group
+Making special settings in the "Properties &gt; General &gt; Settings" parameter group
 
-Depending on the CP type, you will find setting "Data transfer > 240 bytes"
+Depending on the CP type, you will find setting "Data transfer &gt; 240 bytes"
 
-##### Notes on data transfer > 240 bytes
+##### Notes on data transfer &gt; 240 bytes
 
-- Data transfer > 240 bytes is supported by the newer versions of the CPs. Refer to the information in the documentation of your Ethernet CP.
+- Data transfer &gt; 240 bytes is supported by the newer versions of the CPs. Refer to the information in the documentation of your Ethernet CP.
 - With the S7-300 series, remember that this configuration uses one connection resource (free connection for S7 functions) on the S7-300 CPU. CPU connection resources are also used, for example, by S7-300 CPs in FMS mode or by programming devices or OPs.
 
 ### Ethernet / PROFINET interface
@@ -118,7 +118,7 @@ This section contains information on the following topics:
 
 ###### Reference
 
-Making special settings for the PROFINET interface in the "Properties > General >PROFINET interface > Advanced options > Interface options" parameter group
+Making special settings for the PROFINET interface in the "Properties &gt; General &gt;PROFINET interface &gt; Advanced options &gt; Interface options" parameter group
 
 ###### Keepalive frames (only with TCP and ISO-on-TCP connections)
 
@@ -407,7 +407,7 @@ The forwarding of the CP time to the CPU depends on the firmware version of the 
 
   If both modules in a station have one of the mentioned firmware versions, the time of the CP can be forwarded automatically to the CPU.
 
-  A condition for this is: The "CPU synchronizes the modules of the device" option is selected for the CPU under "PROFINET Interface > Time-of-day synchronization".
+  A condition for this is: The "CPU synchronizes the modules of the device" option is selected for the CPU under "PROFINET Interface &gt; Time-of-day synchronization".
 
   Then all intelligent modules of the station are synchronized with the CPU time.
 
@@ -678,7 +678,7 @@ This section contains information on the following topics:
 
 ##### Reference
 
-Making settings for the interface properties in the "Properties > General > IP access protection" parameter group.
+Making settings for the interface properties in the "Properties &gt; General &gt; IP access protection" parameter group.
 
 ##### Overview
 
@@ -765,7 +765,7 @@ With Advanced CPs as of CP 343-1 Advanced (GX30) and CP 443-1 Advanced (GX20) th
 
 ##### Reference
 
-Making settings for the interface properties in the "Properties > General > IP access protection" parameter group.
+Making settings for the interface properties in the "Properties &gt; General &gt; IP access protection" parameter group.
 
 ##### Rules for entering the IP addresses:
 
@@ -819,7 +819,7 @@ Access permissions and short designations
 
 #### Reference
 
-Setting user permissions in the "Properties > General > User management" parameter group
+Setting user permissions in the "Properties &gt; General &gt; User management" parameter group
 
 #### Meaning of user management
 
@@ -871,7 +871,7 @@ User entries are always linked to a password. Exception: The "All" entry is not 
 
 #### Reference
 
-Setting the tags configured on the CPU in the "Properties > General > Tag declaration" parameter group.
+Setting the tags configured on the CPU in the "Properties &gt; General &gt; Tag declaration" parameter group.
 
 #### Meaning of the tag declaration
 
@@ -948,7 +948,7 @@ Below the table:
 
 #### Multiple selection of tags
 
-You can select more than one tag using the <Shift> and <Ctrl> keys.
+You can select more than one tag using the &lt;Shift&gt; and &lt;Ctrl&gt; keys.
 
 #### Check for changes
 
@@ -984,7 +984,7 @@ This section contains information on the following topics:
 
 ##### Reference
 
-Data acquisition for automatic creation of a file allocation table in the "Properties > General > FTP configuration" parameter group.
+Data acquisition for automatic creation of a file allocation table in the "Properties &gt; General &gt; FTP configuration" parameter group.
 
 With the information in the file allocation table, it is possible to address data blocks in one or more CPUs (up to 4) in an S7 station.
 
@@ -1018,7 +1018,7 @@ When operating as an FTP server, if the Ethernet CP receives an FTP command, it 
 
 You can create the file allocation table and transfer it to the CP as follows:
 
-- With an entry in the parameter group "Properties > FTP configuration" described here
+- With an entry in the parameter group "Properties &gt; FTP configuration" described here
 
   The file allocation table is then created in the FTP configuration based on this information and downloaded automatically to the CP along with the configuration data.
 - By creating a file_db.txt file directly
@@ -1111,7 +1111,7 @@ Note: The file DB header described here is largely identical to the file DB head
 
 #### Reference
 
-Setting the input/output addresses in the "Properties > General > I/O addresses" parameter group
+Setting the input/output addresses in the "Properties &gt; General &gt; I/O addresses" parameter group
 
 #### Meaning
 
@@ -1175,7 +1175,7 @@ Establish a physical connection between the programming device and the SIMATIC S
 
 Click the "Web diagnostics" button to display the result of the module diagnostics in the Web browser. The content is supplied by the integrated HTTP server of the module.
 
-Start diagnostics in the Web browser in the "Properties > General > Web diagnostics" parameter group.
+Start diagnostics in the Web browser in the "Properties &gt; General &gt; Web diagnostics" parameter group.
 
 - "Access via" option
 
@@ -1324,7 +1324,7 @@ If there is more than one CP in a station connected to the same network, only a 
 
 #### Reference
 
-Setting the properties for PROFIBUS CPs in the "Properties > Settings > Field device parameter settings" parameter group.
+Setting the properties for PROFIBUS CPs in the "Properties &gt; Settings &gt; Field device parameter settings" parameter group.
 
 #### Field device parameter settings (data record routing)
 
@@ -1340,9 +1340,9 @@ As default, this function is enabled. Since the function requires additional mem
 
 Depending on the module type, you configure the PROFIBUS mode in the following parameter group:
 
-- S7-300/400 CPs, PC-CPs: Parameter group "Operating mode" (or "Properties > General > Operating mode".
-- S7-1200/1500 CPs: Parameter group "PROFIBUS interface / DP interface > Operating mode"
-- LINK modules: Parameter group "DP/MPI interface > Operating mode"
+- S7-300/400 CPs, PC-CPs: Parameter group "Operating mode" (or "Properties &gt; General &gt; Operating mode".
+- S7-1200/1500 CPs: Parameter group "PROFIBUS interface / DP interface &gt; Operating mode"
+- LINK modules: Parameter group "DP/MPI interface &gt; Operating mode"
 
 #### Relationship between CP mode and function of the module
 
@@ -1438,7 +1438,7 @@ The name of the function varies depending on the CP type.
 
 #### Reference
 
-Setting the DP slave type for PROFIBUS DP in the "Properties > General > Operating mode" parameter group.
+Setting the DP slave type for PROFIBUS DP in the "Properties &gt; General &gt; Operating mode" parameter group.
 
 #### DP mode
 
@@ -1519,7 +1519,7 @@ This section contains information on the following topics:
 
 #### Reference
 
-Making special settings in the "Properties > General > Settings" parameter group
+Making special settings in the "Properties &gt; General &gt; Settings" parameter group
 
 Depending on the CP type, you will see the option "Module replacement without PG"
 
@@ -1539,7 +1539,7 @@ If you select this option, you occupy additional resources on your CPU. When you
 
 #### Reference
 
-Making special settings in the "Properties > General > Settings" parameter group
+Making special settings in the "Properties &gt; General &gt; Settings" parameter group
 
 Depending on the CP type, you will see the option "Multiplex OP connections"
 
@@ -1581,7 +1581,7 @@ This section contains information on the following topics:
 
 #### Relevance
 
-ISO transport connections configuration in the parameter group "Properties > General > Dynamics".
+ISO transport connections configuration in the parameter group "Properties &gt; General &gt; Dynamics".
 
 #### Avoid connection abort with appropriate update
 
@@ -1612,7 +1612,7 @@ An immediate reaction is necessary only in certain situations with these job typ
 
 #### Parameters for E-mail delivery
 
-In "Properties > Address details", you enter the parameters required for the delivery of the E-mail. You can set the following parameters:
+In "Properties &gt; Address details", you enter the parameters required for the delivery of the E-mail. You can set the following parameters:
 
 |  |  |  |
 | --- | --- | --- |
@@ -1655,7 +1655,7 @@ For configuring the local and partner TSAPs, there is an "ISO-on-TCP-1" default 
 
 #### Relevance
 
-ISO transport connections / ISO-on-TCP connections / TCP connections configuration in the parameter group "Properties > General > Options".
+ISO transport connections / ISO-on-TCP connections / TCP connections configuration in the parameter group "Properties &gt; General &gt; Options".
 
 #### How connection establishment affects FETCH/WRITE
 
@@ -1777,7 +1777,7 @@ Block-related alarms can be signaled
 - As conditional events
 - As simple events (simple events for compatibility with older applications that do not generally expect conditional events).
 
-If you select "Block-related alarms", the OPC server then registers for alarm messages on this connection. The received alarms are transferred via the Alarms&Events OPC interface.
+If you select "Block-related alarms", the OPC server then registers for alarm messages on this connection. The received alarms are transferred via the Alarms&amp;Events OPC interface.
 
 Diagnostic alarms are derived from the system status list (SSL) of the S7 device. Diagnostic events that have not yet been reported to the OPC client are reported if it has registered for diagnostic alarms. Diagnostic events have no status and do not therefore need to be acknowledged.
 
@@ -1801,7 +1801,7 @@ This section contains information on the following topics:
 
 #### Reference
 
-Display and setting of the properties for PROFINET IO devices on the DP master system of an IE/PB LINK PN IO in the "Properties > General > PROFINET device number" parameter group.
+Display and setting of the properties for PROFINET IO devices on the DP master system of an IE/PB LINK PN IO in the "Properties &gt; General &gt; PROFINET device number" parameter group.
 
 #### Parameters
 
@@ -1883,7 +1883,7 @@ You can use the LINK in the following operating modes:
 
 #### Configuring DP mode
 
-Configuration of the operating mode of the IE/PB LINK in the parameter group "DP/MPI interface > Operating mode"
+Configuration of the operating mode of the IE/PB LINK in the parameter group "DP/MPI interface &gt; Operating mode"
 
 For additional details, see [Configuring DP mode](#configuring-dp-mode-s7-300-s7-400-pc).
 

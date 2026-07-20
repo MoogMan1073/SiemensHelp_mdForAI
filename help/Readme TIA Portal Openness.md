@@ -291,7 +291,7 @@ With TIA Portal V19 onwards, Label value for Profinet / Ethernet interface ports
 
 **Change in behavior of IO Link port handling**
 
-With the TIA Portal V18 Update 2 onwards, IO Link port shall be exchanged with Label value as 'C/Q<n>' where n is the port number. for example: C/Q1, C/Q2 etc.,   
+With the TIA Portal V18 Update 2 onwards, IO Link port shall be exchanged with Label value as 'C/Q&lt;n&gt;' where n is the port number. for example: C/Q1, C/Q2 etc.,   
 For AML exchange of IO Link configuration in TIA Portal V18 Update 2 (via S7-PCT), use "S7-PCT 3.5 SP3 Update 3" version or higher.
 
 ### WebServerUserManagement
@@ -306,9 +306,9 @@ However, until TIA Portal V18, the WebServerUserManagement will be operational, 
 
 **Changes in behaviour of online legitimation call via UMAC on PLC**
 
-If the Openness application is running with a TIA Portal Openness API <= 18, the online legitimation via Openness is still possible via the download and upload configurations. But only if the used PLC is protected by a legacy ProtectionLevel legitimation.
+If the Openness application is running with a TIA Portal Openness API &lt;= 18, the online legitimation via Openness is still possible via the download and upload configurations. But only if the used PLC is protected by a legacy ProtectionLevel legitimation.
 
-With TIA Portal Openness API >= V19, all legitimation calls, especially the new UMAC on PLC, will be delivered to the event handler of the online legitimation event of the ConnectionConfiguration class. In case the OnlineAuthenticationConfiguration type is not handled there by the user code, there will be a second call to the callback method of the particular feature (e.g., download or upload). But there only the old protection mechanisms (until V18) can be handled.
+With TIA Portal Openness API &gt;= V19, all legitimation calls, especially the new UMAC on PLC, will be delivered to the event handler of the online legitimation event of the ConnectionConfiguration class. In case the OnlineAuthenticationConfiguration type is not handled there by the user code, there will be a second call to the callback method of the particular feature (e.g., download or upload). But there only the old protection mechanisms (until V18) can be handled.
 
 ### Enforcement of strict password policies
 
@@ -329,7 +329,7 @@ MultilingualText multilingualToolTipText1 = ((HmiButton)screenItem1).ToolTipText
 
 MultilingualTextItem multilingualTextItem1 = multilingualToolTipText1.Items.Find(language);
 
-multilingualTextItem1.Text = "<body><p>Modified button text from Openness</p></body>";
+multilingualTextItem1.Text = "&lt;body&gt;&lt;p&gt;Modified button text from Openness&lt;/p&gt;&lt;/body&gt;";
 
 clipboard
 
@@ -341,15 +341,15 @@ In TIA Portal V19, the support for Named Value Types has been introduced (only f
 In Openness, a new scope "NamedValueConstant" is introduced in the SimaticML schema from V19 to support the usage of a Named Value Type in Program Blocks or PLC Data Types.  
 The Named Value Types which are used in PLC programming artifacts (Program Blocks, PLC Data Types) are visible in the new scope "NamedValueConstant" during import/export via SimaticML.
 
-<Access Scope="NamedValueConstant" UId="27">
+&lt;Access Scope="NamedValueConstant" UId="27"&gt;
 
-<Constant Name="_.siemens.simatic.Named_value_type_1#UNDEFs" UId="28"/>
+&lt;Constant Name="_.siemens.simatic.Named_value_type_1#UNDEFs" UId="28"/&gt;
 
-</Access>
+&lt;/Access&gt;
 
-<Token Text=";" UId="31"/>
+&lt;Token Text=";" UId="31"/&gt;
 
-<NewLine Num="2" UId="32"/>
+&lt;NewLine Num="2" UId="32"/&gt;
 
 clipboard
 

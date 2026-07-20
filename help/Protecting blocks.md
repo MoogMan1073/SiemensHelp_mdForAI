@@ -72,7 +72,7 @@ The code of the block, on the other hand, is protected from unauthorized reading
 > - Only the non-protected data is compared in offline-online comparison of know-how protected blocks.
 > - You will no longer be able to access the block if you do not have the password.
 > - If you add a know-how-protected block to a library, the master copy created will also be know-how protected.
-> - You will find information on whether or not the block can be used as protected library item in the block properties under "Compilation > Library conformance". For this purpose, the block cannot use any tags from the operand areas Output (Q), Input (I), Bit memory (M), Timer function (T) or Count function (C), and cannot access data blocks.
+> - You will find information on whether or not the block can be used as protected library item in the block properties under "Compilation &gt; Library conformance". For this purpose, the block cannot use any tags from the operand areas Output (Q), Input (I), Bit memory (M), Timer function (T) or Count function (C), and cannot access data blocks.
 > - Cross-references to used tags, bit memories, inputs and outputs in know-how-protected blocks are only displayed if the relevant blocks were unlocked before the cross-reference list was created by entering the correct password.
 > - Automatic renumbering and manual renumbering without password of know-how-protected blocks is only possible for CPUs of the series S7-1500 and S7-1200 (V4). The know-how protection must also be set with a TIA Portal version V13 SP1 or higher. If these requirements for a know-how-protected block are not met, the loadable binary component of the block is no longer up-to-date when you change the number. In this case, the block must be recompiled before downloading it to a device. For know-how-protected blocks, this is only possible with the correct password. Keep this in mind particularly if you want to copy a know-how-protected block to another device in which there is already a block with the same number.
 > - Always pass on a project that includes know-how-protected blocks as a project archive or library archive. In this way, you ensure that the know-how protection cannot be bypassed.
@@ -149,7 +149,7 @@ To install and activate a password provider, proceed as follows:
 3. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-4. In the area navigation, select the "Password provider > Available password providers" group.
+4. In the area navigation, select the "Password provider &gt; Available password providers" group.
 
    The newly installed password provider is displayed in the table of available password providers.
 5. Select the check box in the "Status" column to use the password provider.
@@ -179,47 +179,47 @@ The settings file must have the following content:
 
 XML
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<Document>
+&lt;Document&gt;
 
-<Settings.Settings ID="0">
+&lt;Settings.Settings ID="0"&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<Settings.General ID="1" AggregationName="General">
+&lt;Settings.General ID="1" AggregationName="General"&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<Settings.PasswordProviders ID="3" AggregationeName="PasswordProviders">
+&lt;Settings.PasswordProviders ID="3" AggregationeName="PasswordProviders"&gt;
 
-<AttributeList>
+&lt;AttributeList&gt;
 
-<EnablePasswordPreference>
+&lt;EnablePasswordPreference&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</EnablePasswordPreference>
+&lt;/EnablePasswordPreference&gt;
 
-<DefaultPasswordPreference>
+&lt;DefaultPasswordPreference&gt;
 
-<Value>Advanced</Value>
+&lt;Value&gt;Advanced&lt;/Value&gt;
 
-</DefaultPasswordPreference>
+&lt;/DefaultPasswordPreference&gt;
 
-</AttributeList>
+&lt;/AttributeList&gt;
 
-</Settings.PasswordProviders>
+&lt;/Settings.PasswordProviders&gt;
 
-</ObjectList>
+&lt;/ObjectList&gt;
 
-</Settings.General>
+&lt;/Settings.General&gt;
 
-</ObjectList>
+&lt;/ObjectList&gt;
 
-</Settings.Settings>
+&lt;/Settings.Settings&gt;
 
-</Document>
+&lt;/Document&gt;
 
 You specify the settings for the password provider in the element "Settings.PasswordProviders":
 
@@ -237,7 +237,7 @@ You specify the settings for the password provider in the element "Settings.Pass
 
   The default setting is "Manual".
 
-  If the "CorporateSettings.xml" file already exists and has different settings, supplement the element "Settings.PasswortProviders" in the "ObjectList>" element.
+  If the "CorporateSettings.xml" file already exists and has different settings, supplement the element "Settings.PasswortProviders" in the "ObjectList&gt;" element.
 
 ---
 
@@ -278,7 +278,7 @@ Proceed as follows to display the available password providers:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. In the area navigation, select the "Password provider > Available password providers" group.
+2. In the area navigation, select the "Password provider &gt; Available password providers" group.
 
    The available password providers are displayed in the overview table.
 
@@ -323,7 +323,7 @@ Proceed as follows to activate the recording:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. In the area navigation, select the "Password providers > Analysis of the password providers" group.
+2. In the area navigation, select the "Password providers &gt; Analysis of the password providers" group.
 3. Select the "Log activities of the password provider" check box.
 
    The text field for the storage location of the recording file and the "Browse" button become active.
@@ -336,7 +336,7 @@ Proceed as follows to deactivate recording:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. In the area navigation, select the "Password providers > Analysis of the password providers" group.
+2. In the area navigation, select the "Password providers &gt; Analysis of the password providers" group.
 3. Deselect the "Log activities of the password provider" check box.
 
    The text field for the storage location of the recording file and the "Browse" button become inactive.
@@ -398,7 +398,7 @@ Proceed as follows to define the type of password assignment:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. In the area navigation, select the "Password provider > Password assignment" group.
+2. In the area navigation, select the "Password provider &gt; Password assignment" group.
 3. Activate the desired type of password assignment.
 
 ---

@@ -84,10 +84,10 @@ It is recommended
 More information in the TIA Portal Openness documentation:
 
 - "Readme TIA Portal Openness"
-- "Basics > Openness tasks > [Introduction](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#introduction)"
-- "TIA Portal Openness API > General functions > [TIA Portal Openness firewall](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#tia-portal-openness-firewall)"
-- "TIA Portal Openness API > Functions for accessing the data of a PLC device > Functions for downloading data to PLC device > [Downloading to PLC devices](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#downloading-to-plc-devices)"
-- "Export/import > Overview > [Basic principles of importing/exporting](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#basic-principles-of-importingexporting)"
+- "Basics &gt; Openness tasks &gt; [Introduction](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#introduction)"
+- "TIA Portal Openness API &gt; General functions &gt; [TIA Portal Openness firewall](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#tia-portal-openness-firewall)"
+- "TIA Portal Openness API &gt; Functions for accessing the data of a PLC device &gt; Functions for downloading data to PLC device &gt; [Downloading to PLC devices](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#downloading-to-plc-devices)"
+- "Export/import &gt; Overview &gt; [Basic principles of importing/exporting](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#basic-principles-of-importingexporting)"
 
 ---
 
@@ -129,7 +129,7 @@ More information on this dialog:
 ### Procedure
 
 1. Select the "Charts" entry or a CFC chart in the project tree.
-2. Select the "Tools > Import / Export CFC" entry in the menu bar.
+2. Select the "Tools &gt; Import / Export CFC" entry in the menu bar.
 
    The "Export / Import CFC" dialog opens.
 3. Select the action you want:
@@ -215,7 +215,7 @@ Modify the following program code to export all CFC charts from a PLC with their
 
 plcSoftware = (PlcSoftware) swContainer.Software;
 
-chartProvider = plcSoftware.GetService<ChartProviderS7>();
+chartProvider = plcSoftware.GetService&lt;ChartProviderS7&gt;();
 
 if (chartProvider == null)    // in case that CFC is not installed
 
@@ -231,7 +231,7 @@ clipboard
 
 More information in the TIA Portal Openness documentation:
 
-- "Export/import > Overview > [Exporting configuration data](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#exporting-configuration-data)"
+- "Export/import &gt; Overview &gt; [Exporting configuration data](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#exporting-configuration-data)"
 
 ---
 
@@ -287,7 +287,7 @@ Modify the following program code to export only selected CFC charts with their 
 
 plcSoftware = (PlcSoftware) swContainer.Software;
 
-chartProvider = plcSoftware.GetService<ChartProviderS7>();
+chartProvider = plcSoftware.GetService&lt;ChartProviderS7&gt;();
 
 if (chartProvider == null)    // in case that CFC is not installed
 
@@ -303,7 +303,7 @@ clipboard
 
 More information in the TIA Portal Openness documentation:
 
-- "Export/import > Overview > [Exporting configuration data](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#exporting-configuration-data)"
+- "Export/import &gt; Overview &gt; [Exporting configuration data](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#exporting-configuration-data)"
 
 ---
 
@@ -347,7 +347,7 @@ Modify the following program code to import CFC charts from an XML file.
 
 plcSoftware = (PlcSoftware) swContainer.Software;
 
-chartProvider = plcSoftware.GetService<ChartProviderS7>();
+chartProvider = plcSoftware.GetService&lt;ChartProviderS7&gt;();
 
 if (chartProvider == null)    // in case that CFC is not installed
 
@@ -363,7 +363,7 @@ clipboard
 
 More information in the TIA Portal Openness documentation:
 
-- "Export/import > Overview > [Importing configuration data](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#importing-configuration-data)"
+- "Export/import &gt; Overview &gt; [Importing configuration data](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#importing-configuration-data)"
 
 ---
 
@@ -423,7 +423,7 @@ In this example, the hash value of the new password is included as an abbreviate
 
 plcSoftware = (PlcSoftware) swContainer.Software;
 
-chartProvider = plcSoftware.GetService<ChartProviderS7>();
+chartProvider = plcSoftware.GetService&lt;ChartProviderS7&gt;();
 
 if (chartProvider == null)    // in case that CFC is not installed
 
@@ -485,7 +485,7 @@ Modify the following program code to read a password from a CFC chart.
 
 plcSoftware = (PlcSoftware) swContainer.Software;
 
-chartProvider = plcSoftware.GetService<ChartProviderS7>();
+chartProvider = plcSoftware.GetService&lt;ChartProviderS7&gt;();
 
 if (chartProvider == null)    // in case that CFC is not installed
 
@@ -553,7 +553,7 @@ In this example, the password "test" is changed to a new password. The hash valu
 
 plcSoftware = (PlcSoftware) swContainer.Software;
 
-chartProvider = plcSoftware.GetService<ChartProviderS7>();
+chartProvider = plcSoftware.GetService&lt;ChartProviderS7&gt;();
 
 if (chartProvider == null)    // in case that CFC is not installed
 
@@ -630,7 +630,7 @@ In this example, the password "test" was configured for the chart "CFC_1".
 
 plcSoftware = (PlcSoftware) swContainer.Software;
 
-chartProvider = plcSoftware.GetService<ChartProviderS7>();
+chartProvider = plcSoftware.GetService&lt;ChartProviderS7&gt;();
 
 if (chartProvider == null)    // in case that CFC is not installed
 

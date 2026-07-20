@@ -114,13 +114,13 @@ CP 1613, CP 1623 and CP 1628 are communications modules with a microprocessor. F
 
 Ethernet modules, for example USB network adapters, must already be plugged and activated when the system starts. If Ethernet modules are deactivated or do not exist when the system starts or they are pulled and plugged again during operation, the "Available devices" functionality does not display all the nodes in STEP 7. This also applies to the change of docking stations when the Ethernet module is not plugged into the notebook but rather into the docking stations.
 
-Activate the deactivated Ethernet modules by using "Control Panel > Network Connection" and reboot the system. Also reboot the system if Ethernet modules were plugged during operation or if the docking station with the Ethernet module was changed during operation.
+Activate the deactivated Ethernet modules by using "Control Panel &gt; Network Connection" and reboot the system. Also reboot the system if Ethernet modules were plugged during operation or if the docking station with the Ethernet module was changed during operation.
 
 #### OPC configuration (Ethernet CP)
 
 ##### Reference
 
-Setting the OPC configuration for the PC Ethernet CP in the "Properties > General > OPC configuration" parameter group.
+Setting the OPC configuration for the PC Ethernet CP in the "Properties &gt; General &gt; OPC configuration" parameter group.
 
 The parameter group exists if an OPC server is configured in the PC station.
 
@@ -184,7 +184,7 @@ This section contains information on the following topics:
 
 ###### Reference
 
-Making special settings for the Ethernet interface in the "PROFINET/Ethernet interface > Advanced options > Interface options" parameter group
+Making special settings for the Ethernet interface in the "PROFINET/Ethernet interface &gt; Advanced options &gt; Interface options" parameter group
 
 ###### Keep-Alive connection monitoring
 
@@ -227,7 +227,7 @@ Note that the keepalive mechanism can cause subordinate connections (for example
 
 The possible time monitoring setting in this case relates to the time monitoring that can be set in the connection configuration as follows: The lower value is valid.
 
-Time monitoring can be configured in the connection configuration in "Properties > Details on connection setup".
+Time monitoring can be configured in the connection configuration in "Properties &gt; Details on connection setup".
 
 #### Web
 
@@ -270,7 +270,7 @@ The Identification Web page is excluded from the automatic update.
 
 Select the languages for language-dependent texts to be downloaded to the CP. The number of selectable languages is CP dependent. The texts in the diagnostics buffer, for example, are language dependent.
 
-You should also remember that the languages you select here must be installed in the project. You will find the selection of project languages in the project tree in "Languages & Resources"
+You should also remember that the languages you select here must be installed in the project. You will find the selection of project languages in the project tree in "Languages &amp; Resources"
 
 If the languages you select were not previously installed, the Web server can only display texts in your default language.
 
@@ -313,7 +313,7 @@ Example: The module parameters were set for read access and you want to use the 
 
 The functions protected by the password can only be executed by one PG/PC at any one time. Another PG/PC cannot log on.
 
-The access rights to the protected data apply for the duration of the online connection or until the access rights are canceled again with "Online > Delete access rights".
+The access rights to the protected data apply for the duration of the online connection or until the access rights are canceled again with "Online &gt; Delete access rights".
 
 Each access level allows unrestricted access to certain functions even without entering a password, for example identification using the "Accessible devices" function.
 
@@ -476,7 +476,7 @@ The configured interface parameter assignment is created and is then available i
 
 ##### Reference
 
-Setting the LSAP configuration for the PC PROFIBUS CP in the "Properties > General > LSAP configuration" parameter group.
+Setting the LSAP configuration for the PC PROFIBUS CP in the "Properties &gt; General &gt; LSAP configuration" parameter group.
 
 ##### Reserving LSAPs
 
@@ -500,7 +500,7 @@ The LSAPs are also shown in the connection properties under “Address details�
 
 ##### Reference
 
-Setting the OPC configuration for the PC PROFIBUS CP in the "Properties > General > OPC configuration" parameter group.
+Setting the OPC configuration for the PC PROFIBUS CP in the "Properties &gt; General &gt; OPC configuration" parameter group.
 
 The parameter group exists if an OPC server is configured in the PC station.
 
@@ -572,7 +572,7 @@ Selectable parameter:
 
 ##### Reference
 
-Setting the LDB configuration for the PC PROFIBUS CP in the "Properties > General > LDB configuration" parameter group.
+Setting the LDB configuration for the PC PROFIBUS CP in the "Properties &gt; General &gt; LDB configuration" parameter group.
 
 > **Note**
 >
@@ -580,7 +580,7 @@ Setting the LDB configuration for the PC PROFIBUS CP in the "Properties > Genera
 >
 > The LDB file can only be used for CPs with the SIMATIC NET PC software up to the version May 2000.
 
-##### Generating LDB file (applies only to CP is with firmware < V6.0 SP5 or up to SIMATIC NET PC software May 2000)
+##### Generating LDB file (applies only to CP is with firmware &lt; V6.0 SP5 or up to SIMATIC NET PC software May 2000)
 
 The configuration of the DP master system must be exported to an LDB file (loadable database) when saving and compiling. This file contains the DP project information. It is required by the DP system attachments for PG/PC such as SOFTNET or CP 5614 in the PC stations.
 
@@ -605,7 +605,7 @@ This section contains information on the following topics:
 
 ##### Reference
 
-You select the " Online > Configure PC station online" menu command for a selected PC station.
+You select the " Online &gt; Configure PC station online" menu command for a selected PC station.
 
 You transfer the selected configuration for a PC station or display its current configuration with the highlighted dialog.
 
@@ -797,7 +797,7 @@ This section contains information on the following topics:
 
 ##### Reference
 
-Setting the XDB configuration for the a PC station in the "Properties > General > XDB configuration" parameter group.
+Setting the XDB configuration for the a PC station in the "Properties &gt; General &gt; XDB configuration" parameter group.
 
 ##### XDB configuration
 
@@ -812,7 +812,7 @@ Setting the XDB configuration for the a PC station in the "Properties > General 
 
   With the "Browse" button, you can change the default path for the configuration file.
 
-  The relative path information (.\...) relates to the folder in which the current project is stored (<Install dir>\S7proj\<project>\XDB). If you enter an absolute path (for example C:\...), remember that the access only works as long as the project remains in the current environment.
+  The relative path information (.\...) relates to the folder in which the current project is stored (&lt;Install dir&gt;\S7proj\&lt;project&gt;\XDB). If you enter an absolute path (for example C:\...), remember that the access only works as long as the project remains in the current environment.
 
 #### Setting the interface parameter assignment
 

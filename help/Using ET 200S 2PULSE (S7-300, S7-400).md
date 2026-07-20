@@ -141,8 +141,8 @@ The table below shows how the 2PULSE responds to certain signals.
 
 | Software enable SW_ENABLE | Hardware enable (digital input DI) | DO Digital Output | STS_ENABLE | Output Sequence |
 | --- | --- | --- | --- | --- |
-| 1 | 0 → 1 | 0, if on-delay > 0 1, if on-delay = 0 | 0 → 1 | Start |
-| 0 → 1 | Not used | 0, if on-delay > 0 1, if on-delay = 0 | 0 → 1 | Starting |
+| 1 | 0 → 1 | 0, if on-delay &gt; 0 1, if on-delay = 0 | 0 → 1 | Start |
+| 0 → 1 | Not used | 0, if on-delay &gt; 0 1, if on-delay = 0 | 0 → 1 | Starting |
 | 0 | Any status | 0 | 0 | Terminate |
 | 1 | Any status | Previous status remains |  | - |
 | 0 → 1 | 0 | 0 | 0 | - |
@@ -209,7 +209,7 @@ The table below shows the control and feedback signals of the operating mode "Pu
 | **Control signals when the short control interface is used (8 bytes)** |  |  |  |  |
 | Software enable SW_ENABLE | Starting and canceling of the output sequence. | 0 = SW_ENABLE canceled 1 = SW_ENABLE set 0→1 = start of output sequence; may be dependent on the hardware enable | Byte 2:  Bit 0 | Byte 6:  Bit 0 |
 | Pulse duration | The time that is set for the DO digital output on expiration of the on-delay. | With time base 0.1 ms: 2 to 65535  With time base 1 ms: 1 to 65535  If you violate the low limit of the range, the 2PULSE will not output a pulse. | Word 0 | Word 4 |
-| On-delay factor | The on-delay that has been assigned parameters can be changed before the start of the output sequence:  On-delay = Factor x 0.1 x configured on-delay | 0 to 255  If the on-delay <0.2 ms or if factor = 0, the effective on-delay is = 0. If there is an on-delay > 65.535 s, the on-delay is limited to 65.535 s. | Byte 3 | Byte 7 |
+| On-delay factor | The on-delay that has been assigned parameters can be changed before the start of the output sequence:  On-delay = Factor x 0.1 x configured on-delay | 0 to 255  If the on-delay &lt;0.2 ms or if factor = 0, the effective on-delay is = 0. If there is an on-delay &gt; 65.535 s, the on-delay is limited to 65.535 s. | Byte 3 | Byte 7 |
 | **Control signals when the long control interface is used (12 bytes) (as of**  **6ES7138‑4DD01‑0AB0** **)** |  |  |  |  |
 | Software enable (SW_ENABLE) | Starting and canceling of the output sequence. | 0 = SW_ENABLE canceled 1 = SW_ENABLE set 0→1 = start of output sequence; may be dependent on the hardware enable | Byte 4:  Bit 0 | Byte 10:  Bit 0 |
 | Pulse duration | The time that is set for the DO digital output on expiration of the on-delay. | With time base 0.1 ms: 2 to 65535  With time base 1 ms: 1 to 65535  If you violate the low limit of the range, the 2PULSE will not output a pulse. | Word 0 | Word 6 |
@@ -288,8 +288,8 @@ The table below shows how the 2PULSE responds to certain signals.
 
 | Software enable SW_ENABLE | Hardware enable (digital input DI) | Digital output DO | STS_ENABLE | Output sequence |
 | --- | --- | --- | --- | --- |
-| 1 | 0 → 1 | 0, if on-delay > 0 1, if on-delay = 0 | 0 → 1 | Starting |
-| 0 → 1 | Not used | 0, if on-delay > 0 1, if on-delay = 0 | 0 → 1 | Starting |
+| 1 | 0 → 1 | 0, if on-delay &gt; 0 1, if on-delay = 0 | 0 → 1 | Starting |
+| 0 → 1 | Not used | 0, if on-delay &gt; 0 1, if on-delay = 0 | 0 → 1 | Starting |
 | 0 | Any status | 0 | 0 | Canceling |
 | 1 | Any status | Previous status remains |  | - |
 | 0 → 1 | 0 | 0 | 0 | - |
@@ -456,13 +456,13 @@ The table below shows the control and feedback signals of the operating mode "Pu
 | --- | --- | --- | --- | --- |
 | **Control signals when the short control interface is used (8 bytes)** |  |  |  |  |
 | Software enable (SW_ENABLE) | Starting and canceling of the output sequence. | 0 = SW_ENABLE canceled 1 = SW_ENABLE set 0→1 = start of output sequence; may be dependent on the hardware enable | Byte 2:  Bit 0 | Byte 6:  Bit 0 |
-| Output value | The value that is output in pulse-width modulated format on the digital output DO. | Depending on the output format:  - Per mill: 0 ... 1000 - S7 analog output: 0 to 27648   If you enter an output value > 1000 or 27648, the 2PULSE limits this to 1000 or 27648. | Word 0 | Word 4 |
-| Period duration factor | You can change the assigned period:  Time period = Factor x 0.1 x configured time period | Factor: 0 to 255   Period duration:  2 × Minimum pulse duration up to 65.635 s.  If a period duration of < 2 x minimum pulse duration occurs or < 2 µs or if Factor = 0, the effective period = 2 x minimum pulse duration, but at least 200 µs.   If there is a period > 65.535 s, it is limited to 65.535 s. | Byte 3 | Byte 7 |
+| Output value | The value that is output in pulse-width modulated format on the digital output DO. | Depending on the output format:  - Per mill: 0 ... 1000 - S7 analog output: 0 to 27648   If you enter an output value &gt; 1000 or 27648, the 2PULSE limits this to 1000 or 27648. | Word 0 | Word 4 |
+| Period duration factor | You can change the assigned period:  Time period = Factor x 0.1 x configured time period | Factor: 0 to 255   Period duration:  2 × Minimum pulse duration up to 65.635 s.  If a period duration of &lt; 2 x minimum pulse duration occurs or &lt; 2 µs or if Factor = 0, the effective period = 2 x minimum pulse duration, but at least 200 µs.   If there is a period &gt; 65.535 s, it is limited to 65.535 s. | Byte 3 | Byte 7 |
 | **Control signals when the long control interface is used (12 bytes) (as of**  **6ES7138‑4DD01‑0AB0** **)** |  |  |  |  |
 | Software enable (SW_ENABLE) | Starting and canceling of the output sequence. | 0 = SW_ENABLE canceled 1 = SW_ENABLE set 0→1 = start of output sequence; may be dependent on the hardware enable | Byte 4:  Bit 0 | Byte 10:  Bit 0 |
-| Output value | The value that is output in pulse-width modulated format on the digital output DO. | Depending on the output format:  - Per mill: 0 ... 1000 - S7 analog output: 0 to 27648   If you enter an output value > 1000 or 27648, the 2PULSE limits this to 1000 or 27648. | Word 0 | Word 6 |
+| Output value | The value that is output in pulse-width modulated format on the digital output DO. | Depending on the output format:  - Per mill: 0 ... 1000 - S7 analog output: 0 to 27648   If you enter an output value &gt; 1000 or 27648, the 2PULSE limits this to 1000 or 27648. | Word 0 | Word 6 |
 | Time period <sup>1)</sup> | Setpoint of the time period in non-isochronous mode | With time base 0.1 ms: 2 to 65535  With time base 1 ms: 1 to 65535 | Word 2 | Word 8 |
-| On-delay factor | The on-delay that has been assigned parameters can be changed before the start of the output sequence:  On-delay = Factor x 0.1 x configured on-delay | 0 to 255  If the on-delay <0.2 ms or if factor = 0, the effective on-delay is = 0. If there is an on-delay > 65.535 s, the on-delay is limited to 65.535 s. | Byte 5 | Byte 11 |
+| On-delay factor | The on-delay that has been assigned parameters can be changed before the start of the output sequence:  On-delay = Factor x 0.1 x configured on-delay | 0 to 255  If the on-delay &lt;0.2 ms or if factor = 0, the effective on-delay is = 0. If there is an on-delay &gt; 65.535 s, the on-delay is limited to 65.535 s. | Byte 5 | Byte 11 |
 | **Feedback signals** |  |  |  |  |
 | STS_ENABLE | Indicates an output sequence is running. | 0 = pulse output blocked  1 = pulse output running | Byte 0:  Bit 0 | Byte 4:  Bit 0 |
 | STS_DO | Indicates the signal level at the digital output DO.  Note the update rate. | 0 = Signal 0 on digital output DO  1 = Signal 1 on digital output DO | Byte 0:  Bit 1 | Byte 4:  Bit 1 |
@@ -536,8 +536,8 @@ The table below shows how the 2PULSE responds to certain signals.
 
 | Software enable SW_ENABLE | Hardware enable (digital input DI) | Digital output DO | STS_ENABLE | Output sequence |
 | --- | --- | --- | --- | --- |
-| 1 | 0 → 1 | 0, if on-delay > 0 1, if on-delay = 0 | 0 → 1 | Starting |
-| 0 → 1 | Not used | 0, if on-delay > 0 1, if on-delay = 0 | 0 → 1 | Starting |
+| 1 | 0 → 1 | 0, if on-delay &gt; 0 1, if on-delay = 0 | 0 → 1 | Starting |
+| 0 → 1 | Not used | 0, if on-delay &gt; 0 1, if on-delay = 0 | 0 → 1 | Starting |
 | 0 | Any status | 0 | 0 | Canceling |
 | 1 | Any status | Previous status remains |  | - |
 | 0 → 1 | 0 | 0 | 0 | - |
@@ -623,7 +623,7 @@ The table below shows the control and feedback signals of the operating mode "Pu
 | **Control signals when the short control interface is used (8 bytes)** |  |  |  |  |
 | Software enable (SW_ENABLE) | Starting and canceling of the output sequence. | 0 = SW_ENABLE cleared.  1 = SW_ENABLE set  0 → 1 = Start of the output sequence; may be dependent on the HW enable | Byte 2:  Bit 0 | Byte 6:  Bit 0 |
 | Number of pulses | Number of pulses that are output at the DO digital output on expiration of the on-delay. | 0 to 65535  If the number of pulses is 0, the 2PULSE does not output any pulses. The output sequence is terminated with ERR_PULS = 1. | Word 0 | Word 4 |
-| Period duration factor | The on-delay that can be assigned parameters can be changed before the start of the output sequence:  Time period = Factor x 0.1 x configured time period | Factor: 0 to 255   Period duration:  > Pulse duration up to 65.535 s  If there is a period duration > 65.535 s, it is set to 65.535 s. If a period duration ≤ pulse duration, it is set to a pulse duration of + 0.2 ms (or pulse duration + 1 ms). | Byte 3 | Byte 7 |
+| Period duration factor | The on-delay that can be assigned parameters can be changed before the start of the output sequence:  Time period = Factor x 0.1 x configured time period | Factor: 0 to 255   Period duration:  &gt; Pulse duration up to 65.535 s  If there is a period duration &gt; 65.535 s, it is set to 65.535 s. If a period duration ≤ pulse duration, it is set to a pulse duration of + 0.2 ms (or pulse duration + 1 ms). | Byte 3 | Byte 7 |
 | **Control signals when the long control interface is used (12 bytes) (as of**  **6ES7138‑4DD01‑0AB0** **)** |  |  |  |  |
 | Software enable (SW_ENABLE) | Starting and canceling of the output sequence. | 0 = SW_ENABLE cleared.  1 = SW_ENABLE set  0 → 1 = Start of the output sequence; may be dependent on the HW enable | Byte 4:  Bit 0 | Byte 10:  Bit 0 |
 | Number of pulses | Number of pulses that are output at the DO digital output on expiration of the on-delay. | 0 to 65535  If the number of pulses is 0, the 2PULSE does not output any pulses. The output sequence is terminated with ERR_PULS = 1. | Word 0 | Word 6 |
@@ -706,8 +706,8 @@ The table below shows how the 2PULSE responds to certain signals.
 
 | Software enable SW_ENABLE | Digital input DI | Digital output DO | STS_ENABLE | Output sequence |
 | --- | --- | --- | --- | --- |
-| 1 | 0 → 1 | 0, if on-delay > 0 1, if on-delay = 0 | 1 | Starting |
-| 1 | 1 → 0 | 1, if off-delay > 0 0, if off-delay = 0 | 1 | Starting |
+| 1 | 0 → 1 | 0, if on-delay &gt; 0 1, if on-delay = 0 | 1 | Starting |
+| 1 | 1 → 0 | 1, if off-delay &gt; 0 0, if off-delay = 0 | 1 | Starting |
 | 0 | Any status | 0 | 0 | Canceling |
 | 1 | Any status | Previous status remains | 1 | - |
 | 0 → 1 | 0 | 0 | 1 | - |
@@ -760,7 +760,7 @@ The following figure shows the behavior if the interpulse period is too short.
 
 The 2PULSE starts a new on-delay on the positive edge on the digital input DI if:
 
-On-delay > pulse duration + interpulse period
+On-delay &gt; pulse duration + interpulse period
 
 This deletes the current Off-delay.
 
@@ -774,7 +774,7 @@ The following figure shows the retriggering of the current on-delay.
 
 The 2PULSE starts a new off-delay on the negative edge on the digital input DI if:
 
-Off-delay > pulse duration + interpulse period.
+Off-delay &gt; pulse duration + interpulse period.
 
 This deletes the current on-delay.
 
@@ -841,7 +841,7 @@ The table below shows the control and feedback signals of the operating mode "On
 | **Control signals when the short control interface is used (8 bytes)** |  |  |  |  |
 | Software enable (SW_ENABLE) | You must always issue the software enable in your control program. If you cancel the software enable, the current output sequence will be canceled. | 0 = SW_ENABLE cleared.  1 = SW_ENABLE set | Byte 2:  Bit 0 | Byte 6:  Bit 0 |
 | Off-delay | The time between a negative edge of the digital input DI and its output on the digital output DO. | With time base 0.1 ms: 2 to 65535  With time base 1 ms: 1 to 65535  If you violate the low limit of the range, the off-delay will not function. | Word 0 | Word 4 |
-| On-delay factor | You can change the assigned on-delay:  On-delay = Factor x 0.1 x configured on-delay | Factor: 0 to 255  On-delay:  0.2 ms to 65.535 s  If the on-delay is < 0.2 ms or if the factor = 0, the effective on-delay = 0.  If the on-delay is > 65.535 s, the on-delay is limited to 65.535 s. | Byte 3 | Byte 7 |
+| On-delay factor | You can change the assigned on-delay:  On-delay = Factor x 0.1 x configured on-delay | Factor: 0 to 255  On-delay:  0.2 ms to 65.535 s  If the on-delay is &lt; 0.2 ms or if the factor = 0, the effective on-delay = 0.  If the on-delay is &gt; 65.535 s, the on-delay is limited to 65.535 s. | Byte 3 | Byte 7 |
 | **Control signals when the long control interface is used (12 bytes) (as of**  **6ES7138‑4DD01‑0AB0** **)** |  |  |  |  |
 | Software enable (SW_ENABLE) | You must always issue the software enable in your control program. If you cancel the software enable, the current output sequence will be canceled. | 0 = SW_ENABLE cleared.  1 = SW_ENABLE set | Byte 4:  Bit 0 | Byte 10:  Bit 0 |
 | Off-delay | The time between a negative edge of the digital input DI and its output on the digital output DO. | With time base 0.1 ms: 2 to 65535  With time base 1 ms: 1 to 65535  If you violate the low limit of the range, the off-delay will not function. | Word 0 | Word 6 |
@@ -919,8 +919,8 @@ The table below shows how the 2PULSE responds to certain signals.
 
 | Software enable SW_ENABLE | Hardware enable (digital input DI) | Digital output DO | STS_ENABLE | Output sequence |
 | --- | --- | --- | --- | --- |
-| 1 | 0 → 1 | 0, if on-delay > 0 1, if on-delay = 0 | 0 → 1 | Starting |
-| 0 → 1 | Not used | 0, if on-delay > 0 1, if on-delay = 0 | 0 → 1 | Starting |
+| 1 | 0 → 1 | 0, if on-delay &gt; 0 1, if on-delay = 0 | 0 → 1 | Starting |
+| 0 → 1 | Not used | 0, if on-delay &gt; 0 1, if on-delay = 0 | 0 → 1 | Starting |
 | 0 | Any status | 0 | 0 | Canceling |
 | 1 | Any status | Previous status remains |  | - |
 | 0 → 1 | 0 | 0 | 0 | - |
@@ -952,8 +952,8 @@ You set the output value directly using your control program. The new frequency 
 The configured output frequency is output with the following accuracy at the digital output DO:
 
 - 0.01 Hz at output frequencies of 0.1 Hz to 800 Hz
-- 0.1 Hz at output frequencies > 800 Hz to 2000 Hz
-- 0.5 Hz at output frequencies > 2000 Hz to 5000 Hz
+- 0.1 Hz at output frequencies &gt; 800 Hz to 2000 Hz
+- 0.5 Hz at output frequencies &gt; 2000 Hz to 5000 Hz
 
 ##### Set the on-delay when using the short control interface
 
@@ -994,11 +994,11 @@ The table below shows the control and feedback signals of the operating mode "Fr
 | --- | --- | --- | --- | --- |
 | **Control signals when the short control interface is used (8 bytes)** |  |  |  |  |
 | Software enable (SW_ENABLE) | Starting and canceling of the output sequence. | 0 = SW_ENABLE canceled 1 = SW_ENABLE set 0→1 = start of output sequence; may be dependent on the hardware enable | Byte 2:  Bit 0 | Byte 6:  Bit 0 |
-| Output value | The value that is output in frequency format on the digital output DO. | Depending on the output format:  - 1 Hz: 0 ... 5000 - S7 analog output: 0 to 27648   If you enter an output value > 5000 or 27648, the 2PULSE limits this to 5000 or 27648. | Word 0 | Word 4 |
-| On-delay factor | The on-delay that has been assigned parameters can be changed before the start of the output sequence:  On-delay = Factor x 0.1 x configured on-delay | 0 to 255  If the on-delay <0.2 ms or if factor = 0, the effective on-delay is = 0. If there is an on-delay > 65.535 s, the on-delay is limited to 65.535 s. | Byte 3 | Byte 7 |
+| Output value | The value that is output in frequency format on the digital output DO. | Depending on the output format:  - 1 Hz: 0 ... 5000 - S7 analog output: 0 to 27648   If you enter an output value &gt; 5000 or 27648, the 2PULSE limits this to 5000 or 27648. | Word 0 | Word 4 |
+| On-delay factor | The on-delay that has been assigned parameters can be changed before the start of the output sequence:  On-delay = Factor x 0.1 x configured on-delay | 0 to 255  If the on-delay &lt;0.2 ms or if factor = 0, the effective on-delay is = 0. If there is an on-delay &gt; 65.535 s, the on-delay is limited to 65.535 s. | Byte 3 | Byte 7 |
 | **Control signals when the long control interface is used (12 bytes)** |  |  |  |  |
 | Software enable (SW_ENABLE) | Starting and canceling of the output sequence. | 0 = SW_ENABLE canceled 1 = SW_ENABLE set 0→1 = start of output sequence; may be dependent on the hardware enable | Byte 4:  Bit 0 | Byte 10:  Bit 0 |
-| Output value | The value that is output in frequency format on the digital output DO. | Depending on the output format:  - 1 Hz: 0 ... 5000 - S7 analog output: 0 to 27648   If you enter an output value > 5000 or 27648, the 2PULSE limits this to 5000 or 27648. | Word 0 | Word 6 |
+| Output value | The value that is output in frequency format on the digital output DO. | Depending on the output format:  - 1 Hz: 0 ... 5000 - S7 analog output: 0 to 27648   If you enter an output value &gt; 5000 or 27648, the 2PULSE limits this to 5000 or 27648. | Word 0 | Word 6 |
 | On-delay | The on-delay can be changed before the start of the output sequence. | 0 to 65535  On-delay = Time basis x Specified numerical value | Word 2 | Word 8 |
 | **Feedback Signals** |  |  |  |  |
 | STS_ENABLE | Indicates an output sequence is running. | 0 = pulse output blocked  1 = pulse output running | Byte 0:  Bit 0 | Byte 4:  Bit 0 |
@@ -1062,7 +1062,7 @@ A measurement of current only takes place during the pulse output in the "[Pulse
 
 In the "Pulse output", On/Off-delay" and "Frequency output" operating modes, 0 is always measured as the measured value of the current.
 
-The returned measured value of the current is a mean value of measured values that is recorded during the duration of a period. At period durations < 5 ms, the interval between two individual measuring points amounts to a maximum of 40 µs. When longer periods are involved, 128 measuring points per period are always recorded. This results in correspondingly longer intervals between the measuring points.
+The returned measured value of the current is a mean value of measured values that is recorded during the duration of a period. At period durations &lt; 5 ms, the interval between two individual measuring points amounts to a maximum of 40 µs. When longer periods are involved, 128 measuring points per period are always recorded. This results in correspondingly longer intervals between the measuring points.
 
 In isochronous mode, a new measured value of the current is always made available in the feedback interface at the moment T<sub>i</sub>. In non-isochronous mode, a new measured value of the current is made available about every 500 µs.
 

@@ -138,8 +138,8 @@ The following table shows how the status bits are set in the FBD programming lan
 | Instruction |  | Status bit |  |  |  |
 | --- | --- | --- | --- | --- | --- |
 | Mnemonics | Title | OR | STA | RLO | /FC |
-| & | AND logic operation | x | x | x | 1 |
-| <=1 | OR logic operation | x | x | x | 1 |
+| &amp; | AND logic operation | x | x | x | 1 |
+| &lt;=1 | OR logic operation | x | x | x | 1 |
 | X | EXCLUSIVE OR logic operation | x | x | x | 1 |
 | -| | Insert binary input | - | 1 | x | - |
 | -o| | Invert RLO | - | 1 | x | - |
@@ -252,17 +252,17 @@ The following tables show how the status bits are set when using integers:
 | Valid range | CC 1 | CC 0 | OV | OS |
 | --- | --- | --- | --- | --- |
 | 0 (zero) | 0 | 0 | 0 | * |
-| 16 bits: -32768 <=result < 0 (negative number)  32 bits: -2147483648 <=result < 0 (negative number) | 0 | 1 | 0 | * |
-| 16 bits: 32767 >= result > 0 (positive number)  32 bits: 2147483647 >= result > 0 (positive number) | 1 | 0 | 0 | * |
+| 16 bits: -32768 &lt;=result &lt; 0 (negative number)  32 bits: -2147483648 &lt;=result &lt; 0 (negative number) | 0 | 1 | 0 | * |
+| 16 bits: 32767 &gt;= result &gt; 0 (positive number)  32 bits: 2147483647 &gt;= result &gt; 0 (positive number) | 1 | 0 | 0 | * |
 | * The OS bit is not influenced by the result of the operation. |  |  |  |  |
 
 | Invalid range | CC 1 | CC 0 | OV | OS |
 | --- | --- | --- | --- | --- |
 | Underflow at addition  16 bits: Result = -65536  32 bits: Result = -4294967296 | 0 | 0 | 1 | 1 |
-| Underflow at multiplication  16 bits: Result < -32768 (negative number)  32 bits: Result < -2147483648 (negative number) | 0 | 1 | 1 | 1 |
-| Overflow at addition, subtraction  16 bits: Result > 32767 (positive number)  32 bits: Result > 2147483647 (positive number) | 0 | 1 | 1 | 1 |
-| Overflow at multiplication, division  16 bits: Result > 32767 (positive number)  32 bits: Result > 2147483647 (positive number) | 1 | 0 | 1 | 1 |
-| Underflow at addition, subtraction  16 bits: Result < -32768 (negative number)  32 bits: Result < -2147483648 (negative number) | 1 | 0 | 1 | 1 |
+| Underflow at multiplication  16 bits: Result &lt; -32768 (negative number)  32 bits: Result &lt; -2147483648 (negative number) | 0 | 1 | 1 | 1 |
+| Overflow at addition, subtraction  16 bits: Result &gt; 32767 (positive number)  32 bits: Result &gt; 2147483647 (positive number) | 0 | 1 | 1 | 1 |
+| Overflow at multiplication, division  16 bits: Result &gt; 32767 (positive number)  32 bits: Result &gt; 2147483647 (positive number) | 1 | 0 | 1 | 1 |
+| Underflow at addition, subtraction  16 bits: Result &lt; -32768 (negative number)  32 bits: Result &lt; -2147483648 (negative number) | 1 | 0 | 1 | 1 |
 | Division by 0 | 1 | 1 | 1 | 1 |
 
 #### Setting the status bits in instructions with floating-point numbers (S7-300, S7-400)
@@ -280,16 +280,16 @@ The following tables show how the status bits are set when using floating point 
 | Valid range | CC 1 | CC 0 | OV | OS |
 | --- | --- | --- | --- | --- |
 | +0, -0 (zero) | 0 | 0 | 0 | * |
-| -3.402823E+38 < result < -1.175494E-38 (negative number) | 0 | 1 | 0 | * |
-| +1.175494E-38 < result < 3.402824E+38 (positive number) | 1 | 0 | 0 | * |
+| -3.402823E+38 &lt; result &lt; -1.175494E-38 (negative number) | 0 | 1 | 0 | * |
+| +1.175494E-38 &lt; result &lt; 3.402824E+38 (positive number) | 1 | 0 | 0 | * |
 | * The OS bit is not influenced by the result of the operation. |  |  |  |  |
 
 | Invalid range | CC 1 | CC 0 | OV | OS |
 | --- | --- | --- | --- | --- |
-| Underflow  -1.175494E-38 < result < -1.401298E-45 (negative number) | 0 | 0 | 1 | 1 |
-| Underflow  +1.401298E-45 < result < +1.175494E-38 (positive number) | 0 | 0 | 1 | 1 |
-| Overflow  Result < -3.402823E+38 (negative number) | 0 | 1 | 1 | 1 |
-| Overflow  Result > 3.402823E+38 (positive number) | 1 | 0 | 1 | 1 |
+| Underflow  -1.175494E-38 &lt; result &lt; -1.401298E-45 (negative number) | 0 | 0 | 1 | 1 |
+| Underflow  +1.401298E-45 &lt; result &lt; +1.175494E-38 (positive number) | 0 | 0 | 1 | 1 |
+| Overflow  Result &lt; -3.402823E+38 (negative number) | 0 | 1 | 1 | 1 |
+| Overflow  Result &gt; 3.402823E+38 (positive number) | 1 | 0 | 1 | 1 |
 | Not a valid floating-point number or invalid operation (input value outside of the valid value range) | 1 | 1 | 1 | 1 |
 
 #### Setting the status bit for comparison instructions (S7-300, S7-400)
@@ -307,8 +307,8 @@ The following table shows how the status bits are set with comparison statements
 | Result | CC 1 | CC 0 | OV | OS |
 | --- | --- | --- | --- | --- |
 | Equal to (ACCU2 = ACCU1) | 0 | 0 | 0 | * |
-| Greater than (ACCU2 > ACCU1) | 1 | 0 | 0 | * |
-| Smaller than (ACCU2 < ACCU1) | 0 | 1 | 0 | * |
+| Greater than (ACCU2 &gt; ACCU1) | 1 | 0 | 0 | * |
+| Smaller than (ACCU2 &lt; ACCU1) | 0 | 1 | 0 | * |
 | Invalid floating-point number | 1 | 1 | 1 | 1 |
 | * The OS bit is not influenced by the result of the operation. |  |  |  |  |
 
@@ -331,8 +331,8 @@ The following table shows how the status bits are set in the LAD and FDB program
 | CALL | Call block | 0 | 0 | 1 | - | 0 |
 | OPN | Open global data block | - | - | - | - | - |
 | OPNI | Open instance data block | - | - | - | - | - |
-| MCR< | Open MCR ranges | - | 0 | 1 | - | 0 |
-| MCR> | Close MCR ranges | - | 0 | 1 | - | 0 |
+| MCR&lt; | Open MCR ranges | - | 0 | 1 | - | 0 |
+| MCR&gt; | Close MCR ranges | - | 0 | 1 | - | 0 |
 | MCRA | Enable MCR range | - | - | - | - | - |
 | MCRD | Disable MCR range | - | - | - | - | - |
 | x: The instruction can write "1" or "0"  1: The instruction sets the status bit to "1".  0: The instruction resets the status bit to "0".  -: The status bit is not influenced. |  |  |  |  |  |  |
@@ -433,11 +433,11 @@ The following table shows the operands which can be used to scan the signal stat
 | Operand | Querying the status word |
 | --- | --- |
 | == 0 | Scan for ((CC 0 = 0) AND (CC 1 = 0)) |
-| <> 0 | Scan for CC 0 <>CC 1 |
-| > 0 | Scan for ((CC 0 = 0) AND (CC 1 = 1)) |
-| < 0 | Scan for ((CC 0 = 1) AND (CC 1 = 0)) |
-| >= 0 | Scan for CC 0 = 0 |
-| <= 0 | Scan for CC 1 = 0 |
+| &lt;&gt; 0 | Scan for CC 0 &lt;&gt;CC 1 |
+| &gt; 0 | Scan for ((CC 0 = 0) AND (CC 1 = 1)) |
+| &lt; 0 | Scan for ((CC 0 = 1) AND (CC 1 = 0)) |
+| &gt;= 0 | Scan for CC 0 = 0 |
+| &lt;= 0 | Scan for CC 1 = 0 |
 | UO | Scan for ((CC 1 = 1) AND (CC 0 = 1)) |
 | OV | Scan for OV = 1 |
 | OS | Scan for OS = 1 |
@@ -517,11 +517,11 @@ The following table shows the dependency between status bits CC1 and CC0 and the
 | CC 1 | CC 0 | Result | Executed instruction mnemonics |
 | --- | --- | --- | --- |
 | 0 | 0 | = 0 | JZ |
-| 1 or 0 | 0 or 1 | <> 0 | JN |
-| 1 | 0 | > 0 | JP |
-| 0 | 1 | < 0 | JM |
-| 0 or 1 | 0 | >= 0 | JPZ |
-| 0 | 0 or 1 | <= 0 | JMZ |
+| 1 or 0 | 0 or 1 | &lt;&gt; 0 | JN |
+| 1 | 0 | &gt; 0 | JP |
+| 0 | 1 | &lt; 0 | JM |
+| 0 or 1 | 0 | &gt;= 0 | JPZ |
+| 0 | 0 or 1 | &lt;= 0 | JMZ |
 | 1 | 1 | UO (invalid) | JUO |
 
 ---
@@ -651,11 +651,11 @@ The following table shows the operands which can be used to scan the signal stat
 | Operand | Querying the status word |
 | --- | --- |
 | == 0 | Scan for ((CC 0 = 0) AND (CC 1 = 0)) |
-| <> 0 | Scan for CC 0 <>CC 1 |
-| > 0 | Scan for ((CC 0 = 0) AND (CC 1 = 1)) |
-| < 0 | Scan for ((CC 0 = 1) AND (CC 1 = 0)) |
-| >= 0 | Scan for CC 0 = 0 |
-| <= 0 | Scan for CC 1 = 0 |
+| &lt;&gt; 0 | Scan for CC 0 &lt;&gt;CC 1 |
+| &gt; 0 | Scan for ((CC 0 = 0) AND (CC 1 = 1)) |
+| &lt; 0 | Scan for ((CC 0 = 1) AND (CC 1 = 0)) |
+| &gt;= 0 | Scan for CC 0 = 0 |
+| &lt;= 0 | Scan for CC 1 = 0 |
 | UO | Scan for ((CC 1 = 1) AND (CC 0 = 1)) |
 | OV | Scan for OV = 1 |
 | OS | Scan for OS = 1 |
@@ -735,11 +735,11 @@ The following table shows the dependency between status bits CC 0 and CC 1 and t
 | CC 1 | CC 0 | Result | Executed instruction mnemonics |
 | --- | --- | --- | --- |
 | 0 | 0 | = 0 | JZ |
-| 1 or 0 | 0 or 1 | <> 0 | JN |
-| 1 | 0 | > 0 | JP |
-| 0 | 1 | < 0 | JM |
-| 0 or 1 | 0 | >= 0 | JPZ |
-| 0 | 0 or 1 | <= 0 | JMZ |
+| 1 or 0 | 0 or 1 | &lt;&gt; 0 | JN |
+| 1 | 0 | &gt; 0 | JP |
+| 0 | 1 | &lt; 0 | JM |
+| 0 or 1 | 0 | &gt;= 0 | JPZ |
+| 0 | 0 or 1 | &lt;= 0 | JMZ |
 | 1 | 1 | UO (invalid) | JUO |
 
 ---

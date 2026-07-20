@@ -497,7 +497,7 @@ Follow the steps outlined below to create a recipe:
 >
 > **Runtime API**
 >
-> The Runtime API provides you with extensive uaArchive functions to edit recipes and recipe queries (see section "Interfaces > Runtime API", subsection "[Recipe functions](Runtime%20API%20%28RT%20Professional%29.md#recipe-functions-rt-professional)").
+> The Runtime API provides you with extensive uaArchive functions to edit recipes and recipe queries (see section "Interfaces &gt; Runtime API", subsection "[Recipe functions](Runtime%20API%20%28RT%20Professional%29.md#recipe-functions-rt-professional)").
 
 ---
 
@@ -539,7 +539,7 @@ After loading to the target system, check the recipes with date or time stamps o
 Create a recipe as follows:
 
 1. Double-click the first empty table row in the "Recipes" tab of the "Recipes" editor.
-2. Select "Properties > General > Settings > Name" in the Inspector window and enter a descriptive recipe name.
+2. Select "Properties &gt; General &gt; Settings &gt; Name" in the Inspector window and enter a descriptive recipe name.
 
    The name identifies the recipe uniquely within the project.
 
@@ -549,7 +549,7 @@ Create a recipe as follows:
 3. Select the "Display name" field to enter the language-specific name to be displayed in Runtime.
 4. Define whether or not the recipe data records are limited to a specified maximum number in the area "Size" under "Type".
 5. If the size type is limited, specify the maximum number of recipe data records of a recipe under "Number of data records".
-6. Specify the "Communication type" under "Properties > Communication":
+6. Specify the "Communication type" under "Properties &gt; Communication":
 
    - If you have selected "Raw data tag", create a raw data tag and select it under "Raw data tag".
    - Select "No communication" if you use the recipe only to save project data.
@@ -557,12 +557,12 @@ Create a recipe as follows:
      ![Procedure](images/97446299531_DV_resource.Stream@PNG-en-US.png)
 
      ![Procedure](images/97446299531_DV_resource.Stream@PNG-en-US.png)
-7. Select the control tags for access to the recipe under "Properties > Control tags" if you have selected the "Tags" communication type.
+7. Select the control tags for access to the recipe under "Properties &gt; Control tags" if you have selected the "Tags" communication type.
 
    ![Procedure](images/97449078539_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/97449078539_DV_resource.Stream@PNG-en-US.png)
-8. Define under "Properties > Security" which operator authorizations have read and write access to the recipe in Runtime.
+8. Define under "Properties &gt; Security" which operator authorizations have read and write access to the recipe in Runtime.
 
    ![Procedure](images/97449295755_DV_resource.Stream@PNG-en-US.png)
 
@@ -604,7 +604,7 @@ Select the "Recipe elements" tab in the bottom area of the "Recipes" editor to s
 Create a recipe element as follows:
 
 1. Double-click the first empty table row in the "Recipe elements" tab.
-2. Select "Properties > General > Settings > Name" in the Inspector window and enter a descriptive name for the recipe element. This name must be unique within a recipe.
+2. Select "Properties &gt; General &gt; Settings &gt; Name" in the Inspector window and enter a descriptive name for the recipe element. This name must be unique within a recipe.
 3. Select the "Display name" to enter the language-specific name to be displayed in Runtime.
 
    ![Procedure](images/97453961099_DV_resource.Stream@PNG-en-US.png)
@@ -612,15 +612,15 @@ Create a recipe element as follows:
    ![Procedure](images/97453961099_DV_resource.Stream@PNG-en-US.png)
 4. When the recipe has the "Tags" communication type:
 
-   To link the recipe element to a tag, select a tag under "Properties > Basic settings > Settings". The data type will be displayed below.
+   To link the recipe element to a tag, select a tag under "Properties &gt; Basic settings &gt; Settings". The data type will be displayed below.
 5. For a "String" data type, also specify the maximum length of the string under "Data length". The "Settings" area on the right shows the value range for number-based data types, for which you can also specify a default value.
 
    ![Procedure](images/111899618699_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111899618699_DV_resource.Stream@PNG-en-US.png)
 6. When the recipe has the "Raw data tag" communication type or "No communication": Select the "Data type" and also the "Data length" of the recipe element for the "String" data type.
-7. Define under "Properties > Security" which operator authorizations have read and write access to the recipe element in Runtime.
-8. Define in "Properties > Extras" which conditions the values of the recipe element must satisfy. For faster search, the values can be indexed:
+7. Define under "Properties &gt; Security" which operator authorizations have read and write access to the recipe element in Runtime.
+8. Define in "Properties &gt; Extras" which conditions the values of the recipe element must satisfy. For faster search, the values can be indexed:
 
    ![Procedure](images/97453268491_DV_resource.Stream@PNG-en-US.png)
 
@@ -752,7 +752,7 @@ A recipe query is a set of recipe elements from various recipes. Example: Recipe
 - Water from the "Juice" recipe
 - Water from the "Nectar" recipe
 
-You can link recipe elements to form relations, such as "Nectar.Water > FruitJuiceDrink.Water". In the recipe query, only the data records that satisfy the relation are displayed in Runtime. In the example, these are the records in which the water requirement of the "Nectar" recipe is greater than that of "Fruit juice drink".
+You can link recipe elements to form relations, such as "Nectar.Water &gt; FruitJuiceDrink.Water". In the recipe query, only the data records that satisfy the relation are displayed in Runtime. In the example, these are the records in which the water requirement of the "Nectar" recipe is greater than that of "Fruit juice drink".
 
 You can assemble recipe queries from recipe elements in the "Recipes" editor in the "Recipe queries" tab. Select the recipe elements from the recipes that are included in the recipe query and set their relation. The relation expresses a condition. Only those combinations of recipe elements which satisfy the condition (true) are displayed in the recipe view.
 
@@ -776,7 +776,7 @@ Create a recipe query as follows:
 1. In the "Recipes" editor, double-click the first empty table row in the "Recipe queries" tab.
 
    A new recipe query is created.
-2. In the inspection window, enter a name for the recipe query under "Properties > General > Name " to indicate its function.
+2. In the inspection window, enter a name for the recipe query under "Properties &gt; General &gt; Name " to indicate its function.
 
    ![Creating recipe queries](images/100708744459_DV_resource.Stream@PNG-en-US.png)
 
@@ -788,10 +788,10 @@ Create a recipe query as follows:
 To create a new element for the recipe query and the relation, follow these steps:
 
 1. Double-click on the first free table row in the "Recipe query elements" tab.
-2. Under "Properties > General > Recipe element", select the recipe element to insert into the query.
+2. Under "Properties &gt; General &gt; Recipe element", select the recipe element to insert into the query.
 3. Create other recipe query elements as required.
 4. Select the recipe query in the "Recipe queries" index.
-5. Select a recipe query element and the desired operator as a left and right operand in the Inspector window under "Properties > Relation > Relation".
+5. Select a recipe query element and the desired operator as a left and right operand in the Inspector window under "Properties &gt; Relation &gt; Relation".
 
    ![Creating recipe query elements and relations](images/61731071883_DV_resource.Stream@PNG-en-US.png)
 
@@ -889,11 +889,11 @@ The recipe view visualizes recipe elements in table format on the screens. Opera
 
 The following optional recipe view configurations are available:
 
-- General > Display: You select a recipe or recipe query as a data source and define whether recipe data records can be edited, inserted or deleted.
-- General > Print job
+- General &gt; Display: You select a recipe or recipe query as a data source and define whether recipe data records can be edited, inserted or deleted.
+- General &gt; Print job
 
   The recipe view is automatically linked by logical operation with the system print job for recipe views. Create a logical link to the recipe view for any custom print jobs or system print jobs.
-- General > Time
+- General &gt; Time
 
   Define the time base for the "Last access" display, for example the coordinated universal time (UTC). You can include the time base selected for output in Runtime.
 - Appearance, layout, text format
@@ -905,14 +905,14 @@ The following optional recipe view configurations are available:
 - Table
 
   You define the appearance of the column headers, table and boundary lines and the behavior for selecting and sorting data records.
-- Table > Mark
+- Table &gt; Mark
 
   Determine whether lines or only cells can be marked with the mouse.
 
   Configure the properties of the selection rectangle which can be shown around the marked cells or lines of the table.
 
   Configure the marking colors for the markable cells and/or lines as required. The color defined by the system for the marking is used with the "Automatic coloring" property.
-- Table > Sorting
+- Table &gt; Sorting
 
   Determine whether sorting is to take place and if so, with click or double-click on the column header. Define the order of sorting which is to run cyclically when clicking or double-clicking the column header: either sorting ascending - descending or ascending - descending - no sorting
 
@@ -947,7 +947,7 @@ The following optional recipe view configurations are available:
 
   You can use the following switch tags.
 
-  @OBJECTNAME: Object name of the recipe display, see "Properties > Miscellaneous"
+  @OBJECTNAME: Object name of the recipe display, see "Properties &gt; Miscellaneous"
 
   @PROJECTPATH: Project directory
 
@@ -981,14 +981,14 @@ The following optional recipe view configurations are available:
 Configure a recipe view as follows:
 
 1. Drag the "Recipe display" object from the "Controls" palette of the "Tools" task card into the screen.
-2. Select the desired recipe or recipe query in the Inspector window under "General > Display".
+2. Select the desired recipe or recipe query in the Inspector window under "General &gt; Display".
 
    ![Procedure](images/111903672587_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111903672587_DV_resource.Stream@PNG-en-US.png)
-3. Define the write and read rights for the recipe display in Runtime under "General > Allow in Runtime".
+3. Define the write and read rights for the recipe display in Runtime under "General &gt; Allow in Runtime".
 4. Select "Appearance," "Layout," and "Text format" to define additional display options for the recipe view.
-5. Select "Properties" > Columns" to define the recipe elements which will be visible and write-protected in Runtime.
+5. Select "Properties" &gt; Columns" to define the recipe elements which will be visible and write-protected in Runtime.
 
    ![Procedure](images/111904447755_DV_resource.Stream@PNG-en-US.png)
 
@@ -1030,7 +1030,7 @@ In Runtime you export the recipe data with a button in the recipe display. You c
 
 #### How to configure the operation of the data export
 
-1. Define a file name and a directory for the export file under "Properties > Data export".
+1. Define a file name and a directory for the export file under "Properties &gt; Data export".
 
    The file name may be made up of names you select yourself and the following switch tags:
 
@@ -1053,7 +1053,7 @@ In Runtime you export the recipe data with a button in the recipe display. You c
    - The user may change the file name or the directory.
 4. If "Show dialog" is deactivated, the data are exported immediately to the defined export file on pressing the "Export log" button.
 5. Save the project.
-6. Activate the "Export log" button under "Properties > Toolbar".
+6. Activate the "Export log" button under "Properties &gt; Toolbar".
 
 #### Results
 
@@ -1115,7 +1115,7 @@ The data is loaded into the user archive.
 
 #### Import of configuration data of recipes and views
 
-To import configuration data of recipes and views, select the command "Edit" > "Import" in the main menu of the WinCC Configuration Studio.
+To import configuration data of recipes and views, select the command "Edit" &gt; "Import" in the main menu of the WinCC Configuration Studio.
 
 ### Configuring persistence (RT Professional)
 
@@ -1127,7 +1127,7 @@ The changes configured in Runtime are saved separately from the screen in the en
 
 #### Procedure
 
-1. Select "Properties > Safety > Persistence > Online configuration" which you can only operate in the engineering system. The online configuration can then be defined permanently in Runtime:
+1. Select "Properties &gt; Safety &gt; Persistence &gt; Online configuration" which you can only operate in the engineering system. The online configuration can then be defined permanently in Runtime:
 
    - "No persistence" The online configurations are not retained in Runtime. This default leaves the user no option in Runtime. The online configurations are lost the next time the screen changes and with deactivate/activate.
    - "Persistence" This default leaves the user the options of "reject", "retain" or "reset". With the "retain" option the online configurations are retained the next time the screen changes and with deactivate/activate.
@@ -1291,7 +1291,7 @@ The following control tag combinations are supported:
 
   > **Note**
   >
-  > Different data records may not contain the same recipe value in the "Field" recipe element You have to activate the "Unique values" checkbox under "Properties > Options" for the recipe element. Otherwise no clear assignment of the recipe data record by the value is possible and the first data record which satisfies the "Value in field" condition is used.
+  > Different data records may not contain the same recipe value in the "Field" recipe element You have to activate the "Unique values" checkbox under "Properties &gt; Options" for the recipe element. Otherwise no clear assignment of the recipe data record by the value is possible and the first data record which satisfies the "Value in field" condition is used.
 
 ##### More combinations of values for the "ID" and "Job" control tags
 
@@ -1696,7 +1696,7 @@ No further description is needed here as these are tags and functions internal t
 ###### Procedure
 
 1. Create a new connection, for example, "SIMATICS7".
-2. In the "Parameters" tab, select "WinCC RT Prof connection > Send/receive raw data block".
+2. In the "Parameters" tab, select "WinCC RT Prof connection &gt; Send/receive raw data block".
 
    ![Procedure](images/100542129931_DV_resource.Stream@PNG-en-US.png)
 
@@ -1716,7 +1716,7 @@ No further description is needed here as these are tags and functions internal t
    ![Procedure](images/61886561675_DV_resource.Stream@PNG-en-US.png)
 8. Specify the "R_ID" parameter, which was assigned in the configuration of the controller.
 9. Create a new recipe.
-10. In the Inspector window under "Properties > Communication" select "Raw data tag" as communication type and "Raw data tag_1" as raw data tag.
+10. In the Inspector window under "Properties &gt; Communication" select "Raw data tag" as communication type and "Raw data tag_1" as raw data tag.
 11. Create the recipe elements and recipe data records. Ensure that the recipe number matches the "PLC" field in the message frame.
 
 ##### Raw data tag for BSEND/BRCV functions of S7 communication (RT Professional)
@@ -1741,7 +1741,7 @@ Example:
 
   > **Note**
   >
-  > If the data block of a write job is transferred to AS and has not yet been deleted or fully deleted from the receiving buffer, then the next write job will be rejected with an error message. During such an error display, write jobs with R_ID > 0x8000 0000 are written to a connection-specific queue and the system tries to repeat the write job for 6 seconds.
+  > If the data block of a write job is transferred to AS and has not yet been deleted or fully deleted from the receiving buffer, then the next write job will be rejected with an error message. During such an error display, write jobs with R_ID &gt; 0x8000 0000 are written to a connection-specific queue and the system tries to repeat the write job for 6 seconds.
   >
   > The responsibility for time co-ordination for transfer rests with the user and needs to be noted as shorter time intervals for write jobs.
 
@@ -1823,7 +1823,7 @@ You use the recipe screen with the control objects you have configured. The sect
 >
 > **Runtime API**
 >
-> Runtime API provides you with extensive uaArchive functions to edit recipes and recipe queries in Runtime (see section "Interfaces > Runtime API", subsection "Control tags").
+> Runtime API provides you with extensive uaArchive functions to edit recipes and recipe queries in Runtime (see section "Interfaces &gt; Runtime API", subsection "Control tags").
 
 #### Requirement
 
@@ -2189,8 +2189,8 @@ Tags:
 2. Create the "Beverage" and "Orders" recipes with the settings indicated above.
 3. Select the following properties for the recipes:
 
-   - Under "General > Size" the "Unlimited" type
-   - Under "Communication > Communication type" the "Tags" communication type
+   - Under "General &gt; Size" the "Unlimited" type
+   - Under "Communication &gt; Communication type" the "Tags" communication type
 4. Create the recipe entries in each recipe.
 
    ![Procedure](images/61789021707_DV_resource.Stream@PNG-en-US.png)
@@ -2249,7 +2249,7 @@ The "Beverage" and "Orders" recipes are created.
    ![Procedure](images/100708744459_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/100708744459_DV_resource.Stream@PNG-en-US.png)
-2. Enter the following conditions under "Properties > Relations":
+2. Enter the following conditions under "Properties &gt; Relations":
 
    Beverage.Article = Orders.Article
 
@@ -2282,13 +2282,13 @@ You have created and opened the "Drinks mixing plant" process picture.
 #### Procedure
 
 1. Insert the recipe view in the process picture. You will find the recipe display in the toolbox under "Controls".
-2. In the Inspector window, use the arrow to select the "Recipe query" type in the "Data source" input field of the "General > View" group.
+2. In the Inspector window, use the arrow to select the "Recipe query" type in the "Data source" input field of the "General &gt; View" group.
 3. Select the "Label" recipe query.
-4. Define additional display options for the recipe view in the "Properties" > "Appearance" group in the Inspector window.
-5. Go to the "Properties" > "Columns" group in the Inspector window.
+4. Define additional display options for the recipe view in the "Properties" &gt; "Appearance" group in the Inspector window.
+5. Go to the "Properties" &gt; "Columns" group in the Inspector window.
 
    - Activate the check box in the "Visible" and "Protected" columns for all recipe elements.
-6. In the Inspector window, switch to the "Properties" > "Toolbar" group. Activate the check box in the "Visible" column for the following buttons under "Toolbar - Buttons".
+6. In the Inspector window, switch to the "Properties" &gt; "Toolbar" group. Activate the check box in the "Visible" column for the following buttons under "Toolbar - Buttons".
 
    - "First line"
    - "Previous line"
@@ -2296,7 +2296,7 @@ You have created and opened the "Drinks mixing plant" process picture.
    - "Last line"
    - "Sort dialog"
    - "Selection dialog"
-7. Go to the "Properties" > "Columns" group in the Inspector window. Enter the following sorting in the "Sort" column.
+7. Go to the "Properties" &gt; "Columns" group in the Inspector window. Enter the following sorting in the "Sort" column.
 
    - By job number
    - Ascending
@@ -2389,7 +2389,7 @@ SYSTEMTIME SysDate;
 
 //******* Connect to Component User Archives ****************************
 
-if (uaConnect( &hConnect ) == FALSE )
+if (uaConnect( &amp;hConnect ) == FALSE )
 
 {
 
@@ -2411,7 +2411,7 @@ return;
 
 //******* Connect to Archive via Archive Name ****************************
 
-if (uaQueryArchiveByName( hConnect, "color", &hArchive ) == FALSE )
+if (uaQueryArchiveByName( hConnect, "color", &amp;hArchive ) == FALSE )
 
 {
 
@@ -2453,7 +2453,7 @@ printf("Number of Fields = %u\n", NumberOfFields );
 
 //******* Read and show Data Fields ****************************************
 
-for ( Index = 1; Index < NumberOfFields; Index++ )
+for ( Index = 1; Index &lt; NumberOfFields; Index++ )
 
 {
 
@@ -2469,7 +2469,7 @@ case UA_FIELDTYPE_INTEGER :
 
 printf("Field Type = Integer\n");
 
-if ( uaArchiveGetFieldValueLong ( hArchive, Index, &IntValue ) == TRUE )
+if ( uaArchiveGetFieldValueLong ( hArchive, Index, &amp;IntValue ) == TRUE )
 
 printf( "Field Value = %u\n", IntValue );
 
@@ -2483,7 +2483,7 @@ case UA_FIELDTYPE_FLOAT :
 
 printf("Field Type = Float\n");
 
-if (uaArchiveGetFieldValueFloat ( hArchive, Index, &FloatValue ) == TRUE )
+if (uaArchiveGetFieldValueFloat ( hArchive, Index, &amp;FloatValue ) == TRUE )
 
 printf("Field Value = %f\n", FloatValue );
 
@@ -2497,7 +2497,7 @@ case UA_FIELDTYPE_DOUBLE :
 
 printf("Field Type = Double\n");
 
-if (uaArchiveGetFieldValueDouble (hArchive, Index, &DoubleValue ) == TRUE )
+if (uaArchiveGetFieldValueDouble (hArchive, Index, &amp;DoubleValue ) == TRUE )
 
 printf("Field Value = %g\n", DoubleValue );
 
@@ -2523,9 +2523,9 @@ break;
 
 case UA_FIELDTYPE_DATETIME :
 
-printf("Field Type = Date & Time\n");
+printf("Field Type = Date &amp; Time\n");
 
-if (uaArchiveGetFieldValueDate ( hArchive, Index, &SysDate ) == TRUE )
+if (uaArchiveGetFieldValueDate ( hArchive, Index, &amp;SysDate ) == TRUE )
 
 printf("%d.%d.%d\n ",SysDate.wDay, SysDate.wMonth, SysDate.wYear );
 
@@ -2645,7 +2645,7 @@ SYSTEMTIME SysDate;
 
 //******* Connect to Component User Archives ****************************
 
-if (uaConnect( &hConnect ) == FALSE )
+if (uaConnect( &amp;hConnect ) == FALSE )
 
 {
 
@@ -2667,7 +2667,7 @@ return;
 
 //******* Connect to Archive via Name ****************************
 
-if (uaQueryArchiveByName( hConnect, "color", &hArchive ) == FALSE )
+if (uaQueryArchiveByName( hConnect, "color", &amp;hArchive ) == FALSE )
 
 {
 
@@ -2717,9 +2717,9 @@ IntValue = 105;//RGB for darkgray
 
 strcpy(StringField, "darkgray" );
 
-GetSystemTime( &SysDate );
+GetSystemTime( &amp;SysDate );
 
-for ( Index = 1; Index < NumberOfFields; Index++ )
+for ( Index = 1; Index &lt; NumberOfFields; Index++ )
 
 {
 
@@ -2789,9 +2789,9 @@ break;
 
 case UA_FIELDTYPE_DATETIME :
 
-printf("Field Type = Date & Time\n");
+printf("Field Type = Date &amp; Time\n");
 
-if (uaArchiveSetFieldValueDate ( hArchive, Index, &SysDate ) == TRUE )
+if (uaArchiveSetFieldValueDate ( hArchive, Index, &amp;SysDate ) == TRUE )
 
 printf("%d.%d.%d\n ",SysDate.wDay, SysDate.wMonth, SysDate.wYear );
 
@@ -2985,7 +2985,7 @@ You can now access the recipe in the following ways:
 
 > **Note**
 >
-> For an element that is referenced with the "Value" control tag, you must select the "Field must possess a unique value" check box under "Properties > Memory options". Otherwise it will not be possible to create a unique assignment between the recipe data record and the value in the element.
+> For an element that is referenced with the "Value" control tag, you must select the "Field must possess a unique value" check box under "Properties &gt; Memory options". Otherwise it will not be possible to create a unique assignment between the recipe data record and the value in the element.
 
 - In the "Field" I/O field, enter the word "Item" and write "Cola Light" to the "Value" I/O field. Enter "7" in the "Job" I/O field.
 

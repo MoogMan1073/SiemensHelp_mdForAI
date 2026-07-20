@@ -157,7 +157,7 @@ The packages are version-independent and can be combined.
 
 > **Note**
 >
-> By default, the WebNavigator licenses are used for WebUX. If you want to use these licenses separately, clear the "Use WebNavigator licenses for WebUX" check box under "Runtime settings > Web access".
+> By default, the WebNavigator licenses are used for WebUX. If you want to use these licenses separately, clear the "Use WebNavigator licenses for WebUX" check box under "Runtime settings &gt; Web access".
 
 #### Reserved license
 
@@ -186,7 +186,7 @@ Possible applications include:
 
 #### Reserve WebUX license
 
-You assign one of the available licenses to a WebUX user as a reserved license under "Runtime settings > Web Navigator".
+You assign one of the available licenses to a WebUX user as a reserved license under "Runtime settings &gt; Web Navigator".
 
 To do so, enable the option "Reserve WebUX license" for a selected user. The "Number of reserved licenses" field shows how many WebUX licenses are reserved.
 
@@ -226,7 +226,7 @@ Certain requirements concerning operating system and software configuration must
 | SIMATIC Logon version (optional) | SIMATIC Logon V1.5 SP3 | WebUX server | Only relevant if you are using SIMATIC Logon for central user administration. |
 | User rights for installation | Administrator rights | WebUX server | Required rights for installing the WebUX server. |
 | User rights for operation | Default user rights | WebUX client  WebUX server | Required rights on the WebUX server and WebUX client. |
-| Microsoft Internet Information Service (IIS) | WWW Services > Common HTTP Features:  - HTTP error - HTTP redirect - Standard document - Static content   WWW Services > Performance Features:  - Compression of dynamic content - Compression of static content   WWW services > Application development features (only for Windows Server 2019 Windows Server 2022):  - WebSocket protocol | WebUX server | The WebUX server requires the Microsoft Internet Information Service (IIS).  Enable the settings listed for the IIS. |
+| Microsoft Internet Information Service (IIS) | WWW Services &gt; Common HTTP Features:  - HTTP error - HTTP redirect - Standard document - Static content   WWW Services &gt; Performance Features:  - Compression of dynamic content - Compression of static content   WWW services &gt; Application development features (only for Windows Server 2019 Windows Server 2022):  - WebSocket protocol | WebUX server | The WebUX server requires the Microsoft Internet Information Service (IIS).  Enable the settings listed for the IIS. |
 | Microsoft Message Queuing (MSMQ) | In Control Panel in the dialog box for activating Windows features (Windows 10):  - "Microsoft Message Queue (MSMQ) Server" component   In the server manager (Windows Server 2019 / Windows Server 2022):  - "Message Queuing" option - Below this, the "Message Queuing Services" option - Below this, the "Message Queuing Server" option | WebUX server | The WebUX server requires the Message Queuing service from Microsoft.  Activate the listed settings for Microsoft Message Queuing. |
 
 #### WebUX client (terminal)
@@ -274,7 +274,7 @@ Before installing the WebUX server, you must install Microsoft Message Queuing (
 
 #### Windows Procedure
 
-1. Go to "Control Panel > Programs".
+1. Go to "Control Panel &gt; Programs".
 2. Click the "Enable or disable Windows features" button on the left menu bar.
 
    The "Windows Features" dialog box opens.
@@ -357,7 +357,7 @@ If the installation was successful, a message to this effect is displayed on the
 
 > **Note**
 >
-> You can also start the "WinCC WebUX Configurator" manually with Options and Tools > HMI Tools > SCADA WebUX Configuration manager.
+> You can also start the "WinCC WebUX Configurator" manually with Options and Tools &gt; HMI Tools &gt; SCADA WebUX Configuration manager.
 
 #### Result
 
@@ -387,7 +387,7 @@ Once WinCC Runtime Professional and WebUX are installed, the WinCC WebUX Configu
 
 To make changes later, you can find the WinCC WebUX Configurator in the "Siemens Automation" program group:
 
-- Options and Tools > HMI Tools > SCADA WebUX Configuration manager
+- Options and Tools &gt; HMI Tools &gt; SCADA WebUX Configuration manager
 
 The WebUX Configurator is used to set up the standard configuration for using WebUX:
 
@@ -483,7 +483,7 @@ You need a digital SSL certificate for the WebUX server.
 
 You can find more information in the Microsoft Support under "How to Set Up an HTTPS Service in IIS":
 
-- <http://support.microsoft.com/kb/324069>
+- [http://support.microsoft.com/kb/324069](http://support.microsoft.com/kb/324069)
 
 | Symbol | Meaning |
 | --- | --- |
@@ -523,7 +523,7 @@ When the configuration is completed, a self-signed certificate is created. The c
   
 [Installing the WebUX server (RT Professional)](#installing-the-webux-server-rt-professional)
   
-<http://support.microsoft.com/kb/324069>
+[http://support.microsoft.com/kb/324069](http://support.microsoft.com/kb/324069)
 
 ## Supported functions (RT Professional)
 
@@ -560,7 +560,7 @@ All unsupported objects are hidden in WebUX.
 >
 > If unsupported objects are used, warnings are output on the "Info" tab in the Inspector window during compilation.
 >
-> If you do not want to display the WebUX warnings, they can be hidden. Go to "Runtime settings > Compiler options" and select the "Hide WebUX warnings" check box.
+> If you do not want to display the WebUX warnings, they can be hidden. Go to "Runtime settings &gt; Compiler options" and select the "Hide WebUX warnings" check box.
 
 **Faceplates**
 
@@ -665,10 +665,10 @@ Proceed as follows to display a file in the WebBrowser Control:
 
 1. Save the file in a sub-folder at the following path
 
-   - C:\inetpub\wwwroot\siemens\WebRH\public\<folder>
+   - C:\inetpub\wwwroot\siemens\WebRH\public\&lt;folder&gt;
 2. Use the following call in the WebBrowser Control:
 
-   - https://<server name>/<folder>/<file name>
+   - https://&lt;server name&gt;/&lt;folder&gt;/&lt;file name&gt;
 
 **Example**
 
@@ -744,7 +744,7 @@ The following restrictions apply to the dynamization:
 
 > **Note**
 >
-> The option "SmartTags reads PLC value via cache" under "Runtime settings > General" is irrelevant for WebUX. In WebUX, the process tags are always read from the buffer, in other words asynchronously.
+> The option "SmartTags reads PLC value via cache" under "Runtime settings &gt; General" is irrelevant for WebUX. In WebUX, the process tags are always read from the buffer, in other words asynchronously.
 
 ---
 
@@ -851,7 +851,7 @@ Depending on the language and components, only specific characters are permitted
 >
 > . , ; : ! ? " '   
 > + = / \ @ *   
-> [ ] { } < >  
+> [ ] { } &lt; &gt;  
 > space  
 > Uppercase and lowercase are relevant in the project names.
 
@@ -876,12 +876,12 @@ You need to configure screens for WebUX so that they can be run on the Web brows
 1. Double-click the desired screen in the project tree.
 
    The screen opens and the screen properties are shown in the Inspector window.
-2. In the Inspector window, click "Properties > Properties > Web access".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Web access".
 3. Select the "Web access" check box under "WebUX".
 
    or
 4. Select the desired screen in the project tree.
-5. Select the "Web access > WebUX" command from the shortcut menu.
+5. Select the "Web access &gt; WebUX" command from the shortcut menu.
 
    The pictures are additionally saved in "*.rdf" format. Faceplate types are additionally stored in the "*.json" format. When a process picture is saved as Web-enabled, the properties of the picture and the objects are checked. The result is stored in the output window.
 6. Check the alarms in the output window.
@@ -890,7 +890,7 @@ You need to configure screens for WebUX so that they can be run on the Web brows
 
 > **Note**
 >
-> You can also configure multiple screens for Web access by selecting the "Screens" entry in the project tree and then the "Web access > WebUX enabled" command from the shortcut menu.
+> You can also configure multiple screens for Web access by selecting the "Screens" entry in the project tree and then the "Web access &gt; WebUX enabled" command from the shortcut menu.
 
 > **Note**
 >
@@ -943,7 +943,7 @@ To use WinCC/WebUX on terminal devices, all you need is a Web browser with acces
 > - Avoid the following operator inputs because they would end the session:
 >
 >   - Browser navigation (back/next)
->   - Reloading the Web page (refresh or <F5>)
+>   - Reloading the Web page (refresh or &lt;F5&gt;)
 
 #### Requirement
 
@@ -955,15 +955,15 @@ To use WinCC/WebUX on terminal devices, all you need is a Web browser with acces
 
 1. Go to the address bar of the browser and enter the address of the WebUX server.
 
-   - https://<servername>
+   - https://&lt;servername&gt;
 
    If you do not use the default port, add the port number to the URL:
 
-   - https://<servername>:<portnummer>
+   - https://&lt;servername&gt;:&lt;portnummer&gt;
 
    If you are using a virtual folder instead of a Website, add the name of the virtual Web folder:
 
-   - https://<servername>/<directoryname>
+   - https://&lt;servername&gt;/&lt;directoryname&gt;
 2. Type in the user name and password.
 
 Depending on the user rights, you can observe or operate the WinCC project.

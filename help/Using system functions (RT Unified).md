@@ -52,7 +52,7 @@ Events include:
 - Execution of a task
 - Pressing of a button
 
-The function list is opened in the Inspector window under "Properties > Events" as soon as an object has been selected.
+The function list is opened in the Inspector window under "Properties &gt; Events" as soon as an object has been selected.
 
 #### Layout
 
@@ -100,10 +100,10 @@ You have several options for entering a function in the function list:
 - Enter the complete or partial name of the function.
 
   Autocomplete is supported.
-- Select the "<Add function>" field and open the selection menu.
+- Select the "&lt;Add function&gt;" field and open the selection menu.
 
   The available functions are sorted by category.
-- Select the "<Add function>" field and select the list icon.
+- Select the "&lt;Add function&gt;" field and select the list icon.
 
   The available functions are displayed in alphabetical order.
 
@@ -172,7 +172,7 @@ To inform you of errors, missing or incorrect entries in the function list are h
 >
 > Missing screen items and HMI tags can be created later. Objects of the WinCC Unified object model are referenced in the function list.
 
-Alarms during the compiling and loading of a project are displayed in the Inspector window in the "Info > Compile" tab.
+Alarms during the compiling and loading of a project are displayed in the Inspector window in the "Info &gt; Compile" tab.
 
 The function list supports you by displaying missing or incorrect entries directly for editing:
 
@@ -208,11 +208,11 @@ One of the following objects is configured:
 #### Procedure
 
 1. Select the object.
-2. Go to "Properties > Events" in the Inspector window.
+2. Go to "Properties &gt; Events" in the Inspector window.
 
    The function list opens.
 3. Select an event.
-4. Select "<Add function>" in the function list.
+4. Select "&lt;Add function&gt;" in the function list.
 5. Enter the function.
 
    If the desired function has parameters, the parameters are displayed.
@@ -277,7 +277,7 @@ The function list can be converted to a local script even if the parameter speci
 To delete a single function, follow these steps:
 
 1. Select the name of the function.
-2. Press <Del>.
+2. Press &lt;Del&gt;.
 
 ---
 
@@ -320,7 +320,7 @@ To assign a parameter to a screen item and convert the value entered in the scre
 
 1. Assign the desired screen item to the parameter.
 2. Select the screen item.
-3. Go to "Properties > General > Process value" in the Inspector window.
+3. Go to "Properties &gt; General &gt; Process value" in the Inspector window.
 4. Select "Tag" in the "Dynamization" column.
 
    The tag selection range is displayed.
@@ -538,7 +538,7 @@ You can find more information on using the "ActivateCleanScreen" system function
 
 #### Description
 
-This system function is used to log user actions in the Audit Trail that are not automatically logged in the Audit Trail. You can also use this system function to require the user to enter an acknowledgment or an electronic signature and a comment for the operator action. A requirement for the use of the system function is that the GMP-compliant configuration is activated under "Runtime settings > GMP".
+This system function is used to log user actions in the Audit Trail that are not automatically logged in the Audit Trail. You can also use this system function to require the user to enter an acknowledgment or an electronic signature and a comment for the operator action. A requirement for the use of the system function is that the GMP-compliant configuration is activated under "Runtime settings &gt; GMP".
 
 If you use the "InsertElectronicRecord" system function in a function, the debugger may open if you cancel your input by clicking "Cancel". To compensate for this reaction, you can use the "On Error Resume Next" statement in a function. With this instruction, the next instruction is executed after a runtime error. If you use the "On Error Resume Next" statement, output of system alarms is also suppressed.
 
@@ -1805,7 +1805,7 @@ The system function "OpenScreenWithNumberInPopup" has the following parameters:
 | Parameter | Description |
 | --- | --- |
 | Popup window name | Name of the popup window. The name must be unique within the parent screen and is required to close the pop-up window. |
-| Screen number | Unique number (> 0) of the screen that will be loaded into the popup window. |
+| Screen number | Unique number (&gt; 0) of the screen that will be loaded into the popup window. |
 | Close when opened | True = If the pop-up window is open when the function is called, it is closed.  False = If the popup window is open when the function is called, it remains open. |
 | Header | Specifies the window title of the popup window. |
 | Left | Defines the window position as offset from the left margin. |
@@ -2182,7 +2182,7 @@ The system function "SetPropertyValue" has the following parameters:
 | Parameter | Description |
 | --- | --- |
 | Screen object path | Path of the screen item whose property is changed. |
-| Screen object property name | Name of the property that will be changed.  The property name can be copied with selected screen item to the Inspector window under "Properties > Properties":  1. Right-click the name of the property. 2. Select "Copy property name". |
+| Screen object property name | Name of the property that will be changed.  The property name can be copied with selected screen item to the Inspector window under "Properties &gt; Properties":  1. Right-click the name of the property. 2. Select "Copy property name". |
 | Value | The value assigned to the property. |
 
 #### Use in scripts
@@ -2201,7 +2201,7 @@ You can find more information on using the "SetPropertyValue" system function in
 
 Assigns a new value to the brightness of the display.
 
-The value for the "SetBrightness" system function can be set between 0 and 100. The HMI devices support a brightness setting between 10% and 100%. The brightness settings on the HMI device can be viewed and edited in the Control Panel under "Settings > Display". The configuration set in the Control Panel is restored when the HMI device is restarted.
+The value for the "SetBrightness" system function can be set between 0 and 100. The HMI devices support a brightness setting between 10% and 100%. The brightness settings on the HMI device can be viewed and edited in the Control Panel under "Settings &gt; Display". The configuration set in the Control Panel is restored when the HMI device is restarted.
 
 - If the system function has been assigned a value of 0, the display of the HMI device is switched off in runtime. If the operator touches the display, the display switches to the previous brightness setting.
 - If the system function has been assigned a value between 1 and 10, the brightness is set to 10% on the HMI device.
@@ -2887,7 +2887,7 @@ The system function "ChangeScreenAsyncWithNumber" has the following parameters:
 
 | Parameter | Description |
 | --- | --- |
-| Screen number | Unique number (> 0) of the new screen to which you change. |
+| Screen number | Unique number (&gt; 0) of the new screen to which you change. |
 | Screen window path | Path of the top-level screen window or screen in which the screen is to be switched, for example, "Screen_window_1" |
 
 #### Using scripts
@@ -2920,7 +2920,7 @@ The system function "ChangeScreenWithNumber" has the following parameters:
 
 | Parameter | Description |
 | --- | --- |
-| Screen number | Unique number (> 0) of the new screen to which you change. |
+| Screen number | Unique number (&gt; 0) of the new screen to which you change. |
 | Screen window path | Path of the top-level screen window or screen in which the screen is to be switched, for example, "Screen_window_1" |
 
 #### Use in scripts

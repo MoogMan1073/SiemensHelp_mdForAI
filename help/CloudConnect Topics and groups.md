@@ -46,7 +46,7 @@ Open the Topic editor as follows:
 
 1. Expand the project tree:
 
-   Station > Local modules > CP 1545-1 > Cloud connection >
+   Station &gt; Local modules &gt; CP 1545-1 &gt; Cloud connection &gt;
 
    - "Published topics" / "Subscribed topics" or
    - "Published groups"
@@ -81,7 +81,7 @@ Open the dialog as follows:
    - For groups: Siemens MindSphere - MindConnect IoT Extension
 2. Expand the project tree:
 
-   Station > Local modules > CP 1545-1 > Cloud connection
+   Station &gt; Local modules &gt; CP 1545-1 &gt; Cloud connection
 3. In the shortcut menu, click on "Export CloudConnect Data" or "Import CloudConnect data".
 
    The window for importing and exporting the file is opened in *.XML format.
@@ -103,7 +103,7 @@ Open the dialog as follows:
 | `<TimeTrigger> <Cyclic>`      `oder`      `<TimeTrigger> <Date>` | - CycleTime - Frequency - TimeOfTheDay - Weekday - DayOfTheMonth | - Integer; 10-4294967295, ms - String; Daily, Weekly, Monthly - Integer; 0-1439, minutes (00:00 - 23:59 in minutes) - String; Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday - Integer; 1-31 | - Required for element `TimeTrigger > Cyclic` Required for element `TimeTrigger > Date` - Optional - Optional - Optional |
 | `<DataPoints> <DataPoint> <General>`    `<DataPoints> <DataPoint> <General> <Tag>` | - Name | - String - String | - Required - Optional |
 | `<DataPoints> <DataPoint> <ValueTrigger>` | - Type - Value - RangeLow - RangeHigh | - String; Deviation, Lower Threshold, Upper Threshold, Outside Range, Inside Range - String - String - String | - Required for element `ValueTrigger` - Optional - Optional - Optional |
-| `<Payload>` | - Format - Customize | - String; XML, JSON, MindConnect IoT Extension, Custom - Boolean; true, false - <![CDATA[Permitted content see section [Payload formats](#payload-formats)]]> | - Required - Optional - Optional |
+| `<Payload>` | - Format - Customize | - String; XML, JSON, MindConnect IoT Extension, Custom - Boolean; true, false - &lt;![CDATA[Permitted content see section [Payload formats](#payload-formats)]]&gt; | - Required - Optional - Optional |
 | `<SubscribedTopic>` |  |  |  |
 | `<General>` | - Name - Author - Comment | - String - String - String | - Required - Optional - Optional |
 | `<QoS>` |  | Integer; 0-2 | Optional |
@@ -360,7 +360,7 @@ This section contains information on the following topics:
 
 You open the Topic editor via the project tree:
 
-Station > Local modules > CP 1545-1 > Cloud connection >  
+Station &gt; Local modules &gt; CP 1545-1 &gt; Cloud connection &gt;  
      "Published topics" / "Subscribed topics" or "Published groups"
 
 **Data point configuration in the topic editor**
@@ -448,7 +448,7 @@ When configuring the data points, note the information under [Permitted Characte
 
   ⇒ Validity: MindConnect IoT Extension
 
-  The attribute is applied to the payload as <ADDITIONAL_ATTRIBUTE>; see section [Payload configuration](#payload-configuration).
+  The attribute is applied to the payload as &lt;ADDITIONAL_ATTRIBUTE&gt;; see section [Payload configuration](#payload-configuration).
 
   With a connection to IoT Extension, the attribute is interpreted as a label of the physical units of the respective data point. The standard units are:
 
@@ -482,11 +482,11 @@ The table lists the configurable data types.
 
 If needed, check whether the data types are supported by your broker.
 
-<DATAPOINT_TYPE> indicates the data type during publication. For the publication of the useful data and the tag, <DATAPOINT_TYPE> see section [Payload configuration](#payload-configuration).
+&lt;DATAPOINT_TYPE&gt; indicates the data type during publication. For the publication of the useful data and the tag, &lt;DATAPOINT_TYPE&gt; see section [Payload configuration](#payload-configuration).
 
 Data types available for Cloud access
 
-| S7 data types (bits) | <DATAPOINT_TYPE> | Remarks |
+| S7 data types (bits) | &lt;DATAPOINT_TYPE&gt; | Remarks |
 | --- | --- | --- |
 | BOOL (1) | BOOL | Values transferred: 0, 1 |
 | BYTE (8) | UINT8 |  |
@@ -920,8 +920,8 @@ The following sequences are not permitted in the payload content:
 - {{#
 - {{^
 - {{/
-- {{>
-- {{&
+- {{&gt;
+- {{&amp;
 - {{{
 
 ##### Example of transferred payload (JSON)

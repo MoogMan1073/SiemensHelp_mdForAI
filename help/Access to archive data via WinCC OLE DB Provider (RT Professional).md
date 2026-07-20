@@ -52,7 +52,7 @@ Once the configuration has been completed, the Archive Connector may be closed.
 
 > **Note**
 >
-> WinCC RT archives in the directory "<Project Directory> \ ArchiveManager" and the associated subdirectories must not be connected to or disconnected with the Archive Connector because their connection to the SQL server is managed by the WinCC RT Professional HMI device.
+> WinCC RT archives in the directory "&lt;Project Directory&gt; \ ArchiveManager" and the associated subdirectories must not be connected to or disconnected with the Archive Connector because their connection to the SQL server is managed by the WinCC RT Professional HMI device.
 >
 > The path for the swapped out WinCC archives is set in WinCC with the Archive Configurator of tag logging, for example, not with the WinCC Archive Connector.
 >
@@ -177,7 +177,7 @@ For the communication with the WinCC OLE DB-Provider, ADO DB is used in applicat
 
   > **Note**
   >
-  > The WinCC RT archives in the directory "<Project directory> \ ArchiveManager" and the associated subdirectories must not be connected or disconnected with the Archive Connector, because their connection to the SQL server is managed by WinCC RT Professional.
+  > The WinCC RT archives in the directory "&lt;Project directory&gt; \ ArchiveManager" and the associated subdirectories must not be connected or disconnected with the Archive Connector, because their connection to the SQL server is managed by WinCC RT Professional.
 
 #### Procedure
 
@@ -200,8 +200,8 @@ For ActiveX data objects (ADO), the connection between the application and the a
 | Parameter | Description |
 | --- | --- |
 | Provider | Name of the OLE DB Provider:  e.g. WinCCOLEDBProvider |
-| Catalog | Names of the WinCC database With WinCC RT databases, you will use database names that end in "R." <Datenbankname_R>. The database "CC_ExternalBrowsing" can also be used.  If you have connected swapped out WinCC archives to the SQL Server via the WinCC Archive Connector, use their symbolic name.    **Note**   Enter the WinCC project name for "Catalog" for transparent access; for e.g.: "Catalog=WinCC_Project_Name".   **Note**   If you access message archives or swapped out archives via "CC_ExternalBrowsing", this access may take several minutes. |
-| Data Source | Server name Local: ".\WinCC" or "<Computer Name>\WinCC"  Remote: "<Computer name>\WinCC"   **Note**   Enter the transparent access to the Central Archive Server and in case of redundant servers enter the following via the OLE DB-Provider for "Data Source":  <Symbolic Computer Name>::\WinCC.    **Note**   Use the archive tag name to directly access an archive tag on the central archive server CAS. The central archive server CAS returns the CAS-ID and not the archive tag ID as ID:  <SYMBOLIC COMPUTER NAME>\\<Achive_Var_Name> |
+| Catalog | Names of the WinCC database With WinCC RT databases, you will use database names that end in "R." &lt;Datenbankname_R&gt;. The database "CC_ExternalBrowsing" can also be used.  If you have connected swapped out WinCC archives to the SQL Server via the WinCC Archive Connector, use their symbolic name.    **Note**   Enter the WinCC project name for "Catalog" for transparent access; for e.g.: "Catalog=WinCC_Project_Name".   **Note**   If you access message archives or swapped out archives via "CC_ExternalBrowsing", this access may take several minutes. |
+| Data Source | Server name Local: ".\WinCC" or "&lt;Computer Name&gt;\WinCC"  Remote: "&lt;Computer name&gt;\WinCC"   **Note**   Enter the transparent access to the Central Archive Server and in case of redundant servers enter the following via the OLE DB-Provider for "Data Source":  &lt;Symbolic Computer Name&gt;::\WinCC.    **Note**   Use the archive tag name to directly access an archive tag on the central archive server CAS. The central archive server CAS returns the CAS-ID and not the archive tag ID as ID:  &lt;SYMBOLIC COMPUTER NAME&gt;\\&lt;Achive_Var_Name&gt; |
 
 **Example Process Value and Message Archive:**
 
@@ -221,7 +221,7 @@ In the following example, a connection object is created with subsequent opening
 
 > **Note**
 >
-> In order to improve performance during local access, enter "<Computer Name>\WinCC" as the data source instead of ".\WinCC".
+> In order to improve performance during local access, enter "&lt;Computer Name&gt;\WinCC" as the data source instead of ".\WinCC".
 
 ## Application cases (RT Professional)
 
@@ -457,19 +457,19 @@ Replace "TAG_LLVID:R" with "TAG_LLVID_EX:R".
 
 | Parameter | Description |  |  |
 | --- | --- | --- | --- |
-| ValueID | Value ID from the database table   Multiple namings are possible, e.g.,  "TAG:R,(ValueID_1;ValueID_2;ValueID_x),<TimeBegin>,<TimeEnd>" |  |  |
-| ValueName | ValueName in format 'ArchiveName\Value_Name'. The <ValueName> parameter must be enclosed in single quotes.   Multiple namings are possible, e.g.,  "TAG:R,('ValueName_1';'ValueName_2';'ValueName_x'), <TimeBegin>,<TimeEnd>"   **Note**   Please not that programming languages such as Visual Basic, VBScript or VBA only allow the following characters in the tag names: "A...Z", "a...z", "0...9" and "_".   In WinCC if you use special characters such as "," or ";" in the tag names then the script will be aborted with an error message. In such a case use the "Tag-ID" to access a tag with special characters in the script name. |  |  |
-| TimeBegin | Start time in  'YYYY-MM-DD hh:mm:ss.msc' format  When <TimeStep> is used, <TimeBegin> must be specified as an absolute time. Relative time information or "0000-00-00 00:00:00.000" is not possible. |  |  |
+| ValueID | Value ID from the database table   Multiple namings are possible, e.g.,  "TAG:R,(ValueID_1;ValueID_2;ValueID_x),&lt;TimeBegin&gt;,&lt;TimeEnd&gt;" |  |  |
+| ValueName | ValueName in format 'ArchiveName\Value_Name'. The &lt;ValueName&gt; parameter must be enclosed in single quotes.   Multiple namings are possible, e.g.,  "TAG:R,('ValueName_1';'ValueName_2';'ValueName_x'), &lt;TimeBegin&gt;,&lt;TimeEnd&gt;"   **Note**   Please not that programming languages such as Visual Basic, VBScript or VBA only allow the following characters in the tag names: "A...Z", "a...z", "0...9" and "_".   In WinCC if you use special characters such as "," or ";" in the tag names then the script will be aborted with an error message. In such a case use the "Tag-ID" to access a tag with special characters in the script name. |  |  |
+| TimeBegin | Start time in  'YYYY-MM-DD hh:mm:ss.msc' format  When &lt;TimeStep&gt; is used, &lt;TimeBegin&gt; must be specified as an absolute time. Relative time information or "0000-00-00 00:00:00.000" is not possible. |  |  |
 | TimeEnd | End time in  'YYYY-MM-DD hh:mm:ss.msc' format |  |  |
-| SQL_Clause | Filter criterion in SQL syntax:  [WHERE search_condition]  [ORDER BY {order_expression [ASC|DESC] } ]   The "ORDER BY" criterion can only be used when the specified sorting order is "{order_expression [ASC|DESC] }".  Example: The following query supplies all values of the "ValueName_1" and "ValueName_2" tags that are less than 50 or greater than 100. "TAG:R,('ValueName_1';'ValueName_2'),<TimeBegin>,<TimeEnd>, 'WHERE RealValue > 100 OR RealValue < 50'" |  |  |
-| TimeStep | Values within the specified time interval are collected, beginning with the start time <TimeBegin>   Format: 'TIMESTEP=x,y' x = Interval in seconds  y = Aggregation type, defines the interval result   The following values are possible for aggregation type: |  |  |
+| SQL_Clause | Filter criterion in SQL syntax:  [WHERE search_condition]  [ORDER BY {order_expression [ASC|DESC] } ]   The "ORDER BY" criterion can only be used when the specified sorting order is "{order_expression [ASC|DESC] }".  Example: The following query supplies all values of the "ValueName_1" and "ValueName_2" tags that are less than 50 or greater than 100. "TAG:R,('ValueName_1';'ValueName_2'),&lt;TimeBegin&gt;,&lt;TimeEnd&gt;, 'WHERE RealValue &gt; 100 OR RealValue &lt; 50'" |  |  |
+| TimeStep | Values within the specified time interval are collected, beginning with the start time &lt;TimeBegin&gt;   Format: 'TIMESTEP=x,y' x = Interval in seconds  y = Aggregation type, defines the interval result   The following values are possible for aggregation type: |  |  |
 | Without interpolation | With interpolation | Meaning |  |
 | 1 (FIRST)  2 (LAST)  3 (MIN)  4 (MAX)  5 (AVG)  6 (SUM)  7 (COUNT) | 257 (FIRST_INTERPOLATED)  258 (LAST_INTERPOLATED)  259 (MIN_INTERPOLATED)  260 (MAX_INTERPOLATED)  261 (AVG_INTERPOLATED)  262 (SUM_INTERPOLATED)  263 (COUNT_INTERPOLATED) | First value Last value Minimum value Maximum value Mean value Sum Number of values |  |
 | Without interpolation means: If no values are present in the interval, no interval result will be returned.  With interpolation means: If no values are present in the interval, the value will be derived by linear interpolation from the results of the neighboring intervals that are not empty. No extrapolation is done.   Example: When TIMESTEP=60,257, for each interval of 60 seconds, the first value of this interval or - if there are no values in this interval - the linear, interpolated value from the first values of the neighboring intervals are returned.  "TAG:R,1,'2013-07-09 09:03:00.000','0000-00-00 00:10:00.000','TIMESTEP=60,257'" |  |  |  |
 
 > **Note**
 >
-> <TimeBegin> and <TimeEnd> must not both be "ZERO" = '0000-00-00 00:00:00.000'.
+> &lt;TimeBegin&gt; and &lt;TimeEnd&gt; must not both be "ZERO" = '0000-00-00 00:00:00.000'.
 >
 > In order to improve performance, use the parameter "ValueID" instead of "ValueName" in the query. You can determine the "ValueID" from the "Archives" table.
 >
@@ -478,7 +478,7 @@ Replace "TAG_LLVID:R" with "TAG_LLVID_EX:R".
 
 #### Selection of an Absolute Time Interval
 
-Reads from start time <TimeBegin> to end time <TimeEnd>.
+Reads from start time &lt;TimeBegin&gt; to end time &lt;TimeEnd&gt;.
 
 **Example A1:**
 
@@ -496,7 +496,7 @@ Reads until end of recording:
 
 `<TimeEnd> = '0000-00-00 00:00:00.000'`
 
-<TimeBegin> and <TimeEnd> must not both be "ZERO" = '0000-00-00 00:00:00.000'.
+&lt;TimeBegin&gt; and &lt;TimeEnd&gt; must not both be "ZERO" = '0000-00-00 00:00:00.000'.
 
 > **Note**
 >
@@ -544,31 +544,31 @@ The following diagrams shows a possible result of this example. The query was im
 
 **Example C1:**
 
-The following query also uses the <SQL_Clause> parameter and returns all tag values that have the ValueID "3" and "6" and are below 50 or above 100.
+The following query also uses the &lt;SQL_Clause&gt; parameter and returns all tag values that have the ValueID "3" and "6" and are below 50 or above 100.
 
 `"TAG:R,(3;6),<TimeBegin>,<TimeEnd>,'WHERE RealValue > 100 OR RealValue < 50'"`
 
-#### Query with parameter <TimeStep>
+#### Query with parameter &lt;TimeStep&gt;
 
 **Example C2:**
 
-The following query uses the <TimeStep> parameter and returns all values of ValueID "1" - starting from start time "TimeBegin" till 5 minutes later in intervals of "60" seconds with the aggregation type "5" = "Mean value without interpolation".
+The following query uses the &lt;TimeStep&gt; parameter and returns all values of ValueID "1" - starting from start time "TimeBegin" till 5 minutes later in intervals of "60" seconds with the aggregation type "5" = "Mean value without interpolation".
 
 `"TAG:R,1,'2004-10-13 17:00:00.000','0000-00-00 00:05:00.000', 'TIMESTEP=60,5'"`
 
 The following diagram shows the query result. The left table displays the archive data which were archived in an archiving cycle of 30 seconds. The right table displays the query result. It determines the average between two archive values at "0" seconds and "30" seconds, displayed with the first time stamp of the averaging interval, i.e. second "0".
 
-![Query with parameter <TimeStep>](images/2548255755_DV_resource.Stream@PNG-en-US..png)
+![Query with parameter &lt;TimeStep>](images/2548255755_DV_resource.Stream@PNG-en-US..png)
 
 **Example C3:**
 
-The following query uses the <TimeStep> parameter and returns all values of ValueID "1" and "2" - starting from start time "TimeBegin" till 2 minutes later in intervals of "15" seconds with the aggregation type "261" = "Mean value with linear interpolation".
+The following query uses the &lt;TimeStep&gt; parameter and returns all values of ValueID "1" and "2" - starting from start time "TimeBegin" till 2 minutes later in intervals of "15" seconds with the aggregation type "261" = "Mean value with linear interpolation".
 
 `"TAG:R,(1;2),'2004-10-13 17:00:00.000','0000-00-00 00:02:00.000', 'TIMESTEP=15,261'"`
 
 The following diagram shows the query result. The left table displays the archive data which were archived in an archiving cycle of 30 seconds. The right table displays the query result. The archive values at "0" and "30" seconds are displayed in the query result unchanged with their time stamp. For second "15," the linear, interpolated value is formed of archive values at seconds "0" and "30". For the "45" second, the linear, interpolated value is taken from the archive values of "30" second of the same minute and the "0" second of the next minute.
 
-![Query with parameter <TimeStep>](images/2548263307_DV_resource.Stream@PNG-en-US..png)
+![Query with parameter &lt;TimeStep>](images/2548263307_DV_resource.Stream@PNG-en-US..png)
 
 ### Querying Alarm Message Archives (RT Professional)
 
@@ -576,7 +576,7 @@ The following diagram shows the query result. The left table displays the archiv
 
 With the following query, an alarm message archive can be accessed. The data can be selected using filter criteria. The queries are forwarded to the database by the command object.
 
-You will find information about status of messages in the WinCC Information System under "Working with WinCC > ANSI-C Function for Creation of Functions and Actions > ANSI-C Function descriptions > Appendix > Structure Definitions > Structure Definition MSG_RTDATA_STRUCT".
+You will find information about status of messages in the WinCC Information System under "Working with WinCC &gt; ANSI-C Function for Creation of Functions and Actions &gt; ANSI-C Function descriptions &gt; Appendix &gt; Structure Definitions &gt; Structure Definition MSG_RTDATA_STRUCT".
 
 When querying message archives, the result is summarized by archive, but without sorting the queried archive segments. The filter condition needs to be extended accordingly if the segments are to be sorted, e.g., for the chronological sorting "ORDER BY DateTime ASC, MS ASC".
 
@@ -589,7 +589,7 @@ When querying message archives, the result is summarized by archive, but without
 | Parameter | Description |
 | --- | --- |
 | ViewName | Name of the database table. The table has to be specified in the desired language. The "ViewName" for the five European language is e.g.:  ALGVIEWDEU: German alarm message archive data ALGVIEWENU: English alarm message archive data ALGVIEWESP: Spanish alarm message archive data ALGVIEWFRA: French alarm message archive data ALGVIEWITA: Italian alarm message archive data  The "ViewName" for the Asian language is e.g.:  ALGVIEWCHT: Chinese (simplified) alarm message archive data ALGVIEWCHT: Chinese (traditional) alarm message archive data ALGVIEWJPN: Japanese alarm message archive data ALGVIEWKOR: Korean message archive data  Note  The languages that are installed in the WinCC base system or that are configured in the WinCC Text Library are supported. Information concerning the possible query-languages or the respective "ViewName" can be found in the SQL-Server in the linked alarm archives under "Views". All languages that are supported in the corresponding archive are shown with their IDs e.g. "GENVIEWENU" here. |
-| Condition | Filter criterion, e.g.: DateTime>'2003-06-01' AND DateTime<'2003-07-01' DateTime>'2003-06-01 17:30:00' MsgNr = 5 MsgNr in (4, 5) State = 2  With DateTime, only absolute time indications can be used. |
+| Condition | Filter criterion, e.g.: DateTime&gt;'2003-06-01' AND DateTime&lt;'2003-07-01' DateTime&gt;'2003-06-01 17:30:00' MsgNr = 5 MsgNr in (4, 5) State = 2  With DateTime, only absolute time indications can be used. |
 
 Example 1:   
 Reads all entries of message no. 5 that were captured after July 5, 2003.
@@ -611,7 +611,7 @@ The following picture shows a possible result of this example. The query was imp
 
 The query result is returned as the Recordset. In this chapter, the structure of the Recordset for alarm log archives is described.
 
-You will find information about status of messages in the WinCC Information System under "Working with WinCC > ANSI-C Function for Creation of Functions and Actions > ANSI-C Function descriptions > Appendix > Structure Definitions > Structure Definition MSG_RTDATA_STRUCT".
+You will find information about status of messages in the WinCC Information System under "Working with WinCC &gt; ANSI-C Function for Creation of Functions and Actions &gt; ANSI-C Function descriptions &gt; Appendix &gt; Structure Definitions &gt; Structure Definition MSG_RTDATA_STRUCT".
 
 #### Recordset Structure
 
@@ -700,7 +700,7 @@ The data can be selected using filter criteria. The queries are forwarded to the
 | Parameter | Description |
 | --- | --- |
 | ArchiveName | Name of the user archive. |
-| Condition | Filter criterion e.g.: LastAccess>'2004-06-01' AND LastAccess<'2004-07-01' DateTime>'2004-06-01 17:30:00' ID = 5 ID > 3 |
+| Condition | Filter criterion e.g.: LastAccess&gt;'2004-06-01' AND LastAccess&lt;'2004-07-01' DateTime&gt;'2004-06-01 17:30:00' ID = 5 ID &gt; 3 |
 
 Example 1:   
 Reads all data in the user archive "Test".
@@ -739,7 +739,7 @@ WinCC OLE DB Provider may be used to access WinCC databases while employing the 
 #### Procedure
 
 1. Start the "SQL Server Management Studio" and select the desired database.
-2. In the shortcut menu of the database select "Tasks > Export Date...".
+2. In the shortcut menu of the database select "Tasks &gt; Export Date...".
 
    The SQL Server Import/Export-Wizard opens.
 3. Configure the data source.   
@@ -758,7 +758,7 @@ WinCC OLE DB Provider may be used to access WinCC databases while employing the 
 
 **Note**
 
-In order to improve performance during local access, enter " <Computer Name>\WinCC" in the field "Data Source" instead of ".\WinCC".
+In order to improve performance during local access, enter " &lt;Computer Name&gt;\WinCC" in the field "Data Source" instead of ".\WinCC".
 
 **Note**
 
@@ -783,7 +783,7 @@ The use of the Reporting Services with WinCC calls for the following additional 
 
 #### Installing the Information Services
 
-1. Select "Settings > Control Panel > Software".
+1. Select "Settings &gt; Control Panel &gt; Software".
 2. Click on the "Add/Remove Windows Components" button on the left.
 3. Select the check box "Internet Information Services (IIS)" in the "Windows Components Wizard" dialog.
 
@@ -791,9 +791,9 @@ The use of the Reporting Services with WinCC calls for the following additional 
 
 You install the Reporting Services from the WinCC-DVD or its location in the file system.
 
-1. Select "Settings > Control Panel > Programs and Features".
+1. Select "Settings &gt; Control Panel &gt; Programs and Features".
 2. Select an older version of "Microsoft SQL Server " (if available) and click on "Uninstall/Change".
-3. Select "Add" and select the path "InstData > SQL > SQL..STD > setup" in the WinCC setup.
+3. Select "Add" and select the path "InstData &gt; SQL &gt; SQL..STD &gt; setup" in the WinCC setup.
 
    The Microsoft SQL Server Installation Wizard is automatically opened. Follow the instructions.
 4. Under "Installation Type" select the option "Add features to an existing instance of SQL Server" and the instance "WINCC".
@@ -811,7 +811,7 @@ You install the Reporting Services from the WinCC-DVD or its location in the fil
 3. Open the feature "Authentication" and select the entry "Edit" in the shortcut menu of "Anonymous authentication".
 4. Select the option "Specific user" and enter the user name and password.
 
-   The user name has the following format: <domain or computer name>\<user>
+   The user name has the following format: &lt;domain or computer name&gt;\&lt;user&gt;
 
 > **Note**
 >
@@ -947,8 +947,8 @@ For the calculation of aggregate functions for messages, the following command i
 `"AlarmHitView: SELECT * FROM <ViewName>[WHERE <Condition>]"`
 
 Here:  
-<ViewName> = Name of the database table in the desired language, e.g. ALGVIEWMENU for English.   
-[WHERE <Condition>] = optional filter criterion as WHERE condition in the SQL syntax.
+&lt;ViewName&gt; = Name of the database table in the desired language, e.g. ALGVIEWMENU for English.   
+[WHERE &lt;Condition&gt;] = optional filter criterion as WHERE condition in the SQL syntax.
 
 Additional information on the syntax of parameters may be found in the section "Query for Alarm Logs".
 
@@ -1001,7 +1001,7 @@ Where:
 "@P1" = database name (e.g. WinCC Runtime database or symbolic name of the directory with the swapped out archives). For transparent access, use the WinCC project name instead of the database name.  
 "@P2" = WinCC OLE DB-Provider String for process values.   
 "@P3" = desired aggregate function.  
-"@P4" = <Symbolic computer name>::\WinCC (required only for transparent access).
+"@P4" = &lt;Symbolic computer name&gt;::\WinCC (required only for transparent access).
 
 Additional information on the syntax of parameters "@P1" and "@P2" may be found in the section "Query for Process Value Archives".
 

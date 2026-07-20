@@ -200,7 +200,7 @@ The following instructions are available for transferring data on the SEND/RECEI
   - With S7–300 CPs (up to 6GK7 343–1EX10–0XE0 with firmware V2.2), use the instruction AG_LRECV on TCP connections instead of AG_RECV.
 - The following applies to S7­400:
 
-  - With AG_SEND / AG_RECV, the data length per job is restricted to <=240 bytes.   
+  - With AG_SEND / AG_RECV, the data length per job is restricted to &lt;=240 bytes.   
     Longer data records (up to 8192 bytes) can be transferred with the AG_LSEND or AG_LRECV instructions.
   - AG_SSEND and AG_SRECV are for accelerated transfer of data by using optimized communication between CPU and CP in the S7 station. The fast communication has no effect on LAN communication. These two instructions are supported as of STEP 7 V5.4 SP3.
   - On an S7–400, AG_RECV cannot be used on TCP connections but only the AG_LRECV or AG_SRECV instructions.
@@ -388,7 +388,7 @@ AG_SEND / AG_LSEND / AG_SSEND status codes
 | 0 | 1 | 8304<sub>H</sub> | The connection is not established. The send job should only be attempted again after waiting for at least 100 ms. |
 | 0 | 1 | 8311<sub>H</sub> | The destination station cannot be obtained under the specified Ethernet address. |
 | 0 | 1 | 8312<sub>H</sub> | Ethernet error on the CP. |
-| 0 | 1 | 8F22<sub>H</sub> | Source area invalid, e.g.:  Area does not exist in the DB  LEN parameter < 0 |
+| 0 | 1 | 8F22<sub>H</sub> | Source area invalid, e.g.:  Area does not exist in the DB  LEN parameter &lt; 0 |
 | 0 | 1 | 8F24<sub>H</sub> | Area error reading a parameter. |
 | 0 | 1 | 8F28<sub>H</sub> | Alignment error reading a parameter. |
 | 0 | 1 | 8F32<sub>H</sub> | Parameter contains a DB number that is too high. |
@@ -554,7 +554,7 @@ The following instructions are available for the FETCH/WRITE function to coordin
 
 If you use AG_LOCK and AG_UNLOCK, you must specify the following information for CPs in S7­400 stations in the configuration:
 
-- Under "Properties > Addresses"  
+- Under "Properties &gt; Addresses"  
   The "Address setting for LOCK/UNLOCK" option must be selected if the selection is available.
 
 ##### How It works
@@ -1058,8 +1058,8 @@ Commands to FC AG_CNTRL
 | 9 | PING_RESULT - Query ping result  This command sends a PING result request to the CP. The CP transfers the results of the 4 executed PING echo requests in the RESULT parameter.  The call is successful when the 4 ping echo requests have been completed on the part of the CP. |  |  |
 | **RESULT (for CMD = 9)** |  | **Meaning** |  |
 | **Parameter** | **Hex value/range** |  |  |
-| RESULT1 | **** ****<sub>H</sub> | 1. Word:  Reply time in ms for the 1st PING echo request.  2. Word:  Reply time in ms for the 2nd PING echo request.  Example:  0005 FFFF<sub>H</sub> Echo 1 -> received after 5 ms  Echo 2 -> no echo in the set monitoring time |  |
-| RESULT2 | **** ****<sub>H</sub> | 1. Word:  Reply time in ms for the 3rd PING echo request.  2. Word:  Reply time in ms for the 4th PING echo request.  Example:  0002 3456<sub>H</sub> Echo 3 -> received after 2 ms  Echo 4 -> received after 13398 ms |  |
+| RESULT1 | **** ****<sub>H</sub> | 1. Word:  Reply time in ms for the 1st PING echo request.  2. Word:  Reply time in ms for the 2nd PING echo request.  Example:  0005 FFFF<sub>H</sub> Echo 1 -&gt; received after 5 ms  Echo 2 -&gt; no echo in the set monitoring time |  |
+| RESULT2 | **** ****<sub>H</sub> | 1. Word:  Reply time in ms for the 3rd PING echo request.  2. Word:  Reply time in ms for the 4th PING echo request.  Example:  0002 3456<sub>H</sub> Echo 3 -&gt; received after 2 ms  Echo 4 -&gt; received after 13398 ms |  |
 | Range of values for data words in RESULT1 / RESULT 2: |  |  |  |
 |  | 0000<sub>H</sub> | not used |  |
 | 0001<sub>H </sub>... EA60<sub>H</sub> | Reply time in ms  0001<sub>H </sub>= 1 ms EA60<sub>H </sub>= 60000 ms |  |  |
@@ -1418,7 +1418,7 @@ The following table explains all the formal parameters for the PNIO_SEND functio
 | CPLADDR | INPUT | WORD | - | Module start address |
 | MODE  (parameters version 2.0 or later) | INPUT | BYTE | Values for X:  - 0Y<sub>H</sub>: Status bits are transferred in IOCS. - 8Y<sub>H</sub>: Restriction to group message in CHECK_IOCS; no status bits in IOCS.   Values for Y:  - X0<sub>H</sub>:   - IO controller mode   - IO device mode (without parallel operation)There is compatibility with the instruction in version 1.0. - X1<sub>H</sub>: IO device mode (with parallel operation) | Specified in the form XY (hexadecimal):  - X sets the transfer of status information. - Y specifies the mode of the CP as IO controller or IO device.   Notes on compatibility;:  - The version 1.0 instruction can continue to be used as long as the CP is not being operated as an IO controller and IO device at the same time. - When MODE=0, the instruction as of version 2.0 behaves like the instruction version 1.0. |
 | SEND | IN_OUT | ANY (as VARTYPE only BYTE is permitted) | The address of the data area points to one of the alternatives:  - Memory bit area - Data block area | Specifies the address and length   **IO controller mode:**   The length should match the total length of the distributed IO configured, whereby address gaps are also transmitted.  The length can also be shorter than the total length of the distributed IO, for example when the instruction is called more than once in one OB. It must, however, have the total length in at least one call.    **IO device mode:**   The data structure results from the order of the slots of the input modules configured for this PROFINET IO device on the PROFINET IO controller line and their length without address gaps.  (Please note the more extensive explanations or examples for your CP in the device­specific Part B of this manual)  Notes:  - The instruction begins to transfer the data at address 0 regardless of how you configured the addresses (regardless of the lowest configured address). - Specifying an I/O area is not permitted since you must first check the IOCS for GOOD before data can be accepted in the I/O. |
-| LEN | INPUT | INT | Value > 0  The maximum total length of the data areas to be transferred can be found in the device­specific Part B of the device manual in the "Performance data" chapter. This may differ for controller or device mode. | Length of the data area to be transferred in bytes.  The transfer of the data always begins with address 0 regardless of the configuration. Please note that the IO address "0" with a length of 1 is included.   **IO controller mode:**   - The highest configured address of the devices must be specified here. The individual areas are not grouped together. If the instruction is called more than once, LEN can also be shorter than the highest address. The highest address should be specified in at least one call (compare "SEND" parameter). - The data is transferred in the order of the logical addresses (as with PROFIBUS DP).    **IO device mode:**   - The data is transferred in the order of the slots corresponding to the configuration of the input modules on the PROFINET IO controller line for this PROFINET IO device.   Note: Make sure that the length programmed here and the configuration of the PROFINET IO controller are consistent. The entire data area length including any gaps is transferred for the device. |
+| LEN | INPUT | INT | Value &gt; 0  The maximum total length of the data areas to be transferred can be found in the device­specific Part B of the device manual in the "Performance data" chapter. This may differ for controller or device mode. | Length of the data area to be transferred in bytes.  The transfer of the data always begins with address 0 regardless of the configuration. Please note that the IO address "0" with a length of 1 is included.   **IO controller mode:**   - The highest configured address of the devices must be specified here. The individual areas are not grouped together. If the instruction is called more than once, LEN can also be shorter than the highest address. The highest address should be specified in at least one call (compare "SEND" parameter). - The data is transferred in the order of the logical addresses (as with PROFIBUS DP).    **IO device mode:**   - The data is transferred in the order of the slots corresponding to the configuration of the input modules on the PROFINET IO controller line for this PROFINET IO device.   Note: Make sure that the length programmed here and the configuration of the PROFINET IO controller are consistent. The entire data area length including any gaps is transferred for the device. |
 | DONE | OUTPUT | BOOL | 0: - 1: New data accepted | This parameter indicates whether or not the job was completed without errors. |
 | ERROR | OUTPUT | BOOL | 0: -1: Error | Error code |
 | STATUS | OUTPUT | WORD | - | Status code |
@@ -1458,7 +1458,7 @@ Condition codes PNIO_SEND
 | 0 | 0 | 8180<sub>H</sub> | - Data transfer active;  or  - The CP is in STOP mode. |
 | 0 | 0 | 8181<sub>H</sub> | Module does not support version 2.0 of the instruction  Solution: Use version 1.0. |
 | 1 | 0 | 0000<sub>H</sub> | New data transferred without error. |
-| 0 | 1 | 8183<sub>H</sub> | - PROFINET IO configuration missing;  or  - wrong CPLADDR;   or  - The CP is in STOP mode.   or  - Interconnection of MODE does not match module configuration or incorrect interconnection with MODE > 1   Extra in device mode:  - The connection between PROFINET IO controller and PROFINET IO device is down,   or  - PROFINET IO controller not reachable   or  - Total lengths (configuration and LEN parameter) are not consistent. |
+| 0 | 1 | 8183<sub>H</sub> | - PROFINET IO configuration missing;  or  - wrong CPLADDR;   or  - The CP is in STOP mode.   or  - Interconnection of MODE does not match module configuration or incorrect interconnection with MODE &gt; 1   Extra in device mode:  - The connection between PROFINET IO controller and PROFINET IO device is down,   or  - PROFINET IO controller not reachable   or  - Total lengths (configuration and LEN parameter) are not consistent. |
 | 0 | 1 | 8184<sub>H</sub> | System error or bad parameter type. |
 | 0 | 1 | 8185<sub>H</sub> | Parameter LEN is greater than source area SEND or target buffer (IOCS) is too small. |
 | 0 | 1 | 8F22<sub>H</sub> | Area length error reading a parameter (e.g. DB too short). |
@@ -1543,13 +1543,13 @@ The following table explains all the formal parameters for the PNIO_RECV instruc
 | CPLADDR | INPUT | WORD | - | Module start address |
 | MODE  (parameters version 2.0 or later) | INPUT | BYTE | Values for X:  - 0Y<sub>H</sub>: Status bits are transferred in IOCS. - 8Y<sub>H</sub>: Restriction to group message in CHECK_IOCS; no status bits in IOCS.   Values for Y:  - X0<sub>H:</sub>   - IO controller mode   - IO device mode (without parallel operation)Compatible with instruction in version 1.0 - X1<sub>H</sub>: IO device mode (with parallel operation) | Specified in the form XY (hexadecimal):  - X sets the transfer of status information. - Y specifies the mode of the CP as IO controller or IO device.   Notes on compatibility;:  - The version 1.0 instruction can continue to be used as long as the CP is not being operated as an IO controller and IO device at the same time. - When MODE=0, the instruction as of version 2.0 behaves like the instruction version 1.0. |
 | RECV | IN_OUT | ANY (as VARTYPE only BYTE is permitted) | The address of the data area points to one of the alternatives:  - Memory bit area - Data block area | Specifies the address and length  IO controller mode:  The length should match the total length of the distributed IO configured, whereby address gaps are also transmitted.  The length can also be shorter than the total length of the distributed IO, for example when the instruction is called more than once in one OB. It must, however, have the total length in at least one call.  IO device mode:  The data structure results from the order of the slots of the output modules configured for this PROFINET IO device on the PROFINET IO controller line and their length without address gaps.  Notes:  - The instruction begins to transfer the data at address 0 regardless of how you configured the addresses (regardless of the lowest configured address). - Specifying an I/O area is not permitted since you must first change the IOPS for GOOD before data can be accepted in the I/O. |
-| LEN | INPUT | INT | Value > 0  The maximum total length of the data to be transferred can be found in Part B of the device manual in the "Performance data" chapter. This may differ for controller or device mode. | Length of the data area to be transferred in bytes.  The transfer of the data always begins with address 0 regardless of the configuration. Please note that the IO address "0" with a length of 1 is included.  IO controller mode:  - The highest configured address of the devices must be specified here. The individual areas are not grouped together. If the instruction is called more than once, LEN can also be shorter than the highest address. The highest address should be specified in at least one call (compare "RECV" parameter). - The data is transferred in the order of the logical addresses (as with PROFIBUS DP).   IO device mode:  - The data is transferred in the order of the slots corresponding to the configuration of the input modules on the PROFINET IO controller line for this PROFINET IO device. - Note: Make sure that the length programmed here and the configuration of the PROFINET IO controller are consistent. The entire data area length including any gaps is transferred for the device. |
+| LEN | INPUT | INT | Value &gt; 0  The maximum total length of the data to be transferred can be found in Part B of the device manual in the "Performance data" chapter. This may differ for controller or device mode. | Length of the data area to be transferred in bytes.  The transfer of the data always begins with address 0 regardless of the configuration. Please note that the IO address "0" with a length of 1 is included.  IO controller mode:  - The highest configured address of the devices must be specified here. The individual areas are not grouped together. If the instruction is called more than once, LEN can also be shorter than the highest address. The highest address should be specified in at least one call (compare "RECV" parameter). - The data is transferred in the order of the logical addresses (as with PROFIBUS DP).   IO device mode:  - The data is transferred in the order of the slots corresponding to the configuration of the input modules on the PROFINET IO controller line for this PROFINET IO device. - Note: Make sure that the length programmed here and the configuration of the PROFINET IO controller are consistent. The entire data area length including any gaps is transferred for the device. |
 | NDR | OUTPUT | BOOL | 0: - 1: Data accepted | This parameter indicates whether or not the job was completed without errors. |
 | ERROR | OUTPUT | BOOL | 0: - 1: Error | Error code |
 | STATUS | OUTPUT | WORD | - | Status code |
 | CHECK_ IOPS | OUTPUT | BOOL | 0: All IOPS set to GOOD  1: At least one IOPS set to BAD | Auxiliary bit that indicates whether or not it is necessary to evaluate the IOPS status area. |
 | IOPS | OUTPUT | ANY (as VARTYPE only BYTE is permitted) | The address of the data area points to one of the alternatives:  - Memory bit area - Data block area   Length:  For the maximum value, refer to Part B of the device manual in the section "Performance data". This may differ for controller or device mode. | A status bit is transferred per byte of user data.  The length information depends on the length in the RECV parameter (one bit per byte)   = (Length LEN + 7/ 8)  Controller mode:  Address gaps are also transferred according to the RECV parameter.  Address gaps are transferred with the status GOOD.  Device mode:  Address gaps are not transferred.  The instruction begins the transfer of the status for address 0.  Note:  - The minimum length of the ANY pointer is  (length LEN + 7/8) |
-| ADD_INFO | OUTPUT | WORD | Additional Diagnostic Information  In controller mode:  - 0: No alarm - >0: Number of pending alarms   In device mode, the parameter is always = 0. | Parameter expansion  Note: The ADD_INFO parameter is also updated when there are no INPUT addresses configured on the PROFINET IO controller. In this case, the PNIO_RECV instruction is called with a length LEN > 0 (for example LEN = 1 byte). It then transfers an address gap of 1 byte.  The parameter expansion can be used for CPs as of the following firmware version:  - CP 343−1 (EX30) as of firmware V2.0 - CP 343−1 Lean (CX10) as of firmware V2.0 - CP 343−1 Advanced (GX30) as of firmware V1.0   In older firmware versions, the parameter is reserved. |
+| ADD_INFO | OUTPUT | WORD | Additional Diagnostic Information  In controller mode:  - 0: No alarm - &gt;0: Number of pending alarms   In device mode, the parameter is always = 0. | Parameter expansion  Note: The ADD_INFO parameter is also updated when there are no INPUT addresses configured on the PROFINET IO controller. In this case, the PNIO_RECV instruction is called with a length LEN &gt; 0 (for example LEN = 1 byte). It then transfers an address gap of 1 byte.  The parameter expansion can be used for CPs as of the following firmware version:  - CP 343−1 (EX30) as of firmware V2.0 - CP 343−1 Lean (CX10) as of firmware V2.0 - CP 343−1 Advanced (GX30) as of firmware V1.0   In older firmware versions, the parameter is reserved. |
 
 > **Note**
 >
@@ -1580,7 +1580,7 @@ Condition codes PNIO_RECV
 | 0 | 0 | 8180<sub>H</sub> | - Data acceptance active;  or  - The CP is in STOP mode. |
 | 0 | 0 | 8181<sub>H</sub> | Module does not support version 2.0 of the instruction.  Solution: Use version 1.0. |
 | 1 | 0 | 0000<sub>H</sub> | New data accepted without error. |
-| 0 | 1 | 8183<sub>H</sub> | - PROFINET IO configuration missing;  or   - wrong CPLADDR;   or   - The CP is in STOP mode.   or   - Interconnection of MODE does not match module configuration or incorrect interconnection with MODE > 1.     Extra in device mode:  - The connection between PROFINET IO controller and PROFINET IO device is down   or  - PROFINET IO controller not reachable   or  - Total lengths (configuration and LEN parameter) are not consistent |
+| 0 | 1 | 8183<sub>H</sub> | - PROFINET IO configuration missing;  or   - wrong CPLADDR;   or   - The CP is in STOP mode.   or   - Interconnection of MODE does not match module configuration or incorrect interconnection with MODE &gt; 1.     Extra in device mode:  - The connection between PROFINET IO controller and PROFINET IO device is down   or  - PROFINET IO controller not reachable   or  - Total lengths (configuration and LEN parameter) are not consistent |
 | 0 | 1 | 8184<sub>H</sub> | System error or bad parameter type. |
 | 0 | 1 | 8185<sub>H</sub> | Destination buffer (RECV of IOCS) is too small. |
 | 0 | 1 | 8F22<sub>H</sub> | Area length error reading a parameter (e.g. DB too short). |
@@ -1846,7 +1846,7 @@ The following table explains all the formal parameters for the PNIO_ALARM instru
 | ID | OUTPUT | WORD |  | Logical start address of the PNIO component that triggers the alarm (module or submodule).  For an output module, bit 15 is set (example of output address 5: ID:=DW#16#8005).  For a mixed module, the lower of the two addresses is specified. |
 | LEN | OUTPUT | INT |  | Length of the received alarm information (AINFO) |
 | MODE | IN_OUT | DWORD | 0 | Reserved |
-| TINFO | IN_OUT | ANY (as VARTYPE, BYTE, WORD and DWORD are permitted) | The address of the data area points to one of the alternatives:  - Memory bit area - Data block area   The length of the ANY pointer must be >= 32 bytes. | (task information)  Destination area for the alarm management information.  The error OB start information (OB header = byte 0 to 19 of TINFO) is reproduced as far as possible by the CP firmware.  See also 1) |
+| TINFO | IN_OUT | ANY (as VARTYPE, BYTE, WORD and DWORD are permitted) | The address of the data area points to one of the alternatives:  - Memory bit area - Data block area   The length of the ANY pointer must be &gt;= 32 bytes. | (task information)  Destination area for the alarm management information.  The error OB start information (OB header = byte 0 to 19 of TINFO) is reproduced as far as possible by the CP firmware.  See also 1) |
 | AINFO | IN_OUT | ANY (as VARTYPE, BYTE, WORD and DWORD are permitted) | The address of the data area points to one of the alternatives:  - Memory bit area - Data block area   The length of the ANY pointer must be greater than or equal to the maximum additional alarm information that can be expected, maximum 1432 bytes (see LEN parameter) | (alarm information)  Destination area for header information and additional alarm information. If the ANY pointer AINFO is too low, the information will be truncated.  See also 1) |
 
 1) Reference Manual "STEP 7 - System and Standard Functions for S7-300 and S7-400", receiving an alarm with the "RALRM" instruction
@@ -2493,7 +2493,7 @@ The following sections explain the parameter values for the queries of the IO co
 
 <sup>2</sup> Accuracy class (range 1...15):  
    0 = Reserved  
-   1 (0.01%) ... 15 (>20%)
+   1 (0.01%) ... 15 (&gt;20%)
 
 <sup>3</sup> Measuring range if Accuracy_Domain = 1; otherwise undefined
 
@@ -2735,7 +2735,7 @@ Individual parameters of FC 2 PE_END_RSP
 
 ###### PE_LIST_MODES_RSP
 
-Generates the response to the "Query_Modes" > modifier "List_Modes" command (list of the supported energy-saving modes).
+Generates the response to the "Query_Modes" &gt; modifier "List_Modes" command (list of the supported energy-saving modes).
 
 The IDs of the energy-saving modes must be specified in the user program.
 
@@ -2756,7 +2756,7 @@ Possible values for "PE_Mode_ID":
 
 ###### PE_GET_MODE_RSP
 
-Generates the response to the "Query_Modes" > Modifier "Get_Mode". command
+Generates the response to the "Query_Modes" &gt; Modifier "Get_Mode". command
 
 Individual parameters of FC 4 PE_GET_MODE_RSP
 
@@ -2816,25 +2816,25 @@ Individual parameters of FC 6 PE_IDENTIFY_RSP
 
 ###### PE_MEASUREMENT_LIST_RSP
 
-Generates the response to the "Query_Measurement" > Modifier "Get_Measurement_List". command
+Generates the response to the "Query_Measurement" &gt; Modifier "Get_Measurement_List". command
 
 Individual parameters of FC 7 PE_MEASUREMENT_LIST_RSP
 
 | Parameters | Declaration | Data type | Range of values | Description |
 | --- | --- | --- | --- | --- |
 | Count | INPUT | BYTE |  | Number of supported measured value IDs (Measurement_ID) |
-| Measurement_List | INPUT | ANY |  | Pointer to the data area with the supported measured value IDs.  As the user, you store the measured value IDs in this data area.  Per frame, a maximum of 29 measured value IDs can be transferred.  For information on the structure of the array, refer to section [Response data](#response-data-s7-300) > "Query_Measurement" – Get_Measurement_List. |
+| Measurement_List | INPUT | ANY |  | Pointer to the data area with the supported measured value IDs.  As the user, you store the measured value IDs in this data area.  Per frame, a maximum of 29 measured value IDs can be transferred.  For information on the structure of the array, refer to section [Response data](#response-data-s7-300) &gt; "Query_Measurement" – Get_Measurement_List. |
 
 ###### PE_MEASUREMENT_VALUE_RSP
 
-Generates the response to the "Query_Measurement" > Modifier "Get_Measurement_Values". command
+Generates the response to the "Query_Measurement" &gt; Modifier "Get_Measurement_Values". command
 
 Individual parameters of FC 8 PE_MEASUREMENT_VALUE_RSP
 
 | Parameters | Declaration | Data type | Range of values | Description |
 | --- | --- | --- | --- | --- |
 | Count | INPUT | BYTE |  | Number of supported Measurement_Values |
-| Measurement_Values | INPUT | ANY |  | Pointer to the data area of the measured values (Measurement_Values).  As the user, you store the measured values in this data area.  Per frame, a maximum of 116 measured values can be transferred.  For information on the structure of the array, refer to section [Response data](#response-data-s7-300) > "Query_Measurement" – Get_Measurement_List. |
+| Measurement_Values | INPUT | ANY |  | Pointer to the data area of the measured values (Measurement_Values).  As the user, you store the measured values in this data area.  Per frame, a maximum of 116 measured values can be transferred.  For information on the structure of the array, refer to section [Response data](#response-data-s7-300) &gt; "Query_Measurement" – Get_Measurement_List. |
 
 ##### PE_DS3_WRITE_ET200S_CP (S7-300)
 
@@ -3107,7 +3107,7 @@ IP_CONFIG status codes
 | 0 | 1 | 8186<sub>H</sub> | Illegal parameter detected  The ANY pointer CONF_DB does not point to a data block. |
 | 0 | 1 | 8187<sub>H</sub> | Illegal status of the IP_CONFIG  Data in the header of CONF_DB was possibly overwritten. |
 | Further errors detected on the interface between the CPU and CP. |  |  |  |
-| 0 | 1 | 8A01<sub>H</sub> | The status code in the data record is invalid (value is >= 3). |
+| 0 | 1 | 8A01<sub>H</sub> | The status code in the data record is invalid (value is &gt;= 3). |
 | 0 | 1 | 8A02<sub>H</sub> | There is no job running on the CP. IP_CONFIG did, however, expect an acknowledgment for the executed job. |
 | 0 | 1 | 8A03<sub>H</sub> | There is no job running on the CP and the CP is not ready. IP_CONFIG triggered the first job to read a data record. |
 | 0 | 1 | 8A04<sub>H</sub> | There is no job running on the CP and the CP is not ready. IP_CONFIG did, however, expect an acknowledgment for the executed job. |
@@ -3323,10 +3323,10 @@ Range of values for the connection ID:
 
 Enter the parameters in the parameter field for TCP connections as follows:
 
-- **Type = 1 ->** 
+- **Type = 1 -&gt;** 
   ①
 
-- **ID = connection ID ->** 
+- **ID = connection ID -&gt;** 
   ②
 
 - Number of subfields = n
@@ -3374,10 +3374,10 @@ for S7-300: 1,2...16
 
 Enter the parameters in the parameter field for UDP connections as follows:
 
-- **Type = 2 ->** 
+- **Type = 2 -&gt;** 
   ①
 
-- **ID = connection ID ->** 
+- **ID = connection ID -&gt;** 
   ②
 
 - Number of subfields = n
@@ -3425,10 +3425,10 @@ for S7-300: 1,2...16
 
 Enter the parameters in the parameter field for ISO-on-TCP connections as follows:
 
-- **Type = 3 ->** 
+- **Type = 3 -&gt;** 
   ①
 
-- **ID = connection ID ->** 
+- **ID = connection ID -&gt;** 
   ②
 
 - Number of subfields = n
@@ -3480,10 +3480,10 @@ To send E­mails, one E­mail connection must be set up per Advanced CP. The E­
 
 Enter the parameters in the parameter field for E-mail connections as follows:
 
-- **Type = 4 ->** 
+- **Type = 4 -&gt;** 
   ①
 
-- **ID = connection ID ->** 
+- **ID = connection ID -&gt;** 
   ②
 
 - Number of subfields = n
@@ -3540,10 +3540,10 @@ FTP connections are TCP connections, with the parameter SUB_LOC_MODE set to the 
 
 Enter the parameters in the parameter field for FTP connections as follows:
 
-- **Type = 1 ->** 
+- **Type = 1 -&gt;** 
   ①
 
-- **ID = connection ID ->** 
+- **ID = connection ID -&gt;** 
   ②
 
 - Number of subfields = n
@@ -3705,12 +3705,12 @@ Formal parameters of FB40 (FTP_CMD) - input parameters
 | Parameter | Declaration | Type | Range of values | Meaning / remarks |
 | --- | --- | --- | --- | --- |
 | ID | INPUT | INT | For S7-300:  1, 2...16  For S7-400:  1, 2...64 | The FTP jobs are handled on FTP connections. The parameter identifies the connection being used. |
-| LADDR | INPUT | WORD |  | Module start address  When you call an FC, you transfer the module start address of the ADVANCED-CP in the LADDR parameter.  You will find the module start address of the ADVANCED CP in the configuration of the ADVANCED CP in "Properties>Addresses>Inputs". |
+| LADDR | INPUT | WORD |  | Module start address  When you call an FC, you transfer the module start address of the ADVANCED-CP in the LADDR parameter.  You will find the module start address of the ADVANCED CP in the configuration of the ADVANCED CP in "Properties&gt;Addresses&gt;Inputs". |
 | CMD | INPUT | BYTE | See table below  - FTP commands in the "CMD" parameter | FTP commands executed when FTP_CMD is called. You will find further information following the table.  If a command is not supported by the CP firmware, an error message with STATUS = 8F6B<sub>H</sub> is output.  Examples of FTP commands:  - RETRIEVE: B#16#3 - CONNECT_TLS_PRIVATE: B#16#11 |
 | NAME_STR | INPUT | ANY | Only "BYTE" is permitted as VARTYPE. | The address references a data block area. Here, you specify the address and length of the data area in which the target data is entered.  - When CMD = 1, 17:   With this command, the "NAME_STR" parameter specifies the FTP server to be addressed over the FTP connection with the following attributes: - IP address of the FTP server - User name - Password for the login   These values must be specified as three consecutive strings in the destination range of the ANY pointer. - When CMD = 2, 3, 4, 6, 7:   With this command, the "NAME_STR" parameter specifies the file name on the FTP server, in other words, the data source or data destination. The file name is specified as a string in the destination range of the ANY pointer. - When CMD = 5: Parameter not relevant   You will find example of content further below. |
 | FILE_DB_NR | INPUT | INT |  | The data block specified here contains the file DB to be read / written.  The parameter is relevant only when CMD = 2, 3, 6 and 7. |
 | OFFSET | INPUT | DWORD |  | Only when CMD = 7:  Offset in bytes starting at which the file will be read. |
-| LEN | INPUT | DWORD |  | Only when CMD = 7:  Sublength in bytes that is read starting at the value specified in "OFFSET".  Special features:  - If "DW#16#FFFFFFFF" is specified, the available rest of the file will be read.   Result OK (DONE = 1, STATUS = 0) if no other error occurred. - When OFFSET > length of the original file:   The length of the destination file is displayed in this case in the ACT_LENGTH parameter in the file DB: 0 bytes on the CPU.   Result OK (DONE = 1, STATUS = 0) if no other error occurred. - When OFFSET + LEN > length of the original file (and LEN ≠ 0xFFFFFFFF):   The length of the destination file is displayed in this case in the ACT_LENGTH parameter in the file DB: Available bytes starting at "OFFSET".   Result OK (DONE = 1, STATUS = 0) if no other error occurred. |
+| LEN | INPUT | DWORD |  | Only when CMD = 7:  Sublength in bytes that is read starting at the value specified in "OFFSET".  Special features:  - If "DW#16#FFFFFFFF" is specified, the available rest of the file will be read.   Result OK (DONE = 1, STATUS = 0) if no other error occurred. - When OFFSET &gt; length of the original file:   The length of the destination file is displayed in this case in the ACT_LENGTH parameter in the file DB: 0 bytes on the CPU.   Result OK (DONE = 1, STATUS = 0) if no other error occurred. - When OFFSET + LEN &gt; length of the original file (and LEN ≠ 0xFFFFFFFF):   The length of the destination file is displayed in this case in the ACT_LENGTH parameter in the file DB: Available bytes starting at "OFFSET".   Result OK (DONE = 1, STATUS = 0) if no other error occurred. |
 
 ###### FTP commands in the "CMD" parameter
 
@@ -3798,7 +3798,7 @@ FB 40: Meaning of the STATUS parameter in conjunction with DONE and ERROR
 | 0 | 1 | 8092<sub>H</sub> | Type information in the ANY pointer is not byte |
 | 0 | 1 | 80A4<sub>H</sub> | The communication bus connection between the CPU and CP is not established (with newer CPU versions).  This can, for example, be caused by the following:  - No connection configuration - Maximum number of CPs operating at the same time was exceeded |
 | 0 | 1 | 80B0<sub>H</sub> | The module does not recognize the data record. |
-| 0 | 1 | 80B1<sub>H</sub> | Destination area invalid; for example, destination area > 240 bytes. |
+| 0 | 1 | 80B1<sub>H</sub> | Destination area invalid; for example, destination area &gt; 240 bytes. |
 | 0 | 1 | 80B2<sub>H</sub> | The communication bus connection between the CPU and CP is not established (with older CPU versions). (with newer CPU versions, see 80A4<sub>H</sub>) |
 | 0 | 1 | 80C0<sub>H</sub> | The data record cannot be read. |
 | 0 | 1 | 80C1<sub>H</sub> | The specified data record is currently being processed. |
@@ -3820,7 +3820,7 @@ FB 40: Meaning of the STATUS parameter in conjunction with DONE and ERROR
 | 0 | 1 | 8F50<sub>H</sub> | File DB DB 0 or DB does not exist |
 | 0 | 1 | 8F51<sub>H</sub> | Specified file DB data area larger than existing data area |
 | 0 | 1 | 8F52<sub>H</sub> | File DB in write-protected memory |
-| 0 | 1 | 8F53<sub>H</sub> | File DB max. length < current length |
+| 0 | 1 | 8F53<sub>H</sub> | File DB max. length &lt; current length |
 | 0 | 1 | 8F54<sub>H</sub> | File DB does not contain any valid data. |
 | 0 | 1 | 8F55<sub>H</sub> | Header status bit: Locked |
 | 0 | 1 | 8F56<sub>H</sub> | The NEW bit in the file DB header was not reset |
@@ -3837,7 +3837,7 @@ FB 40: Meaning of the STATUS parameter in conjunction with DONE and ERROR
 | 0 | 1 | 8F69<sub>H</sub> | The FTP connection is in an incorrect status, for example:  - The connection is called without a previous connection termination (with the same connection ID) - There is a connection termination for a connection that has already been terminated: - A STORE command was sent on a connection that is not established. |
 | 0 | 1 | 8F6A<sub>H</sub> | The connection could not be established due to a temporary resource bottleneck.  Remedy: Repeat the block call. |
 | 0 | 1 | 8F6B<sub>H</sub> | Possible causes:  - Wrong value for the CMD parameter - An FTP_CMD command is not supported.   Possible cause: Wrong firmware on the CP Remedy: Firmware update |
-| 0 | 1 | 8F6C<sub>H</sub> | A value > 7FFF FFF<sub>H</sub> was set in the OFFSET parameter. |
+| 0 | 1 | 8F6C<sub>H</sub> | A value &gt; 7FFF FFF<sub>H</sub> was set in the OFFSET parameter. |
 | 0 | 1 | 8F6D<sub>H</sub> | The FTP client does not support SSL-secured connections. |
 | 0 | 1 | 8F6F<sub>H</sub> | Possible causes:  - The certificate contains an invalid value for "notBefore". - The certificate is invalid. The "notBefore" entry contains a time after the current time. |
 | 0 | 1 | 8F70<sub>H</sub> | Possible causes:  - The certificate contains an invalid value for "notAfter". - The certificate has elapsed: The "notAfter" entry contains a time before the current time. |
@@ -4436,7 +4436,7 @@ The following table explains all the formal parameters for the AG_SEND /AG_LSEND
 | ID | INPUT | INT | 1,2...64  (S7-400)  1,2...16  (S7-300) | The connection number of the FDL connection is specified in the parameter ID. |
 | LADDR | INPUT | WORD |  | Module start address  When you configure the CP, the module start address is displayed in the configuration table. Specify this address here. |
 | SEND | INPUT | ANY  (only the following are permitted as VARTYPE:  WORD and DWORD are permitted) |  | Specifies the address and length  The address of the data area points to one of the alternatives:  - PI area - Memory bit area - Data block area   With a call with job header, the FDL data area contains the job header and the user data. |
-| LEN | INPUT | INT | 1, 2, to 240 (or up to "length specified for SEND parameter") | Number of bytes to be sent from the FDL data area with this job. The possible values range from 1 to length specified for the SEND parameter.  In a call, with job header, the length information is made up of the job header (4 bytes) + user data (1 to 236 bytes). Therefore LEN >= 4 ! |
+| LEN | INPUT | INT | 1, 2, to 240 (or up to "length specified for SEND parameter") | Number of bytes to be sent from the FDL data area with this job. The possible values range from 1 to length specified for the SEND parameter.  In a call, with job header, the length information is made up of the job header (4 bytes) + user data (1 to 236 bytes). Therefore LEN &gt;= 4 ! |
 | DONE | OUTPUT | BOOL | 0: - 1: new data | The status parameter indicates whether or not the job was completed without errors. For the meaning in conjunction with the ERROR and STATUS parameters, refer to the following table. |
 | ERROR | OUTPUT | BOOL | 0: - 1: Error | Error code  For the meaning in conjunction with the DONE and STATUS parameters, refer to the following table. |
 | STATUS | OUTPUT | WORD | See following table | Status code  For the meaning in conjunction with the DONE and ERROR parameters, refer to the following table. |
@@ -4468,7 +4468,7 @@ AG_SEND condition codes
 | 0 | 0 | 8181<sub>H</sub> | Job active. |
 | 0 | 1 | 7000<sub>H</sub> | The condition code is possible only with S7-400: The instruction was called with ACT=0; the job has not yet been processed. |
 | 0 | 1 | 8183<sub>H</sub> | No configuration or the FDL service has not yet started on the PROFIBUS CP. |
-| 0 | 1 | 8184<sub>H</sub> | Possible causes:  - Illegal data type specified for the SEND parameter. - FDL connection without job buffer: System error. - FDL connection with job buffer: Parameter LEN<4 or illegal parameter in job header (with free layer 2 access). |
+| 0 | 1 | 8184<sub>H</sub> | Possible causes:  - Illegal data type specified for the SEND parameter. - FDL connection without job buffer: System error. - FDL connection with job buffer: Parameter LEN&lt;4 or illegal parameter in job header (with free layer 2 access). |
 | 0 | 1 | 8185<sub>H</sub> | LEN parameter longer than SEND source area. |
 | 0 | 1 | 8186<sub>H</sub> | ID parameter invalid. ID!=1, 2 to 15, 16. |
 | 0 | 1 | 8301<sub>H</sub> | SAP not activated on destination station. |
@@ -4477,8 +4477,8 @@ AG_SEND condition codes
 | 0 | 1 | 8304<sub>H</sub> | The FDL connection is not established. |
 | 0 | 1 | 8311<sub>H</sub> | The destination station is not obtainable at the specified PROFIBUS address or the service is not possible for the specified PROFIBUS address. |
 | 0 | 1 | 8312<sub>H</sub> | PROFIBUS error on the CP: for example, bus short-circuit, own station not in ring. |
-| 0 | 1 | 8315<sub>H</sub> | Possible causes:  - Internal parameter error on an FDL connection with job header: Parameter LEN<4 or illegal parameter in job header (with free layer 2 access). - Bus disruption   Possible additional meaning:  - This error code can also occur with bus problems (for example physical disturbances due to bad power connections or different settings for the transmission speed on the nodes). |
-| 0 | 1 | 8F22<sub>H</sub> | Source area invalid, e.g.:  Area does not exist in the DB  LEN parameter < 0 |
+| 0 | 1 | 8315<sub>H</sub> | Possible causes:  - Internal parameter error on an FDL connection with job header: Parameter LEN&lt;4 or illegal parameter in job header (with free layer 2 access). - Bus disruption   Possible additional meaning:  - This error code can also occur with bus problems (for example physical disturbances due to bad power connections or different settings for the transmission speed on the nodes). |
+| 0 | 1 | 8F22<sub>H</sub> | Source area invalid, e.g.:  Area does not exist in the DB  LEN parameter &lt; 0 |
 | 0 | 1 | 8F24<sub>H</sub> | Area error reading a parameter. |
 | 0 | 1 | 8F28<sub>H</sub> | Alignment error reading a parameter. |
 | 0 | 1 | 8F32<sub>H</sub> | Parameter contains a DB number that is too high. |
@@ -4492,7 +4492,7 @@ AG_SEND condition codes
 | 0 | 1 | 8092<sub>H</sub> | In the ANY reference, a type other than BYTE is specified. (S7-400 only) |
 | 0 | 1 | 80A4<sub>H</sub> | The communication bus connection between the CPU and CP is not established. (with newer CPU versions).  This can, for example, be caused by the following:  - No connection configuration; - The maximum number of CPs that can be operated at one time has been exceeded (for further information, refer to the CP manual). |
 | 0 | 1 | 80B0<sub>H</sub> | The module does not recognize the data record. |
-| 0 | 1 | 80B1<sub>H</sub> | The destination area is invalid. The amount of data to be sent exceeds the upper limit permitted for this service (e.g. destination area > 240 bytes). |
+| 0 | 1 | 80B1<sub>H</sub> | The destination area is invalid. The amount of data to be sent exceeds the upper limit permitted for this service (e.g. destination area &gt; 240 bytes). |
 | 0 | 1 | 80B2<sub>H</sub> | The communication bus connection between the CPU and CP is not established (with older CPU versions; otherwise 80A4<sub>H</sub>; for further information, refer to this code) |
 | 0 | 1 | 80C0<sub>H</sub> | The data record cannot be read. |
 | 0 | 1 | 80C1<sub>H</sub> | The specified data record is currently being processed. |
@@ -4593,7 +4593,7 @@ The following table explains all the formal parameters for the AG_RECV / AG_LREC
 | ID | INPUT | INT | 1, 2 to 16 (S7-300) 1, 2 to 32 (S7-400) | The connection number of the FDL connection is specified in the parameter ID. |
 | LADDR | INPUT | WORD |  | Module start address   When you configure the CP, the module start address is displayed in the configuration table. Specify this address here. |
 | RECV | INPUT | ANY  (only the following are permitted as VARTYPE:  WORD and DWORD are permitted) |  | Specifies the address and length  The address of the FDL data area points to one of the alternatives:  - PI area - Memory bit area - Data block area   With a call with job header, the FDL data area contains the job header and the user data. |
-| LEN | OUTPUT | INT | 1,2,...240 | Specifies the number of bytes to be received in the FDL data area from the PROFIBUS CP.  In a call, with job header, the length information is made up of the job header (4 bytes) + user data (1 to 236 bytes). Therefore LEN >= 4 ! |
+| LEN | OUTPUT | INT | 1,2,...240 | Specifies the number of bytes to be received in the FDL data area from the PROFIBUS CP.  In a call, with job header, the length information is made up of the job header (4 bytes) + user data (1 to 236 bytes). Therefore LEN &gt;= 4 ! |
 | NDR | OUTPUT | BOOL | 0: - 1: new data | This parameter indicates whether new data were received.  For the meaning in conjunction with the ERROR and STATUS parameters, refer to the following table. |
 | ERROR | OUTPUT | BOOL | 0: - 1: Error | Error code  For the meaning of this parameter in conjunction with the NDR and STATUS parameters, refer to the following table. |
 | STATUS | OUTPUT | WORD | See following table | Status code  For the meaning in conjunction with the NDR and ERROR parameters, refer to the following table. |
@@ -5072,14 +5072,14 @@ Job types for DP_DIAG
 | --- | --- | --- | --- | --- |
 | 0 | Read DP station list | --- | - ignored - | With the DP station list, you obtain information in the user program on the status and availability of DP slaves. The information in the DP station list relates to all DP slaves assigned to the DP master by the configuration. |
 | 1 | Read DP diagnostics list | --- | - ignored - | The DP diagnostics list informs the CPU program about the DP slaves with new diagnostics data. |
-| 2 | Read current DP single diagnostics data | 1...126 | >=6 | The current DP single diagnostics informs the CPU program of the current diagnostics data of a DP slave. |
-| 3 | Read older DP single diagnostic information | 1...126 | >=6 | The older DP single diagnostics informs the CPU program of the older diagnostics data of a DP slave. This data is stored on the PROFIBUS CP and read according to the "last in - first out" principle in the ring buffer.   The structure of the ring buffer is explained below.  If changes occur quickly in the DP slave diagnostic data, this function allows the diagnostic data of a DP slave to be acquired and evaluated in the CPU program of the DP master. |
+| 2 | Read current DP single diagnostics data | 1...126 | &gt;=6 | The current DP single diagnostics informs the CPU program of the current diagnostics data of a DP slave. |
+| 3 | Read older DP single diagnostic information | 1...126 | &gt;=6 | The older DP single diagnostics informs the CPU program of the older diagnostics data of a DP slave. This data is stored on the PROFIBUS CP and read according to the "last in - first out" principle in the ring buffer.   The structure of the ring buffer is explained below.  If changes occur quickly in the DP slave diagnostic data, this function allows the diagnostic data of a DP slave to be acquired and evaluated in the CPU program of the DP master. |
 | 4 | Read the operating status requested with DP-CTRL job (CTYPE=4) |  | =1 | With this job, the DP operating status can be read that was set previously with the DP-CTRL job (CTYPE=4).  Note: The operating status that is read out does not necessarily match the current operating status.  The following operating statuses are possible:  - RUN - CLEAR - STOP (is mapped to the OFFLINE status) <sup>*)</sup> - OFFLINE |
 | 5 | Read DP status for CPU STOP |  | =1 | With this job you can find out the DP status to which the PROFIBUS CP changes if the CPU changes to STOP:  - RUN - CLEAR - STOP (is mapped to the OFFLINE status) <sup>*)</sup> - OFFLINE   As default, the PROFIBUS CP changes to the DP status CLEAR if the CPU changes to STOP. |
 | 6 | Read DP status for CP STOP |  | =1 | With this job you can find out the DP status to which the PROFIBUS CP changes if the CP changes to STOP:  - STOP (is mapped to the OFFLINE status) <sup>*)</sup> - OFFLINE   As default, the PROFIBUS CP changes to the DP status OFFLINE if the CP changes to STOP. |
-| 7 | Read input data | 1...126 | >=1 | With this job, the DP master (class 2) reads the input data of the DP slave. This function is also known as shared input. |
-| 8 | Read output data | 1...126 | >=1 | With this job, the DP master (class 2) reads the output data of a DP slave. This function is also known as shared output. |
-| 10 | Read current status of the DP slave | 1...126 | >=0 | With this job, you can read out the current status of the DP slave. The following statuses are possible :  - The DP master exchanges data with the DP slave cyclically. - The DP master reads the input data of the DP slave cyclically. - The DP master reads the output data of the DP slaves cyclically. - The DP master is not currently processing this DP slave cyclically. |
+| 7 | Read input data | 1...126 | &gt;=1 | With this job, the DP master (class 2) reads the input data of the DP slave. This function is also known as shared input. |
+| 8 | Read output data | 1...126 | &gt;=1 | With this job, the DP master (class 2) reads the output data of a DP slave. This function is also known as shared output. |
+| 10 | Read current status of the DP slave | 1...126 | &gt;=0 | With this job, you can read out the current status of the DP slave. The following statuses are possible :  - The DP master exchanges data with the DP slave cyclically. - The DP master reads the input data of the DP slave cyclically. - The DP master reads the output data of the DP slaves cyclically. - The DP master is not currently processing this DP slave cyclically. |
 | <sup>*) </sup>The STOP status is no longer supported on the latest modules (as of module type DA02). |  |  |  |  |
 
 ---
@@ -5141,7 +5141,7 @@ DP_DIAG codes
 | 1 | 0 | 8249<sub>H</sub> | 2,3,10 | Job completed without error. Message: The DP slave is deactivated due to a DP mode change ( e.g. CP mode selector set to STOP). |
 | 1 | 0 | 824A<sub>H</sub> | 2,3,10 | Job completed without error. Message: The DP slave is deactivated due to a DP_CTRL job in the CPU program. |
 | 0 | 1 | 8090<sub>H</sub> | 0-10 | Logical base address of the module is invalid |
-| 0 | 1 | 80B0<sub>H</sub> | 0-10 | The module does not recognize the data record or is changing from RUN --> STOP. |
+| 0 | 1 | 80B0<sub>H</sub> | 0-10 | The module does not recognize the data record or is changing from RUN --&gt; STOP. |
 | 0 | 1 | 80B1<sub>H</sub> | 0-10 | Specified data record length incorrect |
 | 0 | 1 | 80C0<sub>H</sub> | 0-10 | Data record cannot be read |
 | 0 | 1 | 80C1<sub>H</sub> | 0-10 | The specified data record is being processed |
@@ -5151,9 +5151,9 @@ DP_DIAG codes
 | 0 | 1 | 80D2<sub>H</sub> | 0-10 | Logical base address wrong |
 | 0 | 1 | 8183<sub>H</sub> | 0-10 | DP master not configured. |
 | 0 | 1 | 8184<sub>H</sub> | 0-8 | System error or bad parameter type. |
-| 0 | 1 | 8311<sub>H</sub> | >=2 | DTYPE parameter outside range of values. |
+| 0 | 1 | 8311<sub>H</sub> | &gt;=2 | DTYPE parameter outside range of values. |
 | 0 | 1 | 8313<sub>H</sub> | 2,3,7,8,10 | STATION parameter outside range of values. |
-| 0 | 1 | 8321<sub>H</sub> | >=2 | The DP slave is not providing any valid data. |
+| 0 | 1 | 8321<sub>H</sub> | &gt;=2 | The DP slave is not providing any valid data. |
 | 0 | 1 | 8326<sub>H</sub> | 7,8 | The DP slave has more than 242 bytes of data available. The PROFIBUS CP supports a maximum of 242 bytes. |
 | 0 | 1 | 8335<sub>H</sub> | 7,8 | The PROFIBUS CP is in PROFIBUS status: "Station not in ring". |
 | 0 | 1 | 8341<sub>H</sub> | 2,3,7,8,10 | The specified slave was not configured |
@@ -5280,8 +5280,8 @@ Permitted or feasible specifications for the job are shown in the following over
 | 1<sup>*)</sup> | Trigger cyclic global control | 1. byte: command mode 2nd byte: group select 3rd byte: autoclear  (See section  following this table.) | 3 | The sending of cyclic global control jobs to the DP slaves selected with group select is triggered on the PROFIBUS CP.   The autoclear parameter is only evaluated with the SYNC global control job. If at least one DP slave in the selected group is not in the data transfer phase and autoclear = 1 is set, the CLEAR mode is activated. In other words, the output data of the DP slaves is set to "0".  The following global jobs can be activated in the command mode parameter:  - SYNC - FREEZE - CLEAR (CLEAR-Bit = 1) - is not supported (please read the information in the manual as well)   or deactivated:  - UNSYNC - UNFREEZE - UNCLEAR (CLEAR bit = 0)   It is possible to specify more than one job in the command mode parameter.  An active cyclic global control job can only be terminated by a further global control job (cyclic or acyclic).  To terminate the job set in the command mode, the job must be canceled. For example, the SYNC job  is canceled by an UNSYNC job. |
 | 3 | Delete older DP single diagnostic data | 1. byte:  Slave address 1..126  127 = all slaves | 1 | The older diagnostic data stored on the PROFIBUS CP is deleted for one or all DP slaves. |
 | 4 | Set current DP mode | 1. byte:  RUN = 00<sub>H</sub> CLEAR = 01<sub>H</sub> OFFLINE = 03<sub>H</sub> RUN with AUTOCLEAR = 04<sub>H</sub> RUN without AUTOCLEAR = 04<sub>H</sub> | 1 | The DP mode can be set with this job as follows:  - RUN - CLEAR - OFFLINE   The AUTOCLEAR parameter means that the DP master class 1 changes to the CLEAR status automatically when the following condition is met: at least one of the DP slaves with which the DP master class 1 wants to exchange data is not in the data transfer phase.   The RUN without AUTOCLEAR parameter resets AUTOCLEAR.  Notes:  The STOP = 02<sub>H</sub> mode is no longer supported on the later modules (as of module type DA02). STOP = 02<sub>H</sub> is mapped to the OFFLINE mode. |
-| 5 | Set DP mode for CPU STOP | 1. byte:  RUN = 00<sub>H</sub> CLEAR = 01<sub>H</sub> OFFLINE = 03<sub>H</sub> | 1 | This job specifies which DP mode the PROFIBUS CP changes to if the CPU changes to STOP:  - RUN - CLEAR - OFFLINE   As default, the PROFIBUS CP changes to the DP status CLEAR if the CPU changes to STOP.  This mode remains set during a CP mode change from RUN --> STOP --> RUN.  Notes:  The STOP = 02<sub>H</sub> mode is no longer supported on the later modules (as of module type DA02). STOP = 02<sub>H</sub> is mapped to the OFFLINE mode. |
-| 6 | Set DP mode for CP STOP | 1. byte:  OFFLINE=03<sub>H</sub> | 1 | This job specifies which DP mode the PROFIBUS CP changes to if the CP changes to STOP.  - OFFLINE   As default, the PROFIBUS CP changes to the DP status OFFLINE if the CP changes to STOP.  This mode remains set during a CP mode change from RUN --> STOP --> RUN.  Notes:  The STOP = 02<sub>H</sub> mode is no longer supported on the later modules (as of module type DA02). STOP = 02<sub>H</sub> is mapped to the OFFLINE mode. |
+| 5 | Set DP mode for CPU STOP | 1. byte:  RUN = 00<sub>H</sub> CLEAR = 01<sub>H</sub> OFFLINE = 03<sub>H</sub> | 1 | This job specifies which DP mode the PROFIBUS CP changes to if the CPU changes to STOP:  - RUN - CLEAR - OFFLINE   As default, the PROFIBUS CP changes to the DP status CLEAR if the CPU changes to STOP.  This mode remains set during a CP mode change from RUN --&gt; STOP --&gt; RUN.  Notes:  The STOP = 02<sub>H</sub> mode is no longer supported on the later modules (as of module type DA02). STOP = 02<sub>H</sub> is mapped to the OFFLINE mode. |
+| 6 | Set DP mode for CP STOP | 1. byte:  OFFLINE=03<sub>H</sub> | 1 | This job specifies which DP mode the PROFIBUS CP changes to if the CP changes to STOP.  - OFFLINE   As default, the PROFIBUS CP changes to the DP status OFFLINE if the CP changes to STOP.  This mode remains set during a CP mode change from RUN --&gt; STOP --&gt; RUN.  Notes:  The STOP = 02<sub>H</sub> mode is no longer supported on the later modules (as of module type DA02). STOP = 02<sub>H</sub> is mapped to the OFFLINE mode. |
 | 7 <sup>*)</sup> | Read input data cyclically (DP master class 2) | 1. byte: slave address 1 to 125 | 1 | This job is not supported.  Please read the information in the manual as well. |
 | 8 <sup>*)</sup> | Read output data cyclically (DP master class 2) | 1. byte: slave address 1 to 125 | 1 | This job is not supported.  Please read the information in the manual as well. |
 | 9 | Terminate cyclic processing of the DP slave by the DP master (class 1, class 2) | 1. byte: slave address 1 to 125 | 1 | This job terminates the cyclic reading of the input data or output data of the addressed DP slave or the data transfer (DP master class 1).  The DP slave is then no longer processed by the PROFIBUS CP acting as DP master (class 2).   **This deactivates the DP slave.** |
@@ -5382,7 +5382,7 @@ DP_CTRL condition codes
 | 0 | 1 | 8334<sub>H</sub> | 0, 1 | This job is not permitted in the DP "OFFLINE" mode.  Note: If no DP master is configured, the status 8181<sub> H</sub> can also be output. |
 | 0 | 1 | 8335<sub>H</sub> | 0, 1 | The PROFIBUS CP is in PROFIBUS status: "Station not in ring". |
 | 0 | 1 | 8339<sub>H</sub> | 0, 1 | At least one DP slave in the selected group is not in the data transfer phase. |
-| 0 | 1 | 833C<sub>H</sub> | 1 | Cyclic global control must not be used in  the "PLC <-> CP free running" mode. This error does not occur on the CP 3425 because this mode is not possible with this CP (PBUS data records are always used for data transfer). |
+| 0 | 1 | 833C<sub>H</sub> | 1 | Cyclic global control must not be used in  the "PLC &lt;-&gt; CP free running" mode. This error does not occur on the CP 3425 because this mode is not possible with this CP (PBUS data records are always used for data transfer). |
 | 0 | 1 | 8341<sub>H</sub> | 7-10 | The specified DP slave was not configured. |
 | 0 | 1 | 8183<sub>H</sub> | 0..10 | DP master not configured. |
 | 0 | 1 | 8184<sub>H</sub> | - | System error or bad parameter type. |

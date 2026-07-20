@@ -12,7 +12,7 @@ This section contains information on the following topics:
 
 - [Overview](#overview)
 - [Parameterization](#parameterization)
-- [Rotate & optimize](#rotate-optimize)
+- [Rotate &amp; optimize](#rotate-optimize)
 
 ## Overview
 
@@ -322,7 +322,7 @@ Proceed as follows to activate the Safety Integrated settings:
 
 ###### Making basic settings
 
-1. In the secondary navigation, execute "Safety Integrated > Function selection".
+1. In the secondary navigation, execute "Safety Integrated &gt; Function selection".
 2. Select between the following in the first drop-down list:
 
    - No Safety Integrated Function
@@ -1156,7 +1156,7 @@ In the "Safe Stop 1" (SS1) screen form you make settings for the motor decelerat
    - with SAM
    - with SBR
 4. Click "Monitoring" and parameterize the alternative brake monitoring functions "SAM" and "SBR" in the dialog (see "[Configuring SAM/SBR](#configuring-samsbr)").
-5. Enter the required delay time in the "Delay time SS1 -> STO active" (p9556) input field.
+5. Enter the required delay time in the "Delay time SS1 -&gt; STO active" (p9556) input field.
 6. Enter the required delay time in the "Safe Stop 1 delay time" (p9652) input field.
 
    This field only appears if you have activated the "Basic Functions via onboard terminals" option in the function selection.
@@ -1178,7 +1178,7 @@ In the "Safe Stop 1" (SS1) screen form you make settings for the motor decelerat
 2. Select the "[1] SS1E external stop" setting in the "Brake response" drop-down list.
 
    The screen form is structured accordingly.
-3. Enter the required delay time in the "Delay time SS1 -> STO active" (p9556) input field.
+3. Enter the required delay time in the "Delay time SS1 -&gt; STO active" (p9556) input field.
 4. Enter the required delay time in the "Safe Stop 1 delay time" (p9652) input field.
 
    This field only appears if you have activated the "Basic Functions via onboard terminals" option in the function selection.
@@ -1447,7 +1447,7 @@ The following differences exist:
    - with SAM
    - with SBR
 3. Click "Monitoring" and parameterize the alternative brake monitoring functions "SAM" and "SBR" in the dialog (see "[Configuring SAM/SBR](#configuring-samsbr-1)").
-4. Correct the prescribed delay time in the "Delay time SS2 -> SOS active" field (p9552).
+4. Correct the prescribed delay time in the "Delay time SS2 -&gt; SOS active" field (p9552).
 5. Correct the value prescribed for the standstill tolerance in the "Standstill monitoring" field (p9530).
 6. Click "Save project" in the toolbar to save the changes in the project.
 
@@ -1459,7 +1459,7 @@ The following differences exist:
 
    In this screen form, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
 2. Set the "SS2E enable" switch to "Connection".
-3. Correct the prescribed delay time in the "Delay time SS2E -> SOS active" field (p9553).
+3. Correct the prescribed delay time in the "Delay time SS2E -&gt; SOS active" field (p9553).
 
    SBR/SAM is not monitored during this delay time. SOS becomes active after this delay time has elapsed.
 4. Correct the value prescribed for the standstill tolerance in the "Standstill monitoring" field (p9530).
@@ -1691,7 +1691,7 @@ If the standstill tolerance is exceeded (in [p9530](SINAMICS%20Parameter%20SINAM
 
 ###### Configuring monitoring
 
-1. Enter the required value in the "Delay time SOS -> SOS active" (p9551) field.
+1. Enter the required value in the "Delay time SOS -&gt; SOS active" (p9551) field.
 2. Enter the required value in the "Standstill tolerance" (p9530) field.
 
    Alternatively, you can also click on the "Standstill tolerance SOS" button. A dialog with a graphic display of the standstill monitoring opens. You can also enter the standstill tolerance here.
@@ -1939,7 +1939,7 @@ A PROFIsafe override can also be added to SLS limit value 1. In operation, this 
 
    In this screen form, configure the controls via the fail-safe inputs and outputs and/or PROFIsafe (see "[Control](#control)").
 2. Call the "SLS" Safety Integrated Function again.
-3. Correct the prescribed delay time in the field "Delay time for selection of SLS >> SLS active" (p9551).
+3. Correct the prescribed delay time in the field "Delay time for selection of SLS &gt;&gt; SLS active" (p9551).
 4. Enter a suitable value for level 1 of the speed limit (p9531[0]).
 5. Select the required fault response for level 1 in the drop-down list (p9563[0]).
 6. Click the ![Setting SLS via PROFIsafe](images/147856715147_DV_resource.Stream@PNG-en-US.PNG) icon to open the configuration for level 1.
@@ -2133,7 +2133,7 @@ After SDI has been selected via PROFIsafe (see "[Making basic settings](#making-
 
 If the drive now moves more than the configured tolerance ([p9564](SINAMICS%20Parameter%20SINAMICS%20S210.md#p9564-si-motion-sdi-tolerance-1)) in the blocked direction, message C01716 is output and the fault response defined in [p9566](SINAMICS%20Parameter%20SINAMICS%20S210.md#p9566-si-motion-sdi-stop-response) is initiated. To acknowledge the messages, you must first deselect SDI, remove the fault cause and then safely acknowledge the messages. Only then can you reselect SDI.
 
-1. Enter a delay time in ms in the "Delay time for selection of SDI -> SDI active" (p9565) field.
+1. Enter a delay time in ms in the "Delay time for selection of SDI -&gt; SDI active" (p9565) field.
 2. Enter a monitoring tolerance in mm in the "Monitoring tolerance" (p9564) field.
 3. Select the desired fault response in the "Selection" drop-down list (p9566).
 4. Click on the icon ![Parameterizing SDI](images/147856715147_DV_resource.Stream@PNG-en-US.PNG) to open an additional configuration screen form for the set fault response.
@@ -2473,7 +2473,7 @@ The PROFIsafe address is required for control of the Safety Integrated Functions
 1. Click the icon ![PROFIsafe configuration](images/147856715147_DV_resource.Stream@PNG-en-US.PNG) "Telegram configuration"
 
    The properties of the PROFINET interface are displayed in the inspector window. The "Cyclic data traffic" setting range is active. The telegrams for the drive objects can be specified here.
-2. Click the <Add telegram> entry in the telegram configuration of "Drive axis_x".
+2. Click the &lt;Add telegram&gt; entry in the telegram configuration of "Drive axis_x".
 3. Select the "Add Safety telegram" option in the drop-down list of the entry:
 
    The "Safe actual value" and "Safe setpoint" lines are then inserted. The relevant PROFIsafe telegrams are preassigned.

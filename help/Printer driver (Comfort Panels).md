@@ -115,9 +115,9 @@ The application "HTMLSettings.exe" is available on the desktop of the HMI device
 1. Open the "HTMLSettings.exe" application
 2. Open the "Columns Attributes" tab.
 3. Select an attribute in the "Available Columns" category:
-4. Add this attribute to your selection with the ">>" button.
+4. Add this attribute to your selection with the "&gt;&gt;" button.
 5. If required, define whether the selected attribute is to be displayed as an image or as a hyperlink in the HTML file.
-6. To deselect attributes from the "Selected Columns" category, select an attribute and click the "<<" button.
+6. To deselect attributes from the "Selected Columns" category, select an attribute and click the "&lt;&lt;" button.
 
 #### Selecting style sheets
 
@@ -181,11 +181,11 @@ ProSave is installed on the PC.
 ### Procedure
 
 1. Double click the "PROSAVE-OPT.exe" file.
-2. Select "<Setup>" in the "WinZip Self-Extractor" dialog.
+2. Select "&lt;Setup&gt;" in the "WinZip Self-Extractor" dialog.
 3. Select the language for the installation menu.
-4. Select "<Continue>" in the "Optional package printer driver setup" dialog.
-5. Confirm the next box with "<Install>".
-6. Confirm the "Optional package printer driver setup" message with "<Finish>".
+4. Select "&lt;Continue&gt;" in the "Optional package printer driver setup" dialog.
+5. Confirm the next box with "&lt;Install&gt;".
+6. Confirm the "Optional package printer driver setup" message with "&lt;Finish&gt;".
 
 **Note**
 
@@ -208,7 +208,7 @@ The HMI device is connected to a PC on which ProSave is installed.
 7. Set "Transfer" mode on the HMI device.
 
    If automatic transfer mode is enabled on the HMI device, the device automatically sets "Transfer" mode when a transfer is initiated.
-8. Select ">>" on the PC to start the transfer.
+8. Select "&gt;&gt;" on the PC to start the transfer.
 9. Follow the ProSave instructions and the instructions which appear on the HMI device.
 
    During the installation of the printer driver, a status display appears indicating the progress of the operation.

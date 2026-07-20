@@ -483,7 +483,7 @@ If you want to use less than eight data areas, the required data areas must be l
 
 The Data_Area_Array field consists of 8 elements: Data_Area_Array[1] to Data_Area_Array[8]
 
-Each field element Data_Area_Array[x], 1 <= x <= 8, is a UDT of the type MB_DataArea and is structured as follows:
+Each field element Data_Area_Array[x], 1 &lt;= x &lt;= 8, is a UDT of the type MB_DataArea and is structured as follows:
 
 | Parameter | Data type | Meaning |
 | --- | --- | --- |

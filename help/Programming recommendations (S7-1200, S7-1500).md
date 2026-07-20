@@ -287,7 +287,7 @@ The DB_ANY data type is used to identify any data block. For CPUs of the S7-1200
 - VARIANT_TO_DB_ANY: Convert VARIANT to DB_ANY
 - DB_ANY_TO_VARIANT: Convert DB_ANY to VARIANT
 
-For more information about the instructions, refer to "Basic instructions > STL/SCL > Conversion operations > VARIANT".
+For more information about the instructions, refer to "Basic instructions &gt; STL/SCL &gt; Conversion operations &gt; VARIANT".
 
 The advantage of this procedure: You can create the program code before you know which data block will be processed.
 
@@ -314,11 +314,11 @@ Create the PLC data type "UDT_Hole" to transfer the job data:
    A new declaration table for creating a PLC data type will be created and opened.
 2. Declare the following lines within the PLC data type:
 
-   X-coordinate > REAL
+   X-coordinate &gt; REAL
 
-   Y-coordinate > REAL
+   Y-coordinate &gt; REAL
 
-   Diameter > REAL
+   Diameter &gt; REAL
 
    ![Procedure - Creating the PLC data types](images/103463506059_DV_resource.Stream@PNG-de-DE.png)
 
@@ -335,13 +335,13 @@ Create the PLC data type "UDT_RectangleWindowStatic":
    A new declaration table for creating a PLC data type will be created and opened.
 2. Declare the following lines within the PLC data type:
 
-   X1-coordinate > REAL
+   X1-coordinate &gt; REAL
 
-   Y1-coordinate > REAL
+   Y1-coordinate &gt; REAL
 
-   X2-coordinate > REAL
+   X2-coordinate &gt; REAL
 
-   Y2-coordinate > REAL
+   Y2-coordinate &gt; REAL
 
    ![Procedure - Creating the PLC data types](images/68758734603_DV_resource.Stream@PNG-de-DE.png)
 
@@ -360,15 +360,15 @@ Create the PLC data type "UDT_RectangleWindowFlexible":
    A new declaration table for creating a PLC data type will be created and opened.
 2. Declare the following lines within the PLC data type:
 
-   X-coordinate > REAL
+   X-coordinate &gt; REAL
 
-   Y-coordinate > REAL
+   Y-coordinate &gt; REAL
 
-   Height > REAL
+   Height &gt; REAL
 
-   Width > REAL
+   Width &gt; REAL
 
-   Angle > REAL
+   Angle &gt; REAL
 
    ![Procedure - Creating the PLC data types](images/68761686283_DV_resource.Stream@PNG-de-DE.png)
 
@@ -424,13 +424,13 @@ A separate function is created for each job type. The punch jobs are broken down
 3. Rename the PLC data type "UDT_Punch".
 4. Declare the following lines within the PLC data type:
 
-   Tool > DINT
+   Tool &gt; DINT
 
-   x > REAL
+   x &gt; REAL
 
-   y > REAL
+   y &gt; REAL
 
-   w > REAL
+   w &gt; REAL
 
    ![Procedure - Creating the program code](images/103794671883_DV_resource.Stream@PNG-de-DE.png)
 
@@ -521,7 +521,7 @@ The next job on the list is prepared by breaking down the current punch job into
 
 SCL
 
-#a : DB_ANY_TO_VARIANT(in := #Order, err => #Error);
+#a : DB_ANY_TO_VARIANT(in := #Order, err =&gt; #Error);
 
 CASE TypeOf(#a) OF
 
@@ -529,7 +529,7 @@ CASE TypeOf(#a) OF
 
 VariantGet(SRC := #a,
 
-DST => #Hole);
+DST =&gt; #Hole);
 
 "FC_PrepareHole"(#Hole);
 
@@ -537,7 +537,7 @@ DST => #Hole);
 
 VariantGet(SRC := #a,
 
-DST => #WindowStatic);
+DST =&gt; #WindowStatic);
 
 "FC_PrepareWindowStatic"(#WindowStatic);
 
@@ -545,7 +545,7 @@ DST => #WindowStatic);
 
 VariantGet(SRC := #a,
 
-DST => #WindowFlexible);
+DST =&gt; #WindowFlexible);
 
 "FC_PrepareWindowFlexible"(#WindowFlexible);
 
@@ -659,13 +659,13 @@ The following example shows the call and the parameter assignment of a function 
 2. Rename the PLC data type to "UDT_Material".
 3. Declare the following lines within the PLC data type:
 
-   ArticleNumber > Data type: DINT
+   ArticleNumber &gt; Data type: DINT
 
-   ArticleName > Data type: STRING
+   ArticleName &gt; Data type: STRING
 
-   Amount > Data type: REAL
+   Amount &gt; Data type: REAL
 
-   Unit > Data type: STRING
+   Unit &gt; Data type: STRING
 
    ![Programming example in STEP 7 TIA Portal](images/67954987147_DV_resource.Stream@PNG-de-DE.png)
 

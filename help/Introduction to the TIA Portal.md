@@ -16,7 +16,7 @@ This section contains information on the following topics:
 - [Setting the TIA Portal](#setting-the-tia-portal)
 - [User interface and operation](#user-interface-and-operation)
 - [Help on the information system](#help-on-the-information-system)
-- [Display Service & Support Information in the TIA Portal](#display-service-support-information-in-the-tia-portal)
+- [Display Service &amp; Support Information in the TIA Portal](#display-service-support-information-in-the-tia-portal)
 - [Find and replace](#find-and-replace)
 - [Undoing and redoing actions](#undoing-and-redoing-actions)
 - [Running external applications](#running-external-applications)
@@ -30,49 +30,49 @@ This website contains an overview of information and videos for getting started 
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Getting Started S7-1200](images/170941688459_DV_resource.Stream@PNG-de-DE.png) | This video is an easy introduction to SIMATIC S7-1200 and the TIA Portal. It shows you step-by-step how to create your first project, have the hardware configuration detected automatically, set the CPU properties and load the configuration to the device.  Automation Task "Getting Started with SIMATIC S7-1200":   <https://youtu.be/APV5qfgBunw> |
+| ![Getting Started S7-1200](images/170941688459_DV_resource.Stream@PNG-de-DE.png) | This video is an easy introduction to SIMATIC S7-1200 and the TIA Portal. It shows you step-by-step how to create your first project, have the hardware configuration detected automatically, set the CPU properties and load the configuration to the device.  Automation Task "Getting Started with SIMATIC S7-1200":   [https://youtu.be/APV5qfgBunw](https://youtu.be/APV5qfgBunw) |
 
 ### Getting Started S7-1500
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Getting Started S7-1500](images/170941680011_DV_resource.Stream@PNG-de-DE.png) | In this video, you will learn how to create the hardware and software components for your first SIMATIC S7-1500 project with the TIA Portal.    <https://support.industry.siemens.com/cs/ww/en/view/99499820> |
+| ![Getting Started S7-1500](images/170941680011_DV_resource.Stream@PNG-de-DE.png) | In this video, you will learn how to create the hardware and software components for your first SIMATIC S7-1500 project with the TIA Portal.    [https://support.industry.siemens.com/cs/ww/en/view/99499820](https://support.industry.siemens.com/cs/ww/en/view/99499820) |
 
 ### Getting Started S7-1500 with application example "Color mixing system"
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Getting Started S7-1500 with application example "Color mixing system"](images/170941308811_DV_resource.Stream@PNG-de-DE.png) | In this Getting Started we show you in detail by means of an application example how to use the CPU SIMATIC S7-1500 together with the TIA Portal. Video clips will illustrate the approach for creating a solution for the automation task "Color mixing system".    <https://support.industry.siemens.com/cs/ww/en/view/78027451> |
+| ![Getting Started S7-1500 with application example "Color mixing system"](images/170941308811_DV_resource.Stream@PNG-de-DE.png) | In this Getting Started we show you in detail by means of an application example how to use the CPU SIMATIC S7-1500 together with the TIA Portal. Video clips will illustrate the approach for creating a solution for the automation task "Color mixing system".    [https://support.industry.siemens.com/cs/ww/en/view/78027451](https://support.industry.siemens.com/cs/ww/en/view/78027451) |
 
 ### Getting Started WinCC Unified - Newcomers
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Getting Started WinCC Unified - Newcomers](images/170941773195_DV_resource.Stream@PNG-de-DE.png) | This application example shows you the first steps when working with WinCC Unified.   <https://support.industry.siemens.com/cs/ww/en/view/109813335> |
+| ![Getting Started WinCC Unified - Newcomers](images/170941773195_DV_resource.Stream@PNG-de-DE.png) | This application example shows you the first steps when working with WinCC Unified.   [https://support.industry.siemens.com/cs/ww/en/view/109813335](https://support.industry.siemens.com/cs/ww/en/view/109813335) |
 
 ### Getting Started WinCC Unified - Advanced Users
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Getting Started WinCC Unified - Advanced Users](images/170941773195_DV_resource.Stream@PNG-de-DE.png) | This application example shows you how to use WinCC to perform all the steps for configuring the operator control and monitoring solution for managing the brewery process.  In the Getting Started, you will get to know the following configuration steps:   - ​Configuring the visualization of the brewing process - ​Monitoring and logging the brewing process - Configuring parameter sets (optional) - ​Configuring user management - Configuring screen navigation - Carrying out a function test in runtime    <https://support.industry.siemens.com/cs/ww/en/view/109818884> |
+| ![Getting Started WinCC Unified - Advanced Users](images/170941773195_DV_resource.Stream@PNG-de-DE.png) | This application example shows you how to use WinCC to perform all the steps for configuring the operator control and monitoring solution for managing the brewery process.  In the Getting Started, you will get to know the following configuration steps:   - ​Configuring the visualization of the brewing process - ​Monitoring and logging the brewing process - Configuring parameter sets (optional) - ​Configuring user management - Configuring screen navigation - Carrying out a function test in runtime    [https://support.industry.siemens.com/cs/ww/en/view/109818884](https://support.industry.siemens.com/cs/ww/en/view/109818884) |
 
 ### TIA Portal Tutorial Center
 
 | Symbol | Meaning |
 | --- | --- |
-| ![TIA Portal Tutorial Center](images/170941781131_DV_resource.Stream@PNG-de-DE.png) | For a quick start with the TIA Portal, Getting Started documents are available in form of videos in the TIA Portal Tutorial Center.  The videos have the following contents:   - They give you an overview of the functions and tools offered by the TIA Portal. - They give you an overview of the smooth interaction of the configuration and programming tools. - They show you how to work effectively with the TIA Portal. - They show you how to implement the various automation tasks in the TIA Portal.   The videos of the TIA Portal Tutorial Center are of a technical nature and offer assistance in all phases of the plant lifecycle, from planning, through configuring, all the way to commissioning.   <https://www.siemens.com/tia-portal-tutorial-center> |
+| ![TIA Portal Tutorial Center](images/170941781131_DV_resource.Stream@PNG-de-DE.png) | For a quick start with the TIA Portal, Getting Started documents are available in form of videos in the TIA Portal Tutorial Center.  The videos have the following contents:   - They give you an overview of the functions and tools offered by the TIA Portal. - They give you an overview of the smooth interaction of the configuration and programming tools. - They show you how to work effectively with the TIA Portal. - They show you how to implement the various automation tasks in the TIA Portal.   The videos of the TIA Portal Tutorial Center are of a technical nature and offer assistance in all phases of the plant lifecycle, from planning, through configuring, all the way to commissioning.   [https://www.siemens.com/tia-portal-tutorial-center](https://www.siemens.com/tia-portal-tutorial-center) |
 
 ### Mister Automation
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Mister Automation](images/170941789067_DV_resource.Stream@PNG-de-DE.png) | In this video series, our own TIA Portal expert shows you the advantages of an integrated engineering process in the TIA Portal and the simple implementation of automation tasks. The videos demonstrate how you can use the TIA Portal more easily and efficiently and thereby increase your productivity. You will also get some tips & tricks as well as insights behind the scenes of TIA Portal.   <https://support.industry.siemens.com/cs/ww/en/view/109764401> |
+| ![Mister Automation](images/170941789067_DV_resource.Stream@PNG-de-DE.png) | In this video series, our own TIA Portal expert shows you the advantages of an integrated engineering process in the TIA Portal and the simple implementation of automation tasks. The videos demonstrate how you can use the TIA Portal more easily and efficiently and thereby increase your productivity. You will also get some tips &amp; tricks as well as insights behind the scenes of TIA Portal.   [https://support.industry.siemens.com/cs/ww/en/view/109764401](https://support.industry.siemens.com/cs/ww/en/view/109764401) |
 
 ### Automation Tasks in less than 10 minutes
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Automation Tasks in less than 10 minutes](images/170941912203_DV_resource.Stream@PNG-de-DE.png) | The videos in the "Automation Tasks" media system show you how easy it is to implement automation tasks in less than 10 minutes.   <https://support.industry.siemens.com/cs/ww/en/view/109767570> |
+| ![Automation Tasks in less than 10 minutes](images/170941912203_DV_resource.Stream@PNG-de-DE.png) | The videos in the "Automation Tasks" media system show you how easy it is to implement automation tasks in less than 10 minutes.   [https://support.industry.siemens.com/cs/ww/en/view/109767570](https://support.industry.siemens.com/cs/ww/en/view/109767570) |
 
 ### Guidelines for S7-1200 and S7-1500
 
@@ -94,25 +94,25 @@ Interesting information about the TIA Portal is available for you in the SiePort
 
 | Symbol | Meaning |
 | --- | --- |
-| ![TIA Portal - An overview](images/170941956363_DV_resource.Stream@PNG-de-DE.png) | This page provides you with an overview of the most important documents and links related to the TIA Portal. You will find instructions for easy entry into the TIA Portal as well as practical tips and information for advanced users.   <https://support.industry.siemens.com/cs/ww/en/view/65601780> |
+| ![TIA Portal - An overview](images/170941956363_DV_resource.Stream@PNG-de-DE.png) | This page provides you with an overview of the most important documents and links related to the TIA Portal. You will find instructions for easy entry into the TIA Portal as well as practical tips and information for advanced users.   [https://support.industry.siemens.com/cs/ww/en/view/65601780](https://support.industry.siemens.com/cs/ww/en/view/65601780) |
 
 ### Application examples
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Application examples](images/170941977099_DV_resource.Stream@PNG-de-DE.png) | Application examples show you exemplary solutions for typical automation tasks. You can use the examples as inspiration, or directly as a basis for your own solutions.   <https://support.industry.siemens.com/cs/ww/en/ps/14667/ae> |
+| ![Application examples](images/170941977099_DV_resource.Stream@PNG-de-DE.png) | Application examples show you exemplary solutions for typical automation tasks. You can use the examples as inspiration, or directly as a basis for your own solutions.   [https://support.industry.siemens.com/cs/ww/en/ps/14667/ae](https://support.industry.siemens.com/cs/ww/en/ps/14667/ae) |
 
 ### Tools and applications
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Tools and applications](images/170941985035_DV_resource.Stream@PNG-de-DE.png) | Tools and applications that support you in implementing your projects quickly and easily are a useful addition to the TIA Portal. You can find a selection of useful tools and applications here:  - TIA Selection Tool – The configurator for the complete Siemens automation portfolio    <https://support.industry.siemens.com/cs/ww/en/view/109767888> - Compatibility Tool for Automation and Drives    <https://support.industry.siemens.com/cs/ww/en/view/64847781> - SIMATIC Automation Tool – The tool for support during commissioning, service, and maintenance of SIMATIC devices    <https://support.industry.siemens.com/cs/ww/en/view/98161300> - The image database offers you a variety of photos, graphics, 3D models, and engineering data in different versions available for free download.    [https://www.automation.siemens.com/bilddb/index.aspx](https://www.automation.siemens.com/bilddb/index.aspx?lang=en) |
+| ![Tools and applications](images/170941985035_DV_resource.Stream@PNG-de-DE.png) | Tools and applications that support you in implementing your projects quickly and easily are a useful addition to the TIA Portal. You can find a selection of useful tools and applications here:  - TIA Selection Tool – The configurator for the complete Siemens automation portfolio    [https://support.industry.siemens.com/cs/ww/en/view/109767888](https://support.industry.siemens.com/cs/ww/en/view/109767888) - Compatibility Tool for Automation and Drives    [https://support.industry.siemens.com/cs/ww/en/view/64847781](https://support.industry.siemens.com/cs/ww/en/view/64847781) - SIMATIC Automation Tool – The tool for support during commissioning, service, and maintenance of SIMATIC devices    [https://support.industry.siemens.com/cs/ww/en/view/98161300](https://support.industry.siemens.com/cs/ww/en/view/98161300) - The image database offers you a variety of photos, graphics, 3D models, and engineering data in different versions available for free download.    [https://www.automation.siemens.com/bilddb/index.aspx](https://www.automation.siemens.com/bilddb/index.aspx?lang=en) |
 
 ### Training
 
 | Symbol | Meaning |
 | --- | --- |
-| ![Training](images/170942005771_DV_resource.Stream@PNG-de-DE.png) | SITRAIN stands for a modern learning culture that focuses on the needs of learners and the demands of innovative companies. For more effective, flexible, relevant and continuous learning.    <https://new.siemens.com/global/en/products/services/digital-enterprise-services/training-services/sitrain.html> |
+| ![Training](images/170942005771_DV_resource.Stream@PNG-de-DE.png) | SITRAIN stands for a modern learning culture that focuses on the needs of learners and the demands of innovative companies. For more effective, flexible, relevant and continuous learning.    [https://new.siemens.com/global/en/products/services/digital-enterprise-services/training-services/sitrain.html](https://new.siemens.com/global/en/products/services/digital-enterprise-services/training-services/sitrain.html) |
 
 ## Starting and exiting the TIA Portal
 
@@ -120,7 +120,7 @@ Interesting information about the TIA Portal is available for you in the SiePort
 
 To start the TIA Portal, follow these steps:
 
-1. In the Windows start menu, select the command "Siemens Automation > TIA Portal V18".
+1. In the Windows start menu, select the command "Siemens Automation &gt; TIA Portal V18".
 
    The TIA Portal opens with the last settings used.
 
@@ -173,7 +173,7 @@ The following table shows the application settings that you can make:
 | Load most recent project during startup | The last opened project is opened automatically after the TIA Portal starts. |  |
 | Load editors of the last opened project when starting | The editors of the last opened project are loaded automatically during startup of the TIA Portal.  The "Load editors of the last opened project when starting" option is only available when the "Load last opened project during startup" option was activated. |  |
 | Displaying truncated text in full | Texts which are truncated due to their length are displayed in a tooltip. |  |
-| Show tooltips (context-sensitive help is available) | Tooltips are displayed and you get context-sensitive help. If this function is disabled, you can open the tooltip with <F1>.  The setting also affects rollouts with context-related syntax errors and input aids in STL. |  |
+| Show tooltips (context-sensitive help is available) | Tooltips are displayed and you get context-sensitive help. If this function is disabled, you can open the tooltip with &lt;F1&gt;.  The setting also affects rollouts with context-related syntax errors and input aids in STL. |  |
 | Open cascade automatically in tooltips | After a brief time, the tooltips automatically expand to display a cascade containing additional help. If this option is cleared, the tooltips must be manually expanded. |  |
 | Show banner minimized | Banners with additional information in the editor are minimized in display by default. |  |
 | Notifications: Show as pop-up in the status bar | Shows the last notification of warnings or errors and information as a pop-up in the status bar. |  |
@@ -276,7 +276,7 @@ The following table shows the available settings for printing:
 | With interface | The interfaces of blocks are included in the printout. |  |
 | With comments | Comments on blocks are included in the printout. |  |
 | With line numbers | The line numbers of the program code are printed for text-based programming languages. |  |
-| Motion & Technology | Dialog display/graphic | The content of the editor is printed out as a graphic if the editor supports this. |
+| Motion &amp; Technology | Dialog display/graphic | The content of the editor is printed out as a graphic if the editor supports this. |
 | Table | The parameters of the technology objects are printed out in the form of a table. |  |
 | HMI screens | Show tab order | In the printout you can specify the order in which the runtime objects can be selected with the TAB key. |
 
@@ -543,35 +543,35 @@ The XML configuration file must have the following structure:
 
 XML
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<Document>
+&lt;Document&gt;
 
-<Settings.Settings ID="0">
+&lt;Settings.Settings ID="0"&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<Settings.General ID="1" AggregationName="General">
+&lt;Settings.General ID="1" AggregationName="General"&gt;
 
-<AttributeList>
+&lt;AttributeList&gt;
 
-<PredefinedCentralSettingsPaths IsReadOnly="true">
+&lt;PredefinedCentralSettingsPaths IsReadOnly="true"&gt;
 
-<!-- Example for the path -->
+&lt;!-- Example for the path --&gt;
 
-<Item>D:\CentralSettings\Settings.tps19</Item>
+&lt;Item&gt;D:\CentralSettings\Settings.tps19&lt;/Item&gt;
 
-</PredefinedCentralSettingsPaths>
+&lt;/PredefinedCentralSettingsPaths&gt;
 
-</AttributeList>
+&lt;/AttributeList&gt;
 
-</Settings.General>
+&lt;/Settings.General&gt;
 
-</ObjectList>
+&lt;/ObjectList&gt;
 
-</Settings.Settings>
+&lt;/Settings.Settings&gt;
 
-</Document>
+&lt;/Document&gt;
 
 You define the content of the XML configuration file within the "Settings.General" element.
 
@@ -848,7 +848,7 @@ The following figure shows an example of the project tree areas:
 | ⑨ | Unassigned devices |
 | ⑩ | Common data |
 | ⑪ | Documentation settings |
-| ⑫ | Languages & resources |
+| ⑫ | Languages &amp; resources |
 | ⑬ | Online access |
 | ⑭ | Card Reader / USB memory |
 
@@ -879,7 +879,7 @@ The "Name" column is shown by default. You can also show the columns "Type name"
 You will find all the objects and actions related to the project in the "Project" folder, e.g.:
 
 - Devices
-- Languages & resources
+- Languages &amp; resources
 - Online access
 
 ###### Device
@@ -910,7 +910,7 @@ This folder contains data that you can use across more than one device, such as 
 
 In this folder, you can specify the layout for the printed project documentation.
 
-###### Languages & resources
+###### Languages &amp; resources
 
 You can determine the project languages and texts in this folder.
 
@@ -1784,7 +1784,7 @@ If you load a window layout and then make changes to the arrangement of the wind
 
 To load one of the first five saved window layouts, follow these steps:
 
-1. In the "Window" menu, select a window layout or select the key combination <Alt+Shift+[1 ... 5]>.
+1. In the "Window" menu, select a window layout or select the key combination &lt;Alt+Shift+[1 ... 5]&gt;.
 
 ###### Loading additional window layouts
 
@@ -1800,7 +1800,7 @@ To load a window layout that is not among the first five window layouts, follow 
 
 To go back to a saved window layout, follow these steps:
 
-1. In the "Window" menu, select the "Restore window layout" command or select the key combination <Alt+Shift+0>.
+1. In the "Window" menu, select the "Restore window layout" command or select the key combination &lt;Alt+Shift+0&gt;.
 
 ---
 
@@ -1827,7 +1827,7 @@ To manage the existing window layouts, follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The settings of the TIA Portal are displayed.
-2. In the area navigation, navigate to the entry "General > Manage all window layouts".
+2. In the area navigation, navigate to the entry "General &gt; Manage all window layouts".
 3. Select a window layout.
 
    The selected window layout is immediately activated.
@@ -1889,7 +1889,7 @@ To reset the user interface settings to the default, follow these steps:
 
    The "Settings" window is displayed in the work area.
 2. Select the "General" group in the area navigation.
-3. Click the "Reset to default" button under "Reset to default > Editor layout".
+3. Click the "Reset to default" button under "Reset to default &gt; Editor layout".
 
 ###### Result
 
@@ -1960,22 +1960,22 @@ The following table shows how you can access basic functions of the TIA Portal w
 
 | Function | Keyboard shortcut | Menu command |
 | --- | --- | --- |
-| Change between the project view and the portal view | <Alt+F7> | - |
-| Opens the online and diagnostics view | <Ctrl+D> | - |
-| Start Runtime  This keyboard shortcut is available for Runtime Professional and Runtime Advanced. | <Ctrl+Shift+Z> | - |
-| Show cross-references | <Shift+Alt+F11> | - |
-| Cross-reference information | <Shift+F11> | - |
-| Open the Help system  If you need help on the TIA Portal, press <F1>. | <F1> | Help > Show help |
-| Cancel the current action | <Esc> | - |
-| Find | <Ctrl+F> | - |
-| Replace an object  You can replace found objects when searching in the editor. | <Ctrl+H> | - |
-| Find next  If you have started a search in the editor, you can jump to the next hit with <F3>. | <F3> | - |
-| Print object | <Ctrl+P> | Project > Print |
-| Run default action of the object | <Enter> | - |
-| Update | <F5> | - |
-| Scroll horizontally to the right | <Ctrl+Arrow right> | - |
-| Scroll horizontally to the left | <Ctrl+Arrow left> | - |
-| Open block/PLC data type | <F7> | - |
+| Change between the project view and the portal view | &lt;Alt+F7&gt; | - |
+| Opens the online and diagnostics view | &lt;Ctrl+D&gt; | - |
+| Start Runtime  This keyboard shortcut is available for Runtime Professional and Runtime Advanced. | &lt;Ctrl+Shift+Z&gt; | - |
+| Show cross-references | &lt;Shift+Alt+F11&gt; | - |
+| Cross-reference information | &lt;Shift+F11&gt; | - |
+| Open the Help system  If you need help on the TIA Portal, press &lt;F1&gt;. | &lt;F1&gt; | Help &gt; Show help |
+| Cancel the current action | &lt;Esc&gt; | - |
+| Find | &lt;Ctrl+F&gt; | - |
+| Replace an object  You can replace found objects when searching in the editor. | &lt;Ctrl+H&gt; | - |
+| Find next  If you have started a search in the editor, you can jump to the next hit with &lt;F3&gt;. | &lt;F3&gt; | - |
+| Print object | &lt;Ctrl+P&gt; | Project &gt; Print |
+| Run default action of the object | &lt;Enter&gt; | - |
+| Update | &lt;F5&gt; | - |
+| Scroll horizontally to the right | &lt;Ctrl+Arrow right&gt; | - |
+| Scroll horizontally to the left | &lt;Ctrl+Arrow left&gt; | - |
+| Open block/PLC data type | &lt;F7&gt; | - |
 
 ##### Operating menus
 
@@ -1983,9 +1983,9 @@ The following table shows how you can navigate through menus using the keyboard:
 
 | Function | Keyboard shortcut |
 | --- | --- |
-| Start keyboard shortcuts in the menu  You can access the menu using the <Alt> key and then continue to navigate with the arrow keys to scroll through the menu. Confirm your selection of the menu command with <Enter>. | <Alt> |
-| Go directly to a specific menu  You can go directly to an individual menu command by holding down the <Alt> key. There is an underlined letter for each menu command. Press the <Alt> key along with the underlined letter. | <Alt+underlined letter in respective menu> |
-| Open shortcut menu of an object  With the shortcut menu key (on Microsoft Windows compatible keyboards), you can open the shortcut menu of the selected object. Alternatively, you can use <Shift+F10> if you are not using a Microsoft Windows compatible keyboard. You can use the arrow keys to scroll through the shortcut menu and select a menu command with <Enter>. | <Shortcut menu key>  Alternative: <Shift+F10> |
+| Start keyboard shortcuts in the menu  You can access the menu using the &lt;Alt&gt; key and then continue to navigate with the arrow keys to scroll through the menu. Confirm your selection of the menu command with &lt;Enter&gt;. | &lt;Alt&gt; |
+| Go directly to a specific menu  You can go directly to an individual menu command by holding down the &lt;Alt&gt; key. There is an underlined letter for each menu command. Press the &lt;Alt&gt; key along with the underlined letter. | &lt;Alt+underlined letter in respective menu&gt; |
+| Open shortcut menu of an object  With the shortcut menu key (on Microsoft Windows compatible keyboards), you can open the shortcut menu of the selected object. Alternatively, you can use &lt;Shift+F10&gt; if you are not using a Microsoft Windows compatible keyboard. You can use the arrow keys to scroll through the shortcut menu and select a menu command with &lt;Enter&gt;. | &lt;Shortcut menu key&gt;  Alternative: &lt;Shift+F10&gt; |
 
 ##### Operating expandable elements
 
@@ -1993,11 +1993,11 @@ The following table shows how you can operate expandable elements using the keyb
 
 | Function | Keyboard shortcut |
 | --- | --- |
-| Expand a folder in a tree  With <Arrow right>, for example, you expand a folder in the project tree. | <Arrow right> |
-| Close a folder in a tree  With <Arrow left>, for example, you collapse a folder in the project tree. | <Arrow left> |
-| Open a drop-down list  You can open drop-down lists with <F4> and then navigate with the arrow keys to scroll through the drop-down list. Finally, press the <Enter> key to confirm your selection. | <F4> |
-| Open autocompletion | <Ctrl+Space>  <Ctrl+I> |
-| Show object browser | <Ctrl+J> |
+| Expand a folder in a tree  With &lt;Arrow right&gt;, for example, you expand a folder in the project tree. | &lt;Arrow right&gt; |
+| Close a folder in a tree  With &lt;Arrow left&gt;, for example, you collapse a folder in the project tree. | &lt;Arrow left&gt; |
+| Open a drop-down list  You can open drop-down lists with &lt;F4&gt; and then navigate with the arrow keys to scroll through the drop-down list. Finally, press the &lt;Enter&gt; key to confirm your selection. | &lt;F4&gt; |
+| Open autocompletion | &lt;Ctrl+Space&gt;  &lt;Ctrl+I&gt; |
+| Show object browser | &lt;Ctrl+J&gt; |
 
 #### Using project-related functions
 
@@ -2005,20 +2005,20 @@ The following table shows how you can operate expandable elements using the keyb
 
 | Function | Keyboard shortcuts | Menu command |
 | --- | --- | --- |
-| Open a project | <Ctrl+O> | Project > Open |
-| Close a project | <Ctrl+W> | Project > Close |
-| Save a project | <Ctrl+S> | Project > Save |
-| Save a project under a different name | <Ctrl+Shift+S> | Project > Save as |
-| Delete a project | <Ctrl+E> | Project > Delete project |
-| Print project | <Ctrl+P> | Project > Print |
-| Undo last action | <Ctrl+Z> | Edit > Undo |
-| Redo last action | <Ctrl+Y> | Edit > Redo |
+| Open a project | &lt;Ctrl+O&gt; | Project &gt; Open |
+| Close a project | &lt;Ctrl+W&gt; | Project &gt; Close |
+| Save a project | &lt;Ctrl+S&gt; | Project &gt; Save |
+| Save a project under a different name | &lt;Ctrl+Shift+S&gt; | Project &gt; Save as |
+| Delete a project | &lt;Ctrl+E&gt; | Project &gt; Delete project |
+| Print project | &lt;Ctrl+P&gt; | Project &gt; Print |
+| Undo last action | &lt;Ctrl+Z&gt; | Edit &gt; Undo |
+| Redo last action | &lt;Ctrl+Y&gt; | Edit &gt; Redo |
 
 ##### Calling up the help function
 
 | Function | Keyboard shortcuts | Menu command |
 | --- | --- | --- |
-| Calling up the help function | <F1> or <Shift+F1> | Help > Show help |
+| Calling up the help function | &lt;F1&gt; or &lt;Shift+F1&gt; | Help &gt; Show help |
 
 #### Arranging windows
 
@@ -2030,19 +2030,19 @@ The following table shows how you can open and close windows with keyboard short
 
 | Function | Keyboard shortcut | Menu command |
 | --- | --- | --- |
-| Open/close project tree | <Ctrl+1> | View > Project tree |
-| Opening/closing the detailed view | <Ctrl+4> | View > Details view |
-| Opening/closing the overview | <Ctrl+2> | View > Overview |
-| Opening/closing a task card | <Ctrl+3> | View > Task card |
-| Open libraries | <Ctrl+Shift+L> | - |
-| Open hardware catalog If you are in the device or network view, the hardware catalog opens. | <Ctrl+Shift+C> | - |
-| Open/close inspector window | <Ctrl+5> | View > Inspector window |
-| Open the "Properties" tab in the inspector window | <Ctrl+6> | - |
-| Open the "Info" tab in the inspector window | <Ctrl+7> | - |
-| Open the "Diagnostics" tab in the Inspector window | <Ctrl+8> | - |
-| Display or hide reference projects | <Ctrl+9> | - |
-| Display the on-screen keyboard  You can display a keyboard on the screen, for example, to operate with a touch screen. | <Ctrl+Shift+K> | - |
-| Close all editors | <Ctrl+Shift+F4> | Window > Close all |
+| Open/close project tree | &lt;Ctrl+1&gt; | View &gt; Project tree |
+| Opening/closing the detailed view | &lt;Ctrl+4&gt; | View &gt; Details view |
+| Opening/closing the overview | &lt;Ctrl+2&gt; | View &gt; Overview |
+| Opening/closing a task card | &lt;Ctrl+3&gt; | View &gt; Task card |
+| Open libraries | &lt;Ctrl+Shift+L&gt; | - |
+| Open hardware catalog If you are in the device or network view, the hardware catalog opens. | &lt;Ctrl+Shift+C&gt; | - |
+| Open/close inspector window | &lt;Ctrl+5&gt; | View &gt; Inspector window |
+| Open the "Properties" tab in the inspector window | &lt;Ctrl+6&gt; | - |
+| Open the "Info" tab in the inspector window | &lt;Ctrl+7&gt; | - |
+| Open the "Diagnostics" tab in the Inspector window | &lt;Ctrl+8&gt; | - |
+| Display or hide reference projects | &lt;Ctrl+9&gt; | - |
+| Display the on-screen keyboard  You can display a keyboard on the screen, for example, to operate with a touch screen. | &lt;Ctrl+Shift+K&gt; | - |
+| Close all editors | &lt;Ctrl+Shift+F4&gt; | Window &gt; Close all |
 
 ##### Using saved window layouts
 
@@ -2050,8 +2050,8 @@ You can save individual window arrangements and restore them at a later point in
 
 | Function | Keyboard shortcut | Menu command |
 | --- | --- | --- |
-| Restore active window layout  If you use a saved window layout and have made changes to the program interface in the meantime, you can restore the original state of the active window layout with <Alt+Shift+0>. | <Shift+Alt+0> | Window > Restore window layout |
-| Load window layout  You can use <Alt+Shift+[number of the window layout]> to activate the first of the five saved window layouts. | <Shift+Alt+[Number of the window layout]> | Window > Window layout 1 to 5 |
+| Restore active window layout  If you use a saved window layout and have made changes to the program interface in the meantime, you can restore the original state of the active window layout with &lt;Alt+Shift+0&gt;. | &lt;Shift+Alt+0&gt; | Window &gt; Restore window layout |
+| Load window layout  You can use &lt;Alt+Shift+[number of the window layout]&gt; to activate the first of the five saved window layouts. | &lt;Shift+Alt+[Number of the window layout]&gt; | Window &gt; Window layout 1 to 5 |
 
 #### Navigating through the program interface
 
@@ -2063,12 +2063,12 @@ The following table shows how to move between individual interface areas of the 
 
 | Function | Keyboard shortcut |
 | --- | --- |
-| Move clockwise between the interface areas  You can use the <F6> key to move clockwise between the individual interface areas of the TIA Portal. The interface area currently in focus is highlighted with a blue title bar. If you are in the project tree, for example, and press the <F6> key, you jump to the currently open editor. If you press <F6> again, the task cards are in focus.  If you press <Shift+F6>, on the other hand, you move counterclockwise between the work areas. | <F6> |
-| Move counterclockwise between the interface areas  With <Shift+F6> you move counter-clockwise between the interface areas of the TIA Portal. | <Shift+F6> |
-| Go to the next open editor  With <Ctrl+Alt+Arrow right> you go to the next open editor. You can see the open editors in the editor toolbar. | <Ctrl+Alt+Arrow right>  Alternative: <Ctrl+F6> |
-| Go to the previous open editor  With <Ctrl+Alt+Arrow left>, you go to the last opened editor. | <Ctrl+Alt+Arrow left>  Alternative: <Ctrl+Shift+F6> |
-| Go to the next higher section of the interface area  With <Shift+Esc>, you move to the next higher section of the program interface. If, for example, you have selected a device in the project tree and you press <Shift+Esc>, the entire project navigation is put into focus. | <Shift+Esc>  Alternative: <Alt+Arrow up> |
-| Go to the next lower section of the interface area  With <Enter>, you place the focus on the next lower section of the program interface. For example, if you have just opened the properties of a device in the Inspector window in order to assign parameters to the device, press <Enter> to go one level deeper in the program interface. You can then navigate to the desired parameter using the Tab key. | <Enter>  Alternative: <Alt+Arrow down> |
+| Move clockwise between the interface areas  You can use the &lt;F6&gt; key to move clockwise between the individual interface areas of the TIA Portal. The interface area currently in focus is highlighted with a blue title bar. If you are in the project tree, for example, and press the &lt;F6&gt; key, you jump to the currently open editor. If you press &lt;F6&gt; again, the task cards are in focus.  If you press &lt;Shift+F6&gt;, on the other hand, you move counterclockwise between the work areas. | &lt;F6&gt; |
+| Move counterclockwise between the interface areas  With &lt;Shift+F6&gt; you move counter-clockwise between the interface areas of the TIA Portal. | &lt;Shift+F6&gt; |
+| Go to the next open editor  With &lt;Ctrl+Alt+Arrow right&gt; you go to the next open editor. You can see the open editors in the editor toolbar. | &lt;Ctrl+Alt+Arrow right&gt;  Alternative: &lt;Ctrl+F6&gt; |
+| Go to the previous open editor  With &lt;Ctrl+Alt+Arrow left&gt;, you go to the last opened editor. | &lt;Ctrl+Alt+Arrow left&gt;  Alternative: &lt;Ctrl+Shift+F6&gt; |
+| Go to the next higher section of the interface area  With &lt;Shift+Esc&gt;, you move to the next higher section of the program interface. If, for example, you have selected a device in the project tree and you press &lt;Shift+Esc&gt;, the entire project navigation is put into focus. | &lt;Shift+Esc&gt;  Alternative: &lt;Alt+Arrow up&gt; |
+| Go to the next lower section of the interface area  With &lt;Enter&gt;, you place the focus on the next lower section of the program interface. For example, if you have just opened the properties of a device in the Inspector window in order to assign parameters to the device, press &lt;Enter&gt; to go one level deeper in the program interface. You can then navigate to the desired parameter using the Tab key. | &lt;Enter&gt;  Alternative: &lt;Alt+Arrow down&gt; |
 
 ##### Navigation within interface areas and editors
 
@@ -2076,13 +2076,13 @@ The following table shows how you can navigate within a user interface area usin
 
 | Function | Keyboard shortcut |
 | --- | --- |
-| Jump to the next element within an interface area  You can use the Tab key to jump from one element to the next within a work area. If, for example, you have opened the properties of a device and want to jump from one field to the next, press the Tab key. Any changes you have made to the current text box are applied in this case. | <Tab> |
-| Jump to the previous element within an interface area  With <Shift+Tab>, you can jump to the previous element in a work area, for example, a previous text box. Any changes you have made to the current text box are applied in this case. | <Shift+Tab> |
-| Jump to the higher-level element within an interface area  With <Shift+Home> you can jump to the higher-level element of a work area, e.g., to the higher-level folder in the project tree. | <Shift+Home> |
-| Move to the next tab within an interface area  If an interface area is divided into separate tabs, you can move between the tabs with the shortcut keys <Ctrl+Tab>. If, for example, you are in the "Properties" tab of the Inspector window and you want to jump to the "Info" tab, press the shortcut keys <Ctrl+Tab>. | <Ctrl+Tab> |
-| Go to the previous tab  With <Ctrl+Shift+Tab>, you move to the most recently open tab within an interface area. | <Ctrl+Shift+Tab> |
-| Jumping to the toolbar of an editor  You can use the <Alt+F10> key to jump to the toolbar of an editor. For example, if you have opened the print preview and want to switch to the next page of the printout in the toolbar, press <Alt+F10>. Then, use the arrow keys to navigate to the appropriate icon in the toolbar and confirm the selection with <Enter>. | <Alt+F10> |
-| Use arrows on the divider to display or hide user interface components  The table in the work area can be minimized and maximized. First, navigate to the work area and use the Tab key to place the focus on one of the little arrows on the separator line above the table. The arrows have the focus as soon as they are highlighted in blue. Then, press the space bar to minimize or maximize the table. | <Space> |
+| Jump to the next element within an interface area  You can use the Tab key to jump from one element to the next within a work area. If, for example, you have opened the properties of a device and want to jump from one field to the next, press the Tab key. Any changes you have made to the current text box are applied in this case. | &lt;Tab&gt; |
+| Jump to the previous element within an interface area  With &lt;Shift+Tab&gt;, you can jump to the previous element in a work area, for example, a previous text box. Any changes you have made to the current text box are applied in this case. | &lt;Shift+Tab&gt; |
+| Jump to the higher-level element within an interface area  With &lt;Shift+Home&gt; you can jump to the higher-level element of a work area, e.g., to the higher-level folder in the project tree. | &lt;Shift+Home&gt; |
+| Move to the next tab within an interface area  If an interface area is divided into separate tabs, you can move between the tabs with the shortcut keys &lt;Ctrl+Tab&gt;. If, for example, you are in the "Properties" tab of the Inspector window and you want to jump to the "Info" tab, press the shortcut keys &lt;Ctrl+Tab&gt;. | &lt;Ctrl+Tab&gt; |
+| Go to the previous tab  With &lt;Ctrl+Shift+Tab&gt;, you move to the most recently open tab within an interface area. | &lt;Ctrl+Shift+Tab&gt; |
+| Jumping to the toolbar of an editor  You can use the &lt;Alt+F10&gt; key to jump to the toolbar of an editor. For example, if you have opened the print preview and want to switch to the next page of the printout in the toolbar, press &lt;Alt+F10&gt;. Then, use the arrow keys to navigate to the appropriate icon in the toolbar and confirm the selection with &lt;Enter&gt;. | &lt;Alt+F10&gt; |
+| Use arrows on the divider to display or hide user interface components  The table in the work area can be minimized and maximized. First, navigate to the work area and use the Tab key to place the focus on one of the little arrows on the separator line above the table. The arrows have the focus as soon as they are highlighted in blue. Then, press the space bar to minimize or maximize the table. | &lt;Space&gt; |
 
 #### Customizing editors
 
@@ -2094,10 +2094,10 @@ The following table shows how to arrange open editors above and below each other
 
 | Function | Keyboard shortcut | Menu command |
 | --- | --- | --- |
-| Close active editor | <Ctrl+F4> | - |
-| Split editor space vertically  If, for example, you have opened the overview window and the network view and want to display them side-by-side, press the <F12> key. | <F12> | Window > Split editor space vertically |
-| Split editor space horizontally  You can display two open editors in the work area above and below each other. | <Ctrl+F12> | Window > Split editor space horizontally |
-| Remove window split  If you have displayed two editors in the work area horizontally or vertically in split mode, you can remove the split with <Alt+Shift+F12>. | <Alt+Shift+F12> | Window > Unsplit editor space |
+| Close active editor | &lt;Ctrl+F4&gt; | - |
+| Split editor space vertically  If, for example, you have opened the overview window and the network view and want to display them side-by-side, press the &lt;F12&gt; key. | &lt;F12&gt; | Window &gt; Split editor space vertically |
+| Split editor space horizontally  You can display two open editors in the work area above and below each other. | &lt;Ctrl+F12&gt; | Window &gt; Split editor space horizontally |
+| Remove window split  If you have displayed two editors in the work area horizontally or vertically in split mode, you can remove the split with &lt;Alt+Shift+F12&gt;. | &lt;Alt+Shift+F12&gt; | Window &gt; Unsplit editor space |
 
 ##### Customizing the display in an editor
 
@@ -2105,10 +2105,10 @@ The following table shows how you how to zoom in and out in graphical editors an
 
 | Function | Keyboard shortcut |
 | --- | --- |
-| Zoom in step-by-step in an editor  With <Ctrl> and the <Plus> key on the numeric keypad of the keyboard, you can zoom in on the display of the editor. | <Ctrl+Plus>  Alternative: <Ctrl+Scroll up> |
-| Zoom out step-by-step in an editor  Use the <Ctrl> and the <Minus> key on the numeric keypad of the keyboard to zoom out of the display of the editor. | <Ctrl+Minus>  Alternative: <Ctrl+Scroll down> |
-| Set view in the editor to 100%  Press <CTRL+0> to enlarge or reduce the current view in a graphical editor to 100%. | <Ctrl+0> |
-| Move the area selection of the editor  If you hold down the spacebar, you can move the displayed section of an editor using the mouse. | <Space> |
+| Zoom in step-by-step in an editor  With &lt;Ctrl&gt; and the &lt;Plus&gt; key on the numeric keypad of the keyboard, you can zoom in on the display of the editor. | &lt;Ctrl+Plus&gt;  Alternative: &lt;Ctrl+Scroll up&gt; |
+| Zoom out step-by-step in an editor  Use the &lt;Ctrl&gt; and the &lt;Minus&gt; key on the numeric keypad of the keyboard to zoom out of the display of the editor. | &lt;Ctrl+Minus&gt;  Alternative: &lt;Ctrl+Scroll down&gt; |
+| Set view in the editor to 100%  Press &lt;CTRL+0&gt; to enlarge or reduce the current view in a graphical editor to 100%. | &lt;Ctrl+0&gt; |
+| Move the area selection of the editor  If you hold down the spacebar, you can move the displayed section of an editor using the mouse. | &lt;Space&gt; |
 
 #### Editing objects
 
@@ -2118,11 +2118,11 @@ The following table shows how to select individual objects, for example, devices
 
 | Function | Keyboard shortcut | Menu command |
 | --- | --- | --- |
-| Select an object located at the left, right, above or below | <Arrow keys> | - |
-| Jump to the first object within the current interface area  The first object in the interface area currently in focus is selected. In the project tree, this would be the project node at the top, for example. | <Home> | - |
-| Jump to the last object within the current interface area  The last object in the interface area currently in focus is selected, for example, the last item in the project tree. | <End> | - |
-| Select all objects in an area  All objects in the work area currently in focus are selected. | <Ctrl+A> | Edit > Select all |
-| Select multiple objects  If you want to select several objects that are not located directly next to each other, you first have to move the focus (gray outline of an object) to the next desired object using <Ctrl+Arrow keys>. The current selection is maintained. Then, press the space bar to select the new focused object as well. Repeat this process until all desired objects are selected. | <Ctrl+Arrow keys> + <Space> | - |
+| Select an object located at the left, right, above or below | &lt;Arrow keys&gt; | - |
+| Jump to the first object within the current interface area  The first object in the interface area currently in focus is selected. In the project tree, this would be the project node at the top, for example. | &lt;Home&gt; | - |
+| Jump to the last object within the current interface area  The last object in the interface area currently in focus is selected, for example, the last item in the project tree. | &lt;End&gt; | - |
+| Select all objects in an area  All objects in the work area currently in focus are selected. | &lt;Ctrl+A&gt; | Edit &gt; Select all |
+| Select multiple objects  If you want to select several objects that are not located directly next to each other, you first have to move the focus (gray outline of an object) to the next desired object using &lt;Ctrl+Arrow keys&gt;. The current selection is maintained. Then, press the space bar to select the new focused object as well. Repeat this process until all desired objects are selected. | &lt;Ctrl+Arrow keys&gt; + &lt;Space&gt; | - |
 
 ##### Editing objects
 
@@ -2130,15 +2130,15 @@ The following table provides an overview of all the keyboard shortcuts required 
 
 | Function | Keyboard shortcut | Menu command |
 | --- | --- | --- |
-| Insert new object  A new object is inserted depending on your current context. If, for example, you are in the device view, the "Add Device" dialog opens for creating a new device. | <Ctrl+N> | - |
-| Open object | <Enter> | - |
-| Rename an object | <F2> | Edit > Rename |
-| Copy an object | <Ctrl+C>  Alternative: <Ctrl+Ins> | Edit > Copy |
-| Cut an object | <Ctrl+X>  Alternative: <Shift+Delete> | Edit > Cut |
-| Paste an object | <Ctrl+V>  Alternative: <Shift+Insert> | Edit > Paste |
-| Delete an object | <Del> | Edit > Delete |
-| Compile an object | <Ctrl+B> | Edit > Compile |
-| Open properties of an object  Many objects in the TIA Portal have editable properties. Press the shortcut keys <Alt+Enter> to display the properties of an object. | <Alt+Enter> | - |
+| Insert new object  A new object is inserted depending on your current context. If, for example, you are in the device view, the "Add Device" dialog opens for creating a new device. | &lt;Ctrl+N&gt; | - |
+| Open object | &lt;Enter&gt; | - |
+| Rename an object | &lt;F2&gt; | Edit &gt; Rename |
+| Copy an object | &lt;Ctrl+C&gt;  Alternative: &lt;Ctrl+Ins&gt; | Edit &gt; Copy |
+| Cut an object | &lt;Ctrl+X&gt;  Alternative: &lt;Shift+Delete&gt; | Edit &gt; Cut |
+| Paste an object | &lt;Ctrl+V&gt;  Alternative: &lt;Shift+Insert&gt; | Edit &gt; Paste |
+| Delete an object | &lt;Del&gt; | Edit &gt; Delete |
+| Compile an object | &lt;Ctrl+B&gt; | Edit &gt; Compile |
+| Open properties of an object  Many objects in the TIA Portal have editable properties. Press the shortcut keys &lt;Alt+Enter&gt; to display the properties of an object. | &lt;Alt+Enter&gt; | - |
 
 #### Text editing
 
@@ -2150,13 +2150,13 @@ The following table shows the basic editing functions for text:
 
 | Function | Keyboard shortcuts |
 | --- | --- |
-| Switch to insert or overwrite mode | <Insert> |
-| Exit edit mode | <Esc> |
-| Delete | <Del> |
-| Delete characters | <Backspace> |
-| Confirm entry in a text box and leave the text box | <Return> |
-| Line break in a multiline text box  In a multiline text box, hold down the <Shift> button to create a line break. | <Shift+Return> |
-| Reset input in a text box  If you are in an text box and press <Esc>, you exit the box and the changes are discarded. | <Esc> |
+| Switch to insert or overwrite mode | &lt;Insert&gt; |
+| Exit edit mode | &lt;Esc&gt; |
+| Delete | &lt;Del&gt; |
+| Delete characters | &lt;Backspace&gt; |
+| Confirm entry in a text box and leave the text box | &lt;Return&gt; |
+| Line break in a multiline text box  In a multiline text box, hold down the &lt;Shift&gt; button to create a line break. | &lt;Shift+Return&gt; |
+| Reset input in a text box  If you are in an text box and press &lt;Esc&gt;, you exit the box and the changes are discarded. | &lt;Esc&gt; |
 
 ##### Navigating within a text area
 
@@ -2164,15 +2164,15 @@ The following table shows how to navigate in a text area with the keyboard:
 
 | Function | Keyboard shortcuts |
 | --- | --- |
-| Jump to start of line | <Home> |
-| Jump to end of line | <End> |
-| Jump to start of text | <Ctrl+Home> |
-| Jump to end of text | <Ctrl+End> |
-| Jump to the previous page | <PgUp> |
-| Jump to the next page | <PgDn> |
-| Confirm entry in a text box and leave the text box | <Return> |
-| Line break in a multiline text box | <Shift+Return> |
-| Reset input in a text box  If you are in an text box and press <Esc>, you exit the box and the changes are discarded. | <Esc> |
+| Jump to start of line | &lt;Home&gt; |
+| Jump to end of line | &lt;End&gt; |
+| Jump to start of text | &lt;Ctrl+Home&gt; |
+| Jump to end of text | &lt;Ctrl+End&gt; |
+| Jump to the previous page | &lt;PgUp&gt; |
+| Jump to the next page | &lt;PgDn&gt; |
+| Confirm entry in a text box and leave the text box | &lt;Return&gt; |
+| Line break in a multiline text box | &lt;Shift+Return&gt; |
+| Reset input in a text box  If you are in an text box and press &lt;Esc&gt;, you exit the box and the changes are discarded. | &lt;Esc&gt; |
 
 ##### Selecting text
 
@@ -2180,11 +2180,11 @@ The following table shows how to select text with the keyboard:
 
 | Function | Keyboard shortcuts |
 | --- | --- |
-| Expand selection to the word at the left or right  The text or current text selection is marked up to the end of word. If you are at the beginning or end of a word, the previous or next word is selected. | <Ctrl+Shift+Arrow left or Arrow right> |
-| Expand selection to beginning of line | <Shift+Home> |
-| Expand selection to end of line | <Shift+End> |
-| Expand selection to beginning of text  The text is selected up to the beginning or the end. | <Ctrl+Shift+Home> |
-| Expand selection to end of text  The text is selected up to the beginning or the end. | <Ctrl+Shift+End> |
+| Expand selection to the word at the left or right  The text or current text selection is marked up to the end of word. If you are at the beginning or end of a word, the previous or next word is selected. | &lt;Ctrl+Shift+Arrow left or Arrow right&gt; |
+| Expand selection to beginning of line | &lt;Shift+Home&gt; |
+| Expand selection to end of line | &lt;Shift+End&gt; |
+| Expand selection to beginning of text  The text is selected up to the beginning or the end. | &lt;Ctrl+Shift+Home&gt; |
+| Expand selection to end of text  The text is selected up to the beginning or the end. | &lt;Ctrl+Shift+End&gt; |
 
 #### Editing tables
 
@@ -2196,11 +2196,11 @@ The following table shows how you can edit tables using only the keyboard:
 
 | Function | Keyboard shortcut |
 | --- | --- |
-| Place a cell in edit mode | <F2> or <Return> |
-| Confirm entry and exit edit mode | <Enter> |
-| Cancel editing and discard changes | <Esc> |
-| Open drop-down list in a cell  Open the drop-down list with <F4>. Use the arrow keys to select the desired entry and then confirm the selection with <Return>. | <F4> |
-| Close drop-down list in a cell and discard changes | <Esc> |
+| Place a cell in edit mode | &lt;F2&gt; or &lt;Return&gt; |
+| Confirm entry and exit edit mode | &lt;Enter&gt; |
+| Cancel editing and discard changes | &lt;Esc&gt; |
+| Open drop-down list in a cell  Open the drop-down list with &lt;F4&gt;. Use the arrow keys to select the desired entry and then confirm the selection with &lt;Return&gt;. | &lt;F4&gt; |
+| Close drop-down list in a cell and discard changes | &lt;Esc&gt; |
 
 ##### Navigate in tables
 
@@ -2208,20 +2208,20 @@ The following table shows how you can navigate within a table using the keyboard
 
 | Function | Keyboard shortcut |
 | --- | --- |
-| Go to line | <Ctrl+G> |
-| Go to the next cell | <Arrow keys> |
-| Go to the next editable cell on the right | <Tab> |
-| Go to the next editable cell on the left | <Shift+Tab> |
-| Move a screen upwards | <PgUp> |
-| Move a screen downwards | <PgDn> |
-| Go to the first cell in the row | <Home> |
-| Go to the last cell in the row | <End> |
-| Go to the first cell in the table | <Ctrl+Home> |
-| Go to the last cell in the table | <Ctrl+End> |
-| Go to the top cell in the column | <Ctrl+Arrow up> |
-| Go to the bottom cell in the column | <Ctrl+Arrow down> |
-| Insert table row below | <Alt+Ins> |
-| Insert line break in an entry field/insert table row above | <Ctrl+Return> |
+| Go to line | &lt;Ctrl+G&gt; |
+| Go to the next cell | &lt;Arrow keys&gt; |
+| Go to the next editable cell on the right | &lt;Tab&gt; |
+| Go to the next editable cell on the left | &lt;Shift+Tab&gt; |
+| Move a screen upwards | &lt;PgUp&gt; |
+| Move a screen downwards | &lt;PgDn&gt; |
+| Go to the first cell in the row | &lt;Home&gt; |
+| Go to the last cell in the row | &lt;End&gt; |
+| Go to the first cell in the table | &lt;Ctrl+Home&gt; |
+| Go to the last cell in the table | &lt;Ctrl+End&gt; |
+| Go to the top cell in the column | &lt;Ctrl+Arrow up&gt; |
+| Go to the bottom cell in the column | &lt;Ctrl+Arrow down&gt; |
+| Insert table row below | &lt;Alt+Ins&gt; |
+| Insert line break in an entry field/insert table row above | &lt;Ctrl+Return&gt; |
 
 ##### Selecting areas in tables
 
@@ -2229,16 +2229,16 @@ The following table shows how you can select areas within a table using the keyb
 
 | Function | Keyboard shortcut |
 | --- | --- |
-| Select column | <Ctrl+Space> |
-| Select line | <Shift+Space> |
-| Select all cells | <Ctrl+A> |
-| Expand selection by one cell | <Shift+arrow keys> |
-| Extend selection up one page | <Shift+PgUp> |
-| Extend selection down one page | <Shift+PgDn> |
-| Expand selection up to the first row | <Ctrl+Shift+Arrow up> |
-| Expand selection down to the last row | <Ctrl+Shift+Arrow down> |
-| Expand selection to the first cell in the row | <Ctrl+Shift+Arrow left> |
-| Expand selection to the last cell in the row | <Ctrl+Shift+Arrow right> |
+| Select column | &lt;Ctrl+Space&gt; |
+| Select line | &lt;Shift+Space&gt; |
+| Select all cells | &lt;Ctrl+A&gt; |
+| Expand selection by one cell | &lt;Shift+arrow keys&gt; |
+| Extend selection up one page | &lt;Shift+PgUp&gt; |
+| Extend selection down one page | &lt;Shift+PgDn&gt; |
+| Expand selection up to the first row | &lt;Ctrl+Shift+Arrow up&gt; |
+| Expand selection down to the last row | &lt;Ctrl+Shift+Arrow down&gt; |
+| Expand selection to the first cell in the row | &lt;Ctrl+Shift+Arrow left&gt; |
+| Expand selection to the last cell in the row | &lt;Ctrl+Shift+Arrow right&gt; |
 
 #### Using online functions
 
@@ -2248,13 +2248,13 @@ The following table provides an overview of the shortcut keys that you can use f
 
 | Function | Keyboard shortcut | Menu command |
 | --- | --- | --- |
-| Establish an online connection | <Ctrl+K> | Online > Go online |
-| Go offline | <Ctrl+M> | Online > Go offline |
-| Download project data to the device | <Ctrl+L> | Online > Download to device |
-| Show accessible devices  This opens a dialog showing all devices that are connected to the PG/PC interface of the PG/PC. | <Ctrl+U> | Online > Show accessible devices |
-| Start CPU  The CPU is set to "RUN" mode. The CPU must be online for this. | <Ctrl+Shift+E> | Online > Start CPU |
-| Stop CPU  The CPU is set to "STOP" mode. The CPU must be online for this. | <Ctrl+Shift+Q> | Online > Stop CPU |
-| Start simulation  The hardware and software of the project can be tested in a simulated online environment, without the modules actually being online. | <Ctrl+Shift+X> | Online > Simulation > Start |
+| Establish an online connection | &lt;Ctrl+K&gt; | Online &gt; Go online |
+| Go offline | &lt;Ctrl+M&gt; | Online &gt; Go offline |
+| Download project data to the device | &lt;Ctrl+L&gt; | Online &gt; Download to device |
+| Show accessible devices  This opens a dialog showing all devices that are connected to the PG/PC interface of the PG/PC. | &lt;Ctrl+U&gt; | Online &gt; Show accessible devices |
+| Start CPU  The CPU is set to "RUN" mode. The CPU must be online for this. | &lt;Ctrl+Shift+E&gt; | Online &gt; Start CPU |
+| Stop CPU  The CPU is set to "STOP" mode. The CPU must be online for this. | &lt;Ctrl+Shift+Q&gt; | Online &gt; Stop CPU |
+| Start simulation  The hardware and software of the project can be tested in a simulated online environment, without the modules actually being online. | &lt;Ctrl+Shift+X&gt; | Online &gt; Simulation &gt; Start |
 
 #### Using the on-screen keyboard
 
@@ -2529,7 +2529,7 @@ While working with the program, you receive the following support:
 
 - Information system with all the background information, step-by-step instructions and examples that you need when working with the TIA Portal.
 - Tooltips for information on elements of the user interface, for example text boxes, buttons and icons. Some of the tooltips are supplemented by cascades containing more precise information.
-- Help on the current context, for example on menu commands when you press the <F1> key.
+- Help on the current context, for example on menu commands when you press the &lt;F1&gt; key.
 - Help on messages
 - Roll-outs for correct inputs in dialog boxes
 - Banner on the software interface
@@ -2668,12 +2668,12 @@ To access the information system on the home page, follow these steps:
 
 The start page of the information system opens.
 
-#### Opening the information system with <F1>
+#### Opening the information system with &lt;F1&gt;
 
 To access the information system and help for the current context, proceed as follows:
 
 1. Select an object for which you want to view the help, for example, a menu command or a program element.
-2. Press <F1>.
+2. Press &lt;F1&gt;.
 
 The information system opens. If information on the current context is available, the appropriate topic appears. If no information on the current context is available, the home page of the information system is displayed.
 
@@ -2807,7 +2807,7 @@ You can further specify your search with additional criteria:
 
   `<Search_term AND Search_term>`
 
-  `<Search_term + Search_term`>
+  `<Search_term + Search_term`&gt;
 
   You can link your search terms using the Boolean "AND" operator. This finds all help pages that contain all search terms exactly or in a slightly changed form.
 
@@ -2816,7 +2816,7 @@ You can further specify your search with additional criteria:
 
   `<Search_term OR Search_term>`
 
-  `<Search_term – Search_term`>
+  `<Search_term – Search_term`&gt;
 
   You can link your search terms using the Boolean "OR" operator. This finds all help pages that contain one of the search terms exactly or in a slightly changed form.
 - Negate search with "NOT"
@@ -2831,7 +2831,7 @@ You can further specify your search with additional criteria:
   `<Search~>`
 
   You can place a tilde ("~") after the search term. This finds all help pages in which the search term appears with approximately this spelling.
-- Distance search with "~<proximity>"
+- Distance search with "~&lt;proximity&gt;"
 
   `<"Search_term_1 Search_term_2" ~proximity>`
 
@@ -2971,7 +2971,7 @@ A fuzzy search finds all help pages in which the search term appears with approx
 
   This finds all pages containing the terms "trend", "trend bit", "trend value", "trend display" "trend recording" or similar related terms.
 
-##### Examples of a proximity search with "~ <distance>"
+##### Examples of a proximity search with "~ &lt;distance&gt;"
 
 A proximity search finds all help pages where two search terms are no further apart from each other than the defined distance.
 
@@ -3200,7 +3200,7 @@ You can customize the display of tooltips and tooltip cascades to suit your need
   Sometimes texts may be too long for a text field. The texts are then fully displayed in a tooltip when you hover your mouse over the text field. You can enable or disable this function.
 - Enable or disable tooltips
 
-  Tooltips provide more detailed information about an element of the user interface. You can also have tooltips displayed in a cascade. If you disable the tooltips, the cascade with context-sensitive help is also no longer displayed. However, you have the option of manually displaying the tooltip for the currently active interface element by pressing <F1>.
+  Tooltips provide more detailed information about an element of the user interface. You can also have tooltips displayed in a cascade. If you disable the tooltips, the cascade with context-sensitive help is also no longer displayed. However, you have the option of manually displaying the tooltip for the currently active interface element by pressing &lt;F1&gt;.
 
   The setting also affects rollouts with context-related syntax errors and input aids in STL.
 - Enable or disable automatic opening of tooltip cascades
@@ -3229,7 +3229,7 @@ In the Siemens Industry Online Support, in the "mySupport Documentation" categor
 
 You can open "mySupport Documentation" here:
 
-<https://support.industry.siemens.com/My/ww/en/documentation>
+[https://support.industry.siemens.com/My/ww/en/documentation](https://support.industry.siemens.com/My/ww/en/documentation)
 
 #### Requirement
 
@@ -3325,7 +3325,7 @@ To set the representation of the information system, proceed as follows:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "General > Information system" group in the area navigation.
+2. Select the "General &gt; Information system" group in the area navigation.
 3. Activate the "Display information system in the web browser" option.
 
 When you call the information system the next time, it is opened in your Windows default web browser.
@@ -3471,10 +3471,10 @@ The following settings are available:
 
 To open the Support Gateway, proceed as follows:
 
-- From the "Help" menu, select "Service & Support in TIA Portal".
+- From the "Help" menu, select "Service &amp; Support in TIA Portal".
 
   or
-- Press <CTRL+SHIFT+7>.
+- Press &lt;CTRL+SHIFT+7&gt;.
 
 ### Search forum
 
@@ -3749,7 +3749,7 @@ Or:
 
    - Select the "Search in project" command in the "Edit" menu.
    - Right-click an object in the project tree and select the "Search in project" command from the shortcut menu. The object is set as default search area in the "Search in" box.
-   - Make sure that the focus is outside of an editor that supports an editor-specific search and press the shortcut <Ctrl+F>. If you mark a text beforehand, it will be included as a search expression in the "Find" drop-down list. In this case you can skip step 2.
+   - Make sure that the focus is outside of an editor that supports an editor-specific search and press the shortcut &lt;Ctrl+F&gt;. If you mark a text beforehand, it will be included as a search expression in the "Find" drop-down list. In this case you can skip step 2.
 2. Enter the search term in the "Search" box, or select a term from the list of terms for which you have already searched.
 3. To search exactly for the search term, select the check box "Find exact match". You cannot use wildcards in the search term when you use this option, for example, when you enter "*" or "?" the search is exactly for these characters.
 4. To limit the search area, select the sections you want to include in the search under "Search in".
@@ -3788,7 +3788,7 @@ To automatically generate the search index, follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. In the area navigation, select the group "General > Search in project".
+2. In the area navigation, select the group "General &gt; Search in project".
 3. Click "Recreate search index".
 
 ##### Result
@@ -3822,7 +3822,7 @@ To disable or enable "Search in project", follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. In the area navigation, select the group "General > Search in project".
+2. In the area navigation, select the group "General &gt; Search in project".
 3. Select or clear the "Search in project" check box.
 
 ---
@@ -4039,7 +4039,7 @@ Follow these steps to start the "Find and replace" function:
 
    - Select the "Find and replace" command in the "Edit" menu.
    - Open the "Find and replace" pane in the "Tasks" task card.
-   - Press the shortcut key <Ctrl + F>. If you mark a text beforehand, it will be included as a search expression in the "Find" drop-down list. In this case you can skip step 2.
+   - Press the shortcut key &lt;Ctrl + F&gt;. If you mark a text beforehand, it will be included as a search expression in the "Find" drop-down list. In this case you can skip step 2.
 2. Enter a term in the "Find" drop-down list.
 
    Alternatively, select one of the most recent search terms from the drop-down list.
@@ -4060,7 +4060,7 @@ You have the option of replacing hits individually or automatically replacing al
 
    - Select the "Find and replace" command in the "Edit" menu.
    - Open the "Find and replace" pane in the "Tasks" task card.
-   - Press the shortcut key <Ctrl + F>. If you mark a text beforehand, it will be included as a search expression in the "Find" drop-down list. In this case you can skip step 2.
+   - Press the shortcut key &lt;Ctrl + F&gt;. If you mark a text beforehand, it will be included as a search expression in the "Find" drop-down list. In this case you can skip step 2.
 2. Enter a term in the "Find" drop-down list.
 
    As an alternative, you can select the most recent search key from the drop-down list.
@@ -4269,13 +4269,13 @@ You can also specify the start path for the application. Here you can either use
 
 ### Configuring external applications
 
-Before you can open external applications from the TIA Portal, you must first configure these applications. For external applications already available, you can subsequently modify the configuration and edit the order in which they are displayed in the menu "Tools > External Applications". You can delete external applications that you no longer want to call.
+Before you can open external applications from the TIA Portal, you must first configure these applications. For external applications already available, you can subsequently modify the configuration and edit the order in which they are displayed in the menu "Tools &gt; External Applications". You can delete external applications that you no longer want to call.
 
 #### Adding and configuring a new external application
 
 To configure a new external application, follow these steps:
 
-1. Click on the "Configure" command in the menu "Tools > External Applications" or open the list of applications from the menu "Options > Settings > External Applications".
+1. Click on the "Configure" command in the menu "Tools &gt; External Applications" or open the list of applications from the menu "Options &gt; Settings &gt; External Applications".
 
    The list of applications is displayed in the working area.
 2. Double-click on "Add new" or select the "Add new" command from the shortcut menu.
@@ -4287,7 +4287,7 @@ To configure a new external application, follow these steps:
 6. Optional: Click the "+" button next to the "Start in" field and select the start position.
 7. Click on "Add".
 
-   The new external application is added to the list of applications and can now be started via the menu "Tools > External Applications" with the name entered. The order of the display in the menu "Tools > External Applications" corresponds to the order in the list of applications. You can change this order as desired.
+   The new external application is added to the list of applications and can now be started via the menu "Tools &gt; External Applications" with the name entered. The order of the display in the menu "Tools &gt; External Applications" corresponds to the order in the list of applications. You can change this order as desired.
 
 **Note**
 
@@ -4300,7 +4300,7 @@ Note the following:
 
 To change an existing external application, follow these steps:
 
-1. Click on the "Configure" command in the menu "Tools > External Applications" or open the list of applications from the menu "Options > Settings > External Applications".
+1. Click on the "Configure" command in the menu "Tools &gt; External Applications" or open the list of applications from the menu "Options &gt; Settings &gt; External Applications".
 
    The list of applications is displayed in the working area.
 2. Select the external application that you want to change.
@@ -4312,9 +4312,9 @@ To change an existing external application, follow these steps:
 
 #### Change the order of the external applications in the list
 
-To change the order of the external applications in the list and thus also in the "Tools > External Applications" menu, follow these steps:
+To change the order of the external applications in the list and thus also in the "Tools &gt; External Applications" menu, follow these steps:
 
-1. Click on the "Configure" command in the menu "Tools > External Applications" or open the list of applications from the menu "Options > Settings > External Applications".
+1. Click on the "Configure" command in the menu "Tools &gt; External Applications" or open the list of applications from the menu "Options &gt; Settings &gt; External Applications".
 
    The list of applications is displayed in the working area.
 2. Select the external application whose position you want to change.
@@ -4326,7 +4326,7 @@ To change the order of the external applications in the list and thus also in th
 
 To delete an existing external application, follow these steps:
 
-1. Click on the "Configure" command in the menu "Tools > External Applications" or open the list of applications from the menu "Options > Settings > External Applications".
+1. Click on the "Configure" command in the menu "Tools &gt; External Applications" or open the list of applications from the menu "Options &gt; Settings &gt; External Applications".
 
    The list of applications is displayed in the working area.
 2. Select the external application that you want to delete.
@@ -4353,7 +4353,7 @@ You have configured an external application.
 
 To launch an external application, follow these steps:
 
-1. In the "Tools > External Application" menu, click the external application that you want to start.
+1. In the "Tools &gt; External Application" menu, click the external application that you want to start.
 
    If you start the application for the first time or have changed the configuration for this external application since the last start, the "Start application" dialog is displayed. Then perform step 2.
 2. Click "OK" if you want to start the external application despite possible security risks. Otherwise, cancel the startup by clicking "Cancel".
@@ -4392,7 +4392,7 @@ You can program the following types of Add-Ins:
 
 - Add-Ins that are executed via the shortcut menu
 
-  These Add-Ins can be run in the project tree, in the "Devices & networks" editor, and in the "Libraries" task card using shortcut menu commands. In addition, the Workspace editor of the Version Control Interface (VCI) also provides the facility to expand the shortcut menu with Add-Ins.
+  These Add-Ins can be run in the project tree, in the "Devices &amp; networks" editor, and in the "Libraries" task card using shortcut menu commands. In addition, the Workspace editor of the Version Control Interface (VCI) also provides the facility to expand the shortcut menu with Add-Ins.
 - Add-Ins that are executed together with a workflow
 
   These Add-Ins do not have to be explicitly invoked. If there are Add-Ins available and activated for certain workflows, they are executed along with the relevant workflow. For example, if the workflow were 'compile', you could program Add-Ins that execute additional functions at specific defined points.
@@ -4413,7 +4413,7 @@ There is a description of how you can program these workflow Add-Ins in the resp
 
 #### Problem handling when running Add-Ins
 
-If errors occur when running Add-Ins, you are informed about this in the "General > Info" tab of the Inspector window. Depending on the error, a crash report is generated which you can access via the link in the "Go to" column.
+If errors occur when running Add-Ins, you are informed about this in the "General &gt; Info" tab of the Inspector window. Depending on the error, a crash report is generated which you can access via the link in the "Go to" column.
 
 #### TIA Portal Add-In Development Tools
 
@@ -4431,7 +4431,7 @@ The programming of Add-Ins is done in the C# programming language. You can eithe
 
 Use the TIA Portal Add-In Development Tools in Microsoft Visual Studio 2019 or 2022 or in Visual Studio Code.
 
-You can find more information about the TIA Portal Add-In Development Tools and the required installation files on the DVD 2 of the TIA Portal Installation Package under "DVD > Support > TIA_Portal_Add-In_Tools > Development".
+You can find more information about the TIA Portal Add-In Development Tools and the required installation files on the DVD 2 of the TIA Portal Installation Package under "DVD &gt; Support &gt; TIA_Portal_Add-In_Tools &gt; Development".
 
 #### Mass rollout of Add-Ins
 
@@ -4651,8 +4651,8 @@ A project for creating a class library is needed to program an Add-In. A referen
 
 To create a new C# project for programming an Add-In, follow these steps:
 
-1. Open the dialog "New project" via "File -> New > Project".
-2. Under "Installed > Visual Studio", select the entry "Class library (.NET Framework)".
+1. Open the dialog "New project" via "File -&gt; New &gt; Project".
+2. Under "Installed &gt; Visual Studio", select the entry "Class library (.NET Framework)".
 3. Specify the name and the storage location for your project.
 4. Confirm your entries with "OK".
 
@@ -4761,7 +4761,7 @@ public class ProjectTreeProvider: ProjectTreeAddInProvider
 
 {
 
-protected override IEnumerable<ContextMenuAddIn> GetContextMenuAddIns()
+protected override IEnumerable&lt;ContextMenuAddIn&gt; GetContextMenuAddIns()
 
 {
 
@@ -4852,13 +4852,13 @@ protected override void BuildContextMenuItems(Submenu addInRootSubmenu)
 
 {
 
-addInRootSubmenu.Items.AddActionItem<IEngineeringObject>("Entry 1", Entry1_OnClick);
+addInRootSubmenu.Items.AddActionItem&lt;IEngineeringObject&gt;("Entry 1", Entry1_OnClick);
 
-addInRootSubmenu.Items.AddActionItem<IEngineeringObject>("Entry 2", Entry2_OnClick);
+addInRootSubmenu.Items.AddActionItem&lt;IEngineeringObject&gt;("Entry 2", Entry2_OnClick);
 
 }
 
-private void Entry1_OnClick(MenuSelectionProvider<IEngineeringObject> menuSelectionProvider)
+private void Entry1_OnClick(MenuSelectionProvider&lt;IEngineeringObject&gt; menuSelectionProvider)
 
 {
 
@@ -4866,7 +4866,7 @@ private void Entry1_OnClick(MenuSelectionProvider<IEngineeringObject> menuSelect
 
 }
 
-private void Entry2_OnClick(MenuSelectionProvider<IEngineeringObject> menuSelectionProvider)
+private void Entry2_OnClick(MenuSelectionProvider&lt;IEngineeringObject&gt; menuSelectionProvider)
 
 {
 
@@ -5033,127 +5033,127 @@ You can customize the execution to suit your requirements with an XML file. You 
 
 The following example shows the structure of the configuration file:
 
-<?xml version="1.0" encoding="utf-8" ?>
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
 
-<PackageConfiguration xmlns="http://www.siemens.com/automation/Openness/AddIn/Publisher/Vxx">
+&lt;PackageConfiguration xmlns="http://www.siemens.com/automation/Openness/AddIn/Publisher/Vxx"&gt;
 
-<Author>Example Author</Author>
+&lt;Author&gt;Example Author&lt;/Author&gt;
 
-<Description>This Add-In does X, Y, and Z.</Description>
+&lt;Description&gt;This Add-In does X, Y, and Z.&lt;/Description&gt;
 
-<AddInVersion>V1.1</AddInVersion>
+&lt;AddInVersion&gt;V1.1&lt;/AddInVersion&gt;
 
-<Product>
+&lt;Product&gt;
 
-<Name>Siemens Example</Name>
+&lt;Name&gt;Siemens Example&lt;/Name&gt;
 
-<Id>ExampleUniqueProductId987654321</Id>
+&lt;Id&gt;ExampleUniqueProductId987654321&lt;/Id&gt;
 
-<Version>0.0.1.0</Version>
+&lt;Version&gt;0.0.1.0&lt;/Version&gt;
 
-</Product>
+&lt;/Product&gt;
 
-<FeatureAssembly>
+&lt;FeatureAssembly&gt;
 
-<AssemblyInfo>
+&lt;AssemblyInfo&gt;
 
-<Assembly>..\..\Assembly.dll</Assembly>
+&lt;Assembly&gt;..\..\Assembly.dll&lt;/Assembly&gt;
 
-<Pdb>..\..\Assembly.pdb</Pdb>
+&lt;Pdb&gt;..\..\Assembly.pdb&lt;/Pdb&gt;
 
-</AssemblyInfo>
+&lt;/AssemblyInfo&gt;
 
-</FeatureAssembly>
+&lt;/FeatureAssembly&gt;
 
-<DisplayInMultiuser />
+&lt;DisplayInMultiuser /&gt;
 
-<AdditionalAssemblies>
+&lt;AdditionalAssemblies&gt;
 
-<AssemblyInfo>
+&lt;AssemblyInfo&gt;
 
-<Assembly>..\AdditionalAssemblies\UserInterfaceUtilities.dll</Assembly>
+&lt;Assembly&gt;..\AdditionalAssemblies\UserInterfaceUtilities.dll&lt;/Assembly&gt;
 
-<Pdb>..\AdditionalAssemblies\UserInterfaceUtilities.pdb</Pdb>
+&lt;Pdb&gt;..\AdditionalAssemblies\UserInterfaceUtilities.pdb&lt;/Pdb&gt;
 
-</AssemblyInfo>
+&lt;/AssemblyInfo&gt;
 
-<AssemblyInfo>
+&lt;AssemblyInfo&gt;
 
-<Assembly>..\AdditionalAssemblies\BL.Utilities.dll</Assembly>
+&lt;Assembly&gt;..\AdditionalAssemblies\BL.Utilities.dll&lt;/Assembly&gt;
 
-<Pdb>..\AdditionalAssemblies\BL.Utilities.pdb</Pdb>
+&lt;Pdb&gt;..\AdditionalAssemblies\BL.Utilities.pdb&lt;/Pdb&gt;
 
-</AssemblyInfo>
+&lt;/AssemblyInfo&gt;
 
-</AdditionalAssemblies>
+&lt;/AdditionalAssemblies&gt;
 
-<RequiredPermissions>
+&lt;RequiredPermissions&gt;
 
-<TIAPermissions>
+&lt;TIAPermissions&gt;
 
-<TIA.ReadOnly />
+&lt;TIA.ReadOnly /&gt;
 
-</TIAPermissions>
+&lt;/TIAPermissions&gt;
 
-<SecurityPermissions>
+&lt;SecurityPermissions&gt;
 
-<System.Security.Permissions.UIPermission/>
+&lt;System.Security.Permissions.UIPermission/&gt;
 
-<System.Security.Permissions.FileIOPermission>
+&lt;System.Security.Permissions.FileIOPermission&gt;
 
-</System.Security.Permissions.FileIOPermission>
+&lt;/System.Security.Permissions.FileIOPermission&gt;
 
-<System.Security.Permissions.FileDialogPermission>
+&lt;System.Security.Permissions.FileDialogPermission&gt;
 
-</System.Security.Permissions.FileDialogPermission>
+&lt;/System.Security.Permissions.FileDialogPermission&gt;
 
-<System.Security.Permissions.EnvironmentPermission />
+&lt;System.Security.Permissions.EnvironmentPermission /&gt;
 
-<Siemens.Engineering.AddIn.Permissions.ProcessStartPermission/>
+&lt;Siemens.Engineering.AddIn.Permissions.ProcessStartPermission/&gt;
 
-<System.Net.WebPermission />
+&lt;System.Net.WebPermission /&gt;
 
-</SecurityPermissions>
+&lt;/SecurityPermissions&gt;
 
-</RequiredPermissions>
+&lt;/RequiredPermissions&gt;
 
-<Certificates>
+&lt;Certificates&gt;
 
-<SigningCertificate>..\Certificates\SigningFile.p12</SigningCertificate>
+&lt;SigningCertificate&gt;..\Certificates\SigningFile.p12&lt;/SigningCertificate&gt;
 
-<AdditionalCertificates>
+&lt;AdditionalCertificates&gt;
 
-<Certificate>..\Certificates\AdditionalCert.cer</Certificate>
+&lt;Certificate&gt;..\Certificates\AdditionalCert.cer&lt;/Certificate&gt;
 
-</AdditionalCertificates>
+&lt;/AdditionalCertificates&gt;
 
-</Certificates>
+&lt;/Certificates&gt;
 
-</PackageConfiguration>
+&lt;/PackageConfiguration&gt;
 
 In the "RequiredPermissions" element, you can use the "UnrestrictedPermissions" element as an alternative to the "SecurityPermissions" element to allow the Add-In unrestricted access. The following example shows the relevant part of the configuration file for this case:
 
 ...
 
-<RequiredPermissions>
+&lt;RequiredPermissions&gt;
 
-<TIAPermissions>
+&lt;TIAPermissions&gt;
 
-<TIA.ReadOnly />
+&lt;TIA.ReadOnly /&gt;
 
-</TIAPermissions>
+&lt;/TIAPermissions&gt;
 
-<UnrestrictedPermissions>
+&lt;UnrestrictedPermissions&gt;
 
-<System.UnrestrictedAccess>
+&lt;System.UnrestrictedAccess&gt;
 
-<JustificationComment>Needed for ... </JustificationComment>
+&lt;JustificationComment&gt;Needed for ... &lt;/JustificationComment&gt;
 
-</System.UnrestrictedAccess>
+&lt;/System.UnrestrictedAccess&gt;
 
-</UnrestrictedPermissions>
+&lt;/UnrestrictedPermissions&gt;
 
-</RequiredPermissions>
+&lt;/RequiredPermissions&gt;
 
 ...
 
@@ -5237,10 +5237,10 @@ The following table shows the parameters you can use during program execution:
 
 | Parameter | Description | Examples |
 | --- | --- | --- |
-| --configuration or -f <configuration> | Path to the configuration file for the publisher | `--configuration D:\Configuration.xml`   -f D:\Configuration.xml |
-| --certificatepassword or -p <certificatepassword> | Password for the certificate  Required if you have defined a certificate in the "SigningCertificate" element of the configuration file. | --certificatepassword MyPassword  -p MyPassword |
-| --logfile or -l <logfile> | Path to a log file  This log file will contain information, for example, as to why the conversion into an addin file failed. | --logfile D:\Logfile.txt  -l D:\Logfile.txt |
-| --outfile or -o <out> | Path and name of the addin file from which the dll file is to be created. If you do not enter anything, the addin file is saved with the same name and in the same directory as the dll file. | --outfile D:\MyAddin.addin  -o D:\MyAddin.addin |
+| --configuration or -f &lt;configuration&gt; | Path to the configuration file for the publisher | `--configuration D:\Configuration.xml`   -f D:\Configuration.xml |
+| --certificatepassword or -p &lt;certificatepassword&gt; | Password for the certificate  Required if you have defined a certificate in the "SigningCertificate" element of the configuration file. | --certificatepassword MyPassword  -p MyPassword |
+| --logfile or -l &lt;logfile&gt; | Path to a log file  This log file will contain information, for example, as to why the conversion into an addin file failed. | --logfile D:\Logfile.txt  -l D:\Logfile.txt |
+| --outfile or -o &lt;out&gt; | Path and name of the addin file from which the dll file is to be created. If you do not enter anything, the addin file is saved with the same name and in the same directory as the dll file. | --outfile D:\MyAddin.addin  -o D:\MyAddin.addin |
 | --verbose or -v | When you use this option, additional details are written to the log file. | -verbose  -v |
 | --console or -c | When you use this option, the logged details are output in the console. | --console  -c |
 | --pause or -x | Leaves the command prompt open after the publisher has been executed. | --pause  -x |
@@ -5332,10 +5332,10 @@ You have the option to use the feedback service of the TIA Portal in order to di
 
 - Default tab in the Inspector window
 
-  It is possible for all Add-Ins to show messages in the Inspector window in the "Info > General" tab.
+  It is possible for all Add-Ins to show messages in the Inspector window in the "Info &gt; General" tab.
 - Specific tab in the Inspector window or log
 
-  If a workflow displays its messages in a specific tab within the Inspector window or documents them in a log, an Add-In for such a workflow can also display its messages at these locations. If a workflow does not use a specific location, it is still possible to display the messages in the "General > Info" tab in the Inspector window.
+  If a workflow displays its messages in a specific tab within the Inspector window or documents them in a log, an Add-In for such a workflow can also display its messages at these locations. If a workflow does not use a specific location, it is still possible to display the messages in the "General &gt; Info" tab in the Inspector window.
 
 ##### API
 
@@ -5354,7 +5354,7 @@ The following table shows the method of "FeedbackContext":
 
 ##### Sample code for displaying messages in the default tab of the Inspector window
 
-The following example shows how you display messages in the "Info > General" tab in the Inspector window:
+The following example shows how you display messages in the "Info &gt; General" tab in the Inspector window:
 
 `//...`
 
@@ -5681,7 +5681,7 @@ For the mass rollout for Corporate Add-Ins to work, the Add-In administrator mus
 To set up the Corporate Add-Ins network directory as an Add-In administrator, proceed as follows:
 
 1. Create a new folder in the desired network directory.
-2. Name the "TIAP<version>" folder, where "<version>" is the version of the TIA Portal for which the Add-Ins are to be used. For example, for TIA Portal V18, the folder name is "TIAP18".
+2. Name the "TIAP&lt;version&gt;" folder, where "&lt;version&gt;" is the version of the TIA Portal for which the Add-Ins are to be used. For example, for TIA Portal V18, the folder name is "TIAP18".
 
    Note that the Windows service for the mass rollout only considers directories that start with "TIAP".
 3. You can then store all Add-Ins you want to distribute within your company in this folder. The mass rollout is executed once the Windows service has been started on the appropriate computers.
@@ -5733,22 +5733,22 @@ The service has been started on the user computer and will now synchronize the A
 To start the Windows service simultaneously on multiple user computers as an Add-In Rollout Manager via a Powershell script, proceed as follows:
 
 1. Copy the following PowerShell script into a text editor or the Windows PowerShell ISE.
-2. Replace "<Hostnames text file path>" with the path to a text file containing the user computers which you want to start the service.
-3. Replace "<Corporate Add-Ins network directory>" with the path to the network directory where the Corporate Add-Ins are managed.
+2. Replace "&lt;Hostnames text file path&gt;" with the path to a text file containing the user computers which you want to start the service.
+3. Replace "&lt;Corporate Add-Ins network directory&gt;" with the path to the network directory where the Corporate Add-Ins are managed.
 4. Adapt the time interval if required. In the example below, 5 minutes is set.
 5. If the above optional configuration step is required to configure the Windows service, replace "TestUser" and "TestPassword" with the correct user data. Otherwise, remove the entire line "Invoke-Command { sc.exe \\$name config "Siemens Add-In Rollout Service" obj= "domain\TestUser" password="TestPassword" }".
 6. Run the script.
 
 Example: PowerShell script to start the Windows service on multiple computers
 
-$targetHostname = Get-Content -Path '<Hostnames text file path>' ;  
+$targetHostname = Get-Content -Path '&lt;Hostnames text file path&gt;' ;  
  foreach ($name in $targetHostname)   
  {  
  $MassRollOutService = Get-Service -name "Siemens Add-In Rollout Service" -ComputerName $name;
 
 Invoke-Command { sc.exe \\$name config "Siemens Add-In Rollout Service" obj= "domain\TestUser" password="TestPassword" }
 
-$MassRollOutService.Start(@('<Corporate Add-Ins network directory>','[Poll Time in minutes]'))  
+$MassRollOutService.Start(@('&lt;Corporate Add-Ins network directory&gt;','[Poll Time in minutes]'))  
  $MassRollOutService.WaitForStatus('Running', '00:00:30')   
   
  if($MassRollOutService.status -eq "Running")  
@@ -5771,12 +5771,12 @@ If the Windows service has been configured with a user account, the local policy
 To stop the Windows service simultaneously on multiple user computers as an Add-In Rollout Manager via a Powershell script, proceed as follows:
 
 1. Copy the following PowerShell script into a text editor or the Windows PowerShell ISE.
-2. Replace "<Hostnames text file path>" with the path to a text file that contains the user computers for which you want to stop the service.
+2. Replace "&lt;Hostnames text file path&gt;" with the path to a text file that contains the user computers for which you want to stop the service.
 3. Run the script.
 
 Example: PowerShell script to stop the Windows service on multiple computers
 
-$targetHostname = Get-Content -Path '<Hostnames text file path>' ;  
+$targetHostname = Get-Content -Path '&lt;Hostnames text file path&gt;' ;  
  foreach ($name in $targetHostname)   
  {  
  $MassRollOutService = Get-Service -name "Siemens Add-In Rollout Service" -ComputerName $name;  
@@ -5799,12 +5799,12 @@ $targetHostname = Get-Content -Path '<Hostnames text file path>' ;
 To restart the Windows service simultaneously on multiple user computers as an Add-In Rollout Manager, proceed as follows:
 
 1. Copy the following PowerShell script into a text editor or the Windows PowerShell ISE.
-2. Replace "<Hostnames text file path>" with the path to a text file that contains the user computers for which you want to restart the service.
+2. Replace "&lt;Hostnames text file path&gt;" with the path to a text file that contains the user computers for which you want to restart the service.
 3. Run the script.
 
 Example: PowerShell script to restart the Windows service on multiple computers
 
-$targetHostname = Get-Content -Path '<Hostnames text file path>' ;  
+$targetHostname = Get-Content -Path '&lt;Hostnames text file path&gt;' ;  
  foreach ($name in $targetHostname)   
  {  
  $MassRollOutService = Get-Service -name "Siemens Add-In Rollout Service" -ComputerName $name;  
@@ -5948,7 +5948,7 @@ Follow these steps to define, change or remove a default Add-In for a workflow:
 
    The configuration view opens.
 3. Select the row of the workflow for which you want to change the assignment of the default Add-Ins.
-4. In the "Default Add-In" column, select the Add-In that is to run together with the corresponding workflow from the drop-down list. If you want to remove an assignment, select the entry "<None>".
+4. In the "Default Add-In" column, select the Add-In that is to run together with the corresponding workflow from the drop-down list. If you want to remove an assignment, select the entry "&lt;None&gt;".
 
 ---
 
@@ -6026,9 +6026,9 @@ To execute Add-Ins, follow these steps:
 
 1. Select the object in whose context you want to run the Add-In.
 
-   You can run Add-Ins in the project tree, in the "Devices & networks" editor, and in the "Libraries" task card.
+   You can run Add-Ins in the project tree, in the "Devices &amp; networks" editor, and in the "Libraries" task card.
 2. Open the shortcut menu.
-3. In the shortcut menu under the "Add-Ins" entry, execute the command "<Name of the Add-In> > <Name of the Add-In>".
+3. In the shortcut menu under the "Add-Ins" entry, execute the command "&lt;Name of the Add-In&gt; &gt; &lt;Name of the Add-In&gt;".
 
 > **Note**
 >

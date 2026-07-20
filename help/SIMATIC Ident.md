@@ -38,7 +38,7 @@ This section contains information on the following topics:
 
 #### Configuration/programming
 
-You can use the technology object "[TO_Ident](SIMATIC%20Ident%20%28TFIdentMainenUS%29.md#technology-object-to_ident)" or not use it for parameter assignment of the Ident blocks / Ident profile. If you do not use the technology object for parameter assignment, you need the data type "IID_HW_CONNECT". Note that this data type is only contained in library versions < V5.0. SIMATIC S7-300/400 controllers are not compatible with the technology object.
+You can use the technology object "[TO_Ident](SIMATIC%20Ident%20%28TFIdentMainenUS%29.md#technology-object-to_ident)" or not use it for parameter assignment of the Ident blocks / Ident profile. If you do not use the technology object for parameter assignment, you need the data type "IID_HW_CONNECT". Note that this data type is only contained in library versions &lt; V5.0. SIMATIC S7-300/400 controllers are not compatible with the technology object.
 
 Before you can start parameter assignment of the blocks, you first need to create a variable of the PLC data type "IID_HW_CONNECT". The Ident system or a channel of the Ident system is addressed using the "IID_HW_CONNECT" PLC data type.
 
@@ -73,7 +73,7 @@ When working with all the instructions/blocks, you require the "IID_HW_CONNECT" 
    The I/O address displayed in the tab corresponds to "LADDR".
 
    Note that the input and output address must have the same value.
-3. In the "Properties > System constants" tab, you will find the hardware identifier that corresponds to the "HW_ID".
+3. In the "Properties &gt; System constants" tab, you will find the hardware identifier that corresponds to the "HW_ID".
 
    ![The "Hardware identifier" parameter](images/114079829771_DV_resource.Stream@PNG-en-US.png)
 
@@ -108,7 +108,7 @@ The "IID_HW_CONNECT" data type has been assigned parameters.
 
 **Follow the steps below to link in a block and to set the call parameters:**
 
-1. Open the program block you have created by double-clicking in the "Project tree > Program blocks" tab.
+1. Open the program block you have created by double-clicking in the "Project tree &gt; Program blocks" tab.
 2. Drag the required block from the instruction register into the program block.
 3. Enter the tag you created earlier in the "HW_CONNECT" input parameter.
 
@@ -546,7 +546,7 @@ This section contains information on the following topics:
 
 Then "Read_Tagfield" block reads data from a tag field of the transponder and makes the formatted information available at the "IDENT_DATA" parameter. A "TO_TagLayout" technology object is transferred at the "TAGLAYOUT" parameter; the respective tag field is selected with the "TAGFIELD" parameter.
 
-The technology object "TO_TagLayout" creates a "<Name of the TO>_Indexes" data block that can be used to select a symbolic tag field at the "TAGFIELD" parameter. In addition, a "<Name of the TO>_Datatypes" data type is made available that can be used to create a tag that contains all tag fields with the respective data types. It can be used to address a symbolic memory area for the tag field at the "IDENT_DATA" parameter.
+The technology object "TO_TagLayout" creates a "&lt;Name of the TO&gt;_Indexes" data block that can be used to select a symbolic tag field at the "TAGFIELD" parameter. In addition, a "&lt;Name of the TO&gt;_Datatypes" data type is made available that can be used to create a tag that contains all tag fields with the respective data types. It can be used to address a symbolic memory area for the tag field at the "IDENT_DATA" parameter.
 
 The tag at the "IDENT_DATA" parameter must match the data type of the tag field. A tag of the type "Array of Byte" is always permitted. Specific access to a certain transponder takes place with the optional "EPCID_UID" and "LEN_ID" parameters.
 
@@ -559,7 +559,7 @@ The following table shows the parameters of the instruction "Read_Tagfield":
 | Parameter | Declaration | Data type | Default values | Description |
 | --- | --- | --- | --- | --- |
 | EXECUTE | Input | BOOL | FALSE | There must be a positive edge at this input before the block will execute the command. |
-| TAGFIELD | Input | INT | 1 | Selecting a tag field  The value corresponds to the number of the tag field in the technology object "TO_TagLayout".  For symbolic addressing, an element of the created data block "<Name of the TO>_Indexes" can be used. |
+| TAGFIELD | Input | INT | 1 | Selecting a tag field  The value corresponds to the number of the tag field in the technology object "TO_TagLayout".  For symbolic addressing, an element of the created data block "&lt;Name of the TO&gt;_Indexes" can be used. |
 | LEN_ID | Input | BYTE | B#16#0 | Length of the EPC-ID/UID  Default value: 0x00 ≙ unspecified single tag access (RF200, RF300, RF61xR, RF68xR) |
 | EPCID_UID | Input | ARRAY[1...62] OF BYTE | 0x00 | Buffer for up to 62 bytes EPC-ID, 8 bytes UID or 4 bytes handle ID.  - 2 - 62-byte EPC-ID is entered at the start of the buffer (length is set by "LEN_ID") - 8-byte UID is entered at the start of the buffer ("LEN_ID = 8") |
 | DONE | Output | BOOL | FALSE | The job was executed. If the result is positive, this parameter is set. |
@@ -583,7 +583,7 @@ The following table shows the parameters of the instruction "Read_Tagfield":
 
 The "Write_Tagfield" block writes data from the parameter "IDENT_DATA" to a tag field of the transponder. A "TO_TagLayout" technology object is transferred at the "TAGLAYOUT" parameter; the respective tag field is selected with the "TAGFIELD" parameter.
 
-The technology object "TO_TagLayout" creates a "<Name of the TO>_Indexes" data block that can be used to select a symbolic tag field at the "TAGFIELD" parameter. In addition, a "<Name of the TO>_Datatypes" data type is made available that can be used to create a tag that contains all tag fields with the respective data types. It can be used to address a symbolic memory area for the tag field at the "IDENT_DATA" parameter.
+The technology object "TO_TagLayout" creates a "&lt;Name of the TO&gt;_Indexes" data block that can be used to select a symbolic tag field at the "TAGFIELD" parameter. In addition, a "&lt;Name of the TO&gt;_Datatypes" data type is made available that can be used to create a tag that contains all tag fields with the respective data types. It can be used to address a symbolic memory area for the tag field at the "IDENT_DATA" parameter.
 
 The tag at the "IDENT_DATA" parameter must match the data type of the tag field. A tag of the type "Array of Byte" is always permitted. Specific access to a certain transponder takes place with the optional "EPCID_UID" and "LEN_ID" parameters.
 
@@ -596,7 +596,7 @@ The following table shows the parameters of the instruction "Write_Tagfield":
 | Parameter | Declaration | Data type | Default values | Description |
 | --- | --- | --- | --- | --- |
 | EXECUTE | Input | BOOL | FALSE | There must be a positive edge at this input before the block will execute the command. |
-| TAGFIELD | Input | INT | 1 | Selecting a tag field  The value corresponds to the number of the tag field in the technology object "TO_TagLayout".  For symbolic addressing, an element of the created data block "<Name of the TO>_Indexes" can be used. |
+| TAGFIELD | Input | INT | 1 | Selecting a tag field  The value corresponds to the number of the tag field in the technology object "TO_TagLayout".  For symbolic addressing, an element of the created data block "&lt;Name of the TO&gt;_Indexes" can be used. |
 | LEN_DATA | Input | WORD | W#16#0 | Length of the data to be written |
 | LEN_ID | Input | BYTE | B#16#0 | Length of the EPC-ID/UID  Default value: 0x00 ≙ unspecified single tag access (RF200, RF300, RF61xR, RF68xR) |
 | EPCID_UID | Input | ARRAY[1...62] OF BYTE | 0x00 | Buffer for up to 62 bytes EPC-ID, 8 bytes UID or 4 bytes handle ID.  - 2 - 62-byte EPC-ID is entered at the start of the buffer (length is set by "LEN_ID") - 8-byte UID is entered at the start of the buffer ("LEN_ID = 8") |
@@ -647,7 +647,7 @@ The following table shows the parameters of the "AdvancedCmd" instruction:
 | Parameter | Declaration | Data type | Default values | Description |
 | --- | --- | --- | --- | --- |
 | EXECUTE | Input | BOOL | FALSE | There must be a positive edge at this input before the block will execute the command. |
-| CMDSEL | Input | INT | 1 | Selection of the command to be executed "CMDREF";   1 ⇒ 1. Command, ...   The value of the "CMDSEL" parameter can never be > 100. |
+| CMDSEL | Input | INT | 1 | Selection of the command to be executed "CMDREF";   1 ⇒ 1. Command, ...   The value of the "CMDSEL" parameter can never be &gt; 100. |
 | CMDREF | Input | ANY / VARIANT | -- | You will find a detailed description of the parameter in the sections:  - "[Overview of the commands](#overview-of-the-commands)" - "[Command structure](#command-structure)" |
 | DONE | Output | BOOL | FALSE | The job was executed. If the result is positive, this parameter is set. |
 | BUSY | Output | BOOL | FALSE | The job is being executed. |
@@ -1355,7 +1355,7 @@ If the "CMDREF[2]" command is selected, a write command is started and the data 
 
 #### Configuration/programming
 
-You can use the technology object "[TO_Ident](SIMATIC%20Ident%20%28TFIdentMainenUS%29.md#technology-object-to_ident)" or not use it for parameter assignment of the Ident blocks / Ident profile. If you do not use the technology object for parameter assignment, you need the data type "IID_HW_CONNECT". Note that this data type is only contained in library versions < V5.0. SIMATIC S7-300/400 controllers are not compatible with the technology object.
+You can use the technology object "[TO_Ident](SIMATIC%20Ident%20%28TFIdentMainenUS%29.md#technology-object-to_ident)" or not use it for parameter assignment of the Ident blocks / Ident profile. If you do not use the technology object for parameter assignment, you need the data type "IID_HW_CONNECT". Note that this data type is only contained in library versions &lt; V5.0. SIMATIC S7-300/400 controllers are not compatible with the technology object.
 
 Before you can start parameter assignment of the blocks, you first need to create a variable of the PLC data type "IID_HW_CONNECT". The Ident system or a channel of the Ident system is addressed using the "IID_HW_CONNECT" PLC data type.
 
@@ -1390,7 +1390,7 @@ When working with all the instructions/blocks, you require the "IID_HW_CONNECT" 
    The I/O address displayed in the tab corresponds to "LADDR".
 
    Note that the input and output address must have the same value.
-3. In the "Properties > System constants" tab, you will find the hardware identifier that corresponds to the "HW_ID".
+3. In the "Properties &gt; System constants" tab, you will find the hardware identifier that corresponds to the "HW_ID".
 
    ![The "Hardware identifier" parameter](images/114079829771_DV_resource.Stream@PNG-en-US.png)
 
@@ -1425,7 +1425,7 @@ The "IID_HW_CONNECT" data type has been assigned parameters.
 
 **Follow the steps below to link in a block and to set the call parameters:**
 
-1. Open the program block you have created by double-clicking in the "Project tree > Program blocks" tab.
+1. Open the program block you have created by double-clicking in the "Project tree &gt; Program blocks" tab.
 2. Drag the required block from the instruction register into the program block.
 3. Enter the tag you created earlier in the "HW_CONNECT" input parameter.
 
@@ -1796,7 +1796,7 @@ Parameter values of bytes 9 ... 16
 | 0 | Reserved | Reserved for the setting with the switch or GSD parameter assignment |  |  |  |  |
 | 1 | MOBY I | If RF300 readers of the 2nd generation are to be operated in MOBY I mode, the value = 0x01 must be set.  Short "INIT" (only the "param" and "option_1" parameters are transferred to the reader). |  |  |  |  |
 | 5 | MOBY U/D, RF200, RF300 | Single tag mode |  |  |  |  |
-| 6 | MOBY U | Multitag mode  - Parameter setting with Multitag > 1 and more than one transponder in the antenna field: the UID parameter must be supplied with the transponder ID. - Parameter setting with Multitag = 1 and only one transponder in the antenna field: the UID parameter can be supplied with the correct transponder ID or zero. |  |  |  |  |
+| 6 | MOBY U | Multitag mode  - Parameter setting with Multitag &gt; 1 and more than one transponder in the antenna field: the UID parameter must be supplied with the transponder ID. - Parameter setting with Multitag = 1 and only one transponder in the antenna field: the UID parameter can be supplied with the correct transponder ID or zero. |  |  |  |  |
 | 7 | MOBY D | Multitag mode |  |  |  |  |
 | Note: Note that after a parameter change the CM must be restarted. |  |  |  |  |  |  |
 | **Byte 11** | option_1 | RF200, RF300, Freeport, MOBY D/U | This byte is bit-coded. As default, it has the value "B#16#0". With this byte, special controllers can be implemented on the CM/reader. |  |  |  |
@@ -2244,7 +2244,7 @@ Devices that support command repetition and save results
 | RF18xC/RF18xCI | 270 | 270 × 1034 bytes = 279 180 bytes |
 | RF166C | 270 | 270 × 229 bytes = 61 830 bytes |
 | ASM 456 | 150 | 150 × 233 bytes = 34 950 bytes |
-| <sup>1)</sup> As of FW > V2.0, the Repeat command is supported. When using the Repeat command, the number of buffers is reduced to 150. |  |  |
+| <sup>1)</sup> As of FW &gt; V2.0, the Repeat command is supported. When using the Repeat command, the number of buffers is reduced to 150. |  |  |
 
 The devices listed below support the command repetition and have the necessary data buffer. However, the data buffer is only used as buffer for the command sequence (chaining) and not for saving results.
 
@@ -2255,7 +2255,7 @@ Devices that support command repetition
 | RF300 reader; 1st gen. | 245 | 245 × 233 bytes = 57 085 bytes |
 | RF300 reader; 2nd gen. <sup>1)</sup> | 299 | 299 × 233 bytes = 69 667 bytes |
 | 150 | 150 × 480 bytes = 72 000 bytes |  |
-| <sup>1)</sup> As of FW > V1.7, the number of buffers is reduced to 150 by using the "RF300 fast protocol". |  |  |
+| <sup>1)</sup> As of FW &gt; V1.7, the number of buffers is reduced to 150 by using the "RF300 fast protocol". |  |  |
 
 > **Note**
 >
@@ -2407,7 +2407,7 @@ Messages via the "STATUS" output parameter ("IN_OP" is not reset)
 
 | Message  (hex) | Description |
 | --- | --- |
-| 0xE1FE0300 | Bad parameter in MV command  The command was incorrectly structured. Possible causes:  - The specified address for a "WRITE" command is ≠ "0x0000". - MV command program change    - Length of the data to be written > "0x1".   - Program number transferred is > "0xF".   The transferred program number is not saved. |
+| 0xE1FE0300 | Bad parameter in MV command  The command was incorrectly structured. Possible causes:  - The specified address for a "WRITE" command is ≠ "0x0000". - MV command program change    - Length of the data to be written &gt; "0x1".   - Program number transferred is &gt; "0xF".   The transferred program number is not saved. |
 | 0xE6FE0100 | Command not permitted or the command was aborted.  The precise error message can be obtained with "INIT" without program selection. Possible causes:   - The send buffer is full. - The program is damaged. - The Ethernet interface is in operation and there is a problem. - The connected lamp is overloaded. - Match string access failed due to missing parameter assignment. |
 | 0xE6FE0300 | Initialization with program selection ("INIT"/"WRITE-CONFIG") is not possible. Possible causes:  - Program number transferred is not stored. - Reader is still in self-test. |
 

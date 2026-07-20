@@ -122,7 +122,7 @@ Networking the connection partners it is necessary to ensure the uniqueness and 
 
 The views described below will provide you with comprehensive access to all the information and functions regarding configuring and checking communication connections.
 
-The view is accessed via the project navigation under "Devices & Networks".
+The view is accessed via the project navigation under "Devices &amp; Networks".
 
 ![Figure](images/47041944331_DV_resource.Stream@PNG-en-US.png)
 
@@ -226,7 +226,7 @@ To graphically create a connection via a default connection path, proceed as fol
 
 **Note**
 
-If you wish to exit connection mode before, press <Esc>, right-click the mouse or double-click into the background of the network view.
+If you wish to exit connection mode before, press &lt;Esc&gt;, right-click the mouse or double-click into the background of the network view.
 
 ### Result
 
@@ -262,7 +262,7 @@ Proceed as follows to create a connection with an individually selected connecti
 
 **Note**
 
-If you wish to exit connection mode before, press <Esc>, right-click the mouse or double-click into the background of the network view.
+If you wish to exit connection mode before, press &lt;Esc&gt;, right-click the mouse or double-click into the background of the network view.
 
 ### Configuring a connection when there is no or no clear network assignment
 
@@ -541,7 +541,7 @@ The procedure for changing or reassigning a configured connection path in a loca
 
 You can set or change the connection path in the following views:
 
-- Inspector window - "Properties > General"
+- Inspector window - "Properties &gt; General"
 
 ### Changing the connection path in the Inspector window
 
@@ -551,7 +551,7 @@ To assign a different connection path to an existing connection:
 2. In the connection table select the connection for which you want to change the connection path.
 
    Hint: The current connection path is highlighted in the network view if you have set the "Highlight connection" view.
-3. Select the new interface in the Inspector window under " Properties > General > Interface". The partner is offered the interfaces that can be considered in the context of the local interface (Note: S7 connections can be established via different subnet types).
+3. Select the new interface in the Inspector window under " Properties &gt; General &gt; Interface". The partner is offered the interfaces that can be considered in the context of the local interface (Note: S7 connections can be established via different subnet types).
 
    In the network view the new connection path is highlighted.
 
@@ -563,7 +563,7 @@ To assign a closed connection path to an existing open connection path:
 2. In the connection table, select the connection for which you want to change the connection path.
 
    Hint: The current connection path will be highlighted in the network view if you have set the "Highlight connection" view accordingly.
-3. Activate the "Find connection path" button under "Properties > General > Interface" in the inspector window.
+3. Activate the "Find connection path" button under "Properties &gt; General &gt; Interface" in the inspector window.
 
    In the network view the new connection path is highlighted.
 
@@ -674,7 +674,7 @@ To create a multicast / broadcast connection interactively, follow these steps:
    - In to the connection table, go to the "Partner" column and select the required connection type from the drop-down list; address parameters are assigned automatically.
 
      or
-   - For UDP, enter the IP address or port directly in "General > Address details". For FDL, set the PROFIBUS station address 63.
+   - For UDP, enter the IP address or port directly in "General &gt; Address details". For FDL, set the PROFIBUS station address 63.
 
 ---
 

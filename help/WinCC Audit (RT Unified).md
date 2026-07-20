@@ -144,7 +144,7 @@ Audit Trail certificates are required for the HMI device. The certificates are u
 For HMI devices that support "Configuration conforms to GMP", the WinCC engineering system is extended to include the following configuration options when GMP is enabled:
 
 - The Audit Trail entry is added to the "Logs" editor
-- A "Good Manufacturing Practice Settings" entry is added to the "HMI tags" editor in the Inspector window of a "Properties > Properties" tag
+- A "Good Manufacturing Practice Settings" entry is added to the "HMI tags" editor in the Inspector window of a "Properties &gt; Properties" tag
 - "InsertElectronicRecord" system function
 
 ---
@@ -291,7 +291,7 @@ The following functions can now be configured:
    ![Procedure](images/170176095115_DV_resource.Stream@PNG-en-US.png)
 
    An Audit Trail is created automatically.
-4. Set the parameters of the "AuditTrail" in the Inspector window under "Properties > Properties > General".
+4. Set the parameters of the "AuditTrail" in the Inspector window under "Properties &gt; Properties &gt; General".
 
    ![Procedure](images/170176033803_DV_resource.Stream@PNG-en-US.png)
 
@@ -318,7 +318,7 @@ The standard log size is 10 GB. The value is entered in MB. When the maximum lo
 
 #### Log segments
 
-The size of the log segments is specified either as a time period or a segment size. You specify the following under "Properties > Properties > Segment":
+The size of the log segments is specified either as a time period or a segment size. You specify the following under "Properties &gt; Properties &gt; Segment":
 
 - Segment time period: The standard time period for logging a single segment is 30 days. You can specify the time period in the following format: Days.Hours:Minutes:Seconds.
 - Maximum segment size: The standard segment size is 1 GB. The value is entered in MB.
@@ -326,7 +326,7 @@ The size of the log segments is specified either as a time period or a segment s
 
 #### Backup
 
-When the databases exist in the MS SQL format, you can create backups of the database under "Properties > Properties > Backup".
+When the databases exist in the MS SQL format, you can create backups of the database under "Properties &gt; Properties &gt; Backup".
 
 1. Under "Backup mode", select the "Path" setting.
 2. Enter a storage location under "Backup path".
@@ -488,7 +488,7 @@ Possible filter types:
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
 
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
-3. Click "New Configuration > Audit configuration".
+3. Click "New Configuration &gt; Audit configuration".
 4. Enter the name of the configuration under "Name".
 5. Select a check mode:
 6. Specify a filter type.
@@ -496,7 +496,7 @@ Possible filter types:
    Preset value: "Show data and conformity errors"
 7. (Optional) Change the default settings of the optional columns. The optional columns are used to display the audit attributes.
 
-   You can find more information on configuring the optional columns in the WinCC Unified object model > Creating production logs > Configuring optional columns.
+   You can find more information on configuring the optional columns in the WinCC Unified object model &gt; Creating production logs &gt; Configuring optional columns.
 8. (Optional) To further filter the inserted content, define a filter query.
 
    The filter query can consist of up to two conditions. Proceed as follows:
@@ -508,7 +508,7 @@ Possible filter types:
 
 > **Note**
 >
-> To not use the default column title for the standard column, set a display name in the local configuration of the data source item. You can find more information on setting the display name in the WinCC Unified object model > Creating production logs > Setting the display name for the standard column.
+> To not use the default column title for the standard column, set a display name in the local configuration of the data source item. You can find more information on setting the display name in the WinCC Unified object model &gt; Creating production logs &gt; Setting the display name for the standard column.
 
 ##### Editing a configuration
 
@@ -740,7 +740,7 @@ The configuration has the following effects in runtime depending on the properti
 
    ![Example procedure](images/170176160267_DV_resource.Stream@PNG-en-US.png)
 3. In the open work area, select the tag for which you want to make GMP settings.
-4. Click "GMP-relevant" under "Properties > Properties > GMP" in the Inspector window.
+4. Click "GMP-relevant" under "Properties &gt; Properties &gt; GMP" in the Inspector window.
 
    ![Example procedure](images/170176130955_DV_resource.Stream@PNG-en-US.png)
 
@@ -888,7 +888,7 @@ The "Audit Viewer" object expands the possibilities for visualizing and editing 
 
 You use the "Audit Viewer" object to evaluate in tabular form all data of the Audit Trail in runtime.
 
-You will find the "Audit Viewer" object under "Toolbox > My controls". You place the object in your screen with a double-click or with drag-and-drop.
+You will find the "Audit Viewer" object under "Toolbox &gt; My controls". You place the object in your screen with a double-click or with drag-and-drop.
 
 ![Audit Viewer](images/170176680843_DV_resource.Stream@PNG-en-US.png)
 
@@ -943,17 +943,17 @@ In the Engineering System, you configure the settings for the position, geometry
 
 To define a text for the header of the Audit Viewer, follow these steps:
 
-1. Activate the "Show header" option in the Inspector window under "Properties > Appearance > Window settings". The option is activated by default.
-2. Click "Properties > Miscellaneous > Label > Font" in the Inspector window.
+1. Activate the "Show header" option in the Inspector window under "Properties &gt; Appearance &gt; Window settings". The option is activated by default.
+2. Click "Properties &gt; Miscellaneous &gt; Label &gt; Font" in the Inspector window.
 3. Select a font.
-4. Click "Properties > Miscellaneous > Label > Text" in the Inspector window.
+4. Click "Properties &gt; Miscellaneous &gt; Label &gt; Text" in the Inspector window.
 5. Enter a text.
 
 ##### Adapting size in runtime
 
 To resize the Audit Viewer in runtime, follow these steps:
 
-1. Activate the options "Show border" and "Can be sized" in the Inspector window "Properties > Appearance > Window settings". The options are activated by default.
+1. Activate the options "Show border" and "Can be sized" in the Inspector window "Properties &gt; Appearance &gt; Window settings". The options are activated by default.
 
    The width of the border is not evaluated.
 
@@ -1183,6 +1183,6 @@ Individual operator actions are overwritten during logging. The following table 
 
 #### Version number of the device
 
-The version number is incremented with each compilation of the device. You can find the version number in the Inspector window under "Properties > General > Information".
+The version number is incremented with each compilation of the device. You can find the version number in the Inspector window under "Properties &gt; General &gt; Information".
 
 ![Version number of the device](images/142368722315_DV_resource.Stream@PNG-en-US.png)

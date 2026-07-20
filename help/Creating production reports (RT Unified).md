@@ -333,7 +333,7 @@ This section contains information on the following topics:
 
 #### Procedure
 
-1. Open "Runtime settings > Reporting" in the project tree below the HMI device.
+1. Open "Runtime settings &gt; Reporting" in the project tree below the HMI device.
 2. Select the "Enable Runtime" option.
 
    When the option is disabled, it is not possible to use the Runtime project as data source for report templates or configure report jobs in Runtime and generate reports.
@@ -404,7 +404,7 @@ You can find additional information in the "SIMATIC Unified PC Installation" use
 
 The Runtime project that is the data source of a report template must have reporting functionality enabled.
 
-You activate the reporting functionality of a Runtime project before loading it into the device in TIA Portal: "Runtime settings" of the HMI device > "Reporting" > "Enable Reporting" option
+You activate the reporting functionality of a Runtime project before loading it into the device in TIA Portal: "Runtime settings" of the HMI device &gt; "Reporting" &gt; "Enable Reporting" option
 
 > **Note**
 >
@@ -468,7 +468,7 @@ Contexts are not supported for Unified Comfort Panel. This option is not availab
 
 ##### Procedure
 
-1. In the installation package of WinCC Unified on "DVD_2", double-click the file "Support\Reporting\SIMATIC_WinCC_Unified_Reporting_<Version number>.exe".
+1. In the installation package of WinCC Unified on "DVD_2", double-click the file "Support\Reporting\SIMATIC_WinCC_Unified_Reporting_&lt;Version number&gt;.exe".
 2. Select the target directory to which the underlying ZIP file is extracted and confirm your input.
 
    The ZIP file is extracted and setup starts automatically.
@@ -498,7 +498,7 @@ The Excel manifest is installed.
 
 ##### Procedure
 
-Give the users that create templates with the Excel add-in read access to the installation path of the Excel manifest: <target directory>\WinCCUnifiedReporting\Excelmanifest
+Give the users that create templates with the Excel add-in read access to the installation path of the Excel manifest: &lt;target directory&gt;\WinCCUnifiedReporting\Excelmanifest
 
 > **Note**
 >
@@ -544,10 +544,10 @@ Give the users that create templates with the Excel add-in read access to the in
 ##### Procedure
 
 1. Open Microsoft Excel.
-2. Open the "Trust Center" under "File" > "Options".
+2. Open the "Trust Center" under "File" &gt; "Options".
 3. Click "Trust Center Settings".
 4. Click "Catalogs of trusted add-ins".
-5. Add the catalog using the URL "\\<Computer name>\Excelmanifest".
+5. Add the catalog using the URL "\\&lt;Computer name&gt;\Excelmanifest".
 
    ![Procedure](images/142754073355_DV_resource.Stream@PNG-en-US.png)
 
@@ -1045,9 +1045,9 @@ The standard column provides the standard property of the data source item and d
 | --- | --- | --- |
 | Logging alarm | "Alarm ID" | Alarm IDs of the displayed alarms |
 | Alarm statistics | "Alarm statistics [ID]" | Alarm IDs of the alarms displayed in the alarm statistics |
-| Tag or logging tag | "<Name of the tags or logging tags>" | Value of the tag or logging tag |
-| Context | "<Name of the context object>" | Context name |
-| Audit | "Audit [<object name>]" | The name of the object monitored by the Audit Trail |
+| Tag or logging tag | "&lt;Name of the tags or logging tags&gt;" | Value of the tag or logging tag |
+| Context | "&lt;Name of the context object&gt;" | Context name |
+| Audit | "Audit [&lt;object name&gt;]" | The name of the object monitored by the Audit Trail |
 | User-defined column | Name entered when creating the data source item | As set in the configuration of the data source item:  - A fixed string.  Or - A dynamically calculated string |
 
 ###### Changing the column title
@@ -1460,7 +1460,7 @@ In segments that combine contexts with logging tags or logging alarms:
 - All logged values with the same time stamp are displayed per row.
 - "Time stamp" column: The logging event
 - "Start time" column: The time at which the context was started
-- "Context " <Context name>"" column: The value passed to the context at start
+- "Context " &lt;Context name&gt;"" column: The value passed to the context at start
 - If no context was started at the time of logging, the context cells remain empty.
 
 **Example**
@@ -1527,7 +1527,7 @@ The configuration of the user-defined column controls which string or formula it
 3. Click "+".
 4. Select the option "User-defined column".
 5. Enter the name of the column under "name".
-6. Click "Select" or press <ENTER>.
+6. Click "Select" or press &lt;ENTER&gt;.
 
    The column is included in the list "Selected data source items".
 7. Select a configuration for the user-defined column.
@@ -1735,7 +1735,7 @@ You have the following options:
    ![Creating a configuration](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
 
    ![Creating a configuration](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
-3. Click "New Configuration > Logging alarm configuration".
+3. Click "New Configuration &gt; Logging alarm configuration".
 4. Enter the name of the configuration under "Configuration name".
 5. (Optional) Enter texts or graphics from a text list or graphic list in the standard column instead of the alarm IDs.
 
@@ -1793,7 +1793,7 @@ The changes are applied the next time you read in the Runtime data.
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
 
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
-3. Click "New Configuration > Alarm statistics configuration".
+3. Click "New Configuration &gt; Alarm statistics configuration".
 4. Enter the name of the configuration under "Configuration name".
 5. (Optional) Enter texts or graphics from a text list or graphic list in the standard column instead of the alarm IDs.
 
@@ -1888,7 +1888,7 @@ In time series segments, the following additional settings are available for log
 | Setting | Description |
 | --- | --- |
 | "Interval" | Only for the "Stepped" and "Interpolated" calculation modes. |
-| "Columns" > "Quality Code" | (Optional) Change the default settings of the optional "Quality Code" column.  See [Configuring optional columns](#configuring-optional-columns-rt-unified). |
+| "Columns" &gt; "Quality Code" | (Optional) Change the default settings of the optional "Quality Code" column.  See [Configuring optional columns](#configuring-optional-columns-rt-unified). |
 
 ###### Additional settings for single value segments
 
@@ -1927,7 +1927,7 @@ To set the "Time stamp", select one of the following options:
 
 1. Click on "Segments" in the "Configuration" group.
 2. Click "Data source item configuration": ![Creating a configuration](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
-3. Click "New Configuration> Tag single value configuration".
+3. Click "New Configuration&gt; Tag single value configuration".
 4. Enter the name of the configuration under "Name".
 5. (Optional) If the configuration is for tags with the numeric data type, you can output texts or graphics from a text list or graphic list in the standard column instead of the tag value.
 
@@ -2010,7 +2010,7 @@ The changes are applied the next time you read in the Runtime data.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| 1. Click on "Segments" in the "Configuration" group. 2. Click "Data source item configuration":               ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)         ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png) 3. Click "New Configuration > User-defined column configuration". 4. Enter the name of the configuration under "Configuration name". 5. Under "Formula", select one of the following options:    - Enter a fixed string.      The string is transferred into each cell of the column.    - Enter an Excel formula.      The formula is copied into each cell of the user-defined column and adapted to the respective row.       To prevent a part of the formula from being adjusted, place the character "$" in front of it.      Example         |  |  |  |  |      | --- | --- | --- | --- |      | Formula in configuration |  | =B2+C2 | =B$2+C2 |      | Adapting the formula in the report | in line 2 | =B2+C2 | =B2+C2 |      | in line 3 | =B3+C3 | =B2+C3 |  |      | in line 4 | =B4+C4 | =B2+C4 |  |         |  |  |  |  |      | --- | --- | --- | --- |      | **Note**  **No validity check**  The formula is not tested for correctness during either input or dynamic adaptation. |  |  |  | 6. Confirm your entries with "OK". |  |  |  |
+| 1. Click on "Segments" in the "Configuration" group. 2. Click "Data source item configuration":               ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)         ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png) 3. Click "New Configuration &gt; User-defined column configuration". 4. Enter the name of the configuration under "Configuration name". 5. Under "Formula", select one of the following options:    - Enter a fixed string.      The string is transferred into each cell of the column.    - Enter an Excel formula.      The formula is copied into each cell of the user-defined column and adapted to the respective row.       To prevent a part of the formula from being adjusted, place the character "$" in front of it.      Example         |  |  |  |  |      | --- | --- | --- | --- |      | Formula in configuration |  | =B2+C2 | =B$2+C2 |      | Adapting the formula in the report | in line 2 | =B2+C2 | =B2+C2 |      | in line 3 | =B3+C3 | =B2+C3 |  |      | in line 4 | =B4+C4 | =B2+C4 |  |         |  |  |  |  |      | --- | --- | --- | --- |      | **Note**  **No validity check**  The formula is not tested for correctness during either input or dynamic adaptation. |  |  |  | 6. Confirm your entries with "OK". |  |  |  |
 
 ##### Adding or editing configurations for audit (RT Unified)
 
@@ -2065,7 +2065,7 @@ Possible filter types:
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
 
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
-3. Click "New Configuration > Audit configuration".
+3. Click "New Configuration &gt; Audit configuration".
 4. Enter the name of the configuration under "Name".
 5. Select a check mode:
 6. Specify a filter type.
@@ -2073,7 +2073,7 @@ Possible filter types:
    Preset value: "Show data and conformity errors"
 7. (Optional) Change the default settings of the optional columns. The optional columns are used to display the audit attributes.
 
-   You can find more information on configuring the optional columns in the WinCC Unified object model > Creating production logs > Configuring optional columns.
+   You can find more information on configuring the optional columns in the WinCC Unified object model &gt; Creating production logs &gt; Configuring optional columns.
 8. (Optional) To further filter the inserted content, define a filter query.
 
    The filter query can consist of up to two conditions. Proceed as follows:
@@ -2085,7 +2085,7 @@ Possible filter types:
 
 > **Note**
 >
-> To not use the default column title for the standard column, set a display name in the local configuration of the data source item. You can find more information on setting the display name in the WinCC Unified object model > Creating production logs > Setting the display name for the standard column.
+> To not use the default column title for the standard column, set a display name in the local configuration of the data source item. You can find more information on setting the display name in the WinCC Unified object model &gt; Creating production logs &gt; Setting the display name for the standard column.
 
 ###### Editing a configuration
 
@@ -2539,7 +2539,7 @@ An online connection is established.
 
 ##### Reading in all segments
 
-1. Select "WinCC Unified > Segments".
+1. Select "WinCC Unified &gt; Segments".
 2. Click "Update all":
 
    ![Reading in all segments](images/142023530251_DV_resource.Stream@PNG-de-DE.png)
@@ -2548,7 +2548,7 @@ An online connection is established.
 
 ##### Reading in individual segments
 
-1. Select "WinCC Unified > Segments".
+1. Select "WinCC Unified &gt; Segments".
 2. Next to a segment in the list of segments click, "Update":
 
    ![Reading in individual segments](images/142023530251_DV_resource.Stream@PNG-de-DE.png)
@@ -2627,7 +2627,7 @@ You can select the language for the contents of the report independently of the 
 
 ##### Selecting the language for the report
 
-1. Select "WinCC Unified > Segments".
+1. Select "WinCC Unified &gt; Segments".
 2. Click "Basic settings":
 
    ![Selecting the language for the report](images/142024587787_DV_resource.Stream@PNG-de-DE.png)
@@ -2659,7 +2659,7 @@ To enlarge your working area, you can undock the Excel add-in:
 
 ##### Procedure
 
-To zoom in or out of the display in the add-in, press <CTRL> and move the mouse wheel.
+To zoom in or out of the display in the add-in, press &lt;CTRL&gt; and move the mouse wheel.
 
 ### Undo and redo (RT Unified)
 
@@ -2725,7 +2725,7 @@ Add diagrams, pivot tables or formulas that graphically visualize, structure or 
 
 #### Set up page
 
-Use "File > Print > Set up page" to define details for printing the report, for example:
+Use "File &gt; Print &gt; Set up page" to define details for printing the report, for example:
 
 - Alignment of the report (portrait format or landscape format)
 - Scaling, for example, to print all columns on one page
@@ -2767,7 +2767,7 @@ The following requirements and restrictions apply to the configuration of report
 
 The reporting functionality must be enabled for the Runtime project that is running or being simulated on the HMI device.
 
-You activate the reporting functionality of a Runtime project before loading it into the device in TIA Portal: "Runtime settings" of the HMI device > "Reporting" > "Enable Reporting" option
+You activate the reporting functionality of a Runtime project before loading it into the device in TIA Portal: "Runtime settings" of the HMI device &gt; "Reporting" &gt; "Enable Reporting" option
 
 > **Note**
 >
@@ -2965,9 +2965,9 @@ The following buttons are available in the toolbars of the tab:
 | Icon | Button |  |
 | --- | --- | --- |
 | ![Toolbar](images/129288141323_DV_resource.Stream@PNG-de-DE.png) | Delete | Deletes the elements whose option is enabled in the work area. |
-| ![Toolbar](images/129286967947_DV_resource.Stream@PNG-de-DE.png) | - Add new - Import | - Creates a new element. - "Job parameters > Templates" tab: To import a report template into Runtime |
+| ![Toolbar](images/129286967947_DV_resource.Stream@PNG-de-DE.png) | - Add new - Import | - Creates a new element. - "Job parameters &gt; Templates" tab: To import a report template into Runtime |
 | ![Toolbar](images/129288760331_DV_resource.Stream@PNG-de-DE.png) | Run | In the "Report jobs" tab.  Manually creates a report for the report job whose option is enabled in the work area. |
-| ![Toolbar](images/129288150155_DV_resource.Stream@PNG-de-DE.png) | Export | - In the "Job parameters > Templates" tab: To export report templates - In the "Reports" tab:  To download reports to the client |
+| ![Toolbar](images/129288150155_DV_resource.Stream@PNG-de-DE.png) | Export | - In the "Job parameters &gt; Templates" tab: To export report templates - In the "Reports" tab:  To download reports to the client |
 
 #### Information bar
 
@@ -3002,7 +3002,7 @@ Store the certificates of the SMTP servers that require authentication via certi
 
 ##### Procedure
 
-1. In the "Reports" control, click on the "Global settings > Certificates" tab.
+1. In the "Reports" control, click on the "Global settings &gt; Certificates" tab.
 2. Click "Add new" in the toolbar.
 
    Alternative: In the work area, click "Add new".
@@ -3022,7 +3022,7 @@ Store the data of the e-mail senders and email recipients.
 
 To create a new contact, follow these steps:
 
-1. In the "Reports" control, click on the "Global settings > Contacts" tab.
+1. In the "Reports" control, click on the "Global settings &gt; Contacts" tab.
 2. Click "Add new".
 3. Enter the name of the contact.
 4. Enter the e-mail address of the contact.
@@ -3045,13 +3045,13 @@ Store the data of the SMTP servers via which the e-mails are sent.
 
 ##### Requirement
 
-Contacts that are suitable as senders have been entered in the "Global Settings > Contacts" tab.
+Contacts that are suitable as senders have been entered in the "Global Settings &gt; Contacts" tab.
 
 ##### Procedure
 
 To create a new SMTP server configuration, follow these steps:
 
-| 1. In the "Reports" control, click on the "Global settings > SMTP" tab. 2. Click "Add new". 3. Specify the following:       | Field | Description |    | --- | --- |    | "Name" | Enter the name of the SMTP server configuration. |    | "Address" | Enter the URL of the SMTP server. Servers without authentication (e.g. company-internal mail servers) and with authentication are permitted. Example: URL of a company mail server: `mail.<``Company name``>.com` |    | "Port" | Enter the port number of the SMTP server. Default setting: 25 |    | "Sender" | In the list, select the contact that is used as the sender for this SMTP server configuration.  All contacts maintained under "Contacts" are offered to you for selection. Select a sender that meets the respective requirements of the server. |    | "Comment" | (Optional) Enter a comment relating to the SMTP server configuration. | |  |
+| 1. In the "Reports" control, click on the "Global settings &gt; SMTP" tab. 2. Click "Add new". 3. Specify the following:       | Field | Description |    | --- | --- |    | "Name" | Enter the name of the SMTP server configuration. |    | "Address" | Enter the URL of the SMTP server. Servers without authentication (e.g. company-internal mail servers) and with authentication are permitted. Example: URL of a company mail server: `mail.<``Company name``>.com` |    | "Port" | Enter the port number of the SMTP server. Default setting: 25 |    | "Sender" | In the list, select the contact that is used as the sender for this SMTP server configuration.  All contacts maintained under "Contacts" are offered to you for selection. Select a sender that meets the respective requirements of the server. |    | "Comment" | (Optional) Enter a comment relating to the SMTP server configuration. | |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ##### Result
@@ -3110,7 +3110,7 @@ You define the remaining job parameters while configuring a report job in the "R
 ##### Requirement
 
 - The "Reports" control is placed on a screen of the project.
-- The "Job parameters > Templates" tab is visible in the control.
+- The "Job parameters &gt; Templates" tab is visible in the control.
 - Import: You have access to the storage location of the report template.
 - Export: Report templates have been imported into the control.
 
@@ -3141,7 +3141,7 @@ The report templates are downloaded to the download folder or a user-defined dir
 ##### Requirement
 
 - The "Reports" control is placed on a screen of the project.
-- The "Job parameters > Templates" tab is visible in the control.
+- The "Job parameters &gt; Templates" tab is visible in the control.
 - Templates have been imported into the control.
 
 ##### Procedure
@@ -3159,14 +3159,14 @@ If you delete a template that is used by a report job, the report job is marked 
 
 ##### Introduction
 
-In the "Job Parameters > Triggers" tab you configure which automatic triggers are available for selection when configuring report jobs.
+In the "Job Parameters &gt; Triggers" tab you configure which automatic triggers are available for selection when configuring report jobs.
 
 Report jobs with automatic triggers are executed if the report jobs on the "Report jobs" tab are set to active and their trigger event occurs. Users can also start the execution manually.
 
 ##### Requirement
 
 - The "Reports" control is placed on a screen of the project.
-- The "Job parameters > Trigger" tab is visible in the control.
+- The "Job parameters &gt; Trigger" tab is visible in the control.
 - To use the trigger type "Context trigger": Contexts are available in the project.
 
 ##### Add trigger
@@ -3178,13 +3178,13 @@ Report jobs with automatic triggers are executed if the report jobs on the "Repo
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Click "Select tag". 2. Click "Load". 3. Select the required tag and click "OK". 4. Set the condition and the condition value.    Example:        | Symbol | Meaning |    | --- | --- |    | Set tag | <tag name> |    | Condition | > |    | Condition value | 100 |     The trigger will be initiated when the tag receives a value greater than 100. |  |
+| 1. Click "Select tag". 2. Click "Load". 3. Select the required tag and click "OK". 4. Set the condition and the condition value.    Example:        | Symbol | Meaning |    | --- | --- |    | Set tag | &lt;tag name&gt; |    | Condition | &gt; |    | Condition value | 100 |     The trigger will be initiated when the tag receives a value greater than 100. |  |
 
 ##### Settings for serial triggers
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Select the serial pattern.    The series pattern defines the occurrence and time at which the trigger is initiated.    Example: Weekly > Every 2 weeks > Fridays 2. Select the series area.    The series range defines the period in which the trigger is initiated.       | Symbol | Meaning |    | --- | --- |    | "Start" | Specify the start date |    | "Time" | Specify the time at which the trigger is initiated. |    | "End on" | Specify the end date. The trigger will be executed for the last time on this day. |    | "End after" | Determine the number of dates after which the series ends. |    | "No end date" | The series runs indefinitely. | |  |
+| 1. Select the serial pattern.    The series pattern defines the occurrence and time at which the trigger is initiated.    Example: Weekly &gt; Every 2 weeks &gt; Fridays 2. Select the series area.    The series range defines the period in which the trigger is initiated.       | Symbol | Meaning |    | --- | --- |    | "Start" | Specify the start date |    | "Time" | Specify the time at which the trigger is initiated. |    | "End on" | Specify the end date. The trigger will be executed for the last time on this day. |    | "End after" | Determine the number of dates after which the series ends. |    | "No end date" | The series runs indefinitely. | |  |
 
 ##### Settings for context triggers
 
@@ -3194,7 +3194,7 @@ Report jobs with automatic triggers are executed if the report jobs on the "Repo
 
 ##### Delete trigger
 
-Select the option of the desired trigger in the work area of the "Job Parameters > Triggers" tab and click "Delete" in the toolbar.
+Select the option of the desired trigger in the work area of the "Job Parameters &gt; Triggers" tab and click "Delete" in the toolbar.
 
 ##### Edit trigger
 
@@ -3212,12 +3212,12 @@ The trigger type can only be set when adding the trigger.
 ##### Requirement
 
 - The "Reports" control is placed on a screen of the project.
-- The receivers of the e-mails are maintained as contacts in the "Global settings > Contacts" tab.
-- An SMTP server, with which the e-mail is to be sent, has been configured in the "Global settings > SMTP" tab.
+- The receivers of the e-mails are maintained as contacts in the "Global settings &gt; Contacts" tab.
+- An SMTP server, with which the e-mail is to be sent, has been configured in the "Global settings &gt; SMTP" tab.
 
 ##### Procedure
 
-1. In the "Reports" control, click on the "Job parameters > Targets" tab.
+1. In the "Reports" control, click on the "Job parameters &gt; Targets" tab.
 2. In the work area of the tab, click "Add new".
 3. Select "E-mail" as target type.
 
@@ -3267,7 +3267,7 @@ The following targets with "File system" target type are pre-configured:
 | Local project storage location | The reports are stored in the following folder: `<Project folder of the Runtime project>\``Reports` |
 | Local main storage location | The reports are stored in the local main storage location for reports. The local main storage location is configured in TIA Portal in the Runtime settings of the HMI device.  If this setting has not been set in TIA Portal, the reports are stored in the folder configured during the installation of Runtime or later in the "WinCC Unified Configuration" tool: |
 
-You can select these targets in the "Report jobs" tab. You cannot edit or delete these targets in the "Job parameters > Targets" tab.
+You can select these targets in the "Report jobs" tab. You cannot edit or delete these targets in the "Job parameters &gt; Targets" tab.
 
 **User-defined targets**
 
@@ -3281,7 +3281,7 @@ In the "Reports" control, you can create user-defined targets of the "File syste
 
 To add user-defined targets of the "File system" target type, follow these steps:
 
-1. In the "Reports" control, click on the "Job parameters > Targets" tab.
+1. In the "Reports" control, click on the "Job parameters &gt; Targets" tab.
 2. In the work area of the tab, click "Add new".
 3. Select "File system" as target type.
 
@@ -3291,7 +3291,7 @@ To add user-defined targets of the "File system" target type, follow these steps
 4. Assign a unique name to the target.
 5. Under "Subfolder", enter the path to the subfolder in which the report is to be saved.
 
-   Use the following notation: <folder name> or <folder name>\<folder name>\...
+   Use the following notation: &lt;folder name&gt; or &lt;folder name&gt;\&lt;folder name&gt;\...
 6. (Optional) Enter a comment.
 
 **Note**
@@ -3331,7 +3331,7 @@ The following targets with "File system" target type are pre-configured:
 | Local project storage location | The reports are stored in the following folder: `<Project folder of the Runtime project>\``Reports` |
 | Local main storage location | The reports are stored in the local main storage location for reports. The local main storage location is configured in TIA Portal in the Runtime settings of the HMI device.  If this setting has not been made in TIA Portal, the reports are stored in the following folder on the SD card plugged into the panel: `media/simatic/X51/Reports` |
 
-You can select these targets in the "Report jobs" tab. You cannot edit or delete these targets in the "Job parameters > Targets" tab.
+You can select these targets in the "Report jobs" tab. You cannot edit or delete these targets in the "Job parameters &gt; Targets" tab.
 
 **User-defined targets**
 
@@ -3346,7 +3346,7 @@ In the "Reports" control, you can create user-defined targets of the "File syste
 
 To add user-defined targets of the "File system" target type, follow these steps:
 
-1. In the "Reports" control, click on the "Job parameters > Targets" tab.
+1. In the "Reports" control, click on the "Job parameters &gt; Targets" tab.
 2. In the work area of the tab, click "Add new".
 3. Select "File system" as target type.
 
@@ -3356,7 +3356,7 @@ To add user-defined targets of the "File system" target type, follow these steps
 4. Assign a unique name to the target.
 5. Under "Subfolder", enter the path to the subfolder in which the report is to be saved.
 
-   Use the following notation: <folder name> or <folder name>\<folder name>\...
+   Use the following notation: &lt;folder name&gt; or &lt;folder name&gt;\&lt;folder name&gt;\...
 6. (Optional) Enter a comment.
 
 **Note**
@@ -3398,12 +3398,12 @@ A report job is a job for generating reports in Runtime. The configuration of a 
 - The following job parameters were configured in the control:
 
   - At least one template has been imported.
-  - To automatically execute a report job: Triggers are configured in the "Job parameters > Trigger" tab.
+  - To automatically execute a report job: Triggers are configured in the "Job parameters &gt; Trigger" tab.
 - For sending an email after execution of the report job:
 
   - Email contacts were configured in the global settings.
   - An SMTP server was configured in the global settings.
-  - A target of the target type "E-mail" was configured in the "Job parameters > Targets" tab.
+  - A target of the target type "E-mail" was configured in the "Job parameters &gt; Targets" tab.
 - For a report job with the target format PDF:
 
   - Microsoft Office Excel or LibreOffice is installed on the runtime server.
@@ -3422,7 +3422,7 @@ A report job is a job for generating reports in Runtime. The configuration of a 
 
    - Click "Add target".
 
-     You see the targets configured in the tab "Job parameters > Targets".
+     You see the targets configured in the tab "Job parameters &gt; Targets".
    - Select a target.
    - Add the target by clicking "+".
 
@@ -3665,7 +3665,7 @@ An offline configuration file is required to configure reporting templates in th
 
 #### Procedure
 
-1. In the "Reports" control, click on the "Global settings > Configuration" tab.
+1. In the "Reports" control, click on the "Global settings &gt; Configuration" tab.
 2. Enter the name of the offline configuration file under "Offline-configuration".
 3. Click "Export offline configuration".
 
@@ -3697,15 +3697,15 @@ Reports are not transferred.
 
 #### Export configuration
 
-1. In the "Reports" control, select the "Global settings > Configuration" tab.
-2. Enter the name of the export file under "Export/import configuration > Export".
+1. In the "Reports" control, select the "Global settings &gt; Configuration" tab.
+2. Enter the name of the export file under "Export/import configuration &gt; Export".
 3. Click "Export configuration".
 
 The configuration is exported to a ZIP file and downloaded to the default download directory of the device.
 
 #### Import configuration
 
-1. In the "Reports" control, select the "Global settings > Configuration" tab.
+1. In the "Reports" control, select the "Global settings &gt; Configuration" tab.
 2. Click "Select import file" under "Export/import configuration".
 3. Select the ZIP file in File Explorer and confirm your selection.
 4. Runtime checks whether the control already contains configurations:
@@ -3721,7 +3721,7 @@ The configuration is exported to a ZIP file and downloaded to the default downlo
 
 To set how many entries the lists in the work area of the "Reports" control display per page, follow these steps:
 
-1. In the "Reports" control, click on the "Global settings > Configuration" tab.
+1. In the "Reports" control, click on the "Global settings &gt; Configuration" tab.
 2. Under "List Settings", select the number of entries.
 
 If a list has more entries, these are split over several pages. Use the buttons below the list to switch pages.
@@ -3807,7 +3807,7 @@ Use a dynamic placeholder for tags to integrate process values in the report nam
 | Tag placeholder | Description | Example |  | Area |
 | --- | --- | --- | --- | --- |
 | Configuration | Result |  |  |  |
-| {@<Full  Tag name>} | Process value of an online tag | Rep_{@PC1_LineA::MyTag1} | Rep_On | Process value of the online tags  If the value contains a character that is not permitted in file names, it is replaced by an underscore.  If there is an error resolving the name, e.g. because the tag is not found in runtime, the tag placeholder in the name is replaced by `ERR`. The process is logged in the generation status of the report. |
+| {@&lt;Full  Tag name&gt;} | Process value of an online tag | Rep_{@PC1_LineA::MyTag1} | Rep_On | Process value of the online tags  If the value contains a character that is not permitted in file names, it is replaced by an underscore.  If there is an error resolving the name, e.g. because the tag is not found in runtime, the tag placeholder in the name is replaced by `ERR`. The process is logged in the generation status of the report. |
 
 Examples:
 

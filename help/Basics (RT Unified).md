@@ -55,7 +55,7 @@ An automation system consists of the following communication partners:
 
   Communication between the communication partners PLC and HMI device is described below.
 
-  Additional information on other forms of communication is available in the online help of the TIA Portal in the section "Editing devices & networks".
+  Additional information on other forms of communication is available in the online help of the TIA Portal in the section "Editing devices &amp; networks".
 
   If the following requirements are met, the PLC and HMI device form an automation system:
 
@@ -97,7 +97,7 @@ For more detailed information, refer to the documentation for OPC UA.
 
 #### Introduction
 
-To configure an automation system, you configure the connections in the "Devices & networks" editor. Connections of devices that are within the same project and were created with the "Devices & networks" editor are referred to as integrated connections. Connections of devices that were created with the "Connections" editor are referred to as non-integrated connections. The devices do not all have to be within the same project.
+To configure an automation system, you configure the connections in the "Devices &amp; networks" editor. Connections of devices that are within the same project and were created with the "Devices &amp; networks" editor are referred to as integrated connections. Connections of devices that were created with the "Connections" editor are referred to as non-integrated connections. The devices do not all have to be within the same project.
 
 You use the graphic and table network view for the configuration.
 
@@ -118,7 +118,7 @@ To set up an automation system, always follow the steps below:
 
 1. **Inserting devices**
 
-   You drag a PLC and an HMI device from the hardware catalog to the network view of the "Devices & networks" editor.
+   You drag a PLC and an HMI device from the hardware catalog to the network view of the "Devices &amp; networks" editor.
 2. **Configuring devices**
 
    Depending on the HMI device used, you add the required communications modules to your PC station.
@@ -198,7 +198,7 @@ The following requirements apply for secure communication between Runtime and PL
   - End entity certificate issued by a certification authority as well as the root certificate of the certification authority and its certificate revocation list.
   > **Note**
   >
-  > It is recommended to enable the "Only allow secure PG/PC and HMI communication" option on the PLC under "Protection & Security > Connection mechanism". If this option is enabled, the PLC always uses secure communication.
+  > It is recommended to enable the "Only allow secure PG/PC and HMI communication" option on the PLC under "Protection &amp; Security &gt; Connection mechanism". If this option is enabled, the PLC always uses secure communication.
 - The HMI device has an integrated connection to the PLC.  
   Or
 
@@ -211,8 +211,8 @@ The following requirements apply for secure communication between Runtime and PL
   >
   > The HMI device does not initially trust the PLC certificate after calling the system function. To establish a secure connection, you must trust the certificate manually:
   >
-  > - Unified PC: SIMATIC Runtime Manager > Settings > Certificates
-  > - Unified Panel: Control Panel > Security > Certificates
+  > - Unified PC: SIMATIC Runtime Manager &gt; Settings &gt; Certificates
+  > - Unified Panel: Control Panel &gt; Security &gt; Certificates
 
 #### Connection establishment
 
@@ -234,8 +234,8 @@ If an integrated connection to the PLC is configured on the HMI device or a non-
 
 If the "ChangeConnection" system function was called on the HMI device, the HMI device does not trust the PLC certificate at first. The PLC certificate has the status "untrusted". You must trust the certificate manually:
 
-- Unified PC: SIMATIC Runtime Manager > Settings > Certificates
-- Unified Panel: Control Panel > Security > Certificates
+- Unified PC: SIMATIC Runtime Manager &gt; Settings &gt; Certificates
+- Unified Panel: Control Panel &gt; Security &gt; Certificates
 
 #### Change to PLC configuration after loading the HMI device.
 
@@ -251,8 +251,8 @@ If secure communication is mandatory for the PLC, no connection is established.
 
 The connection is rejected. Trust the certificate on the HMI device manually:
 
-- Unified PC: Via "SIMATIC Runtime Manager > Settings > Certificates"
-- Unified Panel: Via "Control Panel > Security > Certificates"
+- Unified PC: Via "SIMATIC Runtime Manager &gt; Settings &gt; Certificates"
+- Unified Panel: Via "Control Panel &gt; Security &gt; Certificates"
 
 The next connection attempt is successful.
 
@@ -272,8 +272,8 @@ A certificate revocation list contains certificates that were revoked before the
 
 You can find or manage the certificate revocation lists of the HMI device here:
 
-- Unified PC: SIMATIC Runtime Manager > Settings > Certificates
-- Unified Panel: Control Panel > Security > Certificates
+- Unified PC: SIMATIC Runtime Manager &gt; Settings &gt; Certificates
+- Unified Panel: Control Panel &gt; Security &gt; Certificates
 
 While the HMI connection to a PLC is being established, the PLC certificate is compared with the certificate revocation list. If the certificate is listed there, the connection is denied. An alarm is output.
 
@@ -378,7 +378,7 @@ The options for addressing external tags depend on the type of HMI connection be
 
 - Integrated HMI connection
 
-  In the TIA Portal you configure integrated HMI connections between the devices in the "Devices & Networks" editor. An integrated HMI connection enables an optimized data exchange.
+  In the TIA Portal you configure integrated HMI connections between the devices in the "Devices &amp; Networks" editor. An integrated HMI connection enables an optimized data exchange.
 - Non-integrated HMI connection
 
   In the case of a non-integrated connection, the PLC program can be created outside the WinCC project. You configure the PLC and the WinCC project independently each other. For configuration in WinCC, you only need to know the addresses used in the PLC and their function.
@@ -408,7 +408,7 @@ The options for addressing external tags depend on the type of HMI connection be
 
 The following table provides an overview of the connection types that you can use in addition to the HMI connection for communication to specific device types and areas of application.
 
-Additional information on connection types is available in the online help of the TIA Portal in the section "Editing devices & networks".
+Additional information on connection types is available in the online help of the TIA Portal in the section "Editing devices &amp; networks".
 
 | Connection type | Description | Application |
 | --- | --- | --- |
@@ -475,8 +475,8 @@ In the case of non-integrated connections, the HMI devices, PC systems and PLCs 
 
 #### Time synchronization on the S7-1200/1500
 
-1. To make settings for the time synchronization, select the "Online & Diagnostics" node of the PLC in the project tree.
-2. In the Inspector window, select "Properties > General > Time of day".
+1. To make settings for the time synchronization, select the "Online &amp; Diagnostics" node of the PLC in the project tree.
+2. In the Inspector window, select "Properties &gt; General &gt; Time of day".
 
    ![Time synchronization on the S7-1200/1500](images/159586963851_DV_resource.Stream@PNG-en-US.png)
 
@@ -496,8 +496,8 @@ In the case of non-integrated connections, the HMI devices, PC systems and PLCs 
 
 #### Time synchronization on the S7-300/400
 
-1. To make settings for the time synchronization, select the "Online & Diagnostics" node of the PLC in the project tree.
-2. In the Inspector window, select "Properties > General > Time of day".
+1. To make settings for the time synchronization, select the "Online &amp; Diagnostics" node of the PLC in the project tree.
+2. In the Inspector window, select "Properties &gt; General &gt; Time of day".
 
    ![Time synchronization on the S7-300/400](images/160082060811_DV_resource.Stream@PNG-en-US.png)
 
@@ -515,8 +515,8 @@ In the case of non-integrated connections, the HMI devices, PC systems and PLCs 
 >
 > Activating this service reduces security against unauthorized access to functions and data of the PLC from the outside and via the network.
 
-1. To make settings for the time synchronization, select the "Online & Diagnostics" node of the panel in the project tree.
-2. Select "Properties > PROFINET interface [x] > Time synchronization" in the Inspector window.
+1. To make settings for the time synchronization, select the "Online &amp; Diagnostics" node of the panel in the project tree.
+2. Select "Properties &gt; PROFINET interface [x] &gt; Time synchronization" in the Inspector window.
 
    ![Time synchronization for PROFINET interfaces on Panels](images/159588765579_DV_resource.Stream@PNG-en-US.png)
 3. Enable the time synchronization.
@@ -547,16 +547,16 @@ The number of available interfaces and interface types depends on the device. To
 
 ##### Requirement
 
-- The "Devices & Networks" editor is open.
+- The "Devices &amp; Networks" editor is open.
 - The networks are configured.
-- An HMI device is configured in the "Devices & Networks" editor.
-- The PLC is configured in the "Devices & Networks" editor.
+- An HMI device is configured in the "Devices &amp; Networks" editor.
+- The PLC is configured in the "Devices &amp; Networks" editor.
 
 ##### Procedure
 
 To network an HMI device and a PLC, follow these steps:
 
-1. Open the network view of the "Devices & Networks" editor.
+1. Open the network view of the "Devices &amp; Networks" editor.
 2. Enable the "Networking" mode.
 3. Use a drag-and-drop operation to interconnect the interfaces of the desired communication network of the devices.
 
@@ -599,7 +599,7 @@ If all connection resources of a communication partner are allocated, no new con
 
 - The networks are configured.
 - An HMI device and a SIMATIC PLC are configured and networked.
-- The network view is open in the "Devices & Networks" editor.
+- The network view is open in the "Devices &amp; Networks" editor.
 
 ##### Create an integrated HMI connection
 
@@ -633,12 +633,12 @@ You can change the local name for the connection only in the tabular area of the
 
    ![Open the graphic view of the connection partners](images/159468380811_DV_resource.Stream@PNG-en-US.png)
 
-   The connection path is shown in the Inspector window under "Properties > General > General".
+   The connection path is shown in the Inspector window under "Properties &gt; General &gt; General".
 
 ##### Change the connection path
 
 1. Open the graphic view display of the connection partners.
-2. Select a different interface in the Inspector window under "Properties > General > General > Interface".
+2. Select a different interface in the Inspector window under "Properties &gt; General &gt; General &gt; Interface".
 
    The existing connection parameters are highlighted as invalid.
 3. To validate the connection parameters, click on "Find connection path".
@@ -736,7 +736,7 @@ To create a non-integrated connection, follow these steps:
    Existing non-integrated connections are identified with ![Procedure](images/104228646283_DV_resource.Stream@PNG-de-DE.png).
 2. Create a new connection with "Add".
 3. Select the communication driver. Use the communication driver of the required PLC family.
-4. Select the required interface of the HMI device in the graphic area of the editor under "Parameters > [HMI device type] > Interface".
+4. Select the required interface of the HMI device in the graphic area of the editor under "Parameters &gt; [HMI device type] &gt; Interface".
 
    The number of available interfaces on the HMI device depends on the communication driver.
 5. Change the connection parameters according to the requirements of your project.
@@ -780,7 +780,7 @@ Configure a Runtime script for enabling/disabling a connection in runtime.
 To configure enabling/disabling of a connection in Runtime, follow these steps:
 
 1. Select a button.
-2. Select the event that is to trigger enabling/disabling in runtime under "Properties > Events" in the Inspector window.
+2. Select the event that is to trigger enabling/disabling in runtime under "Properties &gt; Events" in the Inspector window.
 3. Program a script to the event which enables or disables the connection via the "Set Connection mode" snippet.
 
 #### Result
@@ -842,7 +842,7 @@ A Panel is a complete integrated HMI device which does not require further compo
 
 - The networks are configured.
 - HMI device and PLC each support the communication channel of the respective network.
-- The network view is open in the "Devices & Networks" editor.
+- The network view is open in the "Devices &amp; Networks" editor.
 - A corresponding interface is required at both ends to connect the HMI device to the PLC.
 
 #### Configuring a SIMATIC WinCC Unified PC

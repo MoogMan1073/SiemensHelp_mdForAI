@@ -189,7 +189,7 @@ A license for the WinCC Option Connectivity Pack is required to operate the REST
 
 For each tag, you can limit reading or writing of values to specific authorizations.
 
-In the Inspector window, under "Properties > Properties > Settings > REST API", select the desired authorization in the following fields:
+In the Inspector window, under "Properties &gt; Properties &gt; Settings &gt; REST API", select the desired authorization in the following fields:
 
 - REST API read authorization
 - REST API write authorization
@@ -203,7 +203,7 @@ In order to access a tag, give the user the authorizations set in the tag proper
 ##### Procedure
 
 1. Open the Runtime settings:
-2. Select the "Runtime settings > General" area.
+2. Select the "Runtime settings &gt; General" area.
 3. Under "REST settings", activate the option "Turn on".
 4. Specify the connection data:
 
@@ -215,7 +215,7 @@ In order to access a tag, give the user the authorizations set in the tag proper
 
    The available certificates are displayed.
 6. Select a certificate and confirm with "OK".
-7. Select the "Runtime settings > Services" area.
+7. Select the "Runtime settings &gt; Services" area.
 8. Under "Start sequence of WinCC Runtime", activate the "REST service" application.
 
 #### Methods for HMI tags (RT Professional)
@@ -237,7 +237,7 @@ GET / POST
 
 ###### URL
 
-https://<Host>:<Port>/WinCCRestService/TagManagement/value/<VariableName>
+https://&lt;Host&gt;:&lt;Port&gt;/WinCCRestService/TagManagement/value/&lt;VariableName&gt;
 
 ###### Body
 
@@ -269,7 +269,7 @@ PUT
 
 ###### URL
 
-https://<Host>:<Port>/WinCCRestService/TagManagement/value/<VariableName>
+https://&lt;Host&gt;:&lt;Port&gt;/WinCCRestService/TagManagement/value/&lt;VariableName&gt;
 
 ###### Body
 

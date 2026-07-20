@@ -272,11 +272,11 @@ PID_Compact will respond as follows:
 
 | Process value | InputWarning_H | InputWarning_L | ErrorBits | Operating mode |
 | --- | --- | --- | --- | --- |
-| > 98 °C | TRUE | FALSE | 0001h | Inactive or   Substitute output value with error monitoring |
-| ≤ 98 °C and > 90 °C | TRUE | FALSE | 0000h | Automatic mode |
+| &gt; 98 °C | TRUE | FALSE | 0001h | Inactive or   Substitute output value with error monitoring |
+| ≤ 98 °C and &gt; 90 °C | TRUE | FALSE | 0000h | Automatic mode |
 | ≤ 90 °C and ≥ 10 °C | FALSE | FALSE | 0000h | Automatic mode |
-| < 10 °C and ≥ 0 °C | FALSE | TRUE | 0000h | Automatic mode |
-| < 0 °C | FALSE | TRUE | 0001h | Inactive or   Substitute output value with error monitoring |
+| &lt; 10 °C and ≥ 0 °C | FALSE | TRUE | 0000h | Automatic mode |
+| &lt; 0 °C | FALSE | TRUE | 0001h | Inactive or   Substitute output value with error monitoring |
 
 In the output value settings, you can specify the reaction of PID_Compact when the process value high limit or low limit is violated.
 
@@ -455,7 +455,7 @@ All PID parameters are retentive. If you enter the PID parameters manually, you 
 
 ###### Proportional gain
 
-The value specifies the proportional gain of the controller. PID_Compact does not work with a negative proportional gain. Control logic is inverted under Basic settings > Controller type.
+The value specifies the proportional gain of the controller. PID_Compact does not work with a negative proportional gain. Control logic is inverted under Basic settings &gt; Controller type.
 
 ###### Integration time
 
@@ -473,7 +473,7 @@ Derivative delay = derivative action time × derivative delay coefficient
 
 - 0.0: Derivative action is effective for one cycle only and therefore almost not effective.
 - 0.5: This value has proved useful in practice for controlled systems with **one** dominant time constant.
-- > 1.0: The greater the coefficient, the longer the effect of the derivative action is delayed.
+- &gt; 1.0: The greater the coefficient, the longer the effect of the derivative action is delayed.
 
 ###### Proportional action weighting
 
@@ -568,7 +568,7 @@ All PID parameters are retentive. If you enter the PID parameters manually, you 
 
 ###### Proportional gain
 
-The value specifies the proportional gain of the controller. PID_Compact does not work with a negative proportional gain. Control logic is inverted under Basic settings > Controller type.
+The value specifies the proportional gain of the controller. PID_Compact does not work with a negative proportional gain. Control logic is inverted under Basic settings &gt; Controller type.
 
 ###### Integration time
 
@@ -594,7 +594,7 @@ Derivative delay = derivative action time × derivative delay coefficient
 
 - 0.0: Derivative action is effective for one cycle only and therefore almost not effective.
 - 0.5: This value has proved useful in practice for controlled systems with **one** dominant time constant.
-- > 1.0: The greater the coefficient, the longer the effect of the derivative action is delayed.
+- &gt; 1.0: The greater the coefficient, the longer the effect of the derivative action is delayed.
 
 ###### Proportional action weighting
 
@@ -676,13 +676,13 @@ The more stable the process value is, the easier it is to calculate the PID para
 - PID_Compact is in one of the following modes: "Inactive", "Manual mode", or "Automatic mode".
 - The setpoint and the process value lie within the configured limits (see "Process value monitoring" configuration).
 - The difference between setpoint and process value is greater than 30% of the difference between process value high limit and process value low limit.
-- The distance between the setpoint and the process value is > 50% of the setpoint.
+- The distance between the setpoint and the process value is &gt; 50% of the setpoint.
 
 ##### Procedure
 
 To perform pretuning, follow these steps:
 
-1. Double-click the "PID_Compact > Commissioning" entry in the project tree.
+1. Double-click the "PID_Compact &gt; Commissioning" entry in the project tree.
 2. Select the entry "Pretuning" in the "Tuning mode" drop-down list.
 3. Click the "Start" icon.
 
@@ -820,7 +820,7 @@ This procedure ensures that the calculation of the current output value and thus
 
 #### Requirements
 
-- PIDCtrl.PIDInit is only effective if the integral action is activated (Retain.CtrlParams.Ti tag > 0.0).
+- PIDCtrl.PIDInit is only effective if the integral action is activated (Retain.CtrlParams.Ti tag &gt; 0.0).
 - You must assign PIDCtrl.PIDInit and OverwriteInitialOutputValue in your user program yourself (see example below). PID_Compact does not automatically change these tags.
 - PIDCtrl.PIDInit is only effective when PID_Compact is in automatic mode (parameter State = 3)
 - If possible, select the sampling time of the PID algorithm (Retain.CtrlParams.Cycle tag) in such a way that it is identical for all controllers, and call all controllers in the same cyclic interrupt OB. In this way, you ensure that the switchover does not take place within a controller cycle or a PWM period.
@@ -1139,11 +1139,11 @@ PID_Compact will respond as follows:
 
 | Process value | InputWarning_H | InputWarning_L | Operating mode |
 | --- | --- | --- | --- |
-| > 98° C | TRUE | FALSE | Inactive |
-| ≤ 98° C and > 90° C | TRUE | FALSE | Automatic mode |
+| &gt; 98° C | TRUE | FALSE | Inactive |
+| ≤ 98° C and &gt; 90° C | TRUE | FALSE | Automatic mode |
 | ≤ 90° C and ≥ 10° C | FALSE | FALSE | Automatic mode |
-| < 10° C and ≥ 0° C | FALSE | TRUE | Automatic mode |
-| < 0° C | FALSE | TRUE | Inactive |
+| &lt; 10° C and ≥ 0° C | FALSE | TRUE | Automatic mode |
+| &lt; 0° C | FALSE | TRUE | Inactive |
 
 ---
 
@@ -1291,7 +1291,7 @@ All PID parameters are retentive. If you enter the PID parameters manually, you 
 
 ###### Proportional gain
 
-The value specifies the proportional gain of the controller. PID_Compact does not work with a negative proportional gain. Control logic is inverted under Basic settings > Controller type.
+The value specifies the proportional gain of the controller. PID_Compact does not work with a negative proportional gain. Control logic is inverted under Basic settings &gt; Controller type.
 
 ###### Integration time
 
@@ -1309,7 +1309,7 @@ Derivative delay = derivative action time × derivative delay coefficient
 
 - 0.0: Derivative action is effective for one cycle only and therefore almost not effective.
 - 0.5: This value has proved useful in practice for controlled systems with **one** dominant time constant.
-- > 1.0: The greater the coefficient, the longer the effect of the derivative action is delayed.
+- &gt; 1.0: The greater the coefficient, the longer the effect of the derivative action is delayed.
 
 ###### Proportional action weighting
 
@@ -1419,13 +1419,13 @@ The more stable the process value is, the easier it is to calculate the PID para
 - The setpoint may not be changed during controller tuning. PID_Compact will otherwise be deactivated.
 - The setpoint and the process value lie within the configured limits (see "Process value monitoring" configuration).
 - The difference between setpoint and process value is greater than 30% of the difference between process value high limit and process value low limit.
-- The distance between the setpoint and the process value is > 50% of the setpoint.
+- The distance between the setpoint and the process value is &gt; 50% of the setpoint.
 
 ##### Procedure
 
 To perform pretuning, follow these steps:
 
-1. Double-click the "PID_Compact > Commissioning" entry in the project tree.
+1. Double-click the "PID_Compact &gt; Commissioning" entry in the project tree.
 2. Select the entry "Pretuning" in the "Tuning mode" drop-down list.
 3. Click the "Start" icon.
 

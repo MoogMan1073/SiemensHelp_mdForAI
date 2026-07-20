@@ -306,16 +306,16 @@ The following table shows you when the DO1 is switched on or off:
 
 |  | DO1 is switched on when | DO1 Is switched off when |
 | --- | --- | --- |
-| V2 < V1  (see Figure below) | V2 ≤ counter status ≤ V1 | V2 > counter status  or  counter status > V1 |
+| V2 &lt; V1  (see Figure below) | V2 ≤ counter status ≤ V1 | V2 &gt; counter status  or  counter status &gt; V1 |
 | V2 = V1 | V2 = counter status = V1 | V2 ≠ counter status ≠ V1 |
-| V2 > V1  (see Figure below) | V1 > counter status  or  counter status > V2 | V1 ≤ counter status ≤ V2 |
+| V2 &gt; V1  (see Figure below) | V1 &gt; counter status  or  counter status &gt; V2 | V1 ≤ counter status ≤ V2 |
 
 The figures below show the status of output DO1 as determined by the counter value and comparison values:
 
-- V2 < V1 at the start of counting
+- V2 &lt; V1 at the start of counting
 
   ![Switch at comparison values](images/21844367371_DV_resource.Stream@PNG-en-US.png)
-- V2 > V1 at the start of counting
+- V2 &gt; V1 at the start of counting
 
   ![Switch at comparison values](images/21844477323_DV_resource.Stream@PNG-en-US.png)
 
@@ -339,7 +339,7 @@ This is where you select the substitute value which is to be output at digital o
 
 ##### DO1 and DO2 diagnostics
 
-"DO1 diagnostics" or "DO2 diagnostics" (wire break, short circuit) are possible only with pulse lengths of > 90 ms at digital output DO1 or DO2.
+"DO1 diagnostics" or "DO2 diagnostics" (wire break, short circuit) are possible only with pulse lengths of &gt; 90 ms at digital output DO1 or DO2.
 
 Select the check box for diagnostics at output DO1 or DO2.
 
@@ -383,7 +383,7 @@ Hysteresis will no longer be active if the counter value is outside the hysteres
 
 The example in the figure below demonstrates the effect of hysteresis. The figure shows the various responses of an output with a hysteresis of 0 (= switched off) as opposed to hysteresis of 3. In the example, the comparison value is 5.
 
-The following settings are assigned for the counter: "Pulse on reaching the comparison value", "No main count direction" and "Pulse duration > 0".
+The following settings are assigned for the counter: "Pulse on reaching the comparison value", "No main count direction" and "Pulse duration &gt; 0".
 
 When the comparison conditions have been met, hysteresis becomes active and a pulse of the assigned duration is output.
 
@@ -617,7 +617,7 @@ This is where you can select either once only or periodic synchronization if you
 
 By configuring an high count limit together with a [main count direction](Counting%20and%20measuring%20%28S7-300%2C%20S7-400%29.md#main-count-direction-s7-300-s7-400)  (up or down), you can reduce the maximum counting range. The parameterized counting range is then between 0 and the high count limit parameterized.
 
-The high count limit can be any value between > 1 and the high count range limit.
+The high count limit can be any value between &gt; 1 and the high count range limit.
 
 ### Control and feedback interface for counting modes (S7-300, S7-400)
 
@@ -1018,9 +1018,9 @@ The figure below illustrates limit monitoring.
 
 When the integration time has elapsed, the measured value obtained (frequency, rotational speed or period) is compared with the assigned limits.
 
-The STS_UFLW = 1 bit will be set in the [feedback](#feedback-interface-for-measuring-modes-s7-300-s7-400) interface if the current measured value is below the parameterized low limit (measured value < low limit).
+The STS_UFLW = 1 bit will be set in the [feedback](#feedback-interface-for-measuring-modes-s7-300-s7-400) interface if the current measured value is below the parameterized low limit (measured value &lt; low limit).
 
-The STS_OFLW = 1 bit will be set in the [feedback](#feedback-interface-for-measuring-modes-s7-300-s7-400) interface if the current measured value is above the parameterized high limit (measured value > high limit).
+The STS_OFLW = 1 bit will be set in the [feedback](#feedback-interface-for-measuring-modes-s7-300-s7-400) interface if the current measured value is above the parameterized high limit (measured value &gt; high limit).
 
 You must acknowledge these bits with the [control bit](#control-interface-for-measuring-modes-s7-300-s7-400)RES_STS.
 
@@ -1032,9 +1032,9 @@ The table below shows how the enabled digital output DO1 can be set by limit mon
 
 | "Function DO1" parameter | DO1 is Set ... |
 | --- | --- |
-| Outside limits | Measured value < low limit  OR measured value > high limit |
-| Violating low limit | Measured value < low limit |
-| Exceeding high limit | Measured value > high limit |
+| Outside limits | Measured value &lt; low limit  OR measured value &gt; high limit |
+| Violating low limit | Measured value &lt; low limit |
+| Exceeding high limit | Measured value &gt; high limit |
 
 In isochronous mode the output is switched at the end of measurement at time T<sub>i</sub>.
 
@@ -1048,7 +1048,7 @@ This is where you select the substitute value which is to be output at digital o
 
 ##### DO1 and DO2 diagnostics
 
-"DO1 diagnostics" or "DO2 diagnostics" (wire break, short circuit) are possible only with pulse lengths of > 90 ms at digital output DO1 or DO2.
+"DO1 diagnostics" or "DO2 diagnostics" (wire break, short circuit) are possible only with pulse lengths of &gt; 90 ms at digital output DO1 or DO2.
 
 Select the check box for diagnostics at output DO1 or DO2.
 

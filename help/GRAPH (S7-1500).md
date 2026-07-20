@@ -362,9 +362,9 @@ CALL TP TIME, "IEC_TP_DB"
 
 PT := "Tag_PresetTIME"
 
-Q => "Tag_Status"
+Q =&gt; "Tag_Status"
 
-ET => "Tag_ElapsedTIME"
+ET =&gt; "Tag_ElapsedTIME"
 
 )
 
@@ -458,9 +458,9 @@ CALL TON TIME, "IEC_TON_DB"
 
 PT := "Tag_PresetTIME"
 
-Q => "Tag_Status"
+Q =&gt; "Tag_Status"
 
-ET => "Tag_ElapsedTIME"
+ET =&gt; "Tag_ElapsedTIME"
 
 )
 
@@ -554,9 +554,9 @@ CALL TOF TIME, "IEC_TOF_DB"
 
 PT := "Tag_PresetTIME"
 
-Q => "Tag_Status"
+Q =&gt; "Tag_Status"
 
-ET => "Tag_ElapsedTIME"
+ET =&gt; "Tag_ElapsedTIME"
 
 )
 
@@ -656,9 +656,9 @@ R := "Tag_Reset"
 
 PT := "Tag_PresetTIME"
 
-Q => "Tag_Status"
+Q =&gt; "Tag_Status"
 
-ET => "Tag_ElapsedTIME"
+ET =&gt; "Tag_ElapsedTIME"
 
 )
 
@@ -700,7 +700,7 @@ The value of the CV parameter is reset to zero when the signal state at the R pa
 
 Each call of the "Count up" instruction must be assigned an IEC counter in which the instruction data is stored. An IEC counter is a structure with one of the following data types:
 
-##### Data block of system data type IEC_<Counter> (Shared DB)
+##### Data block of system data type IEC_&lt;Counter&gt; (Shared DB)
 
 - IEC_SCOUNTER / IEC_USCOUNTER
 - IEC_COUNTER / IEC_UCOUNTER
@@ -720,8 +720,8 @@ Each call of the "Count up" instruction must be assigned an IEC counter in which
 
 You can declare an IEC counter as follows:
 
-- Declaration of a data block of system data type IEC_<Counter> (for example, "MyIEC_COUNTER")
-- Declaration as a local tag of the type CTU_<Data_type> or IEC_<Counter> in the "Static" section of a block (for example #MyCTU_COUNTER)
+- Declaration of a data block of system data type IEC_&lt;Counter&gt; (for example, "MyIEC_COUNTER")
+- Declaration as a local tag of the type CTU_&lt;Data_type&gt; or IEC_&lt;Counter&gt; in the "Static" section of a block (for example #MyCTU_COUNTER)
 
 When you set up the IEC counter in a separate data block (single instance), the instance data block is created by default with "optimized block access" and the individual tags are defined as retentive. For additional information on setting retentivity in an instance data block, refer to "See also".
 
@@ -757,9 +757,9 @@ R := "Tag_ResetCOUNTER"
 
 PV := "Tag_PresetValue"
 
-Q => "Tag_Status"
+Q =&gt; "Tag_Status"
 
-CV => "Tag_CounterValue"
+CV =&gt; "Tag_CounterValue"
 
 )
 
@@ -799,7 +799,7 @@ The value of the CV parameter is set to the value of the PV parameter when the s
 
 Each call of the "Count down" instruction must be assigned an IEC counter in which the instruction data is stored. An IEC counter is a structure with one of the following data types:
 
-##### Data block of system data type IEC_<Counter> (Shared DB)
+##### Data block of system data type IEC_&lt;Counter&gt; (Shared DB)
 
 - IEC_SCOUNTER / IEC_USCOUNTER
 - IEC_COUNTER / IEC_UCOUNTER
@@ -819,8 +819,8 @@ Each call of the "Count down" instruction must be assigned an IEC counter in whi
 
 You can declare an IEC counter as follows:
 
-- Declaration of a data block of system data type IEC_<Counter> (for example, "MyIEC_COUNTER")
-- Declaration as a local tag of the type CTD_<Data_type> or IEC_<Counter> in the "Static" section of a block (for example #MyCTD_COUNTER)
+- Declaration of a data block of system data type IEC_&lt;Counter&gt; (for example, "MyIEC_COUNTER")
+- Declaration as a local tag of the type CTD_&lt;Data_type&gt; or IEC_&lt;Counter&gt; in the "Static" section of a block (for example #MyCTD_COUNTER)
 
 When you set up the IEC counter in a separate data block (single instance), the instance data block is created by default with "optimized block access" and the individual tags are defined as retentive. For additional information on setting retentivity in an instance data block, refer to "See also".
 
@@ -856,9 +856,9 @@ LD := "Tag_LoadPV"
 
 PV := "Tag_PresetValue"
 
-Q => "Tag_Status"
+Q =&gt; "Tag_Status"
 
-CV => "Tag_CounterValue"
+CV =&gt; "Tag_CounterValue"
 
 )
 
@@ -904,7 +904,7 @@ You can query the status of the down counter at the QD parameter. If the current
 
 Each call of the "Count up and down" instruction must be assigned an IEC counter in which the instruction data is stored. An IEC counter is a structure with one of the following data types:
 
-##### Data block of system data type IEC_<Counter> (Shared DB)
+##### Data block of system data type IEC_&lt;Counter&gt; (Shared DB)
 
 - IEC_SCOUNTER / IEC_USCOUNTER
 - IEC_COUNTER / IEC_UCOUNTER
@@ -924,8 +924,8 @@ Each call of the "Count up and down" instruction must be assigned an IEC counter
 
 You can declare an IEC counter as follows:
 
-- Declaration of a data block of system data type IEC_<Counter> (for example, "MyIEC_COUNTER")
-- Declaration as a local tag of the type CTUD_<Data_type> or IEC_<Counter> in the "Static" section of a block (for example #MyCTUD_COUNTER)
+- Declaration of a data block of system data type IEC_&lt;Counter&gt; (for example, "MyIEC_COUNTER")
+- Declaration as a local tag of the type CTUD_&lt;Data_type&gt; or IEC_&lt;Counter&gt; in the "Static" section of a block (for example #MyCTUD_COUNTER)
 
 When you set up the IEC counter in a separate data block (single instance), the instance data block is created by default with "optimized block access" and the individual tags are defined as retentive. For additional information on setting retentivity in an instance data block, refer to "See also".
 
@@ -968,11 +968,11 @@ LD := "Tag_LoadPV"
 
 PV := "Tag_PresetValue"
 
-​ QU => "Tag_CounterStatusUP"
+​ QU =&gt; "Tag_CounterStatusUP"
 
-QD => "Tag_CounterStatusDOWN"
+QD =&gt; "Tag_CounterStatusDOWN"
 
-CV => "Tag_CounterValue"
+CV =&gt; "Tag_CounterValue"
 
 )
 
@@ -1033,8 +1033,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | SINT, INT, DINT, LINT, floating-point numbers | I, Q, M, D, L, P or constant | Input value |
-| <Result> | Output | SINT, INT, DINT, LINT, floating-point numbers | I, Q, M, D, L, P | Twos complement of the input value |
+| &lt;Operand&gt; | Input | SINT, INT, DINT, LINT, floating-point numbers | I, Q, M, D, L, P or constant | Input value |
+| &lt;Result&gt; | Output | SINT, INT, DINT, LINT, floating-point numbers | I, Q, M, D, L, P | Twos complement of the input value |
 
 You can select the data type of the instruction from the "???" drop-down list.
 
@@ -1076,8 +1076,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | SINT, INT, DINT, LINT, floating-point numbers | I, Q, M, D, L, P or constant | Input value |
-| <Result> | Output | SINT, INT, DINT, LINT, floating-point numbers | I, Q, M, D, L, P | Absolute value of the input value |
+| &lt;Operand&gt; | Input | SINT, INT, DINT, LINT, floating-point numbers | I, Q, M, D, L, P or constant | Input value |
+| &lt;Result&gt; | Output | SINT, INT, DINT, LINT, floating-point numbers | I, Q, M, D, L, P | Absolute value of the input value |
 
 You can find additional information on valid data types under "See also".
 
@@ -1148,7 +1148,7 @@ CALL MIN INT
 
 IN2 := "TagIn_Value2"
 
-​OUT => "Tag_Minimum"
+​OUT =&gt; "Tag_Minimum"
 
 )
 
@@ -1212,7 +1212,7 @@ CALL MAX INT
 
 IN2 := "TagIn_Value2"
 
-​OUT => "Tag_Maximum"
+​OUT =&gt; "Tag_Maximum"
 
 )
 
@@ -1242,7 +1242,7 @@ The instruction compares the values of the specified operands and copies the hig
 
 ##### Description
 
-You use the "Set limit value" instruction to limit the value of the IN input to the values of the MN and MX inputs. If the value of the IN input meets the condition MN <= IN <= MX, it is copied to the OUT output. If the condition is not met and the IN input value is below the low limit MN, the OUT output is set to the value of the MN input. If the high limit MX is exceeded, the OUT output is set to the value of the MX input.
+You use the "Set limit value" instruction to limit the value of the IN input to the values of the MN and MX inputs. If the value of the IN input meets the condition MN &lt;= IN &lt;= MX, it is copied to the OUT output. If the condition is not met and the IN input value is below the low limit MN, the OUT output is set to the value of the MN input. If the high limit MX is exceeded, the OUT output is set to the value of the MX input.
 
 If the value at the MN input is greater than at the MX input, the result is the value specified at the IN parameter. The instruction is only executed if the tags of all inputs are of the same data type.
 
@@ -1282,7 +1282,7 @@ IN := "Tag_InputValue"
 
 MX := "Tag_HighLimit"
 
-​OUT => "Tag_Result"
+​OUT =&gt; "Tag_Result"
 
 )
 
@@ -1323,8 +1323,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L, P | Square of the input value |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L, P | Square of the input value |
 
 You can find additional information on valid data types under "See also".
 
@@ -1369,8 +1369,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L | Square root of the input value |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L | Square root of the input value |
 
 You can find additional information on valid data types under "See also".
 
@@ -1417,8 +1417,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L, P | Natural logarithm of the input value |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L, P | Natural logarithm of the input value |
 
 You can find additional information on valid data types under "See also".
 
@@ -1458,8 +1458,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L, P | Exponential value of the input value |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L, P | Exponential value of the input value |
 
 You can find additional information on valid data types under "See also".
 
@@ -1501,8 +1501,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Size of angle in radians |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L, P | Sine of the specified angle |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Size of angle in radians |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L, P | Sine of the specified angle |
 
 You can find additional information on valid data types under "See also".
 
@@ -1549,8 +1549,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Size of angle in radians |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L, P | Cosine of the specified angle |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Size of angle in radians |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L, P | Cosine of the specified angle |
 
 You can find additional information on valid data types under "See also".
 
@@ -1597,8 +1597,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Size of angle in radians |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L, P | Tangent of the specified angle |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Size of angle in radians |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L, P | Tangent of the specified angle |
 
 You can find additional information on valid data types under "See also".
 
@@ -1648,8 +1648,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Sine value |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L, P | Size of angle in radians |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Sine value |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L, P | Size of angle in radians |
 
 You can find additional information on valid data types under "See also".
 
@@ -1699,8 +1699,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Cosine value |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L, P | Size of angle in radians |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Cosine value |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L, P | Size of angle in radians |
 
 You can find additional information on valid data types under "See also".
 
@@ -1745,8 +1745,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Tangent value |
-| <Result> | Output | Floating-point numbers | I, Q, M, D, L, P | Size of angle in radians |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Tangent value |
+| &lt;Result&gt; | Output | Floating-point numbers | I, Q, M, D, L, P | Size of angle in radians |
 
 You can find additional information on valid data types under "See also".
 
@@ -1812,7 +1812,7 @@ CALL FRAC REAL
 
 (IN := "Tag_InValue"
 
-RET_VAL => "Tag_OutValue"
+RET_VAL =&gt; "Tag_OutValue"
 
 )
 
@@ -1861,11 +1861,11 @@ This section contains information on the following topics:
 
 ##### Description
 
-You can use the "Deserialize" instruction to convert back the sequential representation of a PLC data type (UDT), STRUCT or ARRAY of <data type> and to fill its entire contents. You can use the instruction to convert multiple serialized data areas back to their deserialized representation form.
+You can use the "Deserialize" instruction to convert back the sequential representation of a PLC data type (UDT), STRUCT or ARRAY of &lt;data type&gt; and to fill its entire contents. You can use the instruction to convert multiple serialized data areas back to their deserialized representation form.
 
-If you only want to convert back a single sequential representation of a PLC data type (UDT), STRUCT or ARRAY of <data type>, you can also directly use the instruction "TRCV: Receive data via communication connection".
+If you only want to convert back a single sequential representation of a PLC data type (UDT), STRUCT or ARRAY of &lt;data type&gt;, you can also directly use the instruction "TRCV: Receive data via communication connection".
 
-The memory area "SRC_ARRAY" in which the sequential representation of a PLC data type (UDT), STRUCT or ARRAY of <data type> is located must have the ARRAY of BYTE or ARRAY of CHAR data type and be declared with standard access in version 1.0. The capacity of the standard memory area is 64 KB. Make sure that there is enough memory space prior to the conversion. Optimized memory areas are also permitted as of version 2.0.
+The memory area "SRC_ARRAY" in which the sequential representation of a PLC data type (UDT), STRUCT or ARRAY of &lt;data type&gt; is located must have the ARRAY of BYTE or ARRAY of CHAR data type and be declared with standard access in version 1.0. The capacity of the standard memory area is 64 KB. Make sure that there is enough memory space prior to the conversion. Optimized memory areas are also permitted as of version 2.0.
 
 When the "SRC_ARRAY" memory area is filled using the "Serialize" instruction, any required filling bytes are automatically inserted. If you fill the "SRC_ARRAY" memory area by other means, you need to insert any required filling bytes yourself. Filling bytes are ignored during deserialization, regardless of whether "SRC_ARRAY" is in an optimized or a standard memory area.
 
@@ -1881,7 +1881,7 @@ For a block with the block property "Optimized block access", the BOOL has a len
 
 ##### Optimized memory area
 
-To deserialize larger structures, you can declare the memory area for sequential representation with optimized access for a CPU of the S7-1200 series as of firmware version >= 4.2, and for a CPU of the S7-1500 series as of firmware version >= 2.0. The content of the sequential representation remains unchanged, as for a standard memory area. Only symbolic access to the bytes in the ARRAY is possible.
+To deserialize larger structures, you can declare the memory area for sequential representation with optimized access for a CPU of the S7-1200 series as of firmware version &gt;= 4.2, and for a CPU of the S7-1500 series as of firmware version &gt;= 2.0. The content of the sequential representation remains unchanged, as for a standard memory area. Only symbolic access to the bytes in the ARRAY is possible.
 
 ##### Parameters
 
@@ -1945,11 +1945,11 @@ CALL Deserialize VARIANT
 
 (SRC_ARRAY := "Buffer".Field
 
-DEST_VARIABLE => "Target".Client
+DEST_VARIABLE =&gt; "Target".Client
 
 POS := #BufferPos
 
-RET_VAL => #Error
+RET_VAL =&gt; #Error
 
 )
 
@@ -1985,7 +1985,7 @@ The instruction deserializes the sequential representation of the customer data 
 
 ##### Description
 
-You can use the "Serialize" instruction to convert several PLC data types (UDT), STRUCT or ARRAY of <data type> to a sequential representation without losing parts of their structure.
+You can use the "Serialize" instruction to convert several PLC data types (UDT), STRUCT or ARRAY of &lt;data type&gt; to a sequential representation without losing parts of their structure.
 
 You use the instruction to temporarily save multiple structured data items from your program in a buffer, which should preferably be in a global data block, and send them to another CPU. The memory area in which the converted data is stored must have the ARRAY of BYTE or ARRAY of CHAR data type and be declared with standard access in version 1.0. Optimized data is also permitted as of version 2.0. Fill data of the source data area is undefined in the target array. These can be fill bytes or fill bits of a data area (e.g. ARRAY, STRUCT or PLC data type (UDT)) as well as the characters of a string currently not in use.
 
@@ -1995,7 +1995,7 @@ It is recommended to define the low limit of the ARRAY with "0", because then th
 
 The operand at the POS parameter contains information about the number of bytes used by the converted data.
 
-If you want to send a single PLC data type (UDT), STRUCT or ARRAY of <data type>, you can directly call the instruction "TSEND: Send data via communication connection".
+If you want to send a single PLC data type (UDT), STRUCT or ARRAY of &lt;data type&gt;, you can directly call the instruction "TSEND: Send data via communication connection".
 
 ##### Size of the memory area
 
@@ -2009,7 +2009,7 @@ We therefore recommend that the source data area for the serialization starts wi
 
 ##### Optimized memory area
 
-To serialize larger structures, you can declare the memory area with optimized access for a CPU of the S7-1200 series as of firmware version >= 4.2, and for a CPU of the S7-1500 series as of firmware version >= 2.0. The sequential representation remains unchanged, as for a standard memory area.
+To serialize larger structures, you can declare the memory area with optimized access for a CPU of the S7-1200 series as of firmware version &gt;= 4.2, and for a CPU of the S7-1500 series as of firmware version &gt;= 2.0. The sequential representation remains unchanged, as for a standard memory area.
 
 ##### Parameters
 
@@ -2075,11 +2075,11 @@ CALL Serialize VARIANT
 
 (SRC_VARIABLE := "Source".Client
 
-DEST_ARRAY => "Buffer".Field
+DEST_ARRAY =&gt; "Buffer".Field
 
 POS := #BufferPos
 
-RET_VAL => #Error
+RET_VAL =&gt; #Error
 
 )
 
@@ -2154,7 +2154,7 @@ CALL MOVE_BLK INT_UINT
 
 COUNT := "Tag_Count"
 
-OUT => #b_array[1]
+OUT =&gt; #b_array[1]
 
 )
 
@@ -2175,7 +2175,7 @@ Starting from the third element, the instruction selects three INT elements from
 > In STEP 7 (TIA Portal) how do you copy memory areas and structured data from one data block to another?
 >
 > ![Example](images/84907645963_DV_resource.Stream@PNG-de-DE.png)
-> <https://support.industry.siemens.com/cs/ww/en/view/42603881>
+> [https://support.industry.siemens.com/cs/ww/en/view/42603881](https://support.industry.siemens.com/cs/ww/en/view/42603881)
 
 ---
 
@@ -2209,7 +2209,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| SRC | Input<sup> 2)</sup> | VARIANT (which points to an ARRAY or an individual ARRAY element), ARRAY of <Data_type> | L (The declaration is possible in the "Input", "InOut" and "Temp" sections of the block interface.) | Source block from which to copy |
+| SRC | Input<sup> 2)</sup> | VARIANT (which points to an ARRAY or an individual ARRAY element), ARRAY of &lt;Data_type&gt; | L (The declaration is possible in the "Input", "InOut" and "Temp" sections of the block interface.) | Source block from which to copy |
 | COUNT | Input | UDINT | I, Q, M, D, L or constant | Number of elements which are copied  Assign the value "1" to the parameter COUNT, if no ARRAY is specified at parameter SRC or at parameter DEST. |
 | SRC_INDEX | Input | DINT | I, Q, M, D, L or constant | Defines the first element to be copied:  - The SRC_INDEX parameter is calculated zero-based. If an ARRAY is specified at parameter SRC, the integer at parameter SRC_INDEX specifies the first element within the source area from which it is to be copied. Independent of the declared ARRAY limits. - If no Array is specified at parameter SRC or only one single element of an ARRAY is specified, then assign the value "0" at parameter SRC_INDEX. |
 | DEST_INDEX | Input | DINT | I, Q, M, D, L or constant | Defines the start of the destination memory area:  - The DEST_INDEX parameter is calculated zero-based. If an ARRAY is specified at parameter DEST, the integer at parameter DEST_INDEX specifies the first element within the target range that is to be copied into. Independent of the declared ARRAY limits. - If no ARRAY is specified at parameter DEST, then assign the value "0" at parameter DEST_INDEX. |
@@ -2259,7 +2259,7 @@ SRC_INDEX := "Tag_Src_Index"
 
 DEST_INDEX := "Tag_Dest_Index"
 
-DEST =>​ #DestField
+DEST =&gt;​ #DestField
 
 RET_VAL := "Tag_Result"
 
@@ -2284,7 +2284,7 @@ Two elements are moved from the source range, starting from the fourth element o
 > In STEP 7 (TIA Portal) how do you copy memory areas and structured data from one data block to another?
 >
 > ![Example](images/84907645963_DV_resource.Stream@PNG-de-DE.png)
-> <https://support.industry.siemens.com/cs/ww/en/view/42603881>
+> [https://support.industry.siemens.com/cs/ww/en/view/42603881](https://support.industry.siemens.com/cs/ww/en/view/42603881)
 
 ---
 
@@ -2351,7 +2351,7 @@ CALL UMOVE_BLK INT_UINT
 
 COUNT := "Tag_Count"
 
-OUT => #b_array[1]
+OUT =&gt; #b_array[1]
 
 )
 
@@ -2372,7 +2372,7 @@ Starting from the third element, the instruction selects three INT elements from
 > In STEP 7 (TIA Portal) how do you copy memory areas and structured data from one data block to another?
 >
 > ![Example](images/84907645963_DV_resource.Stream@PNG-de-DE.png)
-> <https://support.industry.siemens.com/cs/ww/en/view/42603881>
+> [https://support.industry.siemens.com/cs/ww/en/view/42603881](https://support.industry.siemens.com/cs/ww/en/view/42603881)
 
 ---
 
@@ -2432,7 +2432,7 @@ CALL FILL_BLK INT_UINT
 
 COUNT := "Tag_Count"
 
-OUT => #TargetArea[1]
+OUT =&gt; #TargetArea[1]
 
 )
 
@@ -2484,7 +2484,7 @@ CALL FILL_BLK INT_UINT
 
 COUNT := 2
 
-OUT => "Data_block_1".MyStruct1.Member_2
+OUT =&gt; "Data_block_1".MyStruct1.Member_2
 
 )
 
@@ -2498,7 +2498,7 @@ CALL FILL_BLK INT_UINT
 
 COUNT := 2
 
-OUT => "Data_block_1".MyStruct2.SubArray[1].NestedStruct.Member_2
+OUT =&gt; "Data_block_1".MyStruct2.SubArray[1].NestedStruct.Member_2
 
 )
 
@@ -2568,7 +2568,7 @@ CALL UFILL_BLK INT_UINT
 
 COUNT := "Tag_Count"
 
-OUT => #TargetArea[1]
+OUT =&gt; #TargetArea[1]
 
 )
 
@@ -2620,7 +2620,7 @@ CALL UFILL_BLK INT_UINT
 
 COUNT := 2
 
-OUT => "Data_block_1".MyStruct1.Member_2
+OUT =&gt; "Data_block_1".MyStruct1.Member_2
 
 )
 
@@ -2634,7 +2634,7 @@ CALL UFILL_BLK INT_UINT
 
 COUNT := 2
 
-OUT => "Data_block_1".MyStruct2.SubArray[1].NestedStruct.Member_2
+OUT =&gt; "Data_block_1".MyStruct2.SubArray[1].NestedStruct.Member_2
 
 )
 
@@ -2710,7 +2710,7 @@ CALL SCATTER
 
 (IN := #SourceWord
 
-OUT => #DestinationArray
+OUT =&gt; #DestinationArray
 
 )
 
@@ -2744,7 +2744,7 @@ CALL SCATTER
 
 (IN := #SourceWord
 
-OUT => #DestinationUDT
+OUT =&gt; #DestinationUDT
 
 )
 
@@ -2827,7 +2827,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| IN | Input | Element of an ARRAY[*] of  - BYTE  - WORD  - DWORD  - LWORD | I, Q, M, D, L | ARRAY of <bit sequence> that is parsed.  The values must not be located in the I/O area or in the DB of a technology object. |
+| IN | Input | Element of an ARRAY[*] of  - BYTE  - WORD  - DWORD  - LWORD | I, Q, M, D, L | ARRAY of &lt;bit sequence&gt; that is parsed.  The values must not be located in the I/O area or in the DB of a technology object. |
 | COUNT_IN | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L | Counter for the number of elements of the source ARRAY that are going to be parsed.  The value must not be in the I/O area or in the database of a technology object. |
 | OUT | Output | Element of an ARRAY[*] of   - BOOL  - STRUCT  - PLC data type | I, Q, M, D, L | ARRAY, STRUCT or PLC data type in which the individual bits are stored |
 
@@ -2855,7 +2855,7 @@ CALL SCATTER_BLK
 
 COUNT_IN := #CounterInput
 
-OUT => #DestinationArrayBool[0]
+OUT =&gt; #DestinationArrayBool[0]
 
 )
 
@@ -2889,7 +2889,7 @@ CALL SCATTER_BLK
 
 COUNT_IN := #CounterInput
 
-OUT => #DestinationArrayBool[14]
+OUT =&gt; #DestinationArrayBool[14]
 
 )
 
@@ -2973,7 +2973,7 @@ CALL GATHER
 
 (IN := #SourceArray
 
-OUT => #DestinationWord
+OUT =&gt; #DestinationWord
 
 )
 
@@ -3007,7 +3007,7 @@ CALL GATHER
 
 (IN := #SourceUDT
 
-OUT => #DestinationWord
+OUT =&gt; #DestinationWord
 
 )
 
@@ -3034,7 +3034,7 @@ The following table shows how the instruction works using specific operand value
 
 ##### Description
 
-The "Merge individual bits into multiple elements of an ARRAY of bit sequence" instruction merges the bits from an ARRAY of BOOL, an anonymous STRUCT or a PLC data type exclusively with Boolean elements into one or multiple elements of an ARRAY of <bit sequence>. At the COUNT_OUT parameter you specify how many elements of the destination ARRAY are going to be written. With this step you also implicitly specify how many elements of the ARRAY of BOOL, the anonymous STRUCT or the PLC data type are required. The destination ARRAY at the OUT parameter may have more elements than specified at the COUNT_OUT parameter. The ARRAY of <bit sequence> must have sufficient elements to save the bits that are going to be merged. However, the destination ARRAY may also be larger.
+The "Merge individual bits into multiple elements of an ARRAY of bit sequence" instruction merges the bits from an ARRAY of BOOL, an anonymous STRUCT or a PLC data type exclusively with Boolean elements into one or multiple elements of an ARRAY of &lt;bit sequence&gt;. At the COUNT_OUT parameter you specify how many elements of the destination ARRAY are going to be written. With this step you also implicitly specify how many elements of the ARRAY of BOOL, the anonymous STRUCT or the PLC data type are required. The destination ARRAY at the OUT parameter may have more elements than specified at the COUNT_OUT parameter. The ARRAY of &lt;bit sequence&gt; must have sufficient elements to save the bits that are going to be merged. However, the destination ARRAY may also be larger.
 
 > **Note**
 >
@@ -3070,8 +3070,8 @@ The "Merge individual bits into multiple elements of an ARRAY of bit sequence" i
 
 The enable output ENO returns signal state "0" if one of the following conditions applies:
 
-- The index of the source ARRAY does not start at a BYTE, WORD, DWORD or LWORD limit. In this case, no result is written to the ARRAY of <bit sequence>.
-- The ARRAY[*] of <bit sequence> does not provide the required number of elements. In this case as many bit sequences as possible are merged and written to the ARRAY of <bit sequence>. The remaining bits are no longer taken into account.
+- The index of the source ARRAY does not start at a BYTE, WORD, DWORD or LWORD limit. In this case, no result is written to the ARRAY of &lt;bit sequence&gt;.
+- The ARRAY[*] of &lt;bit sequence&gt; does not provide the required number of elements. In this case as many bit sequences as possible are merged and written to the ARRAY of &lt;bit sequence&gt;. The remaining bits are no longer taken into account.
 
 > **Note**
 >
@@ -3087,7 +3087,7 @@ The following table shows the parameters of the instruction:
 | --- | --- | --- | --- | --- |
 | IN | Input | Element of an ARRAY[*] of   - BOOL  - STRUCT  - PLC data type | I, Q, M, D, L | ARRAY of BOOL, STRUCT or PLC data type whose bits are merged (source ARRAY)  The values must not be located in the I/O area or in the DB of a technology object. |
 | COUNT_OUT | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L | Counter how many elements of the target ARRAY are to be described.  The value must not be in the I/O area or in the database of a technology object. |
-| OUT | Output | Element of an ARRAY[*] of  - BYTE  - WORD  - DWORD  - LWORD | I, Q, M, D, L | ARRAY of <bit sequence> to which the bits are saved (destination ARRAY) |
+| OUT | Output | Element of an ARRAY[*] of  - BYTE  - WORD  - DWORD  - LWORD | I, Q, M, D, L | ARRAY of &lt;bit sequence&gt; to which the bits are saved (destination ARRAY) |
 
 You can find additional information on valid data types under "See also".
 
@@ -3111,7 +3111,7 @@ CALL GATHER_BLK
 
 COUNT_OUT := #CounterOutput
 
-OUT => #DestinationArrayWord[2]
+OUT =&gt; #DestinationArrayWord[2]
 
 )
 
@@ -3145,7 +3145,7 @@ CALL GATHER_BLK
 
 COUNT_OUT := #CounterOutput
 
-OUT => #DestinationArrayWord[2]
+OUT =&gt; #DestinationArrayWord[2]
 
 )
 
@@ -3202,8 +3202,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | WORD, DWORD, LWORD | I, Q, M, D, L or constant | Operand whose bytes are swapped |
-| <Result> | Output | WORD, DWORD, LWORD | I, Q, M, D, L | Result |
+| &lt;Operand&gt; | Input | WORD, DWORD, LWORD | I, Q, M, D, L or constant | Operand whose bytes are swapped |
+| &lt;Result&gt; | Output | WORD, DWORD, LWORD | I, Q, M, D, L | Result |
 
 You can find additional information on valid data types under "See also".
 
@@ -3317,9 +3317,9 @@ CALL ReadFromArrayDB
 
 INDEX := 2
 
-VALUE => "TargetField"
+VALUE =&gt; "TargetField"
 
-RET_VAL => "TagResult"
+RET_VAL =&gt; "TagResult"
 
 )
 
@@ -3403,7 +3403,7 @@ INDEX := 2
 
 VALUE := "SourceField"
 
-RET_VAL => "TagResult"
+RET_VAL =&gt; "TagResult"
 
 )
 
@@ -3498,11 +3498,11 @@ INDEX := 2
 
 VALUE := "TargetField"
 
-BUSY => "TagBusy"
+BUSY =&gt; "TagBusy"
 
-DONE => "TagDone"
+DONE =&gt; "TagDone"
 
-ERROR => "TagError"
+ERROR =&gt; "TagError"
 
 )
 
@@ -3603,11 +3603,11 @@ INDEX := 2
 
 VALUE := "SourceField"
 
-BUSY => "TagBusy"
+BUSY =&gt; "TagBusy"
 
-DONE => "TagDone"
+DONE =&gt; "TagDone"
 
-ERROR => "TagError"
+ERROR =&gt; "TagError"
 
 )
 
@@ -3827,13 +3827,13 @@ firstIndex := 0,
 
 lastIndex := 9,
 
-done => #Output_Done,
+done =&gt; #Output_Done,
 
-busy => #Output_Busy,
+busy =&gt; #Output_Busy,
 
-error => #Output_Error,
+error =&gt; #Output_Error,
 
-status => #Output_Status,
+status =&gt; #Output_Status,
 
 nameList := "mySrcDB".InOut_Symbols,
 
@@ -3875,7 +3875,7 @@ The system data type "ResolvedSymbol" has the following visible elements:
 
 | Parameter name | Data type | Description |
 | --- | --- | --- |
-| resolved | BOOL | Provide information on whether the symbol was successfully resolved:  - resolved = FALSE + status = 0  => No attempt has been made yet to resolve the symbol. - resolved = FALSE + status <> 0  => The resolution of the symbol failed The value of the status parameter indicates the structure level within the tag that could not be resolved. A negative value means that the symbol could not be resolved, e.g. due to range violations.  A positive value means that the tag is not accessible or not writable by HMI/OPC UA or Web API. - resolved = TRUE + status = 0  => Symbol was successfully resolved. - resolved = TRUE + status <> 0  => Symbol was successfully resolved but the DB was overwritten by a subsequent loading in "RUN". |
+| resolved | BOOL | Provide information on whether the symbol was successfully resolved:  - resolved = FALSE + status = 0  =&gt; No attempt has been made yet to resolve the symbol. - resolved = FALSE + status &lt;&gt; 0  =&gt; The resolution of the symbol failed The value of the status parameter indicates the structure level within the tag that could not be resolved. A negative value means that the symbol could not be resolved, e.g. due to range violations.  A positive value means that the tag is not accessible or not writable by HMI/OPC UA or Web API. - resolved = TRUE + status = 0  =&gt; Symbol was successfully resolved. - resolved = TRUE + status &lt;&gt; 0  =&gt; Symbol was successfully resolved but the DB was overwritten by a subsequent loading in "RUN". |
 | status | INT |  |
 
 The element "resolved" indicates whether a symbol was successfully resolved. If the symbol was successfully resolved, the parameter "status" has the value "0" and the "ResolvedSymbol" structure contains reliable information.
@@ -4031,7 +4031,7 @@ dstOffsets := #Input_Offset,
 
 mode := 2#0,
 
-Ret_Val => #RETVAL,
+Ret_Val =&gt; #RETVAL,
 
 dst := myTargetDB.InOut_Buffer,
 
@@ -4182,7 +4182,7 @@ src := mySrcDB.Input_Buffer,
 
 srcOffsets := #Input_Offset,
 
-Ret_Val => #RETVAL,
+Ret_Val =&gt; #RETVAL,
 
 dst := myTargetDB.InOut_ResolvedSymbols,
 
@@ -4305,9 +4305,9 @@ CALL BLKMOV VARIANT
 
 (SRCBLK := P#M100.0 BYTE 10
 
-RET_VAL => "Tag_ErrorCode"
+RET_VAL =&gt; "Tag_ErrorCode"
 
-DSTBLK => P#DB1.DBX0.0 BYTE 10
+DSTBLK =&gt; P#DB1.DBX0.0 BYTE 10
 
 )
 
@@ -4402,9 +4402,9 @@ CALL UBLKMOV VARIANT
 
 (SRCBLK := P#M100.0 BYTE 10
 
-RET_VAL => "Tag_ErrorCode"
+RET_VAL =&gt; "Tag_ErrorCode"
 
-DSTBLK => P#DB1.DBX0.0 BYTE 10
+DSTBLK =&gt; P#DB1.DBX0.0 BYTE 10
 
 )
 
@@ -4511,9 +4511,9 @@ CALL FILL VARIANT
 
 (BVAL := P#M14.0 WORD 4
 
-RET_VAL => "Tag_ErrorCode"
+RET_VAL =&gt; "Tag_ErrorCode"
 
-BLK => P#M100.0 WORD 10
+BLK =&gt; P#M100.0 WORD 10
 
 )
 
@@ -4564,8 +4564,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Binary numbers, integers, floating-point numbers, CHAR, WCHAR, BCD16, BCD32 | I, Q, M, D, L, P or constant | Value to be converted. |
-| <Result> | Output | Binary numbers, integers, floating-point numbers, CHAR, WCHAR, BCD16, BCD32 | I, Q, M, D, L, P | Result of the conversion |
+| &lt;Operand&gt; | Input | Binary numbers, integers, floating-point numbers, CHAR, WCHAR, BCD16, BCD32 | I, Q, M, D, L, P or constant | Value to be converted. |
+| &lt;Result&gt; | Output | Binary numbers, integers, floating-point numbers, CHAR, WCHAR, BCD16, BCD32 | I, Q, M, D, L, P | Result of the conversion |
 
 You can select the data types of the instruction from the "???" drop-down lists.
 
@@ -4609,8 +4609,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value to be rounded. |
-| <Result> | Output | Integers, floating-point numbers | I, Q, M, D, L, P | Result of rounding |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value to be rounded. |
+| &lt;Result&gt; | Output | Integers, floating-point numbers | I, Q, M, D, L, P | Result of rounding |
 
 You can find additional information on valid data types under "See also".
 
@@ -4657,8 +4657,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value as floating-point number |
-| <Result> | Output | Integers, floating-point numbers | I, Q, M, D, L, P | Result with next higher integer |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value as floating-point number |
+| &lt;Result&gt; | Output | Integers, floating-point numbers | I, Q, M, D, L, P | Result with next higher integer |
 
 You can find additional information on valid data types under "See also".
 
@@ -4705,8 +4705,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value as floating-point number |
-| <Result> | Output | Integers, floating-point numbers | I, Q, M, D, L, P | Result with next lower integer |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L, P or constant | Input value as floating-point number |
+| &lt;Result&gt; | Output | Integers, floating-point numbers | I, Q, M, D, L, P | Result with next lower integer |
 
 You can find additional information on valid data types under "See also".
 
@@ -4753,8 +4753,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Floating-point numbers | I, Q, M, D, L or constant | Input value as floating-point number |
-| <Result> | Output | Integers, floating-point numbers | I, Q, M, D, L | Result with integer part of the floating-point number |
+| &lt;Operand&gt; | Input | Floating-point numbers | I, Q, M, D, L or constant | Input value as floating-point number |
+| &lt;Result&gt; | Output | Integers, floating-point numbers | I, Q, M, D, L | Result with integer part of the floating-point number |
 
 You can find additional information on valid data types under "See also".
 
@@ -4841,7 +4841,7 @@ VALUE := "Tag_Value"
 
 MAX := "Tag_Maximum"
 
-RET_VAL => "Tag_OutputValue"
+RET_VAL =&gt; "Tag_OutputValue"
 
 )
 
@@ -4923,7 +4923,7 @@ VALUE := "Tag_Value"
 
 MAX := "Tag_Maximum"
 
-RET_VAL => "Tag_OutputValue"
+RET_VAL =&gt; "Tag_OutputValue"
 
 )
 
@@ -4974,7 +4974,7 @@ When the value at the IN parameter is greater than the value of the constant "K2
 
 When the value at the IN parameter is less than the value of the constant "K1", the result of the instruction is set to the value of the low limit (LO_LIM) and an error is output.
 
-When the specified low limit is greater than the high limit (LO_LIM > HI_LIM), the result is scaled inversely proportional to the input value.
+When the specified low limit is greater than the high limit (LO_LIM &gt; HI_LIM), the result is scaled inversely proportional to the input value.
 
 ###### Parameters
 
@@ -5016,9 +5016,9 @@ LO_LIM := "Tag_LowLimit"
 
 ​BIPOLAR := "Tag_Bipolar"
 
-RET_VAL => "Tag_ErrorCode"
+RET_VAL =&gt; "Tag_ErrorCode"
 
-OUT => "Tag_OutputValue"
+OUT =&gt; "Tag_OutputValue"
 
 )
 
@@ -5079,7 +5079,7 @@ The values of the "K1" and "K2" constants are determined by the signal state at 
 
 When the value at parameter IN is not within the limits defined by HI_LIM and LO_LIM, an error is output and the result is set to the nearest limit.
 
-When the indicated low limit value is greater than the high limit value (LO_LIM > HI_LIM), the result is scaled in reverse proportion to the input value.
+When the indicated low limit value is greater than the high limit value (LO_LIM &gt; HI_LIM), the result is scaled in reverse proportion to the input value.
 
 ###### Parameters
 
@@ -5121,9 +5121,9 @@ LO_LIM := "Tag_LowLimit"
 
 ​BIPOLAR := "Tag_Bipolar"
 
-RET_VAL => "Tag_ErrorCode"
+RET_VAL =&gt; "Tag_ErrorCode"
 
-OUT => "Tag_OutputValue"
+OUT =&gt; "Tag_OutputValue"
 
 )
 
@@ -5613,7 +5613,7 @@ CALL INIT_RD
 
 (REQ := "Tag_REQ"
 
-RET_VAL => "Tag_RET_VAL"
+RET_VAL =&gt; "Tag_RET_VAL"
 
 )
 
@@ -5691,11 +5691,11 @@ Processing of the program in OB1 is resumed after the higher-priority process ha
 
 **Runtime measurement of the OB1 using the "RT_INFO" instruction:**
 
-Case 2: 20 ms - 8 ms - System Threads = <12 ms. Send clock: ~20 ms.
+Case 2: 20 ms - 8 ms - System Threads = &lt;12 ms. Send clock: ~20 ms.
 
-Case 3: 20 ms - 11 ms - System Threads - <9 ms. Send clock: ~20 ms.
+Case 3: 20 ms - 11 ms - System Threads - &lt;9 ms. Send clock: ~20 ms.
 
-Case 4: 20 ms - 15 ms - System Threads - <7 ms. Send clock: ~22 ms.
+Case 4: 20 ms - 15 ms - System Threads - &lt;7 ms. Send clock: ~22 ms.
 
 ---
 
@@ -5730,8 +5730,8 @@ The following table shows the parameters of the instruction:
 
 | Parameters | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand> | Input | Bit strings, integers | I, Q, M, D, L, P or constant | Input value |
-| <Result> | Output | Bit strings, integers | I, Q, M, D, L, P | Ones complement of the operand value |
+| &lt;Operand&gt; | Input | Bit strings, integers | I, Q, M, D, L, P or constant | Input value |
+| &lt;Result&gt; | Output | Bit strings, integers | I, Q, M, D, L, P | Ones complement of the operand value |
 
 You can find additional information on valid data types under "See also".
 
@@ -5795,7 +5795,7 @@ CALL DECO UINT_DWORD
 
 (IN := "Tag_Input"
 
-OUT => "Tag_Output"
+OUT =&gt; "Tag_Output"
 
 )
 
@@ -5846,7 +5846,7 @@ CALL ENCO DWORD
 
 (IN := "Tag_Input"
 
-OUT => "Tag_Output"
+OUT =&gt; "Tag_Output"
 
 )
 
@@ -5905,7 +5905,7 @@ IN0 := "Tag_Input0"
 
 IN1 := "Tag_Input1"
 
-OUT => "Tag_Output"
+OUT =&gt; "Tag_Output"
 
 ​)
 
@@ -5955,7 +5955,7 @@ The following table shows the parameters of the instruction:
 | IN0 | Input | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L or constant | First input value |
 | IN1 | Input | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L or constant | Second input value |
 | INn | Input | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L or constant | Optional input values |
-| INELSE | Input | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L or constant | Specifies the value that is copied when K > n. |
+| INELSE | Input | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L or constant | Specifies the value that is copied when K &gt; n. |
 | RET_VAL | Output | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L | Output to which the value is copied. |
 
 You can select the data type of the instruction from the "???" drop-down list.
@@ -5978,7 +5978,7 @@ IN1 := "Tag_Value_2"
 
 INELSE := "Tag_Value_3"
 
-RET_VAL => "Tag_Result"
+RET_VAL =&gt; "Tag_Result"
 
 ​ )
 
@@ -6028,7 +6028,7 @@ The following table shows the parameters of the instruction:
 | OUT0 | Output | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L | First output |
 | OUT1 | Output | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L | Second output |
 | OUTn | Output | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L | Optional outputs |
-| OUTELSE | Output | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L | Output to which the input value (IN) is copied when K > n. |
+| OUTELSE | Output | Binary numbers, integers, floating-point numbers, timers, CHAR, WCHAR, TOD, LTOD, DATE, LDT | I, Q, M, D, L | Output to which the input value (IN) is copied when K &gt; n. |
 
 You can select the data type of the instruction from the "???" drop-down list.
 
@@ -6046,11 +6046,11 @@ CALL DEMUX SINT_SINT
 
 IN := "Tag_Value"
 
-OUT0 => "Tag_Output_1"
+OUT0 =&gt; "Tag_Output_1"
 
-OUT1 => "Tag_Output_2"
+OUT1 =&gt; "Tag_Output_2"
 
-OUTELSE => "Tag_Output_3"
+OUTELSE =&gt; "Tag_Output_3"
 
 ​ )
 
@@ -6116,9 +6116,9 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand1> | Input | Bit strings, integers | I, Q, M, D, L or constant | Value to be shifted |
-| <Operand2> | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L or constant | Number of bit positions by which the value is shifted |
-| <Result> | Output | Bit strings, integers | I, Q, M, D, L | Result of the instruction |
+| &lt;Operand1&gt; | Input | Bit strings, integers | I, Q, M, D, L or constant | Value to be shifted |
+| &lt;Operand2&gt; | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L or constant | Number of bit positions by which the value is shifted |
+| &lt;Result&gt; | Output | Bit strings, integers | I, Q, M, D, L | Result of the instruction |
 
 You can select the data type of the instruction from the "???" drop-down list.
 
@@ -6176,9 +6176,9 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand1> | Input | Bit strings, integers | I, Q, M, D, L or constant | Value to be shifted |
-| <Operand2> | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L or constant | Number of bit positions by which the value is shifted |
-| <Result> | Output | Bit strings, integers | I, Q, M, D, L | Result of the instruction |
+| &lt;Operand1&gt; | Input | Bit strings, integers | I, Q, M, D, L or constant | Value to be shifted |
+| &lt;Operand2&gt; | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L or constant | Number of bit positions by which the value is shifted |
+| &lt;Result&gt; | Output | Bit strings, integers | I, Q, M, D, L | Result of the instruction |
 
 You can select the data type of the instruction from the "???" drop-down list.
 
@@ -6236,9 +6236,9 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand1> | Input | Bit strings, integers | I, Q, M, D, L or constant | Value to be rotated |
-| <Operand2> | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L or constant | Number of bit positions by which the value is rotated |
-| <Result> | Output | Bit strings, integers | I, Q, M, D, L | Result of the instruction |
+| &lt;Operand1&gt; | Input | Bit strings, integers | I, Q, M, D, L or constant | Value to be rotated |
+| &lt;Operand2&gt; | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L or constant | Number of bit positions by which the value is rotated |
+| &lt;Result&gt; | Output | Bit strings, integers | I, Q, M, D, L | Result of the instruction |
 
 You can find additional information on valid data types under "See also".
 
@@ -6294,9 +6294,9 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand1> | Input | Bit strings, integers | I, Q, M, D, L or constant | Value to be rotated |
-| <Operand2> | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L or constant | Number of bit positions by which the value is rotated |
-| <Result> | Output | Bit strings, integers | I, Q, M, D, L | Result of the instruction |
+| &lt;Operand1&gt; | Input | Bit strings, integers | I, Q, M, D, L or constant | Value to be rotated |
+| &lt;Operand2&gt; | Input | USINT, UINT, UDINT, ULINT | I, Q, M, D, L or constant | Number of bit positions by which the value is rotated |
+| &lt;Result&gt; | Output | Bit strings, integers | I, Q, M, D, L | Result of the instruction |
 
 You can find additional information on valid data types under "See also".
 
@@ -6420,13 +6420,13 @@ LST_STEP := "Tag_Number_LastStep"
 
 EVENTn := "MyTag_Event_n"
 
-OUTn => "MyTag_Output_n"
+OUTn =&gt; "MyTag_Output_n"
 
-Q => "Tag_Output_Q"
+Q =&gt; "Tag_Output_Q"
 
-OUT_WORD => "Tag_OutputWord"
+OUT_WORD =&gt; "Tag_OutputWord"
 
-ERR_CODE => "Tag_ErrorCode"
+ERR_CODE =&gt; "Tag_ErrorCode"
 
 )
 
@@ -6590,11 +6590,11 @@ You can use the "Discrete control-timer alarm" instruction to accumulate the tim
 
 The "Discrete control-timer alarm" instruction has the following reactions to the input conditions:
 
-- When the signal state of the CMD parameter changes from "0" to "1", the signal states of the parameters Q, CMD_HIS, ET (only if ET is < PT) OA and CA are influenced as follows:
+- When the signal state of the CMD parameter changes from "0" to "1", the signal states of the parameters Q, CMD_HIS, ET (only if ET is &lt; PT) OA and CA are influenced as follows:
 
   - The Q and CMD_HIS parameters are set to "1".
   - The ET, OA, and CA parameters are reset to "0".
-- When the signal state at the parameter CMD changes from "1" to "0", the parameters Q, ET (only if ET < PT), OA, CA and CMD_HIS are reset to "0".
+- When the signal state at the parameter CMD changes from "1" to "0", the parameters Q, ET (only if ET &lt; PT), OA, CA and CMD_HIS are reset to "0".
 - When the signal state at the CMD and CMD_HIS parameters is "1" and the O_FB parameter is set to "0", the time difference (ms) since the last execution of the instruction is added to the value of the parameter ET. If the value of the ET parameter exceeds the value of the PT parameter, the signal state at the OA parameter is set to "1". If the value of the ET parameter does not exceed the value of the PT parameter, the signal state of the OA parameter is reset to "0". The value at the CMD_HIS parameter is reset to the value of the CMD parameter.
 - If the signal state of the CMD, CMD_HIS, and O_FB parameters is set to "1" and the C_FB parameter has the value "0", the signal state of the OA parameter is set to "0". The value of the ET parameter is set to the value of the PT parameter. If the signal state of the O_FB parameter changes to "0", the alarm is set the next time the instruction is executed. The value of the CMD_HIS parameter is set to the value of the CMD parameter.
 - If the CMD, CMD_HIS, and C_FB parameters have the value "0", the time difference (ms) since the last execution of the instruction is added to the value of the ET parameter. If the value of the ET parameter exceeds the value of the PT parameter, the signal state of the CA parameter is reset to "1". If the value at the PT parameter is not exceeded, the CA parameter has the signal state "0". The value of the CMD_HIS parameter is set to the value of the CMD parameter.
@@ -6638,11 +6638,11 @@ O_FB := "Tag_Input_O_FB"
 
 C_FB := "Tag_Input_C_FB"
 
-Q => "Tag_Output_Q"
+Q =&gt; "Tag_Output_Q"
 
-OA => "Tag_Output_OA"
+OA =&gt; "Tag_Output_OA"
 
-CA => "Tag_Output_CA"
+CA =&gt; "Tag_Output_CA"
 
 )
 
@@ -6716,20 +6716,20 @@ The following table shows the reactions of the "Motor control-timer alarm" instr
 | X | X | X |  | X | X | 1 | X | X | 0 | 0 | 0 | 0 | X | 0 | 0 | 1 | Stop |
 | X | X | X |  | 1 | 1 | X | X | X | 0 | 0 | 0 | 0 | X | 0 | 0 | 1 | Stop |
 | X | 0 | X |  | 1 | 0 | 0 | X | X | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | Start opening |
-| <PT | 1 | 0 |  | X | 0 | 0 | 0 | X | 1 | 0 | 0 | 0 | INC | 1 | 0 | 1 | Open |
+| &lt;PT | 1 | 0 |  | X | 0 | 0 | 0 | X | 1 | 0 | 0 | 0 | INC | 1 | 0 | 1 | Open |
 | X | 1 | 0 |  | X | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | PT | 1 | 0 | 1 | Opened |
-| >=PT | 1 | 0 |  | X | 0 | 0 | 0 | X | 0 | 0 | 1 | 0 | PT | 1 | 0 | 0 | Opening alarm |
+| &gt;=PT | 1 | 0 |  | X | 0 | 0 | 0 | X | 0 | 0 | 1 | 0 | PT | 1 | 0 | 0 | Opening alarm |
 | X | X | 0 |  | 0 | 1 | 0 | X | X | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | Start closing |
-| <PT | 0 | 1 |  | 0 | X | 0 | X | 0 | 0 | 1 | 0 | 0 | INC | 0 | 1 | 1 | Close |
+| &lt;PT | 0 | 1 |  | 0 | X | 0 | X | 0 | 0 | 1 | 0 | 0 | INC | 0 | 1 | 1 | Close |
 | X | 0 | 1 |  | 0 | X | 0 | 0 | 1 | 0 | 0 | 0 | 0 | PT | 0 | 1 | 1 | Closed |
-| >=PT | 0 | 1 |  | 0 | X | 0 | X | 0 | 0 | 0 | 0 | 1 | PT | 0 | 1 | 0 | Closing alarm |
+| &gt;=PT | 0 | 1 |  | 0 | X | 0 | X | 0 | 0 | 0 | 0 | 1 | PT | 0 | 1 | 0 | Closing alarm |
 | X | 0 | 0 |  | 0 | 0 | 0 | X | X | 0 | 0 | 0 | 0 | X | 0 | 0 | 1 | Stopped |
 | Legend: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | INC |  |  | Add the time difference (ms) since the last processing of the FB to ET |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | PT |  |  | PT is set to the same value as ET |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | X |  |  | Cannot be used |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| <PT |  |  | ET < PT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| >=PT |  |  | ET >= PT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| &lt;PT |  |  | ET &lt; PT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| &gt;=PT |  |  | ET &gt;= PT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | If the input parameters O_HIS and C_HIS both have the signal state "1", they are immediately set to signal state "0". In this case, the last row in the table (X) mentioned above is valid. Because it is therefore not possible to check whether the input parameters O_HIS and C_HIS have the signal state "1", the output parameters are set as follows in this case:   OO = FALSE  CO = FALSE  OA = FALSE  CA = FALSE  ET = PT  Q = TRUE |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ##### Parameters
@@ -6776,15 +6776,15 @@ O_FB := "Tag_Input_O_FB"
 
 C_FB := "Tag_Input_C_FB"
 
-OO => "Tag_OutputOpen"
+OO =&gt; "Tag_OutputOpen"
 
-​CO => "Tag_OutputClosed"
+​CO =&gt; "Tag_OutputClosed"
 
-OA => "Tag_Output_OA"
+OA =&gt; "Tag_Output_OA"
 
-CA => "Tag_Output_CA"
+CA =&gt; "Tag_Output_CA"
 
-Q => "Tag_Output_Q"
+Q =&gt; "Tag_Output_Q"
 
 )
 
@@ -6911,9 +6911,9 @@ CALL IMC, "IMC_DB"
 
 CMP_STEP := "Tag_CMP_STEP"
 
-OUT => "Tag_Output"
+OUT =&gt; "Tag_Output"
 
-ERR_CODE => "Tag_ErrorCode"
+ERR_CODE =&gt; "Tag_ErrorCode"
 
 )
 
@@ -7045,11 +7045,11 @@ CALL SMC, "SMC_DB"
 
 (IN_BIT0 - 15 := "Tag_Input_BITn"
 
-OUT => "Tag_Output"
+OUT =&gt; "Tag_Output"
 
-OUT_STEP => "Tag_Output_STEP"
+OUT_STEP =&gt; "Tag_Output_STEP"
 
-ERR_CODE => "Tag_ErrorCode"
+ERR_CODE =&gt; "Tag_ErrorCode"
 
 )
 
@@ -7133,7 +7133,7 @@ You use the "Lead and lag algorithm" instruction to process signals with an anal
 
 ![Description](images/50811330187_DV_resource.Stream@PNG-de-DE.png)
 
-The "Lead and lag algorithm" instruction supplies plausible results only when processing is in fixed program cycles. The same units must be specified at the parameters LD_TIME, LG_TIME and SAMPLE_T. At LG_TIME > 4 + SAMPLE_T, the instruction approaches the following function:
+The "Lead and lag algorithm" instruction supplies plausible results only when processing is in fixed program cycles. The same units must be specified at the parameters LD_TIME, LG_TIME and SAMPLE_T. At LG_TIME &gt; 4 + SAMPLE_T, the instruction approaches the following function:
 
 OUT = GAIN * ((1 + LD_TIME * s) / (1 + LG_TIME * s)) * IN
 
@@ -7183,9 +7183,9 @@ CALL LEAD_LAG, "LEAD_LAG_DB"
 
 SAMPLE_T := "Tag_Input_SAMPLE_T"
 
-OUT => "Tag_Output_Result"
+OUT =&gt; "Tag_Output_Result"
 
-ERR_CODE => "Tag_ErrorCode"
+ERR_CODE =&gt; "Tag_ErrorCode"
 
 )
 
@@ -7286,7 +7286,7 @@ CALL SEG
 
 (IN := "Tag_Input"
 
-OUT => "Tag_Output"
+OUT =&gt; "Tag_Output"
 
 )
 
@@ -7343,7 +7343,7 @@ CALL BCDCPL
 
 (IN := "Tag_Input"
 
-ERR_CODE => "Tag_Output"
+ERR_CODE =&gt; "Tag_Output"
 
 )
 
@@ -7394,7 +7394,7 @@ CALL BITSUM
 
 (IN := "Tag_Input"
 
-RET​_VAL => "Tag_Output"
+RET​_VAL =&gt; "Tag_Output"
 
 )
 
@@ -7421,10 +7421,10 @@ The following table shows how the instruction functions using specific values:
 This section contains information on the following topics:
 
 - [General LAD instructions in GRAPH (S7-1500)](#general-lad-instructions-in-graph-s7-1500)
-- [CMP>T: Greater than step activation time (S7-1500)](#cmpt-greater-than-step-activation-time-s7-1500)
-- [CMP>U: Greater than uninterrupted step activation time (S7-1500)](#cmpu-greater-than-uninterrupted-step-activation-time-s7-1500)
-- [CMP>T_MAX: Greater than maximum step activation time (S7-1500)](#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
-- [CMP>T_WARN: Greater than warning time (S7-1500)](#cmpt_warn-greater-than-warning-time-s7-1500)
+- [CMP&gt;T: Greater than step activation time (S7-1500)](#cmpt-greater-than-step-activation-time-s7-1500)
+- [CMP&gt;U: Greater than uninterrupted step activation time (S7-1500)](#cmpu-greater-than-uninterrupted-step-activation-time-s7-1500)
+- [CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](#cmpt_max-greater-than-maximum-step-activation-time-s7-1500)
+- [CMP&gt;T_WARN: Greater than warning time (S7-1500)](#cmpt_warn-greater-than-warning-time-s7-1500)
 
 ### General LAD instructions in GRAPH (S7-1500)
 
@@ -7491,11 +7491,11 @@ The following table shows an overview of the instructions and their availability
 | [S_CUD: Assign parameters and count up / down](LAD%20%28S7-1200%2C%20S7-1500%29.md#s_cud-assign-parameters-and-count-up-down-s7-1500) | x | - |
 | **Comparator operations** |  |  |
 | [CMP ==: Equal](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-equal-s7-1200-s7-1500) | x | x |
-| [CMP <>: Not equal](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-not-equal-s7-1200-s7-1500) | x | x |
-| [CMP >=: Greater or equal](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-greater-or-equal-s7-1200-s7-1500) | x | x |
-| [CMP <=: Less or equal](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-less-or-equal-s7-1200-s7-1500) | x | x |
-| [CMP >: Greater than](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-greater-than-s7-1200-s7-1500) | x | x |
-| [CMP <: Less than](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-less-than-s7-1200-s7-1500) | x | x |
+| [CMP &lt;&gt;: Not equal](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-not-equal-s7-1200-s7-1500) | x | x |
+| [CMP &gt;=: Greater or equal](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-greater-or-equal-s7-1200-s7-1500) | x | x |
+| [CMP &lt;=: Less or equal](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-less-or-equal-s7-1200-s7-1500) | x | x |
+| [CMP &gt;: Greater than](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-greater-than-s7-1200-s7-1500) | x | x |
+| [CMP &lt;: Less than](LAD%20%28S7-1200%2C%20S7-1500%29.md#cmp-less-than-s7-1200-s7-1500) | x | x |
 | [IN_RANGE: Value within range](LAD%20%28S7-1200%2C%20S7-1500%29.md#in_range-value-within-range-s7-1200-s7-1500) | x | - |
 | [OUT_RANGE: Value outside range](LAD%20%28S7-1200%2C%20S7-1500%29.md#out_range-value-outside-range-s7-1200-s7-1500) | x | - |
 | [---| OK |---: Check validity](LAD%20%28S7-1200%2C%20S7-1500%29.md#i-ok-i-----check-validity-s7-1200-s7-1500) | x | - |
@@ -7509,8 +7509,8 @@ The following table shows an overview of the instructions and their availability
 | [IS_ARRAY: Check for ARRAY](LAD%20%28S7-1200%2C%20S7-1500%29.md#is_array-check-for-array-s7-1200-s7-1500) | x | - |
 | [EQ_TypeOfDB: Compare DB_ANY data type with the data type of a tag for EQUAL](LAD%20%28S7-1200%2C%20S7-1500%29.md#eq_typeofdb-compare-data-type-of-an-indirectly-addressed-db-for-equal-with-a-data-type-s7-1200-s7-1500) | x | - |
 | [NE_TypeOfDB: Compare DB_ANY data type with the data type of a tag for NOT EQUAL](LAD%20%28S7-1200%2C%20S7-1500%29.md#ne_typeofdb-compare-data-type-of-an-indirectly-addressed-db-for-unequal-with-a-data-type-s7-1200-s7-1500) | x | - |
-| [CMP>T: Greater than step activation time](#cmpt-greater-than-step-activation-time-s7-1500) | - | x |
-| [CMP>U: Greater than uninterrupted step activation time](#cmpu-greater-than-uninterrupted-step-activation-time-s7-1500) | - | x |
+| [CMP&gt;T: Greater than step activation time](#cmpt-greater-than-step-activation-time-s7-1500) | - | x |
+| [CMP&gt;U: Greater than uninterrupted step activation time](#cmpu-greater-than-uninterrupted-step-activation-time-s7-1500) | - | x |
 | **Math functions** |  |  |
 | [CALCULATE: Calculate](LAD%20%28S7-1200%2C%20S7-1500%29.md#calculate-calculate-s7-1200-s7-1500) | x | - |
 | [ADD: Add](LAD%20%28S7-1200%2C%20S7-1500%29.md#add-add-s7-1200-s7-1500) | x | - |
@@ -7626,15 +7626,15 @@ In the programmed condition, the current or the last activation time of the step
 >
 > Under the following requirements:
 >
-> - Prior to the instruction "CMP >T: Greater than step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
+> - Prior to the instruction "CMP &gt;T: Greater than step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
 > - "Monitoring on" is switched on.
-> - A new result of the condition resets the network to FALSE. The instruction "CMP >T: Greater than step activation time" becomes inactive.
+> - A new result of the condition resets the network to FALSE. The instruction "CMP &gt;T: Greater than step activation time" becomes inactive.
 >
 > Result:
 >
-> For the instruction "CMP >T: Greater than step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
+> For the instruction "CMP &gt;T: Greater than step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
 >
-> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP >T: Greater than step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP >T: Greater than step activation time" is shown as grayed out in the network in the inactive status.
+> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP &gt;T: Greater than step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP &gt;T: Greater than step activation time" is shown as grayed out in the network in the inactive status.
 
 #### Parameters
 
@@ -7642,8 +7642,8 @@ The following table shows the parameters of the "Greater than step activation ti
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand1> | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Current or last activation time of the step |
-| <Operand2> | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Duration used for comparison |
+| &lt;Operand1&gt; | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Current or last activation time of the step |
+| &lt;Operand2&gt; | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Duration used for comparison |
 
 #### Example
 
@@ -7679,15 +7679,15 @@ In the programmed condition, the total activation time of the step (Operand1) is
 >
 > Under the following requirements:
 >
-> - Prior to the instruction "CMP >U: Greater than uninterrupted step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
+> - Prior to the instruction "CMP &gt;U: Greater than uninterrupted step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
 > - "Monitoring on" is switched on.
-> - A new result of the condition resets the network to FALSE. The instruction "CMP >U: Greater than uninterrupted step activation time" becomes inactive.
+> - A new result of the condition resets the network to FALSE. The instruction "CMP &gt;U: Greater than uninterrupted step activation time" becomes inactive.
 >
 > Result:
 >
-> For the instruction "CMP >U: Greater than uninterrupted step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
+> For the instruction "CMP &gt;U: Greater than uninterrupted step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
 >
-> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP >U: Greater than uninterrupted step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP >U: Greater than uninterrupted step activation time" is shown as grayed out in the network in the inactive status.
+> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP &gt;U: Greater than uninterrupted step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP &gt;U: Greater than uninterrupted step activation time" is shown as grayed out in the network in the inactive status.
 
 #### Parameters
 
@@ -7695,8 +7695,8 @@ The following table shows the parameters of the "Greater than uninterrupted step
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand1> | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Current or last activation time of the step minus the faults |
-| <Operand2> | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Duration used for comparison |
+| &lt;Operand1&gt; | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Current or last activation time of the step minus the faults |
+| &lt;Operand2&gt; | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Duration used for comparison |
 
 #### Example
 
@@ -7732,15 +7732,15 @@ In the programmed condition, the current or the last activation time of the step
 >
 > Under the following requirements:
 >
-> - Prior to the instruction "CMP >T_MAX: Greater than maximum step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
+> - Prior to the instruction "CMP &gt;T_MAX: Greater than maximum step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
 > - "Monitoring on" is switched on.
-> - A new result of the condition resets the network to FALSE. The instruction "CMP >T_MAX: Greater than maximum step activation time" becomes inactive.
+> - A new result of the condition resets the network to FALSE. The instruction "CMP &gt;T_MAX: Greater than maximum step activation time" becomes inactive.
 >
 > Result:
 >
-> For the instruction "CMP >T_MAX: Greater than maximum step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
+> For the instruction "CMP &gt;T_MAX: Greater than maximum step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
 >
-> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP >T_MAX: Greater than maximum step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP >T_MAX: Greater than maximum step activation time" is shown as grayed out in the network in the inactive status.
+> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP &gt;T_MAX: Greater than maximum step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP &gt;T_MAX: Greater than maximum step activation time" is shown as grayed out in the network in the inactive status.
 
 #### Parameter
 
@@ -7748,8 +7748,8 @@ The following table shows the parameters of the "Greater than maximum step activ
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand1> | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Current or last activation time of the step |
-| <Operand2> | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Duration used for comparison |
+| &lt;Operand1&gt; | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Current or last activation time of the step |
+| &lt;Operand2&gt; | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Duration used for comparison |
 
 #### Example
 
@@ -7789,15 +7789,15 @@ In the programmed condition, the current or the last activation time of the step
 >
 > Under the following requirements:
 >
-> - Prior to the instruction "CMP >T_WARN: Greater than warning time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
+> - Prior to the instruction "CMP &gt;T_WARN: Greater than warning time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
 > - "Monitoring on" is switched on.
-> - A new result of the condition resets the network to FALSE. The instruction "CMP >T_WARN: Greater than warning time" becomes inactive.
+> - A new result of the condition resets the network to FALSE. The instruction "CMP &gt;T_WARN: Greater than warning time" becomes inactive.
 >
 > Result:
 >
-> For the instruction "CMP >T_WARN: Greater than warning time" (data type STRING, WSTRING), the previous status is still shown in the network.
+> For the instruction "CMP &gt;T_WARN: Greater than warning time" (data type STRING, WSTRING), the previous status is still shown in the network.
 >
-> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP >T_WARN: Greater than warning time" (data type STRING, WSTRING) is displayed again. The instruction "CMP >T_WARN: Greater than warning time" is shown as grayed out in the network in the inactive status.
+> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP &gt;T_WARN: Greater than warning time" (data type STRING, WSTRING) is displayed again. The instruction "CMP &gt;T_WARN: Greater than warning time" is shown as grayed out in the network in the inactive status.
 
 #### Parameters
 
@@ -7805,8 +7805,8 @@ The following table lists the parameters of the "Greater than warning time" inst
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| <Operand1> | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Current or last activation time of the step |
-| <Operand2> | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Duration used for comparison |
+| &lt;Operand1&gt; | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Current or last activation time of the step |
+| &lt;Operand2&gt; | Input | Integers, floating-point numbers, timers, strings, DATE, DT, DTL, TOD, LTOD, LDT | I, Q, M, D, L or constant | Duration used for comparison |
 
 #### Example
 
@@ -7837,10 +7837,10 @@ As long as the activation time of #Step1.T does not exceed the warning time of #
 This section contains information on the following topics:
 
 - [General FBD instructions in GRAPH (S7-1500)](#general-fbd-instructions-in-graph-s7-1500)
-- [CMP>T: Greater than step activation time (S7-1500)](#cmpt-greater-than-step-activation-time-s7-1500-1)
-- [CMP>U: Greater than uninterrupted step activation time (S7-1500)](#cmpu-greater-than-uninterrupted-step-activation-time-s7-1500-1)
-- [CMP>T_MAX: Greater than maximum step activation time (S7-1500)](#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
-- [CMP>T_WARN: Greater than warning time (S7-1500)](#cmpt_warn-greater-than-warning-time-s7-1500-1)
+- [CMP&gt;T: Greater than step activation time (S7-1500)](#cmpt-greater-than-step-activation-time-s7-1500-1)
+- [CMP&gt;U: Greater than uninterrupted step activation time (S7-1500)](#cmpu-greater-than-uninterrupted-step-activation-time-s7-1500-1)
+- [CMP&gt;T_MAX: Greater than maximum step activation time (S7-1500)](#cmpt_max-greater-than-maximum-step-activation-time-s7-1500-1)
+- [CMP&gt;T_WARN: Greater than warning time (S7-1500)](#cmpt_warn-greater-than-warning-time-s7-1500-1)
 
 ### General FBD instructions in GRAPH (S7-1500)
 
@@ -7859,8 +7859,8 @@ The following table shows an overview of the instructions and their availability
 | [-|: Insert input](FBD%20%28S7-1200%2C%20S7-1500%29.md#insert-input-s7-1200-s7-1500) | x | x |
 | [-o|: Invert RLO](FBD%20%28S7-1200%2C%20S7-1500%29.md#invert-rlo-s7-1200-s7-1500) | x | x |
 | **Bit logic operations** |  |  |
-| [&: AND logic operation](FBD%20%28S7-1200%2C%20S7-1500%29.md#and-logic-operation-s7-1200-s7-1500) | x | x |
-| [>=1: OR logic operation](FBD%20%28S7-1200%2C%20S7-1500%29.md#1-or-logic-operation-s7-1200-s7-1500) | x | x |
+| [&amp;: AND logic operation](FBD%20%28S7-1200%2C%20S7-1500%29.md#and-logic-operation-s7-1200-s7-1500) | x | x |
+| [&gt;=1: OR logic operation](FBD%20%28S7-1200%2C%20S7-1500%29.md#1-or-logic-operation-s7-1200-s7-1500) | x | x |
 | [X: EXCLUSIVE OR logic operation](FBD%20%28S7-1200%2C%20S7-1500%29.md#x-exclusive-or-logic-operation-s7-1200-s7-1500) | x | - |
 | [=: Assignment](FBD%20%28S7-1200%2C%20S7-1500%29.md#assignment-s7-1200-s7-1500) | x | - |
 | [/=: Negate assignment](FBD%20%28S7-1200%2C%20S7-1500%29.md#negate-assignment-s7-1200-s7-1500) | x | - |
@@ -7907,11 +7907,11 @@ The following table shows an overview of the instructions and their availability
 | [S_CUD: Assign parameters and count up / down](FBD%20%28S7-1200%2C%20S7-1500%29.md#s_cud-assign-parameters-and-count-up-down-s7-1500) | x | - |
 | **Comparator operations** |  |  |
 | [CMP==: Equal](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-equal-s7-1200-s7-1500) | x | x |
-| [CMP <>: Not equal](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-not-equal-s7-1200-s7-1500) | x | x |
-| [CMP>=: Greater or equal](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-greater-or-equal-s7-1200-s7-1500) | x | x |
-| [CMP<=: Less or equal](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-less-or-equal-s7-1200-s7-1500) | x | x |
-| [CMP>: Greater than](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-greater-than-s7-1200-s7-1500) | x | x |
-| [CMP<: Less than](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-less-than-s7-1200-s7-1500) | x | x |
+| [CMP &lt;&gt;: Not equal](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-not-equal-s7-1200-s7-1500) | x | x |
+| [CMP&gt;=: Greater or equal](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-greater-or-equal-s7-1200-s7-1500) | x | x |
+| [CMP&lt;=: Less or equal](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-less-or-equal-s7-1200-s7-1500) | x | x |
+| [CMP&gt;: Greater than](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-greater-than-s7-1200-s7-1500) | x | x |
+| [CMP&lt;: Less than](FBD%20%28S7-1200%2C%20S7-1500%29.md#cmp-less-than-s7-1200-s7-1500) | x | x |
 | [IN_RANGE: Value within range](FBD%20%28S7-1200%2C%20S7-1500%29.md#in_range-value-within-range-s7-1200-s7-1500) | x | - |
 | [OUT_RANGE: Value outside range](FBD%20%28S7-1200%2C%20S7-1500%29.md#out_range-value-outside-range-s7-1200-s7-1500) | x | - |
 | [---| OK |---: Check validity](FBD%20%28S7-1200%2C%20S7-1500%29.md#ok-check-validity-s7-1200-s7-1500) | x | - |
@@ -7925,8 +7925,8 @@ The following table shows an overview of the instructions and their availability
 | [IS_ARRAY: Check for ARRAY](FBD%20%28S7-1200%2C%20S7-1500%29.md#is_array-check-for-array-s7-1200-s7-1500) | x | - |
 | [EQ_TypeOfDB: Compare DB_ANY data type with the data type of a tag for EQUAL](FBD%20%28S7-1200%2C%20S7-1500%29.md#eq_typeofdb-compare-data-type-of-an-indirectly-addressed-db-for-equal-with-a-data-type-s7-1200-s7-1500) | x | - |
 | [NE_TypeOfDB: Compare DB_ANY data type with the data type of a tag for NOT EQUAL](FBD%20%28S7-1200%2C%20S7-1500%29.md#ne_typeofdb-compare-data-type-of-an-indirectly-addressed-db-for-unequal-with-a-data-type-s7-1200-s7-1500) | x | - |
-| [CMP>T: Greater than step activation time](#cmpt-greater-than-step-activation-time-s7-1500-1) | - | x |
-| [CMP>U: Greater than uninterrupted step activation time](#cmpu-greater-than-uninterrupted-step-activation-time-s7-1500-1) | - | x |
+| [CMP&gt;T: Greater than step activation time](#cmpt-greater-than-step-activation-time-s7-1500-1) | - | x |
+| [CMP&gt;U: Greater than uninterrupted step activation time](#cmpu-greater-than-uninterrupted-step-activation-time-s7-1500-1) | - | x |
 | **Math functions** |  |  |
 | [CALCULATE: Calculate](FBD%20%28S7-1200%2C%20S7-1500%29.md#calculate-calculate-s7-1200-s7-1500) | x | - |
 | [ADD: Add](FBD%20%28S7-1200%2C%20S7-1500%29.md#add-add-s7-1200-s7-1500) | x | - |
@@ -8044,15 +8044,15 @@ In the programmed condition, the current or the last activation time of the step
 >
 > Under the following requirements:
 >
-> - Prior to the instruction "CMP >T: Greater than step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
+> - Prior to the instruction "CMP &gt;T: Greater than step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
 > - "Monitoring on" is switched on.
-> - A new result of the condition resets the network to FALSE. The instruction "CMP >T: Greater than step activation time" becomes inactive.
+> - A new result of the condition resets the network to FALSE. The instruction "CMP &gt;T: Greater than step activation time" becomes inactive.
 >
 > Result:
 >
-> For the instruction "CMP >T: Greater than step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
+> For the instruction "CMP &gt;T: Greater than step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
 >
-> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP >T: Greater than step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP >T: Greater than step activation time" is shown as grayed out in the network in the inactive status.
+> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP &gt;T: Greater than step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP &gt;T: Greater than step activation time" is shown as grayed out in the network in the inactive status.
 
 #### Parameters
 
@@ -8097,15 +8097,15 @@ In the programmed condition, the total activation time of a step (Operand1) is c
 >
 > Under the following requirements:
 >
-> - Prior to the instruction "CMP >U: Greater than uninterrupted step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
+> - Prior to the instruction "CMP &gt;U: Greater than uninterrupted step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
 > - "Monitoring on" is switched on.
-> - A new result of the condition resets the network to FALSE. The instruction "CMP >U: Greater than uninterrupted step activation time" becomes inactive.
+> - A new result of the condition resets the network to FALSE. The instruction "CMP &gt;U: Greater than uninterrupted step activation time" becomes inactive.
 >
 > Result:
 >
-> For the instruction "CMP >U: Greater than uninterrupted step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
+> For the instruction "CMP &gt;U: Greater than uninterrupted step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
 >
-> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP >U: Greater than uninterrupted step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP >U: Greater than uninterrupted step activation time" is shown as grayed out in the network in the inactive status.
+> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP &gt;U: Greater than uninterrupted step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP &gt;U: Greater than uninterrupted step activation time" is shown as grayed out in the network in the inactive status.
 
 #### Parameters
 
@@ -8150,15 +8150,15 @@ In the programmed condition, the current or the last activation time of the step
 >
 > Under the following requirements:
 >
-> - Prior to the instruction "CMP >T_MAX: Greater than maximum step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
+> - Prior to the instruction "CMP &gt;T_MAX: Greater than maximum step activation time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
 > - "Monitoring on" is switched on.
-> - A new result of the condition resets the network to FALSE. The instruction "CMP >T_MAX: Greater than maximum step activation time" becomes inactive.
+> - A new result of the condition resets the network to FALSE. The instruction "CMP &gt;T_MAX: Greater than maximum step activation time" becomes inactive.
 >
 > Result:
 >
-> For the instruction "CMP >T_MAX: Greater than maximum step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
+> For the instruction "CMP &gt;T_MAX: Greater than maximum step activation time" (data type STRING, WSTRING), the previous status is still shown in the network.
 >
-> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP >T_MAX: Greater than maximum step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP >T_MAX: Greater than maximum step activation time" is shown as grayed out in the network in the inactive status.
+> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP &gt;T_MAX: Greater than maximum step activation time" (data type STRING, WSTRING) is displayed again. The instruction "CMP &gt;T_MAX: Greater than maximum step activation time" is shown as grayed out in the network in the inactive status.
 
 #### Parameters
 
@@ -8207,15 +8207,15 @@ In the programmed condition, the current or the last activation time of the step
 >
 > Under the following requirements:
 >
-> - Prior to the instruction "CMP >T_WARN: Greater than warning time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
+> - Prior to the instruction "CMP &gt;T_WARN: Greater than warning time" (with data type STRING, WSTRING), a condition (e.g. of a NO contact) is queried in the network.
 > - "Monitoring on" is switched on.
-> - A new result of the condition resets the network to FALSE. The instruction "CMP >T_WARN: Greater than warning time" becomes inactive.
+> - A new result of the condition resets the network to FALSE. The instruction "CMP &gt;T_WARN: Greater than warning time" becomes inactive.
 >
 > Result:
 >
-> For the instruction "CMP >T_WARN: Greater than warning time" (data type STRING, WSTRING), the previous status is still shown in the network.
+> For the instruction "CMP &gt;T_WARN: Greater than warning time" (data type STRING, WSTRING), the previous status is still shown in the network.
 >
-> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP >T_WARN: Greater than warning time" (data type STRING, WSTRING) is displayed again. The instruction "CMP >T_WARN: Greater than warning time" is shown as grayed out in the network in the inactive status.
+> When you switch "Monitoring on" off and on again or scroll to a different network, the correct status of the instruction "CMP &gt;T_WARN: Greater than warning time" (data type STRING, WSTRING) is displayed again. The instruction "CMP &gt;T_WARN: Greater than warning time" is shown as grayed out in the network in the inactive status.
 
 #### Parameters
 

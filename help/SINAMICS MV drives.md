@@ -1185,7 +1185,7 @@ If a drive train has interfering points of resonance in the range from 0 rpm to
 
 You can use the trace technology of the TIA Portal to determine the points of resonance. You may also have noticed a speed range during commissioning in which resonance occurred.
 
-1. Open the trace and select "Configuration > Signals".
+1. Open the trace and select "Configuration &gt; Signals".
 2. Select the actual speed value ([r0062](SINAMICS%20Parameter%20VECTORMV.md#r0062-co-speed-setpoint-after-the-filter)) as the signal to be recorded.
 
    ![Trace with signal r62](images/148105478923_DV_resource.Stream@PNG-en-US.png)
@@ -1291,7 +1291,7 @@ With ramp-function generator tracking, the speed setpoint follows the actual spe
 
 Various enables are required to operate the ramp-function generator.
 
-- "OFF1 enable" and "OFF3 enable" are set via the control word "Sequential control system". Check the individual bits of the control word at "Diagnostics > Control/status words". Check the interconnection at "Diagnostics > Interconnections".
+- "OFF1 enable" and "OFF3 enable" are set via the control word "Sequential control system". Check the individual bits of the control word at "Diagnostics &gt; Control/status words". Check the interconnection at "Diagnostics &gt; Interconnections".
 
   The control inputs of the ramp-function generator take effect as follows:
 
@@ -1704,7 +1704,7 @@ Droop (enabled via [p1492](SINAMICS%20Parameter%20VECTORMV.md#p14920n-bi-droop-f
 
 | Symbol | Meaning |
 | --- | --- |
-| ① | Active only when the precontrol has been activated ([p1496](SINAMICS%20Parameter%20VECTORMV.md#p14960n-acceleration-precontrol-scaling) > 0) |
+| ① | Active only when the precontrol has been activated ([p1496](SINAMICS%20Parameter%20VECTORMV.md#p14960n-acceleration-precontrol-scaling) &gt; 0) |
 | ② | Active only for SLVC |
 
 Speed controller with droop
@@ -1937,7 +1937,7 @@ In order that the speed controller does not counteract the applied torque setpoi
 
 ###### Requirement
 
-- The precontrol balancing becomes active only when P gain [p1460](SINAMICS%20Parameter%20VECTORMV.md#p14600n-speed-controller-p-gain-adaptation-speed-lower) > 0% is set and the reference model is deactivated.
+- The precontrol balancing becomes active only when P gain [p1460](SINAMICS%20Parameter%20VECTORMV.md#p14600n-speed-controller-p-gain-adaptation-speed-lower) &gt; 0% is set and the reference model is deactivated.
 
 ###### Setting precontrol balancing
 
@@ -2097,7 +2097,7 @@ The K<sub>p</sub>/T<sub>n</sub> adaptation permits a completely variable proport
 
    - "Adaptation factor upper" ([p1459](SINAMICS%20Parameter%20VECTORMV.md#p14590n-adaptation-factor-upper))
 
-     Set the adaptation factor after the adaptation range (> [p1457](SINAMICS%20Parameter%20VECTORMV.md#p14570n-speed-controller-p-gain-adaptation-upper-starting-point)) to additionally adapt the P gain of the speed/velocity controller.
+     Set the adaptation factor after the adaptation range (&gt; [p1457](SINAMICS%20Parameter%20VECTORMV.md#p14570n-speed-controller-p-gain-adaptation-upper-starting-point)) to additionally adapt the P gain of the speed/velocity controller.
    - "Adaptation factor lower" ([p1458](SINAMICS%20Parameter%20VECTORMV.md#p14580n-adaptation-factor-lower))
 
      Set the adaptation factor before the adaptation range (0% ... [p1456](SINAMICS%20Parameter%20VECTORMV.md#p14560n-speed-controller-p-gain-adaptation-lower-starting-point)) to additionally adapt the P gain of the speed/velocity controller.
@@ -2114,10 +2114,10 @@ The K<sub>p</sub>/T<sub>n</sub> adaptation permits a completely variable proport
 
    - "Scaling" ([p1461](SINAMICS%20Parameter%20VECTORMV.md#p14610n-speed-controller-kp-adaptation-speed-upper-scaling))
 
-     Enter the P gain of the speed controller for the upper adaptation speed range (> [p1465](SINAMICS%20Parameter%20VECTORMV.md#p14650n-speed-controller-adaptation-speed-upper)).
+     Enter the P gain of the speed controller for the upper adaptation speed range (&gt; [p1465](SINAMICS%20Parameter%20VECTORMV.md#p14650n-speed-controller-adaptation-speed-upper)).
    - "Scaling" ([p1463](SINAMICS%20Parameter%20VECTORMV.md#p14630n-speed-controller-tn-adaptation-speed-upper-scaling))
 
-     Set the integral time of the speed controller after the adaptation speed range (> p1465).
+     Set the integral time of the speed controller after the adaptation speed range (&gt; p1465).
 9. Enter the desired speed in the "Upper adaptation speed" (p1465) field.
 10. Enter the desired speed in the "Lower adaptation speed" ([p1464](SINAMICS%20Parameter%20VECTORMV.md#p14640n-speed-controller-adaptation-speed-lower)) field.
 11. In the "Free T<sub>n</sub> adaptation active" drop-down list (p1400.6) select the option "[1] Yes" if you want to optimize the T<sub>n</sub> component of the speed-dependent adaptation. The T<sub>n</sub> value of the speed-dependent adaptation is divided by the factor of the free adaptation.
@@ -2742,7 +2742,7 @@ The P gain of the current controller can be reduced via an adaptation depending 
 2. Click the "Adaptation" button.
 
    A dialog with the same name opens.
-3. Correct the factor for the P gain of the current controller in the adaptation range (current > [p0392](SINAMICS%20Parameter%20VECTORMV.md#p03920n-current-controller-adaptation-starting-point-kp-adapted)) in the "Scaling" ([p0393](SINAMICS%20Parameter%20VECTORMV.md#p03930n-current-controller-adaptation-p-gain-adaptation)) field.
+3. Correct the factor for the P gain of the current controller in the adaptation range (current &gt; [p0392](SINAMICS%20Parameter%20VECTORMV.md#p03920n-current-controller-adaptation-starting-point-kp-adapted)) in the "Scaling" ([p0393](SINAMICS%20Parameter%20VECTORMV.md#p03930n-current-controller-adaptation-p-gain-adaptation)) field.
 4. Enter the application point of the current-dependent current controller adaptation at which the adapted current controller gain takes effect p1715 x p0393 in the "Application point Kp adapted" (p0392) field.
 5. Enter the application point of the current-dependent current controller adaptation at which the current controller gain takes effect p1715 in the "Application point Kp" ([p0391](SINAMICS%20Parameter%20VECTORMV.md#p03910n-current-controller-adaptation-starting-point-kp)) field.
 6. Once you have made all the necessary settings, click the "Close" button.
@@ -2992,7 +2992,7 @@ The following table contains the fault responses and their meanings for the enti
 | OFF1 | ON/OFF | Brake along the ramp-function generator deceleration ramp followed by pulse disable | - Speed control (p1300 = 20, 21)    - The immediate specification of n_set = 0 at the ramp generator deceleration ramp (p1121) causes the drive to be braked.   - When standstill is detected, the motor holding brake (if parameterized) is closed (p1215). The pulses are suppressed when the closing time (p1217) expires.      Standstill is detected when the actual speed value falls below the speed threshold (p1226) or when the monitoring time (p1227) started when speed setpoint ≤ speed threshold (p1226) has expired. - Torque control (p1300 = 23)   - The following applies for torque control: Response as for OFF2.   - When switching to torque control via p1501, the following applies:      There is no separate braking response.      If the actual speed value falls below the speed threshold (p1226) or the timer (p1227) has expired, the motor holding brake (if available) is closed. The pulses are suppressed when the closing time (p1217) expires. |
 | OFF1_DELAYED | - | As for OFF1, but delayed | Faults with this fault response only take effect after the delay time in p3136 has expired. The remaining time until OFF1 is displayed in r3137. |
 | OFF2 | COAST STOP | Internal/external pulse disable | Speed control and torque control   - Immediate pulse suppression, the drive "coasts" to a standstill. - The motor holding brake (if available) is closed immediately. - The "switching on disabled" is activated. |
-| OFF3 | QUICK STOP | Brake along the OFF3 deceleration ramp followed by pulse disable | - Speed control (p1300 = 20, 21)    - The drive is braked along the OFF3 deceleration ramp (p1135) by immediately entering n_set = 0.   - When standstill is detected, the motor holding brake (if parameterized) is closed. The pulses are suppressed when the closing time of the holding brake (p1217) expires.      Standstill is detected when the actual speed value falls below the speed threshold (p1226) or when the monitoring time (p1227) started when speed setpoint <= speed threshold (p1226) has expired.   - The "switching on disabled" is activated. - Torque control (p1300 = 23)    - Switchover to speed-controlled operation and other responses as described for speed-controlled operation. |
+| OFF3 | QUICK STOP | Brake along the OFF3 deceleration ramp followed by pulse disable | - Speed control (p1300 = 20, 21)    - The drive is braked along the OFF3 deceleration ramp (p1135) by immediately entering n_set = 0.   - When standstill is detected, the motor holding brake (if parameterized) is closed. The pulses are suppressed when the closing time of the holding brake (p1217) expires.      Standstill is detected when the actual speed value falls below the speed threshold (p1226) or when the monitoring time (p1227) started when speed setpoint &lt;= speed threshold (p1226) has expired.   - The "switching on disabled" is activated. - Torque control (p1300 = 23)    - Switchover to speed-controlled operation and other responses as described for speed-controlled operation. |
 | STOP2 | - | n_set = 0 | - The drive is braked along the OFF3 deceleration ramp (p1135) by immediately entering n_set = 0. - The drive remains in speed control. |
 | IASC/DCBRK | - | - | - For synchronous motors, the following applies:    - If a fault occurs with this fault response, an internal armature short-circuit is triggered.   - The conditions for p1231 = 4 must be observed. - For induction motors, the following applies:    - If a fault occurs with this fault response, DC braking is triggered.   - DC braking must have been commissioned (p1232, p1233, p1234). |
 | ENCODER | - | Internal/external pulse disable (p0491) | The ENCODER fault response is applied depending on the setting in p0491.   - Factory setting: p0491 = 0 → encoder error results in OFF2     **Notice**    When changing p0491, it is imperative that the information in the description of this parameter is observed. |
@@ -3336,22 +3336,22 @@ Comparators are provided for monitoring the actual speed and setpoint thresholds
 
    The "f or n comparison value reached/exceeded" signal is generated under consideration of hysteresis speed 1, speed threshold 1 and the ON delay.
 4. Enter the speed threshold 1 in the "Speed threshold 1" ([p2141](SINAMICS%20Parameter%20VECTORMV.md#p21410n-speed-threshold-1)) field.
-5. Enter the ON delay time for signal |n_act| > speed threshold in the "ON delay" ([p2156](SINAMICS%20Parameter%20VECTORMV.md#p21560n-on-delay-comparison-value-reached)) field.
+5. Enter the ON delay time for signal |n_act| &gt; speed threshold in the "ON delay" ([p2156](SINAMICS%20Parameter%20VECTORMV.md#p21560n-on-delay-comparison-value-reached)) field.
 6. Enter the bandwidths for the following messages in the "Hysteresis speed 2" ([p2140](SINAMICS%20Parameter%20VECTORMV.md#p21400n-hysteresis-speed-2)) field:
 
-   - |n_act| < speed threshold 2
-   - |n_set| > speed threshold 2
+   - |n_act| &lt; speed threshold 2
+   - |n_set| &gt; speed threshold 2
 7. Interconnect the following signal sinks with the required parameters:
 
    - |n_act| ≤ speed threshold 2
-   - |n_act| > speed threshold 2
+   - |n_act| &gt; speed threshold 2
 8. Enter speed threshold 2 in the "Speed threshold 2" ([p2155](SINAMICS%20Parameter%20VECTORMV.md#p21550n-speed-threshold-2)) field.
-9. Enter the bandwidths for the n_act > n_max message in the "Hysteresis speed n_act > n_max" ([p2162](SINAMICS%20Parameter%20VECTORMV.md#p21620n-hysteresis-speed-n_act-n_max)) field.
-10. Interconnect the "n_act > n_max" ([r2197](SINAMICS%20Parameter%20VECTORMV.md#r2197113-cobo-status-word-monitoring-1)) signal sink with the required parameters. Several interconnections are possible.
+9. Enter the bandwidths for the n_act &gt; n_max message in the "Hysteresis speed n_act &gt; n_max" ([p2162](SINAMICS%20Parameter%20VECTORMV.md#p21620n-hysteresis-speed-n_act-n_max)) field.
+10. Interconnect the "n_act &gt; n_max" ([r2197](SINAMICS%20Parameter%20VECTORMV.md#r2197113-cobo-status-word-monitoring-1)) signal sink with the required parameters. Several interconnections are possible.
 
     Connect binector output:
 
-    Signal n_act > n_max is generated under consideration of hysteresis speed n_act > n_max.
+    Signal n_act &gt; n_max is generated under consideration of hysteresis speed n_act &gt; n_max.
 
     For a negative speed limit, the hysteresis is effective below the limit value and for a positive speed limit, above the limit value.
 
@@ -3379,18 +3379,18 @@ Comparators are provided for monitoring the speed thresholds used to activate mo
 1. Correct the specified bandwidths for the following messages in the "Hysteresis speed 3" ([p2150](SINAMICS%20Parameter%20VECTORMV.md#p21500n-hysteresis-speed-3)[0]) field:
 
    - n_act ≥ 0
-   - |n_act| < speed setpoint 3
-   - n_set < [p2161](SINAMICS%20Parameter%20VECTORMV.md#p21610n-speed-threshold-3)
+   - |n_act| &lt; speed setpoint 3
+   - n_set &lt; [p2161](SINAMICS%20Parameter%20VECTORMV.md#p21610n-speed-threshold-3)
    - n_set ≥ 0
 
    The calculation mode is defined using [p0340](SINAMICS%20Parameter%20VECTORMV.md#p03400n-automatic-calculation-motorcontrol-parameters).
 2. Interconnect the "n_act ≥ 0" ([r2197](SINAMICS%20Parameter%20VECTORMV.md#r2197113-cobo-status-word-monitoring-1).3) signal sink with the required parameters. Several interconnections are possible.
 
    Signal n_act ≥ 0 is generated considering hysteresis speed 3.
-3. Interconnect the "|n_act| < speed threshold 3" ([r2199](SINAMICS%20Parameter%20VECTORMV.md#r2199012-cobo-status-word-monitoring-3).0) signal sink with the required parameters. Several interconnections are possible.
+3. Interconnect the "|n_act| &lt; speed threshold 3" ([r2199](SINAMICS%20Parameter%20VECTORMV.md#r2199012-cobo-status-word-monitoring-3).0) signal sink with the required parameters. Several interconnections are possible.
 
-   Signal |n_act| < speed threshold 3 is generated considering hysteresis speed 3 and speed threshold 3.
-4. Correct the speed threshold 3 for |n_act| < speed setpoint 3 in the "Speed threshold 3" (p2161) field.
+   Signal |n_act| &lt; speed threshold 3 is generated considering hysteresis speed 3 and speed threshold 3.
+4. Correct the speed threshold 3 for |n_act| &lt; speed setpoint 3 in the "Speed threshold 3" (p2161) field.
 5. Interconnect the "Speed setpoint for messages" ([p2151](SINAMICS%20Parameter%20VECTORMV.md#p21510n-ci-speed-setpoint-for-messagessignals)) signal source for speed setpoint messages.
 6. Interconnect the "Speed setpoint 2" ([p2154](SINAMICS%20Parameter%20VECTORMV.md#p21540n-ci-speed-setpoint-2)) signal source for velocity setpoint 2.
 

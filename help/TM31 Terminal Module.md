@@ -133,7 +133,7 @@ In the "Analog inputs" screen form, you can change the interconnection of the an
    The larger the smoothing time constant, the slower the response of the analog input to changes in the measured value.
 7. If you require a noise suppression for the input signal, enter a value in the "Noise suppression" field. The noise suppression results as follows:
 
-   - |y-x| > noise suppression   
+   - |y-x| &gt; noise suppression   
      results in y = x: The output value is set to the current input value.
    - |y-x| ≤ noise suppression   
      results in y = y<sub>old</sub>: The output value retains its value.
@@ -334,7 +334,7 @@ Parameter settings for selecting alarms and faults
 | Alarm only | ≤ 250° C | ≥ 251° C (= Off) | 0 |
 | Fault only | ≥ 251° C (= Off) | ≤ 250° C | Any |
 | Fault and alarm | ≤ 250° C | ≤ 250° C | 0 |
-| Alarm with delayed fault | ≤ 250° C | ≤ 250° C | > 0 ms |
+| Alarm with delayed fault | ≤ 250° C | ≤ 250° C | &gt; 0 ms |
 | No messages | ≥ 251° C (= Off) | ≥ 251° C (= Off) | Any |
 
 ###### Parameterizing temperature sensors

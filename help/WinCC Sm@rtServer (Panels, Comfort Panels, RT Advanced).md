@@ -297,7 +297,7 @@ The "WinCC Runtime Advanced Internet" dialog of the control panel can contain th
 
 At Sm@rtServer and Sm@rtClient, the same input area plan must be set.
 
-The Sm@rtServer uses the Standard-Input area plan of the operating system: (Start>Settings>Control Panel> Country settings>Tab "Entry"). These changes become effective after system restart.
+The Sm@rtServer uses the Standard-Input area plan of the operating system: (Start&gt;Settings&gt;Control Panel&gt; Country settings&gt;Tab "Entry"). These changes become effective after system restart.
 
 At Sm@rtClient, the same input area plan must be set like at Sm@rtServer. No restart is necessary after the switchover of input area plan at Sm@rtClient.
 
@@ -759,7 +759,7 @@ This setting governs forced access in an emergency contrary to normal session ma
 
   If this check box is not selected, every operator can force access in emergencies as follows:
 
-  - Pressing the <Shift> key four times
+  - Pressing the &lt;Shift&gt; key four times
   - Clicking four times
   - Touching the screen four times
 
@@ -771,7 +771,7 @@ This setting governs forced access in an emergency contrary to normal session ma
 
   > **Note**
   >
-  > On the server, access can only be forced by pressing the <Shift> key four times, clicking four times, or touching the screen four times.
+  > On the server, access can only be forced by pressing the &lt;Shift&gt; key four times, clicking four times, or touching the screen four times.
 
 ###### HTTP-Server
 
@@ -953,22 +953,22 @@ If the client accesses the server in monitoring mode, the operator can see the c
 
 In the monitoring mode, all the keys on the client retain their standard functions.
 
-If remote control was started from the Sm@rtClient display, the operator uses the <Tab> key or the cursor keys to go to the next object in the current screen of the client project.
+If remote control was started from the Sm@rtClient display, the operator uses the &lt;Tab&gt; key or the cursor keys to go to the next object in the current screen of the client project.
 
 ##### Control mode
 
 If the client accesses the server in operator control mode, the operator can use the mouse and the keyboard to control the server from the client. If an access attempt is made from another client, the assignment of operating permission depends on the settings at the server and at the clients.
 
-In operator control mode, the client keys act on the server screen. Thus, the operator uses the <Tab> key to go to the next object in the current screen of the project running on the server.
+In operator control mode, the client keys act on the server screen. Thus, the operator uses the &lt;Tab&gt; key to go to the next object in the current screen of the project running on the server.
 
 If remote control was started from the Sm@rtClient display, the operator can only go to another object or screen in the project on the client by using an additionally configured function or an additional menu command. The operator to this menu command as follows:
 
 - On the Touch-device, in which he touches the screen longer than 1 sec.
-- On the keyboard =device, in which he masks on the menu with <Shift+Control> and operates it with <Alt> and the keyboard.
+- On the keyboard =device, in which he masks on the menu with &lt;Shift+Control&gt; and operates it with &lt;Alt&gt; and the keyboard.
 
 In both operating modes, the Sm@rtServer is set so that the operator at the remotely controlled device, the server, can be prevented from performing any activities.
 
-In an emergency, the operator can exact the user rights on a remotely controlled HMI device as well as on an inactive HMI device. If no password is specified, the operator must click the user interface four times consecutively, touch the screen four times consecutively, or press the <Shift> key four times consecutively. If a password is specified, the operator must click once or press a key on the client and then enter the specified password.
+In an emergency, the operator can exact the user rights on a remotely controlled HMI device as well as on an inactive HMI device. If no password is specified, the operator must click the user interface four times consecutively, touch the screen four times consecutively, or press the &lt;Shift&gt; key four times consecutively. If a password is specified, the operator must click once or press a key on the client and then enter the specified password.
 
 ##### Settings for session management
 
@@ -1156,14 +1156,14 @@ However, this option only blocks basic keyboard and mouse operation. Gestures ar
 
 ##### Switching off touch mode on PCs with resistive display
 
-1. Open the IPC wizard on the server device in the Windows Start menu with the command "All Programs > UPDD > Settings".
+1. Open the IPC wizard on the server device in the Windows Start menu with the command "All Programs &gt; UPDD &gt; Settings".
 2. Under "Click Mode", disable the "Extended Touch" option.
 
 ##### Switching off touch mode on capacitive multi-touch PCs
 
-1. Open "IPC Wizard > Panel Configuration Center" (version 2.1 or higher).
+1. Open "IPC Wizard &gt; Panel Configuration Center" (version 2.1 or higher).
 
-   All recognized devices are displayed under "Panel Configuration Center > Touch settings". The set touch mode is also displayed for each device.
+   All recognized devices are displayed under "Panel Configuration Center &gt; Touch settings". The set touch mode is also displayed for each device.
 2. To change the touch mode of a device, click the respective "Switch Mode" button.
 
 The touch mode of the device changes accordingly to single-touch mode.
@@ -1291,7 +1291,7 @@ Settings for the screen display
   In the Sm@rtClient application window, the entire layout of remote HMI-device is not shown.
 - Use CTRL + Cursor Key for Scrolling
 
-  The key combinations <CTRL> + cursor key are used to scroll within the local screen. They are no longer transferred to the server.
+  The key combinations &lt;CTRL&gt; + cursor key are used to scroll within the local screen. They are no longer transferred to the server.
 
 **Mouse**
 
@@ -1535,7 +1535,7 @@ If the "https" check box is cleared, the user can decide in the WebClient whethe
 >
 > The security certificate for the Sm@rtServer is located in the Windows certificate store. No certificates can be exported on the HMI devices.
 
-The certificate name is as follows: <IP address>.
+The certificate name is as follows: &lt;IP address&gt;.
 
 > **Note**
 >
@@ -1817,7 +1817,7 @@ Example: "192.168.0.1::5800"
 
 You can also start the Sm@rtClient application with the command line: "smartclient.exe 192.168.0.1". The logon dialog box opens.
 
-Or you start the Sm@rtClient application via the command line with password: "smartclient.exe 192.168.0.1 /password <Password>".
+Or you start the Sm@rtClient application via the command line with password: "smartclient.exe 192.168.0.1 /password &lt;Password&gt;".
 
 > **Note**
 >
@@ -1830,7 +1830,7 @@ Or you start the Sm@rtClient application via the command line with password: "sm
   Instead of the on-screen keyboard, the following message is displayed on the Sm@rtClient if you enter the password directly at the Sm@rtServer: "Remote access by Sm@rt Options is in Progress. Please wait until the input of values has been ended." This measure prevents keyboard input for entering the password from being displayed on the Sm@rtClient.
 - Password input at the Sm@rtClient
 
-  The on-screen keyboard is hidden on the Sm@rtServer due to the actions carried out on the Sm@rtClient. Use the local on-screen keyboard for entries at the Sm@rtClient. The local on-screen keyboard will be displayed automatically on the Sm@rtClient or in the Sm@rtClient view. Close the on-screen keyboard manually. Select "Input > Hide Input Panel" to hide the local on-screen keyboard.
+  The on-screen keyboard is hidden on the Sm@rtServer due to the actions carried out on the Sm@rtClient. Use the local on-screen keyboard for entries at the Sm@rtClient. The local on-screen keyboard will be displayed automatically on the Sm@rtClient or in the Sm@rtClient view. Close the on-screen keyboard manually. Select "Input &gt; Hide Input Panel" to hide the local on-screen keyboard.
 
   > **Note**
   >
@@ -1854,12 +1854,12 @@ For operator control via the keyboard, the following is available:
 
 | Keyboard shortcut | Function |
 | --- | --- |
-| <ALT+CTRL+SHIFT+O> | Opens the "Sm@rtClient Options" dialog |
-| <ALT+CTRL+SHIFT+F> | Switches over to full screen mode |
-| <ALT+CTRL+SHIFT+R> | Updates the display |
-| <ALT+CTRL+SHIFT+N> | Opens the "New Sm@rtServer Connection" dialog |
-| <ALT+CTRL+SHIFT+S> | Save as |
-| <ALT+CTRL+SHIFT+T> | Displays and hides the toolbar |
+| &lt;ALT+CTRL+SHIFT+O&gt; | Opens the "Sm@rtClient Options" dialog |
+| &lt;ALT+CTRL+SHIFT+F&gt; | Switches over to full screen mode |
+| &lt;ALT+CTRL+SHIFT+R&gt; | Updates the display |
+| &lt;ALT+CTRL+SHIFT+N&gt; | Opens the "New Sm@rtServer Connection" dialog |
+| &lt;ALT+CTRL+SHIFT+S&gt; | Save as |
+| &lt;ALT+CTRL+SHIFT+T&gt; | Displays and hides the toolbar |
 
 ---
 
@@ -1915,7 +1915,7 @@ Instead of the on-screen keyboard, the following message is displayed on the Sm@
 
 The on-screen keyboard is hidden on the Sm@rtServer due to the actions carried out on the Sm@rtClient. Use the local on-screen keyboard for entries at the Sm@rtClient. The local on-screen keyboard will be displayed automatically on the Sm@rtClient or in the Sm@rtClient view.
 
-Close the local on-screen keyboard manually. Select "Input > Hide Input Panel" to hide the local on-screen keyboard.
+Close the local on-screen keyboard manually. Select "Input &gt; Hide Input Panel" to hide the local on-screen keyboard.
 
 > **Note**
 >
@@ -2086,7 +2086,7 @@ The settings were changed. The changes will be effective after restarting the Sm
 Proceed as follows to configure the Sm@rtClient:
 
 1. Insert the Sm@rtClient display in the start screen.
-2. In the Inspector window, click "Properties > Properties > General".
+2. In the Inspector window, click "Properties &gt; Properties &gt; General".
 3. Enter the IP address or the name of the server HMI device in the "Address Sm@rtServer" field.
 4. Enter "Password 1" configured on the server in the "Password" field.
 5. Activate the "Encrypt communication" function in the "Options" area.
@@ -2197,7 +2197,7 @@ Proceed as follows to send a message when an alarm is triggered:
 1. Double-click on the "HMI-Alarms" entry in the project tree.
 2. Click the "Alarm classes" tab in the "HMI-Alarms" editor.
 3. Select the alarm class, e.g. "Errors".
-4. Enter the E-Mail-Address in the inspector window under "Properties > Properties > General".
+4. Enter the E-Mail-Address in the inspector window under "Properties &gt; Properties &gt; General".
 5. Create an analog or discrete message with this alarm class.
 
 #### Result
@@ -2537,7 +2537,7 @@ To display and control the service pages, follow these steps:
 
 The service-pages are displayed. The HMI-device can be operated or monitored via the service-pages.
 
-A keyboard units cannot be operated completely in the Internet Explorer, since only the screen content is displayed. Use the Sm@rtClient-Application to remotely control the keys of HMI-device. The Sm@rtClient-Application can be located under "Start > Program > Siemens Automation > Runtime Systems > WinCC Runtime Advanced > Sm@rtClient"
+A keyboard units cannot be operated completely in the Internet Explorer, since only the screen content is displayed. Use the Sm@rtClient-Application to remotely control the keys of HMI-device. The Sm@rtClient-Application can be located under "Start &gt; Program &gt; Siemens Automation &gt; Runtime Systems &gt; WinCC Runtime Advanced &gt; Sm@rtClient"
 
 ### Create own Service-pages (Panels, Comfort Panels, RT Advanced)
 
@@ -2561,7 +2561,7 @@ The basic framework of the service-pages corresponds to a normal HTML-file.
 
 You can specify variable parameters in HTML documents. As soon as a page with variable parameters is opened, the parameters are replaced by specific values.
 
-<BODY > Welcome on <MWSL><!-- write(GetVar("[Parameter]")); --></MWSL></BODY>
+&lt;BODY &gt; Welcome on &lt;MWSL&gt;&lt;!-- write(GetVar("[Parameter]")); --&gt;&lt;/MWSL&gt;&lt;/BODY&gt;
 
 ##### Available variable parameter
 
@@ -2585,13 +2585,13 @@ You can specify variable parameters in HTML documents. As soon as a page with va
 
 In the example below, the "HostName" parameter is replaced by the network-name of the device.
 
-<BODY > Welcome on <MWSL><!-- write(GetVar("[HostName]")); --></MWSL></BODY>
+&lt;BODY &gt; Welcome on &lt;MWSL&gt;&lt;!-- write(GetVar("[HostName]")); --&gt;&lt;/MWSL&gt;&lt;/BODY&gt;
 
 ##### Process tag
 
 Process tag values can also be displayed in HTML pages. The syntax is the same as for device tags. Use the tag name as a placeholder for the tag value, , e.g. Tag_1.
 
-<BODY > Welcome on <MWSL><!-- write(GetVar("[Tag_1")); --></MWSL></BODY>
+&lt;BODY &gt; Welcome on &lt;MWSL&gt;&lt;!-- write(GetVar("[Tag_1")); --&gt;&lt;/MWSL&gt;&lt;/BODY&gt;
 
 | Symbol | Meaning |
 | --- | --- |
@@ -2602,7 +2602,7 @@ Situation 1 is based on standard behavior: If a tag is currently not in use curr
 
 ##### Link own Service-pages
 
-If a user connects to an HMI device, he is automatically forwarded to the start page http://<Device name>/www/start.html. This page represents the starting point for the HTML-pages of the web server. Every standard page is accessible from the start page via a link. For this reason, you insert a link for each of your HTML pages in the start page.
+If a user connects to an HMI device, he is automatically forwarded to the start page http://&lt;Device name&gt;/www/start.html. This page represents the starting point for the HTML-pages of the web server. Every standard page is accessible from the start page via a link. For this reason, you insert a link for each of your HTML pages in the start page.
 
 > **Note**
 >
@@ -2651,7 +2651,7 @@ Proceed as follows to transfer files via the standard-path:
 
 1. Copy the changed HTML pages and pictures according to "\Flash\Simatic\WebContent".
 
-   Access then takes place with "http://<device>/www/<HTML page>".
+   Access then takes place with "http://&lt;device&gt;/www/&lt;HTML page&gt;".
 
 ##### Transfer files via the project transfer
 
@@ -2878,9 +2878,9 @@ Proceed as follows to create an HTTP-connection:
    If the server has already been commissioned, you can read out the IP address on the server as well:
 
    - Panel  
-     Click "Start > Programs > Command Prompt" on the server and enter the "ipconfig" command using the screen keyboard. Press <Enter> to display the IP-address.
+     Click "Start &gt; Programs &gt; Command Prompt" on the server and enter the "ipconfig" command using the screen keyboard. Press &lt;Enter&gt; to display the IP-address.
    - For PC/Panel PC  
-     Click on the server on "Start > Run", enter "Cmd", and press <Enter>. The command interpreter is displayed. Enter the "ipconfig" command. Press <Enter> to display the IP-address.
+     Click on the server on "Start &gt; Run", enter "Cmd", and press &lt;Enter&gt;. The command interpreter is displayed. Enter the "ipconfig" command. Press &lt;Enter&gt; to display the IP-address.
 5. If the "HTTPS" protocol type is selected, you can establish how the HTTPS-client verifies the properties of the server-certificate and how it should react in the event of error:
 
    - "Allow invalid computer names for certificates"
@@ -2913,7 +2913,7 @@ A connection was created in the WinCC-Project of the HTTP-Client. You can find m
 To create tags on the HTTP-client, proceed as follows:
 
 1. Open the "HMI- tags" folder in the project tree and double-click the entry "Standard-tag table". The "Tags" editor opens.
-2. Enter a clear tag-name for "Name" in the Inspector window under "Properties > Properties > General".
+2. Enter a clear tag-name for "Name" in the Inspector window under "Properties &gt; Properties &gt; General".
 3. Select the HTTP-connection for "Connection".
 4. Select the data type for "data type".
 
@@ -2957,7 +2957,7 @@ After runtime start, the HTTPS client establishes a connection to the HTTPS serv
 
 The HTTPS server generates the certificate itself during the first HTTPS client access. The HTTPS server saves the certificate to the "Cert.cer" file. The file is stored in the following directory:
 
-- On a PC/Panel PC (with Windows) in the directory "<Runtime Directory>\SystemRoot\SSL"
+- On a PC/Panel PC (with Windows) in the directory "&lt;Runtime Directory&gt;\SystemRoot\SSL"
 - On Windows CE-based devices in the directory "Flash\Simatic\SystemRoot\SSL"
 
 The certificate must be stored on the HTTPS client on a storage medium from which it can be launched with a double click. You can select from the following transfer options:
@@ -2973,7 +2973,7 @@ The certificate must be stored on the HTTPS client on a storage medium from whic
 
 Insert the storage medium on which you have saved the "Cert.cer" file into the HTTPS client or open the directory in which the file is located. Double click on the file and follow the instructions in the Windows dialog.
 
-Tip: The Internet Explorer provides an easy way to install a certificate. Connect to this device via HTTPS (e.g.: https://<my device>). The browser establishes if a certificate has not yet been imported. In this case, the browser asks if you want to install the certificate. Any faults in the certificate are displayed.
+Tip: The Internet Explorer provides an easy way to install a certificate. Connect to this device via HTTPS (e.g.: https://&lt;my device&gt;). The browser establishes if a certificate has not yet been imported. In this case, the browser asks if you want to install the certificate. Any faults in the certificate are displayed.
 
 #### Installing a certificate on a client with Windows CE
 
@@ -3002,7 +3002,7 @@ A status alarm is output when you completed the installation. Runtime has to be 
 If the "Cert.cer" file generated on the HTTPS server cannot be opened on HMI devices based on Windows CE 5.0 by double-clicking the client, follow these steps:
 
 1. Open the Control Panel.
-2. Select "Certificates > My Certificates".
+2. Select "Certificates &gt; My Certificates".
 3. Click the "Import" button.
 
    A dialog box opens.
@@ -3037,7 +3037,7 @@ The data access via the Web-service(SOAP) on Windows CE-HMI-devices functions us
 
 Enter the device name of the HMI-device with the appropriate IP-address in the hosts-file. The hosts file is given in the directory "%windir%\system32\drivers\etc\", e.g. C:\WINNT\system32\drivers\etc.
 
-The engineering object name, e.g. DEVICE, must be set in the control panel on the HMI device under "System > Device Name". Please change the default device name to ensure that the device name is unique within the network.
+The engineering object name, e.g. DEVICE, must be set in the control panel on the HMI device under "System &gt; Device Name". Please change the default device name to ensure that the device name is unique within the network.
 
 #### Example for the entry in the hosts-file:
 

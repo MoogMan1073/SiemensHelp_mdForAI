@@ -53,7 +53,7 @@ To use one of the "SIMATIC Ident" technology objects, the following requirements
 
   - TO_Ident: From V14 SP1 and higher
   - TO_TagLayout: From V16 and higher
-- According to the hardware used, the connected devices were added to the hardware configuration ("Devices & Networks"), networked with each other and configured.
+- According to the hardware used, the connected devices were added to the hardware configuration ("Devices &amp; Networks"), networked with each other and configured.
 - The project contains at least one S7 controller and at least one Ident device (e.g. communications module, reader, optical reader).
 
   The following controllers are compatible:
@@ -178,7 +178,7 @@ You can use this function to configure Ident devices that are not fully integrat
 - Reader parameters
 
   The "Transmission speed" parameter is not supported within this parameter group.
-- Diagnostics > Hardware diagnostics
+- Diagnostics &gt; Hardware diagnostics
 
   The hardware diagnostics is not supported by the function.
 
@@ -434,8 +434,8 @@ Displayed parameters of the "Reader status" area
 | 20 | ISO 14443 (MOBY E, E6xx) |  |
 | 31 | General Mode |  |
 | 40 | P2P master |  |
-| 41 | P2P master & mixed operation with ISO transponder (MDS Dxxx) |  |
-| 50 | P2P master & mixed operation with RF300 transponder |  |
+| 41 | P2P master &amp; mixed operation with ISO transponder (MDS Dxxx) |  |
+| 50 | P2P master &amp; mixed operation with RF300 transponder |  |
 | 4F | P2P slave |  |
 | Antenna status | Status of the antenna |  |
 | Presence check | Set presence check profile |  |
@@ -532,7 +532,7 @@ Parameters of the "Tag layout definition" parameter group
 | Elements | Display/output of the array/string elements. Note that this parameter value is pre-defined by the "Data type" parameter.  The following values are possible:  - Array: (1 ... 262144) - String: (1 ... 254) |
 | Length | Display/output of the tag field length. Note that this parameter value is pre-defined by the "Data type" parameter.   If the "Array" data type was selected, the value is identical to the value in the "Elements" parameter. If the "String" data type was selected, the value specified here is 2 bytes larger than the value in the "Elements" parameter. |
 | End address | Display/output of the tag field end address. Note that this parameter value depends on the values entered in the parameters "Data type", "Start address" and "Elements". |
-| Create DB/DT | Click the "Create DB/DT" button to create a data block/data type that provides easy access to the defined tag fields. If an existing "TagLayout" technology object was revised, the data block/data type is updated.    The data block contains a list of all tag fields of the technology object with the associated IDs and is used for symbolic selection of a tag field at the "TAGFIELD" parameter of the function blocks "Read_Tagfield" and "Write_Tagfield".   Name of the DB: <Name of the TO>_Indexes  The data type can be used in a data block and supplies the "IDENT_DATA" parameter of the function blocks "Read_Tagfield" and "Write_Tagfield" with the user data.  Name of the DT: <Name of the TO>_data_type |
+| Create DB/DT | Click the "Create DB/DT" button to create a data block/data type that provides easy access to the defined tag fields. If an existing "TagLayout" technology object was revised, the data block/data type is updated.    The data block contains a list of all tag fields of the technology object with the associated IDs and is used for symbolic selection of a tag field at the "TAGFIELD" parameter of the function blocks "Read_Tagfield" and "Write_Tagfield".   Name of the DB: &lt;Name of the TO&gt;_Indexes  The data type can be used in a data block and supplies the "IDENT_DATA" parameter of the function blocks "Read_Tagfield" and "Write_Tagfield" with the user data.  Name of the DT: &lt;Name of the TO&gt;_data_type |
 
 #### Loading the configuration on the CPU
 

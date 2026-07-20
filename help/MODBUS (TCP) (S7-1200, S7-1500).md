@@ -583,7 +583,7 @@ This section contains information on the following topics:
 
 - [MB_CLIENT: Communicating via PROFINET as a Modbus TCP client (S7-1200, S7-1500)](#mb_client-communicating-via-profinet-as-a-modbus-tcp-client-s7-1200-s7-1500)
 - [MB_SERVER: Communicating via PROFINET as a Modbus TCP server (S7-1200, S7-1500)](#mb_server-communicating-via-profinet-as-a-modbus-tcp-server-s7-1200-s7-1500)
-- [Differences between the versions <= V3.x and >= V4.0 of the Modbus TCP library (S7-1200, S7-1500)](#differences-between-the-versions-v3x-and-v40-of-the-modbus-tcp-library-s7-1200-s7-1500)
+- [Differences between the versions &lt;= V3.x and &gt;= V4.0 of the Modbus TCP library (S7-1200, S7-1500)](#differences-between-the-versions-v3x-and-v40-of-the-modbus-tcp-library-s7-1200-s7-1500)
 
 ### MB_CLIENT: Communicating via PROFINET as a Modbus TCP client (S7-1200, S7-1500)
 
@@ -638,7 +638,7 @@ The following table shows the parameters of the "MB_CLIENT" instruction:
 | [MB_DATA_ADDR](#mb_mode-mb_data_addr-and-mb_data_len-parameters-s7-1200-s7-1500) | Input | UDINT | depends on MB_MODE  Note: This parameter is not used for Modbus function 23 and it must have its default value as the value. |
 | MB_DATA_LEN | Input | UINT | Data length: Number of bits or words for the data access (see [MB_MODE, MB_DATA_ADDR and MB_DATA_LEN parameters](#mb_mode-mb_data_addr-and-mb_data_len-parameters-s7-1200-s7-1500)).   Note: This parameter is not used for Modbus function 23 and it must have its default value as the value. |
 | [MB_DATA_PTR](#mb_data_ptr-parameter-s7-1200-s7-1500) | InOut | VARIANT | Pointer to a data buffer for the data to be received from the Modbus server or to be sent to the Modbus server.  Note: This parameter is not used for Modbus function 23 and it must have its default value as the value. |
-| [CONNECT](#connect-parameter-s7-1200-s7-1500) | InOut | VARIANT | Pointer to the structure of the connection description  The following structures (system data types) can be used:  - TCON_IP_v4: Includes all address parameters that are required for establishing a programmed connection. When using TCON_IP_v4, the connection is established when calling the "MB_CLIENT" instruction. - TCON_Configured: Includes the address parameters of a configured connection. When using TCON_Configured, an existing connection is used that was created by the CPU after download of the hardware configuration.   For instruction versions > V4.1 of MB_CLIENT, the following connection descriptions for TCP are also possible:  - TCON_IP_V4_SEC (firmware version V4.3 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters according to TCON_IP_V4_SEC](Configuring%20devices%20and%20networks.md#connection-parameters-according-to-tcon_ip_v4_sec-s7-1500) - TCON_QDN (firmware version V4.4 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters in accordance with TCON_QDN](Configuring%20devices%20and%20networks.md#connection-parameters-in-accordance-with-tcon_qdn-s7-1500) - TCON_QDN_SEC (firmware version V4.4 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters in accordance with TCON_QDN_SEC](Configuring%20devices%20and%20networks.md#connection-parameters-in-accordance-with-tcon_qdn_sec-s7-1500)   For more information on secure connections, see [Secure Open User Communication](Configuring%20devices%20and%20networks.md#secure-open-user-communication-s7-1500-s7-1500t) |
+| [CONNECT](#connect-parameter-s7-1200-s7-1500) | InOut | VARIANT | Pointer to the structure of the connection description  The following structures (system data types) can be used:  - TCON_IP_v4: Includes all address parameters that are required for establishing a programmed connection. When using TCON_IP_v4, the connection is established when calling the "MB_CLIENT" instruction. - TCON_Configured: Includes the address parameters of a configured connection. When using TCON_Configured, an existing connection is used that was created by the CPU after download of the hardware configuration.   For instruction versions &gt; V4.1 of MB_CLIENT, the following connection descriptions for TCP are also possible:  - TCON_IP_V4_SEC (firmware version V4.3 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters according to TCON_IP_V4_SEC](Configuring%20devices%20and%20networks.md#connection-parameters-according-to-tcon_ip_v4_sec-s7-1500) - TCON_QDN (firmware version V4.4 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters in accordance with TCON_QDN](Configuring%20devices%20and%20networks.md#connection-parameters-in-accordance-with-tcon_qdn-s7-1500) - TCON_QDN_SEC (firmware version V4.4 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters in accordance with TCON_QDN_SEC](Configuring%20devices%20and%20networks.md#connection-parameters-in-accordance-with-tcon_qdn_sec-s7-1500)   For more information on secure connections, see [Secure Open User Communication](Configuring%20devices%20and%20networks.md#secure-open-user-communication-s7-1500-s7-1500t) |
 | DONE | Out | BOOL | The bit at output parameter DONE is set to "1" as soon as the last Modbus job is completed without errors. |
 | BUSY | Out | BOOL | - 0: No Modbus request in progress - 1: Modbus request being processed  The output parameter BUSY is not set during connection establishment and termination. |
 | ERROR | Out | BOOL | - 0: No error - 1: Error occurred. The cause of error is indicated by the STATUS parameter. |
@@ -930,7 +930,7 @@ For programmed connections at the CONNECT parameter, use the following structure
 | 8381 | Remote | 01 | Function code is not supported. |
 | 8382 | Local | - | - The length of the Modbus frame in the frame header does not match the number of received bytes. - The number of bytes does not match the number of actually transmitted bytes (only functions 1-4). For example, this is the case when "MB_CLIENT" requests an odd number of words, but "MB_SERVER" always sends an even number of words. - The start address in the received frame does not match the saved start address (functions 5, 6, 15, 16). - The number of words does not match the number of actually transmitted words (functions 15 and 16). |
 | Remote | 03 | Invalid length specification in received Modbus frame. Check the server side. |  |
-| 8383 | Local | - | - Instruction version < V6.0: Error reading or writing data or access outside the address area of [MB_DATA_PTR](#mb_data_ptr-parameter-s7-1200-s7-1500). - Instruction version >= V6.0: Error reading or writing data or access outside the address area of MB_DATA_PTR, RD_MB_DATA_PTR or WR_MB_DATA_PTR. |
+| 8383 | Local | - | - Instruction version &lt; V6.0: Error reading or writing data or access outside the address area of [MB_DATA_PTR](#mb_data_ptr-parameter-s7-1200-s7-1500). - Instruction version &gt;= V6.0: Error reading or writing data or access outside the address area of MB_DATA_PTR, RD_MB_DATA_PTR or WR_MB_DATA_PTR. |
 | Remote | 02 | Error reading or writing data or access outside the address area of the server |  |
 | 8384 | Local | - | - Invalid exception code received. - A different data value was received than was originally sent by the client (functions 5, 6 and 8). - Invalid status value received (function 11) |
 | Remote | 03 | Error in data value for function 5 |  |
@@ -948,9 +948,9 @@ For programmed connections at the CONNECT parameter, use the following structure
 | 80B6 | Invalid connection type, only TCP connections are supported. |
 | 80BB | Invalid value at ActiveEstablished parameter (identifier for the type of connection establishment, see [CONNECT parameter](#connect-parameter-s7-1200-s7-1500)):   - Only passive connection establishment permitted for server (ActiveEstablished = FALSE). - Only active connection establishment permitted for client (ActiveEstablished = TRUE). |
 | 8188 | The MB_MODE parameter has an invalid value. |
-| 8189 | - Instruction version < V6.0: Invalid addressing of data at the MB_DATA_ADDR parameter. - Instruction version >= V6.0: Invalid addressing of data at the MB_DATA_ADDR, RD_MB_DATA_ADDR or WR_MB_DATA_ADDR parameter. |
-| 818A | - Instruction version < V6.0: Invalid data length at the MB_DATA_LEN parameter. - Instruction version >= V6.0: Invalid data length at the MB_DATA_LEN, RD_MB_DATA_LEN or WR_MB_DATA_LEN parameter. |
-| 818B | - Instruction version < V6.0: The MB_DATA_PTR parameter has an invalid pointer. You should also check the values of the [MB_DATA_ADDR](#mb_data_ptr-parameter-s7-1200-s7-1500) and MB_DATA_LEN parameters. - Instruction version >= V6.0: Invalid pointer at the MB_DATA_PTR, RD_MB_DATA_PTR or WR_MB_DATA_PTR parameter. Also check the values of the parameters MB_DATA_ADDR and MB_DATA_LEN or, for MB_MODE = 123, the values of the parameters RD_MB_DATA_ADDR / WR_MB_DATA_ADDR and RD_MB_DATA_LEN / WR_MB_DATA_LEN. |
+| 8189 | - Instruction version &lt; V6.0: Invalid addressing of data at the MB_DATA_ADDR parameter. - Instruction version &gt;= V6.0: Invalid addressing of data at the MB_DATA_ADDR, RD_MB_DATA_ADDR or WR_MB_DATA_ADDR parameter. |
+| 818A | - Instruction version &lt; V6.0: Invalid data length at the MB_DATA_LEN parameter. - Instruction version &gt;= V6.0: Invalid data length at the MB_DATA_LEN, RD_MB_DATA_LEN or WR_MB_DATA_LEN parameter. |
+| 818B | - Instruction version &lt; V6.0: The MB_DATA_PTR parameter has an invalid pointer. You should also check the values of the [MB_DATA_ADDR](#mb_data_ptr-parameter-s7-1200-s7-1500) and MB_DATA_LEN parameters. - Instruction version &gt;= V6.0: Invalid pointer at the MB_DATA_PTR, RD_MB_DATA_PTR or WR_MB_DATA_PTR parameter. Also check the values of the parameters MB_DATA_ADDR and MB_DATA_LEN or, for MB_MODE = 123, the values of the parameters RD_MB_DATA_ADDR / WR_MB_DATA_ADDR and RD_MB_DATA_LEN / WR_MB_DATA_LEN. |
 | 818C | Timeout at parameter BLOCKED_PROC_TIMEOUT or RCV_TIMEOUT (see static tags of instruction). BLOCKED_PROC_TIMEOUT and RCV_TIMEOUT must be between 0.5 s and 55 s. |
 | 818D | One or more parameters do not have their default value but are not used with the specified Modbus function.  Example: If MB_MODE has the value 123, MB_DATA_ADDR and MB_DATA_LEN must have the value 0 and MB_DATA_PTR must be empty. If MB_MODE has a value other than 123, all parameters that begin with "RD_" or "WR_" must have the value 0 or be empty. |
 | 8200 | - A different Modbus request is currently being processed via the port. - Another instance of MB_CLIENT with the same connection parameters is processing an existing Modbus request. |
@@ -1039,7 +1039,7 @@ The following table shows the parameters of the "MB_SERVER" instruction:
 | --- | --- | --- | --- |
 | DISCONNECT | Input | BOOL | The "MB_SERVER" instruction is used to enter into a passive connection with a partner module. The server responds to a connection request from the IP address which is entered in the SDT "TCON_IP_v4" in the CONNECT parameter.   You can use this parameter to control when a connection request is accepted:  - 0: A passive connection is established when there is no communications connection. - 1: Initialization of the connection termination. If the input is set, no other operations are executed. The value 0003 is output at the STATUS parameter after successful connection termination. |
 | [MB_HOLD_REG](#mb_hold_reg-parameter-s7-1200-s7-1500) | InOut | VARIANT | Pointer to the Modbus holding register of the "MB_SERVER" instruction  MB_HOLD_REG must always reference a memory area that is larger than two bytes.  The holding register contains the values that may be accessed by a Modbus client using the Modbus functions 3 (read), 6 (write), 16 (multiple write) and 23 (reading and writing in one job).  As the holding register, use either a global data block with optimized access or the memory area of the bit memories. |
-| [CONNECT](#connect-parameter-s7-1200-s7-1500-1) | InOut | VARIANT | Pointer to the structure of the connection description  The following structures (SDTs) can be used:  - TCON_IP_v4: Includes all address parameters that are required for establishing a programmed connection. The default address is 0.0.0.0 (any IP address), but you can enter a specific IP address so that the server only responds to requests from this address. When using TCON_IP_v4, the connection is established when calling the "MB_SERVER" instruction. - TCON_Configured: Includes the address parameters of a configured connection. When using TCON_Configured, the connection is established by the CPU after download of the hardware configuration.   For instruction versions > V4.2 of MB_SERVER, the following connection descriptions for TCP are also possible:  - TCON_IP_V4_SEC (firmware version V4.3 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters according to TCON_IP_V4_SEC](Configuring%20devices%20and%20networks.md#connection-parameters-according-to-tcon_ip_v4_sec-s7-1500) - TCON_QDN (firmware version V4.4 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters in accordance with TCON_QDN](Configuring%20devices%20and%20networks.md#connection-parameters-in-accordance-with-tcon_qdn-s7-1500) - TCON_QDN_SEC (firmware version V4.4 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters in accordance with TCON_QDN_SEC](Configuring%20devices%20and%20networks.md#connection-parameters-in-accordance-with-tcon_qdn_sec-s7-1500)   For more information on secure connections, see [Secure Open User Communication](Configuring%20devices%20and%20networks.md#secure-open-user-communication-s7-1500-s7-1500t) |
+| [CONNECT](#connect-parameter-s7-1200-s7-1500-1) | InOut | VARIANT | Pointer to the structure of the connection description  The following structures (SDTs) can be used:  - TCON_IP_v4: Includes all address parameters that are required for establishing a programmed connection. The default address is 0.0.0.0 (any IP address), but you can enter a specific IP address so that the server only responds to requests from this address. When using TCON_IP_v4, the connection is established when calling the "MB_SERVER" instruction. - TCON_Configured: Includes the address parameters of a configured connection. When using TCON_Configured, the connection is established by the CPU after download of the hardware configuration.   For instruction versions &gt; V4.2 of MB_SERVER, the following connection descriptions for TCP are also possible:  - TCON_IP_V4_SEC (firmware version V4.3 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters according to TCON_IP_V4_SEC](Configuring%20devices%20and%20networks.md#connection-parameters-according-to-tcon_ip_v4_sec-s7-1500) - TCON_QDN (firmware version V4.4 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters in accordance with TCON_QDN](Configuring%20devices%20and%20networks.md#connection-parameters-in-accordance-with-tcon_qdn-s7-1500) - TCON_QDN_SEC (firmware version V4.4 or higher of the S7-1200 CPUs or firmware version V2.5 or higher of the S7-1500 CPUs)   For a description, see [Connection parameters in accordance with TCON_QDN_SEC](Configuring%20devices%20and%20networks.md#connection-parameters-in-accordance-with-tcon_qdn_sec-s7-1500)   For more information on secure connections, see [Secure Open User Communication](Configuring%20devices%20and%20networks.md#secure-open-user-communication-s7-1500-s7-1500t) |
 | NDR | Output | BOOL | "New Data Ready":  - 0: No new data - 1: New data written by the Modbus client written |
 | DR | Output | BOOL | "Data Read":  - 0: No data read - 1: Data read by the Modbus client |
 | ERROR | Output | BOOL | If an error occurs during the call of the "MB_SERVER" instruction, the output of the ERROR parameter is set to "1". Detailed information about the cause of the problem is indicated by the STATUS parameter. |
@@ -1049,7 +1049,7 @@ The following table shows the parameters of the "MB_SERVER" instruction:
 >
 > **Use of Modbus function 23 in the instruction "MB_SERVER"**
 >
-> The instruction "MB_SERVER" supports the use of Modbus function 23 with which you can write to a holding register and read from a holding register in one job; however, the instruction "MB_CLIENT" supports this function as of instruction version V6.0. Instruction versions < V6.0 return an error code.
+> The instruction "MB_SERVER" supports the use of Modbus function 23 with which you can write to a holding register and read from a holding register in one job; however, the instruction "MB_CLIENT" supports this function as of instruction version V6.0. Instruction versions &lt; V6.0 return an error code.
 >
 > Also note that for a job with read access and write access, write access is executed before the read access.
 
@@ -1304,7 +1304,7 @@ If you want to use less than eight data areas, the required data areas must be l
 
 The Data_Area_Array field consists of 8 elements: Data_Area_Array[1] to Data_Area_Array[8]
 
-Each field element Data_Area_Array[x], 1 <= x <= 8, is a UDT of the type MB_DataArea and is structured as follows:
+Each field element Data_Area_Array[x], 1 &lt;= x &lt;= 8, is a UDT of the type MB_DataArea and is structured as follows:
 
 | Parameter | Data type | Meaning |
 | --- | --- | --- |
@@ -1371,23 +1371,23 @@ The statistical tags NDR_immediate and DR_immediate are contained in the instanc
 
 ### Differences between the versions <= V3.x and >= V4.0 of the Modbus TCP library (S7-1200, S7-1500)
 
-#### Differences between the versions <= V3.x and >= V4.0 of the Modbus instructions
+#### Differences between the versions &lt;= V3.x and &gt;= V4.0 of the Modbus instructions
 
 The following differences between versions exist with the MB_SERVER/MB_CLIENT MODBUS instructions:
 
 - Address parameter
 
-  - In versions <= 3.x, the address data for the Modbus TCP server is specified via the input parameters "IP_x".
-  - Versions >= 4.0 use TCON_IP_V4 and TCON_Configured system data types at the CONNECT input parameter for this purpose.
+  - In versions &lt;= 3.x, the address data for the Modbus TCP server is specified via the input parameters "IP_x".
+  - Versions &gt;= 4.0 use TCON_IP_V4 and TCON_Configured system data types at the CONNECT input parameter for this purpose.
 - If an error occurs during execution, as of version 4.0 of the Modbus instructions, there are more STATUS alarms available which can be evaluated accordingly.
 
 You can find detailed information in the instruction descriptions for [MB_CLIENT](#description-of-mb_client-s7-1200-s7-1500) and [MB_SERVER](#description-of-mb_server-s7-1200-s7-1500).
 
 > **Note**
 >
-> **Changing the Modbus TCP library from a version <= V3.x to a version >= V4.0**
+> **Changing the Modbus TCP library from a version &lt;= V3.x to a version &gt;= V4.0**
 >
-> When you replace the Modbus TCP library from a version <= V3.x to a version >= V4.0 you also need to replace the Open User Communication library. Afterwards check all the instructions relevant for your program.
+> When you replace the Modbus TCP library from a version &lt;= V3.x to a version &gt;= V4.0 you also need to replace the Open User Communication library. Afterwards check all the instructions relevant for your program.
 
 ## Redundant MODBUS (TCP) communication for library versions V5.0 or higher (S7-1200, S7-1500)
 
@@ -1493,8 +1493,8 @@ The R-CPU or H-CPU 1 refers to the connection point 0, the R-CPU or H-CPU 2 refe
 
 If the S7 is designed redundantly, one connection is created from the S7 connection point 0 to junction A of the link partner and one connection from the S7 connection point 1 to junction A of the link partner.
 
-- Connection from the S7 connection point **0** to the partner/node **A** => connection **0A**
-- Connection from the S7 connection point **1** to the partner/node **A** => connection **1A**
+- Connection from the S7 connection point **0** to the partner/node **A** =&gt; connection **0A**
+- Connection from the S7 connection point **1** to the partner/node **A** =&gt; connection **1A**
 
 The figure illustrates the connection designations.
 
@@ -1504,8 +1504,8 @@ Modbus/TCP: Single-sided redundancy S7
 
 If the S7 is designed as standalone and the link partner is designed redundantly, one connection is created from the S7 connection point 0 to junction A of the link partner and one connection from the S7 connection point 0 to junction B of the link partner.
 
-- Connection from the S7 connection point **0** to the partner/node **A** => connection **0A**
-- Connection from the S7 connection point **0** to the partner/node **B** => connection **0B**
+- Connection from the S7 connection point **0** to the partner/node **A** =&gt; connection **0A**
+- Connection from the S7 connection point **0** to the partner/node **B** =&gt; connection **0B**
 
 The figure illustrates the connection designations.
 
@@ -1525,10 +1525,10 @@ The R-CPU or H-CPU 1 refers to the connection point 0, the R-CPU or H-CPU 2 refe
 
 In the case of double-sided redundancy, two connections are created from connection point 0 and two connections from connection point 1 of the S7 to the junctions A and B of the link partner.
 
-- Connection from the S7 connection point **0** to the partner/node **A** => connection **0A**
-- Connection from the S7 connection point **1** to the partner/node **A** => connection **1A**
-- Connection from the S7 connection point **0** to the partner/node **B** => connection **0B**
-- Connection from the S7 connection point **1** to the partner/node **B** => connection **1B**
+- Connection from the S7 connection point **0** to the partner/node **A** =&gt; connection **0A**
+- Connection from the S7 connection point **1** to the partner/node **A** =&gt; connection **1A**
+- Connection from the S7 connection point **0** to the partner/node **B** =&gt; connection **0B**
+- Connection from the S7 connection point **1** to the partner/node **B** =&gt; connection **1B**
 
 The figure illustrates the connection designations.
 
@@ -1689,7 +1689,7 @@ Proceed as follows to enter the registration key REG_KEY:
   REG_KEY in DB
 - Copy the transmitted 17-digit registration key using copy/paste to the "Start value" column.
 - In the cyclic OB, enter the name of the license DB and the name of the string, e.g. License_DB.REG_KEY, at the parameter REG_KEY of the "MB_RED_CLIENT" instruction.
-- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -> RUN is not necessary.
+- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -&gt; RUN is not necessary.
 
 The Modbus/TCP communication using the "MB_RED_CLIENT" instruction is now licensed for this CPU, the output bit LICENSED is TRUE.
 
@@ -1989,8 +1989,8 @@ The R-CPU or H-CPU 1 refers to the connection point 0, the R-CPU or H-CPU 2 refe
 
 If the S7 is designed redundantly, one connection is created from the S7 connection point 0 to junction A of the link partner and one connection from the S7 connection point 1 to junction A of the link partner.
 
-- Connection from the S7 connection point **0** to the partner/node **A** => connection **0A**
-- Connection from the S7 connection point **1** to the partner/node **A** => connection **1A**
+- Connection from the S7 connection point **0** to the partner/node **A** =&gt; connection **0A**
+- Connection from the S7 connection point **1** to the partner/node **A** =&gt; connection **1A**
 
 The figure illustrates the connection designations.
 
@@ -2000,8 +2000,8 @@ Modbus/TCP: Single-sided redundancy S7
 
 If the S7 is designed as standalone and the link partner is designed redundantly, one connection is created from the S7 connection point 0 to junction A of the link partner and one connection from the S7 connection point 0 to junction B of the link partner.
 
-- Connection from the S7 connection point **0** to the partner/node **A** => connection **0A**
-- Connection from the S7 connection point **0** to the partner/node **B** => connection **0B**
+- Connection from the S7 connection point **0** to the partner/node **A** =&gt; connection **0A**
+- Connection from the S7 connection point **0** to the partner/node **B** =&gt; connection **0B**
 
 The figure illustrates the connection designations.
 
@@ -2021,10 +2021,10 @@ The R-CPU or H-CPU 1 refers to the connection point 0, the R-CPU or H-CPU 2 refe
 
 In the case of double-sided redundancy, two connections are created from connection point 0 and two connections from connection point 1 of the S7 to the junctions A and B of the link partner.
 
-- Connection from the S7 connection point **0** to the partner/node **A** => connection **0A**
-- Connection from the S7 connection point **1** to the partner/node **A** => connection **1A**
-- Connection from the S7 connection point **0** to the partner/node **B** => connection **0B**
-- Connection from the S7 connection point **1** to the partner/node **B** => connection **1B**
+- Connection from the S7 connection point **0** to the partner/node **A** =&gt; connection **0A**
+- Connection from the S7 connection point **1** to the partner/node **A** =&gt; connection **1A**
+- Connection from the S7 connection point **0** to the partner/node **B** =&gt; connection **0B**
+- Connection from the S7 connection point **1** to the partner/node **B** =&gt; connection **1B**
 
 The figure illustrates the connection designations.
 
@@ -2262,7 +2262,7 @@ Proceed as follows to enter the registration key REG_KEY:
   REG_KEY in DB
 - Copy the transmitted 17-digit registration key using copy/paste to the "Start value" column.
 - In the cyclic OB, enter the name of the license DB and the name of the string, e.g. License_DB.REG_KEY, at the parameter REG_KEY of the ""MB_RED_SERVER"" instruction.
-- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -> RUN is not necessary.
+- Download the modified blocks to the CPU. The registration key can be entered during runtime; a change from STOP -&gt; RUN is not necessary.
 
 The Modbus/TCP communication using the "MB_RED_SERVER" instruction is now licensed for this CPU, the output bit LICENSED is TRUE.
 

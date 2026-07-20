@@ -64,7 +64,7 @@ Safety-related communication for safe AS-i outputs also uses code sequences. How
 
 The dialog displays an overview of the existing code sequences of the safety-oriented AS-i slaves. For this purpose, code sequences read in at the AS-i bus can be transferred to the F-CM AS-i Safety ST module memory.
 
-Code sequences can be read in by activating the dialog under "Functions" in "Online & Diagnostics" of the F-CM.
+Code sequences can be read in by activating the dialog under "Functions" in "Online &amp; Diagnostics" of the F-CM.
 
 See also: [Operating principle of code sequences of safe AS-i slaves](#operating-principle-of-code-sequences-of-safe-as-i-slaves)
 

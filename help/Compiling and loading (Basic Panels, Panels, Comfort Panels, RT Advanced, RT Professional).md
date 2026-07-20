@@ -29,7 +29,7 @@ To download a WinCC project to an HMI device, a properly configured connection m
 ### Setting up a connection between the configuration PC and HMI device
 
 1. Check the cable connection between the HMI device and configuration PC.
-2. Open the "Devices & Networks" editor in WinCC and start the network view.
+2. Open the "Devices &amp; Networks" editor in WinCC and start the network view.
 3. Select the subnet in the network view and check the settings for the subnet.
 4. Select the interface of the HMI device in the network view or device view and check the connection parameters in the Inspector window.
 5. Switch on the HMI device and press the "Control Panel" button in the loader.
@@ -57,7 +57,7 @@ Check the connection settings and in particular the following parameters:
 >
 > **Connections over Ethernet**
 >
-> For Ethernet-based communication, check the required network settings. You can find additional information under "Readme > WinCC > Security information".
+> For Ethernet-based communication, check the required network settings. You can find additional information under "Readme &gt; WinCC &gt; Security information".
 
 If using a configurable adapter for the connection, check the adapter settings, for example, transmission rate, master on the bus.
 
@@ -125,7 +125,7 @@ You configure options from different areas of your project in the runtime settin
 - Logging language
 - Remote control via Sm@rt server in the "Services" area
 
-  You can find additional information on this in the WinCC online help under "Options > Sm@rt options"
+  You can find additional information on this in the WinCC online help under "Options &gt; Sm@rt options"
 - Operator control in runtime
 
   - Task switching
@@ -137,7 +137,7 @@ You configure options from different areas of your project in the runtime settin
   - Keyboard layout and shortcuts
 - GMP-compliant configuration
 
-  You can find additional information on this in the WinCC online help under "Options > WinCC Audit".
+  You can find additional information on this in the WinCC online help under "Options &gt; WinCC Audit".
 - Alarms
 
   - Buffer overflow
@@ -206,7 +206,7 @@ In WinCC, configure the visual representation of the generated project in Runtim
   > **Truncated view**
   >
   > If the HMI screen does not match the configured size (in pixels), the project only appears on part of the screen in full-screen mode.
-- Under "General > Screen", you specify whether the HMI device uses the default style of the project or another pre-defined style.
+- Under "General &gt; Screen", you specify whether the HMI device uses the default style of the project or another pre-defined style.
 
 ##### Screen settings
 
@@ -216,12 +216,12 @@ In the Runtime settings, specify the start screen and default template. You can 
 
 - Logging language
 
-  Under "General > Logs", you specify the language in which you want to write the logs. The selected logging language always remains the same, even if the user switches the language in Runtime.
+  Under "General &gt; Logs", you specify the language in which you want to write the logs. The selected logging language always remains the same, even if the user switches the language in Runtime.
 
   If you select "Startup language", the logging language remains the same until Runtime is stopped, even if the user has switched the language. However, the next time Runtime is started, the last configured Runtime language is used as the logging language.
 - Runtime language
 
-  Under "Language & font", you specify all Runtime languages and their display. Text entries may be truncated if you selected an unsuitable font size or style. This setting can, for example, affect the following texts:
+  Under "Language &amp; font", you specify all Runtime languages and their display. Text entries may be truncated if you selected an unsuitable font size or style. This setting can, for example, affect the following texts:
 
   - Tooltips
   - Long alarm text
@@ -231,7 +231,7 @@ In the Runtime settings, specify the start screen and default template. You can 
 
 - Specify bit selection
 
-  Under "Screens > Bit selection", you specify whether bit selection will be used on this HMI device for the following:
+  Under "Screens &gt; Bit selection", you specify whether bit selection will be used on this HMI device for the following:
 
   - Text and graphics (text lists and graphic lists)
   - Color and flashing (appearance analysis)
@@ -241,10 +241,10 @@ In the Runtime settings, specify the start screen and default template. You can 
     When you disable an option and several bits are set, the selection that has been configured only for the set bit is displayed.
 - Tooltips for I/O fields
 
-  Under "Screens > Display", you specify whether configured limit values are displayed as tooltips in Runtime when values are entered in I/O fields.
+  Under "Screens &gt; Display", you specify whether configured limit values are displayed as tooltips in Runtime when values are entered in I/O fields.
 - Colored objects
 
-  You specify the color depth of your HMI device under "General > Screens > Color depth". As needed, you assign screen objects a colored appearance. The range of colors is determined by the color depth supported on your selected HMI device.
+  You specify the color depth of your HMI device under "General &gt; Screens &gt; Color depth". As needed, you assign screen objects a colored appearance. The range of colors is determined by the color depth supported on your selected HMI device.
 
 #### Configuring operation in Runtime (Basic Panels)
 
@@ -258,7 +258,7 @@ To edit the Runtime settings for your HMI device, select "Runtime settings" unde
 
 Depending on the HMI device, you can lock task switching on the HMI device. This will prevent the operator from opening other applications in Runtime.
 
-In the Runtime settings of the HMI device, enable the "Lock task switching" option under "General > Screen".
+In the Runtime settings of the HMI device, enable the "Lock task switching" option under "General &gt; Screen".
 
 > **Note**
 >
@@ -270,10 +270,10 @@ In the Runtime settings of the HMI device, enable the "Lock task switching" opti
 
 - Transferring names of the screen objects in scripts
 
-  If you enable the "Load names" option under "General > Screen", the object names of the screen objects are transferred instead of coded addressing information. You need the object names, if you want to address the screen objects in a script via the object names. When you test a script in the debugger, the code becomes more comprehensible by displaying the object names.
+  If you enable the "Load names" option under "General &gt; Screen", the object names of the screen objects are transferred instead of coded addressing information. You need the object names, if you want to address the screen objects in a script via the object names. When you test a script in the debugger, the code becomes more comprehensible by displaying the object names.
 - Displaying comments in scripts
 
-  Under "Screens > Display", you specify whether the comments in scripts are also transferred to the HMI device.
+  Under "Screens &gt; Display", you specify whether the comments in scripts are also transferred to the HMI device.
 
   If you do not transfer the comments, you save storage space on your HMI device.
 
@@ -281,15 +281,15 @@ In the Runtime settings of the HMI device, enable the "Lock task switching" opti
 
 ##### Operation using function keys
 
-To symbolize the function of a function key for keyboard devices, you configure a graphic next to the function key in the display. Under "Screens > Function keys > User-defined pictogram size", you specify whether you want to use a graphic size that deviates from the standard size.
+To symbolize the function of a function key for keyboard devices, you configure a graphic next to the function key in the display. Under "Screens &gt; Function keys &gt; User-defined pictogram size", you specify whether you want to use a graphic size that deviates from the standard size.
 
 ##### Operation with keyboard
 
-Under "Keyboard > General > Use screen keyboard", you specify whether the screen keyboard is available on your HMI device.
+Under "Keyboard &gt; General &gt; Use screen keyboard", you specify whether the screen keyboard is available on your HMI device.
 
-Under "Keyboard > General > Release button on exit", you specify whether the "Release" event is triggered when the user exits a button without releasing it.
+Under "Keyboard &gt; General &gt; Release button on exit", you specify whether the "Release" event is triggered when the user exits a button without releasing it.
 
-Under "Keyboard > Disable function keys in dialogs", you specify for keyboard HMI devices whether the function keys are disabled for the duration of the displayed dialog. Large dialogs can hide explanatory areas or graphics at function keys or that border function keys. Functions keys can be unintentionally pressed due to this.
+Under "Keyboard &gt; Disable function keys in dialogs", you specify for keyboard HMI devices whether the function keys are disabled for the duration of the displayed dialog. Large dialogs can hide explanatory areas or graphics at function keys or that border function keys. Functions keys can be unintentionally pressed due to this.
 
 #### Compatibility check with the controller
 
@@ -299,7 +299,7 @@ The "Project ID" area pointer is used to configure the project ID for checking t
 
 ##### Compatibility check with the controller
 
-You select the project ID in the Runtime settings of the HMI device under "General > Identification > Project ID".
+You select the project ID in the Runtime settings of the HMI device under "General &gt; Identification &gt; Project ID".
 
 At startup, Runtime checks whether the project ID of the project matches the PLC project version. Runtime will only start if the two values match.
 
@@ -354,7 +354,7 @@ To protect the private password key during transport, you can configure a passwo
 
 ###### Creating password
 
-1. Open the "Runtime settings > General" editor in the Project window.
+1. Open the "Runtime settings &gt; General" editor in the Project window.
 2. Enter the password in the "Enter password" field in the "Transport password" area.
 3. Confirm the password in the "Confirm password" field.
 
@@ -419,7 +419,7 @@ If an error occurs during compilation, WinCC provides support in locating and co
 
 Once you have corrected any problems, you download the compiled project to the HMI devices on which the project is to run. If the configuration PC is not connected to the HMI device, save the compiled project on a data medium of your choice. The compiled project is then transferred from a PC connected to the HMI device to the HMI device.
 
-If you are using HMI tags in your project that are connected to PLC tags, you should also compile all modified S7 blocks with the command "Compile > Software" in the shortcut menu before you compile the HMI device.
+If you are using HMI tags in your project that are connected to PLC tags, you should also compile all modified S7 blocks with the command "Compile &gt; Software" in the shortcut menu before you compile the HMI device.
 
 #### Project
 
@@ -491,8 +491,8 @@ Proceed as follows to compile a project:
 1. If you want to compile several HMI devices at the same time, select all the relevant HMI devices with multiple selection in the project tree.
 2. Compile the project:
 
-   - To only compile changes in the project, select the "Compile > Software (only changes)" command from the shortcut menu of the HMI device.
-   - To compile all project data, select the "Compile > Software (compile all)" command from the shortcut menu.
+   - To only compile changes in the project, select the "Compile &gt; Software (only changes)" command from the shortcut menu of the HMI device.
+   - To compile all project data, select the "Compile &gt; Software (compile all)" command from the shortcut menu.
 
 #### Result
 
@@ -516,8 +516,8 @@ You can use the simulator to test the performance of your configuration on the c
 You can start the simulator as follows:
 
 - In the shortcut menu of the HMI device, or in a screen: "Start simulation"
-- Menu command "Online > Simulation > [Start|With tag simulator|With script debugger]"
-- Under "Visualization > Simulate device" in the portal view.
+- Menu command "Online &gt; Simulation &gt; [Start|With tag simulator|With script debugger]"
+- Under "Visualization &gt; Simulate device" in the portal view.
 
 ##### Requirements
 
@@ -576,18 +576,18 @@ You simulate your project with one of the following two methods:
 To simulate a project using the tag simulator, follow these steps:
 
 1. Open the project on the configuration PC.
-2. Select the "Online > Simulation > With tag simulator" menu command.
+2. Select the "Online &gt; Simulation &gt; With tag simulator" menu command.
 
    For initial project simulation, the simulator is started with a new, empty table. The project is opened simultaneously in Runtime.
 
-   Toggle between the tag simulator and Runtime using the <Alt +Tab> key combination.
+   Toggle between the tag simulator and Runtime using the &lt;Alt +Tab&gt; key combination.
 3. To simulate a process value, select the corresponding "tag" from the tag simulator.
 
    The table lists all configured tags. You can simulate up to 300 tags simultaneously.
 4. Select the simulation mode in the "Simulation" column.
 5. Change the value of tags and area pointers in the respective columns.
 6. Activate the "Start" check box to start the simulation for this tag.
-7. To save the simulation, select the menu command "File > Save" and enter a descriptive name, for example, "Mixing".
+7. To save the simulation, select the menu command "File &gt; Save" and enter a descriptive name, for example, "Mixing".
 
    The file name is assigned the extension "*.cors".
 
@@ -595,7 +595,7 @@ To simulate a project using the tag simulator, follow these steps:
 
 The process values are simulated in Runtime. The tag values are created at random, or incremented, depending on the simulation mode.
 
-To specify tag values, change the simulation mode to "<Display>" and enter a value at "Set value".
+To specify tag values, change the simulation mode to "&lt;Display&gt;" and enter a value at "Set value".
 
 The following figure shows a tag simulator with four tags whose values can be determined at random in a range of values from 10 to 1000:
 
@@ -607,8 +607,8 @@ If you have saved data from a previous simulation, you can open the file at a la
 
 Proceed as follows to open a simulation file:
 
-1. Select the menu command "Online > Simulate Runtime > With tag simulator".
-2. Select the menu command "File > Open" in the tag simulator.
+1. Select the menu command "Online &gt; Simulate Runtime &gt; With tag simulator".
+2. Select the menu command "File &gt; Open" in the tag simulator.
 3. Select the corresponding simulation file and click "Open".
 
    The simulator loads the stored data.
@@ -624,7 +624,7 @@ If a tag is activated, the simulation values are calculated and transferred to t
 To delete a tag from the tag simulator, follow these steps:
 
 1. Select the cell that contains the tag name.
-2. Select the "Edit > Cut" menu command.
+2. Select the "Edit &gt; Cut" menu command.
 
    The tag is removed from the table.
 
@@ -666,14 +666,14 @@ The simulator has six different simulation modes. The configured tags are suppli
 | Increment | Increases the value of the tag continuously up to a specified maximum value. Begins again at the minimum after the maximum has been reached. The value trend corresponds to a positive saw-tooth curve. |
 | Decrement | Reduces the value of the tag continuously down to a specified minimum value. Begins again at the maximum after the minimum has been reached. The value curve corresponds to a negative saw-tooth curve. |
 | Shift bit | Shifts a set bit continuously by one position. The previous position is always reset. This lets you test the alarms of an HMI device, for example. |
-| <Display> | The current tag value is displayed statically. |
+| &lt;Display&gt; | The current tag value is displayed statically. |
 
 ##### Example: Simulate tags with the "Shift bit" simulation mode
 
 Proceed as follows to simulate tags with the "Shift bit" simulation mode:
 
 1. Open the project you want to simulate.
-2. Select the menu command "Online > Simulate Runtime > With tag simulator".
+2. Select the menu command "Online &gt; Simulate Runtime &gt; With tag simulator".
 
    The tag simulator opens.
 3. In the "Tag" column, select a tag from your project.
@@ -735,7 +735,7 @@ The following steps are completed prior to downloading:
 
 1. The download settings are verified. The "Extended download to device" dialog box is opened automatically during the initial download of a project to an HMI device. You use this dialog to define the protocol and interface or destination path for the project in accordance with the HMI device Runtime used.
 
-   You can open the "Extended download to device" dialog at any time with the menu command "Online > Extended download to device...".
+   You can open the "Extended download to device" dialog at any time with the menu command "Online &gt; Extended download to device...".
 
    The "Load preview" dialog box opens.
 2. The project is compiled. Warnings and errors during compilation are displayed in the Inspector window and in the "Load preview" dialog box.
@@ -762,7 +762,7 @@ If you are using HMI tags in your project that are connected to PLC tags, you sh
 
 ##### Loading with S7 routing
 
-Configure the S7 routing settings in the "Devices & Networks" editor in the relevant controller. The settings depend on the device configured.
+Configure the S7 routing settings in the "Devices &amp; Networks" editor in the relevant controller. The settings depend on the device configured.
 
 S7 routing supports the following protocols:
 
@@ -775,7 +775,7 @@ If you cannot establish a direct connection from the configuration PC to the HMI
 
 This function is available in connection with an HMI device image which is compatible with TIA Portal version V14 or higher.
 
-Generate the required project data in WinCC by configuring the HMI device and then dragging the HMI device folder (such as "HMI_1 [<Device type>]") to an external storage medium under "Card Reader/USB memory".
+Generate the required project data in WinCC by configuring the HMI device and then dragging the HMI device folder (such as "HMI_1 [&lt;Device type&gt;]") to an external storage medium under "Card Reader/USB memory".
 
 ##### Transferring Runtime add-ons
 
@@ -841,7 +841,7 @@ Please refer to the documentation for the HMI device used for more detailed info
 Proceed as follows to load a project:
 
 1. To download a project simultaneously to several HMI devices, select the HMI devices by means of multiple selection in the project tree.
-2. Select the "Download to device > Software" command from the shortcut menu of an HMI device.
+2. Select the "Download to device &gt; Software" command from the shortcut menu of an HMI device.
 3. If the "Extended download to device" dialog is open, configure the "Settings for loading". Make sure that the "Settings for loading" correspond to the "Transfer settings in the HMI device".
 
    - Select the protocol used, for example, Ethernet or HTTP.
@@ -849,7 +849,7 @@ Proceed as follows to load a project:
    - Make any interface-specific or protocol-specific settings required in the HMI device.
    - Click "Load".
 
-   You can open the "Extended download to device" dialog at any time with the menu command "Online > Extended download to device...".
+   You can open the "Extended download to device" dialog at any time with the menu command "Online &gt; Extended download to device...".
 
    The "Load preview" dialog box opens. The project is compiled at the same time. The result is displayed in the "Load preview" dialog box.
 4. Check the displayed presettings and change them as necessary.
@@ -861,7 +861,7 @@ The project is loaded to all selected HMI devices. Any existing project is repla
 
 During the download, you can keep track of the files that are transferred.
 
-If errors or warnings occur during the download, corresponding alarms are displayed under "Info > Load" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are displayed under "Info &gt; Load" in the Inspector window.
 
 On completion of the successful download of the project, you can execute it on the HMI device.
 
@@ -898,7 +898,7 @@ This function is available for Basic Panels 2nd Generation.
 |  | **Notice** |
 | **Data loss**  If you load a project with the option "Upgrade or downgrade Firmware", the operating system of the HMI device is updated. Existing data on the HMI device including the HMI device password is deleted. Settings in the Start Center are retained, license keys are stored on the external storage medium before the operating system is updated.  If required, back up the data before loading. |  |
 
-You create the required project data in WinCC by configuring the HMI device and then dragging and dropping or copying and pasting the folder of the HMI device (e.g. "HMI_1 [<device type>]") to an external storage medium under "Card Reader/USB memory".
+You create the required project data in WinCC by configuring the HMI device and then dragging and dropping or copying and pasting the folder of the HMI device (e.g. "HMI_1 [&lt;device type&gt;]") to an external storage medium under "Card Reader/USB memory".
 
 ##### Requirements
 
@@ -908,7 +908,7 @@ You create the required project data in WinCC by configuring the HMI device and 
 ##### Procedure
 
 1. Click "Settings".
-2. Open the "Service & Commissioning" dialog.
+2. Open the "Service &amp; Commissioning" dialog.
 3. Confirm with the "Project Download" button.
 
    With "Project Download", you have the option of downloading a single project from an external storage medium to the HMI device.
@@ -974,7 +974,7 @@ For HMI devices and RT Advanced, the following scenarios are possible in multius
 In principle, you can execute all commands for compiling and loading in multiuser engineering projects:
 
 - "Software (rebuild all)"
-- "Compile > Software (only changes)"
+- "Compile &gt; Software (only changes)"
 - Software (all)
 
 **The term "project"**
@@ -1213,26 +1213,26 @@ There are several ways to reduce the size of the project and save space:
 
 - Reduce the number of available Runtime languages
 
-  Check whether all selected Runtime languages are actually needed. You can disable the languages that you do not need under "Runtime settings > Language & Font > Runtime language and font selection".
+  Check whether all selected Runtime languages are actually needed. You can disable the languages that you do not need under "Runtime settings &gt; Language &amp; Font &gt; Runtime language and font selection".
 - Do not use help texts for S7 diagnostic alarms
 
-  To reduce the size of the project, you can disable the download of help texts for the S7 diagnostic alarms. In order to avoid downloading the help texts to the HMI device, disable the option "Download S7 diagnostics help texts" under "Runtime settings > Alarms > General".
+  To reduce the size of the project, you can disable the download of help texts for the S7 diagnostic alarms. In order to avoid downloading the help texts to the HMI device, disable the option "Download S7 diagnostics help texts" under "Runtime settings &gt; Alarms &gt; General".
 - Rebuild all software
 
-  In order to optimize the project data and to clean up obsolete changes, compile the entire project using the "Compile > Software (rebuild all)" command from the shortcut menu of the HMI device.
+  In order to optimize the project data and to clean up obsolete changes, compile the entire project using the "Compile &gt; Software (rebuild all)" command from the shortcut menu of the HMI device.
 - Harmonize the presentation using styles (as of WinCC V13)
 
   It is recommended to harmonize screen objects using styles. Standardize the appearance of screen objects in a project to optimize project data. Use the specified preset or customized style for the configuration of the screen objects throughout the project.
 - Enable automatic update of PLC alarms (for S7-1500 controllers and V14 HMI devices)
 
-  To save space, you can specify that the PLC alarm texts are only to be loaded in Runtime when needed. To do this, enable the "Automatic update" option under "Runtime settings > Alarms > Controller alarms". Make sure that automatic update of alarms is also enabled in the corresponding controller.
+  To save space, you can specify that the PLC alarm texts are only to be loaded in Runtime when needed. To do this, enable the "Automatic update" option under "Runtime settings &gt; Alarms &gt; Controller alarms". Make sure that automatic update of alarms is also enabled in the corresponding controller.
 
   The "Automatic update" option is not available on Basic Panels.
 
   The amount of space that can be saved depends on the number of PLC alarms and the number of Runtime languages.
 - Reduce the number of fonts loaded
 
-  Check whether the number of downloaded user-defined fonts can be reduced. If necessary, configure only the standard fonts for the required Runtime languages under "Runtime settings > Language & font > Runtime language and font selection".
+  Check whether the number of downloaded user-defined fonts can be reduced. If necessary, configure only the standard fonts for the required Runtime languages under "Runtime settings &gt; Language &amp; font &gt; Runtime language and font selection".
 
   To save space, use fewer font groups for the configuration.
 - Reduce the size of the graphics
@@ -1515,7 +1515,7 @@ You navigate on the display of your HMI device as follows:
 
 ##### Procedure
 
-- To navigate in the specified tab sequence, press the <TAB> key.
+- To navigate in the specified tab sequence, press the &lt;TAB&gt; key.
 - To navigate freely between the operator controls, press the cursor keys.
 
 Depending on the configuration of your HMI device, you can also use function keys or shortcuts for navigation.
@@ -1539,7 +1539,7 @@ Triggering an action at an operator control can mean the following:
   Example: Click a button to trigger a script or to execute a predefined function.
 - An object is enabled.
 
-  Example: To enter a value, select a table cell with the <Enter> key.
+  Example: To enter a value, select a table cell with the &lt;Enter&gt; key.
 
 ##### Requirement
 
@@ -1548,7 +1548,7 @@ Triggering an action at an operator control can mean the following:
 
 ##### Procedure
 
-- Press <Enter>.
+- Press &lt;Enter&gt;.
 
   Or
 - Touch the operator control on the touch screen once or twice in rapid succession.
@@ -1582,8 +1582,8 @@ You enter these values depending on the existing hardware using the screen keybo
 ##### Entering a value
 
 1. Enter the desired value.
-2. To confirm the value and exit the field, press the <Enter> key.
-3. To discard the value and exit the field, press the <Esc> key.
+2. To confirm the value and exit the field, press the &lt;Enter&gt; key.
+3. To discard the value and exit the field, press the &lt;Esc&gt; key.
 
 ##### Result
 
@@ -1606,9 +1606,9 @@ In Runtime, you can move the movable operator controls of a screen object with t
 - To move the operator control, proceed as follows depending on the operating element:
 
   - Standard for touch screen: Press the cursor keys.
-  - Standard for keyboard devices: Press <SHIFT> and the cursor keys.
-  - Switches: Press <ENTER>
-  - Slider: Press <PgUp> or <PgDn>
+  - Standard for keyboard devices: Press &lt;SHIFT&gt; and the cursor keys.
+  - Switches: Press &lt;ENTER&gt;
+  - Slider: Press &lt;PgUp&gt; or &lt;PgDn&gt;
 
 1. To finish the movement, navigate to another screen object or operator control.
 
@@ -1629,7 +1629,7 @@ For more detailed information, refer to the operating instructions for your HMI 
 
 Depending on the configuration, additional information and operating instructions are available as infotext. The infotext is assigned to an operating element, an alarm or to the open screen. The infotext of an I/O field may contain, for example, information about the value to be entered.
 
-As an alternative to the <Help> key of the HMI device, use the <Help> key of the screen keyboard for input objects.
+As an alternative to the &lt;Help&gt; key of the HMI device, use the &lt;Help&gt; key of the screen keyboard for input objects.
 
 ##### Requirement
 
@@ -1638,11 +1638,11 @@ As an alternative to the <Help> key of the HMI device, use the <Help> key of the
 ##### Calling the infotext
 
 1. Enable the desired operating element.
-2. Press the <Help> key of the HMI device.
+2. Press the &lt;Help&gt; key of the HMI device.
 
    The infotext for the operating element is displayed.
 
-If you are operating your input object with the touch screen, the screen keyboard opens. If the <Help> key appears, an infotext is configured for the operating element or the current screen.
+If you are operating your input object with the touch screen, the screen keyboard opens. If the &lt;Help&gt; key appears, an infotext is configured for the operating element or the current screen.
 
 If there is no infotext for the selected screen object, the infotext for the current screen is displayed, if it has been configured.
 
@@ -1656,7 +1656,7 @@ Depending on your configuration, infotext can also be retrieved by means of a co
 
 ##### Hiding infotext
 
-- To hide the infotext, press the <Esc> key or press the <Help> key again.
+- To hide the infotext, press the &lt;Esc&gt; key or press the &lt;Help&gt; key again.
 
 #### Changing Runtime language (Basic Panels)
 
@@ -1854,7 +1854,7 @@ You configure options from different areas of your project in the runtime settin
 - Logging language
 - Remote control via Sm@rt server in the "Services" area
 
-  You can find additional information on this in the WinCC online help under "Options > Sm@rt options"
+  You can find additional information on this in the WinCC online help under "Options &gt; Sm@rt options"
 - Operator control in runtime
 
   - Task switching
@@ -1866,7 +1866,7 @@ You configure options from different areas of your project in the runtime settin
   - Keyboard layout and shortcuts
 - GMP-compliant configuration
 
-  You can find additional information on this in the WinCC online help under "Options > WinCC Audit".
+  You can find additional information on this in the WinCC online help under "Options &gt; WinCC Audit".
 - Alarms
 
   - Buffer overflow
@@ -1949,18 +1949,18 @@ In WinCC, configure the visual representation of the generated project in Runtim
   >
   > If the HMI screen does not match the configured size (in pixels), the project only appears on part of the screen in full-screen mode.
 - To hide the taskbar, disable the taskbar under Windows.
-- Under "General > Screen", you specify whether the HMI device uses the default style of the project or another pre-defined style.
+- Under "General &gt; Screen", you specify whether the HMI device uses the default style of the project or another pre-defined style.
 
 ##### Language settings
 
 - Logging language
 
-  Under "General > Logs", you specify the language in which you want to write the logs. The selected logging language always remains the same, even if the user switches the language in Runtime.
+  Under "General &gt; Logs", you specify the language in which you want to write the logs. The selected logging language always remains the same, even if the user switches the language in Runtime.
 
   If you select "Startup language", the logging language remains the same until Runtime is stopped, even if the user has switched the language. However, the next time Runtime is started, the last configured Runtime language is used as the logging language.
 - Runtime language
 
-  Under "Language & font", you specify all Runtime languages and their display.
+  Under "Language &amp; font", you specify all Runtime languages and their display.
 
   > **Note**
   >
@@ -1982,7 +1982,7 @@ In WinCC, configure the visual representation of the generated project in Runtim
 
 - Specify bit selection
 
-  Under "Screens > Bit selection", you specify whether bit selection will be used on this HMI device for the following:
+  Under "Screens &gt; Bit selection", you specify whether bit selection will be used on this HMI device for the following:
 
   - Text and graphics (text lists and graphic lists)
   - Color and flashing (appearance analysis)
@@ -1992,10 +1992,10 @@ In WinCC, configure the visual representation of the generated project in Runtim
     When you disable an option and several bits are set, the selection that has been configured only for the set bit is displayed.
 - Tooltips for I/O fields
 
-  Under "Screens > Display", you specify whether configured limit values are displayed as tooltips in Runtime when values are entered in I/O fields.
+  Under "Screens &gt; Display", you specify whether configured limit values are displayed as tooltips in Runtime when values are entered in I/O fields.
 - Colored objects
 
-  You specify the color depth of your HMI device under "General > Screens > Color depth". As needed, you assign screen objects a colored appearance. The range of colors is determined by the color depth supported on your selected HMI device.
+  You specify the color depth of your HMI device under "General &gt; Screens &gt; Color depth". As needed, you assign screen objects a colored appearance. The range of colors is determined by the color depth supported on your selected HMI device.
 
 ##### Design settings in the Windows Control Panel
 
@@ -2013,7 +2013,7 @@ To edit the Runtime settings for your HMI device, select "Runtime settings" unde
 
 Depending on the HMI device, you can lock task switching on the HMI device. This will prevent the operator from opening other applications in Runtime.
 
-In the Runtime settings of the HMI device, enable the "Lock task switching" option under "General > Screen".
+In the Runtime settings of the HMI device, enable the "Lock task switching" option under "General &gt; Screen".
 
 To use the "Lock task switching" option on a Runtime PC, disable the Aero theme in Windows 7 and Windows 8.x. To disable the Aero theme, right-click on the desktop and select "Personalize". In the "Personalization" menu, select the designs "Windows Basic" or "Windows - Classic".
 
@@ -2034,23 +2034,23 @@ To lock task switching for the Windows on-screen keyboard, you have to completel
 Proceed as follows to deactivate the Windows on-screen keyboard:
 
 1. Open the on-screen keyboard.
-2. Open the “Options” dialog via “Tools > Options".
+2. Open the “Options” dialog via “Tools &gt; Options".
 3. In the "Initialization" tab, deactivate the options "Touch input, show the icon next to the textbox", "Show the icon on the taskbar", "Use the input panel" tab.
 
 The Runtime Advanced on-screen keyboard is not affected by these changes and can continue to be opened and operated.
 
 > **Note**
 >
-> To activate the Windows on-screen keyboard again, open Start > Programs > Accessories > Ease of Access > On-screen keyboard”.
+> To activate the Windows on-screen keyboard again, open Start &gt; Programs &gt; Accessories &gt; Ease of Access &gt; On-screen keyboard”.
 
 ##### Settings for data transfer to the HMI device
 
 - Transferring names of the screen objects in scripts
 
-  If you enable the "Load names" option under "General > Screen", the object names of the screen objects are transferred instead of coded addressing information. You need the object names if you want to address the screen objects in a script using the object names. When you test a script in the debugger, the code becomes more comprehensible through the display of object names.
+  If you enable the "Load names" option under "General &gt; Screen", the object names of the screen objects are transferred instead of coded addressing information. You need the object names if you want to address the screen objects in a script using the object names. When you test a script in the debugger, the code becomes more comprehensible through the display of object names.
 - Displaying comments in scripts
 
-  Under "Screens > Display", you specify whether the comments in scripts are also transferred to the HMI device.
+  Under "Screens &gt; Display", you specify whether the comments in scripts are also transferred to the HMI device.
 
   If you do not transfer the comments, you save storage space on your HMI device.
 
@@ -2058,15 +2058,15 @@ The Runtime Advanced on-screen keyboard is not affected by these changes and can
 
 ##### Operation using function keys
 
-To symbolize the function of a function key for keyboard devices, you configure a graphic next to the function key in the display. Under "Screens > Function keys > User-defined pictogram size", you specify whether you want to use a graphic size that deviates from the standard size.
+To symbolize the function of a function key for keyboard devices, you configure a graphic next to the function key in the display. Under "Screens &gt; Function keys &gt; User-defined pictogram size", you specify whether you want to use a graphic size that deviates from the standard size.
 
 ##### Operation with keyboard
 
-Under "Keyboard > General > Use screen keyboard", you specify whether the screen keyboard is available on your HMI device.
+Under "Keyboard &gt; General &gt; Use screen keyboard", you specify whether the screen keyboard is available on your HMI device.
 
-Under "Keyboard > General > Release button on exit", you specify whether the "Release" event is triggered when the user exits a button without releasing it.
+Under "Keyboard &gt; General &gt; Release button on exit", you specify whether the "Release" event is triggered when the user exits a button without releasing it.
 
-Under "Keyboard > Disable function keys in dialogs", you specify for key devices whether the function keys are disabled for the duration of the displayed dialog. Large dialogs can hide explanatory areas or graphics at function keys or bordering function keys. Functions keys can be unintentionally pressed due to this.
+Under "Keyboard &gt; Disable function keys in dialogs", you specify for key devices whether the function keys are disabled for the duration of the displayed dialog. Large dialogs can hide explanatory areas or graphics at function keys or bordering function keys. Functions keys can be unintentionally pressed due to this.
 
 #### Compatibility check with the controller (Panels, Comfort Panels, RT Advanced)
 
@@ -2076,7 +2076,7 @@ The "Project ID" area pointer is used to configure the project ID for checking t
 
 ##### Compatibility check with the controller
 
-You select the project ID in the Runtime settings of the HMI device under "General > Identification > Project ID".
+You select the project ID in the Runtime settings of the HMI device under "General &gt; Identification &gt; Project ID".
 
 At startup, Runtime checks whether the project ID of the project matches the PLC project version. Runtime will only start if the two values match.
 
@@ -2160,7 +2160,7 @@ To protect the private password key during transport, you can configure a passwo
 
 ###### Creating password
 
-1. Open the "Runtime settings > General" editor in the Project window.
+1. Open the "Runtime settings &gt; General" editor in the Project window.
 2. Enter the password in the "Enter password" field in the "Transport password" area.
 3. Confirm the password in the "Confirm password" field.
 
@@ -2209,7 +2209,7 @@ If an error occurs during compilation, WinCC provides support in locating and co
 
 Once you have corrected any problems, you download the compiled project to the HMI devices on which the project is to run. If the configuration PC is not connected to the HMI device, save the compiled project on a data medium of your choice. The compiled project is then transferred from a PC connected to the HMI device to the HMI device.
 
-If you are using HMI tags in your project that are connected to PLC tags, you should also compile all modified S7 blocks with the command "Compile > Software" in the shortcut menu before you compile the HMI device.
+If you are using HMI tags in your project that are connected to PLC tags, you should also compile all modified S7 blocks with the command "Compile &gt; Software" in the shortcut menu before you compile the HMI device.
 
 #### Project
 
@@ -2281,8 +2281,8 @@ Proceed as follows to compile a project:
 1. If you want to compile several HMI devices at the same time, select all the relevant HMI devices with multiple selection in the project tree.
 2. Compile the project:
 
-   - To only compile changes in the project, select the "Compile > Software (only changes)" command from the shortcut menu of the HMI device.
-   - To compile all project data, select the "Compile > Software (compile all)" command from the shortcut menu.
+   - To only compile changes in the project, select the "Compile &gt; Software (only changes)" command from the shortcut menu of the HMI device.
+   - To compile all project data, select the "Compile &gt; Software (compile all)" command from the shortcut menu.
 
 #### Result
 
@@ -2314,8 +2314,8 @@ You can use the simulator to test the performance of your configuration on the c
 You can start the simulator as follows:
 
 - In the shortcut menu of the HMI device or in a screen: "Start simulation"
-- Menu command "Online > Simulation > [Start|With tag simulator|With script debugger]"
-- Under "Visualization > Simulate device" in the portal view.
+- Menu command "Online &gt; Simulation &gt; [Start|With tag simulator|With script debugger]"
+- Under "Visualization &gt; Simulate device" in the portal view.
 
 ##### Requirement
 
@@ -2398,18 +2398,18 @@ You simulate your project with one of the following two methods:
 To simulate a project using the tag simulator, follow these steps:
 
 1. Open the project on the configuration PC.
-2. Select the "Online > Simulation > With tag simulator" menu command.
+2. Select the "Online &gt; Simulation &gt; With tag simulator" menu command.
 
    For initial project simulation, the simulator is started with a new, empty table. The project is opened simultaneously in Runtime.
 
-   Toggle between the tag simulator and Runtime using the <Alt +Tab> key combination.
+   Toggle between the tag simulator and Runtime using the &lt;Alt +Tab&gt; key combination.
 3. To simulate a process value, select the corresponding "tag" from the tag simulator.
 
    The table lists all configured tags. You can simulate up to 300 tags simultaneously.
 4. Select the simulation mode in the "Simulation" column.
 5. Change the value of tags and area pointers in the respective columns.
 6. Activate the "Start" check box to start the simulation for this tag.
-7. To save the simulation, select the menu command "File > Save" and enter a descriptive name, for example, "Mixing".
+7. To save the simulation, select the menu command "File &gt; Save" and enter a descriptive name, for example, "Mixing".
 
    The file name is assigned the extension "*.cors".
 
@@ -2417,7 +2417,7 @@ To simulate a project using the tag simulator, follow these steps:
 
 The process values are simulated in Runtime. The tag values are created at random, or incremented, depending on the simulation mode.
 
-To specify tag values, change the simulation mode to "<Display>" and enter a value at "Set value".
+To specify tag values, change the simulation mode to "&lt;Display&gt;" and enter a value at "Set value".
 
 The following figure shows a tag simulator with four tags whose values can be determined at random in a range of values from 10 to 1000:
 
@@ -2429,8 +2429,8 @@ If you have saved data from a previous simulation, you can open the file at a la
 
 Proceed as follows to open a simulation file:
 
-1. Select the menu command "Online > Simulate Runtime > With tag simulator".
-2. Select the menu command "File > Open" in the tag simulator.
+1. Select the menu command "Online &gt; Simulate Runtime &gt; With tag simulator".
+2. Select the menu command "File &gt; Open" in the tag simulator.
 3. Select the corresponding simulation file and click "Open".
 
    The simulator loads the stored data.
@@ -2446,7 +2446,7 @@ If a tag is activated, the simulation values are calculated and transferred to t
 To delete a tag from the tag simulator, follow these steps:
 
 1. Select the cell that contains the tag name.
-2. Select the "Edit > Cut" menu command.
+2. Select the "Edit &gt; Cut" menu command.
 
    The tag is removed from the table.
 
@@ -2507,14 +2507,14 @@ The simulator has six different simulation modes. The configured tags are suppli
 | Increment | Increases the value of the tag continuously up to a specified maximum value. Begins again at the minimum after the maximum has been reached. The value trend corresponds to a positive saw-tooth curve. |
 | Decrement | Reduces the value of the tag continuously down to a specified minimum value. Begins again at the maximum after the minimum has been reached. The value curve corresponds to a negative saw-tooth curve. |
 | Shift bit | Shifts a set bit continuously by one position. The previous position is always reset. This lets you test the alarms of an HMI device, for example. |
-| <Display> | The current tag value is displayed statically. |
+| &lt;Display&gt; | The current tag value is displayed statically. |
 
 ##### Example: Simulate tags with the "Shift bit" simulation mode
 
 Proceed as follows to simulate tags with the "Shift bit" simulation mode:
 
 1. Open the project you want to simulate.
-2. Select the menu command "Online > Simulate Runtime > With tag simulator".
+2. Select the menu command "Online &gt; Simulate Runtime &gt; With tag simulator".
 
    The tag simulator opens.
 3. In the "Tag" column, select a tag from your project.
@@ -2569,8 +2569,8 @@ This section contains information on the following topics:
 - [Overview for loading of projects (Panels, Comfort Panels)](#overview-for-loading-of-projects-panels-comfort-panels)
 - [Overview for loading of projects (RT Advanced)](#overview-for-loading-of-projects-rt-advanced)
 - [Loading a project (Panels, Comfort Panels, RT Advanced)](#loading-a-project-panels-comfort-panels-rt-advanced)
-- [Generating a "Pack&Go" file (Panels, Comfort Panels)](#generating-a-packgo-file-panels-comfort-panels)
-- [Downloading projects from a "Pack&Go" file to the HMI device (Panels, Comfort Panels)](#downloading-projects-from-a-packgo-file-to-the-hmi-device-panels-comfort-panels)
+- [Generating a "Pack&amp;Go" file (Panels, Comfort Panels)](#generating-a-packgo-file-panels-comfort-panels)
+- [Downloading projects from a "Pack&amp;Go" file to the HMI device (Panels, Comfort Panels)](#downloading-projects-from-a-packgo-file-to-the-hmi-device-panels-comfort-panels)
 - [Loading via USB interface (Panels, Comfort Panels, RT Advanced)](#loading-via-usb-interface-panels-comfort-panels-rt-advanced)
 - [Load project from external storage medium (Panels, Comfort Panels, RT Advanced)](#load-project-from-external-storage-medium-panels-comfort-panels-rt-advanced)
 - [Installing a USB driver in Windows 7 (Panels, Comfort Panels, RT Advanced)](#installing-a-usb-driver-in-windows-7-panels-comfort-panels-rt-advanced)
@@ -2589,7 +2589,7 @@ The following steps are completed prior to downloading:
 
    If the HMI device is part of a subnet, for example, you also select the subnet and the first gateway.
 
-   You can open the "Extended download to device" dialog at any time with the menu command "Online > Extended download to device...".
+   You can open the "Extended download to device" dialog at any time with the menu command "Online &gt; Extended download to device...".
 
    The "Load preview" dialog box opens.
 2. The project is compiled. Warnings and errors during compilation are displayed in the Inspector window and in the "Load preview" dialog box.
@@ -2624,7 +2624,7 @@ If you cannot establish a direct connection from the configuration PC to the HMI
 
 This function is available in connection with an HMI device image which is compatible with TIA Portal version V14 or higher.
 
-Generate the required project data in WinCC by configuring the HMI device and then dragging the HMI device folder (such as "HMI_1 [<Device type>]") to an external storage medium under "Card Reader/USB memory".
+Generate the required project data in WinCC by configuring the HMI device and then dragging the HMI device folder (such as "HMI_1 [&lt;Device type&gt;]") to an external storage medium under "Card Reader/USB memory".
 
 ##### Loading of projects without recipe data records
 
@@ -2634,13 +2634,13 @@ You may encounter inconsistencies if you have altered the structure of the recip
 
 Check the consistency of the data records in this case. The device will not issue a note for all structural changes.
 
-##### Pack&Go
+##### Pack&amp;Go
 
 If you cannot establish a direct connection from the configuration PC to the HMI device, copy the compiled project to a PC that is connected to the HMI device, for example via a network. Download the project from this PC to the HMI device.
 
 ##### Loading with S7 routing
 
-Configure the S7 routing settings in the "Devices & Networks" editor in the relevant PLC. The settings depend on the device configured.
+Configure the S7 routing settings in the "Devices &amp; Networks" editor in the relevant PLC. The settings depend on the device configured.
 
 S7 routing supports the following protocols:
 
@@ -2665,7 +2665,7 @@ Projects can contain Runtime add-ons in the form of controls or CSP (Communicati
   
 [Load project from external storage medium (Panels, Comfort Panels, RT Advanced)](#load-project-from-external-storage-medium-panels-comfort-panels-rt-advanced)
   
-[Downloading projects from a "Pack&Go" file to the HMI device (Panels, Comfort Panels)](#downloading-projects-from-a-packgo-file-to-the-hmi-device-panels-comfort-panels)
+[Downloading projects from a "Pack&amp;Go" file to the HMI device (Panels, Comfort Panels)](#downloading-projects-from-a-packgo-file-to-the-hmi-device-panels-comfort-panels)
   
 [Overview of online delta transfers (RT Professional)](#overview-of-online-delta-transfers-rt-professional)
   
@@ -2673,7 +2673,7 @@ Projects can contain Runtime add-ons in the form of controls or CSP (Communicati
   
 [Downloading the project to an HMI device (RT Professional)](#downloading-the-project-to-an-hmi-device-rt-professional)
   
-[Generating a "Pack&Go" file (Panels, Comfort Panels)](#generating-a-packgo-file-panels-comfort-panels)
+[Generating a "Pack&amp;Go" file (Panels, Comfort Panels)](#generating-a-packgo-file-panels-comfort-panels)
   
 [Starting Runtime Advanced and Panel Runtime (Panels, Comfort Panels, RT Advanced)](#starting-runtime-advanced-and-panel-runtime-panels-comfort-panels-rt-advanced)
 
@@ -2700,7 +2700,7 @@ The following steps are completed prior to downloading:
 
    If the HMI device is part of a subnet, for example, you also select the subnet and the first gateway.
 
-   You can open the "Extended download to device" dialog at any time with the menu command "Online > Extended download to device...".
+   You can open the "Extended download to device" dialog at any time with the menu command "Online &gt; Extended download to device...".
 
    The "Load preview" dialog box opens.
 2. The project is compiled. Warnings and errors during compilation are displayed in the Inspector window and in the "Load preview" dialog box.
@@ -2733,7 +2733,7 @@ If you cannot establish a direct connection from the configuration PC to the HMI
 
 ##### Loading with S7 routing
 
-Configure the S7 routing settings in the "Devices & Networks" editor in the relevant PLC. The settings depend on the device configured.
+Configure the S7 routing settings in the "Devices &amp; Networks" editor in the relevant PLC. The settings depend on the device configured.
 
 S7 routing supports the following protocols:
 
@@ -2836,7 +2836,7 @@ Please refer to the documentation for the HMI device used for more detailed info
 Proceed as follows to load a project:
 
 1. To download a project simultaneously to several HMI devices, select the HMI devices by means of multiple selection in the project tree.
-2. Select the "Download to device > Software" command from the shortcut menu of an HMI device.
+2. Select the "Download to device &gt; Software" command from the shortcut menu of an HMI device.
 3. If the "Extended download to device" dialog is open, configure the "Settings for loading". Make sure that the "Settings for loading" correspond to the "Transfer settings in the HMI device".
 
    - Select the protocol used, for example, Ethernet or HTTP.
@@ -2844,7 +2844,7 @@ Proceed as follows to load a project:
    - Make any interface-specific or protocol-specific settings required in the HMI device.
    - Click "Load".
 
-   You can open the "Extended download to device" dialog at any time with the menu command "Online > Extended download to device...".
+   You can open the "Extended download to device" dialog at any time with the menu command "Online &gt; Extended download to device...".
 
    The "Load preview" dialog box opens. The project is compiled at the same time. The result is displayed in the "Load preview" dialog box.
 4. Check the displayed presettings and change them as necessary.
@@ -2856,7 +2856,7 @@ The project is loaded to all selected HMI devices. In WinCC V13, the project wit
 
 During the download, you can keep track of the files that are transferred.
 
-If errors or warnings occur during the download, corresponding alarms are displayed under "Info > Load" in the Inspector window.
+If errors or warnings occur during the download, corresponding alarms are displayed under "Info &gt; Load" in the Inspector window.
 
 On completion of the successful download of the project, you can execute it on the HMI device.
 
@@ -2886,13 +2886,13 @@ On completion of the successful download of the project, you can execute it on t
 
 ##### Introduction
 
-Create a "Pack&Go" file if you cannot connect the HMI device to the configuration PC. The "Pack&Go" file is a ZIP file containing the following data:
+Create a "Pack&amp;Go" file if you cannot connect the HMI device to the configuration PC. The "Pack&amp;Go" file is a ZIP file containing the following data:
 
 - The compiled project
 - A program for transferring the project to the HMI device
 - Image for the configured HMI device
 
-Typical example of an application: An engineering company creates a project variant for a new HMI device. The project engineer of the engineering company does not have direct access to the plant. The project engineer therefore e-mails the "Pack&Go" file to his local contact. The contact unpacks the "Pack&Go" file on a PC connected to the HMI device via a network. He then transfers the project from the PC to the HMI device.
+Typical example of an application: An engineering company creates a project variant for a new HMI device. The project engineer of the engineering company does not have direct access to the plant. The project engineer therefore e-mails the "Pack&amp;Go" file to his local contact. The contact unpacks the "Pack&amp;Go" file on a PC connected to the HMI device via a network. He then transfers the project from the PC to the HMI device.
 
 ##### Requirement
 
@@ -2900,32 +2900,32 @@ Typical example of an application: An engineering company creates a project vari
 
 ##### Procedure
 
-To create a "Pack&Go" file, follow these steps:
+To create a "Pack&amp;Go" file, follow these steps:
 
 1. Select the HMI device in the project tree.
-2. Select the "Pack&Go" command from the menu under "Online > HMI Device maintenance".
-3. The "Create Pack&Go file" opens.
+2. Select the "Pack&amp;Go" command from the menu under "Online &gt; HMI Device maintenance".
+3. The "Create Pack&amp;Go file" opens.
 4. Verify that the displayed device version corresponds with that of the target HMI device.
 5. Select a protocol as transfer mode.
-6. Select the storage location under "Pack&Go file" and enter the file name.
-7. If necessary, specify if the "Pack&Go" file is split into several files.
+6. Select the storage location under "Pack&amp;Go file" and enter the file name.
+7. If necessary, specify if the "Pack&amp;Go" file is split into several files.
 8. Click "Create".
 
 > **Note**
 >
-> To unzip a "Pack&Go" file which is distributed over several files, you need a compression program. The compression program integrated into the operating system is not adequate to unzip distributed files.
+> To unzip a "Pack&amp;Go" file which is distributed over several files, you need a compression program. The compression program integrated into the operating system is not adequate to unzip distributed files.
 
 ##### Result
 
-The "Pack&Go" file is created and saved to the specified folder in the file system. Now copy the "Pack&Go" file to the PC connected to the HMI device.
+The "Pack&amp;Go" file is created and saved to the specified folder in the file system. Now copy the "Pack&amp;Go" file to the PC connected to the HMI device.
 
 #### Downloading projects from a "Pack&Go" file to the HMI device (Panels, Comfort Panels)
 
 ##### Introduction
 
-Pack&Go is a 64-bit application that can only run on a 64-bit operating system.
+Pack&amp;Go is a 64-bit application that can only run on a 64-bit operating system.
 
-If the TIA Portal is not installed on your PC, install Microsoft Visual C++ 2015 Redisitributable Package (x64) and .Net Framework 4.6.1 to run the Pack&Go application.
+If the TIA Portal is not installed on your PC, install Microsoft Visual C++ 2015 Redisitributable Package (x64) and .Net Framework 4.6.1 to run the Pack&amp;Go application.
 
 - You can find the Microsoft Visual C++ 2015 Redistributable Package (x64) in the Download Center of Microsoft at the following URL:  
   http://www.microsoft.com/en-us/download/details.aspx?id=48145
@@ -2936,19 +2936,19 @@ If the TIA Portal is not installed on your PC, install Microsoft Visual C++ 2015
 
 - .NET Framework with version 4.6.1
 - ProSave is installed on the PC
-- The "Pack&Go" file has been stored in the file system of a PC.
+- The "Pack&amp;Go" file has been stored in the file system of a PC.
 - The PC is connected to the HMI device.
 - The device version of the HMI device is consistent with the device version in the project
 
 > **Note**
 >
-> To unzip a "Pack&Go" file which is distributed over several files, you need a compression program. The compression program integrated into the operating system is not adequate to unzip distributed files.
+> To unzip a "Pack&amp;Go" file which is distributed over several files, you need a compression program. The compression program integrated into the operating system is not adequate to unzip distributed files.
 
 ##### Procedure
 
-To download the project from a "Pack&Go" file to an HMI device, follow these steps:
+To download the project from a "Pack&amp;Go" file to an HMI device, follow these steps:
 
-1. Unpack the "Pack&Go" file to a folder of your choice in the file system of the PC.
+1. Unpack the "Pack&amp;Go" file to a folder of your choice in the file system of the PC.
 2. From the "PackNGo" subfolder of this directory, run "Siemens.Simatic.Hmi.PackNgo.exe".
 
    The "Pack'n Go" dialog opens. The settings for loading are set by default. Exception: You must select the target device if you are using an S7 USB connection.
@@ -3023,18 +3023,18 @@ This function is available in connection with an HMI device image which is compa
 |  | **Notice** |
 | **Loss of data**  When you activate the "Firmware upgrade" or "Firmware downgrade" options, then the operating system of the HMI device is updated. Existing data on the HMI device including the HMI device password is deleted. Settings in the Start Center are retained, license keys are saved to the external storage medium before update of the operating system.  If required, save this data before loading. |  |
 
-You create the required project data in WinCC by configuring the HMI device and then dragging and dropping or copying and pasting the folder of the HMI device (e.g. "HMI_1 [<device type>]") to an external storage medium under "Card Reader/USB memory".
+You create the required project data in WinCC by configuring the HMI device and then dragging and dropping or copying and pasting the folder of the HMI device (e.g. "HMI_1 [&lt;device type&gt;]") to an external storage medium under "Card Reader/USB memory".
 
 ##### Requirements
 
 - You have started the Start Center on the HMI device.
 - The storage medium with the backed up project is inserted in the HMI device.
-- For Runtime Advanced you have manually copied the files to a directory and adjusted the configuration path under "Start Center > Settings".
+- For Runtime Advanced you have manually copied the files to a directory and adjusted the configuration path under "Start Center &gt; Settings".
 
 ##### Procedure
 
 1. Click "Settings".
-2. Open the "Service & Commissioning" dialog.
+2. Open the "Service &amp; Commissioning" dialog.
 3. Select the "Load Project" tab.
 4. Press "Next".
 
@@ -3150,10 +3150,10 @@ To install the USB driver under Windows 7, follow these steps:
 
    The USB cable is detected, but the wizard for the driver installation does not find the driver.
 2. Open the Device Manager in the Control Panel.
-3. Select "Other devices > USB host-to-host cable".
+3. Select "Other devices &gt; USB host-to-host cable".
 4. Select "USB host-to-host cable" and then select "Update driver software..." in the shortcut menu.
 5. When the "How do you want to search for driver software?" prompt appears, select "Search for driver software on the computer".
-6. Click "Update driver software > Browse...".
+6. Click "Update driver software &gt; Browse...".
 7. Insert the WinCC product DVD as the source for driver installation.
 8. Select "Include subfolders" and then click "Next".
 
@@ -3161,7 +3161,7 @@ To install the USB driver under Windows 7, follow these steps:
 
    The drivers available on the WinCC product DVD are displayed. The wizard highlights the appropriate driver for Windows 7.
 9. Check the selection and click "Next".
-10. To continue with the installation, click "Hardware Installation > Continue installation".
+10. To continue with the installation, click "Hardware Installation &gt; Continue installation".
 
     The driver is installed.
 11. Click "Finish".
@@ -3222,7 +3222,7 @@ For HMI devices and RT Advanced, the following scenarios are possible in multius
 In principle, you can execute all commands for compiling and loading in multiuser engineering projects:
 
 - "Software (rebuild all)"
-- "Compile > Software (only changes)"
+- "Compile &gt; Software (only changes)"
 - Software (all)
 
 **The term "project"**
@@ -3328,7 +3328,7 @@ You can start a project in Runtime on the configuration PC if Runtime has been i
 
 > **Note**
 >
-> You can only simulate HMI devices with Runtime Panels on the configuration PC. Select the "Online > Start simulation" menu command.
+> You can only simulate HMI devices with Runtime Panels on the configuration PC. Select the "Online &gt; Start simulation" menu command.
 
 > **Note**
 >
@@ -3355,7 +3355,7 @@ You can start a project in Runtime on the configuration PC if Runtime has been i
 To start runtime on the configuration PC, follow these steps:
 
 1. Select the desired HMI device in the project navigation.
-2. Select the "Online > Start Runtime" menu command.
+2. Select the "Online &gt; Start Runtime" menu command.
 
 ##### Result
 
@@ -3409,7 +3409,7 @@ The project settings defined in the "Runtime settings" of the HMI device are act
 
 The compiled project is saved in the PC file system with the extension "*.fwc" and is freely accessible.
 
-1. Enter the project file with complete path information in the "Start C​​enter" under "Settings > Configuration path".
+1. Enter the project file with complete path information in the "Start C​​enter" under "Settings &gt; Configuration path".
 2. To start the project automatically after booting the HMI device:
 
    - Select the required delay time in seconds under "Wait until Autostart".
@@ -3459,7 +3459,7 @@ Possible remedy: Select a lower baud rate.
 
 | Possible cause | Remedy |
 | --- | --- |
-| Conflict between versions of the configuration software and the operating system of the HMI device | Synchronize the operating system of the HMI device with the version of the configuration software.  To update the operating system on the HMI device, select the "Update operating system" command from the "Online > HMI device maintenance" menu in WinCC. You can also use ProSave.   For additional information, refer to the operating instructions for the HMI device. |
+| Conflict between versions of the configuration software and the operating system of the HMI device | Synchronize the operating system of the HMI device with the version of the configuration software.  To update the operating system on the HMI device, select the "Update operating system" command from the "Online &gt; HMI device maintenance" menu in WinCC. You can also use ProSave.   For additional information, refer to the operating instructions for the HMI device. |
 | The configuration PC is connected to the wrong device, e.g. a controller. | Check the cabling.   Correct the communication parameters. |
 
 #### Project download fails
@@ -3552,26 +3552,26 @@ There are several ways to reduce the size of the project and save space:
 
 - Reduce the number of available Runtime languages
 
-  Check whether all selected Runtime languages are actually needed. You can disable the languages that you do not need under "Runtime settings > Language & Font > Runtime language and font selection".
+  Check whether all selected Runtime languages are actually needed. You can disable the languages that you do not need under "Runtime settings &gt; Language &amp; Font &gt; Runtime language and font selection".
 - Do not use help texts for S7 diagnostic alarms
 
-  To reduce the size of the project, you can disable the download of help texts for the S7 diagnostic alarms. In order to avoid downloading the help texts to the HMI device, disable the option "Download S7 diagnostics help texts" under "Runtime settings > Alarms > General".
+  To reduce the size of the project, you can disable the download of help texts for the S7 diagnostic alarms. In order to avoid downloading the help texts to the HMI device, disable the option "Download S7 diagnostics help texts" under "Runtime settings &gt; Alarms &gt; General".
 - Rebuild all software
 
-  In order to optimize the project data and to clean up obsolete changes, compile the entire project using the "Compile > Software (rebuild all)" command from the shortcut menu of the HMI device.
+  In order to optimize the project data and to clean up obsolete changes, compile the entire project using the "Compile &gt; Software (rebuild all)" command from the shortcut menu of the HMI device.
 - Harmonize the presentation using styles (as of WinCC V13)
 
   It is recommended to harmonize screen objects using styles. Standardize the appearance of screen objects in a project to optimize project data. Use the specified preset or customized style for the configuration of the screen objects throughout the project.
 - Enable automatic update of PLC alarms (for S7-1500 controllers and V14 HMI devices)
 
-  To save space, you can specify that the PLC alarm texts are only to be loaded in Runtime when needed. To do this, enable the "Automatic update" option under "Runtime settings > Alarms > Controller alarms". Make sure that automatic update of alarms is also enabled in the corresponding controller.
+  To save space, you can specify that the PLC alarm texts are only to be loaded in Runtime when needed. To do this, enable the "Automatic update" option under "Runtime settings &gt; Alarms &gt; Controller alarms". Make sure that automatic update of alarms is also enabled in the corresponding controller.
 
   The "Automatic update" option is not available on Basic Panels.
 
   The amount of space that can be saved depends on the number of PLC alarms and the number of Runtime languages.
 - Reduce the number of fonts loaded
 
-  Check whether the number of downloaded user-defined fonts can be reduced. If necessary, configure only the standard fonts for the required Runtime languages under "Runtime settings > Language & font > Runtime language and font selection".
+  Check whether the number of downloaded user-defined fonts can be reduced. If necessary, configure only the standard fonts for the required Runtime languages under "Runtime settings &gt; Language &amp; font &gt; Runtime language and font selection".
 
   To save space, use fewer font groups for the configuration.
 - Reduce the size of the graphics
@@ -3606,7 +3606,7 @@ The following tables show you the settings for the tested cameras and the result
 | Resolution of camera view | 320x240 | 320x240 | 640x480 | 640x480 | 320x240 | 800x600 |
 | Camera resolution | 320x240 | 320x240 | 640x480 | 640x480 | 320x240 | 800x600 SVGA |
 | Frame rate (fps) | 10 | 10 | 10 | 10 | 10 | Not relevant |
-| Screen delay (seconds) | <1 | <1 | <1 | <1 | <1 | <1 |
+| Screen delay (seconds) | &lt;1 | &lt;1 | &lt;1 | &lt;1 | &lt;1 | &lt;1 |
 | Quality | Standard | Standard | Standard | Standard | Standard | Standard |
 | Recommendation with panel | Suitable | Suitable | Suitable | Suitable | Suitable | Suitable |
 
@@ -3618,7 +3618,7 @@ The following tables show you the settings for the tested cameras and the result
 | Resolution of camera view | 320x240 | 320x240 | 640x480 | 640x480 | 480x360 | 640x480 |
 | Camera resolution | 320x240 | 320x240 | 640x480 | 640x480 | 480x360 | 640x480 |
 | Frame rate (fps) | 10 | 10 | 10 | 10 | 10 | Not relevant |
-| Screen delay (seconds) | >1 | <1 | <1 | <1 | <1 | <1 |
+| Screen delay (seconds) | &gt;1 | &lt;1 | &lt;1 | &lt;1 | &lt;1 | &lt;1 |
 | Quality | Standard | Standard | Standard | Standard | Standard | Standard |
 | Recommendation with panel | Suitable with restrictions | Suitable | Suitable | Suitable | Suitable | Suitable |
 
@@ -3630,7 +3630,7 @@ The following tables show you the settings for the tested cameras and the result
 | Resolution of camera view | 320x240 | 320x240 | 800x600 | 800x600 | 480x360 | 800x600 |
 | Camera resolution | 320x240 | 320x240 | 800x600 | 800x600 | 480x360 | 800x600 |
 | Frame rate (fps) | 10 | 10 | 10 | 10 | 10 | Not relevant |
-| Screen delay (seconds) | <1 | <1 | >1 | <1 | <1 | <1 |
+| Screen delay (seconds) | &lt;1 | &lt;1 | &gt;1 | &lt;1 | &lt;1 | &lt;1 |
 | Quality | Standard | Standard | Standard | Standard | Standard | Standard |
 | Recommendation with panel | Suitable | Suitable | Suitable with restrictions | Suitable | Suitable | Suitable |
 
@@ -3642,7 +3642,7 @@ The following tables show you the settings for the tested cameras and the result
 | Resolution of camera view | 320x240 | 320x240 | 320x240 | 640x480 | 320x240 | 640x480 |
 | Camera resolution | 320x240 | 320x240 | 320x240 | 640x480 | 320x240 | 640x480 |
 | Frame rate (fps) | 10 | 10 | 10 | 10 | 10 | Not relevant |
-| Screen delay (seconds) | <1 | <1 | <1 | <1 | <1 | <1 |
+| Screen delay (seconds) | &lt;1 | &lt;1 | &lt;1 | &lt;1 | &lt;1 | &lt;1 |
 | Quality | Standard | Standard | Standard | Standard | Standard | Standard |
 | Recommendation with panel | Suitable | Suitable | Not suitable | Suitable | Suitable | Suitable |
 
@@ -3654,7 +3654,7 @@ The following tables show you the settings for the tested cameras and the result
 | Resolution of camera view | 320x240 | 320x240 | 320x240 | 640x480 | 640x480 | 320x240 | 960x720 |
 | Camera resolution | 320x240 | 320x240 | 320x240 | 640x480 | 640x480 | 320x240 | 960x720 |
 | Frame rate (fps) | 25 | 25 | 25 | 7 | 25 | 25 | Not relevant |
-| Screen delay (seconds) | <1 | <1 | <1 | <2 | <1 | <1 | <1 |
+| Screen delay (seconds) | &lt;1 | &lt;1 | &lt;1 | &lt;2 | &lt;1 | &lt;1 | &lt;1 |
 | Quality | Standard | Standard | Standard | Standard | Standard | Standard | Standard |
 | Recommendation with panel | Suitable | Suitable | Suitable | Suitable | Suitable | Suitable | Suitable |
 
@@ -3665,7 +3665,7 @@ The following tables show you the settings for the tested cameras and the result
 | Codec | MJPEG | MJPEG |
 | Resolution of camera view | 640x480 | 960x720 |
 | Camera resolution | 640x480 | 960x720 |
-| Screen delay (seconds) | <1 | <1 |
+| Screen delay (seconds) | &lt;1 | &lt;1 |
 | Quality | Standard | Standard |
 | Recommendation with panel | Suitable | Suitable |
 
@@ -3676,7 +3676,7 @@ The following tables show you the settings for the tested cameras and the result
 | Codec | MJPEG |
 | Resolution of camera view | 640x480 |
 | Camera resolution | 640x480 |
-| Screen delay (seconds) | <1 |
+| Screen delay (seconds) | &lt;1 |
 | Quality | Standard |
 | Recommendation with panel | Suitable |
 
@@ -3688,7 +3688,7 @@ The following tables show you the settings for the tested cameras and the result
 | Resolution of camera view | 320x240 (QVGA) | 320x240 (QVGA) | 640x480 | 1280x720 | 640x480 (VGA) | 1280x720 |
 | Camera resolution | 320x240  (QVGA) | 320x240 (QVGA) | 320x240 | 1280x720 | 640x480 (VGA) | 1280x720 |
 | Frame rate (fps) | 5 | 5 | 5 | 5 | 5 | 5 |
-| Screen delay (seconds) | <1 | <1 | <1 | <1 | <1 | <1 |
+| Screen delay (seconds) | &lt;1 | &lt;1 | &lt;1 | &lt;1 | &lt;1 | &lt;1 |
 | Quality | Standard | Standard | Standard | Standard | Standard | Standard |
 | Recommendation with panel | Suitable | Suitable | Suitable | Suitable | Suitable | Suitable |
 
@@ -4005,7 +4005,7 @@ The following table shows the availability of the device versions in combination
 
 If the respective HMI device image was not installed during installation of WinCC, the following actions can only be executed after the missing HMI device image has been installed:
 
-- Create a "Pack&Go" file for the respective HMI device.
+- Create a "Pack&amp;Go" file for the respective HMI device.
 - Trigger an OS update for the respective HMI device.
 - Download a project offline from a USB data storage medium to the respective HMI device.
 - Download a project to the respective HMI device.
@@ -4195,7 +4195,7 @@ Double tap to switch from the magnified trend view back to the normal view.
 
 The zooming function is limited to the time axis in the "Trend view" object.
 
-If you have enabled the option "Range > Auto-size" during configuration of the value axes in f(x) trend view, the axes are constantly calculated during zooming.
+If you have enabled the option "Range &gt; Auto-size" during configuration of the value axes in f(x) trend view, the axes are constantly calculated during zooming.
 
 > **Note**
 >
@@ -4289,12 +4289,12 @@ You can lock and unlock individual operator controls or several operator control
 
 1. Configure operator controls of the type I/O field, button or slider.
 2. Select the required operator control(s).
-3. To lock the operator controls, enable the "Activate two-hand operation" option under "Properties > Properties > Security".
+3. To lock the operator controls, enable the "Activate two-hand operation" option under "Properties &gt; Properties &gt; Security".
 
    ![Procedure](images/104486184971_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/104486184971_DV_resource.Stream@PNG-en-US.png)
-4. To unlock the operator controls, disable the "Activate two-hand operation" option under "Properties > Properties > Security".
+4. To unlock the operator controls, disable the "Activate two-hand operation" option under "Properties &gt; Properties &gt; Security".
 
 In runtime, locked operator controls can only be operated if a release button is pressed at the same time.
 
@@ -4316,7 +4316,7 @@ At least one unlocked button is configured in the screen or in the template.
 
 ###### Procedure
 
-1. Select the required button of the screen or template under "Release button" under "Properties > Properties > General".
+1. Select the required button of the screen or template under "Release button" under "Properties &gt; Properties &gt; General".
 
    ![Procedure](images/72514540555_DV_resource.Stream@PNG-en-US.png)
 
@@ -4516,7 +4516,7 @@ You navigate on the display of your HMI device as follows:
 
 ##### Procedure
 
-- To navigate in the specified tab sequence, press the <TAB> key.
+- To navigate in the specified tab sequence, press the &lt;TAB&gt; key.
 - To navigate freely between the operator controls, press the cursor keys.
 
 Depending on the configuration of your HMI device, you can also use function keys or shortcuts for navigation.
@@ -4540,7 +4540,7 @@ Triggering an action at an operator control can mean the following:
   Example: Click a button to trigger a script or to execute a predefined function.
 - An object is enabled.
 
-  Example: To enter a value, select a table cell with the <Enter> key.
+  Example: To enter a value, select a table cell with the &lt;Enter&gt; key.
 
 ##### Requirement
 
@@ -4549,7 +4549,7 @@ Triggering an action at an operator control can mean the following:
 
 ##### Procedure
 
-- Press <Enter>.
+- Press &lt;Enter&gt;.
 
   Or
 - Touch the operator control on the touch screen once or twice in rapid succession.
@@ -4583,8 +4583,8 @@ You enter these values depending on the existing hardware using the screen keybo
 ##### Entering a value
 
 1. Enter the desired value.
-2. To confirm the value and exit the field, press the <Enter> key.
-3. To discard the value and exit the field, press the <Esc> key.
+2. To confirm the value and exit the field, press the &lt;Enter&gt; key.
+3. To discard the value and exit the field, press the &lt;Esc&gt; key.
 
 ##### Result
 
@@ -4607,9 +4607,9 @@ In Runtime, you can move the movable operator controls of a screen object with t
 - To move the operator control, proceed as follows depending on the operating element:
 
   - Standard for touch screen: Press the cursor keys.
-  - Standard for keyboard devices: Press <SHIFT> and the cursor keys.
-  - Switches: Press <ENTER>
-  - Slider: Press <PgUp> or <PgDn>
+  - Standard for keyboard devices: Press &lt;SHIFT&gt; and the cursor keys.
+  - Switches: Press &lt;ENTER&gt;
+  - Slider: Press &lt;PgUp&gt; or &lt;PgDn&gt;
 
 1. To finish the movement, navigate to another screen object or operator control.
 
@@ -4630,7 +4630,7 @@ For more detailed information, refer to the operating instructions for your HMI 
 
 Depending on the configuration, additional information and operating instructions are available as infotext. The infotext is assigned to an operating element, an alarm or to the open screen. The infotext of an I/O field may contain, for example, information about the value to be entered.
 
-As an alternative to the <Help> key of the HMI device, use the <Help> key of the screen keyboard for input objects.
+As an alternative to the &lt;Help&gt; key of the HMI device, use the &lt;Help&gt; key of the screen keyboard for input objects.
 
 ##### Requirement
 
@@ -4639,11 +4639,11 @@ As an alternative to the <Help> key of the HMI device, use the <Help> key of the
 ##### Calling the infotext
 
 1. Enable the desired operating element.
-2. Press the <Help> key of the HMI device.
+2. Press the &lt;Help&gt; key of the HMI device.
 
    The infotext for the operating element is displayed.
 
-If you are operating your input object with the touch screen, the screen keyboard opens. If the <Help> key appears, an infotext is configured for the operating element or the current screen.
+If you are operating your input object with the touch screen, the screen keyboard opens. If the &lt;Help&gt; key appears, an infotext is configured for the operating element or the current screen.
 
 If there is no infotext for the selected screen object, the infotext for the current screen is displayed, if it has been configured.
 
@@ -4657,7 +4657,7 @@ Depending on your configuration, infotext can also be retrieved by means of a co
 
 ##### Hiding infotext
 
-- To hide the infotext, press the <Esc> key or press the <Help> key again.
+- To hide the infotext, press the &lt;Esc&gt; key or press the &lt;Help&gt; key again.
 
 #### Changing Runtime language (Panels, Comfort Panels, RT Advanced)
 
@@ -4685,7 +4685,7 @@ You can switch the language in Runtime in one of the following ways:
 
 ##### Introduction
 
-In the "HTML browser" object, you have the option in RT Advanced to select between two Web browser types. Specify the type of the Web browser under "Properties > Properties > General > HTML browser type" in the Inspector window.
+In the "HTML browser" object, you have the option in RT Advanced to select between two Web browser types. Specify the type of the Web browser under "Properties &gt; Properties &gt; General &gt; HTML browser type" in the Inspector window.
 
 Only the Web browser of the WebKit engine is available on Panels.
 
@@ -4719,7 +4719,7 @@ The table below shows the availability of the HTML5 functions in the Web browser
 
 | Parsing rules | Available |
 | --- | --- |
-| <!DOCTYPE html> triggers the standard mode | Yes |
+| &lt;!DOCTYPE html&gt; triggers the standard mode | Yes |
 | HTML5 tokenizer | Yes |
 | HTML 5 tree building | Yes |
 | Parsing Inline SVG | Yes |
@@ -5201,13 +5201,13 @@ To edit the Runtime settings for your HMI device, select "Runtime settings" unde
 
 ##### Start screen settings
 
-The start screen is the initial screen that is displayed after Runtime starts. The screen resolution is automatically adjusted to suit the HMI device when the screen is selected. You specify the start screen in the Runtime settings of the HMI device under "General > Settings".
+The start screen is the initial screen that is displayed after Runtime starts. The screen resolution is automatically adjusted to suit the HMI device when the screen is selected. You specify the start screen in the Runtime settings of the HMI device under "General &gt; Settings".
 
 You can find additional information in the online help for WinCC under "Defining the project's start screen".
 
 ##### Design settings in the Runtime settings
 
-Under "General > Settings", you specify whether the HMI device uses the default design of the project or another predefined design. You can find more detailed information in "Working with designs".
+Under "General &gt; Settings", you specify whether the HMI device uses the default design of the project or another predefined design. You can find more detailed information in "Working with designs".
 
 ##### Design settings in the Windows Control Panel
 
@@ -5233,22 +5233,22 @@ You can find additional information on this subject in the online help for WinCC
 
 ##### Settings for independent screen windows
 
-If you enable the "Hide main window" option under "General > Independent screen windows", you specify that Runtime runs in the background. The Runtime window is hidden and is also not visible in the taskbar.
+If you enable the "Hide main window" option under "General &gt; Independent screen windows", you specify that Runtime runs in the background. The Runtime window is hidden and is also not visible in the taskbar.
 
 ##### Settings for screens
 
 Change the settings of the Runtime window under "Screens" and specify how additional functions are used.
 
-The submenu "Screens > General" allows you to make general settings. The general settings include:
+The submenu "Screens &gt; General" allows you to make general settings. The general settings include:
 
 - Enable background effects in runtime
 - Use shadows for screen objects in Runtime
 - Use WinCC classic design in runtime
 - Bit selection for appearance
 
-In the menu "Screens > Screen buffer" you can define the number of screens to be buffered via "Number of screens". The screens saved in the screen buffer are displayed using the screen navigation keys.
+In the menu "Screens &gt; Screen buffer" you can define the number of screens to be buffered via "Number of screens". The screens saved in the screen buffer are displayed using the screen navigation keys.
 
-The submenu "Screens > Window behavior" gives you options via the Runtime window. You have the following setting options here:
+The submenu "Screens &gt; Window behavior" gives you options via the Runtime window. You have the following setting options here:
 
 - Display of the title
 - Showing a border
@@ -5268,7 +5268,7 @@ The submenu "Screens > Window behavior" gives you options via the Runtime window
 
 ##### Graphic settings
 
-Under "Graphic settings > Loaded project graphics", you specify which graphics from the project graphics are downloaded to the HMI device.
+Under "Graphic settings &gt; Loaded project graphics", you specify which graphics from the project graphics are downloaded to the HMI device.
 
 #### Configuring operation in Runtime (RT Professional)
 
@@ -5296,17 +5296,17 @@ This shortcut key is used to navigate between multiple screen windows, which are
 
 > **Note**
 >
-> The <DEL> and <HOME> keys cannot be used as shortcut keys.
+> The &lt;DEL&gt; and &lt;HOME&gt; keys cannot be used as shortcut keys.
 
 ###### Making help available in Runtime
 
-Under Runtime settings > General, you specify that online help is available in Runtime. For this purpose you enable the "Make help available in Runtime" option.
+Under Runtime settings &gt; General, you specify that online help is available in Runtime. For this purpose you enable the "Make help available in Runtime" option.
 
 Some objects in Runtime have an online help system. You can centrally disable calls to online help. You thereby prevent the online help on the hard disk from being accessed in Runtime.
 
 ###### Preventing access to Windows in Runtime
 
-To prevent the user from accessing the Windows user interface with familiar shortcuts, such as <Ctrl>+<Alt>+<Del>, activate the function "Disable keyboard commands" under "Runtime settings > Keyboard > Keyboard commands of the operating system". In addition, deactivate the "Keep the taskbar on top of other windows" setting in Windows.
+To prevent the user from accessing the Windows user interface with familiar shortcuts, such as &lt;Ctrl&gt;+&lt;Alt&gt;+&lt;Del&gt;, activate the function "Disable keyboard commands" under "Runtime settings &gt; Keyboard &gt; Keyboard commands of the operating system". In addition, deactivate the "Keep the taskbar on top of other windows" setting in Windows.
 
 ###### Using the screen keyboard
 
@@ -5338,7 +5338,7 @@ You need the objects' name information, if you want to address the objects in a 
 
 ###### Hide main window
 
-The "Screen window" object is used to display other screens from the project in the current screen. You can find the "Hide main window" function under "General > Independent screen windows". With this option, you specify that Runtime runs in the background. The Runtime window is hidden and is also not visible in the taskbar.
+The "Screen window" object is used to display other screens from the project in the current screen. You can find the "Hide main window" function under "General &gt; Independent screen windows". With this option, you specify that Runtime runs in the background. The Runtime window is hidden and is also not visible in the taskbar.
 
 ##### Select keyboard layout (Professional) (RT Professional)
 
@@ -5384,7 +5384,7 @@ The "Runtime settings" editor is open.
 
 Set up the shortcuts as follows:
 
-1. Click on "Runtime settings > Keyboard".
+1. Click on "Runtime settings &gt; Keyboard".
 2. Select the desired action in the "Action keys" area, for example.
 
    ![Procedure](images/72269634699_DV_resource.Stream@PNG-en-US.png)
@@ -5406,7 +5406,7 @@ Set up the shortcuts as follows:
 
 Screens can also be operated if mouse control is not available. Define corresponding shortcuts for the required operating functions. The operator calls the specific function by operating the shortcut.
 
-The most important shortcuts for operation without mouse in Runtime are defined in the "Runtime settings > Keyboard" editor.
+The most important shortcuts for operation without mouse in Runtime are defined in the "Runtime settings &gt; Keyboard" editor.
 
 ###### Procedure
 
@@ -5417,7 +5417,7 @@ Set up the operator shortcuts as follows:
 3. Define the required shortcuts.
 4. Click the button to close the dialog.
 
-You can also define one of the function keys <F1> to <F12> instead of a shortcut.
+You can also define one of the function keys &lt;F1&gt; to &lt;F12&gt; instead of a shortcut.
 
 > **Note**
 >
@@ -5433,7 +5433,7 @@ This hotkey is used to navigate between multiple screen windows, which are confi
 
 > **Note**
 >
-> The <DEL> and <HOME> keys cannot be used as hotkeys.
+> The &lt;DEL&gt; and &lt;HOME&gt; keys cannot be used as hotkeys.
 
 ###### Screen navigation keys
 
@@ -5451,7 +5451,7 @@ Configure corresponding shortcuts in the "Screen selection" dialog to facilitate
 
 You can configure object navigation without mouse using defined cursor control functions in screens with tabular layout of the objects.
 
-Define the cursor control shortcuts in the "Runtime settings > Keyboard" editor. You specify the response of the cursor in tables under "Screens > Cursor response in tables".
+Define the cursor control shortcuts in the "Runtime settings &gt; Keyboard" editor. You specify the response of the cursor in tables under "Screens &gt; Cursor response in tables".
 
 ![Introduction](images/72512739723_DV_resource.Stream@PNG-en-US.png)
 
@@ -5466,7 +5466,7 @@ Set up the operator shortcuts as follows:
 4. Accept the settings.  
    The dialog for specifying the shortcut closes itself.
 
-You can also define one of the function keys <F1> to <F12> instead of a shortcut.
+You can also define one of the function keys &lt;F1&gt; to &lt;F12&gt; instead of a shortcut.
 
 ##### Activating the zoom functions (Professional) (RT Professional)
 
@@ -5479,7 +5479,7 @@ Zooming in Runtime is supported by three techniques:
 
   For additional information, refer to "[Dynamic visualization of an object](Creating%20screens%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#dynamizing-the-visibility-of-an-object-panels-comfort-panels-rt-advanced-rt-professional)".
 - Extended Zooming  
-  A screen's view in Runtime can be enlarged or reduced using the scroll wheel of the mouse. For this purpose, hold down <CTRL> and move the mouse scroll wheel in the desired direction.
+  A screen's view in Runtime can be enlarged or reduced using the scroll wheel of the mouse. For this purpose, hold down &lt;CTRL&gt; and move the mouse scroll wheel in the desired direction.
 - Panning
 
   If a screen has a zoom factor that causes the screen to be displayed with scroll bars, then you can move a screen detail within the document. A navigation crosshair appears upon clicking on the mouse wheel. Moving the mouse pointer scrolls in the desired direction. The distance between mouse pointer and navigation crosshair determines the scrolling speed. A second click cancels panning.
@@ -5503,7 +5503,7 @@ Zooming in Runtime is supported by three techniques:
 
 ###### Configuring Extended Zooming Screen-Specific
 
-The "Extended Zoom" function can be enabled/disabled for specific screens. Make the corresponding setting in the inspector window of a screen under "Properties > Properties > Miscellaneous".
+The "Extended Zoom" function can be enabled/disabled for specific screens. Make the corresponding setting in the inspector window of a screen under "Properties &gt; Properties &gt; Miscellaneous".
 
 ---
 
@@ -5525,7 +5525,7 @@ Start only the applications required in Runtime to obtain a high performance lev
 
 Set up the startup list as follows:
 
-1. Open the "Runtime settings > Services" editor.
+1. Open the "Runtime settings &gt; Services" editor.
 
    ![Procedure](images/72513304203_DV_resource.Stream@PNG-en-US.png)
 
@@ -5567,7 +5567,7 @@ The time synchronization of the computer is entered in the start sequence of the
 
 Proceed as follows to activate time synchronization:
 
-1. Select the runtime "Properties" command from the shortcut menu in the project navigation and then select "Time synchronization > General".
+1. Select the runtime "Properties" command from the shortcut menu in the project navigation and then select "Time synchronization &gt; General".
 2. Under "Synchronization", activate "Activate time synchronization".
 
    ![Activating time synchronization](images/64828333067_DV_resource.Stream@PNG-en-US.png)
@@ -5580,7 +5580,7 @@ Proceed as follows to activate time synchronization:
 
 Proceed as follows to synchronize the time via the terminal bus:
 
-1. Select the runtime "Properties" command from the shortcut menu in the project navigation and then select "Time synchronization > Via terminal bus".
+1. Select the runtime "Properties" command from the shortcut menu in the project navigation and then select "Time synchronization &gt; Via terminal bus".
 
    ![Synchronization via the terminal bus](images/88752692747_DV_resource.Stream@PNG-en-US.png)
 
@@ -5594,7 +5594,7 @@ Proceed as follows to synchronize the time via the terminal bus:
 
 Proceed as follows to synchronize the time via the system bus:
 
-1. Select the runtime "Properties" command from the shortcut menu in the project navigation and then select "Time synchronization > Via system bus".
+1. Select the runtime "Properties" command from the shortcut menu in the project navigation and then select "Time synchronization &gt; Via system bus".
 
    ![Synchronization via the system bus](images/88752697099_DV_resource.Stream@PNG-en-US.png)
 
@@ -5645,7 +5645,7 @@ You can also display these performance tags as counters in the Windows system mo
 
 To set the time display on the HMI device, proceed as follows:
 
-1. Select "Properties > Time information" from the Runtime shortcut menu in the project navigation.
+1. Select "Properties &gt; Time information" from the Runtime shortcut menu in the project navigation.
 
    ![Setting the time base for the time of day](images/64831049355_DV_resource.Stream@PNG-en-US.png)
 
@@ -5947,7 +5947,7 @@ To protect the private password key during transport, you can configure a passwo
 
 ###### Creating password
 
-1. Open the "Runtime settings > General" editor in the Project window.
+1. Open the "Runtime settings &gt; General" editor in the Project window.
 2. Enter the password in the "Enter password" field in the "Transport password" area.
 3. Confirm the password in the "Confirm password" field.
 
@@ -6018,7 +6018,7 @@ A license for the WinCC Option Connectivity Pack is required to operate the REST
 
 For each tag, you can limit reading or writing of values to specific authorizations.
 
-In the Inspector window, under "Properties > Properties > Settings > REST API", select the desired authorization in the following fields:
+In the Inspector window, under "Properties &gt; Properties &gt; Settings &gt; REST API", select the desired authorization in the following fields:
 
 - REST API read authorization
 - REST API write authorization
@@ -6032,7 +6032,7 @@ In order to access a tag, give the user the authorizations set in the tag proper
 ##### Procedure
 
 1. Open the Runtime settings:
-2. Select the "Runtime settings > General" area.
+2. Select the "Runtime settings &gt; General" area.
 3. Under "REST settings", activate the option "Turn on".
 4. Specify the connection data:
 
@@ -6044,7 +6044,7 @@ In order to access a tag, give the user the authorizations set in the tag proper
 
    The available certificates are displayed.
 6. Select a certificate and confirm with "OK".
-7. Select the "Runtime settings > Services" area.
+7. Select the "Runtime settings &gt; Services" area.
 8. Under "Start sequence of WinCC Runtime", activate the "REST service" application.
 
 ### Overview of compiling and loading projects (RT Professional)
@@ -6057,7 +6057,7 @@ If an error occurs during compilation, WinCC provides support in locating and co
 
 Once you have corrected any problems, you download the compiled project to the HMI devices on which the project is to run. If the configuration PC is not connected to the HMI device, save the compiled project on a data medium of your choice. The compiled project is then transferred from a PC connected to the HMI device to the HMI device.
 
-If you are using HMI tags in your project that are connected to PLC tags, you should also compile all modified S7 blocks with the command "Compile > Software" in the shortcut menu before you compile the HMI device.
+If you are using HMI tags in your project that are connected to PLC tags, you should also compile all modified S7 blocks with the command "Compile &gt; Software" in the shortcut menu before you compile the HMI device.
 
 > **Note**
 >
@@ -6122,7 +6122,7 @@ There are two types of simulation:
   
 [Error messages during loading of projects (Panels, Comfort Panels, RT Advanced)](#error-messages-during-loading-of-projects-panels-comfort-panels-rt-advanced)
   
-[Generating a "Pack&Go" file (Panels, Comfort Panels)](#generating-a-packgo-file-panels-comfort-panels)
+[Generating a "Pack&amp;Go" file (Panels, Comfort Panels)](#generating-a-packgo-file-panels-comfort-panels)
   
 [Starting Runtime Advanced and Panel Runtime (Panels, Comfort Panels, RT Advanced)](#starting-runtime-advanced-and-panel-runtime-panels-comfort-panels-rt-advanced)
   
@@ -6155,8 +6155,8 @@ Proceed as follows to compile a project:
 1. If you want to compile several HMI devices at the same time, select all the relevant HMI devices with multiple selection in the project tree.
 2. Compile the project:
 
-   - To only compile changes in the project, select the "Compile > Software (only changes)" command from the shortcut menu of the HMI device.
-   - To compile all project data, select the "Compile > Software (compile all)" command from the shortcut menu.
+   - To only compile changes in the project, select the "Compile &gt; Software (only changes)" command from the shortcut menu of the HMI device.
+   - To compile all project data, select the "Compile &gt; Software (compile all)" command from the shortcut menu.
 
 #### Result
 
@@ -6188,8 +6188,8 @@ You can use the simulator to test the performance of your configuration on the c
 You can start the simulator as follows:
 
 - In the shortcut menu of the HMI device or in a screen: "Start simulation"
-- Menu command "Online > Simulation > [Start|With tag simulator|With script debugger]"
-- Under "Visualization > Simulate device" in the portal view.
+- Menu command "Online &gt; Simulation &gt; [Start|With tag simulator|With script debugger]"
+- Under "Visualization &gt; Simulate device" in the portal view.
 
 ##### Requirement
 
@@ -6251,7 +6251,7 @@ Proceed as follows to simulate a project:
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Disconnect the connection to the controller or switch the controller off if you do not want to test the function of the entire process. 2. Select the menu command "Online > Simulate Runtime > With tag simulator".    Runtime starts and the simulator opens with all the configured tags. 3. Select the "New tag" command in the "Edit" menu to add a tag to the tag simulator. 4. Select the tag from the WinCC tag management. 5. In the tag simulator, select the required tag on the "Tags" tab to supply a tag with simulated values. 6. Configure the simulation mode on the "Properties" tab:    - Select the simulation mode.    - Enter values for the simulation.    - Click "Active" to include the tag in the simulation.        | Symbol | Meaning |      | --- | --- |      |  | **Warning** |      | Make sure once again that the configuration computer cannot pass any changed tags to the PLC in the active process. If you have not switched the PLC off, the simulated tag values will be passed to the PLC and the runtime process. |  | 7. Click the "Start simulation" button on the "Properties" tab. 8. Observe the effect the simulation has on your project in Runtime. 9. Click on the "Stop simulation" button to stop the simulation. 10. To save the settings for the simulation, select the menu command "File > Save" and enter a corresponding name.     The file is automatically given the *.sim extension. |  |
+| 1. Disconnect the connection to the controller or switch the controller off if you do not want to test the function of the entire process. 2. Select the menu command "Online &gt; Simulate Runtime &gt; With tag simulator".    Runtime starts and the simulator opens with all the configured tags. 3. Select the "New tag" command in the "Edit" menu to add a tag to the tag simulator. 4. Select the tag from the WinCC tag management. 5. In the tag simulator, select the required tag on the "Tags" tab to supply a tag with simulated values. 6. Configure the simulation mode on the "Properties" tab:    - Select the simulation mode.    - Enter values for the simulation.    - Click "Active" to include the tag in the simulation.        | Symbol | Meaning |      | --- | --- |      |  | **Warning** |      | Make sure once again that the configuration computer cannot pass any changed tags to the PLC in the active process. If you have not switched the PLC off, the simulated tag values will be passed to the PLC and the runtime process. |  | 7. Click the "Start simulation" button on the "Properties" tab. 8. Observe the effect the simulation has on your project in Runtime. 9. Click on the "Stop simulation" button to stop the simulation. 10. To save the settings for the simulation, select the menu command "File &gt; Save" and enter a corresponding name.     The file is automatically given the *.sim extension. |  |
 
 ##### Managing simulation data
 
@@ -6259,8 +6259,8 @@ If you have saved data from a previous simulation, you can open the file at a la
 
 Proceed as follows to open a simulation file:
 
-1. Select the menu command "Online > Simulate Runtime > With tag simulator".
-2. Select the menu command "File > Open" in the tag simulator.
+1. Select the menu command "Online &gt; Simulate Runtime &gt; With tag simulator".
+2. Select the menu command "File &gt; Open" in the tag simulator.
 3. Select the corresponding simulation file and click "Open".
 
    The simulator loads the stored data.
@@ -6276,7 +6276,7 @@ When a tag is enabled, the simulation values are calculated and transferred to t
 To delete a tag from the tag simulator, follow these steps:
 
 1. Select the tag name.
-2. Select the menu command "Edit > Delete".
+2. Select the menu command "Edit &gt; Delete".
 
 The tag is removed from the table.
 
@@ -6405,7 +6405,7 @@ You have several options to start the simulator.
 
 **From the TIA Portal**
 
-In the menu bar, select "Online > Simulation > With Tag Simulator".
+In the menu bar, select "Online &gt; Simulation &gt; With Tag Simulator".
 
 A simulation is started and the "Tags simulation" simulator opens.
 
@@ -6424,7 +6424,7 @@ You can save a configured simulation as a file in "*.sim" format and call it up 
 
 **Save simulation file**
 
-1. In the simulator, select "File > Save" or "Save as".
+1. In the simulator, select "File &gt; Save" or "Save as".
 2. Select a target directory and a file name.
 
 Target directory:
@@ -6432,7 +6432,7 @@ Target directory:
 - If you have started the simulator from the TIA Portal together with the simulation, a default folder is proposed as target directory.
 - If you started the simulator via the Windows user interface while a project is in RUN in Runtime, the simulation file is saved to the following directory:
 
-  <Path to the active RT project>\Simulation
+  &lt;Path to the active RT project&gt;\Simulation
 
   > **Note**
   >
@@ -6442,7 +6442,7 @@ Target directory:
 
 **Open simulation file**
 
-1. In the simulator, select "File > Load".
+1. In the simulator, select "File &gt; Load".
 2. Select the desired simulation file or the path to the desired file.
 
 If you have started the simulator from the TIA Portal together with the simulation, the default directory for saving will be suggested. If you have saved the file in another directory, select this directory.
@@ -6484,7 +6484,7 @@ You edit the properties in the data area or in the properties window.
 | Object name | Tag name | Display: Inserted tag |
 | Data type | Tag type | Display: Data type of the inserted tag |
 | Active | Activating the tag for the simulation | A maximum of 300 tags can be simulated at the same time.  To activate all inserted tags, select the "Active" column in the data area and select the entry "Select all" in the shortcut menu.  When more than 300 tags are inserted, the first 300 tags are activated. |
-| Cycle | Update cycle | Base is 1 second.  To extend the cycle, enter a value > 1. |
+| Cycle | Update cycle | Base is 1 second.  To extend the cycle, enter a value &gt; 1. |
 | Function | Simulation function | Select the function from the drop-down list. |
 | Parameters of the simulation functions |  | You can find the description of the parameters under "[Configuring functions for the simulation](#configuring-functions-for-the-simulation-rt-professional)".  In the data area, the parameters of the simulation functions are hidden in the standard view. To show these columns, select "Show" from the column header shortcut menu. |
 
@@ -6595,7 +6595,7 @@ Open the tag selection dialog and apply the required tags.
 
 To delete a tag in the data area, click the corresponding line number. The line is highlighted.
 
-Select "Delete" from the shortcut menu or press the <Del> key.
+Select "Delete" from the shortcut menu or press the &lt;Del&gt; key.
 
 The tag is deleted, without further prompt, from the list of tags to be simulated.
 
@@ -6732,7 +6732,7 @@ A simulation is running or a project is running in Runtime.
    ![Procedure](images/139538953355_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/139538953355_DV_resource.Stream@PNG-en-US.png)
-4. To change the update cycle, enter a number > 1 in the "Cycle" field.
+4. To change the update cycle, enter a number &gt; 1 in the "Cycle" field.
 
    An update cycle of 1 second is the basis. To change the simulated value, every 5 seconds for example, enter "5".
 5. If necessary, select the quality code in the "Quality set" column.
@@ -6741,10 +6741,10 @@ A simulation is running or a project is running in Runtime.
 6. Activate the simulation of the required tags in the "Active" column.
 
    You can simulate a maximum of 300 tags simultaneously, even if more tags are configured in the simulator.
-7. Save the simulation using the menu command "File > Save as".
+7. Save the simulation using the menu command "File &gt; Save as".
 
    This allows you to reuse the projected simulation later, for example, to test a changed configuration.
-8. Start the simulation using the menu command "Simulation > Start".
+8. Start the simulation using the menu command "Simulation &gt; Start".
 
    - The simulated values are displayed in the "Value set" column.
    - The actual values of the tags are displayed in the "Current value" column.
@@ -6753,7 +6753,7 @@ A simulation is running or a project is running in Runtime.
    ![Procedure](images/164174451851_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/164174451851_DV_resource.Stream@PNG-en-US.png)
-9. To stop the simulation, select the menu command "Simulation > Stop".
+9. To stop the simulation, select the menu command "Simulation &gt; Stop".
 
    The simulation is also closed when WinCC Runtime is deactivated.
 
@@ -6793,7 +6793,7 @@ Use the "Apply code" property in the "Tag properties" window to select the sourc
 - You cannot deactivate a tag with the "Script" simulation function as long as the simulation is active in runtime.
 - If the script cannot be processed in the current cycle, it is not called up again until of next update cycle after processing has been completed.
 
-  To deactivate the tag simulation and correct the script, stop the simulation using the menu item "Simulation > Stop".
+  To deactivate the tag simulation and correct the script, stop the simulation using the menu item "Simulation &gt; Stop".
 
 ###### Transfer parameters
 
@@ -6884,7 +6884,7 @@ SmartTags("Simulation_5") = 7
 To change the interface language in the WinCC Professional Runtime Tag Simulator, proceed as follows:
 
 1. Start the "WinCC RT Start" tool.
-2. Select "View > Language".
+2. Select "View &gt; Language".
 3. Select a language.
 4. Restart the simulator.
 
@@ -6927,7 +6927,7 @@ The following steps are completed prior to downloading:
 
    If the HMI device is part of a subnet, for example, you also select the subnet and the first gateway.
 
-   You can open the "Extended download to device" dialog at any time with the menu command "Online > Extended download to device...".
+   You can open the "Extended download to device" dialog at any time with the menu command "Online &gt; Extended download to device...".
 
    The "Load preview" dialog box opens.
 2. The project is compiled. Warnings and errors during compilation are displayed in the Inspector window and in the "Load preview" dialog box.
@@ -6950,7 +6950,7 @@ If you cannot establish a direct connection from the configuration PC to the HMI
 
 ##### Loading with S7 routing
 
-Configure the S7 routing settings in the "Devices & Networks" editor in the relevant PLC. The settings depend on the device configured.
+Configure the S7 routing settings in the "Devices &amp; Networks" editor in the relevant PLC. The settings depend on the device configured.
 
 S7 routing supports the following protocols:
 
@@ -6965,7 +6965,7 @@ Projects can contain Runtime add-ons in the form of controls or CSP (Communicati
 
 Loading inconsistent projects to a device can result in the loss of the online delta load capability of the device. Therefore, the system prevents the loading of inconsistent projects in Runtime Professional. You can only simulate a Runtime project or load it onto a device if no errors were output during compiling. The options "Complete load", "Online delta loading" and the loading via data carrier are not available with inconsistent projects. If the system determines inconsistencies, an error message in the "Load preview" dialog box informs you that the project cannot be loaded on the device.
 
-Inconsistencies in VB scripting and C scripting are an exception. You can load or simulate a project with errors in VB scripting and C scripting on a device if you have selected the check box "Start even with corrupt scripts" under "Runtime settings > General > Script options".
+Inconsistencies in VB scripting and C scripting are an exception. You can load or simulate a project with errors in VB scripting and C scripting on a device if you have selected the check box "Start even with corrupt scripts" under "Runtime settings &gt; General &gt; Script options".
 
 ---
 
@@ -7005,7 +7005,7 @@ Please note the following when downloading a project to an HMI device:
 - If the name of the runtime project does not match the project name on the engineering project, the project is not loaded.
 - Loading inconsistent projects is prevented by the system in Runtime Professional. You can only simulate a Runtime project or load it onto a device if no errors were output during compiling. If the system determines inconsistencies, an error message in the "Load preview" dialog box informs you that the project cannot be loaded on the device.
 
-  Inconsistencies in VB scripting and C scripting are an exception. You can load or simulate a project with errors in VB scripting and C scripting on a device if you have selected the check box "Start even with corrupt scripts" under "Runtime settings > General > Script options".
+  Inconsistencies in VB scripting and C scripting are an exception. You can load or simulate a project with errors in VB scripting and C scripting on a device if you have selected the check box "Start even with corrupt scripts" under "Runtime settings &gt; General &gt; Script options".
 
 ##### Requirement
 
@@ -7019,7 +7019,7 @@ Please note the following when downloading a project to an HMI device:
 Proceed as follows to load a project:
 
 1. To download a project simultaneously to several HMI devices, select the HMI devices by means of multiple selection in the project tree.
-2. Select the "Download to device > Software" command from the shortcut menu of an HMI device.
+2. Select the "Download to device &gt; Software" command from the shortcut menu of an HMI device.
 3. If the "Extended download to device" dialog opens:
 
    - Select the "destination path" for the compiled project on the HMI device.
@@ -7029,7 +7029,7 @@ Proceed as follows to load a project:
      Full access is usually set during installation of WinCC Runtime for the "WinCC Projects" file. The location of this folder in the file system depends on the operating system of the HMI device.
    - Click "Load".
 
-   You can open the "Extended download to device" dialog at any time with the menu command "Online > Extended download to device...".
+   You can open the "Extended download to device" dialog at any time with the menu command "Online &gt; Extended download to device...".
 
    The "Load preview" dialog box opens. The project is compiled at the same time. The result is displayed in the "Load preview" dialog box.
 4. Check the displayed defaults and change them as necessary:
@@ -7046,7 +7046,7 @@ With multiple runtime projects, create a separate directory for each project. Th
 
 ##### Result
 
-The project is loaded to all selected HMI devices. If errors or warnings occur during the download, corresponding alarms are displayed under "Info > Load" in the Inspector window.
+The project is loaded to all selected HMI devices. If errors or warnings occur during the download, corresponding alarms are displayed under "Info &gt; Load" in the Inspector window.
 
 On completion of the successful download of the project, you can execute it on the HMI device. If starting of Runtime on the target system was activated in the "Load preview" dialog box, the project is started in Runtime after loading.
 
@@ -7085,7 +7085,7 @@ A project is open.
 To download a project to a file system, follow these steps:
 
 1. Select the project in the project tree.
-2. Select the "Online > Download to file system" menu command.
+2. Select the "Online &gt; Download to file system" menu command.
 
    A dialog opens.
 3. Select the storage path and click "OK".
@@ -7223,7 +7223,7 @@ The table below shows for which actions the online delta transfer capability is 
 >
 > **Displaying PLC alarms**
 >
-> If you change the configuration of the option "Automatic update" after compiling and loading under "Runtime settings > Alarms > PLC alarms", the online delta load capability is lost.
+> If you change the configuration of the option "Automatic update" after compiling and loading under "Runtime settings &gt; Alarms &gt; PLC alarms", the online delta load capability is lost.
 
 ---
 
@@ -7250,9 +7250,9 @@ To transfer an updated V13 SP1 project from engineering system to an HMI device,
 To transfer to an updated V13 SP1 project from engineering system to an HMI device and update an existing runtime project on the HMI device to version 13 SP1, follow these steps:
 
 1. Select the project in the project tree on the engineering system.
-2. Select the "Online > Download to device" menu command.
+2. Select the "Online &gt; Download to device" menu command.
 
-   Alternatively, you can select the command "Download to device > Software (all)" from the shortcut menu of the HMI device.
+   Alternatively, you can select the command "Download to device &gt; Software (all)" from the shortcut menu of the HMI device.
 
    The "Extended download to device" dialog opens.
 3. Select the destination directory of the old runtime project under "Path of the target folder".
@@ -7315,7 +7315,7 @@ The following additional scenarios are possible for RT Professional:
 In principle, you can execute all commands for compiling and loading in Multiuser Engineering projects:
 
 - "Software (rebuild all)"
-- "Compile > Software (only changes)"
+- "Compile &gt; Software (only changes)"
 - "Software (all)"
 - "Online delta loading" (RT Professional only)
 
@@ -7471,7 +7471,7 @@ As long as all the users in the engineering project only make changes which do n
 >
 > With complete loading, the online delta loading capability of the HM device is lost.
 
-Several users can make configuration changes in parallel in different local sessions. The steps "Compile > Software (only changes)" or "Online delta loading" must, however, be executed in succession in the server project view, as exclusive access rights are required for this.
+Several users can make configuration changes in parallel in different local sessions. The steps "Compile &gt; Software (only changes)" or "Online delta loading" must, however, be executed in succession in the server project view, as exclusive access rights are required for this.
 
 You can find more information on Multiuser Engineering in "Using Multiuser Engineering".
 
@@ -7581,7 +7581,7 @@ Once you have loaded your project locally you can start your project in Runtime 
 To start Runtime on the configuration PC and to apply changes to the configuration to the active Runtime, follow these steps:
 
 1. Activate the HMI device in the project tree.
-2. Select "Online > Download to device".
+2. Select "Online &gt; Download to device".
 3. When the "Load preview" dialog box opens, select to start Runtime after loading.
 
    ![Procedure](images/111987115787_DV_resource.Stream@PNG-en-US.png)
@@ -7640,7 +7640,7 @@ If only WinCC Runtime is installed on an HMI device, load the project to the HMI
 ##### Starting Runtime at an Engineering Station
 
 1. Select the required project in the WinCC project tree.
-2. Select "Online > Download to device".
+2. Select "Online &gt; Download to device".
 3. Activate the start of WinCC Runtime after loading.
 
    ![Starting Runtime at an Engineering Station](images/111987115787_DV_resource.Stream@PNG-en-US.png)
@@ -7907,7 +7907,7 @@ The following gestures are supported.
 >
 > **Settings for dragging and scaling**
 >
-> To unlock the "Drag" and "Scale" functions, select the "Slider" check box and clear the "Extended zoom" check box under "Runtime Settings > Screens > Properties Window". Also select the "Extended zoom" check box under "Properties > Properties > Miscellaneous" in the Inspector window of each screen.
+> To unlock the "Drag" and "Scale" functions, select the "Slider" check box and clear the "Extended zoom" check box under "Runtime Settings &gt; Screens &gt; Properties Window". Also select the "Extended zoom" check box under "Properties &gt; Properties &gt; Miscellaneous" in the Inspector window of each screen.
 
 ---
 
@@ -7959,14 +7959,14 @@ You can lock and unlock individual operator controls or several operator control
 
 1. Configure operator controls of the type I/O field,button or slider.
 2. Select the required operator control(s).
-3. To lock the operator controls, disable the "Allow operator control" option under "Properties > Properties > Security".
+3. To lock the operator controls, disable the "Allow operator control" option under "Properties &gt; Properties &gt; Security".
 
    ![Procedure](images/88767936651_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/88767936651_DV_resource.Stream@PNG-en-US.png)
 
    In Runtime, locked operator controls can only be operated by simultaneously pressing a release button that has been made dynamic with a corresponding system function.
-4. To unlock the operator controls, enable the "Allow operator control" option under "Properties > Properties > Security".
+4. To unlock the operator controls, enable the "Allow operator control" option under "Properties &gt; Properties &gt; Security".
 
 ###### Configuring release button in screen or template (RT Professional)
 
@@ -7983,7 +7983,7 @@ If several objects have to be unlocked in a screen with a release button, expand
 ###### Procedure
 
 1. Select the button that you want to configure as the release button.
-2. Click "Properties > Events" in the Inspector window.
+2. Click "Properties &gt; Events" in the Inspector window.
 3. Select the "Press left mouse button" event.
 4. Click on "Add function" in the table.
 5. Select the "SetPropertyByConstant" system function.
@@ -8151,7 +8151,7 @@ You navigate on the display of your HMI device as follows:
 
 ##### Procedure
 
-- To navigate in the specified tab sequence, press the <TAB> key.
+- To navigate in the specified tab sequence, press the &lt;TAB&gt; key.
 - To navigate freely between the operator controls, press the cursor keys.
 
 Depending on the configuration of your HMI device, you can also use function keys or shortcuts for navigation.
@@ -8175,7 +8175,7 @@ Triggering an action at an operator control can mean the following:
   Example: Click a button to trigger a script or to execute a predefined function.
 - An object is enabled.
 
-  Example: To enter a value, select a table cell with the <Enter> key.
+  Example: To enter a value, select a table cell with the &lt;Enter&gt; key.
 
 ##### Requirement
 
@@ -8184,7 +8184,7 @@ Triggering an action at an operator control can mean the following:
 
 ##### Procedure
 
-- Press <Enter>.
+- Press &lt;Enter&gt;.
 
   Or
 - Touch the operator control on the touch screen once or twice in rapid succession.
@@ -8218,8 +8218,8 @@ You enter these values depending on the existing hardware using the screen keybo
 ##### Entering a value
 
 1. Enter the desired value.
-2. To confirm the value and exit the field, press the <Enter> key.
-3. To discard the value and exit the field, press the <Esc> key.
+2. To confirm the value and exit the field, press the &lt;Enter&gt; key.
+3. To discard the value and exit the field, press the &lt;Esc&gt; key.
 
 ##### Result
 
@@ -8242,9 +8242,9 @@ In Runtime, you can move the movable operator controls of a screen object with t
 - To move the operator control, proceed as follows depending on the operating element:
 
   - Standard for touch screen: Press the cursor keys.
-  - Standard for keyboard devices: Press <SHIFT> and the cursor keys.
-  - Switches: Press <ENTER>
-  - Slider: Press <PgUp> or <PgDn>
+  - Standard for keyboard devices: Press &lt;SHIFT&gt; and the cursor keys.
+  - Switches: Press &lt;ENTER&gt;
+  - Slider: Press &lt;PgUp&gt; or &lt;PgDn&gt;
 
 1. To finish the movement, navigate to another screen object or operator control.
 
@@ -8378,9 +8378,9 @@ With WinCC Certificate Manager you can create the following CA-based application
 
 ##### Procedure
 
-The procedure for providing the certificates as well as the operation of the Certificate Manager interface is largely the same for WinCC Professional and WinCC Unified. Proceed as described in the WinCC Unified user help: Visualize processes (RT Unified) > Runtime and simulation > Certificates in WinCC Unified Runtime.
+The procedure for providing the certificates as well as the operation of the Certificate Manager interface is largely the same for WinCC Professional and WinCC Unified. Proceed as described in the WinCC Unified user help: Visualize processes (RT Unified) &gt; Runtime and simulation &gt; Certificates in WinCC Unified Runtime.
 
-You can find more information about WinCC Unified Certificate Manager under the contribution ID [109813308](https://support.industry.siemens.com/cs/document/109813308/simatic-hmi-wincc-unified-engineering-v18?dti=0&lc=en-WW) in the Siemens Industry Online Support Portal in the help "SIMATIC HMI WinCC Unified Engineering V19" under "Runtime and Simulation > Certificates in WinCC Unified Runtime" under the keyword "Use CA-based certificates".
+You can find more information about WinCC Unified Certificate Manager under the contribution ID [109813308](https://support.industry.siemens.com/cs/document/109813308/simatic-hmi-wincc-unified-engineering-v18?dti=0&lc=en-WW) in the Siemens Industry Online Support Portal in the help "SIMATIC HMI WinCC Unified Engineering V19" under "Runtime and Simulation &gt; Certificates in WinCC Unified Runtime" under the keyword "Use CA-based certificates".
 
 ##### Restrictions and special features
 
@@ -8469,7 +8469,7 @@ This section describes how to install the root certificate in order to display R
 
    For Firefox, for example, follow these steps:
 
-   - In Firefox, click "Display certificates" under "Settings > Privacy & Security" under "Certificates".
+   - In Firefox, click "Display certificates" under "Settings &gt; Privacy &amp; Security" under "Certificates".
    - In the "Certificate Management" window, select the "Certification authorities" tab.
    - Click "Import" and select the root certificate file.
    - ​In the window that opens, select the option "This certificate can identify websites" and confirm your selection.
@@ -8504,7 +8504,7 @@ You can customize the display of the interface to suit your needs. Follow the st
 
 | Menu | Description |
 | --- | --- |
-| "File > Exit" | Closes Certificate Manager. |
+| "File &gt; Exit" | Closes Certificate Manager. |
 | "View" | Configure which Certificate Manager interface elements you see.  You can open or close the following interface elements:  - "Output" area - "Details" area - "CA configuration" tab - "Installed certificates" tab |
 | "Help" | "About Certificate Manager"  Opens a dialog with information about the installed software version. |
 
@@ -8541,7 +8541,7 @@ You configure a change to an event in your program that triggered a hardware int
 
 You configure this system function at a screen object, for example, a button or a button of the toolbar in an alarm view. When you click the button, the necessary context is stored by the system. The corresponding position is automatically displayed in the program code after the switch to the engineering system.
 
-For a description of the system function, refer to ["System functions for Runtime Advanced > ShowBlockInTIAPortal"](System%20functions%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%29.md#showblockintiaportal-rt-advanced)
+For a description of the system function, refer to ["System functions for Runtime Advanced &gt; ShowBlockInTIAPortal"](System%20functions%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%29.md#showblockintiaportal-rt-advanced)
 
 #### Jumping to a protected project
 
@@ -8602,7 +8602,7 @@ The following TIA Portal editors can be opened in read mode:
 - Program information
 - Cross-reference list
 - Cross-reference information
-- Devices & networks
+- Devices &amp; networks
 - HMI editors
 - Safety Administration Editor
 - Search in project
@@ -8617,7 +8617,7 @@ In read mode, the operator cannot perform the following actions in the TIA Porta
 - Edit project
 - Modify tags in the program status
 - Display watch table and force table
-- Open "Online & diagnostics" editor
+- Open "Online &amp; diagnostics" editor
 - Open editors of technology objects
 - Open editors of local modules
 
@@ -8660,7 +8660,7 @@ Use one of the four API functions to open a project in the TIA Portal:
 - OpenTIAPortalIECPLByAssignment is used for the LAD and FBD languages and shows the assignment to an operand and its preceding logic.
 - OpenTIAPortalS7GraphByBlock is used for the GRAPH language and shows a step in a GRAPH sequencer.
 
-For a description of the API functions, refer to ["Interfaces > Runtime API > Functions for displaying the PLC code"](Runtime%20API%20%28RT%20Professional%29.md#functions-for-displaying-the-plc-code-rt-professional)
+For a description of the API functions, refer to ["Interfaces &gt; Runtime API &gt; Functions for displaying the PLC code"](Runtime%20API%20%28RT%20Professional%29.md#functions-for-displaying-the-plc-code-rt-professional)
 
 #### System function
 
@@ -8668,7 +8668,7 @@ You configure a change to an event in your program that triggered a hardware int
 
 You configure this system function at a screen object, for example, a button or a button of the toolbar in an alarm view. When you click the button, the necessary context is stored by the system. The corresponding position is automatically displayed in the program code after the switch to the engineering system.
 
-For a description of the system function, refer to ["System functions for Runtime Professional > ShowBlockInTiaPortalFromAlarm"](System%20functions%20%28RT%20Professional%29.md#showblockintiaportalfromalarm-rt-professional)
+For a description of the system function, refer to ["System functions for Runtime Professional &gt; ShowBlockInTiaPortalFromAlarm"](System%20functions%20%28RT%20Professional%29.md#showblockintiaportalfromalarm-rt-professional)
 
 #### Accessing a protected project
 
@@ -8729,7 +8729,7 @@ The following TIA Portal editors can be opened in read mode:
 - Program information
 - Cross-reference list
 - Cross-reference information
-- Devices & networks
+- Devices &amp; networks
 - HMI editors
 - Safety Administration Editor
 - Search in project
@@ -8744,7 +8744,7 @@ In read mode, the operator cannot perform the following actions in the TIA Porta
 - Edit project
 - Modify tags in the program status
 - Display watch table and force table
-- Open "Online & diagnostics" editor
+- Open "Online &amp; diagnostics" editor
 - Open editors of technology objects
 - Open editors of local modules
 
@@ -8758,7 +8758,7 @@ In WinCC Professional, you have the option of configuring a context-sensitive sw
 
 If you implement the change to the TIA Portal using the API functions in C scripts, configure the use of read mode as a parameter of the API function. Set the read-only access or the read/write protection for the operators using a bit in the bit field dwFlags. Depending on the bit value, the TIA Portal is opened in read mode (TRUE) or not in read mode (FALSE).
 
-For a description of the API functions refer to ["Interfaces > Runtime API > Functions for displaying the PLC code"](Runtime%20API%20%28RT%20Professional%29.md#functions-for-displaying-the-plc-code-rt-professional).
+For a description of the API functions refer to ["Interfaces &gt; Runtime API &gt; Functions for displaying the PLC code"](Runtime%20API%20%28RT%20Professional%29.md#functions-for-displaying-the-plc-code-rt-professional).
 
 #### Configuring read mode via the system function
 
@@ -8767,7 +8767,7 @@ If you configure the jump to the TIA Portal using the system function ShowBlockI
 - TRUE (default): TIA Portal is opened in read mode, the user cannot make any changes to project data.
 - FALSE: TIA Portal is opened with read and right authorization.
 
-For a description of the system function refer to ["System functions for Runtime Professional > ShowBlockInTiaPortalFromAlarm".](System%20functions%20%28RT%20Professional%29.md#showblockintiaportalfromalarm-rt-professional)
+For a description of the system function refer to ["System functions for Runtime Professional &gt; ShowBlockInTiaPortalFromAlarm".](System%20functions%20%28RT%20Professional%29.md#showblockintiaportalfromalarm-rt-professional)
 
 ---
 
@@ -8930,7 +8930,7 @@ The HMI device is delivered with preconfigured firmware and hardware.
 
 #### Introduction
 
-The "ProSave" service tool is installed by default when WinCC is installed. The ProSave functions are accessed in WinCC with the menu "Online > HMI Device maintenance".
+The "ProSave" service tool is installed by default when WinCC is installed. The ProSave functions are accessed in WinCC with the menu "Online &gt; HMI Device maintenance".
 
 #### Functional scope
 
@@ -9049,7 +9049,7 @@ As a general rule, you can backup the data to any storage medium. If the HMI dev
 
 Proceed as follows to backup the data of the HMI device:
 
-1. Select the "Backup" command from the "Online > HMI Device maintenance" menu.
+1. Select the "Backup" command from the "Online &gt; HMI Device maintenance" menu.
 
    The "Create backup" dialog box opens.
 2. Select the type of the PG/PC interface and the target device, and click "Create".
@@ -9065,7 +9065,7 @@ This starts the data backup. The backup operation takes some time, depending on 
 
 Proceed as follows to restore the data of the HMI device:
 
-1. Select the "Restore" command from the "Online > HMI Device maintenance" menu.
+1. Select the "Restore" command from the "Online &gt; HMI Device maintenance" menu.
 
    The "Restore backup" dialog box opens.
 2. Select the type of the PG/PC interface and the target device, and click "Load".
@@ -9135,7 +9135,7 @@ If the operating system on the HMI device is no longer operational, update the o
 > - the available IP address
 > - the programming device/PC interface of the configuration PC set to Ethernet TCP/IP
 >
-> The programming device/PC interface is configured using the control panel of the configuration PC. Select" "S7ONLINE (STEP7) -> TCP/IP" in the "Access point of the application" field.
+> The programming device/PC interface is configured using the control panel of the configuration PC. Select" "S7ONLINE (STEP7) -&gt; TCP/IP" in the "Access point of the application" field.
 
 > **Note**
 >
@@ -9143,7 +9143,7 @@ If the operating system on the HMI device is no longer operational, update the o
 >
 > To reset the Comfort Panels to factory settings, please use ProSave.
 >
-> With the exception of Comfort Panels, you can reset all HMI devices to factory settings with the menu item "Online > HMI Device maintenance > Reset factory settings".
+> With the exception of Comfort Panels, you can reset all HMI devices to factory settings with the menu item "Online &gt; HMI Device maintenance &gt; Reset factory settings".
 
 ---
 
@@ -9173,7 +9173,7 @@ If possible, you should use the interface with the highest bandwidth for this co
 
 Proceed as follows to update the operating system:
 
-1. Select the "Update operating system" command from the "Online > HMI Device maintenance" menu.
+1. Select the "Update operating system" command from the "Online &gt; HMI Device maintenance" menu.
 
    The "Update operating system" dialog box opens.
 2. Select the type of the PG/PC interface and the target device, and click "Update".
@@ -9190,7 +9190,7 @@ To reset the HMI device to factory settings, proceed as follows:
 
 1. Switch off power to the HMI device.
 2. Connect the HMI device to the Engineering Station.
-3. Select the "Update operating system" command from the menu under "Online > HMI Device maintenance" on the configuration PC in WinCC.
+3. Select the "Update operating system" command from the menu under "Online &gt; HMI Device maintenance" on the configuration PC in WinCC.
 
    The "Update operating system" dialog box opens.
 4. Select the type of the PG/PC interface and the target device, and click "Update".
@@ -9231,7 +9231,7 @@ The operating system of the HMI device is operational and up-to-date.
 
 You can update the operating system using a data carrier for Comfort Panels and Mobile Panels.
 
-You can find the HMI image files, for example, in the installation directory of WinCC under: "\Siemens\Automation\Portal V1x\Data\Hmi\Transfer\<HMI device image version>\Images".
+You can find the HMI image files, for example, in the installation directory of WinCC under: "\Siemens\Automation\Portal V1x\Data\Hmi\Transfer\&lt;HMI device image version&gt;\Images".
 
 | Symbol | Meaning |
 | --- | --- |
@@ -9246,7 +9246,7 @@ You can find the HMI image files, for example, in the installation directory of 
 #### Procedure
 
 1. Open the "Control Panel" on your HMI device.
-2. Open the "Service & Commissioning" dialog using the "Service & Commissioning" icon.
+2. Open the "Service &amp; Commissioning" dialog using the "Service &amp; Commissioning" icon.
 3. Change to the "OS Update" tab.
 4. Press "Next".
 
@@ -9321,7 +9321,7 @@ To transfer license keys, follow these steps:
 1. Open the "Automation License Manager". Go to the Windows Start menu and start "Automation License Manager" on a PC on which WinCC is not installed.
 
    The "Automation License Manager" starts.
-2. Select the "Connect HMI device" command from the "Edit > Connect target system" menu.
+2. Select the "Connect HMI device" command from the "Edit &gt; Connect target system" menu.
 
    The "Connect target system" dialog opens.
 3. Select the HMI device type in the "Device type" area.
@@ -9346,7 +9346,7 @@ You can also remove License Keys from the HMI device using drag-and-drop.
 
 #### Alternative procedure
 
-You can also start the "Automation License Manager" from WinCC on a PC with a WinCC installation: Select the "Authorize/License" command in the "Online > HMI Device maintenance" menu.
+You can also start the "Automation License Manager" from WinCC on a PC with a WinCC installation: Select the "Authorize/License" command in the "Online &gt; HMI Device maintenance" menu.
 
 #### Result
 
@@ -9382,7 +9382,7 @@ Which options you can install depends on the HMI device type.
 
 To install an option on the HMI device, proceed as follows:
 
-1. Select the "Options" command from the "Online > HMI Device maintenance" menu.
+1. Select the "Options" command from the "Online &gt; HMI Device maintenance" menu.
 
    The "Load options" dialog opens.
 2. Select the type of the PG/PC interface and the target device, and click "Load".
@@ -9391,8 +9391,8 @@ To install an option on the HMI device, proceed as follows:
 
    All available options and the previously installed options are displayed.
 3. To display the installed options on the HMI device, click "Device status".
-4. To install an option on the HMI device, select the option under "Available options" and click ">>".
-5. To uninstall an option from the HMI device, select the option under "Available options" and click "<<".
+4. To install an option on the HMI device, select the option under "Available options" and click "&gt;&gt;".
+5. To uninstall an option from the HMI device, select the option under "Available options" and click "&lt;&lt;".
 
 #### Result
 
@@ -9413,13 +9413,13 @@ When using Asian languages, only the Asian characters that were used in configur
 #### Procedure
 
 1. Select the HMI device in the project tree.
-2. Select the "Options" command from the "Online > HMI device maintenance" menu.
+2. Select the "Options" command from the "Online &gt; HMI device maintenance" menu.
 
    The "Load options" dialog opens.
 3. Select the type of the PG/PC interface and the target device, and click "Load".
 
    The "SIMATIC ProSave" dialog box opens.
-4. Select the respective font under "Available options" and click ">>".
+4. Select the respective font under "Available options" and click "&gt;&gt;".
 
    The font is loaded to the HMI device.
 

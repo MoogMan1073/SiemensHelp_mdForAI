@@ -55,7 +55,7 @@ Multi-level security functionality is available for SINAMICS drives in the TIA P
 >
 > SIMATIC controllers can also be protected in the project.
 >
-> For details on the required security settings, see the [Protection & Security](Functional%20description%20of%20S7-1200%20CPUs%20%28S7-1200%29.md#using-the-security-settings-wizard-s7-1200) section.
+> For details on the required security settings, see the [Protection &amp; Security](Functional%20description%20of%20S7-1200%20CPUs%20%28S7-1200%29.md#using-the-security-settings-wizard-s7-1200) section.
 
 > **Note**
 >
@@ -103,10 +103,10 @@ The security settings for user access are preset centrally in the TIA Portal set
 
 #### Procedure
 
-1. Select the "Options > Settings" menu in Startdrive.
+1. Select the "Options &gt; Settings" menu in Startdrive.
 
    The "Settings" screen is displayed in the work area.
-2. In the secondary navigation, select menu "Security > Access protection".
+2. In the secondary navigation, select menu "Security &gt; Access protection".
 3. Select the standard procedure for user authentication (see Table "Default settings for access protection").
 4. Optional: Select the option "Activate automatic project lock".
 5. Assign a timeout time for local project users.
@@ -125,8 +125,8 @@ In case of inactivity, a timeout can be set for the currently displayed project.
 
 If you want to activate or configure the timeout, proceed as follows:
 
-1. Select the "Options > Settings" menu in Startdrive.
-2. In the secondary navigation of the settings, select the "Security > Access protection" menu.
+1. Select the "Options &gt; Settings" menu in Startdrive.
+2. In the secondary navigation of the settings, select the "Security &gt; Access protection" menu.
 3. If you want to define a timeout, enable the "Activate automatic project lock for all user types" option.
 4. In the "Session timeout for local project users (minutes)" field, enter the time in minutes after which the project is automatically locked.
 
@@ -155,10 +155,10 @@ You configure the security settings of the drive using the wizard.
 
 #### Procedure
 
-1. Select the "Options > Settings" menu in Startdrive.
+1. Select the "Options &gt; Settings" menu in Startdrive.
 
    The "Settings" screen is displayed in the work area.
-2. In the secondary navigation, select menu "Security > Default settings".
+2. In the secondary navigation, select menu "Security &gt; Default settings".
 3. Activate or deactivate option "Do not display the wizard for the security settings for the drive after adding a drive".
 
 #### Result
@@ -177,7 +177,7 @@ This section contains information on the following topics:
 
 - [Overview](#overview-1)
 - [Manually starting the Security Wizard](#manually-starting-the-security-wizard)
-- [User Management & Access Control (features)](#user-management-access-control-features)
+- [User Management &amp; Access Control (features)](#user-management-access-control-features)
 - [Activating ports and protocols (features)](#activating-ports-and-protocols-features)
 - [Interfaces and communication relations](#interfaces-and-communication-relations)
 - [Encryption of the drive data](#encryption-of-the-drive-data)
@@ -186,7 +186,7 @@ This section contains information on the following topics:
 
 Separate security settings can be made in the inspector window for each drive in the project.
 
-In the "Settings" tab, you find the following security settings under the navigation item "Protection & Security":
+In the "Settings" tab, you find the following security settings under the navigation item "Protection &amp; Security":
 
 - Wizard for security settings
 - User Management and Access Control
@@ -211,7 +211,7 @@ The Security Wizard opens automatically when you create a drive in the project. 
 
 #### Procedure
 
-1. In the Inspector window of a drive, select the "Protection & Security > Wizard for Security Settings" menu.
+1. In the Inspector window of a drive, select the "Protection &amp; Security &gt; Wizard for Security Settings" menu.
 2. Click the "Start Security Wizard" button on the right.
 
    The "Security settings..." dialog opens. The "Select security configuration" step is displayed.
@@ -226,7 +226,7 @@ Details on the settings are provided on Page [Security Wizard (from SINAMICS fir
 
 #### Overview
 
-You can view the following UMAC settings for the drive in the "User Management & Access Control" view:
+You can view the following UMAC settings for the drive in the "User Management &amp; Access Control" view:
 
 - Activate UMAC for the drive
 - Number of activated users with the right "Manage users and roles"
@@ -252,7 +252,7 @@ All the settings shown are made in the Security Wizard.
 
 You can also activate the "Activate UMAC for the drive" option in the current view.
 
-1. In the Inspector window, select the "Protection & Security > User Management & Access Control" menu.
+1. In the Inspector window, select the "Protection &amp; Security &gt; User Management &amp; Access Control" menu.
 2. Then select or clear the "Activate UMAC for the drive" option.
 3. Then load the project data with the UMAC settings into the drive.
 4. Save the project data in the drive retentively.
@@ -306,14 +306,14 @@ In the "Ports and protocols" section, you activate the required protocols for th
 
 #### Requirement
 
-- For the settings under "Ports & Protocols", you need a user account with the following function rights:
+- For the settings under "Ports &amp; Protocols", you need a user account with the following function rights:
 
   - Open and edit the project
   - Edit hardware configuration
 
 #### Procedure
 
-1. In the Inspector window of a drive, select the "Protection & Security > Ports and protocols" menu.
+1. In the Inspector window of a drive, select the "Protection &amp; Security &gt; Ports and protocols" menu.
 2. Activate all protocols required to access the drive.
 
    For security reasons, deactivate all protocols that you currently do not require to access the drive.
@@ -339,7 +339,7 @@ This section contains information on the following topics:
 
 - [Fundamentals](#fundamentals)
 - [Configuring encryption (features)](#configuring-encryption-features)
-- [Configuring the encryption (Online & Diagnostics)](#configuring-the-encryption-online-diagnostics)
+- [Configuring the encryption (Online &amp; Diagnostics)](#configuring-the-encryption-online-diagnostics)
 
 #### Fundamentals
 
@@ -396,7 +396,7 @@ You can make the settings for this offline in the drive inspector window.
 ##### Enabling encryption offline
 
 1. Select the required drive in the project tree.
-2. In the inspector window, select the menu "Protection & Security > Encryption of the drive data".
+2. In the inspector window, select the menu "Protection &amp; Security &gt; Encryption of the drive data".
 3. Activate the "Encrypt sensitive drive data" option.
 
    The "Specify password" button is activated.
@@ -410,7 +410,7 @@ You can make the settings for this offline in the drive inspector window.
 ##### Changing the password offline
 
 1. Select the required drive in the project tree.
-2. In the inspector window, select the menu "Protection & Security > Encryption of the drive data".
+2. In the inspector window, select the menu "Protection &amp; Security &gt; Encryption of the drive data".
 3. Click on "Change password" to change an existing password.
 
    A change dialog opens.
@@ -422,7 +422,7 @@ You can make the settings for this offline in the drive inspector window.
 ##### Canceling encryption completely
 
 1. Select the required drive in the project tree.
-2. In the inspector window, select the menu "Protection & Security > Encryption of the drive data".
+2. In the inspector window, select the menu "Protection &amp; Security &gt; Encryption of the drive data".
 3. Deactivate the "Encrypt sensitive drive data" option.
 
    A password dialog is displayed. A password must be entered in order that protection can be deactivated.
@@ -442,13 +442,13 @@ You have configured the encryption of sensitive drive data in the Startdrive pro
 
 [Download UMAC to device (from SINAMICS firmware V6.1)](#download-umac-to-device-from-sinamics-firmware-v61)
   
-[Configuring the encryption (Online & Diagnostics)](#configuring-the-encryption-online-diagnostics)
+[Configuring the encryption (Online &amp; Diagnostics)](#configuring-the-encryption-online-diagnostics)
 
 #### Configuring the encryption (Online & Diagnostics)
 
 ##### Overview
 
-If there is an online connection to the drive, you can configure encryption for sensitive data directly in the drive. You then make the settings via Online & Diagnostics.
+If there is an online connection to the drive, you can configure encryption for sensitive data directly in the drive. You then make the settings via Online &amp; Diagnostics.
 
 UMAC user names and passwords are sensitive data.
 
@@ -463,8 +463,8 @@ UMAC user names and passwords are sensitive data.
 ##### Activating protection online
 
 1. Select the required drive in the project tree.
-2. In the drive project tree, select menu "Online & diagnostics".
-3. Call up the "Functions > Set password for encrypting drive data" menu in the secondary navigation.
+2. In the drive project tree, select menu "Online &amp; diagnostics".
+3. Call up the "Functions &gt; Set password for encrypting drive data" menu in the secondary navigation.
 4. Activate the "Encrypt sensitive drive data" option.
 
    The "Specify password" button is activated.
@@ -478,8 +478,8 @@ UMAC user names and passwords are sensitive data.
 ##### Changing the password online
 
 1. Select the required drive in the project tree.
-2. In the drive project tree, select menu "Online & diagnostics".
-3. Call up the "Functions > Set password for encrypting drive data" menu in the secondary navigation.
+2. In the drive project tree, select menu "Online &amp; diagnostics".
+3. Call up the "Functions &gt; Set password for encrypting drive data" menu in the secondary navigation.
 4. Click on "Change password" to change an existing password.
 
    A change dialog opens.
@@ -492,8 +492,8 @@ UMAC user names and passwords are sensitive data.
 ##### Completely removing protection
 
 1. Select the required drive in the project tree.
-2. In the drive project tree, select menu "Online & diagnostics".
-3. Call up the "Functions > Set password for encrypting drive data" menu in the secondary navigation.
+2. In the drive project tree, select menu "Online &amp; diagnostics".
+3. Call up the "Functions &gt; Set password for encrypting drive data" menu in the secondary navigation.
 4. Deactivate the "Encrypt sensitive drive data" option.
 
    A password dialog is displayed. A password must be entered in order that protection can be deactivated.
@@ -518,7 +518,7 @@ This section contains information on the following topics:
 - [Fundamentals](#fundamentals-1)
 - [Central user administration with UMC](#central-user-administration-with-umc)
 - [Activating project protection](#activating-project-protection)
-- [Project protection & "Anonymous" user](#project-protection-anonymous-user)
+- [Project protection &amp; "Anonymous" user](#project-protection-anonymous-user)
 - [Setting password policies](#setting-password-policies)
 - [User administration](#user-administration)
 - [Access control](#access-control)
@@ -625,7 +625,7 @@ Details on this are provided on Page "[Download UMAC to device](#download-umac-t
 
 **See also**
 
-[User Management & Access Control (features)](#user-management-access-control-features)
+[User Management &amp; Access Control (features)](#user-management-access-control-features)
 
 ### Project protection & "Anonymous" user
 
@@ -642,7 +642,7 @@ When activating project protection, the "Anonymous" user account is automaticall
 
 **See also**
 
-[User Management & Access Control (features)](#user-management-access-control-features)
+[User Management &amp; Access Control (features)](#user-management-access-control-features)
 
 ### Setting password policies
 
@@ -748,7 +748,7 @@ To manage local users in your project, you can perform the following actions:
 Proceed as follows to create a new local user:
 
 1. Open the "Users" tab.
-2. Click "<Add new user>".
+2. Click "&lt;Add new user&gt;".
 
    A submenu is opened in which you can select the user type.
 3. Click "Add new local user".
@@ -804,7 +804,7 @@ Proceed as follows to delete a local user:
 1. Open the "Users" tab.
 2. Select the user you want to delete.
 3. Ensure that "Password" is set as authentication procedure. Appropriately correct this setting if required.
-4. In the shortcut menu select the "Delete" command or use the <Del> key.
+4. In the shortcut menu select the "Delete" command or use the &lt;Del&gt; key.
 
 #### Assign roles to the user accounts
 
@@ -866,7 +866,7 @@ In principle, there are several options for changing the password. However, not 
   Project users and global users that do not use the single sign-on procedure can change their password via the toolbar.
 - When working in a protected or unprotected project, via the "Users and roles" menu:
 
-  Project users can change their password via the menu "Security settings > Users and roles". For protected projects, the two function rights "Open and edit the project" and "Manage users and roles" are required.
+  Project users can change their password via the menu "Security settings &gt; Users and roles". For protected projects, the two function rights "Open and edit the project" and "Manage users and roles" are required.
 
   A description for changing the password via the "Users and Roles" editor is provided in Chapter "[Configuring user account](#configuring-user-accounts)" in Section "Changing user account".
 
@@ -1026,7 +1026,7 @@ To delete a role, follow these steps:
 2. Select the role that you want to delete.
 
    System-defined roles "Engineering-Administrator" and "Engineering-Standard" cannot be deleted.
-3. Select "Delete" from the shortcut menu or press key <Del>.
+3. Select "Delete" from the shortcut menu or press key &lt;Del&gt;.
 
 #### Engineering rights
 
@@ -1097,7 +1097,7 @@ Without the "Open project read-only" right or the "Open and edit project" right,
 | Edit drive applications | Drives | Permits a user to edit the configuration of drives with Startdrive. This includes all parameterization, diagnostics, commissioning and DCC settings in the function view and parameter view.   Excluded from this are:   - Generally the safety configuration - Device configuration settings in the inspector window |
 | Edit Safety Integrated drive application | Drives | Permits a user to edit the safety configuration of drives using Startdrive. This includes the safety configuration in the parameter lists. This also includes all settings for PROFIsafe telegrams (e.g. in the quick startup).  Using the Safety Integrated acceptance test also requires this function right. |
 | Control drive in manual mode | Drives | Permits a user to access the control panel of a selected drive in the project. |
-| Perform drive firmware update | Drives | Permits a user to perform a firmware update for the drive via the "Online & diagnostics" function view. |
+| Perform drive firmware update | Drives | Permits a user to perform a firmware update for the drive via the "Online &amp; diagnostics" function view. |
 | Perform drive backup | Drives | Permits a user to create a backup of the drive data (zip file) and save it in a file directory on the operating unit. |
 | Show the configuration of security modules | Security | Permits a user to display the configuration of security modules. However, changes cannot be made to the configuration. |
 | Edit the configuration of security modules | Security | Allows a user to view and edit the configuration of security modules. |
@@ -1179,7 +1179,7 @@ In general, the following rules apply in Startdrive:
 | Device view, Network view, Topology view | - Open and edit the project - Edit hardware configuration | ‑ |
 | All settings under the "Properties" tab of the inspector window  (Exception: Safety telegram configuration) | - Open and edit the project - Edit hardware configuration | ‑ |
 | Use control panel | - Open and edit the project - Control drive in manual mode | - Control drive in manual mode |
-| Rotate & optimize | - Open and edit the project - Control drive in manual mode - Edit drive applications | - Edit device configuration or drive applications - Control drive in manual mode |
+| Rotate &amp; optimize | - Open and edit the project - Control drive in manual mode - Edit drive applications | - Edit device configuration or drive applications - Control drive in manual mode |
 | Execute the measuring functions | - Open and edit the project - Control drive in manual mode - Edit drive applications | - Edit device configuration or drive applications - Control drive in manual mode - Perform drive diagnostics |
 | Evaluate traces | - Open and edit the project - Create and edit traces | - Perform drive diagnostics |
 | Perform safety acceptance test | - Open and edit the project - Control drive in manual mode - Edit Safety Integrated drive application | - Control drive in manual mode - Perform drive diagnostics - Edit Safety Integrated application |
@@ -1194,12 +1194,12 @@ In general, the following rules apply in Startdrive:
 | Restore Safety Integrated factory settings | - Open and edit the project - Edit Safety Integrated drive application | - Edit Safety Integrated application |
 | Retentively save | - Open and edit the project - Edit drive applications | - Edit device configuration or drive applications |
 | Restart the drive | - Open and edit the project - Edit drive applications | - Edit device configuration or drive applications |
-| Perform firmware update in "Online & diagnostics" | - Open and edit the project - Perform drive firmware update | - Perform firmware update |
+| Perform firmware update in "Online &amp; diagnostics" | - Open and edit the project - Perform drive firmware update | - Perform firmware update |
 | Save drive data to backup file | - Open and edit the project - Perform drive backup | - Create backup or load drive data to Startdrive |
 | Restore drive data from backup file | - Open and edit the project - Download to drives | - Edit device configuration or drive applications |
 | Online access by searching for accessible participants  (working with the life list) | ‑ | - Edit device configuration or drive applications - Perform firmware update  The required function rights depend on which actions are performed. |
 | "Start Security Wizard" in the inspector window | - Open and edit the project - Edit hardware configuration - Manage users and roles | ‑ |
-| All settings in the inspector window under "Protection & Security" | - Open and edit the project - Edit hardware configuration | ‑ |
+| All settings in the inspector window under "Protection &amp; Security" | - Open and edit the project - Edit hardware configuration | ‑ |
 | Use Openness | - Modify project via Openness API | ‑ |
 
 ### User login
@@ -1480,7 +1480,7 @@ Details on this are provided on Page "[Timeout/Configuring a project lock](#conf
 Proceed as follows to remove the project lock for local project users:
 
 1. In the "Project locked" dialog, enter the correct password for the logged-on user.
-2. Confirm the entries with <Enter> or click "Unlock".
+2. Confirm the entries with &lt;Enter&gt; or click "Unlock".
 
    Alternatively, you can also close the project if you do not want to log on again. Changes that have not been saved are discarded.
 
@@ -1597,7 +1597,7 @@ Each of these settings is explained in detail in the Security Wizard. At the end
 
 #### Starting/exiting
 
-You can [manually start](#editing-security-settings) the Security Wizard again at any time via the "Start Security Wizard" button in the "Protection & Security" area of the device configuration.
+You can [manually start](#editing-security-settings) the Security Wizard again at any time via the "Start Security Wizard" button in the "Protection &amp; Security" area of the device configuration.
 
 | Variant | Explanation |
 | --- | --- |
@@ -1911,7 +1911,7 @@ In the "Summary" area, the previous settings are summarized once again. You are 
 
 ##### Result
 
-The drive is created in the project with the selected security settings. You can change these security settings at a later point in time via the "Protection & Security" menu in the inspector window.
+The drive is created in the project with the selected security settings. You can change these security settings at a later point in time via the "Protection &amp; Security" menu in the inspector window.
 
 In order that the security settings are valid in the drive, the project data must be subsequently downloaded to the drive.
 
@@ -1967,7 +1967,7 @@ In the "Summary" area, the resulting settings are summarized once again.
 
 ##### Result
 
-The drive is created in the project with the selected security settings. You can change these security settings at a later point in time via the "Protection & Security" menu in the Inspector window, for example, in order to correct a security setting.
+The drive is created in the project with the selected security settings. You can change these security settings at a later point in time via the "Protection &amp; Security" menu in the Inspector window, for example, in order to correct a security setting.
 
 In order that the security settings are active in the drive, the UMAC settings must be subsequently downloaded to the drive.
 
@@ -1998,12 +1998,12 @@ You can adjust the existing security settings of a SINAMICS drive at any time vi
 
 > **Note**
 >
-> The following description refers to UMAC changes via the Security Wizard. You can also make further changes in the inspector window via the "Protection & Security" menu.
+> The following description refers to UMAC changes via the Security Wizard. You can also make further changes in the inspector window via the "Protection &amp; Security" menu.
 
 You want to change the existing security settings for the drive. Proceed as follows:
 
 1. Select the required drive in the project tree.
-2. In the inspector window, select menu "Protection & Security > for Security Settings Wizard".
+2. In the inspector window, select menu "Protection &amp; Security &gt; for Security Settings Wizard".
 3. Click the "Start Security Wizard" button on the right.
 
    Dialog "Security settings..." opens and setting area "Select security configuration" is displayed.
@@ -2039,7 +2039,7 @@ Connections between operating units and drives must be secure. By exchanging dig
 
 When the SINAMICS drive is accessed for the first time, the required certificates are generated. Examples:
 
-- When calling the "Online & diagnostics" screen
+- When calling the "Online &amp; diagnostics" screen
 - When calling the "Download to device" or "Extended download to device" dialogs
 - When accessing the drive online via the search for "Accessible devices"
 
@@ -2077,7 +2077,7 @@ In digital certificates, attributes provide information about the issuer of the 
 | --- | --- | --- |
 | O | Organization | SIEMENS |
 | C | Country/region | DE |
-| CN | Common name | SINAMICS Embedded Root CA  SINAMICS Embedded Issuing CA, serial number=<SN> |
+| CN | Common name | SINAMICS Embedded Root CA  SINAMICS Embedded Issuing CA, serial number=&lt;SN&gt; |
 | OU | Organizational unit | Copyright (C) SIEMENS AG 2022 All rights reserved |
 
 > **Note**

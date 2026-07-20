@@ -150,7 +150,7 @@ Process values and operator inputs are exchanged between the controller and the 
 
 You configure a screen navigation to enable the operator to call a screen on the HMI device in Runtime.
 
-- You use the "Menus & Toolbars" editor to configure the navigation between the screens.
+- You use the "Menus &amp; Toolbars" editor to configure the navigation between the screens.
 - The "Screen" editor is used to configure buttons for calling other screens.
 
 ---
@@ -240,7 +240,7 @@ The "Toolbox" task card contains objects in different panes:
 - User controls (optional)
 - Graphics
 
-You paste objects from the palettes into your screens by drag&drop or a double click. The objects available for selection are determined by the features of the HMI device you are configuring. The following icons are used to change the display mode:
+You paste objects from the palettes into your screens by drag&amp;drop or a double click. The objects available for selection are determined by the features of the HMI device you are configuring. The following icons are used to change the display mode:
 
 | Icon | Meaning |
 | --- | --- |
@@ -249,7 +249,7 @@ You paste objects from the palettes into your screens by drag&drop or a double c
 
 ##### Animations
 
-The "Animations" task card contains the possible dynamizations of a screen object in the palettes. You paste the animations to a screen object by drag&drop or a double click from the "Movements", "Display" and "Tag Binding" palettes.
+The "Animations" task card contains the possible dynamizations of a screen object in the palettes. You paste the animations to a screen object by drag&amp;drop or a double click from the "Movements", "Display" and "Tag Binding" palettes.
 
 ##### Layout
 
@@ -286,7 +286,7 @@ The "Libraries" task card show the following libraries in separate panes:
 
 To view a small screen section in closer detail, use the zoom tool to magnify the screen in the working area. The maximum zoom amounts to 800%.
 
-You can zoom with the toolbar in the work area or with the "Layout > Zoom" task card.
+You can zoom with the toolbar in the work area or with the "Layout &gt; Zoom" task card.
 
 There are different ways to increase the screen, for example, with the zoom factor or by adapting the work area to the height of the screen.
 
@@ -433,7 +433,7 @@ Create screens to display processes in your system.
 
 ##### Procedure
 
-1. Double-click "Screens > Add New Screen" in the project navigation.
+1. Double-click "Screens &gt; Add New Screen" in the project navigation.
 
    The screen is generated in the project and appears in your view. The screen properties are shown in the Inspector window.
 2. Enter a meaningful name for the screen.
@@ -475,12 +475,12 @@ Create screens to display processes in your system.
 
 To create a new screen:
 
-1. Double-click "Screens > Add New Screen" in the project tree.
+1. Double-click "Screens &gt; Add New Screen" in the project tree.
 
    The screen is generated in the project and appears in your view. The screen properties are shown in the Inspector window.
 2. Enter a meaningful name for the screen, such as "Overview_Diagram."
 
-   Do not use the special characters ?, . , ", /, \, *, <, >
+   Do not use the special characters ?, . , ", /, \, *, &lt;, &gt;
 
    This name is language-neutral.
 3. If required, enter a descriptive display name. The name is language-specific and can be translated for the required languages. You can output the display name in a text field with the SetPropertyByProperty system function, for example.
@@ -532,7 +532,7 @@ You can move screens within a project to other groups, or copy, rename, and dele
 
    A copy of the screen is inserted. A consecutive number is appended to the name of the original in the copy.
 
-Alternatively, press <Ctrl> while you drag the screen to the required position.
+Alternatively, press &lt;Ctrl&gt; while you drag the screen to the required position.
 
 > **Note**
 >
@@ -543,9 +543,9 @@ Alternatively, press <Ctrl> while you drag the screen to the required position.
 1. Select the screen in the project tree.
 2. Select "Rename" from the shortcut menu.
 3. Type in a new name.
-4. Press <Enter>.
+4. Press &lt;Enter&gt;.
 
-As an option, use the <F2> function key to rename the screen.
+As an option, use the &lt;F2&gt; function key to rename the screen.
 
 ##### Delete screen
 
@@ -572,7 +572,7 @@ The project contains the screen you want to use as the start screen.
 
 ##### Procedure
 
-1. Double-click "Runtime settings > General" in the project tree.
+1. Double-click "Runtime settings &gt; General" in the project tree.
 
    ![Procedure](images/87575376651_DV_resource.Stream@PNG-en-US.png)
 
@@ -603,7 +603,7 @@ The project contains the screen you want to use as the start screen.
 
 ##### Procedure
 
-1. Double-click "Runtime settings > General" in the project tree.
+1. Double-click "Runtime settings &gt; General" in the project tree.
 
    ![Procedure](images/60721519371_DV_resource.Stream@PNG-en-US.png)
 
@@ -627,7 +627,7 @@ The screen resolution can be configured for the following HMI devices:
 ##### Configuring a fixed screen resolution
 
 1. Open the Runtime settings of the HMI device.
-2. Select the screen resolution under "General > Screen > Screen resolution".
+2. Select the screen resolution under "General &gt; Screen &gt; Screen resolution".
 
    ![Configuring a fixed screen resolution](images/74946779787_DV_resource.Stream@PNG-en-US.png)
 
@@ -707,7 +707,7 @@ For HMI devices with function keys you assign the function keys globally in the 
 Proceed as follows to assign function keys locally in screens or templates:
 
 1. Click the function key in your screens or templates.
-2. Deactivate "Properties > Properties > General > Use Global Assignment" in the inspection window.
+2. Deactivate "Properties &gt; Properties &gt; General &gt; Use Global Assignment" in the inspection window.
 
 ##### Indicator and control objects for alarms
 
@@ -763,13 +763,13 @@ In a template, you can centrally modify objects and function keys. Changes to an
 
 ##### Procedure
 
-1. Select "Screen management > Templates" in the project tree and then double-click "Add new template".
+1. Select "Screen management &gt; Templates" in the project tree and then double-click "Add new template".
 
    The template is created in the project, and appears in your view.
 
    The properties of the template are displayed in the Inspector window.
-2. Define the name of the template under "Properties > Properties > General" in the Inspector window.
-3. Specify the layers in the engineering system that are displayed under "Properties >Properties >Layers" in the Inspector window.
+2. Define the name of the template under "Properties &gt; Properties &gt; General" in the Inspector window.
+3. Specify the layers in the engineering system that are displayed under "Properties &gt;Properties &gt;Layers" in the Inspector window.
 4. Add the necessary objects from the "Tools" task card.
 5. Configure the function keys.
 
@@ -789,7 +789,7 @@ The template is created in your project.
 
 In the permanent area, you configure objects which are visible in all screens. In contrast to the template, the permanent area occupies an area of the screen for itself alone.
 
-You can configure permanent areas in a template or in a screen. In the project tree, the permanent area is available under "Screen management > Permanent area".
+You can configure permanent areas in a template or in a screen. In the project tree, the permanent area is available under "Screen management &gt; Permanent area".
 
 ##### Configuring permanent areas
 
@@ -823,7 +823,7 @@ You can move, copy, rename, and delete templates within a project in the Project
 
 ##### Moving a template into a group
 
-1. Select the templates in the project navigation "Screen management > Templates".
+1. Select the templates in the project navigation "Screen management &gt; Templates".
 2. Select "Add group" in the shortcut menu.
 
    A folder called "Group_x" is inserted.
@@ -841,7 +841,7 @@ You can move, copy, rename, and delete templates within a project in the Project
 
    A unique name is assigned automatically to the copy.
 
-Alternatively, you can hold down the <Ctrl> key, and drag the template into position.
+Alternatively, you can hold down the &lt;Ctrl&gt; key, and drag the template into position.
 
 ##### Deleting a template
 
@@ -853,7 +853,7 @@ Alternatively, you can hold down the <Ctrl> key, and drag the template into posi
 ##### Assigning a template to a screen
 
 1. In the project navigation, select the screen to which you want to assign the template.
-2. In the Inspector window, select "Properties > Properties > General".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General".
 3. Select the desired template under "Template."
 
    The selected template and all the objects contained in it are assigned to the screen.
@@ -881,7 +881,7 @@ A screen has been created.
 Proceed as follows to use a template in a screen:
 
 1. Double click a screen in the project tree. The screen opens in the work area.
-2. Open "Properties > Properties > General" in the inspector window.
+2. Open "Properties &gt; Properties &gt; General" in the inspector window.
 3. Select a template that is to be applied to the screen under "Template".
 
 ##### Show template in screen
@@ -890,7 +890,7 @@ When you edit a screen, you can show an existing template in the screen.
 
 Proceed as follows to show a template in the screen:
 
-1. Activate "Extras > Settings > Visualization > Show template in screens" in the menu.
+1. Activate "Extras &gt; Settings &gt; Visualization &gt; Show template in screens" in the menu.
 
 ##### Result
 
@@ -961,7 +961,7 @@ You configure the following objects in the pop-up screen:
 
 ##### Introduction
 
-A new pop-up screen is created in Project tree > Screen management. The size of a pop-up screen is defined in the properties.
+A new pop-up screen is created in Project tree &gt; Screen management. The size of a pop-up screen is defined in the properties.
 
 ##### Requirements
 
@@ -970,15 +970,15 @@ A new pop-up screen is created in Project tree > Screen management. The size of 
 
 ##### Creating a new pop-up screen
 
-1. Double-click "Screen management > Pop-up screens > Add new pop-up screen" in the project tree.
+1. Double-click "Screen management &gt; Pop-up screens &gt; Add new pop-up screen" in the project tree.
 
    The pop-up screen is generated in the project and is displayed in the work area.
 
    The pop-up screen properties are displayed in the Inspector window.
-2. Define the name of the pop-up screen under "Properties > Properties > General" in the Inspector window.
-3. Specify the layers in the engineering system that are displayed under "Properties >Properties >Layers" in the Inspector window.
-4. Define the height and width of the pop-up screen under "Properties > Properties > Layout" in the Inspector window.
-5. Define the color for the scroll arrows and the sizing handle in the scroll bar in "Properties > Properties > Scroll bar" in the Inspector window.
+2. Define the name of the pop-up screen under "Properties &gt; Properties &gt; General" in the Inspector window.
+3. Specify the layers in the engineering system that are displayed under "Properties &gt;Properties &gt;Layers" in the Inspector window.
+4. Define the height and width of the pop-up screen under "Properties &gt; Properties &gt; Layout" in the Inspector window.
+5. Define the color for the scroll arrows and the sizing handle in the scroll bar in "Properties &gt; Properties &gt; Scroll bar" in the Inspector window.
 6. Add the necessary objects from the "Tools" task card.
 7. Configure the function keys.
 
@@ -1002,7 +1002,7 @@ You can move, copy, rename, and delete pop-up screens within a project in the Pr
 
 ##### Moving pop-up screens in a group
 
-1. Select "Screen management > Pop-up screens" in the project tree.
+1. Select "Screen management &gt; Pop-up screens" in the project tree.
 2. Select "Add group" in the shortcut menu.
 
    A folder called "Group_x" is inserted.
@@ -1048,7 +1048,7 @@ You configure the system function to open a pop-up screen at the event of an ope
 ##### Procedure
 
 1. Configure a button.
-2. Click "Properties > Events" in the Inspector window.
+2. Click "Properties &gt; Events" in the Inspector window.
 3. Select an event, for example, "Click".
 4. Click on "Add function" in the table.
 5. Select the "ShowPopupScreen" system function.
@@ -1132,7 +1132,7 @@ You configure the following objects in the slide-in screen:
 
 ##### Introduction
 
-By default, four slide-in screens are preset for each device in the project tree under "Screen management > Slide-in screens". For each of these slide-in screens, you configure the size, the layout and the handle for operation in Runtime using the properties.
+By default, four slide-in screens are preset for each device in the project tree under "Screen management &gt; Slide-in screens". For each of these slide-in screens, you configure the size, the layout and the handle for operation in Runtime using the properties.
 
 ##### Requirement
 
@@ -1142,14 +1142,14 @@ By default, four slide-in screens are preset for each device in the project tree
 
 ##### Configuring properties for slide-in screens
 
-1. Select the slide-in screen you wish to configure in the project tree under "Screen management > Slide-in screens.
+1. Select the slide-in screen you wish to configure in the project tree under "Screen management &gt; Slide-in screens.
 
    The slide-in screen properties are displayed in the Inspector window.
-2. Define the background color of the slide-in screen in the "Background color" selection list of the "Properties > Properties > General" Inspector window.
+2. Define the background color of the slide-in screen in the "Background color" selection list of the "Properties &gt; Properties &gt; General" Inspector window.
 3. Define the grid color of the slide-in screen in the "Grid color" selection list.
 4. Enable the "Activate" check box.
-5. Specify the layers in the engineering system that are displayed under "Properties >Properties >Layers" in the Inspector window.
-6. Define the height and width of the slide-in screen in "Properties > Properties > Layout" in the Inspector window:
+5. Specify the layers in the engineering system that are displayed under "Properties &gt;Properties &gt;Layers" in the Inspector window.
+6. Define the height and width of the slide-in screen in "Properties &gt; Properties &gt; Layout" in the Inspector window:
 
    - Define the height only for "Slide-in screen top" and "Slide-in screen bottom".
    - Define the width only for "Slide-in screen left" and "Slide-in screen right".
@@ -1172,7 +1172,7 @@ The names of all slide-in screens are write-protected and cannot be changed.
 
 ##### Configuring handles for slide-in screens
 
-1. Define the color of the first line of the handle in the "Lines" area of the "Color" selection list under "Properties > Properties > Handle" in the Inspector window.
+1. Define the color of the first line of the handle in the "Lines" area of the "Color" selection list under "Properties &gt; Properties &gt; Handle" in the Inspector window.
 2. Define the color of the second line of the handle in the "Alternative color" selection list.
 3. Define the color for the operable area of the handle in the "Color" selection list under "Operable area".
 4. Select one of the following options from the "Visibility" area:
@@ -1225,7 +1225,7 @@ You use the "ShowSlideInScreen" system function to make the slide-in screens ava
 
 1. Drag the "Button" object to the screen from the toolbox.
 2. Enter a suitable text of any length for the button.
-3. In the Inspector window, select "Properties > Events > Click".
+3. In the Inspector window, select "Properties &gt; Events &gt; Click".
 
    The "Function list" dialog box is opened.
 4. Select the "ShowSlideInScreen" system function from the "Keyboard operation for screen objects" group.
@@ -1535,7 +1535,7 @@ For the individual screens, elements and controls, you also specify in each case
 To change the basic design of the user interface of an HMI device, follow the steps below:
 
 1. Open the "Runtime settings" of the HMI device.
-2. Under "General > Settings", specify whether the default design or a different design is used as the basic design.
+2. Under "General &gt; Settings", specify whether the default design or a different design is used as the basic design.
 
 ---
 
@@ -1558,7 +1558,7 @@ To change the basic design of the user interface of an HMI device, follow the st
 Proceed as follows to use design templates for the representation of images on a screen:
 
 1. Open the desired screen in the "Screens" editor.
-2. Activate "Properties > Properties > Design > Settings > Use color scheme" in the Inspector window.
+2. Activate "Properties &gt; Properties &gt; Design &gt; Settings &gt; Use color scheme" in the Inspector window.
 
 ##### Result
 
@@ -1588,7 +1588,7 @@ To apply the design specifications for the layout of basic elements and elements
 
 1. Open the screen in the "Screens" editor.
 2. Click the required object in the work area.
-3. Select the group settings "Properties > Properties > Designs" in the Inspector window.
+3. Select the group settings "Properties &gt; Properties &gt; Designs" in the Inspector window.
 4. Activate "Shadow" to visualize the object with a shadow.
 5. Activate "Use color scheme" to to apply the default colors of the design.
 
@@ -1620,7 +1620,7 @@ Proceed as follows to apply design templates for visualization of controls:
 
 1. Open the screen in the "Screens" editor.
 2. Click the required object in the work area.
-3. Deactivate "Properties > Properties > Appearance > Style > Use project settings for design".
+3. Deactivate "Properties &gt; Properties &gt; Appearance &gt; Style &gt; Use project settings for design".
 4. Select the design from the selection list.
 
 The control is displayed in the style specified in the design.
@@ -1656,16 +1656,16 @@ Proceed as follows:
 
    Or:
 
-   Display a preview of the desired desire in the work area and select "Properties > Properties > General > Design > Default" in the Inspector window.
+   Display a preview of the desired desire in the work area and select "Properties &gt; Properties &gt; General &gt; Design &gt; Default" in the Inspector window.
 3. If required, adapt the design to your requirements.
 
 ##### Use default design
 
 The default design settings are effective for the objects which satisfy the following conditions:
 
-- "Runtime settings > General > Settings > Use default design" is activated for the HMI device.
-- For screens, basic elements and elements: "Properties > Properties> Design > Settings > Use color scheme" is selected in the Inspector window.
-- For controls: "Properties > Properties > Appearance > Style > Accept project settings" is selected in the Inspector window.
+- "Runtime settings &gt; General &gt; Settings &gt; Use default design" is activated for the HMI device.
+- For screens, basic elements and elements: "Properties &gt; Properties&gt; Design &gt; Settings &gt; Use color scheme" is selected in the Inspector window.
+- For controls: "Properties &gt; Properties &gt; Appearance &gt; Style &gt; Accept project settings" is selected in the Inspector window.
 
 ---
 
@@ -1925,7 +1925,7 @@ The table below shows the device sizes and the reference font sizes in pixels:
 
 1. Double-click the "Runtime settings" editor in the project window.
 2. Click "General".
-3. Activate the option "Adjust font size in style" under "General > Screen".
+3. Activate the option "Adjust font size in style" under "General &gt; Screen".
 
    ![Activating automatic adjustment of font sizes](images/74853635595_DV_resource.Stream@PNG-en-US.png)
 
@@ -1970,7 +1970,7 @@ You define style items in the style editor.
 
    You can also select "Duplicate style item" in the shortcut menu of the object.
 6. Make the required changes in the inspector window.
-7. Assign a meaningful name to the new style item under "Properties > Miscellaneous > Object > Name".
+7. Assign a meaningful name to the new style item under "Properties &gt; Miscellaneous &gt; Object &gt; Name".
 8. Release the version of the style.
 
 ##### Deleting a style item
@@ -1993,7 +1993,7 @@ The style item is deleted.
 
 If you have configured additional style items for an object in the device style, you can use the predefined style item for a screen object.
 
-1. Open "Properties > Styles/Designs > Settings".
+1. Open "Properties &gt; Styles/Designs &gt; Settings".
 2. Enable the option "Use style/design".
 3. Select the predefined style item under "Style item appearance".
 
@@ -2036,9 +2036,9 @@ To apply a style sheet to a style item, drag the required style sheet from the t
 
 ##### Managing style sheets
 
-Style sheets are library types. You manage style sheets in the project library. Style sheet categories are available in the project library in the "Style sheets > Categories" task card during style editing.
+Style sheets are library types. You manage style sheets in the project library. Style sheet categories are available in the project library in the "Style sheets &gt; Categories" task card during style editing.
 
-The style sheets that are available for a style sheet type are available in the "Style sheets > Visual attributes" task card. The task card includes predefined style sheets as well as style sheets you have created yourself and released.
+The style sheets that are available for a style sheet type are available in the "Style sheets &gt; Visual attributes" task card. The task card includes predefined style sheets as well as style sheets you have created yourself and released.
 
 #### Creating a new style sheet (Basic Panels, Panels, Comfort Panels, RT Advanced)
 
@@ -2075,7 +2075,7 @@ To automatically configure the properties for similar screen objects when editin
 4. Assign a meaningful name to the style sheet.
 5. Click "OK" to confirm.
 
-   The new style sheet based on a style was created and has been added to the "Style sheets > Visual attributes" task card.
+   The new style sheet based on a style was created and has been added to the "Style sheets &gt; Visual attributes" task card.
 
    The properties in the style sheet were applied from the selected style item. The properties of the style sheet not included in the selected style have been assigned default values.
 
@@ -2085,7 +2085,7 @@ To automatically configure the properties for similar screen objects when editin
 
 You edit, copy and delete the style sheets in the project library.
 
-You can also open, copy, create and delete style sheets with the commands in the shortcut menu of the "Style sheets > Categories" task card.
+You can also open, copy, create and delete style sheets with the commands in the shortcut menu of the "Style sheets &gt; Categories" task card.
 
 ##### Edit style sheet
 
@@ -2151,9 +2151,9 @@ You have the following options to use a style sheet:
 
 ##### Apply style sheet to style item
 
-1. Select the style sheet category in the "Style sheets > Categories" task card.
-2. Select the required style sheet in the "Style sheets > Visual attributes" task card.
-3. Drag the selected style sheet to a style item with drag&drop.
+1. Select the style sheet category in the "Style sheets &gt; Categories" task card.
+2. Select the required style sheet in the "Style sheets &gt; Visual attributes" task card.
+3. Drag the selected style sheet to a style item with drag&amp;drop.
 
    ![Apply style sheet to style item](images/74855470859_DV_resource.Stream@PNG-en-US.png)
 
@@ -2266,7 +2266,7 @@ The toolbox contains various palettes, depending on the currently active editor.
 
   In addition to the display and operating objects, the library objects are available. They are located within the palettes of the "Libraries" task card. A library contains preconfigured objects such as graphics of pipes, pumps, or preconfigured buttons. You can also integrate multiple instances of library objects into your project without having to reconfigure them.
 
-  The WinCC software package includes libraries, e.g. "HMI Buttons & Switches".
+  The WinCC software package includes libraries, e.g. "HMI Buttons &amp; Switches".
 
   You may also store customized objects and faceplates in user libraries. Faceplates are objects that you create from existing screen objects, and for which you define the configurable properties.
 
@@ -2408,7 +2408,7 @@ The toolbox contains various palettes, depending on the currently active editor.
 
   In addition to the display and operating objects, the library objects are available. They are located within the palettes of the "Libraries" task card. A library contains preconfigured objects such as graphics of pipes, pumps, or preconfigured buttons. You can also integrate multiple instances of library objects into your project without having to reconfigure them.
 
-  The WinCC software package includes libraries, e.g. "HMI Buttons & Switches".
+  The WinCC software package includes libraries, e.g. "HMI Buttons &amp; Switches".
 
   You can also store customized objects, and faceplates in user libraries.
 
@@ -2479,7 +2479,7 @@ The toolbox contains various palettes, depending on the currently active editor.
 
 <sup>1)</sup> Available for Comfort Panels and KTP Mobile Panels (as of device version V13) and RT Advanced (as of device version V14 SP1)
 
-<sup>2)</sup> Available for WinCC Runtime Advanced (as of device version V14) and Comfort Panels and KTP Mobile Panels (as of device version V14 with a display size > 4'').
+<sup>2)</sup> Available for WinCC Runtime Advanced (as of device version V14) and Comfort Panels and KTP Mobile Panels (as of device version V14 with a display size &gt; 4'').
 
 <sup>3)</sup> Available for WinCC Runtime Advanced, Comfort Panels and KTP Mobile Panels (as of device version V14)
 
@@ -2581,7 +2581,7 @@ The toolbox contains various palettes, depending on the currently active editor.
 
   In addition to the display and operating elements, the library objects are available. They are located within the palettes of the "Libraries" task card. A library contains preconfigured objects such as graphics of pipes, pumps, or preconfigured buttons. You can also integrate multiple instances of library objects into your project without having to reconfigure them.
 
-  The WinCC software package includes libraries, e.g. "HMI Buttons & Switches".
+  The WinCC software package includes libraries, e.g. "HMI Buttons &amp; Switches".
 
   You can also store customized objects, and faceplates in user libraries.
 
@@ -2658,7 +2658,7 @@ You have the following options for editing objects:
 
   You can save graphics in the graphic browser:
 
-  - Via drag & drop from the "Graphics" object group to the working area
+  - Via drag &amp; drop from the "Graphics" object group to the working area
   - As a graphic file in the following formats: *.bmp, *.dib, *.ico, *.emf, *.wmf, *.gif, *.tif, *.svg, *.jpeg or *.jpg
   - As an OLE object
 
@@ -2714,8 +2714,8 @@ In the "Screens" or "Reports" editor, insert the objects to the "Toolbox" task c
 
 In addition, you can copy or move objects via the clipboard from one editor to another, for example to transfer a screen object to a report. Alternatively, you can also use the mouse instead of the clipboard for copying and moving:
 
-- Copy: <Ctrl + Drag&Drop>
-- Moving: Drag&drop
+- Copy: &lt;Ctrl + Drag&amp;Drop&gt;
+- Moving: Drag&amp;drop
 
   > **Note**
   >
@@ -2797,7 +2797,7 @@ You have opened the work area containing at least one object.
 
 1. Select the object that you want to delete.
 
-   To delete multiple objects, keep the <Shift> key pressed and select the objects to be deleted one after the other. Alternatively, drag and maximize an area around the desired objects with the mouse.
+   To delete multiple objects, keep the &lt;Shift&gt; key pressed and select the objects to be deleted one after the other. Alternatively, drag and maximize an area around the desired objects with the mouse.
 2. Select "Delete" from the shortcut menu.
 
 ##### Result
@@ -2826,14 +2826,14 @@ When you select an object, it is enclosed by a rectangle with resizing handles. 
 
 You have the possibility of having a grid displayed in the work area. You have three options for easier positioning of objects:
 
-- "Snap to grid" When you resposition objects, they are automatically snapped and pasted to the grid. If you hold down the <Alt> key, the object is no longer snapped to the grid.
+- "Snap to grid" When you resposition objects, they are automatically snapped and pasted to the grid. If you hold down the &lt;Alt&gt; key, the object is no longer snapped to the grid.
 - "Snap to objects" When you reposition objects, they are displayed with help lines. You can use other objects for orientation during positioning.
 - "None": You position the objects in any position.
 
 You activate and deactivate the grid and options as follows:
 
-- In the "Options > Settings > Visualization > Screens" menu
-- In the "Layout > Grid" task card
+- In the "Options &gt; Settings &gt; Visualization &gt; Screens" menu
+- In the "Layout &gt; Grid" task card
 
 ##### Requirement
 
@@ -2864,8 +2864,8 @@ You have opened the work area containing at least one object.
 
 ##### Alternative procedure
 
-1. In the Inspector window, select "Properties > Properties > Layout".
-2. Enter the X and Y values for the position under "Position & Size".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
+2. Enter the X and Y values for the position under "Position &amp; Size".
 
 ##### Result
 
@@ -2904,14 +2904,14 @@ You have opened the work area containing at least one object.
    The size of the object changes.
 
    - The size of the object is aligned to the grid pattern, provided the "Snap to grid" function is set.
-   - Press <ALT> to disable this function while you drag the object.
+   - Press &lt;ALT&gt; to disable this function while you drag the object.
 
-     In order to scale the object proportionally, keep the <Shift> key pressed while changing the size with the mouse.
+     In order to scale the object proportionally, keep the &lt;Shift&gt; key pressed while changing the size with the mouse.
 
 ##### Alternative procedure
 
-1. In the Inspector window, select "Properties > Properties > Layout".
-2. Enter the size of the object under "Position & Size".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
+2. Enter the size of the object under "Position &amp; Size".
 
 ##### Harmonizing the object size
 
@@ -2953,7 +2953,7 @@ The Inspector window shows all the properties of the selected objects.
 You now have several options of selecting multiple objects:
 
 - Draw a selection frame around the objects.
-- Hold down the <Shift> key, and click the required objects.
+- Hold down the &lt;Shift&gt; key, and click the required objects.
 
 ##### Selection frame of a multiple selection
 
@@ -2986,7 +2986,7 @@ You have opened the work area containing at least two objects.
 
 Or:
 
-1. Hold down the <Shift> key.
+1. Hold down the &lt;Shift&gt; key.
 2. Click the relevant objects, working in succession.
 
    All the selected objects are identified by frames.
@@ -2995,7 +2995,7 @@ Or:
 
 **Note**
 
-To remove an object from the multiple selection, press <SHIFT>, hold it down and then click the relevant object once again.
+To remove an object from the multiple selection, press &lt;SHIFT&gt;, hold it down and then click the relevant object once again.
 
 ##### Result
 
@@ -3081,12 +3081,12 @@ You can move the objects in the screen by using shortcut keys or select them by 
 
 | Function | Keyboard shortcut |
 | --- | --- |
-| Moves the selected screen object to the left to the first available vertical alignment position. | <Alt+Shift+Left> |
-| Moves the selected screen object to the right to the first available vertical alignment position. | <Alt+Shift+Right> |
-| Moves the selected screen object up to the first available horizontal alignment position. | <Alt+Shift+Up> |
-| Moves the selected screen object down to the first available horizontal alignment position. | <Alt+Shift+Down> |
-| Selects all screen objects of this type. | <Ctrl+Shift+A> |
-| Selects all objects that support the use styles. | <Ctrl+Shift+D> |
+| Moves the selected screen object to the left to the first available vertical alignment position. | &lt;Alt+Shift+Left&gt; |
+| Moves the selected screen object to the right to the first available vertical alignment position. | &lt;Alt+Shift+Right&gt; |
+| Moves the selected screen object up to the first available horizontal alignment position. | &lt;Alt+Shift+Up&gt; |
+| Moves the selected screen object down to the first available horizontal alignment position. | &lt;Alt+Shift+Down&gt; |
+| Selects all screen objects of this type. | &lt;Ctrl+Shift+A&gt; |
+| Selects all objects that support the use styles. | &lt;Ctrl+Shift+D&gt; |
 
 #### Moving an object forwards or backwards (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -3146,13 +3146,13 @@ If you assign objects to positions that are outside the configurable area, these
 
 ##### Procedure
 
-1. Open the "Layout > Objects outside the area" task card.
+1. Open the "Layout &gt; Objects outside the area" task card.
 
    This displays a list of objects that are outside the configurable area.
 2. Select the the object which you want to move back into the screen from the list.
 3. Select "Move to screen" in the object shortcut menu.
 
-Alternatively open the "Layout > Layer" task card. Objects outside the area are indicated by the ![Procedure](images/14146121867_DV_resource.Stream@PNG-de-DE.png) icon. If you click this icon, the object is moved back into the screen.
+Alternatively open the "Layout &gt; Layer" task card. Objects outside the area are indicated by the ![Procedure](images/14146121867_DV_resource.Stream@PNG-de-DE.png) icon. If you click this icon, the object is moved back into the screen.
 
 ##### Result
 
@@ -3248,7 +3248,7 @@ A line has been created in a screen.
 ##### Procedure
 
 1. Select the line on your screen.
-2. In the Inspector window, select "Properties > Properties > Appearance":
+2. In the Inspector window, select "Properties &gt; Properties &gt; Appearance":
 3. Select "Dash" as the style.
 4. To display the dashed line in two colors, select the line width "1".
 5. Select the setting "Arrow" in the "Line ends" area.
@@ -3276,7 +3276,7 @@ A circle has been created in a screen.
 ##### Procedure
 
 1. Select the circle in the screen.
-2. In the Inspector window, select "Properties > Properties > Appearance":
+2. In the Inspector window, select "Properties &gt; Properties &gt; Appearance":
 3. Select "Solid" as the background fill pattern.
 4. Activate "Fill level".
 5. Enter "50" for the fill level.
@@ -3312,7 +3312,7 @@ The object has been created and selected.
 
 ##### Designing the background color of an object
 
-1. In the Inspector window, select "Properties > Properties > Appearance".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Appearance".
 2. Select a color for the background of the object, for example, yellow.
 
    The object is filled with the selected color.
@@ -3323,7 +3323,7 @@ The object has been created and selected.
 
 ##### Designing the fill pattern of an object
 
-1. In the Inspector window, select "Properties > Properties > Appearance".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Appearance".
 2. To define a transparent background for the object, select transparent.
 
    You can find information about designing a fill pattern with a color gradient in the section [Defining color gradients](#defining-color-gradients-basic-panels-panels-comfort-panels-rt-advanced-rt-professional).
@@ -3334,7 +3334,7 @@ The object has been created and selected.
 
    ![Designing the fill pattern of an object](images/74903800075_DV_resource.Stream@PNG-en-US.png)
 
-You can optionally set the fill pattern in the Inspector window under "Properties > Properties > Fill Pattern".
+You can optionally set the fill pattern in the Inspector window under "Properties &gt; Properties &gt; Fill Pattern".
 
 ---
 
@@ -3354,13 +3354,13 @@ You can use the scroll bars for navigation in the table-based objects:
 >
 > On HMI devices with keys, you can move the scroll bar with arrow keys.
 >
-> In pop-up screens, use <ALT>+<arrow key> to scroll.
+> In pop-up screens, use &lt;ALT&gt;+&lt;arrow key&gt; to scroll.
 
 In WinCC version V14 and higher, you can configure different colors for the scroll bars.
 
 ##### Scrolling in controls
 
-Two display options for scrolling are available under "Runtime settings > Screens > Scrolling in controls":
+Two display options for scrolling are available under "Runtime settings &gt; Screens &gt; Scrolling in controls":
 
 - Scroll bar with scroll arrows for devices with device version V14 or higher
 
@@ -3400,7 +3400,7 @@ You can configure the color of the scroll bar in conjunction with other colors f
 
 This example shows the configuration of scroll bar colors for an alarm view.
 
-1. Open "Properties > Properties > Appearance".
+1. Open "Properties &gt; Properties &gt; Appearance".
 2. Select a color for the table foreground, for example "blue" for the scroll arrows and the scroll box in the scroll bar.
 3. Select the alternative color, for example "yellow" for the even rows in the table and the background of the scroll bar.
 
@@ -3450,14 +3450,14 @@ You have several options to align text.
 
 ##### Configuring the distance from the object border
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter the value "5" for the left border, for example.
 
 The text is aligned five pixels from the left border of the object.
 
 ##### Aligning the text position
 
-1. In the Inspector window, select "Properties > Properties > Text format".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Text format".
 2. Select the horizontal alignment, for example, centered.
 3. Select the vertical alignment, for example, top.
 
@@ -3465,7 +3465,7 @@ The text is aligned five pixels from the left border of the object.
 
 ##### Defining the text orientation
 
-1. In the Inspector window, select "Properties > Properties > Text format".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Text format".
 2. Select the orientation of the text, for example, vertical, right.
 
    The text flow is shown from bottom to top.
@@ -3489,7 +3489,7 @@ Comfort Panels and WinCC Runtime Advanced give you the option to add output fiel
 
 ##### Connecting tags in a text field
 
-1. Open "Properties > Properties > General" in the inspector window.
+1. Open "Properties &gt; Properties &gt; General" in the inspector window.
 2. Open the shortcut menu of the input field.
 
    ![Connecting tags in a text field](images/66258430859_DV_resource.Stream@PNG-en-US.png)
@@ -3504,7 +3504,7 @@ The name of the connected tag is displayed in the text field of the object.
 
 ##### Connecting the text list
 
-1. Open "Properties > Properties > General" in the inspector window.
+1. Open "Properties &gt; Properties &gt; General" in the inspector window.
 2. Open the shortcut menu of the input field.
 3. Select the command "Insert text list field ...".  
    A dialog opens.
@@ -3530,7 +3530,7 @@ WinCC lets you insert graphics into some objects and format them. You can change
 
 ##### Resizing a graphic
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Select "No stretching of picture" or "Stretch picture".
 
    The contained graphic is displayed in its original size or stretched to the size of the object.
@@ -3541,7 +3541,7 @@ WinCC lets you insert graphics into some objects and format them. You can change
 
 ##### Aligning a graphic horizontally and vertically
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. To determine the horizontal position of the graphic, select "Right", for example.
 3. To determine the vertical position of the graphic, select "Top", for example.
 
@@ -3551,7 +3551,7 @@ WinCC lets you insert graphics into some objects and format them. You can change
 
 ##### Defining the distance from the object border
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter the value for the distance to the object border, for example, "20" for the top border.
 
    The graphic is shown with a distance of 20 pixels to the top border of the object.
@@ -3569,7 +3569,7 @@ WinCC lets you insert graphics into some objects and format them. You can change
 
 ##### Introduction
 
-You define the rotation of an object around a reference point. You define the reference point with "X", "Y" in the Inspector window in the group "Properties > Properties > Layout".
+You define the rotation of an object around a reference point. You define the reference point with "X", "Y" in the Inspector window in the group "Properties &gt; Properties &gt; Layout".
 
 The rotation of the object is visible in Runtime only.
 
@@ -3605,7 +3605,7 @@ You change the properties of table-based objects in the Inspector window of the 
 
 ##### Designing colors
 
-Select the colors for font, selections and areas under "Properties > Properties > Appearance".
+Select the colors for font, selections and areas under "Properties &gt; Properties &gt; Appearance".
 
 ![Selecting table properties](images/57306182155_DV_resource.Stream@PNG-en-US.png)
 
@@ -3613,7 +3613,7 @@ Selecting table properties
 
 ##### Designing the border of the table header
 
-1. In the Inspector window, open "Properties > Properties > Table header border".
+1. In the Inspector window, open "Properties &gt; Properties &gt; Table header border".
 2. Select "Solid", for example, as the style.
 3. Select 5, for example, as the "Width".
 4. Select red, for example, as a foreground color.
@@ -3623,7 +3623,7 @@ The border of the table header is shown with a red border and width of 5 pixels.
 ##### Colors and color gradient in the table header
 
 1. Select the table-based object in the screen.
-2. In the Inspector window, open "Properties > Properties > Table header fill pattern".
+2. In the Inspector window, open "Properties &gt; Properties &gt; Table header fill pattern".
 3. Select the fill pattern, for example "Horizontal gradient".
 4. Select a background color, for example, blue, under "Gradient".
 5. Activate "Gradient 1".
@@ -3647,7 +3647,7 @@ You change the appearance in the Inspector window of the relevant object.
 
 ##### Designing a border
 
-1. Open "Properties > Properties > Appearance".
+1. Open "Properties &gt; Properties &gt; Appearance".
 2. Select the width of the border, e.g. "5".
 3. Select the style of the border, e.g. double line.
 4. Select the foreground color.
@@ -3686,8 +3686,8 @@ The following section describes how to configure the color gradient of buttons.
 ##### Horizontal color gradient with two colors
 
 1. Select an object with buttons, for example, a button.
-2. In the Inspector window, select "Properties > Properties > Fill Pattern".
-3. Select "Fill Pattern > Horizontal gradient".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Fill Pattern".
+3. Select "Fill Pattern &gt; Horizontal gradient".
 4. Select a background color for the vertical color gradient, for example, orange.
 5. Activate "Gradient 1".
 6. Select a "Color" for Gradient 1, for example, red.
@@ -3702,7 +3702,7 @@ For the horizontal color gradient, Gradient 1 is shown from the left border. Gra
 ##### Vertical color gradient with three colors
 
 1. Select a button in the screen.
-2. In the Inspector window, select "Properties > Properties > Fill Pattern".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Fill Pattern".
 3. Select the "Vertical gradient" background.
 4. Select a background color under "Gradient", for example, orange.
 5. Activate "Gradient 1".
@@ -3728,7 +3728,7 @@ Gradient 2 is shown at the bottom border. Gradient 2 is 10 pixels wide.
 
 ##### Introduction
 
-As of WinCC V14, you have the option of defining up to five value ranges for the "Gauge", "Bar" and "Slider" objects and configuring them centrally in a process tag. This means you can, for example, distinguish between different operating states with different colors. To display the ranges defined in the tag in the screen object, activate the option "Display ranges of tags" in the Inspector window under "Properties > Limits/Ranges".
+As of WinCC V14, you have the option of defining up to five value ranges for the "Gauge", "Bar" and "Slider" objects and configuring them centrally in a process tag. This means you can, for example, distinguish between different operating states with different colors. To display the ranges defined in the tag in the screen object, activate the option "Display ranges of tags" in the Inspector window under "Properties &gt; Limits/Ranges".
 
 This setting is not available for display with inner scale, for example, the option "Layout with inner bar" must be cleared for the bar.
 
@@ -3758,9 +3758,9 @@ You can find additional information on limits under "[Defining limits for a tag]
 
 ##### Configuring ranges
 
-1. Specify the tag that defines the ranges for the screen object under "Properties > General > Process tag".
+1. Specify the tag that defines the ranges for the screen object under "Properties &gt; General &gt; Process tag".
 2. If necessary, specify the values for maximum and minimum.
-3. Select the option "Display ranges of tags" under "Properties > Limits/Ranges".
+3. Select the option "Display ranges of tags" under "Properties &gt; Limits/Ranges".
 
    ![Configuring ranges](images/88009370763_DV_resource.Stream@PNG-en-US.png)
 
@@ -3795,7 +3795,7 @@ You have opened the work area containing at least one object.
 ##### Procedure
 
 1. Select the object that you want to flash.
-2. In the Inspector window, select the type "Standard enabled" under "Properties > Properties > Flashing".
+2. In the Inspector window, select the type "Standard enabled" under "Properties &gt; Properties &gt; Flashing".
 
 ##### Result
 
@@ -3820,7 +3820,7 @@ You have opened the work area containing at least one object.
 ##### Procedure
 
 1. Select the object that you want to flash.
-2. In the Inspector window, select the type "Advanced" under ""Properties > Properties > Flashing".
+2. In the Inspector window, select the type "Advanced" under ""Properties &gt; Properties &gt; Flashing".
 3. Activate "Line" to make the line flash in runtime.
 4. Activate "Text" to make the text flash in runtime.
 5. Activate "Background" to make the background flash in runtime.
@@ -3870,12 +3870,12 @@ The "Tools" task card is open.
 
 **Note**
 
-You can copy existing objects using the drag-and-drop +<CTRL> function. The existing object is not moved in this case. You paste a copy of this object into the new position instead.
+You can copy existing objects using the drag-and-drop +&lt;CTRL&gt; function. The existing object is not moved in this case. You paste a copy of this object into the new position instead.
 
 ##### Inserting and multiplying an object
 
 1. Insert the desired object from the "Tools" task card.
-2. Press the <Ctrl> key and position the cursor on one of the handles displayed in the figure shown below.
+2. Press the &lt;Ctrl&gt; key and position the cursor on one of the handles displayed in the figure shown below.
 
    ![Inserting and multiplying an object](images/6340346507_DV_resource.Stream@PNG-en-US.png)
 
@@ -3960,7 +3960,7 @@ You assign a user data type defined in the project library to a screen and link 
 
 ##### Procedure
 
-1. Select the "Use user data type" check box under "Properties > Properties > User data type" in the Inspector window.
+1. Select the "Use user data type" check box under "Properties &gt; Properties &gt; User data type" in the Inspector window.
 2. In the "User data type" selection list, select a HMI user data type or PLC user data type from the project library that you want to assign to the screen.
 
    ![Procedure](images/71790659211_DV_resource.Stream@PNG-en-US.png)
@@ -3972,7 +3972,7 @@ The user data type is assigned to the screen.
 ##### Linking elements of a user data type with objects
 
 1. Insert in the screen an object that you want to link to an element of a user data type.
-2. In the Inspector window under "Properties > Properties > General", select the element from the "Tag" selection list that you want to link to the object.
+2. In the Inspector window under "Properties &gt; Properties &gt; General", select the element from the "Tag" selection list that you want to link to the object.
 
    ![Linking elements of a user data type with objects](images/71793983243_DV_resource.Stream@PNG-en-US.png)
 
@@ -3988,7 +3988,7 @@ The user data type is assigned to the screen.
 
 ##### Comments
 
-- If you disable the "Use user data type" check box under "Properties > Properties > User data type", the link between the element and the object is removed.
+- If you disable the "Use user data type" check box under "Properties &gt; Properties &gt; User data type", the link between the element and the object is removed.
 - If you assign the screen a different user data type, the link between the element and the object is removed. However, if an identically named element is contained in the new user data type on the same structural level, the link between the element and the object is retained.
 - If you rename the element, the link between the element and the object is removed.
 - If you change the data type of the element, the link between the element and the object is retained.
@@ -4005,7 +4005,7 @@ The user data type is assigned to the screen.
 
 ##### Introduction
 
-You can use your own controls in the WinCC editions "WinCC Advanced" and "WinCC Professional". Add standardized or user-defined controls in the "Toolbox > My Controls" task card. The configuration of user-specific controls on levels is not supported. User-specific controls are always positioned in the foreground in runtime.
+You can use your own controls in the WinCC editions "WinCC Advanced" and "WinCC Professional". Add standardized or user-defined controls in the "Toolbox &gt; My Controls" task card. The configuration of user-specific controls on levels is not supported. User-specific controls are always positioned in the foreground in runtime.
 
 The ActiveX controls registered in the operating system and the .Net controls on your system are available for use in WinCC.
 
@@ -4034,7 +4034,7 @@ If the name of an event of a control contains the character string "Changed", th
 
 ##### Adding a new control to the "My controls" group
 
-1. Open "Toolbox > My controls" in the "Toolbox" task card.
+1. Open "Toolbox &gt; My controls" in the "Toolbox" task card.
 2. Select "Select objects" from the shortcut menu.
 
    A dialog opens. This contains all the controls available on the system. Controls that already exist in the "Toolbox" task card are identified by a check mark.
@@ -4070,7 +4070,7 @@ If the name of an event of a control contains the character string "Changed", th
 
 ##### Result
 
-The control now appears in the "Toolbox > My controls" task card and can be configured in a screen.
+The control now appears in the "Toolbox &gt; My controls" task card and can be configured in a screen.
 
 ##### Removing a control from the "My controls" group
 
@@ -4098,7 +4098,7 @@ You can use graphics created with an external graphic program in WinCC. To use t
 
 You can save graphics in the project graphics:
 
-- When you drag-and-drop graphics objects from the "Graphics" pane into the work area, these are stored automatically in the project graphics. The graphic names are numbered in the order of their creation, for example, "Graphic_1." Use the <F2> function key to rename the graphic.
+- When you drag-and-drop graphics objects from the "Graphics" pane into the work area, these are stored automatically in the project graphics. The graphic names are numbered in the order of their creation, for example, "Graphic_1." Use the &lt;F2&gt; function key to rename the graphic.
 - As a graphic file with the following formats:
 
   *.bmp, *.ico, *.emf, *.wmf, *.gif, *.tif, *.png, *.svg, *.jpeg, *.jpg
@@ -4255,14 +4255,14 @@ To store an OLE object in the browser:
 ##### Creating and saving a new graphic as an OLE object
 
 1. Select the Graphic view on your screen.
-2. In the Inspector window, select "Properties > Properties > General":
+2. In the Inspector window, select "Properties &gt; Properties &gt; General":
 3. Open the graphic selection list.
 4. Click ![Creating and saving a new graphic as an OLE object](images/14146668299_DV_resource.Stream@PNG-de-DE.png).
 5. The "Insert object" dialog box opens.
-6. From the "Insert object" dialog box, select "New" and an object type. The settings in "Settings > "OLE settings" determine which object types are shown.
+6. From the "Insert object" dialog box, select "New" and an object type. The settings in "Settings &gt; "OLE settings" determine which object types are shown.
 7. Click "OK." The associated graphic program is opened.
 
-   When you are finished creating graphics, end the graphic programming software with "File > Close" or "File > Close & return to WinCC."
+   When you are finished creating graphics, end the graphic programming software with "File &gt; Close" or "File &gt; Close &amp; return to WinCC."
 
    The graphic will be stored in the graphic programming software standard format and added to the graphic browser.
 
@@ -4283,7 +4283,7 @@ In addition, the dialog "External application running..." will open. The dialog 
 
 ##### Saving an existing graphic object as an OLE object
 
-1. In the Inspector window, select "Properties > Properties > General":
+1. In the Inspector window, select "Properties &gt; Properties &gt; General":
 2. Open the graphic selection list.
 3. Click ![Saving an existing graphic object as an OLE object](images/14146668299_DV_resource.Stream@PNG-de-DE.png).
 4. The "Insert object" dialog box opens.
@@ -4307,7 +4307,7 @@ To import graphics files, note the following size restrictions:
 
 The image file is now stored in your image browser. It is shown in a screen with a Graphic view , or is added as a list element in an image list.
 
-You can double-click OLE objects in your library to open them for editing in the corresponding graphic editor. When you have finished editing graphics, end the graphic programming software with "File > Close" or "File > Close & return to WinCC." The changes are applied to WinCC.
+You can double-click OLE objects in your library to open them for editing in the corresponding graphic editor. When you have finished editing graphics, end the graphic programming software with "File &gt; Close" or "File &gt; Close &amp; return to WinCC." The changes are applied to WinCC.
 
 ---
 
@@ -4361,7 +4361,7 @@ Some adjustments in the engineering system are required to enable you to customi
 1. Select the control that you want to customize in the screen.
 
    The properties of the control are displayed in the Inspector window.
-2. Under "Properties > Properties > Columns", select one of the entries in the "Title as" column for the display of the respective column title:
+2. Under "Properties &gt; Properties &gt; Columns", select one of the entries in the "Title as" column for the display of the respective column title:
 
    - "Both" (text and symbol)
    - "None"
@@ -4491,9 +4491,9 @@ WinCC offers the following methods for editing multiple objects:
 
 ##### Editing mode
 
-To edit an individual object in a group, select the object in the "Layout > Layers" task card.
+To edit an individual object in a group, select the object in the "Layout &gt; Layers" task card.
 
-Alternatively select "Group > Edit group" in the object group's shortcut menu.
+Alternatively select "Group &gt; Edit group" in the object group's shortcut menu.
 
 ##### Hierarchical groups
 
@@ -4537,7 +4537,7 @@ You can change the size and position of the group. The following rules apply:
 
 - The system automatically adapts the position coordinates of the grouped objects when you reposition the group. The relative position of the grouped objects to the group is not affected.
 - The system automatically adapts the height and width of the grouped objects in proportion to a change of the group size.
-- To change the size of the group proportionately, hold down the <Shift> key and drag the rectangle around the object until has the required size.
+- To change the size of the group proportionately, hold down the &lt;Shift&gt; key and drag the rectangle around the object until has the required size.
 
   > **Note**
   >
@@ -4550,26 +4550,26 @@ You can change the size and position of the group. The following rules apply:
 ##### Creating object groups
 
 1. Select all the objects you want to organize in a group.
-2. Select the command "Group > Group" from the shortcut menu.
+2. Select the command "Group &gt; Group" from the shortcut menu.
 
 The objects of the group are displayed with a rectangle around the objects.
 
 ##### Grouping objects within a group
 
 1. Select the group you want to edit.
-2. Select the command "Group > Edit group" from the shortcut menu.
+2. Select the command "Group &gt; Edit group" from the shortcut menu.
 
    The group that you are editing is highlighted by a red frame.
 3. Select the objects of a group that you want to combine into a subgroup.
-4. Select the command "Group > Group" from the shortcut menu.
+4. Select the command "Group &gt; Group" from the shortcut menu.
 
 A subgroup with the objects is created.
 
 ##### Adding objects into an existing group
 
 1. Select the group to which you want to add objects.
-2. Press the <Shift> key and select the object you want to add to the group.
-3. Select the "Group > Add to group" command from the shortcut menu.
+2. Press the &lt;Shift&gt; key and select the object you want to add to the group.
+3. Select the "Group &gt; Add to group" command from the shortcut menu.
 
 The object is added to this group.
 
@@ -4610,16 +4610,16 @@ Select the "Ungroup" command to split a group into the original object fractions
 ##### Ungroup
 
 1. Select the group.
-2. Select the "Group > Ungroup" command from the shortcut menu.
+2. Select the "Group &gt; Ungroup" command from the shortcut menu.
 
 ##### Ungrouping a group within a group
 
 1. Select the higher-level group.
-2. Select the command "Group > Edit group" from the shortcut menu.
+2. Select the command "Group &gt; Edit group" from the shortcut menu.
 
    The group that you are editing is highlighted by a red frame.
 3. Select the lower-level group.
-4. Select the "Group > Ungroup" command from the shortcut menu.
+4. Select the "Group &gt; Ungroup" command from the shortcut menu.
 
 ##### Result
 
@@ -4658,8 +4658,8 @@ A screen with one group and at least one other object is opened.
 ##### Procedure
 
 1. Select the group.
-2. Press the <Shift> key and select the object you want to add to the group.
-3. Select the "Group > Add to group" command from the shortcut menu.
+2. Press the &lt;Shift&gt; key and select the object you want to add to the group.
+3. Select the "Group &gt; Add to group" command from the shortcut menu.
 
 ##### Result
 
@@ -4667,7 +4667,7 @@ The group consists of the original objects, and the newly-added objects. The add
 
 ##### Alternative procedure
 
-You can also edit groups in the "Layout" task card. Using drag&drop you can also easily edit hierarchical groups in the "Layers" palette.
+You can also edit groups in the "Layout" task card. Using drag&amp;drop you can also easily edit hierarchical groups in the "Layers" palette.
 
 ---
 
@@ -4694,11 +4694,11 @@ You do not have to remove the object from the group to edit an object in a group
 To remove an object from a group:
 
 1. Select the group.
-2. Select the command "Group > Edit group" from the shortcut menu.
+2. Select the command "Group &gt; Edit group" from the shortcut menu.
 
    The group you want to edit is highlighted by a red frame.
 3. Select all objects in the group that you want to remove from the group.
-4. Select the "Group > Remove from group" command from the shortcut menu.
+4. Select the "Group &gt; Remove from group" command from the shortcut menu.
 
 The objects are removed from the group.
 
@@ -4711,7 +4711,7 @@ The objects are removed from the group.
 To remove an object from the group, and from the screen:
 
 1. Select the group.
-2. Select the command "Group > Edit group" from the shortcut menu.
+2. Select the command "Group &gt; Edit group" from the shortcut menu.
 
    The group you want to edit is highlighted by a red frame.
 3. Select the objects in the group that you want to delete.
@@ -4752,8 +4752,8 @@ You have opened a screen that contains a group.
    ![Editing grouped objects](images/9130318731_DV_resource.Stream@PNG-de-DE.png)
 
    The properties of the group are displayed in the Inspector window.
-2. Change the position and size of the grouped objects in "Properties > Properties >Layout."
-3. Change the name of the group in "Properties > Properties > Miscellaneous."
+2. Change the position and size of the grouped objects in "Properties &gt; Properties &gt;Layout."
+3. Change the name of the group in "Properties &gt; Properties &gt; Miscellaneous."
 
 ##### Modifying the properties of an object within a group
 
@@ -4799,13 +4799,13 @@ This section contains information on the following topics:
 
 ##### Introduction
 
-For keyboard units without a mouse, the operator activates control objects using the <Tab> key. You can set up keyboard input to make the process easier to run, and to make sure that the operator enters all the necessary values. If you are using the keyboard, use the <Tab> key to activate the objects in a certain order, and to enter the necessary values.
+For keyboard units without a mouse, the operator activates control objects using the &lt;Tab&gt; key. You can set up keyboard input to make the process easier to run, and to make sure that the operator enters all the necessary values. If you are using the keyboard, use the &lt;Tab&gt; key to activate the objects in a certain order, and to enter the necessary values.
 
-For HMI devices without key, you can simulate the <Tab> key by configuring the "SimulateSystemKey" system function to a function key.
+For HMI devices without key, you can simulate the &lt;Tab&gt; key by configuring the "SimulateSystemKey" system function to a function key.
 
 ##### Operator authorizations and operator control enables
 
-If you configure an object for operator input with the <Tab> key, the object must have both an operator authorization, and an operator control enable.
+If you configure an object for operator input with the &lt;Tab&gt; key, the object must have both an operator authorization, and an operator control enable.
 
 ##### Editing the tab sequence
 
@@ -4846,14 +4846,14 @@ Change to the tab sequence mode to change the tab sequence. In this mode, the ta
 
 ##### Introduction
 
-To influence the process, the operator edits operable objects such as I/O fields or buttons in Runtime. You set up keyboard input to make the process easier to run, and to make sure that the operator enters all necessary values. When the operator makes entries, he uses the <Tab> key to activate the objects in a specified order and to enter the necessary values.
+To influence the process, the operator edits operable objects such as I/O fields or buttons in Runtime. You set up keyboard input to make the process easier to run, and to make sure that the operator enters all necessary values. When the operator makes entries, he uses the &lt;Tab&gt; key to activate the objects in a specified order and to enter the necessary values.
 
 ##### Keyboard access
 
 There are two methods of mouseless operator input:
 
-- Alpha cursor: The operator uses the <Tab> key in Runtime to activate objects of the "I/O field", and "text list" type only.
-- Tab cursor: Depending on the settings, the operator uses the <Tab> key in Runtime to activate all objects that permit an input.
+- Alpha cursor: The operator uses the &lt;Tab&gt; key in Runtime to activate objects of the "I/O field", and "text list" type only.
+- Tab cursor: Depending on the settings, the operator uses the &lt;Tab&gt; key in Runtime to activate all objects that permit an input.
 
 You define the cursor mode when Runtime starts. You set the cursor mode in the Inspector window of the screen.
 
@@ -4863,7 +4863,7 @@ When you have defined a hotkey, the operator can toggle the cursor mode between 
 
 ##### Operation in Runtime
 
-You use the tab sequence to define in which order the operator can activate objects. The default setting is operation using the <Tab> key. If required, define operation using a hotkey or the mouse.
+You use the tab sequence to define in which order the operator can activate objects. The default setting is operation using the &lt;Tab&gt; key. If required, define operation using a hotkey or the mouse.
 
 ---
 
@@ -4886,7 +4886,7 @@ You have opened a screen which contains multiple objects.
 ##### Procedure
 
 1. Click on a empty surface on the screen.
-2. In the Inspector window, click "Properties > Properties > Miscellaneous".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Miscellaneous".
 3. Select the desired cursor mode under "Tab sequence".
 
 ##### Result
@@ -4905,7 +4905,7 @@ The required cursor mode is active when Runtime starts.
 
 ##### Introduction
 
-If you configure an object for operator input with the <Tab> key, the object must have both an operator authorization, and an operator control enable.
+If you configure an object for operator input with the &lt;Tab&gt; key, the object must have both an operator authorization, and an operator control enable.
 
 ##### Requirement
 
@@ -4914,13 +4914,13 @@ You have opened a screen which contains at least one object.
 ##### Procedure
 
 1. Select the object.
-2. Select "Properties > Properties > Security" in the Inspector window.
+2. Select "Properties &gt; Properties &gt; Security" in the Inspector window.
 3. Select the operator authorization under "Authorization."
 4. Activate the authorization to operate.
 
 ##### Result
 
-The operator can use the <Tab> key in Runtime to select the object.
+The operator can use the &lt;Tab&gt; key in Runtime to select the object.
 
 ---
 
@@ -4934,7 +4934,7 @@ The operator can use the <Tab> key in Runtime to select the object.
 
 ##### Introduction
 
-In the Inspector window, you can define the object types that the operator activates using the <Tab> key in "Tab cursor" mode.
+In the Inspector window, you can define the object types that the operator activates using the &lt;Tab&gt; key in "Tab cursor" mode.
 
 ![Introduction](images/87580173707_DV_resource.Stream@PNG-en-US.png)
 
@@ -4947,7 +4947,7 @@ In the Inspector window, you can define the object types that the operator activ
 ##### Procedure
 
 1. Click on a empty surface on the screen.
-2. Select the object types to be used in Runtime using the <Tab> key in the inspector window under "Properties > Properties > Miscellaneous > Tab sequence object types".
+2. Select the object types to be used in Runtime using the &lt;Tab&gt; key in the inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Tab sequence object types".
 
    ![Procedure](images/61217822859_DV_resource.Stream@PNG-en-US.png)
 
@@ -4955,7 +4955,7 @@ In the Inspector window, you can define the object types that the operator activ
 
 ##### Result
 
-The user can activate all the defined objects in Runtime using the <Tab> key in "Tab cursor" mode.
+The user can activate all the defined objects in Runtime using the &lt;Tab&gt; key in "Tab cursor" mode.
 
 ---
 
@@ -4969,15 +4969,15 @@ The user can activate all the defined objects in Runtime using the <Tab> key in 
 
 ##### Introduction
 
-All operable objects can be reached in runtime with the <Tab> key. You use the "Tab sequence" command to define the order in which the operator can activate objects in runtime.
+All operable objects can be reached in runtime with the &lt;Tab&gt; key. You use the "Tab sequence" command to define the order in which the operator can activate objects in runtime.
 
 > **Note**
 >
-> You cannot reach objects with the "Output" or "Two states" mode in runtime with the <Tab> key.
+> You cannot reach objects with the "Output" or "Two states" mode in runtime with the &lt;Tab&gt; key.
 
 You can operate the screen in runtime:
 
-- Using the <Tab> key
+- Using the &lt;Tab&gt; key
 - Using the mouse
 - Using a configured hotkey
 
@@ -4992,14 +4992,14 @@ You can operate the screen in runtime:
 1. Select "Edit tab sequence" in the "Edit" menu.
 
    Tab sequence mode is activated. The tab sequence number is displayed for all objects that can be used. The tab sequence number is also displayed for hidden objects.
-2. Use edit the tab sequence mode, click the accessible objects in the order in which you want them to be activated using <Tab> in runtime.
+2. Use edit the tab sequence mode, click the accessible objects in the order in which you want them to be activated using &lt;Tab&gt; in runtime.
 
-   The following figure shows how the tab sequence is defined in the screen. In runtime, the <Tab> key first activates the alarm view (number 1), then the I/O field (number 2), and then the button (number 3):
-
-   ![Procedure](images/14553543819_DV_resource.Stream@PNG-de-DE.png)
+   The following figure shows how the tab sequence is defined in the screen. In runtime, the &lt;Tab&gt; key first activates the alarm view (number 1), then the I/O field (number 2), and then the button (number 3):
 
    ![Procedure](images/14553543819_DV_resource.Stream@PNG-de-DE.png)
-3. To exclude a screen object from the tab sequence, press the key combination <Shift+Ctrl> and click on the desired object.
+
+   ![Procedure](images/14553543819_DV_resource.Stream@PNG-de-DE.png)
+3. To exclude a screen object from the tab sequence, press the key combination &lt;Shift+Ctrl&gt; and click on the desired object.
 
    The tab sequence number is no longer displayed in the screen object. The screen object is now excluded from the tab sequence. The remaining tab sequence numbers are automatically decreased by 1.
 4. To reenter an excluded screen object in the tab sequence, repeat step 3.
@@ -5008,7 +5008,7 @@ You can operate the screen in runtime:
 
 ##### Result
 
-The operator selects the objects in the specified order in Runtime with the <Tab> key.
+The operator selects the objects in the specified order in Runtime with the &lt;Tab&gt; key.
 
 > **Note**
 >
@@ -5030,7 +5030,7 @@ The operator selects the objects in the specified order in Runtime with the <Tab
 
 Every object can be accessed in Runtime in the mode "Tab cursor". You use the "Tab sequence" command to define the order in which the operator can activate objects in Runtime. You can operate the process screen in runtime:
 
-- Using the <Tab> key
+- Using the &lt;Tab&gt; key
 - Using the mouse
 - Using a configured hotkey
 
@@ -5042,12 +5042,12 @@ Every object can be accessed in Runtime in the mode "Tab cursor". You use the "T
 
 ##### Procedure
 
-1. Select "Edit > Tab sequence > Edit tab cursor" or "Edit alpha cursor".
+1. Select "Edit &gt; Tab sequence &gt; Edit tab cursor" or "Edit alpha cursor".
 
    Tab sequence mode is activated. The tab sequence number is displayed for all objects that can be used. The tab sequence number is also displayed for hidden objects.
-2. Use edit the tab sequence mode, click the accessible objects in the order in which you want them to be activated using <Tab> in Runtime.
+2. Use edit the tab sequence mode, click the accessible objects in the order in which you want them to be activated using &lt;Tab&gt; in Runtime.
 
-   The following figure shows how the tab sequence is defined in the screen. In Runtime, the <Tab> key first activates the I/O field (number 2), and then the button (number 3).
+   The following figure shows how the tab sequence is defined in the screen. In Runtime, the &lt;Tab&gt; key first activates the I/O field (number 2), and then the button (number 3).
 
    ![Procedure](images/14553543819_DV_resource.Stream@PNG-de-DE.png)
 
@@ -5055,7 +5055,7 @@ Every object can be accessed in Runtime in the mode "Tab cursor". You use the "T
 
 ##### Result
 
-The operator selects the objects in the specified order in Runtime with the <Tab> key.
+The operator selects the objects in the specified order in Runtime with the &lt;Tab&gt; key.
 
 > **Note**
 >
@@ -5120,7 +5120,7 @@ Carry out the following steps in order to create a rectangle:
 
 ##### Task
 
-In this example, you insert and rename a rectangle. Do not use the special characters ?, ", /, \, *, <, > for the name.
+In this example, you insert and rename a rectangle. Do not use the special characters ?, ", /, \, *, &lt;, &gt; for the name.
 
 ##### Requirement
 
@@ -5132,7 +5132,7 @@ In this example, you insert and rename a rectangle. Do not use the special chara
 
 1. Click the "Basic objects" palette in the "Tools" task card.
 2. Drag the "Rectangle" object into the screen.
-3. In the Inspector window, select "Properties > Properties > Miscellaneous".
+3. In the Inspector window, select "Properties &gt; Properties &gt; Miscellaneous".
 4. Type in the new name "MyRectangle".
 
 ##### Result
@@ -5161,9 +5161,9 @@ In this example you configure a rectangle:
 To change the color of the rectangle:
 
 1. Select the rectangle.
-2. Define the background color in "Properties > Properties > Appearance > Background > Color" in the Inspector window.
+2. Define the background color in "Properties &gt; Properties &gt; Appearance &gt; Background &gt; Color" in the Inspector window.
 3. Select "Solid" as the fill pattern.
-4. Define the color for the border in "Properties > Properties > Appearance > Border > Color" in the Inspector window.
+4. Define the color for the border in "Properties &gt; Properties &gt; Appearance &gt; Border &gt; Color" in the Inspector window.
 5. Enter the value "2" for "width".
 6. Select "Solid" as the "Style".
 
@@ -5176,12 +5176,12 @@ The rectangle is red and has a black frame with a width of two pixels.
 To change the position and size of the rectangle:
 
 1. Select the rectangle.
-2. In the Inspector window, select "Properties > Properties > Layout".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 
    ![Repositioning and resizing the rectangle](images/87584240651_DV_resource.Stream@PNG-en-US.png)
 
    ![Repositioning and resizing the rectangle](images/87584240651_DV_resource.Stream@PNG-en-US.png)
-3. Set "20" for the both the X and Y coordinates under "Position & Size".
+3. Set "20" for the both the X and Y coordinates under "Position &amp; Size".
 4. Set "100" for the height and for the width.
 
 ##### Result
@@ -5257,7 +5257,7 @@ Three types are available for the text lists:
 
 ##### Multilingual texts
 
-You can configure multiple languages for the texts in a text list. The texts will then be displayed in the set language in Runtime. To this purpose you set the languages in the Project window under "Language support > Project languages."
+You can configure multiple languages for the texts in a text list. The texts will then be displayed in the set language in Runtime. To this purpose you set the languages in the Project window under "Language support &gt; Project languages."
 
 ##### Configuration steps
 
@@ -5357,7 +5357,7 @@ For each area text list you specify which texts are displayed at which value ran
    ![Procedure](images/70649488523_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/70649488523_DV_resource.Stream@PNG-en-US.png)
-2. Select the setting "Range" in "Properties > Properties > General > Value" in the Inspector window.
+2. Select the setting "Range" in "Properties &gt; Properties &gt; General &gt; Value" in the Inspector window.
 
    ![Procedure](images/76061051275_DV_resource.Stream@PNG-en-US.png)
 
@@ -5367,7 +5367,7 @@ For each area text list you specify which texts are displayed at which value ran
    - Enter the value "20" for "Max" for example.
    - For "Text", enter the text that is displayed in Runtime if the tag is within the specified value range.
 3. Click "Add" in the "Text list entries" table. A second list entry is created.
-4. Select the setting "Range" in "Properties > Properties > General > Value" in the Inspector window.
+4. Select the setting "Range" in "Properties &gt; Properties &gt; General &gt; Value" in the Inspector window.
 
    - Enter the value "21" for "Min" for example.
    - Enter the value "40" for "Max" for example.
@@ -5411,7 +5411,7 @@ For each area text list you specify which texts are displayed at which value ran
    ![Procedure](images/70649488523_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/70649488523_DV_resource.Stream@PNG-en-US.png)
-2. Select one of the following settings in the Inspector window under "Properties > Properties > General > Value".
+2. Select one of the following settings in the Inspector window under "Properties &gt; Properties &gt; General &gt; Value".
 
    ![Procedure](images/9150167563_DV_resource.Stream@PNG-en-US.png)
 
@@ -5462,12 +5462,12 @@ For each text list, you specify which text is displayed at which bit value.
    ![Procedure](images/70651185291_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/70651185291_DV_resource.Stream@PNG-en-US.png)
-2. Select the setting "Single value" in "Properties > Properties > General > Value" in the Inspector window.
+2. Select the setting "Single value" in "Properties &gt; Properties &gt; General &gt; Value" in the Inspector window.
 
    - Enter "0" for "Value."
    - Enter the text which is displayed in Runtime under "Text" if the bit tag is set to "0".
 3. Click "Add" in the "Text list entries" table. A second list entry is created.
-4. Select the setting "Single value" in "Properties > Properties > General > Value" in the Inspector window.
+4. Select the setting "Single value" in "Properties &gt; Properties &gt; General &gt; Value" in the Inspector window.
 
    - Enter "1" under "Value."
    - Enter the text which is to be displayed in Runtime under "Text" if the bit tag is set to "1".
@@ -5509,7 +5509,7 @@ For each bit number text list you specify which texts are displayed at which bit
    ![Procedure](images/70649488523_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/70649488523_DV_resource.Stream@PNG-en-US.png)
-2. Select the setting "Single value" in "Properties > Properties > General > Value" in the Inspector window.
+2. Select the setting "Single value" in "Properties &gt; Properties &gt; General &gt; Value" in the Inspector window.
 
    - Enter "10", for example, for "Value".
    - Under "Text", enter the text that is displayed in Runtime when the tag has the value "10".
@@ -5568,7 +5568,7 @@ Define a default value to prevent an empty display. A configured default value i
 
 1. Enable the text for the default entry in the "Default" column of the "Text list entries" table.   
    The value "Default entry" appears in the "Value" column of the text entry.
-2. You can also select the "Default" option under "Properties > General" in the inspector window.
+2. You can also select the "Default" option under "Properties &gt; General" in the inspector window.
 
 ##### Set bit with the least significance
 
@@ -5584,7 +5584,7 @@ This setting is deselected by default to maintain downward compatibility. The se
 
 ##### Multiline text list entries
 
-Use the <SHIFT>+<RETURN> shortcut to enter a line break in the text entry. Line breaks are represented by the "¶" paragraph mark.
+Use the &lt;SHIFT&gt;+&lt;RETURN&gt; shortcut to enter a line break in the text entry. Line breaks are represented by the "¶" paragraph mark.
 
 Multiline text list entries are only output in symbolic output fields as well as on buttons with multiple lines. In all other cases, multiline texts are displayed with the paragraph mark.
 
@@ -5603,7 +5603,7 @@ The output value and value application for text lists are specified in the displ
 
 ##### Procedure
 
-1. Select the text list which you want to have displayed in Runtime in "Properties > Properties > General > Text list" in the Inspection window.
+1. Select the text list which you want to have displayed in Runtime in "Properties &gt; Properties &gt; General &gt; Text list" in the Inspection window.
 2. Select the setting "Output" as the "Mode".
 3. Select the tag the value of which determines the display in the symbolic I/O field as "Tag".
 
@@ -5642,7 +5642,7 @@ The output value and value application for text lists are specified in the displ
 
 ##### Procedure
 
-1. Select the text list which you want to have displayed in Runtime in "Properties > Properties > General > Text list" in the Inspection window.
+1. Select the text list which you want to have displayed in Runtime in "Properties &gt; Properties &gt; General &gt; Text list" in the Inspection window.
 2. Select the setting "Output" as the "Mode".
 3. Select the tag the value of which determines the display in the symbolic I/O field as "Tag".
 
@@ -5842,7 +5842,7 @@ For each area graphics list you specify which graphics are displayed at which va
    ![Procedure](images/55963899531_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/55963899531_DV_resource.Stream@PNG-en-US.png)
-2. Select the settings "Range" in "Properties > Properties > General > Value" in the Inspector window:
+2. Select the settings "Range" in "Properties &gt; Properties &gt; General &gt; Value" in the Inspector window:
 
    - Enter the value "1" for "Min" for example.
    - Enter the value "20" for "Max" for example.
@@ -5852,7 +5852,7 @@ For each area graphics list you specify which graphics are displayed at which va
 
      ![Procedure](images/55964115979_DV_resource.Stream@PNG-en-US.png)
 3. Click "Add" in the "Graphics list entries" table. A further list entry is created.
-4. Select the settings "Single value" in "Properties > Properties > General > Value" in the Inspector window:
+4. Select the settings "Single value" in "Properties &gt; Properties &gt; General &gt; Value" in the Inspector window:
 
    - Enter the value "21" for example.
    - Select a graphic which is displayed in Runtime if the bit "21" is set in the tag.
@@ -5869,7 +5869,7 @@ For each area graphics list you specify which graphics are displayed at which va
 As an alternative to the drop-down menu, you can insert graphics from libraries or from your file system:
 
 1. Select a graphic in the library or in your file system.
-2. Drag-and-drop the graphic into the "Graphics list entries > Graphic" table.
+2. Drag-and-drop the graphic into the "Graphics list entries &gt; Graphic" table.
 
 ##### Result
 
@@ -5902,7 +5902,7 @@ For each area graphics list you specify which graphics are displayed at which va
    ![Procedure](images/72357797003_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/72357797003_DV_resource.Stream@PNG-en-US.png)
-2. Select the settings "Single value" in "Properties > Properties > General > Value" in the Inspector window:
+2. Select the settings "Single value" in "Properties &gt; Properties &gt; General &gt; Value" in the Inspector window:
 
    - Enter the value "0" for example.
    - Select a graphic which is displayed in Runtime if the bit "0" is set.
@@ -5913,9 +5913,9 @@ For each area graphics list you specify which graphics are displayed at which va
 3. If required, activate the "default entry".
 
    The graphic is always displayed when the tag has an undefined value. Only one default entry is possible per list.
-4. Activate "Properties > Properties > General > Use transparent color" in the inspector window and select a color.
-5. Activate "Properties > Properties > Flash > Use flash" in the inspector window.
-6. Select "Flash frequency > Slow" for example.
+4. Activate "Properties &gt; Properties &gt; General &gt; Use transparent color" in the inspector window and select a color.
+5. Activate "Properties &gt; Properties &gt; Flash &gt; Use flash" in the inspector window.
+6. Select "Flash frequency &gt; Slow" for example.
 7. Create further list entries for additional bit numbers of the same graphics list.
 
 **Note**
@@ -5923,7 +5923,7 @@ For each area graphics list you specify which graphics are displayed at which va
 As an alternative to the drop-down menu, you can insert graphics from libraries or from your file system:
 
 1. Select a graphic in the library or in your file system.
-2. Drag-and-drop the graphic into the "Graphics list entries > Graphic" table.
+2. Drag-and-drop the graphic into the "Graphics list entries &gt; Graphic" table.
 
 ##### Result
 
@@ -5950,12 +5950,12 @@ For each graphics list you specify which graphic is displayed at which bit value
    ![Procedure](images/72357797003_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/72357797003_DV_resource.Stream@PNG-en-US.png)
-2. Select the settings "Single value" in the inspector window "Properties > Properties > General > Value":
+2. Select the settings "Single value" in the inspector window "Properties &gt; Properties &gt; General &gt; Value":
 
    - Enter "0" as the value.
    - Select a graphic which is displayed in Runtime if the bit "0" is set in the tag.
 3. Click "Add" in the "Graphics list entries" table. A new list entry is created.
-4. Select "Properties > Properties > General > Value > Single value": in the Inspector window.
+4. Select "Properties &gt; Properties &gt; General &gt; Value &gt; Single value": in the Inspector window.
 
    - Enter "1" as the value.
    - Select a graphic which is displayed in Runtime if the bit "1" is set in the tag.
@@ -5965,7 +5965,7 @@ For each graphics list you specify which graphic is displayed at which bit value
 As an alternative to the drop-down menu, you can insert graphics from libraries or from your file system:
 
 1. Select a graphic in the library or in your file system.
-2. Drag-and-drop the graphic into the "Graphics list entries > Graphic" table.
+2. Drag-and-drop the graphic into the "Graphics list entries &gt; Graphic" table.
 
 ##### Result
 
@@ -5998,7 +5998,7 @@ For each bit number graphics list you specify which graphics are displayed at wh
    ![Procedure](images/72357797003_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/72357797003_DV_resource.Stream@PNG-en-US.png)
-2. Select the settings "Single value" in the Inspector window "Properties > Properties > General > Value":
+2. Select the settings "Single value" in the Inspector window "Properties &gt; Properties &gt; General &gt; Value":
 
    - Enter the value "1" for example.
    - Select a graphic which is displayed in Runtime if the bit "0" is set in the tag.
@@ -6016,7 +6016,7 @@ For each bit number graphics list you specify which graphics are displayed at wh
 As an alternative to the drop-down menu, you can insert graphics from libraries or from your file system:
 
 1. Select a graphic in the library or in your file system.
-2. Drag-and-drop the graphic into the "Graphics list entries > Graphic" table.
+2. Drag-and-drop the graphic into the "Graphics list entries &gt; Graphic" table.
 
 > **Note**
 >
@@ -6061,7 +6061,7 @@ Define a default value to prevent an empty display. A configured default value i
 
 1. Enable the graphic for the default entry in the "Default" column of the "Graphics list entries" table.   
    The value "Default entry" appears in the "Value" column of the entry.
-2. You can also select the "Default" option under "Properties > General" in the inspector window.
+2. You can also select the "Default" option under "Properties &gt; General" in the inspector window.
 
 ##### Set bit with the least significance
 
@@ -6088,7 +6088,7 @@ The output value and value application for graphics list are specified in the di
 
 ##### Procedure
 
-1. Select the graphics list the graphics of which you want to have displayed in Runtime in "Properties > Properties > General > Graphics list" in the Inspector window.
+1. Select the graphics list the graphics of which you want to have displayed in Runtime in "Properties &gt; Properties &gt; General &gt; Graphics list" in the Inspector window.
 2. Select the "Input/output" setting for "Mode".
 
    ![Procedure](images/74906063755_DV_resource.Stream@PNG-en-US.png)
@@ -6131,7 +6131,7 @@ You use the C text list, for example, to display texts in a screen object.
 
 ##### Multilingual texts
 
-You can configure multiple languages for the texts in a C text list. The texts will then be displayed in the set language in Runtime. To this purpose you set the languages in the Project window under "Language support > Project languages".
+You can configure multiple languages for the texts in a C text list. The texts will then be displayed in the set language in Runtime. To this purpose you set the languages in the Project window under "Language support &gt; Project languages".
 
 ##### Configuration steps
 
@@ -6301,7 +6301,7 @@ The selection of the supported animations depends on the HMI device and the sele
 
 You can configure the "Variable binding" type of animation several times for one object.
 
-You configure animations in the "Properties > Animations" inspector window.
+You configure animations in the "Properties &gt; Animations" inspector window.
 
 ![Animations](images/74855728139_DV_resource.Stream@PNG-en-US.png)
 
@@ -6311,7 +6311,7 @@ Operable objects also react to events, such as a mouse click.
 
 You configure a function list with system functions on an event. The system functions are processed as a reaction to the triggered event.
 
-You configure events in the "Properties > Events" inspector window.
+You configure events in the "Properties &gt; Events" inspector window.
 
 ![Events](images/111848724747_DV_resource.Stream@PNG-en-US.png)
 
@@ -6335,7 +6335,7 @@ The inspector window offers you the possibilities for dynamization of screen obj
 
 ##### Property list
 
-With the ![Property list](images/25618366987_DV_resource.Stream@PNG-de-DE.png) button you go to the properties list in the "Properties > Properties" inspector window.
+With the ![Property list](images/25618366987_DV_resource.Stream@PNG-de-DE.png) button you go to the properties list in the "Properties &gt; Properties" inspector window.
 
 In the property list, you set any dynamization for the individual object properties using tags or local C and VB scripts. You can, for example, dynamically change the background color of an object.
 
@@ -6365,7 +6365,7 @@ You have two different options for animating objects.
 
 You configure animations
 
-- in the inspector window under "Properties > Animations",
+- in the inspector window under "Properties &gt; Animations",
 - in the "Animations" task card.
 
 WinCC helps you to implement dynamization using predefined animations. If you want to animate an object, first configure the desired animation with the tools of the toolbox or in the object's inspector window. Then customize the animation in the Inspector window to suit the requirements of your project.
@@ -6385,7 +6385,7 @@ The selection of the supported animations depends on the device and the selected
 
 You can configure the "Tag binding" and "Property animation" types of animation several times for one object.
 
-You configure animations in the "Properties > Animations" inspector window.
+You configure animations in the "Properties &gt; Animations" inspector window.
 
 ![Animations](images/74855728139_DV_resource.Stream@PNG-en-US.png)
 
@@ -6395,7 +6395,7 @@ Operator control enabled objects also react to events, such as a mouse click.
 
 You configure a function list with system functions or local scripts on an event. The system functions or the local script are processed as a reaction to the triggered event.
 
-You configure events in the "Properties > Events" inspector window.
+You configure events in the "Properties &gt; Events" inspector window.
 
 ![Events](images/111848724747_DV_resource.Stream@PNG-en-US.png)
 
@@ -6465,7 +6465,7 @@ Use predefined animations to dynamize screen objects.
 
 ##### Procedure in the inspector window
 
-1. In the Inspector window, select "Properties > Animations".
+1. In the Inspector window, select "Properties &gt; Animations".
 2. Select the animation you want to use.
 3. Click the ![Procedure in the inspector window](images/21534885131_DV_resource.Stream@PNG-de-DE.png)button.
 
@@ -6528,7 +6528,7 @@ Areas or single values of the tag are observed in Runtime depending on the selec
 >
 > **"Multiple bits" selection**
 >
-> If you use the "Multiple bits" option, also select "Bit selection for appearance" option in the runtime settings under "Screens > General".
+> If you use the "Multiple bits" option, also select "Bit selection for appearance" option in the runtime settings under "Screens &gt; General".
 
 ##### Requirement
 
@@ -6539,14 +6539,14 @@ Areas or single values of the tag are observed in Runtime depending on the selec
 
 ##### Procedure
 
-1. In the Inspector window, select "Properties > Animations".
+1. In the Inspector window, select "Properties &gt; Animations".
 
    The animations available for the selected object are displayed.
 2. Select the animation "Appearance" and click the ![Procedure](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.
 
    The parameters of the animation are displayed.
-3. Select a tag in "Tag > Name".
-4. Select "Type > Range" for example.
+3. Select a tag in "Tag &gt; Name".
+4. Select "Type &gt; Range" for example.
 5. Click "Add" in the table.
 6. Enter the tag interval "0 - 20" in the "Range" column for example.
 7. For "Foreground color" and "Background color", select the color the object is to acquire in Runtime when the tag reaches the interval.
@@ -6587,7 +6587,7 @@ You can only program one type of movement for each object.
 1. Select the screen object you want to control dynamically.
 
    The object properties are displayed in the Inspector window.
-2. In the Inspector window, select "Properties > Animations".
+2. In the Inspector window, select "Properties &gt; Animations".
 
    The animations available for the selected object are displayed.
 3. Select "Horizontal movement" and click the ![Procedure](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.
@@ -6635,7 +6635,7 @@ The object is moved respectively in x direction and y direction with "Direct mov
 1. Select the screen object you want to control dynamically.
 
    The object properties are displayed in the Inspector window.
-2. In the Inspector window, select "Properties > Animations".
+2. In the Inspector window, select "Properties &gt; Animations".
 3. Select "Direct movement" and click the ![Configuring "Direct movement"](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.
 
    The parameters of the animation are displayed.
@@ -6676,7 +6676,7 @@ You can use this dynamic control to restrict operator access to an operating ele
 1. Select the operating element in the screen that you want to control dynamically.
 
    The object properties are displayed in the Inspector window.
-2. In the Inspector window, select "Properties > Animations".
+2. In the Inspector window, select "Properties &gt; Animations".
 
    The animations available for the selected object are displayed.
 3. Select "Control enable" and click the ![Procedure](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.
@@ -6691,7 +6691,7 @@ You can use this dynamic control to restrict operator access to an operating ele
 
    - For "From:" enter e.g. the value "0"
    - For "To:" enter e.g. the value "100"
-6. Activate "Control enable > Activated".
+6. Activate "Control enable &gt; Activated".
 
 ##### Result
 
@@ -6725,7 +6725,7 @@ The "Simple recipe view" and "Simple alarm view" objects are always visible.
 1. Select the screen object you want to control dynamically.
 
    The object properties are displayed in the Inspector window.
-2. In the Inspector window, select "Properties > Animations".
+2. In the Inspector window, select "Properties &gt; Animations".
 
    The animations available for the selected object are displayed.
 3. Select "Visibility" and click the ![Procedure](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.
@@ -6759,7 +6759,7 @@ The screen object is shown or hidden in Runtime depending on the tag value.
 
 When you object property an object property with a tag, the object property is changed in Runtime depending on the tag value.
 
-The following example shows the tag binding in the "Properties > Animations" inspector window. If you have configured tag binding it is also visible in the property list or in the property pages in the inspector window.
+The following example shows the tag binding in the "Properties &gt; Animations" inspector window. If you have configured tag binding it is also visible in the property list or in the property pages in the inspector window.
 
 ##### Requirement
 
@@ -6772,13 +6772,13 @@ The following example shows the tag binding in the "Properties > Animations" ins
 1. Select the screen object whose properties you want to control dynamically.
 
    The object properties are displayed in the Inspector window.
-2. In the Inspector window, select "Properties > Animation".
+2. In the Inspector window, select "Properties &gt; Animation".
 
    The animations available for the selected object are displayed.
 3. Select "Tag connection" and click the ![Procedure](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.
 
    The parameters of the animation are displayed.
-4. Select the object property that you want to dynamize in "Properties > Animation > Tag binding > Property > Name", e.g. "Background color".
+4. Select the object property that you want to dynamize in "Properties &gt; Animation &gt; Tag binding &gt; Property &gt; Name", e.g. "Background color".
 5. Select a tag.
 
    ![Procedure](images/60909759883_DV_resource.Stream@PNG-en-US.png)
@@ -6845,7 +6845,7 @@ For a multiple selection, the animations that are configured for the reference o
 
 ##### Application example
 
-Select a button, and a circle at the same time. The button is the reference object. The "Appearance" animation is already configured for the button, so it appears in the Inspector window of the multiple selection. When you activate "Properties > Animations >Appearance > Flashing" in the inspector window, the settings of the "Appearance" animation apply for the button and for the circle.
+Select a button, and a circle at the same time. The button is the reference object. The "Appearance" animation is already configured for the button, so it appears in the Inspector window of the multiple selection. When you activate "Properties &gt; Animations &gt;Appearance &gt; Flashing" in the inspector window, the settings of the "Appearance" animation apply for the button and for the circle.
 
 ##### Configuring new animations for multiple objects
 
@@ -6882,11 +6882,11 @@ With the property animation you dynamize the properties of screens and screen ob
 >
 > **Dynamizing several object properties at the same time**
 >
-> You can dynamize multiple object properties with animation. The order of processing in runtime is not necessarily the same as the order of property configuration in the Inspector window under "Properties > Animation".
+> You can dynamize multiple object properties with animation. The order of processing in runtime is not necessarily the same as the order of property configuration in the Inspector window under "Properties &gt; Animation".
 
 > **Note**
 >
-> If you use the operands "=", ">", "<", "!=" in the expression, note the following:  
+> If you use the operands "=", "&gt;", "&lt;", "!=" in the expression, note the following:  
 > The value for "true" = -1   
 > The value for "false" = 0
 >
@@ -6982,14 +6982,14 @@ When you dynamize an object property with a tag, the object property is changed 
 
 ##### Select animation type, tag and type
 
-1. Click "Properties > Animations" in the Inspector window.  
+1. Click "Properties &gt; Animations" in the Inspector window.  
    The animations available for the selected object are displayed.
 2. Select "Animate property" and click the ![Select animation type, tag and type](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.  
    The animation parameters are displayed.
-3. Enter the name "Light" under "Settings > Name".
+3. Enter the name "Light" under "Settings &gt; Name".
 4. Select "Range" as type.
-5. Activate "Process > Tag".
-6. Select "Tag1" under "Process > Tag".
+5. Activate "Process &gt; Tag".
+6. Select "Tag1" under "Process &gt; Tag".
 
 ##### Select object properties and ranges
 
@@ -7047,14 +7047,14 @@ When you dynamize an object property with a tag, the object property is changed 
 
 ##### Select animation type, expression and type
 
-1. Click "Properties > Animations" in the Inspector window.  
+1. Click "Properties &gt; Animations" in the Inspector window.  
    The animations available for the selected object are displayed.
 2. Select "Animate property" and click the ![Select animation type, expression and type](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.  
    The animation parameters are displayed.
-3. Enter the name "Visibility" under "Settings > Name".
+3. Enter the name "Visibility" under "Settings &gt; Name".
 4. Select "Bool" as type.
-5. Activate "Process > Expression".
-6. Enter the following expression in the field: "(('TCelsius’ × 9) / 5) + 32 < 100".
+5. Activate "Process &gt; Expression".
+6. Enter the following expression in the field: "(('TCelsius’ × 9) / 5) + 32 &lt; 100".
 
 **Note**
 
@@ -7103,16 +7103,16 @@ When you dynamize an object property with a tag, the object property is changed 
 
 ##### Select animation type, tag and type
 
-1. Click "Properties > Animations" in the Inspector window.
+1. Click "Properties &gt; Animations" in the Inspector window.
 
    The animations available for the selected object are displayed.
 2. Select "Animate property" and click the ![Select animation type, tag and type](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.
 
    The parameters of the animation are displayed.
-3. Enter the name "Fill level" under "Settings > Name".
+3. Enter the name "Fill level" under "Settings &gt; Name".
 4. Select "Direct" as type".
-5. Activate "Process > Tag".
-6. Select "Tag1" under "Process > Tag".
+5. Activate "Process &gt; Tag".
+6. Select "Tag1" under "Process &gt; Tag".
 
 ##### Result
 
@@ -7139,15 +7139,15 @@ When you dynamize an object property with a tag, the object property is changed 
 
 ##### Select animation type, tag and type
 
-1. Click "Properties > Animations" in the Inspector window.  
+1. Click "Properties &gt; Animations" in the Inspector window.  
    The animations available for the selected object are displayed.
 2. Select "Animate property" and click the ![Select animation type, tag and type](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.  
    The animation parameters are displayed.
-3. Enter the name "Border color" under "Settings > Name".
+3. Enter the name "Border color" under "Settings &gt; Name".
 4. Select "Single bit" as the type.
 5. Select the bit position, for example, "4".
-6. Activate "Process > Tag".
-7. Select the "Tag_1" tag under "Process > Tag".
+6. Activate "Process &gt; Tag".
+7. Select the "Tag_1" tag under "Process &gt; Tag".
 
 ##### Select object property with the type "Single bit"
 
@@ -7155,7 +7155,7 @@ When you dynamize an object property with a tag, the object property is changed 
    A selection list opens.
 2. Select the "Border color" property, for example. A column "Border color" is added to the table.
 3. Enter the value "0" in the "Value" column.   
-   The color you configured under "Properties > Appearance > Border > Color" is displayed in the "Border color" column.
+   The color you configured under "Properties &gt; Appearance &gt; Border &gt; Color" is displayed in the "Border color" column.
 4. Enter the value "1" in the "Value" column.
 5. In the "Border color" column, select the alternative border color, for example, blue.
 
@@ -7182,14 +7182,14 @@ When you dynamize an object property with a tag, the object property is changed 
 
 ##### Select animation type, tag and type
 
-1. Click "Properties > Animations" in the Inspector window.  
+1. Click "Properties &gt; Animations" in the Inspector window.  
    The animations available for the selected object are displayed.
 2. Select "Animate property" and click the ![Select animation type, tag and type](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.  
    The animation parameters are displayed.
-3. Enter the name "Color" under "Settings > Name".
+3. Enter the name "Color" under "Settings &gt; Name".
 4. Select "Multiple bits" as the type.
-5. Activate "Process > Tag".
-6. Select the "Tag_1" tag under "Process > Tag".
+5. Activate "Process &gt; Tag".
+6. Select the "Tag_1" tag under "Process &gt; Tag".
 
 ##### Select object property with the type "Multiple bits"
 
@@ -7197,7 +7197,7 @@ When you dynamize an object property with a tag, the object property is changed 
    A selection list opens.
 2. Select the property "Border color". A column "Border color" is added to the table.
 3. Add the value "0" in the "Value" column.  
-   The color you configured under "Properties > Appearance > Border > Color" is displayed in the "Border color" column.
+   The color you configured under "Properties &gt; Appearance &gt; Border &gt; Color" is displayed in the "Border color" column.
 4. In the second row, enter the value "5", for example, in the "Value" column.
 5. In the "Border color" column, select a border color, for example, blue.
 6. In the third row, enter the value "8" in the "Value" column.
@@ -7453,7 +7453,7 @@ The inspector window is open.
 ##### Procedure
 
 1. Select the button.
-2. Click "Properties> Events" in the Inspector window.
+2. Click "Properties&gt; Events" in the Inspector window.
 3. Select the "Click" event.
 4. Click "Add function" in the table.
 5. Select the "ShowAlarmWindow" system function.
@@ -7484,7 +7484,7 @@ In this example, you configure a button that can be used to toggle between multi
 
 ##### Procedure
 
-1. In the Inspector window, select "Properties > Events > Press".
+1. In the Inspector window, select "Properties &gt; Events &gt; Press".
 2. Click on "Add function" in the table.
 3. Select the "SetLanguage" system function and the "Switch" setting.
 
@@ -7892,12 +7892,12 @@ The graphic is displayed next to the function key.
 #### Procedure
 
 1. Click an F-key of the HMI device.
-2. In the Inspector window, click "Properties > Properties > General".
+2. In the Inspector window, click "Properties &gt; Properties &gt; General".
 
    ![Procedure](images/66938705803_DV_resource.Stream@PNG-en-US.PNG)
 
    ![Procedure](images/66938705803_DV_resource.Stream@PNG-en-US.PNG)
-3. Select a tag under "LED tag" in the "General > Settings" area.
+3. Select a tag under "LED tag" in the "General &gt; Settings" area.
 4. Under "Bit" enter the correct bit number.
 
    The correct bit number depends on the HMI device and the input and output assignments on the HMI device.
@@ -7985,9 +7985,9 @@ The objects of a single layer are also arranged hierarchically. When you create 
 
 #### Principle of the layer technique
 
-Always one layer of the 32 layers is active. New objects you add to the screen are always assigned to the active layer. The number of the active level is displayed in the inspector window of the screen and in the "Layout > Layers" task card.
+Always one layer of the 32 layers is active. New objects you add to the screen are always assigned to the active layer. The number of the active level is displayed in the inspector window of the screen and in the "Layout &gt; Layers" task card.
 
-When you open a screen, all 32 layers of the screen are displayed. You can hide all the layers except for the active layer in the inspector window of the screen and in the "Layout > Layers" task card. You then explicitly edit objects of the active layer.
+When you open a screen, all 32 layers of the screen are displayed. You can hide all the layers except for the active layer in the inspector window of the screen and in the "Layout &gt; Layers" task card. You then explicitly edit objects of the active layer.
 
 In the tree view of the "Layers" palette in the "Layout" task card, you administer layers and objects with drag-and-drop and the context menu.
 
@@ -8050,7 +8050,7 @@ By default, a new object is inserted on the active layer. You can, however, assi
 1. Select the object in the screen.
 
    The object properties are displayed in the Inspector window.
-2. Enter the layer to which you want to move the object in "Properties > Properties > Miscellaneous > Layer" in the Inspector window.
+2. Enter the layer to which you want to move the object in "Properties &gt; Properties &gt; Miscellaneous &gt; Layer" in the Inspector window.
 
 Alternatively, select the object from the "Layout" task card and drag it to the required layer.
 
@@ -8059,7 +8059,7 @@ Alternatively, select the object from the "Layout" task card and drag it to the 
 1. Select the object in the screen.
 
    The object properties are displayed in the Inspector window.
-2. To move the object to the front or back, select the "Order" > "Move backward" or "Move forward" command from the shortcut menu.
+2. To move the object to the front or back, select the "Order" &gt; "Move backward" or "Move forward" command from the shortcut menu.
 
    Alternatively, use the ![Changing the order of objects](images/14156860427_DV_resource.Stream@PNG-de-DE.png) or ![Changing the order of objects](images/14157072907_DV_resource.Stream@PNG-de-DE.png) button in the toolbar.
 
@@ -8079,7 +8079,7 @@ The object is assigned to the selected layer, and positioned at the top of the l
 
 The screen objects are always assigned to one of the 32 layers. There is always an active layer in the screen. New objects you add to the screen are always assigned to the active layer.
 
-The number of the active layer is indicated in the "Layer" toolbar. The active layer is indicated by the ![Introduction](images/61118622091_DV_resource.Stream@PNG-de-DE.png) icon in the "Layout > Layers" task card.
+The number of the active layer is indicated in the "Layer" toolbar. The active layer is indicated by the ![Introduction](images/61118622091_DV_resource.Stream@PNG-de-DE.png) icon in the "Layout &gt; Layers" task card.
 
 Layer 0 is the active layer when you start programming. You can activate a different layer during configuration, if necessary.
 
@@ -8090,12 +8090,12 @@ Layer 0 is the active layer when you start programming. You can activate a diffe
 
 #### Procedure
 
-1. Click "Properties > Properties > Layers" in the Inspector window of the current screen.
-2. Enter the layer number in "Settings > Active layer".
+1. Click "Properties &gt; Properties &gt; Layers" in the Inspector window of the current screen.
+2. Enter the layer number in "Settings &gt; Active layer".
 
 #### Alternative procedure
 
-1. Select "Layout > Layers" in the "Layout" task card.
+1. Select "Layout &gt; Layers" in the "Layout" task card.
 2. Select the "Set to active" command from the shortcut menu of a layer.
 
 #### Result
@@ -8123,7 +8123,7 @@ You can show or hide the layers of a screen as required. You specify the layers 
 
 #### Procedure
 
-1. Select the layer that you want to hide or show in the "Layout > Layers" task card.
+1. Select the layer that you want to hide or show in the "Layout &gt; Layers" task card.
 2. Click one of the icons next to the corresponding layer:
 
    - ![Procedure](images/14157090443_DV_resource.Stream@PNG-de-DE.png) A shown layer is hidden
@@ -8138,7 +8138,7 @@ The active layer cannot be hidden.
 1. Click in an area of the screen that does not contain an object.
 
    The screen properties are shown in the Inspector window.
-2. In the Inspector window, select "Properties > Properties > Layers":
+2. In the Inspector window, select "Properties &gt; Properties &gt; Layers":
 
    ![Alternative procedure](images/61118800011_DV_resource.Stream@PNG-en-US.png)
 
@@ -8171,7 +8171,7 @@ You can show or hide the layers of a screen as required. You define whether the 
 
 #### Procedure
 
-1. In the Inspector window, select "Properties > Properties > Layers":
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layers":
 2. Deactivate the layers that are not to be displayed in the Engineering System.
 3. Deactivate the layers that are not to be displayed in runtime.
 
@@ -8202,7 +8202,7 @@ A screen is open.
 #### Hiding layers
 
 1. Click in an area of the screen that does not contain an object.
-2. Activate "Properties > Properties > Hide/Show > Activate for layers" in the Inspector window.
+2. Activate "Properties &gt; Properties &gt; Hide/Show &gt; Activate for layers" in the Inspector window.
 
    ![Hiding layers](images/87677404683_DV_resource.Stream@PNG-en-US.png)
 
@@ -8212,7 +8212,7 @@ A screen is open.
 #### Hiding objects
 
 1. Click in an area of the screen that does not contain an object.
-2. Activate "Properties > Properties > Hide/Show > Activate for layers" in the Inspector window.
+2. Activate "Properties &gt; Properties &gt; Hide/Show &gt; Activate for layers" in the Inspector window.
 
    ![Hiding objects](images/87677444747_DV_resource.Stream@PNG-en-US.png)
 
@@ -8247,7 +8247,7 @@ When you create a screen, the 32 layers are numbered consecutively by default. T
 1. Click in an area of the screen that does not contain an object.
 
    The screen properties are shown in the Inspector window.
-2. In the Inspector window, select "Properties > Properties > Layers".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Layers".
 
    ![Procedure](images/61118795275_DV_resource.Stream@PNG-en-US.png)
 
@@ -8605,8 +8605,8 @@ The length of the name of a property of the faceplate together with the length o
 You have created a new property.
 
 1. Click an object in the "Contained objects" list.
-2. Select a property, e.g. "Appearance > Background color".
-3. Move the property from the "Contained objects" list to the desired property in the "Interface" list by drag&drop.
+2. Select a property, e.g. "Appearance &gt; Background color".
+3. Move the property from the "Contained objects" list to the desired property in the "Interface" list by drag&amp;drop.
 
    The connection is displayed as a colored line.
 
@@ -8626,7 +8626,7 @@ The property from the "Contained objects" list must be in concordance with the d
 ##### Deleting a connection
 
 1. Click the connection that you wish to delete.
-2. In the shortcut menu select the "Delete" command or use the <DEL> key.
+2. In the shortcut menu select the "Delete" command or use the &lt;DEL&gt; key.
 
    The connection is deleted.
 
@@ -8643,7 +8643,7 @@ To set the HMI user data types and the PLC user data types as properties of the 
    ![Interconnecting user data types with faceplates](images/72000632331_DV_resource.Stream@PNG-en-US.png)
 
    ![Interconnecting user data types with faceplates](images/72000632331_DV_resource.Stream@PNG-en-US.png)
-2. In the Inspector window under "Properties > Properties > General", select the interface property of the faceplate in the "Tag" selection list.
+2. In the Inspector window under "Properties &gt; Properties &gt; General", select the interface property of the faceplate in the "Tag" selection list.
 
    ![Interconnecting user data types with faceplates](images/72012763019_DV_resource.Stream@PNG-en-US.png)
 
@@ -8692,7 +8692,7 @@ The category including the properties is deleted from the "Interface" list. Exis
 ##### Moving a property to another category
 
 1. Select a property in the "Interface" list.
-2. Move the property to a new category by "drag&drop".
+2. Move the property to a new category by "drag&amp;drop".
 
 You have moved the property to a new category.
 
@@ -8740,9 +8740,9 @@ In the following situations, you may not assign an array element or a multiplex 
 ##### Procedure
 
 1. Click "Add" in the "HMI tags" table. A new tag is created in the faceplate type.
-2. Open "Properties > Events" in the inspector window if necessary. You configure the "Value change" event on the tag for example.
+2. Open "Properties &gt; Events" in the inspector window if necessary. You configure the "Value change" event on the tag for example.
 3. In the work area, select the object to which you want to assign this tag, e.g. an I/O field.
-4. Select the tag in the inspector window of the I/O field "Properties > Properties > General > Process > Tag".
+4. Select the tag in the inspector window of the I/O field "Properties &gt; Properties &gt; General &gt; Process &gt; Tag".
 
 **Note**
 
@@ -8775,14 +8775,14 @@ In the configuration area of the "Faceplates" editor you create scripts which yo
 ##### Procedure
 
 1. Click the "Scripts" tab in the configuration area of the faceplate.
-2. Double click "Faceplate scripts > Add VB script".
+2. Double click "Faceplate scripts &gt; Add VB script".
 3. Write the program code.
-4. Press the shortcut keys <CTRL+J> to Include tags of the faceplate type in the script. The object list opens.
+4. Press the shortcut keys &lt;CTRL+J&gt; to Include tags of the faceplate type in the script. The object list opens.
 5. Click "HMI tags".
 
    All tags of the faceplate type are displayed in the object list.
 6. Select a tag and confirm the selection.
-7. Press the shortcut keys <CTRL+J> to use properties of the faceplate type in the script. The object list opens.
+7. Press the shortcut keys &lt;CTRL+J&gt; to use properties of the faceplate type in the script. The object list opens.
 8. Click "Properties".
 
    All dynamic properties of the "Interface" list for the faceplate type are displayed in the object list.
@@ -8906,9 +8906,9 @@ In a faceplate type, you connect a text list with an object included in the face
 5. Define the values or range of values for the text list.
 6. Enter a text for every value range which is displayed in Runtime when the tag is within the specified value range.
 7. Select an object, e.g. a symbolic I/O field, in the work area of the faceplate type.
-8. In the Inspector window of the object, enable "Properties > Properties > General > Label > Text list".
+8. In the Inspector window of the object, enable "Properties &gt; Properties &gt; General &gt; Label &gt; Text list".
 9. Select the "Text list" from the selection list.
-10. Select a tag of the faceplate type under "Process > Tag".
+10. Select a tag of the faceplate type under "Process &gt; Tag".
 
 ##### Result
 
@@ -8948,9 +8948,9 @@ In a graphics list, specific graphics are assigned to possible values of a tag. 
 5. Define the values or range of values for the graphics list.
 6. Select a graphic for every value or value range which is displayed in runtime when the tag is within the specified value range.
 7. Select an object, e.g. a graphic I/O field, in the work area of the faceplate type.
-8. Activate "Properties > Properties > General > Contents > Graphics list" in the object's Inspector window.
+8. Activate "Properties &gt; Properties &gt; General &gt; Contents &gt; Graphics list" in the object's Inspector window.
 9. Select the "Graphics list" from the selection list.
-10. Select a tag of the faceplate type in "Process > Tag".
+10. Select a tag of the faceplate type in "Process &gt; Tag".
 
 ##### Result
 
@@ -8990,7 +8990,7 @@ If you use several languages in your project, you can translate individual texts
 Proceed as follows to translate individual texts:
 
 1. Open the "Tasks" task card.
-2. Click the ![Procedure](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button under "Languages & Resources > Editing language". The "Project languages" editor opens.
+2. Click the ![Procedure](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button under "Languages &amp; Resources &gt; Editing language". The "Project languages" editor opens.
 3. Activate at least two project languages.
 4. Open the "Texts" tab in the "Faceplates" editor.
 
@@ -9129,7 +9129,7 @@ In the faceplate type, specify the response of the faceplate when it is resized.
 
 ##### Specifying the response to resizing
 
-1. Activate "Properties > Properties > Layout > Fit to size > Auto-size".
+1. Activate "Properties &gt; Properties &gt; Layout &gt; Fit to size &gt; Auto-size".
 2. Select the "Fixed aspect ratio" setting, for example.
 
    This setting retains the aspect ratio when you resize the faceplate.
@@ -9140,7 +9140,7 @@ In the faceplate type, specify the response of the faceplate when it is resized.
 
 You have specified how the faceplate responds when its size in a screen is changed. You can change the response for a particular faceplate.
 
-Select a faceplate in the screen. Select the required setting in "Properties > Properties > Layout > Characteristics" in the Inspector window.
+Select a faceplate in the screen. Select the required setting in "Properties &gt; Properties &gt; Layout &gt; Characteristics" in the Inspector window.
 
 #### Resizing a faceplate (RT Professional)
 
@@ -9156,7 +9156,7 @@ In the faceplate type, specify the response of the faceplate when it is resized.
 
 ##### Specifying the response to resizing
 
-1. Activate "Properties > Properties > Layout > Fit to size > Auto-size."
+1. Activate "Properties &gt; Properties &gt; Layout &gt; Fit to size &gt; Auto-size."
 2. Select one of the following options for "Response to resizing":
 
    - Fixed size
@@ -9181,7 +9181,7 @@ In the faceplate type, specify the response of the faceplate when it is resized.
 
 You have specified how the faceplate responds when its size in a screen is changed. You can change the response for a particular faceplate.
 
-Select a faceplate in the screen. Select the required setting in "Properties > Properties > Layout > Characteristics" in the Inspector window.
+Select a faceplate in the screen. Select the required setting in "Properties &gt; Properties &gt; Layout &gt; Characteristics" in the Inspector window.
 
 #### Creating an instance of the faceplate type (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -9214,7 +9214,7 @@ The faceplate type is stored in the project library. If you use the faceplate ty
 
 ##### Procedure
 
-1. Move the desired faceplate type from a library to the screen by drag&drop.
+1. Move the desired faceplate type from a library to the screen by drag&amp;drop.
 
 ##### Result
 
@@ -9333,7 +9333,7 @@ You Include tags and scripts which you have created in the project for the facep
 ##### Procedure
 
 1. Select the faceplate.
-2. In the Inspector window, open "Properties > Animation".
+2. In the Inspector window, open "Properties &gt; Animation".
 
    The animations available for the selected object are displayed.
 3. Select "Horizontal movement" and click the ![Procedure](images/21534885131_DV_resource.Stream@PNG-de-DE.png) button.
@@ -9425,7 +9425,7 @@ For the example you require objects with the following settings:
 
 ##### Procedure
 
-1. In the toolbox, click the individual objects and drag&drop the objects into the screen.
+1. In the toolbox, click the individual objects and drag&amp;drop the objects into the screen.
 2. Set the properties as shown above.
 3. Select all objects.
 4. Select the "Create faceplate type" command in the shortcut menu of the multiple selection.
@@ -9470,7 +9470,7 @@ The "KMToMeter" property is displayed in the "Interface" list. The symbol identi
 
 1. Click "Tags" in the configuration area.
 2. Click "Add" in the "HMI tags" table. A new tag is added to the table. The inspector window of the tag is opened.
-3. In the Inspector window, select "Properties > Properties > General":
+3. In the Inspector window, select "Properties &gt; Properties &gt; General":
 4. Enter "BB_Tag" as the name. Select the "Int" data type.
 
 ##### Result
@@ -9491,9 +9491,9 @@ You create a script that converts the value of a length measuring system from ki
 
 ##### Procedure
 
-1. Click "Scripts > Faceplate scripts" in the configuration area.
+1. Click "Scripts &gt; Faceplate scripts" in the configuration area.
 2. Double click "Add VB script".
-3. Press the shortcut keys <CTRL+J>.
+3. Press the shortcut keys &lt;CTRL+J&gt;.
 
    The object list opens.
 4. Click "HMI tags".
@@ -9505,7 +9505,7 @@ You create a script that converts the value of a length measuring system from ki
    ![Procedure](images/72362634123_DV_resource.Stream@PNG-en-US.png)
 5. Select the faceplate type tag "BB_Tag". Confirm the selection.
 6. Insert an "=" sign.
-7. Press the shortcut keys <CTRL+J>. The object list is opened.
+7. Press the shortcut keys &lt;CTRL+J&gt;. The object list is opened.
 8. Click "Properties."
 
    The dynamic property "KMtoMeter" is displayed in the object list.
@@ -9515,7 +9515,7 @@ You create a script that converts the value of a length measuring system from ki
    ![Procedure](images/100712093707_DV_resource.Stream@PNG-en-US.png)
 9. Select the "KMToMeter" dynamic property. Confirm the selection.
 10. Enter "*1000" at the end of the code. This corresponds to the conversion factor from kilometers to meters.
-11. Enter the name "Script_1" under "Properties > Properties > General >Setting > Name" in the Inspector window.
+11. Enter the name "Script_1" under "Properties &gt; Properties &gt; General &gt;Setting &gt; Name" in the Inspector window.
 
     ![Procedure](images/24023112715_DV_resource.Stream@PNG-en-US.png)
 
@@ -9554,8 +9554,8 @@ For the example you require a tag with the following settings:
 
 1. Create the HMI tag "Kilometer" with the settings named above.
 2. Open the "project library" in the "Libraries" task card.
-3. Move the "KMtoMeter" faceplate type into the screen by drag&drop.
-4. Click "Properties > Properties > Interface" in the Inspector window.
+3. Move the "KMtoMeter" faceplate type into the screen by drag&amp;drop.
+4. Click "Properties &gt; Properties &gt; Interface" in the Inspector window.
 
    The table shows all the properties which you can dynamize in the faceplate.
 
@@ -9593,12 +9593,12 @@ The faceplate is displayed in the "Faceplates" editor.
 ##### Interconnecting I/O field with a tag
 
 1. Select the "Output_Meter" I/O field in the faceplate.
-2. Connect the I/O field with the faceplate tag "BB_Tag" in the "General > Process > Tag" inspector window.
+2. Connect the I/O field with the faceplate tag "BB_Tag" in the "General &gt; Process &gt; Tag" inspector window.
 
 ##### Connecting an event to a faceplate script
 
 1. Select the "KM_to_Meter" button in the faceplate.
-2. Select "Script_1" in the inspector window under "Events > Click".
+2. Select "Script_1" in the inspector window under "Events &gt; Click".
 
 ##### Result
 
@@ -9641,7 +9641,7 @@ For a production process consisting of multiple subprocesses, you will configure
 
 Before you create a screen change, define the plant structure and derive from it the screen changes that you want to configure.
 
-Create the start screen under "Runtime Settings > General > Start screen".
+Create the start screen under "Runtime Settings &gt; General &gt; Start screen".
 
 ---
 
@@ -9677,7 +9677,7 @@ For a production process consisting of multiple subprocesses, you will configure
 
 Before you create a screen change, define the screen hierarchy based on the plant structure and derive from it the screen changes that you want to configure.
 
-Create the start screen under "Runtime Settings > General > Start screen".
+Create the start screen under "Runtime Settings &gt; General &gt; Start screen".
 
 ---
 
@@ -9706,10 +9706,10 @@ Configure a button in the screen to switch between the screens on the HMI device
 ##### Procedure
 
 1. Double-click "Screen_1" in the project navigation. The screen is displayed in the work area.
-2. Move "Screen_2" from the project tree to the open screen by drag&drop.
+2. Move "Screen_2" from the project tree to the open screen by drag&amp;drop.
 
    A button with the name "Screen_1" is inserted.
-3. In the Inspector window, select "Properties > Events > Click".
+3. In the Inspector window, select "Properties &gt; Events &gt; Click".
 
    The "ActivateScreen" system function is displayed in the "Function list".
 
@@ -9720,8 +9720,8 @@ Configure a button in the screen to switch between the screens on the HMI device
 
 ##### Alternative procedure
 
-1. Move a button from the "Tools" task card to "Screen2" by drag&drop.
-2. In the Inspector window, select "Properties > Events > Click".
+1. Move a button from the "Tools" task card to "Screen2" by drag&amp;drop.
+2. In the Inspector window, select "Properties &gt; Events &gt; Click".
 3. Select the "ActivateScreen" system function.
 4. Select "Screen_2" for the "Screen number".
 
@@ -9757,7 +9757,7 @@ Configure a screen change function key in the screen to switch between the scree
 2. Move "Screen_2" from the project tree to a function key, e.g. "F2".
 
    The configured function key displays a yellow triangle.
-3. Click "Properties > Events > Press key" in the inspector window.
+3. Click "Properties &gt; Events &gt; Press key" in the inspector window.
 
    The "ActivateScreen" system function is displayed.
 
@@ -9832,7 +9832,7 @@ You create the following components for a menu:
 
   - Is displayed in the screen when the main menu opens.
   - Executes a defined procedure when clicked.
-  - You can enter a parameter (for example a screen name) that is to be passed to the procedure under "Properties > Events."
+  - You can enter a parameter (for example a screen name) that is to be passed to the procedure under "Properties &gt; Events."
   - Opens a submenu, if it exists.
 - Submenu command
 
@@ -9907,7 +9907,7 @@ The "Menus and Toolbars" editor has three tabs:
 
   ![Layout](images/61388079371_DV_resource.Stream@PNG-en-US.png)
 
-You open the editor in the project navigation by double-clicking "Screen management > Menus and Toolbars".
+You open the editor in the project navigation by double-clicking "Screen management &gt; Menus and Toolbars".
 
 ###### Work area
 
@@ -9920,7 +9920,7 @@ The "Configurations" tab has an undivided work area that contains the table edit
 
 ###### Inspector window
 
-You configure the menus and toolbars in the Inspector window under "Properties > Properties."
+You configure the menus and toolbars in the Inspector window under "Properties &gt; Properties."
 
 ---
 
@@ -9977,15 +9977,15 @@ In the "Menus and Toolbars" editor you create a menu with main menu commands and
    ![Creating main menu commands](images/21405720331_DV_resource.Stream@PNG-en-US.png)
 
    ![Creating main menu commands](images/21405720331_DV_resource.Stream@PNG-en-US.png)
-3. Enter a name under "Properties > Properties > General >Name" in the Inspector window.
-4. Enter a label for the main menu command "Properties > Properties > General >Text" in the Inspector window.
+3. Enter a name under "Properties &gt; Properties &gt; General &gt;Name" in the Inspector window.
+4. Enter a label for the main menu command "Properties &gt; Properties &gt; General &gt;Text" in the Inspector window.
 
    ![Creating main menu commands](images/72558093323_DV_resource.Stream@PNG-en-US.png)
 
    ![Creating main menu commands](images/72558093323_DV_resource.Stream@PNG-en-US.png)
 
-1. To display the main menu command as visible in Runtime, activate "Properties > Properties > Miscellaneous > Visibility".
-2. To define an operator authorization, select an authorization under "Properties > Properties > Security".
+1. To display the main menu command as visible in Runtime, activate "Properties &gt; Properties &gt; Miscellaneous &gt; Visibility".
+2. To define an operator authorization, select an authorization under "Properties &gt; Properties &gt; Security".
 
 ###### Creating menu commands
 
@@ -10101,11 +10101,11 @@ You can configure any number of toolbars for each configuration. For each toolba
    ![Adjusting buttons](images/72558286731_DV_resource.Stream@PNG-en-US.png)
 
    ![Adjusting buttons](images/72558286731_DV_resource.Stream@PNG-en-US.png)
-3. Enter a name under "Properties > Properties > General" in the Inspector window.
+3. Enter a name under "Properties &gt; Properties &gt; General" in the Inspector window.
 4. Depending on the button type, select a text and/or a graphic for the button design.
-5. To display the button as visible in Runtime, activate "Properties > Properties > Miscellaneous > Visibility".
-6. To display a tooltip in Runtime, enter a text under "Properties > Properties > Miscellaneous > Tooltip".
-7. To define an operator authorization, select an authorization under "Properties > Properties > Security".
+5. To display the button as visible in Runtime, activate "Properties &gt; Properties &gt; Miscellaneous &gt; Visibility".
+6. To display a tooltip in Runtime, enter a text under "Properties &gt; Properties &gt; Miscellaneous &gt; Tooltip".
+7. To define an operator authorization, select an authorization under "Properties &gt; Properties &gt; Security".
 8. To insert further buttons, click in the preview of the toolbar on the ![Adjusting buttons](images/21438792203_DV_resource.Stream@PNG-de-DE.png) symbol.
 
 **Note**
@@ -10140,7 +10140,7 @@ Use the "Menus and Toolbars" editor to configure customized menus and toolbars. 
 ###### Configuring an event with a system function to a button or menu command.
 
 1. Select the button or menu command.
-2. In the Inspector window, select "Properties > Events > Click".
+2. In the Inspector window, select "Properties &gt; Events &gt; Click".
 3. Select the "ActivateScreen" system function from the function list.
 4. Select "Screen_2" as the "Screen name".
 
@@ -10151,7 +10151,7 @@ Use the "Menus and Toolbars" editor to configure customized menus and toolbars. 
 ###### Configuring an event to a button or menu command via scripts.
 
 1. Select the button or menu command.
-2. In the Inspector window, select "Properties > Events > Click".
+2. In the Inspector window, select "Properties &gt; Events &gt; Click".
 3. Click the icon ![Configuring an event to a button or menu command via scripts.](images/26075174539_DV_resource.Stream@PNG-de-DE.png) "VB script" in the toolbar of the Inspector window.
 4. Write the required script.
 
@@ -10185,19 +10185,19 @@ Use a configuration file to display menus and/or toolbars in all screens of your
 
 1. Double-click "Add" in the "Configurations" table. A configuration file is created.
 2. Change the name of the configuration file and enter a comment, if appropriate.
-3. Select a name under "Properties > Properties > Menu >Name" in the Inspector window.
+3. Select a name under "Properties &gt; Properties &gt; Menu &gt;Name" in the Inspector window.
 
    ![Creating a configuration file](images/72558633739_DV_resource.Stream@PNG-en-US.png)
 
    ![Creating a configuration file](images/72558633739_DV_resource.Stream@PNG-en-US.png)
 4. Specify whether the menu is to be activated and visible in Runtime and which authorization is required for operation.
-5. Select the toolbars you want to add to the configuration file under "Properties > Properties > Toolbars" in the Inspector window.
+5. Select the toolbars you want to add to the configuration file under "Properties &gt; Properties &gt; Toolbars" in the Inspector window.
 
    ![Creating a configuration file](images/61392216075_DV_resource.Stream@PNG-en-US.png)
 
    ![Creating a configuration file](images/61392216075_DV_resource.Stream@PNG-en-US.png)
 6. Specify for each selected toolbar whether or not the toolbar is to be activated and visible in Runtime and which authorization is required for operation.
-7. You define the alignment for each toolbar in "Properties > Properties > Toolbars" in the Inspector window.
+7. You define the alignment for each toolbar in "Properties &gt; Properties &gt; Toolbars" in the Inspector window.
 
 ###### Result
 
@@ -10264,7 +10264,7 @@ You can use VB Script to load other configuration files in Runtime. For e.g. whe
 ###### Configuring menus and toolbars for all the screens
 
 1. Open the "Runtime settings" editor.
-2. Select the configuration file whose menu and toolbars are to be displayed in all the screens of your project under "General > Menus and toolbars."
+2. Select the configuration file whose menu and toolbars are to be displayed in all the screens of your project under "General &gt; Menus and toolbars."
 
 ###### Result
 
@@ -10294,7 +10294,7 @@ The customized menus and toolbars of the screen window and the start configurati
 ###### How to configure menus and toolbars in a screen window
 
 1. Drag-and-drop the "Screen window" object into the screen.
-2. In the Inspector window, select the configuration file in "Properties > Properties > General".
+2. In the Inspector window, select the configuration file in "Properties &gt; Properties &gt; General".
 
 ###### Result
 
@@ -10375,15 +10375,15 @@ Your process is split into six process image partitions. One screen is the start
 
 ###### Creating buttons for a start screen
 
-1. Select the first button and select "Properties > Properties > General" in the Inspector window.
+1. Select the first button and select "Properties &gt; Properties &gt; General" in the Inspector window.
 
    ![Creating buttons for a start screen](images/72558891147_DV_resource.Stream@PNG-en-US.png)
 
    ![Creating buttons for a start screen](images/72558891147_DV_resource.Stream@PNG-en-US.png)
 2. Enter the text "Screen up" under "Text".
 3. Select the graphic "Up_Arrow" under "Graphic".
-4. To display the button as visible in Runtime, activate "Properties > Properties > Miscellaneous > Visibility".
-5. Enter the text "Changes to parent screen" under "Properties > Properties > Miscellaneous > Tooltip".
+4. To display the button as visible in Runtime, activate "Properties &gt; Properties &gt; Miscellaneous &gt; Visibility".
+5. Enter the text "Changes to parent screen" under "Properties &gt; Properties &gt; Miscellaneous &gt; Tooltip".
 6. Click ![Creating buttons for a start screen](images/21438792203_DV_resource.Stream@PNG-de-DE.png) in the preview of the toolbar.
 
    ![Creating buttons for a start screen](images/26074662027_DV_resource.Stream@PNG-en-US.png)
@@ -10439,7 +10439,7 @@ In order for each button to execute the desired function during a screen change,
 
 1. Open the toolbar for the start screen.
 2. Select the first button.
-3. In the Inspector window, select "Properties > Events > Click".
+3. In the Inspector window, select "Properties &gt; Events &gt; Click".
 4. Select the "ActivateScreen" system function from the function list.
 5. Enter the name of the screen to which the change is to take place under "Screen name."
 6. Enter "2" under "Object number" as the screen object in the screen to which the change is to take place. The focus is set to the screen object with the tab sequence number "2."
@@ -10450,7 +10450,7 @@ In order for each button to execute the desired function during a screen change,
 
 **Note**
 
-The object number is defined during the configuration of the tab sequence in the screen. The sequence can be displayed in the screen by selecting the menu command "Edit > Tab sequence > Edit tab sequence".
+The object number is defined during the configuration of the tab sequence in the screen. The sequence can be displayed in the screen by selecting the menu command "Edit &gt; Tab sequence &gt; Edit tab sequence".
 
 ###### Result
 
@@ -10524,12 +10524,12 @@ To change from any screen to additional screens, create as many screen windows a
 
 ###### Configuring a configuration file in a screen window
 
-1. Double-click "Screens > Add Screen" in the project window. A new screen is created.
+1. Double-click "Screens &gt; Add Screen" in the project window. A new screen is created.
 2. Assign the name "Overview_Screen_Project" to this screen.
 3. Drag-and-drop the "Screen window" object into the screen.
-4. Enter a name for the title bar under "Properties > Properties > General >Title" in the Inspector window.
-5. Select a screen that is displayed in the screen window in the Inspector window under "Properties > Properties > General > Name".
-6. Define the configuration under "Properties > Properties > General > Configurations" in the Inspector window.
+4. Enter a name for the title bar under "Properties &gt; Properties &gt; General &gt;Title" in the Inspector window.
+5. Select a screen that is displayed in the screen window in the Inspector window under "Properties &gt; Properties &gt; General &gt; Name".
+6. Define the configuration under "Properties &gt; Properties &gt; General &gt; Configurations" in the Inspector window.
 7. Repeat the procedure for all the screens and configurations.
 
 ###### Result
@@ -11002,7 +11002,7 @@ In the Inspector window, you customize the settings for the position, shape, sty
 
 ##### Color transition
 
-You define how the color change is represented in "Properties > Properties > Appearance" in the Inspector window.
+You define how the color change is represented in "Properties &gt; Properties &gt; Appearance" in the Inspector window.
 
 | Color transition | Description |
 | --- | --- |
@@ -11013,7 +11013,7 @@ You define how the color change is represented in "Properties > Properties > App
 
 You display the configured limit in the bar as a line or marking in Runtime using the "Lines" and "Markings" property:
 
-1. In the Inspector window, select "Properties > Properties > Appearance":
+1. In the Inspector window, select "Properties &gt; Properties &gt; Appearance":
 2. Activate "Lines" and "Markings".
 
 ##### Define bar segments
@@ -11022,17 +11022,17 @@ Use the "Subdivisions" property to define the number of segments into which the 
 
 Use the "Interval" property to divide the distance between the main gradations. The value appears as the difference in value between two adjacent main gradations:
 
-1. In the Inspector window, select "Properties > Properties > Scales":
+1. In the Inspector window, select "Properties &gt; Properties &gt; Scales":
 2. Activate "Show scale."
-3. Select the corresponding value for "Settings > Subdivisions".
-4. Select the corresponding value for "Settings > Marks label".
-5. Select the corresponding value for "Large interval > Interval".
+3. Select the corresponding value for "Settings &gt; Subdivisions".
+4. Select the corresponding value for "Settings &gt; Marks label".
+5. Select the corresponding value for "Large interval &gt; Interval".
 
 ##### Configuring limits/ranges
 
 You can represent limits and ranges in different colors. Define the colors in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > Limits/Ranges".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Limits/Ranges".
 2. Activate the limits/ranges that are to be displayed in Runtime
 3. If necessary, change the default colors for the limits/ranges.
 
@@ -11044,7 +11044,7 @@ You can represent limits and ranges in different colors. Define the colors in th
 
 > **Note**
 >
-> If the "Show ranges of tags" option is enabled, the setting "Color gradient Segmented" under "Properties > Appearance > Bar" has no effect in Runtime.
+> If the "Show ranges of tags" option is enabled, the setting "Color gradient Segmented" under "Properties &gt; Appearance &gt; Bar" has no effect in Runtime.
 
 ---
 
@@ -11073,7 +11073,7 @@ In the Inspector window, you customize the settings for the position, shape, sty
 
 ##### Color transition
 
-You define how the color change is represented in "Properties > Properties > Appearance" in the Inspector window.
+You define how the color change is represented in "Properties &gt; Properties &gt; Appearance" in the Inspector window.
 
 | Color transition | Description |
 | --- | --- |
@@ -11084,7 +11084,7 @@ You define how the color change is represented in "Properties > Properties > App
 
 You display the configured limit in the bar as an arrow in Runtime using the "Selections" property:
 
-1. In the Inspector window, select "Properties > Properties > Appearance":
+1. In the Inspector window, select "Properties &gt; Properties &gt; Appearance":
 2. Activate "Selections".
 
 ##### Define bar segments
@@ -11093,9 +11093,9 @@ Use the "Scales" property to define the subdivisions into which the bar is divid
 
 Use the "Interval" property to divide the distance between the main gradations. The value appears as the difference in value between two adjacent main gradations:
 
-1. In the Inspector window, select "Properties > Properties > Scales":
+1. In the Inspector window, select "Properties &gt; Properties &gt; Scales":
 2. Enable "Show scale".
-3. Enter the corresponding value for "Large interval > Interval".
+3. Enter the corresponding value for "Large interval &gt; Interval".
 
 **Note**
 
@@ -11107,9 +11107,9 @@ Use the "Zero point" property to define the zero point on the bar graph scale. E
 
 The "Zero point" property is only evaluated if the "Bar scaling" property is set to "Auto-size":
 
-1. In the Inspector window, open "Properties > Properties > Scales"
+1. In the Inspector window, open "Properties &gt; Properties &gt; Scales"
 2. Activate "Auto-size".
-3. Enter the required value for "Start values .> Zero point".
+3. Enter the required value for "Start values .&gt; Zero point".
 
 ---
 
@@ -11140,23 +11140,23 @@ In addition, you set the borders, the fill pattern and the colors of the table h
 
 The number of lines in the user view displayed in Runtime is specified in the Inspector window. The setting for the number of lines is only effective if "Fit object to contents" is active.
 
-1. Click "Properties > Properties > View" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; View" in the Inspector window.
 2. Enter an integer value under "Number of lines".
-3. Click "Properties > Properties > Layout" in the Inspector window.
+3. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 4. Select "Fit object to contents".
 
 ##### Columns moveable
 
 The operator can change the sequence of columns in Runtime with the "Columns moveable" property.
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 2. Activate "Columns moveable".
 
 ##### Column width
 
 In the Inspector window, you can change the width of columns displayed in Runtime.
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 2. Enter integer values for the column width under "Columns".
 
 **Note**
@@ -11193,9 +11193,9 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 The number of lines in the user view displayed in Runtime is specified in the Inspector window. The setting for the number of lines is only effective if the property "Fit object to contents" is active.
 
-1. In the Inspector window, select "Properties > Properties > View".
+1. In the Inspector window, select "Properties &gt; Properties &gt; View".
 2. Enter an integer value under "Number of lines".
-3. In the Inspector window, activate "Properties > Properties > Layout".
+3. In the Inspector window, activate "Properties &gt; Properties &gt; Layout".
 4. Select "Fit object to contents".
 
 ##### Display in Runtime
@@ -11237,7 +11237,7 @@ On HMI devices with a display size larger than 6 ", you can configure both the a
 
 Proceed as follows to configure the appropriate user view:
 
-1. Click "Properties > Properties > Layout > Mode" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout &gt; Mode" in the Inspector window.
 2. Select "Simplified" or "Advanced".
 
 ##### Layout
@@ -11251,16 +11251,16 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 The number of lines in the user view displayed in Runtime is specified in the Inspector window. The setting for the number of lines is only effective if "Fit object to contents" is active.
 
-1. Click "Properties > Properties > View" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; View" in the Inspector window.
 2. Enter an integer value under "Number of lines".
-3. Click "Properties > Properties > Layout" in the Inspector window.
+3. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 4. Select "Fit object to contents".
 
 ##### Columns moveable
 
 The operator can change the sequence of columns in Runtime with the "Columns movable" property.
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 2. Activate "Columns moveable".
 
 This option is only available at the complex user view.
@@ -11303,7 +11303,7 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 ##### Operator controls
 
-Set the control elements that you can use to control the "Watch table" object in runtime under "Properties > Properties > Display" in the "Settings" area of the inspector window.
+Set the control elements that you can use to control the "Watch table" object in runtime under "Properties &gt; Properties &gt; Display" in the "Settings" area of the inspector window.
 
 |  | Function |
 | --- | --- |
@@ -11326,8 +11326,8 @@ The columns that are displayed in runtime are specified in the Inspector window 
 
 The operator can use the "Column ordering" property to change the sequence of columns in runtime.
 
-1. Select "Properties > Properties > Columns" in the Inspector window.
-2. Activate "Properties of columns > Sequence of columns".
+1. Select "Properties &gt; Properties &gt; Columns" in the Inspector window.
+2. Activate "Properties of columns &gt; Sequence of columns".
 
 ##### System functions
 
@@ -11378,17 +11378,17 @@ You can match the size of the embedded screen to the size of the screen window i
 
 - You want the embedded screen to appear smaller.
 
-  Enter the required zoom factor under "Properties > Properties > General" in the Inspector window.
+  Enter the required zoom factor under "Properties &gt; Properties &gt; General" in the Inspector window.
 - You want to scroll to a section of the embedded screen.
 
-  In the Inspector window, activate "Properties > Properties > Layout > Scroll bar".
+  In the Inspector window, activate "Properties &gt; Properties &gt; Layout &gt; Scroll bar".
 
   The user can scroll to details of the embedded screen in Runtime.
 
-  You can move the position of the scroll bar horizontally or vertically under "Properties > Properties > Layout > Scroll bar position" in the Inspector window.
+  You can move the position of the scroll bar horizontally or vertically under "Properties &gt; Properties &gt; Layout &gt; Scroll bar position" in the Inspector window.
 - You can adapt the embedded screen to the size of the screen window, or vice versa.
 
-  Select either "Fit window to screen", or "Fit screen to window" in "Properties > Properties >" in the Inspector window.
+  Select either "Fit window to screen", or "Fit screen to window" in "Properties &gt; Properties &gt;" in the Inspector window.
 
   If you select the "Fit window to screen" setting, the size of the screen window is adapted to the embedded screen in Runtime and can no longer be changed in the engineering system.
 
@@ -11401,17 +11401,17 @@ You can match the size of the embedded screen to the size of the screen window i
 
 ##### Define screen section
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 2. Enter the values for the horizontal and vertical displacement of the zero point of the screen display under "Offset."
 
    The desired section is displayed in the screen window.
-3. If you want to scroll from the defined section to other areas of the screen, activate "Properties > Properties > Appearance > Scrollbar".
+3. If you want to scroll from the defined section to other areas of the screen, activate "Properties &gt; Properties &gt; Appearance &gt; Scrollbar".
 
 ##### Defining independent screen windows
 
 1. Insert a screen window in the start screen.
-2. Select the screen that is displayed in the screen window under "Properties > Properties > General > Name".
-3. Select "Properties > Properties > General > Independent screen windows".
+2. Select the screen that is displayed in the screen window under "Properties &gt; Properties &gt; General &gt; Name".
+3. Select "Properties &gt; Properties &gt; General &gt; Independent screen windows".
 4. Select "Position and mode":
 
    - As configured: The screen window is displayed in the configured size and at the configured position.
@@ -11422,7 +11422,7 @@ You can match the size of the embedded screen to the size of the screen window i
 
 **Note**
 
-The monitor numbers refer to the number of monitors set in Microsoft Windows: "Control Panel > Display > Settings > Display"
+The monitor numbers refer to the number of monitors set in Microsoft Windows: "Control Panel &gt; Display &gt; Settings &gt; Display"
 
 ##### Define tag prefix
 
@@ -11436,7 +11436,7 @@ Define a tag prefix to access structure instances in Runtime. The tag prefix is 
 >
 > Avoid using both methods at the same time.
 
-1. Click "Properties > Properties > General > Contents" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; General &gt; Contents" in the Inspector window.
 2. Enter one of the created structure instances with a period after the name under "Tag prefix", e.g. "Motor1.".
 
 The "Temperature" tag is requested on an object in the screen window. If a tag prefix "Motor1." is assigned to the screen window, the "Motor1.Temperature" tag is requested.
@@ -11487,7 +11487,7 @@ The selected process tag appears under "Tag prefix" and "Process tag".
 
 ##### Special feature of visibility animation
 
-If you want to animate the visibility of a screen window and the screen window is not to be visible at first, disable the "Visibility" setting under "Properties > Miscellaneous".
+If you want to animate the visibility of a screen window and the screen window is not to be visible at first, disable the "Visibility" setting under "Properties &gt; Miscellaneous".
 
 ---
 
@@ -11514,14 +11514,14 @@ In the Inspector window, you customize the settings for the object position, sty
 
 You define the top and bottom values of the scale in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > General":
+1. In the Inspector window, select "Properties &gt; Properties &gt; General":
 2. Enter a number under "Maximum static" and "Minimum static". If you select a tag as the end value of the scale, the number will be no longer available.
 
 ##### Define alignment
 
 Define whether the scroll bar is aligned vertically or horizontally in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Select the required alignment under "Style."
 
 ---
@@ -11552,14 +11552,14 @@ In the Inspector window, you customize the position, style, colors and font type
 
 The time displayed in the "Date/time field" on the HMI device is specified in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Select "Format > System time".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Select "Format &gt; System time".
 
 ##### Using tags
 
 The time of the interconnected tag is displayed in the date/time field.
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. In the "Format" area, select a tag with the "DateTime" data type, e.g. an internal tag.
 
 ##### Long date/time format
@@ -11648,7 +11648,7 @@ The following templates are available for the "Print jobs" window content:
 
   The "Print job/Script diagnostics" object is supplied by the print jobs. The available print jobs are shown as a list.
 
-  To display print jobs in the list, select "Properties > Properties > General > Display print job/script diagnostics in Control" in the Print Job editor. A shortcut menu offers the following actions:
+  To display print jobs in the list, select "Properties &gt; Properties &gt; General &gt; Display print job/script diagnostics in Control" in the Print Job editor. A shortcut menu offers the following actions:
 
   - Print preview
   - Print report
@@ -11657,14 +11657,14 @@ The following templates are available for the "Print jobs" window content:
 
 You define the window content of the object in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Select the window content, e.g. "Print jobs".
 
 ##### Configure template
 
 You define the template for the window content of the object in the Inspector window:
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Select a template
 
    ![Configure template](images/61246207627_DV_resource.Stream@PNG-en-US.png)
@@ -11707,7 +11707,7 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 ##### Mode
 
-The response of the I/O field is specified in the Inspector window in "Properties > Properties > General > Type".
+The response of the I/O field is specified in the Inspector window in "Properties &gt; Properties &gt; General &gt; Type".
 
 | Mode | Description |
 | --- | --- |
@@ -11717,7 +11717,7 @@ The response of the I/O field is specified in the Inspector window in "Propertie
 
 ##### Display format
 
-The display format for the input and output of values is specified in "Properties > Properties > General > Format" in the Inspector window.
+The display format for the input and output of values is specified in "Properties &gt; Properties &gt; General &gt; Format" in the Inspector window.
 
 | Display format |  |
 | --- | --- |
@@ -11752,21 +11752,21 @@ To input alphanumeric characters directly, use the alternative data type "WChar"
 
 In runtime the input can be displayed normally or encrypted, for example for hidden input of a password. A "*" is displayed for every character during hidden input. The data format of the value entered cannot be recognized.
 
-1. In the Inspector window, select "Properties > Properties > Characteristics":
+1. In the Inspector window, select "Properties &gt; Properties &gt; Characteristics":
 2. Select "Hidden input".
 
 ##### Avoid overlaps in output fields
 
-If several I/O fields are configured as output fields with a transparent background in a screen, these I/O fields may overlap. The transparent part of the one field covers the digits of the other field. This may cause display problems in Runtime. In order to avoid such overlaps, set the borders of the I/O fields to zero in the object properties under "Properties > Properties > Appearance". Select "Properties > Properties > Layout > Fit object to contents."
+If several I/O fields are configured as output fields with a transparent background in a screen, these I/O fields may overlap. The transparent part of the one field covers the digits of the other field. This may cause display problems in Runtime. In order to avoid such overlaps, set the borders of the I/O fields to zero in the object properties under "Properties &gt; Properties &gt; Appearance". Select "Properties &gt; Properties &gt; Layout &gt; Fit object to contents."
 
 ##### Limits
 
-Under "Properties > Properties > Limits" in the Inspector window, set the colors for the values that violate the high or low limits.  
+Under "Properties &gt; Properties &gt; Limits" in the Inspector window, set the colors for the values that violate the high or low limits.  
 You define the limits via the properties of a tag. In Runtime Professional you can specify if the colors should be used.
 
 When there is a limit violation during Runtime, the background color of the I/O field changes according to your configuration, even if the I/O field is in "Input" mode.
 
-In Runtime Professional, you can also define the limit range for the entry in the I/O field via "Properties > Properties > Limits".
+In Runtime Professional, you can also define the limit range for the entry in the I/O field via "Properties &gt; Properties &gt; Limits".
 
 If you enter a numeric value outside this limit, it is not applied; for example, 80 with a limit of 78. In this case, the HMI device generates a system event, if an alarm window is configured. The original value is displayed again.
 
@@ -11798,7 +11798,7 @@ In WinCC Runtime Professional, you can configure the window display of the "I/O 
 
 **Apply value on completed entry**
 
-The "Apply value on completed entry" attribute specifies when an input value is to be applied. If the attribute has the value "No", then the input value is applied when the input is confirmed with <ENTER> . Otherwise the input value is automatically applied as soon as the preset number of characters has been entered.
+The "Apply value on completed entry" attribute specifies when an input value is to be applied. If the attribute has the value "No", then the input value is applied when the input is confirmed with &lt;ENTER&gt; . Otherwise the input value is automatically applied as soon as the preset number of characters has been entered.
 
 **Apply value on exit**
 
@@ -12017,10 +12017,10 @@ In the Inspector window, you customize the position, style, colors and font type
 
 The text for the "Editable text field" is defined in the inspector window.
 
-1. Click "Properties > Properties > General" in the inspector window.
+1. Click "Properties &gt; Properties &gt; General" in the inspector window.
 2. Enter a text of any length.
 
-   For texts over several lines you can set a line break by pressing <Enter>, with the key combination <Shift + Enter> or the key combination <Ctrl + Enter>.
+   For texts over several lines you can set a line break by pressing &lt;Enter&gt;, with the key combination &lt;Shift + Enter&gt; or the key combination &lt;Ctrl + Enter&gt;.
 
 ---
 
@@ -12047,14 +12047,14 @@ In the Inspector window you can customize the settings for the object position, 
 
 The horizontal radius of the "Ellipse" object is specified in the Inspector window. The value is entered in pixels.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value between 0 and 2500 under "Horizontal."
 
 ##### Vertical radius
 
 The vertical radius of the "Ellipse" object is specified in the Inspector window. The value is entered in pixels.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value between 0 and 2500 at "Vertical."
 
 ---
@@ -12090,14 +12090,14 @@ In the Inspector window you can customize the settings for the object position, 
 
 Define the horizontal and vertical radius of the "Elliptical arc" object in the Inspector window. Enter the values using Pixels as the unit.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value for "Horizontal radius" and "Vertical radius".
 
 ##### Define start and end angle
 
 Determine the length of the elliptical arc using the "Start Angle" and "End Angle" attributes. Enter the values using Degrees as the unit.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value for "Angle start" and "Angle end".
 
 ##### Alternative procedure
@@ -12136,14 +12136,14 @@ In the Inspector window, you customize the settings for the object position, sha
 
 Define the horizontal and vertical radius of the "Ellipse segment" object in the Inspector window. Enter the values using Pixels as the unit:
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value for "Horizontal radius" and "Vertical radius" in the "Arc" area.
 
 ##### Define start and end angle
 
 Determine the size of the ellipse segment using the "Start Angle" and "End Angle" attributes. Enter the values using Degrees as the unit:
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value for "Start angle" and "End angle" in the "Arc" area.
 
 ##### Alternative procedure
@@ -12183,7 +12183,7 @@ In the Inspector window, you customize the position, geometry, style, colors and
 
 ##### Configuring trends
 
-1. Select the data supply for the trend under "Properties > Properties > Trends > Data source".
+1. Select the data supply for the trend under "Properties &gt; Properties &gt; Trends &gt; Data source".
 
    - "Log tags": The trend view is supplied with values from a data log.
    - "User-defined": The trend view is supplied user-defined in Runtime by means of scripts.
@@ -12193,7 +12193,7 @@ In the Inspector window, you customize the position, geometry, style, colors and
    - "Automatic": The displayed value range is automatically adapted to the current values.
    - "Initial value / End value": You define the minimum value and maximum value for the value range.
 3. Under "Limits", configure the colored marking of specific values, .e.g.. high and low limit.
-4. Select "Properties > Properties > Time axis".
+4. Select "Properties &gt; Properties &gt; Time axis".
 5. Configure the "Time range" of the trend display.
 
    - "Time span": You define the time range using a starting time and a following time span.
@@ -12210,11 +12210,11 @@ Configure the display of several trends under "Diagram":
 
 ##### Window settings
 
-Under "Layout > Window", define whether the user can change the size of the window in runtime and can close the window.
+Under "Layout &gt; Window", define whether the user can change the size of the window in runtime and can close the window.
 
 ##### Persistence
 
-Select "Properties > Properties > Security > Persistence" to specify whether or not a user may edit trend view configuration in Runtime and the retention period of such changes.
+Select "Properties &gt; Properties &gt; Security &gt; Persistence" to specify whether or not a user may edit trend view configuration in Runtime and the retention period of such changes.
 
 - "No persistence"
 
@@ -12228,7 +12228,7 @@ Select "Properties > Properties > Security > Persistence" to specify whether or 
 
 ##### Toolbar
 
-You define the operator controls of the f(t) trend view in Runtime under "Properties > Properties > Toolbar" in the Inspector window. The following operator controls are available for the f(t) trend view:
+You define the operator controls of the f(t) trend view in Runtime under "Properties &gt; Properties &gt; Toolbar" in the Inspector window. The following operator controls are available for the f(t) trend view:
 
 | Button | Name | Function |
 | --- | --- | --- |
@@ -12247,7 +12247,7 @@ You define the operator controls of the f(t) trend view in Runtime under "Proper
 | ![Toolbar](images/23980641931_DV_resource.Stream@PNG-de-DE.png) | Previous trend | Displays the previous trend in the foreground. |
 | ![Toolbar](images/23980803211_DV_resource.Stream@PNG-de-DE.png) | Next trend | Displays the next trend in the foreground. |
 | ![Toolbar](images/102411244939_DV_resource.Stream@PNG-de-DE.png) | Start/end update | Stops and starts the trend update. The values are buffered and updated as soon as you start trend update again. |
-| ![Toolbar](images/23931759499_DV_resource.Stream@PNG-de-DE.png) | Print log | Starts printing the trends shown in the trend window. You define the print job under "General > Print > Print job". |
+| ![Toolbar](images/23931759499_DV_resource.Stream@PNG-de-DE.png) | Print log | Starts printing the trends shown in the trend window. You define the print job under "General &gt; Print &gt; Print job". |
 | ![Toolbar](images/23932623883_DV_resource.Stream@PNG-de-DE.png) | Selection of the statistics area | Enables you to define a time range for which statistical values are determined. Vertical lines which you use to set the time range are displayed in the trend window. |
 | ![Toolbar](images/23932725131_DV_resource.Stream@PNG-de-DE.png) | Statistics window | Opens a statistics window to display the minimum, maximum, means, and standard deviation for the selected time range and the selected trend. |
 | ![Toolbar](images/25825901579_DV_resource.Stream@PNG-de-DE.png) | Exporting process data in runtime as a CSV file | Opens the dialog for saving the trend data in CSV format. |
@@ -12290,7 +12290,7 @@ In the Inspector window, you customize the position, geometry, style, colors and
 
 ##### Configuring trends
 
-You create and configure trends in the Inspector window "Properties > Properties > Properties > Trend".
+You create and configure trends in the Inspector window "Properties &gt; Properties &gt; Properties &gt; Trend".
 
 1. Select the data supply for the trend in the "Data source" column.
 
@@ -12306,7 +12306,7 @@ You create and configure trends in the Inspector window "Properties > Properties
 
 ##### Configuring a diagram
 
-Configure the display of several trends under "Properties > Properties > Appearance":
+Configure the display of several trends under "Properties &gt; Properties &gt; Appearance":
 
 - Common diagram or separate diagrams
 - Common or separate axes
@@ -12314,14 +12314,14 @@ Configure the display of several trends under "Properties > Properties > Appeara
 
 ##### Toolbar
 
-In Runtime, the operator controls of the f(x) trend view are defined in the "Properties > Properties > Toolbar" Inspector window. The following operator controls are available for the f(x) trend view:
+In Runtime, the operator controls of the f(x) trend view are defined in the "Properties &gt; Properties &gt; Toolbar" Inspector window. The following operator controls are available for the f(x) trend view:
 
 | Button | Name | Function |
 | --- | --- | --- |
-| ![Toolbar](images/74756700939_DV_resource.Stream@PNG-de-DE.png) | Zoom +/- | Increases or decreases the size of the trends in the trend window. Increase the size of the trends by left-clicking with the mouse. Hold down <Shift> and left-click to decrease the size of the trends. |
+| ![Toolbar](images/74756700939_DV_resource.Stream@PNG-de-DE.png) | Zoom +/- | Increases or decreases the size of the trends in the trend window. Increase the size of the trends by left-clicking with the mouse. Hold down &lt;Shift&gt; and left-click to decrease the size of the trends. |
 | ![Toolbar](images/33643902475_DV_resource.Stream@PNG-de-DE.png) | Zoom area | Increases the size of any section of the trend window. Specify an area in the trend window by using the mouse. This area of the trend window is enlarged. |
-| ![Toolbar](images/33643905803_DV_resource.Stream@PNG-de-DE.png) | Zoom X axis | Increases or decreases the size of the X axis in the trend window. Enlarge the X axis by left-clicking with the mouse. Hold down <Shift> and left-click to decrease the size of the X axis. |
-| ![Toolbar](images/33643909131_DV_resource.Stream@PNG-de-DE.png) | Zoom Y axis | Increases or decreases the size of the Y axis in the trend window. Enlarge the Y axis by left-clicking with the mouse. Hold down <Shift> and left-click to decrease the size of the Y axis. |
+| ![Toolbar](images/33643905803_DV_resource.Stream@PNG-de-DE.png) | Zoom X axis | Increases or decreases the size of the X axis in the trend window. Enlarge the X axis by left-clicking with the mouse. Hold down &lt;Shift&gt; and left-click to decrease the size of the X axis. |
+| ![Toolbar](images/33643909131_DV_resource.Stream@PNG-de-DE.png) | Zoom Y axis | Increases or decreases the size of the Y axis in the trend window. Enlarge the Y axis by left-clicking with the mouse. Hold down &lt;Shift&gt; and left-click to decrease the size of the Y axis. |
 | ![Toolbar](images/33643912459_DV_resource.Stream@PNG-de-DE.png) | Trend area | Shift the trends in the trend window along the X axis and Y axis by using this button. |
 | ![Toolbar](images/33643992587_DV_resource.Stream@PNG-de-DE.png) | Axis area | Shift the trends in the trend window along the value axis by using this button. |
 | ![Toolbar](images/23980203659_DV_resource.Stream@PNG-de-DE.png) | Original view | Switches from the magnified trend view back to the normal view. |
@@ -12364,7 +12364,7 @@ In the Inspector window, you customize the position, geometry, style, colors and
 
 ##### Configuring trends
 
-1. Select the data supply for the trend under "Properties > Properties > Trends > Data source".
+1. Select the data supply for the trend under "Properties &gt; Properties &gt; Trends &gt; Data source".
 
    - "Log tags": The trend view is supplied with values from a data log.
    - "User-defined": The trend view is supplied user-defined in Runtime by means of scripts.
@@ -12392,11 +12392,11 @@ Configure the display of several trends under "Layout":
 
 ##### Window settings
 
-Under "Layout > Window", define whether the user can change the size of the window in runtime and can close the window.
+Under "Layout &gt; Window", define whether the user can change the size of the window in runtime and can close the window.
 
 ##### Persistence
 
-Under "Security > Persistence" define how long a user's changes to the trend view in runtime are retained.
+Under "Security &gt; Persistence" define how long a user's changes to the trend view in runtime are retained.
 
 - "Allow persistence"
 
@@ -12410,16 +12410,16 @@ Under "Security > Persistence" define how long a user's changes to the trend vie
 
 ##### Toolbar
 
-You define the operator controls of the f(x) trend view in Runtime under "Properties > Toolbar" in the Inspector window. The following operator controls are available for the f(x) trend view:
+You define the operator controls of the f(x) trend view in Runtime under "Properties &gt; Toolbar" in the Inspector window. The following operator controls are available for the f(x) trend view:
 
 | Button | Name | Function |
 | --- | --- | --- |
 | ![Toolbar](images/23982571147_DV_resource.Stream@PNG-de-DE.png) | Online help | Opens the online help. |
 | ![Toolbar](images/23942155147_DV_resource.Stream@PNG-de-DE.png) | Configuration dialog box | Opens the configuration dialog. |
-| ![Toolbar](images/102270138379_DV_resource.Stream@PNG-de-DE.png) | Zoom +/- | Enlarges and/or shrinks the trends in the trend window. You can enlarge the trend with the left mouse button. You can reduce the size of the trend by holding down <Shift> and left-clicking. |
+| ![Toolbar](images/102270138379_DV_resource.Stream@PNG-de-DE.png) | Zoom +/- | Enlarges and/or shrinks the trends in the trend window. You can enlarge the trend with the left mouse button. You can reduce the size of the trend by holding down &lt;Shift&gt; and left-clicking. |
 | ![Toolbar](images/33643902475_DV_resource.Stream@PNG-de-DE.png) | Zoom area | Increases the size of any section of the trend window. Use the mouse to specify an area in the trend window. This area of the trend window is enlarged. |
-| ![Toolbar](images/33643905803_DV_resource.Stream@PNG-de-DE.png) | Zoom X axis | Enlarges and/or reduces the X axis in the trend window. You can enlarge the X axis with the left mouse button. You can reduce the size of the X axis by holding down <Shift> and left-clicking. |
-| ![Toolbar](images/33643909131_DV_resource.Stream@PNG-de-DE.png) | Zoom Y axis | Enlarges and/or reduces the Y axis in the trend window. You can enlarge the Y axis by left-clicking. You can reduce the size of Y axis by holding down <Shift> and left-clicking. |
+| ![Toolbar](images/33643905803_DV_resource.Stream@PNG-de-DE.png) | Zoom X axis | Enlarges and/or reduces the X axis in the trend window. You can enlarge the X axis with the left mouse button. You can reduce the size of the X axis by holding down &lt;Shift&gt; and left-clicking. |
+| ![Toolbar](images/33643909131_DV_resource.Stream@PNG-de-DE.png) | Zoom Y axis | Enlarges and/or reduces the Y axis in the trend window. You can enlarge the Y axis by left-clicking. You can reduce the size of Y axis by holding down &lt;Shift&gt; and left-clicking. |
 | ![Toolbar](images/33643912459_DV_resource.Stream@PNG-de-DE.png) | Move trend range | You can move the trends in the trend window along the X axis and the Y axis using the button. |
 | ![Toolbar](images/33643992587_DV_resource.Stream@PNG-de-DE.png) | Move axis range | You can move the trends in the trend window along the value axis using the button. |
 | ![Toolbar](images/23980203659_DV_resource.Stream@PNG-de-DE.png) | Original view | Switches from the magnified trend view back to the normal view |
@@ -12473,7 +12473,7 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 Use the following graphic formats in the "Graphic view" object: *.bmp, *.tif, *.png, *.ico, *.emf, *.wmf, *.gif, *.svg, *.jpg or *.jpeg. You may also use graphics as OLE objects in the Graphic view .
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Select the graphic that you wish to insert.
 
    The graphic preview is shown in the right pane.
@@ -12492,15 +12492,15 @@ Whether a graphic displayed in a Graphic view is stretched to the size of the Gr
 | "Fit object size to graphic" | Graphic display is adapted to the largest used graphic and other graphics are stretched. |
 | "Adjust object size to graphic" | Graphic display is adapted to the largest used graphic but the other graphics retain their original size. |
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 2. Select the required size adjustment for the graphic.
 
 ##### Transparent color
 
 This property defines whether the transparent color is used for the graphic to be displayed.
 
-1. In the Inspector window, select "Properties > Properties > Appearance":
-2. Select "Background > Transparent".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Appearance":
+2. Select "Background &gt; Transparent".
 3. Select a transparent color.
 
 **Note**
@@ -12515,7 +12515,7 @@ The "Transparent" property is not available for Basic Panels.
 
 **Note**
 
-If the selected transparent color of the graphic is not shown properly although the "Transparent" property is activated, the color in the graphic is not entirely consistent with the selected color. For example, the selected transparent color [R=255;G=255;B=255] looks almost exactly like the color in the graphic that is expected to be transparent [R=255;G=251;B=255]. In this case, the graphics used in the object must be reedited. Under "Project Navigation > Languages & Resources > Graphics", select the graphic that you want to display transparently. From the shortcut menu of the default graphic, select the "Edit" command and fill in the background of the graph with the desired color that appears transparent in the screen. Save the graphic.
+If the selected transparent color of the graphic is not shown properly although the "Transparent" property is activated, the color in the graphic is not entirely consistent with the selected color. For example, the selected transparent color [R=255;G=255;B=255] looks almost exactly like the color in the graphic that is expected to be transparent [R=255;G=251;B=255]. In this case, the graphics used in the object must be reedited. Under "Project Navigation &gt; Languages &amp; Resources &gt; Graphics", select the graphic that you want to display transparently. From the shortcut menu of the default graphic, select the "Edit" command and fill in the background of the graph with the desired color that appears transparent in the screen. Save the graphic.
 
 ---
 
@@ -12548,7 +12548,7 @@ In the Inspector window, you customize the position, shape, style, color and fon
 >
 > **Scroll bar**
 >
-> The "Scroll bar > Type" property is available for Panels and Runtime Advanced up to device version V12.
+> The "Scroll bar &gt; Type" property is available for Panels and Runtime Advanced up to device version V12.
 
 > **Note**
 >
@@ -12566,7 +12566,7 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 ##### Mode
 
-The response of the "Graphic I/O field" object is specified under "Properties > Properties > General > Type > Mode" in the Inspector window.
+The response of the "Graphic I/O field" object is specified under "Properties &gt; Properties &gt; General &gt; Type &gt; Mode" in the Inspector window.
 
 | Mode | Description |
 | --- | --- |
@@ -12579,12 +12579,12 @@ The response of the "Graphic I/O field" object is specified under "Properties > 
 
 Whether a graphic displayed in a graphic I/O field is stretched to the size of the view in Runtime is specified in the Inspector window.
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 2. Select the required size adjustment for the graphic.
 
 ##### Scroll bar type
 
-The response for the graphic representation of the scroll bar is specified under "Properties > Properties > Appearance > Scroll Bar > Type" in the Inspector window.
+The response for the graphic representation of the scroll bar is specified under "Properties &gt; Properties &gt; Appearance &gt; Scroll Bar &gt; Type" in the Inspector window.
 
 | Type | Description |
 | --- | --- |
@@ -12623,7 +12623,7 @@ In the Inspector window you can customize the settings for the object position, 
 
 ##### Mode
 
-The response of the "Graphic I/O field" object is specified in the Inspector window in "Properties > Properties > General > Mode".
+The response of the "Graphic I/O field" object is specified in the Inspector window in "Properties &gt; Properties &gt; General &gt; Mode".
 
 | Mode | Description |
 | --- | --- |
@@ -12632,7 +12632,7 @@ The response of the "Graphic I/O field" object is specified in the Inspector win
 
 ##### Fit to size
 
-The ratio for the graphic representation in the display window is specified under "Properties > Properties > Layout > Fit to size" in the Inspector window.
+The ratio for the graphic representation in the display window is specified under "Properties &gt; Properties &gt; Layout &gt; Fit to size" in the Inspector window.
 
 | Sizing type | Description |
 | --- | --- |
@@ -12714,8 +12714,8 @@ In three-line mode you see additional lines with the previous and next steps in 
 
 ![Configuring three-line mode with criteria analysis](images/165915662347_DV_resource.Stream@PNG-en-US.png)
 
-- To display the previous and next steps, select the "Previous and next step" option under "Properties > Appearance > Options".
-- To display the first operand with error of the criteria analysis, select the "Criteria analysis" option under "Properties > Appearance > Options".
+- To display the previous and next steps, select the "Previous and next step" option under "Properties &gt; Appearance &gt; Options".
+- To display the first operand with error of the criteria analysis, select the "Criteria analysis" option under "Properties &gt; Appearance &gt; Options".
 
   > **Note**
   >
@@ -12729,13 +12729,13 @@ In three-line mode you see additional lines with the previous and next steps in 
 
 You can also configure a compact GRAPH overview without toolbar buttons and operating mode display, as was previously possible in WinCC Professional versions before V14.
 
-To display the GRAPH overview compactly in single-line compatibility mode, select the "Single-line mode" option under "Properties > Appearance > Options".
+To display the GRAPH overview compactly in single-line compatibility mode, select the "Single-line mode" option under "Properties &gt; Appearance &gt; Options".
 
 ![Configuring a compact view](images/81523039115_DV_resource.Stream@PNG-de-DE.png)
 
 ##### Symbols
 
-You specify the symbols that are displayed in the GRAPH Overview in the Inspector window under "Properties > Appearance > Options". The following symbols are available for GRAPH Overview:
+You specify the symbols that are displayed in the GRAPH Overview in the Inspector window under "Properties &gt; Appearance &gt; Options". The following symbols are available for GRAPH Overview:
 
 | Symbol | Name | Function |
 | --- | --- | --- |
@@ -12745,7 +12745,7 @@ You specify the symbols that are displayed in the GRAPH Overview in the Inspecto
 
 ##### Buttons
 
-You specify the buttons that are displayed in the GRAPH Overview under "Properties > Toolbar > General".
+You specify the buttons that are displayed in the GRAPH Overview under "Properties &gt; Toolbar &gt; General".
 
 | Button | Name | Function |
 | --- | --- | --- |
@@ -12759,8 +12759,8 @@ You specify the buttons that are displayed in the GRAPH Overview under "Properti
 A PLC including a GRAPH instance data block has been created and contains at least one PLC tag which is visible in and accessible from the HMI.
 
 1. Move the GRAPH overview out of the toolbox window using drag-and-drop.
-2. In the Inspector window, select "Properties > Properties > General".
-3. Open the selection button under "Process > Tag".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General".
+3. Open the selection button under "Process &gt; Tag".
 
    The "Add new object" dialog opens.
 4. Select the corresponding PLC in the "Program blocks" folder.
@@ -12811,8 +12811,8 @@ You can set the following property in the Inspector window:
 
 The "Tag" property is used to specify the global assignment of the "HandWheel" object in the global screen. There is only one global screen per HMI device.
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Select a tag from the selection list under "Settings > Tag".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Select a tag from the selection list under "Settings &gt; Tag".
 
 ##### Local assignment
 
@@ -12822,7 +12822,7 @@ Example for configuration to a button:
 
 1. Open the screen in which the "HandWheel" object is assigned to another tag.
 2. Drag the "Button" object from the toolbox to the screen. Select the button on your screen.
-3. Click "Properties > Events > Click" in the Inspector window.
+3. Click "Properties &gt; Events &gt; Click" in the Inspector window.
 4. The "Function list" dialog box opens. Click the first line of the function list. The list of system functions and scripts available in the project appears.
 5. Select the system function "SetTagToHandWheel" from the "Other functions" group. Select a tag from the combo box at "Value".
 
@@ -12859,7 +12859,7 @@ You can adapt the following properties in the Inspector window:
 You can use this property to set the position of the object "Help indicator."
 
 1. Select the object "Help indicator" in the template.
-2. In the Inspector window, select "Properties > Properties > Layout".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 3. Enter a value for X and Y. You can also use the cursor keys to position the selected object.
 
 If you have configured a screen object at this position, the visible help indicator covers the screen object. The help indicator is covered only by incoming system alarms and dialogs.
@@ -12912,7 +12912,7 @@ If the toolbar of the HTML browser toolbar is not activated, the browser backgro
 
 ##### Address
 
-The Internet address is specified in "Properties > Properties > General >URL" in the Inspector window.
+The Internet address is specified in "Properties &gt; Properties &gt; General &gt;URL" in the Inspector window.
 
 > **Note**
 >
@@ -12931,7 +12931,7 @@ The Internet address is specified in "Properties > Properties > General >URL" in
 
 You can select the browser type in Runtime Advanced as of version V13 SP1.
 
-Specify the type of the Web browser under "Properties > Properties > General > HTML browser type" in the Inspector window.
+Specify the type of the Web browser under "Properties &gt; Properties &gt; General &gt; HTML browser type" in the Inspector window.
 
 Two options are available:
 
@@ -12950,10 +12950,10 @@ Two options are available:
 
 1. Create an internal tag of the "String" data type, for example, InternetAddress, in the "Tag" editor.
 2. Insert the "HTML Browser" object in the screen in the "Screens" editor.
-3. In the Inspector window, select "Properties > Properties > General".
+3. In the Inspector window, select "Properties &gt; Properties &gt; General".
 4. At "Tag for the URL", select the "InternetAddress" tag from the selection list.
 5. Insert an I/O field in the screen in the "Screens" editor.
-6. In the Inspector window of the IO field "Properties > Properties > General > Tag for URL", select the "InternetAddress" tag from the selection list.
+6. In the Inspector window of the IO field "Properties &gt; Properties &gt; General &gt; Tag for URL", select the "InternetAddress" tag from the selection list.
 
    ![Basic procedure](images/72547288715_DV_resource.Stream@PNG-en-US.png)
 
@@ -12969,7 +12969,7 @@ The "HTML Browser" object does not have its own operator controls. Assign the sy
 
 1. For example, drag the "Button" object to the screen from the toolbox.
 2. Input a text of any length or select a graphic, for example Update.
-3. In the Inspector window, select "Properties > Events > Click".  
+3. In the Inspector window, select "Properties &gt; Events &gt; Click".  
     The "Function list" dialog opens.
 4. The system functions for controlling the "HTML Browser" object can be found in the list of system functions in the "Keyboard operation for screen objects" group.   
    Select a function from the list, for example, HTMLBrowserRefresh.
@@ -13002,7 +13002,7 @@ The functional scope of the HTML Browser is limited in comparison to the Interne
 
 - The HTML Browser will only show pure HTML pages. VBScript, Java, JavaScript, Flash and ActiveX controls are not supported. Set up the HTML pages for display in the HTML Browser by using a text editor or using a simple HTML editor.
 - Links to embedded files, for example *.pdf or *.xls, are not supported.
-- Queries and dialogs that are conducted during the access of, for example protected pages are not supported. When accessing protected pages, enter your user name and password in the URL: <http://username:password@servername> (for example "http://Administrator:Admin123@192.168.0.199").
+- Queries and dialogs that are conducted during the access of, for example protected pages are not supported. When accessing protected pages, enter your user name and password in the URL: &lt;http://username:password@servername&gt; (for example "http://Administrator:Admin123@192.168.0.199").
 
 > **Note**
 >
@@ -13020,7 +13020,7 @@ The functional scope of the HTML Browser is limited in comparison to the Interne
 >
 > **HTML browser in "Scroll indicator" mode**
 >
-> If you have specified the "Scroll indicator" scroll mode in "Runtime settings > Screens > Scrolling in controls", it may occur that some websites are not correctly displayed.
+> If you have specified the "Scroll indicator" scroll mode in "Runtime settings &gt; Screens &gt; Scrolling in controls", it may occur that some websites are not correctly displayed.
 
 > **Note**
 >
@@ -13066,11 +13066,11 @@ Customize the object position and size in the Inspector window. You can adjust t
 
 ##### Address
 
-The Internet address is specified in the Inspector window under "Properties > Properties > General > Window > URL".
+The Internet address is specified in the Inspector window under "Properties &gt; Properties &gt; General &gt; Window &gt; URL".
 
 ##### Web browser type
 
-You can specify the type of web browser in the Inspector window, under "Properties > Properties > General > Web browser type".
+You can specify the type of web browser in the Inspector window, under "Properties &gt; Properties &gt; General &gt; Web browser type".
 
 Two options are available:
 
@@ -13081,11 +13081,11 @@ Two options are available:
 
 1. Create an internal tag of the "String" data type, for example, "InternetAddress", in the "Tag" editor.
 2. Insert the "HTML Browser" object in the screen in the "Screens" editor.
-3. In the Inspector window, select "Properties > Properties > General".
+3. In the Inspector window, select "Properties &gt; Properties &gt; General".
 4. AFor "Tag for URL", select the "InternetAddress" tag from the selection list.
 5. For "Web browser type", select "... based on Chromium".
 6. Insert an I/O field in the screen in the "Screens" editor.
-7. Select the "InternetAddress" tag from the selection list under "Properties > Properties > General> Tag for URL" in the Inspector window.
+7. Select the "InternetAddress" tag from the selection list under "Properties &gt; Properties &gt; General&gt; Tag for URL" in the Inspector window.
 
    ![Basic procedure](images/172716497291_DV_resource.Stream@PNG-en-US.png)
 
@@ -13101,7 +13101,7 @@ When the operator enters or activates an address in the I/O field, the HTML brow
   - http://
   - file://
 - Note that the "http://" and "file://" reports do not function in the simulation.
-- Queries and dialogs that are conducted during the access of, for example protected pages are not supported. When accessing protected pages, enter your user name and password in the URL: <http://username:password@servername> (for example "http://Administrator:Admin123@192.168.0.199").
+- Queries and dialogs that are conducted during the access of, for example protected pages are not supported. When accessing protected pages, enter your user name and password in the URL: &lt;http://username:password@servername&gt; (for example "http://Administrator:Admin123@192.168.0.199").
 - The "Web control" object only displays content that is supported by the web browser in which Runtime is open.
 - The object is implemented as an iFrame. Pages with X-frame option settings that prevent the display in an iFrame are not displayed in the object.
 
@@ -13115,12 +13115,12 @@ The "Browser" object displays PDF files that are available:
 
 You can view a PDF file in the following ways:
 
-- Under "Properties > URL", enter the address "https://localhost/WebRH/<pdfname.pdf>".
-- Enter a valid Internet address under "Properties > Properties > URL".
+- Under "Properties &gt; URL", enter the address "https://localhost/WebRH/&lt;pdfname.pdf&gt;".
+- Enter a valid Internet address under "Properties &gt; Properties &gt; URL".
 - In the configuration of the "Browser" operating object under "Properties", link the URL with a tag of the type WString which contains the path and file name.
 - Enter path and file name in the URL input field of the "Browser" operating object.
 
-  Syntax: file:///<path>/<file name>.pdf
+  Syntax: file:///&lt;path&gt;/&lt;file name&gt;.pdf
 
   Pay attention to uppercase/lowercase spelling.
 
@@ -13200,8 +13200,8 @@ You can find information on the supported network cameras and recommended settin
 
 ##### Specifying URL for the source of the video stream
 
-1. Insert the camera view in the screen in the "Screens" editor. The camera view is found in the task card "Tools" > "Controls".
-2. Click "Properties > Properties > General > Media" in the Inspector window.
+1. Insert the camera view in the screen in the "Screens" editor. The camera view is found in the task card "Tools" &gt; "Controls".
+2. Click "Properties &gt; Properties &gt; General &gt; Media" in the Inspector window.
 3. Enter the static camera URL in the "Camera URL" field, for example, "rtsp://user:password@192.168.56.208" for a Siemens camera.
 
    The address of the network camera is available in the network camera manual.
@@ -13219,7 +13219,7 @@ The following characters of the US ASCII character set are permitted:
 
 A...Z a...z
 
-!#$%&()*+,'-_./:;<=>?@ [\]_{|}~^(")`
+!#$%&amp;()*+,'-_./:;&lt;=&gt;?@ [\]_{|}~^(")`
 
 > **Note**
 >
@@ -13229,7 +13229,7 @@ A...Z a...z
 
 ##### Specifying the transmission protocol
 
-1. Click "Properties > Properties > General > Media" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; General &gt; Media" in the Inspector window.
 2. Specify the transmission protocol with the "Use UDP instead of TCP" check box.
 
    The selection of the protocol depends on the protocol types which your network camera supports. Information on supported protocols is available in the network camera manual.
@@ -13238,8 +13238,8 @@ A...Z a...z
 
 ##### Specifying position and size of the camera view
 
-1. Click "Properties > Properties > General > Layout" in the Inspector window.
-2. Enter the size of the object under "Camera view" in the "Position & Size" area. To achieve the best picture quality of the video stream, enter the physical resolution of the network camera as size of the camera view.
+1. Click "Properties &gt; Properties &gt; General &gt; Layout" in the Inspector window.
+2. Enter the size of the object under "Camera view" in the "Position &amp; Size" area. To achieve the best picture quality of the video stream, enter the physical resolution of the network camera as size of the camera view.
 
    The recommended setting "Keep video size" is selected by default in the "Fit to size" area. The "Keep aspect ratio" check box is disabled and cannot be selected.
 3. To keep the aspect ratio of the video stream, disable "Keep video size".
@@ -13343,8 +13343,8 @@ In the Inspector window, you customize the position, style, colors and font type
 
 ##### Defining the number of entries
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Define the desired number of list boxes under "Label > Entries".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Define the desired number of list boxes under "Label &gt; Entries".
 
 At the same time, the value of the "Entries" attribute specifies the high limit for the "Index" property under "Label." Changing the value can have the following effects:
 
@@ -13381,8 +13381,8 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 ##### Define number of check boxes
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Define the desired number of check boxes under "Label > Entries".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Define the desired number of check boxes under "Label &gt; Entries".
 
 At the same time, the value of the attribute specifies the upper limit for the "Index" property under "Label." Changing the value can have the following effects:
 
@@ -13395,7 +13395,7 @@ At the same time, the value of the attribute specifies the upper limit for the "
 
 ##### Define the default setting of the check boxes
 
-In the table under "Properties > Properties > General > Label > Presetting enabled", you define which options are shown activated in a check box list. You can activate multiple options.
+In the table under "Properties &gt; Properties &gt; General &gt; Label &gt; Presetting enabled", you define which options are shown activated in a check box list. You can activate multiple options.
 
 Each option is represented by a bit in a 32-bit word. To activate a field, the corresponding bit must have the value "1". The 32-bit word contains the information for all options of the check box list. The value of the "Presetting enabled" property is specified in hexadecimal format.
 
@@ -13425,7 +13425,7 @@ In the Inspector window you can customize the settings for the object position, 
 
 The radius of the "Circle" object is specified in the Inspector window. The value is entered in pixels.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value between 0 and 2500 in the "Radius" area.
 
 ---
@@ -13457,14 +13457,14 @@ In the Inspector window, you customize the settings for the object position, sha
 
 Define the horizontal, and the vertical radius of the "Circular arc" object in the Inspector window. Enter the values using Pixels as the unit.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value for "Radius" in the "Arc" area.
 
 ##### Define start and end angle
 
 Determine the length of the circular arc using the "Start Angle" and "End Angle" attributes. Enter the values using Degrees as the unit.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value for "Start angle" and "End angle" in the "Radii" area.
 
 ##### Alternative procedure
@@ -13505,14 +13505,14 @@ In the Inspector window, you customize the settings for the object position, sha
 
 You define the radius of the "Circle segment" object in the Inspector window. Enter the value using Pixels as the unit.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value for "Radius" in the "Arc" area.
 
 ##### Define start and end angle
 
 Determine the size of the circle segment using the "Start Angle" and "End Angle" attributes. Enter the values using Degrees as the unit.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter a value for "Start angle" and "End angle" in the "Radii" area.
 
 ##### Alternative procedure
@@ -13579,29 +13579,29 @@ The following columns are displayed in the criteria analysis view in Runtime.
 ##### Configuring the criteria analysis view
 
 1. Move the criteria analysis view from the toolbox window using drag-and-drop.
-2. Select "Properties > Properties > General" in the Inspector window.
+2. Select "Properties &gt; Properties &gt; General" in the Inspector window.
 3. Open the selection button under the "Tag" property.
 4. Select the status tag of the corresponding alarm view.
 
-   To enable linking to alarms, enter the tag for the criteria analysis for the configured alarm view under "Properties > Properties > Display".
-5. In the Inspector window, select "Properties > Properties > Columns".
+   To enable linking to alarms, enter the tag for the criteria analysis for the configured alarm view under "Properties &gt; Properties &gt; Display".
+5. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
 6. Select the columns that you require in the device view for Runtime.
 7. Customize the headers and the width of the columns if necessary.
 
 ##### Configuring the criteria analysis view (RT Professional)
 
 1. Move the criteria analysis view from the toolbox window using drag-and-drop.
-2. Select "Properties > Properties > General" in the Inspector window.
+2. Select "Properties &gt; Properties &gt; General" in the Inspector window.
 3. Enter the name of the configured alarm view under "Data source".
 
 ##### Using the keyboard to operate the criteria analysis view
 
 To operate the PLC code view with the keyboard, proceed as follows:
 
-1. Press the <Tab> key repeatedly until the focus is on the desired button.
+1. Press the &lt;Tab&gt; key repeatedly until the focus is on the desired button.
 
-   Use <Shift + Tab> to navigate back to the previous button.
-2. Press <Enter>.
+   Use &lt;Shift + Tab&gt; to navigate back to the previous button.
+2. Press &lt;Enter&gt;.
 
    The command is executed.
 
@@ -13634,13 +13634,13 @@ In the Inspector window, you customize the position, geometry, style, color, and
 
 For improved legibility a value table, a ruler and a grid can be displayed in Runtime.
 
-1. Activate "Properties > Properties > Appearance > Show ruler".
-2. Activate "Properties > Properties > Table > Show table".
-3. Activate "Properties > Properties > Table > Show grid".
+1. Activate "Properties &gt; Properties &gt; Appearance &gt; Show ruler".
+2. Activate "Properties &gt; Properties &gt; Table &gt; Show table".
+3. Activate "Properties &gt; Properties &gt; Table &gt; Show grid".
 
 ##### Toolbars
 
-The layout of the operator controls is defined in the "Properties > Properties > Toolbar" inspector window.
+The layout of the operator controls is defined in the "Properties &gt; Properties &gt; Toolbar" inspector window.
 
 > **Note**
 >
@@ -13666,7 +13666,7 @@ The trend view buttons are not displayed on Basic Panels and HMI devices with a 
 
 ##### Displaying column headers
 
-The layout of the table in the trend view depends on the view settings in the Control Panel. Depending on the setting, the column headers might be truncated. This setting is found under "Display > Appearance" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
+The layout of the table in the trend view depends on the view settings in the Control Panel. Depending on the setting, the column headers might be truncated. This setting is found under "Display &gt; Appearance" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
 
 This behavior only occurs during configuration. The column headers are displayed correctly in Runtime.
 
@@ -13676,7 +13676,7 @@ If warnings or errors are displayed in the output window during a consistency ch
 
 ##### Adding, configuring, and removing trends
 
-The trends of the trend view are managed in the Inspector window under "Properties > Properties > Trend". You can copy trends between different trend views.
+The trends of the trend view are managed in the Inspector window under "Properties &gt; Properties &gt; Trend". You can copy trends between different trend views.
 
 ##### Notes on operating Comfort Panels
 
@@ -13717,9 +13717,9 @@ The object "Charging condition" is a control element for some SIMATIC Mobile Pan
 
 | Symbol | Description | Charging condition |
 | --- | --- | --- |
-| ![Layout](images/21132147723_DV_resource.Stream@PNG-de-DE.png) | Battery is charged | >20 % |
-| ![Layout](images/21132150795_DV_resource.Stream@PNG-de-DE.png) | Battery must be charged | <20 % and >6 % |
-| ![Layout](images/21132153867_DV_resource.Stream@PNG-de-DE.png) | Battery is weak | < 6 % |
+| ![Layout](images/21132147723_DV_resource.Stream@PNG-de-DE.png) | Battery is charged | &gt;20 % |
+| ![Layout](images/21132150795_DV_resource.Stream@PNG-de-DE.png) | Battery must be charged | &lt;20 % and &gt;6 % |
+| ![Layout](images/21132153867_DV_resource.Stream@PNG-de-DE.png) | Battery is weak | &lt; 6 % |
 
 ##### Operation
 
@@ -13776,7 +13776,7 @@ The "Tag" property is used to specify the global assignment of the "Illuminated 
    - External tag: BufferTag
    - External tag: Pushbutton_PLC
 3. Open the Inspector window of the "Pushbutton_State" tag.
-4. In the Inspector window, select "Properties > Events > Value change". Click the first line of the function list. The list opens, showing the system functions available in the project.
+4. In the Inspector window, select "Properties &gt; Events &gt; Value change". Click the first line of the function list. The list opens, showing the system functions available in the project.
 5. Select the "SetTag" system function.
 
    - Select the "Pushbutton_PLC" tag at "Tag (output)".
@@ -13788,7 +13788,7 @@ The "Tag" property is used to specify the global assignment of the "Illuminated 
 
      The value of the "Pushbutton_PLC" tag is written to the PLC with the "Pushbutton_PLC" tag. A program in the PLC evaluates the life bit. If communication is established, the current value is written to the "Pushbutton_PLC" tag from the PLC. The "BufferTag" is required to transfer the current position of the pushbutton to the PLC.
 6. Open the Inspector window of the "BufferTag" tag.
-7. In the Inspector window, select "Properties > Events > Value change".
+7. In the Inspector window, select "Properties &gt; Events &gt; Value change".
 8. Click the first line of the function list. The list opens, showing the system functions available in the project.
 9. Select the "SetTag" system function.
 
@@ -13802,7 +13802,7 @@ The "Tag" property is used to specify the global assignment of the "Illuminated 
    After establishing communication the current value is written to the "BufferTag" from the PLC. The "SetTag" system function is executed by the value change in the auxiliary tag. The system function re-allocates the value of the "Pushbutton_State" tag to the "Pushbutton_PLC" tag.
 10. Open the global screen in the "Screen navigation" editor.
 11. Select the illuminated key on the global screen.
-12. Select the tag "Pushbutton_State" in "Properties > Properties > General > Settings >Tag" in the Inspector window.
+12. Select the tag "Pushbutton_State" in "Properties &gt; Properties &gt; General &gt; Settings &gt;Tag" in the Inspector window.
 
     If you press the illuminated pushbutton, the value is written to the "Pushbutton_PLC" tag.
 
@@ -13842,7 +13842,7 @@ In the Inspector window, you customize the settings for the object position, sha
 
 ##### Line style
 
-The representation of the line is specified under "Properties > Properties > Appearance" in the Inspector window. The line is shown without interruption if you select "Solid", for example.
+The representation of the line is specified under "Properties &gt; Properties &gt; Appearance" in the Inspector window. The line is shown without interruption if you select "Solid", for example.
 
 > **Note**
 >
@@ -13850,7 +13850,7 @@ The representation of the line is specified under "Properties > Properties > App
 
 ##### Line start and end
 
-The start and end points of the line are specified under "Properties > Properties > Appearance > Line ends" in the Inspector window.
+The start and end points of the line are specified under "Properties &gt; Properties &gt; Appearance &gt; Line ends" in the Inspector window.
 
 Use arrow point, for example, as start and end point. The available start and end points depend on the device.
 
@@ -13879,7 +13879,7 @@ In the Inspector window, you customize the position, style, colors and font type
 
 ##### Defining the number of entries
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Define the desired number of list entries under "Entries".
 
 At the same time, the value of the "Entries" attribute specifies the upper limit for the "Index" property under "Label." Changing the value can have the following effects:
@@ -13892,7 +13892,7 @@ All fields for which the value of the "Index" property is higher than the new nu
 
 ##### Specifying the default setting of the list boxes
 
-Specify which list entry is displayed as active with "Properties > Properties > General > Presetting enabled".
+Specify which list entry is displayed as active with "Properties &gt; Properties &gt; General &gt; Presetting enabled".
 
 Each option is represented by a bit in a 32-bit word. To activate a field, the corresponding bit must have the value "1". The 32-bit word contains the information for all texts of the list of list boxes. The value of the "Selected fields" property is given in hexadecimal notation.
 
@@ -13936,11 +13936,11 @@ You can set the following properties in the Inspector window:
 
 ##### Operator controls
 
-The operator controls that can be used to control the Media Player in Runtime are specified in the Inspector window under "Properties > Properties > Appearance > Elements".
+The operator controls that can be used to control the Media Player in Runtime are specified in the Inspector window under "Properties &gt; Properties &gt; Appearance &gt; Elements".
 
 ##### Number of replays (Comfort Panels)
 
-To play the file multiple times, select number of playbacks under "Properties > Properties > General > Number of replays". Select a value from 0 to 2,147,483,647.
+To play the file multiple times, select number of playbacks under "Properties &gt; Properties &gt; General &gt; Number of replays". Select a value from 0 to 2,147,483,647.
 
 ##### Supported file formats (Comfort Panels)
 
@@ -14036,7 +14036,7 @@ You change the settings for the position, geometry, style, color, and font of th
 
 ##### Operator controls
 
-You define the control elements of the alarm view in Runtime, and their operator authorizations, under "Properties > Properties > Toolbar" in the inspector window. The following control elements are available for the alarm view:
+You define the control elements of the alarm view in Runtime, and their operator authorizations, under "Properties &gt; Properties &gt; Toolbar" in the inspector window. The following control elements are available for the alarm view:
 
 | Button |  | Function |
 | --- | --- | --- |
@@ -14072,7 +14072,7 @@ You define the control elements of the alarm view in Runtime, and their operator
 
 ##### Status bar
 
-You define which of the elements of the status bar are displayed using "Properties > Properties > Status bar" from the Inspector window. The following display elements are available for the alarm view:
+You define which of the elements of the status bar are displayed using "Properties &gt; Properties &gt; Status bar" from the Inspector window. The following display elements are available for the alarm view:
 
 | Button | Function |
 | --- | --- |
@@ -14086,7 +14086,7 @@ You define which of the elements of the status bar are displayed using "Properti
 
 ##### Access protection in Runtime
 
-Configure access protection under "Properties > Properties > Security" in the Inspector window. If a logged-on user has the required authorization, he can acknowledge, and edit alarms using the control elements in the alarm view.
+Configure access protection under "Properties &gt; Properties &gt; Security" in the Inspector window. If a logged-on user has the required authorization, he can acknowledge, and edit alarms using the control elements in the alarm view.
 
 The logon dialog box is displayed in the following cases:
 
@@ -14095,19 +14095,19 @@ The logon dialog box is displayed in the following cases:
 
 ##### Set timebase
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Select the required timebase under "Properties > Properties > Miscellaneous > Time base."
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Select the required timebase under "Properties &gt; Properties &gt; Miscellaneous &gt; Time base."
 3. Under "Time-based standard sort", define whether the alarms are sorted in ascending or descending order in Runtime.
 
 ##### Enable Autoscroll
 
-1. In the Inspector window, activate "Properties > Properties > Layout > Window > Autoscroll".
+1. In the Inspector window, activate "Properties &gt; Properties &gt; Layout &gt; Window &gt; Autoscroll".
 
 ##### Define text format
 
 To format the alarm text:
 
-1. In the Inspector window, select "Properties > Properties > Text format".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Text format".
 2. Click the "..." button in the "Font" area.
 
    A dialog opens.
@@ -14115,7 +14115,7 @@ To format the alarm text:
 
 ##### Set up sort order
 
-1. In the Inspector window, select "Properties > Properties > Columns".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
 
    ![Set up sort order](images/88083730315_DV_resource.Stream@PNG-en-US.png)
 
@@ -14124,7 +14124,7 @@ To format the alarm text:
 
 ##### Set to a table in the alarm view
 
-1. Click "Properties > Properties > Table font" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Table font" in the Inspector window.
 2. Define settings for the rows and cells in the "Table body" area.
 
    - "Optimum line height" activated: The font is aligned to the height of the line.
@@ -14134,12 +14134,12 @@ To format the alarm text:
 
 ##### Set Loop-In-Alarm
 
-1. In the Inspector window, click "Properties > Properties > Miscellaneous".
+1. In the Inspector window, click "Properties &gt; Properties &gt; Miscellaneous".
 2. Activate the "Loop-In-Alarm with double-click" option.
 
 ##### Displaying column headers
 
-The layout of the alarm view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is available in the Control Panel, "Display" > "Appearance" tab. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
+The layout of the alarm view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is available in the Control Panel, "Display" &gt; "Appearance" tab. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
 
 This behavior only occurs during configuration. The column headers are displayed correctly in Runtime.
 
@@ -14173,8 +14173,8 @@ The alarm line allows display of the most current pending alarm in Runtime. The 
 
 How to configure the alarm line:
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
-2. Select "Mode > Alarm line".
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
+2. Select "Mode &gt; Alarm line".
 
 ##### Layout
 
@@ -14182,7 +14182,7 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 > **Note**
 >
-> The fonts available for selection depend on the fonts you have configured in the Runtime settings under "Language & font" and the fonts supported by your HMI device.
+> The fonts available for selection depend on the fonts you have configured in the Runtime settings under "Language &amp; font" and the fonts supported by your HMI device.
 
 You can adapt the following properties in particular:
 
@@ -14201,7 +14201,7 @@ You can adapt the following properties in particular:
 
 ##### Operator controls
 
-The operator controls that can be used to control the alarm view in Runtime are specified in the Inspector window under "Properties > Properties > Toolbar". The following table shows the operator controls in the alarm view and their function:
+The operator controls that can be used to control the alarm view in Runtime are specified in the Inspector window under "Properties &gt; Properties &gt; Toolbar". The following table shows the operator controls in the alarm view and their function:
 
 | Button | Name | Function |
 | --- | --- | --- |
@@ -14214,39 +14214,39 @@ The operator controls that can be used to control the alarm view in Runtime are 
 
 ##### Select alarm classes
 
-1. Click "Properties > Properties > General" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; General" in the Inspector window.
 2. Under "Alarm classes", activate the alarm classes to be displayed in the alarm view in Runtime.
 
 ##### Access protection in Runtime
 
-You can configure access protection in the "Properties > Security" group in the properties of the alarm view. A logged-on user with the required authorization can acknowledge and edit alarms using the operator controls in the alarm view. If the logged-on user does not have the required authorization, or if no user is logged in, pressing the "Acknowledge" or "Edit" buttons or double-clicking an alarm line opens the logon dialog.
+You can configure access protection in the "Properties &gt; Security" group in the properties of the alarm view. A logged-on user with the required authorization can acknowledge and edit alarms using the operator controls in the alarm view. If the logged-on user does not have the required authorization, or if no user is logged in, pressing the "Acknowledge" or "Edit" buttons or double-clicking an alarm line opens the logon dialog.
 
 ##### Define columns
 
 Define the columns to be displayed in the alarm view in Runtime in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > Columns".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
 2. Activate the columns that are to be displayed in Runtime under "Visible columns".
 
 ##### Sequence of columns
 
 If this property is enabled, the column sequence in the alarm view can be changed in Runtime.
 
-1. In the Inspector window, select "Properties > Properties > Columns".
-2. Select "Column properties > Columns moveable".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
+2. Select "Column properties &gt; Columns moveable".
 
 ##### Sorting
 
 If this property is enabled, the alarms displayed in the alarm view in Runtime can be sorted by date and time.
 
-1. In the Inspector window, select "Properties > Properties > Columns".
-2. Select "Column properties > Sorting by date/time possible".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
+2. Select "Column properties &gt; Sorting by date/time possible".
 
 ##### Filter alarms
 
 This property is used to define that only alarms that contain a configured string in the alarm text will be displayed in Runtime for the extended alarm view.
 
-1. In the Inspector window, select "Properties > Properties > Filter".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Filter".
 2. In the "Filter string" field, enter the desired term for filtering.   
    Alternatively, you can configure a filter tag using the "Filter tag" field. The contents of the filter tag serve as the filter criterion in Runtime.
 
@@ -14254,8 +14254,8 @@ This property is used to define that only alarms that contain a configured strin
 
 An icon is displayed in the first column of the alarm view. This symbol allows the alarm to be allocated to an alarm class.
 
-1. In the Inspector window, select "Properties > Properties > Columns".
-2. Select "Visible columns > Alarm class name".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
+2. Select "Visible columns &gt; Alarm class name".
 3. Open the "HMI alarms" editor and click on the "Alarm classes" tab.
 4. Specify an icon for use to identify the alarms of this alarm class for an alarm class in the "Display name" column.
 
@@ -14268,9 +14268,9 @@ The "alarm view" object cannot be grouped.
 You have the option of having alarms of selected alarm classes shown in different colors in Runtime. You set the background colors of the alarms in the "HMI alarms" editor.
 
 1. Open the "HMI alarms" editor and click on the "Alarm classes" tab.
-2. Set the colors for alarms under "Properties > Properties > Colors".
+2. Set the colors for alarms under "Properties &gt; Properties &gt; Colors".
 3. Depending on the HMI device, also change the flashing characteristics if required.
-4. To show alarms in the alarm view in the defined colors, activate the option "Alarm class colors" under "Runtime settings > Alarms > General".
+4. To show alarms in the alarm view in the defined colors, activate the option "Alarm class colors" under "Runtime settings &gt; Alarms &gt; General".
 
 ##### Define display area
 
@@ -14281,21 +14281,21 @@ You select a tag which defines the time from which alarms should be displayed. T
 
 To define the display area, proceed as follows:
 
-1. Click "Properties > Properties > Display" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Display" in the Inspector window.
 2. Define the tag in which the time is specified under "Control tag for display area".
 
 ##### Switch to PLC code view
 
 You configure the "ActivatePLCCodeView" system function on a button to enable the jump from a monitoring alarm in the display to the affected program code in the PLC code view. In the alarm view, you define a control tag that you use to give the button dynamic properties. Control tag is used to evaluate whether the entry point of the selected monitoring signal is possible in the PLC code view. To define the control tag, proceed as follows:
 
-1. Click "Properties > Properties > Display" in the Inspector window.
-2. Specify a Boolean tag under "Properties > Display > Control tag for PLC code view" that will control the jump from the last active ProDiag alarm or GRAPH alarm to the PLC code view.
+1. Click "Properties &gt; Properties &gt; Display" in the Inspector window.
+2. Specify a Boolean tag under "Properties &gt; Display &gt; Control tag for PLC code view" that will control the jump from the last active ProDiag alarm or GRAPH alarm to the PLC code view.
 
 You have the option make the button dynamic using animations, for example, so that the button changes color with an incoming alarm.
 
 ##### Displaying column headers
 
-The layout of the alarm view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display > Layout tab" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
+The layout of the alarm view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display &gt; Layout tab" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
 
 This behavior only occurs during configuration. The column headers are displayed correctly in Runtime.
 
@@ -14329,7 +14329,7 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 > **Note**
 >
-> The fonts available for selection depend on the fonts you have configured in the Runtime settings under "Language & font" and the fonts supported by your HMI device.
+> The fonts available for selection depend on the fonts you have configured in the Runtime settings under "Language &amp; font" and the fonts supported by your HMI device.
 
 You can adapt the following properties in particular:
 
@@ -14343,7 +14343,7 @@ You can adapt the following properties in particular:
 
 ##### Operator controls
 
-The operator controls that can be used to control the alarm display in Runtime are specified in the Inspector window under "Display > Settings". The following table shows the operator controls in the alarm view, and what they do:
+The operator controls that can be used to control the alarm display in Runtime are specified in the Inspector window under "Display &gt; Settings". The following table shows the operator controls in the alarm view, and what they do:
 
 | Button |  | Function |
 | --- | --- | --- |
@@ -14363,12 +14363,12 @@ The operator controls that can be used to control the alarm display in Runtime a
 
 Define the columns to be displayed in the alarm view in Runtime in the Inspector window.
 
-1. In the Inspector window, click "Properties > Columns".
+1. In the Inspector window, click "Properties &gt; Columns".
 2. Activate the columns that are to be displayed in Runtime under "Columns".
 
 ##### Displaying column headers
 
-The layout of the alarm view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display > Layout tab" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
+The layout of the alarm view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display &gt; Layout tab" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
 
 This behavior only occurs during configuration. The column headers are displayed correctly in Runtime.
 
@@ -14392,8 +14392,8 @@ The alarm line allows display of the most current pending alarm in Runtime. The 
 
 How to configure the alarm line:
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
-2. Select "Mode > Alarm line".
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
+2. Select "Mode &gt; Alarm line".
 
 ##### Changing the view type
 
@@ -14403,7 +14403,7 @@ On HMI devices with a display size larger than 6 ", you can configure both the a
 
 Proceed as follows to configure the simplified alarm view:
 
-1. Click "Properties > Properties > Layout > Mode" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout &gt; Mode" in the Inspector window.
 2. Select "Simplified".
 
 ##### Layout
@@ -14431,7 +14431,7 @@ You can adapt the following properties in particular:
 
 ##### Operator controls
 
-The operator controls that can be used to control the alarm view in Runtime are specified in the Inspector window under "Properties > Properties > Display > Settings". The following table shows the operator controls in the alarm view, and what they do:
+The operator controls that can be used to control the alarm view in Runtime are specified in the Inspector window under "Properties &gt; Properties &gt; Display &gt; Settings". The following table shows the operator controls in the alarm view, and what they do:
 
 | Button |  | Function |
 | --- | --- | --- |
@@ -14444,39 +14444,39 @@ The operator controls that can be used to control the alarm view in Runtime are 
 
 ##### Select alarm classes
 
-1. Click "Properties > Properties > General" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; General" in the Inspector window.
 2. Under "Alarm classes", activate the alarm classes to be displayed in the alarm view in Runtime.
 
 ##### Access protection in Runtime
 
-Configure access protection in the "Properties > Security" group in the properties of the alarm view. If a logged-on user has the required authorization, he can acknowledge and edit alarms using the operator controls in the alarm view. If the logged-on user does not have the required authorization, or if no user is logged in, pressing the "Acknowledge" or "Edit" buttons or double-clicking an alarm line opens the logon dialog.
+Configure access protection in the "Properties &gt; Security" group in the properties of the alarm view. If a logged-on user has the required authorization, he can acknowledge and edit alarms using the operator controls in the alarm view. If the logged-on user does not have the required authorization, or if no user is logged in, pressing the "Acknowledge" or "Edit" buttons or double-clicking an alarm line opens the logon dialog.
 
 ##### Define columns
 
 Define the columns to be displayed in the alarm view in Runtime in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > Columns".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
 2. Activate the columns that are to be displayed in Runtime under "Columns".
 
 ##### Sequence of columns
 
 If this property is enabled, the column sequence in the alarm view can be changed in Runtime.
 
-1. In the Inspector window, select "Properties > Properties > Columns".
-2. Select "Column properties > Column order".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
+2. Select "Column properties &gt; Column order".
 
 ##### Enable sorting
 
 If this property is enabled, the alarms displayed in the alarm view in Runtime can be sorted by date and time.
 
-1. In the Inspector window, select "Properties > Properties > Columns".
-2. Select "Column properties > Sorting by date/time possible".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
+2. Select "Column properties &gt; Sorting by date/time possible".
 
 ##### Filter alarms
 
 This property is used to define that only alarms that contain a configured string in the alarm text will be displayed in Runtime for the extended alarm view.
 
-1. In the Inspector window, select "Properties > Properties > Filter".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Filter".
 2. Enter the required term for filtering in the field "Filter string".  
    Alternatively, you configure a filter tag using the field "Filter tag". The contents of the filter tag serve as the filter criterion in Runtime.
 
@@ -14484,8 +14484,8 @@ This property is used to define that only alarms that contain a configured strin
 
 An icon is displayed in the first column of the alarm view. This symbol allows the alarm to be allocated to an alarm class.
 
-1. In the Inspector window, select "Properties > Properties > Columns".
-2. Select "Columns > Alarm class".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
+2. Select "Columns &gt; Alarm class".
 3. Open the "Alarms" editor, and click the "Alarm classes" tab.
 4. Specify an icon for use to identify the alarms of this alarm class for an alarm class in the "Display name" column.
 
@@ -14498,8 +14498,8 @@ The "alarm view" object cannot be grouped.
 You have the option to display alarms of the selected alarm classes in different colors in Runtime. You specify the background colors of the alarms in the "HMI alarms" editor.
 
 1. Open the "HMI alarms" editor, and click the "Alarm classes" tab.
-2. Define the colors for alarms under "Properties > Properties > Colors".
-3. To show alarms in the alarm view in the defined colors, activate the option "Alarm class colors" under "Runtime settings > Alarms > General".
+2. Define the colors for alarms under "Properties &gt; Properties &gt; Colors".
+3. To show alarms in the alarm view in the defined colors, activate the option "Alarm class colors" under "Runtime settings &gt; Alarms &gt; General".
 
 ##### Define display area
 
@@ -14510,14 +14510,14 @@ You select a tag which defines the time from which alarms should be displayed. T
 
 To define the display area, proceed as follows:
 
-1. Click "Properties > Properties > Display" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Display" in the Inspector window.
 2. Define the tag in which the time is specified under "Control tag for the display area".
 
 ##### Configuration behavior
 
 **Displaying column headers**
 
-The layout of the alarm view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display > Layout tab" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
+The layout of the alarm view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display &gt; Layout tab" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
 
 This behavior only occurs during configuration. The column headers are displayed correctly in Runtime.
 
@@ -14556,7 +14556,7 @@ The alarm window is not assigned to any screen. Depending on the configuration t
 
 > **Note**
 >
-> In the engineering system you dynamize, for example, the visibility of an object in "Properties > Animations" in the inspector window. In Runtime, the "Simple alarm window" object does not support animations. If you have configured an animation and, for example, wish to perform a consistency check of the project, then an error alarm is issued in the Output window.
+> In the engineering system you dynamize, for example, the visibility of an object in "Properties &gt; Animations" in the inspector window. In Runtime, the "Simple alarm window" object does not support animations. If you have configured an animation and, for example, wish to perform a consistency check of the project, then an error alarm is issued in the Output window.
 
 ##### Simple alarm window
 
@@ -14577,7 +14577,7 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 ##### Operator controls
 
-The operator controls that can be used to control the alarm view in Runtime are specified in the inspector window under "Properties >Display > Settings". The following table shows the operator controls in the Alarm window, and what they do:
+The operator controls that can be used to control the alarm view in Runtime are specified in the inspector window under "Properties &gt;Display &gt; Settings". The following table shows the operator controls in the Alarm window, and what they do:
 
 | Button |  | Function |
 | --- | --- | --- |
@@ -14590,7 +14590,7 @@ The operator controls that can be used to control the alarm view in Runtime are 
 
 ##### Access protection in Runtime
 
-Configure access protection under "Properties > Properties > Security" in the inspector window of the alarm view. If a logged-on user has the required authorization, he can acknowledge and edit alarms using the operator controls in the alarm view. If the logged-in user does not have the required authorization, or if no user is logged in, clicking the "Acknowledge" or "Edit" buttons or double-clicking an alarm line opens the login dialog box.
+Configure access protection under "Properties &gt; Properties &gt; Security" in the inspector window of the alarm view. If a logged-on user has the required authorization, he can acknowledge and edit alarms using the operator controls in the alarm view. If the logged-in user does not have the required authorization, or if no user is logged in, clicking the "Acknowledge" or "Edit" buttons or double-clicking an alarm line opens the login dialog box.
 
 > **Note**
 >
@@ -14602,12 +14602,12 @@ Configure access protection under "Properties > Properties > Security" in the in
 
 Select the following option so that the Alarm window does not lose the focus after a screen change:
 
-1. In the Inspector window, select "Properties > Properties > Mode".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Mode".
 2. Enable "Label".
 
 ##### Window
 
-Define the response of the Alarm window under "Properties > Properties > Mode > Window" in the inspector window. The following table shows the possible properties:
+Define the response of the Alarm window under "Properties &gt; Properties &gt; Mode &gt; Window" in the inspector window. The following table shows the possible properties:
 
 | Option | Function |
 | --- | --- |
@@ -14642,12 +14642,12 @@ The alarm indicator is a graphic symbol that shows current errors or errors that
 
 ##### Alarm classes
 
-You define which alarm classes are shown with an alarm indicator in "General > Alarm classes" in the Inspector window. Alarm classes, such as "Warnings" or "Errors".
+You define which alarm classes are shown with an alarm indicator in "General &gt; Alarm classes" in the Inspector window. Alarm classes, such as "Warnings" or "Errors".
 
 ##### Define operator control in Runtime
 
 1. Select the alarm indicator in the screen.
-2. Click "Events > Click" or "Click when flashing" in the Inspector window.
+2. Click "Events &gt; Click" or "Click when flashing" in the Inspector window.
 3. The "function list" opens. Click the first line of the function list. The list of system functions, and scripts available in the project opens.
 4. Select the "ShowAlarmWindow". system function under "Alarms."
 5. Under "object name" select the name of the Alarm window from the selection list. Under "Layout", define whether the Alarm window should be visible, hidden, or should toggle between the two states.
@@ -14683,14 +14683,14 @@ In the Inspector window you can customize the settings for the object position, 
 
 You specify the number of fields in the Inspector window:
 
-1. Click "Properties > Properties > General" in the inspector window.
-2. Define the desired number of fields in the area "Label > Number of fields".
+1. Click "Properties &gt; Properties &gt; General" in the inspector window.
+2. Define the desired number of fields in the area "Label &gt; Number of fields".
 
 The value of the "Number of fields" property also indicates the upper limit value for the "Index" property. Changing the value can have the following effects:
 
 - Increasing the number of fields
 
-  New fields are added under the field with the highest value of the "Index" property. The standard label of the new field is changed with "Font > Text".
+  New fields are added under the field with the highest value of the "Index" property. The standard label of the new field is changed with "Font &gt; Text".
 - Decreasing the number of fields
 
   All fields for which the value of the "Index" property is greater than the new number are removed.
@@ -14749,14 +14749,14 @@ You provide information about the position and size of the PDF view in the Inspe
 ##### Basic procedure
 
 1. Create an internal tag of data type "String" in the "Tag" editor, for example, "PDFFile".
-2. Insert the PDF view in the screen of the "Screens" editor. The PDF view is available in the "Tools > Controls" task card.
-3. In the Inspector window, select "Properties > Properties > General".
+2. Insert the PDF view in the screen of the "Screens" editor. The PDF view is available in the "Tools &gt; Controls" task card.
+3. In the Inspector window, select "Properties &gt; Properties &gt; General".
 4. Enter the file name of the PDF file that opens by default in runtime in "File name".
 
    You can also leave the "File name" field blank.
 5. For "File name tag", select the "PDFFile" tag from the selection list.
 6. Insert an I/O field in the screen in the "Screens" editor.
-7. In the Inspector window of the I/O field "Properties > Properties > General > Tag" select the "PDFFile" tag from the selection list.
+7. In the Inspector window of the I/O field "Properties &gt; Properties &gt; General &gt; Tag" select the "PDFFile" tag from the selection list.
 8. Assign the PDF view the "PDFFile" tag under "File name tag" in the Inspector window.
 9. Create a text field for the label in the configured I/O field, for example, "PDF path".
 
@@ -14766,7 +14766,7 @@ If the operator enters the file name along with the path in the I/O field, the P
 
 In Runtime Advanced, you can configure a toolbar for the PDF view with which the PDF view is operated in Runtime.
 
-You configure the operator controls that are only visible in the PDF view in Runtime in the engineering system in the Inspector window under "Properties > Properties > Toolbar":
+You configure the operator controls that are only visible in the PDF view in Runtime in the engineering system in the Inspector window under "Properties &gt; Properties &gt; Toolbar":
 
 - Search: Specifies whether the search bar and "forward" and "backward" buttons are displayed.
 
@@ -14807,7 +14807,7 @@ Configure operator controls yourself, for example, buttons, and link the operato
 
 1. For example, drag the "Button" object to the screen from the toolbox.
 2. Enter a text of any length.
-3. In the Inspector window, select "Properties > Events > Click".   
+3. In the Inspector window, select "Properties &gt; Events &gt; Click".   
    The "Function list" dialog box is opened.
 4. The system functions for operation of the PDF view are available in the list of system functions in the group "Keyboard operation for screen objects".   
    From the list select a function, for example, "PDFZoomIn".
@@ -14911,16 +14911,16 @@ The PLC code view is divided into the following areas:
 
 You change the settings for the position, style, colors, and fonts of the object in the Inspector window. You also, importantly, adjust the toolbar buttons here.
 
-- You specify the display of path information in the header of the PLC code view under "Display > Show header (path)".
-- You specify the number of lines that are displayed in the symbol table in Runtime under "Symbol table lines > Number of visible lines".
-- You specify the width of the detail view relative to the information area under "GRAPH detail area > GRAPH detail area width (%)".
-- You specify the two-line display of GRAPH step names in Runtime under "GRAPH view > Two-line view".
+- You specify the display of path information in the header of the PLC code view under "Display &gt; Show header (path)".
+- You specify the number of lines that are displayed in the symbol table in Runtime under "Symbol table lines &gt; Number of visible lines".
+- You specify the width of the detail view relative to the information area under "GRAPH detail area &gt; GRAPH detail area width (%)".
+- You specify the two-line display of GRAPH step names in Runtime under "GRAPH view &gt; Two-line view".
 
-  To enable the two-line view, the "Show two lines" option must be selected under "Options > Settings > PLC programming > GRAPH > Length of step and transition names".
+  To enable the two-line view, the "Show two lines" option must be selected under "Options &gt; Settings &gt; PLC programming &gt; GRAPH &gt; Length of step and transition names".
 
 ##### Toolbar
 
-The operator controls with which the PLC code view is operated in Runtime are configured under "Properties > Properties > Toolbar > Buttons" in the Inspector window.
+The operator controls with which the PLC code view is operated in Runtime are configured under "Properties &gt; Properties &gt; Toolbar &gt; Buttons" in the Inspector window.
 
 | Operator control | Designation | Function |
 | --- | --- | --- |
@@ -14938,22 +14938,22 @@ The operator controls with which the PLC code view is operated in Runtime are co
 ##### Configuring the PLC code view
 
 1. Drag-and-drop the PLC Code View from the toolbox view.
-2. Click "Properties > Properties > Toolbar" in the Inspector window.
+2. Click "Properties &gt; Properties &gt; Toolbar" in the Inspector window.
 3. Select the buttons that you require in Runtime, for example: Next network, Previous network, Step mode.
 4. If required, configure the button display, e.g. background color or fill pattern.
-5. In the Inspector window, select "Properties > Properties > Columns".
+5. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
 6. Select the columns that you require in the device view for Runtime.
 7. Customize the column headers or order if necessary.
-8. Select an authorization for operation in "Properties > Properties > Security".
+8. Select an authorization for operation in "Properties &gt; Properties &gt; Security".
 
 ##### Controlling the PLC code view with the keyboard
 
 To control the PLC code view with the keyboard, proceed as follows:
 
-1. Press the <Tab> key repeatedly until the focus is on the desired button.
+1. Press the &lt;Tab&gt; key repeatedly until the focus is on the desired button.
 
-   You can use the <Shift + Tab> shortcut keys to navigate back to the previous button.
-2. Press <Enter>.
+   You can use the &lt;Shift + Tab&gt; shortcut keys to navigate back to the previous button.
+2. Press &lt;Enter&gt;.
 
    The command is executed.
 
@@ -15029,11 +15029,11 @@ The PLC code view is divided into the following areas:
 
 In the Inspector window, you customize the position, style, colors and font types of the object. You can adapt the following properties in particular:
 
-- Buttons of the toolbar under "Toolbar > Toolbar buttons"
-- Number of lines that are displayed in the symbol table in Runtime under "Symbol table lines > Number of visible lines"
-- Two-line display of GRAPH step names in Runtime under "GRAPH view > Two-line view"
+- Buttons of the toolbar under "Toolbar &gt; Toolbar buttons"
+- Number of lines that are displayed in the symbol table in Runtime under "Symbol table lines &gt; Number of visible lines"
+- Two-line display of GRAPH step names in Runtime under "GRAPH view &gt; Two-line view"
 
-  To enable the two-line view, the "Show two lines" option must be selected under "Options > Settings > PLC programming > GRAPH > Length of step and transition names".
+  To enable the two-line view, the "Show two lines" option must be selected under "Options &gt; Settings &gt; PLC programming &gt; GRAPH &gt; Length of step and transition names".
 
 ##### Displaying the network
 
@@ -15048,7 +15048,7 @@ You can find detailed information and examples of how to set up a user-defined f
 
 ##### Toolbar
 
-The operator controls with which the PLC code view is operated in Runtime are configured under "Properties > Properties > Toolbar > Buttons" in the Inspector window.
+The operator controls with which the PLC code view is operated in Runtime are configured under "Properties &gt; Properties &gt; Toolbar &gt; Buttons" in the Inspector window.
 
 | Operator control | Designation | Function |
 | --- | --- | --- |
@@ -15111,7 +15111,7 @@ Geometry: Modifies, deletes or adds corners.
 
 The corner points are numbered in the order of their creation. You can change, delete, or add more corner points:
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Select the required corner point in the "Geometry" area. Input a value at "X position " and "Y position ".
 3. To add a corner point, click the ![Geometry](images/14828972939_DV_resource.Stream@PNG-de-DE.png) button.
 4. To delete a corner point, click the ![Geometry](images/14829467019_DV_resource.Stream@PNG-de-DE.png) button.
@@ -15130,7 +15130,7 @@ You configure the "Polygon" object so that it rotates about a reference point in
 
 Enter the values for the angle of rotation using Degrees as the unit.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter values for the following attributes in the "Rotation" area.
 
    - X
@@ -15162,13 +15162,13 @@ In the Inspector window, you customize the settings for the object position, sha
 
 ##### Line start and end
 
-You define the start point and the end point of the line under "Properties > Properties >"Appearance" in the Inspector window. Use arrow point, for example, as start and end point. The available start and end points depend on the device.
+You define the start point and the end point of the line under "Properties &gt; Properties &gt;"Appearance" in the Inspector window. Use arrow point, for example, as start and end point. The available start and end points depend on the device.
 
 ##### Geometry
 
 The corner points are numbered in the order of their creation. You can change, delete, or add more corner points:
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 2. Select the required corner point in the "Geometry" area. Input a value at "X position" and "Y position".
 3. To add a corner point, click the ![Geometry](images/14828972939_DV_resource.Stream@PNG-de-DE.png) button.
 4. To delete a corner point, click the ![Geometry](images/14829467019_DV_resource.Stream@PNG-de-DE.png) button.
@@ -15229,14 +15229,14 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 A CPU and a ProDiag FB are created.
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Open the selection button under the "Tag" property.
 3. Select the status tag of ProDiag FB.
 
    Alternatively, drag the status tag from the detail view and drop it at the desired point of use.
-4. Under "Output > Categories", define the names, colors and flashing behavior for the categories.
-5. Under "Output > Supervision types", define the names, colors and flashing behavior for the supervision types.
-6. Select an authorization for operation under "Properties > Properties > Security".
+4. Under "Output &gt; Categories", define the names, colors and flashing behavior for the categories.
+5. Under "Output &gt; Supervision types", define the names, colors and flashing behavior for the supervision types.
+6. Select an authorization for operation under "Properties &gt; Properties &gt; Security".
 
 ##### Configuring a compact view
 
@@ -15244,7 +15244,7 @@ You can configure the ProDiag overview in a compact view.
 
 ![Configuring a compact view](images/80801307019_DV_resource.Stream@PNG-en-US.png)
 
-Disable the display of categories and monitoring types under "Properties > Appearance > Options". Disable all buttons under "Properties > Toolbar > General".
+Disable the display of categories and monitoring types under "Properties &gt; Appearance &gt; Options". Disable all buttons under "Properties &gt; Toolbar &gt; General".
 
 ##### Monitoring types and categories
 
@@ -15271,7 +15271,7 @@ You can change the display symbols of monitoring types and categories at any tim
 
 ##### Symbols
 
-You specify the symbols that are displayed in the ProDiag overview in the Inspector window under "Properties > Appearance > Options". The following symbols are available for ProDiag overview:
+You specify the symbols that are displayed in the ProDiag overview in the Inspector window under "Properties &gt; Appearance &gt; Options". The following symbols are available for ProDiag overview:
 
 | Icon | Name | Function |
 | --- | --- | --- |
@@ -15281,7 +15281,7 @@ You specify the symbols that are displayed in the ProDiag overview in the Inspec
 
 ##### "Alarm view" button
 
-To display the "Alarm view" in the ProDiag overview, select the "Show alarm window button" property under "Properties > Toolbar > General".
+To display the "Alarm view" in the ProDiag overview, select the "Show alarm window button" property under "Properties &gt; Toolbar &gt; General".
 
 | Button | Name | Function |
 | --- | --- | --- |
@@ -15327,7 +15327,7 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 The corners of the "Rectangle" object can be rounded to suit your requirements. When the properties "X" and "Y" are set to the 100 % value, the rectangle is displayed as an ellipse. As soon as one of the properties has the value 0%, a normal rectangle without a rounded corner is shown.
 
-1. Click "Properties > Properties > Layout" in the inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the inspector window.
 2. Enter a value for "X" in the "Corner radius" area.
 
    The input value is the percentage proportion of half the width of the rectangle.
@@ -15359,11 +15359,11 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 ##### Log/View
 
-Define the recipe or recipe query to be displayed in the recipe view under "Properties > Properties > General > Log/View" in the Inspector window.
+Define the recipe or recipe query to be displayed in the recipe view under "Properties &gt; Properties &gt; General &gt; Log/View" in the Inspector window.
 
 ##### Toolbar
 
-The control elements with which the recipe view is operated in Runtime are configured under "Properties > Properties > Buttons" in the Inspector window. In the simple recipe view the operating elements are based on the functions of the menu.
+The control elements with which the recipe view is operated in Runtime are configured under "Properties &gt; Properties &gt; Buttons" in the Inspector window. In the simple recipe view the operating elements are based on the functions of the menu.
 
 | Operator control |  | Description |
 | --- | --- | --- |
@@ -15390,13 +15390,13 @@ The control elements with which the recipe view is operated in Runtime are confi
 
 ##### Columns
 
-In the Inspector window under "Properties > Properties > Columns > Column properties", you define which columns are displayed in the recipe view.
+In the Inspector window under "Properties &gt; Properties &gt; Columns &gt; Column properties", you define which columns are displayed in the recipe view.
 
 ##### Configuration behavior
 
 **Displaying column headers**
 
-The layout of the recipe view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display > Appearance" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
+The layout of the recipe view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display &gt; Appearance" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
 
 This behavior only occurs during configuration. The column headers are displayed correctly in Runtime.
 
@@ -15438,7 +15438,7 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 ##### Operator controls
 
-The operator controls with which the recipe view is operated in Runtime are configured under "Properties > Properties > Buttons" in the Inspector window. In the simple recipe view the operating elements are based on the functions of the menu.
+The operator controls with which the recipe view is operated in Runtime are configured under "Properties &gt; Properties &gt; Buttons" in the Inspector window. In the simple recipe view the operating elements are based on the functions of the menu.
 
 | Operator control |  | Description |
 | --- | --- | --- |
@@ -15456,14 +15456,14 @@ The operator controls with which the recipe view is operated in Runtime are conf
 
 Specifies whether the number of the recipe and the number of the recipe data record are displayed in Runtime. The number of the recipe uniquely identifies the recipe in the project.
 
-1. Click "Properties > Properties > View" in the Inspector window.
-2. Select "Display > Display numbers".
+1. Click "Properties &gt; Properties &gt; View" in the Inspector window.
+2. Select "Display &gt; Display numbers".
 
 ##### Display label
 
 Use this property to specify the name to be shown for recipes and data records in the recipe view.
 
-1. Click "Properties > Properties > Label" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Label" in the Inspector window.
 2. Select "Display labels".
 3. Enter the labels for the recipe and the recipe data record.
 
@@ -15471,7 +15471,7 @@ Use this property to specify the name to be shown for recipes and data records i
 
 **Displaying column headers**
 
-The layout of the recipe view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display > Appearance" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
+The layout of the recipe view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display &gt; Appearance" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
 
 This behavior only occurs during configuration. The column headers are displayed correctly in Runtime.
 
@@ -15499,7 +15499,7 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 ##### Toolbar
 
-The menu items with which the recipe view is operated in Runtime are configured under "Properties > Properties > Toolbar" in the Inspector window.
+The menu items with which the recipe view is operated in Runtime are configured under "Properties &gt; Properties &gt; Toolbar" in the Inspector window.
 
 | Menu command | Description |
 | --- | --- |
@@ -15534,8 +15534,8 @@ On HMI devices with a display larger than 6", both the advanced and the simplifi
 
 Configuring the simple recipe view:
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
-2. Select "Mode > Display type > Simplified".
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
+2. Select "Mode &gt; Display type &gt; Simplified".
 
 **Note**
 
@@ -15552,7 +15552,7 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 ##### Operator controls
 
-The operator controls with which the recipe view is operated in Runtime are configured under "Properties > Properties > Buttons" in the Inspector window. In the simple recipe view the operating elements are based on the functions of the menu.
+The operator controls with which the recipe view is operated in Runtime are configured under "Properties &gt; Properties &gt; Buttons" in the Inspector window. In the simple recipe view the operating elements are based on the functions of the menu.
 
 | Operator control |  | Description |
 | --- | --- | --- |
@@ -15569,14 +15569,14 @@ The operator controls with which the recipe view is operated in Runtime are conf
 
 Specifies whether the number of the recipe and the number of the recipe data record are displayed in Runtime. The number of the recipe uniquely identifies the recipe in the project.
 
-1. Click "Properties > Properties > View" in the Inspector window.
-2. Select "Display > Display numbers".
+1. Click "Properties &gt; Properties &gt; View" in the Inspector window.
+2. Select "Display &gt; Display numbers".
 
 ##### Configuration behavior
 
 ##### Displaying column headers
 
-The layout of the recipe view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display > Appearance" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
+The layout of the recipe view is dependent on the view settings in the control panel. Depending on the setting, the column headers may be truncated. This setting is found under "Display &gt; Appearance" in the control panel. To display column headers correctly, set the display in "Windows and buttons" to "Windows Classic" style.
 
 This behavior only occurs during configuration. The column headers are displayed correctly in Runtime.
 
@@ -15608,13 +15608,13 @@ Type: The round button can be shown, for example, with text and graphic.
 
 ##### Show round button pressed
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Activate "Mode > Pressed".
-3. To show the round button as two-way switch, activate "Mode > Toggle".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Activate "Mode &gt; Pressed".
+3. To show the round button as two-way switch, activate "Mode &gt; Toggle".
 
 ##### Specifying the round button type
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Select, for example, "Graphics and text" as "Type".
 
 ---
@@ -15708,7 +15708,7 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 ##### Type
 
-Button visualization is specified at "Properties > Properties > General >Type" in the Inspector window.
+Button visualization is specified at "Properties &gt; Properties &gt; General &gt;Type" in the Inspector window.
 
 | Type | Description |
 | --- | --- |
@@ -15752,7 +15752,7 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 ##### Mode
 
-The button display is defined in "Properties > Properties > General >Mode" in the Inspector window.
+The button display is defined in "Properties &gt; Properties &gt; General &gt;Mode" in the Inspector window.
 
 | Mode | Description |
 | --- | --- |
@@ -15766,7 +15766,7 @@ Different options are available depending on the device.
 
 ##### Text / Graphic
 
-The "Mode" property settings are used to define whether the display is static or dynamic. The display is defined in "Properties > Properties > General >Text" or "Graphic" in the Inspector window.
+The "Mode" property settings are used to define whether the display is static or dynamic. The display is defined in "Properties &gt; Properties &gt; General &gt;Text" or "Graphic" in the Inspector window.
 
 You can, for example, select the following options for the "Graphic" or "Text" type.
 
@@ -15785,7 +15785,7 @@ You can, for example, select the following options for the "Graphic" or "Text" t
 
 In the Inspector window, a key or key combination is defined that the operator can use to control the button in Runtime.
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Select a key or key combination from the selection list in the "Hotkey" area.
 
 ---
@@ -15824,14 +15824,14 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 The top and bottom end values of the scale are specified in the Inspector window.
 
-1. In the Inspector window, activate "Properties > Properties > General".
+1. In the Inspector window, activate "Properties &gt; Properties &gt; General".
 2. Enter a number at "Maximum scale value" and "Minimum scale value". If you select a tag as the end value of the scale, the number will be no longer available.
 
 ##### Configuring limits/ranges
 
 You can display limits and ranges in different colors. You define the colors in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > Limits/Ranges".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Limits/Ranges".
 2. Activate the limits/ranges that are to be displayed in runtime.
 3. You can change the default colors for the ranges, if required.
 
@@ -15845,14 +15845,14 @@ You can display limits and ranges in different colors. You define the colors in 
 
 Specify that the value of the current position is displayed below the slider in the Inspector window.
 
-1. In the Inspector window, activate "Properties > Properties > Layout".
+1. In the Inspector window, activate "Properties &gt; Properties &gt; Layout".
 2. Select "Show current value."
 
 ##### Display bar
 
 The bar can be hidden.
 
-1. In the Inspector window, activate "Properties > Properties > Layout".
+1. In the Inspector window, activate "Properties &gt; Properties &gt; Layout".
 2. Deactivate "Display bar".
 
 ##### Behavior during operation
@@ -15906,7 +15906,7 @@ The "Tag" property is used to specify the "Key switch" object assignment in the 
    - External tag: Auxiliary tag
    - External tag: Keyswitch_PLC
 3. Open the Inspector window of the "Position_Keyswitch" tag.
-4. In the Inspector window, select "Properties > Events > Value change".
+4. In the Inspector window, select "Properties &gt; Events &gt; Value change".
 5. Click the first line of the function list. The list opens, showing the system functions available in the project.
 6. Select the "SetTag" system function.
 
@@ -15919,7 +15919,7 @@ The "Tag" property is used to specify the "Key switch" object assignment in the 
 
      The value of the "Keyswitch_PLC" tag is written to the PLC with the "Position_Keyswitch" tag. A program in the PLC evaluates the life bit. If communication is established, the current value is written to the "Keyswitch_PLC" tag from the PLC.
 7. Open the Inspector window of the "Auxiliary tag" tag.
-8. In the Inspector window, select "Properties > Events > Value change".
+8. In the Inspector window, select "Properties &gt; Events &gt; Value change".
 9. Click the first line of the function list. The list opens, showing the system functions available in the project.
 10. Select the "SetTag" system function.
 
@@ -15933,7 +15933,7 @@ The "Tag" property is used to specify the "Key switch" object assignment in the 
       After establishing communication the current value is written to the "Auxiliary Tag" from the PLC. The "SetTag" system function is executed by the value change in the auxiliary tag. The system function re-allocates the value of the "Position_Keyswitch" tag to the "Keyswitch_PLC".
 11. Open the global screen in the "Screen management" editor.
 12. Select the key switch in the screen.
-13. Select the "Position_KeySwitch" tag in the Inspector window under "Properties > Properties > General > Settings > Tag".
+13. Select the "Position_KeySwitch" tag in the Inspector window under "Properties &gt; Properties &gt; General &gt; Settings &gt; Tag".
 
     If you actuate the key switch, the value is written to the "Position_KeySwitch" tag.
 
@@ -15962,12 +15962,12 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 Establishes whether when opening the Sm@rtClient view the connection to the HMI device is automatically created which is remote-controlled.
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Select "View > Connect on start".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Select "View &gt; Connect on start".
 
 ##### Shared use
 
-Define whether the HMI device can be used by several Sm@rtClient views under "Properties > Properties > General > View > Shared".
+Define whether the HMI device can be used by several Sm@rtClient views under "Properties &gt; Properties &gt; General &gt; View &gt; Shared".
 
 | Shared use |  |
 | --- | --- |
@@ -15978,15 +15978,15 @@ Define whether the HMI device can be used by several Sm@rtClient views under "Pr
 
 If this property is set, then the cursor data is transferred separately.
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Select "View > Local cursor".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Select "View &gt; Local cursor".
 
 ##### Display extended objects
 
 If this property is set then there are additional fields for inputting the address and password. For the fields to be shown the "Connect on start" option is not activated.
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Select "View > Show enhanced objects".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Select "View &gt; Show enhanced objects".
 
 ##### Allow menu
 
@@ -15994,14 +15994,14 @@ If this property is set, then a shortcut menu to control the Sm@rtClient view is
 
 When operating using the mouse, the left mouse key must remain depressed for a few seconds for the shortcut menu to open.
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Select "View > Allow Menu".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Select "View &gt; Allow Menu".
 
 ##### Connection type
 
 The "Connection type" property establishes the expected transfer speed for the remote monitoring.
 
-Set the connection type at "Connection type" under "Properties > Properties > General > Connection type" in the Inspector window.
+Set the connection type at "Connection type" under "Properties &gt; Properties &gt; General &gt; Connection type" in the Inspector window.
 
 | Connection type |  |
 | --- | --- |
@@ -16015,8 +16015,8 @@ Set the connection type at "Connection type" under "Properties > Properties > Ge
 
 If this property is set, then via "Client scale factor" and "Server scale" you can reduce or enlarge the Sm@rtClient view on the HMI device.
 
-1. In the Inspector window, select "Properties > Properties > Scaling".
-2. Select "Scaling > Scaling".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Scaling".
+2. Select "Scaling &gt; Scaling".
 3. Enter the values for the scaling under "Client scale factor" and "Server scale factor".
 
 ##### Behavior during operation
@@ -16046,14 +16046,14 @@ In the Inspector window, you customize the settings for the position, shape, sty
 
 ##### Define drive
 
-1. In the Inspector window, activate "Properties > Properties > General".
+1. In the Inspector window, activate "Properties &gt; Properties &gt; General".
 2. Enter the relevant letter in the "Drive letter" area.
 
 ##### Change monitoring limits
 
 Enter the monitoring limits for Alarm, Warning, and Tolerance in the Inspector view. The values are specified as a percentage. The percentage of the occupied memory space is monitored in relation to the total capacity of the specified drive:
 
-1. In the Inspector window, activate "Properties > Properties > General".
+1. In the Inspector window, activate "Properties &gt; Properties &gt; General".
 2. Enter the value for each monitoring limit as a percentage in the "Limits" area.
 
 ---
@@ -16082,11 +16082,11 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 ##### Select symbol
 
-Select the icon at "Properties > Properties > General" in the Inspector window.
+Select the icon at "Properties &gt; Properties &gt; General" in the Inspector window.
 
 ##### Fill style
 
-Specify the design of the library object at "Properties > Properties > Appearance > Style" in the Inspector window.
+Specify the design of the library object at "Properties &gt; Properties &gt; Appearance &gt; Style" in the Inspector window.
 
 ![Fill style](images/39641093387_DV_resource.Stream@PNG-de-DE.png)
 
@@ -16105,16 +16105,16 @@ The content of the screen flips around the horizontal or vertical central axis o
 
 The screen content rotates around the central point of the icon. The symbol is rotated clockwise in increments of 90, 180, or 270 degrees.
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
-2. Select the mirroring mode at "Orientation > Mirror image".
-3. Select the angle of rotation at "Orientation > Rotate".
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
+2. Select the mirroring mode at "Orientation &gt; Mirror image".
+3. Select the angle of rotation at "Orientation &gt; Rotate".
 
 ##### Fixed aspect ratio
 
 The smaller page of the library object defines the maximum size of the symbol. If you change the size of the library object unproportionally, the symbol is still scaled proportionally. Proceed as follows to configure a fixed aspect ratio:
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
-2. Select "Form > Fixed aspect ratio".
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
+2. Select "Form &gt; Fixed aspect ratio".
 
 ##### Behavior during operation
 
@@ -16150,7 +16150,7 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 ##### Mode
 
-The response of the symbolic I/O field is specified in the Inspector window in "Properties > Properties > General > Type".
+The response of the symbolic I/O field is specified in the Inspector window in "Properties &gt; Properties &gt; General &gt; Type".
 
 | Mode | Description |
 | --- | --- |
@@ -16167,7 +16167,7 @@ The response of the symbolic I/O field is specified in the Inspector window in "
 
 In the Inspector window, you specify which text list is linked to the symbolic I/O field.
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Under "Contents" open the selection list for "Text list".
 3. Select a text list.
 
@@ -16175,8 +16175,8 @@ In the Inspector window, you specify which text list is linked to the symbolic I
 
 The "Button for selection list" property is used to display a button for opening the selection list.
 
-1. Select "Properties > Properties > Layout" in the Inspector window.
-2. Select "Response > Button for selection list".
+1. Select "Properties &gt; Properties &gt; Layout" in the Inspector window.
+2. Select "Response &gt; Button for selection list".
 
 **Note**
 
@@ -16219,7 +16219,7 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 ##### Mode
 
-The response of the symbolic I/O field is specified in the Inspector window in "Properties > Properties > General > Type".
+The response of the symbolic I/O field is specified in the Inspector window in "Properties &gt; Properties &gt; General &gt; Type".
 
 | Mode | Description |
 | --- | --- |
@@ -16232,7 +16232,7 @@ The response of the symbolic I/O field is specified in the Inspector window in "
 
 In the Inspector window you specify which text list is linked to the symbolic I/O field.
 
-1. In the Inspector window, select "Properties > Properties > General":
+1. In the Inspector window, select "Properties &gt; Properties &gt; General":
 2. Open the selection list for "Text list".
 3. Select a text list.
 
@@ -16250,7 +16250,7 @@ In the Inspector window you specify which text list is linked to the symbolic I/
 
 ##### Introduction
 
-The system diagnostics view offers you an overview of all the available devices in your plant. You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices & networks" editor.
+The system diagnostics view offers you an overview of all the available devices in your plant. You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices &amp; networks" editor.
 
 ##### Use
 
@@ -16274,7 +16274,7 @@ Three different views are available in the system diagnostics view.
 
 ##### Device view
 
-The device view of the system diagnostics view shows all the available connections in tabular form. Double-clicking a connection opens the detail view. The device view is only displayed if more than one connection has been created in the "Devices & Networks" editor.
+The device view of the system diagnostics view shows all the available connections in tabular form. Double-clicking a connection opens the detail view. The device view is only displayed if more than one connection has been created in the "Devices &amp; Networks" editor.
 
 ##### Diagnostic buffer view
 
@@ -16293,9 +16293,9 @@ You change the settings for the position, geometry, style, color, and font of th
 ##### Configuring the system diagnostics view
 
 1. Drag-and-drop the system diagnostics view from the toolbox.
-2. In the Inspector window, select "Properties > Layout".
+2. In the Inspector window, select "Properties &gt; Layout".
 3. Enter a number under "Lines per entry", i.e. 5.
-4. Select an authorization for operation in "Properties > Properties > Security".
+4. Select an authorization for operation in "Properties &gt; Properties &gt; Security".
 
 ---
 
@@ -16309,7 +16309,7 @@ You change the settings for the position, geometry, style, color, and font of th
 
 ##### Introduction
 
-The system diagnostics view offers you an overview of all the available devices in your plant. You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices & networks" editor.
+The system diagnostics view offers you an overview of all the available devices in your plant. You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices &amp; networks" editor.
 
 ##### Application
 
@@ -16338,8 +16338,8 @@ You change the settings for the position, geometry, style, color, and font of th
 ##### Configuring the system diagnostics view
 
 1. Drag-and-drop the system diagnostics view from the toolbox.
-2. You define the start view for the system diagnostics view under "Properties > Properties > General > Mode".
-3. In the Inspector window, select "Properties > Properties > Columns".
+2. You define the start view for the system diagnostics view under "Properties &gt; Properties &gt; General &gt; Mode".
+3. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
 4. Select the columns that you require in the device view for Runtime, for example, Operating mode, Name, Slot.
 5. Select the columns which you need in the detail view for runtime, e.g., Operating mode, Name, Address.
 6. Select the columns that you require in the diagnostic buffer view, e.g., Status, Name, Rack.
@@ -16348,13 +16348,13 @@ You change the settings for the position, geometry, style, color, and font of th
 
    The column header "IP" is displayed in the device view in Runtime.
 9. Rename other elements if necessary.
-10. Select an authorization for operation in "Properties > Properties > Security".
+10. Select an authorization for operation in "Properties &gt; Properties &gt; Security".
 
 ##### Showing device view and detail view in a single display
 
 You can split the system diagnostics view and allow the device and detail view to be shown in the same window.
 
-1. In the Inspector window, click "Properties > Properties > Layout".
+1. In the Inspector window, click "Properties &gt; Properties &gt; Layout".
 2. Activate "Show split view".
 
 ##### Symbols in the system diagnostics view
@@ -16390,7 +16390,7 @@ You can split the system diagnostics view and allow the device and detail view t
 
 ##### Introduction
 
-The system diagnostics view offers you an overview of all the available devices in your plant. You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices & networks" editor.
+The system diagnostics view offers you an overview of all the available devices in your plant. You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices &amp; networks" editor.
 
 ##### Use
 
@@ -16418,7 +16418,7 @@ You change the settings for the position, geometry, style, color, and font of th
 ##### Configuring the system diagnostics view
 
 1. Drag-and-drop the system diagnostics view from the toolbox.
-2. In the Inspector window, select "Properties > Properties > Columns".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
 3. Select the columns that you require in the device view for Runtime, for example, status, name, slot.
 4. Select the columns which you need in the detail view for runtime, e.g., status, name, address.
 5. Customize the column headers, if necessary.
@@ -16426,19 +16426,19 @@ You change the settings for the position, geometry, style, color, and font of th
 
    The column header "IP" is displayed in the device view in runtime.
 7. Rename other elements if necessary.
-8. Select an authorization for operation in "Properties > Properties > Security".
+8. Select an authorization for operation in "Properties &gt; Properties &gt; Security".
 
 ##### Showing device view and detail view in a single display
 
 You can split the system diagnostics view and allow the device and detail view to be shown in the same window.
 
-1. In the Inspector window, click "Properties > Properties > Layout".
+1. In the Inspector window, click "Properties &gt; Properties &gt; Layout".
 2. Activate "Show split view".
 
 ##### Single display
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
-2. Select "Mode > Display type > Single".
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
+2. Select "Mode &gt; Display type &gt; Single".
 
 ##### Symbols in the system diagnostics view
 
@@ -16471,7 +16471,7 @@ You can split the system diagnostics view and allow the device and detail view t
 
 ##### Introduction
 
-The system diagnostics window offers you an overview of all the available devices in your plant. You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices & networks" editor.
+The system diagnostics window offers you an overview of all the available devices in your plant. You navigate directly to the cause of the error and to the relevant device. You have access to all diagnostics-capable devices which you have configured in the "Devices &amp; networks" editor.
 
 The system diagnostics window is only available in the global screen.
 
@@ -16503,15 +16503,15 @@ You change the settings for the position, geometry, style, color, and font of th
 ##### Configuring the system diagnostics window
 
 1. Drag and drop the system diagnostics view from the toolbox into the global screen.
-2. You define the start view for the system diagnostics window under "Properties > Properties > General > Mode".
-3. In the Inspector window, select "Properties > Properties > Columns".
+2. You define the start view for the system diagnostics window under "Properties &gt; Properties &gt; General &gt; Mode".
+3. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
 4. Select the columns that you require in the device view for Runtime, e.g., Operating mode, Name, Slot.
 5. Select the columns that you require in the detail view for Runtime, e.g., Operating mode, Name, Plant designation.
 6. To change a column header, click in the field and (for example) enter "IP" for "Address".
 
    The column header "IP" is displayed in the device view in Runtime.
 7. Rename other elements if necessary.
-8. To be able to close the system diagnostics window in Runtime, select "Properties > Properties > Window > Closable" in the Inspector window.
+8. To be able to close the system diagnostics window in Runtime, select "Properties &gt; Properties &gt; Window &gt; Closable" in the Inspector window.
 
 ##### Icons in the system diagnostics window
 
@@ -16566,28 +16566,28 @@ In the Inspector window, you customize the position, geometry, style, colors and
 
 ##### Configuring data source and columns
 
-1. Open "Properties > Properties > Value column".
+1. Open "Properties &gt; Properties &gt; Value column".
 2. Select the log tag or compressed log tag that supplies the column with values under "Data source".
 3. Under "Time column", select the column of the table view in which the data source is to be displayed.
-4. Select the time range of the table under "Properties > Properties > Time column > Time range":
+4. Select the time range of the table under "Properties &gt; Properties &gt; Time column &gt; Time range":
 
    - "Time span": You define the time range using a starting time and a following time span.
    - "End time": You define the time range using a starting time and an end time.
    - "Measuring points": You define the time range using a starting time and a number of measuring points.
-5. Use "Format > Update" to specify whether the table displays the values statically or the values are refreshed.
+5. Use "Format &gt; Update" to specify whether the table displays the values statically or the values are refreshed.
 6. Under "Style" specify the format for displaying the time and the alignment within the column.
 
 ##### Configuring a table
 
-Under "Properties > Properties > Table", you specify whether the columns of the table have a title and whether the grid lines of the table are displayed.
+Under "Properties &gt; Properties &gt; Table", you specify whether the columns of the table have a title and whether the grid lines of the table are displayed.
 
 ##### Window settings
 
-Under "Properties > Properties > Layout > Window" you define whether the user can change the size of the window and close the window in Runtime.
+Under "Properties &gt; Properties &gt; Layout &gt; Window" you define whether the user can change the size of the window and close the window in Runtime.
 
 ##### Persistence
 
-Under "Properties > Properties > Security > Persistence", define how long a user's changes to the trend view in runtime are retained.
+Under "Properties &gt; Properties &gt; Security &gt; Persistence", define how long a user's changes to the trend view in runtime are retained.
 
 - "Allow persistence"
 
@@ -16601,7 +16601,7 @@ Under "Properties > Properties > Security > Persistence", define how long a user
 
 ##### Toolbar
 
-You define the operator controls of the table view in Runtime in the "Properties > Properties > Toolbar" inspector window. The following operator controls are available for the table view:
+You define the operator controls of the table view in Runtime in the "Properties &gt; Properties &gt; Toolbar" inspector window. The following operator controls are available for the table view:
 
 | Button | Name | Function |
 | --- | --- | --- |
@@ -16618,7 +16618,7 @@ You define the operator controls of the table view in Runtime in the "Properties
 | ![Toolbar](images/23926805899_DV_resource.Stream@PNG-de-DE.png) | Previous column | Displays the previous column in the foreground |
 | ![Toolbar](images/23927518091_DV_resource.Stream@PNG-de-DE.png) | Next column | Displays the next column in the foreground |
 | ![Toolbar](images/102411244939_DV_resource.Stream@PNG-de-DE.png) | Start/end update | Stops and starts the column update. The values are buffered and updated as soon as you start column update again. |
-| ![Toolbar](images/23931759499_DV_resource.Stream@PNG-de-DE.png) | Print log | Starts printing the columns displayed in the table view. You define the print job under "General > Print > Print job". |
+| ![Toolbar](images/23931759499_DV_resource.Stream@PNG-de-DE.png) | Print log | Starts printing the columns displayed in the table view. You define the print job under "General &gt; Print &gt; Print job". |
 | ![Toolbar](images/23932623883_DV_resource.Stream@PNG-de-DE.png) | Selection of the statistics area | Enables you to define a time range for which statistical values are determined. |
 | ![Toolbar](images/23932725131_DV_resource.Stream@PNG-de-DE.png) | Statistics window | Opens a statistics window to display the minimum, maximum, means, and standard deviation for the selected time range and the selected column. |
 
@@ -16668,17 +16668,17 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 Specify the text for the text field in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Enter a text.
 
-   For texts over several lines you can set a line break by pressing the key combination <Shift + Enter>.
+   For texts over several lines you can set a line break by pressing the key combination &lt;Shift + Enter&gt;.
 
 ##### Size of text field
 
 In the Inspector window, you can define whether the size of the object is adapted to the space required by the largest list entry.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
-2. Activate "Resize > Fit to contents".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
+2. Activate "Resize &gt; Fit to contents".
 
 ---
 
@@ -16704,7 +16704,7 @@ Rotation: Specifies the angle of rotation in degrees of the T piece.
 
 ##### Rotation
 
-You specify by how many degrees the "T piece" is rotated under "Properties > Properties > Layout > Rotation" in the Inspector window. The value entered is automatically rounded to a multiple of 90.
+You specify by how many degrees the "T piece" is rotated under "Properties &gt; Properties &gt; Layout &gt; Rotation" in the Inspector window. The value entered is automatically rounded to a multiple of 90.
 
 - 0: the "leg" of the T piece is pointing downward
 - 90: the "leg" of the T piece is pointing to the left
@@ -16743,14 +16743,14 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 In the Inspector window you can specify whether the clock is displayed as an analog or digital clock. The digital clock shows both the time and the date. The display format depends on the language set on the HMI device.
 
-1. In the Inspector window, select "Properties > Properties > General":
+1. In the Inspector window, select "Properties &gt; Properties &gt; General":
 2. Activate "Analog".
 
 ##### Display dial
 
 In the Inspector window you can specify whether hour marks will be displayed.
 
-1. In the Inspector window, select "Properties > Properties > General":
+1. In the Inspector window, select "Properties &gt; Properties &gt; General":
 2. Activate "Analog".
 3. Activate "Show dial".
 
@@ -16758,7 +16758,7 @@ In the Inspector window you can specify whether hour marks will be displayed.
 
 The width of the second hand, minute hand and hour hand is set for the analog display.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
 2. Enter values for "width" and "length".
 
    The values for the length are interpreted as a percentage of the size of the clock. The value for the length of the second hand influences the radius of the dial at the same time.
@@ -16829,7 +16829,7 @@ In the Inspector window, you customize the position, geometry, style, colors and
 
 ##### Data source for displaying the values
 
-You define which values are displayed in the value table in the "Properties > Properties > General > Data source" inspector window.
+You define which values are displayed in the value table in the "Properties &gt; Properties &gt; General &gt; Data source" inspector window.
 
 Select among the following objects:
 
@@ -16841,7 +16841,7 @@ By default, the configuration for the display format, the format is taken from t
 
 ##### Mode
 
-You define the mode in the "Properties > Properties > General > Mode" inspector window. You have a choice of three different types depending on the data source.
+You define the mode in the "Properties &gt; Properties &gt; General &gt; Mode" inspector window. You have a choice of three different types depending on the data source.
 
 - The ruler window shows the coordinate values of the trends on the ruler or values of a selected line in the table.
 - The statistics area window shows the values of the lower limit and upper limit of the trends between two rulers or the selected area in the table. The statistics area window is not provided for the object f(x) trend view.
@@ -16849,7 +16849,7 @@ You define the mode in the "Properties > Properties > General > Mode" inspector 
 
 ##### Toolbar
 
-You define the control elements of the value table in Runtime in the "Properties > Properties > Toolbar - Toolbar - Buttons" inspector window. The following control elements are available for the recipe data:
+You define the control elements of the value table in Runtime in the "Properties &gt; Properties &gt; Toolbar - Toolbar - Buttons" inspector window. The following control elements are available for the recipe data:
 
 |  |  |  |
 | --- | --- | --- |
@@ -16859,8 +16859,8 @@ You define the control elements of the value table in Runtime in the "Properties
 | ![Toolbar](images/44732127627_DV_resource.Stream@PNG-de-DE.png) | Ruler window | You query the coordinate points of a trend with the button. The trend data are displayed in the ruler window. |
 | ![Toolbar](images/102411256459_DV_resource.Stream@PNG-de-DE.png) | Define statistics area | Enables you to define a time range for which statistics values are determined. |
 | ![Toolbar](images/44732131595_DV_resource.Stream@PNG-de-DE.png) | Calculating statistics | The button shows the statistical values in the statistics window. The displayed values refer to a selected trend with the configured calculation time period. The button can only be pressed if a statistics window is connected with an f(t) trend view. |
-| ![Toolbar](images/44732123659_DV_resource.Stream@PNG-de-DE.png) | Printing | Start the print-out of the values shown in the table. You define the print job to be used in the "Properties > Properties > General > Print job" inspector window. |
-| ![Toolbar](images/44731625483_DV_resource.Stream@PNG-de-DE.png) | Exporting data | This button is used for exporting all or the selected runtime data into a "CSV" file. If the "Properties > Properties > Data export > Show dialog" inspector window is activated, a dialog box opens in runtime. The dialog box offers you settings for the export and starting the export. With the appropriate authorizations you can also select the file and the directory for the export. If no dialog box is displayed, the data export to the preset file starts immediately. |
+| ![Toolbar](images/44732123659_DV_resource.Stream@PNG-de-DE.png) | Printing | Start the print-out of the values shown in the table. You define the print job to be used in the "Properties &gt; Properties &gt; General &gt; Print job" inspector window. |
+| ![Toolbar](images/44731625483_DV_resource.Stream@PNG-de-DE.png) | Exporting data | This button is used for exporting all or the selected runtime data into a "CSV" file. If the "Properties &gt; Properties &gt; Data export &gt; Show dialog" inspector window is activated, a dialog box opens in runtime. The dialog box offers you settings for the export and starting the export. With the appropriate authorizations you can also select the file and the directory for the export. If no dialog box is displayed, the data export to the preset file starts immediately. |
 | ![Toolbar](images/44731633419_DV_resource.Stream@PNG-de-DE.png) | Customized 1 | Shows the first key function created by the user. The function of the button is user-defined. |
 
 ---
@@ -16892,11 +16892,11 @@ The "WLAN reception" object is a control element for some SIMATIC Mobile Panels.
 | Symbol | Meaning | Signal strength |
 | --- | --- | --- |
 | ![Layout](images/21144982411_DV_resource.Stream@PNG-de-DE.png) | No wireless connection | No signal |
-| ![Layout](images/21144985483_DV_resource.Stream@PNG-de-DE.png) | Very poor wireless connection | =<20 % |
-| ![Layout](images/21144993035_DV_resource.Stream@PNG-de-DE.png) | Poor wireless connection | >20 % =<40 % |
-| ![Layout](images/21145410187_DV_resource.Stream@PNG-de-DE.png) | Wireless connection OK | >40 % =<60 % |
-| ![Layout](images/21145520139_DV_resource.Stream@PNG-de-DE.png) | Good wireless connection | >60 % =<80 % |
-| ![Layout](images/21145527691_DV_resource.Stream@PNG-de-DE.png) | Very good wireless connection | >80 % |
+| ![Layout](images/21144985483_DV_resource.Stream@PNG-de-DE.png) | Very poor wireless connection | =&lt;20 % |
+| ![Layout](images/21144993035_DV_resource.Stream@PNG-de-DE.png) | Poor wireless connection | &gt;20 % =&lt;40 % |
+| ![Layout](images/21145410187_DV_resource.Stream@PNG-de-DE.png) | Wireless connection OK | &gt;40 % =&lt;60 % |
+| ![Layout](images/21145520139_DV_resource.Stream@PNG-de-DE.png) | Good wireless connection | &gt;60 % =&lt;80 % |
+| ![Layout](images/21145527691_DV_resource.Stream@PNG-de-DE.png) | Very good wireless connection | &gt;80 % |
 
 ##### Operation
 
@@ -16942,14 +16942,14 @@ In the Inspector window, you customize the position, geometry, style, color and 
 
 The "Display peak value" property can be used to activate a marker function for the maximum and minimum pointer movement in Runtime. The actual measurement range is shown with a slave pointer.
 
-1. In the Inspector window, activate "Properties > Properties > Appearance > Show peak values".
+1. In the Inspector window, activate "Properties &gt; Properties &gt; Appearance &gt; Show peak values".
 
 ##### Maximum Value and Minimum Value
 
 You can set the top and bottom end values of the scale in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > General".
-2. Enter a number under "Process > Maximum scale value" and for "Minimum scale value".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
+2. Enter a number under "Process &gt; Maximum scale value" and for "Minimum scale value".
 
    If you select a tag as the end value of the scale, the number will be no longer available.
 
@@ -16961,7 +16961,7 @@ You can set the top and bottom end values of the scale in the Inspector window.
 
 Define the scale value at which the danger range and the warning range start in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > Limits/Ranges".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Limits/Ranges".
 2. Enter the start value for the danger range in "Upper 2" and the start value for the warning range in "Upper 1".
 3. Select "start value of danger range" and "start value of warning range" to display the ranges on the scale.
 
@@ -16969,14 +16969,14 @@ Define the scale value at which the danger range and the warning range start in 
 
 In the Inspector window, define whether to show the normal range in color.
 
-1. In the Inspector window, select "Properties > Properties > Limits/Ranges".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Limits/Ranges".
 2. Select "Normal".
 
 ##### Color of individual ranges
 
 You can display the normal range, the danger range and the warning range in different colors. Define the color in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > Limits/Ranges".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Limits/Ranges".
 2. Select a color from the color palette for the three areas.
 
 **Note**

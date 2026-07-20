@@ -403,10 +403,10 @@ To copy a block, follow these steps:
 3. In the project tree, right-click the program block folder into which you want to insert the copied block.
 4. Select the "Paste" command in the shortcut menu.
 
-   - If you paste the block into the same CPU, the copy is pasted with the name extension "_<consecutive number>".
+   - If you paste the block into the same CPU, the copy is pasted with the name extension "_&lt;consecutive number&gt;".
    - If you paste the block into a different CPU where a block of the same name already exists, the "Paste" dialog box opens. Select the desired option and confirm your selection with "OK".
 
-Alternatively, you can also copy the block via drag-and-drop while holding down the <Ctrl> key.
+Alternatively, you can also copy the block via drag-and-drop while holding down the &lt;Ctrl&gt; key.
 
 ##### Moving blocks
 
@@ -587,7 +587,7 @@ The properties of the blocks are block and CPU-specific. Not all properties are 
 | Lock operating mode selection | Prevents a GRAPH block operating mode being selected. |  |
 | Name of the expansion block | Defines the extension block via which you can access the invisible parameters in the block interface of the GRAPH function block. |  |
 | Data block write-protected in the device | Indicates whether the data block is read-only in the target system, and cannot be overwritten while the program is running. The option is available only for data blocks. |  |
-| Only store in load memory | When activated, only management information (64 bytes) is stored for the block in the load memory. The program can therefore not directly access the tags of the block.   The "Instructions" task card in the "Extended Instructions > Data block functions" palette provides access options.    The option is available only for data blocks. |  |
+| Only store in load memory | When activated, only management information (64 bytes) is stored for the block in the load memory. The program can therefore not directly access the tags of the block.   The "Instructions" task card in the "Extended Instructions &gt; Data block functions" palette provides access options.    The option is available only for data blocks. |  |
 | Data block accessible from OPC UA | When the check box is selected the data block is accessible as complete object from OPC UA. The individual tags of the data block can then be individually released or locked for OPC UA.  This option is only available for data blocks of the S7-1200/S7-1500. |  |
 | Data block accessible via web server | If the check box is selected, the data block can be accessed as a whole object via a web server. The individual tags of the data block can then be released or locked separately. The option is only available for data blocks. |  |
 | Start information | Here you specify the structure of the start information of the OB for S7-1500 CPUs: either like for S7-300 and S7-400 CPUs or optimized start information. |  |
@@ -796,8 +796,8 @@ To find an offline block and then open it, follow these steps:
 
 1. You can start the search process for the following three types:
 
-   - In the shortcut menu of the project, of a device or of the "Program block" folder, select the "Open block/PLC data type" command or press the <F7> key. Depending on the selection, this section is searched.
-   - Press the <F7> key in the open program editor.
+   - In the shortcut menu of the project, of a device or of the "Program block" folder, select the "Open block/PLC data type" command or press the &lt;F7&gt; key. Depending on the selection, this section is searched.
+   - Press the &lt;F7&gt; key in the open program editor.
 
    The "Open Block/PLC Data Type" dialog box opens.
 2. Enter the name, the namespace, the address or the type of block that you are looking for. You can also enter only parts of the name of the field.
@@ -1120,7 +1120,7 @@ The syntax of the instructions in external source files is very similar to that 
   Mark the end of every instruction and every tag declaration with a semicolon. You can enter several instructions per line.
 - Forward slashes
 
-  Begin every comment with two forward slashes (//) and end the comment with the <Enter> key.
+  Begin every comment with two forward slashes (//) and end the comment with the &lt;Enter&gt; key.
 - Use of String constants
 
   To avoid compilation errors when using String constants, enter the text in the language of the target project. You can explicitly use the data type WSTRING for CPUs of the S7-1200/1500 series by using the prefix "WString#":
@@ -1178,7 +1178,7 @@ To copy a block or PLC data type as text and save it to an external source file,
 To generate external source files from STL or SCL blocks or PLC data types, follow these steps:
 
 1. In the project tree or in the Overview window, select the blocks or the PLC data types from which you want to generate an external source file.
-2. Select the "Generate source from blocks > Selected blocks only" command from the shortcut menu to save only the selected blocks or PLC data types to an external source file. Or select the command "Generate source from blocks > Including dependent blocks" if you also want to save the program code of the dependent blocks and referenced PLC data types to the external source file.
+2. Select the "Generate source from blocks &gt; Selected blocks only" command from the shortcut menu to save only the selected blocks or PLC data types to an external source file. Or select the command "Generate source from blocks &gt; Including dependent blocks" if you also want to save the program code of the dependent blocks and referenced PLC data types to the external source file.
 
    The "Save as" dialog opens.
 3. Specify a path and a name for the external source file.

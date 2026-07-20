@@ -165,176 +165,176 @@ General keyboard shortcuts: Navigating
 
 | Navigating with the keyboard | Selected object | Keyboard shortcut |
 | --- | --- | --- |
-| Open "Instructions" task card | Any | <Ctrl+Shift+C> |
-| Open "Testing" task card | Any | <Ctrl+Shift+O> |
-| Add new block | Any | <Ctrl+N> |
-| Open block/PLC data type | Any | <F7> |
-| Open a drop-down list  You can open drop-down lists with <ALT+F2> and then navigate with the arrow keys to scroll through the drop-down list. Finally, press the <Enter> key to confirm your selection. | Object that contains a drop-down list | <Alt+F2> |
-| Display configuration menu | Object that contains a configuration menu | <F4> |
-| Open autocompletion | Any | <Ctrl+I> or <Ctrl+Spacebar> |
-| Open "Call options" dialog | Cursor position before or after a block call | <Return> |
-| Expand all networks/palettes | Any | <Alt +F11> |
-| Reduce all networks/palettes | Any | <Alt+F12> |
-| Insert network | Any | <Ctrl+R> |
+| Open "Instructions" task card | Any | &lt;Ctrl+Shift+C&gt; |
+| Open "Testing" task card | Any | &lt;Ctrl+Shift+O&gt; |
+| Add new block | Any | &lt;Ctrl+N&gt; |
+| Open block/PLC data type | Any | &lt;F7&gt; |
+| Open a drop-down list  You can open drop-down lists with &lt;ALT+F2&gt; and then navigate with the arrow keys to scroll through the drop-down list. Finally, press the &lt;Enter&gt; key to confirm your selection. | Object that contains a drop-down list | &lt;Alt+F2&gt; |
+| Display configuration menu | Object that contains a configuration menu | &lt;F4&gt; |
+| Open autocompletion | Any | &lt;Ctrl+I&gt; or &lt;Ctrl+Spacebar&gt; |
+| Open "Call options" dialog | Cursor position before or after a block call | &lt;Return&gt; |
+| Expand all networks/palettes | Any | &lt;Alt +F11&gt; |
+| Reduce all networks/palettes | Any | &lt;Alt+F12&gt; |
+| Insert network | Any | &lt;Ctrl+R&gt; |
 | Navigate between objects in the network | Object in the network | Arrow keys |
-| Navigate to the first element of the network | Object in the network | <Home> |
-| Navigate to the last element of the network | Object in the network | <End> |
-| Navigate to the next element of the network | Object in the network | <Tab> |
-| Navigate to the previous element of the network | Object in the network | <Shift+Tab> |
-| To the next network | Network title | <Down arrow> |
-| To the previous network | Network title | <Up arrow> |
-| Navigate to the next point of use of the selected block or operand | Block or operand | <Ctrl+Shift+G> |
-| Navigate to the previous point of use of the selected block or operand | Block or operand | <Ctrl+Shift+F> |
-| Navigate to the next read/write access | Block or operand | <Alt+F8> |
-| Navigate to the previous read/write access | Block or operand | <Alt+F9> |
-| Navigate to the definition of the selected block or operand | Block or operand | <Ctrl+Shift+D> |
+| Navigate to the first element of the network | Object in the network | &lt;Home&gt; |
+| Navigate to the last element of the network | Object in the network | &lt;End&gt; |
+| Navigate to the next element of the network | Object in the network | &lt;Tab&gt; |
+| Navigate to the previous element of the network | Object in the network | &lt;Shift+Tab&gt; |
+| To the next network | Network title | &lt;Down arrow&gt; |
+| To the previous network | Network title | &lt;Up arrow&gt; |
+| Navigate to the next point of use of the selected block or operand | Block or operand | &lt;Ctrl+Shift+G&gt; |
+| Navigate to the previous point of use of the selected block or operand | Block or operand | &lt;Ctrl+Shift+F&gt; |
+| Navigate to the next read/write access | Block or operand | &lt;Alt+F8&gt; |
+| Navigate to the previous read/write access | Block or operand | &lt;Alt+F9&gt; |
+| Navigate to the definition of the selected block or operand | Block or operand | &lt;Ctrl+Shift+D&gt; |
 
 General keyboard shortcuts: Enter operands
 
 | Enter operands with the keyboard | Selected object | Keyboard shortcut |
 | --- | --- | --- |
-| Activate the text box for the first operand of the instruction | Instruction | <Return>  Or  <Any letters/numbers>   An empty text box opens on <Return>, any letters or numbers are entered in the text box. |
-| Activate text box for the operand | Operand | <F2> |
-| Enter operands | Text box for operands | <Any letters/numbers> |
-| Confirm entry of the operand | Text box for operands | <Return> |
-| Open autocompletion | Text box for operands | <Ctrl+I> or  <Ctrl+Space> |
-| Discard current change | Text box for operands | <Esc>   The text box is disabled and the previous contents restored. |
-| Delete operand | Operand | <Del> |
-| Define tag | Operand | <Ctrl+Shift+I> |
-| Rewire tag | Operand | <Ctrl+Shift+P> |
-| Rename tag | Operand | <Ctrl+Shift+T> |
+| Activate the text box for the first operand of the instruction | Instruction | &lt;Return&gt;  Or  &lt;Any letters/numbers&gt;   An empty text box opens on &lt;Return&gt;, any letters or numbers are entered in the text box. |
+| Activate text box for the operand | Operand | &lt;F2&gt; |
+| Enter operands | Text box for operands | &lt;Any letters/numbers&gt; |
+| Confirm entry of the operand | Text box for operands | &lt;Return&gt; |
+| Open autocompletion | Text box for operands | &lt;Ctrl+I&gt; or  &lt;Ctrl+Space&gt; |
+| Discard current change | Text box for operands | &lt;Esc&gt;   The text box is disabled and the previous contents restored. |
+| Delete operand | Operand | &lt;Del&gt; |
+| Define tag | Operand | &lt;Ctrl+Shift+I&gt; |
+| Rewire tag | Operand | &lt;Ctrl+Shift+P&gt; |
+| Rename tag | Operand | &lt;Ctrl+Shift+T&gt; |
 
 General keyboard shortcuts: Monitor program
 
 | Monitor program with the keyboard | Keyboard shortcut |
 | --- | --- |
-| Set/delete breakpoint | <Ctrl+Shift+F9> |
-| Skip breakpoint | <Ctrl+Shift+F10> |
-| Jump to a nested block | <Ctrl+Shift+F11> |
-| Jump back to the calling block | <Ctrl+Shift+F12> |
-| Run program up to marker (cursor position) | <Ctrl+F3> |
-| Display program status | <Ctrl+T> |
-| Enable all breakpoints | <Ctrl+Shift+F2> |
-| Disable all breakpoints | <Ctrl+Shift+F3> |
-| Modify to 0 | <Ctrl+Shift+9> |
-| Modify to 1 | <Ctrl+Shift+1> |
-| Modify operand | <Ctrl+Shift+2> |
+| Set/delete breakpoint | &lt;Ctrl+Shift+F9&gt; |
+| Skip breakpoint | &lt;Ctrl+Shift+F10&gt; |
+| Jump to a nested block | &lt;Ctrl+Shift+F11&gt; |
+| Jump back to the calling block | &lt;Ctrl+Shift+F12&gt; |
+| Run program up to marker (cursor position) | &lt;Ctrl+F3&gt; |
+| Display program status | &lt;Ctrl+T&gt; |
+| Enable all breakpoints | &lt;Ctrl+Shift+F2&gt; |
+| Disable all breakpoints | &lt;Ctrl+Shift+F3&gt; |
+| Modify to 0 | &lt;Ctrl+Shift+9&gt; |
+| Modify to 1 | &lt;Ctrl+Shift+1&gt; |
+| Modify operand | &lt;Ctrl+Shift+2&gt; |
 
 LAD/FBD
 
 | Operate LAD/FBD with the keyboard | Selected object | Keyboard shortcut |
 | --- | --- | --- |
-| Insert normally open contact | LAD: Rung | <F9> |
-| Insert normally closed contact | LAD: Rung | <F10> |
-| Insert empty box | LAD: Rung  FBD: Network | <F8> |
-| Insert assignment | LAD: Rung  FBD: Network, input or output | <Shift+F7> |
-| Open branch | LAD: Rung  FBD: Connecting line between two boxes | <Shift+F8> |
-| Close branch | LAD: Rung | <Shift+F9> |
-| Insert AND logic operation | FBD: Network, input or output | <F9> |
-| Insert OR logic operation | FBD: Network, input or output | <F10> |
-| Create a ones complement | FBD: Network, input or output | <Ctrl+Shift+4> |
-| Insert input | FBD: Network, input or output | <Ctrl+Shift+3> |
+| Insert normally open contact | LAD: Rung | &lt;F9&gt; |
+| Insert normally closed contact | LAD: Rung | &lt;F10&gt; |
+| Insert empty box | LAD: Rung  FBD: Network | &lt;F8&gt; |
+| Insert assignment | LAD: Rung  FBD: Network, input or output | &lt;Shift+F7&gt; |
+| Open branch | LAD: Rung  FBD: Connecting line between two boxes | &lt;Shift+F8&gt; |
+| Close branch | LAD: Rung | &lt;Shift+F9&gt; |
+| Insert AND logic operation | FBD: Network, input or output | &lt;F9&gt; |
+| Insert OR logic operation | FBD: Network, input or output | &lt;F10&gt; |
+| Create a ones complement | FBD: Network, input or output | &lt;Ctrl+Shift+4&gt; |
+| Insert input | FBD: Network, input or output | &lt;Ctrl+Shift+3&gt; |
 
 STL
 
 | Operate the STL with the keyboard | Selected object | Keyboard shortcut |
 | --- | --- | --- |
-| Comment out selection | Line | <Ctrl+Shift+Y> |
-| Remove comment | Line | <Ctrl+Shift+U> |
+| Comment out selection | Line | &lt;Ctrl+Shift+Y&gt; |
+| Remove comment | Line | &lt;Ctrl+Shift+U&gt; |
 
 CEM
 
 | Operate CEM with the keyboard | Area | Keyboard shortcut |
 | --- | --- | --- |
-| Add cause | Any | <Ctrl+R> |
-| Add effect | Any | <Ctrl+Shift+R> |
-| Add input | Cause | <Ctrl+Shift+3> |
-| Add output | Effect | <Ctrl+Shift+3> |
-| Create a ones complement | Operand or connection | <Ctrl+Shift+4> |
-| Jump to the next programming area (Causes > Intersections > Effects) | Any programming area | <Ctrl+Tab> |
-| Jump to the previous programming area (Effects > Intersections > Causes) | Any programming area | <Shift+Tab> |
-| Open a drop-down list, e.g. to select an instruction in a box  You can open drop-down lists with <ALT+F2> and then navigate with the arrow keys to scroll through the drop-down list. Finally, press the <Enter> key to confirm your selection. | Instruction box in a cause or effect | <ALT+F2> |
-| Navigate to the next element of the action group | Element of an action group | <ALT+F3> |
-| Navigate to the previous element of the action group | Element of an action group | <ALT+F6> |
-| Expand/collapse causes | Any | <Alt+F11> |
-| Expand/collapse effects | Any | <Alt+F12> |
-| Display configuration menu, e.g. for programming an intersection | Intersection | <F4> |
-| Insert AND logic operation | Cause or effect | <F9> |
-| Insert OR logic operation | Cause or effect | <F10> |
-| Insert empty box | Cause or effect | <F8> |
-| Insert assignment | Cause or effect | <Shift+F7> |
-| Add intersection column | Effect | <Shift+F8> |
+| Add cause | Any | &lt;Ctrl+R&gt; |
+| Add effect | Any | &lt;Ctrl+Shift+R&gt; |
+| Add input | Cause | &lt;Ctrl+Shift+3&gt; |
+| Add output | Effect | &lt;Ctrl+Shift+3&gt; |
+| Create a ones complement | Operand or connection | &lt;Ctrl+Shift+4&gt; |
+| Jump to the next programming area (Causes &gt; Intersections &gt; Effects) | Any programming area | &lt;Ctrl+Tab&gt; |
+| Jump to the previous programming area (Effects &gt; Intersections &gt; Causes) | Any programming area | &lt;Shift+Tab&gt; |
+| Open a drop-down list, e.g. to select an instruction in a box  You can open drop-down lists with &lt;ALT+F2&gt; and then navigate with the arrow keys to scroll through the drop-down list. Finally, press the &lt;Enter&gt; key to confirm your selection. | Instruction box in a cause or effect | &lt;ALT+F2&gt; |
+| Navigate to the next element of the action group | Element of an action group | &lt;ALT+F3&gt; |
+| Navigate to the previous element of the action group | Element of an action group | &lt;ALT+F6&gt; |
+| Expand/collapse causes | Any | &lt;Alt+F11&gt; |
+| Expand/collapse effects | Any | &lt;Alt+F12&gt; |
+| Display configuration menu, e.g. for programming an intersection | Intersection | &lt;F4&gt; |
+| Insert AND logic operation | Cause or effect | &lt;F9&gt; |
+| Insert OR logic operation | Cause or effect | &lt;F10&gt; |
+| Insert empty box | Cause or effect | &lt;F8&gt; |
+| Insert assignment | Cause or effect | &lt;Shift+F7&gt; |
+| Add intersection column | Effect | &lt;Shift+F8&gt; |
 
 GRAPH
 
 | Operate GRAPH with the keyboard | Block | Keyboard shortcut |
 | --- | --- | --- |
-| Page Up/Down | Navigation view, single step view, sequence view, permanent instructions | <Page Up>/  <Page Down> |
-| Navigate in the navigation view | Navigation view | <Up arrow>  <Down arrow> |
-| Expand/collapse object | Navigation view | <+> or <Right arrow>  <-> or <Left arrow> |
-| Switch between single step view and sequence view when a step or a transition is selected | Navigation view | <Return> |
-| Switch between navigation view and work area | Navigation view, single step view, sequence view, permanent instructions | <ALT+F6> |
-| Go to first element in a network | Single step view | <Home> |
-| Go to last element in a network | Single step view | <End> |
-| Switch to interlock | Single step view | <Ctrl+Home> |
-| Switch to transition | Single step view | <Ctrl+End> |
+| Page Up/Down | Navigation view, single step view, sequence view, permanent instructions | &lt;Page Up&gt;/  &lt;Page Down&gt; |
+| Navigate in the navigation view | Navigation view | &lt;Up arrow&gt;  &lt;Down arrow&gt; |
+| Expand/collapse object | Navigation view | &lt;+&gt; or &lt;Right arrow&gt;  &lt;-&gt; or &lt;Left arrow&gt; |
+| Switch between single step view and sequence view when a step or a transition is selected | Navigation view | &lt;Return&gt; |
+| Switch between navigation view and work area | Navigation view, single step view, sequence view, permanent instructions | &lt;ALT+F6&gt; |
+| Go to first element in a network | Single step view | &lt;Home&gt; |
+| Go to last element in a network | Single step view | &lt;End&gt; |
+| Switch to interlock | Single step view | &lt;Ctrl+Home&gt; |
+| Switch to transition | Single step view | &lt;Ctrl+End&gt; |
 | Navigate in the structure | Sequence view | Arrow keys |
-| Go to first step | Sequence view | <Home> or <Ctrl+Home> |
-| Go to last step | Sequence view | <End> or <Ctrl+End> |
-| Open branch | Sequence view | <Shift+F8> |
-| Close branch | Sequence view | <Shift+F9> |
-| Insert sequence end | Sequence view | <Shift+F7> |
-| Insert jump | Sequence view | <Shift+F12> |
-| Insert step and transition | Sequence view | <F8> |
-| Delete element | Sequence view | <Del> |
-| Go to first editable element | Permanent instructions | <Home> |
-| Go to next editable element | Permanent instructions | <Tab> |
-| Go to last editable element | Permanent instructions | <End> |
-| Go to previous editable element | Permanent instructions | <Shift+Tab> |
-| Jump to the start of the "Action" cell | Actions | <Home> |
-| Jump to the end of the "Action" cell | Actions | <End> |
-| Insert new action | Actions | <Return> |
+| Go to first step | Sequence view | &lt;Home&gt; or &lt;Ctrl+Home&gt; |
+| Go to last step | Sequence view | &lt;End&gt; or &lt;Ctrl+End&gt; |
+| Open branch | Sequence view | &lt;Shift+F8&gt; |
+| Close branch | Sequence view | &lt;Shift+F9&gt; |
+| Insert sequence end | Sequence view | &lt;Shift+F7&gt; |
+| Insert jump | Sequence view | &lt;Shift+F12&gt; |
+| Insert step and transition | Sequence view | &lt;F8&gt; |
+| Delete element | Sequence view | &lt;Del&gt; |
+| Go to first editable element | Permanent instructions | &lt;Home&gt; |
+| Go to next editable element | Permanent instructions | &lt;Tab&gt; |
+| Go to last editable element | Permanent instructions | &lt;End&gt; |
+| Go to previous editable element | Permanent instructions | &lt;Shift+Tab&gt; |
+| Jump to the start of the "Action" cell | Actions | &lt;Home&gt; |
+| Jump to the end of the "Action" cell | Actions | &lt;End&gt; |
+| Insert new action | Actions | &lt;Return&gt; |
 
 SCL
 
 | Operate SCL with the keyboard | Block | Keyboard shortcut |
 | --- | --- | --- |
 | Navigating in the program code | Line | Arrow keys |
-| One word to the right/left | Line | <Ctrl+arrow keys> |
-| Cursor to start of line | Line | <Home> |
-| Cursor to end of line | Line | <End> |
-| Cursor to start of code section | Line | <Ctrl+Home> |
-| Cursor to end of code section | Line | <Ctrl+End> |
-| Expand/collapse code section | Insertion mark within the code section | <Ctrl+Shift+Num+>  <Ctrl+Shift+Num-> |
-| Expand/collapse all code sections | Any | <Ctrl+Shift+Num*>  <Ctrl+Shift+Num/> |
-| Expand block | Block overview, block in the programming window | <Ctrl+Shift+Num+> |
-| Collapse block | Block overview, block in the programming window | <Ctrl+Shift+Num-> |
-| Expand all blocks | Block overview, programming window | <Ctrl+Shift+Num*> |
-| Collapse all blocks | Block overview, programming window | <Ctrl+Shift+Num/> |
-| Indent line | Line | <Tab> or  <Ctrl+R> |
-| Outdent line | Line | <Shift+Tab> or  <Ctrl+Shift+R> |
-| Automatically format selected text |  | <Ctrl+Shift+W> |
-| Expand/collapse the parameter list | Operand | <Ctrl+Shift+Space> |
-| Set/delete bookmarks | Line | <Ctrl+Shift+M> |
-| To the next bookmark |  | <Ctrl+Shift+6> |
-| To the previous bookmark |  | <Ctrl+Shift+5> |
-| Comment out selection | Line | <Ctrl+Shift+Y> |
-| Remove comment | Line | <Ctrl+Shift+U> |
+| One word to the right/left | Line | &lt;Ctrl+arrow keys&gt; |
+| Cursor to start of line | Line | &lt;Home&gt; |
+| Cursor to end of line | Line | &lt;End&gt; |
+| Cursor to start of code section | Line | &lt;Ctrl+Home&gt; |
+| Cursor to end of code section | Line | &lt;Ctrl+End&gt; |
+| Expand/collapse code section | Insertion mark within the code section | &lt;Ctrl+Shift+Num+&gt;  &lt;Ctrl+Shift+Num-&gt; |
+| Expand/collapse all code sections | Any | &lt;Ctrl+Shift+Num*&gt;  &lt;Ctrl+Shift+Num/&gt; |
+| Expand block | Block overview, block in the programming window | &lt;Ctrl+Shift+Num+&gt; |
+| Collapse block | Block overview, block in the programming window | &lt;Ctrl+Shift+Num-&gt; |
+| Expand all blocks | Block overview, programming window | &lt;Ctrl+Shift+Num*&gt; |
+| Collapse all blocks | Block overview, programming window | &lt;Ctrl+Shift+Num/&gt; |
+| Indent line | Line | &lt;Tab&gt; or  &lt;Ctrl+R&gt; |
+| Outdent line | Line | &lt;Shift+Tab&gt; or  &lt;Ctrl+Shift+R&gt; |
+| Automatically format selected text |  | &lt;Ctrl+Shift+W&gt; |
+| Expand/collapse the parameter list | Operand | &lt;Ctrl+Shift+Space&gt; |
+| Set/delete bookmarks | Line | &lt;Ctrl+Shift+M&gt; |
+| To the next bookmark |  | &lt;Ctrl+Shift+6&gt; |
+| To the previous bookmark |  | &lt;Ctrl+Shift+5&gt; |
+| Comment out selection | Line | &lt;Ctrl+Shift+Y&gt; |
+| Remove comment | Line | &lt;Ctrl+Shift+U&gt; |
 
 Editor for named value data types
 
 | Operate editor for named value data types with the keyboard | Keyboard shortcut |
 | --- | --- |
-| Copy text | <Ctrl+C> |
-| Cut text | <Ctrl+X> |
-| Paste copied or cut text | <Ctrl+V> |
-| Print named value data type | <Ctrl+P> |
-| Go to line | <Ctrl+G> |
-| Select all | <Ctrl+A> |
-| Find | <Ctrl+F> |
-| Replace | <Ctrl+H> |
-| Undo last action | <Ctrl+Z> |
-| Redo an undone action | <Ctrl+Y> |
+| Copy text | &lt;Ctrl+C&gt; |
+| Cut text | &lt;Ctrl+X&gt; |
+| Paste copied or cut text | &lt;Ctrl+V&gt; |
+| Print named value data type | &lt;Ctrl+P&gt; |
+| Go to line | &lt;Ctrl+G&gt; |
+| Select all | &lt;Ctrl+A&gt; |
+| Find | &lt;Ctrl+F&gt; |
+| Replace | &lt;Ctrl+H&gt; |
+| Undo last action | &lt;Ctrl+Z&gt; |
+| Redo an undone action | &lt;Ctrl+Y&gt; |
 
 ---
 
@@ -478,7 +478,7 @@ To set the operand representation for all new blocks in the project, follow thes
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > General" group in the area navigation.
+2. Select the "PLC programming &gt; General" group in the area navigation.
 3. Select the desired representation in the "Operand representation" drop-down list.
 
    The selected representation is enabled for all new blocks in the program.
@@ -573,7 +573,7 @@ To edit a text in all project languages, follow these steps:
 >
 > **Editing all project texts in the global "Project texts" table**
 >
-> You can also edit the translations for project texts in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts". It contains all translatable texts of the entire project.
+> You can also edit the translations for project texts in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts". It contains all translatable texts of the entire project.
 >
 > You can find additional information on translation of texts under [Project text basics](Editing%20project%20data.md#project-text-basics).​
 
@@ -733,7 +733,7 @@ The TIA Portal provides you with numerous instructions that you can use to progr
 
 #### Requirement
 
-The "Common data > Instruction profiles" folder is open in the project navigation.
+The "Common data &gt; Instruction profiles" folder is open in the project navigation.
 
 #### Procedure
 
@@ -790,7 +790,7 @@ Once you have opened an instruction profile, you can edit it as follows:
 
 #### Requirement
 
-The "Common data > Instruction profiles" folder is open in the project navigation.
+The "Common data &gt; Instruction profiles" folder is open in the project navigation.
 
 #### Opening instruction profiles
 
@@ -842,7 +842,7 @@ You first need to activate an instruction profile in order to include filtering 
 
 #### Requirement
 
-The "Common data > Instruction profiles" folder is open in the project navigation.
+The "Common data &gt; Instruction profiles" folder is open in the project navigation.
 
 #### Activating instruction profiles
 
@@ -878,7 +878,7 @@ Proceed as follows to deactivate the instruction profile:
 
 #### Requirement
 
-The "Common data > Instruction profiles" folder is open in the project tree.
+The "Common data &gt; Instruction profiles" folder is open in the project tree.
 
 #### Procedure
 
@@ -938,9 +938,9 @@ To insert tags in graphic programming languages using autocompletion, follow the
 1. Select an operand of the instruction to which you wish to assign a tag.
 
    The input field for the operand opens. The autocompletion button will appear beside the input field.
-2. Either click the autocompletion button or use the shortcut <Ctrl+l>.
+2. Either click the autocompletion button or use the shortcut &lt;Ctrl+l&gt;.
 
-   Autocompletion opens. It contains only the local and global tags, data blocks and multiple instances which are admissible for the operand in the given context. You can exit autocompletion at any time by pressing <Esc>.
+   Autocompletion opens. It contains only the local and global tags, data blocks and multiple instances which are admissible for the operand in the given context. You can exit autocompletion at any time by pressing &lt;Esc&gt;.
 3. Select the required tag from the list. If necessary, you can also filter the list:
 
    - For example, enter the first few letters of the name of the tag or instruction you wish to insert. Autocompletion will be filtered further with each letter entered. If there is no tag or instruction starting with the letters entered, autocompletion will remain at the last match.
@@ -949,13 +949,13 @@ To insert tags in graphic programming languages using autocompletion, follow the
 
      - Without namespaces: Enter " to access the global tags.
 
-     - With namespaces: Enter `_.` (<underscore><dot>) to access global tags.
+     - With namespaces: Enter `_.` (&lt;underscore&gt;&lt;dot&gt;) to access global tags.
 
      See also: [Categorizing program elements in namespaces](Using%20software%20units%20%28S7-1500%29.md#categorizing-program-elements-in-namespaces-s7-1500)
    - Enter % to access absolute addresses.
 
-   If the tag is a structured tag, a data block or a multiple instance, then an arrow is displayed at the end of the row. Click on the arrow to display the lower-level elements. You can navigate to the very last level in this way. If a structure is allowed as a data type for the operand, you can choose "None" from the list. This assigns the entire structure to the operand as a tag. Use the <Backspace> key to return to the previous level.
-4. Press the <Return> key to apply the tag.
+   If the tag is a structured tag, a data block or a multiple instance, then an arrow is displayed at the end of the row. Click on the arrow to display the lower-level elements. You can navigate to the very last level in this way. If a structure is allowed as a data type for the operand, you can choose "None" from the list. This assigns the entire structure to the operand as a tag. Use the &lt;Backspace&gt; key to return to the previous level.
+4. Press the &lt;Return&gt; key to apply the tag.
 
 ---
 
@@ -977,14 +977,14 @@ To insert tags and instructions in textual programming languages using autocompl
    - Enter " to access the global tags.
    - Enter % to access absolute addresses.
 
-   Autocompletion opens. It contains only the local and global tags, data blocks, multiple instances and instructions which are admissible at the current position. You can exit autocompletion at any time by pressing <Esc>.
-2. Enter more letters of the name of the tag or instruction you wish to insert. You can use <Enter> or <Tab> to apply the tag or instruction and close autocompletion.
+   Autocompletion opens. It contains only the local and global tags, data blocks, multiple instances and instructions which are admissible at the current position. You can exit autocompletion at any time by pressing &lt;Esc&gt;.
+2. Enter more letters of the name of the tag or instruction you wish to insert. You can use &lt;Enter&gt; or &lt;Tab&gt; to apply the tag or instruction and close autocompletion.
 
    Autocompletion will be filtered further with each letter entered. If there is no tag or instruction starting with the letters entered, autocompletion only contains the previous matches.
 3. Select the tag or instruction required from the list.
 
-   If a tag is a structured tag, a data block or a multiple instance, first select the tag, the data block or multiple instance from the autocompletion and apply the selection with <Enter>. To select the additional components of the structure, data block, or multiple instance, enter a period. Autocompletion then reopens and you can select the next component.
-4. Press the <Return> key to apply the tag.
+   If a tag is a structured tag, a data block or a multiple instance, first select the tag, the data block or multiple instance from the autocompletion and apply the selection with &lt;Enter&gt;. To select the additional components of the structure, data block, or multiple instance, enter a period. Autocompletion then reopens and you can select the next component.
+4. Press the &lt;Return&gt; key to apply the tag.
 
 ---
 
@@ -1111,7 +1111,7 @@ You can use "Go to next error" and "Go to previous error" in the toolbar to find
 
 Or:
 
-1. Open the error list in the inspector window with "Info > Syntax".
+1. Open the error list in the inspector window with "Info &gt; Syntax".
 
    All syntax errors are listed in the table with a short description of the error.
 2. If there are any errors, click on the blue question mark next to the error text to obtain information on eliminating the problem.

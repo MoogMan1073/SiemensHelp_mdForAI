@@ -133,7 +133,7 @@ The cross-reference list has the following structure:
 | --- | --- |
 | Object | Name of the source object that was selected upon opening the cross-reference list.  The lower-level objects and the relevant reference objects are shown below it. |
 | Reference location | The respective reference location of the objects, for example, a network |
-| Reference type | Relationship between the source object and the referenced objects:  - "Uses": The source object uses this object. - "Used by": The source object is used by this object. - "Type -> Instance": The source object is a type of the referenced object. - "Instance -> Type": The source object is an instance of the referenced object. - "Group -> Element": The source object is a group of the referenced object. - "Element -> Group": The source object is an element of the referenced object. - "Defines": The source object defines the referenced object. - "Defined by": The source object is defined by the referenced object. |
+| Reference type | Relationship between the source object and the referenced objects:  - "Uses": The source object uses this object. - "Used by": The source object is used by this object. - "Type -&gt; Instance": The source object is a type of the referenced object. - "Instance -&gt; Type": The source object is an instance of the referenced object. - "Group -&gt; Element": The source object is a group of the referenced object. - "Element -&gt; Group": The source object is an element of the referenced object. - "Defines": The source object defines the referenced object. - "Defined by": The source object is defined by the referenced object. |
 | As | Additional information about the referenced objects, for example when a tag is used by several devices. |
 | Access | Access type, for example:  - Read access to an operand (R) - Write access to an operand (W) - Call |
 | Address | Address of the relevant object |
@@ -212,10 +212,10 @@ You have the following options for filter selection, which relate to reference o
 
 - **Show only "uses":**
 
-  This setting only shows the used reference objects with the reference type "Uses", "Element -> Group", "Instance -> Type" and "Defines".
+  This setting only shows the used reference objects with the reference type "Uses", "Element -&gt; Group", "Instance -&gt; Type" and "Defines".
 - **Show only "used by":**
 
-  This setting shows all the reference objects with the usage type "Used by", "Group -> Element", "Type -> Instance" and "Defined by".
+  This setting shows all the reference objects with the usage type "Used by", "Group -&gt; Element", "Type -&gt; Instance" and "Defined by".
 - **Show only local references:**
 
   This setting only shows local references that belong to a specific device (for example, to CPU_1).
@@ -293,7 +293,7 @@ Alternatively, you have the following option to open the cross-reference list:
 - Click on the icon for cross-references in the toolbar.
 - Select an object in the project tree and click "F11".
 - Select an instruction with version identification in the "Instructions" task card and click "F11".
-- A simpler version of the cross-reference list is also displayed in the Inspector window in the "Info" > "Cross-references" tab.
+- A simpler version of the cross-reference list is also displayed in the Inspector window in the "Info" &gt; "Cross-references" tab.
 
   Click "Cross-reference information" in the shortcut menu of the object.
 
@@ -466,10 +466,10 @@ The following system filters are available:
   This setting shows all the lower-level objects below the source object with or without references.
 - **Show only "uses":**
 
-  This setting only shows the used reference objects with the reference type "Uses", "Element -> Group", "Instance -> Type" and "Defines".
+  This setting only shows the used reference objects with the reference type "Uses", "Element -&gt; Group", "Instance -&gt; Type" and "Defines".
 - **Show only "used by":**
 
-  This setting shows all the reference objects with the usage type "Used by", "Group -> Element", "Type -> Instance" and "Defined by".
+  This setting shows all the reference objects with the usage type "Used by", "Group -&gt; Element", "Type -&gt; Instance" and "Defined by".
 - **Show only local references:**
 
   This setting only shows local references which belong to a specific device (e.g. to CPU_1).
@@ -482,7 +482,7 @@ See also [Filtering the cross-reference list](#filtering-the-cross-reference-lis
 
 You can also create user-defined filters for the cross-references in addition to the system filters that are always available.
 
-This is possible both in the cross-reference editor and in the Inspector window in the "Info > Cross-references" tab.
+This is possible both in the cross-reference editor and in the Inspector window in the "Info &gt; Cross-references" tab.
 
 1. Open the cross-references and click the filter icon in the toolbar of the cross-reference editor.
 2. In the subsequent dialog click "Create new filter" and enter the desired filter criteria.
@@ -598,7 +598,7 @@ This allows you to reduce the number of objects displayed in the cross-reference
 >
 > **Creating user-defined filters**
 >
-> You can create user-defined filters in all cross-reference editors as well as in the Inspector window under "Info > Cross-references".
+> You can create user-defined filters in all cross-reference editors as well as in the Inspector window under "Info &gt; Cross-references".
 >
 > The procedure is identical in all cross-reference editors.
 
@@ -796,7 +796,7 @@ To export user-defined filters, follow the steps below:
 
    The "Export settings" dialog opens.
 4. Click "Deselect all" to select only the desired filter settings for the export.
-5. Select the desired filter for the export under "Cross-references > User-defined filters".
+5. Select the desired filter for the export under "Cross-references &gt; User-defined filters".
 
    If you want to accept the settings selected from previous export operations, activate the check box "Use selection from a previous export file". Enter the file in the field.
 6. Enter a file name for the initialization file in the "File name" box.
@@ -844,7 +844,7 @@ If a filter is set as the default setting, this filter is always applied when th
 >
 > **Cross-reference list in the Inspector window: No user-defined default**
 >
-> When you open cross-reference information in the Inspector window in the "Info > Cross-references" tab, the standard filter "Show objects with references" is always applied.
+> When you open cross-reference information in the Inspector window in the "Info &gt; Cross-references" tab, the standard filter "Show objects with references" is always applied.
 >
 > Setting default filters has no effect.
 >
@@ -962,7 +962,7 @@ The selected filter setting is applied for the objects displayed in the lower-le
 
 In the print preview, you can view and print out the project documentation contents shown in the cross-reference list.
 
-The "Project" > "Print preview" and "Project" > "Print" commands are available for this purpose in the TIA Portal.
+The "Project" &gt; "Print preview" and "Project" &gt; "Print" commands are available for this purpose in the TIA Portal.
 
 The following rules apply to printing out:
 
@@ -988,9 +988,9 @@ You have created a project which contains objects with references.
 
 To print the cross-reference list, follow these steps:
 
-1. Select an object from the cross-reference list and start the print preview via the "Project" > "Print preview" command.
+1. Select an object from the cross-reference list and start the print preview via the "Project" &gt; "Print preview" command.
 2. Make sure that you print out the required cross-reference list and select the required options.
-3. Start the printout using the "Project" > "Print" command.
+3. Start the printout using the "Project" &gt; "Print" command.
 4. In the following dialog box, select the required print options and click "OK".
 
 ### Result
@@ -1081,7 +1081,7 @@ Proceed as follows to display overlapping access in the cross-reference list:
    Result: All objects that have overlapping access are marked with the corresponding overlapping access symbol in the "Object" column.
 2. In the upper part of the cross-reference list, select a marked object and click the "Show overlapping access" button.
 
-   Result: The overlapping access to the selected object is displayed in a second window with the header "Overlapping accesses of: <ObjectName>".
+   Result: The overlapping access to the selected object is displayed in a second window with the header "Overlapping accesses of: &lt;ObjectName&gt;".
 
    > **Note**
    >
@@ -1126,7 +1126,7 @@ Proceed as follows to filter overlapping access in the cross-reference list:
    Result: All objects that have overlapping access are marked with the corresponding overlapping access symbol in the "Object" column.
 2. In the upper part of the cross-reference list, select a marked object and click the "Show overlapping access" button.
 
-   Result: The overlapping access to the selected object is displayed in a second window with the header "Overlapping accesses of: <ObjectName>".
+   Result: The overlapping access to the selected object is displayed in a second window with the header "Overlapping accesses of: &lt;ObjectName&gt;".
 3. In the detail view header of the overlapping objects, click the "Write access only" button to enable the filter function.
 
    Result: The detail view shows only the overlapping accesses that have write access or read and write access.
@@ -1151,7 +1151,7 @@ This function is also performed during a project upgrade to a higher TIA Portal
 
 To create new cross-references, follow these steps:
 
-1. In the menu bar of the Project view, select "Options > Settings > General > Cross-references".
+1. In the menu bar of the Project view, select "Options &gt; Settings &gt; General &gt; Cross-references".
 
    The settings for TIA Portal under "Cross-references" open.
 2. To start the process, click the "Recreate the cross-reference information" button.
@@ -1182,7 +1182,7 @@ This section contains information on the following topics:
 
 #### Introduction
 
-The Inspector window displays cross-reference information about an object you have selected in the "Info > Cross-references" tab.
+The Inspector window displays cross-reference information about an object you have selected in the "Info &gt; Cross-references" tab.
 
 If you select an object in any editor in the TIA Portal or in the "Instructions" or "Extended Instructions" task card, the associated references to the selected object are shown in this tab.
 
@@ -1218,7 +1218,7 @@ The table consists of the following columns:
 | --- | --- |
 | Object | Name of the source object that was selected upon opening the cross-reference list.  The lower-level objects and the relevant reference objects are shown below it. |
 | Reference location | The respective reference location of the objects, for example, a network |
-| Reference type | Relationship between the source object and the referenced objects:  - "Uses": The source object uses this object. - "Used by": The source object is used by this object. - "Type -> Instance": The source object is a type of the referenced object. - "Instance -> Type": The source object is an instance of the referenced object. - "Group -> Element": The source object is a group of the referenced object. - "Element -> Group": The source object is an element of the referenced object. - "Defines": The source object defines the referenced object. - "Defined by": The source object is defined by the referenced object. |
+| Reference type | Relationship between the source object and the referenced objects:  - "Uses": The source object uses this object. - "Used by": The source object is used by this object. - "Type -&gt; Instance": The source object is a type of the referenced object. - "Instance -&gt; Type": The source object is an instance of the referenced object. - "Group -&gt; Element": The source object is a group of the referenced object. - "Element -&gt; Group": The source object is an element of the referenced object. - "Defines": The source object defines the referenced object. - "Defined by": The source object is defined by the referenced object. |
 | As | Additional information about the referenced objects, for example when a tag is used by several devices. |
 | Access | Access type, for example:  - Read access to an operand (R) - Write access to an operand (W) - Call |
 | Address | Address of the relevant object |
@@ -1234,7 +1234,7 @@ To display cross-reference information in the Inspector window, follow these ste
 1. Select the required object, for example, in the project tree or in the program editor.
 2. Click "Cross-reference information" in the shortcut menu.
 
-   Result: The references to the selected object are displayed in the Inspector window in the "Info" > "Cross-references" tab.
+   Result: The references to the selected object are displayed in the Inspector window in the "Info" &gt; "Cross-references" tab.
 
 > **Note**
 >
@@ -1246,7 +1246,7 @@ To display cross-reference information in the Inspector window, follow these ste
 
 #### Introduction
 
-The Inspector window displays cross-reference information about an object you have selected in the "Info > Cross-references" tab.
+The Inspector window displays cross-reference information about an object you have selected in the "Info &gt; Cross-references" tab.
 
 You can customize the display of the cross-references, for example, to display parent objects of the source object.
 
@@ -1257,7 +1257,7 @@ To display cross-reference information in the Inspector window, follow these ste
 1. Select the required object, for example, in the project tree or in the program editor.
 2. Click "Cross-reference information" in the shortcut menu.
 
-   Result: The references to the selected object are displayed in the Inspector window in the "Info" > "Cross-references" tab.
+   Result: The references to the selected object are displayed in the Inspector window in the "Info" &gt; "Cross-references" tab.
 
    > **Note**
    >
@@ -1272,7 +1272,7 @@ To freeze the displayed cross-reference list in the Inspector window, follow the
 1. Select the required object, for example, in the project tree or in the program editor.
 2. Click "Cross-reference information" in the shortcut menu.
 
-   Result: The references to the selected object are displayed in the Inspector window in the "Info" > "Cross-references" tab.
+   Result: The references to the selected object are displayed in the Inspector window in the "Info" &gt; "Cross-references" tab.
 3. Select the reference for which you want to display the cross-reference information.
 4. Click the "Freeze/unfreeze cross-reference list" button.
 
@@ -1294,7 +1294,7 @@ Proceed as follows to display to a selected structured object along with the par
 1. Select the required object, for example, in the project tree or in the program editor.
 2. Click "Cross-reference information" in the shortcut menu.
 
-   Result: The references to the selected object are displayed in the Inspector window in the "Info" > "Cross-references" tab.
+   Result: The references to the selected object are displayed in the Inspector window in the "Info" &gt; "Cross-references" tab.
 3. Select the reference for which you want to display the parent cross-reference information.
 
    If parent objects exist for the reference, the option "Show parent objects" is displayed on the right-hand border of the toolbar.

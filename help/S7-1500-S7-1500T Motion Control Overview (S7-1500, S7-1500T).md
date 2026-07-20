@@ -34,7 +34,7 @@ Please also note the supplementary information on the Motion Control documentati
 
 - Product information on the S7-1500/1500T Motion Control documentation
 
-  <https://support.industry.siemens.com/cs/ww/en/view/109794046>
+  [https://support.industry.siemens.com/cs/ww/en/view/109794046](https://support.industry.siemens.com/cs/ww/en/view/109794046)
 
 #### Documentation
 
@@ -80,7 +80,7 @@ The documentation of the Motion Control functions is divided into the following 
 
 | Symbol | Meaning |
 | --- | --- |
-| ![See also](images/159090927115_DV_resource.Stream@PNG-en-US.png) | Topic page "SIMATIC Technology - Motion Control: Overview and Important Links" <https://support.industry.siemens.com/cs/ww/en/view/109751049> |
+| ![See also](images/159090927115_DV_resource.Stream@PNG-en-US.png) | Topic page "SIMATIC Technology - Motion Control: Overview and Important Links" [https://support.industry.siemens.com/cs/ww/en/view/109751049](https://support.industry.siemens.com/cs/ww/en/view/109751049) |
 
 ## Overview of functions (S7-1500, S7-1500T)
 
@@ -183,7 +183,7 @@ You configure the properties of real objects using the technology objects. The c
 
 ![Motion Control instructions](images/163741563275_DV_resource.Stream@PNG-de-DE.png)
 
-With the Motion Control instructions you perform the desired functionality in the technology objects. The Motion Control instructions are available in the TIA Portal under "Instructions > Technology > Motion Control". The instructions can be called at all execution levels.
+With the Motion Control instructions you perform the desired functionality in the technology objects. The Motion Control instructions are available in the TIA Portal under "Instructions &gt; Technology &gt; Motion Control". The instructions can be called at all execution levels.
 
 ![Motion Control instructions](images/163741496715_DV_resource.Stream@PNG-de-DE.png)
 
@@ -242,7 +242,7 @@ The following figure shows an example configuration in which all components are 
 
 The technology objects occupy memory in the CPU's RAM. The internal memory requirements of the technology objects are mapped by the Motion Control and Extended Motion Control resources. Each CPU offers a defined set of these resources. You can find the total resources available in the technical specifications of the utilized CPU.
 
-You can find an overview of the Motion Control and Extended Motion Control resources consumption of a CPU in the TIA Portal under "Tools > Resources".
+You can find an overview of the Motion Control and Extended Motion Control resources consumption of a CPU in the TIA Portal under "Tools &gt; Resources".
 
 #### Motion Control resources
 
@@ -436,8 +436,8 @@ Technology version V8.0 contains the following new features:
   - From a motion job that synchronizes the TCP with the tracked OCS to the subsequent motion job in the tracked OCS
   - To blend the intermediate point in the WCS during a movement from one tracked OCS to another tracked OCS, you can also only issue the synchronization job during desynchronization "TrackingState" = 4.
 - You can enable dynamic adaptation (for motion jobs) in all phases of conveyor tracking.
-- The new tag structure "<TO>.StatusInterpreterMotion <tag name>" contains status information on motion jobs controlled by a technology object Interpreter.
-- The array of the tag "<TO>.StatusTool.Frame[1..3].<tag name>" was extended from [1..1] to [1..3]:
+- The new tag structure "&lt;TO&gt;.StatusInterpreterMotion &lt;tag name&gt;" contains status information on motion jobs controlled by a technology object Interpreter.
+- The array of the tag "&lt;TO&gt;.StatusTool.Frame[1..3].&lt;tag name&gt;" was extended from [1..1] to [1..3]:
 
 ##### S7-1500T Motion Control KinPlus
 
@@ -563,7 +563,7 @@ Technology version V7.0 contains the following new features:
 - The "MC_SaveAbsoluteEncoderData" instruction is available. Use this instruction to save the absolute adjustment data for CPU device replacement on the SIMATIC Memory Card.
 - With the "MC_Home" instruction, the new incremental encoder adjustment homing type "MC_Home.Mode" = 13 is available. The axis does not perform a compensating motion and the offset of the position is not applied at all encoders of the axis. This makes it easier to readjust individual encoders.
 - Active and passive homing of absolute encoders with "MC_Home" is available.
-- The homing status of the "<TO>.StatusSensor[1..4].Adjusted" encoders is displayed.
+- The homing status of the "&lt;TO&gt;.StatusSensor[1..4].Adjusted" encoders is displayed.
 - The S7-1500T CPU supports absolute adjustment/incremental adjustment of non-operational encoders. This means that the respective encoder no longer has to be enabled for homing.
 
 ##### Configuring a control loop
@@ -644,17 +644,17 @@ Technology version V7.0 contains the following new features:
   > Note the information provided in the section "[Upgrading to technology version V7.0"](#upgrading-to-technology-version-v70-s7-1500-s7-1500t).
 - The tag structure of the following tags has been extended by the coordinates B and C:
 
-  - <TO>.Tcp
-  - <TO>.KcsFrame
-  - <TO>.OcsFrame
-  - <TO>.Tool
-  - <TO>.TcpInWcs
-  - <TO>.TcpInOcs
-  - <TO>.StatusOcsFrame[1..3]
-  - <TO>.FlangeInKcs
-  - <TO>.StatusTool
-  - <TO>.StatusConveyor[1..3]
-  - <TO>.StatusWorkspaceZone[1..10]
+  - &lt;TO&gt;.Tcp
+  - &lt;TO&gt;.KcsFrame
+  - &lt;TO&gt;.OcsFrame
+  - &lt;TO&gt;.Tool
+  - &lt;TO&gt;.TcpInWcs
+  - &lt;TO&gt;.TcpInOcs
+  - &lt;TO&gt;.StatusOcsFrame[1..3]
+  - &lt;TO&gt;.FlangeInKcs
+  - &lt;TO&gt;.StatusTool
+  - &lt;TO&gt;.StatusConveyor[1..3]
+  - &lt;TO&gt;.StatusWorkspaceZone[1..10]
 
 ##### S7-1500T Motion Control KinPlus
 
@@ -668,9 +668,9 @@ Technology version V7.0 contains the following new features:
 - Joints:
 
   - The joint coordinate system (JCS) is available.
-  - The tag "<TO>.Joint" contains the configuration of the joints for kinematics types with more than four interpolating kinematics axes.
-  - The tag "<TO>.JointData" contains the setpoints of the kinematics motion for the joints.
-- The tag "<TO>.AxisCoupling" contains the configuration of the mechanical axis coupling for kinematics types with more than four interpolating kinematics axes.
+  - The tag "&lt;TO&gt;.Joint" contains the configuration of the joints for kinematics types with more than four interpolating kinematics axes.
+  - The tag "&lt;TO&gt;.JointData" contains the setpoints of the kinematics motion for the joints.
+- The tag "&lt;TO&gt;.AxisCoupling" contains the configuration of the mechanical axis coupling for kinematics types with more than four interpolating kinematics axes.
 
 ### Innovations V6.0 (S7-1500, S7-1500T)
 
@@ -688,8 +688,8 @@ The technology version V6.0 contains the following new features:
 - A backlash compensation can be configured for the positioning axis and synchronous axis technology objects.
 - A linear axis can be configured with linear motor for the positioning axis and synchronous axis technology objects.
 - The actual velocity can be calculated from the actual speed NIST_B from the drive telegram for the positioning axis, synchronous axis and external encoder technology objects.
-- The "<TO>.PositionMonitoring.MinDwellTime" tag of the positioning axis and synchronous axis technology objects has the start value 0.01 s as default setting.
-- Axis control panel: The "Deceleration" element in the "Control" area has the default 100% of the configured value in "Technology objects > Configuration > Extended parameters > Limits > Dynamics limits".
+- The "&lt;TO&gt;.PositionMonitoring.MinDwellTime" tag of the positioning axis and synchronous axis technology objects has the start value 0.01 s as default setting.
+- Axis control panel: The "Deceleration" element in the "Control" area has the default 100% of the configured value in "Technology objects &gt; Configuration &gt; Extended parameters &gt; Limits &gt; Dynamics limits".
 
 #### Synchronous operation functions
 
@@ -718,14 +718,14 @@ Cross-PLC synchronous operation (S7-1500T):
 
 - In the "Calibration" configuration window can calibrate workspace zones in online and offline mode.
 - With a "MC_KinematicsMotionSimulation" job, you can simulate the motion of a kinematics with interconnected axes that are not enabled and exit simulation mode.
-- You can configure the maximum smoothing distance in the configuration menu "Technology object > Configuration > Extended parameters> Job sequence" or directly via the "<TO>.Transition.FactorBlendingLength" tag. You can move the kinematics with smoothing distances > 50% of the shorter distance.
-- In the "Technology object > Configuration > Extended parameters > Dynamics" configuration menu, you can define the default values for the dynamic responses for synchronous "point-to-point" motions.
+- You can configure the maximum smoothing distance in the configuration menu "Technology object &gt; Configuration &gt; Extended parameters&gt; Job sequence" or directly via the "&lt;TO&gt;.Transition.FactorBlendingLength" tag. You can move the kinematics with smoothing distances &gt; 50% of the shorter distance.
+- In the "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics" configuration menu, you can define the default values for the dynamic responses for synchronous "point-to-point" motions.
 - In the kinematics control panel, the dynamic adaptation is effective in "Jog to target position" mode and the dynamic limits of the kinematics axes are taken into account. The "dynamic adaptation without segmentation of the path" is always used.
-- The tag "<TO>.StatusWord.InSimulation" indicates the simulation mode of a kinematics.
-- The "<TO>.AxesData" tag structure shows the axis data from the kinematics motion.
-- The "<TO>.StatusPath.AccumulatedPathLength" tag shows the sum of the distance already traveled.
-- The "<TO>.StatusPath.TotalPathLength" tag shows the sum of the total distance (distance already traveled and calculated distance).
-- The tag "<TO>.StatusMotionQueue.NumberOfPreparedCommands" shows the number of prepared commands in the job sequence.
+- The tag "&lt;TO&gt;.StatusWord.InSimulation" indicates the simulation mode of a kinematics.
+- The "&lt;TO&gt;.AxesData" tag structure shows the axis data from the kinematics motion.
+- The "&lt;TO&gt;.StatusPath.AccumulatedPathLength" tag shows the sum of the distance already traveled.
+- The "&lt;TO&gt;.StatusPath.TotalPathLength" tag shows the sum of the total distance (distance already traveled and calculated distance).
+- The tag "&lt;TO&gt;.StatusMotionQueue.NumberOfPreparedCommands" shows the number of prepared commands in the job sequence.
 
 ### Innovations V5.0 (S7-1500, S7-1500T)
 
@@ -756,9 +756,9 @@ Technology version V5.0 contains the following new features:
 - With a "MC_Reset" job, alarms in the drive can be acknowledged without a pending error at the technology object.
 - Selected bits in control word 1 and control word 2 can be controlled with a "MC_SetAxisSTW" job.
 - With a "MC_WriteParameter" job, hardware limit switches can be enabled and disabled.
-- The "<TO>.VelocitySetpoint" tag indicates the active velocity setpoint.
-- The tag "<TO>.ModuloCycle" indicates the number of modulo cycles of the setpoint.
-- The tag "<TO>.ActualModuloCycle" indicates the number of modulo cycles of the actual value.
+- The "&lt;TO&gt;.VelocitySetpoint" tag indicates the active velocity setpoint.
+- The tag "&lt;TO&gt;.ModuloCycle" indicates the number of modulo cycles of the setpoint.
+- The tag "&lt;TO&gt;.ActualModuloCycle" indicates the number of modulo cycles of the actual value.
 
 #### Measuring input and output cam functions (S7-1500T)
 
@@ -772,8 +772,8 @@ Technology version V5.0 contains the following new features:
 - With a "MC_LeadingValueAdditive" job, an additive leading value can be specified for the following axis cyclically to a master value.
 - With a "MC_GearInPos" job, a subsequent synchronization via leading value distance is possible for gearing.
 - With a "MC_CamIn" job, a subsequent synchronization via leading value distance is possible for camming.
-- During synchronization, the tag "<TO>.StatusSynchronizedMotion.StatusWord" indicates that the dynamic limits have been exceeded.
-- The tag "<TO>.StatusSynchronizedMotion.WaitingFunctionState" indicates a pending synchronous operation.
+- During synchronization, the tag "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord" indicates that the dynamic limits have been exceeded.
+- The tag "&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState" indicates a pending synchronous operation.
 
 #### Kinematics functions (S7-1500T)
 
@@ -1001,7 +1001,7 @@ There are two ways of changing the technology version of a CPU:
 - Changing the version of the Motion Control instructions
 - Adding a technology object with an alternative version
 
-The version of a technology object or a Motion Control instruction is indicated in the properties of the technology object in the "General > Information" tab, "Version" field.
+The version of a technology object or a Motion Control instruction is indicated in the properties of the technology object in the "General &gt; Information" tab, "Version" field.
 
 The technology objects and Motion Control instructions are only converted to the selected version of the technology during compilation.
 
@@ -1012,7 +1012,7 @@ Requirement: The firmware of the CPU supports the required technology version.
 To change the version of the motion control instructions, proceed as follows:
 
 1. Open the program editor (e.g. by opening the OB1).
-2. In the "Instructions" task card, select the higher technology version in the "Technology > Motion control" folder.
+2. In the "Instructions" task card, select the higher technology version in the "Technology &gt; Motion control" folder.
 
    The invalid technology objects and Motion Control instructions are highlighted in red after the CPU is replaced.
 3. Save and compile the project.
@@ -1040,15 +1040,15 @@ If you want to blend the current motion job, parameterize the motion transition 
 
 #### Dynamic adaptation during conveyor tracking
 
-Activate the Dynamic adaptation during the conveyor tracking by setting the value for "DynamicAdaption" to "1" or "2" on the motion job. Alternatively, configure the default setting on the technology object by setting the "<TO>.DynamicDefaults.DynamicAdaption" variable to "1" or "2" and specifying the value "-1" on the motion job.
+Activate the Dynamic adaptation during the conveyor tracking by setting the value for "DynamicAdaption" to "1" or "2" on the motion job. Alternatively, configure the default setting on the technology object by setting the "&lt;TO&gt;.DynamicDefaults.DynamicAdaption" variable to "1" or "2" and specifying the value "-1" on the motion job.
 
-Also configure the dynamic range reserve (<TO>.Conveyor.DynamicReserve).
+Also configure the dynamic range reserve (&lt;TO&gt;.Conveyor.DynamicReserve).
 
 #### Newly designed mode of the virtual axis
 
 In technology version V8.0, the behavior of the virtual axis has been changed. The behavior of a virtual axis is no longer identical to the behavior of an axis in simulation. The setpoints are directly adopted as actual values with an application cycle delay. Further configurations do not affect the calculation of the actual values.
 
-To maintain compatibility with virtual axes of technology versions ≤ V7.0 for an axis, switch the axis to simulation (<TO>.Simulation.Mode = 1) and deactivate the virtual axis (<TO>.VirtualAxis.Mode = 0).
+To maintain compatibility with virtual axes of technology versions ≤ V7.0 for an axis, switch the axis to simulation (&lt;TO&gt;.Simulation.Mode = 1) and deactivate the virtual axis (&lt;TO&gt;.VirtualAxis.Mode = 0).
 
 #### Organization blocks for Motion Control in software units
 
@@ -1095,7 +1095,7 @@ Manually update the following data types to V2 at all points of use in the proje
 
 When the technology version is upgraded to V7.0, system performance improvement for motion preparation of the kinematics technology object is enabled.
 
-If you are using user-defined kinematics, clear the "Improve system performance" check box in the MC-LookAhead [OB97] properties under "General > Multi-core processor".
+If you are using user-defined kinematics, clear the "Improve system performance" check box in the MC-LookAhead [OB97] properties under "General &gt; Multi-core processor".
 
 ### Upgrade to technology version V3.0 to V6.0 (S7-1500, S7-1500T)
 
@@ -1127,14 +1127,14 @@ If you use multiple kinematics, only one "MC-LookAhead [OB97]" OB is used for al
 
 The following table shows the version-based UDT names for the control words and status words of the SIEMENS telegrams 10x:
 
-| UDT name < V4.0 | UDT name ≥ V4.0 | WORD data type |
+| UDT name &lt; V4.0 | UDT name ≥ V4.0 | WORD data type |
 | --- | --- | --- |
 | PD_STW1 | PD_STW1_611Umode | Control word 1 (STW1) |
 | PD_STW2 | PD_STW2_611Umode | Control word 2 (STW2) |
 | PD_ZSW1 | PD_ZSW1_611Umode | Status word 1 (ZSW1) |
 | PD_ZSW2 | PD_ZSW2_611Umode | Status word 2 (ZSW2) |
 
-If you switch from technology version < V4.0 to ≥ V4.0 or vice versa, an error occurs during the compilation. You have to adapt the UDT names manually.
+If you switch from technology version &lt; V4.0 to ≥ V4.0 or vice versa, an error occurs during the compilation. You have to adapt the UDT names manually.
 
 #### Upgrading to technology version V3.0
 
@@ -1144,22 +1144,22 @@ Starting from technology version V3.0, all input and output addresses are specif
 
 | Tag of technology object | Changes starting from V3.0 |
 | --- | --- |
-| <TO>.Actor.Interface.AddressIn | Data type: VREF |
-| <TO>.Actor.Interface.AddressOut | Data type: VREF |
-| <TO>.Sensor[1..4].Interface.AddressIn | Data type: VREF |
-| <TO>.Sensor[1..4].Interface.AddressOut | Data type: VREF |
-| <TO>.Actor.Interface.EnableDriveOutputAddress | Data type: VREF |
-| <TO>.Actor.Interface.EnableDriveOutputBitNumber | Tag eliminated |
-| <TO>.Actor.Interface.DriveReadyInputAddress | Data type: VREF |
-| <TO>.Actor.Interface.DriveReadyInputBitNumber | Tag eliminated |
-| <TO>.Sensor[1..4].ActiveHoming.DigitalInputAddress | Data type: VREF |
-| <TO>.Sensor[1..4].ActiveHoming.DigitalInputBitNumber | Tag eliminated |
-| <TO>.Sensor[1..4].PassiveHoming.DigitalInputAddress | Data type: VREF |
-| <TO>.Sensor[1..4].PassiveHoming.DigitalInputBitNumber | Tag eliminated |
-| <TO>.PositionLimits_HW.MinInputAddress | Data type: VREF |
-| <TO>.PositionLimits_HW.MinInputBitNumber | Tag eliminated |
-| <TO>.PositionLimits_HW.MaxInputAddress | Data type: VREF |
-| <TO>.PositionLimits_HW.MaxInputBitNumber | Tag eliminated |
+| &lt;TO&gt;.Actor.Interface.AddressIn | Data type: VREF |
+| &lt;TO&gt;.Actor.Interface.AddressOut | Data type: VREF |
+| &lt;TO&gt;.Sensor[1..4].Interface.AddressIn | Data type: VREF |
+| &lt;TO&gt;.Sensor[1..4].Interface.AddressOut | Data type: VREF |
+| &lt;TO&gt;.Actor.Interface.EnableDriveOutputAddress | Data type: VREF |
+| &lt;TO&gt;.Actor.Interface.EnableDriveOutputBitNumber | Tag eliminated |
+| &lt;TO&gt;.Actor.Interface.DriveReadyInputAddress | Data type: VREF |
+| &lt;TO&gt;.Actor.Interface.DriveReadyInputBitNumber | Tag eliminated |
+| &lt;TO&gt;.Sensor[1..4].ActiveHoming.DigitalInputAddress | Data type: VREF |
+| &lt;TO&gt;.Sensor[1..4].ActiveHoming.DigitalInputBitNumber | Tag eliminated |
+| &lt;TO&gt;.Sensor[1..4].PassiveHoming.DigitalInputAddress | Data type: VREF |
+| &lt;TO&gt;.Sensor[1..4].PassiveHoming.DigitalInputBitNumber | Tag eliminated |
+| &lt;TO&gt;.PositionLimits_HW.MinInputAddress | Data type: VREF |
+| &lt;TO&gt;.PositionLimits_HW.MinInputBitNumber | Tag eliminated |
+| &lt;TO&gt;.PositionLimits_HW.MaxInputAddress | Data type: VREF |
+| &lt;TO&gt;.PositionLimits_HW.MaxInputBitNumber | Tag eliminated |
 
 ### Technology versions V1.0 and V2.0 (S7-1500)
 
@@ -1174,7 +1174,7 @@ The following table shows which version of the technology is available as of whi
 | V1.1 | - | ✓ |
 | V1.0 | - | ✓ |
 
-When changing to a CPU ≥ V1.6, you must change the technology version accordingly. Card replacement from a CPU < V1.6 to a ≥ CPU V1.6 is supported. In the TIA Portal, you can use a CPU ≥ 1.6 only to work on projects with a correspondingly higher technology version.
+When changing to a CPU ≥ V1.6, you must change the technology version accordingly. Card replacement from a CPU &lt; V1.6 to a ≥ CPU V1.6 is supported. In the TIA Portal, you can use a CPU ≥ 1.6 only to work on projects with a correspondingly higher technology version.
 
 #### Technology objects in the technology versions V1.0 and V2.0
 
@@ -1263,7 +1263,7 @@ To reset the "MC_Home.Mode" parameter (V2.0), follow these steps:
    - The value configured at the "MC_Home.HomingMode" parameter (V1.0) is lost. As a note on renaming, the following text is entered as the parameter value in the "MC_Home.Mode" parameter (≥ V2.0).
 
      "The interface has changed. You can find additional information in the description of the Motion Control instruction MC_Home".
-   - There is a message in the "Info > Compile" tab in the Inspector window stating that the operand has the wrong data type.
+   - There is a message in the "Info &gt; Compile" tab in the Inspector window stating that the operand has the wrong data type.
 2. Change the value of the "MC_Home.Mode" parameter (≥ V2.0) in your user program according to the new assignment.
 3. Save and compile the project.
 
@@ -1355,7 +1355,7 @@ To copy a technology object, follow these steps:
 2. Open the "Technology Objects" folder.
 3. If necessary, open the higher-level technology object.
 4. Select the technology object to be copied.
-5. To also copy the technology objects connected to a technology object, such as axes on a Kinematics technology object, select them as well. To select multiple axes, press and hold down the <Ctrl> key.
+5. To also copy the technology objects connected to a technology object, such as axes on a Kinematics technology object, select them as well. To select multiple axes, press and hold down the &lt;Ctrl&gt; key.
 6. Select "Copy" in the shortcut menu.
 7. Select the "Technology objects" folder or the higher-level technology object.
 8. Select "Paste" in the shortcut menu.
@@ -1936,23 +1936,23 @@ For use with Motion Control, the following parameters must be configured:
 | Configuration |  |
 | --- | --- |
 | Technology module  TM Count 1x24V/TM Count 2x24V | Technology object    ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) Axis and ![Figure](images/163742004107_DV_resource.Stream@PNG-de-DE.png) external encoder |
-| **TM Count 1x24V/TM Count 2x24V > Channel 0/1 > Operating mode** | – |
+| **TM Count 1x24V/TM Count 2x24V &gt; Channel 0/1 &gt; Operating mode** | – |
 | Select "Position detection for Motion Control technology object" operating mode |  |
-| **TM Count 1x24V/TM Count 2x24V > Channel 0/1 > Module parameters** | **Hardware interface > Encoder** |
+| **TM Count 1x24V/TM Count 2x24V &gt; Channel 0/1 &gt; Module parameters** | **Hardware interface &gt; Encoder** |
 | – | Select "Encoder" data connection and the channel configured for Motion Control on the technology module as encoder |
 | Signal type  - Incremental encoder | Select encoder type corresponding to configuration for technology module  - Incremental <sup>1)</sup> |
-| – | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png)  **Axis: Hardware interface > Data exchange with encoder**     ![Figure](images/163742004107_DV_resource.Stream@PNG-de-DE.png)  **External encoder: Hardware interface > Data exchange** |
+| – | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png)  **Axis: Hardware interface &gt; Data exchange with encoder**     ![Figure](images/163742004107_DV_resource.Stream@PNG-de-DE.png)  **External encoder: Hardware interface &gt; Data exchange** |
 | Telegram "Standard telegram 83" is automatically selected after the selection of the encoder. |  |
 | Clear the check box "Automatic data exchange for encoder values (online)" |  |
 | Select the check box "Automatic data exchange for encoder values (offline)"  If the check box is cleared, you can manually match the parameters described and identified in this table. |  |
 | Select rotary or linear measuring system type <sup>1)</sup> |  |
 | Signal evaluation  - Single - Double - Quadruple | Select fine resolution corresponding to configuration on the technology module <sup>1)</sup>  - 0 = Single - 1 = Double - 2 = Quadruple |
 | - Rotary type:   Enter increments per revolution - Linear type:   Configuration not relevant | - Rotary type:   Enter increments per revolution corresponding to configuration at technology module (1:1) <sup>1)</sup> - Linear type:   Enter distance between increments <sup>1)</sup> |
-| – | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) **Axis: Hardware interface > Data exchange with the drive** |
+| – | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) **Axis: Hardware interface &gt; Data exchange with the drive** |
 | - Rotary type:   Enter reference speed corresponding to configuration for technology object (1:1) - Linear type:   Configuration not relevant | Enter reference speed |
 | – | **Homing** |
 | Select the homing signal for homing mark 0:  - Signal N of the incremental encoder - DI0 | Use the homing mode "Use zero mark via PROFIdrive telegram".   **TM Count 1x24V as of V2.0**   The states of the digital inputs are displayed in the operating mode "Position detection for Motion Control technology object" in the process image. The following bits are used for this purpose:  - STS_DI0 (Status of DI0): ZSW2_ENC.Reserved_Bit11 - STS_DI1 (Status of DI1): ZSW2_ENC.Reserved_Bit10 - STS_DI2 (Status of DI2): ZSW2_ENC.Reserved_Bit8   To select one of the digital inputs use, for example, a PLC tag of the data type "PD_TEL83_IN" with the input start address of the desired channel of the module. The status word "ZSW2_ENC" and the named bits can be found within the created tag structure. |
-| **TM Count 2x24V > I/O addresses** | – |
+| **TM Count 2x24V &gt; I/O addresses** | – |
 | The organization block ("MC_Servo") and the process image ("PIP OB Servo") are selected automatically for the input and output addresses by selecting the channel in the encoder configuration at the technology object. |  |
 | Process image: PIP OB servo |  |
 | <sup>1)</sup> Parameters are automatically applied when "Automatic data exchange for encoder values (offline)" is selected  "–" No configuration for technology module/technology object is required for these parameters |  |
@@ -1963,9 +1963,9 @@ For use with Motion Control, the following parameters must be configured:
 | --- | --- |
 | Technology module  TM Count 1x24V/TM Count 2x24V | Technology object |
 | ![Figure](images/163742009227_DV_resource.Stream@PNG-de-DE.png) Measuring input |  |
-| **TM Count 1x24V/TM Count 2x24V > Channel 0/1 > Operating mode** | **Hardware interface > Measuring input** |
+| **TM Count 1x24V/TM Count 2x24V &gt; Channel 0/1 &gt; Operating mode** | **Hardware interface &gt; Measuring input** |
 | Select "Position detection for Motion Control technology object" operating mode | Measuring using PROFIdrive telegram (drive or external encoder) |
-| **TM Count 1x24V/TM Count 2x24V > Channel 0/1 > Module parameters**   You set the parameters for the encoder signals of the channel under "Module parameters" in the operating mode "Position input for Motion Control". The parameters must be set depending on the encoder used. | In the "Number of the measuring input" selection box, select "1" (measuring input 1). |
+| **TM Count 1x24V/TM Count 2x24V &gt; Channel 0/1 &gt; Module parameters**   You set the parameters for the encoder signals of the channel under "Module parameters" in the operating mode "Position input for Motion Control". The parameters must be set depending on the encoder used. | In the "Number of the measuring input" selection box, select "1" (measuring input 1). |
 
 #### TM PosInput 1/TM PosInput 2 (S7-1500, S7-1500T)
 
@@ -1974,23 +1974,23 @@ For use with Motion Control, the following parameters must be configured:
 | Configuration |  |
 | --- | --- |
 | Technology module  TM PosInput 1 / TM PosInput 2 | Technology object    ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) Axis and ![Figure](images/163742004107_DV_resource.Stream@PNG-de-DE.png) external encoder |
-| **TM PosInput 1/2 > Channel 0/1 > Operating mode** | – |
+| **TM PosInput 1/2 &gt; Channel 0/1 &gt; Operating mode** | – |
 | Select "Position detection for Motion Control technology object" mode |  |
-| **TM PosInput 1/2 > Channel 0/1 > Module parameters**   You set the parameters for the encoder signals of the channel under "Module parameters" in the "Position input for Motion Control" mode. The parameters must be set depending on the encoder used.  The configuration of the encoder is required for use with an SSI absolute encoder. Information on the configuration is available in the documentation for the respective technology module. | **Hardware interface > Encoder** |
+| **TM PosInput 1/2 &gt; Channel 0/1 &gt; Module parameters**   You set the parameters for the encoder signals of the channel under "Module parameters" in the "Position input for Motion Control" mode. The parameters must be set depending on the encoder used.  The configuration of the encoder is required for use with an SSI absolute encoder. Information on the configuration is available in the documentation for the respective technology module. | **Hardware interface &gt; Encoder** |
 | – | Select "Encoder" data connection and the channel activated and configured as encoder on the technology module |
 | Signal type  - Incremental encoder - Absolute encoder | Select encoder type corresponding to configuration for technology module:  - Incremental <sup>1)</sup> - Absolute/Cyclic absolute |
-| – | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) **Axis: Hardware interface > Data exchange with encoder**     ![Figure](images/163742004107_DV_resource.Stream@PNG-de-DE.png) **External encoder: Hardware interface > Data exchange** |
+| – | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) **Axis: Hardware interface &gt; Data exchange with encoder**     ![Figure](images/163742004107_DV_resource.Stream@PNG-de-DE.png) **External encoder: Hardware interface &gt; Data exchange** |
 | Telegram "Standard telegram 83" is automatically selected after the selection of the encoder. |  |
 | Clear the check box "Automatic data exchange for encoder values (online)" |  |
 | Select the check box "Automatic data exchange for encoder values (offline)"  If the check box is cleared, you can manually match the parameters described and identified in this table. |  |
 | Select rotary or linear measuring system type <sup>1)</sup> |  |
 | Signal evaluation  - Single - Double - Quadruple | Select fine resolution corresponding to configuration on the technology module <sup>1)</sup>  - Incremental encoder:   - 0 = Single   - 1 = Double   - 2 = Quadruple - Absolute encoder:   - 0 = Single |
 | - Rotary type:   Enter increments per revolution - Linear type:   Configuration not relevant | - Rotary type:   Enter increments per revolution corresponding to configuration at technology module (1:1) <sup>1)</sup> - Linear type:   Enter distance between increments <sup>1)</sup> |
-| – | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) **Axis: Hardware interface > Data exchange with the drive** |
+| – | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) **Axis: Hardware interface &gt; Data exchange with the drive** |
 | - Rotary type:   Enter reference speed corresponding to configuration for technology object (1:1) - Linear type:   Configuration not relevant | Enter reference speed |
 | – | **Homing** |
 | Select the homing signal for homing mark 0:  - Signal N of the incremental encoder - DI0 | Use the homing mode "Use zero mark via PROFIdrive telegram". |
-| **TM PosInput 1/2 > I/O addresses** | – |
+| **TM PosInput 1/2 &gt; I/O addresses** | – |
 | The organization block ("MC_Servo") and the process image ("PIP OB Servo") are selected automatically for the input and output addresses by selecting the channel in the encoder configuration at the technology object. |  |
 | <sup>1)</sup> Parameters are automatically applied when "Automatic data exchange for encoder values (offline)" is selected  "–" No configuration for technology module/technology object is required for these parameters |  |
 
@@ -2000,13 +2000,13 @@ For use with Motion Control, the following parameters must be configured:
 | --- | --- |
 | Technology module  TM PosInput 1 / TM PosInput 2 | Technology object |
 | ![Figure](images/109319880459_DV_resource.Stream@PNG-de-DE.png) Measuring input |  |
-| **TM PosInput 1/2 > Channel 0/1 > Operating mode** | **Hardware interface > Measuring input** |
+| **TM PosInput 1/2 &gt; Channel 0/1 &gt; Operating mode** | **Hardware interface &gt; Measuring input** |
 | Select operating mode "Position detection for Motion Control technology object" | Measuring using PROFIdrive telegram (drive or external encoder) |
-| **TM PosInput 1/2 > Channel 0/1 > Module parameters**   You set the parameters for the encoder signals of the channel under "Module parameters" in the operating mode "Position input for Motion Control". The parameters must be set depending on the encoder used.  The configuration of the encoder is required for use with an SSI absolute encoder. Please note the following information in this regard. Information on the configuration is available in the documentation for the respective technology module. | In the "Number of the measuring input" selection box, select "1" (measuring input 1). |
+| **TM PosInput 1/2 &gt; Channel 0/1 &gt; Module parameters**   You set the parameters for the encoder signals of the channel under "Module parameters" in the operating mode "Position input for Motion Control". The parameters must be set depending on the encoder used.  The configuration of the encoder is required for use with an SSI absolute encoder. Please note the following information in this regard. Information on the configuration is available in the documentation for the respective technology module. | In the "Number of the measuring input" selection box, select "1" (measuring input 1). |
 
 > **Note**
 >
-> When a single-turn absolute encoder is used and two edges are to be measured ("MC_MeasuringInput.Mode" = 2, 3 or 4), the distance between the measured edges of the Measurement input must be < 1 encoder revolution. Otherwise, use a multi-turn absolute encoder.
+> When a single-turn absolute encoder is used and two edges are to be measured ("MC_MeasuringInput.Mode" = 2, 3 or 4), the distance between the measured edges of the Measurement input must be &lt; 1 encoder revolution. Otherwise, use a multi-turn absolute encoder.
 
 #### TM Timer DIDQ 10x24V/TM Timer DIDQ 16x24V (S7-1500, S7-1500T)
 
@@ -2027,7 +2027,7 @@ For use with Motion Control, the following parameters must be configured:
 | ![Figure](images/163742052747_DV_resource.Stream@PNG-de-DE.png) Output cam / ![Figure](images/163742057867_DV_resource.Stream@PNG-de-DE.png) Cam track |  |
 | **Basic parameters** | – |
 | Select desired number of outputs under channel configuration (ET 200MP TM Timer DIDQ 16x24V only) |  |
-| **Channel parameters** | **Hardware interface > Output cam output/output cam track** |
+| **Channel parameters** | **Hardware interface &gt; Output cam output/output cam track** |
 | – | Activate output |
 | Output via Timer DQ |  |
 | Select "Timer DQ" mode for the respective output | Select output cam output |
@@ -2044,7 +2044,7 @@ For use with Motion Control, the following parameters must be configured:
 | ![Figure](images/163742009227_DV_resource.Stream@PNG-de-DE.png) Measuring input |  |
 | **Basic parameters** | – |
 | Select desired number of inputs under channel configuration |  |
-| **Channel parameters** | **Hardware interface > Measuring input** |
+| **Channel parameters** | **Hardware interface &gt; Measuring input** |
 | Configuration of DI group: Use inputs individually | – |
 | Select "Timer DI" mode for the respective input | Select measuring via timer DI |
 | – | Select measuring input |
@@ -2064,13 +2064,13 @@ For use with Motion Control, the parameters described below must each be configu
 | --- | --- |
 | TM Pulse 2x24V | Technology object |
 | ![Drive connection using PWM (pulse width modulation)](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Drive connection using PWM (pulse width modulation)](images/163742062987_DV_resource.Stream@PNG-de-DE.png)  ![Drive connection using PWM (pulse width modulation)](images/163741973387_DV_resource.Stream@PNG-de-DE.png) Axis |  |
-| **TM Pulse 2x24V > Channel configuration** | – |
+| **TM Pulse 2x24V &gt; Channel configuration** | – |
 | Select if you want to use 1 or 2 channels. |  |
-| **TM Pulse 2x24V > Channel > Operating mode** |  |
+| **TM Pulse 2x24V &gt; Channel &gt; Operating mode** |  |
 | Select "Pulse width modulation PWM" or "PWM with DC motor" operating mode |  |
-| **TM Pulse 2x24V > Channel > Parameters** | **Hardware interface > Drive** |
+| **TM Pulse 2x24V &gt; Channel &gt; Parameters** | **Hardware interface &gt; Drive** |
 | Select "S7 analog output" output format | Select analog drive connection  For the selection of the analog output, create a PLC tag of the "Int" type with corresponding address. The offset for the PLC tag to the start address is 2.  To activate the output of the PWM signal, set the following two bits of the control interface of the PWM channel in the user program:  - SW_ENABLE (= Bit 0 in Byte 9) - TM_CTRL_DQ (= Bit 1 in Byte 9)   The offset for byte 9 to the start address of the PWM channel is 9. |
-| **TM Pulse 2x24V > Channel > I/O addresses** | – |
+| **TM Pulse 2x24V &gt; Channel &gt; I/O addresses** | – |
 | Select the organization block "MC_Servo" for the input and output addresses. The "TPA OB Servo" process image is selected automatically for the input and output addresses by selecting the organization block. |  |
 | "–" No configuration for technology object is required for these parameters |  |
 
@@ -2082,16 +2082,16 @@ For use with Motion Control, the following parameters must be configured.
 | --- | --- |
 | Technology module  TM PTO 2x24V | Technology object |
 | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163742062987_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) Axis |  |
-| **TM PTO 2 > Channel 0…1 > Operating mode** | – |
+| **TM PTO 2 &gt; Channel 0…1 &gt; Operating mode** | – |
 | Select signal type:  - PTO (pulse (P) and direction (D)) - PTO (count up (A) and count down (B)) - PTO (A, B phase-shifted) - PTO (A, B phase-shifted - quadruple) |  |
 | Configure the pulse pause for direction reversal |  |
-| – | **Hardware interface > Drive** |
+| – | **Hardware interface &gt; Drive** |
 | Select drive type "PROFIdrive" and "Drive" data connection  Select the channel at the technology module as drive |  |
-| **Hardware interface > Encoder** |  |
+| **Hardware interface &gt; Encoder** |  |
 | Select encoder type "PROFIdrive" and data connection  Select the simulated encoder of the PTO 2 channel as encoder |  |
-| **TM PTO 2 > Channel 0...1 > Diagnostic interrupts** | - |
+| **TM PTO 2 &gt; Channel 0...1 &gt; Diagnostic interrupts** | - |
 | When the "Enable diagnostic interrupts" check box is selected, diagnostic interrupts are activated if:  - No supply voltage - Errors occur at digital outputs   The detected error is displayed for the respective channel with feedback bit "Fault_Present" and "Sensor_Error". |  |
-| **TM PTO 2 > Channel 0…1 > Axis parameters** | **Data exchange with the drive** |
+| **TM PTO 2 &gt; Channel 0…1 &gt; Axis parameters** | **Data exchange with the drive** |
 | – | Telegram "Standard telegram 1" is automatically selected after selection of the drive |
 | Clear check box "Automatic data exchange for drive values (online)" |  |
 |  | Select check box "Automatic data exchange for drive values (offline)"  If the check box is cleared, you can manually match the parameters described and identified in this table. |
@@ -2105,18 +2105,18 @@ For use with Motion Control, the following parameters must be configured.
 | Enter increments per revolution | Enter increments per revolution corresponding to configuration at technology module (1:1) <sup>2)</sup> |
 | - | Enter fine resolution <sup>2)</sup>  - 0 = Single |
 | Configure stop behavior  - Quick stop time - Ramp stop time | – |
-| **TM PTO 2 > Channel 0…1 > Hardware inputs/outputs** | – |
+| **TM PTO 2 &gt; Channel 0…1 &gt; Hardware inputs/outputs** | – |
 | If you want to use a hardware output to enable the drive, select the "Use ED as drive enable" check box. | No setting required at the technology object. The output is automatically controlled by the "MC_Power". |
 |  | **Homing** |
 | For the hardware input (DI0), select the "Use RS as reference switch" check box. | Use the homing mode "Use zero mark via PROFIdrive telegram". |
 | Select the edge of the hardware input for triggering the reference output cam function. |  |
-|  | **"Measuring input > Configuration > Hardware interface" technology object** |
+|  | **"Measuring input &gt; Configuration &gt; Hardware interface" technology object** |
 | When using a measuring input, select the "Use MI as measuring input" check box. | Select the measuring input type "Measuring via PROFIdrive telegram (drive or external encoder)".  Select the measuring input "1" under hardware connection. |
 | When using Drive ready, select the "Use Rdy as ready signal" check box. | No setting required at the technology object. When the input is used, "MC_Power" waits until the input signal is present before it sets the drive enable. |
 | Configuring input delay | – |
-| **TM PTO 2 > Channel 0…1 > Sign-of-life error** |  |
+| **TM PTO 2 &gt; Channel 0…1 &gt; Sign-of-life error** |  |
 | Configure tolerated number of sign-of-life errors |  |
-| **TM PTO 2 > I/O addresses** |  |
+| **TM PTO 2 &gt; I/O addresses** |  |
 | The organization block ("MC_Servo") and the process image ("PIP OB Servo") are selected automatically for the input and output addresses by selecting the PTO channel at the technology object. |  |
 | <sup>1)</sup> Parameters are automatically applied when "Automatic data exchange for drive values (offline)" is selected   <sup>2)</sup> Parameters are automatically applied when "Automatic data exchange for encoder values (offline)" is selected  "–" No configuration required for these parameters at the technology module/technology object |  |
 
@@ -2128,19 +2128,19 @@ For use with Motion Control, the following parameters must be configured.
 | --- | --- |
 | Technology module  TM PTO 4 | Technology object |
 | ![Figure](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163742062987_DV_resource.Stream@PNG-de-DE.png)  ![Figure](images/163741973387_DV_resource.Stream@PNG-de-DE.png) Axis |  |
-| **TM PTO 4 > Channel configuration** | – |
+| **TM PTO 4 &gt; Channel configuration** | – |
 | Configure the number of channels (1 to 4) you want to use. |  |
-| **TM PTO 4 > Channel 0…3 > Operating mode** |  |
+| **TM PTO 4 &gt; Channel 0…3 &gt; Operating mode** |  |
 | Select signal type:  - PTO (pulse (P) and direction (D)) - PTO (count up (A) and count down (B)) - PTO (A, B phase-shifted) - PTO (A, B phase-shifted - quadruple) |  |
 | Select signal interface:  - RS422, symmetrical/TTL (5V), asymmetrical - 24V asymmetric |  |
 | Configure the interpulse pause for direction reversal. |  |
-| – | **Hardware interface > Drive** |
+| – | **Hardware interface &gt; Drive** |
 | Select drive type "PROFIdrive" and "Drive" data connection.  Select the pulse output configured at the technology module as drive. |  |
-| **Hardware interface > Encoder** |  |
+| **Hardware interface &gt; Encoder** |  |
 | The encoder of the actuator telegram (simulated encoder) is automatically selected. Alternatively, an existing encoder interface can be selected. |  |
-| **TM PTO 4 > Channel 0...3 > Diagnostic interrupts** | - |
+| **TM PTO 4 &gt; Channel 0...3 &gt; Diagnostic interrupts** | - |
 | When the "Enable diagnostic interrupts" check box is selected, diagnostic interrupts are activated if:  - No supply voltage - Errors occur at digital outputs   The detected error is displayed for the respective channel with feedback bit "Fault_Present" and "Sensor_Error". |  |
-| **TM PTO 4 > Channel 0…3 > Axis parameters** | **Data exchange with the drive** |
+| **TM PTO 4 &gt; Channel 0…3 &gt; Axis parameters** | **Data exchange with the drive** |
 | – | Telegram "Standard telegram 3" is automatically selected after the selection of the drive. |
 | Clear check box "Automatic data exchange for drive values (online)" |  |
 |  | Select check box "Automatic data exchange for drive values (offline)"  If the check box is cleared, you can manually match the parameters described and identified in this table. |
@@ -2154,18 +2154,18 @@ For use with Motion Control, the following parameters must be configured.
 | Enter increments per revolution | Enter increments per revolution corresponding to configuration at technology module (1:1) <sup>2)</sup> |
 | - | Enter fine resolution <sup>2)</sup>  - 0 = Single |
 | Configure stop behavior  - Quick stop time - Ramp stop time | – |
-| **TM PTO 4 > Channel 0…3 > Hardware inputs/outputs** | – |
+| **TM PTO 4 &gt; Channel 0…3 &gt; Hardware inputs/outputs** | – |
 | If you want to use a hardware output to enable the drive, select the "Use drive enable" check box. Next select one of the two hardware outputs DQ0 or DIQ2. | No setting required at the technology object. The output is automatically controlled by the "MC_Power". |
 |  | **Homing** |
 | Activate the hardware input (DI0) for the reference cam. | Use the homing mode "Use zero mark via PROFIdrive telegram". |
 | Select the edge of the hardware input for triggering the reference output cam function. |  |
-| When using a measuring input, select the "Use DI1 check box as measuring input". | **"Measuring input > Configuration > Hardware interface" technology object** |
+| When using a measuring input, select the "Use DI1 check box as measuring input". | **"Measuring input &gt; Configuration &gt; Hardware interface" technology object** |
 | Select the measuring input type "Measuring via PROFIdrive telegram (drive or external encoder)".  Select the measuring input "1" under hardware connection. |  |
 | Select the "Use "drive ready"" check box. In the ""Drive ready" input", select the hardware input that is to be used to display whether the drive is ready. | No setting required at the technology object. When the input is used, "MC_Power" waits until the input signal is present before it sets the drive enable. |
 | Configuring input delay | – |
-| **TM PTO 4 > Channel 0…3 > Sign-of-life error** |  |
+| **TM PTO 4 &gt; Channel 0…3 &gt; Sign-of-life error** |  |
 | Configure tolerated number of sign-of-life errors |  |
-| **TM PTO 4 > I/O addresses** |  |
+| **TM PTO 4 &gt; I/O addresses** |  |
 | The organization block ("MC_Servo") and the process image ("PIP OB Servo") are selected automatically for the input and output addresses by selecting the PTO channel at the technology object. |  |
 | <sup>1)</sup> Parameters are automatically applied when "Automatic data exchange for drive values (offline)" is selected   <sup>2)</sup> Parameters are automatically applied when "Automatic data exchange for encoder values (offline)" is selected  "–" No configuration required for these parameters at the technology module/technology object |  |
 
@@ -2179,32 +2179,32 @@ For use with Motion Control, the parameters described below must be configured.
 | --- | --- |
 | CPU 1511C-1 PN/CPU 1512C-1 PN | Technology object |
 | ![Drive connection via PTO (Pulse Train Output)](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Drive connection via PTO (Pulse Train Output)](images/163742062987_DV_resource.Stream@PNG-de-DE.png)  ![Drive connection via PTO (Pulse Train Output)](images/163741973387_DV_resource.Stream@PNG-de-DE.png) Axis |  |
-| **Pulse generators (PTO/PWM) > PTO1…4/PWM1…4 > General** | – |
+| **Pulse generators (PTO/PWM) &gt; PTO1…4/PWM1…4 &gt; General** | – |
 | To activate a channel for PTO mode, select one of the following operating modes:  - PTO (pulse (A) and direction (B)) - PTO (count up (A), count down (B)) - PTO (A,B phase shifted) - PTO (A,B phase shifted, quadruple) |  |
-| – | **Hardware interface > Drive** |
+| – | **Hardware interface &gt; Drive** |
 | Select drive type "PROFIdrive" and "Drive" data connection.  Select the pulse generator of the CPU configured for PTO mode as drive. |  |
-| **Hardware interface > Encoder** |  |
+| **Hardware interface &gt; Encoder** |  |
 | The encoder of the actuator telegram (simulated encoder) is automatically selected. Alternatively, an existing encoder interface can be selected. |  |
-| **Pulse generators (PTO/PWM) > PTO1…4/PWM1…4 > Axis parameters** | **Hardware interface > Data exchange with the drive** |
+| **Pulse generators (PTO/PWM) &gt; PTO1…4/PWM1…4 &gt; Axis parameters** | **Hardware interface &gt; Data exchange with the drive** |
 | – | Telegram "Standard telegram 3" is automatically selected after the selection of the drive. |
 | Clear check box "Automatic data exchange for drive values (online)" |  |
 |  | Select check box "Automatic data exchange for drive values (offline)"  If the check box is cleared, you can manually match the parameters described and identified in this table. |
 | Enter reference speed corresponding to configuration for technology object (1:1) | Enter reference speed of the drive <sup>1)</sup> |
 | Enter reference speed corresponding to configuration for technology object (1:1) | Enter maximum speed of the drive <sup>1)</sup>  If the maximum speed is exceeded, technology alarm 102 is triggered and displayed. |
-| – | **Hardware interface > Data exchange with encoder** |
+| – | **Hardware interface &gt; Data exchange with encoder** |
 | Telegram "Standard telegram 3" is automatically selected after the selection of the encoder. |  |
 | Clear the check box "Automatic data exchange for encoder values (online)" |  |
 | Select the check box "Automatic data exchange for encoder values (offline)"  If the check box is cleared, you can manually match the parameters described and identified in this table. |  |
 | Select rotary measuring system type <sup>2)</sup> |  |
 | Enter increments per revolution | Enter increments per revolution corresponding to configuration for CPU (1:1) <sup>2)</sup> |
 | The fine resolution has the fixed value "0 bit" (= single) and cannot be changed. | Enter the fine resolution corresponding to the configuration on the CPU <sup>2)</sup>  Bits in incr. actual value (G1_XIST1): 0 (= single) |
-| **Pulse generators (PTO/PWM) > PTO1…4/PWM1…4 > Hardware inputs/outputs** | **Homing** |
-| Select the hardware input for the reference switch  In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 > Inputs > Channel > Input parameters > Input delay). | Use the homing mode "Use zero mark via PROFIdrive telegram" for drive connection via PTO. |
+| **Pulse generators (PTO/PWM) &gt; PTO1…4/PWM1…4 &gt; Hardware inputs/outputs** | **Homing** |
+| Select the hardware input for the reference switch  In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 &gt; Inputs &gt; Channel &gt; Input parameters &gt; Input delay). | Use the homing mode "Use zero mark via PROFIdrive telegram" for drive connection via PTO. |
 | Select the edge of the hardware input for triggering the reference output cam function. |  |
 | When using a measuring input, select the hardware input of the measuring input. The following table includes the configuration description. | – |
-| Select the hardware input that is used to display whether the drive is ready.  In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 > Inputs > Channel > Input parameters > Input delay). |  |
+| Select the hardware input that is used to display whether the drive is ready.  In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 &gt; Inputs &gt; Channel &gt; Input parameters &gt; Input delay). |  |
 | With selected "PTO (pulse (A) and direction (B))" mode, the hardware output for the PTO signal A ("Pulse output (A)") is automatically selected through the device configuration and cannot be changed. For PTO signal B ("Direction output (B)") select one of the hardware outputs offered in the selection box.  The hardware outputs for the PTO signals are selected through the device configuration for the following operating modes and cannot be changed:  - PTO (count up (A), count down (B)) - PTO (A,B phase shifted) - PTO (A,B phase shifted, quadruple) |  |
-| **Pulse generators (PTO/PWM) > PTO1…4/PWM1…4 > I/O addresses** |  |
+| **Pulse generators (PTO/PWM) &gt; PTO1…4/PWM1…4 &gt; I/O addresses** |  |
 | The organization block ("MC_Servo") and the process image ("PIP OB Servo") are selected automatically for the input and output addresses by selecting the PTO channel at the technology object. |  |
 | <sup>1)</sup> Parameters are automatically applied when "Automatic data exchange for drive values (offline)" is selected   <sup>2)</sup> Parameters are automatically applied when "Automatic data exchange for encoder values (offline)" is selected  "–" No configuration for CPU/technology object is required for these parameters |  |
 
@@ -2214,8 +2214,8 @@ For use with Motion Control, the parameters described below must be configured.
 | --- | --- |
 | Technology module  CPU 1511C-1 PN/CPU 1512C-1 PN | Technology object |
 | ![Drive connection via PTO (Pulse Train Output)](images/163742009227_DV_resource.Stream@PNG-de-DE.png) Measuring input |  |
-| **Pulse generators (PTO/PWM) > PTO1…4/PWM1…4 > Hardware inputs/outputs** | **Hardware interface > Measuring input** |
-| Select the hardware input of the measuring input.   In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 > Inputs > Channel > Input parameters > Input delay). | Measuring using PROFIdrive telegram (drive or external encoder) |
+| **Pulse generators (PTO/PWM) &gt; PTO1…4/PWM1…4 &gt; Hardware inputs/outputs** | **Hardware interface &gt; Measuring input** |
+| Select the hardware input of the measuring input.   In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 &gt; Inputs &gt; Channel &gt; Input parameters &gt; Input delay). | Measuring using PROFIdrive telegram (drive or external encoder) |
 | In the "Number of the measuring input" selection box, select "1" (measuring input 1). |  |
 
 ##### Drive connection using PWM (pulse width modulation)
@@ -2226,16 +2226,16 @@ Note that only travel in the positive direction is possible with a drive connect
 | --- | --- |
 | CPU 1511C-1 PN/CPU 1512C-1 PN | Technology object |
 | ![Drive connection using PWM (pulse width modulation)](images/163742062987_DV_resource.Stream@PNG-de-DE.png) Speed axis |  |
-| **Pulse generators (PTO/PWM) > PTO1…4/PWM1…4 > General** | – |
+| **Pulse generators (PTO/PWM) &gt; PTO1…4/PWM1…4 &gt; General** | – |
 | Select "Pulse width modulation PWM" mode |  |
-| **Pulse generators (PTO/PWM) > PTO1…4/PWM1…4 > Hardware inputs/outputs** |  |
+| **Pulse generators (PTO/PWM) &gt; PTO1…4/PWM1…4 &gt; Hardware inputs/outputs** |  |
 | Select the hardware output to be used for pulse output. |  |
 | Select whether the set hardware output is to work as a fast push-pull switch or as P switch. |  |
-| **Pulse generators (PTO/PWM) > PTO1…4/PWM1…4 > Parameters** | **Hardware interface > Drive** |
+| **Pulse generators (PTO/PWM) &gt; PTO1…4/PWM1…4 &gt; Parameters** | **Hardware interface &gt; Drive** |
 | Select "S7 analog output" output format | Select analog drive connection  For the selection of the analog output, create a PLC tag of the "Int" type with corresponding address. The offset for the PLC tag of the control interface of the PWM channel is 2.  To activate the output of the PWM signal, set the following two bits of the control interface of the PWM channel in the user program:  - SW_ENABLE (= bit 0 in byte 9) - TM_CTRL_DQ (= Bit 1 in Byte 9)   The offset for byte 9 to the start address of the PWM channel is 9. |
 | Select minimum pulse width of 0 μs | – |
 | Select required period duration (e.g. 100 μs) |  |
-| **Pulse generators (PTO/PWM) > PTO1…4/PWM1…4 > I/O addresses** |  |
+| **Pulse generators (PTO/PWM) &gt; PTO1…4/PWM1…4 &gt; I/O addresses** |  |
 | Select the organization block "MC_Servo" for the input and output addresses. The "TPA OB Servo" process image is selected automatically for the input and output addresses by selecting the organization block. |  |
 | "–" No configuration for technology object is required for these parameters |  |
 
@@ -2245,25 +2245,25 @@ Note that only travel in the positive direction is possible with a drive connect
 | --- | --- | --- |
 | CPU 1511C-1 PN/CPU 1512C-1 PN | Technology object |  |
 | ![Encoder connection via HSC (High Speed Counter)](images/163741968267_DV_resource.Stream@PNG-de-DE.png)  ![Encoder connection via HSC (High Speed Counter)](images/163742062987_DV_resource.Stream@PNG-de-DE.png)  ![Encoder connection via HSC (High Speed Counter)](images/163741973387_DV_resource.Stream@PNG-de-DE.png) Axis | ![Encoder connection via HSC (High Speed Counter)](images/163741968267_DV_resource.Stream@PNG-de-DE.png) External encoder |  |
-| **High-speed counter (HSC) > HSC 1…6 > General > Enable** | – | – |
+| **High-speed counter (HSC) &gt; HSC 1…6 &gt; General &gt; Enable** | – | – |
 | Enable high-speed counter |  |  |
-| **High-speed counter (HSC) > HSC 1…6 > Basic parameters > Operating mode** |  |  |
+| **High-speed counter (HSC) &gt; HSC 1…6 &gt; Basic parameters &gt; Operating mode** |  |  |
 | Select "Position input for Motion Control" mode |  |  |
-| **High-speed counter (HSC) > HSC 1…6 > Basic parameters > Module parameters** | **Hardware interface > Encoder** | **Hardware interface > Encoder** |
+| **High-speed counter (HSC) &gt; HSC 1…6 &gt; Basic parameters &gt; Module parameters** | **Hardware interface &gt; Encoder** | **Hardware interface &gt; Encoder** |
 | – | Select "Encoder" data connection and the high-speed counter activated and configured as encoder on the CPU | Select "Encoder" data connection and the high-speed counter activated and configured as encoder on the CPU |
 | Signal type  - Incremental encoder | Select encoder type according to the device configuration of the CPU <sup>1)</sup>  - Incremental | Select encoder type according to the device configuration of the CPU <sup>1)</sup>  - Incremental |
-| – | **Hardware interface > Data exchange with encoder** | **Hardware interface > Data exchange** |
+| – | **Hardware interface &gt; Data exchange with encoder** | **Hardware interface &gt; Data exchange** |
 | Telegram "Standard telegram 83" is automatically selected after the selection of the encoder. | Telegram "Standard telegram 83" is automatically selected after the selection of the encoder. |  |
 | Clear the check box "Automatic data exchange for encoder values (online)" | Clear the check box "Automatic data exchange for encoder values (online)" |  |
 | Select the check box "Automatic data exchange for encoder values (offline)"  If the check box is cleared, you can manually match the parameters described and identified in this table. | Select the check box "Automatic data exchange for encoder values (offline)"  If the check box is cleared, you can manually match the parameters described and identified in this table. |  |
 | Select rotary measuring system type <sup>1)</sup> | Select rotary measuring system type <sup>1)</sup> |  |
 | Signal evaluation  - Single - Double - Quadruple | Enter fine resolution according to the configured signal evaluation set for the high-speed counter (HSC) <sup>1)</sup>  - 0 = Single - 1 = Double - 2 = Quadruple | Enter fine resolution according to the configured signal evaluation set for the high-speed counter (HSC) <sup>1)</sup>  - 0 = Single - 1 = Double - 2 = Quadruple |
 | Enter increments per revolution | Enter increments per revolution corresponding to device configuration for CPU (1:1) <sup>1)</sup> | Enter increments per revolution corresponding to device configuration for CPU (1:1) <sup>1)</sup> |
-| – | **Hardware interface > Data exchange with the drive** | – |
+| – | **Hardware interface &gt; Data exchange with the drive** | – |
 | Enter reference speed corresponding to configuration for technology object (1:1) | Enter reference speed |  |
 | – | **Homing** | **Homing** |
-| Select the homing signal for homing mark 0:  - Signal N of the incremental encoder - DI0 (can be set with the hardware inputs/outputs)   In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 > Inputs > Channel > Input parameters > Input delay). | Use the homing mode "Use zero mark via PROFIdrive telegram". | Use the homing mode "Use zero mark via PROFIdrive telegram". |
-| **High-speed counter (HSC) > HSC 1…6 > I/O addresses** | – | – |
+| Select the homing signal for homing mark 0:  - Signal N of the incremental encoder - DI0 (can be set with the hardware inputs/outputs)   In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 &gt; Inputs &gt; Channel &gt; Input parameters &gt; Input delay). | Use the homing mode "Use zero mark via PROFIdrive telegram". | Use the homing mode "Use zero mark via PROFIdrive telegram". |
+| **High-speed counter (HSC) &gt; HSC 1…6 &gt; I/O addresses** | – | – |
 | The organization block ("MC_Servo") and the process image ("PIP OB Servo") are selected automatically for the input and output addresses by selecting the HSC channel at the technology object. |  |  |
 | <sup>1)</sup> Parameters are automatically applied when "Automatic data exchange for encoder values (offline)" is selected  "–" No configuration for CPU/technology object is required for these parameters |  |  |
 
@@ -2273,8 +2273,8 @@ Note that only travel in the positive direction is possible with a drive connect
 | --- | --- |
 | Technology module  CPU 1511C-1 PN/CPU 1512C-1 PN | Technology object |
 | ![Encoder connection via HSC (High Speed Counter)](images/163742009227_DV_resource.Stream@PNG-de-DE.png) Measuring input |  |
-| **High-speed counter (HSC) > HSC 1…6 > Hardware inputs/outputs** | **Hardware interface > Measuring input** |
-| Select the hardware input of the measuring input.  In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 > Inputs > Channel > Input parameters > Input delay). | Measuring using PROFIdrive telegram (drive or external encoder) |
+| **High-speed counter (HSC) &gt; HSC 1…6 &gt; Hardware inputs/outputs** | **Hardware interface &gt; Measuring input** |
+| Select the hardware input of the measuring input.  In addition, configure the input delay for the selected hardware input. You configure the input delay in the device configuration at the corresponding DI channel (DI 16/DQ 16 &gt; Inputs &gt; Channel &gt; Input parameters &gt; Input delay). | Measuring using PROFIdrive telegram (drive or external encoder) |
 | In the "Number of the measuring input" selection box, select "1" (measuring input 1). |  |
 
 #### SIMATIC Drive Controller (onboard I/O) (S7-1500, S7-1500T)
@@ -2291,7 +2291,7 @@ For use with Motion Control, the following parameters must be configured:
 | --- | --- |
 | SIMATIC Drive Controller | Technology object |
 | ![Figure](images/163742052747_DV_resource.Stream@PNG-de-DE.png) Output cam / ![Figure](images/163742057867_DV_resource.Stream@PNG-de-DE.png) Cam track |  |
-| **Channel parameters > Channel 0 to 7** | **Hardware interface > Output cam output/output cam track** |
+| **Channel parameters &gt; Channel 0 to 7** | **Hardware interface &gt; Output cam output/output cam track** |
 | – | Activate output |
 | Output via Timer DQ |  |
 | Select desired channel and select operating mode "Timer DQ". | Select output cam output |
@@ -2306,7 +2306,7 @@ For use with Motion Control, the following parameters must be configured:
 | --- | --- |
 | SIMATIC Drive Controller | Technology object |
 | ![Figure](images/163742009227_DV_resource.Stream@PNG-de-DE.png) Measuring input |  |
-| **Channel parameters > Channel 0 to 7** | **Hardware interface > Measuring input** |
+| **Channel parameters &gt; Channel 0 to 7** | **Hardware interface &gt; Measuring input** |
 | – | Select measuring via timer DI |
 | Select desired channel and select operating mode "Timer DI" | Select measuring input |
 | **I/O addresses** | – |
@@ -2429,7 +2429,7 @@ You have the following options for influencing the system load and the processin
 - Adjusting the percentage cycle load of the MC_LookAhead (adjustment range 1% to 40%, default setting 20%)
 - Adjusting the percentage communication load of the CPU
 - To relieve the load on MC_Interpolator and MC_LookAhead, avoid simultaneous starting of Motion Control instructions
-- Improving the system performance for the cam interpolation in the MC_Interpolator and for the motion preparation of the kinematics technology object in the MC_LookAhead using the properties under "General > Multi-core processor" (S7‑1500T FW V3.0 and higher)
+- Improving the system performance for the cam interpolation in the MC_Interpolator and for the motion preparation of the kinematics technology object in the MC_LookAhead using the properties under "General &gt; Multi-core processor" (S7‑1500T FW V3.0 and higher)
 
   If both the options are activated, a cam interpolation can interrupt the motion preparation of the kinematics technology object.
 
@@ -2446,7 +2446,7 @@ Note the following settings when you call an isochronous mode interrupt OB (OB6x
 
 ##### Priority
 
-You can configure the priority of the organization blocks as needed in their properties under "General > Properties > Priority".
+You can configure the priority of the organization blocks as needed in their properties under "General &gt; Properties &gt; Priority".
 
 When setting the priorities, make sure that the MC_Servo is always set before the MC_PreInterpolator and the MC_Interpolator. The priority of MC_Servo must be at least one level higher than the priority of MC_Interpolator. The priority of the MC_LookAhead must be higher than the priority of cyclic interrupts.
 
@@ -2667,11 +2667,11 @@ Changes to values in the technology data block by the user program can take effe
 | Effectiveness of changes | Description |  |
 | --- | --- | --- |
 | Direct (DIR) | You write changes using direct assignments. The changes are applied only at the start of the next MC_Servo.  The changes are retained until the next POWER OFF of the CPU or restart of the technology object. |  |
-| LREAL   (e.g. <TO>.Override.Velocity) | The technology object performs a range check on the written value, and immediately starts using the new value.  If range limits are violated when writing, the technology object automatically corrects the values. If the value is below the range, then the value is set to the low limit of the range; if the range is exceeded, then the value is set to the high limit of the range. |  |
-| DINT/BOOL  (e.g. <TO>.PositionLimits_SW.Active) | Changes are only permitted in the defined value range. Value changes outside the value range are not applied.  If you enter invalid values, the programming error OB (OB 121) is started. |  |
-| When Motion Control instruction is called (CAL)  (e.g. <TO>.Sensor[1..4].ActiveHoming.HomePositionOffset) | You write changes using direct assignments. The changes are applied at the start of the next MC_Servo after the call of the corresponding Motion Control instruction in the user program.  The changes are retained until the next POWER OFF of the CPU or restart of the technology object. |  |
-| Restart (RES)  (e.g. <TO>.Homing.AutoReversal) | Since restart-relevant tags have dependencies on other tags, value changes cannot be applied at any arbitrary time. The changes are only used after reinitialization (restart) of the technology object.   During a restart the technology object is reinitialized with the data in load memory. You therefore write changes to the start value in the load memory with the extended instruction "WRIT_DBL" (write to data block in load memory).   You trigger the restart in your user program using the Motion Control instruction "MC_Reset" with parameter "Restart" = TRUE. Additional information regarding the restart can be found in the section [Restarting technology objects](#restart-of-technology-objects-s7-1500-s7-1500t). |  |
-| Read only (RON)  (e.g. <TO>.Position) | The tag cannot and must not be changed during runtime of the user program. |  |
+| LREAL   (e.g. &lt;TO&gt;.Override.Velocity) | The technology object performs a range check on the written value, and immediately starts using the new value.  If range limits are violated when writing, the technology object automatically corrects the values. If the value is below the range, then the value is set to the low limit of the range; if the range is exceeded, then the value is set to the high limit of the range. |  |
+| DINT/BOOL  (e.g. &lt;TO&gt;.PositionLimits_SW.Active) | Changes are only permitted in the defined value range. Value changes outside the value range are not applied.  If you enter invalid values, the programming error OB (OB 121) is started. |  |
+| When Motion Control instruction is called (CAL)  (e.g. &lt;TO&gt;.Sensor[1..4].ActiveHoming.HomePositionOffset) | You write changes using direct assignments. The changes are applied at the start of the next MC_Servo after the call of the corresponding Motion Control instruction in the user program.  The changes are retained until the next POWER OFF of the CPU or restart of the technology object. |  |
+| Restart (RES)  (e.g. &lt;TO&gt;.Homing.AutoReversal) | Since restart-relevant tags have dependencies on other tags, value changes cannot be applied at any arbitrary time. The changes are only used after reinitialization (restart) of the technology object.   During a restart the technology object is reinitialized with the data in load memory. You therefore write changes to the start value in the load memory with the extended instruction "WRIT_DBL" (write to data block in load memory).   You trigger the restart in your user program using the Motion Control instruction "MC_Reset" with parameter "Restart" = TRUE. Additional information regarding the restart can be found in the section [Restarting technology objects](#restart-of-technology-objects-s7-1500-s7-1500t). |  |
+| Read only (RON)  (e.g. &lt;TO&gt;.Position) | The tag cannot and must not be changed during runtime of the user program. |  |
 
 > **Note**
 >
@@ -2716,7 +2716,7 @@ To evaluate the individual bits in the data word "StatusWord", follow these step
 1. Crate a global data structure. Name the data structure, e.g. as "Status".
 2. Create a double word (DWORD) in the data structure "Status". Name the double word, e.g. as "Temp".
 3. Create 32 Boolean tags in the "Status" data structure. You can obtain a clearer overview by giving the individual Boolean tags identical names as the bits in the technology DB (e.g. name the fifth Boolean tag "HomingDone").
-4. If needed, copy the tag "<TO>.StatusWord" from the technology data block to the double word "Temp" in your data structure.
+4. If needed, copy the tag "&lt;TO&gt;.StatusWord" from the technology data block to the double word "Temp" in your data structure.
 5. Copy the individual bits of double word "Temp" to the corresponding Boolean tags with bit accesses.
 6. Use the Boolean tags to query the status bits.
 
@@ -2755,16 +2755,16 @@ To change restart-relevant data, proceed as follows:
 1. Create a data block and fill it with the restart-relevant values, that you want to change in the technology data block. In doing so, the data types must match the tags to be changed.
 2. Write the values from your data block to the starting values of the tags of the technology data block in load memory, using the extended instruction "WRIT_DBL".
 
-   If restart-relevant data were changed, this will be indicated in the "<TO>.StatusWord.X3 (OnlineStartValuesChanged)" tag of the technology object.
+   If restart-relevant data were changed, this will be indicated in the "&lt;TO&gt;.StatusWord.X3 (OnlineStartValuesChanged)" tag of the technology object.
 3. Perform a restart of the technology object using the Motion Control instruction "MC_Reset" with parameter "Restart" = TRUE.
 
 After the restart of the technology object, the new value is transferred into the technology data block in work memory, and is effective.
 
 ##### Changing multiple variables with the "WRIT_DBL" instruction
 
-The tag "<TO>.StatusWord.X3 (OnlineStartValuesChanged)" indicates that the value of a tag has been changed.
+The tag "&lt;TO&gt;.StatusWord.X3 (OnlineStartValuesChanged)" indicates that the value of a tag has been changed.
 
-If you change several variables with "WRIT_DBL", you cannot use "<TO>.StatusWord.X3 (OnlineStartValuesChanged)" to determine which tags have already been written.
+If you change several variables with "WRIT_DBL", you cannot use "&lt;TO&gt;.StatusWord.X3 (OnlineStartValuesChanged)" to determine which tags have already been written.
 
 To capture the relevant value changes of several variables, build your user program with "WRIT_DBL" similar to the following programming example in a sequencer:
 
@@ -2966,7 +2966,7 @@ To add Motion Control instructions in your user program, proceed as follows:
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Double click your program block in the project tree (the program block must be called in the cyclical program).    The program block is opened in the programming editor, and the available instructions are displayed. 2. In the "Instructions" task card, open the "Technology > Motion Control" folder. 3. Using drag-and-drop, move the Motion Control instruction, e.g. "MC_Power", to the desired segment of the program block.    The "Call options" dialog opens. 4. In the dialog, specify a name and a number for the instance data block of the Motion Control instruction. 5. Click "OK".    The Motion Control instruction "MC_Power" is inserted into the network.               ![Procedure](images/163742130443_DV_resource.Stream@PNG-de-DE.png)         ![Procedure](images/163742130443_DV_resource.Stream@PNG-de-DE.png)      The instance data block is automatically created under "Program Blocks > System Blocks > Program Resources". 6. Input parameters without a default value (e.g. "Axis"), must be assigned. Select the technology object in the project tree and move the technology object onto <...> at the "Axis" parameter using drag-and-drop.               ![Procedure](images/163742205195_DV_resource.Stream@PNG-de-DE.png)         ![Procedure](images/163742205195_DV_resource.Stream@PNG-de-DE.png)      Once the technology object is specified in the "Axis" parameter, the following buttons are available to you:       | Symbol | Meaning |    | --- | --- |    | ![Procedure](images/163742134027_DV_resource.Stream@PNG-de-DE.png)      ![Procedure](images/163742134027_DV_resource.Stream@PNG-de-DE.png) | To open the configuration of the technology object, click on the toolbox icon. |    | ![Procedure](images/163742137611_DV_resource.Stream@PNG-de-DE.png)      ![Procedure](images/163742137611_DV_resource.Stream@PNG-de-DE.png) | To open the diagnostics of the technology object, click on the stethoscope icon. | 7. Add additional Motion Control instructions in accordance with steps 3 through 6. |  |
+| 1. Double click your program block in the project tree (the program block must be called in the cyclical program).    The program block is opened in the programming editor, and the available instructions are displayed. 2. In the "Instructions" task card, open the "Technology &gt; Motion Control" folder. 3. Using drag-and-drop, move the Motion Control instruction, e.g. "MC_Power", to the desired segment of the program block.    The "Call options" dialog opens. 4. In the dialog, specify a name and a number for the instance data block of the Motion Control instruction. 5. Click "OK".    The Motion Control instruction "MC_Power" is inserted into the network.               ![Procedure](images/163742130443_DV_resource.Stream@PNG-de-DE.png)         ![Procedure](images/163742130443_DV_resource.Stream@PNG-de-DE.png)      The instance data block is automatically created under "Program Blocks &gt; System Blocks &gt; Program Resources". 6. Input parameters without a default value (e.g. "Axis"), must be assigned. Select the technology object in the project tree and move the technology object onto &lt;...&gt; at the "Axis" parameter using drag-and-drop.               ![Procedure](images/163742205195_DV_resource.Stream@PNG-de-DE.png)         ![Procedure](images/163742205195_DV_resource.Stream@PNG-de-DE.png)      Once the technology object is specified in the "Axis" parameter, the following buttons are available to you:       | Symbol | Meaning |    | --- | --- |    | ![Procedure](images/163742134027_DV_resource.Stream@PNG-de-DE.png)      ![Procedure](images/163742134027_DV_resource.Stream@PNG-de-DE.png) | To open the configuration of the technology object, click on the toolbox icon. |    | ![Procedure](images/163742137611_DV_resource.Stream@PNG-de-DE.png)      ![Procedure](images/163742137611_DV_resource.Stream@PNG-de-DE.png) | To open the diagnostics of the technology object, click on the stethoscope icon. | 7. Add additional Motion Control instructions in accordance with steps 3 through 6. |  |
 
 > **Note**
 >
@@ -2990,7 +2990,7 @@ In contrast to standard data types, the data types for technology objects are al
 
 ##### Example 1: Tag transfer with specific data type
 
-By specifying the data type, you can address the tags of the technology object in the function block (<parameters of the block interface>.<tag of the technology object>). The data types for the reference to the technology objects are available in the section "[appendix](#data-types-s7-1500-s7-1500t)".
+By specifying the data type, you can address the tags of the technology object in the function block (&lt;parameters of the block interface&gt;.&lt;tag of the technology object&gt;). The data types for the reference to the technology objects are available in the section "[appendix](#data-types-s7-1500-s7-1500t)".
 
 The following table shows the declaration of the tags used:
 
@@ -3180,15 +3180,15 @@ Make sure that the technology object is in the appropriate status to perform the
 
   Enabling is performed using the Motion Control instruction "MC_Power".
 
-  The "MC_Power.Status" parameter (<TO>.StatusWord.X0 (Enable)) must show the value "TRUE".
+  The "MC_Power.Status" parameter (&lt;TO&gt;.StatusWord.X0 (Enable)) must show the value "TRUE".
 - **Is a technology alarm pending?**
 
-  To perform motion commands, no technology alarms or alarm responses may be pending. The "<TO>.ErrorDetail.Number" and "<TO>.ErrorDetail.Reaction" tags of the technology object must show the value zero. After resolving the error, acknowledge any pending alarms using the Motion Control instruction "MC_Reset".
+  To perform motion commands, no technology alarms or alarm responses may be pending. The "&lt;TO&gt;.ErrorDetail.Number" and "&lt;TO&gt;.ErrorDetail.Reaction" tags of the technology object must show the value zero. After resolving the error, acknowledge any pending alarms using the Motion Control instruction "MC_Reset".
 
   You can find a list of the technology alarms and alarm responses in the "[Technology alarms](S7-1500-S7-1500T%20Motion%20Control%20alarms%20and%20error%20IDs%20%28S7-1500%2C%20S7-1500T%29.md#technology-alarms-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control alarms and error IDs" documentation.
 - **Has the technology object been homed?**
 
-  In order to perform a job for absolute positioning, the positioning axis/synchronous axis technology object must be homed. The referencing occurs via the Motion Control instruction "MC_Home". The "<TO>.StatusWord.X5 (HomingDone)" tag of the technology object must show the value "TRUE".
+  In order to perform a job for absolute positioning, the positioning axis/synchronous axis technology object must be homed. The referencing occurs via the Motion Control instruction "MC_Home". The "&lt;TO&gt;.StatusWord.X5 (HomingDone)" tag of the technology object must show the value "TRUE".
 
 #### 2. Initiate new command for the technology object
 
@@ -3233,7 +3233,7 @@ When tracking jobs, a distinction is made between three groups:
 
 Jobs of Motion Control instructions with the "Done" parameter are started with a positive edge at the "Execute" parameter. If the job was completed without errors or interruption by another job (e.g. "MC_MoveAbsolute": Target position reached), the "Done" parameter shows the value "TRUE". The CPU processes the Motion Control statements and the technology object in different execution levels. The status bits on the Motion Control statements, such as the "Done" parameter, are updated with a delay.
 
-In positioning instructions, the parameter "Done" is delayed by the set minimum dwell time (<TO>.PositioningMonitoring.MinDwellTime).
+In positioning instructions, the parameter "Done" is delayed by the set minimum dwell time (&lt;TO&gt;.PositioningMonitoring.MinDwellTime).
 
 The following Motion Control instructions have a "Done" parameter for the S7-1500 CPU:
 
@@ -3370,7 +3370,7 @@ The following motion control instructions do not have any special parameter for 
 
 | Motion control instruction | Parameter | Description |
 | --- | --- | --- |
-| MC_MeasuringInputCyclic | Busy | The execution of a measuring job is indicated with parameter "Busy" = "TRUE". Completed measuring events are indicated in the corresponding event counters "<TO>.MeasuredValues.MeasuredValue1Counter" and "<TO>.MeasuredValues.MeasuredValue2Counter" of the technology data block. |
+| MC_MeasuringInputCyclic | Busy | The execution of a measuring job is indicated with parameter "Busy" = "TRUE". Completed measuring events are indicated in the corresponding event counters "&lt;TO&gt;.MeasuredValues.MeasuredValue1Counter" and "&lt;TO&gt;.MeasuredValues.MeasuredValue2Counter" of the technology data block. |
 | MC_OutputCam | Busy | The execution of a job is indicated with parameter "Busy" = "TRUE". The CamOutput tag in the associated technology data block indicates the switching state of the output cam. |
 | MC_CamTrack | Busy | The execution of a job is indicated with parameter "Busy" = "TRUE". The TrackOutput tag in the associated technology data block indicates the switching state of the cam track. |
 
@@ -3545,7 +3545,7 @@ If changes in the technology data block should also be retained after the restar
 
 #### Restart required
 
-If a restart of the technology object is required, this is indicated at "Technology object > Diagnostics > Status and error bits > Axis status or Encoder status > Online start value changed", as well as in the tag "<TO>.StatusWord.X3 (OnlineStartValuesChanged)" of the technology object.
+If a restart of the technology object is required, this is indicated at "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Axis status or Encoder status &gt; Online start value changed", as well as in the tag "&lt;TO&gt;.StatusWord.X3 (OnlineStartValuesChanged)" of the technology object.
 
 #### Restarting a technology object
 
@@ -3555,8 +3555,8 @@ During a restart, all configuration data of the technology object are loaded fro
 
 Note the following during a restart of the technology object:
 
-- A restart resets the "Homed" status of a technology object with incremental actual values ("<TO>.StatusWord.X5 (HomingDone)").
-- While a restart is being performed, the technology object cannot perform any jobs. An active restart will be indicated under "Technology object > Diagnostics > Status and error bits > Axis status or Encoder status > Restart active", and in the "<TO>.StatusWord.X2 (RestartActive)" tag of the technology object.
+- A restart resets the "Homed" status of a technology object with incremental actual values ("&lt;TO&gt;.StatusWord.X5 (HomingDone)").
+- While a restart is being performed, the technology object cannot perform any jobs. An active restart will be indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Axis status or Encoder status &gt; Restart active", and in the "&lt;TO&gt;.StatusWord.X2 (RestartActive)" tag of the technology object.
 - Motion Control jobs are rejected during a restart with the "Error" = TRUE and "ErrorID" = 16#800D parameters (job not executable, because a restart is active).
 - Active Motion Control jobs to the technology objects output cam, cam track, measuring input and kinematics are canceled by a restart with "ErrorID" = 16#800D.
 - While a restart is being executed, you cannot access the technology data block.
@@ -3632,18 +3632,18 @@ Downloading a function block with multi-instances of Motion Control instructions
 
 - "MC_Power.Enable" = FALSE
 - "MC_Power.Status" = FALSE
-- "<TO>.StatusWord.X0" = FALSE
+- "&lt;TO&gt;.StatusWord.X0" = FALSE
 
 Downloading a function block with multi-instances of Motion Control instructions "MC_TorqueLimiting" is only possible under the following preconditions:
 
 - "MC_TorqueLimiting.Enable" = FALSE
 - "MC_TorqueLimiting.Busy" = FALSE
-- "<TO>.StatusWord.X26" = FALSE
+- "&lt;TO&gt;.StatusWord.X26" = FALSE
 
 The following changes **cannot** be downloaded to the CPU in "RUN" mode:
 
 - Changes to the cycle clocks of MC_Servo
-- Changes to the hardware interface of the technology object in "Technology object > Configuration > Hardware interface"
+- Changes to the hardware interface of the technology object in "Technology object &gt; Configuration &gt; Hardware interface"
 
 > **Note**
 >

@@ -101,14 +101,14 @@ A network is available.
 To insert an LAD instruction into a network using an empty box, follow these steps:
 
 1. Open the "Instructions" task card.
-2. Navigate to "Basic instructions > General > Empty box".
+2. Navigate to "Basic instructions &gt; General &gt; Empty box".
 3. Use a drag-and-drop operation to move the "Empty box" element to the desired place in the network.
 4. Hover the cursor over the yellow triangle in the top right corner of the empty box.
 
    A drop-down list is displayed.
 5. Select the required instruction from the drop-down list.
 
-If the instruction acts as a function block (FB) within the system, the "Call options" dialog opens. In this dialog, you can create an instance data block for the function block, either as a single instance or, if necessary, multi-instance, in which data of the inserted instruction are stored. Once it is created, the new instance data block can be found in the "Program resources" folder in the project tree under "Program blocks > System blocks". If you have selected "multi-instance", you can find it in the block interface in the "Static" section.
+If the instruction acts as a function block (FB) within the system, the "Call options" dialog opens. In this dialog, you can create an instance data block for the function block, either as a single instance or, if necessary, multi-instance, in which data of the inserted instruction are stored. Once it is created, the new instance data block can be found in the "Program resources" folder in the project tree under "Program blocks &gt; System blocks". If you have selected "multi-instance", you can find it in the block interface in the "Static" section.
 
 ##### Result
 
@@ -130,7 +130,7 @@ Use branches to program parallel connections with the Ladder Logic (LAD) program
 To insert a new branch in a network, follow these steps:
 
 1. Open the "Instructions" task card.
-2. Navigate to "Basic instructions > General > Open branch".
+2. Navigate to "Basic instructions &gt; General &gt; Open branch".
 3. Use a drag-and-drop operation to move the element to the desired place in the network.
 4. If you want to connect the new branch directly to the power rail, drag the element to the power rail.
 
@@ -209,14 +209,14 @@ A network is available.
 To insert FBD elements into a network using an empty box, follow these steps:
 
 1. Open the "Instructions" task card.
-2. Navigate to "Basic instructions > General > Empty box".
+2. Navigate to "Basic instructions &gt; General &gt; Empty box".
 3. Use a drag-and-drop operation to move the "Empty box" element to the desired place in the network.
 4. Hover the cursor over the yellow triangle in the top right corner of the empty box.
 
    A drop-down list is displayed.
 5. Select the desired FBD element from the drop-down list.
 
-If the instruction acts as a function block (FB) within the system, the "Call options" dialog opens. In this dialog, you can create an instance data block for the function block, either as a single instance or, if necessary, multi-instance, in which data of the inserted instruction are stored. Once it is created, the new instance data block can be found in the "Program resources" folder in the project tree under "Program blocks > System blocks". If you have selected "multi-instance", you can find it in the block interface in the "Static" section.
+If the instruction acts as a function block (FB) within the system, the "Call options" dialog opens. In this dialog, you can create an instance data block for the function block, either as a single instance or, if necessary, multi-instance, in which data of the inserted instruction are stored. Once it is created, the new instance data block can be found in the "Program resources" folder in the project tree under "Program blocks &gt; System blocks". If you have selected "multi-instance", you can find it in the block interface in the "Static" section.
 
 ##### Result
 
@@ -237,7 +237,7 @@ A network is available.
 To insert a new branch in a network, follow these steps:
 
 1. Open the "Instructions" task card.
-2. Navigate in the pane to "Basic instructions > General > Branch".
+2. Navigate in the pane to "Basic instructions &gt; General &gt; Branch".
 3. Use a drag-and-drop operation to move the element to the desired place to a connecting line between two boxes.
 
 ##### Example
@@ -264,7 +264,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Input | BOOL | The operand indicates the bit whose signal state will be queried. |
+| &lt;Operand&gt; | Input | BOOL | The operand indicates the bit whose signal state will be queried. |
 
 ##### Example
 
@@ -343,7 +343,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Input | BOOL | Operand whose signal state is queried. |
+| &lt;Operand&gt; | Input | BOOL | Operand whose signal state is queried. |
 
 ##### Example
 
@@ -374,7 +374,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Input | BOOL | Operand whose signal state is queried. |
+| &lt;Operand&gt; | Input | BOOL | Operand whose signal state is queried. |
 
 ##### Example
 
@@ -420,7 +420,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Output | BOOL | Operand to which the RLO is assigned. |
+| &lt;Operand&gt; | Output | BOOL | Operand to which the RLO is assigned. |
 
 ##### Example
 
@@ -461,7 +461,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Output | BOOL | Operand that is reset when RLO = "1". |
+| &lt;Operand&gt; | Output | BOOL | Operand that is reset when RLO = "1". |
 
 ##### Example
 
@@ -508,7 +508,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Output | BOOL | Operand that is set when RLO = "1". |
+| &lt;Operand&gt; | Output | BOOL | Operand that is set when RLO = "1". |
 
 ##### Example
 
@@ -551,7 +551,7 @@ The following table shows the parameters of the instruction:
 | --- | --- | --- | --- |
 | S | Input | BOOL | Enable set |
 | R1 | Input | BOOL | Enable reset |
-| <Operand> | Output | BOOL | Operand that is set or reset. |
+| &lt;Operand&gt; | Output | BOOL | Operand that is set or reset. |
 | Q | Output | BOOL | Signal state of the operand |
 
 ##### Example
@@ -600,7 +600,7 @@ The following table shows the parameters of the instruction:
 | --- | --- | --- | --- |
 | R | Input | BOOL | Enable reset |
 | S1 | Input | BOOL | Enable set |
-| <Operand> | Output | BOOL | Operand that is reset or set. |
+| &lt;Operand&gt; | Output | BOOL | Operand that is reset or set. |
 | Q | Output | BOOL | Signal state of the operand |
 
 ##### Example
@@ -623,11 +623,11 @@ Operands ""F_DB_1".TagRS" and "TagOut" are set when the following conditions are
 
 ##### Description
 
-You can use the "Scan operand for positive signal edge" instruction to determine if there is a change from "0" to "1" in the signal state of a specified operand (<Operand1>). The instruction compares the current signal state of <Operand1> with the signal state of the previous query saved in <Operand2>. If the instruction detects a change in the result of logic operation from "0" to "1", there is a positive, rising edge.
+You can use the "Scan operand for positive signal edge" instruction to determine if there is a change from "0" to "1" in the signal state of a specified operand (&lt;Operand1&gt;). The instruction compares the current signal state of &lt;Operand1&gt; with the signal state of the previous query saved in &lt;Operand2&gt;. If the instruction detects a change in the result of logic operation from "0" to "1", there is a positive, rising edge.
 
 If a rising edge is detected, the output of the instruction has signal state "1". In all other cases, the signal state at the output of the instruction is "0".
 
-Enter the operand to be queried (<Operand1>) in the operand placeholder above the instruction. Enter the edge memory bit (<Operand2>) in the operand placeholder below the instruction.
+Enter the operand to be queried (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the edge memory bit (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 > **Note**
 >
@@ -635,13 +635,13 @@ Enter the operand to be queried (<Operand1>) in the operand placeholder above th
 
 > **Note**
 >
-> If you want to use a formal parameter of an F‑FC for the edge memory bit <Operand2> of the instruction, it must be declared as an input/output parameter.
+> If you want to use a formal parameter of an F‑FC for the edge memory bit &lt;Operand2&gt; of the instruction, it must be declared as an input/output parameter.
 
 > **Note**
 >
-> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit <Operand2> of the instruction.
+> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit &lt;Operand2&gt; of the instruction.
 >
-> If operand area "local data (temp)" is used for the edge memory bit <Operand2> of the instruction, the local data bit used must be initialized beforehand.
+> If operand area "local data (temp)" is used for the edge memory bit &lt;Operand2&gt; of the instruction, the local data bit used must be initialized beforehand.
 
 ##### Parameter
 
@@ -649,8 +649,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand1> | Input | BOOL | Signal to be queried |
-| <Operand2> | InOut | BOOL | Edge memory bit in which the signal state of the previous query is saved. |
+| &lt;Operand1&gt; | Input | BOOL | Signal to be queried |
+| &lt;Operand2&gt; | InOut | BOOL | Edge memory bit in which the signal state of the previous query is saved. |
 
 ##### Example
 
@@ -667,11 +667,11 @@ Operand "TagOut" is set when the following conditions are fulfilled:
 
 ##### Description
 
-You can use the "Scan operand for negative signal edge" instruction to determine if there is a change form "1" to "0" in the signal state of a specified operand. The instruction compares the current signal state of <Operand1> with the signal state of the previous query saved in <Operand2>. If the instruction detects a change in the result of logic operation from "1" to "0", there is a negative, falling edge.
+You can use the "Scan operand for negative signal edge" instruction to determine if there is a change form "1" to "0" in the signal state of a specified operand. The instruction compares the current signal state of &lt;Operand1&gt; with the signal state of the previous query saved in &lt;Operand2&gt;. If the instruction detects a change in the result of logic operation from "1" to "0", there is a negative, falling edge.
 
 If a falling edge is detected, the output of the instruction has signal state "1". In all other cases, the signal state at the output of the instruction is "0".
 
-Enter the operand to be queried (<Operand1>) in the operand placeholder above the instruction. Enter the edge memory bit (<Operand2>) in the operand placeholder below the instruction.
+Enter the operand to be queried (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the edge memory bit (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 > **Note**
 >
@@ -679,13 +679,13 @@ Enter the operand to be queried (<Operand1>) in the operand placeholder above th
 
 > **Note**
 >
-> If you want to use a formal parameter of an F‑FC for the edge memory bit <Operand2> of the instruction, it must be declared as an input/output parameter.
+> If you want to use a formal parameter of an F‑FC for the edge memory bit &lt;Operand2&gt; of the instruction, it must be declared as an input/output parameter.
 
 > **Note**
 >
-> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit <Operand2> of the instruction.
+> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit &lt;Operand2&gt; of the instruction.
 >
-> If operand area "local data (temp)" is used for the edge memory bit <Operand2> of the instruction, the local data bit used must be initialized beforehand.
+> If operand area "local data (temp)" is used for the edge memory bit &lt;Operand2&gt; of the instruction, the local data bit used must be initialized beforehand.
 
 ##### Parameter
 
@@ -693,8 +693,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand1> | Input | BOOL | Signal to be queried |
-| <Operand2> | InOut | BOOL | Edge memory bit in which the signal state of the previous query is saved. |
+| &lt;Operand1&gt; | Input | BOOL | Signal to be queried |
+| &lt;Operand2&gt; | InOut | BOOL | Edge memory bit in which the signal state of the previous query is saved. |
 
 ##### Example
 
@@ -711,7 +711,7 @@ Operand "TagOut" is set when the following conditions are fulfilled:
 
 ##### Description
 
-You can use the "Scan RLO for positive signal edge" instruction to query a change in the signal state of the result of logic operation from "0" to "1". The instruction compares the current signal state of the result of logic operation (RLO) with the signal state of the previous query, which is saved in the edge bit memory (<Operand>). If the instruction detects a change in the RLO from "0" to "1", there is a positive, rising edge.
+You can use the "Scan RLO for positive signal edge" instruction to query a change in the signal state of the result of logic operation from "0" to "1". The instruction compares the current signal state of the result of logic operation (RLO) with the signal state of the previous query, which is saved in the edge bit memory (&lt;Operand&gt;). If the instruction detects a change in the RLO from "0" to "1", there is a positive, rising edge.
 
 If a rising edge is detected, the output of the instruction has signal state "1". In all other cases, the signal state at the output of the instruction is "0".
 
@@ -721,13 +721,13 @@ If a rising edge is detected, the output of the instruction has signal state "1"
 
 > **Note**
 >
-> If you want to use a formal parameter of an F‑FC for the edge memory bit <Operand> of the instruction, it must be declared as an input/output parameter.
+> If you want to use a formal parameter of an F‑FC for the edge memory bit &lt;Operand&gt; of the instruction, it must be declared as an input/output parameter.
 
 > **Note**
 >
-> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit <Operand> of the instruction.
+> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit &lt;Operand&gt; of the instruction.
 >
-> If operand area "local data (temp)" is used for the edge memory bit <Operand> of the instruction, the local data bit used must be initialized beforehand.
+> If operand area "local data (temp)" is used for the edge memory bit &lt;Operand&gt; of the instruction, the local data bit used must be initialized beforehand.
 
 ##### Parameter
 
@@ -736,7 +736,7 @@ The following table shows the parameters of the instruction:
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | CLK | Input | BOOL | Current RLO |
-| <Operand> | InOut | BOOL | Edge memory bit in which the RLO of the previous query is saved. |
+| &lt;Operand&gt; | InOut | BOOL | Edge memory bit in which the RLO of the previous query is saved. |
 | Q | Output | BOOL | Result of edge evaluation |
 
 ##### Example
@@ -751,7 +751,7 @@ The RLO from the previous bit logic operation is saved in edge memory bit ""F_DB
 
 ##### Description
 
-You can use the "Scan RLO for negative signal edge" instruction to query a change in the signal state of the result of logic operation from "1" to "0". The instruction compares the current signal state of the result of logic operation with the signal state from the previous query, which is saved in the edge memory bit (<Operand>). If the instruction detects a change in the RLO from "1" to "0", there is a negative, falling edge.
+You can use the "Scan RLO for negative signal edge" instruction to query a change in the signal state of the result of logic operation from "1" to "0". The instruction compares the current signal state of the result of logic operation with the signal state from the previous query, which is saved in the edge memory bit (&lt;Operand&gt;). If the instruction detects a change in the RLO from "1" to "0", there is a negative, falling edge.
 
 If a falling edge is detected, the output of the instruction has signal state "1". In all other cases, the signal state at the output of the instruction is "0".
 
@@ -761,13 +761,13 @@ If a falling edge is detected, the output of the instruction has signal state "1
 
 > **Note**
 >
-> If you want to use a formal parameter of an F‑FC for the edge memory bit <Operand> of the instruction, it must be declared as an input/output parameter.
+> If you want to use a formal parameter of an F‑FC for the edge memory bit &lt;Operand&gt; of the instruction, it must be declared as an input/output parameter.
 
 > **Note**
 >
-> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit <Operand> of the instruction.
+> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit &lt;Operand&gt; of the instruction.
 >
-> If operand area "local data (temp)" is used for the edge memory bit <Operand> of the instruction, the local data bit used must be initialized beforehand.
+> If operand area "local data (temp)" is used for the edge memory bit &lt;Operand&gt; of the instruction, the local data bit used must be initialized beforehand.
 
 ##### Parameter
 
@@ -776,7 +776,7 @@ The following table shows the parameters of the instruction:
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | CLK | Input | BOOL | Current RLO |
-| <Operand> | InOut | BOOL | Edge memory bit in which the RLO of the previous query is saved. |
+| &lt;Operand&gt; | InOut | BOOL | Edge memory bit in which the RLO of the previous query is saved. |
 | Q | Output | BOOL | Result of edge evaluation |
 
 ##### Example
@@ -822,7 +822,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Input | BOOL | The operand indicates the bit whose signal state will be queried. |
+| &lt;Operand&gt; | Input | BOOL | The operand indicates the bit whose signal state will be queried. |
 
 ##### Example
 
@@ -867,7 +867,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Input | BOOL | The operand indicates the bit whose signal state will be queried. |
+| &lt;Operand&gt; | Input | BOOL | The operand indicates the bit whose signal state will be queried. |
 
 ##### Example
 
@@ -908,7 +908,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Input | BOOL | The operand indicates the bit whose signal state will be queried. |
+| &lt;Operand&gt; | Input | BOOL | The operand indicates the bit whose signal state will be queried. |
 
 ##### Example
 
@@ -964,7 +964,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Output | BOOL | Operand to which the RLO is assigned. |
+| &lt;Operand&gt; | Output | BOOL | Operand to which the RLO is assigned. |
 
 ##### Example
 
@@ -1005,7 +1005,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Output | BOOL | Operand that is reset with RLO = "1". |
+| &lt;Operand&gt; | Output | BOOL | Operand that is reset with RLO = "1". |
 
 ##### Example
 
@@ -1052,7 +1052,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand> | Output | BOOL | Operand that is set when RLO = "1". |
+| &lt;Operand&gt; | Output | BOOL | Operand that is set when RLO = "1". |
 
 ##### Example
 
@@ -1095,7 +1095,7 @@ The following table shows the parameters of the instruction:
 | --- | --- | --- | --- |
 | S | Input | BOOL | Enable set |
 | R1 | Input | BOOL | Enable reset |
-| <Operand> | Output | BOOL | Operand that is set or reset. |
+| &lt;Operand&gt; | Output | BOOL | Operand that is set or reset. |
 | Q | Output | BOOL | Signal state of the operand |
 
 ##### Example
@@ -1144,7 +1144,7 @@ The following table shows the parameters of the instruction:
 | --- | --- | --- | --- |
 | R | Input | BOOL | Enable reset |
 | S1 | Input | BOOL | Enable set |
-| <Operand> | Output | BOOL | Operand that is reset or set. |
+| &lt;Operand&gt; | Output | BOOL | Operand that is reset or set. |
 | Q | Output | BOOL | Signal state of the operand |
 
 ##### Example
@@ -1167,11 +1167,11 @@ Operands ""F_DB_1".TagRS" and "TagOut" are set when the following conditions are
 
 ##### Description
 
-You can use the "Scan operand for positive signal edge" instruction to determine if there is a change from "0" to "1" in the signal state of a specified operand (<Operand1>). The instruction compares the current signal state of <Operand1> with the signal state of the previous query saved in <Operand2>. If the instruction detects a change in the result of logic operation from "0" to "1", there is a positive, rising edge.
+You can use the "Scan operand for positive signal edge" instruction to determine if there is a change from "0" to "1" in the signal state of a specified operand (&lt;Operand1&gt;). The instruction compares the current signal state of &lt;Operand1&gt; with the signal state of the previous query saved in &lt;Operand2&gt;. If the instruction detects a change in the result of logic operation from "0" to "1", there is a positive, rising edge.
 
 If a rising edge is detected, the output of the instruction has signal state "1". In all other cases, the signal state at the output of the instruction is "0".
 
-Enter the operand to be queried (<Operand1>) in the operand placeholder above the instruction. Enter the edge memory bit (<Operand2>) in the operand placeholder below the instruction.
+Enter the operand to be queried (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the edge memory bit (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 > **Note**
 >
@@ -1179,13 +1179,13 @@ Enter the operand to be queried (<Operand1>) in the operand placeholder above th
 
 > **Note**
 >
-> If you want to use a formal parameter of an F‑FC for the edge memory bit <Operand2> of the instruction, it must be declared as an input/output parameter.
+> If you want to use a formal parameter of an F‑FC for the edge memory bit &lt;Operand2&gt; of the instruction, it must be declared as an input/output parameter.
 
 > **Note**
 >
-> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit <Operand2> of the instruction.
+> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit &lt;Operand2&gt; of the instruction.
 >
-> If operand area "local data (temp)" is used for the edge memory bit <Operand2> of the instruction, the local data bit used must be initialized beforehand.
+> If operand area "local data (temp)" is used for the edge memory bit &lt;Operand2&gt; of the instruction, the local data bit used must be initialized beforehand.
 
 ##### Parameters
 
@@ -1193,8 +1193,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand1> | Input | BOOL | Signal to be queried |
-| <Operand2> | InOut | BOOL | Edge memory bit in which the signal state of the previous query is saved. |
+| &lt;Operand1&gt; | Input | BOOL | Signal to be queried |
+| &lt;Operand2&gt; | InOut | BOOL | Edge memory bit in which the signal state of the previous query is saved. |
 
 ##### Example
 
@@ -1211,11 +1211,11 @@ The following example shows how the instruction works:
 
 ##### Description
 
-You can use the "Scan operand for negative signal edge" instruction to determine if there is a change form "1" to "0" in the signal state of a specified operand. The instruction compares the current signal state of <Operand1> with the signal state of the previous query saved in <Operand2>. If the instruction detects a change in the result of logic operation from "1" to "0", there is a negative, falling edge.
+You can use the "Scan operand for negative signal edge" instruction to determine if there is a change form "1" to "0" in the signal state of a specified operand. The instruction compares the current signal state of &lt;Operand1&gt; with the signal state of the previous query saved in &lt;Operand2&gt;. If the instruction detects a change in the result of logic operation from "1" to "0", there is a negative, falling edge.
 
 If a falling edge is detected, the output of the instruction has signal state "1". In all other cases, the signal state at the output of the instruction is "0".
 
-Enter the operand to be queried (<Operand1>) in the operand placeholder above the instruction. Enter the edge memory bit (<Operand2>) in the operand placeholder below the instruction.
+Enter the operand to be queried (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the edge memory bit (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 > **Note**
 >
@@ -1223,13 +1223,13 @@ Enter the operand to be queried (<Operand1>) in the operand placeholder above th
 
 > **Note**
 >
-> If you want to use a formal parameter of an F‑FC for the edge memory bit <Operand2> of the instruction, it must be declared as an input/output parameter.
+> If you want to use a formal parameter of an F‑FC for the edge memory bit &lt;Operand2&gt; of the instruction, it must be declared as an input/output parameter.
 
 > **Note**
 >
-> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit <Operand2> of the instruction.
+> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit &lt;Operand2&gt; of the instruction.
 >
-> If operand area "local data (temp)" is used for the edge memory bit <Operand2> of the instruction, the local data bit used must be initialized beforehand.
+> If operand area "local data (temp)" is used for the edge memory bit &lt;Operand2&gt; of the instruction, the local data bit used must be initialized beforehand.
 
 ##### Parameter
 
@@ -1237,8 +1237,8 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Operand1> | Input | BOOL | Signal to be queried |
-| <Operand2> | InOut | BOOL | Edge memory bit in which the signal state of the previous query is saved. |
+| &lt;Operand1&gt; | Input | BOOL | Signal to be queried |
+| &lt;Operand2&gt; | InOut | BOOL | Edge memory bit in which the signal state of the previous query is saved. |
 
 ##### Example
 
@@ -1255,7 +1255,7 @@ Output "TagOut" is set when the following conditions are fulfilled:
 
 ##### Description
 
-You can use the "Scan RLO for positive signal edge" instruction to query a change in the signal state of the result of logic operation from "0" to "1". The instruction compares the current signal state of the result of logic operation with the signal state from the previous query, which is saved in the edge memory bit (<Operand>). If the instruction detects a change in the RLO from "0" to "1", there is a positive, rising edge.
+You can use the "Scan RLO for positive signal edge" instruction to query a change in the signal state of the result of logic operation from "0" to "1". The instruction compares the current signal state of the result of logic operation with the signal state from the previous query, which is saved in the edge memory bit (&lt;Operand&gt;). If the instruction detects a change in the RLO from "0" to "1", there is a positive, rising edge.
 
 If a rising edge is detected, the output of the instruction has signal state "1". In all other cases, the signal state at the output of the instruction is "0".
 
@@ -1265,13 +1265,13 @@ If a rising edge is detected, the output of the instruction has signal state "1"
 
 > **Note**
 >
-> If you want to use a formal parameter of an F‑FC for the edge memory bit <Operand> of the instruction, it must be declared as an input/output parameter.
+> If you want to use a formal parameter of an F‑FC for the edge memory bit &lt;Operand&gt; of the instruction, it must be declared as an input/output parameter.
 
 > **Note**
 >
-> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit <Operand> of the instruction.
+> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit &lt;Operand&gt; of the instruction.
 >
-> If operand area "local data (temp)" is used for the edge memory bit <Operand> of the instruction, the local data bit used must be initialized beforehand.
+> If operand area "local data (temp)" is used for the edge memory bit &lt;Operand&gt; of the instruction, the local data bit used must be initialized beforehand.
 
 ##### Parameter
 
@@ -1280,7 +1280,7 @@ The following table shows the parameters of the instruction:
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | CLK | Input | BOOL | Current RLO |
-| <Operand> | InOut | BOOL | Edge memory bit in which the RLO of the previous query is saved. |
+| &lt;Operand&gt; | InOut | BOOL | Edge memory bit in which the RLO of the previous query is saved. |
 | Q | Output | BOOL | Result of edge evaluation |
 
 ##### Example
@@ -1295,7 +1295,7 @@ The RLO from the previous bit logic operation is saved in edge memory bit ""F_DB
 
 ##### Description
 
-You can use the "Scan RLO for negative signal edge" instruction to query a change in the signal state of the result of logic operation from "1" to "0". The instruction compares the current signal state of the result of logic operation with the signal state from the previous query, which is saved in the edge memory bit (<Operand>). If the instruction detects a change in the RLO from "1" to "0", there is a negative, falling edge.
+You can use the "Scan RLO for negative signal edge" instruction to query a change in the signal state of the result of logic operation from "1" to "0". The instruction compares the current signal state of the result of logic operation with the signal state from the previous query, which is saved in the edge memory bit (&lt;Operand&gt;). If the instruction detects a change in the RLO from "1" to "0", there is a negative, falling edge.
 
 If a falling edge is detected, the output of the instruction has signal state "1". In all other cases, the signal state at the output of the instruction is "0".
 
@@ -1305,13 +1305,13 @@ If a falling edge is detected, the output of the instruction has signal state "1
 
 > **Note**
 >
-> If you want to use a formal parameter of an F‑FC for the edge memory bit <Operand> of the instruction, it must be declared as an input/output parameter.
+> If you want to use a formal parameter of an F‑FC for the edge memory bit &lt;Operand&gt; of the instruction, it must be declared as an input/output parameter.
 
 > **Note**
 >
-> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit <Operand> of the instruction.
+> You cannot use the "process image", "standard DB" and "bit memory" operand areas for the edge memory bit &lt;Operand&gt; of the instruction.
 >
-> If operand area "local data (temp)" is used for the edge memory bit <Operand> of the instruction, the local data bit used must be initialized beforehand.
+> If operand area "local data (temp)" is used for the edge memory bit &lt;Operand&gt; of the instruction, the local data bit used must be initialized beforehand.
 
 ##### Parameter
 
@@ -1320,7 +1320,7 @@ The following table shows the parameters of the instruction:
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | CLK | Input | BOOL | Current RLO |
-| <Operand> | InOut | BOOL | Edge memory bit in which the RLO of the previous query is saved. |
+| &lt;Operand&gt; | InOut | BOOL | Edge memory bit in which the RLO of the previous query is saved. |
 | Q | Output | BOOL | Result of edge evaluation |
 
 ##### Example
@@ -1362,7 +1362,7 @@ Output ACK_REQ is used to signal that a user acknowledgment is required at input
 
 Following an acknowledgment, the instruction resets ACK_REQ to 0.
 
-Every call of the "Emergency STOP/Emergency OFF up to Stop Category 1" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., ESTOP1_DB_1) or a multi-instance (e.g., ESTOP1_Instance_1) for the "Emergency STOP/Emergency OFF up to Stop Category 1" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Emergency STOP/Emergency OFF up to Stop Category 1" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., ESTOP1_DB_1) or a multi-instance (e.g., ESTOP1_Instance_1) for the "Emergency STOP/Emergency OFF up to Stop Category 1" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -1405,7 +1405,7 @@ A number of versions are available for this instruction:
 | 1.3 | x | o | o |  |
 | 1.4 | x | o | o |  |
 | 1.5 | x | x | x |  |
-| 1.6 | x | x | x | The reaction of the delay time TIME_DEL for F-CPUs S7-1200/1500 was adapted to the reaction of F-CPUs S7-300/400: If the input ESTOP (0 -> 1 (including acknowledgment) -> 0) is changed while the delay time is running, the delay time is restarted. |
+| 1.6 | x | x | x | The reaction of the delay time TIME_DEL for F-CPUs S7-1200/1500 was adapted to the reaction of F-CPUs S7-300/400: If the input ESTOP (0 -&gt; 1 (including acknowledgment) -&gt; 0) is changed while the delay time is running, the delay time is restarted. |
 | o This version is no longer supported. |  |  |  |  |
 
 When a new F-CPU is created with STEP 7 Safety, the latest available version for the F-CPU created is automatically preset.
@@ -1424,7 +1424,7 @@ The DIAG output provides non-fail-safe information on errors for service purpose
 
 | Bit no. | Assignment | Possible error causes | Remedies |
 | --- | --- | --- | --- |
-| Bit 0 | Incorrect TIM_DEL setting | Time delay setting < 0 | Set time delay > 0 |
+| Bit 0 | Incorrect TIM_DEL setting | Time delay setting &lt; 0 | Set time delay &gt; 0 |
 | Bit 1 | Reserved | — | — |
 | Bit 2 | Reserved | — | — |
 | Bit 3 | Reserved | — | — |
@@ -1469,7 +1469,7 @@ If pushbuttons IN1 and IN2 are activated within the permitted discrepancy time D
 
 Q is reset to 0 as soon as one of the pushbuttons is released (IN1/IN2 = 0). Enable signal Q can be reset to 1 only if the other pushbutton has been released, and if both pushbuttons are then reactivated within the discrepancy time. Enable signal Q can never be set to 1 if the discrepancy time is set to values less than 0 or greater than 500 ms.
 
-Every call of the "Two-hand monitoring" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., TWO_HAND_DB_1) or a multi-instance (e.g., TWO_HAND_Instance_1) for the "Two-hand monitoring" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Two-hand monitoring" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., TWO_HAND_DB_1) or a multi-instance (e.g., TWO_HAND_Instance_1) for the "Two-hand monitoring" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -1519,7 +1519,7 @@ If pushbuttons IN1 and IN2 are activated within the permitted discrepancy time D
 
 Q is reset to 0 as soon as one of the pushbuttons is released (IN1/IN 2 = 0) or ENABLE = 0. Enable signal Q can be reset to 1 only if the other pushbutton has been released, and if both pushbuttons are then reactivated within the discrepancy time when existing ENABLE = 1.
 
-Every call of the "Two-hand monitoring with enable" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., TWO_H_EN_DB_1) or a multi-instance (e.g., TWO_H_EN_Instance_1) for the "Two-hand monitoring with enable" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Two-hand monitoring with enable" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., TWO_H_EN_DB_1) or a multi-instance (e.g., TWO_H_EN_Instance_1) for the "Two-hand monitoring with enable" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -1541,7 +1541,7 @@ The following table shows the parameters of the instruction:
 | IN1 | Input | BOOL | Pushbutton 1 |
 | IN2 | Input | BOOL | Pushbutton 2 |
 | ENABLE | Input | BOOL | Enable input |
-| DISCTIME | Input | TIME | Discrepancy time (0 to 500 ms)  For productive use, select a discrepancy time > 0 ms. |
+| DISCTIME | Input | TIME | Discrepancy time (0 to 500 ms)  For productive use, select a discrepancy time &gt; 0 ms. |
 | Q | Output | BOOL | 1=Enable |
 | DIAG | Output | BYTE | Non-fail safe service information |
 
@@ -1569,7 +1569,7 @@ The DIAG output provides non-fail-safe information on errors for service purpose
 
 | Bit no. | Assignment | Possible error causes | Remedies |
 | --- | --- | --- | --- |
-| Bit 0 | Incorrect discrepancy time DISCTIME setting | Discrepancy time setting is <0 or > 500 ms | Set discrepancy time in range of 0 to 500 ms |
+| Bit 0 | Incorrect discrepancy time DISCTIME setting | Discrepancy time setting is &lt;0 or &gt; 500 ms | Set discrepancy time in range of 0 to 500 ms |
 | Bit 1 | Discrepancy time elapsed | Discrepancy time setting is too low | If necessary, set a higher discrepancy time |
 | Pushbuttons were not activated within the discrepancy time | Release pushbuttons and activate them within the discrepancy time |  |  |
 | Wiring fault | Check wiring of pushbuttons |  |  |
@@ -1615,7 +1615,7 @@ Muting is a defined suppression of the protective function of light curtains. Li
 
 To utilize the muting function, at least two independently wired muting sensors must be present. The use of two or four muting sensors and correct integration into the production sequence must ensure that no persons enter the danger area while the light curtain is muted.
 
-Every call of the "Muting" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., MUTING_DB_1) or a multi-instance (e.g., MUTING_Instance_1) for the "Muting" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Muting" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., MUTING_DB_1) or a multi-instance (e.g., MUTING_Instance_1) for the "Muting" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -1694,8 +1694,8 @@ Enable signal Q cannot be set to 1 or becomes 0, if:
 - The muting lamp monitoring function responds at input QBAD_MUT
 - Sensor pair 1 (MS_11 and MS_12) or sensor pair 2 (MS_21 and MS_22) is not activated or deactivated during discrepancy time DISCTIM1 or DISCTIM2, respectively
 - The MUTING function is active longer than the maximum muting time TIME_MAX
-- Discrepancy times DISCTIM1 and DISCTIM2 have been set to values < 0 or > 3 s
-- Maximum muting time TIME_MAX has been set to a value< 0 or > 10 min
+- Discrepancy times DISCTIM1 and DISCTIM2 have been set to values &lt; 0 or &gt; 3 s
+- Maximum muting time TIME_MAX has been set to a value&lt; 0 or &gt; 10 min
 
 In the identified cases, output FAULT (group error) is set to 1 (restart inhibit). If the MUTING function is started, it will be terminated and the Muting output becomes 0.
 
@@ -1757,11 +1757,11 @@ The DIAG output provides non-fail-safe information on errors for service purpose
 | Wiring fault | Check wiring of sensors |  |  |
 | Sensors are wired to different F-I/O, and F-I/O fault, channel fault, or communication error, or passivation by means of PASS_ON on an F-I/O | For a solution, see the section "Structure of DIAG", bits 0 to 6 in [DIAG](SIMATIC%20Safety%20-%20Configuring%20and%20Programming.md#diag) |  |  |
 | Discrepancy time setting is too low | If necessary, set a higher discrepancy time |  |  |
-| Discrepancy time setting is < 0 s or > 3 s | Set discrepancy time in range between 0 s and 3 s |  |  |
+| Discrepancy time setting is &lt; 0 s or &gt; 3 s | Set discrepancy time in range between 0 s and 3 s |  |  |
 | Bit 1 | Discrepancy error or incorrect discrepancy time DISCTIM 2 setting for sensor pair 2 | Same as Bit 0 | Same as Bit 0 |
 | Bit 2 | Maximum muting time exceeded or incorrect muting time TIME_MAX setting | Malfunction in production sequence | Malfunction in production sequence eliminated |
 | Maximum muting time setting is too low | If necessary, set a higher maximum muting time |  |  |
-| Muting time setting is < 0 s or > 10 min | Set muting time in range from 0 s to 10 min |  |  |
+| Muting time setting is &lt; 0 s or &gt; 10 min | Set muting time in range from 0 s to 10 min |  |  |
 | Bit 3 | Light curtain interrupted and muting not active | Light curtain is defective | Check light curtain |
 | Wiring fault | Check wiring of light curtain (FREE input) |  |  |
 | F‑I/O fault, channel fault, or communication error, or passivation by means of PASS_ON of F‑I/O of light curtain (FREE input) | For a solution, see the section "Structure of DIAG", bits 0 to 6 in [DIAG](SIMATIC%20Safety%20-%20Configuring%20and%20Programming.md#diag) |  |  |
@@ -1801,7 +1801,7 @@ Muting is a defined suppression of the protective function of light curtains. Li
 
 To utilize the muting function, at least two independently wired muting sensors must be present. The use of two or four muting sensors and correct integration into the production sequence must ensure that no persons enter the danger area while the light curtain is muted.
 
-Every call of the "Parallel muting" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., MUT_P_DB_1) or a multi-instance (e.g., MUT_P_Instance_1) for the "Parallel muting" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Parallel muting" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., MUT_P_DB_1) or a multi-instance (e.g., MUT_P_Instance_1) for the "Parallel muting" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -1864,7 +1864,7 @@ For more information on the use of instruction versions, refer to the help on ST
   > F‑I/O that can promptly detect a wire break after activation of the muting operation must be used (see manual for specific F‑I/O).
 
   ![Schematic sequence of error-free muting procedure with 4 muting sensors (MS_11, MS_12, MS_21, MS_22)](images/166657200651_DV_resource.Stream@PNG-en-US.png)
-- As long as both muting sensors MS_11 and MS_12 continue to be activated, the MUTING function of the instruction causes Q to remain 1 and MUTING to remain 1 (so that the product can pass through the light curtain without causing the machine to stop). Each of the two muting sensors MS_11 and MS_12 may be switched to inactive (t < DISCTIM1) for a short time (apply signal state 0).
+- As long as both muting sensors MS_11 and MS_12 continue to be activated, the MUTING function of the instruction causes Q to remain 1 and MUTING to remain 1 (so that the product can pass through the light curtain without causing the machine to stop). Each of the two muting sensors MS_11 and MS_12 may be switched to inactive (t &lt; DISCTIM1) for a short time (apply signal state 0).
 
   ![Schematic sequence of error-free muting procedure with 4 muting sensors (MS_11, MS_12, MS_21, MS_22)](images/166657451403_DV_resource.Stream@PNG-en-US.png)
 - Muting sensors MS_21 and MS_22 must both be activated (within DISCTIM2) before muting sensors MS_11 and MS_12 are switched to inactive (apply signal state 0). In this way, the instruction retains the MUTING function. (Q = 1, MUTING = 1).
@@ -1900,8 +1900,8 @@ Enable signal Q cannot be set to 1 or becomes 0, if:
 - Light curtain is (being) interrupted and the MUTING function is not enabled by setting input ENABLE to 1
 - Sensor pair 1 (MS_11 and MS_12) or sensor pair 2 (MS_21 and MS_22) is not activated or deactivated during discrepancy time DISCTIM1 or DISCTIM2, respectively
 - The MUTING function is active longer than the maximum muting time TIME_MAX
-- Discrepancy times DISCTIM1 and DISCTIM2 have been set to values < 0 or > 3 s
-- Maximum muting time TIME_MAX has been set to a value< 0 or > 10 min
+- Discrepancy times DISCTIM1 and DISCTIM2 have been set to values &lt; 0 or &gt; 3 s
+- Maximum muting time TIME_MAX has been set to a value&lt; 0 or &gt; 10 min
 - The F-system starts up (regardless of whether or not the light curtain is interrupted, because the F-I/O is passivated after F-system startup and, thus, the FREE input is initially supplied with 0)
 
 In the identified cases, output FAULT (group error) is set to 1 (restart inhibit). If the MUTING function is started, it will be terminated and the Muting output becomes 0.
@@ -1982,11 +1982,11 @@ The DIAG output provides non-fail-safe information on errors for service purpose
 | Wiring fault | Check wiring of sensors |  |  |
 | Sensors are wired to different F-I/O, and F-I/O fault, channel fault, or communication error, or passivation by means of PASS_ON on an F-I/O | For a solution, see the section "Structure of DIAG", bits 0 to 6 in [DIAG](SIMATIC%20Safety%20-%20Configuring%20and%20Programming.md#diag) |  |  |
 | Discrepancy time setting is too low | If necessary, set a higher discrepancy time |  |  |
-| Discrepancy time setting is < 0 s or > 3 s | Set discrepancy time in range between 0 s and 3 s |  |  |
+| Discrepancy time setting is &lt; 0 s or &gt; 3 s | Set discrepancy time in range between 0 s and 3 s |  |  |
 | Bit 1 | Discrepancy error or incorrect discrepancy time DISCTIM 2 setting for sensor pair 2 | Same as Bit 0 | Same as Bit 0 |
 | Bit 2 | Maximum muting time exceeded or incorrect muting time TIME_MAX setting | Malfunction in production sequence | Malfunction in production sequence eliminated |
 | Maximum muting time setting is too low | If necessary, set a higher maximum muting time |  |  |
-| Muting time setting is < 0 s or > 10 min | Set muting time in range from 0 s to 10 min |  |  |
+| Muting time setting is &lt; 0 s or &gt; 10 min | Set muting time in range from 0 s to 10 min |  |  |
 | Bit 3 | Light curtain interrupted and muting not active | ENABLE = 0 | Set ENABLE = 1 |
 | Light curtain is defective | Check light curtain |  |  |
 | Wiring fault | Check wiring of light curtain (FREE input) |  |  |
@@ -2040,9 +2040,9 @@ If the discrepancy between inputs IN1 and IN2 is no longer detected, the discrep
 
 The output ACK_REQ = 1 signals that a user acknowledgment at input ACK is necessary to acknowledge the discrepancy error (cancel the restart inhibit). The instruction sets ACK_REQ = 1 as soon as discrepancy is no longer detected. After acknowledgment or if, prior to acknowledgment, there is once again a discrepancy between inputs IN1 and IN2, the instruction resets ACK_REQ to 0.
 
-Output Q can never be set to 1 if the discrepancy time setting is < 0 or > 60 s. In this case, output DISC_FLT is also set to 1 (restart inhibit). The call interval of the safety program (e.g., OB 35) must be less than the discrepancy time setting.
+Output Q can never be set to 1 if the discrepancy time setting is &lt; 0 or &gt; 60 s. In this case, output DISC_FLT is also set to 1 (restart inhibit). The call interval of the safety program (e.g., OB 35) must be less than the discrepancy time setting.
 
-Every call of the "1oo2 evaluation with discrepancy analysis" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., EV1oo2DI_DB_1) or a multi-instance (e.g., EV1oo2DI_Instance_1) for the "1oo2 evaluation with discrepancy analysis" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "1oo2 evaluation with discrepancy analysis" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., EV1oo2DI_DB_1) or a multi-instance (e.g., EV1oo2DI_Instance_1) for the "1oo2 evaluation with discrepancy analysis" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -2134,7 +2134,7 @@ The DIAG output provides non-fail-safe information on errors for service purpose
 | Wiring fault | Check wiring of sensors |  |  |
 | Sensors are wired to different F‑I/O, and F‑I/O fault, channel fault, or communication error, or passivation by means of PASS_ON on an F‑I/O | For a solution, see the section "Structure of DIAG", bits 0 to 6 in [DIAG](SIMATIC%20Safety%20-%20Configuring%20and%20Programming.md#diag) |  |  |
 | Discrepancy time setting is too low | If necessary, set a higher discrepancy time |  |  |
-| Discrepancy time setting is < 0 s or > 60 s | Set discrepancy time in range between 0 s and 60 s |  |  |
+| Discrepancy time setting is &lt; 0 s or &gt; 60 s | Set discrepancy time in range between 0 s and 60 s |  |  |
 | Bit 1 | For discrepancy errors: last signal state change was at input IN1 | — | — |
 | Bit 2 | For discrepancy errors: last signal state change was at input IN2 | — | — |
 | Bit 3 | Reserved | — | — |
@@ -2185,7 +2185,7 @@ The ACK_REQ = 1 output then signals that a user acknowledgment is necessary at i
 
 To avoid a feedback errors from being detected and acknowledgment from being required when the F-I/O controlled by the Q output are passivated, you need to supply input QBAD_FIO with the QBAD signal of the associated F-I/O or the QBAD_O_xx signal / inverted value status of the associated channel.
 
-Every call of the "Feedback monitoring" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., FDBACK_DB_1) or a multi-instance (e.g., FDBACK_Instance_1) for the "Feedback monitoring" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Feedback monitoring" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., FDBACK_DB_1) or a multi-instance (e.g., FDBACK_Instance_1) for the "Feedback monitoring" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -2251,7 +2251,7 @@ The DIAG output provides non-fail-safe information on errors for service purpose
 
 | Bit no. | Assignment | Possible error causes | Remedies |
 | --- | --- | --- | --- |
-| Bit 0 | Feedback error or incorrect feedback time setting (= state of ERROR) | Feedback time setting < 0 | Set feedback time > 0 |
+| Bit 0 | Feedback error or incorrect feedback time setting (= state of ERROR) | Feedback time setting &lt; 0 | Set feedback time &gt; 0 |
 | Feedback time setting is too low | If necessary, set a higher feedback time |  |  |
 | Wiring fault | Check wiring of actuator and feedback contact |  |  |
 | Actuator or feedback contact is defective | Check actuator and feedback contact |  |  |
@@ -2312,7 +2312,7 @@ Output ACK_REQ = 1 is used to signal that a user acknowledgment is required at i
 
 In order for the instruction to recognize whether inputs IN1 and IN2 are 0 merely due to passivation of the associated F-I/O, you need to supply inputs QBAD_IN1 or QBAD_IN2 with the QBAD signal of the associated F-I/O or QBAD_I_xx signal / inverted value status of the associated channel. Among other things, this will prevent you from having to open the safety door completely prior to an acknowledgment in the event the F-I/O are passivated.
 
-Every call of the "Safety door monitoring" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., SFDOOR_DB_1) or a multi-instance (e.g., SFDOOR_Instance_1) for the "Safety door monitoring" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Safety door monitoring" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., SFDOOR_DB_1) or a multi-instance (e.g., SFDOOR_Instance_1) for the "Safety door monitoring" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -2421,7 +2421,7 @@ A [user acknowledgment](SIMATIC%20Safety%20-%20Configuring%20and%20Programming.m
 
 If you use the instruction ACK_GL, you do not have to provide a user acknowledgment for each F‑I/O of the F-runtime group via the ACK_REI tag of the F‑I/O DB.
 
-Every call of the "Global acknowledgment of all F-I/O of a runtime group" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., ACK_GL_DB_1) or a multi-instance (e.g., ACK_GL_Instance_1) for the "Global acknowledgment of all F-I/O of a runtime group" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Global acknowledgment of all F-I/O of a runtime group" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., ACK_GL_DB_1) or a multi-instance (e.g., ACK_GL_Instance_1) for the "Global acknowledgment of all F-I/O of a runtime group" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -2479,7 +2479,7 @@ You can use the "Generate pulse" instruction to set output Q for a programmed pe
 
 You can query the current time value at the output ET. The time value begins at T#0s and ends when the value of period PT is reached. If period PT is reached and the signal state at input IN is "0", output ET is reset.
 
-Every call of the "Generate pulse" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Timer_DB_1) or a multi-instance (e.g., F_IEC_Timer_Instance_1) for the "Generate pulse" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Generate pulse" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Timer_DB_1) or a multi-instance (e.g., F_IEC_Timer_Instance_1) for the "Generate pulse" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -2493,7 +2493,7 @@ The operating system resets the instances of the "Generate pulse" instruction on
 > The functionality of this instruction differs from the corresponding standard TP instruction in the following points:
 >
 > - If the instruction is called while the time is running with PT = 0 ms, the outputs Q and ET are reset.
-> - If the instruction is called with PT < 0 ms, the outputs Q and ET are reset.
+> - If the instruction is called with PT &lt; 0 ms, the outputs Q and ET are reset.
 >
 > To restart the pulse, a new rising signal edge at input IN is required once PT is greater than 0 again.
 
@@ -2561,7 +2561,7 @@ You use the "Generate on-delay" instruction to delay the setting of output Q by 
 
 You can query the current time value at the output ET. The time value begins at T#0s and ends when the value of period PT is reached. Output ET is reset, as soon as the signal state at input IN changes to "0".
 
-Every call of the "Generate on-delay" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Timer_DB_1) or a multi-instance (e.g., F_IEC_Timer_Instance_1) for the "Generate on-delay" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Generate on-delay" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Timer_DB_1) or a multi-instance (e.g., F_IEC_Timer_Instance_1) for the "Generate on-delay" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -2575,7 +2575,7 @@ The operating system resets the instances of the "Generate on-delay" instruction
 > The functionality of this instruction differs from the corresponding standard TON instruction in the following points:
 >
 > - If the instruction is called while the time is running with PT = 0 ms, the output ET is reset.
-> - If the instruction is called with PT < 0 ms, the outputs Q and ET are reset.
+> - If the instruction is called with PT &lt; 0 ms, the outputs Q and ET are reset.
 >
 > To restart the on-delay, a new rising signal edge at input IN is required once PT is greater than 0 again.
 
@@ -2643,7 +2643,7 @@ You use the "Generate off-delay" instruction to delay the resetting of output Q 
 
 You can query the current time value at the output ET. The time value begins at T#0s and ends when the value of period PT is reached. After time PT has elapsed, output ET remains at its current value until input IN changes back to "1". If input IN changes to "1" before time PT has expired, the output ET is reset to value T#0.
 
-Every call of the "Generate off-delay" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is in inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Timer_DB_1) or a multi-instance (e.g., F_IEC_Timer_Instance_1) for the "Generate off-delay" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Generate off-delay" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is in inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Timer_DB_1) or a multi-instance (e.g., F_IEC_Timer_Instance_1) for the "Generate off-delay" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -2657,7 +2657,7 @@ The operating system resets the instances of the "Generate off-delay" instructio
 > The functionality of this instruction differs from the corresponding standard TOF instruction in the following points:
 >
 > - If the instruction is called while the time is running with PT = 0 ms, the outputs Q and ET are reset.
-> - If the instruction is called with PT < 0 ms, the outputs Q and ET are reset.
+> - If the instruction is called with PT &lt; 0 ms, the outputs Q and ET are reset.
 >
 > To restart the off-delay, another falling signal edge at input IN is required once PT is greater than 0 again.
 
@@ -2737,7 +2737,7 @@ The counter status can be queried at output Q. The signal state at output Q is d
 
 The value at output CV is reset to zero when the signal state at input R changes to "1". As long as signal state "1" exists at input R, the signal state at input CU has no effect on the instruction.
 
-Every call of the "Count up" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Counter_DB_1) or a multi-instance (e.g., F_IEC_Counter_Instance_1) for the "Count up" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Count up" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Counter_DB_1) or a multi-instance (e.g., F_IEC_Counter_Instance_1) for the "Count up" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 The operating system resets the instances of the "Count up" instruction on a startup of the F-system.
 
@@ -2791,7 +2791,7 @@ The counter status can be queried at output Q. When the current count value is l
 
 The value at output CV is set to the value of parameter "PV" when the signal state at input LD changes to "1". As long as signal state "1" exists at input LD, the signal state at input CD has no effect on the instruction.
 
-Every call of the "Count down" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Counter_DB_1) or a multi-instance (e.g., F_IEC_Counter_Instance_1) for the "Count down" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Count down" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Counter_DB_1) or a multi-instance (e.g., F_IEC_Counter_Instance_1) for the "Count down" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 The operating system resets the instances of the "Count down" instruction on a startup of the F-system.
 
@@ -2851,7 +2851,7 @@ The status of the up counter can be queried at output QU. When the current count
 
 The status of the down counter can be queried at output QD. When the current count value is lesser than or equal to zero, output QD delivers signal state "1". In all other cases, the signal state at output QD is "0".
 
-Every call of the "Count up and down" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Counter_DB_1) or a multi-instance (e.g., F_IEC_Counter_Instance_1) for the "Count up and down" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Count up and down" instruction must be assigned a data area in which the instruction data are stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., F_IEC_Counter_DB_1) or a multi-instance (e.g., F_IEC_Counter_Instance_1) for the "Count up and down" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 The operating system resets the instances of the "Count up and down" instruction when the F-system is started up.
 
@@ -2905,17 +2905,17 @@ Output "QD" returns the signal state "1" as long as the current count is less th
 This section contains information on the following topics:
 
 - [CMP ==: Equal (STEP 7 Safety V19)](#cmp-equal-step-7-safety-v19)
-- [CMP <>: Not equal (STEP 7 Safety V19)](#cmp-not-equal-step-7-safety-v19)
-- [CMP >=: Greater or equal (STEP 7 Safety V19)](#cmp-greater-or-equal-step-7-safety-v19)
-- [CMP <=: Less or equal (STEP 7 Safety V19)](#cmp-less-or-equal-step-7-safety-v19)
-- [CMP >: Greater than (STEP 7 Safety V19)](#cmp-greater-than-step-7-safety-v19)
-- [CMP <: Less than (STEP 7 Safety V19)](#cmp-less-than-step-7-safety-v19)
+- [CMP &lt;&gt;: Not equal (STEP 7 Safety V19)](#cmp-not-equal-step-7-safety-v19)
+- [CMP &gt;=: Greater or equal (STEP 7 Safety V19)](#cmp-greater-or-equal-step-7-safety-v19)
+- [CMP &lt;=: Less or equal (STEP 7 Safety V19)](#cmp-less-or-equal-step-7-safety-v19)
+- [CMP &gt;: Greater than (STEP 7 Safety V19)](#cmp-greater-than-step-7-safety-v19)
+- [CMP &lt;: Less than (STEP 7 Safety V19)](#cmp-less-than-step-7-safety-v19)
 
 ### CMP ==: Equal (STEP 7 Safety V19)
 
 #### Description
 
-You can use the "Equal" instruction to determine if the first comparison value (IN1 or <Operand1>) is equal to the second comparison value (IN2 or <Operand2>).
+You can use the "Equal" instruction to determine if the first comparison value (IN1 or &lt;Operand1&gt;) is equal to the second comparison value (IN2 or &lt;Operand2&gt;).
 
 If the condition of the comparison is satisfied, the instruction returns result of logic operation (RLO) "1". If the condition of the comparison is not satisfied, the instruction returns RLO "0".
 
@@ -2926,7 +2926,7 @@ The RLO of the instruction is linked to the RLO of the entire current path as fo
 - By AND, when the comparison instruction is connected in series.
 - By OR, when the comparison instruction is connected in parallel.
 
-Enter the first comparison value (<Operand1>) in the operand placeholder above the instruction. Enter the second comparison value (<Operand2>) in the operand placeholder below the instruction.
+Enter the first comparison value (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the second comparison value (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 #### Parameters
 
@@ -2934,10 +2934,10 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| FBD: IN1  LAD: <Operand1> | Input | INT, DINT, TIME, WORD, (S7-300, S7-400) DWORD | First value to compare |
-| FBD: IN2  LAD: <Operand2> | Input | INT, DINT, TIME, WORD, (S7-300, S7-400) DWORD | Second value to compare |
+| FBD: IN1  LAD: &lt;Operand1&gt; | Input | INT, DINT, TIME, WORD, (S7-300, S7-400) DWORD | First value to compare |
+| FBD: IN2  LAD: &lt;Operand2&gt; | Input | INT, DINT, TIME, WORD, (S7-300, S7-400) DWORD | Second value to compare |
 
-You can select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You can select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example
 
@@ -2956,7 +2956,7 @@ Output "TagOut" is set when the following conditions are fulfilled:
 
 #### Description
 
-You can use the "Not equal" instruction to determine if the first comparison value (IN1 or <Operand1>) is not equal to the second comparison value (IN2 or <Operand2>).
+You can use the "Not equal" instruction to determine if the first comparison value (IN1 or &lt;Operand1&gt;) is not equal to the second comparison value (IN2 or &lt;Operand2&gt;).
 
 If the condition of the comparison is satisfied, the instruction returns result of logic operation (RLO) "1". If the condition of the comparison is not satisfied, the instruction returns RLO "0".
 
@@ -2967,7 +2967,7 @@ The RLO of the instruction is linked to the RLO of the entire current path as fo
 - By AND, when the comparison instruction is connected in series.
 - By OR, when the comparison instruction is connected in parallel.
 
-Enter the first comparison value (<Operand1>) in the operand placeholder above the instruction. Enter the second comparison value (<Operand2>) in the operand placeholder below the instruction.
+Enter the first comparison value (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the second comparison value (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 #### Parameters
 
@@ -2975,10 +2975,10 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| FBD: IN1  LAD: <Operand1> | Input | INT, DINT, TIME, WORD, (S7-300, S7-400) DWORD | First value to compare |
-| FBD: IN2  LAD: <Operand2> | Input | INT, DINT, TIME, WORD, (S7-300, S7-400) DWORD | Second value to compare |
+| FBD: IN1  LAD: &lt;Operand1&gt; | Input | INT, DINT, TIME, WORD, (S7-300, S7-400) DWORD | First value to compare |
+| FBD: IN2  LAD: &lt;Operand2&gt; | Input | INT, DINT, TIME, WORD, (S7-300, S7-400) DWORD | Second value to compare |
 
-You can select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You can select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example
 
@@ -2991,13 +2991,13 @@ The following example shows how the instruction works:
 Output "TagOut" is set when the following conditions are fulfilled:
 
 - "Tag_In1" has signal state "1".
-- The condition of the comparison instruction is fulfilled ("Tag_Value1" <> "Tag_Value2").
+- The condition of the comparison instruction is fulfilled ("Tag_Value1" &lt;&gt; "Tag_Value2").
 
 ### CMP >=: Greater or equal (STEP 7 Safety V19)
 
 #### Description
 
-You can use the "Greater or equal" instruction to determine if the first comparison value (IN1 or <Operand1>) is greater than or equal to the second comparison value (IN2 or <Operand2>). Both comparison values must be of the same data type.
+You can use the "Greater or equal" instruction to determine if the first comparison value (IN1 or &lt;Operand1&gt;) is greater than or equal to the second comparison value (IN2 or &lt;Operand2&gt;). Both comparison values must be of the same data type.
 
 If the condition of the comparison is satisfied, the instruction returns result of logic operation (RLO) "1". If the condition of the comparison is not satisfied, the instruction returns RLO "0".
 
@@ -3008,7 +3008,7 @@ The RLO of the instruction is linked to the RLO of the entire current path as fo
 - By AND, when the comparison instruction is connected in series.
 - By OR, when the comparison instruction is connected in parallel.
 
-Enter the first comparison value (<Operand1>) in the operand placeholder above the instruction. Enter the second comparison value (<Operand2>) in the operand placeholder below the instruction.
+Enter the first comparison value (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the second comparison value (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 #### Parameters
 
@@ -3016,10 +3016,10 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| FBD: IN1  LAD: <Operand1> | Input | INT, DINT, TIME | First value to compare |
-| FBD: IN2  LAD: <Operand2> | Input | INT, DINT, TIME | Second value to compare |
+| FBD: IN1  LAD: &lt;Operand1&gt; | Input | INT, DINT, TIME | First value to compare |
+| FBD: IN2  LAD: &lt;Operand2&gt; | Input | INT, DINT, TIME | Second value to compare |
 
-You can select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You can select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example
 
@@ -3032,13 +3032,13 @@ The following example shows how the instruction works:
 Output "TagOut" is set when the following conditions are fulfilled:
 
 - "Tag_In1" has signal state "1".
-- The condition of the comparison instruction is fulfilled ("Tag_Value1" >= "Tag_Value2").
+- The condition of the comparison instruction is fulfilled ("Tag_Value1" &gt;= "Tag_Value2").
 
 ### CMP <=: Less or equal (STEP 7 Safety V19)
 
 #### Description
 
-You can use the "Less or equal" instruction to determine if the first comparison value (IN1 or <Operand1>) is less than or equal to the second comparison value (IN2 or <Operand2>). Both comparison values must be of the same data type.
+You can use the "Less or equal" instruction to determine if the first comparison value (IN1 or &lt;Operand1&gt;) is less than or equal to the second comparison value (IN2 or &lt;Operand2&gt;). Both comparison values must be of the same data type.
 
 If the condition of the comparison is satisfied, the instruction returns result of logic operation (RLO) "1". If the condition of the comparison is not satisfied, the instruction returns RLO "0".
 
@@ -3049,7 +3049,7 @@ The RLO of the instruction is linked to the RLO of the entire current path as fo
 - By AND, when the comparison instruction is connected in series.
 - By OR, when the comparison instruction is connected in parallel.
 
-Enter the first comparison value (<Operand1>) in the operand placeholder above the instruction. Enter the second comparison value (<Operand2>) in the operand placeholder below the instruction.
+Enter the first comparison value (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the second comparison value (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 #### Parameters
 
@@ -3057,10 +3057,10 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| FBD: IN1  LAD: <Operand1> | Input | INT, DINT, TIME | First value to compare |
-| FBD: IN2  LAD: <Operand2> | Input | INT, DINT, TIME | Second value to compare |
+| FBD: IN1  LAD: &lt;Operand1&gt; | Input | INT, DINT, TIME | First value to compare |
+| FBD: IN2  LAD: &lt;Operand2&gt; | Input | INT, DINT, TIME | Second value to compare |
 
-You can select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You can select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example
 
@@ -3073,13 +3073,13 @@ The following example shows how the instruction works:
 Output "TagOut" is set when the following conditions are fulfilled:
 
 - "Tag_In1" has signal state "1".
-- The condition of the comparison instruction is fulfilled ("Tag_Value1" <= "Tag_Value2").
+- The condition of the comparison instruction is fulfilled ("Tag_Value1" &lt;= "Tag_Value2").
 
 ### CMP >: Greater than (STEP 7 Safety V19)
 
 #### Description
 
-You can use the "Greater than" instruction to determine if the first comparison value (IN1 or <Operand1>) is greater than the second comparison value (IN2 or <Operand2>). Both comparison values must be of the same data type.
+You can use the "Greater than" instruction to determine if the first comparison value (IN1 or &lt;Operand1&gt;) is greater than the second comparison value (IN2 or &lt;Operand2&gt;). Both comparison values must be of the same data type.
 
 If the condition of the comparison is satisfied, the instruction returns result of logic operation (RLO) "1". If the condition of the comparison is not satisfied, the instruction returns RLO "0".
 
@@ -3090,7 +3090,7 @@ The RLO of the instruction is linked to the RLO of the entire current path as fo
 - By AND, when the comparison instruction is connected in series.
 - By OR, when the comparison instruction is connected in parallel.
 
-Enter the first comparison value (<Operand1>) in the operand placeholder above the instruction. Enter the second comparison value (<Operand2>) in the operand placeholder below the instruction.
+Enter the first comparison value (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the second comparison value (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 #### Parameters
 
@@ -3098,10 +3098,10 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| FBD: IN1  LAD: <Operand1> | Input | INT, DINT, TIME | First value to compare |
-| FBD: IN2  LAD: <Operand2> | Input | INT, DINT, TIME | Second value to compare |
+| FBD: IN1  LAD: &lt;Operand1&gt; | Input | INT, DINT, TIME | First value to compare |
+| FBD: IN2  LAD: &lt;Operand2&gt; | Input | INT, DINT, TIME | Second value to compare |
 
-You can select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You can select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example
 
@@ -3114,13 +3114,13 @@ The following example shows how the instruction works:
 Output "TagOut" is set when the following conditions are fulfilled:
 
 - "Tag_In1" has signal state "1".
-- The condition of the comparison instruction is fulfilled ("Tag_Value1" > "Tag_Value2").
+- The condition of the comparison instruction is fulfilled ("Tag_Value1" &gt; "Tag_Value2").
 
 ### CMP <: Less than (STEP 7 Safety V19)
 
 #### Description
 
-You can use the "Less than" instruction to determine if the first comparison value (IN1 or <Operand1>) is less than the second comparison value (IN2 or <Operand2>). Both comparison values must be of the same data type.
+You can use the "Less than" instruction to determine if the first comparison value (IN1 or &lt;Operand1&gt;) is less than the second comparison value (IN2 or &lt;Operand2&gt;). Both comparison values must be of the same data type.
 
 If the condition of the comparison is satisfied, the instruction returns result of logic operation (RLO) "1". If the condition of the comparison is not satisfied, the instruction returns RLO "0".
 
@@ -3131,7 +3131,7 @@ The RLO of the instruction is linked to the RLO of the entire current path as fo
 - By AND, when the comparison instruction is connected in series.
 - By OR, when the comparison instruction is connected in parallel.
 
-Enter the first comparison value (<Operand1>) in the operand placeholder above the instruction. Enter the second comparison value (<Operand2>) in the operand placeholder below the instruction.
+Enter the first comparison value (&lt;Operand1&gt;) in the operand placeholder above the instruction. Enter the second comparison value (&lt;Operand2&gt;) in the operand placeholder below the instruction.
 
 #### Parameters
 
@@ -3139,10 +3139,10 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| FBD: IN1  LAD: <Operand1> | Input | INT, DINT, TIME | First value to compare |
-| FBD: IN2  LAD: <Operand2> | Input | INT, DINT, TIME | Second value to compare |
+| FBD: IN1  LAD: &lt;Operand1&gt; | Input | INT, DINT, TIME | First value to compare |
+| FBD: IN2  LAD: &lt;Operand2&gt; | Input | INT, DINT, TIME | Second value to compare |
 
-You can select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You can select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example
 
@@ -3155,7 +3155,7 @@ The following example shows how the instruction works:
 Output "TagOut" is set when the following conditions are fulfilled:
 
 - "Tag_In1" has signal state "1".
-- The condition of the comparison instruction is fulfilled ("Tag_Value1" < "Tag_Value2").
+- The condition of the comparison instruction is fulfilled ("Tag_Value1" &lt; "Tag_Value2").
 
 ## Math functions
 
@@ -3212,7 +3212,7 @@ The following table shows the parameters of the instruction:
 | IN2 | Input | INT, DINT | Second addend |
 | OUT | Output | INT, DINT | Total |
 
-You select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example for S7-300/400 F-CPUs
 
@@ -3298,7 +3298,7 @@ The following table shows the parameters of the instruction:
 | IN2 | Input | INT, DINT | Subtrahend |
 | OUT | Output | INT, DINT | Difference |
 
-You select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example for S7-300/400 F-CPUs
 
@@ -3380,7 +3380,7 @@ The following table shows the parameters of the instruction:
 | IN2 | Input | INT, DINT | Multiplicand |
 | OUT | Output | INT, DINT | Product |
 
-You select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example for S7-300/400 F-CPUs
 
@@ -3472,7 +3472,7 @@ The following table shows the parameters of the instruction:
 | IN2 | Input | INT, DINT | Divisor |
 | OUT | Output | INT, DINT | Quotient |
 
-You select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example for S7-300/400 F-CPUs
 
@@ -3553,7 +3553,7 @@ The following table shows the parameters of the instruction:
 | IN | Input | INT, DINT | Input value |
 | OUT | Output | INT, DINT | Twos complement of the input value |
 
-You select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example for S7-300/400 F-CPUs
 
@@ -3624,7 +3624,7 @@ The following table shows the parameters of the instruction:
 | IN | Input | INT, DINT | Input value |
 | OUT | Output | INT, DINT | Absolute value of the input value |
 
-You select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example
 
@@ -3868,7 +3868,7 @@ The following table shows the parameters of the instruction:
 | END_ADDR | Input | POINTER | End address of the area in an F-DB |
 | OFFSET | Input | INT | Offset |
 
-You can select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You can select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Examples of parameter assignment of INI_ADDR, END_ADDR, and OFFS
 
@@ -3943,7 +3943,7 @@ The following table shows the parameters of the instruction:
 | OFFSET | Input | INT | Offset |
 | OUT | Output | INT, DINT | Value to be read from the F-DB |
 
-You can select the data type of the instruction in the "<???>" drop-down list in the instruction box.
+You can select the data type of the instruction in the "&lt;???&gt;" drop-down list in the instruction box.
 
 #### Example
 
@@ -3990,7 +3990,7 @@ The following table shows the parameters of the instruction:
 | IN | Input | INT, DINT | Value to be converted. |
 | OUT | Output | INT, DINT | Result of the conversion |
 
-You can select the data types of the instruction in the "<???>" drop-down lists of the instruction box. The supported conversions are from "INT to DINT" and "DINT to INT".
+You can select the data types of the instruction in the "&lt;???&gt;" drop-down lists of the instruction box. The supported conversions are from "INT to DINT" and "DINT to INT".
 
 #### Example
 
@@ -4142,9 +4142,9 @@ As long as the value at input IN is greater than 27648, output OUT is linked to 
 
 As long as the value at input IN is less than 0, output OUT is linked to LO_LIM and OUT_LO is set to 1.
 
-For inverse scaling, you must assign LO_LIM > HI_LIM. With inverse scaling, the output value at output OUT decreases while the input value at input IN increases.
+For inverse scaling, you must assign LO_LIM &gt; HI_LIM. With inverse scaling, the output value at output OUT decreases while the input value at input IN increases.
 
-Every call of the "Scale value" instruction must be assigned a data area in which the instruction data is stored. In addition, when the instruction is inserted in the program, the "Call options" dialog is automatically opened, where you can create a data block (single instance) (e.g., SCALE_DB_1) or a multi-instance (e.g., SCALE_Instance_1) for the "Scale value" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Scale value" instruction must be assigned a data area in which the instruction data is stored. In addition, when the instruction is inserted in the program, the "Call options" dialog is automatically opened, where you can create a data block (single instance) (e.g., SCALE_DB_1) or a multi-instance (e.g., SCALE_Instance_1) for the "Scale value" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -4158,8 +4158,8 @@ The following table shows the parameters of the instruction:
 | HI_LIM | Input | INT | High limit value of value range of OUT |
 | LO_LIM | Input | INT | Low limit value of value range of OUT |
 | OUT | Output | INT | Result of scaling |
-| OUT_HI | Output | BOOL | 1 = Input value > 27648: OUT = HI_LIM |
-| OUT_LO | Output | BOOL | 1 = Input value < 0: OUT = LO_LIM |
+| OUT_HI | Output | BOOL | 1 = Input value &gt; 27648: OUT = HI_LIM |
+| OUT_LO | Output | BOOL | 1 = Input value &lt; 0: OUT = LO_LIM |
 
 #### Instruction versions
 
@@ -4184,7 +4184,7 @@ For more information on the use of instruction versions, refer to the help on ST
 >
 > If other fail-safe values should be output in this case, you need to evaluate the QBAD signal of the associated F-I/O or QBAD_I_xx signal / value status of the corresponding channel.
 >
-> If the value in the PII of the F‑SM is within the overrange or underrange, but is > 27648 or < 0, you can likewise branch to the output of an individual fail‑safe value by evaluating outputs OUT_HI and OUT_LO, respectively.
+> If the value in the PII of the F‑SM is within the overrange or underrange, but is &gt; 27648 or &lt; 0, you can likewise branch to the output of an individual fail‑safe value by evaluating outputs OUT_HI and OUT_LO, respectively.
 
 #### Example
 
@@ -4210,9 +4210,9 @@ As long as the value at input IN is greater than 27648, output OUT is linked to 
 
 As long as the value at input IN is less than 0, output OUT is linked to LO_LIM and OUT_LO is set to 1.
 
-For inverse scaling, you must assign LO_LIM > HI_LIM. With inverse scaling, the output value at output OUT decreases while the input value at input IN increases.
+For inverse scaling, you must assign LO_LIM &gt; HI_LIM. With inverse scaling, the output value at output OUT decreases while the input value at input IN increases.
 
-Every call of the "Scale value to data type DINT" instruction must be assigned a data area in which the instruction data is stored. In addition, when the instruction is inserted in the program, the "Call options" dialog is automatically opened, where you can create a data block (single instance) (e.g., SCALE_D_DB_1) or a multi-instance (e.g., SCALE_D_Instance_1) for the "Scale value to data type DINT" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Scale value to data type DINT" instruction must be assigned a data area in which the instruction data is stored. In addition, when the instruction is inserted in the program, the "Call options" dialog is automatically opened, where you can create a data block (single instance) (e.g., SCALE_D_DB_1) or a multi-instance (e.g., SCALE_D_Instance_1) for the "Scale value to data type DINT" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -4226,8 +4226,8 @@ The following table shows the parameters of the instruction:
 | HI_LIM | Input | DINT | High limit value of value range of OUT |
 | LO_LIM | Input | DINT | Low limit value of value range of OUT |
 | OUT | Output | DINT | Result of scaling |
-| OUT_HI | Output | BOOL | 1 = Input value > 27648: OUT = HI_LIM |
-| OUT_LO | Output | BOOL | 1 = Input value < 0: OUT = LO_LIM |
+| OUT_HI | Output | BOOL | 1 = Input value &gt; 27648: OUT = HI_LIM |
+| OUT_LO | Output | BOOL | 1 = Input value &lt; 0: OUT = LO_LIM |
 
 #### Instruction versions
 
@@ -4250,7 +4250,7 @@ For more information on the use of instruction versions, refer to the help on ST
 >
 > If other fail-safe values should be output in this case, you need to evaluate the QBAD signal of the associated F-I/O or QBAD_I_xx signal / value status of the corresponding channel.
 >
-> If the value in the PII of the F‑SM is within the overrange or underrange, but is > 27648 or < 0, you can likewise branch to the output of an individual fail‑safe value by evaluating outputs OUT_HI and OUT_LO, respectively.
+> If the value in the PII of the F‑SM is within the overrange or underrange, but is &gt; 27648 or &lt; 0, you can likewise branch to the output of an individual fail‑safe value by evaluating outputs OUT_HI and OUT_LO, respectively.
 
 #### Example
 
@@ -4425,7 +4425,7 @@ The following table shows the parameters of the instruction:
 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
-| <Data block> | Input | BLOCK_DB | Data block that is opened |
+| &lt;Data block&gt; | Input | BLOCK_DB | Data block that is opened |
 
 #### "Fully qualified DB access"
 
@@ -4604,7 +4604,7 @@ Enable input "EN" and enable output "ENO" cannot be connected. The instruction i
 >
 > S7-1200/1500:
 >
-> If the value at input N < 0, the output OUT is set to 0.
+> If the value at input N &lt; 0, the output OUT is set to 0.
 
 #### Parameters
 
@@ -4678,7 +4678,7 @@ Enable input "EN" and enable output "ENO" cannot be connected. The instruction i
 >
 > S7-1200/1500:
 >
-> If the value at input N < 0, the output OUT is set to 0.
+> If the value at input N &lt; 0, the output OUT is set to 0.
 
 #### Parameters
 
@@ -4747,7 +4747,7 @@ If an invalid value is input or if in/out parameter IN has not changed to the va
 
 During the time in which in/out parameter IN must change from 6 to the value 9, output Q is set to 1. Otherwise, Q has a value of 0.
 
-Every call of the "Fail-safe acknowledgment" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., ACK_OP_DB_1) or a multi-instance (e.g., ACK_OP_Instance_1) for the "Fail-safe acknowledgment" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Fail-safe acknowledgment" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., ACK_OP_DB_1) or a multi-instance (e.g., ACK_OP_Instance_1) for the "Fail-safe acknowledgment" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 > **Note**
 >
@@ -4797,7 +4797,7 @@ If an invalid value is input or if in/out parameter IN has not changed to the va
 
 During the time in which in/out parameter IN must change from 6 to the value at the ACK_ID input, output Q is set to 1. Otherwise, Q has a value of 0.
 
-Every call of the "Fail-safe acknowledgment" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., ACK_OP_DB_1) or a multi-instance (e.g., ACK_OP_Instance_1) for the "Fail-safe acknowledgment" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of the "Fail-safe acknowledgment" instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., ACK_OP_DB_1) or a multi-instance (e.g., ACK_OP_Instance_1) for the "Fail-safe acknowledgment" instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 > **Note**
 >
@@ -5023,7 +5023,7 @@ You use the SENDDP and RCVDP instructions for fail-safe sending and receiving of
 
 The SENDDP instruction sends 16 data elements of data type BOOL and 2 data elements of data type INT or one data element of the data type DINT (S7-1200, S7-1500) in a fail-safe manner to another F‑CPU via PROFIBUS DP/PROFINET IO. The data can be received there by the related RCVDP instruction.
 
-Every call of this instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g. RCVDP_DB_1) for these instructions. Once it is created, the new data block can be found in the "STEP 7 Safety" folder in the project tree under "Program blocks > System blocks". For more information, refer to the help on STEP 7.
+Every call of this instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g. RCVDP_DB_1) for these instructions. Once it is created, the new data block can be found in the "STEP 7 Safety" folder in the project tree under "Program blocks &gt; System blocks". For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -5094,8 +5094,8 @@ The following table shows the parameters of the SENDDP instruction:
 | LADDR | Input | INT (S7-300, S7-400)  HW_SUBMODULE (S7-1200, S7-1500) | The start address (S7-300, S7-400) or HW identifier (S7-1200, S7-1500) of the address area/transfer area:   - Of DP/DP coupler for safety-related master-master communication - For safety-related master-I-slave communication - For safety-related I-slave-I-slave communication - Of PN/PN coupler for safety-related IO controller-IO controller communication - For safety-related IO controller-I-device communication - For safety-related IO controller-I-slave communication |
 | ERROR | Output | BOOL | 1=Communication error |
 | SUBS_ON | Output | BOOL | 1=RCVDP outputs fail-safe values |
-| RET_DPRD | Output | WORD | Non-fail-safe error code RET_VAL of the DPRD_DAT instruction (for a description of error codes, refer to the help for the DPRD_DAT instruction ("Extended instructions > Distributed I/O > Other")). |
-| RET_DPWR | Output | WORD | Non-fail-safe error code RET_VAL of the DPWR_DAT instruction (for a description of error codes, refer to the help for the DPWR_DAT instruction ("Extended instructions > Distributed I/O > Other")). |
+| RET_DPRD | Output | WORD | Non-fail-safe error code RET_VAL of the DPRD_DAT instruction (for a description of error codes, refer to the help for the DPRD_DAT instruction ("Extended instructions &gt; Distributed I/O &gt; Other")). |
+| RET_DPWR | Output | WORD | Non-fail-safe error code RET_VAL of the DPWR_DAT instruction (for a description of error codes, refer to the help for the DPWR_DAT instruction ("Extended instructions &gt; Distributed I/O &gt; Other")). |
 | DIAG | Output | BYTE | Non-fail safe service information |
 
 ##### RCVDP parameter:
@@ -5124,8 +5124,8 @@ The following table shows the parameters of the RCVDP instruction:
 | RD_I_00 | Output | INT | Receive data INT 00 |
 | RD_I_01 | Output | INT | Receive data INT 01 |
 | RD_DI_00 | Output | DINT | (S7-1200, S7-1500)  (hidden)  Receive data DINT 00 |
-| RET_DPRD | Output | WORD | Non-fail-safe error code RET_VAL of the DPRD_DAT instruction (for a description of error codes, refer to the help for the DPRD_DAT instruction ("Extended instructions > Distributed I/O > Other")). |
-| RET_DPWR | Output | WORD | Non-fail-safe error code RET_VAL of the DPWR_DAT instruction (for a description of error codes, refer to the help for the DPWR_DAT instruction ("Extended instructions > Distributed I/O > Other")). |
+| RET_DPRD | Output | WORD | Non-fail-safe error code RET_VAL of the DPRD_DAT instruction (for a description of error codes, refer to the help for the DPRD_DAT instruction ("Extended instructions &gt; Distributed I/O &gt; Other")). |
+| RET_DPWR | Output | WORD | Non-fail-safe error code RET_VAL of the DPWR_DAT instruction (for a description of error codes, refer to the help for the DPWR_DAT instruction ("Extended instructions &gt; Distributed I/O &gt; Other")). |
 | DIAG | Output | BYTE | Non-fail safe service information |
 
 ##### Instruction versions
@@ -5160,7 +5160,7 @@ After the sending and receiving F-systems are started up, communication must be 
 
 The SENDDP and RCVDP instructions signal this with 1 at output SUBS_ON. The SENDMODE output has default setting "0" and is not updated as long as output SUBS_ON = 1.
 
-As of version V3.0 of the SENDDP and RCVDP instructions, communication is only established when DP_DP_ID <> 0.
+As of version V3.0 of the SENDDP and RCVDP instructions, communication is only established when DP_DP_ID &lt;&gt; 0.
 
 ##### Behavior in the event of communication errors
 
@@ -5264,7 +5264,7 @@ You use the SENDS7 and RCVS7 instructions for fail-safe sending and receiving of
 
 The SENDS7 instruction sends the send data contained in an F-communication DB to the F-communication DB of the associated RCVS7 instruction of another F-CPU in a fail-safe manner using an S7 connection.
 
-Every call of this instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., SENDS7_DB_1) or a multi-instance (e.g., SENDS7_Instance_1) for this instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
+Every call of this instruction must be assigned a data area in which the instruction data is stored. The "Call options" dialog is automatically opened when the instruction is inserted in the program for this reason. There you can create a data block (single instance) (e.g., SENDS7_DB_1) or a multi-instance (e.g., SENDS7_Instance_1) for this instruction. Once it is created, you can find the new data block in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks" or the multi-instance as a local tag in the "Static" section of the block interface. For more information, refer to the help on STEP 7.
 
 Enable input "EN" and enable output "ENO" cannot be connected. The instruction is therefore always executed (regardless of the signal state at enable input "EN").
 
@@ -5316,8 +5316,8 @@ The following table shows the parameters of the SENDS7 instruction:
 | R_ID | Input | DWORD | Network-wide unique value for a F-communication ID between a SENDS7 instruction and a RCVS7 instruction |
 | ERROR | Output | BOOL | 1=Communication error |
 | SUBS_ON | Output | BOOL | 1=Receiving block outputs fail-safe values |
-| STAT_RCV | Output | WORD | Non-fail-safe status parameter STATUS of the URCV instruction (You can find a description of error codes in the help for the URCV instruction ("Communication > S7 Communication")) |
-| STAT_SND | Output | WORD | Non-fail-safe status parameter STATUS of the USEND instruction (You can find a description of error codes in the help for the USEND instruction ("Communication > S7 Communication")) |
+| STAT_RCV | Output | WORD | Non-fail-safe status parameter STATUS of the URCV instruction (You can find a description of error codes in the help for the URCV instruction ("Communication &gt; S7 Communication")) |
+| STAT_SND | Output | WORD | Non-fail-safe status parameter STATUS of the USEND instruction (You can find a description of error codes in the help for the USEND instruction ("Communication &gt; S7 Communication")) |
 | DIAG | Output | BYTE | Non-fail safe service information |
 
 ##### RCVS7 parameter
@@ -5335,8 +5335,8 @@ The following table shows the parameters of the RCVS7 instruction.
 | SUBS_ON | Output | BOOL | 1=Fail-safe values are output |
 | ACK_REQ | Output | BOOL | 1=Acknowledgment for reintegration of send data required |
 | SENDMODE | Output | BOOL | 1=F-CPU with the SENDS7 instruction in disabled safety mode |
-| STAT_RCV | Output | WORD | Non-fail-safe status parameter STATUS of the URCV instruction (You can find a description of error codes in the help for the URCV instruction ("Communication > S7 Communication")) |
-| STAT_SND | Output | WORD | Non-fail-safe status parameter STATUS of the USEND instruction (You can find a description of error codes in the help for the USEND instruction ("Communication > S7 Communication")) |
+| STAT_RCV | Output | WORD | Non-fail-safe status parameter STATUS of the URCV instruction (You can find a description of error codes in the help for the URCV instruction ("Communication &gt; S7 Communication")) |
+| STAT_SND | Output | WORD | Non-fail-safe status parameter STATUS of the USEND instruction (You can find a description of error codes in the help for the USEND instruction ("Communication &gt; S7 Communication")) |
 | DIAG | Output | BYTE | Non-fail safe service information |
 
 ##### Instruction versions

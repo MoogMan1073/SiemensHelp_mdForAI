@@ -430,16 +430,16 @@ Activate the following settings under Windows or Windows Server:
   - IIS management scripts and tools
   - IIS compatibility to IIS metabasis and IIS 6 management
   - Compatibility with WMI for IIS 6
-- WWW Services > Shared HTTP Features:
+- WWW Services &gt; Shared HTTP Features:
 
   - Standard document
   - Static content
-- WWW services > Application development features:
+- WWW services &gt; Application development features:
 
   - ASP
   - ISAPI extensions
   - ISAPI filters
-- WWW services > Security:
+- WWW services &gt; Security:
 
   - Request filter
   - Standard authentication
@@ -452,7 +452,7 @@ Activate the following settings under Windows or Windows Server:
 
 Additionally activate the following settings in Windows 10 or Windows Server 2016:
 
-- WWW services > Application development features:
+- WWW services &gt; Application development features:
 
   - .NET extensibility 3.5
   - .NET extensibility 4.6
@@ -472,7 +472,7 @@ Additionally activate the following settings in Windows 10 or Windows Server 201
 
 ##### Alternative procedure
 
-You can also use the command line "Start > Run > cmd" to install the IIS components located on the installation data carrier:
+You can also use the command line "Start &gt; Run &gt; cmd" to install the IIS components located on the installation data carrier:
 
 pkgmgr.exe /iu:IIS-WebServerRole;IIS-WebServer;IIS-CommonHttpFeatures;IIS-RequestFiltering;IIS-StaticContent;IIS-DefaultDocument;IIS-HttpErrors;IIS-ASPNET;IIS-ASP;IIS-ISAPIExtensions;IIS-ISAPIFilter;IIS-BasicAuthentication;IIS-WindowsAuthentication;IIS-ManagementConsole;IIS-ManagementService;IIS-IIS6ManagementCompatibility;IIS-Metabase;IIS-WMICompatibility;IIS-ManagementScriptingTools
 
@@ -509,7 +509,7 @@ However, MS Message Queuing is not part of the default setting of the Windows in
 
 ##### Windows Procedure
 
-1. Go to "Control Panel > Programs".
+1. Go to "Control Panel &gt; Programs".
 2. Click the "Enable or disable Windows features" button on the left menu bar.
 
    The "Windows Features" dialog box opens.
@@ -599,7 +599,7 @@ To increase the security of the system, change the password for the user regular
 
 For more detailed information, refer to the WinCC/WebNavigator documentation:
 
-- "WinCC/WebNavigator documentation > Configuring the WebNavigator system > Configuring the WebNavigator server > Setting up the WebNavigator website > [WinCC Web Configurator](#wincc-web-configurator-rt-professional)
+- "WinCC/WebNavigator documentation &gt; Configuring the WebNavigator system &gt; Configuring the WebNavigator server &gt; Setting up the WebNavigator website &gt; [WinCC Web Configurator](#wincc-web-configurator-rt-professional)
 
 ##### Result
 
@@ -642,7 +642,7 @@ You can also install the WebNavigator Client additionally on the WebNavigator se
 >
 > The .Net controls must not be copied into the Windows folder "Common Files". Use the following path instead:
 >
-> - <installation directory>WinCC\WebNavigator\Client\bin
+> - &lt;installation directory&gt;WinCC\WebNavigator\Client\bin
 
 ##### WinCCViewerRT
 
@@ -763,15 +763,15 @@ The settings given predefined in the table are used under the following conditio
 
 | Information | Parameters |
 | --- | --- |
-| Target directory for the WebNavigator client | INSTALLDIR=" <syspath1>\Siemens\Automation\SCADA-RT_V11\WinCC\WebNavigator" |
-| Target directory for common components | COMMONDIR=" <syspath2>\Siemens " |
+| Target directory for the WebNavigator client | INSTALLDIR=" &lt;syspath1&gt;\Siemens\Automation\SCADA-RT_V11\WinCC\WebNavigator" |
+| Target directory for common components | COMMONDIR=" &lt;syspath2&gt;\Siemens " |
 | User information / user name | USER |
 | User information / organization | COMPANYNAME |
 
-The "<syspath?>" parameter is derived from the setting in the registry under the key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion":
+The "&lt;syspath?&gt;" parameter is derived from the setting in the registry under the key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion":
 
-- "<syspath1>" corresponds to the key "ProgramFilesDir" e.g. "C:\\Program Files"
-- "<syspath2>" corresponds to the key "CommonFilesDir", e.g. "C:\\Program Files\\Common Files"
+- "&lt;syspath1&gt;" corresponds to the key "ProgramFilesDir" e.g. "C:\\Program Files"
+- "&lt;syspath2&gt;" corresponds to the key "CommonFilesDir", e.g. "C:\\Program Files\\Common Files"
 
 ##### Example of a configuration file "options.ini" for Windows
 
@@ -817,7 +817,7 @@ To have the full functionality available on the WebNavigator client, you need to
 
 ##### Procedure
 
-1. Click "Tools" > "Internet Options" in the Internet Explorer.
+1. Click "Tools" &gt; "Internet Options" in the Internet Explorer.
 2. Select the "Security" tab. Select the corresponding zone, e.g. "Local Intranet" or "Internet".
 
    ![Procedure](images/27041231243_DV_resource.Stream@PNG-en-US.png)
@@ -1016,7 +1016,7 @@ The following configurations are required to set up a WebNavigator system:
    - Create users for WebNavigator client access
    - Observe restrictions
    - Compiling a project
-2. Transfer your WinCC project to the server PC. If the configuration PC and the WebNavigator server are interconnected, transfer the WinCC project using the command "Load to device > Software (all)".
+2. Transfer your WinCC project to the server PC. If the configuration PC and the WebNavigator server are interconnected, transfer the WinCC project using the command "Load to device &gt; Software (all)".
 3. Configure the WebNavigator Web page on the WebNavigator server.
 4. Operate the WinCC project.
 
@@ -1038,7 +1038,7 @@ This section contains information on the following topics:
 ##### Configuring individual WinCC screens for Web access
 
 1. Double-click the desired screen in the project tree. The screen opens and the screen properties are shown in the Inspector window.
-2. In the Inspector window, click "Properties > Properties > Web access".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Web access".
 3. Activate "Web access".
 
 or
@@ -1094,10 +1094,10 @@ The following operating systems support gadgets:
 To configure WinCC screens as a gadget, proceed as follows:
 
 1. Double-click the desired screen in the project tree. The screen is opened and the screen properties are shown in the Inspector window.
-2. In the Inspector window, click "Properties > Properties > Web access".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Web access".
 3. Enable "Gadget" and "Web access".
 4. Save the WinCC project.
-5. Select the "Compile > Software" command in the shortcut menu of the HMI device.
+5. Select the "Compile &gt; Software" command in the shortcut menu of the HMI device.
 
 ###### Result
 
@@ -1150,7 +1150,7 @@ You can configure the behavior in runtime in the "Runtime settings" editor.
 
 ##### Procedure
 
-1. Open the "Runtime Settings > Web Navigator" editor.
+1. Open the "Runtime Settings &gt; Web Navigator" editor.
 
    ![Procedure](images/96374677771_DV_resource.Stream@PNG-en-US.png)
 2. To use the "WinCC Classic" design, activate "Use "WinCC-classic" design".
@@ -1215,7 +1215,7 @@ This allows you to make various sections of a project immediately accessible or 
 1. Double-click the "Runtime settings" editor in the project window.
 2. Click "User administration".
 3. In the "Users" tab, select a user for whom you want to make the settings.
-4. In the Inspector window, select "Properties > Properties > Web options".
+4. In the Inspector window, select "Properties &gt; Properties &gt; Web options".
 5. Under "WebNavigator settings", click the ![Procedure](images/30890839819_DV_resource.Stream@PNG-de-DE.png) button in the "Start screen" selection list.
 
    A dialog box for selecting the start screen opens.
@@ -1244,11 +1244,11 @@ Alternatively, you can make these settings in the shortcut menu by selecting the
 
 > **Note**
 >
-> By default, the WebNavigator licenses are used for WebUX. If you want to use these licenses separately, clear the "Use WebNavigator licenses for WebUX" check box under "Runtime settings > Web access".
+> By default, the WebNavigator licenses are used for WebUX. If you want to use these licenses separately, clear the "Use WebNavigator licenses for WebUX" check box under "Runtime settings &gt; Web access".
 
 > **Note**
 >
-> Users can now also log off manually from the WebNavigator client using the ODK function "PWRTLogout()". You can find one description of the function in the Runtime API documentation under "Functions of the user administration > Functions for logon, logoff".
+> Users can now also log off manually from the WebNavigator client using the ODK function "PWRTLogout()". You can find one description of the function in the Runtime API documentation under "Functions of the user administration &gt; Functions for logon, logoff".
 
 ##### Administration of user groups for the WebNavigator client (RT Professional)
 
@@ -1277,7 +1277,7 @@ This allows you to make various sections of a project immediately accessible or 
 1. Double-click the "Runtime settings" editor in the project window.
 2. Click "User administration".
 3. In the "User groups" tab, select the user group "Web operators".
-4. In the Inspector window, select "Properties > Properties > Web options".
+4. In the Inspector window, select "Properties &gt; Properties &gt; Web options".
 5. Under "WebNavigator settings", click the ![Procedure](images/30890839819_DV_resource.Stream@PNG-de-DE.png) button in the "Start screen" selection list.
 
    A dialog box for selecting the start screen opens.
@@ -1335,7 +1335,7 @@ Depending on the language and components, only specific characters are permitted
 >
 > . , ; : ! ? " '   
 > + = / \ @ *   
-> [ ] { } < >  
+> [ ] { } &lt; &gt;  
 > space  
 > Uppercase and lowercase are relevant in the project names.
 
@@ -1357,7 +1357,7 @@ Depending on the language and components, only specific characters are permitted
 
 #### Online transfer
 
-Transfer the WinCC project using the command "Load to device > Software (all)". The project is compiled prior to the download. The screens are adapted for access via Intranet/Internet during compilation.
+Transfer the WinCC project using the command "Load to device &gt; Software (all)". The project is compiled prior to the download. The screens are adapted for access via Intranet/Internet during compilation.
 
 During the download to the server PC, the configured WinCC project is transferred and the screens are published on the WebNavigator server. For more information, refer to "[Compiling and loading](Compiling%20and%20loading%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#runtime-professional-rt-professional)".
 
@@ -1398,7 +1398,7 @@ The Internet Information Service (IIS) is set up and managed with the WinCC Web 
 
 ###### Starting WinCC Web Configurator:
 
-In the Start menu, select "Start > All Programs > Siemens Automation > Option and Tools > HMI Tools" > WinCC Web Configurator".
+In the Start menu, select "Start &gt; All Programs &gt; Siemens Automation &gt; Option and Tools &gt; HMI Tools" &gt; WinCC Web Configurator".
 
 ###### Initial configuration with the WinCC Web Configurator
 
@@ -1431,7 +1431,7 @@ The Web Configurator automatically detects whether a configuration already exist
 >   - Exit the IIS console.
 >   - To delete the WebNavigator website, enter the following command line in the Windows "Run" window:
 >
->     "<wincc_installation_path>\WebNavigator\Server\bin\WinCCWebConfigurator.exe" deinstall="yes".
+>     "&lt;wincc_installation_path&gt;\WebNavigator\Server\bin\WinCCWebConfigurator.exe" deinstall="yes".
 >   - Start the desired website in the IIS console, for example, the standard website.
 
 ###### Internal user "WNUSR_DC92D7179E29"
@@ -1606,7 +1606,7 @@ To set up the firewall for a standard port, proceed as follows:
 
 Proceed as follows to check the activated website:
 
-1. In the Start menu, select "Programs" > "Administrative Tools" > "Internet Services Manager".
+1. In the Start menu, select "Programs" &gt; "Administrative Tools" &gt; "Internet Services Manager".
 
    ![Procedure](images/23020422539_DV_resource.Stream@PNG-en-US.png)
 
@@ -1644,7 +1644,7 @@ The following restrictions apply to the WebNavigator Client:
 - The message archive and message system can only be operated and monitored.
 - "Alarm view" does not support the property "Loop-in alarm".
 
-  For the correct display of message blocks, the "Apply project settings" option cannot be activated. You will find the option in the "Alarm view" Inspector window under "Properties > Properties > Blocks".
+  For the correct display of message blocks, the "Apply project settings" option cannot be activated. You will find the option in the "Alarm view" Inspector window under "Properties &gt; Properties &gt; Blocks".
 - The hotkeys configured in WinCC are not supported. Operator control using the tab key is supported.
 - National special characters in names of process pictures or referenced graphics are not supported on the Internet.
 - The overlap lock in process pictures is not supported.
@@ -2339,14 +2339,14 @@ This section contains information on the following topics:
 
 Set up WinCCViewerRT as follows:
 
-1. In the Start menu, select "Start > All Programs > Siemens Automation > Option and Tools > HMI Tools" > WinCCViewerRT".
+1. In the Start menu, select "Start &gt; All Programs &gt; Siemens Automation &gt; Option and Tools &gt; HMI Tools" &gt; WinCCViewerRT".
 2. Enter the logon data in the "General" tab:
 
    ![Procedure](images/25756275595_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/25756275595_DV_resource.Stream@PNG-en-US.png)
 
-   - Server address: http://<server name>, or http://<IP address>
+   - Server address: http://&lt;server name&gt;, or http://&lt;IP address&gt;
    - User name and password
 3. In the "Parameters" tab, specify the Runtime language and whether to disable keystrokes that the operator uses to change to other programs.
 4. Define the WinCC Runtime Professional properties in the "Graphics Runtime" tab:
@@ -2359,8 +2359,8 @@ Set up WinCCViewerRT as follows:
 
    - Automatic logout
    - Enable screen keyboard.
-   - Use <Ctrl+Alt+Del> to switch to the Task Manager and to the operating system. This setting is only valid for the on-screen keyboard.
-   - Open the "WinCCRTViewer" by means of keystroke. You can change the default keystroke <Ctrl+Alt+P>.
+   - Use &lt;Ctrl+Alt+Del&gt; to switch to the Task Manager and to the operating system. This setting is only valid for the on-screen keyboard.
+   - Open the "WinCCRTViewer" by means of keystroke. You can change the default keystroke &lt;Ctrl+Alt+P&gt;.
    - Define the printer via which you can print with the configured print job from the WinCC Controls.
 
      Alternatively, you can print the print job using the "RPTJobPrint" function. A preview via "RPTJobPreview" is not possible on the Web client.
@@ -2371,7 +2371,7 @@ Set up WinCCViewerRT as follows:
 
 WinCCViewerRT is configured. When the dialog is closed, the connection to the WebNavigator server is established. The settings are saved to the configuration file "WinCCViewerRT.xml". The settings in the configuration file are used at the next start of WinCCViewerRT.
 
-The configuration file is stored in the directory "C:\Users\<User name>\Appdata\LocalLow\Siemens\SIMATIC.WinCC\WebNavigator\Client" . Under <User name>, enter the name of the user logged-on when the file is created. This allows different configurations to be used, depending on the logged on user. WinCCViewerRT applies the interface language from WinCC.
+The configuration file is stored in the directory "C:\Users\&lt;User name&gt;\Appdata\LocalLow\Siemens\SIMATIC.WinCC\WebNavigator\Client" . Under &lt;User name&gt;, enter the name of the user logged-on when the file is created. This allows different configurations to be used, depending on the logged on user. WinCCViewerRT applies the interface language from WinCC.
 
 **Renaming or removing WinCCViewerRT.xml**
 
@@ -2401,12 +2401,12 @@ When you rename or remove the file WinCCViewerRT.xml, the configuration dialog o
 
 To view screens, proceed as follows:
 
-1. In the Start menu, select "Start > All Programs > Siemens Automation > Option and Tools > HMI Tools" > WinCCViewerRT".
+1. In the Start menu, select "Start &gt; All Programs &gt; Siemens Automation &gt; Option and Tools &gt; HMI Tools" &gt; WinCCViewerRT".
 2. Log on to the WebNavigator server:
 
    - If the user and password are configured in the "WinCCViewerRT" dialog, no logon dialog displayed.
    - If no user and password was configured in the "WinCCViewerRT" dialog, the logon dialog displayed. Enter the user name and password of the WinCC user. Click "OK".
-3. Press the <Ctrl+Alt+P> keystroke to change the user. The "WinCCViewerRT" dialog opens.
+3. Press the &lt;Ctrl+Alt+P&gt; keystroke to change the user. The "WinCCViewerRT" dialog opens.
 
    Enter the user name and password in the "General" tab.
 
@@ -2526,8 +2526,8 @@ The Web Navigation interface combines various Web functions. The various functio
 
 When logging onto the WebNavigator server, the user can determine - through the address entered in Internet Explorer - whether he logs on via the Web navigation interface or the start page configured in the WinCC project.
 
-- The address "http://<server_name>/webnavigator" opens the start page configured in the User Administrator following the logon.
-- The address "http://<server_name>/webnavigator/maincontrol.asp" starts the Web navigation interface.
+- The address "http://&lt;server_name&gt;/webnavigator" opens the start page configured in the User Administrator following the logon.
+- The address "http://&lt;server_name&gt;/webnavigator/maincontrol.asp" starts the Web navigation interface.
 
 ###### Change of the Server
 
@@ -2550,7 +2550,7 @@ The "Download Plug-Ins" menu command provides plug-ins that have been stored on 
 
 **Languages**
 
-Adjustment of language options may be facilitated by adjusting the "Menu.xml" file. The languages are stored as CSV files on the WebNavigator server in the folder "_languages / <language_identifier>". When adding, these language files have to be referenced in the file "maincontrol.asp".
+Adjustment of language options may be facilitated by adjusting the "Menu.xml" file. The languages are stored as CSV files on the WebNavigator server in the folder "_languages / &lt;language_identifier&gt;". When adding, these language files have to be referenced in the file "maincontrol.asp".
 
 #### Diagnosis of the Connections with "Status.html" (RT Professional)
 
@@ -2638,9 +2638,9 @@ The application is saved to the folder "...\Common Files\Siemens\BIN\". The hard
 
 #### Examples of the command line
 
-"C:\Program Files\Common Files\Siemens\BIN\PrtScr.exe" –infinit –hotkey="<ALT>+p"
+"C:\Program Files\Common Files\Siemens\BIN\PrtScr.exe" –infinit –hotkey="&lt;ALT&gt;+p"
 
-Starts PrtScr.exe and waits for the <ALT>+p keystroke. The entire screen is printed when you press the keystroke.
+Starts PrtScr.exe and waits for the &lt;ALT&gt;+p keystroke. The entire screen is printed when you press the keystroke.
 
 #### Parameters
 
@@ -2652,7 +2652,7 @@ Starts PrtScr.exe and waits for the <ALT>+p keystroke. The entire screen is prin
 | -nomcp | Starts PrtScr.exe , creates the hardcopy, and closes PrtScr.exe. |
 | /C= left;top;right;bottom | Starts PrtScr, directly triggers a hardcopy of the specified screen area, and then ends PrtScr.exe ( |
 | -l | Prints in landscape format. |
-| -hotkey="x" | Specifies the keystroke.   Valid characters and combinations:   <ALT>, <SHIFT>,<CTRL> +  {0-9, A-Z, 0xXX}  The hexadecimal notation "0xXX" can be used to specify the "Virtual Key Code". For more information on "Virtual-Key Codes", refer to the MSDN Library. |
+| -hotkey="x" | Specifies the keystroke.   Valid characters and combinations:   &lt;ALT&gt;, &lt;SHIFT&gt;,&lt;CTRL&gt; +  {0-9, A-Z, 0xXX}  The hexadecimal notation "0xXX" can be used to specify the "Virtual Key Code". For more information on "Virtual-Key Codes", refer to the MSDN Library. |
 
 ## Setting up terminal services for Web Navigator (RT Professional)
 
@@ -2717,7 +2717,7 @@ The terminal server is installed.
 
 To set up a user for access to the terminal server, proceed as follows:
 
-1. Go to "Control Panel > Administrative Tools > Computer Management > Local Users and Groups".
+1. Go to "Control Panel &gt; Administrative Tools &gt; Computer Management &gt; Local Users and Groups".
 2. Select "New User" from the "Users" shortcut menu. The "New User" dialog is opened.
 3. Click the "User" icon. Double-click the corresponding user. The user properties dialog opens.
 4. Click the "Member of" tab. Click "Add". The "Select Group" dialog opens.
@@ -2736,7 +2736,7 @@ To set up a user for access to the terminal server, proceed as follows:
 
 To start an application on the terminal server from the terminal client, proceed as follows:
 
-1. On the terminal client, from the Start menu select the menu command "Programs" > Accessories > Communication > Remote Desktop Connection". The "Remote Desktop Connection" dialog opens.
+1. On the terminal client, from the Start menu select the menu command "Programs" &gt; Accessories &gt; Communication &gt; Remote Desktop Connection". The "Remote Desktop Connection" dialog opens.
 2. Enter the name of the terminal server.
 3. Click the "Connect" button. Log on as the user who was created for access to the terminal server.
 
@@ -2776,4 +2776,4 @@ Make sure the correct Web site is activated on the PC running the Web Navigator 
 You have edited a new screen in the "Screens" editor.
 
 - Compile and load the screen on the server PC.
-- Delete the temporary Internet files in the Internet Explorer via "Tools" > "Internet Options".
+- Delete the temporary Internet files in the Internet Explorer via "Tools" &gt; "Internet Options".

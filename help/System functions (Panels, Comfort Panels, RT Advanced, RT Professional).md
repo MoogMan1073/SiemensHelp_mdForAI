@@ -249,7 +249,7 @@ Name of the file which contains the passwords or to which the passwords are writ
 
 > **Note**
 >
-> If a storage card is used as file location, specify the file location as follows: "\StorageCard\<FileName".
+> If a storage card is used as file location, specify the file location as follows: "\StorageCard\&lt;FileName".
 
 **Direction**
 
@@ -287,7 +287,7 @@ Can be used if the configured device supports user-defined functions. For additi
 
 The structure of the transferred "Screen" parameter must correspond to that formed by the graphics system for screen paths:
 
-<Screen_name>.<Screen_window_name>:<Screen_name>.<Screen_window_name>:<Screen_name>...
+&lt;Screen_name&gt;.&lt;Screen_window_name&gt;:&lt;Screen_name&gt;.&lt;Screen_window_name&gt;:&lt;Screen_name&gt;...
 
 If you use the object list in the function list to specify the parameter, the screen name is entered instead of the screen path.
 
@@ -337,7 +337,7 @@ Can be used if the configured device supports user-defined functions. For additi
 
 The structure of the transferred "Screen" parameter must correspond to that formed by the graphics system for screen paths:
 
-<Screen_name>.<Screen_window_name>:<Screen_name>.<Screen_window_name>:<Screen_name>...
+&lt;Screen_name&gt;.&lt;Screen_window_name&gt;:&lt;Screen_name&gt;.&lt;Screen_window_name&gt;:&lt;Screen_name&gt;...
 
 If you use the object list in the function list to specify the parameter, the screen name is entered instead of the screen path.
 
@@ -564,7 +564,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -665,7 +665,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -878,7 +878,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -974,7 +974,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -1062,7 +1062,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "&bSaved &Chr(13)&"New Value: "&bValue
+strResult="Old Value: "&amp;bSaved &amp;Chr(13)&amp;"New Value: "&amp;bValue
 
 myOutputField.Text=strResult
 
@@ -1164,7 +1164,7 @@ bValue=myTag.Value
 
 'Output result old and new value:
 
-strResult="Old Value: "& bSaved & "New Value: " & bValue
+strResult="Old Value: "&amp; bSaved &amp; "New Value: " &amp; bValue
 
 myOutputField.Text=strResult
 

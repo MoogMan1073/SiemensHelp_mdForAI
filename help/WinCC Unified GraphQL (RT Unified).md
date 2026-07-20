@@ -143,9 +143,9 @@ The character " is an escape sequence in the Runtime system and Apollo Studio. T
 
 You can find more information on GraphQL here:
 
-- About GraphQL in general: <https://graphql.org/>
-- About Apollo Studio: <https://www.apollographql.com/>
-- Solutions to technical problems concerning GraphQL: <https://stackoverflow.com/>
+- About GraphQL in general: [https://graphql.org/](https://graphql.org/)
+- About Apollo Studio: [https://www.apollographql.com/](https://www.apollographql.com/)
+- Solutions to technical problems concerning GraphQL: [https://stackoverflow.com/](https://stackoverflow.com/)
 
 ## Quick start (RT Unified)
 
@@ -186,7 +186,7 @@ To follow the instructions and examples of the quick start, the following genera
 1. Start a web browser on a device that has access to the runtime server.
 2. Enter the following address in the address line and press Enter:
 
-   <https://studio.apollographql.com/sandbox/explorer>
+   [https://studio.apollographql.com/sandbox/explorer](https://studio.apollographql.com/sandbox/explorer)
 
    Apollo Studio opens:
 
@@ -365,7 +365,7 @@ In addition to the general requirements, the following is required:
 3. Enter the following header data:
 
    - Key: "Authorization"
-   - Value: "Bearer <Token ID from the login response>"
+   - Value: "Bearer &lt;Token ID from the login response&gt;"
 4. Activate the header.
 
    ![Procedure](images/159397435275_DV_resource.Stream@PNG-de-DE.png)
@@ -474,7 +474,7 @@ See also [Using the syntax highlighting and autocompletion functions of Apollo](
 | Line | Description |
 | --- | --- |
 | 1 | The operation type of the requested operation, in this example: `query` |
-| 3 | Name of the requested operation and list of input parameters in the following format:  (<Name_Parameter1>: "<Value>", <Name_Parameter2>: "<Value>") |
+| 3 | Name of the requested operation and list of input parameters in the following format:  (&lt;Name_Parameter1&gt;: "&lt;Value&gt;", &lt;Name_Parameter2&gt;: "&lt;Value&gt;") |
 | 4 to 19 | The selection set with the attributes requested from the server |
 
 > **Note**
@@ -490,10 +490,10 @@ The selection set is where you specify for the operation request which attribute
 Notation:  
 `Operation name ( <Input parameter>) {<Selection set> }`
 
-Where <Selection set> stands for a comma-separated list of the attribute names requested by the server.
+Where &lt;Selection set&gt; stands for a comma-separated list of the attribute names requested by the server.
 
 Specification of type-based attributes:   
-<Name of type-based attribute> { <Comma-separated list of attribute names> }
+&lt;Name of type-based attribute&gt; { &lt;Comma-separated list of attribute names&gt; }
 
 Example of type-based attributes: The attributes `value`, `quality` and `error` from the selection set above.
 
@@ -723,7 +723,7 @@ writeTagValues(
 
   > **Note**
   >
-  > The WebSocket protocol is not activated by WinCC Unified Setup. Activate it manually if necessary: "Enable or Disable Windows Features > Internet Information Services > WWW Services > Application Development Features > WebSocket Protocol".
+  > The WebSocket protocol is not activated by WinCC Unified Setup. Activate it manually if necessary: "Enable or Disable Windows Features &gt; Internet Information Services &gt; WWW Services &gt; Application Development Features &gt; WebSocket Protocol".
 
 ##### Description
 
@@ -984,7 +984,7 @@ enableAlarms(
 | Operation name | `disableAlarms` | `enableAlarms` |
 | Operation type | `mutation` |  |
 | Function | Disables the alarms specified in the input parameter `names`. | Enables the alarms specified in the input parameter `names`. |
-| Input parameters | `names`:  - Mandatory parameter - Data type: `[String]` - The fully qualified name of one or more configured alarms.   The alarms are disabled or enabled.   Specify the fully qualified name of a configured alarm:   - Alarm of a tag: <System name>::<Tag name>:<Alarm name>   - Alarm of an element of a structure tag or array: <System name>::<Tag name>.<Element path>:<Alarm name> Delimiter for the components of the element path: "." |  |
+| Input parameters | `names`:  - Mandatory parameter - Data type: `[String]` - The fully qualified name of one or more configured alarms.   The alarms are disabled or enabled.   Specify the fully qualified name of a configured alarm:   - Alarm of a tag: &lt;System name&gt;::&lt;Tag name&gt;:&lt;Alarm name&gt;   - Alarm of an element of a structure tag or array: &lt;System name&gt;::&lt;Tag name&gt;.&lt;Element path&gt;:&lt;Alarm name&gt; Delimiter for the components of the element path: "." |  |
 | Selection set | Mandatory specification  Specify which attributes the server returns for the queried alarms. You can request the attributes defined in the `AlarmMutationResult` type.   For information on the notation, see section [Structure of a client query](#structure-of-a-client-query-rt-unified). |  |
 | Server response | Supplies the attributes requested in the selection set for the alarms as key-value pairs of a JSON data record. |  |
 | Error messages (`code` and `description`) | - `0:`    `Success` - `2:`    `Cannot resolve provided name` |  |
@@ -1017,7 +1017,7 @@ names: [String]
 | Operation name | `shelveAlarms` | `unshelveAlarms` |
 | Operation type | `mutation` |  |
 | Function | Shelves the alarms. The attribute `suppressionState` of the alarms is set to `0x2 Shelved`.  If the GraphQL client has subscribed to one of the shelved alarms, the client receives a notification on the shelving.   The shelved alarms are still available and logged in the system. If the Graph QL client has subscribed a shelved alarm, it keeps receiving notifications on changes at the alarm from the Runtime system.  The implementation of the GraphQL client controls how the client:  - Deals with notifications about subscribed shelved alarms, for example. whether to suppress them. - Deals with operation calls that include shelved alarms, for example whether to disallow read access to these alarms. | Cancels the shelving of the alarms again. This creates a log entry. |
-| Input parameters | `names`:  - Mandatory parameter - Data type: `[String]` - The fully qualified name of one or more configured alarms.   The active alarm instances of these alarms are shelved or their shelving is canceled.   Specify the fully qualified name of a configured alarm:   - Alarm of a tag: <System name>::<Tag name>:<Alarm name>   - Alarm of an element of a structure tag or array: <System name>::<Tag name>.<Element path>:<Alarm name> Delimiter for the components of the element path: "." |  |
+| Input parameters | `names`:  - Mandatory parameter - Data type: `[String]` - The fully qualified name of one or more configured alarms.   The active alarm instances of these alarms are shelved or their shelving is canceled.   Specify the fully qualified name of a configured alarm:   - Alarm of a tag: &lt;System name&gt;::&lt;Tag name&gt;:&lt;Alarm name&gt;   - Alarm of an element of a structure tag or array: &lt;System name&gt;::&lt;Tag name&gt;.&lt;Element path&gt;:&lt;Alarm name&gt; Delimiter for the components of the element path: "." |  |
 | `shelveTimeout`:  - Optional - Time interval after which the shelving of the alarms is automatically canceled.   Must not be greater than the timeout configured in Runtime.    If no value is transferred, the timeout configured for Runtime is used. - Data type: Timespan | - |  |
 | Selection set | Mandatory specification  Specify which attributes the server returns for the queried alarms. You can request the attributes defined in the `AlarmMutationResult` type.  For information on the notation, see section [Type "AlarmMutationResult"](#type-alarmmutationresult-rt-unified). |  |
 | Server response | Supplies the attributes requested in the selection set for the alarms as key-value pairs of a JSON data record. |  |
@@ -1038,7 +1038,7 @@ names: [String]
 
   > **Note**
   >
-  > The WebSocket protocol is not activated by WinCC Unified Setup. Activate it manually if necessary: "Enable or Disable Windows Features > Internet Information Services > WWW Services > Application Development Features > WebSocket Protocol".
+  > The WebSocket protocol is not activated by WinCC Unified Setup. Activate it manually if necessary: "Enable or Disable Windows Features &gt; Internet Information Services &gt; WWW Services &gt; Application Development Features &gt; WebSocket Protocol".
 
 ##### Description
 
@@ -1142,8 +1142,8 @@ Operators permitted in `filterString`:
 
 | Symbol | Meaning |
 | --- | --- |
-| > |  |
-| > |  |
+| &gt; |  |
+| &gt; |  |
 | = |  |
 | LIKE |  |
 | () | For grouping of expressions |
@@ -1157,8 +1157,8 @@ Operators permitted in `filterString`:
 >
 > `path` is the full name of the alarm. It has the following components:
 >
-> - Alarm of a tag: <System name>::<Tag name>:<Alarm name>
-> - Alarm of an element of a structure tag or array: <System name>::<Tag name>.<Element path>:<Alarm name>
+> - Alarm of a tag: &lt;System name&gt;::&lt;Tag name&gt;:&lt;Alarm name&gt;
+> - Alarm of an element of a structure tag or array: &lt;System name&gt;::&lt;Tag name&gt;.&lt;Element path&gt;:&lt;Alarm name&gt;
 >
 >   Delimiter for the components of the element path: "."
 >
@@ -1520,7 +1520,7 @@ The data type has the following attributes:
 
 | Name | Data type | Description |
 | --- | --- | --- |
-| `name` | `String` | - Mandatory specification - The fully qualified name of a configured alarm   Alarm of a tag: <System name>::<Tag name>:<Alarm name>   Alarm of an element of a structure tag or array: <System name>::<Tag name>.<Element path>:<Alarm name> Delimiter for the components of the element path: "." |
+| `name` | `String` | - Mandatory specification - The fully qualified name of a configured alarm   Alarm of a tag: &lt;System name&gt;::&lt;Tag name&gt;:&lt;Alarm name&gt;   Alarm of an element of a structure tag or array: &lt;System name&gt;::&lt;Tag name&gt;.&lt;Element path&gt;:&lt;Alarm name&gt; Delimiter for the components of the element path: "." |
 | `instanceID` | `Int` | - Optional - The ID of an alarm instance of the configured alarm - If "0" is transferred as the `instanceID` or if no `instanceID` is transferred, all active alarms of the configured alarm are acknowledged. |
 
 ---
@@ -1558,7 +1558,7 @@ The data type has the following attributes:
 
 | Name | Data type | Description |
 | --- | --- | --- |
-| `alarmName` | `String` | - Mandatory specification - The fully qualified name of the configured alarm   Specify the fully qualified name of a configured alarm:   - Alarm of a tag: <System name>::<Tag name>:<Alarm name>   - Alarm of an element of a structure tag or array: <System name>::<Tag name>.<Element path>:<Alarm name> Delimiter for the components of the element path: "." |
+| `alarmName` | `String` | - Mandatory specification - The fully qualified name of the configured alarm   Specify the fully qualified name of a configured alarm:   - Alarm of a tag: &lt;System name&gt;::&lt;Tag name&gt;:&lt;Alarm name&gt;   - Alarm of an element of a structure tag or array: &lt;System name&gt;::&lt;Tag name&gt;.&lt;Element path&gt;:&lt;Alarm name&gt; Delimiter for the components of the element path: "." |
 | `error` | `Error` | - Optional - Feedback on the success of the operation |
 
 ---

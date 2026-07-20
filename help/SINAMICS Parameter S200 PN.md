@@ -1114,17 +1114,17 @@ r0196[255]: Status of component with component number 255
 **Note:** 
   
 For bit 03 ... 00:  
-Bit 3, 2, 1, 0 = 0, 0, 0, 0 --> component not available.  
-Bit 3, 2, 1, 0 = 0, 0, 0, 1 --> run up, acyclic communications (LED = orange).  
-Bit 3, 2, 1, 0 = 0, 0, 1, 0 --> operating mode, cyclic communications (LED = green).  
-Bit 3, 2, 1, 0 = 0, 0, 1, 1 --> alarm (LED = green).  
-Bit 3, 2, 1, 0 = 0, 1, 0, 0 --> fault (LED = red).  
-Bit 3, 2, 1, 0 = 0, 1, 0, 1 --> detection via LED and operating mode (LED = green/orange).  
-Bit 3, 2, 1, 0 = 0, 1, 1, 0 --> detection via LED and alarm (LED = green/orange).  
-Bit 3, 2, 1, 0 = 0, 1, 1, 1 --> detection via LED and fault (LED = red/orange).  
-Bit 3, 2, 1, 0 = 1, 0, 0, 0 --> firmware being downloaded (LED = green/red with 0.5
+Bit 3, 2, 1, 0 = 0, 0, 0, 0 --&gt; component not available.  
+Bit 3, 2, 1, 0 = 0, 0, 0, 1 --&gt; run up, acyclic communications (LED = orange).  
+Bit 3, 2, 1, 0 = 0, 0, 1, 0 --&gt; operating mode, cyclic communications (LED = green).  
+Bit 3, 2, 1, 0 = 0, 0, 1, 1 --&gt; alarm (LED = green).  
+Bit 3, 2, 1, 0 = 0, 1, 0, 0 --&gt; fault (LED = red).  
+Bit 3, 2, 1, 0 = 0, 1, 0, 1 --&gt; detection via LED and operating mode (LED = green/orange).  
+Bit 3, 2, 1, 0 = 0, 1, 1, 0 --&gt; detection via LED and alarm (LED = green/orange).  
+Bit 3, 2, 1, 0 = 0, 1, 1, 1 --&gt; detection via LED and fault (LED = red/orange).  
+Bit 3, 2, 1, 0 = 1, 0, 0, 0 --&gt; firmware being downloaded (LED = green/red with 0.5
 Hz).  
-Bit 3, 2, 1, 0 = 1, 0, 0, 1 --> firmware download completed, wait for POWER ON (LED
+Bit 3, 2, 1, 0 = 1, 0, 0, 1 --&gt; firmware download completed, wait for POWER ON (LED
 = green/red with 2.0 Hz).  
 For bits 12 ... 11:  
 These status bits are used for the classification of internal alarm classes and are
@@ -1558,7 +1558,7 @@ F30002
   
 Selects the motor type or start to read in the motor parameters for a motor with self-identifying
 data (p0300 = 10000).  
-For p0300 < 10000 the following applies:  
+For p0300 &lt; 10000 the following applies:  
 The first digit of the parameter value always defines the general motor type and corresponds
 to the third-party motor belonging to a motor list:  
 2 = rotating synchronous motor
@@ -1773,7 +1773,7 @@ Displays the rated motor torque.
 Sets the torque constant of the synchronous motor.  
 r0316 = 0:  
 The torque constant is calculated from the motor data.  
-r0316 > 0:  
+r0316 &gt; 0:  
 The selected value is used as torque constant.
 
 ### p0318[0] Motor stall current
@@ -1933,9 +1933,9 @@ Identify encoder (waiting)
 
 **Notice:** 
   
-An encoder type with p0400 < 9999 defines an encoder for which there is an encoder
+An encoder type with p0400 &lt; 9999 defines an encoder for which there is an encoder
 parameter list.  
-When selecting a catalog encoder (p0400 < 9999) the parameters from the encoder parameter
+When selecting a catalog encoder (p0400 &lt; 9999) the parameters from the encoder parameter
 list cannot be changed (write protection).
 
 **Note:** 
@@ -2410,13 +2410,13 @@ A shorter opening time/closing time is realized if the power unit supports the f
 Setting the code number for the brake.  
 0 = No data  
 1 = Manual entry  
-> 1 = valid code number  
+&gt; 1 = valid code number  
 For value = 0:  
 - Parameters listed under Dependent are set to a value of zero and are write protected.  
 - Parameters p1216, p1217 are set to a value of zero.  
 For value = 1:  
 - Write protection for the parameters listed under Dependent is withdrawn.  
-For value > 1:  
+For value &gt; 1:  
 - Parameters listed under Dependent are automatically pre-assigned and are write protected.  
 - Parameters p1216, p1217 are automatically appropriately pre-assigned.
 
@@ -3106,10 +3106,10 @@ documentation.
 The buffer parameters are cyclically updated (states are indicated in r2139).  
 Fault buffer structure (general principle):  
 r0945[0], r0949[0] or r2133[0], r2130[0], r0948[0], r2136[0], r2109[0]  
---> Fault 1 (oldest active fault) of the active incident  
+--&gt; Fault 1 (oldest active fault) of the active incident  
 . . .  
 r0945[7], r0949[7] or r2133[7], r2130[7], r0948[7], r2136[7], r2109[7]  
---> fault 8 (oldest active fault) of the active incident  
+--&gt; fault 8 (oldest active fault) of the active incident  
   
 For more than 8 active faults, only the entries are overwritten at the eighth position
 (index 7).  
@@ -3121,16 +3121,16 @@ The 2nd incident is transferred into the 3rd, the 3rd into the 4th etc. The last
 is rejected.  
   
 r0945[8], r0949[8] or r2133[8], r2130[0], r0948[8], r2136[8], r2109[8]  
---> fault 1 of the 1st acknowledged incident  
+--&gt; fault 1 of the 1st acknowledged incident  
 . . .  
 r0945[16], r0949[16] or r2133[16], r2130[16], r0948[16], r2136[16], r2109[16]  
---> fault 1 of the 2nd acknowledged incident  
+--&gt; fault 1 of the 2nd acknowledged incident  
 . . .  
 r0945[56], r0949[56] or r2133[56], r2130[56], r0948[56], r2136[56], r2109[56]  
---> fault 1 of the 7th acknowledged incident  
+--&gt; fault 1 of the 7th acknowledged incident  
 . . .  
 r0945[63], r0949[63] or r2133[63], r2130[63], r0948[63], r2136[63], r2109[63]  
---> fault 8 (oldest fault that has gone) of the 7th acknowledged incident
+--&gt; fault 8 (oldest fault that has gone) of the 7th acknowledged incident
 
 ### r0947[0...63] Fault number
 
@@ -3166,10 +3166,10 @@ documentation.
   
 The buffer parameters are cyclically updated (states are indicated in r2139).  
 Fault buffer structure (general principle):  
-r0945[0], r0949[0] or r2133[0], r2130[0], r0948[0], r2136[0], r2109[0] --> fault 1
+r0945[0], r0949[0] or r2133[0], r2130[0], r0948[0], r2136[0], r2109[0] --&gt; fault 1
 (oldest active fault) of the active incident  
 . . .  
-r0945[7], r0949[7] or r2133[7], r2130[7], r0948[7], r2136[7], r2109[7] --> fault 8
+r0945[7], r0949[7] or r2133[7], r2130[7], r0948[7], r2136[7], r2109[7] --&gt; fault 8
 (latest active fault) of the active incident  
 For more than 8 active faults, only the entries are overwritten at the eighth position
 (index 7).  
@@ -3180,16 +3180,16 @@ transferred into the 2nd fault incident, this becomes the 1st acknowledged fault
 The 2nd incident is transferred into the 3rd, the 3rd into the 4th etc. The last incident
 is rejected.  
   
-r0945[8], r0949[8] or r2133[8], r2130[0], r0948[8], r2136[8], r2109[8] --> fault 1
+r0945[8], r0949[8] or r2133[8], r2130[0], r0948[8], r2136[8], r2109[8] --&gt; fault 1
 of the 1st acknowledged incident  
 . . .  
-r0945[16], r0949[16] or r2133[16], r2130[16], r0948[16], r2136[16], r2109[16] -->
+r0945[16], r0949[16] or r2133[16], r2130[16], r0948[16], r2136[16], r2109[16] --&gt;
 fault 1 of the 2nd acknowledged incident  
 . . .  
-r0945[56], r0949[56] or r2133[56], r2130[56], r0948[56], r2136[56], r2109[56] -->
+r0945[56], r0949[56] or r2133[56], r2130[56], r0948[56], r2136[56], r2109[56] --&gt;
 fault 1 of the 7th acknowledged incident  
 . . .  
-r0945[63], r0949[63] or r2133[63], r2130[63], r0948[63], r2136[63], r2109[63] -->
+r0945[63], r0949[63] or r2133[63], r2130[63], r0948[63], r2136[63], r2109[63] --&gt;
 fault 8 (oldest fault that has gone) of the 7th acknowledged incident
 
 ### r0948[0...63] Fault time received in milliseconds
@@ -3337,19 +3337,19 @@ Firmware patch/hot fix
 **Note:** 
   
 Example:  
-r0964[0] = 42 --> SIEMENS  
+r0964[0] = 42 --&gt; SIEMENS  
 r0964[1] = device type, see below  
-r0964[2] = 602 --> first part firmware version V06.02 (second part, refer to index
+r0964[2] = 602 --&gt; first part firmware version V06.02 (second part, refer to index
 6)  
-r0964[3] = 2023 --> year 2023  
-r0964[4] = 1706 --> June 17  
-r0964[5] = 1 --> 1 (fixed value)  
-r0964[6] = 0 --> second part firmware version (complete version: V06.02.00.00)  
+r0964[3] = 2023 --&gt; year 2023  
+r0964[4] = 1706 --&gt; June 17  
+r0964[5] = 1 --&gt; 1 (fixed value)  
+r0964[6] = 0 --&gt; second part firmware version (complete version: V06.02.00.00)  
 Device type:  
-r0964[1] = 11200 --> SINAMICS S200 PN  
-r0964[1] = 11202 --> SINAMICS S200 PTI  
-r0964[1] = 11210 --> SINAMICS S200 Basic PN  
-r0964[1] = 11212 --> SINAMICS S200 Basic PTI
+r0964[1] = 11200 --&gt; SINAMICS S200 PN  
+r0964[1] = 11202 --&gt; SINAMICS S200 PTI  
+r0964[1] = 11210 --&gt; SINAMICS S200 Basic PN  
+r0964[1] = 11212 --&gt; SINAMICS S200 Basic PTI
 
 ### r0965 PROFIdrive profile number profile version
 
@@ -3385,7 +3385,7 @@ When the parameter is read via PROFIdrive, the Octet String 2 data type applies.
 | --- | --- | --- |
 | **Data type:**Unsigned16 | **Visible in:**Extended display |  |
 | **Can be changed in the operating state:**- |  |  |
-| **Parameter group:** Save & reset |  |  |
+| **Parameter group:** Save &amp; reset |  |  |
 | **Not relevant for motor type:**- |  |  |
 | **Dyn. index [0…n]:** - |  | **Calculated:** - |
 | **Unit:** - | **Unit group:** - | **Unit selection:** - |
@@ -3437,8 +3437,8 @@ After communications have been established, check the reset operation (refer bel
 To check the reset operation:  
 After the drive unit has been restarted and communications have been established,
 read p0972 and check the following:  
-p0972 = 0 --> the reset was successfully executed.  
-p0972 > 0 --> the reset was not executed.
+p0972 = 0 --&gt; the reset was successfully executed.  
+p0972 &gt; 0 --&gt; the reset was not executed.
 
 ### r0975[0...10] Converter identification
 
@@ -3506,18 +3506,18 @@ r0964
 **Note:** 
   
 Example:  
-r0975[0] = 42 --> SIEMENS  
-r0975[1] = 311 --> SERVO converter type  
-r0975[2] = 602 --> first part firmware version V06.02 (second part refer to index
+r0975[0] = 42 --&gt; SIEMENS  
+r0975[1] = 311 --&gt; SERVO converter type  
+r0975[2] = 602 --&gt; first part firmware version V06.02 (second part refer to index
 10)  
-r0975[3] = 2023 --> year 2023  
-r0975[4] = 1706 --> 17th of June  
-r0975[5] = 1 --> PROFIdrive type class = 1 (axis)  
-r0975[6] = 8 --> PROFIdrive subtype class = 4 (application class)  
-r0975[7] = 1 --> 1 (fixed value)  
+r0975[3] = 2023 --&gt; year 2023  
+r0975[4] = 1706 --&gt; 17th of June  
+r0975[5] = 1 --&gt; PROFIdrive type class = 1 (axis)  
+r0975[6] = 8 --&gt; PROFIdrive subtype class = 4 (application class)  
+r0975[7] = 1 --&gt; 1 (fixed value)  
 r0975[8] = 0 (reserved)  
 r0975[9] = 0 (reserved)  
-r0975[10] = 0 --> second part firmware version (complete version: V06.02.00.00)
+r0975[10] = 0 --&gt; second part firmware version (complete version: V06.02.00.00)
 
 ### p0976 Reset all parameters
 
@@ -3525,7 +3525,7 @@ r0975[10] = 0 --> second part firmware version (complete version: V06.02.00.00)
 | --- | --- | --- |
 | **Data type:**Unsigned16 | **Visible in:**Extended display |  |
 | **Can be changed in the operating state:**- |  |  |
-| **Parameter group:** Save & reset |  |  |
+| **Parameter group:** Save &amp; reset |  |  |
 | **Not relevant for motor type:**- |  |  |
 | **Dyn. index [0…n]:** - |  | **Calculated:** - |
 | **Unit:** - | **Unit group:** - | **Unit selection:** - |
@@ -3559,7 +3559,7 @@ Writing to parameters is inhibited during the reset operation.
 | --- | --- | --- |
 | **Data type:**Unsigned16 | **Visible in:**Extended display |  |
 | **Can be changed in the operating state:**- |  |  |
-| **Parameter group:** Save & reset |  |  |
+| **Parameter group:** Save &amp; reset |  |  |
 | **Not relevant for motor type:**- |  |  |
 | **Dyn. index [0…n]:** - |  | **Calculated:** - |
 | **Unit:** - | **Unit group:** - | **Unit selection:** - |
@@ -6489,7 +6489,7 @@ F07860
 
 **Note:** 
   
-An external fault is initiated with a 1->0 edge.  
+An external fault is initiated with a 1-&gt;0 edge.  
 If this fault is initiated at the Control Unit, then it is transferred to all of the
 drive objects available.
 
@@ -6656,14 +6656,14 @@ documentation.
 The buffer parameters are cyclically updated in the background.  
 Alarm buffer structure (general principle):  
 Currently active alarms (not gone):  
-r2122[0], r2124[0], r2123[0], r2125[0] --> alarm 1 (the oldest)  
+r2122[0], r2124[0], r2123[0], r2125[0] --&gt; alarm 1 (the oldest)  
 . . .  
-r2122[7], r2124[7], r2123[7], r2125[7] --> Alarm 8 (the latest)  
+r2122[7], r2124[7], r2123[7], r2125[7] --&gt; Alarm 8 (the latest)  
   
 History of alarms that have gone:  
-r2122[8], r2124[8], r2123[8], r2125[8] --> Alarm 1 (the latest)  
+r2122[8], r2124[8], r2123[8], r2125[8] --&gt; Alarm 1 (the latest)  
 . . .  
-r2122[63], r2124[63], r2123[63], r2125[63] --> alarm 56 (the oldest)
+r2122[63], r2124[63], r2123[63], r2125[63] --&gt; alarm 56 (the oldest)
 
 ### r2123[0...63] Alarm time received in milliseconds
 
@@ -7143,7 +7143,7 @@ used for messages and signals.
 
 **Description:** 
   
-Sets the speed threshold value for signal "|n_act| < speed threshold 3".
+Sets the speed threshold value for signal "|n_act| &lt; speed threshold 3".
 
 **Dependency:** 
   
@@ -7171,12 +7171,12 @@ r2199
 
 **Description:** 
   
-Sets the hysteresis speed (bandwidth) for signal "n_act > n_max".
+Sets the hysteresis speed (bandwidth) for signal "n_act &gt; n_max".
 
 **Notice:** 
   
-For p0322 = 0, the following applies: p2162 <= 0.1 * p0311  
-For p0322 > 0, the following applies: p2162 <= 1.02 * p0322 - p1082  
+For p0322 = 0, the following applies: p2162 &lt;= 0.1 * p0311  
+For p0322 &gt; 0, the following applies: p2162 &lt;= 1.02 * p0322 - p1082  
 If one of the conditions is violated, p2162 is appropriately and automatically reduced
 when exiting the commissioning mode.
 
@@ -7283,11 +7283,11 @@ Displays the third status word of the monitoring functions.
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
 | Bit | Signal name | 0 signal | 1 signal | Function diagram |
-| 00 | |n_act| < p2161 | No | Yes | 8010 |
+| 00 | |n_act| &lt; p2161 | No | Yes | 8010 |
 | 01 | f or n comparison value reached or exceeded | No | Yes | 8010 |
 | 04 | Speed setpoint - actual value deviation in tolerance t_on | No | Yes | 8011 |
 | 05 | Ramp-up/ramp-down completed | No | Yes | 8011 |
-| 11 | Torque utilization < torque threshold value 2 | No | Yes | 8012 |
+| 11 | Torque utilization &lt; torque threshold value 2 | No | Yes | 8012 |
 
 **Note:** 
   
@@ -7847,12 +7847,12 @@ Example:
 Rotary encoder, ballscrew with 10 mm/revolution, 10 mm should be broken down to units
 of µm.  
 Length unit LU (p2496 = 0)  
---> One load distance corresponds to 10000 LU (i.e. 1 LU = 1 µm)  
---> p2506 = 10000  
+--&gt; One load distance corresponds to 10000 LU (i.e. 1 LU = 1 µm)  
+--&gt; p2506 = 10000  
   
 Physical unit µm (2496) = 4  
---> One load distance corresponds to 10000 µm  
---> p2506 = 10000
+--&gt; One load distance corresponds to 10000 µm  
+--&gt; p2506 = 10000
 
 **Dependency:** 
   
@@ -7887,8 +7887,8 @@ rotating unit MU.
 Example:  
 Rotating unit LU (p2496 = 0)  
 Rotary encoder, 1 revolution should be broken down into mdegrees, (i.e. 1 LU = 1 mdegrees).  
---> One load revolution corresponds to 360000 LU  
---> p2506 = 360000
+--&gt; One load revolution corresponds to 360000 LU  
+--&gt; p2506 = 360000
 
 **Dependency:** 
   
@@ -8113,7 +8113,7 @@ p2502, r2526
 
 **Note:** 
   
-r2526.0 = 1 --> The position actual value in r2521[0] for the position control is
+r2526.0 = 1 --&gt; The position actual value in r2521[0] for the position control is
 valid.
 
 #### r2521[0...3] LR position actual value
@@ -8160,7 +8160,7 @@ p2502, r2526
 
 **Note:** 
   
-r2526.0 = 1 --> The position actual value in r2521[0] for the position control is
+r2526.0 = 1 --&gt; The position actual value in r2521[0] for the position control is
 valid.
 
 ### r2522[0...3] LR velocity actual value
@@ -8212,7 +8212,7 @@ p2502, r2526
 
 **Note:** 
   
-r2526.0 = 1 --> The velocity actual value in r2522[0] for the position control is
+r2526.0 = 1 --&gt; The velocity actual value in r2522[0] for the position control is
 valid.
 
 #### r2522[0...3] LR velocity actual value
@@ -8259,7 +8259,7 @@ p2502, r2526
 
 **Note:** 
   
-r2526.0 = 1 --> The velocity actual value in r2522[0] for the position control is
+r2526.0 = 1 --&gt; The velocity actual value in r2522[0] for the position control is
 valid.
 
 ### r2523[0...3] LR measured value
@@ -8312,7 +8312,7 @@ p2502, r2526
 
 **Note:** 
   
-r2526.2 = 1 --> The measured value in r2523[0] for the position control is valid.
+r2526.2 = 1 --&gt; The measured value in r2523[0] for the position control is valid.
 
 #### r2523[0...3] LR measured value
 
@@ -8359,7 +8359,7 @@ p2502, r2526
 
 **Note:** 
   
-r2526.2 = 1 --> The measured value in r2523[0] for the position control is valid.
+r2526.2 = 1 --&gt; The measured value in r2523[0] for the position control is valid.
 
 ### r2526.0...12 LR status word
 
@@ -8600,7 +8600,7 @@ Applications:
 **Description:** 
   
 Setting for activation and weighting of the speed precontrol value.  
-Value = 0 % --> The precontrol is deactivated.
+Value = 0 % --&gt; The precontrol is deactivated.
 
 **Dependency:** 
   
@@ -8645,7 +8645,7 @@ p2536
 
 **Notice:** 
   
-When speed precontrol is active (p2534 > 0 %), the following applies:  
+When speed precontrol is active (p2534 &gt; 0 %), the following applies:  
 In addition to the set dead time (p2535), internally two position controller sampling
 times are effective.  
 When speed precontrol is inactive (p2534 = 0 %), the following applies:  
@@ -8754,7 +8754,7 @@ small.
 **Description:** 
   
 Setting to activate the integral time of the position controller.  
-Value = 0 ms --> The I component of the position controller is deactivated.
+Value = 0 ms --&gt; The I component of the position controller is deactivated.
 
 **Dependency:** 
   
@@ -8851,7 +8851,7 @@ Sets the standstill window for the standstill monitoring function.
 After the standstill monitoring time expires, it is cyclically checked whether the
 difference between the setpoint and actual position is located within the standstill
 window and, if required, an appropriate fault is output.  
-Value = 0 --> The standstill monitoring is deactivated.
+Value = 0 --&gt; The standstill monitoring is deactivated.
 
 **Dependency:** 
   
@@ -8861,7 +8861,7 @@ p2543, p2544
 **Note:** 
   
 The following applies for the setting of the standstill window and positioning window:  
-Standstill window (p2542) >= positioning window (p2544)
+Standstill window (p2542) &gt;= positioning window (p2544)
 
 #### p2542 LR standstill window
 
@@ -8889,7 +8889,7 @@ Sets the standstill window for the standstill monitoring function.
 After the standstill monitoring time expires, it is cyclically checked whether the
 difference between the setpoint and actual position is located within the standstill
 window and, if required, an appropriate fault is output.  
-Value = 0 --> The standstill monitoring is deactivated.
+Value = 0 --&gt; The standstill monitoring is deactivated.
 
 **Dependency:** 
   
@@ -8899,7 +8899,7 @@ p2543, p2544
 **Note:** 
   
 The following applies for the setting of the standstill window and positioning window:  
-Standstill window (p2542) >= positioning window (p2544)
+Standstill window (p2542) &gt;= positioning window (p2544)
 
 ### p2543 LR standstill monitoring time
 
@@ -8936,7 +8936,7 @@ p2542, p2545
   
 The following applies for the setting of the standstill and positioning monitoring
 time:  
-Standstill monitoring time (p2543) <= positioning monitoring time (p2545)
+Standstill monitoring time (p2543) &lt;= positioning monitoring time (p2545)
 
 ### p2544 LR positioning window
 
@@ -8969,7 +8969,7 @@ Sets the positioning window for the positioning monitoring function.
 After the positioning monitoring time expires, it is checked once as to whether the
 difference between the setpoint and actual position lies within the positioning window
 and if required an appropriate fault is output.  
-Value = 0 --> The positioning monitoring function is deactivated.
+Value = 0 --&gt; The positioning monitoring function is deactivated.
 
 **Dependency:** 
   
@@ -8979,7 +8979,7 @@ p2542, p2545, r2684
 **Note:** 
   
 The following applies for the setting of the standstill and positioning window:  
-Standstill window (p2542) >= positioning window (p2544)
+Standstill window (p2542) &gt;= positioning window (p2544)
 
 #### p2544 LR positioning window
 
@@ -9007,7 +9007,7 @@ Sets the positioning window for the positioning monitoring function.
 After the positioning monitoring time expires, it is checked once as to whether the
 difference between the setpoint and actual position lies within the positioning window
 and if required an appropriate fault is output.  
-Value = 0 --> The positioning monitoring function is deactivated.
+Value = 0 --&gt; The positioning monitoring function is deactivated.
 
 **Dependency:** 
   
@@ -9017,7 +9017,7 @@ p2542, p2545, r2684
 **Note:** 
   
 The following applies for the setting of the standstill and positioning window:  
-Standstill window (p2542) >= positioning window (p2544)
+Standstill window (p2542) &gt;= positioning window (p2544)
 
 ### p2545 LR positioning monitoring time
 
@@ -9054,7 +9054,7 @@ p2543, p2544, r2684
   
 The following applies for the setting of the standstill and positioning monitoring
 time:  
-Standstill monitoring time (p2543) <= positioning monitoring time (p2545)
+Standstill monitoring time (p2543) &lt;= positioning monitoring time (p2545)
 
 ### p2546[0] LR dynamic following error monitoring tolerance
 
@@ -9086,7 +9086,7 @@ Standstill monitoring time (p2543) <= positioning monitoring time (p2545)
 Sets the tolerance for the dynamic following error monitoring.  
 If the dynamic following error (r2563) exceeds the selected tolerance, then an appropriate
 fault is output.  
-Value = 0 --> The dynamic following error monitoring is deactivated.
+Value = 0 --&gt; The dynamic following error monitoring is deactivated.
 
 **Dependency:** 
   
@@ -9123,7 +9123,7 @@ incorrectly responding due to operational control sequences (e.g. during load su
 Sets the tolerance for the dynamic following error monitoring.  
 If the dynamic following error (r2563) exceeds the selected tolerance, then an appropriate
 fault is output.  
-Value = 0 --> The dynamic following error monitoring is deactivated.
+Value = 0 --&gt; The dynamic following error monitoring is deactivated.
 
 **Dependency:** 
   
@@ -9378,10 +9378,10 @@ the position setpoint and the position actual value.
 
 **Note:** 
   
-For p2534 >= 100 % (precontrol activated) the following applies:  
+For p2534 &gt;= 100 % (precontrol activated) the following applies:  
 The dynamic following error (r2563) corresponds to the system deviation (r2557) at
 the position controller input.  
-For 0 % < p2534 < 100 % (precontrol activated) or p2534 = 0 % (precontrol deactivated)
+For 0 % &lt; p2534 &lt; 100 % (precontrol activated) or p2534 = 0 % (precontrol deactivated)
 the following applies:  
 The dynamic following error (r2563) is the deviation between the measured position
 actual value and a value that is calculated from the position setpoint via a PT1 model.
@@ -9413,10 +9413,10 @@ the position setpoint and the position actual value.
 
 **Note:** 
   
-For p2534 >= 100 % (precontrol activated) the following applies:  
+For p2534 &gt;= 100 % (precontrol activated) the following applies:  
 The dynamic following error (r2563) corresponds to the system deviation (r2557) at
 the position controller input.  
-For 0 % < p2534 < 100 % (precontrol activated) or p2534 = 0 % (precontrol deactivated)
+For 0 % &lt; p2534 &lt; 100 % (precontrol activated) or p2534 = 0 % (precontrol deactivated)
 the following applies:  
 The dynamic following error (r2563) is the deviation between the measured position
 actual value and a value that is calculated from the position setpoint via a PT1 model.
@@ -9480,7 +9480,7 @@ This value is the deviation between the position setpoint - after fine interpola
 
 **Notice:** 
   
-When speed precontrol is active (p2534 > 0 %), the following applies:  
+When speed precontrol is active (p2534 &gt; 0 %), the following applies:  
 To calculate this value, the position setpoint is delayed by two position controller
 sampling times.  
 When speed precontrol is inactive (p2534 = 0 %), the following applies:  
@@ -9513,7 +9513,7 @@ This value is the deviation between the position setpoint - after fine interpola
 
 **Notice:** 
   
-When speed precontrol is active (p2534 > 0 %), the following applies:  
+When speed precontrol is active (p2534 &gt; 0 %), the following applies:  
 To calculate this value, the position setpoint is delayed by two position controller
 sampling times.  
 When speed precontrol is inactive (p2534 = 0 %), the following applies:  
@@ -10242,7 +10242,7 @@ traversing blocks being checked.
 **Note:** 
   
 The following applies for the setting of the software limit switch:  
-Negative software limit switch < positive software limit switch
+Negative software limit switch &lt; positive software limit switch
 
 #### c2578 EPOS negative software limit switch
 
@@ -10284,7 +10284,7 @@ traversing blocks being checked.
 **Note:** 
   
 The following applies for the setting of the software limit switch:  
-Negative software limit switch < positive software limit switch
+Negative software limit switch &lt; positive software limit switch
 
 ### c2579 EPOS positive software limit switch
 
@@ -10331,7 +10331,7 @@ traversing blocks being checked.
 **Note:** 
   
 The following applies for the setting of the software limit switch:  
-Negative software limit switch < positive software limit switch
+Negative software limit switch &lt; positive software limit switch
 
 #### c2579 EPOS positive software limit switch
 
@@ -10373,7 +10373,7 @@ traversing blocks being checked.
 **Note:** 
   
 The following applies for the setting of the software limit switch:  
-Negative software limit switch < positive software limit switch
+Negative software limit switch &lt; positive software limit switch
 
 ### p2580 EPOS negative software limit switch
 
@@ -10593,9 +10593,9 @@ The traversing range can also be limited using hardware limit switches.
   
 Sets the amount of play (backlash) for positive or negative play.  
 0: backlash compensation is deactivated.  
-> 0: Positive backlash (normal case)  
+&gt; 0: Positive backlash (normal case)  
 When the direction is reversed, the encoder actual value leads the actual value.  
-< 0: Negative backlash  
+&lt; 0: Negative backlash  
 When the direction is reversed, the actual value leads the encoder actual value.
 
 **Dependency:** 
@@ -10604,11 +10604,11 @@ If a stationary axis is referenced by "setting the home position", or an adjuste
 with absolute encoder is switched on, then the setting of c2604 is relevant for entering
 the compensation value.  
 c2604 = 1:  
-Traveling in the positive direction -> A compensation value is immediately entered.  
-Traveling in the negative direction -> A compensation value is not entered  
+Traveling in the positive direction -&gt; A compensation value is immediately entered.  
+Traveling in the negative direction -&gt; A compensation value is not entered  
 c2604 = 0:  
-Traveling in the positive direction -> A compensation value is not entered  
-Traveling in the negative direction -> A compensation value is immediately entered.  
+Traveling in the positive direction -&gt; A compensation value is not entered  
+Traveling in the negative direction -&gt; A compensation value is immediately entered.  
 When again setting the home position (a homed axis) or for "passive homing", c2604
 is not relevant but instead the history of the axis.  
 See also:
@@ -10638,9 +10638,9 @@ c2604
   
 Sets the amount of play (backlash) for positive or negative play.  
 0: backlash compensation is deactivated.  
-> 0: Positive backlash (normal case)  
+&gt; 0: Positive backlash (normal case)  
 When the direction is reversed, the encoder actual value leads the actual value.  
-< 0: Negative backlash  
+&lt; 0: Negative backlash  
 When the direction is reversed, the actual value leads the encoder actual value.
 
 **Dependency:** 
@@ -10649,11 +10649,11 @@ If a stationary axis is referenced by "setting the home position", or an adjuste
 with absolute encoder is switched on, then the setting of c2604 is relevant for entering
 the compensation value.  
 c2604 = 1:  
-Traveling in the positive direction -> A compensation value is immediately entered.  
-Traveling in the negative direction -> A compensation value is not entered  
+Traveling in the positive direction -&gt; A compensation value is immediately entered.  
+Traveling in the negative direction -&gt; A compensation value is not entered  
 c2604 = 0:  
-Traveling in the positive direction -> A compensation value is not entered  
-Traveling in the negative direction -> A compensation value is immediately entered.  
+Traveling in the positive direction -&gt; A compensation value is not entered  
+Traveling in the negative direction -&gt; A compensation value is immediately entered.  
 When again setting the home position (a homed axis) or for "passive homing", c2604
 is not relevant but instead the history of the axis.  
 See also:
@@ -12433,19 +12433,19 @@ JERK: 0 - deactivate, 1 - activate
 Sets the influence of the task for the traversing block.  
 Value = 0000 cccc bbbb aaaa  
 cccc: Positioning mode  
-cccc = 0000 --> ABSOLUTE  
-cccc = 0001 --> RELATIVE  
-cccc = 0010 --> ABS_POS (only for a rotary axis with modulo correction)  
-cccc = 0011 --> ABS_NEG (only for a rotary axis with modulo correction)  
+cccc = 0000 --&gt; ABSOLUTE  
+cccc = 0001 --&gt; RELATIVE  
+cccc = 0010 --&gt; ABS_POS (only for a rotary axis with modulo correction)  
+cccc = 0011 --&gt; ABS_NEG (only for a rotary axis with modulo correction)  
 bbbb: Progression condition  
-bbbb = 0000 --> END  
-bbbb = 0001 --> CONTINUE_WITH_STOP  
-bbbb = 0010 --> CONTINUE_FLYING  
-bbbb = 0011 --> CONTINUE_EXTERNAL  
-bbbb = 0100 --> CONTINUE_EXTERNAL_WAIT  
-bbbb = 0101 --> CONTINUE_EXTERNAL_ALARM  
+bbbb = 0000 --&gt; END  
+bbbb = 0001 --&gt; CONTINUE_WITH_STOP  
+bbbb = 0010 --&gt; CONTINUE_FLYING  
+bbbb = 0011 --&gt; CONTINUE_EXTERNAL  
+bbbb = 0100 --&gt; CONTINUE_EXTERNAL_WAIT  
+bbbb = 0101 --&gt; CONTINUE_EXTERNAL_ALARM  
 aaaa: IDs  
-aaaa = 000x --> show/hide block (x = 0: show, x = 1: hide)
+aaaa = 000x --&gt; show/hide block (x = 0: show, x = 1: hide)
 
 **Dependency:** 
   
@@ -13618,16 +13618,16 @@ A traversing direction must be selected using parameters c2651 and c2652.
 Signal of the MDI mode via PROFIBUS telegram 110 in operating mode "direct setpoint
 input/MDI".  
 c2654 = 0: Signals are evaluated.  
-c2654 > 0: Signals are not evaluated.  
+c2654 &gt; 0: Signals are not evaluated.  
 The evaluation involves the following signals:  
 - c2648 (positioning type)  
 - c2651 (positive direction selection)  
 - c2652 (negative direction selection)  
 In this case, the following definitions apply:  
-Signal via c2654 = xx0x hex -> absolute  
-Signal via c2654 = xx1x hex -> relative  
-Signal via c2654 = xx2x hex -> abs_pos (only for modulo correction)  
-Signal via c2654 = xx3x hex -> abs_neg (only for modulo correction)
+Signal via c2654 = xx0x hex -&gt; absolute  
+Signal via c2654 = xx1x hex -&gt; relative  
+Signal via c2654 = xx2x hex -&gt; abs_pos (only for modulo correction)  
+Signal via c2654 = xx3x hex -&gt; abs_neg (only for modulo correction)
 
 **Dependency:** 
   
@@ -14137,9 +14137,9 @@ FIXED STOP: Clamping torque (0 ... 65536 [0.01 Nm]) or clamping force (0 ... 655
 [N])  
 WAIT: Wait time [ms]  
 GOTO: Block number  
-SET_O: 1, 2, 3 --> direct output 1, 2 or 3 (both) is set  
-RESET_O: 1, 2, 3 --> direct output 1, 2 or 3 (both) is reset  
-JERK: 0 --> deactivate, 1 --> activate
+SET_O: 1, 2, 3 --&gt; direct output 1, 2 or 3 (both) is set  
+RESET_O: 1, 2, 3 --&gt; direct output 1, 2 or 3 (both) is reset  
+JERK: 0 --&gt; deactivate, 1 --&gt; activate
 
 ### r2677 EPOS actual task mode
 
@@ -14833,43 +14833,43 @@ The buffer parameters are cyclically updated in the background (refer to status 
 in r2139).  
 The structure of the fault buffer and the assignment of the indices is shown in r0945.  
 For bits 20 ... 16:  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --&gt; PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --&gt; PROFIdrive message class 1: hardware fault/software
 error  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --&gt; PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --&gt; PROFIdrive message class 3: supply voltage
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --&gt; PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --&gt; PROFIdrive message class 5: power electronics
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --&gt; PROFIdrive message class 6: overtemperature
 electronic components  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --&gt; PROFIdrive message class 7: ground fault/phase
 fault detected  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --&gt; PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --&gt; PROFIdrive message class 9: communication
 error to the higher-level control  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --&gt; PROFIdrive message class 10: safe monitoring
 channel has identified an error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --&gt; PROFIdrive message class 11: incorrect
 position actual value/speed actual value or not available  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 12: internal
 (DRIVE-CLiQ) communication error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --&gt; PROFIdrive message class 13: infeed unit
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --&gt; PROFIdrive message class 14: braking controller/Braking
 Module faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --&gt; PROFIdrive message class 15: line filter
 faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --&gt; PROFIdrive message class 16: external
 measured value/signal state outside the permissible range  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --&gt; PROFIdrive message class 17: application/technology
 function faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --&gt; PROFIdrive message class 18: error in
 the parameterization/configuration/commissioning sequence  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --&gt; PROFIdrive message class 19: general drive
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 20: auxiliary
 unit faulted
 
 ### r3123[0...63].0...20 Diagnostic attribute alarm
@@ -14924,43 +14924,43 @@ These status bits are used for the classification of internal alarm classes and 
 intended for diagnostic purposes only on certain automation systems with integrated
 SINAMICS functionality.  
 For bits 20 ... 16:  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --&gt; PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --&gt; PROFIdrive message class 1: hardware fault/software
 error  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --&gt; PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --&gt; PROFIdrive message class 3: supply voltage
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --&gt; PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --&gt; PROFIdrive message class 5: power electronics
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --&gt; PROFIdrive message class 6: overtemperature
 electronic components  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --&gt; PROFIdrive message class 7: ground fault/phase
 fault detected  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --&gt; PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --&gt; PROFIdrive message class 9: communication
 error to the higher-level control  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --&gt; PROFIdrive message class 10: safe monitoring
 channel has identified an error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --&gt; PROFIdrive message class 11: incorrect
 position actual value/speed actual value or not available  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 12: internal
 (DRIVE-CLiQ) communication error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --&gt; PROFIdrive message class 13: infeed unit
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --&gt; PROFIdrive message class 14: braking controller/Braking
 Module faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --&gt; PROFIdrive message class 15: line filter
 faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --&gt; PROFIdrive message class 16: external
 measured value/signal state outside the permissible range  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --&gt; PROFIdrive message class 17: application/technology
 function faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --&gt; PROFIdrive message class 18: error in
 the parameterization/configuration/commissioning sequence  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --&gt; PROFIdrive message class 19: general drive
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 20: auxiliary
 unit faulted
 
 ### p3234 Delay line voltage failure detection
@@ -15249,8 +15249,8 @@ Sets a zero mark offset to shift the zero mark within one mechanical revolution.
 Example:  
 p0408 = 2048 (encoder pulses)  
 p4426 = 512 (zero mark offset in pulses)  
---> Positive direction: The zero mark is output offset by 512 pulses.  
---> Negative direction: The zero mark is output offset by 1536 pulses.
+--&gt; Positive direction: The zero mark is output offset by 512 pulses.  
+--&gt; Negative direction: The zero mark is output offset by 1536 pulses.
 
 **Dependency:** 
   
@@ -15604,10 +15604,10 @@ The maximum speed controller gain is determined from the identified mechanical c
 system.  
 For bits 03, 04:  
 The measured value buffer length is set using these bits:  
-Bit 04 = 0 and bit 03 = 0 -> buffer length = 256  
-Bit 04 = 0 and bit 03 = 1 -> buffer length = 512  
-Bit 04 = 1 and bit 03 = 0 -> buffer length = 1024  
-Bit 04 = 1 and bit 03 = 1 -> buffer length = 2048  
+Bit 04 = 0 and bit 03 = 0 -&gt; buffer length = 256  
+Bit 04 = 0 and bit 03 = 1 -&gt; buffer length = 512  
+Bit 04 = 1 and bit 03 = 0 -&gt; buffer length = 1024  
+Bit 04 = 1 and bit 03 = 1 -&gt; buffer length = 2048  
 For bit 05:  
 A Hamming window is used to filter the measured time signals.  
 For bit 06:  
@@ -15615,18 +15615,18 @@ The measurement checks the current controller frequency response and this is tak
 into account in the speed controller loop.  
 For bits 07, 08, 09:  
 The measurement bandwidth is set using these bits:  
-Bit 09 = 0, bit 08 = 0, bit 07 = 0 -> bandwidth = 50 Hz  
-Bit 09 = 0, bit 08 = 0, bit 07 = 1 -> bandwidth = 100 Hz  
-Bit 09 = 0, bit 08 = 1, bit 07 = 0 -> bandwidth = 200 Hz  
-Bit 09 = 0, bit 08 = 1, bit 07 = 1 -> bandwidth = 400 Hz  
-Bit 09 = 1, bit 08 = 0, bit 07 = 0 -> bandwidth = 800 Hz  
-Bit 09 = 1, bit 08 = 0, bit 07 = 1 -> bandwidth = 1600 Hz  
+Bit 09 = 0, bit 08 = 0, bit 07 = 0 -&gt; bandwidth = 50 Hz  
+Bit 09 = 0, bit 08 = 0, bit 07 = 1 -&gt; bandwidth = 100 Hz  
+Bit 09 = 0, bit 08 = 1, bit 07 = 0 -&gt; bandwidth = 200 Hz  
+Bit 09 = 0, bit 08 = 1, bit 07 = 1 -&gt; bandwidth = 400 Hz  
+Bit 09 = 1, bit 08 = 0, bit 07 = 0 -&gt; bandwidth = 800 Hz  
+Bit 09 = 1, bit 08 = 0, bit 07 = 1 -&gt; bandwidth = 1600 Hz  
 For bits 10, 11:  
 Number of measuring periods.  
-Bit 11 = 0 and bit 10 = 0 -> number of measurements = 1  
-Bit 11 = 0 and bit 10 = 1 -> number of measurements = 2  
-Bit 11 = 1 and bit 10 = 0 -> number of measurements = 4  
-Bit 11 = 1 and bit 10 = 1 -> number of measurements = 8  
+Bit 11 = 0 and bit 10 = 0 -&gt; number of measurements = 1  
+Bit 11 = 0 and bit 10 = 1 -&gt; number of measurements = 2  
+Bit 11 = 1 and bit 10 = 0 -&gt; number of measurements = 4  
+Bit 11 = 1 and bit 10 = 1 -&gt; number of measurements = 8  
 For bit 12:  
 The PRBS signal is switched to the speed setpoint (in front of the filter).  
 For bit 13:  
@@ -15637,7 +15637,7 @@ When the bit is set, a current setpoint filter is used to partially compensate t
 mechanical system.  
 This is recommended for the following machine attributes:  
 - The load moment of inertia is significantly higher than the motor moment of inertia
-(e.g. > 6x).  
+(e.g. &gt; 6x).  
 - The coupling between the machine elements has almost no backlash (no play).  
 - The stiffness of the mechanical transmission elements does not change significantly
 in the traversing range.
@@ -16952,43 +16952,43 @@ in r2139).
 The structure of the safety message buffer and the assignment of the indices is shown
 in r60045.  
 For bits 20 ... 16:  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
-Bit 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --&gt; PROFIdrive message class 0: not assigned  
+Bit 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --&gt; PROFIdrive message class 1: hardware fault/software
 error  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --&gt; PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --&gt; PROFIdrive message class 3: supply voltage
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --&gt; PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --&gt; PROFIdrive message class 5: power electronics
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --&gt; PROFIdrive message class 6: overtemperature
 electronic components  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --&gt; PROFIdrive message class 7: ground fault/phase
 fault detected  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --&gt; PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --&gt; PROFIdrive message class 9: communication
 error to the higher-level control  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --&gt; PROFIdrive message class 10: safe monitoring
 channel has identified an error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --&gt; PROFIdrive message class 11: incorrect
 position actual value/speed actual value or not available  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 12: internal
 (DRIVE-CLiQ) communication error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --&gt; PROFIdrive message class 13: infeed unit
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --&gt; PROFIdrive message class 14: braking controller/Braking
 Module faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --&gt; PROFIdrive message class 15: line filter
 faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --&gt; PROFIdrive message class 16: external
 measured value/signal state outside the permissible range  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --&gt; PROFIdrive message class 17: application/technology
 function faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --&gt; PROFIdrive message class 18: error in
 the parameterization/configuration/commissioning sequence  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --&gt; PROFIdrive message class 19: general drive
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 20: auxiliary
 unit faulted
 
 ### r9753[0...63] SI message value for float values
@@ -17666,7 +17666,7 @@ Reserved
 If the self test is enabled using externally specified dark pulses (p10041 = 3) for
 at least one F-DI, then p10017 must be set longer than the maximum duration of the
 dark pulses + 2 ms. If the test pulses are specified using the switchable power supply
-(p10041 = 1), then this means p10017 > p10018 + 2 ms.
+(p10041 = 1), then this means p10017 &gt; p10018 + 2 ms.
 
 ### p10018 SI F-DI self test length dark pulses VS+
 
@@ -17693,7 +17693,7 @@ dark pulses + 2 ms. If the test pulses are specified using the switchable power 
 Sets the dark pulse length of the switchable power supply for the self test using
 specified dark pulses (p10041) of the F-DI.  
 Value = 0: switchable power supply, permanently switched on.  
-Value > 0: dark pulse length for the switchable power supply. The test cycle is fixed
+Value &gt; 0: dark pulse length for the switchable power supply. The test cycle is fixed
 at 5 s.
 
 **Note:** 
@@ -17842,7 +17842,7 @@ Reserved
 **Note:** 
   
 Mode 1:  
-A check is made whether p10017 is > p10018 + 2 ms and whether p10018 is set > 0.
+A check is made whether p10017 is &gt; p10018 + 2 ms and whether p10018 is set &gt; 0.
 
 ### r10051.0 SI digital inputs status channel A
 
@@ -17891,8 +17891,8 @@ both inputs of the F-DI, to a status of the F-DI equal to "1" (safety function d
 F-DI: Failsafe Digital Input  
   
 NC contact:  
-24V at the input -> logical "1"  
-0V at the input -> logical "0"
+24V at the input -&gt; logical "1"  
+0V at the input -&gt; logical "0"
 
 ### r10071.0 SI F-DI status
 
@@ -19091,24 +19091,24 @@ r9753, r9754, r9755, r9756, r60044, r60048, r60049, p60052
   
 The messages type "safety message" (Cxxxxx) are entered in the message fault buffer.  
 Message buffer structure (principle):  
-r60045[0], r60048[0], r60049[0], r9753[0], r9754[0], r9755[0], r9756[0] --> safety
+r60045[0], r60048[0], r60049[0], r9753[0], r9754[0], r9755[0], r9756[0] --&gt; safety
 message 1 (oldest active message) of the actual message case.  
 ...  
-r60045[7], r60048[7], r60049[7], r9753[7], r9754[7], r9755[7], r9756[7] --> safety
+r60045[7], r60048[7], r60049[7], r9753[7], r9754[7], r9755[7], r9756[7] --&gt; safety
 message 8 (latest active message) of the actual message case,  
   
 Safety messages that have gone are automatically acknowledged.  
 History of acknowledged messages:  
-r60045[8], r60048[8], r60049[8], r9753[8], r9754[8], r9755[8], r9756[8] --> safety
+r60045[8], r60048[8], r60049[8], r9753[8], r9754[8], r9755[8], r9756[8] --&gt; safety
 message 1 of the 1st acknowledged message case,  
 ...  
-r60045[16], r60048[16], r60049[16], r9753[16], r9754[16], r9755[16], r9756[16] -->
+r60045[16], r60048[16], r60049[16], r9753[16], r9754[16], r9755[16], r9756[16] --&gt;
 safety message 1 of the 2nd acknowledged message case,  
 ...  
-r60045[56], r60048[56], r60049[56], r9753[56], r9754[56], r9755[56], r9756[56] -->
+r60045[56], r60048[56], r60049[56], r9753[56], r9754[56], r9755[56], r9756[56] --&gt;
 safety message 1 of the 7th acknowledged message case,  
 ...  
-r60045[63], r60048[63], r60049[63], r9753[63], r9754[63], r9755[63], r9756[63] -->
+r60045[63], r60048[63], r60049[63], r9753[63], r9754[63], r9755[63], r9756[63] --&gt;
 safety message 8 (oldest gone message) of the 7th acknowledged message case,
 
 ### r60047[0...63] SI message number
@@ -19141,24 +19141,24 @@ r9753, r9754, r9755, r9756, r60044, r60048, r60049, p60052
   
 The messages type "safety message" (Cxxxxx) are entered in the message fault buffer.  
 Message buffer structure (principle):  
-r60045[0], r60048[0], r60049[0], r9753[0], r9754[0], r9755[0], r9756[0] --> safety
+r60045[0], r60048[0], r60049[0], r9753[0], r9754[0], r9755[0], r9756[0] --&gt; safety
 message 1 (oldest active message) of the actual message case.  
 ...  
-r60045[7], r60048[7], r60049[7], r9753[7], r9754[7], r9755[7], r9756[7] --> safety
+r60045[7], r60048[7], r60049[7], r9753[7], r9754[7], r9755[7], r9756[7] --&gt; safety
 message 8 (latest active message) of the actual message case,  
   
 Safety messages that have gone are automatically acknowledged.  
 History of acknowledged messages:  
-r60045[8], r60048[8], r60049[8], r9753[8], r9754[8], r9755[8], r9756[8] --> safety
+r60045[8], r60048[8], r60049[8], r9753[8], r9754[8], r9755[8], r9756[8] --&gt; safety
 message 1 of the 1st acknowledged message case,  
 ...  
-r60045[16], r60048[16], r60049[16], r9753[16], r9754[16], r9755[16], r9756[16] -->
+r60045[16], r60048[16], r60049[16], r9753[16], r9754[16], r9755[16], r9756[16] --&gt;
 safety message 1 of the 2nd acknowledged message case,  
 ...  
-r60045[56], r60048[56], r60049[56], r9753[56], r9754[56], r9755[56], r9756[56] -->
+r60045[56], r60048[56], r60049[56], r9753[56], r9754[56], r9755[56], r9756[56] --&gt;
 safety message 1 of the 7th acknowledged message case,  
 ...  
-r60045[63], r60048[63], r60049[63], r9753[63], r9754[63], r9755[63], r9756[63] -->
+r60045[63], r60048[63], r60049[63], r9753[63], r9754[63], r9755[63], r9756[63] --&gt;
 safety message 8 (oldest gone message) of the 7th acknowledged message case,
 
 ### r60048[0...63] SI message time received in milliseconds

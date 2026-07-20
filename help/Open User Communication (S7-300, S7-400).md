@@ -85,7 +85,7 @@ The receive area is specified by the following two variables:
 - Pointer to the start of the area
 - Length of the area
 
-Depending on the protocol variant being used, the length of the area is specified either by the LEN parameter (if LEN <> 0) or the length information of the DATA parameter (if LEN = 0).
+Depending on the protocol variant being used, the length of the area is specified either by the LEN parameter (if LEN &lt;&gt; 0) or the length information of the DATA parameter (if LEN = 0).
 
 The following data types are permitted in the ANY pointer: BOOL, BYTE, CHAR, WORD, INT, DWORD, DINT, REAL, DATE, TIME_OF_DAY, TIME, S5TIME, DATE_AND_TIME.
 
@@ -228,7 +228,7 @@ For additional information on valid data types, refer to "[Overview of the valid
 | loc_tsap_id_len | local_tsap_id[1] | local_tsap_id[2] | local_tsap_id[3 to 16] |
 | --- | --- | --- | --- |
 | 2 | B#16#E0 (connection type T connection) | 0 (only for integrated IE interfaces) or rack and slot of the local CPU (bits 0 to 4 slot, bits 5 to 7 rack number) | Does not exist |
-| > 2 | B#16#E0 (connection type T connection) | 0 (only for integrated IE interfaces) or rack and slot of the local CPU (bits 0 to 4 slot, bits 5 to 7 rack number) | TSAP extension |
+| &gt; 2 | B#16#E0 (connection type T connection) | 0 (only for integrated IE interfaces) or rack and slot of the local CPU (bits 0 to 4 slot, bits 5 to 7 rack number) | TSAP extension |
 |  | Only for integrated IE interfaces: a ASCII character (B#16#20 to B#16#7E) | irrelevant | TSAP extension |
 
 ### CPU dependencies for protocol variants TCP and ISO on TCP
@@ -611,7 +611,7 @@ For additional information on valid data types, refer to "[Overview of the valid
 | 1 | 80A7 | Communication error: You have called "[TDISCON](#tdiscon-terminate-communication-connection-s7-300-s7-400)" before "TCON" was completed. Connection establishment was aborted by calling "[TDISCON](#tdiscon-terminate-communication-connection-s7-300-s7-400)". |
 | 1 | 80B2 | The CONNECT parameter points to a data block that was generated with the keyword UNLINKED. |
 | 1 | 80B3 | Inconsistent parameter assignment: Group error for error codes W#16#80A0 to W#16#80A2, W#16#80A4, W#16#80B4 to W#16#80B9 |
-| 1 | 80B4 | You have violated one or more of the following conditions when establishing a connection passively (active_est = FALSE) with the ISO-on-TCP protocol variant (connection_type = B#16#12):  - local_tsap_id_len >= B#16#02 - local_tsap_id[1] = B#16#E0 - With local_tsap_id_len >= B#16#03, local_tsap_id[1] is an ASCII character. - local_tsap_id[1] is an ASCII character and local_tsap_id_len >= B#16#03 |
+| 1 | 80B4 | You have violated one or more of the following conditions when establishing a connection passively (active_est = FALSE) with the ISO-on-TCP protocol variant (connection_type = B#16#12):  - local_tsap_id_len &gt;= B#16#02 - local_tsap_id[1] = B#16#E0 - With local_tsap_id_len &gt;= B#16#03, local_tsap_id[1] is an ASCII character. - local_tsap_id[1] is an ASCII character and local_tsap_id_len &gt;= B#16#03 |
 | 1 | 80B5 | Error in parameter active_est (UDT 65) with the UDP protocol variant |
 | 1 | 80B6 | Parameters assignment error in parameter connection_type (UDT 65) |
 | 1 | 80B7 | Error in one of the following parameters of UDT 65: block_length, local_tsap_id_len, rem_subnet_id_len, rem_staddr_len, rem_tsap_id_len, next_staddr_len |
@@ -770,7 +770,7 @@ The receive area is specified by the following two variables:
 - Pointer to the start of the area
 - Length of the area
 
-Depending on the protocol variant being used, the length of the area is specified either by the LEN parameter (if LEN <> 0) or the length information of the DATA parameter (if LEN = 0).
+Depending on the protocol variant being used, the length of the area is specified either by the LEN parameter (if LEN &lt;&gt; 0) or the length information of the DATA parameter (if LEN = 0).
 
 ### Receive modes of TRCV
 
@@ -779,8 +779,8 @@ The following table shows how "TRCV" enters the received data in the receive are
 | Protocol variant | Entering the data  in the receive area | connection_type parameter | Value of the LEN parameter |
 | --- | --- | --- | --- |
 | TCP | Ad-hoc mode | B#16#01, B#16#11 | 0 |
-| TCP | Data reception with specified length | B#16#01, B#16#11 | <> 0 |
-| ISO on TCP | protocol-controlled | B#16#12 | 0 (recommended) or <> 0 |
+| TCP | Data reception with specified length | B#16#01, B#16#11 | &lt;&gt; 0 |
+| ISO on TCP | protocol-controlled | B#16#12 | 0 (recommended) or &lt;&gt; 0 |
 
 ### TCP / ad-hoc mode
 
@@ -835,7 +835,7 @@ The following table shows the parameters of the "TRCV" instruction:
 | --- | --- | --- | --- | --- |
 | EN_R | Input | BOOL | I, Q, M, D, L, T, C | Control parameter enabled to receive: With EN_R = 1, "TRCV" is ready to receive. The receive job is being processed. |
 | ID | Input | WORD | M, D or constant | Reference to the associated connection. ID must be identical to the associated parameter ID in the local connection description. Value range: W#16#0001 to W#16#0FFF |
-| LEN | Input | INT | I, Q, M, D, L | Length of the receive area in bytes  For the meaning of LEN = 0 or LEN <> 0, see above (receive modes of "TRCV").  For the value range, see also: [Relationship between CPU and protocol variant used (connection_type) and transferable data length](#relationship-between-cpu-and-protocol-variant-used-connection_type-and-transferable-data-length-s7-300-s7-400). |
+| LEN | Input | INT | I, Q, M, D, L | Length of the receive area in bytes  For the meaning of LEN = 0 or LEN &lt;&gt; 0, see above (receive modes of "TRCV").  For the value range, see also: [Relationship between CPU and protocol variant used (connection_type) and transferable data length](#relationship-between-cpu-and-protocol-variant-used-connection_type-and-transferable-data-length-s7-300-s7-400). |
 | NDR | Output | BOOL | I, Q, M, D, L | Status parameter NDR:  - NDR = 0: Job not yet started or still running - NDR = 1: Job successfully completed |
 | ERROR | Output | BOOL | I, Q, M, D, L | Status parameter ERROR:  - ERROR=1: Error occurred during processing. STATUS supplies detailed information on the type of error |
 | BUSY | Output | BOOL | I, Q, M, D, L | - BUSY = 1: The job is not yet completed. A new job cannot be triggered. - BUSY = 0: The job is completed. |
@@ -1390,7 +1390,7 @@ The following table provides an overview of the status values of the connection 
 | 80A4 | IP address of the remote connection end point is invalid; for example, it matches the local partner's own IP address |
 | 80B2 | The CONNECT parameter points to a data block that was generated with the keyword UNLINKED. |
 | 80B3 | Inconsistent parameter assignment |
-| 80B4 | You have violated one or more of the following conditions when establishing a connection passively (active_est = FALSE) with the ISO-on-TCP protocol variant (connection_type = B#16#12):  - local_tsap_id_len >= B#16#02 - local_tsap_id[1] = B#16#E0 |
+| 80B4 | You have violated one or more of the following conditions when establishing a connection passively (active_est = FALSE) with the ISO-on-TCP protocol variant (connection_type = B#16#12):  - local_tsap_id_len &gt;= B#16#02 - local_tsap_id[1] = B#16#E0 |
 | 80B6 | Parameter assignment error relating to the connection_type parameter |
 | 80B7 | Error in the connection description |
 | 80C3 | All connection resources are in use:  - Another block with this ID is already being processed in a different priority class. - Internal lack of resources. |

@@ -546,7 +546,7 @@ The ratio between two process values is adjusted to a defined setpoint with a PI
 Proceed as follows to create a single-loop ratio controller:
 
 1. Program process value processing as outlined below in your controller FB.
-2. To avoid division by zero, you must limit the value range for the process value PV_PER2 to Values > Zero with the instruction LIMITER.
+2. To avoid division by zero, you must limit the value range for the process value PV_PER2 to Values &gt; Zero with the instruction LIMITER.
 
 The diagram below shows a controller FB, in this case RATIOCTR, for a single-loop ratio controller with a continual manipulated variable.
 

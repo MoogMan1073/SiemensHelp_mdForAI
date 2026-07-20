@@ -212,7 +212,7 @@ Proceed as follows to create a new project in the TIA Portal and add a SIMATIC D
 ##### Creating a project
 
 1. Start TIA Portal.
-2. Select the action "Start" > "Create new project" in the portal view.
+2. Select the action "Start" &gt; "Create new project" in the portal view.
 3. Assign a name for the new project under "Project name".
 4. Set the storage location with the "..." button.
 5. If required, enter comments in the Comment field.
@@ -223,7 +223,7 @@ You have created the project and are currently in the portal view. To continue w
 ##### Adding a SIMATIC Drive Controller to the project
 
 1. Select "Add new device" in the project tree.
-2. In the "Add new device" dialog, select the device version you are using under "Controller" > "SIMATIC Drive Controller" and the firmware version of the device under "Version".
+2. In the "Add new device" dialog, select the device version you are using under "Controller" &gt; "SIMATIC Drive Controller" and the firmware version of the device under "Version".
 3. You use the "Open device view" checkbox to specify whether the hardware configuration view is to be opened once the device has been created. Keep the checkbox selected if you want to configure the CPU next.
 4. Click OK to confirm the new device.
 
@@ -246,7 +246,7 @@ SIMATIC Drive Controller in the project tree, device collapsed
 SINAMICS Integrated is only created if the following conditions are met:
 
 - Startdrive is installed
-- The option "Create including SINAMICS Integrated (Requirement: Startdrive is installed)" is activated, in the "Options" menu under "Settings" > "Hardware configuration" > "Device-specific settings".
+- The option "Create including SINAMICS Integrated (Requirement: Startdrive is installed)" is activated, in the "Options" menu under "Settings" &gt; "Hardware configuration" &gt; "Device-specific settings".
 
 Both devices are networked via the PROFIdrive Integrated_n subnet.
 
@@ -265,13 +265,13 @@ CPU PLC_n and integrated automatic speed control Integrated_n are modeled as sep
 > You can add the SIMATIC Drive Controller directly to a group folder in the project tree even if the group folder is a subfolder:
 >
 > 1. Select the required group.
-> 2. Go to the menu bar or shortcut menu and select "Add" > "Device".
+> 2. Go to the menu bar or shortcut menu and select "Add" &gt; "Device".
 
 ##### Creation options
 
 The CPU and SINAMICS Integrated are by default created in a shared group folder in the project tree.
 
-To change this behavior, activate or deactivate the relevant options for the SIMATIC Drive Controller in the "Options" menu under "Settings" -> "Hardware configuration" -> "Device-specific settings".
+To change this behavior, activate or deactivate the relevant options for the SIMATIC Drive Controller in the "Options" menu under "Settings" -&gt; "Hardware configuration" -&gt; "Device-specific settings".
 
 ![Creation options for creating a SIMATIC Drive Controller](images/128351040779_DV_resource.Stream@PNG-en-US.png)
 
@@ -311,7 +311,7 @@ Load preview
 Proceed as follows if your project only contains the CPU of a SIMATIC Drive Controller and you want to configure the missing SINAMICS Integrated.
 
 1. Select "Add new device" in the project tree.
-2. In the "Add new device" dialog, go to "Drives" > "Drives & starters" > "SINAMICS drives" > "SINAMICS S120 Integrated for SIMATIC" and select SINAMICS Integrated, and select the firmware version of the device under "Version".
+2. In the "Add new device" dialog, go to "Drives" &gt; "Drives &amp; starters" &gt; "SINAMICS drives" &gt; "SINAMICS S120 Integrated for SIMATIC" and select SINAMICS Integrated, and select the firmware version of the device under "Version".
 3. Click OK to confirm.
 
 Result: SINAMICS Integrated has been added to the project tree and can be networked with the CPU.
@@ -322,9 +322,9 @@ Result: SINAMICS Integrated has been added to the project tree and can be networ
 
 Proceed as follows if your project only contains a SINAMICS Integrated of a SIMATIC Drive Controller and you want to configure the missing CPU.
 
-1. To ensure that only the CPU (without SINAMICS Integrated) is created, deselect the "Including SINAMICS Integrated" option under "Settings" > "Hardware configuration" > "Device-specific settings" in the "Options" menu. Also deselect the "Create Drive Controller with group folder" option if you do not want a group folder to be created. Alternatively, you will need to delete the components you do not require.
+1. To ensure that only the CPU (without SINAMICS Integrated) is created, deselect the "Including SINAMICS Integrated" option under "Settings" &gt; "Hardware configuration" &gt; "Device-specific settings" in the "Options" menu. Also deselect the "Create Drive Controller with group folder" option if you do not want a group folder to be created. Alternatively, you will need to delete the components you do not require.
 2. Select "Add new device" in the project tree.
-3. In the "Add new device" dialog, select the relevant device version under "Controller" > "SIMATIC Drive Controller" and the firmware version of the device under "Version".
+3. In the "Add new device" dialog, select the relevant device version under "Controller" &gt; "SIMATIC Drive Controller" and the firmware version of the device under "Version".
 4. Click OK to confirm.
 
 Result: The CPU has been added to the project tree and can be connected to the SINAMICS Integrated .
@@ -773,7 +773,7 @@ Hardware interface
 - Output deactivated  
   When output is deactivated, the cam track is evaluated only in the software.
 
-**Extended parameters > Activation time**
+**Extended parameters &gt; Activation time**
 
 ![Activation time](images/128375412491_DV_resource.Stream@PNG-en-US.png)
 
@@ -783,7 +783,7 @@ The specified output cam type is indicated at the top of the Activation time con
 
 1. For a time shift of the switch-on and switch-off times of the output cams, enter an activation time and a deactivation time.
 
-**Extended parameters Parameter > Hysteresis**
+**Extended parameters Parameter &gt; Hysteresis**
 
 ![Hysteresis](images/128377411339_DV_resource.Stream@PNG-en-US.png)
 
@@ -791,7 +791,7 @@ Hysteresis
 
 1. To prevent unwanted changes in the switching state of the output cams of a cam track, enter a hysteresis value.
 
-When using output cams that reference the actual position, it is advisable to enter a hysteresis value (> 0.0).
+When using output cams that reference the actual position, it is advisable to enter a hysteresis value (&gt; 0.0).
 
 ##### Cam track technology object
 
@@ -993,7 +993,7 @@ N<sub>E(new)</sub>: Event counter, current (new) count
 
 N<sub>E(old)</sub>:   Event counter, previous (old) count
 
-If current count < old count is true for the counters, then an overflow has occurred. In this case, the value 2<sup>16</sup> must be added to the new count for the event counter, and the value 2<sup>32</sup> must be added to the new count for the period duration counter. A maximum of one overflow is possible.
+If current count &lt; old count is true for the counters, then an overflow has occurred. In this case, the value 2<sup>16</sup> must be added to the new count for the event counter, and the value 2<sup>32</sup> must be added to the new count for the period duration counter. A maximum of one overflow is possible.
 
 The "Multiple periods" measurement method yields a more accurate measurement.
 
@@ -1307,7 +1307,7 @@ With digital outputs (DQ, Timer DQ, oversampling DQ, pulse width modulation PWM)
 >
 > Signals are only reliably acquired over STS_DI if the level is significantly longer than the input delay + acquisition cycle of the digital inputs/outputs (X142).
 >
-> Example: If you operate the digital inputs/outputs (X142) as isochronous to the MC Servo in a cycle of 2 ms and a set input delay of 125 µs, the level duration must be > 2.125 ms.
+> Example: If you operate the digital inputs/outputs (X142) as isochronous to the MC Servo in a cycle of 2 ms and a set input delay of 125 µs, the level duration must be &gt; 2.125 ms.
 
 #### Programming example
 
@@ -1326,7 +1326,7 @@ The digital inputs and digital inputs/outputs (X122/X132) are assigned to SINAMI
 - A digital output is always only available exclusively to SINAMICS Integrated or to the CPU.
 - If you use a digital input for the CPU, you can also interconnect the digital input at the drive end.
 
-You can configure the digital inputs and digital inputs/outputs (X122/X132) channel by channel. To do so, go to the function view in the project tree under "Automatic speed control" > "Parameter assignment" and set the configuration under "Inputs/outputs".
+You can configure the digital inputs and digital inputs/outputs (X122/X132) channel by channel. To do so, go to the function view in the project tree under "Automatic speed control" &gt; "Parameter assignment" and set the configuration under "Inputs/outputs".
 
 Bidirectional inputs/outputs are configured in the following configuration mask.
 
@@ -1445,7 +1445,7 @@ You configure coupled isochronous mode in STEP 7; see [Setting the clock system]
 
    Configuring the SINAMICS S120 drive system
 3. Select the drive control in the SINAMICS Integrated device view.  
-   Check the default PROFIdrive telegrams In the properties, under "Integrated_1" > "Telegram configuration" in the "General" tab. Make changes if required.  
+   Check the default PROFIdrive telegrams In the properties, under "Integrated_1" &gt; "Telegram configuration" in the "General" tab. Make changes if required.  
    The following default settings are made automatically:
 
    - Automatic speed control: Frame 393
@@ -1455,11 +1455,11 @@ You configure coupled isochronous mode in STEP 7; see [Setting the clock system]
    ![Configuring PROFIdrive frames](images/128446766347_DV_resource.Stream@PNG-en-US.png)
 
    Configuring PROFIdrive frames
-4. Create the axis technology objects. You create the axis technology objects under "Technology objects > Add new object" in the project tree.
+4. Create the axis technology objects. You create the axis technology objects under "Technology objects &gt; Add new object" in the project tree.
 5. Assign the configured drives to the axis technology objects.
 
    - Open the configuration of the technology object.
-   - Navigate to "Hardware interface" > "Drive".
+   - Navigate to "Hardware interface" &gt; "Drive".
    - Select the "PROFIdrive" entry from the "Drive type" drop-down list.
    - Select the "Drive" entry from the "Data connection" drop-down list.
    - Select a SINAMICS Integrated drive axis from the "Drive" list.
@@ -1517,12 +1517,12 @@ Make the following settings in accordance with whether you are operating SINAMIC
 ##### Procedure
 
 1. Open the device view of the CPU.
-2. Configure the operating modes of the technology I/Os in the CPU properties under "General" > "DI/DQ 8x24VDC[X142]" > "Channel parameters", for example, a timer DQ for later use as a cam output for channel 3.
+2. Configure the operating modes of the technology I/Os in the CPU properties under "General" &gt; "DI/DQ 8x24VDC[X142]" &gt; "Channel parameters", for example, a timer DQ for later use as a cam output for channel 3.
 
    ![Setting the operating mode for technology I/O X142](images/128460987787_DV_resource.Stream@PNG-en-US.png)
 
    Setting the operating mode for technology I/O X142
-3. In the project tree under the axis technology object, add an output cam technology object under "Output cam" > "Add new output cam".
+3. In the project tree under the axis technology object, add an output cam technology object under "Output cam" &gt; "Add new output cam".
 4. Open the configuration of the output cam.
 5. Under "Hardware interface", select the "Activate output" checkbox and the option "Output over Timer DQ".
 6. Assign the configured output under "Output".
@@ -1530,7 +1530,7 @@ Make the following settings in accordance with whether you are operating SINAMIC
    ![Assigning a channel to the output cam](images/128475592715_DV_resource.Stream@PNG-en-US.png)
 
    Assigning a channel to the output cam
-7. Use the "Device configuration" button to switch back to the CPU settings and check the settings under "DI/DQ 8x24VDC [X142]" > "I/O addresses".
+7. Use the "Device configuration" button to switch back to the CPU settings and check the settings under "DI/DQ 8x24VDC [X142]" &gt; "I/O addresses".
 
    The following settings must be configured for the input and output addresses:
 
@@ -1601,9 +1601,9 @@ You can operate PROFINET drives in isochronous or non-isochronous mode. Isochron
 Proceed as follows to activate isochronous mode for the drive:
 
 1. Select the device view of the drive system.
-2. In the properties window, select the tab "PROFINET Interface [X150]" > "Advanced options" > "Isochronous mode".
+2. In the properties window, select the tab "PROFINET Interface [X150]" &gt; "Advanced options" &gt; "Isochronous mode".
 3. Select the "Isochronous mode" check box.
-4. In the properties window, select the tab "PROFINET Interface [150]" > "Advanced options" > "Real-time settings" > "Synchronization".
+4. In the properties window, select the tab "PROFINET Interface [150]" &gt; "Advanced options" &gt; "Real-time settings" &gt; "Synchronization".
 5. Select "IRT" as the RT class.
 
 > **Note**
@@ -1613,7 +1613,7 @@ Proceed as follows to activate isochronous mode for the drive:
 ##### Configuring the CPU as sync master and setting the send clock
 
 1. Select the device view of the CPU.
-2. In the properties window, select the tab "PROFINET interface [X150]" > "Advanced options" > "Real-time settings" > "Synchronization".
+2. In the properties window, select the tab "PROFINET interface [X150]" &gt; "Advanced options" &gt; "Real-time settings" &gt; "Synchronization".
 3. Select "IRT" as the RT class if it has not already been set automatically.
 4. Select "Sync master" from the "Synchronization role" drop-down list.
 5. Click the "Domain settings" button.
@@ -1622,7 +1622,7 @@ Proceed as follows to activate isochronous mode for the drive:
 ##### Selecting the drive in the configuration of the technology object
 
 1. Add a new axis technology object.
-2. Open the configuration "Hardware interface" > "Drive".
+2. Open the configuration "Hardware interface" &gt; "Drive".
 3. Select the "PROFIdrive" entry from the "Drive type" drop-down list.
 4. Select a drive axis of the PROFINET drive unit from the "Drive" list.  
    Only drives for which you have configured a suitable PROFIdrive frame are available for selection. You can find out which PROFIdrive frames are supported by the SIMATIC Drive Controller in the [S7‑1500T Motion Control function manuals](https://support.industry.siemens.com/cs/ww/en/view/109751049).
@@ -1664,15 +1664,15 @@ You make the required settings in the relevant clock systems.
 
 Once you have set and, if necessary, coupled the clock systems, you need to couple the OB servo with the clock system in which you wish to operate the drives / that is the leading clock system. Depending on the configuration, these settings are made by the system.
 
-##### Use of clock cycles < 500 μs
+##### Use of clock cycles &lt; 500 μs
 
-You can only use clock cycles < 500 μs in the CPU 1507D TF with the following restrictions:
+You can only use clock cycles &lt; 500 μs in the CPU 1507D TF with the following restrictions:
 
 - Limited quantities are available.
 - The vulnerability for level overflows increases, for example, with MC Servo [OB91] and MC Interpolator [OB92]. This may result in an involuntary STOP of the CPU, especially in case of additional loads caused by the user program, traces and large watch tables.
 - A down-scaling from the application cycle of the MC-Servo [OB91] to the selected clock system, results in an additional load and should be avoided with small clocks.
 
-You should, therefore, only use clock cycles < 500 μs in exceptional cases and test your application very intensely.
+You should, therefore, only use clock cycles &lt; 500 μs in exceptional cases and test your application very intensely.
 
 For small position controller clock cycles, you can also use the position controller in the drive (Dynamic Servo Control function, DSC). This allows for position controller clock cycles of 125 μs, for example.
 
@@ -1719,7 +1719,7 @@ Setting options for "Cycle time" in the SINAMICS Integrated clock system
 Proceed as follows to set the clock system of the X142 technology I/Os:
 
 1. In the device view of STEP 7, select the CPU of the SIMATIC Drive Controller.
-2. Navigate to "Advanced configuration" > "Isochronous mode" in the properties of the CPU.
+2. Navigate to "Advanced configuration" &gt; "Isochronous mode" in the properties of the CPU.
 3. Select the required settings from the "Source of send clock" drop-down list in the "Isochronous mode for local modules" section.
 
    ![Technology I/O clock system](images/128487767307_DV_resource.Stream@PNG-en-US.png)
@@ -1738,7 +1738,7 @@ Setting options for "Source of send clock" in the clock system of the technology
 Proceed as follows to set the clock system of PROFINET interface X150:
 
 1. Select the PROFINET IO system in the network view of STEP 7.
-2. Make the settings for the send clock, etc. under "PROFINET subnet" > "Domain management" > "Sync domains".
+2. Make the settings for the send clock, etc. under "PROFINET subnet" &gt; "Domain management" &gt; "Sync domains".
 
 In coupled isochronous mode with other clock systems, the clock system of the PROFINET interface is always leading.
 

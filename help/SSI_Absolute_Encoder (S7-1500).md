@@ -171,8 +171,8 @@ Eliminate the cause of the error and acknowledge the error message by setting th
 | 80A2 | ENC_ERROR from feedback interface: Incorrect encoder signal |
 | 80A3 | LD_ERROR from feedback interface: Error when loading via control interface |
 | **Error messages of the instruction** SSI_Absolute_Encoder |  |
-| 80B8 | New comparison value 0 does not meet the following conditions:  - Low counting limit <= comparison value 0 <= high counting limit - Comparison value 0 < comparison value 1 |
-| 80B9 | New comparison value 1 does not meet the following conditions:  - Low counting limit <= comparison value 1 <= high counting limit - Comparison value 0 < comparison value 1 |
+| 80B8 | New comparison value 0 does not meet the following conditions:  - Low counting limit &lt;= comparison value 0 &lt;= high counting limit - Comparison value 0 &lt; comparison value 1 |
+| 80B9 | New comparison value 1 does not meet the following conditions:  - Low counting limit &lt;= comparison value 1 &lt;= high counting limit - Comparison value 0 &lt; comparison value 1 |
 | 80C0 | Instruction was called multiple times with the same instance (DB) |
 | 80C1 | Communication with technology module failed (read data records): Error information of internal instruction RDREC saved in static tag AdditionalErrorID |
 | 80C2 | Communication with technology module failed (write data records): Error information of internal instruction WRREC saved in static tag AdditionalErrorID |

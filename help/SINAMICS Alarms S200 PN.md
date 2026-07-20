@@ -704,7 +704,7 @@ The master control was returned to the drive.
 Set the monitoring time higher at the PC or, if required, completely disable the monitoring
 function.  
 The monitoring time is set as follows using the commissioning tool:  
-<Drive> -> Commissioning -> Control panel -> Button "Fetch master control" -> A window
+&lt;Drive&gt; -&gt; Commissioning -&gt; Control panel -&gt; Button "Fetch master control" -&gt; A window
 is displayed to set the monitoring time in milliseconds.  
 Notice:  
 The monitoring time should be set as short as possible. A long monitoring time means
@@ -2287,10 +2287,10 @@ Only for internal Siemens troubleshooting.
 
 **Remedy**
   
-For alarm value r2124 < 256, the following applies:  
+For alarm value r2124 &lt; 256, the following applies:  
 - Carry out a POWER ON (switch-off/switch-on).  
 - Replace the converter.  
-For alarm value r2124 >= 256, the following applies:  
+For alarm value r2124 &gt;= 256, the following applies:  
 - For the converter with this alarm, clear the fault memory (p0952 = 0).  
 - Replace the converter.
 
@@ -2474,7 +2474,7 @@ Component class and connection number are described in F01375.
 - Remove the corresponding component.  
 - Change the setting "deactivate and not present".  
 Note:  
-Under "Topology --> Topology view", the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view", the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01317 Deactivated component again present
@@ -2815,7 +2815,7 @@ Adapting topologies:
 - Adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - Automatically resolve the topology error.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01388 Topology: Encoder incorrectly inserted
@@ -2935,7 +2935,7 @@ Adapting topologies:
 - Adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - Automatically resolve the topology error.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01416 Topology: Component additionally inserted
@@ -3048,7 +3048,7 @@ Adapting topologies:
 - Remove the additional component (correct the actual topology).  
 - Adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01420 Topology: Component different
@@ -3136,7 +3136,7 @@ Adapting topologies:
 - Adapt the project/parameterizing in the commissioning tool (correct the target topology).  
   
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01425 Topology: Serial number different
@@ -3212,7 +3212,7 @@ Adapting topologies:
 - Change over the actual topology to match the target topology.  
 - Load the target topology that matches the actual topology (commissioning tool).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### F01451 Topology: Target topology is invalid
@@ -3469,7 +3469,7 @@ Check the hardware:
 - Check cables for interruption and contact problems.  
 - Check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01488 Topology: Encoder not connected
@@ -3585,7 +3585,7 @@ Check the hardware:
 - Check cables for interruption and contact problems.  
 - Check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01489 Topology: Motor not connected
@@ -3701,7 +3701,7 @@ Check the hardware:
 - Check cables for interruption and contact problems.  
 - Check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### F01512 No scaling available
@@ -3819,7 +3819,7 @@ to the password that was originally configured for the data backup in the origin
 converter:  
 - With the SD card inserted, enter the correct DDE password in the Security Wizard
 of the web server and restart the converter.  
-- In Startdrive, with the SD card inserted, under Online & Diagnostics, enter the
+- In Startdrive, with the SD card inserted, under Online &amp; Diagnostics, enter the
 correct DDE password in screen form "Specify password for encryption of the drive
 data" and restart the converter.  
   
@@ -4919,7 +4919,7 @@ time (if necessary, round up).
 - The discrepancy time must be greater or equal to the SI monitoring clock cycle (it
 must always be rounded up or down to be an integer multiple of the SI monitoring clock
 cycle).  
-If an input filter has been parameterized (p10017 > 0), then the shortest possible
+If an input filter has been parameterized (p10017 &gt; 0), then the shortest possible
 discrepancy time is directly specified by the input filter.  
 - The period of a cyclic switching pulse must be less than half of the discrepancy
 time p10017 (if necessary, round down).  
@@ -4927,7 +4927,7 @@ time p10017 (if necessary, round down).
 time+p10017 (if necessary, round up).  
 - The discrepancy time must be greater or equal to the SI monitoring clock cycle.
 The input filter must always be set less than the discrepancy time.  
-Self test with specified dark pulses (p10041 > 0) for long cable lengths:  
+Self test with specified dark pulses (p10041 &gt; 0) for long cable lengths:  
 - Increase the dark pulse length (p10018 or p10019).  
 - Increase the input filter (p10017).  
 Note:  
@@ -5080,24 +5080,24 @@ NONE
   
 Parameterization for isochronous operation is not permissible.  
 Alarm value (r2124, interpret decimal):  
-0: Bus cycle time Tdp < 0.5 ms.  
-1: Bus cycle time Tdp > 32 ms.  
+0: Bus cycle time Tdp &lt; 0.5 ms.  
+1: Bus cycle time Tdp &gt; 32 ms.  
 2: Bus cycle time Tdp is not an integer multiple of the current controller sampling
 time.  
-3: Instant of the actual value sensing Ti > Bus cycle time Tdp or Ti = 0.  
+3: Instant of the actual value sensing Ti &gt; Bus cycle time Tdp or Ti = 0.  
 4: Instant of the actual value sensing Ti is not an integer multiple of the current
 controller sampling time.  
-5: Instant of the setpoint acceptance To >= Bus cycle time Tdp or To = 0.  
+5: Instant of the setpoint acceptance To &gt;= Bus cycle time Tdp or To = 0.  
 6: Instant of the setpoint acceptance To is not an integer multiple of the current
 controller sampling time.  
 7: Controller application cycle time Tmapc is not an integer multiple of the speed
 controller sampling time.  
 8: Bus reserve bus cycle time Tdp - Data exchange time Tdx less than two current controller
 sampling times.  
-10: Instant of the setpoint acceptance To <= data exchange time Tdx + current controller
+10: Instant of the setpoint acceptance To &lt;= data exchange time Tdx + current controller
 sampling time  
-11: Controller application cycle time Tmapc > 14 x Tdp or Tmapc = 0.  
-12: PLL tolerance window Tpll_w > Tpll_w_max.  
+11: Controller application cycle time Tmapc &gt; 14 x Tdp or Tmapc = 0.  
+12: PLL tolerance window Tpll_w &gt; Tpll_w_max.  
 13: Bus cycle time Tdp is not a multiple of the speed controller clock cycle.
 
 **Remedy**
@@ -5660,7 +5660,7 @@ The alarm is automatically withdrawn after approx. 30 seconds.
 Alarm value (r2124, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = info. 1, xxxx = info. 2  
 Info 1 = 0: number of RT connections exceeded  
-Info 1 > 0: number of IRT connections exceeded  
+Info 1 &gt; 0: number of IRT connections exceeded  
 Info 2: permitted number of connections
 
 **Remedy**
@@ -6009,8 +6009,8 @@ Bandwidth_max = 1 / (2 x time slice clock cycle)
 Bandwidth_min = Bandwidth_max / 100000  
 Example:  
 Assumption: Time slice clock cycle = 125 µs  
---> Bandwidth_max = 1 / (2 x 125 µs) = 4000 Hz  
---> Bandwidth_min = 4000 Hz / 100000 = 0.04 Hz
+--&gt; Bandwidth_max = 1 / (2 x 125 µs) = 4000 Hz  
+--&gt; Bandwidth_min = 4000 Hz / 100000 = 0.04 Hz
 
 **Remedy**
   
@@ -6281,7 +6281,7 @@ The selected time slice clock cycle cannot be used for more than 4 recording cha
 
 **Remedy**
   
-Enter the clock cycle of an existing time slice with a cycle time >= 4 ms or reduce
+Enter the clock cycle of an existing time slice with a cycle time &gt;= 4 ms or reduce
 the number of recording channels to 4 per trace.  
 The fastest cycle time can be read out using the commissioning tool.
 
@@ -7282,7 +7282,7 @@ IMMEDIATELY
   
 For AC/AC drive units, the measured DC link voltage lies outside the tolerance range
 after precharging has been completed.  
-The following applies for the tolerance range: 1.16 * p0210 < r0070 < 1.6 * p0210  
+The following applies for the tolerance range: 1.16 * p0210 &lt; r0070 &lt; 1.6 * p0210  
 Note:  
 The fault can only be acknowledged when the drive is switched off.  
 See also: p0210 (Device supply voltage)
@@ -7726,7 +7726,7 @@ The upper torque limit is lower than the lower torque limit.
 **Remedy**
   
 When setting the torque limits via telegram 750, the positive torque limit must be
->= the negative torque.
+&gt;= the negative torque.
 
 ### A07091 Drive: determined current controller dynamic response invalid
 
@@ -7897,8 +7897,8 @@ NONE
   
 As a result of the violation of a parameter limit, the parameter value was automatically
 corrected.  
-Minimum limit violated --> parameter is set to the minimum value.  
-Maximum limit violated --> parameter is set to the maximum value.  
+Minimum limit violated --&gt; parameter is set to the minimum value.  
+Maximum limit violated --&gt; parameter is set to the maximum value.  
 Alarm value (r2124, interpret decimal):  
 Parameter number, whose value had to be adapted.
 
@@ -8443,7 +8443,7 @@ can destroy the converter.
 Limit the maximum speed (p1082) without any additional protection.  
 Note:  
 The maximum speed is calculated as follows:  
-p1082 <= 11.695 * DC link voltage overvoltage threshold/r0316  
+p1082 &lt;= 11.695 * DC link voltage overvoltage threshold/r0316  
 DC link voltage overvoltage threshold:  
 - Line connection 1 AC: 410 V  
 - Line connection 3 AC: 820 V  
@@ -10475,7 +10475,7 @@ The input terminal for the measuring probe is not set.
 Error when initializing the measuring probe.  
 4100:  
 The measuring pulse frequency is too high.  
-> 50000:  
+&gt; 50000:  
 The measuring clock cycle is not a multiple integer of the position controller clock
 cycle.
 
@@ -10488,7 +10488,7 @@ For alarm value = 4098:
 Check the Control Unit hardware.  
 For alarm value = 4100:  
 Reduce the frequency of the measuring pulses at the measuring probe.  
-For alarm value > 50000:  
+For alarm value &gt; 50000:  
 Set the clock cycle ratio of the measuring clock cycle to the position controller
 clock cycle to an integer multiple.  
 To do this, the currently effective measuring clock cycle can be determined from the
@@ -10706,7 +10706,7 @@ NONE
 
 **Cause**
   
-The selected command data set is not available (r0836 > p0170). The command data set
+The selected command data set is not available (r0836 &gt; p0170). The command data set
 was not changed over.
 
 **Remedy**
@@ -13152,7 +13152,7 @@ Fault value (r0949, interpret decimal):
 0:  
 - The hardware DC current monitoring has responded.  
 - Short-circuit at the braking resistor.  
-> 0:  
+&gt; 0:  
 Absolute value summation current amplitude.
 
 **Remedy**
@@ -13366,10 +13366,10 @@ yyyyxxxx hex:
 yyyy = power unit state  
 0: Fault status (wait for OFF and fault acknowledgment).  
 1: Restart inhibit (wait for OFF).  
-2: Overvoltage condition detected -> change into the fault state.  
-3: Undervoltage condition detected -> change into the fault state.  
-4: Wait for bridging contactor to open -> change into the fault state.  
-5: Wait for bridging contactor to open -> change into restart inhibit.  
+2: Overvoltage condition detected -&gt; change into the fault state.  
+3: Undervoltage condition detected -&gt; change into the fault state.  
+4: Wait for bridging contactor to open -&gt; change into the fault state.  
+5: Wait for bridging contactor to open -&gt; change into restart inhibit.  
 6: Wait for bypass contactor to open  
 7: Commissioning.  
 8: Ready for precharging.  
@@ -13380,7 +13380,7 @@ has been completed.
 12: Precharging completed, ready for pulse enable.  
 13: It was detected that the STO terminal was energized at the power unit.  
   
-xxxx = Missing internal enable signals, power unit (inverted bit-coded, FFFF hex ->
+xxxx = Missing internal enable signals, power unit (inverted bit-coded, FFFF hex -&gt;
 all internal enable signals available)  
 Bit 0: Power supply for the power semiconductor gating shut down.  
 Bit 1: Ground fault detected.  

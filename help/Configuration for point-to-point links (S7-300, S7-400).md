@@ -907,7 +907,7 @@ The response message frame consists of 4 bytes and contains information on the p
 | 1 | Message frame ID in response message frames (00H),  in continuation response message frames (FFH) |
 | 2 | Message frame ID (00H) |
 | 3 | Displays 00H |
-| 4 | Error number of the communication partner in the response message frame:  - **00H** if transmission was error-free - **> 00H** error number   The error number in the response message frame automatically causes an error number to be entered in the error message area of the module. |
+| 4 | Error number of the communication partner in the response message frame:  - **00H** if transmission was error-free - **&gt; 00H** error number   The error number in the response message frame automatically causes an error number to be entered in the error message area of the module. |
 
 #### Sending data with RK512 (S7-300, S7-400)
 
@@ -1049,9 +1049,9 @@ In the properties dialog of the module, you configure message text and set the p
 
   Structure of the message text file:
 
-  <Versions number>
+  &lt;Versions number&gt;
 
-  <Number of the message>:<Content the message>
+  &lt;Number of the message&gt;:&lt;Content the message&gt;
 - **Page layout:**
 
   You can configure the margins, optional line breaks and headers and footers of the page layout.
@@ -1667,8 +1667,8 @@ The length **LEN** depends on the function code used.
 | 08 | 6 |
 | 11 | 2 |
 | 12 | 2 |
-| 15 | >6 |
-| 16 | >6 |
+| 15 | &gt;6 |
+| 16 | &gt;6 |
 
 If the transferred data quantities differ from those listed above for the individual function codes, the job is not carried out and P_SND_RK rejects it with an edge at output ERROR.
 
@@ -1791,8 +1791,8 @@ The length **LEN** depends on the function code used.
 | 08 | 6 |
 | 11 | 2 |
 | 12 | 2 |
-| 15 | >6 |
-| 16 | >6 |
+| 15 | &gt;6 |
+| 16 | &gt;6 |
 
 If the transferred data quantities differ from the ones listed above for the individual function codes, the job is not carried out and BSEND rejects it with an edge at output ERROR.
 
@@ -2030,8 +2030,8 @@ Structure of SEND source area:
 | 05H | Slave address |
 | 01H | Function code |
 | 02H | Byte counter |
-| 01H | <Data> |
-| 17H | <Data> |
+| 01H | &lt;Data&gt; |
+| 17H | &lt;Data&gt; |
 | xxH | CRC checksum "Low" |
 | xxH | CRC checksum "High" |
 
@@ -2096,9 +2096,9 @@ Structure of SEND source area:
 | 05H | Slave address |
 | 02H | Function code |
 | 03H | Byte counter |
-| 04H | <Data> |
-| 26H | <Data> |
-| 48H | <Data> |
+| 04H | &lt;Data&gt; |
+| 26H | &lt;Data&gt; |
+| 48H | &lt;Data&gt; |
 | xxH | CRC checksum "Low" |
 | xxH | CRC checksum "High" |
 
@@ -2393,7 +2393,7 @@ Structure of SEND source area:
 | --- | --- |
 | 05H | Slave address |
 | 07H | Function code |
-| 3EH | <Data> |
+| 3EH | &lt;Data&gt; |
 | xxH | CRC checksum "Low" |
 | xxH | CRC checksum "High" |
 
@@ -2701,12 +2701,12 @@ Structure of SEND source area:
 | 00H | Register number "High" |
 | 03H | Register number "Low" |
 | 06H | Byte counter |
-| 41H | <reg_data[1]> "High" |
-| A1H | <reg_data[1]> "Low" |
-| 42H | <reg_data[2]> "High" |
-| A2H | <reg_data[2]> "Low" |
-| 43H | <reg_data[3]> "High" |
-| A3H | <reg_data[3]> "Low" |
+| 41H | &lt;reg_data[1]&gt; "High" |
+| A1H | &lt;reg_data[1]&gt; "Low" |
+| 42H | &lt;reg_data[2]&gt; "High" |
+| A2H | &lt;reg_data[2]&gt; "Low" |
+| 43H | &lt;reg_data[3]&gt; "High" |
+| A3H | &lt;reg_data[3]&gt; "Low" |
 | xxH | CRC checksum "Low" |
 | xxH | CRC checksum "High" |
 
@@ -2841,10 +2841,10 @@ Conversion of MODBUS addressing for function codes FC 01, 05 and 15
 | 05H | Slave address ADDR |
 | 01H | Function code FUNC |
 | 04H | Byte_count |
-| 01H | <DATA 1> M 1008.0 - M 1008.7 |
-| 17H | <DATA 2> M 1009.0 - M 1009.7 |
-| 02H | <DATA 3> M 1010.0 - M 1010.7 |
-| 18H | <DATA 4> M 1011.0 - M 1011.7 |
+| 01H | &lt;DATA 1&gt; M 1008.0 - M 1008.7 |
+| 17H | &lt;DATA 2&gt; M 1009.0 - M 1009.7 |
+| 02H | &lt;DATA 3&gt; M 1010.0 - M 1010.7 |
+| 18H | &lt;DATA 4&gt; M 1011.0 - M 1011.7 |
 | xxH | CRC checksum "Low" |
 | xxH | CRC checksum "High" |
 
@@ -2878,19 +2878,19 @@ Some other access examples are listed in the table below.
 
 All examples are based on the above area specification.
 
-| start_address |  | Access in SIMATIC beginning |  |  |  |  | -> | with |
+| start_address |  | Access in SIMATIC beginning |  |  |  |  | -&gt; | with |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Hex | Decimal | (Decimal) |  |  |  |  |  |  |
-| 0000 | 0 | Bit memory | ((0 | - 0) | / 8) | + 1000 | -> | M 1000.0 |
-| 0021 | 33 | Bit memory | ((33 | - 0) | / 8) | + 1000 | -> | M 1004.1 |
-| 0400 | 1024 | Bit memory | ((1024 | - 0) | / 8) | + 1000 | -> | M 1128.0 |
-| 0606 | 1542 | Bit memory | ((1542 | - 0) | / 8) | + 1000 | -> | M 1192.6 |
-| 0840 | 2112 | Output | ((2112 | - 2048) | / 8) | + 256 | -> | Q 264.0 |
-| 09E4 | 2532 | Output | ((2532 | - 2048) | / 8) | + 256 | -> | Q 316.4 |
-| 1010 | 4112 | Timers | ((4112 | - 4096) | / 16) | + 100 | -> | T 101 |
-| 10C0 | 4288 | Timers | ((4288 | - 4096) | / 16) | + 100 | -> | T 112 |
-| 1200 | 4608 | Counters | ((4608 | - 4608) | / 16) | + 200 | -> | C 200 |
-| 13E0 | 5088 | Counters | ((5088 | - 4608) | / 16) | + 200 | -> | C 230 |
+| 0000 | 0 | Bit memory | ((0 | - 0) | / 8) | + 1000 | -&gt; | M 1000.0 |
+| 0021 | 33 | Bit memory | ((33 | - 0) | / 8) | + 1000 | -&gt; | M 1004.1 |
+| 0400 | 1024 | Bit memory | ((1024 | - 0) | / 8) | + 1000 | -&gt; | M 1128.0 |
+| 0606 | 1542 | Bit memory | ((1542 | - 0) | / 8) | + 1000 | -&gt; | M 1192.6 |
+| 0840 | 2112 | Output | ((2112 | - 2048) | / 8) | + 256 | -&gt; | Q 264.0 |
+| 09E4 | 2532 | Output | ((2532 | - 2048) | / 8) | + 256 | -&gt; | Q 316.4 |
+| 1010 | 4112 | Timers | ((4112 | - 4096) | / 16) | + 100 | -&gt; | T 101 |
+| 10C0 | 4288 | Timers | ((4288 | - 4096) | / 16) | + 100 | -&gt; | T 112 |
+| 1200 | 4608 | Counters | ((4608 | - 4608) | / 16) | + 200 | -&gt; | C 200 |
+| 13E0 | 5088 | Counters | ((5088 | - 4608) | / 16) | + 200 | -&gt; | C 230 |
 
 ##### Function code 02 - Read Input Status (S7-300, S7-400)
 
@@ -2973,9 +2973,9 @@ For **bit_number**, number of coils, values between **1** and **2040** (with ET 
 | 05H | Slave address ADDR |
 | 02H | Function code FUNC |
 | 03H | Byte_count |
-| 12H | <DATA 1> I 134.0 - I 134.7 |
-| 34H | <DATA 2> I 135.0 - I 135.7 |
-| 56H | <DATA 3> I 136.0 - I 136.7 |
+| 12H | &lt;DATA 1&gt; I 134.0 - I 134.7 |
+| 34H | &lt;DATA 2&gt; I 135.0 - I 135.7 |
+| 56H | &lt;DATA 3&gt; I 136.0 - I 136.7 |
 | xxH | CRC checksum "Low" |
 | xxH | CRC checksum "High" |
 
@@ -3009,15 +3009,15 @@ Some other access examples are listed in the table below.
 
 All examples are based on the above area specification.
 
-| start_address |  | Access in SIMATIC beginning |  |  |  |  | -> | with |
+| start_address |  | Access in SIMATIC beginning |  |  |  |  | -&gt; | with |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Hex | Decimal | (Decimal) |  |  |  |  |  |  |
-| 0000 | 0 | Bit memory | ((0 | - 0) | / 8) | + 2000 | -> | M 2000.0 |
-| 0071 | 113 | Bit memory | ((113 | - 0) | / 8) | + 2000 | -> | M 2014.1 |
-| 0800 | 2048 | Bit memory | ((2048 | - 0) | / 8) | + 2000 | -> | M 2256.0 |
-| 0D05 | 3333 | Bit memory | ((3333 | - 0) | / 8) | + 2000 | -> | M 2416.5 |
-| 1000 | 4096 | Input | ((4096 | - 4096) | / 8) | + 128 | -> | I 128.0 |
-| 10A4 | 4260 | Input | ((4260 | - 4096) | / 8) | + 128 | -> | I 148.4 |
+| 0000 | 0 | Bit memory | ((0 | - 0) | / 8) | + 2000 | -&gt; | M 2000.0 |
+| 0071 | 113 | Bit memory | ((113 | - 0) | / 8) | + 2000 | -&gt; | M 2014.1 |
+| 0800 | 2048 | Bit memory | ((2048 | - 0) | / 8) | + 2000 | -&gt; | M 2256.0 |
+| 0D05 | 3333 | Bit memory | ((3333 | - 0) | / 8) | + 2000 | -&gt; | M 2416.5 |
+| 1000 | 4096 | Input | ((4096 | - 4096) | / 8) | + 128 | -&gt; | I 128.0 |
+| 10A4 | 4260 | Input | ((4260 | - 4096) | / 8) | + 128 | -&gt; | I 148.4 |
 
 ##### Function Code 03 - Read Output Registers (S7-300, S7-400)
 
@@ -3105,10 +3105,10 @@ Conversion of MODBUS addressing for function codes FC 03, 06 and 16
 | 05H | Slave address ADDR |
 | 03H | Function code FUNC |
 | 04H | Byte_count |
-| 87H | <DATA 1> DBW 160 "High" |
-| 65H | <DATA 2> DBW 160 "Low" |
-| 43H | <DATA 3> DBW 161 "High" |
-| 21H | <DATA 4> DBW 161 "Low" |
+| 87H | &lt;DATA 1&gt; DBW 160 "High" |
+| 65H | &lt;DATA 2&gt; DBW 160 "Low" |
+| 43H | &lt;DATA 3&gt; DBW 161 "High" |
+| 21H | &lt;DATA 4&gt; DBW 161 "Low" |
 | xxH | CRC checksum "Low" |
 | xxH | CRC checksum "High" |
 
@@ -3226,12 +3226,12 @@ Conversion of MODBUS addressing for function code FC 04
 | 05H | Slave address ADDR |
 | 04H | Function code FUNC |
 | 06H | Byte_count |
-| A1H | <DATA 1> DBW 384 "High" |
-| A2H | <DATA 2> DBW 384 "Low" |
-| A3H | <DATA 3> DBW 385 "High" |
-| A4H | <DATA 4> DBW 385 "Low" |
-| A5H | <DATA 5> DBW 386 "High" |
-| A6H | <DATA 6> DBW 386 "Low" |
+| A1H | &lt;DATA 1&gt; DBW 384 "High" |
+| A2H | &lt;DATA 2&gt; DBW 384 "Low" |
+| A3H | &lt;DATA 3&gt; DBW 385 "High" |
+| A4H | &lt;DATA 4&gt; DBW 385 "Low" |
+| A5H | &lt;DATA 5&gt; DBW 386 "High" |
+| A6H | &lt;DATA 6&gt; DBW 386 "Low" |
 | xxH | CRC checksum "Low" |
 | xxH | CRC checksum "High" |
 
@@ -3313,8 +3313,8 @@ Access to the SIMATIC timers and counters areas is not permitted with function c
 
 The following two values are permitted as **DATA-on/off**:
 
-- FF00H -> Set bit.
-- 0000H -> Delete bit.
+- FF00H -&gt; Set bit.
+- 0000H -&gt; Delete bit.
 
 ###### Application example
 
@@ -3805,7 +3805,7 @@ For further access examples, please refer to FC 03.
 | 0201 | No (valid) configuration available. | Provide the module with correct parameters. If necessary, ensure the system is correctly installed. |
 | 0502 | Order inadmissible in this operating mode of the serial interface module ET 200S Modbus/USS (example: device interface is not configured). | Evaluate the diagnostic interrupt and rectify the error accordingly. |
 | 050E | Invalid telegram length | The send message frame is longer than 224 bytes. The send job was aborted by the ET 200S Modbus/USS module.  Select a shorter telegram length. |
-| 0518 | - Transmission length during sending is too large (> 4 Kbyte) - The transmission length during SEND is too small. | Check LEN parameter on SEND. |
+| 0518 | - Transmission length during sending is too large (&gt; 4 Kbyte) - The transmission length during SEND is too small. | Check LEN parameter on SEND. |
 | 0530 | Modbus master send job rejected because the response of the communication partner to a previous reading Modbus master send job has not yet been retrieved. | After a successful read Modbus master send job, you must first read the response from the communication partner from the module before you start a new Modbus master send job. |
 | 0551 | Frame sequence errors in the communication between the serial interface module ET 200S Modbus/USS and the CPU. The error occurred while transmitting a received message frame of the ET 200S SI serial interface module to the CPU. | The module and the CPU have canceled the transmission. Repeat the receive job. The ET 200S Modbus/USS serial interface module sends the received message again. |
 | 0806 | Character delay time ZVZ exceeded | Error by the partner device or repair disruptions on the transmission line. |
@@ -3866,8 +3866,8 @@ For further access examples, please refer to FC 03.
 | 0E49 | Function code 08: The code specified in SEND source DB for “Diagnostic Code” is wrong. | The only permitted code is “Diagnostic Code” 0000H. |
 | 0E50 | In the word-based SIMATIC timers/counters areas, the resulting residual bit number from the Modbus address is ≠ 0. | Only use Modbus addresses that result in valid bit numbers. |
 | 0E51 | The received Modbus address is outside the configured "from/to" areas. | Only use addresses as address information in the request message frame that have previously been defined in the configuration. |
-| 0E52 | - A SIMATIC area limit was exceeded during an access attempt by the Modbus master system: Resulting DB number < 1 - Write access to an unreleased area (configuration) - Write access to the instance DB of the communication instruction | Access area limited to valid SIMATIC memory areas. |
-| 0E53 | A SIMATIC area limit was exceeded during an access attempt by the Modbus master system: For example, overflow from the formation of the resulting DB no. (> 65535) | Access area limited to valid SIMATIC memory areas. |
+| 0E52 | - A SIMATIC area limit was exceeded during an access attempt by the Modbus master system: Resulting DB number &lt; 1 - Write access to an unreleased area (configuration) - Write access to the instance DB of the communication instruction | Access area limited to valid SIMATIC memory areas. |
+| 0E53 | A SIMATIC area limit was exceeded during an access attempt by the Modbus master system: For example, overflow from the formation of the resulting DB no. (&gt; 65535) | Access area limited to valid SIMATIC memory areas. |
 | 0E54 | Access beyond the configured area end or access beyond the SIMATIC area end. | Access area limited to valid SIMATIC memory areas. |
 | 0E55 | Write access to this SIMATIC memory area is not allowed. | Write only to the SIMATIC memory bits, outputs data areas. |
 | 0E56 | The coupling cannot be operated because the communication instruction is not running. | Call the Modbus communication instruction in the STEP 7 user program cyclically. You may need to repeat initialization of the communication instruction. |

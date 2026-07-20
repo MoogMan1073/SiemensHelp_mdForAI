@@ -451,7 +451,7 @@ To access object-oriented configuration, click on "Plant objects" in "Project tr
 
 ④ Tabs for the configuration of alarms and logs for plant objects
 
-Create the plant view under "Project tree > Plant objects". You can create a plant view in a project. The plant view is filled with plant nodes and thus maps your plant. Plant nodes act as structural elements. Create plant objects based on the plant object types created in the project.
+Create the plant view under "Project tree &gt; Plant objects". You can create a plant view in a project. The plant view is filled with plant nodes and thus maps your plant. Plant nodes act as structural elements. Create plant objects based on the plant object types created in the project.
 
 In the "Plant objects" area you assign an HMI device to the plant view.
 
@@ -549,7 +549,7 @@ Assign the plant view to a HMI device.
 
 ##### Procedure
 
-1. Under "Project tree > Plant objects", click on "Add new plant view".
+1. Under "Project tree &gt; Plant objects", click on "Add new plant view".
 
    An empty plant view is created.
 2. Rename the plant view accordingly.
@@ -603,7 +603,7 @@ A plant view can only be assigned to a HMI device.
 
    The plant view and all lower-level plant objects are assigned to the HMI device.
 
-   If a plant view was assigned to a HMI device, the assignment is visible under "Project tree > Plant objects".
+   If a plant view was assigned to a HMI device, the assignment is visible under "Project tree &gt; Plant objects".
 
 ---
 
@@ -653,7 +653,7 @@ You create plant object types.
 
 Then define the "Communications driver" property of the interface:
 
-- "<Internal communication>": Create data members for internal communication.
+- "&lt;Internal communication&gt;": Create data members for internal communication.
 - "SIMATIC S7 1200/1500": Use either function blocks or the PLC user data types of an S7-1500.
 
   You can add further data members to the linked structure.
@@ -667,7 +667,7 @@ Then define the "Communications driver" property of the interface:
 
 Create plant object types in the "Plant object types" task card.
 
-1. To display the "Plant object types" task card, click the "Show plant object types" button under "Project tree > Plant objects".
+1. To display the "Plant object types" task card, click the "Show plant object types" button under "Project tree &gt; Plant objects".
 2. To create a plant object type, click "Add new plant object type".
 
    An empty plant object type is created.
@@ -912,21 +912,21 @@ This section contains information on the following topics:
 
 ##### Overview
 
-The configuration of screens for operating and monitoring is also available to you in object-oriented configuration. This means that you are working in two areas, under "Project tree> Devices" and "Project tree > Plant objects > Visualization". Here you work with both screens and faceplates that also support the type-instance concept.
+The configuration of screens for operating and monitoring is also available to you in object-oriented configuration. This means that you are working in two areas, under "Project tree&gt; Devices" and "Project tree &gt; Plant objects &gt; Visualization". Here you work with both screens and faceplates that also support the type-instance concept.
 
-In the area "Project tree > Devices", configure screens for HMI devices as usual. In the screens, also configure companion controls that are relevant for the display of screens of the plant objects.
+In the area "Project tree &gt; Devices", configure screens for HMI devices as usual. In the screens, also configure companion controls that are relevant for the display of screens of the plant objects.
 
-In the "Project tree > Plant objects > Visualization" area, you configure screens for plant objects.
+In the "Project tree &gt; Plant objects &gt; Visualization" area, you configure screens for plant objects.
 
-In the "Plant object types > Visualization" area, configure faceplates for plant object types.
+In the "Plant object types &gt; Visualization" area, configure faceplates for plant object types.
 
-In the areas under "Project tree > Devices" and "Project tree > Plant Objects > Visualization", the same predefined screen objects are available in the "Toolbox" task card.
+In the areas under "Project tree &gt; Devices" and "Project tree &gt; Plant Objects &gt; Visualization", the same predefined screen objects are available in the "Toolbox" task card.
 
 When configuring faceplates, a minimized tool area is available under "Toolbox".
 
 ##### Configuration options
 
-Under "Project tree > Devices", you configure a screen for the created HMI device with the "Plant overview" control and one of the companion controls, such as a screen window. In runtime, navigate the plant structure to the plant objects via the "Plant overview" control. The screen windows in the plant overview display the screens that you have previously configured for the plant object.
+Under "Project tree &gt; Devices", you configure a screen for the created HMI device with the "Plant overview" control and one of the companion controls, such as a screen window. In runtime, navigate the plant structure to the plant objects via the "Plant overview" control. The screen windows in the plant overview display the screens that you have previously configured for the plant object.
 
 The companion controls are connected to one another and supplement one another in displaying the data values.
 
@@ -1089,7 +1089,7 @@ The following controls can act as companion control for the plant overview:
 
 ##### Procedure
 
-1. Insert the "Plant overview" control from the "Toolbox > My controls" task card into the screen.
+1. Insert the "Plant overview" control from the "Toolbox &gt; My controls" task card into the screen.
 
    ![Procedure](images/140103831179_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1102,7 +1102,7 @@ The following controls can act as companion control for the plant overview:
    - Screen window
    - Calendar control
 3. Select the "Plant overview" control.
-4. Open the Inspector window under "Properties > Properties > Miscellaneous > Interface > Companion control".
+4. Open the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface &gt; Companion control".
 
    The "Companion control" editor opens on the right-hand side of the Inspector window.
 5. Click "Add".
@@ -1168,7 +1168,7 @@ To filter by plant object alarms in the alarm control, configure a filter with t
 
 To filter by plant object alarms in the alarm control, configure a filter as follows:
 
-1. In the Inspector window under "Properties > Filter", click in the "Static value" column.
+1. In the Inspector window under "Properties &gt; Filter", click in the "Static value" column.
 
    The "Alarm filter configuration" dialog opens.
 2. Select the "Area" criteria.
@@ -1292,19 +1292,19 @@ An alarm is linked to the respective plant object type. If you delete the plant 
 ##### Procedure
 
 1. Select the respective data member of the plant object type on the basis of which you want to configure an alarm.
-2. To create a new discrete alarm, double-click on "<Add>" under "Discrete alarms" in the table.
+2. To create a new discrete alarm, double-click on "&lt;Add&gt;" under "Discrete alarms" in the table.
 
    A new discrete alarm is created.
 3. Assign a name for the alarm.
-4. To configure the alarm, select "Properties > General" in the Inspector window:
+4. To configure the alarm, select "Properties &gt; General" in the Inspector window:
 
    - Enter the alarm text.
    - Change the name of the alarm as required.
    - Select the alarm class.
    - Configure the priority of the alarm (a value of between "0" and "16").
-5. Select "Properties > Trigger" in the Inspector window to select the tag and the bit that triggers the alarm.
+5. Select "Properties &gt; Trigger" in the Inspector window to select the tag and the bit that triggers the alarm.
 6. Select "Trigger mode" to specify whether to trigger the alarm at a rising or falling edge.
-7. To configure the alarm text, select "Properties > General > Alarm text".
+7. To configure the alarm text, select "Properties &gt; General &gt; Alarm text".
 
    - Enter the text for the alarm under "Alarm text".
 
@@ -1358,11 +1358,11 @@ An alarm is linked to the respective plant object type. If you delete the plant 
 ##### Procedure
 
 1. Select the respective data member of the plant object type on the basis of which you want to configure an alarm.
-2. Enter the alarm text under "Properties > General".
-3. To create a new analog alarm, double-click in the table on "<Add>" under "Analog alarms" in the table.
+2. Enter the alarm text under "Properties &gt; General".
+3. To create a new analog alarm, double-click in the table on "&lt;Add&gt;" under "Analog alarms" in the table.
 
    A new alarm is displayed.
-4. To configure the alarm, select "Properties > General" in the Inspector window:
+4. To configure the alarm, select "Properties &gt; General" in the Inspector window:
 
    - Enter the alarm text.
    - Change the name of the alarm as required.
@@ -1372,8 +1372,8 @@ An alarm is linked to the respective plant object type. If you delete the plant 
      ![Procedure](images/131147291147_DV_resource.Stream@PNG-en-US.png)
 
      ![Procedure](images/131147291147_DV_resource.Stream@PNG-en-US.png)
-5. In the Inspector window, select the tag that triggers the alarm, e.g. a data member, under "Properties > Trigger".
-6. In the Inspector window under "Properties > Trigger", enter a limit in the "Value" field in the "Limits" area.
+5. In the Inspector window, select the tag that triggers the alarm, e.g. a data member, under "Properties &gt; Trigger".
+6. In the Inspector window under "Properties &gt; Trigger", enter a limit in the "Value" field in the "Limits" area.
 7. Select the trigger mode in the "Mode" field:
 
    - "Lower": The alarm is triggered if the limit is undershot.
@@ -1441,7 +1441,7 @@ The logging tags are created for the plant object types. This means that the pla
 
    The logging tag is linked to the tag. The data type of the logging tag corresponds to the data type of the connected tag.
 4. Specify the logging mode.
-5. When the "Cyclic" logging mode is set, define the logging mode and the factor under "Properties > Properties > Cycle".
+5. When the "Cyclic" logging mode is set, define the logging mode and the factor under "Properties &gt; Properties &gt; Cycle".
 6. Define the tag trigger depending on the logging mode.
 7. Define the limit values.
 8. Define the smoothing.
@@ -1647,7 +1647,7 @@ You create the "Brewery" plant view and assign it to the HMI device.
 
 ##### Introduction
 
-1. Under "Project tree > Plant objects", click "Add new plant view".
+1. Under "Project tree &gt; Plant objects", click "Add new plant view".
 
    An empty plant view is created.
 2. According to our example, call the plant view "Brewery".
@@ -1682,7 +1682,7 @@ Next, you define the "Communication driver" property of the interfaces.
 
 ##### Procedure
 
-1. To display the "Plant object types" task card, click the "Show plant object types" button under "Project tree > Plant objects".
+1. To display the "Plant object types" task card, click the "Show plant object types" button under "Project tree &gt; Plant objects".
 2. Create a plant object type for each unit and assign the following names:
 
    - Conveyor
@@ -1729,7 +1729,7 @@ To visualize the plant objects, configure faceplate types for each plant object 
 
 ##### Procedure
 
-1. Under "Project tree > Plant objects", configure the screens for the "Bottling" and "Packaging" production lines.
+1. Under "Project tree &gt; Plant objects", configure the screens for the "Bottling" and "Packaging" production lines.
 
    - Open the "Bottling" plant object and switch to the "Visualization" tab.
    - You press the "Add new screen" button to create a new screen.
@@ -1741,7 +1741,7 @@ To visualize the plant objects, configure faceplate types for each plant object 
    ![Procedure](images/139067879563_DV_resource.Stream@PNG-de-DE.png)
 
    ![Procedure](images/139067879563_DV_resource.Stream@PNG-de-DE.png)
-3. Under "Project tree > Plant objects", open the plant object type "Robot" and drag the created faceplate type to the "Save faceplates here" button in the "Visualization" tab.
+3. Under "Project tree &gt; Plant objects", open the plant object type "Robot" and drag the created faceplate type to the "Save faceplates here" button in the "Visualization" tab.
 4. Create faceplate instances for all the robots you need for the two production lines:
 
    - Open the "Bottling" screen.
@@ -1766,7 +1766,7 @@ To visualize the plant objects, configure faceplate types for each plant object 
    ![Procedure](images/139071864715_DV_resource.Stream@PNG-de-DE.png)
 
    ![Procedure](images/139071864715_DV_resource.Stream@PNG-de-DE.png)
-8. Under "Project tree > Plant objects", open the plant object type "Filling tank" and drag the created faceplate type to the "Drop faceplates here" button in the "Visualization" tab.
+8. Under "Project tree &gt; Plant objects", open the plant object type "Filling tank" and drag the created faceplate type to the "Drop faceplates here" button in the "Visualization" tab.
 9. From the "Filling tank" plant object, create a faceplate instance for the filling container:
 
    - Open the "Bottling" overview screen.
@@ -1795,7 +1795,7 @@ To directly jump to the alarms of the "Filling Tank" plant object in runtime, cr
 ##### Procedure
 
 1. Change to the project tree.
-2. Under "Project tree > Devices", create an "Overview" screen.
+2. Under "Project tree &gt; Devices", create an "Overview" screen.
 3. Configure the "Plant overview" control in the "Overview" screen.
 4. Also add the "Alarm control" and "Screen window" controls as companion controls to the "Overview" screen.
 
@@ -1891,7 +1891,7 @@ To filter by plant object alarms in the alarm control, configure a filter with t
 
 To filter by alarms of the "Filling Tank" plant object in the alarm control, configure a filter as follows:
 
-1. In the Inspector window under "Properties > Filter", click in the "Static value" column.
+1. In the Inspector window under "Properties &gt; Filter", click in the "Static value" column.
 
    The "Alarm filter configuration" dialog box opens.
 2. Select the "Area" criterion.
@@ -1931,7 +1931,7 @@ To visualize the tag values of the temperature monitoring in runtime, you have a
 
 ##### Configuring trends
 
-1. Go to "Properties > Properties > General > Trend areas > [0] trend areas > Trends" and click on the selection button in the "Static value" column.
+1. Go to "Properties &gt; Properties &gt; General &gt; Trend areas &gt; [0] trend areas &gt; Trends" and click on the selection button in the "Static value" column.
 
    A dialog opens.
 2. Click "Add" in the "Index" column.
@@ -1939,7 +1939,7 @@ To visualize the tag values of the temperature monitoring in runtime, you have a
    This adds another trend. Close the dialog.
 3. Expand the index number of the trend [0]. The trend settings are displayed.
 4. Specify the name of the trend under "Display name", for example "Temperature".
-5. Under "Data source Y > Source", select the "temperature" tag in the "Static value" column.
+5. Under "Data source Y &gt; Source", select the "temperature" tag in the "Static value" column.
 6. Configure the line color for the trend, for example, blue.
 
 ![Configuring trends](images/139272635787_DV_resource.Stream@PNG-en-US.png)

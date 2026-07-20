@@ -298,7 +298,7 @@ To switch the program status for a block on or off directly in the block, follow
 1. Open the block for which you wish to switch on the program status.
 2. Click "Monitoring on/off" in the toolbar.
 3. Right-click on the tag you want program status to start from.
-4. Select "Modify > "Monitor from here" in the shortcut menu.
+4. Select "Modify &gt; "Monitor from here" in the shortcut menu.
 5. Click "Monitoring on/off" in the toolbar again to switch the program status off.
 
 **To start the program status in SCL at a specific point, follow these steps:**
@@ -317,7 +317,7 @@ To start the program status for LAD and FBD for selected tags, follow these step
 1. Open the block for which you wish to switch on the program status.
 2. Click "Monitoring on/off" in the toolbar.
 3. Select the tags for which you want to start the program status.
-4. Select "Modify > Monitor selection" in the shortcut menu.
+4. Select "Modify &gt; Monitor selection" in the shortcut menu.
 5. Click "Monitoring on/off" in the toolbar again to switch the program status off.
 
 #### Switching on program status from the calling block
@@ -382,7 +382,7 @@ To enable the monitoring of loops in STL, follow these steps:
    If you have not already established an online connection, the "Go online" dialog opens. In this dialog, you can establish an online connection.
 
    See also: [Establishing and terminating an online connection](Using%20online%20and%20diagnostics%20functions.md#establishing-or-changing-an-online-connection)
-3. Enable the monitoring within the program editor with the shortcut menu command "Monitoring" > "Monitor loops".
+3. Enable the monitoring within the program editor with the shortcut menu command "Monitoring" &gt; "Monitor loops".
 4. Confirm the next prompt with "Yes".
 
    Result: The monitoring of loops is enabled for the entire block and is active until monitoring of loops is once again disabled or the online connection to the CPU is terminated.
@@ -432,7 +432,7 @@ To display the monitor values for a structure, you must first enable monitoring 
 
 #### Displaying the monitor values for structures in the Inspector window
 
-If the monitoring of structures is enabled and a structure tag is selected in the program editor, the associated monitor values are displayed in the Inspector window in the tab "Diagnostics" > "Monitor values".
+If the monitoring of structures is enabled and a structure tag is selected in the program editor, the associated monitor values are displayed in the Inspector window in the tab "Diagnostics" &gt; "Monitor values".
 
 The Inspector window is structured as follows:
 
@@ -458,9 +458,9 @@ To enable the monitoring of structures, follow these steps:
 3. If the structure to be monitored is located in a loop, first enable the monitoring of loops.
 
    See also: [Monitoring loops](#monitoring-loops)
-4. Right-click on a structure and enable the monitoring of structures by means of the shortcut menu command "Monitoring" > "Monitor values".
+4. Right-click on a structure and enable the monitoring of structures by means of the shortcut menu command "Monitoring" &gt; "Monitor values".
 
-   Result: The selected structure tag is displayed in the Inspector window in the tab "Diagnostics" > "Monitor values" is open up to the first level with the current values displayed.
+   Result: The selected structure tag is displayed in the Inspector window in the tab "Diagnostics" &gt; "Monitor values" is open up to the first level with the current values displayed.
 5. If needed, open the closed elements of the structure to display all the lower-level elements and their values.
 6. Click "Monitoring on/off" in the toolbar again to switch the program status off.
 
@@ -530,13 +530,13 @@ To modify tags during monitoring, follow these steps:
    - If you click "No" or exit the dialog by using " Close", the existing value remains.
 4. Alternatively, select one of the following commands in the shortcut menu:
 
-   - "Modify > Modify to 1"
+   - "Modify &gt; Modify to 1"
 
      Modifies tags of the "BOOL" data type to the value "TRUE".
-   - "Modify > Modify to 0"
+   - "Modify &gt; Modify to 0"
 
      Modifies tags of the "BOOL" data type to the value "FALSE".
-   - "Modify > Modify operand"
+   - "Modify &gt; Modify operand"
 5. If you select "Modify operand", the "Modify operand" dialog opens.
 6. In the subsequent dialog enter the value you require in the "Modify value" box and confirm with "OK".
 

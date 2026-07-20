@@ -35,13 +35,13 @@ The following table shows the restrictions that must be observed when allocating
 | Names / Passwords | Restriction |
 | --- | --- |
 | Computer names | The name must start with a letter. |
-| Names of objects | Do not use the characters ? " / \ * < > % |
-| Names and passwords in user view | Do not use the characters ? " / \ § & $ % |
+| Names of objects | Do not use the characters ? " / \ * &lt; &gt; % |
+| Names and passwords in user view | Do not use the characters ? " / \ § &amp; $ % |
 | Recipe data | Do not use the characters , ; |
-| Names of alarm logs | In the storage location file - RDB, file - CSV (ASCII) and file -TXT (Unicode)   do not use the characters \ / * ? : " < >| |
+| Names of alarm logs | In the storage location file - RDB, file - CSV (ASCII) and file -TXT (Unicode)   do not use the characters \ / * ? : " &lt; &gt;| |
 | For the storage location database, use only the characters a-z A-Z 0-9 _ @ # $  The characters _ @ # $ cannot be used as the first character of a name. |  |
 | Name of HMI tags | HMI tag names may not start with the character @.  For Runtime Professional, do not use the characters : ? " ' \ * %  Do not use spaces for Runtime Professional. |
-| Names of screens | Do not use the characters ? " / \ * < >  Avoid the characters . : in screens for Runtime Professional |
+| Names of screens | Do not use the characters ? " / \ * &lt; &gt;  Avoid the characters . : in screens for Runtime Professional |
 | Tag names in faceplates | Do not use the characters . @ |
 | Property names of the faceplates | Do not use any UNICODE characters (for example, Chinese characters) in the names.  The name must start with a letter.  The name may not contain more than 255 characters. |
 | Names of AuditTrails | Do not use any special characters. |

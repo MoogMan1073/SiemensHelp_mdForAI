@@ -185,7 +185,7 @@ See section [Restrictions and requirements](#restrictions-and-requirements-rt-un
 ### Open in a web client
 
 1. Start the Web client.
-2. In the address bar of the browser, enter the URL of the Unified Runtime web server: "https://<IP-address of the HMI device or its FQDN or device name> ".
+2. In the address bar of the browser, enter the URL of the Unified Runtime web server: "https://&lt;IP-address of the HMI device or its FQDN or device name&gt; ".
 3. Press Enter.
 
    You see the Unified home page:
@@ -264,7 +264,7 @@ See section [Restrictions and requirements](#restrictions-and-requirements-rt-un
 
    - Status is not "Connection available": No connection is possible. Start the Runtime of the server and repeat the check.
    - Status is "Connection available": The connection is possible.
-6. If a connection is possible, select "WinCC Unified Control Center > My WinCC Unified" in the Windows tray.
+6. If a connection is possible, select "WinCC Unified Control Center &gt; My WinCC Unified" in the Windows tray.
 7. Log in to Runtime in the "User login" dialog:
 
    - Enter the user name and password of a user with the necessary function rights.
@@ -275,7 +275,7 @@ See section [Restrictions and requirements](#restrictions-and-requirements-rt-un
 >
 > "Configure Server" remembers inputs transferred by "Apply". If you select the IP address provided under "Server", the display name transferred with "Server display name" for this IP address is automatically entered under "Apply".
 >
-> You can change the display name of the configured server later. In the "Server Status" area, click "... > Edit" and change your entry.
+> You can change the display name of the configured server later. In the "Server Status" area, click "... &gt; Edit" and change your entry.
 
 ### Result
 
@@ -793,7 +793,7 @@ See section [Restrictions and requirements](#restrictions-and-requirements-rt-un
 
    - Status is not "Connection available": No connection is possible. Start the Runtime of the server and repeat the check.
    - Status is "Connection available": The connection is possible.
-5. If a connection is possible, select "WinCC Unified Control Center > Launch UI Client" in the Windows tray.
+5. If a connection is possible, select "WinCC Unified Control Center &gt; Launch UI Client" in the Windows tray.
 6. Log in to Runtime in the "User login" dialog:
 
    - Enter the user name and password of a user with the necessary function rights.

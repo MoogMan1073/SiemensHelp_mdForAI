@@ -87,7 +87,7 @@ By testing with program status, you have the option of having the maximum step a
 
 > **Note**
 >
-> For GRAPH blocks with a version lower than 2.0, the learning mode for determining the values of "T_MAX" and "T_WARN" is not available. You can change the version in the properties of the GRAPH block under "General > Block".
+> For GRAPH blocks with a version lower than 2.0, the learning mode for determining the values of "T_MAX" and "T_WARN" is not available. You can change the version in the properties of the GRAPH block under "General &gt; Block".
 
 ---
 
@@ -353,13 +353,13 @@ The process and the sequencers are synchronized with each other.
 
 With the learning mode, you can have the values for the maximum step activation time and warning time for the entire duration of a step determined by the system. To be able to do this, each step must be executed at least once. The longer the learning mode is active, the more often a step is executed and the more precise the learned values are. The maximum step activation time and the warning time for a step are made up of the learned time and an additive threshold. You specify the additive thresholds for the supervision and the warning yourself.
 
-When learning mode is ended, the values are stored in the instance data block on the device. You can also save the values in the offline instance data block. The values are adopted as the start values for the static parameters "T_MAX" and "T_WARN". Following this, the learned values are used in the comparison instructions "CMP>T_MAX" and "CMP>T_WARN".
+When learning mode is ended, the values are stored in the instance data block on the device. You can also save the values in the offline instance data block. The values are adopted as the start values for the static parameters "T_MAX" and "T_WARN". Following this, the learned values are used in the comparison instructions "CMP&gt;T_MAX" and "CMP&gt;T_WARN".
 
 You can reset the times for "T_MAX" and "T_WARN" determined in the learning mode to their default values at any time. This resets both the online and the offline data block.
 
 > **Note**
 >
-> For GRAPH blocks with a version lower than 2.0, the learning mode for determining the values of "T_MAX" and "T_WARN" is not available. You can change the version in the properties of the GRAPH block under "General > Block".
+> For GRAPH blocks with a version lower than 2.0, the learning mode for determining the values of "T_MAX" and "T_WARN" is not available. You can change the version in the properties of the GRAPH block under "General &gt; Block".
 
 #### Requirement
 

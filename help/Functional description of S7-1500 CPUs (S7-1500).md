@@ -270,7 +270,7 @@ In HOLD operating state, hardware interrupt OBs are not started by external inte
 
 The system time continues running.
 
-At a POWER OFF > POWER ON transition while in HOLD mode, the CPU goes to STOP mode and remains in this state. In this case, the CPU does not perform an automatic startup.
+At a POWER OFF &gt; POWER ON transition while in HOLD mode, the CPU goes to STOP mode and remains in this state. In this case, the CPU does not perform an automatic startup.
 
 When the user program reaches a breakpoint, the cycle monitoring time is stopped. When the breakpoint is exited again, the monitoring time restarts.
 
@@ -360,7 +360,7 @@ The following folders and files can be found on the SIMATIC memory card:
 | Backups | Files for backing up and restoring via the display |
 | DUMP.S7S | Service data files |
 
-The content of the "DataLogs", "Recipes" and "UserFiles" folders is also loaded when the device is loaded as a new station into the STEP 7 project (as of TIA Portal V15.1). The files are located in the project path under "AdditionalFiles/MemoryCards/<Name of the PLC>". You can find further information on DataLogs and recipe files in the chapter "[Recipes and Data Logging](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#recipes-and-data-logging-s7-1200-s7-1500)".
+The content of the "DataLogs", "Recipes" and "UserFiles" folders is also loaded when the device is loaded as a new station into the STEP 7 project (as of TIA Portal V15.1). The files are located in the project path under "AdditionalFiles/MemoryCards/&lt;Name of the PLC&gt;". You can find further information on DataLogs and recipe files in the chapter "[Recipes and Data Logging](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#recipes-and-data-logging-s7-1200-s7-1500)".
 
 The following data structure exists on the SIMATIC memory card:
 
@@ -385,13 +385,13 @@ When the SIMATIC memory card is inserted in the programming device or in an exte
 
   In this case, all objects relevant to processing, such as blocks and the hardware configuration, are transferred to the SIMATIC memory card, just as with downloading.
 
-To perform the transfer, you can move the objects with drag-and-drop or use the command "Card reader/USB memory > Write to memory card" in the "Project" menu.
+To perform the transfer, you can move the objects with drag-and-drop or use the command "Card reader/USB memory &gt; Write to memory card" in the "Project" menu.
 
 #### Saving user data on a SIMATIC memory card
 
 You transfer user files, such as PDF files for project documentation, onto the SIMATIC memory card by manually creating a folder called "UserFiles" on the memory card and saving your files in this folder. Only files in this folder (*.pdf, *.txt, *.csv, etc) are also loaded into the STEP 7 project when loading the device as a new station. The "UserFiles" folder can be used for restoring in the case of a memory card or CPU failure.
 
-After being loaded from the memory card, the "UserFiles" folder with the files contained in it is saved in the project tree in the "AdditionalFiles > MemoryCards > [Name of the CPU]" directory.
+After being loaded from the memory card, the "UserFiles" folder with the files contained in it is saved in the project tree in the "AdditionalFiles &gt; MemoryCards &gt; [Name of the CPU]" directory.
 
 If the folder "[Name of the CPU]" already exists, as is the case in reloading from the memory card, the folder in the project tree is overwritten by the data from the memory card.
 
@@ -401,15 +401,15 @@ You transfer objects by selecting the SIMATIC memory card symbol in the project 
 
 #### Updating firmware with a SIMATIC memory card
 
-You can get the latest firmware data on the Internet from the Service & Support pages:
+You can get the latest firmware data on the Internet from the Service &amp; Support pages:
 
 http://support.automation.siemens.com
 
 Save the firmware files on the hard disk and plug the SIMATIC Memory Card into the card reader of your programming device.
 
-To store the file on the SIMATIC memory card, select the memory card in the "Card Reader/USB memory" folder in the project tree. Select the shortcut menu "Card Reader/USB memory > Create firmware update memory card".
+To store the file on the SIMATIC memory card, select the memory card in the "Card Reader/USB memory" folder in the project tree. Select the shortcut menu "Card Reader/USB memory &gt; Create firmware update memory card".
 
-Then follow the instructions for performing the firmware update in the Service & Support portal or in the S7-1500 system manual.
+Then follow the instructions for performing the firmware update in the Service &amp; Support portal or in the S7-1500 system manual.
 
 Updating the firmware provides the module, for example, CPU or I/O module, with a new firmware version. If you have used the module in the project, you must replace the already configured module with the new firmware version offline by means of module replacement and adapt and then load the program or configuration.
 
@@ -533,7 +533,7 @@ For the S7-1500, you can specify the total size of the load memory (program info
 
 **Online**:
 
-Start "Online & Diagnostics" in the project navigation. The "Memory" function provides information on the fill level of all the CPU's memories.
+Start "Online &amp; Diagnostics" in the project navigation. The "Memory" function provides information on the fill level of all the CPU's memories.
 
 Additional information on your CPU's resources can be found in the "Assignment list" and "Call structure" tabs of the program information as well as in the PLC tag table.
 
@@ -551,7 +551,7 @@ Additional information on your CPU's resources can be found in the "Assignment l
 
 The S7-1500 CPUs have a retentive memory for storing retentive data in the event of a POWER OFF. The size of the retentive memory is documented in the CPU's technical specifications.
 
-The utilization of the retentive memory of the configured CPU can be found offline in the project tree under "Program information > Resources" or online in the project tree under "Online & Diagnostics > Diagnostics > Memory".
+The utilization of the retentive memory of the configured CPU can be found offline in the project tree under "Program information &gt; Resources" or online in the project tree under "Online &amp; Diagnostics &gt; Diagnostics &gt; Memory".
 
 If you define data as retentive, their content is retained after a power failure, during CPU startup, and when a modified program is loaded.
 
@@ -654,7 +654,7 @@ The time-of-day of S7-1500 CPUs is retentive and not affected by memory reset. A
 
 In the STOP and RUN modes of the CPU, the S7-1500 CPU offers you the option of loading changes to the software without affecting the actual values of already loaded tags during the download operation.
 
-In STEP 7, you load changes to the software under "Download to device > Software (changes only)".
+In STEP 7, you load changes to the software under "Download to device &gt; Software (changes only)".
 
 #### Impact of software changes on PLC tags
 
@@ -990,16 +990,16 @@ The following table provides an overview of the OB start events, including the p
 
 | Types of event sources | Possible priorities (default priority) | Possible  OB numbers | Default system reaction | Number of supported OBs |
 | --- | --- | --- | --- | --- |
-| Startup | 1 | 100, >= 123 | Ignore | 100 |
-| Cyclic program | 1 | 1, >= 123 | Ignore | 100 |
-| Time-of-day interrupt | 2 to 24 (2) | 10 to 17, >= 123 | Not applicable | 20 |
+| Startup | 1 | 100, &gt;= 123 | Ignore | 100 |
+| Cyclic program | 1 | 1, &gt;= 123 | Ignore | 100 |
+| Time-of-day interrupt | 2 to 24 (2) | 10 to 17, &gt;= 123 | Not applicable | 20 |
 | Status interrupt | 2 to 24 (4) | 55 | Ignore | 1 |
 | Update interrupt | 2 to 24 (4) | 56 | Ignore | 1 |
 | Manufacturer- or profile-specific interrupt | 2 to 24 (4) | 57 | Ignore | 1 |
-| Time-delay interrupt | 2 to 24 (3) | 20 to 23, >= 123 | Not applicable | 20 |
-| Cyclic interrupt | 2 to 24 (8 to 17, depending on the cycle time) | 30 to 38, >= 123 | Not applicable | 20 |
-| Hardware interrupt | 2 to 26 (16) | 40 to 47, >= 123 | Ignore | 50 |
-| Isochronous mode interrupt | 16 to 26 (21) | 61 to 64, >= 123 | Ignore | 20 (one per isochronous interface) |
+| Time-delay interrupt | 2 to 24 (3) | 20 to 23, &gt;= 123 | Not applicable | 20 |
+| Cyclic interrupt | 2 to 24 (8 to 17, depending on the cycle time) | 30 to 38, &gt;= 123 | Not applicable | 20 |
+| Hardware interrupt | 2 to 26 (16) | 40 to 47, &gt;= 123 | Ignore | 50 |
+| Isochronous mode interrupt | 16 to 26 (21) | 61 to 64, &gt;= 123 | Ignore | 20 (one per isochronous interface) |
 | I/O redundancy error (only with H and HF CPUs) | 2 to 26 (6) | 70 | Ignore | 1 |
 | CPU redundancy error (for R/H-CPUs only) | 2 to 26 (26) | 72 | Ignore | 1 |
 | MC-Interpolator | 16 to 25 (24) | 92 | Not applicable | 1 |
@@ -1086,7 +1086,7 @@ If yes (check box selected), you use the OB parameter "Event threshold for time 
 
 In the event of an overload, you therefore have the option of programming a reaction well before the limit is reached for similar events and thus before the events are discarded.
 
-The following value range applies to the "Event threshold for time error" parameter: 1 <= "Event threshold for time error" <= "Events to be queued"
+The following value range applies to the "Event threshold for time error" parameter: 1 &lt;= "Event threshold for time error" &lt;= "Events to be queued"
 
 ### Example of a hardware interrupt event (S7-1500)
 
@@ -1099,7 +1099,7 @@ Process events are events which are triggered by the I/O (e.g. a digital input) 
 To configure a hardware interrupt, proceed as follows:
 
 1. Configure an S7-1500 with CPU and a hardware interrupt-compatible module, e.g. DI 16x24VDC HF.
-2. Select the hardware interrupt-compatible module and navigate in the area navigation to the area "Inputs > Channel 0".
+2. Select the hardware interrupt-compatible module and navigate in the area navigation to the area "Inputs &gt; Channel 0".
 3. Activate the option "Enable rising edge detection".
 4. Assign a meaningful name to the event.
 5. If necessary, change the priority of this event.
@@ -1151,7 +1151,7 @@ This section contains information on the following topics:
 - [Time-of-day functions (S7-1500)](#time-of-day-functions-s7-1500)
 - [Enabling system memory (S7-1500)](#enabling-system-memory-s7-1500)
 - [Using clock memory (S7-1500)](#using-clock-memory-s7-1500)
-- [Protection & Security (S7-1500)](#protection-security-s7-1500)
+- [Protection &amp; Security (S7-1500)](#protection-security-s7-1500)
 - [Test, commissioning and routing (S7-1500)](#test-commissioning-and-routing-s7-1500)
 - [Activating and deactivating SNMP (S7-1500)](#activating-and-deactivating-snmp-s7-1500)
 - [Activating/deactivating SNMP through a program - standard CPU (S7-1500)](#activatingdeactivating-snmp-through-a-program---standard-cpu-s7-1500)
@@ -1180,7 +1180,7 @@ The following table provides you with an overview of the CPU properties:
 | --- | --- | --- |
 | General | Project information | General information to describe the inserted CPU. Except for the slot number, you can change this information. |
 | Catalog information | Read-only information from the hardware catalog for this CPU. |  |
-| Identification & Maintenance | For saving application-specific information such as the name of the plant and the installation location. |  |
+| Identification &amp; Maintenance | For saving application-specific information such as the name of the plant and the installation location. |  |
 | Checksums | To check the identity or integrity of PLC programs.  Blocks in the block folder and text lists are automatically marked with unique checksums when they are compiled. You can easily establish whether the program currently running on the CPU is the same program that you loaded a long time ago or whether the program has been changed in the meantime. The "GetChecksum" instruction is available to read out the checksum while the program is running.  See: [Comparison of PLC programs based on checksums](Comparing%20PLC%20programs.md#comparison-of-plc-programs-based-on-checksums) |  |
 | PROFINET interface | General | Name and comment for this PROFINET interface. The name is limited to 110 characters. |
 | Ethernet addresses | Select whether the PROFINET interface is networked. If subnets have already been created in the project, they are available for selection in the drop-down list. If not, you can create a new subnet with the "Add new subnet" button.  Information on the IP address, subnet mask and IP router usage in the subnet is available in the IP protocol. If an IP router is used, the information about the IP address of the IP router is necessary.  See: [Assigning addresses and names to PROFINET devices](Configuring%20devices%20and%20networks.md#assigning-addresses-and-names-to-profinet-devices) |  |
@@ -1205,7 +1205,7 @@ The following table provides you with an overview of the CPU properties:
 | PLC alarms | General  Central alarm management in the PLC | Activates the central alarm management in the CPU. An alarm is completely assembled in the CPU and then sent to the HMI device. Advantage: There is no need to download the alarm texts to the HMI devices.  See: [Central alarm management in the CPU](#central-alarm-management-in-the-cpu-s7-1500) |
 | Web server | General | Activates and configures the web server function.  See: [Enable the web server](Configuring%20the%20Web%20server%20%28S7-300%2C%20S7-400%2C%20S7-1500%29.md#enable-the-web-server-s7-300-s7-400-s7-1500) |
 | Automatic update | Sends the requested web page with current CPU data periodically to the web browser. Enter the period duration under "Update interval". Automatic update can only be activated if the web server is enabled.  See: [Activate automatic update](Configuring%20the%20Web%20server%20%28S7-300%2C%20S7-400%2C%20S7-1500%29.md#activate-automatic-update-s7-300-s7-400-s7-1500) |  |
-| User management (only for CPUs with FW < V3.1) | Here you enter the user names with their access rights.  - Everyone: Pre-defined user whose access rights you assign using a drop-down list. The "Everyone" user is a user who does not log on with a password for web access. - User#: Editable name for a user for whom you assign access rights and a password. As soon as you click in a line below "Everyone", a preset name is displayed that you can change.   Each user can be assigned different access rights via a drop-down list.  There are access rights that are connected to each other. Example: When you activate the access right "Perform firmware update", the access rights "Change operating mode" and "... query diagnostics" are activated automatically. These two rights are required to perform a firmware update from the web server.  See: [User administration](Configuring%20the%20Web%20server%20%28S7-300%2C%20S7-400%2C%20S7-1500%29.md#user-administration-s7-300-s7-400-s7-1500) |  |
+| User management (only for CPUs with FW &lt; V3.1) | Here you enter the user names with their access rights.  - Everyone: Pre-defined user whose access rights you assign using a drop-down list. The "Everyone" user is a user who does not log on with a password for web access. - User#: Editable name for a user for whom you assign access rights and a password. As soon as you click in a line below "Everyone", a preset name is displayed that you can change.   Each user can be assigned different access rights via a drop-down list.  There are access rights that are connected to each other. Example: When you activate the access right "Perform firmware update", the access rights "Change operating mode" and "... query diagnostics" are activated automatically. These two rights are required to perform a firmware update from the web server.  See: [User administration](Configuring%20the%20Web%20server%20%28S7-300%2C%20S7-400%2C%20S7-1500%29.md#user-administration-s7-300-s7-400-s7-1500) |  |
 | Security | Allows the use of a certificate for the identification of the server. |  |
 | Watch tables | Allows you to create watch tables and defines access to those tables. |  |
 | User-defined web pages | Allows access to freely-designed web pages of the CPU via a web browser.  See: [Creating and loading user pages](Configuring%20the%20Web%20server%20%28S7-300%2C%20S7-400%2C%20S7-1500%29.md#creating-and-loading-user-pages-s7-300-s7-400-s7-1500) |  |
@@ -1216,16 +1216,16 @@ The following table provides you with an overview of the CPU properties:
 | Password | Setting to enable or disable write-access via the CPU display. If you have enabled write-access, you can also enable display protection. The display is then protected by a configurable password. You can set the time until automatic logoff after input of the password on the display. |  |
 | Watch tables | Configured watch tables are provided for selection. You can use the selected watch tables on the display during operation. |  |
 | User-defined logo | You can select a user-defined logo and load it to the CPU with the hardware configuration. |  |
-| Multilingual | - | If you want to use translations of project texts for the Web server/for the CPU display, you need to assign the project language to the languages for the Web server/for the CPU display (number depends on the CPU). With this, you specify the project languages that are displayed when the Web server is accessed or in the CPU display.   Example: You assign the project language "German (Luxembourg)", for example, to a German language of the Web server/the CPU display by selecting it from the drop-down list. Enable the project language under "Languages & resources > Project languages" in the project tree to make it available for selection in the drop-down list.  See: [Multilingual](#multilingual-s7-1500) |
+| Multilingual | - | If you want to use translations of project texts for the Web server/for the CPU display, you need to assign the project language to the languages for the Web server/for the CPU display (number depends on the CPU). With this, you specify the project languages that are displayed when the Web server is accessed or in the CPU display.   Example: You assign the project language "German (Luxembourg)", for example, to a German language of the Web server/the CPU display by selecting it from the drop-down list. Enable the project language under "Languages &amp; resources &gt; Project languages" in the project tree to make it available for selection in the drop-down list.  See: [Multilingual](#multilingual-s7-1500) |
 | Time | Local time and daylight saving time | Selection of the time zone in which the CPU operates and setting for standard/daylight saving time.  See:    [Determining and setting the time of day on a CPU](Device%20and%20network%20diagnostics.md#determining-and-setting-the-time-of-day-on-a-cpu)    [Setting and reading the time of day](#setting-and-reading-the-time-of-day-s7-1500) |
-| Protection & Security | Protection of the PLC configuration data | Configure here the protection of the confidential PLC configuration data.  See: [Protection of confidential configuration data](Configuring%20devices%20and%20networks.md#protection-of-confidential-configuration-data-s7-1200-s7-1500-s7-1500t) |
+| Protection &amp; Security | Protection of the PLC configuration data | Configure here the protection of the confidential PLC configuration data.  See: [Protection of confidential configuration data](Configuring%20devices%20and%20networks.md#protection-of-confidential-configuration-data-s7-1200-s7-1500-s7-1500t) |
 | Access control | Setting of the read/write protection and the password for access to the CPU. Starting from FW V3.1 (S7-1500) introduction of local user management.   See: [Useful information on the local user administration and access control](#useful-information-on-the-local-user-administration-and-access-control-s7-1500)  See: [What you should know about the access levels](#what-you-should-know-about-the-access-levels-s7-1500)  See: [Configuring access levels](#configuring-access-levels-s7-1500) |  |
 | Connection mechanisms | Enable access via a PUT/GET communication or via secure PG/PC communication and HMI communication. For secure PG/PC communication and HMI communication you can select the communication certificates here.  See: [Restriction of communication services](#restriction-of-communication-services-s7-1500)  See: [Useful information for the protection of confidential PLC configuration data](Configuring%20devices%20and%20networks.md#useful-information-for-the-protection-of-confidential-plc-configuration-data-s7-1200-s7-1500-s7-1500t) |  |
 | Certificate manager | Enabling of global security settings for the certificate manager and management of the certificates for the device. |  |
 | Syslog | Enabling the transmission of Syslog messages to a Syslog server and managing the certificates for the device.  See: [Syslog](#syslog-s7-1500) |  |
 | Security event | Enabling of group alarms for security events and specification of a monitoring time (interval).  See: [Summarizing security events](#what-you-should-know-about-group-alarms-for-security-events-s7-1500) |  |
 | OPC UA | General | Shows the name of the OPC UA application. This is used for the OPC UA server on this CPU. |
-| Server | Enabling and configuring of the OPC UA server. Besides the general settings for assignment of port numbers, send interval and sampling interval, you can configure the security settings here and perform the export of the PLC/DB tags available in the OPC UA address space to an XML file.  You have the following options for the security settings:  - Secure channel: Select between use of global security settings or use of the local CPU-specific certificate manager with limited functionality. Create or select the server certificate here, select the suitable security policy and manage the list of trusted clients. - User authentication (only for CPUs with FW < V3.1): Create or select new users and specify the authentication options. |  |
+| Server | Enabling and configuring of the OPC UA server. Besides the general settings for assignment of port numbers, send interval and sampling interval, you can configure the security settings here and perform the export of the PLC/DB tags available in the OPC UA address space to an XML file.  You have the following options for the security settings:  - Secure channel: Select between use of global security settings or use of the local CPU-specific certificate manager with limited functionality. Create or select the server certificate here, select the suitable security policy and manage the list of trusted clients. - User authentication (only for CPUs with FW &lt; V3.1): Create or select new users and specify the authentication options. |  |
 | Client | Enable the OPC UA client for this CPU. |  |
 | System power supply | General | Specifies that the CPU is connected to the power grid. This CPU power therefore goes in to the power supply/consumption ratio as positive. |
 | Power segment overview | In the power segment overview, the power provided by the CPU and the power supply modules is compared with the power required by the signal modules. If the supply/consumption ratio is negative, in other words the power requirements are greater than the power provided by the CPU and the power supply modules, this is indicated in the table. |  |
@@ -1394,7 +1394,7 @@ When you configure a CPU, texts of different categories result, e.g.
 
 Texts are made available by the system (e.g. diagnostics buffer texts) or are created during the configuration (e.g. alarms).
 
-Depending on the specific element, texts are available in one language or they can be translated into other languages and can then be present in the project in multiple languages. You can maintain project texts in all languages available to you in the project tree (Languages & resources > Project texts).
+Depending on the specific element, texts are available in one language or they can be translated into other languages and can then be present in the project in multiple languages. You can maintain project texts in all languages available to you in the project tree (Languages &amp; resources &gt; Project texts).
 
 The texts produced during the configuration can be loaded onto the CPU. Due to the limited resources (e.g. load memory) only a limited number of languages can be loaded.
 
@@ -1419,7 +1419,7 @@ Multilingual texts can also be displayed on HMI devices. You can display tag com
 - The project languages that are to be assigned must be activated.
 - The corresponding texts (translations) must be available in the project.
 
-  The project language selection can be found in the project tree under "Languages & Resources".
+  The project language selection can be found in the project tree under "Languages &amp; Resources".
 
 ##### Setting the available languages for CPU display and Web server
 
@@ -1430,7 +1430,7 @@ The settings for multiple languages can be found in the CPU parameters: You set 
 
 Follow these steps:
 
-1. Navigate to the "Multiple languages" area ("Properties > General > Multiple languages") with selected CPU in the Inspector window.
+1. Navigate to the "Multiple languages" area ("Properties &gt; General &gt; Multiple languages") with selected CPU in the Inspector window.
 
    This area contains a table in which you assign languages: The project languages can be selected in the left-hand column. In the right-hand column, all the languages are listed that can be selected on the CPU display or for the Web server.
 2. Assign a project language to the languages for the CPU display/Web server.
@@ -1495,12 +1495,12 @@ Module comments are only loaded in one language.
 
 The following applies to loading module comments:
 
-- Requirement: In the project settings (Options > Settings "Hardware configuration" area), the option "Download module comment" must be enabled (default).
-- Module comments are loaded in the language set as the editing language. You change the editing languages in "Languages & Resources > Project languages".
+- Requirement: In the project settings (Options &gt; Settings "Hardware configuration" area), the option "Download module comment" must be enabled (default).
+- Module comments are loaded in the language set as the editing language. You change the editing languages in "Languages &amp; Resources &gt; Project languages".
 
 ##### Special considerations: Diagnostics buffer texts and status texts for the module status
 
-The predefined texts for diagnostics buffer entries are not available in all languages that you can select as project languages in the languages & resources in STEP 7. With the assignment between the project language and language for the Web server/CPU display, the "closest" language is therefore loaded to the CPU.
+The predefined texts for diagnostics buffer entries are not available in all languages that you can select as project languages in the languages &amp; resources in STEP 7. With the assignment between the project language and language for the Web server/CPU display, the "closest" language is therefore loaded to the CPU.
 
 Example: The texts mentioned above are in the German language, there is only one German language variant. If German (Luxemburg) or German (Austria) is selected as project language, the language German is always loaded.
 
@@ -1522,7 +1522,7 @@ Before each load operation, STEP 7 checks whether the number of languages for th
 
 If you have established an online connection to a device and you load this device (CPU with all assigned modules) into your project, the following rules apply:
 
-- The project languages in the project are updated; in other words, when additional project languages exist on the device, they also exist in the project after loading (enabled in "Languages & Resources" in the project tree). The "Offline and online texts" are also compared after the loading; in other words, the version of the texts in the project corresponds to the version on the device.
+- The project languages in the project are updated; in other words, when additional project languages exist on the device, they also exist in the project after loading (enabled in "Languages &amp; Resources" in the project tree). The "Offline and online texts" are also compared after the loading; in other words, the version of the texts in the project corresponds to the version on the device.
 - The project languages already existing in the project remain unaffected by the loading operation, no project language is deleted.
 - After loading, the assignments "Project languages of the CPU/Web server" (multilingual) in the project correspond to the assignments loaded on the CPU. Loading to the device again loads the same languages that exist on the CPU.
 
@@ -1530,7 +1530,7 @@ If you have established an online connection to a device and you load this devic
 
 If you load the software from a CPU in your project, for example individual blocks or the entire program, the following rules apply:
 
-- The project languages in the project are updated; in other words, when additional project languages exist on the device, they also exist in the project after loading (enabled in "Languages & Resources" in the project tree). The "Offline and online texts" of the loaded components are compared after the loading; in other words, the version of the texts in the project corresponds to the version on the device.
+- The project languages in the project are updated; in other words, when additional project languages exist on the device, they also exist in the project after loading (enabled in "Languages &amp; Resources" in the project tree). The "Offline and online texts" of the loaded components are compared after the loading; in other words, the version of the texts in the project corresponds to the version on the device.
 - The assignments "Project language - languages of the CPU display/Web server" (multilingual) in the project **are retained**; in other words, they do not change even if, for example, a new project language was used in the loaded block.   
   Note that in this case (new language only available in the CPU accessible online), you need to adapt the settings under "Multilingual support" in the properties of the CPU if the new language is to be loaded again to the CPU.
 - There is a risk that existing translations in the project may be **deleted** when loading from the device in the following situation:
@@ -1591,7 +1591,7 @@ To make alarm messages available in another language, for example, follow these 
 
 S7-1500 CPUs with firmware version V2.0 or higher support central alarm management.
 
-The CPU parameter "Central alarm management in the PLC" is available under "PLC alarms > General".
+The CPU parameter "Central alarm management in the PLC" is available under "PLC alarms &gt; General".
 
 Default: Central alarm management is enabled.
 
@@ -1621,7 +1621,7 @@ Any change to the message texts requires renewed downloading to the connected HM
     This option is not available for HMI devices with WinCC RT Unified.
 - The following applies to alarms that are displayed in the alarm archive:
 
-  - The alarm archive includes alarms in one language only. This language is set during configuration of the HMI device under "Archives > General > Archive language". The archive language also has to be one of the languages that was downloaded to the CPU.
+  - The alarm archive includes alarms in one language only. This language is set during configuration of the HMI device under "Archives &gt; General &gt; Archive language". The archive language also has to be one of the languages that was downloaded to the CPU.
 
 > **Note**
 >
@@ -1689,7 +1689,7 @@ The following applies to an S7-1500 CPU with several PROFINET interfaces:
 - For CPUs with multiple PROFINET interfaces **with firmware version V2.0 or higher**, the second PROFINET interface (X2) also supports IO functionality with real-time class RT, in other words the roles of IO controller and IO device.
 
   In addition, the second and all further PROFINET interfaces (for example X2) supports HMI communication, communication with the configuration system, communication with a higher-level network (backbone, router, Internet) and communication with another machine or automation cell. In addition, the following is supported: Send topology via LLDP protocol, manage LLDP MIBs, reply to and manage SNMP requests as well as the "Accessible devices" function (DCP protocol).
-- The following applies for CPUs with **firmware versions < V2.0**: The second or all other PROFINET interfaces (for example X2) do not support any IO functionality, meaning no IO controller/IO device role. HMI communication, communication with the configuration system, communication with a higher-level network (backbone, router, Internet) and communication with another machine or automation cell are supported. In addition, the following is supported: Send topology via LLDP protocol, manage LLDP MIBs, reply to and manage SNMP requests as well as the "Accessible devices" function (DCP protocol).
+- The following applies for CPUs with **firmware versions &lt; V2.0**: The second or all other PROFINET interfaces (for example X2) do not support any IO functionality, meaning no IO controller/IO device role. HMI communication, communication with the configuration system, communication with a higher-level network (backbone, router, Internet) and communication with another machine or automation cell are supported. In addition, the following is supported: Send topology via LLDP protocol, manage LLDP MIBs, reply to and manage SNMP requests as well as the "Accessible devices" function (DCP protocol).
 - The IP subnets of all interfaces must be different. This means that the subnet part of all interface IP addresses must be different.
 
   Advantages regarding communication across several PROFINET interfaces only apply when the interfaces are in different IP subnets.
@@ -1759,7 +1759,7 @@ In line with the interface, you can enable or disable the function "Limit data i
 To set the limitation of the data infeed into the network, follow these steps:
 
 1. In the network view of STEP 7, select the interface of the CPU.
-2. In the Inspector window, go to "Properties" > "General" > "Advanced options" > "Interface options".
+2. In the Inspector window, go to "Properties" &gt; "General" &gt; "Advanced options" &gt; "Interface options".
 3. Select or clear the "Limit data infeed into the network" check box.
 
 ![Setting limitation of the data infeed into the network for a CPU](images/90142566027_DV_resource.Stream@PNG-en-US.png)
@@ -1784,7 +1784,7 @@ When you configure all devices in the PROFINET subnet in one project, STEP 7 aut
 
 ###### How do you determine which mode is supported by a PROFINET interface?
 
-You can see which mode is supported by a PROFINET interface in the properties of the PROFINET interface for a selected device or selected interface in the device view or network view. You can find the option "Use IEC V2.2 LLDP mode" in the area "PROFINET interface > Advanced options".
+You can see which mode is supported by a PROFINET interface in the properties of the PROFINET interface for a selected device or selected interface in the device view or network view. You can find the option "Use IEC V2.2 LLDP mode" in the area "PROFINET interface &gt; Advanced options".
 
 - If the option "Use IEC V2.2 LLDP mode" is selected and cannot be changed, the PROFINET interface only supports V2.2 mode.
 - If the option "Use IEC V2.2 LLDP mode" is disabled and can be changed, the PROFINET interface supports V2.2 mode as well as V2.3 mode.
@@ -1948,7 +1948,7 @@ You can set, start and read the time and date on the CPU clock with the followin
 
 ##### Manual setting
 
-You can also read and set the time manually in the online and diagnostics view under "Functions > Set time".
+You can also read and set the time manually in the online and diagnostics view under "Functions &gt; Set time".
 
 ---
 
@@ -1968,7 +1968,7 @@ You can also read and set the time manually in the online and diagnostics view u
 
 ##### Reference
 
-Assigning parameters for the interface properties in the "Properties > General > DP interface > Time synchronization" parameter group.
+Assigning parameters for the interface properties in the "Properties &gt; General &gt; DP interface &gt; Time synchronization" parameter group.
 
 ##### SIMATIC procedure
 
@@ -1999,7 +1999,7 @@ To ensure that the time is consistent in all modules in the network, the time sl
 
 ##### Reference
 
-Assigning parameters for the interface properties in the "Properties > General > PROFINET interface > Time synchronization" parameter group. The "Enable time synchronization via NTP server" option is selected.
+Assigning parameters for the interface properties in the "Properties &gt; General &gt; PROFINET interface &gt; Time synchronization" parameter group. The "Enable time synchronization via NTP server" option is selected.
 
 ##### NTP mode (NTP: Network Time Protocol)
 
@@ -2115,7 +2115,7 @@ The wizard also starts, for example, when you replace a module in the network vi
 
 All settings in the wizard are applied in the Inspector window (CPU properties).
 
-You can start the wizard at any time using a Start button in the "Protection & Security" area of the CPU properties.
+You can start the wizard at any time using a Start button in the "Protection &amp; Security" area of the CPU properties.
 
 ---
 
@@ -2142,7 +2142,7 @@ A description of the concept as well as detailed information on handling the pas
 ##### Procedure
 
 1. Open the CPU properties in the network view or in the device view.
-2. Navigate to the area "Protection & Security > Protection of the PLC configuration data".
+2. Navigate to the area "Protection &amp; Security &gt; Protection of the PLC configuration data".
 
    **Result:** The "Protect confidential PLC configuration data" option is enabled first and the empty field for password entry is highlighted in red.
 3. Configure the password (recommended) via the "Set" button or disable the "Protect confidential PLC configuration data" option.
@@ -2156,7 +2156,7 @@ A description of the concept as well as detailed information on handling the pas
 - Manage your passwords in a password manager.
 - Use TIA Portal's password policy verification settings to check newly entered passwords for compliance and prevent trivial passwords, for example:
 
-  - In the project tree, navigate to the area "<Project name> > Security settings > Settings" area and select the "Password policies" area.
+  - In the project tree, navigate to the area "&lt;Project name&gt; &gt; Security settings &gt; Settings" area and select the "Password policies" area.
   - Specify, for example, the minimum number of characters the password must have or the minimum number of special characters.
 - You do not have to assign different passwords for each CPU in a system or machine. If the requirements are met, you can also define the same password for a group of CPUs. This strategy also has advantages in the replacement parts scenario: If the group password is also assigned to the replacement CPU, the workload of replacing the CPU is reduced.
 
@@ -2188,11 +2188,11 @@ This section contains information on the following topics:
 
 ##### Useful information on the local user administration and access control (S7-1500)
 
-As of TIA Portal version V19 and CPU firmware version V3.1 (V4.7 for S7-1200), S7-1500 and S7-1200 CPUs have improved management of users, roles and CPU function rights (User Management & Access Control, UMAC). Software controller from version V30.1 also have this function.
+As of TIA Portal version V19 and CPU firmware version V3.1 (V4.7 for S7-1200), S7-1500 and S7-1200 CPUs have improved management of users, roles and CPU function rights (User Management &amp; Access Control, UMAC). Software controller from version V30.1 also have this function.
 
 From the versions mentioned above onwards, you manage all project users along with their rights (for example, access rights) for all CPUs in the project in the editor for users and roles of the project in the TIA Portal:
 
-- Navigate to the "Security Settings > Users and roles" area in the project navigation to manage users with their rights, for example, to control access rights.
+- Navigate to the "Security Settings &gt; Users and roles" area in the project navigation to manage users with their rights, for example, to control access rights.
 
 The TIA Portal saves the assignment of the function rights of a CPU to user-defined roles and the assignment of these roles to users for each CPU. There are no system-defined roles with predefined function rights for CPUs.
 
@@ -2208,7 +2208,7 @@ This new feature is also called "local user management and access control" below
 
 ###### Users, roles and function rights - details of new features
 
-Users and roles were already being managed in the predecessor version by TIA Portal under "Security settings > Users and roles". In addition to the existing user management for HMI devices, for example, you can also manage all CPU function rights via this editor as of TIA Portal Version V19.
+Users and roles were already being managed in the predecessor version by TIA Portal under "Security settings &gt; Users and roles". In addition to the existing user management for HMI devices, for example, you can also manage all CPU function rights via this editor as of TIA Portal Version V19.
 
 The CPU function rights are valid during runtime. Therefore, these rights are located in the "Runtime rights" tab in the editor for users and roles. For each CPU in the project, there is a section with all CPU function rights to choose from - separated according to CPU services such as PG/HMI communication (engineering access, access levels), web server and OPC UA.
 
@@ -2223,9 +2223,9 @@ These additional user managements are integrated in the local user management in
 
 For CPUs up to firmware versions V3.0 (S7-1500) or V4.6 (S7-1200), you managed the users under the respective CPU properties separated according to services such as "Web server" und "OPC UA". Web server users were parameterized in the "Web server" area, OPC UA users in the "OPC UA" area.
 
-To restrict the PG/HMI access to the CPU at different levels, you configured passwords for the corresponding access levels. With this procedure, for example, HMI accesses could be permitted without restriction, but write accesses could be made dependent on the knowledge of a password. You have agreed passwords for the different access levels in the "Protection & Security" area of the CPU properties. The access protection therefore always related to groups that have the appropriate passwords - not to individual users.
+To restrict the PG/HMI access to the CPU at different levels, you configured passwords for the corresponding access levels. With this procedure, for example, HMI accesses could be permitted without restriction, but write accesses could be made dependent on the knowledge of a password. You have agreed passwords for the different access levels in the "Protection &amp; Security" area of the CPU properties. The access protection therefore always related to groups that have the appropriate passwords - not to individual users.
 
-With the introduction of the local user management and access control from TIA Portal version V19 onwards, you can use the "Security settings > Users and roles" area in TIA Portal in the project navigation for all users and their roles and function rights of a CPU. This also applies to the access protection for engineering/HMI access, which as of TIA Portal version V19 no longer works via access levels with password protection by default, but also via user management.
+With the introduction of the local user management and access control from TIA Portal version V19 onwards, you can use the "Security settings &gt; Users and roles" area in TIA Portal in the project navigation for all users and their roles and function rights of a CPU. This also applies to the access protection for engineering/HMI access, which as of TIA Portal version V19 no longer works via access levels with password protection by default, but also via user management.
 
 More information on the new access protection is available [here](#from-the-access-level-to-the-function-right-of-users-s7-1500).
 
@@ -2241,7 +2241,7 @@ The following image displays the assignment of the role with full access to a us
 
 ###### Requirement
 
-CPU parameterization: To be able to use users, roles and function rights for a CPU, the "Enable access control" option in the "Protection & Security > Access control" tab must be checked.
+CPU parameterization: To be able to use users, roles and function rights for a CPU, the "Enable access control" option in the "Protection &amp; Security &gt; Access control" tab must be checked.
 
 No project protection is required for local user management.
 
@@ -2255,7 +2255,7 @@ You can load configuration changes with regard to the local user management and 
 
 ###### Runtime timeout
 
-You can set a runtime timeout for both the role and the user in 'Security Settings > Users and Roles'.
+You can set a runtime timeout for both the role and the user in 'Security Settings &gt; Users and Roles'.
 
 For an S7-1500 CPU, these settings are taken into account by the various services as follows:
 
@@ -2274,7 +2274,7 @@ The following section discusses the advantages which the new local user manageme
 
 ###### Quick activation/deactivation of the local user management
 
-The options for user management are located in the "Protection & Security > Access control" tab:
+The options for user management are located in the "Protection &amp; Security &gt; Access control" tab:
 
 - Access control deactivated: Every user has full access to all functions with the exception of the GDS Push function for the online transfer of certificates.
 
@@ -2286,7 +2286,7 @@ The options for user management are located in the "Protection & Security > Acce
 
 ###### Access protection for PG/HMI accesses, now with user authentication
 
-While it was possible to parameterize passwords for access levels for CPUs with firmware versions < V3.1 (S7-1500 CPUs) or < V4.7 (S7-1200 CPUs), with the current CPUs, you have the possibility to configure users with the corresponding function rights. This means that the authentication options for PG/HMI access correspond to the options offered by OPC UA or web server accesses.
+While it was possible to parameterize passwords for access levels for CPUs with firmware versions &lt; V3.1 (S7-1500 CPUs) or &lt; V4.7 (S7-1200 CPUs), with the current CPUs, you have the possibility to configure users with the corresponding function rights. This means that the authentication options for PG/HMI access correspond to the options offered by OPC UA or web server accesses.
 
 ###### All in one place
 
@@ -2297,7 +2297,7 @@ All users, no matter if you manage their engineering rights for the project or t
 ###### Powerful password functions
 
 - Support for compliance with complexity rules for password creation:   
-  Right from the password creation stage, you can have the TIA Portal check compliance with complexity rules (such as the password length, uppercase/lowercase letters) (project navigation, "Security settings > Settings" area).  
+  Right from the password creation stage, you can have the TIA Portal check compliance with complexity rules (such as the password length, uppercase/lowercase letters) (project navigation, "Security settings &gt; Settings" area).  
   The complexity rules are also saved in the CPU upon loading the user management. When the password is changed online, the CPU determines and considers these rules. This prevents a user from overriding the complexity rules set by the configuration engineer and assigning a non-secure password.
 - The period of validity of passwords is adjustable:   
   To ensure that a user does not have access to the CPU with a compromised password for an unlimited time, you can parameterize a period of validity. Before the period of validity expires, the remaining time is then displayed on login so that each user has the possibility to change their password in time.
@@ -2306,7 +2306,7 @@ All users, no matter if you manage their engineering rights for the project or t
 
 From firmware version V3.1 onwards, you can load certain security-relevant configuration data both in the STOP operating state and in the RUN operating state. Therefore, loading the hardware configuration does not necessarily result in a STOP of the CPU.
 
-You can make the following changes in the STOP operating state as well as in the RUN operating state (Download to device > Hardware configuration):
+You can make the following changes in the STOP operating state as well as in the RUN operating state (Download to device &gt; Hardware configuration):
 
 - Local user management extended/changed
 - TIA Portal-configured certificates added/modified
@@ -2376,7 +2376,7 @@ If you require the configuration of an access level, for example, to ensure an H
 >
 > **User for OPC UA and for the web server**
 >
-> Regardless of the access protection, you always have to configure the users for the web server and for the OPC UA server in the project tree ("Security settings > Users and roles" area).
+> Regardless of the access protection, you always have to configure the users for the web server and for the OPC UA server in the project tree ("Security settings &gt; Users and roles" area).
 
 ###### Restrictions on continued use of the access levels
 
@@ -2389,19 +2389,19 @@ The area where you set the access levels leads you via a link to the editor for 
 **Examples**:
 
 - If the "Anonymous" user is deactivated or if the "Anonymous" user is activated and no function rights are assigned to that user, then nobody can log in without a user name and password (corresponds to the access level "No access (complete protection")).
-- If the "Anonymous" user is activated and the "Full access" function right for a CPU is assigned to that user via a corresponding role, the result of this setting is "No protection". You can achieve the same effect with regard to access protection by setting "No access protection" in the "Protection & Security" area of the CPU properties.
+- If the "Anonymous" user is activated and the "Full access" function right for a CPU is assigned to that user via a corresponding role, the result of this setting is "No protection". You can achieve the same effect with regard to access protection by setting "No access protection" in the "Protection &amp; Security" area of the CPU properties.
 
 ###### Procedure
 
 To activate the "Legacy access control" and set the required access level, follow these steps:
 
-1. In the CPU properties, go to "Protection & Security > Access control".
+1. In the CPU properties, go to "Protection &amp; Security &gt; Access control".
 2. Select the option "Activate access control" and, in addition, select the check box "Use legacy access control via access levels" check box.
 
    The access level selection cannot be used in this setting. You have to set the access level via the "Anonymous" user of the CPU.
 
    The "Anonymous" user is disabled in the default setting. This means that the resulting access level for users without a password is "No access (complete protection)" (default setting).
-3. Go to "Security Settings > Users and roles" in the project navigation.
+3. Go to "Security Settings &gt; Users and roles" in the project navigation.
 4. Activate the "Anonymous" user, if you want to set a different access level than "No access (complete protection)". You can assign a role with function rights that grants access to the CPU without password input, only to the activated "Anonymous" user.
 5. You cannot assign function rights for a CPU directly to a user. You must first assign a role:  
    Therefore switch to the "Roles" tab and add a new role. Assign a meaningful name, e.g. "PLC1-Read-Access-Role". If you assign this role to a user, this user should have read access to PLC1 during operation.
@@ -2422,13 +2422,13 @@ In the following sections, you will find information on the behavior of the CPUs
 
 ###### Replacement part scenario
 
-If you replace a CPU with a firmware version < V3.1 with a CPU with a firmware version V3.1 or higher, the program stored on the memory card runs like the original CPU. The behavior with regard to the configured access levels, the users for the OPC UA server and the web server corresponds to the behavior of the previous CPU.
+If you replace a CPU with a firmware version &lt; V3.1 with a CPU with a firmware version V3.1 or higher, the program stored on the memory card runs like the original CPU. The behavior with regard to the configured access levels, the users for the OPC UA server and the web server corresponds to the behavior of the previous CPU.
 
-In this case, the "Change password function" via the web server API is not accepted by the CPU because the CPU has been configured for firmware version < V3.1 and has no local user management.
+In this case, the "Change password function" via the web server API is not accepted by the CPU because the CPU has been configured for firmware version &lt; V3.1 and has no local user management.
 
 ###### Replace CPU (upgrade)
 
-If you replace a CPU (FW < V3.1) with a current CPU (FW V3.1 or higher) in the TIA Portal, this has the following effects on the configured user data:
+If you replace a CPU (FW &lt; V3.1) with a current CPU (FW V3.1 or higher) in the TIA Portal, this has the following effects on the configured user data:
 
 - The user data from the OPC UA server and web server is transferred to the "Users and roles" editor in the project navigation.
 
@@ -2448,13 +2448,13 @@ If you replace a CPU (FW < V3.1) with a current CPU (FW V3.1 or higher) in the T
 
 ###### Replace CPU (downgrade)
 
-If you replace a CPU (as of FW V3.1) with a previous CPU (< FW V3.1) in the TIA Portal, this has the following effects on the configured user data:
+If you replace a CPU (as of FW V3.1) with a previous CPU (&lt; FW V3.1) in the TIA Portal, this has the following effects on the configured user data:
 
 - The local user management is no longer available.
-- Users of the web server with their roles and function rights remain in the "Users and roles" editor. They are not transferred to the area of the CPU properties (Web server > User management) and are not in effect.
+- Users of the web server with their roles and function rights remain in the "Users and roles" editor. They are not transferred to the area of the CPU properties (Web server &gt; User management) and are not in effect.
 - Users of the OPC UA server with their roles and function rights remain in the "Users and roles" editor. No users are moved to the "OPC UA" area of the CPU parameters.
 
-  With regard to the settings for user authentication, the default setting applies again (OPC UA > Server > Security > User authentication): Guest authentication is enabled.
+  With regard to the settings for user authentication, the default setting applies again (OPC UA &gt; Server &gt; Security &gt; User authentication): Guest authentication is enabled.
 - It is no longer possible for users to change passwords during runtime (via web server API).
 
 ##### What you should know about the access levels (S7-1500)
@@ -2541,10 +2541,10 @@ The table below describes which online functions are possible in the various pro
 | Monitoring tags (M, I, Q, DB content) via HMI device | Yes | Yes | Yes | No |
 | Modifying tags (M, I, Q, DB content) via HMI device | Yes | Yes | Yes | No |
 | Diagnostics display (for example, device information, connection display, alarm display, diagnostic buffer) | Yes | Yes | Yes | No |
-| Reading cycle time statistics (Online & Diagnostics) | Yes | Yes | Yes | No |
-| Reading information from the hardware configuration (Online & Diagnostics) | Yes | Yes | Yes | No |
+| Reading cycle time statistics (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
+| Reading information from the hardware configuration (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
 | Reading time-of-day | Yes | Yes | Yes | No |
-| Executing online functions within the hardware configuration (Online & Diagnostics) | Yes | Yes | Yes | No |
+| Executing online functions within the hardware configuration (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
 | Acknowledging alarms | Yes | Yes | Yes | No |
 | Receiving alarms | Yes | Yes | Yes | No |
 |  |  |  |  |  |
@@ -2582,7 +2582,7 @@ If you only have a password for HMI access with a completely protected CPU, canc
 - A module was configured with read access and you want to execute the "Modify tags" test function. Since this requires write access to a test function, the configured password must be entered to execute the function (password for full access).
 - A module was configured with HMI access and you want to go online with STEP 7 for this module. Since the data from which STEP 7 determines the equivalence between online and offline objects (checksum) requires read access, you are prompted to enter the password for read access when going online. If you abort the dialog for entering the password, an online connection to the module is nevertheless established. However, only question marks are displayed in the column for comparison icons in an online/offline comparison.
 
-Access authorization to the protected data is in effect for the duration of the online connection. If the online connection is restored after an interruption, you do not have to enter the access data again. To manually cancel access authorization, click "Online > Delete access rights".
+Access authorization to the protected data is in effect for the duration of the online connection. If the online connection is restored after an interruption, you do not have to enter the access data again. To manually cancel access authorization, click "Online &gt; Delete access rights".
 
 Each access level allows unrestricted access to certain functions without entering a password, for example, identification using the "Accessible devices" function.
 
@@ -2633,7 +2633,7 @@ For users who know one of the set passwords, the effect depends on the table row
 To configure the access levels of a CPU, follow these steps:
 
 1. Open the properties of the module in the inspector window.
-2. Open the "Protection & Security > Access control" entry in the area navigation.
+2. Open the "Protection &amp; Security &gt; Access control" entry in the area navigation.
 
    A table with the possible access levels appears in the inspector window.
 
@@ -2689,10 +2689,10 @@ Proceed as follows to load a new configuration (with new password) in this case:
 
 ##### Behavior of a password-protected CPU during module replacement
 
-- You are replacing an S7-1500 CPU (**firmware < 2.0**) with an S7-1500 (**firmware ≥ 2.0**):
+- You are replacing an S7-1500 CPU (**firmware &lt; 2.0**) with an S7-1500 (**firmware ≥ 2.0**):
 
   You are informed that a more up-to-date algorithm is available for password encryption. You have the option of using the new algorithm by clicking on the button or - on the grounds of compatibility - retaining the previous algorithm.
-- You are replacing an S7-1500 CPU (**firmware ≥ 2.0**) with an S7-1500 (**firmware < 2.0**):
+- You are replacing an S7-1500 CPU (**firmware ≥ 2.0**) with an S7-1500 (**firmware &lt; 2.0**):
 
   You are informed that the previous passwords will be lost and that new passwords must be configured.
 
@@ -2700,11 +2700,11 @@ Proceed as follows to load a new configuration (with new password) in this case:
 
 To create users and their specific rights, you must configure a password for each user. Similar rules apply for module replacement as for a password-protected CPU:
 
-- You are replacing an S7-1500 CPU (**firmware < V2.0**) with an S7-1500 (**firmware ≥ V2.0**):
+- You are replacing an S7-1500 CPU (**firmware &lt; V2.0**) with an S7-1500 (**firmware ≥ V2.0**):
 
   You are informed that a more up-to-date algorithm is available for password encryption. You have the option of using the new algorithm by clicking on the button or - on the grounds of compatibility - retaining the previous algorithm.
 - You are replacing an S7-1500 CPU (**V1.7 ≤ firmware ≤ V1.8**) with an S7-1500 (**firmware ≤ 1.6**) or
-- You are replacing an S7-1500 CPU (**firmware ≥ 2.0**) with an S7-1500 (**firmware < 2.0**):
+- You are replacing an S7-1500 CPU (**firmware ≥ 2.0**) with an S7-1500 (**firmware &lt; 2.0**):
 
   You are informed that all configured users are deleted and that the user "Everyone" is reset to default user rights.
 
@@ -2830,7 +2830,7 @@ To configure group alarms for security events, follow these steps:
 1. Click on the CPU symbol in the network view.
 
    The properties of the CPU are displayed in the Inspector window.
-2. Go to the "Protection" > "Security event" area.
+2. Go to the "Protection" &gt; "Security event" area.
 3. Click on "Security event".
 4. Select the option "Summarize security events in case of high message volume" to enable group alarms for security events.
 5. Set the duration of an interval (monitoring time); the default is 20 seconds.
@@ -2857,7 +2857,7 @@ In addition, a password can be configured for the display in the properties of t
 
 Proceed as follows to set the local access protection for an S7-1500 CPU on the display:
 
-1. Select the menu Settings > Protection on the display.
+1. Select the menu Settings &gt; Protection on the display.
 2. Confirm with "OK" and set for each protection level whether access in RUN mode is permitted:
 
    Allow: Access to the CPU is possible with password input.
@@ -2914,7 +2914,7 @@ In the global security certificate manager you can utilize additional functions 
 - Adding trusted certificates and certification authorities.
 - Deleting manually imported certificates.
 
-The global security settings are not visible until they have been activated in the project for at last one device. The "Use global security settings for certificate manager" check box is available to this purpose in the local CPU-specific certificate manager: It is located in the Inspector window in the general settings of a device with security functions under "Protection & Security > Certificate manager". Depending on this setting either only the local CPU-specific certificate manager with limited functionality is used or the global security certificate manager.
+The global security settings are not visible until they have been activated in the project for at last one device. The "Use global security settings for certificate manager" check box is available to this purpose in the local CPU-specific certificate manager: It is located in the Inspector window in the general settings of a device with security functions under "Protection &amp; Security &gt; Certificate manager". Depending on this setting either only the local CPU-specific certificate manager with limited functionality is used or the global security certificate manager.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -2945,7 +2945,7 @@ With the local CPU-specific certificate manager, you can use certificates for di
 
 In comparison to the global certificate manager, the local CPU-specific certificate manager only has a limited functionality. Via the local certificate manager, you can only create, assign, export or delete self-signed certificates.
 
-The settings for the local CPU-specific certificate manager are located in the Inspector window in the general settings of the device under "Protection & Security > Certificate manager".
+The settings for the local CPU-specific certificate manager are located in the Inspector window in the general settings of the device under "Protection &amp; Security &gt; Certificate manager".
 
 - Option for activating the global certificate manager
 - Table for device certificates: Display and management of the certificates that you use, for example, for secure OUC (TLS server / TLS client), the Web server and the OPC UA server of the device.
@@ -2961,7 +2961,7 @@ When you create a new certificate, the following values are entered as the defau
 - Certificate authority: Only self-signed certificates are possible for the local CPU-specific certificate management.
 - Certificate parameters:
 
-  - Certificate holder: For example, <Name of the CPU>/TLS. The set of characters is limited so that the specifications to ASN.1 can be observed.
+  - Certificate holder: For example, &lt;Name of the CPU&gt;/TLS. The set of characters is limited so that the specifications to ASN.1 can be observed.
   - Encryption process: For example, EC (Elliptic Curves), RSA. Note that the selected encryption process EC is not validated for the specific device at the time of input.
   - Encryption parameters: Depending on the encryption process.
   - Hash algorithm: Algorithm that is used for signing the certificate.
@@ -3014,7 +3014,7 @@ As of CPU firmware version V2.9 (S7-1500) or V4.5 (S7-1200) the settings for the
 
 To create a new certificate, proceed as follows, for example:
 
-1. In the Inspector window, go to "Protection & Security > Certificate manager" in the properties of the device.
+1. In the Inspector window, go to "Protection &amp; Security &gt; Certificate manager" in the properties of the device.
 2. Click "Add" in the table of certificates. A new row is entered in the table.
 3. Click in the new row. The selection for new certificates is opened.
 4. Click the "Add" button. The corresponding dialog window opens in which you can enter the data for the new certificate.
@@ -3070,7 +3070,7 @@ The device must offer security functions with certificate manager. This applies 
 
 To assign an available certificate to a device, follow these steps:
 
-1. In the Inspector window, go to "Protection & Security > Certificate manager" in the properties of the device.
+1. In the Inspector window, go to "Protection &amp; Security &gt; Certificate manager" in the properties of the device.
 2. Click "Add" in the table of certificates. A new row is entered in the table.
 3. Click in the new row. The selection for new certificates is opened.
 4. Select an available certificate. If only the local CPU-specific certificate manager is active, you do not see the globally available certificates. You can only see and select globally available certificates when the global security certificate manager is activated.
@@ -3100,7 +3100,7 @@ The device must offer security functions with certificate manager. This applies 
 
 To export a certificate, follow these steps:
 
-1. In the Inspector window, go to "Protection & Security > Certificate manager" in the properties of the device.
+1. In the Inspector window, go to "Protection &amp; Security &gt; Certificate manager" in the properties of the device.
 2. Right-click in the row with the certificate to be exported to open the shortcut menu.
 3. Click "Export certificate".
 4. Export the certificate into one of the selectable file formats: CER, DER.
@@ -3131,7 +3131,7 @@ The device must offer security functions with certificate manager. This applies 
 
 To delete a certificate, follow these steps:
 
-1. In the Inspector window, go to "Protection & Security > Certificate manager" in the properties of the device.
+1. In the Inspector window, go to "Protection &amp; Security &gt; Certificate manager" in the properties of the device.
 2. Right-click in the row with the certificate to be deleted to open the shortcut menu.
 3. Click "Delete certificate".
 
@@ -3149,7 +3149,7 @@ The selected certificate was deleted in the device. With an activated global sec
 
 ###### Introduction
 
-You can create or assign a server certificate for the Web server in the inspection window under "Web server > Security".
+You can create or assign a server certificate for the Web server in the inspection window under "Web server &gt; Security".
 
 ###### Local Web server certificate
 
@@ -3166,7 +3166,7 @@ Import and renewal of certificates is only possible in the global security setti
 When you create a new certificate, the following values are entered as the default in the corresponding dialog for a Web server:
 
 - Purpose of usage: Web server. The entries under "Key usage" (Extensions "KeyUsage" and "ExtendedKeyUsage" for certificates of the X.509 V3) standard are filled suitably for the Web server.
-- Certificate holder: <Name of the CPU>/Web server. The set of characters is limited so that the specifications to ASN.1 can be observed.
+- Certificate holder: &lt;Name of the CPU&gt;/Web server. The set of characters is limited so that the specifications to ASN.1 can be observed.
 - Encryption process: EC.
 - Encryption parameters: prime256v1.
 - Validity period: The start and end of the validity period is entered in the two fields for the validity period in dependence on the system time.
@@ -3195,7 +3195,7 @@ You can overwrite the defaults with your own values.
 
 ###### Introduction
 
-You can create or assign a server certificate for OPC UA in the Inspector window under "OPC UA > Server > Security".
+You can create or assign a server certificate for OPC UA in the Inspector window under "OPC UA &gt; Server &gt; Security".
 
 ###### Local server certificates for OPC UA
 
@@ -3212,7 +3212,7 @@ Import and renewal of certificates is only possible in the global security setti
 When you create a new certificate, the following values are entered as the default in the corresponding dialog for a OPC UA:
 
 - Purpose of usage: OPC UA server. The entries under "Key usage" ("KeyUsage" and "ExtendedKeyUsage" extensions for certificates of the X.509 V3) standard are filled suitably for the OPC UA server.
-- Certificate holder: <Name of the CPU>/OPCUA. The set of characters is limited so that the specifications to ASN.1 can be observed.
+- Certificate holder: &lt;Name of the CPU&gt;/OPCUA. The set of characters is limited so that the specifications to ASN.1 can be observed.
 - Encryption process: RSA.
 - Encryption parameters: 2048.
 - Validity period: The start and end of the validity period is entered in the two fields for the validity period in dependence on the system time.
@@ -3294,7 +3294,7 @@ If you want to transfer the syslog messages of a CPU to a syslog server, the fol
 To configure the CPU to transfer syslog messages to a syslog server, following these steps:
 
 1. Select the required CPU in the device or network view of STEP 7.
-2. In the Inspector window, navigate to "Properties > Protection & Security > System Logging".
+2. In the Inspector window, navigate to "Properties &gt; Protection &amp; Security &gt; System Logging".
 3. In the "Connection to syslog server" area, activate the option "Enable transfer of syslog messages to syslog servers". The selection options below become editable.
 4. Select one of the following options from the "Transport protocol" drop-down list:
 
@@ -3316,7 +3316,7 @@ Result: You have configured the transfer of syslog messages to a syslog server.
 STEP 7 provides the required client certificate for a CPU for the TLS transport protocol. If the certificate is managed within the CPU, you can either choose an existing certificate or create a new certificate. To do so, follow these steps:
 
 1. Select the required CPU in the device or network view of STEP 7.
-2. In the Inspector window, navigate to "Properties > Protection & Security > System Logging".  
+2. In the Inspector window, navigate to "Properties &gt; Protection &amp; Security &gt; System Logging".  
    The certificate generated by STEP 7 is displayed next to "Client certificate".
 
 ###### Selecting the server authentication
@@ -3324,7 +3324,7 @@ STEP 7 provides the required client certificate for a CPU for the TLS transport
 After selecting the TLS transport protocol, the configured syslog server must authenticate itself. This ensures that the CPU only connects to a trusted server. If you want to waive server authentication, activate the automatic acceptance of server certificates during runtime. To configure these settings, follow these steps:
 
 1. Select the required CPU in the device or network view of STEP 7.
-2. In the Inspector window, navigate to "Properties > Protection & Security > System Logging".
+2. In the Inspector window, navigate to "Properties &gt; Protection &amp; Security &gt; System Logging".
 3. In the "Trusted servers" area, specify whether the connected syslog server should be authenticated. In this case, it is necessary to complete the following information:
 
    - Add trusted server: Add a valid server certificate in the "Common name of subject" column.
@@ -3403,7 +3403,7 @@ The default setting "disabled" is also in effect if no configuration has been lo
 >
 > **Replacement part scenario**
 >
-> For compatibility reasons, an S7-1500 CPU as of firmware version V3.0 with a loaded predecessor project (CPU firmware < V3.0) behaves like the CPU in the predecessor project:
+> For compatibility reasons, an S7-1500 CPU as of firmware version V3.0 with a loaded predecessor project (CPU firmware &lt; V3.0) behaves like the CPU in the predecessor project:
 >
 > SNMP is activated and "public" and "private" community strings are in effect.
 
@@ -3413,7 +3413,7 @@ As of CPU firmware version 4.6 and TIA Portal version V18, you have the possibil
 
 - Activate SNMP (default: deactivated)
 
-You can find the settings in the "Advanced configuration > SNMP" area of the CPU properties.
+You can find the settings in the "Advanced configuration &gt; SNMP" area of the CPU properties.
 
 #### Configuring SNMP (S7-1500)
 
@@ -3423,7 +3423,7 @@ As of CPU firmware version V3.0 and TIA Portal version V18, you have the possibi
 - Read-only community string (default: "public")
 - Read-write community string (default: "private")
 
-You can find the settings in the "Advanced configuration > SNMP" area.
+You can find the settings in the "Advanced configuration &gt; SNMP" area.
 
 #### Meaning and properties of community strings
 
@@ -3505,9 +3505,9 @@ IF "ActivateSnmp".snmpWrite THEN
  "instWrrec_1"(REQ := "ActivateSnmp".snmpWrite,  
  ID := "Local~PROFINET-Schnittstelle_1",  
  INDEX := 16#B071,  
- DONE => "ActivateSnmp".snmpWriteDone,  
- ERROR => "ActivateSnmp".snmpWriteError,  
- STATUS => "ActivateSnmp".snmpWriteStatus,  
+ DONE =&gt; "ActivateSnmp".snmpWriteDone,  
+ ERROR =&gt; "ActivateSnmp".snmpWriteError,  
+ STATUS =&gt; "ActivateSnmp".snmpWriteStatus,  
  RECORD := "ActivateSnmp".snmpRecord);  
  END_IF;  
  IF "ActivateSnmp".snmpWriteError THEN  
@@ -3599,9 +3599,9 @@ IF "ActivateSnmp".snmpWrite THEN
  "instWrrec_1"(REQ := "ActivateSnmp".snmpWrite,  
  ID := "Local1~PROFINET_interface_1",  
  INDEX := 16#B071,  
- DONE => "ActivateSnmp".plcLeft.snmpWrDone,  
- ERROR => "ActivateSnmp".plcLeft.snmpWrError,  
- STATUS => "ActivateSnmp".plcLeft.snmpWrStatus,  
+ DONE =&gt; "ActivateSnmp".plcLeft.snmpWrDone,  
+ ERROR =&gt; "ActivateSnmp".plcLeft.snmpWrError,  
+ STATUS =&gt; "ActivateSnmp".plcLeft.snmpWrStatus,  
  RECORD := "ActivateSnmp".snmpRecord);  
  END_IF;  
  IF "ActivateSnmp".plcLeft.snmpWrError THEN  
@@ -3613,9 +3613,9 @@ IF "ActivateSnmp".snmpWrite THEN
  "instWrrec_2"(REQ := "ActivateSnmp".snmpWrite,  
  ID := "Local2~PROFINET_interface_1",  
  INDEX := 16#B071,  
- DONE => "ActivateSnmp".plcRight.snmpWrDone,  
- ERROR => "ActivateSnmp".plcRight.snmpWrError,  
- STATUS =>  
+ DONE =&gt; "ActivateSnmp".plcRight.snmpWrDone,  
+ ERROR =&gt; "ActivateSnmp".plcRight.snmpWrError,  
+ STATUS =&gt;  
  "ActivateSnmp".plcRight.snmpWrStatus,  
  RECORD := "ActivateSnmp".snmpRecord);  
  END_IF;  
@@ -3670,7 +3670,7 @@ To create an isochronous connection between the I/O and user program, follow the
 2. If you have performed a firmware update of the S7-1500 CPU from an earlier version, update the module description:
 
    - Open the "properties" of the module.
-   - In the "General > Catalog information" tab, click the "Update module description" button.
+   - In the "General &gt; Catalog information" tab, click the "Update module description" button.
 3. Change to the device view.
 4. Insert an I/O module that can be operated isochronously (e.g. AI 8 x U/I HS).
 5. Go to the "I/O addresses" area in the Inspector window of the selected I/O module.
@@ -3688,7 +3688,7 @@ To create an isochronous connection between the I/O and user program, follow the
 **Configuring the CPU**
 
 1. To check the settings for isochronous mode, select the CPU in the device view of STEP 7.
-2. In the Inspector window of the marked CPU, navigate to the area "Advanced configuration > Isochronous mode".
+2. In the Inspector window of the marked CPU, navigate to the area "Advanced configuration &gt; Isochronous mode".
 3. In the "Isochronous mode for local modules" area, check to determine if:
 
    - Isochronous mode is selected
@@ -3702,7 +3702,7 @@ To create an isochronous connection between the I/O and user program, follow the
 >
 > **Configuring isochronous mode after a firmware update**
 >
-> If, after upgrading a project and subsequently updating the firmware of the S7-1500 CPU to the current version, the centrally plugged modules cannot be configured in isochronous mode, update the module description of the individual modules. To do this, open the "Properties" of the modules and click the "Update module description" button in the "General > Catalog information" tab.
+> If, after upgrading a project and subsequently updating the firmware of the S7-1500 CPU to the current version, the centrally plugged modules cannot be configured in isochronous mode, update the module description of the individual modules. To do this, open the "Properties" of the modules and click the "Update module description" button in the "General &gt; Catalog information" tab.
 >
 > You can find additional information in the section "[Changing or updating hardware components](Configuring%20devices%20and%20networks.md#changing-or-updating-hardware-components)".
 
@@ -3823,7 +3823,7 @@ A startup OB has the following start information:
 
   In contrast to the assignment of start information with S7-300 and S7-400-CPUs:
 
-  - OB_NUMBR=B#16#FF, if the OB number > 254
+  - OB_NUMBR=B#16#FF, if the OB number &gt; 254
 - Optimized start information:
 
 | Name | Data type | Meaning |
@@ -3880,7 +3880,7 @@ Apart from monitoring the maximum cycle time, it is also possible to guarantee a
   In contrast to the assignment of start information with S7-300 and S7-400-CPUs:
 
   - SCAN_1=B#16#01 at the first call and B#16#03 at each further call
-  - OB_NUMBR=B#16#FF, if the OB number > 254
+  - OB_NUMBR=B#16#FF, if the OB number &gt; 254
 - Optimized start information:
 
 | Name | Data type | Meaning |
@@ -3935,8 +3935,8 @@ The characteristics of the time interrupts depend on the time difference by whic
 
 | Changing the time | Effect on time interrupt |
 | --- | --- |
-| < 20 s | - When the time is set ahead: Every skipped time interrupt is executed subsequently. The start information tag "CaughtUp" is set. OB 80 is not called. - When the time is adjusted back: A time interrupt that was already executed in the reset time range or is currently active is not repeated. |
-| > > = 20 s | - When the time is set ahead: If one or more time interrupts were skipped, OB 80 is called. For each priority, the start information provides information on whether at least one time interrupt was skipped. If you do not delete the time interrupt in OB 80, the first skipped time interrupt is executed subsequently and the start information tag "CaughtUp" is set. - When the time is adjusted back: The time interrupts in the range of the reset time are repeated. If the time correction is greater than the duration of a time interrupt, the operating system calculates the time of the first time interrupt to be repeated. In the case of a repeated time interrupt, the start information tag "SecondTime" is set. |
+| &lt; 20 s | - When the time is set ahead: Every skipped time interrupt is executed subsequently. The start information tag "CaughtUp" is set. OB 80 is not called. - When the time is adjusted back: A time interrupt that was already executed in the reset time range or is currently active is not repeated. |
+| &gt; &gt; = 20 s | - When the time is set ahead: If one or more time interrupts were skipped, OB 80 is called. For each priority, the start information provides information on whether at least one time interrupt was skipped. If you do not delete the time interrupt in OB 80, the first skipped time interrupt is executed subsequently and the start information tag "CaughtUp" is set. - When the time is adjusted back: The time interrupts in the range of the reset time are repeated. If the time correction is greater than the duration of a time interrupt, the operating system calculates the time of the first time interrupt to be repeated. In the case of a repeated time interrupt, the start information tag "SecondTime" is set. |
 | Changing from standard to daylight saving time and vice versa | This change is only effective if you use local time.  - When there is a change from standard to daylight saving time, a skipped time interrupt is executed subsequently and the start information tag "CaughtUp" is set. OB 80 is not called. - When there is a change from daylight saving time to standard time: the time interrupts in the range of the reset time are repeated. In the case of a repeated time interrupt, the start information tag "SecondTime" is set. |
 | Changing the time zone (results in change of the local time) | The start time of the active time interrupts is recalculated.  - When the local time is adjusted ahead, a skipped time interrupt is executed subsequently and the start information tag "CaughtUp" is set. OB 80 is not called. - When the local time is adjusted back, time interrupts that have already been executed may be repeated. In the case of repeated time interrupts, the start information tag "SecondTime" is set. |
 
@@ -3961,8 +3961,8 @@ When working with time interrupts, the following events can occur due to time mo
 
   In contrast to the assignment of start information with S7-300 and S7-400-CPUs:
 
-  - STRT_INF=B#16#1F, if the OB number > 122
-  - OB_NUMBR=B#16#FF, if the OB number > 254
+  - STRT_INF=B#16#1F, if the OB number &gt; 122
+  - OB_NUMBR=B#16#FF, if the OB number &gt; 254
 - Optimized start information:
 
 | Name | Data type | Meaning |
@@ -4106,8 +4106,8 @@ A warm or cold restart clears all start events for a time-delay interrupt OB.
 
   In contrast to the assignment of start information with S7-300 and S7-400-CPUs:
 
-  - STRT_INF=B#16#2F, if the OB number > 122
-  - OB_NUMBR=B#16#FF, if the OB number > 254
+  - STRT_INF=B#16#2F, if the OB number &gt; 122
+  - OB_NUMBR=B#16#FF, if the OB number &gt; 254
 - Optimized start information:
 
 | Name | Data type | Meaning |
@@ -4175,8 +4175,8 @@ Please note that the operating system of the CPU always calculates the start eve
 
   In contrast to the assignment of start information with S7-300 and S7-400-CPUs:
 
-  - STRT_INF=B#16#3F, if the OB number > 122 and the phase offset and cycle time are specified in ms
-  - OB_NUMBR=B#16#FF, if the OB number > 254
+  - STRT_INF=B#16#3F, if the OB number &gt; 122 and the phase offset and cycle time are specified in ms
+  - OB_NUMBR=B#16#FF, if the OB number &gt; 254
 - Optimized start information
 
 | Name | Data type | Meaning |
@@ -4234,7 +4234,7 @@ Hardware interrupt OBs are called only in RUN mode of the CPU.
   In contrast to the assignment of start information with S7-300 and S7-400-CPUs:
 
   - STRT_INF=B#16#41
-  - OB_NUMBR=B#16#FF, if the OB number > 254
+  - OB_NUMBR=B#16#FF, if the OB number &gt; 254
 - Optimized start information:
 
 | Name | Data type | Meaning |
@@ -4259,13 +4259,13 @@ Hardware interrupt OBs are called only in RUN mode of the CPU.
 
 Because the optimized start information of the hardware interrupt OB in version 14.0 or higher of the TIA Portal includes an additional tag, constellations may result in which opening, compiling and loading of the hardware interrupt OBs to the CPU is no longer possible. These constellations are listed below:
 
-- You copy a hardware interrupt OB with a new interface to an S7-1500 CPU with firmware version < V2.0 or to an S7-1200-CPU in the engineering system. The OB can then no longer be opened, compiled and loaded.
-- You replace an S7-1500 CPU with firmware version >= V2.0 that includes a hardware interrupt OB with new interface with an S7-1500 CPU with firmware version < V2.0 in the engineering system. The OB can then no longer be opened, compiled and loaded.
+- You copy a hardware interrupt OB with a new interface to an S7-1500 CPU with firmware version &lt; V2.0 or to an S7-1200-CPU in the engineering system. The OB can then no longer be opened, compiled and loaded.
+- You replace an S7-1500 CPU with firmware version &gt;= V2.0 that includes a hardware interrupt OB with new interface with an S7-1500 CPU with firmware version &lt; V2.0 in the engineering system. The OB can then no longer be opened, compiled and loaded.
 
 However, no problems arise during opening, compiling and loading in the following constellations:
 
-- You copy a hardware interrupt OB with old interface to an S7-1500 CPU with firmware version >= V2.0 in the engineering system. The hardware interrupt OB retains the old interface.
-- You replace an S7-1500 CPU with firmware version < V2.0 that includes a hardware interrupt OB with old interface with an S7-1500 CPU with firmware version >= V2.0 in the engineering system. The hardware interrupt OB retains the old interface.
+- You copy a hardware interrupt OB with old interface to an S7-1500 CPU with firmware version &gt;= V2.0 in the engineering system. The hardware interrupt OB retains the old interface.
+- You replace an S7-1500 CPU with firmware version &lt; V2.0 that includes a hardware interrupt OB with old interface with an S7-1500 CPU with firmware version &gt;= V2.0 in the engineering system. The hardware interrupt OB retains the old interface.
 
 ---
 
@@ -4308,8 +4308,8 @@ You update the associated process image partition of the inputs and the associat
 
   In contrast to the assignment of start information with S7-300 and S7-400-CPUs:
 
-  - STRT_INF=B#16#6F, if the OB number > 122
-  - OB_NUMBR=B#16#FF, if the OB number > 254
+  - STRT_INF=B#16#6F, if the OB number &gt; 122
+  - OB_NUMBR=B#16#FF, if the OB number &gt; 254
 - Optimized start information:
 
 | Name | Data type | Meaning |
@@ -4773,15 +4773,15 @@ When you add a new cyclic interrupt OB to your project, you enter its cycle time
 
 | Cycle time | Default priority |
 | --- | --- |
-| 0.25 ms <= cycle time <= 2 ms | 17 |
-| 2 ms < cycle time <= 5 ms | 16 |
-| 5 ms < cycle time <= 10 ms | 14 |
-| 10 ms < cycle time <= 100 ms | 13 |
-| 100 ms < cycle time <= 200 ms | 12 |
-| 200 ms < cycle time <= 500 ms | 11 |
-| 500 ms < cycle time <= 1000 ms | 10 |
-| 1000 ms < cycle time <= 2000 ms | 9 |
-| Cycle time > 2000 ms | 8 |
+| 0.25 ms &lt;= cycle time &lt;= 2 ms | 17 |
+| 2 ms &lt; cycle time &lt;= 5 ms | 16 |
+| 5 ms &lt; cycle time &lt;= 10 ms | 14 |
+| 10 ms &lt; cycle time &lt;= 100 ms | 13 |
+| 100 ms &lt; cycle time &lt;= 200 ms | 12 |
+| 200 ms &lt; cycle time &lt;= 500 ms | 11 |
+| 500 ms &lt; cycle time &lt;= 1000 ms | 10 |
+| 1000 ms &lt; cycle time &lt;= 2000 ms | 9 |
+| Cycle time &gt; 2000 ms | 8 |
 
 You can change the default priority as follows:
 

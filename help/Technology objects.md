@@ -95,7 +95,7 @@ For technology objects, the following elements are required inside the element S
 
   - Sections elements represent the hierarchy structure of the technology object datatypes and their version.
   - Member elements represent all parameters mapped directly to the technology object data block tags.
-  - The AttributeList includes all defined attributes of a member. Attributes, that are system defined or assigned by a default value are not listed in the XML structure. The member attributes <ReadOnly> and <Informative> are only written to the XMLexport file if their value is TRUE.
+  - The AttributeList includes all defined attributes of a member. Attributes, that are system defined or assigned by a default value are not listed in the XML structure. The member attributes &lt;ReadOnly&gt; and &lt;Informative&gt; are only written to the XMLexport file if their value is TRUE.
 - Name
 
   The name of the technology object in TIA Portal project
@@ -214,7 +214,7 @@ private static void ExportOutputCam(FileInfo path, ExportOptions options, Techno
 
 OutputCamMeasuringInputContainer container =
 
-parentTO.GetService<OutputCamMeasuringInputContainer>();
+parentTO.GetService&lt;OutputCamMeasuringInputContainer&gt;();
 
 //Get access to TO_OutputCam container
 
@@ -256,7 +256,7 @@ In TIA Portal, open connections are created when a tag that is connected to a TO
 
 ### Program code
 
-IList<SW.TechnologicalObjects.TechnologicalInstanceDB> Import(FileInfo path, ImportOptions options);
+IList&lt;SW.TechnologicalObjects.TechnologicalInstanceDB&gt; Import(FileInfo path, ImportOptions options);
 
 Modify the following program code to import one or several technology objects from an XML file. For more information about the ImportOptions see [Importing configuration data](TIA%20Portal%20Openness%20API%20for%20automation%20of%20engineering%20workflows.md#importing-configuration-data).
 
@@ -655,7 +655,7 @@ The names and values of the attributes listed below correspond to the parameter 
 | XML element | Description |
 | --- | --- |
 | AdditionalData | The element contains up to six KinematicsAxis elements, followed by one ConveyorTrackingLeadingValues element. |
-| KinematicsAxis | The element describes a connected kinematics axis. This XML element has the following attributes:  - Required Attribute Index   The value of the index must be unique.    - <V7.0 Possible values are 1..4     The index values corresponds to kinematics axis A1 to A4.   - As of V7.0 Possible values are 1..6     The index values corresponds to kinematics axis A1 to A6.     Kinematics axes A5 and A6 can only be used with "S7-1500T Motion Control KinPlus". - Required Attribute Ref Denotes the name of the connected axis technology object. This reference needs to be unique. - Required attribute Type Contains the type of the connected axis. The version of the connected axis is not nessassary. |
+| KinematicsAxis | The element describes a connected kinematics axis. This XML element has the following attributes:  - Required Attribute Index   The value of the index must be unique.    - &lt;V7.0 Possible values are 1..4     The index values corresponds to kinematics axis A1 to A4.   - As of V7.0 Possible values are 1..6     The index values corresponds to kinematics axis A1 to A6.     Kinematics axes A5 and A6 can only be used with "S7-1500T Motion Control KinPlus". - Required Attribute Ref Denotes the name of the connected axis technology object. This reference needs to be unique. - Required attribute Type Contains the type of the connected axis. The version of the connected axis is not nessassary. |
 | ConveyorTrackingLeadingValues | The element contains elements for SetPointCoupling followed by elements for ActualValueCoupling, DelayedCoupling. |
 | SetPointCoupling | The element describes a connected leading value TO that is coupled via setpoint values. It has the following attributes:  - Required Attribute Ref Denotes the name of the connected technology object which provides the leading value for conveyor tracking. - Required attribute Type Contains the associated TO type (version independent) |
 | ActualValueCoupling | The element describes a connected leading value TO that is coupled via actual values. The same attributes as at SetPointCoupling elements are used. |

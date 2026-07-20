@@ -62,23 +62,23 @@ The hardware configuration of the output module is not transferred automatically
 >
 > Migration of complete systems:
 >
-> <http://support.automation.siemens.com/WW/view/en/83558085>
+> [http://support.automation.siemens.com/WW/view/en/83558085](http://support.automation.siemens.com/WW/view/en/83558085)
 >
 > Migration of controllers:
 >
-> <http://support.automation.siemens.com/WW/view/en/83557459>
+> [http://support.automation.siemens.com/WW/view/en/83557459](http://support.automation.siemens.com/WW/view/en/83557459)
 >
 > Migration of visualization:
 >
-> <http://support.automation.siemens.com/WW/view/en/76878921>
+> [http://support.automation.siemens.com/WW/view/en/76878921](http://support.automation.siemens.com/WW/view/en/76878921)
 >
 > Migration of communication:
 >
-> <http://support.automation.siemens.com/WW/view/en/83558087>
+> [http://support.automation.siemens.com/WW/view/en/83558087](http://support.automation.siemens.com/WW/view/en/83558087)
 >
 > FAQs on migration:
 >
-> <http://support.automation.siemens.com/WW/view/en/67858106>
+> [http://support.automation.siemens.com/WW/view/en/67858106](http://support.automation.siemens.com/WW/view/en/67858106)
 >
 > If you need further support, please contact SIMATIC Customer Support.
 
@@ -88,7 +88,7 @@ The hardware configuration of the output module is not transferred automatically
 >
 > Additional information on all aspects of the TIA Portal can be found in the TIA Portal in the Siemens Industry Online Support.
 >
-> <http://support.automation.siemens.com/WW/view/en/65601780>
+> [http://support.automation.siemens.com/WW/view/en/65601780](http://support.automation.siemens.com/WW/view/en/65601780)
 >
 > There you will find information on our training offers. For experienced users of the classic SIMATIC S7 system who want to upgrade efficiently to SIMATIC S7-1500 with the TIA Portal, we recommend "TIA-SYSUP - SIMATIC TIA Portal system retraining course for SIMATIC S7-1500".
 
@@ -115,7 +115,7 @@ Proceed as follows to prepare the program for migration:
 1. Open the device that contains the reference program in the project navigation.
 2. Open the folder "Program blocks" and check whether it contains know-how protected blocks.
 3. Remove the know-how protection from the blocks.
-4. Open the folder "Program blocks > System blocks" and check whether the block contained therein include the extension "_LF" (legacy functions).
+4. Open the folder "Program blocks &gt; System blocks" and check whether the block contained therein include the extension "_LF" (legacy functions).
 
    These are library blocks from STEP 7 that are no longer supported in the TIA Portal. These blocks are not transferred to the new device during PLC migration because they are know-how protected.
 5. If possible, replace the blocks with an instruction from the "Instructions" task card.
@@ -182,7 +182,7 @@ A log file is created for each migration. The log file contains the following in
 
 To display the log file of the migration, follow these steps:
 
-1. Open the "Common data > Logs" folder in the project tree. It contains the logs of all previously performed migrations.
+1. Open the "Common data &gt; Logs" folder in the project tree. It contains the logs of all previously performed migrations.
 2. Double-click the required migration log.
 
    The log opens.
@@ -274,7 +274,7 @@ To do this, follow these steps:
 
 1. Open the device configuration.
 2. Select the module that you want to address.
-3. Select the "Properties > System constants" tab in the Inspector window.
+3. Select the "Properties &gt; System constants" tab in the Inspector window.
 
    The table contains constants for all modules used and the required HW identifiers.
 4. Select the constants for the module to be addressed and select the "Copy" command from the shortcut menu.
@@ -353,7 +353,7 @@ Additional information on migration of system status lists is available under: [
 The CPUs of the S7-1500 series have integrated system diagnostics. "Report System Errors" is therefore no longer supported. If the program contains blocks for "Report System Errors", disable system diagnostics in the reference program prior to migration and recompile the program. The blocks in question are deleted during this process.
 
 System diagnostics for the S7-1500 CPUs is enabled by default. You do not have to make any additional settings.  
-To change the settings for the system diagnostics, select the CPU in the device configuration. The settings for the system diagnostics are then shown in the Inspector window under "Properties > System diagnostics". The alarms of the system diagnostics are enabled and can be deselected if they are not needed.
+To change the settings for the system diagnostics, select the CPU in the device configuration. The settings for the system diagnostics are then shown in the Inspector window under "Properties &gt; System diagnostics". The alarms of the system diagnostics are enabled and can be deselected if they are not needed.
 
 ##### PROFINET/PROFIBUS diagnostics
 
@@ -475,8 +475,8 @@ All function blocks in the CPUs of the S7-1500 series have multiple instance cap
 
 The handling of invalid floating-point numbers in S7-1500 differs from S7-300/400. Example:
 
-- S7-300/400: The result of the expression "Invalid floating-point number <> 1.0" is FALSE.
-- S7-1500: The result of the expression "Invalid floating-point number <> 1.0" is TRUE.
+- S7-300/400: The result of the expression "Invalid floating-point number &lt;&gt; 1.0" is FALSE.
+- S7-1500: The result of the expression "Invalid floating-point number &lt;&gt; 1.0" is TRUE.
 
 Note that the instructions in your program can produce other results due to this difference.
 
@@ -506,7 +506,7 @@ The following example shows the specified exception: The character is written di
 | MyDB.mystring := 'hello'; |  |
 | MyDB.mystring[6] := CHAR_TO_BYTE('!'); |  |
 
-Where possible, use instructions from the "Extended instructions > String + Char" pane to handle STRINGs.
+Where possible, use instructions from the "Extended instructions &gt; String + Char" pane to handle STRINGs.
 
 | SCL |  |
 | --- | --- |
@@ -603,7 +603,7 @@ In the following chapters, you can find an overview of the non-migratable instru
 >
 > Migration of controllers:
 >
-> <http://support.automation.siemens.com/WW/view/en/83557459>
+> [http://support.automation.siemens.com/WW/view/en/83557459](http://support.automation.siemens.com/WW/view/en/83557459)
 >
 > If you need further assistance for PLC migration, please contact SIMATIC Customer Support.
 
@@ -766,7 +766,7 @@ The following are examples of instructions that cannot be migrated and informati
 | AS_DIAL | The MPI interface is not supported by S7-1500 as the default interface. The instruction is no longer available. |  |
 | SMS_SEND | The MPI interface is not supported by S7-1500 as the default interface. Check whether the instruction in your program can be replaced by the "TMAIL_C" instruction. |  |
 | AS_MAIL | The MPI interface is not supported by S7-1500 as the default interface. Check whether the instruction in your program can be replaced by the "TMAIL_C" instruction. |  |
-| User library | PNIO_DIAG | The "PNIO_DIAG" instruction could be downloaded to a user library for S7-300/400 and used for diagnostic purposes. "PNIO_DIAG" has been replaced in S7-1500 by integrated diagnostics and is thus no longer needed.   In S7-1500, the system diagnostics is enabled by default. You can use the system diagnostics without making any additional settings. If required, you can edit the settings for the system diagnostics in the device configuration of the S7-1500 on the "Properties > Diagnostics" tab. You can also configure the interrupts of the system diagnostics there. The interrupts are enabled by default.  Following the migration, you can delete the diagnostic screens used in conjunction with "PNIO_DIAG" and the associated tags in the HMI Panel. Use the "System diagnostics display" control in your diagnostic screens instead. |
+| User library | PNIO_DIAG | The "PNIO_DIAG" instruction could be downloaded to a user library for S7-300/400 and used for diagnostic purposes. "PNIO_DIAG" has been replaced in S7-1500 by integrated diagnostics and is thus no longer needed.   In S7-1500, the system diagnostics is enabled by default. You can use the system diagnostics without making any additional settings. If required, you can edit the settings for the system diagnostics in the device configuration of the S7-1500 on the "Properties &gt; Diagnostics" tab. You can also configure the interrupts of the system diagnostics there. The interrupts are enabled by default.  Following the migration, you can delete the diagnostic screens used in conjunction with "PNIO_DIAG" and the associated tags in the HMI Panel. Use the "System diagnostics display" control in your diagnostic screens instead. |
 
 > **Note**
 >
@@ -778,7 +778,7 @@ The following are examples of instructions that cannot be migrated and informati
 >
 > Migration of controllers:
 >
-> <http://support.automation.siemens.com/WW/view/en/83557459>
+> [http://support.automation.siemens.com/WW/view/en/83557459](http://support.automation.siemens.com/WW/view/en/83557459)
 
 ---
 
@@ -845,13 +845,13 @@ In the second figure, you can see the call for "CREATE_DB" after migration:
 
 The instruction "RDSYSST: Read system status list" is no longer available in S7-1500 as the CPUs of this product series do not provide system status lists. However, the option exists to use one of the following instructions to read out some of the information you received previously via the system status list:
 
-- "[RDREC](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#rdrec-read-data-record-s7-1200-s7-1500-1)" (Extended instructions > Distributed I/O)
-- "[GET_DIAG](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#get_diag-read-diagnostic-information-s7-1200-s7-1500)" (Extended instructions > Diagnostics)
-- "[GEO2LOG](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#geo2log-determine-hardware-identifier-from-slot-s7-1200-s7-1500)" (Extended instructions > Diagnostics)
-- "[DeviceStates](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#devicestates-read-module-status-information-in-an-io-system-s7-1200-s7-1500)" (Extended instructions > Diagnostics)
-- "[ModuleStates](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#modulestates-read-module-status-information-of-a-module-s7-1200-s7-1500)" (Extended instructions > Diagnostics)
-- "[RALRM](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#description-ralrm-s7-1200-s7-1500)" (Extended instructions > Distributed I/O)
-- "[LED](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#led-read-led-status-s7-1200-s7-1500)" (Extended instructions > Diagnostics)
+- "[RDREC](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#rdrec-read-data-record-s7-1200-s7-1500-1)" (Extended instructions &gt; Distributed I/O)
+- "[GET_DIAG](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#get_diag-read-diagnostic-information-s7-1200-s7-1500)" (Extended instructions &gt; Diagnostics)
+- "[GEO2LOG](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#geo2log-determine-hardware-identifier-from-slot-s7-1200-s7-1500)" (Extended instructions &gt; Diagnostics)
+- "[DeviceStates](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#devicestates-read-module-status-information-in-an-io-system-s7-1200-s7-1500)" (Extended instructions &gt; Diagnostics)
+- "[ModuleStates](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#modulestates-read-module-status-information-of-a-module-s7-1200-s7-1500)" (Extended instructions &gt; Diagnostics)
+- "[RALRM](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#description-ralrm-s7-1200-s7-1500)" (Extended instructions &gt; Distributed I/O)
+- "[LED](Extended%20instructions%20%28S7-1200%2C%20S7-1500%29.md#led-read-led-status-s7-1200-s7-1500)" (Extended instructions &gt; Diagnostics)
 
 ##### Reading system status information in S7-1500
 
@@ -899,7 +899,7 @@ The "Migration" column indicates whether the information is still available in S
 >
 > Migration of controllers:
 >
-> <http://support.automation.siemens.com/WW/view/en/83557459>
+> [http://support.automation.siemens.com/WW/view/en/83557459](http://support.automation.siemens.com/WW/view/en/83557459)
 
 ---
 
@@ -1035,7 +1035,7 @@ The function writes the value of the input parameter "#val" to the last row of t
 
 | SCL |  |
 | --- | --- |
-| #h:=(#tab.last+1) MOD #tab.lng; // increment index  IF #h <> #tab.first THEN ​ // Scan to see if indices are overtaking each other   #tab.x[#tab.last] := #val; //  Write value   #tab.last := #h; ​ // Save index of the next free element   #Attend:= false;  ELSE   #Attend:= true; // Error >> The table is full; the value cannot be entered  END_IF; |  |
+| #h:=(#tab.last+1) MOD #tab.lng; // increment index  IF #h &lt;&gt; #tab.first THEN ​ // Scan to see if indices are overtaking each other   #tab.x[#tab.last] := #val; //  Write value   #tab.last := #h; ​ // Save index of the next free element   #Attend:= false;  ELSE   #Attend:= true; // Error &gt;&gt; The table is full; the value cannot be entered  END_IF; |  |
 
 ##### Example for migration of "FIFO: Output first value of the table" (S7-1500)
 
@@ -1066,7 +1066,7 @@ The function returns the first value written to the table (first in, first out).
 
 | SCL |  |
 | --- | --- |
-| #h:=(#tab.first+1) MOD #tab.lng; // increment index   IF #h <> #tab.last THEN ​ // Scan to see if indices are overtaking each other   #tab.first := #h; ·​ // Save index of the next value   #val := #tab.x[#h]; //  Output desired value   #Fifo:= false;   ELSE   #Fifo:= true; // Error >> The table is empty; no value is output   #val := #tab.x[#tab.first]; //  Output last valid value   END_IF; |  |
+| #h:=(#tab.first+1) MOD #tab.lng; // increment index   IF #h &lt;&gt; #tab.last THEN ​ // Scan to see if indices are overtaking each other   #tab.first := #h; ·​ // Save index of the next value   #val := #tab.x[#h]; //  Output desired value   #Fifo:= false;   ELSE   #Fifo:= true; // Error &gt;&gt; The table is empty; no value is output   #val := #tab.x[#tab.first]; //  Output last valid value   END_IF; |  |
 
 ##### Example for migration of "LIFO: Output last value in the table" (S7-1500)
 
@@ -1097,7 +1097,7 @@ The function returns the last value written in the table (last in, first out). T
 
 | SCL |  |
 | --- | --- |
-| #h:=(#tab.last-1) MOD #tab.lng; // decrement index   IF #h<0 THEN #h:=#h + #tab.lng; END_IF; // allow only positive indices   IF #h <> #tab.first THEN ​ // Scan to see if indices are overtaking each other   #tab.last := #h; ​ // Save index of the next value   #val := #tab.x[#h]; //  Output desired value   #Lifo:= false;   ELSE   #Lifo:= true; // Error >> The table is empty; no value is output   #val := #tab.x[#tab.last]; //  Output last valid value   END_IF; |  |
+| #h:=(#tab.last-1) MOD #tab.lng; // decrement index   IF #h&lt;0 THEN #h:=#h + #tab.lng; END_IF; // allow only positive indices   IF #h &lt;&gt; #tab.first THEN ​ // Scan to see if indices are overtaking each other   #tab.last := #h; ​ // Save index of the next value   #val := #tab.x[#h]; //  Output desired value   #Lifo:= false;   ELSE   #Lifo:= true; // Error &gt;&gt; The table is empty; no value is output   #val := #tab.x[#tab.last]; //  Output last valid value   END_IF; |  |
 
 #### Migration of communication instructions (S7-1500)
 
@@ -1351,11 +1351,11 @@ The instructions have additional formal parameters in S7-1500. You need to provi
 >
 > Migration of communication:
 >
-> <http://support.automation.siemens.com/WW/view/en/83558087>
+> [http://support.automation.siemens.com/WW/view/en/83558087](http://support.automation.siemens.com/WW/view/en/83558087)
 >
 > Migration of controllers:
 >
-> <http://support.automation.siemens.com/WW/view/en/83557459>
+> [http://support.automation.siemens.com/WW/view/en/83557459](http://support.automation.siemens.com/WW/view/en/83557459)
 >
 > If you need further support, please contact SIMATIC Customer Support.
 
@@ -1467,13 +1467,13 @@ The instructions are not available in S7-1500. The migration distinguishes betwe
 
 The following example shows the migration of a status bit query. In the first figure, you can see the program before migration.
 
-**Network 1**: The "<=0" instruction queries the status bit "A1". It indicates whether the result of multiplication is less than or equal to zero.
+**Network 1**: The "&lt;=0" instruction queries the status bit "A1". It indicates whether the result of multiplication is less than or equal to zero.
 
 ![Example](images/38099133451_DV_resource.Stream@PNG-de-DE.png)
 
 The following figure shows the program after migration.
 
-**Network 1**: The program was able to be migrated automatically. The "<=0" instruction was removed. Instead, the result of the multiplication is queried by using a comparator with the "myTag3" tag.
+**Network 1**: The program was able to be migrated automatically. The "&lt;=0" instruction was removed. Instead, the result of the multiplication is queried by using a comparator with the "myTag3" tag.
 
 ![Example](images/38099268619_DV_resource.Stream@PNG-de-DE.png)
 
@@ -2017,13 +2017,13 @@ In the first table, you can see a call of "AG_SEND" prior to migration:
 
 | SCL |  |
 | --- | --- |
-| AG_SEND (ACT:=#myBool,   ID:=#myInt1,   LADDR:=#myWord,   SEND:=#myAny,   LEN:=#myInt2,   DONE=>#myBool,   ERROR=>#myBool,   STATUS=>#myWord); |  |
+| AG_SEND (ACT:=#myBool,   ID:=#myInt1,   LADDR:=#myWord,   SEND:=#myAny,   LEN:=#myInt2,   DONE=&gt;#myBool,   ERROR=&gt;#myBool,   STATUS=&gt;#myWord); |  |
 
 In the first table, you can see the call of "TSEND" after migration:
 
 | SCL |  |
 | --- | --- |
-| "TSEND_DB"((* ToReplace: REQ:=#myBool *)    (* ToReplace: ID:=#myInt1 *)    LEN:=INT_TO_UDINT(#myInt2),   DONE=>#myBool,   ERROR:=#myBool,   STATUS:=#myWord,   DATA:=#myAny; |  |
+| "TSEND_DB"((* ToReplace: REQ:=#myBool *)    (* ToReplace: ID:=#myInt1 *)    LEN:=INT_TO_UDINT(#myInt2),   DONE=&gt;#myBool,   ERROR:=#myBool,   STATUS:=#myWord,   DATA:=#myAny; |  |
 
 The actual parameter of "REQ" was applied from the "ACT" parameter of the "AG_SEND" instruction. It is commented out because the program must be checked at this location.
 
@@ -2041,13 +2041,13 @@ In the first table, you can see a call of "READ_RTM" prior to migration:
 
 | SCL |  |
 | --- | --- |
-| IF READ_RTM(NR:=#myByte, CQ=>#myBool, CV=>#myOutInt)= 1 THEN   ...; END_IF; |  |
+| IF READ_RTM(NR:=#myByte, CQ=&gt;#myBool, CV=&gt;#myOutInt)= 1 THEN   ...; END_IF; |  |
 
 In the second table, you can see a call of "RTM" after migration.
 
 | SCL |  |
 | --- | --- |
-| (* classic code: IF READ_RTM(NR:=#myByte, CQ=>#myBool, CV=>#myOutInt)= 1 THEN*)  #SCL_MIGRA_TEMP_INT_1:=RTM(NR:=#myByte,   MODE:=0,   PV:=#Migra_PV,   CQ:=#myBool,   CV:=#Migra_CV);  #myOutInt:=DINT_TO_INT(#Migra_CV);     IF #SCL_MIGRA_TEMP_INT_1= 1 THEN;  ...  END_IF; |  |
+| (* classic code: IF READ_RTM(NR:=#myByte, CQ=&gt;#myBool, CV=&gt;#myOutInt)= 1 THEN*)  #SCL_MIGRA_TEMP_INT_1:=RTM(NR:=#myByte,   MODE:=0,   PV:=#Migra_PV,   CQ:=#myBool,   CV:=#Migra_CV);  #myOutInt:=DINT_TO_INT(#Migra_CV);     IF #SCL_MIGRA_TEMP_INT_1= 1 THEN;  ...  END_IF; |  |
 
 The instruction from the original program is transferred as a comment section to the migrated block. This makes it easy for you to track the changes that were made by the migration.
 

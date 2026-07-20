@@ -114,11 +114,11 @@ The available DP master and the desired functionality will determine which DP sl
 You will find devices that you can configure as intelligent DP slaves in the "PLC" folder of the hardware catalog. The following are examples of devices that you can configure as I-slaves:
 
 - CP 342-5 DP  
-  in the hardware catalog under "PLC > SIMATIC S7-300 > CP > PROFIBUS".
+  in the hardware catalog under "PLC &gt; SIMATIC S7-300 &gt; CP &gt; PROFIBUS".
 - CPU 315-2 DP, CPU 317-2 DP, CPU 319-3 PN/DP  
-  in the hardware catalog under "PLC > SIMATIC S7-300 > CPU".
+  in the hardware catalog under "PLC &gt; SIMATIC S7-300 &gt; CPU".
 - IM 151-7 CPU  
-  in the hardware catalog under "PLC > SIMATIC ET200 PLC > ET 200S > CPU".
+  in the hardware catalog under "PLC &gt; SIMATIC ET200 PLC &gt; ET 200S &gt; CPU".
 
 ---
 
@@ -136,7 +136,7 @@ The maximum amount of data that can be transferred is 244 bytes input data and 2
 
 ### DP/DP coupler in the hardware catalog
 
-Details of a DP/DP coupler as gateway between two DM master systems are contained in the hardware catalog in the folder "Other field devices > PROFIBUS-DP > Gateways".
+Details of a DP/DP coupler as gateway between two DM master systems are contained in the hardware catalog in the folder "Other field devices &gt; PROFIBUS-DP &gt; Gateways".
 
 ### Configuring the DP/DP coupler
 
@@ -181,16 +181,16 @@ When more than one DP master system is connected to a physical PROFIBUS DP subne
 You can use various methods to connect these DP master systems via PROFIBUS DP:
 
 - Without logical connection of the DP master systems to each other
-- Direct DP slave > DP master data exchange
-- Direct DP slave > I-slave data exchange
+- Direct DP slave &gt; DP master data exchange
+- Direct DP slave &gt; I-slave data exchange
 
-#### Direct DP slave > DP master data exchange
+#### Direct DP slave &gt; DP master data exchange
 
 For the configuration of multi-master systems, input data of DP slaves of DP masters can be read on the same physical PROFIBUS DP subnet.
 
 ![Direct DP slave > DP master data exchange](images/26174319115_DV_resource.Stream@PNG-en-US.png)
 
-#### Direct DP slave > I-slave data exchange
+#### Direct DP slave &gt; I-slave data exchange
 
 This means that an intelligent DP slave (I-slave), such as a CPU 315-2 DP, can support the direct transfer of input data from DP slaves with different DP master systems to its input data area.
 
@@ -220,18 +220,18 @@ DP slaves that feature their own preprocessing program are referred to as intell
 
 There are two methods for configuring intelligent DP slaves using PROFIBUS DP:
 
-- I-slave <> DP master data exchange
-- Direct DP slave > I-slave data exchange
+- I-slave &lt;&gt; DP master data exchange
+- Direct DP slave &gt; I-slave data exchange
 
-#### I-slave <> DP master data exchange
+#### I-slave &lt;&gt; DP master data exchange
 
 A higher-level automation system processes the automation task, which is broken down into sub-tasks. The necessary control tasks are processed separately and efficiently in a CPU as preprocessing programs. This CPU can be implemented in the form of an intelligent DP slave.
 
 In the case of configurations involving intelligent DP slaves, for example CPU 315-2 DP, the DP master merely accesses the address area of the I-slave CPU, rather than the I/O modules of the intelligent DP slave. The address area must not be assigned to any actual I/O modules on the I-slave. The assignment must be made during I-slave configuration.
 
-![I-slave <> DP master data exchange](images/5873551627_DV_resource.Stream@PNG-en-US.png)
+![I-slave &lt;> DP master data exchange](images/5873551627_DV_resource.Stream@PNG-en-US.png)
 
-#### Direct DP slave > I-slave data exchange
+#### Direct DP slave &gt; I-slave data exchange
 
 With this configuration, input data from simple DP slaves can be transferred to intelligent DP slaves on the PROFIBUS DP subnet at high speed.
 
@@ -408,7 +408,7 @@ To edit the properties of a DP master system, proceed as follows:
 1. Move the mouse pointer over a subnet with a DP master system.
 2. A message will appear displaying the available DP master systems. Click the one you want to edit. The DP master system will now be color-highlighted.
 3. Now click the DP master system that has been color-highlighted.
-4. In the inspector window, edit the DP master system attributes under "Properties > General".
+4. In the inspector window, edit the DP master system attributes under "Properties &gt; General".
 
 **Note**
 
@@ -588,7 +588,7 @@ Before DP slaves can be synchronized using control commands, you must first assi
 
 For an S7 CPU, use the instruction DPSYC_FR (SFC 11) to synchronize the DP slaves.
 
-When you select the DP master, a list of the eight SYNC/FREEZE groups is displayed in the Inspector window under "Properties > DP interface > SYNC/FREEZE" or "Properties> MPI/DP interface > SYNC/FREEZE" (when operating as a PROFIBUS interface).
+When you select the DP master, a list of the eight SYNC/FREEZE groups is displayed in the Inspector window under "Properties &gt; DP interface &gt; SYNC/FREEZE" or "Properties&gt; MPI/DP interface &gt; SYNC/FREEZE" (when operating as a PROFIBUS interface).
 
 > **Note**
 >
@@ -700,14 +700,14 @@ To assign parameters for the reference junction, follow these steps:
 
 1. In the ET 200S device view, insert an analog RTD electronics module, for example a 2AI RTD HF. The module must support the "thermal resistor" measuring type (linear, 4-wire) and the "Pt 100 climatic range" measuring range.
 2. Select the module on the rack.
-3. Under "Properties > General > Inputs" in the inspector window, set a channel for the reference junctions function.
+3. Under "Properties &gt; General &gt; Inputs" in the inspector window, set a channel for the reference junctions function.
 
    Measuring type: Thermal resistor (linear, 4-wire)
 
    Measuring range: Pt 100 climatic range
 4. Select the ET 200S (that is, the interface module).
-5. Under "Properties > General > Module parameters >Reference junctions" in the inspector window, select the "Reference junction" check box and specify the slot and the channel number of the relevant RTD module.
-6. Insert the analog electronics module for measuring the temperature using a thermocouple (TC module) and select the option "RTD" as a reference junction under "Properties > General > Inputs > Channel x" in the inspector window.
+5. Under "Properties &gt; General &gt; Module parameters &gt;Reference junctions" in the inspector window, select the "Reference junction" check box and specify the slot and the channel number of the relevant RTD module.
+6. Insert the analog electronics module for measuring the temperature using a thermocouple (TC module) and select the option "RTD" as a reference junction under "Properties &gt; General &gt; Inputs &gt; Channel x" in the inspector window.
 
 #### Additional information
 
@@ -749,7 +749,7 @@ To pack addressed, follow these steps:
 
 1. Select the electronics modules whose addresses are to be packed. The following options are available for selecting multiple electronics modules:
 
-   - Press and hold down <Shift> or <Ctrl> while clicking the relevant electronics modules.
+   - Press and hold down &lt;Shift&gt; or &lt;Ctrl&gt; while clicking the relevant electronics modules.
    - Click off the rack and select the required electronics modules by drawing round them with the mouse.
 2. Click "Pack addresses" in the shortcut menu for the selected electronics modules.
 
@@ -812,9 +812,9 @@ You do this by assembling, wiring, configuring, and programming the maximum conf
 
 To activate option handling, follow these steps:
 
-1. Select the IM 151-1 in the device view and enable it in "Option handling" check box under "Properties > General > Option handling" in the inspector window.
+1. Select the IM 151-1 in the device view and enable it in "Option handling" check box under "Properties &gt; General &gt; Option handling" in the inspector window.
 2. Select the numbered check boxes for the slots that are initially to accommodate the standby modules prior to the future electronics modules.
-3. Select the power module in the device view and enable it in the "Option handling" check box under "Properties > Addresses" in the inspector window. Reserve the necessary address space for the control and check-back interface in the process image output (PIQ) and process image input (PII).
+3. Select the power module in the device view and enable it in the "Option handling" check box under "Properties &gt; Addresses" in the inspector window. Reserve the necessary address space for the control and check-back interface in the process image output (PIQ) and process image input (PII).
 
 The assembled standby modules can be replaced with the configured modules at a later date without having to modify the configuration.
 
@@ -893,8 +893,8 @@ You can use the option handling function to prepare the ET 200S for future expa
 
 To activate option handling, follow these steps:
 
-1. Select the IM 151-1 in the device view and enable it in "Option handling" check box under "Properties > General > Option handling" in the inspector window.
-2. Select the power module in the device view and enable it in the "Option handling" check box under "Properties > Addresses" in the inspector window. Reserve the necessary address space for the control and check-back interface in the process image output (PIQ) and process image input (PII).
+1. Select the IM 151-1 in the device view and enable it in "Option handling" check box under "Properties &gt; General &gt; Option handling" in the inspector window.
+2. Select the power module in the device view and enable it in the "Option handling" check box under "Properties &gt; Addresses" in the inspector window. Reserve the necessary address space for the control and check-back interface in the process image output (PIQ) and process image input (PII).
 3. Configure the slave's maximum configuration. The selection/clearing of options is controlled via the user program.
 
 **Note**
@@ -944,13 +944,13 @@ PROFIBUS DPV1 enables you to access extended PROFIBUS functions.
 To switch the DP slave over to DPV1, follow these steps:
 
 1. Select the DP slave.
-2. Under "Properties > Module parameters" in the inspector window, select "DPV1" mode from the "DP interrupt mode" drop-down list box.
+2. Under "Properties &gt; Module parameters" in the inspector window, select "DPV1" mode from the "DP interrupt mode" drop-down list box.
 
 or
 
 1. Select the DP master.
 2. In the I/O communications table select the row with the connection between the DP master and the desired DP slave.
-3. Under "Properties > Module parameters" in the inspector window, select "DPV1" mode from the "DP interrupt mode" drop-down list box.
+3. Under "Properties &gt; Module parameters" in the inspector window, select "DPV1" mode from the "DP interrupt mode" drop-down list box.
 
 #### Special characteristics
 
@@ -1047,15 +1047,15 @@ In the case of an intelligent DP slave, the DP master actually accesses a transf
 
 Configurations involving intelligent DP slaves:
 
-- I-slave <> DP master data exchange
-- Direct DP slave > I-slave data exchange
+- I-slave &lt;&gt; DP master data exchange
+- Direct DP slave &gt; I-slave data exchange
 
 #### Procedure
 
 To add an I-slave to a DP master system, proceed as follows:
 
 1. From the hardware catalog, drag two devices with PROFIBUS DP interface for configuration as DP master and I-slave (e.g. CPU 317-2 DP) into the network view.
-2. Switch the device that is to be used as the I-slave over to "Slave" mode under "Properties > DP interface" in the Inspector window. The device will now operate as an intelligent DP slave.
+2. Switch the device that is to be used as the I-slave over to "Slave" mode under "Properties &gt; DP interface" in the Inspector window. The device will now operate as an intelligent DP slave.
 3. Draw a connecting line between the DP interfaces of both devices. This way you connect the I-slave with a DP master in a DP master system.
 
 #### Result
@@ -1125,12 +1125,12 @@ To edit the diagnostics addresses for the I-slave communication, follow these st
 
 1. Select the DP master or the I-slave.
 2. In the I/O communication table, select the line showing "I-slave" mode.
-3. Edit the diagnostics addresses under "Properties > I-slave communication > Diagnostics address of communication" in the Inspector window.
+3. Edit the diagnostics addresses under "Properties &gt; I-slave communication &gt; Diagnostics address of communication" in the Inspector window.
 
 Or:
 
 1. Select the I-slave.
-2. Edit the diagnostics addresses under "Properties >DP interface > Operating mode > I-slave communication > Diagnostics address of communication" in the Inspector window.
+2. Edit the diagnostics addresses under "Properties &gt;DP interface &gt; Operating mode &gt; I-slave communication &gt; Diagnostics address of communication" in the Inspector window.
 
 You can select and edit the fields containing the values of the diagnostics addresses both for the slave and the master.
 
@@ -1161,7 +1161,7 @@ I-slaves with the advanced instruction "SALRM" (SFB 75) can trigger interrupts 
 
 #### Addresses for triggering interrupts
 
-Use the addresses configured in the I-slave's inspector window under "Properties > DP interface > Mode > I-slave communication" to trigger interrupts with advanced instruction "SALRM". Rather than being assigned to physical modules, these addresses correspond to virtual "slots".
+Use the addresses configured in the I-slave's inspector window under "Properties &gt; DP interface &gt; Mode &gt; I-slave communication" to trigger interrupts with advanced instruction "SALRM". Rather than being assigned to physical modules, these addresses correspond to virtual "slots".
 
 You cannot use the addresses relating to operating mode transitions and device diagnostics for the purpose of triggering interrupts.
 
@@ -1240,10 +1240,10 @@ In this example, you are going to configure a station with a CP 342-5 as an I-s
 To configure a CP as an I-slave, proceed as follows:
 
 1. Select the CP 342-5.
-2. In the Inspector window, switch the CP 342-5 to "DP slave" mode under "Properties > Mode".
+2. In the Inspector window, switch the CP 342-5 to "DP slave" mode under "Properties &gt; Mode".
 3. Draw a connecting line between the CP 342-5's DP interface and the DP interface of the DP master.
 4. Select the CP 342-5.
-5. Click on "I-slave communication" under "Properties > Mode" in the Inspector window.
+5. Click on "I-slave communication" under "Properties &gt; Mode" in the Inspector window.
 6. Edit the address assignment between the DP master and I-slave.
 
 Alternatively, after selecting the CP 342-5 in the I/O communications table, you can call the line with the "I-slave" mode in order to edit the address assignment under "Properties" and "I-slave communication" in the Inspector window.
@@ -1268,13 +1268,13 @@ In this example, you are going to configure a station with a CPU 31X-2 DP featu
 To configure a CPU as an I-slave, proceed as follows:
 
 1. Select the CPU 315-2 DP.
-2. In the Inspector window, switch the CPU 315-2 DP to "DP slave" mode under "Properties > DP interface > Mode".
+2. In the Inspector window, switch the CPU 315-2 DP to "DP slave" mode under "Properties &gt; DP interface &gt; Mode".
 3. Draw a connecting line between the DP interface of the CPU 315-2 DP and the DP interface of the DP master.
 4. Select the CPU 315-2 DP.
-5. Click on "I-slave communication" under "Properties > DP interface > Mode" in the Inspector window.
+5. Click on "I-slave communication" under "Properties &gt; DP interface &gt; Mode" in the Inspector window.
 6. Edit the address assignment between the DP master and I-slave.
 
-Alternatively, after selecting the CPU 315-2 DP in the I/O communications table, you can call the line with the "I-slave" mode in order to edit the address assignment under "Properties > I-slave communication" in the Inspector window.
+Alternatively, after selecting the CPU 315-2 DP in the I/O communications table, you can call the line with the "I-slave" mode in order to edit the address assignment under "Properties &gt; I-slave communication" in the Inspector window.
 
 #### Additional information
 
@@ -1286,7 +1286,7 @@ In this example, you are going to configure an ET 200S with Interface Module IM
 
 > **Note**
 >
-> You can find the interface module of the ET 200S in the hardware catalog under "PLC > SIMATIC ET 200 PLC > ET 200S > CPU".
+> You can find the interface module of the ET 200S in the hardware catalog under "PLC &gt; SIMATIC ET 200 PLC &gt; ET 200S &gt; CPU".
 
 #### Requirements
 
@@ -1303,11 +1303,11 @@ To configure a DP slave as an I-slave, proceed as follows:
 2. Draw a connecting line between the DP interface of the IM 151-7 CPU and the DP interface of the DP master.
 3. Select the IM 151-7 CPU.
 4. In the I/O communications table, select the line showing "I-slave" mode.
-5. Edit the address assignment between the DP master and I-slave under "Properties > I-slave communication" in the Inspector window.
+5. Edit the address assignment between the DP master and I-slave under "Properties &gt; I-slave communication" in the Inspector window.
 
 **Note**
 
-Some stations have permanently specified interfaces for master or slave. Under "Properties > MPI/DP interface" and/or "Properties > DP interface" you will find the settings for the respective mode.
+Some stations have permanently specified interfaces for master or slave. Under "Properties &gt; MPI/DP interface" and/or "Properties &gt; DP interface" you will find the settings for the respective mode.
 
 #### Additional information
 
@@ -1363,7 +1363,7 @@ To configure transfer areas for an I-slave, follow these steps:
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. In the area navigation, go to the section "Operating mode" > "I-slave communication" > "Transfer areas". 2. Create transfer areas. Set the properties of the created transfer areas.               ![Procedure for configuring transfer areas](images/72031306763_DV_resource.Stream@PNG-en-US.png)         ![Procedure for configuring transfer areas](images/72031306763_DV_resource.Stream@PNG-en-US.png)        | Symbol | Meaning |    | --- | --- |    | ① | Click in the first cell of the "Transfer area" column. STEP 7 assigns a default name that you can change. |    | ② | Select the type of communication relation: Currently, you can only select MS for "master-slave communications relation". |    | ③ | STEP 7 assigns the addresses for the transfer area automatically. Correct the addresses if necessary. |    | ④ | Set the length and unit of the transfer area. Specify the length of the transfer area in the following format: [1...64] bytes/word. Examples: "32 Byte", "64 Word" |    | ⑤ | Specify whether the transfer area is exchanged in units of bytes or words or consistently over the entire length between the DP master and I-slave. | |  |
+| 1. In the area navigation, go to the section "Operating mode" &gt; "I-slave communication" &gt; "Transfer areas". 2. Create transfer areas. Set the properties of the created transfer areas.               ![Procedure for configuring transfer areas](images/72031306763_DV_resource.Stream@PNG-en-US.png)         ![Procedure for configuring transfer areas](images/72031306763_DV_resource.Stream@PNG-en-US.png)        | Symbol | Meaning |    | --- | --- |    | ① | Click in the first cell of the "Transfer area" column. STEP 7 assigns a default name that you can change. |    | ② | Select the type of communication relation: Currently, you can only select MS for "master-slave communications relation". |    | ③ | STEP 7 assigns the addresses for the transfer area automatically. Correct the addresses if necessary. |    | ④ | Set the length and unit of the transfer area. Specify the length of the transfer area in the following format: [1...64] bytes/word. Examples: "32 Byte", "64 Word" |    | ⑤ | Specify whether the transfer area is exchanged in units of bytes or words or consistently over the entire length between the DP master and I-slave. | |  |
 
 A separate entry is created in the area navigation for each transfer area. If you select one of these entries, you can adjust the details of the transfer area, or correct them and comment on them.
 
@@ -1431,8 +1431,8 @@ The intelligent DP slave or DP master can then use these input address area assi
 
 Possible applications of direct data exchange include:
 
-- A configuration involving intelligent DP slaves: DP slave > I slave
-- A configuration involving two DP master systems: DP slave > DP master
+- A configuration involving intelligent DP slaves: DP slave &gt; I slave
+- A configuration involving two DP master systems: DP slave &gt; DP master
 
 #### Number of PROFIBUS DP partners that can be connected
 
@@ -1481,10 +1481,10 @@ To configure direct data exchange, proceed as follows:
 
 1. Select a direct data exchange partner.
 2. In the I/O communications table, select the line showing "Direct data exchange" mode.
-3. Select "Properties > Direct data exchange" in the Inspector window.
+3. Select "Properties &gt; Direct data exchange" in the Inspector window.
 4. Create a new transfer area under "Direct data exchange" in the transfer area table:
 
-   In the "Transfer area" column, click on "<Add new>" and select the "DX" communication type for direct data exchange in the "Type" drop-down list box. You can also create the new transfer area by setting the communication type in a new column only under "Type". The transfer area is then created automatically.
+   In the "Transfer area" column, click on "&lt;Add new&gt;" and select the "DX" communication type for direct data exchange in the "Type" drop-down list box. You can also create the new transfer area by setting the communication type in a new column only under "Type". The transfer area is then created automatically.
 5. Under "Direct data exchange", click on the newly created transfer area.
 
    The detail view of the transfer area is opened.
@@ -1526,13 +1526,13 @@ To set up a PROFIBUS DP master system, proceed as follows:
 2. Give the CPUs meaningful names:
 
    - Select the CPU 317-2 PN/DP.
-   - Assign the name "DP master" to the CPU under "Properties > General" in the Inspector window.
+   - Assign the name "DP master" to the CPU under "Properties &gt; General" in the Inspector window.
 
    Now repeat the naming process for the other CPUs, calling them "Sender" and "Receiver" respectively.
-3. Select the CPU 317-2 PN/DP and then, if necessary, change the interface type from "MPI" to "PROFIBUS" under "Properties > MPI/DP interface > MPI address" in the Inspector window.
+3. Select the CPU 317-2 PN/DP and then, if necessary, change the interface type from "MPI" to "PROFIBUS" under "Properties &gt; MPI/DP interface &gt; MPI address" in the Inspector window.
 
    Note: If the MPI/DP interface is set to "PROFIBUS" type, the entry is no longer "MPI address" but rather "PROFIBUS address".
-4. Select CPUs 315-2 DP and 317-2 DP one after the other and in both cases select "Slave" mode under "Properties > DP interface > Mode" in the Inspector window.
+4. Select CPUs 315-2 DP and 317-2 DP one after the other and in both cases select "Slave" mode under "Properties &gt; DP interface &gt; Mode" in the Inspector window.
 
    The two CPUs 315-2 DP "Sender" and 317-2 "Receiver" are now being operated as I-slaves.
 5. While holding down the mouse button, draw the PROFIBUS connections between the master CPU and the two slave CPUs.
@@ -1560,17 +1560,17 @@ To select master-slave communication, proceed as follows:
 
 1. Select one of the two communication partners of master-slave communication (DP master CPU 317-2 PN/DP or I-slave CPU 315-2 DP "sender")
 2. In the I/O communications table, click on the line with the respective second partner and "I-slave" mode.
-3. Select "Properties > I-slave communication" in the Inspector window.
+3. Select "Properties &gt; I-slave communication" in the Inspector window.
 
 Or:
 
 1. Select the CPU 315-2 DP "sender" I-slave.
-2. Select "Properties > DP interface > Mode > I-slave communication" in the Inspector window.
+2. Select "Properties &gt; DP interface &gt; Mode &gt; I-slave communication" in the Inspector window.
 
 To configure master-slave communication, proceed as follows:
 
 1. Create a new transfer area under "I-slave communication" in the transfer area table:  
-   In the "Transfer area" column, click on "<Add new>" and select the "MS" communication type for master-slave communication in the "Type" drop-down list box. You can also create the new transfer area by setting the communication type in a new column only under "Type". The transfer area is then created automatically.
+   In the "Transfer area" column, click on "&lt;Add new&gt;" and select the "MS" communication type for master-slave communication in the "Type" drop-down list box. You can also create the new transfer area by setting the communication type in a new column only under "Type". The transfer area is then created automatically.
 2. Under "I-slave communication", click on the newly created transfer area.
 
    The detail view of the transfer area is opened.
@@ -1597,12 +1597,12 @@ To configure direct data exchange, proceed as follows:
 
 1. Select one of the two communication partners of direct data exchange (I-slave CPU 315-2 DP "Sender" or I-slave CPU 317-2 DP "Receiver")
 2. In the I/O communications table, click on the line showing "Direct data exchange" mode.
-3. Select "Properties > Direct data exchange" in the Inspector window.
+3. Select "Properties &gt; Direct data exchange" in the Inspector window.
 
 To configure direct data exchange, proceed as follows:
 
 1. Create a new transfer area under "Direct data exchange" in the transfer area table:  
-   In the "Transfer area" column, click on "<Add new>" and select the "DX" communication type for direct data exchange in the "Type" drop-down list box. You can also create the new transfer area by setting the communication type in a new column only under "Type". The transfer area is then created automatically.
+   In the "Transfer area" column, click on "&lt;Add new&gt;" and select the "DX" communication type for direct data exchange in the "Type" drop-down list box. You can also create the new transfer area by setting the communication type in a new column only under "Type". The transfer area is then created automatically.
 2. Under "Direct data exchange", click on the newly created transfer area.
 
    The detail view of the transfer area is opened.
@@ -1709,7 +1709,7 @@ By installing a GSD file, you have added the DP slave or the potential equalizat
 
 #### Result
 
-You will find the new DP slaves installed by means of GSD files in the hardware catalog under "Additional field devices > PROFIBUS DP". New potential equalization components installed via GSD files can be found there under "Other field devices > PROFIBUS PA".
+You will find the new DP slaves installed by means of GSD files in the hardware catalog under "Additional field devices &gt; PROFIBUS DP". New potential equalization components installed via GSD files can be found there under "Other field devices &gt; PROFIBUS PA".
 
 GSD files are always saved together with the project, which means all information relevant for display of the device (including symbols) is also available in the saved project.
 
@@ -1771,7 +1771,7 @@ GSD files that are no longer needed are deleted from the project data. The GSD-b
 
 > **Note**
 >
-> If you delete a GSD-based hardware component with "Options > Manage general station description files (GSD) > Installed GSDs", it is deleted from the hardware catalog. However, unused GSD files of this hardware component can still be a part of the project data and can be deleted with the function for finding the unused GSD files.
+> If you delete a GSD-based hardware component with "Options &gt; Manage general station description files (GSD) &gt; Installed GSDs", it is deleted from the hardware catalog. However, unused GSD files of this hardware component can still be a part of the project data and can be deleted with the function for finding the unused GSD files.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -1814,7 +1814,7 @@ You have now inserted the module in a free slot of the GSD-based DP slave and ca
 
 #### Preset configuration
 
-For modules with an adjustable preset configuration, you can change this configuration in the inspector window under "Properties > Preset configuration".
+For modules with an adjustable preset configuration, you can change this configuration in the inspector window under "Properties &gt; Preset configuration".
 
 ---
 
@@ -1875,13 +1875,13 @@ Some devices, such as the DP interface IM 151-1 HF, can toggle between DPV0 and 
 To switch the DP slave mode from DPV1 to DPV0 functionality, proceed as follows:
 
 1. Select the DP slave.
-2. Under "Properties > General > Module parameters" in the Inspector window, select "DPV0" or "DPV1" mode from the "DP interrupt mode" drop-down list.
+2. Under "Properties &gt; General &gt; Module parameters" in the Inspector window, select "DPV0" or "DPV1" mode from the "DP interrupt mode" drop-down list.
 
 or
 
 1. Select the DP master.
 2. In the I/O communications table, select the row with the connection between the DP master and the desired DP slave.
-3. Under "Properties > General > Module parameters" in the Inspector window, select "DPV0" or "DPV1" mode from the "DP interrupt mode" drop-down list.
+3. Under "Properties &gt; General &gt; Module parameters" in the Inspector window, select "DPV0" or "DPV1" mode from the "DP interrupt mode" drop-down list.
 
 #### Using devices with different PROFIBUS functionality
 
@@ -1943,7 +1943,7 @@ The following sections of the existing user program must be observed when you ha
 
 | Function | What do I need to observe? |
 | --- | --- |
-| Address conversions | If you have used address conversions in the user program, for example, with extended instructions of system functions "[GADR_LGC](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#gadr_lgc-query-logical-start-address-of-a-module-s7-300-s7-400)" (SFC 5), "[LGC_GADR](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#lgc_gadr-determine-the-slot-belonging-to-a-logical-address-s7-300-s7-400)" (SFC 49), "[RD_LGADR](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#rd_lgadr-determine-all-logical-addresses-of-a-module-s7-300-s7-400)" (SFC 50), you must check the slot <-> logical start address assignment for the DPV1 slaves. In addition, slot 0 has an address.  DPV1 slave:  Whereas previously the first I/O module of the DP slave was assigned to slot 4 by the extended instructions, now the first I/O module is assigned to slot 1 (as shown in the hardware configuration).  DPV1 slave integrated in the hardware catalog (for example, ET 200M):  Interface module (slot 2) has its own address. |
+| Address conversions | If you have used address conversions in the user program, for example, with extended instructions of system functions "[GADR_LGC](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#gadr_lgc-query-logical-start-address-of-a-module-s7-300-s7-400)" (SFC 5), "[LGC_GADR](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#lgc_gadr-determine-the-slot-belonging-to-a-logical-address-s7-300-s7-400)" (SFC 49), "[RD_LGADR](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#rd_lgadr-determine-all-logical-addresses-of-a-module-s7-300-s7-400)" (SFC 50), you must check the slot &lt;-&gt; logical start address assignment for the DPV1 slaves. In addition, slot 0 has an address.  DPV1 slave:  Whereas previously the first I/O module of the DP slave was assigned to slot 4 by the extended instructions, now the first I/O module is assigned to slot 1 (as shown in the hardware configuration).  DPV1 slave integrated in the hardware catalog (for example, ET 200M):  Interface module (slot 2) has its own address. |
 | Reading diagnostics information using the system function "[DPNRM_DG](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#dpnrm_dg-read-diagnostics-data-from-a-dp-slave-s7-300-s7-400)" | The originally assigned diagnostics address will also continue to function. Internally this address is assigned to slot 0.  The diagnostic data record of the DPV1 slave is structured differently than it is with DPV0 (see description of the DP slave for ET 200M, for example, also under the keyword "Extended diagnostics"). |
 | Reading/writing data records | If you transfer data records to a DPV1 slave using extended instruction "[WR_REC](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#wr_rec-write-data-record-to-io-s7-300-s7-400)" (SFC 58) or read data records from a DPV1 slave using extended instruction "[RD_REC](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#rd_rec-read-data-record-from-io-s7-300-s7-400)" (SFC 59) and this slave is working in DPV1 mode, the DP master analyzes the error information received from the slave as follows: If the error information is in the areas W#16#8000 to W#16#80FF or W#16#F000 to W#16#FFFF, the DP master will forward the error information to the SFC. If it is outside of these areas it gives the value W#16#80A2 to the SFC and suspends the slave.  For the description of the error information originating from the DPV1 slave, see the description of the "RALRM" (SFB 54) instruction.  Additional information is available in the descriptions on jumps in language descriptions, module help and system attributes. |
 | Reading out system status lists | If you use the extended instruction "[RDSYSST](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md#rdsysst-read-system-status-list-s7-300-s7-400)", for example to read module status information or rack/station status information, you must also take the changed meaning of the slots and the additional slot 0 (see above) into consideration. |
@@ -2098,7 +2098,7 @@ For example, proxy means that interrupts that have been triggered from slot 0 or
 
 From the CPU perspective, there is a separate logical address for each of its interfaces. The address for the respective DP interface is displayed in various ways:
 
-- When you select a device or a DP interface in the Inspector window under "Properties > PROFIBUS address (Xn)" or "Properties > MPI/DP interface > PROFIBUS address (Xn)".
+- When you select a device or a DP interface in the Inspector window under "Properties &gt; PROFIBUS address (Xn)" or "Properties &gt; MPI/DP interface &gt; PROFIBUS address (Xn)".
 - With an enabled "Display addresses" in the toolbar in the network view: You will then see the name of any connected subnets for each interface, followed by the assigned PROFIBUS address.
 
 These addresses have nothing to do with the slot model of DP slaves; they serve merely as internal CPU identification, for example, in the event of a failure of the interface. This address is of minor significance for the user program.
@@ -2109,7 +2109,7 @@ Every manufacturer of a DP slave can freely determine which data will come from 
 
 As opposed to DPV1 slaves with user data starting with slot 1, DPV0 slaves are subject to a restriction in that the first I/O module must always be located in slot 4. DP slaves that are installed via a GSD file, can have user data starting with slot 1. Because distributed I/O data is usually accessed via its addresses, in the same way as central I/O data, user data of the DPV0 slaves must be addressed from the start address of slot 4. This also applies to intelligent DP slaves.
 
-In the case of intelligent DP slaves, you can allocate I/O memory areas of the I-slaves to I/O memory areas of the DP master by means of the "I-slave communication" transfer areas. During operation (cyclic data exchange), the data that you transfer into the I/O memory areas in the user program of the intelligent DP slave are transferred via the transfer area into the I/O memory area of the DP master. You will find the table for the assignment of the I/O memory areas to the transfer areas by selecting the I-slave connection in the I/O communications table under "Properties > I-slave communication" in the Inspector window. After creating a transfer area, you can carry out the rest of the configuration under "Details of the transfer area".
+In the case of intelligent DP slaves, you can allocate I/O memory areas of the I-slaves to I/O memory areas of the DP master by means of the "I-slave communication" transfer areas. During operation (cyclic data exchange), the data that you transfer into the I/O memory areas in the user program of the intelligent DP slave are transferred via the transfer area into the I/O memory area of the DP master. You will find the table for the assignment of the I/O memory areas to the transfer areas by selecting the I-slave connection in the I/O communications table under "Properties &gt; I-slave communication" in the Inspector window. After creating a transfer area, you can carry out the rest of the configuration under "Details of the transfer area".
 
 When configuring the addresses under "Details of the transfer area", slot numbers are also displayed. The slots are not generated by real modules, as is the case with ET 200M, for example, but rather by freely definable lengths of the respective I/O areas. In this case they are also referred to as virtual slots.
 
@@ -2137,7 +2137,7 @@ The following table shows the assignment of the virtual slots in the transfer ar
 
 > **Note**
 >
-> In the network view, you will find slot assignment for the selected I-slave connection in the I/O communications table under "I-slave communication > Transfer areas" in the Inspector window.
+> In the network view, you will find slot assignment for the selected I-slave connection in the I/O communications table under "I-slave communication &gt; Transfer areas" in the Inspector window.
 
 #### Addresses for system information
 
@@ -2424,7 +2424,7 @@ A configuration for isochronous mode consists of the following isochronous compo
 - DP interface modules (for example ET 200S interface IM 151-1 High Feature)
 - Distributed input/output modules (for example DI 2xDC24V, High Feature [131-4BB00], DO 2xDC24V/2A, High Feature [132-4BB30])
 
-A current list of isochronous components is available in the [Service & Support Portal](http://support.automation.siemens.com/WW/view/en/14747677).
+A current list of isochronous components is available in the [Service &amp; Support Portal](http://support.automation.siemens.com/WW/view/en/14747677).
 
 ###### Procedure
 
@@ -2600,7 +2600,7 @@ Except for the constant bus cycle time for the DP cycle and the Ti/To times for 
 To set the isochronous mode for modules, follow these steps:
 
 1. In network view, select the DP slave whose properties you want to edit.
-2. Under "Properties > Isochronous mode", adapt the parameters to suit your requirements.
+2. Under "Properties &gt; Isochronous mode", adapt the parameters to suit your requirements.
 
 ###### Setting Ti/To times the same for all slaves
 
@@ -2699,7 +2699,7 @@ The diagram below shows a constant bus cycle time in isochronous mode with Ti/To
 Rules for Ti, To and TDP:
 
 - Ti + To ≤ TDP without overlap, that is: TDP ≥ Ti + To
-- The conditions Ti + To > TDP or TDP < Ti + To may develop with overlap
+- The conditions Ti + To &gt; TDP or TDP &lt; Ti + To may develop with overlap
 
 ---
 

@@ -248,7 +248,7 @@ The Dynamic dialog is used, for example, for the following purposes:
 
 #### How do I configure animations with WinCC in TIA Portal?
 
-Dynamic object properties can be realized, for example, using animations that you configure in the object property list, "Properties > Animations".
+Dynamic object properties can be realized, for example, using animations that you configure in the object property list, "Properties &gt; Animations".
 
 These animations dynamically change the background color of an object, for example.
 
@@ -487,7 +487,7 @@ A few terms have changed in WinCC as compared to WinCC flexible.
 
 > **Note**
 >
-> If "Synchronization" > "Synchronize recipe tags" is deactivated and "Show table" is deactivated in the recipe control under "Properties > Table", then recipe data records cannot be sent to or from the PLC in the Runtime using the "Write to PLC" and "Read from PLC" buttons.
+> If "Synchronization" &gt; "Synchronize recipe tags" is deactivated and "Show table" is deactivated in the recipe control under "Properties &gt; Table", then recipe data records cannot be sent to or from the PLC in the Runtime using the "Write to PLC" and "Read from PLC" buttons.
 
 For more detailed information, see:
 

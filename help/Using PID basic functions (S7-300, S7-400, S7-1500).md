@@ -683,7 +683,7 @@ With TUN_ON = TRUE, you can establish the tuning readiness. The controller switc
 
 ![Pretuning](images/166014607883_DV_resource.Stream@PNG-en-US.png)
 
-The tuning manipulated variable (LMN0 + TUN_DLMN) is activated by a setpoint change (transition phase 1 -> 2). The setpoint is not effective until the inflection point has been reached (automatic mode is not enabled until this point is reached).
+The tuning manipulated variable (LMN0 + TUN_DLMN) is activated by a setpoint change (transition phase 1 -&gt; 2). The setpoint is not effective until the inflection point has been reached (automatic mode is not enabled until this point is reached).
 
 The user is responsible for defining the output excitation delta (TUN_DLMN) according to the permitted process value change. The sign of TUN_DLMN must be set depending on the intended process value change (take into account the direction in which the control is operating).
 
@@ -711,7 +711,7 @@ During this tuning, the process with a constant setpoint is activated through a 
 
 ![Fine tuning](images/166014626187_DV_resource.Stream@PNG-en-US.png)
 
-The tuning manipulated variable (LMN0 + TUN_DLMN) is activated by setting the start bit TUN_ST (transition from phase 1 -> 2). When you modify the setpoint value, the new value will not take effect until the point of inflection has been reached (automatic mode will not be enabled until this point has been reached).
+The tuning manipulated variable (LMN0 + TUN_DLMN) is activated by setting the start bit TUN_ST (transition from phase 1 -&gt; 2). When you modify the setpoint value, the new value will not take effect until the point of inflection has been reached (automatic mode will not be enabled until this point has been reached).
 
 The user is responsible for defining the output excitation delta (TUN_DLMN) according to the permitted process value change. The sign of TUN_DLMN must be set depending on the intended process value change (take into account the direction in which the control is operating).
 
@@ -783,7 +783,7 @@ Both controllers output LMN0 + TUN_DLMN until both controllers have left phase 2
 
 In general terms, tuning should be carried out to reflect the way in which the controller will operate subsequently. If zones are operated together during production such that the temperature differences between the zones remain the same, the temperature of the adjacent zones ought to be increased accordingly during tuning.
 
-Differences in temperature at the beginning of the tuning are irrelevant since they will be compensated by the initial heating (-> initial rise = 0).
+Differences in temperature at the beginning of the tuning are irrelevant since they will be compensated by the initial heating (-&gt; initial rise = 0).
 
 #### Fault descriptions and corrective measures (S7-300, S7-400, S7-1500)
 
@@ -792,7 +792,7 @@ Differences in temperature at the beginning of the tuning are irrelevant since t
 | Operator error | STATUS and action | Comment |
 | --- | --- | --- |
 | TUN_ON and setpoint step change or TUN_ST are set simultaneously | Transition to phase 1; however, tuning is not started.  - SP_INT = SP<sub>old </sub>or - TUN_ST = FALSE | The setpoint change is canceled. This prevents the controller from settling to the new setpoint value and from leaving the stationary operating point unnecessarily. |
-| Effective TUN_DLMN < 5% (end of phase 1) | STATUS_H = 30002  - Transition to phase 0 - TUN_ON = FALSE - SP = SP<sub>old</sub> | Tuning is canceled.  The setpoint change is canceled. This prevents the controller from settling to the new setpoint value and from leaving the stationary operating point unnecessarily. |
+| Effective TUN_DLMN &lt; 5% (end of phase 1) | STATUS_H = 30002  - Transition to phase 0 - TUN_ON = FALSE - SP = SP<sub>old</sub> | Tuning is canceled.  The setpoint change is canceled. This prevents the controller from settling to the new setpoint value and from leaving the stationary operating point unnecessarily. |
 
 ##### Point of inflection not reached (only if excited by setpoint step change)
 
@@ -800,7 +800,7 @@ At the latest, tuning is ended when the process value has passed 75% of the setp
 
 The currently valid setpoint always applies. By reducing the setpoint, it is possible to achieve an earlier end of the tuning function.
 
-In typical temperature processes, cancelation of tuning at 75% of the setpoint step change is normally adequate to prevent overshoot. However, **caution** is advised, particularly in processes with a greater delay (TU/TA > 0.1, process type III). If manipulated variable excitation is too strong compared to the setpoint step change, the process value can overshoot heavily (up to a factor of 3).
+In typical temperature processes, cancelation of tuning at 75% of the setpoint step change is normally adequate to prevent overshoot. However, **caution** is advised, particularly in processes with a greater delay (TU/TA &gt; 0.1, process type III). If manipulated variable excitation is too strong compared to the setpoint step change, the process value can overshoot heavily (up to a factor of 3).
 
 In higher-order processes, if the point of inflection is still a long way off after reaching 75% of the setpoint step change, there will be significant overshoot. In addition, the controller parameters are too stringent. In this case, you should reduce the controller parameters or repeat the attempt.
 
@@ -822,7 +822,7 @@ Repeat the tuning procedure and ensure that disturbances do not occur at the pro
 
 > **Note**
 >
-> The special case of a PT1-only process is also indicated by STATUS_H = 2x1xx (TU <= 3*CYCLE). In this case, it is not necessary to repeat the attempt. Reduce the controller parameters if the control oscillates.
+> The special case of a PT1-only process is also indicated by STATUS_H = 2x1xx (TU &lt;= 3*CYCLE). In this case, it is not necessary to repeat the attempt. Reduce the controller parameters if the control oscillates.
 
 ##### Quality of measuring signals (measurement noise, low-frequency interference)
 

@@ -669,7 +669,7 @@ The following table shows the effects of JOB 1 on the various MODEs.
 | --- | --- |
 | Reference point approach | At incremental encoders and in non-activated dosing mode, ensure that, when the reference point run is evaluated, the SYNC = 1 feedback bit is set immediately.  The reference point run still continues to run. |
 | Inching | - |
-| Absolute positioning | The following reactions are possible:  - Distance to the target ≤ switch-off difference  The switch-off point is reached or overshot; positioning is switched off immediately, and the run is terminated with POS_DONE = 1. In this case, the destination is sometimes overshot. - Distance to the destination ≤ the changeover difference  The changeover point is reached or overshot; there is an immediate reduction from rapid feed to creep feed. In this case, the distance covered at creep speed is less than (switch-over difference - switch-off difference). - Distance to the destination > the changeover difference  The drive is moved using rapid traverse, even if it was switched over to creep speed beforehand. |
+| Absolute positioning | The following reactions are possible:  - Distance to the target ≤ switch-off difference  The switch-off point is reached or overshot; positioning is switched off immediately, and the run is terminated with POS_DONE = 1. In this case, the destination is sometimes overshot. - Distance to the destination ≤ the changeover difference  The changeover point is reached or overshot; there is an immediate reduction from rapid feed to creep feed. In this case, the distance covered at creep speed is less than (switch-over difference - switch-off difference). - Distance to the destination &gt; the changeover difference  The drive is moved using rapid traverse, even if it was switched over to creep speed beforehand. |
 | Relative Positioning | The preset distance continues to be traversed. |
 
 #### Control signals
@@ -823,7 +823,7 @@ The following table shows the effects of JOB 4 on the various MODEs.
 | --- | --- |
 | Reference point approach | - |
 | Inching |  |
-| Absolute positioning | The following reactions are possible:  - Distance to the destination ≤ the changeover difference.  The changeover point is reached or overshot; there is an immediate reduction from rapid feed to creep feed. In this case, the distance covered at creep speed is less than (switch-over difference - switch-off difference). - Distance to the destination > the changeover difference  The drive is moved using rapid feed, even if it was switched over to creep feed beforehand. |
+| Absolute positioning | The following reactions are possible:  - Distance to the destination ≤ the changeover difference.  The changeover point is reached or overshot; there is an immediate reduction from rapid feed to creep feed. In this case, the distance covered at creep speed is less than (switch-over difference - switch-off difference). - Distance to the destination &gt; the changeover difference  The drive is moved using rapid feed, even if it was switched over to creep feed beforehand. |
 | Relative Positioning |  |
 
 #### Control signals
@@ -1015,7 +1015,7 @@ The following table shows the error numbers relevant for "Define the settings fo
 | Error number | Meaning | Remedy |
 | --- | --- | --- |
 | 21 | Impermissible JOB in dosing mode |  |
-| 38 | Monitoring of the direction of rotation path difference > 65 535 |  |
+| 38 | Monitoring of the direction of rotation path difference &gt; 65 535 |  |
 
 ### Displaying current values (JOB 15)  (S7-300, S7-400)
 
@@ -1205,7 +1205,7 @@ The following table shows the causes and possible remedies for the POS_ERR error
 | 35 | Display current values: Selection unknown |  |
 | 36 | Latch Function: Edge selection unknown |  |
 | 37 | Display current values: JOB 15 cannot be activated with the latch function running. |  |
-| 38 | Monitoring of the direction of rotation  path difference > 65 535 |  |
+| 38 | Monitoring of the direction of rotation  path difference &gt; 65 535 |  |
 
 ### CPU/Master STOP and RESET state (S7-300, S7-400)
 
@@ -1885,7 +1885,7 @@ For the limits you have to differentiate between the individual encoder models. 
 
   - minimum value = 4
   - maximum value = 8192
-- Multiturn encoder (number of revolutions > 1) with 25-bit message frame length:
+- Multiturn encoder (number of revolutions &gt; 1) with 25-bit message frame length:
 
   - Minimum value = 4
   - Maximum value = 8192

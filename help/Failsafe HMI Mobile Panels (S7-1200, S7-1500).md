@@ -411,7 +411,7 @@ You must integrate the following fail-safe blocks in your safety program:
 - For each connection box: a FC199: F_FB_KTP_RNG  
   The F_FB_KTP_RNG supplies the safety-related signals for the machine part that is associated with a connection box.
 - FB 215: ESTOP1; with this block, you can ensure that the operator must first provide confirmation after an emergency stop before the plant can be restarted. You can find this module in the F-library "Safety Advanced" in the following block container:  
-  "Communication > Failsafe HMI Mobile Panels > -- KTP Mobile --"
+  "Communication &gt; Failsafe HMI Mobile Panels &gt; -- KTP Mobile --"
 
 | Symbol | Meaning |
 | --- | --- |
@@ -555,7 +555,7 @@ You can find the start addresses of PII and PIQ in the PROFIsafe settings of the
 
 | Parameter | Data type | Description | Interconnection |
 | --- | --- | --- | --- |
-| ID | Word | The connection box is uniquely identified by the ID set on the connection box. The ID must be unique throughout the plant and must match the value of this parameter. The value has the following meaning:  0 or > 254: Invalid box ID, emergency stop and acknowledgment button are disabled.  1...254: Valid box ID, emergency stop and acknowledgment button enabled depending on the mode of the HMI device. | --- |
+| ID | Word | The connection box is uniquely identified by the ID set on the connection box. The ID must be unique throughout the plant and must match the value of this parameter. The value has the following meaning:  0 or &gt; 254: Invalid box ID, emergency stop and acknowledgment button are disabled.  1...254: Valid box ID, emergency stop and acknowledgment button enabled depending on the mode of the HMI device. | --- |
 | E_STOP_EXT | Bool | External information on the state of the emergency stop button of another F_FB_KTP_RNG with cascading. |  |
 | ENABLE_EXT | Bool | External information on the state of the acknowledgement button of another F_FB_KTP_RNG with cascading. |  |
 | ACTIVATE_ENABLE | Bool | This input allows the acknowledgement button to be enabled and disabled. |  |

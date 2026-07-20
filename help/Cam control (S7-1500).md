@@ -19,4 +19,4 @@ This section contains information on the following topics:
 
 **Cam control with Motion Control**
 
-Cam control is also available to you via technology objects from Motion Control. The corresponding technology objects enable the control of high-precision output cams. You can find more information under "Using S7-1500 Motion Control > Using S7-1500/S7-1500T measuring input and output cam functions".
+Cam control is also available to you via technology objects from Motion Control. The corresponding technology objects enable the control of high-precision output cams. You can find more information under "Using S7-1500 Motion Control &gt; Using S7-1500/S7-1500T measuring input and output cam functions".

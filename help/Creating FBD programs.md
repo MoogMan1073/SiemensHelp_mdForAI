@@ -271,12 +271,12 @@ To select a network, follow these steps:
 
 Proceed as follows to select several individual networks:
 
-1. Press and hold down the <Ctrl> key.
+1. Press and hold down the &lt;Ctrl&gt; key.
 2. Click all the networks that you want to select.
 
 To select several successive networks, follow these steps:
 
-1. Press and hold down the <Shift> key.
+1. Press and hold down the &lt;Shift&gt; key.
 2. Click the first network that you want to select.
 3. Click the last network that you want to select.
 
@@ -462,7 +462,7 @@ To specify that the network titles are always set automatically, follow these st
 
 To set an individual network title automatically, follow these steps:
 
-1. Right-click "Network <Number of the network>" in the title bar of a network.
+1. Right-click "Network &lt;Number of the network&gt;" in the title bar of a network.
 2. Select the "Set network title automatically" command in the shortcut menu.
 
    The title of the selected network is set based on the comment of the operand if the conditions listed above are fulfilled.
@@ -537,7 +537,7 @@ You can navigate straight to a specific position within a block.
 To navigate to a specific position within a block, follow these steps:
 
 1. Right-click in the code area of the programming window.
-2. Select the "Go to > Network/line" command in the shortcut menu.
+2. Select the "Go to &gt; Network/line" command in the shortcut menu.
 
    The "Go to" dialog will open.
 3. Enter the network to which you want to navigate.
@@ -638,8 +638,8 @@ The following table sets out the instructions that can only be positioned at the
 | SAVE | Save RLO in BR bit | No |
 | MCRA | Enable MCR range | No |
 | MCRD | Disable MCR range | No |
-| MCR< | Open MCR ranges | No |
-| MCR> | Close MCR ranges | No |
+| MCR&lt; | Open MCR ranges | No |
+| MCR&gt; | Close MCR ranges | No |
 
 > **Note**
 >
@@ -663,7 +663,7 @@ To insert FBD elements into a network using the "Instructions" task card, follow
 2. Navigate to the FBD element that you want to insert.
 3. Use drag-and-drop to move the element to the desired place in the network.
 
-   If the element is an internal system function block (FB), the "Call options" dialog opens. In this dialog, you can determine if the data of the inserted element is to be stored in a single, multi or parameter instance. If you select "Single instance", you can find the new instance data block once it is created in the "Program resources" folder of the project tree under "Program blocks > System blocks". You can find multi-instances in the block interface in the "Static" section and parameter instances in the "InOut" section.
+   If the element is an internal system function block (FB), the "Call options" dialog opens. In this dialog, you can determine if the data of the inserted element is to be stored in a single, multi or parameter instance. If you select "Single instance", you can find the new instance data block once it is created in the "Program resources" folder of the project tree under "Program blocks &gt; System blocks". You can find multi-instances in the block interface in the "Static" section and parameter instances in the "InOut" section.
 
 Or:
 
@@ -671,7 +671,7 @@ Or:
 2. Open the "Instructions" task card.
 3. Double-click on the element you want to insert.
 
-   If the element is an internal system function block (FB), the "Call options" dialog opens. In this dialog, you can determine if the data of the inserted element is to be stored in a single, multi or parameter instance. If you select "Single instance", you can find the new instance data block once it is created in the "Program resources" folder of the project tree under "Program blocks > System blocks". You can find multi-instances in the block interface in the "Static" section and parameter instances in the "InOut" section.
+   If the element is an internal system function block (FB), the "Call options" dialog opens. In this dialog, you can determine if the data of the inserted element is to be stored in a single, multi or parameter instance. If you select "Single instance", you can find the new instance data block once it is created in the "Program resources" folder of the project tree under "Program blocks &gt; System blocks". You can find multi-instances in the block interface in the "Static" section and parameter instances in the "InOut" section.
 
 #### Result
 
@@ -704,14 +704,14 @@ A network is available.
 To insert FBD elements into a network using an empty box, follow these steps:
 
 1. Open the "Instructions" task card.
-2. Navigate to "General > Empty box" in the "Basic instructions" palette.
+2. Navigate to "General &gt; Empty box" in the "Basic instructions" palette.
 3. Use a drag-and-drop operation to move the "Empty box" element to the desired place in the network.
 4. Position the cursor over the triangle in the top right-hand corner of the empty box.
 
    A drop-down list is displayed.
 5. Select the desired FBD element from the drop-down list.
 
-   If the element is an internal system function block (FB), the "Call options" dialog opens. In this dialog, you can determine if the data of the inserted element is to be stored in a single, multi or parameter instance. If you select "Single instance", you can find the new instance data block once it is created in the "Program resources" folder of the project tree under "Program blocks > System blocks". You can find multi-instances in the block interface in the "Static" section and parameter instances in the "InOut" section.
+   If the element is an internal system function block (FB), the "Call options" dialog opens. In this dialog, you can determine if the data of the inserted element is to be stored in a single, multi or parameter instance. If you select "Single instance", you can find the new instance data block once it is created in the "Program resources" folder of the project tree under "Program blocks &gt; System blocks". You can find multi-instances in the block interface in the "Static" section and parameter instances in the "InOut" section.
 
 #### Result
 
@@ -752,7 +752,7 @@ The valid data types for an instruction are listed in the instruction drop-down 
 
 ##### Data type selection of mathematical instructions
 
-Some mathematical instructions provide you with the option of having the data type automatically set corresponding to the data types of the operand. In the drop-down list for data type selection, these instructions have the entry "Auto" in addition to the actual data types. If you select this entry and then allocate the first operand, the data type of the operand is selected as data type for the instruction. The entry in the drop-down list changes to "Auto (<Data type>)", e.g. "Auto (Real)". If you allocate additional operands, the automatically set data type of the instruction is adjusted according to the following criteria:
+Some mathematical instructions provide you with the option of having the data type automatically set corresponding to the data types of the operand. In the drop-down list for data type selection, these instructions have the entry "Auto" in addition to the actual data types. If you select this entry and then allocate the first operand, the data type of the operand is selected as data type for the instruction. The entry in the drop-down list changes to "Auto (&lt;Data type&gt;)", e.g. "Auto (Real)". If you allocate additional operands, the automatically set data type of the instruction is adjusted according to the following criteria:
 
 - You supply all other operands with tags of the same data type:
 
@@ -821,7 +821,7 @@ To automatically specify the data type for mathematical instructions, follow the
 2. Select the "Auto" entry from the drop-down list.
 3. Enter a valid tag at an input or output.
 
-   The data type of the tag is applied as data type of the instruction. The entry in the drop-down list changes to "Auto (<Data type>)".
+   The data type of the tag is applied as data type of the instruction. The entry in the drop-down list changes to "Auto (&lt;Data type&gt;)".
 
 See also: [Selecting a data type](#selecting-a-data-type)
 
@@ -1057,7 +1057,7 @@ Follow these steps to update all block calls and uses of PLC data types during c
 
 1. Open the project tree.
 2. Select the "Program blocks" folder.
-3. Select the command "Compile > Software (rebuild all blocks)" in the shortcut menu.
+3. Select the command "Compile &gt; Software (rebuild all blocks)" in the shortcut menu.
 
 ---
 
@@ -1077,7 +1077,7 @@ You have the option of changing the called block for a block call. But keep in m
 
 To change the called block of a block call, follow these steps:
 
-1. Click on the name of the called block within the block call and press the <F2> key. Or double-click the name of the called block.
+1. Click on the name of the called block within the block call and press the &lt;F2&gt; key. Or double-click the name of the called block.
 
    A text box opens, and the name of the currently called block is selected.
 2. Enter the name of the block you want to call or select a block in the autocompletion.
@@ -1147,7 +1147,7 @@ A network is available.
 Proceed as follows to use the "Calculate" instruction:
 
 1. Open the "Instructions" task card.
-2. Navigate to "Math functions > CALCULATE" in the "Basic instructions" pane.
+2. Navigate to "Math functions &gt; CALCULATE" in the "Basic instructions" pane.
 3. Use drag-and-drop to move the element to the desired place in the network.
 
    The instruction "Calculate" will be inserted for the data type with a placeholder expression and question mark.
@@ -1335,16 +1335,16 @@ FBD elements are available
 
 To select several individual FBD elements, follow these steps:
 
-1. Press and hold down the <Ctrl> key.
+1. Press and hold down the &lt;Ctrl&gt; key.
 2. Click on all the FBD elements you wish to select.
-3. Now release the <Ctrl> key.
+3. Now release the &lt;Ctrl&gt; key.
 
 #### Selecting all FBD elements in a network
 
 To select all FBD elements in a network, follow these steps:
 
 1. Go to the network whose elements you wish to select.
-2. Select the "Select all" command in the "Edit" menu or press <Ctrl+A>.
+2. Select the "Select all" command in the "Edit" menu or press &lt;Ctrl+A&gt;.
 
 ---
 
@@ -1673,11 +1673,11 @@ This section contains information on the following topics:
 
 ### Inserting operands
 
-The character strings "<???>", "<??.?>" and "..." are inserted as placeholders for the parameters when a FBD element is inserted:
+The character strings "&lt;???&gt;", "&lt;??.?&gt;" and "..." are inserted as placeholders for the parameters when a FBD element is inserted:
 
-- The "<???>" and "<??.?>" strings displayed in red indicate parameters that need to be connected.
+- The "&lt;???&gt;" and "&lt;??.?&gt;" strings displayed in red indicate parameters that need to be connected.
 - The "..." string displayed in black indicates parameters that may be connected.
-- "<??.?>" stands for Boolean placeholders.
+- "&lt;??.?&gt;" stands for Boolean placeholders.
 
 In addition, FBD elements can have the following different I/Os for the parameters:
 
@@ -1724,7 +1724,7 @@ Or drag from it the block interface:
 #### Result
 
 - If the syntax is error-free, the displayed parameter is black.
-- If there is an error in the syntax, the cursor stays in the input field and a corresponding error message is displayed in the inspector window in the "Info > Syntax" register.
+- If there is an error in the syntax, the cursor stays in the input field and a corresponding error message is displayed in the inspector window in the "Info &gt; Syntax" register.
 
 ---
 
@@ -1875,7 +1875,7 @@ A network is available.
 To insert a new branch in a network, follow these steps:
 
 1. Open the "Instructions" task card.
-2. Navigate to "General > Branch" in the "Basic instructions" palette.
+2. Navigate to "General &gt; Branch" in the "Basic instructions" palette.
 3. Drag the element from the "Elements" pane to the a required location on a connection line between two boxes.
 
 ---
@@ -1993,7 +1993,7 @@ A logic path is available.
 
 To delete a logic path, proceed as follows:
 
-1. Hold down the left mouse button and draw a frame around the logic path. At the same time, make sure that you select all instructions of the logic path. Alternatively, you can hold down the <Shift> key and select the first the last instruction of the logic path.
+1. Hold down the left mouse button and draw a frame around the logic path. At the same time, make sure that you select all instructions of the logic path. Alternatively, you can hold down the &lt;Shift&gt; key and select the first the last instruction of the logic path.
 2. Right-click on one of the instructions in the logic path.
 3. Select the "Delete" command in the shortcut menu.
 
@@ -2291,7 +2291,7 @@ The following table shows the definition of the tags used:
 To program the equation with the instruction "CALCULATE", follow these steps:
 
 1. Drag the instruction "CALCULATE" from the "Instructions" task card to an FBD network.
-2. You can select the data type INT for the instruction from the "<???>" drop-down list.
+2. You can select the data type INT for the instruction from the "&lt;???&gt;" drop-down list.
 3. Interconnect the tags declared in the block interface with the inputs and outputs of the instruction box.
 4. Click the "Calculator" icon on the top right corner of the instruction box to enter the equation to be calculated.
 

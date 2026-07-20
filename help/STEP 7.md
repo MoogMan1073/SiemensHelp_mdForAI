@@ -31,11 +31,11 @@ In order to protect plants, systems, machines and networks against cyber threats
 
 Customers are responsible for preventing unauthorized access to their plants, systems, machines and networks. Such systems, machines and components should only be connected to an enterprise network or the internet if and to the extent such a connection is necessary and only when appropriate security measures (e.g. firewalls and/or network segmentation) are in place.
 
-For additional information on industrial cybersecurity measures that may be implemented, please visit <https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html>.
+For additional information on industrial cybersecurity measures that may be implemented, please visit [https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html).
 
 Siemens’ products and solutions undergo continuous development to make them more secure. Siemens strongly recommends that product updates are applied as soon as they are available and that the latest product versions are used. Use of product versions that are no longer supported, and failure to apply the latest updates may increase customer’s exposure to cyber threats.
 
-To stay informed about product updates, subscribe to the Siemens Industrial Cybersecurity RSS Feed under <https://new.siemens.com/global/en/products/services/cert.html>.
+To stay informed about product updates, subscribe to the Siemens Industrial Cybersecurity RSS Feed under [https://new.siemens.com/global/en/products/services/cert.html](https://new.siemens.com/global/en/products/services/cert.html).
 
 ### Network settings
 
@@ -129,7 +129,7 @@ This section contains information on the following topics:
 - [CP 343-2 on SIMATIC S7 Embedded Controller EC31-RTX](#cp-343-2-on-simatic-s7-embedded-controller-ec31-rtx)
 - [Loading of S7-1500 CPUs (temporarily not possible)](#loading-of-s7-1500-cpus-temporarily-not-possible)
 - [Loading of S7-1500 CPUs (SIPLUS)](#loading-of-s7-1500-cpus-siplus)
-- [Module change for I-devices (S7-1500 CPU FW versions < V3.1 and V3.1)](#module-change-for-i-devices-s7-1500-cpu-fw-versions-v31-and-v31)
+- [Module change for I-devices (S7-1500 CPU FW versions &lt; V3.1 and V3.1)](#module-change-for-i-devices-s7-1500-cpu-fw-versions-v31-and-v31)
 - [ET 200MP (IM 155-5 DP ST) on a WinLC RTX](#et-200mp-im-155-5-dp-st-on-a-winlc-rtx)
 - [Elimination of TS adapters](#elimination-of-ts-adapters)
 - [Network components](Network%20components.md#network-components)
@@ -187,7 +187,7 @@ By contrast, OPC UA does not define an array as a data type. Any variable value 
 
 | Attribute / Property | Data type | Possible values, meaning |
 | --- | --- | --- |
-| ValueRank (Mandatory) | Int32 | - n > 1: Value is an array with dimension n. - 1: Value is an array with one dimension - 0: Value is an array with one or more dimensions - -1: Value is a scalar (not an array) - -2: Value is a scalar or an array with any number of dimensions - -3: Value can be a scalar or a one-dimensional array |
+| ValueRank (Mandatory) | Int32 | - n &gt; 1: Value is an array with dimension n. - 1: Value is an array with one dimension - 0: Value is an array with one or more dimensions - -1: Value is a scalar (not an array) - -2: Value is a scalar or an array with any number of dimensions - -3: Value can be a scalar or a one-dimensional array |
 | ArrayDimensions (Optional) | UInt32[] | Maximum supported length of each dimension.   0 or empty: Unknown length. |
 | MaxArrayLength (Optional) | UInt32 | For DataVariables with ValueRank attribute not set to scalar:  Maximum length of the array.   Example: A three-dimensional array with lengths 2x3x10 has the length 60. |
 
@@ -308,9 +308,9 @@ Make sure that the DI information model matches the Core model – in the nodese
 
 **Example**: The DI information model version "1.03.1" requires at least Core Information Model version="1.04.4":
 
-<Model ModelUri="http://opcfoundation.org/UA/DI/" Version="1.03.1" PublicationDate="2021-09-07T00:00:00Z">
+&lt;Model ModelUri="http://opcfoundation.org/UA/DI/" Version="1.03.1" PublicationDate="2021-09-07T00:00:00Z"&gt;
 
-<RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.04.4" PublicationDate="2020-01-08T00:00:00Z"/>
+&lt;RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.04.4" PublicationDate="2020-01-08T00:00:00Z"/&gt;
 
 When loading a server configuration with the newer DI nodeset, the following happens:
 
@@ -321,9 +321,9 @@ This "mixture" is not expected to cause any problems in the CPU, as DI nodesets 
 
 When exporting the DI information model, the following cases must be distinguished:
 
-- Standard SIMATIC server interface (CPU properties: OPC UA > Server > Export): The exported OPC UA XML file does not contain the DI information model, only references to it. If you use the XML export e.g. for OPC UA clients, then you have to add the used DI information model additionally for this, so that the OPC UA address space is consistent.
-- OPC UA communication > Server interface of type "Interface": The exported OPC UA XML file does not contain either the DI information model or references to it.
-- OPC UA communication > Server interface of type "Companion Specification": The exported OPC UA XML file still corresponds to the import nodeset. If the imported nodeset contained nodes from the DI information model, then these nodes are also contained in the exported file.
+- Standard SIMATIC server interface (CPU properties: OPC UA &gt; Server &gt; Export): The exported OPC UA XML file does not contain the DI information model, only references to it. If you use the XML export e.g. for OPC UA clients, then you have to add the used DI information model additionally for this, so that the OPC UA address space is consistent.
+- OPC UA communication &gt; Server interface of type "Interface": The exported OPC UA XML file does not contain either the DI information model or references to it.
+- OPC UA communication &gt; Server interface of type "Companion Specification": The exported OPC UA XML file still corresponds to the import nodeset. If the imported nodeset contained nodes from the DI information model, then these nodes are also contained in the exported file.
 
 The DI information model is not integrated in the SiOME modeling editor. In SiOME, you must import the appropriate nodeset as described above. When exporting, SiOME exports all non-nodeset 0 nodesets, unless you have excluded the corresponding namespace from the export.
 
@@ -361,7 +361,7 @@ Examples:
 
 Solution: When the CPU still has certificates that were provided during runtime and you want to transfer new/changed certificates by loading the hardware configuration to the CPU, proceed as outlined below:
 
-- After loading the configuration, perform a "Memory reset" or restart the CPU (POWER OFF > POWER ON). After these measures, the CPU reorganizes the loaded configuration and uses the current certificates.
+- After loading the configuration, perform a "Memory reset" or restart the CPU (POWER OFF &gt; POWER ON). After these measures, the CPU reorganizes the loaded configuration and uses the current certificates.
 
 ##### PLC object not visible in the server address space
 
@@ -507,7 +507,7 @@ Possible cause: The OPC UA server of CPU is just starting. As soon as the server
 
 Information that could no longer be included in the online help and important information about product features.
 
-#### Behavior of a SIMATIC S7-1500 CPU SIPLUS (6AG1...) FW <V2.5 with formatted memory card
+#### Behavior of a SIMATIC S7-1500 CPU SIPLUS (6AG1...) FW &lt;V2.5 with formatted memory card
 
 Components involved:
 
@@ -550,8 +550,8 @@ If you have configured an I-device (S7-1500 CPU) and want to change from this I-
 | Current device | New device | Explanations |
 | --- | --- | --- |
 | S7-1500 CPU FW V3.1 | S7-1500 CPU FW V3.1 | Module can be changed |
-| S7-1500 CPU FW < V3.1 | S7-1500 CPU FW V3.1 | Module can be changed; the new I-device can **not** be used as a shared I-device within the project.  If you want to use the new I-device as a shared I-device within the project, you must deselect the "IO device" option at the relevant PROFINET interface of the current device before changing the module. |
-| S7-1500 CPU FW V3.1 | S7-1500 CPU FW < V3.1 | Module can be changed. You must deselect the "IO device" option at the relevant PROFINET interface of the current device before changing the module. |
+| S7-1500 CPU FW &lt; V3.1 | S7-1500 CPU FW V3.1 | Module can be changed; the new I-device can **not** be used as a shared I-device within the project.  If you want to use the new I-device as a shared I-device within the project, you must deselect the "IO device" option at the relevant PROFINET interface of the current device before changing the module. |
+| S7-1500 CPU FW V3.1 | S7-1500 CPU FW &lt; V3.1 | Module can be changed. You must deselect the "IO device" option at the relevant PROFINET interface of the current device before changing the module. |
 
 ### ET 200MP (IM 155-5 DP ST) on a WinLC RTX
 
@@ -620,7 +620,7 @@ In certain situations, the import rules can mean the loss of instance-specific a
 
 #### Modifying the application cycle of an isochronous mode interrupt OB
 
-When you change the "Application cycle (ms)" parameter of an isochronous mode interrupt OB, you implicitly also modify the hardware configuration. To ensure that the modified value for the application cycle duration becomes effective after the next loading process of the CPU you have to explicitly include the hardware configuration in loading. To this purpose select either the menu command "Load to device > Hardware and software" or the command "Load to device > Hardware configuration".
+When you change the "Application cycle (ms)" parameter of an isochronous mode interrupt OB, you implicitly also modify the hardware configuration. To ensure that the modified value for the application cycle duration becomes effective after the next loading process of the CPU you have to explicitly include the hardware configuration in loading. To this purpose select either the menu command "Load to device &gt; Hardware and software" or the command "Load to device &gt; Hardware configuration".
 
 #### Information about network security
 
@@ -1112,11 +1112,11 @@ The actual parameter "myRemote" of the REMOTE data type must no longer be passed
 
 `"Block_1_DB"(myVariant:=myRemote);`
 
-##### FBD: CMP== (equal) and CMP<> (unequal) with data type VARIANT (S7-1200/S7-1500)
+##### FBD: CMP== (equal) and CMP&lt;&gt; (unequal) with data type VARIANT (S7-1200/S7-1500)
 
-It is no longer permissible in the FBD to negate the output of the instructions "CMP==" and "CMP<>" with the function "Invert RLO" when "VARIANT" is selected as data type. If you have used one of the two instructions with the data type "VARIANT" and a negated output, an error is signaled during compilation. Use the function "Software (rebuild all)" to locate all uses in your program.
+It is no longer permissible in the FBD to negate the output of the instructions "CMP==" and "CMP&lt;&gt;" with the function "Invert RLO" when "VARIANT" is selected as data type. If you have used one of the two instructions with the data type "VARIANT" and a negated output, an error is signaled during compilation. Use the function "Software (rebuild all)" to locate all uses in your program.
 
-To remedy the error, use the instruction "CMP<>" instead of "CMP==" and vice versa. Remove the negation of the output.
+To remedy the error, use the instruction "CMP&lt;&gt;" instead of "CMP==" and vice versa. Remove the negation of the output.
 
 ##### ARRAY access error (S7-1200/S7-1500)
 
@@ -1336,7 +1336,7 @@ As of V15.1, the program is now correctly processed from right to left: First, #
 
 This correction can have the result that your program behaves differently after upgrade, e.g. when the tags #x or #y are set in "FC1". Therefore, please check your program after upgrading.
 
-##### **Comparators (SCL S7-1200 >= 4.2 and S7-1500 >= 2.0)**
+##### **Comparators (SCL S7-1200 &gt;= 4.2 and S7-1500 &gt;= 2.0)**
 
 When comparing two instance data blocks via comparison instructions in SCL, not the structure of the blocks but only the block numbers are compared. As of V15.1, an error message during compiling notifies you that this instruction may not return the desired result (FALSE is generally returned because the numbers of the blocks are different).
 
@@ -1382,9 +1382,9 @@ Information that could not be included in the online help and important informat
 
 In principle, you can continue to use in V15 all PLC programs that were created with older versions of TIA Portal. However, because improvements were made to the compiler and errors corrected there in V15, it can occur in rare cases that the program reacts differently after the upgrade or that you have to adjust the program code manually. These cases are described in detail below.
 
-##### S7-GRAPH: Implicit conversions "Hardware data type <> INT"
+##### S7-GRAPH: Implicit conversions "Hardware data type &lt;&gt; INT"
 
-As of TIA Portal V15 it is no longer possible to program implicit conversions of hardware data types (for example INT -> DB_ANY or DB_ANY -> INT), as is already the case in LAD, FBD, STL and SCL.
+As of TIA Portal V15 it is no longer possible to program implicit conversions of hardware data types (for example INT -&gt; DB_ANY or DB_ANY -&gt; INT), as is already the case in LAD, FBD, STL and SCL.
 
 Please use either the UINT data type or an explicit conversion instead.
 
@@ -1392,11 +1392,11 @@ Please use either the UINT data type or an explicit conversion instead.
 
 From TIA Portal V14 SP1 update 2 the individual subcategories for ProDiag are no longer added manually, but activated or deactivated in the "Activation" column.
 
-This results in the fact that following the upgrade of a project <V14 SP1 Update 2, which uses already existing subcategories in at least one monitoring, the "Repair" button must first be selected before you can create new subcategories.
+This results in the fact that following the upgrade of a project &lt;V14 SP1 Update 2, which uses already existing subcategories in at least one monitoring, the "Repair" button must first be selected before you can create new subcategories.
 
 ##### Instructions "(U)MOVE_BLK" and "(U)FILL_BLK" (S7-1500)
 
-The instructions "(U)MOVE_BLK" and "(U)FILL_BLK" only accessed the process image in TIA Portal <= V15 when directly accessing the I/O.
+The instructions "(U)MOVE_BLK" and "(U)FILL_BLK" only accessed the process image in TIA Portal &lt;= V15 when directly accessing the I/O.
 
 This behavior has been corrected and now causes a runtime error because direct I/O access is not permitted for BLK instructions.
 
@@ -1444,7 +1444,7 @@ In the past "my_variant" was compared with "my_Array". As of V15 the comparison 
 
 If an FB interconnects a static variable to a formal parameter of a call and a nested block uses "GetSymbolPath" V1.0 or V1.1 for the parameter, compiling this block results in an additional display of the DB name before the name of the static variable, however, without a period as a delimiter and without replacement of the #. Version V1.2 of "GetSymbolPath" shows the path correctly with a period as a delimiter and without #.
 
-If you use the "GetSymbolPath" instruction in your program, you should use the "GetSymbolPath" V1.2 instruction after upgrading to >=V15.
+If you use the "GetSymbolPath" instruction in your program, you should use the "GetSymbolPath" V1.2 instruction after upgrading to &gt;=V15.
 
 ##### Instruction "GetInstancePath" (S7-1200/S7-1500)
 
@@ -1500,7 +1500,7 @@ If possible, remove the write protection of the variable. If this is not possibl
 
 When importing an external source in which an instruction is used as a multi- or single-instance, the entire program was changed to the instruction version used in the source in the past. As of Version V15 of TIA Portal this behavior has been corrected: The instructions already contained in the project are no longer changed over, but rather retain the instruction version configured by you.
 
-If the project contains different versions of an instruction after the import, a syntax error is reported. In this case compile the complete project again. To do so, select the "Program blocks" folder in the project tree and select the command "Compile > Software (only changes)" or "Compile > Software (compile all)" from the shortcut menu.
+If the project contains different versions of an instruction after the import, a syntax error is reported. In this case compile the complete project again. To do so, select the "Program blocks" folder in the project tree and select the command "Compile &gt; Software (only changes)" or "Compile &gt; Software (compile all)" from the shortcut menu.
 
 ##### Size of ARRAY of BOOL/BYTE/CHAR (S7-1500)
 
@@ -1522,9 +1522,9 @@ In addition, you have the option of editing the project in compatibility mode. Y
 
 The alarm procedure of the S7-1500 CPU allows a maximum of 512 bytes for associated values (SD parameters) of the instruction "Program_Alarm".
 
-You will only see a warning regarding this number in TIA Portal <= V14 during compilation. There is a stricter check as of TIA Portal V14 SP1. If this number is exceeded, an error is output during compilation to rule out error scenarios during runtime. This check from now on no longer refers to the actual size of the SD parameters at the time the instruction "Program_Alarm" is called, but to the maximum possible size of the SD parameters. This means you must decide beforehand with what length you declare the character string tags you are transferring, as these take up a large number of bytes.
+You will only see a warning regarding this number in TIA Portal &lt;= V14 during compilation. There is a stricter check as of TIA Portal V14 SP1. If this number is exceeded, an error is output during compilation to rule out error scenarios during runtime. This check from now on no longer refers to the actual size of the SD parameters at the time the instruction "Program_Alarm" is called, but to the maximum possible size of the SD parameters. This means you must decide beforehand with what length you declare the character string tags you are transferring, as these take up a large number of bytes.
 
-This must be taken into account in the migration of projects from version <= V14 to version V14 SP1 Update 1.
+This must be taken into account in the migration of projects from version &lt;= V14 to version V14 SP1 Update 1.
 
 ##### Program loops in SCL (S7-1200/S7-1500)
 
@@ -1611,7 +1611,7 @@ With structures of the type PLC data type, as of version V14 STRUCT or ARRAY the
 
 ##### Instructions "SCALE: Scale" and "UNSCALE: Unscale" (S7-1500)
 
-The response of the instruction has changed from TIA Portal V13 SP1 to TIA Portal V14 in regard to specifying the limits (LO_LIM> HI_LIM).
+The response of the instruction has changed from TIA Portal V13 SP1 to TIA Portal V14 in regard to specifying the limits (LO_LIM&gt; HI_LIM).
 
 In version V13 SP1, you received an error message when the low limit was greater than the high limit.
 
@@ -1619,13 +1619,13 @@ As of version V14, this value is allowed and the result is inversely proportiona
 
 On CPUs of the S7-300/400 series, the instruction has always scaled the result inversely proportional to the input value.
 
-##### Unused bits of PLC data types (UDT) with firmware >= V1.8.1
+##### Unused bits of PLC data types (UDT) with firmware &gt;= V1.8.1
 
 The unused bits of PLC data types in standard memory areas are occupied or overwritten, for example, for a PLC data type that contains 4 bits.
 
-With firmware versions < V1.8.1, you could not use the unused bits of a PLC data type elsewhere.
+With firmware versions &lt; V1.8.1, you could not use the unused bits of a PLC data type elsewhere.
 
-With firmware version >= V1.8.1, all bits are occupied or overwritten even if only 4 bits are used.
+With firmware version &gt;= V1.8.1, all bits are occupied or overwritten even if only 4 bits are used.
 
 > **Note**
 >
@@ -1633,9 +1633,9 @@ With firmware version >= V1.8.1, all bits are occupied or overwritten even if on
 >
 > Ensure you do not assign the same absolute address twice to different symbolic address assignments.
 
-##### Explicit data type conversion in SCL (S7-1200) with firmware >= V4.2
+##### Explicit data type conversion in SCL (S7-1200) with firmware &gt;= V4.2
 
-With firmware versions < V4.2, the string was transferred aligned to the right and filled with leading spaces during explicit data type conversion of SINT/INT/DINT/REAL_TO_STRING/WSTRING in SCL.
+With firmware versions &lt; V4.2, the string was transferred aligned to the right and filled with leading spaces during explicit data type conversion of SINT/INT/DINT/REAL_TO_STRING/WSTRING in SCL.
 
 Example: REAL_TO_WSTRING(12) = ' 1.200000E+1'
 
@@ -1721,13 +1721,13 @@ Information that could not be included in the online help and important informat
 
 You can continue to use in V13 SP1 all programs that were created with TIA Portal V12 SP1 or V13. However, because improvements were made to the compiler and errors corrected there (compilation of the program code) in V13 SP1, it can occur in rare cases that the program reacts differently after the upgrade or that you have to adjust the program code manually. These cases are described in detail below.
 
-##### Unused bits of PLC data types (UDT) with firmware >= V1.8.1
+##### Unused bits of PLC data types (UDT) with firmware &gt;= V1.8.1
 
 The unused bits of PLC data types in standard memory areas are occupied or overwritten, for example, for a PLC data type that contains 4 bits.
 
-With firmware versions < V1.8.1, you could not use the unused bits of a PLC data type elsewhere.
+With firmware versions &lt; V1.8.1, you could not use the unused bits of a PLC data type elsewhere.
 
-With firmware version >= V1.8.1, all bits are occupied or overwritten even if only 4 bits are used.
+With firmware version &gt;= V1.8.1, all bits are occupied or overwritten even if only 4 bits are used.
 
 > **Note**
 >
@@ -1735,9 +1735,9 @@ With firmware version >= V1.8.1, all bits are occupied or overwritten even if on
 >
 > Ensure you do not assign the same absolute address twice to different symbolic address assignments.
 
-##### Explicit data type conversion in SCL (S7-1200) with firmware >= V4.2
+##### Explicit data type conversion in SCL (S7-1200) with firmware &gt;= V4.2
 
-With firmware versions < V4.2, the string was transferred aligned to the right and filled with leading spaces during explicit data type conversion of SINT/INT/DINT/REAL_TO_STRING/WSTRING in SCL.
+With firmware versions &lt; V4.2, the string was transferred aligned to the right and filled with leading spaces during explicit data type conversion of SINT/INT/DINT/REAL_TO_STRING/WSTRING in SCL.
 
 Example: REAL_TO_WSTRING(12) = ' 1.200000E+1'
 
@@ -1769,9 +1769,9 @@ In TIA Portal V13 SP1, if you use a tag with a valid data type at the input para
 
 ##### Instruction "DEMUX: Demultiplex" (SCL)
 
-Up to and including TIA Portal V13, no value was output at the OUTELSE output parameter if the value of the K parameter was < 0. In contrast, the value of the IN input parameter was output at the OUTELSE output parameter if the value of the K parameter was > available outputs. This behavior has changed in TIA Portal V13 SP1.
+Up to and including TIA Portal V13, no value was output at the OUTELSE output parameter if the value of the K parameter was &lt; 0. In contrast, the value of the IN input parameter was output at the OUTELSE output parameter if the value of the K parameter was &gt; available outputs. This behavior has changed in TIA Portal V13 SP1.
 
-In the TIA Portal V13 SP1, if you specify at the K parameter a value that is outside the available outputs (K < 0 or K > available outputs), then the value of the IN input parameter is output at the OUTELSE output parameter.​
+In the TIA Portal V13 SP1, if you specify at the K parameter a value that is outside the available outputs (K &lt; 0 or K &gt; available outputs), then the value of the IN input parameter is output at the OUTELSE output parameter.​
 
 ##### Instruction "MOVE: Move value" (STL) (S7-1500)
 
@@ -1908,7 +1908,7 @@ Due to the essential connection between TIA Portal and the CPU, we recommend lim
 
 #### Hardware detection followed by online connection
 
-When the "Online > Hardware detection" command is performed for an unspecified CPU, the online configuration is not loaded from the CPU. If you do not load the configuration resulting from the hardware detection to the CPU, the device and network views will always show a difference between the offline and online configurations. It will appear that there are different configurations in the online and diagnostic views, although the article numbers are identical in the actual CPU and the offline CPU.
+When the "Online &gt; Hardware detection" command is performed for an unspecified CPU, the online configuration is not loaded from the CPU. If you do not load the configuration resulting from the hardware detection to the CPU, the device and network views will always show a difference between the offline and online configurations. It will appear that there are different configurations in the online and diagnostic views, although the article numbers are identical in the actual CPU and the offline CPU.
 
 ## Inter Project Engineering (IPE)
 

@@ -1086,7 +1086,7 @@ The following table shows the distribution of the bytes:
 | Bytes | Contents | Range |
 | --- | --- | --- |
 | 0 … 3 | Seconds starting from 1.1.1900 0:00:00.000 | Corresponding to  1.1.1900 ... 6.2.2036 |
-| 4 … 7 | Fractions of seconds in multiples of 1/2<sup>32</sup> s | 0 … <1 |
+| 4 … 7 | Fractions of seconds in multiples of 1/2<sup>32</sup> s | 0 … &lt;1 |
 
 The time conversion is valid in the date range covered by both time formats 1.1.1990 up to and including 6.2.2036.
 
@@ -1098,17 +1098,17 @@ A data block of the "WS_RULES" type has the following structure.
 
 | Name |  | Data type | Start value | Description |
 | --- | --- | --- | --- | --- |
-| // Conversion base time<->local time and "Set interrupt according to local time" |  |  |  |  |
+| // Conversion base time&lt;-&gt;local time and "Set interrupt according to local time" |  |  |  |  |
 | B2L |  | Struct |  |  |
-|  | S | INT | 2 | // Offset base->local time [30 min] in winter, permitted -24 ... +24. |
+|  | S | INT | 2 | // Offset base-&gt;local time [30 min] in winter, permitted -24 ... +24. |
 |  | T | INT | 2 | // Difference standard and daylight-saving time [30 min], permitted: 2 |
-| // Rule for: Standard time -> daylight-saving time. Default: Last Sunday in March; 2:00 a.m. |  |  |  |  |
+| // Rule for: Standard time -&gt; daylight-saving time. Default: Last Sunday in March; 2:00 a.m. |  |  |  |  |
 | W2S |  | Struct |  | // in STANDARD TIME |
 |  | M | BYTE | B#16#3 | // Month of conversion |
 |  | W | BYTE | B#16#9 | // n-th occurrence of the day of the week (1=first, 2=second,..,9=last) |
 |  | D | BYTE | B#16#1 | // Day of the week (Sunday = 1) |
 |  | H | BYTE | B#16#2 | // Hour |
-| // Rule for: Daylight-saving time -> standard time. Default: Last Sunday in October; 3:00 a.m. |  |  |  |  |
+| // Rule for: Daylight-saving time -&gt; standard time. Default: Last Sunday in October; 3:00 a.m. |  |  |  |  |
 | S2W |  |  |  | // in DAYLIGHT-SAVING TIME |
 |  | M | BYTE | B#16#10 | // Month of conversion |
 |  | W | BYTE | B#16#9 | // n-th occurrence of the day of the week (9 = last) |
@@ -1632,7 +1632,7 @@ The following table shows the parameters of the instruction "UPDAT_PI":
 
 | Parameters | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| PART | Input | BYTE | I, Q, M, D, L or constant | Number of the process image partition input table to  be updated. Maximum value range (depending on the CPU):   0 to 15 (0 means OB 1 process image, n where 1 < n < 15 means process image partition n) |
+| PART | Input | BYTE | I, Q, M, D, L or constant | Number of the process image partition input table to  be updated. Maximum value range (depending on the CPU):   0 to 15 (0 means OB 1 process image, n where 1 &lt; n &lt; 15 means process image partition n) |
 | RET_VAL | Return | INT | I, Q, M, D, L | Error information |
 | FLADDR | Output | WORD | I, Q, M, D, L | Address of the first byte to cause an error  if an access error has occurred. |
 |  |  |  |  |  |
@@ -1675,7 +1675,7 @@ The following table shows the parameters of the instruction "UPDAT_PO":
 
 | Parameters | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| PART | Input | BYTE | I, Q, M, D, L or constant | Number of the process image partition output table to be transferred.   Maximum value range (depending on the CPU): 0 to 15.  (0 means OB 1 process image, n where 1 < n < 15 means process image partition n) |
+| PART | Input | BYTE | I, Q, M, D, L or constant | Number of the process image partition output table to be transferred.   Maximum value range (depending on the CPU): 0 to 15.  (0 means OB 1 process image, n where 1 &lt; n &lt; 15 means process image partition n) |
 | RET_VAL | Return | INT | I, Q, M, D, L | Error information |
 | FLADDR | Output | WORD | I, Q, M, D, L | Address of the first byte to cause an error  if an access error has occurred. |
 |  |  |  |  |  |
@@ -2192,9 +2192,9 @@ STATUS[3] can have the following values:
 
 With DPV1 errors, the DP master passes on STATUS[4] to the CPU and the instruction. Without DPV1 error, this value is set to 0, with the following exceptions for the "[RDREC](#rdrec-read-data-record-s7-300-s7-400)" and "[WRREC](#wrrec-write-data-record-s7-300-s7-400)" instructions:
 
-- STATUS[4] contains the target range length from RECORD, if LEN  > the target range length from RECORD
-- STATUS[4]=LEN, if the actual data record length < LEN < the target range length from RECORD
-- STATUS[4]=0, if STATUS[4] > 255 has to be set.
+- STATUS[4] contains the target range length from RECORD, if LEN  &gt; the target range length from RECORD
+- STATUS[4]=LEN, if the actual data record length &lt; LEN &lt; the target range length from RECORD
+- STATUS[4]=0, if STATUS[4] &gt; 255 has to be set.
 
 In PROFINET IO, STATUS[4] has the value 0.
 
@@ -2617,7 +2617,7 @@ See also: [Difference between synchronous and asynchronous instructions](Asynchr
 
 > **Note**
 >
-> When you read out a data record with a number greater than one from an FM or a CP you have purchased prior to February 1997 (below referred to as "old modules"), "RD_REC" responds differently than it does in new modules. This special situation is covered in the section "Using old S7-300 FMs and CPs with data record numbers >1" (see below).
+> When you read out a data record with a number greater than one from an FM or a CP you have purchased prior to February 1997 (below referred to as "old modules"), "RD_REC" responds differently than it does in new modules. This special situation is covered in the section "Using old S7-300 FMs and CPs with data record numbers &gt;1" (see below).
 >
 > If a DPV1 slave is configured via GSD file (GSD rev. 3 and higher) and the DP interface of the DP master is set to "S7 compatible", then you may not read any data records from the I/O modules in the user program with "RD_REC". In this case, the DP master addresses the wrong slot (configured slot + 3).
 >
@@ -2646,7 +2646,7 @@ For additional information on valid data types, refer to "[Overview of the valid
 >
 > If you want to ensure that the entire data record is always read, select a destination area with a length of 241 bytes. If the data transfer is error-free, RET_VAL contains the actual data record length.
 
-##### Using old S7-300 FMs and CPs with data record numbers > 1
+##### Using old S7-300 FMs and CPs with data record numbers &gt; 1
 
 If you want to use the instruction "RD_REC" to read out a data record with a number greater than one from an old S7-300 FM or old S7-300 CP, remember the following points:
 
@@ -2702,7 +2702,7 @@ When looking at the "real" error information (error codes W#16#8xyz) in the foll
 | 80A3 | DP protocol error with user interface/user | Distributed I/O |
 | 80A4 | Communication on the communication bus disrupted | Error occurs between  the CPU and the external DP  interface module. |
 | 80B0 | - Instruction not possible for module type. - The module does not recognize the data record. - Data record number 241 not permitted. - With "[WR_REC](#wr_rec-write-data-record-to-io-s7-300-s7-400)", data records 0 and 1 are not  permitted. | - |
-| 80B1 | The length specified in parameter RECORD is incorrect. | - With "[WR_REC](#wr_rec-write-data-record-to-io-s7-300-s7-400)": Length incorrect - With "RD_REC"  (only when using old  S7-300 FMs and S7-300  CPs): specified length > data record length - With DPNRM_DG: specified length > record length |
+| 80B1 | The length specified in parameter RECORD is incorrect. | - With "[WR_REC](#wr_rec-write-data-record-to-io-s7-300-s7-400)": Length incorrect - With "RD_REC"  (only when using old  S7-300 FMs and S7-300  CPs): specified length &gt; data record length - With DPNRM_DG: specified length &gt; record length |
 | 80B2 | The configured slot is  not occupied. | - |
 | 80B3 | Actual module type does not match the specified module  type in SDB1. | - |
 | 80B7 | DP slave or module reports an invalid range for a parameter or value. | With "RD_REC" only |
@@ -3200,7 +3200,7 @@ For a slave in S7-compatible mode (operated on an S7 master), hardware and diagn
 
 According to the applicable standard, this parameter shows the diagnostics status of the virtual slot. For this reason, you can assign a value other than zero to ASPEC only when sending a diagnostics interrupt.
 
-Because the additional S7 interrupt information for a diagnostics interrupt (data record 0) contains incoming/outgoing information (see Diagnostics data>Main byte 0 bit 0), you must write bit 0 (module fault) in byte 0 of the additional interrupt information as follows:
+Because the additional S7 interrupt information for a diagnostics interrupt (data record 0) contains incoming/outgoing information (see Diagnostics data&gt;Main byte 0 bit 0), you must write bit 0 (module fault) in byte 0 of the additional interrupt information as follows:
 
 | ASPEC | "Module fault" bit in [AINFO](#parameter-ainfo-s7-300-s7-400-1) |
 | --- | --- |
@@ -3226,9 +3226,9 @@ The following table shows the response of "SALRM" when you assign LEN a value ot
 
 | Value of LEN | Characteristics of "SALRM" |
 | --- | --- |
-| <= length specification of AINFO | "SALRM" sends an interrupt to the DP master. The number of bytes of additional interrupt information transmitted is as specified in LEN. |
-| Outside the permitted range of values (< 0 or > 16) | "SALRM" does not send an interrupt. Error information: W#16#80B1, STATUS[4]=B#16#FF |
-| > Length specification of AINFO | "SALRM" sends an interrupt to the DP master. The amount of bytes of additional interrupt information transmitted is as specified in the length information of AINFO. Error information: W#16#00B1, STATUS[4]= length specification of AINFO |
+| &lt;= length specification of AINFO | "SALRM" sends an interrupt to the DP master. The number of bytes of additional interrupt information transmitted is as specified in LEN. |
+| Outside the permitted range of values (&lt; 0 or &gt; 16) | "SALRM" does not send an interrupt. Error information: W#16#80B1, STATUS[4]=B#16#FF |
+| &gt; Length specification of AINFO | "SALRM" sends an interrupt to the DP master. The amount of bytes of additional interrupt information transmitted is as specified in the length information of AINFO. Error information: W#16#00B1, STATUS[4]= length specification of AINFO |
 
 ###### Parameters STATUS and ERROR (S7-300, S7-400)
 
@@ -3246,8 +3246,8 @@ The following table indicates all specific error information of "SALRM".
 
 | ERROR | STATUS[2,3]  (W#16#...) | Explanation |
 | --- | --- | --- |
-| 0 | 0000 | Job was executed without errors. If LEN is < length of AINFO, only LEN bytes of additional interrupt information were transmitted. |
-| 0 | 00B1 | LEN > length of AINFO. The job was completed. The additional interrupt information specified in AINFO was transmitted. STATUS[4] contains the length of AINFO. |
+| 0 | 0000 | Job was executed without errors. If LEN is &lt; length of AINFO, only LEN bytes of additional interrupt information were transmitted. |
+| 0 | 00B1 | LEN &gt; length of AINFO. The job was completed. The additional interrupt information specified in AINFO was transmitted. STATUS[4] contains the length of AINFO. |
 | 0 | 7000 | Initial call with REQ=0 (empty cycle). No interrupt was sent. BUSY has the value "0". |
 | 0 | 7001 | Initial call with REQ=1. The job was initiated. BUSY has the value "1". |
 | 0 | 7002 | Intermediate call (REQ irrelevant). The interrupt sent was not yet acknowledged by the DP master. BUSY has the value "1". |
@@ -4199,7 +4199,7 @@ The following table shows the parameters of the "PE_CMD" instruction:
 | CMD | Input | BYTE | I, Q, M, D, L, P or constant | Service-Request-ID of the PROFIenergy command in accordance with the PROFIenergy profile (see "CMD and CMD_MODIFIER parameters").  Further service request IDs are possible following extensions of the PROFIenergy profile. |
 | CMD_MODIFIER | Input | BYTE | I, Q, M, D, L, P or constant | PROFIenergy sub-command  (only when CMD=3 or CMD=16, see "CMD and CMD_MODIFIER parameters")  Further sub-commands are possible following extensions of the PROFIenergy profile. |
 | CMD_PARA | Input | ANY | I, Q, M, D, L | Parameters for the PE commands:  - Get mode: PE_mode_ID - Get measurement values: List of Measurement_Ids   The complete Service Data Request is entered. |
-| CMD_PARA_LEN | Input | INT | I, Q, M, D, L, P or constant | The actual length of the command parameters (<= length defined in CMD_PARA; is verified by the instruction). |
+| CMD_PARA_LEN | Input | INT | I, Q, M, D, L, P or constant | The actual length of the command parameters (&lt;= length defined in CMD_PARA; is verified by the instruction). |
 | RESPONSE_DATA | InOut | ANY | I, Q, M, D, L | PROFIenergy information   May be complete response frame including block header, depending on the command.  Note: If the buffer is too small, only the number of bytes which is specified in the ANY pointer will be entered. |
 | VALID | Output | BOOL | I, Q, M, D, L | Command successfully sent. |
 | BUSY | Output | BOOL | I, Q, M, D, L | Command still being processed. |
@@ -4548,7 +4548,7 @@ Possible values for MESSAGE
 | 52 | The instruction could not determine any configured devices in the PROFINET I/O system. |
 | 53 | Determining the logical addresses of configured devices. |
 | 54 | Reading interface information out of the devices. |
-| 55 | Determining I&M data (data record 0 only) of the configured devices. |
+| 55 | Determining I&amp;M data (data record 0 only) of the configured devices. |
 | 56 | Configuring PROFINET interface for sending the "Wake on LAN" MagicPaket™ via UDP. |
 | 57 | Determining PROFIenergy capabilities of the connected devices. |
 | 62 | Invalid PROFINET I/O system ID detected. The causative number is displayed in the INFORMATION field. |
@@ -4841,8 +4841,8 @@ Accuracy classes of the accuracy domains 1 and 2
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Meaning** | Reserved | 0.01% | 0.02% | 0.05% | 0.1% | 0.2% | 0.5% | 1% | 1.5% |
 |  |  |  |  |  |  |  |  |  |  |
-| **Accuracy class** | **9** | **10** | **11** | **12** | **13** | **14** | **15** | **>15** |  |
-| **Meaning** | 2% | 2.5% | 3% | 5% | 10% | 20% | >20% | Not defined |  |
+| **Accuracy class** | **9** | **10** | **11** | **12** | **13** | **14** | **15** | **&gt;15** |  |
+| **Meaning** | 2% | 2.5% | 3% | 5% | 10% | 20% | &gt;20% | Not defined |  |
 |  |  |  |  |  |  |  |  |  |  |
 
 Accuracy classes of accuracy domain 3
@@ -4851,13 +4851,13 @@ Accuracy classes of accuracy domain 3
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Meaning** | Reserved | 0.02 | 0.05 | 0.1 | 0.2 | 0.5 | 1 | 1.5 | 2 |
 |  |  |  |  |  |  |  |  |  |  |
-| **Accuracy class** | **9** | **10** | **11** | **12** | **13** | **14** | **>13** |  |  |
+| **Accuracy class** | **9** | **10** | **11** | **12** | **13** | **14** | **&gt;13** |  |  |
 | **Meaning** | 2.5 | 3 | 5 | 10 | 20 | 20% | Not defined |  |  |
 |  |  |  |  |  |  |  |  |  |  |
 
 Accuracy classes of accuracy domain 4
 
-| Accuracy class | 0 | 1 | 2 | 3 | 4 | 5 | 6 | >7 |
+| Accuracy class | 0 | 1 | 2 | 3 | 4 | 5 | 6 | &gt;7 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Meaning** | Reserved | 0.5 | 1.0 | 1.5 | 2.0 | 2.5 | 3.0 | Not defined |
 |  |  |  |  |  |  |  |  |  |
@@ -5467,7 +5467,7 @@ Displays for the "[RD_DPARM](#rd_dparm-read-data-record-from-configured-system-d
 | 80C5 | Distributed I/O not available or deactivated. | Distributed I/O <sup>1)</sup> |
 | 80C6 | Data record transfer stopped due to priority class abort (restart or background) | Distributed I/O <sup>1)</sup> |
 | 80D0 | No entry for the  module in the  corresponding SDB. | - |
-| 80D1 | The data record number is not configured in the  corresponding SDB for the module (data record numbers >  241 are rejected). | - |
+| 80D1 | The data record number is not configured in the  corresponding SDB for the module (data record numbers &gt;  241 are rejected). | - |
 | 80D2 | The module cannot be assigned parameters according to its type identifier. | - |
 | 80D3 | The SDB cannot be accessed since it does not exist. | - |
 | 80D4 | SDB structure error: The SDB internal pointer points to a  value outside the SDB. | For S7-300 only |
@@ -6590,7 +6590,7 @@ You generate a PLC alarm by calling one of the following instructions in your pr
 
 These instructions have the following properties:
 
-- With "[NOTIFY](#notify-report-a-signal-change-s7-400)" and "[NOTIFY_8P](#notify_8p-report-up-to-eight-signal-changes-s7-400)", all 0 -> 1 or 1 -> 0 signal changes detected during the call will cause an alarm to be sent.
+- With "[NOTIFY](#notify-report-a-signal-change-s7-400)" and "[NOTIFY_8P](#notify_8p-report-up-to-eight-signal-changes-s7-400)", all 0 -&gt; 1 or 1 -&gt; 0 signal changes detected during the call will cause an alarm to be sent.
 - Also for "[ALARM](#alarm-create-plc-alarms-with-acknowledgement-display-s7-400)", "[ALARM_8](#alarm_8-create-plc-alarms-without-associated-values-for-eight-signals-s7-400)" and "[ALARM_8P](#alarm_8p-create-plc-alarms-without-associated-values-for-eight-signals-s7-400)", every signal change detected for a call causes an alarm to be sent, provided acknowledgment-triggered reporting is inactive.  
   If, on the other hand, you have activated the acknowledgment-triggered reporting, then not every detected signal change will cause an alarm to be sent (see below for more information). In this case, a sent alarm is not displayed in the alarm display.
 - After the block processing is complete, all of the associated values (SD_i inputs) are detected and the alarm is assigned (refer to "Send and receive parameters" in [Common parameters of instructions for S7 communication](S7%20communication%20%28S7-300%2C%20S7-400%29.md#common-parameters-of-instructions-for-s7-communication-s7-300-s7-400).)  
@@ -6617,7 +6617,7 @@ If he first memory block is free then the second memory block will be transferre
 
 You can reduce alarm traffic ín your system by using acknowledgment-triggered alarm generation with the "[ALARM](#alarm-create-plc-alarms-with-acknowledgement-display-s7-400)", "[ALARM_8](#alarm_8-create-plc-alarms-without-associated-values-for-eight-signals-s7-400)" and "[ALARM_8P](#alarm_8p-create-plc-alarms-without-associated-values-for-eight-signals-s7-400)" instructions.
 
-That is, after an incoming alarm has been generated (Signal transition 0 > 1) initially for a signal, subsequent alarms will not be generated until you have acknowledged the first alarm on a display device. The next alarm displayed on the display unit after your acknowledgment is an outgoing alarm (signal transition 1 to 0). Subsequently the alarm cycle restarts with an incoming alarm (signal change from 0 to 1) that must be acknowledged. In this manner you can control the reports of signal change (until the outgoing alarm) via the display device.
+That is, after an incoming alarm has been generated (Signal transition 0 &gt; 1) initially for a signal, subsequent alarms will not be generated until you have acknowledged the first alarm on a display device. The next alarm displayed on the display unit after your acknowledgment is an outgoing alarm (signal transition 1 to 0). Subsequently the alarm cycle restarts with an incoming alarm (signal change from 0 to 1) that must be acknowledged. In this manner you can control the reports of signal change (until the outgoing alarm) via the display device.
 
 You specify the alarm generation method (enable or disable acknowledgment-triggered alarm generation) for the "[ALARM](#alarm-create-plc-alarms-with-acknowledgement-display-s7-400)", "[ALARM_8](#alarm_8-create-plc-alarms-without-associated-values-for-eight-signals-s7-400)" and "[ALARM_8P](#alarm_8p-create-plc-alarms-without-associated-values-for-eight-signals-s7-400)" instructions globally for the CPU during configuration.
 
@@ -6849,7 +6849,7 @@ The following table contains all specific error information for the "ALARM_8P" i
 
 > **Note**
 >
-> After the first call, all the bits of the ACK_STATE output are set and it is assumed that the previous values of SIG_i, 1< i < 8 inputs were "0".
+> After the first call, all the bits of the ACK_STATE output are set and it is assumed that the previous values of SIG_i, 1&lt; i &lt; 8 inputs were "0".
 
 ---
 
@@ -8586,9 +8586,9 @@ A data record of the partial list with the SZL-IDW#16#xy1C has the following str
 | Name | Length | Meaning |
 | --- | --- | --- |
 | index | 1 word | - For a standard CPU and the partial list extract W#16#011C: component ID: W#16#0009 - For the partial list extracts W#16#021C and W#16#031C: Byte 0:   - Bits 0 to 2: Rack no.;   - Bit 3: 0 = Reserve CPU, 1 = Master CPU;   - Bits 4 to 7: 1111 Byte 1: component ID: B#16#09 |
-| manufacturer_id | 1 word | See PROFIBUS Profile Guidelines Part 1, Identification & Maintenance Functions |
-| profile_id | 1 word | See PROFIBUS Profile Guidelines Part 1, Identification & Maintenance Functions |
-| profile_specific_typ | 1 word | See PROFIBUS Profile Guidelines Part 1, Identification & Maintenance Functions |
+| manufacturer_id | 1 word | See PROFIBUS Profile Guidelines Part 1, Identification &amp; Maintenance Functions |
+| profile_id | 1 word | See PROFIBUS Profile Guidelines Part 1, Identification &amp; Maintenance Functions |
+| profile_specific_typ | 1 word | See PROFIBUS Profile Guidelines Part 1, Identification &amp; Maintenance Functions |
 | res | 13 words | Reserved |
 
 **INDEX = W#16#000A**
@@ -9068,7 +9068,7 @@ The adr2 parameter contains:
 | 8100 | Entered for expected (configured) type and actual type if type check is not possible |
 | 8101 | Entered for expected (configured) type if a type check is possible |
 | 8101 | Entered as actual type if expected = actual |
-| 8102 | Entered as actual type if expected <> actual |
+| 8102 | Entered as actual type if expected &lt;&gt; actual |
 
 #### SZL-ID W#16#xy92 - rack / station status information (S7-300, S7-400)
 
@@ -9104,7 +9104,7 @@ A data record of the partial list with the IDW#16#xy92 has the following structu
 | Contents | Length | Meaning |
 | --- | --- | --- |
 | status_0 to status_15 | 16 bytes | Rack status/ station status or backup status. (The backup status is only relevant for DP modules)  - W#16#0092:   - Bit=0: rack/station not configured   - Bit=1: rack/station not configured - W#16#4092:   - Bit=0: station not configured   - Bit=1: Station configured - W#16#0192:   - Bit=0: Station is not configured or configured and activated   - Bit=1: station is configured and activated - W#16#0292:   - Bit=0: Rack/station failure, deactivated or not configured   - Bit=1: Rack/station exists, activated and has not failed - W#16#4292:   - Bit=0: Station failure, deactivated or not configured   - Bit=1: Station exists, activated and has not failed - W#16#0692:   - Bit=0: All modules of the expansion rack / station exist, are available with no problems and the station is activated   - Bit=1: At least one module of the expansion rack / station is not OK or the station is deactivated - W#16#4692:   - Bit=0: All modules of a station exist, are available with no problems and the station is activated   - Bit=1: At least one module of a station is not OK or the station is deactivated |
-| status_0 | 1 byte | Bit 0: Central rack (INDEX = 0) or station 1 (INDEX <> 0)  Bit 1: 1. Expansion rack or station 2    :   :  Bit 7: 7. Expansion rack or station 8 |
+| status_0 | 1 byte | Bit 0: Central rack (INDEX = 0) or station 1 (INDEX &lt;&gt; 0)  Bit 1: 1. Expansion rack or station 2    :   :  Bit 7: 7. Expansion rack or station 8 |
 | status_1 | 1 byte | Bit 0: 8. Expansion rack or station 9    :   :  Bit 7: 15. Expansion rack or station 16 |
 | status_2 | 1 byte | Bit 0: 16. Expansion rack or station 17    :   :  Bit 5: 21. Expansion rack or station 22  Bit 6: 0 or station 23  Bit 7: 0 or station 24 |
 | status_3 | 1 byte | Bit 0: 0 or station 25    :   :  Bit 5: 0 or station 30  Bit 6: Expansion rack SIMATIC S5 area or station 31  Bit 7: 0 or station 32 |
@@ -9523,7 +9523,7 @@ Suitable evaluation of these connection data lets you recognize failures of S7 c
 
 > **Note**
 >
-> A change in the operating state of the CPU: RUN -> STOP ->RUN, does not affect the state of the configured connections. Exception: When an H-station changes from the redundant system state to the Stop system state, the partial connections of all fault-tolerant connections to the standby CPU will be disconnected.
+> A change in the operating state of the CPU: RUN -&gt; STOP -&gt;RUN, does not affect the state of the configured connections. Exception: When an H-station changes from the redundant system state to the Stop system state, the partial connections of all fault-tolerant connections to the standby CPU will be disconnected.
 >
 > After a power failure, on the other hand, all configured connections will be reestablished and this changes the connection status.
 >
@@ -9594,8 +9594,8 @@ The connections are not sorted by connection reference.
 | STAT_CON | BYTE | The current status of the S7 connection or fault-tolerant S7 connection  Possible values:  - B#16#00: S7 connection not established - B#16#10: Fault-tolerant S7 connection not established - B#16#01: S7 connection is currently being established - B#16#11: Fault-tolerant S7 connection is currently being established - B#16#02: S7 connection is established - B#16#12: Fault-tolerant S7 connection is established, but is not fault tolerant - B#16#13: Fault-tolerant S7 connection has been established and is fault tolerant |
 | PROD_CON | BYTE | Partial connection number of the productive connection  Possible values: 0, 1, 2, 3 |
 | STBY_CON | BYTE | Partial connection number of the standby connection (B#16#FF: no standby connection)  Possible values: 0, 1, 2, 3  Note: Only a fault-tolerant S7 connection can have a standby connection. |
-| DIS_PCON | BOOL | The transitions W#16#12 -> W#16#13 and W#16#13 -> W#16#12 from CON_ARR[i].STAT_CON since the last instruction call set CON_ARR[i].DIS_PCON to "1". All other status changes of the i connection leave CON_ARR[i].DIS_PCON unchanged.  Note:  - With MODE=B#16#01 and 02 , the operating system bit that corresponds to DIS_PCON is reset when connection data are copied to the target range. - With MODE=B#16#03 , the operating system bit that corresponds to DIS_PCON remains unchanged. |
-| DIS_CON | BOOL | Each modification of CON_ARR[i].STAT_CON since the last "C_DIAG" call, with the exception of the transitions W#16#12 -> W#16#13 and W#16#13 -> W#16#12 sets CON_ARR[i].DIS_CON to 1.  Note:  - With MODE=B#16#01 and 02 , the operating system bit that corresponds to "DIS_CON" is reset when connection data are copied to the target range. - With MODE=B#16#03 , the operating system bit that corresponds to DIS_CON remains unchanged. |
+| DIS_PCON | BOOL | The transitions W#16#12 -&gt; W#16#13 and W#16#13 -&gt; W#16#12 from CON_ARR[i].STAT_CON since the last instruction call set CON_ARR[i].DIS_PCON to "1". All other status changes of the i connection leave CON_ARR[i].DIS_PCON unchanged.  Note:  - With MODE=B#16#01 and 02 , the operating system bit that corresponds to DIS_PCON is reset when connection data are copied to the target range. - With MODE=B#16#03 , the operating system bit that corresponds to DIS_PCON remains unchanged. |
+| DIS_CON | BOOL | Each modification of CON_ARR[i].STAT_CON since the last "C_DIAG" call, with the exception of the transitions W#16#12 -&gt; W#16#13 and W#16#13 -&gt; W#16#12 sets CON_ARR[i].DIS_CON to 1.  Note:  - With MODE=B#16#01 and 02 , the operating system bit that corresponds to "DIS_CON" is reset when connection data are copied to the target range. - With MODE=B#16#03 , the operating system bit that corresponds to DIS_CON remains unchanged. |
 | RES0 | BYTE | Reserved (B#16#00) |
 | RES1 | BYTE | Reserved (B#16#00) |
 
@@ -9834,7 +9834,7 @@ For additional information on valid data types, refer to "[Overview of the valid
 | 0000 | No error |
 | 8091 | You have called CREAT_DB as a nested instruction. |
 | 8092 | The "Create a DB" function is currently unavailable because   - The "Compress user memory" function is currently active. - The number of DBs in the CPU has already reached the maximum possible number. - The H-CPU is running link-up or update functions. - The WinAC software CPU has detected an error in the OS of the computer on which WinAC is installed. - The previous Delete is not completed yet |
-| 80A1 | Error in the DB number:  - The number is "0" - The number exceeds the CPU-specific DB quantity - Lower limit > upper limit |
+| 80A1 | Error in the DB number:  - The number is "0" - The number exceeds the CPU-specific DB quantity - Lower limit &gt; upper limit |
 | 80A2 | Error in length of DB:  - The length is "0" - The length was specified with an uneven number - The length is greater than the CPU allows |
 | 80B1 | There is no DB number free. |
 | 80B2 | There is not enough free memory available. |
@@ -9882,7 +9882,7 @@ For additional information on valid data types, refer to "[Overview of the valid
 | 8091 | You have called CREA_DB as a nested instruction. |
 | 8092 | The "Create a DB" function is currently unavailable because   - The "Compress user memory" function is currently active. - The WinAC software CPU has detected an error in the OS of the computer on which WinAC is installed. |
 | 8094 | Invalid value in parameter ATTRIB |
-| 80A1 | Error in the DB number:  - The number is "0" - The number exceeds the CPU-specific DB quantity - Lower limit > upper limit |
+| 80A1 | Error in the DB number:  - The number is "0" - The number exceeds the CPU-specific DB quantity - Lower limit &gt; upper limit |
 | 80A2 | Error in length of DB:  - The length is "0" - The length was specified with an uneven number - The length is greater than the CPU allows |
 | 80B1 | There is no DB number free. |
 | 80B2 | There is not enough free memory available. |
@@ -9950,7 +9950,7 @@ For additional information on valid data types, refer to "[Overview of the valid
 | 8092 | The "Create data block" function is currently unavailable because  - The "Compress user memory" function is currently active. - The maximum number of blocks on your CPU has already been reached. |
 | 8093 | No data block or a data block that is not in the work memory is specified for the SRCBLK parameter. |
 | 8094 | A not yet supported attribute was specified for the ATTRIB parameter. |
-| 80A1 | DB number error:  - The number is 0 or is not within the valid range for the CPU (CPU15xx: 60001 to 60999) - The number exceeds the CPU-specific DB quantity - Low limit > high limit |
+| 80A1 | DB number error:  - The number is 0 or is not within the valid range for the CPU (CPU15xx: 60001 to 60999) - The number exceeds the CPU-specific DB quantity - Low limit &gt; high limit |
 | 80A2 | DB length error:  - The length is "0" - The length is an odd number - The length is greater than permitted by the CPU |
 | 80B1 | No free DB number |
 | 80B2 | Insufficient work memory |
@@ -10708,7 +10708,7 @@ The following table shows the parameters of the instruction "GEO_LOG":
 | Parameters | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
 | MASTER | Input | INT | I, Q, M, D, L or constant | Area ID:  - 0, if the slot in a centralized configuration is located in: Rack 0 to 3 (for S7-300) or 0 to 21 (for S7-400) - 1 to 32: DP master system ID of the associated field device if the slot is located in a field device on PROFIBUS - 100 to 115: PROFINET IO system ID of the associated field device if the slot is located in a field device on PROFINET |
-| STATION | Input | INT | I, Q, M, D, L or constant | - Number of the rack if the area identifier = 0. - Device number of field device if area ID> 0 |
+| STATION | Input | INT | I, Q, M, D, L or constant | - Number of the rack if the area identifier = 0. - Device number of field device if area ID&gt; 0 |
 | SLOT | Input | INT | I, Q, M, D, L or constant | Slot no. |
 | SUBSLOT | Input | INT | I, Q, M, D, L or constant | Sub-module slot (if no sub-module can be inserted, 0 must be entered here) |
 | RET_VAL | Return | INT | I, Q, M, D, L | Error information |
@@ -10746,7 +10746,7 @@ The following table shows the parameters of the instruction "LOG_GEO":
 | RET_VAL | Return | INT | I, Q, M, D, L | Error information |
 | AREA | Output | INT | I, Q, M, D, L | Area ID: indicates how the remaining output parameters are to be interpreted. |
 | MASTER | Output | INT | I, Q, M, D, L | Area ID:  - 0, if the slot is located in a centralized configuration: Rack 0 to 3 (for S7-300) or 0 to 21 (for S7-400) - 1 to 32: DP master system ID of the associated field device if the slot is located in a field device on PROFIBUS - 100 to 115: PROFINET IO system ID of the associated field device if the slot is located in a field device on PROFINET |
-| STATION | Output | INT | I, Q, M, D, L | No. of the rack when:  - Area ID = 0 - Device number of field device if area ID> 0 |
+| STATION | Output | INT | I, Q, M, D, L | No. of the rack when:  - Area ID = 0 - Device number of field device if area ID&gt; 0 |
 | SLOT | Output | INT | I, Q, M, D, L | Slot no. |
 | SUBSLOT | Output | INT | I, Q, M, D, L | Interface module number |
 | OFFSET | Output | INT | I, Q, M, D, L | Offset in user data address area of the associated module |
@@ -10824,7 +10824,7 @@ The following table shows the parameters of the instruction "GADR_LGC":
 | Parameters | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
 | SUBNETID | Input | BYTE | I, Q, M, D, L or constant | Area ID:  - 0, if the slot is in one of the racks 0 (central rack) or 1 to 21 (expansion racks). - DP master system ID of the corresponding distributed I/O system if the slot is in a  distributed I/O device. |
-| RACK | Input | WORD | I, Q, M, D, L or constant | - Number of the rack if the area identifier is 0. - Device number of the distributed I/O device if the area identifier > 0. |
+| RACK | Input | WORD | I, Q, M, D, L or constant | - Number of the rack if the area identifier is 0. - Device number of the distributed I/O device if the area identifier &gt; 0. |
 | SLOT | Input | WORD | I, Q, M, D, L or constant | Slot no. |
 | SUBSLOT | Input | BYTE | I, Q, M, D, L or constant | Sub-module slot (if no sub-module can be inserted, 0 must be entered here) |
 | SUBADDR | Input | WORD | I, Q, M, D, L or constant | Offset in the user data address area of the  module |

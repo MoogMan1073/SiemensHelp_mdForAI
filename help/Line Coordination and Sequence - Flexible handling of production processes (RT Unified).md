@@ -761,8 +761,8 @@ The following table shows the output at input "actualvalue", depending on the se
 | Counter backwards |  |
 | Timer forwards | The input "actualvalue[x]" is irrelevant in this case and is not displayed. The seconds are counted forwards and backwards in "statactualvalue[x]". |
 | Timer backwards |  |
-| Actual value >= setpoint | Compares the value at input "actualvalue[x]" with the setpoint taking into account the hysteresis. |
-| Actual value <= setpoint |  |
+| Actual value &gt;= setpoint | Compares the value at input "actualvalue[x]" with the setpoint taking into account the hysteresis. |
+| Actual value &lt;= setpoint |  |
 | Integrator | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of 1 second and added to the value in "statactualvalue[x]". |
 | Integrator with hold | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of "x" milliseconds (variable) and added to the value in "statactualvalue[x]". |
 
@@ -935,15 +935,15 @@ LCS Runtime uses this tag to signal the result of the job. The following message
 
 | Messages | Description |
 | --- | --- |
-| Job <JobName> was successfully started | The job was successfully started. |
+| Job &lt;JobName&gt; was successfully started | The job was successfully started. |
 | Job not started – Job data string format error | The job was not started. Error in the string format. |
-| Job <JobName> not started – Duplicate Job Name | The job was not started. The job name already exists. |
-| Job <JobName> not started - Recipe not found | The job was not started. The recipe was not found or is not in the "Effective" status. |
-| Job <JobName> not started – Unknown JobCommand | The job was not started. Unknown command. |
-| Job <JobName> not started – Job quantity out of range | The job was not started. The job quantity is out of range. |
-| Job <JobName> not started – Job parameter <Job parameter name> value out of range | The job was not started. Job parameter value is out of range. |
-| Job <JobName> not started – Job parameter <Job parameter name> name not found | The job was not started. Job parameter value was not found. |
-| Job <JobName> not started – Job parameter <Job parameter name> type does not fit | The job was not started. Job parameter type does not match. |
+| Job &lt;JobName&gt; not started – Duplicate Job Name | The job was not started. The job name already exists. |
+| Job &lt;JobName&gt; not started - Recipe not found | The job was not started. The recipe was not found or is not in the "Effective" status. |
+| Job &lt;JobName&gt; not started – Unknown JobCommand | The job was not started. Unknown command. |
+| Job &lt;JobName&gt; not started – Job quantity out of range | The job was not started. The job quantity is out of range. |
+| Job &lt;JobName&gt; not started – Job parameter &lt;Job parameter name&gt; value out of range | The job was not started. Job parameter value is out of range. |
+| Job &lt;JobName&gt; not started – Job parameter &lt;Job parameter name&gt; name not found | The job was not started. Job parameter value was not found. |
+| Job &lt;JobName&gt; not started – Job parameter &lt;Job parameter name&gt; type does not fit | The job was not started. Job parameter type does not match. |
 | MaxJobLimitError | No new job was created. The maximum number of 1000 planned, released or active jobs has been reached. |
 
 > **Note**
@@ -1274,7 +1274,7 @@ You can find additional information under [Equipment module function blocks (SES
 | Increment | Value that is relevant for the following parameter types:  - Counter forwards - Counter backwards - Integrator - Integrator with hold   Depending on the parameter type, a value is increased, decreased or multiplied by the value.  The type of the column is a floating-point number. |
 | Low limit | Low limit of the parameter. The type of the column is a floating-point number. |
 | High limit | High limit of the parameter. The type of the column is a floating-point number. |
-| Hysteresis | Tolerance range for parameter type "Actual value >= setpoint" and "Actual value <= setpoint". The tolerance range is subtracted for "Actual value >= setpoint" and added for "Actual value <= setpoint".  The type of the column is a floating-point number. |
+| Hysteresis | Tolerance range for parameter type "Actual value &gt;= setpoint" and "Actual value &lt;= setpoint". The tolerance range is subtracted for "Actual value &gt;= setpoint" and added for "Actual value &lt;= setpoint".  The type of the column is a floating-point number. |
 
 ##### Parameter types
 
@@ -1285,8 +1285,8 @@ You can find additional information under [Equipment module function blocks (SES
 | Counter backwards |  |
 | Timer forwards | The input "actualvalue[x]" is irrelevant in this case and is not displayed. The seconds are counted forwards and backwards in "statactualvalue[x]". |
 | Timer backwards |  |
-| Actual value >= setpoint | Compares the value at input "actualvalue[x]" with the setpoint taking into account the hysteresis. |
-| Actual value <= setpoint |  |
+| Actual value &gt;= setpoint | Compares the value at input "actualvalue[x]" with the setpoint taking into account the hysteresis. |
+| Actual value &lt;= setpoint |  |
 | Integrator | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of 1 second and added to the value in "statactualvalue[x]". |
 | Integrator with hold | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of "x" milliseconds (variable) and added to the value in "statactualvalue[x]". |
 
@@ -1296,10 +1296,10 @@ You can find additional information under [Equipment module function blocks (SES
 
    Alternatively, select "Open" in the shortcut menu of the equipment module.
 2. Open the "SES / LCS" tab.
-3. Under "Parameters", click <Add new parameter> in the "Name" column.
+3. Under "Parameters", click &lt;Add new parameter&gt; in the "Name" column.
 4. Assign a name and a display name.
 5. Set your settings.
-6. Under "Control module", click <Add new control module> in the "Name" column.
+6. Under "Control module", click &lt;Add new control module&gt; in the "Name" column.
 7. Assign a name and a display name.
 8. Set your settings.
 
@@ -1352,7 +1352,7 @@ You change the settings for the position, geometry, style, color, and font of th
 To be able to create recipes and procedures for a line, assign the relevant plant object to the recipe control in the Inspector window.
 
 1. Using drag-and-drop, move the recipe control from the "Toolbox" task card onto the screen.
-2. In the Inspector window, expand the "Properties > Properties > Miscellaneous" group.
+2. In the Inspector window, expand the "Properties &gt; Properties &gt; Miscellaneous" group.
 3. Under "Interface", click on the selection button in the "Static value" column.
 
    The selection dialog opens.
@@ -1405,7 +1405,7 @@ You change the settings for the position, geometry, style, color, and font of th
 To manage jobs for a line, assign the relevant plant object to the job overview in the Inspector window.
 
 1. Using a drag-and-drop operation, move the job overview from the "Toolbox" task card onto the screen.
-2. In the Inspector window, expand the "Properties > Properties > Miscellaneous" group.
+2. In the Inspector window, expand the "Properties &gt; Properties &gt; Miscellaneous" group.
 3. Under "Interface", click on the selection button in the "Static value" column.
 
    The selection dialog opens.
@@ -1539,8 +1539,8 @@ You change the settings for the position, geometry, style, color, and font of th
 To create steps and operations for an equipment module, use the control in a screen. This procedure is optional, you can also open the equipment module directly in Runtime in the control.
 
 1. Using drag-and-drop, move the SES control from the "Toolbox" task card onto the screen.
-2. In the Inspector window, expand the "Properties > Properties > Miscellaneous" group.
-3. Under "Interface > Plant objects", click the selection button in the "Static value" column.
+2. In the Inspector window, expand the "Properties &gt; Properties &gt; Miscellaneous" group.
+3. Under "Interface &gt; Plant objects", click the selection button in the "Static value" column.
 
    The selection dialog opens.
 4. Select a configured equipment module and confirm the selection.
@@ -1585,14 +1585,14 @@ Or the property is empty.
   You can find more information in the section "Configuring users and roles" in the WinCC Unified help.
 - The "Allow operator control" option is activated in the control properties under "Security".
 - The "Authorization" option is empty in the control properties under "Security".
-- The "Require explicit unlock" option is disabled under the "Read", "Write" and "Operate" property in the control properties under "Properties > Miscellaneous > Interface".
+- The "Require explicit unlock" option is disabled under the "Read", "Write" and "Operate" property in the control properties under "Properties &gt; Miscellaneous &gt; Interface".
 
   This control property is for multipoint touch displays and is not supported in V17.
 
 #### Procedure
 
 1. Select the desired control in the screen.
-2. Expand the property "Read", "Write" or "Operate" under "Properties > Miscellaneous > Interface".
+2. Expand the property "Read", "Write" or "Operate" under "Properties &gt; Miscellaneous &gt; Interface".
 3. Expand the drop-down list in the "Static value" column under "Authorization".
 
    The function rights are displayed.
@@ -1637,14 +1637,14 @@ Or the property is empty.
   You can find more information in the section "Configuring users and roles" in the WinCC Unified help.
 - The "Allow operator control" option is activated in the control properties under "Security".
 - The "Authorization" option is empty in the control properties under "Security".
-- The "Require explicit unlock" option is disabled under the "Read", "Write" and "Operate" property in the control properties under "Properties > Miscellaneous > Interface".
+- The "Require explicit unlock" option is disabled under the "Read", "Write" and "Operate" property in the control properties under "Properties &gt; Miscellaneous &gt; Interface".
 
   This control property is for multipoint touch displays and is not supported in V17.
 
 #### Procedure
 
 1. Select the desired control in the screen.
-2. Expand the property "Read", "Write" or "Operate" under "Properties > Miscellaneous > Interface".
+2. Expand the property "Read", "Write" or "Operate" under "Properties &gt; Miscellaneous &gt; Interface".
 3. Expand the drop-down list in the "Static value" column under "Authorization".
 
    The function rights are displayed.
@@ -1673,7 +1673,7 @@ Not all configuration changes can be compiled and downloaded in delta mode. The 
 | Element | Delta download capability | No delta download capability |
 | --- | --- | --- |
 | LCS plant object | **Equipment operation**   Value change in the "Operation parameters" area:  - Default value - Minimum value - Maximum value | General:  - Create, rename or delete - Copy and paste - Move within the plant view - Exchange instance data block |
-| SES plant object | **Equipment module**   Value changes in the "Parameters" area:  - Increment - Low limit - High limit - Hysteresis     "Equipment module configuration > Equipment module block input/output" area:  - Change value |  |
+| SES plant object | **Equipment module**   Value changes in the "Parameters" area:  - Increment - Low limit - High limit - Hysteresis     "Equipment module configuration &gt; Equipment module block input/output" area:  - Change value |  |
 | LCS plant object type | **Unit**   Assign new tag:  - Job ID - Process mode      **Equipment operation**   "Commands" area:  - Change values - Change tags     "Status" area:  - Change values - Change mask - Change tags     "Operation parameters" area:  - Changing an existing parameter - Creating a new parameter - Delete existing parameter | In general, if an instance of the plant object type exists:  - Change an ISA-88 type definition - Exchange function block - Rename or delete |
 | SES plant object type | **Equipment module**   "Parameters" area:  - Changing an existing parameter - Creating a new parameter - Delete existing parameter     "Control module" area:  - Change existing control module - Create new control module - Delete existing control module - Change existing parameters within a control module - Create a new parameter within a control element - Clear existing parameters within a control element |  |
 | LCS controls | - Assign or change a line in the properties of the recipe control or job overview. - Assigning or changing the function rights. | - |
@@ -1697,7 +1697,7 @@ In addition, the number of plant objects (instances) used is displayed during co
 
 ### Solve causes of errors during validation
 
-1. Navigate in the Inspector window to "Info > Compile".
+1. Navigate in the Inspector window to "Info &gt; Compile".
 2. ![Solve causes of errors during validation](images/122765203595_DV_resource.Stream@PNG-de-DE.png) Set the filter so that error messages are displayed.
 
    If a green arrow ![Solve causes of errors during validation](images/122844867979_DV_resource.Stream@PNG-de-DE.png) is displayed in the "Go to" column for a message, you can go directly to the appropriate tab for correcting the cause of the alarm.
@@ -1707,7 +1707,7 @@ In addition, the number of plant objects (instances) used is displayed during co
 
 ### Showing the number of plant objects (instances)
 
-The quantities of the following instances that are defined as ISA-88 type definitions and used in the plant view are displayed under "Info > Compile" in the Inspector window:
+The quantities of the following instances that are defined as ISA-88 type definitions and used in the plant view are displayed under "Info &gt; Compile" in the Inspector window:
 
 - Instances of LCS units
 - Instances of SES units
@@ -1870,7 +1870,7 @@ A procedure has the following properties:
 
 1. Select the "Add" button in the "Procedures" tab.
 
-   Alternatively, click the "<Add>" entry in the "Overview > Procedure list" tab.
+   Alternatively, click the "&lt;Add&gt;" entry in the "Overview &gt; Procedure list" tab.
 
    A procedure is created with "Draft" status.
 
@@ -2074,7 +2074,7 @@ A recipe has the following properties:
 
 1. Select the "Add" button in the "Recipes" tab.
 
-   Alternatively, click the "<Add>" entry in the "Overview > Recipe list" tab.
+   Alternatively, click the "&lt;Add&gt;" entry in the "Overview &gt; Recipe list" tab.
 
    A recipe with the "Draft" status is created.
 
@@ -2261,7 +2261,7 @@ If the export file cannot be stored in the download path defined in the browser,
 
 ##### Result
 
-All created procedures and recipes are saved regardless of status in the "Procedures_Recipes_<Line name>.json" file.
+All created procedures and recipes are saved regardless of status in the "Procedures_Recipes_&lt;Line name&gt;.json" file.
 
 #### Importing procedures and recipes (LCS) (RT Unified)
 
@@ -2317,7 +2317,7 @@ If you have already tried to drag and drop the file, close the browser and reope
 - Recipes have been imported.
 
   Materials linked to recipes are not imported.
-- A log file is stored in the folder configured in the download settings of the browser. The file named LcsImportLog_<Name of import file>.txt contains the following information:
+- A log file is stored in the folder configured in the download settings of the browser. The file named LcsImportLog_&lt;Name of import file&gt;.txt contains the following information:
 
   - Time stamp
   - Information: List of successfully imported procedures and recipes
@@ -2499,7 +2499,7 @@ A job has the following properties:
 
 ##### Create job
 
-1. Select the "Add" button or click the "<Add>" entry in the list.
+1. Select the "Add" button or click the "&lt;Add&gt;" entry in the list.
 
    A job is created in "Planned" status.
 
@@ -2970,7 +2970,7 @@ In the material overview, you define the following properties in the "Material c
 
 ##### Creating a material class
 
-1. Select the "Add" button or click the "<Add>" entry in the list.
+1. Select the "Add" button or click the "&lt;Add&gt;" entry in the list.
 
    A material class is created in "Draft" status.
 
@@ -3021,7 +3021,7 @@ In the material overview, you define the following properties in the "Material" 
 
 ##### Creating material
 
-1. Select the "Add" button or click the "<Add>" entry in the list.
+1. Select the "Add" button or click the "&lt;Add&gt;" entry in the list.
 
    A material in "Draft" status is created.
 
@@ -3121,7 +3121,7 @@ You have the option to make settings for control modules and parameters. By defa
 | Setting |  | Description |
 | --- | --- | --- |
 | ![Introduction](images/129729182347_DV_resource.Stream@PNG-de-DE.png) | Set | The binary output that is configured under "Block input/output" in TIA Portal is output at the function block under "cmcommand".  If the "Set" setting is active, the binary output is influenced by the "Value" setting.  If a step is active, the value under "cmcommand" is changed. If the step is completed and the binary output is not used again in the next step, "cmcommand" is reset.   If the "Set" setting is not active, no setpoint field appears under "Operations".  The parameter types "Timer forwards" and "Timer backwards" have a different behavior (see table below). |
-| ![Introduction](images/129729103499_DV_resource.Stream@PNG-de-DE.png)     ![Introduction](images/129729107211_DV_resource.Stream@PNG-de-DE.png)     ![Introduction](images/143283152523_DV_resource.Stream@PNG-de-DE.png)     ![Introduction](images/143283161099_DV_resource.Stream@PNG-de-DE.png) | Value | If the "Set" setting is active, the value at "cmcommand" is influenced.  If the "Check" setting is active, the value at "cmfbonoff" is checked dependent on the configured parameter type.    Under "Value", the "0" or "1" value is displayed for the following parameter types:  - External - Counter forwards - Counter backwards - Actual value >= setpoint - Actual value <= setpoint - Integrator - Integrator with hold   Under "Value", the "Play" or "Pause" symbol is displayed for the following parameter types:  - Timer forwards - Timer backwards |
+| ![Introduction](images/129729103499_DV_resource.Stream@PNG-de-DE.png)     ![Introduction](images/129729107211_DV_resource.Stream@PNG-de-DE.png)     ![Introduction](images/143283152523_DV_resource.Stream@PNG-de-DE.png)     ![Introduction](images/143283161099_DV_resource.Stream@PNG-de-DE.png) | Value | If the "Set" setting is active, the value at "cmcommand" is influenced.  If the "Check" setting is active, the value at "cmfbonoff" is checked dependent on the configured parameter type.    Under "Value", the "0" or "1" value is displayed for the following parameter types:  - External - Counter forwards - Counter backwards - Actual value &gt;= setpoint - Actual value &lt;= setpoint - Integrator - Integrator with hold   Under "Value", the "Play" or "Pause" symbol is displayed for the following parameter types:  - Timer forwards - Timer backwards |
 | ![Introduction](images/115226877835_DV_resource.Stream@PNG-de-DE.png) | Check | This setting checks whether all conditions are met.  If "Check" is not activated, the condition is immediately fulfilled. |
 | ![Introduction](images/115237301387_DV_resource.Stream@PNG-de-DE.png) | Status | Shows the status of the control module or parameter if the step is being executed in "Monitoring" tab:    ![Introduction](images/133440073995_DV_resource.Stream@PNG-de-DE.png) Idle    ![Introduction](images/133440082571_DV_resource.Stream@PNG-de-DE.png) Active    ![Introduction](images/133439941643_DV_resource.Stream@PNG-de-DE.png) Conditions met    ![Introduction](images/133440027019_DV_resource.Stream@PNG-de-DE.png) Error |
 | ![Introduction](images/129729110923_DV_resource.Stream@PNG-de-DE.png) | Logic | OR logic operation: If the "OR" setting is set for all parameters, at least one parameter must be fulfilled.  Parameters without the "OR" setting have an AND logic operation. |
@@ -3157,7 +3157,7 @@ The following table applies to all parameter types except for "Timer forwards" a
 | Setting |  |  |  | Effect |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Set | Value | Check | OR | cmcommand | parametersetpoint | actualvalue | cmbonoff | Other effect |
-| x | 1 | x | - | Set to 1. | The entered setpoint is output. | At each signal change from 0.0 to 1.0 at assigned input "actualvalue[x]", the value in "statactualvalue[x]" is increased by the value in "Increment". | Not relevant. | The parameter condition is met when "statactualvalue[x]" >= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
+| x | 1 | x | - | Set to 1. | The entered setpoint is output. | At each signal change from 0.0 to 1.0 at assigned input "actualvalue[x]", the value in "statactualvalue[x]" is increased by the value in "Increment". | Not relevant. | The parameter condition is met when "statactualvalue[x]" &gt;= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
 | x | 0 | x | - | Set to 0. | The entered setpoint is output. | At each signal change from 0.0 to 1.0 at assigned input "actualvalue[x]", the value in "statactualvalue[x]" is increased by the value in "Increment". | Not relevant. | - |
 
 ##### Parameter type "Counter backwards"
@@ -3165,31 +3165,31 @@ The following table applies to all parameter types except for "Timer forwards" a
 | Setting |  |  |  | Effect |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Set | Value | Check | OR | cmcommand | parametersetpoint | actualvalue | cmbonoff | Other effect |
-| x | 1 | x | - | Set to 1. | The entered setpoint is output. | At each signal change from 0.0 to 1.0 at assigned input "actualvalue[x]", the value in "statactualvalue[x]" is decreased by the value in "Increment". | Not relevant. | The parameter condition is met when "statactualvalue[x]" >= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
+| x | 1 | x | - | Set to 1. | The entered setpoint is output. | At each signal change from 0.0 to 1.0 at assigned input "actualvalue[x]", the value in "statactualvalue[x]" is decreased by the value in "Increment". | Not relevant. | The parameter condition is met when "statactualvalue[x]" &gt;= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
 | x | 0 | x | - | Set to 0. | The entered setpoint is output. | At each signal change from 0.0 to 1.0 at assigned input "actualvalue[x]", the value in "statactualvalue[x]" is decreased by the value in "Increment". | Not relevant. | - |
 
-##### Parameter type "Actual value >= Setpoint"
+##### Parameter type "Actual value &gt;= Setpoint"
 
 | Setting |  |  |  | Effect |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Set | Value | Check | OR | cmcommand | parametersetpoint | actualvalue | cmbonoff | Other effect |
-| x | 1 | x | - | Set to 1. | The entered setpoint is output. | The value at input "actualvalue[x]" is compared with the setpoint taking into account the hysteresis. | Not relevant. | The parameter condition is met when "statactualvalue[x]" >= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
-| x | 0 | x | - | Set to 0. | The entered setpoint is output. | The value at input "actualvalue[x]" is compared with the setpoint taking into account the hysteresis. | Not relevant. | The parameter condition is met when "statactualvalue[x]" >= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
+| x | 1 | x | - | Set to 1. | The entered setpoint is output. | The value at input "actualvalue[x]" is compared with the setpoint taking into account the hysteresis. | Not relevant. | The parameter condition is met when "statactualvalue[x]" &gt;= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
+| x | 0 | x | - | Set to 0. | The entered setpoint is output. | The value at input "actualvalue[x]" is compared with the setpoint taking into account the hysteresis. | Not relevant. | The parameter condition is met when "statactualvalue[x]" &gt;= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
 
-##### Parameter type "Actual value <= Setpoint"
+##### Parameter type "Actual value &lt;= Setpoint"
 
 | Setting |  |  |  | Effect |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Set | Value | Check | OR | cmcommand | parametersetpoint | actualvalue | cmbonoff | Other effect |
-| x | 1 | x | - | Set to 1. | The entered setpoint is output. | The value at input "actualvalue[x]" is compared with the setpoint taking into account the hysteresis. | Not relevant. | The parameter condition is fulfilled if "statactualvalue[x]" <= setpoint and is output in bit x (x = block input/output) of the "statcmfbonoff" element. |
-| x | 0 | x | - | Set to 0. | The entered setpoint is output. | The value at input "actualvalue[x]" is compared with the setpoint taking into account the hysteresis. | Not relevant. | The parameter condition is fulfilled if "statactualvalue[x]" <= setpoint and is output in bit x (x = block input/output) of the "statcmfbonoff" element. |
+| x | 1 | x | - | Set to 1. | The entered setpoint is output. | The value at input "actualvalue[x]" is compared with the setpoint taking into account the hysteresis. | Not relevant. | The parameter condition is fulfilled if "statactualvalue[x]" &lt;= setpoint and is output in bit x (x = block input/output) of the "statcmfbonoff" element. |
+| x | 0 | x | - | Set to 0. | The entered setpoint is output. | The value at input "actualvalue[x]" is compared with the setpoint taking into account the hysteresis. | Not relevant. | The parameter condition is fulfilled if "statactualvalue[x]" &lt;= setpoint and is output in bit x (x = block input/output) of the "statcmfbonoff" element. |
 
 ##### Parameter type "Integrator"
 
 | Setting |  |  |  | Effect |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Set | Value | Check | OR | cmcommand | parametersetpoint | actualvalue | cmbonoff | Other effect |
-| x | 1 | x | - | Set to 1. | The entered setpoint is output. | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of 1 second and added to the value in "statactualvalue[x]". | Not relevant. | The parameter condition is met when "statactualvalue[x]" >= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
+| x | 1 | x | - | Set to 1. | The entered setpoint is output. | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of 1 second and added to the value in "statactualvalue[x]". | Not relevant. | The parameter condition is met when "statactualvalue[x]" &gt;= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
 | x | 0 | x | - | Set to 0. | The entered setpoint is output. | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of 1 second and added to the value in "statactualvalue[x]". | Not relevant. | - |
 
 ##### Parameter type "Integrator with hold"
@@ -3197,7 +3197,7 @@ The following table applies to all parameter types except for "Timer forwards" a
 | Setting |  |  |  | Effect |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Set | Value | Check | OR | cmcommand | parametersetpoint | actualvalue | cmbonoff | Other effect |
-| x | 1 | x | - | Set to 1. | The entered setpoint is output. | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of "x" milliseconds (variable) and added to the value in "statactualvalue[x]". | Not relevant. | The parameter condition is met when "statactualvalue[x]" >= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
+| x | 1 | x | - | Set to 1. | The entered setpoint is output. | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of "x" milliseconds (variable) and added to the value in "statactualvalue[x]". | Not relevant. | The parameter condition is met when "statactualvalue[x]" &gt;= setpoint and is output in bit x (x = block input/output) at the "statcmfbonoff" element. |
 | x | 0 | x | - | Set to 0. | The entered setpoint is output. | The value at input "actualvalue[x]" is multiplied by the value in "Increment" and the time interval of "x" milliseconds (variable) and added to the value in "statactualvalue[x]". | Not relevant. | - |
 
 ##### "Timer forwards" and "Timer backwards" parameter type
@@ -3224,13 +3224,13 @@ If the setpoint of "Timer forwards" is reached or the setpoint of "Timer backwar
 **Timer forwards**
 **"**
 
-The seconds are counted forwards in "statactualvalue[x]". The parameter condition is met when "statactualvalue[x]" >= setpoint.
+The seconds are counted forwards in "statactualvalue[x]". The parameter condition is met when "statactualvalue[x]" &gt;= setpoint.
 
 **"**
 **Timer backwards**
 **"**
 
-The seconds are counted backwards in "statactualvalue[x]". The parameter condition is met when "statactualvalue[x]" <= 0.
+The seconds are counted backwards in "statactualvalue[x]". The parameter condition is met when "statactualvalue[x]" &lt;= 0.
 
 #### Creating and managing steps (SES) (RT Unified)
 
@@ -3476,7 +3476,7 @@ If the export file cannot be stored in the download path defined in the browser,
 
 ##### Result
 
-The engineering data and all steps and operations created in Runtime are saved independent of the status in the file "<Name of the unit>_<Name of the equipment module>.json".
+The engineering data and all steps and operations created in Runtime are saved independent of the status in the file "&lt;Name of the unit&gt;_&lt;Name of the equipment module&gt;.json".
 
 #### Importing steps and operations (SES) (RT Unified)
 
@@ -3544,7 +3544,7 @@ If the log file cannot be stored in the download path defined in the browser, th
 
 All steps and operations are imported when they match the data in the TIA Portal.
 
-A log file with the name "SESImportLog_<Name of the unit> _<Name of the equipment module>.txt" is created; it contains the following information:
+A log file with the name "SESImportLog_&lt;Name of the unit&gt; _&lt;Name of the equipment module&gt;.txt" is created; it contains the following information:
 
 - Time stamp
 - List of successfully imported steps and operations
@@ -3959,7 +3959,7 @@ Before you create a job report, create a report job in the "Reports" control and
 9. Select the tag of your line, e.g. "HMI_RT_1::Line_1.@JobIdForLcsReporting"
 10. Define the following settings:
 
-    - Condition: ">"
+    - Condition: "&gt;"
     - Condition value: "0"
 11. Add a report job in the "Report jobs" area.
 12. Define the template for the report job.

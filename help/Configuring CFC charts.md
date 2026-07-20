@@ -28,12 +28,12 @@ In order to protect plants, systems, machines and networks against cyber threats
 Customers are responsible for preventing unauthorized access to their plants, systems, machines and networks. Such systems, machines and components should only be connected to an enterprise network or the internet if and to the extent such a connection is necessary and only when appropriate security measures (e.g. firewalls and/or network segmentation) are in place.
 
 For additional information on industrial cybersecurity measures that may be implemented, please visit   
-<https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html>.
+[https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html).
 
 Siemens’ products and solutions undergo continuous development to make them more secure. Siemens strongly recommends that product updates are applied as soon as they are available and that the latest product versions are used. Use of product versions that are no longer supported, and failure to apply the latest updates may increase customer’s exposure to cyber threats.
 
 To stay informed about product updates, subscribe to the Siemens Industrial Cybersecurity RSS Feed under   
-<https://new.siemens.com/global/en/products/services/cert.html>.
+[https://new.siemens.com/global/en/products/services/cert.html](https://new.siemens.com/global/en/products/services/cert.html).
 
 ## Introduction and basics
 
@@ -174,7 +174,7 @@ You can also interconnect the parameters of function blocks and functions with e
 
 There are other block types in the S7 target system.
 
-Additional information: "Working with CFC charts for S7 > Blocks in CFC charts for S7"
+Additional information: "Working with CFC charts for S7 &gt; Blocks in CFC charts for S7"
 
 #### Properties of instructions and blocks
 
@@ -244,7 +244,7 @@ Additional information: "[Central change of a type](#central-change-of-a-block-t
 >
 > If you delete a type of which an instance still exists, then you will no longer be able to compile the CFC charts of this target system.
 >
-> You may find the information on the missing block types in the alarms of the Inspector window or in the "Chart sequence & extras" editor.
+> You may find the information on the missing block types in the alarms of the Inspector window or in the "Chart sequence &amp; extras" editor.
 
 #### Instance
 
@@ -537,7 +537,7 @@ The following languages are present in a project:
 
   Based on the editing language, all texts can be translated into the various project languages.
 
-Editing language and project languages are configured in the project tree folder "Languages & resources" > "Project languages".
+Editing language and project languages are configured in the project tree folder "Languages &amp; resources" &gt; "Project languages".
 
 > **Note**
 >
@@ -575,7 +575,7 @@ There are different ways of translating texts:
 
 More information in the information system of the TIA Portal:
 
-- "Editing project data > [Working with multi-language projects](Editing%20project%20data.md#working-with-multi-language-projects)"
+- "Editing project data &gt; [Working with multi-language projects](Editing%20project%20data.md#working-with-multi-language-projects)"
 
 #### User interface language: Installing language packs
 
@@ -591,7 +591,7 @@ You can install additional interface languages using TIA Administrator:
 
 You can copy within the TIA Portal either by dragging with the mouse or using the "Copy" and "Paste" commands.
 
-If you want to copy an object in the same area by dragging it with the mouse, you can do this by holding down the <Ctrl> key.
+If you want to copy an object in the same area by dragging it with the mouse, you can do this by holding down the &lt;Ctrl&gt; key.
 
 All selected objects are copied.
 
@@ -695,7 +695,7 @@ This section contains information on the following topics:
 
 - [Basic settings for CFC charts](#basic-settings-for-cfc-charts)
 - ["CFC" Editor](#cfc-editor)
-- ["Chart sequence & extras" Editor](#chart-sequence-extras-editor)
+- ["Chart sequence &amp; extras" Editor](#chart-sequence-extras-editor)
 - [Keyboard operation in CFC](#keyboard-operation-in-cfc)
 - [Icons in CFC](#icons-in-cfc)
 
@@ -705,7 +705,7 @@ The basic settings of CFC charts refer to all charts that you have configured in
 
 #### Default settings for new charts
 
-You define the basic settings for new charts in the "Options > Settings > Charts" menu.
+You define the basic settings for new charts in the "Options &gt; Settings &gt; Charts" menu.
 
 You can change the properties of each CFC chart at any time regardless of the basic settings.
 
@@ -731,7 +731,7 @@ Existing CFC charts remain unchanged.
 
 Newly created CFC charts have an assigned main task.
 
-Depending on the target system, you change this task assignment in the "Chart sequence & extras" editor.
+Depending on the target system, you change this task assignment in the "Chart sequence &amp; extras" editor.
 
 Additional information: "[Runtime model](#runtime-model)"
 
@@ -743,13 +743,13 @@ This behavior also applies following a program restart.
 
 **Zoom function in the CFC chart**
 
-You zoom in the CFC chart with the <Ctrl> key and the mouse wheel.
+You zoom in the CFC chart with the &lt;Ctrl&gt; key and the mouse wheel.
 
 The zoom focuses on the position of the mouse pointer.
 
 Alternative zoom options:
 
-- Keyboard shortcuts <Ctrl+"+"> and <Ctrl+"-">
+- Keyboard shortcuts &lt;Ctrl+"+"&gt; and &lt;Ctrl+"-"&gt;
 - Zoom scale at the bottom of the editor window
 - % entry or selection in the drop-down list
 
@@ -767,9 +767,9 @@ Alternative zoom options:
   
 [Extending a CFC chart](#extending-a-cfc-chart)
   
-["Chart sequence & extras" Editor](#chart-sequence-extras-editor)
+["Chart sequence &amp; extras" Editor](#chart-sequence-extras-editor)
   
-"Chart sequence & extras" editor for S7
+"Chart sequence &amp; extras" editor for S7
   
 [Basics of CFC](#basics-of-cfc)
 
@@ -874,7 +874,7 @@ Testing CFC charts in the S7 system
   
 [Adding an instruction or block to the CFC chart](#adding-an-instruction-or-block-to-the-cfc-chart)
   
-["Chart sequence & extras" Editor](#chart-sequence-extras-editor)
+["Chart sequence &amp; extras" Editor](#chart-sequence-extras-editor)
   
 [Overview for configuration of CFC charts](#overview-for-configuration-of-cfc-charts)
   
@@ -886,7 +886,7 @@ Testing CFC charts in the S7 system
 
 #### Overview
 
-In the "Chart sequence & extras" editor, you configure the run sequence of charts.
+In the "Chart sequence &amp; extras" editor, you configure the run sequence of charts.
 
 The assignment of the instructions/blocks to the tasks and therefore the run sequence within the target system is also displayed.
 
@@ -912,7 +912,7 @@ Tabs that are not supported by the target system are not visible.
 
 **Information on S7 target systems**
 
-- "Working with CFC charts for S7 > "Chart sequence & extras" editor for S7"
+- "Working with CFC charts for S7 &gt; "Chart sequence &amp; extras" editor for S7"
 
 #### Table layout
 
@@ -954,20 +954,20 @@ The following shortcuts enable operation without the mouse:
 
 | Function | Keyboard shortcut | Menu command |
 | --- | --- | --- |
-| Go to the next open CFC chart | <Ctrl+F6> |  |
-| Go to the previous open CFC chart | <Ctrl+Shift+F6> |  |
-| Go to the next chart partition, if more than one chart partition has been created | <Shift+PgDn> |  |
-| Go to the previous chart partition, if more than one chart partition has been created | <Shift+PgUp> |  |
-| Project tree:  Go to the next CFC chart | <Ctrl+Arrow up> |  |
-| Project tree:  Go to the previous CFC chart | <Ctrl+Arrow down> |  |
-| Open/close project tree | <Ctrl+1> | View > Project tree |
-| Open/close task card | <Ctrl+3> | View > Task card |
-| Open/close detail view | <Ctrl+4> | View > Detail view |
-| Open/close Inspector window | <Ctrl+5> | View > Inspector window |
-| Display or hide reference projects | <Ctrl+9> |  |
-| Download project data to the device | <Ctrl+L> | Online > Download to device |
-| Open Help | <F1> | Help > Show help |
-| Open help on a block | <Shift+F1> |  |
+| Go to the next open CFC chart | &lt;Ctrl+F6&gt; |  |
+| Go to the previous open CFC chart | &lt;Ctrl+Shift+F6&gt; |  |
+| Go to the next chart partition, if more than one chart partition has been created | &lt;Shift+PgDn&gt; |  |
+| Go to the previous chart partition, if more than one chart partition has been created | &lt;Shift+PgUp&gt; |  |
+| Project tree:  Go to the next CFC chart | &lt;Ctrl+Arrow up&gt; |  |
+| Project tree:  Go to the previous CFC chart | &lt;Ctrl+Arrow down&gt; |  |
+| Open/close project tree | &lt;Ctrl+1&gt; | View &gt; Project tree |
+| Open/close task card | &lt;Ctrl+3&gt; | View &gt; Task card |
+| Open/close detail view | &lt;Ctrl+4&gt; | View &gt; Detail view |
+| Open/close Inspector window | &lt;Ctrl+5&gt; | View &gt; Inspector window |
+| Display or hide reference projects | &lt;Ctrl+9&gt; |  |
+| Download project data to the device | &lt;Ctrl+L&gt; | Online &gt; Download to device |
+| Open Help | &lt;F1&gt; | Help &gt; Show help |
+| Open help on a block | &lt;Shift+F1&gt; |  |
 
 #### TIA Portal: Operation with the keyboard
 
@@ -982,7 +982,7 @@ You can find an overview of all keyboard shortcuts and the option of assigning u
 
 More information in the TIA Portal Information System:
 
-- "User interface and operation > [Keyboard operation in the TIA Portal](Introduction%20to%20the%20TIA%20Portal.md#basic-functions-of-the-tia-portal)"
+- "User interface and operation &gt; [Keyboard operation in the TIA Portal](Introduction%20to%20the%20TIA%20Portal.md#basic-functions-of-the-tia-portal)"
 
   You learn how to navigate in the TIA Portal using the keyboard, edit objects and customize the TIA Portal to your needs.
 
@@ -992,7 +992,7 @@ More information in the TIA Portal Information System:
 
 ["CFC" Editor](#cfc-editor)
   
-["Chart sequence & extras" Editor](#chart-sequence-extras-editor)
+["Chart sequence &amp; extras" Editor](#chart-sequence-extras-editor)
 
 ### Icons in CFC
 
@@ -1010,7 +1010,7 @@ The tables below show the icons that you use when working with CFC and describe 
   - Icons at the block instances
   - Interconnections
   - Other icons
-- "Chart sequence & extras" editor
+- "Chart sequence &amp; extras" editor
 
   - General
   - "Chart sequence" tab
@@ -1025,7 +1025,7 @@ The tables below show the icons that you use when working with CFC and describe 
 | Icon | Meaning |
 | --- | --- |
 | ![TIA Portal project tree: CFC charts](images/161100152587_DV_resource.Stream@PNG-de-DE.png) | Navigation area for managing CFC charts |
-| ![TIA Portal project tree: CFC charts](images/161099698827_DV_resource.Stream@PNG-de-DE.png) | Opens the "Chart sequence & extras" editor |
+| ![TIA Portal project tree: CFC charts](images/161099698827_DV_resource.Stream@PNG-de-DE.png) | Opens the "Chart sequence &amp; extras" editor |
 | ![TIA Portal project tree: CFC charts](images/160947545739_DV_resource.Stream@PNG-de-DE.png) | Creates a new CFC chart. |
 | ![TIA Portal project tree: CFC charts](images/161098110603_DV_resource.Stream@PNG-de-DE.png) | CFC chart:  Opens the chart in the CFC editor. |
 | ![TIA Portal project tree: CFC charts](images/161099707275_DV_resource.Stream@PNG-de-DE.png) | Hierarchical CFC chart:  Icon for a group of hierarchical charts, consisting of the basic chart and subcharts |
@@ -1062,7 +1062,7 @@ The icons for the status display identify whether changes exist in the project a
 
 | Icon | Meaning |
 | --- | --- |
-| ![Project tree / Toolbars: Other icons](images/161100122379_DV_resource.Stream@PNG-de-DE.png) | Opens the force table.  You find the entry in the project tree under "Charts - Trend/dynamic display & force table" |
+| ![Project tree / Toolbars: Other icons](images/161100122379_DV_resource.Stream@PNG-de-DE.png) | Opens the force table.  You find the entry in the project tree under "Charts - Trend/dynamic display &amp; force table" |
 | ![Project tree / Toolbars: Other icons](images/161099921931_DV_resource.Stream@PNG-de-DE.png) | Refreshes the display  The icon is used in multiple editors and views. |
 | ![Project tree / Toolbars: Other icons](images/144473179531_DV_resource.Stream@PNG-de-DE.png) | TIA Portal toolbar:  Split editor area horizontally or vertically  Use the split editor areas to drag interconnections between charts or chart partitions. |
 
@@ -1118,7 +1118,7 @@ The icons for the status display identify whether changes exist in the project a
 
 **Interconnections in the data flow**
 
-The color of the interconnection lines depends on the data type of the data source. You select the colors in menu "Options > Settings > Charts > CFC > General".
+The color of the interconnection lines depends on the data type of the data source. You select the colors in menu "Options &gt; Settings &gt; Charts &gt; CFC &gt; General".
 
 For interconnections to operands whose data type is not defined, the default value "black" is used.
 
@@ -1137,12 +1137,12 @@ For interconnections to operands whose data type is not defined, the default val
 | ![CFC editor: Chart view in the "Data flow" tab](images/161097477003_DV_resource.Stream@PNG-de-DE.png) | Footer:  Select zoom factor of work area |
 | ![CFC editor: Chart view in the "Data flow" tab](images/161097493899_DV_resource.Stream@PNG-de-DE.png) | Footer:  Slider for zoom factor of the work area |
 | ![CFC editor: Chart view in the "Data flow" tab](images/161097485451_DV_resource.Stream@PNG-de-DE.png) | Footer:  Opens a window for navigation in the chart |
-| ![CFC editor: Chart view in the "Data flow" tab](images/35945135243_DV_resource.Stream@PNG-de-DE.png) | Inheritance status of attributes of a selected parameter in the Inspector window (tab "Properties > General")  - The value of the attribute is handed down from the type to the instance. |
-| ![CFC editor: Chart view in the "Data flow" tab](images/35939430795_DV_resource.Stream@PNG-de-DE.png) | Inheritance status of attributes of a selected parameter in the Inspector window (tab "Properties > General")  - The value is not handed down from the type to the instance because it was changed at the instance.   To restore the inheritance, click on the icon. |
+| ![CFC editor: Chart view in the "Data flow" tab](images/35945135243_DV_resource.Stream@PNG-de-DE.png) | Inheritance status of attributes of a selected parameter in the Inspector window (tab "Properties &gt; General")  - The value of the attribute is handed down from the type to the instance. |
+| ![CFC editor: Chart view in the "Data flow" tab](images/35939430795_DV_resource.Stream@PNG-de-DE.png) | Inheritance status of attributes of a selected parameter in the Inspector window (tab "Properties &gt; General")  - The value is not handed down from the type to the instance because it was changed at the instance.   To restore the inheritance, click on the icon. |
 | ![CFC editor: Chart view in the "Data flow" tab](images/161431202443_DV_resource.Stream@PNG-de-DE.png) | Data flow:  Open textual interconnections of interface parameters have the background color "yellow" in the "Operand" column. |
 | ![CFC editor: Chart view in the "Data flow" tab](images/161283729163_DV_resource.Stream@PNG-de-DE.png) | Chart interface:  As long as an interface parameter has not been interconnected, the table cell of the "Data type" column has a "light gray" background color.  Upon interconnection, the background color changes to "medium gray". |
 
-#### "Chart sequence & extras" editor
+#### "Chart sequence &amp; extras" editor
 
 **General**
 
@@ -1177,7 +1177,7 @@ The "Differences" column displays the status of the block in comparison with the
 | --- | --- |
 | !["Chart sequence & extras" editor](images/25862137611_DV_resource.Stream@PNG-de-DE.png) | There are no differences between the compared blocks.  No action required. |
 | !["Chart sequence & extras" editor](images/25903747595_DV_resource.Stream@PNG-de-DE.png) | No instances of this imported block are currently used in the CFC.  Existing differences have no effect in the CFC. |
-| !["Chart sequence & extras" editor](images/25862145803_DV_resource.Stream@PNG-de-DE.png) | There are differences between the compared blocks.  The differences are displayed in the Inspector window in the "Properties > Differences" tab. |
+| !["Chart sequence & extras" editor](images/25862145803_DV_resource.Stream@PNG-de-DE.png) | There are differences between the compared blocks.  The differences are displayed in the Inspector window in the "Properties &gt; Differences" tab. |
 | !["Chart sequence & extras" editor](images/160951074187_DV_resource.Stream@PNG-de-DE.png) | The block type of the imported block was not found in the block folder. |
 | Other status  Example: !["Chart sequence & extras" editor](images/26522556939_DV_resource.Stream@PNG-de-DE.png) | Status information is displayed in the "Properties" tab of the Inspector window.  Example: The block is not compiled. |
 
@@ -1199,7 +1199,7 @@ The icons are displayed in the last column of the "Differences" window.
   
 ["CFC" Editor](#cfc-editor)
   
-["Chart sequence & extras" Editor](#chart-sequence-extras-editor)
+["Chart sequence &amp; extras" Editor](#chart-sequence-extras-editor)
 
 ## Configuring and adapting CFC charts
 
@@ -1315,7 +1315,7 @@ You cannot redo or undo actions after such an action.
 
 Additional information in the information system of the TIA Portal:
 
-- "Introduction to the TIA Portal > [Undoing and redoing actions](Introduction%20to%20the%20TIA%20Portal.md#undoing-and-redoing-actions)"
+- "Introduction to the TIA Portal &gt; [Undoing and redoing actions](Introduction%20to%20the%20TIA%20Portal.md#undoing-and-redoing-actions)"
 
 ### Creating and managing CFC charts
 
@@ -1514,7 +1514,7 @@ Additional information: "[Managing CFC charts and groups](#managing-cfc-charts-a
 
 ##### S7 target systems: Advanced settings
 
-1. If necessary, change the assigned main task under "S7 specific > Sequence".
+1. If necessary, change the assigned main task under "S7 specific &gt; Sequence".
 2. If necessary, change the settings for the run sequence.
 
 ##### Result
@@ -1603,8 +1603,8 @@ The CFC chart is extended.
 
 Use the following keyboard shortcuts to navigate between sheets:
 
-- <Ctrl+Right/Left>
-- <Ctrl+Top/Bottom>
+- &lt;Ctrl+Right/Left&gt;
+- &lt;Ctrl+Top/Bottom&gt;
 
 ---
 
@@ -1669,8 +1669,8 @@ Navigate between the chart partitions using this drop-down list:
 
 Alternatively, change between the chart partitions of the open CFC chart with the following keyboard shortcuts:
 
-- Next chart partition: <Shift+PgDn>
-- Previous chart partition: <Shift+PgUp>
+- Next chart partition: &lt;Shift+PgDn&gt;
+- Previous chart partition: &lt;Shift+PgUp&gt;
 
 ##### Requirement
 
@@ -1683,7 +1683,7 @@ Alternatively, change between the chart partitions of the open CFC chart with th
 
    The new chart partition is displayed in the editor.
 
-   New chart partitions are always created with the name "Partition_<consecutive number>".
+   New chart partitions are always created with the name "Partition_&lt;consecutive number&gt;".
 2. To change the name, select the entry "Displayed chart partition" in the "General" tab of the Inspector window.
 
    Enter a meaningful name and a comment, if necessary.
@@ -1768,7 +1768,7 @@ You can create additional subgroups to an existing group.
 1. Select the CFC or the group in the project tree.
 2. Select the "Rename" command in the shortcut menu.
 
-   Alternatively, press the <F2> key.
+   Alternatively, press the &lt;F2&gt; key.
 3. Enter the new name.
 
 ##### Deleting a CFC
@@ -1833,8 +1833,8 @@ You can select different print settings for printing the CFC charts, e.g. sheet 
 
 | Symbol | Meaning |
 | --- | --- |
-| Menu bar:  - "Options > Settings > Charts" | Basic settings for all CFC charts to be newly created |
-| Chart properties in the Inspector window  - "General > Sheet bars/Layout" | Print settings for one or more selected CFC charts |
+| Menu bar:  - "Options &gt; Settings &gt; Charts" | Basic settings for all CFC charts to be newly created |
+| Chart properties in the Inspector window  - "General &gt; Sheet bars/Layout" | Print settings for one or more selected CFC charts |
 
 > **Note**
 >
@@ -1860,7 +1860,7 @@ You can select different print settings for printing the CFC charts, e.g. sheet 
 
 Additional information in the information system of the TIA Portal:
 
-- "Edit project data > Print project contents > [Print project documentation](Editing%20project%20data.md#printing-project-documentation)"
+- "Edit project data &gt; Print project contents &gt; [Print project documentation](Editing%20project%20data.md#printing-project-documentation)"
 
 ##### Procedure: Displaying print preview
 
@@ -1877,12 +1877,12 @@ Additional information in the information system of the TIA Portal:
 
 1. Check the chart settings:
 
-   - By using the "Options > Settings > Charts" menu command
+   - By using the "Options &gt; Settings &gt; Charts" menu command
    - In the properties of the CFC chart in the Inspector window under "Sheet bars/Layout"
 2. Select the CFC charts you want to print in the project tree.
 3. Select the "Print" command from the shortcut menu.
 
-   Alternatively, use the keyboard shortcut <Ctrl+P>.
+   Alternatively, use the keyboard shortcut &lt;Ctrl+P&gt;.
 4. Select the print settings.
 5. Start the printout with the "Print" button.
 
@@ -2228,7 +2228,7 @@ Interconnections with chart interface parameters are visualized using the chart 
    When the "Interface" area is hidden, enlarge the area with the mouse or click the unhide icon:
 
    ![Procedure](images/132651805963_DV_resource.Stream@PNG-de-DE.png)
-2. If you want to add a new parameter, click the "<add>" line in the "Name" column in the required Input, Output or InOut section.
+2. If you want to add a new parameter, click the "&lt;add&gt;" line in the "Name" column in the required Input, Output or InOut section.
 
    The new parameter is added in the selected line.
 
@@ -2409,10 +2409,10 @@ In the work area, you have the following options for editing the block interface
 
 **Navigation with the keyboard**
 
-- To select individual parameters with the keyboard, click on the block and press the <Down> arrow key: ![Block interface (2)](images/144257272971_DV_resource.Stream@PNG-de-DE.png)
-- Use the <Right> and <Left> arrow keys to switch between the parameters: ![Block interface (2)](images/144257717259_DV_resource.Stream@PNG-de-DE.png), ![Block interface (2)](images/144257725451_DV_resource.Stream@PNG-de-DE.png)
-- Use the <Up> arrow key to return to the block level: ![Block interface (2)](images/144257797643_DV_resource.Stream@PNG-de-DE.png)
-- When the entire block is selected, use the <Right> and <Left> arrow keys to switch between the blocks.
+- To select individual parameters with the keyboard, click on the block and press the &lt;Down&gt; arrow key: ![Block interface (2)](images/144257272971_DV_resource.Stream@PNG-de-DE.png)
+- Use the &lt;Right&gt; and &lt;Left&gt; arrow keys to switch between the parameters: ![Block interface (2)](images/144257717259_DV_resource.Stream@PNG-de-DE.png), ![Block interface (2)](images/144257725451_DV_resource.Stream@PNG-de-DE.png)
+- Use the &lt;Up&gt; arrow key to return to the block level: ![Block interface (2)](images/144257797643_DV_resource.Stream@PNG-de-DE.png)
+- When the entire block is selected, use the &lt;Right&gt; and &lt;Left&gt; arrow keys to switch between the blocks.
 
 ##### Display for hidden parameters (3)
 
@@ -2730,7 +2730,7 @@ For configuration of a CFC chart insert the instructions or blocks to the chart 
 
 You can insert one or more existing blocks using copy and paste:
 
-- Keyboard shortcuts <Ctrl+C> and <Ctrl+V>
+- Keyboard shortcuts &lt;Ctrl+C&gt; and &lt;Ctrl+V&gt;
 
   Blocks copied in are placed at an offset over the blocks that serve as the copy source.
 - Shortcut menu: "Copy" and "Paste" entries
@@ -3001,7 +3001,7 @@ You have the following options to do this:
 - Blocks from the "Program blocks" folder:
 
   - Adding the changed block from the "Program blocks" folder
-  - Use the "Chart sequence & extras" editor in the "Block types" tab (depending on the target system)
+  - Use the "Chart sequence &amp; extras" editor in the "Block types" tab (depending on the target system)
 
 Before the changed block type is imported, the block versions are compared.
 
@@ -3125,11 +3125,11 @@ Additional information: "[Type and instance](#type-and-instance)"
 
 ##### S7 target systems: Alternative procedure
 
-You can also update block types in the "Program blocks" folder in the "Block types" tab of the "Chart sequence & extras" editor.
+You can also update block types in the "Program blocks" folder in the "Block types" tab of the "Chart sequence &amp; extras" editor.
 
 The functionality in this tab is specific to the target system.
 
-Additional information: "Working with CFC charts for S7 > Updating block type imported in CFC"
+Additional information: "Working with CFC charts for S7 &gt; Updating block type imported in CFC"
 
 ##### Result
 
@@ -3203,7 +3203,7 @@ This section contains information on the following topics:
 - [Deleting an interconnection](#deleting-an-interconnection)
 - [Overview of textual interconnections](#overview-of-textual-interconnections)
 - [Creating, editing and closing textual interconnections](#creating-editing-and-closing-textual-interconnections)
-- [Textual interconnections in the "Chart sequence & extras" editor](#textual-interconnections-in-the-chart-sequence-extras-editor)
+- [Textual interconnections in the "Chart sequence &amp; extras" editor](#textual-interconnections-in-the-chart-sequence-extras-editor)
 
 #### Setting the parameters of the input and output parameters
 
@@ -3357,7 +3357,7 @@ The following options are possible for interconnections:
 - From one output parameter to one or several input parameters
 - From one input or output parameter to one external tag
 
-  An overview of the points of use of interconnected tags and global data blocks can be found in the "Tag interconnections" tab of the "Chart sequence & extras" editor.
+  An overview of the points of use of interconnected tags and global data blocks can be found in the "Tag interconnections" tab of the "Chart sequence &amp; extras" editor.
 - Several options are available for input and output parameters of STRUCT data type.
 
   More information: "[Interconnections with structures as input and output parameters](#interconnections-with-structures-as-input-and-output-parameters)"
@@ -3471,7 +3471,7 @@ You have the following options to track a signal for an interconnection across s
 
   To jump back or to switch between positions, select the "Back" command in the shortcut menu of the chart.
 
-  For navigation between the chart partitions, also use the drop-down list or the keyboard shortcuts <Shift+PgUp> and <Shift+PgDn>.
+  For navigation between the chart partitions, also use the drop-down list or the keyboard shortcuts &lt;Shift+PgUp&gt; and &lt;Shift+PgDn&gt;.
 
 **Example**
 
@@ -3606,7 +3606,7 @@ Changing the color assignment has an effect on the display of interconnection li
 ##### Procedure
 
 1. Select the "Settings" command in the "Options" menu.
-2. Select the "Charts > CFC > General" group in the area navigation.
+2. Select the "Charts &gt; CFC &gt; General" group in the area navigation.
 3. Select the desired colors for the data types in the "Color of interconnection lines" area.
 
    You can also use the "Default values" button to reset all settings to the default values.
@@ -3636,8 +3636,8 @@ You can create interconnections using the following methods:
 - Double-click / Click
 - Drag-and-drop
 - Click Clack
-- <C> key and click
-- Copy&Paste
+- &lt;C&gt; key and click
+- Copy&amp;Paste
 - Manual input of the interconnection target (Textual interconnection)
 
 ##### Requirement
@@ -3670,7 +3670,7 @@ You can create interconnections using the following methods:
    The interconnection is inserted and the interconnection line displayed.
 
    Depending on the space available in the CFC chart, the interconnection is displayed either fully or by connectors.
-5. To cancel the interconnection, click on a free location in the CFC chart or press <Esc>.
+5. To cancel the interconnection, click on a free location in the CFC chart or press &lt;Esc&gt;.
 
 ##### Alternative procedure: Drag-and-drop
 
@@ -3691,26 +3691,26 @@ As an alternative, drag the parameter to the target chart using the taskbar of t
 
    The selected parameter turns magenta.
 2. Select a parameter that is shown in green when you place the mouse cursor over it.
-3. To create multiple interconnections, click on additional parameters displayed in green while pressing the <Ctrl> key.
+3. To create multiple interconnections, click on additional parameters displayed in green while pressing the &lt;Ctrl&gt; key.
 
    The interconnections for the clicked parameters are created.
 
-##### Alternative procedure: <C> and click
+##### Alternative procedure: &lt;C&gt; and click
 
-1. Select the input or output parameter and press the <C> key.
+1. Select the input or output parameter and press the &lt;C&gt; key.
 
    The selected parameter turns magenta.
 2. Click on a parameter that is displayed in green.
-3. To create multiple interconnections, click on additional parameters displayed in green while pressing the <Ctrl> key.
+3. To create multiple interconnections, click on additional parameters displayed in green while pressing the &lt;Ctrl&gt; key.
 
    The interconnections for the clicked parameters are created.
 
-##### Alternative procedure: Copy&Paste
+##### Alternative procedure: Copy&amp;Paste
 
 **Keyboard**
 
-1. Select the output parameter and press <Ctrl+C>.
-2. Select the output parameter and press <Ctrl+V>.
+1. Select the output parameter and press &lt;Ctrl+C&gt;.
+2. Select the output parameter and press &lt;Ctrl+V&gt;.
 
 Use the arrow keys to switch between the parameters of a block or between blocks.
 
@@ -3734,12 +3734,12 @@ Syntax for manual input:
 
 - Interconnection destination is in the other CFC chart:
 
-  - "\<Chart name>\<Object name>.<Parameter name>"
+  - "\&lt;Chart name&gt;\&lt;Object name&gt;.&lt;Parameter name&gt;"
 
     Example: \Chart_1\AND_1.OUT2
 - Interconnection destination is in the same CFC chart:
 
-  - "<Object name>.<Parameter name>"
+  - "&lt;Object name&gt;.&lt;Parameter name&gt;"
 
     Example: AND_1.OUT2
 
@@ -3755,12 +3755,12 @@ Syntax for manual input:
 
 - Interconnection destination is an external tag.
 
-  - "<Tag name>"
+  - "&lt;Tag name&gt;"
 
     Example: "StartMotor"
 - Interconnection target is a data block:
 
-  - "<DB name>.<Parameter name>"
+  - "&lt;DB name&gt;.&lt;Parameter name&gt;"
 
     Example: "MotorDB.Start"
 
@@ -3783,7 +3783,7 @@ The parameters of the two instructions/blocks are interconnected with each other
 
 Depending on the space available in the CFC chart, the interconnection is displayed either fully or by connectors.
 
-To display an overview of the points of use of interconnected tags and global data blocks, use the "Tag interconnections" tab of the "Chart sequence & extras" editor.
+To display an overview of the points of use of interconnected tags and global data blocks, use the "Tag interconnections" tab of the "Chart sequence &amp; extras" editor.
 
 ---
 
@@ -3817,11 +3817,11 @@ Depending on the positions of the target objects, this step results in one or mo
 
 You have the following options to interconnect an output parameter with several input parameters:
 
-**Procedure: <C> key and click**
+**Procedure: &lt;C&gt; key and click**
 
 1. Click on the output parameter.
-2. Press the <C> key.
-3. Press and hold down the <Ctrl> key and click on the input parameters one after the other.
+2. Press the &lt;C&gt; key.
+3. Press and hold down the &lt;Ctrl&gt; key and click on the input parameters one after the other.
 
 **Alternative procedure: Click Clack**
 
@@ -3829,13 +3829,13 @@ You have the following options to interconnect an output parameter with several 
 
    The selected parameter turns magenta.
 2. Select a parameter that is shown in green when you place the mouse cursor over it.
-3. Press and hold down the <Ctrl> key and click on other parameters displayed in green.
+3. Press and hold down the &lt;Ctrl&gt; key and click on other parameters displayed in green.
 
-**Alternative procedure: Copy&Paste**
+**Alternative procedure: Copy&amp;Paste**
 
 1. Click on the output parameter.
-2. Press the shortcut <Ctrl+C>.
-3. Click on the input parameters, one after the other, and press <Ctrl+V>.
+2. Press the shortcut &lt;Ctrl+C&gt;.
+3. Click on the input parameters, one after the other, and press &lt;Ctrl+V&gt;.
 
 Instead of the keyboard shortcuts, you can also use the "Copy" and "Paste" entries in the shortcut menu of the parameters.
 
@@ -4137,7 +4137,7 @@ To gain more space for displaying objects on a sheet, you can hide the input or 
 
 ##### Manage hidden parameters
 
-To display the overview and the status of all parameters, select the instance in the chart and click on "Properties > Interface" in the Inspector window.
+To display the overview and the status of all parameters, select the instance in the chart and click on "Properties &gt; Interface" in the Inspector window.
 
 If the hidden parameter is interconnected, it is also listed under "Invisible interconnections".
 
@@ -4186,7 +4186,7 @@ The input or output parameter has been hidden.
 
 ##### Overview
 
-In the "Chart sequence & extras" editor, all interconnections are displayed in the "Tag interconnections" tab.
+In the "Chart sequence &amp; extras" editor, all interconnections are displayed in the "Tag interconnections" tab.
 
 The list of tag interconnections supports you in searching for interconnected tags and interconnected global data blocks in the CFC charts:
 
@@ -4224,7 +4224,7 @@ Requirement for the full functional scope of the "Tag interconnections" table:
 
 ##### Procedure
 
-1. Open the "Chart sequence & extras" CFC editor.
+1. Open the "Chart sequence &amp; extras" CFC editor.
 2. Select the "Tag interconnections" tab.
 
    A table with all interconnections in the CFC charts of the control is displayed.
@@ -4355,7 +4355,7 @@ Enter a free text with up to 1000 characters as the textual interconnection. The
 
 You can create, edit, delete and close textual interconnections in the "Data flow" or "Control flow".
 
-**"Chart sequence & extras" editor**
+**"Chart sequence &amp; extras" editor**
 
 Depending on the target system, the textual interconnections of a project are displayed in the "Textual interconnections" tab.
 
@@ -4366,7 +4366,7 @@ You can change the path of the interconnection only in the data flow or control 
 **More information**
 
 - "[Creating, editing and closing textual interconnections](#creating-editing-and-closing-textual-interconnections)"
-- "[Textual interconnections in the "Chart sequence & extras" editor](#textual-interconnections-in-the-chart-sequence-extras-editor)"
+- "[Textual interconnections in the "Chart sequence &amp; extras" editor](#textual-interconnections-in-the-chart-sequence-extras-editor)"
 
 ##### Overview
 
@@ -4489,7 +4489,7 @@ Result:
 
 1. Click the desired textual interconnection in the sheet bar.
 2. Edit the text.
-3. Exit your entry with the <Enter> key.
+3. Exit your entry with the &lt;Enter&gt; key.
 
 Result:
 
@@ -4503,13 +4503,13 @@ Result:
 1. Click the desired textual interconnection in the sheet bar.
 
    Alternatively, click the interconnection line in the chart.
-2. Press the <Del> key or select the "Delete" command from the shortcut menu.
+2. Press the &lt;Del&gt; key or select the "Delete" command from the shortcut menu.
 
 **Closing an "open" textual interconnection**
 
 When a referenced interconnection source is created after the textual interconnection has been created, this textual interconnection remains "open" until the user closes it manually.
 
-Depending on the target system, you can also close an "open" textual interconnection in the "Chart sequence & extras" editor.
+Depending on the target system, you can also close an "open" textual interconnection in the "Chart sequence &amp; extras" editor.
 
 1. Click the desired textual interconnection in the sheet bar.
 2. Select the menu command "Close textual interconnections" from the shortcut menu.
@@ -4518,7 +4518,7 @@ Result:
 
 - If the entered text can be interpreted as a valid path, the textual interconnection is replaced by a real interconnection.
 - If the entered text cannot be interpreted as a valid path, the textual interconnection remains and is displayed in the sheet bar.
-- A message for the procedure is displayed in the Inspector window in the "Info > General" tab.
+- A message for the procedure is displayed in the Inspector window in the "Info &gt; General" tab.
 
 ##### Procedure in "Control flow"
 
@@ -4544,7 +4544,7 @@ Result:
 
 1. Click in the table on the table cell in the "Operand" column that belongs to the desired textual interconnection.
 2. Edit the text.
-3. Exit your entry with the <Enter> key.
+3. Exit your entry with the &lt;Enter&gt; key.
 
 Result:
 
@@ -4569,11 +4569,11 @@ Result:
 
 - If the entered text can be interpreted as a valid path, the textual interconnection is replaced by a real interconnection.
 - If the entered text cannot be interpreted as a valid path, the textual interconnection remains.
-- A message for the procedure is displayed in the Inspector window in the "Info > General" tab.
+- A message for the procedure is displayed in the Inspector window in the "Info &gt; General" tab.
 
 #### Textual interconnections in the "Chart sequence & extras" editor
 
-All open textual interconnections are displayed in the "Textual interconnections" tab of the "Chart sequence & extras" editor in a table. This display depends on the target system.
+All open textual interconnections are displayed in the "Textual interconnections" tab of the "Chart sequence &amp; extras" editor in a table. This display depends on the target system.
 
 Up to 600 interconnections are displayed below the associated CFC chart. If more than 600 textual interconnections were created, the entries for the most recently edited interconnections are displayed.
 
@@ -4581,7 +4581,7 @@ Up to 600 interconnections are displayed below the associated CFC chart. If more
 >
 > **Configuration depending on the target system**
 >
-> You can use the "Chart sequence & extras" editor to check, close or delete open textual interconnections.
+> You can use the "Chart sequence &amp; extras" editor to check, close or delete open textual interconnections.
 >
 > The availability and the content of the tabs depend on the target system for which you are configuring.
 
@@ -4625,7 +4625,7 @@ A comment is displayed in the "Status" column to help with the selection.
 
 When you select a chart and start the "Close textual interconnections" function, all displayed "open" textual interconnections of this chart are closed. You do not need to select the textual interconnections additionally.
 
-After the process has been completed, a message is displayed for each selected textual interconnection in the "Info > General" tab in the Inspector window.
+After the process has been completed, a message is displayed for each selected textual interconnection in the "Info &gt; General" tab in the Inspector window.
 
 When all "open" textual interconnections of a CFC are closed, the CFC is removed from the table.
 
@@ -4639,7 +4639,7 @@ When several textual interconnections are selected, the first textual interconne
 
 **See also**
 
-"Chart sequence & extras" editor for S7
+"Chart sequence &amp; extras" editor for S7
 
 ### Adapting the run sequence
 
@@ -4664,7 +4664,7 @@ The runtime model describes the following functions:
 >
 > **Configuration depending on the target system**
 >
-> You can use the "Chart sequence & extras" editor to check and change the run sequence and task assignment.
+> You can use the "Chart sequence &amp; extras" editor to check and change the run sequence and task assignment.
 >
 > The availability and the content of the tabs depend on the target system for which you are configuring.
 
@@ -4674,7 +4674,7 @@ The runtime model describes the following functions:
 
 The runtime model is based on the assumption that the target system has one or more tasks.
 
-- In the "Chart sequence & extras" editor you specify the task assignment for the chart folders of the target system.
+- In the "Chart sequence &amp; extras" editor you specify the task assignment for the chart folders of the target system.
 
   When you create a new CFC chart, this task is assigned to the chart as the main task.
 
@@ -4767,8 +4767,8 @@ To interconnect the "EN" parameter, select the output parameter of a block or CF
 
 | Editor | Selected object | Configuration | Interconnections |
 | --- | --- | --- | --- |
-| Chart sequence & extras > "Chart sequence" tab | - | "Enable chart" column | Create  Change  Delete |
-| Data flow > Inspector window > "Properties" tab | CFC chart  (No object is selected.) | "S7 specific":  - "Enable chart" field | Create  Change  Delete |
+| Chart sequence &amp; extras &gt; "Chart sequence" tab | - | "Enable chart" column | Create  Change  Delete |
+| Data flow &gt; Inspector window &gt; "Properties" tab | CFC chart  (No object is selected.) | "S7 specific":  - "Enable chart" field | Create  Change  Delete |
 | Subchart in a CFC chart | "Interface":  - "EN" parameter | Interconnected parameters cannot be edited. |  |
 | "EN" parameter of a subchart | "General":  - "Value" field | Interconnected parameters cannot be edited. |  |
 | Control flow | "EN" parameter of a subchart | "Operand" column | Change  Delete |
@@ -4787,7 +4787,7 @@ When this setting is enabled the following options for optimizing the run sequen
 
 | Editor | Button | Effect |
 | --- | --- | --- |
-| Chart sequence & extras:  - Chart sequence | Optimize run sequence according to the signal flow | Chart sequence and / or content of the CFC charts are optimized. |
+| Chart sequence &amp; extras:  - Chart sequence | Optimize run sequence according to the signal flow | Chart sequence and / or content of the CFC charts are optimized. |
 | CFC chart:  - Data flow - Control flow | Optimize run sequence of the CFC chart according to the signal flow | The content of the CFC chart is optimized. |
 
 When the "Optimize chart" field is disabled, the buttons in the editors have no function.
@@ -4849,9 +4849,9 @@ The configuration of the reduction ratio and the phase offset depends on the tar
 
 **Configuration for S7 target systems**
 
-You configure the reduction ratio and the phase offset in the chart properties under "General > S7 specific > Sequence".
+You configure the reduction ratio and the phase offset in the chart properties under "General &gt; S7 specific &gt; Sequence".
 
-You check and configure other settings for the run sequence in the "Chart sequence & extras" editor, for example, the task assignment or the run sequence of the charts.
+You check and configure other settings for the run sequence in the "Chart sequence &amp; extras" editor, for example, the task assignment or the run sequence of the charts.
 
 The Editor gives you an overview of the settings of all CFC charts.
 
@@ -4930,7 +4930,7 @@ The run sequence is adapted.
 
 - Two or more CFCs have been created for a controller.
 - The CFCs have interconnections between charts.
-- The "Chart sequence & extras" Editor is open.
+- The "Chart sequence &amp; extras" Editor is open.
 - "Chart sequence" is displayed.
 
 ##### Procedure
@@ -4964,7 +4964,7 @@ Additional information: "[Adapting the run sequence within the CFC chart](#adapt
 
 ##### Optimization options
 
-You start the automatic optimization in the toolbar of the "Chart sequence & extras" editor.
+You start the automatic optimization in the toolbar of the "Chart sequence &amp; extras" editor.
 
 In the "Optimize run sequence" dialog, you select the scope of the optimization:
 
@@ -4986,7 +4986,7 @@ If the setting is disabled at a chart, the following applies to this chart:
 ##### Requirement
 
 - Cross-chart interconnections or interconnections in the CFC charts are configured.
-- The "Chart sequence & extras" editor is open.
+- The "Chart sequence &amp; extras" editor is open.
 - The "Chart sequence" is displayed.
 
 ##### Procedure
@@ -5187,7 +5187,7 @@ The structure with all structure elements appears as a tooltip when you move the
 
 **Display value permanently**
 
-If you have not selected the input or output parameter for testing, then you can keep the <Ctrl> key pressed and click on an input or output parameter or an interconnection with the mouse pointer.
+If you have not selected the input or output parameter for testing, then you can keep the &lt;Ctrl&gt; key pressed and click on an input or output parameter or an interconnection with the mouse pointer.
 
 The parameter is permanently selected for the test and the latest value from the device is displayed.
 
@@ -5427,7 +5427,7 @@ However, the effects of the force value in the program are only visible in onlin
 
    In "Data flow", a green rectangle at the associated parameter indicates that the parameter is registered for "Forcing".
 
-   The parameter is also displayed in the so-called force table under "Charts - Trend/dynamic display & force table".
+   The parameter is also displayed in the so-called force table under "Charts - Trend/dynamic display &amp; force table".
 3. Further configuration depends on whether or not the parameter is interconnected.
 
    - If the parameter is interconnected, the check box "Forcing active" and the input box "Force value" are shown.
@@ -5509,19 +5509,19 @@ However, the effects of the force value in the program are only visible in onlin
 
    In "Data flow", a green rectangle at the associated parameter indicates that the parameter is registered for "Forcing".
 
-   The parameter is also displayed in the so-called force table under "Charts - Trend/dynamic display & force table".
+   The parameter is also displayed in the so-called force table under "Charts - Trend/dynamic display &amp; force table".
 4. Repeat steps 1 - 3 for each parameter that is to be available for testing in the force table.
 5. Download the program to the device.
 6. Click "Go online" in the toolbar.
 7. Open the force table.
 
-   Double-click the "Force table" entry in the "Charts - Trend/dynamic display & force table" folder of the project tree.
+   Double-click the "Force table" entry in the "Charts - Trend/dynamic display &amp; force table" folder of the project tree.
 
    The force table is opened in the work area.
 
    - You can turn the sorting of the table on/off or change it by clicking the respective table column.
    - You can manipulate the display and width of the table columns with the shortcut menu of a column header.
-   - The "Tag" column displays all parameters with the "<Chart>\<Block_name>.<Parameter_name>" path for which the "Add forcing" option is selected.
+   - The "Tag" column displays all parameters with the "&lt;Chart&gt;\&lt;Block_name&gt;.&lt;Parameter_name&gt;" path for which the "Add forcing" option is selected.
    - Double-click the path in the "Tag name" column to open the associated CFC and select the configured parameter.
    - When you select a table line, the "General" tab with the configuration data of this parameter is displayed in the Inspector window.
    - If you clear the "Add forcing" option for a parameter, this parameter is removed from the table.
@@ -5570,7 +5570,7 @@ The compilations of selected tags/parameters are stored for reuse.
 
 #### General properties
 
-- The trend and dynamic displays are stored and managed in the project tree, in the "Charts - Trend/dynamic display & force table" folder.
+- The trend and dynamic displays are stored and managed in the project tree, in the "Charts - Trend/dynamic display &amp; force table" folder.
 
   The objects can be copied to or deleted from this folder.
 - You can create several trend and dynamic displays for each target system.
@@ -5607,7 +5607,7 @@ The values of the trend chart can be exported or imported in CSV format.
 
 You start the print in the project navigation via the shortcut menu or from the opened trend display.
 
-Alternatively, you can open the "Print" dialog in the definition table with the key combination <Ctrl+P>.
+Alternatively, you can open the "Print" dialog in the definition table with the key combination &lt;Ctrl+P&gt;.
 
 - Print the axis and curve definition table in the project navigation or in the definition table.
 - In the open trend display, print the trend chart using the "Print" button.
@@ -5620,7 +5620,7 @@ During trace configuration, the block parameters are listed in the "Signals" tab
 
 Additional information in the TIA Portal Information System:
 
-- "Using online and diagnostics functions > [Using the trace and logic analyzer function](Using%20the%20trace%20and%20logic%20analyzer%20function.md#recording-of-measured-values-with-the-trace-function)"
+- "Using online and diagnostics functions &gt; [Using the trace and logic analyzer function](Using%20the%20trace%20and%20logic%20analyzer%20function.md#recording-of-measured-values-with-the-trace-function)"
 
 **Additional information**
 
@@ -5642,7 +5642,7 @@ If the dynamic display is not open, you can drag-and-drop the parameter to the c
 
 You start printing in the project navigation via the shortcut menu.
 
-Alternatively, you can open the "Print" dialog in the open dynamic display with the <Ctrl+P> key combination.
+Alternatively, you can open the "Print" dialog in the open dynamic display with the &lt;Ctrl+P&gt; key combination.
 
 - In offline mode, the offline values are printed.
 - In online mode, the corresponding online values are printed.
@@ -5710,7 +5710,7 @@ The following operator controls are provided in the trend view.
 | (23) | Interpolated trend value | A value **without underscore** on the ruler indicates that this is an interpolated value.   A defined online value is not available for this trend point. |
 | (24) | Defined trend value | An **underscored** value on the ruler indicates that this is a defined online value. |
 | (25) | Digital trends | Digital trends are visualized in the lower area of the trend window.   The names of the digital trends (15) are displayed outside of the trend chart. The position depends on the configured position of the digital axis (16).   A tooltip is displayed for each visualized trend whenever you position the mouse pointer on the trend line. The tooltip first displays the trend name; click this name to display the configured data source. |
-| (26) | Ruler | A ruler displays the value of each trend at the ruler/trend intersections.  Every ruler displays the associated time stamp with data and time.  A trend chart may have several rulers.  The **active** ruler is indicated by a yellow marker at its top end. The values at the active rulers are displayed in the legend (A) to the right of the trend name.  Adding rulers:  - You can drag-and-drop a new ruler from its docking position on the left edge of the trend chart to a specific position in the trend chart.   Copying rulers:  - Press <CTRL> and click the ruler to paste a copy thereof.   Deleting rulers:  - Drag the ruler to the left edge of the trend chart. - Press <ALT> and click the ruler to be deleted. |
+| (26) | Ruler | A ruler displays the value of each trend at the ruler/trend intersections.  Every ruler displays the associated time stamp with data and time.  A trend chart may have several rulers.  The **active** ruler is indicated by a yellow marker at its top end. The values at the active rulers are displayed in the legend (A) to the right of the trend name.  Adding rulers:  - You can drag-and-drop a new ruler from its docking position on the left edge of the trend chart to a specific position in the trend chart.   Copying rulers:  - Press &lt;CTRL&gt; and click the ruler to paste a copy thereof.   Deleting rulers:  - Drag the ruler to the left edge of the trend chart. - Press &lt;ALT&gt; and click the ruler to be deleted. |
 | (27) | Ratio display / scroll bar (y axis) | This function depends on the selected display mode (2) and only affects analog trends.  - Scroll bar function + ratio display in "Static" display mode. - Ratio display in all other display modes.    **Ratio display:**   The scroll bar displays the approximate ratio between the configured and currently displayed range of values of the y axis in the trend chart.    **Scroll bar:**    The scroll bar can be used to shift the visible range of a trend in the trend chart if the displayed range of the y axis was modified in **vertical** direction, for example, by means of the zoom icons (1). |
 | (28) | Ratio display/scroll bar (x axis) | This function depends on the selected display mode (2) and only affects analog trends.  - Scroll bar function + ratio display in "Static" display mode. - Ratio display in all other display modes.    **Ratio display:**   The scroll bar displays the approximate ratio between the configured and currently displayed range of values of the y axis in the trend chart.   **Scroll bar:**   The scroll bar can be used to shift the visible range of a trend in the trend chart if the displayed time range of the x axis was modified in **horizontal** direction, for example, by means of the zoom icons (1). |
 
@@ -5722,7 +5722,7 @@ Various toolbar functions and mouse actions are available to accelerate your wor
 | --- | --- | --- |
 | Zooming windows with pressed left mouse button | Zoom function with window | You can define the display range of the trend chart by dragging the window while pressing the left mouse button.   All axis value ranges for which write protection is not enabled by means of the lock icon are adapted when you release the mouse button. |
 | Double-click on the chart area | Adapting trends | Double-click on the chart area of the trend chart sets the analog range of values of the y axes for analog trends so that the trends are completely visible in the current time range. |
-| <Alt> + double-click on the chart area | Arranging trends | <Alt> + double-click in the chart area of the trend chart adapts the range of values of the y axes for analog trends so that the trends are arranged vertically. |
+| &lt;Alt&gt; + double-click on the chart area | Arranging trends | &lt;Alt&gt; + double-click in the chart area of the trend chart adapts the range of values of the y axes for analog trends so that the trends are arranged vertically. |
 | Dragging the scale with pressed left mouse button | Editing the range of values of the axes | To change the range of values of an axis, click the axis and then drag the scale to the new value while keeping the left mouse button pressed.  - The arrows at the mouse pointer indicate the possible direction of change.   - If the arrows point in both directions you can edit both values.   - You can only edit one value if only one arrow is displayed, for example, in the direction of the minimum value. - Only the axis value ranges for which write protection is not enabled by means of lock icon are adapted.   Example:  If write protection of the minimum and maximum values of the y axis is not enabled, both values change simultaneously when you drag the scale while keeping the left mouse button pressed. The current **difference** between both values **remains unchanged**!  Double-clicking on the axis resets the range of values to the configured values. |
 | Double-click on the axis | Resetting the range of values | Double-clicking on the axis resets the range of values to the configured values. |
 | Space bar plus drag-and-drop of an axis | Moving axes | The position of the y axes is specified in the definition table of the trend display.  However, you can change the position of the x and y axes in online mode by pressing the space bar and moving the selected axis to the new position using drag-and-drop.  This method can be used, for example, to move the x axis towards the top. |
@@ -5746,7 +5746,7 @@ This section describes how to create and configure a new trend display.
 
 #### Procedure
 
-1. Double-click the "Add new trend display" entry in the "Charts - Trend/dynamic display & force table" folder of the project tree.
+1. Double-click the "Add new trend display" entry in the "Charts - Trend/dynamic display &amp; force table" folder of the project tree.
 
    - A new trend display is added to the folder and opened in the editor.
    - In the editor window, the table for the axis definition and the window for the trend chart are displayed.
@@ -5758,7 +5758,7 @@ This section describes how to create and configure a new trend display.
    Navigate to the desired parameter in the CFC chart or in the chart interface.
 4. Drag-and-drop the parameter from the chart into the "y axis/trend" column.
 
-   Alternatively, use Copy and Paste from the shortcut menu or the <Ctrl+C> and <Ctrl+V> keyboard shortcuts.
+   Alternatively, use Copy and Paste from the shortcut menu or the &lt;Ctrl+C&gt; and &lt;Ctrl+V&gt; keyboard shortcuts.
 
    The inserted parameter is displayed in a new row of the table:
 
@@ -5871,7 +5871,7 @@ For S7 target systems, you have the following options to specify the sampling ti
 
 #### Procedure
 
-1. Open the trend display by double-clicking its name in the "Charts - Trend/dynamic display & force table" folder.
+1. Open the trend display by double-clicking its name in the "Charts - Trend/dynamic display &amp; force table" folder.
 
    The table for the axis definition and the window for the trend chart are displayed in the editor window.
 2. Click "Go online" in the toolbar.
@@ -5914,7 +5914,7 @@ This section describes how to create and configure a new dynamic display.
 
 #### Procedure
 
-1. Double-click the "Add new dynamic display" entry in the "Charts - Trend/dynamic display & force table" folder of the project tree.
+1. Double-click the "Add new dynamic display" entry in the "Charts - Trend/dynamic display &amp; force table" folder of the project tree.
 
    - A new dynamic display is added in the folder.
    - The table for the dynamic display is opened in the editor window.
@@ -5926,7 +5926,7 @@ This section describes how to create and configure a new dynamic display.
    Navigate to the desired parameter in the CFC chart or in the chart interface.
 4. Drag-and-drop the parameter from the chart into the "Tag name" column.
 
-   Alternatively, use Copy and Paste from the shortcut menu or the <Ctrl+C> and <Ctrl+V> keyboard shortcuts.
+   Alternatively, use Copy and Paste from the shortcut menu or the &lt;Ctrl+C&gt; and &lt;Ctrl+V&gt; keyboard shortcuts.
 
    The inserted parameter is displayed in a new row of the table.
 
@@ -5974,7 +5974,7 @@ Additional information: "[Creating a dynamic display](#creating-a-dynamic-displa
 
 #### Procedure
 
-1. Open the dynamic display by double-clicking its name in the "Charts - Trend/dynamic display & force table" folder.
+1. Open the dynamic display by double-clicking its name in the "Charts - Trend/dynamic display &amp; force table" folder.
 
    The editor displays a table.
 2. Click "Go online" in the toolbar.
@@ -6020,7 +6020,7 @@ CFCs support the standard data types of the TIA Portal.
 
 Additional information on syntax and display of the data types, for example, is available in the TIA Portal information system:
 
-- "Program PLC > [Data types](Data%20types.md#overview-of-the-valid-data-types)"
+- "Program PLC &gt; [Data types](Data%20types.md#overview-of-the-valid-data-types)"
 
 ### Elementary data types
 
@@ -6766,7 +6766,7 @@ Data structure consisting of a fixed number of components of the same data type.
 
 All data types except ARRAY and reference data types are permitted for the ARRAY components.
 
-Multidimensional ARRAYs are also supported, e.g.: `"MyDB".MyArray[#i,#j]`. You can find more information on multidimensional ARRAYs as well as an example in the TIA Portal information system under "Programming the PLC > Data types > [Basic information on ARRAY](Data%20types.md#basic-information-on-array)".
+Multidimensional ARRAYs are also supported, e.g.: `"MyDB".MyArray[#i,#j]`. You can find more information on multidimensional ARRAYs as well as an example in the TIA Portal information system under "Programming the PLC &gt; Data types &gt; [Basic information on ARRAY](Data%20types.md#basic-information-on-array)".
 
 Not permitted data types for ARRAY components:
 
@@ -6776,7 +6776,7 @@ Not permitted data types for ARRAY components:
 
 **Format**
 
-- ARRAY[Low limit..High limit] of <Data type>
+- ARRAY[Low limit..High limit] of &lt;Data type&gt;
 
 ##### Restrictions
 
@@ -6803,17 +6803,17 @@ The specified value ranges are maximum values. The actual number of ARRAY elemen
 
 **Blocks with standard access**
 
-- [-32 768..32 767] of <DataType>
+- [-32 768..32 767] of &lt;DataType&gt;
 
 **S7-1500 blocks with optimized access *)**
 
-- [-2 147 483 648..2 147 483 647] of <DataType>
+- [-2 147 483 648..2 147 483 647] of &lt;DataType&gt;
 
   Maximum number of ARRAY elements in total:
 
   - 16 777 216 (= 2 <sup>24</sup>)
 
-<sub>*) The internal storage structure is hidden for S7-1500 blocks with optimized access. The system automatically optimizes and manages the addresses. More information: "Working with CFC charts for S7 > Blocks in CFC charts for S7"</sub>
+<sub>*) The internal storage structure is hidden for S7-1500 blocks with optimized access. The system automatically optimizes and manages the addresses. More information: "Working with CFC charts for S7 &gt; Blocks in CFC charts for S7"</sub>
 
 ---
 

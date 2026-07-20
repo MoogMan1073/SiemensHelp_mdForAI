@@ -180,7 +180,7 @@ After the online connection has been established successfully, the user interfac
 | ③ | An orange, pulsing bar appears at the right-hand edge of the status bar. If the connection has been established but is functioning incorrectly, an icon for an interrupted connection is displayed instead of the bar. You will find more information on the error in "Diagnostics" in the Inspector window. In addition, the status line indicates if there is an online connection to the SIMATIC hardware via the TIA Portal Cloud Connector. |
 | ④ | The left column in the project tree indicates the diagnostics status for hardware objects in online mode through symbols. |
 | ⑤ | The right column in the project tree indicates the comparison status for software objects in online mode through symbols. A comparison of the online and offline state is performed automatically. Differences between online and offline objects are displayed in the form of symbols. |
-| ⑥ | The "Diagnostics > Device information" area is brought to the foreground in the Inspector window. |
+| ⑥ | The "Diagnostics &gt; Device information" area is brought to the foreground in the Inspector window. |
 
 #### Online connection abort
 
@@ -192,7 +192,7 @@ If you use the TIA Portal in a virtual environment, you have the opportunity to 
 
 ![Online connection via the TIA Portal Cloud Connector](images/85416131339_DV_resource.Stream@PNG-de-DE.png)
 
-You can find instructions on how to use the TIA Portal in a virtual environment (private cloud) on the installation disk in the directory "Documents\Readme\<language directory>". You can open the PDF document "TIAPortalCloudConnectorHowTo<Sprachkennung>.pdf" here.
+You can find instructions on how to use the TIA Portal in a virtual environment (private cloud) on the installation disk in the directory "Documents\Readme\&lt;language directory&gt;". You can open the PDF document "TIAPortalCloudConnectorHowTo&lt;Sprachkennung&gt;.pdf" here.
 
 ---
 
@@ -213,7 +213,7 @@ To specify a default connection path, follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The settings of the TIA Portal are opened.
-2. Select the "Online & Diagnostics" entry in the area navigation.
+2. Select the "Online &amp; Diagnostics" entry in the area navigation.
 3. In the "Preset connection path for online access" area, specify the type of the PG/PC interface as well as the interface itself.
 4. Enable or disable the check box "Display dialog for setting the default connection path for online access".
 
@@ -622,7 +622,7 @@ To display the current parameters of the Ethernet interface, follow these steps:
 2. Select the "Properties" command in the shortcut menu of the interface.
 
    The dialog for configuring the interface opens.
-3. Select "Configurations > Industrial Ethernet" in the area navigation.
+3. Select "Configurations &gt; Industrial Ethernet" in the area navigation.
 
 ---
 
@@ -642,7 +642,7 @@ To select the subnet to which the Ethernet interface is connected, follow these 
 2. Select the "Properties" command in the shortcut menu of the interface.
 
    The dialog for configuring the interface opens.
-3. Go to "General > Assignment" and select the subnet to which you want to connect the Ethernet interface of the programming device / PC in the "Connection to subnet" drop-down list.
+3. Go to "General &gt; Assignment" and select the subnet to which you want to connect the Ethernet interface of the programming device / PC in the "Connection to subnet" drop-down list.
 4. Close the dialog with "OK".
 
 #### Setting parameters for the Ethernet interface
@@ -663,12 +663,12 @@ To change parameter settings relating to the network protocol, follow these step
 2. Select the "Properties" command in the shortcut menu of the interface.
 
    The dialog for configuring the interface opens.
-3. Select "Configurations > IE-PG access" to adapt the protocol settings relevant for network management.
+3. Select "Configurations &gt; IE-PG access" to adapt the protocol settings relevant for network management.
 
    - Select the "Fast acknowledge" check box to achieve faster reaction times with smaller network packets.
    - From the "Timeout" drop-down list, select the maximum time that can elapse before a network node is detected.
-4. To activate the LLDP protocol and discover the network topology more accurately, set the "LLDP active" check box in "Configurations > LLDP".
-5. Select "Configurations > TCP/IP" to adapt the TCP/IP protocol for network traffic during runtime.
+4. To activate the LLDP protocol and discover the network topology more accurately, set the "LLDP active" check box in "Configurations &gt; LLDP".
+5. Select "Configurations &gt; TCP/IP" to adapt the TCP/IP protocol for network traffic during runtime.
 
    - Select the "Fast acknowledge" check box to achieve faster reaction times with smaller network packets.
    - From the "Timeout" drop-down list, select the maximum time that can elapse before there is a timeout during communication with a network node.
@@ -715,7 +715,7 @@ To display and delete temporarily assigned addresses, follow these steps:
 2. Select the "Properties" command in the shortcut menu of the interface.
 
    The dialog for configuring the interface opens.
-3. Select "Configurations > IE-PG access".
+3. Select "Configurations &gt; IE-PG access".
 
    A table with the assigned IP addresses is displayed.
 4. Click the "Delete project-specific IP addresses" button to delete all the IP addresses at one time.
@@ -738,7 +738,7 @@ To restore the TCP/IP configuration to the default settings, follow these steps:
 2. Select the "Properties" command in the shortcut menu of the interface.
 
    The dialog for configuring the interface opens.
-3. Select "Configurations > TCP/IP".
+3. Select "Configurations &gt; TCP/IP".
 4. Click the "Standard" button to reset all the settings.
 
 ### Setting parameters for the MPI and PROFIBUS interfaces
@@ -831,8 +831,8 @@ To enable automatic bus parameter detection, follow these steps:
 2. Select the "Properties" command in the shortcut menu of the interface.
 
    The dialog for configuring the interface opens.
-3. Go to "General > Configurations > Active configuration" and select the setting "Automatic protocol detection".
-4. Go to "Configurations > Auto configuration > Local settings" and select the address of the PG/PC interface in the "Own address" drop-down list.
+3. Go to "General &gt; Configurations &gt; Active configuration" and select the setting "Automatic protocol detection".
+4. Go to "Configurations &gt; Auto configuration &gt; Local settings" and select the address of the PG/PC interface in the "Own address" drop-down list.
 5. If you then want to display the current bus settings, click the "Network detection" button.
 
 ---
@@ -861,8 +861,8 @@ To adapt the parameters of the MPI interface, follow these steps:
 2. Select the "Properties" command in the shortcut menu of the interface.
 
    The dialog for configuring the interface opens.
-3. Go to "General > Assignment" and select the subnet with which you want to connect the interface in the "Connection to subnet" drop-down list.
-4. Under "General > Configuration", select a default for the device and network-related parameters. The defaults are suitable for most configurations. Select one of the following settings:
+3. Go to "General &gt; Assignment" and select the subnet with which you want to connect the interface in the "Connection to subnet" drop-down list.
+4. Under "General &gt; Configuration", select a default for the device and network-related parameters. The defaults are suitable for most configurations. Select one of the following settings:
 
    - Automatic protocol detection
 
@@ -876,7 +876,7 @@ To adapt the parameters of the MPI interface, follow these steps:
 
 ##### Changing the default parameter settings
 
-To adapt the default settings to your requirements, change the parameter setting where necessary in "Configurations > MPI".
+To adapt the default settings to your requirements, change the parameter setting where necessary in "Configurations &gt; MPI".
 
 You can set the following device-related parameters:
 
@@ -932,8 +932,8 @@ To adapt the parameters of the PROFIBUS interface, follow these steps:
 2. Select the "Properties" command in the shortcut menu of the interface.
 
    The dialog for configuring the interface opens.
-3. Go to "General > Assignment" and select the subnet with which you want to connect the interface in the "Connection to subnet" drop-down list.
-4. Under "General > Configuration", select a default for the device and network-related parameters. The defaults are suitable for most configurations. Select one of the following settings:
+3. Go to "General &gt; Assignment" and select the subnet with which you want to connect the interface in the "Connection to subnet" drop-down list.
+4. Under "General &gt; Configuration", select a default for the device and network-related parameters. The defaults are suitable for most configurations. Select one of the following settings:
 
    - Automatic protocol detection
 
@@ -947,7 +947,7 @@ To adapt the parameters of the PROFIBUS interface, follow these steps:
 
 ##### Changing the default parameter settings
 
-To adapt the default settings to your requirements, change the parameter setting where necessary in "Configurations > PROFIBUS".
+To adapt the default settings to your requirements, change the parameter setting where necessary in "Configurations &gt; PROFIBUS".
 
 You can set the following device-related parameters:
 
@@ -982,8 +982,8 @@ You can set the following network-related parameters:
 
   You have a choice of four alternatives for the PROFIBUS settings. "DP", "Standard" and "Universal (DP/FMS)" are predefined settings that you cannot change. If you select "User-defined", you can adapt the bus parameters yourself.
 
-  - If you have selected "User-defined", go to "Configurations > PROFIBUS > Bus parameters" in area navigation.
-  - If you have selected one of the defaults (DP, Standard or Universal (DP/FMS)), you should select the "Include" check box in "Configurations > PROFIBUS > Bus parameters > Additional parameters". You can then set the number of masters and slaves on the bus. This allows a more precise calculation of the bus parameters and potential bus disruptions can be prevented. The option cannot be selected with a user-defined profile.
+  - If you have selected "User-defined", go to "Configurations &gt; PROFIBUS &gt; Bus parameters" in area navigation.
+  - If you have selected one of the defaults (DP, Standard or Universal (DP/FMS)), you should select the "Include" check box in "Configurations &gt; PROFIBUS &gt; Bus parameters &gt; Additional parameters". You can then set the number of masters and slaves on the bus. This allows a more precise calculation of the bus parameters and potential bus disruptions can be prevented. The option cannot be selected with a user-defined profile.
 
 ---
 
@@ -1072,7 +1072,7 @@ To restore the MPI or PROFIBUS configuration to the default settings, follow the
 2. Select the "Properties" command in the shortcut menu of the interface.
 
    The dialog for configuring the interface opens.
-3. Select "Configurations > MPI" or "Configurations > PROFIBUS", depending on the interface properties you want to reset.
+3. Select "Configurations &gt; MPI" or "Configurations &gt; PROFIBUS", depending on the interface properties you want to reset.
 4. Click the "Standard" button to reset all the settings.
 
 ## Simulating devices with S7-PLCSIM
@@ -1113,7 +1113,7 @@ Some devices can be simulated with additional software. You therefore do not hav
 To start the simulation software, follow these steps:
 
 1. Select the device you want to simulate, for example, in the project tree.
-2. Select the "Simulation > Start" command in the "Online" menu.
+2. Select the "Simulation &gt; Start" command in the "Online" menu.
 
    This calls the simulation software.
 

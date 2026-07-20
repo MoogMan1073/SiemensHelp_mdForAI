@@ -73,7 +73,7 @@ The "Performance overview" control is no longer supported in V17. If the control
 ### Updating PFI controls
 
 1. Open a screen in your project.
-2. Click the "Update" button in the task card "Toolbox > My controls".
+2. Click the "Update" button in the task card "Toolbox &gt; My controls".
 
    ![Updating PFI controls](images/141884950027_DV_resource.Stream@PNG-en-US.png)
 
@@ -340,7 +340,7 @@ The global elements are created once and can be used multiple times on plant obj
 
 **Opening an editor**
 
-Under "Plant objects > <project name> > Common data", double-click "Performance indicators" or select "Open" in the shortcut menu.
+Under "Plant objects &gt; &lt;project name&gt; &gt; Common data", double-click "Performance indicators" or select "Open" in the shortcut menu.
 
 After opening, the editor is available to you as task card on the right side.
 
@@ -648,17 +648,17 @@ The "Limits" property is only displayed when the "Incremental with limits" count
    A new global operand of the type "Counter" is created.
 3. Enter a meaningful name for the counter, for example, "PartsProduced".
 4. Open the Inspector window.
-5. Specify the counter type under "Properties > General > General":
+5. Specify the counter type under "Properties &gt; General &gt; General":
 
    - Incremental
    - Incremental with limits
    - Manual
-6. If you have selected the "Incremental with limits" counter type, define the high limit and low limit for the counter under "Properties > General > Limits".
-7. Under "Properties > General > Description", enter a comment for the counter that will appear as a tooltip in runtime.
+6. If you have selected the "Incremental with limits" counter type, define the high limit and low limit for the counter under "Properties &gt; General &gt; Limits".
+7. Under "Properties &gt; General &gt; Description", enter a comment for the counter that will appear as a tooltip in runtime.
 
 #### Result
 
-Configured global operands are available for use in KPIs in the "Performance indicators > Global operands" task card.
+Configured global operands are available for use in KPIs in the "Performance indicators &gt; Global operands" task card.
 
 ### Configuring global operands of the type "Numerical operands" (RT Unified)
 
@@ -687,11 +687,11 @@ You define numeric operands in the "Global operands" tab and use them when creat
    A new global operand of the type "Numerical operand" is created.
 3. Enter a meaningful name for the numerical operand.
 4. Open the Inspector window.
-5. Under "Properties > General > Description", enter a comment for the operand that will appear as a tooltip in runtime.
+5. Under "Properties &gt; General &gt; Description", enter a comment for the operand that will appear as a tooltip in runtime.
 
 #### Result
 
-Configured global operands are available for use in KPIs in the "Performance indicators > Global operands" task card.
+Configured global operands are available for use in KPIs in the "Performance indicators &gt; Global operands" task card.
 
 ### Configuring global calculation cycles (RT Unified)
 
@@ -730,12 +730,12 @@ You define global calculation cycles in the "Global calculation cycle" tab:
    A new global calculation cycle is created.
 3. Enter a meaningful name for the global calculation cycle.
 4. Open the Inspector window.
-5. Select the "Tag" mode under "Properties > General > Calculation > Mode".
+5. Select the "Tag" mode under "Properties &gt; General &gt; Calculation &gt; Mode".
 
    Alternative: In the row of your created calculation cycle, select the "Tag" entry from the drop-down list under "Data type".
-6. Specify the length of the calculation cycle under "Properties > General > Calculation > Interval value".
-7. Specify the unit for the calculation cycle under "Properties > General > Calculation > Unit".
-8. Under "Description > Description", enter a comment for the calculation cycle that will appear as a tooltip in Runtime.
+6. Specify the length of the calculation cycle under "Properties &gt; General &gt; Calculation &gt; Interval value".
+7. Specify the unit for the calculation cycle under "Properties &gt; General &gt; Calculation &gt; Unit".
+8. Under "Description &gt; Description", enter a comment for the calculation cycle that will appear as a tooltip in Runtime.
 
 Specify the tag as soon as the calculation cycle is used in a KPI, and this KPI is assigned to a plant object type.
 
@@ -751,13 +751,13 @@ You can find additional information in the Calendar manual under "Defining time 
    A new global calculation cycle is created.
 3. Enter a meaningful name for the global calculation cycle.
 4. Open the Inspector window.
-5. Select the "Context" mode under "Properties > General > Calculation > Mode".
+5. Select the "Context" mode under "Properties &gt; General &gt; Calculation &gt; Mode".
 
    Alternative: In the row of your created calculation cycle, select the "Context" entry from the drop-down list under "Data type".
-6. Specify whether the calculation cycle is started via a calendar or custom under "Properties > General > Calculation > Context provider".
-7. Specify the length of the calculation cycle under "Properties > General > Calculation > Interval value".
-8. Specify the unit for the calculation cycle under "Properties > General > Calculation > Unit".
-9. Under "Description > Description", enter a comment for the calculation cycle that will appear as a tooltip in Runtime.
+6. Specify whether the calculation cycle is started via a calendar or custom under "Properties &gt; General &gt; Calculation &gt; Context provider".
+7. Specify the length of the calculation cycle under "Properties &gt; General &gt; Calculation &gt; Interval value".
+8. Specify the unit for the calculation cycle under "Properties &gt; General &gt; Calculation &gt; Unit".
+9. Under "Description &gt; Description", enter a comment for the calculation cycle that will appear as a tooltip in Runtime.
 
 > **Note**
 >
@@ -767,7 +767,7 @@ You can find additional information in the Calendar manual under "Defining time 
 
 #### Result
 
-Configured global calculation cycles are available for use in KPIs in the "Performance indicators > Global calculation cycle" task card.
+Configured global calculation cycles are available for use in KPIs in the "Performance indicators &gt; Global calculation cycle" task card.
 
 ### Time categories and machine states (RT Unified)
 
@@ -813,16 +813,16 @@ You define time categories in the "Time model" editor.
 ##### Procedure
 
 1. In the project tree, open the "Time model" editor under "Common data" in the "Plant objects" tab.
-2. To create a time category, double-click the "<Add>" entry in the top line of the editor or select the button ![Procedure](images/122813604363_DV_resource.Stream@PNG-de-DE.png) "Add time category".
+2. To create a time category, double-click the "&lt;Add&gt;" entry in the top line of the editor or select the button ![Procedure](images/122813604363_DV_resource.Stream@PNG-de-DE.png) "Add time category".
 3. To create additional time categories, select an existing time category and click "Add time category" ![Procedure](images/122813604363_DV_resource.Stream@PNG-de-DE.png).
-4. Open the Inspector window under "Properties > General > General".
+4. Open the Inspector window under "Properties &gt; General &gt; General".
 5. Define the properties of the time category in the Inspector window.
 
    You can also change the properties in the table overview of the editor.
 
 ##### Result
 
-Configured time categories are available for use in KPIs in the "Performance indicators > Global time categories and machine states" task card.
+Configured time categories are available for use in KPIs in the "Performance indicators &gt; Global time categories and machine states" task card.
 
 ##### Importing and exporting the time model
 
@@ -856,7 +856,7 @@ Define machine states in the "Time model" editor and use them when creating form
 | Priority | Priority for this state as compared to other machine states prevailing at the same time.  The information must be unique and different for each machine state. |  |
 | Sort index | The machine states are sorted in runtime according to this index. |  |
 | Machine state type | Data type | When assigning a KPI, configure also the data type for the machine state:  - "Bit-based machine state" is set via the bit values. The corresponding bits are controlled by means of conditions. - "Value-based machine state" is specified automatically by a numerical value or a value range. This value is set as default value. |
-| Source | Specifies the source tag.  Define the source tag in the editor of the plant object type in the "Performance indicators > Machine states" tab. |  |
+| Source | Specifies the source tag.  Define the source tag in the editor of the plant object type in the "Performance indicators &gt; Machine states" tab. |  |
 | Condition | - "1" - State is active when the bit is set. - "0" - State is active when the bit is not set. - "X" - The bit is not considered in the evaluation of the state.  The condition is only relevant for the bit-based machine state. |  |
 | High limit | Specifies the high limit.  The high limit is only relevant for the value-based machine state. |  |
 | Low limit | Specifies the low limit.  High and low limit can have the same value assigned. In this case, the machine state only uses this one value. The limits must not overlap with the limits of other machine states.  The low limit is only relevant for the value-based machine state. |  |
@@ -866,7 +866,7 @@ Define machine states in the "Time model" editor and use them when creating form
 >
 > **Time and unit of microstops**
 >
-> In the editor of the plant object type in the "Performance indicators > Settings" tab, specify the microstop time and unit.
+> In the editor of the plant object type in the "Performance indicators &gt; Settings" tab, specify the microstop time and unit.
 
 ##### Requirements
 
@@ -875,7 +875,7 @@ Define machine states in the "Time model" editor and use them when creating form
 
 ##### Defining time categories
 
-To define the machine states, first define time categories. You create time categories under "Common data > Time model". You can find additional information at "[Configuring time categories](#configuring-time-categories-rt-unified)".
+To define the machine states, first define time categories. You create time categories under "Common data &gt; Time model". You can find additional information at "[Configuring time categories](#configuring-time-categories-rt-unified)".
 
 You can find additional information on creating and editing time categories in the documentation of WinCC Unified Option "Calendar".
 
@@ -884,16 +884,16 @@ You can find additional information on creating and editing time categories in t
 1. In the project tree, open the "Time model" editor under "Common data" in the "Plant objects" tab.
 2. To create a machine state, select a time category in the editor.
 3. Select the button ![Configuring the machine state](images/122819462539_DV_resource.Stream@PNG-de-DE.png) "Add machine state".
-4. Open the Inspector window under "Properties > General > General" and define the properties.
+4. Open the Inspector window under "Properties &gt; General &gt; General" and define the properties.
 
    You can also change some properties in the table overview of the editor.
-5. Select the "Properties > General > Description" area. Define a brief description that serves as a tooltip in Runtime and is shown in reports.
+5. Select the "Properties &gt; General &gt; Description" area. Define a brief description that serves as a tooltip in Runtime and is shown in reports.
 
    The description can contain up to 32767 characters.
 
 ##### Result
 
-Configured machine states are available for use in KPIs in the "Performance indicators > Global time categories and machine states" task card.
+Configured machine states are available for use in KPIs in the "Performance indicators &gt; Global time categories and machine states" task card.
 
 #### Configuring machine state at the plant object type (RT Unified)
 
@@ -908,8 +908,8 @@ For the configured machine state to be visible in Runtime, it is configured at t
 
 ##### Procedure
 
-1. In the editor of the plant object type, switch to the "Performance indicators > Machine states" tab.
-2. In the Inspector window, configure the source tag in the "Properties > General > Machine state type" area.
+1. In the editor of the plant object type, switch to the "Performance indicators &gt; Machine states" tab.
+2. In the Inspector window, configure the source tag in the "Properties &gt; General &gt; Machine state type" area.
 
    If you specify the source for a machine state, the value is transferred to all machine states used in this plant object type.
 
@@ -937,7 +937,7 @@ For the configured machine state to be visible in Runtime, it is configured at t
 
 ##### Defining the microstop
 
-Specify the length of a microstop in the editor of the plant object type in the "Performance indicators> Settings" area. When calculating a KPI, microstops can be either included, omitted, or displayed separately.
+Specify the length of a microstop in the editor of the plant object type in the "Performance indicators&gt; Settings" area. When calculating a KPI, microstops can be either included, omitted, or displayed separately.
 
 **Settings**
 
@@ -977,7 +977,7 @@ You can define the following properties:
 - Low limit 1
 - Low limit 2
 
-The values must rise from "Low limit 2" to "Target" and fall from "High limit 2" to "Target" (High limit 2 > High limit 1 > Target > Low limit 1 > Low limit 2).
+The values must rise from "Low limit 2" to "Target" and fall from "High limit 2" to "Target" (High limit 2 &gt; High limit 1 &gt; Target &gt; Low limit 1 &gt; Low limit 2).
 
 ##### Requirements
 
@@ -987,13 +987,13 @@ The values must rise from "Low limit 2" to "Target" and fall from "High limit 2"
 
 ##### Configure global KPIs
 
-1. In the work area, click "<Add>" under "Global KPIs".
+1. In the work area, click "&lt;Add&gt;" under "Global KPIs".
 
    A new KPI is created.
-2. Assign a descriptive display name for the KPI in the Inspector window in the "Properties" tab under "General > General".
+2. Assign a descriptive display name for the KPI in the Inspector window in the "Properties" tab under "General &gt; General".
 3. Under "Unit of measure", specify the unit of measure in which the KPI is calculated.
-4. In the Inspector window under "General > Color > Bar color", specify the color with which the bar for this KPI is visualized in runtime.
-5. Under "General > Color > Text color", specify the color in which the text label for the KPI is displayed in runtime.
+4. In the Inspector window under "General &gt; Color &gt; Bar color", specify the color with which the bar for this KPI is visualized in runtime.
+5. Under "General &gt; Color &gt; Text color", specify the color in which the text label for the KPI is displayed in runtime.
 6. Create the calculation formula for the KPI under "KPI formula".
 7. Define a type and value for each property under "Target and thresholds".
 8. Enter a brief description that serves as a tooltip in Runtime and is shown in reports.
@@ -1009,20 +1009,20 @@ The values must rise from "Low limit 2" to "Target" and fall from "High limit 2"
 1. In the work area, right-click "Add" under "Global KPIs".
 2. Select "Add a new group" in the shortcut menu.
 3. Assign a meaningful name to the group.
-4. Confirm your entry with the <Enter> key or by clicking on any field.
+4. Confirm your entry with the &lt;Enter&gt; key or by clicking on any field.
 5. Right-click on the name of a group in the work area under "Global KPIs".
 6. Select "Add new KPI" or "Add a new group" again in the shortcut menu.
-7. Move KPIs or groups using drag & drop. To do this, drag the icon of the KPI or group to a different location.
+7. Move KPIs or groups using drag &amp; drop. To do this, drag the icon of the KPI or group to a different location.
 
 **Delete KPIs**
 
 1. Click the left, dark gray column in front of the entry of the KPI that you want to delete.
-2. Press <Del> or select "Delete" in the shortcut menu.  
+2. Press &lt;Del&gt; or select "Delete" in the shortcut menu.  
    The selected KPI or group is deleted without a prompt for confirmation.
 
 ##### Result
 
-Configured KPIs are available in the "Performance indicators > Global KPIs" task card.
+Configured KPIs are available in the "Performance indicators &gt; Global KPIs" task card.
 
 ---
 
@@ -1069,10 +1069,10 @@ You create the formulas for calculating the KPIs in the "KPI formula" editor acc
 
 | Operation | Syntax | Example |
 | --- | --- | --- |
-| Arithmetic operators  (only within aggregate functions or as a mathematical operation of aggregate functions) | <Operand> <Operator> <Operand> | `SUM(NumericOperands("Speed").Value * NumericOperands("Speed").Duration)` |
-| Aggregate functions | <Aggregate function name>(<Operand>) | `AVG(NumericOperands("Speed_1").Value)` |
-| Evaluation types | <Operand type>("<operand name>").<evaluation type> | `SUM(MachineStates("Running").Occurrences)` |
-| KPI in KPI | KPIs("<NamePlantHierarchy>/<NamePlantObject>/>NameLowerLevelPlantObject>/<NameKPI>") | `KPIs("Plantview/Station_1/Motor_1/Performance")` |
+| Arithmetic operators  (only within aggregate functions or as a mathematical operation of aggregate functions) | &lt;Operand&gt; &lt;Operator&gt; &lt;Operand&gt; | `SUM(NumericOperands("Speed").Value * NumericOperands("Speed").Duration)` |
+| Aggregate functions | &lt;Aggregate function name&gt;(&lt;Operand&gt;) | `AVG(NumericOperands("Speed_1").Value)` |
+| Evaluation types | &lt;Operand type&gt;("&lt;operand name&gt;").&lt;evaluation type&gt; | `SUM(MachineStates("Running").Occurrences)` |
+| KPI in KPI | KPIs("&lt;NamePlantHierarchy&gt;/&lt;NamePlantObject&gt;/&gt;NameLowerLevelPlantObject&gt;/&lt;NameKPI&gt;") | `KPIs("Plantview/Station_1/Motor_1/Performance")` |
 
 > **Note**
 >
@@ -1114,10 +1114,10 @@ For operands, the evaluation types must be specified as follows:
 
 | Syntax | Example |
 | --- | --- |
-| Counters("<Counter name>") | `SUM(Counters("TotalIncrementWithLimits"))` |
-| NumericOperands("<Name of the numerical operand>").Value | `SUM(NumericOperands("Speed_1").Value)` |
-| NumericOperands("<Name of the numerical operand>").Duration | `SUM(NumericOperands("Speed_1").Duration)` |
-| NumericOperands("<Name of the numerical operand>").Occurences | `SUM(NumericOperands("Speed_1").Occurrences)` |
+| Counters("&lt;Counter name&gt;") | `SUM(Counters("TotalIncrementWithLimits"))` |
+| NumericOperands("&lt;Name of the numerical operand&gt;").Value | `SUM(NumericOperands("Speed_1").Value)` |
+| NumericOperands("&lt;Name of the numerical operand&gt;").Duration | `SUM(NumericOperands("Speed_1").Duration)` |
+| NumericOperands("&lt;Name of the numerical operand&gt;").Occurences | `SUM(NumericOperands("Speed_1").Occurrences)` |
 
 ###### Time categories
 
@@ -1125,14 +1125,14 @@ For time categories, the evaluation type "Duration" or "Occurences" must be used
 
 | Syntax | Example |
 | --- | --- |
-| TimeCategories("<Name of the time category>").Duration | `SUM(TimeCategories("ReducedSpeed").Duration)` |
-| TimeCategories("<Name of the time category>").Duration.Planned | `SUM(TimeCategories("ReducedSpeed").Duration.Planned)` |
-| TimeCategories("<Name of the time category>").Duration.WithOutMicroStops | `SUM(TimeCategories("ReducedSpeed").Duration.WithOutMicroStops)` |
-| TimeCategories("<Name of the time category>").Duration.OnlyMicroStops | `SUM(TimeCategories("ReducedSpeed").Duration.OnlyMicroStops)` |
-| TimeCategories("<Name of the time category>").Occurrences | `SUM(TimeCategories("ReducedSpeed").Occurrences)` |
-| TimeCategories("<Name of the time category>").Occurrences.Planned | `SUM(TimeCategories("ReducedSpeed").Occurrences.Planned)` |
-| TimeCategories("<Name of the time category>").Occurrences.WithOutMicroStops | `SUM(TimeCategories("ReducedSpeed").Occurrences.WithOutMicroStops)` |
-| TimeCategories("<Name of the time category>").Occurrences.OnlyMicroStops | `SUM(TimeCategories("ReducedSpeed").Occurrences.OnlyMicroStops)` |
+| TimeCategories("&lt;Name of the time category&gt;").Duration | `SUM(TimeCategories("ReducedSpeed").Duration)` |
+| TimeCategories("&lt;Name of the time category&gt;").Duration.Planned | `SUM(TimeCategories("ReducedSpeed").Duration.Planned)` |
+| TimeCategories("&lt;Name of the time category&gt;").Duration.WithOutMicroStops | `SUM(TimeCategories("ReducedSpeed").Duration.WithOutMicroStops)` |
+| TimeCategories("&lt;Name of the time category&gt;").Duration.OnlyMicroStops | `SUM(TimeCategories("ReducedSpeed").Duration.OnlyMicroStops)` |
+| TimeCategories("&lt;Name of the time category&gt;").Occurrences | `SUM(TimeCategories("ReducedSpeed").Occurrences)` |
+| TimeCategories("&lt;Name of the time category&gt;").Occurrences.Planned | `SUM(TimeCategories("ReducedSpeed").Occurrences.Planned)` |
+| TimeCategories("&lt;Name of the time category&gt;").Occurrences.WithOutMicroStops | `SUM(TimeCategories("ReducedSpeed").Occurrences.WithOutMicroStops)` |
+| TimeCategories("&lt;Name of the time category&gt;").Occurrences.OnlyMicroStops | `SUM(TimeCategories("ReducedSpeed").Occurrences.OnlyMicroStops)` |
 
 ###### Machine states
 
@@ -1140,18 +1140,18 @@ For machine states, the evaluation type "Duration" or "Occurences" must be used.
 
 | Syntax | Example |
 | --- | --- |
-| MachineStates("<Name of the machine state>").Duration | `SUM(MachineStates("Running").Duration)` |
-| MachineStates("<Name of the machine state>").Duration.WithOutMicroStops | `SUM(MachineStates("Running").Duration.WithOutMicroStops` |
-| MachineStates("<Name of the machine state>").Duration.OnlyMicroStops | `SUM(MachineStates("Running").Duration.OnlyMicroStops` |
-| MachineStates("<Name of the machine state>").Occurrences | `SUM(MachineStates("Running").Occurrences)` |
-| MachineStates("<Name of the machine state>").Occurrences.WithOutMicroStops | `SUM(MachineStates("Running").Occurences.WithOutMicroStops` |
-| MachineStates("<Name of the machine state>").Occurences.OnlyMicroStops | `SUM(MachineStates("Running").Occurences.OnlyMicroStops` |
+| MachineStates("&lt;Name of the machine state&gt;").Duration | `SUM(MachineStates("Running").Duration)` |
+| MachineStates("&lt;Name of the machine state&gt;").Duration.WithOutMicroStops | `SUM(MachineStates("Running").Duration.WithOutMicroStops` |
+| MachineStates("&lt;Name of the machine state&gt;").Duration.OnlyMicroStops | `SUM(MachineStates("Running").Duration.OnlyMicroStops` |
+| MachineStates("&lt;Name of the machine state&gt;").Occurrences | `SUM(MachineStates("Running").Occurrences)` |
+| MachineStates("&lt;Name of the machine state&gt;").Occurrences.WithOutMicroStops | `SUM(MachineStates("Running").Occurences.WithOutMicroStops` |
+| MachineStates("&lt;Name of the machine state&gt;").Occurences.OnlyMicroStops | `SUM(MachineStates("Running").Occurences.OnlyMicroStops` |
 
 > **Note**
 >
 > **Time and unit of microstops**
 >
-> In the editor of the plant object type in the "Performance indicators > Settings" tab, specify the microstop time and unit.
+> In the editor of the plant object type in the "Performance indicators &gt; Settings" tab, specify the microstop time and unit.
 
 ##### Arithmetic operators (RT Unified)
 
@@ -1261,7 +1261,7 @@ To configure a KPI formula, follow these steps:
 
 1. Open the "Performance indicators" editor.
 2. Select a KPI in the "Global KPIs" tab.
-3. In the Inspector window, switch to "General > KPI formula" in the "Properties" area.
+3. In the Inspector window, switch to "General &gt; KPI formula" in the "Properties" area.
 4. Define the KPI formula:
 
    - Drag and drop global operands, time categories, and machine states from the "Performance indicators" task card to the definition area of the formula editor.
@@ -1292,7 +1292,7 @@ Examples:
 
 ##### Introduction
 
-After you have configured the global KPIs and operands, assign the global KPIs to the individual plant object types. The operands configured in the KPI are automatically visible at the plant object type in the "Performance indicators > Operands" tab.
+After you have configured the global KPIs and operands, assign the global KPIs to the individual plant object types. The operands configured in the KPI are automatically visible at the plant object type in the "Performance indicators &gt; Operands" tab.
 
 ##### Requirements
 
@@ -1303,12 +1303,12 @@ After you have configured the global KPIs and operands, assign the global KPIs t
 
 ##### Assigning KPIs
 
-1. Open the "Performance indicators > KPIs" tab in the editor of a plant object type.
+1. Open the "Performance indicators &gt; KPIs" tab in the editor of a plant object type.
 2. To view the previously configured KPIs and operands at a glance, click on the "Performance indicators" task card.
 3. Drag-and-drop the KPI relevant to this plant object type from the "Performance indicators" task card to the "KPIs" area.
 
    A reuse of the KPI and the operands used is created.
-4. Open the Inspector window under "Properties > General > Targets and thresholds".
+4. Open the Inspector window under "Properties &gt; General &gt; Targets and thresholds".
 5. Define dynamic targets and thresholds for the KPI.
 6. Change to the "Operands" area.
 7. Configure the properties of the operands, for example, the tag.
@@ -1358,7 +1358,7 @@ To supply the operands with process data, you configure the tags at the use of t
 1. Open the respective plant object type.
 2. To expand all operands, open the overview of all operands used using the "Expand hierarchical structure" button ![KPI parameter assignment](images/126132978827_DV_resource.Stream@PNG-de-DE.png).
 3. Select the desired operand.
-4. Select the interface tag from the data structure in the Inspector window under "General > General > Source".
+4. Select the interface tag from the data structure in the Inspector window under "General &gt; General &gt; Source".
 
 ##### Result
 
@@ -1378,7 +1378,7 @@ You have configured a KPI by connecting the operand with the interface tag of th
 
 You can configure a calculation cycle.
 
-In addition to the interface tag, you configure a tag that triggers or stops the calculation cycle in runtime. The tag must be defined as Bool. When the tag value is "TRUE", the active calculation cycle is triggered. When the tag value is "FALSE", the active calculation cycle is stopped immediately. You configure the tag at the plant object type in the "Calculation cycle" tab under "Properties > General > Calculation > Condition".
+In addition to the interface tag, you configure a tag that triggers or stops the calculation cycle in runtime. The tag must be defined as Bool. When the tag value is "TRUE", the active calculation cycle is triggered. When the tag value is "FALSE", the active calculation cycle is stopped immediately. You configure the tag at the plant object type in the "Calculation cycle" tab under "Properties &gt; General &gt; Calculation &gt; Condition".
 
 ##### Requirement
 
@@ -1391,11 +1391,11 @@ In addition to the interface tag, you configure a tag that triggers or stops the
 
 ##### Assigning a calculation cycle to a KPI
 
-1. Open the "Performance indicators > KPIs" tab in the editor of a plant object type.
+1. Open the "Performance indicators &gt; KPIs" tab in the editor of a plant object type.
 2. Select a KPI.
-3. In the Inspector window go to "Properties > General > Calculation cycles".
+3. In the Inspector window go to "Properties &gt; General &gt; Calculation cycles".
 4. Open the "Performance indicators" task card.
-5. Drag a calculation cycle from the "Global Calculation Cycles" pane to the "Calculation Cycles" table in the Inspector window under "Properties > General > Calculation Cycles".
+5. Drag a calculation cycle from the "Global Calculation Cycles" pane to the "Calculation Cycles" table in the Inspector window under "Properties &gt; General &gt; Calculation Cycles".
 
    The calculation cycle is assigned to the KPI.
 6. In the "Target" column, as an option, select the interface tag in which the KPI results are stored during a calculation cycle. You can use these interface tags in an EA field, for example.
@@ -1409,8 +1409,8 @@ In addition to the interface tag, you configure a tag that triggers or stops the
 If the assigned calculation cycle has been created in "Tag" mode, assign the tag as follows:
 
 1. Double-click on the required plant object type.
-2. In the editor of the plant object type under "Performance indicators > Calculation cycle", select the calculation cycle.
-3. Open the Inspector window under "Properties > General > Calculation".
+2. In the editor of the plant object type under "Performance indicators &gt; Calculation cycle", select the calculation cycle.
+3. Open the Inspector window under "Properties &gt; General &gt; Calculation".
 4. Under "Tag", click the ![Assigning a calculation cycle to a KPI](images/124299151755_DV_resource.Stream@PNG-de-DE.png) button.
 
    The dialog for selecting a tag opens.
@@ -1432,11 +1432,11 @@ If the assigned calculation cycle has been created in "Tag" mode, assign the tag
 
 ##### Introduction
 
-You create independent KPIs in the editor of the plant object in the "Performance indicators > KPIs" tab.
+You create independent KPIs in the editor of the plant object in the "Performance indicators &gt; KPIs" tab.
 
 For each KPI, you define a calculation formula and how this KPI is displayed. In the KPI formulas, you use only KPIs from other plant objects. Operands, time categories, and machine states are not available.
 
-The "Performance indicators > KPIs" tab of the plant object show the elements that were previously configured on the plant object type. These cannot be edited.
+The "Performance indicators &gt; KPIs" tab of the plant object show the elements that were previously configured on the plant object type. These cannot be edited.
 
 > **Note**
 >
@@ -1452,23 +1452,23 @@ When you choose the "Constant" type, you can define the following optional targe
 - Low limit 1
 - Low limit 2
 
-The values must rise from "Low limit 2" to "Target" and fall from "High limit 2" to "Target" (High limit 2 > High limit 1 > Target > Low limit 1 > Low limit 2).
+The values must rise from "Low limit 2" to "Target" and fall from "High limit 2" to "Target" (High limit 2 &gt; High limit 1 &gt; Target &gt; Low limit 1 &gt; Low limit 2).
 
 ##### Requirement
 
 - Multiple plant objects are created in the plant hierarchy.
 - Global KPIs are used in the plant objects.
-- The "Performance indicators > KPIs" tab is open on the plant object.
+- The "Performance indicators &gt; KPIs" tab is open on the plant object.
 
 ##### Procedure
 
-1. Click "<Add>" in the work area.
+1. Click "&lt;Add&gt;" in the work area.
 
    A new KPI is created.
-2. Assign a unique display name for the KPI in the Inspector window in the "Properties" tab under "General > General".
+2. Assign a unique display name for the KPI in the Inspector window in the "Properties" tab under "General &gt; General".
 3. Under "Unit of measure", specify the unit of measure in which the KPI is calculated.
-4. In the Inspector window under "General > Color > Bar color", specify the color with which the bar for this KPI is visualized in runtime.
-5. Under "General > Color > Text color", specify the color in which the text label for the KPI is displayed in runtime.
+4. In the Inspector window under "General &gt; Color &gt; Bar color", specify the color with which the bar for this KPI is visualized in runtime.
+5. Under "General &gt; Color &gt; Text color", specify the color in which the text label for the KPI is displayed in runtime.
 6. Create the calculation formula for the KPI under "KPI formula". To use the KPI of a different plant object in the formula, follow these steps:
 
    - Select the specific plant object in the plant hierarchy.
@@ -1505,7 +1505,7 @@ You create global operands and define the corresponding KPI formula for calculat
 
    The "Performance indicators" editor opens.
 3. Open the "Counters" folder in the "Global operands" tab.
-4. Select "<Add>".
+4. Select "&lt;Add&gt;".
 
    A new global operand of the type "Counter" is created.
 5. Enter a meaningful name for the operand, for example, "RejectionCounts".
@@ -1578,11 +1578,11 @@ In the following example, you define a KPI for a station in which you use KPIs f
 
 #### Procedure
 
-1. Switch to the "Performance indicators > KPIs" tab.
-2. Select "<Add>".
+1. Switch to the "Performance indicators &gt; KPIs" tab.
+2. Select "&lt;Add&gt;".
 
    A new KPI is created.
-3. Open the Inspector window under "Properties > General > KPI formula".
+3. Open the Inspector window under "Properties &gt; General &gt; KPI formula".
 4. Select the plant object "Engine_1" in the plant hierarchy.
 
    The available KPIs of "Engine_1" are shown in the Details view.
@@ -1628,22 +1628,22 @@ Calculation cycles are used to calculate and log KPIs at specified time interval
 #### Procedure
 
 1. Change to the "Global calculation cycle" tab of the "Performance indicators" editor.
-2. To create a global calculation cycle, click on " <Add> ".
+2. To create a global calculation cycle, click on " &lt;Add&gt; ".
 3. Assign a meaningful name, e.g. "CalculationCycle_Quality".
-4. Enter a display name for the calculation cycle in the Inspector window under "Properties > General > General".
-5. In the Inspector window, under "Properties > General > Calculation", specify the following calculation properties:
+4. Enter a display name for the calculation cycle in the Inspector window under "Properties &gt; General &gt; General".
+5. In the Inspector window, under "Properties &gt; General &gt; Calculation", specify the following calculation properties:
 
    - Mode: "Tag"
    - Interval value: 10
    - Unit: Minutes
-6. Under "Properties > General > Description" in the Inspector window, enter a description that will appear as a tooltip in runtime.
+6. Under "Properties &gt; General &gt; Description" in the Inspector window, enter a description that will appear as a tooltip in runtime.
 7. Open the editor of the plant object type.
-8. Switch to the "Performance indicators > KPIs" tab.
+8. Switch to the "Performance indicators &gt; KPIs" tab.
 9. Select the "QualityRate" KPI.
-10. Open the Inspector window of the KPI under "Properties > General > Calculation cycles".
-11. Drag the configured calculation cycle from the "Performance indicators > Global calculation cycle" task card to the "Calculation cycles" workspace of the inspector window.
+10. Open the Inspector window of the KPI under "Properties &gt; General &gt; Calculation cycles".
+11. Drag the configured calculation cycle from the "Performance indicators &gt; Global calculation cycle" task card to the "Calculation cycles" workspace of the inspector window.
 12. In the "Target" column, define an interface tag of the plant object type in which the value of the KPI is recorded, for example, "Status".
-13. Change to the "Performance indicators > Calculation cycles of the plant object type" tab.
+13. Change to the "Performance indicators &gt; Calculation cycles of the plant object type" tab.
 14. In the "Tag" column, define an interface tag of the plant object type which triggers the calculation cycles, for example, "CC_Trigger".
 15. In the "Condition" column, define a Boolean tag that starts or stops the calculation cycles, e.g. "CC_Condition".
 
@@ -1714,7 +1714,7 @@ The import file with exported configuration data is stored in the file system.
    - whether objects with already existing names are renamed during the import
    - whether existing objects are overwritten
 5. Click "Import".
-6. Save the configuration with <Ctrl+S> or select "File > Save" in the menu bar.
+6. Save the configuration with &lt;Ctrl+S&gt; or select "File &gt; Save" in the menu bar.
 
 ## Create and save data log (RT Unified)
 
@@ -1748,11 +1748,11 @@ The following settings are available:
 
    The "Performance Insight" editor opens.
 3. Click on the "Data log" tab.
-4. Click on the "<Add>" row in the "Name" column.
+4. Click on the "&lt;Add&gt;" row in the "Name" column.
 
    A data log is created with the default values.
 5. Open the Inspector window.
-6. Change the properties of the database under "Properties > General".
+6. Change the properties of the database under "Properties &gt; General".
 7. Compile and download your project.
 
 **Note**
@@ -1771,7 +1771,7 @@ A delta download and delta compile is not possible.
    The "Performance Insight" editor opens.
 3. Click on the "Data log" tab.
 4. Open the Inspector window.
-5. Select the "Path" option under "Properties > Backup".
+5. Select the "Path" option under "Properties &gt; Backup".
 6. Specify the storage location under "Path".
 7. Compile and download your project.
 
@@ -1983,7 +1983,7 @@ In the Inspector window, define the time ranges in which the operands and KPIs a
 
 #### Procedure
 
-1. Expand the "Selected time" entry in the Inspector window under "Properties > Properties > Miscellaneous > Interface".
+1. Expand the "Selected time" entry in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface".
 2. Select the desired mode under "Time mode".
 3. If you select "Absolute time" mode, set a start time and end time under the "Absolute time" entry.
 4. If you select "Relative time" mode, set a time offset and the time unit under the "Relative time" entry.
@@ -2011,11 +2011,11 @@ You have the option to define the data displayed in the control in the engineeri
 
 You change the settings for the position, visibility, geometry, style, color, and font of the control in the Inspector window.
 
-You can find more information in the WinCC Unified help under "Visualizing processes > Configuring screens > Basic information".
+You can find more information in the WinCC Unified help under "Visualizing processes &gt; Configuring screens &gt; Basic information".
 
 #### Properties of the Performance pie chart
 
-The following properties are available for the Performance pie chart in the Inspector window under "Properties > Miscellaneous > Interface":
+The following properties are available for the Performance pie chart in the Inspector window under "Properties &gt; Miscellaneous &gt; Interface":
 
 | Property | Description |
 | --- | --- |
@@ -2040,9 +2040,9 @@ The following properties are available for the Performance pie chart in the Insp
 
 #### Inserting a control in a screen
 
-1. Insert the "Performance pie chart" control from the "Toolbox > My controls" task card into the screen.
+1. Insert the "Performance pie chart" control from the "Toolbox &gt; My controls" task card into the screen.
 2. Select the control.
-3. In the Inspector window under "Properties > Properties", you define the properties of the control.
+3. In the Inspector window under "Properties &gt; Properties", you define the properties of the control.
 
 #### Adding KPIs
 
@@ -2052,7 +2052,7 @@ The following properties are available for the Performance pie chart in the Insp
 4. In the "Selected KPIs" row, click on the "0 entries" field in the "Static value" column.
 
    The "Selected KPIs" editor is opened on the right side of the Inspector window.
-5. Click "<Add>".
+5. Click "&lt;Add&gt;".
 
    A new element (starting with 0) is created.
 6. Under "KPI", navigate to the plant view and then to the unit for which you have already configured KPIs.
@@ -2061,7 +2061,7 @@ The following properties are available for the Performance pie chart in the Insp
 
 #### Result
 
-The created elements are displayed in the Inspector window under "Miscellaneous > Interface" and can be changed there in the "Static value" column if required.
+The created elements are displayed in the Inspector window under "Miscellaneous &gt; Interface" and can be changed there in the "Static value" column if required.
 
 ![Result](images/144987079179_DV_resource.Stream@PNG-en-US.png)
 
@@ -2100,11 +2100,11 @@ You have the option to define the data displayed in the control directly in the 
 
 You change the settings for the position, visibility, geometry, style, color, and font of the control in the Inspector window.
 
-You can find more information in the WinCC Unified help under "Visualizing processes > Configuring screens > Basic information".
+You can find more information in the WinCC Unified help under "Visualizing processes &gt; Configuring screens &gt; Basic information".
 
 #### Properties of the Performance bar chart
 
-The following properties are available for the Performance bar chart in the Inspector window under "Properties > Miscellaneous > Interface":
+The following properties are available for the Performance bar chart in the Inspector window under "Properties &gt; Miscellaneous &gt; Interface":
 
 | Property | Description |
 | --- | --- |
@@ -2131,9 +2131,9 @@ The following properties are available for the Performance bar chart in the Insp
 
 #### Inserting a control in a screen
 
-1. Insert the "Performance bar chart" control from the "Toolbox > My controls" task card into the screen.
+1. Insert the "Performance bar chart" control from the "Toolbox &gt; My controls" task card into the screen.
 2. Select the control.
-3. In the Inspector window under "Properties > Properties", you define the properties of the control.
+3. In the Inspector window under "Properties &gt; Properties", you define the properties of the control.
 
 #### Adding KPIs
 
@@ -2143,7 +2143,7 @@ The following properties are available for the Performance bar chart in the Insp
 4. In the "Selected KPIs" row, click on the "0 entries" field in the "Static value" column.
 
    The "Selected KPIs" editor is opened on the right side of the Inspector window.
-5. Click "<Add>".
+5. Click "&lt;Add&gt;".
 
    A new element (starting with 0) is created.
 6. Under "KPI", navigate to the plant view and then to the unit for which you have already configured KPIs.
@@ -2152,7 +2152,7 @@ The following properties are available for the Performance bar chart in the Insp
 
 #### Result
 
-The created elements are displayed in the Inspector window under "Miscellaneous > Interface" and can be changed there in the "Static value" column if required.
+The created elements are displayed in the Inspector window under "Miscellaneous &gt; Interface" and can be changed there in the "Static value" column if required.
 
 ![Result](images/144987082891_DV_resource.Stream@PNG-en-US.png)
 
@@ -2191,11 +2191,11 @@ You have the option to define the data displayed in the control directly in the 
 
 You change the settings for the position, visibility, geometry, style, color, and font of the control in the Inspector window.
 
-You can find more information in the WinCC Unified help under "Visualizing processes > Configuring screens > Basic information".
+You can find more information in the WinCC Unified help under "Visualizing processes &gt; Configuring screens &gt; Basic information".
 
 #### Properties of the Performance Gantt chart
 
-The following properties are available for the Performance Gantt chart in the Inspector window under "Properties > Miscellaneous > Interface":
+The following properties are available for the Performance Gantt chart in the Inspector window under "Properties &gt; Miscellaneous &gt; Interface":
 
 | Property | Description |
 | --- | --- |
@@ -2222,9 +2222,9 @@ The following properties are available for the Performance Gantt chart in the In
 
 #### Inserting a control in a screen
 
-1. Insert the "Performance Gantt chart" control from the "Toolbox > My controls" task card into the screen.
+1. Insert the "Performance Gantt chart" control from the "Toolbox &gt; My controls" task card into the screen.
 2. Select the control in the screen.
-3. In the Inspector window under "Properties > Properties", you define the properties of the control.
+3. In the Inspector window under "Properties &gt; Properties", you define the properties of the control.
 
 #### Adding equipment
 
@@ -2234,7 +2234,7 @@ The following properties are available for the Performance Gantt chart in the In
 4. In the "Selected equipment" row, click the "0 items" field in the "Static value" column.
 
    The "Selected equipment" editor opens on the right side of the Inspector window.
-5. Click "<Add>".
+5. Click "&lt;Add&gt;".
 
    A new element (starting with 0) is created.
 6. Navigate under "Equipment" to the plant view and further to the unit for which you have already configured equipment.
@@ -2243,7 +2243,7 @@ The following properties are available for the Performance Gantt chart in the In
 
 #### Result
 
-The created elements are displayed in the Inspector window under "Miscellaneous > Interface" and can be changed there in the "Static value" column if required.
+The created elements are displayed in the Inspector window under "Miscellaneous &gt; Interface" and can be changed there in the "Static value" column if required.
 
 ![Result](images/144987086603_DV_resource.Stream@PNG-en-US.png)
 
@@ -2282,11 +2282,11 @@ You have the option to define the data displayed in the control in the engineeri
 
 You change the settings for the position, visibility, geometry, style, color, and font of the control in the Inspector window.
 
-You can find more information in the WinCC Unified help under "Visualizing processes > Configuring screens > Basic information".
+You can find more information in the WinCC Unified help under "Visualizing processes &gt; Configuring screens &gt; Basic information".
 
 #### Properties of the performance display
 
-The following properties are available for the Performance display in the Inspector window under "Properties > Miscellaneous > Interface":
+The following properties are available for the Performance display in the Inspector window under "Properties &gt; Miscellaneous &gt; Interface":
 
 | Property | Description |
 | --- | --- |
@@ -2314,9 +2314,9 @@ The following properties are available for the Performance display in the Inspec
 
 #### Inserting a control in a screen
 
-1. Insert the "Performance control" from the "Toolbox > My controls" task card into the screen.
+1. Insert the "Performance control" from the "Toolbox &gt; My controls" task card into the screen.
 2. Select the control.
-3. In the Inspector window under "Properties > Properties", you define the properties of the control.
+3. In the Inspector window under "Properties &gt; Properties", you define the properties of the control.
 
 #### Adding KPIs
 
@@ -2326,7 +2326,7 @@ The following properties are available for the Performance display in the Inspec
 4. In the "Selected KPIs" row, click on the "0 entries" field in the "Static value" column.
 
    The "Selected KPIs" editor is opened on the right side of the Inspector window.
-5. Click "<Add>".
+5. Click "&lt;Add&gt;".
 
    A new element (starting with 0) is created.
 6. Under "KPI", navigate to the plant view and then to the unit for which you have already configured KPIs.
@@ -2335,7 +2335,7 @@ The following properties are available for the Performance display in the Inspec
 
 #### Result
 
-The created elements are displayed in the Inspector window under "Miscellaneous > Interface" and can be changed there in the "Static value" column if required.
+The created elements are displayed in the Inspector window under "Miscellaneous &gt; Interface" and can be changed there in the "Static value" column if required.
 
 ![Result](images/144987090315_DV_resource.Stream@PNG-en-US.png)
 
@@ -2374,11 +2374,11 @@ You have the option to define the data displayed in the control directly in the 
 
 You change the settings for the position, visibility, geometry, style, color, and font of the control in the Inspector window.
 
-You can find more information in the WinCC Unified help under "Visualizing processes > Configuring screens > Basic information".
+You can find more information in the WinCC Unified help under "Visualizing processes &gt; Configuring screens &gt; Basic information".
 
 #### Properties of the Performance analyzer
 
-The following properties are available for the Performance analyzer in the Inspector window under "Properties > Miscellaneous > Interface":
+The following properties are available for the Performance analyzer in the Inspector window under "Properties &gt; Miscellaneous &gt; Interface":
 
 | Property | Description |
 | --- | --- |
@@ -2395,9 +2395,9 @@ The following properties are available for the Performance analyzer in the Inspe
 
 #### Inserting a control in a screen
 
-1. Insert the "Performance analyzer" control from the "Toolbox > My controls" task card into the screen.
+1. Insert the "Performance analyzer" control from the "Toolbox &gt; My controls" task card into the screen.
 2. Select the control.
-3. In the Inspector window under "Properties > Properties", you define the properties of the control.
+3. In the Inspector window under "Properties &gt; Properties", you define the properties of the control.
 
 #### Adding entities
 
@@ -2407,7 +2407,7 @@ The following properties are available for the Performance analyzer in the Inspe
 4. In the "Selected objects" row, click on the "0 items" field in the "Static value" column.
 
    The "Selected objects" editor opens on the right side of the Inspector window.
-5. Click "<Add>".
+5. Click "&lt;Add&gt;".
 
    A new element (starting with 0) is created.
 6. Navigate under "Object" to the plant view and further to the unit for which you have already configured items.
@@ -2421,7 +2421,7 @@ The following properties are available for the Performance analyzer in the Inspe
 
 #### Result
 
-The created elements are displayed in the Inspector window under "Miscellaneous > Interface" and can be changed there in the "Static value" column if required.
+The created elements are displayed in the Inspector window under "Miscellaneous &gt; Interface" and can be changed there in the "Static value" column if required.
 
 ![Result](images/144987273227_DV_resource.Stream@PNG-en-US.png)
 
@@ -2473,14 +2473,14 @@ Or the property is empty.
   You can find more information in the section "Configuring users and roles" in the WinCC Unified help.
 - The "Allow operator control" option is activated in the control properties under "Security".
 - The "Authorization" option is empty in the control properties under "Security".
-- The "Require explicit unlock" option is deactivated under the "Change runtime configuration" and "Change runtime data" properties in the control properties under "Properties > Miscellaneous > Interface".
+- The "Require explicit unlock" option is deactivated under the "Change runtime configuration" and "Change runtime data" properties in the control properties under "Properties &gt; Miscellaneous &gt; Interface".
 
   This control property is for multipoint touch displays and is not supported in V17.
 
 #### Procedure
 
 1. Select the desired control in the screen.
-2. Expand the "Change runtime configuration" or "Change runtime data" property under "Properties > Miscellaneous > Interface".
+2. Expand the "Change runtime configuration" or "Change runtime data" property under "Properties &gt; Miscellaneous &gt; Interface".
 3. Expand the drop-down list in the "Static value" column under "Authorization".
 
    The function rights are displayed.
@@ -2493,7 +2493,7 @@ Or the property is empty.
 
 To receive configuration data in runtime, you have the option of performing a delta compile and delta download.
 
-You can find more information in the WinCC Unified help under "Visualize processes > Compile and load".
+You can find more information in the WinCC Unified help under "Visualize processes &gt; Compile and load".
 
 ### Configuration changes to PFI data
 
@@ -2524,7 +2524,7 @@ In addition, the number of plant objects (instances) used that are relevant for 
 
 ### Solve causes of errors during validation
 
-1. Navigate in the Inspector window to "Info > Compile".
+1. Navigate in the Inspector window to "Info &gt; Compile".
 2. ![Solve causes of errors during validation](images/122765203595_DV_resource.Stream@PNG-de-DE.png) Set the filter so that error messages are displayed.
 
    If a green arrow ![Solve causes of errors during validation](images/122844867979_DV_resource.Stream@PNG-de-DE.png) is displayed in the "Go to" column for messages, you can go directly to the appropriate tab to correct the cause.
@@ -2543,7 +2543,7 @@ Examples:
 
 ### Showing the number of plant objects (instances)
 
-The number of plant objects that are used in the plant view and in which at least one PFI object (KPI, operand or machine state) is configured are displayed under "Info > Compile" in the Inspector window.
+The number of plant objects that are used in the plant view and in which at least one PFI object (KPI, operand or machine state) is configured are displayed under "Info &gt; Compile" in the Inspector window.
 
 If no instances exist, the count is not displayed in the Inspector window.
 
@@ -2576,7 +2576,7 @@ To display the buttons again, double-click in the display area of the control.
 - For example, to highlight the pie slice for a KPI for a printout, click the pie slice.
 
   The pie slice is moved out of the center and thus highlighted.
-- With <Ctrl>-click, you highlight another pie slice.
+- With &lt;Ctrl&gt;-click, you highlight another pie slice.
 
 #### Chinese representation
 
@@ -2836,7 +2836,7 @@ A message is output if you have selected a combination of settings that cannot b
 | Logical operator | Selection | Specifies the logical operator for linking the filter rules:  - ( - ) - AND - OR |
 | Context provider | Selection | Specifies the tool on which the filter rule is based:  - Calendar - None |
 | Context | Selection | Specifies the context:  - ShiftID    For the "Calendar" context provider |
-| Condition | Selection | Specifies the condition for the filter rule:  - = - <   Only available for "Calendar" context provider - <=   Only available for "Calendar" context provider - >   Only available for "Calendar" context provider - >=   Only available for "Calendar" context provider |
+| Condition | Selection | Specifies the condition for the filter rule:  - = - &lt;   Only available for "Calendar" context provider - &lt;=   Only available for "Calendar" context provider - &gt;   Only available for "Calendar" context provider - &gt;=   Only available for "Calendar" context provider |
 | Value | Number | Specifies the value for the condition. |
 
 ---
@@ -3049,7 +3049,7 @@ A message is output if you have selected a combination of settings that cannot b
 | Logical operator | Selection | Specifies the logical operator for linking the filter rules:  - ( - ) - AND - OR |
 | Context provider | Selection | Specifies the tool on which the filter rule is based:  - Calendar - None |
 | Context | Selection | Specifies the context:  - ShiftID   For the "Calendar" context provider |
-| Condition | Selection | Specifies the condition for the filter rule:  - = - <   Only available for "Calendar" context provider - <=   Only available for "Calendar" context provider - >   Only available for "Calendar" context provider - >=   Only available for "Calendar" context provider |
+| Condition | Selection | Specifies the condition for the filter rule:  - = - &lt;   Only available for "Calendar" context provider - &lt;=   Only available for "Calendar" context provider - &gt;   Only available for "Calendar" context provider - &gt;=   Only available for "Calendar" context provider |
 | Value | Number | Specifies the value for the condition. |
 
 ---
@@ -3322,7 +3322,7 @@ The machine states are logged according to the settings in the engineering syste
 ##### Merging machine states
 
 1. Click on the "Equipment view" in the Performance Gantt chart.
-2. Use multiple selection to select the two machine states you want to combine. Use the <Ctrl> key for multiple selection.
+2. Use multiple selection to select the two machine states you want to combine. Use the &lt;Ctrl&gt; key for multiple selection.
 3. Click "Edit".
 4. Select the "Merge" button.
 
@@ -3341,7 +3341,7 @@ The machine states are logged according to the settings in the engineering syste
 ##### Adjacent machine state (side by side)
 
 1. Click on the "Equipment view" in the Performance Gantt chart.
-2. Using multiple selection, select the machine state and the undefined machine state that are to be merged. Use the <Ctrl> key for multiple selection.
+2. Using multiple selection, select the machine state and the undefined machine state that are to be merged. Use the &lt;Ctrl&gt; key for multiple selection.
 3. Click "Edit".
 4. Select the "Merge" button.
 
@@ -3491,16 +3491,16 @@ With a user-defined bar window, you create an additional display area in the con
 | Property | Type | Description |
 | --- | --- | --- |
 | **KPIs by equipment** |  |  |
-| <Equipment> | String selection list | Specifies the equipment for which KPIs are visualized in the control.  - Select the KPI of the equipment you would like to visualize. - Select the display color and the text color for the corresponding KPI or activate the use of the standard color. |
-| <Context> | String selection list | Specifies the context for the display. |
-| <KPIs of the selected equipment> | Boolean value | Specifies whether a KPI is displayed for the selected equipment. |
+| &lt;Equipment&gt; | String selection list | Specifies the equipment for which KPIs are visualized in the control.  - Select the KPI of the equipment you would like to visualize. - Select the display color and the text color for the corresponding KPI or activate the use of the standard color. |
+| &lt;Context&gt; | String selection list | Specifies the context for the display. |
+| &lt;KPIs of the selected equipment&gt; | Boolean value | Specifies whether a KPI is displayed for the selected equipment. |
 | KPI color: Apply default | Boolean value | Specifies whether the default color is used to display the KPI. The color can be set individually using the color icon. |
 | Text color: Apply default | Boolean value | Specifies whether the default color is used to display the text. The color can be set individually using the color icon. |
 | Activate targets and thresholds | Boolean value | Specifies whether the targets and thresholds are displayed in the control. |
 | **KPI display options** |  |  |
 | Automatic decimal format | Boolean value | Specifies whether the decimal format is set automatically. |
 | Decimal places | Number | Specifies the number of decimal places between 0 and 10.   Default value: 2. |
-| <Sort order> | Selection list | Defines the order in which the KPIs are displayed. |
+| &lt;Sort order&gt; | Selection list | Defines the order in which the KPIs are displayed. |
 | Counter calculation without the next archived value | Boolean value | The last archived value of a counter cannot be fully calculated if the calculation begins in the specified time range and ends outside the specified time range. If the option "Counter calculation without the next archived value" is activated, this value is not taken into account in the calculation. |
 
 ##### Configuring fonts
@@ -3590,7 +3590,7 @@ With a user-defined bar window, you create an additional display area in the con
 | Logical operator | Selection | Specifies the logical operator for linking the filter rules:  - ( - ) - AND - OR |
 | Context provider | Selection | Specifies the tool on which the filter rule is based:  - Calendar - Custom |
 | Context | Selection | Specifies the context:  - ShiftID    For the "Calendar" context provider |
-| Condition | Selection | Specifies the condition for the filter rule:  - = - <   Only available for "Calendar" context provider - <=   Only available for "Calendar" context provider - >   Only available for "Calendar" context provider - >=   Only available for "Calendar" context provider |
+| Condition | Selection | Specifies the condition for the filter rule:  - = - &lt;   Only available for "Calendar" context provider - &lt;=   Only available for "Calendar" context provider - &gt;   Only available for "Calendar" context provider - &gt;=   Only available for "Calendar" context provider |
 | Value | Number | Specifies the value for the condition. |
 
 > **Note**
@@ -3795,7 +3795,7 @@ The equipment with or without calculation cycle is displayed on level 1 with the
 | --- | --- |
 | No. | Row index |
 | Icon | ![Level 1 - Equipment with/without calculation cycle](images/144154965515_DV_resource.Stream@PNG-de-DE.png) |
-| Name | The name is made up of the configuration:"<name of the HMI device>/<name of the plant object> |
+| Name | The name is made up of the configuration:"&lt;name of the HMI device&gt;/&lt;name of the plant object&gt; |
 | Type | Plant object |
 
 **Equipment with calculation cycle**
@@ -3804,7 +3804,7 @@ The equipment with or without calculation cycle is displayed on level 1 with the
 | --- | --- |
 | No. | Row index |
 | Icon | ![Level 1 - Equipment with/without calculation cycle](images/142667648011_DV_resource.Stream@PNG-de-DE.png) |
-| Name | The name is made up of the configuration:"<name of the HMI device>/<name of the plant object>.<name of the KPI>.<name of the calculation cycle> |
+| Name | The name is made up of the configuration:"&lt;name of the HMI device&gt;/&lt;name of the plant object&gt;.&lt;name of the KPI&gt;.&lt;name of the calculation cycle&gt; |
 | Type | Trigger type of the calculation cycle:  - Tag - Context |
 
 The associated KPI formula is displayed below the "Data table" tab.
@@ -4486,40 +4486,40 @@ In this control, you have the option of displaying either machine states with mi
 3. Create a "Tailback" machine state.
 4. Create an "Idle" machine state.
 5. Select the "Tailback" machine state.
-6. Open the Inspector window under "Properties > General > General".
+6. Open the Inspector window under "Properties &gt; General &gt; General".
 7. Set the check mark in the "Stop state" area.
 
 **Configuring KPIs**
 
 1. Open the "Performance indicators" editor.
 2. Create the "Availability_WithMicroStops" KPI.
-3. Open the Inspector window under "Properties > General > KPI formula".
+3. Open the Inspector window under "Properties &gt; General &gt; KPI formula".
 4. Configure the "SUM(MachineStates("Operating").Duration/(MachineStates("Operating").Duration+MachineStates("Tailback").Duration+MachineStates("Idle"). Duration))" formula.
 
-   Use drag & drop to use the machine states in the "KPI formula" editor.
+   Use drag &amp; drop to use the machine states in the "KPI formula" editor.
 5. Create the "Availability_WithoutMicroStops" KPI.
-6. Open the Inspector window under "Properties > General > KPI formula".
+6. Open the Inspector window under "Properties &gt; General &gt; KPI formula".
 7. Configure the "SUM(MachineStates("Operating").Duration/(MachineStates("Operating").Duration+MachineStates("Tailback").Duration.WithoutMicroStops+MachineStates("Idle"). Duration))" formula.
 8. Create the "Availability_OnlyMicroStops" KPI.
-9. Open the Inspector window under "Properties > General > KPI formula".
+9. Open the Inspector window under "Properties &gt; General &gt; KPI formula".
 10. Configure the "SUM(MachineStates("Operating").Duration/(MachineStates("Operating").Duration+MachineStates("Tailback").Duration.OnlyMicroStops+MachineStates("Idle"). Duration))" formula.
-11. In the Inspector window, under "Properties > General > General", assign different colors for the display of the KPIs.
+11. In the Inspector window, under "Properties &gt; General &gt; General", assign different colors for the display of the KPIs.
 
 **Using KPIs and connecting machine states**
 
 1. Open the plant object type.
-2. Switch to the "Performance indicators > KPIs" tab.
+2. Switch to the "Performance indicators &gt; KPIs" tab.
 3. Select the KPIs in the "Performance indicators" task card.
-4. Drag the KPIs to the workspace area using drag & drop.
-5. Switch to the "Performance indicators > Machine states" tab.
+4. Drag the KPIs to the workspace area using drag &amp; drop.
+5. Switch to the "Performance indicators &gt; Machine states" tab.
 6. Select the "Operating" machine state.
-7. Define the configured interface tag "MachineState" as source tag in the inspector window under "Properties > General > General".
+7. Define the configured interface tag "MachineState" as source tag in the inspector window under "Properties &gt; General &gt; General".
 8. Set the value "10" for both the low limit and the high limit.
 9. Select the "Tailback" machine state.
-10. Set the value "15" for both the low limit and the high limit in the Inspector window under "Properties > General > General".
+10. Set the value "15" for both the low limit and the high limit in the Inspector window under "Properties &gt; General &gt; General".
 11. Select the "Idle" machine state.
-12. Set the value "0" for both the low limit and the high limit in the Inspector window under "Properties > General > General".
-13. Switch to the "Performance indicators > Settings" tab.
+12. Set the value "0" for both the low limit and the high limit in the Inspector window under "Properties &gt; General &gt; General".
+13. Switch to the "Performance indicators &gt; Settings" tab.
 14. Set the value "1" for the microstop time.
 15. Set minutes as the microstop unit.
 
@@ -4527,28 +4527,28 @@ In this control, you have the option of displaying either machine states with mi
 
 1. Open the configured screen.
 2. Add an I/O field.
-3. Use the interface tag "MachineState" of the plant object to make the I/O field dynamic in the Inspector window under "Properties > Properties > General > Process value".
+3. Use the interface tag "MachineState" of the plant object to make the I/O field dynamic in the Inspector window under "Properties &gt; Properties &gt; General &gt; Process value".
 4. Add the "Performance Gantt chart" control.
-5. Create an element for the equipment in the Inspector window under "Properties > Properties > Miscellaneous > Interface > SelectedEquipment".
+5. Create an element for the equipment in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface &gt; SelectedEquipment".
 6. Expand the created element.
 7. Select the plant object in the "Static value" column.
 
    The plant object is assigned to the "Performance Gantt chart" control.
-8. Create a time range under "Properties > Properties > Miscellaneous > Interface > Selected time":
+8. Create a time range under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface &gt; Selected time":
 
    - Time mode: Relative time
    - From: Current time
-   - To > Offset: 2
+   - To &gt; Offset: 2
 9. Add the "Performance pie chart" control.
-10. Create three elements in the Inspector window under "Properties > Properties > General > Interface > Selected KPIs".
+10. Create three elements in the Inspector window under "Properties &gt; Properties &gt; General &gt; Interface &gt; Selected KPIs".
 11. In the "Static value" column, select a KPI for each item created.
 
     The KPIs are assigned to the "Performance pie chart" control.
-12. Create a time range under "Properties > Properties > Miscellaneous > Interface > Selected time":
+12. Create a time range under "Properties &gt; Properties &gt; Miscellaneous &gt; Interface &gt; Selected time":
 
     - Time mode: Relative time
     - From: Current time
-    - To > Offset: 2
+    - To &gt; Offset: 2
 13. Compile and download the project.
 14. Enter a value for a machine state in the I/O field.
 15. Update both controls in Runtime.
@@ -4613,14 +4613,14 @@ In the example, the following actions are configured using scripts on buttons:
 #### Procedure
 
 1. Select the "Show_KPI_1" button in the configured screen.
-2. Select the event "Click left mouse button" under "Properties > Events" in the Inspector window.
+2. Select the event "Click left mouse button" under "Properties &gt; Events" in the Inspector window.
 3. Convert the function list to a script.
 4. Insert the "Show_KPI_1" sample code.
 5. Repeat steps 1 to 4 for the "Hide_KPI_1" button and the "Hide_KPI_1" sample code.
 6. Select the I/O field "From" in the configured screen.
-7. Use the "From" HMI tag to make the "From" I/O field dynamic in the Inspector window under "Properties > Properties > Process value".
+7. Use the "From" HMI tag to make the "From" I/O field dynamic in the Inspector window under "Properties &gt; Properties &gt; Process value".
 8. Select the I/O field "To" in the configured screen.
-9. Use the "To" HMI tag to make the "From" I/O field dynamic in the Inspector window under "Properties > Properties > Process value".
+9. Use the "To" HMI tag to make the "From" I/O field dynamic in the Inspector window under "Properties &gt; Properties &gt; Process value".
 10. Repeat steps 1 to 4 for the "Start-End_Time" button and the "Start-End_Time" sample code.
 11. Compile and load it in runtime.
 12. Trigger the event "Click left mouse button" on the buttons.

@@ -119,7 +119,7 @@ To set the IEC check for all new blocks in the project, proceed as follows:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > General" group in the area navigation.
+2. Select the "PLC programming &gt; General" group in the area navigation.
 3. Select or clear the "IEC check for code blocks" check box in the "Default settings for new blocks" group.
 
    The IEC check is enabled or disabled for all new blocks in the program.

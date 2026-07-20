@@ -106,7 +106,7 @@ On a HMI device with "WinCC Runtime Professional" there are server for the follo
 
 - OPC Data Access: Access to the data management of WinCC
 - OPC Historical Data Access: Access to the WinCC log system
-- OPC Alarms&Events: Access to the WinCC alarm system
+- OPC Alarms&amp;Events: Access to the WinCC alarm system
 - OPC Unified Architecture: Access to the WinCC data management, alarm system and log system
 
 In addition, WinCC by default contains an OPC channel that can access corresponding servers with data access support as a client via OPC DA or OPC UA.
@@ -131,7 +131,7 @@ The following screen shows the OPC communication concept of WinCC:
   
 [Functionality of the WinCC OPC HDA server (RT Professional)](#functionality-of-the-wincc-opc-hda-server-rt-professional)
   
-[Functionality of the WinCC OPC A&E server (RT Professional)](#functionality-of-the-wincc-opc-ae-server-rt-professional)
+[Functionality of the WinCC OPC A&amp;E server (RT Professional)](#functionality-of-the-wincc-opc-ae-server-rt-professional)
   
 [Principle of operation the WinCC OPC UA Server (RT Professional)](#principle-of-operation-the-wincc-opc-ua-server-rt-professional)
   
@@ -150,7 +150,7 @@ This section contains information on the following topics:
 For the following WinCC OPC servers, you configure the basic settings on the configuration PC for OPC in the HMI device runtime settings:
 
 - OPC HDA
-- OPC A&E
+- OPC A&amp;E
 - OPC UA
 
 ##### Basic settings for OPC
@@ -167,7 +167,7 @@ For HMI devices with Runtime Professional, you define the following in the runti
 
   In this category you configure the mapping of the WinCC alarm system for the alarm behavior of the following WinCC OPC servers:
 
-  - OPC A&E
+  - OPC A&amp;E
 
 ---
 
@@ -175,7 +175,7 @@ For HMI devices with Runtime Professional, you define the following in the runti
 
 [Configure WinCC OPC HDA Server (RT Professional)](#configure-wincc-opc-hda-server-rt-professional)
   
-[Configure WinCC OPC A&E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
+[Configure WinCC OPC A&amp;E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
   
 [Configure WinCC OPC UA Server (RT Professional)](#configure-wincc-opc-ua-server-rt-professional)
 
@@ -186,7 +186,7 @@ This section contains information on the following topics:
 - [Accessibility of WinCC OPC servers (RT Professional)](#accessibility-of-wincc-opc-servers-rt-professional)
 - [WinCC OPC DA Server (RT Professional)](#wincc-opc-da-server-rt-professional)
 - [WinCC OPC HDA Server (RT Professional)](#wincc-opc-hda-server-rt-professional)
-- [WinCC OPC A&E server (RT Professional)](#wincc-opc-ae-server-rt-professional)
+- [WinCC OPC A&amp;E server (RT Professional)](#wincc-opc-ae-server-rt-professional)
 - [WinCC OPC UA Server (RT Professional)](#wincc-opc-ua-server-rt-professional)
 
 #### Accessibility of WinCC OPC servers (RT Professional)
@@ -209,7 +209,7 @@ The WinCC OPC DA server enables any OPC DA client to access process values from 
 
 ###### Supported specifications
 
-The WinCC OPC A&E Server supports OPC Data Access 2.05a and 3.0.
+The WinCC OPC A&amp;E Server supports OPC Data Access 2.05a and 3.0.
 
 ###### ProgID of the WinCC OPC DA servers
 
@@ -549,47 +549,47 @@ To configure WinCC OPC HDA server, proceed as follows:
 
 This section contains information on the following topics:
 
-- [Functionality of the WinCC OPC A&E server (RT Professional)](#functionality-of-the-wincc-opc-ae-server-rt-professional)
-- [OPC A&E Server mapping rules (RT Professional)](#opc-ae-server-mapping-rules-rt-professional)
-- [Configure WinCC OPC A&E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
+- [Functionality of the WinCC OPC A&amp;E server (RT Professional)](#functionality-of-the-wincc-opc-ae-server-rt-professional)
+- [OPC A&amp;E Server mapping rules (RT Professional)](#opc-ae-server-mapping-rules-rt-professional)
+- [Configure WinCC OPC A&amp;E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
 - [Accessing logged alarms (RT Professional)](#accessing-logged-alarms-rt-professional)
 
 ##### Functionality of the WinCC OPC A&E server (RT Professional)
 
 ###### Principle of operation
 
-The WinCC OPC A&E server enables the access to alarms of the WinCC alarm system. The OPC A&E Client is kept informed of status changes for WinCC alarms via Subscriptions. To avoid displaying all alarms and attributes on the OPC A&E client, configure in the Subscription filter.
+The WinCC OPC A&amp;E server enables the access to alarms of the WinCC alarm system. The OPC A&amp;E Client is kept informed of status changes for WinCC alarms via Subscriptions. To avoid displaying all alarms and attributes on the OPC A&amp;E client, configure in the Subscription filter.
 
 ###### Supported specifications
 
-OPC Alarm & Events is a specification for the transmission of alarms and events. The WinCC OPC A&E Server supports the OPC Alarms&Events 1.10 specification.
+OPC Alarm &amp; Events is a specification for the transmission of alarms and events. The WinCC OPC A&amp;E Server supports the OPC Alarms&amp;Events 1.10 specification.
 
-In addition, the WinCC OPC A&E Server supports access to historical alarms in accordance with the Siemens draft "OPC Historical Alarms and Events v1.10".
+In addition, the WinCC OPC A&amp;E Server supports access to historical alarms in accordance with the Siemens draft "OPC Historical Alarms and Events v1.10".
 
-###### ProgID of the WinCC OPC A&E server
+###### ProgID of the WinCC OPC A&amp;E server
 
-You access the WinCC OPC A&E server via the following ProgID: "OPCServerAE.WinCC_SCADA".
+You access the WinCC OPC A&amp;E server via the following ProgID: "OPCServerAE.WinCC_SCADA".
 
 ###### Quality codes
 
-The "Quality Code" delivers information on the status and quality of an alarm. For more information, refer to the "OPC Alarms&Events 1.10" specification.
+The "Quality Code" delivers information on the status and quality of an alarm. For more information, refer to the "OPC Alarms&amp;Events 1.10" specification.
 
-###### OPC A&E Server mapping rules
+###### OPC A&amp;E Server mapping rules
 
-To map the WinCC alarm system on OPC Alarms&Events, the WinCC OPC A&E server supports three mapping rules "Mode 1" to "Mode 3".
+To map the WinCC alarm system on OPC Alarms&amp;Events, the WinCC OPC A&amp;E server supports three mapping rules "Mode 1" to "Mode 3".
 
-"Mode 1" and "Mode 2" are supported because of compatibility reasons to WinCC OPC A&E server version 3.52 and earlier. "Mode 1" and "Mode 2" do not have a restricted scope of operation.
+"Mode 1" and "Mode 2" are supported because of compatibility reasons to WinCC OPC A&amp;E server version 3.52 and earlier. "Mode 1" and "Mode 2" do not have a restricted scope of operation.
 
 "Mode 3" widens the restricted scope of operation of "Mode 1" and "Mode 2".
 
 ###### Documentation contents
 
-The WinCC OPC A&E Server documentation contains the following information:
+The WinCC OPC A&amp;E Server documentation contains the following information:
 
-- A mapping of the alarm system on OPC A&E
+- A mapping of the alarm system on OPC A&amp;E
 - An overview of supported attributes
 
-For more information, refer to the "OPC Alarm&Events 1.10" specification.
+For more information, refer to the "OPC Alarm&amp;Events 1.10" specification.
 
 ---
 
@@ -599,7 +599,7 @@ For more information, refer to the "OPC Alarm&Events 1.10" specification.
   
 [Accessibility of WinCC OPC servers (RT Professional)](#accessibility-of-wincc-opc-servers-rt-professional)
   
-[OPC A&E Server mapping rules (RT Professional)](#opc-ae-server-mapping-rules-rt-professional-1)
+[OPC A&amp;E Server mapping rules (RT Professional)](#opc-ae-server-mapping-rules-rt-professional-1)
   
 [Mapping rule "Mode 1": (RT Professional)](#mapping-rule-mode-1-rt-professional)
   
@@ -627,23 +627,23 @@ This section contains information on the following topics:
 
 This section contains information on the following topics:
 
-- [OPC A&E Server mapping rules (RT Professional)](#opc-ae-server-mapping-rules-rt-professional-1)
-- [OPC A&E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
+- [OPC A&amp;E Server mapping rules (RT Professional)](#opc-ae-server-mapping-rules-rt-professional-1)
+- [OPC A&amp;E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
 - [State machine (RT Professional)](#state-machine-rt-professional)
-- [Quality Codes for OPC A&E (RT Professional)](#quality-codes-for-opc-ae-rt-professional)
+- [Quality Codes for OPC A&amp;E (RT Professional)](#quality-codes-for-opc-ae-rt-professional)
 - [Attributes (RT Professional)](#attributes-rt-professional)
 
 ###### OPC A&E Server mapping rules (RT Professional)
 
-During the configuration of the WinCC message system, settings are made to determine which process events generate a message. This message is shown as an alarm in OPC A&E.
+During the configuration of the WinCC message system, settings are made to determine which process events generate a message. This message is shown as an alarm in OPC A&amp;E.
 
 The following table shows the most important parameters of the alarm and how the WinCC alarm system prepares the information:
 
 | OPC | WinCC message system | Type of event |
 | --- | --- | --- |
-| Source | Source where the alarm was issued. The source has the format "<server prefix>::@LOCALMACHINE::". | S, C |
+| Source | Source where the alarm was issued. The source has the format "&lt;server prefix&gt;::@LOCALMACHINE::". | S, C |
 | Time | Time of the event. Issues a time stamp in UTC (Universal Time Coordinated). | S, C |
-| EventType | Type of event. The WinCC OPC A&E Server supports "Simple Events" and "Condition Related Events". | S, C |
+| EventType | Type of event. The WinCC OPC A&amp;E Server supports "Simple Events" and "Condition Related Events". | S, C |
 | Severity | Priority of the alarm from WinCC | S, C |
 | EventCategory | Category of the alarms. For more information on this topic, refer to "Displaying Message Classes and Types". | S, C |
 | Message | Alarm text for the corresponding alarm number. | S, C |
@@ -656,7 +656,7 @@ The following table shows the most important parameters of the alarm and how the
 | ActiveTime | Returns the time stamp for received messages. | C |
 | EventAttribute | Lists the attributes required for the respective message. For more information, refer to "Attributes of the WinCC Message System". | C |
 | Quality | Returns the quality code of the message. | C |
-| Cookie | Returns the cookie from the OPC A&E Server. | C |
+| Cookie | Returns the cookie from the OPC A&amp;E Server. | C |
 | ActorID | Returns the logged user. | C |
 | S = "Simple Event"  C = "Condition Related Event" |  |  |
 
@@ -666,7 +666,7 @@ The following table shows the most important parameters of the alarm and how the
 
 [State machine (RT Professional)](#state-machine-rt-professional)
   
-[Quality Codes for OPC A&E (RT Professional)](#quality-codes-for-opc-ae-rt-professional)
+[Quality Codes for OPC A&amp;E (RT Professional)](#quality-codes-for-opc-ae-rt-professional)
   
 [Attributes (RT Professional)](#attributes-rt-professional)
   
@@ -678,19 +678,19 @@ The following table shows the most important parameters of the alarm and how the
   
 [Alarm components and properties (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](Working%20with%20alarms%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#alarm-components-and-properties-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[OPC A&E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
+[OPC A&amp;E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
 
 ###### OPC A&E types of event  (RT Professional)
 
 ###### Introduction
 
-The WinCC OPC A&E Server supports "Condition Related Events" and "Simple Events".
+The WinCC OPC A&amp;E Server supports "Condition Related Events" and "Simple Events".
 
 ###### Condition Related Events
 
 "Condition Related Events" are alarms triggered by a condition. such as the limit violation of a tag, which is then output as an alarm on the HMI device. A "Condition Related Event"contains additionally the "Alarm" attribute.
 
-By default, each alarm as "Condition Related Event" is sent to the OPC A&A client.
+By default, each alarm as "Condition Related Event" is sent to the OPC A&amp;A client.
 
 ###### Simple Events
 
@@ -715,7 +715,7 @@ In order for an alarm to be treated as a "Simple Event", the following prerequis
 
 [State machine (RT Professional)](#state-machine-rt-professional)
   
-[OPC A&E Server mapping rules (RT Professional)](#opc-ae-server-mapping-rules-rt-professional-1)
+[OPC A&amp;E Server mapping rules (RT Professional)](#opc-ae-server-mapping-rules-rt-professional-1)
   
 [Mapping rule "Mode 1": (RT Professional)](#mapping-rule-mode-1-rt-professional)
   
@@ -727,7 +727,7 @@ In order for an alarm to be treated as a "Simple Event", the following prerequis
 
 ###### Introduction
 
-For WinCC, the state machine is how an alarm is displayed and processed from "incoming" to "outgoing". On the WinCC OPC A&E Server, this alarm status is managed in the "ChangeMask" and "NewState" parameters.
+For WinCC, the state machine is how an alarm is displayed and processed from "incoming" to "outgoing". On the WinCC OPC A&amp;E Server, this alarm status is managed in the "ChangeMask" and "NewState" parameters.
 
 ###### ChangeMask
 
@@ -770,7 +770,7 @@ The following table shows how WinCC alarm statuses are mapped to the "NewState" 
 
 **See also**
 
-[OPC A&E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
+[OPC A&amp;E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
 
 ###### Quality Codes for OPC A&E (RT Professional)
 
@@ -778,7 +778,7 @@ The "Quality Code" is required to evaluate the status and quality of an alarm.
 
 ###### Quality codes
 
-OPC A&E's quality codes are presented in the following table:
+OPC A&amp;E's quality codes are presented in the following table:
 
 | Code | Quality | Status |
 | --- | --- | --- |
@@ -788,7 +788,7 @@ OPC A&E's quality codes are presented in the following table:
 
 ###### Attributes (RT Professional)
 
-The following table lists the OPC attributes of the WinCC message system. You can configure the attributes in the "Alarms" editor. Some attributes are intended for internal use in WinCC only and are therefore not relevant to an OPC A&E Client. These attributes are not listed.
+The following table lists the OPC attributes of the WinCC message system. You can configure the attributes in the "Alarms" editor. Some attributes are intended for internal use in WinCC only and are therefore not relevant to an OPC A&amp;E Client. These attributes are not listed.
 
 | OPC attribute | WinCC message system | Data type |
 | --- | --- | --- |
@@ -862,7 +862,7 @@ The following table lists the OPC attributes of the WinCC message system. You ca
 
 "Mode 1" displays the whole WinCC alarm system under a "OPC Source" with the name "localhost::" The "TEXT01" WinCC attribute is written in the OPC alarm text.
 
-The WinCC alarm number is displayed on the "Condition" of the WinCC OPC A&E server.
+The WinCC alarm number is displayed on the "Condition" of the WinCC OPC A&amp;E server.
 
 "Mode 1" supports the "Simple Events" and "Condition Related Events" types of event. Events can be filtered according to the "Event Type", "Category" and "Severity" criteria.
 
@@ -874,9 +874,9 @@ The WinCC alarm number is displayed on the "Condition" of the WinCC OPC A&E serv
   
 [Attributes (RT Professional)](#attributes-rt-professional)
   
-[OPC A&E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
+[OPC A&amp;E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
   
-[Configure WinCC OPC A&E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
+[Configure WinCC OPC A&amp;E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
   
 [Alarm classes and alarm methods (RT Professional)](#alarm-classes-and-alarm-methods-rt-professional)
   
@@ -884,7 +884,7 @@ The WinCC alarm number is displayed on the "Condition" of the WinCC OPC A&E serv
 
 ###### Mapping rules "Mode 2": (RT Professional)
 
-"Mode 2" is implemented as of version 3.5.2. of the WinCC OPC A&E server. The WinCC alarm number is displayed on the "Condition" of the WinCC OPC A&E server.
+"Mode 2" is implemented as of version 3.5.2. of the WinCC OPC A&amp;E server. The WinCC alarm number is displayed on the "Condition" of the WinCC OPC A&amp;E server.
 
 The text attribute of the WinCC alarm ("TEXT01" to "TEXT10") you have configured, is written in the OPC alarm text of "OPC Source".
 
@@ -898,9 +898,9 @@ The text attribute of the WinCC alarm ("TEXT01" to "TEXT10") you have configured
   
 [Attributes (RT Professional)](#attributes-rt-professional)
   
-[OPC A&E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
+[OPC A&amp;E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
   
-[Configure WinCC OPC A&E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
+[Configure WinCC OPC A&amp;E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
   
 [Alarm classes and alarm methods (RT Professional)](#alarm-classes-and-alarm-methods-rt-professional)
   
@@ -908,9 +908,9 @@ The text attribute of the WinCC alarm ("TEXT01" to "TEXT10") you have configured
 
 ###### Mapping rules "Mode 3": (RT Professional)
 
-"Mode 3" is implemented as of version 3.6 of the WinCC OPC A&E server. "Mode 3" supports the hierarchical mapping of user-defined alarms. The hierarchy of "OPC Areas" is set by the user-defined alarm groups.
+"Mode 3" is implemented as of version 3.6 of the WinCC OPC A&amp;E server. "Mode 3" supports the hierarchical mapping of user-defined alarms. The hierarchy of "OPC Areas" is set by the user-defined alarm groups.
 
-With "Mode 3" you query the address space of the WinCC OPC A&E server according to "Areas" and "Sources".
+With "Mode 3" you query the address space of the WinCC OPC A&amp;E server according to "Areas" and "Sources".
 
 "Mode 3" supports the "Simple Events" and "Condition Related Events" types of event. Events can be additionally filtered according to the "Area" and "Source" criteria. "Mode 3" supports the "System Message" OPC category.
 
@@ -920,9 +920,9 @@ With "Mode 3" you query the address space of the WinCC OPC A&E server according 
 
 [Attributes (RT Professional)](#attributes-rt-professional)
   
-[OPC A&E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
+[OPC A&amp;E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
   
-[Configure WinCC OPC A&E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
+[Configure WinCC OPC A&amp;E server (RT Professional)](#configure-wincc-opc-ae-server-rt-professional)
   
 [Priorities (RT Professional)](#priorities-rt-professional)
 
@@ -934,7 +934,7 @@ The mapping rules for "Mode 1" and "Mode 2" contain significant restrictions. Th
 
 > **Note**
 >
-> In order to ensure compatibility with the previous version, the WinCC OPC A&E server cannot use multiplexer.
+> In order to ensure compatibility with the previous version, the WinCC OPC A&amp;E server cannot use multiplexer.
 
 The restrictions are solved in the mapping rule "Mode 3".
 
@@ -946,7 +946,7 @@ Some of the restrictions of the mapping rules "Mode 1" and "Mode 2" are listed b
 
   - ID Set 1 contains the "OPC-specific Properties". Range: 1 … 99
   - ID Set 2 contains the "Recommended Properties". Value range 100 to 199
-  - IDs 300…399 are especially reserved for OPC A&E
+  - IDs 300…399 are especially reserved for OPC A&amp;E
   - IDs 400 to 4999 are reserved by OPC.
   - ID Set 3 contains the "Vendor-specific Properties". Range: 5000 and higher
 
@@ -954,7 +954,7 @@ Some of the restrictions of the mapping rules "Mode 1" and "Mode 2" are listed b
 
   Mode 1 and Mode 2 pass on the IDs of the WinCC alarm attributes via the OPC interface. These IDs are in the range of 0 to 61.
 
-  If an OPC client, for example, requires the attribute with the IDs 2 ("Item Value") and 3 ("Item Quality") from the WinCC OPC A&E server, the OPC client receives instead the corresponding WinCC alarm atrocities. In this case the attributes are "ForeColor" and "BackColor".
+  If an OPC client, for example, requires the attribute with the IDs 2 ("Item Value") and 3 ("Item Quality") from the WinCC OPC A&amp;E server, the OPC client receives instead the corresponding WinCC alarm atrocities. In this case the attributes are "ForeColor" and "BackColor".
 - Restrictions for transfer of WinCC alarm numbers
 
   Alarm numbers are only transferred as text in the "Condition" when "Condition Related Events". When "Simple Events", the alarm numbers are completely lost.
@@ -991,7 +991,7 @@ The WinCC message system informs the user of disturbances and operating conditio
 >
 > The characteristics of the mapping rules "Mode 1" and "Mode 2" are described below:
 
-An "Event Category" is displayed on the WinCC OPC A&E Server for every combination of an alarm class and alarm method.
+An "Event Category" is displayed on the WinCC OPC A&amp;E Server for every combination of an alarm class and alarm method.
 
 An "Event Category" is determined by a "CategoryID" and a descriptive "Category Description". The "CategoryID" consists of the WinCC-internal ID of an alarm class and alarm method. The "Category Description" comes from the names of the alarm class and alarm method.
 
@@ -1009,7 +1009,7 @@ The names of the alarm classes and alarm methods can be ascertained explicitly v
 
 ###### Introduction
 
-The priority of WinCC alarms is displayed by the WinCC OPC A&E server on the "Severity" attribute.
+The priority of WinCC alarms is displayed by the WinCC OPC A&amp;E server on the "Severity" attribute.
 
 You can configure up to 17 priority levels in WinCC. The "Severity" OPC attribute has a value range from "1" to "1000":
 
@@ -1022,7 +1022,7 @@ Exception: For the mapping rules "Mode 1", the priority levels configured in Win
 
 ###### Example
 
-If you do not change the default settings in the configuration settings of the WinCC OPC A&E server, the 17 priority levels are going to be displayed in the WinCC OPC A&E server as follows:
+If you do not change the default settings in the configuration settings of the WinCC OPC A&amp;E server, the 17 priority levels are going to be displayed in the WinCC OPC A&amp;E server as follows:
 
 | Priority level in WinCC | Assigned value in the "Severity" attribute |
 | --- | --- |
@@ -1050,7 +1050,7 @@ If you do not change the default settings in the configuration settings of the W
 
 ###### Introduction
 
-Define the display of the WinCC alarm system in the configuration settings of the WinCC OPC A&E server.
+Define the display of the WinCC alarm system in the configuration settings of the WinCC OPC A&amp;E server.
 
 The following screen shows the configuration settings in the "Runtime settings" of the HMI device:
 
@@ -1062,33 +1062,33 @@ Alarms are configured.
 
 ###### Procedure
 
-To configure WinCC OPC A&E server, proceed as follows:
+To configure WinCC OPC A&amp;E server, proceed as follows:
 
 1. Open the "Runtime settings" of the HMI device in the project tree.
-2. Configure the server settings at "Alarms > OPC Alarms & Events":
+2. Configure the server settings at "Alarms &gt; OPC Alarms &amp; Events":
 
    - Define the low and high limit for the display of the priority range.
-   - To activate the WinCC alarms with the mapping rule "Mode 3" in the WinCC OPC A&E, activate "Activated" and "OPC areas".
+   - To activate the WinCC alarms with the mapping rule "Mode 3" in the WinCC OPC A&amp;E, activate "Activated" and "OPC areas".
 
      Use primarily this setting.
    - Assign to the "OPC event source" and the "OPC event alarm" respectively an alarm quality, for example, " User text block 3".
 
 ###### Result
 
-The WinCC alarms are displayed completely in the WinCC OPC A&E. If you have configured user-defined alarms, areas and sources of the user-defined alarms are displayed in the WinCC OPC A&E server.
+The WinCC alarms are displayed completely in the WinCC OPC A&amp;E. If you have configured user-defined alarms, areas and sources of the user-defined alarms are displayed in the WinCC OPC A&amp;E server.
 
 ###### Alternative procedure
 
-You can display alternatively because of compatibility reasons the WinCC alarm also according to the "Mode 2" and "Mode 1" mapping rules in the WinCC OPC A&E server:
+You can display alternatively because of compatibility reasons the WinCC alarm also according to the "Mode 2" and "Mode 1" mapping rules in the WinCC OPC A&amp;E server:
 
-1. To display the WinCC alarms with the mapping rule "Mode 2" in the WinCC OPC A&E server, activate "Activated" and deactivate"OPC areas".
-2. To display the WinCC alarms with the mapping rule "Mode 1" in the WinCC OPC A&E server, deactivate "Activated" and "OPC areas".
+1. To display the WinCC alarms with the mapping rule "Mode 2" in the WinCC OPC A&amp;E server, activate "Activated" and deactivate"OPC areas".
+2. To display the WinCC alarms with the mapping rule "Mode 1" in the WinCC OPC A&amp;E server, deactivate "Activated" and "OPC areas".
 
 ---
 
 **See also**
 
-[OPC A&E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
+[OPC A&amp;E types of event (RT Professional)](#opc-ae-types-of-event-rt-professional)
   
 [Priorities (RT Professional)](#priorities-rt-professional)
   
@@ -1113,18 +1113,18 @@ This section contains information on the following topics:
 
 ###### Introduction
 
-You can access the archived messages via the OPC A&E Server using an OPC client. Two methods are supported for accessing logged alarms:
+You can access the archived messages via the OPC A&amp;E Server using an OPC client. Two methods are supported for accessing logged alarms:
 
 - Output archived messages from a time period in the past
 - Output archived messages from a time period in the past without mentioning end of period. After the output of archived messages, all other newly generated messages are automatically sent to the OPC client.
 
   > **Note**
   >
-  > After reading tagged logs, you are not allowed to use the returned "ActiveTime" of an alarm to acknowledge the alarm or to track any transitions in the alarm. To ensure this does not happen, the OPC A&E Client must check the "EventType" of an alarm for the extra flag "OPC_HAE_HISTORICAL_EVENTFLAG". The "ActiveTime" is not correct on logged alarms. You can find information on the additional flag under "Identifying archived messages".
+  > After reading tagged logs, you are not allowed to use the returned "ActiveTime" of an alarm to acknowledge the alarm or to track any transitions in the alarm. To ensure this does not happen, the OPC A&amp;E Client must check the "EventType" of an alarm for the extra flag "OPC_HAE_HISTORICAL_EVENTFLAG". The "ActiveTime" is not correct on logged alarms. You can find information on the additional flag under "Identifying archived messages".
 
 ###### Polling the "Historic alarms and events" functionality
 
-The table below lists the filters offered by the WinCC's extended OPC A&E Server, in addition to the standard filters:
+The table below lists the filters offered by the WinCC's extended OPC A&amp;E Server, in addition to the standard filters:
 
 | Filter | Filter Values | Description |
 | --- | --- | --- |
@@ -1204,12 +1204,12 @@ Optional Defines how messages close to the start and end time are to be handled.
 
 - `bBounds=FALSE:`
 
-  - Time stamp of the first transferred alarm >= htStartTime
-  - Time stamp of the last transferred alarm < htEndTime
+  - Time stamp of the first transferred alarm &gt;= htStartTime
+  - Time stamp of the last transferred alarm &lt; htEndTime
 - `bBounds=TRUE:`
 
-  - Time stamp of the first transferred alarm <= htStartTime
-  - Time stamp of the last transferred alarm >= htEndTime
+  - Time stamp of the first transferred alarm &lt;= htStartTime
+  - Time stamp of the last transferred alarm &gt;= htEndTime
 
 The default setting is FALSE.
 
@@ -1331,7 +1331,7 @@ This section contains information on the following topics:
 - [Name area of the WinCC OPC UA server (RT Professional)](#name-area-of-the-wincc-opc-ua-server-rt-professional)
 - [OPC UA Data Access (RT Professional)](#opc-ua-data-access-rt-professional)
 - [OPC UA Log Access (RT Professional)](#opc-ua-log-access-rt-professional)
-- [OPC UA Alarms & Conditions (RT Professional)](#opc-ua-alarms-conditions-rt-professional)
+- [OPC UA Alarms &amp; Conditions (RT Professional)](#opc-ua-alarms-conditions-rt-professional)
 - [Attributes of the WinCC message system (RT Professional)](#attributes-of-the-wincc-message-system-rt-professional)
 - [Structure of the configuration file (RT Professional)](#structure-of-the-configuration-file-rt-professional)
 - [Configure WinCC OPC UA Server (RT Professional)](#configure-wincc-opc-ua-server-rt-professional)
@@ -1368,7 +1368,7 @@ The WinCC OPC UA server registers for Runtime-Start, depending on the configurat
 
 ###### Supported languages in the WinCC address area
 
-The WinCC OPC A&E Server supports the WinCC address area in the following languages:
+The WinCC OPC A&amp;E Server supports the WinCC address area in the following languages:
 
 - German
 - English
@@ -1484,7 +1484,7 @@ You can deactivate the support of anonymous users in the configuration settings 
 
 ###### Introduction
 
-The WinCC OPC A&E Server supports the following described functionality.
+The WinCC OPC A&amp;E Server supports the following described functionality.
 
 ###### OPC UA Service Sets
 
@@ -1511,7 +1511,7 @@ The WinCC OPC UA server supports the following OPC UA 1.02 profiles without rest
 
 - 6.5.3 Base Server Behaviour Facet
 - 6.5.12 Standard Event Subscription Server Facet
-- 6.5.14 A & C Base Condition Server Facet
+- 6.5.14 A &amp; C Base Condition Server Facet
 - 6.5.24  Method Server Facet
 - 6.5.30 Historical Raw Data Server Facet
 - 6.5.36 Historical Data Update Server Facet
@@ -1522,7 +1522,7 @@ The WinCC OPC UA server supports the following OPC UA 1.02 profiles without rest
 - 6.5.124 SecurityPolicy - Basic128Rsa15
 - 6.5.123 SecurityPolicy - None
 
-The WinCC OPC A&E Server supports the following OPC UA profiles shown in the following table, however with restrictions:
+The WinCC OPC A&amp;E Server supports the following OPC UA profiles shown in the following table, however with restrictions:
 
 | Profile | "Group" | Not supported "Conformance Unit" |
 | --- | --- | --- |
@@ -1530,8 +1530,8 @@ The WinCC OPC A&E Server supports the following OPC UA profiles shown in the fol
 | 6.5.9 Enhanced DataChange Subscription Server Facet | Monitored Item Services |  |
 | 6.5.25 Core Server Facet | Attribute Services | Attribute Write Index |
 | 6.5.26 Data Access Server Facet | Data Access | Data Access Analog  Data Access Multistate  Data Access PercentDeadBand  Data Access Semantic Changes  Data Access Two State |
-| 6.5.35 Standard UA Server | Attribute Services | Attribute Write StatusCode & TimeStamp |
-| 6.5.47 Standard UA Server Profile | Attribute Services | Attribute Write StatusCode & Timestamp |
+| 6.5.35 Standard UA Server | Attribute Services | Attribute Write StatusCode &amp; TimeStamp |
+| 6.5.47 Standard UA Server Profile | Attribute Services | Attribute Write StatusCode &amp; Timestamp |
 
 ---
 
@@ -1606,13 +1606,13 @@ The starting node of the WinCC namespace is an Event Notifier with which the OPC
 
 Internal and external WinCC tags are displayed by OPC UA tags of the "DataItemType" type. Other DataAccess tag types as "AnalogItem" or "DiscreteType" are not supported.
 
-The WinCC OPC A&E Server supports the reading access on the OPC UA tag attributes as "DataType" or "AccessLevel". Writing access and subscriptions are only supported for the "Value" attribute.
+The WinCC OPC A&amp;E Server supports the reading access on the OPC UA tag attributes as "DataType" or "AccessLevel". Writing access and subscriptions are only supported for the "Value" attribute.
 
 ##### OPC UA Log Access (RT Professional)
 
 ###### Introduction
 
-"OPC Historical Access" enables the access to logs and includes the "Historical Data" and "Alarms & Events" services. The WinCC OPC UA server supports only the "Historical Data" service.
+"OPC Historical Access" enables the access to logs and includes the "Historical Data" and "Alarms &amp; Events" services. The WinCC OPC UA server supports only the "Historical Data" service.
 
 The WinCC OPC UA Server offers the OPC clients access to the raw data of tag logs via "Services".
 
@@ -1674,7 +1674,7 @@ The OPC UA server allows access to alarms of the WinCC message system.
 
 The OPC UA server relays status changes of messages to OPC UA clients with WinCC-Event-Notifications via Subscriptions and Monitored Event Items , but manages no Condition instance in its namespace. The Event Notifier node to be used is the start node of the WinCC name area. The UA client can filter the messages and define the list of message attributes returned.
 
-The OPC UA server supports the "OPC UA Alarms & Conditions 1.02" specification.
+The OPC UA server supports the "OPC UA Alarms &amp; Conditions 1.02" specification.
 
 ###### Mapping of the message system to OPC UA event types
 
@@ -1775,17 +1775,17 @@ The following table shows WinCC message status mapping to the corresponding WinC
 
 The configuration of the OPC UA server also applies to the OPC UA server as regards the mapping of the Properties "SourceName" and "Message" of a message.
 
-- With OPC A&E server with hierarchical access:
+- With OPC A&amp;E server with hierarchical access:
 
   | Symbol | Meaning |
   | --- | --- |
-  | SourceName | Indicates the source of a message. The Source has the format "<Server prefix>::Area\UserTextBlock 2". The server prefix of the local computer is "@LOCALMACHINE". |
+  | SourceName | Indicates the source of a message. The Source has the format "&lt;Server prefix&gt;::Area\UserTextBlock 2". The server prefix of the local computer is "@LOCALMACHINE". |
   | Message | Returns the message text of the corresponding message number |
-- With OPC A&E server without hierarchical access:
+- With OPC A&amp;E server without hierarchical access:
 
   | Symbol | Meaning |
   | --- | --- |
-  | SourceName | Indicates the source of a message. The Source has the format "<Server prefix>::localhost::". The server prefix of the local computer is "@LOCALMACHINE". |
+  | SourceName | Indicates the source of a message. The Source has the format "&lt;Server prefix&gt;::localhost::". The server prefix of the local computer is "@LOCALMACHINE". |
   | Message | Returns the message text of the corresponding message number |
 
 ###### Alarm groups
@@ -1868,30 +1868,30 @@ You configure the WinCC OPC UA server in the configuration file "OPCUASERVERWINC
 
 When you create a project in the TIA Portal, the project-specific configuration file "OPCUASERVERWINCCPRO.XML" is stored in the WinCC project folder under:
 
-"<WinCC project folder>\OPC\UASERVER"
+"&lt;WinCC project folder&gt;\OPC\UASERVER"
 
-###### <`SecuredApplication`> section
+###### &lt;`SecuredApplication`&gt; section
 
 In this section the OPC UA application security is set.
 
 | Section | Description |
 | --- | --- |
-| <Secured Application> |  |
-| <BaseAddresses>        <...></...>      </BaseAddresses> | Address and port number  The parameter [`HostName`] is the placeholder for the computer name and is determined during runtime.   Example:   `<BaseAddresses>`    `<ua:String>opc.tcp://`    `[HostName]:5210</ua:String>`    `</BaseAddresses>` |
-| <SecurityProfileUris>        <SecurityProfile>          <...></...>        </SecurityProfile>         ...      </SecurityProfileUris> | Security guidelines  - You enable the setting with "`true`". - You disable the setting with "`false`".   All active OPC clients with this certificate are thus disabled.  Example:   `<SecurityProfile>`    `<ProfileUri>http://opcfoundation.org/`    `UA/SecurityPolicy#Basic128Rsa15</ProfileUri>`    `<Enabled>false</Enabled>`    `</SecurityProfile>` |
-| </Secured Application> |  |
+| &lt;Secured Application&gt; |  |
+| &lt;BaseAddresses&gt;        &lt;...&gt;&lt;/...&gt;      &lt;/BaseAddresses&gt; | Address and port number  The parameter [`HostName`] is the placeholder for the computer name and is determined during runtime.   Example:   `<BaseAddresses>`    `<ua:String>opc.tcp://`    `[HostName]:5210</ua:String>`    `</BaseAddresses>` |
+| &lt;SecurityProfileUris&gt;        &lt;SecurityProfile&gt;          &lt;...&gt;&lt;/...&gt;        &lt;/SecurityProfile&gt;         ...      &lt;/SecurityProfileUris&gt; | Security guidelines  - You enable the setting with "`true`". - You disable the setting with "`false`".   All active OPC clients with this certificate are thus disabled.  Example:   `<SecurityProfile>`    `<ProfileUri>http://opcfoundation.org/`    `UA/SecurityPolicy#Basic128Rsa15</ProfileUri>`    `<Enabled>false</Enabled>`    `</SecurityProfile>` |
+| &lt;/Secured Application&gt; |  |
 
-###### <`ServerConfiguration`> section
+###### &lt;`ServerConfiguration`&gt; section
 
 In this section you set the parameters for data transmission, authentication and optimized WinCC archive write access.
 
 | Symbol | Meaning |
 | --- | --- |
-| <ServerConfiguration> |  |
-| <SecurityPolicies>          <SecurityPolicy>          <...></...>          </SecurityPolicy>          ...      </SecurityPolicies> | Alarm security mode  To deactivate a security setting, delete the entire entry.  Example:   `<` `SecurityPolicy>`    `<ProfileUri>http://opcfoundation.org/`        `UA/SecurityPolicy#Basic128Rsa15`     `</ProfileUri>`   `<MessageSecurityModes>SignAndEncrypt`    `</MessageSecurityModes>`    `</SecurityPolicy>` |
-| <UserTokenPolicies>          <UserTokenPolicy>          <...></...>          </UserTokenPolicy>          ...      </UserTokenPolicies> | User authentication  To deactivate a setting, delete the entire entry.  Example   `<UserTokenPolicy>`     `<TokenType>`      `<!--[User]-->`   `</TokenType>`    `</UserTokenPolicy>`   Use the "Anonymous" setting only for test and diagnostics purposes. |
-| <FastInsert>          <Users>          <...></...>          </Users>          <Clients>          <...></...>          </Clients>      </FastInsert> | Optimized WinCC archive write access  - You use "`true`" to activate the optimized WinCC archive write access for all OPC UA clients. - You use "`false`" to specify whether specific Windows users or OPC UA clients may use the optimized WinCC archive write access.   You specify the Windows user under `<Users>`.   You specify the OPC UA clients under `<Clients>`. As `ClientName`, use the "Common Name" that is entered in the client certificate.   Example:   `<EnabledByDefault>false</EnabledByDefault>`    `<Users>`    `<User>domain\user1</User>`    `</Users>`    `<Clients>`    `<Client>ClientName1</Client>`    `</Clients>` |
-| </ServerConfiguration> |  |
+| &lt;ServerConfiguration&gt; |  |
+| &lt;SecurityPolicies&gt;          &lt;SecurityPolicy&gt;          &lt;...&gt;&lt;/...&gt;          &lt;/SecurityPolicy&gt;          ...      &lt;/SecurityPolicies&gt; | Alarm security mode  To deactivate a security setting, delete the entire entry.  Example:   `<` `SecurityPolicy>`    `<ProfileUri>http://opcfoundation.org/`        `UA/SecurityPolicy#Basic128Rsa15`     `</ProfileUri>`   `<MessageSecurityModes>SignAndEncrypt`    `</MessageSecurityModes>`    `</SecurityPolicy>` |
+| &lt;UserTokenPolicies&gt;          &lt;UserTokenPolicy&gt;          &lt;...&gt;&lt;/...&gt;          &lt;/UserTokenPolicy&gt;          ...      &lt;/UserTokenPolicies&gt; | User authentication  To deactivate a setting, delete the entire entry.  Example   `<UserTokenPolicy>`     `<TokenType>`      `<!--[User]-->`   `</TokenType>`    `</UserTokenPolicy>`   Use the "Anonymous" setting only for test and diagnostics purposes. |
+| &lt;FastInsert&gt;          &lt;Users&gt;          &lt;...&gt;&lt;/...&gt;          &lt;/Users&gt;          &lt;Clients&gt;          &lt;...&gt;&lt;/...&gt;          &lt;/Clients&gt;      &lt;/FastInsert&gt; | Optimized WinCC archive write access  - You use "`true`" to activate the optimized WinCC archive write access for all OPC UA clients. - You use "`false`" to specify whether specific Windows users or OPC UA clients may use the optimized WinCC archive write access.   You specify the Windows user under `<Users>`.   You specify the OPC UA clients under `<Clients>`. As `ClientName`, use the "Common Name" that is entered in the client certificate.   Example:   `<EnabledByDefault>false</EnabledByDefault>`    `<Users>`    `<User>domain\user1</User>`    `</Users>`    `<Clients>`    `<Client>ClientName1</Client>`    `</Clients>` |
+| &lt;/ServerConfiguration&gt; |  |
 
 ---
 
@@ -1914,8 +1914,8 @@ You configure the WinCC OPC UA server in the runtime settings and in the configu
 To configure the WinCC OPC UA server in the runtime settings, proceed as follows:
 
 1. Open the "Runtime settings" of the HMI device in the project tree.
-2. If necessary, configure the write access validation under "OPC settings > Configuration of the OPC Historical Access".
-3. Configure the server settings under "OPC settings > Configuration of the OPC Unified Architecture Server":
+2. If necessary, configure the write access validation under "OPC settings &gt; Configuration of the OPC Historical Access".
+3. Configure the server settings under "OPC settings &gt; Configuration of the OPC Unified Architecture Server":
 
    - Change the "Port number", if required
    - Activate at least one of the "Security guidelines" and the respective "Alarm security mode".
@@ -1935,7 +1935,7 @@ Use the "None" setting only for test and diagnostics purposes.
 To configure the WinCC OPC UA server in the configuration file, proceed as follows:
 
 1. Open the Windows Explorer.
-2. ​Navigate to the directory​ "<WinCC project folder>\OPC\UASERVER".
+2. ​Navigate to the directory​ "&lt;WinCC project folder&gt;\OPC\UASERVER".
 3. Open the configuration file ​"OPCUASERVERWINCCPRO.XML".
 4. If necessary, change the port number under `<``BaseAddresses``>`.
 
@@ -1986,7 +1986,7 @@ To create a connection to an OPC server, follow these steps:
 1. On the HMI device, open the "Connections" editor.
 2. Create a new connection and enter a meaningful name.
 3. Choose "OPC" as the "Communication driver".
-4. In the work area under "Parameters > OPC settings", enter the communication peer.
+4. In the work area under "Parameters &gt; OPC settings", enter the communication peer.
 
    - Select the "Type of OPC server".
    - Select the OPC server based on the OPC server type you chose, or enter the IP address or name of the remote computer.
@@ -2214,7 +2214,7 @@ You can protect OPC UA tags against access by clients. For this, you assign read
 
 ##### Procedure
 
-1. In the Inspector window, select "Properties > Properties > Settings".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Settings".
 2. Enable the desired protection under "OPC UA".
 3. Download the full project.
 
@@ -2247,7 +2247,7 @@ It is possible to configure one-dimensional arrays for all supported OPC UA data
 
 You create the array tags for OPC UA connections exactly as you would normal array tags. You can find additional information under "Create array tag".
 
-If needed, make the following deviating settings for the created OPC UA connection under "Parameters > OPC Server":
+If needed, make the following deviating settings for the created OPC UA connection under "Parameters &gt; OPC Server":
 
 1. To use arrays on older OPC UA servers that do not support writing single array elements, use the "Write array elements without IndexRange" setting.
 
@@ -2445,7 +2445,7 @@ On PCs without a WinCC installation, you configure the access rights manually.
 
 1. Open Windows user administration.
 2. Create the "SIMATIC HMI" user group.
-3. Under "DCOM > My Computer > COM Security > Access Permissions > Edit Default" enter the permissions "Local Access" and "Remote Access".
+3. Under "DCOM &gt; My Computer &gt; COM Security &gt; Access Permissions &gt; Edit Default" enter the permissions "Local Access" and "Remote Access".
 4. Assign the user accounts for this user group.
 
 For more information on assigning user rights, see the documentation for Windows XP / 7.

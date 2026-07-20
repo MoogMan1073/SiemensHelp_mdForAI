@@ -27,7 +27,7 @@ You can record the signal characteristic directly in the device with the trace f
 The drive parameters can be divided into the following categories:
 
 - "Normal" parameters; these parameters have a value
-- Enumeration parameters; these parameters have several values which can be used, for example, as an event query for the trace trigger ("="; "<>").
+- Enumeration parameters; these parameters have several values which can be used, for example, as an event query for the trace trigger ("="; "&lt;&gt;").
 - Index parameters; these parameters contain an index which can be used to display several properties.
 
   Example: r39[0] "Energy balance (sum)" and r39[1] "Energy drawn"

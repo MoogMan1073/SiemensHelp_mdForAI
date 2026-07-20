@@ -209,9 +209,9 @@ The figure below illustrates the characteristics of the DONE and ERROR parameter
 | 0212 | Impermissible  - Monitoring time - Character Delay Time   Only for 3964(R):  - Acknowledgment delay | Correct the impermissible parameter assignment, load the parameters onto the module and carry out a cold restart. |
 | 0501 | Current request aborted as a result of CP restart. | No help available during POWER ON. When changing the parameters of the CP in the programming device, before writing an interface you should ensure there are no more requests running from the CPU. |
 | 0502 | Job not permitted in this CP operating mode (e.g., device interface not parameterized) | Set the parameters for the device interface. |
-| 050E | - Invalid frame length or | - Frame length is > 400 bytes. Reduce the message frame length  or |
+| 050E | - Invalid frame length or | - Frame length is &gt; 400 bytes. Reduce the message frame length  or |
 | - The configured end-of-text characters did not occur within the maximum permissible length. | - Add the end-of-text characters at the place you want in the send buffer. |  |
-| 0517 | Transmission length > 400 bytes exceeds CP capacity. | Split the job up into several shorter jobs. |
+| 0517 | Transmission length &gt; 400 bytes exceeds CP capacity. | Split the job up into several shorter jobs. |
 | 051D | Send/receive job interrupted by:  - Communication block reset - Parameter reassignment | Repeat the call for the communication block. |
 | 0522 | A new SEND job has been started, although the old job has not yet been completed. | Only start the new SEND job when the old job has been completed with DONE or ERROR. |
 | 0701 | Only for 3964(R):  Sending of the first repetition:  - An error was detected when transmitting the frame or - The partner requested a repetition by means of a negative acknowledgment character (NAK). | A repetition is not an error, but it can indicate that there is interference on the data link or the partner device has malfunctioned. If the message frame has not been transmitted after the maximum number of repetitions, an error number describing the first error that occurred is output. |

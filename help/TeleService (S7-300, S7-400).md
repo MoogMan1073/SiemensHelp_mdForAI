@@ -144,8 +144,8 @@ The following tables shows the return values of "PG_DIAL" except for error codes
 | 7001 | "PG_DIAL" is active (first call, BUSY = 1). The function has just been started. |  |
 | 7002 | "PG_DIAL" is active (subsequent call, BUSY = 1). The processing of the function is not yet completed. |  |
 | 8xxx or 8zxx | The processing of "PG_DIAL" was completed with an error code of the internally called communication instructions.  If the error message originates from the "BLKMOV" instruction, the meaning is as follows  - z = 2: Error copying the PHONE_NO parameter to the internal buffer - z = 3: Error copying the EVENT_ID parameter to the internal buffer | You will find more detailed information in the error information of the communication instructions:   [Error information of communication instructions for non-configured S7 connections](Communication%20%28S7-300%2C%20S7-400%29.md#error-information-of-communication-instructions-for-non-configured-s7-connections-s7-300-s7-400) |
-| 9001 | Length of PHONE_NO = 0 or > 31 | The telephone number must consist of at least 1 character and not more than 31 characters. |
-| 9002 | Length of EVENT_ID = 0 or > 16 | The event ID must consist of at least 1 character and not more than 16 characters. |
+| 9001 | Length of PHONE_NO = 0 or &gt; 31 | The telephone number must consist of at least 1 character and not more than 31 characters. |
+| 9002 | Length of EVENT_ID = 0 or &gt; 16 | The event ID must consist of at least 1 character and not more than 16 characters. |
 | B000 | It was possible to establish the remote connection to the PG/PC. With TeleService, however, no program logged on for the transferred event ID. |  |
 | B10A | A job is already stored on the TS Adapter and this job is currently being processed by the TS Adapter. | Call "PG_DIAL" again. |
 | B10B | After the establishment of the remote connection, the connection was terminated by the partner before the event ID could be transferred. | Call "PG_DIAL" again. |
@@ -312,10 +312,10 @@ The following table shows the return values of "AS_DIAL" except for error codes 
 | 7002 | DIAL function is active (subsequent call, BUSY = 1). The processing of the function is not yet completed. | The REQ_DIAL input parameter is not evaluated until the end of the (BUSY = 0) function. |
 | 7701 | The HANGUP function is active (first call). The function has just been started. | The input parameters REQ_DIAL and REQ_HANGUP are not evaluated until the end of the (BUSY = 0) function. |
 | 7702 | HANGUP function is active (subsequent call). The processing of the function is not yet completed. | The input parameters REQ_DIAL and REQ_HANGUP are not evaluated until the end of the (BUSY = 0) function. |
-| 8xxx | Error message: The processing of the active block function was terminated because of an error message (RET_VAL < 0) of an instruction called within the block. | You will find more detailed information in the error information of the communication instructions:   [Error information of communication instructions for non-configured S7 connections](Communication%20%28S7-300%2C%20S7-400%29.md#error-information-of-communication-instructions-for-non-configured-s7-connections-s7-300-s7-400). |
-| 9001 | Length of PHONE_NO = 0 or > 31 | The telephone number must consist of at least 1 character and not more than 31 characters. |
-| 9003 | Length of LOGIN > 8 | The user name for authorization on the remote TS Adapter must not exceed 8 characters. |
-| 9004 | Length of PASSWORD > 8 | The password for authorization on the remote TS Adapter must not exceed 8 characters. |
+| 8xxx | Error message: The processing of the active block function was terminated because of an error message (RET_VAL &lt; 0) of an instruction called within the block. | You will find more detailed information in the error information of the communication instructions:   [Error information of communication instructions for non-configured S7 connections](Communication%20%28S7-300%2C%20S7-400%29.md#error-information-of-communication-instructions-for-non-configured-s7-connections-s7-300-s7-400). |
+| 9001 | Length of PHONE_NO = 0 or &gt; 31 | The telephone number must consist of at least 1 character and not more than 31 characters. |
+| 9003 | Length of LOGIN &gt; 8 | The user name for authorization on the remote TS Adapter must not exceed 8 characters. |
+| 9004 | Length of PASSWORD &gt; 8 | The password for authorization on the remote TS Adapter must not exceed 8 characters. |
 | B100 | TS Adapter cannot currently establish a connection. | The TS Adapter cannot currently call a connection to the modem. Call "AS_DIAL" again. |
 | B10A | An event ID of a "PG_DIAL" function is already stored in the TS Adapter or an "AS_DIAL" function is active that is still to be transferred. | Call "AS_DIAL" again. |
 | B10B | The remote connection was terminated again after successful establishment of the remote connection. | Call "AS_DIAL" again. |
@@ -383,9 +383,9 @@ The input parameters of the function block are copied to in internal buffer when
 
 If you use a SIM card on which the PIN check is enabled, the PIN must be transferred during the initialization phase of the wireless modem. This is possible using the init string of the TS Adapter, which you can set using TeleService. Set the init string as follows (example for PIN = 4711):
 
-- AT+CPIN="4711";AT&F.....
+- AT+CPIN="4711";AT&amp;F.....
 
-When power is restored, the TS Adapter sends the string "AT+CPIN="4711" once, along with the PIN for the SIM card used in the wireless modem, to the connected components. The wireless modem is then initialized with "AT&F...".
+When power is restored, the TS Adapter sends the string "AT+CPIN="4711" once, along with the PIN for the SIM card used in the wireless modem, to the connected components. The wireless modem is then initialized with "AT&amp;F...".
 
 **Caution:** An incorrect PIN is not reported during the initialization, but only when an SMS is sent via the feedback message of "SMS_SEND".
 
@@ -498,9 +498,9 @@ The following table shows the return values of "SMS_SEND" except for error codes
 | 7001 | "SMS_SEND" is active (first call, BUSY = 1). The function has just been started. |  |
 | 7002 | "SMS_SEND" is active (next call, BUSY = 1). The processing of the function is not yet completed. |  |
 | 8xxx or  8zxx | Processing of "SMS_SEND" was completed with an error code of the communication instructions called internally or the "BLKMOV" instruction.  If the error message originates from the "BLKMOV" instruction, the meaning is as follows  - z = 2 : Error copying the parameter PHONE_NO to the internal buffer - z = 3 : Error copying the parameter SCENTER_NO to the internal buffer - z = 4 : Error copying the parameter MESSAGE to the internal buffer | For detailed information, refer to the description of the "BLKMOV" instruction and the error information of the communication instructions:   [Error information of communication instructions for non-configured S7 connections](Communication%20%28S7-300%2C%20S7-400%29.md#error-information-of-communication-instructions-for-non-configured-s7-connections-s7-300-s7-400) |
-| 9001 | Length of PHONE_NO = 0 or > 31 | The telephone number must consist of at least 1 character and not more than 31 characters. |
-| 9002 | Length of SCENTER_NO = 0 or > 20 | The service center number must consist of at least 1 character and not more than 20 characters. |
-| 9003 | Length of MESSAGE = 0 or > 160 | The SMS message must consist of at least 1 character and not more than 160 characters. |
+| 9001 | Length of PHONE_NO = 0 or &gt; 31 | The telephone number must consist of at least 1 character and not more than 31 characters. |
+| 9002 | Length of SCENTER_NO = 0 or &gt; 20 | The service center number must consist of at least 1 character and not more than 20 characters. |
+| 9003 | Length of MESSAGE = 0 or &gt; 160 | The SMS message must consist of at least 1 character and not more than 160 characters. |
 | B10A | A job is already stored on the TS Adapter and this job is currently being processed by the TS Adapter. | Call "SMS_SEND" again. |
 | B301 | A remote connection to a PG/PC is still established. | Call "SMS_SEND" again later. |
 | B302 | The TS Adapter is directly connected to a PG/PC (direct connection). | Connect the TS adapter to a GSM wireless modem. |
@@ -685,15 +685,15 @@ Because of runtime and memory space, the "AS_MAIL" instruction does not perform 
 
 The TO_S, CC and FROM parameters are ANY pointers to strings with, for example, the following content:
 
-- TO: <wenna@mydomain.com>, <ruby@mydomain.com>,
-- CC: <admin@mydomain.com>, <judy@mydomain.com>,
-- FROM: <admin@mydomain.com>
+- TO: &lt;wenna@mydomain.com&gt;, &lt;ruby@mydomain.com&gt;,
+- CC: &lt;admin@mydomain.com&gt;, &lt;judy@mydomain.com&gt;,
+- FROM: &lt;admin@mydomain.com&gt;
 
 Note the following rules when entering the parameters:
 
 - The "TO:", "CC:" and "FROM:" characters must be entered.
-- A space and an opening angled bracket "<" must be entered before each address.
-- A closing angled bracket ">" must be entered after each address.
+- A space and an opening angled bracket "&lt;" must be entered before each address.
+- A closing angled bracket "&gt;" must be entered after each address.
 - A comma must be entered after each address in TO_S and CC.
 - Only one e-mail may be entered in FROM, and there must be no comma at the end of this address.
 
@@ -724,9 +724,9 @@ You can copy these lines to an STL source file and compile them. To do this, how
 | VERSION : 1.0 |  |
 |  |  |
 | STRUCT |  |
-| TO_S : STRING [240 ] := 'TO: <wenna@mydomain.com>, <ruby@mydomain.com>,'; | //Address of recipient |
-| CC : STRING [240 ] := 'CC: <admin@mydomain.com>, <judy@mydomain.com>,'; | //CC Address of recipient |
-| FROM : STRING [60 ] := 'FROM: <admin@mydomain.com>'; | //Address of sender |
+| TO_S : STRING [240 ] := 'TO: &lt;wenna@mydomain.com&gt;, &lt;ruby@mydomain.com&gt;,'; | //Address of recipient |
+| CC : STRING [240 ] := 'CC: &lt;admin@mydomain.com&gt;, &lt;judy@mydomain.com&gt;,'; | //CC Address of recipient |
+| FROM : STRING [60 ] := 'FROM: &lt;admin@mydomain.com&gt;'; | //Address of sender |
 | SUB : STRING [60 ] := 'Status plant 7'; | //Subject |
 | TEXT : STRING [240 ] := 'Fault in plant 7 sector 2'; | //Text |
 | USERNAME : STRING [60 ] := 'admin'; | //User name for LOGIN authentication |

@@ -1238,7 +1238,7 @@ Occurs when the user double-clicks on an object from the symbol library.
 
 #### Description
 
-Occurs when the user clicks on a button with the left mouse button, presses <RETURN> or <SPACE>.
+Occurs when the user clicks on a button with the left mouse button, presses &lt;RETURN&gt; or &lt;SPACE&gt;.
 
 Also occurs when the user right-clicks on an object of the symbol library.
 
@@ -1436,7 +1436,7 @@ The event is not triggered, on the other hand, by user logon or by input fields 
 
 #### Description
 
-Occurs when the user presses the <ESC> key twice at the HMI device.
+Occurs when the user presses the &lt;ESC&gt; key twice at the HMI device.
 
 > **Note**
 >
@@ -1775,7 +1775,7 @@ Occurs when the user reaches the beginning or the end of a scrollable area.
 
 #### Configurable objects
 
-The event can only be configured on the <Up> and <Down> keys, or on the keys on which you have configured the "ScreenObjectPageUp" or "ScreenObjectPageDown" system functions.
+The event can only be configured on the &lt;Up&gt; and &lt;Down&gt; keys, or on the keys on which you have configured the "ScreenObjectPageUp" or "ScreenObjectPageDown" system functions.
 
 ---
 
@@ -2005,7 +2005,7 @@ Occurs when the user releases a function key.
 
 Occurs when the user presses a key on the keyboard.
 
-The keys <F10> and <ALT+PRINT> are not used by the operator for process operations.
+The keys &lt;F10&gt; and &lt;ALT+PRINT&gt; are not used by the operator for process operations.
 
 > **Note**
 >
@@ -2017,7 +2017,7 @@ The keys <F10> and <ALT+PRINT> are not used by the operator for process operatio
 
 Occurs when the user releases a key on the keyboard.
 
-The keys <F10> and <ALT+PRINT> are not used by the operator for process operations.
+The keys &lt;F10&gt; and &lt;ALT+PRINT&gt; are not used by the operator for process operations.
 
 > **Note**
 >

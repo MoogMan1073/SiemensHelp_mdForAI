@@ -495,7 +495,7 @@ To establish the trust relationship with an external communication partner, foll
 4. Import the root certificate and the CRL file of the external communication partner into the collaboration device and trust it:
 
    - Unified PC: Use SIMATIC Runtime Manager.
-   - Unified Comfort Panel: In the Control Panel of the device, under "Security", use the "Certificates" > "Import" function.
+   - Unified Comfort Panel: In the Control Panel of the device, under "Security", use the "Certificates" &gt; "Import" function.
 
 During the next connection attempt, the communication partners mutually accept their application certificates.
 
@@ -515,7 +515,7 @@ The procedures differ for PC devices and Panel devices.
 
 ##### Exporting all certificates for Unified PC
 
-1. Right-click the root certificate and select "Export..." > "CA container" in the menu.
+1. Right-click the root certificate and select "Export..." &gt; "CA container" in the menu.
 
    ![Exporting all certificates for Unified PC](images/158222613131_DV_resource.Stream@PNG-en-US.png)
 
@@ -541,7 +541,7 @@ The procedures differ for PC devices and Panel devices.
 
 ##### Exporting the certificate for Unified Panel
 
-1. Right-click a device and select "Export device > To Panel..." in the menu.
+1. Right-click a device and select "Export device &gt; To Panel..." in the menu.
 
    ![Exporting the certificate for Unified Panel](images/170447108875_DV_resource.Stream@PNG-en-US.png)
 
@@ -556,7 +556,7 @@ The procedures differ for PC devices and Panel devices.
 Depending on the device, use the following tool:
 
 - Unified PC: WinCC Unified Certificate Manager
-- Unified Comfort Panel: Control Panel > "Security" function
+- Unified Comfort Panel: Control Panel &gt; "Security" function
 
 To make the certificates of a Unified HMI device available on the Unified PC, follow these steps:
 
@@ -621,7 +621,7 @@ The system events contain, for example, information on the connection status. Al
 
 #### Defining collaboration settings (RT Unified)
 
-A device must be uniquely identifiable in order for it to participate in Unified Collaboration. You make the settings in the "Collaboration" or "Remote access > Collaboration" area of the Runtime settings of the HMI device.
+A device must be uniquely identifiable in order for it to participate in Unified Collaboration. You make the settings in the "Collaboration" or "Remote access &gt; Collaboration" area of the Runtime settings of the HMI device.
 
 ![Figure](images/158246137739_DV_resource.Stream@PNG-en-US.png)
 
@@ -768,7 +768,7 @@ This section contains information on the following topics:
 
 1. Open the screen on the device on which you want to display screens of the collaboration device.
 2. Add a screen window to the screen.
-3. Open the Inspector window under "Properties > Properties > General > Screen".
+3. Open the Inspector window under "Properties &gt; Properties &gt; General &gt; Screen".
 4. Click the selection button in the "Static value" column.
 
    A new dialog opens.
@@ -891,7 +891,7 @@ To use Unified Collaboration, import screen references from collaboration device
 
 ###### Procedure for initial import
 
-1. In the "Devices" tab of the project navigation, expand the "Common data" folder > "Collaboration devices".
+1. In the "Devices" tab of the project navigation, expand the "Common data" folder &gt; "Collaboration devices".
 2. Open the "Collaboration Devices" editor.
 3. Click the import icon ![Procedure for initial import](images/129951734027_DV_resource.Stream@PNG-de-DE.png).
 
@@ -955,7 +955,7 @@ You have made the screens of a collaboration device available for Runtime of an 
 
 1. Open the screen on the device on which you want to display screens of the collaboration device.
 2. Add a screen window to the screen.
-3. Open the Inspector window under "Properties > Properties > General > Screen".
+3. Open the Inspector window under "Properties &gt; Properties &gt; General &gt; Screen".
 4. Click the selection button in the "Static value" column.
 
    A new dialog opens.
@@ -1141,7 +1141,7 @@ To operate the screens of the Unified Comfort Panels in Runtime of the Unified P
 
 To import screen references, follow the steps below:
 
-1. In the "Devices" tab of the project navigation, expand the "Common data" folder > "Collaboration devices".
+1. In the "Devices" tab of the project navigation, expand the "Common data" folder &gt; "Collaboration devices".
 2. Open the "Collaboration Devices" editor.
 3. Click Import ![Importing screen references](images/129951734027_DV_resource.Stream@PNG-de-DE.png).
 
@@ -1175,11 +1175,11 @@ In the following, a screen is configured for the Unified PC in which a screen wi
    The editor of the screen opens.
 4. Add a screen window.
 5. Select a screen window.
-6. Open the Inspector window under "Properties > Properties > General > Screen".
+6. Open the Inspector window under "Properties &gt; Properties &gt; General &gt; Screen".
 7. Click the selection button in the "Static value" column.
 
    A new dialog opens.
-8. Select "HMI_2 > Screens" in the left area of the window.
+8. Select "HMI_2 &gt; Screens" in the left area of the window.
 9. Select the "Screen_1" screen in the right area of the window.
 10. Confirm your selection.
 
@@ -1191,25 +1191,25 @@ To configure the buttons for the screen change in the screen window, follow thes
 2. Configure a "HMI_2" button.
 3. Configure a "HMI_3" button.
 4. Select the "HMI_2" button.
-5. Open the Inspector window under "Properties > Events".
+5. Open the Inspector window under "Properties &gt; Events".
 6. Select the "Click left mouse button" event.
 
    The function list is displayed.
 7. Select the "ChangeScreen" system function.
 8. Open the selection window of the "Screen name" parameter.
-9. Select "HMI_2 > Screens" in the left area of the window and confirm the selection.
+9. Select "HMI_2 &gt; Screens" in the left area of the window and confirm the selection.
 
    The "Screen name" parameter contains the value "HMI_RT_2 :: Screen_1".
 10. Specify the type of "Screen window" for the "Screen window path" parameter.
 11. Open the selection menu and select the screen window.
 12. Select the "HMI_3" button.
-13. Open the Inspector window under "Properties > Events".
+13. Open the Inspector window under "Properties &gt; Events".
 14. Select the "Click left mouse button" event.
 
     The function list is displayed.
 15. Select the "ChangeScreen" system function.
 16. Open the selection window of the "Screen name" parameter.
-17. Select "HMI_3 > Screens" in the left area of the window and confirm the selection.
+17. Select "HMI_3 &gt; Screens" in the left area of the window and confirm the selection.
 
     The "Screen name" parameter contains the value "HMI_RT_3 :: Screen_1".
 18. Specify the type of "Screen window" for the "Screen window path" parameter.
@@ -1378,7 +1378,7 @@ If you use runtime locally on the Unified Comfort Panel, you will be shown an op
 #### Enabling the web client in the Control Panel
 
 1. Open the Control Panel of the Unified Comfort Panel.
-2. Select "Runtime properties > Web client".
+2. Select "Runtime properties &gt; Web client".
 3. Select "Enable web access to runtime".
 
 ### Using the web client (RT Unified)
@@ -1399,7 +1399,7 @@ To access the runtime of a different HMI device using the web client, follow the
 
    If you are using a browser that runs directly on the HMI device, you can also use "localhost" instead of the IP address.
 
-   To access the Runtime project directly, use "https://<ip>/device/WebRH", note the use of lowercase/uppercase letters, and use the IP address of the HMI device instead of the placeholder "<ip>".
+   To access the Runtime project directly, use "https://&lt;ip&gt;/device/WebRH", note the use of lowercase/uppercase letters, and use the IP address of the HMI device instead of the placeholder "&lt;ip&gt;".
 2. If you access the runtime of the HMI device from this device for the first time and there is no corresponding certificate, you will receive a security warning. Follow these steps:
 
    - Continue loading the web page.
@@ -1431,7 +1431,7 @@ If you experience display problems in the web client, completely delete the brow
 
 The runtime of the remote HMI device is displayed.
 
-The Runtime project is displayed in the language that is set in the "User login" dialog. If this language is not configured in the Runtime settings of the HMI device, the language that has the lowest number in the "Order" column under "Runtime settings > Language & font" in the TIA Portal is used.
+The Runtime project is displayed in the language that is set in the "User login" dialog. If this language is not configured in the Runtime settings of the HMI device, the language that has the lowest number in the "Order" column under "Runtime settings &gt; Language &amp; font" in the TIA Portal is used.
 
 Depending on the access authorization, you the option to monitor and operate the runtime.
 
@@ -1475,7 +1475,7 @@ Chrome and Microsoft Edge use the Windows system certificate store.
 
 To install manually, follow these steps (for example, Microsoft Edge):
 
-1. Open the WinCC Unified home page via the URL https://<host name>
+1. Open the WinCC Unified home page via the URL https://&lt;host name&gt;
 
    At first, an error message appears:
 
@@ -1500,7 +1500,7 @@ To install manually, follow these steps (for example, Microsoft Edge):
 
 Firefox uses its own certificate store and must therefore be configured manually on each device once:
 
-1. Open the WinCC Unified home page via the URL https://<host name>
+1. Open the WinCC Unified home page via the URL https://&lt;host name&gt;
 
    At first, an error message appears:
 2. Open the field "Advanced" and confirm the field "Accept the Risk and Continue".
@@ -1511,7 +1511,7 @@ Firefox uses its own certificate store and must therefore be configured manually
 5. Store the certificate in the Firefox certificate store. Proceed as follows:
 
    - Open the "Settings" page of Firefox.
-   - Select "Privacy & Security". There you will find the "Certificates" area further down. Open "Show certificates...".
+   - Select "Privacy &amp; Security". There you will find the "Certificates" area further down. Open "Show certificates...".
    - In the "Certificate Management" window, select the "Certification authorities" tab:
 
      ![Installing the root certificate for Firefox](images/142189917195_DV_resource.Stream@PNG-en-US.png)
@@ -1547,7 +1547,7 @@ iOS uses its own certificate store and must therefore be configured manually on 
    ![Installing the root certificate on iOS devices](images/129772977419_DV_resource.Stream@PNG-de-DE.png)
 
    ![Installing the root certificate on iOS devices](images/129772977419_DV_resource.Stream@PNG-de-DE.png)
-5. Select "General > Info > Certificate Trust Settings".
+5. Select "General &gt; Info &gt; Certificate Trust Settings".
 
    ![Installing the root certificate on iOS devices](images/129773293963_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1630,7 +1630,7 @@ To remedy the error in "Firefox", follow these steps:
 1. Open a new tab.
 2. Enter the URL address of the identity provider of the UMC server (ring server) in the address line of the browser, for example, "https://uadtbf-01.asrd-lab.net/umc-sso".
 3. A blank page opens. Close the page.
-4. Refresh the home page with the function key <F5>. The home page with the "User login" dialog is displayed.
+4. Refresh the home page with the function key &lt;F5&gt;. The home page with the "User login" dialog is displayed.
 
 ---
 
@@ -1742,8 +1742,8 @@ Remote monitoring and remote control of the Smart Server is password protected. 
 - It contains at least one uppercase letter (A-Z)
 - It contains at least one of the following characters:
 
-  !$%&()*+,-./:;<=>?@[\]_{|}~^
-- Passwords cannot be entered using copy & paste.
+  !$%&amp;()*+,-./:;&lt;=&gt;?@[\]_{|}~^
+- Passwords cannot be entered using copy &amp; paste.
 - The passwords for User1 and User2 cannot be identical.
 - Passwords must not be empty.
 
@@ -1810,7 +1810,7 @@ Note that the settings on the Unified Comfort Panel are overwritten when a proje
 To configure the Smart Server in the Control Panel of the Unified Comfort Panel, follow these steps:
 
 1. In the Control Panel of the Unified Control Panel, open the menu item "Network and Internet".
-2. In the area "Remote access > Smart Server" enable the setting "Enable Smart Server".
+2. In the area "Remote access &gt; Smart Server" enable the setting "Enable Smart Server".
 3. Select one or more users for remote access.
 4. Assign a password for each user.
 
@@ -1973,7 +1973,7 @@ On the Smart Client, the Smart Client application provides the connection to the
 #### Requirement
 
 - Both devices are connected with via a TCP/IP capable network.
-- In the TIA Portal project of the Smart Server or in the Unified Comfort Panel, the setting "Enable Smart Server" is selected in the runtime settings under "Remote access > Smart Server".
+- In the TIA Portal project of the Smart Server or in the Unified Comfort Panel, the setting "Enable Smart Server" is selected in the runtime settings under "Remote access &gt; Smart Server".
 
   Note that the settings on the Unified Comfort Panel are overwritten when a project is downloaded from the TIA Portal.
 
@@ -2029,7 +2029,7 @@ Other options to start the Smart Client application:
   Instead of the on-screen keyboard, the following message is displayed on the Smart Client when you enter the password directly at the Smart Server: "Remote access by Smart Options is in Progress. Please wait until the input of values has been ended." This measure prevents keyboard input for entering the password from being displayed on the Smart Client.
 - Password input at the Smart Client
 
-  The display of the screen keyboard on the Smart Server by actions on the Smart Client is suppressed. Use the local on-screen keyboard for entries at the Smart Client. The local on-screen keyboard on the Smart Client is automatically displayed. Close the on-screen keyboard manually. Select "Input > Hide Input Panel" to hide the local on-screen keyboard.
+  The display of the screen keyboard on the Smart Server by actions on the Smart Client is suppressed. Use the local on-screen keyboard for entries at the Smart Client. The local on-screen keyboard on the Smart Client is automatically displayed. Close the on-screen keyboard manually. Select "Input &gt; Hide Input Panel" to hide the local on-screen keyboard.
 
   > **Note**
   >
@@ -2051,12 +2051,12 @@ For operator control via the keyboard, the following is available:
 
 | Keyboard shortcut | Function |
 | --- | --- |
-| <Alt+Ctrl+SHIFT+O> | Opens the "SmartClient options" dialog. |
-| <Alt+Ctrl+SHIFT+F> | Switches over to full screen mode |
-| <Alt+Ctrl+SHIFT+R> | Updates the display |
-| <Alt+Ctrl+SHIFT+N> | Opens the "New SmartServer Connection" dialog |
-| <Alt+Ctrl+SHIFT+S> | Save as |
-| <Alt+Ctrl+SHIFT+T> | Displays and hides the toolbar |
+| &lt;Alt+Ctrl+SHIFT+O&gt; | Opens the "SmartClient options" dialog. |
+| &lt;Alt+Ctrl+SHIFT+F&gt; | Switches over to full screen mode |
+| &lt;Alt+Ctrl+SHIFT+R&gt; | Updates the display |
+| &lt;Alt+Ctrl+SHIFT+N&gt; | Opens the "New SmartServer Connection" dialog |
+| &lt;Alt+Ctrl+SHIFT+S&gt; | Save as |
+| &lt;Alt+Ctrl+SHIFT+T&gt; | Displays and hides the toolbar |
 
 #### Result
 
@@ -2097,4 +2097,4 @@ If the company network is protected by a Firewall, the system administrator must
 
 - The Smart Server is connected to the network via port 5900.
 
-You change the port number in the Runtime settings under "Remote access > Smart Server" in the settings for "Communication" or in the same way on the Comfort Panel.
+You change the port number in the Runtime settings under "Remote access &gt; Smart Server" in the settings for "Communication" or in the same way on the Comfort Panel.

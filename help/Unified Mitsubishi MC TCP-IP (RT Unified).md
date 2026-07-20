@@ -38,7 +38,7 @@ Example: PROFINET interface corresponds to the Ethernet interface.
 
 1. Double-click on the HMI device under "Devices" in the project tree.
 2. Double-click on the "Connections" item.
-3. Double-click "<Add new>" in the "Connections" editor.
+3. Double-click "&lt;Add new&gt;" in the "Connections" editor.
 4. In the "Communication driver" column, select "Mitsubishi MC TCPI/IP" driver.
 
    ![Procedure](images/137886187659_DV_resource.Stream@PNG-en-US.png)
@@ -71,7 +71,7 @@ To set up the IP address of the HMI device:
 3. Click the Ethernet interface.
 4. Assign the IP address in the inspector window under:
 
-   "General > PROFINET interface > Ethernet addresses"
+   "General &gt; PROFINET interface &gt; Ethernet addresses"
 
 ### Parameters for the PLC
 
@@ -322,7 +322,7 @@ The table lists the data types that can be used when configuring tags.
 >
 > - For Q-Series CPU, some of the operands (W, TN, SN, CN, SW, SD, D) for Bit Block data types and SS, SC operands for String data type are not supported.
 > - For FX3 CPU type, some of the operands (D, TN, CN, R) for Bit Block data types and CN operand for Bool data type are not supported.
-> - In FX3 Series CPU type, S operand is not supported for Int, DInt, Word, DWord, Real & String data types.
+> - In FX3 Series CPU type, S operand is not supported for Int, DInt, Word, DWord, Real &amp; String data types.
 > - In Q Series CPU type, R operand is not supported for all data types.
 > - Z operand will support address range from 0-19 only, this address range (of 0 to max 19 or less) is dependent on the given CPU type, and PLC configuration.
 

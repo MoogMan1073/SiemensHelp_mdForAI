@@ -875,9 +875,9 @@ Data errors are detected synchronously to an operator input/control.
 | 10 | **Incorrect zero offset** |  | No |
 | Cause | The zero offset is greater than ±100 m or ±1000 m.   After the zero offset, the software limit switches are outside the traversing range (-100 m to +100 m or -1000 m to +1000 m).   Rotary axis: The zero offset amount is greater than the end of the rotary axis. |  |  |
 | 11 | **Incorrect actual value specification** |  | No |
-| Cause | Linear axis: The coordinate is outside the current (possibly shifted) software limit switches.  Rotary axis: The coordinate is < 0 or greater than the end of the rotary axis. |  |  |
+| Cause | Linear axis: The coordinate is outside the current (possibly shifted) software limit switches.  Rotary axis: The coordinate is &lt; 0 or greater than the end of the rotary axis. |  |  |
 | 12 | **Incorrect reference position** |  | No |
-| Cause | Linear axis: The coordinate is outside the current (possibly shifted) software limit switches.  Rotary axis: The coordinate is < 0 or greater than the end of the rotary axis. |  |  |
+| Cause | Linear axis: The coordinate is outside the current (possibly shifted) software limit switches.  Rotary axis: The coordinate is &lt; 0 or greater than the end of the rotary axis. |  |  |
 | 20 | **Enable machine data not permitted** |  | No |
 | Cause | There is no new (error-free) machine data on the module |  |  |
 | 21 | **Set actual value on-the-fly not permitted** |  | No |
@@ -892,9 +892,9 @@ Data errors are detected synchronously to an operator input/control.
 | 31 | **Incorrect cam number** |  | No |
 | Cause | Cam is invalid  The cam number is not in the range from 0 to 127. |  |  |
 | 32 | **Incorrect cam start** |  | No |
-| Cause | The cam start is outside the traversing range  (-100 m to +100 m or -1000 m to +1000 m).  Rotary axis: Cam start is < 0 or greater than the end of the rotary axis. |  |  |
+| Cause | The cam start is outside the traversing range  (-100 m to +100 m or -1000 m to +1000 m).  Rotary axis: Cam start is &lt; 0 or greater than the end of the rotary axis. |  |  |
 | 33 | **Incorrect cam end / cam activation time** |  | No |
-| Cause | The cam end is outside the traversing range  (-100 m to +100 m or -1000 m to +1000 m).  Rotary axis: The cam end is < 0 or greater than the end of the rotary axis.   The cam is not activated at least for the duration of one pulse.  With an inverse cam, there are not at least 4 pulses between the cam start and cam end. |  |  |
+| Cause | The cam end is outside the traversing range  (-100 m to +100 m or -1000 m to +1000 m).  Rotary axis: The cam end is &lt; 0 or greater than the end of the rotary axis.   The cam is not activated at least for the duration of one pulse.  With an inverse cam, there are not at least 4 pulses between the cam start and cam end. |  |  |
 | 34 | **Cancel set actual value not possible** |  | No |
 | Cause | The actual position value would be outside the working range with an SSI encoder and linear axis after making the setting. |  |  |
 | 35 | **Incorrect actual value specified by "Set actual value" / "Set actual value on-the-fly"** |  | No |
@@ -917,7 +917,7 @@ A diagnostics interrupt is only triggered if an error is detected in the system 
 | 5 | **Error in hardware interrupt setting** |  | Yes |
 | Cause | You have attempted to select a hardware interrupt that the module does not support. |  |  |
 | 6 | **Incorrect minimum edge distance** |  | Yes |
-| Cause | You have entered a value <0 or >10<sup>9</sup> µm as the minimum edge distance |  |  |
+| Cause | You have entered a value &lt;0 or &gt;10<sup>9</sup> µm as the minimum edge distance |  |  |
 | 8 | **Incorrect axis type** |  | Yes |
 | Cause | You have specified neither 0, nor 1 as the axis type |  |  |
 | 9 | **Incorrect end of the rotary axis** |  | Yes |
@@ -931,7 +931,7 @@ A diagnostics interrupt is only triggered if an error is detected in the system 
 | 15 | **Incorrect transmission rate** |  | Yes |
 | Cause | You specified a transmission rate outside the valid range from 0 to 3. |  |  |
 | 16 | **Incorrect reference point coordinate** |  | Yes |
-| Cause | The coordinate is outside the range from -100 m to +100 m or -1000 m to +1000 m, depending on the resolution.  Linear axis: The coordinate is outside the operating range.   Rotary axis: The coordinate is < 0 or greater than the end of the rotary axis. |  |  |
+| Cause | The coordinate is outside the range from -100 m to +100 m or -1000 m to +1000 m, depending on the resolution.  Linear axis: The coordinate is outside the operating range.   Rotary axis: The coordinate is &lt; 0 or greater than the end of the rotary axis. |  |  |
 | 17 | **Incorrect absolute encoder adjustment** |  | Yes |
 | Cause | SSI encoder: The value of the absolute encoder adjustment is not in the encoder range: (increments per encoder revolution x number of revolutions - 1). |  |  |
 | 18 | **Incorrect mode for "Retrigger reference point"** |  | Yes |
@@ -957,11 +957,11 @@ A diagnostics interrupt is only triggered if an error is detected in the system 
 | 149 | **Incorrect selection of special tracks** |  | Yes |
 | Cause | You wanted to define a track outside 0, 1 and 2 (bits 0, 1 and 2) as a special track |  |  |
 | 150 | **Incorrect high count value track 0** |  | Yes |
-| Cause | You have specified a count value < 2 or > 65535 as the high count value. |  |  |
+| Cause | You have specified a count value &lt; 2 or &gt; 65535 as the high count value. |  |  |
 | 151 | **Incorrect high count value track 1** |  | Yes |
-| Cause | You have specified a count value < 2 or > 65535 as the high count value. |  |  |
+| Cause | You have specified a count value &lt; 2 or &gt; 65535 as the high count value. |  |  |
 | 200 | **Incorrect resolution** |  | Yes |
-| Cause | You have specified a resolution < 0.1 µm/pulse or >1000 µm/pulse.  You specified a distance / encoder revolution and a number of pulses / encoder revolutions, that results in a resolution of < 0.1 or > 1000. |  |  |
+| Cause | You have specified a resolution &lt; 0.1 µm/pulse or &gt;1000 µm/pulse.  You specified a distance / encoder revolution and a number of pulses / encoder revolutions, that results in a resolution of &lt; 0.1 or &gt; 1000. |  |  |
 | 201 | **Encoder does not match the operating range / rotary axis range** |  | Yes |
 | Cause | SSI encoder and rotary axis: The encoder does not precisely cover the rotary axis range.  Linear axis: The encoder does not cover at least the operating range (including software limit switches). |  |  |
 
@@ -974,17 +974,17 @@ A diagnostics interrupt is only triggered if an error is detected in the system 
 | No. | Meaning |  | Diagnostics interrupt |
 | --- | --- | --- | --- |
 | 1 | **Invalid hardware interrupt** |  | Yes |
-| Cause | You attempted to define a hardware interrupt for a cam with a cam number > 7. |  |  |
+| Cause | You attempted to define a hardware interrupt for a cam with a cam number &gt; 7. |  |  |
 | 2 | **Incorrect track number** |  | Yes |
 | Cause | The track number is outside the range from 0 to 31 |  |  |
 | 3 | **Incorrect cam start** |  | Yes |
-| Cause | The cam start is outside the traversing range  (-100 m to +100 m or -1000 m to +1000 m).  Rotary axis: Cam start is < 0 or greater than the end of the rotary axis. |  |  |
+| Cause | The cam start is outside the traversing range  (-100 m to +100 m or -1000 m to +1000 m).  Rotary axis: Cam start is &lt; 0 or greater than the end of the rotary axis. |  |  |
 | 4 | **Incorrect cam end** |  | Yes |
-| Cause | The cam end is outside the traversing range  (-100 m to +100 m or -1000 m to +1000 m).  The cam length is not at least 1 pulse.   Rotary axis: The cam end is < 0 or greater than the end of the rotary axis.   With an inverse cam, there are not at least 4 pulses between the cam start and cam end. |  |  |
+| Cause | The cam end is outside the traversing range  (-100 m to +100 m or -1000 m to +1000 m).  The cam length is not at least 1 pulse.   Rotary axis: The cam end is &lt; 0 or greater than the end of the rotary axis.   With an inverse cam, there are not at least 4 pulses between the cam start and cam end. |  |  |
 | 5 | **Incorrect activation time** |  | Yes |
-| Cause | The activation time is < 0 µs. The maximum value depends on the quantity structure. |  |  |
+| Cause | The activation time is &lt; 0 µs. The maximum value depends on the quantity structure. |  |  |
 | 6 | **Incorrect lead time**  <sup>1)</sup> |  | Yes |
-| Cause | The derivative time is < 0 µs. The maximum value depends on the quantity structure. |  |  |
+| Cause | The derivative time is &lt; 0 µs. The maximum value depends on the quantity structure. |  |  |
 | 50 | **Too many cam records** |  | Yes |
 | Cause | You wanted to enter more cam records than is possible with this quantity structure. |  |  |
 | 51 | **Axis in operation** |  | Yes |

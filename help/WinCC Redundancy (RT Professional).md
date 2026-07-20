@@ -263,7 +263,7 @@ The following operating systems are permitted in a redundant project:
 
 1. All users must be added to the "SIMATIC HMI" user group. This also applies to users who want to open WinCC projects remotely.
 2. The storage folders of the projects must have the NTFS authorizations "SIMATIC HMI" with full access and "SIMATIC HMI Viewer" with read access. The authorizations must be inherited for all subordinate objects.
-3. Members of the Windows user group "SIMATIC HMI" should not simultaneously be members of the Windows user group "SQLServerMSSQLUser$<Computername>$WINCC". The members of this group have administrator rights to the SQL server. You should therefore remove from this group all Windows users for whom restricted access to the WinCC database is sufficient.
+3. Members of the Windows user group "SIMATIC HMI" should not simultaneously be members of the Windows user group "SQLServerMSSQLUser$&lt;Computername&gt;$WINCC". The members of this group have administrator rights to the SQL server. You should therefore remove from this group all Windows users for whom restricted access to the WinCC database is sufficient.
 
 #### Configuring an Identical Function (RT Professional)
 
@@ -389,7 +389,7 @@ You have created a project. You can now create devices in the project.
 
 > **Note**
 >
-> In a redundant project you only map the master server as device in the "Devices & Networks" editor. You perform the division into a redundant system of master server and standby server in the section "Configuring redundant servers".
+> In a redundant project you only map the master server as device in the "Devices &amp; Networks" editor. You perform the division into a redundant system of master server and standby server in the section "Configuring redundant servers".
 
 1. Double-click "Add new device" in the project tree.  
    The "Add new device" dialog box opens.
@@ -456,7 +456,7 @@ Proceed as follows to configure redundant clients:
     The project tree offers the following additional options:
 
    - Device configuration
-   - Online & diagnostics
+   - Online &amp; diagnostics
    - HMI_RT_2 [WinCC RT Professional]
 2. Double-click "HMI_RT_2 [WinCC RT Client]".  
    The project tree is extended by additional setting options.
@@ -499,7 +499,7 @@ An additional activation of the redundant system is not necessary.
    The project navigation offers the following additional options:
 
    - Device configuration
-   - Online & diagnostics
+   - Online &amp; diagnostics
    - HMI_RT_1 [WinCC RT Professional]
 4. Double-click "HMI_RT_1 [WinCC RT Professional]".  
    The project navigation is expanded by additional setting options.
@@ -597,20 +597,20 @@ You create two WinCC clients and link them with the WinCC server.
 
    - WinCC client, device name "WinCC Client1"
    - WinCC client, device name "WinCC Client2"
-2. In the "Devices & Networks" editor, "Relations" tab, link the two WinCC clients with the WinCC server by means of drag-and-drop. A multiple-station system will be created.
+2. In the "Devices &amp; Networks" editor, "Relations" tab, link the two WinCC clients with the WinCC server by means of drag-and-drop. A multiple-station system will be created.
 
    ![Procedure](images/7693912203_DV_resource.Stream@PNG-de-DE.PNG)
 
    ![Procedure](images/7693912203_DV_resource.Stream@PNG-de-DE.PNG)
 3. Select "WinCC-Client1".
-4. In the inspector window, select Properties > Computer name" and enter the physical computer name of the HMI device.
+4. In the inspector window, select Properties &gt; Computer name" and enter the physical computer name of the HMI device.
 
    The computer name identifies the HMI device in the network.
 5. In the Runtime settings, "General" tab, select a screen as the "Start screen" of the WinCC server. In the multiple-station system, the WinCC client then displays this server screen in runtime.
-6. Select a "Menus & Toolbars" configuration that was made on the WinCC server.
+6. Select a "Menus &amp; Toolbars" configuration that was made on the WinCC server.
 7. At "Services", activate the client Runtime services you need for the specific configuration, e.g. the scheduler.
 8. Select additional design features under "Screens".
-9. Select a Runtime language for the WinCC server under "Language & Font". For example, you can configure a separate Runtime language for each WinCC client.
+9. Select a Runtime language for the WinCC server under "Language &amp; Font". For example, you can configure a separate Runtime language for each WinCC client.
 10. Repeat steps 3 to 9 for "WinCC Client2".
 
     ![Procedure](images/24538352267_DV_resource.Stream@PNG-en-US.png)
@@ -643,7 +643,7 @@ Proceed as follows to configure redundant clients:
     The project tree offers the following additional options:
 
    - Device configuration
-   - Online & diagnostics
+   - Online &amp; diagnostics
    - HMI_RT_2 [WinCC RT Professional]
 2. Double-click "HMI_RT_2 [WinCC RT Client]".  
    The project tree is extended by additional setting options.
@@ -798,13 +798,13 @@ Proceed as follows to upgrade redundant plants during operation:
 9. Close the WinCC application on the master server.
 10. Restart the master server.
 11. Upgrade the master server.
-12. Run a complete download via the dialog "Load preview > Options for loading" for the master server only.
+12. Run a complete download via the dialog "Load preview &gt; Options for loading" for the master server only.
 13. Configure the Web server and DataMonitor server, if necessary.
 14. Enable the master server.
 15. Enable all upgraded clients by connecting them to the master server project.
 16. Wait until the Runtime data has been synchronized.
 17. To upgrade the standby server and the clients connected to it, repeat steps 4 to 16 for the standby server.
-18. Run a complete download for the master server and the standby server via the dialog "Load preview > Options for loading" with the setting "Server and redundant partner".
+18. Run a complete download for the master server and the standby server via the dialog "Load preview &gt; Options for loading" with the setting "Server and redundant partner".
 
     Running the download with the option "Server and redundant partner" ensures that the same project is running on both partner servers.
 
@@ -832,7 +832,7 @@ After download with the option "Server and redundant partner", subsequent delta 
 If you want to perform the download only for one plant of a redundant server pair, proceed as follows:
 
 1. In the project tree, right-click on the relevant Runtime Professional device.
-2. Select "Download to device > Software (all)".
+2. Select "Download to device &gt; Software (all)".
 3. Select the appropriate option in the "Load preview" dialog under "Options for loading".
 
 ---
@@ -1170,7 +1170,7 @@ The performance tags @PRF_REDUNDANCY_... map the states of the redundant servers
 | System tag | Description |
 | --- | --- |
 | @PRF_REDUNDANCY_IS_SYNCHRONIZED | Synchronization status:  - 0: Redundant applications are not synchronized. - 1: Redundancy synchronization of all applications is complete.   In addition to WinCC, the status can be influenced by other applications registered for the redundancy, for example, SIMATIC BATCH. |
-| @PRF_REDUNDANCY_VALIDATION | Validation points of the server. The validation value determines which server will be the primary server.  The validation value depends, for example, on the connection and runtime status.  If the redundancy was configured correctly, the validation value is the same on both redundant servers.  When the validation values are not identical, the server with the greater value will become the primary server.  Typical values:  - 37: The server status is good.   - Runtime is active.   - Redundant connection over serial interface - 35: The server status is good.   - Runtime is active.   - Redundant connection over LAN - < 35: The server has the internal status "FAULT".   Check the connection status or the server status. The "FAULT" status is set for a critical operating state, for example, when a server application no longer responds.   When a server takes on the "FAULT" status, the partner server becomes the primary server.   Example calculations:  - When runtime is disabled on the server, the validation is reduced by four points. - When the terminal bus cannot be reached, validation is reduced by 20 points. |
+| @PRF_REDUNDANCY_VALIDATION | Validation points of the server. The validation value determines which server will be the primary server.  The validation value depends, for example, on the connection and runtime status.  If the redundancy was configured correctly, the validation value is the same on both redundant servers.  When the validation values are not identical, the server with the greater value will become the primary server.  Typical values:  - 37: The server status is good.   - Runtime is active.   - Redundant connection over serial interface - 35: The server status is good.   - Runtime is active.   - Redundant connection over LAN - &lt; 35: The server has the internal status "FAULT".   Check the connection status or the server status. The "FAULT" status is set for a critical operating state, for example, when a server application no longer responds.   When a server takes on the "FAULT" status, the partner server becomes the primary server.   Example calculations:  - When runtime is disabled on the server, the validation is reduced by four points. - When the terminal bus cannot be reached, validation is reduced by 20 points. |
 | @PRF_REDUNDANCY_PARTNER_VALIDATION | Validation points of the redundant partner server  If the redundancy was configured correctly, this value is the same on both redundant servers. |
 | @PRF_REDUNDANCY_AS_COUNT | Number of AS connections on the server  If the redundancy was configured correctly, this value is the same on both redundant servers.  The following conditions will cause a redundancy switchover:  - The validation values are identical on the redundant servers. - The number of AS connections is different.   In this case, the server with more AS connections will become the primary server. |
 | @PRF_REDUNDANCY_PARTNER_AS_COUNT | Number of AS connections on the redundant partner server  If the redundancy was configured correctly, this value is the same on both redundant servers. |
@@ -1225,7 +1225,7 @@ The "WinCC Redundancy" option provides the following system messages. You can re
 | 1012353 | REDRT:@100%s@:RedundancyControl: Status changed to FAULT. However partner server is not available. |
 | 1012354 | REDRT:@100%s@:RedundancyControl: Status changed to FAULT. However server isolation is not activated. |
 | 1012355 | REDRT:@100%s@:RedundancyControl: Status changed to FAULT. However server isolation is locked by @1%s@. Reason: @2%s@ |
-| 1012356 | REDRT:@100%s@:RedundancyControl: Status changed to FAULT => server is isolated |
+| 1012356 | REDRT:@100%s@:RedundancyControl: Status changed to FAULT =&gt; server is isolated |
 | 1012357 | REDRT:@100%s@:RedundancyControl: Status changed to FAULT. However automatic restart is not activated. |
 | 1012358 | REDRT:@100%s@:RedundancyControl: Status changed to FAULT. However automatic restart is locked. The network adapter is disconnected and DHCP is released. |
 | 1012359 | REDRT:@100%s@:RedundancyControl: Reboot of computer disabled by @1%s@. Reason: @2%s@ |

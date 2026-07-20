@@ -26,7 +26,7 @@ The "synchronous" and "asynchronous" properties relate to the temporal relations
 
 Asynchronous instructions are usually instructions for transferring data (data records for modules, communication data, diagnostics data).
 
-Additional information about asynchronous instructions can be found here:[SIMATIC S7-1500 / ET 200MP Manual Collection](https://support.industry.siemens.com/cs/ww/en/view/86140384) In the system manual under Basics of program processing > Asynchronous instructions​
+Additional information about asynchronous instructions can be found here:[SIMATIC S7-1500 / ET 200MP Manual Collection](https://support.industry.siemens.com/cs/ww/en/view/86140384) In the system manual under Basics of program processing &gt; Asynchronous instructions​
 
 ### Identification of the job
 

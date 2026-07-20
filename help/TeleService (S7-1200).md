@@ -90,7 +90,7 @@ You can find additional information on valid data types under "[Overview of the 
 >
 > **Optional parameters**
 >
-> The optional parameters CC, TEXT, and ATTACHMENT are only sent with the e-mail if the corresponding parameters contain a string of length > 0.
+> The optional parameters CC, TEXT, and ATTACHMENT are only sent with the e-mail if the corresponding parameters contain a string of length &gt; 0.
 
 > **Note**
 >
@@ -125,15 +125,15 @@ You can find a detailed application example in the Siemens Industry Online Suppo
 
 The TO_S, CC, and FROM parameters are strings with, for example, the following content:
 
-- TO: <wenna@mydomain.com>, <ruby@mydomain.com>,
-- CC: <admin@mydomain.com>, <judy@mydomain.com>,
-- FROM: <admin@mydomain.com>
+- TO: &lt;wenna@mydomain.com&gt;, &lt;ruby@mydomain.com&gt;,
+- CC: &lt;admin@mydomain.com&gt;, &lt;judy@mydomain.com&gt;,
+- FROM: &lt;admin@mydomain.com&gt;
 
 Note the following rules when entering the parameters:
 
 - The "TO:", "CC:", and "FROM:" characters must be entered.
-- A space and an opening pointed bracket "<" must be entered before each address.
-- A closing pointed bracket ">" must be entered after each address.
+- A space and an opening pointed bracket "&lt;" must be entered before each address.
+- A closing pointed bracket "&gt;" must be entered after each address.
 - A comma must be entered after each address in TO and CC.
 - Only one e-mail may be entered in FROM, and there must not be a comma at the end of this address
 

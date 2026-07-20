@@ -414,8 +414,8 @@ The FM x52 has the following reaction times for absolute encoders:
 
 The following limit values apply to the monoflop time:
 
-- Minimum monoflop time: > 15 µs
-- Maximum monoflop time: < 64 µs
+- Minimum monoflop time: &gt; 15 µs
+- Maximum monoflop time: &lt; 64 µs
 
 Encoders with values outside the limits shown here are not permitted.
 

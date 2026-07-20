@@ -181,7 +181,7 @@ Communication between the CPU, the communication module and a communication part
 
 The instructions form the software interface between the CPU and the communication module. They must be called cyclically from the user program. When the instruction library PtP-Communication as of V4.0 is used, the instructions detect independently whether the Performance option is active and adapt the method for the data exchange.
 
-The instructions are part of STEP 7 (TIA Portal). The instructions are available in the "Instructions" task card under Communication > Communication processor. They apply to all listed communication modules if they support the required function.
+The instructions are part of STEP 7 (TIA Portal). The instructions are available in the "Instructions" task card under Communication &gt; Communication processor. They apply to all listed communication modules if they support the required function.
 
 All tables
 Instructions for PtP

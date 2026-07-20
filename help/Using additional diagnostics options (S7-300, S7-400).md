@@ -557,7 +557,7 @@ This area contains the following buttons:
 
 ##### Requirement
 
-- You are using an S7-300 CPU with any firmware version or an S7-400 CPU with firmware version >= V6.0.
+- You are using an S7-300 CPU with any firmware version or an S7-400 CPU with firmware version &gt;= V6.0.
 - There is no memory card inserted in the CPU.
 - There is an online connection to the CPU whose PROFINET interface parameters you want to reset.
 - The CPU is in STOP mode.
@@ -713,7 +713,7 @@ The following assumes that the IP address of the IO device can also be obtained 
 ###### Requirement
 
 - The devices accessible via the associated interface of the PG/PC are displayed in the project tree (to display these, either double-click "Update accessible devices" in the project tree or select the "Accessible devices..." command in the "Online" menu.).
-- You have double-clicked "Online access" -> <Selected interface> -> <PROFINET IO device> -> "Online & Diagnostics" in the project tree to open the Online and Diagnostics view.
+- You have double-clicked "Online access" -&gt; &lt;Selected interface&gt; -&gt; &lt;PROFINET IO device&gt; -&gt; "Online &amp; Diagnostics" in the project tree to open the Online and Diagnostics view.
 
 ###### Procedure for specifying the IP address yourself
 
@@ -798,7 +798,7 @@ This section contains information on the following topics:
 
 ##### Where do I determine the connection details of an NCM connection?
 
-The connection details of an NCM connection can be found in the "Connection details" group. This group is located in the "Diagnostics > Connection information" area of the Inspector window.
+The connection details of an NCM connection can be found in the "Connection details" group. This group is located in the "Diagnostics &gt; Connection information" area of the Inspector window.
 
 ##### When is the "Connection details" group filled in?
 

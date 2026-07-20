@@ -134,7 +134,7 @@ See also: p31580 (VIBX application mode)
 
 **Remedy:**
   
-Set the required application mode (p31580 > 0).  
+Set the required application mode (p31580 &gt; 0).  
 Note:  
 VIBX: VIBration eXtinction (vibration absorber)
 

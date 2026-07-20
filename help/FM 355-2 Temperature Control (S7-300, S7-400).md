@@ -316,27 +316,27 @@ During program controlled re-configuring (LOAD_PAR, LOAD_OP) of the FM 355-2 by
 | PID_ON | 26.2 | BOOL | TRUE | After optimization or in the case of LOAD_PID =TRUE, the PID parameters are enabled. If PID_ON =FALSE, the PI parameters are loaded.  With certain process types it is nevertheless possible that only a PI controller will be designed despite PID_ON = TRUE. |
 | CONZ_ON | 26.3 | BOOL | FALSE | TRUE = control zone enabled  FALSE = control zone off |
 | D_EL_SEL | 28.0 | INT | 16 | The D-action element in the PID algorithm can be assigned to a separate input This is selected at the D_EL_SEL parameter.   - D_EL_SEL = 0 to D_EL_SEL = 3: Analog input 0 to 3 - D_EL_SEL = 16: error signal - D_EL_SEL = 17: negative process value |
-| SP_HLM | 30.0 | REAL | 100.0 | The setpoint is always limited to a high and a low limit. The SP_HLM parameter specifies the high limit.  SP_HLM > SP_LLM |
-| SP_LLM | 34.0 | REAL | 0.0 | The setpoint is always limited to a high and a low limit. The SP_LLM parameter specifies the low limit.  SP_LLM < SP_HLM |
-| H_ALM | 38.0 | REAL | 100.0 | Highest limit for monitoring the process value or the error signal.  H_ALM > H_WRN |
-| H_WRN | 42.0 | REAL | 90.0 | Second to highest limit for monitoring the process value or the error signal.  H_WRN > H_ALM |
+| SP_HLM | 30.0 | REAL | 100.0 | The setpoint is always limited to a high and a low limit. The SP_HLM parameter specifies the high limit.  SP_HLM &gt; SP_LLM |
+| SP_LLM | 34.0 | REAL | 0.0 | The setpoint is always limited to a high and a low limit. The SP_LLM parameter specifies the low limit.  SP_LLM &lt; SP_HLM |
+| H_ALM | 38.0 | REAL | 100.0 | Highest limit for monitoring the process value or the error signal.  H_ALM &gt; H_WRN |
+| H_WRN | 42.0 | REAL | 90.0 | Second to highest limit for monitoring the process value or the error signal.  H_WRN &gt; H_ALM |
 | L_WRN | 46.0 | REAL | 10.0 | Second to lowest limit for monitoring the process value or the error signal.  Values from H_WRN to L_ALM are permitted. |
 | L_ALM | 50.0 | REAL | 0.0 | Lowest limit for monitoring the process value or the error signal.  Values from L_ALM to L_WRN are permitted. |
-| HYS | 54.0 | REAL | 1.0 | The parameters can be assigned for a hysteresis to prevent the monitoring displays from flickering.  HYS >= 0.0 |
-| DEADB_W | 58.0 | REAL | 0.0 | A dead band is applied to the error signal. The DEADB_W parameter determines the size of the dead band.  DEADB_W >= 0.0 |
+| HYS | 54.0 | REAL | 1.0 | The parameters can be assigned for a hysteresis to prevent the monitoring displays from flickering.  HYS &gt;= 0.0 |
+| DEADB_W | 58.0 | REAL | 0.0 | A dead band is applied to the error signal. The DEADB_W parameter determines the size of the dead band.  DEADB_W &gt;= 0.0 |
 | PFAC_SP | 62.0 | REAL | 1.0 | PFAC_SP specifies the effective P-action when there is a setpoint change.  Values from 0.0 to 1.0 are permitted. |
 | GAIN | 66.0 | REAL | 1.0 | The GAIN parameter specifies the controller gain.  The control direction is inverted by means of a negative sign of GAIN. |
-| TI | 70.0 | REAL | 3000.0 | The TI parameter (integral-action time) determines the time response of the integrator. If TI = 0.0, the integral action is disabled.  TI = 0.0 or TI >= 0.5 |
-| TD | 74.0 | REAL | 0.0 | The TD (rate time) paramter determines the time response of the derivative action (D-action element). If TD = 0.0, the derivative action is disabled  TD = 0.0 or TD >= 1.0 |
+| TI | 70.0 | REAL | 3000.0 | The TI parameter (integral-action time) determines the time response of the integrator. If TI = 0.0, the integral action is disabled.  TI = 0.0 or TI &gt;= 0.5 |
+| TD | 74.0 | REAL | 0.0 | The TD (rate time) paramter determines the time response of the derivative action (D-action element). If TD = 0.0, the derivative action is disabled  TD = 0.0 or TD &gt;= 1.0 |
 | D_F | 78.0 | REAL | 5.0 | The time constant TD/D_F that is effective for the D-action element is limited internally to ≥ sampling time/2.  Values from 5.0 to 10.0 are permitted. |
 | LMN_SAFE | 82.0 | REAL | 0.0 | A safety value can be parameterized for the manipulated value.  Values from -100.0 to 100.0 (%) are permitted. |
 | LMN_HLM | 86.0 | REAL | 100.0 | The manipulated value is always limited to a high and a low limit. The LMN_HLM parameter specifies the high limit.  (This does not apply to step controllers without analog position feedback).  Values from LMN_LLM to 100.0 (%) are permitted. |
 | LMN_LLM | 90.0 | REAL | 0.0 | The manipulated value is always limited to a high and a low limit. The LMN_LLM parameter specifies the low limit.   (This does not apply to step controllers without analog position feedback).  Values from -100.0 to LMN_HLM (%) are permitted. |
-| MTR_TM | 94.0 | REAL | 60.0 | Runtime of the control valve from stop to stop   (Applies to step controllers only).  MTR_TM >= 0.001 |
+| MTR_TM | 94.0 | REAL | 60.0 | Runtime of the control valve from stop to stop   (Applies to step controllers only).  MTR_TM &gt;= 0.001 |
 | PULSE_TM | 98.0 | REAL | 0.0 | Minimum pulse duration   (Applies to step controllers or pulse controllers only) |
 | BREAK_TM | 102.0 | REAL | 0.0 | Minimum pulse duration   (Applies to step controllers or pulse controllers only) |
-| RATIOFAC | 106.0 | REAL | 0.0 | Ratio of heating gain/cooling gain for the process.   RATIOFAC <> 0.0 has the following effect:  - LMN = LMN * RATIOFAC for LMN<0.0; - CON_ZONE 50 % greater   Values from 0.01 to 100.0 or 0.0 are permitted. |
-| CON_ZONE | 110.0 | REAL | 100.0 | Control zone width  If ER >= CON_ZONE, then LMN = LMN_HLM.  If ER <= -CON_ZONE, then LMN = LMN_LLM.  If RATIOFAC <> 0.0 and ER <= -CON_ZONE/RATIOFAC, then LMN = LMN_LLM.  CON_ZONE > 0.0 |
+| RATIOFAC | 106.0 | REAL | 0.0 | Ratio of heating gain/cooling gain for the process.   RATIOFAC &lt;&gt; 0.0 has the following effect:  - LMN = LMN * RATIOFAC for LMN&lt;0.0; - CON_ZONE 50 % greater   Values from 0.01 to 100.0 or 0.0 are permitted. |
+| CON_ZONE | 110.0 | REAL | 100.0 | Control zone width  If ER &gt;= CON_ZONE, then LMN = LMN_HLM.  If ER &lt;= -CON_ZONE, then LMN = LMN_LLM.  If RATIOFAC &lt;&gt; 0.0 and ER &lt;= -CON_ZONE/RATIOFAC, then LMN = LMN_LLM.  CON_ZONE &gt; 0.0 |
 | TUN_DLMN | 114.0 | REAL | 20.0 | Process excitation for controller optimization results from a manipulated value step-change of TUN_DLMN.  Values from -100.0 to 100.0 (%) are permitted. |
 | TUN_CLMN | 118.0 | REAL | -20.0 | Manipulated variable step-change after start of cooling optimization by TUN_CST.  Values from -100.0 to 100.0 (%) are permitted. |
 
@@ -407,7 +407,7 @@ During program controlled re-configuring (LOAD_PAR, LOAD_OP) of the FM 355-2 by
 | STATUS_H | 158.0 | INT | 0 | [Parameters STATUS_H](#parameters-status_h-s7-300-s7-400) displays a diagnostic value via the search for the point of inflection during heating process. |
 | STATUS_C | 160.0 | INT | 0 | [Parameters STATUS_C](#parameters-status_c-s7-300-s7-400) displays a diagnostic value via the search for the point of inflection during cooling process. |
 | STATUS_D | 162.0 | INT | 0 | [Parameters STATUS_D](#parameters-status_d-s7-300-s7-400) indicates a diagnostic value of the controller design during the heating process. |
-| ZONE_TUN | 164.0 | WORD | W#16#0 | In HEX code, each of the four digits represents one channel, arranged in the following order from left to right: Channel 0, 1, 2, 3. ZONE_TUN = 0 means that the selected channel will not be tuned as a group with other channels. A value <> 0000 shows - in each case with a 1 - the channels that will be tuned as a group. |
+| ZONE_TUN | 164.0 | WORD | W#16#0 | In HEX code, each of the four digits represents one channel, arranged in the following order from left to right: Channel 0, 1, 2, 3. ZONE_TUN = 0 means that the selected channel will not be tuned as a group with other channels. A value &lt;&gt; 0000 shows - in each case with a 1 - the channels that will be tuned as a group. |
 
 ---
 
@@ -536,17 +536,17 @@ If a diagnostic value 3xxxx is displayed, the optimization is canceled (PHASE = 
 | 0 | Default or no or still no new controller parameters |  |
 | 10000 | Optimization completed + suitable controller parameters found |  |
 | 2xxxx | Optimization completed + controller parameters uncertain |  |
-| 2xxx1 | effective motor actuating time >= 65% of the point of inflection time T_P_INF | Compensation of TU and T_P_INF is not performed any more. This leads to the design of a softer controller |
+| 2xxx1 | effective motor actuating time &gt;= 65% of the point of inflection time T_P_INF | Compensation of TU and T_P_INF is not performed any more. This leads to the design of a softer controller |
 | 2xx2x | Point of inflection not reached   (only with excitation via setpoint step-change) | If the controller oscillates, reduce the controller parameters or repeat test with lower TUN_DLMN. |
-| 2x1xx | Estimation error   TU <= 3*Sampling time | Repeat test. |
-| 2x2xx | Serious estimation error (TU < sampling time) | Repeat test.  Special case PT1-only process: Do not repeat the test; reduce the controller parameters if necessary |
+| 2x1xx | Estimation error   TU &lt;= 3*Sampling time | Repeat test. |
+| 2x2xx | Serious estimation error (TU &lt; sampling time) | Repeat test.  Special case PT1-only process: Do not repeat the test; reduce the controller parameters if necessary |
 | 2x3xx | Estimation error TU too high | Repeat test under better conditions. |
-| 21xxx | Estimation error N_PTN < 1 | Repeat test under better conditions. |
-| 22xxx | Estimation error N_PTN > 10 | Repeat test under better conditions. |
+| 21xxx | Estimation error N_PTN &lt; 1 | Repeat test under better conditions. |
+| 22xxx | Estimation error N_PTN &gt; 10 | Repeat test under better conditions. |
 | 3xxxx | Optimization interrupted in phase 1 due to incorrect parameter assignment |  |
 | 30001 | Simultaneous setting of TUN_ON and TUN_ST | Restart optimization. |
-| 30002 | |TUN_DLMN| < 5 % or value of effective LMN modification < 5 %  - Transition in phase 99 (Phase 0 in a parallel optimization process) - Output LMN = LMN0 | Either you configured for TUN_DLMN a value that is too low, or the manipulated variable was near to a control limit prior to start of optimization.  In this case, you must prevent the controller from settling to the new setpoint and from unnecessary leaving the stationary operating point (not possible with parallel optimization process).  You should now proceed as follows:  - If necessary, cancel setpoint and set TUN_ON to FALSE. - TUN_DLMN correct. - If TUN_DLMN >= 5%, check manipulated value limits. - Restart optimization. |
-| 30004 | |TUN_DLMN| < 5 % or effective LMN modification < 5 %  The effective manipulated value difference limited by split–range limits and not by manipulated value limits.   - Transition in phase 99 (Phase 0 in a parallel optimization process) - Output LMN = LMN0 | See STATUS_H=30002:  Also take into account that, for example, with LMN_A < 5 % a heating optimization with negative TUN_DLMN is not possible (reason: the cooling power must not be adjusted). |
+| 30002 | |TUN_DLMN| &lt; 5 % or value of effective LMN modification &lt; 5 %  - Transition in phase 99 (Phase 0 in a parallel optimization process) - Output LMN = LMN0 | Either you configured for TUN_DLMN a value that is too low, or the manipulated variable was near to a control limit prior to start of optimization.  In this case, you must prevent the controller from settling to the new setpoint and from unnecessary leaving the stationary operating point (not possible with parallel optimization process).  You should now proceed as follows:  - If necessary, cancel setpoint and set TUN_ON to FALSE. - TUN_DLMN correct. - If TUN_DLMN &gt;= 5%, check manipulated value limits. - Restart optimization. |
+| 30004 | |TUN_DLMN| &lt; 5 % or effective LMN modification &lt; 5 %  The effective manipulated value difference limited by split–range limits and not by manipulated value limits.   - Transition in phase 99 (Phase 0 in a parallel optimization process) - Output LMN = LMN0 | See STATUS_H=30002:  Also take into account that, for example, with LMN_A &lt; 5 % a heating optimization with negative TUN_DLMN is not possible (reason: the cooling power must not be adjusted). |
 | 30009 | Safety mode | Close safety mode and restart optimization. |
 
 > **Note**
@@ -595,13 +595,13 @@ If a diagnostic value 3xxxx is displayed, the optimization is canceled (PHASE = 
 | 10000 | Optimization completed + suitable controller parameters found |  |
 | 2xxxx | Optimization completed + controller parameters uncertain |  |
 | 2x3xx | Estimation error TU too high | Repeat test under better conditions. |
-| 21xxx | Estimation error N_PTN < 1 | Repeat test under better conditions. |
-| 22xxx | Estimation error N_PTN > 10 | Repeat test under better conditions. |
+| 21xxx | Estimation error N_PTN &lt; 1 | Repeat test under better conditions. |
+| 22xxx | Estimation error N_PTN &gt; 10 | Repeat test under better conditions. |
 | 3xxxx | Optimization interrupted in phase 1 due to incorrect parameter assignment |  |
 | 30001 | Simultaneous setting of TUN_ON and TUN_CST | Restart optimization. |
-| 30002 | Only for step controllers without analog position feedback:  |TUN_CLMN| < 5 % or value of effective LMN modification < 5 %  - Transition to phase 0 - TUN_ON = FALSE | Either you configured for TUN_CLMN a value that is too low, or the manipulated variable was near to a control limit prior to start of optimization.  In this case, you must prevent the controller from settling to the new setpoint and from unnecessary leaving the stationary operating point (not possible with parallel optimization process).  You should now proceed as follows:  - If necessary cancel setpoint and set TUN_ON to FALSE. - TUN_CLMN correct. - Check the manipulated value limits, if |TUN_CLMN| >= 5% and the sign was correct. - Restart optimization. |
-| 30003 | TUN_CLMN <= -5%, butLMN_LLM > -5%.  - Transition to phase 0 - TUN_ON = FALSE | The low limit LMN_LLM is too high (e.g. 0%) and therefore prevents the output of cooling power.  - Correct low limit LMN_LLM. - Restart optimization. |
-| 30004 | TUN_CLMN > -5 % or effective LMN modification > -5 %  The effective manipulated value difference limited by split–range limits and not by manipulated value limits.   - Transition to phase 0 - TUN_ON = FALSE | See STATUS_C=30002:  Also take into account that, for example, with LMN_A < 5 % a heating optimization with negative TUN_DLMN is not possible (reason: the cooling power must not be adjusted). |
+| 30002 | Only for step controllers without analog position feedback:  |TUN_CLMN| &lt; 5 % or value of effective LMN modification &lt; 5 %  - Transition to phase 0 - TUN_ON = FALSE | Either you configured for TUN_CLMN a value that is too low, or the manipulated variable was near to a control limit prior to start of optimization.  In this case, you must prevent the controller from settling to the new setpoint and from unnecessary leaving the stationary operating point (not possible with parallel optimization process).  You should now proceed as follows:  - If necessary cancel setpoint and set TUN_ON to FALSE. - TUN_CLMN correct. - Check the manipulated value limits, if |TUN_CLMN| &gt;= 5% and the sign was correct. - Restart optimization. |
+| 30003 | TUN_CLMN &lt;= -5%, butLMN_LLM &gt; -5%.  - Transition to phase 0 - TUN_ON = FALSE | The low limit LMN_LLM is too high (e.g. 0%) and therefore prevents the output of cooling power.  - Correct low limit LMN_LLM. - Restart optimization. |
+| 30004 | TUN_CLMN &gt; -5 % or effective LMN modification &gt; -5 %  The effective manipulated value difference limited by split–range limits and not by manipulated value limits.   - Transition to phase 0 - TUN_ON = FALSE | See STATUS_C=30002:  Also take into account that, for example, with LMN_A &lt; 5 % a heating optimization with negative TUN_DLMN is not possible (reason: the cooling power must not be adjusted). |
 | 30008 | TUN_CST but without previous heating optimization  - Transition to phase 0 - TUN_ON = FALSE | First start heating optimization |
 | 30009 | Safety mode | Close safety mode and restart optimization. |
 
@@ -636,12 +636,12 @@ If a diagnostic value 3xxxx is displayed, the optimization is canceled (PHASE = 
 | STATUS_D | Description |
 | --- | --- |
 | 0 | No controller parameters have been calculated. |
-| 110 | N_PTN <= 1.5 Process type I fast |
-| 121 | N_PTN > 1.5 Process type I |
-| 122 | N_PTN = 1.9 process type I after phase 7 (before N_PTN > 1.9) |
-| 200 | N_PTN > 1.9 Process type II (transition range) |
-| 310 | N_PTN >= 2.1 Process type III fast |
-| 320 | N_PTN > 2.6 Process type III |
+| 110 | N_PTN &lt;= 1.5 Process type I fast |
+| 121 | N_PTN &gt; 1.5 Process type I |
+| 122 | N_PTN = 1.9 process type I after phase 7 (before N_PTN &gt; 1.9) |
+| 200 | N_PTN &gt; 1.9 Process type II (transition range) |
+| 310 | N_PTN &gt;= 2.1 Process type III fast |
+| 320 | N_PTN &gt; 2.6 Process type III |
 
 > **Note**
 >
@@ -1136,20 +1136,20 @@ Reasons: Both instructions access FM355-2 via the same data records. You must th
 | STATUS_H | 94.0 | INT | 0 | Diagnostics value for searching for point of inflection during heating optimization   See [parameter FMT_PID.STATUS_H](#parameters-status_h-s7-300-s7-400) |
 | STATUS_C | 96.0 | INT | 0 | Diagnostics value for searching for point of inflection during cooling optimization.   See [parameter FMT_PID.STATUS_C](#parameters-status_c-s7-300-s7-400) |
 | STATUS_D | 98.0 | INT | 0 | Diagnostics value for controller design during heating optimization  See [parameter FMT_PID.STATUS_D](#parameters-status_d-s7-300-s7-400) |
-| ZONE_TUN | 100.0 | WORD | W#16#0 | In HEX code, each one of the four digits represents one channel, arranged in the following order from left to right: Channel 0, 1, 2, 3. ZONE_TUN = 0 means that the channel selected will not be optimized together with other channels. A value <> 0000 shows - in each case with a 1 - the channels which will be optimized as a group. |
+| ZONE_TUN | 100.0 | WORD | W#16#0 | In HEX code, each one of the four digits represents one channel, arranged in the following order from left to right: Channel 0, 1, 2, 3. ZONE_TUN = 0 means that the channel selected will not be optimized together with other channels. A value &lt;&gt; 0000 shows - in each case with a 1 - the channels which will be optimized as a group. |
 | GAIN_P | 152.0 | REAL | 0.0 | Identified steady state gain (phys. variable) /%.   In the case of process type I, GAIN_P tends to be estimated too low. |
 | TU | 156.0 | REAL | 0.0 | Identified time lag of process.  TU≥ 3*Sampling time |
 | TA | 160.0 | REAL | 0.0 | Identified recovery time of process.   In the case of process type I, TA tends to be estimated too low. |
 | KIG | 164.0 | REAL | 0.0 | Maximum possible rate of rise of the process value. (phys. variable) /s  GAIN_P = 0.01 * KIG * TA |
 | N_PTN | 168.0 | REAL | 0.0 | Order of the process "Non-integer values" are also possible.  Values from 0.1 to 10.0 are permitted. |
-| TM_LAG_P | 172.0 | REAL | 0.0 | Time constant of a PTN model.  (practical values for N_PTN>=2 only). |
+| TM_LAG_P | 172.0 | REAL | 0.0 | Time constant of a PTN model.  (practical values for N_PTN&gt;=2 only). |
 | T_P_INF | 176.0 | REAL | 0.0 | Time from process excitation to inflection point. |
 | P_INF | 180.0 | REAL | 0.0 | Change in process value from process excitation to inflection point. |
 | LMN0 | 184.0 | REAL | 0.0 | Manipulated value at the start of optimization  Is established in phase 1 (average)  Values from -100.0 to 100.0 (%) are permitted. |
 | PV0 | 188.0 | REAL | 0.0 | Process value at the start of optimization  Is established in phase 1 (average). |
 | PVDT0 | 192.0 | REAL | 0.0 | Process value slew rate at the start of optimization  Sign is adapted.   (phys. variable) /s |
 | PVDT | 196.0 | REAL | 0.0 | Current process value slew rate  Sign is adapted.  (phys. variable) /s |
-| PVDT_MAX | 200.0 | REAL | 0.0 | Maximal process value modification (phys. variable) /s  Maximum derivative of the process value at the point of inflection (sign adapted, always > 0); is used to calculate TU and KIG. |
+| PVDT_MAX | 200.0 | REAL | 0.0 | Maximal process value modification (phys. variable) /s  Maximum derivative of the process value at the point of inflection (sign adapted, always &gt; 0); is used to calculate TU and KIG. |
 | NOI_PVDT | 204.0 | REAL | 0.0 | Noise action in PVDT_MAX in %  The larger the noise action, the less precise (softer) are the controller parameters. |
 | NOISE_PV | 208.0 | REAL | 0.0 | Absolute process value noise action (phys. variable) /s  The difference between maximum and minimum process value in phase 1. |
 | FIL_CYC | 212.0 | INT | 0 | Number of cycles of the mean value filter  The process value is determined through FIL_CYC cycles. FIL_CYC is increased from 1 to a max. of 1024 if needed. |

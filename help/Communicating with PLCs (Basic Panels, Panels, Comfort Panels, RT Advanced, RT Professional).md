@@ -140,7 +140,7 @@ If you have created a project, you can add a device in the portal view or projec
 
 #### Networking devices
 
-You can network the interfaces of the communication-capable devices conveniently in the "Devices & Networks" editor. In the networking step, you configure the physical device connections.
+You can network the interfaces of the communication-capable devices conveniently in the "Devices &amp; Networks" editor. In the networking step, you configure the physical device connections.
 
 ![Networking devices](images/69215370763_DV_resource.Stream@PNG-en-US.png)
 
@@ -379,7 +379,7 @@ While the HMI connection to a PLC is being established, the PLC certificate is c
 
 This section contains information on the following topics:
 
-- ["Devices & networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+- ["Devices &amp; networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Network view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Network data (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-data-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Diagnostics of online connections (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#diagnostics-of-online-connections-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
@@ -393,11 +393,11 @@ This section contains information on the following topics:
 
 #### Function of the hardware and network editor
 
-The "Devices & networks" editor is the development environment for networking, configuring and assigning parameters to devices and modules.
+The "Devices &amp; networks" editor is the development environment for networking, configuring and assigning parameters to devices and modules.
 
 #### Configuration
 
-The "Devices & networks" editor consists of the following components:
+The "Devices &amp; networks" editor consists of the following components:
 
 ![Configuration](images/124500241675_DV_resource.Stream@PNG-en-US.png)
 
@@ -407,7 +407,7 @@ The "Devices & networks" editor consists of the following components:
 | 2 | Hardware catalog |
 | 3 | Inspector window |
 
-The "Devices & networks" editor provides you with three different views of your project. You can switch between these three views at any time depending on whether you want to produce and edit individual devices and modules, entire networks and device configurations or the topological structure of your project.
+The "Devices &amp; networks" editor provides you with three different views of your project. You can switch between these three views at any time depending on whether you want to produce and edit individual devices and modules, entire networks and device configurations or the topological structure of your project.
 
 The inspector window contains information on the object currently marked. Here you can change the settings for the object marked.
 
@@ -500,7 +500,7 @@ You can use the shortcut menu of the title bar of the table to adjust the tabula
 
 **See also**
 
-["Devices & networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+["Devices &amp; networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Network data (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-data-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
@@ -565,7 +565,7 @@ You will find additional network data under "Connections".
 
 **See also**
 
-["Devices & networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+["Devices &amp; networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Network view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
@@ -595,7 +595,7 @@ The "Diagnostics" function shows the connection data in tabular form in the Insp
 
 #### Device information
 
-The diagnostics data of all devices in "Online" mode is displayed in the "Diagnostics > Device information" Inspector window.
+The diagnostics data of all devices in "Online" mode is displayed in the "Diagnostics &gt; Device information" Inspector window.
 
 ![Device information](images/69175158667_DV_resource.Stream@PNG-en-US.png)
 
@@ -610,7 +610,7 @@ The following data is displayed:
 
 #### Connection information
 
-Use the "Connection information" function to display the diagnostics data of the connection selected in the "Devices&Networks" editor.
+Use the "Connection information" function to display the diagnostics data of the connection selected in the "Devices&amp;Networks" editor.
 
 A graphic displays the communication partners of the connection and by which communication driver they are connected with each other.
 
@@ -629,7 +629,7 @@ The following data is displayed:
 
 **See also**
 
-["Devices & networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+["Devices &amp; networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Network view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
@@ -705,7 +705,7 @@ You can use the shortcut menu of the title bar of the table to adjust the tabula
 
 **See also**
 
-["Devices & networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+["Devices &amp; networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Network view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
@@ -779,7 +779,7 @@ You can use the shortcut menu of the title bar of the table to adjust the tabula
 
 **See also**
 
-["Devices & networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+["Devices &amp; networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Network view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
@@ -827,7 +827,7 @@ The left pane of the inspector window is used for area navigation. Information a
 
 **See also**
 
-["Devices & networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+["Devices &amp; networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Network view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
@@ -887,7 +887,7 @@ The "Information" pane contains detailed information on the object selected from
 
 **See also**
 
-["Devices & networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+["Devices &amp; networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Network view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
@@ -909,7 +909,7 @@ In the hardware catalog, you can display information on selected hardware compon
 
 #### Access to further information
 
-If you select a hardware object in the hardware catalog and open the shortcut menu, you not only have the "Copy" function available but also three options for accessing information on Service & Support:
+If you select a hardware object in the hardware catalog and open the shortcut menu, you not only have the "Copy" function available but also three options for accessing information on Service &amp; Support:
 
 - Information regarding product support
 - FAQs
@@ -919,7 +919,7 @@ The required information is displayed in the work area of the hardware and netwo
 
 > **Note**
 >
-> You can only access Service & Support when you are connected to the Internet and the function is enabled. By default, the function is disabled.
+> You can only access Service &amp; Support when you are connected to the Internet and the function is enabled. By default, the function is disabled.
 >
 > To enable the function, refer to the instructions in the section "Enabling product support".
 
@@ -939,7 +939,7 @@ Here, you have access to the manuals of the various hardware components. This is
 
 **See also**
 
-["Devices & networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+["Devices &amp; networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Network view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#network-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
@@ -1177,10 +1177,10 @@ The RS 485 repeater can be used to extend the PPI network. Modems can also be co
 This section contains information on the following topics:
 
 - [Networking devices (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#networking-devices-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
-- [Configuring an integrated connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
-- [Special considerations of the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+- [Configuring an integrated connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+- [Special considerations of the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Configuring a non-integrated connection in the "Connections" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-non-integrated-connection-in-the-connections-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
-- [Configuring a routed connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+- [Configuring a routed connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Setting up switch on/switch off of a connection in Runtime (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#setting-up-switch-onswitch-off-of-a-connection-in-runtime-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Using local ID of HMI connections for communication (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#using-local-id-of-hmi-connections-for-communication-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 
@@ -1188,9 +1188,9 @@ This section contains information on the following topics:
 
 ##### Introduction
 
-The "Devices & Networks" editor is provided for configuring connections. You can network devices in the editor. You can also configure and assign parameters to devices and interfaces. You then configure the required connections between the networked devices.
+The "Devices &amp; Networks" editor is provided for configuring connections. You can network devices in the editor. You can also configure and assign parameters to devices and interfaces. You then configure the required connections between the networked devices.
 
-In the "Devices & Networks" editor you configure HMI connections with the PLCs:
+In the "Devices &amp; Networks" editor you configure HMI connections with the PLCs:
 
 - SIMATIC S7 1500
 - SIMATIC S7 1200
@@ -1203,9 +1203,9 @@ You configure the HMI connections to other PLCs in the "Connections" editor of t
 
 ##### Networking devices
 
-The network view of the "Devices & Networks" editor includes a graphical area and a tabular area. You can use the graphical area to network the devices in the project with drag-and-drop. The tabular area provides an overview of the devices and their components.
+The network view of the "Devices &amp; Networks" editor includes a graphical area and a tabular area. You can use the graphical area to network the devices in the project with drag-and-drop. The tabular area provides an overview of the devices and their components.
 
-You can network the following PLCs together with HMI devices in the "Devices & Networks" area.
+You can network the following PLCs together with HMI devices in the "Devices &amp; Networks" area.
 
 - SIMATIC S7 1500
 - SIMATIC S7 1200
@@ -1224,19 +1224,19 @@ With the networking step, you configure the physical connection of the communica
 
 **See also**
 
-[Configuring an integrated connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Configuring an integrated connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Special considerations of the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Special considerations of the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Configuring a non-integrated connection in the "Connections" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-non-integrated-connection-in-the-connections-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Configuring a routed connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Configuring a routed connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 
 #### Configuring an integrated connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
 ##### Introduction
 
-You configure an HMI connection between the HMI device and a SIMATIC S7 PLC in the "Devices & Networks" editor. This HMI connection is the direct connection between the communication partners that you have created in a project.
+You configure an HMI connection between the HMI device and a SIMATIC S7 PLC in the "Devices &amp; Networks" editor. This HMI connection is the direct connection between the communication partners that you have created in a project.
 
 ##### Integrated connections
 
@@ -1244,7 +1244,7 @@ Connections of devices within a project are referred to as integrated connection
 
 > **Note**
 >
-> An HMI connection can be configured in the "Devices & Networks" editor for the following PLCs only:
+> An HMI connection can be configured in the "Devices &amp; Networks" editor for the following PLCs only:
 >
 > - SIMATIC S7 1500
 > - SIMATIC S7 1200
@@ -1255,7 +1255,7 @@ Connections of devices within a project are referred to as integrated connection
 >
 > You configure the HMI connections to all other PLCs in the "Connections" editor of the HMI device.
 
-##### Configuring an HMI connection in the "Devices & Networks" editor
+##### Configuring an HMI connection in the "Devices &amp; Networks" editor
 
 1. Insert an HMI device and a SIMATIC S7 PLC in your project.
 
@@ -1277,17 +1277,17 @@ Connections of devices within a project are referred to as integrated connection
 
 [Networking devices (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#networking-devices-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Special considerations of the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Special considerations of the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Configuring a non-integrated connection in the "Connections" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-non-integrated-connection-in-the-connections-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Configuring a routed connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Configuring a routed connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 
 #### Special considerations of the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
 ##### Introduction
 
-If you are configuring or have already configured networks or HMI connections, the "Devices & Networks" editor supports you with the following functions:
+If you are configuring or have already configured networks or HMI connections, the "Devices &amp; Networks" editor supports you with the following functions:
 
 - Highlighting of communication partners
 - Highlighting of HMI connections
@@ -1332,17 +1332,17 @@ Subnetworks are automatically created and used under the following conditions:
 
 [Networking devices (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#networking-devices-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Configuring an integrated connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Configuring an integrated connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Configuring a non-integrated connection in the "Connections" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-non-integrated-connection-in-the-connections-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Configuring a routed connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Configuring a routed connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 
 #### Configuring a non-integrated connection in the "Connections" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
 ##### Introduction
 
-You use the "Connections" editor of the HMI device to configure a connection between an HMI device and a PLC that cannot be configured in the "Devices & Networks" editor.
+You use the "Connections" editor of the HMI device to configure a connection between an HMI device and a PLC that cannot be configured in the "Devices &amp; Networks" editor.
 
 These connections are referred to as non-integrated connections.
 
@@ -1372,7 +1372,7 @@ A non-integrated connection between an HMI device and a SIMATIC S7-1500 software
 
 ##### Integrated connections in the "Connections" editor
 
-If you have already configured the integrated connections of the HMI device in the "Devices & Networks" editor, they are also displayed in the "Connections" editor.
+If you have already configured the integrated connections of the HMI device in the "Devices &amp; Networks" editor, they are also displayed in the "Connections" editor.
 
 ![Integrated connections in the "Connections" editor](images/69240866571_DV_resource.Stream@PNG-en-US.png)
 
@@ -1389,17 +1389,17 @@ Meaning of the icons used:
 
 [Networking devices (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#networking-devices-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Configuring an integrated connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Configuring an integrated connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Special considerations of the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Special considerations of the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Configuring a routed connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Configuring a routed connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-routed-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 
 #### Configuring a routed connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
 ##### Introduction
 
-You can configure a routed HMI connection to a PLC in another subnet in the "Devices & Networks" editor.
+You can configure a routed HMI connection to a PLC in another subnet in the "Devices &amp; Networks" editor.
 
 > **Note**
 >
@@ -1415,7 +1415,7 @@ You can configure a routed HMI connection to a PLC in another subnet in the "Dev
 
 - An HMI device has been created.
 - PLCs have been set up in different networks
-- The network view in the "Devices & Networks" editor is open.
+- The network view in the "Devices &amp; Networks" editor is open.
 
 ##### Configuring a routed HMI connection
 
@@ -1442,9 +1442,9 @@ The routed HMI connection has now been created. If you change the HMI device typ
 
 [Networking devices (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#networking-devices-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Configuring an integrated connection in the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Configuring an integrated connection in the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-an-integrated-connection-in-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
-[Special considerations of the "Devices & Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+[Special considerations of the "Devices &amp; Networks" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#special-considerations-of-the-devices-networks-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
   
 [Configuring a non-integrated connection in the "Connections" editor (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#configuring-a-non-integrated-connection-in-the-connections-editor-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 
@@ -1494,11 +1494,11 @@ To create tags for controlling a connection in Runtime, follow these steps:
 
 1. Create the tags for connection control in the following text format:
 
-   - "@<Connection name>@ConnectionState", for example @HMI_Connection_1@ConnectionState
+   - "@&lt;Connection name&gt;@ConnectionState", for example @HMI_Connection_1@ConnectionState
 
      This tag contains the current state of the connection. You only have read access to this tag.
 
-     "@<Connection name>@ForceConnectionState", for example @HMI_connection_1@ForceConnectionState
+     "@&lt;Connection name&gt;@ForceConnectionState", for example @HMI_connection_1@ForceConnectionState
 
      You set the new status of the connection in Runtime using this tag. The start value for @HMI_Verbindung_1@ForceConnectionState is 0 (not connected) or 1 (connected).
 2. Configure the tag according to the following specifications:
@@ -1530,7 +1530,7 @@ You cannot edit the "Local ID" value in the HMI connection properties.
 
 To enable usage of the "Local ID" for communication, follow these steps:
 
-1. Open the network view in the "Devices & Networks" editor.
+1. Open the network view in the "Devices &amp; Networks" editor.
 2. Click "Connections".
 3. Select an S7 connection.
 4. Select the "Add new connection" command in the shortcut menu of the PLC.
@@ -1541,7 +1541,7 @@ To enable usage of the "Local ID" for communication, follow these steps:
 
    ![Procedure](images/89638536587_DV_resource.Stream@PNG-en-US.png)
 7. Click "Add" and then "Close".
-8. Select "Properties > General" from the partner area of the Inspector window and enter the IP address of the HMI device for the new connection.
+8. Select "Properties &gt; General" from the partner area of the Inspector window and enter the IP address of the HMI device for the new connection.
 9. Configure the necessary raw data tags for communication in the HMI device.
 
 ## Data exchange (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
@@ -1747,7 +1747,7 @@ For external tags, the current tag values are transmitted in Runtime via the com
 The options for addressing external tags depend on the type of connection between WinCC and the PLC in question. A distinction must be made between the following connection types:
 
 - Integrated connection  
-  Connections of devices which are within a project and were created with the "Devices & Networks" editor are referred to as integrated connections.
+  Connections of devices which are within a project and were created with the "Devices &amp; Networks" editor are referred to as integrated connections.
 - Non-integrated connection  
   Connections of devices which were created with the "Connections" editor are referred to as non-integrated connections. It is not necessary that all of the devices be within a single project.
 
@@ -1788,7 +1788,7 @@ Symbolic addressing is also available if you have an integrated link.
 
 You can also use absolute addressing with an integrated connection. You have to use absolute addressing for PLC tags from a SIMATIC S7-300/400 PLC. If you have connected an HMI tag with a PLC tag and the address of the PLC tag changes, you only have to recompile the control program to update the new address in WinCC. Then you recompile the WinCC project and load it onto the HMI device.
 
-In WinCC, symbolic addressing is the default method. To change the default setting, select the menu command "Options > Settings". Select "Visualization > Tags" in the "Settings" dialog. If required, disable the "Symbolic access" option.
+In WinCC, symbolic addressing is the default method. To change the default setting, select the menu command "Options &gt; Settings". Select "Visualization &gt; Tags" in the "Settings" dialog. If required, disable the "Symbolic access" option.
 
 The availability of an integrated connection depends on the PLC used. The following table shows the availability:
 
@@ -1800,7 +1800,7 @@ The availability of an integrated connection depends on the PLC used. The follow
 | SIMATIC ET 200 CPU | Yes | A validity check of the tag connection is performed in runtime during symbolic addressing. If an address is changed in the PLC, the change is registered and an error message is issued. In the case of absolute addressing, the behavior described for the S7-300/400 applies. |
 | SIMATIC S7-1500 software controller | Yes | A validity check of the tag connection is performed in runtime during symbolic addressing. If an address is changed in the PLC, the change is registered and an error message is issued. In the case of absolute addressing, the behavior described for the S7-300/400 applies. |
 
-Create an integrated connection in the "Devices & Networks" editor. If the PLC is contained in the project and integrated connections are supported, you can then also have the connection created automatically. To do this, when configuring the HMI tag, simply select an existing PLC tag to which you want to connect the HMI tag. The integrated connection is then automatically created by the system.
+Create an integrated connection in the "Devices &amp; Networks" editor. If the PLC is contained in the project and integrated connections are supported, you can then also have the connection created automatically. To do this, when configuring the HMI tag, simply select an existing PLC tag to which you want to connect the HMI tag. The integrated connection is then automatically created by the system.
 
 ##### Addressing with non-integrated connections
 
@@ -1958,7 +1958,7 @@ The "Global area pointers of HMI device" table contains the area pointers which 
 
 ##### "Area pointer" tab
 
-Before you use an area pointer, you enable it under "Connections > Area pointer". You then assign the area pointer parameters.
+Before you use an area pointer, you enable it under "Connections &gt; Area pointer". You then assign the area pointer parameters.
 
 You assign the following parameters in the "Area pointer" tab:
 
@@ -2046,7 +2046,7 @@ You use an area pointer to access a data area in the PLC. The data area is store
 
 ###### Prior to configuring area pointers
 
-Before you use the area pointer, you must enable and parameterize it under "Connections > Area Pointer".
+Before you use the area pointer, you must enable and parameterize it under "Connections &gt; Area Pointer".
 
 ###### Global data block
 
@@ -2054,7 +2054,7 @@ To access the data area in the PLC, you have to create a global data block in th
 
 ###### Length of area pointers
 
-For area pointers with a length >= 1, you set up the data area as a tag array in a global data block or instance data block.
+For area pointers with a length &gt;= 1, you set up the data area as a tag array in a global data block or instance data block.
 
 You also have the option to use a PLC tag for area pointers with a length = 1.
 
@@ -2090,7 +2090,7 @@ To access the data area in the PLC, a global data block for the area pointer mus
 
 ###### Procedure
 
-1. Open "PLC > Program blocks" in the project tree.
+1. Open "PLC &gt; Program blocks" in the project tree.
 2. Double-click the global data block you created previously.
 
    The data block opens.
@@ -2139,7 +2139,7 @@ After you have parameterized the global data block, you now create the area poin
 
 ###### Procedure
 
-1. Open "HMI >Connections" in the project tree.
+1. Open "HMI &gt;Connections" in the project tree.
 2. Click the "Area pointer" tab.
 3. Enable the required area pointer.
 
@@ -2675,7 +2675,7 @@ Comfort Panels
 | --- | --- |
 | 1) | Direct communication with PLC5 or KF2 module, otherwise only with RS422-RS232 converter.  Order number: 6AV6 671-8XE00-0AX0 |
 | 2) | only with RS422-RS232 converter (option)  Order number: 6AV6 671-8XE00-0AX0 |
-| 3) | For serial communication, deselect "Remote Control" of "Channel 1" in the "File > Transfer >Options" menu. |
+| 3) | For serial communication, deselect "Remote Control" of "Channel 1" in the "File &gt; Transfer &gt;Options" menu. |
 | 4) | "PROFINET IO Enabled" must be disabled. |
 
 ---
@@ -2792,7 +2792,7 @@ There are different versions of the HMI devices within the integrated communicat
 | Symbol | Meaning |
 | --- | --- |
 | <sup>1)</sup> | "PROFINET IO Enabled" must be disabled. |
-| <sup>2)</sup> | You must activate "Access via PUT/GET communication" for communication with the SIMATIC S7-1500 PLC.   Activate PUT/GET communication in the PLC properties at:   "General > Security > Enable PUT/GET communication with remote partner (PLC, HMI, OPC, etc.)" |
+| <sup>2)</sup> | You must activate "Access via PUT/GET communication" for communication with the SIMATIC S7-1500 PLC.   Activate PUT/GET communication in the PLC properties at:   "General &gt; Security &gt; Enable PUT/GET communication with remote partner (PLC, HMI, OPC, etc.)" |
 
 ---
 
@@ -3071,7 +3071,7 @@ You can configure the following communication channels for the SIMATIC S7-1500 
 
 #### HMI connection for communication
 
-Connections between the HMI device and SIMATIC S7-1500 are configured in the "Devices & Networks" editor.
+Connections between the HMI device and SIMATIC S7-1500 are configured in the "Devices &amp; Networks" editor.
 
 #### Overwriting data from the HMI system or the web server
 
@@ -3103,7 +3103,7 @@ This section contains information on the following topics:
 
 ###### HMI connections via PROFINET
 
-If you have inserted an HMI device and a SIMATIC S7 1500 into the project, interconnect the two PROFINET interfaces in the "Devices & Networks" editor.
+If you have inserted an HMI device and a SIMATIC S7 1500 into the project, interconnect the two PROFINET interfaces in the "Devices &amp; Networks" editor.
 
 ![HMI connections via PROFINET](images/67536394635_DV_resource.Stream@PNG-en-US.png)
 
@@ -3113,9 +3113,9 @@ The maximum number of communication partners that you can connect to an HMI devi
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -3133,7 +3133,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 1500 via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 1500 via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -3142,14 +3142,14 @@ You configure an HMI connection between HMI devices and a SIMATIC S7 1500 via 
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with PROFINET or Ethernet interface
 - SIMATIC S7 1500 with PROFINET interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 2. Click the "Connections" button and select "HMI connection" for the connection type.
@@ -3209,7 +3209,7 @@ You can use the following WinCC Runtimes as an HMI device:
 
 ###### WinCC Runtime as HMI device
 
-Configure the HMI connections between a WinCC Runtime and SIMATIC S7-1500 in the "Devices & Networks" editor.
+Configure the HMI connections between a WinCC Runtime and SIMATIC S7-1500 in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -3230,9 +3230,9 @@ The maximum number of communication partners that you can connect to an HMI devi
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -3252,7 +3252,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between an HMI device and a SIMATIC S7 1500 via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between an HMI device and a SIMATIC S7 1500 via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -3261,14 +3261,14 @@ You configure an HMI connection between an HMI device and a SIMATIC S7 1500 vi
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1500 with PROFINET interface
 - PC station with WinCC RT Advanced or WinCC RT Professional
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFINET-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -3320,7 +3320,7 @@ You have created a connection between an HMI device and a SIMATIC S7 1500. The
 
 ###### Introduction
 
-You configure an HMI connection between an HMI device and SIMATIC S7 1500 via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between an HMI device and SIMATIC S7 1500 via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -3329,14 +3329,14 @@ You configure an HMI connection between an HMI device and SIMATIC S7 1500 via 
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1500 with PROFINET interface
 - SIMATIC PC with PROFINET interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a WinCC Runtime from the hardware catalog to the PC.
@@ -3402,8 +3402,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and changing the HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing the HMI connection parameters](images/67532300299_DV_resource.Stream@PNG-en-US.png)
 
@@ -3454,8 +3454,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFINET parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General".
 
    ![Displaying and changing PROFINET parameters of the HMI device](images/67530906891_DV_resource.Stream@PNG-en-US.png)
 
@@ -3507,8 +3507,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFINET parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFINET parameters of the PLC](images/67532304779_DV_resource.Stream@PNG-en-US.png)
 
@@ -3758,10 +3758,10 @@ The table below describes which online functions are possible in the various pro
 | Monitoring tags (M, I, Q, DB content) via HMI device | Yes | Yes | Yes | No |
 | Modifying tags (M, I, Q, DB content) via HMI device | Yes | Yes | Yes | No |
 | Diagnostics display (for example, device information, connection display, alarm display, diagnostic buffer) | Yes | Yes | Yes | No |
-| Reading cycle time statistics (Online & Diagnostics) | Yes | Yes | Yes | No |
-| Reading information from the hardware configuration (Online & Diagnostics) | Yes | Yes | Yes | No |
+| Reading cycle time statistics (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
+| Reading information from the hardware configuration (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
 | Reading time-of-day | Yes | Yes | Yes | No |
-| Executing online functions within the hardware configuration (Online & Diagnostics) | Yes | Yes | Yes | No |
+| Executing online functions within the hardware configuration (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
 | Acknowledging alarms | Yes | Yes | Yes | No |
 | Receiving alarms | Yes | Yes | Yes | No |
 |  |  |  |  |  |
@@ -3790,7 +3790,7 @@ Example: The module was configured with read access and you want to execute the 
 
 The functions protected by a password can only be executed by one programming device/PC at any one time. Another programming device/PC cannot log on.
 
-Access authorization to the protected data is in effect for the duration of the online connection. If the online connection is restored after an interruption, you do not have to enter the access data again. To manually cancel access authorization, click "Online > Delete access rights".
+Access authorization to the protected data is in effect for the duration of the online connection. If the online connection is restored after an interruption, you do not have to enter the access data again. To manually cancel access authorization, click "Online &gt; Delete access rights".
 
 Each access level allows unrestricted access to certain functions without entering a password, for example, identification using the "Accessible devices" function.
 
@@ -4002,13 +4002,13 @@ This section contains information on the following topics:
 
 ###### HMI connections via PROFIBUS
 
-If you have inserted an HMI device and a SIMATIC S7 1500 into the project, interconnect the two PROFIBUS interfaces in the "Devices & Networks" editor.
+If you have inserted an HMI device and a SIMATIC S7 1500 into the project, interconnect the two PROFIBUS interfaces in the "Devices &amp; Networks" editor.
 
 ![HMI connections via PROFIBUS](images/69335686667_DV_resource.Stream@PNG-en-US.png)
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -4026,18 +4026,18 @@ Alternatively, you configure the connection between the PLC and HMI device in th
 
 ###### Introduction
 
-You configure an HMI connection over PROFIBUS between HMI devices and a SIMATIC S7 1500 in the "Devices & Networks" editor.
+You configure an HMI connection over PROFIBUS between HMI devices and a SIMATIC S7 1500 in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with MPI/DP interface
 - SIMATIC S7 1500 with PROFIBUS interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 
@@ -4048,7 +4048,7 @@ The following communication partners are created in the "Devices & Networks" edi
 
    The devices available for connection are highlighted in color.
 3. Click the HMI device interface.
-4. Select the "PROFIBUS" interface type in the Inspector window under "Properties > General > HMI MPIDP > Parameters".
+4. Select the "PROFIBUS" interface type in the Inspector window under "Properties &gt; General &gt; HMI MPIDP &gt; Parameters".
 5. Click the interface of the PLC and use a drag-and-drop operation to draw a connection to the HMI device.
 
    ![Procedure](images/69803024523_DV_resource.Stream@PNG-en-US.png)
@@ -4103,7 +4103,7 @@ You can use the following WinCC Runtimes as an HMI device:
 
 ###### WinCC Runtime as HMI device
 
-You configure the HMI connections between WinCC Runtime and SIMATIC S7 1500 in the "Devices & Networks" editor.
+You configure the HMI connections between WinCC Runtime and SIMATIC S7 1500 in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -4122,9 +4122,9 @@ You can also connect multiple HMI devices to one SIMATIC S7 1500 and multiple S
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -4144,18 +4144,18 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between an HMI device and a SIMATIC S7 1500 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between an HMI device and a SIMATIC S7 1500 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1500 with PROFIBUS interface
 - PC station with WinCC RT Advanced or WinCC RT Professional
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFIBUS-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -4205,18 +4205,18 @@ You have created an HMI connection between an HMI device and a SIMATIC S7 1500 v
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 1500 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 1500 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1500 with PROFIBUS interface
 - SIMATIC PC with PROFIBUS interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Click the MPI interface of the PC and select "PROFIBUS" for the interface type in the Inspector window.
@@ -4284,8 +4284,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and changing the HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing the HMI connection parameters](images/69346340235_DV_resource.Stream@PNG-en-US.png)
 
@@ -4370,8 +4370,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFINET parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFINET parameters of the HMI device](images/69346472331_DV_resource.Stream@PNG-en-US.png)
 
@@ -4416,8 +4416,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFIBUS parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFIBUS parameters of the PLC](images/69346524939_DV_resource.Stream@PNG-en-US.png)
 
@@ -4623,10 +4623,10 @@ The table below describes which online functions are possible in the various pro
 | Monitoring tags (M, I, Q, DB content) via HMI device | Yes | Yes | Yes | No |
 | Modifying tags (M, I, Q, DB content) via HMI device | Yes | Yes | Yes | No |
 | Diagnostics display (for example, device information, connection display, alarm display, diagnostic buffer) | Yes | Yes | Yes | No |
-| Reading cycle time statistics (Online & Diagnostics) | Yes | Yes | Yes | No |
-| Reading information from the hardware configuration (Online & Diagnostics) | Yes | Yes | Yes | No |
+| Reading cycle time statistics (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
+| Reading information from the hardware configuration (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
 | Reading time-of-day | Yes | Yes | Yes | No |
-| Executing online functions within the hardware configuration (Online & Diagnostics) | Yes | Yes | Yes | No |
+| Executing online functions within the hardware configuration (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
 | Acknowledging alarms | Yes | Yes | Yes | No |
 | Receiving alarms | Yes | Yes | Yes | No |
 |  |  |  |  |  |
@@ -4655,7 +4655,7 @@ Example: The module was configured with read access and you want to execute the 
 
 The functions protected by a password can only be executed by one programming device/PC at any one time. Another programming device/PC cannot log on.
 
-Access authorization to the protected data is in effect for the duration of the online connection. If the online connection is restored after an interruption, you do not have to enter the access data again. To manually cancel access authorization, click "Online > Delete access rights".
+Access authorization to the protected data is in effect for the duration of the online connection. If the online connection is restored after an interruption, you do not have to enter the access data again. To manually cancel access authorization, click "Online &gt; Delete access rights".
 
 Each access level allows unrestricted access to certain functions without entering a password, for example, identification using the "Accessible devices" function.
 
@@ -4731,7 +4731,7 @@ The PLC and the HMI device trigger defined interactions based on the evaluation 
 
 ###### Configuration of area pointers
 
-Before you use an area pointer, you enable it under "Connections > Area pointer". You then assign the area pointer parameters.
+Before you use an area pointer, you enable it under "Connections &gt; Area pointer". You then assign the area pointer parameters.
 
 You can find more detailed information on configuring area pointers in:
 
@@ -4778,7 +4778,7 @@ This allows the transfer of the current screen contents from the HMI device to t
 
 ###### Use
 
-Configure and enable the area pointer in "Communication > Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
+Configure and enable the area pointer in "Communication &gt; Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
 
 The screen number is always transferred to the PLC when a new screen is activated or when the focus within a screen changes from one screen object to another.
 
@@ -5051,10 +5051,10 @@ To use this area pointer, set up the following during the configuration:
 
 - Define the version of the configuration. Values between 1 and 255 are possible.
 
-  You enter the version in the editor "Runtime settings > General" in the "Identification" area.
+  You enter the version in the editor "Runtime settings &gt; General" in the "Identification" area.
 - Data address of the value for the version that is stored in the PLC:
 
-  You enter the data address in the editor "Communication > Connections" under "Address".
+  You enter the data address in the editor "Communication &gt; Connections" under "Address".
 
 ###### Connection failure
 
@@ -5314,10 +5314,10 @@ Synchronous data record transfer can be a useful solution, for example, when:
 
 In order to synchronize transfer of data records between the HMI device and the PLC, the following requirements must be met during configuration:
 
-- An area pointer has been set up: "Communication > Connections" editor in "Area pointer".
+- An area pointer has been set up: "Communication &gt; Connections" editor in "Area pointer".
 - The PLC with which the HMI device synchronizes transfer of data records is specified in the recipe:
 
-  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General > Synchronization > Settings"
+  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General &gt; Synchronization &gt; Settings"
 
 ###### Structure of the data area
 
@@ -5761,7 +5761,7 @@ For connections with a SIMATIC communication driver, the following counting meth
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -6266,7 +6266,7 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/69348619019_DV_resource.Stream@PNG-en-US.png)
 
@@ -6277,11 +6277,11 @@ This section contains information on the following topics:
 
    ![Procedure](images/78897001995_DV_resource.Stream@PNG-en-US.png)
 4. Click the name of the connection.
-5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the IP addresses of the communication partners in the Inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -6301,23 +6301,23 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/69348619019_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/69348619019_DV_resource.Stream@PNG-en-US.png)
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select the "IF 1 B" interface from "Parameters > interface" in the Inspector window.
-6. Select the "DP" profile in the Inspector window under "Parameters > Network".
+5. Select the "IF 1 B" interface from "Parameters &gt; interface" in the Inspector window.
+6. Select the "DP" profile in the Inspector window under "Parameters &gt; Network".
 
    ![Procedure](images/69351420427_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/69351420427_DV_resource.Stream@PNG-en-US.png)
 7. Set the addresses of the communication partners in the inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -6449,7 +6449,7 @@ You set the parameters for the HMI device in the network under "HMI device".. Th
   - Click the Ethernet interface.
   - Assign the IP address in the inspector window under:
 
-    "General > PROFINET interface > Ethernet addresses"
+    "General &gt; PROFINET interface &gt; Ethernet addresses"
 - "Address"
 
   You assign the IP address of the HMI device in the "Address" area.
@@ -6503,15 +6503,15 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select an interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select an interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the parameters for the connection in the Inspector window.
 
 ##### Interfaces
 
-Select one of the following interfaces in the Inspector window under "Parameters > WinCC RT Professional > Interfaces":
+Select one of the following interfaces in the Inspector window under "Parameters &gt; WinCC RT Professional &gt; Interfaces":
 
 - TCP/IP
 - PROFIBUS
@@ -6676,7 +6676,7 @@ You can configure the time synchronization between a SIMATIC S7-1200 or SIMATIC�
 
   Configure the "Access password" for communication with a PLC with "Complete protection" security type in the "Connections" editor of the HMI device.
 
-  This "Access password" must match the password configured on the PLC. The PLC password is assigned in the PLC properties at: "General > Security"
+  This "Access password" must match the password configured on the PLC. The PLC password is assigned in the PLC properties at: "General &gt; Security"
 - Basic Panels can only be configured as "Slave".
 - If you use Basic Panels for the configuration, it is not possible to use time synchronization via NTP and the "Date/time PLC" area pointer simultaneously.
 - Time synchronization with SIMATIC S7-1200 (V1.0) controllers is not possible.
@@ -6697,18 +6697,18 @@ You can configure the time synchronization between a SIMATIC S7-1200 or SIMATIC�
 
 ##### Introduction
 
-You configure time synchronization for an integrated connection in the "Devices & Networks" editor.
+You configure time synchronization for an integrated connection in the "Devices &amp; Networks" editor.
 
 ##### Requirements
 
 - An HMI connection between an HMI device and a SIMATIC S7 1200 or SIMATIC S7 1500 has been configured.
 - The HMI device must support the "time synchronization" function.
-- The "Devices & Networks" editor is open.
+- The "Devices &amp; Networks" editor is open.
 
 ##### Procedure
 
-1. Click the line of the HMI connection in the "Devices & networks" editor.
-2. Select the following in the inspector window under "General > Time synchronization > Settings":
+1. Click the line of the HMI connection in the "Devices &amp; networks" editor.
+2. Select the following in the inspector window under "General &gt; Time synchronization &gt; Settings":
 
    - None: No time synchronization is used.
    - Master: The HMI device sets the time.
@@ -6741,7 +6741,7 @@ You configure time synchronization for a non-integrated connection in the "Conne
 
 ##### Procedure
 
-1. Double-click "<Add>".
+1. Double-click "&lt;Add&gt;".
 2. In the "Communication drivers" column, select the "SIMATIC S7 1500" PLC.
 3. Select the following in the "HMI time synchronization mode" column:
 
@@ -6781,7 +6781,7 @@ To query the status of a PLC, proceed as follows:
 
 1. Establish a connection with the communication driver "SIMATIC S7 1500" or "SIMATIC S7 1200". Assign the name "MyConnection" to this connection.
 2. Create the tag "@MyConnection@OpStateConfiguredAddress" and assign the data type "UDInt" and the connection "MyConnection" to it.
-3. Select "<Absolute access>" for the access mode.
+3. Select "&lt;Absolute access&gt;" for the access mode.
 
 > **Note**
 >
@@ -6945,10 +6945,10 @@ The configuration is the same for all interfaces of the communication driver.
    ![Set communication driver and interface](images/141369402635_DV_resource.Stream@PNG-en-US.png)
 
    Set communication driver and interface
-3. Double-click "HMI tags > Show all tags" in the project navigation and create an HMI tag under "HMI tags".
+3. Double-click "HMI tags &gt; Show all tags" in the project navigation and create an HMI tag under "HMI tags".
 4. Select the data type "Raw" in the "Data type" field.
 5. Select "Connection_1" in the "Connection" field and then confirm the selection.
-6. Select "Properties > Properties > General" in the Inspector window.
+6. Select "Properties &gt; Properties &gt; General" in the Inspector window.
 
    ![Raw data address_set](images/141356687371_DV_resource.Stream@PNG-en-US.png)
 
@@ -6958,7 +6958,7 @@ The configuration is the same for all interfaces of the communication driver.
 7. Enter the length of the raw data block (in bytes) in the Length field.
 8. Enter the number of the data block.
 9. Enter the value of the start address.
-10. The type "Send/receive raw data block" in the "Raw data mode" is automatically set (in the Inspector window under "Properties > Properties > Raw data").
+10. The type "Send/receive raw data block" in the "Raw data mode" is automatically set (in the Inspector window under "Properties &gt; Properties &gt; Raw data").
 
     ![Raw data mode](images/141369087115_DV_resource.Stream@PNG-en-US.png)
 
@@ -7001,7 +7001,7 @@ You can configure the following communication channels for the SIMATIC S7-1200 
 
 #### HMI connection for communication
 
-Connections between the HMI device and SIMATIC S7-1200 are configured in the "Devices & Networks" editor. If you have configured an HMI device with a serial port, you must configure a PROFIBUS-capable communication module for the SIMATIC S7-1200.
+Connections between the HMI device and SIMATIC S7-1200 are configured in the "Devices &amp; Networks" editor. If you have configured an HMI device with a serial port, you must configure a PROFIBUS-capable communication module for the SIMATIC S7-1200.
 
 > **Note**
 >
@@ -7027,7 +7027,7 @@ This section contains information on the following topics:
 
 ###### HMI connections via PROFINET
 
-If you have inserted an HMI device and a SIMATIC S7 1200 into the project, you interconnect the two PROFINET interfaces in the "Devices & Networks" editor.
+If you have inserted an HMI device and a SIMATIC S7 1200 into the project, you interconnect the two PROFINET interfaces in the "Devices &amp; Networks" editor.
 
 ![HMI connections via PROFINET](images/69216145931_DV_resource.Stream@PNG-en-US.png)
 
@@ -7035,9 +7035,9 @@ You can also connect multiple HMI devices to one SIMATIC S7 1200 and multiple S
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -7055,7 +7055,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -7064,14 +7064,14 @@ You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via 
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1200
 - HMI device with PROFINET or Ethernet interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 2. Click the "Connections" button and select "HMI connection" for the connection type.
@@ -7135,7 +7135,7 @@ You can use the following WinCC Runtimes as an HMI device:
 
 ###### WinCC Runtime as HMI device
 
-You configure the HMI connections between WinCC Runtime and SIMATIC S7 1200 in the "Devices & Networks" editor.
+You configure the HMI connections between WinCC Runtime and SIMATIC S7 1200 in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -7154,9 +7154,9 @@ You can also connect multiple HMI devices to one SIMATIC S7 1200 and multiple S
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -7176,7 +7176,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -7185,14 +7185,14 @@ You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via 
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1200
 - SIMATIC PC with PROFINET interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a WinCC Runtime from the hardware catalog to the PC.
@@ -7242,7 +7242,7 @@ You have created a connection between an HMI device and a SIMATIC S7 1200. The
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -7251,14 +7251,14 @@ You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via 
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1200
 - PC station with WinCC RT Advanced or WinCC RT Professional
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFINET-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -7324,8 +7324,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and editing HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and editing HMI connection parameters](images/69474875019_DV_resource.Stream@PNG-en-US.png)
 
@@ -7378,8 +7378,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFINET parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFINET parameters of the HMI device](images/88484878859_DV_resource.Stream@PNG-en-US.png)
 
@@ -7422,8 +7422,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFINET parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFINET parameters of the PLC](images/69475986187_DV_resource.Stream@PNG-en-US.png)
 
@@ -7641,7 +7641,7 @@ Example: The module was configured with read access and you want to execute the 
 
 The functions protected by a password can only be executed by one programming device/PC at any one time. Another programming device/PC cannot log on.
 
-Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online > Delete access rights".
+Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online &gt; Delete access rights".
 
 Each access level allows unrestricted access to certain functions without entering a password, for example, identification using the "Accessible devices" function.
 
@@ -7685,7 +7685,7 @@ Example: The module was assigned write protection and you want to execute the "M
 
 The functions protected by a password can only be executed by one programming device/PC at any one time. Another programming device/PC cannot log on with a password.
 
-Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online > Delete access rights". Access authorization will also expire when the project is closed.
+Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online &gt; Delete access rights". Access authorization will also expire when the project is closed.
 
 > **Note**
 >
@@ -7905,9 +7905,9 @@ If you want to connect a SIMATIC S7 1200 to a HMI device via PROFIBUS, you mus
 
 ![HMI connections via PROFIBUS](images/69477680523_DV_resource.Stream@PNG-en-US.png)
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -7925,18 +7925,18 @@ Alternatively, you configure the connection between the PLC and HMI device in th
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7-1200 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7-1200 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with MPI/DP interface
 - SIMATIC S7-1200
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 2. Click the "Connections" button.
@@ -7948,7 +7948,7 @@ The following communication partners are created in the "Devices & Networks" edi
 
    ![Procedure](images/69477836683_DV_resource.Stream@PNG-en-US.png)
 4. Click the HMI device interface.
-5. Select the "PROFIBUS" interface type in the Inspector window under "Properties > General > PROFIBUS address/ MPI address > Parameters".
+5. Select the "PROFIBUS" interface type in the Inspector window under "Properties &gt; General &gt; PROFIBUS address/ MPI address &gt; Parameters".
 6. Click the interface of the communication module and use a drag-and-drop operation to draw a connection to the HMI device.
 
    ![Procedure](images/69477867019_DV_resource.Stream@PNG-en-US.png)
@@ -8005,7 +8005,7 @@ If you want to connect a SIMATIC S7 1200 to an HMI device via PROFIBUS, you must
 
 ###### WinCC Runtime as HMI device
 
-You configure the HMI connections between a WinCC Runtime and SIMATIC S7 1200 in the "Devices & Networks" editor.
+You configure the HMI connections between a WinCC Runtime and SIMATIC S7 1200 in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -8024,9 +8024,9 @@ You can also connect multiple HMI devices to one SIMATIC S7 1200 and multiple S
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -8046,18 +8046,18 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7-1200 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7-1200 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7-1200
 - SIMATIC PC with PROFIBUS interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a WinCC Runtime from the hardware catalog to the PC.
@@ -8112,18 +8112,18 @@ You have created an HMI connection between an HMI device and a SIMATIC S7-1200 v
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 1200 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1200
 - WinCC RT Advanced or WinCC RT Professional
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFIBUS-capable communication module from the hardware catalog to the PLC.
@@ -8195,8 +8195,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and editing HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and editing HMI connection parameters](images/69483422219_DV_resource.Stream@PNG-en-US.png)
 
@@ -8284,8 +8284,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFIBUS parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFIBUS parameters of the HMI device](images/69484858763_DV_resource.Stream@PNG-en-US.png)
 
@@ -8330,8 +8330,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFIBUS parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFIBUS parameters of the PLC](images/69485692939_DV_resource.Stream@PNG-en-US.png)
 
@@ -8502,7 +8502,7 @@ Example: The module was configured with read access and you want to execute the 
 
 The functions protected by a password can only be executed by one programming device/PC at any one time. Another programming device/PC cannot log on.
 
-Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online > Delete access rights".
+Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online &gt; Delete access rights".
 
 Each access level allows unrestricted access to certain functions without entering a password, for example, identification using the "Accessible devices" function.
 
@@ -8566,7 +8566,7 @@ The PLC and the HMI device trigger defined interactions based on the evaluation 
 
 ###### Configuration of area pointers
 
-Before you use an area pointer, you enable it under "Connections > Area pointer". You then assign the area pointer parameters.
+Before you use an area pointer, you enable it under "Connections &gt; Area pointer". You then assign the area pointer parameters.
 
 You can find more detailed information on configuring area pointers in:
 
@@ -8878,7 +8878,7 @@ To use this area pointer, set up the following during the configuration:
 
 - Define the version of the configuration. Values between 1 and 255 are possible.
 
-  You enter the version in the editor "Runtime settings > General" in the "Identification" area.
+  You enter the version in the editor "Runtime settings &gt; General" in the "Identification" area.
 - This is where you select the PLC tag or the tag array that you have configured as the data area for the area pointer.
 
 ###### Connection failure
@@ -9159,7 +9159,7 @@ In order to synchronize transfer of data records between the HMI device and the 
 - An area pointer has been set up: "Connections ▶ Area pointer" editor.
 - The PLC with which the HMI device synchronizes transfer of data records is specified in the recipe:
 
-  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General > Synchronization > Settings"
+  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General &gt; Synchronization &gt; Settings"
 
 ###### Structure of the data area
 
@@ -9609,7 +9609,7 @@ For connections with a SIMATIC communication driver, the following counting meth
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -10072,7 +10072,7 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/74975417483_DV_resource.Stream@PNG-en-US.png)
 
@@ -10083,11 +10083,11 @@ This section contains information on the following topics:
 
    ![Procedure](images/74975421963_DV_resource.Stream@PNG-en-US.png)
 4. Click the name of the connection.
-5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the IP addresses of the communication partners in the Inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -10107,23 +10107,23 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select the "MPI/DP" interface in the Inspector window under "Parameters > Interface".
-6. Select the "DP" profile in the Inspector window under "Parameters > Network".
+5. Select the "MPI/DP" interface in the Inspector window under "Parameters &gt; Interface".
+6. Select the "DP" profile in the Inspector window under "Parameters &gt; Network".
 
    ![Procedure](images/74975784203_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/74975784203_DV_resource.Stream@PNG-en-US.png)
 7. Set the addresses of the communication partners in the inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -10186,7 +10186,7 @@ You set the parameters for the HMI device in the network under "HMI device".. Th
   - Click the Ethernet interface.
   - Assign the IP address in the inspector window under:
 
-    "General > PROFINET interface > Ethernet addresses"
+    "General &gt; PROFINET interface &gt; Ethernet addresses"
 - "Address"
 
   You assign the IP address of the HMI device in the "Address" area.
@@ -10309,19 +10309,19 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/70069841291_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/70069841291_DV_resource.Stream@PNG-en-US.png)
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select an interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select an interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the parameters for the connection in the Inspector window.
 
 ##### Interfaces
 
-Select one of the following interfaces in the Inspector window under "Parameters > WinCC RT Professional > Interfaces".
+Select one of the following interfaces in the Inspector window under "Parameters &gt; WinCC RT Professional &gt; Interfaces".
 
 - TCP/IP
 - PROFIBUS
@@ -10464,7 +10464,7 @@ You can configure the time synchronization between a SIMATIC S7-1200 or SIMATIC�
 
   Configure the "Access password" for communication with a PLC with "Complete protection" security type in the "Connections" editor of the HMI device.
 
-  This "Access password" must match the password configured on the PLC. The PLC password is assigned in the PLC properties at: "General > Security"
+  This "Access password" must match the password configured on the PLC. The PLC password is assigned in the PLC properties at: "General &gt; Security"
 - Basic Panels can only be configured as "Slave".
 - If you use Basic Panels for the configuration, it is not possible to use time synchronization via NTP and the "Date/time PLC" area pointer simultaneously.
 - Time synchronization with SIMATIC S7-1200 (V1.0) controllers is not possible.
@@ -10485,18 +10485,18 @@ You can configure the time synchronization between a SIMATIC S7-1200 or SIMATIC�
 
 ##### Introduction
 
-You configure time synchronization for an integrated connection in the "Devices & Networks" editor.
+You configure time synchronization for an integrated connection in the "Devices &amp; Networks" editor.
 
 ##### Requirements
 
 - An HMI connection between an HMI device and a SIMATIC S7 1200 has been configured.
 - The HMI device must support the "time synchronization" function.
-- The "Devices & Networks" editor is open.
+- The "Devices &amp; Networks" editor is open.
 
 ##### Procedure
 
-1. Click the line of the HMI connection in the "Devices & networks" editor.
-2. Select the following in the inspector window under "General > Time synchronization > Settings":
+1. Click the line of the HMI connection in the "Devices &amp; networks" editor.
+2. Select the following in the inspector window under "General &gt; Time synchronization &gt; Settings":
 
    - None: No time synchronization is used.
    - Master: The HMI device sets the time.
@@ -10529,7 +10529,7 @@ You configure time synchronization for a non-integrated connection in the "Conne
 
 ##### Procedure
 
-1. Double-click "<Add>".
+1. Double-click "&lt;Add&gt;".
 2. In the "Communication drivers" column, select the "SIMATIC S7 1200" PLC.
 3. Select the following in the "HMI time synchronization mode" column:
 
@@ -10569,7 +10569,7 @@ To query the status of a PLC, proceed as follows:
 
 1. Establish a connection with the communication driver "SIMATIC S7 1500" or "SIMATIC S7 1200". Assign the name "MyConnection" to this connection.
 2. Create the tag "@MyConnection@OpStateConfiguredAddress" and assign the data type "UDInt" and the connection "MyConnection" to it.
-3. Select "<Absolute access>" for the access mode.
+3. Select "&lt;Absolute access&gt;" for the access mode.
 
 > **Note**
 >
@@ -10604,7 +10604,7 @@ You can configure the following communication channels for the SIMATIC S7 300/
 
 #### HMI connection for communication
 
-You configure connections between the HMI device and a SIMATIC S7 300/400 in the "Devices & Networks" editor.
+You configure connections between the HMI device and a SIMATIC S7 300/400 in the "Devices &amp; Networks" editor.
 
 ### Communication via PROFINET (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -10627,7 +10627,7 @@ This section contains information on the following topics:
 
 ###### HMI connections via PROFINET
 
-If you have inserted an HMI device and a SIMATIC S7 300/400 into the project, you interconnect the two PROFINET interfaces in the "Devices & Networks" editor.
+If you have inserted an HMI device and a SIMATIC S7 300/400 into the project, you interconnect the two PROFINET interfaces in the "Devices &amp; Networks" editor.
 
 ![HMI connections via PROFINET](images/69542563979_DV_resource.Stream@PNG-en-US.png)
 
@@ -10635,9 +10635,9 @@ You can also connect multiple HMI devices to one SIMATIC S7 300/400 and multipl
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -10655,7 +10655,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -10664,14 +10664,14 @@ You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 v
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with PROFINET or Ethernet interface
 - SIMATIC S7 300/400 with PROFINET interface.
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 2. Click the "Connections" button and select "HMI connection" for the connection type.
@@ -10731,7 +10731,7 @@ You can use the following WinCC Runtimes as an HMI device:
 
 ###### WinCC Runtime as HMI device
 
-You configure the HMI connections between a WinCC Runtime and SIMATIC S7 300/400 in the "Devices & Networks" editor.
+You configure the HMI connections between a WinCC Runtime and SIMATIC S7 300/400 in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -10750,9 +10750,9 @@ You can also connect multiple HMI devices to one SIMATIC S7 300/400 and multipl
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -10772,7 +10772,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and SIMATIC S7 300/400 via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and SIMATIC S7 300/400 via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -10781,14 +10781,14 @@ You configure an HMI connection between HMI devices and SIMATIC S7 300/400 via
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 300/400 with PROFINET interface
 - SIMATIC PC with PROFINET interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a WinCC Runtime from the hardware catalog to the PC.
@@ -10838,7 +10838,7 @@ You have created a connection between an HMI device and a SIMATIC S7 300/400. 
 
 ###### Introduction
 
-You configure an HMI connection between an HMI device and a SIMATIC S7 300/400 via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between an HMI device and a SIMATIC S7 300/400 via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -10847,14 +10847,14 @@ You configure an HMI connection between an HMI device and a SIMATIC S7 300/400
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 300/400 with PROFINET interface
 - PC station with WinCC RT Advanced or WinCC RT Professional
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFINET-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -10951,18 +10951,18 @@ Named connections can only be configured for integrated connections.
 
 A "Named connection" has been created in STEP 7.
 
-The following communication partners are configured in the "Devices & Networks" editor:
+The following communication partners are configured in the "Devices &amp; Networks" editor:
 
 - SIMATIC PC with WinCC RT Professional
 - SIMATIC S7 300/400
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Click the HMI device in the "Network view".
-3. Select the entry "S7RTM is installed" in the Inspector window under "Parameters > XDB configuration".
+3. Select the entry "S7RTM is installed" in the Inspector window under "Parameters &gt; XDB configuration".
 
    ![Procedure](images/70232737675_DV_resource.Stream@PNG-en-US.png)
 
@@ -10975,7 +10975,7 @@ The following communication partners are configured in the "Devices & Networks" 
 7. Click "Highlight HMI connection" and select the HMI connection.
 
    The connection is displayed graphically in the Inspector window.
-8. Select the interface "Named Conn." in the editor "Connections" > "Parameter" . "Interface" of WinCC RT Professional.
+8. Select the interface "Named Conn." in the editor "Connections" &gt; "Parameter" . "Interface" of WinCC RT Professional.
 
    ![Procedure](images/159510312843_DV_resource.Stream@PNG-en-US.png)
 
@@ -11004,8 +11004,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and changing the HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing the HMI connection parameters](images/69547965451_DV_resource.Stream@PNG-en-US.png)
 
@@ -11058,8 +11058,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFINET parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General".
 
    ![Displaying and changing PROFINET parameters of the HMI device](images/88484878859_DV_resource.Stream@PNG-en-US.png)
 
@@ -11111,8 +11111,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFINET parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFINET parameters of the PLC](images/69475986187_DV_resource.Stream@PNG-en-US.png)
 
@@ -11401,13 +11401,13 @@ This section contains information on the following topics:
 
 ###### HMI connections via PROFIBUS
 
-If you have inserted an HMI device and a SIMATIC S7 300/400 into the project, you interconnect the two PROFIBUS interfaces in the "Devices & Networks" editor.
+If you have inserted an HMI device and a SIMATIC S7 300/400 into the project, you interconnect the two PROFIBUS interfaces in the "Devices &amp; Networks" editor.
 
 ![HMI connections via PROFIBUS](images/69552631819_DV_resource.Stream@PNG-en-US.png)
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -11425,18 +11425,18 @@ Alternatively, you configure the connection between the PLC and HMI device in th
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with MPI/DP interface
 - SIMATIC S7 300/400 with PROFIBUS interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 
@@ -11447,7 +11447,7 @@ The following communication partners are created in the "Devices & Networks" edi
 
    The devices available for connection are highlighted in color.
 3. Click the HMI device interface.
-4. Select the "PROFIBUS" interface type in the Inspector window under "Properties > General > HMI MPIDP > Parameters".
+4. Select the "PROFIBUS" interface type in the Inspector window under "Properties &gt; General &gt; HMI MPIDP &gt; Parameters".
 5. Click the interface of the PLC and use a drag-and-drop operation to draw a connection to the HMI device.
 
    ![Procedure](images/69552735243_DV_resource.Stream@PNG-en-US.png)
@@ -11502,7 +11502,7 @@ You can use the following WinCC Runtimes as an HMI device:
 
 ###### WinCC Runtime as HMI device
 
-You configure the HMI connections between WinCC Runtime and SIMATIC S7 300/400 in the "Devices & Networks" editor.
+You configure the HMI connections between WinCC Runtime and SIMATIC S7 300/400 in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -11521,9 +11521,9 @@ You can also connect multiple HMI devices to one SIMATIC S7 300/400 and multipl
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -11543,18 +11543,18 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 300/400 with PROFIBUS interface
 - SIMATIC PC with PROFIBUS interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Click the MPI interface of the PC and select "PROFIBUS" for the interface type in the Inspector window.
@@ -11605,18 +11605,18 @@ You have created an HMI connection between an HMI device and a SIMATIC S7 300/
 
 ###### Introduction
 
-You configure an HMI connection between an HMI device and a SIMATIC S7-300/400 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between an HMI device and a SIMATIC S7-300/400 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7-300/400 with PROFIBUS interface
 - PC station with WinCC RT Advanced or WinCC RT Professional
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFIBUS-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -11681,8 +11681,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and changing the HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing the HMI connection parameters](images/69555254795_DV_resource.Stream@PNG-en-US.png)
 
@@ -11733,8 +11733,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFIBUS parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFIBUS parameters of the HMI device](images/69484858763_DV_resource.Stream@PNG-en-US.png)
 
@@ -11777,8 +11777,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFIBUS parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFIBUS parameters of the PLC](images/69485692939_DV_resource.Stream@PNG-en-US.png)
 
@@ -11870,11 +11870,11 @@ This section contains information on the following topics:
 
 ###### HMI connections via MPI
 
-If you have inserted an HMI device and a SIMATIC S7 300/400 into the project, you interconnect the two MPI interfaces in the "Devices & Networks" editor.
+If you have inserted an HMI device and a SIMATIC S7 300/400 into the project, you interconnect the two MPI interfaces in the "Devices &amp; Networks" editor.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ![HMI connection in the "Devices & Networks" editor](images/69555401099_DV_resource.Stream@PNG-en-US.png)
 
@@ -11894,18 +11894,18 @@ Alternatively, you configure the connection between the PLC and HMI device in th
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via MPI in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via MPI in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with MPI/DP interface
 - SIMATIC S7 300/400 with MPI/DP interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 
@@ -11967,7 +11967,7 @@ You can use the following WinCC Runtimes as an HMI device:
 
 ###### WinCC Runtime as HMI device
 
-You configure the HMI connections between a WinCC Runtime and SIMATIC S7 300/400 in the "Devices & Networks" editor.
+You configure the HMI connections between a WinCC Runtime and SIMATIC S7 300/400 in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -11986,9 +11986,9 @@ You can also connect multiple HMI devices to one SIMATIC S7 300/400 and multipl
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via MPI in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via MPI in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -12008,18 +12008,18 @@ Alternatively, you configure the connection between the PLC and HMI device via M
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via MPI in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via MPI in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 300/400 with MPI interface
 - SIMATIC PC with MPI interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a WinCC Runtime from the hardware catalog to the PC.
@@ -12069,18 +12069,18 @@ You have created an HMI connection between an HMI device and a SIMATIC S7 300/
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via MPI in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 300/400 via MPI in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 300/400 with MPI interface
 - PC station with WinCC RT Advanced or WinCC RT Professional
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFIBUS-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -12146,8 +12146,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and changing the HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing the HMI connection parameters](images/69584024459_DV_resource.Stream@PNG-en-US.png)
 
@@ -12200,8 +12200,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing MPI parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing MPI parameters of the HMI device](images/69586369291_DV_resource.Stream@PNG-en-US.png)
 
@@ -12244,8 +12244,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFIBUS parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFIBUS parameters of the PLC](images/69588869259_DV_resource.Stream@PNG-en-US.png)
 
@@ -12352,7 +12352,7 @@ The PLC and the HMI device trigger defined interactions based on the evaluation 
 
 ###### Configuration of area pointers
 
-Before you use an area pointer, you enable it under "Connections > Area pointer". You then assign the area pointer parameters.
+Before you use an area pointer, you enable it under "Connections &gt; Area pointer". You then assign the area pointer parameters.
 
 You can find more detailed information on configuring area pointers in:
 
@@ -12388,7 +12388,7 @@ This allows the transfer of the current screen contents from the HMI device to t
 
 ###### Use
 
-Configure and enable the area pointer in "Communication > Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
+Configure and enable the area pointer in "Communication &gt; Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
 
 The screen number is always transferred to the PLC when a new screen is activated or when the focus within a screen changes from one screen object to another.
 
@@ -12625,10 +12625,10 @@ To use this area pointer, set up the following during the configuration:
 
 - Define the version of the configuration. Values between 1 and 255 are possible.
 
-  You enter the version in the editor "Runtime settings > General" in the "Identification" area.
+  You enter the version in the editor "Runtime settings &gt; General" in the "Identification" area.
 - Data address of the value for the version that is stored in the PLC:
 
-  You enter the data address in the editor "Communication > Connections" under "Address".
+  You enter the data address in the editor "Communication &gt; Connections" under "Address".
 
 ###### Connection failure
 
@@ -12884,10 +12884,10 @@ Synchronous data record transfer can be a useful solution, for example, when:
 
 In order to synchronize transfer of data records between the HMI device and the PLC, the following requirements must be met during configuration:
 
-- An area pointer has been set up: "Communication > Connections" editor in "Area pointer".
+- An area pointer has been set up: "Communication &gt; Connections" editor in "Area pointer".
 - The PLC with which the HMI device synchronizes transfer of data records is specified in the recipe:
 
-  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General > Synchronization > Settings"
+  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General &gt; Synchronization &gt; Settings"
 
 ###### Structure of the data area
 
@@ -13313,7 +13313,7 @@ For connections with a SIMATIC communication driver, the following counting meth
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -13824,7 +13824,7 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/74975417483_DV_resource.Stream@PNG-en-US.png)
 
@@ -13835,11 +13835,11 @@ This section contains information on the following topics:
 
    ![Procedure](images/74975421963_DV_resource.Stream@PNG-en-US.png)
 4. Click the name of the connection.
-5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the IP addresses of the communication partners in the Inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -13861,23 +13861,23 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select the "MPI/DP" interface in the Inspector window under "Parameters > Interface".
-6. Select the "DP" profile in the Inspector window under "Parameters > Network".
+5. Select the "MPI/DP" interface in the Inspector window under "Parameters &gt; Interface".
+6. Select the "DP" profile in the Inspector window under "Parameters &gt; Network".
 
    ![Procedure](images/74975784203_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/74975784203_DV_resource.Stream@PNG-en-US.png)
 7. Set the addresses of the communication partners in the inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -13899,23 +13899,23 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select the "MPI/DP" interface in the Inspector window under "Parameters > Interface".
-6. Select the "MPI" profile in the Inspector window under "Parameters > Network".
+5. Select the "MPI/DP" interface in the Inspector window under "Parameters &gt; Interface".
+6. Select the "MPI" profile in the Inspector window under "Parameters &gt; Network".
 
    ![Procedure](images/69593344907_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/69593344907_DV_resource.Stream@PNG-en-US.png)
 7. Set the addresses of the communication partners in the inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -13986,7 +13986,7 @@ You set the parameters for the HMI device in the network under "HMI device".. Th
   - Click the Ethernet interface.
   - Assign the IP address in the inspector window under:
 
-    "General > PROFINET interface > Ethernet addresses"
+    "General &gt; PROFINET interface &gt; Ethernet addresses"
 - "Address"
 
   You assign the IP address of the HMI device in the "Address" area.
@@ -14217,19 +14217,19 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/70069841291_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/70069841291_DV_resource.Stream@PNG-en-US.png)
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select an interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select an interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the parameters for the connection in the Inspector window.
 
 ##### Interfaces
 
-Select one of the following interfaces in the Inspector window under "Parameters > WinCC RT Professional > Interfaces".
+Select one of the following interfaces in the Inspector window under "Parameters &gt; WinCC RT Professional &gt; Interfaces".
 
 - Industrial Ethernet
 - MPI
@@ -15046,7 +15046,7 @@ Maximal length of the diagnostic file in k byte. If the maximal length is reache
 
 MaxCycleBuffer
 
-Maximum number of circular buffer files. If the parameter is not specified or "MaxCycleBuffer=0" is specified, only one file is created. For input of a number 2..99 a new file is created if the maximum file length is reached. In the circular buffer mode the file name is limited to maximum 6 characters and completed with the current cycle number 01..99. If the maximum buffer number is reached, the saving process of the files continues with the file 01. (Example: MaxCycleBuffer = 2) ==> writing in files: S7CHN01.LOG -> S7CHN02.LOG -> S7CHN01.LOG ...
+Maximum number of circular buffer files. If the parameter is not specified or "MaxCycleBuffer=0" is specified, only one file is created. For input of a number 2..99 a new file is created if the maximum file length is reached. In the circular buffer mode the file name is limited to maximum 6 characters and completed with the current cycle number 01..99. If the maximum buffer number is reached, the saving process of the files continues with the file 01. (Example: MaxCycleBuffer = 2) ==&gt; writing in files: S7CHN01.LOG -&gt; S7CHN02.LOG -&gt; S7CHN01.LOG ...
 
 Selection
 
@@ -15999,7 +15999,7 @@ Internal function correctly completed.
 
 In this Property Page, the current connection status of the corresponding unit is displayed. You can use the displayed error code to quickly localize a communication error.
 
-Select the corresponding connection and press the <F1> key, or double-click the error code.
+Select the corresponding connection and press the &lt;F1&gt; key, or double-click the error code.
 
 | Column | Description |
 | --- | --- |
@@ -16551,7 +16551,7 @@ See description in the "SINEC Communication Interface SCI" manual (A/5-15).
 | L7_SDB0_PROTECTION_ERR | 53783 | D217 | D217: The specified protection level in the SDB0 is invalid. |
 | L7_ACT_PAS_ATTRIB_ERR | 53784 | D218 | D218: Incorrect attribute (active/passive). |
 | L7_BL_LEN_ERR | 53785 | D219 | D219: Incorrect block lengths (e.g. incorrect length of the first section or the whole block). |
-| L7_LOCAL_DATA_LEN_ERR | 53786 | D21A | D21A: The length of the local data (e.g. odd. for OB<20, local data length/ data stack too large) or read-only ID is incorrect. |
+| L7_LOCAL_DATA_LEN_ERR | 53786 | D21A | D21A: The length of the local data (e.g. odd. for OB&lt;20, local data length/ data stack too large) or read-only ID is incorrect. |
 | L7_COMPRESS_ERR | 53787 | D21B | D21B: The module cannot compress, or the compress process was prematurely interrupted. |
 | L7_WRONG_CPU_LIMITS | 53789 | D21D | D21D: The transferred dynamic qualified project specifications are invalid. They do not match the removal of CPU or the current user program.  Check your settings and transfer them again. |
 | L7_SDB_LINK_IN_ERR | 53790 | D21E | D21E: Error during configuration of external modules inside linking of a SDB. |
@@ -17410,10 +17410,10 @@ The configuration is the same for all interfaces of the communication driver. Th
    ![Select communication driver and interface](images/140927593995_DV_resource.Stream@PNG-en-US.png)
 
    Select communication driver and interface
-3. Double-click "HMI tags > Show all tags" in the project navigation and create an HMI tag under "HMI tags".
+3. Double-click "HMI tags &gt; Show all tags" in the project navigation and create an HMI tag under "HMI tags".
 4. Select the data type "Raw" in the "Data type" field.
 5. Select "Connection_1" in the "Connection" field and then confirm the selection.
-6. Select "Properties > Properties > General" in the Inspector window.
+6. Select "Properties &gt; Properties &gt; General" in the Inspector window.
 
    ![Procedure](images/140836166923_DV_resource.Stream@PNG-en-US.png)
 
@@ -17424,7 +17424,7 @@ The configuration is the same for all interfaces of the communication driver. Th
 10. Set the "DBW" operand type.
 11. Enter the value of the start address.
 12. Enter the desired length of the data range in the "Settings" field.
-13. Select "Properties > Properties > Raw data" in the Inspector window.
+13. Select "Properties &gt; Properties &gt; Raw data" in the Inspector window.
 14. The type "Send/receive raw data block" in the "Raw data mode" area is automatically set.
 
 ![Set raw data mode](images/140836086539_DV_resource.Stream@PNG-en-US.png)
@@ -17483,7 +17483,7 @@ Examples with the S7-400:
 >
 > If the data block of a write job is transferred to the PLC and has not yet been deleted or fully deleted from the receiving buffer, then the next write job will be rejected with an error message.
 >
-> During such an error display, write jobs with R_ID > 0x8000 0000 are written to a connection-specific queue and the system tries to repeat the write job for 6 seconds.
+> During such an error display, write jobs with R_ID &gt; 0x8000 0000 are written to a connection-specific queue and the system tries to repeat the write job for 6 seconds.
 >
 > The responsibility for time co-ordination for transfer rests with the user and needs to be noted as shorter time intervals for write jobs.
 
@@ -17563,10 +17563,10 @@ The configuration is the same for all interfaces of the communication driver. Th
    ![Set communication driver and interface](images/140927593995_DV_resource.Stream@PNG-en-US.png)
 
    Set communication driver and interface
-3. Double-click "HMI tags > Show all tags > HMI tags" in the project navigation and create an HMI tag.
+3. Double-click "HMI tags &gt; Show all tags &gt; HMI tags" in the project navigation and create an HMI tag.
 4. Select the data type "Raw" in the "Data type" field.
 5. Select "Connection_1" in the "Connection" field and then confirm the selection.
-6. Select "Properties > Properties > Raw data" in the Inspector window.
+6. Select "Properties &gt; Properties &gt; Raw data" in the Inspector window.
 
    ![Select raw data mode and specify R_ID](images/141015720459_DV_resource.Stream@PNG-en-US.png)
 
@@ -17604,7 +17604,7 @@ You can find additional information on communication via PROFIBUS at [Communicat
 
 #### HMI connection for communication
 
-You configure connections between the HMI device and SIMATIC S7-1500 Software Controller in the "Devices & Networks" editor.
+You configure connections between the HMI device and SIMATIC S7-1500 Software Controller in the "Devices &amp; Networks" editor.
 
 ---
 
@@ -17678,7 +17678,7 @@ This section contains information on the following topics:
 
 ###### HMI connections via PROFINET
 
-If you have inserted an HMI device and a SIMATIC S7-1500 Software Controller in the project, connect the two PROFINET interfaces in the "Devices & Networks" editor.
+If you have inserted an HMI device and a SIMATIC S7-1500 Software Controller in the project, connect the two PROFINET interfaces in the "Devices &amp; Networks" editor.
 
 ![HMI connections via PROFINET](images/69003640587_DV_resource.Stream@PNG-en-US.png)
 
@@ -17688,9 +17688,9 @@ The maximum number of communication partners that you can connect to an HMI devi
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -17710,7 +17710,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure a HMI connection between HMI devices and a SIMATIC S7-1500 Software Controller via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure a HMI connection between HMI devices and a SIMATIC S7-1500 Software Controller via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -17719,14 +17719,14 @@ You configure a HMI connection between HMI devices and a SIMATIC S7-1500 Softwa
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with PROFINET or Ethernet interface
 - SIMATIC S7-1500 Software Controller on PC system with PROFINET interface.
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 2. Click the "Connections" button and select "HMI connection" for the connection type.
@@ -17788,7 +17788,7 @@ You can use the following WinCC Runtimes as an HMI device:
 
 ###### WinCC Runtime as HMI device
 
-Configure the HMI connections between a WinCC Runtime and an SIMATIC S7-1500 Software Controller in the "Devices & Networks" editor.
+Configure the HMI connections between a WinCC Runtime and an SIMATIC S7-1500 Software Controller in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -17809,9 +17809,9 @@ The maximum number of communication partners that you can connect to an HMI devi
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -17833,7 +17833,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between an HMI device and a SIMATIC S7-1500 Software Controller via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between an HMI device and a SIMATIC S7-1500 Software Controller via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -17842,14 +17842,14 @@ You configure an HMI connection between an HMI device and a SIMATIC S7-1500 Sof
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - PC station with an SIMATIC S7-1500 Software Controller with PROFINET interface
 - PC station with a "WinCC Runtime" application
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFINET-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -17904,7 +17904,7 @@ You have created a connection between an HMI device and a SIMATIC S7-1500 Softwa
 
 ###### Introduction
 
-You configure an HMI connection between an HMI device and a SIMATIC S7-1500 Software Controller via PROFINET or Ethernet in the "Devices & Networks" editor.
+You configure an HMI connection between an HMI device and a SIMATIC S7-1500 Software Controller via PROFINET or Ethernet in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -17913,14 +17913,14 @@ You configure an HMI connection between an HMI device and a SIMATIC S7-1500 Sof
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - PC station with an SIMATIC S7-1500 Software Controller with PROFINET interface
 - SIMATIC PC with PROFINET interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a WinCC Runtime from the hardware catalog to the PC.
@@ -17988,8 +17988,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and changing the HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing the HMI connection parameters](images/70061866123_DV_resource.Stream@PNG-en-US.png)
 
@@ -18040,8 +18040,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFINET parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General".
 
    ![Displaying and changing PROFINET parameters of the HMI device](images/67214999563_DV_resource.Stream@PNG-en-US.png)
 
@@ -18093,8 +18093,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFINET parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFINET parameters of the PLC](images/70061907339_DV_resource.Stream@PNG-en-US.png)
 
@@ -18214,13 +18214,13 @@ This section contains information on the following topics:
 
 ###### HMI connections via PROFIBUS
 
-If you have inserted an HMI device and a SIMATIC S7 1500 into the project, interconnect the two PROFIBUS interfaces in the "Devices & Networks" editor.
+If you have inserted an HMI device and a SIMATIC S7 1500 into the project, interconnect the two PROFIBUS interfaces in the "Devices &amp; Networks" editor.
 
 ![HMI connections via PROFIBUS](images/69335686667_DV_resource.Stream@PNG-en-US.png)
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -18230,18 +18230,18 @@ Alternatively, you configure the connection between the PLC and HMI device in th
 
 ###### Introduction
 
-You configure an HMI connection over PROFIBUS between HMI devices and a SIMATIC S7 1500 in the "Devices & Networks" editor.
+You configure an HMI connection over PROFIBUS between HMI devices and a SIMATIC S7 1500 in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with MPI/DP interface
 - SIMATIC S7 1500 with PROFIBUS interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 
@@ -18252,7 +18252,7 @@ The following communication partners are created in the "Devices & Networks" edi
 
    The devices available for connection are highlighted in color.
 3. Click the HMI device interface.
-4. Select the "PROFIBUS" interface type in the Inspector window under "Properties > General > HMI MPIDP > Parameters".
+4. Select the "PROFIBUS" interface type in the Inspector window under "Properties &gt; General &gt; HMI MPIDP &gt; Parameters".
 5. Click the interface of the PLC and use a drag-and-drop operation to draw a connection to the HMI device.
 
    ![Procedure](images/69803024523_DV_resource.Stream@PNG-en-US.png)
@@ -18303,7 +18303,7 @@ You can use the following WinCC Runtimes as an HMI device:
 
 ###### WinCC Runtime as HMI device
 
-You configure the HMI connections between WinCC Runtime and SIMATIC S7 1500 in the "Devices & Networks" editor.
+You configure the HMI connections between WinCC Runtime and SIMATIC S7 1500 in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -18322,9 +18322,9 @@ You can also connect multiple HMI devices to one SIMATIC S7 1500 and multiple S
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -18334,18 +18334,18 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between an HMI device and a SIMATIC S7 1500 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between an HMI device and a SIMATIC S7 1500 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1500 with PROFIBUS interface
 - PC station with WinCC RT Advanced or WinCC RT Professional
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFIBUS-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -18389,18 +18389,18 @@ You have created an HMI connection between an HMI device and a SIMATIC S7 1500 v
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC S7 1500 via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC S7 1500 via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC S7 1500 with PROFIBUS interface
 - SIMATIC PC with PROFIBUS interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Click the MPI interface of the PC and select "PROFIBUS" for the interface type in the Inspector window.
@@ -18462,8 +18462,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and changing the HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing the HMI connection parameters](images/69346340235_DV_resource.Stream@PNG-en-US.png)
 
@@ -18520,8 +18520,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFINET parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFINET parameters of the HMI device](images/69346472331_DV_resource.Stream@PNG-en-US.png)
 
@@ -18552,8 +18552,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFIBUS parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFIBUS parameters of the PLC](images/69346524939_DV_resource.Stream@PNG-en-US.png)
 
@@ -18725,10 +18725,10 @@ The table below describes which online functions are possible in the various pro
 | Monitoring tags (M, I, Q, DB content) via HMI device | Yes | Yes | Yes | No |
 | Modifying tags (M, I, Q, DB content) via HMI device | Yes | Yes | Yes | No |
 | Diagnostics display (for example, device information, connection display, alarm display, diagnostic buffer) | Yes | Yes | Yes | No |
-| Reading cycle time statistics (Online & Diagnostics) | Yes | Yes | Yes | No |
-| Reading information from the hardware configuration (Online & Diagnostics) | Yes | Yes | Yes | No |
+| Reading cycle time statistics (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
+| Reading information from the hardware configuration (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
 | Reading time-of-day | Yes | Yes | Yes | No |
-| Executing online functions within the hardware configuration (Online & Diagnostics) | Yes | Yes | Yes | No |
+| Executing online functions within the hardware configuration (Online &amp; Diagnostics) | Yes | Yes | Yes | No |
 | Acknowledging alarms | Yes | Yes | Yes | No |
 | Receiving alarms | Yes | Yes | Yes | No |
 |  |  |  |  |  |
@@ -18757,7 +18757,7 @@ Example: The module was configured with read access and you want to execute the 
 
 The functions protected by a password can only be executed by one programming device/PC at any one time. Another programming device/PC cannot log on.
 
-Access authorization to the protected data is in effect for the duration of the online connection. If the online connection is restored after an interruption, you do not have to enter the access data again. To manually cancel access authorization, click "Online > Delete access rights".
+Access authorization to the protected data is in effect for the duration of the online connection. If the online connection is restored after an interruption, you do not have to enter the access data again. To manually cancel access authorization, click "Online &gt; Delete access rights".
 
 Each access level allows unrestricted access to certain functions without entering a password, for example, identification using the "Accessible devices" function.
 
@@ -18813,7 +18813,7 @@ The PLC and the HMI device trigger defined interactions based on the evaluation 
 
 ###### Configuration of area pointers
 
-Before you use an area pointer, you enable it under "Connections > Area pointer". You then assign the area pointer parameters.
+Before you use an area pointer, you enable it under "Connections &gt; Area pointer". You then assign the area pointer parameters.
 
 You can find more detailed information on configuring area pointers in:
 
@@ -18860,7 +18860,7 @@ This allows the transfer of the current screen contents from the HMI device to t
 
 ###### Use
 
-Configure and enable the area pointer in "Communication > Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
+Configure and enable the area pointer in "Communication &gt; Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
 
 The screen number is always transferred to the PLC when a new screen is activated or when the focus within a screen changes from one screen object to another.
 
@@ -19133,10 +19133,10 @@ To use this area pointer, set up the following during the configuration:
 
 - Define the version of the configuration. Values between 1 and 255 are possible.
 
-  You enter the version in the editor "Runtime settings > General" in the "Identification" area.
+  You enter the version in the editor "Runtime settings &gt; General" in the "Identification" area.
 - Data address of the value for the version that is stored in the PLC:
 
-  You enter the data address in the editor "Communication > Connections" under "Address".
+  You enter the data address in the editor "Communication &gt; Connections" under "Address".
 
 ###### Connection failure
 
@@ -19392,10 +19392,10 @@ Synchronous data record transfer can be a useful solution, for example, when:
 
 In order to synchronize transfer of data records between the HMI device and the PLC, the following requirements must be met during configuration:
 
-- An area pointer has been set up: "Communication > Connections" editor in "Area pointer".
+- An area pointer has been set up: "Communication &gt; Connections" editor in "Area pointer".
 - The PLC with which the HMI device synchronizes transfer of data records is specified in the recipe:
 
-  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General > Synchronization > Settings"
+  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General &gt; Synchronization &gt; Settings"
 
 ###### Structure of the data area
 
@@ -19829,7 +19829,7 @@ For connections with a SIMATIC communication driver, the following counting meth
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -20364,7 +20364,7 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/69004744331_DV_resource.Stream@PNG-en-US.png)
 
@@ -20375,11 +20375,11 @@ This section contains information on the following topics:
 
    ![Procedure](images/88490737931_DV_resource.Stream@PNG-en-US.png)
 4. Click the name of the connection.
-5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the IP addresses of the communication partners in the Inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -20404,19 +20404,19 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/69009598091_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/69009598091_DV_resource.Stream@PNG-en-US.png)
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select an interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select an interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the parameters for the connection in the Inspector window.
 
 ##### Interfaces
 
-Select one of the following interfaces in the Inspector window under "Parameters > WinCC RT Advanced > Interfaces".:
+Select one of the following interfaces in the Inspector window under "Parameters &gt; WinCC RT Advanced &gt; Interfaces".:
 
 - Industrial Ethernet
 - MPI
@@ -20541,7 +20541,7 @@ You can configure the time synchronization between a SIMATIC S7-1200 or SIMATIC�
 
   Configure the "Access password" for communication with a PLC with "Complete protection" security type in the "Connections" editor of the HMI device.
 
-  This "Access password" must match the password configured on the PLC. The PLC password is assigned in the PLC properties at: "General > Security"
+  This "Access password" must match the password configured on the PLC. The PLC password is assigned in the PLC properties at: "General &gt; Security"
 - Basic Panels can only be configured as "Slave".
 - If you use Basic Panels for the configuration, it is not possible to use time synchronization via NTP and the "Date/time PLC" area pointer simultaneously.
 - Time synchronization with SIMATIC S7-1200 (V1.0) controllers is not possible.
@@ -20562,18 +20562,18 @@ You can configure the time synchronization between a SIMATIC S7-1200 or SIMATIC�
 
 ##### Introduction
 
-You configure time synchronization for an integrated connection in the "Devices & Networks" editor.
+You configure time synchronization for an integrated connection in the "Devices &amp; Networks" editor.
 
 ##### Requirements
 
 - An HMI connection between an HMI device and a SIMATIC S7 1200 or SIMATIC S7 1500 has been configured.
 - The HMI device must support the "time synchronization" function.
-- The "Devices & Networks" editor is open.
+- The "Devices &amp; Networks" editor is open.
 
 ##### Procedure
 
-1. Click the line of the HMI connection in the "Devices & networks" editor.
-2. Select the following in the inspector window under "General > Time synchronization > Settings":
+1. Click the line of the HMI connection in the "Devices &amp; networks" editor.
+2. Select the following in the inspector window under "General &gt; Time synchronization &gt; Settings":
 
    - None: No time synchronization is used.
    - Master: The HMI device sets the time.
@@ -20606,7 +20606,7 @@ You configure time synchronization for a non-integrated connection in the "Conne
 
 ##### Procedure
 
-1. Double-click "<Add>".
+1. Double-click "&lt;Add&gt;".
 2. In the "Communication drivers" column, select the "SIMATIC S7 1500" PLC.
 3. Select the following in the "HMI time synchronization mode" column:
 
@@ -20655,7 +20655,7 @@ You can configure the following communication channels for the SIMATIC ET 200 C
 
 #### HMI connection for communication
 
-Configure connections between the HMI device and a SIMATIC ET 200 CPU in the "Devices & Networks" editor. If you have configured a HMI device with a serial port, you must configure a PROFIBUS-capable communication module to the ET 200 CPU.
+Configure connections between the HMI device and a SIMATIC ET 200 CPU in the "Devices &amp; Networks" editor. If you have configured a HMI device with a serial port, you must configure a PROFIBUS-capable communication module to the ET 200 CPU.
 
 ---
 
@@ -20695,7 +20695,7 @@ This section contains information on the following topics:
 
 ###### HMI connections via PROFINET
 
-If you have inserted an HMI device and a SIMATIC ET 200 CPU into the project, you interconnect the two PROFINET interfaces in the "Devices & Networks" editor.
+If you have inserted an HMI device and a SIMATIC ET 200 CPU into the project, you interconnect the two PROFINET interfaces in the "Devices &amp; Networks" editor.
 
 ![HMI connections via PROFINET](images/72227169035_DV_resource.Stream@PNG-en-US.png)
 
@@ -20705,9 +20705,9 @@ The maximum number of communication partners that you can connect to an HMI devi
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -20725,7 +20725,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection over PROFINET or Ethernet between HMI devices and a SIMATIC ET 200 CPU in the "Devices & Networks" editor.
+You configure an HMI connection over PROFINET or Ethernet between HMI devices and a SIMATIC ET 200 CPU in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -20734,14 +20734,14 @@ You configure an HMI connection over PROFINET or Ethernet between HMI devices an
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with PROFINET or Ethernet interface
 - SIMATIC ET 200 CPU with PROFINET interface.
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 2. Click the "Connections" button and select "HMI connection" for the connection type.
@@ -20801,7 +20801,7 @@ You can use the following WinCC Runtimes as an HMI device:
 
 ###### WinCC Runtime as HMI device
 
-You configure the HMI connections between a WinCC Runtime and SIMATIC ET 200 CPU in the "Devices & Networks" editor.
+You configure the HMI connections between a WinCC Runtime and SIMATIC ET 200 CPU in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -20822,9 +20822,9 @@ The maximum number of communication partners that you can connect to an HMI devi
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFINET in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -20844,7 +20844,7 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection over PROFINET or Ethernet between a HMI device and a SIMATIC ET 200 CPU in the "Devices & Networks" editor.
+You configure an HMI connection over PROFINET or Ethernet between a HMI device and a SIMATIC ET 200 CPU in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -20853,14 +20853,14 @@ You configure an HMI connection over PROFINET or Ethernet between a HMI device a
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC ET 200 CPU with PROFINET interface
 - PC station with a "WinCC Runtime" application
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFINET-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -20913,7 +20913,7 @@ You have created a connection between an HMI device and a SIMATIC ET 200 CPU. T
 
 ###### Introduction
 
-You configure an HMI connection over PROFINET or Ethernet between a HMI device and SIMATIC ET 200 CPU in the "Devices & Networks" editor.
+You configure an HMI connection over PROFINET or Ethernet between a HMI device and SIMATIC ET 200 CPU in the "Devices &amp; Networks" editor.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -20922,14 +20922,14 @@ You configure an HMI connection over PROFINET or Ethernet between a HMI device a
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC ET 200 CPU with PROFINET interface
 - SIMATIC PC with PROFINET interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a WinCC Runtime from the hardware catalog to the PC.
@@ -20996,8 +20996,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and changing the HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing the HMI connection parameters](images/72227480203_DV_resource.Stream@PNG-en-US.png)
 
@@ -21046,8 +21046,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFINET parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General".
 
    ![Displaying and changing PROFINET parameters of the HMI device](images/72227500555_DV_resource.Stream@PNG-en-US.png)
 
@@ -21097,8 +21097,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFINET parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFINET parameters of the PLC](images/72227520907_DV_resource.Stream@PNG-en-US.png)
 
@@ -21300,9 +21300,9 @@ If you want to connect a SIMATIC ET 200 CPU to a HMI device via PROFIBUS, you m
 
 ![HMI connections via PROFIBUS](images/72252161163_DV_resource.Stream@PNG-en-US.png)
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -21320,25 +21320,25 @@ Alternatively, you configure the connection between the PLC and HMI device in th
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC ET 200 CPU via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC ET 200 CPU via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - HMI device with MPI/DP interface
 - SIMATIC ET 200 CPU
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed graphically in the network view.
 2. Click the "Connections" button.
 
    The devices available for connection are highlighted in color.
 3. Click the HMI device interface.
-4. Select the "PROFIBUS" interface type in the Inspector window under "Properties > General > PROFIBUS address/ MPI address > Parameters".
+4. Select the "PROFIBUS" interface type in the Inspector window under "Properties &gt; General &gt; PROFIBUS address/ MPI address &gt; Parameters".
 5. Click the interface of the CPU and use a drag-and-drop operation to draw a connection to the HMI device.
 
    ![Procedure](images/72252282507_DV_resource.Stream@PNG-en-US.png)
@@ -21395,7 +21395,7 @@ If you want to connect a SIMATIC ET 200 CPU to a HMI device via PROFIBUS, you m
 
 ###### WinCC Runtime as HMI device
 
-Configure the HMI connections between WinCC Runtime and SIMATIC ET 200 CPU in the "Devices & Networks" editor.
+Configure the HMI connections between WinCC Runtime and SIMATIC ET 200 CPU in the "Devices &amp; Networks" editor.
 
 If you want to use a WinCC Runtime as an HMI device, you have the following options:
 
@@ -21416,9 +21416,9 @@ The maximum number of communication partners that you can connect to an HMI devi
 
 Additional information is available in the documentation for the respective HMI device.
 
-###### HMI connection in the "Devices & Networks" editor
+###### HMI connection in the "Devices &amp; Networks" editor
 
-You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices & Networks" editor.
+You configure the HMI connection between the PLC and the HMI device via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Connection in the "Connections" editor
 
@@ -21438,18 +21438,18 @@ Alternatively, you configure the connection between the PLC and HMI device via P
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC ET 200 CPU via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC ET 200 CPU via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC ET 200 CPU
 - SIMATIC PC with PROFIBUS interface
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a WinCC Runtime from the hardware catalog to the PC.
@@ -21501,18 +21501,18 @@ You have created an HMI connection between an HMI device and a SIMATIC ET 200 C
 
 ###### Introduction
 
-You configure an HMI connection between HMI devices and a SIMATIC ET 200 CPU via PROFIBUS in the "Devices & Networks" editor.
+You configure an HMI connection between HMI devices and a SIMATIC ET 200 CPU via PROFIBUS in the "Devices &amp; Networks" editor.
 
 ###### Requirements
 
-The following communication partners are created in the "Devices & Networks" editor:
+The following communication partners are created in the "Devices &amp; Networks" editor:
 
 - SIMATIC ET 200 CPU
 - PC station with a WinCC RT Advanced or WinCC RT Professional
 
 ###### Procedure
 
-1. Double-click the "Devices & Networks" item in the project tree.
+1. Double-click the "Devices &amp; Networks" item in the project tree.
 
    The available communication partners in the project are displayed in the network view.
 2. Use a drag-and-drop operation to move a PROFIBUS-capable communication processor from the hardware catalog to the WinCC Runtime.
@@ -21577,8 +21577,8 @@ An overview of the configured HMI device parameters can be found in the properti
 
 ###### Displaying and changing PROFIBUS parameters of the HMI device
 
-1. Click the HMI device in the "Devices & Networks" editor.
-2. Change the parameters of the HMI device in the Inspector window under "Properties > General > General".
+1. Click the HMI device in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI device in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFIBUS parameters of the HMI device](images/72252194315_DV_resource.Stream@PNG-en-US.png)
 
@@ -21619,8 +21619,8 @@ An overview of the configured parameters can be found in the properties for the 
 
 ###### Displaying and changing PROFIBUS parameters of the PLC
 
-1. Click the PLC in the "Devices & Networks" editor.
-2. Change the parameters of the PLC in the Inspector window under "Properties > General > General".
+1. Click the PLC in the "Devices &amp; Networks" editor.
+2. Change the parameters of the PLC in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and changing PROFIBUS parameters of the PLC](images/89642938251_DV_resource.Stream@PNG-en-US.png)
 
@@ -21663,8 +21663,8 @@ Only limited changes are possible in this Inspector window.
 
 ###### Displaying and editing HMI connection parameters
 
-1. Click the HMI connection in the "Devices & Networks" editor.
-2. Change the parameters of the HMI connection in the Inspector window under "Properties > General > General".
+1. Click the HMI connection in the "Devices &amp; Networks" editor.
+2. Change the parameters of the HMI connection in the Inspector window under "Properties &gt; General &gt; General".
 
    ![Displaying and editing HMI connection parameters](images/72252247819_DV_resource.Stream@PNG-en-US.png)
 
@@ -21740,7 +21740,7 @@ The PLC and the HMI device trigger defined interactions based on the evaluation 
 
 ###### Configuration of area pointers
 
-Before you use an area pointer, you enable it under "Connections > Area pointer". You then assign the area pointer parameters.
+Before you use an area pointer, you enable it under "Connections &gt; Area pointer". You then assign the area pointer parameters.
 
 You can find more detailed information on configuring area pointers in:
 
@@ -21776,7 +21776,7 @@ This allows the transfer of the current screen contents from the HMI device to t
 
 ###### Use
 
-Configure and enable the area pointer in "Communication > Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
+Configure and enable the area pointer in "Communication &gt; Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
 
 The screen number is always transferred to the PLC when a new screen is activated or when the focus within a screen changes from one screen object to another.
 
@@ -22015,10 +22015,10 @@ To use this area pointer, set up the following during the configuration:
 
 - Define the version of the configuration. Values between 1 and 255 are possible.
 
-  You enter the version in the editor "Runtime settings > General" in the "Identification" area.
+  You enter the version in the editor "Runtime settings &gt; General" in the "Identification" area.
 - Data address of the value for the version that is stored in the PLC:
 
-  You enter the data address in the editor "Communication > Connections" under "Address".
+  You enter the data address in the editor "Communication &gt; Connections" under "Address".
 
 ###### Connection failure
 
@@ -22274,10 +22274,10 @@ Synchronous data record transfer can be a useful solution, for example, when:
 
 In order to synchronize transfer of data records between the HMI device and the PLC, the following requirements must be met during configuration:
 
-- An area pointer has been set up: "Communication > Connections" editor in "Area pointer".
+- An area pointer has been set up: "Communication &gt; Connections" editor in "Area pointer".
 - The PLC with which the HMI device synchronizes transfer of data records is specified in the recipe:
 
-  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General > Synchronization > Settings"
+  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General &gt; Synchronization &gt; Settings"
 
 ###### Structure of the data area
 
@@ -22709,7 +22709,7 @@ For connections with a SIMATIC communication driver, the following counting meth
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -23184,7 +23184,7 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/72253072651_DV_resource.Stream@PNG-en-US.png)
 
@@ -23195,11 +23195,11 @@ This section contains information on the following topics:
 
    ![Procedure](images/88500578955_DV_resource.Stream@PNG-en-US.png)
 4. Click the name of the connection.
-5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select a PROFINET interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the IP addresses of the communication partners in the Inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -23219,7 +23219,7 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/88541032075_DV_resource.Stream@PNG-en-US.png)
 
@@ -23227,15 +23227,15 @@ This section contains information on the following topics:
 3. In the "Communication drivers" column, select the "SIMATIC S7 1200" driver.
 4. Click the name of the connection.
 5. Select the "MPI/DP" interface in the Inspector window under "Parameters".
-6. Select the "DP" profile in the Inspector window under "Parameters > Network".
+6. Select the "DP" profile in the Inspector window under "Parameters &gt; Network".
 
    ![Procedure](images/88541046411_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/88541046411_DV_resource.Stream@PNG-en-US.png)
 7. Set the addresses of the communication partners in the Inspector window:
 
-   - HMI device: "Parameters > HMI device > Address"
-   - PLC: "Parameters > PLC > Address"
+   - HMI device: "Parameters &gt; HMI device &gt; Address"
+   - PLC: "Parameters &gt; PLC &gt; Address"
 
 ---
 
@@ -23347,7 +23347,7 @@ You set the parameters for the HMI device in the network under "HMI device".. Th
   - Click the Ethernet interface.
   - Assign the IP address in the inspector window under:
 
-    "General > PROFINET interface > Ethernet addresses"
+    "General &gt; PROFINET interface &gt; Ethernet addresses"
 - "Address"
 
   You assign the IP address of the HMI device in the "Address" area.
@@ -23421,19 +23421,19 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 
    ![Procedure](images/88538592907_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/88538592907_DV_resource.Stream@PNG-en-US.png)
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select an interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select an interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the parameters for the connection in the Inspector window.
 
 ##### Interfaces
 
-Select one of the following interfaces in the Inspector window under "Parameters > WinCC RT Advanced > Interfaces".:
+Select one of the following interfaces in the Inspector window under "Parameters &gt; WinCC RT Advanced &gt; Interfaces".:
 
 - Industrial Ethernet
 - MPI
@@ -23560,15 +23560,15 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Open the "Connections" editor of the HMI device.
-2. Double-click "<Add>".
+2. Double-click "&lt;Add&gt;".
 3. Select the driver in the "Communication driver" column.
 4. Click the name of the connection.
-5. Select an interface of the HMI device in the Inspector window under "Parameters > Interface".
+5. Select an interface of the HMI device in the Inspector window under "Parameters &gt; Interface".
 6. Set the parameters for the connection in the Inspector window.
 
 ##### Interfaces
 
-Select one of the following interfaces in the Inspector window under "Parameters > WinCC RT Professional > Interfaces":
+Select one of the following interfaces in the Inspector window under "Parameters &gt; WinCC RT Professional &gt; Interfaces":
 
 - TCP/IP
 - PROFIBUS
@@ -23783,7 +23783,7 @@ You set the parameters for the HMI device in the network under "HMI device".. Th
   - Click the Ethernet interface.
   - Assign the IP address in the inspector window under:
 
-    "General > PROFINET interface > Ethernet addresses"
+    "General &gt; PROFINET interface &gt; Ethernet addresses"
 - "Address"
 
   You assign the IP address of the HMI device in the "Address" area.
@@ -23879,7 +23879,7 @@ You can configure the time synchronization between a SIMATIC S7-1200 or SIMATIC�
 
   Configure the "Access password" for communication with a PLC with "Complete protection" security type in the "Connections" editor of the HMI device.
 
-  This "Access password" must match the password configured on the PLC. The PLC password is assigned in the PLC properties at: "General > Security"
+  This "Access password" must match the password configured on the PLC. The PLC password is assigned in the PLC properties at: "General &gt; Security"
 - Basic Panels can only be configured as "Slave".
 - If you use Basic Panels for the configuration, it is not possible to use time synchronization via NTP and the "Date/time PLC" area pointer simultaneously.
 - Time synchronization with SIMATIC S7-1200 (V1.0) controllers is not possible.
@@ -23900,18 +23900,18 @@ You can configure the time synchronization between a SIMATIC S7-1200 or SIMATIC�
 
 ##### Introduction
 
-You configure time synchronization for an integrated connection in the "Devices & Networks" editor.
+You configure time synchronization for an integrated connection in the "Devices &amp; Networks" editor.
 
 ##### Requirements
 
 - An HMI connection between an HMI device and a SIMATIC S7 1200 or SIMATIC S7 1500 has been configured.
 - The HMI device must support the "time synchronization" function.
-- The "Devices & Networks" editor is open.
+- The "Devices &amp; Networks" editor is open.
 
 ##### Procedure
 
-1. Click the line of the HMI connection in the "Devices & networks" editor.
-2. Select the following in the inspector window under "General > Time synchronization > Settings":
+1. Click the line of the HMI connection in the "Devices &amp; networks" editor.
+2. Select the following in the inspector window under "General &gt; Time synchronization &gt; Settings":
 
    - None: No time synchronization is used.
    - Master: The HMI device sets the time.
@@ -23944,7 +23944,7 @@ You configure time synchronization for a non-integrated connection in the "Conne
 
 ##### Procedure
 
-1. Double-click "<Add>".
+1. Double-click "&lt;Add&gt;".
 2. In the "Communication drivers" column, select the "SIMATIC S7 1500" PLC.
 3. Select the following in the "HMI time synchronization mode" column:
 
@@ -24014,7 +24014,7 @@ You configure a connection to the SIMATIC S7 200 PLC in the "Connections" edit
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 
    ![Procedure](images/74975417483_DV_resource.Stream@PNG-en-US.png)
 
@@ -24098,7 +24098,7 @@ You set the parameters for the HMI device in the network under "HMI device".. Th
   - Click the Ethernet interface.
   - Assign the IP address in the inspector window under:
 
-    "General > PROFINET interface > Ethernet addresses"
+    "General &gt; PROFINET interface &gt; Ethernet addresses"
 - "Address"
 
   You assign the IP address of the HMI device in the "Address" area.
@@ -24419,7 +24419,7 @@ The PLC and the HMI device trigger defined interactions based on the evaluation 
 
 ###### Configuration of area pointers
 
-Before you use an area pointer, you enable it under "Connections > Area pointer". You then assign the area pointer parameters.
+Before you use an area pointer, you enable it under "Connections &gt; Area pointer". You then assign the area pointer parameters.
 
 You can find more detailed information on configuring area pointers in:
 
@@ -24455,7 +24455,7 @@ This allows the transfer of the current screen contents from the HMI device to t
 
 ###### Use
 
-Configure and enable the area pointer in "Communication > Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
+Configure and enable the area pointer in "Communication &gt; Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
 
 The screen number is always transferred to the PLC when a new screen is activated or when the focus within a screen changes from one screen object to another.
 
@@ -24690,10 +24690,10 @@ To use this area pointer, set up the following during the configuration:
 
 - Define the version of the configuration. Values between 1 and 255 are possible.
 
-  You enter the version in the editor "Runtime settings > General" in the "Identification" area.
+  You enter the version in the editor "Runtime settings &gt; General" in the "Identification" area.
 - Data address of the value for the version that is stored in the PLC:
 
-  You enter the data address in the editor "Communication > Connections" under "Address".
+  You enter the data address in the editor "Communication &gt; Connections" under "Address".
 
 ###### Connection failure
 
@@ -25168,10 +25168,10 @@ Synchronous data record transfer can be a useful solution, for example, when:
 
 In order to synchronize transfer of data records between the HMI device and the PLC, the following requirements must be met during configuration:
 
-- An area pointer has been set up: "Communication > Connections" editor in "Area pointer".
+- An area pointer has been set up: "Communication &gt; Connections" editor in "Area pointer".
 - The PLC with which the HMI device synchronizes transfer of data records is specified in the recipe:
 
-  "Recipes" editor in the Inspector window the "Coordinated transfer of data records" option under "General > Synchronization > Settings".
+  "Recipes" editor in the Inspector window the "Coordinated transfer of data records" option under "General &gt; Synchronization &gt; Settings".
 
 ###### Structure of the data area
 
@@ -25383,7 +25383,7 @@ For connections with a SIMATIC communication driver, the following counting meth
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -25853,7 +25853,7 @@ You configure a connection to the SIMATIC LOGO! controller in the "Connections"
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 
    ![Procedure](images/69595469323_DV_resource.Stream@PNG-en-US.png)
 
@@ -25928,7 +25928,7 @@ You set the parameters for the HMI device in the network under "HMI device".. Th
   - Click the Ethernet interface.
   - Assign the IP address in the inspector window under:
 
-    "General > PROFINET interface > Ethernet addresses"
+    "General &gt; PROFINET interface &gt; Ethernet addresses"
 - "Address"
 
   You assign the IP address of the HMI device in the "Address" area.
@@ -26176,7 +26176,7 @@ For connections with a SIMATIC communication driver, the following counting meth
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -26632,8 +26632,8 @@ The HMI device is networked with a PLC via PROFINET.
 
 ##### Procedure
 
-1. Click the PROFINET interface of the HMI device in the "Devices & Networks" editor.
-2. Click "Operating mode" under "Properties > General" in the Inspector window.
+1. Click the PROFINET interface of the HMI device in the "Devices &amp; Networks" editor.
+2. Click "Operating mode" under "Properties &gt; General" in the Inspector window.
 3. Select the function "IO device" in the "Operating mode" area.
 4. Select the PLC which is networked with the HMI device under "Assigned IO controller".
 
@@ -26657,8 +26657,8 @@ The HMI device is networked with a PLC via PROFIBUS.
 
 ##### Procedure
 
-1. Click the PROFIBUS interface of the HMI device in the "Devices & Networks" editor.
-2. Click "Operating mode" under "Properties > General" in the Inspector window.
+1. Click the PROFIBUS interface of the HMI device in the "Devices &amp; Networks" editor.
+2. Click "Operating mode" under "Properties &gt; General" in the Inspector window.
 3. Select the function "DP slave" in the "Operating mode" area.
 4. Select the PLC which is networked with the HMI device under "Assigned DP master".
 
@@ -26692,8 +26692,8 @@ This section contains information on the following topics:
 1. Create a new screen.
 2. Drag-and-drop a button from the "Tools" task card into the screen.
 3. Click the button.
-4. In the Inspector window, click "Properties > Events > Press".
-5. Click "<Add function>".
+4. In the Inspector window, click "Properties &gt; Events &gt; Press".
+5. Click "&lt;Add function&gt;".
 6. Select the "Direct key" system function.
 
    ![Procedure](images/69603355915_DV_resource.Stream@PNG-en-US.png)
@@ -26745,9 +26745,9 @@ The following figure shows the basic configuration based on an automation networ
 
 The cycle time of the Ethernet bus can be set between 8 ms and 512 ms.
 
-Thus, the reaction time of the PROFINET IO direct keys can also be determined. For a typical configuration with a cycle time of 64 ms, the response time of the PROFINET IO direct keys is < 100 ms.
+Thus, the reaction time of the PROFINET IO direct keys can also be determined. For a typical configuration with a cycle time of 64 ms, the response time of the PROFINET IO direct keys is &lt; 100 ms.
 
-A response time of < 100 ms to the CPU is usually ensured when using the PROFINET IO direct keys. This time can be exceeded significantly in the following cases:
+A response time of &lt; 100 ms to the CPU is usually ensured when using the PROFINET IO direct keys. This time can be exceeded significantly in the following cases:
 
 - Complex functions run in the background, e.g. transmitting recipes, printing reports.
 - At the same time, multiple connections can be maintained to the CPU.
@@ -27247,7 +27247,7 @@ With PROFIBUS DP direct keys, when the key or button is pressed, a bit is set i
 
 The cycle time of the PROFIBUS DP bus is calculated from the total of all configured inputs and outputs.
 
-The number of configured inputs and outputs can influence the reaction time of the PROFIBUS DP direct key. For a typical configuration the response time of the PROFIBUS DP direct key is < 100 ms.
+The number of configured inputs and outputs can influence the reaction time of the PROFIBUS DP direct key. For a typical configuration the response time of the PROFIBUS DP direct key is &lt; 100 ms.
 
 ---
 
@@ -27744,7 +27744,7 @@ This section contains information on the following topics:
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 4. In the "Communication drivers" column, select the "SIMATIC HMI HTTP Protocol" driver.
 
    ![Procedure](images/69611104779_DV_resource.Stream@PNG-en-US.png)
@@ -27774,7 +27774,7 @@ This section contains information on the following topics:
 
 ###### Procedure
 
-1. Select "Ethernet" in the Inspector window under "Parameters > Interface".
+1. Select "Ethernet" in the Inspector window under "Parameters &gt; Interface".
 2. Select protocol http:// or https://.
 3. Enter the name of the server or its IP address.
 
@@ -27784,7 +27784,7 @@ This section contains information on the following topics:
 
 ###### User name and password
 
-If the "Authentication required" check box was selected in the server in the "Control Panel > WinCC Internet Settings > Web Server" dialog, a user name and password must be entered here in the client.
+If the "Authentication required" check box was selected in the server in the "Control Panel &gt; WinCC Internet Settings &gt; Web Server" dialog, a user name and password must be entered here in the client.
 
 ###### Timeout
 
@@ -27804,10 +27804,10 @@ If the server has already been commissioned, you can read out the IP address on 
 
 - For Panel
 
-  Click "Start > Programs > Command Prompt" on the server and enter the "ipconfig" command using the screen keyboard. The IP address is displayed after pressing <Ret>.
+  Click "Start &gt; Programs &gt; Command Prompt" on the server and enter the "ipconfig" command using the screen keyboard. The IP address is displayed after pressing &lt;Ret&gt;.
 - For PC / Panel PC
 
-  Click "Start > Run" on the server, enter "Cmd", and press <Ret>: The command interpreter is displayed. Enter the "ipconfig" command. The IP address is displayed after pressing <Ret>.
+  Click "Start &gt; Run" on the server, enter "Cmd", and press &lt;Ret&gt;: The command interpreter is displayed. Enter the "ipconfig" command. The IP address is displayed after pressing &lt;Ret&gt;.
 
 ---
 
@@ -27914,8 +27914,8 @@ Make the following settings:
   In this case, there are several options for calling the Control Panel:
 
   - In the startup phase, click on the "Control Panel" button in the Windows CE Loader menu.
-  - Select "Start > Settings > Control Panel" in the toolbar.
-  - During normal operation, pressing the key combination <CTRL + ESC> opens the toolbar. Start the Control Panel by selecting "Start > Settings > Control Panel".
+  - Select "Start &gt; Settings &gt; Control Panel" in the toolbar.
+  - During normal operation, pressing the key combination &lt;CTRL + ESC&gt; opens the toolbar. Start the Control Panel by selecting "Start &gt; Settings &gt; Control Panel".
   - Using the RT function "OpenControlPanel"
 
   The language in the Windows CE based devices is always English.
@@ -28010,7 +28010,7 @@ After runtime start, the HTTPS client establishes a connection to the HTTPS serv
 
 With the first HTTPS client access, the HTTPS server generates the certificate itself. The HTTPS server then saves it in the "Cert.cer" file. The file is stored in the following directory:
 
-- On a PC/Panel PC (with Windows) in the directory "<Runtime Directory>\SystemRoot\SSL"
+- On a PC/Panel PC (with Windows) in the directory "&lt;Runtime Directory&gt;\SystemRoot\SSL"
 - On Windows CE-based devices in the directory "Flash\Simatic\SystemRoot\SSL"
 
   The certificate must be stored on the HTTPS client on a storage medium from which it can be launched with a double click.
@@ -28026,7 +28026,7 @@ With the first HTTPS client access, the HTTPS server generates the certificate i
 
 Insert the storage medium on which you have saved the "Cert.cer" file into the HTTPS client or open the directory in which the file is located. Double click on the file and follow the instructions in the Windows dialog.
 
-Tip: The Internet Explorer provides an easy way to install a certificate. Connect to this device via HTTPS (e.g.: https://<my device>). The browser establishes if a certificate has not yet been imported. In this case, the browser asks if you want to install the certificate. Any errors in the certificate will be displayed.
+Tip: The Internet Explorer provides an easy way to install a certificate. Connect to this device via HTTPS (e.g.: https://&lt;my device&gt;). The browser establishes if a certificate has not yet been imported. In this case, the browser asks if you want to install the certificate. Any errors in the certificate will be displayed.
 
 ###### Installing a certificate on a client with Windows CE
 
@@ -28055,7 +28055,7 @@ A status alarm is output when you completed the installation. Runtime has to be 
 If the "Cert.cer" file generated on the HTTPS server cannot be opened on HMI devices based on Windows CE 5.0 by double-clicking the client, follow these steps:
 
 1. Open the Control Panel.
-2. Select "Certificates > My Certificates."
+2. Select "Certificates &gt; My Certificates."
 3. Click the "Import" button.
 
    A dialog box opens.
@@ -28159,16 +28159,16 @@ You configure a connection to a device via OPC in the "Connections" editor of th
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click "Runtime settings".
-3. Select the function "Operate as OPC server" under "Services > Services in runtime".
+3. Select the function "Operate as OPC server" under "Services &gt; Services in runtime".
 4. Double-click on the "Connections" entry in the project tree.
-5. Double-click "<Add>" in the "Connections" editor.
+5. Double-click "&lt;Add&gt;" in the "Connections" editor.
 6. In the "Communication drivers" column, select the "OPC" driver.
-7. Select the "OPC" interface for the HMI device under "Parameters > Interface".
+7. Select the "OPC" interface for the HMI device under "Parameters &gt; Interface".
 
    ![Procedure](images/70302773003_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/70302773003_DV_resource.Stream@PNG-en-US.png)
-8. Select an OPC server from the tree view under "Parameters > OPC servers".
+8. Select an OPC server from the tree view under "Parameters &gt; OPC servers".
 
    The OPC server is entered in the "Name of OPC server" field.
 
@@ -28401,7 +28401,7 @@ The following configuration describes a network for the following communication 
 #### Procedure
 
 1. Click on the PROFINET interface of the HMI device.
-2. In the Inspector window, click "Properties > General > Ethernet addresses".
+2. In the Inspector window, click "Properties &gt; General &gt; Ethernet addresses".
 3. Click "Use router" in the "IP protocol" area.
 4. Enter the IP address of the router in the "Router address" field.
 
@@ -28587,7 +28587,7 @@ On the HMI device connected to the S7 PLC, the "ForceSecure" option is enabled 
 
 Alternatively, you can export the PLC certificate from TIA Portal in advance and copy it to the "`...\trusted\certs`" folder before starting Runtime. The certificate file must have the following name:
 
-"S7PlusChannel_<PLC_IP>.der", e.g. "S7PlusChannel_192.168.0.1.der"
+"S7PlusChannel_&lt;PLC_IP&gt;.der", e.g. "S7PlusChannel_192.168.0.1.der"
 
 ### Using self-signed certificates (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -28831,16 +28831,16 @@ An IO controller and at least one PROFINET IO device are necessary for a PROFINE
 
 - A SIMATIC S7 1200 or SIMATIC S7 1500 PLC has been created.
 - An HMI device from the Comfort Panels device family has been created.
-- The "Devices & Networks" editor is open.
+- The "Devices &amp; Networks" editor is open.
 
 #### Procedure
 
 1. You network the PLC with the HMI device:
 2. Establish an HMI connection between PLC and HMI device.
-3. Click the HMI device in the "Devices & Networks" editor.
+3. Click the HMI device in the "Devices &amp; Networks" editor.
 4. In the inspector window, select the following:
 
-   "General > PROFINET Interface (X1) > Operating mode"
+   "General &gt; PROFINET Interface (X1) &gt; Operating mode"
 5. Enable the "IO device" option.
 
    ![Procedure](images/69777517963_DV_resource.Stream@PNG-en-US.png)
@@ -28872,7 +28872,7 @@ This section contains information on the following topics:
 
 ![Parameters for real-time settings](images/88286434827_DV_resource.Stream@PNG-en-US.png)
 
-Under "Real time settings > IO cycle", set the following parameters:
+Under "Real time settings &gt; IO cycle", set the following parameters:
 
 - Shared Device: Number of IO controllers with access to this I-device
 - Update time
@@ -28886,7 +28886,7 @@ Under "Real time settings > IO cycle", set the following parameters:
 
 ![Parameters for real-time settings](images/88286487307_DV_resource.Stream@PNG-en-US.png)
 
-Under "Real time settings > Synchronization", set the following parameters:
+Under "Real time settings &gt; Synchronization", set the following parameters:
 
 - Display of sync domain used
 - Selection of RT class
@@ -29104,7 +29104,7 @@ The following connection boxes for Mobile Panels support "media redundancy":
 #### Procedure
 
 1. Click on the PROFINET interface of an HMI device.
-2. Select "General > Advanced settings > Media redundancy" in the properties.
+2. Select "General &gt; Advanced settings &gt; Media redundancy" in the properties.
 3. Select "Client" in the "Media redundancy role" area.
 
    ![Procedure](images/69782216331_DV_resource.Stream@PNG-en-US.png)
@@ -29201,9 +29201,9 @@ The devices are configured and networked.
 #### Procedure
 
 1. Select the PROFINET interface of the HMI device.
-2. Select the "Advanced options > Media redundancy" area in the Inspector window.
+2. Select the "Advanced options &gt; Media redundancy" area in the Inspector window.
 3. Click the "Domain settings" button.
-4. Navigate to the "Domain management > MRP domains" area in the Inspector window.
+4. Navigate to the "Domain management &gt; MRP domains" area in the Inspector window.
 
    ![Procedure](images/69784076427_DV_resource.Stream@PNG-en-US.png)
 
@@ -29495,7 +29495,7 @@ Example: PROFINET interface corresponds to the Ethernet interface
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 
    ![Procedure](images/74975417483_DV_resource.Stream@PNG-en-US.png)
 4. In the "Communication drivers" column, select the "Allen-Bradley EtherNet/IP" driver.
@@ -29544,7 +29544,7 @@ To set up the IP address of the HMI device:
 3. Click the Ethernet interface.
 4. Assign the IP address in the inspector window under:
 
-   "General > PROFINET interface > Ethernet addresses"
+   "General &gt; PROFINET interface &gt; Ethernet addresses"
 
 ###### Parameters for the PLC
 
@@ -30330,7 +30330,7 @@ The interfaces are named differently depending on the HMI device.
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 4. In the "Communication drivers" column, select the "Allen-Bradley DF1" driver.
@@ -31339,7 +31339,7 @@ For connections with an Allen-Bradley communication driver, the following counti
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -31492,7 +31492,7 @@ Example: PROFINET interface corresponds to the Ethernet interface
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 
    ![Procedure](images/88652942987_DV_resource.Stream@PNG-en-US.png)
 4. In the "Communication drivers" column, select the "Mitsubishi MC TCPI/IP" driver.
@@ -31541,7 +31541,7 @@ To set up the IP address of the HMI device:
 3. Click the Ethernet interface.
 4. Assign the IP address in the inspector window under:
 
-   "General > PROFINET interface > Ethernet addresses"
+   "General &gt; PROFINET interface &gt; Ethernet addresses"
 
 ###### Parameters for the PLC
 
@@ -32174,7 +32174,7 @@ The interfaces are named differently depending on the HMI device.
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 4. In the "Communication drivers" column, select the "Mitsubishi FX" driver.
@@ -32721,7 +32721,7 @@ For connections with a Mitsubishi communication driver, the following counting m
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -32861,7 +32861,7 @@ Example: PROFINET interface corresponds to the Ethernet interface
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 
    ![Procedure](images/74975417483_DV_resource.Stream@PNG-en-US.png)
 4. Select the "Modicon Modbus TCP" driver in the "Communication driver" column.
@@ -32910,7 +32910,7 @@ To set up the IP address of the HMI device:
 3. Click the Ethernet interface.
 4. Assign the IP address in the inspector window under:
 
-   "General > PROFINET interface > Ethernet addresses"
+   "General &gt; PROFINET interface &gt; Ethernet addresses"
 
 ###### Parameters for the PLC
 
@@ -33410,7 +33410,7 @@ The interfaces are named differently depending on the HMI device.
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 4. In the "Communication drivers" column, select the "Modicon Modbus RTU" driver.
@@ -33618,7 +33618,7 @@ This section contains information on the following topics:
 
 ###### Connecting cable PP1, RS-232, for Modicon (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
-###### Point-to-point cable 1: PLC > PC ...
+###### Point-to-point cable 1: PLC &gt; PC ...
 
 ![Point-to-point cable 1: PLC > PC ...](images/110961991051_DV_resource.Stream@PNG-en-US.png)
 
@@ -33635,7 +33635,7 @@ max. length 15 m
 
 ###### Connecting cable PP2, RS-232, for Modicon (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
-###### Point-to-point cable 2: PLC (TSX Compact) > PC...
+###### Point-to-point cable 2: PLC (TSX Compact) &gt; PC...
 
 ![Point-to-point cable 2: PLC (TSX Compact) > PC...](images/87699284107_DV_resource.Stream@PNG-en-US.png)
 
@@ -34129,7 +34129,7 @@ For connections with a Modicon Modbus communication driver, the following counti
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -34278,7 +34278,7 @@ The interfaces are named differently depending on the HMI device.
 
 1. Double-click the HMI device under "Devices" in the project tree.
 2. Double-click the "Connections" item.
-3. Double-click "<Add>" in the "Connections" editor.
+3. Double-click "&lt;Add&gt;" in the "Connections" editor.
 
    ![Procedure](images/88644293003_DV_resource.Stream@PNG-en-US.png)
 4. Select the "Omron Host Link" driver in the "Communication driver" column.
@@ -34435,7 +34435,7 @@ This section contains information on the following topics:
 
 ###### Connecting cable MP1, RS-232, over converter, for Omron (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
-###### Multipoint cable 1: MP/TP/PC > PLC
+###### Multipoint cable 1: MP/TP/PC &gt; PLC
 
 ![Multipoint cable 1: MP/TP/PC > PLC](images/128791665035_DV_resource.Stream@PNG-en-US.png)
 
@@ -34455,7 +34455,7 @@ shielded, max. length 500 m
 
 ###### Connecting cable MP2, RS-422, for Omron (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
-###### Multipoint cable 2: RS422, MP/TP/PC > SPS_
+###### Multipoint cable 2: RS422, MP/TP/PC &gt; SPS_
 
 ![Multipoint cable 2: RS422, MP/TP/PC > SPS_](images/34168649995_DV_resource.Stream@PNG-en-US.png)
 
@@ -34626,9 +34626,9 @@ The following CPU types are supported in the configuration of the Omron Host Lin
 
 In PLCs of the series CS, CP and CJ, the timers 0-4095 are addressed with T/C 0-2047.
 
-The counters 0-4095 must be addressed with an offset of 2048 (T/C 2048-4095 correspond to the counters 0-2047). Counters and timers with addresses > 2047 cannot be addressed via Host Link.
+The counters 0-4095 must be addressed with an offset of 2048 (T/C 2048-4095 correspond to the counters 0-2047). Counters and timers with addresses &gt; 2047 cannot be addressed via Host Link.
 
-Counters and timers with addresses > 2047 cannot be addressed via Host Link.
+Counters and timers with addresses &gt; 2047 cannot be addressed via Host Link.
 
 Example:
 
@@ -34959,7 +34959,7 @@ Only tags for the "DM", "I/O", "HR", "AR", LR" areas and the "Int" and "UInt" fi
 
 ###### Procedure
 
-Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties > Acknowledgment".
+Create suitable tags on the PLC to acknowledge an error alarm. You assign these tags to an alarm in the "Bit messages" editor. You make the assignment in "Properties &gt; Acknowledgment".
 
 Distinction in terms of acknowledgment:
 
@@ -35142,7 +35142,7 @@ This allows the transfer of the current screen contents from the HMI device to t
 
 ##### Use
 
-Configure and enable the area pointer in "Communication > Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
+Configure and enable the area pointer in "Communication &gt; Connections" before you put it into use. You can create only **one** instance of the "Screen number" area pointer and only on **one** PLC.
 
 The screen number is always transferred to the PLC when a new screen is activated or when the focus within a screen changes from one screen object to another.
 
@@ -35323,10 +35323,10 @@ To use this area pointer, set up the following during the configuration:
 
 - Define the version of configuration. Possible values between 1 and 255.
 
-  You enter the version in the editor "Runtime settings > General" in the "Identification" area.
+  You enter the version in the editor "Runtime settings &gt; General" in the "Identification" area.
 - Data address of the value for the version that is stored in the PLC:
 
-  You enter the data address in the editor "Communication > Connections".
+  You enter the data address in the editor "Communication &gt; Connections".
 
 ##### Connection failure
 
@@ -35550,10 +35550,10 @@ Synchronous data record transfer can be a useful solution, for example, when:
 
 In order to synchronize transfer of data records between the HMI device and the PLC, the following requirements must be met during configuration:
 
-- An area pointer has been set up: "Communication > Connections" editor in "Area pointer".
+- An area pointer has been set up: "Communication &gt; Connections" editor in "Area pointer".
 - The PLC with which the HMI device synchronizes transfer of data records is specified in the recipe:
 
-  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General > Synchronization > Settings"
+  "Recipes" editor in the inspector window the option "Coordinated transfer of data records" under "General &gt; Synchronization &gt; Settings"
 
 ###### Structure of the data area
 
@@ -35782,7 +35782,7 @@ You can start the diagnostics module as separate application via the Windows Sta
 
 #### Logbook file
 
-A logbook file with the name <Name.log> is created by "Channel Diagnosis" for each configured connection. Important information and errors are displayed in this file. The contents depend on the communication driver.
+A logbook file with the name &lt;Name.log&gt; is created by "Channel Diagnosis" for each configured connection. Important information and errors are displayed in this file. The contents depend on the communication driver.
 
 The creation of the file and the displayed texts are not configurable.
 
@@ -35792,7 +35792,7 @@ Each entry in the file consists of a date stamp and time stamp, the flag name, a
 
 #### Trace file
 
-A trace file, in which additional information and errors are displayed, with the name <Name.trc> can also be created for each configured connection. The use of the trace file is selectable in Runtime. When the function is activated a message appears that the runtime of the communication is affected by this.
+A trace file, in which additional information and errors are displayed, with the name &lt;Name.trc&gt; can also be created for each configured connection. The use of the trace file is selectable in Runtime. When the function is activated a message appears that the runtime of the communication is affected by this.
 
 Each entry in the trace file contains a time stamp with appended flag name and description.
 
@@ -35843,7 +35843,7 @@ The channel diagnostics "Chanel Diagnosis" can also be started separately from W
 
 #### Procedure
 
-1. In the Windows Start menu, select the entry "WinCC Channel Diagnostics" under "All Programs > Siemens Automation > Runtime Systems > WinCC Runtime Professional".
+1. In the Windows Start menu, select the entry "WinCC Channel Diagnostics" under "All Programs &gt; Siemens Automation &gt; Runtime Systems &gt; WinCC Runtime Professional".
 2. "WinCC Channel Diagnosis" opens.
 3. The configured connections appear in the "Channels/Connection" tab. If there is no WinCC project in Runtime, the message "No connection to WinCC" appears.
 4. Click a connection. The status information for this connection is displayed in the area on the right.
@@ -36032,7 +36032,7 @@ You can evaluate the time response of a connection with these performance tags.
 >
 > When you link the connection-specific performance tags to objects, the tag assignment will have a red background in the engineering system. Access in Runtime still works.
 
-Use the @<...>@ConnectionStateEx system tags to determine the status of a connection.
+Use the @&lt;...&gt;@ConnectionStateEx system tags to determine the status of a connection.
 
 #### Creating performance tags
 
@@ -36056,22 +36056,22 @@ Performance tags can be assigned to the following data types:
 | --- | --- |
 | Alarm logging |  |
 | @PRF_ALGRT_RESET | The reset tag resets the values of the following performance tags:  - @PRF_ALGRT_CHNCON_..._AVERAGE - @PRF_ALGRT_CHNCON_..._PEAK   The @PRF_ALGRT_... counter tags without relation to the communication driver are also reset. |
-| @PRF_ALGRT_CHNCON_<...>_ALARMS_PER_SECOND <sup>2)</sup> | Number of alarms generated per second that are transferred via the connection |
-| @PRF_ALGRT_CHNCON_<...>_ALARMS_PER_SECOND_AVERAGE | Average number of alarms per second |
-| @PRF_ALGRT_CHNCON_<...>_ALARMS_PER_SECOND_PEAK | Maximum number of alarms per second |
+| @PRF_ALGRT_CHNCON_&lt;...&gt;_ALARMS_PER_SECOND <sup>2)</sup> | Number of alarms generated per second that are transferred via the connection |
+| @PRF_ALGRT_CHNCON_&lt;...&gt;_ALARMS_PER_SECOND_AVERAGE | Average number of alarms per second |
+| @PRF_ALGRT_CHNCON_&lt;...&gt;_ALARMS_PER_SECOND_PEAK | Maximum number of alarms per second |
 | **Tags** |  |
-| @PRF_DMRT_CHNCON_<...>_RESET | The reset tag resets the values of the following performance tags:  - @PRF_DMRT_CHNCON_<...>..._TOTAL - @PRF_DMRT_CHNCON_<...>_RESET   The reset applies to all counter tags that were created for the same connection. |
-| @PRF_DMRT_CHNCON_<...>_TAG_READ_BYTES_PER_SECOND <sup>2)</sup> | Bytes read/second  Bits are rounded up to a byte.  Metadata is not included, e.g. time stamp or SetValue Callback data. |
-| @PRF_DMRT_CHNCON_<...>_TAG_READ_BYTES_TOTAL | Bytes read since activation of Runtime  Bits are rounded up to a byte.  Metadata is not included, e.g. time stamp or SetValue Callback data. |
-| @PRF_DMRT_CHNCON_<...>_TAG_READS_PENDING | Started read requests that are not yet complete  A constantly rising value indicates a system overload. Possible cause:  - A data source or connection is not processing the read requests fast enough because it is overloaded or blocked. |
-| @PRF_DMRT_CHNCON_<...>_TAG_READS_PER_SECOND <sup>2)</sup> | Tags read/second |
-| @PRF_DMRT_CHNCON_<...>_TAG_READS_TOTAL | Tags read since activation of Runtime |
-| @PRF_DMRT_CHNCON_<...>_TAG_WRITES_PENDING | Started write requests that are not yet complete  A constantly rising value indicates a system overload. Possible cause:  - A data source or connection is not processing the write requests fast enough because it is overloaded or blocked. |
-| @PRF_DMRT_CHNCON_<...>_TAG_WRITES_PER_SECOND 2<sup>)</sup> | Tags written/second |
-| @PRF_DMRT_CHNCON_<...>_TAG_WRITES_TOTAL | Tags written since activation of Runtime |
-| @PRF_DMRT_CHNCON_<...>_TAG_WRITTEN_BYTES_PER_SECOND <sup>2)</sup> | Bytes written/second  Bits are rounded up to a byte.  Metadata is not included, e.g. time stamp or SetValue Callback data. |
-| @PRF_DMRT_CHNCON_<...>_TAG_WRITTEN_BYTES_TOTAL | Bytes written since activation of Runtime  Bits are rounded up to a byte.  Metadata is not included, e.g. time stamp or SetValue Callback data. |
-| 1) <...> stands for the name of the communication connection, e.g. "@PRF_DMRT_CHNCON_S7-417_TAG_READS_PER_SECOND".  2) The information "PER_SECOND" relates to the last second before the tag update. |  |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_RESET | The reset tag resets the values of the following performance tags:  - @PRF_DMRT_CHNCON_&lt;...&gt;..._TOTAL - @PRF_DMRT_CHNCON_&lt;...&gt;_RESET   The reset applies to all counter tags that were created for the same connection. |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_READ_BYTES_PER_SECOND <sup>2)</sup> | Bytes read/second  Bits are rounded up to a byte.  Metadata is not included, e.g. time stamp or SetValue Callback data. |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_READ_BYTES_TOTAL | Bytes read since activation of Runtime  Bits are rounded up to a byte.  Metadata is not included, e.g. time stamp or SetValue Callback data. |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_READS_PENDING | Started read requests that are not yet complete  A constantly rising value indicates a system overload. Possible cause:  - A data source or connection is not processing the read requests fast enough because it is overloaded or blocked. |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_READS_PER_SECOND <sup>2)</sup> | Tags read/second |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_READS_TOTAL | Tags read since activation of Runtime |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_WRITES_PENDING | Started write requests that are not yet complete  A constantly rising value indicates a system overload. Possible cause:  - A data source or connection is not processing the write requests fast enough because it is overloaded or blocked. |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_WRITES_PER_SECOND 2<sup>)</sup> | Tags written/second |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_WRITES_TOTAL | Tags written since activation of Runtime |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_WRITTEN_BYTES_PER_SECOND <sup>2)</sup> | Bytes written/second  Bits are rounded up to a byte.  Metadata is not included, e.g. time stamp or SetValue Callback data. |
+| @PRF_DMRT_CHNCON_&lt;...&gt;_TAG_WRITTEN_BYTES_TOTAL | Bytes written since activation of Runtime  Bits are rounded up to a byte.  Metadata is not included, e.g. time stamp or SetValue Callback data. |
+| 1) &lt;...&gt; stands for the name of the communication connection, e.g. "@PRF_DMRT_CHNCON_S7-417_TAG_READS_PER_SECOND".  2) The information "PER_SECOND" relates to the last second before the tag update. |  |
 
 ---
 

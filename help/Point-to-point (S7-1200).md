@@ -348,7 +348,7 @@ The minimum data size that can be sent by the "PTP_SEND" instruction is one byte
 | LENGTH parameter | BUFFER parameter | Description |
 | --- | --- | --- |
 | LENGTH = 0 | Not used | The complete data is sent as defined by the BUFFER parameter. If LENGTH = 0, you do not need to specify the number of bytes transferred. |
-| LENGTH > 0 | Elementary data type | The LENGTH value must contain the byte count of this data type. Otherwise, data is not transferred and error 8088 is output. |
+| LENGTH &gt; 0 | Elementary data type | The LENGTH value must contain the byte count of this data type. Otherwise, data is not transferred and error 8088 is output. |
 | STRUCT | The LENGTH value can contain a byte count that is smaller than the complete byte length of the structure. In this case, only the first LENGTH bytes are transferred. |  |
 | ARRAY | The LENGTH value can contain a byte count that is smaller than the complete byte length of the field. In this case, only the field elements that fit completely in the LENGTH bytes are transferred.  The LENGTH value must be a multiple of the byte count of the data elements. Otherwise, STATUS = 8088, ERROR = 1, and no data is transferred. |  |
 | STRING | The complete memory arrangement of the character sequence format will be transmitted as well as the information about maximum length of the character string and the actual length of the character string.  The LENGTH value must contain bytes for maximum length, actual length, and the characters of the character string.   With the data type STRING, all lengths and characters have the size of one byte.  If a character string is used for the BUFFER parameter, the LENGTH value must also contain two bytes for the two length fields. |  |

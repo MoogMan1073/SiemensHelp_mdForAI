@@ -69,7 +69,7 @@ The HMI device wizard will guide you through each dialog step by step and help y
 >
 > If possible, the HMI device wizard makes a connection between the HMI device and controller with the default interface type of the HMI device.
 >
-> After configuration with the HMI device wizard, check the connection in the "Devices & Networks" editor.
+> After configuration with the HMI device wizard, check the connection in the "Devices &amp; Networks" editor.
 
 ---
 
@@ -556,7 +556,7 @@ Logs listing all changes made to the global library are created when global libr
 To open the logs of a global library, follow these steps:
 
 1. Open the global library in the "Libraries" task card.
-2. Open "Common data > Logs" in the lower-level folder.
+2. Open "Common data &gt; Logs" in the lower-level folder.
 3. Double-click the required log.
 
    The log opens in the work area.
@@ -579,7 +579,7 @@ The "Libraries" task card or the library management is open.
 ##### Procedure
 
 1. Select a folder within the project library or individual types.
-2. Select "Update types > Project..." from the shortcut menu.
+2. Select "Update types &gt; Project..." from the shortcut menu.
 
    A dialog opens.
 3. Select either the entire project or individual devices for the update.
@@ -615,7 +615,7 @@ Each of the following elements can be selected as source for the update:
 To update a library with the contents of a different library, follow these steps:
 
 1. Select a folder within the library or individual types.
-2. Right-click the source and select the "Update types > Library..." command from the shortcut menu.
+2. Right-click the source and select the "Update types &gt; Library..." command from the shortcut menu.
 
    The "Update library" dialog opens.
 3. Select the type of library you want to update:
@@ -639,9 +639,9 @@ To update a library with the contents of a different library, follow these steps
   If a more recent version of a type already exists in the target library, the latest version is nevertheless copied from the source library and automatically assigned a newer version number.
 - A log listing all performed changes to the target library is created for the update process.
 
-  If you have updated the project library, you can find the log in the project tree under "Common data > Logs".
+  If you have updated the project library, you can find the log in the project tree under "Common data &gt; Logs".
 
-  If you have updated a global library, you can find the log in the "Common data > Logs" folder in the level below the global library.
+  If you have updated a global library, you can find the log in the "Common data &gt; Logs" folder in the level below the global library.
 
 #### Exporting and importing library texts (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -1572,11 +1572,11 @@ This section describes the required format of the file for the import of recipes
 
 The structure of the import file is fixed. The following example shows the structure of a recipe containing two recipe elements, each with two data records:
 
-"ID";<**Name, recipe element 1**>;< **Name, recipe element 2**>;"LastUser";"LastAccess[UTC]"<Line break>
+"ID";&lt;**Name, recipe element 1**&gt;;&lt; **Name, recipe element 2**&gt;;"LastUser";"LastAccess[UTC]"&lt;Line break&gt;
 
-<**Recipe data record number 1**>;<**Recipe data record 1 value 1**>;<**Recipe data record 1 value 2**>;"**<Last user 1>**";**<Date and time 1>**<Line break>
+&lt;**Recipe data record number 1**&gt;;&lt;**Recipe data record 1 value 1**&gt;;&lt;**Recipe data record 1 value 2**&gt;;"**&lt;Last user 1&gt;**";**&lt;Date and time 1&gt;**&lt;Line break&gt;
 
-<**Recipe data record number 2**>;<**Recipe data record 2 value 1**>;<**Recipe data record 2 value 2**>;"**<Last user 2>**";**<Date and time 2>**<Line break>
+&lt;**Recipe data record number 2**&gt;;&lt;**Recipe data record 2 value 1**&gt;;&lt;**Recipe data record 2 value 2**&gt;;"**&lt;Last user 2&gt;**";**&lt;Date and time 2&gt;**&lt;Line break&gt;
 
 ##### ID of the language
 
@@ -1746,15 +1746,15 @@ Meaning of the entries
 | --- | --- |
 | ID | The alarm number is used to reference an alarm. The alarm number is unique. Alarms with identical alarm numbers are overwritten during import. An alarm without an existing alarm number is created. |
 | Name | Name of the analog alarm |
-| Event text [de-DE], Alarm text | Displays the alarm text. The field designation contains a language ID. Alarm texts must be assigned a language ID for import.  An expression with a reference ID will be added to the alarm text if the text has a dynamic parameter. Example: text <field ref="0" />. Use the ID to assign dynamic parameters to alarm texts. |
-| FeldInfo | Specifies whether the alarm text contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Tag: <ref id = 0; type = AlarmTag; Tag = Tag1; DisplayType = Decimal; Length = 5;>  Text list: <ref id = 1; type = CommonTextList; TextList = Textlist1; Tag = tag 2; Length = 5;> |
+| Event text [de-DE], Alarm text | Displays the alarm text. The field designation contains a language ID. Alarm texts must be assigned a language ID for import.  An expression with a reference ID will be added to the alarm text if the text has a dynamic parameter. Example: text &lt;field ref="0" /&gt;. Use the ID to assign dynamic parameters to alarm texts. |
+| FeldInfo | Specifies whether the alarm text contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Tag: &lt;ref id = 0; type = AlarmTag; Tag = Tag1; DisplayType = Decimal; Length = 5;&gt;  Text list: &lt;ref id = 1; type = CommonTextList; TextList = Textlist1; Tag = tag 2; Length = 5;&gt; |
 | Class | The class of an alarm determines whether or not the alarm must be acknowledged. It can also be used to determine how the alarm appears when it is displayed on the HMI device. The alarm class also determines whether and where the corresponding alarm will be logged. |
 | Group | Indicates the allocation to an alarm group. If an alarm belongs to a group with other alarms, it can be acknowledged together with these alarms of the same group in a single operation. |
 | Trigger tag | Specifies the tag monitored for limit value violation. |
 | Delay time value | Specifies the delay time. The alarm is not triggered until the duration of the limit value violation equals the specified delay time. |
 | Delay time unit | Specifies the time unit for the delay. |
 | Report | Enables reporting of the specific alarm on a printer.  True or "1" = Reporting enabled.  False or "0" = Reporting disabled.  Reporting must also be globally enabled in the project. |
-| Info text [de-DE], Info text | The tooltip is an optional property of an alarm. Tooltips can contain additional information about the alarm. A tooltip will be displayed in a separate window on the HMI device when the operator presses the <HELP> key.  The field designation contains a language ID. |
+| Info text [de-DE], Info text | The tooltip is an optional property of an alarm. Tooltips can contain additional information about the alarm. A tooltip will be displayed in a separate window on the HMI device when the operator presses the &lt;HELP&gt; key.  The field designation contains a language ID. |
 
 ##### Example of the worksheet "Limits"
 
@@ -1809,8 +1809,8 @@ Meaning of the entries
 | --- | --- |
 | ID | The alarm number is used to reference an alarm. The alarm number is unique. Alarms with identical alarm numbers are overwritten during import. An alarm without an existing alarm number is created. |
 | Name | Name of the analog alarm |
-| Event text [de-DE], Alarm text | Displays the alarm text. The field designation contains a language ID. For import, a language ID must be assigned to alarm text.  An expression with a reference ID will be added to the alarm text if the text has a dynamic parameter. Example: text <field ref="0" />. Use the ID to assign dynamic parameters to alarm texts. |
-| FeldInfo | Specifies whether the alarm text contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Tag: <ref id = 0; type = AlarmTag; Tag = Tag1; DisplayType = Decimal; Length = 5;>  Text list: <ref id = 1; type = CommonTextList; TextList = Textlist1; Tag = tag 2; Length = 5;> |
+| Event text [de-DE], Alarm text | Displays the alarm text. The field designation contains a language ID. For import, a language ID must be assigned to alarm text.  An expression with a reference ID will be added to the alarm text if the text has a dynamic parameter. Example: text &lt;field ref="0" /&gt;. Use the ID to assign dynamic parameters to alarm texts. |
+| FeldInfo | Specifies whether the alarm text contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Tag: &lt;ref id = 0; type = AlarmTag; Tag = Tag1; DisplayType = Decimal; Length = 5;&gt;  Text list: &lt;ref id = 1; type = CommonTextList; TextList = Textlist1; Tag = tag 2; Length = 5;&gt; |
 | Class | The class of an alarm determines whether or not the alarm must be acknowledged. It can also be used to determine how the alarm appears when it is displayed on the HMI device. The alarm class also determines whether and where the corresponding alarm will be logged. |
 | Group | Indicates the allocation to an alarm group. If an alarm belongs to a group with other alarms, it can be acknowledged together with these alarms of the same group in a single operation. |
 | Trigger tag | Specifies the tag containing the bit that triggers the alarm. |
@@ -1822,7 +1822,7 @@ Meaning of the entries
 | Delay time value | Specifies the delay time. The alarm is not triggered until the duration of the limit value violation equals the specified delay time. |
 | Delay time unit | Specifies the time unit for the delay. |
 | Report | Enables reporting of the specific alarm on a printer.  True or "1" = Reporting enabled.  False or "0" = Reporting disabled.  Reporting must also be globally enabled in the project. |
-| Info text [de-DE], Info text | The tooltip is an optional property of an alarm. Tooltips can contain additional information about the alarm. A tooltip will be displayed in a separate window on the HMI device when the operator presses the <HELP> key.  The field designation contains a language ID. |
+| Info text [de-DE], Info text | The tooltip is an optional property of an alarm. Tooltips can contain additional information about the alarm. A tooltip will be displayed in a separate window on the HMI device when the operator presses the &lt;HELP&gt; key.  The field designation contains a language ID. |
 
 > **Note**
 >
@@ -1865,13 +1865,13 @@ Meaning of the entries
 | --- | --- |
 | ID | Shows the number of the analog alarm. The alarm number must be unique in the project. |
 | Name | Shows the name of the analog alarm. The name is used to reference an alarm. Alarms with identical names are overwritten during import. An alarm without an existing name is created. |
-| Event text [de-DE], Alarm text | Displays the alarm text. The field designation contains a language ID. Alarm texts must be assigned a language ID for import.  An expression with a reference ID will be added to the alarm text if the text has a dynamic parameter. Example: text <field ref="0" />. Use the ID to assign dynamic parameters to alarm texts. |
-| FeldInfo | Specifies whether the alarm text contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Parameter: <ref id = 0; type = AlarmAnalogParameter; Parameter = Limit; DisplayType = Decimal; Length = 1; Precision = 0; Alignment = Right; ZeroPadding = False;>  System parameters: <ref id = 0; type = CommonSystemParameter; SystemParameter = UserName;> |
+| Event text [de-DE], Alarm text | Displays the alarm text. The field designation contains a language ID. Alarm texts must be assigned a language ID for import.  An expression with a reference ID will be added to the alarm text if the text has a dynamic parameter. Example: text &lt;field ref="0" /&gt;. Use the ID to assign dynamic parameters to alarm texts. |
+| FeldInfo | Specifies whether the alarm text contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Parameter: &lt;ref id = 0; type = AlarmAnalogParameter; Parameter = Limit; DisplayType = Decimal; Length = 1; Precision = 0; Alignment = Right; ZeroPadding = False;&gt;  System parameters: &lt;ref id = 0; type = CommonSystemParameter; SystemParameter = UserName;&gt; |
 | Class | The alarm class of an alarm determines whether or not the alarm has to be acknowledged. It can also be used to determine how the alarm appears when it is displayed on the HMI device. The alarm class also determines whether and where the corresponding alarm will be logged. |
 | Group | Indicates the allocation to an alarm group. If an alarm belongs to a group with other alarms, it can be acknowledged along with these alarms of the same group in a single operation. |
 | Priority | Indicates alarm priority. You can sort the alarms in the alarm view by priority. Range: 0 -16 |
-| CPU number | Specifies the CPU number. This option is only activated if you have enabled the "CPU/PLC number" alarm text block in the "Alarm blocks > System blocks" tab in the "HMI alarms" editor. |
-| PLC number | Shows the PLC number. This option is only activated if you have enabled the "CPU/PLC number" alarm text block in the "Alarm blocks > System blocks" tab in the "HMI alarms" editor. |
+| CPU number | Specifies the CPU number. This option is only activated if you have enabled the "CPU/PLC number" alarm text block in the "Alarm blocks &gt; System blocks" tab in the "HMI alarms" editor. |
+| PLC number | Shows the PLC number. This option is only activated if you have enabled the "CPU/PLC number" alarm text block in the "Alarm blocks &gt; System blocks" tab in the "HMI alarms" editor. |
 | Trigger tag | Specifies the tag monitored for limit value violation. |
 | Verzögerung | Specifies the delay time. The alarm is not triggered until the duration of the limit value violation equals the specified delay time. |
 | Delay time unit | Specifies the time unit for the delay. |
@@ -1883,7 +1883,7 @@ Meaning of the entries
 | Alarm annonciation | Indicates whether an alarm is being suppressed.  True = suppressed alarm. |
 | Display suppresion mask | Indicates the display suppression method. |
 | Additonal Text | Shows the additional alarm text. |
-| Info text [de-DE], Info text | The tooltip is an optional property of an alarm. Tooltips can contain additional information about the alarm. A tooltip will be displayed in a separate window on the HMI device when the operator presses the <HELP> key.  The field designation contains a language ID. |
+| Info text [de-DE], Info text | The tooltip is an optional property of an alarm. Tooltips can contain additional information about the alarm. A tooltip will be displayed in a separate window on the HMI device when the operator presses the &lt;HELP&gt; key.  The field designation contains a language ID. |
 
 ##### Example of the worksheet "Limits"
 
@@ -1938,13 +1938,13 @@ Meaning of the entries
 | --- | --- |
 | ID | Shows the number of the discrete alarm. The alarm number is unique. |
 | Name | Shows the name of the discrete alarm. The name is used to reference an alarm. Alarms with identical names are overwritten during import. An alarm without an existing name is created. |
-| Event text [de-DE], Alarm text | Displays the alarm text. The field designation contains a language ID. Alarm texts must be assigned a language ID for import.  An expression with a reference ID will be added to the alarm text if the text has a dynamic parameter. Example: text <field ref="0" />. Use the ID to assign dynamic parameters to alarm texts. |
-| FeldInfo | Specifies whether the alarm text contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Parameter: <ref id = 0; type = AlarmDiscreteParameter; Parameter = Parameter 1; Tag = HMI_Variable_1; DisplayType = Decimal; Length = 5; Precision = 0; Alignment = Right; ZeroPadding = False;>  System parameters: <ref id = 0; type = CommonSystemParameter; System Parameter = UserName;> |
+| Event text [de-DE], Alarm text | Displays the alarm text. The field designation contains a language ID. Alarm texts must be assigned a language ID for import.  An expression with a reference ID will be added to the alarm text if the text has a dynamic parameter. Example: text &lt;field ref="0" /&gt;. Use the ID to assign dynamic parameters to alarm texts. |
+| FeldInfo | Specifies whether the alarm text contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Parameter: &lt;ref id = 0; type = AlarmDiscreteParameter; Parameter = Parameter 1; Tag = HMI_Variable_1; DisplayType = Decimal; Length = 5; Precision = 0; Alignment = Right; ZeroPadding = False;&gt;  System parameters: &lt;ref id = 0; type = CommonSystemParameter; System Parameter = UserName;&gt; |
 | Class | The alarm class of an alarm determines whether or not the alarm has to be acknowledged. It can also be used to determine how the alarm appears when it is displayed on the HMI device. The alarm class also determines whether and where the corresponding alarm will be logged. |
 | Group | Indicates the allocation to an alarm group. If an alarm belongs to a group with other alarms, it can be acknowledged along with these alarms of the same group in a single operation. |
 | Priority | Indicates alarm priority. You can sort the alarms in the alarm view by priority. Range: 0 -16 |
-| CPU number | Specifies the CPU number. This option is only activated if you have enabled the "CPU/PLC number" alarm text block in the "Alarm blocks > System blocks" tab in the "HMI alarms" editor. |
-| PLC number | Shows the PLC number. This option is only activated if you have enabled the "CPU/PLC number" alarm text block in the "Alarm blocks > System blocks" tab in the "HMI alarms" editor. |
+| CPU number | Specifies the CPU number. This option is only activated if you have enabled the "CPU/PLC number" alarm text block in the "Alarm blocks &gt; System blocks" tab in the "HMI alarms" editor. |
+| PLC number | Shows the PLC number. This option is only activated if you have enabled the "CPU/PLC number" alarm text block in the "Alarm blocks &gt; System blocks" tab in the "HMI alarms" editor. |
 | Trigger tag | Specifies the tag containing the bit that triggers the alarm. |
 | Trigger bit | Specifies the number of the bit that triggers the alarm. |
 | Trigger mode | Indicates the method used for monitoring the limit value. |
@@ -1957,7 +1957,7 @@ Meaning of the entries
 | Alarm annonciation | Indicates whether an alarm is being suppressed.  True = suppressed alarm. |
 | Display suppresion mask | Indicates the display suppression method. |
 | Additonal Text | Shows the additional alarm text. |
-| Info text [de-DE], Info text | The tooltip is an optional property of an alarm. Tooltips can contain additional information about the alarm. A tooltip will be displayed in a separate window on the HMI device when the operator presses the <HELP> key.  The field designation contains a language ID. |
+| Info text [de-DE], Info text | The tooltip is an optional property of an alarm. Tooltips can contain additional information about the alarm. A tooltip will be displayed in a separate window on the HMI device when the operator presses the &lt;HELP&gt; key.  The field designation contains a language ID. |
 
 > **Note**
 >
@@ -2077,7 +2077,7 @@ To import files with the version number 1.2 into a project that was created prio
 ##### Preparing files for the import
 
 1. Open the corresponding file in Microsoft Excel.
-2. Select "File > Properties > Advanced properties".
+2. Select "File &gt; Properties &gt; Advanced properties".
 
    The "Properties" dialog is opened.
 3. Switch to the "Fit to size" task card.
@@ -2262,7 +2262,7 @@ WinCC has an export function for text lists.
 
 - The WinCC project for the export is open.
 - Text lists have been created in the project.
-- The "Text & graphics lists" editor is open.
+- The "Text &amp; graphics lists" editor is open.
 
 ##### Exporting text lists
 
@@ -2302,7 +2302,7 @@ You then import text lists from an xlsx file to WinCC.
 - An xlsx file with text lists has been created.
 - The structure of the xlsx file meets the requirements.
 - The WinCC project for the import is open.
-- The "Text & graphics lists" editor is open.
+- The "Text &amp; graphics lists" editor is open.
 
 ##### Importing text lists
 
@@ -2370,8 +2370,8 @@ Meaning of the entries
 | Parent | Specifies the name of the corresponding text list. |
 | DefaultEntry | Indicates whether the text list entry is a default entry. The default entry is always displayed when the tag has an undefined value. |
 | Value | Specifies the tag integer values or value ranges which are assigned to the text entries in the text list. |
-| Text | Shows the text list entry. The field designation contains a language ID. Text list entries must be assigned a language ID for import.   An expression with a reference ID will be added to the text if the text list entry has a dynamic parameter. Example: text <field ref="0" />. Use the ID to assign the dynamic parameter to a text list entry. |
-| FeldInfo | Specifies whether the text list contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Tag: <ref id = 0; type = CommonTagDisplayFormat; Tag = tag 1; DisplayType = Decimal; DisplayFormat = 9;>  Text list: <ref id = 1; type = CommonTextList; TextList = Textliste_1; Tag = tag 2; Length = 5;>  PLC tag: <ref id = 0; type = CommonControlTagDisplayFormat; DisplayType = Decimal; DisplayFormat = 9;> |
+| Text | Shows the text list entry. The field designation contains a language ID. Text list entries must be assigned a language ID for import.   An expression with a reference ID will be added to the text if the text list entry has a dynamic parameter. Example: text &lt;field ref="0" /&gt;. Use the ID to assign the dynamic parameter to a text list entry. |
+| FeldInfo | Specifies whether the text list contains dynamic parameters. The settings are separated by a semicolon ";".   Example of dynamic parameters:  Tag: &lt;ref id = 0; type = CommonTagDisplayFormat; Tag = tag 1; DisplayType = Decimal; DisplayFormat = 9;&gt;  Text list: &lt;ref id = 1; type = CommonTextList; TextList = Textliste_1; Tag = tag 2; Length = 5;&gt;  PLC tag: &lt;ref id = 0; type = CommonControlTagDisplayFormat; DisplayType = Decimal; DisplayFormat = 9;&gt; |
 
 ---
 
@@ -2406,7 +2406,7 @@ Edit the xlsx file or send it to a translator. Import the texts once they have b
 
 To import a file with project texts, proceed as follows:
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The lower-level elements will be displayed.
 2. Double-click on "Project texts". The "Project texts" editor will open.
@@ -2433,7 +2433,7 @@ You can exchange the file with the translators and import it back to the project
 
 To export individual project texts, proceed as follows:
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The child elements are displayed.
 2. Double-click on "Project texts". The "Project texts" editor will open.
@@ -2846,13 +2846,13 @@ The following fonts no longer belong to the standard installation pack in Window
 - Gulim (is used as standard for displaying Korean characters)
 - MingLiU (is used as standard for displaying traditional Chinese characters)
 
-If a font is not installed, an error message is displayed in the engineering system. The error message appears in every TIA Portal session if you navigate to "Runtime settings > Language and font" or open screen objects which use the missing font. The missing font is replaced with a suitable font by the TIA Portal.
+If a font is not installed, an error message is displayed in the engineering system. The error message appears in every TIA Portal session if you navigate to "Runtime settings &gt; Language and font" or open screen objects which use the missing font. The missing font is replaced with a suitable font by the TIA Portal.
 
 Missing fonts cause problems during compilation and in Runtime.
 
 For example, if you open an error-free V13 SP1 project that was created on a configuration PC with Windows 7 on a configuration PC of V14 SP1 with the Windows 10 operating system, error messages can be output during compilation because of the fonts that are not installed.
 
-You can find more detailed information on fonts in Windows 10 at <https://support.microsoft.com/en-us/kb/3083806>
+You can find more detailed information on fonts in Windows 10 at [https://support.microsoft.com/en-us/kb/3083806](https://support.microsoft.com/en-us/kb/3083806)
 
 Solution:
 
@@ -2920,10 +2920,10 @@ You can switch between the installed user interface languages during configurati
 
 ##### Procedure
 
-1. Select "Options > Settings" in the menu.
+1. Select "Options &gt; Settings" in the menu.
 
    The "Settings" dialog box is opened.
-2. Select the desired user interface language under "General > General settings".
+2. Select the desired user interface language under "General &gt; General settings".
 
 ##### Result
 
@@ -2947,7 +2947,7 @@ The project languages are set in the "Project languages" editor. You define whic
 
 ##### Enable project languages
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The lower-level elements will be displayed.
 2. Double-click on "Project languages".
@@ -2989,9 +2989,9 @@ Several project languages have been activated.
 
 ##### Selecting the reference language and editing language
 
-1. Click the arrow in the drop-down list in the "General > Editing language" section.
+1. Click the arrow in the drop-down list in the "General &gt; Editing language" section.
 2. Click on the required language in the drop-down list, for example, German.
-3. Click on the arrow in the drop-down list in the "General > Reference language" section.
+3. Click on the arrow in the drop-down list in the "General &gt; Reference language" section.
 4. Click on the required language in the drop-down list, for example, English.
 
 The language selection is displayed in the list box.
@@ -3080,7 +3080,7 @@ In the interests of clarity, a distinction is drawn between user texts and syste
 - User texts are texts created by the user.
 - System texts are texts created automatically and which are a product of configuration in the project.
 
-The project texts are managed in the project text editor. This can be found in the project tree under "Languages & Resources > Project texts".
+The project texts are managed in the project text editor. This can be found in the project tree under "Languages &amp; Resources &gt; Project texts".
 
 ##### Examples of multilingual project texts
 
@@ -3133,7 +3133,7 @@ If you use several languages in your project, you can translate individual texts
 
 Proceed as follows to translate individual texts:
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The elements below this are displayed.
 2. Double-click on "Project texts".
@@ -3181,12 +3181,12 @@ There is at least one translation into a different project language for an input
 
 To display the translation of an input cell in a reference language, follow these steps:
 
-1. Select "Tasks > Languages & resources" in the task card.
+1. Select "Tasks &gt; Languages &amp; resources" in the task card.
 2. Select a reference language from the "Reference language" drop-down list.
 
 ##### Result
 
-The reference language is preset. If you click in a text block, translations that already exist in other project languages are shown in the "Tasks > Reference text" task card.
+The reference language is preset. If you click in a text block, translations that already exist in other project languages are shown in the "Tasks &gt; Reference text" task card.
 
 ---
 
@@ -3214,7 +3214,7 @@ You can exchange the file with the translators and import it back to the project
 
 To export individual project texts, proceed as follows:
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The child elements are displayed.
 2. Double-click on "Project texts". The "Project texts" editor will open.
@@ -3276,7 +3276,7 @@ Edit the xlsx file or send it to a translator. Import the texts once they have b
 
 To import a file with project texts, proceed as follows:
 
-1. Click on the arrow to the left of "Languages & resources" in the project tree.
+1. Click on the arrow to the left of "Languages &amp; resources" in the project tree.
 
    The lower-level elements will be displayed.
 2. Double-click on "Project texts". The "Project texts" editor will open.
@@ -3322,7 +3322,7 @@ You use the "Project Graphics" editor to manage the configured graphic objects i
 
 ##### Opening the "Project graphics" editor
 
-Double-click in the project tree on "Languages and resources > Project graphics".
+Double-click in the project tree on "Languages and resources &gt; Project graphics".
 
 ##### Work area
 
@@ -3376,12 +3376,12 @@ You use the "Graphics" editor to import graphics you want to use in screens in t
    The language-dependent version is inserted in the table in place of the reference language graphic.
 7. Then, in the "Default graphic" column, import a graphic to be displayed in runtime for those languages for which there is no language-specific graphic.
 
-You can also drag&drop a graphic from Windows Explorer to the relevant position in the "Graphics library" table.
+You can also drag&amp;drop a graphic from Windows Explorer to the relevant position in the "Graphics library" table.
 
 ##### Displaying graphics in the HMI device preview
 
 1. Click on a graphic in the table.
-2. Select the required HMI device under "Properties > Graphics settings > Device preview" in the Inspector window.
+2. Select the required HMI device under "Properties &gt; Graphics settings &gt; Device preview" in the Inspector window.
 
    The graphic will then be displayed as it will appear in runtime on the selected HMI device.
 
@@ -3424,7 +3424,7 @@ To display graphics that have been created in an external graphics program in yo
    The graphic will be imported to the project and displayed in all cells in this row in the "Graphics" editor.
 4. Click in the corresponding cell of a language for which a language-dependent version of this graphic exists.
 5. Select "Insert object" from the shortcut menu. The "Insert object" dialog box opens.
-6. Select "Insert object > Create new" and an object type in the dialog.
+6. Select "Insert object &gt; Create new" and an object type in the dialog.
 7. Click "OK." The associated graphic program is opened.
 8. Close the graphics program once you have created the graphic.
 
@@ -3491,9 +3491,9 @@ You can decide which project languages are to be used in Runtime on a particular
 
 When Runtime starts, the project is displayed according to the most recent language setting. When Runtime starts the first time, the language with the lowest number in the "Order for language setting" is displayed.
 
-##### "Language & font" Runtime setting
+##### "Language &amp; font" Runtime setting
 
-Configure the following under "Language & font":
+Configure the following under "Language &amp; font":
 
 - The project languages available as Runtime languages for the respective HMI device.
 - The order in which the languages are switched.
@@ -3523,7 +3523,7 @@ The license status of the fonts is also shown in the "Download font" area. If a 
 
 ##### Use of multilingual graphics (RT Professional)
 
-Graphics are stored in the runtime project in the language that you specified in the Runtime settings under "Language & font > Language selection > Runtime language for non-multilingual objects".
+Graphics are stored in the runtime project in the language that you specified in the Runtime settings under "Language &amp; font &gt; Language selection &gt; Runtime language for non-multilingual objects".
 
 The use of different graphics for individual runtime languages has no effect when switching languages in runtime.
 
@@ -3582,7 +3582,7 @@ Regardless of the method used, the button names must be translated into each of 
 
 ##### Introduction
 
-The "Language & Font" editor shows all project languages available in the project. Here you select which project languages are to be available as runtime languages on the HMI device.
+The "Language &amp; Font" editor shows all project languages available in the project. Here you select which project languages are to be available as runtime languages on the HMI device.
 
 ##### Requirements
 
@@ -3591,7 +3591,7 @@ Multiple languages have been selected in the "Project languages" editor.
 ##### Procedure
 
 1. Double-click on "Runtime settings" in the project tree.
-2. Click on "Language & Font".
+2. Click on "Language &amp; Font".
 3. Select the following languages:
 
    - English
@@ -3635,7 +3635,7 @@ You specify the language order for Runtime language switching. The first time Ru
 ##### Requirements
 
 - Multiple languages have been enabled in the "Project languages" editor.
-- The "Language & Font" editor is open and three Runtime languages have been set in the following order:
+- The "Language &amp; Font" editor is open and three Runtime languages have been set in the following order:
 
   1. English
 
@@ -3674,7 +3674,7 @@ You have changed the order of Runtime languages. The first time runtime starts, 
 
 ##### Introduction
 
-You can specify the font used to display the texts for each runtime language on the HMI device in the "Language & Font" editor. The default font is used in all texts, such as dialog texts, for which you cannot define a specific font.
+You can specify the font used to display the texts for each runtime language on the HMI device in the "Language &amp; Font" editor. The default font is used in all texts, such as dialog texts, for which you cannot define a specific font.
 
 WinCC offers only fonts supported by the HMI device.
 
@@ -3687,7 +3687,7 @@ WinCC offers only fonts supported by the HMI device.
 ##### Requirements
 
 - Multiple languages have been enabled in the "Project languages" editor.
-- Three runtime languages have been enabled in the "Language & Font" editor.
+- Three runtime languages have been enabled in the "Language &amp; Font" editor.
 
   1. Chinese
 
@@ -3698,7 +3698,7 @@ WinCC offers only fonts supported by the HMI device.
 ##### Procedure
 
 1. Double-click on "Runtime settings" in the project tree.
-2. Click on "Language & Font". The table shows the runtime languages and fonts set.
+2. Click on "Language &amp; Font". The table shows the runtime languages and fonts set.
 3. Click in the "French" row in the "Default font" column.
 4. Select the font to be used by default if a font cannot be selected for a given text.
 
@@ -3731,12 +3731,12 @@ You can standardize the font for all project languages during configuration with
 ##### Requirement
 
 - Multiple languages have been selected in the "Project languages" editor.
-- Multiple languages have been selected in the "Language & font" editor.
+- Multiple languages have been selected in the "Language &amp; font" editor.
 - The same font is defined for the selected runtime languages under "Configured font".
 
 ##### Procedure
 
-1. In the "Options > Settings > Visualization > General" menu, select the "Use same font for all languages" option.
+1. In the "Options &gt; Settings &gt; Visualization &gt; General" menu, select the "Use same font for all languages" option.
 
    ![Procedure](images/70031488139_DV_resource.Stream@PNG-en-US.png)
 
@@ -3750,7 +3750,7 @@ You have enabled the option "Use same font for all languages". If you change the
 
 ##### Introduction
 
-In the "Runtime settings > General" editor, select the language to be used for writing to logs in runtime.
+In the "Runtime settings &gt; General" editor, select the language to be used for writing to logs in runtime.
 
 ##### Requirements
 
@@ -3759,14 +3759,14 @@ In the "Runtime settings > General" editor, select the language to be used for w
 ##### Procedure
 
 1. Double-click on "Runtime settings" in the project tree.
-2. Click on "Language & Font".
+2. Click on "Language &amp; Font".
 3. Activate the runtime languages, for example, "German" and "English".
 4. Specify the "order":
 
    - 1 German
    - 2 English
-5. Click on "Runtime settings > General".
-6. Select "German" for "Logs > Log language".
+5. Click on "Runtime settings &gt; General".
+6. Select "German" for "Logs &gt; Log language".
 
 ##### Result
 
@@ -3802,13 +3802,13 @@ The memory requirement is greater when using Asian languages. Therefore look out
 
 ##### Font size for Asian character sets
 
-Use at least a font size of 10 points to display the text of projects created for Asian languages in Runtime. Asian characters will become illegible if smaller font sizes are used. This also applies to the default font in the Runtime settings under "Language & font".
+Use at least a font size of 10 points to display the text of projects created for Asian languages in Runtime. Asian characters will become illegible if smaller font sizes are used. This also applies to the default font in the Runtime settings under "Language &amp; font".
 
 ##### Text field length for Asian languages
 
 Make allowances for an appropriate length of the text fields when working on multilingual projects with Asian languages. Field contents may be partially hidden, depending on the font and the font size.
 
-1. Open the "Properties > Appearance" text box in the Inspector window.
+1. Open the "Properties &gt; Appearance" text box in the Inspector window.
 2. Under "Fit to size", disable the "Auto-size" option.
 3. Verify the proper display in Runtime.
 
@@ -3834,7 +3834,7 @@ In this example, you configure a button that can be used to toggle between multi
 
 ##### Procedure
 
-1. In the Inspector window, select "Properties > Events > Press".
+1. In the Inspector window, select "Properties &gt; Events &gt; Press".
 2. Click on "Add function" in the table.
 3. Select the "SetLanguage" system function and the "Switch" setting.
 
@@ -3870,12 +3870,12 @@ In this example, you configure a "Sprache umschalten" button in German and "Swit
 1. Drag-and-drop a button from the "Tools" task card into the screen.
 
    The button will be added to the screen.
-2. In the Inspector window, open "Properties > Properties > General".
-3. Enter the text ""Sprache umschalten" under "Text > off".
-4. Press <Enter> to confirm. The button is named.
+2. In the Inspector window, open "Properties &gt; Properties &gt; General".
+3. Enter the text ""Sprache umschalten" under "Text &gt; off".
+4. Press &lt;Enter&gt; to confirm. The button is named.
 5. Open the "Tasks" task card.
-6. Select "English" under "Languages & Resources > Editing language".
-7. Enter the label "Switch Language" under "Properties > Properties > General > Text > Off" in the Inspector window.
+6. Select "English" under "Languages &amp; Resources &gt; Editing language".
+7. Enter the label "Switch Language" under "Properties &gt; Properties &gt; General &gt; Text &gt; Off" in the Inspector window.
 
 ##### Result
 
@@ -3902,7 +3902,7 @@ In this example, you configure a "Sprache umschalten" button in German and "Swit
   - German
   - English
   - Italian
-- All languages have been set as runtime languages in the "Runtime settings > Language & Font" editor.
+- All languages have been set as runtime languages in the "Runtime settings &gt; Language &amp; Font" editor.
 - You have created and opened the "Screen_1" screen.
 - Three buttons have been created on the screen:
 
@@ -3914,8 +3914,8 @@ In this example, you configure a "Sprache umschalten" button in German and "Swit
 ##### Procedure
 
 1. Select "Button_1".
-2. In the Inspector window, select "Properties > Events > Press".
-3. Click on <Add function> in the table.
+2. In the Inspector window, select "Properties &gt; Events &gt; Press".
+3. Click on &lt;Add function&gt; in the table.
 4. Select the "SetLanguage" system function.
 5. Click on the "Switch" field.
 6. Click on the ![Procedure](images/22300229003_DV_resource.Stream@PNG-de-DE.png)button.
@@ -3983,7 +3983,7 @@ The following applies when you replace devices:
 >
 > **Controller alarms after a Basic Panel device replacement**
 >
-> For the controller alarms (PLC monitoring alarms, program alarms or system alarms) to be displayed after a device replacement ("Device view > Change device") from a Basic Panel to a Comfort Panel, Mobile Panel or WinCC RT Advanced, you need to activate the "Display classes" setting for the respective connections under "Runtime settings > Alarms > Controller alarms".
+> For the controller alarms (PLC monitoring alarms, program alarms or system alarms) to be displayed after a device replacement ("Device view &gt; Change device") from a Basic Panel to a Comfort Panel, Mobile Panel or WinCC RT Advanced, you need to activate the "Display classes" setting for the respective connections under "Runtime settings &gt; Alarms &gt; Controller alarms".
 
 ---
 
@@ -4018,7 +4018,7 @@ If an HMI device is replaced, error messages of the type "... are not supported 
 3. Network the interface of the HMI device with the interface of the CPU.
 4. Click in the table area of the network view on the "Connections" table.
 5. Select the connection marked red.
-6. Enter the new interface under "Properties > General > Interface" in the Inspector window.
+6. Enter the new interface under "Properties &gt; General &gt; Interface" in the Inspector window.
 
 ---
 
@@ -4058,7 +4058,7 @@ Functions dependent on the device are implemented as follows:
 
   If the new device supports a different resolution than the previous device when you replace a device, there are several ways to adjust the screens.
 
-  Adjust the size of the screens to the new device in the menu under "Options > Settings > Visualization > Fit to size screen".
+  Adjust the size of the screens to the new device in the menu under "Options &gt; Settings &gt; Visualization &gt; Fit to size screen".
 
 ---
 
@@ -4135,7 +4135,7 @@ Object adjustment to content can be prevented for objects such as graphic views 
 
 ##### Screen adjustment when replacing devices
 
-Adjust the size of the screens to the new device in the menu under "Tools > Settings > Visualization > Resize screen".
+Adjust the size of the screens to the new device in the menu under "Tools &gt; Settings &gt; Visualization &gt; Resize screen".
 
 ![Screen adjustment when replacing devices](images/58776494987_DV_resource.Stream@PNG-en-US.png)
 
@@ -4167,7 +4167,7 @@ Use this option when you are replacing a device with widescreen, for example, wi
 
 You select a free scale factor for screen adjustment. You can specify a factor for the x-axis and the y-axis.
 
-Using a free scale factor of < 1 may distort the objects. Object labels may, for example, be cut off and the content may not be fitted to the object.
+Using a free scale factor of &lt; 1 may distort the objects. Object labels may, for example, be cut off and the content may not be fitted to the object.
 
 You must therefore adjust the screens to the new device once you have replaced devices.
 
@@ -4194,7 +4194,7 @@ For some objects, you can specify fit to respective content in the Inspector win
 
 ##### Fit to size for text and graphic objects
 
-Disable automatic fit to size of the individual objects in the menu under "Options > Settings > Visualization > Resize screen and screen objects > Fit to content". This results in scaling of the objects as specified under "Options > Settings > Visualization > Resize screen and screen objects".
+Disable automatic fit to size of the individual objects in the menu under "Options &gt; Settings &gt; Visualization &gt; Resize screen and screen objects &gt; Fit to content". This results in scaling of the objects as specified under "Options &gt; Settings &gt; Visualization &gt; Resize screen and screen objects".
 
 Select the objects which are not automatically fitted to size.
 
@@ -4213,7 +4213,7 @@ Select the objects which are not automatically fitted to size.
 
 "Disable 'fit to size' for text objects" and "Disable 'fit to size' for graphic objects" have no effect if:
 
-- You have activated "Resize screen and screen objects > None".
+- You have activated "Resize screen and screen objects &gt; None".
 
 - You have activated "Fit screen to window width and height" and the new device has the same resolution as the current device.
 
@@ -4221,7 +4221,7 @@ Select the objects which are not automatically fitted to size.
 
 - You have activated "Fit screen to window width" and the new device has the same resolution as the current device.
 
-- You have selected "Resize screen and screen objects > None" and position "Top left" which means an adaptation is not necessary.
+- You have selected "Resize screen and screen objects &gt; None" and position "Top left" which means an adaptation is not necessary.
 
 ##### Example
 
@@ -4231,7 +4231,7 @@ The figure below shows the effects of automatic sizing using a graphic object wi
 
 | Symbol | Meaning |
 | --- | --- |
-| ① | Initial situation:   - Two buttons are aligned on a graphic object. - The option "Fit object size to graphic" or "Adjust object size to graphic" is activated in the object properties of the graphic object under "Display > Sizing". |
+| ① | Initial situation:   - Two buttons are aligned on a graphic object. - The option "Fit object size to graphic" or "Adjust object size to graphic" is activated in the object properties of the graphic object under "Display &gt; Sizing". |
 | ② | Option 1: The original properties of the graphic object are to be maintained after switching the HMI device.  - Deactivate the option "Disable 'fit to size' for graphical objects" in the settings under "Size adaptation of objects".   Effect: The graphic object retains its original size after switching the HMI device. The alignment to the buttons is lost. |
 | ③ | Option 2: The graphic object is to be placed relative to the new screen resolution after switching the HMI device.  - Activate the option "Disable 'fit to size' for graphical objects" in the settings under "Size adaptation of objects".   The option "Fit graphic to object size" is activated automatically in the object properties of the graphic object. The two buttons are properly aligned on the graphic object even after switching the HMI device. |
 
@@ -4251,7 +4251,7 @@ There are various ways to adjust the position of screen objects to the new devic
 
 ##### Select position
 
-Adjust the position of the screen objects to the new device in the menu under "Options > Settings > Visualization > Fit to size screen > Select position".
+Adjust the position of the screen objects to the new device in the menu under "Options &gt; Settings &gt; Visualization &gt; Fit to size screen &gt; Select position".
 
 ##### Example
 
@@ -4315,8 +4315,8 @@ The KTP700 Basic format is 800 x 480 pixels while the format of the TP1500 Comf
 
 ##### Adjusting screens
 
-1. Open the "Options > Settings" menu.
-2. Click on "Visualization > Resize screen".
+1. Open the "Options &gt; Settings" menu.
+2. Click on "Visualization &gt; Resize screen".
 3. Activate "Fit to height".
 
    ![Adjusting screens](images/58776494987_DV_resource.Stream@PNG-en-US.png)
@@ -4350,7 +4350,7 @@ The following example shows you how to replace a device.
 
 ##### Procedure
 
-1. Double-click on "Devices & Networks" in the project navigation. The editor opens.
+1. Double-click on "Devices &amp; Networks" in the project navigation. The editor opens.
 2. Click on the "KTP700 Basic PN" device.
 3. Select "Change Device/Version" in the device shortcut menu. A dialog opens.
 4. Select the TP1500 Comfort PRO device.
@@ -4411,8 +4411,8 @@ This section contains information on the following topics:
 
 You can copy and paste objects, such as display objects, within an HMI device. If the object is already created in the editor, when the object name is inserted a number is automatically attached, in accordance with the following principle:
 
-- "<Object_name>_1" is renamed to "<Object_name>_2".
-- "<Object_name>_2" is renamed to "<Object_name>_3".
+- "&lt;Object_name&gt;_1" is renamed to "&lt;Object_name&gt;_2".
+- "&lt;Object_name&gt;_2" is renamed to "&lt;Object_name&gt;_3".
 
 ##### Copying and pasting between HMI devices
 
@@ -4467,11 +4467,11 @@ To copy and paste objects using the shortcut menu, proceed as follows:
 
    The button will be pasted together with all properties already defined.
 
-##### Drag&drop
+##### Drag&amp;drop
 
 To drag-and-drop objects, proceed as follows:
 
-1. Click on "Screens > Start" in the project tree of a device.
+1. Click on "Screens &gt; Start" in the project tree of a device.
 2. Drag-and-drop the "Start" screen into the "Screens" folder of another device.
 3. A dialog will appear if the second device already contains a screen with the same name.
 4. Choose whether to replace or rename the existing screen.
@@ -4561,7 +4561,7 @@ This section contains information on the following topics:
 - [Linked objects copied automatically (Panels, Comfort Panels, RT Advanced)](#linked-objects-copied-automatically-panels-comfort-panels-rt-advanced)
 - [Copying HMI devices with HMI connections (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#copying-hmi-devices-with-hmi-connections-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Copying linked screen objects with user data types (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#copying-linked-screen-objects-with-user-data-types-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
-- [Drag & drop from the details view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#drag-drop-from-the-details-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
+- [Drag &amp; drop from the details view (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#drag-drop-from-the-details-view-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Copying screens (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#copying-screens-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Copying recipes within an HMI device (Basic Panels, Panels, Comfort Panels, RT Advanced, RT Professional)](#copying-recipes-within-an-hmi-device-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
 - [Differences between Runtime Advanced and Panels and Runtime Professional (Panels, Comfort Panels, RT Advanced, RT Professional)](#differences-between-runtime-advanced-and-panels-and-runtime-professional-panels-comfort-panels-rt-advanced-rt-professional)
@@ -4658,7 +4658,7 @@ If you copy an HMI device with HMI connections to a PLC, the HMI connection in t
 
 To also access the PLC tag via an HMI tag in the new HMI device, follow these steps:
 
-1. Open the "Devices & Networks" editor.
+1. Open the "Devices &amp; Networks" editor.
 2. Connect the new HMI device to the required network.
 3. Open the connection table.
 4. Select the HMI connection of the new HMI device.
@@ -4723,7 +4723,7 @@ If there is less space for the screen in the target HMI device than in the sourc
 
 ##### Automatic fit to size for objects
 
-1. Select "Options > Settings > Visualization > Resize screen and screen objects" in the menu.
+1. Select "Options &gt; Settings &gt; Visualization &gt; Resize screen and screen objects" in the menu.
 2. Activate, for example, "Fit to height".
 
 ---
@@ -5083,7 +5083,7 @@ You can copy a connection in the "Connections" editor and paste it in the "Conne
 
 ###### Integrated connections
 
-Integrated connections are created under "Devices & networks" in the network view. An integrated connection is displayed in the "Connections" editor. However, you cannot edit the integrated connection in the "Connections" editor. Any integrated connection you copy and paste from the "Connections" editor to another Runtime will become invalid in the target HMI device as it lacks a communication partner. You can only edit the copied integrated connection in the network view of the target device.
+Integrated connections are created under "Devices &amp; networks" in the network view. An integrated connection is displayed in the "Connections" editor. However, you cannot edit the integrated connection in the "Connections" editor. Any integrated connection you copy and paste from the "Connections" editor to another Runtime will become invalid in the target HMI device as it lacks a communication partner. You can only edit the copied integrated connection in the network view of the target device.
 
 ---
 
@@ -5376,10 +5376,10 @@ The event text is displayed in the following dialog boxes of the Inspector windo
 
 - Runtime Panels and Advanced:
 
-  "Properties > Properties > General > Settings > Event text"
+  "Properties &gt; Properties &gt; General &gt; Settings &gt; Event text"
 - Runtime Professional:
 
-  "Properties > Properties > Texts > Settings > Event text"
+  "Properties &gt; Properties &gt; Texts &gt; Settings &gt; Event text"
 
 The event texts are copied into the corresponding dialog boxes with all the format data.
 
@@ -5429,10 +5429,10 @@ The event text is displayed in the following dialog boxes of the Inspector windo
 
 - Runtime Advanced and Panels:
 
-  "Properties > Properties > General > Settings > Event text"
+  "Properties &gt; Properties &gt; General &gt; Settings &gt; Event text"
 - Runtime Professional:
 
-  "Properties > Properties > Texts > Settings > Event text"
+  "Properties &gt; Properties &gt; Texts &gt; Settings &gt; Event text"
 
 The event texts are copied into the corresponding dialog boxes with all the format data.
 
@@ -5499,7 +5499,7 @@ During the copying process the logging specifications are implemented as follows
 
   If "Log" is activated in Runtime Professional, you need to specify a log in Runtime Advanced and Panels.
 
-  If "Log" is deactivated in Runtime Professional, the entry <No log> is specified in Runtime Advanced and Panels.
+  If "Log" is deactivated in Runtime Professional, the entry &lt;No log&gt; is specified in Runtime Advanced and Panels.
 
 ###### Flashing
 
@@ -5610,7 +5610,7 @@ You can copy a data log in the "Historical Data" editor in the "Data log" tab an
 
 You can copy a logging tag in the "Historical Data" editor in the "Data log" tab and paste it in another Runtime.
 
-In addition, you can copy a logging tag in the "Tags" editor of Runtime Professional and paste it into the "Historical Data" editor in Runtime Advanced and Panels. To copy a logging tag in Runtime Professional, open the "Tags" editor and select the "Alarms & Logs" tab in the upper work area. Copy the desired logging tag in the lower work area of the "Data logs" tab.
+In addition, you can copy a logging tag in the "Tags" editor of Runtime Professional and paste it into the "Historical Data" editor in Runtime Advanced and Panels. To copy a logging tag in Runtime Professional, open the "Tags" editor and select the "Alarms &amp; Logs" tab in the upper work area. Copy the desired logging tag in the lower work area of the "Data logs" tab.
 
 ###### Tags used in the logging tags
 
@@ -5663,7 +5663,7 @@ The objects, object types, properties and methods supported in Runtime Advanced 
 
 You can copy VB scripts
 
-- using the shortcut menu or by drag & drop from the project tree
+- using the shortcut menu or by drag &amp; drop from the project tree
 - from the code of an open VB script to another open VB script.
 
 ##### Objects called in VB script
@@ -5875,8 +5875,8 @@ When specifying a range the following settings are supported in both Runtimes:
 
 The following settings are supported in Runtime Professional:
 
-- To (<=)
-- From (>=)
+- To (&lt;=)
+- From (&gt;=)
 
 ---
 
@@ -6045,7 +6045,7 @@ The following applies when copying within different ES versions:
 
 #### Copying between different ES versions
 
-To copy between two TIA projects, open a second instance of the TIA Portal. You can only copy between projects that have the same ES version. The ES version of a project is indicated by the file extension *.ap<version_number>.
+To copy between two TIA projects, open a second instance of the TIA Portal. You can only copy between projects that have the same ES version. The ES version of a project is indicated by the file extension *.ap&lt;version_number&gt;.
 
 ![Copying between different ES versions](images/53305525387_DV_resource.Stream@PNG-en-US.png)
 
@@ -6118,7 +6118,7 @@ To add a new device with an older version, select the desired version in the "Ad
 
 **Changing the runtime version**
 
-You can change the runtime version in the "Devices & Networks" editor or in the device properties in the project tree. See also section [Changing the runtime version](#changing-the-runtime-version-basic-panels-panels-comfort-panels-rt-advanced-rt-professional).
+You can change the runtime version in the "Devices &amp; Networks" editor or in the device properties in the project tree. See also section [Changing the runtime version](#changing-the-runtime-version-basic-panels-panels-comfort-panels-rt-advanced-rt-professional).
 
 #### Device version
 
@@ -6184,7 +6184,7 @@ To upgrade a project from TIA Portal V16 or higher to your WinCC version, follow
 4. Click "Upgrade".
 
    The project is upgraded to the current project version and opened.
-5. Then compile each device in the project with the command "Edit > Compile".
+5. Then compile each device in the project with the command "Edit &gt; Compile".
 
 **Note**
 
@@ -6280,7 +6280,7 @@ Depending on the required device version, select the runtime version suitable fo
 
 To change the device version, follow these steps:
 
-1. Double-click on "Devices & Networks" in the project tree.
+1. Double-click on "Devices &amp; Networks" in the project tree.
 
    The editor opens.
 2. Select the required HMI device from the device view.
@@ -6590,13 +6590,13 @@ The files that you want to download to the project are located on your computer.
 5. Select one or more files.
 6. Click "Open".
 
-   The files appear in the work area numbered in alphabetical order and are saved under "<TIAProjectname>\UserFiles\HMI_globalFiles".
+   The files appear in the work area numbered in alphabetical order and are saved under "&lt;TIAProjectname&gt;\UserFiles\HMI_globalFiles".
 
-You can also open the Windows Explorer using the "Open in Windows Explorer" button and move the required files from the Windows Explorer into the work area with drag&drop.
+You can also open the Windows Explorer using the "Open in Windows Explorer" button and move the required files from the Windows Explorer into the work area with drag&amp;drop.
 
 > **Note**
 >
-> To go directly to the storage folder "<TIAProjectname>\UserFiles\HMI_globalFiles", click on the button "Open in Windows Explorer".
+> To go directly to the storage folder "&lt;TIAProjectname&gt;\UserFiles\HMI_globalFiles", click on the button "Open in Windows Explorer".
 
 ### Overwriting files
 
@@ -6650,11 +6650,11 @@ The files and folders as well as their changes are transferred to all devices in
 - Starting runtime
 - Starting the simulation
 
-The contents of the "<TIAProjectname>\UserFiles\HMI_globalFiles" folder is mirrored under "<RTProject>\AdditionalFiles".
+The contents of the "&lt;TIAProjectname&gt;\UserFiles\HMI_globalFiles" folder is mirrored under "&lt;RTProject&gt;\AdditionalFiles".
 
 > **Note**
 >
-> When a file is being used in runtime, this file is not overwritten in the "<RTProject>\AdditionalFiles" folder. A warning informs you about it.
+> When a file is being used in runtime, this file is not overwritten in the "&lt;RTProject&gt;\AdditionalFiles" folder. A warning informs you about it.
 
 ---
 

@@ -12,7 +12,7 @@ This section contains information on the following topics:
 
 - [Guided quick startup](#guided-quick-startup)
 - [Parameterization](#parameterization)
-- [Rotate & optimize](#rotate-optimize-1)
+- [Rotate &amp; optimize](#rotate-optimize-1)
 
 ## Guided quick startup
 
@@ -26,7 +26,7 @@ This section contains information on the following topics:
 - [Application settings](#application-settings)
 - [I/O configuration](#io-configuration)
 - [Telegrams (only offline)](#telegrams-only-offline)
-- [Rotate & optimize](#rotate-optimize)
+- [Rotate &amp; optimize](#rotate-optimize)
 - [Overview](#overview-1)
 
 ### Overview
@@ -88,7 +88,7 @@ You can define the following basic settings in the quick startup steps with the 
 - [Telegrams](#telegrams-only-offline)
 
   Based on the selected control mode, the preferred telegrams are suggested here (1, 105 or 112). You can define different telegrams and/or make detailed settings. Telegram settings can only be made offline.
-- [Rotate & optimize](#rotate-optimize)
+- [Rotate &amp; optimize](#rotate-optimize)
 
   In online mode, you optimize the drive via the control panel or using one-button tuning. Settings and optimizations can only be performed online.
 - [Overview](#overview-1)
@@ -284,7 +284,7 @@ In quick startup step "Application" you define in detail in which application ar
 Startdrive defines the default settings of the setup based on what you have specified. The telegrams that match the selected application area are also preset.
 
 When control mode "Positioning" is activated, then the additional quick startup step "Application settings" is activated. In this step, you define the settings for active homing or for an absolute encoder adjustment.   
-You can also configure additional EPOS functions via the function view "[Parameterization > Technology functions > Basic positioner](#basic-positioner-epos)".
+You can also configure additional EPOS functions via the function view "[Parameterization &gt; Technology functions &gt; Basic positioner](#basic-positioner-epos)".
 
 > **Note**
 >
@@ -441,7 +441,7 @@ The settings of the position control words and position status words of telegram
 
 ##### Result
 
-Startdrive defines the default settings of the setup based on what you have specified. These default settings have an impact on the following EPOS settings in the guided quick startup and/or under [Parameterization > Technology functions > Basic positioner](#basic-positioner-epos).
+Startdrive defines the default settings of the setup based on what you have specified. These default settings have an impact on the following EPOS settings in the guided quick startup and/or under [Parameterization &gt; Technology functions &gt; Basic positioner](#basic-positioner-epos).
 
 ##### Additional parameters
 
@@ -686,7 +686,7 @@ The telegrams for communication are configured.
 
 #### Overview
 
-Optimize the converter online in quick startup step "Rotate & Optimize". To do this, use the "One Button Tuning". This step cannot be configured offline.
+Optimize the converter online in quick startup step "Rotate &amp; Optimize". To do this, use the "One Button Tuning". This step cannot be configured offline.
 
 With "One Button Tuning" (OBT), the mechanical drive train is measured using short test signals. This procedure adapts the controller parameters to the existing mechanical system. With this optimization procedure you determine the optimum controller settings with few entries.
 
@@ -694,7 +694,7 @@ With "One Button Tuning" (OBT), the mechanical drive train is measured using sho
 >
 > **Alternatively: Moving the drive via the control panel**
 >
-> If you want to use the control panel in the "Rotate & Optimize" step, click the "Use control panel" button. Instead of the OBT, the control panel is now displayed in the quick startup step. Proceed as described under [Traverse the drive from the control panel by specifying the speed](#traverse-the-drive-from-the-control-panel-by-specifying-the-speed).
+> If you want to use the control panel in the "Rotate &amp; Optimize" step, click the "Use control panel" button. Instead of the OBT, the control panel is now displayed in the quick startup step. Proceed as described under [Traverse the drive from the control panel by specifying the speed](#traverse-the-drive-from-the-control-panel-by-specifying-the-speed).
 
 #### Requirements
 
@@ -1822,7 +1822,7 @@ Monitoring comprises the following parts:
 ###### Procedure
 
 1. Enter a value   
-   (value = 0, positioning monitoring is deactivated; value >= 1, positioning monitoring is activated) in the "Positioning window" ([p2544](SINAMICS%20Parameter%20S200%20Basic%20PN.md#p2544-lr-positioning-window-1)) field.
+   (value = 0, positioning monitoring is deactivated; value &gt;= 1, positioning monitoring is activated) in the "Positioning window" ([p2544](SINAMICS%20Parameter%20S200%20Basic%20PN.md#p2544-lr-positioning-window-1)) field.
 
    The positioning window defines the range around the target position in which the actual position value must lie after the positioning monitoring time has expired.
 2. Enter a value in the "Positioning monitoring time" ([p2545](SINAMICS%20Parameter%20S200%20Basic%20PN.md#p2545-lr-positioning-monitoring-time)) field.

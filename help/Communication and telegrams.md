@@ -162,7 +162,7 @@ When a DP master system is created, the isochronous mode (or constant bus cycle 
 1. In the network view, click on the PROFIBUS connection between the DP master and a DP slave.
 
    The Inspector window of the DP slave is displayed.
-2. In the secondary navigation, activate the "PROFIBUS > Constant bus cycle time" menu if it has not yet been selected.
+2. In the secondary navigation, activate the "PROFIBUS &gt; Constant bus cycle time" menu if it has not yet been selected.
 
    ![DP constant bus cycle time](images/133889531275_DV_resource.Stream@PNG-en-US.PNG)
 
@@ -208,7 +208,7 @@ A drive is to be operated as IO device via PROFINET IO on the PROFINET subnet of
 
 To operate a drive as an IO device, proceed as follows:
 
-1. Select a SINAMICS drive in the hardware catalog at "Drives & starters > SINAMICS drives" and drag and drop it in the network view.
+1. Select a SINAMICS drive in the hardware catalog at "Drives &amp; starters &gt; SINAMICS drives" and drag and drop it in the network view.
 2. Click the link on the unassigned device in the network view (in the example, a SINAMICS S120).  
    All possible IO controllers in the project are displayed.
 
@@ -238,7 +238,7 @@ After inserting a controller and a SINAMICS S120 drive unit, they must first be 
 **To configure the sync domain, proceed as follows:**
 
 1. Select the PROFINET IO system in the network view.
-2. In the Inspector window, click the "General" tab and select "Domain management > Sync domain > Sync domain_1". You can set the parameters in the tab.
+2. In the Inspector window, click the "General" tab and select "Domain management &gt; Sync domain &gt; Sync domain_1". You can set the parameters in the tab.
 3. You can set a new name at "Sync domain". It is converted automatically to a conformant name that is displayed at "Converted name".
 4. Select the sync master (SIMATIC S7-1500F-3 PN in the example) and select the RT class for the IO device (SINAMICS S120 in the example). When you select IRT, the synchronization role of the IO device is set automatically to sync slave.
 5. Select the "send clock" for the sync domain.
@@ -276,7 +276,7 @@ To configure a sync master, proceed as follows:
 1. Select the PROFINET interface of the sync master in the network view.
 
    The interface settings are displayed in the Inspector window.
-2. In the "General" tab, click "Advanced options > Real time settings > Synchronization".
+2. In the "General" tab, click "Advanced options &gt; Real time settings &gt; Synchronization".
 3. Select the "Sync master" entry at "Synchronization role".
 
 ![Configuring the sync master](images/90655389195_DV_resource.Stream@PNG-en-US.png)
@@ -289,7 +289,7 @@ To configure a device within a PROFINET IO system as a sync slave, proceed as fo
 
 1. Select the PROFINET interface for the sync slave in the network view.  
    The interface settings are displayed in the Inspector window.
-2. In the "General" tab, click "Advanced options > Real time settings > Synchronization".
+2. In the "General" tab, click "Advanced options &gt; Real time settings &gt; Synchronization".
 3. Select "IRT" as RT class. In the example, the "Sync slave" entry is automatically selected as "Synchronization role".
 
 ![IO device as a sync slave](images/90655415435_DV_resource.Stream@PNG-en-US.png)
@@ -332,7 +332,7 @@ Topology view
 
 #### Port interconnection via the properties
 
-After the selection of a device or an interface, the entries for the ports are displayed in the Inspector window in the "General" tab at "PROFINET PN / IO interface > Advanced options" or "Advanced options".
+After the selection of a device or an interface, the entries for the ports are displayed in the Inspector window in the "General" tab at "PROFINET PN / IO interface &gt; Advanced options" or "Advanced options".
 
 1. Select the interface, whose ports you want to edit, from the Inspector window.
 2. Select the interface you wish to interconnect.
@@ -370,7 +370,7 @@ The drive and controller together form a sync domain. You must parameterize the 
 1. Select the IO device in the network view and click the PN interface.
 
    The interface properties are displayed in the Inspector window.
-2. In the secondary navigation of the "General" tab, click on "Advanced options > Isochronous mode".
+2. In the secondary navigation of the "General" tab, click on "Advanced options &gt; Isochronous mode".
 3. Activate the "isochronous mode" option.
 4. In the "detailed overview", the drive objects with the appropriate telegrams are displayed.   
    You must already have configured the objects and telegrams in Startdrive.
@@ -1094,8 +1094,8 @@ To extend a telegram, proceed as follows:
 
 1. Use the secondary navigation of the Inspector window to open the "Telegram configuration" screen form.
 
-   - PROFIBUS menu: "Properties > Telegram configuration"
-   - PROFINET menu: "Properties > PROFINET interface > Telegram configuration"
+   - PROFIBUS menu: "Properties &gt; Telegram configuration"
+   - PROFINET menu: "Properties &gt; PROFINET interface &gt; Telegram configuration"
 
    Telegrams that you have created are displayed for each existing drive object in the "Telegram configuration " screen form.
 2. In the table "Telegram configuration", select the required telegram. In the field "Extension", enter the number of words by which you wish to extend the telegram.
@@ -1131,8 +1131,8 @@ To add a telegram, proceed as follows:
 
 1. Use the secondary navigation of the Inspector window to open the "Telegram configuration" screen form.
 
-   - PROFIBUS menu: "Properties > Telegram configuration".
-   - PROFINET menu: "Properties > PROFINET interface > Telegram configuration"
+   - PROFIBUS menu: "Properties &gt; Telegram configuration".
+   - PROFINET menu: "Properties &gt; PROFINET interface &gt; Telegram configuration"
 2. Click the "Add telegram" entry (at the required drive object).
 
    A drop-down list opens. All telegram types that have not been assigned yet can be used.
@@ -1171,8 +1171,8 @@ You can change this specified sorting in the telegram configuration (Inspector w
 
 1. Use the secondary navigation of the Inspector window to open the "Telegram configuration" screen form.
 
-   - PROFIBUS menu: "Properties > Telegram configuration"
-   - PROFINET menu: "Properties > PROFINET interface > Telegram configuration"
+   - PROFIBUS menu: "Properties &gt; Telegram configuration"
+   - PROFINET menu: "Properties &gt; PROFINET interface &gt; Telegram configuration"
 
    The telegrams that have been created are displayed for each existing drive object in the "Telegram configuration" screen form.
 2. Right-click on the drive object to be moved in the telegram list.

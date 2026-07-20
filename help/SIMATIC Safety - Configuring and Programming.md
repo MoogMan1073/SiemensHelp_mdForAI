@@ -736,7 +736,7 @@ If you want to continue working with a project from STEP 7 Safety as of V14 SP1,
 
 Perform the upgrade following the usual procedure for STEP 7. After upgrading to V19, you must compile your safety program.
 
-If you have upgraded and compiled a project <= V17 to V19, the collective F-signature remains the same, but the version comparison between the online and offline programs shows a change. Here, follow the procedure described in section "[Identity of online and offline program](#identity-of-online-and-offline-program)".
+If you have upgraded and compiled a project &lt;= V17 to V19, the collective F-signature remains the same, but the version comparison between the online and offline programs shows a change. Here, follow the procedure described in section "[Identity of online and offline program](#identity-of-online-and-offline-program)".
 
 Keep in mind that existing change histories are not upgraded. All previous entries are deleted after the upgrade. If required, print out the change log before you upgrade.
 
@@ -963,17 +963,17 @@ F‑parameters are explained in "[Configuring an F-CPU](#configuring-an-f-cpu)" 
 
 #### Compiling the hardware configuration
 
-You must compile the hardware configuration of the SIMATIC Safety F-system (shortcut menu "Compile > Hardware configuration"). A configured F-CPU with enabled F-capability is the only prerequisite for programming the safety program.
+You must compile the hardware configuration of the SIMATIC Safety F-system (shortcut menu "Compile &gt; Hardware configuration"). A configured F-CPU with enabled F-capability is the only prerequisite for programming the safety program.
 
 > **Note**
 >
-> Inconsistencies are possible when configuring the hardware and can also be saved. A full consistency check of the hardware configuration and possible connection data is performed only during compilation. Therefore, perform "Edit > Compile" regularly.
+> Inconsistencies are possible when configuring the hardware and can also be saved. A full consistency check of the hardware configuration and possible connection data is performed only during compilation. Therefore, perform "Edit &gt; Compile" regularly.
 
 #### Changing safety-related parameters
 
 > **Note**
 >
-> If you change a safety-related parameter (marked in yellow) for an F-I/O or an F-CPU, you must then compile the modified hardware configuration and the [Compiling the safety program](#compiling-the-safety-program) (shortcut menu "Compile > Hardware and software (only changes)") and download. This also applies for changes to the F-I/O which are not used in the safety program. F-I/O in standard operation is not affected by this.
+> If you change a safety-related parameter (marked in yellow) for an F-I/O or an F-CPU, you must then compile the modified hardware configuration and the [Compiling the safety program](#compiling-the-safety-program) (shortcut menu "Compile &gt; Hardware and software (only changes)") and download. This also applies for changes to the F-I/O which are not used in the safety program. F-I/O in standard operation is not affected by this.
 
 ### Configuring an F-CPU
 
@@ -1085,7 +1085,7 @@ You can adjust the F-monitoring time via the following parameters:
 - "Default F‑monitoring time for central F‑I/O"
 - "Default F‑monitoring time for F‑I/O of this interface"
 
-The **default F‑monitoring time for the central F‑I/O** acts on the F‑I/O that is arranged centrally, i.e. near the F‑CPU. You set this parameter in the properties of the F‑CPU (select F‑CPU, then select "Properties > Fail-safe > F‑parameters").
+The **default F‑monitoring time for the central F‑I/O** acts on the F‑I/O that is arranged centrally, i.e. near the F‑CPU. You set this parameter in the properties of the F‑CPU (select F‑CPU, then select "Properties &gt; Fail-safe &gt; F‑parameters").
 
 The **default F‑monitoring time for the F‑I/O of this interface** acts on the F-I/O that is assigned to this interface of the F-CPU (PROFIBUS or PROFINET). You change this parameter in the properties of the relevant interface (selection of the interface in the "Device view" tab, then "F-parameters").
 
@@ -1099,7 +1099,7 @@ You can also change the F-monitoring time individually for each F-I/O in the F-I
 
 > **Note**
 >
-> The default value for the "Default F-monitoring time for the F-I/O" for an HF-system is 2300 ms and is designed for an MRP ring. For line topology, you can set the "Default F-monitoring time for the F-I/O" smaller by a factor of approx. 2. You can determine the exact value as described in section "[Monitoring and response times](#monitoring-and-response-times)". You can set this value in the properties of the F-CPU (selection of the F-CPU, then "Properties > Fail-safe > F-parameters > PROFINET interface [X1]").
+> The default value for the "Default F-monitoring time for the F-I/O" for an HF-system is 2300 ms and is designed for an MRP ring. For line topology, you can set the "Default F-monitoring time for the F-I/O" smaller by a factor of approx. 2. You can determine the exact value as described in section "[Monitoring and response times](#monitoring-and-response-times)". You can set this value in the properties of the F-CPU (selection of the F-CPU, then "Properties &gt; Fail-safe &gt; F-parameters &gt; PROFINET interface [X1]").
 
 | Symbol | Meaning |
 | --- | --- |
@@ -1116,7 +1116,7 @@ You can define in STEP 7 Safety  that no F-runtime group is generated while inse
 
 Proceed as follows:
 
-1. Select the "Options > Settings" menu command.
+1. Select the "Options &gt; Settings" menu command.
 2. Select the "STEP 7 Safety" area.
 3. If it is not already disabled, disable automatic generation of an F-runtime group by deselecting the "Generate default fail-safe program" option.
 
@@ -1701,7 +1701,7 @@ The following requirements must be met:
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| Make sure that the latest hardware configuration has been downloaded to the F-CPU before identification. By clicking the "Identification" button and then clicking on "Assign PROFIsafe address", you confirm the correctness of the PROFIsafe addresses for the F-I/Os.   Therefore, proceed carefully when confirming the F-I/Os by LED flashing or the serial number of the F-CPU with central F-I/Os or the serial number of the interface module with F-I/Os.   To do this, you must read and write down the serial number directly at the F-CPU* or the interface module**. Reading out the serial number via the online and diagnostics view of the TIA Portal is not permitted.  A special rule applies for F-I/Os of the ET 200AL distributed I/O system. For these F-I/Os, only identification by LED flashing is permissible and only exactly one F-I/O may be selected for the assignment of the PROFIsafe address at a time.   * When an ET 200SP Open Controller is used, you must read and write down the serial number from the display of the S7-1500 Fail-safe Software Controller in menu "Overview > CPU".  ** When an R1 device is used, you must read and write down the serial number of the left interface module. (S046) |  |
+| Make sure that the latest hardware configuration has been downloaded to the F-CPU before identification. By clicking the "Identification" button and then clicking on "Assign PROFIsafe address", you confirm the correctness of the PROFIsafe addresses for the F-I/Os.   Therefore, proceed carefully when confirming the F-I/Os by LED flashing or the serial number of the F-CPU with central F-I/Os or the serial number of the interface module with F-I/Os.   To do this, you must read and write down the serial number directly at the F-CPU* or the interface module**. Reading out the serial number via the online and diagnostics view of the TIA Portal is not permitted.  A special rule applies for F-I/Os of the ET 200AL distributed I/O system. For these F-I/Os, only identification by LED flashing is permissible and only exactly one F-I/O may be selected for the assignment of the PROFIsafe address at a time.   * When an ET 200SP Open Controller is used, you must read and write down the serial number from the display of the S7-1500 Fail-safe Software Controller in menu "Overview &gt; CPU".  ** When an R1 device is used, you must read and write down the serial number of the left interface module. (S046) |  |
 
 ##### Procedure
 
@@ -2330,7 +2330,7 @@ Set the "Local data used in safety program" parameter to the maximum amount of l
 
 **Note:** If you have not declared any temporary local data in the main safety blocks and calling OBx, the local data requirement of the main safety blocks is 6 bytes and the local data requirement of the calling OBx is 26 bytes. You can derive the local data requirement of the main safety blocks and calling OBx from the program structure.
 
-Select the utilized F-CPU in the project tree and then "Tools > Call structure". The table gives the local data requirement in the path or for the individual blocks (see also the help on STEP 7).
+Select the utilized F-CPU in the project tree and then "Tools &gt; Call structure". The table gives the local data requirement in the path or for the individual blocks (see also the help on STEP 7).
 
 **Case 2: Main safety block not called directly from OBs**
 
@@ -2340,7 +2340,7 @@ Set the "Local data settings" parameter to the value calculated for Case 1, min
 
 **Note:** You can derive the local data requirement of the standard user program A from the program structure.
 
-Select the utilized F-CPU in the project tree and then "Tools > Call structure". The table gives the local data requirement in the path or for the individual blocks (see also the help on STEP 7).
+Select the utilized F-CPU in the project tree and then "Tools &gt; Call structure". The table gives the local data requirement in the path or for the individual blocks (see also the help on STEP 7).
 
 #### "Advanced settings"
 
@@ -2425,7 +2425,7 @@ In the "Flexible F-Link" area, you receive information on configured F-communica
 
 #### Creating F-communication
 
-1. In an empty row of the table click "<Add new>"
+1. In an empty row of the table click "&lt;Add new&gt;"
 2. Assign a name to the communication connection.
 3. Select an F-compliant PLC data type (UUID) for the communication connection.
 
@@ -2689,7 +2689,7 @@ Access permission for the F‑CPU remains valid until the project is closed in t
 
 ##### Canceling access permission for the F‑CPU
 
-You cancel the access permission with the menu command "Online > Delete access rights" auf.
+You cancel the access permission with the menu command "Online &gt; Delete access rights" auf.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -2740,7 +2740,7 @@ Access permission for the F‑CPU remains valid until the project is closed in t
 
 ##### Canceling access permission for the F‑CPU
 
-You cancel the access permission with the menu command "Online > Delete access rights" auf.
+You cancel the access permission with the menu command "Online &gt; Delete access rights" auf.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -3432,7 +3432,7 @@ To delete an entire safety program, proceed as follows:
 
    The offline project no longer contains a safety program.
 5. To delete a safety program on the Memory Card (SIMATIC Micro Memory Card or Flash Card), insert the Memory Card (SIMATIC Micro Memory Card or Flash Card) in the programming device or PC or in a SIMATIC USB prommer.
-6. Select the menu command "Project > Card Reader/USB memory > Show Card Reader/USB memory" in the menu bar.
+6. Select the menu command "Project &gt; Card Reader/USB memory &gt; Show Card Reader/USB memory" in the menu bar.
 7. Open the "SIMATIC Card Reader" folder and delete the Memory Card.
 8. Insert the Memory Card into the F-CPU.
 9. Perform a memory reset of the F‑CPU (flashing of the STOP LED requests a memory reset).
@@ -3814,7 +3814,7 @@ To delete an F-runtime group, proceed as follows:
 1. In the area navigation of the Safety Administration Editor, click on the F‑runtime group to be deleted.
 2. Select the "Delete F-runtime group" button in the work area.
 3. Confirm the dialog with "Yes".
-4. [Compile the safety program](#compiling-the-safety-program) (menu command "Edit > Compile") to put your changes into effect.
+4. [Compile the safety program](#compiling-the-safety-program) (menu command "Edit &gt; Compile") to put your changes into effect.
 
 The assignment of the F-blocks to an F-runtime group (to the calling block of the main safety block) is deleted. However, the F-blocks continue to exist.
 
@@ -3891,7 +3891,7 @@ You can copy F-FBs, F-FCs, and F-DBs in exactly the same was as blocks of the st
 **Exceptions:**
 
 - (S7-1200, S7-1500) You may not copy an F-OB.
-- You cannot copy blocks from the folder "Program blocks > System blocks".
+- You cannot copy blocks from the folder "Program blocks &gt; System blocks".
 - (S7-1500) F-blocks cannot be copied from the Safety Unit to a standard unit or between the Safety Unit and the "Program blocks" folder of the F-CPU.
 
 ---
@@ -4575,7 +4575,7 @@ The DIAG tag provides non-fail-safe information (1 byte) about errors or faults
 | Bit 4 | Timeout detected by F-system | See description for bit 0 | See description for bit 0 |
 | Bit 5 | Sequence number error detected by F-system<sup>2</sup> | See description for bit 0 | See description for bit 0 |
 | Bit 6 | CRC-error detected by F-system | See description for bit 0 | See description for bit 0 |
-| Bit 7 | Addressing error<sup>3</sup> | — | Contact Service & Support |
+| Bit 7 | Addressing error<sup>3</sup> | — | Contact Service &amp; Support |
 | <sup>1</sup> Not for F-I/O that support the "RIOforFA-Safety" profile.   <sup>2</sup> For S7-300/400 F-CPUs only   <sup>3</sup> For S7-1200/1500 F-CPUs only |  |  |  |
 
 #### Accessing tags of the F-I/O DB
@@ -5176,7 +5176,7 @@ The data are transferred using the SENDDP instruction for sending and the RCVDP 
 
 ##### Safety-related I-slave-slave communication via PROFIBUS DP
 
-Safety-related I‑slave-slave communication with F‑I/O is possible in a DP slave that supports safety-related I‑slave-slave communication, for example with all ET 200SP F-modules with IM 155-6 DP HF, firmware > V3.1, with all ET 200S F‑modules with IM 151-1 HF, with all fail-safe S7‑300 signal modules with IM 153‑2, as of article number 6ES7153‑2BA01‑0XB0, firmware > V4.0.0.
+Safety-related I‑slave-slave communication with F‑I/O is possible in a DP slave that supports safety-related I‑slave-slave communication, for example with all ET 200SP F-modules with IM 155-6 DP HF, firmware &gt; V3.1, with all ET 200S F‑modules with IM 151-1 HF, with all fail-safe S7‑300 signal modules with IM 153‑2, as of article number 6ES7153‑2BA01‑0XB0, firmware &gt; V4.0.0.
 
 Safety-related communication between the safety program of the F-CPU of an I-slave and F-I/O of a DP slave takes place using direct data exchange, as in the standard program. The process image is used to access the channels of the F-I/O in the safety program of the F-CPU of the I-slave.
 
@@ -5769,10 +5769,10 @@ The assignment of the start addresses of the transfer areas to the LADDR input o
 | Instruction | Start address LADDR |  |
 | --- | --- | --- |
 | From row | From column |  |
-| SENDDP in the 1st I-slave | → | Address in the <1st I-slave>   (in example column "Address in PLC_2") |
-| RCVDP in the 1st I-slave | ← | Address in the <1st I-slave>   (in example column "Address in PLC_2") |
-| SENDDP in the 2nd I-slave | ← | Address in the <2nd I-slave>   (in example column "Address in PLC_3") |
-| RCVDP in the 2nd I-slave | → | Address in the <2nd I-slave>   (in example column "Address in PLC_3") |
+| SENDDP in the 1st I-slave | → | Address in the &lt;1st I-slave&gt;   (in example column "Address in PLC_2") |
+| RCVDP in the 1st I-slave | ← | Address in the &lt;1st I-slave&gt;   (in example column "Address in PLC_2") |
+| SENDDP in the 2nd I-slave | ← | Address in the &lt;2nd I-slave&gt;   (in example column "Address in PLC_3") |
+| RCVDP in the 2nd I-slave | → | Address in the &lt;2nd I-slave&gt;   (in example column "Address in PLC_3") |
 
 ##### Limits for data transfer of safety-related I-slave-I-slave communication
 
@@ -5809,7 +5809,7 @@ The process image input is used to access the channels of the F-I/O in the safet
 
 > **Note**
 >
-> Safety-related I‑slave-slave communication with F‑I/O is possible in a DP slave that supports safety-related I‑slave-slave communication, for example with all ET 200SP F-modules with IM 155-6 DP HF, firmware > V3.1, with all ET 200S F‑modules with IM 151-1 HF, with all fail-safe S7‑300 signal modules with IM 153‑2, as of article number 6ES7153‑2BA01‑0XB0, firmware > V4.0.0.
+> Safety-related I‑slave-slave communication with F‑I/O is possible in a DP slave that supports safety-related I‑slave-slave communication, for example with all ET 200SP F-modules with IM 155-6 DP HF, firmware &gt; V3.1, with all ET 200S F‑modules with IM 151-1 HF, with all fail-safe S7‑300 signal modules with IM 153‑2, as of article number 6ES7153‑2BA01‑0XB0, firmware &gt; V4.0.0.
 
 > **Note**
 >
@@ -6046,7 +6046,7 @@ You program safety-related communication via S7 connections as follows:
 
 If you have migrated a project from S7 Distributed Safety V5.4 SP5 to STEP 7 Safety Advanced in which safety-related communication via S7 connections is programmed, you must note the following:
 
-- Do not delete migrated instance DBs for the SENDS7 and RCVS7 instructions in the project tree in the "STEP 7 Safety" folder under "Program blocks > System blocks".
+- Do not delete migrated instance DBs for the SENDS7 and RCVS7 instructions in the project tree in the "STEP 7 Safety" folder under "Program blocks &gt; System blocks".
 
 Otherwise, communication errors may occur in the relevant communication connections.
 
@@ -6055,8 +6055,6 @@ A migrated instance DB for the SENDS7 and RCVS7 instructions has been deleted if
 You can find the "User-defined ID" of a block in its properties in the "Information" area.
 
 ##### Safety-related communication via S7 connections - Limits of data transfer
-
-###### 
 
 > **Note**
 >
@@ -6140,7 +6138,7 @@ For these you must set the local and partner connection resources (hex) that are
 
 If the local connection resource (hex) is already occupied by an existing connection, you must change the connection resource (hex) for it.
 
-If the instance DBs of the SENDS7 and RCVS7, instructions that you want to use for communication with S7 Distributed Safety were migrated from S7 Distributed Safety, you must delete them in the project tree in the "STEP 7 Safety" folder, under "Program blocks > System blocks" (contrary to the information in [Programming safety-related communication via S7 connections](#programming-safety-related-communication-via-s7-connections), section "Particularities for migrated projects").
+If the instance DBs of the SENDS7 and RCVS7, instructions that you want to use for communication with S7 Distributed Safety were migrated from S7 Distributed Safety, you must delete them in the project tree in the "STEP 7 Safety" folder, under "Program blocks &gt; System blocks" (contrary to the information in [Programming safety-related communication via S7 connections](#programming-safety-related-communication-via-s7-connections), section "Particularities for migrated projects").
 
 ##### Communication with S7 F/FH Systems via S7 connections
 
@@ -7022,7 +7020,7 @@ The following section describes particular aspects when the IO Controller and th
 
 **Note**
 
-When creating with STEP 7 Safety < V14 SP1 avoid a subsequent change from the transfer areas from CD to F-CD.
+When creating with STEP 7 Safety &lt; V14 SP1 avoid a subsequent change from the transfer areas from CD to F-CD.
 
 When creating with S7 Distributed SafetyV5.4 create the application transfer areas of the address type "Output" and "Input" directly after each other.
 
@@ -7070,7 +7068,7 @@ To get a consistent safety program, follow these steps:
 
 #### Reporting compiling errors
 
-You can recognize whether or not the compilation was successful based on the message in the inspector window under "Info > Compile", error messages and warnings are output.
+You can recognize whether or not the compilation was successful based on the message in the inspector window under "Info &gt; Compile", error messages and warnings are output.
 
 For information on the procedure you must follow to eliminate compiling errors, see "Eliminating compiling errors" in the Help on STEP 7.
 
@@ -7119,7 +7117,7 @@ This section contains information on the following topics:
 - [Specifics on creating and installing an image file of an S7-1500 F Software Controller](#specifics-on-creating-and-installing-an-image-file-of-an-s7-1500-f-software-controller)
 - [Load project data (including safety-related project data) from an F-CPU into a PG/PC (S7-1500)](#load-project-data-including-safety-related-project-data-from-an-f-cpu-into-a-pgpc-s7-1500)
 - [Load project data (including safety-related project data) from a memory card into a PG/PC (S7-1500)](#load-project-data-including-safety-related-project-data-from-a-memory-card-into-a-pgpc-s7-1500)
-- [Loading PC station via the configuration file (only FW < V30.0)](#loading-pc-station-via-the-configuration-file-only-fw-v300)
+- [Loading PC station via the configuration file (only FW &lt; V30.0)](#loading-pc-station-via-the-configuration-file-only-fw-v300)
 
 #### Downloading project data to an F-CPU
 
@@ -7146,7 +7144,7 @@ We will show you the options for downloading the safety program later. For basic
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| (S7-1200, S7-1500) If **several F-CPUs** can be reached via a network (such as Industrial Ethernet) by the **same PG/PC**, you must take the following additional measures to ensure that the safety-related project data is downloaded to the correct F-CPU or that safety mode is deactivated in the correct F-CPU:  - Enter the serial number of the specific F-CPU in the Safety Administration Editor.   Depending on the respective CPU type (see documentation of the CPU), you have several possibilities for determining the serial number of an F-CPU:   - Print of the serial number on the housing of the F-CPU. - Scanning of the ID link on the F-CPU. - Display of the F-CPU - Web server* - TIA Portal (I&M data)*   Note the following when downloading:  - If the "Load preview" window does not contain a warning, the connection to the correct F-CPU has been established. You can confirm the download of the safety-related project data without an additional check. - If a serial number has not yet been entered in the Safety Administration Editor or if the connected F-CPU has a different serial number, check the proposed serial number of the F-CPU in the "Load preview" window or "Disable safety mode" window. If you determine an error, cancel the download or the disabling of safety mode. Otherwise, you can confirm the procedure. - When the serial number is confirmed (online), it is always applied in the Safety Administration Editor and any existing entry is overwritten.    (S099) |  |
+| (S7-1200, S7-1500) If **several F-CPUs** can be reached via a network (such as Industrial Ethernet) by the **same PG/PC**, you must take the following additional measures to ensure that the safety-related project data is downloaded to the correct F-CPU or that safety mode is deactivated in the correct F-CPU:  - Enter the serial number of the specific F-CPU in the Safety Administration Editor.   Depending on the respective CPU type (see documentation of the CPU), you have several possibilities for determining the serial number of an F-CPU:   - Print of the serial number on the housing of the F-CPU. - Scanning of the ID link on the F-CPU. - Display of the F-CPU - Web server* - TIA Portal (I&amp;M data)*   Note the following when downloading:  - If the "Load preview" window does not contain a warning, the connection to the correct F-CPU has been established. You can confirm the download of the safety-related project data without an additional check. - If a serial number has not yet been entered in the Safety Administration Editor or if the connected F-CPU has a different serial number, check the proposed serial number of the F-CPU in the "Load preview" window or "Disable safety mode" window. If you determine an error, cancel the download or the disabling of safety mode. Otherwise, you can confirm the procedure. - When the serial number is confirmed (online), it is always applied in the Safety Administration Editor and any existing entry is overwritten.    (S099) |  |
 
 * To make use of these possibilities, you must ensure a connection to the expected F-CPU. You achieve this through:
 
@@ -7322,7 +7320,7 @@ For an S7-1200 F-CPU without inserted SIMATIC Memory Card and deleted internal l
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| If you use a programming device/PC to download F-blocks to an S7-1200 F-CPU with inserted program card (external load memory), you must ensure that the transfer takes place to the external load memory. This can be accomplished by the following measures:   - Ensure that the program card is inserted correctly. - Insert a program card whose memory size is different from the size of the internal load memory. Check in the project tree under "Online & Diagnostics > Diagnostics > Memory" if the memory size displayed for the load memory matches the memory size of the program card. (S058) |  |
+| If you use a programming device/PC to download F-blocks to an S7-1200 F-CPU with inserted program card (external load memory), you must ensure that the transfer takes place to the external load memory. This can be accomplished by the following measures:   - Ensure that the program card is inserted correctly. - Insert a program card whose memory size is different from the size of the internal load memory. Check in the project tree under "Online &amp; Diagnostics &gt; Diagnostics &gt; Memory" if the memory size displayed for the load memory matches the memory size of the program card. (S058) |  |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -7435,7 +7433,7 @@ The following warning applies to an S7-1500 F Software Controller with firmware 
 |  | **Warning** |
 | When you download the safety program, you must perform a POWER OFF/POWER ON afterwards before you run a program identification for acceptance. (S097) |  |
 
-The following warning applies to an S7-1500 F Software Controller with firmware < V30.1
+The following warning applies to an S7-1500 F Software Controller with firmware &lt; V30.1
 
 | Symbol | Meaning |
 | --- | --- |
@@ -7521,7 +7519,7 @@ Note the following warnings when restoring the software and hardware configurati
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| When installing an image file (for example, of an image, a data storage medium snapshot, etc.) with safety-related project data, you must comply with the following points:  - You must take [organizational measures](#glossary) to limit access to an S7-1500 F Software Controller to persons who are authorized to install image files. - When installing an image file via LAN, remote access or comparable access, you must ensure access protection (for example, using Windows administrator rights (ADMIN) or the Linux root user). Note, however, that only authorized persons are set up as users. - To ensure that the image file is written to the correct S7-1500 F Software Controller, you must make sure when installing that the safety-related project data is installed in the correct F-CPU (for example, by comparing the serial number or the hardware identification of the device determined by the operating system). - You must ensure that the image file contains the correct safety-related project data, for example, by checking the labeling of the data storage medium or image file. - Remove the image file and any copies of it once you have installed it in the S7-1500 F Software Controller.    **The following applies as of firmware version V30.0 of the S7-1500 F Software Controller:**   - After installing the image file, you must ensure that the correct safety-related project data is in the S7-1500 F Software Controller through a program identification, for example, by reading out the Collective F-signature with the command line command "GetCollectiveFSignature" or the display. - Then you must enter and confirm the expected Collective F-signature with the command line command "ConfirmCollectiveFSignature".    **The following applies to firmware versions < V30.0 of the S7-1500 F Software Controller:**   After installing the image file, you must ensure through a program identification that the correct safety-related project data is in the S7-1500 F Software Controller, for example, with the display. (S074) |  |
+| When installing an image file (for example, of an image, a data storage medium snapshot, etc.) with safety-related project data, you must comply with the following points:  - You must take [organizational measures](#glossary) to limit access to an S7-1500 F Software Controller to persons who are authorized to install image files. - When installing an image file via LAN, remote access or comparable access, you must ensure access protection (for example, using Windows administrator rights (ADMIN) or the Linux root user). Note, however, that only authorized persons are set up as users. - To ensure that the image file is written to the correct S7-1500 F Software Controller, you must make sure when installing that the safety-related project data is installed in the correct F-CPU (for example, by comparing the serial number or the hardware identification of the device determined by the operating system). - You must ensure that the image file contains the correct safety-related project data, for example, by checking the labeling of the data storage medium or image file. - Remove the image file and any copies of it once you have installed it in the S7-1500 F Software Controller.    **The following applies as of firmware version V30.0 of the S7-1500 F Software Controller:**   - After installing the image file, you must ensure that the correct safety-related project data is in the S7-1500 F Software Controller through a program identification, for example, by reading out the Collective F-signature with the command line command "GetCollectiveFSignature" or the display. - Then you must enter and confirm the expected Collective F-signature with the command line command "ConfirmCollectiveFSignature".    **The following applies to firmware versions &lt; V30.0 of the S7-1500 F Software Controller:**   After installing the image file, you must ensure through a program identification that the correct safety-related project data is in the S7-1500 F Software Controller, for example, with the display. (S074) |  |
 
 #### Load project data (including safety-related project data) from an F-CPU into a PG/PC (S7-1500)
 
@@ -7529,7 +7527,7 @@ The "Upload from device (software)" or "Upload device as new station (hardware a
 
 To load the project data (including safety-related project data) to a programming device or PC, proceed as in the standard scenario.
 
-If multiple F‑CPUs can be reached over a network (e.g. Industrial Ethernet) by the programming device / PC, you have to ensure that the project data is uploaded from the correct F‑CPU. For example with "Online & diagnostics" > "Online accesses " > "Flash LED".
+If multiple F‑CPUs can be reached over a network (e.g. Industrial Ethernet) by the programming device / PC, you have to ensure that the project data is uploaded from the correct F‑CPU. For example with "Online &amp; diagnostics" &gt; "Online accesses " &gt; "Flash LED".
 
 After successful loading from the device you can continue working as with a project that was created offline.
 
@@ -7609,7 +7607,7 @@ For evaluating and testing these identification parameters via script, you must 
 
 ##### Creating a configuration file
 
-1. In TIA Portal create a new configuration file with "Project > Memory Card file > New > PC system configuration file (.psc)".
+1. In TIA Portal create a new configuration file with "Project &gt; Memory Card file &gt; New &gt; PC system configuration file (.psc)".
 
    The configuration file is created in the project tree under "Card Reader/USB memory".
 2. Use the Collective F-Signature to check in the Safety Administration Editor that you have selected the correct project/station.
@@ -7670,7 +7668,7 @@ The figure below contains a systematic overview of checking the configuration fi
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| You must determine whether the safety-related project data was successfully imported via the script by evaluating the corresponding return value (0x51A3 or 20899). If the corresponding return value is not returned, the import has failed and the old safety-related project data may still be present.  If the import operation is triggered by a server, feedback about the positive return value must also be given.  For traceability we recommend that you document the import operation in a log file.   **The following applies as of firmware version V30.0 of the S7-1500 F Software Controller:**   To have the return value 0x51A3 displayed after the import, you must call the import command with extension "/v" for verbose.  After successful import, you must read out the Collective F-signature from the meta file (PSC file) and enter and confirm it with the command line command "ConfirmCollectiveFSignature". This confirmation is required to restart the safety program.   **The following applies to firmware versions < V30.0 of the S7-1500 F Software Controller:**   To ensure that the return value is not from the previous import, you must reset the return value to 0x3FF ("PCSystem_Control /ImportConfig" without entering a file name) before the import. Then check whether the return value was reset to 0x3FF (enter "PCSystem_Control/GetStatus /ImportConfig" and then enter "echo %errorlevel%". This instruction must deliver the return value 0x3FF).  If the configuration file is imported manually via the Windows command line (via script command), you need to do one of the following:  - Reset the return value to 0x3FF and check it before the import (see above).   - Carry out the import.   - Evaluate return value (enter "PCSystem_Control /GetStatus /ImportConfig" and then enter "echo %errorlevel%". This instruction must return the return value 0x51A3 or 20899). - Carry out the import.   - Perform manual program identification, e.g. via the display of the F-CPU. (S083) |  |
+| You must determine whether the safety-related project data was successfully imported via the script by evaluating the corresponding return value (0x51A3 or 20899). If the corresponding return value is not returned, the import has failed and the old safety-related project data may still be present.  If the import operation is triggered by a server, feedback about the positive return value must also be given.  For traceability we recommend that you document the import operation in a log file.   **The following applies as of firmware version V30.0 of the S7-1500 F Software Controller:**   To have the return value 0x51A3 displayed after the import, you must call the import command with extension "/v" for verbose.  After successful import, you must read out the Collective F-signature from the meta file (PSC file) and enter and confirm it with the command line command "ConfirmCollectiveFSignature". This confirmation is required to restart the safety program.   **The following applies to firmware versions &lt; V30.0 of the S7-1500 F Software Controller:**   To ensure that the return value is not from the previous import, you must reset the return value to 0x3FF ("PCSystem_Control /ImportConfig" without entering a file name) before the import. Then check whether the return value was reset to 0x3FF (enter "PCSystem_Control/GetStatus /ImportConfig" and then enter "echo %errorlevel%". This instruction must deliver the return value 0x3FF).  If the configuration file is imported manually via the Windows command line (via script command), you need to do one of the following:  - Reset the return value to 0x3FF and check it before the import (see above).   - Carry out the import.   - Evaluate return value (enter "PCSystem_Control /GetStatus /ImportConfig" and then enter "echo %errorlevel%". This instruction must return the return value 0x51A3 or 20899). - Carry out the import.   - Perform manual program identification, e.g. via the display of the F-CPU. (S083) |  |
 
 > **Note**
 >
@@ -7711,7 +7709,7 @@ For a program identification using the HMI, follow these steps:
 
 For a program identification using the display of an F-CPU, follow these steps:
 
-1. In the display menu, go to "Overview > Fail-safe".
+1. In the display menu, go to "Overview &gt; Fail-safe".
 2. Compare the displayed Collective F-Signature with the expected value.
 
 #### With the Web server of an S7-1200/1500 F-CPU
@@ -7784,7 +7782,7 @@ It is possible that a block is displayed as changed, but no changes are displaye
 
 #### Document the result of the comparison
 
-The comparison result can be printed via "Project > Print" in the menu bar or the "Print" icon in the toolbar or create a PDF file. Select "Print objects/area" "All" and "Properties" "All".
+The comparison result can be printed via "Project &gt; Print" in the menu bar or the "Print" icon in the toolbar or create a PDF file. Select "Print objects/area" "All" and "Properties" "All".
 
 After printing, make sure that all pages were printed. Incomplete printouts (e.g. lines cut off, insufficient toner when printing to paper) must not be used for an acceptance of changes.
 
@@ -7805,7 +7803,7 @@ To create the safety summary, follow these steps:
 
    In the displayed dialog, you can make layout settings for the printout and specify the scope of the printout (all/subset), among other things.
 
-   Alternatively, you can select an F-CPU in the project tree and open the dialog using "Print" in the shortcut menu, "Project > Print" in the menu bar or the print button in the toolbar.
+   Alternatively, you can select an F-CPU in the project tree and open the dialog using "Print" in the shortcut menu, "Project &gt; Print" in the menu bar or the print button in the toolbar.
 3. Under "Document information", select one of the ISO formats, e.g. "DocuInfo_ISO_A4_Portait".
 4. Select the "All" option, if the F‑blocks and F-compliant PLC data types are to be shown in the printout. This is necessary, for example, to document the program code for the acceptance (see [Acceptance of system](#system-acceptance)). Select the "Compact" option to exclude the source code from the printout.
 5. Click the "Print" button.
@@ -7873,7 +7871,7 @@ Read and write test functions (such as controlling tags of the safety program) a
 
 You can test the safety program using S7‑PLCSIM. You use S7-PLCSIM in the same way as for standard user programs.
 
-You start the simulation with S7-PLCSIM using menu item "Online > Simulation > Start"
+You start the simulation with S7-PLCSIM using menu item "Online &gt; Simulation &gt; Start"
 
 ##### Rules for testing
 
@@ -7952,7 +7950,7 @@ To configure the time limit, follow these steps:
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| (S7-1200, S7-1500) If **several F-CPUs** can be reached via a network (such as Industrial Ethernet) by the **same PG/PC**, you must take the following additional measures to ensure that the safety-related project data is downloaded to the correct F-CPU or that safety mode is deactivated in the correct F-CPU:  - Enter the serial number of the specific F-CPU in the Safety Administration Editor.   Depending on the respective CPU type (see documentation of the CPU), you have several possibilities for determining the serial number of an F-CPU:   - Print of the serial number on the housing of the F-CPU. - Scanning of the ID link on the F-CPU. - Display of the F-CPU - Web server* - TIA Portal (I&M data)*   Note the following when downloading:  - If the "Load preview" window does not contain a warning, the connection to the correct F-CPU has been established. You can confirm the download of the safety-related project data without an additional check. - If a serial number has not yet been entered in the Safety Administration Editor or if the connected F-CPU has a different serial number, check the proposed serial number of the F-CPU in the "Load preview" window or "Disable safety mode" window. If you determine an error, cancel the download or the disabling of safety mode. Otherwise, you can confirm the procedure. - When the serial number is confirmed (online), it is always applied in the Safety Administration Editor and any existing entry is overwritten.    (S099) |  |
+| (S7-1200, S7-1500) If **several F-CPUs** can be reached via a network (such as Industrial Ethernet) by the **same PG/PC**, you must take the following additional measures to ensure that the safety-related project data is downloaded to the correct F-CPU or that safety mode is deactivated in the correct F-CPU:  - Enter the serial number of the specific F-CPU in the Safety Administration Editor.   Depending on the respective CPU type (see documentation of the CPU), you have several possibilities for determining the serial number of an F-CPU:   - Print of the serial number on the housing of the F-CPU. - Scanning of the ID link on the F-CPU. - Display of the F-CPU - Web server* - TIA Portal (I&amp;M data)*   Note the following when downloading:  - If the "Load preview" window does not contain a warning, the connection to the correct F-CPU has been established. You can confirm the download of the safety-related project data without an additional check. - If a serial number has not yet been entered in the Safety Administration Editor or if the connected F-CPU has a different serial number, check the proposed serial number of the F-CPU in the "Load preview" window or "Disable safety mode" window. If you determine an error, cancel the download or the disabling of safety mode. Otherwise, you can confirm the procedure. - When the serial number is confirmed (online), it is always applied in the Safety Administration Editor and any existing entry is overwritten.    (S099) |  |
 
 * To make use of these possibilities, you must ensure a connection to the expected F-CPU. You achieve this through:
 
@@ -8079,7 +8077,7 @@ Proceed as follows to control tags of F-I/O:
 >
 > To avoid invalid combinations of channel value and status value:
 >
-> - The value status is set by the F-system automatically to 1 when setting a channel value to a value <> fail-safe value 0
+> - The value status is set by the F-system automatically to 1 when setting a channel value to a value &lt;&gt; fail-safe value 0
 > - The fail-safe value 0 is automatically output when setting the value status to 0 for the associated channel value
 
 | Symbol | Meaning |
@@ -8164,7 +8162,7 @@ The inputs (channel values) can be simulated starting from the 2nd cycle and are
 
 (S7-1200, S7-1500) By simulating inputs (value status) of F-I/O, you can simulate incoming and outgoing F-I/O / channel faults. Keep in mind the following notes/restrictions:
 
-- To realistically simulate the behavior of the F-I/O, you must note the connection between channel value and value status on the real F-I/O. The combination value status = 0 and channel value <> fail-safe value (0) is invalid and can result in the simulation deviating from the behavior of the real F-CPU.
+- To realistically simulate the behavior of the F-I/O, you must note the connection between channel value and value status on the real F-I/O. The combination value status = 0 and channel value &lt;&gt; fail-safe value (0) is invalid and can result in the simulation deviating from the behavior of the real F-CPU.
 - During the transition of the F-CPU from "STOP" to "RUN" in S7-PLCSIM, all inputs (value status) of F-I/O are initialized with 1 in the process image input (PII). This means you can start with the simulation of inputs (channel values) immediately without simulation of the inputs (value status).
 - The simulation of inputs (value status) in S7-PLCSIM does not have an effect on the QBAD and PASS_OUT tags in the F-I/O DB. Note that with real F-I/O, QBAD and PASS_OUT can be 1 as soon as the value status is 0 for at least one channel of the F-I/O (see tags of the F-I/O DB: [PASS_OUT/QBAD/QBAD_I_xx/QBAD_O_xx and value status](#qbadpass_outdisabledqbad_i_xxqbad_o_xx-and-value-status)).
 - For F-I/O configured with "Behavior after channel fault" = "Passivation of the complete F-I/O", use the tag PASS_ON in the F-I/O DB for simulation of the passivation of the complete F-I/O for F-I/O / channel faults. If you limit the simulation to passivation of individual inputs (channel value including value status), the behavior of the simulation will deviate from that of the real F-CPU.
@@ -8180,11 +8178,11 @@ With passivation of the F-I/O, the safety program operates with substitute value
 
 ##### CPU-CPU-communication with SENDDP / RCVDP instructions
 
-The following applies for SENDDP/RCVDP (S7-300, S7-400) instructions and SENDDP/RCVDP instructions with Version < 3.0 (S7-1200, S7-1500):
+The following applies for SENDDP/RCVDP (S7-300, S7-400) instructions and SENDDP/RCVDP instructions with Version &lt; 3.0 (S7-1200, S7-1500):
 
 You cannot simulate communication between F-CPUs with the SENDDP and RCVDP instructions in S7-PLCSIM. You can, however, use the SENDDP and RCVDP instructions together with S7-PLCSIM. During simulation in S7-PLCSIM, the RCVDP instruction outputs the substitute values pending at its inputs SUBBO_xx and SUBI_xx ((S7-1200, S7-1500) or alternatively SUBDI_00). The SENDDP and RCVDP instructions signal this with 1 at output SUBS_ON.
 
-For SENDDP/RCVDP instructions with Version >= 3.0 (S7-1200, S7-1500) the following applies:
+For SENDDP/RCVDP instructions with Version &gt;= 3.0 (S7-1200, S7-1500) the following applies:
 
 During the simulation with S7-PLCSIM it is possible to simulate the received data and the information "Deactivated Safety Mode" (RCVDP) or respectively the information "Substitute value output" (SENDDP) in the corresponding transfer area for inputs. Note the following notes:
 
@@ -8360,7 +8358,7 @@ You enable Fast Commissioning mode by clicking the "Enable Fast Commissioning" b
 
 Here, "Fast Compile" is selected as the default setting.
 
-Once Fast Commissioning mode with "Fast Compile" is active, the behavior when compiling changes (shortcut menu "Compile > Software (only changes)" and "Compile > Hardware and software (only changes)") switches to the behavior when compiling changes in Fast Commissioning mode with "Fast Compile".
+Once Fast Commissioning mode with "Fast Compile" is active, the behavior when compiling changes (shortcut menu "Compile &gt; Software (only changes)" and "Compile &gt; Hardware and software (only changes)") switches to the behavior when compiling changes in Fast Commissioning mode with "Fast Compile".
 
 As soon as you change to the "Consistent Compile" setting, you can also compile the safety program consistently and download it to the F-CPU in RUN.
 
@@ -8392,7 +8390,7 @@ If at least one of these 3 conditions is not met, the "Download" dialog displays
 
 > **Note**
 >
-> If the work memory utilization of the F-CPU is > 80%, a download in RUN mode with "Consistent Compile" may be aborted and the download to the F-CPU may not be properly completed. Even the indicators regarding the safety program on the display and in the web server of the F-CPU are no longer current.
+> If the work memory utilization of the F-CPU is &gt; 80%, a download in RUN mode with "Consistent Compile" may be aborted and the download to the F-CPU may not be properly completed. Even the indicators regarding the safety program on the display and in the web server of the F-CPU are no longer current.
 >
 > A subsequent download in RUN is no longer possible, even though all requirements for Fast Commissioning mode are met.
 >
@@ -8446,7 +8444,7 @@ While Fast Commissioning mode with "Fast Compile" is activated, you cannot make 
 
 > **Note**
 >
-> For the changes marked with "Compiling errors", the compiling of the safety program is aborted in Fast Commissioning mode. An additional note is displayed in the inspector window under "Info > Compile" indicating the F-block containing the unsupported change.
+> For the changes marked with "Compiling errors", the compiling of the safety program is aborted in Fast Commissioning mode. An additional note is displayed in the inspector window under "Info &gt; Compile" indicating the F-block containing the unsupported change.
 
 > **Note**
 >
@@ -8514,7 +8512,7 @@ The following is logged in the F-change history:
 - Download of the safety-related project data with time stamp
 - Compiled F-blocks with signature and time stamp
 
-The F-change history can contain a maximum of 5000 entries per F-CPU. When the 5000 entries are exceeded, a new F-change history is created using the naming scheme "F-change history <CPU name> YYYY-MM-DD hh:mm:ss".
+The F-change history can contain a maximum of 5000 entries per F-CPU. When the 5000 entries are exceeded, a new F-change history is created using the naming scheme "F-change history &lt;CPU name&gt; YYYY-MM-DD hh:mm:ss".
 
 After a project upgrade, the "Go to" function is not supported anymore for the F-change history of the project for the entries which were created before STEP 7 Safety V15.1.
 
@@ -8815,7 +8813,7 @@ Once you have checked all properties of the offline safety program you must ensu
 |  | **Warning** |
 | In a redundant S7-1500HF system, you must perform the verification of identity of the online and offline program in RUN-Redundant mode. In so doing, it is sufficient to perform the verification only for one S7-1500 HF-CPU. (S098) |  |
 
-1. Connect online with the F-CPU. If multiple F‑CPUs can be reached over a network (e.g. Industrial Ethernet) by the programming device / PC, you have to ensure that you are connected with the correct F‑CPU. For example with "Online & diagnostics" > "Online accesses " > "Flash LED".
+1. Connect online with the F-CPU. If multiple F‑CPUs can be reached over a network (e.g. Industrial Ethernet) by the programming device / PC, you have to ensure that you are connected with the correct F‑CPU. For example with "Online &amp; diagnostics" &gt; "Online accesses " &gt; "Flash LED".
 2. Open the Safety Administration Editor.
 3. Check whether the online and offline Collective F-Signatures correspond to the Collective F-Signature from the safety summary.
 4. Now check in the "General" area under "Safety program status" whether the safety programs are identical online and offline.
@@ -8961,7 +8959,7 @@ How to do this is described below.
 
 The reference project and the project to be accepted must be consistent and compiled for a comparison. To perform the comparison, see [Comparing Safety Programs](#comparing-safety-programs).
 
-1. Navigate in the comparison result to the "System blocks > STEP 7 Safety > F-I/O DBs" folder. All data blocks listed in this folder are F-I/O-DBs and are each assigned to an F-I/O.
+1. Navigate in the comparison result to the "System blocks &gt; STEP 7 Safety &gt; F-I/O DBs" folder. All data blocks listed in this folder are F-I/O-DBs and are each assigned to an F-I/O.
 
    - If the F-I/O-DBs in the comparison result are identical, this means that the safety-related configuration of the assigned F-I/O was also not changed. Standard-parameters might have changed.
    - If the F-I/O-DBs in the comparison result are not identical, this means that the safety-related configuration of the assigned F-I/O was also changed.
@@ -9033,7 +9031,7 @@ Pay attention to the following important notes on safety mode of the safety prog
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| **Use of simulation devices/simulation programs in plants**  If you operate simulation devices or simulation programs that generate safety message frames, for example, based on PROFIsafe, and make them available to the SIMATIC Safety F-system via the bus system (such as PROFIBUS DP or PROFINET IO), you must ensure the safety of the plant through [organizational measures](#glossary).  Note, for example, that a protocol analyzer is not permitted to perform any function that reproduces recorded message frame sequences with correct time behavior.  - **S7-PLCSIM version < 15.1 or S7-PLCSIM Advanced version < 2.0 SP1 and Safety System version < V2.2**    If you use [S7-PLCSIM](#overview-of-testing-the-safety-program) to simulate safety programs, the measures mentioned above are not necessary because S7-PLCSIM cannot establish an online connection to a real component. - **S7-PLCSIM version ≥ 15.1 or S7-PLCSIM Advanced version ≥ 2.0 SP1 or Safety System version ≥ V2.2**    You must ensure the safety of the plant through organizational measures.   In addition, the loading of the safety-related project data with Safety System version V2.2 and higher onto an S7-PLCSIM is only permissible as of S7-PLCSIM V15.1 or S7-PLCSIM Advanced V2.0 SP1 and higher.    (S030) |  |
+| **Use of simulation devices/simulation programs in plants**  If you operate simulation devices or simulation programs that generate safety message frames, for example, based on PROFIsafe, and make them available to the SIMATIC Safety F-system via the bus system (such as PROFIBUS DP or PROFINET IO), you must ensure the safety of the plant through [organizational measures](#glossary).  Note, for example, that a protocol analyzer is not permitted to perform any function that reproduces recorded message frame sequences with correct time behavior.  - **S7-PLCSIM version &lt; 15.1 or S7-PLCSIM Advanced version &lt; 2.0 SP1 and Safety System version &lt; V2.2**    If you use [S7-PLCSIM](#overview-of-testing-the-safety-program) to simulate safety programs, the measures mentioned above are not necessary because S7-PLCSIM cannot establish an online connection to a real component. - **S7-PLCSIM version ≥ 15.1 or S7-PLCSIM Advanced version ≥ 2.0 SP1 or Safety System version ≥ V2.2**    You must ensure the safety of the plant through organizational measures.   In addition, the loading of the safety-related project data with Safety System version V2.2 and higher onto an S7-PLCSIM is only permissible as of S7-PLCSIM V15.1 or S7-PLCSIM Advanced V2.0 SP1 and higher.    (S030) |  |
 
 > **Note**
 >
@@ -9110,7 +9108,7 @@ Note the following warning when replacing an HF-CPU of a redundant S7-1500HF sys
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| **The following applies as of firmware version V30.0 of the S7-1500 F Software Controller:**   After a CPU module replacement (for example, new PC with data storage medium from old PC), a data storage medium replacement (for example, data storage medium with safety-related project data 1 is replaced by data storage medium with safety-related project data 2) or a UEFI update (if no NVRAM is present), you must ensure that the correct safety program is located in the S7-1500 F Software Controller by reading out the Collective F-signature with the command line command "GetCollectiveFSignature" or the display.  Then you must enter and confirm the expected Collective F-signature with the command line command "ConfirmCollectiveFSignature". This confirmation is required to restart the safety program.  For both command line commands, you must be a member of the "Software Controller Operators" (Windows) or "software_controller_operators" (Linux) user group and the "Failsafe Operators" (Windows) or "failsafe_operators" (Linux) user group.   **The following applies to firmware versions < V30.0 of the S7-1500 F Software Controller:**   After a CPU module replacement (e.g. new PC with data storage medium from old PC), a data storage medium replacement (e.g. data storage medium containing safety program 1 is replaced with data storage medium containing safety program 2) or a UEFI update, you must check via the display whether the correct collective F-signature is displayed or perform a program identification. (S066) |  |
+| **The following applies as of firmware version V30.0 of the S7-1500 F Software Controller:**   After a CPU module replacement (for example, new PC with data storage medium from old PC), a data storage medium replacement (for example, data storage medium with safety-related project data 1 is replaced by data storage medium with safety-related project data 2) or a UEFI update (if no NVRAM is present), you must ensure that the correct safety program is located in the S7-1500 F Software Controller by reading out the Collective F-signature with the command line command "GetCollectiveFSignature" or the display.  Then you must enter and confirm the expected Collective F-signature with the command line command "ConfirmCollectiveFSignature". This confirmation is required to restart the safety program.  For both command line commands, you must be a member of the "Software Controller Operators" (Windows) or "software_controller_operators" (Linux) user group and the "Failsafe Operators" (Windows) or "failsafe_operators" (Linux) user group.   **The following applies to firmware versions &lt; V30.0 of the S7-1500 F Software Controller:**   After a CPU module replacement (e.g. new PC with data storage medium from old PC), a data storage medium replacement (e.g. data storage medium containing safety program 1 is replaced with data storage medium containing safety program 2) or a UEFI update, you must check via the display whether the correct collective F-signature is displayed or perform a program identification. (S066) |  |
 
 #### Removing and inserting F-I/O during operation
 
@@ -9128,7 +9126,7 @@ The minimum CPU operating system versions with guaranteed F-capability are speci
 
 When using a new operating system for an interface module, such as IM 151‑1 HIGH FEATURE for ET 200S (firmware update), you must observe the following:
 
-If you have selected the "Activate firmware after update" option for the firmware update (see Help onSTEP 7, "Online & Diagnostics"), the interface module is automatically reset following a successful download operation and then runs on the new operating system. Note that the firmware update for interface modules during operation causes a communication error in the F‑CPU.
+If you have selected the "Activate firmware after update" option for the firmware update (see Help onSTEP 7, "Online &amp; Diagnostics"), the interface module is automatically reset following a successful download operation and then runs on the new operating system. Note that the firmware update for interface modules during operation causes a communication error in the F‑CPU.
 
 You must acknowledge the communication error in your safety program in the ACK_REI tag of the [F-I/O DB](#f-io-db) or, alternatively, by using the "[ACK_GL](STEP%207%20Safety%20V19%20instructions.md#ack_gl-global-acknowledgment-of-all-f-io-in-an-f-runtime-group-step-7-safety-v19)" instruction. Without an acknowledgment, the F-I/O will remain passivated.
 
@@ -9146,7 +9144,7 @@ Below are the probability of failure values (PFD<sub>avg</sub>, PFH values) for 
 
 | Low demand mode   **low demand mode**   According to IEC 61508:2010:  PFD<sub>avg</sub> = Average probability of dangerous failure on demand | High demand or continuous mode   **high demand/continuous mode**   According to IEC 61508:2010:  PFH = Average frequency of a dangerous failure [h<sup>-1</sup>] |
 | --- | --- |
-| < 2E-05 | < 1E-09 up to an operating altitude of 3 000 m or  < 2E-09 at an operating altitude greater than 3 000 m up to 5 000 m |
+| &lt; 2E-05 | &lt; 1E-09 up to an operating altitude of 3 000 m or  &lt; 2E-09 at an operating altitude greater than 3 000 m up to 5 000 m |
 
 You can find more information on the operating conditions of the F-CPUs in the [PI F-CPUs](https://support.industry.siemens.com/cs/ww/en/view/109478599), and in the [PI of the PFD<sub>avg</sub>, PFH values](https://support.industry.siemens.com/cs/ww/en/view/109481784).
 
@@ -9156,7 +9154,7 @@ Below you will find the failure probability values (PFD<sub>avg</sub>, PFH value
 
 | Low demand mode   **low demand mode**   According to IEC 61508:2010:  PFD<sub>avg</sub> = Average probability of dangerous failure on demand | High demand or continuous mode   **high demand/continuous mode**   According to IEC 61508:2010:  PFH = Average frequency of a dangerous failure [h<sup>-1</sup>] |
 | --- | --- |
-| < 1E-05* | < 1E-09***** |
+| &lt; 1E-05* | &lt; 1E-09***** |
 
 *** Note on S7-300/400 F-CPUs:**
   
@@ -9176,7 +9174,7 @@ The following table shows the steps you take to evaluate diagnostic capabilities
 | Step | Procedure | Reference |
 | --- | --- | --- |
 | 1 | **Evaluate LEDs on the hardware (F‑CPU, F‑I/O):**   - BUSF LED on the F-CPU: Flashes when a communication error occurs on PROFIBUS DP/PROFINET IO;   On if a programming error occurs when OB 85 and OB 121 are programmed (e.g. instance DB is not loaded) - STOP LED on the F-CPU: illuminates when the F-CPU is in STOP mode - Fault LEDs on the F-I/O: e.g. SF‑LED (group error LED) on if any fault occurs in the individual F‑I/O | Manuals for F‑CPU and F‑I/O |
-| 2 | **Evaluate diagnostic buffer of the modules:**   You read the diagnostic buffer of a module (F-CPU, F-I/O, CP) in its online and diagnostic view in the "Diagnostic buffer" group under the "Online & Diagnostics" folder. | Help on STEP 7 and manuals for the F-CPU and F-I/O |
+| 2 | **Evaluate diagnostic buffer of the modules:**   You read the diagnostic buffer of a module (F-CPU, F-I/O, CP) in its online and diagnostic view in the "Diagnostic buffer" group under the "Online &amp; Diagnostics" folder. | Help on STEP 7 and manuals for the F-CPU and F-I/O |
 | 3 | **Evaluate stacks of the F‑CPU:**   when the F-CPU is in STOP mode, read the following successively:  - Block stack: Check whether STOP mode of the F‑CPU was triggered by an F‑block of the safety program - Interruption stack - Local data stack | Help on STEP 7 |
 | 4 | **Evaluate diagnostic tag of the F‑I/O DB using testing and commissioning functions, by means of an operator control and monitoring system, or in the standard user program:**   Evaluate the DIAG tag in the F‑I/O DB | [F-I/O access](#addressing-f-io) |
 | 5 | **Evaluate diagnostic outputs of the instance DBs of instructions using testing and commissioning functions, using an operator control and monitoring system, or in the standard user program:**   - Evaluate the following for MUTING, EV1oo2DI, TWO_H_EN, MUT_P, ESTOP1, FDBACK, SFDOOR in the assigned instance DB:   - Output DIAG - Evaluate the following for SENDDP or RCVDP in the assigned instance DB:   - Output RET_DPRD/RET_DPWR   - Output DIAG - Evaluate the following for SENDS7 or RCVS7 in the assigned instance DB:   - Output STAT_RCV   - Output STAT_SND   - Output DIAG | Instructions |
@@ -9555,7 +9553,7 @@ The validity of the process data in the → safety message frame, the correctnes
 
 ### DB for F-runtime group communication
 
--> F-DB for safety-related communication between F-runtime groups of a safety program.
+-&gt; F-DB for safety-related communication between F-runtime groups of a safety program.
 
  
 
@@ -9573,7 +9571,7 @@ A timer is started when the safety mode is disabled. After the timer has expired
 
 The following actions are possible only in deactivated safety mode:
 
-- Downloading changes of the → safety program to the -> F-CPU during operation (in RUN mode)
+- Downloading changes of the → safety program to the -&gt; F-CPU during operation (in RUN mode)
 - Test functions such as "Modify" or other write access to data of the → safety program (with limitations)
 
 Whenever safety mode is deactivated, the safety of the system must be ensured by other organizational measures, such as operation monitoring and manual safety shutdown.
@@ -9849,7 +9847,7 @@ The functionality of the "I‑device" (intelligent I/O‑device) of a CPU allows
 
 ### IE/PB link
 
-Device for coupling PROFINET IO and PROFIBUS DP‑systems required, among other things, for IO‑controller-I‑slave communication between -> safety programs in different → F‑CPUs in SIMATIC Safety.
+Device for coupling PROFINET IO and PROFIBUS DP‑systems required, among other things, for IO‑controller-I‑slave communication between -&gt; safety programs in different → F‑CPUs in SIMATIC Safety.
 
  
 
@@ -10009,9 +10007,9 @@ The Safety Administration Editor provides support for the main tasks of your saf
 
 ### Safety function
 
-Mechanism integrated in the → F-CPU and → F-I/O that allows them to be used in -> fail-safe systems.
+Mechanism integrated in the → F-CPU and → F-I/O that allows them to be used in -&gt; fail-safe systems.
 
-According to IEC 61508:2010, a function that is implemented by a safety device in order to maintain the system in the safe state or bring the system to a safe state in the event of a specific fault. (fault reaction function -> user safety function)
+According to IEC 61508:2010, a function that is implemented by a safety device in order to maintain the system in the safe state or bring the system to a safe state in the event of a specific fault. (fault reaction function -&gt; user safety function)
 
  
 

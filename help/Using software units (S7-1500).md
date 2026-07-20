@@ -167,7 +167,7 @@ In software units, you can only use symbolic programming. Specifically, this mea
 - Bit memory, the "Timer" function and the "Counter" function are not permitted in the PLC tag table. Using IEC timers and counters instead.
 - You cannot use system and clock bit memories. Siemens Industry Online Support provides you with ready-made functions that you can use alternatively.
 
-  See also: <https://support.industry.siemens.com/cs/ww/en/view/109479728>
+  See also: [https://support.industry.siemens.com/cs/ww/en/view/109479728](https://support.industry.siemens.com/cs/ww/en/view/109479728)
 
 ### Names for software units
 
@@ -185,14 +185,14 @@ See also: [Categorizing program elements in namespaces](#categorizing-program-el
 
 ### ProDiag
 
-Each software unit contains its own ProDiag overview editor, which you can open in the project tree via the "PLC supervisions & alarms" entry. You can add supervisions for a software unit in this editor. The supervisions that you create in one software unit are not displayed in other software units. The ProDiag overview editor outside software units, in contrast, displays all PLC supervisions, including supervisions within the software units.
+Each software unit contains its own ProDiag overview editor, which you can open in the project tree via the "PLC supervisions &amp; alarms" entry. You can add supervisions for a software unit in this editor. The supervisions that you create in one software unit are not displayed in other software units. The ProDiag overview editor outside software units, in contrast, displays all PLC supervisions, including supervisions within the software units.
 
 You can export the created supervisions to an Excel spreadsheet and then import them back into TIA Portal. If you export in the ProDiag overview editor of a software unit, only the supervisions of this software unit are exported. To export all supervision data from a PLC, start the export process in the ProDiag overview editor outside the software units. The Excel spreadsheet has an additional column in which the software unit containing the supervision is specified.
 
 Note the following particularities for ProDiag with respect to use within software units:
 
 - User-defined text lists that are referenced in supervision-specific texts can be stored in any software unit but not outside of software units.
-- Every software unit has its own ProDiag OB to which a number >= 250 is assigned.
+- Every software unit has its own ProDiag OB to which a number &gt;= 250 is assigned.
 - The global tag supervisions for a ProDiag FB can only supervise operands of the same software unit.
 - A ProDiag FB only contains block supervisions that reference parameters from the same software unit.
 - You cannot publish a ProDiag FB. Therefore, access from other software units is not possible.
@@ -236,7 +236,7 @@ See also: [Comparison of software units](Comparing%20PLC%20programs.md#compariso
 
 The use of software units does not change the access options for tags via HMI or OPC UA. You still define these options in the block interface for local tags or in the PLC tag table for global tags.
 
-Configuration data blocks that are generated from OPC UA client interfaces by the system ("<Name of the client interface_Configuration>") are always created outside of the software units. If you want to access them you can create a relation to these client interfaces. To do so, use the "Data block outside of the software unit" option as relation type.
+Configuration data blocks that are generated from OPC UA client interfaces by the system ("&lt;Name of the client interface_Configuration&gt;") are always created outside of the software units. If you want to access them you can create a relation to these client interfaces. To do so, use the "Data block outside of the software unit" option as relation type.
 
 ### Fail-safe blocks
 
@@ -642,7 +642,7 @@ To paste a software unit, follow these steps:
 2. Right-click on the "Software Units" folder.
 3. Select the "Paste" command in the shortcut menu.
 
-   - If you are pasting the software unit into the same CPU, the copy is pasted with the name extension "_<smallest free number>". If there is a namespace preset, it will also be renamed.
+   - If you are pasting the software unit into the same CPU, the copy is pasted with the name extension "_&lt;smallest free number&gt;". If there is a namespace preset, it will also be renamed.
    - If you are pasting the software unit into another CPU and a software unit with this name already exists, the "Paste" dialog box opens. Select the desired option and confirm your selection with "OK".
 
 ---
@@ -1051,7 +1051,7 @@ To change the publishing status for a program element in the Overview window, fo
 
 1. In the project tree, open the folder "Software Units" and navigate to the software unit of the program element with the publishing status you want to change.
 2. Select either the "Program blocks", "PLC tags" or "PLC data types" folder, depending on the type of program element.
-3. Open the Overview window using the "Maximizes/minimizes the overview" button or the "View > Overview" menu.
+3. Open the Overview window using the "Maximizes/minimizes the overview" button or the "View &gt; Overview" menu.
 4. Open the "Details" tab.
 
    The publishing status is displayed for each element in the "Published" column.
@@ -1094,7 +1094,7 @@ To create a new relation, follow these steps:
 2. Double click on "Relations".
 
    The relational table opens.
-3. Click "<Add new relation>".
+3. Click "&lt;Add new relation&gt;".
 4. Select the type of relation in the "Relation type" column.
 5. In the "Accessible element" column, select or enter the element you want to access.
 
@@ -1119,7 +1119,7 @@ To delete a relation, follow these steps:
 
    The relational table opens.
 3. Select the relations that you want to delete.
-4. In the shortcut menu, select the "Delete" command or press the <Del> key.
+4. In the shortcut menu, select the "Delete" command or press the &lt;Del&gt; key.
 5. Confirm the confirmation prompt with "Yes".
 
    The selected relations are deleted.
@@ -1242,7 +1242,7 @@ To compile the blocks of a software unit, follow these steps:
 
 #### Result
 
-The program elements are compiled. You can check whether or not the compilation was successful in the Inspector window with "Info > Compile".
+The program elements are compiled. You can check whether or not the compilation was successful in the Inspector window with "Info &gt; Compile".
 
 ---
 
@@ -1296,7 +1296,7 @@ To load one or more Software Units to the device, follow these steps:
 Proceed as follows to load all Software Units in one loading operation to the device:
 
 1. Select the "Software Units" folder in the project tree.
-2. Select the "Download to device > Software (only changes)" command from the shortcut menu.
+2. Select the "Download to device &gt; Software (only changes)" command from the shortcut menu.
 
    If an online connection is already defined, the project data is compiled if necessary and the "Load preview" dialog opens. This dialog displays messages and recommends actions needed for the loading operation. If you have not already established an online connection, the "Extended download to device" dialog opens. Then perform step 3.
 3. Set all parameters required for the connection and click "Load".
@@ -1315,7 +1315,7 @@ Proceed as follows to load all Software Units in one loading operation to the de
 
 The Software Units are loaded to the device. If the changes affect additional objects, these are compiled and also loaded to the device. Objects that only exist online in the device are deleted. Be aware that loading individual Software Units can result in inconsistencies between the user program in the device and the user program in the offline project.
 
-The messages under "About > General" in the Inspector window show whether the load process was successful.
+The messages under "About &gt; General" in the Inspector window show whether the load process was successful.
 
 #### Loading software units from a device (S7-1500)
 
@@ -1370,8 +1370,8 @@ To load software units together with other project data to a memory card, follow
 Or:
 
 1. In the project navigation, select the project data that you want to load.
-2. To do this, right-click the selection and select the "Copy" command from the shortcut menu. You can also use the key combination <Ctrl+C>.
-3. Right-click the memory card and select the "Paste" command from the shortcut menu. You can also use the key combination <Ctrl+V>.
+2. To do this, right-click the selection and select the "Copy" command from the shortcut menu. You can also use the key combination &lt;Ctrl+C&gt;.
+3. Right-click the memory card and select the "Paste" command from the shortcut menu. You can also use the key combination &lt;Ctrl+V&gt;.
 
    If necessary, the project data is compiled. The "Load preview" dialog then opens. This dialog displays messages and recommends actions needed for the loading operation.
 4. Check the messages and, where necessary, enable the actions in the "Action" column.
@@ -1384,7 +1384,7 @@ Or:
 Or:
 
 1. In the project navigation, select the project data that you want to load.
-2. Select the "Card Reader/USB memory > Write to memory card" command in the "Project" menu.
+2. Select the "Card Reader/USB memory &gt; Write to memory card" command in the "Project" menu.
 
    The "Select memory card" dialog opens.
 3. Select a memory card that is compatible with the CPU.
@@ -1462,7 +1462,7 @@ This section contains information on the following topics:
 
 This application example serves as an introduction to the use of software units and namespaces in an automation project.
 
-Using a "Pick & Place" application as an example, you will learn how to use software units to modularize your program technologically and administer data access between the individual modules.
+Using a "Pick &amp; Place" application as an example, you will learn how to use software units to modularize your program technologically and administer data access between the individual modules.
 
 A modularized and standardized automation solution offers the following advantages:
 
@@ -1481,7 +1481,7 @@ By using software units, you achieve a significant increase in efficiency and pr
 
 #### Technological task
 
-In the example, we want to control a process that places electronic components into workpieces (Pick & Place). In practice, this could be placing buttons into a cell phone.
+In the example, we want to control a process that places electronic components into workpieces (Pick &amp; Place). In practice, this could be placing buttons into a cell phone.
 
 A conveyor belt system transports a workpiece carrier to a work station. Here, the workpiece positioned on it is fitted by a robot with an electronic component from the storage unit.
 

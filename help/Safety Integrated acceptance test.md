@@ -347,7 +347,7 @@ The operator controls for the test steps are located in the lower area. This inc
 
    For this purpose, call the shortcut menu in the diagram area and click "Add to measurements".
 
-   The trace recording is saved in the project navigation in the drive menu under "Traces > Measurements".
+   The trace recording is saved in the project navigation in the drive menu under "Traces &gt; Measurements".
 9. Alternatively: Cancel the test by clicking "Cancel" if the workflow does not meet your expectations.  
    In this case, check the correctness of all input conditions and repeat the test, if necessary.  
    Sample scenario: STO is initiated, even though the motor speed is still high. In this case, a possible cause could be incorrect parameterization, e.g. an insufficiently short delay time from SS1 to STO or an excessively high shut-down speed.
@@ -487,7 +487,7 @@ The report comprises several individual tables. These include:
 >
 > - Microsoft Excel  
 >   The acceptance report is displayed correctly in Microsoft Excel when the following is configured in the Windows display settings:  
->   Control Panel > Appearance and Personalization > Display > Make text and other items larger or smaller > Option "Smaller – 100%"
+>   Control Panel &gt; Appearance and Personalization &gt; Display &gt; Make text and other items larger or smaller &gt; Option "Smaller – 100%"
 > - LibreOffice  
 >   The acceptance report is displayed independently of the Windows settings and is thus always correct.
 

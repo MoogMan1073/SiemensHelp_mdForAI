@@ -60,7 +60,7 @@ When using the redundant system S7-1500R/H there are restrictions for the hardwa
 - No support of series machine projects, configuration control (options handling)
 - Longer cycle and reaction times
 
-A complete overview of all restrictions for the redundant system S7-1500R/H compared to the S7-1500 automation system can be found in the section "Operational planning > Restrictions" in the "Redundant System S7-1500R/H" system manual.
+A complete overview of all restrictions for the redundant system S7-1500R/H compared to the S7-1500 automation system can be found in the section "Operational planning &gt; Restrictions" in the "Redundant System S7-1500R/H" system manual.
 
 ### Restrictions and special features (software)
 
@@ -81,7 +81,7 @@ When using the redundant system S7-1500R/H there are restrictions for the softwa
 - You can only test with breakpoints in the STARTUP (startup OB) or RUN-Solo system state
 - The storage of measurements on the SIMATIC memory card (measurements in the device) is not supported
 
-A complete overview of all restrictions for the redundant system S7-1500R/H compared to the S7-1500 automation system can be found in the section "Operational planning > Restrictions in comparison to the S7-1500 automation system" in the "Redundant System S7-1500R/H" system manual.
+A complete overview of all restrictions for the redundant system S7-1500R/H compared to the S7-1500 automation system can be found in the section "Operational planning &gt; Restrictions in comparison to the S7-1500 automation system" in the "Redundant System S7-1500R/H" system manual.
 
 ### Communication restrictions
 
@@ -336,11 +336,11 @@ Instead of the ET 200SP HA shown in the picture, two ET 200SP (IM 155-6 PN R1)
 
 1. Place an S7-1500H system (as of firmware V3.0) in the network view.
 2. Click on the PN/IE_1 connection between the PROFINET interfaces X1 of the two H CPUs and create a new MRP domain.  
-   To do this, navigate to the properties of the PROFINET interface in the Inspector window ("Domain management > MRP domains" area).
+   To do this, navigate to the properties of the PROFINET interface in the Inspector window ("Domain management &gt; MRP domains" area).
 3. Drag an ET 200SP (IM 155-6 PN R1) from the hardware catalog as an R1 device into the network view.
 4. Connect the left interface module of the R1 device to the H CPU with redundancy ID 1 (PROFINET interface X1 of the left H CPU).
 5. Connect the right interface module of the R1 device to the H CPU with redundancy ID 2 (PROFINET interface X1 of the right H CPU).
-6. Switch to the device view of the IM 155-6 PN R1 and set the watchdog timer for both interface modules. To do this, navigate in the Inspector window to "Properties > PROFINET interface [X1] > Advanced options > Real time settings > IO cycle".
+6. Switch to the device view of the IM 155-6 PN R1 and set the watchdog timer for both interface modules. To do this, navigate in the Inspector window to "Properties &gt; PROFINET interface [X1] &gt; Advanced options &gt; Real time settings &gt; IO cycle".
 7. Drag an additional ET 200SP (IM 155-6 PN R1) from the hardware catalog as an R1 device into the network view.
 8. Repeat steps 4 to 6 for this second R1 device.
 
@@ -352,7 +352,7 @@ As soon as you create an S7‑1500H redundant system in STEP 7, STEP 7 automat
 
 1. Switch to the device view of the S7-1500H redundant system. The two redundant CPUs are displayed one above the other.
 2. Select the PROFINET interface X1 of the upper H CPU of the S7 1500H redundant system.
-3. In the Inspector window, navigate to "Properties > General > Advanced options > Media redundancy".
+3. In the Inspector window, navigate to "Properties &gt; General &gt; Advanced options &gt; Media redundancy".
 4. Change the MRP domain to "mrpdomain-1" (if required) and the media redundancy role for the H CPU to "Manager (auto)".
 5. Select the PROFINET interface X1 of the lower H CPU of the S7‑1500H redundant system.
 6. Change the MRP domain to "mrpdomain-2" (if required) and the media redundancy role for the H CPU to "Manager (auto)".
@@ -404,8 +404,8 @@ The reconfiguration times of the R1 devices are significantly reduced and shorte
 
 When using routers in R/H systems, you must pay attention to a consistent configuration in the router settings of the CPUs and IO devices. You avoid an error in the consistency check of the router addresses by not confusing the following configuration options:
 
-- If the interface setting "Synchronize router settings with IO controller" is enabled in an assigned IO device, use of the router must be activated, and the same router address must be set in the primary CPU and backup CPU of the S7-1500R/H system under "PROFINET interface > Ethernet addresses > IP protocol".
-- If different router addresses are set in the primary CPU and backup CPU of the S7-1500R/H system under "PROFINET interface > Ethernet addresses > IP protocol" with activated use of the router, the interface setting "Synchronize router settings with IO controller" must be disabled in the IO device.
+- If the interface setting "Synchronize router settings with IO controller" is enabled in an assigned IO device, use of the router must be activated, and the same router address must be set in the primary CPU and backup CPU of the S7-1500R/H system under "PROFINET interface &gt; Ethernet addresses &gt; IP protocol".
+- If different router addresses are set in the primary CPU and backup CPU of the S7-1500R/H system under "PROFINET interface &gt; Ethernet addresses &gt; IP protocol" with activated use of the router, the interface setting "Synchronize router settings with IO controller" must be disabled in the IO device.
 
 Below you will find the description of an inconsistent configuration of an R/H system:
 
@@ -457,7 +457,7 @@ As soon as you create a redundant system S7-1500R/H in STEP 7, STEP 7 automati
 Follow these steps to determine the media redundancy for additional stations in the ring:
 
 1. In the network view of STEP 7, select the PROFINET interface X1 of one of the two CPUs of the redundant system S7-1500R/H.
-2. In the Inspector window navigate to "Properties" > "General" > "Advanced options" > "Media redundancy".
+2. In the Inspector window navigate to "Properties" &gt; "General" &gt; "Advanced options" &gt; "Media redundancy".
 
    ![Defining the MRP role for additional stations of the ring](images/109752350475_DV_resource.Stream@PNG-en-US.png)
 
@@ -757,9 +757,9 @@ In addition to the OBs of the S7-1500 CPU, you can use OB 72. With OB 72 you ha
 - You create the user program for the redundant system S7-1500R/H in the top CPU (e.g. PLC_1) of the STEP 7 project tree.
 - The redundant system S7-1500R/H does not support some of the instructions the S7-1500 CPUs. Instructions that are not supported by the S7‑1500R/H redundant system are grayed out in STEP 7 in the "Instructions" task card.  
   STEP 7 shows the instructions that are not supported in the program code in red. If you compile with instructions that are not supported, STEP 7 issues a corresponding error message.  
-  The instructions that are not supported are specified in the section "Basics of program execution > Restrictions" in the "Redundant System S7-1500R/H" system manual.
+  The instructions that are not supported are specified in the section "Basics of program execution &gt; Restrictions" in the "Redundant System S7-1500R/H" system manual.
 - In the case of instructions with the "LADDR" block parameter, you use this parameter to determine which of the two CPUs is the target of this instruction.  
-  Example: To read out the I & M data of the CPU with the redundancy ID 1, enter the hardware identifier 65149 (or system constant "Local1") at the "LADDR" block parameter of the Get_IM_Data instruction.
+  Example: To read out the I &amp; M data of the CPU with the redundancy ID 1, enter the hardware identifier 65149 (or system constant "Local1") at the "LADDR" block parameter of the Get_IM_Data instruction.
 - Behavior of asynchronous instructions
 
   - Normally, asynchronous instructions delay the SYNCUP process until their execution is completed.
@@ -982,7 +982,7 @@ To download the project data to the primary CPU, follow these steps:
 
 1. Select the S7-1500R/H system in the project navigation.
 2. Right-click to call up the shortcut menu.
-3. Select the "Download to device > Hardware and software (only changes)" command from the shortcut menu.
+3. Select the "Download to device &gt; Hardware and software (only changes)" command from the shortcut menu.
 
    The "Extended download to device" dialog opens.
 4. Select the subnet from the "Type of the PG/PC interface" drop-down list.
@@ -1107,7 +1107,7 @@ Proceed as follows to download a changed user program into the primary CPU:
 1. Switch the backup CPU to the STOP operating state.
 
    The S7-1500R/H system switches from the RUN-Redundant system state to the RUN-Solo system state.
-2. Download the modified user program to the primary CPU with "Download to device" > "Software (only changes)".
+2. Download the modified user program to the primary CPU with "Download to device" &gt; "Software (only changes)".
 
    The primary CPU continues to control the process.
 3. Switch the backup CPU to the RUN operating state.
@@ -1233,7 +1233,7 @@ If the CPUs of the redundant system S7-1500R/H have two PROFINET interfaces (X1 
 To enable the system IP address for your redundant system S7-1500R/H, proceed as follows:
 
 1. In the network view of STEP 7, select the interface X1 of one of the two CPUs.
-2. In the Inspector window, go to "Properties" > "General" > "Ethernet addresses" in the area "System IP address for switched communication".
+2. In the Inspector window, go to "Properties" &gt; "General" &gt; "Ethernet addresses" in the area "System IP address for switched communication".
 3. Select the check box "Enable the system IP address for switched communication".
 
    STEP 7 automatically creates a system IP address.
@@ -1331,7 +1331,7 @@ The system data type TCON_Param is not supported.
 | UDP | - TCON_IP_v4 - TCON_IP_QDN - TADDR_Param - TADDR_SEND_QDN - TADDR_RCV_IP - TCON_QDN_SEC* - TCON_IP_v4_SEC* | Establish connection and send/receive data via:  - TSEND_C/TRCV_C - TUSEND/TURCV/TRCV (connection can be terminated via TDISCON) |
 | Modbus TCP | - TCON_IP_v4 - TCON_QDN - TCON_IP_v4_SEC* - TCON_QDN_SEC* | - MB_CLIENT - MB_SERVER |
 
-* The S7‑1500R/H redundant system supports Secure Open User Communication as of FW version V3.1. If you use the system data types TCON_IP_v4_SEC or TCON_QDN_SEC in the S7‑1500R/H redundant system (< FW version V 3.1), their ActivateSecureConn parameter must have the value FALSE. This means that the subsequent security parameters are irrelevant. You can set up a non-secure TCP or UDP connection in this case.
+* The S7‑1500R/H redundant system supports Secure Open User Communication as of FW version V3.1. If you use the system data types TCON_IP_v4_SEC or TCON_QDN_SEC in the S7‑1500R/H redundant system (&lt; FW version V 3.1), their ActivateSecureConn parameter must have the value FALSE. This means that the subsequent security parameters are irrelevant. You can set up a non-secure TCP or UDP connection in this case.
 
 #### Example: Setting up connection via the system IP address
 
@@ -1356,7 +1356,7 @@ To set up a TCP connection to another CPU, proceed as follows:
 
 1. Create an instruction TSEND_C in the user program.
 2. Select the instruction "TSEND_C".
-3. In the Inspector window, go to "Properties" > "Configuration" > "Connection parameters".  
+3. In the Inspector window, go to "Properties" &gt; "Configuration" &gt; "Connection parameters".  
    On the left side you see the redundant system S7-1500R/H is local end point of the connection:
 
    - "Interface:": The interface X1 is preset.
@@ -1364,7 +1364,7 @@ To set up a TCP connection to another CPU, proceed as follows:
    - **The option "Use System IP address" is enabled**.
 4. For "Partner", select the CPU 1516‑3 PN/DP as communication partner under "End point:".
 5. For "Partner", select the PROFINET interface X2 of the CPU 1516‑3 PN/DP under "Interface:".
-6. For "Local", select the setting <new> under "Connection data".
+6. For "Local", select the setting &lt;new&gt; under "Connection data".
 
    STEP 7 creates a data block for the connection data in the user program of the redundant system S7-1500R/H.
 7. For "Partner", select the setting "TCP" under "Connection type:".
@@ -1688,7 +1688,7 @@ The extension compared to a standard CPU is solely that the role of the CPU conn
 
 Connections to an R/H system that use its system IP address behave differently than in the case of standard connections to exactly one CPU of the R/H system with regard to the used connection resources: Connections via the system IP address use resources in each of the two CPUs and in the R/H station.
 
-The display of the connection resources ("Diagnostics" > "Connection information" of the Inspector window, "Connection resources" group) behaves accordingly.
+The display of the connection resources ("Diagnostics" &gt; "Connection information" of the Inspector window, "Connection resources" group) behaves accordingly.
 
 For more information, please refer to the "Communication" function manual.
 
@@ -1728,7 +1728,7 @@ For example, you cannot compare an R/H CPU with PC systems (other design).
 
 The execution of the offline/online comparison is basically no different from the offline/online comparison with standard CPUs:
 
-As a starting point for this comparison, you can either select the R/H station or one or both CPUs of the R/H station in the project tree and then select the shortcut menu command "Compare > Offline/Online" as usual. STEP 7 compares with the online CPU that has the role "Primary".
+As a starting point for this comparison, you can either select the R/H station or one or both CPUs of the R/H station in the project tree and then select the shortcut menu command "Compare &gt; Offline/Online" as usual. STEP 7 compares with the online CPU that has the role "Primary".
 
 There is no separate menu command for the offline/online comparison with the backup CPU. If you want to compare an offline CPU (R/H system) with the backup CPU as the target device, you must first establish an online connection to the backup CPU using the shortcut menu command "Online connection to backup CPU" and then start the offline/online comparison.
 

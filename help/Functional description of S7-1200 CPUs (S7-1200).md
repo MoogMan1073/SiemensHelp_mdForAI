@@ -321,7 +321,7 @@ When the SIMATIC memory card is inserted in the programming device or in an exte
 
   In this case, all objects relevant to processing, such as blocks and the hardware configuration, are transferred to the SIMATIC memory card, just as with downloading.
 
-To perform the transfer, you can move the objects with drag-and-drop or use the command "Card reader/USB memory > Write to memory card" in the "Project" menu.
+To perform the transfer, you can move the objects with drag-and-drop or use the command "Card reader/USB memory &gt; Write to memory card" in the "Project" menu.
 
 #### Transferring objects from the SIMATIC memory card to the project
 
@@ -329,15 +329,15 @@ You can transfer Individual blocks (multiple selection is possible) by dragging 
 
 #### Updating firmware with a SIMATIC memory card
 
-You can get the latest firmware data on the Internet from the Service & Support pages:
+You can get the latest firmware data on the Internet from the Service &amp; Support pages:
 
 [http://support.automation.siemens.com](http://support.automation.siemens.com/WW/view/en/34143537)
 
 Save the firmware files on the hard disk and plug the SIMATIC Memory Card into the card reader of your programming device.
 
-To store the file on the SIMATIC memory card, select the SIMATIC memory card in the "Card Reader/USB memory" folder in the project tree. Select the shortcut menu "Card Reader/USB memory > Create firmware update memory card".
+To store the file on the SIMATIC memory card, select the SIMATIC memory card in the "Card Reader/USB memory" folder in the project tree. Select the shortcut menu "Card Reader/USB memory &gt; Create firmware update memory card".
 
-Then follow the instructions in the Service & Support portal for performing a firmware update with your CPU.
+Then follow the instructions in the Service &amp; Support portal for performing a firmware update with your CPU.
 
 Updating the firmware changes the CPU firmware status. If you have used the CPU in the project, you will have to update the CPU already configured to the CPU with the new firmware status by changing devices offline, and adapt and then load the program or configuration.
 
@@ -365,7 +365,7 @@ This internal load memory can be replaced by using external memory cards. If the
 
 With this option in the CPU properties, you can prevent someone from simply inserting a memory card and transferring the contents of the internal load memory (project data) to a memory card, thus gaining access to this data.
 
-If you do not select the "Disable copying from internal load memory to external load memory" setting in the "Protection & Security" area of the CPU properties, the CPU determines which type of memory card you are inserting:
+If you do not select the "Disable copying from internal load memory to external load memory" setting in the "Protection &amp; Security" area of the CPU properties, the CPU determines which type of memory card you are inserting:
 
 - Empty memory card: An empty memory card has no job file (S7_JOB.S7S). If you insert an empty memory card, the CPU adds a program job file. It then copies the internal load memory to the external load memory (the program file on the memory card) and deletes the internal load memory.
 - Empty program card: An empty program card contains a program job file, which is empty. In this case, the CPU copies the internal load memory to the external load memory (the program file on the memory card) and deletes the internal load memory.
@@ -430,7 +430,7 @@ The following table shows the operand areas of the system memory:
 | Local data byte | LB |  |  |
 | Local data word | LW |  |  |
 | Local data double word | LD |  |  |
-| I/O input area | The I/O input and output areas permit direct access to central and distributed input and output modules. | I/O input bit | <tag>:P |
+| I/O input area | The I/O input and output areas permit direct access to central and distributed input and output modules. | I/O input bit | &lt;tag&gt;:P |
 | I/O input byte |  |  |  |
 | I/O input word |  |  |  |
 | I/O input double word |  |  |  |
@@ -652,12 +652,12 @@ The following table provides an overview of the events which can start an OB, in
 
 | Event class | OB no. | Number of OBs | Start event | OB priority (default) |
 | --- | --- | --- | --- | --- |
-| Cyclic program | 1, >= 123 | >= 1 | Starting or end of the last program cycle OB | 1 |
-| Startup | 100, >= 123 | >=0 | STOP to RUN transition | 1 |
-| Time-of-day interrupt | >= 10 | Max. 2 | Start time has been reached | 2 |
-| Time-delay interrupt | >= 20 | Max. 4 | Delay time expired | - 3 - Firmware version V4.0 or higher: 3 for OB20, 4 for OB21, 5 for OB22, 6 for OB23, 3 for OB123 to 32767 |
-| Cyclic interrupt | >= 30 | Constant bus cycle time expired | - 8 - Firmware version V4.0 or higher: 8 for OB30, 9 for OB31, 10 for OB32, 11 for OB33, 12 for OB34, 13 for OB35, 14 for OB36, 16 for OB37, 17 for OB38, 7 for OB123 to 32767 |  |
-| Hardware interrupt | >= 40 | Max. 50 (more can be used with DETACH and ATTACH) | - Positive edge (max. 16) - Negative edge (max. 16) | 18 |
+| Cyclic program | 1, &gt;= 123 | &gt;= 1 | Starting or end of the last program cycle OB | 1 |
+| Startup | 100, &gt;= 123 | &gt;=0 | STOP to RUN transition | 1 |
+| Time-of-day interrupt | &gt;= 10 | Max. 2 | Start time has been reached | 2 |
+| Time-delay interrupt | &gt;= 20 | Max. 4 | Delay time expired | - 3 - Firmware version V4.0 or higher: 3 for OB20, 4 for OB21, 5 for OB22, 6 for OB23, 3 for OB123 to 32767 |
+| Cyclic interrupt | &gt;= 30 | Constant bus cycle time expired | - 8 - Firmware version V4.0 or higher: 8 for OB30, 9 for OB31, 10 for OB32, 11 for OB33, 12 for OB34, 13 for OB35, 14 for OB36, 16 for OB37, 17 for OB38, 7 for OB123 to 32767 |  |
+| Hardware interrupt | &gt;= 40 | Max. 50 (more can be used with DETACH and ATTACH) | - Positive edge (max. 16) - Negative edge (max. 16) | 18 |
 | - HSC: Count value = reference value (max. 6) - HSC: Count direction changed (max. 6) - HSC: External reset (max. 6) | 18 |  |  |  |
 | Status interrupt | 55 | 0 or 1 | CPU has received status interrupt | 4 |
 | Update interrupt | 56 | 0 or 1 | CPU has received update interrupt | 4 |
@@ -693,9 +693,9 @@ OBs are always executed on a priority basis: The OBs with the highest priority a
 
 As of firmware version V4.0 of the S7-1200 CPUs you can specify in the device configuration, under properties of the CPU, if the OBs are interruptible or not. This parameter assignment has an effect on all OBs with exception of the cycle OBs which are always interruptible.
 
-The following applies to S7-1200 CPUs with firmware version < V4.0:
+The following applies to S7-1200 CPUs with firmware version &lt; V4.0:
 
-- Any OB with priority >= 2 will interrupt cyclic program execution.
+- Any OB with priority &gt;= 2 will interrupt cyclic program execution.
 - An OB of priority 2 to 25 cannot be interrupted by any event of priority group 2 to 25. This rule also applies to events of a priority higher than that of the currently active OB. Such events are processed later.
 - A time error (priority 26) will interrupt any other OB.
 
@@ -703,12 +703,12 @@ The following applies to S7-1200 CPUs as of firmware version V4.0:
 
 If you do not configure the OBs as interruptible, an OB is always processed completely even if an event of a higher priority occurs during its runtime. Specifically, this means:
 
-- Any OB with priority >= 2 will interrupt cyclic program execution.
+- Any OB with priority &gt;= 2 will interrupt cyclic program execution.
 - An OB of priority 2 to 25 cannot be interrupted by any event. This rule also applies to events of a priority higher than that of the currently active OB, which also includes a time error. Such events are processed later.
 
 If you do configure the OBs as interruptible and an event of a higher priority occurs during the runtime of an OB, the running OB is interrupted and the OB associated with the occurring event is processed. Once this OB has been completed, processing of the interrupted OB continues. Specifically, this means:
 
-- Any OB with priority >= 2 will interrupt cyclic program execution.
+- Any OB with priority &gt;= 2 will interrupt cyclic program execution.
 - An OB of priority 2 to 25 can be interrupted by any event whose priority is higher than that of the running OB. This is also true for time errors: A time error (priority 26) will interrupt any OB.
 
 #### OB start information
@@ -835,7 +835,7 @@ This section contains information on the following topics:
 - [Point-to-point communication (S7-1200)](#point-to-point-communication-s7-1200)
 - [Enabling system memory (S7-1200)](#enabling-system-memory-s7-1200)
 - [Using clock memory (S7-1200)](#using-clock-memory-s7-1200)
-- [Protection & Security (S7-1200)](#protection-security-s7-1200)
+- [Protection &amp; Security (S7-1200)](#protection-security-s7-1200)
 - [Activating and deactivating SNMP (S7-1200)](#activating-and-deactivating-snmp-s7-1200)
 - [Disabling SNMP: Full program example (S7-1200)](#disabling-snmp-full-program-example-s7-1200)
 
@@ -910,7 +910,7 @@ The following table provides you with an overview of the CPU properties:
 | --- | --- | --- |
 | General | Project information | General information to describe the inserted CPU. Except for the slot number, you can change this information. |
 | Catalog information | Read-only information from the hardware catalog for this CPU. |  |
-| Identification & Maintenance | For saving application-specific information such as the name of the plant and the installation location. |  |
+| Identification &amp; Maintenance | For saving application-specific information such as the name of the plant and the installation location. |  |
 | Checksums | To check the identity or integrity of PLC programs.  Blocks in the block folder and text lists are automatically marked with unique checksums when they are compiled. You can easily establish whether the program currently running on the CPU is the same program that you loaded a long time ago or whether the program has been changed in the meantime. The "GetChecksum" instruction is available to read out the checksum while the program is running.  See: [Comparison of PLC programs based on checksums](Comparing%20PLC%20programs.md#comparison-of-plc-programs-based-on-checksums) |  |
 | PROFINET interface | General | Name and comment for this PROFINET interface. The name is limited to 110 characters. |
 | Ethernet addresses | Select whether the PROFINET interface is networked. If subnets have already been created in the project, they are available for selection in the drop-down list. If not, you can create a new subnet with the "Add new subnet" button.  Information on the IP address, subnet mask and IP router usage in the subnet is available in the IP protocol. If an IP router is used, the information about the IP address of the IP router is necessary.  See: [Assigning addresses and names for PROFINET devices](Configuring%20devices%20and%20networks.md#assigning-addresses-and-names-to-profinet-devices) |  |
@@ -938,9 +938,9 @@ The following table provides you with an overview of the CPU properties:
 | User-defined web pages | Allows access to freely-designed web pages of the CPU via a web browser.  See: [What you need to know about user pages](Configuring%20the%20Web%20server%20%28S7-300%2C%20S7-400%2C%20S7-1500%29.md#what-you-need-to-know-about-user-pages-s7-300-s7-400-s7-1500) |  |
 | Entry page | Allows you to select the entry page. |  |
 | Overview of interfaces | Table of all modules with their Ethernet interfaces providing Web server functionality for this device.  Here, you can permit or deny access to the Web server over the interface for each Ethernet interface of the device (CPU, CP or CM). |  |
-| User interface languages | - | If you want to use translations of project texts for the Web server, you need to assign the project language to the languages for the Web server (number depends on the CPU). This specifies the project languages that are displayed when the Web server is accessed.  Example: You assign the project language "German (Luxembourg)" to the Web server language "German" by selecting it from the drop-down list. Enable the project language under "Languages & resources > Project languages" in the project tree to make it available for selection in the drop-down list. |
+| User interface languages | - | If you want to use translations of project texts for the Web server, you need to assign the project language to the languages for the Web server (number depends on the CPU). This specifies the project languages that are displayed when the Web server is accessed.  Example: You assign the project language "German (Luxembourg)" to the Web server language "German" by selecting it from the drop-down list. Enable the project language under "Languages &amp; resources &gt; Project languages" in the project tree to make it available for selection in the drop-down list. |
 | Time | Local time and daylight saving time | Setting of the time zone in which the CPU is operated and setting of the daylight-saving/standard time changeover. |
-| Protection & Security | Protection of the PLC configuration data | Configure here the protection of the confidential PLC configuration data.  See: [Protection of confidential configuration data](#protection-of-confidential-configuration-data-s7-1200) |
+| Protection &amp; Security | Protection of the PLC configuration data | Configure here the protection of the confidential PLC configuration data.  See: [Protection of confidential configuration data](#protection-of-confidential-configuration-data-s7-1200) |
 | Access level | Setting the read/write protection and the password for access to the CPU.  See: [Setting options for the protection level (FW V1 to V3)](#setting-options-for-the-protection-level-fw-v1-to-v3-s7-1200)  See: [Setting options for the protection (FW as of V4)](#setting-options-for-the-protection-fw-as-of-v4-s7-1200) |  |
 | Connection mechanisms | Enabling access over PUT/GET communication. |  |
 | Security event | Enabling group alarms for security events and specifying a monitoring time (interval). |  |
@@ -1071,7 +1071,7 @@ You can set, start and read the time-of-day and date on the CPU clock with the f
 
 ##### Manual setting
 
-You can also read and set the time-of-day manually in the online and diagnostics view under "Functions > Set time-of-day".
+You can also read and set the time-of-day manually in the online and diagnostics view under "Functions &gt; Set time-of-day".
 
 ---
 
@@ -1220,7 +1220,7 @@ An S7-1200 CPU has been inserted in the hardware configuration.
 To configure a high-speed counter, follow these steps:
 
 1. Select an S7-1200 CPU in the device or network view.
-2. Click on the required high-speed counter under "Properties > High-speed counter (HSC)" in the Inspector window:
+2. Click on the required high-speed counter under "Properties &gt; High-speed counter (HSC)" in the Inspector window:
 
    - CPU 1211C: HSC1 to HSC3 (also HSC5 with a DI2/DO2 signal board)
    - CPU 1212C: HSC1 to HSC4 (also HSC5 with a DI2/DO2 signal board)
@@ -1727,7 +1727,7 @@ The wizard also starts, for example, when you replace a module in the network vi
 
 All settings in the wizard are applied in the Inspector window (CPU properties).
 
-You can start the wizard at any time using a Start button in the "Protection & Security" area of the CPU properties.
+You can start the wizard at any time using a Start button in the "Protection &amp; Security" area of the CPU properties.
 
 ---
 
@@ -1754,7 +1754,7 @@ A description of the concept as well as detailed information on handling the pas
 ##### Procedure
 
 1. Open the CPU properties in the network view or in the device view.
-2. Navigate to the area "Protection & Security > Protection of the PLC configuration data".
+2. Navigate to the area "Protection &amp; Security &gt; Protection of the PLC configuration data".
 
    **Result:** The "Protect confidential PLC configuration data" option is enabled first and the empty field for password entry is highlighted in red.
 3. Configure the password (recommended) via the "Set" button or disable the "Protect confidential PLC configuration data" option.
@@ -1768,7 +1768,7 @@ A description of the concept as well as detailed information on handling the pas
 - Manage your passwords in a password manager.
 - Use TIA Portal's password policy verification settings to check newly entered passwords for compliance and prevent trivial passwords, for example:
 
-  - In the project tree, navigate to the area "<Project name> > Security settings > Settings" area and select the "Password policies" area.
+  - In the project tree, navigate to the area "&lt;Project name&gt; &gt; Security settings &gt; Settings" area and select the "Password policies" area.
   - Specify, for example, the minimum number of characters the password must have or the minimum number of special characters.
 - You do not have to assign different passwords for each CPU in a system or machine. If the requirements are met, you can also define the same password for a group of CPUs. This strategy also has advantages in the replacement parts scenario: If the group password is also assigned to the replacement CPU, the workload of replacing the CPU is reduced.
 - The definition of passwords also has an impact on the replacement parts scenario.
@@ -1805,7 +1805,7 @@ Example: The module was assigned write protection and you want to execute the "M
 
 The functions protected by a password can only be executed by one programming device/PC at any one time. Another programming device/PC cannot log on with a password.
 
-Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online > Delete access rights". Access authorization will also expire when the project is closed.
+Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online &gt; Delete access rights". Access authorization will also expire when the project is closed.
 
 > **Note**
 >
@@ -1859,7 +1859,7 @@ Example: The module was configured with read access and you want to execute the 
 
 The functions protected by a password can only be executed by one programming device/PC at any one time. Another programming device/PC cannot log on.
 
-Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online > Delete access rights".
+Access authorization to the protected data is in effect for the duration of the online connection or until the access authorization is manually rescinded with "Online &gt; Delete access rights".
 
 Each access level allows unrestricted access to certain functions without entering a password, for example, identification using the "Accessible devices" function.
 
@@ -1897,11 +1897,11 @@ This section contains information on the following topics:
 
 ##### Useful information on the local user administration and access control
 
-As of TIA Portal version V19 and CPU firmware version V3.1 (V4.7 for S7-1200), S7-1500 and S7-1200 CPUs have improved management of users, roles and CPU function rights (User Management & Access Control, UMAC). Software controller from version V30.1 also have this function.
+As of TIA Portal version V19 and CPU firmware version V3.1 (V4.7 for S7-1200), S7-1500 and S7-1200 CPUs have improved management of users, roles and CPU function rights (User Management &amp; Access Control, UMAC). Software controller from version V30.1 also have this function.
 
 From the versions mentioned above onwards, you manage all project users along with their rights (for example, access rights) for all CPUs in the project in the editor for users and roles of the project in the TIA Portal:
 
-- Navigate to the "Security Settings > Users and roles" area in the project navigation to manage users with their rights, for example, to control access rights.
+- Navigate to the "Security Settings &gt; Users and roles" area in the project navigation to manage users with their rights, for example, to control access rights.
 
 The TIA Portal saves the assignment of the function rights of a CPU to user-defined roles and the assignment of these roles to users for each CPU. There are no system-defined roles with predefined function rights for CPUs.
 
@@ -1917,7 +1917,7 @@ This new feature is also called "local user management and access control" below
 
 ###### Users, roles and function rights - details of new features
 
-Users and roles were already being managed in the predecessor version by TIA Portal under "Security settings > Users and roles". In addition to the existing user management for HMI devices, for example, you can also manage all CPU function rights via this editor as of TIA Portal Version V19.
+Users and roles were already being managed in the predecessor version by TIA Portal under "Security settings &gt; Users and roles". In addition to the existing user management for HMI devices, for example, you can also manage all CPU function rights via this editor as of TIA Portal Version V19.
 
 The CPU function rights are valid during runtime. Therefore, these rights are located in the "Runtime rights" tab in the editor for users and roles. For each CPU in the project, there is a section with all CPU function rights to choose from - separated according to CPU services such as PG/HMI communication (engineering access, access levels), web server and OPC UA.
 
@@ -1932,9 +1932,9 @@ These additional user managements are integrated in the local user management in
 
 For CPUs up to firmware versions V3.0 (S7-1500) or V4.6 (S7-1200), you managed the users under the respective CPU properties separated according to services such as "Web server" und "OPC UA". Web server users were parameterized in the "Web server" area, OPC UA users in the "OPC UA" area.
 
-To restrict the PG/HMI access to the CPU at different levels, you configured passwords for the corresponding access levels. With this procedure, for example, HMI accesses could be permitted without restriction, but write accesses could be made dependent on the knowledge of a password. You have agreed passwords for the different access levels in the "Protection & Security" area of the CPU properties. The access protection therefore always related to groups that have the appropriate passwords - not to individual users.
+To restrict the PG/HMI access to the CPU at different levels, you configured passwords for the corresponding access levels. With this procedure, for example, HMI accesses could be permitted without restriction, but write accesses could be made dependent on the knowledge of a password. You have agreed passwords for the different access levels in the "Protection &amp; Security" area of the CPU properties. The access protection therefore always related to groups that have the appropriate passwords - not to individual users.
 
-With the introduction of the local user management and access control from TIA Portal version V19 onwards, you can use the "Security settings > Users and roles" area in TIA Portal in the project navigation for all users and their roles and function rights of a CPU. This also applies to the access protection for engineering/HMI access, which as of TIA Portal version V19 no longer works via access levels with password protection by default, but also via user management.
+With the introduction of the local user management and access control from TIA Portal version V19 onwards, you can use the "Security settings &gt; Users and roles" area in TIA Portal in the project navigation for all users and their roles and function rights of a CPU. This also applies to the access protection for engineering/HMI access, which as of TIA Portal version V19 no longer works via access levels with password protection by default, but also via user management.
 
 More information on the new access protection is available [here](Functional%20description%20of%20S7-1500%20CPUs%20%28S7-1500%29.md#from-the-access-level-to-the-function-right-of-users-s7-1500).
 
@@ -1950,7 +1950,7 @@ The following image displays the assignment of the role with full access to a us
 
 ###### Requirement
 
-CPU parameterization: To be able to use users, roles and function rights for a CPU, the "Enable access control" option in the "Protection & Security > Access control" tab must be checked.
+CPU parameterization: To be able to use users, roles and function rights for a CPU, the "Enable access control" option in the "Protection &amp; Security &gt; Access control" tab must be checked.
 
 No project protection is required for local user management.
 
@@ -1964,7 +1964,7 @@ You can load configuration changes with regard to the local user management and 
 
 ###### Runtime timeout
 
-You can set a runtime timeout for both the role and the user in 'Security Settings > Users and Roles'.
+You can set a runtime timeout for both the role and the user in 'Security Settings &gt; Users and Roles'.
 
 For an S7-1500 CPU, these settings are taken into account by the various services as follows:
 
@@ -1983,7 +1983,7 @@ The following section discusses the advantages which the new local user manageme
 
 ###### Quick activation/deactivation of the local user management
 
-The options for user management are located in the "Protection & Security > Access control" tab:
+The options for user management are located in the "Protection &amp; Security &gt; Access control" tab:
 
 - Access control deactivated: Every user has full access to all functions with the exception of the GDS Push function for the online transfer of certificates.
 
@@ -1995,7 +1995,7 @@ The options for user management are located in the "Protection & Security > Acce
 
 ###### Access protection for PG/HMI accesses, now with user authentication
 
-While it was possible to parameterize passwords for access levels for CPUs with firmware versions < V3.1 (S7-1500 CPUs) or < V4.7 (S7-1200 CPUs), with the current CPUs, you have the possibility to configure users with the corresponding function rights. This means that the authentication options for PG/HMI access correspond to the options offered by OPC UA or web server accesses.
+While it was possible to parameterize passwords for access levels for CPUs with firmware versions &lt; V3.1 (S7-1500 CPUs) or &lt; V4.7 (S7-1200 CPUs), with the current CPUs, you have the possibility to configure users with the corresponding function rights. This means that the authentication options for PG/HMI access correspond to the options offered by OPC UA or web server accesses.
 
 ###### All in one place
 
@@ -2006,7 +2006,7 @@ All users, no matter if you manage their engineering rights for the project or t
 ###### Powerful password functions
 
 - Support for compliance with complexity rules for password creation:   
-  Right from the password creation stage, you can have the TIA Portal check compliance with complexity rules (such as the password length, uppercase/lowercase letters) (project navigation, "Security settings > Settings" area).  
+  Right from the password creation stage, you can have the TIA Portal check compliance with complexity rules (such as the password length, uppercase/lowercase letters) (project navigation, "Security settings &gt; Settings" area).  
   The complexity rules are also saved in the CPU upon loading the user management. When the password is changed online, the CPU determines and considers these rules. This prevents a user from overriding the complexity rules set by the configuration engineer and assigning a non-secure password.
 - The period of validity of passwords is adjustable:   
   To ensure that a user does not have access to the CPU with a compromised password for an unlimited time, you can parameterize a period of validity. Before the period of validity expires, the remaining time is then displayed on login so that each user has the possibility to change their password in time.
@@ -2015,7 +2015,7 @@ All users, no matter if you manage their engineering rights for the project or t
 
 From firmware version V3.1 onwards, you can load certain security-relevant configuration data both in the STOP operating state and in the RUN operating state. Therefore, loading the hardware configuration does not necessarily result in a STOP of the CPU.
 
-You can make the following changes in the STOP operating state as well as in the RUN operating state (Download to device > Hardware configuration):
+You can make the following changes in the STOP operating state as well as in the RUN operating state (Download to device &gt; Hardware configuration):
 
 - Local user management extended/changed
 - TIA Portal-configured certificates added/modified
@@ -2085,7 +2085,7 @@ If you require the configuration of an access level, for example, to ensure an H
 >
 > **User for OPC UA and for the web server**
 >
-> Regardless of the access protection, you always have to configure the users for the web server and for the OPC UA server in the project tree ("Security settings > Users and roles" area).
+> Regardless of the access protection, you always have to configure the users for the web server and for the OPC UA server in the project tree ("Security settings &gt; Users and roles" area).
 
 ###### Restrictions on continued use of the access levels
 
@@ -2098,19 +2098,19 @@ The area where you set the access levels leads you via a link to the editor for 
 **Examples**:
 
 - If the "Anonymous" user is deactivated or if the "Anonymous" user is activated and no function rights are assigned to that user, then nobody can log in without a user name and password (corresponds to the access level "No access (complete protection")).
-- If the "Anonymous" user is activated and the "Full access" function right for a CPU is assigned to that user via a corresponding role, the result of this setting is "No protection". You can achieve the same effect with regard to access protection by setting "No access protection" in the "Protection & Security" area of the CPU properties.
+- If the "Anonymous" user is activated and the "Full access" function right for a CPU is assigned to that user via a corresponding role, the result of this setting is "No protection". You can achieve the same effect with regard to access protection by setting "No access protection" in the "Protection &amp; Security" area of the CPU properties.
 
 ###### Procedure
 
 To activate the "Legacy access control" and set the required access level, follow these steps:
 
-1. In the CPU properties, go to "Protection & Security > Access control".
+1. In the CPU properties, go to "Protection &amp; Security &gt; Access control".
 2. Select the option "Activate access control" and, in addition, select the check box "Use legacy access control via access levels" check box.
 
    The access level selection cannot be used in this setting. You have to set the access level via the "Anonymous" user of the CPU.
 
    The "Anonymous" user is disabled in the default setting. This means that the resulting access level for users without a password is "No access (complete protection)" (default setting).
-3. Go to "Security Settings > Users and roles" in the project navigation.
+3. Go to "Security Settings &gt; Users and roles" in the project navigation.
 4. Activate the "Anonymous" user, if you want to set a different access level than "No access (complete protection)". You can assign a role with function rights that grants access to the CPU without password input, only to the activated "Anonymous" user.
 5. You cannot assign function rights for a CPU directly to a user. You must first assign a role:  
    Therefore switch to the "Roles" tab and add a new role. Assign a meaningful name, e.g. "PLC1-Read-Access-Role". If you assign this role to a user, this user should have read access to PLC1 during operation.
@@ -2131,13 +2131,13 @@ In the following sections, you will find information on the behavior of the CPUs
 
 ###### Replacement part scenario
 
-If you replace a CPU with a firmware version < V3.1 with a CPU with a firmware version V3.1 or higher, the program stored on the memory card runs like the original CPU. The behavior with regard to the configured access levels, the users for the OPC UA server and the web server corresponds to the behavior of the previous CPU.
+If you replace a CPU with a firmware version &lt; V3.1 with a CPU with a firmware version V3.1 or higher, the program stored on the memory card runs like the original CPU. The behavior with regard to the configured access levels, the users for the OPC UA server and the web server corresponds to the behavior of the previous CPU.
 
-In this case, the "Change password function" via the web server API is not accepted by the CPU because the CPU has been configured for firmware version < V3.1 and has no local user management.
+In this case, the "Change password function" via the web server API is not accepted by the CPU because the CPU has been configured for firmware version &lt; V3.1 and has no local user management.
 
 ###### Replace CPU (upgrade)
 
-If you replace a CPU (FW < V3.1) with a current CPU (FW V3.1 or higher) in the TIA Portal, this has the following effects on the configured user data:
+If you replace a CPU (FW &lt; V3.1) with a current CPU (FW V3.1 or higher) in the TIA Portal, this has the following effects on the configured user data:
 
 - The user data from the OPC UA server and web server is transferred to the "Users and roles" editor in the project navigation.
 
@@ -2157,13 +2157,13 @@ If you replace a CPU (FW < V3.1) with a current CPU (FW V3.1 or higher) in the T
 
 ###### Replace CPU (downgrade)
 
-If you replace a CPU (as of FW V3.1) with a previous CPU (< FW V3.1) in the TIA Portal, this has the following effects on the configured user data:
+If you replace a CPU (as of FW V3.1) with a previous CPU (&lt; FW V3.1) in the TIA Portal, this has the following effects on the configured user data:
 
 - The local user management is no longer available.
-- Users of the web server with their roles and function rights remain in the "Users and roles" editor. They are not transferred to the area of the CPU properties (Web server > User management) and are not in effect.
+- Users of the web server with their roles and function rights remain in the "Users and roles" editor. They are not transferred to the area of the CPU properties (Web server &gt; User management) and are not in effect.
 - Users of the OPC UA server with their roles and function rights remain in the "Users and roles" editor. No users are moved to the "OPC UA" area of the CPU parameters.
 
-  With regard to the settings for user authentication, the default setting applies again (OPC UA > Server > Security > User authentication): Guest authentication is enabled.
+  With regard to the settings for user authentication, the default setting applies again (OPC UA &gt; Server &gt; Security &gt; User authentication): Guest authentication is enabled.
 - It is no longer possible for users to change passwords during runtime (via web server API).
 
 ##### Configuring access levels
@@ -2193,7 +2193,7 @@ For users who know one of the set passwords, the effect depends on the table row
 To configure the access levels of a CPU, follow these steps:
 
 1. Open the properties of the module in the inspector window.
-2. Open the "Protection & Security > Access control" entry in the area navigation.
+2. Open the "Protection &amp; Security &gt; Access control" entry in the area navigation.
 
    A table with the possible access levels appears in the inspector window.
 
@@ -2315,7 +2315,7 @@ To configure group alarms for security events, follow these steps:
 1. Click on the CPU symbol in the network view.
 
    The properties of the CPU are displayed in the Inspector window.
-2. Go to the "Protection" > "Security event" area.
+2. Go to the "Protection" &gt; "Security event" area.
 3. Click on "Security event".
 4. Select the option "Summarize security events in case of high message volume" to enable group alarms for security events.
 5. Set the duration of an interval (monitoring time); the default is 20 seconds.
@@ -2370,7 +2370,7 @@ In the global security certificate manager you can utilize additional functions 
 - Adding trusted certificates and certification authorities.
 - Deleting manually imported certificates.
 
-The global security settings are not visible until they have been activated in the project for at last one device. The "Use global security settings for certificate manager" check box is available to this purpose in the local CPU-specific certificate manager: It is located in the Inspector window in the general settings of a device with security functions under "Protection & Security > Certificate manager". Depending on this setting either only the local CPU-specific certificate manager with limited functionality is used or the global security certificate manager.
+The global security settings are not visible until they have been activated in the project for at last one device. The "Use global security settings for certificate manager" check box is available to this purpose in the local CPU-specific certificate manager: It is located in the Inspector window in the general settings of a device with security functions under "Protection &amp; Security &gt; Certificate manager". Depending on this setting either only the local CPU-specific certificate manager with limited functionality is used or the global security certificate manager.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -2401,7 +2401,7 @@ With the local CPU-specific certificate manager you can use certificates for the
 
 In comparison to the global certificate manager, the local CPU-specific certificate manager only has a limited functionality. With the local certificate manager you can solely generate, assign, export or delete certificates.
 
-The settings for the local CPU-specific certificate manager are located in the Inspector window in the general settings of the device under "Protection & Security > Certificate manager".
+The settings for the local CPU-specific certificate manager are located in the Inspector window in the general settings of the device under "Protection &amp; Security &gt; Certificate manager".
 
 - Option for activating the global certificate manager
 - Table for device certificates: Display and management of the certificates that you use, for example, for secure OUC (TLS server / TLS client), the Web server and the OPC UA server of the device.
@@ -2413,7 +2413,7 @@ Device certificates are valid for the device and its associated components. The 
 
 When you create a new certificate, the following values are entered as the default in the corresponding dialog for the device:
 
-- Certificate holder: <Name of the CPU>/TLS. The set of characters is limited so that the specifications to ASN.1 can be observed.
+- Certificate holder: &lt;Name of the CPU&gt;/TLS. The set of characters is limited so that the specifications to ASN.1 can be observed.
 - Type of signature: sha256RSA or sha1RSA, depending on the security policy in use.
 - Validity period: The start and end of the validity period is entered in the two fields for the validity period in dependence on the system time.
 - Usage: TLS. The extensions "KeyUsage" and "ExtendedKeyUsage" for certificates of the X.509 V3 standard are filled suitably for OPC UA.
@@ -2463,7 +2463,7 @@ For S7-1200 CPUs as of firmware version V4.5 the settings for the password to pr
 
 To create a new certificate, follow these steps:
 
-1. In the Inspector window, go to "Protection & Security > Certificate manager" in the properties of the device.
+1. In the Inspector window, go to "Protection &amp; Security &gt; Certificate manager" in the properties of the device.
 2. Click "Add" in the table of certificates. A new row is entered in the table.
 3. Click in the new row. The selection for new certificates is opened.
 4. Click the "Add" button. The corresponding dialog window opens in which you can enter the data for the new certificate.
@@ -2523,7 +2523,7 @@ The device must offer security functions with certificate manager. This applies 
 
 To assign an available certificate to a device, follow these steps:
 
-1. In the Inspector window, go to "Protection & Security > Certificate manager" in the properties of the device.
+1. In the Inspector window, go to "Protection &amp; Security &gt; Certificate manager" in the properties of the device.
 2. Click "Add" in the table of certificates. A new row is entered in the table.
 3. Click in the new row. The selection for new certificates is opened.
 4. Select an available certificate. If only the local CPU-specific certificate manager is active, you do not see the globally available certificates. You can only see and select globally available certificates when the global security certificate manager is activated.
@@ -2553,7 +2553,7 @@ The device must offer security functions with certificate manager. This applies 
 
 To export a certificate, follow these steps:
 
-1. In the Inspector window, go to "Protection & Security > Certificate manager" in the properties of the device.
+1. In the Inspector window, go to "Protection &amp; Security &gt; Certificate manager" in the properties of the device.
 2. Right-click in the row with the certificate to be exported to open the shortcut menu.
 3. Click "Export certificate".
 4. Export the certificate into one of the selectable file formats: CER, DER.
@@ -2584,7 +2584,7 @@ The device must offer security functions with certificate manager. This applies 
 
 To delete a certificate, follow these steps:
 
-1. In the Inspector window, go to "Protection & Security > Certificate manager" in the properties of the device.
+1. In the Inspector window, go to "Protection &amp; Security &gt; Certificate manager" in the properties of the device.
 2. Right-click in the row with the certificate to be deleted to open the shortcut menu.
 3. Click "Delete certificate".
 
@@ -2602,7 +2602,7 @@ The selected certificate was deleted in the device. With an activated global sec
 
 ###### Introduction
 
-You can create or assign a server certificate for the Web server in the Inspector window under "Web server > Server security".
+You can create or assign a server certificate for the Web server in the Inspector window under "Web server &gt; Server security".
 
 ###### Local Web server certificate
 
@@ -2617,7 +2617,7 @@ The following restrictions apply when you create Web server certificates locally
 
 When you create a new certificate, the following values are entered as the default in the corresponding dialog for a Web server:
 
-- Certificate holder: <Name of the CPU>/Web server. The set of characters is limited so that the specifications to ASN.1 can be observed.
+- Certificate holder: &lt;Name of the CPU&gt;/Web server. The set of characters is limited so that the specifications to ASN.1 can be observed.
 - Type of signature: sha256RSA or sha1RSA, depending on the security policy in use.
 - Validity period: The start and end of the validity period is entered in the two fields for the validity period in dependence on the system time.
 - Usage: Web server. The extensions "KeyUsage" and "ExtendedKeyUsage" for certificates of the X.509 V3 standard are filled suitably for the Web server.
@@ -2646,7 +2646,7 @@ You can overwrite the defaults with your own values.
 
 ###### Introduction
 
-You can create or assign a server certificate for OPC UA in the Inspector window under "OPC UA > Server > Security".
+You can create or assign a server certificate for OPC UA in the Inspector window under "OPC UA &gt; Server &gt; Security".
 
 ###### Local server certificates for OPC UA
 
@@ -2661,7 +2661,7 @@ The following restrictions apply when you create server certificates locally for
 
 When you create a new certificate, the following values are entered as the default in the corresponding dialog for a OPC UA:
 
-- Certificate holder: <Name of the CPU>/OPCUA. The set of characters is limited so that the specifications to ASN.1 can be observed.
+- Certificate holder: &lt;Name of the CPU&gt;/OPCUA. The set of characters is limited so that the specifications to ASN.1 can be observed.
 - Type of signature: sha256RSA or sha1RSA, depending on the security policy in use.
 - Validity period: The start and end of the validity period is entered in the two fields for the validity period in dependence on the system time.
 - Usage: OPC UA. The extensions "KeyUsage" and "ExtendedKeyUsage" for certificates of the X.509 V3 standard are filled suitably for OPC UA.
@@ -2717,7 +2717,7 @@ The default setting "disabled" is also in effect if no configuration has been lo
 >
 > **Replacement part scenario**
 >
-> For compatibility reasons, an S7-1500 CPU as of firmware version V3.0 with a loaded predecessor project (CPU firmware < V3.0) behaves like the CPU in the predecessor project:
+> For compatibility reasons, an S7-1500 CPU as of firmware version V3.0 with a loaded predecessor project (CPU firmware &lt; V3.0) behaves like the CPU in the predecessor project:
 >
 > SNMP is activated and "public" and "private" community strings are in effect.
 
@@ -2727,7 +2727,7 @@ As of CPU firmware version 4.6 and TIA Portal version V18, you have the possibil
 
 - Activate SNMP (default: deactivated)
 
-You can find the settings in the "Advanced configuration > SNMP" area of the CPU properties.
+You can find the settings in the "Advanced configuration &gt; SNMP" area of the CPU properties.
 
 #### Configuring SNMP (S7-1500)
 
@@ -2737,7 +2737,7 @@ As of CPU firmware version V3.0 and TIA Portal version V18, you have the possibi
 - Read-only community string (default: "public")
 - Read-write community string (default: "private")
 
-You can find the settings in the "Advanced configuration > SNMP" area.
+You can find the settings in the "Advanced configuration &gt; SNMP" area.
 
 #### Meaning and properties of community strings
 
@@ -2862,11 +2862,11 @@ ID := "Local~PROFINET-Schnittstelle_1",
 
 INDEX := 16#b071,
 
-DONE => "Deactivate_SNMP".snmp_done,
+DONE =&gt; "Deactivate_SNMP".snmp_done,
 
-ERROR => "Deactivate_SNMP".snmp_error,
+ERROR =&gt; "Deactivate_SNMP".snmp_error,
 
-STATUS => "Deactivate_SNMP".snmp_Status,
+STATUS =&gt; "Deactivate_SNMP".snmp_Status,
 
 RECORD := "Deactivate_SNMP".snmp_record);
 
@@ -3091,7 +3091,7 @@ This section contains information on the following topics:
 
 #### Description
 
-You can determine the boundary conditions for the startup characteristics of your CPU, for example, the initialization values for "RUN". To do this, write a startup program. The startup program consists of one or more startup OBs (OB numbers 100 or >= 123).
+You can determine the boundary conditions for the startup characteristics of your CPU, for example, the initialization values for "RUN". To do this, write a startup program. The startup program consists of one or more startup OBs (OB numbers 100 or &gt;= 123).
 
 The startup program is executed once during the transition from "STOP" mode to "RUN" mode. Current values from the process image of the inputs are not available for startup program, nor can these values be set.
 
@@ -3124,7 +3124,7 @@ A startup OB has the following start information:
 
 #### Introduction
 
-For the program execution to start, at least one program cycle OB must be present in the project. The operating system calls this program cycle OB once in each cycle and thereby starts the execution of the user program. You can use multiple OBs (OB numbers >= 123). When multiple program cycle OBs are used, these are called in one after the other in the order of their OB numbers. The program cycle OB with the lowest OB number is called first.
+For the program execution to start, at least one program cycle OB must be present in the project. The operating system calls this program cycle OB once in each cycle and thereby starts the execution of the user program. You can use multiple OBs (OB numbers &gt;= 123). When multiple program cycle OBs are used, these are called in one after the other in the order of their OB numbers. The program cycle OB with the lowest OB number is called first.
 
 The program cycle OBs have the priority class 1. This corresponds to the lowest priority of all OBs. The cyclic program can be interrupted by events of any other event class.
 
@@ -3203,7 +3203,7 @@ This section contains information on the following topics:
 
 ##### Function
 
-Organization blocks for time-of-day interrupt (OB number >=123) can be processed as follows:
+Organization blocks for time-of-day interrupt (OB number &gt;=123) can be processed as follows:
 
 - One time to a preset time (date with time of day)
 - Periodically with preset start time and the following intervals:
@@ -3468,7 +3468,7 @@ Hardware interrupts can be triggered by high-speed counters and input channels. 
 - The process event that should trigger the hardware interrupt (for example, the change of a count direction of a high-speed counter)
 - The number of the hardware interrupt OB which is assigned to this process event
 
-You can use up to 50 hardware interrupt OBs (OB numbers >= 123) that are independent of each other in your program.
+You can use up to 50 hardware interrupt OBs (OB numbers &gt;= 123) that are independent of each other in your program.
 
 ##### Functionality of a hardware interrupt OB
 
@@ -3883,7 +3883,7 @@ Here, you decide which time the start time of the time-of-day interrupt OB relat
 
 You can use cyclic interrupt OBs to start programs at regular time intervals. To do so you must enter a scan time and a phase shift for each cyclic interrupt OB used.
 
-You can use up to four cyclic interrupt OBs or time-delay OBs (OB numbers >= 200) in your program. If, for example, you are already using two time-delay interrupt OBs, you can insert a maximum of two further cyclic interrupt OBs in your program.
+You can use up to four cyclic interrupt OBs or time-delay OBs (OB numbers &gt;= 200) in your program. If, for example, you are already using two time-delay interrupt OBs, you can insert a maximum of two further cyclic interrupt OBs in your program.
 
 > **Note**
 >
@@ -3897,7 +3897,7 @@ To enter a scan time and a phase shift for a cyclic interrupt OB, proceed as fol
 2. Right-click on an existing cyclic interrupt OB.
 3. Select the "Properties" command in the shortcut menu.
 
-   The "<Name of the cyclic interrupt OB>" dialog box opens.
+   The "&lt;Name of the cyclic interrupt OB&gt;" dialog box opens.
 4. Click the "Cyclic interrupt" group in the area navigation.
 
    The text boxes for the scan time and the phase shift are displayed.
@@ -3931,7 +3931,7 @@ You can create the hardware interrupt OB to be assigned parameters either before
 
 To configure a hardware interrupt event, follow these steps:
 
-1. Double-click the "Devices & Networks" command in the project tree.
+1. Double-click the "Devices &amp; Networks" command in the project tree.
 
    The hardware and network editor opens in the network view.
 2. Change to the device view.
@@ -4021,19 +4021,19 @@ On the other hand, you cannot go online to an S7-1200 CPU V1, V2 or V3 with a co
 
 You can replace a configured S7-1200-CPU V1, V2 or V3 with a new CPU with a firmware version greater than or equal to 4. In case of an existing S7-1200 CPU V1 or V2, you must start by replacing the device with an S7-1200 CPU V3: It is not possible to directly replace it with an S7-1200 CPU V4.
 
-1. S7-1200 CPU V1 (V2) > S7-1200 CPU V3
-2. S7-1200 CPU V3 > S7-1200 CPU V4
+1. S7-1200 CPU V1 (V2) &gt; S7-1200 CPU V3
+2. S7-1200 CPU V3 &gt; S7-1200 CPU V4
 
 As long as you do not download the configuration, you can undo the device replacement ("Undo" command in the "Edit" menu). When you download the configuration for the new CPU firmware version ("V4 configuration") to the CPU, you can no longer return to version V3.
 
 This means you should save the existing project, for example, with a V3 configuration as project archive so that you can access it later.
 
-Special notes for device replacement (V3 > V4):
+Special notes for device replacement (V3 &gt; V4):
 
 - The interrupt behavior of interrupt OBs remains the same; they are not configured as interruptible. This is also the default behavior of S7-1200 CPUs V1-V3. The interrupt behavior of the interrupt OB can be configured for S7-1200 V4 CPUs. If you drag an S7-1200 CPU V4 directly from the hardware catalog into the network view, this option is activated (interrupt OBs are interruptible).
 - The behavior for PUT/GET access of remote partners remains the same; access is permitted. This is also the default behavior of S7-1200 CPUs V1-V3. The access via PUT/GET communication by means of remote partners can be configured for S7-1200 V4 CPUs ("Protection" area of CPU parameters). If you drag an S7-1200 CPU V4 directly from the hardware catalog into the network view, access is not permitted and must be explicitly enabled.
 - The wording for the protection levels changes but the effect of the settings remains the same. You can also select the access level "No access (complete protection)".
-- The web server settings for activation of the web server and HTTP/HTTPS settings are applied. You also have the option to create users and assign them specific rights (Web server area > User management of CPU parameters). Web server users only have access to standard websites when you do not configure users. An S7-1200 CPU V4 no longer supports the user "admin" and his/her password.
+- The web server settings for activation of the web server and HTTP/HTTPS settings are applied. You also have the option to create users and assign them specific rights (Web server area &gt; User management of CPU parameters). Web server users only have access to standard websites when you do not configure users. An S7-1200 CPU V4 no longer supports the user "admin" and his/her password.
 - For reasons of compatibility, the interfaces of used OBs are not changed by the device replacement. You can therefore continue to use used OBs. If you want to use OB properties that have been added or changed in the new firmware version of the S7-1200 CPU, you will need to recreate the corresponding OB.
 
 ### Communication with HMI devices

@@ -101,7 +101,7 @@ The instruction is called in a cyclic interrupt OB (for example, OB 35), or in 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | Execute | INPUT | BOOL | Start of positioning at a positive edge. |
-| Position | INPUT | REAL | Absolute target position in [length unit]  Rotary axis: Start of rotary axis ≤ position < end of rotary axis |
+| Position | INPUT | REAL | Absolute target position in [length unit]  Rotary axis: Start of rotary axis ≤ position &lt; end of rotary axis |
 | Velocity | INPUT | REAL | Axis velocity in [length unit/s] |
 | Acceleration | INPUT | REAL | Axis acceleration in [length unit/s<sup>2</sup>] |
 | Deceleration | INPUT | REAL | Axis deceleration in [length unit/s<sup>2</sup>] |
@@ -220,7 +220,7 @@ A UDT2 data type is listed and reserved in the block properties of MC_MoveJog. T
 
 instruction MC_Home is used for the following tasks:
 
-- Reference point approach with incremental encoder ("Velocity" > 0)
+- Reference point approach with incremental encoder ("Velocity" &gt; 0)
 - Set reference point with incremental and absolute encoder ("Velocity" = 0)   
   The set reference point function for absolute encoders is also known as absolute encoder adjustment.
 
@@ -228,7 +228,7 @@ instruction MC_Home is used for the following tasks:
 
 **Reference point approach ("**
 **Velocity**
-**" > 0)**
+**" &gt; 0)**
 
 Once "Execute" has been set, the axis travels at the selected velocity and in the selected direction until the position decoder module distance and the input driver detect that the axis has reached the reference point. Once the reference point has been reached, the actual position value is set to the value specified in the"Position" parameter, and the axis is slowed down. The axis is now synchronized ("Sync" = TRUE), but is not positioned on the reference point.
 
@@ -278,8 +278,8 @@ The reference point approach or reference setting can only be started when the a
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | Execute | INPUT | BOOL | Start of reference point approach or reference setting with a positive edge. |
-| Position | INPUT | REAL | **Incremental encoder** Reference point coordinate for reference point approach or reference setting.   **Absolute encoder** Reference point coordinate for reference setting.  The value must be within the working range:  - **Linear axis** Within the software limit switch - **Rotary axis:**    Rotary axis start ≤ position < Rotary axis end |
-| Velocity | INPUT | REAL | Axis velocity in [length unit/s]  Velocity > 0: Reference point approach  Velocity = 0: Set reference point |
+| Position | INPUT | REAL | **Incremental encoder** Reference point coordinate for reference point approach or reference setting.   **Absolute encoder** Reference point coordinate for reference setting.  The value must be within the working range:  - **Linear axis** Within the software limit switch - **Rotary axis:**    Rotary axis start ≤ position &lt; Rotary axis end |
+| Velocity | INPUT | REAL | Axis velocity in [length unit/s]  Velocity &gt; 0: Reference point approach  Velocity = 0: Set reference point |
 | Acceleration | INPUT | REAL | Axis acceleration in [length unit/s<sup>2</sup>] |
 | Deceleration | INPUT | REAL | Axis deceleration in [length unit/s<sup>2</sup>] |
 | Direction | INPUT | INT | Start direction for reference point approach  1 = Reference point approach in positive direction  -1 = Reference point approach in negative direction |
@@ -318,7 +318,7 @@ The instruction is called in a cyclic interrupt OB (for example, OB 35), or in 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | Execute | INPUT | BOOL | Start of braking with a positive edge |
-| Deceleration | INPUT | REAL | Axis deceleration for deceleration ramp in [length unit/s<sup>2</sup>]  If you enter values <= 0.0, the maximum deceleration value from the axis DB will be used. |
+| Deceleration | INPUT | REAL | Axis deceleration for deceleration ramp in [length unit/s<sup>2</sup>]  If you enter values &lt;= 0.0, the maximum deceleration value from the axis DB will be used. |
 | Busy | OUTPUT | BOOL | 1 = Job in progress. |
 | Done | OUTPUT | BOOL | 1 = Job completed without error.  The bit remains active at least for one call of the instruction until "Execute" is reset. |
 | CommandAborted | OUTPUT | BOOL | 1 = Job was cancelled due to manual intervention at the controller. |
@@ -523,7 +523,7 @@ The instruction is called in a cyclic interrupt OB (for example, OB 35), or in 
 | Parameter | Declaration | Data type | Description |
 | --- | --- | --- | --- |
 | Execute | INPUT | BOOL | Start of the gear motion on a positive edge |
-| Rationumerator | INPUT | REAL | Gear ratio numerator  Gear ratio = "RatioNumerator" / "RatioDenominator"  If "RatioNumerator" < 0, the direction of movement of the leading axis is opposite to that of the following axis.  "RatioNumerator" = 0 is rejected with "DataErr" = 1.   You can modify the effective gear ratio of the following axis by overriding the active gear instruction with another instance that contains a modified gear ratio. |
+| Rationumerator | INPUT | REAL | Gear ratio numerator  Gear ratio = "RatioNumerator" / "RatioDenominator"  If "RatioNumerator" &lt; 0, the direction of movement of the leading axis is opposite to that of the following axis.  "RatioNumerator" = 0 is rejected with "DataErr" = 1.   You can modify the effective gear ratio of the following axis by overriding the active gear instruction with another instance that contains a modified gear ratio. |
 | RatioDenominator | INPUT | INT | The gear ratio denominator; must be an integer ≥ 1  You can modify the effective gear ratio of the following axis by overriding the active gear instruction with another instance that contains a modified gear ratio. |
 | Velocity | INPUT | REAL | Axis velocity in [length unit/s]  The maximum geared velocity of the following axis is limited to this value. |
 | Acceleration | INPUT | REAL | Axis acceleration in [length unit/s<sup>2</sup>]  The maximum geared acceleration of the following axis is limited to this value.  This parameter is used if:  - The following axis is coupled to a faster leading axis. - The acceleration of the leading axis exceeds the capability of the following axis. |
@@ -766,7 +766,7 @@ The driver can also be used for the isochronous variant of this module.
 
 The input driver is only suitable for the 1SSI module with "**Fast Mode**" parameter setting as operating mode. In the TIA Portal, the "**Fast Mode**" is no longer selected based on the module, but is now set as operating mode.
 
-Select the module from the "Distributed I/O devices" > ET 200S > FM > Position detection" section in the hardware catalog.
+Select the module from the "Distributed I/O devices" &gt; ET 200S &gt; FM &gt; Position detection" section in the hardware catalog.
 
 | Parameter | Setting |
 | --- | --- |
@@ -812,7 +812,7 @@ instruction EncoderAbsSensorDP is used to employ the absolute encoder SIMODRIVE 
 
 #### Configuration of the absolute encoder SIMODRIVE sensor (hardware configuration)
 
-Select the "PROFIBUS DP > ENCODER > SIMODRIVE sensor > Version 2.2 Single-turn or Version 2.2 Multiturn" encoder from the hardware catalog. If the SIMODRIVE sensor is not yet available, implement the device using the corresponding GSD file. The encoder will then be available in the "Additional field devices > PROFIBUS DP > Encoder > Siemens AG > SIMODRIVE sensor" folder.
+Select the "PROFIBUS DP &gt; ENCODER &gt; SIMODRIVE sensor &gt; Version 2.2 Single-turn or Version 2.2 Multiturn" encoder from the hardware catalog. If the SIMODRIVE sensor is not yet available, implement the device using the corresponding GSD file. The encoder will then be available in the "Additional field devices &gt; PROFIBUS DP &gt; Encoder &gt; Siemens AG &gt; SIMODRIVE sensor" folder.
 
 | Parameter | Setting |  |
 | --- | --- | --- |
@@ -930,7 +930,7 @@ The driver can also be used for the isochronous variant of this module.
 
 The input driver is only suitable for the "1 Count 5V" or "1 Count 24V" from the hardware catalog. The count mode is now set as the operating mode instead of be selecting via the module.
 
-Select the module from the "Distributed I/O devices" > ET 200S > FM > Counting" section in the hardware catalog.
+Select the module from the "Distributed I/O devices" &gt; ET 200S &gt; FM &gt; Counting" section in the hardware catalog.
 
 | Parameter | Setting |
 | --- | --- |
@@ -1275,10 +1275,10 @@ The referencing type can be specified using input parameter "RefMode" at the inp
 
 | RefMode | "Velocity" on MC_Home | Encoder zero mark | External zero mark p495[0] | Description |
 | --- | --- | --- | --- | --- |
-| 0 | > 0 | First encoder zero mark | 0 | Referencing to first encoder zero mark |
-| 1 | > 0 | Second encoder zero mark | 0 | Referencing to second encoder zero mark |
-| 2 | > 0 | Third encoder zero mark | 0 | Referencing to third encoder zero mark |
-| 3 | > 0 | Fourth encoder zero mark | 0 | Referencing to fourth encoder zero mark |
+| 0 | &gt; 0 | First encoder zero mark | 0 | Referencing to first encoder zero mark |
+| 1 | &gt; 0 | Second encoder zero mark | 0 | Referencing to second encoder zero mark |
+| 2 | &gt; 0 | Third encoder zero mark | 0 | Referencing to third encoder zero mark |
+| 3 | &gt; 0 | Fourth encoder zero mark | 0 | Referencing to fourth encoder zero mark |
 |  |  |  |  |  |
 
 The entry at RefMode controls the corresponding encoder control word for the drive so that the required functionality is realized in the SINAMICS. Input driver EncoderSINAMICS enables only the reference point approach to one or several encoder zero marks and to an external zero mark (alternative zero mark). Referencing on-the-fly is not possible. In order to reference to an external zero mark, set the p495[0] parameter of the axis concerned to a value between 1 and 6 value in the SINAMICS. To enable activation of a reference point approach, a traversing velocity greater than zero must be entered at instruction MC_HOME.
@@ -1544,7 +1544,7 @@ instruction OutputMM4_DP is used to implement of a MICROMASTER 4 with optional D
 
 For information on MICROMASTER 4, refer to the hardware catalog at:
 
-"Additional field devices > PROFIBUS DP > Drives > Siemens AG > SIMOVERT > MICROMASTER 4".
+"Additional field devices &gt; PROFIBUS DP &gt; Drives &gt; Siemens AG &gt; SIMOVERT &gt; MICROMASTER 4".
 
 You may first have to install the corresponding GSD file.
 

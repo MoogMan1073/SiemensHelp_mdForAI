@@ -87,12 +87,12 @@ The programs only contain the most needed components of a simple client. They fo
 
 > **Note**
 >
-> You will find additional programming examples on the installation medium in the file "Support\Openness\Siemens.Unified.Openness_SDK_<version number>.zip" in the subdirectory"ODK\samples".
+> You will find additional programming examples on the installation medium in the file "Support\Openness\Siemens.Unified.Openness_SDK_&lt;version number&gt;.zip" in the subdirectory"ODK\samples".
 
 ### Requirement
 
 - Development environment is installed.
-- The ODK SDK was extracted locally on your computer. You will find the ODK SDK in the "Support\Openness" folder on the WinCC Unified DVD in the file "Siemens.Unified.Openness_SDK_<version number>.zip".
+- The ODK SDK was extracted locally on your computer. You will find the ODK SDK in the "Support\Openness" folder on the WinCC Unified DVD in the file "Siemens.Unified.Openness_SDK_&lt;version number&gt;.zip".
 
   > **Note**
   >
@@ -167,18 +167,18 @@ System.Console.WriteLine(string.Format("Exception occured {0}", ex.Message));
 1. Create a new C++ project in the development environment.
 2. Set the following include directories for required headers:
 
-   - <Local folder to which you have extracted the ODK SDK>\ODK\include\ODK
-   - <Local folder to which you have extracted the ODK SDK>\ODK\include\ODK\include\CF
-3. Create references to the following libraries in "<Local folder to which you have extracted the ODK SDK>\ODK\include\ODK\lib":
+   - &lt;Local folder to which you have extracted the ODK SDK&gt;\ODK\include\ODK
+   - &lt;Local folder to which you have extracted the ODK SDK&gt;\ODK\include\ODK\include\CF
+3. Create references to the following libraries in "&lt;Local folder to which you have extracted the ODK SDK&gt;\ODK\include\ODK\lib":
 
    - HmiUnifiedRt.lib
    - CfCore.lib
 4. Create a reference to the following directory as "Additional Library Directory":
 
-   - <Local folder to which you have extracted the ODK SDK>\ODK\lib
+   - &lt;Local folder to which you have extracted the ODK SDK&gt;\ODK\lib
 5. Create a program with the following code:
 
-#include <CfTL>
+#include &lt;CfTL&gt;
 
 #include "IOdkRt.h"
 
@@ -196,11 +196,11 @@ System.Console.WriteLine(string.Format("Exception occured {0}", ex.Message));
 
 #include "IOdkRtUmc.h"
 
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
-#include <tchar.h>
+#include &lt;tchar.h&gt;
 
-#include <iostream>
+#include &lt;iostream&gt;
 
 using namespace Siemens::Runtime::HmiUnified;
 
@@ -216,7 +216,7 @@ CCfString projectName = L"";
 
 IRuntimePtr pRuntime;
 
-if(CF_SUCCEEDED(Connect(projectName, &pRuntime)
+if(CF_SUCCEEDED(Connect(projectName, &amp;pRuntime)
 
 {
 
@@ -346,9 +346,9 @@ Precedence of the operators:
 
 | Rank | Operators |
 | --- | --- |
-| 1 | - Relational operators:   =, <>, >, <, >=, <= - LIKE - IN - BETWEEN |
+| 1 | - Relational operators:   =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;= - LIKE - IN - BETWEEN |
 | 2 | NOT |
-| 3 | AND, && |
+| 3 | AND, &amp;&amp; |
 | 4 | OR, || |
 
 Permitted wildcards:
@@ -487,7 +487,7 @@ The following table contains the Microsoft locale IDs of the languages supported
 
 ## Code samples (RT Unified)
 
-ODK is supplied with code samples for using the Runtime interfaces. Open the local folder to which you have extracted the file "Support\Openness\Siemens.Unified.Openness_SDK_<version number>.zip".
+ODK is supplied with code samples for using the Runtime interfaces. Open the local folder to which you have extracted the file "Support\Openness\Siemens.Unified.Openness_SDK_&lt;version number&gt;.zip".
 
 You will find the code samples in the subfolder "\ODK\samples".
 
@@ -585,7 +585,7 @@ try
 
 {
 
-using (ITag myTag = runtime.GetObject<ITag>("Tag1"))
+using (ITag myTag = runtime.GetObject&lt;ITag&gt;("Tag1"))
 
 {
 
@@ -609,7 +609,7 @@ When you release objects that are used by asynchronous ODK methods, you can use 
 
 Copy code
 
-ITagSet odkTagSet = runtime.GetObject<ITagSet>();
+ITagSet odkTagSet = runtime.GetObject&lt;ITagSet&gt;();
 
 odkTagSet.Add(new string[] { "Tag1", "Tag2" });
 
@@ -619,7 +619,7 @@ odkTagSet.OnReadResult += odkTagSet_OnReadResult;
 
 odkTagSet.ReadAsync();// Reads asynchronous
 
-void odkTagSet_OnReadResult(ITagSet sender, IList<IProcessValue> values, bool completed)
+void odkTagSet_OnReadResult(ITagSet sender, IList&lt;IProcessValue&gt; values, bool completed)
 
 {
 
@@ -839,7 +839,7 @@ public void ReadSingleTagSync()
 
 {
 
-ITag myTag = runtime.GetObject<ITag>("Tag1");
+ITag myTag = runtime.GetObject&lt;ITag&gt;("Tag1");
 
    //further tag processing
 
@@ -887,7 +887,7 @@ public void GetVersionInfo(IRuntime runtime)
 
    System.Console.WriteLine(string.Format("Product version: {0}.{1}.{2}.{3}", version.Major, version.Minor, version.ServicePack, version.Update));
 
-   if (product.Options.Count > 0)
+   if (product.Options.Count &gt; 0)
 
    {
 
@@ -968,7 +968,7 @@ public void GetOptionObject()
 
    //create a instance of the option object IMyOptionObject
 
-   IMyOptionObject optionObject = rtOption.GetObject<IMyOptionObject>();
+   IMyOptionObject optionObject = rtOption.GetObject&lt;IMyOptionObject&gt;();
 
    string strMethod = optionObject.MyMethod();
 
@@ -1034,7 +1034,7 @@ public void GetVersionInfo(IRuntime runtime)
 
    System.Console.WriteLine(string.Format("Product version: {0}.{1}.{2}.{3}", version.Major, version.Minor, version.ServicePack, version.Update));
 
-   if (product.Options.Count > 0)
+   if (product.Options.Count &gt; 0)
 
    {
 
@@ -1098,7 +1098,7 @@ public void WritePartlyNotExistingTagSetSync()
 
 {
 
-ITagSet odkTagSet = runtime.GetObject<ITagSet>();
+ITagSet odkTagSet = runtime.GetObject&lt;ITagSet&gt;();
 
 odkTagSet.Add("Tag1", 1);
 
@@ -1108,7 +1108,7 @@ odkTagSet.Add("NotExistingTag1", 1);
 
 odkTagSet.Add("NotExistingTag2", 2);
 
-IList<IErrorResult> writeResult = odkTagSet.Write();
+IList&lt;IErrorResult&gt; writeResult = odkTagSet.Write();
 
 foreach (var result in writeResult)
 
@@ -1217,7 +1217,7 @@ IMyOption rtOption = (IMyOption)runtime.GetOption("MyOptionName");
 
 //create a instance of the option object IMyOptionObject
 
-IMyOptionObject optionObject = rtOption.GetObject<IMyOptionObject>();
+IMyOptionObject optionObject = rtOption.GetObject&lt;IMyOptionObject&gt;();
 
 try
 
@@ -1324,7 +1324,7 @@ public void ReadSingleTagSync()
 
 {
 
-   var myTag = runtime.GetObject<ITag>("Tag1");
+   var myTag = runtime.GetObject&lt;ITag&gt;("Tag1");
 
    var value = myTag.Read(HmiReadType.Cache); // Reads value from Cache
 
@@ -1438,7 +1438,7 @@ public void ReadSingleTagSync()
 
 {
 
-   var myTag = runtime.GetObject<ITag>("Tag1");
+   var myTag = runtime.GetObject&lt;ITag&gt;("Tag1");
 
    var value = myTag.Read(HmiReadType.Cache); // Reads value from Cache
 
@@ -1450,7 +1450,7 @@ public void WriteSingleTagSync()
 
 {
 
-   var odkTag = runtime.GetObject<ITag>("Tag1");
+   var odkTag = runtime.GetObject&lt;ITag&gt;("Tag1");
 
    var value = 5;
 
@@ -1710,7 +1710,7 @@ public void ReadTagSetSync()
 
 {
 
-   var odkTagSet = runtime.GetObject<ITagSet>())
+   var odkTagSet = runtime.GetObject&lt;ITagSet&gt;())
 
    odkTagSet.Add(new[] { "Tag1", "Tag2" });
 
@@ -1734,7 +1734,7 @@ public void WriteTagSetSyncWithChange()
 
 {
 
-   var odkTagSet = runtime.GetObject<ITagSet>();
+   var odkTagSet = runtime.GetObject&lt;ITagSet&gt;();
 
    odkTagSet.Add(new[] { "Tag1", "Tag2" });
 
@@ -1756,7 +1756,7 @@ public void WriteTagSetAsync()
 
 {
 
-   var odkTagSet = runtime.GetObject<ITagSet>();
+   var odkTagSet = runtime.GetObject&lt;ITagSet&gt;();
 
    odkTagSet.Add("Tag1", 1);
 
@@ -1774,7 +1774,7 @@ public void WriteTagSetAsync()
 
 }
 
-private void OdkTagSet_OnWriteResult(ITagSet sender, IList<IErrorResult> values, bool completed)
+private void OdkTagSet_OnWriteResult(ITagSet sender, IList&lt;IErrorResult&gt; values, bool completed)
 
 {
 
@@ -1792,7 +1792,7 @@ public void SubscribeTagSet()
 
 {
 
-   var odkTagSet = runtime.GetObject<ITagSet>();
+   var odkTagSet = runtime.GetObject&lt;ITagSet&gt;();
 
    odkTagSet.Add(new[] { "Tag1", "Tag2" });
 
@@ -1810,7 +1810,7 @@ public void SubscribeTagSet()
 
 }
 
-public void OdkTagSet_OnDataChanged(ITagSet sender, IList<IProcessValue> pItems)
+public void OdkTagSet_OnDataChanged(ITagSet sender, IList&lt;IProcessValue&gt; pItems)
 
 {
 
@@ -1955,7 +1955,7 @@ public void WriteTagSetQCDSync()
 
 {
 
-    var odkTagSet = runtime.GetObject<ITagSetQCD>();
+    var odkTagSet = runtime.GetObject&lt;ITagSetQCD&gt;();
 
     odkTagSet.Add("Tag1", 1, DateTime.Now, 128);
 
@@ -2132,7 +2132,7 @@ public void ReadSingleTag()
 
 {
 
-   var tag = _runtime.GetObject<ILoggedTag>("Tag1:Tag1Logging1";
+   var tag = _runtime.GetObject&lt;ILoggedTag&gt;("Tag1:Tag1Logging1";
 
    var begin = DateTime.UtcNow.AddMinutes(-10);
 
@@ -2144,7 +2144,7 @@ public void ReadSingleTag()
 
    {
 
-      var pinfo = _runtime.GetObject<IErrorInfo>();
+      var pinfo = _runtime.GetObject&lt;IErrorInfo&gt;();
 
       Console.WriteLine();
 
@@ -2373,7 +2373,7 @@ var begin = DateTime.UtcNow.AddHours(-1);
 
 var end = DateTime.UtcNow;
 
-var tagSet = _runtime.GetObject<ILoggedTagSet>();
+var tagSet = _runtime.GetObject&lt;ILoggedTagSet&gt;();
 
 tagSet.OnReadComplete += TagSet_OnReadComplete;
 
@@ -2395,7 +2395,7 @@ Console.WriteLine(string.Format("OdkException occurred {0}", ex.Message));
 
 }
 
-private void TagSet_OnReadComplete(ILoggedTagSet sender, uint errorCode, IList<ILoggedTagValue> values, bool completed)
+private void TagSet_OnReadComplete(ILoggedTagSet sender, uint errorCode, IList&lt;ILoggedTagValue&gt; values, bool completed)
 
 {
 
@@ -2417,7 +2417,7 @@ try
 
 {
 
-ILoggedTagSet tagSet = _runtime.GetObject<ILoggedTagSet>();
+ILoggedTagSet tagSet = _runtime.GetObject&lt;ILoggedTagSet&gt;();
 
 tagSet.Add("Tag1:Tag1Logging1");
 
@@ -2437,7 +2437,7 @@ Console.WriteLine(string.Format("OdkException occurred {0}", ex.Message));
 
 }
 
-void tagSet_OnDataChanged(ILoggedTagSet sender, UInt32 errorCode, IList<ILoggedTagValue> values)
+void tagSet_OnDataChanged(ILoggedTagSet sender, UInt32 errorCode, IList&lt;ILoggedTagValue&gt; values)
 
 {
 
@@ -3067,7 +3067,7 @@ When alarms become active, a selection of properties of the "IAlarmResult" objec
 
 Copy code
 
-public void alarm_OnAlarmHandler(IAlarmSubscription sender, UInt32 nGlobalError, String systemName, IList<IAlarmResult> value, bool completed)
+public void alarm_OnAlarmHandler(IAlarmSubscription sender, UInt32 nGlobalError, String systemName, IList&lt;IAlarmResult&gt; value, bool completed)
 
 {
 
@@ -3079,7 +3079,7 @@ try
 
 {
 
-AlarmList = new List<IALarmResult>();
+AlarmList = new List&lt;IALarmResult&gt;();
 
 foreach (var item in value)
 
@@ -3208,7 +3208,7 @@ Acknowledge active alarm or instance of an active alarm synchronously.
 - `instanceID`
 
   - Value "0": Acknowledge all instances of an active alarm.
-  - Value > "0": Acknowledge instance with this ID.
+  - Value &gt; "0": Acknowledge instance with this ID.
 
 **"Disable" method**
 
@@ -3231,7 +3231,7 @@ Acknowledge the inactive state of an active alarm or an instance of an active al
 - `instanceID`
 
   - Value "0": Acknowledge the inactive state of the active alarm.
-  - Value > "0": Acknowledge the inactive state of an instance with this ID.
+  - Value &gt; "0": Acknowledge the inactive state of an instance with this ID.
 
 **"Shelve" method**
 
@@ -3251,7 +3251,7 @@ Acknowledge active alarm synchronously:
 
 Copy code
 
-public void AcknowledgeAlarms(IList<IAlarmResult> AlarmList)
+public void AcknowledgeAlarms(IList&lt;IAlarmResult&gt; AlarmList)
 
 {
 
@@ -3263,7 +3263,7 @@ foreach (var alarm in AlarmList)
 
 {
 
-var alarmAck = runtime.GetObject<IAlarm>(alarm.Name);
+var alarmAck = runtime.GetObject&lt;IAlarm&gt;(alarm.Name);
 
 alarmAck.Acknowledge((alarm.InstanceID); // to acknowledge a particular alarm instance, parameter can be ommitted if all instances of an alarm shall be acknowledged.
 
@@ -3318,7 +3318,7 @@ Add an active alarm or an instance of the alarm to the AlarmSet.
 
   Value = "0": Add all instances of an active alarm.
 
-  Value > "0": Add instance with this ID.
+  Value &gt; "0": Add instance with this ID.
 
 **"Remove" method**
 
@@ -3332,7 +3332,7 @@ Remove a single alarm or an instance of an alarm from the AlarmSet.
 - `instanceID`
     
   value = "0": Remove all instances of an active alarm  
-  Value > "0": Remove instance with this ID.
+  Value &gt; "0": Remove instance with this ID.
 
 **"Clear" method**
 
@@ -3456,7 +3456,7 @@ Acknowledge active alarms from the "AlarmList" list as an AlarmSet asynchronousl
 
 Copy code
 
-public void AcknowledgeAlarms(IList<IAlarmResult> AlarmList)
+public void AcknowledgeAlarms(IList&lt;IAlarmResult&gt; AlarmList)
 
 {
 
@@ -3468,7 +3468,7 @@ if (AlarmList.Count == 1)
 
 {
 
-IAlarm alarmAck = runtime.GetObject<IAlarm>(AlarmList[0].Name);
+IAlarm alarmAck = runtime.GetObject&lt;IAlarm&gt;(AlarmList[0].Name);
 
 alarmAck.Acknowledge();
 
@@ -3478,9 +3478,9 @@ else
 
 {
 
-AlarmAckList = new List<IAlarmResult>();
+AlarmAckList = new List&lt;IAlarmResult&gt;();
 
-IAlarmSet alarmSet = runtime.GetObject<IAlarmSet>(); ;
+IAlarmSet alarmSet = runtime.GetObject&lt;IAlarmSet&gt;(); ;
 
 foreach (var alarmResult in AlarmList)
 
@@ -3506,7 +3506,7 @@ alarmSet.Acknowledge();
 
 }
 
-public void alarmSet_OnAcknowledgeHandler(IAlarmSet sender, uint errorCode, IList<IAlarmSetResult> values, bool completed)
+public void alarmSet_OnAcknowledgeHandler(IAlarmSet sender, uint errorCode, IList&lt;IAlarmSetResult&gt; values, bool completed)
 
 {
 
@@ -3524,7 +3524,7 @@ Remove active alarms from the "AlarmList" list as an AlarmSet asynchronously:
 
 Copy code
 
-public void ResetAlarms(IList<IAlarmResult> AlarmList)
+public void ResetAlarms(IList&lt;IAlarmResult&gt; AlarmList)
 
 {
 
@@ -3536,7 +3536,7 @@ if (AlarmList.Count == 1)
 
 {
 
-IAlarm alarmReset = runtime.GetObject<IAlarm>(AlarmList[0].Name);
+IAlarm alarmReset = runtime.GetObject&lt;IAlarm&gt;(AlarmList[0].Name);
 
 alarmReset.Reset();
 
@@ -3546,9 +3546,9 @@ else
 
 {
 
-IAlarmSet alarmSet = runtime.GetObject<IAlarmSet>(); ;
+IAlarmSet alarmSet = runtime.GetObject&lt;IAlarmSet&gt;(); ;
 
-AlarmResetList = new List<IAlarmResult>();
+AlarmResetList = new List&lt;IAlarmResult&gt;();
 
 foreach (var alarmResult in AlarmList)
 
@@ -3586,7 +3586,7 @@ System.Console.WriteLine(string.Format("OdkException occurred {0}", ex.Message))
 
 }
 
-public void alarmSet_OnReseteHandler(IAlarmSet sender, uint errorCode, IList<IAlarmSetResult> values, bool completed)
+public void alarmSet_OnReseteHandler(IAlarmSet sender, uint errorCode, IList&lt;IAlarmSetResult&gt; values, bool completed)
 
 {
 
@@ -3662,7 +3662,7 @@ Read out alarm of an AlarmSet after acknowledgment
 
 Copy code
 
-public void alarmSet_OnAcknowledgeHandler(IAlarmSet sender, uint errorCode, IList<IAlarmSetResult> values, bool completed)
+public void alarmSet_OnAcknowledgeHandler(IAlarmSet sender, uint errorCode, IList&lt;IAlarmSetResult&gt; values, bool completed)
 
 {
 
@@ -3802,9 +3802,9 @@ public void CreateSystemAlarm()
 
    //Create SystemAlarm with monolingual alarm text
 
-    var alarm = runtime.GetObject<IAlarmSubscription>();
+    var alarm = runtime.GetObject&lt;IAlarmSubscription&gt;();
 
-    var systemNames = new List<string>();
+    var systemNames = new List&lt;string&gt;();
 
     systemNames.Add("SYSTEM1");
 
@@ -3820,7 +3820,7 @@ public void CreateSystemAlarm()
 
     alarm.Start();
 
-    var systemAlarm = runtime.GetObject<IAlarmTrigger>();
+    var systemAlarm = runtime.GetObject&lt;IAlarmTrigger&gt;();
 
     systemAlarm.CreateSystemAlarm(alarmText: "Alarm Text", area: "Area",
 
@@ -3858,9 +3858,9 @@ public void CreateSystemAlarmWithAlarmTextAsTextList()
 
    //Create SystemAlarm with multilingual alarm text; the tranlsations are directly stored in the text list
 
-    var alarm = runtime.GetObject<IAlarmSubscription>();
+    var alarm = runtime.GetObject&lt;IAlarmSubscription&gt;();
 
-    var systemNames = new List<string>();
+    var systemNames = new List&lt;string&gt;();
 
     systemNames.Add("SYSTEM1");
 
@@ -3876,9 +3876,9 @@ public void CreateSystemAlarmWithAlarmTextAsTextList()
 
     alarm.Start();
 
-    var systemAlarm = runtime.GetObject<IAlarmTrigger>();
+    var systemAlarm = runtime.GetObject&lt;IAlarmTrigger&gt;();
 
-     var texlistforAlarmText = runtime.GetObject<ITextList>();
+     var texlistforAlarmText = runtime.GetObject&lt;ITextList&gt;();
 
     // Text list: AlarmTextTemplate
 
@@ -3926,9 +3926,9 @@ public void CreateSystemAlarmWithTextListAsParameterValue()
 
    //Create SystemAlarm with multilingual alarm text; the text list references other text lists with tranlsations
 
-    var alarm = runtime.GetObject<IAlarmSubscription>();
+    var alarm = runtime.GetObject&lt;IAlarmSubscription&gt;();
 
-    var systemNames = new List<string>();
+    var systemNames = new List&lt;string&gt;();
 
     systemNames.Add("SYSTEM1");
 
@@ -3944,11 +3944,11 @@ public void CreateSystemAlarmWithTextListAsParameterValue()
 
     alarm.Start();
 
-    var systemAlarm = runtime.GetObject<IAlarmTrigger>();
+    var systemAlarm = runtime.GetObject&lt;IAlarmTrigger&gt;();
 
-    var textList1 = runtime.GetObject<ITextList>("Text_List_1");
+    var textList1 = runtime.GetObject&lt;ITextList&gt;("Text_List_1");
 
-    var textList2 = runtime.GetObject<ITextList>("Text_List_2");
+    var textList2 = runtime.GetObject&lt;ITextList&gt;("Text_List_2");
 
     textList1.TextListEntryIndex = 1; //Eng TL @1%t#2T@ Val: @3%s@
 
@@ -4127,9 +4127,9 @@ try
 
 //  object filter = "AlarmClass = 'AlarmWithOptionalAcknowledgement' AND Origin = 'Boiler'";
 
-IAlarmSubscription alarm = runtime.GetObject<IAlarmSubscription>();
+IAlarmSubscription alarm = runtime.GetObject&lt;IAlarmSubscription&gt;();
 
-List<string> systemNames = new List<string>();
+List&lt;string&gt; systemNames = new List&lt;string&gt;();
 
 systemNames.Add("SYSTEM1");
 
@@ -4157,7 +4157,7 @@ System.Console.WriteLine(string.Format("OdkException occurred {0}", ex.Message))
 
 }
 
-public void alarm_OnAlarmHandler(IAlarmSubscription sender, UInt32 nGlobalError, String systemName, IList<IAlarmResult> value, bool completed)
+public void alarm_OnAlarmHandler(IAlarmSubscription sender, UInt32 nGlobalError, String systemName, IList&lt;IAlarmResult&gt; value, bool completed)
 
 {
 
@@ -4169,7 +4169,7 @@ try
 
 {
 
-AlarmList = new List<IAlarmResult>();
+AlarmList = new List&lt;IAlarmResult&gt;();
 
 foreach (var item in value)
 
@@ -4627,7 +4627,7 @@ try
 
 {
 
-var alarm = _runtime.GetObject<IAlarmLogging>();
+var alarm = _runtime.GetObject&lt;IAlarmLogging&gt;();
 
 var now = DateTime.UtcNow;
 
@@ -4635,7 +4635,7 @@ var begin = now.AddMinutes(-5);
 
 var end = now.AddMinutes(-2);
 
-List<string> systemNames = new List<string>();
+List&lt;string&gt; systemNames = new List&lt;string&gt;();
 
 systemNames.Add("SYSTEM1");
 
@@ -4655,7 +4655,7 @@ System.Console.WriteLine(string.Format("OdkException occurred {0}", ex.Message))
 
 }
 
-private void Alarm_OnReadComplete(IAlarmLogging sender, uint errorCode, IList<ILoggedAlarmResult> values, bool completed)
+private void Alarm_OnReadComplete(IAlarmLogging sender, uint errorCode, IList&lt;ILoggedAlarmResult&gt; values, bool completed)
 
 {
 
@@ -4665,7 +4665,7 @@ sender.Dispose();
 
 }
 
-private void PrintValues(IList<ILoggedAlarmResult> values)
+private void PrintValues(IList&lt;ILoggedAlarmResult&gt; values)
 
 {
 
@@ -4765,9 +4765,9 @@ try
 
 {
 
-_alarm = _runtime.GetObject<IAlarmLoggingSubscription>();
+_alarm = _runtime.GetObject&lt;IAlarmLoggingSubscription&gt;();
 
-List<string> systemNames = new List<string>();
+List&lt;string&gt; systemNames = new List&lt;string&gt;();
 
 systemNames.Add("SYSTEM1");
 
@@ -4795,7 +4795,7 @@ System.Console.WriteLine(string.Format("OdkException occurred {0}", ex.Message))
 
 }
 
-private void Alarm_OnDataChanged(IAlarmLoggingSubscription sender, uint errorCode, IList<ILoggedAlarmResult> values)
+private void Alarm_OnDataChanged(IAlarmLoggingSubscription sender, uint errorCode, IList&lt;ILoggedAlarmResult&gt; values)
 
 {
 
@@ -4803,7 +4803,7 @@ PrintValues(values);
 
 }
 
-private void PrintValues(IList<ILoggedAlarmResult> values)
+private void PrintValues(IList&lt;ILoggedAlarmResult&gt; values)
 
 {
 
@@ -4957,7 +4957,7 @@ public void Connection_Read()
 
 {
 
-    var (connection = m_runtime.GetObject<IConnection>("HMI-ConnectionS7Plus");
+    var (connection = m_runtime.GetObject&lt;IConnection&gt;("HMI-ConnectionS7Plus");
 
     if (connection != null)
 
@@ -5046,7 +5046,7 @@ public void Connection_GetConnectionState()
 
 {
 
-    var connection = m_runtime.GetObject<IConnection>("HMI-ConnectionS7Plus");
+    var connection = m_runtime.GetObject&lt;IConnection&gt;("HMI-ConnectionS7Plus");
 
     var con = connection.GetConnectionState();
 
@@ -5123,7 +5123,7 @@ public void Connection_SetConnectionStateDisable()
 
 {
 
-    var connection = m_runtime.GetObject<IConnection>("HMI-ConnectionS7Plus");
+    var connection = m_runtime.GetObject&lt;IConnection&gt;("HMI-ConnectionS7Plus");
 
     if (connection != null)
 
@@ -5143,7 +5143,7 @@ public void SetConnectionStateEnable()
 
 {
 
-    using (IConnection connection = runtime.GetObject<IConnection>("HMI-ConnectionS7Plus"))
+    using (IConnection connection = runtime.GetObject&lt;IConnection&gt;("HMI-ConnectionS7Plus"))
 
     {
 
@@ -5329,7 +5329,7 @@ public void ConnnectionSet_Subscribe()
 
     Console.WriteLine(" ......Connection Set:Subscription start ......");
 
-    using (IConnectionSet subscribe = runtime.GetObject<IConnectionSet>())
+    using (IConnectionSet subscribe = runtime.GetObject&lt;IConnectionSet&gt;())
 
     {
 
@@ -5337,7 +5337,7 @@ public void ConnnectionSet_Subscribe()
 
         {
 
-            ICollection<string> list = new string[] { "HMI-Connection", "HMI-ConnectionS7Plus" };
+            ICollection&lt;string&gt; list = new string[] { "HMI-Connection", "HMI-ConnectionS7Plus" };
 
             subscribe.Add(list);
 
@@ -5353,7 +5353,7 @@ public void ConnnectionSet_Subscribe()
 
 }
 
-private void Subscribe_OnConnectionStateChanged(IConnectionSet sender, uint systemError, IList<IConnectionStatusResult> values)
+private void Subscribe_OnConnectionStateChanged(IConnectionSet sender, uint systemError, IList&lt;IConnectionStatusResult&gt; values)
 
 {
 
@@ -5427,7 +5427,7 @@ public void ConnectionSet_Read()
 
 Console.WriteLine(" .......Connection Set: Read ...... ");
 
-using (IConnectionSet read = runtime.GetObject<IConnectionSet>())
+using (IConnectionSet read = runtime.GetObject&lt;IConnectionSet&gt;())
 
 {
 
@@ -5435,11 +5435,11 @@ if (read != null)
 
 {
 
-ICollection<string> list = new string[] { "HMI-Connection", "HMI-ConnectionS7Plus" };
+ICollection&lt;string&gt; list = new string[] { "HMI-Connection", "HMI-ConnectionS7Plus" };
 
 read.Add(list);
 
-IList<IConnectionResult> connectionResult = read.Read();
+IList&lt;IConnectionResult&gt; connectionResult = read.Read();
 
 foreach (var item in connectionResult)
 
@@ -5479,13 +5479,13 @@ public void ConnectionSet_ReadAsync()
 
 Console.WriteLine(" ......Connection Set: ReadAsync start ......");
 
-IConnectionSet readAsync = runtime.GetObject<IConnectionSet>();
+IConnectionSet readAsync = runtime.GetObject&lt;IConnectionSet&gt;();
 
 if (readAsync != null)
 
 {
 
-ICollection<string> list = new string[] { "HMI-Connection", "HMI-ConnectionS7Plus" };
+ICollection&lt;string&gt; list = new string[] { "HMI-Connection", "HMI-ConnectionS7Plus" };
 
 readAsync.Add(list);
 
@@ -5499,7 +5499,7 @@ Thread.Sleep(5000);
 
 }
 
-private void Read_OnConnectionComplete(IConnectionSet sender, uint systemError, IList<IConnectionResult> values)
+private void Read_OnConnectionComplete(IConnectionSet sender, uint systemError, IList&lt;IConnectionResult&gt; values)
 
 {
 
@@ -5670,15 +5670,15 @@ public void Odk_GetPlantObjectsByType()
 
 {
 
-using (IPlantModel myPlantModel = runtime.GetObject<IPlantModel>())
+using (IPlantModel myPlantModel = runtime.GetObject&lt;IPlantModel&gt;())
 
 { //gets node for specified Node path
 
-IList<IPlantObject> plantObject = myPlantModel.GetPlantObjectsByType("RUNTIME_1::NodeType1",
+IList&lt;IPlantObject&gt; plantObject = myPlantModel.GetPlantObjectsByType("RUNTIME_1::NodeType1",
 
 ".hierarchy::RootNodeName\\Node1");
 
-if (plantObject.Count() > 0)
+if (plantObject.Count() &gt; 0)
 
 {
 
@@ -5838,7 +5838,7 @@ public void Odk_PlantObjectGetProperties()
 
 {
 
-    var myPlantModel = _runtime.GetObject<IPlantModel>();
+    var myPlantModel = _runtime.GetObject&lt;IPlantModel&gt;();
 
     var strNodeName = ".hierarchy::RootNodeName/Node1";
 
@@ -5924,7 +5924,7 @@ public void Odk_PlantObjectGetPropertyWrite()
 
 {
 
-    using (IPlantModel myPlantModel = runtime.GetObject<IPlantModel>())
+    using (IPlantModel myPlantModel = runtime.GetObject&lt;IPlantModel&gt;())
 
     {
 
@@ -6040,7 +6040,7 @@ Copy code
 public void Odk_PlantObjectGetPropertyRead()  
 {
 
-        using (var myPlantModel = _runtime.GetObject<IPlantModel>())  
+        using (var myPlantModel = _runtime.GetObject&lt;IPlantModel&gt;())  
         {
 
                 var strNodeName = ".hierarchy::RootNodeName/Node1";
@@ -6274,7 +6274,7 @@ try
 
 {
 
-IPlantModel myPlantModel = runtime.GetObject<IPlantModel>();
+IPlantModel myPlantModel = runtime.GetObject&lt;IPlantModel&gt;();
 
 string strNodeName = ".hierarchy::RootNodeName\\Node1"; 　 //gets node for specified Node path
 
@@ -6288,7 +6288,7 @@ if (plantObject != null)
 
 {
 
-ICollection<string> PropNames = null;// get the plant objectproperties by propeyty names
+ICollection&lt;string&gt; PropNames = null;// get the plant objectproperties by propeyty names
 
 IPlantObjectPropertySet plantObjectPropertyset = plantObject.GetProperties(PropNames);
 
@@ -6318,7 +6318,7 @@ System.Console.WriteLine(string.Format("OdkException occurred {0}", ex.Message))
 
 }
 
-public void odkPlantModel_onReadComplete(IPlantObjectPropertySet sender, UInt32 SystemError, IList<IPlantObjectPropertyValue> Values)
+public void odkPlantModel_onReadComplete(IPlantObjectPropertySet sender, UInt32 SystemError, IList&lt;IPlantObjectPropertyValue&gt; Values)
 
 {
 
@@ -6366,7 +6366,7 @@ try
 
 {
 
-IPlantModel myPlantmodel = runtime.GetObject<IPlantModel>();
+IPlantModel myPlantmodel = runtime.GetObject&lt;IPlantModel&gt;();
 
 string strNodeName = ".hierarchy::RootNodeName\\Node1"; 　 //gets node for specified Node path
 
@@ -6380,7 +6380,7 @@ if (plantObject != null)
 
 {
 
-ICollection<string> PropNames = null;
+ICollection&lt;string&gt; PropNames = null;
 
 IPlantObjectPropertySet plantObjectPropertyset = plantObject.GetProperties(PropNames);
 
@@ -6412,7 +6412,7 @@ System.Console.WriteLine(string.Format("OdkException occurred {0}", ex.Message))
 
 }
 
-public void odkPlantModelPropertySet_OnDataChanged(IPlantObjectPropertySet sender, IList<IPlantObjectPropertyValue> Values)
+public void odkPlantModelPropertySet_OnDataChanged(IPlantObjectPropertySet sender, IList&lt;IPlantObjectPropertyValue&gt; Values)
 
 {
 
@@ -6547,7 +6547,7 @@ try
 
 {
 
-using (IPlantModel myPlantModel = runtime.GetObject<IPlantModel>())
+using (IPlantModel myPlantModel = runtime.GetObject&lt;IPlantModel&gt;())
 
 {
 
@@ -6587,7 +6587,7 @@ System.Console.WriteLine(string.Format("OdkException occurred {0}", ex.Message))
 
 }
 
-public void alarm_OnPlantObjectSubscribeAlarmHandler(IPlantObjectAlarmSubscription sender, UInt32 nGlobalError, String systemName, IList<IAlarmResult> value)
+public void alarm_OnPlantObjectSubscribeAlarmHandler(IPlantObjectAlarmSubscription sender, UInt32 nGlobalError, String systemName, IList&lt;IAlarmResult&gt; value)
 
 {
 
@@ -6721,7 +6721,7 @@ if (runtime != null)
 
 {
 
-IPlantModel myPlantModel = runtime.GetObject<IPlantModel>();
+IPlantModel myPlantModel = runtime.GetObject&lt;IPlantModel&gt;();
 
 IPlantObject po = myPlantModel.GetPlantObject(".hierarchy::Plant/Unit1");
 
@@ -6789,7 +6789,7 @@ Console.WriteLine(" \nName:{0} \nColor:{1} \n Deleted:{2}\n", category.Name, cat
 
 }
 
-IDictionary<uint, string> displayNames = category.DisplayNames;
+IDictionary&lt;uint, string&gt; displayNames = category.DisplayNames;
 
 foreach (var item in displayNames)
 
@@ -6799,7 +6799,7 @@ Console.WriteLine("Language:{0} DisplayName:{1}", item.Key, item.Value);
 
 }
 
-IDictionary<uint, string> description = category.Descriptions;
+IDictionary&lt;uint, string&gt; description = category.Descriptions;
 
 foreach (var item in description)
 
@@ -6835,7 +6835,7 @@ Supplies a collection with the categories of the calendar.
 
 Copy code
 
-IReadOnlyCollection<ISHCCategory> categories = calendar.Category.Browse();
+IReadOnlyCollection&lt;ISHCCategory&gt; categories = calendar.Category.Browse();
 
 foreach (var cat in categories)
 
@@ -7083,9 +7083,9 @@ DateTime end = DateTime.Now.EndOfDay();
 
 end = end.AddDays(3);
 
-IReadOnlyCollection<ISHCDay> days = calendar.Day.Browse(start, end);
+IReadOnlyCollection&lt;ISHCDay&gt; days = calendar.Day.Browse(start, end);
 
-if (days.Count > 0)
+if (days.Count &gt; 0)
 
 {
 
@@ -7101,7 +7101,7 @@ if (null != day)
 
 Console.WriteLine(strDays);
 
-IDictionary<uint, string> Comments = day.Comments;foreach (var item in Comments)
+IDictionary&lt;uint, string&gt; Comments = day.Comments;foreach (var item in Comments)
 
 {Console.WriteLine("\n Language:{0} DayComment:{1} \n", item.Key, item.Value); }
 
@@ -7145,17 +7145,17 @@ try
 
 {
 
-IReadOnlyCollection<ISHCDayTemplate> Daytemplates = calendar.DayTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCDayTemplate&gt; Daytemplates = calendar.DayTemplate.Browse(false);
 
-if (Daytemplates.Count > 0)
+if (Daytemplates.Count &gt; 0)
 
 {
 
 ISHCDayTemplate dayTemplate = Daytemplates.ElementAt(0);
 
-List<ISHCDay> DayList = new List<ISHCDay>();
+List&lt;ISHCDay&gt; DayList = new List&lt;ISHCDay&gt;();
 
-ISHCDay day = calendar.GetObject<ISHCDay>();
+ISHCDay day = calendar.GetObject&lt;ISHCDay&gt;();
 
 day.DayTemplate = dayTemplate.Name;
 
@@ -7169,9 +7169,9 @@ DayList.Add(day);
 
 calendar.Day.Create(DayList);
 
-IReadOnlyCollection<ISHCShiftTemplate> ShiftTemplates = calendar.ShiftTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCShiftTemplate&gt; ShiftTemplates = calendar.ShiftTemplate.Browse(false);
 
-if (ShiftTemplates.Count > 0)
+if (ShiftTemplates.Count &gt; 0)
 
 {
 
@@ -7223,19 +7223,19 @@ DateTime end = DateTime.Now.EndOfDay();
 
 end = end.AddDays(1);
 
-IReadOnlyCollection<ISHCDay> days = calendar.Day.Browse(start, end);
+IReadOnlyCollection&lt;ISHCDay&gt; days = calendar.Day.Browse(start, end);
 
-if (days.Count > 0)
+if (days.Count &gt; 0)
 
 {
 
-List<ISHCDay> list = new List<ISHCDay>();
+List&lt;ISHCDay&gt; list = new List&lt;ISHCDay&gt;();
 
 foreach (var day in days)
 
 {
 
-IReadOnlyCollection<ISHCShift> shifts = day.GetShifts();
+IReadOnlyCollection&lt;ISHCShift&gt; shifts = day.GetShifts();
 
 if (shifts != null)
 
@@ -7295,13 +7295,13 @@ DateTime end = DateTime.Now.EndOfDay();
 
 end = end.AddDays(3);
 
-IReadOnlyCollection<ISHCDay> days = calendar.Day.Browse(start, end);
+IReadOnlyCollection&lt;ISHCDay&gt; days = calendar.Day.Browse(start, end);
 
-if (days.Count > 0)
+if (days.Count &gt; 0)
 
 {
 
-List<ISHCDay> list = new List<ISHCDay>();
+List&lt;ISHCDay&gt; list = new List&lt;ISHCDay&gt;();
 
 foreach (var day in days)
 
@@ -7464,9 +7464,9 @@ static void ReadDayTemplateWithShift()
 
     {
 
-         IReadOnlyCollection<ISHCDayTemplate> dayTemplate = calendar.DayTemplate.Browse(false);
+         IReadOnlyCollection&lt;ISHCDayTemplate&gt; dayTemplate = calendar.DayTemplate.Browse(false);
 
-         if (dayTemplate.Count > 0)
+         if (dayTemplate.Count &gt; 0)
 
              {
 
@@ -7516,13 +7516,13 @@ try
 
 {
 
-ISHCDayTemplate Daytemplate = calendar.GetObject<ISHCDayTemplate>();
+ISHCDayTemplate Daytemplate = calendar.GetObject&lt;ISHCDayTemplate&gt;();
 
 if (null != Daytemplate)
 
 {
 
-List<ISHCDayTemplate> ListDayTemplate = new List<ISHCDayTemplate>();
+List&lt;ISHCDayTemplate&gt; ListDayTemplate = new List&lt;ISHCDayTemplate&gt;();
 
 Daytemplate.Name = "DayTemplateName";
 
@@ -7534,9 +7534,9 @@ ListDayTemplate.Add(Daytemplate);
 
 calendar.DayTemplate.Create(ListDayTemplate);
 
-IReadOnlyCollection<ISHCShiftTemplate> ShiftTemplates = calendar.ShiftTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCShiftTemplate&gt; ShiftTemplates = calendar.ShiftTemplate.Browse(false);
 
-if (ShiftTemplates.Count > 0)
+if (ShiftTemplates.Count &gt; 0)
 
 {
 
@@ -7582,13 +7582,13 @@ try
 
 {
 
-IReadOnlyCollection<ISHCDayTemplate> dayTemplate = calendar.DayTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCDayTemplate&gt; dayTemplate = calendar.DayTemplate.Browse(false);
 
-if (dayTemplate.Count > 0)
+if (dayTemplate.Count &gt; 0)
 
 {
 
-List<ISHCDayTemplate> list = new List<ISHCDayTemplate>();
+List&lt;ISHCDayTemplate&gt; list = new List&lt;ISHCDayTemplate&gt;();
 
 foreach (var dayTemplates in dayTemplate)
 
@@ -7600,7 +7600,7 @@ dayTemplates.SetDisplayName(1033, "UpdatedDayTemplateDisplayName");
 
 dayTemplates.SetDescription(1033, "UpdatedDayTemplateDescription");
 
-IReadOnlyCollection<ISHCShift> shifts = dayTemplates.GetShifts();
+IReadOnlyCollection&lt;ISHCShift&gt; shifts = dayTemplates.GetShifts();
 
 if (shifts != null)
 
@@ -7654,13 +7654,13 @@ try
 
 {
 
-IReadOnlyCollection<ISHCDayTemplate> dayTemplates = calendar.DayTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCDayTemplate&gt; dayTemplates = calendar.DayTemplate.Browse(false);
 
-if (dayTemplate.Count > 0)
+if (dayTemplate.Count &gt; 0)
 
 {
 
-List<ISHCDayTemplate> list = new List<ISHCDayTemplate>();
+List&lt;ISHCDayTemplate&gt; list = new List&lt;ISHCDayTemplate&gt;();
 
 foreach (var dayTemplate in dayTemplates)
 
@@ -7825,9 +7825,9 @@ try
 
 Console.WriteLine("ReadShiftTemplate With Timeslice");
 
-IReadOnlyCollection<ISHCShiftTemplate> template = calendar.ShiftTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCShiftTemplate&gt; template = calendar.ShiftTemplate.Browse(false);
 
-if (template.Count > 0)
+if (template.Count &gt; 0)
 
 {
 
@@ -7877,7 +7877,7 @@ try
 
 {
 
-using (ISHCShiftTemplate pShiftTemplate = calendar.GetObject<ISHCShiftTemplate>())
+using (ISHCShiftTemplate pShiftTemplate = calendar.GetObject&lt;ISHCShiftTemplate&gt;())
 
 {
 
@@ -7889,21 +7889,21 @@ pShiftTemplate.SetDescription(1033, "ShiftTemplateDescriptions");
 
 pShiftTemplate.Duration = new TimeSpan(8, 0, 0);
 
-List<ISHCShiftTemplate> ShiftList = new List<ISHCShiftTemplate>();
+List&lt;ISHCShiftTemplate&gt; ShiftList = new List&lt;ISHCShiftTemplate&gt;();
 
 ShiftList.Add(pShiftTemplate);
 
 calendar.ShiftTemplate.Create(ShiftList);
 
-IReadOnlyCollection<ISHCCategory> categories = calendar.Category.Browse();
+IReadOnlyCollection&lt;ISHCCategory&gt; categories = calendar.Category.Browse();
 
-if (categories.Count > 0)
+if (categories.Count &gt; 0)
 
 {
 
 ISHCCategory pCat = categories.ElementAt(0);
 
-ISHCTimeSlice pTimeSlice = calendar.GetObject<ISHCTimeSlice>();
+ISHCTimeSlice pTimeSlice = calendar.GetObject&lt;ISHCTimeSlice&gt;();
 
 pTimeSlice.StartTime = DateTime.Now.StartOfDay();
 
@@ -7951,11 +7951,11 @@ try
 
 {
 
-IReadOnlyCollection<ISHCShiftTemplate> shiftTemplates = calendar.ShiftTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCShiftTemplate&gt; shiftTemplates = calendar.ShiftTemplate.Browse(false);
 
-List<ISHCShiftTemplate> list = new List<ISHCShiftTemplate>();
+List&lt;ISHCShiftTemplate&gt; list = new List&lt;ISHCShiftTemplate&gt;();
 
-IReadOnlyCollection<ISHCCategory> categories = calendar.Category.Browse();
+IReadOnlyCollection&lt;ISHCCategory&gt; categories = calendar.Category.Browse();
 
 ISHCCategory pCat = categories.ElementAt(1);
 
@@ -7973,9 +7973,9 @@ shifttemplate.Duration = new TimeSpan(10, 0, 0);
 
 list.Add(shifttemplate);
 
-IReadOnlyCollection<ISHCTimeSlice> Timeslices = shifttemplate.GetTimeSlices();
+IReadOnlyCollection&lt;ISHCTimeSlice&gt; Timeslices = shifttemplate.GetTimeSlices();
 
-if (Timeslices.Count > 0)
+if (Timeslices.Count &gt; 0)
 
 {
 
@@ -8025,13 +8025,13 @@ try
 
 {
 
-IReadOnlyCollection<ISHCShiftTemplate> shiftTemplates = calendar.ShiftTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCShiftTemplate&gt; shiftTemplates = calendar.ShiftTemplate.Browse(false);
 
-if (shiftTemplates.Count > 0)
+if (shiftTemplates.Count &gt; 0)
 
 {
 
-List<ISHCShiftTemplate> list = new List<ISHCShiftTemplate>();
+List&lt;ISHCShiftTemplate&gt; list = new List&lt;ISHCShiftTemplate&gt;();
 
 foreach (var shifttemplate in shiftTemplates)
 
@@ -8251,7 +8251,7 @@ if (Shift != null)
 
 {
 
-IReadOnlyList<ISHCAction> action = Shift.GetActions();
+IReadOnlyList&lt;ISHCAction&gt; action = Shift.GetActions();
 
 if (action != null)
 
@@ -8541,7 +8541,7 @@ try
 
 Console.WriteLine("ReadActionTemplate");
 
-IReadOnlyCollection<ISHCActionTemplate> actionTemplate = calendar.ActionTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCActionTemplate&gt; actionTemplate = calendar.ActionTemplate.Browse(false);
 
 foreach (var template in actionTemplate)
 
@@ -8585,7 +8585,7 @@ try
 
 {
 
-ISHCActionTemplate pActionTemplate = calendar.GetObject<ISHCActionTemplate>();
+ISHCActionTemplate pActionTemplate = calendar.GetObject&lt;ISHCActionTemplate&gt;();
 
 if (pActionTemplate != null)
 
@@ -8597,13 +8597,13 @@ pActionTemplate.SetDisplayName(1033, "ActionDisplayName");
 
 pActionTemplate.SetDescription(1033, "ActionDescription");
 
-List<ISHCActionTemplate> ActionList = new List<ISHCActionTemplate>();
+List&lt;ISHCActionTemplate&gt; ActionList = new List&lt;ISHCActionTemplate&gt;();
 
 ActionList.Add(pActionTemplate);
 
 calendar.ActionTemplate.Create(ActionList);
 
-ISHCActionTemplateElement pActionTemplateElement = calendar.GetObject<ISHCActionTemplateElement>();
+ISHCActionTemplateElement pActionTemplateElement = calendar.GetObject&lt;ISHCActionTemplateElement&gt;();
 
 if (pActionTemplateElement != null)
 
@@ -8651,9 +8651,9 @@ static void UpdateActionTemplateWithActionTemplateElement()
 
 {
 
-IReadOnlyCollection<ISHCActionTemplate> actionTemplates = calendar.ActionTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCActionTemplate&gt; actionTemplates = calendar.ActionTemplate.Browse(false);
 
-List<ISHCActionTemplate> list = new List<ISHCActionTemplate>();
+List&lt;ISHCActionTemplate&gt; list = new List&lt;ISHCActionTemplate&gt;();
 
 foreach (var actionTemplate in actionTemplates)
 
@@ -8665,7 +8665,7 @@ actionTemplate.SetDisplayName(1033, "UpdatedDisplayName ");
 
 actionTemplate.SetDescription(1033, "UpdatedDescription");
 
-IReadOnlyCollection<ISHCActionTemplateElement> action = actionTemplate.GetElements();
+IReadOnlyCollection&lt;ISHCActionTemplateElement&gt; action = actionTemplate.GetElements();
 
 ISHCActionTemplateElement templateElement = action.ElementAt(0);
 
@@ -8701,13 +8701,13 @@ try
 
 {
 
-IReadOnlyCollection<ISHCActionTemplate> actionTemplates = calendar.ActionTemplate.Browse(false);
+IReadOnlyCollection&lt;ISHCActionTemplate&gt; actionTemplates = calendar.ActionTemplate.Browse(false);
 
-if (actionTemplates.Count > 0)
+if (actionTemplates.Count &gt; 0)
 
 {
 
-List<ISHCActionTemplate> list = new List<ISHCActionTemplate>();
+List&lt;ISHCActionTemplate&gt; list = new List&lt;ISHCActionTemplate&gt;();
 
 foreach (var actionTemplate in actionTemplates)
 
@@ -9093,21 +9093,21 @@ public void CreateContextDefinitions()
 
      Console.WriteLine("CreateContextDefinitions \n");
 
-     var contextLogging = _runtime.GetObject<IContextLogging>();
+     var contextLogging = _runtime.GetObject&lt;IContextLogging&gt;();
 
-     List<IContextDefinition> contextDefnitions = new List<IContextDefinition>();
+     List&lt;IContextDefinition&gt; contextDefnitions = new List&lt;IContextDefinition&gt;();
 
-     for (int i = 0; i < 5; i++)
+     for (int i = 0; i &lt; 5; i++)
 
      {
 
-          var contextDefinition = _runtime.GetObject<IContextDefinition>();
+          var contextDefinition = _runtime.GetObject&lt;IContextDefinition&gt;();
 
           contextDefinition.PlantViewPath = ".hierarchy::Plant/Node1_1";
 
           contextDefinition.DataType = HmiContextDataType.DInt;
 
-          Dictionary<UInt32, string> displayLanguages = new Dictionary<uint, string>();
+          Dictionary&lt;UInt32, string&gt; displayLanguages = new Dictionary&lt;uint, string&gt;();
 
           displayLanguages[1033] = "english";
 
@@ -9139,7 +9139,7 @@ public void CreateContextDefinitions()
 
 Copying code
 
-private void ContextLogging_OnContextDefinitionCreate(IContextLogging sender, UInt32 globalError, string systemName, IList<IContextError> errors, bool completed)
+private void ContextLogging_OnContextDefinitionCreate(IContextLogging sender, UInt32 globalError, string systemName, IList&lt;IContextError&gt; errors, bool completed)
 
 {
 
@@ -9183,15 +9183,15 @@ public void ReadContextDefinitionsWithFilter()
 
     Console.WriteLine("ReadContextDefinitionsWithFilter \n");
 
-    var contextLogging = _runtime.GetObject<IContextLogging>();
+    var contextLogging = _runtime.GetObject&lt;IContextLogging&gt;();
 
     contextLogging.OnContextDefinitionReadReply += OnContextDefinitionReadReplyForContextLogging;
 
-    List<string> plantobjectsfilter = new List<string>();
+    List&lt;string&gt; plantobjectsfilter = new List&lt;string&gt;();
 
     plantobjectsfilter.Add(".hierarchy::Plant/Node1_1");
 
-    List<HmiContextProviderType> contextProviderType = new List<HmiContextProviderType>();
+    List&lt;HmiContextProviderType&gt; contextProviderType = new List&lt;HmiContextProviderType&gt;();
 
     contextProviderType.Add(HmiContextProviderType.UserDefined);
 
@@ -9213,7 +9213,7 @@ public void StartContext()
 
     Console.WriteLine("StartContext \n");
 
-    var contextLogging = _runtime.GetObject<IContextLogging>();
+    var contextLogging = _runtime.GetObject&lt;IContextLogging&gt;();
 
     startDt = System.DateTime.Now;
 
@@ -9241,7 +9241,7 @@ public void StopContext()
 
     Console.WriteLine("StopContext \n");
 
-    var contextLogging = _runtime.GetObject<IContextLogging>();
+    var contextLogging = _runtime.GetObject&lt;IContextLogging&gt;();
 
     endDt = System.DateTime.Now;
 
@@ -9255,7 +9255,7 @@ public void StopContext()
 
 Copying code
 
-void OnContextDefinitionReadReplyForContextLogging(IContextLogging sender, UInt32 globalErrors, string systemName, IList<IContextDefinition> contextDefinitions, bool completed)
+void OnContextDefinitionReadReplyForContextLogging(IContextLogging sender, UInt32 globalErrors, string systemName, IList&lt;IContextDefinition&gt; contextDefinitions, bool completed)
 
 {
 
@@ -9293,7 +9293,7 @@ void OnContextDefinitionReadReplyForContextLogging(IContextLogging sender, UInt3
 
 Copying code
 
-void OnLoggedContextReadReplyForContextLogging(IContextLogging sender, UInt32 globalErrors, string systemName, IList<ILoggedContext> loggedContexts, bool completed)
+void OnLoggedContextReadReplyForContextLogging(IContextLogging sender, UInt32 globalErrors, string systemName, IList&lt;ILoggedContext&gt; loggedContexts, bool completed)
 
 {
 
@@ -9337,7 +9337,7 @@ public void Subscribe()
 
 Console.WriteLine("Subscribe \n");
 
-var contextLogging = _runtime.GetObject<IContextLogging>();
+var contextLogging = _runtime.GetObject&lt;IContextLogging&gt;();
 
 contextLogging.OnContextDataChanged += OnContextDataChangedForContextLogging;
 
@@ -9569,10 +9569,10 @@ The operator is applied to the value. The following operators are allowed:
 
   - =
   - !=
-  - <
-  - >
-  - <=
-  - >=
+  - &lt;
+  - &gt;
+  - &lt;=
+  - &gt;=
 - For values with data type String:
 
   - LIKE
@@ -9582,7 +9582,7 @@ The operator is applied to the value. The following operators are allowed:
 
 `string Operator { set; get; }`
 
-Examples of operators: ">", "<", ">=" , "<=" and "="
+Examples of operators: "&gt;", "&lt;", "&gt;=" , "&lt;=" and "="
 
 **"Value" property**
 
@@ -9600,11 +9600,11 @@ public void ReadContextWithFilter()
 
     Console.WriteLine("ReadContextWithFilter \n");
 
-    var contextLogging = _runtime.GetObject<IContextLogging>();
+    var contextLogging = _runtime.GetObject&lt;IContextLogging&gt;();
 
     contextLogging.OnLoggedContextReadReply += OnLoggedContextReadReplyForContextLogging;
 
-    IContextFilter Filter = _runtime.GetObject<IContextFilter>();
+    IContextFilter Filter = _runtime.GetObject&lt;IContextFilter&gt;();
 
     if (Filter != null)
 
@@ -9735,7 +9735,7 @@ CFRESULT Connect()
 
 CCfString projectName = L"";
 
-CFRESULT retVal = Connect(projectName, &pRuntime);
+CFRESULT retVal = Connect(projectName, &amp;pRuntime);
 
 return retVal;
 
@@ -9753,19 +9753,19 @@ Siemens::Runtime::HmiUnified::Common::Cpp::IOptionPtr pOdkOption;
 
 //load option component by name
 
-pRuntime->GetOption(CCfString("MyOptionName"), &pOdkOption);
+pRuntime-&gt;GetOption(CCfString("MyOptionName"), &amp;pOdkOption);
 
 ICfUnknownPtr pUnknown;
 
 //create a instance of the option object "MyOptionObject"
 
-pOdkOption->GetObject(CCfString("MyOptionObject"), &pUnknown);
+pOdkOption-&gt;GetObject(CCfString("MyOptionObject"), &amp;pUnknown);
 
 IMyOptionObjectPtr pMyOptionObject(pUnknown);
 
 CCfString strProperty;
 
-pMyOptionObject->GetMyProperty(&strProperty);
+pMyOptionObject-&gt;GetMyProperty(&amp;strProperty);
 
 }
 
@@ -9839,11 +9839,11 @@ CFRESULT ReadSingleTagSync(IRuntimePtr pRuntime, CCfString tag)
 
 ICfUnknownPtr pUnk;
 
-pRuntime->GetObject(CCfString(L"Tag"), &pUnk);
+pRuntime-&gt;GetObject(CCfString(L"Tag"), &amp;pUnk);
 
 ITagPtr pTag(pUnk);
 
-pTag->SetTagName(tag);
+pTag-&gt;SetTagName(tag);
 
 ... //further tag processing
 
@@ -9859,23 +9859,23 @@ void GetVersionInfo(IRuntimePtr pRuntime)
 
    IProductPtr pProduct;
 
-   pRuntime->GetProduct(&pProduct);
+   pRuntime-&gt;GetProduct(&amp;pProduct);
 
    uint16_t uintMajor, uintMinor, uintUpdate, uintServicePack;
 
    IVersionInfoPtr pVersion;
 
-   pProduct->GetVersion(&pVersion);
+   pProduct-&gt;GetVersion(&amp;pVersion);
 
-   pVersion->GetMajor(&uintMajor);
+   pVersion-&gt;GetMajor(&amp;uintMajor);
 
-   pVersion->GetMinor(&uintMinor);
+   pVersion-&gt;GetMinor(&amp;uintMinor);
 
-   pVersion->GetServicePack(&uintServicePack);
+   pVersion-&gt;GetServicePack(&amp;uintServicePack);
 
-   pVersion->GetUpdate(&uintUpdate);
+   pVersion-&gt;GetUpdate(&amp;uintUpdate);
 
-   wcout << L"WinCC Unified version: " << uintMajor << L"-" << uintMinor << L"-" << uintServicePack << L"-" << uintUpdate << endl;
+   wcout &lt;&lt; L"WinCC Unified version: " &lt;&lt; uintMajor &lt;&lt; L"-" &lt;&lt; uintMinor &lt;&lt; L"-" &lt;&lt; uintServicePack &lt;&lt; L"-" &lt;&lt; uintUpdate &lt;&lt; endl;
 
 }
 
@@ -9889,29 +9889,29 @@ void GetOptionObject(IRuntimePtr pRuntime)
 
 Siemens::Runtime::HmiUnified::Common::Cpp::IOptionPtr pOdkOption;
 
-pRuntime->GetOption(CCfString("MyOptionName"), &pOdkOption);
+pRuntime-&gt;GetOption(CCfString("MyOptionName"), &amp;pOdkOption);
 
 ICfUnknownPtr pUnk;
 
-pOdkOption->GetObject("MyOptionObject2", &pUnk);
+pOdkOption-&gt;GetObject("MyOptionObject2", &amp;pUnk);
 
 IMyOptionObjectPtr pMyOptionObject(pUnknown);
 
 CCfString strProperty;
 
-pMyOptionObject->GetMyProperty(&strProperty);
+pMyOptionObject-&gt;GetMyProperty(&amp;strProperty);
 
 //using extension methods for CPM node
 
 ICpmPtr pCpm;
 
-pRuntime->GetObject(CCfString("Cpm"), (ICfUnknown**) &pCpm);
+pRuntime-&gt;GetObject(CCfString("Cpm"), (ICfUnknown**) &amp;pCpm);
 
 ICpmNodePtr pCpmNode;
 
 CCfString strNode(".hierarchy::PlantView\\Unit1");
 
-pCpm->GetNode(strNode, &pCpmNode);
+pCpm-&gt;GetNode(strNode, &amp;pCpmNode);
 
 //using specific option interface
 
@@ -9919,13 +9919,13 @@ IMyOptionPtr pMyOption(pOdkOption);
 
 IMyCpmNodeFormulaPtr pFormula;
 
-pMyOption->GetObject(pCpmNode, CCfString("Formula"), (ICfUnknown**) &pFormula);
+pMyOption-&gt;GetObject(pCpmNode, CCfString("Formula"), (ICfUnknown**) &amp;pFormula);
 
-pFormula->SetName(CCfString("Quality"));
+pFormula-&gt;SetName(CCfString("Quality"));
 
 int32_t result;
 
-pFormula->Calc(&result);
+pFormula-&gt;Calc(&amp;result);
 
 }
 
@@ -9971,23 +9971,23 @@ void GetVersionInfo(IRuntimePtr pRuntime)
 
    IProductPtr pProduct;
 
-   pRuntime->GetProduct(&pProduct);
+   pRuntime-&gt;GetProduct(&amp;pProduct);
 
    uint16_t uintMajor, uintMinor, uintUpdate, uintServicePack;
 
    IVersionInfoPtr pVersion;
 
-   pProduct->GetVersion(&pVersion);
+   pProduct-&gt;GetVersion(&amp;pVersion);
 
-   pVersion->GetMajor(&uintMajor);
+   pVersion-&gt;GetMajor(&amp;uintMajor);
 
-   pVersion->GetMinor(&uintMinor);
+   pVersion-&gt;GetMinor(&amp;uintMinor);
 
-   pVersion->GetServicePack(&uintServicePack);
+   pVersion-&gt;GetServicePack(&amp;uintServicePack);
 
-   pVersion->GetUpdate(&uintUpdate);
+   pVersion-&gt;GetUpdate(&amp;uintUpdate);
 
-   wcout << L"WinCC Unified version: " << uintMajor << L"-" << uintMinor << L"-" << uintServicePack << L"-" << uintUpdate << endl;
+   wcout &lt;&lt; L"WinCC Unified version: " &lt;&lt; uintMajor &lt;&lt; L"-" &lt;&lt; uintMinor &lt;&lt; L"-" &lt;&lt; uintServicePack &lt;&lt; L"-" &lt;&lt; uintUpdate &lt;&lt; endl;
 
 }
 
@@ -10001,23 +10001,23 @@ void GetVersionInfo(IRuntimePtr pRuntime)
 
 IProductPtr pProduct;
 
-   pRuntime->GetProduct(&pProduct);
+   pRuntime-&gt;GetProduct(&amp;pProduct);
 
    IOptionEnumeratorPtr pItems;
 
-   while (pItems->MoveNext() == CF_SUCCESS)
+   while (pItems-&gt;MoveNext() == CF_SUCCESS)
 
    {
 
       IOptionPtr pValue;
 
-      pItems->Current(&pValue);
+      pItems-&gt;Current(&amp;pValue);
 
       CCfString module;
 
-      pValue->GetName(&module);
+      pValue-&gt;GetName(&amp;module);
 
-      wcout << L"Option name: " << module << endl;
+      wcout &lt;&lt; L"Option name: " &lt;&lt; module &lt;&lt; endl;
 
    }
 
@@ -10088,17 +10088,17 @@ void GetOptionObject(IRuntimePtr pRuntime)
 
 Siemens::Runtime::HmiUnified::Common::Cpp::IOptionPtr pOdkOption;
 
-pRuntime->GetOption(CCfString("MyOptionName"), &pOdkOption);
+pRuntime-&gt;GetOption(CCfString("MyOptionName"), &amp;pOdkOption);
 
 ICfUnknownPtr pUnk;
 
-pOdkOption->GetObject("MyOptionObject2", &pUnk);
+pOdkOption-&gt;GetObject("MyOptionObject2", &amp;pUnk);
 
 IMyOptionObjectPtr pMyOptionObject(pUnknown);
 
 CCfString strProperty;
 
-pMyOptionObject->GetMyProperty(&strProperty);
+pMyOptionObject-&gt;GetMyProperty(&amp;strProperty);
 
 }
 
@@ -10168,19 +10168,19 @@ void GetVersionInfo(IRuntimePtr pRuntime)
 
 IProductPtr pProduct;
 
-   pRuntime->GetProduct(&pProduct);
+   pRuntime-&gt;GetProduct(&amp;pProduct);
 
-   pProduct->GetOptions(&pItems);
+   pProduct-&gt;GetOptions(&amp;pItems);
 
    IOptionEnumeratorPtr pItems;
 
-   while (pItems->MoveNext() == CF_SUCCESS)
+   while (pItems-&gt;MoveNext() == CF_SUCCESS)
 
    {
 
    IOptionPtr pValue;
 
-   pItems->Current(&pValue);
+   pItems-&gt;Current(&amp;pValue);
 
    ...
 
@@ -10250,23 +10250,23 @@ void GetVersionInfo(IRuntimePtr pRuntime)
 
    IProductPtr pProduct;
 
-   pRuntime->GetProduct(&pProduct);
+   pRuntime-&gt;GetProduct(&amp;pProduct);
 
    uint16_t uintMajor, uintMinor, uintUpdate, uintServicePack;
 
    IVersionInfoPtr pVersion;
 
-   pProduct->GetVersion(&pVersion);
+   pProduct-&gt;GetVersion(&amp;pVersion);
 
-   pVersion->GetMajor(&uintMajor);
+   pVersion-&gt;GetMajor(&amp;uintMajor);
 
-   pVersion->GetMinor(&uintMinor);
+   pVersion-&gt;GetMinor(&amp;uintMinor);
 
-   pVersion->GetServicePack(&uintServicePack);
+   pVersion-&gt;GetServicePack(&amp;uintServicePack);
 
-   pVersion->GetUpdate(&uintUpdate);
+   pVersion-&gt;GetUpdate(&amp;uintUpdate);
 
-   wcout << L"WinCC Unified version: " << uintMajor << L"-" << uintMinor << L"-" << uintServicePack << L"-" << uintUpdate << endl;
+   wcout &lt;&lt; L"WinCC Unified version: " &lt;&lt; uintMajor &lt;&lt; L"-" &lt;&lt; uintMinor &lt;&lt; L"-" &lt;&lt; uintServicePack &lt;&lt; L"-" &lt;&lt; uintUpdate &lt;&lt; endl;
 
 }
 
@@ -10306,13 +10306,13 @@ Read out details of "IErrorResult" error messages:
 
 Copy code
 
-IErrorResultEnumerator* WriteTagSetSync(IRuntimePtr pRuntime, std::vector<TagTuple_T> tags)
+IErrorResultEnumerator* WriteTagSetSync(IRuntimePtr pRuntime, std::vector&lt;TagTuple_T&gt; tags)
 
 {
 
 ICfUnknownPtr pUnk;
 
-CFRESULT errCode = pRuntime->GetObject(CCfString(L"TagSet"), &pUnk);
+CFRESULT errCode = pRuntime-&gt;GetObject(CCfString(L"TagSet"), &amp;pUnk);
 
 IErrorResultEnumerator* pEnumerator = nullptr;
 
@@ -10320,21 +10320,21 @@ ITagSetPtr pTagSet(pUnk);
 
 // add tags to tag set
 
-for (int i = 0; i < tags.size(); i++)
+for (int i = 0; i &lt; tags.size(); i++)
 
 {
 
-pTagSet->AddWithValue(CCfString(tags[i]._tagName), tags[i]._tagValue);
+pTagSet-&gt;AddWithValue(CCfString(tags[i]._tagName), tags[i]._tagValue);
 
 }
 
-errCode = pTagSet->Write(&pEnumerator);
+errCode = pTagSet-&gt;Write(&amp;pEnumerator);
 
 if (CF_FAILED(errCode))
 
 {
 
-std::wcout << L"Write operation failed." << std::endl;
+std::wcout &lt;&lt; L"Write operation failed." &lt;&lt; std::endl;
 
 PrintErrorInformation(errCode, L"Write", pRuntime);
 
@@ -10344,29 +10344,29 @@ if (pEnumerator != nullptr)
 
 {
 
-while (pEnumerator->MoveNext() == CF_SUCCESS)
+while (pEnumerator-&gt;MoveNext() == CF_SUCCESS)
 
 {
 
    IErrorResult* pValue;
 
-   CFRESULT errorCode = pEnumerator->Current(&pValue);
+   CFRESULT errorCode = pEnumerator-&gt;Current(&amp;pValue);
 
-   if (pValue != nullptr && CF_SUCCEEDED(errorCode))
+   if (pValue != nullptr &amp;&amp; CF_SUCCEEDED(errorCode))
 
    {
 
-      pValue->GetError(&errorCode);
+      pValue-&gt;GetError(&amp;errorCode);
 
       CCfString str;
 
-      pValue->GetName(&str);
+      pValue-&gt;GetName(&amp;str);
 
       if (CF_FAILED(errorCode))
 
       {
 
-         std::wcout << L"Write Tag failed, Tag name: " << str << L", ErrorCode:" << errorCode << std::endl;
+         std::wcout &lt;&lt; L"Write Tag failed, Tag name: " &lt;&lt; str &lt;&lt; L", ErrorCode:" &lt;&lt; errorCode &lt;&lt; std::endl;
 
          PrintErrorInformation(errorCode, L"Write Tag", pRuntime);
 
@@ -10434,13 +10434,13 @@ Access the "IErrorResult" error messages when writing a TagSet:
 
 Copy code
 
-IErrorResultEnumerator* WriteTagSetSync(IRuntimePtr pRuntime, std::vector<TagTuple_T> tags)
+IErrorResultEnumerator* WriteTagSetSync(IRuntimePtr pRuntime, std::vector&lt;TagTuple_T&gt; tags)
 
 {
 
 ICfUnknownPtr pUnk;
 
-CFRESULT errCode = pRuntime->GetObject(CCfString(L"TagSet"), &pUnk);
+CFRESULT errCode = pRuntime-&gt;GetObject(CCfString(L"TagSet"), &amp;pUnk);
 
 IErrorResultEnumerator* pEnumerator = nullptr;
 
@@ -10448,21 +10448,21 @@ ITagSetPtr pTagSet(pUnk);
 
 // add tags to tag set
 
-for (int i = 0; i < tags.size(); i++)
+for (int i = 0; i &lt; tags.size(); i++)
 
 {
 
-pTagSet->AddWithValue(CCfString(tags[i]._tagName), tags[i]._tagValue);
+pTagSet-&gt;AddWithValue(CCfString(tags[i]._tagName), tags[i]._tagValue);
 
 }
 
-errCode = pTagSet->Write(&pEnumerator);
+errCode = pTagSet-&gt;Write(&amp;pEnumerator);
 
 if (CF_FAILED(errCode))
 
 {
 
-std::wcout << L"Write operation failed." << std::endl;
+std::wcout &lt;&lt; L"Write operation failed." &lt;&lt; std::endl;
 
 PrintErrorInformation(errCode, L"Write", pRuntime);
 
@@ -10472,29 +10472,29 @@ if (pEnumerator != nullptr)
 
 {
 
-while (pEnumerator->MoveNext() == CF_SUCCESS)
+while (pEnumerator-&gt;MoveNext() == CF_SUCCESS)
 
 {
 
    IErrorResult* pValue;
 
-   CFRESULT errorCode = pEnumerator->Current(&pValue);
+   CFRESULT errorCode = pEnumerator-&gt;Current(&amp;pValue);
 
-   if (pValue != nullptr && CF_SUCCEEDED(errorCode))
+   if (pValue != nullptr &amp;&amp; CF_SUCCEEDED(errorCode))
 
    {
 
-      pValue->GetError(&errorCode);
+      pValue-&gt;GetError(&amp;errorCode);
 
       CCfString str;
 
-      pValue->GetName(&str);
+      pValue-&gt;GetName(&amp;str);
 
       if (CF_FAILED(errorCode))
 
       {
 
-         std::wcout << L"Write Tag failed, Tag name: " << str << L", ErrorCode:" << errorCode << std::endl;
+         std::wcout &lt;&lt; L"Write Tag failed, Tag name: " &lt;&lt; str &lt;&lt; L", ErrorCode:" &lt;&lt; errorCode &lt;&lt; std::endl;
 
          PrintErrorInformation(errorCode, L"Write Tag", pRuntime);
 
@@ -10551,13 +10551,13 @@ void PrintErrorInformation(CFRESULT errorCode, CCfSmartString objectName, IRunti
 
       IErrorInfoPtr pInfo;
 
-      CFRESULT result = pRuntime->GetObject(CCfString(L"ErrorHandler"), (ICfUnknown**)&pInfo);
+      CFRESULT result = pRuntime-&gt;GetObject(CCfString(L"ErrorHandler"), (ICfUnknown**)&amp;pInfo);
 
       if (CF_FAILED(result))
 
       {
 
-         std::wcout << "Error occurred: Can not create 'ErrorHandler' object " << std::endl;
+         std::wcout &lt;&lt; "Error occurred: Can not create 'ErrorHandler' object " &lt;&lt; std::endl;
 
          return;
 
@@ -10565,7 +10565,7 @@ void PrintErrorInformation(CFRESULT errorCode, CCfSmartString objectName, IRunti
 
       CCfString resStr;
 
-      result = pInfo->GetErrorDescription(errorCode, &resStr);
+      result = pInfo-&gt;GetErrorDescription(errorCode, &amp;resStr);
 
       if (CF_SUCCEEDED(result))
 
@@ -10573,7 +10573,7 @@ void PrintErrorInformation(CFRESULT errorCode, CCfSmartString objectName, IRunti
 
          CCfSmartString errorDescription(resStr);
 
-         std::wcout << "Error occurred: '" << errorDescription.Get() << "', ObjectName = " << objectName.Get() << std::endl;
+         std::wcout &lt;&lt; "Error occurred: '" &lt;&lt; errorDescription.Get() &lt;&lt; "', ObjectName = " &lt;&lt; objectName.Get() &lt;&lt; std::endl;
 
       }
 
@@ -10581,7 +10581,7 @@ void PrintErrorInformation(CFRESULT errorCode, CCfSmartString objectName, IRunti
 
       {
 
-         std::wcout << "Error occurred: 'GetErrorDescription' failed, Error number: " << result << std::endl;
+         std::wcout &lt;&lt; "Error occurred: 'GetErrorDescription' failed, Error number: " &lt;&lt; result &lt;&lt; std::endl;
 
       }
 
@@ -10595,13 +10595,13 @@ void PrintErrorInformation(CFRESULT errorCode, CCfSmartString objectName, IRunti
 
       Siemens::Runtime::HmiUnified::Common::IErrorInfo* pErrorInfo;
 
-      GetErrorHandler(&pErrorInfo);
+      GetErrorHandler(&amp;pErrorInfo);
 
-      CFRESULT rVal = pErrorInfo->GetErrorDescription(errorCode, &strMsg);
+      CFRESULT rVal = pErrorInfo-&gt;GetErrorDescription(errorCode, &amp;strMsg);
 
       CCfSmartString errorDescription(strMsg);
 
-      std::wcout << "Error occurred: '" << errorDescription.Get() << "', ObjectName = " << objectName.Get() << std::endl;
+      std::wcout &lt;&lt; "Error occurred: '" &lt;&lt; errorDescription.Get() &lt;&lt; "', ObjectName = " &lt;&lt; objectName.Get() &lt;&lt; std::endl;
 
    }
 
@@ -10704,23 +10704,23 @@ CFRESULT ReadSingleTagSync(IRuntimePtr pRuntime, CCfString tag)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"Tag"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"Tag"), &amp;pUnk);
 
    ITagPtr pTag(pUnk);
 
-   pTag->SetTagName(tag);
+   pTag-&gt;SetTagName(tag);
 
    IProcessValuePtr pValue;
 
    // Read value of tag
 
-   pTag->Read(&pValue);
+   pTag-&gt;Read(&amp;pValue);
 
    CCfString timeStamp;
 
    CFDATETIME64 cfTimeStamp;
 
-   pValue->GetTimeStamp(&cfTimeStamp);
+   pValue-&gt;GetTimeStamp(&amp;cfTimeStamp);
 
    CCfDateTime64 time(cfTimeStamp);
 
@@ -10728,17 +10728,17 @@ CFRESULT ReadSingleTagSync(IRuntimePtr pRuntime, CCfString tag)
 
    CCfString strName;
 
-   pValue->GetTagName(&strName);
+   pValue-&gt;GetTagName(&amp;strName);
 
    CCfVariant varValue;
 
-   pValue->GetValue(&varValue);
+   pValue-&gt;GetValue(&amp;varValue);
 
    int32_t quality;
 
-   pValue->GetQuality(&quality);
+   pValue-&gt;GetQuality(&amp;quality);
 
-   std::wcout << strName.ToUTF8().c_str() << L" " << timeStamp.ToUTF8().c_str() << L" " << L" Value: " << (double)(varValue) << L" Quality: " << quality << std::endl;
+   std::wcout &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; L" " &lt;&lt; timeStamp.ToUTF8().c_str() &lt;&lt; L" " &lt;&lt; L" Value: " &lt;&lt; (double)(varValue) &lt;&lt; L" Quality: " &lt;&lt; quality &lt;&lt; std::endl;
 
 }
 
@@ -10798,25 +10798,25 @@ Copy code
 
 IProcessValueEnumeratorPtr pItems;
 
-pTagSet->Read(&pItems);
+pTagSet-&gt;Read(&amp;pItems);
 
-std::wcout << "Read finished " << std::endl;
+std::wcout &lt;&lt; "Read finished " &lt;&lt; std::endl;
 
 // Iterate over the process value objects
 
-while(CF_SUCCEEDED(pItems->MoveNext()))
+while(CF_SUCCEEDED(pItems-&gt;MoveNext()))
 
 {
 
    IProcessValuePtr pValue;
 
-   pItems->Current(&pValue);   // get current process value
+   pItems-&gt;Current(&amp;pValue);   // get current process value
 
    CCfString timeStamp;
 
    CFDATETIME64 cfTimeStamp;
 
-   pValue->GetTimeStamp(&cfTimeStamp);
+   pValue-&gt;GetTimeStamp(&amp;cfTimeStamp);
 
    CCfDateTime64 time(cfTimeStamp);
 
@@ -10824,21 +10824,21 @@ while(CF_SUCCEEDED(pItems->MoveNext()))
 
    CCfString strName;
 
-   pValue->GetTagName(&strName);
+   pValue-&gt;GetTagName(&amp;strName);
 
    CCfVariant varValue;
 
-   pValue->GetValue(&varValue);
+   pValue-&gt;GetValue(&amp;varValue);
 
    int32_t quality;
 
-   pValue->GetQuality(&quality);
+   pValue-&gt;GetQuality(&amp;quality);
 
    int32_t error = 0;
 
-   pValue->GetError(&error);
+   pValue-&gt;GetError(&amp;error);
 
-   std::wcout << L" " << strName.ToUTF8().c_str() << L" " << timeStamp.ToUTF8().c_str() << L" " << L" Value: " << static_cast<double>(varValue) << L" Quality: " << quality << L" Error: " << (uint32_t)error << std::endl;
+   std::wcout &lt;&lt; L" " &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; L" " &lt;&lt; timeStamp.ToUTF8().c_str() &lt;&lt; L" " &lt;&lt; L" Value: " &lt;&lt; static_cast&lt;double&gt;(varValue) &lt;&lt; L" Quality: " &lt;&lt; quality &lt;&lt; L" Error: " &lt;&lt; (uint32_t)error &lt;&lt; std::endl;
 
 }
 
@@ -10955,21 +10955,21 @@ Write tags synchronously:
 
 Copy code
 
-CFRESULT WriteSingleTagSync(IRuntimePtr pRuntime, CCfString tag, CCfVariant& value)
+CFRESULT WriteSingleTagSync(IRuntimePtr pRuntime, CCfString tag, CCfVariant&amp; value)
 
 {
 
    ICfUnknownPtr pUnk;
 
-   CFRESULT errCode = pRuntime->GetObject(CCfString(L"Tag"), &pUnk);
+   CFRESULT errCode = pRuntime-&gt;GetObject(CCfString(L"Tag"), &amp;pUnk);
 
    ITagPtr pTag(pUnk);
 
-   pTag->SetTagName(tag);
+   pTag-&gt;SetTagName(tag);
 
    // Write value of tag
 
-   errCode = pTag->Write(value, HmiWriteType::Wait);
+   errCode = pTag-&gt;Write(value, HmiWriteType::Wait);
 
    return errCode;
 
@@ -10979,21 +10979,21 @@ Write tag with time stamp and quality code synchronously:
 
 Copy code
 
-void WriteSingleTagQCDSync(IRuntimePtr pRuntime, CCfString tag, CCfVariant& value)
+void WriteSingleTagQCDSync(IRuntimePtr pRuntime, CCfString tag, CCfVariant&amp; value)
 
 {
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"Tag"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"Tag"), &amp;pUnk);
 
    ITagPtr pTag(pUnk);
 
-   pTag->SetTagName(tag);
+   pTag-&gt;SetTagName(tag);
 
    // Write value of tag
 
-   pTag->WriteQCD(value, CCfDateTime64::Now(), 128, HmiWriteType::Wait);
+   pTag-&gt;WriteQCD(value, CCfDateTime64::Now(), 128, HmiWriteType::Wait);
 
 }
 
@@ -11007,17 +11007,17 @@ CFRESULT ReadSingleTagSync(IRuntimePtr pRuntime, CCfString tag)
 
 ICfUnknownPtr pUnk;
 
-pRuntime->GetObject(CCfString(L"Tag"), &pUnk);
+pRuntime-&gt;GetObject(CCfString(L"Tag"), &amp;pUnk);
 
 ITagPtr pTag(pUnk);
 
-pTag->SetTagName(tag);
+pTag-&gt;SetTagName(tag);
 
 IProcessValuePtr pValue;
 
 // Read value of tag
 
-pTag->Read(&pValue);
+pTag-&gt;Read(&amp;pValue);
 
 ...
 
@@ -11152,43 +11152,43 @@ In the following section tags in a TagSet are read asynchronously. To this purpo
 
 Copy code
 
-void ReadTagSetAsync(IRuntimePtr pRuntime, std::vector<CCfString> tags)
+void ReadTagSetAsync(IRuntimePtr pRuntime, std::vector&lt;CCfString&gt; tags)
 
 {
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"TagSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"TagSet"), &amp;pUnk);
 
    ITagSetPtr pTagSet(pUnk);
 
    // add tags to tag set
 
-   for(int i = 0; i < tags.size(); i++)
+   for(int i = 0; i &lt; tags.size(); i++)
 
    {
 
-      pTagSet->Add(tags[i]);
+      pTagSet-&gt;Add(tags[i]);
 
    }
 
    COdkTagSetCB* pTagSetCB = new COdkTagSetCB();
 
-   pTagSetCB->AddRef();
+   pTagSetCB-&gt;AddRef();
 
    // Read the tag set asynchronously, result comes via callback
 
-   pTagSet->ReadAsync(pTagSetCB);
+   pTagSet-&gt;ReadAsync(pTagSetCB);
 
-   pTagSetCB->WaitForcompletion(std::numeric_limits<uint32_t>::max();
+   pTagSetCB-&gt;WaitForcompletion(std::numeric_limits&lt;uint32_t&gt;::max();
 
-   vector<IProcessValuePtr> pValues = pTagSetCB->GetValues();
+   vector&lt;IProcessValuePtr&gt; pValues = pTagSetCB-&gt;GetValues();
 
-   std::wcout << L"Read finished " << std::endl;
+   std::wcout &lt;&lt; L"Read finished " &lt;&lt; std::endl;
 
     // display tag values
 
-   for(int i = 0; i < pValues.size(); i++)
+   for(int i = 0; i &lt; pValues.size(); i++)
 
    {
 
@@ -11198,7 +11198,7 @@ void ReadTagSetAsync(IRuntimePtr pRuntime, std::vector<CCfString> tags)
 
       CFDATETIME64 cfTimeStamp;
 
-      pValue->GetTimeStamp(&cfTimeStamp);
+      pValue-&gt;GetTimeStamp(&amp;cfTimeStamp);
 
       CCfDateTime64 time(cfTimeStamp);
 
@@ -11206,21 +11206,21 @@ void ReadTagSetAsync(IRuntimePtr pRuntime, std::vector<CCfString> tags)
 
       CCfString strName;
 
-      pValue->GetTagName(&strName);
+      pValue-&gt;GetTagName(&amp;strName);
 
       CCfVariant varValue;
 
-      pValue->GetValue(&varValue);
+      pValue-&gt;GetValue(&amp;varValue);
 
       int32_t quality;
 
-      pValue->GetQuality(&quality);
+      pValue-&gt;GetQuality(&amp;quality);
 
       int32_t error = 0;
 
-      pValue->GetError(&error);
+      pValue-&gt;GetError(&amp;error);
 
-      std::wcout << L" " << strName.ToUTF8().c_str() << L" " << timeStamp.ToUTF8().c_str() << L" " << L" Value: " << static_cast<double>(varValue) << L" Quality: " << quality << L" Error: " << (uint32_t)error << std::endl;
+      std::wcout &lt;&lt; L" " &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; L" " &lt;&lt; timeStamp.ToUTF8().c_str() &lt;&lt; L" " &lt;&lt; L" Value: " &lt;&lt; static_cast&lt;double&gt;(varValue) &lt;&lt; L" Quality: " &lt;&lt; quality &lt;&lt; L" Error: " &lt;&lt; (uint32_t)error &lt;&lt; std::endl;
 
    }
 
@@ -11444,37 +11444,37 @@ CCfVariant _tagValue;
 
 };
 
-void WriteTagSetAsync(IRuntimePtr pRuntime, std::vector<TagTuple_T> tags)
+void WriteTagSetAsync(IRuntimePtr pRuntime, std::vector&lt;TagTuple_T&gt; tags)
 
 {
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"TagSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"TagSet"), &amp;pUnk);
 
-   vector<IErrorResultPtr> pErrors;
+   vector&lt;IErrorResultPtr&gt; pErrors;
 
    ITagSetPtr pTagSet(pUnk);
 
    // add tags to tag set
 
-   for(int i = 0; i < tags.size(); i++)
+   for(int i = 0; i &lt; tags.size(); i++)
 
    {
 
-      pTagSet->AddWithValue(CCfString(tags[i]._tagName), tags[i]._tagValue);
+      pTagSet-&gt;AddWithValue(CCfString(tags[i]._tagName), tags[i]._tagValue);
 
    }
 
    COdkTagSetCB* pTagSetCB = new COdkTagSetCB();
 
-   pTagSetCB->AddRef();
+   pTagSetCB-&gt;AddRef();
 
    // Write value of tag asynchronously
 
-   pTagSet->WriteAsync(pTagSetCB);
+   pTagSet-&gt;WriteAsync(pTagSetCB);
 
-   pTagSetCB->WaitForcompletion(std::numeric_limits<uint32_t>::max());
+   pTagSetCB-&gt;WaitForcompletion(std::numeric_limits&lt;uint32_t&gt;::max());
 
 }
 
@@ -11482,39 +11482,39 @@ Start monitoring for tags of a TagSet:
 
 Copy code
 
-void SubscribeTagSet(IRuntimePtr pRuntime, std::vector<CCfString> tags)
+void SubscribeTagSet(IRuntimePtr pRuntime, std::vector&lt;CCfString&gt; tags)
 
 {
 
    ICfUnknown* pUnk;
 
-   pRuntime->GetObject(CCfString(L"TagSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"TagSet"), &amp;pUnk);
 
    ITagSetPtr pTagSet(pUnk);
 
    // add tags to tag set
 
-   for(int i = 0; i < tags.size(); i++)
+   for(int i = 0; i &lt; tags.size(); i++)
 
    {
 
-      pTagSet->Add(tags[i]);
+      pTagSet-&gt;Add(tags[i]);
 
    }
 
    COdkTagSetCB* pTagSetCB = new COdkTagSetCB();
 
-   pTagSetCB->AddRef();
+   pTagSetCB-&gt;AddRef();
 
    // subscribe tags
 
-   pTagSet->Subscribe(pTagSetCB);
+   pTagSet-&gt;Subscribe(pTagSetCB);
 
-   pTagSetCB->WaitForcompletion(1500);
+   pTagSetCB-&gt;WaitForcompletion(1500);
 
-   std::wcout << L"Stop subscribtion." << std::endl;
+   std::wcout &lt;&lt; L"Stop subscribtion." &lt;&lt; std::endl;
 
-   pTagSet->CancelSubscribe();
+   pTagSet-&gt;CancelSubscribe();
 
 }
 
@@ -11663,43 +11663,43 @@ CCfVariant _tagValue;
 
 };
 
-void WriteTagSetQCDSync(IRuntimePtr pRuntime, std::vector<TagTuple_T> tags)
+void WriteTagSetQCDSync(IRuntimePtr pRuntime, std::vector&lt;TagTuple_T&gt; tags)
 
 {
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"TagSetQCD"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"TagSetQCD"), &amp;pUnk);
 
    ITagSetQCDPtr pTagSetQCD(pUnk);
 
    // add tags to tag set
 
-   for(int i = 0; i < tags.size(); i++)
+   for(int i = 0; i &lt; tags.size(); i++)
 
    {
 
-      pTagSetQCD->Add(CCfString(tags[i]._tagName), tags[i]._tagValue, CCfDateTime64::Now(), 128);
+      pTagSetQCD-&gt;Add(CCfString(tags[i]._tagName), tags[i]._tagValue, CCfDateTime64::Now(), 128);
 
    }
 
    IErrorResultEnumerator* pEnumerator;
 
-   pTagSetQCD->Write(&pEnumerator);
+   pTagSetQCD-&gt;Write(&amp;pEnumerator);
 
-   while (pEnumerator->MoveNext() == CF_SUCCESS)
+   while (pEnumerator-&gt;MoveNext() == CF_SUCCESS)
 
    {
 
       IErrorResult* pValue;
 
-      CFRESULT errorCode = pEnumerator->Current(&pValue);
+      CFRESULT errorCode = pEnumerator-&gt;Current(&amp;pValue);
 
-      pValue->GetError(&errorCode);
+      pValue-&gt;GetError(&amp;errorCode);
 
       CCfString str;
 
-      pValue->GetName(&str);
+      pValue-&gt;GetName(&amp;str);
 
    }
 
@@ -11906,17 +11906,17 @@ void PrintValues(ILoggedTagValueEnumeratorPtr pItems,IRuntimePtr pRuntime)
 
    // Iterate over the process value objects
 
-   while (CF_SUCCEEDED(pItems->MoveNext()))
+   while (CF_SUCCEEDED(pItems-&gt;MoveNext()))
 
    {
 
       ILoggedTagValuePtr pValue;
 
-      pItems->Current(&pValue);   // get current process value
+      pItems-&gt;Current(&amp;pValue);   // get current process value
 
       uint32_t nerror;
 
-      pValue->GetError(&nerror);
+      pValue-&gt;GetError(&amp;nerror);
 
       if (nerror)
 
@@ -11926,9 +11926,9 @@ void PrintValues(ILoggedTagValueEnumeratorPtr pItems,IRuntimePtr pRuntime)
 
          CCfString strName;
 
-         pValue->GetTagName(&strName);
+         pValue-&gt;GetTagName(&amp;strName);
 
-         std::wcout << "Tag With Error: "<<strName.ToUTF8().c_str() << std::endl;
+         std::wcout &lt;&lt; "Tag With Error: "&lt;&lt;strName.ToUTF8().c_str() &lt;&lt; std::endl;
 
          continue;
 
@@ -11938,7 +11938,7 @@ void PrintValues(ILoggedTagValueEnumeratorPtr pItems,IRuntimePtr pRuntime)
 
       CFDATETIME64 cfTimeStamp;
 
-      pValue->GetTimeStamp(&cfTimeStamp);
+      pValue-&gt;GetTimeStamp(&amp;cfTimeStamp);
 
       CCfDateTime64 time(cfTimeStamp);
 
@@ -11946,17 +11946,17 @@ void PrintValues(ILoggedTagValueEnumeratorPtr pItems,IRuntimePtr pRuntime)
 
       CCfString strName;
 
-      pValue->GetTagName(&strName);
+      pValue-&gt;GetTagName(&amp;strName);
 
       CCfVariant varValue;
 
-      pValue->GetValue(&varValue);
+      pValue-&gt;GetValue(&amp;varValue);
 
       HmiTagLoggingValueFlags enumflag;
 
-      pValue->GetFlags(&enumflag);
+      pValue-&gt;GetFlags(&amp;enumflag);
 
-      std::wcout << strName.ToUTF8().c_str() << L" " << timeStamp.ToUTF8().c_str() << L" Value: " << (double)(varValue) <<" Flagvalue = "<< enumflag<< std::endl;
+      std::wcout &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; L" " &lt;&lt; timeStamp.ToUTF8().c_str() &lt;&lt; L" Value: " &lt;&lt; (double)(varValue) &lt;&lt;" Flagvalue = "&lt;&lt; enumflag&lt;&lt; std::endl;
 
    }
 
@@ -12020,13 +12020,13 @@ void PrintValues(ILoggedTagValueEnumeratorPtr pItems,IRuntimePtr pRuntime)
 
    // Iterate over the process value objects
 
-   while (CF_SUCCEEDED(pItems->MoveNext()))
+   while (CF_SUCCEEDED(pItems-&gt;MoveNext()))
 
    {
 
       ILoggedTagValuePtr pValue;
 
-      pItems->Current(&pValue);   // get current process value
+      pItems-&gt;Current(&amp;pValue);   // get current process value
 
       ...
 
@@ -12172,23 +12172,23 @@ Output LoggedTagSet asynchronously:
 
 Copy code
 
-void LogggingReadTagSetAsync(IRuntimePtr pRuntime, std::vector<CCfString> tags)
+void LogggingReadTagSetAsync(IRuntimePtr pRuntime, std::vector&lt;CCfString&gt; tags)
 
 {
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"LoggedTagSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"LoggedTagSet"), &amp;pUnk);
 
    ILoggedTagSetPtr pTagSet(pUnk);
 
    // add tags to tag set
 
-   for (int i = 0; i < tags.size(); i++)
+   for (int i = 0; i &lt; tags.size(); i++)
 
    {
 
-      pTagSet->Add(tags[i]);
+      pTagSet-&gt;Add(tags[i]);
 
    }
 
@@ -12204,19 +12204,19 @@ void LogggingReadTagSetAsync(IRuntimePtr pRuntime, std::vector<CCfString> tags)
 
    COdkTagSetLoggingCB* pTagSetCB = new COdkTagSetLoggingCB();
 
-   pTagSetCB->AddRef();
+   pTagSetCB-&gt;AddRef();
 
    // Read the tag set asynchronously, result comes via callback
 
-   pTagSet->ReadAsync(pTagSetCB, begin, end, true);
+   pTagSet-&gt;ReadAsync(pTagSetCB, begin, end, true);
 
-   pTagSetCB->WaitForcompletion(std::numeric_limits<uint32_t>::max());
+   pTagSetCB-&gt;WaitForcompletion(std::numeric_limits&lt;uint32_t&gt;::max());
 
-   vector<ILoggedTagValuePtr> pValues = pTagSetCB->GetValues();
+   vector&lt;ILoggedTagValuePtr&gt; pValues = pTagSetCB-&gt;GetValues();
 
    // display tag values
 
-   for (int i = 0; i < pValues.size(); i++)
+   for (int i = 0; i &lt; pValues.size(); i++)
 
    {
 
@@ -12226,7 +12226,7 @@ void LogggingReadTagSetAsync(IRuntimePtr pRuntime, std::vector<CCfString> tags)
 
       CFDATETIME64 cfTimeStamp;
 
-      pValue->GetTimeStamp(&cfTimeStamp);
+      pValue-&gt;GetTimeStamp(&amp;cfTimeStamp);
 
       CCfDateTime64 time(cfTimeStamp);
 
@@ -12234,13 +12234,13 @@ void LogggingReadTagSetAsync(IRuntimePtr pRuntime, std::vector<CCfString> tags)
 
       CCfString strName;
 
-      pValue->GetTagName(&strName);
+      pValue-&gt;GetTagName(&amp;strName);
 
       CCfVariant varValue;
 
-      pValue->GetValue(&varValue);
+      pValue-&gt;GetValue(&amp;varValue);
 
-      std::wcout << strName.ToUTF8().c_str() << L" " << timeStamp.ToUTF8().c_str() << L" Value: " << (double)(varValue) << std::endl;
+      std::wcout &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; L" " &lt;&lt; timeStamp.ToUTF8().c_str() &lt;&lt; L" Value: " &lt;&lt; (double)(varValue) &lt;&lt; std::endl;
 
    }
 
@@ -12320,11 +12320,11 @@ void LoggingReadSingleTagSync(IRuntimePtr pRuntime, CCfString tag)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"LoggedTag"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"LoggedTag"), &amp;pUnk);
 
    ILoggedTagPtr pTag(pUnk);
 
-   pTag->SetTagName(tag);
+   pTag-&gt;SetTagName(tag);
 
    CCfDateTime64 begin, end;
 
@@ -12338,9 +12338,9 @@ void LoggingReadSingleTagSync(IRuntimePtr pRuntime, CCfString tag)
 
    // Read value of tag
 
-   pTag->Read(begin, end, &pItems, true);
+   pTag-&gt;Read(begin, end, &amp;pItems, true);
 
-   std::wcout << "Read finished " << std::endl;
+   std::wcout &lt;&lt; "Read finished " &lt;&lt; std::endl;
 
    PrintValues(pItems ,pRuntime);
 
@@ -12522,37 +12522,37 @@ Subscribe logging tags of a LoggedTagSet for change monitoring:
 
 Copy code
 
-void LoggingSubscribeTagSet(IRuntimePtr pRuntime, std::vector<CCfString> tags)
+void LoggingSubscribeTagSet(IRuntimePtr pRuntime, std::vector&lt;CCfString&gt; tags)
 
 {
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"LoggedTagSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"LoggedTagSet"), &amp;pUnk);
 
    ILoggedTagSetPtr pTagSet(pUnk);
 
    // add tags to tag set
 
-   for (int i = 0; i < tags.size(); i++)
+   for (int i = 0; i &lt; tags.size(); i++)
 
    {
 
-      pTagSet->Add(tags[i]);
+      pTagSet-&gt;Add(tags[i]);
 
    }
 
    COdkTagSetLoggingCB* pTagSetCB = new COdkTagSetLoggingCB();
 
-   pTagSetCB->AddRef();
+   pTagSetCB-&gt;AddRef();
 
    // subscribe tags
 
-   pTagSet->Subscribe(pTagSetCB);
+   pTagSet-&gt;Subscribe(pTagSetCB);
 
    //stop subscription
 
-   pTagSet->CancelSubscribe();
+   pTagSet-&gt;CancelSubscribe();
 
 }
 
@@ -13553,67 +13553,67 @@ CFBOOL bSet = false;
 
 uint32_t nsize;
 
-pItems->Count(&nsize);
+pItems-&gt;Count(&amp;nsize);
 
-if (nsize > 0 && CF_SUCCEEDED(systemError)) {
+if (nsize &gt; 0 &amp;&amp; CF_SUCCEEDED(systemError)) {
 
 m_AlarmValue.clear();
 
-while (CF_SUCCEEDED(pItems->MoveNext()))
+while (CF_SUCCEEDED(pItems-&gt;MoveNext()))
 
 {
 
 IAlarmResultPtr ppValues;
 
-pItems->Current(&ppValues);
+pItems-&gt;Current(&amp;ppValues);
 
 AlarmAttributes AlarmValue;
 
 AlarmValue.m_nInstanceID;
 
-ppValues->GetInstanceID(&AlarmValue.m_nInstanceID);
+ppValues-&gt;GetInstanceID(&amp;AlarmValue.m_nInstanceID);
 
 AlarmValue.m_strSourceID;
 
 CCfString strId;
 
-ppValues->GetSourceID(&strId);
+ppValues-&gt;GetSourceID(&amp;strId);
 
 AlarmValue.m_strSourceID = CCfSmartString(strId);
 
  CCfString strName;
 
-ppValues->GetName(&strName);
+ppValues-&gt;GetName(&amp;strName);
 
 AlarmValue.m_strName = CCfSmartString(strName);
 
 CCfString strClassName;
 
-ppValues->GetAlarmClassName(&strClassName);
+ppValues-&gt;GetAlarmClassName(&amp;strClassName);
 
 AlarmValue.m_strAlarmClassName = CCfSmartString(strClassName);
 
- ppValues->GetState(&AlarmValue.m_nState);
+ ppValues-&gt;GetState(&amp;AlarmValue.m_nState);
 
 CCfString strEvent;
 
-ppValues->GetEventText(&strEvent);
+ppValues-&gt;GetEventText(&amp;strEvent);
 
 AlarmValue.m_strEventText = CCfSmartString(strEvent);
 
 CCfString strText;
 
-ppValues->GetStateText(&strText);
+ppValues-&gt;GetStateText(&amp;strText);
 
 AlarmValue.m_strStateText = CCfSmartString(strText);
 
-ppValues->GetBackColor(&AlarmValue.m_nBackColor);
+ppValues-&gt;GetBackColor(&amp;AlarmValue.m_nBackColor);
 
-ppValues->GetTextColor(&AlarmValue.m_nTextColor);
+ppValues-&gt;GetTextColor(&amp;AlarmValue.m_nTextColor);
 
-ppValues->GetFlashing(&AlarmValue.m_bFlashing);
+ppValues-&gt;GetFlashing(&amp;AlarmValue.m_bFlashing);
 
-ppValues->GetDuration(&nDuration);
+ppValues-&gt;GetDuration(&amp;nDuration);
 
 ...
 
@@ -13621,15 +13621,15 @@ AlarmValue.m_nAlarmsSize = nsize;
 
 AlarmValue.m_strSystemName = systemName;
 
-std::cout << "System name = " << AlarmValue.m_strSystemName.ToUTF8().c_str() << std::endl;
+std::cout &lt;&lt; "System name = " &lt;&lt; AlarmValue.m_strSystemName.ToUTF8().c_str() &lt;&lt; std::endl;
 
 m_AlarmValue.push_back(AlarmValue);
 
-std::cout << "Alarm name = " << strName.ToUTF8().c_str() << std::endl;
+std::cout &lt;&lt; "Alarm name = " &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; std::endl;
 
 }
 
-this->SetEvent();
+this-&gt;SetEvent();
 
 return CF_SUCCESS;
 
@@ -13771,7 +13771,7 @@ Acknowledge active alarm or instance of an active alarm synchronously.
 
   Value "0": Acknowledge all instances of an active alarm.
 
-  Value > "0": Acknowledge instance with this ID.
+  Value &gt; "0": Acknowledge instance with this ID.
 
 **"Reset" method**
 
@@ -13783,7 +13783,7 @@ Acknowledge the inactive state of an active alarm or an instance of an active al
 
   Value "0": Acknowledge the inactive state of the active alarm.
 
-  Value > "0": Acknowledge the inactive state of an instance with this ID.
+  Value &gt; "0": Acknowledge the inactive state of an instance with this ID.
 
 ##### Example
 
@@ -13791,7 +13791,7 @@ Acknowledge list of active alarms synchronously:
 
 Copy code
 
-vector<AlarmAttributes> g_vecAlarmList;
+vector&lt;AlarmAttributes&gt; g_vecAlarmList;
 
 void AcknowledgeAlarmSync(IRuntimePtr pRuntime)
 
@@ -13799,13 +13799,13 @@ void AcknowledgeAlarmSync(IRuntimePtr pRuntime)
 
 ICfUnknownPtr pUnk;
 
-pRuntime->GetObject(CCfString(L"Alarm"), &pUnk);
+pRuntime-&gt;GetObject(CCfString(L"Alarm"), &amp;pUnk);
 
 IAlarmPtr pAlarm(pUnk);
 
-pAlarm->SetName("Tag1:Alarm1");
+pAlarm-&gt;SetName("Tag1:Alarm1");
 
-CFRESULT errCode = pAlarm->Acknowledge();
+CFRESULT errCode = pAlarm-&gt;Acknowledge();
 
 }
 
@@ -13862,7 +13862,7 @@ Copy code
 
 const uint32_t g_nMaxWaitTime = 6000;
 
-vector<AlarmAttributes> g_vecAlarmList;
+vector&lt;AlarmAttributes&gt; g_vecAlarmList;
 
 void SubscribeAlarm(IRuntimePtr pRuntime)
 
@@ -13870,13 +13870,13 @@ void SubscribeAlarm(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"AlarmSubscription"), &pUnk));
+   pRuntime-&gt;GetObject(CCfString(L"AlarmSubscription"), &amp;pUnk));
 
    IAlarmSubscriptionPtr pAlarm(pUnk);
 
    CAlarmValue* pAlarmValue = new CAlarmValue();
 
-   pAlarmValue->AddRef();
+   pAlarmValue-&gt;AddRef();
 
    IAlarmCallback* pCB = pAlarmValue;
 
@@ -13884,7 +13884,7 @@ void SubscribeAlarm(IRuntimePtr pRuntime)
 
    CCfSafeArray daAttribute;
 
-   CCfSafeArray daSystemID(CF_VT_SREF, 1, &bounds);
+   CCfSafeArray daSystemID(CF_VT_SREF, 1, &amp;bounds);
 
    CCfVariant daDataSource = 0;
 
@@ -13898,31 +13898,31 @@ void SubscribeAlarm(IRuntimePtr pRuntime)
 
    int32_t index = 0;
 
-   daSystemID.PutElement(&index, &id);
+   daSystemID.PutElement(&amp;index, &amp;id);
 
    CCfVariant daLanguage = 1033;
 
-   daSystemID.Detach(&vSystemIDs);
+   daSystemID.Detach(&amp;vSystemIDs);
 
    CCfSmartString strFilter = L"";
 
    // Start Subscription
 
-   pAlarm->SetFilter(strFilter.AllocCFSTR());
+   pAlarm-&gt;SetFilter(strFilter.AllocCFSTR());
 
-   pAlarm->SetLanguage(1033);
+   pAlarm-&gt;SetLanguage(1033);
 
-   pAlarm->SetSystemNames(vSystemIDs);
+   pAlarm-&gt;SetSystemNames(vSystemIDs);
 
-   Alarm->Start(pCB);
+   Alarm-&gt;Start(pCB);
 
    // Wait for alarm notifications
 
-   pAlarmValue->WaitForcompletion(g_nMaxWaitTime);
+   pAlarmValue-&gt;WaitForcompletion(g_nMaxWaitTime);
 
-   Alarm->Stop();
+   Alarm-&gt;Stop();
 
-   pAlarmValue->GetAlarmAttributes(g_vecAlarmList);
+   pAlarmValue-&gt;GetAlarmAttributes(g_vecAlarmList);
 
 }
 
@@ -14088,7 +14088,7 @@ Copy code
 
 const uint32_t g_nMaxWaitTime = 6000;
 
-vector<AlarmAttributes> g_vecAlarmList;
+vector&lt;AlarmAttributes&gt; g_vecAlarmList;
 
 void AcknowledgeAlarmAsync(IRuntimePtr pRuntime)
 
@@ -14098,7 +14098,7 @@ void AcknowledgeAlarmAsync(IRuntimePtr pRuntime)
 
     CFRESULT errCode;
 
-    if (CF_SUCCEEDED(pRuntime->GetObject(CCfString(L"AlarmSet"), &pUnk)))
+    if (CF_SUCCEEDED(pRuntime-&gt;GetObject(CCfString(L"AlarmSet"), &amp;pUnk)))
 
     {
 
@@ -14106,19 +14106,19 @@ void AcknowledgeAlarmAsync(IRuntimePtr pRuntime)
 
      CAlarmSourceCommandCB* pAlarmSoureCommand = new CAlarmSourceCommandCB();
 
-     pAlarmSoureCommand->AddRef();
+     pAlarmSoureCommand-&gt;AddRef();
 
      IAlarmSourceCommandCallback* pCB = pAlarmSoureCommand;
 
-     vector<AlarmAttributes>::iterator it = g_vecAlarmList.begin(); 　 // iterate through list of notified alarms and acknowledge each alarm
+     vector&lt;AlarmAttributes&gt;::iterator it = g_vecAlarmList.begin(); 　 // iterate through list of notified alarms and acknowledge each alarm
 
      while (it != g_vecAlarmList.end())
 
      {
 
-     IAlarm* pAlarm = nullptr; CCfVariant vtAlarmName = it->m_strName;
+     IAlarm* pAlarm = nullptr; CCfVariant vtAlarmName = it-&gt;m_strName;
 
-     errCode = pAlarmSet->Add(vtAlarmName, &pAlarm);
+     errCode = pAlarmSet-&gt;Add(vtAlarmName, &amp;pAlarm);
 
      it++;
 
@@ -14126,11 +14126,11 @@ void AcknowledgeAlarmAsync(IRuntimePtr pRuntime)
 
      // acknowledged the AlarmSet
 
-     errCode = pAlarmSet->Acknowledge(pCB);
+     errCode = pAlarmSet-&gt;Acknowledge(pCB);
 
      // wait for acknowledge callback
 
-     if (CF_SUCCEEDED(errCode) && pAlarmSoureCommand->WaitForcompletion(g_nMaxWaitTime) == CF_SUCCESS)
+     if (CF_SUCCEEDED(errCode) &amp;&amp; pAlarmSoureCommand-&gt;WaitForcompletion(g_nMaxWaitTime) == CF_SUCCESS)
 
      {
 
@@ -14181,7 +14181,7 @@ Remove a single alarm or an instance of an alarm from an AlarmSet.
 
   Value = "0": Remove all instances of an active alarm.
 
-  Value > "0": Remove instance with this ID.
+  Value &gt; "0": Remove instance with this ID.
 
 **"Add" method**
 
@@ -14202,7 +14202,7 @@ Add an active alarm or an instance of the alarm to an AlarmSet.
 
   Value = "0": Add all instances of an active alarm.
 
-  Value > "0": Add instance with this ID.
+  Value &gt; "0": Add instance with this ID.
 
 **"Get" method**
 
@@ -14225,7 +14225,7 @@ Reference an alarm or an instance of an alarm from an AlarmSet.
 
   Value = "0": Reference all instances of an active alarm.
 
-  Value > "0": Reference instance with this ID.
+  Value &gt; "0": Reference instance with this ID.
 
 **"Disable" method**
 
@@ -14301,7 +14301,7 @@ Copy code
 
 const uint32_t g_nMaxWaitTime = 6000;
 
-vector<AlarmAttributes> g_vecAlarmList;
+vector&lt;AlarmAttributes&gt; g_vecAlarmList;
 
 void ResetAlarmAsync(IRuntimePtr pRuntime)
 
@@ -14311,7 +14311,7 @@ ICfUnknownPtr pUnk;
 
 CFRESULT errCode;
 
-if (CF_SUCCEEDED(pRuntime->GetObject(CCfString(L"AlarmSet"), &pUnk)))
+if (CF_SUCCEEDED(pRuntime-&gt;GetObject(CCfString(L"AlarmSet"), &amp;pUnk)))
 
 {
 
@@ -14319,11 +14319,11 @@ IAlarmSetPtr pAlarmSet(pUnk);
 
 CAlarmSourceCommandCB* pAlarmSoureCommond = new CAlarmSourceCommandCB();
 
-pAlarmSoureCommond->AddRef();
+pAlarmSoureCommond-&gt;AddRef();
 
 IAlarmSourceCommandCallback* pCB = pAlarmSoureCommond;
 
-vector<AlarmAttributes>::iterator it = g_vecAlarmList.begin(); 　 // iterate through list of notified alarms and reset each alarm
+vector&lt;AlarmAttributes&gt;::iterator it = g_vecAlarmList.begin(); 　 // iterate through list of notified alarms and reset each alarm
 
 while (it != g_vecAlarmList.end())
 
@@ -14331,9 +14331,9 @@ while (it != g_vecAlarmList.end())
 
 IAlarm* palarm = nullptr;
 
-CCfVariant vtAlarmName = it->m_strName;
+CCfVariant vtAlarmName = it-&gt;m_strName;
 
-errCode = pAlarmSet->Add(vtAlarmName, &palarm);
+errCode = pAlarmSet-&gt;Add(vtAlarmName, &amp;palarm);
 
 it++;
 
@@ -14341,11 +14341,11 @@ it++;
 
 // Reset the AlarmSet
 
-errCode = pAlarmSet->Reset(pCB);
+errCode = pAlarmSet-&gt;Reset(pCB);
 
     //Check if an alarm could not be reset
 
-if (CF_SUCCEEDED(errCode) && pAlarmSoureCommond->WaitForcompletion(g_nMaxWaitTime) == CF_SUCCESS)
+if (CF_SUCCEEDED(errCode) &amp;&amp; pAlarmSoureCommond-&gt;WaitForcompletion(g_nMaxWaitTime) == CF_SUCCESS)
 
 {
 
@@ -14505,7 +14505,7 @@ Creates an alarm of the SystemAlarmWithoutClearEvent class with the state machin
 - `area`
     
   [in]: The area of origin of the alarm
-- `p_AlarmParameterValue`<Number>  
+- `p_AlarmParameterValue`&lt;Number&gt;  
   [in]: User-defined comments
 
 The alarm triggers an event with the following event path:
@@ -14553,7 +14553,7 @@ Creates an alarm of the SystemInformation class with the state machine alarm wit
 - `area`
     
   [in]: The area of origin of the alarm
-- `p_AlarmParameterValue`<Number>  
+- `p_AlarmParameterValue`&lt;Number&gt;  
   [in]: User-defined comments
 
 The alarm triggers an event with the following event path:
@@ -14601,7 +14601,7 @@ Creates an alarm of the OperatorInputInformation class with the state machine al
 - `area`
     
   [in]: The area of origin of the alarm
-- `p_AlarmParameterValue`<Number>  
+- `p_AlarmParameterValue`&lt;Number&gt;  
   [in]: User-defined comments
 
 The alarm triggers an event with the following event path:
@@ -14621,7 +14621,7 @@ void CreateSystemAlarm(IRuntimePtr pRuntime)
 
 ICfUnknownPtr pUnk;
 
-if (CF_SUCCEEDED(pRuntime->GetObject(CCfString(L"AlarmTrigger"), &pUnk)))
+if (CF_SUCCEEDED(pRuntime-&gt;GetObject(CCfString(L"AlarmTrigger"), &amp;pUnk)))
 
 {
 
@@ -14631,7 +14631,7 @@ if (pTrigger != nullptr)
 
 {
 
-pTrigger->CreateSystemAlarm(CCfVariant(L"Alarm Text"), CCfString(L"Alarm Area"), CCfVariant(L"param1"), CCfVariant(L"param2"), CCfVariant(L"param3"), CCfVariant(L"param4"), CCfVariant(L"param5"), CCfVariant("param6"), CCfVariant("param7"));
+pTrigger-&gt;CreateSystemAlarm(CCfVariant(L"Alarm Text"), CCfString(L"Alarm Area"), CCfVariant(L"param1"), CCfVariant(L"param2"), CCfVariant(L"param3"), CCfVariant(L"param4"), CCfVariant(L"param5"), CCfVariant("param6"), CCfVariant("param7"));
 
 }
 
@@ -14649,7 +14649,7 @@ void CreateSystemAlarmWithAlarmTextAsTextList(IRuntimePtr pRuntime)
 
 ICfUnknownPtr pUnk;
 
-if (CF_SUCCEEDED(pRuntime->GetObject(CCfString(L"AlarmTrigger"), &pUnk)))
+if (CF_SUCCEEDED(pRuntime-&gt;GetObject(CCfString(L"AlarmTrigger"), &amp;pUnk)))
 
 {
 
@@ -14659,7 +14659,7 @@ if (pTrigger != nullptr)
 
 {
 
-if (CF_SUCCEEDED(pRuntime->GetObject(CCfString("TextList"), &pUnk)))
+if (CF_SUCCEEDED(pRuntime-&gt;GetObject(CCfString("TextList"), &amp;pUnk)))
 
 {
 
@@ -14675,11 +14675,11 @@ if (nullptr != ptextList)
 
 // Text: "My input msg. input value = @1%d@"
 
-ptextList->SetName(CCfString(L"MyTextList"));
+ptextList-&gt;SetName(CCfString(L"MyTextList"));
 
-ptextList->SetTextListEntryIndex(101);
+ptextList-&gt;SetTextListEntryIndex(101);
 
-pTrigger->CreateSystemAlarm(CCfVariant(ptextList), CCfString(L"Alarm Area"), CCfVariant(L"125"),// dynamic value for format specifier @1%d@;
+pTrigger-&gt;CreateSystemAlarm(CCfVariant(ptextList), CCfString(L"Alarm Area"), CCfVariant(L"125"),// dynamic value for format specifier @1%d@;
 
 CCfVariant(), CCfVariant(), CCfVariant(), CCfVariant(), CCfVariant(), CCfVariant());
 
@@ -14703,7 +14703,7 @@ void CreateSystemAlarmWithTextListAsParameterValue(IRuntimePtr pRuntime)
 
 ICfUnknownPtr pUnk;
 
-if (CF_SUCCEEDED(pRuntime->GetObject(CCfString(L"AlarmTrigger"), &pUnk)))
+if (CF_SUCCEEDED(pRuntime-&gt;GetObject(CCfString(L"AlarmTrigger"), &amp;pUnk)))
 
 {
 
@@ -14715,7 +14715,7 @@ if (pTrigger != nullptr)
 
 ICfUnknownPtr pUnktextList, pUnktextList1;
 
-if (CF_SUCCEEDED(pRuntime->GetObject(CCfString("TextList"), &pUnktextList)) && CF_SUCCEEDED(pRuntime->GetObject(CCfString("TextList"), &pUnktextList1)))
+if (CF_SUCCEEDED(pRuntime-&gt;GetObject(CCfString("TextList"), &amp;pUnktextList)) &amp;&amp; CF_SUCCEEDED(pRuntime-&gt;GetObject(CCfString("TextList"), &amp;pUnktextList1)))
 
 {
 
@@ -14725,9 +14725,9 @@ if (nullptr != pTextList_1)
 
 {
 
-pTextList_1->SetName(CCfString(L"Text_List_1"));
+pTextList_1-&gt;SetName(CCfString(L"Text_List_1"));
 
-pTextList_1->SetTextListEntryIndex(1); //Text with reference to Text_List_2: @1%t#2T@ Val: @3%s@
+pTextList_1-&gt;SetTextListEntryIndex(1); //Text with reference to Text_List_2: @1%t#2T@ Val: @3%s@
 
 }
 
@@ -14737,11 +14737,11 @@ if (nullptr != pTextList_2)
 
 {
 
-pTextList_2->SetName(CCfString(L"Text_List_2"));
+pTextList_2-&gt;SetName(CCfString(L"Text_List_2"));
 
 }
 
-pTrigger->CreateSystemAlarm(CCfVariant(pTextList_1), CCfString(L"Alarm Area"), CCfVariant(1), // Index for Text_list_2
+pTrigger-&gt;CreateSystemAlarm(CCfVariant(pTextList_1), CCfString(L"Alarm Area"), CCfVariant(1), // Index for Text_list_2
 
 CCfVariant(pTextList_2), // Text_list_2 object
 
@@ -14907,7 +14907,7 @@ Copy code
 
 const uint32_t g_nMaxWaitTime = 6000;
 
-vector<AlarmAttributes> g_vecAlarmList;
+vector&lt;AlarmAttributes&gt; g_vecAlarmList;
 
 void SubscribeAlarm(IRuntimePtr pRuntime)
 
@@ -14915,13 +14915,13 @@ void SubscribeAlarm(IRuntimePtr pRuntime)
 
 ICfUnknownPtr pUnk;
 
-pRuntime->GetObject(CCfString(L"AlarmSubscription"), &pUnk);
+pRuntime-&gt;GetObject(CCfString(L"AlarmSubscription"), &amp;pUnk);
 
 IAlarmSubscriptionPtr pAlarm(pUnk);
 
 CAlarmValue* pAlarmValue = new CAlarmValue();
 
-pAlarmValue->AddRef();
+pAlarmValue-&gt;AddRef();
 
 IAlarmCallback *pCB = pAlarmValue;
 
@@ -14929,7 +14929,7 @@ CCfSafeArrayBound bounds(1UL, 0);
 
 CCfSafeArray daAttribute;
 
-CCfSafeArray daSystemID(CF_VT_SREF, 1, &bounds);
+CCfSafeArray daSystemID(CF_VT_SREF, 1, &amp;bounds);
 
 CCfVariant daDataSource = 0;
 
@@ -14941,35 +14941,35 @@ CCfSREF id(L"SYSTEM1");
 
 int32_t index = 0;
 
-daSystemID.PutElement(&index, &id);
+daSystemID.PutElement(&amp;index, &amp;id);
 
 CCfVariant daLanguage = 1033;
 
-daSystemID.Detach(&vSystemIDs);
+daSystemID.Detach(&amp;vSystemIDs);
 
 CCfSmartString strFilter = L"";
 
 // Start Subscription
 
-pAlarm->SetFilter(strFilter.AllocCFSTR());
+pAlarm-&gt;SetFilter(strFilter.AllocCFSTR());
 
-pAlarm->SetLanguage(1033);
+pAlarm-&gt;SetLanguage(1033);
 
- pAlarm->SetSystemNames(vSystemIDs);
+ pAlarm-&gt;SetSystemNames(vSystemIDs);
 
-pAlarm->Start(pCB);
+pAlarm-&gt;Start(pCB);
 
 // Wait for alarm notifications
 
-if (pAlarmValue->WaitForcompletion(g_nMaxWaitTime) == CF_SUCCESS)
+if (pAlarmValue-&gt;WaitForcompletion(g_nMaxWaitTime) == CF_SUCCESS)
 
 {
 
-   pAlarm->Stop();
+   pAlarm-&gt;Stop();
 
    // Get current alarms from callback
 
-   pAlarmValue->GetAlarmAttributes(g_vecAlarmList);
+   pAlarmValue-&gt;GetAlarmAttributes(g_vecAlarmList);
 
 }
 
@@ -15523,7 +15523,7 @@ void LoggingReadAlarmSync(IRuntimePtr pRuntime)
 
 ICfUnknownPtr pUnk;
 
-pRuntime->GetObject(CCfString(L"LoggedAlarm"), &pUnk);
+pRuntime-&gt;GetObject(CCfString(L"LoggedAlarm"), &amp;pUnk);
 
 CCfVariant vSystemIDs = 0;
 
@@ -15535,9 +15535,9 @@ CCfSREF id(L"SYSTEM1");
 
 int32_t index = 0;
 
-daSystemID.PutElement(&index, &id);
+daSystemID.PutElement(&amp;index, &amp;id);
 
-daSystemID.Detach(&vSystemIDs);
+daSystemID.Detach(&amp;vSystemIDs);
 
 IAlarmLoggingPtr pAlarm(pUnk);
 
@@ -15553,22 +15553,22 @@ ILoggedAlarmResultEnumeratorPtr pItems;
 
 // Read value of tag
 
- pAlarm->Read(begin, end, CCfString(""), 1033, vSystemIDs, &pItems);
+ pAlarm-&gt;Read(begin, end, CCfString(""), 1033, vSystemIDs, &amp;pItems);
 
-std::wcout << "Read finished " << std::endl;
+std::wcout &lt;&lt; "Read finished " &lt;&lt; std::endl;
 
 // Iterate over the process value objects and print them  
- while (CF_SUCCEEDED(pItems->MoveNext()))  
+ while (CF_SUCCEEDED(pItems-&gt;MoveNext()))  
  {  
  ILoggedAlarmResultPtr pValue;
 
- pItems->Current(&pValue); // get current process value
+ pItems-&gt;Current(&amp;pValue); // get current process value
 
  CCfString timeStamp;
 
 CFDATETIME64 cfTimeStamp;
 
-pValue->GetModificationTime(&cfTimeStamp);
+pValue-&gt;GetModificationTime(&amp;cfTimeStamp);
 
 CCfDateTime64 time(cfTimeStamp);
 
@@ -15576,13 +15576,13 @@ timeStamp = time.GetDateTimeString(false);
 
 CCfString strName;
 
-pValue->GetName(&strName);
+pValue-&gt;GetName(&amp;strName);
 
 CCfVariant varValue;
 
-pValue->GetValue(&varValue);
+pValue-&gt;GetValue(&amp;varValue);
 
-std::wcout << strName.ToUTF8().c_str() << L" " << timeStamp.ToUTF8().c_str() << L" Value: " << (double)(varValue) << std::endl;
+std::wcout &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; L" " &lt;&lt; timeStamp.ToUTF8().c_str() &lt;&lt; L" Value: " &lt;&lt; (double)(varValue) &lt;&lt; std::endl;
 
 }
 
@@ -15717,7 +15717,7 @@ void LoggingSubscribeAlarm(IRuntimePtr pRuntime)
 
 ICfUnknownPtr pUnk;
 
-pRuntime->GetObject(CCfString(L"LoggedAlarmSubscribtion"), &pUnk);
+pRuntime-&gt;GetObject(CCfString(L"LoggedAlarmSubscribtion"), &amp;pUnk);
 
 CCfVariant vSystemIDs = 0;
 
@@ -15729,23 +15729,23 @@ CCfSREF id(L"SYSTEM1");
 
 int32_t index = 0;
 
-daSystemID.PutElement(&index, &id);
+daSystemID.PutElement(&amp;index, &amp;id);
 
-daSystemID.Detach(&vSystemIDs);
+daSystemID.Detach(&amp;vSystemIDs);
 
 IAlarmLoggingSubscriptionPtr pAlarm(pUnk);
 
-pAlarm->SetSystemName(vSystemIDs);
+pAlarm-&gt;SetSystemName(vSystemIDs);
 
-pAlarm->SetLanguage(1033);
+pAlarm-&gt;SetLanguage(1033);
 
 COdkAlarmLoggingCB* pAlarmCB = new COdkAlarmLoggingCB();
 
-pAlarmCB->AddRef();
+pAlarmCB-&gt;AddRef();
 
 // subscribe tags
 
-pAlarm->Start(pAlarmCB);
+pAlarm-&gt;Start(pAlarmCB);
 
 }
 
@@ -15881,51 +15881,51 @@ void DisplayConnectionInfo(IConnectionResultPtr pConnectionresult,IRuntimePtr pR
 
    CCfString strName;
 
-   pConnectionresult->GetName(&strName);
+   pConnectionresult-&gt;GetName(&amp;strName);
 
-   std::cout << "ConnectionName:" << strName.ToUTF8() << std::endl;
+   std::cout &lt;&lt; "ConnectionName:" &lt;&lt; strName.ToUTF8() &lt;&lt; std::endl;
 
    CCfString strConnectiontype;
 
-   pConnectionresult->GetConnectionType(&strConnectiontype);
+   pConnectionresult-&gt;GetConnectionType(&amp;strConnectiontype);
 
-   std::cout << "ConnectionType:" << strConnectiontype.ToUTF8() << std::endl;
+   std::cout &lt;&lt; "ConnectionType:" &lt;&lt; strConnectiontype.ToUTF8() &lt;&lt; std::endl;
 
    CFENUM enConnectionState;
 
-   pConnectionresult->GetConnectionState(&enConnectionState);
+   pConnectionresult-&gt;GetConnectionState(&amp;enConnectionState);
 
-   HmiConnectionState enumconnectionState = static_cast<HmiConnectionState>(enConnectionState);
+   HmiConnectionState enumconnectionState = static_cast&lt;HmiConnectionState&gt;(enConnectionState);
 
    ConnectionState(enumconnectionState);
 
    CFENUM enEstablishmentMode;
 
-   pConnectionresult->GetEstablishmentMode(&enEstablishmentMode);
+   pConnectionresult-&gt;GetEstablishmentMode(&amp;enEstablishmentMode);
 
-   HmiConnectionEstablishmentMode enumEstablishmentMode = static_cast<HmiConnectionEstablishmentMode>(enEstablishmentMode);
+   HmiConnectionEstablishmentMode enumEstablishmentMode = static_cast&lt;HmiConnectionEstablishmentMode&gt;(enEstablishmentMode);
 
    Establishmentmode(enumEstablishmentMode);
 
    CFENUM enTimeSynchronizationMode;
 
-   pConnectionresult->GetTimeSynchronizationMode(&enTimeSynchronizationMode);
+   pConnectionresult-&gt;GetTimeSynchronizationMode(&amp;enTimeSynchronizationMode);
 
-   HmiTimeSynchronizationMode enumTimeSynchronizationMode = static_cast<HmiTimeSynchronizationMode>(enTimeSynchronizationMode);
+   HmiTimeSynchronizationMode enumTimeSynchronizationMode = static_cast&lt;HmiTimeSynchronizationMode&gt;(enTimeSynchronizationMode);
 
    TimeSynchronizationmode(enumTimeSynchronizationMode);
 
    CFBOOL bDisableatStartup;
 
-   pConnectionresult->GetDisabledAtStartup(&bDisableatStartup);
+   pConnectionresult-&gt;GetDisabledAtStartup(&amp;bDisableatStartup);
 
-   std::cout << "DisableStartup:" << (int)bDisableatStartup << std::endl;
+   std::cout &lt;&lt; "DisableStartup:" &lt;&lt; (int)bDisableatStartup &lt;&lt; std::endl;
 
    CFBOOL bEnabled;
 
-   pConnectionresult->GetEnabled(&bEnabled);
+   pConnectionresult-&gt;GetEnabled(&amp;bEnabled);
 
-   std::cout << "Enabled:" << (int)bEnabled << std::endl;
+   std::cout &lt;&lt; "Enabled:" &lt;&lt; (int)bEnabled &lt;&lt; std::endl;
 
 }
 
@@ -16050,7 +16050,7 @@ void ConnectionSet_GetConnectionState(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ConnectionSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ConnectionSet"), &amp;pUnk);
 
    IConnectionSetPtr pConnectionsetPtr(pUnk);
 
@@ -16066,39 +16066,39 @@ void ConnectionSet_GetConnectionState(IRuntimePtr pRuntime)
 
    ICfArrayVariantPtr connectionNames;
 
-   vtArrayVaiarnt.DetachEnumerator(&connectionNames);
+   vtArrayVaiarnt.DetachEnumerator(&amp;connectionNames);
 
-   pConnectionsetPtr->Add(connectionNames);
+   pConnectionsetPtr-&gt;Add(connectionNames);
 
    IConnectionStatusResultEnumeratorPtr pConnectionStatusResultEnum;
 
    IConnectionStatusResultPtr pConnectionStatusresult;
 
-   pConnectionsetPtr->GetConnectionState(&pConnectionStatusResultEnum);
+   pConnectionsetPtr-&gt;GetConnectionState(&amp;pConnectionStatusResultEnum);
 
    uint32_t nCount;
 
-   pConnectionStatusResultEnum->Count(&nCount);
+   pConnectionStatusResultEnum-&gt;Count(&amp;nCount);
 
-   for (int32_t i = 0; i < (int32_t)nCount; i++)
+   for (int32_t i = 0; i &lt; (int32_t)nCount; i++)
 
    {
 
-      pConnectionStatusResultEnum->MoveNext();
+      pConnectionStatusResultEnum-&gt;MoveNext();
 
-      pConnectionStatusResultEnum->Current(&pConnectionStatusresult);
+      pConnectionStatusResultEnum-&gt;Current(&amp;pConnectionStatusresult);
 
       CCfString strName;
 
-      pConnectionStatusresult->GetName(&strName);
+      pConnectionStatusresult-&gt;GetName(&amp;strName);
 
-      std::cout << "ConnectionName:" << strName.ToUTF8() << std::endl;
+      std::cout &lt;&lt; "ConnectionName:" &lt;&lt; strName.ToUTF8() &lt;&lt; std::endl;
 
       CFENUM enConnectionState;
 
-      pConnectionStatusresult->GetConnectionStatus(&enConnectionState);
+      pConnectionStatusresult-&gt;GetConnectionStatus(&amp;enConnectionState);
 
-      HmiConnectionState enumconnectionState = static_cast<HmiConnectionState>(enConnectionState);
+      HmiConnectionState enumconnectionState = static_cast&lt;HmiConnectionState&gt;(enConnectionState);
 
       ConnectionState(enumconnectionState);
 
@@ -16243,15 +16243,15 @@ void Connection_SetConnectionState(IRuntimePtr pRuntime, ConnectionMode connecti
 
       ICfUnknownPtr pUnk;
 
-      pRuntime->GetObject(CCfString(L"Connection"), &pUnk);
+      pRuntime-&gt;GetObject(CCfString(L"Connection"), &amp;pUnk);
 
       IConnectionPtr pConnection(pUnk);
 
       CCfSmartString daName = L"HMI-Connection";
 
-      pConnection->SetName(daName.AllocCFSTR());
+      pConnection-&gt;SetName(daName.AllocCFSTR());
 
-      pConnection->SetConnectionMode(int32_t(connectionMode));
+      pConnection-&gt;SetConnectionMode(int32_t(connectionMode));
 
 }
 
@@ -16305,7 +16305,7 @@ void ConnectionSet_ReadAsync(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ConnectionSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ConnectionSet"), &amp;pUnk);
 
    IConnectionSetPtr pConnectionset(pUnk);
 
@@ -16323,15 +16323,15 @@ void ConnectionSet_ReadAsync(IRuntimePtr pRuntime)
 
    ICfArrayVariantPtr connectionNames;
 
-   vtArrayVaiarnt.DetachEnumerator(&connectionNames);
+   vtArrayVaiarnt.DetachEnumerator(&amp;connectionNames);
 
-   pConnectionset->Add(connectionNames);
+   pConnectionset-&gt;Add(connectionNames);
 
-   CCfRefPtr<CConnectionReadNotification>pRead = new CConnectionReadNotification(pRuntime);
+   CCfRefPtr&lt;CConnectionReadNotification&gt;pRead = new CConnectionReadNotification(pRuntime);
 
    IConnectionReadNotification *pNotification = pRead;
 
-   pConnectionset->ReadAsync(pNotification);
+   pConnectionset-&gt;ReadAsync(pNotification);
 
 }
 
@@ -16381,7 +16381,7 @@ void ConnnectionSet_Subscribe(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ConnectionSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ConnectionSet"), &amp;pUnk);
 
    IConnectionSetPtr pConnectionsetPtr(pUnk);
 
@@ -16397,15 +16397,15 @@ void ConnnectionSet_Subscribe(IRuntimePtr pRuntime)
 
    ICfArrayVariantPtr connectionNames;
 
-   vtArrayVaiarnt.DetachEnumerator(&connectionNames);
+   vtArrayVaiarnt.DetachEnumerator(&amp;connectionNames);
 
-   pConnectionsetPtr->Add(connectionNames);
+   pConnectionsetPtr-&gt;Add(connectionNames);
 
    CConnectionSubscriptionNotification *pSubscribe = new CConnectionSubscriptionNotification();
 
    IConnectionStateChangeNotification *pNotification = pSubscribe;
 
-   pConnectionsetPtr->Subscribe(pNotification);
+   pConnectionsetPtr-&gt;Subscribe(pNotification);
 
 }
 
@@ -16541,7 +16541,7 @@ void ConnnectionSet_Subscribe(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ConnectionSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ConnectionSet"), &amp;pUnk);
 
    IConnectionSetPtr pConnectionsetPtr(pUnk);
 
@@ -16557,15 +16557,15 @@ void ConnnectionSet_Subscribe(IRuntimePtr pRuntime)
 
    ICfArrayVariantPtr connectionNames;
 
-   vtArrayVaiarnt.DetachEnumerator(&connectionNames);
+   vtArrayVaiarnt.DetachEnumerator(&amp;connectionNames);
 
-   pConnectionsetPtr->Add(connectionNames);
+   pConnectionsetPtr-&gt;Add(connectionNames);
 
    CConnectionSubscriptionNotification *pSubscribe = new CConnectionSubscriptionNotification();
 
    IConnectionStateChangeNotification *pNotification = pSubscribe;
 
-   pConnectionsetPtr->Subscribe(pNotification);
+   pConnectionsetPtr-&gt;Subscribe(pNotification);
 
 }
 
@@ -16579,7 +16579,7 @@ void ConnectionSet_ReadAsync(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ConnectionSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ConnectionSet"), &amp;pUnk);
 
    IConnectionSetPtr pConnectionset(pUnk);
 
@@ -16597,15 +16597,15 @@ void ConnectionSet_ReadAsync(IRuntimePtr pRuntime)
 
    ICfArrayVariantPtr connectionNames;
 
-   vtArrayVaiarnt.DetachEnumerator(&connectionNames);
+   vtArrayVaiarnt.DetachEnumerator(&amp;connectionNames);
 
-   pConnectionset->Add(connectionNames);
+   pConnectionset-&gt;Add(connectionNames);
 
-   CCfRefPtr<CConnectionReadNotification>pRead = new CConnectionReadNotification(pRuntime);
+   CCfRefPtr&lt;CConnectionReadNotification&gt;pRead = new CConnectionReadNotification(pRuntime);
 
    IConnectionReadNotification *pNotification = pRead;
 
-   pConnectionset->ReadAsync(pNotification);
+   pConnectionset-&gt;ReadAsync(pNotification);
 
 }
 
@@ -16619,7 +16619,7 @@ void Connection_AddRemove(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ConnectionSet"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ConnectionSet"), &amp;pUnk);
 
    IConnectionSetPtr pConnectionsetPtr(pUnk);
 
@@ -16635,21 +16635,21 @@ void Connection_AddRemove(IRuntimePtr pRuntime)
 
    ICfArrayVariantPtr connectionNames;
 
-   vtArrayVaiarnt.DetachEnumerator(&connectionNames);
+   vtArrayVaiarnt.DetachEnumerator(&amp;connectionNames);
 
-   pConnectionsetPtr->Add(connectionNames);
+   pConnectionsetPtr-&gt;Add(connectionNames);
 
    int32_t count;
 
-   pConnectionsetPtr->GetCount(&count);
+   pConnectionsetPtr-&gt;GetCount(&amp;count);
 
-   pConnectionsetPtr->Remove(strName1.AllocCFSTR());
+   pConnectionsetPtr-&gt;Remove(strName1.AllocCFSTR());
 
-   pConnectionsetPtr->GetCount(&count);
+   pConnectionsetPtr-&gt;GetCount(&amp;count);
 
-   pConnectionsetPtr->Clear();
+   pConnectionsetPtr-&gt;Clear();
 
-   pConnectionsetPtr->GetCount(&count);
+   pConnectionsetPtr-&gt;GetCount(&amp;count);
 
 }
 
@@ -16791,25 +16791,25 @@ void PlantModelGetPlantObjectsByType(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"PlantModel"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"PlantModel"), &amp;pUnk);
 
    IPlantModelPtr pPlantModel(pUnk);
 
    IPlantObjectEnumeratorPtr pPlantObjectEnum;
 
-   pPlantModel->GetPlantObjectsByType(CCfString(L"BLOWER").Get(), CCfString(L"").Get(), &pPlantObjectEnum);
+   pPlantModel-&gt;GetPlantObjectsByType(CCfString(L"BLOWER").Get(), CCfString(L"").Get(), &amp;pPlantObjectEnum);
 
    IPlantObjectPtr pItem;
 
-   pPlantObjectEnum->MoveNext();
+   pPlantObjectEnum-&gt;MoveNext();
 
-   while (CF_SUCCEEDED(pPlantObjectEnum->Current(&pItem)))
+   while (CF_SUCCEEDED(pPlantObjectEnum-&gt;Current(&amp;pItem)))
 
    {
 
       DisplayNodeInfo(pItem);
 
-      pPlantObjectEnum->MoveNext();
+      pPlantObjectEnum-&gt;MoveNext();
 
    }
 
@@ -16819,7 +16819,7 @@ void PlantModelGetPlantObjectsByExpression(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"PlantModel"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"PlantModel"), &amp;pUnk);
 
    IPlantModelPtr pPlantModel(pUnk);
 
@@ -16833,31 +16833,31 @@ void PlantModelGetPlantObjectsByExpression(IRuntimePtr pRuntime)
 
    int32_t index = 0;
 
-   daSafeArray.PutElement(&index, (void*)&str1);
+   daSafeArray.PutElement(&amp;index, (void*)&amp;str1);
 
    ++index;
 
-   daSafeArray.PutElement(&index, (void*)&str2);
+   daSafeArray.PutElement(&amp;index, (void*)&amp;str2);
 
    ++index;
 
    CCfVariant vtProperties;
 
-   daSafeArray.Detach(&vtProperties);
+   daSafeArray.Detach(&amp;vtProperties);
 
-   pPlantModel->GetPlantObjectsByExpression(vtProperties, CCfString(L"BLOWER").Get(), CCfString(L"NumberOfNodes>=0"), CCfString(L"RUNTIME_1.hierarchy").Get(), &pPlantObjectEnum);
+   pPlantModel-&gt;GetPlantObjectsByExpression(vtProperties, CCfString(L"BLOWER").Get(), CCfString(L"NumberOfNodes&gt;=0"), CCfString(L"RUNTIME_1.hierarchy").Get(), &amp;pPlantObjectEnum);
 
-   pPlantObjectEnum->MoveNext();
+   pPlantObjectEnum-&gt;MoveNext();
 
    IPlantObject* pPlantObject;
 
-   while (CF_SUCCEEDED(pPlantObjectEnum->Current(&pPlantObject)))
+   while (CF_SUCCEEDED(pPlantObjectEnum-&gt;Current(&amp;pPlantObject)))
 
    {
 
       DisplayNodeInfo(pPlantObject);
 
-      pPlantObjectEnum->MoveNext();
+      pPlantObjectEnum-&gt;MoveNext();
 
    }
 
@@ -17014,7 +17014,7 @@ void PlantObjectGetProperties(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"PlantModel"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"PlantModel"), &amp;pUnk);
 
    IPlantModelPtr pPlantModel(pUnk);
 
@@ -17024,7 +17024,7 @@ void PlantObjectGetProperties(IRuntimePtr pRuntime)
 
    //gets node for specified Node path
 
-   pPlantModel->GetPlantObject(strNode.Get(), &pPlantObject);
+   pPlantModel-&gt;GetPlantObject(strNode.Get(), &amp;pPlantObject);
 
    //empty property - so all node members should be read
 
@@ -17034,13 +17034,13 @@ void PlantObjectGetProperties(IRuntimePtr pRuntime)
 
    // get the PlantObject properties by property names
 
-   pPlantObject->GetProperties(vtProperties, &pPlantObjectPropertySet);
+   pPlantObject-&gt;GetProperties(vtProperties, &amp;pPlantObjectPropertySet);
 
    uint32_t nCount = 0;
 
-   pPlantObjectPropertySet->GetCount(&nCount);
+   pPlantObjectPropertySet-&gt;GetCount(&amp;nCount);
 
-   std::cout << "Count :" << nCount << std::endl;
+   std::cout &lt;&lt; "Count :" &lt;&lt; nCount &lt;&lt; std::endl;
 
 }
 
@@ -17100,7 +17100,7 @@ void PlantObjectReadproperty(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"PlantModel"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"PlantModel"), &amp;pUnk);
 
    IPlantModelPtr pPlantModel(pUnk);
 
@@ -17110,7 +17110,7 @@ void PlantObjectReadproperty(IRuntimePtr pRuntime)
 
    //gets node for specified Node path
 
-   pPlantModel->GetPlantObject(strNode.Get(), &pPlantObject);
+   pPlantModel-&gt;GetPlantObject(strNode.Get(), &amp;pPlantObject);
 
    //empty property - so all node members should be read
 
@@ -17122,15 +17122,15 @@ void PlantObjectReadproperty(IRuntimePtr pRuntime)
 
    CCfString strName(L"DateActivation");
 
-   daPropertyNames.PutElement(&index, &strName);
+   daPropertyNames.PutElement(&amp;index, &amp;strName);
 
-   daPropertyNames.Detach(&vtProperties);
+   daPropertyNames.Detach(&amp;vtProperties);
 
    IPlantObjectPropertySetPtr pPlantObjectPropertySet;
 
    // get the PlantObject properties by property names
 
-   pPlantObject->GetProperties(vtProperties, &pPlantObjectPropertySet);
+   pPlantObject-&gt;GetProperties(vtProperties, &amp;pPlantObjectPropertySet);
 
    CCfString strName(L"NumberOfNodes");
 
@@ -17138,43 +17138,43 @@ void PlantObjectReadproperty(IRuntimePtr pRuntime)
 
    //get the PlantObject property by name
 
-   pPlantObject->GetProperty(strName.Get(), &PlantObjectProperty);
+   pPlantObject-&gt;GetProperty(strName.Get(), &amp;PlantObjectProperty);
 
    IPlantObjectPropertyValuePtr pPlantObjectPropertyValue;
 
    // Read PlantObject Property
 
-   PlantObjectProperty->Read(&pPlantObjectPropertyValue);
+   PlantObjectProperty-&gt;Read(&amp;pPlantObjectPropertyValue);
 
    CCfString strName;
 
-   pPlantObjectPropertyValue->GetPlantObjectPropertyName(&strName);
+   pPlantObjectPropertyValue-&gt;GetPlantObjectPropertyName(&amp;strName);
 
-   std::cout << "PlantModelPropertyName:" << strName.ToUTF8() << std::endl;
+   std::cout &lt;&lt; "PlantModelPropertyName:" &lt;&lt; strName.ToUTF8() &lt;&lt; std::endl;
 
    int64_t qc;
 
-   pPlantObjectPropertyValue->GetQuality(&qc);
+   pPlantObjectPropertyValue-&gt;GetQuality(&amp;qc);
 
-   std::cout << "Quality:" << qc << std::endl;
+   std::cout &lt;&lt; "Quality:" &lt;&lt; qc &lt;&lt; std::endl;
 
    int64_t ec;
 
-   pPlantObjectPropertyValue->GetError(&ec);
+   pPlantObjectPropertyValue-&gt;GetError(&amp;ec);
 
-   std::cout << "Error:" << ec << std::endl;
+   std::cout &lt;&lt; "Error:" &lt;&lt; ec &lt;&lt; std::endl;
 
    CCfDateTime64 dt;
 
-   pPlantObjectPropertyValue->GetTimeStamp(&dt);
+   pPlantObjectPropertyValue-&gt;GetTimeStamp(&amp;dt);
 
-   std::cout << "DateTime:" << dt.GetDateTimeString().ToUTF8() << std::endl;
+   std::cout &lt;&lt; "DateTime:" &lt;&lt; dt.GetDateTimeString().ToUTF8() &lt;&lt; std::endl;
 
    CCfVariant vtVal;
 
-   pPlantObjectPropertyValue->GetValue(&vtVal);
+   pPlantObjectPropertyValue-&gt;GetValue(&amp;vtVal);
 
-   std::cout << "Value:" << vtVal.uint64 << std::endl;
+   std::cout &lt;&lt; "Value:" &lt;&lt; vtVal.uint64 &lt;&lt; std::endl;
 
 }
 
@@ -17278,7 +17278,7 @@ void PlantObjectSubscribePropertySet(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"PlantModel"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"PlantModel"), &amp;pUnk);
 
    IPlantModelPtr pPlantModel(pUnk);
 
@@ -17288,7 +17288,7 @@ void PlantObjectSubscribePropertySet(IRuntimePtr pRuntime)
 
    //gets node for specified Node path
 
-   pPlantModel->GetPlantObject(strNode.Get(), &pPlantObject);
+   pPlantModel-&gt;GetPlantObject(strNode.Get(), &amp;pPlantObject);
 
    //empty property - so all node members should be read
 
@@ -17298,7 +17298,7 @@ void PlantObjectSubscribePropertySet(IRuntimePtr pRuntime)
 
    // get the PlantObject properties by property names
 
-   pPlantObject->GetProperties(vtProperties, &pPlantObjectPropertySet);
+   pPlantObject-&gt;GetProperties(vtProperties, &amp;pPlantObjectPropertySet);
 
    CPlantModelPropertySubscriptionNotification* pSubscribe = new CPlantModelPropertySubscriptionNotification();
 
@@ -17306,7 +17306,7 @@ void PlantObjectSubscribePropertySet(IRuntimePtr pRuntime)
 
    //Susbcribe for all PlantObject properties
 
-   pPlantObjectPropertySet->Subscribe(pNotification);
+   pPlantObjectPropertySet-&gt;Subscribe(pNotification);
 
 }
 
@@ -17316,55 +17316,55 @@ CFRESULT CFCALLTYPE CPlantModelPropertySubscriptionNotification::OnDataChanged(I
 
    uint32_t nCount = 0;
 
-   pEnumerator->Count(&nCount);
+   pEnumerator-&gt;Count(&amp;nCount);
 
-   for (int i = 0;i < (int32_t)nCount; i++)
+   for (int i = 0;i &lt; (int32_t)nCount; i++)
 
    {
 
-      pEnumerator->MoveNext();
+      pEnumerator-&gt;MoveNext();
 
       IPlantObjectPropertyValue* pPlantModelPropertyValue;
 
-      if (CF_SUCCEEDED(pEnumerator->Current(&pPlantModelPropertyValue)) && nullptr != pPlantModelPropertyValue)
+      if (CF_SUCCEEDED(pEnumerator-&gt;Current(&amp;pPlantModelPropertyValue)) &amp;&amp; nullptr != pPlantModelPropertyValue)
 
       {
 
          CCfString strName;
 
-         pPlantModelPropertyValue->GetPlantObjectPropertyName(&strName);
+         pPlantModelPropertyValue-&gt;GetPlantObjectPropertyName(&amp;strName);
 
-         std::cout << "Name:" << strName.ToUTF8() << std::endl;
+         std::cout &lt;&lt; "Name:" &lt;&lt; strName.ToUTF8() &lt;&lt; std::endl;
 
          int64_t qc;
 
-         pPlantModelPropertyValue->GetQuality(&qc);
+         pPlantModelPropertyValue-&gt;GetQuality(&amp;qc);
 
-         std::cout << "Quality:" << qc << std::endl;
+         std::cout &lt;&lt; "Quality:" &lt;&lt; qc &lt;&lt; std::endl;
 
          int64_t ec;
 
-         pPlantModelPropertyValue->GetError(&ec);
+         pPlantModelPropertyValue-&gt;GetError(&amp;ec);
 
-         std::cout << "Error:" << ec << std::endl;
+         std::cout &lt;&lt; "Error:" &lt;&lt; ec &lt;&lt; std::endl;
 
          CCfDateTime64 dt;
 
-         pPlantModelPropertyValue->GetTimeStamp(&dt);
+         pPlantModelPropertyValue-&gt;GetTimeStamp(&amp;dt);
 
-         std::cout << "DateTime:" << dt.GetDateTimeString().ToUTF8() << std::endl;
+         std::cout &lt;&lt; "DateTime:" &lt;&lt; dt.GetDateTimeString().ToUTF8() &lt;&lt; std::endl;
 
          CCfVariant vtVal;
 
-         pPlantModelPropertyValue->GetValue(&vtVal);
+         pPlantModelPropertyValue-&gt;GetValue(&amp;vtVal);
 
-         std::cout << "Value:" << vtVal.uint64 << std::endl;
+         std::cout &lt;&lt; "Value:" &lt;&lt; vtVal.uint64 &lt;&lt; std::endl;
 
       }
 
    }
 
-   this->SetEvent();
+   this-&gt;SetEvent();
 
    return CF_SUCCESS;
 
@@ -17573,7 +17573,7 @@ void PlantObjectWriteAsyncPropertySet(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"PlantModel"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"PlantModel"), &amp;pUnk);
 
    IPlantModelPtr pPlantModel(pUnk);
 
@@ -17583,7 +17583,7 @@ void PlantObjectWriteAsyncPropertySet(IRuntimePtr pRuntime)
 
    //gets node for specified Node path
 
-   pPlantModel->GetPlantObject(strNode.Get(), &pPlantObject);
+   pPlantModel-&gt;GetPlantObject(strNode.Get(), &amp;pPlantObject);
 
    //empty property - so all node members should be read
 
@@ -17593,13 +17593,13 @@ void PlantObjectWriteAsyncPropertySet(IRuntimePtr pRuntime)
 
    // get the PlantObject properties by property names
 
-   pPlantObject->GetProperties(vtProperties, &pPlantObjectPropertySet);
+   pPlantObject-&gt;GetProperties(vtProperties, &amp;pPlantObjectPropertySet);
 
    CCfString strName(L"NumberOfNodes");
 
    CCfVariant vtValue(1000);
 
-   pPlantObjectPropertySet->Add(strName, vtValue);
+   pPlantObjectPropertySet-&gt;Add(strName, vtValue);
 
    CPlantObjectPropertySetWriteReply* pReply = new CPlantObjectPropertySetWriteReply();
 
@@ -17607,7 +17607,7 @@ void PlantObjectWriteAsyncPropertySet(IRuntimePtr pRuntime)
 
    //Write PlantObject properties values asynchronously
 
-   pPlantObjectPropertySet->WriteAsync(pWritReply);
+   pPlantObjectPropertySet-&gt;WriteAsync(pWritReply);
 
 }
 
@@ -17644,7 +17644,7 @@ void PlantObjectReadAsyncPropertySet(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"PlantModel"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"PlantModel"), &amp;pUnk);
 
    IPlantModelPtr pPlantModel(pUnk);
 
@@ -17654,7 +17654,7 @@ void PlantObjectReadAsyncPropertySet(IRuntimePtr pRuntime)
 
    //gets node for specified Node path
 
-   errCode = pPlantModel->GetPlantObject(strNode.Get(), &pPlantObject);
+   errCode = pPlantModel-&gt;GetPlantObject(strNode.Get(), &amp;pPlantObject);
 
    //empty property - so all node members should be read
 
@@ -17664,7 +17664,7 @@ void PlantObjectReadAsyncPropertySet(IRuntimePtr pRuntime)
 
    // get the PlantObject properties by property names
 
-   pPlantObject->GetProperties(vtProperties, &pPlantObjectPropertySet);
+   pPlantObject-&gt;GetProperties(vtProperties, &amp;pPlantObjectPropertySet);
 
    CPlantObjectPropertySetReadReply* pReply = new CPlantObjectPropertySetReadReply();
 
@@ -17672,7 +17672,7 @@ void PlantObjectReadAsyncPropertySet(IRuntimePtr pRuntime)
 
    // Read PlantObject properties values asynchronously
 
-   pPlantObjectPropertySet->ReadAsync(pReadReply);
+   pPlantObjectPropertySet-&gt;ReadAsync(pReadReply);
 
 }
 
@@ -17682,49 +17682,49 @@ CFRESULT CFCALLTYPE CPlantObjectPropertySetReadReply::OnReadComplete(IN CFVARIAN
 
    uint32_t nCount = 0;
 
-   pPlantObjectPropertySet->Count(&nCount);
+   pPlantObjectPropertySet-&gt;Count(&amp;nCount);
 
-   for (int i = 0;i < (int32_t)nCount; i++)
+   for (int i = 0;i &lt; (int32_t)nCount; i++)
 
    {
 
-      pPlantObjectPropertySet->MoveNext();
+      pPlantObjectPropertySet-&gt;MoveNext();
 
       IPlantObjectPropertyValue* pPlantModelPropertyValue;
 
       CCfString strName;
 
-      pPlantModelPropertyValue->GetPlantObjectPropertyName(&strName);
+      pPlantModelPropertyValue-&gt;GetPlantObjectPropertyName(&amp;strName);
 
-      std::cout << "Name:" << strName.ToUTF8() << std::endl;
+      std::cout &lt;&lt; "Name:" &lt;&lt; strName.ToUTF8() &lt;&lt; std::endl;
 
       int64_t qc;
 
-      pPlantModelPropertyValue->GetQuality(&qc);
+      pPlantModelPropertyValue-&gt;GetQuality(&amp;qc);
 
-      std::cout << "Quality:" << qc << std::endl;
+      std::cout &lt;&lt; "Quality:" &lt;&lt; qc &lt;&lt; std::endl;
 
       int64_t ec;
 
-      pPlantModelPropertyValue->GetError(&ec);
+      pPlantModelPropertyValue-&gt;GetError(&amp;ec);
 
-      std::cout << "Error:" << ec << std::endl;
+      std::cout &lt;&lt; "Error:" &lt;&lt; ec &lt;&lt; std::endl;
 
       CCfDateTime64 dt;
 
-      pPlantModelPropertyValue->GetTimeStamp(&dt);
+      pPlantModelPropertyValue-&gt;GetTimeStamp(&amp;dt);
 
-      std::cout << "DateTime:" << dt.GetDateTimeString().ToUTF8() << std::endl;
+      std::cout &lt;&lt; "DateTime:" &lt;&lt; dt.GetDateTimeString().ToUTF8() &lt;&lt; std::endl;
 
       CCfVariant vtVal;
 
-      pPlantModelPropertyValue->GetValue(&vtVal);
+      pPlantModelPropertyValue-&gt;GetValue(&amp;vtVal);
 
-      std::cout << "Value:" << vtVal.uint64 << std::endl;
+      std::cout &lt;&lt; "Value:" &lt;&lt; vtVal.uint64 &lt;&lt; std::endl;
 
    }
 
-   this->SetEvent();
+   this-&gt;SetEvent();
 
    return CF_SUCCESS;
 
@@ -17763,31 +17763,31 @@ CFRESULT CFCALLTYPE CPlantObjectPropertySetWriteReply::OnWriteComplete(IN CFVARI
 
    uint32_t nCount = 0;
 
-   pPlantObjectPropertySet->Count(&nCount);
+   pPlantObjectPropertySet-&gt;Count(&amp;nCount);
 
-   for (int i = 0;i < (int32_t)nCount; i++)
+   for (int i = 0;i &lt; (int32_t)nCount; i++)
 
    {
 
-      pPlantObjectPropertySet->MoveNext();
+      pPlantObjectPropertySet-&gt;MoveNext();
 
       IPlantObjectPropertyValue* pPlantModelPropertyValue;
 
       CCfString strName;
 
-      pPlantModelPropertyValue->GetPlantObjectPropertyName(&strName);
+      pPlantModelPropertyValue-&gt;GetPlantObjectPropertyName(&amp;strName);
 
-      std::cout << "Name:" << strName.ToUTF8() << std::endl;
+      std::cout &lt;&lt; "Name:" &lt;&lt; strName.ToUTF8() &lt;&lt; std::endl;
 
       int64_t ec;
 
-      pPlantModelPropertyValue->GetError(&ec);
+      pPlantModelPropertyValue-&gt;GetError(&amp;ec);
 
-      std::cout << "Error:" << ec << std::endl;
+      std::cout &lt;&lt; "Error:" &lt;&lt; ec &lt;&lt; std::endl;
 
    }
 
-   this->SetEvent();
+   this-&gt;SetEvent();
 
    return CF_SUCCESS;
 
@@ -17851,7 +17851,7 @@ void PlantObjectCurrentViewPath(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"PlantModel"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"PlantModel"), &amp;pUnk);
 
    IPlantModelPtr pPlantModel(pUnk);
 
@@ -17869,39 +17869,39 @@ void PlantObjectCurrentViewPath(IRuntimePtr pRuntime)
 
    int32_t index = 0;
 
-   daSafeArray.PutElement(&index, (void*)&str1);
+   daSafeArray.PutElement(&amp;index, (void*)&amp;str1);
 
    ++index;
 
-   daSafeArray.PutElement(&index, (void*)&str2);
+   daSafeArray.PutElement(&amp;index, (void*)&amp;str2);
 
    ++index;
 
-   daSafeArray.PutElement(&index, (void*)&str3);
+   daSafeArray.PutElement(&amp;index, (void*)&amp;str3);
 
    ++index;
 
-   daSafeArray.PutElement(&index, (void*)&str4);
+   daSafeArray.PutElement(&amp;index, (void*)&amp;str4);
 
    CCfVariant vtProperties;
 
-   daSafeArray.Detach(&vtProperties);
+   daSafeArray.Detach(&amp;vtProperties);
 
    // gets PlantObjects for specified filter
 
-   pPlantModel->GetPlantObjectsByExpression(vtProperties, CCfString(L"UNIT").Get(), CCfString(L""), CCfString(L"RUNTIME_1.hierarchy::PlantView/Unit1").Get(), &pPlantObjectEnum);
+   pPlantModel-&gt;GetPlantObjectsByExpression(vtProperties, CCfString(L"UNIT").Get(), CCfString(L""), CCfString(L"RUNTIME_1.hierarchy::PlantView/Unit1").Get(), &amp;pPlantObjectEnum);
 
-   pPlantObjectEnum->MoveNext();
+   pPlantObjectEnum-&gt;MoveNext();
 
    IPlantObject* pPlantObject;
 
-   while (CF_SUCCEEDED(pPlantObjectEnum->Current(&pPlantObject)))
+   while (CF_SUCCEEDED(pPlantObjectEnum-&gt;Current(&amp;pPlantObject)))
 
    {
 
       DisplayNodeInfo(pPlantObject);
 
-      pPlantObjectEnum->MoveNext();
+      pPlantObjectEnum-&gt;MoveNext();
 
    }
 
@@ -18007,13 +18007,13 @@ void PlantObjectSubscription(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"PlantModel").Get(), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"PlantModel").Get(), &amp;pUnk);
 
    IPlantModelPtr pPlantModel(pUnk);
 
    CPlantModelAlarmValue* pAlarmValue = new CPlantModelAlarmValue();
 
-   pAlarmValue->AddRef();
+   pAlarmValue-&gt;AddRef();
 
    IPlantObjectAlarmCallback *pCB = pAlarmValue;
 
@@ -18021,7 +18021,7 @@ void PlantObjectSubscription(IRuntimePtr pRuntime)
 
    IPlantObjectPtr pPlantObject;
 
-   pPlantModel->GetPlantObject(strNode.Get(), &pPlantObject);
+   pPlantModel-&gt;GetPlantObject(strNode.Get(), &amp;pPlantObject);
 
    CCfSmartString daFilter;//= L"AlarmClassName = 'Alarm'";
 
@@ -18029,25 +18029,25 @@ void PlantObjectSubscription(IRuntimePtr pRuntime)
 
    IPlantObjectAlarmSubscriptionPtr pPlantObjectAlarmSubscription;
 
-   pPlantObject->CreateAlarmSubscription(&pPlantObjectAlarmSubscription);
+   pPlantObject-&gt;CreateAlarmSubscription(&amp;pPlantObjectAlarmSubscription);
 
-   pPlantObjectAlarmSubscription->SetFilter(daFilter.AllocCFSTR());
+   pPlantObjectAlarmSubscription-&gt;SetFilter(daFilter.AllocCFSTR());
 
-   pPlantObjectAlarmSubscription->SetLanguage(1033);
+   pPlantObjectAlarmSubscription-&gt;SetLanguage(1033);
 
-   pPlantObjectAlarmSubscription->SetFilter(false);
+   pPlantObjectAlarmSubscription-&gt;SetFilter(false);
 
-   pPlantObjectAlarmSubscription->SetIncludeChildren(false);
+   pPlantObjectAlarmSubscription-&gt;SetIncludeChildren(false);
 
-   CCfRefPtr<CPlantObjectAlarmSubscriptionCallback> pCallback = new CPlantObjectAlarmSubscriptionCallback();
+   CCfRefPtr&lt;CPlantObjectAlarmSubscriptionCallback&gt; pCallback = new CPlantObjectAlarmSubscriptionCallback();
 
-   pPlantObjectAlarmSubscription->Start(pCallback);
+   pPlantObjectAlarmSubscription-&gt;Start(pCallback);
 
-   if (0 == pCallback->WaitForcompletion(30000))
+   if (0 == pCallback-&gt;WaitForcompletion(30000))
 
    {
 
-      pPlantObjectAlarmSubscription->Stop();
+      pPlantObjectAlarmSubscription-&gt;Stop();
 
    }
 
@@ -18106,39 +18106,39 @@ CFRESULT CFCALLTYPE CPlantModelAlarmValue::OnAlarm( uint32_t systemError, CFSTR 
 
       uint32_t nsize;
 
-      pItems->Count(&nsize);
+      pItems-&gt;Count(&amp;nsize);
 
-      if (nsize > 0 && CF_SUCCEEDED(systemError)) {
+      if (nsize &gt; 0 &amp;&amp; CF_SUCCEEDED(systemError)) {
 
       {
 
          int index = 0;
 
-         while (CF_SUCCEEDED(pItems->MoveNext()))
+         while (CF_SUCCEEDED(pItems-&gt;MoveNext()))
 
          {
 
             IAlarmResultPtr ppValues;
 
-            pItems->Current(&ppValues);
+            pItems-&gt;Current(&amp;ppValues);
 
             CCfString strId;
 
-            ppValues->GetSourceID(&strId);
+            ppValues-&gt;GetSourceID(&amp;strId);
 
-            std::cout << "String ID = " << strId.ToUTF8().c_str() << std::endl;
+            std::cout &lt;&lt; "String ID = " &lt;&lt; strId.ToUTF8().c_str() &lt;&lt; std::endl;
 
             CCfString strName;
 
-            ppValues->GetName(&strName);
+            ppValues-&gt;GetName(&amp;strName);
 
-            std::cout << "Name = " << strName.ToUTF8().c_str() << std::endl;
+            std::cout &lt;&lt; "Name = " &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; std::endl;
 
             CCfString strClassName;
 
-            ppValues->GetAlarmClassName(&strClassName);
+            ppValues-&gt;GetAlarmClassName(&amp;strClassName);
 
-            std::cout << "Alarm Class Name = " << strClassName.ToUTF8().c_str() << std::endl;
+            std::cout &lt;&lt; "Alarm Class Name = " &lt;&lt; strClassName.ToUTF8().c_str() &lt;&lt; std::endl;
 
             index++;
 
@@ -18266,7 +18266,7 @@ It shows how you can obtain the "IPlantObject" instance and also an "ISHCCalenda
 
 Copy code
 
-#include <iostream>
+#include &lt;iostream&gt;
 
 #include "IOdkShcInterface.h"
 
@@ -18298,13 +18298,13 @@ ISHCActionTemplatesProviderPtr pShcActionTemplateProvider;
 
 CCfString projectName = L"";
 
-if (CF_SUCCEEDED(Connect(projectName, &pRuntime)))
+if (CF_SUCCEEDED(Connect(projectName, &amp;pRuntime)))
 
 {
 
   ICfUnknownPtr pPlantModelUnk;
 
- pRuntime->GetObject(CCfString(L"PlantModel"), &pPlantModelUnk);
+ pRuntime-&gt;GetObject(CCfString(L"PlantModel"), &amp;pPlantModelUnk);
 
  IPlantObjectPtr pPlantObject;
 
@@ -18314,35 +18314,35 @@ CCfString strNode = L".hierarchy::Plant/Unit1";
 
 //gets Object for specified Node path
 
- pPlantModel->GetPlantObject(strNode.Get(), &pPlantObject);
+ pPlantModel-&gt;GetPlantObject(strNode.Get(), &amp;pPlantObject);
 
  IOptionPtr pOdkOption;
 
-   pRuntime->GetOption(CCfString(ODK_SHC_OPTION), &pOdkOption);
+   pRuntime-&gt;GetOption(CCfString(ODK_SHC_OPTION), &amp;pOdkOption);
 
    ISHCCalendarOptionPtr pShcOption;
 
- pOdkOption->QueryInterface(IID_ISHCCalendarOption, (ICfUnknown**)&pShcOption);
+ pOdkOption-&gt;QueryInterface(IID_ISHCCalendarOption, (ICfUnknown**)&amp;pShcOption);
 
    ICfUnknownPtr pUnk;
 
-   pShcOption->GetObject(pPlantObject, ODK_SHC_CALENDAR, &pUnk);
+   pShcOption-&gt;GetObject(pPlantObject, ODK_SHC_CALENDAR, &amp;pUnk);
 
-   pUnk->QueryInterface(IID_ISHCCalendar, (ICfUnknown**)&pCalendar);
+   pUnk-&gt;QueryInterface(IID_ISHCCalendar, (ICfUnknown**)&amp;pCalendar);
 
  // Get all data provider
 
- pCalendar->GetActionTemplatesProvider(&pShcActionTemplateProvider);
+ pCalendar-&gt;GetActionTemplatesProvider(&amp;pShcActionTemplateProvider);
 
-pCalendar->GetCategoryProvider(&pShcCategoryProvider);
+pCalendar-&gt;GetCategoryProvider(&amp;pShcCategoryProvider);
 
-pCalendar->GetDayProvider(&pShcDayProvider);
+pCalendar-&gt;GetDayProvider(&amp;pShcDayProvider);
 
-pCalendar->GetDayTemplateProvider(&pShcDayTemplateProvider);
+pCalendar-&gt;GetDayTemplateProvider(&amp;pShcDayTemplateProvider);
 
-pCalendar->GetShiftTemplateProvider(&pShcShiftTemplateProvider);
+pCalendar-&gt;GetShiftTemplateProvider(&amp;pShcShiftTemplateProvider);
 
-pCalendar->GetSettings(&pCalendarProvider);
+pCalendar-&gt;GetSettings(&amp;pCalendarProvider);
 
 }
 
@@ -18584,27 +18584,27 @@ Example:
 
 ICfMapIDToVariantPtr pDescriptions;
 
-hr = pShcCategory->GetDescriptions(&pDescriptions);
+hr = pShcCategory-&gt;GetDescriptions(&amp;pDescriptions);
 
-std::cout << "Descriptions::" << std::endl << std::endl;
+std::cout &lt;&lt; "Descriptions::" &lt;&lt; std::endl &lt;&lt; std::endl;
 
 uint32_t nCount2 = 0;
 
-pDescriptions->Count(&nCount2);
+pDescriptions-&gt;Count(&amp;nCount2);
 
-for (uint32_t nIndex2 = 0; nIndex2 < nCount2; nIndex2++)
+for (uint32_t nIndex2 = 0; nIndex2 &lt; nCount2; nIndex2++)
 
 {
 
    int32_t nLanguageID;
 
-   pDescriptions->KeyAt(nIndex2, &nLanguageID);
+   pDescriptions-&gt;KeyAt(nIndex2, &amp;nLanguageID);
 
    CCfVariant strDescription;
 
-   pDescriptions->ValueAt(nLanguageID, &strDescription);
+   pDescriptions-&gt;ValueAt(nLanguageID, &amp;strDescription);
 
-   std::cout << "LangauageID =" << nLanguageID << " Description=" << CCfSmartString(strDescription).ToUTF8().c_str() << std::endl;
+   std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " Description=" &lt;&lt; CCfSmartString(strDescription).ToUTF8().c_str() &lt;&lt; std::endl;
 
 }
 
@@ -18695,95 +18695,95 @@ Output the size of the enumeration or the number of its elements.
 
 Copy code
 
-void PrintCategory(const ISHCCategoryEnumeratorPtr& p_pShcCategoryEnum)
+void PrintCategory(const ISHCCategoryEnumeratorPtr&amp; p_pShcCategoryEnum)
 
 {
 
    uint32_t nCount = 0;
 
-   p_pShcCategoryEnum->Count(&nCount);
+   p_pShcCategoryEnum-&gt;Count(&amp;nCount);
 
-   for (uint32_t nIndex = 0; nIndex < nCount; nIndex++)
+   for (uint32_t nIndex = 0; nIndex &lt; nCount; nIndex++)
 
    {
 
-      p_pShcCategoryEnum->MoveNext();
+      p_pShcCategoryEnum-&gt;MoveNext();
 
       ISHCCategoryPtr pShcCategory;
 
-      p_pShcCategoryEnum->Current(&pShcCategory);
+      p_pShcCategoryEnum-&gt;Current(&amp;pShcCategory);
 
-      cout << endl;
+      cout &lt;&lt; endl;
 
       CFRESULT hr = CF_ERROR;
 
       CCfString strName;
 
-      hr = pShcCategory->GetName(&strName);
+      hr = pShcCategory-&gt;GetName(&amp;strName);
 
-      cout << "CategoryName= " << strName.ToUTF8().c_str() << endl;
+      cout &lt;&lt; "CategoryName= " &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; endl;
 
       uint32_t nColor;
 
-      hr = pShcCategory->GetColor(&nColor);
+      hr = pShcCategory-&gt;GetColor(&amp;nColor);
 
-      cout << "Color= " << nColor << endl;
+      cout &lt;&lt; "Color= " &lt;&lt; nColor &lt;&lt; endl;
 
       CFBOOL bIsDeleted;
 
-      hr = pShcCategory->GetIsDeleted(&bIsDeleted);
+      hr = pShcCategory-&gt;GetIsDeleted(&amp;bIsDeleted);
 
-      cout << "IsDeleted= " << (uint32_t)bIsDeleted << endl;
+      cout &lt;&lt; "IsDeleted= " &lt;&lt; (uint32_t)bIsDeleted &lt;&lt; endl;
 
       ICfMapIDToVariantPtr pDisplayNames;
 
-      hr = pShcCategory->GetDisplayNames(&pDisplayNames);
+      hr = pShcCategory-&gt;GetDisplayNames(&amp;pDisplayNames);
 
-      std::cout << "DisplayNames::" << std::endl << std::endl;
+      std::cout &lt;&lt; "DisplayNames::" &lt;&lt; std::endl &lt;&lt; std::endl;
 
       uint32_t nCount1 = 0;
 
-      pDisplayNames->Count(&nCount1);
+      pDisplayNames-&gt;Count(&amp;nCount1);
 
-      for (uint32_t nIndex1 = 0; nIndex1 < nCount1; nIndex1++)
+      for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount1; nIndex1++)
 
       {
 
          int32_t nLanguageID;
 
-         pDisplayNames->KeyAt(nIndex1, &nLanguageID);
+         pDisplayNames-&gt;KeyAt(nIndex1, &amp;nLanguageID);
 
          CCfVariant strDIsplayname;
 
-         pDisplayNames->ValueAt(nLanguageID, &strDIsplayname);
+         pDisplayNames-&gt;ValueAt(nLanguageID, &amp;strDIsplayname);
 
-         std::cout << "LangauageID =" << nLanguageID << " DisplayName =" << CCfSmartString(strDIsplayname).ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " DisplayName =" &lt;&lt; CCfSmartString(strDIsplayname).ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
       ICfMapIDToVariantPtr pDescriptions;
 
-      hr = pShcCategory->GetDescriptions(&pDescriptions);
+      hr = pShcCategory-&gt;GetDescriptions(&amp;pDescriptions);
 
-      std::cout << "Descriptions::" << std::endl << std::endl;
+      std::cout &lt;&lt; "Descriptions::" &lt;&lt; std::endl &lt;&lt; std::endl;
 
       uint32_t nCount2 = 0;
 
-      pDescriptions->Count(&nCount2);
+      pDescriptions-&gt;Count(&amp;nCount2);
 
-      for (uint32_t nIndex2 = 0; nIndex2 < nCount2; nIndex2++)
+      for (uint32_t nIndex2 = 0; nIndex2 &lt; nCount2; nIndex2++)
 
       {
 
          int32_t nLanguageID;
 
-         pDescriptions->KeyAt(nIndex2, &nLanguageID);
+         pDescriptions-&gt;KeyAt(nIndex2, &amp;nLanguageID);
 
          CCfVariant strDescription;
 
-         pDescriptions->ValueAt(nLanguageID, &strDescription);
+         pDescriptions-&gt;ValueAt(nLanguageID, &amp;strDescription);
 
-         std::cout << "LangauageID =" << nLanguageID << " Description=" << CCfSmartString(strDescription).ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " Description=" &lt;&lt; CCfSmartString(strDescription).ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
@@ -18815,7 +18815,7 @@ Example:
 
 ISHCCategoryEnumeratorPtr pShcCategoryEnum;
 
-CFRESULT hr = pShcCategoryProvider->Browse(&pShcCategoryEnum);
+CFRESULT hr = pShcCategoryProvider-&gt;Browse(&amp;pShcCategoryEnum);
 
 if (CF_SUCCEEDED(hr))
 
@@ -18939,47 +18939,47 @@ Output the size of the enumeration or the number of its elements.
 
 Copy code
 
-void printTimeSlice(const ISHCTimeSliceEnumeratorPtr& p_pShcTimeSliceEnum)
+void printTimeSlice(const ISHCTimeSliceEnumeratorPtr&amp; p_pShcTimeSliceEnum)
 
 {
 
    uint32_t nCout = 0;
 
-   p_pShcTimeSliceEnum->Count(&nCout);
+   p_pShcTimeSliceEnum-&gt;Count(&amp;nCout);
 
-   for (uint32_t nIndex = 0; nIndex < nCout; nIndex++)
+   for (uint32_t nIndex = 0; nIndex &lt; nCout; nIndex++)
 
    {
 
-      p_pShcTimeSliceEnum->MoveNext();
+      p_pShcTimeSliceEnum-&gt;MoveNext();
 
-      cout << endl;
+      cout &lt;&lt; endl;
 
       ISHCTimeSlicePtr pTimeSlice;
 
-      p_pShcTimeSliceEnum->Current(&pTimeSlice);
+      p_pShcTimeSliceEnum-&gt;Current(&amp;pTimeSlice);
 
       CCfString strCategoryName;
 
-      pTimeSlice->GetCategory(&strCategoryName);
+      pTimeSlice-&gt;GetCategory(&amp;strCategoryName);
 
-      std::cout << "Category= " << strCategoryName.ToUTF8().c_str() << std::endl;
+      std::cout &lt;&lt; "Category= " &lt;&lt; strCategoryName.ToUTF8().c_str() &lt;&lt; std::endl;
 
       CCfTimeSpan64 tsDuration;
 
-      pTimeSlice->GetDuration(&tsDuration);
+      pTimeSlice-&gt;GetDuration(&amp;tsDuration);
 
       CCfString strDuration = tsDuration.GetTimeSpanString();
 
-      std::cout << "Durations= " << strDuration.ToUTF8().c_str() << std::endl;
+      std::cout &lt;&lt; "Durations= " &lt;&lt; strDuration.ToUTF8().c_str() &lt;&lt; std::endl;
 
       CCfDateTime64 dtStartTime;
 
-      pTimeSlice->GetStartTime(&dtStartTime);
+      pTimeSlice-&gt;GetStartTime(&amp;dtStartTime);
 
       CCfString strStarttime = dtStartTime.GetDateTimeString(false);
 
-      std::cout << "Start Time= " << strStarttime.ToUTF8().c_str() << std::endl;
+      std::cout &lt;&lt; "Start Time= " &lt;&lt; strStarttime.ToUTF8().c_str() &lt;&lt; std::endl;
 
    }
 
@@ -19045,25 +19045,25 @@ Example:
 
 ICfMapIDToVariantPtr pComments;
 
-pShcshift->GetComments(&pComments);
+pShcshift-&gt;GetComments(&amp;pComments);
 
 uint32_t nCount = 0;
 
-pComments->Count(&nCount);
+pComments-&gt;Count(&amp;nCount);
 
-for (uint32_t nIndex1 = 0; nIndex1 < nCount; nIndex1++)
+for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount; nIndex1++)
 
 {
 
    int32_t nLanguageID;
 
-   pComments->KeyAt(nIndex1, &nLanguageID);
+   pComments-&gt;KeyAt(nIndex1, &amp;nLanguageID);
 
    CCfVariant strComments;
 
-   pComments->ValueAt(nLanguageID, &strComments);
+   pComments-&gt;ValueAt(nLanguageID, &amp;strComments);
 
-   std::cout << "LangauageID =" << nLanguageID << " Comments=" << CCfSmartString(strComments).ToUTF8().c_str() << std::endl;
+   std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " Comments=" &lt;&lt; CCfSmartString(strComments).ToUTF8().c_str() &lt;&lt; std::endl;
 
 }
 
@@ -19181,191 +19181,191 @@ Output the size of the enumeration or the number of its elements.
 
 Copy code
 
-void PrintDay(const ISHCDayEnumeratorPtr& p_pShcdayEnum)
+void PrintDay(const ISHCDayEnumeratorPtr&amp; p_pShcdayEnum)
 
 {
 
    uint32_t nCount = 0;
 
-   p_pShcdayEnum->Count(&nCount);
+   p_pShcdayEnum-&gt;Count(&amp;nCount);
 
-   for (uint32_t nIndex = 0; nIndex < nCount; nIndex++)
+   for (uint32_t nIndex = 0; nIndex &lt; nCount; nIndex++)
 
    {
 
-      cout << endl;
+      cout &lt;&lt; endl;
 
-      p_pShcdayEnum->MoveNext();
+      p_pShcdayEnum-&gt;MoveNext();
 
       ISHCDayPtr pShcday;
 
-      p_pShcdayEnum->Current(&pShcday);
+      p_pShcdayEnum-&gt;Current(&amp;pShcday);
 
       CCfString strDaytemplate;
 
-      pShcday->GetDayTemplate(&strDaytemplate);
+      pShcday-&gt;GetDayTemplate(&amp;strDaytemplate);
 
-      cout << "DayTemplate= " << strDaytemplate.ToUTF8().c_str() << endl;
+      cout &lt;&lt; "DayTemplate= " &lt;&lt; strDaytemplate.ToUTF8().c_str() &lt;&lt; endl;
 
       ICfMapIDToVariantPtr pComments;
 
-      pShcday->GetComments(&pComments);
+      pShcday-&gt;GetComments(&amp;pComments);
 
-      std::cout << "comments:-" << std::endl << std::endl;
+      std::cout &lt;&lt; "comments:-" &lt;&lt; std::endl &lt;&lt; std::endl;
 
       uint32_t nCount1 = 0;
 
-      pComments->Count(&nCount1);
+      pComments-&gt;Count(&amp;nCount1);
 
-      for (uint32_t nIndex1 = 0; nIndex1 < nCount1; nIndex1++)
+      for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount1; nIndex1++)
 
       {
 
          int32_t nLanguageID;
 
-         pComments->KeyAt(nIndex1, &nLanguageID);
+         pComments-&gt;KeyAt(nIndex1, &amp;nLanguageID);
 
          CCfVariant strComments;
 
-         pComments->ValueAt(nLanguageID, &strComments);
+         pComments-&gt;ValueAt(nLanguageID, &amp;strComments);
 
-         std::cout << "LangauageID = " << nLanguageID << " Comments= " << CCfSmartString(strComments).ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "LangauageID = " &lt;&lt; nLanguageID &lt;&lt; " Comments= " &lt;&lt; CCfSmartString(strComments).ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
       CFBOOL bIsCustomized;
 
-      pShcday->GetIsCustomized(&bIsCostomized);
+      pShcday-&gt;GetIsCustomized(&amp;bIsCostomized);
 
-      cout << "IsCustomized=" << (uint32_t)bIsCostomized << endl;
+      cout &lt;&lt; "IsCustomized=" &lt;&lt; (uint32_t)bIsCostomized &lt;&lt; endl;
 
       CCfDateTime64 dtStartTime;
 
-      pShcday->GetStartTime(&dtStartTime);
+      pShcday-&gt;GetStartTime(&amp;dtStartTime);
 
-      cout << "StartTime= " << dtStartTime.GetDateTimeString(false).ToUTF8().c_str() << endl;
+      cout &lt;&lt; "StartTime= " &lt;&lt; dtStartTime.GetDateTimeString(false).ToUTF8().c_str() &lt;&lt; endl;
 
       ISHCShiftEnumeratorPtr pDayShifts;
 
-      pShcday->GetShifts(&pDayShifts);
+      pShcday-&gt;GetShifts(&amp;pDayShifts);
 
       //printShift(pDayShifts);
 
       uint32_t nCout = 0;
 
-      pDayShifts->Count(&nCout);
+      pDayShifts-&gt;Count(&amp;nCout);
 
-      for (uint32_t nIndex = 0; nIndex < nCout; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nCout; nIndex++)
 
       {
 
-         cout << endl;
+         cout &lt;&lt; endl;
 
-         pDayShifts->MoveNext();
+         pDayShifts-&gt;MoveNext();
 
          ISHCShiftPtr pShcshift;
 
-         pDayShifts->Current(&pShcshift);
+         pDayShifts-&gt;Current(&amp;pShcshift);
 
          CCfString strshiftTemplateName;
 
-         pShcshift->GetShiftTemplate(&strshiftTemplateName);
+         pShcshift-&gt;GetShiftTemplate(&amp;strshiftTemplateName);
 
-         std::cout << "ShiftTemplateName= " << strshiftTemplateName.ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "ShiftTemplateName= " &lt;&lt; strshiftTemplateName.ToUTF8().c_str() &lt;&lt; std::endl;
 
          CCfTimeSpan64 tsDuration;
 
-         pShcshift->GetDuration(&tsDuration);
+         pShcshift-&gt;GetDuration(&amp;tsDuration);
 
          CCfString strDuration = tsDuration.GetTimeSpanString();
 
-         std::cout << "Durations= " << strDuration.ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "Durations= " &lt;&lt; strDuration.ToUTF8().c_str() &lt;&lt; std::endl;
 
          CFBOOL bIsCustomised;
 
-         pShcshift->GetIsCustomized(&bIsCustomised);
+         pShcshift-&gt;GetIsCustomized(&amp;bIsCustomised);
 
-         std::cout << "Is Customised= " << (uint32_t)bIsCustomised << std::endl;
+         std::cout &lt;&lt; "Is Customised= " &lt;&lt; (uint32_t)bIsCustomised &lt;&lt; std::endl;
 
          CFENUM ndeltaKind;
 
-         pShcshift->GetDeltaKind(&ndeltaKind);
+         pShcshift-&gt;GetDeltaKind(&amp;ndeltaKind);
 
-         std::cout << "deltaKind = " << ndeltaKind << std::endl;
+         std::cout &lt;&lt; "deltaKind = " &lt;&lt; ndeltaKind &lt;&lt; std::endl;
 
          uint32_t nShiftId;
 
-         pShcshift->GetShiftId(&nShiftId);
+         pShcshift-&gt;GetShiftId(&amp;nShiftId);
 
-         std::cout << "ShiftId = " << nShiftId << std::endl;
+         std::cout &lt;&lt; "ShiftId = " &lt;&lt; nShiftId &lt;&lt; std::endl;
 
          ICfMapIDToVariantPtr pComments;
 
-         pShcshift->GetComments(&pComments);
+         pShcshift-&gt;GetComments(&amp;pComments);
 
-         std::cout << "comments:-" << std::endl << std::endl;
+         std::cout &lt;&lt; "comments:-" &lt;&lt; std::endl &lt;&lt; std::endl;
 
          uint32_t nCount = 0;
 
-         pComments->Count(&nCount);
+         pComments-&gt;Count(&amp;nCount);
 
-         for (uint32_t nIndex1 = 0; nIndex1 < nCount; nIndex1++)
+         for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount; nIndex1++)
 
          {
 
             int32_t nLanguageID;
 
-            pComments->KeyAt(nIndex1, &nLanguageID);
+            pComments-&gt;KeyAt(nIndex1, &amp;nLanguageID);
 
             CCfVariant strComments;
 
-            pComments->ValueAt(nLanguageID, &strComments);
+            pComments-&gt;ValueAt(nLanguageID, &amp;strComments);
 
-            std::cout << "LangauageID =" << nLanguageID << " Comments=" << CCfSmartString(strComments).ToUTF8().c_str() << std::endl;
+            std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " Comments=" &lt;&lt; CCfSmartString(strComments).ToUTF8().c_str() &lt;&lt; std::endl;
 
          }
 
          ISHCTimeSliceEnumeratorPtr pShiftTimesliceEnum;
 
-         pShcshift->GetTimeSlices(&pShiftTimesliceEnum);
+         pShcshift-&gt;GetTimeSlices(&amp;pShiftTimesliceEnum);
 
          uint32_t nCout = 0;
 
-         pShiftTimesliceEnum->Count(&nCout);
+         pShiftTimesliceEnum-&gt;Count(&amp;nCout);
 
-         for (uint32_t nIndex = 0; nIndex < nCout; nIndex++)
+         for (uint32_t nIndex = 0; nIndex &lt; nCout; nIndex++)
 
          {
 
-            pShiftTimesliceEnum->MoveNext();
+            pShiftTimesliceEnum-&gt;MoveNext();
 
-            cout << endl;
+            cout &lt;&lt; endl;
 
             ISHCTimeSlicePtr pTimeSlice;
 
-            pShiftTimesliceEnum->Current(&pTimeSlice);
+            pShiftTimesliceEnum-&gt;Current(&amp;pTimeSlice);
 
             CCfString strCategoryName;
 
-            pTimeSlice->GetCategory(&strCategoryName);
+            pTimeSlice-&gt;GetCategory(&amp;strCategoryName);
 
-            std::cout << "Category= " << strCategoryName.ToUTF8().c_str() << std::endl;
+            std::cout &lt;&lt; "Category= " &lt;&lt; strCategoryName.ToUTF8().c_str() &lt;&lt; std::endl;
 
             CCfTimeSpan64 tsDuration;
 
-            pTimeSlice->GetDuration(&tsDuration);
+            pTimeSlice-&gt;GetDuration(&amp;tsDuration);
 
             CCfString strDuration = tsDuration.GetTimeSpanString();
 
-            std::cout << "Durations= " << strDuration.ToUTF8().c_str() << std::endl;
+            std::cout &lt;&lt; "Durations= " &lt;&lt; strDuration.ToUTF8().c_str() &lt;&lt; std::endl;
 
             CCfDateTime64 dtStartTime;
 
-            pTimeSlice->GetStartTime(&dtStartTime);
+            pTimeSlice-&gt;GetStartTime(&amp;dtStartTime);
 
             CCfString strStarttime = dtStartTime.GetDateTimeString(false);
 
-            std::cout << "Start Time= " << strStarttime.ToUTF8().c_str() << std::endl;
+            std::cout &lt;&lt; "Start Time= " &lt;&lt; strStarttime.ToUTF8().c_str() &lt;&lt; std::endl;
 
          }
 
@@ -19419,7 +19419,7 @@ st2.cHours = st2.cHours - 1;
 
 CCfDateTime64 dt2;
 
-dt2.SetFromDateTimeStruct(&st2);
+dt2.SetFromDateTimeStruct(&amp;st2);
 
 return dt.GetDifference(dt2);
 
@@ -19447,7 +19447,7 @@ st.sMicroSeconds = 0;
 
 st.sMilliSeconds = 0;
 
-dt.SetFromDateTimeStruct(&st);
+dt.SetFromDateTimeStruct(&amp;st);
 
 return dt;
 
@@ -19455,7 +19455,7 @@ return dt;
 
 ISHCDayEnumeratorPtr pDayEnum; // Get day instances for a timespan of three days
 
-CFRESULT hr = pShcDayProvider->Browse(GetStartoftheDay() - (Get1Hour() * 24), GetStartoftheDay() + (Get1Hour() * 48), &pDayEnum);
+CFRESULT hr = pShcDayProvider-&gt;Browse(GetStartoftheDay() - (Get1Hour() * 24), GetStartoftheDay() + (Get1Hour() * 48), &amp;pDayEnum);
 
 **"Create" method**
 
@@ -19481,57 +19481,57 @@ void CreateDayWithShift()
 
    ICfArrayIUnknownPtr pDays;
 
-   m_pShcDayTemplateProvider->Browse(CF_FALSE, &pShcDayTemplates);
+   m_pShcDayTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcDayTemplates);
 
    uint32_t nCount = 0;
 
-   pShcDayTemplates->Count(&nCount);
+   pShcDayTemplates-&gt;Count(&amp;nCount);
 
-   pShcDayTemplates->MoveNext();
+   pShcDayTemplates-&gt;MoveNext();
 
    ISHCDayTemplatePtr pShcDayTemplate;
 
-   pShcDayTemplates->Current(&pShcDayTemplate);
+   pShcDayTemplates-&gt;Current(&amp;pShcDayTemplate);
 
    CCfString strDayTemplateName;
 
-   pShcDayTemplate->GetName(&strDayTemplateName);
+   pShcDayTemplate-&gt;GetName(&amp;strDayTemplateName);
 
    ICfUnknownPtr pUnk;
 
-   m_pCalendar->GetObject(ODK_SHC_DAY, &pUnk);
+   m_pCalendar-&gt;GetObject(ODK_SHC_DAY, &amp;pUnk);
 
    ISHCDayPtr pShcDay = (ISHCDayPtr)pUnk;
 
-   pShcDay->SetDayTemplate(strDayTemplateName);
+   pShcDay-&gt;SetDayTemplate(strDayTemplateName);
 
    CCfDateTime64 dt = GetStartoftheDay();
 
-   pShcDay->SetStartTime(dt);
+   pShcDay-&gt;SetStartTime(dt);
 
-   pShcDay->SetComment(1033, CCfString(L"DayComments"));
+   pShcDay-&gt;SetComment(1033, CCfString(L"DayComments"));
 
    arrDays.Append(pShcDay);
 
-   arrDays.DetachEnumerator(&pDays);
+   arrDays.DetachEnumerator(&amp;pDays);
 
-   m_pShcDayProvider->Create(pDays);
+   m_pShcDayProvider-&gt;Create(pDays);
 
    ISHCShiftTemplateEnumeratorPtr pShcShiftTemplateEnum;
 
-   m_pShcShiftTemplateProvider->Browse(CF_FALSE, &pShcShiftTemplateEnum);
+   m_pShcShiftTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcShiftTemplateEnum);
 
-   pShcShiftTemplateEnum->MoveNext();
+   pShcShiftTemplateEnum-&gt;MoveNext();
 
    ISHCShiftTemplatePtr pshcShiftTemplate;
 
-   pShcShiftTemplateEnum->Current(&pshcShiftTemaplate);
+   pShcShiftTemplateEnum-&gt;Current(&amp;pshcShiftTemaplate);
 
    ISHCShiftPtr pShcdayShift;
 
    CCfTimeSpan64 starttime = Get1Hour() * 10;
 
-   pShcDay->CreateShift(pshcShiftTemaplate, starttime, &pShcdayShift);
+   pShcDay-&gt;CreateShift(pshcShiftTemaplate, starttime, &amp;pShcdayShift);
 
 }
 
@@ -19555,9 +19555,9 @@ void UpdateDayWithShift()
 
    ISHCDayEnumeratorPtr pDayEnum;
 
-   m_pShcDayProvider->Browse(GetStartoftheDay() - (Get1Hour() * 24), GetStartoftheDay() + (Get1Hour() * 24), &pDayEnum);
+   m_pShcDayProvider-&gt;Browse(GetStartoftheDay() - (Get1Hour() * 24), GetStartoftheDay() + (Get1Hour() * 24), &amp;pDayEnum);
 
-   pDayEnum->MoveNext();
+   pDayEnum-&gt;MoveNext();
 
    CCfArrayIUnknown ArrayDays;
 
@@ -19565,41 +19565,41 @@ void UpdateDayWithShift()
 
    ISHCDayPtr pShcDay;
 
-   pDayEnum->Current(&pShcDay);
+   pDayEnum-&gt;Current(&amp;pShcDay);
 
    CCfDateTime64 dt;
 
-   pShcDay->GetStartTime(&dt);
+   pShcDay-&gt;GetStartTime(&amp;dt);
 
    dt.AddTimeSpan(Get1Hour());
 
-   pShcDay->SetStartTime(dt);//Update StartTime Not Supported
+   pShcDay-&gt;SetStartTime(dt);//Update StartTime Not Supported
 
-   pShcDay->SetComment(1033, CCfString(L"DayComment"));
+   pShcDay-&gt;SetComment(1033, CCfString(L"DayComment"));
 
    ISHCShiftEnumeratorPtr pShiftEnum;
 
-   pShcDay->GetShifts(&pShiftEnum);
+   pShcDay-&gt;GetShifts(&amp;pShiftEnum);
 
-   pShiftEnum->MoveNext();
+   pShiftEnum-&gt;MoveNext();
 
    ISHCShiftPtr pShcShift;
 
-   pShiftEnum->Current(&pShcShift);
+   pShiftEnum-&gt;Current(&amp;pShcShift);
 
    CCfTimeSpan64 ts;
 
-   pShcShift->GetDuration(&ts);
+   pShcShift-&gt;GetDuration(&amp;ts);
 
-   pShcShift->SetDuration(ts + Get1Hour());
+   pShcShift-&gt;SetDuration(ts + Get1Hour());
 
-   pShcShift->SetComment(1033, CCfString(L"UpdatedShiftComments"));
+   pShcShift-&gt;SetComment(1033, CCfString(L"UpdatedShiftComments"));
 
    ArrayDays.Append(pShcDay);
 
-   ArrayDays.DetachEnumerator(&pArrayDays);
+   ArrayDays.DetachEnumerator(&amp;pArrayDays);
 
-   m_pShcDayProvider->Update(pArrayDays);
+   m_pShcDayProvider-&gt;Update(pArrayDays);
 
 }
 
@@ -19623,45 +19623,45 @@ void DeleteDayWithShift()
 
    ISHCDayEnumeratorPtr pDayEnum;
 
-   m_pShcDayProvider->Browse(GetStartoftheDay() - (Get1Hour() * 24), GetStartoftheDay() + (Get1Hour() * 48), &pDayEnum);
+   m_pShcDayProvider-&gt;Browse(GetStartoftheDay() - (Get1Hour() * 24), GetStartoftheDay() + (Get1Hour() * 48), &amp;pDayEnum);
 
    uint32_t nSize = 0;
 
-   pDayEnum->Count(&nSize);
+   pDayEnum-&gt;Count(&amp;nSize);
 
    CCfArrayIUnknown ArrayDays;
 
    ICfArrayIUnknownPtr pArrayDays;
 
-   for (uint32_t nIdnex = 0;nIdnex < nSize;nIdnex++)
+   for (uint32_t nIdnex = 0;nIdnex &lt; nSize;nIdnex++)
 
    {
 
-      pDayEnum->MoveNext();
+      pDayEnum-&gt;MoveNext();
 
       ISHCDayPtr pShcDay;
 
-      pDayEnum->Current(&pShcDay);
+      pDayEnum-&gt;Current(&amp;pShcDay);
 
       ISHCShiftEnumeratorPtr pShiftEnum;
 
-      pShcDay->GetShifts(&pShiftEnum);
+      pShcDay-&gt;GetShifts(&amp;pShiftEnum);
 
-      pShiftEnum->MoveNext();
+      pShiftEnum-&gt;MoveNext();
 
       ISHCShiftPtr pShcShift;
 
-      pShiftEnum->Current(&pShcShift);
+      pShiftEnum-&gt;Current(&amp;pShcShift);
 
-      pShcDay->DeleteShift(pShcShift);
+      pShcDay-&gt;DeleteShift(pShcShift);
 
       ArrayDays.Append(pShcDay);
 
    }
 
-   ArrayDays.DetachEnumerator(&pArrayDays);
+   ArrayDays.DetachEnumerator(&amp;pArrayDays);
 
-   m_pShcDayProvider->Delete(pArrayDays);
+   m_pShcDayProvider-&gt;Delete(pArrayDays);
 
 }
 
@@ -19705,27 +19705,27 @@ Example:
 
 ICfMapIDToVariantPtr pDisplayNames;
 
-pShcDayTemplate->GetDisplayNames(&pDisplayNames);
+pShcDayTemplate-&gt;GetDisplayNames(&amp;pDisplayNames);
 
-std::cout << "DisplayNames::" << std::endl << std::endl;
+std::cout &lt;&lt; "DisplayNames::" &lt;&lt; std::endl &lt;&lt; std::endl;
 
 uint32_t nCount2 = 0;
 
-pDisplayNames->Count(&nCount2);
+pDisplayNames-&gt;Count(&amp;nCount2);
 
-for (uint32_t nIndex2 = 0; nIndex2 < nCount2; nIndex2++)
+for (uint32_t nIndex2 = 0; nIndex2 &lt; nCount2; nIndex2++)
 
 {
 
    int32_t nLanguageID;
 
-   pDisplayNames->KeyAt(nIndex2, &nLanguageID);
+   pDisplayNames-&gt;KeyAt(nIndex2, &amp;nLanguageID);
 
    CCfVariant strDIsplayname;
 
-   pDisplayNames->ValueAt(nLanguageID, &strDIsplayname);
+   pDisplayNames-&gt;ValueAt(nLanguageID, &amp;strDIsplayname);
 
-   std::cout << "LangauageID =" << nLanguageID << " DisplayName=" << CCfSmartString(strDIsplayname).ToUTF8().c_str() << std::endl;
+   std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " DisplayName=" &lt;&lt; CCfSmartString(strDIsplayname).ToUTF8().c_str() &lt;&lt; std::endl;
 
 }
 
@@ -19843,7 +19843,7 @@ Example:
 
 ISHCDayTemplateEnumeratorPtr pShcDayTemplates;
 
-pShcDayTemplateProvider->Browse(CF_FALSE, &pShcDayTemplates);
+pShcDayTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcDayTemplates);
 
 **"Create" method**
 
@@ -19865,7 +19865,7 @@ void CreateDayTemplateWithShift()
 
    ICfUnknownPtr pUnk;
 
-   m_pCalendar->GetObject(ODK_SHC_DAY_TEMPLATE, &pUnk);
+   m_pCalendar-&gt;GetObject(ODK_SHC_DAY_TEMPLATE, &amp;pUnk);
 
    CCfArrayIUnknown ArrayTemplate;
 
@@ -19873,35 +19873,35 @@ void CreateDayTemplateWithShift()
 
    ISHCDayTemplatePtr pShcDayTemplate = (ISHCDayTemplatePtr)pUnk;
 
-   pShcDayTemplate->SetName(CCfString(L"DaytemplateName"));
+   pShcDayTemplate-&gt;SetName(CCfString(L"DaytemplateName"));
 
-   pShcDayTemplate->SetDisplayName(1033, CCfString(L"DayTemplateDisplayName"));
+   pShcDayTemplate-&gt;SetDisplayName(1033, CCfString(L"DayTemplateDisplayName"));
 
-   pShcDayTemplate->SetDescription(1033, CCfString(L"DayTemplate Descriptions"));
+   pShcDayTemplate-&gt;SetDescription(1033, CCfString(L"DayTemplate Descriptions"));
 
    ArrayTemplate.Append(pShcDayTemplate);
 
-   ArrayTemplate.DetachEnumerator(&pArrayTemplate);
+   ArrayTemplate.DetachEnumerator(&amp;pArrayTemplate);
 
-   m_pShcDayTemplateProvider->Create(pArrayTemplate);
+   m_pShcDayTemplateProvider-&gt;Create(pArrayTemplate);
 
    ISHCShiftTemplateEnumeratorPtr pShcShiftTemplates;
 
-   m_pShcShiftTemplateProvider->Browse(CF_FALSE, &pShcShiftTemplates);
+   m_pShcShiftTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcShiftTemplates);
 
-   pShcShiftTemplates->MoveNext();
+   pShcShiftTemplates-&gt;MoveNext();
 
    ISHCShiftTemplatePtr pShcshiftTemplate;
 
-   pShcShiftTemplates->Current(&pShcshiftTemplate);
+   pShcShiftTemplates-&gt;Current(&amp;pShcshiftTemplate);
 
    CCfString strShiftTemplateName;
 
-   pShcshiftTemplate->GetName(&strShiftTemplateName);
+   pShcshiftTemplate-&gt;GetName(&amp;strShiftTemplateName);
 
    ISHCShiftPtr pShift;
 
-   pShcDayTemplate->CreateShift(pShcshiftTemplate, Get1Hour() * 1, &pShift);
+   pShcDayTemplate-&gt;CreateShift(pShcshiftTemplate, Get1Hour() * 1, &amp;pShift);
 
 }
 
@@ -19925,7 +19925,7 @@ void UpdateDayTemplateWithShift()
 
    ISHCDayTemplateEnumeratorPtr pShcDayTemplates;
 
-   hr = m_pShcDayTemplateProvider->Browse(false, &pShcDayTemplates);
+   hr = m_pShcDayTemplateProvider-&gt;Browse(false, &amp;pShcDayTemplates);
 
    CCfArrayIUnknown ArrayDayTemplate;
 
@@ -19933,61 +19933,61 @@ void UpdateDayTemplateWithShift()
 
    uint32_t nCount = 0;
 
-   pShcDayTemplates->Count(&nCount);
+   pShcDayTemplates-&gt;Count(&amp;nCount);
 
-   for (uint32_t i = 0; i < nCount; i++)
+   for (uint32_t i = 0; i &lt; nCount; i++)
 
    {
 
-      pShcDayTemplates->MoveNext();
+      pShcDayTemplates-&gt;MoveNext();
 
       ISHCDayTemplatePtr pShcDayTemplate;
 
-      pShcDayTemplates->Current(&pShcDayTemplate);
+      pShcDayTemplates-&gt;Current(&amp;pShcDayTemplate);
 
-      pShcDayTemplate->SetName(CCfString(L"UpdatedDayTemplateName"));
+      pShcDayTemplate-&gt;SetName(CCfString(L"UpdatedDayTemplateName"));
 
       ISHCShiftEnumeratorPtr pShiftEnum;
 
-      pShcDayTemplate->GetShifts(&pShiftEnum);
+      pShcDayTemplate-&gt;GetShifts(&amp;pShiftEnum);
 
       uint32_t nlength = 0;
 
-      pShiftEnum->Count(&nlength);
+      pShiftEnum-&gt;Count(&amp;nlength);
 
-      for (uint32_t nIndex = 0; nIndex < nlenght; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nlenght; nIndex++)
 
       {
 
-         pShiftEnum->MoveNext();
+         pShiftEnum-&gt;MoveNext();
 
          ISHCShiftPtr pShcShift;
 
-         pShiftEnum->Current(&pShcShift);
+         pShiftEnum-&gt;Current(&amp;pShcShift);
 
          ISHCTimeSliceEnumeratorPtr pShcTimeSliceEnum;
 
-         pShcShift->GetTimeSlices(&pShcTimeSliceEnum);
+         pShcShift-&gt;GetTimeSlices(&amp;pShcTimeSliceEnum);
 
-         pShcShift->SetDuration(Get1Hour() * 8);
+         pShcShift-&gt;SetDuration(Get1Hour() * 8);
 
-         pShcShift->SetComment(1033, CCfString("ShiftComment"));
+         pShcShift-&gt;SetComment(1033, CCfString("ShiftComment"));
 
          uint32_t nCount1 = 0;
 
-         pShcTimeSliceEnum->Count(&nCount1);
+         pShcTimeSliceEnum-&gt;Count(&amp;nCount1);
 
-         for (uint32_t nIndex1 = 0; nIndex1 < nCount1; nIndex1++)
+         for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount1; nIndex1++)
 
          {
 
-            pShcTimeSliceEnum->MoveNext();
+            pShcTimeSliceEnum-&gt;MoveNext();
 
             ISHCTimeSlicePtr pShctimeslice;
 
-            pShcTimeSliceEnum->Current(&pShctimeslice);
+            pShcTimeSliceEnum-&gt;Current(&amp;pShctimeslice);
 
-            pShctimeslice->SetCategory(CCfString(L"Working"));
+            pShctimeslice-&gt;SetCategory(CCfString(L"Working"));
 
          }
 
@@ -19995,9 +19995,9 @@ void UpdateDayTemplateWithShift()
 
    }
 
-   ArrayDayTemplate.DetachEnumerator(&pArrayDayTemplate);
+   ArrayDayTemplate.DetachEnumerator(&amp;pArrayDayTemplate);
 
-  m_pShcDayTemplateProvider->Update(pArrayDayTemplate);
+  m_pShcDayTemplateProvider-&gt;Update(pArrayDayTemplate);
 
 }
 
@@ -20021,7 +20021,7 @@ void DeleteDaytemplateWithShift()
 
    ISHCDayTemplateEnumeratorPtr pShcDayTemplates;
 
-   m_pShcDayTemplateProvider->Browse(CF_FALSE, &pShcDayTemplates);
+   m_pShcDayTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcDayTemplates);
 
    CCfArrayIUnknown ArrayDayTemplate;
 
@@ -20029,45 +20029,45 @@ void DeleteDaytemplateWithShift()
 
    uint32_t nCount = 0;
 
-   pShcDayTemplates->Count(&nCount);
+   pShcDayTemplates-&gt;Count(&amp;nCount);
 
-   for (uint32_t i = 0; i < nCount; i++)
+   for (uint32_t i = 0; i &lt; nCount; i++)
 
    {
 
-      pShcDayTemplates->MoveNext();
+      pShcDayTemplates-&gt;MoveNext();
 
       ISHCDayTemplatePtr pShcDayTemplate;
 
-      pShcDayTemplates->Current(&pShcDayTemplate);
+      pShcDayTemplates-&gt;Current(&amp;pShcDayTemplate);
 
       ISHCShiftEnumeratorPtr pShiftEnum;
 
-      pShcDayTemplate->GetShifts(&pShiftEnum);
+      pShcDayTemplate-&gt;GetShifts(&amp;pShiftEnum);
 
       uint32_t nlength = 0;
 
-      pShiftEnum->Count(&nlength);
+      pShiftEnum-&gt;Count(&amp;nlength);
 
-      for (uint32_t nIndex = 0; nIndex < nlenght; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nlenght; nIndex++)
 
       {
 
-         pShiftEnum->MoveNext();
+         pShiftEnum-&gt;MoveNext();
 
          ISHCShiftPtr pShcShift;
 
-         pShiftEnum->Current(&pShcShift);
+         pShiftEnum-&gt;Current(&amp;pShcShift);
 
-         pShcDayTemplate->DeleteShift(pShcShift);
+         pShcDayTemplate-&gt;DeleteShift(pShcShift);
 
       }
 
       ArrayDayTemplate.Append(pShcDayTemplate);
 
-      ArrayDayTemplate.DetachEnumerator(&pArrayDayTemplate);
+      ArrayDayTemplate.DetachEnumerator(&amp;pArrayDayTemplate);
 
-      m_pShcDayTemplateProvider->Delete(pArrayDayTemplate);
+      m_pShcDayTemplateProvider-&gt;Delete(pArrayDayTemplate);
 
    }
 
@@ -20256,139 +20256,139 @@ Supplies the number of shift templates in the list.
 
 Copy code
 
-void PrintShiftTemplate(const ISHCShiftTemplateEnumeratorPtr& p_pShcShiftTemplateEnum)
+void PrintShiftTemplate(const ISHCShiftTemplateEnumeratorPtr&amp; p_pShcShiftTemplateEnum)
 
 {
 
    uint32_t nCout = 0;
 
-   p_pShcShiftTemplateEnum->Count(&nCout);
+   p_pShcShiftTemplateEnum-&gt;Count(&amp;nCout);
 
-   for (uint32_t nIndex = 0; nIndex < nCout; nIndex++)
+   for (uint32_t nIndex = 0; nIndex &lt; nCout; nIndex++)
 
    {
 
-      cout << endl;
+      cout &lt;&lt; endl;
 
-      p_pShcShiftTemplateEnum->MoveNext();
+      p_pShcShiftTemplateEnum-&gt;MoveNext();
 
       ISHCShiftTemplatePtr pShcShiftTemplate;
 
-      p_pShcShiftTemplateEnum->Current(&pShcShiftTemplate);
+      p_pShcShiftTemplateEnum-&gt;Current(&amp;pShcShiftTemplate);
 
       CCfString strName;
 
-      pShcShiftTemplate->GetName(&strName);
+      pShcShiftTemplate-&gt;GetName(&amp;strName);
 
-      std::cout << "Name=" << strName.ToUTF8().c_str() << std::endl;
+      std::cout &lt;&lt; "Name=" &lt;&lt; strName.ToUTF8().c_str() &lt;&lt; std::endl;
 
       CCfTimeSpan64 tsDuration;
 
-      pShcShiftTemplate->GetDuration(&tsdurantion);
+      pShcShiftTemplate-&gt;GetDuration(&amp;tsdurantion);
 
       CCfString strDuration = tsdurantion.GetTimeSpanString();
 
-      std::cout << "Duration=" << strDuration.ToUTF8().c_str() << std::endl;
+      std::cout &lt;&lt; "Duration=" &lt;&lt; strDuration.ToUTF8().c_str() &lt;&lt; std::endl;
 
       CFBOOL bIsDeleted;
 
-      pShcShiftTemplate->GetIsDeleted(&bIsDeleted);
+      pShcShiftTemplate-&gt;GetIsDeleted(&amp;bIsDeleted);
 
-      std::cout << "ISDeleted=" << (uint32_t)bIsDeleted << std::endl;
+      std::cout &lt;&lt; "ISDeleted=" &lt;&lt; (uint32_t)bIsDeleted &lt;&lt; std::endl;
 
       ICfMapIDToVariantPtr pDescriptions;
 
-      pShcShiftTemplate->GetDescriptions(&pDescriptions);
+      pShcShiftTemplate-&gt;GetDescriptions(&amp;pDescriptions);
 
-      std::cout << "Descriptions=" << std::endl << std::endl;
+      std::cout &lt;&lt; "Descriptions=" &lt;&lt; std::endl &lt;&lt; std::endl;
 
       uint32_t nCount = 0;
 
-      pDescriptions->Count(&nCount);
+      pDescriptions-&gt;Count(&amp;nCount);
 
-      for (uint32_t nIndex1 = 0; nIndex1 < nCount; nIndex1++)
+      for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount; nIndex1++)
 
       {
 
          int32_t nLanguageID;
 
-         pDescriptions->KeyAt(nIndex1, &nLanguageID);
+         pDescriptions-&gt;KeyAt(nIndex1, &amp;nLanguageID);
 
          CCfVariant strDescription;
 
-         pDescriptions->ValueAt(nLanguageID, &strDescription);
+         pDescriptions-&gt;ValueAt(nLanguageID, &amp;strDescription);
 
-         std::cout << "LangauageID =" << nLanguageID << " Description=" << CCfSmartString(strDescription).ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " Description=" &lt;&lt; CCfSmartString(strDescription).ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
       ICfMapIDToVariantPtr pDisplayNames;
 
-      pShcShiftTemplate->GetDisplayNames(&pDisplayNames);
+      pShcShiftTemplate-&gt;GetDisplayNames(&amp;pDisplayNames);
 
-      std::cout << "DisplayNames::" << std::endl << std::endl;
+      std::cout &lt;&lt; "DisplayNames::" &lt;&lt; std::endl &lt;&lt; std::endl;
 
       uint32_t nCount = 0;
 
-      pDisplayNames->Count(&nCount);
+      pDisplayNames-&gt;Count(&amp;nCount);
 
-      for (uint32_t nIndex1 = 0; nIndex1 < nCount; nIndex1++)
+      for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount; nIndex1++)
 
       {
 
          int32_t nLanguageID;
 
-         pDisplayNames->KeyAt(nIndex1, &nLanguageID);
+         pDisplayNames-&gt;KeyAt(nIndex1, &amp;nLanguageID);
 
          CCfVariant strDIsplayname;
 
-         pDisplayNames->ValueAt(nLanguageID, &strDIsplayname);
+         pDisplayNames-&gt;ValueAt(nLanguageID, &amp;strDIsplayname);
 
-         std::cout << "LangauageID =" << nLanguageID << " DisplayName=" << CCfSmartString(strDIsplayname).ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " DisplayName=" &lt;&lt; CCfSmartString(strDIsplayname).ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
       ISHCTimeSliceEnumeratorPtr pShiftTemplatetimeSlice;
 
-      pShcShiftTemplate->GetTimeSlices(&pShiftTemplatetimeSlice);
+      pShcShiftTemplate-&gt;GetTimeSlices(&amp;pShiftTemplatetimeSlice);
 
       uint32_t nCout = 0;
 
-      pShiftTemplatetimeSlice->Count(&nCout);
+      pShiftTemplatetimeSlice-&gt;Count(&amp;nCout);
 
-      for (uint32_t nIndex = 0; nIndex < nCout; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nCout; nIndex++)
 
       {
 
-         pShiftTemplatetimeSlice->MoveNext();
+         pShiftTemplatetimeSlice-&gt;MoveNext();
 
-         cout << endl;
+         cout &lt;&lt; endl;
 
          ISHCTimeSlicePtr pTimeSlice;
 
-         pShiftTemplatetimeSlice->Current(&pTimeSlice);
+         pShiftTemplatetimeSlice-&gt;Current(&amp;pTimeSlice);
 
          CCfString strCategoryName;
 
-         pTimeSlice->GetCategory(&strCategoryName);
+         pTimeSlice-&gt;GetCategory(&amp;strCategoryName);
 
-         std::cout << "Category= " << strCategoryName.ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "Category= " &lt;&lt; strCategoryName.ToUTF8().c_str() &lt;&lt; std::endl;
 
          CCfTimeSpan64 tsDuration;
 
-         pTimeSlice->GetDuration(&tsDuration);
+         pTimeSlice-&gt;GetDuration(&amp;tsDuration);
 
          CCfString strDuration = tsDuration.GetTimeSpanString();
 
-         std::cout << "Durations= " << strDuration.ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "Durations= " &lt;&lt; strDuration.ToUTF8().c_str() &lt;&lt; std::endl;
 
          CCfDateTime64 dtStartTime;
 
-         pTimeSlice->GetStartTime(&dtStartTime);
+         pTimeSlice-&gt;GetStartTime(&amp;dtStartTime);
 
          CCfString strStarttime = dtStartTime.GetDateTimeString(false);
 
-         std::cout << "Start Time= " << strStarttime.ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "Start Time= " &lt;&lt; strStarttime.ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
@@ -20423,7 +20423,7 @@ Example:
 
 ISHCDayTemplateEnumeratorPtr pShcDayTemplates;
 
-CFRESULT hr = pShcDayTemplateProvider->Browse(CF_FALSE, &pShcDayTemplates);
+CFRESULT hr = pShcDayTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcDayTemplates);
 
 **"Create" method**
 
@@ -20447,17 +20447,17 @@ void CreateShiftTemplateWithTimeslice()
 
    ICfUnknownPtr pUnk;
 
-   m_pCalendar->GetObject(ODK_SHC_SHIFT_TEMPLATE, &pUnk);
+   m_pCalendar-&gt;GetObject(ODK_SHC_SHIFT_TEMPLATE, &amp;pUnk);
 
    pShcShiftTemplate = (ISHCShiftTemplatePtr)pUnk;
 
-   pShcShiftTemplate->SetName(CCfString(L"ShiftTemplateName"));
+   pShcShiftTemplate-&gt;SetName(CCfString(L"ShiftTemplateName"));
 
-   pShcShiftTemplate->SetDisplayName(1033, CCfString(L"ShiftDisplayName"));
+   pShcShiftTemplate-&gt;SetDisplayName(1033, CCfString(L"ShiftDisplayName"));
 
-   pShcShiftTemplate->SetDescription(1033, CCfString(L"ShiftTemplateDescription"));
+   pShcShiftTemplate-&gt;SetDescription(1033, CCfString(L"ShiftTemplateDescription"));
 
-   pShcShiftTemplate->SetDuration(Get1Hour() * 8);
+   pShcShiftTemplate-&gt;SetDuration(Get1Hour() * 8);
 
    ICfArrayIUnknownPtr pArrayShiftTemplate;
 
@@ -20465,27 +20465,27 @@ void CreateShiftTemplateWithTimeslice()
 
    ArrayShiftTemplate.Append(pShcShiftTemplate);
 
-   ArrayShiftTemplate.DetachEnumerator(&pArrayShiftTemplate);
+   ArrayShiftTemplate.DetachEnumerator(&amp;pArrayShiftTemplate);
 
-   m_pShcShiftTemplateProvider->Create(pArrayShiftTemplate);
+   m_pShcShiftTemplateProvider-&gt;Create(pArrayShiftTemplate);
 
    ICfUnknownPtr pUnkTimeSlice;
 
-   m_pCalendar->GetObject(ODK_SHC_TIME_SLICE, &pUnkTimeSlice);
+   m_pCalendar-&gt;GetObject(ODK_SHC_TIME_SLICE, &amp;pUnkTimeSlice);
 
    ISHCTimeSlicePtr pShcTimeSlice;
 
-   pUnkTimeSlice->QueryInterface(IID_ISHCTimeSlice, (ICfUnknown**)&pShcTimeSlice);
+   pUnkTimeSlice-&gt;QueryInterface(IID_ISHCTimeSlice, (ICfUnknown**)&amp;pShcTimeSlice);
 
-   pShcTimeSlice->SetCategory(CCfString(L"Working"));
+   pShcTimeSlice-&gt;SetCategory(CCfString(L"Working"));
 
-   pShcTimeSlice->SetDuration(Get1Hour() * 1);
+   pShcTimeSlice-&gt;SetDuration(Get1Hour() * 1);
 
    CCfDateTime64 dt = GetStartoftheDay();
 
-   pShcTimeSlice->SetStartTime(dt);
+   pShcTimeSlice-&gt;SetStartTime(dt);
 
-   pShcShiftTemplate->CreateTimeSlice(pShcTimeSlice);
+   pShcShiftTemplate-&gt;CreateTimeSlice(pShcTimeSlice);
 
 }
 
@@ -20509,7 +20509,7 @@ void UpdateShiftTemplateWithTimeSlice()
 
    ISHCShiftTemplateEnumeratorPtr pShcShiftTemplates;
 
-   m_pShcShiftTemplateProvider->Browse(CF_FALSE, &pShcShiftTemplates);
+   m_pShcShiftTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcShiftTemplates);
 
    CCfArrayIUnknown ArrayShiftTemplate;
 
@@ -20517,43 +20517,43 @@ void UpdateShiftTemplateWithTimeSlice()
 
    uint32_t nCount = 0;
 
-   pShcShiftTemplates->Count(&nCount);
+   pShcShiftTemplates-&gt;Count(&amp;nCount);
 
-   for (uint32_t i = 0; i < nCount; i++)
+   for (uint32_t i = 0; i &lt; nCount; i++)
 
    {
 
-      pShcShiftTemplates->MoveNext();
+      pShcShiftTemplates-&gt;MoveNext();
 
       ISHCShiftTemplatePtr pShcShiftTemplate;
 
-      pShcShiftTemplates->Current(&pShcShiftTemplate);
+      pShcShiftTemplates-&gt;Current(&amp;pShcShiftTemplate);
 
-      pShcShiftTemplate->SetDuration(Get1Hour() * 6);
+      pShcShiftTemplate-&gt;SetDuration(Get1Hour() * 6);
 
-      pShcShiftTemplate->SetName(CCfString(L"UpdatedShiftTemplateName"));
+      pShcShiftTemplate-&gt;SetName(CCfString(L"UpdatedShiftTemplateName"));
 
       ISHCTimeSliceEnumeratorPtr pTimeSlilceEnum;
 
-      pShcShiftTemplate->GetTimeSlices(&pTimeSlilceEnum);
+      pShcShiftTemplate-&gt;GetTimeSlices(&amp;pTimeSlilceEnum);
 
       uint32_t nlength = 0;
 
-      pTimeSlilceEnum->Count(&nlength);
+      pTimeSlilceEnum-&gt;Count(&amp;nlength);
 
-      for (uint32_t nIndex = 0; nIndex < nlenght; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nlenght; nIndex++)
 
       {
 
-         pTimeSlilceEnum->MoveNext();
+         pTimeSlilceEnum-&gt;MoveNext();
 
          ISHCTimeSlicePtr pShcTimeSlice;
 
-         pTimeSlilceEnum->Current(&pShcTimeSlice);
+         pTimeSlilceEnum-&gt;Current(&amp;pShcTimeSlice);
 
-         pShcTimeSlice->SetDuration(Get1Hour() * 4);
+         pShcTimeSlice-&gt;SetDuration(Get1Hour() * 4);
 
-         pShcTimeSlice->SetCategory(CCfString(L"Break"));
+         pShcTimeSlice-&gt;SetCategory(CCfString(L"Break"));
 
       }
 
@@ -20561,9 +20561,9 @@ void UpdateShiftTemplateWithTimeSlice()
 
    }
 
-   ArrayShiftTemplate.DetachEnumerator(&pArrayShiftTemplate);
+   ArrayShiftTemplate.DetachEnumerator(&amp;pArrayShiftTemplate);
 
-   m_pShcShiftTemplateProvider->Update(pArrayShiftTemplate);
+   m_pShcShiftTemplateProvider-&gt;Update(pArrayShiftTemplate);
 
 }
 
@@ -20587,7 +20587,7 @@ void DeleteShiftTemplateWithTimeSlice()
 
    ISHCShiftTemplateEnumeratorPtr pShcShiftTemplates;
 
-   m_pShcShiftTemplateProvider->Browse(CF_FALSE, &pShcShiftTemplates);
+   m_pShcShiftTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcShiftTemplates);
 
    CCfArrayIUnknown ArrayShiftTemplate;
 
@@ -20595,37 +20595,37 @@ void DeleteShiftTemplateWithTimeSlice()
 
    uint32_t nCount = 0;
 
-   pShcShiftTemplates->Count(&nCount);
+   pShcShiftTemplates-&gt;Count(&amp;nCount);
 
-   for (uint32_t i = 0; i < nCount; i++)
+   for (uint32_t i = 0; i &lt; nCount; i++)
 
    {
 
-      pShcShiftTemplates->MoveNext();
+      pShcShiftTemplates-&gt;MoveNext();
 
       ISHCShiftTemplatePtr pShcShiftTemplate;
 
-      pShcShiftTemplates->Current(&pShcShiftTemplate);
+      pShcShiftTemplates-&gt;Current(&amp;pShcShiftTemplate);
 
       ISHCTimeSliceEnumeratorPtr pTimeSlilceEnum;
 
-      pShcShiftTemplate->GetTimeSlices(&pTimeSlilceEnum);
+      pShcShiftTemplate-&gt;GetTimeSlices(&amp;pTimeSlilceEnum);
 
       uint32_t nlength = 0;
 
-      pTimeSlilceEnum->Count(&nlength);
+      pTimeSlilceEnum-&gt;Count(&amp;nlength);
 
-      for (uint32_t nIndex = 0; nIndex < nlenght; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nlenght; nIndex++)
 
       {
 
-         pTimeSlilceEnum->MoveNext();
+         pTimeSlilceEnum-&gt;MoveNext();
 
          ISHCTimeSlicePtr pShcTimeSlice;
 
-         pTimeSlilceEnum->Current(&pShcTimeSlice);
+         pTimeSlilceEnum-&gt;Current(&amp;pShcTimeSlice);
 
-         pShcShiftTemplate->DeleteTimeSlice(pShcTimeSlice);
+         pShcShiftTemplate-&gt;DeleteTimeSlice(pShcTimeSlice);
 
       }
 
@@ -20633,9 +20633,9 @@ void DeleteShiftTemplateWithTimeSlice()
 
    }
 
-   ArrayShiftTemplate.DetachEnumerator(&pArrayShiftTemplate);
+   ArrayShiftTemplate.DetachEnumerator(&amp;pArrayShiftTemplate);
 
-   m_pShcShiftTemplateProvider->Delete(pArrayShiftTemplate);
+   m_pShcShiftTemplateProvider-&gt;Delete(pArrayShiftTemplate);
 
 }
 
@@ -20679,51 +20679,51 @@ void CreateTimeSliceUsingShift()
 
    ISHCDayTemplateEnumeratorPtr pShcDayTemplates;
 
-   m_pShcDayTemplateProvider->Browse(CF_FALSE, &pShcDayTemplates);
+   m_pShcDayTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcDayTemplates);
 
    uint32_t nCount = 0;
 
-   pShcDayTemplates->Count(&nCount);
+   pShcDayTemplates-&gt;Count(&amp;nCount);
 
-   pShcDayTemplates->MoveNext();
+   pShcDayTemplates-&gt;MoveNext();
 
    ISHCDayTemplatePtr pShcDayTemplate;
 
-   pShcDayTemplates->Current(&pShcDayTemplate);
+   pShcDayTemplates-&gt;Current(&amp;pShcDayTemplate);
 
    ISHCShiftEnumeratorPtr pShiftEnum;
 
-   pShcDayTemplate->GetShifts(&pShiftEnum);
+   pShcDayTemplate-&gt;GetShifts(&amp;pShiftEnum);
 
    uint32_t nlength = 0;
 
-   pShiftEnum->Count(&nlength);
+   pShiftEnum-&gt;Count(&amp;nlength);
 
-   pShiftEnum->MoveNext();
+   pShiftEnum-&gt;MoveNext();
 
    ISHCShiftPtr pShcShift;
 
-   pShiftEnum->Current(&pShcShift);
+   pShiftEnum-&gt;Current(&amp;pShcShift);
 
    ISHCTimeSlicePtr pShcTimeSlice;
 
    ICfUnknownPtr pUnk;
 
-   m_pCalendar->GetObject(ODK_SHC_TIME_SLICE, &pUnk);
+   m_pCalendar-&gt;GetObject(ODK_SHC_TIME_SLICE, &amp;pUnk);
 
    pShcTimeSlice = (ISHCTimeSlicePtr)pUnk;
 
-   pShcTimeSlice->SetCategory(CCfString(L"Break"));
+   pShcTimeSlice-&gt;SetCategory(CCfString(L"Break"));
 
-   pShcTimeSlice->SetDuration(Get1Hour() * 1);
+   pShcTimeSlice-&gt;SetDuration(Get1Hour() * 1);
 
    CCfDateTime64 dt = GetStartoftheDay();
 
    dt.AddTimeSpan(Get1Hour() * 3);
 
-   pShcTimeSlice->SetStartTime(dt);
+   pShcTimeSlice-&gt;SetStartTime(dt);
 
-   pShcShift->CreateTimeSlice(pShcTimeSlice);
+   pShcShift-&gt;CreateTimeSlice(pShcTimeSlice);
 
 }
 
@@ -20747,45 +20747,45 @@ void DeleteTimeSliceUsingShift()
 
    ISHCDayTemplateEnumeratorPtr pShcDayTemplates;
 
-   m_pShcDayTemplateProvider->Browse(CF_FALSE, &pShcDayTemplates);
+   m_pShcDayTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcDayTemplates);
 
    uint32_t nCount = 0;
 
-   pShcDayTemplates->Count(&nCount);
+   pShcDayTemplates-&gt;Count(&amp;nCount);
 
-   pShcDayTemplates->MoveNext();
+   pShcDayTemplates-&gt;MoveNext();
 
    ISHCDayTemplatePtr pShcDayTemplate;
 
    ISHCShiftEnumeratorPtr pShiftEnum;
 
-   pShcDayTemplate->GetShifts(&pShiftEnum);
+   pShcDayTemplate-&gt;GetShifts(&amp;pShiftEnum);
 
    uint32_t nlength = 0;
 
-   pShiftEnum->Count(&nlength);
+   pShiftEnum-&gt;Count(&amp;nlength);
 
-   pShiftEnum->MoveNext();
+   pShiftEnum-&gt;MoveNext();
 
    ISHCShiftPtr pShcShift;
 
-   pShiftEnum->Current(&pShcShift);
+   pShiftEnum-&gt;Current(&amp;pShcShift);
 
    ISHCTimeSliceEnumeratorPtr pShcTimeSliceEnum;
 
-   pShcShift->GetTimeSlices(&pShcTimeSliceEnum);
+   pShcShift-&gt;GetTimeSlices(&amp;pShcTimeSliceEnum);
 
    uint32_t nCountTimeSlice = 0;
 
-   pShcTimeSliceEnum->Count(&nCountTimeSlice);
+   pShcTimeSliceEnum-&gt;Count(&amp;nCountTimeSlice);
 
-   pShcTimeSliceEnum->MoveNext();
+   pShcTimeSliceEnum-&gt;MoveNext();
 
    ISHCTimeSlicePtr pShcTimeSlice;
 
-   pShcTimeSliceEnum->Current(&pShcTimeSlice);
+   pShcTimeSliceEnum-&gt;Current(&amp;pShcTimeSlice);
 
-   pShcShift->DeleteTimeSlice(pShcTimeSlice);
+   pShcShift-&gt;DeleteTimeSlice(pShcTimeSlice);
 
 }
 
@@ -20977,125 +20977,125 @@ Output the size of the enumeration or the number of its elements.
 
 Copy code
 
-void printShift(const ISHCShiftEnumeratorPtr& p_pShcShiftEnum)
+void printShift(const ISHCShiftEnumeratorPtr&amp; p_pShcShiftEnum)
 
 {
 
    uint32_t nCout = 0;
 
-   p_pShcShiftEnum->Count(&nCout);
+   p_pShcShiftEnum-&gt;Count(&amp;nCout);
 
-   for (uint32_t nIndex = 0; nIndex < nCout; nIndex++)
+   for (uint32_t nIndex = 0; nIndex &lt; nCout; nIndex++)
 
    {
 
-      cout << endl;
+      cout &lt;&lt; endl;
 
-      p_pShcShiftEnum->MoveNext();
+      p_pShcShiftEnum-&gt;MoveNext();
 
       ISHCShiftPtr pShcshift;
 
-      p_pShcShiftEnum->Current(&pShcshift);
+      p_pShcShiftEnum-&gt;Current(&amp;pShcshift);
 
       CCfString strshiftTemplateName;
 
-      pShcshift->GetShiftTemplate(&strshiftTemplateName);
+      pShcshift-&gt;GetShiftTemplate(&amp;strshiftTemplateName);
 
-      std::cout << "ShiftTemplateName= " << strshiftTemplateName.ToUTF8().c_str() << std::endl;
+      std::cout &lt;&lt; "ShiftTemplateName= " &lt;&lt; strshiftTemplateName.ToUTF8().c_str() &lt;&lt; std::endl;
 
       CCfTimeSpan64 tsDuration;
 
-      pShcshift->GetDuration(&tsDuration);
+      pShcshift-&gt;GetDuration(&amp;tsDuration);
 
       CCfString strDuration = tsDuration.GetTimeSpanString();
 
-      std::cout << "Durations= " << strDuration.ToUTF8().c_str() << std::endl;
+      std::cout &lt;&lt; "Durations= " &lt;&lt; strDuration.ToUTF8().c_str() &lt;&lt; std::endl;
 
       CFBOOL bIsCustomised;
 
-      pShcshift->GetIsCustomized(&bIsCustomised);
+      pShcshift-&gt;GetIsCustomized(&amp;bIsCustomised);
 
-      std::cout << "Is Customised= " << (uint32_t)bIsCustomised << std::endl;
+      std::cout &lt;&lt; "Is Customised= " &lt;&lt; (uint32_t)bIsCustomised &lt;&lt; std::endl;
 
       CFENUM ndeltaKind;
 
-      pShcshift->GetDeltaKind(&ndeltaKind);
+      pShcshift-&gt;GetDeltaKind(&amp;ndeltaKind);
 
-      std::cout << "deltaKind = " << ndeltaKind << std::endl;
+      std::cout &lt;&lt; "deltaKind = " &lt;&lt; ndeltaKind &lt;&lt; std::endl;
 
       uint32_t nShiftId;
 
-      pShcshift->GetShiftId(&nShiftId);
+      pShcshift-&gt;GetShiftId(&amp;nShiftId);
 
-      std::cout << "ShiftId = " << nShiftId << std::endl;
+      std::cout &lt;&lt; "ShiftId = " &lt;&lt; nShiftId &lt;&lt; std::endl;
 
       ICfMapIDToVariantPtr pComments;
 
-      pShcshift->GetComments(&pComments);
+      pShcshift-&gt;GetComments(&amp;pComments);
 
-      std::cout << "comments:-" << std::endl << std::endl;
+      std::cout &lt;&lt; "comments:-" &lt;&lt; std::endl &lt;&lt; std::endl;
 
       uint32_t nCount = 0;
 
-      pComments->Count(&nCount);
+      pComments-&gt;Count(&amp;nCount);
 
-      for (uint32_t nIndex1 = 0; nIndex1 < nCount; nIndex1++)
+      for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount; nIndex1++)
 
       {
 
          int32_t nLanguageID;
 
-         pComments->KeyAt(nIndex1, &nLanguageID);
+         pComments-&gt;KeyAt(nIndex1, &amp;nLanguageID);
 
          CCfVariant strComments;
 
-         pComments->ValueAt(nLanguageID, &strComments);
+         pComments-&gt;ValueAt(nLanguageID, &amp;strComments);
 
-         std::cout << "LangauageID =" << nLanguageID << " Comments=" << CCfSmartString(strComments).ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " Comments=" &lt;&lt; CCfSmartString(strComments).ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
       ISHCTimeSliceEnumeratorPtr pShiftTimesliceEnum;
 
-      pShcshift->GetTimeSlices(&pShiftTimesliceEnum);
+      pShcshift-&gt;GetTimeSlices(&amp;pShiftTimesliceEnum);
 
       uint32_t nCout = 0;
 
-      pShiftTimesliceEnum->Count(&nCout);
+      pShiftTimesliceEnum-&gt;Count(&amp;nCout);
 
-      for (uint32_t nIndex = 0; nIndex < nCout; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nCout; nIndex++)
 
       {
 
-         pShiftTimesliceEnum->MoveNext();
+         pShiftTimesliceEnum-&gt;MoveNext();
 
-         cout << endl;
+         cout &lt;&lt; endl;
 
          ISHCTimeSlicePtr pTimeSlice;
 
-         pShiftTimesliceEnum->Current(&pTimeSlice);
+         pShiftTimesliceEnum-&gt;Current(&amp;pTimeSlice);
 
          CCfString strCategoryName;
 
-         pTimeSlice->GetCategory(&strCategoryName);
+         pTimeSlice-&gt;GetCategory(&amp;strCategoryName);
 
-         std::cout << "Category= " << strCategoryName.ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "Category= " &lt;&lt; strCategoryName.ToUTF8().c_str() &lt;&lt; std::endl;
 
          CCfTimeSpan64 tsDuration;
 
-         pTimeSlice->GetDuration(&tsDuration);
+         pTimeSlice-&gt;GetDuration(&amp;tsDuration);
 
          CCfString strDuration = tsDuration.GetTimeSpanString();
 
-         std::cout << "Durations= " << strDuration.ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "Durations= " &lt;&lt; strDuration.ToUTF8().c_str() &lt;&lt; std::endl;
 
          CCfDateTime64 dtStartTime;
 
-         pTimeSlice->GetStartTime(&dtStartTime);
+         pTimeSlice-&gt;GetStartTime(&amp;dtStartTime);
 
          CCfString strStarttime = dtStartTime.GetDateTimeString(false);
 
-         std::cout << "Start Time= " << strStarttime.ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "Start Time= " &lt;&lt; strStarttime.ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
@@ -21214,95 +21214,95 @@ Output the size of the enumeration or the number of its elements.
 
 Copy code
 
-void PrintAction(const ISHCActionEnumeratorPtr& pShcActionEnum)
+void PrintAction(const ISHCActionEnumeratorPtr&amp; pShcActionEnum)
 
 {
 
    uint32_t nCount = 0;
 
-   pShcActionEnum->Count(&nCount);
+   pShcActionEnum-&gt;Count(&amp;nCount);
 
-   for (uint32_t nIndex = 0; nIndex < nCount; nIndex++)
+   for (uint32_t nIndex = 0; nIndex &lt; nCount; nIndex++)
 
    {
 
-      cout << endl;
+      cout &lt;&lt; endl;
 
-      pShcActionEnum->MoveNext();
+      pShcActionEnum-&gt;MoveNext();
 
       ISHCActionPtr pShcAction;
 
-      pShcActionEnum->Current(&pShcAction);
+      pShcActionEnum-&gt;Current(&amp;pShcAction);
 
       CCfString strActionTemplateName;
 
-      pShcAction->GetActionTemplate(&strActionTemplateName);
+      pShcAction-&gt;GetActionTemplate(&amp;strActionTemplateName);
 
-      std::cout << "ActionTemplateName = " << strActionTemplateName.ToUTF8().c_str() << std::endl;
+      std::cout &lt;&lt; "ActionTemplateName = " &lt;&lt; strActionTemplateName.ToUTF8().c_str() &lt;&lt; std::endl;
 
       CFBOOL isCustomize;
 
-      pShcAction->GetIsCustomized(&isCustomize);
+      pShcAction-&gt;GetIsCustomized(&amp;isCustomize);
 
-      cout << "IsCustomize= " << (uint32_t)isCustomize << endl;
+      cout &lt;&lt; "IsCustomize= " &lt;&lt; (uint32_t)isCustomize &lt;&lt; endl;
 
       CCfTimeSpan64 offset;
 
-      hr = pShcAction->GetOffset(&offset);
+      hr = pShcAction-&gt;GetOffset(&amp;offset);
 
-      cout << "Offset=" << offset.GetTimeSpanString().ToUTF8().c_str() << endl;
+      cout &lt;&lt; "Offset=" &lt;&lt; offset.GetTimeSpanString().ToUTF8().c_str() &lt;&lt; endl;
 
       ISHCActionElementEnumeratorPtr pShcActionElementEnum;
 
-      pShcAction->GetElements(&pShcActionElementEnum);
+      pShcAction-&gt;GetElements(&amp;pShcActionElementEnum);
 
-      cout << endl << "******PrintActionElement*******" << endl << endl;
+      cout &lt;&lt; endl &lt;&lt; "******PrintActionElement*******" &lt;&lt; endl &lt;&lt; endl;
 
       uint32_t nCount = 0;
 
-      pShcActionElementEnum->Count(&nCount);
+      pShcActionElementEnum-&gt;Count(&amp;nCount);
 
-      for (uint32_t nIndex = 0; nIndex < nCount; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nCount; nIndex++)
 
       {
 
-         cout << endl;
+         cout &lt;&lt; endl;
 
-         pShcActionElementEnum->MoveNext();
+         pShcActionElementEnum-&gt;MoveNext();
 
          ISHCActionElementPtr pShcActionElement;
 
-         pShcActionElementEnum->Current(&pShcActionElement);
+         pShcActionElementEnum-&gt;Current(&amp;pShcActionElement);
 
          CCfString strElementName;
 
-         pShcActionElement->GetElementName(&strElementName);
+         pShcActionElement-&gt;GetElementName(&amp;strElementName);
 
-         cout << "ActionElementName= " << strElementName.ToUTF8().c_str() << endl;
+         cout &lt;&lt; "ActionElementName= " &lt;&lt; strElementName.ToUTF8().c_str() &lt;&lt; endl;
 
          CFENUM nType;
 
-         pShcActionElement->GetElementType(&nType);
+         pShcActionElement-&gt;GetElementType(&amp;nType);
 
-         cout << "Element Type= " << nType << endl;
+         cout &lt;&lt; "Element Type= " &lt;&lt; nType &lt;&lt; endl;
 
          CFBOOL bIsEnable;
 
-         pShcActionElement->GetEnabled(&bIsEnable);
+         pShcActionElement-&gt;GetEnabled(&amp;bIsEnable);
 
-         cout << "Is Enable = " << (uint32_t)bIsEnable << endl;
+         cout &lt;&lt; "Is Enable = " &lt;&lt; (uint32_t)bIsEnable &lt;&lt; endl;
 
          CCfTimeSpan64 offset;
 
-         pShcActionElement->GetOffset(&offset);
+         pShcActionElement-&gt;GetOffset(&amp;offset);
 
-         cout << "Offset = " << offset.GetTimeSpanString().ToUTF8().c_str() << endl;
+         cout &lt;&lt; "Offset = " &lt;&lt; offset.GetTimeSpanString().ToUTF8().c_str() &lt;&lt; endl;
 
          CCfVariant vtValue;
 
-         pShcActionElement->GetValue(&vtValue);
+         pShcActionElement-&gt;GetValue(&amp;vtValue);
 
-         cout << "value = " << vtValue.uint32 << endl;
+         cout &lt;&lt; "value = " &lt;&lt; vtValue.uint32 &lt;&lt; endl;
 
       }
 
@@ -21468,57 +21468,57 @@ Output the size of the enumeration or the number of elements.
 
 Copy code
 
- void PrintActionElement(const ISHCActionElementEnumeratorPtr& pShcActionElementEnum)
+ void PrintActionElement(const ISHCActionElementEnumeratorPtr&amp; pShcActionElementEnum)
 
 {
 
-      cout << endl << "******PrintActionElement*******" << endl << endl;
+      cout &lt;&lt; endl &lt;&lt; "******PrintActionElement*******" &lt;&lt; endl &lt;&lt; endl;
 
       uint32_t nCount = 0;
 
-      pShcActionElementEnum->Count(&nCount);
+      pShcActionElementEnum-&gt;Count(&amp;nCount);
 
-      for (uint32_t nIndex = 0; nIndex < nCount; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nCount; nIndex++)
 
       {
 
-         cout << endl;
+         cout &lt;&lt; endl;
 
-         pShcActionElementEnum->MoveNext();
+         pShcActionElementEnum-&gt;MoveNext();
 
          ISHCActionElementPtr pShcActionElement;
 
-         pShcActionElementEnum->Current(&pShcActionElement);
+         pShcActionElementEnum-&gt;Current(&amp;pShcActionElement);
 
          CCfString strElementName;
 
-         pShcActionElement->GetElementName(&strElementName);
+         pShcActionElement-&gt;GetElementName(&amp;strElementName);
 
-         cout << "ActionElementName= " << strElementName.ToUTF8().c_str() << endl;
+         cout &lt;&lt; "ActionElementName= " &lt;&lt; strElementName.ToUTF8().c_str() &lt;&lt; endl;
 
          CFENUM nType;
 
-         pShcActionElement->GetElementType(&nType);
+         pShcActionElement-&gt;GetElementType(&amp;nType);
 
-         cout << "Element Type= " << nType << endl;
+         cout &lt;&lt; "Element Type= " &lt;&lt; nType &lt;&lt; endl;
 
          CFBOOL bIsEnable;
 
-         pShcActionElement->GetEnabled(&bIsEnable);
+         pShcActionElement-&gt;GetEnabled(&amp;bIsEnable);
 
-         cout << "Is Enable = " << (uint32_t)bIsEnable << endl;
+         cout &lt;&lt; "Is Enable = " &lt;&lt; (uint32_t)bIsEnable &lt;&lt; endl;
 
          CCfTimeSpan64 offset;
 
-         pShcActionElement->GetOffset(&offset);
+         pShcActionElement-&gt;GetOffset(&amp;offset);
 
-         cout << "Offset = " << offset.GetTimeSpanString().ToUTF8().c_str() << endl;
+         cout &lt;&lt; "Offset = " &lt;&lt; offset.GetTimeSpanString().ToUTF8().c_str() &lt;&lt; endl;
 
          CCfVariant vtValue;
 
-         pShcActionElement->GetValue(&vtValue);
+         pShcActionElement-&gt;GetValue(&amp;vtValue);
 
-         cout << "value = " << vtValue.uint32 << endl;
+         cout &lt;&lt; "value = " &lt;&lt; vtValue.uint32 &lt;&lt; endl;
 
       }
 
@@ -21693,129 +21693,129 @@ Output the size of the enumeration or the number of elements.
 
 Copy code
 
-void PrintActionTemplate(const ISHCActionTemplateEnumeratorPtr& p_pShcActionTemplateEnum)
+void PrintActionTemplate(const ISHCActionTemplateEnumeratorPtr&amp; p_pShcActionTemplateEnum)
 
 {
 
    uint32_t nCount = 0;
 
-   p_pShcActionTemplateEnum->Count(&nCount);
+   p_pShcActionTemplateEnum-&gt;Count(&amp;nCount);
 
-   for (uint32_t nIndex = 0; nIndex < nCount; nIndex++)
+   for (uint32_t nIndex = 0; nIndex &lt; nCount; nIndex++)
 
    {
 
-      cout << endl;
+      cout &lt;&lt; endl;
 
-      p_pShcActionTemplateEnum->MoveNext();
+      p_pShcActionTemplateEnum-&gt;MoveNext();
 
       ISHCActionTemplatePtr pShcActionTemplate;
 
-      p_pShcActionTemplateEnum->Current(&pShcActionTemplate);
+      p_pShcActionTemplateEnum-&gt;Current(&amp;pShcActionTemplate);
 
       CCfString strActionTemplateName;
 
-      pShcActionTemplate->GetName(&strActionTemplateName);
+      pShcActionTemplate-&gt;GetName(&amp;strActionTemplateName);
 
-      cout << "ActionTemplateName=" << strActionTemplateName.ToUTF8().c_str() << endl;
+      cout &lt;&lt; "ActionTemplateName=" &lt;&lt; strActionTemplateName.ToUTF8().c_str() &lt;&lt; endl;
 
       CFBOOL bIsDeleted;
 
-      pShcActionTemplate->GetIsDeleted(&bIsDeleted);
+      pShcActionTemplate-&gt;GetIsDeleted(&amp;bIsDeleted);
 
-      cout << "IsDeleted=" << (uint32_t)bIsDeleted << endl;
+      cout &lt;&lt; "IsDeleted=" &lt;&lt; (uint32_t)bIsDeleted &lt;&lt; endl;
 
       ICfMapIDToVariantPtr pDescriptions;
 
-      pShcActionTemplate->GetDescriptions(&pDescriptions);
+      pShcActionTemplate-&gt;GetDescriptions(&amp;pDescriptions);
 
-      std::cout << "Descriptions=" << std::endl << std::endl;
+      std::cout &lt;&lt; "Descriptions=" &lt;&lt; std::endl &lt;&lt; std::endl;
 
       uint32_t nCount1 = 0;
 
-      pDescriptions->Count(&nCount1);
+      pDescriptions-&gt;Count(&amp;nCount1);
 
-      for (uint32_t nIndex1 = 0; nIndex1 < nCount1; nIndex1++)
+      for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount1; nIndex1++)
 
       {
 
          int32_t nLanguageID;
 
-         pDescriptions->KeyAt(nIndex1, &nLanguageID);
+         pDescriptions-&gt;KeyAt(nIndex1, &amp;nLanguageID);
 
          CCfVariant strDescription;
 
-         pDescriptions->ValueAt(nLanguageID, &strDescription);
+         pDescriptions-&gt;ValueAt(nLanguageID, &amp;strDescription);
 
-         std::cout << "LangauageID =" << nLanguageID << " Description=" << CCfSmartString(strDescription).ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " Description=" &lt;&lt; CCfSmartString(strDescription).ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
       ICfMapIDToVariantPtr pDisplayNames;
 
-      pShcActionTemplate->GetDisplayNames(&pDisplayNames);
+      pShcActionTemplate-&gt;GetDisplayNames(&amp;pDisplayNames);
 
-      std::cout << "DisplayNames::" << std::endl << std::endl;
+      std::cout &lt;&lt; "DisplayNames::" &lt;&lt; std::endl &lt;&lt; std::endl;
 
       uint32_t nCount1 = 0;
 
-      pDisplayNames->Count(&nCount1);
+      pDisplayNames-&gt;Count(&amp;nCount1);
 
-      for (uint32_t nIndex1 = 0; nIndex1 < nCount1; nIndex1++)
+      for (uint32_t nIndex1 = 0; nIndex1 &lt; nCount1; nIndex1++)
 
       {
 
          int32_t nLanguageID;
 
-         pDisplayNames->KeyAt(nIndex1, &nLanguageID);
+         pDisplayNames-&gt;KeyAt(nIndex1, &amp;nLanguageID);
 
          CCfVariant strDIsplayname;
 
-         pDisplayNames->ValueAt(nLanguageID, &strDIsplayname);
+         pDisplayNames-&gt;ValueAt(nLanguageID, &amp;strDIsplayname);
 
-         std::cout << "LangauageID =" << nLanguageID << " DisplayName=" << CCfSmartString(strDIsplayname).ToUTF8().c_str() << std::endl;
+         std::cout &lt;&lt; "LangauageID =" &lt;&lt; nLanguageID &lt;&lt; " DisplayName=" &lt;&lt; CCfSmartString(strDIsplayname).ToUTF8().c_str() &lt;&lt; std::endl;
 
       }
 
       ISHCActionTemplateElementEnumeratorPtr pShcActionTemplateElementEnum;
 
-      pShcActionTemplate->GetElements(&pShcActionTemplateElementEnum);
+      pShcActionTemplate-&gt;GetElements(&amp;pShcActionTemplateElementEnum);
 
       uint32_t nCount2 = 0;
 
-      pShcActionTemplateElementEnum   ->Count(&nCount2);
+      pShcActionTemplateElementEnum   -&gt;Count(&amp;nCount2);
 
-      for (uint32_t nIndex = 0; nIndex < nCount2; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nCount2; nIndex++)
 
       {
 
-         pShcActionTemplateElementEnum   ->MoveNext();
+         pShcActionTemplateElementEnum   -&gt;MoveNext();
 
          ISHCActionTemplateElementPtr pShcActionTemplateElement;
 
-         pShcActionTemplateElementEnum   ->Current(&pShcActionTemplateElement);
+         pShcActionTemplateElementEnum   -&gt;Current(&amp;pShcActionTemplateElement);
 
          CCfString strElementName;
 
-         pShcActionTemplateElement->GetElementName(&strElementName);
+         pShcActionTemplateElement-&gt;GetElementName(&amp;strElementName);
 
-         cout << "TemplateElementName= " << strElementName.ToUTF8().c_str() << endl;
+         cout &lt;&lt; "TemplateElementName= " &lt;&lt; strElementName.ToUTF8().c_str() &lt;&lt; endl;
 
          CFENUM type;
 
-         pShcActionTemplateElement->GetElementType(&Type);
+         pShcActionTemplateElement-&gt;GetElementType(&amp;Type);
 
-         cout << "ElementType=" << Type << endl;
+         cout &lt;&lt; "ElementType=" &lt;&lt; Type &lt;&lt; endl;
 
          CCfTimeSpan64 tsOffset;
 
-         cout << "Element Offset=" << tsOffset.GetTimeSpanString().ToUTF8().c_str() << endl;
+         cout &lt;&lt; "Element Offset=" &lt;&lt; tsOffset.GetTimeSpanString().ToUTF8().c_str() &lt;&lt; endl;
 
          CCfVariant vtValue;
 
-         pShcActionTemplateElement->GetValue(&vtValue);
+         pShcActionTemplateElement-&gt;GetValue(&amp;vtValue);
 
-         cout << "Value=" << vtValue.uint32 << endl;
+         cout &lt;&lt; "Value=" &lt;&lt; vtValue.uint32 &lt;&lt; endl;
 
       }
 
@@ -21850,7 +21850,7 @@ Example:
 
 ISHCActionTemplateEnumeratorPtr pShcActionTemplateEnum;
 
-pShcActionTemplateProvider->Browse(CF_FALSE, &pShcActionTemplateEnum);
+pShcActionTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcActionTemplateEnum);
 
 **"Create" method**
 
@@ -21872,7 +21872,7 @@ void CreateActionTemplateWithActionTemplateElement()
 
    ICfUnknownPtr pUnk;
 
-   m_pCalendar->GetObject(ODK_SHC_ACTION_TEMPLATE, &pUnk);
+   m_pCalendar-&gt;GetObject(ODK_SHC_ACTION_TEMPLATE, &amp;pUnk);
 
    CCfArrayIUnknown ArrayTemplate;
 
@@ -21880,33 +21880,33 @@ void CreateActionTemplateWithActionTemplateElement()
 
    ISHCActionTemplatePtr pShcActionTemplate = (ISHCActionTemplatePtr)pUnk;
 
-   pShcActionTemplate->SetName(CCfString(L"ActionTemplateName"));
+   pShcActionTemplate-&gt;SetName(CCfString(L"ActionTemplateName"));
 
-   pShcActionTemplate->SetDisplayName(1033, CCfString(L"ActionTemplateDisplayName"));
+   pShcActionTemplate-&gt;SetDisplayName(1033, CCfString(L"ActionTemplateDisplayName"));
 
-   pShcActionTemplate->SetDescription(1033, CCfString(L"ActionTemplateDescription"));
+   pShcActionTemplate-&gt;SetDescription(1033, CCfString(L"ActionTemplateDescription"));
 
    ArrayTemplate.Append(pShcActionTemplate);
 
-   ArrayTemplate.DetachEnumerator(&pArrayTemplate);
+   ArrayTemplate.DetachEnumerator(&amp;pArrayTemplate);
 
-   m_pShcActionTemplateProvider->Create(pArrayTemplate);
+   m_pShcActionTemplateProvider-&gt;Create(pArrayTemplate);
 
-   m_pCalendar->GetObject(ODK_SHC_ACTION_TEMPLATE_ELEMENT, &pUnk);
+   m_pCalendar-&gt;GetObject(ODK_SHC_ACTION_TEMPLATE_ELEMENT, &amp;pUnk);
 
    ISHCActionTemplateElementPtr pShcActionTemplateElement = (ISHCActionTemplateElementPtr)pUnk;
 
-   pShcActionTemplateElement->SetElementName(CCfString(L"HMI_RT_1::Unit1.Member_1"));
+   pShcActionTemplateElement-&gt;SetElementName(CCfString(L"HMI_RT_1::Unit1.Member_1"));
 
    CFTIMESPAN64 Offset = Get1Hour();
 
-   pShcActionTemplateElement->SetOffset(Offset);
+   pShcActionTemplateElement-&gt;SetOffset(Offset);
 
    uint32_t value = 1;
 
-   pShcActionTemplateElement->SetValue(CCfVariant(value));
+   pShcActionTemplateElement-&gt;SetValue(CCfVariant(value));
 
-   pShcActionTemplate->CreateElement(pShcActionTemplateElement);
+   pShcActionTemplate-&gt;CreateElement(pShcActionTemplateElement);
 
 }
 
@@ -21930,9 +21930,9 @@ void UpdateActionTemplateWithActionTemplateElement()
 
    ISHCActionTemplateEnumeratorPtr pShcActionTemplateEnum;
 
-   m_pShcActionTemplateProvider->Browse(CF_FALSE, &pShcActionTemplateEnum);
+   m_pShcActionTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcActionTemplateEnum);
 
-   pShcActionTemplateEnum->MoveNext();
+   pShcActionTemplateEnum-&gt;MoveNext();
 
    CCfArrayIUnknown ArrayActionTemplate;
 
@@ -21940,35 +21940,35 @@ void UpdateActionTemplateWithActionTemplateElement()
 
    ISHCActionTemplatePtr pShcActionTemplate;
 
-   pShcActionTemplateEnum->Current(&pShcActionTemplate);
+   pShcActionTemplateEnum-&gt;Current(&amp;pShcActionTemplate);
 
-   pShcActionTemplate->SetName(CCfString(L"UpdatedActionTemplate"));
+   pShcActionTemplate-&gt;SetName(CCfString(L"UpdatedActionTemplate"));
 
-   pShcActionTemplate->SetDisplayName(1033, CCfString(L"UpdatedActionTemplateDisplayName"));
+   pShcActionTemplate-&gt;SetDisplayName(1033, CCfString(L"UpdatedActionTemplateDisplayName"));
 
    ISHCActionTemplateElementEnumeratorPtr pShcActionTemplateElementEnum;
 
-   pShcActionTemplate->GetElements(&pShcActionTemplateElementEnum);
+   pShcActionTemplate-&gt;GetElements(&amp;pShcActionTemplateElementEnum);
 
-   pShcActionTemplateElementEnum->MoveNext();
+   pShcActionTemplateElementEnum-&gt;MoveNext();
 
    ISHCActionTemplateElementPtr pShcActionTemplateElement;
 
-   pShcActionTemplateElementEnum->Current(&pShcActionTemplateElement);
+   pShcActionTemplateElementEnum-&gt;Current(&amp;pShcActionTemplateElement);
 
    CCfTimeSpan64 offset = Get1Hour() * 2;
 
-   pShcActionTemplateElement->SetOffset(offset);
+   pShcActionTemplateElement-&gt;SetOffset(offset);
 
    uint32_t nValue = 2;
 
-   pShcActionTemplateElement->SetValue(CCfVariant(nValue));
+   pShcActionTemplateElement-&gt;SetValue(CCfVariant(nValue));
 
    ArrayActionTemplate.Append(pShcActionTemplate);
 
-   ArrayActionTemplate.DetachEnumerator(&pArrayActionTemplate);
+   ArrayActionTemplate.DetachEnumerator(&amp;pArrayActionTemplate);
 
-   m_pShcActionTemplateProvider->Update(pArrayActionTemplate);
+   m_pShcActionTemplateProvider-&gt;Update(pArrayActionTemplate);
 
 }
 
@@ -21994,9 +21994,9 @@ void DeleteActionTemplateWithActionTemplateElement()
 
    ISHCActionTemplateEnumeratorPtr pShcActionTemplateEnum;
 
-   m_pShcActionTemplateProvider->Browse(CF_FALSE, &pShcActionTemplateEnum);
+   m_pShcActionTemplateProvider-&gt;Browse(CF_FALSE, &amp;pShcActionTemplateEnum);
 
-   pShcActionTemplateEnum->MoveNext();
+   pShcActionTemplateEnum-&gt;MoveNext();
 
    CCfArrayIUnknown ArrayActionTemplate;
 
@@ -22004,25 +22004,25 @@ void DeleteActionTemplateWithActionTemplateElement()
 
    ISHCActionTemplatePtr pShcActionTemplate;
 
-   pShcActionTemplateEnum->Current(&pShcActionTemplate);
+   pShcActionTemplateEnum-&gt;Current(&amp;pShcActionTemplate);
 
    ISHCActionTemplateElementEnumeratorPtr pShcActionTemplateElementEnum;
 
-   pShcActionTemplate->GetElements(&pShcActionTemplateElementEnum);
+   pShcActionTemplate-&gt;GetElements(&amp;pShcActionTemplateElementEnum);
 
-   pShcActionTemplateElementEnum->MoveNext();
+   pShcActionTemplateElementEnum-&gt;MoveNext();
 
    ISHCActionTemplateElementPtr pShcActionTemplateElement;
 
-   pShcActionTemplateElementEnum->Current(&pShcActionTemplateElement);
+   pShcActionTemplateElementEnum-&gt;Current(&amp;pShcActionTemplateElement);
 
-   pShcActionTemplate->DeleteElement(pShcActionTemplateElement);
+   pShcActionTemplate-&gt;DeleteElement(pShcActionTemplateElement);
 
    ArrayActionTemplate.Append(pShcActionTemplate);
 
-   ArrayActionTemplate.DetachEnumerator(&pArrayActionTemplate);
+   ArrayActionTemplate.DetachEnumerator(&amp;pArrayActionTemplate);
 
-   m_pShcActionTemplateProvider->Delete(pArrayActionTemplate);
+   m_pShcActionTemplateProvider-&gt;Delete(pArrayActionTemplate);
 
 }
 
@@ -22158,45 +22158,45 @@ Output the size of the enumeration or the number of elements.
 
 Copy code
 
-void PrintActionTemplateElement(const ISHCActionTemplateElementEnumeratorPtr& pShcActionTemplateElementEnum   )
+void PrintActionTemplateElement(const ISHCActionTemplateElementEnumeratorPtr&amp; pShcActionTemplateElementEnum   )
 
 {
 
    uint32_t nCount = 0;
 
-   pShcActionTemplateElementEnum   ->Count(&nCount);
+   pShcActionTemplateElementEnum   -&gt;Count(&amp;nCount);
 
-   for (uint32_t nIndex = 0; nIndex < nCount; nIndex++)
+   for (uint32_t nIndex = 0; nIndex &lt; nCount; nIndex++)
 
    {
 
-      pShcActionTemplateElementEnum   ->MoveNext();
+      pShcActionTemplateElementEnum   -&gt;MoveNext();
 
       ISHCActionTemplateElementPtr pShcActionTemplateElement;
 
-      pShcActionTemplateElementEnum   ->Current(&pShcActionTemplateElement);
+      pShcActionTemplateElementEnum   -&gt;Current(&amp;pShcActionTemplateElement);
 
       CCfString strElementName;
 
-      pShcActionTemplateElement->GetElementName(&strElementName);
+      pShcActionTemplateElement-&gt;GetElementName(&amp;strElementName);
 
-      cout << "TemplateElementName= " << strElementName.ToUTF8().c_str() << endl;
+      cout &lt;&lt; "TemplateElementName= " &lt;&lt; strElementName.ToUTF8().c_str() &lt;&lt; endl;
 
       CFENUM type;
 
-      pShcActionTemplateElement->GetElementType(&Type);
+      pShcActionTemplateElement-&gt;GetElementType(&amp;Type);
 
-      cout << "ElementType=" << Type << endl;
+      cout &lt;&lt; "ElementType=" &lt;&lt; Type &lt;&lt; endl;
 
       CCfTimeSpan64 tsOffset;
 
-      cout << "Element Offset=" << tsOffset.GetTimeSpanString().ToUTF8().c_str() << endl;
+      cout &lt;&lt; "Element Offset=" &lt;&lt; tsOffset.GetTimeSpanString().ToUTF8().c_str() &lt;&lt; endl;
 
       CCfVariant vtValue;
 
-      pShcActionTemplateElement->GetValue(&vtValue);
+      pShcActionTemplateElement-&gt;GetValue(&amp;vtValue);
 
-      cout << "Value=" << vtValue.uint32 << endl;
+      cout &lt;&lt; "Value=" &lt;&lt; vtValue.uint32 &lt;&lt; endl;
 
    }
 
@@ -22434,23 +22434,23 @@ void CreateContextDefinitions(IRuntimePtr pRuntime)
 
 {
 
-   std::cout << std::endl << __FUNCTION__ << std::endl << std::endl;
+   std::cout &lt;&lt; std::endl &lt;&lt; __FUNCTION__ &lt;&lt; std::endl &lt;&lt; std::endl;
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ContextLogging"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ContextLogging"), &amp;pUnk);
 
    IContextLoggingPtr pContextLoggingPtr(pUnk);
 
-   std::vector<IContextDefinitionPtr> vecContextDefinitions;
+   std::vector&lt;IContextDefinitionPtr&gt; vecContextDefinitions;
 
-   for (size_t index = 0; index < 10; index++)
+   for (size_t index = 0; index &lt; 10; index++)
 
    {
 
       ICfUnknownPtr pUnkCd;
 
-      pRuntime->GetObject(CCfString(L"ContextDefinition"), &pUnkCd);
+      pRuntime-&gt;GetObject(CCfString(L"ContextDefinition"), &amp;pUnkCd);
 
       IContextDefinitionPtr pContextDefinition(pUnkCd);
 
@@ -22462,7 +22462,7 @@ void CreateContextDefinitions(IRuntimePtr pRuntime)
 
       ICfMapIDToVariantPtr pDisplayNames;
 
-      std::map<int32_t, CCfVariant> DisplayNames;
+      std::map&lt;int32_t, CCfVariant&gt; DisplayNames;
 
       CCfSmartString strDeuName(L"Deutsch-");
 
@@ -22476,21 +22476,21 @@ void CreateContextDefinitions(IRuntimePtr pRuntime)
 
       DisplayNames[1033] = strEngName;
 
-      CCfMapIDToVariant::CreateEnumerator(DisplayNames, &pDisplayNames);
+      CCfMapIDToVariant::CreateEnumerator(DisplayNames, &amp;pDisplayNames);
 
-      pContextDefinition->SetDisplayNames(pDisplayNames);
+      pContextDefinition-&gt;SetDisplayNames(pDisplayNames);
 
       CCfString str_Name = L".hierarchy::Plant/Node1_1";
 
-      pContextDefinition->SetPlantViewPath(str_Name);
+      pContextDefinition-&gt;SetPlantViewPath(str_Name);
 
       CCfString m_strName = L"Contetx_";
 
       m_strName.Append(strName.AllocCFSTR());
 
-      pContextDefinition->SetName(m_strName);
+      pContextDefinition-&gt;SetName(m_strName);
 
-      pContextDefinition->SetDataType(HmiContextDataType::String);
+      pContextDefinition-&gt;SetDataType(HmiContextDataType::String);
 
       vecContextDefinitions.push_back(pContextDefinition);
 
@@ -22498,31 +22498,31 @@ void CreateContextDefinitions(IRuntimePtr pRuntime)
 
    ICfArrayIUnknownPtr pContextDefnitionsArray;
 
-   ::CfCreateEnumerator(vecContextDefinitions, &pContextDefnitionsArray);
+   ::CfCreateEnumerator(vecContextDefinitions, &amp;pContextDefnitionsArray);
 
    CContextLoggingCB * pContextLoggingCB = new CContextLoggingCB();
 
-   pContextLoggingCB->AddRef();
+   pContextLoggingCB-&gt;AddRef();
 
-   pContextLoggingPtr->CreateContextDefintions(pContextDefnitionsArray, pContextLoggingCB);
+   pContextLoggingPtr-&gt;CreateContextDefintions(pContextDefnitionsArray, pContextLoggingCB);
 
 }
 
-void DisplayContextError(const std::vector<IContextErrorPtr>& pVecContext)
+void DisplayContextError(const std::vector&lt;IContextErrorPtr&gt;&amp; pVecContext)
 
 {
 
-   for (const auto& pContext : pVecContext)
+   for (const auto&amp; pContext : pVecContext)
 
    {
 
       CCfString strContextName;
 
-      pContext->GetContextName(&strContextName);
+      pContext-&gt;GetContextName(&amp;strContextName);
 
       uint32_t value;
 
-      pContext->GetErrorCode(&value);
+      pContext-&gt;GetErrorCode(&amp;value);
 
    }
 
@@ -22536,7 +22536,7 @@ void ReadContextDefinitionsWithFilter(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ContextLogging"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ContextLogging"), &amp;pUnk);
 
    IContextLoggingPtr pContextLoggingPtr(pUnk);
 
@@ -22548,9 +22548,9 @@ void ReadContextDefinitionsWithFilter(IRuntimePtr pRuntime)
 
    ArrayPlantobjects.Append(CCfVariant(str_Name));
 
-   ArrayPlantobjects.DetachEnumerator(&pArrayPlantObjects);
+   ArrayPlantobjects.DetachEnumerator(&amp;pArrayPlantObjects);
 
-   CCfVariant vtProviderTypes(static_cast<CFENUM>(HmiContextProviderType::UserDefined));
+   CCfVariant vtProviderTypes(static_cast&lt;CFENUM&gt;(HmiContextProviderType::UserDefined));
 
    CCfArrayVariant arryProvidertypes;
 
@@ -22558,67 +22558,67 @@ void ReadContextDefinitionsWithFilter(IRuntimePtr pRuntime)
 
    ICfArrayVariantPtr pArrayProvidertypes;
 
-   arryProvidertypes.DetachEnumerator(&pArrayProvidertypes);
+   arryProvidertypes.DetachEnumerator(&amp;pArrayProvidertypes);
 
    CContextLoggingCB * pContextLoggingCB = new CContextLoggingCB();
 
-   pContextLoggingCB->AddRef();
+   pContextLoggingCB-&gt;AddRef();
 
-   pContextLoggingPtr->ReadContextDefinitions(pContextLoggingCB, pArrayPlantObjects, pArrayProvidertypes);
+   pContextLoggingPtr-&gt;ReadContextDefinitions(pContextLoggingCB, pArrayPlantObjects, pArrayProvidertypes);
 
-   pContextLoggingCB->Release();
+   pContextLoggingCB-&gt;Release();
 
 }
 
-void DisplayContextDefinition(const std::vector<IContextDefinitionPtr>& ContextDef)
+void DisplayContextDefinition(const std::vector&lt;IContextDefinitionPtr&gt;&amp; ContextDef)
 
 {
 
-   for (auto& pValues : ContextDef)
+   for (auto&amp; pValues : ContextDef)
 
    {
 
       uint32_t ErrorCode;
 
-      pValues->GetErrorCode(&ErrorCode);
+      pValues-&gt;GetErrorCode(&amp;ErrorCode);
 
       CCfString strName;
 
-      pValues->GetName(&strName);
+      pValues-&gt;GetName(&amp;strName);
 
       CFENUM pnum;
 
-      pValues->GetProviderType(&pnum);
+      pValues-&gt;GetProviderType(&amp;pnum);
 
       HmiContextDataType dataType;
 
-      pValues->GetDataType(&dataType);
+      pValues-&gt;GetDataType(&amp;dataType);
 
       ICfMapIDToVariantPtr displayName;
 
-      pValues->GetDisplayNames(&displayName);
+      pValues-&gt;GetDisplayNames(&amp;displayName);
 
       uint32_t nCount;
 
-      displayName->Count(&nCount);
+      displayName-&gt;Count(&amp;nCount);
 
-      for (uint32_t nIndex = 0; nIndex < nCount; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nCount; nIndex++)
 
       {
 
          int32_t langID;
 
-         displayName->KeyAt(index, &langID);
+         displayName-&gt;KeyAt(index, &amp;langID);
 
          CCfVariant vtName;
 
-         displayName->ValueAt(langID, &vtName);
+         displayName-&gt;ValueAt(langID, &amp;vtName);
 
       }
 
       CCfString strPlantViewPath;
 
-      pValues->GetPlantViewPath(&strPlantViewPath);
+      pValues-&gt;GetPlantViewPath(&amp;strPlantViewPath);
 
    }
 
@@ -22632,7 +22632,7 @@ void StartContext(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ContextLogging"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ContextLogging"), &amp;pUnk);
 
    IContextLoggingPtr pContextLoggingPtr(pUnk);
 
@@ -22646,7 +22646,7 @@ void StartContext(IRuntimePtr pRuntime)
 
    strNameContextName.Append(strContext_Unique_Num);
 
-   pContextLoggingPtr->StartContext(strNameContextName, static_cast<CFENUM>(HmiContextProviderType::UserDefined), CCfString(L".hierarchy::Plant/Node1_1"),vtValue, dtStartTime, nQuality);
+   pContextLoggingPtr-&gt;StartContext(strNameContextName, static_cast&lt;CFENUM&gt;(HmiContextProviderType::UserDefined), CCfString(L".hierarchy::Plant/Node1_1"),vtValue, dtStartTime, nQuality);
 
 }
 
@@ -22658,7 +22658,7 @@ void StopContext(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ContextLogging"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ContextLogging"), &amp;pUnk);
 
    IContextLoggingPtr pContextLoggingPtr(pUnk);
 
@@ -22668,7 +22668,7 @@ void StopContext(IRuntimePtr pRuntime)
 
    strNameContextName.Append(strContext_Unique_Num);
 
-   pContextLoggingPtr->StopContext(strNameContextName, static_cast<CFENUM>(HmiContextProviderType::UserDefined), CCfString(L".hierarchy::Plant/Node1_1"), dtEndTime);
+   pContextLoggingPtr-&gt;StopContext(strNameContextName, static_cast&lt;CFENUM&gt;(HmiContextProviderType::UserDefined), CCfString(L".hierarchy::Plant/Node1_1"), dtEndTime);
 
 }
 
@@ -22690,7 +22690,7 @@ void ReadContextWithFilter(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnkFilter;
 
-   pRuntime->GetObject(CCfString(L"ContextFilter"), &pUnkFilter);
+   pRuntime-&gt;GetObject(CCfString(L"ContextFilter"), &amp;pUnkFilter);
 
    pFilter = pUnkFilter;
 
@@ -22698,73 +22698,73 @@ void ReadContextWithFilter(IRuntimePtr pRuntime)
 
    strNameContextName.Append(strContext_Unique_Num);
 
-   pFilter->SetContextName(strNameContextName);
+   pFilter-&gt;SetContextName(strNameContextName);
 
-   pFilter->SetProviderType(static_cast<CFENUM>(HmiContextProviderType::UserDefined));
+   pFilter-&gt;SetProviderType(static_cast&lt;CFENUM&gt;(HmiContextProviderType::UserDefined));
 
-   pFilter->SetOperator(CCfString(L"="));
+   pFilter-&gt;SetOperator(CCfString(L"="));
 
-   pFilter->SetValue(CCfVariant(L"Orange Juice"));
+   pFilter-&gt;SetValue(CCfVariant(L"Orange Juice"));
 
-   pFilter->SetPlantViewPath(CCfString(L".hierarchy::Plant/Node1_1"));
+   pFilter-&gt;SetPlantViewPath(CCfString(L".hierarchy::Plant/Node1_1"));
 
    CContextLoggingCB * pContextLoggingCB = new CContextLoggingCB();
 
-   pContextLoggingCB->AddRef();
+   pContextLoggingCB-&gt;AddRef();
 
-   pContextLoggingPtr->ReadContexts(dtStartTime, dtEndTime, pContextLoggingCB, pFilter, HmiContextLoggingSortingMode::Ascending);
+   pContextLoggingPtr-&gt;ReadContexts(dtStartTime, dtEndTime, pContextLoggingCB, pFilter, HmiContextLoggingSortingMode::Ascending);
 
-   pContextLoggingCB->WaitForcompletion(MaxContextWaitTime);
+   pContextLoggingCB-&gt;WaitForcompletion(MaxContextWaitTime);
 
-   std::vector<ILoggedContextPtr> Context = pContextLoggingCB->GetContexts();
+   std::vector&lt;ILoggedContextPtr&gt; Context = pContextLoggingCB-&gt;GetContexts();
 
                   DisplayContext(Context);
 
 }
 
-void DisplayContext(const std::vector<ILoggedContextPtr>& Context)
+void DisplayContext(const std::vector&lt;ILoggedContextPtr&gt;&amp; Context)
 
 {
 
-   for (const auto& item : Context)
+   for (const auto&amp; item : Context)
 
    {
 
       uint32_t pError;
 
-      item->GetErrorCode(&pError);
+      item-&gt;GetErrorCode(&amp;pError);
 
       CCfDateTime64 dtStartTime;
 
-      item->GetStartTime(&dtStartTime);
+      item-&gt;GetStartTime(&amp;dtStartTime);
 
       CCfString strStartTime = dtStartTime.GetDateTimeString();
 
       CCfDateTime64 dtEnd;
 
-      item->GetEndTime(&dtEnd);
+      item-&gt;GetEndTime(&amp;dtEnd);
 
       CCfString strEndTime = dtEnd.GetDateTimeString();
 
       uint32_t pQuality;
 
-      item->GetQuality(&pQuality);
+      item-&gt;GetQuality(&amp;pQuality);
 
       CCfString name;
 
-      item->GetName(&name);
+      item-&gt;GetName(&amp;name);
 
       CCfString viewPath;
 
-      item->GetPlantViewPath(&viewPath);
+      item-&gt;GetPlantViewPath(&amp;viewPath);
 
       CFENUM providerType;
 
-      item->GetProviderType(&providerType);
+      item-&gt;GetProviderType(&amp;providerType);
 
       CCfVariant vtValue;
 
-      item->GetValue(&vtValue);
+      item-&gt;GetValue(&amp;vtValue);
 
       PrintVariantType(vtValue);
 
@@ -22780,13 +22780,13 @@ void SubscribeContextLogging(IRuntimePtr pRuntime)
 
    ICfUnknownPtr pUnk;
 
-   pRuntime->GetObject(CCfString(L"ContextLogging"), &pUnk);
+   pRuntime-&gt;GetObject(CCfString(L"ContextLogging"), &amp;pUnk);
 
    IContextLoggingPtr pContextLoggingPtr(pUnk);
 
    CContextLoggingCB * pContextLoggingCB = new CContextLoggingCB();
 
-   pContextLoggingCB->AddRef();
+   pContextLoggingCB-&gt;AddRef();
 
    CreateContextDefinition(pRuntime);
 
@@ -22794,87 +22794,87 @@ void SubscribeContextLogging(IRuntimePtr pRuntime)
 
    strNameContextName.Append(strContext_Unique_Num);
 
-   CFENUM providerType = static_cast<CFENUM>(HmiContextProviderType::UserDefined);
+   CFENUM providerType = static_cast&lt;CFENUM&gt;(HmiContextProviderType::UserDefined);
 
-   pContextLoggingPtr->Add(strNameContextName, providerType, CCfString(L".hierarchy::Plant/Node1_1"));
+   pContextLoggingPtr-&gt;Add(strNameContextName, providerType, CCfString(L".hierarchy::Plant/Node1_1"));
 
-   pContextLoggingPtr->Subscribe(pContextLoggingCB);
+   pContextLoggingPtr-&gt;Subscribe(pContextLoggingCB);
 
    StartContext(pRuntime);
 
-   if (pContextLoggingCB->GetContexts().size()>0 || pContextLoggingCB->WaitForcompletion(MaxContextWaitTime) == CF_SUCCESS);
+   if (pContextLoggingCB-&gt;GetContexts().size()&gt;0 || pContextLoggingCB-&gt;WaitForcompletion(MaxContextWaitTime) == CF_SUCCESS);
 
    {
 
-      std::vector<ILoggedContextPtr> Context = pContextLoggingCB->GetContexts();
+      std::vector&lt;ILoggedContextPtr&gt; Context = pContextLoggingCB-&gt;GetContexts();
 
       DisplayContext(Context);
 
-      pContextLoggingCB->clear();
+      pContextLoggingCB-&gt;clear();
 
    }
 
    StopContext(pRuntime);
 
-   if (pContextLoggingCB->GetContexts().size() > 0 || pContextLoggingCB->WaitForcompletion(MaxContextWaitTime)==CF_SUCCESS);
+   if (pContextLoggingCB-&gt;GetContexts().size() &gt; 0 || pContextLoggingCB-&gt;WaitForcompletion(MaxContextWaitTime)==CF_SUCCESS);
 
    {
 
-      std::vector<ILoggedContextPtr> Context = pContextLoggingCB->GetContexts();
+      std::vector&lt;ILoggedContextPtr&gt; Context = pContextLoggingCB-&gt;GetContexts();
 
       DisplayContext(Context);
 
    }
 
-   pContextLoggingPtr->CancelSubscribe();
+   pContextLoggingPtr-&gt;CancelSubscribe();
 
-   pContextLoggingCB->Release();
+   pContextLoggingCB-&gt;Release();
 
 }
 
-void DisplayContext(const std::vector<ILoggedContextPtr>& Context)
+void DisplayContext(const std::vector&lt;ILoggedContextPtr&gt;&amp; Context)
 
 {
 
-   for (const auto& item : Context)
+   for (const auto&amp; item : Context)
 
    {
 
       uint32_t pError;
 
-      item->GetErrorCode(&pError);
+      item-&gt;GetErrorCode(&amp;pError);
 
       CCfDateTime64 dtStartTime;
 
-      item->GetStartTime(&dtStartTime);
+      item-&gt;GetStartTime(&amp;dtStartTime);
 
       CCfString strStartTime = dtStartTime.GetDateTimeString();
 
       CCfDateTime64 dtEnd;
 
-      item->GetEndTime(&dtEnd);
+      item-&gt;GetEndTime(&amp;dtEnd);
 
       CCfString strEndTime = dtEnd.GetDateTimeString();
 
       uint32_t pQuality;
 
-      item->GetQuality(&pQuality);
+      item-&gt;GetQuality(&amp;pQuality);
 
       CCfString name;
 
-      item->GetName(&name);
+      item-&gt;GetName(&amp;name);
 
       CCfString viewPath;
 
-      item->GetPlantViewPath(&viewPath);
+      item-&gt;GetPlantViewPath(&amp;viewPath);
 
       CFENUM providerType;
 
-      item->GetProviderType(&providerType);
+      item-&gt;GetProviderType(&amp;providerType);
 
       CCfVariant vtValue;
 
-      item->GetValue(&vtValue);
+      item-&gt;GetValue(&amp;vtValue);
 
       PrintVariantType(vtValue);
 
@@ -23270,55 +23270,55 @@ Supplies the error code of the "IContextDefinition" instance
 
 Copy code
 
-void DisplayContextDefinition(const std::vector<IContextDefinitionPtr>& ContextDef)
+void DisplayContextDefinition(const std::vector&lt;IContextDefinitionPtr&gt;&amp; ContextDef)
 
 {
 
-   for (auto& pValues : ContextDef)
+   for (auto&amp; pValues : ContextDef)
 
    {
 
       uint32_t ErrorCode;
 
-      pValues->GetErrorCode(&ErrorCode);
+      pValues-&gt;GetErrorCode(&amp;ErrorCode);
 
       CCfString strName;
 
-      pValues->GetName(&strName);
+      pValues-&gt;GetName(&amp;strName);
 
       CFENUM pnum;
 
-      pValues->GetProviderType(&pnum);
+      pValues-&gt;GetProviderType(&amp;pnum);
 
       HmiContextDataType dataType;
 
-      pValues->GetDataType(&dataType);
+      pValues-&gt;GetDataType(&amp;dataType);
 
       ICfMapIDToVariantPtr displayName;
 
-      pValues->GetDisplayNames(&displayName);
+      pValues-&gt;GetDisplayNames(&amp;displayName);
 
       uint32_t nCount;
 
-      displayName->Count(&nCount);
+      displayName-&gt;Count(&amp;nCount);
 
-      for (uint32_t nIndex = 0; nIndex < nCount; nIndex++)
+      for (uint32_t nIndex = 0; nIndex &lt; nCount; nIndex++)
 
       {
 
          int32_t langID;
 
-         displayName->KeyAt(index, &langID);
+         displayName-&gt;KeyAt(index, &amp;langID);
 
          CCfVariant vtName;
 
-         displayName->ValueAt(langID, &vtName);
+         displayName-&gt;ValueAt(langID, &amp;vtName);
 
       }
 
       CCfString strPlantViewPath;
 
-      pValues->GetPlantViewPath(&strPlantViewPath);
+      pValues-&gt;GetPlantViewPath(&amp;strPlantViewPath);
 
    }
 
@@ -23389,49 +23389,49 @@ Supplies the QualityCode of the context value.
 
 Copy code
 
-void DisplayContext(const std::vector<ILoggedContextPtr>& Context)
+void DisplayContext(const std::vector&lt;ILoggedContextPtr&gt;&amp; Context)
 
 {
 
-   for (const auto& item : Context)
+   for (const auto&amp; item : Context)
 
    {
 
       uint32_t pError;
 
-      item->GetErrorCode(&pError);
+      item-&gt;GetErrorCode(&amp;pError);
 
       CCfDateTime64 dtStartTime;
 
-      item->GetStartTime(&dtStartTime);
+      item-&gt;GetStartTime(&amp;dtStartTime);
 
       CCfString strStartTime = dtStartTime.GetDateTimeString();
 
       CCfDateTime64 dtEnd;
 
-      item->GetEndTime(&dtEnd);
+      item-&gt;GetEndTime(&amp;dtEnd);
 
       CCfString strEndTime = dtEnd.GetDateTimeString();
 
       uint32_t pQuality;
 
-      item->GetQuality(&pQuality);
+      item-&gt;GetQuality(&amp;pQuality);
 
       CCfString name;
 
-      item->GetName(&name);
+      item-&gt;GetName(&amp;name);
 
       CCfString viewPath;
 
-      item->GetPlantViewPath(&viewPath);
+      item-&gt;GetPlantViewPath(&amp;viewPath);
 
       CFENUM providerType;
 
-      item->GetProviderType(&providerType);
+      item-&gt;GetProviderType(&amp;providerType);
 
       CCfVariant vtValue;
 
-      item->GetValue(&vtValue);
+      item-&gt;GetValue(&amp;vtValue);
 
       PrintVariantType(vtValue);
 
@@ -23473,21 +23473,21 @@ Supplies the error code.
 
 Copy code
 
-void DisplayContextError(const std::vector<IContextErrorPtr>& pVecContext)
+void DisplayContextError(const std::vector&lt;IContextErrorPtr&gt;&amp; pVecContext)
 
 {
 
-   for (const auto& pContext : pVecContext)
+   for (const auto&amp; pContext : pVecContext)
 
    {
 
       CCfString strContextName;
 
-      pContext->GetContextName(&strContextName);
+      pContext-&gt;GetContextName(&amp;strContextName);
 
       uint32_t value;
 
-      pContext->GetErrorCode(&value);
+      pContext-&gt;GetErrorCode(&amp;value);
 
 }
 
@@ -23585,10 +23585,10 @@ Sets the filter operator.
 
   - =
   - !=
-  - <
-  - >
-  - <=
-  - >=
+  - &lt;
+  - &gt;
+  - &lt;=
+  - &gt;=
 
   For values with data type String:
 

@@ -249,7 +249,7 @@ This section contains information on the following topics:
 
 #### Overview
 
-The following table shows the settings you can make for user management under "Security > Access protection":
+The following table shows the settings you can make for user management under "Security &gt; Access protection":
 
 | Group | Setting | Description |
 | --- | --- | --- |
@@ -257,7 +257,7 @@ The following table shows the settings you can make for user management under "S
 | Automatic project lock | Activate automatic project lock for all user types | Specifies that the project is locked after the session timeout has expired. Authentication is required again to continue working on the project. Note that you cannot lock the project if you are logged in as an anonymous user. |
 | Session timeout for local project users (minutes) | Sets the duration of the session timeout for project users. For global users and single sign-on users, this setting is taken from UMC. |  |
 
-In addition, under "General > User Name", you can specify that the name of the logged-on user should be used as the user name.
+In addition, under "General &gt; User Name", you can specify that the name of the logged-on user should be used as the user name.
 
 See also: [Overview of the program settings](Introduction%20to%20the%20TIA%20Portal.md#overview-of-the-program-settings)
 
@@ -276,7 +276,7 @@ To change the user management settings, follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the group "Security > Access protection" or "General > General > User name" in the navigation area.
+2. Select the group "Security &gt; Access protection" or "General &gt; General &gt; User name" in the navigation area.
 3. Change the desired setting.
 
 #### Result
@@ -359,7 +359,7 @@ The following table provides an overview of the engineering function rights of a
 | [Edit Safety Integrated application of the drive](#function-right-edit-safety-integrated-application-of-the-drive) | A user with this function right can edit the safety configuration of drives and carry out safety acceptance tests. | TIA Portal user interface |
 | [Control the drive in manual mode](#control-the-drive-in-manual-mode-function-right) | A user with this function right may activate master control over the drive through the project, and then carry out targeted drive optimizations. | TIA Portal user interface |
 | [Download to drives](#function-right-download-to-drives) | A user with this function right can use Startdrive to download the configuration from a project and/or a backup of drive data into the drive. | TIA Portal user interface |
-| [Perform drive firmware update](#function-right-perform-drive-firmware-update) | A user with this function right can perform a firmware update for the drive via the "Online & Diagnostics" function view. | TIA Portal user interface |
+| [Perform drive firmware update](#function-right-perform-drive-firmware-update) | A user with this function right can perform a firmware update for the drive via the "Online &amp; Diagnostics" function view. | TIA Portal user interface |
 | [Perform drive backup](#function-right-perform-drive-backup) | A user with this function right can create a backup of the drive data (as a zip file) and save it in a directory on the operating unit. | TIA Portal user interface |
 
 Each engineering function right has a specific protection target. The protection target is the area that is protected by the function right. The following protection targets are available:
@@ -695,7 +695,7 @@ The function right "Download HMI device" allows a user to download a project to 
 
 #### Additional information
 
-You can find additional information in the sections "Visualizing processes > Compiling and downloading" and "Visualizing processes (RT Unified) > Compiling and downloading".
+You can find additional information in the sections "Visualizing processes &gt; Compiling and downloading" and "Visualizing processes (RT Unified) &gt; Compiling and downloading".
 
 ---
 
@@ -717,7 +717,7 @@ The function right "Maintain HMI device" allows a user to carry out maintenance 
 
 #### Additional information
 
-You can find additional information in the sections "Visualizing processes > Compiling and downloading" and "Visualizing processes (RT Unified) > Compiling and downloading".
+You can find additional information in the sections "Visualizing processes &gt; Compiling and downloading" and "Visualizing processes (RT Unified) &gt; Compiling and downloading".
 
 ---
 
@@ -1044,7 +1044,7 @@ The "Import project texts" function right allows a user to import project texts.
 
 Users without this function right cannot import the project texts in any of the following ways:
 
-- Menu "Tools > Import project texts"
+- Menu "Tools &gt; Import project texts"
 - "Import project texts" button in the toolbar of the project texts editor
 - "Import project texts" button in the "Texts" tab of the device properties
 
@@ -1098,7 +1098,7 @@ The "Upgrade project" function right allows a user to upgrade the project of an 
 
 #### Description
 
-The "Perform drive firmware update" function right allows a user to carry out a firmware update for the drive via the "Online & Diagnostics" function view.
+The "Perform drive firmware update" function right allows a user to carry out a firmware update for the drive via the "Online &amp; Diagnostics" function view.
 
 > **Note**
 >
@@ -1270,7 +1270,7 @@ In contrast, the following restrictions apply to CPs:
 
 - A project is open.
 - If the project is protected, you must be logged on with a user account that has the function rights "Open and edit the project" and "Manage users and roles".
-- The editor "Security settings > Users and roles" is open.
+- The editor "Security settings &gt; Users and roles" is open.
 
 ### Create new local project users
 
@@ -1316,7 +1316,7 @@ To delete a local project user, follow these steps:
 
 1. Open the "Users" tab.
 2. Select the local project user you want to delete.
-3. In the shortcut menu select the "Delete" command or use the <Del> key.
+3. In the shortcut menu select the "Delete" command or use the &lt;Del&gt; key.
 
 > **Note**
 >
@@ -1387,7 +1387,7 @@ See also: [Changing the UM domain](#changing-the-um-domain)
 - The connection to UMC is configured and you have a user account with the corresponding rights in UMC.
 
   For further information on installation and configuration of UMC, refer to the English documentation on UMC on the installation data carrier in the directory "/document/Readme/English".
-- The editor "Security settings > Users and roles" is open.
+- The editor "Security settings &gt; Users and roles" is open.
 
 #### Adding global users
 
@@ -1437,7 +1437,7 @@ To delete a global user from the TIA Portal project, follow these steps:
 
 1. Open the "Users" tab.
 2. Select the global user you want to delete. You can also delete several users at the same time via multi-selection.
-3. In the shortcut menu, select the "Delete" command or press the <Del> button.
+3. In the shortcut menu, select the "Delete" command or press the &lt;Del&gt; button.
 
 ---
 
@@ -1460,7 +1460,7 @@ To delete a global user from the TIA Portal project, follow these steps:
 - The connection to UMC is configured and you have a user account with the corresponding rights in UMC.
 
   For further information on installation and configuration of UMC, refer to the English documentation on UMC on the installation data carrier in the directory "/document/Readme/English".
-- The editor "Security settings > Users and roles" is open.
+- The editor "Security settings &gt; Users and roles" is open.
 
 #### Adding a global user group
 
@@ -1503,7 +1503,7 @@ To delete a global user group from the TIA Portal project, follow these steps:
 
 1. Open the "User groups" tab.
 2. Select the global user group that you want to delete. You can also delete several user groups at the same time via multi-selection.
-3. In the shortcut menu select the "Delete" command or use the <Del> key.
+3. In the shortcut menu select the "Delete" command or use the &lt;Del&gt; key.
 
 > **Note**
 >
@@ -1537,7 +1537,7 @@ You can check whether synchronization is necessary at any time, and then carry i
 - The connection to UMC is configured and you have a user account with the corresponding rights in UMC.
 
   For more information on installation and configuration of UMC, refer to the English documentation on UMC on the installation data carrier in the directory "/Documents/Readme/English".
-- The editor "Security settings > Users and roles" is open.
+- The editor "Security settings &gt; Users and roles" is open.
 
 #### Procedure
 
@@ -1626,7 +1626,7 @@ See also: [User management settings](#user-management-settings)
 
 - A project is open.
 - Only in protected projects: You are logged on with a user account with the "Manage users and roles" and "Open and edit the project" function rights.
-- The editor "Security settings > Users and roles" is open.
+- The editor "Security settings &gt; Users and roles" is open.
 
 ### Procedure
 
@@ -1660,7 +1660,7 @@ You can display the assigned role permissions for each project user or global us
 
 - A project is open.
 - If the project is protected, you must be logged on with a user account that has the function rights "Open and edit the project" and "Manage users and roles".
-- The editor "Security settings > Users and roles" is open.
+- The editor "Security settings &gt; Users and roles" is open.
 
 ### Defining a new role
 
@@ -1702,7 +1702,7 @@ To delete a role, follow these steps:
 
 1. Open the "Roles" tab.
 2. Select the role that you want to delete. Please note that you cannot delete the "Engineering administrator" and "Engineering standard" roles defined by the system.
-3. In the shortcut menu select the "Delete" command or use the <Del> key.
+3. In the shortcut menu select the "Delete" command or use the &lt;Del&gt; key.
 
 ### Display assigned function rights of a local project user or of a global user
 
@@ -1734,7 +1734,7 @@ You can assign roles to project users or global users and user groups that have 
 
 - A project is open.
 - If the project is protected, you must be logged on with a user account that has the function rights "Open and edit the project" and "Manage users and roles".
-- The editor "Security settings > Users and roles" is open.
+- The editor "Security settings &gt; Users and roles" is open.
 
 ### Assigning roles to project users and global users
 
@@ -2031,7 +2031,7 @@ To lock the project automatically on inactivity, follow these steps:
 To remove the project lock again for local project users and global users, follow these steps:
 
 1. In the "Project locked" dialog, enter the correct password for the logged-on user.
-2. Confirm the entries with <Enter> or click "Unlock".
+2. Confirm the entries with &lt;Enter&gt; or click "Unlock".
 
    Alternatively, you can also close the project if you do not want to log on again. Changes that have not been saved are discarded.
 

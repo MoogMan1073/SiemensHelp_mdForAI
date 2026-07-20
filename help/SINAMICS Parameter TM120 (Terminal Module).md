@@ -223,14 +223,14 @@ Activation:
 1. p0003 = 3 (expert).  
 2. p0013[0...49] = requested parameter number.  
 3. If required, enter p0011 = password in order to prevent non-authorized deactivation.  
-4. p0016 = 1 --> activates the selected user-defined list.  
+4. p0016 = 1 --&gt; activates the selected user-defined list.  
 Deactivation/change:  
 1. p0003 = 3 (expert).  
 2. If required, p0012 = p0011, in order to be authorized to change or deactivate the
 list.  
 3. If required p0013[0...49] = required parameter number.  
-4. p0016 = 1 --> activates the modified user-defined list.  
-5. p0003 = 0 --> deactivates the user-defined list.
+4. p0016 = 1 --&gt; activates the modified user-defined list.  
+5. p0003 = 0 --&gt; deactivates the user-defined list.
 
 **Dependency:**
   
@@ -275,7 +275,7 @@ A value of 0 means: Entry is empty.
 Runs the corresponding macro files.  
 The selected macro file must be available on the memory card/device memory.  
 Example:  
-p0015 = 6 --> the macro file PM000006.ACX is run.
+p0015 = 6 --&gt; the macro file PM000006.ACX is run.
 
 **Dependency:**
   
@@ -812,19 +812,19 @@ documentation.
 The buffer parameters are cyclically updated in the background (refer to status signal
 in r2139).  
 Fault buffer structure (general principle):  
-r0945[0], r0949[0], r0948[0], r2109[0], r3115[0] --> actual fault case, fault 1  
+r0945[0], r0949[0], r0948[0], r2109[0], r3115[0] --&gt; actual fault case, fault 1  
 . . .  
-r0945[7], r0949[7], r0948[7], r2109[7], r3115[7] --> actual fault case, fault 8  
-r0945[8], r0949[8], r0948[8], r2109[8], r3115[8] --> 1st acknowledged fault case,
+r0945[7], r0949[7], r0948[7], r2109[7], r3115[7] --&gt; actual fault case, fault 8  
+r0945[8], r0949[8], r0948[8], r2109[8], r3115[8] --&gt; 1st acknowledged fault case,
 fault 1  
 . . .  
-r0945[15], r0949[15], r0948[15], r2109[15], r3115[15] --> 1st acknowledged fault case,
+r0945[15], r0949[15], r0948[15], r2109[15], r3115[15] --&gt; 1st acknowledged fault case,
 fault 8  
 . . .  
-r0945[56], r0949[56], r0948[56], r2109[56], r3115[56] --> 7th acknowledged fault case,
+r0945[56], r0949[56], r0948[56], r2109[56], r3115[56] --&gt; 7th acknowledged fault case,
 fault 1  
 . . .  
-r0945[63], r0949[63], r0948[63], r2109[63], r3115[63] --> 7th acknowledged fault case,
+r0945[63], r0949[63], r0948[63], r2109[63], r3115[63] --&gt; 7th acknowledged fault case,
 fault 8
 
 ### r0947[0...63] Fault number
@@ -1113,18 +1113,18 @@ Firmware patch/hot fix
 **Note:**
   
 Example:  
-r0975[0] = 42 --> SIEMENS  
-r0975[1] = 11 --> SERVO drive object type  
-r0975[2] = 102 --> first part, firmware version V01.02 (second part, refer to index
+r0975[0] = 42 --&gt; SIEMENS  
+r0975[1] = 11 --&gt; SERVO drive object type  
+r0975[2] = 102 --&gt; first part, firmware version V01.02 (second part, refer to index
 10)  
-r0975[3] = 2003 --> year 2003  
-r0975[4] = 1401 --> 14th of January  
-r0975[5] = 1 --> PROFIdrive drive object, type class  
-r0975[6] = 9 --> PROFIdrive drive object sub-type class 1  
-r0975[7] = 2 --> drive object number = 2  
+r0975[3] = 2003 --&gt; year 2003  
+r0975[4] = 1401 --&gt; 14th of January  
+r0975[5] = 1 --&gt; PROFIdrive drive object, type class  
+r0975[6] = 9 --&gt; PROFIdrive drive object sub-type class 1  
+r0975[7] = 2 --&gt; drive object number = 2  
 r0975[8] = 0 (reserved)  
 r0975[9] = 0 (reserved)  
-r0975[10] = 600 --> second part, firmware version (complete version: V01.02.06.00)
+r0975[10] = 600 --&gt; second part, firmware version (complete version: V01.02.06.00)
 
 ### p2006 Reference temperature
 
@@ -2829,7 +2829,7 @@ effective after the message has gone.
 The message type can only be changed for messages with the appropriate identification
 (exception, value = 0).  
 Example:  
-F12345(A) --> Fault F12345 can be changed to alarm A12345.  
+F12345(A) --&gt; Fault F12345 can be changed to alarm A12345.  
 In this case, the message number that may be possibly entered in p2100[0...19] and
 p2126[0...19] is automatically removed.
 
@@ -2924,14 +2924,14 @@ documentation.
 The buffer parameters are cyclically updated in the background (refer to status signal
 in r2139).  
 Alarm buffer structure (general principle):  
-r2122[0], r2124[0], r2123[0], r2125[0] --> alarm 1 (the oldest)  
+r2122[0], r2124[0], r2123[0], r2125[0] --&gt; alarm 1 (the oldest)  
 . . .  
-r2122[7], r2124[7], r2123[7], r2125[7] --> Alarm 8 (the latest)  
+r2122[7], r2124[7], r2123[7], r2125[7] --&gt; Alarm 8 (the latest)  
 When the alarm buffer is full, the alarms that have gone are entered into the alarm
 history:  
-r2122[8], r2124[8], r2123[8], r2125[8] --> Alarm 1 (the latest)  
+r2122[8], r2124[8], r2123[8], r2125[8] --&gt; Alarm 1 (the latest)  
 . . .  
-r2122[63], r2124[63], r2123[63], r2125[63] --> alarm 56 (the oldest)
+r2122[63], r2124[63], r2123[63], r2125[63] --&gt; alarm 56 (the oldest)
 
 ### r2123[0...63] Alarm time received in milliseconds
 
@@ -3127,7 +3127,7 @@ effective after the fault has been resolved.
 The acknowledge mode can only be changed for faults with the appropriate identification.  
 Example:  
 F12345 and acknowledge mode = IMMEDIATELY (POWER ON)  
---> The acknowledge mode can be changed from IMMEDIATELY to POWER ON.
+--&gt; The acknowledge mode can be changed from IMMEDIATELY to POWER ON.
 
 ### p2128[0...15] Faults/alarms trigger selection
 
@@ -3211,8 +3211,8 @@ p2128
 
 **Note:**
   
-CO: r2129 = 0 --> None of the selected messages has occurred.  
-CO: r2129 > 0 --> At least one of the selected messages has occurred.
+CO: r2129 = 0 --&gt; None of the selected messages has occurred.  
+CO: r2129 &gt; 0 --&gt; At least one of the selected messages has occurred.
 
 ### r2130[0...63] Fault time received in days
 
@@ -3976,43 +3976,43 @@ The buffer parameters are cyclically updated in the background (refer to status 
 in r2139).  
 The structure of the fault buffer and the assignment of the indices is shown in r0945.  
 For bits 20 ... 16:  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --&gt; PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --&gt; PROFIdrive message class 1: hardware fault/software
 error  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --&gt; PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --&gt; PROFIdrive message class 3: supply voltage
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --&gt; PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --&gt; PROFIdrive message class 5: power electronics
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --&gt; PROFIdrive message class 6: overtemperature
 electronic components  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --&gt; PROFIdrive message class 7: ground fault/phase
 fault detected  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --&gt; PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --&gt; PROFIdrive message class 9: communication
 error to the higher-level control  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --&gt; PROFIdrive message class 10: safe monitoring
 channel has identified an error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --&gt; PROFIdrive message class 11: incorrect
 position actual value/speed actual value or not available  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 12: internal
 (DRIVE-CLiQ) communication error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --&gt; PROFIdrive message class 13: infeed unit
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --&gt; PROFIdrive message class 14: braking controller/Braking
 Module faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --&gt; PROFIdrive message class 15: line filter
 faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --&gt; PROFIdrive message class 16: external
 measured value/signal state outside the permissible range  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --&gt; PROFIdrive message class 17: application/technology
 function faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --&gt; PROFIdrive message class 18: error in
 the parameterization/configuration/commissioning sequence  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --&gt; PROFIdrive message class 19: general drive
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 20: auxiliary
 unit faulted
 
 ### r3123[0...63] Diagnostic attribute alarm
@@ -4069,43 +4069,43 @@ These status bits are used for the classification of internal alarm classes and 
 intended for diagnostic purposes only on certain automation systems with integrated
 SINAMICS functionality.  
 For bits 20 ... 16:  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --&gt; PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --&gt; PROFIdrive message class 1: hardware fault/software
 error  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --&gt; PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --&gt; PROFIdrive message class 3: supply voltage
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --&gt; PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --&gt; PROFIdrive message class 5: power electronics
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --&gt; PROFIdrive message class 6: overtemperature
 electronic components  
-Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --&gt; PROFIdrive message class 7: ground fault/phase
 fault detected  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --&gt; PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --&gt; PROFIdrive message class 9: communication
 error to the higher-level control  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --&gt; PROFIdrive message class 10: safe monitoring
 channel has identified an error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --&gt; PROFIdrive message class 11: incorrect
 position actual value/speed actual value or not available  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 12: internal
 (DRIVE-CLiQ) communication error  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --&gt; PROFIdrive message class 13: infeed unit
 faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --&gt; PROFIdrive message class 14: braking controller/Braking
 Module faulted  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --&gt; PROFIdrive message class 15: line filter
 faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --&gt; PROFIdrive message class 16: external
 measured value/signal state outside the permissible range  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --&gt; PROFIdrive message class 17: application/technology
 function faulted  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --&gt; PROFIdrive message class 18: error in
 the parameterization/configuration/commissioning sequence  
-Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --&gt; PROFIdrive message class 19: general drive
 fault  
-Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --&gt; PROFIdrive message class 20: auxiliary
 unit faulted
 
 ### r3131 CO: Actual fault value
@@ -4262,7 +4262,7 @@ SINAMICS Parameter TM120 (Terminal Module) 03996 - 20057
 Displays whether writing to parameters is inhibited.  
 r3996[0] = 0:  
 Parameter write not inhibited.  
-0 < r3996[0] < 100:  
+0 &lt; r3996[0] &lt; 100:  
 Parameter write inhibited. The value shows how the calculations are progressing.
 
 **Index:**
@@ -4334,7 +4334,7 @@ Temperature channel 3
   
 For p4102[0...7] = 251 °C, evaluation of the corresponding threshold is deactivated.  
 For sensor type "PTC thermistor" (p4100[0...3] = 1), the following applies:  
-To activate the corresponding alarm or fault, p4102[0...7] must be set <= 250 °C.
+To activate the corresponding alarm or fault, p4102[0...7] must be set &lt;= 250 °C.
 
 **Note:**
   
@@ -4410,17 +4410,17 @@ X521.8(+) and X521.7(-) = channel 3
 **Description:**
   
 Sets the fault threshold/alarm threshold for Terminal Module 120 (TM120).  
-A35211 is initiated, if the temperature actual value r4105[0] > p4102[0]  
-F35207 is initiated if the temperature actual value r4105[0] > p4102[1] or timer p4103[0]
+A35211 is initiated, if the temperature actual value r4105[0] &gt; p4102[0]  
+F35207 is initiated if the temperature actual value r4105[0] &gt; p4102[1] or timer p4103[0]
 has expired  
-A35212 is initiated, if the temperature actual value r4105[1] > p4102[2]  
-F35208 is initiated if the temperature actual value r4105[1] > p4102[3] or timer p4103[1]
+A35212 is initiated, if the temperature actual value r4105[1] &gt; p4102[2]  
+F35208 is initiated if the temperature actual value r4105[1] &gt; p4102[3] or timer p4103[1]
 has expired  
-A35213 is initiated, if the temperature actual value r4105[2] > p4102[4]  
-F35209 is initiated if the temperature actual value r4105[2] > p4102[5] or timer p4103[2]
+A35213 is initiated, if the temperature actual value r4105[2] &gt; p4102[4]  
+F35209 is initiated if the temperature actual value r4105[2] &gt; p4102[5] or timer p4103[2]
 has expired  
-A35214 is initiated, if the temperature actual value r4105[3] > p4102[6]  
-F35210 is initiated if the temperature actual value r4105[3] > p4102[7] or timer p4103[3]
+A35214 is initiated, if the temperature actual value r4105[3] &gt; p4102[6]  
+F35210 is initiated if the temperature actual value r4105[3] &gt; p4102[7] or timer p4103[3]
 has expired  
 For alarms A35211, A35212, A35213, A35214 the following applies:  
 - Remains until the temperature actual value (r4105[0...3]) reaches or falls below
@@ -4469,7 +4469,7 @@ Fault F35207 ... F35210 only causes the drive to shut down if there is at least 
 BICO interconnection between the drive and TM120.  
 For p4102[0...7] = 251 °C, evaluation of the corresponding threshold is deactivated.  
 For sensor type "PTC thermistor" (p4100[0...3] = 1), the following applies:  
-To activate the corresponding alarm or fault, p4102[0...7] must be set <= 250 °C.
+To activate the corresponding alarm or fault, p4102[0...7] must be set &lt;= 250 °C.
 
 **Note:**
   
@@ -4775,7 +4775,7 @@ r4950, r4951, r4952, p4956, r4957, r4958, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -4820,7 +4820,7 @@ r4950, r4951, r4952, r4955, r4957, r4958, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -4858,7 +4858,7 @@ r4950, r4951, r4952, r4955, p4956, r4958, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -4898,7 +4898,7 @@ r4950, r4951, r4952, r4955, p4956, r4957, r4959, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -4942,7 +4942,7 @@ r4950, r4951, r4952, r4955, p4956, r4957, r4958, r4960
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -4985,7 +4985,7 @@ r4950, r4951, r4952, r4955, p4956, r4957, r4958, r4959
 **Notice:**
   
 This parameter is only indexed if at least one drive object-specific Technology Extension
-exists (p4950 > 0).
+exists (p4950 &gt; 0).
 
 **Note:**
   
@@ -6924,9 +6924,9 @@ is assigned to controller 2.
 Displays the parameters that were not able to be transferred when reading the parameter
 back-up files (PS files) from the non-volatile memory (e.g. memory card).  
 r9406[0] = 0  
---> All of the parameter values were able to be transferred error-free.  
-r9406[0...x] > 0  
---> indicates the parameter number in the following cases:  
+--&gt; All of the parameter values were able to be transferred error-free.  
+r9406[0...x] &gt; 0  
+--&gt; indicates the parameter number in the following cases:  
 - parameter, whose value was not able to be completely accepted.  
 - indexed parameter, where at least 1 index was not able to be accepted. The first
 index that is not transferred is displayed in r9407.
@@ -6970,9 +6970,9 @@ If, from an indexed parameter, at least one index was not able to be transferred
 then the parameter number is displayed in r9406[n] and the first index that was not
 transferred is displayed in r9407[n].  
 r9406[0] = 0  
---> All of the parameter values were able to be transferred error-free.  
-r9406[n] > 0  
---> Displays r9407[n] the first index of the parameter number r9406[n] that was not
+--&gt; All of the parameter values were able to be transferred error-free.  
+r9406[n] &gt; 0  
+--&gt; Displays r9407[n] the first index of the parameter number r9406[n] that was not
 transferred.
 
 **Dependency:**
@@ -8077,14 +8077,14 @@ the calculated value is then present.
   
 For value = 1 ... 256:  
 This value can only be set if, for sampling time T_sample of this runtime group, the
-following applies: 1 ms <= T_sample <= r20003. At download, a value that violates
+following applies: 1 ms &lt;= T_sample &lt;= r20003. At download, a value that violates
 this condition is not rejected, but a permissible equivalent value is set automatically
 and fault F50518 is output.  
 If value = 9003:  
 The fixed runtime groups p20000[x] = 9003 log on with the sampling time of the setpoint
 channel, although the sampling time must be at least 1 ms. If, as a result of this
 limit, the actual sampling time deviates from the sampling time of the setpoint channel
-p0115[3], alarm A20103 is output. Another runtime group with a sampling time >= 1
+p0115[3], alarm A20103 is output. Another runtime group with a sampling time &gt;= 1
 ms should be selected. "Calculate before setpoint channel" means before function diagrams
 3010, 3020, 3030, 3040, etc. are calculated, if the setpoint channel is activated
 (p0108.8 = 1). If, e.g. for SERVO, a setpoint channel has not been configured (p0108.8
@@ -8247,7 +8247,7 @@ Runtime group 9
 
 **Note:**
   
-The runtime group to be measured has to be logged on (p20000[x] > 0).  
+The runtime group to be measured has to be logged on (p20000[x] &gt; 0).  
 The value for the computation time load is calculated in the drive unit using the
 project loaded. As such, the r20005[x] values are not available in the expert list
 in SCOUT/STARTER offline mode.
@@ -8273,7 +8273,7 @@ in SCOUT/STARTER offline mode.
   
 Displays the assignment of the available hardware sampling times of the drive unit.  
 The term "hardware sampling times" refers to those r20002 sampling times that are
-formed as a multiple of the basic sampling time and always < r20003.
+formed as a multiple of the basic sampling time and always &lt; r20003.
 
 **Dependency:**
   
@@ -8289,7 +8289,7 @@ Therefore, the current number of hardware sampling times that are still free can
 read out in r7903.  
 If r7903=0, no additional sampling time that differs from r20008[0...12] can be provided
 from the Control Unit. If, when selecting in this state, a runtime group with a sampling
-time < r20003 (p20000 <= 255) is to be set in p20000, only runtime groups whose sampling
+time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000, only runtime groups whose sampling
 time is already provided in r20008[0...12] can be selected.
 
 **Note:**
@@ -8304,8 +8304,8 @@ It should be noted that the basic system, depending on the selected basic sampli
 times p0115[0], requires at least two (sometimes several) freely assignable hardware
 sampling times for internal functions. The number of hardware sampling times that
 can still be freely assigned can be read out in r7903.  
-r20008[11] = 99999.00000 --> Hardware sampling time is not supported.  
-r20008[12] = 99999.00000 --> Hardware sampling time is not supported.  
+r20008[11] = 99999.00000 --&gt; Hardware sampling time is not supported.  
+r20008[12] = 99999.00000 --&gt; Hardware sampling time is not supported.  
 The sampling time of runtime groups that have been assigned to the PROFIBUS runtime
 groups (p20000 = 4000 ... 4004) is not displayed in r20008. For this sampling time,
 one of the internally and permanently assigned hardware sampling times is used.
@@ -8570,7 +8570,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 0 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 0 of the
 AND function block.
 
 ### p20032 AND 0 runtime group
@@ -8703,7 +8703,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 1 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 1 of the
 AND function block.
 
 ### p20036 AND 1 runtime group
@@ -8836,7 +8836,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 2 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 2 of the
 AND function block.
 
 ### p20040 AND 2 runtime group
@@ -8969,7 +8969,7 @@ Input I3
 
 **Description:**
   
-Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 3 of the
+Display parameter for binary quantity Q = I0 &amp; I1 &amp; I2 &amp; I3 of instance AND 3 of the
 AND function block.
 
 ### p20044 AND 3 runtime group
@@ -11437,7 +11437,7 @@ Div remainder MOD
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 0 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### p20121 DIV 0 runtime group
 
@@ -11598,7 +11598,7 @@ Div remainder MOD
   
 Display parameter for the signal QF that the divisor X1 of instance DIV 1 of the divider
 is zero.  
-X1 = 0.0 => QF = 1
+X1 = 0.0 =&gt; QF = 1
 
 ### p20126 DIV 1 runtime group
 
@@ -11739,7 +11739,7 @@ with sign evaluation.
   
 Display parameter for signal SN that the input quantity X of instance AVA 0 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### p20131 AVA 0 runtime group
 
@@ -11880,7 +11880,7 @@ with sign evaluation.
   
 Display parameter for signal SN that the input quantity X of instance AVA 1 of the
 absolute value generator with sign evaluation is negative.  
-X < 0.0 => SN = 1
+X &lt; 0.0 =&gt; SN = 1
 
 ### p20136 AVA 1 runtime group
 
@@ -14664,7 +14664,7 @@ Display parameter for the limited output quantity Y of instance LIM 0 of the lim
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20233 BO: LIM 0 input quantity at the lower limit QL
 
@@ -14686,7 +14686,7 @@ Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 0 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### p20234 LIM 0 runtime group
 
@@ -14866,7 +14866,7 @@ Display parameter for the limited output quantity Y of instance LIM 1 of the lim
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU =
-1 for X >= LU.
+1 for X &gt;= LU.
 
 ### r20241 BO: LIM 1 input quantity at the lower limit QL
 
@@ -14888,7 +14888,7 @@ Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU
 **Description:**
   
 Display parameter of instance LIM 1 of limiter QL (lower limit reached), i.e. QL =
-1 for X <= LL.
+1 for X &lt;= LL.
 
 ### p20242 LIM 1 runtime group
 
@@ -15446,7 +15446,7 @@ integrator.
 **Description:**
   
 Display parameter for output quantity Y of instance INT 0 of the integrator.  
-If LL>= LU, then the output quantity Y = LU.
+If LL&gt;= LU, then the output quantity Y = LU.
 
 ### r20262 BO: INT 0 integrator at the upper limit QU
 
@@ -15671,7 +15671,7 @@ Setting parameter for hysteresis HY of instance LVM 0 of the double-sided limite
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20271 BO: LVM 0 input quantity within interval QM
 
@@ -15715,7 +15715,7 @@ X lies within the interval.
 **Description:**
   
 Display parameter of instance LVM 0 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### p20273 LVM 0 runtime group
 
@@ -15896,7 +15896,7 @@ Setting parameter for hysteresis HY of instance LVM 1 of the double-sided limite
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X > M + L and X is >= M + L - HY.
+X was at least once X &gt; M + L and X is &gt;= M + L - HY.
 
 ### r20280 BO: LVM 1 input quantity within interval QM
 
@@ -15940,7 +15940,7 @@ X lies within the interval.
 **Description:**
   
 Display parameter of instance LVM 1 of the double-sided limiter that input quantity
-X was at least once X < M - L and X is <= M - L + HY.
+X was at least once X &lt; M - L and X is &lt;= M - L + HY.
 
 ### p20282 LVM 1 runtime group
 
@@ -16175,7 +16175,7 @@ blocks with a higher run sequence value.
 **Description:**
   
 Allocates properties to runtime groups 1 to 10.  
-This property comprises the sampling time and, for p21000[x] >= 2000, the instant
+This property comprises the sampling time and, for p21000[x] &gt;= 2000, the instant
 of the call within the sampling time.  
 The index x + 1 of p21000 corresponds to the number of the runtime group:  
 - p21000[0] is used to set the property of the runtime group 1  
@@ -16796,15 +16796,15 @@ could result in discontinuous signal transitions.
 For value = 1 ... 256 (free runtime group):  
 This selection value can only be selected online if the following applies for sampling
 time T_sample of this runtime group:  
-1 ms <= T_sample < r21003.  
+1 ms &lt;= T_sample &lt; r21003.  
 At download, a value that violates this condition is not rejected, but a permissible
 equivalent value is set automatically and fault F51004 is output.  
-For value > 2000 (fixed runtime group):  
-The fixed runtime groups p21000[x] >= 2000 log on with the sampling time of the associated
+For value &gt; 2000 (fixed runtime group):  
+The fixed runtime groups p21000[x] &gt;= 2000 log on with the sampling time of the associated
 basic system function, subject to a minimum sampling time of 1 ms. If, as a result
 of this limit, the actual sampling time deviates from the sampling time of the basic
 system function, then fault F51005 (during F51006 download) is output. In this case,
-another runtime group with a sampling time >= 1 ms should be selected. When selecting
+another runtime group with a sampling time &gt;= 1 ms should be selected. When selecting
 the fixed runtime groups, a check is not made as to whether the associated system
 block exists.  
 Example:  
@@ -16976,7 +16976,7 @@ Runtime group 10
 **Note:**
   
 The computing time load can only be displayed for the runtime groups which are logged
-on (p21000[x] > 0). The value for the computing time load is calculated in the drive
+on (p21000[x] &gt; 0). The value for the computing time load is calculated in the drive
 unit based on the project loaded plus DCC chart. Therefore, the values r21005[x] are
 not available in the offline mode of the SCOUT/STARTER.  
   
@@ -17014,7 +17014,7 @@ system.
   
 Displays the assignment of the available hardware sampling times of the drive unit.  
 The designated sampling times are those created as a multiple of the hardware basis
-sampling time (r21002) and which are always < r21003.
+sampling time (r21002) and which are always &lt; r21003.
 
 **Index:**
   
@@ -17129,7 +17129,7 @@ times. Therefore the current number of free hardware sampling times can be read 
 in r7903.  
 If r7903=0, no additional sampling time different from r21008[0...31] may be provided
 from the Control Unit. When selecting in this state, if a runtime group with a sampling
-time < r21003 (p21000 <= 255) is selected in p21000, only runtime groups whose sampling
+time &lt; r21003 (p21000 &lt;= 255) is selected in p21000, only runtime groups whose sampling
 time is already provided in r21008[0...31] may be selected.
 
 **Note:**

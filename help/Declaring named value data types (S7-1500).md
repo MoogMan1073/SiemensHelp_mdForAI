@@ -44,7 +44,7 @@ You can create, open, or delete documents in two different ways:
   Documents for named value data types are located in the "PLC data types" subfolder.
 - In the file system outside of the TIA Portal
 
-  Documents for named value data types are located in the project directory, in the subfolder "src\<PLC name>\UNITS\<Software unit name>\TYPES".
+  Documents for named value data types are located in the project directory, in the subfolder "src\&lt;PLC name&gt;\UNITS\&lt;Software unit name&gt;\TYPES".
 
 You also have two options for editing documents:
 

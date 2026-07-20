@@ -397,21 +397,21 @@ NONE
 The settings of the control voltage limits are not plausible.  
 Fault cause:  
 1 (= 01 hex):  
-- Resulting voltage setpoint (r31679[0]) > active upper control value limit (r31728)  
+- Resulting voltage setpoint (r31679[0]) &gt; active upper control value limit (r31728)  
 Note:  
 The difference between the voltage setpoint and active, upper control voltage limit
 can result in a remaining system deviation. As a consequence, the current and voltage
 controllers can go to their associated limits.  
 2 (= 02 hex):  
-- Resulting voltage setpoint (r31679[0]) < active lower control voltage limit (r31729)  
+- Resulting voltage setpoint (r31679[0]) &lt; active lower control voltage limit (r31729)  
 Note:  
 The difference between the voltage setpoint and active, lower control voltage limit
 can result in a remaining system deviation. As a consequence, the current and voltage
 controllers can go to their associated limits.  
 3 (= 03 hex):  
-- Control voltage upper limit (p31714) < control voltage lower limit (p31715)  
+- Control voltage upper limit (p31714) &lt; control voltage lower limit (p31715)  
 4 (= 04 hex):  
-- Active upper control voltage limit (r31728) < active lower control voltage limit
+- Active upper control voltage limit (r31728) &lt; active lower control voltage limit
 (r31729)  
 Internally, the lower control voltage limit is set equal to the active upper control
 voltage limit. As a consequence, the output voltage is provided directly.  
@@ -578,8 +578,8 @@ by the set current controller sampling time (p0115[0]). The pulse frequency is c
 as follows: p1800 = 1/p0115[0].  
 Example:  
 The following applies for a maximum power unit switching frequency of 7.5 kHz:  
-p0115[0] = 250 µs results in p1800 = 4 kHz --> value valid  
-p0115[0] = 125 µs results in p1800 = 8 kHz --> value not valid  
+p0115[0] = 250 µs results in p1800 = 4 kHz --&gt; value valid  
+p0115[0] = 125 µs results in p1800 = 8 kHz --&gt; value not valid  
 For fault cause = 5:  
 Deactivate motor data identification (p1910 = 0).  
 For fault cause = 6:  

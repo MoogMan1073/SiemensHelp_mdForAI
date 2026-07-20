@@ -151,13 +151,13 @@ WinCC provides the "@PRF_ALGRT_..." system tags to analyze the alarm system.
 
 You use them to evaluate the time response of the server. You can also view this performance evaluation in the Windows system monitor.
 
-Performance tags with the names "@PRF_ALGRT_CHNCON_<connection name>_..." are created for the connections in use.
+Performance tags with the names "@PRF_ALGRT_CHNCON_&lt;connection name&gt;_..." are created for the connections in use.
 
 > **Note**
 >
 > **Connection-specific performance tags**
 >
-> When a connection is configured, performance tags are created in the database with the names "@PRF_ALGRT_CHNCON_<connection name>_...".
+> When a connection is configured, performance tags are created in the database with the names "@PRF_ALGRT_CHNCON_&lt;connection name&gt;_...".
 >
 > These tags are not visible in the "System tags" tab, but can be used just like any other performance tag.
 >
@@ -527,7 +527,7 @@ This section contains information on the following topics:
 
 A system alarm indicates the status of the system, plus communication errors between the HMI device and system.
 
-Under "Runtime settings > Alarms" you specify how long a system alarm is shown on the HMI device.
+Under "Runtime settings &gt; Alarms" you specify how long a system alarm is shown on the HMI device.
 
 ###### Support
 
@@ -706,10 +706,10 @@ Use the following alarm classes to define the state machines and appearance of a
 
 - Predefined alarm classes
 
-  You cannot delete predefined alarm classes and edit them only to a limited extent. Predefined alarm classes have been created for each HMI device under "HMI alarms > Alarm classes".
+  You cannot delete predefined alarm classes and edit them only to a limited extent. Predefined alarm classes have been created for each HMI device under "HMI alarms &gt; Alarm classes".
 - Custom alarm classes
 
-  You can create new alarm classes under "HMI alarms > Alarm classes", configure how you want the alarms to be displayed, and define an acknowledgment model for alarms of this alarm class. The possible number of user-defined alarm classes depends on the Runtime used in your project.
+  You can create new alarm classes under "HMI alarms &gt; Alarm classes", configure how you want the alarms to be displayed, and define an acknowledgment model for alarms of this alarm class. The possible number of user-defined alarm classes depends on the Runtime used in your project.
 
 > **Note**
 >
@@ -762,13 +762,13 @@ Use the following alarm classes to define the state machines and appearance of a
 
 - Predefined alarm classes
 
-  You cannot delete predefined alarm classes and edit them only to a limited extent. Predefined alarm classes have been created for each HMI device under "HMI alarms > Alarm classes".
+  You cannot delete predefined alarm classes and edit them only to a limited extent. Predefined alarm classes have been created for each HMI device under "HMI alarms &gt; Alarm classes".
 - Custom alarm classes
 
-  You can create new alarm classes under "HMI alarms > Alarm classes", configure how you want the alarms to be displayed, and define an acknowledgment model for alarms of this alarm class. The possible number of custom alarm classes depends on which runtime is used in your project.
+  You can create new alarm classes under "HMI alarms &gt; Alarm classes", configure how you want the alarms to be displayed, and define an acknowledgment model for alarms of this alarm class. The possible number of custom alarm classes depends on which runtime is used in your project.
 - Common alarm classes
 
-  Common alarm classes are displayed under "Common data > Alarm classes" in the project tree and can be used for the alarms of an HMI device. Common alarm classes originate in the STEP 7 alarm configuration. If required, create additional common alarm classes in WinCC.
+  Common alarm classes are displayed under "Common data &gt; Alarm classes" in the project tree and can be used for the alarms of an HMI device. Common alarm classes originate in the STEP 7 alarm configuration. If required, create additional common alarm classes in WinCC.
 
 ---
 
@@ -909,13 +909,13 @@ Discrete alarms will be automatically acknowledged by the PLC, if necessary. The
 
 In Runtime, the user acknowledges an alarm in one of the following ways, depending on the configuration:
 
-- Using the acknowledgment button <ACK> on the HMI device
+- Using the acknowledgment button &lt;ACK&gt; on the HMI device
 - Using the button in the alarm view
 - Using configured function keys or buttons in screens
 
   > **Note**
   >
-  > **Acknowledgment button <ACK> on the HMI device**
+  > **Acknowledgment button &lt;ACK&gt; on the HMI device**
   >
   > To ensure that critical alarms are processed only by authorized users, protect the "ACK" button on the HMI devices, including the operating controls and display objects of the alarms. Use the appropriate operator authorization for this.
 
@@ -923,12 +923,12 @@ In Runtime, the user acknowledges an alarm in one of the following ways, dependi
   >
   > **HMI device dependency**
   >
-  > The acknowledgment key <ACK> is not available on all HMI devices.
+  > The acknowledgment key &lt;ACK&gt; is not available on all HMI devices.
 
 ##### Reaction to the acknowledgment of alarms of an alarm group
 
 - Alarm acknowledgment by the operator  
-  You acknowledge the alarm of an alarm group, for example, using the <ACK> acknowledgment key or a function key. All alarms of the alarm group are acknowledged.
+  You acknowledge the alarm of an alarm group, for example, using the &lt;ACK&gt; acknowledgment key or a function key. All alarms of the alarm group are acknowledged.
 - Alarm acknowledgment by the controller  
   The controller sets a tag bit to acknowledge the alarm of an alarm group.  
   The respective alarm is acknowledged.
@@ -1113,12 +1113,12 @@ In WinCC, you work with two types of alarm group:
 
   You create custom alarm groups as required. These contain alarms that must be acknowledged, as well as sublevel alarm groups. You can create a hierarchy of custom alarm groups that contains up to five subgroups.
 
-  You create user-defined alarm groups in WinCC under "HMI alarms > Alarm groups > Alarm groups".
+  You create user-defined alarm groups in WinCC under "HMI alarms &gt; Alarm groups &gt; Alarm groups".
 - Alarm groups from alarm classes / class groups
 
   An alarm group is already created for each predefined alarm class. When you create a new alarm class, an alarm group is created with the same name. All the alarms from this alarm class will also be contained in the alarm group from the alarm class. Any changes to the alarm class configuration will be transferred to the "Alarm Groups" tab. The configuration for the corresponding alarm group will be updated. You only edit the properties of the alarm group for alarm groups from alarm classes.
 
-  Alarm groups from alarm classes, which are also known as class groups, are displayed in WinCC under "HMI alarms > Alarm groups > Class groups".
+  Alarm groups from alarm classes, which are also known as class groups, are displayed in WinCC under "HMI alarms &gt; Alarm groups &gt; Class groups".
 
   > **Note**
   >
@@ -1126,16 +1126,16 @@ In WinCC, you work with two types of alarm group:
 
 ##### Alarm group IDs in WinCC and STEP 7
 
-Each alarm group has a unique ID. If you create 15 user-defined alarm groups after creating an HMI device, these alarm groups receive the IDs 17-31. If you create further user-defined alarm groups after this, these alarm groups receive IDs > 35. The four pre-defined alarm classes in every WinCC project automatically occupy IDs 32-35 with their alarm groups. If you create an HMI connection between the HMI device and controller, 16 user-defined alarm groups with the IDs 1-16 are created in WinCC. With these alarm groups, WinCC supports the 16 alarm groups from STEP 7 with the IDs 1-16. WinCC does not support the alarm group with the ID 0 from STEP 7. When the HMI connection is created, at least two more alarm groups are created from alarm classes in WinCC. These alarm groups are created for the alarm classes that are created new by the HMI connection and linked with the project-wide alarm classes under "Common data > Alarm classes". The at least two further alarm groups from alarm classes receive IDs > 35.
+Each alarm group has a unique ID. If you create 15 user-defined alarm groups after creating an HMI device, these alarm groups receive the IDs 17-31. If you create further user-defined alarm groups after this, these alarm groups receive IDs &gt; 35. The four pre-defined alarm classes in every WinCC project automatically occupy IDs 32-35 with their alarm groups. If you create an HMI connection between the HMI device and controller, 16 user-defined alarm groups with the IDs 1-16 are created in WinCC. With these alarm groups, WinCC supports the 16 alarm groups from STEP 7 with the IDs 1-16. WinCC does not support the alarm group with the ID 0 from STEP 7. When the HMI connection is created, at least two more alarm groups are created from alarm classes in WinCC. These alarm groups are created for the alarm classes that are created new by the HMI connection and linked with the project-wide alarm classes under "Common data &gt; Alarm classes". The at least two further alarm groups from alarm classes receive IDs &gt; 35.
 
 The alarm group ID of a user-defined alarm group is displayed at the following locations in WinCC:
 
-- Under "HMI alarms > Alarm groups > Alarm groups" in the column "ID"
-- In the properties of the user-defined alarm group in the Inspector window under "Properties > General > General > Settings > ID"
+- Under "HMI alarms &gt; Alarm groups &gt; Alarm groups" in the column "ID"
+- In the properties of the user-defined alarm group in the Inspector window under "Properties &gt; General &gt; General &gt; Settings &gt; ID"
 
-The alarm group ID of a class group is displayed in WinCC in the properties of the class group in the Inspector window under "Properties > General > General > Settings > ID".
+The alarm group ID of a class group is displayed in WinCC in the properties of the class group in the Inspector window under "Properties &gt; General &gt; General &gt; Settings &gt; ID".
 
-In STEP 7, you select an alarm group ID from 0-16 in the properties of a controller alarm in the Inspector window under "Advanced settings > Group ID". The controller alarm is hereby assigned to the alarm group with the selected alarm group ID. The alarm group ID 0 is preset in the properties of a controller alarm. This means that a controller alarm is assigned by default to the alarm group with the ID 0, which is not supported by WinCC.
+In STEP 7, you select an alarm group ID from 0-16 in the properties of a controller alarm in the Inspector window under "Advanced settings &gt; Group ID". The controller alarm is hereby assigned to the alarm group with the selected alarm group ID. The alarm group ID 0 is preset in the properties of a controller alarm. This means that a controller alarm is assigned by default to the alarm group with the ID 0, which is not supported by WinCC.
 
 ---
 
@@ -1572,26 +1572,26 @@ To create an alarm class, proceed as follows:
 
    ![Procedure](images/111886374155_DV_resource.Stream@PNG-en-US.png)
 
-1. Double-click "<Add>" in the table.
+1. Double-click "&lt;Add&gt;" in the table.
 
    A new alarm class is created. Each new alarm class is automatically assigned a static ID.
 
    The properties of the new alarm class are shown in the Inspector window.
-2. Configure the alarm class under "Properties > Properties >General" in the Inspector window.
+2. Configure the alarm class under "Properties &gt; Properties &gt;General" in the Inspector window.
 
    - Enter a "Name" and the "Display name".
    - Depending on the HMI device, you can also activate logging, or automatic sending of e-mails.
-3. Define the state machines for the alarm class under "Properties > Properties > Acknowledgment" in the Inspector window.
-4. Change the default text under "Properties > Properties > Status texts" in the Inspector window.
+3. Define the state machines for the alarm class under "Properties &gt; Properties &gt; Acknowledgment" in the Inspector window.
+4. Change the default text under "Properties &gt; Properties &gt; Status texts" in the Inspector window.
 
    This text indicates the status of an alarm in Runtime.
-5. Change the default colors under "Properties > Properties > Colors" in the Inspector window. Depending on the HMI device, also change the flashing characteristics.
+5. Change the default colors under "Properties &gt; Properties &gt; Colors" in the Inspector window. Depending on the HMI device, also change the flashing characteristics.
 
 These settings define how alarms from this alarm class are displayed in Runtime.
 
 > **Note**
 >
-> To display the alarm classes in color in Runtime, the "Use alarm class colors" option must be activated. In the project navigation, enable "Runtime settings > Alarms > General > Use alarm class colors" accordingly.
+> To display the alarm classes in color in Runtime, the "Use alarm class colors" option must be activated. In the project navigation, enable "Runtime settings &gt; Alarms &gt; General &gt; Use alarm class colors" accordingly.
 
 ---
 
@@ -1632,20 +1632,20 @@ To create an alarm class, proceed as follows:
 
    ![Procedure](images/72284004107_DV_resource.Stream@PNG-en-US.png)
 
-1. Double-click "<Add>" in the table.
+1. Double-click "&lt;Add&gt;" in the table.
 
    A new alarm class is created. Each new alarm class is automatically assigned a static ID.
 
    The properties of the new alarm class are shown in the Inspector window.
-2. Configure the alarm class under "Properties > Properties >General" in the Inspector window:
+2. Configure the alarm class under "Properties &gt; Properties &gt;General" in the Inspector window:
 
    - Enter a "Name" and the "Display name".
    - Activate the"Log" check box if you want to log the alarms from this alarm class.
-3. Select "Properties > Properties > Acknowledgment" in the Inspector window to define the state machines for the alarm class and alarm annunciator.
-4. If required, change the preset state texts in the Inspector window under "Properties > Properties > Status".
+3. Select "Properties &gt; Properties &gt; Acknowledgment" in the Inspector window to define the state machines for the alarm class and alarm annunciator.
+4. If required, change the preset state texts in the Inspector window under "Properties &gt; Properties &gt; Status".
 
    The status texts are used in Runtime to display the status of an alarm.
-5. You can also change the default background and foreground colors under "Properties > Properties > Colors" in the Inspector window.
+5. You can also change the default background and foreground colors under "Properties &gt; Properties &gt; Colors" in the Inspector window.
 
    These settings define how alarms from this alarm class are displayed in Runtime.
 
@@ -1660,7 +1660,7 @@ The user enters a comment for an incoming alarm in Runtime, as required. Using t
 To assign the comments to the user logged on, proceed as follows:
 
 1. Select the alarm class.
-2. Enable "Properties > Properties > Acknowledgment > Settings > Assign comments to defined user" in the Inspector window.
+2. Enable "Properties &gt; Properties &gt; Acknowledgment &gt; Settings &gt; Assign comments to defined user" in the Inspector window.
 
    Any user can enter the first comment if a comment has yet to be entered.
 
@@ -1671,7 +1671,7 @@ To assign the comments to the user logged on, proceed as follows:
 Whenever the status of an alarm changes, for example, from "incoming" to "acknowledged" status, the alarm is output once again with another status. The user only assigns comments to one incoming alarm. To include comments for alarm output with the new status, proceed as follows:
 
 1. Select the alarm class.
-2. Enable "Properties > Properties > Acknowledgment > Settings > Use comment of the incoming alarm" in the Inspector window.
+2. Enable "Properties &gt; Properties &gt; Acknowledgment &gt; Settings &gt; Use comment of the incoming alarm" in the Inspector window.
 
 ---
 
@@ -1714,7 +1714,7 @@ The texts for the status of an alarm in Runtime are displayed in the alarm view 
 
 To configure the state texts of an alarm, proceed as follows:
 
-| 1. Create a new alarm class in the "Alarm classes" tab.    The properties of the new alarm class are shown in the Inspector window. 2. Define the state texts for runtime alarms in the Inspector window under "Properties > Properties > Status":       | Field | Description |    | --- | --- |    | Incoming | Text for incoming alarms when changing to the operating state to be reported |    | Outgoing | Text for outgoing alarms when changing from the operating state to be reported |    | Acknowledged | Text for acknowledged alarms |    | Incoming/outgoing | Text for incoming and outgoing alarm | 3. If required, configure additional properties of the alarm class in the Inspector window under "Properties > Properties". 4. Create tags in the "HMI Tags" editor:    - Configure the tags for your project.    - Create range values for the tags. 5. Create a user-defined alarm in the "HMI Alarms" editor:    - Assign the alarm to the alarm class created, the tag to be monitored, and other properties.    - If required, assign system functions or scripts to the events of the alarm. 6. Use the project navigation to create a new screen. 7. To output the created alarm with the defined status texts in Runtime, insert the "Alarm view" object from the "Tools" task card into the screen.    The properties of the alarm view are shown in the Inspector window. 8. Deactivate the "Accept project settings" option in the Inspector window under "Properties > Properties > Blocks". 9. To use the "Status" and "Acknowledgment status" system blocks in the alarm view, activate the two system blocks in the "Selected" column. 10. In the "Length" column, define the text length of the "Status" and "Acknowledgment status" system blocks so that the defined state texts can be displayed in full. 11. In the rows of the "Status" and "Acknowledgment status" system blocks, select the entry "Text" or "Both" in the "Contents as" column.       | Symbol | Meaning |     | --- | --- |     | **Note**  If you select the "Both" entry, the contents of the "Status" and "Acknowledgment status" system blocks in Runtime are not only displayed as text, but also as symbols. |  | 12. To display the "Status" and "Acknowledgment status" system blocks as columns in the alarm view, activate the columns "Status" and "Acknowledgment status" under "Visible" under "Properties > Properties > Columns". |  |
+| 1. Create a new alarm class in the "Alarm classes" tab.    The properties of the new alarm class are shown in the Inspector window. 2. Define the state texts for runtime alarms in the Inspector window under "Properties &gt; Properties &gt; Status":       | Field | Description |    | --- | --- |    | Incoming | Text for incoming alarms when changing to the operating state to be reported |    | Outgoing | Text for outgoing alarms when changing from the operating state to be reported |    | Acknowledged | Text for acknowledged alarms |    | Incoming/outgoing | Text for incoming and outgoing alarm | 3. If required, configure additional properties of the alarm class in the Inspector window under "Properties &gt; Properties". 4. Create tags in the "HMI Tags" editor:    - Configure the tags for your project.    - Create range values for the tags. 5. Create a user-defined alarm in the "HMI Alarms" editor:    - Assign the alarm to the alarm class created, the tag to be monitored, and other properties.    - If required, assign system functions or scripts to the events of the alarm. 6. Use the project navigation to create a new screen. 7. To output the created alarm with the defined status texts in Runtime, insert the "Alarm view" object from the "Tools" task card into the screen.    The properties of the alarm view are shown in the Inspector window. 8. Deactivate the "Accept project settings" option in the Inspector window under "Properties &gt; Properties &gt; Blocks". 9. To use the "Status" and "Acknowledgment status" system blocks in the alarm view, activate the two system blocks in the "Selected" column. 10. In the "Length" column, define the text length of the "Status" and "Acknowledgment status" system blocks so that the defined state texts can be displayed in full. 11. In the rows of the "Status" and "Acknowledgment status" system blocks, select the entry "Text" or "Both" in the "Contents as" column.       | Symbol | Meaning |     | --- | --- |     | **Note**  If you select the "Both" entry, the contents of the "Status" and "Acknowledgment status" system blocks in Runtime are not only displayed as text, but also as symbols. |  | 12. To display the "Status" and "Acknowledgment status" system blocks as columns in the alarm view, activate the columns "Status" and "Acknowledgment status" under "Visible" under "Properties &gt; Properties &gt; Columns". |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ###### Result
@@ -1750,7 +1750,7 @@ You have configured the state texts of an alarm. The display of the defined stat
 
 ###### Introduction
 
-Common alarm classes are displayed under "Common data > Alarm classes" in the project tree. If required, create additional common alarm classes in WinCC.
+Common alarm classes are displayed under "Common data &gt; Alarm classes" in the project tree. If required, create additional common alarm classes in WinCC.
 
 Controller alarms are assigned to common alarm classes. If you work with controller alarms, common alarm classes are automatically loaded in WinCC.
 
@@ -1762,7 +1762,7 @@ Controller alarms are assigned to common alarm classes. If you work with control
 
 To create a common alarm class, proceed as follows:
 
-1. Double-click "Common data > Alarm classes" in the project tree.
+1. Double-click "Common data &gt; Alarm classes" in the project tree.
 
    The "Common alarm classes" editor opens in the work area.
 2. To create a common alarm class, double-click in the first empty line of the table editor.
@@ -1775,7 +1775,7 @@ Proceed as follows to assign an analog or discrete alarm to a common alarm class
 
 1. In the "HMI alarms" editor, select the alarm that you want to assign to the common alarm class.
 2. Click "General" in the Inspector window.
-3. Click "Common data > Alarm classes" in the project tree.
+3. Click "Common data &gt; Alarm classes" in the project tree.
 4. Select the common alarm class in the detail view.
 5. Drag-and-drop the alarm class to the "Alarm class" selection box or "Alarm class" column in the work area of the Inspector window of the alarm.
 
@@ -1795,7 +1795,7 @@ To assign an alarm to a common alarm class, proceed as follows:
 1. Click the "Alarm Classes" tab.
 
    The alarm classes are displayed.
-2. Click "Common data > Alarm classes" in the project tree. The following table shows the common alarm classes:
+2. Click "Common data &gt; Alarm classes" in the project tree. The following table shows the common alarm classes:
 
    ![Alternative procedure](images/72284051467_DV_resource.Stream@PNG-en-US.png)
 
@@ -1851,7 +1851,7 @@ Create alarm groups on the "Alarm Groups" tab in the "HMI alarms" editor. An ala
    ![Creating a new alarm group](images/72332068747_DV_resource.Stream@PNG-en-US.png)
 
    ![Creating a new alarm group](images/72332068747_DV_resource.Stream@PNG-en-US.png)
-2. In the work area of the table, double-click "<Add>" in the first free row.
+2. In the work area of the table, double-click "&lt;Add&gt;" in the first free row.
 
    A new alarm group is created.
 3. You can overwrite the proposed "Name".
@@ -1891,12 +1891,12 @@ To create an alarm group, proceed as follows:
    ![Creating a new alarm group](images/72307909131_DV_resource.Stream@PNG-en-US.png)
 
    ![Creating a new alarm group](images/72307909131_DV_resource.Stream@PNG-en-US.png)
-2. Double-click "<Add>" in the table.  
+2. Double-click "&lt;Add&gt;" in the table.  
    A new alarm group is created.
 
    The properties of the new alarm group are shown in the Inspector window.
-3. In the Inspector window, click "Properties > Properties > General" and enter a name for the alarm group.
-4. In the Properties window, click "Properties > Properties > Tags" to specify the following tags and bits:
+3. In the Inspector window, click "Properties &gt; Properties &gt; General" and enter a name for the alarm group.
+4. In the Properties window, click "Properties &gt; Properties &gt; Tags" to specify the following tags and bits:
 
    - Status tag for visualizing the alarm states of the alarm group
    - Acknowledgment tag for acknowledging an alarm group
@@ -1971,10 +1971,10 @@ Analog alarms indicate limit violations. For example, if the speed of a motor dr
 To configure an analog alarm, proceed as follows:
 
 1. Click the "Analog alarms" tab.
-2. To create a new analog alarm, double-click in the table on "<Add>".
+2. To create a new analog alarm, double-click in the table on "&lt;Add&gt;".
 
    A new analog alarm is created.
-3. To configure the alarm, select "Properties > Properties >General" in the Inspector window:
+3. To configure the alarm, select "Properties &gt; Properties &gt;General" in the Inspector window:
 
    - Enter an alarm text as event text.
 
@@ -1987,13 +1987,13 @@ To configure an analog alarm, proceed as follows:
      ![Procedure](images/89645735819_DV_resource.Stream@PNG-en-US.png)
 
      ![Procedure](images/89645735819_DV_resource.Stream@PNG-en-US.png)
-4. Configure the tag that triggers the alarm under "Properties > Properties > Trigger > Settings".
+4. Configure the tag that triggers the alarm under "Properties &gt; Properties &gt; Trigger &gt; Settings".
 
    Do not use trigger tags for anything else.
 
 ###### Configure limit values for an analog alarm
 
-1. In the Inspector window, click the ![Configure limit values for an analog alarm](images/14170060427_DV_resource.Stream@PNG-de-DE.png) button under "Properties > Properties > Trigger > Limit > Value".
+1. In the Inspector window, click the ![Configure limit values for an analog alarm](images/14170060427_DV_resource.Stream@PNG-de-DE.png) button under "Properties &gt; Properties &gt; Trigger &gt; Limit &gt; Value".
 
    - To use a constant as limit value, select "Constant".
 
@@ -2016,7 +2016,7 @@ If the required tag does not exist in the selection list yet, create it in the o
 
 To set the delay time, proceed as follows:
 
-- Enter a time period in the Inspector window under "Properties > Properties> Trigger > Settings > Delay".
+- Enter a time period in the Inspector window under "Properties &gt; Properties&gt; Trigger &gt; Settings &gt; Delay".
 
   The alarm is only triggered when the trigger condition is still present after the delay time has elapsed.
 
@@ -2028,7 +2028,7 @@ To set the delay time, proceed as follows:
 
 To enter the deadband, follow these steps:
 
-1. Under "Properties > Properties> Trigger > Deadband > Mode", select the change in alarm status for which the deadband is to be taken into account.
+1. Under "Properties &gt; Properties&gt; Trigger &gt; Deadband &gt; Mode", select the change in alarm status for which the deadband is to be taken into account.
 2. Enter a constant value under "Value".
 3. To define the deadband value as a percentage of the limit, set the "in %" check box.
 
@@ -2036,7 +2036,7 @@ To enter the deadband, follow these steps:
 
 To print the alarms continuously:
 
-- Select the "Activate" option under "Properties > Properties > Miscellaneous > Report."
+- Select the "Activate" option under "Properties &gt; Properties &gt; Miscellaneous &gt; Report."
 
   > **Note**
   >
@@ -2048,14 +2048,14 @@ To print the alarms continuously:
 
 To configure a tooltip for the alarm, follow these steps:
 
-- Select "Properties > Properties > Tooltip" in the Inspector window and enter your text.
+- Select "Properties &gt; Properties &gt; Tooltip" in the Inspector window and enter your text.
 
 ###### Configuring event-driven tasks
 
 To configure event-driven tasks, such as a loop-in alarm, follow these steps:
 
 1. Select the analog alarm.
-2. In the Inspector window, select "Properties > Events > Loop-In-Alarm.
+2. In the Inspector window, select "Properties &gt; Events &gt; Loop-In-Alarm.
 3. Select, for example, the system function "ActivateScreen" or a different system function that is be called for Loop-In-Alarm.
 4. Select the parameters required for the selected system function.
 
@@ -2100,17 +2100,17 @@ The following sections describes the configuration procedures in the "HMI alarms
 To configure a discrete alarm, proceed as follows:
 
 1. Open the "Discrete alarms" tab.
-2. To create a new discrete alarm, double-click in the work area on "<Add>".
+2. To create a new discrete alarm, double-click in the work area on "&lt;Add&gt;".
 
    A new discrete alarm is created.
-3. To configure the alarm, select "Properties > Properties >General" in the Inspector window:
+3. To configure the alarm, select "Properties &gt; Properties &gt;General" in the Inspector window:
 
    - Enter an alarm text as event text.
 
      Use the functions of the shortcut menu to format the text on a character-by-character basis, or to insert output fields for HMI tags, or texts from the text lists.
    - You can renumber the alarm.
    - Select the alarm class and the alarm group, if necessary.
-4. In the Inspector window, select the tag and the bit that triggers the alarm under "Properties > Properties > Trigger". Note the following information:
+4. In the Inspector window, select the tag and the bit that triggers the alarm under "Properties &gt; Properties &gt; Trigger". Note the following information:
 
    - Use the data types "Int" or "UInt" to select an HMI tag.
    - When you select a PLC tag, use the data types "Int" or "Word". The input and output area of a PLC tag is unsuitable as trigger.
@@ -2136,14 +2136,14 @@ To display a different text independent of the alarm status, link a text list to
 
 To configure a tooltip for the alarm, follow these steps:
 
-- Enter your text under "Properties > Properties > Tooltip".
+- Enter your text under "Properties &gt; Properties &gt; Tooltip".
 
 ###### Configuring event-driven tasks
 
 To configure event-driven tasks, such as a loop-in alarm, follow these steps:
 
 1. Select the discrete alarm.
-2. Select "Properties > Events" in the Inspector window and configure a new function list for the relevant event.
+2. Select "Properties &gt; Events" in the Inspector window and configure a new function list for the relevant event.
 
 ---
 
@@ -2183,7 +2183,7 @@ The alarm texts can be formatted or special characters inserted in the alarm tex
 To format an alarm text, proceed as follows:
 
 1. Select the alarm to edit.
-2. In the Inspector window, select the characters to format under "Properties > Properties > General > Alarm text".
+2. In the Inspector window, select the characters to format under "Properties &gt; Properties &gt; General &gt; Alarm text".
 3. Select the formatting from the shortcut menu, e.g. "Underscored" or "Uppercase".
 
    The selected characters are displayed in Runtime with the selected formatting.
@@ -2250,7 +2250,7 @@ To insert an output field for a tag value in the alarm text, proceed as follows:
    Configure an output field of sufficient size. Otherwise, the tag content is not output to the full extent in the alarm.
 5. Click ![Output of a tag value in the alarm text](images/70512612363_DV_resource.Stream@PNG-de-DE.png) to save your entries.
 
-WinCC inserts a placeholder for the output field into the alarm text: "<tag: n, [tag name]>" whereby n = text string length.
+WinCC inserts a placeholder for the output field into the alarm text: "&lt;tag: n, [tag name]&gt;" whereby n = text string length.
 
 ###### Editing output field properties
 
@@ -2317,7 +2317,7 @@ To insert an output field for a value from a text list in the alarm text, procee
 
    WinCC inserts a placeholder for the output field into the alarm text:
 
-   ""<textlist: n, [textlist name]>" whereby n = text string length.
+   ""&lt;textlist: n, [textlist name]&gt;" whereby n = text string length.
 
 ###### Editing output field properties
 
@@ -2358,7 +2358,7 @@ When you open the "System events" tab in the "HMI alarms" editor, WinCC prompts 
 To determine the display period, proceed as follows:
 
 1. Double-click "Runtime settings" in the project navigation.
-2. Enter a value under "Alarms > System events > Display period".
+2. Enter a value under "Alarms &gt; System events &gt; Display period".
 
    This value specifies a time in seconds during which the system events are displayed on the HMI device. If you want to display system events permanently, enter "0".
 
@@ -2369,7 +2369,7 @@ To change the alarm text of a system event, follow these steps:
 1. Open the "HMI alarms" editor and then click the "System events" tab.
 2. Select the system event that you want to edit.
 
-1. Change the alarm text under "Properties > Properties > Properties > General" in the Inspector window.
+1. Change the alarm text under "Properties &gt; Properties &gt; Properties &gt; General" in the Inspector window.
 
 > **Note**
 >
@@ -2381,7 +2381,7 @@ The "Incoming" event is available for certain system events, depending on the HM
 
 1. Select the system event.
 
-2. Select "Properties > Properties > Incoming" in the inspector window and configure a function list.
+2. Select "Properties &gt; Properties &gt; Incoming" in the inspector window and configure a function list.
 
 ---
 
@@ -2447,7 +2447,7 @@ You can edit these controller alarms in the STEP 7 alarm configuration system. 
 
 To filter controller alarms by display classes, proceed as follows:
 
-1. Click "Runtime settings > Alarms" in the project navigation under your HMI device.
+1. Click "Runtime settings &gt; Alarms" in the project navigation under your HMI device.
 
    One or several connections to a PLC are shown in "Contoller alarms".
 2. Select the display classes whose controller alarms you want to display for the connection.
@@ -2456,7 +2456,7 @@ To filter controller alarms by display classes, proceed as follows:
 >
 > **Controller alarms after a basic panel device exchange**
 >
-> For the controller alarms (PLC monitoring alarms, program alarms or system alarms) to be displayed after a device replacement ("Device view > Change device") from a Basic Panel to a Comfort Panel, Mobile Panel or WinCC RT Advanced, you need to activate the "Display classes" setting for the respective connections under "Runtime settings > Alarms > Controller alarms".
+> For the controller alarms (PLC monitoring alarms, program alarms or system alarms) to be displayed after a device replacement ("Device view &gt; Change device") from a Basic Panel to a Comfort Panel, Mobile Panel or WinCC RT Advanced, you need to activate the "Display classes" setting for the respective connections under "Runtime settings &gt; Alarms &gt; Controller alarms".
 
 ###### Result
 
@@ -2484,7 +2484,7 @@ Only those controller alarms whose display class you have enabled for your HMI d
 
 To activate system-defined controller alarms of the type "SIMATIC S7 diagnostic alarm" for your HMI device, follow these steps:
 
-1. Select "Runtime settings > Alarms" in the project navigation.
+1. Select "Runtime settings &gt; Alarms" in the project navigation.
 
    The alarm settings open.
 2. Under "System events" select the check box "S7 diagnostic alarms (number)".
@@ -2618,14 +2618,14 @@ An alarm is made up of configured alarm text blocks. You enable the alarm text b
 
 1. Select the "System blocks", "User text blocks" or "Parameter blocks" tab for the alarm text blocks.
 2. Select the alarm text block to be displayed on your HMI device.
-3. In the Inspector window, select "Properties > Properties > General > Blocks > Enable".
-4. In the Inspector window under "Properties > Properties > General > Settings", define the display name of the alarm text block.
-5. Under "Properties > Properties > General > Blocks" in the Inspector window, define the text length and alignment of the alarm text block in the alarm view column.
-6. In the Inspector window under "Properties > Properties > Settings > Format", select the format of the alarm text block. This option is not available for every alarm text block.
+3. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Blocks &gt; Enable".
+4. In the Inspector window under "Properties &gt; Properties &gt; General &gt; Settings", define the display name of the alarm text block.
+5. Under "Properties &gt; Properties &gt; General &gt; Blocks" in the Inspector window, define the text length and alignment of the alarm text block in the alarm view column.
+6. In the Inspector window under "Properties &gt; Properties &gt; Settings &gt; Format", select the format of the alarm text block. This option is not available for every alarm text block.
 
 **Note**
 
-The write-protected names of the alarm text blocks stored in the system are displayed in the "Name in the Alarms editor" column under "Properties > Properties > General > Settings". This column is available for the "User text blocks" and "Parameter blocks" tags.
+The write-protected names of the alarm text blocks stored in the system are displayed in the "Name in the Alarms editor" column under "Properties &gt; Properties &gt; General &gt; Settings". This column is available for the "User text blocks" and "Parameter blocks" tags.
 
 Based on the "Name in the Alarms editor" column, you recognize the relationship between the display names of the alarm blocks in Runtime and the designations in the "Alarms" editor, even if the display names of the alarm text blocks were changed.
 
@@ -2670,7 +2670,7 @@ Whether or not an alarm text block flashes in Runtime depends on the alarm class
 To configure flashing for alarm text blocks in Runtime, proceed as follows:
 
 1. Select the alarm text block to flash in Runtime from the subordinate tabs on the "Alarm text blocks" tab.
-2. In the Inspector window, select "Properties > Properties > General > Blocks > Flash".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Blocks &gt; Flash".
 3. Repeat this step for all the alarm text blocks that you want to flash in Runtime.
 
 ###### Result
@@ -2710,16 +2710,16 @@ In the "HMI alarms" editor, you can configure analog alarms and define their pro
 To configure an analog alarm, proceed as follows:
 
 1. Click the "Analog Alarms" tab.
-2. To create a new analog alarm, double-click in the table on "<Add>".
+2. To create a new analog alarm, double-click in the table on "&lt;Add&gt;".
 
    A new analog alarm is created.
-3. To configure the alarm, select "Properties > Properties >General" in the Inspector window:
+3. To configure the alarm, select "Properties &gt; Properties &gt;General" in the Inspector window:
 
    - You can always change the object name of the alarm.
    - Select the alarm class and the alarm group, if necessary.
-4. To display the CPU number or PLC that sends the alarm, enter this under "Connection to the PLC". This option is only active if you have enabled the "CPU/PLC number" alarm text block on the "Alarm text blocks > System blocks" tab.
-5. In the Inspector window, select the tag that triggers the alarm under "Properties > Properties > Trigger". Do not use trigger tags for anything else.
-6. To configure the alarm text, select "Properties > Properties > Alarm texts".
+4. To display the CPU number or PLC that sends the alarm, enter this under "Connection to the PLC". This option is only active if you have enabled the "CPU/PLC number" alarm text block on the "Alarm text blocks &gt; System blocks" tab.
+5. In the Inspector window, select the tag that triggers the alarm under "Properties &gt; Properties &gt; Trigger". Do not use trigger tags for anything else.
+6. To configure the alarm text, select "Properties &gt; Properties &gt; Alarm texts".
 
    - To enter the alarm text, select "Alarm text".
    - To create additional alarm texts, select "Additional texts".
@@ -2732,18 +2732,18 @@ You can only enter additional text in the rows that you have enabled as user tex
 ###### Defining limits
 
 1. Select the analog alarm to which you want to assign the limits.
-2. At the bottom of the work area, click <Add> under "Limits for analog alarm".
+2. At the bottom of the work area, click &lt;Add&gt; under "Limits for analog alarm".
 
    ![Defining limits](images/111888922251_DV_resource.Stream@PNG-en-US.png)
 
    ![Defining limits](images/111888922251_DV_resource.Stream@PNG-en-US.png)
 3. To use a **constant** as limit:
 
-   - In the Inspector window, click the button ![Defining limits](images/14170060427_DV_resource.Stream@PNG-de-DE.png) under "Properties > Properties > Trigger > Value" and select "Constant".
+   - In the Inspector window, click the button ![Defining limits](images/14170060427_DV_resource.Stream@PNG-de-DE.png) under "Properties &gt; Properties &gt; Trigger &gt; Value" and select "Constant".
    - Enter the required limit value.
 4. To use a **tag** as limit:
 
-   - In the Inspector window, click the button ![Defining limits](images/14170060427_DV_resource.Stream@PNG-de-DE.png) under "Properties > Properties > Trigger > Value" and select "HMI tag".
+   - In the Inspector window, click the button ![Defining limits](images/14170060427_DV_resource.Stream@PNG-de-DE.png) under "Properties &gt; Properties &gt; Trigger &gt; Value" and select "HMI tag".
 
      ![Defining limits](images/111888926731_DV_resource.Stream@PNG-en-US.png)
 
@@ -2773,7 +2773,7 @@ If a process value fluctuates around the limit, the alarm associated with this f
 To display an alarm after a delay, proceed as follows:
 
 1. Select the analog alarm.
-2. In the Inspector window, select "Properties > Properties > Trigger".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Trigger".
 3. Enter a time period under "Delay". The trigger condition must be fulfilled within this time for the alarm to be triggered.
 
 **Setting the deadband**
@@ -2781,9 +2781,9 @@ To display an alarm after a delay, proceed as follows:
 Proceed as follows to enter a tolerance range for the arrival or departure of an alarm:
 
 1. Select the limit to which the deadband is to be assigned.
-2. In the Inspector window, select "Properties > Properties > Trigger".
-3. Under "Deadband > Mode", select the change to the alarm status to include in the evaluation of the deadband.
-4. Enter a constant under "Deadband > Value".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Trigger".
+3. Under "Deadband &gt; Mode", select the change to the alarm status to include in the evaluation of the deadband.
+4. Enter a constant under "Deadband &gt; Value".
 5. To define the deadband value as a percentage of the limit, activate the "%" check box.
 
 **Saving the status of the alarm**
@@ -2791,28 +2791,28 @@ Proceed as follows to enter a tolerance range for the arrival or departure of an
 To save the alarm states to a tag, proceed as follows:
 
 1. Select the analog alarm.
-2. Under "Properties > Properties > Status" in the Inspector window, select the tag and the bit that triggers saving of the incoming/outgoing alarm states and the acknowledgment request.
+2. Under "Properties &gt; Properties &gt; Status" in the Inspector window, select the tag and the bit that triggers saving of the incoming/outgoing alarm states and the acknowledgment request.
 
 **Setting the priority**
 
 To set the priority, proceed as follows:
 
 1. Select the analog alarm.
-2. Select a value between 0 and 16 under "Properties > Properties > General > Priority" in the Inspector window, .
+2. Select a value between 0 and 16 under "Properties &gt; Properties &gt; General &gt; Priority" in the Inspector window, .
 
    If you filter the alarm view by priority, the alarm with priority 0 will appear at the top.
 
 **Creating an infotext**
 
 1. Select the analog alarm.
-2. Select "Properties > Properties > Tooltip" in the Inspector window and enter a text.
+2. Select "Properties &gt; Properties &gt; Tooltip" in the Inspector window and enter a text.
 
 **Configuring event-driven tasks**
 
 To configure event-driven tasks, such as a loop-in alarm, follow these steps:
 
 1. Select the analog alarm.
-2. Select "Properties > Events" in the Inspector window and configure a new function list for the relevant event.
+2. Select "Properties &gt; Events" in the Inspector window and configure a new function list for the relevant event.
 
 ---
 
@@ -2880,9 +2880,9 @@ To output parameters in alarm texts, proceed as follows:
 
 WinCC inserts a placeholder for the output field into the alarm text:
 
-- For alarm parameter: "<tag: n, [###]>", where n = text length in characters.
+- For alarm parameter: "&lt;tag: n, [###]&gt;", where n = text length in characters.
 
-- For system parameters; "<name of the system parameter>"
+- For system parameters; "&lt;name of the system parameter&gt;"
 
   > **Note**
   >
@@ -2944,15 +2944,15 @@ The following sections describes the configuration procedures in the "HMI alarms
 To configure a discrete alarm, proceed as follows:
 
 1. Click the "Discrete alarms" tab.
-2. To create a new discrete alarm, double-click on "<Add>" in the table.
+2. To create a new discrete alarm, double-click on "&lt;Add&gt;" in the table.
 
    A new discrete alarm is created.
-3. To configure the alarm, select "Properties > Properties >General" in the Inspector window:
+3. To configure the alarm, select "Properties &gt; Properties &gt;General" in the Inspector window:
 
    - You can always change the object name of the alarm.
    - Select the alarm class and the alarm group, if necessary.
    - To display the CPU number or PLC that sends the alarm, enter these in the "Connection" area. This option is only active if you have enabled the "CPU/PLC number" alarm text block on the "Alarm text blocks" tab.
-4. Select "Properties > Properties > Trigger" in the Inspector window to select the tag and the bit that triggers the alarm. Note the following information:
+4. Select "Properties &gt; Properties &gt; Trigger" in the Inspector window to select the tag and the bit that triggers the alarm. Note the following information:
 
    - Use data types "Bool" "USInt", "UInt", or "UDInt".
    - Use trigger tag bits only for alarms.
@@ -2972,7 +2972,7 @@ To configure a discrete alarm, proceed as follows:
 > Note the method used to count bits in the utilized PLC when specifying the bit. For more information, refer to the "Communication" section in the PLC Online Help.
 
 1. Select "Mode" to specify whether to trigger the alarm at a rising or falling edge.
-2. To configure the alarm text, select "Properties > Properties > Alarm texts".
+2. To configure the alarm text, select "Properties &gt; Properties &gt; Alarm texts".
 
    - To enter the alarm text, select "Alarm text".
    - To create additional alarm texts, select "Additional texts".
@@ -2993,14 +2993,14 @@ The discrete alarm is created.
 To configure a tooltip for the alarm, follow these steps:
 
 1. Select the discrete alarm.
-2. Select "Properties > Properties > Infotext" in the Inspector window and enter the required tip.
+2. Select "Properties &gt; Properties &gt; Infotext" in the Inspector window and enter the required tip.
 
 **Enabling discrete alarm parameters**
 
 To output process values to an output field in the alarm text, assign corresponding tags to the parameter blocks. Proceed as follows:
 
 1. Select the alarm.
-2. In the Inspector window, click "Properties > Properties > Alarm parameters".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Alarm parameters".
 3. Enter a value for the alarm parameter, or select a tag.
 4. You can enter several alarm parameters.
 
@@ -3017,14 +3017,14 @@ You only edit parameters that you have enabled under "Parameter blocks" on the "
 To save the alarm states to a tag, proceed as follows:
 
 1. Select the discrete alarm.
-2. Under "Properties > Properties > Status" in the Inspector window, select the tag and the bit that triggers saving of the incoming/outgoing alarm states and the acknowledgment request.
+2. Under "Properties &gt; Properties &gt; Status" in the Inspector window, select the tag and the bit that triggers saving of the incoming/outgoing alarm states and the acknowledgment request.
 
 **Configuring event-driven tasks**
 
 To configure event-driven tasks, such as a loop-in alarm, follow these steps:
 
 1. Select the discrete alarm.
-2. Select "Properties > Events" in the Inspector window and configure a new function list for the relevant event.
+2. Select "Properties &gt; Events" in the Inspector window and configure a new function list for the relevant event.
 
 ---
 
@@ -3062,7 +3062,7 @@ To configure event-driven tasks, such as a loop-in alarm, follow these steps:
 
 To display system or alarm parameters, insert an appropriate output field in the analog alarm.
 
-- You can select the parameters configured in "Properties > Properties > Alarm parameters" for use as alarm parameters.
+- You can select the parameters configured in "Properties &gt; Properties &gt; Alarm parameters" for use as alarm parameters.
 - The following system blocks can be selected as system parameters:
 
   - Application
@@ -3090,7 +3090,7 @@ To output parameters in alarm texts, proceed as follows:
 
    - The tag that provides the parameter values.
 
-     The tag configured for the parameter under "Properties > Properties > Alarm parameters" is entered by default. If you select a different tag, WinCC updates the parameter configuration in "Properties > Properties > Alarm parameters" accordingly.
+     The tag configured for the parameter under "Properties &gt; Properties &gt; Alarm parameters" is entered by default. If you select a different tag, WinCC updates the parameter configuration in "Properties &gt; Properties &gt; Alarm parameters" accordingly.
    - Display type, length, number of decimal places and alignment of the output field
    - To display leading zeros in the output field, enable "Leading zeros".
 5. Click ![Procedure](images/70512612363_DV_resource.Stream@PNG-de-DE.png) to save your entries.
@@ -3153,10 +3153,10 @@ User alarms serve to to indicate operator actions in Runtime. User alarms are tr
 To configure user alarms, proceed as follows:
 
 1. Click the "User alarms" tab.
-2. To create a new user alarm, double-click "<Add>" in the table.
+2. To create a new user alarm, double-click "&lt;Add&gt;" in the table.
 
    A new user alarm is created.
-3. To configure the alarm, select "Properties > Properties >General" in the Inspector window:
+3. To configure the alarm, select "Properties &gt; Properties &gt;General" in the Inspector window:
 
    - You can always change the object name of the alarm.
    - Select the alarm class and the alarm group, if necessary.
@@ -3182,21 +3182,21 @@ The user alarm is created.
 To configure a tooltip for the alarm, follow these steps:
 
 1. Select the user alarm.
-2. Select "Properties > Properties > Tooltip" in the Inspector window and enter your text.
+2. Select "Properties &gt; Properties &gt; Tooltip" in the Inspector window and enter your text.
 
 **Saving the alarm status**
 
 To save the alarm states to a tag, proceed as follows:
 
 1. Select the user alarm.
-2. Select "Properties > Properties > Status" in the Inspector window and select the tag and the bit that triggers saving of the incoming/outgoing alarm states and the acknowledgment request.
+2. Select "Properties &gt; Properties &gt; Status" in the Inspector window and select the tag and the bit that triggers saving of the incoming/outgoing alarm states and the acknowledgment request.
 
 **Configuring event-driven tasks**
 
 To configure event-driven tasks, proceed as follows:
 
 1. Select the user alarm.
-2. Select "Properties > Events" in the Inspector window and configure a new function list for the relevant event.
+2. Select "Properties &gt; Events" in the Inspector window and configure a new function list for the relevant event.
 
 ---
 
@@ -3415,9 +3415,9 @@ Each alarm text contains up to 255 characters and any number of output fields.
 Proceed as follows to assign additional user text blocks to the alarm text for an alarm:
 
 1. Select the alarm that you want to edit on the relevant tab.
-2. To enter the alarm text, select "Properties > Properties > Alarm text" in the Inspector window.
+2. To enter the alarm text, select "Properties &gt; Properties &gt; Alarm text" in the Inspector window.
 3. You can also add output fields to the alarm text.
-4. To enter additional alarm texts, select "Properties > Properties > Alarm text > Additional text" in the Inspector window.
+4. To enter additional alarm texts, select "Properties &gt; Properties &gt; Alarm text &gt; Additional text" in the Inspector window.
 
    Enter more additional texts according to which user text blocks you enabled under "User text blocks" on the "Alarm text blocks" tab.
 
@@ -3466,7 +3466,7 @@ To configure system events, proceed as follows:
 
 To configure event-driven tasks, proceed as follows:
 
-- To configure a function list for the relevant event, select "Properties > Events".
+- To configure a function list for the relevant event, select "Properties &gt; Events".
 
 ---
 
@@ -3524,7 +3524,7 @@ You can edit these controller alarms in the STEP 7 alarm configuration system. 
 
 To filter controller alarms by display classes, proceed as follows:
 
-1. Click "Runtime settings > Alarms" in the project navigation under your HMI device.
+1. Click "Runtime settings &gt; Alarms" in the project navigation under your HMI device.
 
    One or several connections to a PLC are shown in "Contoller alarms".
 2. Select the display classes whose controller alarms you want to display for the connection.
@@ -3533,7 +3533,7 @@ To filter controller alarms by display classes, proceed as follows:
 >
 > **Controller alarms after a basic panel device exchange**
 >
-> For the controller alarms (PLC monitoring alarms, program alarms or system alarms) to be displayed after a device replacement ("Device view > Change device") from a Basic Panel to a Comfort Panel, Mobile Panel or WinCC RT Advanced, you need to activate the "Display classes" setting for the respective connections under "Runtime settings > Alarms > Controller alarms".
+> For the controller alarms (PLC monitoring alarms, program alarms or system alarms) to be displayed after a device replacement ("Device view &gt; Change device") from a Basic Panel to a Comfort Panel, Mobile Panel or WinCC RT Advanced, you need to activate the "Display classes" setting for the respective connections under "Runtime settings &gt; Alarms &gt; Controller alarms".
 
 ###### Result
 
@@ -3568,8 +3568,8 @@ The property "Request motive" specifies whether the motif will be logged by oper
 ###### Procedure
 
 1. Select the I/O field.
-2. Click "Properties > Properties > Security" in the Inspector window.
-3. To use operator input for the object, select the option "Log > Operator Actions Report".
+2. Click "Properties &gt; Properties &gt; Security" in the Inspector window.
+3. To use operator input for the object, select the option "Log &gt; Operator Actions Report".
 4. If you want to log the operation motive, enable the property "Request motive".
 
 ###### Result
@@ -3606,7 +3606,7 @@ Operator input alarms for the alarm view are preconfigured system alarms. Manage
 To configure operator input alarms for an alarm view, proceed as follows:
 
 1. Select the alarm view.
-2. In the Inspector window, click "Properties > Properties > Operator input alarms".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Operator input alarms".
 3. Activate the operator action at the alarm view for which an operator input alarm is to be output.
 
    The alarm number of the preconfigured operator input alarm for this operator action is displayed in the "Alarm number" output field.
@@ -3652,7 +3652,7 @@ To configure a Loop-In-Alarm for an alarm, proceed as follows:
 
 1. Click the tab that contains the alarm for which you want to configure the Loop-In-Alarm.
 2. Select the alarm.
-3. In the Inspector window, select "Properties > Events > Loop-In-Alarm".
+3. In the Inspector window, select "Properties &gt; Events &gt; Loop-In-Alarm".
 4. Select the "ActivateScreen" system function.
 5. Select the screen to be called by the Loop-In-Alarm as its parameter.
 
@@ -3724,7 +3724,7 @@ The "HMI tags" editor is open.
 
 To configure a discrete alarm, proceed as follows:
 
-1. To create a tag, click on "<Add>" in the table at the top of the work area.
+1. To create a tag, click on "&lt;Add&gt;" in the table at the top of the work area.
 
    A new tag is created.
 2. Configure an internal or external tag as required.
@@ -3732,16 +3732,16 @@ To configure a discrete alarm, proceed as follows:
    - Use the data types "Int" or "UInt" to select an HMI tag.
    - When you select a PLC tag, use the data types "Int" or "Word". The input and output area of a PLC tag is unsuitable as trigger.
 3. Select the tag at the top of the work area.
-4. Click on "<Add>" in the table on the "Discrete alarms" tab at the bottom of the work area.
+4. Click on "&lt;Add&gt;" in the table on the "Discrete alarms" tab at the bottom of the work area.
 
    A new discrete alarm is created for the tag. If you have selected the incorrect data type, the tag will be marked in the discrete alarm.
 5. Configure the discrete alarm in the Inspector window:
 
-   - Enter the alarm text under "Properties > Properties > General > Alarm text".
+   - Enter the alarm text under "Properties &gt; Properties &gt; General &gt; Alarm text".
 
      You can also insert output fields into the alarm text.
    - Select an alarm class.
-   - Select the trigger bit of the tag that triggers the discrete alarm under "Properties > Trigger".
+   - Select the trigger bit of the tag that triggers the discrete alarm under "Properties &gt; Trigger".
 6. You can create additional discrete alarms to monitor the tags.
 
 **Note**
@@ -3780,11 +3780,11 @@ The "HMI tags" editor is open.
 
 To configure an analog alarm in the "HMI tags" editor, proceed as follows:
 
-1. To create a tag, click on "<Add>" in the table at the top of the work area.
+1. To create a tag, click on "&lt;Add&gt;" in the table at the top of the work area.
 
    A new tag is created.
 2. Configure an internal or external tag as required.
-3. In the Inspector window, configure the range values of the tags under "Properties > Properties > Range":
+3. In the Inspector window, configure the range values of the tags under "Properties &gt; Properties &gt; Range":
 
    - Select whether to use a "Constant" or an "HMI tag" as limit value for your range values. The object list opens when you select "HMI tag". Select the tag you want to use.
 
@@ -3795,7 +3795,7 @@ To configure an analog alarm in the "HMI tags" editor, proceed as follows:
    Create an analog alarm for both range values.
 2. Select an analog alarm and configure it in the Inspector window:
 
-   - Enter the alarm text under "Properties > Properties > General > Alarm text".
+   - Enter the alarm text under "Properties &gt; Properties &gt; General &gt; Alarm text".
    - You can also insert output fields into the alarm text.
    - You can change the default alarm class.
 3. Configure the analog alarms as in the "HMI alarms" editor.
@@ -3940,7 +3940,7 @@ The following table shows the symbols used to display the predefined alarm class
 | "Diagnosis Events" | S7 |
 | "Errors" | ! |
 | "System" | $ |
-| "Warnings" | <No symbol> |
+| "Warnings" | &lt;No symbol&gt; |
 
 ---
 
@@ -3986,7 +3986,7 @@ To specify the alarms that will be shown in the alarm view, proceed as follows:
 1. Insert an "Alarm view" object from the "Tools" task card into the screen.
 2. Select the alarm view.
 
-   - In the Inspector window, select "Properties > Properties > General > View > Current alarm states".
+   - In the Inspector window, select "Properties &gt; Properties &gt; General &gt; View &gt; Current alarm states".
 
      Set whether to display alarms with and/or without mandatory acknowledgment.
 
@@ -3999,7 +3999,7 @@ To specify the alarms that will be shown in the alarm view, proceed as follows:
 
      ![Configuring alarms for the alarm view](images/88275340555_DV_resource.Stream@PNG-en-US.png)
 3. In the table, activate the alarm classes to be displayed in the alarm view.
-4. Under ""Properties > Properties > View > Control tag for display area", define the tag that returns the date as of which the alarms will be displayed.
+4. Under ""Properties &gt; Properties &gt; View &gt; Control tag for display area", define the tag that returns the date as of which the alarms will be displayed.
 
    ![Configuring alarms for the alarm view](images/88276760459_DV_resource.Stream@PNG-en-US.png)
 
@@ -4015,9 +4015,9 @@ The "Control tag for display area" property is not available for all HMI devices
 
 To specify how the alarms are shown in the alarm view, proceed as follows.
 
-1. Under "Properties > Properties > Layout > Settings > Lines per alarm" in the Inspection window, specify the number of lines to display for each alarm.
-2. In "Properties > Properties > View", select the control elements that are available on the HMI device.
-3. Configure the columns under "Properties > Properties > Columns":
+1. Under "Properties &gt; Properties &gt; Layout &gt; Settings &gt; Lines per alarm" in the Inspection window, specify the number of lines to display for each alarm.
+2. In "Properties &gt; Properties &gt; View", select the control elements that are available on the HMI device.
+3. Configure the columns under "Properties &gt; Properties &gt; Columns":
 
    - Under "Visible columns" select the columns to be output in the alarm view.
    - Under "Properties Column", define the properties of the columns.
@@ -4026,7 +4026,7 @@ To specify how the alarms are shown in the alarm view, proceed as follows.
      ![Configuring the layout of the alarm view](images/88275336075_DV_resource.Stream@PNG-en-US.png)
 
      ![Configuring the layout of the alarm view](images/88275336075_DV_resource.Stream@PNG-en-US.png)
-4. Activate or deactivate the "Show selection color" option under "Properties > Properties > Appearance > Alarms".
+4. Activate or deactivate the "Show selection color" option under "Properties &gt; Properties &gt; Appearance &gt; Alarms".
 
    ![Configuring the layout of the alarm view](images/170291194123_DV_resource.Stream@PNG-en-US.png)
 
@@ -4071,7 +4071,7 @@ To display S7 diagnostic alarms, configure an alarm view or alarm window for the
 >
 > **Using system diagnostics view and/or system diagnostics window**
 >
-> As soon as a system diagnostics view or a system diagnostics window in available in the HMI project, the alarm texts for the screen objects are downloaded for system diagnostics and used there. Therefore, the option "Runtime settings > Alarms > System alarms > Show alarm text" has no effect when system diagnostics view or system diagnostics window and is always considered enabled. In this case the size of the Runtime file cannot be reduced by enabling the option.
+> As soon as a system diagnostics view or a system diagnostics window in available in the HMI project, the alarm texts for the screen objects are downloaded for system diagnostics and used there. Therefore, the option "Runtime settings &gt; Alarms &gt; System alarms &gt; Show alarm text" has no effect when system diagnostics view or system diagnostics window and is always considered enabled. In this case the size of the Runtime file cannot be reduced by enabling the option.
 
 ###### Requirements
 
@@ -4082,11 +4082,11 @@ To display S7 diagnostic alarms, configure an alarm view or alarm window for the
 
 To configure the display of S7 diagnostic alarms, follow these steps:
 
-1. Select "Runtime settings > Alarms" in the project navigation.
+1. Select "Runtime settings &gt; Alarms" in the project navigation.
 2. Under "System events" select the check box "S7 diagnostic alarms (number)".
 3. To display the S7 diagnostic alarms with text, activate "With event text".
 4. Open the screen with the alarm view and select the alarm view.
-5. In the Inspector window, select "Properties > Properties > General > Display > Alarm class "Diagnosis Events".
+5. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Display &gt; Alarm class "Diagnosis Events".
 
    ![Configuring the display of S7 diagnostic alarms](images/88303002763_DV_resource.Stream@PNG-en-US.png)
 
@@ -4122,7 +4122,7 @@ In Runtime, logged alarms are displayed in an alarm view or alarm window.
 To configure an alarm view for logged alarms, proceed as follows:
 
 1. Open the screen with the alarm view and select the alarm view.
-2. In the Inspector window, select "Properties > Properties > General > Alarm log".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Alarm log".
 3. Click the "...." button and select the alarm log.
 4. Continue to configure the alarm view as for the display of current alarms.
 
@@ -4150,11 +4150,11 @@ Proceed as follows to configure an alarm window:
 
 1. Insert an "Alarm window" object from the "Tools" task card into the global screen.
 2. Configure the alarm window like an alarm view.
-3. Under "Properties > Properties > Mode > Window" in the Inspector window, select how the alarm window reacts and is operated in Runtime.
+3. Under "Properties &gt; Properties &gt; Mode &gt; Window" in the Inspector window, select how the alarm window reacts and is operated in Runtime.
 
    - Activate "Modal" if the alarm window is to retain the focus in Runtime after a screen change.
 
-     This option is important, as switching back and forth between the screen and different windows with <Ctrl+TAB> is not supported.
+     This option is important, as switching back and forth between the screen and different windows with &lt;Ctrl+TAB&gt; is not supported.
 
 ###### Result
 
@@ -4195,14 +4195,14 @@ Proceed as follows to configure the alarm indicator:
 
 1. Insert the "Alarm view" object from the "Tools" task card into the work area.
 2. Select the alarm indicator.
-3. Under "Properties > Properties > General" in the Inspector window, select the alarm classes to be displayed by the alarm view.
+3. Under "Properties &gt; Properties &gt; General" in the Inspector window, select the alarm classes to be displayed by the alarm view.
 
    Specify whether to display pending and/or acknowledged alarms in the alarm view.
 
    ![Procedure](images/111891212171_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111891212171_DV_resource.Stream@PNG-en-US.png)
-4. Under "Properties > Event", assign the system function "ShowAlarmWindow" to an event of the alarm view.
+4. Under "Properties &gt; Event", assign the system function "ShowAlarmWindow" to an event of the alarm view.
 
 **Note**
 
@@ -4242,7 +4242,7 @@ You can filter the display of alarms in the enhanced alarm view. The criterion i
 ###### Configuring filters for a fixed character string
 
 1. Select the alarm view.
-2. In the Inspector window, select "Properties > Properties > Alarm filter".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Alarm filter".
 3. Enter a filter string in "Filter string".
 
    ![Configuring filters for a fixed character string](images/88303055371_DV_resource.Stream@PNG-en-US.png)
@@ -4256,11 +4256,11 @@ Only those alarms are displayed in Runtime that contain the complete character s
 ###### Configuring filters for a variable character string
 
 1. Select the alarm view.
-2. In the Inspector window, select "Properties > Properties > Filter".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Filter".
 3. Select a tag from "Filter tag". The tag must be of the "String" type.
 4. In the screen, configure an I/O field for entering the filter string in Runtime.
 
-   - In the Inspector window, select "Properties > Properties > General > Format > Display format > String".
+   - In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Format &gt; Display format &gt; String".
    - To link the I/O field to the alarm view, select "Process" to set the filter tag you selected for the alarm view.
 
      ![Configuring filters for a variable character string](images/74925742731_DV_resource.Stream@PNG-en-US.png)
@@ -4313,7 +4313,7 @@ For example, you want to view information about the process at the end of a shif
 Proceed as follows to configure an alarm view to output an alarm log:
 
 1. Configure an alarm view in a screen.
-2. Under "Properties > Properties > General > Display > Alarm log"" in the Inspector window, select the required alarm log.
+2. Under "Properties &gt; Properties &gt; General &gt; Display &gt; Alarm log"" in the Inspector window, select the required alarm log.
 
    You can always create a new alarm log.
 
@@ -4416,26 +4416,26 @@ Current, and logged alarms are displayed in the alarm view. Alarms from all alar
 To configure an alarm view, proceed as follows:
 
 1. Insert an "Alarm view" object from the "Tools" task card into the screen.
-2. Select the alarm view and click "Properties > Properties > General" in the Inspector window.
+2. Select the alarm view and click "Properties &gt; Properties &gt; General" in the Inspector window.
 
-   - Under "Display > Type", select the type of alarms you want to display as default in the alarm view.
-   - Under "Display > Display" select which alarms are displayed. This shows or hides the alarms to be suppressed in the display.
-   - Double-click of the operator on an alarm in Runtime starts a specific action. Specify this action under "Display > Double-click". If you want to trigger the Loop-In-Alarm not only using the "Loop-In-Alarm" button, select "Loop-In-Alarm".
+   - Under "Display &gt; Type", select the type of alarms you want to display as default in the alarm view.
+   - Under "Display &gt; Display" select which alarms are displayed. This shows or hides the alarms to be suppressed in the display.
+   - Double-click of the operator on an alarm in Runtime starts a specific action. Specify this action under "Display &gt; Double-click". If you want to trigger the Loop-In-Alarm not only using the "Loop-In-Alarm" button, select "Loop-In-Alarm".
    - Select the required time base under "Time base".
 
      ![Procedure](images/100529955083_DV_resource.Stream@PNG-en-US.png)
 
      ![Procedure](images/100529955083_DV_resource.Stream@PNG-en-US.png)
-3. To specify the appearance of the alarm view, select "Properties > Properties > Appearance" in the Inspector window.
-4. To specify the appearance of the headers, content, and table grid in the alarm view, select "Properties > Properties > Table" .
+3. To specify the appearance of the alarm view, select "Properties &gt; Properties &gt; Appearance" in the Inspector window.
+4. To specify the appearance of the headers, content, and table grid in the alarm view, select "Properties &gt; Properties &gt; Table" .
 
-   - To specify the visualization of selected alarms in Runtime, select "Properties > Properties > Table > Table - Select".
-   - To specify the sorting method for alarms in Runtime, select "Properties > Properties > Table > Table - Sorting".
-5. To specify the sort order of alarms in Runtime, select "Properties > Properties > Alarm list" .
+   - To specify the visualization of selected alarms in Runtime, select "Properties &gt; Properties &gt; Table &gt; Table - Select".
+   - To specify the sorting method for alarms in Runtime, select "Properties &gt; Properties &gt; Table &gt; Table - Sorting".
+5. To specify the sort order of alarms in Runtime, select "Properties &gt; Properties &gt; Alarm list" .
 
 ###### Configuring alarm blocks for the alarm view
 
-1. To configure alarm blocks for the alarm view, deactivate the "Accept project settings" option in the Inspector window under "Properties > Properties > Blocks".
+1. To configure alarm blocks for the alarm view, deactivate the "Accept project settings" option in the Inspector window under "Properties &gt; Properties &gt; Blocks".
 2. To use an alarm block in the alarm view, activate the alarm block in the "Selected" column.
 3. To give an alarm block its own label for the column heading in the alarm view, change the text in the "Label" column.
 4. To change the text length and alignment of an alarm block in the alarm view column, change the entries in the "Length" and "Alignment" columns.
@@ -4443,7 +4443,7 @@ To configure an alarm view, proceed as follows:
 6. To display the content of an alarm block in the Alarm view column as text, symbol or both, select the corresponding entry in the "Content as" column.
 7. To display the title of an alarm block in the Alarm view column as text, symbol or both, select the corresponding entry in the "Title as" column.
 8. Specify the format of an alarm block in the "Format" column. This option is not available for every alarm text block.
-9. To display an alarm block as a column in the alarm view, activate the column corresponding to the alarm block under "Properties > Properties > Columns" in the "Visible" column.
+9. To display an alarm block as a column in the alarm view, activate the column corresponding to the alarm block under "Properties &gt; Properties &gt; Columns" in the "Visible" column.
 
 **Note**
 
@@ -4455,7 +4455,7 @@ The display of the title as a symbol is not available for all alarm blocks.
 
 ###### Configuring Alarm view columns
 
-1. To define the arrangement of the columns of the alarm view, select a row in the Inspector window under "Properties > Properties > Columns". Use the arrow buttons to move the row to the desired position.
+1. To define the arrangement of the columns of the alarm view, select a row in the Inspector window under "Properties &gt; Properties &gt; Columns". Use the arrow buttons to move the row to the desired position.
 2. Specify the sort direction for each activated column in the "Sort direction" column.
 3. Define the sort order in the "Sorting order" column by assigning the values "1" to "4".
 
@@ -4465,10 +4465,10 @@ The sorting function is only active if a maximum of four columns are contained i
 
 ###### Configuring the toolbar and status bar in the alarm view
 
-1. To specify the toolbar layout, select "Properties > Properties > Toolbar > Toolbar - General".
-2. Select "Properties > Properties > Toolbar > Toolbar - Operator input elements", to enable the operator input elements to be included in the alarm view toolbar.
-3. To specify the status bar layout, select "Properties > Properties > Status bar > Status bar - General".
-4. Select "Properties > Properties > Toolbar > Toolbar - Operator input elements", to enable the operator input elements to be included in the status bar of the alarm view.
+1. To specify the toolbar layout, select "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - General".
+2. Select "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - Operator input elements", to enable the operator input elements to be included in the alarm view toolbar.
+3. To specify the status bar layout, select "Properties &gt; Properties &gt; Status bar &gt; Status bar - General".
+4. Select "Properties &gt; Properties &gt; Toolbar &gt; Toolbar - Operator input elements", to enable the operator input elements to be included in the status bar of the alarm view.
 
 ###### Result
 
@@ -4514,7 +4514,7 @@ WinCC supports the configuration of different filters for the alarm view:
 
 ###### Procedure
 
-1. Select the alarm view and click "Properties > Properties > Filter > Alarm filter" in the Inspector window.
+1. Select the alarm view and click "Properties &gt; Properties &gt; Filter &gt; Alarm filter" in the Inspector window.
 2. To configure a custom filter, click on the "Custom" tab.
 3. Define one or more filters. For each filter, specify one or more filter criteria under "Expression" with condition and value.
 
@@ -4597,13 +4597,13 @@ The calculation of the time of acknowledgment includes the "Acknowledged" alarm 
 
 Proceed as follows to configure the functions of the alarm statistics:
 
-1. Select the alarm view and click "Properties > Properties > Alarm statistics - General" in the Inspector window.
+1. Select the alarm view and click "Properties &gt; Properties &gt; Alarm statistics - General" in the Inspector window.
 
    ![Configuring the alarm statistics functions](images/72334516491_DV_resource.Stream@PNG-en-US.png)
 
    ![Configuring the alarm statistics functions](images/72334516491_DV_resource.Stream@PNG-en-US.png)
 2. To limit the calculation period, activate the "Use time range" option under "Time range". Specify the frequency.
-3. To define the maximum number of alarms to be processed in the alarm statistics, enter a value at "Data records > Maximum number of data records".
+3. To define the maximum number of alarms to be processed in the alarm statistics, enter a value at "Data records &gt; Maximum number of data records".
 
    This setting requires the following conditions to be met:
 
@@ -4615,7 +4615,7 @@ Proceed as follows to configure the functions of the alarm statistics:
 
 Proceed as follows to set the columns of the alarm statistics:
 
-1. Select the alarm view and click "Properties > Properties > Alarm statistics - Elements" in the Inspector window.
+1. Select the alarm view and click "Properties &gt; Properties &gt; Alarm statistics - Elements" in the Inspector window.
 
    ![Setting up the alarm statistics](images/72334658699_DV_resource.Stream@PNG-en-US.png)
 
@@ -4793,10 +4793,10 @@ You can set the time after which manually-suppressed alarms should be automatica
 
 To set the alarm display suppression timeout, follow these steps:
 
-1. Double-click "Runtime settings > Alarms" in the project navigation.
+1. Double-click "Runtime settings &gt; Alarms" in the project navigation.
 
    The alarm settings open.
-2. Select "General > Display suppression timeout" to configure the period during which a manually suppressed alarm remains hidden.
+2. Select "General &gt; Display suppression timeout" to configure the period during which a manually suppressed alarm remains hidden.
 
    30 minutes are preset.
 
@@ -4844,12 +4844,12 @@ The "Show alarm" button is configured in the alarm view.
 ###### Creating a display suppression mask for the alarm
 
 1. Select the alarm.
-2. To select the alarm group for which you created the alarm suppression tag, select "Properties > Properties > General" in the Inspector window.
+2. To select the alarm group for which you created the alarm suppression tag, select "Properties &gt; Properties &gt; General" in the Inspector window.
 
    ![Creating a display suppression mask for the alarm](images/72334990603_DV_resource.Stream@PNG-en-US.png)
 
    ![Creating a display suppression mask for the alarm](images/72334990603_DV_resource.Stream@PNG-en-US.png)
-3. To enter the display suppression mask, select "Properties > Properties > Display suppression" in the Inspector window.
+3. To enter the display suppression mask, select "Properties &gt; Properties &gt; Display suppression" in the Inspector window.
 
    ![Creating a display suppression mask for the alarm](images/72334995083_DV_resource.Stream@PNG-en-US.png)
 
@@ -4892,10 +4892,10 @@ In addition to the alarm view, WinCC also supports alarm indication in the plant
 ###### Configuring alarms for the alarm annunciator
 
 1. Select the alarm that you want to display using an alarm annunciator.
-2. In the Inspector window, select "Properties > Alarm annunciator".
+2. In the Inspector window, select "Properties &gt; Alarm annunciator".
 3. In the "Alarm classes" tab, select the alarm class of the alarms for the alarm annunciator.
 
-   - To acknowledge the alarm annunciator via the "Alarm annunciator acknowledgment" button of the alarm view, activate "Acknowledge > Alarm annunciator > By means of "Acknowledge central annunciator" button" in the Inspector window.
+   - To acknowledge the alarm annunciator via the "Alarm annunciator acknowledgment" button of the alarm view, activate "Acknowledge &gt; Alarm annunciator &gt; By means of "Acknowledge central annunciator" button" in the Inspector window.
 
      To switch off the alarm annunciator, use the "Alarm annunciator acknowledgment" button. The alarm is still pending in the alarm view.
    - To acknowledge the alarm via the alarm annunciator, select the tag to which the alarm annunciator is connected.
@@ -4944,7 +4944,7 @@ An alarm view displays logged alarms in Runtime according to the configuration. 
 Proceed as follows to configure an "Historical alarm list" (short-term) or "Historical alarm list" (long-term) display:
 
 1. Select the alarm view.
-2. Select "Properties > Properties > General > Active list > "Historical alarm list" (short-term) or "Historical alarm list" (long-term) in the Inspector window.
+2. Select "Properties &gt; Properties &gt; General &gt; Active list &gt; "Historical alarm list" (short-term) or "Historical alarm list" (long-term) in the Inspector window.
 3. Configure the alarm view similar to an alarm view for active alarms.
 
 ###### Result
@@ -4978,7 +4978,7 @@ To export alarms to a "*.csv" file in Runtime, the operator clicks on the ![Intr
 
 To configure the export of alarms, proceed as follows:
 
-1. Select the alarm view and configure data export by selecting "Properties > Properties > Data export" in the Inspector window.
+1. Select the alarm view and configure data export by selecting "Properties &gt; Properties &gt; Data export" in the Inspector window.
 
    - You can specify a custom file name and folder.
    - At "Scope", specify the data to be exported from the alarm view.
@@ -5007,7 +5007,7 @@ To enable evaluation of the alarms in Runtime, assign a custom C function to the
 To configure the evaluation of an alarm in Runtime, proceed as follows:
 
 1. Select the alarm.
-2. In the Inspector window, select "Properties > Events > Status changed".
+2. In the Inspector window, select "Properties &gt; Events &gt; Status changed".
 3. Select the custom function for reading the data.
 
    ![Procedure](images/72352498187_DV_resource.Stream@PNG-en-US.png)
@@ -5069,7 +5069,7 @@ WinCC can report on all alarms that occur in the system. The following options a
 To activate continuous reporting of alarms, follow these steps:
 
 1. Double-click "Runtime settings" in the project navigation.
-2. Select "Alarms > General > Report".
+2. Select "Alarms &gt; General &gt; Report".
 
    ![Activating continuous alarm reporting](images/70817119115_DV_resource.Stream@PNG-en-US.png)
 
@@ -5085,7 +5085,7 @@ To exclude specific alarms from reporting, proceed as follows:
 
 1. Open the "HMI alarms" editor.
 2. Select the alarm to exclude from reporting on the tab of the selected alarm type.
-3. In the Inspector window, disable "Properties > Properties > Miscellaneous > Report".
+3. In the Inspector window, disable "Properties &gt; Properties &gt; Miscellaneous &gt; Report".
 
    ![Excluding an alarm from reporting](images/88322944779_DV_resource.Stream@PNG-en-US.png)
 
@@ -5135,7 +5135,7 @@ WinCC logs all system alarms as required.The following options are available:
 To configure the outputting of the current display in an alarm view using your own report, proceed as follows:
 
 1. Select the required alarm view.
-2. To select the print job, select "Properties > Properties > General > Print > Print job" in the Inspector window.
+2. To select the print job, select "Properties &gt; Properties &gt; General &gt; Print &gt; Print job" in the Inspector window.
 
    The default print job is the system print job. You can also select a customized print job, or a modified system print job.
 
@@ -5184,14 +5184,14 @@ To configure an alarm with alarm acknowledgment, assign it to an alarm class wit
 The state machine for a predefined alarm class has already been set. You can only set the state machines for user-defined alarm classes. Proceed as follows:
 
 1. In the "HMI alarms" editor, click the "Alarm class" tab and select the alarm class.
-2. Select the required acknowledgment model under "Properties > Properties > Acknowledgment" in the Inspector window.
+2. Select the required acknowledgment model under "Properties &gt; Properties &gt; Acknowledgment" in the Inspector window.
 
 ##### Assign alarms to an alarm class requiring acknowledgment
 
 Proceed as follows to assign an alarm to an alarm class requiring acknowledgment.
 
 1. In the "HMI alarms" editor, click the tab for the alarm type and select the alarm.
-2. Under "Properties > Properties > General" in the Inspector window, select the alarm class of the alarm.
+2. Under "Properties &gt; Properties &gt; General" in the Inspector window, select the alarm class of the alarm.
 
 ##### Result
 
@@ -5226,13 +5226,13 @@ The following options are also available to trigger acknowledgment:
 To configure a button for acknowledging an alarm, proceed as follows:
 
 1. Select the button in the "Screens" editor.
-2. Under "Properties > Events" in the Inspector window, assign the "AlarmViewAcknowledgeAlarm" system function to the "Click" event.
+2. Under "Properties &gt; Events" in the Inspector window, assign the "AlarmViewAcknowledgeAlarm" system function to the "Click" event.
 3. Select the alarm view as parameter.
 
 ##### Acknowledgment of a Discrete Alarm by the PLC
 
 1. In the "HMI alarms" editor, click the "Discrete alarm" tab and select the discrete alarm.
-2. In the Inspector window, select the tag and the bit that acknowledges the PLC alarm under "Properties > Properties > Acknowledgment > PLC".
+2. In the Inspector window, select the tag and the bit that acknowledges the PLC alarm under "Properties &gt; Properties &gt; Acknowledgment &gt; PLC".
 
    ![Acknowledgment of a Discrete Alarm by the PLC](images/70821567371_DV_resource.Stream@PNG-en-US.png)
 
@@ -5244,7 +5244,7 @@ The various acknowledgment options have the following effect in alarm groups:
 
 - Operator acknowledges the alarm
 
-  You acknowledge the alarm of an alarm group, for example, using the <ACK> acknowledgment key or a function key. All alarms of the alarm group are acknowledged.
+  You acknowledge the alarm of an alarm group, for example, using the &lt;ACK&gt; acknowledgment key or a function key. All alarms of the alarm group are acknowledged.
 - The PLC acknowledges the alarm
 
   The alarm of an alarm group is acknowledged by setting a bit in the tag.
@@ -5273,7 +5273,7 @@ The various acknowledgment options have the following effect in alarm groups:
 To configure that acknowledgment of an alarm is sent to the PLC, follow these steps:
 
 1. In the "HMI alarms" editor, click the "Discrete alarm" tab and select the discrete alarm.
-2. In the Inspector window, select "Properties > Properties > Acknowledgment".
+2. In the Inspector window, select "Properties &gt; Properties &gt; Acknowledgment".
 3. Under "HMI", select the tag and the bit set by the alarm acknowledgment function.
 
 **Note**
@@ -5311,7 +5311,7 @@ The alarm classes define how the alarms from an alarm class are to be acknowledg
 To configure the acknowledgement of an alarm, follow these steps:
 
 1. In the "HMI alarms" editor, click the "Alarm class" tab and select the alarm class.
-2. To select the state machine, select "Properties > Properties > Acknowledgment > Settings" in the Inspector window.
+2. To select the state machine, select "Properties &gt; Properties &gt; Acknowledgment &gt; Settings" in the Inspector window.
 
    - If you enable "Assign comment to defined user", this Runtime user writes a comment on the alarm acknowledgment that is written to the log file alongside with the alarm.
    - If you enable "Use comment of the incoming alarm", the same comment is attached to each status change of this alarm as the one assigned for the "incoming" alarm event.
@@ -5320,14 +5320,14 @@ To configure the acknowledgement of an alarm, follow these steps:
 
      ![Procedure](images/72353472651_DV_resource.Stream@PNG-en-US.png)
 3. In the "HMI alarms" editor, select the alarm.
-4. Select "Properties > Properties > General" in the Inspector window to select the alarm class of the alarm.
-5. Select "Properties > Properties > Acknowledgement > Settings" in the Inspector window to specify the acknowledgment tag to which the alarm acknowledgment is saved, including the bit set for this purpose.
+4. Select "Properties &gt; Properties &gt; General" in the Inspector window to select the alarm class of the alarm.
+5. Select "Properties &gt; Properties &gt; Acknowledgement &gt; Settings" in the Inspector window to specify the acknowledgment tag to which the alarm acknowledgment is saved, including the bit set for this purpose.
 6. To exclude the alarm from the group acknowledgment of the alarm view, enable "Single acknowledgment".
 
 ##### Acknowledging an alarm via a system function
 
 1. In the "HMI alarms" editor, select the alarm.
-2. In the Inspector window, click "Properties > Events > Incoming".
+2. In the Inspector window, click "Properties &gt; Events &gt; Incoming".
 
    The function list opens.
 3. In the "Function list" dialog, assign the "SetBit" system function to the "Incoming" event.
@@ -5366,10 +5366,10 @@ You acknowledge an alarm group using the acknowledgment tag. To set and reset th
 To configure the acknowledgement of an alarm group, follow these steps:
 
 1. In the "HMI alarms" editor, select the alarm.
-2. Under "Properties > Properties > General" in the Inspector window, select the alarm group to which the alarm belongs.
+2. Under "Properties &gt; Properties &gt; General" in the Inspector window, select the alarm group to which the alarm belongs.
 3. Click the "Alarm groups" tab in the "HMI alarms" editor.
 4. Select the alarm group.
-5. Under "Properties > Properties > Tags > Settings" in the Inspector window, select the acknowledgment tag and acknowledgment bit.
+5. Under "Properties &gt; Properties &gt; Tags &gt; Settings" in the Inspector window, select the acknowledgment tag and acknowledgment bit.
 6. Open the "Screens" editor and configure a button that sets the acknowledgment bit in Runtime for the acknowledgment tag.
 
 ##### Result
@@ -5414,7 +5414,7 @@ To configure the acknowledgment of an alarm annunciator, proceed as follows:
 
 1. Click the "Alarm classes" tab in the "HMI alarms" editor.
 2. Select the required alarm class.
-3. In the Inspector window, select "Properties > Properties > Acknowledgment > Alarm annunciator" to specify how to acknowledge the alarm annunciator.
+3. In the Inspector window, select "Properties &gt; Properties &gt; Acknowledgment &gt; Alarm annunciator" to specify how to acknowledge the alarm annunciator.
 
 ##### Result
 
@@ -5444,7 +5444,7 @@ You can use the ![Introduction](images/21866163339_DV_resource.Stream@PNG-de-DE.
 To set up a group acknowledgement, follow these steps:
 
 1. Open the "Screens" editor, and select the relevant alarm view.
-2. In the Inspector window, select "Properties Properties > Toolbar - Buttons > Group acknowledgment."
+2. In the Inspector window, select "Properties Properties &gt; Toolbar - Buttons &gt; Group acknowledgment."
 
    The ![Procedure](images/21866163339_DV_resource.Stream@PNG-de-DE.png) button appears in the alarm view. All alarms of an alarm view that are not excluded from group acknowledgment are acknowledged when the operator actuates this button.
 
@@ -5452,7 +5452,7 @@ To set up a group acknowledgement, follow these steps:
 
 1. Open the "HMI alarms" editor and select the tab that contains the relevant alarm type.
 2. Select the alarm that you want to exclude from the group acknowledgement.
-3. Enable "Properties > Properties > Acknowledgment > Single acknowledgment" in the Inspector window.
+3. Enable "Properties &gt; Properties &gt; Acknowledgment &gt; Single acknowledgment" in the Inspector window.
 
    When you acknowledge all the alarms in an alarm view using the ![Configuring a single acknowledgement](images/21866163339_DV_resource.Stream@PNG-de-DE.png) button, any alarms for which the "Single acknowledgement" option is enabled will be excluded. The operator acknowledges alarms with "single acknowledgment" option individually.
 
@@ -5676,10 +5676,10 @@ You can also enter comments for each log.
 
 To create an alarm log, proceed as follows:
 
-1. Double-click "<Add>" in the table.
+1. Double-click "&lt;Add&gt;" in the table.
 
    A new alarm log is created.
-2. Under "Properties > Properties > General" in the Inspector window, enter a unique name for the alarm log.
+2. Under "Properties &gt; Properties &gt; General" in the Inspector window, enter a unique name for the alarm log.
 
    ![Procedure](images/70551132171_DV_resource.Stream@PNG-en-US.png)
 
@@ -5689,7 +5689,7 @@ To create an alarm log, proceed as follows:
    The approximate space required on the storage medium is displayed. Memory space requirements will increase accordingly if you log alarm texts with tag values.
 4. In the "Storage location" field you select where the log entries are saved.
 5. Depending on the selected "Storage location", you either select the "Path" or the "Name of the data source".
-6. To determine if audit trail data were changed at a later time, activate "Properties > Properties > General > Checksum".
+6. To determine if audit trail data were changed at a later time, activate "Properties &gt; Properties &gt; General &gt; Checksum".
 7. If necessary, enter a descriptive text in the "Comment" category to document your configuration.
 
 **Note**
@@ -5759,7 +5759,7 @@ To assign the alarm log to an alarm class, proceed as follows:
 
 1. Open the "Alarm classes" tab in the "HMI alarms" editor.
 2. Select the required alarm class.
-3. Under "Properties > Properties > General > Log" in the Inspector window, select the alarm log.
+3. Under "Properties &gt; Properties &gt; General &gt; Log" in the Inspector window, select the alarm log.
 
 ##### Assign alarm to an alarm class
 
@@ -5767,7 +5767,7 @@ To assign an alarm to the alarm class, proceed as follows:
 
 1. In the "HMI alarms" editor, open the "Analog alarms" tab, or the "Discrete alarms" tab.
 2. Select the required alarm.
-3. Under "Properties > Properties > General > Alarm class" in the Inspection window, select the alarm class for which the alarm log was configured.
+3. Under "Properties &gt; Properties &gt; General &gt; Alarm class" in the Inspection window, select the alarm class for which the alarm log was configured.
 
 ##### Result
 
@@ -5806,7 +5806,7 @@ In Runtime, logged alarms are displayed in an alarm view or alarm window.
 To configure an alarm view for logged alarms, proceed as follows:
 
 1. Open the screen with the alarm view and select the alarm view.
-2. In the Inspector window, select "Properties > Properties > General > Alarm log".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Alarm log".
 3. Click the "...." button and select the alarm log.
 4. Continue to configure the alarm view as for the display of current alarms.
 
@@ -5839,7 +5839,7 @@ The size of the alarm buffer depends on the type of HMI device. In WinCC, specif
 To configure the response to an alarm buffer overflow, follow these steps:
 
 1. Double-click "Runtime settings" in the project navigation under your HMI device.
-2. Under "Alarms > General > Buffer clearance in percent upon buffer overflow", enter a value between 1 and 100.
+2. Under "Alarms &gt; General &gt; Buffer clearance in percent upon buffer overflow", enter a value between 1 and 100.
 
    This value specifies the percentage of the alarm buffer that is deleted on alarm buffer overflow.
 
@@ -5867,7 +5867,7 @@ The storage location of a log can be a database or a file.
 
 The database is addressed by means of its "Data source name" (DSN). Select the database to be used in WinCC as follows:
 
-Select the database from the Windows Start menu under "Settings > Control panel > ODBC Data Sources".
+Select the database from the Windows Start menu under "Settings &gt; Control panel &gt; ODBC Data Sources".
 
 In your configuration, specify the "Data source name" (DSN) instead of a directory name as storage path for log data. With the DSN, you are referencing the database and the storage location.
 
@@ -5912,7 +5912,7 @@ To set up an ODBC data source, follow these steps:
 1. In Control Panel, open "Administrative Tools" and select "Data Sources (ODBC)".
 
    The "ODBC Data Source Administrator" dialog is opened.
-2. Click "User DSN > Add".
+2. Click "User DSN &gt; Add".
 3. Select the "SQL-Server and click on "Finish".
 4. In the dialog that follows, enter a name for the User DSN and the SQL-Server and click on "Next".
 5. In the dialog that follows, define the logon procedure for the SQL database and click on "Next".
@@ -5955,7 +5955,7 @@ Proceed as follows to configure a data log or alarm log for the use of a checksu
    ![Procedure](images/70806916747_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/70806916747_DV_resource.Stream@PNG-en-US.png)
-3. Under "Properties > Properties > Logging method" in the Inspector window, select the option "Display system event at" or "Trigger event".
+3. Under "Properties &gt; Properties &gt; Logging method" in the Inspector window, select the option "Display system event at" or "Trigger event".
 
    ![Procedure](images/70807230603_DV_resource.Stream@PNG-en-US.png)
 
@@ -6006,7 +6006,7 @@ The "HmiCheckLogIntegrity" program supports verification of the following files:
 - Recipe data records in CSV format
 - Recipe data records in TXT format
 
-You can find the "HmiCheckLogIntegrity.exe" program in the installation directory of WinCC under the folder "WinCC Runtime Advanced", for example <C:\Program Files\Siemens\Automation WinCC Runtime Advanced>.
+You can find the "HmiCheckLogIntegrity.exe" program in the installation directory of WinCC under the folder "WinCC Runtime Advanced", for example &lt;C:\Program Files\Siemens\Automation WinCC Runtime Advanced&gt;.
 
 > **Note**
 >
@@ -6019,9 +6019,9 @@ You can find the "HmiCheckLogIntegrity.exe" program in the installation director
 ##### Procedure
 
 1. Copy the file to be checked from the HMI device to your configuration computer.
-2. Open a command line prompt with "Start > Programs > Accessories > Command Prompt".
+2. Open a command line prompt with "Start &gt; Programs &gt; Accessories &gt; Command Prompt".
 3. Enter the path to "HmiCheckLogIntegrity.exe" followed by a space in the command line prompt. After the space, enter the storage location of the file to be checked within quotation marks.
-4. Press <Enter>.
+4. Press &lt;Enter&gt;.
 5. The check is performed.
 
    When the checked data are consistent, the "Consistency check succeeded" message appears.
@@ -6088,7 +6088,7 @@ In the Runtime settings of your HMI device, select the language to be used for w
 
 To determine the startup language, follow these steps:
 
-1. Select "Runtime settings > Language and fonts" in the project navigation.
+1. Select "Runtime settings &gt; Language and fonts" in the project navigation.
 2. Activate the runtime language, for example, "German (Germany)" and "English (USA)".
 3. Set the "Language switch order". Use 0 to determine the startup language, for example:
 
@@ -6096,8 +6096,8 @@ To determine the startup language, follow these steps:
    - English 1
 
      With "0", German is specified as the "Startup language".
-4. Select "Runtime settings > General" in the project navigation.
-5. Select the "Logs > Logging language > Startup language".
+4. Select "Runtime settings &gt; General" in the project navigation.
+5. Select the "Logs &gt; Logging language &gt; Startup language".
 
 ##### Result
 
@@ -6138,7 +6138,7 @@ You define the restart characteristics separately for each log.
 To configure the restart characteristics of a data log, proceed as follows:
 
 1. Select the log for which you want to define the restart characteristics in the "Historical Data" editor.
-2. In the Inspector window select "Properties > Properties > Restart behavior".
+2. In the Inspector window select "Properties &gt; Properties &gt; Restart behavior".
 3. If you want logging to start when Runtime starts, enable the "Enable logging at runtime start" option in the "Logging" area.  
    You can also start logging in Runtime using the "StartLogging" system function, for example.
 4. Select the restart behavior of the log in the "Log handling at restart" area.
@@ -6186,7 +6186,7 @@ The following logging methods are available:
 ##### Procedure
 
 1. Select the log for which you want to define the logging method in the "Historical Data" editor.
-2. Select "Properties > Properties > Logging method" in the Inspector window and select the required logging method.
+2. Select "Properties &gt; Properties &gt; Logging method" in the Inspector window and select the required logging method.
 3. If you have selected the "Segmented circular log" type, enter the number of log segments. The system creates an additional log segment for the main log. This results in the total number of log files created from the number of configured segments as well as the automatically created log.
 
    If you selected a log with the "Display system alarm on" setting, specify the level as a percentage at which a system alarm is to be triggered.
@@ -6321,7 +6321,7 @@ To configure the alarm log, proceed as follows:
    ![Configuring an alarm log](images/72354101771_DV_resource.Stream@PNG-en-US.png)
 
    ![Configuring an alarm log](images/72354101771_DV_resource.Stream@PNG-en-US.png)
-3. Click "Properties > General" in the Inspector window and specify the following:
+3. Click "Properties &gt; General" in the Inspector window and specify the following:
 
    - Enter the values for "Time period of all segments" and "Maximum size of all segments".
 
@@ -6340,7 +6340,7 @@ To create an alarm class with logging, proceed as follows:
 1. Open the "HMI alarms" editor.
 2. Click the "Alarm Classes" tab.
 3. Select the alarm class whose alarms are logged.
-4. In the Inspector window, select "Properties > Properties > General > Settings > Alarm log".
+4. In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Settings &gt; Alarm log".
 5. Assign the alarm to be logged to this alarm class.
 
 ##### Example for the timing of the first segment change
@@ -6384,12 +6384,12 @@ Make regular backups of your log data to ensure complete documentation of your p
 To create a backup of the log segments, proceed as follows:
 
 1. Double-click "Logging" in the area navigator.
-2. Enable "Alarm log > Backup".
+2. Enable "Alarm log &gt; Backup".
 
    ![Procedure](images/72357512459_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/72357512459_DV_resource.Stream@PNG-en-US.png)
-3. In the Inspector window, click "Properties > General > Settings Backup > Path".
+3. In the Inspector window, click "Properties &gt; General &gt; Settings Backup &gt; Path".
 4. Click ![Procedure](images/6315966347_DV_resource.Stream@PNG-de-DE.png) and look for an existing folder in which to store the backup file. Use "Make New Folder" to create a new folder, if necessary. You can also use a network path as the storage location.
 
    ![Procedure](images/72357507979_DV_resource.Stream@PNG-en-US.png)
@@ -6428,7 +6428,7 @@ A backup file for an alarm log has the following structure:
   A log segment backup consists of two files in "*.LDF" and "*.MDF" format. To transfer a backup to another PC, simply copy both files.
 - File name
 
-  The file name is in the following form: "<Computer_name>_<Project_name>_<Type>_<Time_from>_<Time_to>".
+  The file name is in the following form: "&lt;Computer_name&gt;_&lt;Project_name&gt;_&lt;Type&gt;_&lt;Time_from&gt;_&lt;Time_to&gt;".
 
 | Component | Explanation | Example |
 | --- | --- | --- |
@@ -6580,7 +6580,7 @@ To define the number of alarms that are reloaded after a power failure, follow t
 
 1. Double-click "Runtime settings" in the project navigation under your HMI device.
 2. Double-click "Alarms" in the area navigator.
-3. Select "Properties > General > Number of alarm list entries after power failure" in the Inspector window to enter the number of alarms to be reloaded after power failure.
+3. Select "Properties &gt; General &gt; Number of alarm list entries after power failure" in the Inspector window to enter the number of alarms to be reloaded after power failure.
 
 ##### Result
 
@@ -6655,7 +6655,7 @@ Alarm events are saved to an internal buffer. The size of this alarm buffer depe
 
 The "Persistent alarm buffer" setting is used to switch the alarm buffer on and off in Runtime. For storage space reasons it can be necessary to switch off the alarm buffer.
 
-The setting "Persistent alarm buffer" is activated under "Runtime Settings > Alarms". In this setting the alarm view displays both current alarms and also alarms from the alarm buffer
+The setting "Persistent alarm buffer" is activated under "Runtime Settings &gt; Alarms". In this setting the alarm view displays both current alarms and also alarms from the alarm buffer
 
 If you switch off the alarm buffer you need to restart Runtime in order that the alarm view no longer displays the alarms from the alarm buffer.
 
@@ -6757,7 +6757,7 @@ Alarm events are saved to an internal buffer. The size of this alarm buffer depe
 >
 > The "Persistent alarm buffer" setting is used to switch the alarm buffer on and off in Runtime. For storage space reasons it can be necessary to switch off the alarm buffer.
 >
-> The setting "Persistent alarm buffer" is activated under "Runtime Settings > Alarms". In this setting the alarm view displays both current alarms and also alarms from the alarm buffer
+> The setting "Persistent alarm buffer" is activated under "Runtime Settings &gt; Alarms". In this setting the alarm view displays both current alarms and also alarms from the alarm buffer
 >
 > If you switch off the alarm buffer you need to restart Runtime in order that the alarm view no longer displays the alarms from the alarm buffer.
 
@@ -6872,7 +6872,7 @@ The buttons have the following functions:
 
 **Linked alarm window for touch panels**
 
-When configuring the alarm window for keyboard units, enable the "Connected" (modal) property under "Properties > Mode". This ensures that the alarm window does not defocus during screen changes. Switching back and forth between the screen and different windows with <Ctrl+TAB> is not supported. If the linked alarm window has the focus, then the buttons in the screen behind it cannot be operated. The functions configured on a function key are carried out.
+When configuring the alarm window for keyboard units, enable the "Connected" (modal) property under "Properties &gt; Mode". This ensures that the alarm window does not defocus during screen changes. Switching back and forth between the screen and different windows with &lt;Ctrl+TAB&gt; is not supported. If the linked alarm window has the focus, then the buttons in the screen behind it cannot be operated. The functions configured on a function key are carried out.
 
 ##### Changing the order of the displayed alarms
 
@@ -6892,7 +6892,7 @@ When you click on the column, first of all alarms requiring acknowledgment are s
 
 ##### Introduction
 
-As an alternative to using the mouse, you can operate the alarm view and the alarm window using the <TAB> key on your HMI device. This allows you to select the button and the most recently selected alarm in the alarm view. Depending on the configuration, you can also operate the alarm view via the function keys.
+As an alternative to using the mouse, you can operate the alarm view and the alarm window using the &lt;TAB&gt; key on your HMI device. This allows you to select the button and the most recently selected alarm in the alarm view. Depending on the configuration, you can also operate the alarm view via the function keys.
 
 ##### Operation using the mouse
 
@@ -6901,10 +6901,10 @@ As an alternative to using the mouse, you can operate the alarm view and the ala
 
 ##### Operation using the keyboard
 
-1. Press the <Tab> key until the list of displayed alarms is selected in the alarm view.
-2. Click on the alarm to be edited. Use the <Up> and <Down> keys accordingly.
-3. Press the <Tab> key until the button whose function you wish to use is selected.
-4. Press <Enter>.
+1. Press the &lt;Tab&gt; key until the list of displayed alarms is selected in the alarm view.
+2. Click on the alarm to be edited. Use the &lt;Up&gt; and &lt;Down&gt; keys accordingly.
+3. Press the &lt;Tab&gt; key until the button whose function you wish to use is selected.
+4. Press &lt;Enter&gt;.
 
 ##### Change the order of the columns
 
@@ -7028,7 +7028,7 @@ The display of the buttons for using the simple alarm view depends on the config
 
 ##### Introduction
 
-As an alternative to using the mouse, you can operate the simple alarm view using the <TAB> key on your HMI device. This allows you to select the button and the most recently selected alarm in the alarm view. Depending on the configuration, you can also operate the alarm view via the function keys.
+As an alternative to using the mouse, you can operate the simple alarm view using the &lt;TAB&gt; key on your HMI device. This allows you to select the button and the most recently selected alarm in the alarm view. Depending on the configuration, you can also operate the alarm view via the function keys.
 
 ##### Operation using the mouse
 
@@ -7037,10 +7037,10 @@ As an alternative to using the mouse, you can operate the simple alarm view usin
 
 ##### Operation using the keyboard
 
-1. Press the <Tab> key until the list of displayed alarms is selected in the alarm view.
-2. Click on the alarm to be edited. Use the <Up> and <Down> keys accordingly.
-3. Press the <Tab> key until the button whose function you wish to use is selected.
-4. Press <Enter>.
+1. Press the &lt;Tab&gt; key until the list of displayed alarms is selected in the alarm view.
+2. Click on the alarm to be edited. Use the &lt;Up&gt; and &lt;Down&gt; keys accordingly.
+3. Press the &lt;Tab&gt; key until the button whose function you wish to use is selected.
+4. Press &lt;Enter&gt;.
 
 ##### Acknowledge alarm
 
@@ -7058,7 +7058,7 @@ As an alternative to using the mouse, you can operate the simple alarm view usin
 
 1. Select the alarm to be edited.
 2. Click the ![Calling the infotext](images/6307803019_DV_resource.Stream@PNG-de-DE.png)button.
-3. To close the window for displaying the operator note, press the ![Calling the infotext](images/6307811339_DV_resource.Stream@PNG-de-DE.png) button or use the key combination <Alt+F4>.
+3. To close the window for displaying the operator note, press the ![Calling the infotext](images/6307811339_DV_resource.Stream@PNG-de-DE.png) button or use the key combination &lt;Alt+F4&gt;.
 
 ---
 
@@ -7301,7 +7301,7 @@ Alarm events are saved to an internal buffer. The size of this alarm buffer depe
 >
 > The "Persistent alarm buffer" setting is used to switch the alarm buffer on and off in Runtime. For storage space reasons it can be necessary to switch off the alarm buffer.
 >
-> The setting "Persistent alarm buffer" is activated under "Runtime Settings > Alarms". In this setting the alarm view displays both current alarms and also alarms from the alarm buffer
+> The setting "Persistent alarm buffer" is activated under "Runtime Settings &gt; Alarms". In this setting the alarm view displays both current alarms and also alarms from the alarm buffer
 >
 > If you switch off the alarm buffer you need to restart Runtime in order that the alarm view no longer displays the alarms from the alarm buffer.
 
@@ -7350,7 +7350,7 @@ The "Alarm view" object displays alarms that occur during the process in a plant
 
 ![Introduction](images/88074762635_DV_resource.Stream@PNG-de-DE.png)
 
-In Runtime, you can use the <TAB> key to jump to different objects in succession to enter values, or click buttons. Alternatively you can use the alarm view with the mouse.
+In Runtime, you can use the &lt;TAB&gt; key to jump to different objects in succession to enter values, or click buttons. Alternatively you can use the alarm view with the mouse.
 
 > **Note**
 >
@@ -7374,10 +7374,10 @@ In Runtime, you can use the <TAB> key to jump to different objects in succession
 
 #### Operation using the keyboard
 
-1. Press the <Tab> key until the list of displayed alarms is selected in the alarm view.
-2. Click on the alarm to be edited. Use the <Up> and <Down> keys accordingly.
-3. Press the <Tab> key until the operator control element you wish to use is selected.
-4. Press <Enter>.
+1. Press the &lt;Tab&gt; key until the list of displayed alarms is selected in the alarm view.
+2. Click on the alarm to be edited. Use the &lt;Up&gt; and &lt;Down&gt; keys accordingly.
+3. Press the &lt;Tab&gt; key until the operator control element you wish to use is selected.
+4. Press &lt;Enter&gt;.
 
 #### Alternative operation
 
@@ -7385,14 +7385,14 @@ Depending on the configuration, you can also operate the alarm view via the func
 
 #### Example: Change the order of the columns
 
-The function can be configured. It is only available in Runtime if you have activated the alarm view "Font table > Header column > Sort" in the Inspector window.
+The function can be configured. It is only available in Runtime if you have activated the alarm view "Font table &gt; Header column &gt; Sort" in the Inspector window.
 
 1. Select the column header, such as the "Date" column header.
 2. While holding down the mouse button, drag the column header to the column header "Time".
 
 #### Example: Change the order of the columns
 
-The function can be configured. It is only available in Runtime if you have activated the alarm view "Font table > Header column > Sort by column headers" in the Inspector window.
+The function can be configured. It is only available in Runtime if you have activated the alarm view "Font table &gt; Header column &gt; Sort by column headers" in the Inspector window.
 
 1. Click on the column header.
 2. Click the same column header again to reverse the sort order.
@@ -7565,7 +7565,7 @@ Examples for sorting alarms:
     >
     > **Specifying sorting criteria in the ES for the alarm view**
     >
-    > You can set the sort criteria to configure the alarm view as required. In the Inspector window of the alarm view, select "Properties > Properties > View > Columns".
+    > You can set the sort criteria to configure the alarm view as required. In the Inspector window of the alarm view, select "Properties &gt; Properties &gt; View &gt; Columns".
 
 #### Sorting alarms
 
@@ -7575,10 +7575,10 @@ To sort the alarm view by column, define the sort order over up to four columns.
 
 - "Sort by click" or "Sort by double-click" is selected in the alarm view.
 
-  Click on "Properties > Properties > Table > Table - Sorting > Settings".
+  Click on "Properties &gt; Properties &gt; Table &gt; Table - Sorting &gt; Settings".
 - The "Autoscroll" button is activated in the alarm view.
 
-  Click "Properties > Properties > Toolbar > Toolbar buttons".
+  Click "Properties &gt; Properties &gt; Toolbar &gt; Toolbar buttons".
 
 #### Procedure
 
@@ -7596,7 +7596,7 @@ To sort alarms in the alarm view by column, proceed as follows:
 
 Sorting is not affected by events or changes to the alarm text block configuration.
 
-An alarm text block corresponds to a field in an alarm. If you define an alarm text block as sorting criterion in the sort dialog and then remove this block from the alarm line under "Properties> Properties > Columns", the defined sort order remains unchanged. In the sort dialog, a blank field is displayed instead of the deleted alarm text block.
+An alarm text block corresponds to a field in an alarm. If you define an alarm text block as sorting criterion in the sort dialog and then remove this block from the alarm line under "Properties&gt; Properties &gt; Columns", the defined sort order remains unchanged. In the sort dialog, a blank field is displayed instead of the deleted alarm text block.
 
 If you do not define another sort order order and reactivate the removed alarm text block in the alarm text block configuration, the alarms will be sorted in the original sort order once more.
 
@@ -8148,7 +8148,7 @@ The following controller alarms can be sent to the HMI device:
 - ProDiag alarms
 - Program alarms
 
-The controller alarms can be sent completely to the HMI devices with device version V14 if the corresponding settings are configured in the controller and on the HMI device. The option "Automatic update" must be activated on the HMI device for the respective connection under "Runtime settings Alarms > Controller alarms". You can find additional information on the settings under [Configuring automatic update of controller alarms on the HMI device](#configuring-automatic-update-of-controller-alarms-on-the-hmi-device-panels-comfort-panels-rt-advanced-rt-professional).
+The controller alarms can be sent completely to the HMI devices with device version V14 if the corresponding settings are configured in the controller and on the HMI device. The option "Automatic update" must be activated on the HMI device for the respective connection under "Runtime settings Alarms &gt; Controller alarms". You can find additional information on the settings under [Configuring automatic update of controller alarms on the HMI device](#configuring-automatic-update-of-controller-alarms-on-the-hmi-device-panels-comfort-panels-rt-advanced-rt-professional).
 
 #### Device dependency
 
@@ -8181,11 +8181,11 @@ When using Asian languages, only the Asian characters that were used in configur
 #### Notes and rules
 
 - Modified texts that you load to the controller are displayed immediately on the HMI device when the controller alarm has already been triggered.
-- If the property "Alarm > Basic settings > Information only" was selected for a controller alarm, this controller alarm is not displayed in the alarm view in WinCC.
+- If the property "Alarm &gt; Basic settings &gt; Information only" was selected for a controller alarm, this controller alarm is not displayed in the alarm view in WinCC.
 - The following applies to alarms that are displayed in the alarm log:
 
-  - The alarm log includes alarms in the set language. This language is set during configuration of the HMI device under "Runtime settings > General > Logs > Logging language". Regardless of whether you set a specific language for logging of the controller alarms in the alarm log or select the default language, the respective language must also be activated in the controller. When you specify startup language, this can lead to mixed languages in the alarm log in conjunction with the "Automatic update" option. You can find additional information on language selection of the log in Runtime under [Log response to language switching in runtime](#log-response-to-language-switching-in-runtime-panels-comfort-panels-rt-advanced).
-  - The check box "Log event text and error location" must be selected for the respective alarm log under "Properties > Properties > Logging method" so that the logged controller alarms are displayed in the alarm view or in the alarm window.
+  - The alarm log includes alarms in the set language. This language is set during configuration of the HMI device under "Runtime settings &gt; General &gt; Logs &gt; Logging language". Regardless of whether you set a specific language for logging of the controller alarms in the alarm log or select the default language, the respective language must also be activated in the controller. When you specify startup language, this can lead to mixed languages in the alarm log in conjunction with the "Automatic update" option. You can find additional information on language selection of the log in Runtime under [Log response to language switching in runtime](#log-response-to-language-switching-in-runtime-panels-comfort-panels-rt-advanced).
+  - The check box "Log event text and error location" must be selected for the respective alarm log under "Properties &gt; Properties &gt; Logging method" so that the logged controller alarms are displayed in the alarm view or in the alarm window.
   - The info texts of the alarms are not logged and show "###Text missing###" when an alarm log is displayed in runtime.
   - If an alarm text contains more than six values, only the first six values are saved in the log file after logging. An alarm view configured for the display of the logs shows all values contained in the alarm text.
 
@@ -8213,7 +8213,7 @@ The following controller alarms can be sent to the HMI device:
 - Process diagnostics
 - Program alarms
 
-The controller alarms can be sent in their entirety to the HMI devices with device version V14 if the corresponding settings are configured in the controller and on the HMI device. On the HMI device, the "Automatic update" option must be activated under "Runtime Settings > Alarms > Controller alarms" for the relevant connection. You can find additional information on the settings under [Configuring automatic update of controller alarms on the HMI device](#configuring-automatic-update-of-controller-alarms-on-the-hmi-device-panels-comfort-panels-rt-advanced-rt-professional).
+The controller alarms can be sent in their entirety to the HMI devices with device version V14 if the corresponding settings are configured in the controller and on the HMI device. On the HMI device, the "Automatic update" option must be activated under "Runtime Settings &gt; Alarms &gt; Controller alarms" for the relevant connection. You can find additional information on the settings under [Configuring automatic update of controller alarms on the HMI device](#configuring-automatic-update-of-controller-alarms-on-the-hmi-device-panels-comfort-panels-rt-advanced-rt-professional).
 
 #### Device dependency
 
@@ -8273,7 +8273,7 @@ If the connection between an HMI device and an S7-1500 controller was created in
 
 1. Open the "Runtime settings" of the HMI device.
 
-   One or more connections to controllers are displayed under "Alarms > Controller alarms".
+   One or more connections to controllers are displayed under "Alarms &gt; Controller alarms".
 2. Activate the "Automatic update" option for the respective connection for which you want to display the controller alarms.
 
    The "Automatic update" function must be activated separately for each connection.
@@ -8536,7 +8536,7 @@ The value of the alarm text block (such as the time of day) is displayed in the 
 
 > **Note**
 >
-> If you enabled the "Change ISO8601 format on all components" option in the shortcut menu of WinCC RT Professional, "Properties > Time settings > Central date and time formatting", the date and time are also displayed in the system blocks of the alarms in ISO8601 format.
+> If you enabled the "Change ISO8601 format on all components" option in the shortcut menu of WinCC RT Professional, "Properties &gt; Time settings &gt; Central date and time formatting", the date and time are also displayed in the system blocks of the alarms in ISO8601 format.
 
 #### Possible symbols in the lists in the alarm view
 
@@ -8598,7 +8598,7 @@ In the alarm view, you can only use SQL statements that can be generated using t
 
   Example:
 
-  DATETIME >= '2006-12-21 00:00:00.000' AND MSGNR >= 100
+  DATETIME &gt;= '2006-12-21 00:00:00.000' AND MSGNR &gt;= 100
 
   All alarms from 21.12.2006 with an alarm number greater than or equal to 100
 - The following information is entered in single quotes:
@@ -8613,20 +8613,20 @@ In the alarm view, you can only use SQL statements that can be generated using t
 | Name | SQL name | Type | Data | Example |
 | --- | --- | --- | --- | --- |
 | Filter | MsgFilterSQL: | Integer | Maximum number of alarms to output | 10000  Up to 10,000 alarms are output. |
-| Date/time | DATETIME | Date | 'YYYY-MM-DD hh:mm:ss.msmsms' | DATETIME >= '2007-05-03 16:00:00.000'  Outputs alarms as of 05/03/2007, 16:00 hours. |
-| Number | MSGNR | Integer | Alarm number | MSGNR >= 10 AND MSGNR <= 12  Outputs the alarms with alarm numbers 10 to 12. |
+| Date/time | DATETIME | Date | 'YYYY-MM-DD hh:mm:ss.msmsms' | DATETIME &gt;= '2007-05-03 16:00:00.000'  Outputs alarms as of 05/03/2007, 16:00 hours. |
+| Number | MSGNR | Integer | Alarm number | MSGNR &gt;= 10 AND MSGNR &lt;= 12  Outputs the alarms with alarm numbers 10 to 12. |
 | Class | CLASS IN | Integer | Alarm class ID 1-256 and "System" alarm classes 17 + 18 | CLASS IN ( 1 )  Outputs alarms of alarm class 1. |
 | Status | STATE | Integer | Value "ALARM_STATE_xx"  Only the operands "=" and "IN(...)" are permitted.  ALARM_STATE_1 ALARM_STATE_2 ALARM_STATE_3 ALARM_STATE_4 ALARM_STATE_10 ALARM_STATE_11 ALARM_STATE_16 ALARM_STATE_17 | STATE IN(1,2,3)  Outputs all alarms that came in, went out and were acknowledged.  Possible values: 1 = incoming alarms 2 = outgoing alarms 3 = acknowledged alarms 4 = blocked alarms 10 = hidden alarms 11 = displayed alarms 16 = alarms acknowledged by the system 17 = Emergency-acknowledged alarms |
-| Priority | PRIORITY | Integer | Alarm priority 0 to 16 | PRIORITY >= 1 AND PRIORITY =< 5  Outputs alarms that have a priority between 1 and 5. |
-| Controller number | AG_NR | Integer | Controller number | AG_NR >= 2 AND AG_NR <= 2  Outputs alarms with the Controller number 2. |
-| CPU number | CPU_NR | Integer | AG sub-number | CPU_NR >= 5 AND CPU_NR <= 5  Outputs alarms with AG sub-number 5. |
+| Priority | PRIORITY | Integer | Alarm priority 0 to 16 | PRIORITY &gt;= 1 AND PRIORITY =&lt; 5  Outputs alarms that have a priority between 1 and 5. |
+| Controller number | AG_NR | Integer | Controller number | AG_NR &gt;= 2 AND AG_NR &lt;= 2  Outputs alarms with the Controller number 2. |
+| CPU number | CPU_NR | Integer | AG sub-number | CPU_NR &gt;= 5 AND CPU_NR &lt;= 5  Outputs alarms with AG sub-number 5. |
 | Instance | INSTANCE | Text | Instance | - |
 | Block: 1 ... Block: 10 | TEXTxx | Text | Search string for Text1 - Text10 | TEXT2 IN ('Error','Fault')  Outputs the alarms whose Text2 corresponds with the text "Error" or "Fault".  TEXT2 LIKE 'Error'  Outputs the alarms whose Text2 corresponds with "Error".  TEXT2 LIKE '%Error%'  Outputs the alarms whose Text2 includes the text "Error". |
-| Process value: 1 ... Process value: 10 | PVALUExx | Double | Search value for PVALUE1-PVALUE10 | PVALUE1 >= 0 AND PVALUE1 <= 50  Outputs process value 1 with start value 0 and stop value 50. |
+| Process value: 1 ... Process value: 10 | PVALUExx | Double | Search value for PVALUE1-PVALUE10 | PVALUE1 &gt;= 0 AND PVALUE1 &lt;= 50  Outputs process value 1 with start value 0 and stop value 50. |
 
 #### Permissible Operands
 
-- **>= , <= , = , > , <**
+- **&gt;= , &lt;= , = , &gt; , &lt;**
 - **IN(...)** : Several values as an array, separated by commas, e.g.: CLASS IN( 1 ,2 ,3 ).
 - **LIKE** : Text must contain string, e.g.: TEXT1 LIKE 'Error' relays alarm where Text1 contains the search string "Error". The operand LIKE is only allowed for "text" type arguments.
 
@@ -8759,7 +8759,7 @@ The most important system events are listed below. The system events are divided
 | 20010 | An error has occurred in the specified script line. Execution of the script was therefore aborted. Note the system event that might have occurred prior to this. | Select the specified script line in the configuration. Ensure that the tags used are of the allowed types. For system functions, verify the correct number of parameters and the parameter types. |
 | 20011 | An error has occurred in a script that was called by the specified script.  Execution of the script was therefore aborted in the called script.  Note the system event that might have occurred prior to this. | In the configuration, select the script that has been called directly or indirectly by the specified script.  Ensure that the tags used are of the allowed types.  For system functions, verify the correct number of parameters and the parameter types. |
 | 20012 | Inconsistent configuration data. The script could therefore not be generated. | Recompile the configuration data. |
-| 20013 | The script component of WinCC Runtime was not initialized during the start. | Recompile your project using the "Compile > Software (rebuild all)" command from the context-sensitive menu and then download the project to the HMI device. |
+| 20013 | The script component of WinCC Runtime was not initialized during the start. | Recompile your project using the "Compile &gt; Software (rebuild all)" command from the context-sensitive menu and then download the project to the HMI device. |
 | 20014 | The system function returns a value that is not written in any return tag. | Select the specified script in the configuration. Check whether the script name has been assigned a value. |
 | 20015 | Too many successive scripts have been triggered in short intervals. When more than 20 scripts are queued for processing, any subsequent scripts are rejected. In this case, the script indicated in the alarm is not executed. | Check what is triggering the scripts. Extend the times, e.g. the acquisition cycle of the tag initiating the script. |
 
@@ -8846,13 +8846,13 @@ The most important system events are listed below.
 | 70026 | No other screens are stored in the internal screen memory. No other screens can be selected. | -- |
 | 70027 | The backup of the RAM file system has been started. | -- |
 | 70028 | RAM file system backup is complete. The files from the RAM have been copied to the Flash memory. Following a restart, these saved files are copied back to the RAM file system. | -- |
-| 70029 | Backup of the RAM file system has failed. No backup copy of the RAM file system has been made. | Check the settings in the "Control Panel > OP" dialog and save the RAM file system using the "Save Files" button in the "Persistent Storage" tab. |
+| 70029 | Backup of the RAM file system has failed. No backup copy of the RAM file system has been made. | Check the settings in the "Control Panel &gt; OP" dialog and save the RAM file system using the "Save Files" button in the "Persistent Storage" tab. |
 | 70030 | The parameters configured for the system function are faulty. The connection to the new PLC was not established. | Compare the parameters configured for the system function with the parameters configured for the PLCs and correct them as necessary. |
 | 70031 | The PLC configured in the system function is not an S7 PLC. The connection to the new PLC has not been established. | Compare the S7 PLC name parameter configured for the system function with the parameters configured for the PLC and correct them as necessary. |
 | 70032 | The object configured with this number in the tab sequence is not available in the selected screen. The screen changes but the focus is set to the first object. | Check the number of the tab sequence and correct it if necessary. |
 | 70033 | An e-mail could not be sent because a TCP/IP connection to the SMTP server no longer exists. This system event is only generated at the first failed attempt. All subsequent unsuccessful attempts to send an e-mail will no longer generate a system event. The event is only generated again if an e-mail has been successfully sent in the meantime. The central e-mail component in WinCC Runtime attempts to connect to the SMTP server at regular intervals (1 minute) in order to transmit the remaining e-mails. | Check the network connection to the SMTP server and re-establish it if necessary. |
 | 70034 | Following a disruption, the TCP/IP connection to the SMTP server was successfully re-established. The queued e-mails are then sent. | -- |
-| 70036 | No SMTP server for sending e-mails is configured. An attempt to connect to an SMTP server therefore fails and it is not possible to send e-mails.   WinCC Runtime generates the system event at the first attempt to send an e-mail. | Configure an SMTP server:  In the WinCC Engineering System using "Device settings > Device settings"  In the Windows CE operating system using "Control Panel > Internet Settings > E-mail > SMTP Server" |
+| 70036 | No SMTP server for sending e-mails is configured. An attempt to connect to an SMTP server therefore fails and it is not possible to send e-mails.   WinCC Runtime generates the system event at the first attempt to send an e-mail. | Configure an SMTP server:  In the WinCC Engineering System using "Device settings &gt; Device settings"  In the Windows CE operating system using "Control Panel &gt; Internet Settings &gt; E-mail &gt; SMTP Server" |
 | 70037 | An e-mail could not be sent for unknown reasons. The contents of the e-mail are discarded. | Check the e-mail parameters (recipient etc.). |
 | 70038 | The SMTP server has rejected the sending or forwarding of an e-mail because the domain of the recipient is unknown to the server or because the SMTP server requires authentication. The contents of the e-mail are discarded. | Check the domain of the recipient address or disable the authentication on the SMTP server if possible. SMTP authentication is currently not used in WinCC Runtime. |
 | 70039 | The syntax of the e-mail address is incorrect or contains invalid characters. The contents of the e-mail are discarded. | Check the e-mail address of the recipient. |
@@ -9026,7 +9026,7 @@ The most important system events are listed below.
 | 140012 | Initialization error (e.g. if WinCC Runtime was closed in Task Manager). Or: Another application (e.g. STEP 7) with different bus parameters is active and the driver cannot be started with the new bus parameters (baud rate, for example). | Restart the HMI device. Or: Start WinCC Runtime and then start your other applications. |
 | 140013 | The MPI cable is disconnected and, therefore, there is no power supply. | Check the connections. |
 | 140014 | The configured bus address is in use by another application. | Change the HMI device address in the PLC configuration. |
-| 140015 | Incorrect baud rate Or:  Incorrect bus parameters (e.g. HSA) Or: OP address > HSA or: Incorrect interrupt vector (interrupt not registered by the driver) | Correct the parameters. |
+| 140015 | Incorrect baud rate Or:  Incorrect bus parameters (e.g. HSA) Or: OP address &gt; HSA or: Incorrect interrupt vector (interrupt not registered by the driver) | Correct the parameters. |
 | 140016 | The hardware does not support the configured interrupt. | Change the interrupt number. |
 | 140017 | The set interrupt is in use by another driver. | Change the interrupt number. |
 | 140018 | SIMOTION Scout disabled the consistency check. Only a corresponding note appears. | In SIMOTION Scout, reactivate the consistency check and once again download the project to the PLC. |
@@ -9212,7 +9212,7 @@ The most important system events are listed below.
 | 230100 | During navigation in the Web browser, the system returned a message which may be of interest to the user. The Web browser continues to run but may not (fully) show the new page. | Navigate to another page. |
 | 230200 | The HTTP channel connection was interrupted due to an error. This error is explained in detail by another system event. Data is no longer exchanged. | Check the network connection. Check the server configuration. |
 | 230201 | The HTTP channel connection is set up. Data is exchanged. | -- |
-| 230202 | WININET.DLL has detected an error. Usually, this error occurs if it is not possible to connect to the server, or the server denies a connection because the client lacks proper authorization. An unknown server certificate may also be the cause if the connection is encrypted by means of SSL. The alarm text provides details. This text is always in the language of the Windows installation because it is returned by the Windows OS. Process values are no longer exchanged. The part of the alarm returned by the Windows OS might not be displayed, e.g. "An error has occurred". WININET.DLL returns the following error: Number: 12055 Text:HTTP: <no error text available>." | Depending on the cause:  When an attempt to connect fails, or a timeout occurs:  - Check the network connection and the network. - Check the server address. - Check whether the WebServer is actually running on the target station.   Incorrect authorization:  - The configured user name and/or password do not match the entries on the server. Set consistent data.   If the server certificate is rejected: Certificate signed by an unknown CA ( ):  - Ignore this point, or install a certificate that has been signed with one of the root certificates known to the client station.   The date of the certificate is invalid:  - Ignore this point, or install a certificate with valid date on the server.   Invalid CN (Common Name or Computer Name):  - Ignore this point, or install a certificate with a name that corresponds to the server address. |
+| 230202 | WININET.DLL has detected an error. Usually, this error occurs if it is not possible to connect to the server, or the server denies a connection because the client lacks proper authorization. An unknown server certificate may also be the cause if the connection is encrypted by means of SSL. The alarm text provides details. This text is always in the language of the Windows installation because it is returned by the Windows OS. Process values are no longer exchanged. The part of the alarm returned by the Windows OS might not be displayed, e.g. "An error has occurred". WININET.DLL returns the following error: Number: 12055 Text:HTTP: &lt;no error text available&gt;." | Depending on the cause:  When an attempt to connect fails, or a timeout occurs:  - Check the network connection and the network. - Check the server address. - Check whether the WebServer is actually running on the target station.   Incorrect authorization:  - The configured user name and/or password do not match the entries on the server. Set consistent data.   If the server certificate is rejected: Certificate signed by an unknown CA ( ):  - Ignore this point, or install a certificate that has been signed with one of the root certificates known to the client station.   The date of the certificate is invalid:  - Ignore this point, or install a certificate with valid date on the server.   Invalid CN (Common Name or Computer Name):  - Ignore this point, or install a certificate with a name that corresponds to the server address. |
 | 230203 | Although a connection can be made to the server, the HTTP server refused to connect. Possible causes:  - WinCC Runtime does not run on the server - The HTTP channel is not supported (503 Service unavailable).   Other errors can only occur if the Webserver does not support the HTTP channel. The language of the alarm text depends on the Webserver. Data is not exchanged. | On 503 Service unavailable error:  Check whether WinCC Runtime is running on the server and whether the HTTP channel is supported. |
 | 230301 | Internal error. An English text explains the error in more detail. The error may be caused by insufficient memory. OCX does not work. | -- |
 | 230302 | The name of the remote server cannot be resolved. An attempt to connect has failed. | Check the configured server address. Check whether the DNS service is available on the network. |
@@ -9723,7 +9723,7 @@ The most important system alarms are listed below.
 | 1003051 | Acknowledgment tag (bit) already occupied by an alarm  The acknowledgment tag bit has already been interconnected with an alarm. |  |
 | 1003052 | Status tag already occupied by an alarm  The bit of the status tag has already been interconnected with an alarm. |  |
 | 1003053 | Error during conversion of Variant data type |  |
-| 1003054 | Event tag (bit) already occupied-->different type |  |
+| 1003054 | Event tag (bit) already occupied--&gt;different type |  |
 | 1003055 | Event tag or tag type invalid  The data type of the alarm tag is invalid. You may have used a tag with sign. |  |
 | 1003056 | Acknowledgment tag or tag type invalid |  |
 | 1003057 | Status tag or tag type invalid  The data type of the status tag is invalid. You may have used a tag with sign. |  |
@@ -9740,7 +9740,7 @@ The most important system alarms are listed below.
 | 1003068 | No alarm text blocks in the report | Check the alarm sequence report. |
 | 1003069 | Invalid protocol identifier |  |
 | 1003070 | Report printout is already active  An attempt was made to restart an active report. |  |
-| 1003071 | Alarm system runtime <server> not initialized  The server reports that the project was activated without the runtime component of Alarm Logging. |  |
+| 1003071 | Alarm system runtime &lt;server&gt; not initialized  The server reports that the project was activated without the runtime component of Alarm Logging. |  |
 | 1003072 | Printout of the alarm sequence report has not been started. |  |
 | 1003073 | Printout of the short-term archive report has not been started. |  |
 | 1003074 | Printout of the sequence archive report has not been started. |  |
@@ -10037,7 +10037,7 @@ The most important system alarms are listed below.
 | 1012352 | RedundancyControl:   System blockage detected. Restart your computer as soon as possible. |  |
 | 1012354 | [Computer name]:RedundancyControl:   Status changed to FAULT. However, server isolation is not activated. |  |
 | 1012355 | [Computer name]:RedundancyControl:   Status changed to FAULT. However, server isolation is locked by @1%s@. Reason: @2%s@ |  |
-| 1012356 | RedundancyControl: Status changed to FAULT => server is isolated |  |
+| 1012356 | RedundancyControl: Status changed to FAULT =&gt; server is isolated |  |
 | 1012357 | [Computer name]:RedundancyControl:   Status changed to FAULT. However, automatic restart is not activated. |  |
 | 1012358 | [Computer name]:RedundancyControl:   Status changed to FAULT. However, automatic restart is locked. The network adapter is disconnected and DHCP is released. |  |
 | 1012359 | [Computer name]:RedundancyControl:   Reboot of computer disabled by @1%s@. Reason: @2%s@ |  |
@@ -10417,7 +10417,7 @@ The display suppression tag is an external WinCC tag that stores the plant state
 
 In the Inspector window of an alarm, you can use the display suppression mask to define the plant states at which the alarm is not shown. The project engineer sets the bits that define specific plant states. A plant can have a maximum of 32 states.
 
-You enter the selected plant states as hexadecimal value in the Inspector window of the alarm under "Display suppression > Mask".
+You enter the selected plant states as hexadecimal value in the Inspector window of the alarm under "Display suppression &gt; Mask".
 
 The display suppression tag saves the plant state. When a plant state listed in the mask occurs, the alarm is no longer displayed. To view the alarms currently hidden due to a plant state, you can switch the alarm view in Runtime to "Alarms with display suppression".
 

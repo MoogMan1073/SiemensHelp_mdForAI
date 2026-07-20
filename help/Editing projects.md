@@ -245,7 +245,7 @@ Unsupported modules of a project are handled as follows:
 
 ### Open recently used objects
 
-The menu command "Edit > Open last object used" can be used to display the objects recently used in the TIA Portal and to open them in the connected editors. This function allows users to quickly resume editing their recently used objects directly from the menu.
+The menu command "Edit &gt; Open last object used" can be used to display the objects recently used in the TIA Portal and to open them in the connected editors. This function allows users to quickly resume editing their recently used objects directly from the menu.
 
 The list shows the 20 most recently used objects in the order of their last use.
 
@@ -508,7 +508,7 @@ In addition to displaying them in the TIA Portal, logs can also be printed.
 
 To open a log, follow these steps:
 
-1. Open the "Common data > Logs" folder in the project tree.
+1. Open the "Common data &gt; Logs" folder in the project tree.
 2. Double-click the desired log in the list.
 
    The contents of the log are displayed in the work area.
@@ -519,7 +519,7 @@ To open a log, follow these steps:
 To delete a log, follow these steps:
 
 1. Select the log in the project tree.
-2. Press <Del>.
+2. Press &lt;Del&gt;.
 
    The selected log is deleted from the project directory and removed from the project tree.
 
@@ -598,7 +598,7 @@ CAx files are XML files that you create in the TIA Portal and that you can swap 
 
    A dialog shows the export progress. If you need to cancel the export, click "Cancel".
 
-   You see the status of the export in the "Info > General" tab of the Inspector window. In addition, a log file is created in the directory that you entered as the storage location for log files under "Settings > General > Data exchange".
+   You see the status of the export in the "Info &gt; General" tab of the Inspector window. In addition, a log file is created in the directory that you entered as the storage location for log files under "Settings &gt; General &gt; Data exchange".
 
    The exported file receives the file extension ".aml".
 
@@ -611,7 +611,7 @@ CAx files are XML files that you create in the TIA Portal and that you can swap 
 
    A dialog shows the export progress. If you need to cancel the export, click "Cancel".
 
-   You see the status of the export in the "Info > General" tab of the Inspector window. In addition, a log file is created in the directory that you entered as the storage location for log files under "Settings > General > Data exchange".
+   You see the status of the export in the "Info &gt; General" tab of the Inspector window. In addition, a log file is created in the directory that you entered as the storage location for log files under "Settings &gt; General &gt; Data exchange".
 
    The exported file receives the file extension ".aml".
 
@@ -623,7 +623,7 @@ CAx files are XML files that you create in the TIA Portal and that you can swap 
 
    A dialog shows the import progress. If you need to cancel the import, click "Cancel".
 
-   You receive feedback about the status of the import of devices, for example error messages, in the inspector window in the "Info > General" tab. In addition, a log file is created in the directory that you entered as the storage location for log files under "Settings > General > Data exchange".
+   You receive feedback about the status of the import of devices, for example error messages, in the inspector window in the "Info &gt; General" tab. In addition, a log file is created in the directory that you entered as the storage location for log files under "Settings &gt; General &gt; Data exchange".
 
 #### Permitted exchange formats for CAx data
 
@@ -855,7 +855,7 @@ To upgrade a project from TIA Portal V14, follow these steps:
 5. Click "OK".
 
    The project is upgraded and opened in the current version of the project.
-6. Compile the hardware of all devices in the project by selecting the "Compile > Hardware (rebuild all)" command in the shortcut menu of the devices.
+6. Compile the hardware of all devices in the project by selecting the "Compile &gt; Hardware (rebuild all)" command in the shortcut menu of the devices.
 
 ##### Upgrading projects from TIA Portal V13 SP1
 
@@ -1164,7 +1164,7 @@ To archive a project, follow these steps:
 5. To add a date and time automatically, select the "Add date and time to the target name".
 6. In the "Target path" field select the directory where you want to save the archive file or the new directory of the project.
 
-   You can set the default directory under "Options > General > Archive settings > Storage location for project archives".
+   You can set the default directory under "Options &gt; General &gt; Archive settings &gt; Storage location for project archives".
 7. Click "Archive".
 
 #### Result
@@ -1323,7 +1323,7 @@ You can compare devices from reference projects with devices from both the curre
 To compare the objects of a reference project to the device data of the current project, follow these steps:
 
 1. In the project tree, select the device whose data you want to compare to the data of a reference project and which allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Open the "Reference projects" palette in the project tree.

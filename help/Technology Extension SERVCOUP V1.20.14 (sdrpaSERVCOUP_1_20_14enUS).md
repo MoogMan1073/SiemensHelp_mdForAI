@@ -166,7 +166,7 @@ On multi-winding motors operation with missing enables at the follower drive obj
 is only permissible up to a certain speed because not all the windings are energized.  
 Monitoring is only realized at the assigned master drive object when the following
 preconditions are satisfied:  
-1. Setting p31742 > 0.  
+1. Setting p31742 &gt; 0.  
 2. Setting p31743 = 0 (multiple separate winding systems in one enclosure).  
 3: The actual speed of the master drive object is greater than that of the value set
 in p31742.  
@@ -215,7 +215,7 @@ On multi-winding motors operation with missing enables at the follower drive obj
 is only permissible up to a certain velocity because not all the windings are energized.  
 Monitoring is only realized at the assigned master drive object when the following
 preconditions are satisfied:  
-1. Setting p31742 > 0.  
+1. Setting p31742 &gt; 0.  
 2. Setting p31743 = 0 (multiple separate winding systems in one enclosure).  
 3: The actual velocity of the master drive object is greater than the value set in
 p31742.  
@@ -952,7 +952,7 @@ Follower drive object 1: p31744 = 100 %
 Follower drive object 2: p31744 = 100 %  
 Follower drive object 3: p31744 = 100 %  
 Follower drive object 4: p31744 = 50 %  
---> Master drive object: r31753 = 450 %
+--&gt; Master drive object: r31753 = 450 %
 
 **Dependency:**
   
@@ -996,7 +996,7 @@ Follower drive object 1: p31744 = 100 %
 Follower drive object 2: p31744 = 100 %  
 Follower drive object 3: p31744 = 100 %  
 Follower drive object 4: p31744 = 50 %  
---> Master drive object: r31753 = 450 %
+--&gt; Master drive object: r31753 = 450 %
 
 **Dependency:**
   

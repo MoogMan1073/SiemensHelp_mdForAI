@@ -713,7 +713,7 @@ Adaptation is deactivated in the following cases:
 - p31685 = p31686  
 Adaptation is activated if the two following conditions are satisfied:  
 1. p31682 not equal to 100 %  
-2. p31685 < p31686
+2. p31685 &lt; p31686
 
 ### p31681 DCDCCONV voltage controller Kp
 
@@ -753,7 +753,7 @@ Adaptation is deactivated in the following cases:
 - p31685 = p31686  
 Adaptation is activated if the two following conditions are satisfied:  
 1. p31682 not equal to 100 %  
-2. p31685 < p31686
+2. p31685 &lt; p31686
 
 ### p31682 DCDCCONV voltage controller upper Kp adaptation factor
 
@@ -775,7 +775,7 @@ Adaptation is activated if the two following conditions are satisfied:
 **Description:**
   
 Sets the adaptation factor for the proportional gain (Kp) in the upper adaptation
-range (> p31686).  
+range (&gt; p31686).  
 The value is referred to p31681.
 
 **Dependency:**
@@ -826,7 +826,7 @@ Adaptation is deactivated in the following cases:
 - p31685 = p31686  
 Adaptation is activated if the two following conditions are satisfied:  
 1. p31684 not equal to 100 %  
-2. p31685 < p31686  
+2. p31685 &lt; p31686  
 The integral component is held if the sum of the voltage controller output and supplementary
 setpoints exceeds the upper or lower current limit.
 
@@ -850,7 +850,7 @@ setpoints exceeds the upper or lower current limit.
 **Description:**
   
 Sets the adaptation factor for the integral time (Tn) in the upper adaptation range
-(> p31686).  
+(&gt; p31686).  
 The value is referred to p31683.
 
 **Dependency:**
@@ -899,7 +899,7 @@ p31681, p31682, p31683, p31684, p31686
 **Note:**
   
 The following must be observed:  
-p31685 < p31686
+p31685 &lt; p31686
 
 ### p31686 DCDCCONV voltage controller adaptation upper voltage limit
 
@@ -937,7 +937,7 @@ p31681, p31682, p31683, p31684, p31685
 **Note:**
   
 The following must be observed:  
-p31685 < p31686
+p31685 &lt; p31686
 
 ### p31688 BI: DCDCCONV voltage controller hold integrator
 
@@ -1421,7 +1421,7 @@ Adaptation is deactivated in the following cases:
 - p31706 = p31707  
 Adaptation is activated if the two following conditions are satisfied:  
 1. p31703 not equal to 100 %  
-2. p31706 < p31707  
+2. p31706 &lt; p31707  
 In 3-phase operation, this value is applicable for the three current controllers.
 
 ### p31702 DCDCCONV current controller Kp
@@ -1462,7 +1462,7 @@ Adaptation is deactivated in the following cases:
 - p31706 = p31707  
 Adaptation is activated if the two following conditions are satisfied:  
 1. p31703 not equal to 100 %  
-2. p31706 < p31707  
+2. p31706 &lt; p31707  
 In 3-phase operation, this value is applicable for the three current controllers.
 
 ### p31703 DCDCCONV current controller upper Kp adaptation factor
@@ -1485,7 +1485,7 @@ In 3-phase operation, this value is applicable for the three current controllers
 **Description:**
   
 Sets the adaptation factor for the proportional gain (Kp) in the upper adaptation
-range (> p31707).  
+range (&gt; p31707).  
 The value is referred to p31702.
 
 **Dependency:**
@@ -1537,7 +1537,7 @@ Adaptation is deactivated in the following cases:
 - p31706 = p31707  
 Adaptation is activated if the two following conditions are satisfied:  
 1. p31705 not equal to 100 %  
-2. p31706 < p31707  
+2. p31706 &lt; p31707  
 The integral component is held if the sum of the current controller output and supplementary
 setpoints exceeds the upper or lower voltage limit.  
 In 3-phase operation, this value is applicable for the three current controllers.
@@ -1562,7 +1562,7 @@ In 3-phase operation, this value is applicable for the three current controllers
 **Description:**
   
 Sets the adaptation factor for the integral time (Tn) in the upper adaptation range
-(> p31707).  
+(&gt; p31707).  
 The value is referred to p31704.
 
 **Dependency:**
@@ -1612,7 +1612,7 @@ p31702, p31703, p31704, p31705, p31707
 **Note:**
   
 The following must be observed:  
-p31706 < p31707  
+p31706 &lt; p31707  
 In 3-phase operation, this value is applicable for the three current controllers.
 
 ### p31707 DCDCCONV current controller adaptation upper current limit
@@ -1651,7 +1651,7 @@ p31702, p31703, p31704, p31705, p31706
 **Note:**
   
 The following must be observed:  
-p31706 < p31707  
+p31706 &lt; p31707  
 In 3-phase operation, this value is applicable for the three current controllers.
 
 ### p31709 BI: DCDCCONV current controller integrator setting value
@@ -1812,7 +1812,7 @@ to use the complete voltage range, the maximum modulation depth must be increase
 to over 100%.  
 The following settings are required:  
 - set p1810.15 = 1  
-- set p1803 > 115%
+- set p1803 &gt; 115%
 
 ### p31714 DCDCCONV control voltage upper limit
 
@@ -1864,7 +1864,7 @@ to use the complete voltage range, the maximum modulation depth must be increase
 to over 100%.  
 The following settings are required:  
 - set p1810.15 = 1  
-- set p1803 > 115%
+- set p1803 &gt; 115%
 
 ### p31715 DCDCCONV control voltage lower limit
 
@@ -1922,7 +1922,7 @@ to use the complete voltage range, the maximum modulation depth must be increase
 to over 100%.  
 The following settings are required:  
 - set p1810.15 = 1  
-- set p1803 > 115%
+- set p1803 &gt; 115%
 
 ### r31716[0...3] CO: DCDCCONV control voltage
 
@@ -2261,7 +2261,7 @@ to use the complete voltage range, the maximum modulation depth must be increase
 to over 100%.  
 The following settings are required:  
 - set p1810.15 = 1  
-- set p1803 > 115%
+- set p1803 &gt; 115%
 
 ### p31724 BI: DCDCCONV Vdc controller enable signal source
 

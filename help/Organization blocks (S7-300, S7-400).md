@@ -347,7 +347,7 @@ The following table shows the temporary (TEMP) tags of a cyclic interrupt OB.
 | Tag | Data type | Description |
 | --- | --- | --- |
 | OB3x_EV_CLASS | BYTE | Event class and identifiers:  B#16#11: Interrupt is active |
-| OB3x_STRT_INF | BYTE | - B#16#30: Special start request for a cyclic interrupt OB in the H-system (assigned special handling on changeover to the "Redundant" system state) - B#16#31: Start request for OB 30   …  - B#16#36: Start request for OB 35    …  - B#16#39: Start request for OB 38 - B#16#3A: Start request for cyclic interrupt OBs (OB 30 to OB 38) if the following conditions are met:   - Cycle time < 32768 μs   - The cycle time or phase offset or both cannot be represented as an integer ms value. |
+| OB3x_STRT_INF | BYTE | - B#16#30: Special start request for a cyclic interrupt OB in the H-system (assigned special handling on changeover to the "Redundant" system state) - B#16#31: Start request for OB 30   …  - B#16#36: Start request for OB 35    …  - B#16#39: Start request for OB 38 - B#16#3A: Start request for cyclic interrupt OBs (OB 30 to OB 38) if the following conditions are met:   - Cycle time &lt; 32768 μs   - The cycle time or phase offset or both cannot be represented as an integer ms value. |
 | OB3x_PRIORITY | BYTE | Assigned priority class; default values: 7 (OB 30) to 15 (OB 38)   Default values for S7-1500 CPUs: 8 to 14; 16 to 17 |
 | OB3x_OB_NUMBR | BYTE | OB number (30 to 38) |
 | OB3x_RESERVED_1 | BYTE | Reserved |
@@ -537,7 +537,7 @@ Depending on the start event, the tags OB56_Z2 and OB56_Z3 contain different inf
 | OB56_STRT_INF | Meaning of OB56_Z2 |
 | --- | --- |
 | B#16#56 | - Low byte: ID for the interrupt type "Update interrupt" - High byte: Length of the data block supplied by the interrupt |
-| B#16#59 | ID for the interrupt type  - W#16#0006: Update interrupt - W#16#001E: Upload-and-Retrieval-Alarm   In the Siemens Industry Online Support you can find the function block IPARSERV which serves as a application example that you can use to save additional configuration data when required by a PROFINET device or a module used within it to a DB and restore it following maintenance or repair. A PROFINET device sends a Upload-and-Retrieval-Alarm to the IO controller and uses the Update-Alarm OB for this. <https://support.industry.siemens.com/cs/ww/en/view/45841087> |
+| B#16#59 | ID for the interrupt type  - W#16#0006: Update interrupt - W#16#001E: Upload-and-Retrieval-Alarm   In the Siemens Industry Online Support you can find the function block IPARSERV which serves as a application example that you can use to save additional configuration data when required by a PROFINET device or a module used within it to a DB and restore it following maintenance or repair. A PROFINET device sends a Upload-and-Retrieval-Alarm to the IO controller and uses the Update-Alarm OB for this. [https://support.industry.siemens.com/cs/ww/en/view/45841087](https://support.industry.siemens.com/cs/ww/en/view/45841087) |
 
 ### Meaning of OB56_Z3
 
@@ -618,7 +618,7 @@ Depending on the start event, the tags OB57_Z2 and OB57_Z3 contain different inf
 
 ### Description
 
-Isochronous mode interrupts give you the option of starting programs isochronously with the DP cycle or PN send clock. OB 6y, 1 <= y <= 4, serves as an interface OB to the isochronous mode interrupt TSAL y. You can set the priority for OB 61 to 64 between 0 (OB deselected) and from 2 to 26.
+Isochronous mode interrupts give you the option of starting programs isochronously with the DP cycle or PN send clock. OB 6y, 1 &lt;= y &lt;= 4, serves as an interface OB to the isochronous mode interrupt TSAL y. You can set the priority for OB 61 to 64 between 0 (OB deselected) and from 2 to 26.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -669,7 +669,7 @@ You can use the "[DIS_IRT](Extended%20instructions%20%28S7-300%2C%20S7-400%29.md
 
 "Report System Errors" delays the processing of interrupts that occur during its execution time.
 
-If the **Execution time of "****Report System Errors****" > 50% of cycle time** condition is met, this effect is greater (here, the execution time of "Report System Errors" is understood to mean the sum of all processing times of "Report System Errors" within the cycle time). This can lead to the call of the time error OB and possibly to CPU STOP (if the time error OB is not loaded).
+If the **Execution time of "****Report System Errors****" &gt; 50% of cycle time** condition is met, this effect is greater (here, the execution time of "Report System Errors" is understood to mean the sum of all processing times of "Report System Errors" within the cycle time). This can lead to the call of the time error OB and possibly to CPU STOP (if the time error OB is not loaded).
 
 The following measures are available to prevent this:
 
@@ -1598,7 +1598,7 @@ The following sample program will provide a substitute value in the "REPL_VAL" i
 | ==I | //If the same, |
 | SPB Qfeh | //then jump to Qfeh |
 | L B#16#43 | //Identifier for "I/O access error writing" event |
-| <>I | //If not the same as the error code in OB 122, |
+| &lt;&gt;I | //If not the same as the error code in OB 122, |
 | SPB STOP | //then jump to STOP |
 | Qfeh: |  |
 | CALL "REPL_VAL" | //Call the "REPL_VAL" instruction |

@@ -74,7 +74,7 @@ The alarms either require acknowledgment or do not require acknowledgment. The a
 
 ## Alarm archive
 
-In the alarm archive, alarms are displayed and archived according to the time they appear. You can set the size of the archive (between 200 and 3000 alarms) with the menu command "Options > Settings > Online & Diagnostics". If the selected archive size is exceeded, the oldest alarm it contains is deleted.
+In the alarm archive, alarms are displayed and archived according to the time they appear. You can set the size of the archive (between 200 and 3000 alarms) with the menu command "Options &gt; Settings &gt; Online &amp; Diagnostics". If the selected archive size is exceeded, the oldest alarm it contains is deleted.
 
 Alarms that must be acknowledged are displayed in blue lettering and can be acknowledged with the shortcut menu command "Acknowledge alarm(s)".
 
@@ -138,7 +138,7 @@ To allow alarms to be displayed, you must first set the receipt of alarms for ea
 
 Toe receive alarms, follow these steps:
 
-1. Double-click on the "Online & Diagnostics" folder of the relevant CPU in project navigation.
+1. Double-click on the "Online &amp; Diagnostics" folder of the relevant CPU in project navigation.
 2. Click the "Online access" group in the area navigation.
 3. Select the option "Receive alarms".
 
@@ -194,7 +194,7 @@ To acknowledge an alarm, follow these steps:
 
 **Note**
 
-You can select more than one alarm to acknowledge at the same time. To do this, hold down the <Ctrl> key and then select the alarms you want to acknowledge.
+You can select more than one alarm to acknowledge at the same time. To do this, hold down the &lt;Ctrl&gt; key and then select the alarms you want to acknowledge.
 
 ### Result
 

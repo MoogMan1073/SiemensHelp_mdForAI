@@ -69,7 +69,7 @@ You enter the sampling time in the CYCLE parameter. The sampling time should not
 
 In order for the process parameters to be identified reliably, the smallest time constant of the process (delay time) should be sampled at least 10 to 20 times.
 
-In connection with the FM355/455 controller modules, the sampling time of TUN_EC must be approximately equal to the resulting cycle time of the controllers on the FM (Parameter setting > Module parameters).
+In connection with the FM355/455 controller modules, the sampling time of TUN_EC must be approximately equal to the resulting cycle time of the controllers on the FM (Parameter setting &gt; Module parameters).
 
 #### Reaction to error
 
@@ -118,9 +118,9 @@ The process must meet the following requirements:
 
   The range of application can be specified based on the ratio of the delay time t<sub>u</sub> and response time t<sub>a</sub>. The delay time also encompasses any existing dead time.
 
-  The pretuning or adaptation is designed for the range t<sub>u</sub> < 1/10 t<sub>a</sub>, within which most controlled temperature systems fall.
+  The pretuning or adaptation is designed for the range t<sub>u</sub> &lt; 1/10 t<sub>a</sub>, within which most controlled temperature systems fall.
 
-  For the range of especially long delay times 1/10 t<sub>a</sub> < t<sub>u</sub> < 1/3 t<sub>a</sub>, the design of a utilizable PI controller is generally still also possible.
+  For the range of especially long delay times 1/10 t<sub>a</sub> &lt; t<sub>u</sub> &lt; 1/3 t<sub>a</sub>, the design of a utilizable PI controller is generally still also possible.
 - **Adequate linear response across a sufficiently large operating range**
 
   This means that non-linear effects within this operating range can be ignored both during identification and during normal closed-loop control operation. However, it is possible to re-identify the process when there is a change from one operating point to another if the adaptation process is carried out again close to the new operating point and provided that the non-linearity is not passed through during adaptation.
@@ -221,12 +221,12 @@ TUN_EC has the following functions for the control and optimization of the contr
 | Function | Start bit | Enable bit | Start condition:  PHASE | Start condition:  Setpoint step-change at SP |
 | --- | --- | --- | --- | --- |
 | Manual mode | — | MAN_ON | 0 to 7 | — |
-| Manual/automatic changeover with predictive manipulated-value specification | — | PRED_ON | Transition 7 -> 4 | — |
-| First adaption | ADAPT1ST | — | 0, 4 | Pos.: > MIN_STEP |
-| First adaption or fine tuning | ADAPT_ON | — | 4 | Pos.: > MIN_STEP |
+| Manual/automatic changeover with predictive manipulated-value specification | — | PRED_ON | Transition 7 -&gt; 4 | — |
+| First adaption | ADAPT1ST | — | 0, 4 | Pos.: &gt; MIN_STEP |
+| First adaption or fine tuning | ADAPT_ON | — | 4 | Pos.: &gt; MIN_STEP |
 | Cooling tuning | COOLID_ON | — | 4 | — |
 | Control zone | — | CONZ_ON | 4 |  |
-| Structure switchover | — | STRUC_ON | 4 | Pos.: > MIN_STEP,  Neg: > MIN_STEP × RATIO_FAC |
+| Structure switchover | — | STRUC_ON | 4 | Pos.: &gt; MIN_STEP,  Neg: &gt; MIN_STEP × RATIO_FAC |
 | Save controller parameters | SAVE_PAR | — | 2 to 7 | — |
 | Reloading controller parameters | UNDO_PAR | — | 4 | — |
 | Change controller parameters | LOAD_PAR | — | 4 | — |
@@ -329,11 +329,11 @@ You can activate the structure switchover with STRUC_ON = TRUE. The block autom
 >
 > **Notes on selecting the operating modes:**
 >
-> - The Self-Tuner calculates a control zone and activates it automatically, if the ratio of the two time constants of the process is f = TM_LAG1 / TM_LAG2 > 10.
+> - The Self-Tuner calculates a control zone and activates it automatically, if the ratio of the two time constants of the process is f = TM_LAG1 / TM_LAG2 &gt; 10.
 > - In the case of jumps within the control zone, the structure segmentation that is selected by default acts, if allowed by the controller.
 > - If you want to compensate for small setpoint jumps within the control zone as quickly as possible and are willing to accept small overshoots, deactivate the structure segmentation.
 >
->   Numerical example: Control zone 20 °C, then overshoots of approx. 10% to 20% of the step size (< 20 °C) occur, i.e. less than 2 to 4 °C.
+>   Numerical example: Control zone 20 °C, then overshoots of approx. 10% to 20% of the step size (&lt; 20 °C) occur, i.e. less than 2 to 4 °C.
 > - The structure segmentation function prevents overshoots at setpoint jumps of all sizes, even if the process does not permit a control zone or you have deactivated it. However, the rise times are slightly slower than with a control zone.
 > - If the process does not allow a control zone and the controller does not allow a structure segmentation, activate the structure switchover. The structure switchover must not be activated at the same time as the structure segmentation.
 
@@ -354,7 +354,7 @@ You can activate the structure switchover with STRUC_ON = TRUE. The block autom
 | STRUC_ON | 32.2 | BOOL | FALSE | If STRUC_ON = TRUE, a structure switchover (from PI(D) to P(D) control) ensures that overshoots are largely avoided at setpoint jumps. The STRUC_ON input must not be set = TRUE if the proportional action or derivative action is fed into the feedback loop of the controller. |
 | WRITE_DIS | 32.3 | BOOL | FALSE | In connection with the controller module, the Self-Tuner must know whether the driver block is ready to send data to the FM. This is the case if LOAD_OP = LOAD_PAR = FALSE. The result of the OR operation of LOAD_OP and LOAD_PAR is interconnected with WRITE_DIS. |
 | PRED_ON | 32.4 | BOOL | TRUE | When changing over to automatic mode you can specify whether you want to change over bumplessly from the last manual value or with bumps with a manipulated variable calculated by the Self-Tuner. If PRED_ON = TRUE (default setting) the changeover is carried out with bumps. The changeover with bumps is only effective after tuning and ensures rapid settling into the desired setpoint, in particular for a PI control system. |
-| CYCLE | 34.0 | TIME | 100 ms | The sampling time must be configured in the CYCLE input. CYCLE must correspond to the sampling time of the controller to be set and the time difference between two calls (cycle time of the cyclic interrupt OB taking into account the reduction ratios).  CYCLE > 1 ms |
+| CYCLE | 34.0 | TIME | 100 ms | The sampling time must be configured in the CYCLE input. CYCLE must correspond to the sampling time of the controller to be set and the time difference between two calls (cycle time of the cyclic interrupt OB taking into account the reduction ratios).  CYCLE &gt; 1 ms |
 
 ---
 
@@ -661,7 +661,7 @@ When ADAPT1ST = TRUE , the initialization routine of the TUN_ES instruction is 
 
 You enter the sampling time in the CYCLE parameter. The sampling time should not exceed 10% of the determined integral action time of the controller. In addition, the sampling time should not exceed 1% of the motor transition time so that the position feedback has a resolution of at least 1%. You can set the sampling time in the CYCLE parameter of the TUN_ES instruction and the controller. It must agree with the time difference between two calls (cycle time of the cyclic interrupt OB taking into account the reduction ratios).
 
-In connection with the FM355/455 controller modules, the sampling time of TUN_ES must be approximately equal to the resulting cycle time of the controllers on the FM (Parameter setting > Module parameters).
+In connection with the FM355/455 controller modules, the sampling time of TUN_ES must be approximately equal to the resulting cycle time of the controllers on the FM (Parameter setting &gt; Module parameters).
 
 #### Reaction to error
 
@@ -708,9 +708,9 @@ The process must meet the following requirements:
 
   The range of application can be specified based on the ratio of the delay time t<sub>u</sub> and response time t<sub>a</sub>. The delay time also encompasses any existing dead time.
 
-  The pretuning or adaptation is designed for the range t<sub>u</sub> < 1/10 t<sub>a</sub>, within which most controlled temperature systems fall.
+  The pretuning or adaptation is designed for the range t<sub>u</sub> &lt; 1/10 t<sub>a</sub>, within which most controlled temperature systems fall.
 
-  For the range of especially long delay times 1/10 t<sub>a</sub> < t<sub>u</sub> < 1/3 t<sub>a</sub>, the design of a utilizable PI controller is generally still also possible.
+  For the range of especially long delay times 1/10 t<sub>a</sub> &lt; t<sub>u</sub> &lt; 1/3 t<sub>a</sub>, the design of a utilizable PI controller is generally still also possible.
 - **Adequate linear response across a sufficiently large operating range**
 
   This means that non-linear effects within this operating range can be ignored both during identification and during normal closed-loop control operation. However, it is possible to re-identify the process when there is a change from one operating point to another if the adaptation process is carried out again close to the new operating point and provided that the non-linearity is not passed through during adaptation.
@@ -802,9 +802,9 @@ No cooling tuning and no control zone mode can be implemented with TUN_ES.
 | Function | Start bit | Enable bit | Start condition:  PHASE | Start condition:  Setpoint jump at SP |
 | --- | --- | --- | --- | --- |
 | Manual mode | — | MAN_ON  LMNS_ON | 0 to 7 | — |
-| Pretuning with measurement of the motor transition time | ADAPT1ST | — | 0, 4 | Pos.: > MIN_STEP |
-| Pretuning without measurement of the actuating time of the actuator or fine tuning (only possible for step controller without position feedback) | ADAPT_ON | — | 4 | Pos.: > MIN_STEP |
-| Structure switchover | — | STRUC_ON | 4 | Pos.: > MIN_STEP  Neg: > MIN_STEP |
+| Pretuning with measurement of the motor transition time | ADAPT1ST | — | 0, 4 | Pos.: &gt; MIN_STEP |
+| Pretuning without measurement of the actuating time of the actuator or fine tuning (only possible for step controller without position feedback) | ADAPT_ON | — | 4 | Pos.: &gt; MIN_STEP |
+| Structure switchover | — | STRUC_ON | 4 | Pos.: &gt; MIN_STEP  Neg: &gt; MIN_STEP |
 | Save controller parameters | SAVE_PAR | — | 2 to 7 | — |
 | Reload controller parameters | UNDO_PAR | — | 4 | — |
 | Change controller parameters | LOAD_PAR | — | 4 | — |

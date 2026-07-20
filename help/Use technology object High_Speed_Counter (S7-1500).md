@@ -31,7 +31,7 @@ STEP 7 (TIA Portal) supports you in the configuration, commissioning and diagno
 - You configure the High_Speed_Counter technology object in STEP 7 (TIA Portal) with the settings for the counting and measuring functions.
 - The corresponding High_Speed_Counter instruction is programmed in the user program. This instruction supplies the control and feedback interface of the technology module.
 
-The High_Speed_Counter technology object corresponds to the instance DB of the High_Speed_Counter instruction. The configuration of the counting and measuring functions is saved in the technology object. The technology object is located in the folder "PLC > Technology objects".
+The High_Speed_Counter technology object corresponds to the instance DB of the High_Speed_Counter instruction. The configuration of the counting and measuring functions is saved in the technology object. The technology object is located in the folder "PLC &gt; Technology objects".
 
 The High_Speed_Counter technology object can be used equally for technology modules of the S7-1500, ET 200SP and ET 200eco PN M12-L systems.
 
@@ -497,7 +497,7 @@ You can select from the following input delays:
 
 You use this parameter to suppress interference at the digital inputs of the DIn signals. Changes to the signal are only detected if they remain stable for longer than the configured input delay time.
 
-You can configure the input delay for a digital input of a Compact CPU in the Inspector window of the device configuration under "Properties > DI 16/DQ 16 > Inputs > Channel n".
+You can configure the input delay for a digital input of a Compact CPU in the Inspector window of the device configuration under "Properties &gt; DI 16/DQ 16 &gt; Inputs &gt; Channel n".
 
 You can select from the following input delays:
 
@@ -615,9 +615,9 @@ You can select from the following options:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-counter-value-as-reference-s7-1500) in operating mode "Use count value as reference" | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value <= counter value <= high counting limit | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value and low limit | The respective digital output is active if: Low counting limit <= counter value <= comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= counter value <= comparison value 1 | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value and high limit (default) | The respective digital output is active if: Comparison value &lt;= counter value &lt;= high counting limit | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value and low limit | The respective digital output is active if: Low counting limit &lt;= counter value &lt;= comparison value | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= counter value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 - Hysteresis (in increments) |
 | At comparison value for a pulse duration | The respective digital output is active once for the configured time and count direction when the counter value reaches the comparison value. | - Comparison value 0 - Comparison value 1 - Count direction - Pulse duration - Hysteresis (in increments) |
 | After set command from CPU until comparison value | When a set command is sent from the CPU, the respective digital output is active until the counter value is equal to the comparison value. | - Comparison value 0 - Comparison value 1 - Count direction - Hysteresis (in increments) |
 | Use by user program | The respective digital output can be switched by the CPU [via the control interface](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#comparison-values-and-outputs-s7-1500). | — |
@@ -638,10 +638,10 @@ You can select from the following options:
 
 | [Function of a digital output](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#switching-at-comparison-values-with-measured-value-as-reference-s7-1500) in operating mode "Use measured value as reference" | Meaning | Additional option-specific parameters |
 | --- | --- | --- |
-| Measured value >= comparison value (default) | The respective digital output is active if the measured value is greater than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
-| Measured value <= comparison value | The respective digital output is active if the measured value is less than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
-| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 <= measured value <= comparison value 1 | - Comparison value 0 - Comparison value 1 |
-| Not between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 1 <= measured value <= comparison value 0 | - Comparison value 0 - Comparison value 1 |
+| Measured value &gt;= comparison value (default) | The respective digital output is active if the measured value is greater than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
+| Measured value &lt;= comparison value | The respective digital output is active if the measured value is less than or equal to the comparison value. | - Comparison value 0 - Comparison value 1 |
+| Between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 0 &lt;= measured value &lt;= comparison value 1 | - Comparison value 0 - Comparison value 1 |
+| Not between comparison value 0 and 1 | The digital output DQ1 is active if: Comparison value 1 &lt;= measured value &lt;= comparison value 0 | - Comparison value 0 - Comparison value 1 |
 | Use by user program | The respective digital output can be switched by the CPU [via the control interface](The%20basics%20of%20counting%2C%20measurement%20and%20position%20detection%20%28S7-1500%29.md#comparison-values-and-outputs-s7-1500). | — |
 
 > **Note**

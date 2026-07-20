@@ -222,7 +222,7 @@ You can find additional information in the chapter Programming.
 In isochronous mode, you can influence the order of the update of the process image partition of the input and output data. In doing so, you can select the following program execution models:
 
 - IPO model (application cycle factor = 1)
-- OIP model (application cycle factor >= 1)
+- OIP model (application cycle factor &gt;= 1)
 
 The abbreviations I, P, O stand for the following processes: I = Input, P= Processing, O = Output.
 
@@ -241,7 +241,7 @@ The user program is started after the delay time. Start by updating the correspo
 
   This gives the application less time than with the OIP model.
 
-#### OIP model (application cycle factor >= 1)
+#### OIP model (application cycle factor &gt;= 1)
 
 The user program is started after the delay time. In PIP_Mode 0, the TIO_SYNC instruction updates the process image. In the other modes, you start by updating the corresponding process image partition of the outputs in the user program by calling the SYNC_PO system instruction. As a result, the output data that was calculated in the previous network cycle will become active during the next network cycle (T<sub>O</sub>). Next the corresponding process image partition of the inputs is updated in the CPU by SYNC_PI. Processing starts after the data is transmitted (for example, calculation of the time stamps).
 
@@ -312,17 +312,17 @@ Overview of settings for Time-based IO
 
 | Component | Where adjustable<sup>1</sup> | Properties to be set | Additional information |
 | --- | --- | --- | --- |
-| When using an ET 200 station: PROFINET subnet | Properties of the PROFINET subnet > sync domain | Create sync domain or edit properties of sync domain | - [PROFINET function manual](http://support.automation.siemens.com/WW/view/en/49948856) - Online help in the STEP 7 (TIA Portal) information system |
+| When using an ET 200 station: PROFINET subnet | Properties of the PROFINET subnet &gt; sync domain | Create sync domain or edit properties of sync domain | - [PROFINET function manual](http://support.automation.siemens.com/WW/view/en/49948856) - Online help in the STEP 7 (TIA Portal) information system |
 | Specify devices of the sync domain:  - Specify CPU as sync master. - Specify ET 200 interface module as sync slave with RT class "IRT". |  |  |  |
-| S7-1500 station | Properties of the PROFINET interface > isochronous communication | Enable isochronous mode | - [Function Manual Isochronous Mode](https://support.industry.siemens.com/cs/ww/en/view/109755401) - [PROFINET function manual](http://support.automation.siemens.com/WW/view/en/49948856) - Manual Technology Module  [TM Timer DIDQ 16x24V](http://support.automation.siemens.com/WW/view/en/95153313) - Manual Technology Module  [TM Timer DIDQ 10x24V](http://support.automation.siemens.com/WW/view/en/95153951) - Online help in the STEP 7 (TIA Portal) information system |
+| S7-1500 station | Properties of the PROFINET interface &gt; isochronous communication | Enable isochronous mode | - [Function Manual Isochronous Mode](https://support.industry.siemens.com/cs/ww/en/view/109755401) - [PROFINET function manual](http://support.automation.siemens.com/WW/view/en/49948856) - Manual Technology Module  [TM Timer DIDQ 16x24V](http://support.automation.siemens.com/WW/view/en/95153313) - Manual Technology Module  [TM Timer DIDQ 10x24V](http://support.automation.siemens.com/WW/view/en/95153951) - Online help in the STEP 7 (TIA Portal) information system |
 | ET 200 station |  |  |  |
-| TIO module | Properties of the TIO module > I/O addresses | Enable isochronous mode |  |
-| Properties of the TIO module > I/O addresses | Assign or create a "Synchronous Cycle" or "MC-PostServo" type OB |  |  |
-| Properties of the TIO module > I/O addresses | Assignment of I/O addresses to the process image partition (e.g., PIP1) |  |  |
-| Properties of the TIO module > Basic parameters | Configure "Module use from the user program" |  |  |
-| Properties of the TIO module > Basic parameters/Channel parameters | For TM Timer DIDQ 10x24V: If required, assign parameters for Configuration "Use input/output individually" |  |  |
+| TIO module | Properties of the TIO module &gt; I/O addresses | Enable isochronous mode |  |
+| Properties of the TIO module &gt; I/O addresses | Assign or create a "Synchronous Cycle" or "MC-PostServo" type OB |  |  |
+| Properties of the TIO module &gt; I/O addresses | Assignment of I/O addresses to the process image partition (e.g., PIP1) |  |  |
+| Properties of the TIO module &gt; Basic parameters | Configure "Module use from the user program" |  |  |
+| Properties of the TIO module &gt; Basic parameters/Channel parameters | For TM Timer DIDQ 10x24V: If required, assign parameters for Configuration "Use input/output individually" |  |  |
 | Parameter assignment for use of Timer DI and Timer DQ |  |  |  |
-| Isochronous OB (Synchronous Cycle or MC-PostServo) | Properties of the Isochronous OB > Isochronous mode | Adjust application cycle, if necessary |  |
+| Isochronous OB (Synchronous Cycle or MC-PostServo) | Properties of the Isochronous OB &gt; Isochronous mode | Adjust application cycle, if necessary |  |
 
 <sup>1</sup> Describes the topic area in the configuration software.
 
@@ -410,7 +410,7 @@ Additional information on configuration of Time-based IO is available in the sec
 1. Create a TIO instruction, TIO_SYNC, in the isochronous OB.
 2. Connect all TIO modules to be synchronized at the TIO_SYNC TIO instruction using parameters HWID_1 to HWID_8.
 
-   The HWID can be found in the hardware configuration under "Properties > System constants".
+   The HWID can be found in the hardware configuration under "Properties &gt; System constants".
 3. Set the data update mode at the TIO_SYNC instruction at the PIP_Mode input parameter.
 
    The description of the modes is available in the chapter [Technical implementation](#technical-implementation-s7-1500).
@@ -423,7 +423,7 @@ Additional information on configuration of Time-based IO is available in the sec
    ![Procedure](images/63088949899_DV_resource.Stream@PNG-en-US.png)
 5. Add the TIO instructions for read-in/output required for your application in the isochronous OB.
 6. At the TIO instructions for read-in/output, interconnect in each case the input/output TIO_SYNC_Data with the same name output at the TIO_SYNC.
-7. At the TIO instructions for read-in/output, assign parameters for the input parameters HWID (see "Properties > System constants" in hardware configuration) and Channel.  
+7. At the TIO instructions for read-in/output, assign parameters for the input parameters HWID (see "Properties &gt; System constants" in hardware configuration) and Channel.  
    The Time-based IO functionality is successfully programmed.
 8. Interconnect the Time-based IO functionality with your application, such as evaluating the read-in time stamp in a step sequencer in another OB.
 9. If TIO_SYNC does not automatically read out the send clock: Define the send clock manually, e.g. in OB100.
@@ -449,7 +449,7 @@ For more information, see the following FAQs in the Siemens Industry Online Supp
 This section contains information on the following topics:
 
 - [Configuration and parameter assignment of TIO-Modul (S7-1500)](#configuration-and-parameter-assignment-of-tio-modul-s7-1500)
-- [TIO-Modul Online & Diagnostics (S7-1500)](#tio-modul-online-diagnostics-s7-1500)
+- [TIO-Modul Online &amp; Diagnostics (S7-1500)](#tio-modul-online-diagnostics-s7-1500)
 
 ### Configuration and parameter assignment of TIO-Modul (S7-1500)
 
@@ -473,7 +473,7 @@ This section contains information on the following topics:
 1. Open the device configuration of the CPU or IM.
 2. Select a module rack.
 3. Select the technology module from the module catalog:  
-   "Technology modules > Time‑based IO > Technology module > Article number".
+   "Technology modules &gt; Time‑based IO &gt; Technology module &gt; Article number".
 4. Drag the technology module to the required slot in the module rack.
 
 ##### Result
@@ -554,7 +554,7 @@ See the device manual for the technology module to find out which errors during 
 
 ##### Module use from the user program
 
-With this parameter, you define whether you use the module with technology objects of Motion Control or with instructions from the library "Time-based IO“ (Instructions > Technology).
+With this parameter, you define whether you use the module with technology objects of Motion Control or with instructions from the library "Time-based IO“ (Instructions &gt; Technology).
 
 #### Channel parameters (S7-1500)
 
@@ -922,7 +922,7 @@ To open the display editor for the diagnostic functions, follow these steps:
 
 1. Open the device configuration of the CPU or IM.
 2. Select the device view.
-3. Right-click on the technology module and select "Online & Diagnostics".
+3. Right-click on the technology module and select "Online &amp; Diagnostics".
 4. Select the required display in the diagnostics navigation.
 
 ##### Additional information

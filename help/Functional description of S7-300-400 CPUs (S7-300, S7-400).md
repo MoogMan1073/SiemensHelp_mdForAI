@@ -469,15 +469,15 @@ To do so, you must insert a blank micro memory card in the CPU and adhere to a s
 
 #### Updating firmware with a micro memory card
 
-You can get the latest firmware on the internet as *.UPD files from the Service & Support pages:
+You can get the latest firmware on the internet as *.UPD files from the Service &amp; Support pages:
 
-<http://support.automation.siemens.com>
+[http://support.automation.siemens.com](http://support.automation.siemens.com)
 
 Save the firmware files on the hard drive.
 
 In order to store the files on the micro memory card, select the command "Create firmware update memory card" in the "Project" menu.
 
-Then follow the instructions in the Service & Support portal for performing a firmware update with your CPU.
+Then follow the instructions in the Service &amp; Support portal for performing a firmware update with your CPU.
 
 ---
 
@@ -524,15 +524,15 @@ The command "Download user program to memory card" in the menu "Online" saves th
 
 #### Updating firmware with a memory card
 
-You can get the latest firmware on the internet as *.UPD files from the Service & Support pages:
+You can get the latest firmware on the internet as *.UPD files from the Service &amp; Support pages:
 
-<http://support.automation.siemens.com>
+[http://support.automation.siemens.com](http://support.automation.siemens.com)
 
 Save the firmware files on the hard drive.
 
 To store the file on the memory card, select the command "Create firmware update memory card" in the "Project" menu.
 
-Then follow the instructions in the Service & Support portal for performing a firmware update with your CPU.
+Then follow the instructions in the Service &amp; Support portal for performing a firmware update with your CPU.
 
 ---
 
@@ -1692,8 +1692,8 @@ You read the current date and time of day of the CPU with the instruction "READ_
 
 Parameter assignment of the interface properties in the following parameter groups:
 
-- For the CPU: "Properties > General > Time"
-- For the DP interface: "Properties > General > DP interface > Time synchronization".
+- For the CPU: "Properties &gt; General &gt; Time"
+- For the DP interface: "Properties &gt; General &gt; DP interface &gt; Time synchronization".
 
 ##### SIMATIC procedure
 
@@ -1732,7 +1732,7 @@ To ensure that the time is consistent in all modules in the network, the time sl
 
 ##### Reference
 
-Assigning parameters for the interface properties in the "Properties > General > PROFINET interface > Time synchronization" parameter group. The "Enable time synchronization via NTP server" option is selected.
+Assigning parameters for the interface properties in the "Properties &gt; General &gt; PROFINET interface &gt; Time synchronization" parameter group. The "Enable time synchronization via NTP server" option is selected.
 
 ##### NTP mode (NTP: Network Time Protocol)
 
@@ -2009,7 +2009,7 @@ Example: The module was assigned a protection level and you want to execute the 
 
 The functions protected by a password can only be executed by one programming device/PC at any one time. Another programming device/PC cannot log on with a password.
 
-Access authorization to the protected data is in effect for the duration of the online connection, or until the access authorization is manually rescinded with "Online > Delete access rights".
+Access authorization to the protected data is in effect for the duration of the online connection, or until the access authorization is manually rescinded with "Online &gt; Delete access rights".
 
 > **Note**
 >
@@ -2027,7 +2027,7 @@ In test operation, all test functions via a programming device/PC – even if th
 
 #### Possible settings for operating behavior
 
-You can set the following modes for testing with the program status in the inspector window under "Properties > Mode":
+You can set the following modes for testing with the program status in the inspector window under "Properties &gt; Mode":
 
 - Test mode
 
@@ -2074,7 +2074,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-If you select the CPU with integrated count and measurement function in the network view or the device view, you can configure the counting function for each of the channels listed in the inspector window under "Properties > General > Count".
+If you select the CPU with integrated count and measurement function in the network view or the device view, you can configure the counting function for each of the channels listed in the inspector window under "Properties &gt; General &gt; Count".
 
 If you decide to use channel 0 or channel 1 as the counting channel you can no longer use "Positioning" technology.
 
@@ -2097,7 +2097,7 @@ You can select several interrupts for the "Counting" function.
 ###### Requirement
 
 - The CPU is selected.
-- Interrupt selection is located at "Properties > General > Counting > Interrupt selection".
+- Interrupt selection is located at "Properties &gt; General &gt; Counting &gt; Interrupt selection".
 
 ###### Interrupt selection (basic parameters)
 
@@ -2153,7 +2153,7 @@ Events that can trigger a hardware interrupt:
 
 ###### General
 
-All channel-specific parameters are set under "Properties > General > Counting > Channel 0 (... Channel n)". There are six options available for this operating mode: "Not configured", "Count continuously", "Count once", "Count periodically", "Measure frequency" and "Pulse-width modulation".
+All channel-specific parameters are set under "Properties &gt; General &gt; Counting &gt; Channel 0 (... Channel n)". There are six options available for this operating mode: "Not configured", "Count continuously", "Count once", "Count periodically", "Measure frequency" and "Pulse-width modulation".
 
 "Not configured" is set as the default.
 
@@ -2415,7 +2415,7 @@ In the "Low limit" and "High limit" input fields, enter the values that the dete
 
     > **Note**
     >
-    > At the time of input it is verified whether the high limit > low limit.
+    > At the time of input it is verified whether the high limit &gt; low limit.
 
 Default for the low limits is 0 mHz respectively. CPU-dependent default high limits are:
 
@@ -2736,7 +2736,7 @@ You can select interrupts for the "Positioning" function.
 ###### Requirement
 
 - The CPU is selected.
-- Interrupt selection is located at "Properties > General > Positioning > Interrupt selection".
+- Interrupt selection is located at "Properties &gt; General &gt; Positioning &gt; Interrupt selection".
 
 ###### Interrupt selection
 
@@ -2749,7 +2749,7 @@ Default selection is "None".
 
 You must carry out supplementary configurations to ensure that the corresponding events are really going to trigger diagnostic interrupts.
 
-Enable the required monitoring under "Properties > Positioning > Channel 0" with operating mode "Positioning with analog output" selected:
+Enable the required monitoring under "Properties &gt; Positioning &gt; Channel 0" with operating mode "Positioning with analog output" selected:
 
 - Under "Drive"
 
@@ -2765,7 +2765,7 @@ Select which events are to trigger a diagnostic interrupt under "Channel 0 - Dia
 
 For a diagnostic interrupt, you must configure the parameters in the following settings:
 
-- Interrupt selection under "Properties > General > Positioning > Channel 0"
+- Interrupt selection under "Properties &gt; General &gt; Positioning &gt; Channel 0"
 - The corresponding monitoring in the appropriate "Drive", "Axis" or "Encoder" section.
 - The respective enable signal in the "Diagnostics" section.
 
@@ -2780,7 +2780,7 @@ Use the "Operating mode" parameter to determine how you want to position. You ha
 
 Default selection is "not configured".
 
-The operating mode is selected under "Properties > General > Positioning > Channel 0".
+The operating mode is selected under "Properties &gt; General &gt; Positioning &gt; Channel 0".
 
 > **Note**
 >
@@ -2819,7 +2819,7 @@ This section contains information on the following topics:
 
 ###### Controlling the drive and control mode
 
-In "Properties > Position > Channel 0" in the "Channel 0 - Drive" section, specify the parameters for the drive and axis for positioning using an analog output.
+In "Properties &gt; Position &gt; Channel 0" in the "Channel 0 - Drive" section, specify the parameters for the drive and axis for positioning using an analog output.
 
 ###### Drive description
 
@@ -2961,7 +2961,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-Specify the parameters for the axis under "Properties > Positioning > Channel 0" in the "Channel 0 - Axis " section.
+Specify the parameters for the axis under "Properties &gt; Positioning &gt; Channel 0" in the "Channel 0 - Axis " section.
 
 ###### Axis type
 
@@ -3121,7 +3121,7 @@ This monitoring function is disabled by default.
 
 ###### Description
 
-In "Properties > Position > Channel 0" in section "Channel 0 - Diagnostics", select the events for which the diagnostics interrupt is to be generated. No check box is selected by default.
+In "Properties &gt; Position &gt; Channel 0" in section "Channel 0 - Diagnostics", select the events for which the diagnostics interrupt is to be generated. No check box is selected by default.
 
 ###### Missing pulse
 
@@ -3181,7 +3181,7 @@ This section contains information on the following topics:
 
 ###### Controlling the drive (S7-300, S7-400)
 
-In "Properties > Position > Channel 0" in the "Channel 0 - Drive" section, specify the parameters for the drive and axis for positioning with digital inputs.
+In "Properties &gt; Position &gt; Channel 0" in the "Channel 0 - Drive" section, specify the parameters for the drive and axis for positioning with digital inputs.
 
 ###### Description
 
@@ -3442,7 +3442,7 @@ This monitoring function is disabled by default.
 
 ###### Description
 
-In "Properties > Position > Channel 0" in section "Channel 0 - Diagnostics", select the events for which the diagnostics interrupt is to be generated. No check box is selected by default.
+In "Properties &gt; Position &gt; Channel 0" in section "Channel 0 - Diagnostics", select the events for which the diagnostics interrupt is to be generated. No check box is selected by default.
 
 ###### Missing pulse
 
@@ -3503,7 +3503,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties > General > PtP > Interrupt selection". Select "ASCII" as the protocol.
+The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties &gt; General &gt; PtP &gt; Interrupt selection". Select "ASCII" as the protocol.
 
 Depending on the type of protocol selected, the further subdivision changes in the area navigation.
 
@@ -3573,7 +3573,7 @@ The data are transmitted via the serial interface in a character frame. Two data
 
 ###### Description
 
-The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties > General > PtP > Interrupt selection". Select "ASCII" as the protocol.
+The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties &gt; General &gt; PtP &gt; Interrupt selection". Select "ASCII" as the protocol.
 
 Depending on the type of protocol selected, the further subdivision changes in the area navigation.
 
@@ -3671,13 +3671,13 @@ Default selection is "Send up to and including end delimiter".
 
 - Send up to and including end delimiter
 
-  Select the "End criteria > Send up to and including end delimiter" drop-down list to specify whether the end delimiter should be included in the data to be transmitted. Only data up to and including the end-of-message character is transmitted, even if a greater data length is specified in the SFB.
+  Select the "End criteria &gt; Send up to and including end delimiter" drop-down list to specify whether the end delimiter should be included in the data to be transmitted. Only data up to and including the end-of-message character is transmitted, even if a greater data length is specified in the SFB.
 - Send up to length set in the block
 
-  Select the "End criteria > Send up to length set in the block" drop-down list to determine that data are transmitted up to the length declared in the SFB parameters. The last character must be the end delimiter.
+  Select the "End criteria &gt; Send up to length set in the block" drop-down list to determine that data are transmitted up to the length declared in the SFB parameters. The last character must be the end delimiter.
 - Send with automatically append the end delimiter
 
-  Select the "End criteria > Automatically append the end delimiter" drop-down list to determine that data are transmitted up to the length declared in the SFB parameters. The end delimiter(s) are automatically appended, that is, the end delimiters must not be contained in the data to be transmitted. Depending on the number of end identifiers, either one or two characters more than specified in the SFB (max. 1024 bytes) are transmitted to the partner.
+  Select the "End criteria &gt; Automatically append the end delimiter" drop-down list to determine that data are transmitted up to the length declared in the SFB parameters. The end delimiter(s) are automatically appended, that is, the end delimiters must not be contained in the data to be transmitted. Depending on the number of end identifiers, either one or two characters more than specified in the SFB (max. 1024 bytes) are transmitted to the partner.
 - Sender end delimiter
 
   If you are using an end delimiter you can now specify its hex code. You can also select whether you want to use a second end delimiter and specify its hex code also. In the "Sender 1st end delimiter" input field, and, if required, in the "Sender 2nd end delimiter" input field, enter a code for the respective end delimiter.
@@ -3688,7 +3688,7 @@ Default selection is "Send up to and including end delimiter".
 
 ###### Description
 
-The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties > General > PtP > Interrupt selection". Select "ASCII" as the protocol.
+The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties &gt; General &gt; PtP &gt; Interrupt selection". Select "ASCII" as the protocol.
 
 Depending on the type of protocol selected, the further subdivision changes in the area navigation.
 
@@ -3727,7 +3727,7 @@ This section deals with PtP data reception.
 
 ###### Description
 
-The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties > General > PtP > Interrupt selection". Select "ASCII" as the protocol.
+The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties &gt; General &gt; PtP &gt; Interrupt selection". Select "ASCII" as the protocol.
 
 Depending on the type of protocol selected, the further subdivision changes in the area navigation.
 
@@ -3786,7 +3786,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties > General > PtP > Interrupt selection". Select "3964(R)" as the protocol.
+The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties &gt; General &gt; PtP &gt; Interrupt selection". Select "3964(R)" as the protocol.
 
 Depending on the type of protocol selected, the further subdivision changes in the area navigation.
 
@@ -3907,7 +3907,7 @@ The data are transmitted via the serial interface in a character frame. Two data
 
 ###### Description
 
-The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties > General > PtP > Interrupt selection". Select "3964(R)" as the protocol.
+The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties &gt; General &gt; PtP &gt; Interrupt selection". Select "3964(R)" as the protocol.
 
 Depending on the type of protocol selected, the further subdivision changes in the area navigation.
 
@@ -3946,7 +3946,7 @@ This topic deals with PtP data reception.
 
 ###### Description
 
-The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties > General > PtP > Interrupt selection". Select "3964(R)" as the protocol.
+The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties &gt; General &gt; PtP &gt; Interrupt selection". Select "3964(R)" as the protocol.
 
 Depending on the type of protocol selected, the further subdivision changes in the area navigation.
 
@@ -3983,7 +3983,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties > General > PtP > Interrupt selection". Select "RK512" as the protocol.
+The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties &gt; General &gt; PtP &gt; Interrupt selection". Select "RK512" as the protocol.
 
 Depending on the type of protocol selected, the further subdivision changes in the area navigation.
 
@@ -4099,7 +4099,7 @@ The data are transmitted via the serial interface in a character frame. Two data
 
 ###### Description
 
-The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties > General > PtP > Interrupt selection". Select "RK512" as the protocol.
+The interrupts, characteristics of a CPU STOP, and protocol are set in "Properties &gt; General &gt; PtP &gt; Interrupt selection". Select "RK512" as the protocol.
 
 Depending on the type of protocol selected, the further subdivision changes in the area navigation.
 

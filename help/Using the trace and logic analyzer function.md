@@ -144,7 +144,7 @@ The configuration data is displayed write-protected.
 
 The ![Measurements on device (memory card)](images/171754038283_DV_resource.Stream@PNG-de-DE.png) "Measurements on device (memory card)" folder contains measurements that are saved on the device (for example, on the memory card). These measurements are retentive and can only be deleted by the user.
 
-The installed measurements can be transferred to the "Measurements" folder using drag & drop and are then saved as measurements in the project.
+The installed measurements can be transferred to the "Measurements" folder using drag &amp; drop and are then saved as measurements in the project.
 
 #### Trace configuration with an installed trace of the same name
 
@@ -489,7 +489,7 @@ The following table explains the icons in the ![Icons in the “Measurements" fo
 
 | Icon | Description |
 | --- | --- |
-| ![Icons in the “Measurements" folder](images/171754631179_DV_resource.Stream@PNG-de-DE.png) | Measurement (offline)  Double-click the icon to open the "Time diagram" tab.  The configuration for a measurement can be transferred to the “Traces” folder using drag & drop. |
+| ![Icons in the “Measurements" folder](images/171754631179_DV_resource.Stream@PNG-de-DE.png) | Measurement (offline)  Double-click the icon to open the "Time diagram" tab.  The configuration for a measurement can be transferred to the “Traces” folder using drag &amp; drop. |
 
 ##### Shortcut menu commands
 
@@ -517,7 +517,7 @@ The measurements can also be copied independent of the device family.
 
 The ![Figure](images/171754038283_DV_resource.Stream@PNG-de-DE.png) "Measurements on device (memory card)" folder shows all measurements present on the memory card. The folder is only displayed when there is an online connection to the device.
 
-Drag folders or measurements contained here to the "Measurements" system folder using drag & drop. This transfers the measurements to the project.​
+Drag folders or measurements contained here to the "Measurements" system folder using drag &amp; drop. This transfers the measurements to the project.​
 
 > **Note**
 >
@@ -730,8 +730,8 @@ The following table shows which functions are possible in the curve diagram usin
 | Function of the mouse wheel | Description |
 | --- | --- |
 | Move the curve diagram vertically | Turning the mouse wheel moves the display in the upper curve diagram up or down.   If the signals are arranged in traces, the display of the group is shifted below the cursor.  The mouse pointer must be positioned above the curve diagram with the analog signals. |
-| Move the curve diagram horizontally | Turning the mouse wheel with the <Shift> button pressed down moves the display in the curve diagram to the left or the right.   The cursor must be positioned above the curve diagram. |
-| Zoom in and zoom out | Turning the mouse wheel with the <Ctrl> button pressed down zooms in or out of the display in the curve diagram. The cursor position is the starting point for zooming in or out.  The value axis of the lower curve diagram (bit tracks) is not affected.  The cursor must be positioned above the curve diagram. |
+| Move the curve diagram horizontally | Turning the mouse wheel with the &lt;Shift&gt; button pressed down moves the display in the curve diagram to the left or the right.   The cursor must be positioned above the curve diagram. |
+| Zoom in and zoom out | Turning the mouse wheel with the &lt;Ctrl&gt; button pressed down zooms in or out of the display in the curve diagram. The cursor position is the starting point for zooming in or out.  The value axis of the lower curve diagram (bit tracks) is not affected.  The cursor must be positioned above the curve diagram. |
 
 ###### Functions using the keyboard
 
@@ -740,25 +740,25 @@ The following table shows which keyboard commands are possible with a focus on t
 | Shortcut key | Description |
 | --- | --- |
 | Selecting a measurement cursor |  |
-| <Ctrl+Shift+1> | The vertical measurement cursor t1 is selected or deselected. |
-| <Ctrl+Shift+2> | The vertical measurement cursor t2 is selected or deselected. |
-| <Ctrl+Shift+3> | The horizontal measurement cursor Y1 is selected or deselected. |
-| <Ctrl+Shift+4> | The horizontal measurement cursor Y2 is selected or deselected. |
-| <Tab> | The next measurement cursor is selected. |
+| &lt;Ctrl+Shift+1&gt; | The vertical measurement cursor t1 is selected or deselected. |
+| &lt;Ctrl+Shift+2&gt; | The vertical measurement cursor t2 is selected or deselected. |
+| &lt;Ctrl+Shift+3&gt; | The horizontal measurement cursor Y1 is selected or deselected. |
+| &lt;Ctrl+Shift+4&gt; | The horizontal measurement cursor Y2 is selected or deselected. |
+| &lt;Tab&gt; | The next measurement cursor is selected. |
 | Positioning a vertical measurement cursor |  |
-| <Left>, <Right> | With the unit "Samples", the selected measurement cursor is moved by one sample by the signal in the foreground. With the unit "Time (relative)", the measurement cursor is moved by one pixel. |
-| <Shift+Left>, <Shift+Right> | With the unit "Samples", the selected measurement cursor is moved by 10 samples by the signal in the foreground. With the unit "Time (relative)", the measurement cursor is moved by 10 pixels. |
+| &lt;Left&gt;, &lt;Right&gt; | With the unit "Samples", the selected measurement cursor is moved by one sample by the signal in the foreground. With the unit "Time (relative)", the measurement cursor is moved by one pixel. |
+| &lt;Shift+Left&gt;, &lt;Shift+Right&gt; | With the unit "Samples", the selected measurement cursor is moved by 10 samples by the signal in the foreground. With the unit "Time (relative)", the measurement cursor is moved by 10 pixels. |
 | Positioning a horizontal measurement cursor |  |
-| <Up>, <Down> | The selected measurement cursor is moved by one pixel along the value axis. |
-| <Shift+Up>, <Shift+Down> | The selected measurement cursor is moved by 10 pixels along the value axis. |
+| &lt;Up&gt;, &lt;Down&gt; | The selected measurement cursor is moved by one pixel along the value axis. |
+| &lt;Shift+Up&gt;, &lt;Shift+Down&gt; | The selected measurement cursor is moved by 10 pixels along the value axis. |
 | Display of vertical measurement cursors |  |
-| <Ctrl+Space> | The vertical measurement cursors are shown or hidden. |
-| <Ctrl+Shift+Space> | The vertical measurement cursors are shown and centered for the current view. |
+| &lt;Ctrl+Space&gt; | The vertical measurement cursors are shown or hidden. |
+| &lt;Ctrl+Shift+Space&gt; | The vertical measurement cursors are shown and centered for the current view. |
 | Changing the view |  |
-| <Space> | Move view |
-| <Ctrl+0> | Set 100% view in open editor |
-| <Ctrl++> | Apply zoom in with 10% |
-| <Ctrl+-> | Apply zoom out with 10% |
+| &lt;Space&gt; | Move view |
+| &lt;Ctrl+0&gt; | Set 100% view in open editor |
+| &lt;Ctrl++&gt; | Apply zoom in with 10% |
+| &lt;Ctrl+-&gt; | Apply zoom out with 10% |
 
 ###### Toolbar of the curve diagram
 
@@ -1021,8 +1021,8 @@ The following table shows which functions are possible in the curve diagram usin
 | Function of the mouse wheel | Description |
 | --- | --- |
 | Move the curve diagram vertically | Turning the mouse wheel moves the display in the upper curve diagram up or down.   If the signals are arranged in traces, the display of the group is shifted below the cursor.  The mouse pointer must be positioned above the curve diagram with the analog signals. |
-| Move the curve diagram horizontally | Turning the mouse wheel with the <Shift> button pressed down moves the display in the curve diagram to the left or the right.   The cursor must be positioned above the curve diagram. |
-| Zoom in and zoom out | Turning the mouse wheel with the <Ctrl> button pressed down zooms in or out of the display in the curve diagram. The cursor position is the starting point for zooming in or out.  The value axis of the lower curve diagram (bit tracks) is not affected.  The cursor must be positioned above the curve diagram. |
+| Move the curve diagram horizontally | Turning the mouse wheel with the &lt;Shift&gt; button pressed down moves the display in the curve diagram to the left or the right.   The cursor must be positioned above the curve diagram. |
+| Zoom in and zoom out | Turning the mouse wheel with the &lt;Ctrl&gt; button pressed down zooms in or out of the display in the curve diagram. The cursor position is the starting point for zooming in or out.  The value axis of the lower curve diagram (bit tracks) is not affected.  The cursor must be positioned above the curve diagram. |
 
 ###### Functions using the keyboard
 
@@ -1031,25 +1031,25 @@ The following table shows which keyboard commands are possible with a focus on t
 | Shortcut key | Description |
 | --- | --- |
 | Selecting a measurement cursor |  |
-| <Ctrl+Shift+1> | The vertical measurement cursor t1 is selected or deselected. |
-| <Ctrl+Shift+2> | The vertical measurement cursor t2 is selected or deselected. |
-| <Ctrl+Shift+3> | The horizontal measurement cursor Y1 is selected or deselected. |
-| <Ctrl+Shift+4> | The horizontal measurement cursor Y2 is selected or deselected. |
-| <Tab> | The next measurement cursor is selected. |
+| &lt;Ctrl+Shift+1&gt; | The vertical measurement cursor t1 is selected or deselected. |
+| &lt;Ctrl+Shift+2&gt; | The vertical measurement cursor t2 is selected or deselected. |
+| &lt;Ctrl+Shift+3&gt; | The horizontal measurement cursor Y1 is selected or deselected. |
+| &lt;Ctrl+Shift+4&gt; | The horizontal measurement cursor Y2 is selected or deselected. |
+| &lt;Tab&gt; | The next measurement cursor is selected. |
 | Positioning a vertical measurement cursor |  |
-| <Left>, <Right> | With the unit "Samples", the selected measurement cursor is moved by one sample by the signal in the foreground. |
-| <Shift+Left>, <Shift+Right> | With the unit "Samples", the selected measurement cursor is moved by 10 samples by the signal in the foreground. |
+| &lt;Left&gt;, &lt;Right&gt; | With the unit "Samples", the selected measurement cursor is moved by one sample by the signal in the foreground. |
+| &lt;Shift+Left&gt;, &lt;Shift+Right&gt; | With the unit "Samples", the selected measurement cursor is moved by 10 samples by the signal in the foreground. |
 | Positioning a horizontal measurement cursor |  |
-| <Up>, <Down> | The selected measurement cursor is moved by one pixel along the Y axis. |
-| <Shift+Up>, <Shift+Down> | The selected measurement cursor is moved by 10 pixels along the value axis. |
+| &lt;Up&gt;, &lt;Down&gt; | The selected measurement cursor is moved by one pixel along the Y axis. |
+| &lt;Shift+Up&gt;, &lt;Shift+Down&gt; | The selected measurement cursor is moved by 10 pixels along the value axis. |
 | Display of vertical measurement cursors |  |
-| <Ctrl+Space> | The vertical measurement cursors are shown or hidden. |
-| <Ctrl+Shift+Space> | The vertical measurement cursors are shown and centered for the current view. |
+| &lt;Ctrl+Space&gt; | The vertical measurement cursors are shown or hidden. |
+| &lt;Ctrl+Shift+Space&gt; | The vertical measurement cursors are shown and centered for the current view. |
 | Changing the view |  |
-| <Space> | Move view |
-| <Ctrl+0> | Set 100% view in open editor |
-| <Ctrl++> | Apply zoom in with 10% |
-| <Ctrl+-> | Apply zoom out with 10% |
+| &lt;Space&gt; | Move view |
+| &lt;Ctrl+0&gt; | Set 100% view in open editor |
+| &lt;Ctrl++&gt; | Apply zoom in with 10% |
+| &lt;Ctrl+-&gt; | Apply zoom out with 10% |
 
 ###### Toolbar of the curve diagram
 
@@ -1151,8 +1151,8 @@ The following table shows which functions are possible in the curve diagram usin
 | Function of the mouse wheel | Description |
 | --- | --- |
 | Move the curve diagram vertically | Turning the mouse wheel moves the display in the upper curve diagram up or down.   If the signals are arranged in traces, the display of the group is shifted below the cursor.  The mouse pointer must be positioned above the curve diagram with the analog signals. |
-| Move the curve diagram horizontally | Turning the mouse wheel with the <Shift> button pressed down moves the display in the curve diagram to the left or the right.   The cursor must be positioned above the curve diagram. |
-| Zoom in and zoom out | Turning the mouse wheel with the <Ctrl> button pressed down zooms in or out of the display in the curve diagram. The cursor position is the starting point for zooming in or out.  The value axis of the lower curve diagram (bit tracks) is not affected.  The cursor must be positioned above the curve diagram. |
+| Move the curve diagram horizontally | Turning the mouse wheel with the &lt;Shift&gt; button pressed down moves the display in the curve diagram to the left or the right.   The cursor must be positioned above the curve diagram. |
+| Zoom in and zoom out | Turning the mouse wheel with the &lt;Ctrl&gt; button pressed down zooms in or out of the display in the curve diagram. The cursor position is the starting point for zooming in or out.  The value axis of the lower curve diagram (bit tracks) is not affected.  The cursor must be positioned above the curve diagram. |
 
 ###### Functions using the keyboard
 
@@ -1161,25 +1161,25 @@ The following table shows which keyboard commands are possible with a focus on t
 | Shortcut key | Description |
 | --- | --- |
 | Selecting a measurement cursor |  |
-| <Ctrl+Shift+1> | The vertical measurement cursor t1 is selected or deselected. |
-| <Ctrl+Shift+2> | The vertical measurement cursor t2 is selected or deselected. |
-| <Ctrl+Shift+3> | The horizontal measurement cursor Y1 is selected or deselected. |
-| <Ctrl+Shift+4> | The horizontal measurement cursor Y2 is selected or deselected. |
-| <Tab> | The next measurement cursor is selected. |
+| &lt;Ctrl+Shift+1&gt; | The vertical measurement cursor t1 is selected or deselected. |
+| &lt;Ctrl+Shift+2&gt; | The vertical measurement cursor t2 is selected or deselected. |
+| &lt;Ctrl+Shift+3&gt; | The horizontal measurement cursor Y1 is selected or deselected. |
+| &lt;Ctrl+Shift+4&gt; | The horizontal measurement cursor Y2 is selected or deselected. |
+| &lt;Tab&gt; | The next measurement cursor is selected. |
 | Positioning a vertical measurement cursor |  |
-| <Left>, <Right> | With the unit "Samples", the selected measurement cursor is moved by one sample by the signal in the foreground. |
-| <Shift+Left>, <Shift+Right> | With the unit "Samples", the selected measurement cursor is moved by 10 samples by the signal in the foreground. |
+| &lt;Left&gt;, &lt;Right&gt; | With the unit "Samples", the selected measurement cursor is moved by one sample by the signal in the foreground. |
+| &lt;Shift+Left&gt;, &lt;Shift+Right&gt; | With the unit "Samples", the selected measurement cursor is moved by 10 samples by the signal in the foreground. |
 | Positioning a horizontal measurement cursor |  |
-| <Up>, <Down> | The selected measurement cursor is moved by one pixel along the Y axis. |
-| <Shift+Up>, <Shift+Down> | The selected measurement cursor is moved by 10 pixels along the value axis. |
+| &lt;Up&gt;, &lt;Down&gt; | The selected measurement cursor is moved by one pixel along the Y axis. |
+| &lt;Shift+Up&gt;, &lt;Shift+Down&gt; | The selected measurement cursor is moved by 10 pixels along the value axis. |
 | Display of vertical measurement cursors |  |
-| <Ctrl+Space> | The vertical measurement cursors are shown or hidden. |
-| <Ctrl+Shift+Space> | The vertical measurement cursors are shown and centered for the current view. |
+| &lt;Ctrl+Space&gt; | The vertical measurement cursors are shown or hidden. |
+| &lt;Ctrl+Shift+Space&gt; | The vertical measurement cursors are shown and centered for the current view. |
 | Changing the view |  |
-| <Space> | Move view |
-| <Ctrl+0> | Set 100% view in open editor |
-| <Ctrl++> | Apply zoom in with 10% |
-| <Ctrl+-> | Apply zoom out with 10% |
+| &lt;Space&gt; | Move view |
+| &lt;Ctrl+0&gt; | Set 100% view in open editor |
+| &lt;Ctrl++&gt; | Apply zoom in with 10% |
+| &lt;Ctrl+-&gt; | Apply zoom out with 10% |
 
 ###### Toolbar of the curve diagram
 
@@ -2459,7 +2459,7 @@ To check whether a certain value has been reached, proceed as follows:
 Proceed as follows to move the time range displayed:
 
 1. Select a time range via the ![Moving the time range displayed](images/171754991883_DV_resource.Stream@PNG-de-DE.png) button.
-2. Move the curve to the desired time range by turning the mouse wheel with the <Shift> key pressed down.
+2. Move the curve to the desired time range by turning the mouse wheel with the &lt;Shift&gt; key pressed down.
 
 ##### Bringing a signal into the foreground
 
@@ -2578,12 +2578,12 @@ To delete the assignment of a signal to a scaling group, proceed as follows:
 Or:
 
 1. Click the text field for the required signal in the "Scaling group" column.
-2. Press the <Del> key.
+2. Press the &lt;Del&gt; key.
 
 Or:
 
-1. Select the respective text field in the "Scaling group" column for several signals using the <Shift> and <Ctrl> keys.
-2. Press the <Del> key.
+1. Select the respective text field in the "Scaling group" column for several signals using the &lt;Shift&gt; and &lt;Ctrl&gt; keys.
+2. Press the &lt;Del&gt; key.
 
 The signals are removed from the scaling group or the scaling group is deleted.
 

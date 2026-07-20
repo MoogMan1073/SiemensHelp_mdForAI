@@ -143,9 +143,9 @@ In Ethernet-based communication, end users themselves are responsible for the se
 
 #### Use of SSL 3.0
 
-For security reasons, the use of the protocol SSL 3.0 is not recommended on Comfort Panels or in Runtime Advanced. The use of the protocol SSL 3.0 is disabled by default on Comfort Panels. If you nevertheless wish to activate the use of SSL 3.0, select the following in Internet Explorer or in "Start Center > Settings: Internet Options > Advanced > Use SSL 3.0".
+For security reasons, the use of the protocol SSL 3.0 is not recommended on Comfort Panels or in Runtime Advanced. The use of the protocol SSL 3.0 is disabled by default on Comfort Panels. If you nevertheless wish to activate the use of SSL 3.0, select the following in Internet Explorer or in "Start Center &gt; Settings: Internet Options &gt; Advanced &gt; Use SSL 3.0".
 
-For RT Advanced, the use of SSL 3.0 can be disabled in Internet Explorer or in the Control Panel under "Internet Options > Advanced" by deactivating the "Use SSL 3.0" option.
+For RT Advanced, the use of SSL 3.0 can be disabled in Internet Explorer or in the Control Panel under "Internet Options &gt; Advanced" by deactivating the "Use SSL 3.0" option.
 
 #### Network settings
 
@@ -157,7 +157,7 @@ The following tables show the network settings of each product which you need in
 | ALM | 4410* | TCP | Inbound, Outbound | License service | This service provides the complete functionality for software licenses and is used by both the Automation License Manager as well as all license-related software products. |
 | HMI Load | 1033 | TCP | Outbound | HMI Load (RT Basic) | This service is used to transmit images and configuration data to Basic Panels. |
 | HMI Load | 2308 | TCP | Outbound | HMI Load  (RT Advanced) | This service is used to transmit images and configuration data to panels. |
-| RPC | ** | UDP | Inbound, Outbound | Client / server & ES communication (CCAgent) | This service is used by WinCC Professional and WinCC Runtime Professional. |
+| RPC | ** | UDP | Inbound, Outbound | Client / server &amp; ES communication (CCAgent) | This service is used by WinCC Professional and WinCC Runtime Professional. |
 | * Default port that can be changed by user configuration  ** Port is assigned automatically |  |  |  |  |  |
 
 | WinCC Simulation for Basic Panels |  |  |  |  |  |
@@ -190,7 +190,7 @@ The following tables show the network settings of each product which you need in
 | WinCC Simulation for Runtime Professional |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- |
 | **Name** | **Port number** | **Transport protocol** | **Direction** | **Function** | **Description** |
-| RPC | ** | UDP | Inbound, Outbound | Client / server & ES communication (CCAgent) | This service is used by WinCC Professional and WinCC RT Professional. |
+| RPC | ** | UDP | Inbound, Outbound | Client / server &amp; ES communication (CCAgent) | This service is used by WinCC Professional and WinCC RT Professional. |
 | RPC | ** | UDP | Inbound, Outbound | Client / server communication (CCEServer / CCEClient) | This service is used by WinCC Runtime Professional. |
 | HTTP | 80 | TCP | Inbound, Outbound | Client / server communication (CCEServer / CCEClient) | This service is used by WinCC Runtime Professional. |
 | RFC 1006 | 102 | TCP | Outbound | S7 channel | Communication with the S7 controller via Ethernet/PROFINET |
@@ -281,7 +281,7 @@ For more information on the "User Account Control", refer to the online help for
 
 Once you have opened TIA Portal, you can no longer access the on-screen keyboard.
 
-To access the on-screen keyboard in Windows, use the following command: "Start > All Programs > Accessories > Ease of Access > On-screen keyboard".
+To access the on-screen keyboard in Windows, use the following command: "Start &gt; All Programs &gt; Accessories &gt; Ease of Access &gt; On-screen keyboard".
 
 #### Device change – character sets (RT Professional)
 
@@ -295,7 +295,7 @@ If you wish to see all texts in Japanese, Korean or Taiwanese in the relevant la
 
 #### Online delta loading with user-defined cycles (RT Professional)
 
-If you have configured new custom cycles in the "Cycles" editor, "Load > Software (compile all)" command when loading the project. Online delta loading is not possible.
+If you have configured new custom cycles in the "Cycles" editor, "Load &gt; Software (compile all)" command when loading the project. Online delta loading is not possible.
 
 #### License transfer via S7USB
 
@@ -303,7 +303,7 @@ You always need to run WinCC to transfer a license to a panel via S7USB.
 
 #### Transferring licenses to a panel on 64-bit operating systems
 
-If you are running a 64-bit operating system and the "Edit > Connect target systems > Connect HMI device" menu command is not available in Automation License Manager, open command line input and run the following command with administrator rights:
+If you are running a 64-bit operating system and the "Edit &gt; Connect target systems &gt; Connect HMI device" menu command is not available in Automation License Manager, open command line input and run the following command with administrator rights:
 
 "%WINDIR%\system32\RegSvr32.exe" "%CommonProgramFiles%\siemens\AlmPanelPlugin\ALMPanelParam.dll"
 
@@ -459,7 +459,7 @@ In this case, adjust the length of the String tag.
 
 #### Tags under "Tag box ID" (Mobile Panel)
 
-The tag that you configure under "Tag box ID" with "Runtime Settings > General" may only be used in read-only mode.
+The tag that you configure under "Tag box ID" with "Runtime Settings &gt; General" may only be used in read-only mode.
 
 No values may be written in this tag, however, they may be read in scripts, for example, or output to screens.
 
@@ -592,7 +592,7 @@ Information that could not be included in the online help and important informat
 
 #### Recipe synchronization (Basic Panels, Panels, Comfort Panels and RT Advanced)
 
-When data record values are sent to the controller, the values are only validated if the "Manual transfer of individually modified values (teach-in mode)" option is selected for the recipe under "General > Synchronization > Settings".
+When data record values are sent to the controller, the values are only validated if the "Manual transfer of individually modified values (teach-in mode)" option is selected for the recipe under "General &gt; Synchronization &gt; Settings".
 
 #### Requirements for using recipes in redundant systems (Runtime Professional)
 
@@ -655,7 +655,7 @@ The "DTL" data type supports time information down to the nanosecond range. Beca
 
 #### Limited number of possible HMI connections
 
-An error message is displayed during compilation of a device indicating that the configuration of the HMI connection in the "Devices & Networks" editor is invalid. The reason might be that the maximum number of possible connections of the HMI device or PLC has been exceeded.
+An error message is displayed during compilation of a device indicating that the configuration of the HMI connection in the "Devices &amp; Networks" editor is invalid. The reason might be that the maximum number of possible connections of the HMI device or PLC has been exceeded.
 
 Check the maximum number of available connections. Consult the device manuals of the devices you are using.
 
@@ -669,7 +669,7 @@ The offset for the start of the address area of the inputs must not be greater t
 
 To configure the address parameters, open the PLC that contains the CPU of the 400 series in HW Config. Select the HMI device that is connected via PROFINET IO from the station window of HW Config. A table with the properties of the HMI device is displayed at the bottom of the station window in the detail view. Select the line containing the addresses of the HMI device in the table and open the object properties using the shortcut menu.
 
-Enable the "Addresses" tab in the "Object properties" dialog. Configure the offset for the inputs under "Inputs > Start". Configure the offset for the outputs under "Outputs > Start".
+Enable the "Addresses" tab in the "Object properties" dialog. Configure the offset for the inputs under "Inputs &gt; Start". Configure the offset for the outputs under "Outputs &gt; Start".
 
 #### RT Advanced communication via Station Manager (SIMATIC NET) with an S7-1200
 
@@ -681,9 +681,9 @@ These restrictions also apply when you use the Station Manager. Connections with
 
 #### Changing the IP settings and device name of a PLC in the Control Panel of the HMI device (Basic Panels)
 
-The Control Panel is open in the "Service and Commissoning > IP-Adaptation" menu on the HMI device. If you want to change the IP settings or the device name of a PLC, note:
+The Control Panel is open in the "Service and Commissoning &gt; IP-Adaptation" menu on the HMI device. If you want to change the IP settings or the device name of a PLC, note:
 
-In the Engineering System, you need to have selected the following options in the Inspector window of the PLC under "Properties > General > PROFINET interface > Ethernet addresses":
+In the Engineering System, you need to have selected the following options in the Inspector window of the PLC under "Properties &gt; General &gt; PROFINET interface &gt; Ethernet addresses":
 
 - "Set IP address using a different method"
 - "Set PROFINET device name using a different method"
@@ -777,15 +777,15 @@ Information that could not be included in the online help and important informat
 
 #### Compiling and loading
 
-If internal errors or warnings occur during compiling, compile the complete project using the command "Compile > Software (rebuild all)" in the shortcut menu of the HMI device.
+If internal errors or warnings occur during compiling, compile the complete project using the command "Compile &gt; Software (rebuild all)" in the shortcut menu of the HMI device.
 
-Before you start productive operation with your project, compile the entire project using the "Compile > Software (rebuild all)" command from the shortcut menu of the HMI device.
+Before you start productive operation with your project, compile the entire project using the "Compile &gt; Software (rebuild all)" command from the shortcut menu of the HMI device.
 
-If you are using HMI tags that are connected to control tags in your project, compile all modified blocks with the command "Compile > Software" in the shortcut menu before you compile the HMI device.
+If you are using HMI tags that are connected to control tags in your project, compile all modified blocks with the command "Compile &gt; Software" in the shortcut menu before you compile the HMI device.
 
 #### Checking the address parameters
 
-When an HMI device is compiled in the project tree with the command "Compile > Hardware and software (changes only)" in the shortcut menu, the address parameters of the HMI device, such as the IP address, are not checked. If you want to ensure that the address parameters are checked as well, you will have to compile the HMI device using the "Compile" button in the "Devices & networks" editor of the toolbar.
+When an HMI device is compiled in the project tree with the command "Compile &gt; Hardware and software (changes only)" in the shortcut menu, the address parameters of the HMI device, such as the IP address, are not checked. If you want to ensure that the address parameters are checked as well, you will have to compile the HMI device using the "Compile" button in the "Devices &amp; networks" editor of the toolbar.
 
 #### Error message when downloading data to the PLC
 
@@ -803,7 +803,7 @@ If characters are not displayed correctly in the transfer alarms during transfer
 
 #### Reducing the project size
 
-When you compile your HMI device, an alarm appears informing you that the size of your project is approaching the system limits for the corresponding HMI device. In this case, perform a complete compilation of the software to reduce the project size. To do this, use the command "Compile > Software (rebuild all)".
+When you compile your HMI device, an alarm appears informing you that the size of your project is approaching the system limits for the corresponding HMI device. In this case, perform a complete compilation of the software to reduce the project size. To do this, use the command "Compile &gt; Software (rebuild all)".
 
 #### Transport password
 
@@ -872,7 +872,7 @@ When very large logs are used, ending runtime can take a long time. Use segmente
 The following programs may start and respond very slowly with Windows 7:
 
 - HMI TouchInputPC
-- SmartServer: <Ctrl+Alt+Del> shortcut in the logon dialog
+- SmartServer: &lt;Ctrl+Alt+Del&gt; shortcut in the logon dialog
 
 The delay is caused by the callback for the Internet certificate validation.
 
@@ -1028,7 +1028,7 @@ If the Engineering System is installed together with Runtime on a PC, the operat
 
 It is possible to disable the automatic checking for software updates and to thus improve performance.
 
-To disable the automatic checking for software updates, go to "Settings > General > Software updates" and deactivate the "Check for updates daily" option.
+To disable the automatic checking for software updates, go to "Settings &gt; General &gt; Software updates" and deactivate the "Check for updates daily" option.
 
 ##### Access to array variables via OPC
 
@@ -1102,7 +1102,7 @@ When you configure autostart on the client, you are required to enter the logon 
 
 In order to ensure the full functionality of the SQL server for WinCC and WinCC Runtime, you need to check the SQL server settings.
 
-1. Start "Programme > Microsoft SQL Server.. > Configuration Tools > SQL Server.. Configuration Manager" in the Start menu.
+1. Start "Programme &gt; Microsoft SQL Server.. &gt; Configuration Tools &gt; SQL Server.. Configuration Manager" in the Start menu.
 2. Click "SQL Server Services" in the tree.
 3. Check the services "SQL Server (WinCC)", "SQL Server (WINCCPLUSMIG)" and "SQL Server Browser".   
    "Automatic" must be entered for "Start Mode".   
@@ -1128,7 +1128,7 @@ The open interfaces of WinCC Runtime Professional do not offer native 64-bit sup
 
 If you use dynamic graphics from a graphics collection, e.g. linked with scripts, these graphics are not updated in the WinCCViewer RT.
 
-Select the "User-defined" option under "Runtime Settings > Graphic Settings".
+Select the "User-defined" option under "Runtime Settings &gt; Graphic Settings".
 
 ##### Runtime Professional: Loading a project without connection to the configuration PC
 
@@ -1153,7 +1153,7 @@ If the Engineering System is installed together with Runtime on a PC, the operat
 
 It is possible to disable the automatic checking for software updates and to thus improve performance.
 
-To disable the automatic checking for software updates, go to "Settings > General > Software updates" and clear the "Check daily for updates" check box.
+To disable the automatic checking for software updates, go to "Settings &gt; General &gt; Software updates" and clear the "Check daily for updates" check box.
 
 ##### Restriction in the online delta loading capability
 
@@ -1357,7 +1357,7 @@ Procedure for non-integrated connections:
 
 Alternatively, you can export the PLC certificate from the TIA Portal in advance and copy it to the "`...\trusted\certs`" folder before starting Runtime. The certificate file must have the following name:
 
-"S7PlusChannel_<PLC_IP>.der", e.g. "S7PlusChannel_192.168.0.1.der"
+"S7PlusChannel_&lt;PLC_IP&gt;.der", e.g. "S7PlusChannel_192.168.0.1.der"
 
 ### Add-ons
 
@@ -1459,7 +1459,7 @@ You can find additional information about industrial cybersecurity under:
 | Symbol | Meaning |
 | --- | --- |
 |  | **Notice** |
-| **Security restrictions and response times in Internet Explorer**  Please note the Internet-specific security restrictions when using the WebNavigator client.  The WebNavigator client may take significantly longer (>20 seconds) than a regular WinCC client to recognize that the WebNavigator server is down or that the communication is faulty. |  |
+| **Security restrictions and response times in Internet Explorer**  Please note the Internet-specific security restrictions when using the WebNavigator client.  The WebNavigator client may take significantly longer (&gt;20 seconds) than a regular WinCC client to recognize that the WebNavigator server is down or that the communication is faulty. |  |
 
 ###### Using a secure connection via HTTPS
 
@@ -1517,7 +1517,7 @@ The following group policy affects the logon behavior of a user with a user cert
 
 | Local group policy | Setting |
 | --- | --- |
-| Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options:  "System cryptography: Force strong key protection for user keys stored on the computer" | User must enter a password each time they use a key |
+| Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Local Policies &gt; Security Options:  "System cryptography: Force strong key protection for user keys stored on the computer" | User must enter a password each time they use a key |
 
 This setting can cause the password prompt for the user certificate to be displayed in the session of another logged-on user when the terminal session is established.
 
@@ -1548,7 +1548,7 @@ Microsoft Redistributable Packages for Visual Studio C++ 2015 are installed alon
 
 For example, if you are using ActiveX controls or Visual Basic projects created with versions prior to Visual Studio 2015, you must install the corresponding package.
 
-The installation files for redistributables < Visual Studio 2015 are included in the WinCC scope of delivery:
+The installation files for redistributables &lt; Visual Studio 2015 are included in the WinCC scope of delivery:
 
 - "Additional Content" DVD:
 
@@ -1585,13 +1585,13 @@ Without the plug-in, the functionality of WinCC Basic Process Control will not b
 
 **Installing the plug-in**
 
-The plug-in is located on the WebNavigator server in the folder <wincc_installationpath>"\WebNavigator\Server\Web\Install\Custom".
+The plug-in is located on the WebNavigator server in the folder &lt;wincc_installationpath&gt;"\WebNavigator\Server\Web\Install\Custom".
 
 You can download the plug-in via the WebNavigator navigation user interface from the download area.
 
 A description of the functions supported/not supported can be found in the WinCC Information System:
 
-- "Options for Process Control > Overview of process control system options > Configuration in the PCS 7 environment > Web client"
+- "Options for Process Control &gt; Overview of process control system options &gt; Configuration in the PCS 7 environment &gt; Web client"
 
 **Dedicated Web server with WinCC Basic Process Control**
 
@@ -1611,7 +1611,7 @@ To increase the security of the system, change the password for the user on a re
 
 You can find more information in the documentation for WinCC/WebNavigator:
 
-- "WinCC/WebNavigator Documentation > Configuring the WebNavigator system > Configuring the WebNavigator Server > Configuring the WebNavigator web page > WinCC Web Configurator"
+- "WinCC/WebNavigator Documentation &gt; Configuring the WebNavigator system &gt; Configuring the WebNavigator Server &gt; Configuring the WebNavigator web page &gt; WinCC Web Configurator"
 
 **Setting a password for the configuration**
 
@@ -1628,7 +1628,7 @@ You can find more information in the "Industry Support Siemens".
 | Symbol | Meaning |
 | --- | --- |
 |  | **Notice** |
-| **Security restrictions and response times in Internet Explorer**  Please note the Internet-specific security restrictions when using the WebNavigator client.  The WebNavigator client may take significantly longer (>20 seconds) than a regular WinCC client to recognize that the WebNavigator server is down or that the communication is faulty. |  |
+| **Security restrictions and response times in Internet Explorer**  Please note the Internet-specific security restrictions when using the WebNavigator client.  The WebNavigator client may take significantly longer (&gt;20 seconds) than a regular WinCC client to recognize that the WebNavigator server is down or that the communication is faulty. |  |
 
 ###### Windows Server operating system: Loading process pictures in WinCCViewerRT
 
@@ -1652,7 +1652,7 @@ If you manage the web clients via group policies, follow these steps:
 1. To open the editor for local group policies, enter "gpedit.msc" in the Windows search field.
 2. Select the following entry in the navigation area:
 
-   - Computer configuration > Administrative templates > Windows components > Internet Explorer > Internet control system > "Advanced" Page
+   - Computer configuration &gt; Administrative templates &gt; Windows components &gt; Internet Explorer &gt; Internet control system &gt; "Advanced" Page
 
    To sort the list alphabetically, click the column header "Setting".
 3. Double-click "Do not save encrypted pages to disk".
@@ -1663,7 +1663,7 @@ If you manage the web clients via group policies, follow these steps:
 
 To be able to print out on the client, you need to define the following Firewall settings for the profiles used:
 
-1. Open "Control system > System and security > Windows firewall".
+1. Open "Control system &gt; System and security &gt; Windows firewall".
 2. In the navigation bar, click "Allow a program or feature through Windows Firewall".
 3. In the "Allowed programs and features:" list, activate the entry "File and printer sharing" for the relevant profile.
 4. Return to the Windows Firewall start page.
@@ -1690,7 +1690,7 @@ Use the WinCC AlarmControl that is offered as of WinCC V7.
 
 ###### WebNavigator client: Diagnostics file "WebNavReconnnect.log"
 
-After installation of the WebNavigator client, the diagnostics file "WebNavReconnnect.log" is saved in the folder "<User>\Application Data\LocalLow\Siemens\SIMATIC.WinCC\WebNavigator\Client".
+After installation of the WebNavigator client, the diagnostics file "WebNavReconnnect.log" is saved in the folder "&lt;User&gt;\Application Data\LocalLow\Siemens\SIMATIC.WinCC\WebNavigator\Client".
 
 The diagnostics file will be saved into the respective user profile so that this user no longer requires administrator rights.
 
@@ -1742,7 +1742,7 @@ void OnClick(char* lpszPictureName, char* lpszObjectName, char* lpszPropertyName
 
         MyStyle.bAdaptSize = TRUE;
 
-        bResult = SSMRTOpenTopFieldEx (SSMGetScreen(lpszPictureName), "PictureA.pdl", szFullTopfieldPath, lBufferLen, &MyStyle, &Err);
+        bResult = SSMRTOpenTopFieldEx (SSMGetScreen(lpszPictureName), "PictureA.pdl", szFullTopfieldPath, lBufferLen, &amp;MyStyle, &amp;Err);
 
     #else
 
@@ -1754,7 +1754,7 @@ void OnClick(char* lpszPictureName, char* lpszObjectName, char* lpszPropertyName
 
         dwTopfieldStyle = TOP_FIELDFIXEDSIZE;
 
-        bResult = _SSMOpenTopField3 (SSMGetScreen(lpszPictureName), "PictureA.pdl", dwTopfieldStyle, szFullTopfieldPath, lBufferLen, &lTopfieldUsed, &Err, 0, 0, TRUE);
+        bResult = _SSMOpenTopField3 (SSMGetScreen(lpszPictureName), "PictureA.pdl", dwTopfieldStyle, szFullTopfieldPath, lBufferLen, &amp;lTopfieldUsed, &amp;Err, 0, 0, TRUE);
 
     #endif
 
@@ -1804,11 +1804,11 @@ To continue protecting Internet Explorer from foreign ActiveX controls, check th
 
 For more information, refer to the following documentation:
 
-- WinCC/WebNavigator: "WinCC/WebNavigator Installation Notes > Installation of WebNavigator Client > AUTOHOTSPOT"
+- WinCC/WebNavigator: "WinCC/WebNavigator Installation Notes &gt; Installation of WebNavigator Client &gt; AUTOHOTSPOT"
 
 ###### WebNavigator client: Updating pictures with faceplates
 
-To display changed faceplates in process pictures, refresh the view of the web client in the browser, e.g. with <F5> or using the ![WebNavigator client: Updating pictures with faceplates](images/152318311947_DV_resource.Stream@PNG-de-DE.png) button.
+To display changed faceplates in process pictures, refresh the view of the web client in the browser, e.g. with &lt;F5&gt; or using the ![WebNavigator client: Updating pictures with faceplates](images/152318311947_DV_resource.Stream@PNG-de-DE.png) button.
 
 #### Redundancy
 

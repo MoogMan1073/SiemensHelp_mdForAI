@@ -293,14 +293,14 @@ The statements made here also apply to servo motors with pulse interface.
 
 The CPU outputs the velocity and direction of travel via two outputs.
 
-The relationships between the configuration and direction of travel differ depending on the selected signal type. You can configure the following signal types in the axis configuration under "Basic parameters > General":
+The relationships between the configuration and direction of travel differ depending on the selected signal type. You can configure the following signal types in the axis configuration under "Basic parameters &gt; General":
 
 - "PTO – pulse A and direction B"
 - "PTO – clock up A and clock down B" (as of V4)
 - "PTO – A/B phase-shifted" (as of V4)
 - "PTO – A/B phase-shifted, quadruple" (as of V4)
 
-You configure the direction under "Extended Parameters > Mechanics" in the axis configuration. If you select the "Invert direction" option, the direction logic described below for the respective signal type is inverted.
+You configure the direction under "Extended Parameters &gt; Mechanics" in the axis configuration. If you select the "Invert direction" option, the direction logic described below for the respective signal type is inverted.
 
 ##### PTO – pulse (A) and direction (B)
 
@@ -444,11 +444,11 @@ For SINAMICS drives as of V4.x and PROFIdrive encoders as of product version A16
 
 The corresponding parameters are transferred after the (re)initialization of the technology object and (re)start of the drives and the CPU. Changes in the drive configuration are transferred after restart of the drive or technology object.
 
-The successful transfer of the parameters can be verified in the controller in the tags of the <axis name>.StatusDrive.AdaptionState = 2 and <axis name>.StatusSensor[1].AdaptionState = 2 technology objects.
+The successful transfer of the parameters can be verified in the controller in the tags of the &lt;axis name&gt;.StatusDrive.AdaptionState = 2 and &lt;axis name&gt;.StatusSensor[1].AdaptionState = 2 technology objects.
 
 ##### Parameters
 
-The controller settings are made in the TIA Portal under "Technology object > Configuration > Basic parameters > Drive/encoder".
+The controller settings are made in the TIA Portal under "Technology object &gt; Configuration &gt; Basic parameters &gt; Drive/encoder".
 
 The drive and encoder settings are made in the configuration or the respective hardware.
 
@@ -457,21 +457,21 @@ The following table compares the settings in the TIA Portal, in the controller a
 | Setting in the TIA Portal | Controller variable in the technology data block | Drive parameter | Automatic transfer |
 | --- | --- | --- | --- |
 | **Drive** |  |  |  |
-| Telegram number | Input address telegram  <Axis name>.Actor.Interface.AddressIn | Telegram number P922 | - |
-| Output address telegram  <Axis name>.Actor.Interface.AddressOut |  |  |  |
-| Reference speed in [1/min] | <Axis name>.Actor.DriveParameter.ReferenceSpeed | SINAMICS drives: P2000 | X |
-| Maximum speed of motor in [1/min] | <Axis name>.Actor.DriveParameter.MaxSpeed | SINAMICS drives: P1082 | X |
-| Drive | <Axis name>.Actor.Type  0 = analog drive connection  1 = PROFIdrive  2 = PTO (pulse train output) | - | - |
+| Telegram number | Input address telegram  &lt;Axis name&gt;.Actor.Interface.AddressIn | Telegram number P922 | - |
+| Output address telegram  &lt;Axis name&gt;.Actor.Interface.AddressOut |  |  |  |
+| Reference speed in [1/min] | &lt;Axis name&gt;.Actor.DriveParameter.ReferenceSpeed | SINAMICS drives: P2000 | X |
+| Maximum speed of motor in [1/min] | &lt;Axis name&gt;.Actor.DriveParameter.MaxSpeed | SINAMICS drives: P1082 | X |
+| Drive | &lt;Axis name&gt;.Actor.Type  0 = analog drive connection  1 = PROFIdrive  2 = PTO (pulse train output) | - | - |
 | **Encoder** |  |  |  |
-| Telegram | <Axis name>.Sensor[1].Interface.AddressIn | P922 | - |
-| <Axis name>.Sensor[1].Interface.Addressout |  |  |  |
-| Encoder type  - Linear incremental - Linear absolute - Rotary incremental - Rotary absolute | <Axis name>.Sensor[1].System  0: Linear  1: Rotary | P979[1] Bit0 Encoder 1  P979[11] Bit0 Encoder 2 | X |
-| <Axis name>.Sensor[1].Type  0: Incremental 1: Absolute | P979[5] Encoder 1  P979[15] Encoder 2 | - |  |
-| Resolution, linear encoder  The grid spacing is specified on the nameplate of the encoder as a separation distance of the marks on the linear measuring system. | <Axis name>.Sensor[1].Parameter.Resolution | P979[2] Encoder 1  P979[12] Encoder 2 | X |
-| Increments per revolution, rotary encoder | <Axis name>.Sensor[1].Parameter.StepsPerRevolution | P979[2] Encoder 1  P979[12] Encoder 2 | X |
-| Number of bits for fine resolution XIST1   Cyclic actual encoder value, linear or rotary encoder | <Axis name>.Sensor[1].Parameter.FineResolutionXist1 | P979[3] Encoder 1  P979[13] Encoder 2 | X |
-| Number of bits for fine resolution XIST2   Absolute value of the encoder, linear or rotary encoder | <Axis name>.Sensor[1].Parameter.FineResolutionXist2 | P979[4] Encoder 1  P979[14] Encoder 2 | X |
-| Differentiable encoder revolutions, rotary absolute encoder | <Axis name>.Sensor[1].Parameter.DeterminableRevolutions | P979[5] Encoder 1  P979[15] Encoder 2 | X |
+| Telegram | &lt;Axis name&gt;.Sensor[1].Interface.AddressIn | P922 | - |
+| &lt;Axis name&gt;.Sensor[1].Interface.Addressout |  |  |  |
+| Encoder type  - Linear incremental - Linear absolute - Rotary incremental - Rotary absolute | &lt;Axis name&gt;.Sensor[1].System  0: Linear  1: Rotary | P979[1] Bit0 Encoder 1  P979[11] Bit0 Encoder 2 | X |
+| &lt;Axis name&gt;.Sensor[1].Type  0: Incremental 1: Absolute | P979[5] Encoder 1  P979[15] Encoder 2 | - |  |
+| Resolution, linear encoder  The grid spacing is specified on the nameplate of the encoder as a separation distance of the marks on the linear measuring system. | &lt;Axis name&gt;.Sensor[1].Parameter.Resolution | P979[2] Encoder 1  P979[12] Encoder 2 | X |
+| Increments per revolution, rotary encoder | &lt;Axis name&gt;.Sensor[1].Parameter.StepsPerRevolution | P979[2] Encoder 1  P979[12] Encoder 2 | X |
+| Number of bits for fine resolution XIST1   Cyclic actual encoder value, linear or rotary encoder | &lt;Axis name&gt;.Sensor[1].Parameter.FineResolutionXist1 | P979[3] Encoder 1  P979[13] Encoder 2 | X |
+| Number of bits for fine resolution XIST2   Absolute value of the encoder, linear or rotary encoder | &lt;Axis name&gt;.Sensor[1].Parameter.FineResolutionXist2 | P979[4] Encoder 1  P979[14] Encoder 2 | X |
+| Differentiable encoder revolutions, rotary absolute encoder | &lt;Axis name&gt;.Sensor[1].Parameter.DeterminableRevolutions | P979[5] Encoder 1  P979[15] Encoder 2 | X |
 
 ---
 
@@ -547,7 +547,7 @@ The following simplified function chart shows the direct data connection to PROF
 
 | Symbol | Meaning |
 | --- | --- |
-| ① | The organization block "MC-Servo" calculates the position controller.   At the start of "MC-Servo", the input telegram of the drive or encoder is read (⑥ -> ⑤ -> ③). If an organization block "MC-PreServo" was added, the telegram is read at the beginning of "MC-PreServo".  At the end of "MC-Servo", the output telegram is written to the drive or encoder (⑥ -> ⑤ -> ③). If an organization block "MC-PostServo" was added, the telegram is written at the end of "MC-PostServo". |
+| ① | The organization block "MC-Servo" calculates the position controller.   At the start of "MC-Servo", the input telegram of the drive or encoder is read (⑥ -&gt; ⑤ -&gt; ③). If an organization block "MC-PreServo" was added, the telegram is read at the beginning of "MC-PreServo".  At the end of "MC-Servo", the output telegram is written to the drive or encoder (⑥ -&gt; ⑤ -&gt; ③). If an organization block "MC-PostServo" was added, the telegram is written at the end of "MC-PostServo". |
 | ② | In every Motion application cycle, the organization block "MC-Interpolator" is called after the "MC-Servo".  In "MC-Interpolator", the Motion Control instructions are evaluated, setpoints are generated for the next Motion application cycle and the technology object is monitored. |
 | ③ | The process image partition "PIP OB servo" of the inputs is updated in the Motion application cycle. |
 | ④ | The process image partition "PIP OB servo" of the outputs is updated in the Motion application cycle. |
@@ -569,7 +569,7 @@ The organization blocks "MC-PreServo" and "MC-PostServo" can be added in the pro
 | Symbol | Meaning |
 | --- | --- |
 | ① | The "MC-PreServo" is called before the "MC-Servo".  In the user program of the "MC-PreServo", transfer the content of the input telegram from the process image partition "PIP OB servo" ⑤ to the data block of the data interface.  In the other user program of the "MC-PreServo", the input area of the telegram can be processed or evaluated. |
-| ② | The organization block "MC-Servo" calculates the position controller.   At the start of "MC-Servo", the input telegram of the drive or encoder is read from the data block of the data interface (① -> ②).  At the end of "MC-Servo", the output telegram of the drive or encoder is written to the data block of the data interface (② -> ③). |
+| ② | The organization block "MC-Servo" calculates the position controller.   At the start of "MC-Servo", the input telegram of the drive or encoder is read from the data block of the data interface (① -&gt; ②).  At the end of "MC-Servo", the output telegram of the drive or encoder is written to the data block of the data interface (② -&gt; ③). |
 | ③ | The "MC-PostServo" is called after the "MC-Servo".  In the user program of the "MC-PostServo", the output area of the telegram can be processed or evaluated.  At the end of the user program of the "MC-PostServo", transfer the content of the output telegram from the data interface of the data block to the process image partition "PIP OB servo" ⑥. |
 | ④ | In every Motion application cycle, the organization block "MC-Interpolator" is called after the "MC-PostServo".  In "MC-Interpolator", the Motion Control instructions are evaluated, setpoints are generated for the next Motion application cycle and the technology object is monitored. |
 | ⑤ | The process image partition "PIP OB servo" of the inputs is updated in the Motion application cycle. |
@@ -593,7 +593,7 @@ To create the data block, follow the steps described below:
 
    - "Only store in load memory"
    - "Data block write-protected in the device"
-   - for technology objects < V7.0 "Optimized block access"
+   - for technology objects &lt; V7.0 "Optimized block access"
 4. Open the data block in the block editor.
 5. Insert a "PD_TELx" type variable in the block editor.
 6. Compile the data block for the data connection before you use it in the configuration of the axes.
@@ -610,7 +610,7 @@ This variable contains the "Input" variable structure for the input area of the 
 
 Proceed as decribed below for the configuration of the axis:
 
-1. Open the configuration window "Hardware interface > Drive" or "Hardware interface > Encoder".
+1. Open the configuration window "Hardware interface &gt; Drive" or "Hardware interface &gt; Encoder".
 2. In the Data block drop-down list, select "Data block".
 3. In the "Data block" field, select the previously created data block.   
    Open this data block and select the tag name defined for the drive or encoder.
@@ -656,7 +656,7 @@ If the output area is to be modified, this must be done before the assignment in
 
 You can find an application example for the use of MC-PreServo and MC-PostServo at:
 
-<https://support.industry.siemens.com/cs/document/109741575>
+[https://support.industry.siemens.com/cs/document/109741575](https://support.industry.siemens.com/cs/document/109741575)
 
 ---
 
@@ -704,16 +704,16 @@ To create the data block, follow the steps described below:
 
    - "Only store in load memory"
    - "Data block write-protected in the device"
-   - for technology objects < V7.0 "Optimized block access"
+   - for technology objects &lt; V7.0 "Optimized block access"
 4. Open the data block in the block editor.
 5. Insert a variable of the "WORD" data type in the block editor.
 6. Compile the data block for the data connection before you use it in the configuration of the axes.
 
 ##### Configuring data connection via a data block
 
-Proceed in the configuration as described below ("Analog drive connection" must be selected in the Basic parameters > General configuration window):
+Proceed in the configuration as described below ("Analog drive connection" must be selected in the Basic parameters &gt; General configuration window):
 
-1. Open the configuration window Basic parameters > Drive.
+1. Open the configuration window Basic parameters &gt; Drive.
 2. Select the previously defined variable of the data block in the "Analog output" box.
 
 ##### Set analog output address in the TPA OB Servo process image
@@ -780,7 +780,7 @@ You can set the Motion Control application cycle and the priority of the organiz
 
 ###### Motion Control application cycle
 
-You can set the Motion Control application cycle, in which the MC-Servo [OB91] is called, in the properties of the organization block in "General > Cycle Time".
+You can set the Motion Control application cycle, in which the MC-Servo [OB91] is called, in the properties of the organization block in "General &gt; Cycle Time".
 
 The MC-Servo [OB91] is called cyclically with the specified "application cycle".
 
@@ -807,7 +807,7 @@ All times should be selected as integral multiples of one another.
 
 ###### Priority
 
-You can configure the priority of the organization blocks as needed in their properties under "General > Properties > Priority":
+You can configure the priority of the organization blocks as needed in their properties under "General &gt; Properties &gt; Priority":
 
 - MC-Servo [OB91]
 
@@ -977,7 +977,7 @@ The jerk limit gives a "smoothed" velocity profile of the axis motion. This ensu
 
 Homing means matching the axis coordinates of the technology object to the real, physical location of the drive. For position-controlled axes the entries and displays for the position refer exactly to these axis coordinates. Therefore, agreement between the axis coordinates and the real situation is extremely important. This step is necessary to ensure that the absolute target position of the axis is also achieved exactly with the drive.
 
-In the S7-1200 CPU, axis homing is implemented with the motion control instruction, "MC_Home". The "Homed" status is displayed in the tags of the technology object <Axis name>.StatusBits.HomingDone . The following homing modes exist:
+In the S7-1200 CPU, axis homing is implemented with the motion control instruction, "MC_Home". The "Homed" status is displayed in the tags of the technology object &lt;Axis name&gt;.StatusBits.HomingDone . The following homing modes exist:
 
 #### Homing modes
 
@@ -998,7 +998,7 @@ In the S7-1200 CPU, axis homing is implemented with the motion control instructi
 
 #### Resetting the "Homed" status
 
-The "Homed" status of a technology object (<Axis name>.StatusBits.HomingDone) is reset under the following conditions:
+The "Homed" status of a technology object (&lt;Axis name&gt;.StatusBits.HomingDone) is reset under the following conditions:
 
 - Drive connection via PTO (Pulse Train Output):
 
@@ -1007,8 +1007,8 @@ The "Homed" status of a technology object (<Axis name>.StatusBits.HomingDone) is
     (After successful completion of the homing operation, the "Homed" status is set again.)
   - Disabling of axis by the "MC_Power" Motion Control instruction
   - Changeover between automatic mode and manual control
-  - After POWER OFF -> POWER ON of the CPU
-  - After CPU restart (RUN-STOP -> STOP-RUN)
+  - After POWER OFF -&gt; POWER ON of the CPU
+  - After CPU restart (RUN-STOP -&gt; STOP-RUN)
 - Technology objects with incremental actual values:
 
   - Start an "MC_Home" command for active homing
@@ -1072,9 +1072,9 @@ This section contains information on the following topics:
 
 - [Overview of versions (S7-1200)](#overview-of-versions-s7-1200)
 - [Changing a technology version (S7-1200)](#changing-a-technology-version-s7-1200)
-- [Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
-- [Compatibility list of variables V4...5 <-> V6 (S7-1200)](#compatibility-list-of-variables-v45---v6-s7-1200)
-- [Compatibility telegrams V6 <-> V7 (S7-1200)](#compatibility-telegrams-v6---v7-s7-1200)
+- [Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+- [Compatibility list of variables V4...5 &lt;-&gt; V6 (S7-1200)](#compatibility-list-of-variables-v45---v6-s7-1200)
+- [Compatibility telegrams V6 &lt;-&gt; V7 (S7-1200)](#compatibility-telegrams-v6---v7-s7-1200)
 - [Status of limit switch (S7-1200)](#status-of-limit-switch-s7-1200)
 
 ### Overview of versions (S7-1200)
@@ -1083,9 +1083,9 @@ The relationship between the relevant versions for S7-1200 Motion Control can be
 
 #### Technology version
 
-You can check the currently selected technology version in the "Instructions" task card in the folder "Technology > Motion Control" and in the "Technology object > Add new object" dialog.
+You can check the currently selected technology version in the "Instructions" task card in the folder "Technology &gt; Motion Control" and in the "Technology object &gt; Add new object" dialog.
 
-Select the technology version in the "Instructions" task card in the folder "Technology > Motion Control".
+Select the technology version in the "Instructions" task card in the folder "Technology &gt; Motion Control".
 
 If a technology object with an alternative version is added in the "Add new object" dialog, the technology version will also be changed.
 
@@ -1097,11 +1097,11 @@ If a technology object with an alternative version is added in the "Add new obje
 
 #### Version of the technology object
 
-The version of a technology object can be checked in the inspector window under "Properties > General > Information" in the "Version" box.
+The version of a technology object can be checked in the inspector window under "Properties &gt; General &gt; Information" in the "Version" box.
 
 #### Motion Control instruction version
 
-The Motion Control instruction version can be checked in the inspector window under "Properties > General > Information" in the "Version" box.
+The Motion Control instruction version can be checked in the inspector window under "Properties &gt; General &gt; Information" in the "Version" box.
 
 If the Motion Control instruction version used is not in line with the following compatibility list, the relevant Motion Control instructions will be highlighted in the program editor.
 
@@ -1124,7 +1124,7 @@ If the Motion Control instruction version used is not in line with the following
 
 [Changing a technology version (S7-1200)](#changing-a-technology-version-s7-1200)
   
-[Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+[Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
   
 [Status of limit switch (S7-1200)](#status-of-limit-switch-s7-1200)
 
@@ -1143,7 +1143,7 @@ Before you can access all the benefits of a new technology version, you may need
 To set or change the technology version, follow these steps:
 
 1. Open the program editor (e.g., by opening the OB1).
-2. In the "Instructions" task card, select the desired technology version in the "Technology > Motion Control" folder.
+2. In the "Instructions" task card, select the desired technology version in the "Technology &gt; Motion Control" folder.
 3. Save and compile the project. Pay attention to any error information that is displayed during compilation. Deal with the causes of the errors indicated.
 4. Check the configuration of the technology objects.
 5. If necessary, adapt the tag names in the following objects in line with the compatibility list.
@@ -1176,77 +1176,77 @@ The following tags are new or have been adapted and may have to be corrected in 
 
 | Tag name V1.0 to V3.0 | Tag name as of V4.0 | Automatic conversion V1 ... 3 to ≥ V4 |
 | --- | --- | --- |
-| <Axis name>.Config.DynamicDefaults.Acceleration | <Axis name>.DynamicDefaults.Acceleration | Yes |
-| <Axis name>.Config.DynamicDefaults.Deceleration | <Axis name>.DynamicDefaults.Deceleration | Yes |
-| <Axis name>.Config.DynamicDefaults.EmergencyDeceleration | <Axis name>.DynamicDefaults.EmergencyDeceleration | Yes |
-| <Axis name>.Config.DynamicDefaults.Jerk | <Axis name>.DynamicDefaults.Jerk | Yes |
-| <Axis name>.Config.DynamicDefaults.JerkActive | Not available  The jerk is activated if the configured jerk is > 0.004 pulse/s<sup>3</sup>. | No |
-| <Axis name>.Config.DynamicLimits.MaxVelocity | <Axis name>.DynamicLimits.MaxVelocity | Yes |
-| <Axis name>.Config.DynamicLimits.MinVelocity | <Axis name>.DynamicLimits.MinVelocity | Yes |
-| <Axis name>.Config.General.LengthUnit | <Axis name>.Units.LengthUnit | Yes |
-| <Axis name>.Config.Homing.AutoReversal | <Axis name>.Homing.AutoReversal | Yes |
-| <Axis name>.Config.Homing.Direction | <Axis name>.Homing.ApproachDirection | Yes |
-| <Axis name>.Config.Homing.FastVelocity | <Axis name>.Homing.ApproachVelocity | Yes |
-| <Axis name>.Config.Homing.Offset | <Axis name>.Sensor[1].ActiveHoming.HomePositionOffset | Yes |
-| <Axis name>.Config.Homing.SideActiveHoming | <Axis name>.Sensor[1].ActiveHoming.SideInput | Yes |
-| <Axis name>.Config.Homing.SidePassiveHoming | <Axis name>.Sensor[1].PassiveHoming.SideInput | Yes |
-| <Axis name>.Config.Homing.SlowVelocity | <Axis name>.Homing.ReferencingVelocity | Yes |
-| <Axis name>.Config.Homing.SwitchedLevel | <Axis name>.Sensor[1].ActiveHoming.SwitchLevel <Axis name>.Sensor[1].PassiveHoming.SwitchLevel | No |
-| <Axis name>.Config.Mechanics.InverseDirection | <Axis name>.Actor.InverseDirection | Yes |
-| <Axis name>.Config.Mechanics.LeadScrew | <Axis name>.Mechanics.LeadScrew | Yes |
-| <Axis name>.Config.Mechanics.PulsesPerDriveRevolution | <Axis name>.Actor.DriveParameter.PulsesPerDriveRevolution | Yes |
-| <Axis name>.Config.PositionLimits_HW.Active | <Axis name>.PositionLimitsHW.Active | Yes |
-| <Axis name>.Config.PositionLimits_HW.MaxSwitchedLevel | <Axis name>.PositionLimitsHW.MaxSwitchLevel | Yes |
-| <Axis name>.Config.PositionLimits_HW.MinSwitchedLevel | <Axis name>.PositionLimitsHW.MinSwitchLevel | Yes |
-| <Axis name>.Config.PositionLimits_SW.Active | <Axis name>.PositionLimitsSW.Active | Yes |
-| <Axis name>.Config.PositionLimits_SW.MaxPosition | <Axis name>.PositionLimitsSW.MaxPosition | Yes |
-| <Axis name>.Config.PositionLimits_SW.MinPosition | <Axis name>.PositionLimitsSW.MinPosition | Yes |
-| Not available | <Axis name>.Actor.DirectionMode | No |
-| Not available | <Axis name>.Actor.Type | No |
-| Not available | <Axis name>.Sensor[1].ActiveHoming.Mode | No |
-| Not available | <Axis name>.Sensor[1].PassiveHoming.Mode | No |
+| &lt;Axis name&gt;.Config.DynamicDefaults.Acceleration | &lt;Axis name&gt;.DynamicDefaults.Acceleration | Yes |
+| &lt;Axis name&gt;.Config.DynamicDefaults.Deceleration | &lt;Axis name&gt;.DynamicDefaults.Deceleration | Yes |
+| &lt;Axis name&gt;.Config.DynamicDefaults.EmergencyDeceleration | &lt;Axis name&gt;.DynamicDefaults.EmergencyDeceleration | Yes |
+| &lt;Axis name&gt;.Config.DynamicDefaults.Jerk | &lt;Axis name&gt;.DynamicDefaults.Jerk | Yes |
+| &lt;Axis name&gt;.Config.DynamicDefaults.JerkActive | Not available  The jerk is activated if the configured jerk is &gt; 0.004 pulse/s<sup>3</sup>. | No |
+| &lt;Axis name&gt;.Config.DynamicLimits.MaxVelocity | &lt;Axis name&gt;.DynamicLimits.MaxVelocity | Yes |
+| &lt;Axis name&gt;.Config.DynamicLimits.MinVelocity | &lt;Axis name&gt;.DynamicLimits.MinVelocity | Yes |
+| &lt;Axis name&gt;.Config.General.LengthUnit | &lt;Axis name&gt;.Units.LengthUnit | Yes |
+| &lt;Axis name&gt;.Config.Homing.AutoReversal | &lt;Axis name&gt;.Homing.AutoReversal | Yes |
+| &lt;Axis name&gt;.Config.Homing.Direction | &lt;Axis name&gt;.Homing.ApproachDirection | Yes |
+| &lt;Axis name&gt;.Config.Homing.FastVelocity | &lt;Axis name&gt;.Homing.ApproachVelocity | Yes |
+| &lt;Axis name&gt;.Config.Homing.Offset | &lt;Axis name&gt;.Sensor[1].ActiveHoming.HomePositionOffset | Yes |
+| &lt;Axis name&gt;.Config.Homing.SideActiveHoming | &lt;Axis name&gt;.Sensor[1].ActiveHoming.SideInput | Yes |
+| &lt;Axis name&gt;.Config.Homing.SidePassiveHoming | &lt;Axis name&gt;.Sensor[1].PassiveHoming.SideInput | Yes |
+| &lt;Axis name&gt;.Config.Homing.SlowVelocity | &lt;Axis name&gt;.Homing.ReferencingVelocity | Yes |
+| &lt;Axis name&gt;.Config.Homing.SwitchedLevel | &lt;Axis name&gt;.Sensor[1].ActiveHoming.SwitchLevel &lt;Axis name&gt;.Sensor[1].PassiveHoming.SwitchLevel | No |
+| &lt;Axis name&gt;.Config.Mechanics.InverseDirection | &lt;Axis name&gt;.Actor.InverseDirection | Yes |
+| &lt;Axis name&gt;.Config.Mechanics.LeadScrew | &lt;Axis name&gt;.Mechanics.LeadScrew | Yes |
+| &lt;Axis name&gt;.Config.Mechanics.PulsesPerDriveRevolution | &lt;Axis name&gt;.Actor.DriveParameter.PulsesPerDriveRevolution | Yes |
+| &lt;Axis name&gt;.Config.PositionLimits_HW.Active | &lt;Axis name&gt;.PositionLimitsHW.Active | Yes |
+| &lt;Axis name&gt;.Config.PositionLimits_HW.MaxSwitchedLevel | &lt;Axis name&gt;.PositionLimitsHW.MaxSwitchLevel | Yes |
+| &lt;Axis name&gt;.Config.PositionLimits_HW.MinSwitchedLevel | &lt;Axis name&gt;.PositionLimitsHW.MinSwitchLevel | Yes |
+| &lt;Axis name&gt;.Config.PositionLimits_SW.Active | &lt;Axis name&gt;.PositionLimitsSW.Active | Yes |
+| &lt;Axis name&gt;.Config.PositionLimits_SW.MaxPosition | &lt;Axis name&gt;.PositionLimitsSW.MaxPosition | Yes |
+| &lt;Axis name&gt;.Config.PositionLimits_SW.MinPosition | &lt;Axis name&gt;.PositionLimitsSW.MinPosition | Yes |
+| Not available | &lt;Axis name&gt;.Actor.DirectionMode | No |
+| Not available | &lt;Axis name&gt;.Actor.Type | No |
+| Not available | &lt;Axis name&gt;.Sensor[1].ActiveHoming.Mode | No |
+| Not available | &lt;Axis name&gt;.Sensor[1].PassiveHoming.Mode | No |
 
 #### ErrorBits tags (positioning axis)
 
 | Tag name V1.0 to V3.0 | Tag name as of V4.0 | Automatic conversion V1 ... 3 to ≥ V4 |
 | --- | --- | --- |
-| <Axis name>.ErrorBits.HwLimitMax | <Axis name>.ErrorBits.HWLimit  (Note the new status bits and the section [Status of the limit switch](#status-of-limit-switch-s7-1200).) | No |
-| <Axis name>.ErrorBits.HwLimitMin |  |  |
-| <Axis name>.ErrorBits.SwLimitMaxExceeded | <Axis name>.ErrorBits.SWLimit  (Note the new status bits and the section [Status of the limit switch](#status-of-limit-switch-s7-1200).) | No |
-| <Axis name>.ErrorBits.SwLimitMaxReached |  |  |
-| <Axis name>.ErrorBits.SwLimitMinExceeded |  |  |
-| <Axis name>.ErrorBits.SwLimitMinReached |  |  |
-| Not available | <Axis name>.ErrorBits.DirectionFault | No |
+| &lt;Axis name&gt;.ErrorBits.HwLimitMax | &lt;Axis name&gt;.ErrorBits.HWLimit  (Note the new status bits and the section [Status of the limit switch](#status-of-limit-switch-s7-1200).) | No |
+| &lt;Axis name&gt;.ErrorBits.HwLimitMin |  |  |
+| &lt;Axis name&gt;.ErrorBits.SwLimitMaxExceeded | &lt;Axis name&gt;.ErrorBits.SWLimit  (Note the new status bits and the section [Status of the limit switch](#status-of-limit-switch-s7-1200).) | No |
+| &lt;Axis name&gt;.ErrorBits.SwLimitMaxReached |  |  |
+| &lt;Axis name&gt;.ErrorBits.SwLimitMinExceeded |  |  |
+| &lt;Axis name&gt;.ErrorBits.SwLimitMinReached |  |  |
+| Not available | &lt;Axis name&gt;.ErrorBits.DirectionFault | No |
 
 #### MotionStatus tags (positioning axis)
 
 | Tag name V1.0 to V3.0 | Tag name as of V4.0 | Automatic conversion V1 ... 3 to ≥ V4 |
 | --- | --- | --- |
-| <Axis name>.MotionStatus.Distance | <Axis name>.StatusPositioning.Distance | Yes |
-| <Axis name>.MotionStatus.Position | <Axis name>.Position | Yes |
-| <Axis name>.MotionStatus.TargetPosition | <Axis name>.StatusPositioning.TargetPosition | Yes |
-| <Axis name>.MotionStatus.Velocity | <Axis name>.Velocity | Yes |
+| &lt;Axis name&gt;.MotionStatus.Distance | &lt;Axis name&gt;.StatusPositioning.Distance | Yes |
+| &lt;Axis name&gt;.MotionStatus.Position | &lt;Axis name&gt;.Position | Yes |
+| &lt;Axis name&gt;.MotionStatus.TargetPosition | &lt;Axis name&gt;.StatusPositioning.TargetPosition | Yes |
+| &lt;Axis name&gt;.MotionStatus.Velocity | &lt;Axis name&gt;.Velocity | Yes |
 
 #### StatusBits tags (positioning axis)
 
 | Tag name V1.0 to V3.0 | Tag name as of V4.0 | Automatic conversion V1 ... 3 to ≥ V4 |
 | --- | --- | --- |
-| <Axis name>.StatusBits.Homing | <Axis name>.StatusBits.HomingCommand | Yes |
-| <Axis name>.StatusBits.SpeedCommand | <Axis name>.StatusBits.VelocityCommand | Yes |
-| Not available | <Axis name>.StatusBits.HWLimitMaxActive | No |
-| Not available | <Axis name>.StatusBits.HWLimitMinActive | No |
-| Not available | <Axis name>.StatusBits.SWLimitMaxActive | No |
-| Not available | <Axis name>.StatusBits.SWLimitMinActive | No |
+| &lt;Axis name&gt;.StatusBits.Homing | &lt;Axis name&gt;.StatusBits.HomingCommand | Yes |
+| &lt;Axis name&gt;.StatusBits.SpeedCommand | &lt;Axis name&gt;.StatusBits.VelocityCommand | Yes |
+| Not available | &lt;Axis name&gt;.StatusBits.HWLimitMaxActive | No |
+| Not available | &lt;Axis name&gt;.StatusBits.HWLimitMinActive | No |
+| Not available | &lt;Axis name&gt;.StatusBits.SWLimitMaxActive | No |
+| Not available | &lt;Axis name&gt;.StatusBits.SWLimitMinActive | No |
 
 #### Tags (command table)
 
 | Tag name V1.0 to V3.0 | Tag name as of V4.0 | Automatic conversion V1 ... 3 to ≥ V4 |
 | --- | --- | --- |
-| <Command table>.Config.Command[n].Position | <Command table>.Command[n].Position | Yes |
-| <Command table>.Config.Command[n].Velocity | <Command table>.Command[n].Velocity | Yes |
-| <Command table>.Config.Command[n].Duration | <Command table>.Command[n].Duration | Yes |
-| <Command table>.Config.Command[n].NextStep | <Command table>.Command[n].NextStep | Yes |
-| <Command table>.Config.Command[n].StepCode | <Command table>.Command[n].StepCode | Yes |
+| &lt;Command table&gt;.Config.Command[n].Position | &lt;Command table&gt;.Command[n].Position | Yes |
+| &lt;Command table&gt;.Config.Command[n].Velocity | &lt;Command table&gt;.Command[n].Velocity | Yes |
+| &lt;Command table&gt;.Config.Command[n].Duration | &lt;Command table&gt;.Command[n].Duration | Yes |
+| &lt;Command table&gt;.Config.Command[n].NextStep | &lt;Command table&gt;.Command[n].NextStep | Yes |
+| &lt;Command table&gt;.Config.Command[n].StepCode | &lt;Command table&gt;.Command[n].StepCode | Yes |
 
 ---
 
@@ -1272,12 +1272,12 @@ The following tags are new or have been adapted and may need to be corrected in 
 
 | Variable name V4.0 to V5.0 | Variable name as of V6.0 | Automatic conversion V4...5 to ≥ V6 |
 | --- | --- | --- |
-| <Axis name>.PositionLimitsSW.Active | <Axis name>.PositionLimits_SW.Active | Yes |
-| <Axis name>.PositionLimitsSW.MinPosition | <Axis name>.PositionLimits_SW.MinPosition | Yes |
-| <Axis name>.PositionLimitsSW.MaxPosition | <Axis name>.PositionLimits_SW.MaxPosition | Yes |
-| <Axis name>.PositionLimitsHW.Active | <Axis name>.PositionLimits_HW.Active | Yes |
-| <Axis name>.PositionLimitsHW.MinSwitchLevel | <Axis name>.PositionLimits_HW.MinSwitchLevel | Yes |
-| <Axis name>.PositionLimitsHW.MinSwitchAddress | <Axis name>.PositionLimits_HW.MinSwitchAddress | Yes |
+| &lt;Axis name&gt;.PositionLimitsSW.Active | &lt;Axis name&gt;.PositionLimits_SW.Active | Yes |
+| &lt;Axis name&gt;.PositionLimitsSW.MinPosition | &lt;Axis name&gt;.PositionLimits_SW.MinPosition | Yes |
+| &lt;Axis name&gt;.PositionLimitsSW.MaxPosition | &lt;Axis name&gt;.PositionLimits_SW.MaxPosition | Yes |
+| &lt;Axis name&gt;.PositionLimitsHW.Active | &lt;Axis name&gt;.PositionLimits_HW.Active | Yes |
+| &lt;Axis name&gt;.PositionLimitsHW.MinSwitchLevel | &lt;Axis name&gt;.PositionLimits_HW.MinSwitchLevel | Yes |
+| &lt;Axis name&gt;.PositionLimitsHW.MinSwitchAddress | &lt;Axis name&gt;.PositionLimits_HW.MinSwitchAddress | Yes |
 
 ### Compatibility telegrams V6 <-> V7 (S7-1200)
 
@@ -1287,7 +1287,7 @@ Observe the information in the following table if you have used tags of the tele
 
 The following tags are new or have been adapted and may need to be corrected in the user program, monitoring tables, etc.:
 
-#### Telegrams V6 <-> V7
+#### Telegrams V6 &lt;-&gt; V7
 
 | Telegram | Tag name in V6 |  | Tag name in V7 |  | Automatic conversion V6 to ≥ V7 |
 | --- | --- | --- | --- | --- | --- |
@@ -1392,12 +1392,12 @@ In order to replicate the behavior of the error bits of versions V1...3, use the
 
 | V1...3 | V4 or higher |
 | --- | --- |
-| <Axis name>.ErrorBits.HwLimitMin | <Axis name>.ErrorBits.HWLimit AND <Axis name>.StatusBits.HWLimitMinActive |
-| <Axis name>.ErrorBits.HwLimitMax | <Axis name>.ErrorBits.HWLimit AND <Axis name>.StatusBits.HWLimitMaxActive |
-| <Axis name>.ErrorBits.SwLimitMinReached | <Axis name>.ErrorBits.SWLimit AND (<Axis name>.Position = <Axis name>.PositioningLimits_SW.MinPosition) |
-| <Axis name>.ErrorBits.SwLimitMinExceeded | <Axis name>.ErrorBits.SWLimit AND (<Axis name>.Position < <Axis name>.PositioningLimits_SW.MinPosition) |
-| <Axis name>.ErrorBits.SwLimitMaxReached | <Axis name>.ErrorBits.SWLimit AND (<Axis name>.Position = <Axis name>.PositioningLimits_SW.MaxPosition) |
-| <Axis name>.ErrorBits.SwLimitMaxExceeded | <Axis name>.ErrorBits.SWLimit AND (<Axis name>.Position > <Axis name>.PositioningLimits_SW.MaxPosition) |
+| &lt;Axis name&gt;.ErrorBits.HwLimitMin | &lt;Axis name&gt;.ErrorBits.HWLimit AND &lt;Axis name&gt;.StatusBits.HWLimitMinActive |
+| &lt;Axis name&gt;.ErrorBits.HwLimitMax | &lt;Axis name&gt;.ErrorBits.HWLimit AND &lt;Axis name&gt;.StatusBits.HWLimitMaxActive |
+| &lt;Axis name&gt;.ErrorBits.SwLimitMinReached | &lt;Axis name&gt;.ErrorBits.SWLimit AND (&lt;Axis name&gt;.Position = &lt;Axis name&gt;.PositioningLimits_SW.MinPosition) |
+| &lt;Axis name&gt;.ErrorBits.SwLimitMinExceeded | &lt;Axis name&gt;.ErrorBits.SWLimit AND (&lt;Axis name&gt;.Position &lt; &lt;Axis name&gt;.PositioningLimits_SW.MinPosition) |
+| &lt;Axis name&gt;.ErrorBits.SwLimitMaxReached | &lt;Axis name&gt;.ErrorBits.SWLimit AND (&lt;Axis name&gt;.Position = &lt;Axis name&gt;.PositioningLimits_SW.MaxPosition) |
+| &lt;Axis name&gt;.ErrorBits.SwLimitMaxExceeded | &lt;Axis name&gt;.ErrorBits.SWLimit AND (&lt;Axis name&gt;.Position &gt; &lt;Axis name&gt;.PositioningLimits_SW.MaxPosition) |
 
 ---
 
@@ -1407,7 +1407,7 @@ In order to replicate the behavior of the error bits of versions V1...3, use the
   
 [Changing a technology version (S7-1200)](#changing-a-technology-version-s7-1200)
   
-[Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+[Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
 
 ## Positioning axis technology object (S7-1200)
 
@@ -1569,7 +1569,7 @@ A project with a CPU S7-1200 has been created.
 
 To add a positioning axis technology object in the project tree, follow these steps:
 
-1. Open the "CPU > Technology objects" folder in the project tree.
+1. Open the "CPU &gt; Technology objects" folder in the project tree.
 2. Double-click the "Add new object" command.
 
    The "Add new object" dialog opens.
@@ -2010,7 +2010,7 @@ In this area, you can configure the data exchange between the encoder and contro
   >
   > Automatic transfer of encoder parameters is only possible with PROFIdrive encoders as of product version A16. For this, "Encoder" must be selected as the data connection in the configuration window.
   >
-  > A product version > V4.x is required to use an encoder on the SINAMICS drive.
+  > A product version &gt; V4.x is required to use an encoder on the SINAMICS drive.
 
   The parameters must be adjusted manually if there is no automatic transfer of encoder parameters. You can find the parameters to be synchronized in the section [Automatic transfer of drive and encoder parameters in the device](#automatic-transfer-of-drive-and-encoder-parameters-in-the-device-s7-1200).
 
@@ -2129,7 +2129,7 @@ Configure the number of pulses required for one revolution of the motor in this 
 
 Limits (independent of the selected unit of measurement):
 
-- 0 < Pulse per motor revolution ≤ 2147483647
+- 0 &lt; Pulse per motor revolution ≤ 2147483647
 
 ###### Load motion per motor revolution
 
@@ -2137,7 +2137,7 @@ In this box, configure the load distance per motor revolution covered by the mec
 
 Limits (independent of the selected unit of measurement):
 
-- 0.0 < Distance per revolution ≤ 1.0e12
+- 0.0 &lt; Distance per revolution ≤ 1.0e12
 
 ###### Permitted direction of rotation (technology version as of V4)
 
@@ -2375,7 +2375,7 @@ You can change the following configuration parameters during runtime of the user
 
 You can also activate and deactivate the hardware limit switches during runtime of the user program. Use the following technology object variable for this purpose:
 
-- <axis name>.PositionLimits_HW.Active
+- &lt;axis name&gt;.PositionLimits_HW.Active
 
 Refer to the description of the [technology object variables](#tags-of-the-positioning-axis-technology-object-v6v8-s7-1200) in the appendix for information on when changes to the configuration parameter take effect.
 
@@ -2383,13 +2383,13 @@ Refer to the description of the [technology object variables](#tags-of-the-posit
 
 You can also activate and deactivate the software limit switches and change their position values during runtime of the user program. Use the following technology object variables for this purpose:
 
-- <axis name>.PositionLimits_SW.Active
+- &lt;axis name&gt;.PositionLimits_SW.Active
 
   for activating and deactivating the software limit switches
-- <axis name>.PositionLimits_SW.MinPosition
+- &lt;axis name&gt;.PositionLimits_SW.MinPosition
 
   for changing the position of the low software limit switch
-- <axis name>.PositionLimits_SW.MaxPosition
+- &lt;axis name&gt;.PositionLimits_SW.MaxPosition
 
   for changing the position of the high software limit switch
 
@@ -2399,7 +2399,7 @@ Refer to the description of the [technology object variables](#tags-of-the-posit
 
 **See also**
 
-[Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+[Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
   
 [MC_ChangeDynamic: Change dynamic settings of axis as of V6 (S7-1200)](S7-1200%20Motion%20Control%20%28S7-1200%29.md#mc_changedynamic-change-dynamic-settings-of-axis-as-of-v6-s7-1200)
   
@@ -2424,13 +2424,13 @@ Configure the maximum velocity, the start/stop velocity, the acceleration and de
 
 ###### Unit of velocity limits
 
-Select the unit of measurement with which you want to set the velocity limits in the drop-down list. The unit set here depends on the unit of measurement set under "Configuration > Basic parameters > General" and only serves to simplify input. This provides the possibility, for example, to enter the maximum velocity as a speed value of the motor in rpm.
+Select the unit of measurement with which you want to set the velocity limits in the drop-down list. The unit set here depends on the unit of measurement set under "Configuration &gt; Basic parameters &gt; General" and only serves to simplify input. This provides the possibility, for example, to enter the maximum velocity as a speed value of the motor in rpm.
 
 > **Note**
 >
 > **Rounding error**
 >
-> If you select a different unit in the "Unit of velocity limitation" drop-down list than in "Configuration > Basic parameters > General", note that a rounding error may occur.
+> If you select a different unit in the "Unit of velocity limitation" drop-down list than in "Configuration &gt; Basic parameters &gt; General", note that a rounding error may occur.
 
 ###### Maximum velocity / Start/stop velocity
 
@@ -2451,7 +2451,7 @@ For drive connection via PROFIdrive or analog output, the start/stop velocity is
 | 20 kHz | 1 ≤ start/stop velocity ≤ 20 000  1 ≤ maximum velocity ≤ 20 000 |
 | 1 MHz CPU 1217 | 1 ≤ start/stop velocity ≤ 1000 000  1 ≤ maximum velocity ≤ 1000 000 |
 
-You can learn about the limits for the technology object positioning axis < V4 in the appendix [Outputs of the CPU relevant for Motion Control (technology version V1...3)](#cpu-outputs-relevant-for-motion-control-technology-version-v13-s7-1200).
+You can learn about the limits for the technology object positioning axis &lt; V4 in the appendix [Outputs of the CPU relevant for Motion Control (technology version V1...3)](#cpu-outputs-relevant-for-motion-control-technology-version-v13-s7-1200).
 
 The value of the maximum velocity must be greater or equal to the value of the start/stop velocity.
 
@@ -2502,10 +2502,10 @@ You can input the parameters of the jerk limit in the "Smoothing time" box or al
   >
   > The smoothing time of the deceleration is adapted as follows:
   >
-  > - Acceleration > deceleration
+  > - Acceleration &gt; deceleration
   >
   >   The smoothing time used for the deceleration ramp is shorter than that for the acceleration ramp.
-  > - Acceleration < deceleration
+  > - Acceleration &lt; deceleration
   >
   >   The smoothing time used for the deceleration ramp is greater than that for the acceleration ramp.
   > - Acceleration = deceleration
@@ -2627,10 +2627,10 @@ You can change the following configuration parameters during runtime of the user
 
 You can also change the values for acceleration and deceleration during runtime of the user program. Use the following technology object variables for this purpose:
 
-- <Axis name>.DynamicDefaults.Acceleration
+- &lt;Axis name&gt;.DynamicDefaults.Acceleration
 
   for changing acceleration
-- <Axis name>.DynamicDefaults.Deceleration
+- &lt;Axis name&gt;.DynamicDefaults.Deceleration
 
   for changing deceleration
 
@@ -2640,7 +2640,7 @@ Refer to the description of the [technology object variables](#tags-of-the-posit
 
 You can also change the value for the emergency stop deceleration during runtime of the user program. Use the following technology object variable for this purpose:
 
-- <Axis name>.DynamicDefaults.EmergencyDeceleration
+- &lt;Axis name&gt;.DynamicDefaults.EmergencyDeceleration
 
 Refer to the description of the technology object variables in the appendix for information on when changes to the configuration parameter take effect.
 
@@ -2650,14 +2650,14 @@ Refer to the description of the technology object variables in the appendix for 
 
 ###### Jerk limit
 
-You can also activate and deactivate the jerk limit at runtime of the user program and change the value for the jerk. To do this, use the technology object tag <axis name>.DynamicDefaults.Jerk For technology objects < V4, the tag <axis name>.Config.DynamicDefaults.JerkActive must be set to TRUE in order to activate the jerk limitation and in order that a value change is visible/effective at the jerk.
+You can also activate and deactivate the jerk limit at runtime of the user program and change the value for the jerk. To do this, use the technology object tag &lt;axis name&gt;.DynamicDefaults.Jerk For technology objects &lt; V4, the tag &lt;axis name&gt;.Config.DynamicDefaults.JerkActive must be set to TRUE in order to activate the jerk limitation and in order that a value change is visible/effective at the jerk.
 
 The following applies to PTO axes:
 
 - If you enter a value **≥** 0.004 pulses/s<sup>3</sup> for the jerk, the jerk limit is enabled with the specified value.
-- If you enter a value < 0.004 pulses/s<sup>3</sup> for the jerk, the jerk limit is disabled.
+- If you enter a value &lt; 0.004 pulses/s<sup>3</sup> for the jerk, the jerk limit is disabled.
 
-For position-controlled axes, the jerk limit is disabled for a value of 0.0, and activated for values > 0.0.
+For position-controlled axes, the jerk limit is disabled for a value of 0.0, and activated for values &gt; 0.0.
 
 Refer to the description of the technology object variables in the appendix for information on when changes to the configuration parameter take effect.
 
@@ -2667,7 +2667,7 @@ Refer to the description of the technology object variables in the appendix for 
 
 [Changing configuration of dynamic values in user program ("Axis" technology object V1...3) (S7-1200)](#changing-configuration-of-dynamic-values-in-user-program-axis-technology-object-v13-s7-1200)
   
-[Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+[Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
   
 [MC_ChangeDynamic: Change dynamic settings of axis as of V6 (S7-1200)](S7-1200%20Motion%20Control%20%28S7-1200%29.md#mc_changedynamic-change-dynamic-settings-of-axis-as-of-v6-s7-1200)
   
@@ -2842,17 +2842,17 @@ The diagram below shows an example of a characteristic curve for an active home 
 - "Homing mode" = "Use homing mark via digital input"
 - "Approach/homing direction" = "Positive direction"
 - "Side of homing switch" = "Top side"
-- Value of "home position offset" > 0
+- Value of "home position offset" &gt; 0
 
   ![Figure](images/34092836491_DV_resource.Stream@PNG-en-US.png)
 
 ###### Search for homing switch (blue curve section)
 
-When active homing starts, the axis accelerates to the configured "approach velocity" and searches at this velocity for the homing switch. The tag <axis name>.StatusBits.HomingDone is set to FALSE.
+When active homing starts, the axis accelerates to the configured "approach velocity" and searches at this velocity for the homing switch. The tag &lt;axis name&gt;.StatusBits.HomingDone is set to FALSE.
 
 ###### Reference point approach (red curve section)
 
-When the homing switch is detected, the axis in this example brakes and reverses, to be homed to the configured side of the homing switch at the configured homing velocity. Homing causes the tag <axis name>.StatusBits.HomingDone to change to TRUE.
+When the homing switch is detected, the axis in this example brakes and reverses, to be homed to the configured side of the homing switch at the configured homing velocity. Homing causes the tag &lt;axis name&gt;.StatusBits.HomingDone to change to TRUE.
 
 ###### Travel to home position offset (green curve segment)
 
@@ -2877,11 +2877,11 @@ The diagram below shows an example of a characteristic curve for passive homing 
 
 ###### Movement towards homing switch (red section of curve)
 
-The Motion Control instruction "MC_Home" does not itself carry out any homing motion when passive homing is started. The travel required for reaching the homing switch must be implemented by the user via other motion control instructions such as "MC_MoveRelative". The tag <axis name>.StatusBits.HomingDone remains TRUE during passive homing if the axis has already been homed.
+The Motion Control instruction "MC_Home" does not itself carry out any homing motion when passive homing is started. The travel required for reaching the homing switch must be implemented by the user via other motion control instructions such as "MC_MoveRelative". The tag &lt;axis name&gt;.StatusBits.HomingDone remains TRUE during passive homing if the axis has already been homed.
 
 ###### Axis homing (transition from red to green section of curve)
 
-The axis is homed when the configured side of the homing switch is reached. The current position of the axis is set to the home position. This is specified at the "Position" parameter of the "MC_Home" Motion Control instruction. The tag <axis name>.StatusBits.HomingDone will be set to "TRUE" if the axis has not been homed before. The travel previously started is not canceled.
+The axis is homed when the configured side of the homing switch is reached. The current position of the axis is set to the home position. This is specified at the "Position" parameter of the "MC_Home" Motion Control instruction. The tag &lt;axis name&gt;.StatusBits.HomingDone will be set to "TRUE" if the axis has not been homed before. The travel previously started is not canceled.
 
 ###### Movement beyond homing switch (green section of curve)
 
@@ -2895,10 +2895,10 @@ With positioning axis technology object as of V2, you can change the following c
 
 You can change the end of the homing switch for passive homing during the user program runtime. Use the following technology object tag for this purpose:
 
-- <Axis name>.Sensor[1].PassiveHoming.SideInput
+- &lt;Axis name&gt;.Sensor[1].PassiveHoming.SideInput
 
   for changing the side of the homing switch
-- <Axis name>.Sensor[1].PassiveHoming.Mode
+- &lt;Axis name&gt;.Sensor[1].PassiveHoming.Mode
 
   for changing the homing mode
 
@@ -2908,25 +2908,25 @@ Refer to the description of the [technology object tags](#tags-of-the-positionin
 
 You can change the direction of approach, the side of the homing switch, the approach velocity, the homing velocity, and the home position offset for active homing during the program runtime of the user program. Use the following technology object tags for this purpose:
 
-- <Axis name>.Homing.AutoReversal
+- &lt;Axis name&gt;.Homing.AutoReversal
 
   for changing the auto reverse at the HW limit switch
-- <Axis name>.Homing.ApproachDirection
+- &lt;Axis name&gt;.Homing.ApproachDirection
 
   for changing the approach/homing direction
-- <Axis name>.Sensor[1].ActiveHoming.SideInput
+- &lt;Axis name&gt;.Sensor[1].ActiveHoming.SideInput
 
   for changing the side of the homing switch
-- <Axis name>.Homing.ApproachVelocity
+- &lt;Axis name&gt;.Homing.ApproachVelocity
 
   for changing the approach velocity
-- <Axis name>.Homing.ReferencingVelocity
+- &lt;Axis name&gt;.Homing.ReferencingVelocity
 
   for changing the homing velocity
-- <Axis name>.Sensor[1].ActiveHoming.HomePositionOffset
+- &lt;Axis name&gt;.Sensor[1].ActiveHoming.HomePositionOffset
 
   for changing the home position offset
-- <Axis name>.Sensor[1].ActiveHoming.Mode
+- &lt;Axis name&gt;.Sensor[1].ActiveHoming.Mode
 
   for changing the homing mode
 
@@ -2936,7 +2936,7 @@ Refer to the description of the technology object tags in the appendix for infor
 
 **See also**
 
-[Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+[Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
   
 [MC_ChangeDynamic: Change dynamic settings of axis as of V6 (S7-1200)](S7-1200%20Motion%20Control%20%28S7-1200%29.md#mc_changedynamic-change-dynamic-settings-of-axis-as-of-v6-s7-1200)
 
@@ -2954,7 +2954,7 @@ In the "Position monitoring" configuration window, configure the criteria for mo
 
 Position monitoring monitors the behavior of the actual position at the end of the setpoint calculation. As soon as the setpoint velocity reaches the value 0, the actual position value must be located within a tolerance time in the positioning window. The actual value must not exit the positioning window during the minimum dwell time.
 
-If the actual position reaches the positioning window within the tolerance time and remains in the positioning window for the minimum dwell time, the status bit <axis name>.StatusBits.Done is set. This completes a motion command.
+If the actual position reaches the positioning window within the tolerance time and remains in the positioning window for the minimum dwell time, the status bit &lt;axis name&gt;.StatusBits.Done is set. This completes a motion command.
 
 Position monitoring does not make any distinction between how the setpoint interpolation was completed. The end of setpoint interpolation can, for example, be reached as follows:
 
@@ -3010,13 +3010,13 @@ In this field, configure the velocity above which the following error should be 
 
 ###### Maximum velocity
 
-This box shows the maximum velocity configured under "Dynamics > General".
+This box shows the maximum velocity configured under "Dynamics &gt; General".
 
 ###### Configuration - Standstill signal (PROFIdrive and analog drive connection only) (S7-1200)
 
 In the "Standstill signal" configuration window, configure the criteria for standstill detection.
 
-To display the standstill (<Axis name>.StatusBits.StandStill), the velocity of the axis must remain in the standstill window for the minimum dwell time.
+To display the standstill (&lt;Axis name&gt;.StatusBits.StandStill), the velocity of the axis must remain in the standstill window for the minimum dwell time.
 
 ###### Standstill window
 
@@ -3405,7 +3405,7 @@ The “../“ prefix in the “Name in DB” column is ignored when sorting.
 After selecting an entire parameter row of the parameter table, you can use the following:
 
 - Drag-and-drop
-- <Ctrl+C>/<Ctrl+V>
+- &lt;Ctrl+C&gt;/&lt;Ctrl+V&gt;
 - Copy/Paste via shortcut menu
 
 Transfer parameters to the following editors of the TIA Portal:
@@ -3583,7 +3583,7 @@ To change the display format of the value, proceed as follows:
 
 > **Note**
 >
-> To change the display format of a certain data type in multiple table rows, sort the Parameter view by this data type. Then select the first and last table row with this data type while keeping the <Shift> key pressed and change the display format for the selected table rows.
+> To change the display format of a certain data type in multiple table rows, sort the Parameter view by this data type. Then select the first and last table row with this data type while keeping the &lt;Shift&gt; key pressed and change the display format for the selected table rows.
 
 ###### Create snapshot of monitor values (S7-1200)
 
@@ -3806,9 +3806,9 @@ For use with S7-1200 Motion Control, the following parameters must be configured
 | --- | --- |
 | Technology module  TM PosInput 1 / TM PosInput 2 | Technology object |
 | ![Figure](images/109108234891_DV_resource.Stream@PNG-de-DE.png) Axis |  |
-| **Basic parameters > Channel 0/1 > Operating mode** | – |
+| **Basic parameters &gt; Channel 0/1 &gt; Operating mode** | – |
 | Select "Position input for technology object "Motion Control"" mode |  |
-| **Basic parameters > Channel 0/1 > Module parameters** | **Basic parameters > Encoder** |
+| **Basic parameters &gt; Channel 0/1 &gt; Module parameters** | **Basic parameters &gt; Encoder** |
 | – | **Encoder connection**   Select encoder to PROFINET/PROFIBUS |
 | – | **Encoder selection**   Select "Encoder" data connection and the channel activated and configured as encoder on the technology module |
 | – | **Data exchange with encoder** |
@@ -3817,7 +3817,7 @@ For use with S7-1200 Motion Control, the following parameters must be configured
 | Activate check box "Automatically apply encoder values during configuration (offline)" If the check box is cleared, you can manually match the parameters described and identified in this table. |  |
 | **Signal type**   - Incremental encoder - Absolute encoder      **Encoder type**   - Linear Distance between two increments - Rotary Enter increments per revolution | **Encoder type**   Select encoder type corresponding to configuration for technology module  Select the version of the measuring system<sup>1)</sup>:  - Linear version (incremental or absolute) enter distance between increments<sup>1)</sup> - Rotary version   - Incremental: Enter the steps per revolution corresponding to configuration for technology module (1:1)<sup>1)</sup>   - Absolute: Enter the steps per revolution and number of revolutions corresponding to configuration for technology module (1:1)<sup>1)</sup> |
 | **Signal evaluation**   - Single - Double - Quadruple | **Fine resolution**   Select fine resolution corresponding to configuration on the technology module<sup>1)</sup>  - Incremental encoder:   - 0 = Single   - 1 = Double or   - 2 = Quadruple - Absolute encoder:   - 0 (= single) |
-| – | **Basic parameters drive > Drive** |
+| – | **Basic parameters drive &gt; Drive** |
 | - Rotary type:   Enter reference speed corresponding to configuration for technology object (1:1) - Linear type:   Enter reference speed | Enter reference speed |
 | <sup>1) </sup>Parameters are automatically transferred when "Automatically apply encoder values during configuration (offline)" is activated.  "–" No configuration for technology module/technology object is required for these parameters |  |
 
@@ -3837,9 +3837,9 @@ For use with S7-1200 Motion Control, the following parameters must be configured
 | --- | --- |
 | Technology module  TM Count 1x24V / TM Count 2x24V | Technology object |
 | ![Figure](images/109108234891_DV_resource.Stream@PNG-de-DE.png) Axis |  |
-| **Basic parameters > Channel 0/1 > Operating mode** | – |
+| **Basic parameters &gt; Channel 0/1 &gt; Operating mode** | – |
 | Select "Position input for technology object "Motion Control"" mode |  |
-| **Basic parameters > Channel 0/1 > Module parameters** | **Basic parameters > Encoder** |
+| **Basic parameters &gt; Channel 0/1 &gt; Module parameters** | **Basic parameters &gt; Encoder** |
 | – | **Encoder connection**   Select encoder to PROFINET/PROFIBUS |
 | – | **Encoder selection**   Select "Encoder" data connection and the channel activated and configured as encoder on the technology module |
 | – | **Data exchange with encoder** |
@@ -3848,7 +3848,7 @@ For use with S7-1200 Motion Control, the following parameters must be configured
 | Activate check box "Automatically apply encoder values during configuration (offline)"  If the check box is cleared, you can manually match the parameters described and identified in this table. |  |
 | **Signal type**   - Incremental encoder      **Encoder type**   - Linear Distance between two increments - Rotary Enter increments per revolution | **Encoder type**  Select encoder type corresponding to configuration for technology module Select measuring system type<sup>1)</sup>:  - Linear version (incremental or absolute) enter distance between increments<sup>1)</sup> - Rotary version   - Incremental: Enter the steps per revolution corresponding to configuration for technology module (1:1)<sup>1)</sup>   - Absolute: Enter the steps per revolution and number of revolutions corresponding to configuration for technology module (1:1)<sup>1)</sup> |
 | **Signal evaluation**   - Single - Double - Quadruple | **Fine resolution**   Select fine resolution corresponding to configuration on the technology module<sup>1)</sup>  - 0 = Single - 1 = Double - 2 = Quadruple |
-| – | **Basic parameters drive > Drive** |
+| – | **Basic parameters drive &gt; Drive** |
 | - Rotary type:   Enter reference speed corresponding to configuration for technology object (1:1) - Linear type:   Enter reference speed | Enter reference speed |
 | <sup>1) </sup>Parameters are automatically transferred when "Automatically apply encoder values during configuration (offline)" is activated.  "-" No configuration for technology module/technology object is required for these parameters |  |
 
@@ -3907,7 +3907,7 @@ The movement sequence data are saved in the data block of the technology object.
 
 Proceed as follows to add a "Command table" technology object in the project tree:
 
-1. Open the "CPU > Technology objects" folder in the project tree.
+1. Open the "CPU &gt; Technology objects" folder in the project tree.
 2. Double-click the "Add new object" command.
 
    The "Add new object" dialog opens.
@@ -4491,22 +4491,22 @@ You can change the following configuration parameters during runtime of the user
 
 You can also change the parameters of the command table during the runtime of the user program. Use the following technology object tags for this purpose:
 
-- <Table name>.Command[1..32].Type
+- &lt;Table name&gt;.Command[1..32].Type
 
   for changing the command type
-- <Table name>.Command[1..32].Position
+- &lt;Table name&gt;.Command[1..32].Position
 
   for changing the position/travel distance
-- <Table name>.Command[1..32].Velocity
+- &lt;Table name&gt;.Command[1..32].Velocity
 
   for changing the velocity
-- <Table name>.Command[1..32].Duration
+- &lt;Table name&gt;.Command[1..32].Duration
 
   for changing the duration
-- <Table name>.Command[1..32].NextStep
+- &lt;Table name&gt;.Command[1..32].NextStep
 
   for changing the parameter "Next step"
-- <Table name>.Command[1..32].StepCode
+- &lt;Table name&gt;.Command[1..32].StepCode
 
   for changing the step code
 
@@ -4516,7 +4516,7 @@ Refer to the description of the [technology object tags](#tag-of-the-command-tab
 
 **See also**
 
-[Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+[Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
   
 [Configuration - General (S7-1200)](#configuration---general-s7-1200-1)
   
@@ -4562,9 +4562,9 @@ Select the direction of copy and the axis for copying the axis parameters. You c
 
 Configure the acceleration and deceleration and the jerk limit for the default axis in the "Dynamics" configuration window.
 
-If you select a configured axis under "Configuration > Extended parameters > Extended parameters" in the drop-down list "Use axis parameters from", the values of the configured axis is displayed.
+If you select a configured axis under "Configuration &gt; Extended parameters &gt; Extended parameters" in the drop-down list "Use axis parameters from", the values of the configured axis is displayed.
 
-If you select the entry "Default axis" under "Configuration > Extended parameters > Extended parameters" in the drop-down list "Use axis parameters from", you can edit the fields described below.
+If you select the entry "Default axis" under "Configuration &gt; Extended parameters &gt; Extended parameters" in the drop-down list "Use axis parameters from", you can edit the fields described below.
 
 ###### Acceleration / deceleration
 
@@ -4595,9 +4595,9 @@ Limit values:
 
 Configure the maximum velocity, the start/stop velocity and the software limit switches of the default axis in the "Limits" configuration window.
 
-If you select a configured axis under "Configuration > Extended parameters > Extended parameters" in the drop-down list "Use axis parameters from", the values of the configured axis is displayed.
+If you select a configured axis under "Configuration &gt; Extended parameters &gt; Extended parameters" in the drop-down list "Use axis parameters from", the values of the configured axis is displayed.
 
-If you select the entry "Default axis" under "Configuration > Extended parameters > Extended parameters" in the drop-down list "Use axis parameters from", you can edit the fields described below.
+If you select the entry "Default axis" under "Configuration &gt; Extended parameters &gt; Extended parameters" in the drop-down list "Use axis parameters from", you can edit the fields described below.
 
 ###### Maximum velocity / Start/stop velocity
 
@@ -4825,7 +4825,7 @@ Click "Acknowledge" to acknowledge all cleared errors.
 >
 > For safety reasons, the "Velocity", "Acceleration/Deceleration" and "Jerk" parameters are initialized with values equivalent to only 10% of the configured values when the axis control panel is activated. The "Jerk" parameter is only used for technology object "Axis" V2.0 and higher.
 >
-> The values in the configuration view displayed when you select "Extended parameters > Dynamics > General" are used for initialization.
+> The values in the configuration view displayed when you select "Extended parameters &gt; Dynamics &gt; General" are used for initialization.
 >
 > The "Velocity" parameter on the axis control panel is derived from the "Maximum velocity" and the "Acceleration/Deceleration" parameters from "Acceleration" in the configuration.
 >
@@ -4837,7 +4837,7 @@ The movement of axes with drive connection via PROFIdrive/analog output is posit
 
 The "Tuning" function supports you in determining the optimal gain (Kv factor) for the [control loop](#configuration---control-loop-profidrive-and-analog-drive-connection-only-s7-1200) of the axis. The axis velocity profile is recorded by means of the Trace function for this purpose for the duration of a configurable positioning movement. Then you can evaluate the recording, and adapt the gain accordingly. It is recommended to disable any other online communication when the axis control panel and the optimization is in use in order to keep the response times as short as possible.
 
-The "Tuning" function for the positioning axis technology object can be found in the project tree under "Technology object > Commissioning".
+The "Tuning" function for the positioning axis technology object can be found in the project tree under "Technology object &gt; Commissioning".
 
 The "Tuning" dialog is divided into the following areas:
 
@@ -5043,10 +5043,10 @@ Proceed as follows to create the user program in accordance with the principles 
 
    ![Procedure](images/34093694603_DV_resource.Stream@PNG-de-DE.png)
 
-   Parameters marked with "<???>" must be initialized; default values are assigned to all other parameters.
+   Parameters marked with "&lt;???&gt;" must be initialized; default values are assigned to all other parameters.
 
    Parameters displayed in black are required for use of the Motion Control instruction.
-6. Select the technology object in the project tree and drag-and-drop it on <???>.
+6. Select the technology object in the project tree and drag-and-drop it on &lt;???&gt;.
 
    ![Procedure](images/34093698827_DV_resource.Stream@PNG-de-DE.png)
 
@@ -5127,17 +5127,17 @@ When creating your user program, note the following information:
     **MC_Power**
     **"**
 
-    You must enable the axis before it can take on motion jobs. Use an AND operation of tag <Axis name>.StatusBits.Enable = TRUE with output parameter Status = TRUE of motion control instruction "MC_Power" to verify that the axis is enabled.
+    You must enable the axis before it can take on motion jobs. Use an AND operation of tag &lt;Axis name&gt;.StatusBits.Enable = TRUE with output parameter Status = TRUE of motion control instruction "MC_Power" to verify that the axis is enabled.
   - **Acknowledge error with motion control instruction "**
     **MC_Reset**
     **"**
 
-    Prior to starting a motion control command, errors requiring acknowledgement must be acknowledged with "MC_Reset". Eliminate the cause of the error and acknowledge the error with motion control instruction "MC_Reset". Verify that the error has been successfully acknowledged before initiating a new command. For this purpose, use an AND operation of tag <Axis name>.StatusBits.Error = FALSE with output parameter Done = TRUE of motion control instruction "MC_Reset".
+    Prior to starting a motion control command, errors requiring acknowledgement must be acknowledged with "MC_Reset". Eliminate the cause of the error and acknowledge the error with motion control instruction "MC_Reset". Verify that the error has been successfully acknowledged before initiating a new command. For this purpose, use an AND operation of tag &lt;Axis name&gt;.StatusBits.Error = FALSE with output parameter Done = TRUE of motion control instruction "MC_Reset".
   - **Home axis with motion control instruction "**
     **MC_Home**
     **"**
 
-    Before you can start an MC_MoveAbsolute command, the axis must be homed. Use an AND operation of tag <Axis name>.StatusBits.HomingDone = TRUE with output parameter Done = TRUE of motion control instruction "MC_Home" to verify that the axis has been homed.
+    Before you can start an MC_MoveAbsolute command, the axis must be homed. Use an AND operation of tag &lt;Axis name&gt;.StatusBits.HomingDone = TRUE with output parameter Done = TRUE of motion control instruction "MC_Home" to verify that the axis has been homed.
 - **Override of motion control command processing**
 
   Motion control jobs for moving an axis can also be executed as overriding jobs.
@@ -5504,19 +5504,19 @@ If changes in the technology data block should also be retained after the restar
 
 #### Restart necessary
 
-If a restart of the technology object is necessary, this will be indicated under "Technology object > Diagnostics > Status and error bits > Status messages > Axis > Restart required", and in the tag "<Axis name>.StatusBits.RestartRequired" of the technology object.
+If a restart of the technology object is necessary, this will be indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Status messages &gt; Axis &gt; Restart required", and in the tag "&lt;Axis name&gt;.StatusBits.RestartRequired" of the technology object.
 
 #### Restarting a technology object
 
 A restart of the technology object is triggered by the user by means of the "MC_Reset" Motion Control instruction, with parameter "Restart" = TRUE.
 
-A restart resets the "Homed" status of a technology object with incremental actual values (<Axis name>.StatusBits.HomingDone).
+A restart resets the "Homed" status of a technology object with incremental actual values (&lt;Axis name&gt;.StatusBits.HomingDone).
 
 ### Parameter transfer for function blocks (S7-1200)
 
 If you want to reuse a function block with Motion Control instructions for different technology objects, create an input parameter of the data type of the respective technology object in the block interface of the function block. You assign the data type in the block interface with direct input. The parameter is then transferred as a reference to the technology object to the "axis" parameter of the Motion Control instructions. The data types of technology objects correspond to the structure of the associated technology data block.
 
-By specifying the data type, you can address the tags of the technology object in the function block (<parameters of the block interface>.<tag of the technology object>).
+By specifying the data type, you can address the tags of the technology object in the function block (&lt;parameters of the block interface&gt;.&lt;tag of the technology object&gt;).
 
 If you do not need access to the tags of the technology object, you can use the data type "DB_ANY". The data type "DB_Any" can be used to achieve more variable programming.
 
@@ -5572,7 +5572,7 @@ The example below shows the basic procedure:
 | 2:  #tempCmdTableSel := #cmdTabl2; | //Program for scenario 2 |
 | 3:  #tempCmdTableSel := #cmdTabl3; | //Program for scenario 3 |
 | ELSE | //Program for all other values |
-| #tempCmdTableSel := #cmdTabl1; | //->Default setting 1st command table |
+| #tempCmdTableSel := #cmdTabl1; | //-&gt;Default setting 1st command table |
 | END_CASE; |  |
 |  | // Call of the "MC_CommandTable" instruction   //with variable transfer of the technology objects |
 | #instMC_CommandTable(Axis:=#axis, | //Assignment of axis |
@@ -5582,7 +5582,7 @@ The example below shows the basic procedure:
 
 You can find more program examples using the data type "DB_Any" in the following FAQ:
 
-<https://support.industry.siemens.com/cs/ww/en/view/109750880>
+[https://support.industry.siemens.com/cs/ww/en/view/109750880](https://support.industry.siemens.com/cs/ww/en/view/109750880)
 
 ## Axis - Diagnostics (S7-1200)
 
@@ -5601,55 +5601,55 @@ You use the "Status and error bits" diagnostic function to monitor the most impo
 
 | Status message - Axis | Description |
 | --- | --- |
-| Enabled | The axis is enabled and ready to be controlled via Motion Control commands.  (Tag of the technology object: <axis name>.StatusBits.Enable) |
-| Homed | The axis is homed and is capable of executing absolute positioning commands of Motion Control instruction "MC_MoveAbsolute". The axis does not have to be homed for relative positioning. Special situations:  - During active homing, the status is FALSE. - If a homed axis undergoes passive homing, the status is set to TRUE during passive homing.   (Tag of the technology object: <axis name>.StatusBits.HomingDone) |
-| Axis error | An error has occurred in the "Axis" technology object. Additional information about the error is available in automatic control at the ErrorID and ErrorInfo parameters of the Motion Control instructions. In manual mode, the "Error message" box of the axis control panel displays detailed information about the cause of error.  (Tag of the technology object: <axis name>.StatusBits.Error) |
-| Control panel active | The "Manual control" mode was enabled in the axis control panel. The axis control panel has control priority over the "Axis" technology object. The axis cannot be controlled from the user program.  (Tag of the technology object: <axis name>.StatusBits.ControlPanelActive) |
-| Restart required | A modified configuration of the axis was downloaded to the load memory in CPU RUN mode. To download the modified configuration to the work memory, you need to restart the axis. Use the Motion Control instruction MC_Reset to do this.  (Tag of the technology object: <axis name>.StatusBits.RestartRequired) |
+| Enabled | The axis is enabled and ready to be controlled via Motion Control commands.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.Enable) |
+| Homed | The axis is homed and is capable of executing absolute positioning commands of Motion Control instruction "MC_MoveAbsolute". The axis does not have to be homed for relative positioning. Special situations:  - During active homing, the status is FALSE. - If a homed axis undergoes passive homing, the status is set to TRUE during passive homing.   (Tag of the technology object: &lt;axis name&gt;.StatusBits.HomingDone) |
+| Axis error | An error has occurred in the "Axis" technology object. Additional information about the error is available in automatic control at the ErrorID and ErrorInfo parameters of the Motion Control instructions. In manual mode, the "Error message" box of the axis control panel displays detailed information about the cause of error.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.Error) |
+| Control panel active | The "Manual control" mode was enabled in the axis control panel. The axis control panel has control priority over the "Axis" technology object. The axis cannot be controlled from the user program.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.ControlPanelActive) |
+| Restart required | A modified configuration of the axis was downloaded to the load memory in CPU RUN mode. To download the modified configuration to the work memory, you need to restart the axis. Use the Motion Control instruction MC_Reset to do this.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.RestartRequired) |
 
 | Status message - Drive | Description |
 | --- | --- |
-| Ready | The drive is ready for operation.  (Tag of the technology object: <axis name>.StatusBits.DriveReady) |
-| Drive error | The drive has reported an error due to loss of its "Drive ready" signal.  (Tag of the technology object: <axis name>.ErrorBits.DriveFault) |
+| Ready | The drive is ready for operation.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.DriveReady) |
+| Drive error | The drive has reported an error due to loss of its "Drive ready" signal.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.DriveFault) |
 
 | Status message - Motion | Description |
 | --- | --- |
-| Standstill | The axis is at a standstill.  (Tag of the technology object: <axis name>.StatusBits.StandStill) |
-| Acceleration | The axis accelerates.  (Tag of the technology object: <axis name>.StatusBits.Accelerating) |
-| Constant velocity | The axis travels at constant velocity.  (Tag of the technology object: <axis name>.StatusBits.ConstantVelocity) |
-| Deceleration | The axis decelerates (slows down).  (Tag of the technology object: <axis name>.StatusBits.Decelerating) |
+| Standstill | The axis is at a standstill.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.StandStill) |
+| Acceleration | The axis accelerates.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.Accelerating) |
+| Constant velocity | The axis travels at constant velocity.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.ConstantVelocity) |
+| Deceleration | The axis decelerates (slows down).  (Tag of the technology object: &lt;axis name&gt;.StatusBits.Decelerating) |
 
 | Status message - Motion type | Description |
 | --- | --- |
-| Positioning | The axis executes a positioning command of the Motion Control instruction "MC_MoveAbsolute", "MC_MoveRelative" or the axis control panel.  (Tag of the technology object: <axis name>.StatusBits.PositioningCommand) |
-| Travel with velocity specification | The axis executes a command with velocity specification of the Motion Control instruction "MC_MoveVelocity", "MC_MoveJog" or the axis control panel.  (Tag of the technology object: <axis name>.StatusBits.VelocityCommand) |
-| Homing | The axis executes a homing command of the Motion Control instruction "MC_Home" or the axis control panel.  (Tag of the technology object: <axis name>.StatusBits.HomingCommand) |
-| Command table active | The axis is controlled by Motion Control instruction "MC_CommandTable".  (Tag of the technology object: <axis name>.StatusBits.CommandTableActive) |
+| Positioning | The axis executes a positioning command of the Motion Control instruction "MC_MoveAbsolute", "MC_MoveRelative" or the axis control panel.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.PositioningCommand) |
+| Travel with velocity specification | The axis executes a command with velocity specification of the Motion Control instruction "MC_MoveVelocity", "MC_MoveJog" or the axis control panel.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.VelocityCommand) |
+| Homing | The axis executes a homing command of the Motion Control instruction "MC_Home" or the axis control panel.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.HomingCommand) |
+| Command table active | The axis is controlled by Motion Control instruction "MC_CommandTable".  (Tag of the technology object: &lt;axis name&gt;.StatusBits.CommandTableActive) |
 
 #### Limit switch status messages
 
 | Limit switch status message | Description |
 | --- | --- |
-| SW low limit switch has been reached | A software limit switch was reached or exceeded.  (Tag of the technology object: <axis name>.StatusBits.SWLimitMinActive) |
-| SW high limit switch has been reached | A hardware limit switch was reached or exceeded.  (Tag of the technology object: <axis name>.StatusBits.SWLimitMaxActive) |
-| HW low limit switch was reached | The hardware low limit switch was reached or exceeded.  (Tag of the technology object: <axis name>.StatusBits.HWLimitMinActive) |
-| HW high limit switch was reached | The hardware high limit switch was reached or exceeded.  (Tag of the technology object: <axis name>.StatusBits.HWLimitMaxActive) |
+| SW low limit switch has been reached | A software limit switch was reached or exceeded.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.SWLimitMinActive) |
+| SW high limit switch has been reached | A hardware limit switch was reached or exceeded.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.SWLimitMaxActive) |
+| HW low limit switch was reached | The hardware low limit switch was reached or exceeded.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.HWLimitMinActive) |
+| HW high limit switch was reached | The hardware high limit switch was reached or exceeded.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.HWLimitMaxActive) |
 
 #### Error messages
 
 | Error message | Description |
 | --- | --- |
-| SW limit switch has been reached | A software limit switch was reached or exceeded.  (Tag of the technology object: <axis name>.ErrorBits.SWLimit) |
-| HW limit switch has been reached | A hardware limit switch was reached or exceeded.  (Tag of the technology object: <axis name>.ErrorBits.HWLimit) |
-| Invalid direction of motion | The motion direction of the command does not match the configured motion direction.  (Tag of the technology object: <axis name>.ErrorBits.DirectionFault) |
-| PTO already in use | A second axis is using the same PTO (Pulse Train Output) and HSC (High Speed Counter) and is enabled with "MC_Power".  (Tag of the technology object: <axis name>.ErrorBits.HWUsed) |
-| Encoder | Error in the encoder system.  (Tag of the technology object: <axis name>.ErrorBits.SensorFault) |
-| Data exchange | Error in communication with a connected device.  (Tag of the technology object: <axis name>.ErrorBits.CommunicationFault) |
-| Positioning | The axis was not correctly positioned at the end of a positioning motion.  (Tag of the technology object: <axis name>.ErrorBits.PositionigFault) |
-| Following error | The maximum permitted following error was exceeded.  (Tag of the technology object: <axis name>.ErrorBits.FollowingErrorFault) |
-| Encoder values are invalid | The encoder values are invalid.  (Tag of the technology object: <axis name>.StatusSensor.State) |
-| Configuration error | The "Axis" technology object was incorrectly configured or editable configuration data were modified incorrectly during runtime of the user program.  (Tag of the technology object: <axis name>.ErrorBits.ConfigFault) |
-| Internal error | An internal error has occurred.  (Tag of the technology object: <axis name>.ErrorBits.SystemFault) |
+| SW limit switch has been reached | A software limit switch was reached or exceeded.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.SWLimit) |
+| HW limit switch has been reached | A hardware limit switch was reached or exceeded.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.HWLimit) |
+| Invalid direction of motion | The motion direction of the command does not match the configured motion direction.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.DirectionFault) |
+| PTO already in use | A second axis is using the same PTO (Pulse Train Output) and HSC (High Speed Counter) and is enabled with "MC_Power".  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.HWUsed) |
+| Encoder | Error in the encoder system.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.SensorFault) |
+| Data exchange | Error in communication with a connected device.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.CommunicationFault) |
+| Positioning | The axis was not correctly positioned at the end of a positioning motion.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.PositionigFault) |
+| Following error | The maximum permitted following error was exceeded.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.FollowingErrorFault) |
+| Encoder values are invalid | The encoder values are invalid.  (Tag of the technology object: &lt;axis name&gt;.StatusSensor.State) |
+| Configuration error | The "Axis" technology object was incorrectly configured or editable configuration data were modified incorrectly during runtime of the user program.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.ConfigFault) |
+| Internal error | An internal error has occurred.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.SystemFault) |
 
 The output window below shows the first reported and still unacknowledged error.
 
@@ -5663,7 +5663,7 @@ The output window below shows the first reported and still unacknowledged error.
   
 [Diagnostics - Status and error bits ("Axis" technology object V1...3) (S7-1200)](#diagnostics---status-and-error-bits-axis-technology-object-v13-s7-1200)
   
-[Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+[Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
   
 [Motion status (S7-1200)](#motion-status-s7-1200)
 
@@ -5673,12 +5673,12 @@ Use the "Motion status" diagnostic function to monitor the motion status of the 
 
 | Status | Description |
 | --- | --- |
-| Actual position | The "Actual position" box indicates the measured position of the axis. If the axis is not homed, the value indicates the position value relative to the enable position of the axis.  (Tag of the technology object: <axis name>.ActualPosition) |
-| Actual velocity | The "Actual velocity" box indicates the measured velocity of the axis.  (Tag of the technology object: <axis name>.ActualVelocity) |
-| Position setpoint | The "Position setpoint" box indicates the measured position setpoint of the axis. If the axis is not homed, the value indicates the position value relative to the enable position of the axis.  (Tag of the technology object: <axis name>.Position) |
-| Velocity setpoint | The "Velocity setpoint:" box indicates the calculated velocity setpoint of the axis.   (Tag of the technology object: <axis name>.Velocity) |
-| Target position | The "Target position" box indicates the current target position of an active positioning command or of the axis command table. The value of the "Target position" is only valid during execution of a positioning command.  (Tag of the technology object: <axis name>.StatusPositioning.TargetPosition) |
-| Remaining travel distance | The "Remaining travel distance" box indicates the travel distance currently remaining for an active positioning command or the axis command table. The "Remaining travel distance" value is only valid during execution of a positioning command.  (Tag of the technology object: <axis name>.StatusPositioning.Distance) |
+| Actual position | The "Actual position" box indicates the measured position of the axis. If the axis is not homed, the value indicates the position value relative to the enable position of the axis.  (Tag of the technology object: &lt;axis name&gt;.ActualPosition) |
+| Actual velocity | The "Actual velocity" box indicates the measured velocity of the axis.  (Tag of the technology object: &lt;axis name&gt;.ActualVelocity) |
+| Position setpoint | The "Position setpoint" box indicates the measured position setpoint of the axis. If the axis is not homed, the value indicates the position value relative to the enable position of the axis.  (Tag of the technology object: &lt;axis name&gt;.Position) |
+| Velocity setpoint | The "Velocity setpoint:" box indicates the calculated velocity setpoint of the axis.   (Tag of the technology object: &lt;axis name&gt;.Velocity) |
+| Target position | The "Target position" box indicates the current target position of an active positioning command or of the axis command table. The value of the "Target position" is only valid during execution of a positioning command.  (Tag of the technology object: &lt;axis name&gt;.StatusPositioning.TargetPosition) |
+| Remaining travel distance | The "Remaining travel distance" box indicates the travel distance currently remaining for an active positioning command or the axis command table. The "Remaining travel distance" value is only valid during execution of a positioning command.  (Tag of the technology object: &lt;axis name&gt;.StatusPositioning.Distance) |
 
 ---
 
@@ -5688,7 +5688,7 @@ Use the "Motion status" diagnostic function to monitor the motion status of the 
   
 [StatusPositioning tags V4...5 (S7-1200)](#statuspositioning-tags-v45-s7-1200)
   
-[Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+[Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
   
 [Tags for position values and velocity values as of V6 (S7-1200)](#tags-for-position-values-and-velocity-values-as-of-v6-s7-1200-1)
   
@@ -5702,10 +5702,10 @@ Use the "Dynamics settings" diagnostic function to monitor the dynamic limits of
 
 | Dynamic limit | Description |
 | --- | --- |
-| Acceleration | The "Acceleration" box indicates the currently configured acceleration of the axis.  (Tag of the technology object: <axis name>.DynamicDefaults.Acceleration) |
-| Deceleration | The "Deceleration" box indicates the currently configured deceleration of the axis.  (Tag of the technology object: <axis name>.DynamicDefaults.Deceleration) |
-| Emergency deceleration | The "Emergency deceleration" box indicates the currently configured emergency stop deceleration of the axis.  (Tag of the technology object: <axis name>.DynamicDefaults.EmergencyDeceleration) |
-| Jerk  (axis technology object as of V2) | The "Velocity" box indicates the current axis step velocity configured.  (Tag of the technology object: <axis name>.DynamicDefaults.Jerk) |
+| Acceleration | The "Acceleration" box indicates the currently configured acceleration of the axis.  (Tag of the technology object: &lt;axis name&gt;.DynamicDefaults.Acceleration) |
+| Deceleration | The "Deceleration" box indicates the currently configured deceleration of the axis.  (Tag of the technology object: &lt;axis name&gt;.DynamicDefaults.Deceleration) |
+| Emergency deceleration | The "Emergency deceleration" box indicates the currently configured emergency stop deceleration of the axis.  (Tag of the technology object: &lt;axis name&gt;.DynamicDefaults.EmergencyDeceleration) |
+| Jerk  (axis technology object as of V2) | The "Velocity" box indicates the current axis step velocity configured.  (Tag of the technology object: &lt;axis name&gt;.DynamicDefaults.Jerk) |
 
 ---
 
@@ -5713,11 +5713,11 @@ Use the "Dynamics settings" diagnostic function to monitor the dynamic limits of
 
 [DynamicDefaults tags V4...5 (S7-1200)](#dynamicdefaults-tags-v45-s7-1200)
   
-[Compatibility list of variables V1...3 <-> V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
+[Compatibility list of variables V1...3 &lt;-&gt; V4...5 (S7-1200)](#compatibility-list-of-variables-v13---v45-s7-1200)
 
 ### PROFIdrive frame (S7-1200)
 
-The "Technology object > Diagnostics > PROFIdrive telegram" diagnostics function is used in the TIA Portal to monitor the PROFIdrive telegrams returned by the drive and encoder. The display of the diagnostics function is available in online mode.
+The "Technology object &gt; Diagnostics &gt; PROFIdrive telegram" diagnostics function is used in the TIA Portal to monitor the PROFIdrive telegrams returned by the drive and encoder. The display of the diagnostics function is available in online mode.
 
 #### "Drive" area
 
@@ -5757,7 +5757,7 @@ Use the Motion Control functionality of the CPU S7-1200 to run multiple position
 
 ![Figure](images/53493049483_DV_resource.Stream@PNG-en-US.png)
 
-In this example, several positioning axis technology objects, each with its own axis configuration, use the same PTO. Each axis must be called in the user program with a separate call of Motion Control instruction "MC_Power" with a separate instance data block. Only one axis at a time may use the PTO. The axis that is currently using the PTO indicates this with tag <Axis name>.StatusBits.Activated = TRUE.
+In this example, several positioning axis technology objects, each with its own axis configuration, use the same PTO. Each axis must be called in the user program with a separate call of Motion Control instruction "MC_Power" with a separate instance data block. Only one axis at a time may use the PTO. The axis that is currently using the PTO indicates this with tag &lt;Axis name&gt;.StatusBits.Activated = TRUE.
 
 #### Switchover of the positioning axis technology object
 
@@ -5769,18 +5769,18 @@ The following diagram presents this principle using Motion Control instruction "
 
 The tags of the activated axis ("Positioning axis_2" here) show the following typical indicators in the user program:
 
-- <Axis name>.StatusBits.Activated = TRUE
-- <Axis name>.ErrorBits.HWUsed = FALSE
+- &lt;Axis name&gt;.StatusBits.Activated = TRUE
+- &lt;Axis name&gt;.ErrorBits.HWUsed = FALSE
 
 To switch from one positioning axis technology object to another, follow the steps described below. In the example, a switch is made from "Positioning axis_2" to "Positioning axis_1":
 
 1. End any active traversing motions of activated "Positioning axis_2"
 2. Disable "Positioning axis_2" with the associated Motion Control instruction "MC_Power" using input parameter Enable = FALSE
-3. To verify that "Positioning axis_2" has been disabled, use an AND operation of output parameter Status = FALSE of Motion Control instruction "MC_Power" and technology object tag <Axis name>.StatusBits.Enable = FALSE.
+3. To verify that "Positioning axis_2" has been disabled, use an AND operation of output parameter Status = FALSE of Motion Control instruction "MC_Power" and technology object tag &lt;Axis name&gt;.StatusBits.Enable = FALSE.
 4. Deactivate the conditional call of the Motion Control instructions for "Positioning axis_2".
 5. Activate the conditional call of the Motion Control instruction for "Positioning axis_1". At the first call of the corresponding Motion Control instruction "MC_Power", "Positioning axis_2" is deactivated and "Positioning axis_1" is activated.
 6. Enable "Positioning axis_1" with the associated Motion Control instruction "MC_Power" using input parameter Enable = TRUE.
-7. To verify that "Positioning axis_1" has been enabled, use an AND operation of output parameter Status = TRUE of Motion Control instruction "MC_Power" and technology object tag <Axis name>.StatusBits.Enable = TRUE.
+7. To verify that "Positioning axis_1" has been enabled, use an AND operation of output parameter Status = TRUE of Motion Control instruction "MC_Power" and technology object tag &lt;Axis name&gt;.StatusBits.Enable = TRUE.
 
 It is also always possible to cyclically call all Motion Control instructions of all axes working with a single PTO.
 
@@ -5788,7 +5788,7 @@ It is also always possible to cyclically call all Motion Control instructions of
 
 When an axis is enabled (here "Positioning axis_2"), this axis becomes active.
 
-In contrast to the conditional call, the Motion Control instructions of the deactivated axes (here "Positioning axis_1" and "Positioning axis_x") indicate errors. The tags of these axes indicate the status <Axis name>.StatusBits.Activated = FALSE and <Axis name>.ErrorBits.HWUsed = TRUE.
+In contrast to the conditional call, the Motion Control instructions of the deactivated axes (here "Positioning axis_1" and "Positioning axis_x") indicate errors. The tags of these axes indicate the status &lt;Axis name&gt;.StatusBits.Activated = FALSE and &lt;Axis name&gt;.ErrorBits.HWUsed = TRUE.
 
 Use the conditional call of the Motion Control instructions if you want to implement the user program without error indicators.
 
@@ -5963,7 +5963,7 @@ The axis response is similar to that described in [Software limit switches in co
 
 #### Software limit switches in conjunction with dynamic changes (S7-1200)
 
-It is possible to influence the deceleration of the axis in the area of the software limit switches in conjunction with overriding motion commands. This applies when the overriding motion command is started with a lower deceleration (tag <Axis name>.DynamicDefaults.Deceleration). Take the following examples into consideration when developing your program.
+It is possible to influence the deceleration of the axis in the area of the software limit switches in conjunction with overriding motion commands. This applies when the overriding motion command is started with a lower deceleration (tag &lt;Axis name&gt;.DynamicDefaults.Deceleration). Take the following examples into consideration when developing your program.
 
 ##### Example 1:
 
@@ -6001,13 +6001,13 @@ During braking of the axis, an active motion command is overridden by another mo
 
 ### Reducing velocity for a short positioning duration (S7-1200)
 
-The CPU can reduce the velocity of a positioning command when the planned positioning duration is  < 2 ms.
+The CPU can reduce the velocity of a positioning command when the planned positioning duration is  &lt; 2 ms.
 
 The velocity of command execution will then be reduced for the entire duration. The reduced velocity (pulses per s) is calculated as follows:
 
 - Reduced speed = Number of pulses to be output * 500 Hz
 
-Velocity is **not** reduced if the planned positioning duration is >= 2 ms.
+Velocity is **not** reduced if the planned positioning duration is &gt;= 2 ms.
 
 ### Dynamic adjustment of start/stop velocity (S7-1200)
 
@@ -6090,7 +6090,7 @@ Depending on the error reaction, the axis is stopped in the case of operating er
   The setpoint 0 is output and the enable is removed. The axis is braked to a standstill according to the configuration in the drive.
 - **Stop with emergency stop ramp**
 
-  Active motion commands are aborted. The axis is braked with the emergency deceleration configured under "Technology object > Extended parameters > Dynamics > Emergency stop ramp" without any jerk limit and brought to a standstill.
+  Active motion commands are aborted. The axis is braked with the emergency deceleration configured under "Technology object &gt; Extended parameters &gt; Dynamics &gt; Emergency stop ramp" without any jerk limit and brought to a standstill.
 
 ##### Overview of errors and ErrorIDs
 
@@ -6132,7 +6132,7 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 |  | 16#0025 | Restarting | Wait until the axis restart is complete. |  |
 | 16#0026 | Executing loading process in RUN mode | Wait until the loading process is complete. |  |  |
 | **16#8008** |  | **Invalid direction of movement** |  | - |
-|  | 16#002E | The selected motion direction is not allowed. | - Adjust the motion direction and restart the command. - Adjust the allowed direction of rotation in the technology object configuration under "Extended parameters > Mechanics". Restart the job. |  |
+|  | 16#002E | The selected motion direction is not allowed. | - Adjust the motion direction and restart the command. - Adjust the allowed direction of rotation in the technology object configuration under "Extended parameters &gt; Mechanics". Restart the job. |  |
 | 16#002F | A reversing motion is not possible with the selected motion direction. |  |  |  |
 | **16#8009** |  | **Reference switch/encoder zero mark not found** |  | Stop with emergency stop ramp |
 |  | 16#0033 | Error in the configuration, hardware or mounting of the encoder or at the homing switch. | - Connect a suitable device. - Check the device (I/Os). - Compare the configuration of HW Config and the technology object. |  |
@@ -6165,9 +6165,9 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | **16#8010** |  | **Position of the low SW limit switch is greater than the position of the high SW limit switch when the axis is not a modulo axis.** |  | Remove enable |
 |  | 16#0001 | - | Change the position of the software limit switches. |  |
 | **16#8011** |  | **Approach velocity to the homing switch / zero mark equals zero.** |  | Remove enable |
-|  | 16#000A | Value is less than or equal to 0. | Approach velocity > Select zero |  |
+|  | 16#000A | Value is less than or equal to 0. | Approach velocity &gt; Select zero |  |
 | **16#8012** |  | **Homing velocity for setting the home position equals zero.** |  | Remove enable |
-|  | 16#000A | Value is less than or equal to 0. | Homing velocity > Select zero |  |
+|  | 16#000A | Value is less than or equal to 0. | Homing velocity &gt; Select zero |  |
 | **16#8013** |  | **The axis cannot occupy the PTO because it is being used by "CTRL_PTO".** |  | Remove enable |
 |  | 16#0001 | - | Select another PTO in the configuration. |  |
 
@@ -6198,7 +6198,7 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | 16#0019 | The axis cannot be actively or passively homed while a command table is being processed. | Wait for command table to finish or abort the command table with a motion command, for example, "MC_Halt". |  |
 | 16#0052 | The specified position exceeds the numeric limit. | Enter a valid position value at the Motion Control instruction. |  |
 | 16#0053 | The axis is in ramp-up. | Wait until the axis is ready for operation. |  |
-| 16#0054 | Actual value not valid | To execute a "MC_Home" command, the actual values must be valid.  Check the status of the actual values. The variable of the technology object <axis name>."StatusSensor.State" must show the value 2 (valid). |  |
+| 16#0054 | Actual value not valid | To execute a "MC_Home" command, the actual values must be valid.  Check the status of the actual values. The variable of the technology object &lt;axis name&gt;."StatusSensor.State" must show the value 2 (valid). |  |
 | 16#0058 | Command is already used in another execution level. | Call axis only via an "MC_Power" instance. |  |
 | 16#006B | Call is not permitted in non-position-controlled mode. | Enable the axis with position control with the "MC_Power" with StartMode = 1. |  |
 | **16#8208** |  | **Velocity difference between the maximum velocity and start/stop velocity is invalid** |  |
@@ -6247,7 +6247,7 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | **16#8404** |  | **Invalid value at parameter "** **Mode** **" of the Motion Control instruction** |  |
 |  | 16#0011 | The selection value is invalid | Correct the selection value; restart the command |
 | 16#0015 | Active/passive homing is not configured | Correct the configuration and download it to the controller; enable the axis and restart the command |  |
-| 16#0017 | Auto reverse after reaching hardware limit switch enabled, even though HW limit switches are disabled. | - Activate the HW limit switch using the variable <Axis name>.PositionLimits_HW.Active = TRUE, restart the command - Correct the configuration and download it to the controller; enable the axis and restart the command |  |
+| 16#0017 | Auto reverse after reaching hardware limit switch enabled, even though HW limit switches are disabled. | - Activate the HW limit switch using the variable &lt;Axis name&gt;.PositionLimits_HW.Active = TRUE, restart the command - Correct the configuration and download it to the controller; enable the axis and restart the command |  |
 | 16#0055 | Invalid mode with incremental encoder | Start a homing process for an incremental encoder using parameter "Mode" = 0, 1, 2, 3. |  |
 | 16#0056 | Invalid mode at absolute encoder | Passive and active homing ("Mode" = 2, 3) are not possible for an absolute value encoder.  Start a homing process for an absolute encoder using parameter "Mode" = 0, 1. |  |
 | **16#8405** |  | **Invalid value at parameter "** **StopMode** **" of the Motion Control instruction** |  |
@@ -6399,11 +6399,11 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | **16#8616** |  | **The address of the homing switch is invalid (passive homing as of V4)** |  |
 |  | 16#0011 | The selection value is invalid | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
 | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |  |
-| **16#8617** |  | **Value of variable <axis name>.** **Sensor.Sensor[1].ActiveHoming.Mode**  **is invalid** |  |
+| **16#8617** |  | **Value of variable &lt;axis name&gt;.** **Sensor.Sensor[1].ActiveHoming.Mode**  **is invalid** |  |
 |  | 16#0011 | The selection value is invalid  (Valid value: 2 = Homing via digital input) | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8618** |  | **Value of variable <axis name>.** **Sensor.Sensor[1].PassiveHoming.Mode**  **is invalid** |  |
+| **16#8618** |  | **Value of variable &lt;axis name&gt;.** **Sensor.Sensor[1].PassiveHoming.Mode**  **is invalid** |  |
 |  | 16#0011 | The selection value is invalid  (Valid value: 2 = Homing via digital input) | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8619** |  | **Value of variable <axis name>.** **Actor.Type**  **is invalid** |  |
+| **16#8619** |  | **Value of variable &lt;axis name&gt;.** **Actor.Type**  **is invalid** |  |
 |  | 16#0011 | The selection value is invalid  (Valid value: 2 = Connection via pulse interface) | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
 | **16#861A** |  | **Value for "Permitted direction of rotation" is invalid** |  |
 |  | 16#0011 | The selection value is invalid | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
@@ -6412,59 +6412,59 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 |  | 16#0031 | Value is invalid. | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
 | **16#861C** |  | **Illegal combination of data for homing with incremental encoder** |  |
 |  | 16#0031 | Value is invalid. | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#861D** |  | **The set encoder mounting type is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].MountingMode** |  |
+| **16#861D** |  | **The set encoder mounting type is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].MountingMode** |  |
 |  | 16#0011 | The selection value is invalid | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#861E** |  | **The configuration of the measuring wheel circumference of the encoder is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.DistancePerRevolution** |  |
+| **16#861E** |  | **The configuration of the measuring wheel circumference of the encoder is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.DistancePerRevolution** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#861F** |  | **The configuration for the resolution of the linear encoder is faulty. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.Resolution** |  |
+| **16#861F** |  | **The configuration for the resolution of the linear encoder is faulty. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.Resolution** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8620** |  | **The configured fine resolution for Gx_XIST1 is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.FineResolutionXist1** |  |
+| **16#8620** |  | **The configured fine resolution for Gx_XIST1 is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.FineResolutionXist1** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8621** |  | **The set fine resolution for Gx_XIST1 in <Axis name>.** **Sensor.Sensor[1].Parameter.FineResolutionXist1**  **is not consistent with the setting in**  **PROFIdrive**  **parameter P979** |  |
+| **16#8621** |  | **The set fine resolution for Gx_XIST1 in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.FineResolutionXist1**  **is not consistent with the setting in**  **PROFIdrive**  **parameter P979** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8622** |  | **Value in <Axis name>.** **Actor.Interface.AddressIn**  **or <Axis name>.** **Actor.Interface.AddressOut**  **is invalid** |  |
+| **16#8622** |  | **Value in &lt;Axis name&gt;.** **Actor.Interface.AddressIn**  **or &lt;Axis name&gt;.** **Actor.Interface.AddressOut**  **is invalid** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
-| **16#8623** |  | **The value set in the variable <axis name>.** **Sensor.Sensor[1].Type**  **is invalid.** |  |
+| **16#8623** |  | **The value set in the variable &lt;axis name&gt;.** **Sensor.Sensor[1].Type**  **is invalid.** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
-| **16#8624** |  | **The set encoder system is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].System** |  |
+| **16#8624** |  | **The set encoder system is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].System** |  |
 |  | 16#0011 | The selection value is invalid | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8625** |  | **Parameter of position monitoring is faulty. Invalid value in <Axis name>.** **PositioningMonitoring.MinDwellTime** |  |
+| **16#8625** |  | **Parameter of position monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **PositioningMonitoring.MinDwellTime** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8626** |  | **Parameter of position monitoring is faulty. Invalid value in <Axis name>.** **PositioningMonitoring.Window** |  |
+| **16#8626** |  | **Parameter of position monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **PositioningMonitoring.Window** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8627** |  | **The configuration of the PROFIdrive interface of the actual value is faulty. Invalid value in <Axis name>.** **Sensor.Sensor[1].Interface.AddressIn**  **or <Axis name>.** **Sensor.Sensor[1].Interface.AddressOut** |  |
+| **16#8627** |  | **The configuration of the PROFIdrive interface of the actual value is faulty. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Interface.AddressIn**  **or &lt;Axis name&gt;.** **Sensor.Sensor[1].Interface.AddressOut** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
 | **16#8628** |  | **Faulty controller factors** |  |
-|  | 16#0030 | The value has an incorrect number format or is outside the valid number range | The value for the gain or the precontrol of the control loop is faulty.  - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary (<Axis name>.PositionControl.Kv, <Axis name>.PositionControl.Kpc) |
-| **16#8629** |  | **Limit for standstill signal is faulty. Invalid value in <Axis name>.** **StandStillSignal.VelocityThreshold** |  |
+|  | 16#0030 | The value has an incorrect number format or is outside the valid number range | The value for the gain or the precontrol of the control loop is faulty.  - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary (&lt;Axis name&gt;.PositionControl.Kv, &lt;Axis name&gt;.PositionControl.Kpc) |
+| **16#8629** |  | **Limit for standstill signal is faulty. Invalid value in &lt;Axis name&gt;.** **StandStillSignal.VelocityThreshold** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#862A** |  | **Parameter of position monitoring is faulty. Invalid value in <Axis name>.** **PositioningMonitoring.ToleranceTime** |  |
+| **16#862A** |  | **Parameter of position monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **PositioningMonitoring.ToleranceTime** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
 | **16#862B** |  | **Inconsistent**  **PROFIBUS**  **parameterization; the sum of**  **Ti**  **and**  **To**  **is greater than one DP cycle** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
-| **16#862C** |  | **Parameter of standstill monitoring is faulty. Invalid value in <Axis name>.** **StandStillSignal.MinDwellTime** |  |
+| **16#862C** |  | **Parameter of standstill monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **StandStillSignal.MinDwellTime** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#862D** |  | **Parameter of following error monitoring is faulty. Invalid value in <Axis name>.** **FollowingError.MinValue** |  |
+| **16#862D** |  | **Parameter of following error monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **FollowingError.MinValue** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#862E** |  | **Value in <Axis name>.** **Modulo.Length**  **is invalid** |  |
+| **16#862E** |  | **Value in &lt;Axis name&gt;.** **Modulo.Length**  **is invalid** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#862F** |  | **Value in <Axis name>.** **Modulo.StartValue**  **is invalid** |  |
+| **16#862F** |  | **Value in &lt;Axis name&gt;.** **Modulo.StartValue**  **is invalid** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8630** |  | **Value in <Axis name>.** **Actor.DriveParameter.ReferenceSpeed**  **is invalid** |  |
+| **16#8630** |  | **Value in &lt;Axis name&gt;.** **Actor.DriveParameter.ReferenceSpeed**  **is invalid** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8631** |  | **The set fine resolution for Gx_XIST2 is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.FineResolutionXist2** |  |
+| **16#8631** |  | **The set fine resolution for Gx_XIST2 is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.FineResolutionXist2** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8632** |  | **The number of determinable encoder revolutions is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.DeterminableRevolutions** |  |
+| **16#8632** |  | **The number of determinable encoder revolutions is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.DeterminableRevolutions** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8634** |  | **Parameter of the following error monitoring is faulty. Invalid value in <Axis name>.** **FollowingError.MaxValue** |  |
+| **16#8634** |  | **Parameter of the following error monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **FollowingError.MaxValue** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8635** |  | **Parameter of the following error monitoring is faulty. Invalid value in <Axis name>.** **FollowingError.MinVelocity** |  |
+| **16#8635** |  | **Parameter of the following error monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **FollowingError.MinVelocity** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8636** |  | **Controller factor is incorrect. Invalid value of the precontrol factor <Axis name>.** **PositionControl.Kpc** |  |
+| **16#8636** |  | **Controller factor is incorrect. Invalid value of the precontrol factor &lt;Axis name&gt;.** **PositionControl.Kpc** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8637** |  | **Value in <Axis name>.** **Sensor.Sensor[1].Interface.Type**  **is invalid** |  |
+| **16#8637** |  | **Value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Interface.Type**  **is invalid** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
-| **16#8638** |  | **Value in <Axis name>.** **Sensor.Sensor[1].Interface.HSC**  **is invalid** |  |
+| **16#8638** |  | **Value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Interface.HSC**  **is invalid** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
 | **16#8639** |  | **Error at the drive** |  |
 |  | 16#0049 | Configuration error on device | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
@@ -6489,8 +6489,8 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | 16#0050 | The requested logical intput address is invalid. |  |  |
 | 16#0051 | The requested logical output address is invalid. |  |  |
 | **16#863E** |  | **Value of variable "** **ControlPanel.Input.TimeOut** **" is** **invalid (axis control panel)** |  |
-|  | 16#0030 | The value has an incorrect number format or is outside the valid number range | Correct the value in the variables of the technology object <Axis name>.ControlPanel.Input.TimeOut.  The value is specified in milliseconds (ms). |
-| **16#863F** |  | **Value in <Axis name>.** **Actor.DriveParameter.MaxSpeed**  **is invalid** |  |
+|  | 16#0030 | The value has an incorrect number format or is outside the valid number range | Correct the value in the variables of the technology object &lt;Axis name&gt;.ControlPanel.Input.TimeOut.  The value is specified in milliseconds (ms). |
+| **16#863F** |  | **Value in &lt;Axis name&gt;.** **Actor.DriveParameter.MaxSpeed**  **is invalid** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | Correct the reference value in the drive and in the configuration of the technology object to Actuator.MaxSpeed/2.   With analog drive connection, correct the reference value in the drive and in the configuration of the technology object to Actuator.MaxSpeed/1.17. |
 | **16#8640** |  | **Error with automatic transfer of drive parameters in the device** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | Correct the value. |
@@ -6515,7 +6515,7 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | 16#0065 | Encoder fine resolution Gx_XIST2 (r0979[4/14]): Either a parameter does not exist or its value cannot be read or is outside the permitted limits. Reading of parameters has been aborted due to an error signaled by the hardware. |  |  |
 | 16#0066 | Number of determinable encoder revolutions (r0979[5/15]): Either a parameter does not exist or its value cannot be read or is outside the permitted limits. Reading of parameters has been aborted due to an error signaled by the hardware. |  |  |
 | 16#0070 | The parameters could not be read from the device. | Check the communication with the device. |  |
-| **16#8646** |  | **The value in <Axis name>.Sensor.Interface.Number is invalid.** |  |
+| **16#8646** |  | **The value in &lt;Axis name&gt;.Sensor.Interface.Number is invalid.** |  |
 |  | 16#0030 | The value has an incorrect number format or is outside the valid number range | Correct the value and load configuration in the device. |
 | **16#8647** |  | **Simulation is not supported for PTO axes** |  |
 |  | 16#0001 | - | Disable simulation |
@@ -6617,7 +6617,7 @@ This section contains information on the following topics:
 | 10 | For drive connection via PROFIdrive/analog output: With the next call of the MC-Interpolator [OB92] |  |
 | Description | Description of the tag |  |
 
-Access to the tags is with "<TO>.<tag name>". The placeholder <TO> represents the name of the technology object.
+Access to the tags is with "&lt;TO&gt;.&lt;tag name&gt;". The placeholder &lt;TO&gt; represents the name of the technology object.
 
 > **Note**
 >
@@ -6676,7 +6676,7 @@ The tag structure contains the setpoint and actual values of the position and th
 
 #### Simulation tags as of V6 (S7-1200)
 
-The tag structure <axis name>.Simulation.Mode contains the simulation mode.
+The tag structure &lt;axis name&gt;.Simulation.Mode contains the simulation mode.
 
 ##### Tags
 
@@ -6699,7 +6699,7 @@ The tag structure <axis name>.Simulation.Mode contains the simulation mode.
 
 #### Actuator tags as of V6 (S7-1200)
 
-The tag structure <axis name>.Actor.<tag name> contains the drive parameters.
+The tag structure &lt;axis name&gt;.Actor.&lt;tag name&gt; contains the drive parameters.
 
 ##### Tags
 
@@ -6791,7 +6791,7 @@ The tag structure <axis name>.Actor.<tag name> contains the drive parameters.
 
 #### Sensor[1] tags as of V6 (S7-1200)
 
-The tag structure <axis name>.Sensor[1].<tag name> contains the encoder parameters.
+The tag structure &lt;axis name&gt;.Sensor[1].&lt;tag name&gt; contains the encoder parameters.
 
 ##### Tags
 
@@ -6922,7 +6922,7 @@ The tag structure <axis name>.Sensor[1].<tag name> contains the encoder paramete
 
 #### Units tag as of V6 (S7-1200)
 
-The tag structure <axis name>.Units.LengthUnit contains the configured units of measurement of the parameters.
+The tag structure &lt;axis name&gt;.Units.LengthUnit contains the configured units of measurement of the parameters.
 
 ##### Tags
 
@@ -6949,7 +6949,7 @@ The tag structure <axis name>.Units.LengthUnit contains the configured units of 
 
 #### Mechanics tag as of V6 (S7-1200)
 
-The tag structure <axis name>.Mechanics.LeadScrew contains the distance traveled per motor revolution.
+The tag structure &lt;axis name&gt;.Mechanics.LeadScrew contains the distance traveled per motor revolution.
 
 ##### Tags
 
@@ -6970,7 +6970,7 @@ The tag structure <axis name>.Mechanics.LeadScrew contains the distance traveled
 
 #### Modulo tags as of V6 (S7-1200)
 
-The tag structure <axis name>.Modulo.<tag name> contains the modulo settings.
+The tag structure &lt;axis name&gt;.Modulo.&lt;tag name&gt; contains the modulo settings.
 
 ##### Tags
 
@@ -6982,7 +6982,7 @@ The tag structure <axis name>.Modulo.<tag name> contains the modulo settings.
 |  | Enable | BOOL | FALSE | R, OPRW | - | Name in Openness: Modulo.Enable |  |
 | FALSE | Modulo conversion disabled |  |  |  |  |  |  |
 | TRUE | Modulo conversion enabled |  |  |  |  |  |  |
-| When modulo conversion is enabled, a check is made for modulo length > 0.0 |  |  |  |  |  |  |  |
+| When modulo conversion is enabled, a check is made for modulo length &gt; 0.0 |  |  |  |  |  |  |  |
 | Length | REAL | 360.0  (0.001 to 1.0E12) | R, OPRW | - | Modulo length  Name in Openness: Modulo.Length |  |  |
 | StartValue | REAL | 0.0  (-1.0E12 to 1.0E12) | R, OPRW | - | Modulo start value  Name in Openness: Modulo.StartValue |  |  |
 
@@ -6996,7 +6996,7 @@ The tag structure <axis name>.Modulo.<tag name> contains the modulo settings.
 
 #### DynamicLimits tags as of V6 (S7-1200)
 
-The tag structure <axis name>.DynamicLimits.<tag name> contains the configuration of the dynamic limits.
+The tag structure &lt;axis name&gt;.DynamicLimits.&lt;tag name&gt; contains the configuration of the dynamic limits.
 
 ##### Tags
 
@@ -7018,7 +7018,7 @@ The tag structure <axis name>.DynamicLimits.<tag name> contains the configuratio
 
 #### DynamicDefaults tags as of V6 (S7-1200)
 
-The tag structure <axis name>.DynamicDefaults.<tag name> contains the configuration of the dynamic defaults.
+The tag structure &lt;axis name&gt;.DynamicDefaults.&lt;tag name&gt; contains the configuration of the dynamic defaults.
 
 ##### Tags
 
@@ -7042,7 +7042,7 @@ The tag structure <axis name>.DynamicDefaults.<tag name> contains the configurat
 
 #### PositionLimits_SW variables as of V6 (S7-1200)
 
-The tag structure <axis name>.PositionLimits_SW.<tag name> contains the configuration for position monitoring with software limit switches. Software limit switches are used to limit the operating range of a positioning axis.
+The tag structure &lt;axis name&gt;.PositionLimits_SW.&lt;tag name&gt; contains the configuration for position monitoring with software limit switches. Software limit switches are used to limit the operating range of a positioning axis.
 
 ##### Tags
 
@@ -7067,7 +7067,7 @@ The tag structure <axis name>.PositionLimits_SW.<tag name> contains the configur
 
 #### PositionLimits_HW variables as of V6 (S7-1200)
 
-The tag structure <axis name>.PositionLimits_HW.<tag name> contains the configuration for position monitoring with hardware limit switches. Hardware limit switches are used to limit the traversing range of a positioning axis.
+The tag structure &lt;axis name&gt;.PositionLimits_HW.&lt;tag name&gt; contains the configuration for position monitoring with hardware limit switches. Hardware limit switches are used to limit the traversing range of a positioning axis.
 
 ##### Tags
 
@@ -7109,7 +7109,7 @@ The tag structure <axis name>.PositionLimits_HW.<tag name> contains the configur
 
 #### Homing tags as of V6 (S7-1200)
 
-The tag structure <axis name>.Homing.<tag name> contains the configuration for homing the axis.
+The tag structure &lt;axis name&gt;.Homing.&lt;tag name&gt; contains the configuration for homing the axis.
 
 ##### Tags
 
@@ -7137,7 +7137,7 @@ The tag structure <axis name>.Homing.<tag name> contains the configuration for h
 
 #### PositionControl tag as of V6 (S7-1200)
 
-The tag structure <axis name>.PositionControl.<tag name> contains the position control settings.
+The tag structure &lt;axis name&gt;.PositionControl.&lt;tag name&gt; contains the position control settings.
 
 ##### Tags
 
@@ -7146,7 +7146,7 @@ The tag structure <axis name>.PositionControl.<tag name> contains the position c
 | Tag |  | Data type | Values | Access | W | Description |
 | --- | --- | --- | --- | --- | --- | --- |
 | PositionControl. |  | STRUCT |  |  |  | TO_Struct_PositionControl |
-|  | Kv | REAL | 10.0  (0.0 to 2147480.0) | R  WP_PD  OPRW | -  10 | Proportional gain of the closed loop position control  ("Kv" > 0.0)  Name in Openness: PositionControl.Kv |
+|  | Kv | REAL | 10.0  (0.0 to 2147480.0) | R  WP_PD  OPRW | -  10 | Proportional gain of the closed loop position control  ("Kv" &gt; 0.0)  Name in Openness: PositionControl.Kv |
 | Kpc | REAL | 100.0  (0.0 to 150.0) | R  WP_PD  OPRW | -  10 | Velocity precontrol of the position control as a percentage  Name in Openness: PositionControl.Kpc |  |
 
 ---
@@ -7159,7 +7159,7 @@ The tag structure <axis name>.PositionControl.<tag name> contains the position c
 
 #### FollowingError tags as of V6 (S7-1200)
 
-The tag structure <axis name>.FollowingError.<tag name> contains the configuration of the dynamic following error monitoring.
+The tag structure &lt;axis name&gt;.FollowingError.&lt;tag name&gt; contains the configuration of the dynamic following error monitoring.
 
 ##### Tags
 
@@ -7185,7 +7185,7 @@ The tag structure <axis name>.FollowingError.<tag name> contains the configurati
 
 #### PositionMonitoring tags as of V6 (S7-1200)
 
-The tag structure <axis name>.PositionMonitoring.<tag name> contains the configuration for position monitoring at the end of a positioning motion.
+The tag structure &lt;axis name&gt;.PositionMonitoring.&lt;tag name&gt; contains the configuration for position monitoring at the end of a positioning motion.
 
 ##### Tags
 
@@ -7208,7 +7208,7 @@ The tag structure <axis name>.PositionMonitoring.<tag name> contains the configu
 
 #### StandstillSignal tags as of V6 (S7-1200)
 
-The tag structure <axis name>.StandstillSignal.<tag name> contains the configuration for the standstill signal.
+The tag structure &lt;axis name&gt;.StandstillSignal.&lt;tag name&gt; contains the configuration for the standstill signal.
 
 ##### Tags
 
@@ -7230,7 +7230,7 @@ The tag structure <axis name>.StandstillSignal.<tag name> contains the configura
 
 #### StatusPositioning tags as of V6 (S7-1200)
 
-The tag structure <axis name>.StatusPositioning.<tag name> indicates the status of a positioning motion.
+The tag structure &lt;axis name&gt;.StatusPositioning.&lt;tag name&gt; indicates the status of a positioning motion.
 
 ##### Tags
 
@@ -7253,7 +7253,7 @@ The tag structure <axis name>.StatusPositioning.<tag name> indicates the status 
 
 #### StatusDrive tags as of V6 (S7-1200)
 
-The tag structure <axis name>.StatusDrive.<tag name> indicates the status of the drive.
+The tag structure &lt;axis name&gt;.StatusDrive.&lt;tag name&gt; indicates the status of the drive.
 
 ##### Tags
 
@@ -7285,7 +7285,7 @@ The tag structure <axis name>.StatusDrive.<tag name> indicates the status of the
 
 #### StatusSensor tags as of V6 (S7-1200)
 
-The tag structure <axis name>.StatusSensor[1].<tag name> indicates the status of the measuring system.
+The tag structure &lt;axis name&gt;.StatusSensor[1].&lt;tag name&gt; indicates the status of the measuring system.
 
 ##### Tags
 
@@ -7319,7 +7319,7 @@ The tag structure <axis name>.StatusSensor[1].<tag name> indicates the status of
 
 #### StatusBits tags as of V6 (S7-1200)
 
-The tag structure <axis name>.StatusBits.<tag name> contains the status information of the technology object.
+The tag structure &lt;axis name&gt;.StatusBits.&lt;tag name&gt; contains the status information of the technology object.
 
 ##### Tags
 
@@ -7408,7 +7408,7 @@ The tag structure <axis name>.StatusBits.<tag name> contains the status informat
 
 #### ErrorBits tags as of V6 (S7-1200)
 
-The tag structure <axis name>.ErrorBits.<tag name> indicates error at the technology object.
+The tag structure &lt;axis name&gt;.ErrorBits.&lt;tag name&gt; indicates error at the technology object.
 
 ##### Tags
 
@@ -7509,7 +7509,7 @@ Changes to the values of configuration tags do not take effect immediately. For 
 
 ### Tags of the command table technology object as of V6 (S7-1200)
 
-The tag structure <command table>.Command[n].<tag name> contains the configured command parameters.
+The tag structure &lt;command table&gt;.Command[n].&lt;tag name&gt; contains the configured command parameters.
 
 #### Tags
 
@@ -7640,7 +7640,7 @@ PTO3 and PTO4 are only available for CPUs with the article numbers xxxxxxx-1xx**
 
 The following limit frequencies apply to the pulse outputs:
 
-| Pulse output | Limit frequencies for technology object positioning axis V1 | Limiting frequencies of the technology object positioning axis V2/V3 with CPU < V3.0 | Limiting frequencies of the technology object positioning axis V2/V3 with CPU V3.0 |
+| Pulse output | Limit frequencies for technology object positioning axis V1 | Limiting frequencies of the technology object positioning axis V2/V3 with CPU &lt; V3.0 | Limiting frequencies of the technology object positioning axis V2/V3 with CPU V3.0 |
 | --- | --- | --- | --- |
 | On-board (MLFB article number xxxxxxx-1xx**30**-xxxx) | 2 Hz ≤ f ≤ 100 kHz | 2 Hz ≤ f ≤ 100 kHz | 1 Hz ≤ f ≤ 100 kHz |
 | On-board (MLFB - article number xxxxxxx-1xx**31**xxxx) | 2 Hz ≤ f ≤ 100 kHz (PTO 1+2)  2 Hz ≤ f ≤ 20 kHz (PTO 3+4) | 2 Hz ≤ f ≤ 100 kHz (PTO 1+2)  2 Hz ≤ f ≤ 20 kHz (PTO 3+4) | 1 Hz ≤ f ≤ 100 kHz (PTO 1+2)  1 Hz ≤ f ≤ 20 kHz (PTO 3+4) |
@@ -7658,7 +7658,7 @@ For motion control, you can optionally parameterize a drive interface for "Drive
 
 The following limits apply to acceleration and deceleration:
 
-| Acceleration/deceleration | Value (CPU < V3.0) | Value (CPU V3.0) |
+| Acceleration/deceleration | Value (CPU &lt; V3.0) | Value (CPU V3.0) |
 | --- | --- | --- |
 | Minimum acceleration/deceleration | 2.8E-1 pulses/s<sup>2</sup> | 5.0E-3 pulses/s<sup>2</sup> |
 | Maximum acceleration/deceleration | 9.5E+9 pulses/s<sup>2</sup> | 9.5E+9 pulses/s<sup>2</sup> |
@@ -7667,7 +7667,7 @@ The following limits apply to acceleration and deceleration:
 
 The following limits apply to the jerk:
 
-| Jerk | Value (CPU < V3.0) | Value (CPU V3.0) |
+| Jerk | Value (CPU &lt; V3.0) | Value (CPU V3.0) |
 | --- | --- | --- |
 | Minimum jerk | 4.0E-2 pulses/s<sup>3</sup> | 4.0E-3 pulses/s<sup>3</sup> |
 | Maximum jerk | 1.5E+8 pulses/s<sup>3</sup> | 1.0E+10 pulses/s<sup>3</sup> |
@@ -7710,7 +7710,7 @@ In CPUs with relay outputs, the pulse signal cannot be output on these outputs b
 
 > **Note**
 >
-> The PTO requires the functionality of a fast counter (HSC). An HSC is used for this purpose with CPU version <V3.0. The HSC is then no longer available to the user. An internal HSC is used for this with CPU version ≥ V3.0.
+> The PTO requires the functionality of a fast counter (HSC). An HSC is used for this purpose with CPU version &lt;V3.0. The HSC is then no longer available to the user. An internal HSC is used for this with CPU version ≥ V3.0.
 >
 > The count can not be evaluated from its input address.
 >
@@ -7981,10 +7981,10 @@ You can change the following configuration parameters during runtime of the user
 
 You can also change the values for acceleration and deceleration during runtime of the user program. Use the following technology object tags for this purpose:
 
-- <Axis name>.Config.DynamicDefaults.Acceleration
+- &lt;Axis name&gt;.Config.DynamicDefaults.Acceleration
 
   for changing acceleration
-- <Axis name>.Config.DynamicDefaults.Deceleration
+- &lt;Axis name&gt;.Config.DynamicDefaults.Deceleration
 
   for changing deceleration
 
@@ -7994,7 +7994,7 @@ Refer to the description of the [technology object tags](#tag-of-the-axis-techno
 
 You can also change the value for the emergency stop deceleration during runtime of the user program. Use the following technology object tag for this purpose:
 
-- <Axis name>.Config.DynamicDefaults.EmergencyDeceleration
+- &lt;Axis name&gt;.Config.DynamicDefaults.EmergencyDeceleration
 
 Refer to the description of the technology object tags in the appendix for information on when changes to the configuration parameter take effect.
 
@@ -8007,10 +8007,10 @@ Refer to the description of the technology object tags in the appendix for infor
 
 You can also activate and deactivate the jerk limit at runtime of the user program and change the value for the jerk. Use the following technology object tags for this purpose:
 
-- <Axis name>.Config.DynamicDefaults.JerkActive
+- &lt;Axis name&gt;.Config.DynamicDefaults.JerkActive
 
   for activating and deactivating the jerk limit
-- <Axis name>.Config.DynamicDefaults.Jerk
+- &lt;Axis name&gt;.Config.DynamicDefaults.Jerk
 
   for changing the jerk
 
@@ -8164,7 +8164,7 @@ Configure the number of pulses required for one revolution of the motor in this 
 
 Limits (independent of the selected unit of measurement):
 
-- 0 < Pulse per motor revolution ≤ 2147483647
+- 0 &lt; Pulse per motor revolution ≤ 2147483647
 
 ###### Distance per revolution
 
@@ -8172,7 +8172,7 @@ In this box, configure the load distance per motor revolution covered by the mec
 
 Limits (independent of the selected unit of measurement):
 
-- 0.0 < Distance per revolution ≤ 1.0e12
+- 0.0 &lt; Distance per revolution ≤ 1.0e12
 
 ###### Permitted direction of rotation (technology version as of V4)
 
@@ -8335,50 +8335,50 @@ You use the "Status and error bits" diagnostic function to monitor the most impo
 
 | Status | Description |
 | --- | --- |
-| Enabled | The axis is enabled and ready to be controlled via Motion Control commands.  (Tag of the technology object: <axis name>.StatusBits.Enable) |
-| Homed | The axis is homed and is capable of executing absolute positioning commands of Motion Control instruction "MC_MoveAbsolute". The axis does not have to be homed for relative positioning. Special situations:  - During active homing, the status is FALSE. - If a homed axis undergoes passive homing, the status is set to TRUE during passive homing.   (Tag of the technology object: <axis name>.StatusBits.HomingDone) |
-| Axis error | An error has occurred in the "Axis" technology object. Additional information about the error is available in automatic control at the ErrorID and ErrorInfo parameters of the Motion Control instructions. In manual mode, the "Error message" box of the axis control panel displays detailed information about the cause of error.  (Tag of the technology object: <axis name>.StatusBits.Error) |
-| Axis control panel enabled | The "Manual control" mode was enabled in the axis control panel. The axis control panel has control priority over the "Axis" technology object. The axis cannot be controlled from the user program.  (Tag of the technology object: <axis name>.StatusBits.ControlPanelActive) |
+| Enabled | The axis is enabled and ready to be controlled via Motion Control commands.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.Enable) |
+| Homed | The axis is homed and is capable of executing absolute positioning commands of Motion Control instruction "MC_MoveAbsolute". The axis does not have to be homed for relative positioning. Special situations:  - During active homing, the status is FALSE. - If a homed axis undergoes passive homing, the status is set to TRUE during passive homing.   (Tag of the technology object: &lt;axis name&gt;.StatusBits.HomingDone) |
+| Axis error | An error has occurred in the "Axis" technology object. Additional information about the error is available in automatic control at the ErrorID and ErrorInfo parameters of the Motion Control instructions. In manual mode, the "Error message" box of the axis control panel displays detailed information about the cause of error.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.Error) |
+| Axis control panel enabled | The "Manual control" mode was enabled in the axis control panel. The axis control panel has control priority over the "Axis" technology object. The axis cannot be controlled from the user program.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.ControlPanelActive) |
 | Restart necessary | A modified configuration of the axis was downloaded to the load memory in CPU RUN operating mode. To download the modified configuration to the work memory, you need to restart the axis. Use the Motion Control instruction MC_Reset to do this. |
 
 ##### Drive status
 
 | Status | Description |
 | --- | --- |
-| Drive ready | The drive is ready for operation.  (Tag of the technology object: <axis name>.StatusBits.DriveReady) |
-| Drive error | The drive has reported an error due to loss of its "Drive ready" signal.  (Tag of the technology object: <axis name>.ErrorBits.DriveFault) |
+| Drive ready | The drive is ready for operation.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.DriveReady) |
+| Drive error | The drive has reported an error due to loss of its "Drive ready" signal.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.DriveFault) |
 
 ##### Status of the axis motion
 
 | Status | Description |
 | --- | --- |
-| Standstill | The axis is at a standstill.  (Tag of the technology object: <axis name>.StatusBits.StandStill) |
-| Acceleration | The axis accelerates.  (Tag of the technology object: <axis name>.StatusBits.Acceleration) |
-| Constant velocity | The axis travels at constant velocity.  (Tag of the technology object: <axis name>.StatusBits.ConstantVelocity) |
-| Deceleration | The axis decelerates (slows down).  (Tag of the technology object: <axis name>.StatusBits.Deceleration) |
+| Standstill | The axis is at a standstill.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.StandStill) |
+| Acceleration | The axis accelerates.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.Acceleration) |
+| Constant velocity | The axis travels at constant velocity.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.ConstantVelocity) |
+| Deceleration | The axis decelerates (slows down).  (Tag of the technology object: &lt;axis name&gt;.StatusBits.Deceleration) |
 
 ##### Status of the motion mode
 
 | Status | Description |
 | --- | --- |
-| Positioning | The axis executes a positioning command of the Motion Control instruction "MC_MoveAbsolute", "MC_MoveRelative" or the axis control panel.  (Tag of the technology object: <axis name>.StatusBits.PositioningCommand) |
-| Travel with velocity specification | The axis executes a command with velocity specification of the Motion Control instruction "MC_MoveVelocity", "MC_MoveJog" or the axis control panel.  (Tag of the technology object: <axis name>.StatusBits.SpeedCommand) |
-| Homing | The axis executes a homing command of the Motion Control instruction "MC_Home" or the axis control panel.  (Tag of the technology object: <axis name>.StatusBits.Homing) |
-| Command table active  (as of technology object Axis V2.0) | The axis is controlled by Motion Control instruction "MC_CommandTable".  (Tag of the technology object: <axis name>.StatusBits.CommandTableActive) |
+| Positioning | The axis executes a positioning command of the Motion Control instruction "MC_MoveAbsolute", "MC_MoveRelative" or the axis control panel.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.PositioningCommand) |
+| Travel with velocity specification | The axis executes a command with velocity specification of the Motion Control instruction "MC_MoveVelocity", "MC_MoveJog" or the axis control panel.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.SpeedCommand) |
+| Homing | The axis executes a homing command of the Motion Control instruction "MC_Home" or the axis control panel.  (Tag of the technology object: &lt;axis name&gt;.StatusBits.Homing) |
+| Command table active  (as of technology object Axis V2.0) | The axis is controlled by Motion Control instruction "MC_CommandTable".  (Tag of the technology object: &lt;axis name&gt;.StatusBits.CommandTableActive) |
 
 ##### Error messages
 
 | Error | Description |
 | --- | --- |
-| Lower SW limit switch was reached | The lower software limit switch has been reached.  (Tag of the technology object: <axis name>.ErrorBits.SwLimitMinReached) |
-| Lower SW limit switch was exceeded | The lower software limit switch has been exceeded.  (Tag of the technology object: <axis name>.ErrorBits.SwLimitMinExceeded) |
-| Upper SW limit switch was reached | The upper software limit switch has been reached.  (Tag of the technology object: <axis name>.ErrorBits.SwLimitMaxReached) |
-| Upper SW limit switch was exceeded | The upper software limit switch has been exceeded.  (Tag of the technology object: <axis name>.ErrorBits.SwLimitMaxExceeded) |
-| Lower HW limit switch was reached | The lower hardware limit switch has been reached.  (Tag of the technology object: <axis name>.ErrorBits.HwLimitMin) |
-| Upper HW limit switch was reached | The upper hardware limit switch has been reached.  (Tag of the technology object: <axis name>.ErrorBits.HwLimitMax) |
-| PTO and HSC already in use | A second axis is using the same PTO (Pulse Train Output) and HSC (High Speed Counter) and is enabled with "MC_Power".  (Tag of the technology object: <axis name>.ErrorBits.HwUsed) |
-| Configuration error | The "Axis" technology object was incorrectly configured or editable configuration data were modified incorrectly during runtime of the user program.  (Tag of the technology object: <axis name>.ErrorBits.ConfigFault) |
-| Internal error | An internal error has occurred.  (Tag of the technology object: <axis name>.ErrorBits.SystemFault) |
+| Lower SW limit switch was reached | The lower software limit switch has been reached.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.SwLimitMinReached) |
+| Lower SW limit switch was exceeded | The lower software limit switch has been exceeded.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.SwLimitMinExceeded) |
+| Upper SW limit switch was reached | The upper software limit switch has been reached.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.SwLimitMaxReached) |
+| Upper SW limit switch was exceeded | The upper software limit switch has been exceeded.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.SwLimitMaxExceeded) |
+| Lower HW limit switch was reached | The lower hardware limit switch has been reached.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.HwLimitMin) |
+| Upper HW limit switch was reached | The upper hardware limit switch has been reached.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.HwLimitMax) |
+| PTO and HSC already in use | A second axis is using the same PTO (Pulse Train Output) and HSC (High Speed Counter) and is enabled with "MC_Power".  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.HwUsed) |
+| Configuration error | The "Axis" technology object was incorrectly configured or editable configuration data were modified incorrectly during runtime of the user program.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.ConfigFault) |
+| Internal error | An internal error has occurred.  (Tag of the technology object: &lt;axis name&gt;.ErrorBits.SystemFault) |
 
 ---
 
@@ -8405,7 +8405,7 @@ Depending on the error reaction, the axis is stopped in the case of operating er
   The setpoint 0 is output and the enable is removed. The axis is braked depending on the configuration in the drive, and is brought to a standstill.
 - **Stop with emergency stop ramp**
 
-  Active motion commands are aborted. The axis is braked with the emergency stop deceleration configured under "Technology object > Extended parameters > Dynamics > Emergency stop ramp" without any jerk limit and brought to a standstill.
+  Active motion commands are aborted. The axis is braked with the emergency stop deceleration configured under "Technology object &gt; Extended parameters &gt; Dynamics &gt; Emergency stop ramp" without any jerk limit and brought to a standstill.
 
 ###### Operating error with axis stop
 
@@ -8434,7 +8434,7 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 |  | 16#0025 | Restarting | Wait until the axis restart is complete. |  |
 | 16#0026 | Executing loading process in RUN mode | Wait until the loading process is complete. |  |  |
 | **16#8008** |  | **Invalid direction of motion** |  | - |
-|  | 16#002E | The selected motion direction is not allowed. | - Adjust the motion direction and restart the command. - Adjust the allowed direction of rotation in the technology object configuration under "Extended parameters > Mechanics". Restart the command. |  |
+|  | 16#002E | The selected motion direction is not allowed. | - Adjust the motion direction and restart the command. - Adjust the allowed direction of rotation in the technology object configuration under "Extended parameters &gt; Mechanics". Restart the command. |  |
 | 16#002F | A reversing motion is not possible with the selected motion direction. |  |  |  |
 | **16#8009** |  | **Reference switch/encoder zero mark not found** |  | Stop with emergency stop ramp |
 |  | 16#0033 | Error in the configuration, hardware or installation of the encoder or at the homing switch. | - Connect a suitable device. - Check the device (I/Os). - Compare the configuration of HW Config and the technology object. |  |
@@ -8491,7 +8491,7 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | 16#0019 | The axis cannot be actively or passively homed while a command table is being processed. | Wait for command table to finish or abort the command table with a motion command, for example, "MC_Halt". |  |
 | 16#0052 | The specified position exceeds the numerical limit. | Enter a valid position value at the Motion Control instruction. |  |
 | 16#0053 | The axis is ramping up. | Wait until the axis is ready for operation. |  |
-| 16#0054 | Actual value is invalid | To execute a "MC_Home" command, the actual values must be valid.  Check the status of the actual values. The variable of the technology object <Axis name>."StatusSensor.State" must show the value 2 (valid). |  |
+| 16#0054 | Actual value is invalid | To execute a "MC_Home" command, the actual values must be valid.  Check the status of the actual values. The variable of the technology object &lt;Axis name&gt;."StatusSensor.State" must show the value 2 (valid). |  |
 | **16#8208** |  | **Difference between maximum and start/stop velocity is invalid** |  |
 |  | 16#0002 | The value has an invalid number format | Correct the value; restart the command |
 | 16#000A | Value is less than or equal to 0. |  |  |
@@ -8531,7 +8531,7 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | **16#8404** |  | **Invalid value at parameter "** **Mode** **" of the Motion Control instruction** |  |
 |  | 16#0011 | The selection value is invalid | Correct the selection value; restart the command |
 | 16#0015 | Active/passive homing is not configured | Correct the configuration and download it to the controller; enable the axis and restart the command |  |
-| 16#0017 | The direction reversal is activated at the hardware limit switch, despite the fact that the hardware limit switches are disabled | - Activate the HW limit switch using the variable <Axis name>.PositionLimitsHW.Active = TRUE, restart the command - Correct the configuration and download it to the controller; enable the axis and restart the command |  |
+| 16#0017 | The direction reversal is activated at the hardware limit switch, despite the fact that the hardware limit switches are disabled | - Activate the HW limit switch using the variable &lt;Axis name&gt;.PositionLimitsHW.Active = TRUE, restart the command - Correct the configuration and download it to the controller; enable the axis and restart the command |  |
 | 16#0055 | Invalid mode at incremental encoder | Start a homing process for an incremental encoder using parameter "Mode" = 0, 1, 2, 3. |  |
 | 16#0056 | Invalid mode at absolute encoder | Passive and active homing ("Mode" = 2, 3) are not possible for an absolute value encoder.  Start a homing process for an absolute encoder using parameter "Mode" = 0, 1. |  |
 | **16#8405** |  | **Invalid value at parameter "** **StopMode** **" of the Motion Control instruction** |  |
@@ -8674,11 +8674,11 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | **16#8616** |  | **Address of homing switch is invalid (passive homing as of V4)** |  |
 |  | 16#0011 | The selection value is invalid | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
 | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |  |
-| **16#8617** |  | **Value of tag <Axis name>.** **Sensor.Sensor[1].ActiveHoming.Mode**  **is invalid** |  |
+| **16#8617** |  | **Value of tag &lt;Axis name&gt;.** **Sensor.Sensor[1].ActiveHoming.Mode**  **is invalid** |  |
 |  | 16#0011 | The selection value is invalid  (Valid value: 2 = Homing via digital input) | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8618** |  | **Value of tag <Axis name>.** **Sensor.Sensor[1].PassiveHoming.Mode**  **is invalid** |  |
+| **16#8618** |  | **Value of tag &lt;Axis name&gt;.** **Sensor.Sensor[1].PassiveHoming.Mode**  **is invalid** |  |
 |  | 16#0011 | The selection value is invalid  (Valid value: 2 = Homing via digital input) | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8619** |  | **Value of tag <Axis name>.** **Actor.Type**  **is invalid** |  |
+| **16#8619** |  | **Value of tag &lt;Axis name&gt;.** **Actor.Type**  **is invalid** |  |
 |  | 16#0011 | The selection value is invalid  (Valid value: 2 = Connection via pulse interface) | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
 | **16#861A** |  | **Value for "Permitted direction of rotation" is invalid** |  |
 |  | 16#0011 | The selection value is invalid | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
@@ -8687,61 +8687,61 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 |  | 16#0031 | Valid is invalid. | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
 | **16#861C** |  | **Illegal combination of data for homing with incremental encoder** |  |
 |  | 16#0031 | Valid is invalid. | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#861D** |  | **The set encoder mounting type is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].MountingMode** |  |
+| **16#861D** |  | **The set encoder mounting type is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].MountingMode** |  |
 |  | 16#0011 | The selection value is invalid | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#861E** |  | **The configuration of the measuring wheel circumference of the encoder is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.DistancePerRevolution** |  |
+| **16#861E** |  | **The configuration of the measuring wheel circumference of the encoder is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.DistancePerRevolution** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#861F** |  | **The configuration for the resolution of the linear encoder is faulty. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.Resolution** |  |
+| **16#861F** |  | **The configuration for the resolution of the linear encoder is faulty. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.Resolution** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8620** |  | **The configured fine resolution for Gx_XIST1 is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.FineResolutionXist1** |  |
+| **16#8620** |  | **The configured fine resolution for Gx_XIST1 is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.FineResolutionXist1** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8621** |  | **The set fine resolution for Gx_XIST1 in <Axis name>.** **Sensor.Sensor[1].Parameter.FineResolutionXist1**  **is not consistent with the setting in**  **PROFIdrive**  **parameter P979** |  |
+| **16#8621** |  | **The set fine resolution for Gx_XIST1 in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.FineResolutionXist1**  **is not consistent with the setting in**  **PROFIdrive**  **parameter P979** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8622** |  | **Invalid value for the configuration date <Axis name>.** **Actor.Interface.AddressIn**  **or <Axis name>.** **Actor.Interface.AddressOut** |  |
+| **16#8622** |  | **Invalid value for the configuration date &lt;Axis name&gt;.** **Actor.Interface.AddressIn**  **or &lt;Axis name&gt;.** **Actor.Interface.AddressOut** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
-| **16#8623** |  | **The value set in the tag <axis name>.** **Sensor.Sensor[1].Type is invalid.** |  |
+| **16#8623** |  | **The value set in the tag &lt;axis name&gt;.** **Sensor.Sensor[1].Type is invalid.** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
-| **16#8624** |  | **The set encoder system is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].System** |  |
+| **16#8624** |  | **The set encoder system is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].System** |  |
 |  | 16#0011 | The selection value is invalid | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8625** |  | **Parameter of position monitoring is faulty. Invalid value in <Axis name>.** **PositioningMonitoring.MinDwellTime** |  |
+| **16#8625** |  | **Parameter of position monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **PositioningMonitoring.MinDwellTime** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8626** |  | **Parameter of position monitoring is faulty. Invalid value in <Axis name>.** **PositioningMonitoring.Window** |  |
+| **16#8626** |  | **Parameter of position monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **PositioningMonitoring.Window** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8627** |  | **The configuration of the PROFIdrive interface of the actual value is faulty. Invalid value in <Axis name>.** **Sensor.Sensor[1].Interface.AddressIn**  **or <Axis name>.** **Sensor.Sensor[1].Interface.AddressOut** |  |
+| **16#8627** |  | **The configuration of the PROFIdrive interface of the actual value is faulty. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Interface.AddressIn**  **or &lt;Axis name&gt;.** **Sensor.Sensor[1].Interface.AddressOut** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
 | **16#8628** |  | **Faulty controller factors** |  |
-|  | 16#0030 | Value has an incorrect number format or is outside the valid number range | The value for the gain or the precontrol of the control loop is faulty.  - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with the "MC_Reset" instruction and restart the command, if necessary>.PositionControl.Kv, <axis name>.PositionControl.Kpc) |
-| **16#8629** |  | **Limit for standstill signal is faulty. Invalid value in <Axis name>.** **StandStillSignal.VelocityThreshold** |  |
+|  | 16#0030 | Value has an incorrect number format or is outside the valid number range | The value for the gain or the precontrol of the control loop is faulty.  - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with the "MC_Reset" instruction and restart the command, if necessary&gt;.PositionControl.Kv, &lt;axis name&gt;.PositionControl.Kpc) |
+| **16#8629** |  | **Limit for standstill signal is faulty. Invalid value in &lt;Axis name&gt;.** **StandStillSignal.VelocityThreshold** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#862A** |  | **Parameter of position monitoring is faulty. Invalid value in <Axis name>.** **PositioningMonitoring.ToleranceTime** |  |
+| **16#862A** |  | **Parameter of position monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **PositioningMonitoring.ToleranceTime** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
 | **16#862B** |  | **Inconsistent**  **PROFIBUS**  **parameterization; the sum of**  **Ti**  **and**  **To**  **is greater than one DP cycle** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
-| **16#862C** |  | **Parameter of standstill monitoring is faulty. Invalid value in <Axis name>.** **StandStillSignal.MinDwellTime** |  |
+| **16#862C** |  | **Parameter of standstill monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **StandStillSignal.MinDwellTime** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#862D** |  | **Parameter of following error monitoring is faulty. Invalid value in <Axis name>.** **FollowingError.MinValue** |  |
+| **16#862D** |  | **Parameter of following error monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **FollowingError.MinValue** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#862E** |  | **Invalid value for the configuration date <Axis name>.** **Modulo.Length** |  |
+| **16#862E** |  | **Invalid value for the configuration date &lt;Axis name&gt;.** **Modulo.Length** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#862F** |  | **Invalid value for the configuration date <Axis name>.** **Modulo.StartValue** |  |
+| **16#862F** |  | **Invalid value for the configuration date &lt;Axis name&gt;.** **Modulo.StartValue** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8630** |  | **Invalid value for the configuration date <Axis name>.** **Actor.DriveParameter.ReferenceSpeed** |  |
+| **16#8630** |  | **Invalid value for the configuration date &lt;Axis name&gt;.** **Actor.DriveParameter.ReferenceSpeed** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8631** |  | **The set fine resolution for Gx_XIST2 is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.FineResolutionXist2** |  |
+| **16#8631** |  | **The set fine resolution for Gx_XIST2 is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.FineResolutionXist2** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8632** |  | **The number of determinable encoder revolutions is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].Parameter.DeterminableRevolutions** |  |
+| **16#8632** |  | **The number of determinable encoder revolutions is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].Parameter.DeterminableRevolutions** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8633** |  | **The specified approach direction of the homing switch for passive homing is invalid. Invalid value in <Axis name>.** **Sensor.Sensor[1].PassiveHoming.Direction** |  |
+| **16#8633** |  | **The specified approach direction of the homing switch for passive homing is invalid. Invalid value in &lt;Axis name&gt;.** **Sensor.Sensor[1].PassiveHoming.Direction** |  |
 |  |  |  |  |
-| **16#8634** |  | **Parameter of the following error monitoring is faulty. Invalid value in <Axis name>.** **FollowingError.MaxValue** |  |
+| **16#8634** |  | **Parameter of the following error monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **FollowingError.MaxValue** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8635** |  | **Parameter of the following error monitoring is faulty. Invalid value in <Axis name>.** **FollowingError.MinVelocity** |  |
+| **16#8635** |  | **Parameter of the following error monitoring is faulty. Invalid value in &lt;Axis name&gt;.** **FollowingError.MinVelocity** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8636** |  | **Controller factor is incorrect. Invalid value of the precontrol factor <Axis name>.** **PositionControl.Kpc** |  |
+| **16#8636** |  | **Controller factor is incorrect. Invalid value of the precontrol factor &lt;Axis name&gt;.** **PositionControl.Kpc** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | - Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" - Correct the incorrect value online; acknowledge error with instruction "MC_Reset" and restart the command, if necessary |
-| **16#8637** |  | **Invalid value for the configuration date <Axis name>.** **Sensor.Sensor[1].Interface.Type** |  |
+| **16#8637** |  | **Invalid value for the configuration date &lt;Axis name&gt;.** **Sensor.Sensor[1].Interface.Type** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
-| **16#8638** |  | **Invalid value for the configuration date <Axis name>.** **Sensor.Sensor[1].Interface.HSC** |  |
+| **16#8638** |  | **Invalid value for the configuration date &lt;Axis name&gt;.** **Sensor.Sensor[1].Interface.HSC** |  |
 |  | 16#0011 | The selection value is invalid | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
 | **16#8639** |  | **Error at the drive** |  |
 |  | 16#0049 | Configuration error at device | Download error-free configuration to the controller; enable the axis again with instruction "MC_Power" |
@@ -8765,8 +8765,8 @@ Depending on the error reaction, the axis is stopped in the case of operating er
 | 16#0056 | The requested logical output address is invalid. |  |  |
 | 16#0057 | The requested logical output address is invalid. |  |  |
 | **16#863E** |  | **Value of tag "** **ControlPanel.Input.TimeOut** **" is invalid (axis control panel)** |  |
-|  | 16#0030 | Value has an incorrect number format or is outside the valid number range | Correct the value in the variables of the technology object <Axis name>.ControlPanel.Input.TimeOut.  The value is specified in milliseconds (ms). |
-| **16#863F** |  | **Invalid value for the configuration date <Axis name>.** **Actor.DriveParameter.MaxSpeed** |  |
+|  | 16#0030 | Value has an incorrect number format or is outside the valid number range | Correct the value in the variables of the technology object &lt;Axis name&gt;.ControlPanel.Input.TimeOut.  The value is specified in milliseconds (ms). |
+| **16#863F** |  | **Invalid value for the configuration date &lt;Axis name&gt;.** **Actor.DriveParameter.MaxSpeed** |  |
 |  | 16#0030 | Value has an incorrect number format or is outside the valid number range | Correct the reference value in the drive and in the configuration of the technology object to Actuator.MaxSpeed/2.   With analog drive connection, correct the reference value in the drive and in the configuration of the technology object to Actuator.MaxSpeed/1.17. |
 
 ###### Configuration error of the command table
@@ -8903,7 +8903,7 @@ The following table lists all ErrorIDs and ErrorInfos that can be indicated in M
 | **16#8404** |  | **Invalid value at parameter "** **Mode** **" of the Motion Control instruction** |  |
 |  | 16#0011 | The selection value is invalid | Correct the selection value; restart the command |
 | 16#0015 | Active/passive homing is not configured | Correct the configuration and download it to the controller; enable the axis and restart the command |  |
-| 16#0017 | The direction reversal is activated at the hardware limit switch, despite the fact that the hardware limit switches are disabled | - Activate the hardware limit switch using the tag <Axis>.Config.PositionLimits_HW.Active = TRUE, restart the command - Correct the configuration and download it to the controller; enable the axis and restart the command |  |
+| 16#0017 | The direction reversal is activated at the hardware limit switch, despite the fact that the hardware limit switches are disabled | - Activate the hardware limit switch using the tag &lt;Axis&gt;.Config.PositionLimits_HW.Active = TRUE, restart the command - Correct the configuration and download it to the controller; enable the axis and restart the command |  |
 | **16#8405** |  | **Invalid value at parameter "** **StopMode** **" of the Motion Control instruction** |  |
 |  | 16#0011 | The selection value is invalid | Correct the selection value; enable the axis again |
 | **16#8406** |  | **Simultaneous forward and backward jogging is not allowed** |  |
@@ -9124,7 +9124,7 @@ The following table lists all ErrorIDs and ErrorInfos that can be indicated in M
 | **16#8404** |  | **Invalid value at parameter "** **Mode** **" of the Motion Control instruction** |  |
 |  | 16#0011 | Invalid selection value | Correct the selection value; restart the command |
 | 16#0015 | Active/passive homing is not configured | Correct the configuration and download it to the controller; enable the axis and restart the command |  |
-| 16#0017 | Axis reversal is activated at the HW limit switch, despite the fact that the hardware limit switches are disabled | - Activate the hardware limit switch using the tag <Axis>.Config.PositionLimits_HW.Active = TRUE, restart the command - Correct the configuration and download it to the controller; enable the axis and restart the command |  |
+| 16#0017 | Axis reversal is activated at the HW limit switch, despite the fact that the hardware limit switches are disabled | - Activate the hardware limit switch using the tag &lt;Axis&gt;.Config.PositionLimits_HW.Active = TRUE, restart the command - Correct the configuration and download it to the controller; enable the axis and restart the command |  |
 | **16#8405** |  | **Invalid value at parameter "** **StopMode** **" of the Motion Control instruction** |  |
 |  | 16#0011 | Invalid selection value | Correct the selection value; enable the axis again |
 | **16#8406** |  | **Simultaneous forward and backward jogging is not allowed** |  |
@@ -9238,8 +9238,8 @@ The following table lists all ErrorIDs and ErrorInfos that can be indicated in M
 | W | Effectiveness of changes in the technology data block |  |
 | 1 | For drive connection via PTO: When axis is activated, disabled, or enabled |  |
 | 2 | For drive connection via PTO: When axis is enabled |  |
-| 3 | After axis enable (the axis must have previously been at a standstill). The axis standstill can be checked with tag <axis name>.StatusBits.Standstill. |  |
-| 4 | Upon the next start of a Motion Control command after a standstill of the axis. The axis standstill can be checked with tag <axis name>.StatusBits.Standstill. |  |
+| 3 | After axis enable (the axis must have previously been at a standstill). The axis standstill can be checked with tag &lt;axis name&gt;.StatusBits.Standstill. |  |
+| 4 | Upon the next start of a Motion Control command after a standstill of the axis. The axis standstill can be checked with tag &lt;axis name&gt;.StatusBits.Standstill. |  |
 | 5 | For drive connection via PTO: The next time an MC_MoveAbsolute, MC_MoveRelative, MC_MoveVelocity, MC_MoveJog, MC_Halt, MC_CommandTable, or active MC_Home command is started (Mode = 3) |  |
 | 6 | For drive connection via PTO: When a MC_MoveJog command is stopped |  |
 | 7 | For drive connection via PTO: When a passive homing command is started |  |
@@ -9248,7 +9248,7 @@ The following table lists all ErrorIDs and ErrorInfos that can be indicated in M
 | 10 | For drive connection via PROFIdrive/analog output: With the next call of the MC-Servo [OB91] |  |
 | Description | Description of the tag |  |
 
-Access to the tags is with "<TO>.<tag name>". The placeholder <TO> represents the name of the technology object.
+Access to the tags is with "&lt;TO&gt;.&lt;tag name&gt;". The placeholder &lt;TO&gt; represents the name of the technology object.
 
 #### Tag of the axis technology object V1...3 (S7-1200)
 
@@ -9264,7 +9264,7 @@ This section contains information on the following topics:
 
 ##### Config tags V1...3 (S7-1200)
 
-The tag structure <axis name>.Config.<tag name> contains the configuration of the dynamic limits.
+The tag structure &lt;axis name&gt;.Config.&lt;tag name&gt; contains the configuration of the dynamic limits.
 
 ###### Tags
 
@@ -9344,7 +9344,7 @@ The tag structure <axis name>.Config.<tag name> contains the configuration of th
 
 ##### MotionStatus tags V1...3 (S7-1200)
 
-The tag structure <axis name>.MotionStatus.<tag name> contains the status of the motion.
+The tag structure &lt;axis name&gt;.MotionStatus.&lt;tag name&gt; contains the status of the motion.
 
 ###### Tags
 
@@ -9370,7 +9370,7 @@ The tag structure <axis name>.MotionStatus.<tag name> contains the status of the
 
 ##### StatusBits tags V1...3 (S7-1200)
 
-The tag structure <axis name>.StatusBits.<tag name> contains the status information of the technology object.
+The tag structure &lt;axis name&gt;.StatusBits.&lt;tag name&gt; contains the status information of the technology object.
 
 ###### Tags
 
@@ -9443,7 +9443,7 @@ The tag structure <axis name>.StatusBits.<tag name> contains the status informat
 
 ##### ErrorBits tags V1...3 (S7-1200)
 
-The tag structure <axis name>.ErrorBits.<tag name> indicates error at the technology object.
+The tag structure &lt;axis name&gt;.ErrorBits.&lt;tag name&gt; indicates error at the technology object.
 
 ###### Tags
 
@@ -9564,7 +9564,7 @@ The tag structure contains the setpoint and actual values of the position and th
 
 ##### Actuator tags V4...5 (S7-1200)
 
-The tag structure <axis name>.Actor.<tag name> contains the drive parameters.
+The tag structure &lt;axis name&gt;.Actor.&lt;tag name&gt; contains the drive parameters.
 
 ###### Tags
 
@@ -9607,7 +9607,7 @@ The tag structure <axis name>.Actor.<tag name> contains the drive parameters.
 
 ##### Sensor[1] tags V4...5 (S7-1200)
 
-The tag structure <axis name>.Sensor.<tag name> contains the encoder parameters.
+The tag structure &lt;axis name&gt;.Sensor.&lt;tag name&gt; contains the encoder parameters.
 
 ###### Tags
 
@@ -9699,7 +9699,7 @@ The tag structure <axis name>.Sensor.<tag name> contains the encoder parameters.
 
 ##### Units tag V4...5 (S7-1200)
 
-The tag structure <axis name>.Units.LengthUnit contains the configured units of measurement of the parameters.
+The tag structure &lt;axis name&gt;.Units.LengthUnit contains the configured units of measurement of the parameters.
 
 ###### Tags
 
@@ -9726,7 +9726,7 @@ The tag structure <axis name>.Units.LengthUnit contains the configured units of 
 
 ##### Mechanics tag V4...5 (S7-1200)
 
-The tag structure <axis name>.Mechanics.LeadScrew contains the distance traveled per motor revolution.
+The tag structure &lt;axis name&gt;.Mechanics.LeadScrew contains the distance traveled per motor revolution.
 
 ###### Tags
 
@@ -9747,7 +9747,7 @@ The tag structure <axis name>.Mechanics.LeadScrew contains the distance traveled
 
 ##### Modulo tags V4...5 (S7-1200)
 
-The tag structure <axis name>.Modulo.<tag name> contains the modulo settings.
+The tag structure &lt;axis name&gt;.Modulo.&lt;tag name&gt; contains the modulo settings.
 
 ###### Tags
 
@@ -9757,7 +9757,7 @@ The tag structure <axis name>.Modulo.<tag name> contains the modulo settings.
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Modulo. |  | STRUCT |  |  |  | TO_Struct_Modulo |  |
 |  | Enable | BOOL | FALSE | R | - | FALSE | Modulo conversion disabled |
-| TRUE | Modulo conversion enabled  When modulo conversion is enabled, a check is made for modulo length > 0.0 |  |  |  |  |  |  |
+| TRUE | Modulo conversion enabled  When modulo conversion is enabled, a check is made for modulo length &gt; 0.0 |  |  |  |  |  |  |
 | Length | REAL | 360.0  (0.001 to 1.0E12) | R | - | Modulo length |  |  |
 | StartValue | REAL | 0.0  (-1.0E12 to 1.0E12) | R | - | Modulo start value |  |  |
 
@@ -9771,7 +9771,7 @@ The tag structure <axis name>.Modulo.<tag name> contains the modulo settings.
 
 ##### DynamicLimits tags V4...5 (S7-1200)
 
-The tag structure <axis name>.DynamicLimits.<tag name> contains the configuration of the dynamic limits.
+The tag structure &lt;axis name&gt;.DynamicLimits.&lt;tag name&gt; contains the configuration of the dynamic limits.
 
 ###### Tags
 
@@ -9793,7 +9793,7 @@ The tag structure <axis name>.DynamicLimits.<tag name> contains the configuratio
 
 ##### DynamicDefaults tags V4...5 (S7-1200)
 
-The tag structure <axis name>.DynamicDefaults.<tag name> contains the configuration of the dynamic defaults.
+The tag structure &lt;axis name&gt;.DynamicDefaults.&lt;tag name&gt; contains the configuration of the dynamic defaults.
 
 ###### Tags
 
@@ -9817,7 +9817,7 @@ The tag structure <axis name>.DynamicDefaults.<tag name> contains the configurat
 
 ##### PositionLimitsSW tags V4...5 (S7-1200)
 
-The tag structure <axis name>.PositionLimits_SW.<tag name> contains the configuration for position monitoring with software limit switches. Software limit switches are used to limit the operating range of a positioning axis.
+The tag structure &lt;axis name&gt;.PositionLimits_SW.&lt;tag name&gt; contains the configuration for position monitoring with software limit switches. Software limit switches are used to limit the operating range of a positioning axis.
 
 ###### Tags
 
@@ -9841,7 +9841,7 @@ The tag structure <axis name>.PositionLimits_SW.<tag name> contains the configur
 
 ##### PositionLimitsHW tags V4...5 (S7-1200)
 
-The tag structure <axis name>.PositionLimits_HW.<tag name> contains the configuration for position monitoring with hardware limit switches. Hardware limit switches are used to limit the traversing range of a positioning axis.
+The tag structure &lt;axis name&gt;.PositionLimits_HW.&lt;tag name&gt; contains the configuration for position monitoring with hardware limit switches. Hardware limit switches are used to limit the traversing range of a positioning axis.
 
 ###### Tags
 
@@ -9871,7 +9871,7 @@ The tag structure <axis name>.PositionLimits_HW.<tag name> contains the configur
 
 ##### Homing tags V4...5 (S7-1200)
 
-The tag structure <axis name>.Homing.<tag name> contains the configuration for homing the axis.
+The tag structure &lt;axis name&gt;.Homing.&lt;tag name&gt; contains the configuration for homing the axis.
 
 ###### Tags
 
@@ -9897,7 +9897,7 @@ The tag structure <axis name>.Homing.<tag name> contains the configuration for h
 
 ##### PositionControl tags V5 (S7-1200)
 
-The tag structure <axis name>.PositionControl.<tag name> contains the position control settings.
+The tag structure &lt;axis name&gt;.PositionControl.&lt;tag name&gt; contains the position control settings.
 
 ###### Tags
 
@@ -9906,7 +9906,7 @@ The tag structure <axis name>.PositionControl.<tag name> contains the position c
 | Tag |  | Data type | Values | Access | W | Description |
 | --- | --- | --- | --- | --- | --- | --- |
 | PositionControl. |  | STRUCT |  |  |  | TO_Struct_PositionControl |
-|  | Kv | REAL | 10.0  (0.0 to 2147480.0) | R  WP | -  10 | Proportional gain of the closed loop position control  ("Kv" > 0.0) |
+|  | Kv | REAL | 10.0  (0.0 to 2147480.0) | R  WP | -  10 | Proportional gain of the closed loop position control  ("Kv" &gt; 0.0) |
 | Kpc | REAL | 100.0  (0.0 to 150.0) | R  WP | -  10 | Velocity precontrol of the position control as a percentage |  |
 
 ---
@@ -9919,7 +9919,7 @@ The tag structure <axis name>.PositionControl.<tag name> contains the position c
 
 ##### FollowingError tags V5 (S7-1200)
 
-The tag structure <axis name>.FollowingError.<tag name> contains the configuration of the dynamic following error monitoring.
+The tag structure &lt;axis name&gt;.FollowingError.&lt;tag name&gt; contains the configuration of the dynamic following error monitoring.
 
 ###### Tags
 
@@ -9944,7 +9944,7 @@ The tag structure <axis name>.FollowingError.<tag name> contains the configurati
 
 ##### PositionMonitoring tags V5 (S7-1200)
 
-The tag structure <axis name>.PositionMonitoring.<tag name> contains the configuration for position monitoring at the end of a positioning motion.
+The tag structure &lt;axis name&gt;.PositionMonitoring.&lt;tag name&gt; contains the configuration for position monitoring at the end of a positioning motion.
 
 ###### Tags
 
@@ -9967,7 +9967,7 @@ The tag structure <axis name>.PositionMonitoring.<tag name> contains the configu
 
 ##### StandstillSignal tags V5 (S7-1200)
 
-The tag structure <axis name>.StandstillSignal.<tag name> contains the configuration for the standstill signal.
+The tag structure &lt;axis name&gt;.StandstillSignal.&lt;tag name&gt; contains the configuration for the standstill signal.
 
 ###### Tags
 
@@ -9989,7 +9989,7 @@ The tag structure <axis name>.StandstillSignal.<tag name> contains the configura
 
 ##### StatusPositioning tags V4...5 (S7-1200)
 
-The tag structure <axis name>.StatusPositioning.<tag name> indicates the status of a positioning motion.
+The tag structure &lt;axis name&gt;.StatusPositioning.&lt;tag name&gt; indicates the status of a positioning motion.
 
 ###### Tags
 
@@ -10014,7 +10014,7 @@ The tag structure <axis name>.StatusPositioning.<tag name> indicates the status 
 
 ##### StatusDrive tags V5 (S7-1200)
 
-The tag structure <axis name>.StatusDrive.<tag name> indicates the status of the drive.
+The tag structure &lt;axis name&gt;.StatusDrive.&lt;tag name&gt; indicates the status of the drive.
 
 ###### Tags
 
@@ -10040,7 +10040,7 @@ The tag structure <axis name>.StatusDrive.<tag name> indicates the status of the
 
 ##### StatusSensor tags V5 (S7-1200)
 
-The tag structure <axis name>.StatusSensor.<tag name> indicates the status of the measuring system.
+The tag structure &lt;axis name&gt;.StatusSensor.&lt;tag name&gt; indicates the status of the measuring system.
 
 ###### Tags
 
@@ -10068,7 +10068,7 @@ The tag structure <axis name>.StatusSensor.<tag name> indicates the status of th
 
 ##### StatusBits tags V4...5 (S7-1200)
 
-The tag structure <axis name>.StatusBits.<tag name> contains the status information of the technology object.
+The tag structure &lt;axis name&gt;.StatusBits.&lt;tag name&gt; contains the status information of the technology object.
 
 ###### Tags
 
@@ -10157,7 +10157,7 @@ The tag structure <axis name>.StatusBits.<tag name> contains the status informat
 
 ##### ErrorBits tags V4...5 (S7-1200)
 
-The tag structure <axis name>.ErrorBits.<tag name> indicates error at the technology object.
+The tag structure &lt;axis name&gt;.ErrorBits.&lt;tag name&gt; indicates error at the technology object.
 
 ###### Tags
 
@@ -10220,7 +10220,7 @@ Changes to the values of configuration tags do not take effect immediately. For 
 
 #### Tags of the command table technology object V1...3 (S7-1200)
 
-The tag structure <command table>.Config.Command.Command[x].<tag name> contains the configured command parameters.
+The tag structure &lt;command table&gt;.Config.Command.Command[x].&lt;tag name&gt; contains the configured command parameters.
 
 ##### Tags
 
@@ -10256,7 +10256,7 @@ The tag structure <command table>.Config.Command.Command[x].<tag name> contains 
 
 #### Tag of the command table technology object V4...5 (S7-1200)
 
-The tag structure <command table>.Command[n].<tag name> contains the configured command parameters.
+The tag structure &lt;command table&gt;.Command[n].&lt;tag name&gt; contains the configured command parameters.
 
 ##### Tags
 

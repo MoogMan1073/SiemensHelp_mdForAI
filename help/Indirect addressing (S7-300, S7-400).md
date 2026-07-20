@@ -150,19 +150,19 @@ For addressing the components of an ARRAY, you can enter tags of the integer dat
 >
 > The index tag [i] is read once at the start of the block call and cannot be changed by the called block while it is being processed.
 >
-> When you call a block and transfer an indirectly indexed ARRAY component ("<DataBlock>".<ARRAY>["i"]) to it as in/out parameter (InOut), you cannot change the value of the index tag while the block is being processed. The value is therefore always written back to the same ARRAY component from which it was read.
+> When you call a block and transfer an indirectly indexed ARRAY component ("&lt;DataBlock&gt;".&lt;ARRAY&gt;["i"]) to it as in/out parameter (InOut), you cannot change the value of the index tag while the block is being processed. The value is therefore always written back to the same ARRAY component from which it was read.
 
 #### Syntax
 
 The following syntax is used for the indirect indexing of a ARRAY:
 
-"<Data block>".<ARRAY>["i"] // one-dimensional ARRAY
+"&lt;Data block&gt;".&lt;ARRAY&gt;["i"] // one-dimensional ARRAY
 
-"<Data block>".<ARRAY>["i"] // one-dimensional ARRAY of STRUCT
+"&lt;Data block&gt;".&lt;ARRAY&gt;["i"] // one-dimensional ARRAY of STRUCT
 
-"<Data block>".<ARRAY>["i"] // multidimensional ARRAY
+"&lt;Data block&gt;".&lt;ARRAY&gt;["i"] // multidimensional ARRAY
 
-"<Data block>".<ARRAY>["i"] // multidimensional ARRAY of STRUCT
+"&lt;Data block&gt;".&lt;ARRAY&gt;["i"] // multidimensional ARRAY of STRUCT
 
 The syntax has the following components:
 
@@ -210,7 +210,7 @@ Data is exchanged between the registers and the other available memory areas wit
 
 [LAR1: Load AR1 with contents of accumulator 1 (S7-300, S7-400)](STL%20%28S7-300%2C%20S7-400%29.md#lar1-load-ar1-with-contents-of-accumulator-1-s7-300-s7-400)
   
-[LAR1 <D>: Load AR1 with double word or area pointer (S7-300, S7-400)](STL%20%28S7-300%2C%20S7-400%29.md#lar1-d-load-ar1-with-double-word-or-area-pointer-s7-300-s7-400)
+[LAR1 &lt;D&gt;: Load AR1 with double word or area pointer (S7-300, S7-400)](STL%20%28S7-300%2C%20S7-400%29.md#lar1-d-load-ar1-with-double-word-or-area-pointer-s7-300-s7-400)
   
 [LAR1 AR2: Load AR1 with contents of AR2 (S7-300, S7-400)](STL%20%28S7-300%2C%20S7-400%29.md#lar1-ar2-load-ar1-with-contents-of-ar2-s7-300-s7-400)
   
@@ -220,7 +220,7 @@ Data is exchanged between the registers and the other available memory areas wit
   
 [TAR1: Transfer AR1 to accumulator 1 (S7-300, S7-400)](STL%20%28S7-300%2C%20S7-400%29.md#tar1-transfer-ar1-to-accumulator-1-s7-300-s7-400)
   
-[TAR1 <D>: Transfer AR1 to double word (S7-300, S7-400)](STL%20%28S7-300%2C%20S7-400%29.md#tar1-d-transfer-ar1-to-double-word-s7-300-s7-400)
+[TAR1 &lt;D&gt;: Transfer AR1 to double word (S7-300, S7-400)](STL%20%28S7-300%2C%20S7-400%29.md#tar1-d-transfer-ar1-to-double-word-s7-300-s7-400)
   
 [TAR1 AR2: Transfer AR1 to AR2 (S7-300, S7-400)](STL%20%28S7-300%2C%20S7-400%29.md#tar1-ar2-transfer-ar1-to-ar2-s7-300-s7-400)
   

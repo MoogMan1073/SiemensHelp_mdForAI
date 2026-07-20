@@ -152,24 +152,24 @@ If the initialization is successfully completed within the configured START-TIME
 | ERROR_ No (decimal) | ERROR_INFO | Error Text | Remedy |
 | --- | --- | --- | --- |
 | 0 | 0 | No error |  |
-| 1 | SFC 51->RET_VAL | Error reading the system status list with SFC 51. | Analyze RET_VAL in ERROR_INFO; eliminate the cause. |
+| 1 | SFC 51-&gt;RET_VAL | Error reading the system status list with SFC 51. | Analyze RET_VAL in ERROR_INFO; eliminate the cause. |
 | 2 |  | Timeout of CP initialization or error during CP initialization | Check if the CP interface was assigned the "Modbus slave" protocol in the parameters.  Analyze ERROR_INFO. |
-| P_SND_RK -> STATUS | Error in P_SND_RK job | Check module address LADDR at the communication instruction. |  |
-| SFB 12->STATUS | Error in BSEND job | Check the connection ID in the communication instruction. |  |
+| P_SND_RK -&gt; STATUS | Error in P_SND_RK job | Check module address LADDR at the communication instruction. |  |
+| SFB 12-&gt;STATUS | Error in BSEND job | Check the connection ID in the communication instruction. |  |
 | 10 | Processing Code | The driver transferred an invalid processing function to the communication instruction. | CP restart (Power_On) |
 | 11 | Start address | The driver transferred an invalid start address to the communication instruction. | Check Modbus address of Modbus master system. |
 | 12 | Register number | The driver transferred an invalid number of registers to the communications instruction: Number of registers = 0. | Check number of registers of Modbus master system, if required restart CP (Power_ON) |
-| 13 | Register number | The driver transferred an invalid number of registers to the communications instruction: Number of registers > 128. | Check number of registers of Modbus master system, if required restart CP (Power_ON) |
+| 13 | Register number | The driver transferred an invalid number of registers to the communications instruction: Number of registers &gt; 128. | Check number of registers of Modbus master system, if required restart CP (Power_ON) |
 | 14 | Memory bits M - End Address | Attempted access to SIMATIC memory area "memory bits" in excess of range end.  Attention: Range length in SIMATIC CPU is CPU type-dependent. | Reduce Modbus start address and/or access length in Modbus master system. |
 | 15 | Outputs Q – End Address | Attempted access to SIMATIC memory area "outputs" in excess of range end.  Attention: Range length in SIMATIC CPU is CPU type-dependent. | Reduce Modbus start address and/or access length in Modbus master system. |
 | 16 | Timers T – End Address | Attempted access to SIMATIC memory area "timers" in excess of range end.  Attention: Range length in SIMATIC CPU is CPU type-dependent. | Reduce Modbus start address and/or access length in Modbus master system. |
 | 17 | Counters C – End Address | Attempted access to SIMATIC memory area "counters" in excess of range end.  Attention: Range length in SIMATIC CPU is CPU type-dependent. | Reduce Modbus start address and/or access length in Modbus master system. |
 | 18 | 0 | The driver transferred an invalid SIMATIC memory area to the communication instruction. | If required, restart CP (Power_On) |
 | 19 |  | Error during access to SIMATIC I/Os. | Check if the required I/Os exist and are error-free. |
-| 90 | P_SND_RK -> STATUS | Error transmitting an acknowledgment message to the driver using the P_SND_RK instruction | Analyze the STATUS information |
-| SFB 12->STATUS | Error transmitting an acknowledgment message to the driver using SFB 12 BSEND | Analyze the STATUS information |  |
-| 91 | SFB 22->STATUS | Error reading SYSTAT with SFB 22 (STATUS) | Analyze the STATUS information |
-| 92 | P_RCV_RK -> STATUS | Error executing a RECEIVE/FETCH call using the P_RCV_RK instruction | Analyze P_RCV_RK-STATUS |
+| 90 | P_SND_RK -&gt; STATUS | Error transmitting an acknowledgment message to the driver using the P_SND_RK instruction | Analyze the STATUS information |
+| SFB 12-&gt;STATUS | Error transmitting an acknowledgment message to the driver using SFB 12 BSEND | Analyze the STATUS information |  |
+| 91 | SFB 22-&gt;STATUS | Error reading SYSTAT with SFB 22 (STATUS) | Analyze the STATUS information |
+| 92 | P_RCV_RK -&gt; STATUS | Error executing a RECEIVE/FETCH call using the P_RCV_RK instruction | Analyze P_RCV_RK-STATUS |
 
 ## SYSTAT error message area (S7-300, S7-400)
 
@@ -185,7 +185,7 @@ If the initialization is successfully completed within the configured START-TIME
 
 | Error code(W#16#...) | Description | Remedy |
 | --- | --- | --- |
-| 0518 | Transmission frame length exceeded (> 4 KB) or insufficient transmission frame length for SEND. | Check the communication instruction; reload it if necessary. |
+| 0518 | Transmission frame length exceeded (&gt; 4 KB) or insufficient transmission frame length for SEND. | Check the communication instruction; reload it if necessary. |
 | 0806 | Character delay time ZVZ exceeded | Error by the partner device or repair disruptions on the transmission line. |
 | 080C | A character transmission error was detected (parity error, overrun error or stop bit error (frame)). | Check if the transmission lines are affected by interference. Modify the system configuration or the cable routing.  Check the consistency of the settings for the protocol parameters baud rate, number of data bits, parity and number of stop bits at the CP and link partner. |
 | 080D | BREAK  The receive line to the partner device is disrupted. | Establish the connection between the devices or switch on the partner device.  In TTY mode, check if there is a line current flow in idle state. For an RS422/485(X27) connection, check or modify the default configuration of the 2-wire receive line R(A) and R(B). |
@@ -229,8 +229,8 @@ If the initialization is successfully completed within the configured START-TIME
 | 0E3C | Illegal job with this driver. | Only SFB SEND, STATUS (CP 441-2 only) are permitted. |
 | 0E50 | In the word-based SIMATIC timers/counters areas, the resulting residual bit number from the Modbus address is ≠ 0. | Only use MODBUS addresses which result in valid bit numbers. |
 | 0E51 | The received Modbus address is outside the configured "from/to" areas. | Only use addresses as address information in the request message frame that have previously been defined in the configuration. |
-| 0E52 | - A SIMATIC area limit was exceeded during an access attempt by the Modbus master system: Resulting DB number < 1 - Write access to an unreleased area (configuration) - Write access to the instance DB of the communication instruction | Access area limited to valid SIMATIC memory areas. |
-| 0E53 | A SIMATIC area limit was exceeded during an access attempt by the Modbus master system:  For example, overflow from the formation of the resulting DB no. (> 65535) | Access area limited to valid SIMATIC memory areas. |
+| 0E52 | - A SIMATIC area limit was exceeded during an access attempt by the Modbus master system: Resulting DB number &lt; 1 - Write access to an unreleased area (configuration) - Write access to the instance DB of the communication instruction | Access area limited to valid SIMATIC memory areas. |
+| 0E53 | A SIMATIC area limit was exceeded during an access attempt by the Modbus master system:  For example, overflow from the formation of the resulting DB no. (&gt; 65535) | Access area limited to valid SIMATIC memory areas. |
 | 0E54 | Access beyond the configured area end or access beyond the SIMATIC area end. | Access area limited to valid SIMATIC memory areas. |
 | 0E55 | Write access to this SIMATIC memory area is not allowed. | Write only to the SIMATIC memory bits, outputs data areas. |
 | 0E56 | Data link operation not possible because the communication instruction is inactive. | Call the MODBUS communication instruction at cyclic intervals in the STEP 7 user program. If necessary, re-initialize the communication instruction. |

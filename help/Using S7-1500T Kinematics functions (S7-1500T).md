@@ -36,7 +36,7 @@ This section contains information on the following topics:
 
 Kinematics are user-programmable mechanical systems in which multiple mechanically coupled axes produce the motion of a working point. The S7‑1500T technology CPUs provide functions for controlling kinematics systems, e.g. for handling tasks, with the kinematics technology object. Typical applications include:
 
-- Pick & Place
+- Pick &amp; Place
 - Installation
 - Palletizing
 
@@ -86,7 +86,7 @@ The following configurations are available in the kinematics technology object:
 
 ### Motion control instructions for kinematics control (S7-1500T)
 
-You execute the functions of the kinematics technology object using the Motion Control instructions in your user program or the TIA Portal (under "Technology object > Commissioning").
+You execute the functions of the kinematics technology object using the Motion Control instructions in your user program or the TIA Portal (under "Technology object &gt; Commissioning").
 
 The following table shows the motion control instructions that are supported by the kinematics technology object:
 
@@ -136,7 +136,7 @@ The following table shows the functions supported by the kinematics technology o
 
 Each CPU offers a defined set of "[Motion Control resources](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#configuration-limits-s7-1500-s7-1500t)". For information on the total Motion Control resources available, refer to the technical specifications of the utilized CPU.
 
-You can find an overview of the Motion Control resources of a CPU in the TIA Portal under "Tools > Resources".
+You can find an overview of the Motion Control resources of a CPU in the TIA Portal under "Tools &gt; Resources".
 
 #### Extended Motion Control resources (S7-1500T)
 
@@ -328,10 +328,10 @@ To check if the firmware extension "S7-1500T Motion Control KinPlus" has been lo
 
 You can find the version and type of the loaded Motion Control package via the following options:
 
-- Under Online and Diagnostics > General in the Motion Control Package Information area.
+- Under Online and Diagnostics &gt; General in the Motion Control Package Information area.
 - In the diagnostic buffer in the event description for the loaded version
-- In the display of the CPU under Overview > Motion Control Package Information
-- In the web server on the page Diagnostics > Motion Control Package Information
+- In the display of the CPU under Overview &gt; Motion Control Package Information
+- In the web server on the page Diagnostics &gt; Motion Control Package Information
 
 If the Motion Control package "S7-1500T Motion Control KinPlus" is successfully loaded, "Package name: MC KinPlus" is displayed. The version and internal version of the Motion Control package is also displayed. If "Package name: MC Base" is displayed, the Motion Control package "S7-1500T Motion Control KinPlus" is not loaded.
 
@@ -525,7 +525,7 @@ The following table shows the frames for the kinematics technology object:
 | Frame | Description |
 | --- | --- |
 | KCS frame | Position of the kinematics coordinate system (KCS) in the world coordinate system (WCS) |
-| Transformation frame | Position of the flange coordinate system (FCS) in the KCS  The transformation frame results from the kinematics transformation and is displayed in the "<TO>.FlangeInKcs" tag of the technology object. |
+| Transformation frame | Position of the flange coordinate system (FCS) in the KCS  The transformation frame results from the kinematics transformation and is displayed in the "&lt;TO&gt;.FlangeInKcs" tag of the technology object. |
 | Tool frame | Position of the tool coordinate system (TCS) in the FCS |
 | OCS1..3 frame | Position of the object coordinate systems 1 to 3 (OCS1..3) in the WCS |
 
@@ -703,7 +703,7 @@ Setting or changing the units of measurement affects the parameter values:
 
 All information and displays correspond to the selected unit of measure.
 
-The set units are displayed in the "<TO>.Units" tag structure of the technology object. The tag structure is described in the "["Units" tag (kinematics)](#units-tag-kinematics-s7-1500t)" section.
+The set units are displayed in the "&lt;TO&gt;.Units" tag structure of the technology object. The tag structure is described in the "["Units" tag (kinematics)](#units-tag-kinematics-s7-1500t)" section.
 
 **Position and velocity**
 
@@ -873,7 +873,7 @@ You can find additional information on the setting and the compensation factor i
 
 #### Mechanical axis coupling for kinematics types with more than four interpolating kinematics axes (S7-1500T)
 
-Mechanical axis couplings of two axes mean that when the "<TO>.AxisCoupling.N[1].CausingAxis" axis moves by a distance or an angle, the position of another joint also changes without the coupled axis "<TO>.AxisCoupling.N[1].AffectedAxis" or the motor of the axis. The motor encoder of the coupled axis "<TO>.AxisCoupling.N[1].AffectedAxis" does not detect any change in position.
+Mechanical axis couplings of two axes mean that when the "&lt;TO&gt;.AxisCoupling.N[1].CausingAxis" axis moves by a distance or an angle, the position of another joint also changes without the coupled axis "&lt;TO&gt;.AxisCoupling.N[1].AffectedAxis" or the motor of the axis. The motor encoder of the coupled axis "&lt;TO&gt;.AxisCoupling.N[1].AffectedAxis" does not detect any change in position.
 
 ##### Configuring the mechanical axis coupling
 
@@ -881,7 +881,7 @@ If there are mechanical axis couplings, configure them in the "Interconnections"
 
 The coupling factor defines the position change of the tracked joint in relation to the position change of the moved axis.
 
-The coupling factor <TO>.AxisCoupling.N[1..5].Factor defines the position change of the coupled axis "<TO>.AxisCoupling.N[1].AffectedAxis" in relation to the position change of the coupled axis "<TO>.AxisCoupling.N[1].CausingAxis".
+The coupling factor &lt;TO&gt;.AxisCoupling.N[1..5].Factor defines the position change of the coupled axis "&lt;TO&gt;.AxisCoupling.N[1].AffectedAxis" in relation to the position change of the coupled axis "&lt;TO&gt;.AxisCoupling.N[1].CausingAxis".
 
 The coupling factor is defined as a quotient, but the two position items do not need to be identical. The position changes are specified in a numerical value (without unit) of the position unit of the kinematics axis.
 
@@ -912,7 +912,7 @@ When the axis A4 is moved by 90°, the joint J4 is moved by 90° and joint J5
 You have the following options to determine the coupling factors:
 
 - Determination based on the mechanical data of the kinematics
-- Detection of the position change at the affected axis via an external measuring system with movement of the axis "<TO>.AxisCoupling.N[1..5].CausingAxis"
+- Detection of the position change at the affected axis via an external measuring system with movement of the axis "&lt;TO&gt;.AxisCoupling.N[1..5].CausingAxis"
 - Determination based on position change of the affected joint
 
 **Determination based on position change of the affected joint**
@@ -921,8 +921,8 @@ Follow these steps to determine the coupling factor using the position change of
 
 1. Move the affected joint into the zero position.
 2. Move the coupled joint via the assigned axis by a defined distance or an angle, e.g. by 5°. The axis moves by 5° in this case when the direction of movement of the joint is not inverted.
-3. Jog the axis "<TO>.AxisCoupling.N[1..5].CausingAxis" so that the coupled axis is moved again in the mechanical zero position without the motor of the affected axis moving.
-4. You calculate the axis coupling factor from the moved position change of the axis "<TO>.AxisCoupling.N[1..5].CausingAxis" from step 3 and the known position change of the coupled axis "<TO>.AxisCoupling.N[1..5].AffectedAxis" (5°) from step 2.
+3. Jog the axis "&lt;TO&gt;.AxisCoupling.N[1..5].CausingAxis" so that the coupled axis is moved again in the mechanical zero position without the motor of the affected axis moving.
+4. You calculate the axis coupling factor from the moved position change of the axis "&lt;TO&gt;.AxisCoupling.N[1..5].CausingAxis" from step 3 and the known position change of the coupled axis "&lt;TO&gt;.AxisCoupling.N[1..5].AffectedAxis" (5°) from step 2.
 
 > **Note**
 >
@@ -943,10 +943,10 @@ For the mechanical axis coupling for kinematics types with more than four inter
 | Tag | Description |
 | --- | --- |
 | **Configuration of the mechanical axis coupling** |  |
-| <TO>.AxisCoupling.N[1..5].Enable | Enabling/disabling the mechanical axis coupling |
-| <TO>.AxisCoupling.N[1..5].CausingAxis | Coupling axis |
-| <TO>.AxisCoupling.N[1..5].AffectedAxis | Coupled axis |
-| <TO>.AxisCoupling.N[1..5].Factor | Coupling factor |
+| &lt;TO&gt;.AxisCoupling.N[1..5].Enable | Enabling/disabling the mechanical axis coupling |
+| &lt;TO&gt;.AxisCoupling.N[1..5].CausingAxis | Coupling axis |
+| &lt;TO&gt;.AxisCoupling.N[1..5].AffectedAxis | Coupled axis |
+| &lt;TO&gt;.AxisCoupling.N[1..5].Factor | Coupling factor |
 
 ### Joints (S7-1500T)
 
@@ -1051,7 +1051,7 @@ If the zero position of the mechanics axis does not match the zero position of t
 
 **Example**
 
-The joint J2 is in the mechanical zero position. This mechanical zero position deviates by 30° in positive direction of rotation from the defined zero position of the kinematics type. The defined zero position of the kinematics type used for the kinematics transformation is staggered by -30°. The offset is configured with "<TO>.Joint.J[2].Offset" = -30°.
+The joint J2 is in the mechanical zero position. This mechanical zero position deviates by 30° in positive direction of rotation from the defined zero position of the kinematics type. The defined zero position of the kinematics type used for the kinematics transformation is staggered by -30°. The offset is configured with "&lt;TO&gt;.Joint.J[2].Offset" = -30°.
 
 ![Figure](images/156111240075_DV_resource.Stream@PNG-en-US.png)
 
@@ -1066,14 +1066,14 @@ When configuring the joints for kinematics types with more than four interpolat
 | Tag | Description |
 | --- | --- |
 | **Configuration of joints** |  |
-| <TO>.Joint.J[1..6].InverseDirection | Invert direction of movement |
-| <TO>.Joint.J[1..6].Offset | Difference between the defined zero position of the joint of the [kinematics type](#kinematics-types-s7-1500t) and the mechanical zero position of the joint at the kinematics used |
-| <TO>.Joint.J[1..6].LowerLimit | Lower limit of the joint traversing range |
-| <TO>.Joint.J[1..6].UpperLimit | Upper limit of the joint traversing range |
+| &lt;TO&gt;.Joint.J[1..6].InverseDirection | Invert direction of movement |
+| &lt;TO&gt;.Joint.J[1..6].Offset | Difference between the defined zero position of the joint of the [kinematics type](#kinematics-types-s7-1500t) and the mechanical zero position of the joint at the kinematics used |
+| &lt;TO&gt;.Joint.J[1..6].LowerLimit | Lower limit of the joint traversing range |
+| &lt;TO&gt;.Joint.J[1..6].UpperLimit | Upper limit of the joint traversing range |
 | **Setpoints of the kinematics motion for the joints** |  |
-| <TO>.JointData.J[1..6].Acceleration | Current acceleration setpoint |
-| <TO>.JointData.J[1..6].Position | Current position setpoint |
-| <TO>.JointData.J[1..6].Velocity | Current velocity setpoint |
+| &lt;TO&gt;.JointData.J[1..6].Acceleration | Current acceleration setpoint |
+| &lt;TO&gt;.JointData.J[1..6].Position | Current position setpoint |
+| &lt;TO&gt;.JointData.J[1..6].Velocity | Current velocity setpoint |
 
 ### Kinematics types (S7-1500T)
 
@@ -1411,11 +1411,11 @@ You can define the 2D kinematics using the following tags of the technology obj
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 1 | Cartesian portal 2D |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 1 | Cartesian portal 2D |
 | 2 | Cartesian portal 2D with orientation |  |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the zero position of axis A1 to the kinematics zero point (KZP) in the x direction of the kinematics coordinate system (KCS) |
-| <TO>.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance LF of the FCS to axis A2 in the negative z direction of the KCS |
-| <TO>.Kinematics.Parameter[3] | -1.0E12 to 1.0E12 | Distance L2 of the zero position of axis A2 to the KZP in the z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the zero position of axis A1 to the kinematics zero point (KZP) in the x direction of the kinematics coordinate system (KCS) |
+| &lt;TO&gt;.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance LF of the FCS to axis A2 in the negative z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[3] | -1.0E12 to 1.0E12 | Distance L2 of the zero position of axis A2 to the KZP in the z direction of the KCS |
 
 ###### Cartesian portal 3D
 
@@ -1423,14 +1423,14 @@ You can define the 3D kinematics using the following tags of the technology obj
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 3 | Cartesian portal 3D |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 3 | Cartesian portal 3D |
 | 4 | Cartesian portal 3D with orientation |  |
 | 26 | Cartesian portal 3D with 2 orientations A, B |  |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the zero position of axis A1 to the KZP in the x direction of the KCS |
-| <TO>.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 of the zero position of axis A2 to the KZP in the y direction of the KCS |
-| <TO>.Kinematics.Parameter[3] | -1.0E12 to 1.0E12 | - Distance LF of the FCS to axis A3 in the negative z direction of the KCS - Cartesian portal 3D with 2 orientations A, B:   Distance LF of the FCS to axis A5 |
-| <TO>.Kinematics.Parameter[4] | -1.0E12 to 1.0E12 | Distance L3 of the zero position of axis A3 to the KZP in the z direction of the KCS |
-| <TO>.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Distance L4 of the joint points of rotational axis A4 and swivel axis A5 in the x direction of the KCS in the kinematics zero position<sup>1)</sup> |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the zero position of axis A1 to the KZP in the x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 of the zero position of axis A2 to the KZP in the y direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[3] | -1.0E12 to 1.0E12 | - Distance LF of the FCS to axis A3 in the negative z direction of the KCS - Cartesian portal 3D with 2 orientations A, B:   Distance LF of the FCS to axis A5 |
+| &lt;TO&gt;.Kinematics.Parameter[4] | -1.0E12 to 1.0E12 | Distance L3 of the zero position of axis A3 to the KZP in the z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Distance L4 of the joint points of rotational axis A4 and swivel axis A5 in the x direction of the KCS in the kinematics zero position<sup>1)</sup> |
 | <sup>1) </sup>Only relevant for kinematics type "Cartesian portal 3D with 2 orientations A, B" |  |  |
 
 ---
@@ -1759,13 +1759,13 @@ You define the 2D delta picker kinematics systems using the following tags of th
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 5 | Roller picker 2D |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 5 | Roller picker 2D |
 | 6 | Roller picker 2D with orientation |  |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | With zero position of the axes A1 and A2:  Distance L1 of the FCS to the KZP in x direction of the kinematics coordinate system (KCS) |
-| <TO>.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Cam radius R1 for axis 1 |
-| <TO>.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Cam radius R2 for axis 2 |
-| <TO>.Kinematics.Parameter[4] | -1.0E12 to 1.0E12 | Flange length LF before the flange coordinate system (FCS) in the negative z direction of the KCS |
-| <TO>.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | With zero position of the axes A1 and A2:  Distance L2 of the FCS to the KZP in z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | With zero position of the axes A1 and A2:  Distance L1 of the FCS to the KZP in x direction of the kinematics coordinate system (KCS) |
+| &lt;TO&gt;.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Cam radius R1 for axis 1 |
+| &lt;TO&gt;.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Cam radius R2 for axis 2 |
+| &lt;TO&gt;.Kinematics.Parameter[4] | -1.0E12 to 1.0E12 | Flange length LF before the flange coordinate system (FCS) in the negative z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | With zero position of the axes A1 and A2:  Distance L2 of the FCS to the KZP in z direction of the KCS |
 
 ###### Roller picker 3D
 
@@ -1773,16 +1773,16 @@ You define the 3D roller picker kinematics systems using the following tags of t
 
 | Tags | Values | Description |  |
 | --- | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 7 | Roller picker 3D (vertical) |  |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 7 | Roller picker 3D (vertical) |  |
 | 8 | Roller picker 3D with orientation (vertical) |  |  |
 | 9 | Roller picker 3D with orientation (horizontal) |  |  |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | With zero position of the axes A1 and A2:  Distance L1 of the FCS to the KZP in x direction of the KCS |  |
-| <TO>.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Cam radius R1 for axis 1 |  |
-| <TO>.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Cam radius R2 for axis 2 |  |
-| <TO>.Kinematics.Parameter[4] | -1.0E12 to 1.0E12 | Flange length LF before the FCS in the negative z direction of the KCS |  |
-| <TO>.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Roller picker vertical | Distance L2 of the zero position of the axis A3 to the KZP in y direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | With zero position of the axes A1 and A2:  Distance L1 of the FCS to the KZP in x direction of the KCS |  |
+| &lt;TO&gt;.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Cam radius R1 for axis 1 |  |
+| &lt;TO&gt;.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Cam radius R2 for axis 2 |  |
+| &lt;TO&gt;.Kinematics.Parameter[4] | -1.0E12 to 1.0E12 | Flange length LF before the FCS in the negative z direction of the KCS |  |
+| &lt;TO&gt;.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Roller picker vertical | Distance L2 of the zero position of the axis A3 to the KZP in y direction of the KCS |
 | Roller picker horizontal | With zero position of the axes A1 and A2:  Distance L2 of the FCS to the kinematics zero point (KZP) in y direction of the KCS |  |  |
-| <TO>.Kinematics.Parameter[6] | -1.0E12 to 1.0E12 | Roller picker vertical | With zero position of the axes A1 and A2:  Distance L3 of the FCS to the KZP in z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[6] | -1.0E12 to 1.0E12 | Roller picker vertical | With zero position of the axes A1 and A2:  Distance L3 of the FCS to the KZP in z direction of the KCS |
 | Roller picker horizontal | Distance L3 of the zero position of the axis A3 to the KZP in z direction of the KCS |  |  |
 
 #### SCARA (S7-1500T)
@@ -1862,7 +1862,7 @@ You can configure a mechanical axis coupling of axis A4 to axis A2 for the kinem
 
 The kinematics transformation covers the following [traversing range](#traversing-range-and-transformation-area-s7-1500t) of the axes:
 
-- Axis A1: -180.0° ≤ α1 < 180.0°
+- Axis A1: -180.0° ≤ α1 &lt; 180.0°
 - Axis A2: No limit
 - Axis A4: No limit
 
@@ -1944,7 +1944,7 @@ You can configure the following mechanical coupled axes for the kinematics:
 - Mechanical coupling of axis A1 to axis A2
 - Mechanical coupling of axis A4 to axis A3
 
-The kinematics transformation compensates for the configured mechanical axis couplings. With a compensation factor > 0.0, the kinematics transformation assumes that a positive motion of the axis A1 leads to a negative motion on the axis A2. The axis coupling between axis A4 and axis A3 is implemented as a leadscrew pitch. With a compensation factor of 1.0, 360.0° on axis A4 corresponds to a distance of -1.0 mm on axis A3.
+The kinematics transformation compensates for the configured mechanical axis couplings. With a compensation factor &gt; 0.0, the kinematics transformation assumes that a positive motion of the axis A1 leads to a negative motion on the axis A2. The axis coupling between axis A4 and axis A3 is implemented as a leadscrew pitch. With a compensation factor of 1.0, 360.0° on axis A4 corresponds to a distance of -1.0 mm on axis A3.
 
 ###### Transformation area
 
@@ -2004,14 +2004,14 @@ You define the SCARA 2D kinematics using the following tags of the technology o
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 20 | SCARA 2D with orientation |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance of the axis A1 from the kinematics zero point in z direction of the kinematics coordinate system (KCS) |
-| <TO>.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 of the axis A2 from the axis A4 in x direction of the KCS |
-| <TO>.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Distance of the flange coordinate system from the axis A2 in the negative z direction of the KCS |
-| <TO>.Kinematics.Parameter[4] | - | Mechanical axis coupling of axis A4 to A2 present/not present |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 20 | SCARA 2D with orientation |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance of the axis A1 from the kinematics zero point in z direction of the kinematics coordinate system (KCS) |
+| &lt;TO&gt;.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 of the axis A2 from the axis A4 in x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Distance of the flange coordinate system from the axis A2 in the negative z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[4] | - | Mechanical axis coupling of axis A4 to A2 present/not present |
 | 0 | Not present |  |
 | 1 | Present |  |
-| <TO>.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Compensation factor of axis A4 to axis A2 |
+| &lt;TO&gt;.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Compensation factor of axis A4 to axis A2 |
 
 ###### SCARA 3D
 
@@ -2019,19 +2019,19 @@ You define the SCARA 3D kinematics using the following tags of the technology o
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 10 | SCARA 3D with orientation |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance of the axis A1 from the kinematics zero point in z direction of the kinematics coordinate system (KCS) |
-| <TO>.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Distance L2 of the axis A2 from the axis A1 in x direction of the KCS |
-| <TO>.Kinematics.Parameter[3] | - | Mechanical axis coupling of axis A1 to axis A2 present/not present |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 10 | SCARA 3D with orientation |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance of the axis A1 from the kinematics zero point in z direction of the kinematics coordinate system (KCS) |
+| &lt;TO&gt;.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Distance L2 of the axis A2 from the axis A1 in x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[3] | - | Mechanical axis coupling of axis A1 to axis A2 present/not present |
 | 0 | Not present |  |
 | 1 | Present |  |
-| <TO>.Kinematics.Parameter[4] | -1.0E12 to 1.0E12 | Compensation factor of axis A1 to axis A2 |
-| <TO>.Kinematics.Parameter[5] | 0.001 to 1.0E12 | Distance L3 of the axis A3 from the axis A2 in x direction of the KCS |
-| <TO>.Kinematics.Parameter[6] | - | Mechanical axis coupling of axis A4 to axis A3 present/not present |
+| &lt;TO&gt;.Kinematics.Parameter[4] | -1.0E12 to 1.0E12 | Compensation factor of axis A1 to axis A2 |
+| &lt;TO&gt;.Kinematics.Parameter[5] | 0.001 to 1.0E12 | Distance L3 of the axis A3 from the axis A2 in x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[6] | - | Mechanical axis coupling of axis A4 to axis A3 present/not present |
 | 0 | Not present |  |
 | 1 | Present |  |
-| <TO>.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | Compensation factor of axis A4 to axis A3 |
-| <TO>.Kinematics.Parameter[8] | -1.0E12 to 1.0E12 | Distance of the flange coordinate system from the axis A2 in the negative z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | Compensation factor of axis A4 to axis A3 |
+| &lt;TO&gt;.Kinematics.Parameter[8] | -1.0E12 to 1.0E12 | Distance of the flange coordinate system from the axis A2 in the negative z direction of the KCS |
 
 #### Articulated arm (S7-1500T)
 
@@ -2102,14 +2102,14 @@ The following table shows the zero position of the axes:
 
 ###### Compensation of mechanical axis couplings
 
-For the kinematics, you can configure a mechanical axis coupling of axis A1 to axis A2. The kinematics transformation compensates for the configured mechanical axis coupling. With a compensation factor > 0.0, the kinematics transformation assumes that a positive motion of the axis A1 leads to a negative motion on the axis A2.
+For the kinematics, you can configure a mechanical axis coupling of axis A1 to axis A2. The kinematics transformation compensates for the configured mechanical axis coupling. With a compensation factor &gt; 0.0, the kinematics transformation assumes that a positive motion of the axis A1 leads to a negative motion on the axis A2.
 
 ###### Transformation area
 
 The kinematics transformation covers the following [traversing range](#traversing-range-and-transformation-area-s7-1500t) of the axes:
 
-- Axis A1: -180.0° ≤ α1 < 180.0°
-- Axis A2: -180.0° ≤ α2 < 180.0°
+- Axis A1: -180.0° ≤ α1 &lt; 180.0°
+- Axis A2: -180.0° ≤ α2 &lt; 180.0°
 
 > **Note**
 >
@@ -2199,14 +2199,14 @@ The following table shows the zero position of the axes:
 
 ###### Compensation of mechanical axis couplings
 
-For the kinematics, you can configure a mechanical axis coupling of axis A1 to axis A2. The kinematics transformation compensates for the configured mechanical axis coupling. With a compensation factor > 0.0, the kinematics transformation assumes that a positive motion of the axis A1 leads to a negative motion on the axis A2.
+For the kinematics, you can configure a mechanical axis coupling of axis A1 to axis A2. The kinematics transformation compensates for the configured mechanical axis coupling. With a compensation factor &gt; 0.0, the kinematics transformation assumes that a positive motion of the axis A1 leads to a negative motion on the axis A2.
 
 ###### Transformation area
 
 The kinematics transformation covers the following [traversing range](#traversing-range-and-transformation-area-s7-1500t) of the axes:
 
-- Axis A1: -180.0° ≤ α1 < 180.0°
-- Axis A2: -180.0° ≤ α2 < 180.0°
+- Axis A1: -180.0° ≤ α1 &lt; 180.0°
+- Axis A2: -180.0° ≤ α2 &lt; 180.0°
 - Axis A4: No limit
 
   An angle greater than 360° can be defined for the orientation. But coordinate A of the tool center point (TCP) is mapped in the range -180° to +180°.
@@ -2314,15 +2314,15 @@ The following table shows the zero position of the axes:
 
 ###### Compensation of mechanical axis couplings
 
-You can configure a mechanical axis coupling of axis A2 to axis A3 for the kinematics. The kinematics transformation compensates for the configured mechanical axis coupling. With a compensation factor > 0.0, the kinematics transformation assumes that a positive motion of the axis A2 leads to a negative motion on the axis A3.
+You can configure a mechanical axis coupling of axis A2 to axis A3 for the kinematics. The kinematics transformation compensates for the configured mechanical axis coupling. With a compensation factor &gt; 0.0, the kinematics transformation assumes that a positive motion of the axis A2 leads to a negative motion on the axis A3.
 
 ###### Transformation area
 
 The kinematics transformation covers the following [traversing range](#traversing-range-and-transformation-area-s7-1500t) of the axes:
 
-- Axis A1: -180.0° ≤ α1 < 180.0°
-- Axis A2: -180.0° ≤ α2 < 180.0°
-- Axis A3: -180.0° ≤ α3 < 180.0°
+- Axis A1: -180.0° ≤ α1 &lt; 180.0°
+- Axis A2: -180.0° ≤ α2 &lt; 180.0°
+- Axis A3: -180.0° ≤ α3 &lt; 180.0°
 
 > **Note**
 >
@@ -2441,15 +2441,15 @@ The following table shows the zero position of the axes:
 
 ###### Compensation of mechanical axis couplings
 
-You can configure a mechanical axis coupling of axis A2 to axis A3 for the kinematics. The kinematics transformation compensates for the configured mechanical axis coupling. With a compensation factor > 0.0, the kinematics transformation assumes that a positive motion of the axis A2 leads to a negative motion on the axis A3.
+You can configure a mechanical axis coupling of axis A2 to axis A3 for the kinematics. The kinematics transformation compensates for the configured mechanical axis coupling. With a compensation factor &gt; 0.0, the kinematics transformation assumes that a positive motion of the axis A2 leads to a negative motion on the axis A3.
 
 ###### Transformation area
 
 The kinematics transformation covers the following [traversing range](#traversing-range-and-transformation-area-s7-1500t) of the axes:
 
-- Axis A1: -180.0° ≤ α1 < 180.0°
-- Axis A2: -180.0° ≤ α2 < 180.0°
-- Axis A3: -180.0° ≤ α3 < 180.0°
+- Axis A1: -180.0° ≤ α1 &lt; 180.0°
+- Axis A2: -180.0° ≤ α2 &lt; 180.0°
+- Axis A3: -180.0° ≤ α3 &lt; 180.0°
 - Axis A4: No limit
 
   An angle greater than 360° can be defined for the orientation. But coordinate A of the tool center point (TCP) is mapped in the range -180° to +180°.
@@ -2597,7 +2597,7 @@ If the direction of travel of a joint of the real kinematics is inverse to the d
 
 The kinematics transformation covers the following [traversing range](#traversing-range-and-transformation-area-s7-1500t) of the axes:
 
-- Axis A[1..6]: -180.0° ≤ α[1..6] < 180.0°
+- Axis A[1..6]: -180.0° ≤ α[1..6] &lt; 180.0°
 
 To traverse outside these traversing range definitions, you can use, for example, the Motion Control instructions "[MC_MoveLinearAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movelinearabsolute-position-kinematics-with-linear-path-motion-v8-s7-1500t)" or "[MC_MoveDirectAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movedirectabsolute-absolute-movement-of-kinematics-with-synchronous-point-to-point-motion-v8-s7-1500t)" and "[MC_MoveDirectRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movedirectrelative-relative-movement-of-kinematics-with-synchronous-point-to-point-motion-v8-s7-1500t)" with "TurnJoint[1..6]" ≠ 1.
 
@@ -2635,15 +2635,15 @@ The graphic below shows examples of singularities and permissible joint position
 
 The joint position space of the kinematics "6-axis articulated arm with central hand" is defined by the joint positions from the kinematics transformation. The joint position space thus describes the geometric joint positions of the kinematics.
 
-When using mechanical axis couplings, inverted joint directions or joint offsets, the joint position space is not defined by the absolute joint positions "<TO>.JointData.J[1..6].Position" or the axis positions "<TO>.AxesData.A[1..6].Position".
+When using mechanical axis couplings, inverted joint directions or joint offsets, the joint position space is not defined by the absolute joint positions "&lt;TO&gt;.JointData.J[1..6].Position" or the axis positions "&lt;TO&gt;.AxesData.A[1..6].Position".
 
 The following example shows the geometric joint position on joint 5:
 
 ![Joint position space](images/158877968011_DV_resource.Stream@PNG-de-DE.png)
 
-**Case 1:** No joint inversion and no joint offset is defined. The joint position corresponds to the geometric joint position (from the transformation), thus -45°. Bit 4 in the "<TO>StatusKinematics.LinkConstellation" tag is TRUE, because the geometric joint position is -45°.
+**Case 1:** No joint inversion and no joint offset is defined. The joint position corresponds to the geometric joint position (from the transformation), thus -45°. Bit 4 in the "&lt;TO&gt;StatusKinematics.LinkConstellation" tag is TRUE, because the geometric joint position is -45°.
 
-**Case 2:** The inverted traversing direction is configured for joint 5. The kinematics has exactly the same geometric joint position as in Case 1. However, due to the inverted traversing direction, the joint position is +45°. Bit 4 in the "<TO>StatusKinematics.LinkConstellation" tag is thus also TRUE in this case, because the geometric joint position (from the transformation) is -45°.
+**Case 2:** The inverted traversing direction is configured for joint 5. The kinematics has exactly the same geometric joint position as in Case 1. However, due to the inverted traversing direction, the joint position is +45°. Bit 4 in the "&lt;TO&gt;StatusKinematics.LinkConstellation" tag is thus also TRUE in this case, because the geometric joint position (from the transformation) is -45°.
 
 **Working areas**
 
@@ -2682,7 +2682,7 @@ The following table shows the possible arm positioning spaces of the kinematics:
 | 1 | Not relevant |  |  |  |  |  |  |
 | Bit 6 … 31 | - | - | - | Not relevant |  |  |  |
 
-Bits 1, 3, 5 and 6 … 31 in the "<TO>StatusKinematics.LinkConstellation" tag are not programmable on the motion control instructions "MC_MoveDirectAbsolute" or "MC_MoveDirectRelative". A setting is reported as an impermissible value for the target joint position space ("ErrorID" = 16#80D2).
+Bits 1, 3, 5 and 6 … 31 in the "&lt;TO&gt;StatusKinematics.LinkConstellation" tag are not programmable on the motion control instructions "MC_MoveDirectAbsolute" or "MC_MoveDirectRelative". A setting is reported as an impermissible value for the target joint position space ("ErrorID" = 16#80D2).
 
 **Examples**
 
@@ -2703,17 +2703,17 @@ You define the 2D articulated arm kinematics systems using the following tags of
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 11 | Articulated arm 2D |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 11 | Articulated arm 2D |
 | 12 | Articulated arm 2D with orientation |  |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the axis A1 to the kinematics zero point in z direction of the kinematics coordinate system (KCS) |
-| <TO>.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 of the axis A1 to the kinematics zero point in x direction of the KCS |
-| <TO>.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Arm length L3 between the axes A1 and A2 |
-| <TO>.Kinematics.Parameter[4] | - | Mechanical axis coupling of axis A1 to axis A2 present/not present |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the axis A1 to the kinematics zero point in z direction of the kinematics coordinate system (KCS) |
+| &lt;TO&gt;.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 of the axis A1 to the kinematics zero point in x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Arm length L3 between the axes A1 and A2 |
+| &lt;TO&gt;.Kinematics.Parameter[4] | - | Mechanical axis coupling of axis A1 to axis A2 present/not present |
 | 0 | Not present |  |
 | 1 | Present |  |
-| <TO>.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Compensation factor of axis A1 to axis A2 |
-| <TO>.Kinematics.Parameter[6] | 0.001 to 1.0E12 | Side length L4 between A2 and positive coupling point |
-| <TO>.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | Distance LF of the flange coordinate system (FCS) from the forced coupler point in the negative z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Compensation factor of axis A1 to axis A2 |
+| &lt;TO&gt;.Kinematics.Parameter[6] | 0.001 to 1.0E12 | Side length L4 between A2 and positive coupling point |
+| &lt;TO&gt;.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | Distance LF of the flange coordinate system (FCS) from the forced coupler point in the negative z direction of the KCS |
 
 ###### Articulated arm 3D
 
@@ -2721,17 +2721,17 @@ You define the 3D articulated arm kinematics systems using the following tags of
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 13 | Articulated arm 3D |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 13 | Articulated arm 3D |
 | 14 | Articulated arm 3D with orientation |  |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the axis A2 to the kinematics zero point in z direction of the KCS |
-| <TO>.Kinematics.Parameter[2] | 0.0 to 1.0E12 | Distance L2 of the axis A2 to the kinematics zero point in x direction of the KCS |
-| <TO>.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Arm length L3 between the axes A2 and A3 |
-| <TO>.Kinematics.Parameter[4] | - | Mechanical axis coupling of axis A2 to A3 present/not present |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the axis A2 to the kinematics zero point in z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[2] | 0.0 to 1.0E12 | Distance L2 of the axis A2 to the kinematics zero point in x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Arm length L3 between the axes A2 and A3 |
+| &lt;TO&gt;.Kinematics.Parameter[4] | - | Mechanical axis coupling of axis A2 to A3 present/not present |
 | 0 | Not present |  |
 | 1 | Present |  |
-| <TO>.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Compensation factor of axis A2 to axis A3 |
-| <TO>.Kinematics.Parameter[6] | 0.001 to 1.0E12 | Arm length L4 between the axis A3 and positive coupler point |
-| <TO>.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | Distance LF of the FCS from the forced coupler point in the negative z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Compensation factor of axis A2 to axis A3 |
+| &lt;TO&gt;.Kinematics.Parameter[6] | 0.001 to 1.0E12 | Arm length L4 between the axis A3 and positive coupler point |
+| &lt;TO&gt;.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | Distance LF of the FCS from the forced coupler point in the negative z direction of the KCS |
 
 ###### 6-axis articulated arm with central hand
 
@@ -2739,13 +2739,13 @@ You define the kinematics "6-axis articulated arm with central hand" via the fol
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 25 | 6-axis articulated arm with central hand |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the axis A2 to the kinematics zero point in z direction of the KCS |
-| <TO>.Kinematics.Parameter[2] | 0.0 to 1.0E12 | Distance L2 of the axis A2 to the kinematics zero point in x direction of the KCS |
-| <TO>.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Distance L3 of the axis A3 to the axis A2 in x direction of the KCS |
-| <TO>.Kinematics.Parameter[4] | 0.001 to 1.0E12 | Distance L4 of the manual root point to the axis A3 in x direction of the KCS |
-| <TO>.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Distance LF of the FCS to the manual root point in x direction of the KCS |
-| <TO>.Kinematics.Parameter[6] | -1.0E12 to 1.0E12 | Distance L5 of the manual root point to the axis A3 in z direction of the KCS |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 25 | 6-axis articulated arm with central hand |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the axis A2 to the kinematics zero point in z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[2] | 0.0 to 1.0E12 | Distance L2 of the axis A2 to the kinematics zero point in x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Distance L3 of the axis A3 to the axis A2 in x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[4] | 0.001 to 1.0E12 | Distance L4 of the manual root point to the axis A3 in x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Distance LF of the FCS to the manual root point in x direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[6] | -1.0E12 to 1.0E12 | Distance L5 of the manual root point to the axis A3 in z direction of the KCS |
 
 #### Delta picker (S7-1500T)
 
@@ -3134,13 +3134,13 @@ You define the 2D delta picker kinematics using the following tags of the techno
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 15 | Delta picker 2D |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 15 | Delta picker 2D |
 | 16 | Delta picker 2D with orientation |  |
-| <TO>.Kinematics.Parameter[1] | 0.0 to 1.0E12 | Distance D1 (radius of the upper connecting plate) |
-| <TO>.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Length L1 of the upper arms |
-| <TO>.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Length L2 of connecting rods |
-| <TO>.Kinematics.Parameter[4] | 0.0 to 1.0E12 | Distance D2 (radius of the lower connecting plate) |
-| <TO>.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Distance LF of the FCS to the lower connecting plate in the negative z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[1] | 0.0 to 1.0E12 | Distance D1 (radius of the upper connecting plate) |
+| &lt;TO&gt;.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Length L1 of the upper arms |
+| &lt;TO&gt;.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Length L2 of connecting rods |
+| &lt;TO&gt;.Kinematics.Parameter[4] | 0.0 to 1.0E12 | Distance D2 (radius of the lower connecting plate) |
+| &lt;TO&gt;.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Distance LF of the FCS to the lower connecting plate in the negative z direction of the KCS |
 
 ###### Delta picker 3D
 
@@ -3148,18 +3148,18 @@ You define the 3D delta picker kinematics using the following tags of the techno
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 17 | Delta picker 3D |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 17 | Delta picker 3D |
 | 18 | Delta picker 3D with orientation |  |
 | 27 | Delta picker 3D with 2 orientations A, B |  |
-| <TO>.Kinematics.Parameter[1] | 0.0 to 1.0E12 | Distance D1 (radius of the upper connecting plate) |
-| <TO>.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Length L1 of the upper arms |
-| <TO>.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Length L2 of connecting rods |
-| <TO>.Kinematics.Parameter[4] | 0.0 to 1.0E12 | Distance D2 (radius of the lower connecting plate) |
-| <TO>.Kinematics.Parameter[5] | 90.001° to 179.998° | Angle β1 between the axes A1 and A2 |
-| <TO>.Kinematics.Parameter[6] | 90.001° to 179.998° | Angle β2 between the axes A2 and A3 |
-| <TO>.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | - Distance LF of the FCS to the lower connecting plate in the negative z direction of the KCS - Delta picker 3D with 2 orientations A, B:   Distance LF from pivot point of swivel axis A5 to FCS in negative x direction of FCS |
-| <TO>.Kinematics.Parameter[8] | 0.001 to 1.0E12 | Distance L3 of the swivel axis to the lower connecting plate in the negative z direction of the KCS at zero position of the kinematics<sup> 1)</sup> |
-| <TO>.Kinematics.Parameter[9] | 0.001 to 1.0E12 | Distance L4 of the hinge points of the rotary axis A4 to swivel axis A5 in x direction of the KCS at zero position of the kinematics<sup> 1)</sup> |
+| &lt;TO&gt;.Kinematics.Parameter[1] | 0.0 to 1.0E12 | Distance D1 (radius of the upper connecting plate) |
+| &lt;TO&gt;.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Length L1 of the upper arms |
+| &lt;TO&gt;.Kinematics.Parameter[3] | 0.001 to 1.0E12 | Length L2 of connecting rods |
+| &lt;TO&gt;.Kinematics.Parameter[4] | 0.0 to 1.0E12 | Distance D2 (radius of the lower connecting plate) |
+| &lt;TO&gt;.Kinematics.Parameter[5] | 90.001° to 179.998° | Angle β1 between the axes A1 and A2 |
+| &lt;TO&gt;.Kinematics.Parameter[6] | 90.001° to 179.998° | Angle β2 between the axes A2 and A3 |
+| &lt;TO&gt;.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | - Distance LF of the FCS to the lower connecting plate in the negative z direction of the KCS - Delta picker 3D with 2 orientations A, B:   Distance LF from pivot point of swivel axis A5 to FCS in negative x direction of FCS |
+| &lt;TO&gt;.Kinematics.Parameter[8] | 0.001 to 1.0E12 | Distance L3 of the swivel axis to the lower connecting plate in the negative z direction of the KCS at zero position of the kinematics<sup> 1)</sup> |
+| &lt;TO&gt;.Kinematics.Parameter[9] | 0.001 to 1.0E12 | Distance L4 of the hinge points of the rotary axis A4 to swivel axis A5 in x direction of the KCS at zero position of the kinematics<sup> 1)</sup> |
 | <sup>1) </sup>Only relevant for kinematics type "Delta picker 3D with 2 orientations A, B" |  |  |
 
 #### Cylindrical robot (S7-1500T)
@@ -3239,7 +3239,7 @@ The following table shows the zero position of the axes:
 
 The kinematics transformation covers the following [traversing range](#traversing-range-and-transformation-area-s7-1500t) of the axes:
 
-- Axis A1: -180.0° ≤ α1 < 180.0°
+- Axis A1: -180.0° ≤ α1 &lt; 180.0°
 - Axis A2: No limit
 - Axis A3: No limit
 
@@ -3357,7 +3357,7 @@ You can configure a mechanical axis coupling of axis A4 to axis A2 for the kinem
 
 The kinematics transformation covers the following [traversing range](#traversing-range-and-transformation-area-s7-1500t) of the axes:
 
-- Axis A1: -180.0° ≤ α1 < 180.0°
+- Axis A1: -180.0° ≤ α1 &lt; 180.0°
 - Axis A2: No limit
 - Axis A3: No limit
 - Axis A4: No limit
@@ -3411,10 +3411,10 @@ You define the "Cylindrical robot 3D" kinematics using the following tags of the
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 21 | Cylindrical robot 3D |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the zero position of the axis A2 to the kinematics zero point in z direction of the kinematics coordinate system (KCS) |
-| <TO>.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 between the axes A2 and A3 in y direction of the KCS |
-| <TO>.Kinematics.Parameter[3] | -1.0E12 to 1.0E12 | Distance of the flange coordinate system from the axis A3 in the negative z direction of the KCS |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 21 | Cylindrical robot 3D |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the zero position of the axis A2 to the kinematics zero point in z direction of the kinematics coordinate system (KCS) |
+| &lt;TO&gt;.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 between the axes A2 and A3 in y direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[3] | -1.0E12 to 1.0E12 | Distance of the flange coordinate system from the axis A3 in the negative z direction of the KCS |
 
 ###### Cylindrical robot 3D with orientation
 
@@ -3422,14 +3422,14 @@ You define the "Cylindrical robot 3D with orientation" kinematics using the foll
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 22 | Cylindrical robot 3D with orientation |
-| <TO>.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the zero position of the axis A2 to the kinematics zero point in z direction of the KCS |
-| <TO>.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 between the axes A2 and A3 in y direction of the KCS |
-| <TO>.Kinematics.Parameter[3] | -1.0E12 to 1.0E12 | Distance of the flange coordinate system from the axis A3 in the negative z direction of the KCS |
-| <TO>.Kinematics.Parameter[4] | - | Mechanical axis coupling of axis A4 to A2 present/not present |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 22 | Cylindrical robot 3D with orientation |
+| &lt;TO&gt;.Kinematics.Parameter[1] | -1.0E12 to 1.0E12 | Distance L1 of the zero position of the axis A2 to the kinematics zero point in z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[2] | -1.0E12 to 1.0E12 | Distance L2 between the axes A2 and A3 in y direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[3] | -1.0E12 to 1.0E12 | Distance of the flange coordinate system from the axis A3 in the negative z direction of the KCS |
+| &lt;TO&gt;.Kinematics.Parameter[4] | - | Mechanical axis coupling of axis A4 to A2 present/not present |
 | 0 | Not present |  |
 | 1 | Present |  |
-| <TO>.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Compensation factor of axis A4 to axis A2 |
+| &lt;TO&gt;.Kinematics.Parameter[5] | -1.0E12 to 1.0E12 | Compensation factor of axis A4 to axis A2 |
 
 #### Tripod (S7-1500T)
 
@@ -3485,7 +3485,7 @@ The graphic below shows the following in the front view (xz plane):
 | D2 | Distance of the lower hinge points of the connecting rods to the center of the lower connecting plate |  |
 | L1 | Length of the connecting rods |  |
 | LF | Flange length before the FCS in the z direction of the KCS |  |
-| γ | Angle between the upper connecting plate (xy plane of the KCS) and the rail of the axis A1 (0.0° ≤ γ < 90.0°) |  |
+| γ | Angle between the upper connecting plate (xy plane of the KCS) and the rail of the axis A1 (0.0° ≤ γ &lt; 90.0°) |  |
 | D1, D2, L1 and γ are identical for the three arms of the kinematics. |  |  |
 | ![Coordinate systems and zero position](images/158499655179_DV_resource.Stream@PNG-de-DE.png) | Deflection of the kinematics with deflection of the axis A1 in positive direction |  |
 | [Legend for representation of the kinematics](#legend-for-representation-of-the-kinematics-s7-1500t) |  |  |
@@ -3561,7 +3561,7 @@ The graphic below shows the following in the side view:
 | D2 | Distance of the lower joint points of the connecting rods to the center of the lower connecting plate |  |
 | L1 | Length of the connecting rods |  |
 | LF | Flange length before the FCS in the z direction of the KCS |  |
-| γ | Angle between the upper connecting plate (xy plane of the KCS) and the rail of the axis A1 (0.0° ≤ γ < 90.0°) |  |
+| γ | Angle between the upper connecting plate (xy plane of the KCS) and the rail of the axis A1 (0.0° ≤ γ &lt; 90.0°) |  |
 | D1, D2, L1 and γ are identical for the three arms of the kinematics. |  |  |
 | ![Coordinate systems and zero position](images/158499655179_DV_resource.Stream@PNG-de-DE.png) | Deflection of the kinematics with deflection of the axis A1 in positive direction |  |
 | [Legend for representation of the kinematics](#legend-for-representation-of-the-kinematics-s7-1500t) |  |  |
@@ -3597,15 +3597,15 @@ You define the tripod kinematics using the following tags of the technology obje
 
 | Tags | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 23 | Tripod 3D |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 23 | Tripod 3D |
 | 24 | Tripod 3D with orientation |  |
-| <TO>.Kinematics.Parameter[1] | 0.0 to 1.0E12 | Distance D1 (radius of the upper connecting plate) |
-| <TO>.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Length L1 of connecting rods |
-| <TO>.Kinematics.Parameter[3] | 0.0° to 89.999° | Angle γ between the linear axes and the x-y plane of the kinematics coordinate system |
-| <TO>.Kinematics.Parameter[4] | 0.0 to 1.0E12 | Distance D2 (radius of the lower connecting plate) |
-| <TO>.Kinematics.Parameter[5] | 90.001° to 179.998° | Angle β1 between the axes A1 and A2 |
-| <TO>.Kinematics.Parameter[6] | 90.001° to 179.998° | Angle β2 between the axes A2 and A3 |
-| <TO>.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | Distance of the flange coordinate system from the lower connecting plate in the negative z direction of the kinematics coordinate system |
+| &lt;TO&gt;.Kinematics.Parameter[1] | 0.0 to 1.0E12 | Distance D1 (radius of the upper connecting plate) |
+| &lt;TO&gt;.Kinematics.Parameter[2] | 0.001 to 1.0E12 | Length L1 of connecting rods |
+| &lt;TO&gt;.Kinematics.Parameter[3] | 0.0° to 89.999° | Angle γ between the linear axes and the x-y plane of the kinematics coordinate system |
+| &lt;TO&gt;.Kinematics.Parameter[4] | 0.0 to 1.0E12 | Distance D2 (radius of the lower connecting plate) |
+| &lt;TO&gt;.Kinematics.Parameter[5] | 90.001° to 179.998° | Angle β1 between the axes A1 and A2 |
+| &lt;TO&gt;.Kinematics.Parameter[6] | 90.001° to 179.998° | Angle β2 between the axes A2 and A3 |
+| &lt;TO&gt;.Kinematics.Parameter[7] | -1.0E12 to 1.0E12 | Distance of the flange coordinate system from the lower connecting plate in the negative z direction of the kinematics coordinate system |
 
 #### User-defined kinematics systems (S7-1500T)
 
@@ -3626,8 +3626,8 @@ You can configure user-defined kinematics systems with corresponding axis interc
 
 The configuration supports you in a user-defined kinematics as follows:
 
-- You interconnect the kinematics axes under "Technology object > Configuration > Interconnections".
-- You define the transformation parameters under "Technology object > Configuration > Geometry". Up to 32 tags for defining the geometry of your kinematics are available on the system level.
+- You interconnect the kinematics axes under "Technology object &gt; Configuration &gt; Interconnections".
+- You define the transformation parameters under "Technology object &gt; Configuration &gt; Geometry". Up to 32 tags for defining the geometry of your kinematics are available on the system level.
 
 You have to program the user transformation of the Cartesian positions and the axis positions and axis dynamics. Predefined interfaces are available on the system level. The function of the user transformation is different for kinematics with and without JCS:
 
@@ -3640,12 +3640,12 @@ You configure the user-defined kinematics systems using the following tags of th
 
 | Tag | Values | Description |
 | --- | --- | --- |
-| <TO>.Kinematics.TypeOfKinematics | 31 | User-defined 2D |
+| &lt;TO&gt;.Kinematics.TypeOfKinematics | 31 | User-defined 2D |
 | 32 | User-defined 2D with orientation A |  |
 | 33 | User-defined 3D |  |
 | 34 | User-defined 3D with orientation A |  |
 | 36 | User-defined 3D with 3 orientations |  |
-| <TO>.Kinematics.Parameter[1..32] | - | Up to 32 user-specific parameters |
+| &lt;TO&gt;.Kinematics.Parameter[1..32] | - | Up to 32 user-specific parameters |
 
 ### Kinematics transformation (S7-1500T)
 
@@ -3700,7 +3700,7 @@ The transformation area is the area of the axis positions that the kinematics tr
 
 The hardware and software limit switches of an axis define the maximum traversing range and the working area. The working area of a kinematics axis can be greater than or less than the transformation area depending on the axis configuration:
 
-- Working area > Transformation area
+- Working area &gt; Transformation area
 
   When a kinematics axis exits the transformation area during a kinematics motion, the kinematics technology object outputs the technology alarm 803. The kinematics motion is aborted and the axes stop with the maximum dynamic values configured for the axes (alarm reaction: Stop with maximum dynamic values of the axes).
 - Working area ≤ Transformation area
@@ -3718,13 +3718,13 @@ The following graphic shows the relationship between the working area of the axi
 | ③ | Software limit switch for positioning axis/synchronous axis technology object |
 | ④ | Maximum traversing range of the axis |
 | ⑤ | Working area of the axis |
-| ⑥ | Transformation area  (here working area > transformation area) |
+| ⑥ | Transformation area  (here working area &gt; transformation area) |
 
 ##### Joint position spaces (kinematics-dependent) (S7-1500T)
 
 Depending on the kinematics type, a kinematics system can reach Cartesian coordinates via various joint positions. The [kinematics type](#kinematics-types-s7-1500t) defines the possible joint positions and the positive and negative joint position space. The joint positioning spaces are limited by the respective transformation areas. In addition, with the "Delta picker" kinematics type there are further limitations due to invalid joint positions and [singularities](#singularities-s7-1500t) with the kinematics types "articulated arm", "SCARA 3D" and "cylindrical robot". Also note the resulting constructional limitations due to the installation location of the kinematics.
 
-The kinematics technology object indicates the current joint position in the "<TO>.StatusKinematics.LinkConstellation" tag.
+The kinematics technology object indicates the current joint position in the "&lt;TO&gt;.StatusKinematics.LinkConstellation" tag.
 
 The kinematics system cannot exit the joint position space during a linear or circular motion. You can change the arm positioning space using single-axis motions and synchronous "point-to-point" motion (sPTP motion).
 
@@ -3841,7 +3841,7 @@ A path motion through a singularity is not possible. The technology alarm 803 "E
 
 The kinematics system reduces the overruns of the dynamics caused by setpoints to the maximum dynamics of the axis. The reduction of the overruns of the dynamics can result in an unpredictable axis motion.
 
-When the dynamic limits of the kinematics axes are exceeded, this is displayed at the affected kinematics axis with the tag "<TO>.StatusKinematicsMotion" and the technology alarm 511 "Dynamic limit is violated by the kinematics motion" is triggered. The technology alarm 511 does not trigger an alarm response and the kinematics motion is not stopped.
+When the dynamic limits of the kinematics axes are exceeded, this is displayed at the affected kinematics axis with the tag "&lt;TO&gt;.StatusKinematicsMotion" and the technology alarm 511 "Dynamic limit is violated by the kinematics motion" is triggered. The technology alarm 511 does not trigger an alarm response and the kinematics motion is not stopped.
 
 **Affected kinematics motions**
 
@@ -3902,11 +3902,11 @@ To empirically determine the area in which overruns of the dynamics occur due to
 
 1. Configure a Trace with the following signals:
 
-   - <TOKinematics>.A[1..6].Velocity
-   - <TOKinematics>.A[1..6].Acceleration
-   - <TOKinematics>.FlangeInKcs.x.Position
-   - <TOKinematics>.FlangeInKcs.y.Position
-   - <TOKinematics>.FlangeInKcs.z.Position
+   - &lt;TOKinematics&gt;.A[1..6].Velocity
+   - &lt;TOKinematics&gt;.A[1..6].Acceleration
+   - &lt;TOKinematics&gt;.FlangeInKcs.x.Position
+   - &lt;TOKinematics&gt;.FlangeInKcs.y.Position
+   - &lt;TOKinematics&gt;.FlangeInKcs.z.Position
 2. Open the diagnostics of the kinematics and arrange it next to the kinematics control panel.
 3. Set the kinematics control panel as follows:
 
@@ -4002,9 +4002,9 @@ Unlike for predefined kinematics types, you must calculate the transformation fo
 - Monitoring functions
 - Communication with the interconnected axes
 
-You program the user transformation of the Cartesian coordinates and the axis-specific setpoints in the MC_Transformation organization block. This programming includes the transformation of the positions and the dynamic values (velocity, acceleration). You freely define the parameters of a user-defined kinematics system in the tags of the kinematics technology object "<TO>.Kinematics.Parameter[1..32]" or under "Technology object > Configuration > Geometry".
+You program the user transformation of the Cartesian coordinates and the axis-specific setpoints in the MC_Transformation organization block. This programming includes the transformation of the positions and the dynamic values (velocity, acceleration). You freely define the parameters of a user-defined kinematics system in the tags of the kinematics technology object "&lt;TO&gt;.Kinematics.Parameter[1..32]" or under "Technology object &gt; Configuration &gt; Geometry".
 
-When you add the MC_Transformation in the TIA Portal, the system data block "TransformationParameter" is automatically created under "Program blocks > System blocks > Program resources". In the properties of the organization block under "General > Transformation", the MC_Transformation indicates the number of the system data block "TransformationParameter". You write and read the axis-specific data or the Cartesian data of the kinematics to be transformed in the system data block "TransformationParameter".
+When you add the MC_Transformation in the TIA Portal, the system data block "TransformationParameter" is automatically created under "Program blocks &gt; System blocks &gt; Program resources". In the properties of the organization block under "General &gt; Transformation", the MC_Transformation indicates the number of the system data block "TransformationParameter". You write and read the axis-specific data or the Cartesian data of the kinematics to be transformed in the system data block "TransformationParameter".
 
 With the technology version V5.0, longer runtimes of the MC_Interpolator arise during user transformation. With longer runtimes of the MC_Interpolator, the runtimes of the organization blocks with lower priority are extended.
 
@@ -4012,7 +4012,7 @@ With the technology version V5.0, longer runtimes of the MC_Interpolator arise d
 >
 > **Disable system performance improvement**
 >
-> If you are using user-defined kinematics, clear the "Improve system performance" check box in the MC_LookAhead properties under "General > Multi-core processor".
+> If you are using user-defined kinematics, clear the "Improve system performance" check box in the MC_LookAhead properties under "General &gt; Multi-core processor".
 
 ###### Programming
 
@@ -4032,7 +4032,7 @@ The kinematics technology object automatically calls the MC_Transformation. The 
 - Processing context of the transformation (current motion or motion planning)
 - Pointer to the system data block "TransformationParameter" (VARIANT)
 
-You evaluate this status information in your user program. In MC_Transformation, you program the algorithms for the calculation of the axis-specific data or the Cartesian data of all user-defined kinematics systems. You read the kinematics parameters needed for this from the tags of the "<TO>.Kinematics.Parameter[1..32]" technology object. You write the result of the calculation to the "TransformationParameter" interface.
+You evaluate this status information in your user program. In MC_Transformation, you program the algorithms for the calculation of the axis-specific data or the Cartesian data of all user-defined kinematics systems. You read the kinematics parameters needed for this from the tags of the "&lt;TO&gt;.Kinematics.Parameter[1..32]" technology object. You write the result of the calculation to the "TransformationParameter" interface.
 
 The transformation parameters are then applied automatically to the kinematics technology object and processed further. The kinematics technology object outputs the setpoints to the kinematics axes.
 
@@ -4051,9 +4051,9 @@ You program the user transformation of the Cartesian coordinates and the joint-s
 1. Retain the user transformation. Invert the affected joint directions of movement and joint zero positions in the "Joints" configuration window of the kinematics technology object. In this case, the joint-specific parameters "AxisData" in the system data block "Transformation" are not equal to the joint coordinates ("JointData"). The technology object performs this calculation automatically through the configured offsets and inversions.
 2. Change the programmed user transformation in such a way that the calculated joint-specific setpoints from the transformation correspond to the joint coordinate system of the kinematics. In this case, the "AxisData" parameters in the "Transformation" system data block are equal to the joint coordinates ("JointData"). It is not necessary to configure the joint offset.
 
-This programming includes the transformation of the positions and the dynamic values (velocity, acceleration). You freely define the parameters of a user-defined kinematics system in the tags of the kinematics technology object "<TO>.Kinematics.Parameter[1..32]" or under "Technology object > Configuration > Geometry".
+This programming includes the transformation of the positions and the dynamic values (velocity, acceleration). You freely define the parameters of a user-defined kinematics system in the tags of the kinematics technology object "&lt;TO&gt;.Kinematics.Parameter[1..32]" or under "Technology object &gt; Configuration &gt; Geometry".
 
-When you add the MC_Transformation in the TIA Portal, the system data block "TransformationParameter" is automatically created under "Program blocks > System blocks > Program resources". In the properties of the organization block under "General > Transformation", the MC_Transformation indicates the number of the system data block "TransformationParameter". You write and read the joint-specific data or the Cartesian data of the kinematics to be transformed in the system data block "TransformationParameter".
+When you add the MC_Transformation in the TIA Portal, the system data block "TransformationParameter" is automatically created under "Program blocks &gt; System blocks &gt; Program resources". In the properties of the organization block under "General &gt; Transformation", the MC_Transformation indicates the number of the system data block "TransformationParameter". You write and read the joint-specific data or the Cartesian data of the kinematics to be transformed in the system data block "TransformationParameter".
 
 With the technology version V5.0, longer runtimes of the MC_Interpolator arise during user transformation. With longer runtimes of the MC_Interpolator, the runtimes of the organization blocks with lower priority are extended.
 
@@ -4061,7 +4061,7 @@ With the technology version V5.0, longer runtimes of the MC_Interpolator arise d
 >
 > **Disable system performance improvement**
 >
-> If you are using user-defined kinematics, clear the "Improve system performance" check box in the MC_LookAhead properties under "General > Multi-core processor".
+> If you are using user-defined kinematics, clear the "Improve system performance" check box in the MC_LookAhead properties under "General &gt; Multi-core processor".
 
 ###### Programming
 
@@ -4076,7 +4076,7 @@ The kinematics technology object automatically calls the MC_Transformation. The 
 - Processing context of the transformation (current motion or motion planning)
 - Pointer to the system data block "TransformationParameter" (VARIANT)
 
-You evaluate this status information in your user program. In MC_Transformation, you program the algorithms for the calculation of the axis-specific data or the Cartesian data of all user-defined kinematics systems. You read the kinematics parameters needed for this from the tags of the "<TO>.Kinematics.Parameter[1..32]" technology object. You write the result of the calculation to the "TransformationParameter" interface.
+You evaluate this status information in your user program. In MC_Transformation, you program the algorithms for the calculation of the axis-specific data or the Cartesian data of all user-defined kinematics systems. You read the kinematics parameters needed for this from the tags of the "&lt;TO&gt;.Kinematics.Parameter[1..32]" technology object. You write the result of the calculation to the "TransformationParameter" interface.
 
 The transformation parameters are then applied automatically to the kinematics technology object and processed further. The kinematics technology object outputs the setpoints to the kinematics axes.
 
@@ -4122,7 +4122,7 @@ The MC_Transformation is called in the [Motion Control application cycle](S7-150
 
 ###### Priority
 
-You configure the priority of the MC_Transformation in the properties of the organization block under "General > Attributes > Priority". For the priority you can set values from 17 to 25 (default setting 25):
+You configure the priority of the MC_Transformation in the properties of the organization block under "General &gt; Attributes &gt; Priority". For the priority you can set values from 17 to 25 (default setting 25):
 
 - The priority of MC_Transformation must be at least one level lower than the priority of MC_Servo.
 - The priority of MC_Transformation must be at least one level higher than the priority of MC_Interpolator.
@@ -4179,7 +4179,7 @@ The following table shows the tags in the system data block "TransformationParam
 
 ##### Program example for a user-defined kinematics systems (S7-1500T)
 
-An example of user transformation in the [MC_Transformation](#mc_transformation-ob98-s7-1500t) of a 2D kinematics with the name "KinematicsUserDefined2D" is described below. For these kinematics, two transformation parameters were defined under "Technology object > Configuration > Geometry".
+An example of user transformation in the [MC_Transformation](#mc_transformation-ob98-s7-1500t) of a 2D kinematics with the name "KinematicsUserDefined2D" is described below. For these kinematics, two transformation parameters were defined under "Technology object &gt; Configuration &gt; Geometry".
 
 The interaction of system performance and user transformation is displayed in the figure in section "[User transformation without JCS](#user-transformation-without-jcs-s7-1500t)".
 
@@ -4193,7 +4193,7 @@ The following table shows the declaration of the tags used:
 | 1 | Inverse transformation |  |  |  |
 | FunctionResult | Output | DInt | Transformation result |  |
 | 0 | Successful |  |  |  |
-| < 0 | Error |  |  |  |
+| &lt; 0 | Error |  |  |  |
 | TransformationParameters | InOut | Variant | Reference to the system data block "TransformationParameter" in the MC_Transformation |  |
 | P | Temp | REF_TO TO_Struct_TransformationParameter_V2 | Temporary tag for the casting command |  |
 | GearRatioA1 | Temp | LReal | Temporary tag for read the defined transformation parameters |  |
@@ -4339,7 +4339,7 @@ IF #KinematicsObject = "KinematicsUserDefined2D" THEN
 
     #GearRatioA2 := "KinematicsUserDefined2D".Kinematics.Parameter[2];
 
-    //Calculate the forward transformation "AxisData" -> "CartesianData".
+    //Calculate the forward transformation "AxisData" -&gt; "CartesianData".
 
     //The system fills the "AxisData" of "TransformationParameters" with values.
 
@@ -4371,7 +4371,7 @@ IF #KinematicsObject = "KinematicsUserDefined2D" THEN
 
         #FunctionResult := 0;
 
-    //Calculate the backward transformation "CartesianData" -> "AxisData".
+    //Calculate the backward transformation "CartesianData" -&gt; "AxisData".
 
     //The system fills the "CartesianData" of "TransformationParameters" with values.
 
@@ -4405,7 +4405,7 @@ END_IF;
 
 ###### Check the validity of the transformation/cartesian values
 
-Check the "<TO>.StatusKinematics.Valid" bit cyclically, e.g. in the MC_PostServo. If "<TO>.StatusKinematics.Valid" shows the value "FALSE", then the Cartesian values are invalid. In this case, initiate a stop action, for example, with the Motion Control instruction "MC_GroupStop".
+Check the "&lt;TO&gt;.StatusKinematics.Valid" bit cyclically, e.g. in the MC_PostServo. If "&lt;TO&gt;.StatusKinematics.Valid" shows the value "FALSE", then the Cartesian values are invalid. In this case, initiate a stop action, for example, with the Motion Control instruction "MC_GroupStop".
 
 Check the setpoint specification of the Cartesian values and the programmed user transformation.
 
@@ -4416,10 +4416,10 @@ The following tags of the kinematics technology object are relevant for the kine
 | Tag | Description |  |
 | --- | --- | --- |
 | **Status values** |  |  |
-| <TO>.StatusKinematics.Valid | TRUE | Transformation/Cartesian values valid |
+| &lt;TO&gt;.StatusKinematics.Valid | TRUE | Transformation/Cartesian values valid |
 | FALSE | Transformation/Cartesian values invalid |  |
-| <TO>.StatusKinematics.LinkConstellation | Joint position space |  |
-| <TO>.FlangeInKcs | Current transformation frame (with dynamics, setpoint reference) |  |
+| &lt;TO&gt;.StatusKinematics.LinkConstellation | Joint position space |  |
+| &lt;TO&gt;.FlangeInKcs | Current transformation frame (with dynamics, setpoint reference) |  |
 
 ## Kinematics functions (S7-1500T)
 
@@ -4581,15 +4581,15 @@ The following tags of the kinematics technology object are relevant for coordina
 | Tag | Description |
 | --- | --- |
 | **Configuration** |  |
-| <TO>.KcsFrame | KCS frame  x, y, z, A, B, C |
-| <TO>.OcsFrame[1..3] | OCS frame  x, y, z, A, B, C |
-| <TO>.Tool[1..3] | Tool frame  x, y, z, A, B, C |
+| &lt;TO&gt;.KcsFrame | KCS frame  x, y, z, A, B, C |
+| &lt;TO&gt;.OcsFrame[1..3] | OCS frame  x, y, z, A, B, C |
+| &lt;TO&gt;.Tool[1..3] | Tool frame  x, y, z, A, B, C |
 | **Status values** |  |
-| <TO>.Tcp | Position of the tool center point (TCP), TCP frame in the world coordinate system (WCS).  x, y, z, A, B, C |
-| <TO>.TcpInWcs | Parameter for tool center point in the world coordinate system  x, y, z, A, B, C |
-| <TO>.TcpInOcs[1..3] | Parameter for the tool center point (TCP) in the Object Coordinate Systems 1 to 3 (OCS)  x, y, z, A, B, C |
-| <TO>.FlangeInKcs | Parameter for the flange coordinate system (FCS) in the kinematics coordinate system (KCS)  x, y, z, A, B, C |
-| <TO>.StatusOcsFrame[1..3] | Display of the OCS frames  x, y, z, A, B, C |
+| &lt;TO&gt;.Tcp | Position of the tool center point (TCP), TCP frame in the world coordinate system (WCS).  x, y, z, A, B, C |
+| &lt;TO&gt;.TcpInWcs | Parameter for tool center point in the world coordinate system  x, y, z, A, B, C |
+| &lt;TO&gt;.TcpInOcs[1..3] | Parameter for the tool center point (TCP) in the Object Coordinate Systems 1 to 3 (OCS)  x, y, z, A, B, C |
+| &lt;TO&gt;.FlangeInKcs | Parameter for the flange coordinate system (FCS) in the kinematics coordinate system (KCS)  x, y, z, A, B, C |
+| &lt;TO&gt;.StatusOcsFrame[1..3] | Display of the OCS frames  x, y, z, A, B, C |
 
 ### Zone monitoring (S7-1500T)
 
@@ -4638,7 +4638,7 @@ Zones are geometric bodies you can use to describe and subdivide the workspace o
 
   Kinematics zones envelope the end point of a kinematics system (flange or tool).
 
-  Kinematics zones are related to the working point/flange of a kinematics and move with the kinematics. The zone monitoring checks the kinematics zones for penetration with workspace zones. With kinematics zones, you expand the monitored area beyond the tool center point (TCP). The tool center point (TCP) is permanently defined as the first kinematics zone (<TO>.KinematicsZone[1]) and always activated.
+  Kinematics zones are related to the working point/flange of a kinematics and move with the kinematics. The zone monitoring checks the kinematics zones for penetration with workspace zones. With kinematics zones, you expand the monitored area beyond the tool center point (TCP). The tool center point (TCP) is permanently defined as the first kinematics zone (&lt;TO&gt;.KinematicsZone[1]) and always activated.
 
   You can configure the following zone types as kinematics zones for the kinematics technology object:
 
@@ -4726,7 +4726,7 @@ When you click on the ![Online view](images/134636636043_DV_resource.Stream@PNG-
 
 ##### Configuring a workspace zone offline (S7-1500T)
 
-You can configure up to 10 workspace zones in the kinematics configuration window under "Extended parameters > Zones > Workspace zones".
+You can configure up to 10 workspace zones in the kinematics configuration window under "Extended parameters &gt; Zones &gt; Workspace zones".
 
 1. In the "Status" column, select whether [zone monitoring](#activating-zone-monitoring-s7-1500t) for the zone should be active or inactive after loading into the device.
 2. In the "Zone type" column, select whether the zone is a work zone, signal zone or blocked zone.
@@ -4766,7 +4766,7 @@ You can configure up to 10 workspace zones in the kinematics configuration wind
 
 ##### Configuring kinematics zones offline (S7-1500T)
 
-You can configure up to 9 kinematics zones in the kinematics configuration window under "Extended parameters > Zones > Kinematics zones".
+You can configure up to 9 kinematics zones in the kinematics configuration window under "Extended parameters &gt; Zones &gt; Kinematics zones".
 
 1. In the "Status" column, select whether [zone monitoring](#activating-zone-monitoring-s7-1500t) for the zone should be active or inactive after loading into the device.
 2. In the "Geometry" column, select whether the zone is a sphere, a cuboid or a cylinder.
@@ -4975,15 +4975,15 @@ The following tags of the kinematics technology object are relevant for the zone
 | Tag | Description |
 | --- | --- |
 | **Zone configuration** |  |
-| <TO>.WorkspaceZone[1..10] | Configuration of the workspace zones |
-| <TO>.KinematicsZone[2..10] | Configuration of the kinematics zones  The <TO>.KinematicsZone[1] zone is the tool center point (TCP) and is always activated. |
+| &lt;TO&gt;.WorkspaceZone[1..10] | Configuration of the workspace zones |
+| &lt;TO&gt;.KinematicsZone[2..10] | Configuration of the kinematics zones  The &lt;TO&gt;.KinematicsZone[1] zone is the tool center point (TCP) and is always activated. |
 | **Status values** |  |
-| <TO>.StatusWorkspaceZone[1..10] | Status of the workspace zones |
-| <TO>.StatusKinematicsZone[2..10] | Status of the kinematics zones |
-| <TO>.StatusZoneMonitoring.WorkingZones | Display of violated work zones  Bit numbers 0 to 9 correspond to the configured zone numbers. |
-| <TO>.StatusZoneMonitoring.BlockedZones | Display of violated blocked zones  Bit numbers 0 to 9 correspond to the configured zone numbers. |
-| <TO>.StatusZoneMonitoring.SignalizingZones | Display of approached signal zones  Bit numbers 0 to 9 correspond to the configured zone numbers. |
-| <TO>.StatusZoneMonitoring.KinematicsZones | Display of kinematics zones that violate workspace zones  Bit number 0 indicates the monitoring status of the TCP. Bit numbers 1 to 9 correspond to the configured zone numbers. |
+| &lt;TO&gt;.StatusWorkspaceZone[1..10] | Status of the workspace zones |
+| &lt;TO&gt;.StatusKinematicsZone[2..10] | Status of the kinematics zones |
+| &lt;TO&gt;.StatusZoneMonitoring.WorkingZones | Display of violated work zones  Bit numbers 0 to 9 correspond to the configured zone numbers. |
+| &lt;TO&gt;.StatusZoneMonitoring.BlockedZones | Display of violated blocked zones  Bit numbers 0 to 9 correspond to the configured zone numbers. |
+| &lt;TO&gt;.StatusZoneMonitoring.SignalizingZones | Display of approached signal zones  Bit numbers 0 to 9 correspond to the configured zone numbers. |
+| &lt;TO&gt;.StatusZoneMonitoring.KinematicsZones | Display of kinematics zones that violate workspace zones  Bit number 0 indicates the monitoring status of the TCP. Bit numbers 1 to 9 correspond to the configured zone numbers. |
 
 ### Overview of kinematics motions (S7-1500T)
 
@@ -5121,9 +5121,9 @@ With an sPTP motion job, the execution progress is displayed with the "Execution
 
 ##### Distance of linear and circular motion jobs
 
-The status tag "<TO>.StatusPath.AccumulatedPathLength" contains the distance already covered by the TCP of all completed motion jobs and the current motion job.
+The status tag "&lt;TO&gt;.StatusPath.AccumulatedPathLength" contains the distance already covered by the TCP of all completed motion jobs and the current motion job.
 
-The status tag "<TO>.StatusPath.TotalPathLength" contains the total path length of the TCP for all jobs in the job sequence.
+The status tag "&lt;TO&gt;.StatusPath.TotalPathLength" contains the total path length of the TCP for all jobs in the job sequence.
 
 The total path length is the sum of:
 
@@ -5186,13 +5186,13 @@ You can interrupt and continue active kinematics motions or stop them and thus a
 
 With the Motion Control instruction "[MC_GroupInterrupt](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_groupinterrupt-v8-s7-1500t)", you interrupt the execution of the motion on a kinematics technology object. With the "Mode" parameter, you specify the dynamic behavior. The kinematics can be stopped either with the dynamics of the motion job to be interrupted or with the maximum dynamics. When dynamic adaptation is activated, the dynamics of the motion can also be reduced so that the dynamic limits of the axes are not exceeded. The current path is not exited when the kinematics is stopped. If the kinematics is already at a standstill, the motion control is also interrupted for subsequent motion jobs.
 
-The kinematics technology object is in "Interrupted" status (<TO>.StatusWord.X17).
+The kinematics technology object is in "Interrupted" status (&lt;TO&gt;.StatusWord.X17).
 
 ##### Continue kinematics motions
 
 With the Motion Control instruction "[MC_GroupContinue](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_groupcontinue-v8-s7-1500t)", you continue a kinematics motion that was previously interrupted with an "MC_GroupInterrupt" job. The kinematics motion can be continued if the kinematics has come to a standstill following the "MC_GroupInterrupt" job.
 
-The "MC_GroupContinue" job only has an effect if the kinematics technology object is in "Interrupted" status (<TO>.StatusWord.X17).
+The "MC_GroupContinue" job only has an effect if the kinematics technology object is in "Interrupted" status (&lt;TO&gt;.StatusWord.X17).
 
 ##### Stop kinematics motions
 
@@ -5228,11 +5228,11 @@ Configure the following values in the "Dynamics" configuration window:
 
 ###### Dynamic limits of the kinematics
 
-The configured dynamic limits of the kinematics configured under "Technology object > Configuration > Extended parameters > Dynamics" are taken into account during the motion execution. The dynamics of a motion can be restricted so that the dynamic limits of the kinematics are not exceeded. When you change the dynamic limits of the kinematics, the changes take effect immediately for the kinematics motion and orientation motion.
+The configured dynamic limits of the kinematics configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics" are taken into account during the motion execution. The dynamics of a motion can be restricted so that the dynamic limits of the kinematics are not exceeded. When you change the dynamic limits of the kinematics, the changes take effect immediately for the kinematics motion and orientation motion.
 
 ###### Dynamic limits of the kinematics axes
 
-When a motion job is transmitted, the dynamic limits of the kinematics axes configured under "Technology object > Configuration > Extended parameters > Limits > Dynamic limits" are only taken into account when [dynamic adaptation](#dynamic-adaptation-s7-1500t) is active. The dynamics of the motion can be restricted so that the dynamic limits of the kinematics axes are not exceeded. Even when using dynamic adaptation, there may be slight overruns of the dynamic limits of the kinematics axes. Set the dynamics at the kinematics axes about 5% lower than their permitted limit. When you change the dynamic limits of the kinematics axes during an active motion, the changed values only take effect with the next motion job.
+When a motion job is transmitted, the dynamic limits of the kinematics axes configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Limits &gt; Dynamic limits" are only taken into account when [dynamic adaptation](#dynamic-adaptation-s7-1500t) is active. The dynamics of the motion can be restricted so that the dynamic limits of the kinematics axes are not exceeded. Even when using dynamic adaptation, there may be slight overruns of the dynamic limits of the kinematics axes. Set the dynamics at the kinematics axes about 5% lower than their permitted limit. When you change the dynamic limits of the kinematics axes during an active motion, the changed values only take effect with the next motion job.
 
 > **Note**
 >
@@ -5254,7 +5254,7 @@ When a motion job is transmitted, the dynamic limits of the kinematics axes conf
 
 ###### Configuring dynamic defaults for the kinematics motion
 
-You specify the dynamic values (velocity, acceleration, jerk) of a kinematics motion for the corresponding Motion Control instruction. If you do not specify any dynamic values for motion jobs (default value "-1.0"), the dynamic defaults configured under "Technology object > Configuration > Extended parameters > Dynamics" are used for the kinematics motion.
+You specify the dynamic values (velocity, acceleration, jerk) of a kinematics motion for the corresponding Motion Control instruction. If you do not specify any dynamic values for motion jobs (default value "-1.0"), the dynamic defaults configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics" are used for the kinematics motion.
 
 > **Note**
 >
@@ -5281,9 +5281,9 @@ You specify the dynamic values (velocity, acceleration, jerk) of a kinematics mo
 
 ##### Configuring dynamics for the sPTP motion (S7-1500T)
 
-You specify the dynamic values (velocity, acceleration, jerk) of an sPTP motion for the corresponding Motion Control instruction. If you do not specify any dynamic values for motion jobs (default value "-1.0"), the dynamic defaults configured under "Technology object > Configuration > Extended parameters > Dynamics" are used for the sPTP motion.
+You specify the dynamic values (velocity, acceleration, jerk) of an sPTP motion for the corresponding Motion Control instruction. If you do not specify any dynamic values for motion jobs (default value "-1.0"), the dynamic defaults configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics" are used for the sPTP motion.
 
-You specify the default settings of the dynamics of the synchronous "point-to-point" motion using factors. These factors each relate in percentage terms to the maximum values of velocity, acceleration, deceleration and jerk that you have configured for the individual axes under "Technology object > Configuration > Extended parameters > Limits> Dynamic limits".
+You specify the default settings of the dynamics of the synchronous "point-to-point" motion using factors. These factors each relate in percentage terms to the maximum values of velocity, acceleration, deceleration and jerk that you have configured for the individual axes under "Technology object &gt; Configuration &gt; Extended parameters &gt; Limits&gt; Dynamic limits".
 
 ###### Configuring dynamic defaults for the sPTP motion
 
@@ -5301,7 +5301,7 @@ You specify the default settings of the dynamics of the synchronous "point-to-po
 
 When dynamic adaptation is activated, a velocity profile for the motion of the kinematics is calculated, which takes into account both the dynamic specifications or dynamic presettings and dynamic limits of the kinematic motion as well as the maximum velocity, maximum acceleration and maximum deceleration of the kinematics axes. In addition, the dynamic presets and dynamic limits for velocity, acceleration and deceleration of the orientation motion are taken into account.
 
-The "<TO>.StatusPath.DynamicAdaption" tag displays the status of the dynamic adaptation.
+The "&lt;TO&gt;.StatusPath.DynamicAdaption" tag displays the status of the dynamic adaptation.
 
 > **Note**
 >
@@ -5332,7 +5332,7 @@ The graphic below shows examples of a velocity curve with and without dynamic ad
 
 ###### Configuring dynamic adaptation
 
-You set the dynamic adaptation under "Kinematics technology object > Configuration > Extended parameters > Dynamics".
+You set the dynamic adaptation under "Kinematics technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics".
 
 Select the default for the dynamic adaptation in the drop-down list.
 
@@ -5348,7 +5348,7 @@ Select the default for the dynamic adaptation in the drop-down list.
 
 ##### Override (S7-1500T)
 
-You can specify a velocity override for the kinematics (<TO>.Override.Velocity) using the technology object data block.
+You can specify a velocity override for the kinematics (&lt;TO&gt;.Override.Velocity) using the technology object data block.
 
 - You can enter a value between 0% and 200% for a path motion.
 - You can enter a value between 0% and 100% for an sPTP motion.
@@ -5396,7 +5396,7 @@ The following jobs enter the job sequence:
 
 ###### Define maximum number of jobs
 
-By default, the job sequence can contain up to five jobs. You can change the maximum number of jobs in the configuration window "Technology object > Configuration > Extended parameters > Job sequence". The job sequence can contain a maximum of ten jobs.
+By default, the job sequence can contain up to five jobs. You can change the maximum number of jobs in the configuration window "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence". The job sequence can contain a maximum of ten jobs.
 
 > **Note**
 >
@@ -5412,13 +5412,13 @@ The job sequence allows the calculation of a velocity profile over several jobs.
 
 ###### Status of the job sequence
 
-The two tags for the status of the job sequence can be used to check whether the calculation of the jobs in the job sequence has been completed and whether the corresponding programmed motion jobs are being blended. If the number of prepared commands in the job sequence ("<TO>StatusMotionQueue.NumberOfPreparedCommands") matches the number of jobs in the job sequence ("<TO>.StatusMotionQueue.NumberOfCommands"), then the preparation of the motion is complete.
+The two tags for the status of the job sequence can be used to check whether the calculation of the jobs in the job sequence has been completed and whether the corresponding programmed motion jobs are being blended. If the number of prepared commands in the job sequence ("&lt;TO&gt;StatusMotionQueue.NumberOfPreparedCommands") matches the number of jobs in the job sequence ("&lt;TO&gt;.StatusMotionQueue.NumberOfCommands"), then the preparation of the motion is complete.
 
 ###### Interrupting and resuming job execution
 
 You can also interrupt execution of the jobs with a "MC_GroupInterrupt" job, fill the job sequence and then continue execution with an "MC_GroupContinue" job. The behavior of the motion processing at the "MC_GroupContinue" differs as follows:
 
-- If a "MC_GroupInterrupt" job is transmitted before the start of the motion, the kinematics motion jobs transmitted between the "MC_GroupInterrupt" and the "MC_GroupContinue" job are prepared. If the number of prepared commands in the job sequence ("<TO>StatusMotionQueue.NumberOfPreparedCommands") matches the number of jobs in the job sequence ("<TO>.StatusMotionQueue.NumberOfCommands"), then the preparation of the motion is complete. As soon as the motion preparation is completed, the "MC_GroupContinue" job immediately releases the motion execution without renewed preparation.
+- If a "MC_GroupInterrupt" job is transmitted before the start of the motion, the kinematics motion jobs transmitted between the "MC_GroupInterrupt" and the "MC_GroupContinue" job are prepared. If the number of prepared commands in the job sequence ("&lt;TO&gt;StatusMotionQueue.NumberOfPreparedCommands") matches the number of jobs in the job sequence ("&lt;TO&gt;.StatusMotionQueue.NumberOfCommands"), then the preparation of the motion is complete. As soon as the motion preparation is completed, the "MC_GroupContinue" job immediately releases the motion execution without renewed preparation.
 - If an active kinematics motion is stopped with a "MC_GroupInterrupt" job and continued with a "MC_GroupContinue" job, the kinematics motions in the job sequence are prepared again with the "MC_GroupContinue" job.
 
 ---
@@ -5446,8 +5446,8 @@ The maximum rounding clearance is determined depending on the following values:
 The maximum rounding clearance is the smallest of the following values:
 
 - L1 - L0
-- "<TO>.Transition.FactorBlendingLength" / 100 * L1
-- "<TO>.Transition.FactorBlendingLength" / 100 * L2
+- "&lt;TO&gt;.Transition.FactorBlendingLength" / 100 * L1
+- "&lt;TO&gt;.Transition.FactorBlendingLength" / 100 * L2
 
 ![Determine maximum rounding clearance](images/158925215371_DV_resource.Stream@PNG-en-US.png)
 
@@ -5455,7 +5455,7 @@ The maximum rounding clearance is the smallest of the following values:
 
 The distances between points A and B and points B and C are the same length. The kinematics is at a standstill.
 
-| <TO>.Transition.FactorBlendingLength | Maximum rounding clearance ① |  | Description |
+| &lt;TO&gt;.Transition.FactorBlendingLength | Maximum rounding clearance ① |  | Description |
 | --- | --- | --- | --- |
 | 100.0 | L1 | ![Determine maximum rounding clearance](images/158924818571_DV_resource.Stream@PNG-de-DE.png) | The entire motion can be blended. The maximum rounding clearance corresponds to the distance between points A and B or B and C. |
 | 50.0 | L1 * 0.5 | ![Determine maximum rounding clearance](images/158924813451_DV_resource.Stream@PNG-de-DE.png) | The maximum rounding clearance is reduced to half the distance between points A and B. |
@@ -5464,7 +5464,7 @@ The distances between points A and B and points B and C are the same length. The
 
 The distances between points A and B and points B and C are different in length. The distance between points A and B is less than the distance between points B and C. The kinematics is in standstill.
 
-| <TO>.Transition.FactorBlendingLength | Maximum rounding clearance ① |  | Description |
+| &lt;TO&gt;.Transition.FactorBlendingLength | Maximum rounding clearance ① |  | Description |
 | --- | --- | --- | --- |
 | 100.0 | L1 | ![Determine maximum rounding clearance](images/158925041291_DV_resource.Stream@PNG-de-DE.png) | The maximum rounding clearance corresponds to the distance L1, as this is the shorter distance. |
 | 50.0 | L1 * 0.5 | ![Determine maximum rounding clearance](images/158925046411_DV_resource.Stream@PNG-de-DE.png) | The maximum rounding clearance is calculated with half of L1, because L1 is the shorter distance. |
@@ -5473,22 +5473,22 @@ The distances between points A and B and points B and C are different in length.
 
 The example builds on the previous example. A linear motion to point D should be traversed. Point C should not be approached directly. The motion to point D should be done with maximum rounding clearance to point C. The previous motion job to point C is blended with rounding clearance L0.
 
-| <TO>.Transition.FactorBlendingLength | Maximum rounding clearance ① |  | Description |
+| &lt;TO&gt;.Transition.FactorBlendingLength | Maximum rounding clearance ① |  | Description |
 | --- | --- | --- | --- |
 | 100.0 | L1 - L0 | ![Determine maximum rounding clearance](images/158925051531_DV_resource.Stream@PNG-de-DE.png) | The maximum rounding clearance corresponds to the distance L1 minus the rounding clearance from the previous motion. That is the shortest distance. |
 | 50.0 | L2 * 0.5 | ![Determine maximum rounding clearance](images/158925210251_DV_resource.Stream@PNG-de-DE.png) | Half of L2 is the shortest distance and therefore the maximum rounding clearance. The rounding clearance of the previous motion is lower by a factor of 50% and does not reduce the maximum rounding clearance of the following motion as much as it does at 100%. |
 
 ###### Configure maximum rounding clearance
 
-Up to technology version V5.0, the maximum rounding clearance is limited to 50% of the shorter distance. From technology version V6.0, you can configure the maximum rounding clearance. The default is 50% and therefore compatible with the technology versions < V6.0.
+Up to technology version V5.0, the maximum rounding clearance is limited to 50% of the shorter distance. From technology version V6.0, you can configure the maximum rounding clearance. The default is 50% and therefore compatible with the technology versions &lt; V6.0.
 
-The factor [%] is configured in the configuration window "Technology object > Configuration > Extended parameters > Job sequence" or using the tag "<TO>.Transition.FactorBlendingLength" of the kinematics technology object. Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective.
+The factor [%] is configured in the configuration window "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence" or using the tag "&lt;TO&gt;.Transition.FactorBlendingLength" of the kinematics technology object. Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective.
 
-The maximum rounding clearance is used when the value of the "TransitionParameter[1]" parameter is < 0.0 or the specified value exceeds the maximum rounding clearance. The rounding clearance is limited to the maximum rounding clearance when the value of the "TransitionParameter[1]" is > 0. If you have parameterized a smaller positive rounding clearance at the Motion Control instruction than the maximum rounding clearance, then the configured rounding clearance "TransitionParameter[1]" is effective.
+The maximum rounding clearance is used when the value of the "TransitionParameter[1]" parameter is &lt; 0.0 or the specified value exceeds the maximum rounding clearance. The rounding clearance is limited to the maximum rounding clearance when the value of the "TransitionParameter[1]" is &gt; 0. If you have parameterized a smaller positive rounding clearance at the Motion Control instruction than the maximum rounding clearance, then the configured rounding clearance "TransitionParameter[1]" is effective.
 
 The following table shows three possible configuration examples and their effect on the calculation of the maximum rounding clearance:
 
-| Configuration example  "<TO>.Transition.FactorBlendingLength" | Effect |
+| Configuration example  "&lt;TO&gt;.Transition.FactorBlendingLength" | Effect |
 | --- | --- |
 | 0.0 | The rounding clearance is always zero. Blending is not possible with any motion. |
 | 50.0 | The maximum rounding clearance is calculated from half of the shorter distance between the two motions. |
@@ -5534,11 +5534,11 @@ To increase the available computing time of the MC_LookAhead, adjust the followi
 
   - Set a bigger application cycle.
   - Set a longer PN send clock.
-- Increase the maximum cycle load for MC_LookAhead in the properties of the organization block under "General > Multi-core processor". You can set values from 1% to 40% (default setting 20%) for the maximum cycle load.
-- If you are not using user-defined kinematics, select the "Improve system performance" check box in the properties of MC_LookAhead  under "General > Multi-core processor".
+- Increase the maximum cycle load for MC_LookAhead in the properties of the organization block under "General &gt; Multi-core processor". You can set values from 1% to 40% (default setting 20%) for the maximum cycle load.
+- If you are not using user-defined kinematics, select the "Improve system performance" check box in the properties of MC_LookAhead  under "General &gt; Multi-core processor".
 - Set the higher priority 16 for the MC_LookAhead.
 - Reduce the percentage communication load in the CPU properties.
-- If necessary for interpolation of cyclic cams, clear the "Improve system performance" check box in the properties of MC_Interpolator under "General > Multi-core processor".
+- If necessary for interpolation of cyclic cams, clear the "Improve system performance" check box in the properties of MC_Interpolator under "General &gt; Multi-core processor".
 
 You have the following options for reducing the calculation time of the motion preparation:
 
@@ -5552,7 +5552,7 @@ The following measures are possible during programming of the jobs:
   - Select the smallest possible rounding clearance. Since the rounding clearance shortens the currently active job, there is less time for calculation of the subsequent job.
   - Reduce the traversing velocity.
   - Use jobs with the longest possible traversing length.
-- If no motion job is active and the job sequence is empty, you can interrupt the processing of the jobs with an "MC_GroupInterrupt" job and fill the job sequence. Then continue the processing with an "MC_GroupContinue" job as soon as the motion preparation is complete. As a result, the number of prepared commands (<TO>.StatusMotionQueue.NumberOfPreparedCommands) corresponds to the number of queued jobs (<TO>.StatusMotionQueue.NumberOfCommands) in the job sequence.
+- If no motion job is active and the job sequence is empty, you can interrupt the processing of the jobs with an "MC_GroupInterrupt" job and fill the job sequence. Then continue the processing with an "MC_GroupContinue" job as soon as the motion preparation is complete. As a result, the number of prepared commands (&lt;TO&gt;.StatusMotionQueue.NumberOfPreparedCommands) corresponds to the number of queued jobs (&lt;TO&gt;.StatusMotionQueue.NumberOfCommands) in the job sequence.
 
 #### Interaction of kinematics motions and single axis motions (S7-1500T)
 
@@ -5579,53 +5579,53 @@ The following technology object tags are relevant for motion control:
 | Tag | Description |  |
 | --- | --- | --- |
 | **Status values** |  |  |
-| <TO>.StatusWord | Status indicator for an active motion |  |
-| <TO>.Tcp | Target coordinates x, y, z, A, B, C of the kinematics motion in the world coordinate system |  |
-| <TO>.StatusPath.CoordSystem | Coordinate system of the active motion job |  |
+| &lt;TO&gt;.StatusWord | Status indicator for an active motion |  |
+| &lt;TO&gt;.Tcp | Target coordinates x, y, z, A, B, C of the kinematics motion in the world coordinate system |  |
+| &lt;TO&gt;.StatusPath.CoordSystem | Coordinate system of the active motion job |  |
 | 0 | World coordinate system |  |
 | 1, 2, 3 | Object coordinate system 1, 2, 3 |  |
 | 100 | Machine coordinate system |  |
 | 101 | Joint coordinate system<sup>1)</sup> |  |
-| <TO>.StatusPath.Velocity | Current path velocity (setpoint reference) |  |
-| <TO>.StatusPath.Acceleration | Current path acceleration (setpoint reference) |  |
-| <TO>.StatusPath.OrientationVelocity | Resulting orientation velocity |  |
-| <TO>.StatusPath.DynamicAdaption | Dynamic adaptation |  |
+| &lt;TO&gt;.StatusPath.Velocity | Current path velocity (setpoint reference) |  |
+| &lt;TO&gt;.StatusPath.Acceleration | Current path acceleration (setpoint reference) |  |
+| &lt;TO&gt;.StatusPath.OrientationVelocity | Resulting orientation velocity |  |
+| &lt;TO&gt;.StatusPath.DynamicAdaption | Dynamic adaptation |  |
 | 0 | No dynamic adaptation |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |
-| <TO>.StatusPath.TotalPathLength | Total path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job - Remaining distance of the motion job - Calculated distance of all jobs in the job sequence |  |
-| <TO>.StatusPath.AccumulatedPathLength | Accumulated path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job |  |
-| <TO>.StatusMotionQueue.NumberOfCommands | Number of jobs in the job sequence |  |
+| &lt;TO&gt;.StatusPath.TotalPathLength | Total path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job - Remaining distance of the motion job - Calculated distance of all jobs in the job sequence |  |
+| &lt;TO&gt;.StatusPath.AccumulatedPathLength | Accumulated path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job |  |
+| &lt;TO&gt;.StatusMotionQueue.NumberOfCommands | Number of jobs in the job sequence |  |
 | **Override** |  |  |
-| <TO>.Override.Velocity | Velocity override |  |
+| &lt;TO&gt;.Override.Velocity | Velocity override |  |
 | **Dynamic limits** |  |  |
-| <TO>.DynamicLimits.Path.Velocity | Dynamic limitation for the maximum velocity of the path |  |
-| <TO>.DynamicLimits.Path.Acceleration | Dynamic limitation for the maximum acceleration of the path |  |
-| <TO>.DynamicLimits.Path.Deceleration | Dynamic limitation for the maximum deceleration of the path |  |
-| <TO>.DynamicLimits.Path.Jerk | Dynamic limitation for the maximum jerk of the path |  |
-| <TO>.DynamicLimits.Orientation.Velocity | Dynamic limitation for the maximum velocity of the Cartesian orientation |  |
-| <TO>.DynamicLimits.Orientation.Acceleration | Dynamic limitation for the maximum acceleration of the Cartesian orientation |  |
-| <TO>.DynamicLimits.Orientation.Deceleration | Dynamic limitation for the maximum deceleration of the Cartesian orientation |  |
-| <TO>.DynamicLimits.Orientation.Jerk | Dynamic limitation for the maximum jerk of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Path.Velocity | Dynamic limitation for the maximum velocity of the path |  |
+| &lt;TO&gt;.DynamicLimits.Path.Acceleration | Dynamic limitation for the maximum acceleration of the path |  |
+| &lt;TO&gt;.DynamicLimits.Path.Deceleration | Dynamic limitation for the maximum deceleration of the path |  |
+| &lt;TO&gt;.DynamicLimits.Path.Jerk | Dynamic limitation for the maximum jerk of the path |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Velocity | Dynamic limitation for the maximum velocity of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Acceleration | Dynamic limitation for the maximum acceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Deceleration | Dynamic limitation for the maximum deceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Jerk | Dynamic limitation for the maximum jerk of the Cartesian orientation |  |
 | **Dynamic defaults** |  |  |
-| <TO>.DynamicDefaults.Path.Velocity | Default setting of the velocity of the path |  |
-| <TO>.DynamicDefaults.Path.Acceleration | Default setting of the acceleration of the path |  |
-| <TO>.DynamicDefaults.Path.Deceleration | Default setting of the deceleration of the path |  |
-| <TO>.DynamicDefaults.Path.Jerk | Default setting of the jerk of the path |  |
-| <TO>.DynamicDefaults.Orientation.Velocity | Default setting of the velocity of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.Orientation.Acceleration | Default setting of the acceleration of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.Orientation.Deceleration | Default setting of the deceleration of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.Orientation.Jerk | Default setting of the jerk of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.DynamicAdaption | Default setting of the dynamic adaptation |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Velocity | Default setting of the velocity of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Acceleration | Default setting of the acceleration of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Deceleration | Default setting of the deceleration of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Jerk | Default setting of the jerk of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Velocity | Default setting of the velocity of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration | Default setting of the acceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration | Default setting of the deceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Jerk | Default setting of the jerk of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.DynamicAdaption | Default setting of the dynamic adaptation |  |
 | 0 | No dynamic adaptation |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |
-| <TO>.DynamicDefaults.MoveDirect.VelocityFactor | Factor for the velocity of the axis motions in relation to the respective maximum velocity of the axes with sPTP motion. |  |
-| <TO>.DynamicDefaults.MoveDirect.AccelerationFactor | Factor for the acceleration of the axis motions in relation to the respective maximum acceleration of the axes with sPTP motion. |  |
-| <TO>.DynamicDefaults.MoveDirect.DecelerationFactor | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axes with sPTP motion. |  |
-| <TO>.DynamicDefaults.MoveDirect.JerkFactor | Factor for the jerk of the axis motions in relation to the respective maximum jerk of the axes with sPTP motion. |  |
+| &lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor | Factor for the velocity of the axis motions in relation to the respective maximum velocity of the axes with sPTP motion. |  |
+| &lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor | Factor for the acceleration of the axis motions in relation to the respective maximum acceleration of the axes with sPTP motion. |  |
+| &lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axes with sPTP motion. |  |
+| &lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor | Factor for the jerk of the axis motions in relation to the respective maximum jerk of the axes with sPTP motion. |  |
 | **Rounding clearance** |  |  |
-| <TO>.Transition.FactorBlendingLength | Factor of the maximum rounding distance in percent [%]  The configuration takes place in "Technology object > Configuration > Extended parameters > Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
+| &lt;TO&gt;.Transition.FactorBlendingLength | Factor of the maximum rounding distance in percent [%]  The configuration takes place in "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
 | 0.0 | No blending possible |  |
 | 50.0 | Default value |  |
 | 100.0 | Blending possible with complete segment length or motion length |  |
@@ -5707,13 +5707,13 @@ You define the dynamics of the linear motion with the following parameters of th
 - With the "Jerk" parameter, you define the jerk.
 - With the "DynamicAdaption" parameter, you specify the dynamic adaptation of the path motion.
 
-With the following configuration parameters under "Technology object > Configuration > Extended parameters > Dynamics", you define the dynamic response of the orientation motion:
+With the following configuration parameters under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics", you define the dynamic response of the orientation motion:
 
 - Select the entry "Orientation motion" in the "Settings for" drop-down list.
-- Define the velocity (<TO>.DynamicDefaults.Orientation.Velocity) in the field "Velocity".
-- Define the acceleration (<TO>.DynamicDefaults.Orientation.Acceleration) in the field "Acceleration".
-- Define the deceleration (<TO>.DynamicDefaults.Orientation.Deceleration) in the field "Deceleration".
-- Define the jerk (<TO>.DynamicDefaults.Orientation.Jerk) in the field "Jerk".
+- Define the velocity (&lt;TO&gt;.DynamicDefaults.Orientation.Velocity) in the field "Velocity".
+- Define the acceleration (&lt;TO&gt;.DynamicDefaults.Orientation.Acceleration) in the field "Acceleration".
+- Define the deceleration (&lt;TO&gt;.DynamicDefaults.Orientation.Deceleration) in the field "Deceleration".
+- Define the jerk (&lt;TO&gt;.DynamicDefaults.Orientation.Jerk) in the field "Jerk".
 
 ##### Dynamic adaptation
 
@@ -5721,7 +5721,7 @@ The dynamic adaptation limits the path dynamics to the axis dynamics. When dynam
 
 **Use the configured default**
 
-With the "DynamicAdaption" < 0 parameter, the configured default is used. You configure the default value in the field "Limit path dynamics to axis dynamics" under "Technology object > Configuration > Extended parameters > Dynamics" of the kinematics technology object (<TO>.DynamicDefaults.DynamicAdaption).
+With the "DynamicAdaption" &lt; 0 parameter, the configured default is used. You configure the default value in the field "Limit path dynamics to axis dynamics" under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics" of the kinematics technology object (&lt;TO&gt;.DynamicDefaults.DynamicAdaption).
 
 **Do not limit path dynamics to axis dynamics**
 
@@ -5764,9 +5764,9 @@ With the "BufferMode" = 2 parameter, the active motion is blended with the lin
 
 With the "BufferMode" = 5 parameter, the active motion is blended with the linear motion and the higher velocity of both jobs is used.
 
-**Rounding clearance d > 0.0**
+**Rounding clearance d &gt; 0.0**
 
-With the "TransitionParameter[1]" < 0.0 parameter, the active motion (A1) is blended with the linear motion (A2) as soon as the specified rounding clearance to the target position of the active motion is reached.
+With the "TransitionParameter[1]" &lt; 0.0 parameter, the active motion (A1) is blended with the linear motion (A2) as soon as the specified rounding clearance to the target position of the active motion is reached.
 
 ![Blending motion](images/158925431179_DV_resource.Stream@PNG-de-DE.png)
 
@@ -5776,17 +5776,17 @@ With the "TransitionParameter[1]" = 0.0 parameter, the linear motion is append
 
 ![Blending motion](images/158926025099_DV_resource.Stream@PNG-de-DE.png)
 
-**Rounding clearance d < 0.0**
+**Rounding clearance d &lt; 0.0**
 
-With the "TransitionParameter[1]" < 0.0 parameter, the active motion (A1) is blended with the linear motion (A2) as soon as the maximum rounding clearance to the target position of the active motion is reached.
+With the "TransitionParameter[1]" &lt; 0.0 parameter, the active motion (A1) is blended with the linear motion (A2) as soon as the maximum rounding clearance to the target position of the active motion is reached.
 
-You configure the factor of the maximum rounding clearance under "Technology object > Configuration > Extended parameters > Job sequence" (<TO>.Transition.FactorBlendingLength). In the following example, the maximum rounding clearance is limited to 50% of the shorter distance.
+You configure the factor of the maximum rounding clearance under "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence" (&lt;TO&gt;.Transition.FactorBlendingLength). In the following example, the maximum rounding clearance is limited to 50% of the shorter distance.
 
 ![Blending motion](images/158926030219_DV_resource.Stream@PNG-de-DE.png)
 
 #### Starting a linear motion job (S7-1500T)
 
-After the start of the linear motion job with "Execute" = TRUE, the job is added to the [job sequence](#job-sequence-s7-1500t). The processing status is indicated in the Motion Control instruction "[MC_MoveLinearAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movelinearabsolute-position-kinematics-with-linear-path-motion-v8-s7-1500t)" or. "[MC_MoveLinearRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movelinearrelative-relative-positioning-of-kinematics-with-linear-path-motion-v8-s7-1500t)" with the parameter "Busy" = TRUE. If the job is active, this is indicated with the parameter "Active" = TRUE and in the "<TO>.StatusWord.X8 (LinearCommand)" tag of the technology object.
+After the start of the linear motion job with "Execute" = TRUE, the job is added to the [job sequence](#job-sequence-s7-1500t). The processing status is indicated in the Motion Control instruction "[MC_MoveLinearAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movelinearabsolute-position-kinematics-with-linear-path-motion-v8-s7-1500t)" or. "[MC_MoveLinearRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movelinearrelative-relative-positioning-of-kinematics-with-linear-path-motion-v8-s7-1500t)" with the parameter "Busy" = TRUE. If the job is active, this is indicated with the parameter "Active" = TRUE and in the "&lt;TO&gt;.StatusWord.X8 (LinearCommand)" tag of the technology object.
 
 As soon as the target position is reached or the linear motion is blended to the next motion, the job is completed. The status is indicated with the parameter "Done" = TRUE.
 
@@ -5799,50 +5799,50 @@ The following technology object tags are relevant for motion control:
 | Tag | Description |  |
 | --- | --- | --- |
 | **Status values** |  |  |
-| <TO>.StatusWord | Status indicator for an active motion |  |
-| <TO>.StatusWord.X8 (LinearCommand) | The value "TRUE" is set if a job for linear motion is active ("MC_MoveLinearAbsolute", "MC_MoveLinearRelative"). |  |
-| <TO>.Tcp | Target coordinates x, y, z, A, B, C of the kinematics motion in the world coordinate system |  |
-| <TO>.StatusPath.CoordSystem | Coordinate system of the active motion job |  |
+| &lt;TO&gt;.StatusWord | Status indicator for an active motion |  |
+| &lt;TO&gt;.StatusWord.X8 (LinearCommand) | The value "TRUE" is set if a job for linear motion is active ("MC_MoveLinearAbsolute", "MC_MoveLinearRelative"). |  |
+| &lt;TO&gt;.Tcp | Target coordinates x, y, z, A, B, C of the kinematics motion in the world coordinate system |  |
+| &lt;TO&gt;.StatusPath.CoordSystem | Coordinate system of the active motion job |  |
 | 0 | World coordinate system |  |
 | 1, 2, 3 | Object coordinate system 1, 2, 3 |  |
 | 100 | Machine coordinate system |  |
 | 101 | Joint coordinate system<sup>1)</sup> |  |
-| <TO>.StatusPath.Velocity | Current path velocity (setpoint reference) |  |
-| <TO>.StatusPath.Acceleration | Current path acceleration (setpoint reference) |  |
-| <TO>.StatusPath.OrientationVelocity | Resulting orientation velocity |  |
-| <TO>.StatusPath.DynamicAdaption | Dynamic adaptation |  |
+| &lt;TO&gt;.StatusPath.Velocity | Current path velocity (setpoint reference) |  |
+| &lt;TO&gt;.StatusPath.Acceleration | Current path acceleration (setpoint reference) |  |
+| &lt;TO&gt;.StatusPath.OrientationVelocity | Resulting orientation velocity |  |
+| &lt;TO&gt;.StatusPath.DynamicAdaption | Dynamic adaptation |  |
 | 0 | No dynamic adaptation |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |
-| <TO>.StatusPath.TotalPathLength | Total path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job - Remaining distance of the motion job - Calculated distance of all jobs in the job sequence |  |
-| <TO>.StatusPath.AccumulatedPathLength | Accumulated path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job |  |
-| <TO>.StatusMotionQueue.NumberOfCommands | Number of jobs in the job sequence |  |
+| &lt;TO&gt;.StatusPath.TotalPathLength | Total path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job - Remaining distance of the motion job - Calculated distance of all jobs in the job sequence |  |
+| &lt;TO&gt;.StatusPath.AccumulatedPathLength | Accumulated path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job |  |
+| &lt;TO&gt;.StatusMotionQueue.NumberOfCommands | Number of jobs in the job sequence |  |
 | **Override** |  |  |
-| <TO>.Override.Velocity | Velocity override |  |
+| &lt;TO&gt;.Override.Velocity | Velocity override |  |
 | **Dynamic limits** |  |  |
-| <TO>.DynamicLimits.Path.Velocity | Dynamic limitation for the maximum velocity of the path |  |
-| <TO>.DynamicLimits.Path.Acceleration | Dynamic limitation for the maximum acceleration of the path |  |
-| <TO>.DynamicLimits.Path.Deceleration | Dynamic limitation for the maximum deceleration of the path |  |
-| <TO>.DynamicLimits.Path.Jerk | Dynamic limitation for the maximum jerk of the path |  |
-| <TO>.DynamicLimits.Orientation.Velocity | Dynamic limitation for the maximum velocity of the Cartesian orientation |  |
-| <TO>.DynamicLimits.Orientation.Acceleration | Dynamic limitation for the maximum acceleration of the Cartesian orientation |  |
-| <TO>.DynamicLimits.Orientation.Deceleration | Dynamic limitation for the maximum deceleration of the Cartesian orientation |  |
-| <TO>.DynamicLimits.Orientation.Jerk | Dynamic limitation for the maximum jerk of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Path.Velocity | Dynamic limitation for the maximum velocity of the path |  |
+| &lt;TO&gt;.DynamicLimits.Path.Acceleration | Dynamic limitation for the maximum acceleration of the path |  |
+| &lt;TO&gt;.DynamicLimits.Path.Deceleration | Dynamic limitation for the maximum deceleration of the path |  |
+| &lt;TO&gt;.DynamicLimits.Path.Jerk | Dynamic limitation for the maximum jerk of the path |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Velocity | Dynamic limitation for the maximum velocity of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Acceleration | Dynamic limitation for the maximum acceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Deceleration | Dynamic limitation for the maximum deceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Jerk | Dynamic limitation for the maximum jerk of the Cartesian orientation |  |
 | **Dynamic defaults** |  |  |
-| <TO>.DynamicDefaults.Path.Velocity | Default setting of the velocity of the path |  |
-| <TO>.DynamicDefaults.Path.Acceleration | Default setting of the acceleration of the path |  |
-| <TO>.DynamicDefaults.Path.Deceleration | Default setting of the deceleration of the path |  |
-| <TO>.DynamicDefaults.Path.Jerk | Default setting of the jerk of the path |  |
-| <TO>.DynamicDefaults.Orientation.Velocity | Default setting of the velocity of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.Orientation.Acceleration | Default setting of the acceleration of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.Orientation.Deceleration | Default setting of the deceleration of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.Orientation.Jerk | Default setting of the jerk of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.DynamicAdaption | Default setting of the dynamic adaptation |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Velocity | Default setting of the velocity of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Acceleration | Default setting of the acceleration of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Deceleration | Default setting of the deceleration of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Jerk | Default setting of the jerk of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Velocity | Default setting of the velocity of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration | Default setting of the acceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration | Default setting of the deceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Jerk | Default setting of the jerk of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.DynamicAdaption | Default setting of the dynamic adaptation |  |
 | 0 | No dynamic adaptation |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |
 | **Rounding clearance** |  |  |
-| <TO>.Transition.FactorBlendingLength | Factor of the maximum rounding clearance in percent [%]  The configuration takes place in "Technology object > Configuration > Extended parameters > Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
+| &lt;TO&gt;.Transition.FactorBlendingLength | Factor of the maximum rounding clearance in percent [%]  The configuration takes place in "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
 | 0.0 | No blending possible |  |
 | 50.0 | Default value |  |
 | 100.0 | Blending possible with complete segment length or motion length |  |
@@ -6077,13 +6077,13 @@ You define the dynamics of the circular motion with the following parameters of 
 - With the "Jerk" parameter, you specify the jerk of the path motion.
 - With the "DynamicAdaption" parameter, you specify the dynamic adaptation of the path motion.
 
-With the following configuration parameters under "Technology object > Configuration > Extended parameters > Dynamics", you define the dynamic response of the orientation motion:
+With the following configuration parameters under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics", you define the dynamic response of the orientation motion:
 
 - Select the entry "Orientation motion" in the "Settings for" drop-down list.
-- Define the velocity of the orientation motion (<TO>.DynamicDefaults.Orientation.Velocity) in the field "Velocity".
-- Define the acceleration of the orientation motion (<TO>.DynamicDefaults.Orientation.Acceleration) in the field "Acceleration".
-- Define the deceleration of the orientation motion (<TO>.DynamicDefaults.Orientation.Deceleration) in the field "Deceleration".
-- Define the jerk of the orientation motion (<TO>.DynamicDefaults.Orientation.Jerk) in the field "Jerk".
+- Define the velocity of the orientation motion (&lt;TO&gt;.DynamicDefaults.Orientation.Velocity) in the field "Velocity".
+- Define the acceleration of the orientation motion (&lt;TO&gt;.DynamicDefaults.Orientation.Acceleration) in the field "Acceleration".
+- Define the deceleration of the orientation motion (&lt;TO&gt;.DynamicDefaults.Orientation.Deceleration) in the field "Deceleration".
+- Define the jerk of the orientation motion (&lt;TO&gt;.DynamicDefaults.Orientation.Jerk) in the field "Jerk".
 
 ##### Dynamic adaptation
 
@@ -6091,7 +6091,7 @@ The dynamic adaptation limits the path dynamics to the axis dynamics. When dynam
 
 **Use the configured default**
 
-With the "DynamicAdaption" < 0 parameter, the configured default is used. You configure the default value in the field "Limit path dynamics to axis dynamics" under "Technology object > Configuration > Extended parameters > Dynamics" of the kinematics technology object (<TO>.DynamicDefaults.DynamicAdaption).
+With the "DynamicAdaption" &lt; 0 parameter, the configured default is used. You configure the default value in the field "Limit path dynamics to axis dynamics" under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics" of the kinematics technology object (&lt;TO&gt;.DynamicDefaults.DynamicAdaption).
 
 **Do not limit path dynamics to axis dynamics**
 
@@ -6134,9 +6134,9 @@ With the "BufferMode" = 2 parameter, the active motion is blended with the cir
 
 With the "BufferMode" = 5 parameter, the active motion is blended with the circular motion and the higher velocity of both jobs is used.
 
-**Rounding clearance d > 0.0**
+**Rounding clearance d &gt; 0.0**
 
-With the "TransitionParameter[1]" < 0.0 parameter, the active motion (A1) is blended with the circular motion (A2) as soon as the specified rounding clearance to the target position of the active motion is reached.
+With the "TransitionParameter[1]" &lt; 0.0 parameter, the active motion (A1) is blended with the circular motion (A2) as soon as the specified rounding clearance to the target position of the active motion is reached.
 
 ![Blending motion](images/158926181259_DV_resource.Stream@PNG-de-DE.png)
 
@@ -6146,17 +6146,17 @@ With the "TransitionParameter[1]" = 0.0 parameter the circular motion is appen
 
 ![Blending motion](images/158926186379_DV_resource.Stream@PNG-de-DE.png)
 
-**Rounding clearance d < 0.0**
+**Rounding clearance d &lt; 0.0**
 
-With the "TransitionParameter[1]" < 0.0 parameter, the active motion (A1) is blended with the circular motion (A2) as soon as the maximum rounding clearance to the target position of the active motion is reached.
+With the "TransitionParameter[1]" &lt; 0.0 parameter, the active motion (A1) is blended with the circular motion (A2) as soon as the maximum rounding clearance to the target position of the active motion is reached.
 
-You configure the factor of the maximum rounding clearance under "Technology object > Configuration > Extended parameters > Job sequence" (<TO>.Transition.FactorBlendingLength). In the following example, the maximum rounding clearance is limited to 50% of the shorter distance.
+You configure the factor of the maximum rounding clearance under "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence" (&lt;TO&gt;.Transition.FactorBlendingLength). In the following example, the maximum rounding clearance is limited to 50% of the shorter distance.
 
 ![Blending motion](images/158926562699_DV_resource.Stream@PNG-de-DE.png)
 
 #### Starting a circular motion job (S7-1500T)
 
-After the start of the circular motion job with "Execute" = TRUE, the job is added to the [job sequence](#job-sequence-s7-1500t). The processing status is indicated in the Motion Control instruction "[MC_MoveCircularAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movecircularabsolute-position-kinematics-with-circular-path-motion-v8-s7-1500t)" or. "[MC_MoveCircularRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movecircularrelative-relative-positioning-of-kinematics-with-circular-path-motion-v8-s7-1500t)" with the parameter "Busy" = TRUE. If the job is active, this is indicated with the parameter "Active" = TRUE and in the "<TO>.StatusWord.X9 (CircularCommand)" tag of the technology object.
+After the start of the circular motion job with "Execute" = TRUE, the job is added to the [job sequence](#job-sequence-s7-1500t). The processing status is indicated in the Motion Control instruction "[MC_MoveCircularAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movecircularabsolute-position-kinematics-with-circular-path-motion-v8-s7-1500t)" or. "[MC_MoveCircularRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movecircularrelative-relative-positioning-of-kinematics-with-circular-path-motion-v8-s7-1500t)" with the parameter "Busy" = TRUE. If the job is active, this is indicated with the parameter "Active" = TRUE and in the "&lt;TO&gt;.StatusWord.X9 (CircularCommand)" tag of the technology object.
 
 As soon as the target position is reached or the circular motion is blended to the next motion, the job is completed. The status is indicated with the parameter "Done" = TRUE.
 
@@ -6169,50 +6169,50 @@ The following technology object tags are relevant for motion control:
 | Tag | Description |  |
 | --- | --- | --- |
 | **Status values** |  |  |
-| <TO>.StatusWord | Status indicator for an active motion |  |
-| <TO>.StatusWord.X9 (CircularCommand) | The value "TRUE" is set if a job for circular motion is active ("MC_MoveCircularAbsolute", "MC_MoveCircularRelative"). |  |
-| <TO>.Tcp | Target coordinates x, y, z, A, B, C of the kinematics motion in the world coordinate system |  |
-| <TO>.StatusPath.CoordSystem | Coordinate system of the active motion job |  |
+| &lt;TO&gt;.StatusWord | Status indicator for an active motion |  |
+| &lt;TO&gt;.StatusWord.X9 (CircularCommand) | The value "TRUE" is set if a job for circular motion is active ("MC_MoveCircularAbsolute", "MC_MoveCircularRelative"). |  |
+| &lt;TO&gt;.Tcp | Target coordinates x, y, z, A, B, C of the kinematics motion in the world coordinate system |  |
+| &lt;TO&gt;.StatusPath.CoordSystem | Coordinate system of the active motion job |  |
 | 0 | World coordinate system |  |
 | 1, 2, 3 | Object coordinate system 1, 2, 3 |  |
 | 100 | Machine coordinate system |  |
 | 101 | Joint coordinate system<sup>1)</sup> |  |
-| <TO>.StatusPath.Velocity | Current path velocity (setpoint reference) |  |
-| <TO>.StatusPath.Acceleration | Current path acceleration (setpoint reference) |  |
-| <TO>.StatusPath.OrientationVelocity | Resulting orientation velocity |  |
-| <TO>.StatusPath.DynamicAdaption | Dynamic adaptation |  |
+| &lt;TO&gt;.StatusPath.Velocity | Current path velocity (setpoint reference) |  |
+| &lt;TO&gt;.StatusPath.Acceleration | Current path acceleration (setpoint reference) |  |
+| &lt;TO&gt;.StatusPath.OrientationVelocity | Resulting orientation velocity |  |
+| &lt;TO&gt;.StatusPath.DynamicAdaption | Dynamic adaptation |  |
 | 0 | No dynamic adaptation |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |
-| <TO>.StatusPath.TotalPathLength | Total path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job - Remaining distance of the motion job - Calculated distance of all jobs in the job sequence |  |
-| <TO>.StatusPath.AccumulatedPathLength | Accumulated path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job |  |
-| <TO>.StatusMotionQueue.NumberOfCommands | Number of jobs in the job sequence |  |
+| &lt;TO&gt;.StatusPath.TotalPathLength | Total path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job - Remaining distance of the motion job - Calculated distance of all jobs in the job sequence |  |
+| &lt;TO&gt;.StatusPath.AccumulatedPathLength | Accumulated path length of linear and circular path motions  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job |  |
+| &lt;TO&gt;.StatusMotionQueue.NumberOfCommands | Number of jobs in the job sequence |  |
 | **Override** |  |  |
-| <TO>.Override.Velocity | Velocity override |  |
+| &lt;TO&gt;.Override.Velocity | Velocity override |  |
 | **Dynamic limits** |  |  |
-| <TO>.DynamicLimits.Path.Velocity | Dynamic limitation for the maximum velocity of the path |  |
-| <TO>.DynamicLimits.Path.Acceleration | Dynamic limitation for the maximum acceleration of the path |  |
-| <TO>.DynamicLimits.Path.Deceleration | Dynamic limitation for the maximum deceleration of the path |  |
-| <TO>.DynamicLimits.Path.Jerk | Dynamic limitation for the maximum jerk of the path |  |
-| <TO>.DynamicLimits.Orientation.Velocity | Dynamic limitation for the maximum velocity of the Cartesian orientation |  |
-| <TO>.DynamicLimits.Orientation.Acceleration | Dynamic limitation for the maximum acceleration of the Cartesian orientation |  |
-| <TO>.DynamicLimits.Orientation.Deceleration | Dynamic limitation for the maximum deceleration of the Cartesian orientation |  |
-| <TO>.DynamicLimits.Orientation.Jerk | Dynamic limitation for the maximum jerk of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Path.Velocity | Dynamic limitation for the maximum velocity of the path |  |
+| &lt;TO&gt;.DynamicLimits.Path.Acceleration | Dynamic limitation for the maximum acceleration of the path |  |
+| &lt;TO&gt;.DynamicLimits.Path.Deceleration | Dynamic limitation for the maximum deceleration of the path |  |
+| &lt;TO&gt;.DynamicLimits.Path.Jerk | Dynamic limitation for the maximum jerk of the path |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Velocity | Dynamic limitation for the maximum velocity of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Acceleration | Dynamic limitation for the maximum acceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Deceleration | Dynamic limitation for the maximum deceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicLimits.Orientation.Jerk | Dynamic limitation for the maximum jerk of the Cartesian orientation |  |
 | **Dynamic defaults** |  |  |
-| <TO>.DynamicDefaults.Path.Velocity | Default setting of the velocity of the path |  |
-| <TO>.DynamicDefaults.Path.Acceleration | Default setting of the acceleration of the path |  |
-| <TO>.DynamicDefaults.Path.Deceleration | Default setting of the deceleration of the path |  |
-| <TO>.DynamicDefaults.Path.Jerk | Default setting of the jerk of the path |  |
-| <TO>.DynamicDefaults.Orientation.Velocity | Default setting of the velocity of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.Orientation.Acceleration | Default setting of the acceleration of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.Orientation.Deceleration | Default setting of the deceleration of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.Orientation.Jerk | Default setting of the jerk of the Cartesian orientation |  |
-| <TO>.DynamicDefaults.DynamicAdaption | Default setting of the dynamic adaptation |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Velocity | Default setting of the velocity of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Acceleration | Default setting of the acceleration of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Deceleration | Default setting of the deceleration of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Path.Jerk | Default setting of the jerk of the path |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Velocity | Default setting of the velocity of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration | Default setting of the acceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration | Default setting of the deceleration of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.Orientation.Jerk | Default setting of the jerk of the Cartesian orientation |  |
+| &lt;TO&gt;.DynamicDefaults.DynamicAdaption | Default setting of the dynamic adaptation |  |
 | 0 | No dynamic adaptation |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |
 | **Rounding clearance** |  |  |
-| <TO>.Transition.FactorBlendingLength | Factor of the maximum rounding clearance in percent [%]  The configuration takes place in "Technology object > Configuration > Extended parameters > Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
+| &lt;TO&gt;.Transition.FactorBlendingLength | Factor of the maximum rounding clearance in percent [%]  The configuration takes place in "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
 | 0.0 | No blending possible |  |
 | 50.0 | Default value |  |
 | 100.0 | Blending possible with complete segment length or motion length |  |
@@ -6366,18 +6366,18 @@ With more than four interpolating kinematics axes, you can define the target joi
 
 | Value | Description |
 | --- | --- |
-| m (m < 0) | -180° + m · 360° ≤ Position < 180° + m · 360° |
-| -2 | -900 ≤ position < -540 |
-| -1 | -540 ≤ position < -180 |
+| m (m &lt; 0) | -180° + m · 360° ≤ Position &lt; 180° + m · 360° |
+| -2 | -900 ≤ position &lt; -540 |
+| -1 | -540 ≤ position &lt; -180 |
 | 0 | Shortest distance |
-| 1 | -180 ≤ position < 180 |
-| 2 | 180 ≤ position < 540 |
-| 3 | 540 ≤ position < 900 |
-| n (n > 0) | -180° + (n - 1) · 360° ≤ Position < 180° + (n - 1) · 360° |
+| 1 | -180 ≤ position &lt; 180 |
+| 2 | 180 ≤ position &lt; 540 |
+| 3 | 540 ≤ position &lt; 900 |
+| n (n &gt; 0) | -180° + (n - 1) · 360° ≤ Position &lt; 180° + (n - 1) · 360° |
 
 The parameterized values for the joint position ranges are absolute for the motion control instructions "MC_MoveDirectAbsolute" and "MC_MoveDirectRelative".
 
-The current position setpoints of the joints J1 to J6 are indicated in the variables "<TO>.JointData.J[1..6].Position" of the technology object. You can derive the current joint position areas from the current position setpoints.
+The current position setpoints of the joints J1 to J6 are indicated in the variables "&lt;TO&gt;.JointData.J[1..6].Position" of the technology object. You can derive the current joint position areas from the current position setpoints.
 
 **Example**
 
@@ -6389,7 +6389,7 @@ With the specification "Position[i]" = 0.0 and "TurnJoint[i]" = 2, the joint
 
 #### Defining the dynamics factors of the sPTP motion (S7-1500T)
 
-The dynamic response of the synchronous "point-to-point" motion (sPTP motion) is determined via dynamics factors. The factors relate to the configured maximum dynamic values of the kinematics axes. You configure the maximum dynamic values in "Technology objects > Configuration > Extended parameters > Limits > Dynamics limits" of the technology objects of the interconnected axes.
+The dynamic response of the synchronous "point-to-point" motion (sPTP motion) is determined via dynamics factors. The factors relate to the configured maximum dynamic values of the kinematics axes. You configure the maximum dynamic values in "Technology objects &gt; Configuration &gt; Extended parameters &gt; Limits &gt; Dynamics limits" of the technology objects of the interconnected axes.
 
 The single-axis motions, which move the kinematics axes synchronously, are calculated from the start and target positions. All kinematics axes move simultaneously and reach the corresponding target position at the same time. The kinematics axis with the longest travel time determines the travel time of the sPTP motion and therefore the travel time of all other kinematics axes. For the motion profile calculation, the dynamic values of the individual kinematics axes are adapted to the kinematics axis with the longest movement time.
 
@@ -6406,12 +6406,12 @@ You define the dynamics of the sPTP motion with the following parameters of the 
 
 Proceed as follows to configure the defaults for the dynamics factors of the sPTP motion:
 
-1. Open the "Technology object > Configuration > Extended parameters > Dynamics" configuration window of the kinematics technology object.
+1. Open the "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics" configuration window of the kinematics technology object.
 2. Select the entry "sPTP motion" in the "Settings for" drop-down list.
-3. Enter the default for the velocity factor in the field "Velocity factor" (<TO>.DynamicDefaults.MoveDirect.VelocityFactor).
-4. Enter the default for the acceleration factor in the field "Acceleration factor" (<TO>.DynamicDefaults.MoveDirect.AccelerationFactor).
-5. Enter the default for the deceleration factor in the field "Deceleration factor" (<TO>.DynamicDefaults.MoveDirect.DecelerationFactor).
-6. Enter the default for the jerk factor in the field "Jerk factor" (<TO>.DynamicDefaults.MoveDirect.JerkFactor).
+3. Enter the default for the velocity factor in the field "Velocity factor" (&lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor).
+4. Enter the default for the acceleration factor in the field "Acceleration factor" (&lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor).
+5. Enter the default for the deceleration factor in the field "Deceleration factor" (&lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor).
+6. Enter the default for the jerk factor in the field "Jerk factor" (&lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor).
 
 #### Defining the transition of the sPTP motion (S7-1500T)
 
@@ -6463,9 +6463,9 @@ To enable a continuous blending between path motions and sPTP motions, observe t
 
 ##### Define blending distance
 
-**Rounding clearance d > 0.0**
+**Rounding clearance d &gt; 0.0**
 
-With the "TransitionParameter[1]" < 0.0 parameter, the active motion (A1) is blended with the sPTP motion (A2) as soon as the specified rounding clearance to the target position of the active motion is reached.
+With the "TransitionParameter[1]" &lt; 0.0 parameter, the active motion (A1) is blended with the sPTP motion (A2) as soon as the specified rounding clearance to the target position of the active motion is reached.
 
 ![Define blending distance](images/158926567819_DV_resource.Stream@PNG-de-DE.png)
 
@@ -6475,17 +6475,17 @@ With the "TransitionParameter[1]" = 0.0 parameter, the sPTP motion is appended
 
 ![Define blending distance](images/158926572939_DV_resource.Stream@PNG-de-DE.png)
 
-**Rounding clearance d < 0.0**
+**Rounding clearance d &lt; 0.0**
 
-With the "TransitionParameter[1]" < 0.0 parameter, the active motion (A1) is blended with the sPTP motion (A2) as soon as the maximum rounding clearance to the target position of the active motion is reached.
+With the "TransitionParameter[1]" &lt; 0.0 parameter, the active motion (A1) is blended with the sPTP motion (A2) as soon as the maximum rounding clearance to the target position of the active motion is reached.
 
-You configure the factor of the maximum rounding clearance under "Technology object > Configuration > Extended parameters > Job sequence" (<TO>.Transition.FactorBlendingLength). In the following example, the maximum rounding clearance is limited to 50% of the shorter distance.
+You configure the factor of the maximum rounding clearance under "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence" (&lt;TO&gt;.Transition.FactorBlendingLength). In the following example, the maximum rounding clearance is limited to 50% of the shorter distance.
 
 ![Define blending distance](images/158926757259_DV_resource.Stream@PNG-de-DE.png)
 
 #### Starting the sPTP motion job (S7-1500T)
 
-After the start of the synchronous "point-to-point" job (sPTP motion) with "Execute" = TRUE, the job is added to the [job sequence](#job-sequence-s7-1500t). The processing status is indicated in the Motion Control instruction "[MC_MoveDirectAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movedirectabsolute-absolute-movement-of-kinematics-with-synchronous-point-to-point-motion-v8-s7-1500t)" or. "[MC_MoveDirectRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movedirectrelative-relative-movement-of-kinematics-with-synchronous-point-to-point-motion-v8-s7-1500t)" with the parameter "Busy" = TRUE. If the job is active, this is indicated with the parameter "Active" = TRUE and in the "<TO>.StatusWord.X11 (DirectCommand)" tag of the technology object.
+After the start of the synchronous "point-to-point" job (sPTP motion) with "Execute" = TRUE, the job is added to the [job sequence](#job-sequence-s7-1500t). The processing status is indicated in the Motion Control instruction "[MC_MoveDirectAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movedirectabsolute-absolute-movement-of-kinematics-with-synchronous-point-to-point-motion-v8-s7-1500t)" or. "[MC_MoveDirectRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_movedirectrelative-relative-movement-of-kinematics-with-synchronous-point-to-point-motion-v8-s7-1500t)" with the parameter "Busy" = TRUE. If the job is active, this is indicated with the parameter "Active" = TRUE and in the "&lt;TO&gt;.StatusWord.X11 (DirectCommand)" tag of the technology object.
 
 The progress of execution is displayed using the "ExecutionTimeStatus" parameter. The parameter value starts at 0.0 and increases incrementally in the course of job execution.
 
@@ -6498,26 +6498,26 @@ The following technology object tags are relevant for motion control:
 | Tag | Description |  |
 | --- | --- | --- |
 | **Status values** |  |  |
-| <TO>.StatusWord | Status indicator for an active motion |  |
-| <TO>.StatusWord.X11 (DirectCommand) | The value "TRUE" is set if a job for sPTP motion is active ("MC_MoveDirectAbsolute", "MC_MoveDirectRelative"). |  |
-| <TO>.Tcp | Target coordinates x, y, z, A, B, C of the kinematics motion in the world coordinate system |  |
-| <TO>.AxesData.A[1..6] | Current setpoints of the kinematics motion for the kinematics axes A1 to A6 |  |
-| <TO>.JointData.J[1..6] | Current setpoints of the kinematics motion for the joints J1 to J6 |  |
-| <TO>.StatusPath.CoordSystem | Coordinate system of the active motion job |  |
+| &lt;TO&gt;.StatusWord | Status indicator for an active motion |  |
+| &lt;TO&gt;.StatusWord.X11 (DirectCommand) | The value "TRUE" is set if a job for sPTP motion is active ("MC_MoveDirectAbsolute", "MC_MoveDirectRelative"). |  |
+| &lt;TO&gt;.Tcp | Target coordinates x, y, z, A, B, C of the kinematics motion in the world coordinate system |  |
+| &lt;TO&gt;.AxesData.A[1..6] | Current setpoints of the kinematics motion for the kinematics axes A1 to A6 |  |
+| &lt;TO&gt;.JointData.J[1..6] | Current setpoints of the kinematics motion for the joints J1 to J6 |  |
+| &lt;TO&gt;.StatusPath.CoordSystem | Coordinate system of the active motion job |  |
 | 0 | World coordinate system |  |
 | 1, 2, 3 | Object coordinate system 1, 2, 3 |  |
 | 100 | Machine coordinate system |  |
 | 101 | Joint coordinate system<sup>1)</sup> |  |
-| <TO>.StatusMotionQueue.NumberOfCommands | Number of jobs in the job sequence |  |
+| &lt;TO&gt;.StatusMotionQueue.NumberOfCommands | Number of jobs in the job sequence |  |
 | **Override** |  |  |
-| <TO>.Override.Velocity | Velocity override |  |
+| &lt;TO&gt;.Override.Velocity | Velocity override |  |
 | **Dynamic defaults** |  |  |
-| <TO>.DynamicDefaults.MoveDirect.VelocityFactor | Factor for the velocity of the axis motions in relation to the respective maximum velocity of the axes with sPTP motion. |  |
-| <TO>.DynamicDefaults.MoveDirect.AccelerationFactor | Factor for the acceleration of the axis motions in relation to the respective maximum acceleration of the axes with sPTP motion. |  |
-| <TO>.DynamicDefaults.MoveDirect.DecelerationFactor | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axes with sPTP motion. |  |
-| <TO>.DynamicDefaults.MoveDirect.JerkFactor | Factor for the jerk of the axis motions in relation to the respective maximum jerk of the axes with sPTP motion. |  |
+| &lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor | Factor for the velocity of the axis motions in relation to the respective maximum velocity of the axes with sPTP motion. |  |
+| &lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor | Factor for the acceleration of the axis motions in relation to the respective maximum acceleration of the axes with sPTP motion. |  |
+| &lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axes with sPTP motion. |  |
+| &lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor | Factor for the jerk of the axis motions in relation to the respective maximum jerk of the axes with sPTP motion. |  |
 | **Rounding clearance** |  |  |
-| <TO>.Transition.FactorBlendingLength | Factor of the maximum rounding distance in percent [%]  The configuration takes place in "Technology object > Configuration > Extended parameters > Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
+| &lt;TO&gt;.Transition.FactorBlendingLength | Factor of the maximum rounding distance in percent [%]  The configuration takes place in "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
 | 0.0 | No blending possible |  |
 | 50.0 | Default value |  |
 | 100.0 | Blending possible with complete segment length or motion length |  |
@@ -6548,7 +6548,7 @@ With conveyor tracking, the kinematics can follow an object on a moving conveyor
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| **Overrun of the dynamics in the vicinity of a singularity**  In the vicinity of a [singularity](#singularities-s7-1500t) a path motion without dynamic adaptation mostly results in overruns of the dynamics. This means one or more kinematics axes can move at very high speed and accelerate or decelerate with excessive force.  This can cause the following damages:  - Personal injury, for example, caused by products or machine parts coming loose - Machine damage, for example, through overload of the mechanical components   Activate the dynamic adaptation by setting the value for "DynamicAdaption" to "1" or "2" on the motion job. Also parameterize the dynamic reserve (<TO>.Conveyor.DynamicReserve[1..1]). |  |
+| **Overrun of the dynamics in the vicinity of a singularity**  In the vicinity of a [singularity](#singularities-s7-1500t) a path motion without dynamic adaptation mostly results in overruns of the dynamics. This means one or more kinematics axes can move at very high speed and accelerate or decelerate with excessive force.  This can cause the following damages:  - Personal injury, for example, caused by products or machine parts coming loose - Machine damage, for example, through overload of the mechanical components   Activate the dynamic adaptation by setting the value for "DynamicAdaption" to "1" or "2" on the motion job. Also parameterize the dynamic reserve (&lt;TO&gt;.Conveyor.DynamicReserve[1..1]). |  |
 
 A typical motion sequence runs in 5 phases.
 
@@ -6564,7 +6564,7 @@ A typical motion sequence runs in 5 phases.
 
 **Phase 5:** Desynchronize TCP from the OCS
 
-The current status of conveyor tracking is displayed in the tag structure "<TO>.StatusConveyor[1..3].TrackingState". "StatusConveyor[1]" refers to OCS1.
+The current status of conveyor tracking is displayed in the tag structure "&lt;TO&gt;.StatusConveyor[1..3].TrackingState". "StatusConveyor[1]" refers to OCS1.
 
 #### Configuring and starting conveyor tracking (S7-1500T)
 
@@ -6693,11 +6693,11 @@ With a Motion Control instruction "MC_MoveLinearAbsolute" or "MC_MoveCircularAbs
 
 #### Behavior of the "TrackingState" tag (S7-1500T)
 
-The tag "<TO>.StatusConveyor[1..3].TrackingState" indicates the status of conveyor tracking.
+The tag "&lt;TO&gt;.StatusConveyor[1..3].TrackingState" indicates the status of conveyor tracking.
 
 | Tag | Description |  |
 | --- | --- | --- |
-| <TO>.StatusConveyor[1..3].TrackingState | Conveyor tracking status |  |
+| &lt;TO&gt;.StatusConveyor[1..3].TrackingState | Conveyor tracking status |  |
 | 0 | OCS not assigned  The OCS is not assigned to a leading-value-capable technology object. |  |
 | 1 | OCS assigned  The Motion Control instruction "MC_TrackConveyorBelt" is finished and the OCS is assigned to a leading-value-capable technology object. The first path motion job in the tracked OCS can be sent. |  |
 | 2 | TCP synchronizes to OCS  The OCS is assigned to a leading-value-capable technology object. The first path motion job in the tracked OCS is active. |  |
@@ -6799,9 +6799,9 @@ The path motion of the kinematics is calculated in advance in the MC_LookAhead o
 
 - Dynamics specification on the motion job
 - Velocity of the conveyor belt
-- Dynamic limits of the Kinematics motion "<TO>.DynamicLimits.Path"
-- Dynamic limits of the orientation motion "<TO>.DynamicLimits.Orientation"
-- Dynamic limits of the kinematics axes "<TO>.DynamicLimits"
+- Dynamic limits of the Kinematics motion "&lt;TO&gt;.DynamicLimits.Path"
+- Dynamic limits of the orientation motion "&lt;TO&gt;.DynamicLimits.Orientation"
+- Dynamic limits of the kinematics axes "&lt;TO&gt;.DynamicLimits"
 
 The dynamic limits take into account velocity, acceleration and deceleration. The maximum permissible jerk is not taken into account.
 
@@ -6816,11 +6816,11 @@ Depending on the path length of the motion job and the conveyor dynamics, a dyna
 
 ###### Enable dynamic adaptation
 
-Activate the [Dynamic adaptation](#dynamic-adaptation-s7-1500t) by setting the value for "DynamicAdaption" to "1" or "2" on the motion job. Alternatively, configure the default setting on the technology object by setting the "<TO>.DynamicDefaults.DynamicAdaption" variable to "1" or "2" and specifying the value "-1" on the motion job.
+Activate the [Dynamic adaptation](#dynamic-adaptation-s7-1500t) by setting the value for "DynamicAdaption" to "1" or "2" on the motion job. Alternatively, configure the default setting on the technology object by setting the "&lt;TO&gt;.DynamicDefaults.DynamicAdaption" variable to "1" or "2" and specifying the value "-1" on the motion job.
 
 ##### Dynamic reserve (S7-1500T)
 
-To maintain the dynamic limits of the kinematics and the kinematics axes when changing the conveyor dynamics and the working range, use the dynamic reserve "<TO>.Conveyor.DynamicReserve[1..1]".
+To maintain the dynamic limits of the kinematics and the kinematics axes when changing the conveyor dynamics and the working range, use the dynamic reserve "&lt;TO&gt;.Conveyor.DynamicReserve[1..1]".
 
 In order not to exceed the dynamic limits in case of dynamic changes, the motion preparation in x direction of the tracked OCS is calculated with reduced dynamic limits of the kinematics motion, the orientation motion and the kinematics axes. The dynamic limits are reduced by the dynamic reserve during motion preparation. This means that the dynamic reserve is available for dynamic changes during motion, e.g. when the speed of the conveyor is increased.
 
@@ -6858,16 +6858,16 @@ The 3 motion jobs are processed together in the job sequence.
 
 The dynamic limits of the kinematics axes A1, A2 and A3 are parameterized as follows:
 
-- <A1...A3>.DynamicLimits.Velocity := 100.0
-- <A1...A3>.DynamicsLimits.MaxVelocity := 100.0
-- <A1...A3>.DynamicLimits.MaxAcceleration := 2000.0
-- <A1...A3>.DynamicLimits.MaxDeceleration := 2000.0
+- &lt;A1...A3&gt;.DynamicLimits.Velocity := 100.0
+- &lt;A1...A3&gt;.DynamicsLimits.MaxVelocity := 100.0
+- &lt;A1...A3&gt;.DynamicLimits.MaxAcceleration := 2000.0
+- &lt;A1...A3&gt;.DynamicLimits.MaxDeceleration := 2000.0
 
 The dynamic limits of the "TO_Kin_1" kinematics are parameterized as follows:
 
-- <TO_Kin_1>.DynamicLimits.Path.Velocity := 100.0
-- <TO_Kin_1>.DynamicLimits.Path.Acceleration := 1000.0
-- <TO_Kin_1>.DynamicLimits.Path.Deceleration := 1000.0
+- &lt;TO_Kin_1&gt;.DynamicLimits.Path.Velocity := 100.0
+- &lt;TO_Kin_1&gt;.DynamicLimits.Path.Acceleration := 1000.0
+- &lt;TO_Kin_1&gt;.DynamicLimits.Path.Deceleration := 1000.0
 
 **Conveyor tracking with dynamic adaptation without segmentation of the path**
 
@@ -6908,7 +6908,7 @@ An "MC_GroupStop" or "MC_GroupInterrupt" instruction completes the tracking of t
 
 ##### "TrackingState" = "3"
 
-The path motion within the coupled OCS is stopped with an "MC_GroupInterrupt" job or "MC_GroupStop" job. The status of the conveyor tracking "<TO>.StatusConveyor[1..3].TrackingState" = "3" is retained. The kinematics continues to follow the OCS.
+The path motion within the coupled OCS is stopped with an "MC_GroupInterrupt" job or "MC_GroupStop" job. The status of the conveyor tracking "&lt;TO&gt;.StatusConveyor[1..3].TrackingState" = "3" is retained. The kinematics continues to follow the OCS.
 
 An "MC_GroupContinue" job can be used to continue a motion that was interrupted with an "MC_GroupInterrupt" job.
 
@@ -6965,9 +6965,9 @@ When the simulation is started with "Execute" = TRUE and "Mode" = 1, the positio
 
 While the kinematics technology object is in simulation, you can move, disable and enable the kinematics axes again using single-axis jobs, without the motion processing being canceled at the kinematics technology object. The same is true for technology alarms pending at the kinematics axes during the kinematics simulation.
 
-So that the simulation mode can be exited with "Execute" = TRUE and "Mode" = 0 , each of the kinematics axes must be at position "<TO>.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
+So that the simulation mode can be exited with "Execute" = TRUE and "Mode" = 0 , each of the kinematics axes must be at position "&lt;TO&gt;.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
 
-Before you exit the simulation, move each of the kinematics axes using single-axis jobs to position "<TO>.AxesData.A[1..6].Position".
+Before you exit the simulation, move each of the kinematics axes using single-axis jobs to position "&lt;TO&gt;.AxesData.A[1..6].Position".
 
 When the simulation is exited with "Execute" = TRUE and "Mode" = 0, the kinematics motion is continued. The setpoints take effect directly on the kinematics axes.
 
@@ -6989,7 +6989,7 @@ The following procedure shows an example of how you can disable the kinematics a
 **Enabling the kinematics axes and continuing the kinematics motion**
 
 1. Enable the individual kinematics axes again with a "MC_Power" job.
-2. Move the individual kinematics axes using single-axis jobs to positions "<TO>.AxesData.A[1..6].Position". These position values match the position values after stopping the kinematics motion. With a modulo axis, additionally ensure that the axis is in the same modulo cycle as at the start time of the simulation.
+2. Move the individual kinematics axes using single-axis jobs to positions "&lt;TO&gt;.AxesData.A[1..6].Position". These position values match the position values after stopping the kinematics motion. With a modulo axis, additionally ensure that the axis is in the same modulo cycle as at the start time of the simulation.
 3. Exit the kinematics simulation with a "MC_KinematicsMotionSimulation" job with "Execute" = TRUE and "Mode" = 0.
 4. Continue the kinematics motion with a "MC_GroupContinue" job.
 
@@ -7000,12 +7000,12 @@ The following tags of the technology object are relevant for simulation:
 | Status indicators |  |  |
 | --- | --- | --- |
 | Tag | Description |  |
-| <TO>.StatusWord.X19 (InSimulation) | Kinematics simulation |  |
+| &lt;TO&gt;.StatusWord.X19 (InSimulation) | Kinematics simulation |  |
 | FALSE | Not simulated |  |
 | TRUE | Simulated |  |
-| <TO>.AxesData.A[1..6].Position | Position setpoints of the kinematics motion for the kinematics axes 1 to 6 |  |
-| <TO>.AxesData.A[1..6].Velocity | Velocity setpoints of the kinematics motion for the kinematics axes 1 to 6 |  |
-| <TO>.AxesData.A[1..6].Acceleration | Acceleration setpoints of the kinematics motion for the kinematics axes 1 to 6 |  |
+| &lt;TO&gt;.AxesData.A[1..6].Position | Position setpoints of the kinematics motion for the kinematics axes 1 to 6 |  |
+| &lt;TO&gt;.AxesData.A[1..6].Velocity | Velocity setpoints of the kinematics motion for the kinematics axes 1 to 6 |  |
+| &lt;TO&gt;.AxesData.A[1..6].Acceleration | Acceleration setpoints of the kinematics motion for the kinematics axes 1 to 6 |  |
 
 ## 3D visualization (S7-1500T)
 
@@ -7061,7 +7061,7 @@ The following values and information are visualized in the 3D display:
 
 > **Note**
 >
-> You set the dimensions for the representation of the kinematics in the 3D display under "Technology object > Configuration > Geometry".
+> You set the dimensions for the representation of the kinematics in the 3D display under "Technology object &gt; Configuration &gt; Geometry".
 
 ### Working with the 3D display (S7-1500T)
 
@@ -7092,8 +7092,8 @@ You show or hide all active and inactive zones with the ![Figure](images/134699
 
 In addition, with the active icon ![Figure](images/134699079307_DV_resource.Stream@PNG-de-DE.png), you can show and hide all active and inactive workspace zones individually with the ![Figure](images/134699086987_DV_resource.Stream@PNG-de-DE.png) icon in the following areas:
 
-- Diagnostics > "Status zones" window
-- Calibration > Object coordinate systems / Workspace zones > "Zone display" window
+- Diagnostics &gt; "Status zones" window
+- Calibration &gt; Object coordinate systems / Workspace zones &gt; "Zone display" window
 
 #### Zone display in calibration
 
@@ -7174,7 +7174,7 @@ The values in the "Positions" window are displayed as follows:
 
 #### Selecting a reference coordinate system for recording in the kinematics trace
 
-The selection of the coordinate systems in the toolbar and in the "Positions" window depends on the signals you have activated under "Technology object > Kinematics trace > Configuration > Traces". The following table shows the available coordinate systems depending on the active signals:
+The selection of the coordinate systems in the toolbar and in the "Positions" window depends on the signals you have activated under "Technology object &gt; Kinematics trace &gt; Configuration &gt; Traces". The following table shows the available coordinate systems depending on the active signals:
 
 | Active signals | Coordinate system 1 | Coordinate system 2 |
 | --- | --- | --- |
@@ -7224,17 +7224,17 @@ This section contains information on the following topics:
 
 ### Brief description of commissioning (S7-1500T)
 
-You can find the kinematics control panel under "Technology object > Commissioning". The kinematics control panel enables you to assume master control for a kinematics technology object and control the motions of the kinematics, the individual axes or the individual joints. You can therefore move the kinematics without affecting the user program.
+You can find the kinematics control panel under "Technology object &gt; Commissioning". The kinematics control panel enables you to assume master control for a kinematics technology object and control the motions of the kinematics, the individual axes or the individual joints. You can therefore move the kinematics without affecting the user program.
 
 You can find the [dynamics settings](#specifying-dynamics-in-the-kinematics-control-panel-s7-1500t) for commissioning in the Inspector window under "Properties".
 
 [3D visualization](#3d-visualization-s7-1500t) provides visual support for commissioning the kinematics technology object. The status LEDs in the "[Control panel status](#control-panel-status-s7-1500t)" diagnostics window show you whether all kinematics axes are switched on and homed and whether errors are pending at the kinematics or the kinematics axes. You can also show additional [diagnostics windows](#structure-of-the-diagnostics-s7-1500t) via the toolbar.
 
-You can also find the kinematics control panel in the project tree under "Technology object > [Calibrate](#calibration-s7-1500t)". In calibration, you move the real kinematics online via the kinematics control panel in the "Jog" or "Jog to target position" operating modes.
+You can also find the kinematics control panel in the project tree under "Technology object &gt; [Calibrate](#calibration-s7-1500t)". In calibration, you move the real kinematics online via the kinematics control panel in the "Jog" or "Jog to target position" operating modes.
 
 ### Control panel status (S7-1500T)
 
-You use the "Control panel status" diagnostics window in "Technology object > Commissioning" in the TIA Portal to monitor the status and error messages of the kinematics and the kinematics axes during commissioning.
+You use the "Control panel status" diagnostics window in "Technology object &gt; Commissioning" in the TIA Portal to monitor the status and error messages of the kinematics and the kinematics axes during commissioning.
 
 The diagnostics function is available in online operation. The "Control panel status" diagnostics window is shown in the graphical display during commissioning. You can show the diagnostics window via the ![Figure](images/155910184715_DV_resource.Stream@PNG-de-DE.png) symbol of the toolbar and move the window to a desired position within the graphic display.
 
@@ -7244,8 +7244,8 @@ The following table shows the possible statuses of the kinematics:
 
 | Status | Description |
 | --- | --- |
-| Valid | The transformation values are valid. (<TO>.StatusKinematics.Valid) |
-| Error | An error occurred at the technology object.  Error messages are displayed in the Inspector window under "Diagnostics > Alarm display". |
+| Valid | The transformation values are valid. (&lt;TO&gt;.StatusKinematics.Valid) |
+| Error | An error occurred at the technology object.  Error messages are displayed in the Inspector window under "Diagnostics &gt; Alarm display". |
 
 #### Axis status
 
@@ -7254,7 +7254,7 @@ The following table shows the possible states of the kinematics axes:
 | Status | Description |
 | --- | --- |
 | Enabled | The technology object has been enabled. The axis can be moved with motion jobs. |
-| Error | An error occurred at the technology object.  Error messages are displayed in the Inspector window under "Diagnostics > Alarm display". |
+| Error | An error occurred at the technology object.  Error messages are displayed in the Inspector window under "Diagnostics &gt; Alarm display". |
 | Homed | The technology object is homed. |
 
 ### Taking over master control and enabling kinematics (S7-1500T)
@@ -7321,7 +7321,7 @@ The kinematics control panel requires a direct connection from its TIA Portal to
 
 1. Click the "Enable" button to enable interconnected axes of the selected kinematics technology object.   
    Result: The kinematics or the kinematics axes can now be moved or actively homed with the kinematics control panel.
-2. Use the status LEDs in the "Control panel status" diagnostics window to check whether all kinematics axes are switched on and homed and whether errors are pending. Use the alarm display (Inspector window > "Diagnostics > Alarm display") in the TIA Portal to display pending causes of the error.
+2. Use the status LEDs in the "Control panel status" diagnostics window to check whether all kinematics axes are switched on and homed and whether errors are pending. Use the alarm display (Inspector window &gt; "Diagnostics &gt; Alarm display") in the TIA Portal to display pending causes of the error.
 
 #### Behavior during operation of the kinematics control panel
 
@@ -7378,7 +7378,7 @@ The following sliders and buttons are displayed depending on the selected coordi
 | Symbol | Meaning |
 | --- | --- |
 |  | **Notice** |
-| **Velocity override**  The position of the slider in the "Control" area is adopted as a velocity override in the "<TO>.Override.Velocity" tag of the kinematics technology object.  If the velocity override is set by the user program, the user program overrides the value from the kinematics control panel. If the position of the slider is not equal to zero, then the value from the user program for the velocity override is transferred to the "<TO>.Override.Velocity" tag of the kinematics technology object.  Do not set the velocity override via the user program as long as the kinematics control panel is active. |  |
+| **Velocity override**  The position of the slider in the "Control" area is adopted as a velocity override in the "&lt;TO&gt;.Override.Velocity" tag of the kinematics technology object.  If the velocity override is set by the user program, the user program overrides the value from the kinematics control panel. If the position of the slider is not equal to zero, then the value from the user program for the velocity override is transferred to the "&lt;TO&gt;.Override.Velocity" tag of the kinematics technology object.  Do not set the velocity override via the user program as long as the kinematics control panel is active. |  |
 
 #### Jogging and homing velocity
 
@@ -7528,7 +7528,7 @@ Example:
 
 You can set a value with the slider or enter a value between 1% and 200% directly in the text box below.
 
-When master control is handed over, the last active position of the slider in the "Control" area is transferred as velocity override to the "<TO>.Override.Velocity" tag of the kinematics technology object. This is not influenced by the "Adjust velocity" set factor.
+When master control is handed over, the last active position of the slider in the "Control" area is transferred as velocity override to the "&lt;TO&gt;.Override.Velocity" tag of the kinematics technology object. This is not influenced by the "Adjust velocity" set factor.
 
 ### Jogging the kinematics (S7-1500T)
 
@@ -7683,7 +7683,7 @@ To return the master control to the user program, perform the following steps:
 4. Click "Deactivate".
 
    The master control is returned from the kinematics control panel to the user program.
-5. Set the velocity override to the value required in the user program (<TO>.Override.Velocity).
+5. Set the velocity override to the value required in the user program (&lt;TO&gt;.Override.Velocity).
 
 #### Result
 
@@ -7720,7 +7720,7 @@ This section contains information on the following topics:
 
 #### Structure of the diagnostics (S7-1500T)
 
-The diagnostics of the kinematics in "Technology object > Diagnostics" is divided into the following areas:
+The diagnostics of the kinematics in "Technology object &gt; Diagnostics" is divided into the following areas:
 
 - Graphic display
 - Diagnostics window
@@ -7747,7 +7747,7 @@ You can also move the diagnostics window to a desired position within the graphi
 
 #### Status and error bits (S7-1500T)
 
-With the diagnostics window "Status and error bits" in "Technology object > Diagnostics" you monitor the status and error messages of the technology object in the TIA Portal. The diagnostics function is available in online operation.
+With the diagnostics window "Status and error bits" in "Technology object &gt; Diagnostics" you monitor the status and error messages of the technology object in the TIA Portal. The diagnostics function is available in online operation.
 
 The diagnostics window "Status and error bits" is shown in the graphic display of the diagnostics. You can show the diagnostics window via the ![Figure](images/134697410187_DV_resource.Stream@PNG-de-DE.png) symbol of the toolbar and move the window to a desired position within the graphic display.
 
@@ -7759,13 +7759,13 @@ The following table shows the possible statuses of the kinematics:
 
 | Status | Description |
 | --- | --- |
-| Error | An error occurred at the technology object. Detailed information about the error is available in the "Error" area and in the "<TO>.ErrorDetail.Number" and "<TO>.ErrorDetail.Reaction" tags of the technology object.  (<TO>.StatusWord.X1 (Error)) |
-| Restart active | The technology object is being reinitialized.  (<TO>.StatusWord.X2 (RestartActive)) |
-| Kinematics control panel active | The kinematics control panel is activated. The kinematics control panel has master control over the technology object. The kinematics cannot be controlled from the user program.  (<TO>.StatusWord.X4 (ControlPanelActive)) |
-| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (<TO>.StatusWord.X3 (OnlineStartValuesChanged)) |
-| Valid | The transformation values are valid.  (<TO>.StatusKinematics.Valid) |
-| Simulation active | The kinematics technology object is in simulation.  (<TO>.StatusWord.X19 (InSimulation)) |
-| JCS enabled | The kinematics technology object uses the JCS.  (<TO>.StatusWord.X21 (EnabledJCS)) |
+| Error | An error occurred at the technology object. Detailed information about the error is available in the "Error" area and in the "&lt;TO&gt;.ErrorDetail.Number" and "&lt;TO&gt;.ErrorDetail.Reaction" tags of the technology object.  (&lt;TO&gt;.StatusWord.X1 (Error)) |
+| Restart active | The technology object is being reinitialized.  (&lt;TO&gt;.StatusWord.X2 (RestartActive)) |
+| Kinematics control panel active | The kinematics control panel is activated. The kinematics control panel has master control over the technology object. The kinematics cannot be controlled from the user program.  (&lt;TO&gt;.StatusWord.X4 (ControlPanelActive)) |
+| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (&lt;TO&gt;.StatusWord.X3 (OnlineStartValuesChanged)) |
+| Valid | The transformation values are valid.  (&lt;TO&gt;.StatusKinematics.Valid) |
+| Simulation active | The kinematics technology object is in simulation.  (&lt;TO&gt;.StatusWord.X19 (InSimulation)) |
+| JCS enabled | The kinematics technology object uses the JCS.  (&lt;TO&gt;.StatusWord.X21 (EnabledJCS)) |
 
 ##### "Error"
 
@@ -7773,12 +7773,12 @@ The following table shows the possible errors:
 
 | Error | Description |
 | --- | --- |
-| System | A system-internal error has occurred.  (<TO>.ErrorWord.X0 (SystemFault)) |
-| Configuration | A configuration error has occurred.  One or more configuration parameters are inconsistent or invalid.  The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (<TO>.ErrorWord.X1 (ConfigFault)) |
-| Transformation | A transformation error has occurred.  (<TO>.ErrorWord.X4 (TransformationFault)) |
-| User program | An error has occurred in the user program at a Motion Control instruction or its use (e.g. by the kinematics control panel).  (<TO>.ErrorWord.X2 (UserFault)) |
-| Job rejected | A job cannot be executed.  A Motion Control instruction cannot be executed because necessary requirements have not been met (e.g. technology object not homed).  (<TO>.ErrorWord.X3 (CommandNotAccepted)) |
-| Dynamic limitation | The dynamic values are limited to the dynamic limits.  (<TO>.ErrorWord.X6 (DynamicError)) |
+| System | A system-internal error has occurred.  (&lt;TO&gt;.ErrorWord.X0 (SystemFault)) |
+| Configuration | A configuration error has occurred.  One or more configuration parameters are inconsistent or invalid.  The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (&lt;TO&gt;.ErrorWord.X1 (ConfigFault)) |
+| Transformation | A transformation error has occurred.  (&lt;TO&gt;.ErrorWord.X4 (TransformationFault)) |
+| User program | An error has occurred in the user program at a Motion Control instruction or its use (e.g. by the kinematics control panel).  (&lt;TO&gt;.ErrorWord.X2 (UserFault)) |
+| Job rejected | A job cannot be executed.  A Motion Control instruction cannot be executed because necessary requirements have not been met (e.g. technology object not homed).  (&lt;TO&gt;.ErrorWord.X3 (CommandNotAccepted)) |
+| Dynamic limitation | The dynamic values are limited to the dynamic limits.  (&lt;TO&gt;.ErrorWord.X6 (DynamicError)) |
 
 ##### "Warnings"
 
@@ -7786,9 +7786,9 @@ The following table shows the possible warnings:
 
 | Warning | Description |
 | --- | --- |
-| Configuration | One or more configuration parameters are being internally adapted temporarily.  (<TO>.WarningWord.X1 (ConfigWarning)) |
-| Job rejected | A job cannot be executed.  A Motion Control instruction cannot be executed because the necessary conditions have not been met.  (<TO>.WarningWord.X3 (CommandNotAccepted)) |
-| Dynamic limitation | The dynamic values are limited to the dynamic limits.  (<TO>.WarningWord.X6 (DynamicWarning)) |
+| Configuration | One or more configuration parameters are being internally adapted temporarily.  (&lt;TO&gt;.WarningWord.X1 (ConfigWarning)) |
+| Job rejected | A job cannot be executed.  A Motion Control instruction cannot be executed because the necessary conditions have not been met.  (&lt;TO&gt;.WarningWord.X3 (CommandNotAccepted)) |
+| Dynamic limitation | The dynamic values are limited to the dynamic limits.  (&lt;TO&gt;.WarningWord.X6 (DynamicWarning)) |
 
 ##### "Motion status"
 
@@ -7796,15 +7796,15 @@ The following table shows the possible statuses of the kinematics motion:
 
 | Status | Description |
 | --- | --- |
-| Done (no job running) | There is no active motion job at the technology object.  (<TO>.StatusWord.X6 (Done)) |
-| Linear motion active | There is a linear motion job active at the technology object.  (<TO>.StatusWord.X8 (LinearCommand)) |
-| Circular motion active | There is a circular motion job active at the technology object.  (<TO>.StatusWord.X9 (CircularCommand)) |
-| sPTP motion active | There is a synchronous "point-to-point" motion job active at the technology object.  (<TO>.StatusWord.X11 (DirectCommand)) |
-| Constant velocity | The kinematics is being moved at constant velocity or is at a standstill.  (<TO>.StatusWord.X12 (ConstantVelocity)) |
-| Accelerating | The kinematics is being accelerated.  (<TO>.StatusWord.X13 (Accelerating)) |
-| Decelerating | The kinematics is being decelerated.  (<TO>.StatusWord.X14 (Decelerating)) |
-| Motion interrupted | The active kinematics motion is interrupted by an "MC_GroupInterrupt" command .  (<TO>.StatusWord.X17 (Interrupted)) |
-| Orientation movement active | There is an orientation motion active at the technology object.  (<TO>.StatusWord.X15 (OrientationMotion)) |
+| Done (no job running) | There is no active motion job at the technology object.  (&lt;TO&gt;.StatusWord.X6 (Done)) |
+| Linear motion active | There is a linear motion job active at the technology object.  (&lt;TO&gt;.StatusWord.X8 (LinearCommand)) |
+| Circular motion active | There is a circular motion job active at the technology object.  (&lt;TO&gt;.StatusWord.X9 (CircularCommand)) |
+| sPTP motion active | There is a synchronous "point-to-point" motion job active at the technology object.  (&lt;TO&gt;.StatusWord.X11 (DirectCommand)) |
+| Constant velocity | The kinematics is being moved at constant velocity or is at a standstill.  (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity)) |
+| Accelerating | The kinematics is being accelerated.  (&lt;TO&gt;.StatusWord.X13 (Accelerating)) |
+| Decelerating | The kinematics is being decelerated.  (&lt;TO&gt;.StatusWord.X14 (Decelerating)) |
+| Motion interrupted | The active kinematics motion is interrupted by an "MC_GroupInterrupt" command .  (&lt;TO&gt;.StatusWord.X17 (Interrupted)) |
+| Orientation movement active | There is an orientation motion active at the technology object.  (&lt;TO&gt;.StatusWord.X15 (OrientationMotion)) |
 
 ---
 
@@ -7818,7 +7818,7 @@ The following table shows the possible statuses of the kinematics motion:
 
 #### Zones status (S7-1500T)
 
-Using the diagnostics windows "Status Zones" in "Technology object > Diagnostics", you monitor the status of the workspace zones and the kinematics zones of the technology object in the TIA portal. The diagnostics function is available in online operation.
+Using the diagnostics windows "Status Zones" in "Technology object &gt; Diagnostics", you monitor the status of the workspace zones and the kinematics zones of the technology object in the TIA portal. The diagnostics function is available in online operation.
 
 The diagnostics window "Zones Status" is displayed in the graphic display of the diagnostics. You can show the diagnostics window via the symbol ![Figure](images/134698672267_DV_resource.Stream@PNG-de-DE.png) of the toolbar and move the window to a desired position within the graphic display.
 
@@ -7843,7 +7843,7 @@ You can use the toolbar icon !["Zones status"](images/134699079307_DV_resource.S
 
 #### Motion and tools (S7-1500T)
 
-You monitor the path motions and the tools of the technology object in the TIA Portal using the diagnostics window "Motion and Tools" in "Technology object > Diagnostics". The diagnostics function is available in online operation.
+You monitor the path motions and the tools of the technology object in the TIA Portal using the diagnostics window "Motion and Tools" in "Technology object &gt; Diagnostics". The diagnostics function is available in online operation.
 
 The diagnostics window "Motion and Tools" is shown in the graphic display of the diagnostics. You can show the diagnostics window via the ![Figure](images/134698974347_DV_resource.Stream@PNG-de-DE.png) symbol of the toolbar and move the window to a desired position within the graphic display.
 
@@ -7854,40 +7854,40 @@ The following table describes the meaning of the parameters of the motion and to
 | Status |  |  | Description |  |
 | --- | --- | --- | --- | --- |
 | Path dynamics values |  |  |  |  |
-|  | Limit path dynamics to axis dynamics |  | Dynamic adaptation  (<TO>.StatusPath.DynamicAdaption) |  |
-| Velocity |  | Current path velocity (setpoint reference)  (<TO>.StatusPath.Velocity) |  |  |
-| Acceleration |  | Current path acceleration (setpoint reference)  (<TO>.StatusPath.Acceleration) |  |  |
-| Orientation velocity |  | Resulting orientation velocity  (<TO>.StatusPath.OrientationVelocity) |  |  |
-| Override |  | Percentage correction of the velocity specification  The setpoint velocity set in Motion Control instructions or from the kinematics control panel is superimposed with an override signal and corrected as a percentage. The following values are permitted as velocity correction:  - Path motion: from 0.0% to 200.0% - sPTP motion: from 0.0% to 100.0%   (<TO>.Override.Velocity) |  |  |
+|  | Limit path dynamics to axis dynamics |  | Dynamic adaptation  (&lt;TO&gt;.StatusPath.DynamicAdaption) |  |
+| Velocity |  | Current path velocity (setpoint reference)  (&lt;TO&gt;.StatusPath.Velocity) |  |  |
+| Acceleration |  | Current path acceleration (setpoint reference)  (&lt;TO&gt;.StatusPath.Acceleration) |  |  |
+| Orientation velocity |  | Resulting orientation velocity  (&lt;TO&gt;.StatusPath.OrientationVelocity) |  |  |
+| Override |  | Percentage correction of the velocity specification  The setpoint velocity set in Motion Control instructions or from the kinematics control panel is superimposed with an override signal and corrected as a percentage. The following values are permitted as velocity correction:  - Path motion: from 0.0% to 200.0% - sPTP motion: from 0.0% to 100.0%   (&lt;TO&gt;.Override.Velocity) |  |  |
 | Job sequence |  |  |  |  |
-|  | Existing jobs |  | Current number of jobs for the kinematics technology object in the job sequence.  (<TO>.StatusMotionQueue.NumberOfCommands) |  |
-| Prepared jobs |  | Number of prepared jobs for the kinematics technology object in the job sequence. (<TO>.StatusMotionQueue.NumberOfPreparedCommands) |  |  |
+|  | Existing jobs |  | Current number of jobs for the kinematics technology object in the job sequence.  (&lt;TO&gt;.StatusMotionQueue.NumberOfCommands) |  |
+| Prepared jobs |  | Number of prepared jobs for the kinematics technology object in the job sequence. (&lt;TO&gt;.StatusMotionQueue.NumberOfPreparedCommands) |  |  |
 | Prepared jobs (distance) |  |  |  |  |
-|  | Total path length |  | Total path length of linear and circular path motions  (<TO>.StatusPath.TotalPathLength)  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job - Remaining distance of the motion job - Calculated distance of all jobs in the job sequence |  |
-| Accumulated path length |  | Accumulated path length of linear and circular path motions  (<TO>.StatusPath.AccumulatedPathLength)  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job |  |  |
+|  | Total path length |  | Total path length of linear and circular path motions  (&lt;TO&gt;.StatusPath.TotalPathLength)  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job - Remaining distance of the motion job - Calculated distance of all jobs in the job sequence |  |
+| Accumulated path length |  | Accumulated path length of linear and circular path motions  (&lt;TO&gt;.StatusPath.AccumulatedPathLength)  Sum of:  - Distance of all completed motion jobs - Distance travelled of the active motion job |  |  |
 | Active tool |  |  |  |  |
-|  | Active tool |  | Currently selected tool  (<TO>.StatusTool.ActiveTool) |  |
+|  | Active tool |  | Currently selected tool  (&lt;TO&gt;.StatusTool.ActiveTool) |  |
 | Tool center point in the FCS |  |  |  |  |
-|  | x position |  | x coordinate of the current tool frame in the flange coordinate system (FCS)  (<TO>.StatusTool.Frame[1..3].x) |  |
-| y position |  | y coordinate of the current tool frame in the FCS  (<TO>.StatusTool.Frame[1..3].y) |  |  |
-| z position |  | z coordinate of the current tool frame in the FCS  (<TO>.StatusTool.Frame[1..3].z) |  |  |
-| Rotation A |  | A-coordinate of the current tool frame in the FCS  (<TO>.StatusTool.Frame[1..3].a) |  |  |
-| Rotation B |  | B-coordinate of the current tool frame in the FCS  (<TO>.StatusTool.Frame[1..3].b) |  |  |
-| Rotation C |  | C-coordinate of the current tool frame in the FCS  (<TO>.StatusTool.Frame[1..3].c) |  |  |
+|  | x position |  | x coordinate of the current tool frame in the flange coordinate system (FCS)  (&lt;TO&gt;.StatusTool.Frame[1..3].x) |  |
+| y position |  | y coordinate of the current tool frame in the FCS  (&lt;TO&gt;.StatusTool.Frame[1..3].y) |  |  |
+| z position |  | z coordinate of the current tool frame in the FCS  (&lt;TO&gt;.StatusTool.Frame[1..3].z) |  |  |
+| Rotation A |  | A-coordinate of the current tool frame in the FCS  (&lt;TO&gt;.StatusTool.Frame[1..3].a) |  |  |
+| Rotation B |  | B-coordinate of the current tool frame in the FCS  (&lt;TO&gt;.StatusTool.Frame[1..3].b) |  |  |
+| Rotation C |  | C-coordinate of the current tool frame in the FCS  (&lt;TO&gt;.StatusTool.Frame[1..3].c) |  |  |
 | Joints |  |  |  |  |
-|  | J1 … J6 velocity setpoint |  | Current velocity setpoint of the respective joint J1 to J6  (<TO>.JointData.J[1..6].Velocity) |  |
-| J1 … J6 acceleration setpoint |  | Current acceleration setpoint of joint J1 to J6  (<TO>.JointData.J[1..6].Acceleration) |  |  |
+|  | J1 … J6 velocity setpoint |  | Current velocity setpoint of the respective joint J1 to J6  (&lt;TO&gt;.JointData.J[1..6].Velocity) |  |
+| J1 … J6 acceleration setpoint |  | Current acceleration setpoint of joint J1 to J6  (&lt;TO&gt;.JointData.J[1..6].Acceleration) |  |  |
 | Conveyor tracking |  |  |  |  |
 |  | OCS1 … 3 |  | Active coupled OCS 1, 2 or 3 |  |
-|  | Coupled technology object | Technology object for active conveyor tracking  Leading-value-capable technology objects are:  - Positioning axis - Synchronous axis - External encoder - Leading axis proxy   (<TO>.StatusConveyor[1..3].ConveyorBelt) |  |  |
-| Conveyor position | Conveyor position of the technology object  (<TO>.StatusConveyor[1..3].BeltPosition) |  |  |  |
-| Position of the OCS in x direction | Position of the OCS in x direction on the conveyor  (<TO>.StatusConveyor[1..3].ObjectPosition) |  |  |  |
-| Conveyor tracking status | Conveyor tracking status   (<TO>.StatusConveyor[1..3].TrackingState) |  |  |  |
-| OCS not assigned | The OCS is not assigned to a leading-value-capable technology object.  (<TO>.StatusConveyor[1..3].TrackingState = 0) |  |  |  |
-| OCS assigned | The Motion Control instruction "MC_TrackConveyorBelt" is finished and the OCS is assigned to a leading-value-capable technology object. The first path motion job in the tracked OCS can be sent.  (<TO>.StatusConveyor[1..3].TrackingState = 1) |  |  |  |
-| TCP synchronizes to OCS | The OCS is assigned to a leading-value-capable technology object. The first path motion job in the tracked OCS is active.  (<TO>.StatusConveyor[1..3].TrackingState = 2) |  |  |  |
-| TCP follows OCS | The OSC is assigned to a leading-value-capable technology object.   The position of the OCS is reached. The kinematics is moved with the position of the OCS.  (<TO>.StatusConveyor[1..3].TrackingState = 3) |  |  |  |
-| TCP desynchronizes from OCS | The motion of the kinematics in the tracked OCS is ended by a motion job in the WCS or a non-tracked OCS. When the motion job is completed, the "TrackingState" changes to 0 and the OCS is not tracked with the product position anymore.  (<TO>.StatusConveyor[1..3].TrackingState = 4) |  |  |  |
+|  | Coupled technology object | Technology object for active conveyor tracking  Leading-value-capable technology objects are:  - Positioning axis - Synchronous axis - External encoder - Leading axis proxy   (&lt;TO&gt;.StatusConveyor[1..3].ConveyorBelt) |  |  |
+| Conveyor position | Conveyor position of the technology object  (&lt;TO&gt;.StatusConveyor[1..3].BeltPosition) |  |  |  |
+| Position of the OCS in x direction | Position of the OCS in x direction on the conveyor  (&lt;TO&gt;.StatusConveyor[1..3].ObjectPosition) |  |  |  |
+| Conveyor tracking status | Conveyor tracking status   (&lt;TO&gt;.StatusConveyor[1..3].TrackingState) |  |  |  |
+| OCS not assigned | The OCS is not assigned to a leading-value-capable technology object.  (&lt;TO&gt;.StatusConveyor[1..3].TrackingState = 0) |  |  |  |
+| OCS assigned | The Motion Control instruction "MC_TrackConveyorBelt" is finished and the OCS is assigned to a leading-value-capable technology object. The first path motion job in the tracked OCS can be sent.  (&lt;TO&gt;.StatusConveyor[1..3].TrackingState = 1) |  |  |  |
+| TCP synchronizes to OCS | The OCS is assigned to a leading-value-capable technology object. The first path motion job in the tracked OCS is active.  (&lt;TO&gt;.StatusConveyor[1..3].TrackingState = 2) |  |  |  |
+| TCP follows OCS | The OSC is assigned to a leading-value-capable technology object.   The position of the OCS is reached. The kinematics is moved with the position of the OCS.  (&lt;TO&gt;.StatusConveyor[1..3].TrackingState = 3) |  |  |  |
+| TCP desynchronizes from OCS | The motion of the kinematics in the tracked OCS is ended by a motion job in the WCS or a non-tracked OCS. When the motion job is completed, the "TrackingState" changes to 0 and the OCS is not tracked with the product position anymore.  (&lt;TO&gt;.StatusConveyor[1..3].TrackingState = 4) |  |  |  |
 
 ---
 
@@ -7897,7 +7897,7 @@ The following table describes the meaning of the parameters of the motion and to
 
 #### Positions (S7-1500T)
 
-You monitor the position values of the technology object in the TIA Portal using the diagnostics window "Positions" in "Technology object > Diagnostics". The diagnostics function is available in online operation.
+You monitor the position values of the technology object in the TIA Portal using the diagnostics window "Positions" in "Technology object &gt; Diagnostics". The diagnostics function is available in online operation.
 
 The diagnostics window "Positions" is shown in the graphical display of the diagnostics. You can show the diagnostics window via the ![Figure](images/134698982027_DV_resource.Stream@PNG-de-DE.png) symbol of the toolbar and move the window to a desired position within the graphic display.
 
@@ -7910,24 +7910,24 @@ The following table describes the meaning of the position information:
 | Status |  |  | Description |
 | --- | --- | --- | --- |
 | Coordinate system 1 |  |  | Reference coordinate system  - In "Diagnostics", in "Calibration" and in "Kinematics trace", this field shows the coordinate system that you have selected in the toolbar. - In "Commissioning", this field shows the coordinate system that you have selected in the kinematics control panel. - When you select the kinematics coordinate system (KCS) in the toolbar, the WCS is displayed in the "Positions" window in "Diagnostics" and in "Kinematics trace". |
-|  | x position |  | x coordinate of the active tool in the set coordinate system  (<TO>.Tcp.x; <TO>.TcpInOcs[1..3].x.Position) |
-| y position |  | y coordinate of the active tool in the set coordinate system  (<TO>.Tcp.y; <TO>.TcpInOcs[1..3].y.Position) |  |
-| z position |  | z coordinate of the active tool in the set coordinate system  (<TO>.Tcp.z; <TO>.TcpInOcs[1..3].z.Position) |  |
-| Rotation A |  | A coordinate of the active tool in the set coordinate system  (<TO>.Tcp.a; <TO>.TcpInOcs[1..3].a.Position) |  |
-| Rotation B |  | B coordinate of the active tool in the set coordinate system  (<TO>.Tcp.b; <TO>.TcpInOcs[1..3].b.Position) |  |
-| Rotation C |  | C coordinate of the active tool in the set coordinate system  (<TO>.Tcp.c; <TO>.TcpInOcs[1..3].c.Position) |  |
+|  | x position |  | x coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.x; &lt;TO&gt;.TcpInOcs[1..3].x.Position) |
+| y position |  | y coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.y; &lt;TO&gt;.TcpInOcs[1..3].y.Position) |  |
+| z position |  | z coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.z; &lt;TO&gt;.TcpInOcs[1..3].z.Position) |  |
+| Rotation A |  | A coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.a; &lt;TO&gt;.TcpInOcs[1..3].a.Position) |  |
+| Rotation B |  | B coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.b; &lt;TO&gt;.TcpInOcs[1..3].b.Position) |  |
+| Rotation C |  | C coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.c; &lt;TO&gt;.TcpInOcs[1..3].c.Position) |  |
 | Coordinate system 2 |  |  | Reference coordinate system  In the drop-down list, you can select an additional coordinate system in order to display the actual position of the active tool in this coordinate system. |
 |  | WCS, OCS1, OCS2, OCS3 |  |  |
-|  | x position | x coordinate of the active tool in the set coordinate system  (<TO>.Tcp.x; <TO>.TcpInOcs[1..3].x.Position) |  |
-| y position | y coordinate of the active tool in the set coordinate system  (<TO>.Tcp.y; <TO>.TcpInOcs[1..3].y.Position) |  |  |
-| z position | z coordinate of the active tool in the set coordinate system  (<TO>.Tcp.z; <TO>.TcpInOcs[1..3].z.Position) |  |  |
-| Rotation A | A coordinate of the active tool in the set coordinate system  (<TO>.Tcp.a; <TO>.TcpInOcs[1..3].a.Position) |  |  |
-| Rotation B | B coordinate of the active tool in the set coordinate system  (<TO>.Tcp.b; <TO>.TcpInOcs[1..3].b.Position) |  |  |
-| Rotation C | C coordinate of the active tool in the set coordinate system  (<TO>.Tcp.c; <TO>.TcpInOcs[1..3].c.Position) |  |  |
+|  | x position | x coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.x; &lt;TO&gt;.TcpInOcs[1..3].x.Position) |  |
+| y position | y coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.y; &lt;TO&gt;.TcpInOcs[1..3].y.Position) |  |  |
+| z position | z coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.z; &lt;TO&gt;.TcpInOcs[1..3].z.Position) |  |  |
+| Rotation A | A coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.a; &lt;TO&gt;.TcpInOcs[1..3].a.Position) |  |  |
+| Rotation B | B coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.b; &lt;TO&gt;.TcpInOcs[1..3].b.Position) |  |  |
+| Rotation C | C coordinate of the active tool in the set coordinate system  (&lt;TO&gt;.Tcp.c; &lt;TO&gt;.TcpInOcs[1..3].c.Position) |  |  |
 | MCS |  |  |  |
-|  | A[1..6] | Current position setpoint of axis A[1..6]  (<TO>.Position) |  |
+|  | A[1..6] | Current position setpoint of axis A[1..6]  (&lt;TO&gt;.Position) |  |
 | JCS |  |  |  |
-|  | J[1..6] | Current position setpoint of joint JJ[1..6]  (<TO>.JointData.J[1..6].Position) |  |
+|  | J[1..6] | Current position setpoint of joint JJ[1..6]  (&lt;TO&gt;.JointData.J[1..6].Position) |  |
 
 ---
 
@@ -7954,11 +7954,11 @@ The kinematics trace offers the following functions:
 - Recording, playing and saving kinematic motions
 - Exporting and importing the recordings
 
-You can find the kinematics trace of the kinematics technology object in the project tree under "Technology object > Kinematics trace".
+You can find the kinematics trace of the kinematics technology object in the project tree under "Technology object &gt; Kinematics trace".
 
 ### Defining parameter values for recording (S7-1500T)
 
-You specify the parameter values for the recording under "Technology object > Kinematics trace > Configuration"
+You specify the parameter values for the recording under "Technology object &gt; Kinematics trace &gt; Configuration"
 
 #### Setting the sampling
 
@@ -8080,7 +8080,7 @@ The following functions are available in the list of recordings:
 
 ### Recording and playing kinematics motions (S7-1500T)
 
-For the recording, use the values set under "Technology object > Kinematics trace > Configuration".
+For the recording, use the values set under "Technology object &gt; Kinematics trace &gt; Configuration".
 
 **Switch to live display**
 
@@ -8088,7 +8088,7 @@ You can show the current motion or position of the kinematics with the ![Figure]
 
 #### Requirement
 
-- The kinematics trace was configured under "Technology object > Kinematics trace > Configuration".
+- The kinematics trace was configured under "Technology object &gt; Kinematics trace &gt; Configuration".
 
 #### Record kinematics motion
 
@@ -8213,8 +8213,8 @@ To save the recording as a measurement, proceed as follows:
 1. Select the current recording or a saved recording.
 2. Click on the symbol ![Save recording as measurement](images/134701951883_DV_resource.Stream@PNG-de-DE.png) in the toolbar.
 
-   The recording is saved under "Traces > Measurements".
-3. Open the recording stored under "Traces > Measurements" in the trace.
+   The recording is saved under "Traces &gt; Measurements".
+3. Open the recording stored under "Traces &gt; Measurements" in the trace.
 
    The recorded parameters are displayed in the trace.
 
@@ -8236,12 +8236,12 @@ This section contains information on the following topics:
 
 During calibration, you move a kinematics to relevant points and use the position values to determine the exact position of an object coordinate system (OCS) in the world coordinate system (WCS), to check a predefined OCS in the WCS or to define a workspace zone.
 
-Open calibration under "Technology object > Calibration".
+Open calibration under "Technology object &gt; Calibration".
 
 Alternatively, you can open the calibration to the following type:
 
-- To calibrate an object coordinate system, select an object coordinate system in the selection box under "Technology object > Configuration > Extended parameters > Object coordinate systems" and click the ![Figure](images/158889361803_DV_resource.Stream@PNG-de-DE.png) symbol.
-- To calibrate a workspace zone, go to "Technology object > Configuration > Extended parameters > Zones > Workspace zones" and click the ![Figure](images/158889361803_DV_resource.Stream@PNG-de-DE.png) symbol in the line for the respective workspace zone.
+- To calibrate an object coordinate system, select an object coordinate system in the selection box under "Technology object &gt; Configuration &gt; Extended parameters &gt; Object coordinate systems" and click the ![Figure](images/158889361803_DV_resource.Stream@PNG-de-DE.png) symbol.
+- To calibrate a workspace zone, go to "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones &gt; Workspace zones" and click the ![Figure](images/158889361803_DV_resource.Stream@PNG-de-DE.png) symbol in the line for the respective workspace zone.
 
 #### Requirement
 
@@ -9030,7 +9030,7 @@ The kinematics technology object is correctly configured and connected.
 
 1. In the "Workspace zone" drop-down list, select the zone you want to calibrate.
 
-   If you have opened the calibration for a zone via the symbol ![Configuring zone properties](images/158889361803_DV_resource.Stream@PNG-de-DE.png) in the configuration window "Configuration > Extended parameters > Zones", the corresponding zone is already preselected. If you open the calibration via the project tree, workspace zone 1 is preselected.
+   If you have opened the calibration for a zone via the symbol ![Configuring zone properties](images/158889361803_DV_resource.Stream@PNG-de-DE.png) in the configuration window "Configuration &gt; Extended parameters &gt; Zones", the corresponding zone is already preselected. If you open the calibration via the project tree, workspace zone 1 is preselected.
 2. In the "Status" drop-down list, select the activation status "Active" or "Inactive".
 
    If you select status "Not defined", all other settings in the configuration mask for the calibration are deactivated.
@@ -9232,11 +9232,11 @@ This section contains information on the following topics:
 | RON | Read only:  The tag cannot and must not be changed during runtime of the user program. |  |
 | Description | Description of the tag |  |
 
-Access to the tags is with "<TO>.<tag name>". The placeholder <TO> represents the name of the technology object.
+Access to the tags is with "&lt;TO&gt;.&lt;tag name&gt;". The placeholder &lt;TO&gt; represents the name of the technology object.
 
 #### "Tcp" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.Tcp.<Tag name>" contains the position of the tool center point (TCP), the TCP frame in the World Coordinate System (WCS).
+The tag structure "&lt;TO&gt;.Tcp.&lt;Tag name&gt;" contains the position of the tool center point (TCP), the TCP frame in the World Coordinate System (WCS).
 
 ##### Tags
 
@@ -9260,7 +9260,7 @@ The tag structure "<TO>.Tcp.<Tag name>" contains the position of the tool center
 
 #### "Kinematics" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.Kinematics.<Tag name>" contains the defined kinematics type.
+The tag structure "&lt;TO&gt;.Kinematics.&lt;Tag name&gt;" contains the defined kinematics type.
 
 ##### Tags
 
@@ -9327,7 +9327,7 @@ The tag structure "<TO>.Kinematics.<Tag name>" contains the defined kinematics t
 
 #### "KcsFrame" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.KcsFrame.<Tag name>" contains the frame of the Kinematic Coordinate System (KCS) in the World Coordinate System (WCS).
+The tag structure "&lt;TO&gt;.KcsFrame.&lt;Tag name&gt;" contains the frame of the Kinematic Coordinate System (KCS) in the World Coordinate System (WCS).
 
 ##### Tags
 
@@ -9358,7 +9358,7 @@ The tag structure "<TO>.KcsFrame.<Tag name>" contains the frame of the Kinematic
 
 #### "OcsFrame[1..3]" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.OcsFrame[1..3].<Tag name>" contains the frames of the Object Coordinate Systems 1 to 3 (OCS) in the World Coordinate System (WCS).
+The tag structure "&lt;TO&gt;.OcsFrame[1..3].&lt;Tag name&gt;" contains the frames of the Object Coordinate Systems 1 to 3 (OCS) in the World Coordinate System (WCS).
 
 ##### Tags
 
@@ -9389,7 +9389,7 @@ The tag structure "<TO>.OcsFrame[1..3].<Tag name>" contains the frames of the Ob
 
 #### "Tool[1..3]" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.Tool[1..3].<Tag name>" contains the tool frame in the Flange Coordinate System (FCS).
+The tag structure "&lt;TO&gt;.Tool[1..3].&lt;Tag name&gt;" contains the tool frame in the Flange Coordinate System (FCS).
 
 ##### Tags
 
@@ -9421,7 +9421,7 @@ The tag structure "<TO>.Tool[1..3].<Tag name>" contains the tool frame in the Fl
 
 #### "DynamicDefaults" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.DynamicDefaults.<Tag name>" contains the configuration of the dynamic presets. These settings will be used when you specify a dynamic value less than 0.0 for a Motion Control instruction. Changes to the default dynamics will be applied at the next positive edge at the "Execute" parameter of a Motion Control instruction.
+The tag structure "&lt;TO&gt;.DynamicDefaults.&lt;Tag name&gt;" contains the configuration of the dynamic presets. These settings will be used when you specify a dynamic value less than 0.0 for a Motion Control instruction. Changes to the default dynamics will be applied at the next positive edge at the "Execute" parameter of a Motion Control instruction.
 
 ##### Tags
 
@@ -9458,7 +9458,7 @@ The tag structure "<TO>.DynamicDefaults.<Tag name>" contains the configuration o
 
 #### "DynamicLimits" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.DynamicLimits.<Tag name>" contains the configuration of the dynamic limits. During Motion Control, no dynamic values greater than the dynamic limits are permitted. If you have specified greater values in a Motion Control instruction, then motion is performed using the dynamic limits, and a warning is indicated (alarm 501 to 503 - Dynamic values are limited).
+The tag structure "&lt;TO&gt;.DynamicLimits.&lt;Tag name&gt;" contains the configuration of the dynamic limits. During Motion Control, no dynamic values greater than the dynamic limits are permitted. If you have specified greater values in a Motion Control instruction, then motion is performed using the dynamic limits, and a warning is indicated (alarm 501 to 503 - Dynamic values are limited).
 
 ##### Tags
 
@@ -9486,7 +9486,7 @@ The tag structure "<TO>.DynamicLimits.<Tag name>" contains the configuration of 
 
 #### "Joint" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.Joint.<Tag name>" contains the configuration of the joints for kinematics types with more than four interpolating kinematics axes.
+The tag structure "&lt;TO&gt;.Joint.&lt;Tag name&gt;" contains the configuration of the joints for kinematics types with more than four interpolating kinematics axes.
 
 ##### Tags
 
@@ -9505,7 +9505,7 @@ The tag structure "<TO>.Joint.<Tag name>" contains the configuration of the join
 
 #### "AxisCoupling" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.AxisCoupling.<Tag name>" contains the configuration of the mechanical axis coupling for kinematics types with more than four interpolating kinematics axes.
+The tag structure "&lt;TO&gt;.AxisCoupling.&lt;Tag name&gt;" contains the configuration of the mechanical axis coupling for kinematics types with more than four interpolating kinematics axes.
 
 ##### Tags
 
@@ -9523,7 +9523,7 @@ The tag structure "<TO>.AxisCoupling.<Tag name>" contains the configuration of t
 
 #### "MotionQueue" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.MotionQueue.<Tag name>" contains the configuration of parameters of the job sequence.
+The tag structure "&lt;TO&gt;.MotionQueue.&lt;Tag name&gt;" contains the configuration of parameters of the job sequence.
 
 ##### Tags
 
@@ -9532,7 +9532,7 @@ The tag structure "<TO>.MotionQueue.<Tag name>" contains the configuration of pa
 | Tag |  | Data type | Values | W | Description |
 | --- | --- | --- | --- | --- | --- |
 | MotionQueue. |  | TO_Struct_Kinematics_MotionQueue |  |  |  |
-|  | MaxNumberOfCommands | DINT | 1 to 10 | RON | Maximum number of commands in job sequence  The configuration takes place in "Technology object > Configuration > Extended parameters > Job sequence". |
+|  | MaxNumberOfCommands | DINT | 1 to 10 | RON | Maximum number of commands in job sequence  The configuration takes place in "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence". |
 
 ---
 
@@ -9542,7 +9542,7 @@ The tag structure "<TO>.MotionQueue.<Tag name>" contains the configuration of pa
 
 #### "Transition" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.Transition.<tag name>" contains the configuration of motion jobs.
+The tag structure "&lt;TO&gt;.Transition.&lt;tag name&gt;" contains the configuration of motion jobs.
 
 ##### Tags
 
@@ -9551,14 +9551,14 @@ The tag structure "<TO>.Transition.<tag name>" contains the configuration of mot
 | Tag |  | Data type | Values | W | Description |  |
 | --- | --- | --- | --- | --- | --- | --- |
 | Transition. |  | TO_Struct_Kinematics_Transition |  |  |  |  |
-|  | FactorBlendingLength | LREAL | 0 to 100.0 | DIR | Factor of the maximum rounding distance in percent [%]  The configuration takes place in "Technology object > Configuration > Extended parameters > Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
+|  | FactorBlendingLength | LREAL | 0 to 100.0 | DIR | Factor of the maximum rounding distance in percent [%]  The configuration takes place in "Technology object &gt; Configuration &gt; Extended parameters &gt; Job sequence".  Change the factor in the user program before sending the motion jobs to the job sequence so that the change is effective. |  |
 | = 0.0 | No blending possible |  |  |  |  |  |
-| = 50.0 | Default  This configuration ensures compatibility with projects that are compatible with Motion Control versions < V6.0. |  |  |  |  |  |
+| = 50.0 | Default  This configuration ensures compatibility with projects that are compatible with Motion Control versions &lt; V6.0. |  |  |  |  |  |
 | = 100.0 | Blending possible with complete segment length or motion length |  |  |  |  |  |
 
 #### "Override" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.Override.<Tag name>" contains the configuration of override parameters.
+The tag structure "&lt;TO&gt;.Override.&lt;Tag name&gt;" contains the configuration of override parameters.
 
 ##### Tags
 
@@ -9577,7 +9577,7 @@ The tag structure "<TO>.Override.<Tag name>" contains the configuration of overr
 
 #### "Conveyor" variable (kinematics) (S7-1500T)
 
-The tag structure "<TO>.Conveyor.<tag name>" contains the configuration of the [Dynamic reserve](#dynamic-adaptation-during-conveyor-tracking-s7-1500t) for the conveyor tracking.
+The tag structure "&lt;TO&gt;.Conveyor.&lt;tag name&gt;" contains the configuration of the [Dynamic reserve](#dynamic-adaptation-during-conveyor-tracking-s7-1500t) for the conveyor tracking.
 
 ##### Tags
 
@@ -9591,7 +9591,7 @@ The tag structure "<TO>.Conveyor.<tag name>" contains the configuration of the [
 
 #### "WorkspaceZone[1..10]" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.WorkspaceZone[1..10].<Tag name>" contains the parameter for the workspace zones.
+The tag structure "&lt;TO&gt;.WorkspaceZone[1..10].&lt;Tag name&gt;" contains the parameter for the workspace zones.
 
 ##### Tags
 
@@ -9637,7 +9637,7 @@ The tag structure "<TO>.WorkspaceZone[1..10].<Tag name>" contains the parameter 
 
 #### "KinematicsZone[2..10]" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.KinematicsZone[2..10].<Tag name>" contains the parameters for kinematic zones.
+The tag structure "&lt;TO&gt;.KinematicsZone[2..10].&lt;Tag name&gt;" contains the parameters for kinematic zones.
 
 ##### Tags
 
@@ -9677,7 +9677,7 @@ The tag structure "<TO>.KinematicsZone[2..10].<Tag name>" contains the parameter
 
 #### "StatusPath" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusPath.<Tag name>" contains the parameters of the current kinematics movement. With a synchronous "point-to-point" motion (sPTP motion) the parameters "<TO>.StatusPath.Velocity" and "<TO>.StatusPath.Acceleration" = 0.0.
+The tag structure "&lt;TO&gt;.StatusPath.&lt;Tag name&gt;" contains the parameters of the current kinematics movement. With a synchronous "point-to-point" motion (sPTP motion) the parameters "&lt;TO&gt;.StatusPath.Velocity" and "&lt;TO&gt;.StatusPath.Acceleration" = 0.0.
 
 ##### Tags
 
@@ -9710,7 +9710,7 @@ The tag structure "<TO>.StatusPath.<Tag name>" contains the parameters of the cu
 
 #### "TcpInWcs" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.TcpInWcs.<Tag name>" contains the parameters for the tool center point (TCP) in the World Coordinate System (WCS).
+The tag structure "&lt;TO&gt;.TcpInWcs.&lt;Tag name&gt;" contains the parameters for the tool center point (TCP) in the World Coordinate System (WCS).
 
 ##### Tags
 
@@ -9752,7 +9752,7 @@ The tag structure "<TO>.TcpInWcs.<Tag name>" contains the parameters for the too
 
 #### "TcpInOcs[1..3]" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.TcpInOcs[1..3].<Tag name>" contains the parameters for the tool center point (TCP) in the Object Coordinate Systems 1 to 3 (OCS).
+The tag structure "&lt;TO&gt;.TcpInOcs[1..3].&lt;Tag name&gt;" contains the parameters for the tool center point (TCP) in the Object Coordinate Systems 1 to 3 (OCS).
 
 ##### Tags
 
@@ -9794,7 +9794,7 @@ The tag structure "<TO>.TcpInOcs[1..3].<Tag name>" contains the parameters for t
 
 #### "StatusOcsFrame[1..3]" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusOcsFrame[1..3].<Tag name>" contains the frames of the Object Coordinate Systems 1 to 3 (OCS) in the World Coordinate System (WCS).
+The tag structure "&lt;TO&gt;.StatusOcsFrame[1..3].&lt;Tag name&gt;" contains the frames of the Object Coordinate Systems 1 to 3 (OCS) in the World Coordinate System (WCS).
 
 ##### Tags
 
@@ -9825,7 +9825,7 @@ The tag structure "<TO>.StatusOcsFrame[1..3].<Tag name>" contains the frames of 
 
 #### "StatusKinematics" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusKinematics.<Tag name>" contains the status of the kinematics.
+The tag structure "&lt;TO&gt;.StatusKinematics.&lt;Tag name&gt;" contains the status of the kinematics.
 
 ##### Tags
 
@@ -9872,7 +9872,7 @@ The tag structure "<TO>.StatusKinematics.<Tag name>" contains the status of the 
 
 #### "AxesData" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.AxesData.<Tag name>" contains the setpoints of the kinematics motion for the kinematics axes.
+The tag structure "&lt;TO&gt;.AxesData.&lt;Tag name&gt;" contains the setpoints of the kinematics motion for the kinematics axes.
 
 ##### Tags
 
@@ -9888,7 +9888,7 @@ The tag structure "<TO>.AxesData.<Tag name>" contains the setpoints of the kinem
 
 #### "JointData" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.JointData.<Tag name>" contains the setpoints of the kinematics motion for the joints.
+The tag structure "&lt;TO&gt;.JointData.&lt;Tag name&gt;" contains the setpoints of the kinematics motion for the joints.
 
 ##### Tags
 
@@ -9904,7 +9904,7 @@ The tag structure "<TO>.JointData.<Tag name>" contains the setpoints of the kine
 
 #### "FlangeInKcs" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.FlangeInKcs.<Tag name>" contains the parameters for the Flange Coordinate System (FCS) in the Kinematics Coordinate System (KCS).
+The tag structure "&lt;TO&gt;.FlangeInKcs.&lt;Tag name&gt;" contains the parameters for the Flange Coordinate System (FCS) in the Kinematics Coordinate System (KCS).
 
 ##### Tags
 
@@ -9946,7 +9946,7 @@ The tag structure "<TO>.FlangeInKcs.<Tag name>" contains the parameters for the 
 
 #### "StatusTool" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusTool.<Tag name>" contains the parameters for the tools.
+The tag structure "&lt;TO&gt;.StatusTool.&lt;Tag name&gt;" contains the parameters for the tools.
 
 ##### Tags
 
@@ -9972,7 +9972,7 @@ The tag structure "<TO>.StatusTool.<Tag name>" contains the parameters for the t
 
 #### "StatusConveyor[1..3]" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusConveyor[1..3].<Tag name>" contains the conveyor tracking status.
+The tag structure "&lt;TO&gt;.StatusConveyor[1..3].&lt;Tag name&gt;" contains the conveyor tracking status.
 
 ##### Tags
 
@@ -9999,7 +9999,7 @@ The tag structure "<TO>.StatusConveyor[1..3].<Tag name>" contains the conveyor t
 
 #### "StatusWorkspaceZone[1..10]" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusWorkspaceZone[1..10].<Tag name>" contains the status of the workspace zones.
+The tag structure "&lt;TO&gt;.StatusWorkspaceZone[1..10].&lt;Tag name&gt;" contains the status of the workspace zones.
 
 ##### Tags
 
@@ -10045,7 +10045,7 @@ The tag structure "<TO>.StatusWorkspaceZone[1..10].<Tag name>" contains the stat
 
 #### "StatusKinematicsZone[2..10]" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusKinematicsZone[2..10].<Tag name>" contains the status of the kinematics zones.
+The tag structure "&lt;TO&gt;.StatusKinematicsZone[2..10].&lt;Tag name&gt;" contains the status of the kinematics zones.
 
 ##### Tags
 
@@ -10085,7 +10085,7 @@ The tag structure "<TO>.StatusKinematicsZone[2..10].<Tag name>" contains the sta
 
 #### "StatusZoneMonitoring" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusZoneMonitoring.<Tag name>" contains the status of the violated zones.
+The tag structure "&lt;TO&gt;.StatusZoneMonitoring.&lt;Tag name&gt;" contains the status of the violated zones.
 
 ##### Tags
 
@@ -10107,7 +10107,7 @@ The tag structure "<TO>.StatusZoneMonitoring.<Tag name>" contains the status of 
 
 #### "StatusMotionQueue" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusMotionQueue.<Tag name>" contains the status of the job sequence.
+The tag structure "&lt;TO&gt;.StatusMotionQueue.&lt;Tag name&gt;" contains the status of the job sequence.
 
 ##### Tags
 
@@ -10127,7 +10127,7 @@ The tag structure "<TO>.StatusMotionQueue.<Tag name>" contains the status of the
 
 #### "KinematicsAxis" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.KinematicsAxis.<Tag name>" contains the defined kinematics axes.
+The tag structure "&lt;TO&gt;.KinematicsAxis.&lt;Tag name&gt;" contains the defined kinematics axes.
 
 ##### Tags
 
@@ -10145,7 +10145,7 @@ The tag structure "<TO>.KinematicsAxis.<Tag name>" contains the defined kinemati
 
 #### "Units" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.Units.<Tag name>" contains the configured technological units of measure.
+The tag structure "&lt;TO&gt;.Units.&lt;Tag name&gt;" contains the configured technological units of measure.
 
 ##### Tags
 
@@ -10199,7 +10199,7 @@ The tag structure "<TO>.Units.<Tag name>" contains the configured technological 
 
 #### "StatusInterpreterMotion" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.StatusInterpreterMotion.<tag name>" contains status information on motion jobs controlled by a technology object Interpreter.
+The tag structure "&lt;TO&gt;.StatusInterpreterMotion.&lt;tag name&gt;" contains status information on motion jobs controlled by a technology object Interpreter.
 
 ##### Tags
 
@@ -10215,7 +10215,7 @@ The tag structure "<TO>.StatusInterpreterMotion.<tag name>" contains status info
 
 #### "StatusWord" tag (kinematics) (S7-1500T)
 
-The "<TO>.StatusWord" tag contains the status information of the technology object.
+The "&lt;TO&gt;.StatusWord" tag contains the status information of the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 2 "RestartActive") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -10256,7 +10256,7 @@ Information on the evaluation of the individual bits (e.g. bit 2 "RestartActive"
 
 #### "ErrorWord" tag (kinematics) (S7-1500T)
 
-The "<TO>.ErrorWord" tag indicates technology object errors (technology alarms).
+The "&lt;TO&gt;.ErrorWord" tag indicates technology object errors (technology alarms).
 
 Information on the evaluation of the individual bits (e.g. bit 3 "CommandNotAccepted") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -10280,7 +10280,7 @@ Information on the evaluation of the individual bits (e.g. bit 3 "CommandNotAcce
 
 #### "ErrorDetail" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.ErrorDetail.<Tag name>" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
+The tag structure "&lt;TO&gt;.ErrorDetail.&lt;Tag name&gt;" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
 
 You can find a list of the technology alarms and alarm responses in the "[Overview of the technology alarms](S7-1500-S7-1500T%20Motion%20Control%20alarms%20and%20error%20IDs%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-the-technology-alarms-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control alarms and error IDs" documentation.
 
@@ -10299,7 +10299,7 @@ You can find a list of the technology alarms and alarm responses in the "[Overvi
 
 #### "WarningWord" tag (kinematics) (S7-1500T)
 
-The "<TO>.WarningWord" tag indicates pending warnings at the technology object.
+The "&lt;TO&gt;.WarningWord" tag indicates pending warnings at the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 2 "UserFault") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control overview" documentation.
 
@@ -10321,7 +10321,7 @@ Information on the evaluation of the individual bits (e.g. bit 2 "UserFault") ca
 
 #### "ControlPanel" tag (kinematics) (S7-1500T)
 
-The tag structure "<TO>.ControlPanel.<tag name>" contains no relevant data for you. This tag structure is internally used.
+The tag structure "&lt;TO&gt;.ControlPanel.&lt;tag name&gt;" contains no relevant data for you. This tag structure is internally used.
 
 ##### Tags
 

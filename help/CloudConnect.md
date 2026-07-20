@@ -85,7 +85,7 @@ For compatibility of CP and third-party device, see:
 
 #### Secure communication certificate ‑
 
-If you want to use secured cloud communication, select "MQTT over TLS" option under "Security > CloudConnect > Broker configuration".
+If you want to use secured cloud communication, select "MQTT over TLS" option under "Security &gt; CloudConnect &gt; Broker configuration".
 
 In this parameter group you specify the broker certificate to be used, which you have previously imported in the global security settings and assigned to the CP.
 
@@ -100,12 +100,12 @@ For information on the configuration, see ["CloudConnect" parameter group](#clou
 1. To allow the cloud application to access the process image, create the required data blocks and DB variables in the local CPU.
 
    The configured data points of the topics/groups access DB variables of the CPU, see section [Operand areas and tags](#operand-areas-and-tags).
-2. First, configure the parameter groups for the CP under "Security > Cloud access" in the Inspector window.
+2. First, configure the parameter groups for the CP under "Security &gt; Cloud access" in the Inspector window.
 
    To do this, create at least one user with the role "NET Administrator" in the Global Security settings.
 3. Expand the project tree:
 
-   Station > Local modules > CP 1545-1 > Cloud connection >  
+   Station &gt; Local modules &gt; CP 1545-1 &gt; Cloud connection &gt;  
         "Published topics" / "Subscribed topics" or  
         "Published groups"
 
@@ -139,7 +139,7 @@ Observe the following rules for configuration:
 
     The number of variables in the DB is not limited.
 
-    When you create arrays, only elements/tags of arrays with a maximum size of < 10000 elements can be published.
+    When you create arrays, only elements/tags of arrays with a maximum size of &lt; 10000 elements can be published.
 - **Topics / Groups**
 
   - Quantity
@@ -296,12 +296,12 @@ If you disable the security functions later, note that all previously configured
 
   - Import the partner certificate:
 
-    Global security settings > Certificate manager > Trusted certificates > right mouse click
+    Global security settings &gt; Certificate manager &gt; Trusted certificates &gt; right mouse click
   - Assign the certificate to the CP:
 
-    Select certificate in the "Trusted certificates" list > right mouse click
+    Select certificate in the "Trusted certificates" list &gt; right mouse click
 
-    The certificate appears in the "Certificates of the partner devices" list on the CP in the parameter group "Security > Certificate manager".
+    The certificate appears in the "Certificates of the partner devices" list on the CP in the parameter group "Security &gt; Certificate manager".
   - Now select the imported certificate in the "Broker certificate" drop-down list.
 - **Broker address**
 
@@ -330,7 +330,7 @@ If you disable the security functions later, note that all previously configured
   - Exporting the certificate of the CP or the STEP 7 project
 
     For the CP certificate to be used, the CA certificate of the TIA project must be imported to the cloud server as trusted certificate. To do so, export the CA certificate with the matching hash algorithm from the global security settings:  
-    "Security settings > Security features > Certificate manager > Certificate Authority (CA)" > Certificate selection > Shortcut menu "Export".
+    "Security settings &gt; Security features &gt; Certificate manager &gt; Certificate Authority (CA)" &gt; Certificate selection &gt; Shortcut menu "Export".
 
     Then transfer the certificate to the cloud server.
   - Importing the certificate of the communication partner
@@ -338,7 +338,7 @@ If you disable the security functions later, note that all previously configured
     You must import the respective certificate from the communication partner as a trusted certificate into your STEP 7 project. To do this, follow these steps:
 
     Save the certificate in the file system of the STEP 7 project computer. Import the certificate in the global security settings:  
-    "Security settings > Security features > Certificate manager > Trusted certificates and root certification authorities" > Selection of an empty table row > Shortcut menu "Import".
+    "Security settings &gt; Security features &gt; Certificate manager &gt; Trusted certificates and root certification authorities" &gt; Selection of an empty table row &gt; Shortcut menu "Import".
 
     The procedure depends on the cloud being used.
 
@@ -362,7 +362,7 @@ If you disable the security functions later, note that all previously configured
   >
   > It is recommended that you enable the parameter.
   >
-  > If QoS is configured with a value > 0 and "Clean session" is disabled, unclear situations can arise in the event of connection aborts with respect to pending acknowledgments.
+  > If QoS is configured with a value &gt; 0 and "Clean session" is disabled, unclear situations can arise in the event of connection aborts with respect to pending acknowledgments.
 
 #### Broker monitoring
 
@@ -451,7 +451,7 @@ Open the Topic editor as follows:
 
 1. Expand the project tree:
 
-   Station > Local modules > CP 1545-1 > Cloud connection >
+   Station &gt; Local modules &gt; CP 1545-1 &gt; Cloud connection &gt;
 
    - "Published topics" / "Subscribed topics" or
    - "Published groups"
@@ -486,7 +486,7 @@ Open the export dialog in the following way:
 
 1. Expand the project tree:
 
-   Station > Local modules > CP 1545-1 > Cloud connection
+   Station &gt; Local modules &gt; CP 1545-1 &gt; Cloud connection
 2. In the shortcut menu of the "Cloud connection" entry, click on "Export CloudConnect Data".
 
    The window for exporting the XML file opens.
@@ -521,7 +521,7 @@ The easiest way to achieve the same DBs in the source and target device is as fo
 1. Copy the DB of the CPU of the source device from which you have exported the CloudConnect data.
 2. Paste the copied DB into the CPU of the target device.
 
-The import procedure is equivalent to the export procedure: Shortcut menu of "Cloud connection" > "Import CloudConnect Data"
+The import procedure is equivalent to the export procedure: Shortcut menu of "Cloud connection" &gt; "Import CloudConnect Data"
 
 If there is already CloudConnect data in the target device, you are asked whether you want the existing data to be retained or overwritten.
 
@@ -535,7 +535,7 @@ If there is already CloudConnect data in the target device, you are asked whethe
 | `<TimeTrigger> <Cyclic>`     or     `<TimeTrigger> <Date>` | - CycleTime - Frequency - TimeOfTheDay - Weekday - DayOfTheMonth | - Integer; 10-4294967295, ms - String; Daily, Weekly, Monthly - Integer; 0-1439, minutes (00:00 - 23:59 in minutes) - String; Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday - Integer; 1-31 | - Required for element `TimeTrigger > Cyclic` Required for element `TimeTrigger > Date` - Optional - Optional - Optional |
 | `<DataPoints> <DataPoint> <General>`    `<DataPoints> <DataPoint> <General> <Tag>` | - Name | - String - String | - Required - Optional |
 | `<DataPoints> <DataPoint> <ValueTrigger>` | - Type - Value - RangeLow - RangeHigh | - String; Deviation, Lower Threshold, Upper Threshold, Outside Range, Inside Range - String - String - String | - Required for element `ValueTrigger` - Optional - Optional - Optional |
-| `<Payload>` | - Format - Customize | - String; XML, JSON, MindConnect IoT Extension, Custom - Boolean; true, false - <![CDATA[Permitted content see section [Payload formats](#payload-formats)]]> | - Required - Optional - Optional |
+| `<Payload>` | - Format - Customize | - String; XML, JSON, MindConnect IoT Extension, Custom - Boolean; true, false - &lt;![CDATA[Permitted content see section [Payload formats](#payload-formats)]]&gt; | - Required - Optional - Optional |
 | `<SubscribedTopic>` |  |  |  |
 | `<General>` | - Name - Author - Comment | - String - String - String | - Required - Optional - Optional |
 | `<QoS>` |  | Integer; 0-2 | Optional |
@@ -792,7 +792,7 @@ This section contains information on the following topics:
 
 You open the Topic editor via the project tree:
 
-Station > Local modules > CP 1545-1 > Cloud connection >  
+Station &gt; Local modules &gt; CP 1545-1 &gt; Cloud connection &gt;  
      "Published topics" / "Subscribed topics" or "Published groups"
 
 **Data point configuration in the topic editor**
@@ -862,7 +862,7 @@ For writable tags, the "Writable from HMI/OPC UA/Web API" attribute also needs t
 
 ##### Inserting data points in a topic / group
 
-1. Open the desired topics or the group (Project tree > Station > Local modules > CP > "Cloud connection").
+1. Open the desired topics or the group (Project tree &gt; Station &gt; Local modules &gt; CP &gt; "Cloud connection").
 
    The topic editor opens.
 2. Click in the first free row of the table (Add tag).
@@ -898,7 +898,7 @@ You can create multiple data points in one step in the following way:
    The content is displayed in the "Detail view" window under the project tree.
 5. In the detail view, select all tags that you want to use for the assignment to data points.
 
-   (Multiple selection with <Shift> or <Ctrl>)
+   (Multiple selection with &lt;Shift&gt; or &lt;Ctrl&gt;)
 6. Drag-and-drop the selected tags into the table of the topic editor.
 
 ![Inserting data points in a topic / group](images/154106529931_DV_resource.Stream@PNG-en-US.png)
@@ -919,7 +919,7 @@ When configuring the data points, note the information under [Permitted Characte
 
   ⇒ Validity: MindConnect IoT Extension
 
-  The attribute is applied to the payload as <ADDITIONAL_ATTRIBUTE>; see section [Payload configuration](#payload-configuration).
+  The attribute is applied to the payload as &lt;ADDITIONAL_ATTRIBUTE&gt;; see section [Payload configuration](#payload-configuration).
 
   With a connection to IoT Extension, the attribute is interpreted as a label of the physical units of the respective data point. The standard units are:
 
@@ -953,11 +953,11 @@ The table lists the configurable data types.
 
 If needed, check whether the data types are supported by your broker.
 
-<DATAPOINT_TYPE> indicates the data type during publication. For the publication of the useful data and the tag, <DATAPOINT_TYPE> see section [Payload configuration](#payload-configuration).
+&lt;DATAPOINT_TYPE&gt; indicates the data type during publication. For the publication of the useful data and the tag, &lt;DATAPOINT_TYPE&gt; see section [Payload configuration](#payload-configuration).
 
 Data types available for Cloud access
 
-| S7 data types (bits) | <DATAPOINT_TYPE> | Remarks |
+| S7 data types (bits) | &lt;DATAPOINT_TYPE&gt; | Remarks |
 | --- | --- | --- |
 | BOOL (1) | BOOL | Values transferred: 0, 1 |
 | BYTE (8) | UINT8 |  |
@@ -1391,8 +1391,8 @@ The following sequences are not permitted in the payload content:
 - {{#
 - {{^
 - {{/
-- {{>
-- {{&
+- {{&gt;
+- {{&amp;
 - {{{
 
 ##### Example of transferred payload (JSON)

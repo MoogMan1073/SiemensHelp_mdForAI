@@ -95,7 +95,7 @@ IPE file is available.
 
    ![Procedure](images/74751679371_DV_resource.Stream@PNG-en-US.png)
 
-   A new device is created in the "Devices & Networks" editor.
+   A new device is created in the "Devices &amp; Networks" editor.
 3. Select the device proxy in the project tree.
 4. Click "Initialize device proxy" in the shortcut menu.
 
@@ -196,7 +196,7 @@ Project file (*.ap*) is available.
 
    ![Procedure](images/74751679371_DV_resource.Stream@PNG-en-US.png)
 
-   A new device is created in the "Devices & Networks" editor.
+   A new device is created in the "Devices &amp; Networks" editor.
 3. Select the device proxy in the project tree.
 4. Click "Initialize device proxy" in the shortcut menu.
 
@@ -292,7 +292,7 @@ The communication between connection partners is possible via the following conn
 
 #### Setting network parameters
 
-In the TIA Portal, you connect the HMI device and the device proxy PLC in the "Devices & Networks" editor.
+In the TIA Portal, you connect the HMI device and the device proxy PLC in the "Devices &amp; Networks" editor.
 
 Once you have connected an HMI device with the device proxy PLC, adapt the properties of the network parameters. Note the   
 network parameters from the source project and enter them in the properties of the network connection between the device proxy PLC and the HMI device.
@@ -318,7 +318,7 @@ Modules with communication capability (CPUs or CPs) used to establish gateways b
 
 The S7 routing settings can be edited in the relevant interface properties.
 
-You can configure the S7 routing connection in the "Devices & Networks" editor.
+You can configure the S7 routing connection in the "Devices &amp; Networks" editor.
 
 > **Note**
 >
@@ -332,7 +332,7 @@ The routing path is determined in Runtime by the system and cannot be influenced
 
 #### Introduction
 
-In the target project, configure a direct connection between a device proxy PLC and an HMI device in "Devices & Networks" editor.   
+In the target project, configure a direct connection between a device proxy PLC and an HMI device in "Devices &amp; Networks" editor.   
 The following configuration describes a network for the following communication partners:
 
 - HMI device
@@ -359,9 +359,9 @@ The following configuration describes a network for the following communication 
    ![Procedure](images/72089327883_DV_resource.Stream@PNG-en-US.png)
 4. Transfer the parameters that you noted from the source project into the parameters of the TIA project:
 
-   - Enter the S7 subnet ID under "Properties > General".
-   - Enter the highest address and the transmission rate under "Properties > Network Settings".
-   - Enter the bus parameters under "Properties > Bus parameters".
+   - Enter the S7 subnet ID under "Properties &gt; General".
+   - Enter the highest address and the transmission rate under "Properties &gt; Network Settings".
+   - Enter the bus parameters under "Properties &gt; Bus parameters".
 
 ### Configuring a routed connection
 
@@ -411,9 +411,9 @@ The following configuration describes a network for the following communication 
    ![Procedure](images/72095019787_DV_resource.Stream@PNG-en-US.png)
 8. Transfer the parameters that you noted from the source project into the parameters of the TIA project:
 
-   - Enter the S7 subnet ID under "Properties > General".
-   - Enter the highest address and the transmission rate under "Properties > Network Settings".
-   - Enter the bus parameters under "Properties > Bus parameters".
+   - Enter the S7 subnet ID under "Properties &gt; General".
+   - Enter the highest address and the transmission rate under "Properties &gt; Network Settings".
+   - Enter the bus parameters under "Properties &gt; Bus parameters".
 
 #### Result
 
@@ -494,7 +494,7 @@ A connection to a CPU within the SIMATIC Manager is established through the init
 
 1. Open the device configuration of the device proxy PLC.
 2. Select "Device view"".
-3. Open "Properties > General > General > Device proxy information".
+3. Open "Properties &gt; General &gt; General &gt; Device proxy information".
 
    The original name is displayed under "Proxy source".
 
@@ -549,17 +549,17 @@ Record the parameters in the STEP 7 project and enter these in the TIA Portal at
 7. If you adapt the PROFIBUS connection, select the "Bus Parameters" button in the "Properties - PROFIBUS" window under "Network settings".
 
    Note the bus parameters listed there.
-8. In "Devices & Networks" editor of the TIA Portal, select the network connection between the device proxy PLC and the HMI device.
-9. Select the "User-defined" profile under "Properties > General> Network Settings".
+8. In "Devices &amp; Networks" editor of the TIA Portal, select the network connection between the device proxy PLC and the HMI device.
+9. Select the "User-defined" profile under "Properties &gt; General&gt; Network Settings".
 
    ![Adapting network parameters](images/74946867595_DV_resource.Stream@PNG-en-US.png)
 
    ![Adapting network parameters](images/74946867595_DV_resource.Stream@PNG-en-US.png)
 10. Transfer the parameters that you noted from the STEP 7 configuration into the parameters of the TIA project:
 
-    - Enter the S7 subnet ID under "Properties > General".
-    - Enter the highest address and the transmission rate under "Properties > Network Settings".
-    - Enter the bus parameters under "Properties > Bus parameters".
+    - Enter the S7 subnet ID under "Properties &gt; General".
+    - Enter the highest address and the transmission rate under "Properties &gt; Network Settings".
+    - Enter the bus parameters under "Properties &gt; Bus parameters".
 
     ![Adapting network parameters](images/71762527627_DV_resource.Stream@PNG-en-US.png)
 
@@ -587,7 +587,7 @@ The following tools are available for determining and repairing the inconsistent
 3. Select the "Check block consistency..." entry from the shortcut menu.
 
    The "Check block consistency" editor opens.
-4. Select the "Program > Compile" command from the menu.
+4. Select the "Program &gt; Compile" command from the menu.
 
    Inconsistencies in the blocks are corrected automatically and objects are compiled.
 5. If an inconsistency cannot be corrected automatically, an error message is output. By double-clicking the error message you jump to the faulty object. Correct the inconsistencies manually and save the project afterwards.
@@ -662,11 +662,11 @@ In WinCC, you insert tags of the device proxy PLC directly into an HMI screen or
 1. Open the folder with the program blocks of the device proxy PLC in the project tree.
 2. Select the block that contains the tags.
 3. All the tags of the selected block are displayed in the detail view.
-4. Drag&drop the tag from the detail view into the working area.
+4. Drag&amp;drop the tag from the detail view into the working area.
 
    An I/O field with the selected tag is created. Carry out further settings in the Inspector window.
 
-Alternatively configure an I/O field in the HMI screen and drag&drop the tag into the I/O field.
+Alternatively configure an I/O field in the HMI screen and drag&amp;drop the tag into the I/O field.
 
 #### Result
 
@@ -683,7 +683,7 @@ The required GSD/GSDM files for WinCC are located in [FAQs mutual configuration 
 #### Installing GSD files
 
 1. Open the hardware configuration in the SIMATIC Manager.
-2. Select the "Options > Install New GSD Files" menu command.   
+2. Select the "Options &gt; Install New GSD Files" menu command.   
    The "Install GSD files" dialog is displayed.
 3. Use the "Browse" button to select the file folder that contains the GSD files.
 4. Mark all the files and click the "Install" command button.
@@ -692,16 +692,16 @@ The required GSD/GSDM files for WinCC are located in [FAQs mutual configuration 
 
 **PROFINET / PROFIBUS storage paths in the SIMATIC Manager**
 
-The GSDML files for the HMI devices are located in the hardware catalog under „PROFINET IO > HMI > SIMATIC HMI > GSD > KP/x“.
+The GSDML files for the HMI devices are located in the hardware catalog under „PROFINET IO &gt; HMI &gt; SIMATIC HMI &gt; GSD &gt; KP/x“.
 
-The GSD files for the HMI devices are located in the hardware catalog under „PROFIBUS DP > Weitere FELDGERÄTE > MMI > SIMATIC_HMI > HMI CP_x“.
+The GSD files for the HMI devices are located in the hardware catalog under „PROFIBUS DP &gt; Weitere FELDGERÄTE &gt; MMI &gt; SIMATIC_HMI &gt; HMI CP_x“.
 
 #### PROFINET connection: PROFINET IO direct keys
 
 1. Note the properties used for the HMI device to be replaced.   
    Take particular note of I/O addresses, device name, device number and diagnostic addresses if these are evaluated.
 2. Remove the existing GSD file.
-3. Drag&Drop the configured HMI device type from the hardware catalog onto the displayed PROFINET IO bus.
+3. Drag&amp;Drop the configured HMI device type from the hardware catalog onto the displayed PROFINET IO bus.
 4. Adapt the properties as noted.
 5. Confirm the entries with OK.
 6. Save and compile the configuration and transfer the hardware configuration to the controller.
@@ -710,7 +710,7 @@ The GSD files for the HMI devices are located in the hardware catalog under „P
 
    ![PROFINET connection: PROFINET IO direct keys](images/67707017867_DV_resource.Stream@PNG-en-US.png)
 7. Open the device configuration of the TP1200 Comfort and change to the "Device view".
-8. Enter the PROFINET device name in the properties of the configured HMI device in WinCC under "Properties > General > PROFINET interface X1 > Ethernet addresses".
+8. Enter the PROFINET device name in the properties of the configured HMI device in WinCC under "Properties &gt; General &gt; PROFINET interface X1 &gt; Ethernet addresses".
 
    To assign the PROFINET device name, deselect the option "Generate PROFINET device name automatically".
 
@@ -744,7 +744,7 @@ Please note that the direct keys are configured in the SIMATIC Manager.
 
    ![PROFIBUS connection: PROFIBUS DP direct keys](images/67707949451_DV_resource.Stream@PNG-en-US.png)
 7. Open the device configuration of the HMI device that you want to use and change to the "Device view".
-8. Network the PROFIBUS interface in the properties of the configured HMI device under "Properties > General > MPI/DP interface X2 > PROFIBUS address > Network interface with".
+8. Network the PROFIBUS interface in the properties of the configured HMI device under "Properties &gt; General &gt; MPI/DP interface X2 &gt; PROFIBUS address &gt; Network interface with".
 9. Specify the PROFIBUS address at "Parameters".
 
 **Note**

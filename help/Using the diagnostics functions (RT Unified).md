@@ -50,20 +50,20 @@ To activate the system diagnostics in a controller, proceed as follows:
 
 1. Open the "Device configuration" of the controller in the project tree.
 2. In the "Device view" tab, select the CPU on the rack.
-3. Select "Properties > General > System diagnostics" in the Inspector window.
+3. Select "Properties &gt; General &gt; System diagnostics" in the Inspector window.
 4. Activate the option "Activate system diagnostics for this device".
 
    ![Activating system diagnostics in the controller](images/160590470027_DV_resource.Stream@PNG-en-US.png)
 
    ![Activating system diagnostics in the controller](images/160590470027_DV_resource.Stream@PNG-en-US.png)
-5. Right-click the controller in the project tree and select "Compile > Hardware (rebuild all)" in the shortcut menu.
+5. Right-click the controller in the project tree and select "Compile &gt; Hardware (rebuild all)" in the shortcut menu.
 
 #### Activating system diagnostics on the HMI device
 
 To activate the system diagnostics on an HMI device, proceed as follows:
 
 1. Open the "Runtime settings" of the HMI device in the project tree.
-2. Activate the option "System diagnostics" under "Alarms > Controller alarms and diagnostics".
+2. Activate the option "System diagnostics" under "Alarms &gt; Controller alarms and diagnostics".
 
    ![Activating system diagnostics on the HMI device](images/160592090507_DV_resource.Stream@PNG-en-US.png)
 
@@ -103,7 +103,7 @@ System diagnostics for RT Unified provides 3 pre-programmed dynamic SVGs for S7-
 
 To create a diagnostics indicator, proceed as follows:
 
-1. Open the "Toolbox" and find "IndustryGraphicLibrary > Dynamic widgets > SIMATIC > SystemDiagnostic" ④.
+1. Open the "Toolbox" and find "IndustryGraphicLibrary &gt; Dynamic widgets &gt; SIMATIC &gt; SystemDiagnostic" ④.
 2. Select one of the 3 pre-programmed SVGs:
 
    - "SysDiag_DiagnosticsIndicator"
@@ -130,7 +130,7 @@ In the "Global libraries" task card, the system diagnostics contains screen obje
 
 ![Global libraries](images/161468390027_DV_resource.Stream@PNG-en-US.png)
 
-Under "Global libraries > Buttons-and-Switches > Master copies > DiagnosticsButtons > RT Unified", three pre-programmed dynamic SVGs are available which you can drag-and-drop into an open screen:
+Under "Global libraries &gt; Buttons-and-Switches &gt; Master copies &gt; DiagnosticsButtons &gt; RT Unified", three pre-programmed dynamic SVGs are available which you can drag-and-drop into an open screen:
 
 - "DiagnosticIndicator"
 - "SignalLamp"
@@ -205,7 +205,7 @@ To assign a style, follow these steps:
 1. Open the Runtime settings of the HMI device.
 
    ![Setting pre-defined styles](images/161482966923_DV_resource.Stream@PNG-en-US.png)
-2. In the "General > Screen > Selected style" tab, select one of the following options:
+2. In the "General &gt; Screen &gt; Selected style" tab, select one of the following options:
 
    "Bright style", "Extended style" or "Dark style" to use the style.
 
@@ -325,7 +325,7 @@ You can use the "System diagnostics control" object to display the diagnostic st
 
 #### Defining the properties of the system diagnostics control
 
-You define the properties of the system diagnostics control in the Inspector window under "Properties > Properties".
+You define the properties of the system diagnostics control in the Inspector window under "Properties &gt; Properties".
 
 ![Defining the properties of the system diagnostics control](images/160544793227_DV_resource.Stream@PNG-en-US.png)
 
@@ -333,7 +333,7 @@ You define the properties of the system diagnostics control in the Inspector win
 
 You select the view type in the following way:
 
-1. Click "Properties > Properties > General > View type" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; General &gt; View type" in the Inspector window.
 2. Select between the "Matrix view", "Diagnostic view" and the "Distributed I/O view".
 
 Selection of the matrix view as start view is recommended. From the matrix view, you can switch to the diagnostic view using the corresponding button in the toolbar.
@@ -344,7 +344,7 @@ With the matrix view, you have the possibility to check the status of your PLCs 
 
 All hardware components are displayed as tiles. You can configure the display as well as the content of the tiles:
 
-Make the settings for hardware details and tiles under "Properties > Properties > General > Matrix view".
+Make the settings for hardware details and tiles under "Properties &gt; Properties &gt; General &gt; Matrix view".
 
 ![Selecting the view type](images/160598299403_DV_resource.Stream@PNG-en-US.png)
 
@@ -354,7 +354,7 @@ The diagnostic view shows the diagnostic buffer of the PLC with the diagnostic e
 
 It is not possible to switch between different PLCs in Runtime. Navigating to the diagnostic view via the selected PLC in the matrix view is recommended.
 
-Under "Properties > Properties > General > Diagnostic view", you make the settings for the rows, header, grid lines, scroll bar, cells and columns.
+Under "Properties &gt; Properties &gt; General &gt; Diagnostic view", you make the settings for the rows, header, grid lines, scroll bar, cells and columns.
 
 ![Selecting the view type](images/160598250123_DV_resource.Stream@PNG-en-US.png)
 
@@ -374,7 +374,7 @@ If you change the device version from 18.00.01.01 to 18.00.01.00, the matrix vie
 
 To set up the column sorting in the diagnostic view, follow these steps:
 
-1. In the Inspector window, click "Properties > Properties > General > Diagnostic view > Columns > [0] Column".
+1. In the Inspector window, click "Properties &gt; Properties &gt; General &gt; Diagnostic view &gt; Columns &gt; [0] Column".
 2. Select the sorting direction and sorting order for the individual columns.
 
 #### Dynamization of graphic properties with tags or scripts
@@ -386,7 +386,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 #### Access protection in Runtime
 
-Configure access protection with the property "Operator control - allow" in the Inspector window under "Properties > Properties > Security". A logged-in user having the required authorization can acknowledge and edit the system diagnostics control using the buttons in the system diagnostics control.
+Configure access protection with the property "Operator control - allow" in the Inspector window under "Properties &gt; Properties &gt; Security". A logged-in user having the required authorization can acknowledge and edit the system diagnostics control using the buttons in the system diagnostics control.
 
 #### Configuring the information bar
 
@@ -396,12 +396,12 @@ The connection status is not displayed while the PLC is starting.
 
 To configure the information bar, follow these steps:
 
-1. Configure the general properties of the information bar, such as the font and background color, under "Properties > Properties > Miscellaneous > Information bar".
-2. Configure the display of the information bar elements under "Properties > Properties > Miscellaneous > Information bar > Elements".
+1. Configure the general properties of the information bar, such as the font and background color, under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar".
+2. Configure the display of the information bar elements under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar &gt; Elements".
 
 #### Toolbar
 
-You can define the buttons of the system diagnostics control in Runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the system diagnostics control in Runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the system diagnostics control:
 
@@ -419,7 +419,7 @@ The following buttons are available for the system diagnostics control:
 
 #### Setting the time zone
 
-Under Properties > Properties > Miscellaneous > Time zone, you set the desired time zone by entering a decimal value for the time zone.
+Under Properties &gt; Properties &gt; Miscellaneous &gt; Time zone, you set the desired time zone by entering a decimal value for the time zone.
 
 - "0" and positive numerical values: The values correspond to the index values of the Microsoft time zones.
 - "-1": The local time zone of the device.
@@ -546,10 +546,10 @@ The objects for the supervision and diagnostics of plants are available for the 
 
 The number of ProDiag monitors that you configure with STEP 7 is licensed. You do not need a license for the first 25 supervisions, licenses must be used for additional supervisions.
 
-| Number of supervisions | <= 25 | <= 250 | <= 500 | <= 750 | <= 1000 | > 1000 *) |
+| Number of supervisions | &lt;= 25 | &lt;= 250 | &lt;= 500 | &lt;= 750 | &lt;= 1000 | &gt; 1000 *) |
 | --- | --- | --- | --- | --- | --- | --- |
 | Number of licenses | None | 1 | 2 | 3 | 4 | 5 |
-| *) If it is clear from the beginning that > 1000 supervisions are required in the project, a license to use supervisions can be ordered without limitation. |  |  |  |  |  |  |
+| *) If it is clear from the beginning that &gt; 1000 supervisions are required in the project, a license to use supervisions can be ordered without limitation. |  |  |  |  |  |  |
 
 #### Licensing of ProjDiag objects
 
@@ -618,7 +618,7 @@ WinCC supports the display of step names for the GRAPH blocks in multiple langua
 
 In the Inspector window, you can change the settings for the position, geometry, style, and color of the object. You can adapt the following properties in particular:
 
-- "Process > Tag": Assign the tag.
+- "Process &gt; Tag": Assign the tag.
 - "Function bar": Specifies the buttons of the GRAPH overview.
 
 #### Operating mode
@@ -654,7 +654,7 @@ The symbols displayed in the GRAPH overview are pre-defined:
 
 #### Function bar
 
-You can define the buttons of the GRAPH overview in runtime along with their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Function bar > Elements". By default, only the "Next Step" button is available. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the GRAPH overview in runtime along with their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Function bar &gt; Elements". By default, only the "Next Step" button is available. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the GRAPH overview:
 
@@ -680,7 +680,7 @@ You can use the GRAPH overview to view the current program status for the execut
   >
   > The process tag you are using for the GRAPH overview must be visible in HMI and accessible from HMI.
   >
-  > To identify the tags of the GRAPH data block as visible and accessible for HMI, open the GRAPH function block, select the block in the work area, and select "Edit > Internal parameters visible/accessible from HMI" in the menu bar. Then compile the program blocks.
+  > To identify the tags of the GRAPH data block as visible and accessible for HMI, open the GRAPH function block, select the block in the work area, and select "Edit &gt; Internal parameters visible/accessible from HMI" in the menu bar. Then compile the program blocks.
 - An HMI device has been created.
 - You have created a screen.
 - The Inspector window is open.
@@ -688,19 +688,19 @@ You can use the GRAPH overview to view the current program status for the execut
 #### Procedure
 
 1. Drag-and-drop the GRAPH overview from the toolbox view into the configured screen.
-2. In the Inspector window, click "Properties > Properties > Miscellaneous".
-3. Open the selection button under "PLC Source > Tag".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Miscellaneous".
+3. Open the selection button under "PLC Source &gt; Tag".
 
    The "Add new object" dialog opens.
 4. Select the corresponding PLC in the "Program blocks" folder.
 5. Select the corresponding PLC tag of the GRAPH instance data block.
 6. To display the GRAPH overview in compatibility mode without function bar buttons and operating mode display, drag the object to the desired size, whereby multiple basic views are possible.
-7. Under "Properties > Properties > Miscellaneous > Function bar > Elements", specify the buttons to be displayed in the object.
+7. Under "Properties &gt; Properties &gt; Miscellaneous &gt; Function bar &gt; Elements", specify the buttons to be displayed in the object.
 
    ![Procedure](images/159222117899_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/159222117899_DV_resource.Stream@PNG-en-US.png)
-8. Under "Properties > Events", you can assign system functions or scripts to the buttons in the GRAPH overview in order, for example, to jump to the alarm control or the PLC code view in Runtime and to open the TIA Portal.
+8. Under "Properties &gt; Events", you can assign system functions or scripts to the buttons in the GRAPH overview in order, for example, to jump to the alarm control or the PLC code view in Runtime and to open the TIA Portal.
 
 **Note**
 
@@ -743,7 +743,7 @@ In the information area of the PLC code view, you are shown:
 
 #### Buttons of the function bar
 
-You can define the buttons of the PLC code view control in runtime along with their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Function bar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the PLC code view control in runtime along with their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Function bar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the PLC code view:
 
@@ -774,7 +774,7 @@ To display the PLC program networks in the graphic programming languages LAD, FB
 #### Procedure
 
 1. Drag-and-drop the PLC code view control from the toolbox view.
-2. In the Inspector window, click "Properties > Properties > Function bar".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Function bar".
 3. Select the buttons that you require in Runtime, for example: Back, Next, Zoom in.
 
    ![Procedure](images/164407799563_DV_resource.Stream@PNG-en-US.png)
@@ -881,7 +881,7 @@ In WinCC, you configure the display and the representation of categories and sup
 #### Procedure
 
 1. Drag-and-drop the ProDiag overview from the toolbox view.
-2. In the Inspector window, select "Properties > Properties > General".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General".
 3. Open the selection button under the "Tag" property.
 4. Select the status tag of ProDiag FB.
 
@@ -890,9 +890,9 @@ In WinCC, you configure the display and the representation of categories and sup
    ![Procedure](images/164610422411_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/164610422411_DV_resource.Stream@PNG-en-US.png)
-5. Under "Properties > Properties > Miscellaneous > P Diag Categories", define the names and colors for the supervision categories.
-6. Under "Properties > Properties > Miscellaneous > P Diag Supervision types", define the names and colors for the supervision types.
-7. Under "Properties > Events", you can configure a system function for the "Alarm view - Button tapped" event to jump from the ProDiag overview to the alarm view in Runtime.
+5. Under "Properties &gt; Properties &gt; Miscellaneous &gt; P Diag Categories", define the names and colors for the supervision categories.
+6. Under "Properties &gt; Properties &gt; Miscellaneous &gt; P Diag Supervision types", define the names and colors for the supervision types.
+7. Under "Properties &gt; Events", you can configure a system function for the "Alarm view - Button tapped" event to jump from the ProDiag overview to the alarm view in Runtime.
 
 #### Result
 
@@ -1066,14 +1066,14 @@ You configure the criteria analysis view and its linked alarm control in the sam
 
 - The HMI device is connected to the controller.
 - A ProDiag program version 2.0 or a GRAPH program Version 6.0 or higher is installed on the controller.
-- Process diagnostics is enabled in the "Runtime settings > Process diagnostics > General" of the Unified Runtime device.
+- Process diagnostics is enabled in the "Runtime settings &gt; Process diagnostics &gt; General" of the Unified Runtime device.
 - Initial value acquisition is enabled for the function blocks.
 - An alarm control has been configured.
 
 ##### Procedure
 
 1. Move the criteria analysis view from the toolbox window using drag-and-drop.
-2. Click on "Properties > Properties" in the Inspector window.
+2. Click on "Properties &gt; Properties" in the Inspector window.
 3. Open the selection button under the "Data source" property.
 4. Select the configured alarm control.
 
@@ -1095,7 +1095,7 @@ You have the option to add additional information about faulty operands to the G
 
 ![Introduction](images/110359669003_DV_resource.Stream@PNG-en-US.png)
 
-In WinCC Unified Runtime, you have the option to add additional information to the alarms. For this, select the appropriate text that you want to extend under "Runtime settings > Process diagnostics > Criteria analysis > Extend text", i.e. alarm text, info text or additional text 1 - 9. You can extend the texts with the first faulty operand or with all faulty operands.
+In WinCC Unified Runtime, you have the option to add additional information to the alarms. For this, select the appropriate text that you want to extend under "Runtime settings &gt; Process diagnostics &gt; Criteria analysis &gt; Extend text", i.e. alarm text, info text or additional text 1 - 9. You can extend the texts with the first faulty operand or with all faulty operands.
 
 The following information can be added to the operands:
 
@@ -1112,7 +1112,7 @@ The additional information is separated in the alarm by semicolons and spaces.
 
 > **Note**
 >
-> To completely display the alarms from the controller on the HMI device, the "Automatic update" option must be selected under "Runtime settings > Alarms > Controller alarms" for the relevant connection. You can find additional information on complete alarms under "[Sending a complete alarm from the controller to the HMI device](Configuring%20alarms%20%28RT%20Unified%29.md#sending-complete-alarms-from-the-controller-to-the-hmi-device-and-automatically-updating-them-rt-unified)".
+> To completely display the alarms from the controller on the HMI device, the "Automatic update" option must be selected under "Runtime settings &gt; Alarms &gt; Controller alarms" for the relevant connection. You can find additional information on complete alarms under "[Sending a complete alarm from the controller to the HMI device](Configuring%20alarms%20%28RT%20Unified%29.md#sending-complete-alarms-from-the-controller-to-the-hmi-device-and-automatically-updating-them-rt-unified)".
 
 ##### Criteria analysis in the alarm system
 
@@ -1124,8 +1124,8 @@ You visualize the alarms for the criteria analysis in the following steps:
 ##### Extend alarms
 
 1. Open the "Runtime settings" editor of the HMI device.
-2. Click "Process diagnostics > Criteria analysis".
-3. Under "Criteria analysis > Extend text", select which texts you want to extend.
+2. Click "Process diagnostics &gt; Criteria analysis".
+3. Under "Criteria analysis &gt; Extend text", select which texts you want to extend.
 4. Select the additional information to be added to the alarm text in the alarm, such as symbol name, address and value of the first faulty operand and comment.
 
    ![Extend alarms](images/169740348171_DV_resource.Stream@PNG-en-US.png)
@@ -1146,7 +1146,7 @@ If an error occurs, you see not only the alarm text in the alarm control but als
 
 ##### Extension of the "GRAPH overview" object with the criteria analysis
 
-To display the criteria analysis in the "GRAPH overview" object, the criteria analysis must be enabled in the Inspector window under "Properties > Properties > Information bar > Elements".
+To display the criteria analysis in the "GRAPH overview" object, the criteria analysis must be enabled in the Inspector window under "Properties &gt; Properties &gt; Information bar &gt; Elements".
 
 ![Extension of the "GRAPH overview" object with the criteria analysis](images/171168840459_DV_resource.Stream@PNG-en-US.png)
 

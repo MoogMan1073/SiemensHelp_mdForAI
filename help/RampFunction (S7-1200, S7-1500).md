@@ -140,8 +140,8 @@ The following table shows the effective tags for the slew rate limit depending o
 | --- | --- |
 | Output ≥ 0 and |Output| rising | PositiveRisingSlewRate |
 | Output ≥ 0 and |Output| falling | PositiveFallingSlewRate |
-| Output < 0 and |Output| rising | NegativeRisingSlewRate |
-| Output < 0 and |Output| falling | NegativeFallingSlewRate |
+| Output &lt; 0 and |Output| rising | NegativeRisingSlewRate |
+| Output &lt; 0 and |Output| falling | NegativeFallingSlewRate |
 
 The absolute value of the slew rate limits defines the maximum change of the output value per second.
 
@@ -151,7 +151,7 @@ The following scenario applies for the example:
 
 - PositiveRisingSlewRate = 10.0
 - Call time of RampFunction = 0.1 s
-- Input > Output ≥ 0.0
+- Input &gt; Output ≥ 0.0
 
 Result:
 
@@ -192,7 +192,7 @@ If the UpperLimit is reduced from 100.0 to 80.0 while the values of the paramete
 
 RampFunction checks whether the following conditions are met for each call:
 
-- LowerLimit < UpperLimit
+- LowerLimit &lt; UpperLimit
 - LowerLimit and UpperLimit are within the permitted value range from -3.402823e+38 to 3.402823e+38
 - LowerLimit and UpperLimit are valid REAL values (≠ NaN e.g. 16#7FFF_FFFF)
 
@@ -237,7 +237,7 @@ The following scenario applies for the example:
 
 - PositiveRisingSlewRate = 10.0
 - Call time of RampFunction = 0.1 s
-- Input > Output ≥ 0.0
+- Input &gt; Output ≥ 0.0
 
 Result without breakpoints:
 
@@ -258,8 +258,8 @@ If you do not need the calculation of the output value based on the actual time 
 | --- | --- | --- | --- |
 | Input | REAL | 0.0 | Input value |
 | SubstituteOutput | REAL | 0.0 | SubstituteOutput is used as the substitute output value when  - Reset = TRUE   or   - An error with error message ErrorBits ≥ 16#0001_0000 prevents correct calculation of the output value, and the configured value of ErrorMode is 1. |
-| ErrorAck | BOOL | FALSE | Deletes the error messages  - Edge FALSE -> TRUE   ErrorBits is reset |
-| Reset | BOOL | FALSE | Performs a restart of the instruction  - Edge FALSE -> TRUE   ErrorBits is reset. - As long as Reset is set to TRUE, the substitute output value SubstituteOutput is output at the output. - As long as Reset is set to FALSE, the calculation of the output value is performed. |
+| ErrorAck | BOOL | FALSE | Deletes the error messages  - Edge FALSE -&gt; TRUE   ErrorBits is reset |
+| Reset | BOOL | FALSE | Performs a restart of the instruction  - Edge FALSE -&gt; TRUE   ErrorBits is reset. - As long as Reset is set to TRUE, the substitute output value SubstituteOutput is output at the output. - As long as Reset is set to FALSE, the calculation of the output value is performed. |
 
 ## RampFunction output parameters (S7-1200, S7-1500)
 
@@ -279,16 +279,16 @@ If you do not need the calculation of the output value based on the actual time 
 
 | Tag | Data type | Default | Description |
 | --- | --- | --- | --- |
-| PositiveRisingSlewRate | REAL | 10.0 | Limit for slew rate of the output value per second in positive range with rising absolute value  With PositiveRisingSlewRate = 3.402823e+38, this slew rate limit is disabled.  Permissible value range: > 0.0 |
-| PositiveFallingSlewRate | REAL | 10.0 | Limit for slew rate of the output value per second in positive range with falling absolute value  With PositiveFallingSlewRate = 3.402823e+38, this slew rate limit is disabled.  Permissible value range: > 0.0 |
-| NegativeRisingSlewRate | REAL | 10.0 | Limit for slew rate of the output value per second in negative range with rising absolute value  With NegativeRisingSlewRate = 3.402823e+38, this slew rate limit is disabled.  Permissible value range: > 0.0 |
-| NegativeFallingSlewRate | REAL | 10.0 | Limit for slew rate of the output value per second in negative range with falling absolute value  With NegativeFallingSlewRate = 3.402823e+38, this slew rate limit is disabled.  Permissible value range: > 0.0 |
-| UpperLimit | REAL | 100.0 | High limit of output value  Permissible value range: > LowerLimit |
-| LowerLimit | REAL | 0.0 | Low limit of output value  Permissible value range: < UpperLimit |
+| PositiveRisingSlewRate | REAL | 10.0 | Limit for slew rate of the output value per second in positive range with rising absolute value  With PositiveRisingSlewRate = 3.402823e+38, this slew rate limit is disabled.  Permissible value range: &gt; 0.0 |
+| PositiveFallingSlewRate | REAL | 10.0 | Limit for slew rate of the output value per second in positive range with falling absolute value  With PositiveFallingSlewRate = 3.402823e+38, this slew rate limit is disabled.  Permissible value range: &gt; 0.0 |
+| NegativeRisingSlewRate | REAL | 10.0 | Limit for slew rate of the output value per second in negative range with rising absolute value  With NegativeRisingSlewRate = 3.402823e+38, this slew rate limit is disabled.  Permissible value range: &gt; 0.0 |
+| NegativeFallingSlewRate | REAL | 10.0 | Limit for slew rate of the output value per second in negative range with falling absolute value  With NegativeFallingSlewRate = 3.402823e+38, this slew rate limit is disabled.  Permissible value range: &gt; 0.0 |
+| UpperLimit | REAL | 100.0 | High limit of output value  Permissible value range: &gt; LowerLimit |
+| LowerLimit | REAL | 0.0 | Low limit of output value  Permissible value range: &lt; UpperLimit |
 | ErrorMode | INT | 2 | Selection of the substitute output value following an error   - 0 = Input - 1 = SubstituteOutput - 2 = Last valid output value - 3 = 0.0 - 4 = LowerLimit - 5 = UpperLimit   Permissible value range: 0 to 5 |
 | StartMode | INT | 2 | Selecting the output value for the first call of the instruction  - 0 = Input - 1 = SubstituteOutput - 2 = Last output value - 3 = 0.0 - 4 = LowerLimit - 5 = UpperLimit   Permissible value range: 0 to 5 |
 | CycleTime | AuxFct_CycleTime | - | Cycle time data |
-| CycleTime.Value | REAL | 0.1 | Time interval between two calls of the instruction in seconds  Permissible value range: > 0.0 |
+| CycleTime.Value | REAL | 0.1 | Time interval between two calls of the instruction in seconds  Permissible value range: &gt; 0.0 |
 | CycleTime.EnableMeasurement | BOOL | TRUE | Automatic measurement of the cycle time  - FALSE = Deactivated - TRUE = Activated |
 
 ## ErrorBits parameter (S7-1200, S7-1500)
@@ -297,12 +297,12 @@ If several errors are pending simultaneously, the values of the ErrorBits are di
 
 For RampFunction, the errors output at the ErrorBits parameter are divided into two categories:
 
-- Errors with error messages ErrorBits < 16#0001_0000
+- Errors with error messages ErrorBits &lt; 16#0001_0000
 - Errors with error messages ErrorBits ≥ 16#0001_0000
 
-### Errors with error messages ErrorBits < 16#0001_0000
+### Errors with error messages ErrorBits &lt; 16#0001_0000
 
-If one or more errors with error messages ErrorBits < 16#0001_0000 are pending, RampFunction reacts as follows:
+If one or more errors with error messages ErrorBits &lt; 16#0001_0000 are pending, RampFunction reacts as follows:
 
 - The output value is determined as follows despite this error:
 
@@ -352,7 +352,7 @@ The output parameter Error is deleted as soon as there are no longer any errors.
 | TRUE | - | SubstituteOutput |  |
 | 0002_0000 | **Cause of error:**   The Input parameter has no valid REAL value while the calculation of the output value is being performed (Reset = FALSE).   **Response to error:**   The substitute output value is output at the Output parameter that is configured at the ErrorMode tag and is limited by the tags UpperLimit and LowerLimit.  When ErrorMode = 0, 0.0 is used as output value.   **Solution:**   Make sure that the parameter Input is a valid REAL value (≠ NaN e.g. 16#7FFF_FFFF). |  |  |
 | 0004_0000 | **Cause of error:**   The calculation of the output value yields an invalid REAL value for the Output parameter.   **Response to error:**   The substitute output value is output at the Output parameter that is configured at the ErrorMode tag and is limited by the tags UpperLimit and LowerLimit.   **Solution:**   Check all tags involved in the calculation of the output value:  - Input - PositiveRisingSlewRate - PositiveFallingSlewRate - NegativeRisingSlewRate - NegativeFallingSlewRate - CycleTime.Value   These tags have valid values. The calculation of the output value fails in this combination of tags. |  |  |
-| 0008_0000 | **Cause of error:**   The LowerLimit or UpperLimit tag has an invalid value.   **Response to error:**   The following value is output at the Output parameter, depending on the Reset parameter:  - Reset = FALSE   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter. - Reset = TRUE   The value of the SubstituteOutput parameter is output at the Output parameter.   In both cases, the Ouput parameter is limited to the value range of the REAL data type from -3.402823e+38 to 3.402823e+38.   **Solution:**   Ensure that the following conditions are met:  1. LowerLimit < UpperLimit 2. LowerLimit and UpperLimit are within the permitted value range from -3.402823e+38 to 3.402823e+38 3. LowerLimit and UpperLimit are valid REAL values (≠ NaN e.g. 16#7FFF_FFFF) |  |  |
+| 0008_0000 | **Cause of error:**   The LowerLimit or UpperLimit tag has an invalid value.   **Response to error:**   The following value is output at the Output parameter, depending on the Reset parameter:  - Reset = FALSE   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter. - Reset = TRUE   The value of the SubstituteOutput parameter is output at the Output parameter.   In both cases, the Ouput parameter is limited to the value range of the REAL data type from -3.402823e+38 to 3.402823e+38.   **Solution:**   Ensure that the following conditions are met:  1. LowerLimit &lt; UpperLimit 2. LowerLimit and UpperLimit are within the permitted value range from -3.402823e+38 to 3.402823e+38 3. LowerLimit and UpperLimit are valid REAL values (≠ NaN e.g. 16#7FFF_FFFF) |  |  |
 | 0010_0000 | **Cause of error:**   At least one of the following tags has invalid values while the calculation of the output value is being performed (Reset = FALSE):  1. PositiveRisingSlewRate 2. PositiveFallingSlewRate 3. NegativeRisingSlewRate 4. NegativeFallingSlewRate    **Response to error:**   The substitute output value is output at the Output parameter that is configured at the ErrorMode tag and is limited by the tags UpperLimit and LowerLimit.   **Solution:**   Ensure that the following conditions are met for all four tags listed above:  - The values are within the permitted value range greater than 0.0 up to 3.402823e+38 - The values are valid REAL values (≠ NaN e.g. 16#7FFF_FFFF) |  |  |
 | 0020_0000 | **Cause of error:**   The tag (configured with StartMode) for the initialization of the Output parameter at the first call of the instruction does not have a valid REAL value.    **Response to error:**   The substitute output value is output with the first call of the instruction at the Output parameter that is configured at the ErrorMode tag and is limited by the tags LowerLimit and UpperLimit. For subsequent calls, RampFunction calculates the output value starting from this substitute output value.   **Solution:**   Make sure that the tag for initializing the parameter Output is a valid REAL value (≠ NaN e.g. 16#7FFF_FFFF). When Reset = FALSE is set, the initialization takes effect with the first call of the instruction after the operating state transition of the CPU from STOP to RUN. The tag that is used for the initialization of the Output parameter depends on StartMode:  - StartMode = 1: Substitute Output - StartMode = 2: Output |  |  |
-| 0040_0000 | **Cause of error:**   The CycleTime.Value tag has an invalid value, while the calculation of the output value is being performed (Reset = FALSE).   **Response to error:**   The substitute output value is output at the Output parameter that is configured at the ErrorMode tag and is limited by the tags UpperLimit and LowerLimit.   **Solution:**   Ensure that the following conditions are met:  - 0.0 < CycleTime.Value ≤ 3.402823e+38 - CycleTime.Value is a valid REAL value (≠ NaN e.g. 16#7FFF_FFFF)    **Additional information:**   To automatically calculate the value of the CycleTime.Value tag, set the CycleTime.EnableMeasurement tag to TRUE. |  |  |
+| 0040_0000 | **Cause of error:**   The CycleTime.Value tag has an invalid value, while the calculation of the output value is being performed (Reset = FALSE).   **Response to error:**   The substitute output value is output at the Output parameter that is configured at the ErrorMode tag and is limited by the tags UpperLimit and LowerLimit.   **Solution:**   Ensure that the following conditions are met:  - 0.0 &lt; CycleTime.Value ≤ 3.402823e+38 - CycleTime.Value is a valid REAL value (≠ NaN e.g. 16#7FFF_FFFF)    **Additional information:**   To automatically calculate the value of the CycleTime.Value tag, set the CycleTime.EnableMeasurement tag to TRUE. |  |  |

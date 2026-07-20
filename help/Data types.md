@@ -145,7 +145,7 @@ ARRAY
 
 | ARRAY | S7-300/400 | S7-1200 | S7-1500 |
 | --- | --- | --- | --- |
-| [ARRAY [....] of <data type>](#basic-information-on-array) | X | X | X |
+| [ARRAY [....] of &lt;data type&gt;](#basic-information-on-array) | X | X | X |
 
 Pointer
 
@@ -844,7 +844,7 @@ Even though the values of invalid floating-point numbers can only be displayed w
 >
 > **The following applies to CPUs of the S7-1200 V4 and S7-1500 series:**
 >
-> If two invalid numbers (NaN) are compared with each other, the result is always FALSE, regardless of the bit pattern of the invalid number or the relation (>, >, ...).
+> If two invalid numbers (NaN) are compared with each other, the result is always FALSE, regardless of the bit pattern of the invalid number or the relation (&gt;, &gt;, ...).
 
 > **Note**
 >
@@ -1153,7 +1153,7 @@ The structure of data type DTL consists of several components each of which can 
 >
 > **Invalid monitor value of DTL tags in hexadecimal format**
 >
-> If the monitor value of the DTL tags is represented in hexadecimal format, this can be because one of the values (YEAR, MONTH, DAY, etc.) is invalid. For example, this is the case if a value > 24 was specified at the HOUR tag.
+> If the monitor value of the DTL tags is represented in hexadecimal format, this can be because one of the values (YEAR, MONTH, DAY, etc.) is invalid. For example, this is the case if a value &gt; 24 was specified at the HOUR tag.
 
 The following table shows the structure components of data type DTL and their properties:
 
@@ -1202,7 +1202,7 @@ This section contains information on the following topics:
 
 A tag of the CHAR (Character) data type has a length of 8 bits and occupies one BYTE of memory.
 
-The CHAR data type stores a single character in ASCII coding. You can find information on the encoding of special characters under "See also > STRING".
+The CHAR data type stores a single character in ASCII coding. You can find information on the encoding of special characters under "See also &gt; STRING".
 
 The following table shows the value range of the CHAR data type:
 
@@ -1486,7 +1486,7 @@ MyDB.mystring := 'hello';
 
 MyDB.mystring[6] := CHAR_TO_BYTE('!');
 
-Where possible, use instructions from the "Extended instructions > String + Char" pane to handle STRINGs.
+Where possible, use instructions from the "Extended instructions &gt; String + Char" pane to handle STRINGs.
 
 CONCAT(IN1 := 'hello', IN2 := '!');
 
@@ -1743,23 +1743,23 @@ The following syntax is used to declare named value data types:
 
 Syntax
 
-NAMESPACE <name>
+NAMESPACE &lt;name&gt;
 
 { PUBLISHED := 'TRUE|FALSE' }
 
     TYPE
 
-        <namedValueType> : <BaseType>
+        &lt;namedValueType&gt; : &lt;BaseType&gt;
 
         (
 
-                <NAME_1> := <Value_1>,
+                &lt;NAME_1&gt; := &lt;Value_1&gt;,
 
-                <NAME_2> := <Value_2>,
+                &lt;NAME_2&gt; := &lt;Value_2&gt;,
 
-                <NAME_3> := <Value_3>
+                &lt;NAME_3&gt; := &lt;Value_3&gt;
 
-        ) := <Default>;
+        ) := &lt;Default&gt;;
 
     END_TYPE
 
@@ -1772,9 +1772,9 @@ The following table describes the individual syntax elements:
 | NAMESPACE  END_NAMESPACE | Optional  Specifies the namespace of one or more named value data types. You can define a namespace for each named value data type, or you can place several data types in a namespace.  If you do not define a namespace, the data type is not in a namespace. |
 | {PUBLISHED : = 'TRUE|FALSE'} | Optional  Specifies whether the named value data type is published. Program elements from other software units can access published data types.   The pragma can assume the values "TRUE" or "FALSE". If you do not specify the "PUBLISHED" pragma, the data type is not published by default. |
 | TYPE  END_TYPE | Surrounds the declaration of one or more named value data types. |
-| <namedValueType> : <BaseType> | Name and base data type of the named value data type.   Naming conventions according to IEC 61131-3 apply.  The following base data types are possible:  - Integers: SINT, USINT, INT, UINT, DINT, UDINT, LINT and ULINT - Bit strings: BYTE, WORD, DWORD, LWORD |
-| <NAME_1> := <Value_1>,   <NAME_2> := <Value_2>,  <NAME_3> := <Value_3> | List of individual named values  The named value data type can be one of the declared values. However, it can take a different value that corresponds to the base data type.  Naming conventions according to IEC 61131-3 apply. The maximum name length amounts to 128 characters.  The names of the individual named values are not multilingual. |
-| := <Default> | Optional  Specifies the default value of the named value data type.  You can specify one of the values from the declaration list or any other value that matches the base data type. If you do not enter an explicit default value, the first value in the declaration list is used as default value. In this example, the value of "NAMED_VALUE_1" would be the default value. |
+| &lt;namedValueType&gt; : &lt;BaseType&gt; | Name and base data type of the named value data type.   Naming conventions according to IEC 61131-3 apply.  The following base data types are possible:  - Integers: SINT, USINT, INT, UINT, DINT, UDINT, LINT and ULINT - Bit strings: BYTE, WORD, DWORD, LWORD |
+| &lt;NAME_1&gt; := &lt;Value_1&gt;,   &lt;NAME_2&gt; := &lt;Value_2&gt;,  &lt;NAME_3&gt; := &lt;Value_3&gt; | List of individual named values  The named value data type can be one of the declared values. However, it can take a different value that corresponds to the base data type.  Naming conventions according to IEC 61131-3 apply. The maximum name length amounts to 128 characters.  The names of the individual named values are not multilingual. |
+| := &lt;Default&gt; | Optional  Specifies the default value of the named value data type.  You can specify one of the values from the declaration list or any other value that matches the base data type. If you do not enter an explicit default value, the first value in the declaration list is used as default value. In this example, the value of "NAMED_VALUE_1" would be the default value. |
 | //comment | Optional  A line comment extends to the end of the line. |
 | (* comment section *)  /* comment section */ | Optional  A comment section can span several lines. |
 
@@ -1798,7 +1798,7 @@ You can use named values in operations in the same way as other constants of the
 
 For unique identification, specify the named value data type followed by the name of the named value in the following form:
 
-<namedValueType>#<NAMED_VALUE>
+&lt;namedValueType&gt;#&lt;NAMED_VALUE&gt;
 
 #### Examples
 
@@ -2049,8 +2049,8 @@ The following table shows the properties of the ARRAY data type:
 
 | Block property | Format | ARRAY limits | Data type |
 | --- | --- | --- | --- |
-| Standard | ARRAY[low limit..high limit] of <DataType> | [-32 768..32 767] of <DataType> | All data types except ARRAY  Multi-instances |
-| Optimized | [-2 147 483 648..2 147 483 647] of <DataType> |  |  |
+| Standard | ARRAY[low limit..high limit] of &lt;DataType&gt; | [-32 768..32 767] of &lt;DataType&gt; | All data types except ARRAY  Multi-instances |
+| Optimized | [-2 147 483 648..2 147 483 647] of &lt;DataType&gt; |  |  |
 
 Various options are available for defining the ARRAY limits depending on the ARRAY that you declared.
 
@@ -2068,7 +2068,7 @@ For more information on the section of the block interface in which you can defi
 >
 > **Applies to CPUs of the S7-1500 series**
 >
-> For a block with the "Optimized block access" block property, an element of the BOOL data type requires 1 byte of memory. This is also true when you use an ARRAY of <data type>. An ARRAY[0..1] of BOOL, for example, thus requires 2 bytes in an optimized program block.
+> For a block with the "Optimized block access" block property, an element of the BOOL data type requires 1 byte of memory. This is also true when you use an ARRAY of &lt;data type&gt;. An ARRAY[0..1] of BOOL, for example, thus requires 2 bytes in an optimized program block.
 
 #### Using integers as fixed ARRAY limits
 
@@ -2116,7 +2116,7 @@ Using the "LOWER_BOUND" and "UPPER_BOUND" instructions, you can read the low and
 >
 > **Availability of ARRAY[*]**
 >
-> ARRAY[*] is available in optimized blocks for a CPU of the S7-1200 series as of firmware version >= 4.2, and for a CPU of the S7-1500 series as of firmware version >= 2.0. In functions (FC) you can use ARRAY[*] in all declaration subsections. In function blocks (FB) you can declare ARRAY[*] only as an in-out parameter in the "InOut" section.
+> ARRAY[*] is available in optimized blocks for a CPU of the S7-1200 series as of firmware version &gt;= 4.2, and for a CPU of the S7-1500 series as of firmware version &gt;= 2.0. In functions (FC) you can use ARRAY[*] in all declaration subsections. In function blocks (FB) you can declare ARRAY[*] only as an in-out parameter in the "InOut" section.
 
 - Variable ARRAY limits for a one-dimensional ARRAY:
 
@@ -2189,7 +2189,7 @@ The addressing of an ARRAY component using fixed index has the following form:
 
 #### Addressing ARRAY components using variable index
 
-An ARRAY component can also be addressed with a tag the value of which is only calculated during runtime. The tag can be an absolute or symbolic addressed global or local tag of integer data type. This addressing is also possible with multidimensional ARRAYs and with the addressing of sub-arrays. (<ArrayName>[i,j,k...])
+An ARRAY component can also be addressed with a tag the value of which is only calculated during runtime. The tag can be an absolute or symbolic addressed global or local tag of integer data type. This addressing is also possible with multidimensional ARRAYs and with the addressing of sub-arrays. (&lt;ArrayName&gt;[i,j,k...])
 
 A change of the tags in the called block has no effect on an ARRAY component that is created as actual parameter at an in/out parameter and addressed using a variable index. The value is written back to the same ARRAY component, transferred during the call, from which it was read.
 
@@ -2440,7 +2440,7 @@ If, for example, a block parameter of a function has the VARIANT data type, then
 >
 > **Address I/O**
 >
-> Direct reading or writing of a signal from an I/O input or output is only possible on a CPU of an S7-1500 module. (<Operand>: P)
+> Direct reading or writing of a signal from an I/O input or output is only possible on a CPU of an S7-1500 module. (&lt;Operand&gt;: P)
 
 The following table shows the properties of the VARIANT pointer:
 
@@ -2555,7 +2555,7 @@ The following instructions for working with VARIANT are available to you in the 
 > - You can use the "MOVE_BLK" instruction to move parts of ARRAYs with known data type.
 > - The MOVE_BLK_VARIANT instruction is only required if you want to move parts of ARRAYs with a data type that is only known during program runtime.
 
-You can find additional information on the individual instructions in the information system under "Basic instructions > Respective programming language".
+You can find additional information on the individual instructions in the information system under "Basic instructions &gt; Respective programming language".
 
 You can also find additional instructions which also work with the VARIANT data type under the "Extended instructions".
 
@@ -2586,7 +2586,7 @@ In the table below, you see which instructions are available to you to evaluate 
 | To evaluate ARRAY elements | IS_ARRAY: Check for ARRAY | You use this instruction to check whether the data type to which a VARIANT tag points is an ARRAY. |
 | CountOfElements: Get number of ARRAY elements | You use this instruction to read out how many ARRAY elements the tag has to which the VARIANT tag points. |  |
 
-You can find additional information on the individual instructions in the information system under "Basic instructions > Respective programming language".
+You can find additional information on the individual instructions in the information system under "Basic instructions &gt; Respective programming language".
 
 ##### Reading data to which a VARIANT points
 
@@ -2754,7 +2754,7 @@ IF IS_ARRAY(#SourceArray) AND TypeOfElements(#SourceArray) = TypeOfElements(#Des
 
 #Error := MOVE_BLK_VARIANT(COUNT := #Count, SRC := #SourceArray, SRC_INDEX := #SourceIndex,
 
-DEST => #DestinationArray, DEST_INDEX := #DestinationIndex);
+DEST =&gt; #DestinationArray, DEST_INDEX := #DestinationIndex);
 
 END_IF;
 
@@ -2781,7 +2781,7 @@ Using the VARIANT data type, program sections can be influenced during runtime. 
 
 (* This program code section is only executed once after a positive signal edge. If there is no change in the signal state of the result of logic operation, the program processing of the "FIFOQueue" FB is terminated. *)
 
-#edgeup := #request & NOT #edgeupm;
+#edgeup := #request &amp; NOT #edgeupm;
 
 #edgeupm := #request;
 
@@ -2837,7 +2837,7 @@ END_IF;
 
 (* This program code section checks whether the variable indices are within the ARRAY limits. If this is not the case, the program execution is terminated at this point and either error code "-20" or "-21" is output depending on the index. *)
 
-IF (#nextEmptyItemIndex >= #bufferSize) THEN
+IF (#nextEmptyItemIndex &gt;= #bufferSize) THEN
 
 #error := -20;
 
@@ -2845,7 +2845,7 @@ RETURN;
 
 END_IF;
 
-IF (#firstItemIndex >= #bufferSize) THEN
+IF (#firstItemIndex &gt;= #bufferSize) THEN
 
 #error := -21;
 
@@ -2887,7 +2887,7 @@ SRC_INDEX := #firstItemIndex,
 
 DEST_INDEX := 0,
 
-DEST => #item);
+DEST =&gt; #item);
 
  
 
@@ -2903,7 +2903,7 @@ SRC_INDEX := 0,
 
 DEST_INDEX := #firstItemIndex,
 
-DEST => #buffer);
+DEST =&gt; #buffer);
 
  
 
@@ -2963,7 +2963,7 @@ SRC_INDEX := 0,
 
 DEST_INDEX := #nextEmptyItemIndex,
 
-DEST => #buffer);
+DEST =&gt; #buffer);
 
  
 
@@ -2997,7 +2997,7 @@ END_IF;
 
 (* This program code section checks whether a local error has occurred. If this is the case, program execution is terminated at this point and the error code "-100" is output. *)
 
-IF (#internalError > 0) THEN
+IF (#internalError &gt; 0) THEN
 
 #error := -100;
 
@@ -3501,7 +3501,7 @@ To set the IEC check for all new blocks in the project, proceed as follows:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > General" group in the area navigation.
+2. Select the "PLC programming &gt; General" group in the area navigation.
 3. Select or clear the "IEC check for code blocks" check box in the "Default settings for new blocks" group.
 
    The IEC check is enabled or disabled for all new blocks in the program.
@@ -3690,7 +3690,7 @@ The following table shows the options for implicit conversion of the SINT data t
 | BYTE | - | X | The bit pattern of the source value is transferred unchanged, right-justified, to the target data type. The remaining bits are filled with "0". |  |
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
-| USINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value transfer from SINT #-1 -> INT #-1, not filled with "0".) |  |
+| USINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value transfer from SINT #-1 -&gt; INT #-1, not filled with "0".) |  |
 | INT | X | X |  |  |
 | UINT | - | X |  |  |
 | DINT | X | X |  |  |
@@ -3731,7 +3731,7 @@ The following table shows the options for implicit conversion of the USINT data 
 | BYTE | - | X | The bit pattern of the source value is transferred unchanged, right-justified, to the target data type. The remaining bits are filled with "0". |  |
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from USINT #10 -> DINT #10 or USINT #128 -> SINT #-128) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from USINT #10 -&gt; DINT #10 or USINT #128 -&gt; SINT #-128) |  |
 | INT | X | X |  |  |
 | UINT | X | X |  |  |
 | DINT | X | X |  |  |
@@ -3772,7 +3772,7 @@ The following table shows the options for the implicit conversion of the INT dat
 | BYTE | - | X | The bit pattern of the source value is transferred unchanged, right-justified, to the target data type. |  |
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from INT #-1 -> SINT #-1, or INT #-32 767 -> UINT #32 769) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from INT #-1 -&gt; SINT #-1, or INT #-32 767 -&gt; UINT #32 769) |  |
 | USINT | - | X |  |  |
 | UINT | - | X |  |  |
 | DINT | X | X |  |  |
@@ -3813,7 +3813,7 @@ The following table shows the options for implicit conversion of the UINT data t
 | BYTE | - | X | The bit pattern of the source value is transferred unchanged, right-justified, to the target data type. |  |
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from UINT #100 -> DINT #100 or UINT #60 000 -> INT #-5536) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from UINT #100 -&gt; DINT #100 or UINT #60 000 -&gt; INT #-5536) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | DINT | X | X |  |  |
@@ -3854,12 +3854,12 @@ The following table shows the options for implicit conversion of the DINT data t
 | BYTE | - | X | The bit pattern of the source value is transferred unchanged, right-justified, to the target data type. |  |
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from DINT #-1 -> SINT #-1 or DINT #-1 -> USINT #255) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from DINT #-1 -&gt; SINT #-1 or DINT #-1 -&gt; USINT #255) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |
 | UDINT | - | X |  |  |
-| REAL | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from DINT #-1 -> REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
+| REAL | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from DINT #-1 -&gt; REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
 | LREAL | X | X | The value is converted to the format of the target data type. (The value "-1", for example, is converted to the value "-1.0".) |  |
 | TIME | - | X | The bit pattern of the source value is transferred unchanged, right-justified, to the target data type. |  |
 | DTL | - | - | No implicit conversion |  |
@@ -3895,12 +3895,12 @@ The following table shows the options for implicit conversion of the UDINT data 
 | BYTE | - | X | The bit pattern of the source value is transferred unchanged, right-justified, to the target data type. |  |
 | WORD | - | X |  |  |
 | DWORD | - | X |  |  |
-| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from DINT #-1 -> SINT #-1 or DINT #-1 -> USINT #255) |  |
+| SINT | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from DINT #-1 -&gt; SINT #-1 or DINT #-1 -&gt; USINT #255) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |
 | DINT | - | X |  |  |
-| REAL | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from DINT #-1 -> REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
+| REAL | - | X | The bit pattern of the source value is converted and transferred to the target data type. (for example, value conversion from DINT #-1 -&gt; REAL #-1.0, but there is a loss in accuracy for numbers with an absolute value greater than 8 388 608) |  |
 | LREAL | X | X | The value is converted to the format of the target data type. (The value "1", for example, is converted to the value "1.0".) |  |
 | TIME | - | X | The bit pattern of the source value is transferred unchanged, right-justified, to the target data type. |  |
 | DTL | - | - | No implicit conversion |  |
@@ -3943,7 +3943,7 @@ The following table shows the options for implicit conversion of the REAL data t
 | BYTE | - | - |  |  |
 | WORD | - | - |  |  |
 | DWORD | - | X | The bit pattern of the source value is transferred unchanged, right-justified, to the target data type. |  |
-| SINT | - | X | The bit pattern of the source value is rounded off and converted and transferred to the target data type. (for example, rounding off and value conversion of REAL #2.5 -> INT #2 or negative number REAL #-2.5 -> INT #-2 -> USINT #254. With an overflow, the remainder is determined REAL #305.5 -> INT #306 -> USINT #50) |  |
+| SINT | - | X | The bit pattern of the source value is rounded off and converted and transferred to the target data type. (for example, rounding off and value conversion of REAL #2.5 -&gt; INT #2 or negative number REAL #-2.5 -&gt; INT #-2 -&gt; USINT #254. With an overflow, the remainder is determined REAL #305.5 -&gt; INT #306 -&gt; USINT #50) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |
@@ -3984,7 +3984,7 @@ The following table shows the options for implicit conversion of the LREAL data 
 | BYTE | - | - |  |  |
 | WORD | - | - |  |  |
 | DWORD | - | - |  |  |
-| SINT | - | X | The bit pattern of the source value is rounded off and converted and transferred to the target data type. (for example, rounding off and value conversion of REAL #2.5 -> INT #2 or negative number REAL #-2.5 -> INT #-2 -> USINT #254. With an overflow, the remainder is determined REAL #305.5 -> INT #306 -> USINT #50) |  |
+| SINT | - | X | The bit pattern of the source value is rounded off and converted and transferred to the target data type. (for example, rounding off and value conversion of REAL #2.5 -&gt; INT #2 or negative number REAL #-2.5 -&gt; INT #-2 -&gt; USINT #254. With an overflow, the remainder is determined REAL #305.5 -&gt; INT #306 -&gt; USINT #50) |  |
 | USINT | - | X |  |  |
 | INT | - | X |  |  |
 | UINT | - | X |  |  |

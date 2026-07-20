@@ -123,9 +123,9 @@ The security functions are configured in two views:
 | Symbol | Meaning |
 | --- | --- |
 | ① | Security functions    ![Figure](images/105144854795_DV_resource.Stream@PNG-en-US.png)   The global security functions are located in the project navigation. The global security functions can be configured independently of the module and subsequently assigned to individual security modules as required. Changes to the global security functions must be loaded on all security modules involved. This also applies to the settings of redundancy relationships.  To display the global security functions completely in the project navigation the project protection must be activated and there must be at least one security module in the project. If the first security module is a CP, the local security settings of the CP must also be activated.  The following main folders and entries are available in the global security functions:  - Certificate manager In the certificate manager, you see an overview of all the certificates used in the project. You can, for example, import new certificates as well as export, renew or replace existing certificates. - Firewall Under the "Firewall" entry, you can define global IP and MAC firewall rule sets and user-specific IP rule sets (SCALANCE S modules only) and assign security modules. Global firewall rule sets can also be exported from STEP 7 and imported into STEP 7. IP and MAC service definitions are used to define the IP and MAC firewall rules compactly and clearly. - VPN groups All created VPN groups are contained in this folder. You can create new VPN groups here and assign security modules to these VPN groups. You can also adapt VPN group properties of VPN groups that have already been created. - NTP Here, you can create NTP servers and assign them to one or more security modules. This ensures that time synchronization is performed through the assigned NTP server. Unsecured NTP servers can only be configured in the local security settings. - Syslog - RADIUS Here, you can create RADIUS servers and assign them to one or more security modules. With this, you ensure that authentication queries from users who log on to the selected security module to activate user-specific IP rule sets are forwarded to the assigned RADIUS server. - Log files (offline view) Opens logged system, audit and packet filter events that you saved as a file in the online diagnostics. |
-| ② | Work area    ![Figure](images/61482500619_DV_resource.Stream@PNG-en-US.png)   Once you have selected a module in the work area, you can configure its local security settings in "Properties" > "General". If the selected object is in a VPN group, related information is displayed in the VPN tab. |
+| ② | Work area    ![Figure](images/61482500619_DV_resource.Stream@PNG-en-US.png)   Once you have selected a module in the work area, you can configure its local security settings in "Properties" &gt; "General". If the selected object is in a VPN group, related information is displayed in the VPN tab. |
 | ③ | VPN tab    ![Figure](images/61482701451_DV_resource.Stream@PNG-en-US.png)   This tab displays information about all the VPN groups to which the security module that was selected in the working area belongs. Information about the respective participants of a VPN group can be displayed and hidden. |
-| ④ | Local security settings    ![Figure](images/68944661515_DV_resource.Stream@PNG-en-US.png)   Local security settings are configured for a specific module. After one of these objects has been selected in the working area, its local security settings are available in the Inspector window under "Properties" > "General". To display the local security settings, project protection must be activated.  For CPs in the Inspector window, the "Activate security features" check box must be activated n the "Properties" > "General" tab, "Security" entry. The local security settings are then displayed below the "Security" entry. When the check box is selected, the some of the CP settings (assuming they were enabled) are migrated automatically to the local security settings.  Depending on the particular security module, additional security functions are also available such as NTP (secure), SNMPv3, FTPS.  In addition, firewall rules that enable a connection to be established are created automatically for configured connections. Log settings are available to record blocked packets. |
+| ④ | Local security settings    ![Figure](images/68944661515_DV_resource.Stream@PNG-en-US.png)   Local security settings are configured for a specific module. After one of these objects has been selected in the working area, its local security settings are available in the Inspector window under "Properties" &gt; "General". To display the local security settings, project protection must be activated.  For CPs in the Inspector window, the "Activate security features" check box must be activated n the "Properties" &gt; "General" tab, "Security" entry. The local security settings are then displayed below the "Security" entry. When the check box is selected, the some of the CP settings (assuming they were enabled) are migrated automatically to the local security settings.  Depending on the particular security module, additional security functions are also available such as NTP (secure), SNMPv3, FTPS.  In addition, firewall rules that enable a connection to be established are created automatically for configured connections. Log settings are available to record blocked packets. |
 
 #### Secure and non-secure configuration areas
 
@@ -202,7 +202,7 @@ Modules can be replaced by modules with higher firmware versions. The local secu
 To be able to replace security modules, their module descriptions must be up to date. To update the module description of security modules, follow the steps below:
 
 1. Select the security module to be edited.
-2. In the local security settings, click on the entry "General" > "Catalog information".
+2. In the local security settings, click on the entry "General" &gt; "Catalog information".
 3. Click the "Update module description" button.
 
 #### How to access this function
@@ -519,11 +519,11 @@ The following requirements must be met in order to create and assign certificate
 
 - As STEP 7 project user, you have at least the rights of the "NET Administrator" role.
 
-  For more on this, see "Security settings > Users and roles > Assigned roles".
+  For more on this, see "Security settings &gt; Users and roles &gt; Assigned roles".
 - The devices have the required minimum firmware version, see above.
 - The configuration data of the CPU is protected.
 
-  For more on this, see "Protection & Security > Protection of confidential PLC configuration data"
+  For more on this, see "Protection &amp; Security &gt; Protection of confidential PLC configuration data"
 
 To be able to assign your local CPU to the TIM 1531 IRC, the following requirement must be met:
 
@@ -532,7 +532,7 @@ To be able to assign your local CPU to the TIM 1531 IRC, the following require
 
 **Certificates of SIMATIC NET devices**
 
-SIMATIC NET communications modules generally use the global certificate manager. You can find this in the project navigation under "Security settings > Security features".
+SIMATIC NET communications modules generally use the global certificate manager. You can find this in the project navigation under "Security settings &gt; Security features".
 
 **Creating the certificate of the CPU**
 
@@ -545,12 +545,12 @@ When the CPU is assigned to the TIM (see below), the ID of the newly created CPU
 
 Proceed as follows to create the CPU certificate:
 
-1. For the CPU, select the parameter group "Protection & Security > Certificate manager > Global security settings".
+1. For the CPU, select the parameter group "Protection &amp; Security &gt; Certificate manager &gt; Global security settings".
 2. Enable the "Use global security settings for certificate manager" option.
 
    Note:  
    When the option is enabled, existing CPU certificates are deleted.
-3. Go to "Protection & Security > Connection mechanisms > Communication to TIA Portal and HMI".
+3. Go to "Protection &amp; Security &gt; Connection mechanisms &gt; Communication to TIA Portal and HMI".
 4. In the "PLC communication certificate" row, right-click on the icon for the drop-down list.
 5. Click "Add" under the open drop-down list.
 
@@ -568,7 +568,7 @@ Proceed as follows to create the CPU certificate:
    The newly created TLS certificate is shown in the device certificate table with the "TlsServer" service for the CPU.
 7. Open the global certificate manager in the project navigation:
 
-   "Security settings > Security features > Certificate manager > Device certificates"
+   "Security settings &gt; Security features &gt; Certificate manager &gt; Device certificates"
 8. Select the newly created certificate of the CPU (see above for ID) and open the "Assign" shortcut menu.
 9. In the list, select the TIM to which the CPU should be assigned.
 10. In the "Used as" row in the ("Not assigned") cell, select the "Trusted certificate" option and click on the green checkmark.
@@ -634,7 +634,7 @@ Alternatively, you can make the third-party certificate available to the STEP 7
 
 1. Open the global certificate manager in the project navigation:
 
-   "Security settings > Security features > Certificate manager > Device certificates"
+   "Security settings &gt; Security features &gt; Certificate manager &gt; Device certificates"
 2. Click on the "Create" shortcut menu in a free row.
 
    The "Create certificate" dialog opens.
@@ -1147,7 +1147,7 @@ Module families such as SCALANCE SC600 or SCALANCE M800 have zones, e.g. "Device
 
 ###### Overview
 
-The table on the right shows all available firewall zones that are created in the local device settings under "Security > Firewall > IP Rules".
+The table on the right shows all available firewall zones that are created in the local device settings under "Security &gt; Firewall &gt; IP Rules".
 
 - **Name**
 
@@ -1180,9 +1180,9 @@ In the left-hand table, you will see the firewall zones already assigned to glob
 
 ###### Procedure
 
-1. In the global security functions, select the entry "Firewall" > "Select firewall zones".
+1. In the global security functions, select the entry "Firewall" &gt; "Select firewall zones".
 2. In the "Available zones" area, select the zones you want to assign to the left-hand side.
-3. Click "<<" to assign the selected zone to the selected firewall zone.
+3. Click "&lt;&lt;" to assign the selected zone to the selected firewall zone.
 
 ###### Result
 
@@ -1259,7 +1259,7 @@ The following conventions apply when creating a global set of firewall rules and
 
 ###### How to access this function
 
-1. In the global security functions, select the entry "Firewall > Global firewall rule sets > IP rule sets or MAC rule sets".  
+1. In the global security functions, select the entry "Firewall &gt; Global firewall rule sets &gt; IP rule sets or MAC rule sets".  
    Result: The previously created IP rule sets or MAC rule sets are displayed under the selected entry.
 2. Double-click on the entry "Add new IP rule set" or "Add new MAC rule set".  
    Result: The created firewall rule set is displayed with an automatically assigned number below the entry "IP rule sets" or "MAC rule sets".
@@ -1298,11 +1298,11 @@ Firewall rule set: Parameter
 | IPv6 | If this check box is selected, you can use a previously defined ICMPv6 service in the firewall rule. For some security CPs, after selecting the check box you can enter additional IPv6 addresses in the "Source IP address" and "Destination IP address" text boxes. | The check box can only be selected and deselected if there are no entries in the "Source IP address" and "Destination IP address" text boxes.  If IPv6 is disabled in the local settings of a CP capable of IPv6, you cannot select the "IPv6" check box in the local security settings of the CP and therefore cannot use ICMPv6 services or IPv6 addresses in firewall rules. Existing firewall rules that use IPv6 are shown grayed out if IPv6 is disabled. |
 | Source IP Address | The firewall rule is applied to the frames with a sender that has the IP address specified here. If you do not specify an IP address, the firewall rule applies to all nodes in the communication direction you selected in the "From" column. | You can find additional information about IP addresses in the section [IP addresses in IP packet filter rules](#ip-addresses-in-ip-packet-filter-rules).     **Configuration options in ghost mode (only for SCALANCE S S602 as of V3.1):**   If ghost mode is activated, the IP address of the internal node is dynamically determined by the security module at runtime. Depending on the selected direction, you can select one of the following options in the column "Source IP address" (for direction "From internal to external") or in the column "Destination IP address" (for direction "From external to internal"):  - IP address of the internal node: The IP address of the internal node is inserted in the firewall rule by the SCALANCE S. - Limited broadcast: The broadcast IP address 255.255.255.255 is inserted in the firewall rule by the SCALANCE S. - Directed broadcast: The broadcast IP address of the SCALANCE S network is inserted in the firewall rule by the SCALANCE S. A directed broadcast can also be forwarded into the destination network via routers. - Multicast: The multicast address band 224.0.0.0 /24 is added to the firewall rule by the SCALANCE S. After selecting this option, a specific multicast IP address from the multicast address band can be specified as an alternative. |
 | Destination IP address | The firewall rule is applied to the frames with a recipient that has the IP address specified here. If you do not specify an IP address, the firewall rules applies to all nodes in the communication direction you selected in the "To" column. |  |
-| Service | Selection of the IP/ICMP service or the service group to be used.  Note: Before using a predefined service make sure that its predefined parameters meet your requirements. Pay particular attention to the predefined source and destination ports. | When selected, a window opens in which all pre-defined and configured IP services, ICMP services and service groups are displayed. These are managed in the global security functions under "Firewall > Services > Define services for IP rules". |
+| Service | Selection of the IP/ICMP service or the service group to be used.  Note: Before using a predefined service make sure that its predefined parameters meet your requirements. Pay particular attention to the predefined source and destination ports. | When selected, a window opens in which all pre-defined and configured IP services, ICMP services and service groups are displayed. These are managed in the global security functions under "Firewall &gt; Services &gt; Define services for IP rules". |
 | Transmission speed (Mbps) | Limitation of the transmission speed  Can only be set if "Accept" is selected as action.  A packet passes through the firewall if the Accept rule applies and the permitted transmission speed for this rule has not yet been exceeded. | CP 343-1 Adv. / CP 443-1 Adv., S7-1200-/S7-1500-CPs, CP 1628: 0.001 ... 100 Mbps  SCALANCE S: 0.001 ... 1000 Mbps  For global and user-specific rules: 0.001 ... 1000 Mbps  For IP rules with the direction "Backplane bus": 0.001 ... 1 Mbps  Note: If the direction "From tunnel to station" is configured in a firewall rule for the S7-1200/S7-1500 CPs, no transmission speed limitation can be specified.  For CP 1543-1 V2.1 only one transmission speed can be specified if "Any" is configured for one of the two directions. This does not apply to the combination of directions "Any" and "Station". |
 | Logging | Enable and disable logging for this rule. If logging is enabled, the settings for the packet filter logging configured in the local security settings apply. | - Enabled - Disabled (default) |
 | Number | Automatically assigned number for the rule. The numbers are recalculated when rules are moved. |  |
-| Stateful | If this check box is cleared for an IP rule with the "Accept" action, no firewall states are generated by packets to which the Accept rule applies. Firewall states automatically allow the responses to allowed packets.  Can only be adapted if "Accept" is selected as action. Configuration of IP rules without firewall states is only possible for SCALANCE S modules as of firmware V3. If the responses to packets that have passed the firewall according to such IP rules should also be allowed, additional IP rules need to be configured for these responses. | For Accept rules of SCALANCE S ≥ V3:  - enabled (default) - Disabled     For Accept rules of SCALANCE S < V3 and CPs:  - enabled (default)   Note: The check box is not present for CPs; however, the activated option is always used implicitly for Accept rules of CPs.    For Drop rules:  - Disabled (default) |
+| Stateful | If this check box is cleared for an IP rule with the "Accept" action, no firewall states are generated by packets to which the Accept rule applies. Firewall states automatically allow the responses to allowed packets.  Can only be adapted if "Accept" is selected as action. Configuration of IP rules without firewall states is only possible for SCALANCE S modules as of firmware V3. If the responses to packets that have passed the firewall according to such IP rules should also be allowed, additional IP rules need to be configured for these responses. | For Accept rules of SCALANCE S ≥ V3:  - enabled (default) - Disabled     For Accept rules of SCALANCE S &lt; V3 and CPs:  - enabled (default)   Note: The check box is not present for CPs; however, the activated option is always used implicitly for Accept rules of CPs.    For Drop rules:  - Disabled (default) |
 | Comment | Space for your own explanation of the rule | If a comment is marked with "AUTO", it was created for an automatic connection rule. For rules you have created, entry of a comment is optional. |
 
 Meaning of the entries in the shortcut menu
@@ -1328,7 +1328,7 @@ MAC rule set: Parameter
 | From / To | Selection of the communications directions for which the rule will apply. | Described in separate sections.  - For SCALANCE S modules: [MAC packet filter directions SCALANCE S](#mac-packet-filter-directions-scalance-s) - For S7-300-/S7-400-/PC CPs: [MAC packet filter directions S7-300-/S7-400-/PC-CPs](#mac-packet-filter-directions-s7-300-s7-400-pc-cps) - For S7-1200-/S7-1500 CPs: [MAC packet filter directions S7-1200 / S7-1500 CPs](#mac-packet-filter-directions-s7-1200-s7-1500-cps)   The communication direction "Station" includes access to the CP and access to the CPU via the CP.  As default, the communication directions "Station" and "Tunnel" are classified as being trustworthy. For communication between trustworthy directions no firewall rules need to be configured. |
 | Source MAC address | The firewall rule is applied to the frames with a sender that has the MAC address specified here. If you do not specify a MAC address, the firewall rule applies to all nodes in the communications direction you selected in the "From" column. | MAC address in the correct format |
 | Destination MAC address | The firewall rule is applied to the frames with a recipient that has the MAC address specified here. If you do not specify a MAC address, the firewall rule applies to all nodes in the communications direction you selected in the "To" column. |  |
-| Service | Selection of the MAC service or the service group to be used.  Note: Before using a predefined service make sure that its predefined parameters meet your requirements. | The drop-down list box displays the predefined and configured services and service groups you can select. These are displayed in the global security functions under "Firewall" > "Services" > "Define services for MAC rules". |
+| Service | Selection of the MAC service or the service group to be used.  Note: Before using a predefined service make sure that its predefined parameters meet your requirements. | The drop-down list box displays the predefined and configured services and service groups you can select. These are displayed in the global security functions under "Firewall" &gt; "Services" &gt; "Define services for MAC rules". |
 | Transmission speed (Mbps) | Limitation of the transmission speed   Can only be entered if "Accept" is selected for the action.  A packet passes through the firewall if the Accept rule applies and the permitted transmission speed for this rule has not yet been exceeded. | CP 343-1 Adv. / CP 443-1 Adv., S7-1200-/S7-1500-CPs: 0.001 ... 100 Mbps  CP 1628 and SCALANCE S: 0.001 ... 1000 Mbps  For global rules: 0.001 ... 1000 Mbps  Note: If the direction "From tunnel to station" is configured in a firewall rule for the S7-1200/S7-1500 CPs, no transmission speed limitation can be specified. |
 | Logging | Enable and disable logging for this rule. If logging is enabled, the settings for the packet filter logging configured in the local security settings apply. | - Enabled - Disabled (default) |
 | Number | Automatically assigned number for the rule. The numbers are recalculated when rules are moved. |  |
@@ -1353,12 +1353,12 @@ You have enabled the advanced firewall mode for the security modules you want to
 
 ###### Procedure
 
-1. In the global security functions, select the entry "Firewall > Global firewall rule sets > Assign module to a firewall rule set".
+1. In the global security functions, select the entry "Firewall &gt; Global firewall rule sets &gt; Assign module to a firewall rule set".
 2. From the "Rule set" drop-down list, select the rule set to which you want to assign the security module.
 
    In the right-hand table, you will see the security modules that you can assign to the selected firewall rule set. In the left-hand table, you will see the security modules already assigned to the selected firewall rule set.
 3. In the "Available modules" area, select the security modules you want to assign to the selected rule set.
-4. Click the "<<" button to assign the selected modules to the selected rule set.
+4. Click the "&lt;&lt;" button to assign the selected modules to the selected rule set.
 
 ###### Result
 
@@ -1384,7 +1384,7 @@ Firewall rule sets exported from STEP 7 are largely compatible with the Security
 
 ###### Exporting firewall rule sets from STEP 7
 
-1. In the global security functions, select the entry "Firewall" > "Global firewall rule sets".
+1. In the global security functions, select the entry "Firewall" &gt; "Global firewall rule sets".
 2. Double-click on the "Overview" entry.
 
    Result: The IP rule sets and MAC rule sets that exist in STEP 7 are displayed in the working area.
@@ -1401,7 +1401,7 @@ Exported firewall rule sets can be edited prior to importing them. Refer to the 
 
 Follow the steps outlined below to import firewall rule sets in STEP 7:
 
-1. In the global security functions, select the entry "Firewall" > "Global firewall rule sets".
+1. In the global security functions, select the entry "Firewall" &gt; "Global firewall rule sets".
 2. Double-click on the "Overview" entry.
 
    Result: The IP rule sets and MAC rule sets that exist in STEP 7 are displayed in the working area.
@@ -1529,7 +1529,7 @@ This section contains information on the following topics:
 
 ###### How to access this function
 
-In the global security functions, select the entry "Firewall > Services > Define services for IP rules".
+In the global security functions, select the entry "Firewall &gt; Services &gt; Define services for IP rules".
 
 ###### Procedure
 
@@ -1556,7 +1556,7 @@ IP services: Parameter
 
 ###### How to access this function
 
-1. In the global security functions, select the entry "Firewall > Services > Define services for IP rules".
+1. In the global security functions, select the entry "Firewall &gt; Services &gt; Define services for IP rules".
 2. Select the "ICMP" tab.
 
 ###### Principle
@@ -1599,7 +1599,7 @@ To search, enter the number in brackets after the type.
 
 ###### How to access this function
 
-1. In the global security functions, select the entry "Firewall > Services > Define services for IP rules".
+1. In the global security functions, select the entry "Firewall &gt; Services &gt; Define services for IP rules".
 2. Select the "Service groups" tab.
 
 ###### Forming service groups
@@ -1619,7 +1619,7 @@ You can also select pre-defined service groups for ICMPv4 or ICMPv6, for example
 
 ###### How to access this function
 
-1. In the global security functions, select the entry "Firewall > Services > Define services for IP rules".
+1. In the global security functions, select the entry "Firewall &gt; Services &gt; Define services for IP rules".
 2. Select the "Group management" tab.
 
 ###### Forming service groups
@@ -1645,7 +1645,7 @@ This section contains information on the following topics:
 
 ###### How to access this function
 
-In the global security functions, select the entry "Firewall > Services > Define services for MAC rules".
+In the global security functions, select the entry "Firewall &gt; Services &gt; Define services for MAC rules".
 
 ###### Meaning
 
@@ -1664,7 +1664,7 @@ MAC services - parameters
 | Parameter | Meaning/comment | Available options / ranges of values |
 | --- | --- | --- |
 | Name | User-definable name for the service that is used as identification in the rule definition or in the group. | - Name must not be redundant. |
-| Protocol | Name of the protocol type:  - ISO   ISO identifies frames with the following properties:   Lengthfield <= 05DC (hex),  DSAP= userdefined  SSAP= userdefined  CTRL= userdefined - SNAP   SNAP identifies frames with the following properties:   Lengthfield <= 05DC (hex),  DSAP=AA (hex), SSAP=AA (hex),  CTRL=03 (hex),  OUI=userdefined,  OUI-Type=userdefined - PROFINET IO - Alternatively, a protocol number can be entered.   The protocol entries 0800 (hex) and 0806 (hex) are not accepted since these values apply to IP or ARP frames. | - Enter protocol number (0x is added automatically) - ISO - SNAP - PROFINET IO |
+| Protocol | Name of the protocol type:  - ISO   ISO identifies frames with the following properties:   Lengthfield &lt;= 05DC (hex),  DSAP= userdefined  SSAP= userdefined  CTRL= userdefined - SNAP   SNAP identifies frames with the following properties:   Lengthfield &lt;= 05DC (hex),  DSAP=AA (hex), SSAP=AA (hex),  CTRL=03 (hex),  OUI=userdefined,  OUI-Type=userdefined - PROFINET IO - Alternatively, a protocol number can be entered.   The protocol entries 0800 (hex) and 0806 (hex) are not accepted since these values apply to IP or ARP frames. | - Enter protocol number (0x is added automatically) - ISO - SNAP - PROFINET IO |
 | DSAP | Destination Service Access Point: LLC recipient address |  |
 | SSAP | Source Service Access Point: LLC sender address |  |
 | CTRL | LLC control field |  |
@@ -1692,7 +1692,7 @@ Use the following protocol settings for filtering of specific SIMATIC NET servic
 
 ###### How to access this function
 
-1. In the global security functions, select the entry "Firewall > Services > Define services for MAC rules".
+1. In the global security functions, select the entry "Firewall &gt; Services &gt; Define services for MAC rules".
 2. Select the "Service groups" tab.
 
 ###### Forming service groups
@@ -1712,7 +1712,7 @@ You can also select pre-defined service groups, for example, for DCP.
 
 ###### How to access this function
 
-1. In the global security functions, select the entry "Firewall > Services > Define services for MAC rules".
+1. In the global security functions, select the entry "Firewall &gt; Services &gt; Define services for MAC rules".
 2. Select the "Group management" tab.
 
 ###### Forming service groups
@@ -1752,7 +1752,7 @@ The communication direction "Station" that can be configured for CPs, includes a
 
 ###### Defining firewall rules in advanced firewall mode
 
-In advanced firewall mode, you can make detailed firewall settings. You can allow individual services for a single node or all services for the node for access to the station or network. You enable the advanced firewall mode using the "Activate firewall in advanced mode" check box. You open the editors for configuration of IP rules and MAC rules in the advanced firewall mode using the corresponding buttons in "Firewall > IP rules". For the configuration options available here in the editors refer to the following section:
+In advanced firewall mode, you can make detailed firewall settings. You can allow individual services for a single node or all services for the node for access to the station or network. You enable the advanced firewall mode using the "Activate firewall in advanced mode" check box. You open the editors for configuration of IP rules and MAC rules in the advanced firewall mode using the corresponding buttons in "Firewall &gt; IP rules". For the configuration options available here in the editors refer to the following section:
 
 For IP packet filter rules: [Defining IP packet filter rules](#defining-ip-packet-filter-rules)
 
@@ -1768,7 +1768,7 @@ For MAC packet filter rules: [Defining MAC packet filter rules](#defining-mac-pa
 
 When you switch over to the advanced firewall mode, enabled predefined firewall rules and logging settings are adopted. If, for example, the "Allow S7 protocol" check box is selected in the direction "From External to Internal" for a SCALANCE S module, an Accept rule with this communication direction and the service "S7" are created automatically in the advanced firewall mode.
 
-If predefined logging settings exist for S7-1200 / S7-1500 CPs, in advanced mode these are not shown as firewall rules but under the entry “Firewall > Log settings” where they can be edited.
+If predefined logging settings exist for S7-1200 / S7-1500 CPs, in advanced mode these are not shown as firewall rules but under the entry “Firewall &gt; Log settings” where they can be edited.
 
 ###### Configuration limits
 
@@ -1806,7 +1806,7 @@ The operator controls of the menu bar have the following functions:
 
 ###### Advanced IP rule editor
 
-After selecting an IP rule, an advanced IP rule editor appears in the Inspector window under "General > IP rules". It is used for simplified configuration of IP rules. Changes made in this editor are adopted in the selected IP rule.
+After selecting an IP rule, an advanced IP rule editor appears in the Inspector window under "General &gt; IP rules". It is used for simplified configuration of IP rules. Changes made in this editor are adopted in the selected IP rule.
 
 ###### Defining IP rules in the Advanced IP rule editor
 
@@ -1829,11 +1829,11 @@ Parameters in the IP rule editor
 | Source IP address | The firewall rule is applied to the frames with a sender that has the IP address specified here. If you do not specify an IP address, the firewall rule applies to all nodes in the communications direction you selected in the "From" column. | In the editor, address ranges can be configured in the text boxes of the "From" and "To" columns. If several address ranges are configured for an IP rule, the number of addresses must match in each case. After configuring address ranges, STEP 7 creates an IP rule set from the selected IP rule that contains a corresponding IP rule for each of the addresses.    You can find additional information about IP addresses in the [IP addresses in IP packet filter rules](#ip-addresses-in-ip-packet-filter-rules) section.     **Configuration options in ghost mode (only for SCALANCE S S602 as of V3.1):**   If ghost mode is activated, the IP address of the internal node is dynamically determined by the security module at runtime. Depending on the selected direction, you can select one of the following options in the column "Source IP address" (for direction "From internal to external") or in the column "Destination IP address" (for direction "From external to internal"):  - IP address of the internal node: The IP address of the internal node is inserted in the firewall rule by the SCALANCE S. - Limited broadcast: The broadcast IP address 255.255.255.255 is inserted in the firewall rule by the SCALANCE S. - Directed broadcast: The broadcast IP address of the SCALANCE S network is inserted in the firewall rule by the SCALANCE S. A directed broadcast can also be forwarded into the destination network via routers. - Multicast: The multicast address band 224.0.0.0 /24 is inserted in the firewall rule by the SCALANCE S. After selecting this option, as an alternative a specific multicast IP address from the multicast address band can be specified. |
 | Dest. IP address | The firewall rule is applied to the frames with a recipient that has the IP address specified here. If you do not specify an IP address, the firewall rules applies to all nodes in the communications direction you selected in the "To" column. |  |
 | **Additional settings** |  |  |
-| Service | Selection of the IP/ICMP service or the service group to be used.  Note: Before using a predefined service make sure that its predefined parameters meet your requirements. Pay particular attention to the predefined source and destination ports. | When selected, a window opens in which all pre-defined and configured IP services, ICMP services and service groups are displayed. These are managed in the global security functions under "Firewall > Services > Define services for IP rules". |
+| Service | Selection of the IP/ICMP service or the service group to be used.  Note: Before using a predefined service make sure that its predefined parameters meet your requirements. Pay particular attention to the predefined source and destination ports. | When selected, a window opens in which all pre-defined and configured IP services, ICMP services and service groups are displayed. These are managed in the global security functions under "Firewall &gt; Services &gt; Define services for IP rules". |
 | Transmission speed (Mbps) | Limitation of the transmission speed  Can only be entered if "Accept" is selected for the action.  A packet passes through the firewall if the Accept rule applies and the permitted transmission speed for this rule has not yet been exceeded. | CP 343-1 Adv. / CP 443-1 Adv., S7-1200-/S7-1500-CPs, CP 1628: 0.001 ... 100 Mbps  SCALANCE S: 0.001 ... 1000 Mbps  For global and user-specific rules: 0.001 ... 1000 Mbps  For IP rules with the direction "Backplane bus": 0.001 ... 1 Mbps  Note: If the direction "From tunnel to station" is configured in a firewall rule for the S7-1200/S7-1500 CPs, no transmission speed limitation can be specified.  For CP 1543-1 V2.1 only one transmission speed can be specified if "Any" is configured for one of the two directions. This does not apply to the combination of directions "Any" and "Station". |
 | Logging | Enable and disable logging for this rule. If logging is enabled, the settings for the packet filter logging configured in the local security settings apply. | - Enabled - Disabled (default) |
 | Number | Automatically assigned number for the rule. The numbers are recalculated when rules are moved. |  |
-| Stateful | If this check box is cleared for an IP rule with the "Accept" action, no firewall states are generated by packets to which the Accept rule applies. Firewall states automatically allow the responses to allowed packets.  Can only be adapted if "Accept" is selected for the action. Configuration of IP rules without firewall states is only possible for SCALANCE S modules as of firmware V3. If the responses to packets that have passed the firewall according to such IP rules should also be allowed, additional IP rules need to be configured for these responses. | For Accept rules of SCALANCE S ≥ V3:  - enabled (default) - disabled     For Accept rules of SCALANCE S < V3 and CPs:  - enabled (default)   Note: The check box is not present for CPs; however, the activated option is always used implicitly for Accept rules of CPs.    For Drop rules:  - Disabled (default) |
+| Stateful | If this check box is cleared for an IP rule with the "Accept" action, no firewall states are generated by packets to which the Accept rule applies. Firewall states automatically allow the responses to allowed packets.  Can only be adapted if "Accept" is selected for the action. Configuration of IP rules without firewall states is only possible for SCALANCE S modules as of firmware V3. If the responses to packets that have passed the firewall according to such IP rules should also be allowed, additional IP rules need to be configured for these responses. | For Accept rules of SCALANCE S ≥ V3:  - enabled (default) - disabled     For Accept rules of SCALANCE S &lt; V3 and CPs:  - enabled (default)   Note: The check box is not present for CPs; however, the activated option is always used implicitly for Accept rules of CPs.    For Drop rules:  - Disabled (default) |
 | Number of copies to create | The selected IP rule is copied. | Select how often the selected rule is to be copied and click on the "Create copies" button. |
 
 Meaning of the entries in the shortcut menu
@@ -1888,7 +1888,7 @@ MAC rules: Parameter
 | From / To | Selection of the communications directions for which the rule will apply. | Described in separate sections.  - For SCALANCE S modules: [MAC packet filter directions SCALANCE S](#mac-packet-filter-directions-scalance-s) - For S7-300/S7-400/PC CPs: [MAC packet filter directions S7-300-/S7-400-/PC-CPs](#mac-packet-filter-directions-s7-300-s7-400-pc-cps) - For S7-1200/S7-1500 CPs: [MAC packet filter directions S7-1200 / S7-1500 CPs](#mac-packet-filter-directions-s7-1200-s7-1500-cps)   The communication direction "Station" includes access to the CP and access to the CPU via the CP.  As default, the communication directions "Station" and "Tunnel" are classified as being trustworthy. For communication between trustworthy directions no firewall rules need to be configured. |
 | Source MAC address | The firewall rule is applied to the frames with a sender that has the MAC address specified here. If you do not specify a MAC address, the firewall rule applies to all nodes in the communications direction you selected in the "From" column. | MAC address in the correct format |
 | Destination MAC address | The firewall rule is applied to the frames with a recipient that has the MAC address specified here. If you do not specify a MAC address, the firewall rule applies to all nodes in the communications direction you selected in the "To" column. |  |
-| Service | Selection of the MAC service or the service group to be used.  Note: Before using a predefined service make sure that its predefined parameters meet your requirements. | The drop-down list box displays the predefined and configured services and service groups you can select. These are displayed in the global security functions under "Firewall" > "Services" > "Define services for MAC rules". |
+| Service | Selection of the MAC service or the service group to be used.  Note: Before using a predefined service make sure that its predefined parameters meet your requirements. | The drop-down list box displays the predefined and configured services and service groups you can select. These are displayed in the global security functions under "Firewall" &gt; "Services" &gt; "Define services for MAC rules". |
 | Transmission speed (Mbps) | Limitation of the transmission speed   Can only be entered if "Accept" is selected for the action.  A packet passes through the firewall if the Accept rule applies and the permitted transmission speed for this rule has not yet been exceeded. | CP 343-1 Adv. / CP 443-1 Adv., S7-1200-/S7-1500-CPs: 0.001 ... 100 Mbps  CP 1628 and SCALANCE S: 0.001 ... 1000 Mbps  For global rules: 0.001 ... 1000 Mbps  Note: If the direction "From tunnel to station" is configured in a firewall rule for the S7-1200/S7-1500 CPs, no transmission speed limitation can be specified. |
 | Logging | Enable and disable logging for this rule. If logging is enabled, the settings for the packet filter logging configured in the local security settings apply. | - Enabled - Disabled (default) |
 | Number | Automatically assigned number for the rule. The numbers are recalculated when rules are moved. |  |
@@ -1985,7 +1985,7 @@ Syslog according to RFC 3164 is used for transferring short, unencrypted text me
 #### Requirements for sending log entries
 
 - The Syslog function is enabled on the device.
-- In "System > Events > Configuration", "Syslog" is activated for the relevant event.
+- In "System &gt; Events &gt; Configuration", "Syslog" is activated for the relevant event.
 - There is a Syslog server in your network that receives the log entries. Since this is a UDP connection, there is no acknowledgment to the sender.
 - The IP address or the FQDN (Fully Qualified Domain Name) of the Syslog server is entered in the device.
 
@@ -2049,7 +2049,7 @@ In both logging procedures, the security module recognizes the three following t
 ##### How to access this function
 
 1. Select the module to be edited.
-2. Select the "Log settings" > "Local log memory" entry in the local security settings.
+2. Select the "Log settings" &gt; "Local log memory" entry in the local security settings.
 
 ##### Configuring local logging
 
@@ -2061,9 +2061,9 @@ Local logging - settings for log events
 
 | Log event | Meaning | Comments |
 | --- | --- | --- |
-| Packet filter log (firewall) | The packet filter log records certain packets of the data traffic. Data packets are only logged if they match a configured packet filter rule (firewall) or to which the basic protection reacts (corrupt or invalid packets). This is only possible when logging is enabled for the packet filter rule.  In the "Packets to be logged" drop-down list, you can specify the data packets to be logged:  - "All packets": The data packets that are logged are those to which a configured firewall rule applies. In addition to this, all the response packets to such packets that have passed the firewall according to a configured Accept rule are recorded. - "Status generating packets" (only for SCALANCE S as of V3): The only data packets that are logged are those to which a configured firewall rule (standard mode or advanced mode) applies and that initially generate a status in the firewall. Data packets that pass through the firewall by using this firewall status are not logged. | Packet filter log data is not retentive  The data is stored in volatile memory on the security module and is therefore no longer available after the power supply has been turned off. For retentive storage, you can also save the log data displayed in the "Online & diagnostics" dialog in a file. |
+| Packet filter log (firewall) | The packet filter log records certain packets of the data traffic. Data packets are only logged if they match a configured packet filter rule (firewall) or to which the basic protection reacts (corrupt or invalid packets). This is only possible when logging is enabled for the packet filter rule.  In the "Packets to be logged" drop-down list, you can specify the data packets to be logged:  - "All packets": The data packets that are logged are those to which a configured firewall rule applies. In addition to this, all the response packets to such packets that have passed the firewall according to a configured Accept rule are recorded. - "Status generating packets" (only for SCALANCE S as of V3): The only data packets that are logged are those to which a configured firewall rule (standard mode or advanced mode) applies and that initially generate a status in the firewall. Data packets that pass through the firewall by using this firewall status are not logged. | Packet filter log data is not retentive  The data is stored in volatile memory on the security module and is therefore no longer available after the power supply has been turned off. For retentive storage, you can also save the log data displayed in the "Online &amp; diagnostics" dialog in a file. |
 | Audit log | The logging of audit events is always enabled.  The logged information is always stored in the ring buffer.  The audit log automatically records security-relevant events, for example user actions such as activating or deactivating packet logging or downloading configurations to the security module. | Audit log data is retentive.  The data is stored in a retentive memory of the security module and is therefore still available after turning off the power supply.   **Note for CPs:**   The audit log files are not retentive on CPs. You should therefore use a Syslog server to backup this data. |
-| System log | The system log automatically logs successive system events, for example the start of a process or the failed login attempt of a user.  Select the "Log settings" > "System events" entry to configure the event filter and cable diagnostics functions. | System log data is not retentive  The data is stored in volatile memory on the security module and is therefore no longer available after the power supply has been turned off. For retentive storage, you can also save the log data displayed in the "Online & diagnostics" dialog in a file. |
+| System log | The system log automatically logs successive system events, for example the start of a process or the failed login attempt of a user.  Select the "Log settings" &gt; "System events" entry to configure the event filter and cable diagnostics functions. | System log data is not retentive  The data is stored in volatile memory on the security module and is therefore no longer available after the power supply has been turned off. For retentive storage, you can also save the log data displayed in the "Online &amp; diagnostics" dialog in a file. |
 
 Local logging - storage of recorded data
 
@@ -2077,7 +2077,7 @@ Local logging - storage of recorded data
 ##### How to access this function
 
 1. Select the module to be edited.
-2. Select the "Log settings" > "System events" entry in the local security settings.
+2. Select the "Log settings" &gt; "System events" entry in the local security settings.
 
 ##### Filtering of the system events
 
@@ -2123,7 +2123,7 @@ Setting parameters for line diagnostics
 ##### How to access this function
 
 1. Select the module to be edited.
-2. Select the "Log settings" > "Network Syslog" entry in the local security settings.
+2. Select the "Log settings" &gt; "Network Syslog" entry in the local security settings.
 
 ##### Configuring the network Syslog
 
@@ -2148,7 +2148,7 @@ Network Syslog - settings for log events
 | --- | --- | --- |
 | Packet filter events (firewall) | The packet filter log records certain packets of the data traffic. Data packets are only logged if they match a configured packet filter rule (firewall) or to which the basic protection reacts (corrupt or invalid packets). This is only possible if logging is activated for the packet filter rule.  Syslog alarms can be classified according to their origin and their severity level by setting Facility and Severity. This assignment is carried out with drop-down lists. The severity and facility that you set here is assigned to every event. | Which value you select, depends on the evaluation in the Syslog server.  If you retain the "default" value setting, the security module specifies the combination of facility and severity with which the event is displayed. |
 | Audit events | The audit log automatically records security-relevant events, for example user actions such as activating or deactivating packet logging or downloading configurations to the security module.  Assignment of the severity and facility is carried out with drop-down lists. The severity and facility that you set here is assigned to every event. | The value you select for the severity and facility, depends on the evaluation in the Syslog server.  If you retain the "default" value setting, the security module specifies the combination of facility and severity with which the event is displayed. |
-| System events | The system log automatically logs successive system events, for example the start of a process or the failed login attempt of a user. | Select the "Log settings" > "System events" entry in the local security settings to configure the event filter and cable diagnostics functions. |
+| System events | The system log automatically logs successive system events, for example the start of a process or the failed login attempt of a user. | Select the "Log settings" &gt; "System events" entry in the local security settings to configure the event filter and cable diagnostics functions. |
 
 ### Security module as router
 
@@ -2181,7 +2181,7 @@ For this mode, you configure an internal IP address and an internal subnet mask 
 Note: In contrast to the bridge mode of the security module, VLAN tags are lost in routing mode.
 
 1. Select the "Routing mode" option under "Mode" in the local security settings.
-2. In the local security settings, enter an internal IP address and an internal subnet mask for addressing the router on the internal subnet in the input boxes under "Internal interface [P2] green" > Ethernet addresses".
+2. In the local security settings, enter an internal IP address and an internal subnet mask for addressing the router on the internal subnet in the input boxes under "Internal interface [P2] green" &gt; Ethernet addresses".
 
 #### Overview of NAT/NAPT
 
@@ -2225,7 +2225,7 @@ Among other things, remember the following rules to obtain consistent entries:
 
 - The IP address of the internal interface must not be used in the NAT / NAPT table.
 - An IP address used in the NAT/NAPT address conversion list must not be a multicast or broadcast address.
-- The external ports assigned for the NAPT translation are in the range > 0 and ≤ 65535.
+- The external ports assigned for the NAPT translation are in the range &gt; 0 and ≤ 65535.
 
   Port 123 (NTP), port 443 (HTTPS), port 514 (Syslog), port 161 (SNMP), ports 67+68 (DHCP) and ports 500+4500 (IPsec) are excluded if the relevant services are activated on the security module.
 - The external IP address of the security module or the IP address of the DMZ interface may only be used in the NAT table for the action "Source NAT".
@@ -2233,7 +2233,7 @@ Among other things, remember the following rules to obtain consistent entries:
 
   An external IP address or an IP address in the DMZ network used in the direction "Destination NAT", "Source NAT +Destination NAT" or "Double NAT" may only be used once in each specified direction.
 - Checking for duplicates in the NAPT table: A source port number may only be entered once for each interface.
-- Internal NAPT ports can be in the range > 0 and ≤ 65535.
+- Internal NAPT ports can be in the range &gt; 0 and ≤ 65535.
 
 ---
 
@@ -2403,7 +2403,7 @@ The following table shows the input required for the action "Double NAT":
 
 ##### Advanced NAT editor
 
-After selecting a NAT rule, an advanced NAT editor appears in the Inspector window in "Properties > General" and is used for simplified configuration of address ranges for ports and IP addresses. Changes made in this editor are adopted in the selected NAT rule. In addition, selected NAT rules and NAT rule sets can be copied in the advanced NAT editor. To copy a NAT rule set, its first line must be selected. You can specify which of the copied NAT rules is used by adapting the IP rules generated for the NAT rules. Based on examples, the following section illustrates the configuration of address ranges in the advanced NAT editor.
+After selecting a NAT rule, an advanced NAT editor appears in the Inspector window in "Properties &gt; General" and is used for simplified configuration of address ranges for ports and IP addresses. Changes made in this editor are adopted in the selected NAT rule. In addition, selected NAT rules and NAT rule sets can be copied in the advanced NAT editor. To copy a NAT rule set, its first line must be selected. You can specify which of the copied NAT rules is used by adapting the IP rules generated for the NAT rules. Based on examples, the following section illustrates the configuration of address ranges in the advanced NAT editor.
 
 ##### Configuring address ranges in the advanced NAT editor
 
@@ -2417,7 +2417,7 @@ The following control elements are available in the menu bar:
 
 | Operator control element | Function |
 | --- | --- |
-| ![Address translation with NAPT](images/105044684171_DV_resource.Stream@PNG-de-DE.png) | Activate NAPT  Enables the editor for NAPT rules. If the editor is enabled, the corresponding rules can be configured and are transferred to the module during loading. After selecting a NAPT rule, the editor for advanced NAPT settings is available In the "Properties" > "General" tab of the Inspector window. |
+| ![Address translation with NAPT](images/105044684171_DV_resource.Stream@PNG-de-DE.png) | Activate NAPT  Enables the editor for NAPT rules. If the editor is enabled, the corresponding rules can be configured and are transferred to the module during loading. After selecting a NAPT rule, the editor for advanced NAPT settings is available In the "Properties" &gt; "General" tab of the Inspector window. |
 | ![Address translation with NAPT](images/101505139467_DV_resource.Stream@PNG-de-DE.png) | Insert rule above  Inserts a rule above the selected rule / the selected rule set. To insert above a rule set, its first line must be selected. |
 | ![Address translation with NAPT](images/101505647755_DV_resource.Stream@PNG-de-DE.png) | Insert rule below  Inserts a rule below the selected rule / the selected rule set. To insert below a rule set, its first line must be selected. |
 | ![Address translation with NAPT](images/101505950987_DV_resource.Stream@PNG-de-DE.png) | Move up  Moves the selected rule / the selected rule set one line up. To move a rule set, its first line must be selected. |
@@ -2461,7 +2461,7 @@ The following table shows the input required for address translation with NAPT i
 
 ##### Advanced NAPT editor
 
-After selecting a NAPT rule an advanced NAPT editor appears in the Inspector window in "Properties > General" and is used for simple configuration of address ranges for ports and IP addresses. Changes made in this editor are adopted in the selected NAPT rule. In addition to this, selected NAPT rules and NAPT rule sets can be copied in the advanced NAPT editor. To copy a NAPT rule set its first line must be selected. Which of the copied NAPT rules is used, can be specified by adapting the IP rules generated for the NAPT rules. Based on examples, the following section illustrates the configuration of address ranges in the advanced NAPT editor.
+After selecting a NAPT rule an advanced NAPT editor appears in the Inspector window in "Properties &gt; General" and is used for simple configuration of address ranges for ports and IP addresses. Changes made in this editor are adopted in the selected NAPT rule. In addition to this, selected NAPT rules and NAPT rule sets can be copied in the advanced NAPT editor. To copy a NAPT rule set its first line must be selected. Which of the copied NAPT rules is used, can be specified by adapting the IP rules generated for the NAPT rules. Based on examples, the following section illustrates the configuration of address ranges in the advanced NAPT editor.
 
 ##### Configuration of address ranges in the advanced NAPT editor.
 
@@ -2680,7 +2680,7 @@ Using the "Import" or "Export" commands in the shortcut menu, you can export the
 2. Double-click the entry "Assign module to an NTP server".
 3. From the "NTP Server" drop-down list, select the NTP server (secure) to which you want to assign a security module.
 4. In the "Available modules" section, select the security module that you want to assign to the selected NTP server (secure).
-5. Click the "<<" button to assign the selected security module to the selected NTP server (secure).
+5. Click the "&lt;&lt;" button to assign the selected security module to the selected NTP server (secure).
 
 ##### Result
 
@@ -2834,7 +2834,7 @@ The following properties of the VPN groups are displayed in columns in the "VPN"
 Open the dialog in which you can set the expiry date of the certificate as follows:
 
 1. Select the VPN group you want to edit in the "VPN" tab.
-2. In the "Properties" > "General" tab of the Inspector window, select the entry "Authentication".
+2. In the "Properties" &gt; "General" tab of the Inspector window, select the entry "Authentication".
 
 **Note**
 
@@ -2893,7 +2893,7 @@ For the number of communications relations between subnets of the security modul
 2. Double-click on the "Assign module to a VPN group" entry.
 3. From the "VPN" drop-down list, select the VPN group to which you want to assign a security module.
 4. In the "Available modules" section, select the security module that you want to assign to the selected VPN group.
-5. Click the "<<" button to assign the selected security module to the selected VPN group.
+5. Click the "&lt;&lt;" button to assign the selected security module to the selected VPN group.
 
    If the security module doe not support one or more properties of the VPN group box, the module symbol in the area of the assigned modules is displayed with an error symbol ![Procedure](images/95396201483_DV_resource.Stream@PNG-de-DE.png).
 
@@ -2915,7 +2915,7 @@ The following key-based or certificate-based authentication methods are supporte
 
   Authentication is achieved using a previously specified character string that is distributed to all modules in the group.
 
-  Enter a pre-shared key in the "Key" field under "Authentication" > "General" in the VPN group properties dialog. If you click the "Renew preshared key" button, STEP 7 renews the pre-shared key to be used.
+  Enter a pre-shared key in the "Key" field under "Authentication" &gt; "General" in the VPN group properties dialog. If you click the "Renew preshared key" button, STEP 7 renews the pre-shared key to be used.
 - Certificate
 
   Certificate-based authentication "Certificate" is the default setting. The procedure is as follows:
@@ -3448,7 +3448,7 @@ You can configure the following variants for logging:
 
 - Local logging
 
-  In this variant, you log events in the local buffer of the security module. You can then access these logs, display them and archive them on the service station in the "Online & diagnostics" dialog. The evaluation of the buffer areas of the security module is only possible if there is a network connection to the selected security module.
+  In this variant, you log events in the local buffer of the security module. You can then access these logs, display them and archive them on the service station in the "Online &amp; diagnostics" dialog. The evaluation of the buffer areas of the security module is only possible if there is a network connection to the selected security module.
 - Network Syslog
 
   With Network Syslog, you use a Syslog server that exists in the network. This logs the events according to the configuration in the log settings for the relevant security module.
@@ -3461,7 +3461,7 @@ You can save the logged events for archiving in a log file and open this later e
 
 When you operate the security module in ghost mode, the external interface of the security module takes over the IP address of the internal node at runtime. Before you can run diagnostics of a security module in ghost mode, you need to establish the connection to the security module via the IP address that the security module obtained from the internal node at runtime.
 
-To find out which IP address the security module currently has, you can search for accessible nodes in STEP 7 using the "Online" > "Accessible devices".
+To find out which IP address the security module currently has, you can search for accessible nodes in STEP 7 using the "Online" &gt; "Accessible devices".
 
 ##### Protecting exported log files from unauthorized access
 
@@ -3469,9 +3469,9 @@ Log files exported from STEP 7 can contain security related information. You sho
 
 #### Function overview online dialog
 
-##### Functions of the "Online & diagnostics" dialog
+##### Functions of the "Online &amp; diagnostics" dialog
 
-In STEP 7, the security module provides the following functions in the "Online & diagnostics" dialog:
+In STEP 7, the security module provides the following functions in the "Online &amp; diagnostics" dialog:
 
 | Entry in the online dialog | Function |
 | --- | --- |
@@ -3510,7 +3510,7 @@ The following requirements must be met to use the online functions of a security
 ##### How to access this function
 
 1. Right-click on the module to process.
-2. Select the "Online & diagnostics" command from the shortcut menu.
+2. Select the "Online &amp; diagnostics" command from the shortcut menu.
 3. If there is no online connection established to the security module, click the "Connect online" button in the "Diagnostics" entry.
 
 ##### Online settings are not saved in the configuration
@@ -3540,7 +3540,7 @@ This section contains information on the following topics:
 
 Display of the status of the security module selected in the project.
 
-Online & diagnostics: - "Status" entry
+Online &amp; diagnostics: - "Status" entry
 
 | System and status functions |  | Meaning |
 | --- | --- | --- |
@@ -3563,7 +3563,7 @@ Online & diagnostics: - "Status" entry
 | IP address |  | Alias IP address that was registered on an interface of the security module by a NAT rule. |
 | Corresponding Interface |  | Interface of the security module on which the alias IP address was registered. |
 | **Local time** |  |  |
-| Current time | Date and time that is displayed on the security module.  Format for "German" user interface language: dd.mm.yyyy (date) hh:mm:ss (time)  Format for "English" user interface language: mm/dd/yyyy (date) hh:mm:ss AM/PM (time)  Format for "French", "Italian" and "Spanish" user interface language: dd/mm/yyyy (date) hh:mm:ss (time)  Format for "Chinese" user interface language: yyyy/mm/dd (date) hh:mm:ss   **Note (not for CPs)**   You set the local time on the SCALANCE S module in "Functions" > "Date and time". |  |
+| Current time | Date and time that is displayed on the security module.  Format for "German" user interface language: dd.mm.yyyy (date) hh:mm:ss (time)  Format for "English" user interface language: mm/dd/yyyy (date) hh:mm:ss AM/PM (time)  Format for "French", "Italian" and "Spanish" user interface language: dd/mm/yyyy (date) hh:mm:ss (time)  Format for "Chinese" user interface language: yyyy/mm/dd (date) hh:mm:ss   **Note (not for CPs)**   You set the local time on the SCALANCE S module in "Functions" &gt; "Date and time". |  |
 | Operating time | Time since the last restart of the security module.  Format with the user interface language "German", "English", "French", "Italian", "Spanish" and "Chinese": dddd.hh:mm:ss |  |
 | Time-of-day source | The source from which the date and time are obtained. |  |
 | **Configuration** |  |  |
@@ -3613,7 +3613,7 @@ Display of the communication status of the following network components:
 - Other security modules of the VPN group to which the selected security module belongs
 - Internal network nodes of these security modules
 
-Online & diagnostics: "Communication Status" entry
+Online &amp; diagnostics: "Communication Status" entry
 
 | System and status functions | Meaning |
 | --- | --- |
@@ -3768,7 +3768,7 @@ This section contains information on the following topics:
 To be able to replace security modules, their module descriptions must be up to date. To update the module description of security modules, follow the steps below:
 
 1. Select the security module to be edited.
-2. In the local security settings, click on the entry "General" > "Catalog information".
+2. In the local security settings, click on the entry "General" &gt; "Catalog information".
 3. Click the "Update module description" button.
 
 #### How to access this function
@@ -3894,7 +3894,7 @@ Specify network parameters such as the IP address and subnet mask for the interf
 
 **Configuration of the internal interface in routing mode**
 
-If you have selected the "Routing" mode for the security module, you must also configure an internal IP address and subnet mask for the internal interface of the security module. You can access this function in the local security settings under "Internal interface [P2] green" > Ethernet addresses".
+If you have selected the "Routing" mode for the security module, you must also configure an internal IP address and subnet mask for the internal interface of the security module. You can access this function in the local security settings under "Internal interface [P2] green" &gt; Ethernet addresses".
 
 | Parameter | Meaning |
 | --- | --- |
@@ -3967,7 +3967,7 @@ Rules for user names and passwords
 
 | Symbol | Meaning |
 | --- | --- |
-| Permitted characters | The following characters from the ANSI X 3.4-1986 character set are permitted:  0123456789  A...Z a...z  !#$%&()"*'+`,-./:;<=>?@ [\]_{|}~^ |
+| Permitted characters | The following characters from the ANSI X 3.4-1986 character set are permitted:  0123456789  A...Z a...z  !#$%&amp;()"*'+`,-./:;&lt;=&gt;?@ [\]_{|}~^ |
 | Length of the user name | 1 to 120 characters |
 | Length of the password | 1 to 31 characters |
 
@@ -4021,7 +4021,7 @@ An account has been created with a provides of dynamic DNS and an FQDN has been 
 
 ##### Setting up dynamic DNS - Follow the steps below:
 
-| 1. Select the security module to be edited. 2. Select the "Dynamic DNS" entry in the local security settings. 3. Activate the "Activate service" check box in the "Primary dynamic DNS service" area and make the following settings:       | Setting | Meaning |    | --- | --- |    | Provider | Choose the provider with which you have set up an account for dynamic DNS. With the predefined providers (DynDNS.org and No-IP.com), the provider update URL and the check IP service URL are already completed. If you select the option "User defined" you can specify the two URLs manually. |    | Service type | Select whether the HTTP or HTTPS protocol will be used for the provider update URL of the predefined provider. |    | FQDN | Enter the host name (e.g. mysecuritymodule) and the domain name (e.g. dyndns.org) that is registered with the provider separated by a period. The FQDN can function as a VPN endpoint and differ from the FQDN in the "VPN" entry. You can configure which VPN endpoint the VPN partner is informed of in the connection-specific VPN settings. The syntax of an FQDN must comply with DNS. Maximum number of characters: 99 |    | Ignore errors when checking the server certificate | To protect the authentication data the certificate of the update server is checked. If the certificate check fails, the HTTPS connection is terminated as default and the account data is not transferred. If you activate the check box, the HTTPS connection is not terminated if the check fails (e.g. with an expired certificate) and the account data is transferred. You are advised not to ignore the check and not to select the check box. The check box can only be activated if the service type "DDNS-HTTPS" was selected. |    | User | Enter the user name that you specified when you created the account. The syntax of a user name must comply with DNS. Maximum number of characters: 24 |    | Password | Enter the password that you specified when you created the account. The syntax of the password must comply with DNS. Maximum number of characters: 24 |    | Monitor IP address change on DSL router | If the security module is connected to the Internet via a DSL router, enabling this function activates the function of the Check IP service. The security module periodically sends queries to determine the current IP address of the DSL router and to detect an IP address change on the DSL router. The IP address specified in this way is sent to the provider with each change ID. |    | Period | Specify the interval at which the Check IP service is called. - Default setting: 20 minutes - Minimum value: 10 minutes - Maximum value: 1440 minutes |    | Provider update URL | Enter the URL with which the security module reports the public IP address to the provider. The placeholder texts <FQDN> and <CurrentWanIP> need to be placed at the correct positions in the URL. The syntax of the URL must comply with DNS. Maximum number of characters: 127 |    | Check IP service URL | Enter the URL that the security module will use to determine its public IP address. The syntax of the URL must comply with DNS. Maximum number of characters: 127 | 4. In case the primary provider fails, create a second provider in the "Secondary dynamic DNS service" area (optional setting). |  |
+| 1. Select the security module to be edited. 2. Select the "Dynamic DNS" entry in the local security settings. 3. Activate the "Activate service" check box in the "Primary dynamic DNS service" area and make the following settings:       | Setting | Meaning |    | --- | --- |    | Provider | Choose the provider with which you have set up an account for dynamic DNS. With the predefined providers (DynDNS.org and No-IP.com), the provider update URL and the check IP service URL are already completed. If you select the option "User defined" you can specify the two URLs manually. |    | Service type | Select whether the HTTP or HTTPS protocol will be used for the provider update URL of the predefined provider. |    | FQDN | Enter the host name (e.g. mysecuritymodule) and the domain name (e.g. dyndns.org) that is registered with the provider separated by a period. The FQDN can function as a VPN endpoint and differ from the FQDN in the "VPN" entry. You can configure which VPN endpoint the VPN partner is informed of in the connection-specific VPN settings. The syntax of an FQDN must comply with DNS. Maximum number of characters: 99 |    | Ignore errors when checking the server certificate | To protect the authentication data the certificate of the update server is checked. If the certificate check fails, the HTTPS connection is terminated as default and the account data is not transferred. If you activate the check box, the HTTPS connection is not terminated if the check fails (e.g. with an expired certificate) and the account data is transferred. You are advised not to ignore the check and not to select the check box. The check box can only be activated if the service type "DDNS-HTTPS" was selected. |    | User | Enter the user name that you specified when you created the account. The syntax of a user name must comply with DNS. Maximum number of characters: 24 |    | Password | Enter the password that you specified when you created the account. The syntax of the password must comply with DNS. Maximum number of characters: 24 |    | Monitor IP address change on DSL router | If the security module is connected to the Internet via a DSL router, enabling this function activates the function of the Check IP service. The security module periodically sends queries to determine the current IP address of the DSL router and to detect an IP address change on the DSL router. The IP address specified in this way is sent to the provider with each change ID. |    | Period | Specify the interval at which the Check IP service is called. - Default setting: 20 minutes - Minimum value: 10 minutes - Maximum value: 1440 minutes |    | Provider update URL | Enter the URL with which the security module reports the public IP address to the provider. The placeholder texts &lt;FQDN&gt; and &lt;CurrentWanIP&gt; need to be placed at the correct positions in the URL. The syntax of the URL must comply with DNS. Maximum number of characters: 127 |    | Check IP service URL | Enter the URL that the security module will use to determine its public IP address. The syntax of the URL must comply with DNS. Maximum number of characters: 127 | 4. In case the primary provider fails, create a second provider in the "Secondary dynamic DNS service" area (optional setting). |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 #### Configuring LLDP
@@ -4258,7 +4258,7 @@ To authenticate the user using a RADIUS server, there are two configuration opti
 - The role is known on the security module, user management is via the RADIUS server. The user and the password are configured on the RADIUS server.
 
   - A user-defined role or a system-defined role is assigned to the user-specific IP rule set.
-  - Under the entry "RADIUS" > "RADIUS settings" in the local security settings of the security module, the check box "Allow RADIUS authentication of unconfigured users" and the check box "Filter ID is required for authentication" are enabled.
+  - Under the entry "RADIUS" &gt; "RADIUS settings" in the local security settings of the security module, the check box "Allow RADIUS authentication of unconfigured users" and the check box "Filter ID is required for authentication" are enabled.
 
   Result:
 
@@ -4301,7 +4301,7 @@ Before authentication by a RADIUS server is possible, this first needs to be sto
 | Name | Name of the RADIUS server.  The name can consist of a maximum of 25 characters. The characters 0-9, a-z, A-Z, -._ can be used. A name must start with a letter and end with a letter or number. Before the ‘.’ character only letters and numbers are permitted, after the ‘.’ character only letters. Before the ‘_’ or ‘-* character only letters and numbers are permitted. |
 | IP address / FQDN | IP address or FQDN of the RADIUS server. |
 | Port | UDP port via which the RADIUS server can be reached. As default, authentication data is received at port 1812. |
-| Shared secret | Entry of the password that will be used when transferring the logon data between the RADIUS server and security modules for encryption.  The following characters from the ANSI X 3.4-1986 character set are permitted:  0123456789  A...Z a...z  !#$%&()"*'+`,-./:;<=>?@ [\]_{|}~^  Length of the shared secret: 1 to 32 characters |
+| Shared secret | Entry of the password that will be used when transferring the logon data between the RADIUS server and security modules for encryption.  The following characters from the ANSI X 3.4-1986 character set are permitted:  0123456789  A...Z a...z  !#$%&amp;()"*'+`,-./:;&lt;=&gt;?@ [\]_{|}~^  Length of the shared secret: 1 to 32 characters |
 | Repeat shared secret | Confirmation of the password |
 | Authentication method | Display of the method used to check the user data. Only the "PAP" method (Password Authentication Protocol) is supported. |
 | Retries | Here, enter the maximum number of retries for an attempted request. The initial connection attempt is repeated the number of times specified here before another configured RADIUS server is queried or the login counts as having failed. As default 3 retries are set, this means 4 connection attempts. The range of values is 1 ... 5. |
@@ -4412,7 +4412,7 @@ Logging
 | Log blocked incoming packets | All incoming IP packets that are discarded are logged. |
 | Log blocked outgoing packets | All outgoing IP packets that are discarded are logged. |
 
-You can view the logged packets at the "Packet filter log" entry in the "Online & Diagnostics" dialog. For more detailed information, refer to the section [Logging data packets - "Packet filter log" entry](#logging-data-packets---packet-filter-log-entry).
+You can view the logged packets at the "Packet filter log" entry in the "Online &amp; Diagnostics" dialog. For more detailed information, refer to the section [Logging data packets - "Packet filter log" entry](#logging-data-packets---packet-filter-log-entry).
 
 ###### Configuring a firewall with predefined MAC rules
 
@@ -4507,13 +4507,13 @@ The same conventions as described in the following section apply:
 
 ###### Creating user-specific IP rule sets
 
-1. In the global security functions, select the entry "Firewall" > "User-specific IP rule sets" > "IP rule sets".
+1. In the global security functions, select the entry "Firewall" &gt; "User-specific IP rule sets" &gt; "IP rule sets".
 2. Double-click on the "Add new IP rule set" entry to create a user-specific IP rule set.
 
    Result: The created user-specific IP rule set is shown in the entry.
 3. Double-click on the created user-specific IP rule set.
 
-   Result: In the "Properties" > "General" tab of the Inspector window, the configurable properties of the user-specific IP rules set are displayed.
+   Result: In the "Properties" &gt; "General" tab of the Inspector window, the configurable properties of the user-specific IP rules set are displayed.
 4. In the Inspector window, click on the "General" entry and enter the following data:
 
    - Name: Project-wide, unique name of the rule set. The name appears in the local rule list of the security module after the rule set is assigned.
@@ -4532,7 +4532,7 @@ The same conventions as described in the following section apply:
 In addition to the system-defined users or roles, you can also create RADIUS user and RADIUS roles locally:
 
 1. Click on the "Users and roles" entry in the Inspector window.
-2. In the "Available users and roles" area, select the entry "<Create RADIUS user/role>".
+2. In the "Available users and roles" area, select the entry "&lt;Create RADIUS user/role&gt;".
 3. Enter a name.
 4. Select whether the name is to be assigned as user or role.
 5. Click the "Create" button.
@@ -4546,13 +4546,13 @@ The entry can only be deleted if it is not assigned to any other user-specific I
 To delete users and roles, follow the steps below:
 
 1. Select the entry you want to delete.
-2. In the shortcut menu, select the "Delete" command or press the <Del> key.
+2. In the shortcut menu, select the "Delete" command or press the &lt;Del&gt; key.
 
 ###### Assigning user-specific IP rule sets
 
 1. Click on the "Users and roles" entry in the Inspector window.
 2. In the "Available users and roles" area, select the users or roles you want to assign to the user-specific IP rule set.
-3. Click the "<<" button to assign the selected users or roles to the user-specific rule set. The assignment of roles to user-specific IP rule sets is possible only for SCALANCE S modules as of V4.
+3. Click the "&lt;&lt;" button to assign the selected users or roles to the user-specific rule set. The assignment of roles to user-specific IP rule sets is possible only for SCALANCE S modules as of V4.
 4. Assign the created user-specific IP rule set to the required security modules using the entry "Assign user-specific IP rule set" in the global security functions. For this, advanced firewall mode must be enabled for the security modules.
 
 **Note**
@@ -4641,7 +4641,7 @@ This function is available only in advanced firewall mode.
 ##### How to access this function
 
 1. Select the security module to be edited.
-2. In the local security settings, select the entry "Firewall" > "Standard rules for IP services".
+2. In the local security settings, select the entry "Firewall" &gt; "Standard rules for IP services".
 
 ##### Meaning of the advanced settings
 
@@ -5001,7 +5001,7 @@ Subnets located on the other side of internal routers also need to be configured
 ###### How to access the function
 
 1. Select the module.
-2. In the local security settings, select the entry "VPN" > "Nodes".
+2. In the local security settings, select the entry "VPN" &gt; "Nodes".
 
 ###### Enabling/disabling the learning mode
 
@@ -5043,7 +5043,7 @@ As an alternative to the learning mode that you enable using the "Enable learnin
 ###### How to access this function
 
 1. Select the module to be edited.
-2. In the local security settings, select the entry "VPN" > "Nodes" > "Internal IP nodes".
+2. In the local security settings, select the entry "VPN" &gt; "Nodes" &gt; "Internal IP nodes".
 
 ##### Configuring MAC network nodes manually
 
@@ -5059,7 +5059,7 @@ As an alternative to the learning mode that you enable using the "Enable learnin
 ###### How to access this function
 
 1. Select the module to be edited.
-2. In the local security settings, select the entry "VPN" > "Nodes" > "Internal MAC nodes".
+2. In the local security settings, select the entry "VPN" &gt; "Nodes" &gt; "Internal MAC nodes".
 
 ##### Configuring internal subnets manually
 
@@ -5070,7 +5070,7 @@ As an alternative to the learning mode that you enable using the "Enable learnin
 ###### How to access this function
 
 1. Select the module to be edited.
-2. In the local security settings, select the entry "VPN" > "Nodes" > "Internal subnets".
+2. In the local security settings, select the entry "VPN" &gt; "Nodes" &gt; "Internal subnets".
 
 ###### Security module in bridge mode - "Internal subnets" entry
 
@@ -5321,8 +5321,8 @@ If you click the "Delete all" button, the displayed IP addresses are removed fro
 ##### How to access this function
 
 1. Select the security module whose time and date you want to check or set.
-2. Select the "Online & diagnostics" command from the shortcut menu.
-3. In online diagnostics, select the "Functions" > "Date and time" entry.
+2. Select the "Online &amp; diagnostics" command from the shortcut menu.
+3. In online diagnostics, select the "Functions" &gt; "Date and time" entry.
 
 ##### Setting the local time on the security module
 
@@ -5388,7 +5388,7 @@ Ideally, you should configure the modules of a group via the common external net
 > **Downloading the configuration when operating in ghost mode (only SCALANCE S602 as of V3.1)**
 >
 > When you operate the security module in ghost mode, the external interface of the security module takes over the IP address of the internal node at runtime. Before you can download a new configuration via the external interface to the security module, you need to specify the IP address for downloading a configuration that the security module obtained from the internal node during runtime.  
-> To find out the current IP address of the security module, you can search for reachable nodes in STEP 7 with the menu command "Online" > "Accessible devices".
+> To find out the current IP address of the security module, you can search for reachable nodes in STEP 7 with the menu command "Online" &gt; "Accessible devices".
 
 > **Note**
 >
@@ -5500,7 +5500,7 @@ This section contains information on the following topics:
 ###### How to access this function
 
 1. Select the module to be edited.
-2. In the local security settings, select the entry "Firewall" > "Predefined IP rules".
+2. In the local security settings, select the entry "Firewall" &gt; "Predefined IP rules".
 
 All tables
 Available services and directions
@@ -5540,7 +5540,7 @@ Logging
 ###### How to access this function
 
 1. Select the module to be edited.
-2. Select the entry "Firewall" > "Predefined MAC rules".
+2. Select the entry "Firewall" &gt; "Predefined MAC rules".
 
 Available services and directions
 
@@ -5577,7 +5577,7 @@ This section contains information on the following topics:
 ###### How to access this function
 
 1. Select the module to be edited.
-2. Select the "Security" > "Firewall" > "Predefined IP rules" entry.
+2. Select the "Security" &gt; "Firewall" &gt; "Predefined IP rules" entry.
 
 All tables
 Available services and directions
@@ -5617,7 +5617,7 @@ Logging
 ###### How to access this function
 
 1. Select the module to be edited.
-2. Select the entry "Security" > "Firewall" > "MAC rules".
+2. Select the entry "Security" &gt; "Firewall" &gt; "MAC rules".
 
 All tables
 Available services and directions
@@ -5692,7 +5692,7 @@ This function is not available for the CP 1628.
 
 ##### Meaning
 
-You set access protection for certain IP addresses using the IP access lists. List entries that have already been created and the corresponding rights are displayed in the local settings of the CP in the entry "Firewall" > "IP rules" (advanced firewall mode).
+You set access protection for certain IP addresses using the IP access lists. List entries that have already been created and the corresponding rights are displayed in the local settings of the CP in the entry "Firewall" &gt; "IP rules" (advanced firewall mode).
 
 > **Note**
 >
@@ -5704,7 +5704,7 @@ You set access protection for certain IP addresses using the IP access lists. Li
 
 ##### Effect of IP access list entries at activation of security
 
-If security is enabled in the local settings of a CP, the corresponding rules are created in the advanced firewall mode. A firewall rule "Accept" > "External" > "Station" is created for an IP address you specified in the address list. The IP address from the IP access list is used accordingly as source IP address. IP addresses from a defined IP address range are also integrated into corresponding firewall rules.
+If security is enabled in the local settings of a CP, the corresponding rules are created in the advanced firewall mode. A firewall rule "Accept" &gt; "External" &gt; "Station" is created for an IP address you specified in the address list. The IP address from the IP access list is used accordingly as source IP address. IP addresses from a defined IP address range are also integrated into corresponding firewall rules.
 
 ##### Requirements for editing
 
@@ -5731,7 +5731,7 @@ Depending on how the connection establishment is configured, the following level
 
 The IP address of the connection partner is entered in the "Source IP address" or "Destination IP address" column of these firewall rules.
 
-| CP->external | Action | From | To |
+| CP-&gt;external | Action | From | To |
 | --- | --- | --- | --- |
 | active | Accept | Station | External |
 | Drop | External | Station |  |
@@ -5740,7 +5740,7 @@ The IP address of the connection partner is entered in the "Source IP address" o
 | active and passive | Accept | External | Station |
 | Accept | Station | External |  |
 
-| CP->internal | Action | From | To |
+| CP-&gt;internal | Action | From | To |
 | --- | --- | --- | --- |
 | active | Accept | Station | Internal |
 | Drop | Internal | Station |  |
@@ -5753,7 +5753,7 @@ For level 2 connections, "Accept" rules are created for both directions. If the 
 
 The MAC address of the connection partner is entered in the "Source MAC address" or "Destination MAC address" column of these firewall rules.
 
-| CP->external | Action | From | To |
+| CP-&gt;external | Action | From | To |
 | --- | --- | --- | --- |
 | active, passive, active and passive | Accept | Station | External |
 | Accept | External | Station |  |
@@ -5849,7 +5849,7 @@ The internal nodes are learned and assigned to the routes dynamically. This conc
 ###### Follow the steps below
 
 1. Select the module to be edited.
-2. In the local security settings, select the entry "Nodes" > "NDIS nodes reachable via tunnel".
+2. In the local security settings, select the entry "Nodes" &gt; "NDIS nodes reachable via tunnel".
 3. Enter the NDIS IP addresses.
 
 ### Online functions - Debug / Diagnostics and Logging
@@ -5938,7 +5938,7 @@ This section contains information on the following topics:
 ###### How to access this function
 
 1. Select the module to be edited.
-2. In the local security settings, select the entry "Firewall" > "Predefined IP rules".
+2. In the local security settings, select the entry "Firewall" &gt; "Predefined IP rules".
 
 Available services and directions
 
@@ -5978,12 +5978,12 @@ Logging
 
 ###### Meaning
 
-With the predefined IPv6 rules, you have the option of configuring the firewall for services in which IPv6 is used. By enabling a predefined IPv6 rule in the local security settings of the CP, the system-defined ICMPv6 services that can be seen in the global security functions in the "ICMP" tab in "Firewall" > "Services" > "Define services for IP rules" are also enabled in the firewall.
+With the predefined IPv6 rules, you have the option of configuring the firewall for services in which IPv6 is used. By enabling a predefined IPv6 rule in the local security settings of the CP, the system-defined ICMPv6 services that can be seen in the global security functions in the "ICMP" tab in "Firewall" &gt; "Services" &gt; "Define services for IP rules" are also enabled in the firewall.
 
 ###### How to access this function
 
 1. Select the module to be edited.
-2. Select the "Firewall" > "Predefined IPv6 rules" item in the local security settings.
+2. Select the "Firewall" &gt; "Predefined IPv6 rules" item in the local security settings.
 
 All tables
 Predefined IPv6 rules
@@ -6017,7 +6017,7 @@ Logging
 ###### How to access this function
 
 1. Select the module to be edited.
-2. Select the entry "Firewall" > "Predefined MAC rules".
+2. Select the entry "Firewall" &gt; "Predefined MAC rules".
 
 Available services and directions
 
@@ -6058,7 +6058,7 @@ This section contains information on the following topics:
 ###### How to access this function
 
 1. Select the module to be edited.
-2. In the local security settings, select the entry "Firewall" > "Predefined IP rules".
+2. In the local security settings, select the entry "Firewall" &gt; "Predefined IP rules".
 
 All tables
 Available services and directions
@@ -6095,12 +6095,12 @@ Logging
 
 ###### Meaning
 
-With the predefined IPv6 rules, you have the option of configuring the firewall for services in which IPv6 is used. By enabling a predefined IPv6 rule in the local security settings of an S7-1200 CP capable of IPv6, the system-defined ICMPv6 services that can be seen in the global security functions in the "ICMP" tab in "Firewall" > "Services" > "Define services for IP rules" are also enabled in the firewall.
+With the predefined IPv6 rules, you have the option of configuring the firewall for services in which IPv6 is used. By enabling a predefined IPv6 rule in the local security settings of an S7-1200 CP capable of IPv6, the system-defined ICMPv6 services that can be seen in the global security functions in the "ICMP" tab in "Firewall" &gt; "Services" &gt; "Define services for IP rules" are also enabled in the firewall.
 
 ###### How to access this function
 
 1. Select the module to be edited.
-2. Select the "Firewall" > "Predefined IPv6 rules" item in the local security settings.
+2. Select the "Firewall" &gt; "Predefined IPv6 rules" item in the local security settings.
 
 All tables
 Available services and directions
@@ -6132,7 +6132,7 @@ Logging
 ###### How to access this function
 
 1. Select the module to be edited.
-2. Select the entry "Firewall" > "Predefined MAC rules".
+2. Select the entry "Firewall" &gt; "Predefined MAC rules".
 
 Available services and directions
 
@@ -6225,7 +6225,7 @@ Depending on how the connection establishment is configured, the following level
 
 The IP address of the connection partner is entered in the "Source IP address" or "Destination IP address" column of these firewall rules.
 
-| CP->external | Action | From | To |
+| CP-&gt;external | Action | From | To |
 | --- | --- | --- | --- |
 | active | Drop | External | Station |
 | Accept | Station | External |  |
@@ -6238,7 +6238,7 @@ For level 2 connections, "Accept" rules are created for both directions. If the 
 
 The MAC address of the connection partner is entered in the "Source MAC address" or "Destination MAC address" column of these firewall rules.
 
-| CP->external | Action | From | To |
+| CP-&gt;external | Action | From | To |
 | --- | --- | --- | --- |
 | active, passive, active and passive | Accept | Station | External |
 | Accept | External | Station |  |
@@ -6295,7 +6295,7 @@ As default, the "Tunnel communication only" check box is enabled. If you deselec
 #### How to access this function
 
 1. Select the module to be edited.
-2. In the local security settings, select the entry "VPN" > "Nodes" > "Subnets reachable through tunnel".
+2. In the local security settings, select the entry "VPN" &gt; "Nodes" &gt; "Subnets reachable through tunnel".
 
 #### Configuring subnets reachable via the backplane bus
 
@@ -6457,7 +6457,7 @@ All nodes of a STEP 7 project with enabled security functions are supplied with 
 >
 > If the security functions of the CP are disabled in the STEP 7 project, no certificate will be generated for the CP.
 
-A certificate is created for every application of the CP that requests a certificate. It is shown in STEP 7 in "Global security settings > Certificate manager > Device certificates". As well as additional information, you will find the respective usage of the certificate there (service/application).
+A certificate is created for every application of the CP that requests a certificate. It is shown in STEP 7 in "Global security settings &gt; Certificate manager &gt; Device certificates". As well as additional information, you will find the respective usage of the certificate there (service/application).
 
 You can call up more information about the certificate by selecting the certificate in the table and selecting the shortcut menu "Show".
 
@@ -6468,8 +6468,8 @@ So that the CP can communicate with non-Siemens partners when the security funct
    ⇒ Global security settings of the project (certificate manager)
 2. Assigning certificates, either:
 
-   - Global security settings > Certificate manager > "Trusted certificates and root certification authorities"
-   - Local security settings of the CP > Certificate manager > "Certificates of the partner devices"
+   - Global security settings &gt; Certificate manager &gt; "Trusted certificates and root certification authorities"
+   - Local security settings of the CP &gt; Certificate manager &gt; "Certificates of the partner devices"
 
 The steps are described in the following sections.
 
@@ -6480,14 +6480,14 @@ Import the certificates of the communications partners of third-party vendors us
 1. Save the third-party certificate in the file system of the PC of the connected engineering station.
 2. In the STEP 7 project open the global certificate manager:
 
-   Global security settings > Certificate manager
+   Global security settings &gt; Certificate manager
 3. Open the "Trusted certificates and root certification authorities" tab.
 4. Click in a row of the table can select the shortcut menu "Import".
 5. In the dialog that opens, import the certificate from the file system of the engineering station into the STEP 7 project.
 
 ##### Assigning certificates in the global security settings
 
-Import the partner certificate via: Global security settings > Certificate manager > Trusted certificates > right mouse click. Assign the certificate to the CP (select certificate > right mouse click).
+Import the partner certificate via: Global security settings &gt; Certificate manager &gt; Trusted certificates &gt; right mouse click. Assign the certificate to the CP (select certificate &gt; right mouse click).
 
 1. Open the "Trusted certificates and root certification authorities" tab.
 2. Select the desired certificate.
@@ -6505,8 +6505,8 @@ In this table, also include the certificates of communications partners whose ce
 Proceed as follows to import:
 
 1. In the STEP 7 project select the CP.
-2. Navigate to the parameter group "Security > Certificate manager".
-3. In the table, double-click on the cell with the entry "<Add new>".
+2. Navigate to the parameter group "Security &gt; Certificate manager".
+3. In the table, double-click on the cell with the entry "&lt;Add new&gt;".
 
    The "Certificate manager" table of the Global security settings is displayed.
 4. In the table. select the required third-party certificate and to adopt it click the green check mark below the table.
@@ -6521,7 +6521,7 @@ You export the certificate of the CP for communications partners from third-part
 
 1. In the STEP 7 project open the global certificate manager:
 
-   Global security settings > Certificate manager
+   Global security settings &gt; Certificate manager
 2. Open the "Device certificates" tab.
 3. In the table select the row with the required certificate and select the shortcut menu "Export".
 4. Save the certificate in the file system of the PC of the connected engineering station.

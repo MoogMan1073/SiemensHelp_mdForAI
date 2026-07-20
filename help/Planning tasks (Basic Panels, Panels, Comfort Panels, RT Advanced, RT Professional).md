@@ -143,7 +143,7 @@ In the "Events" tab use the function list with system functions that will be exe
 
 > **Note**
 >
-> You can obtain more detailed information about the elements of the user interface using the tooltips. To do so, move the mouse pointer to the relevant object or press <F1> if the object has already been selected.
+> You can obtain more detailed information about the elements of the user interface using the tooltips. To do so, move the mouse pointer to the relevant object or press &lt;F1&gt; if the object has already been selected.
 
 ---
 
@@ -438,7 +438,7 @@ If you have selected "Print job" as the task type, an additional field will appe
 >
 > Activate "Scheduled print jobs in runtime" in the start sequence of WinCC Runtime to use the "Print job" job type.
 >
-> Click on "Runtime settings > Services > Scheduled print jobs in runtime" in the editor.
+> Click on "Runtime settings &gt; Services &gt; Scheduled print jobs in runtime" in the editor.
 
 ---
 
@@ -492,7 +492,7 @@ The local VB script is not executed simultaneously. The script last triggered is
 
 Enable "Tasks in Runtime" in the startup sequence of WinCC to use the function list and local scripts.
 
-Click "Runtime settings > Services > Tasks in Runtime" in the editor.
+Click "Runtime settings &gt; Services &gt; Tasks in Runtime" in the editor.
 
 > **Note**
 >
@@ -534,7 +534,7 @@ The local C script is not executed simultaneously. The script last triggered is 
 
 Enable "Tasks in Runtime" in the startup sequence of WinCC to use the function list and local scripts.
 
-Click "Runtime settings > Services > Tasks in Runtime" in the editor.
+Click "Runtime settings &gt; Services &gt; Tasks in Runtime" in the editor.
 
 > **Note**
 >
@@ -581,9 +581,9 @@ You are planning a one-time Runtime stop for maintenance work. The task starts a
 1. Click "Add..." in the table of the task area.
 2. Enter "Maintenance at end of year" as the "Name."
 3. Select "Once" as the "Trigger."
-4. Select "31.12.2008" in the "Properties > Properties > General > on" field of the Inspector window.
+4. Select "31.12.2008" in the "Properties &gt; Properties &gt; General &gt; on" field of the Inspector window.
 5. Enter the time "18:00" in the "at" field.
-6. Click "Properties > Events" in the Inspector window.
+6. Click "Properties &gt; Events" in the Inspector window.
 7. Select the "StopRuntime" system function in the function list.
 8. Select "Runtime" as the "Mode".
 
@@ -651,14 +651,14 @@ You plan a task that starts the daily printout of a report.
 2. Select "Print task" under "Type."
 3. Enter "Daily alarm report printout" as the "Name."
 4. Select "Daily" as the "Trigger."
-5. In the Inspector window "Properties >Properties > General > at" enter the time "18:00".
+5. In the Inspector window "Properties &gt;Properties &gt; General &gt; at" enter the time "18:00".
 6. Select the "Daily alarm report" print task in the "Task" area.
 
    ![Procedure](images/73131627403_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/73131627403_DV_resource.Stream@PNG-en-US.png)
-7. Open the "Runtime settings > Services" editor.
-8. Enable "Start sequence of WinCC Runtime > Planned print jobs in Runtime".
+7. Open the "Runtime settings &gt; Services" editor.
+8. Enable "Start sequence of WinCC Runtime &gt; Planned print jobs in Runtime".
 
 #### Result
 
@@ -708,7 +708,7 @@ You plan a task that generates a screen change when the user changes.
 1. Click "Add..." in the table of the task area.
 2. Enter "Screen change at user change" as the "Name."
 3. Select "User change" as the "Trigger."
-4. In the Inspector window, select "Properties > Events".
+4. In the Inspector window, select "Properties &gt; Events".
 5. Select the "Screen/ActivateScreen" system function in the function list.
 6. Select the "Start" screen in the screen name field.
 
@@ -754,9 +754,9 @@ The task is executed with the "User change" event. When a new user logs on succe
 
 1. In the work area, double-click the field in the "Name" column.
 2. Change the name of the task.
-3. Confirm your entry with <Return>.
+3. Confirm your entry with &lt;Return&gt;.
 
-As an alternative, you can change the designation in the "Job > Name" box of the Inspector window.
+As an alternative, you can change the designation in the "Job &gt; Name" box of the Inspector window.
 
 #### Changing triggers
 
@@ -770,7 +770,7 @@ You can alternatively change the trigger in the "Starting time" area of the Insp
 1. Select one or more lines for the tasks to be deleted.
 2. Open the shortcut menu with the right button and select the menu command "Delete".
 
-As an alternative, delete one or more tasks by using the <Del> button.
+As an alternative, delete one or more tasks by using the &lt;Del&gt; button.
 
 ---
 
@@ -818,15 +818,15 @@ You plan a task that activates the start screen daily with a logon dialog before
 2. Enter "Activate start screen" as the "Name".
 3. Select "Function list" as the "Type".
 4. Select "Daily" as the "Trigger."
-5. In the Inspector window "Properties >Properties > General > at" enter the time "05:30".
-6. In the Inspector window, open "Properties > Events".
+5. In the Inspector window "Properties &gt;Properties &gt; General &gt; at" enter the time "05:30".
+6. In the Inspector window, open "Properties &gt; Events".
 7. Select the system function "ActivateScreen" from the "Screens" group in the function list.
 8. Enter "Start screen" as the "Screen name".
 
    ![Procedure](images/41398411019_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/41398411019_DV_resource.Stream@PNG-en-US.png)
-9. Open the "Runtime settings > Services" editor.
+9. Open the "Runtime settings &gt; Services" editor.
 10. Activate "Scheduled tasks in Runtime".
 
 #### Result
@@ -861,15 +861,15 @@ You plan a task that prints out a report once at the end of the year.
 2. Enter "Annual summary" as the "Name".
 3. Select "Print task" as the "Type".
 4. Select "Once" as the "Trigger."
-5. Select "31.12.2010" in the "Properties > Properties > General > on" field of the Inspector window.
+5. Select "31.12.2010" in the "Properties &gt; Properties &gt; General &gt; on" field of the Inspector window.
 6. Enter the time "22:00" in the "at" field.
 7. Select the "Annual overview" print task in the "Task" area.
 
    ![Procedure](images/19894363531_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/19894363531_DV_resource.Stream@PNG-en-US.png)
-8. Open the "Runtime settings > Services" editor.
-9. Enable "Start sequence of WinCC Runtime > Scheduled print jobs in Runtime".
+8. Open the "Runtime settings &gt; Services" editor.
+9. Enable "Start sequence of WinCC Runtime &gt; Scheduled print jobs in Runtime".
 
 #### Result
 
@@ -900,10 +900,10 @@ You plan a task that writes the current user into a text field.
 1. Click "Add..." in the table of the task area.
 2. Enter "Reading the user name" as the "Name".
 3. Select "Tag trigger" as the "Trigger".
-4. Click "Properties > Properties > General > Add trigger" in the Inspector window.
+4. Click "Properties &gt; Properties &gt; General &gt; Add trigger" in the Inspector window.
 5. Select the "@CurrentUser" system variable.
 6. Select "1 min" as the "Cycle".
-7. In the Inspector window, open "Properties > Events".
+7. In the Inspector window, open "Properties &gt; Events".
 8. Click ![Procedure](images/25646108683_DV_resource.Stream@PNG-de-DE.png) in the "Function list" area.
 9. Enter the following VB script:
 
@@ -917,7 +917,7 @@ HMIRuntime.Screens("Screen_1").ScreenItems("Textfield_1").Text = user
 
 End Sub
 
-1. Open the "Runtime settings > Services" editor.
+1. Open the "Runtime settings &gt; Services" editor.
 2. Activate "Scheduled tasks in Runtime".
 
 #### Result
@@ -948,8 +948,8 @@ You schedule a task that increments the value of a tag by one every hour.
 2. Select "Function list" as the "Type."
 3. Enter "Count up tag" as the "Name."
 4. Select "1 hour" as the "Trigger".
-5. In the Inspector window, under "Properties > Properties > General > Starting time > at minute" enter the value "35:00".
-6. In the Inspector window, open "Properties > Events".
+5. In the Inspector window, under "Properties &gt; Properties &gt; General &gt; Starting time &gt; at minute" enter the value "35:00".
+6. In the Inspector window, open "Properties &gt; Events".
 7. Click ![Procedure](images/25646108683_DV_resource.Stream@PNG-de-DE.png) in the "Function list" area.
 8. Enter the following program code in the entry field:
 
@@ -967,7 +967,7 @@ objTag1.Write lngValue + 1
 
 End Sub
 
-1. Open the "Runtime settings > Services" editor.
+1. Open the "Runtime settings &gt; Services" editor.
 2. Select "Scheduled tasks in Runtime".
 
 #### Result
@@ -1006,7 +1006,7 @@ Configure an I/O field which displays the logged on user. Configure a task which
 #### Procedure
 
 1. Click on the "I/O field" object.
-2. In the Inspector window, select "Properties > Properties > General":
+2. In the Inspector window, select "Properties &gt; Properties &gt; General":
 
    - Select "String" as the "Display format."
    - Select "CurrentUser" as the "Variable."
@@ -1015,7 +1015,7 @@ Configure an I/O field which displays the logged on user. Configure a task which
 4. Click "Add..." in the table of the task area.
 5. Enter "CurrentUser" as the "Name".
 6. Select "User change" as the "Trigger."
-7. In the Inspector window, select "Properties > Events".
+7. In the Inspector window, select "Properties &gt; Events".
 8. Select the system function "ReadUserName" from the "User Management" group in the function list.
 9. Select "CurrentUser" as the "Variable."
 
@@ -1055,13 +1055,13 @@ You plan a task that starts the weekly printout of a report.
 1. Click "Add..." in the table of the task area.
 2. Enter "Weekly report printout for end of shift" as the "Name."
 3. Select "Weekly" as the "Trigger."
-4. Select "Properties > Properties > General > on day" "Friday" in the Inspector window.
+4. Select "Properties &gt; Properties &gt; General &gt; on day" "Friday" in the Inspector window.
 5. Enter the time "18:00" in the "at" field.
 
    ![Procedure](images/111974684555_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111974684555_DV_resource.Stream@PNG-en-US.png)
-6. In the Inspector window, select "Properties > Events".
+6. In the Inspector window, select "Properties &gt; Events".
 7. Select the "Print/PrintReport" system function in the function list.
 8. Select "Weekly report" report.
 
@@ -1153,12 +1153,12 @@ In the following example you configure a Date/time field. To change the starting
 #### Procedure
 
 1. In the toolbox view, drag-and-drop a "Date/time field" from the "Basic objects" category to the screen.
-2. In the Inspector window, click "Properties >Properties > General".
+2. In the Inspector window, click "Properties &gt;Properties &gt; General".
 3. Disable the "System time."
 4. Click "Variable" and select "LogTime."
 5. Disable "Display date" and enable "Display time."
 6. Select "Input/output" as the "Mode."
-7. Click "Properties > Miscellaneous."
+7. Click "Properties &gt; Miscellaneous."
 8. Enter "LogDataTimeField" as the "Name".
 
 #### Result
@@ -1193,9 +1193,9 @@ In the following example you configure a task with a timer tag with which you ch
 1. Click "Add..." in the table of the task area.
 2. Enter "Swap out log daily at a tag time" as the "Name".
 3. Select "Daily" as the "Trigger".
-4. In the Inspector window "Properties >Properties > General > at" enter the time "18:00".
+4. In the Inspector window "Properties &gt;Properties &gt; General &gt; at" enter the time "18:00".
 5. Select the "LogTime" tag as the "Standard timer".
-6. In the Inspector window, open "Properties > Events".
+6. In the Inspector window, open "Properties &gt; Events".
 7. Select the "System functions/Logs/CopyLog" system function in the function list.
 8. Select these settings:
 

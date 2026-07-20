@@ -53,7 +53,7 @@ Two types of syntax are available for WinCC Unified Open Pipe:
 
 ### Samples
 
-You will find the following file on the installation medium: "Support\Openness\Siemens.Unified.Openness_SDK_<version number>.zip"
+You will find the following file on the installation medium: "Support\Openness\Siemens.Unified.Openness_SDK_&lt;version number&gt;.zip"
 
 Extract the file locally to any directory on your computer. You will then find examples of the use of WinCC Unified Open Pipe in the subfolder "OpenPipe\Samples".
 
@@ -376,7 +376,7 @@ The "ReadConfig" command reads a setting configured for general browse behavior.
 
 **Request**
 
-ReadConfig <Param>
+ReadConfig &lt;Param&gt;
 
 - `Param`:
 
@@ -397,7 +397,7 @@ ReadConfig DefaultPageSize
 
 **OnSuccess**
 
-NotifyReadConfig <Parameter> <Value>
+NotifyReadConfig &lt;Parameter&gt; &lt;Value&gt;
 
 For example:
 
@@ -407,7 +407,7 @@ NotifyReadConfig BrowseTimeOut 300
 
 **OnError**
 
-ErrorReadConfig <Error description>
+ErrorReadConfig &lt;Error description&gt;
 
 For example:
 
@@ -421,7 +421,7 @@ The "WriteConfig" command sets a setting configured for general browse behavior.
 
 **Request**
 
-WriteConfig <Parameter> <Value>
+WriteConfig &lt;Parameter&gt; &lt;Value&gt;
 
 - `Parameter`:
 
@@ -448,7 +448,7 @@ WriteConfig DefaultPageSize 500
 
 OnSuccess:
 
-NotifyWriteConfig <Parameter>
+NotifyWriteConfig &lt;Parameter&gt;
 
 For example:
 
@@ -456,7 +456,7 @@ NotifyWriteConfig DefaultPageSize
 
 OnError:
 
-ErrorWriteConfig <Error description>
+ErrorWriteConfig &lt;Error description&gt;
 
 For example:
 
@@ -479,7 +479,7 @@ If the number of hits exceeds the page size of the response, the command consist
 
 ##### Initial request
 
-BrowseTags <System> <Page size> --filter <Filter>
+BrowseTags &lt;System&gt; &lt;Page size&gt; --filter &lt;Filter&gt;
 
 - `System`: Optional
 
@@ -522,7 +522,7 @@ BrowseTags --next
 
 **OnSuccess**
 
-NotifyBrowseTags <System>::<Tag name> ... <System>::<Tag name>
+NotifyBrowseTags &lt;System&gt;::&lt;Tag name&gt; ... &lt;System&gt;::&lt;Tag name&gt;
 
 For example:
 
@@ -530,7 +530,7 @@ NotifyBrowseTags HMI_RT_1::InternalTag0 HMI_RT_2::InternalTag01 HMI_RT_2::Intern
 
 **OnError**
 
-ErrorBrowseTags <Error description>
+ErrorBrowseTags &lt;Error description&gt;
 
 For example:
 
@@ -553,7 +553,7 @@ If the number of hits exceeds the page size of the response, the command consist
 
 ##### Initial request
 
-BrowseConfiguredAlarms <System> <Page size> --filter <Filter>
+BrowseConfiguredAlarms &lt;System&gt; &lt;Page size&gt; --filter &lt;Filter&gt;
 
 - `System`: Optional
 
@@ -596,7 +596,7 @@ BrowseConfiguredAlarms --next
 
 **OnSuccess**
 
-NotifyBBrowseConfiguredAlarms <System>::<Alarm name> ... <System>::<Alarm name>
+NotifyBBrowseConfiguredAlarms &lt;System&gt;::&lt;Alarm name&gt; ... &lt;System&gt;::&lt;Alarm name&gt;
 
 For example:
 
@@ -604,7 +604,7 @@ NotifyBrowseConfiguredAlarms HMI_RT_1::Motor_1:AnalogAlarm_1 HMI_RT_2::Motor_1:A
 
 **OnError**
 
-ErrorBrowseConfiguredAlarms <Error description>
+ErrorBrowseConfiguredAlarms &lt;Error description&gt;
 
 For example:
 
@@ -645,7 +645,7 @@ For example:
 
 OnSuccess
 
-NotifyBrowseAlarmClasses <System>::<Alarm class> ... <System>::<Alarm class>
+NotifyBrowseAlarmClasses &lt;System&gt;::&lt;Alarm class&gt; ... &lt;System&gt;::&lt;Alarm class&gt;
 
 For example:
 
@@ -653,7 +653,7 @@ NotifyBrowseAlarmClasses HMI_RT_1::Alarm HMI_RT_1::SystemNotification HMI_RT_1::
 
 OnError
 
-ErrorBrowseAlarmClasses <Error description>
+ErrorBrowseAlarmClasses &lt;Error description&gt;
 
 For example:
 
@@ -793,13 +793,13 @@ OnError
 
 {
 
-"Message": "Error<Command>",
+"Message": "Error&lt;Command&gt;",
 
-"ErrorCode": "<Error code>",
+"ErrorCode": "&lt;Error code&gt;",
 
-"ErrorDescription": "<Error description>",
+"ErrorDescription": "&lt;Error description&gt;",
 
-"ClientCookie": "<Cookie name>"
+"ClientCookie": "&lt;Cookie name&gt;"
 
 }
 
@@ -1111,7 +1111,7 @@ The "ReadConfig" command reads the settings configured for the general browse be
 
 **Request**
 
-{"Message": "ReadConfig", "Params": ['<Parameter>', '<Parameter>'], "ClientCookie": '<Cookie>'}
+{"Message": "ReadConfig", "Params": ['&lt;Parameter&gt;', '&lt;Parameter&gt;'], "ClientCookie": '&lt;Cookie&gt;'}
 
 - `Params`:
 
@@ -1135,7 +1135,7 @@ For example:
 
 **OnSuccess**
 
-{"Message":"NotifyReadConfig", "Params": {"<Parameter>":<Value>, "<Parameter>":<Value>}, "ClientCookie": '<Cookie>'}
+{"Message":"NotifyReadConfig", "Params": {"&lt;Parameter&gt;":&lt;Value&gt;, "&lt;Parameter&gt;":&lt;Value&gt;}, "ClientCookie": '&lt;Cookie&gt;'}
 
 For example:
 
@@ -1143,7 +1143,7 @@ For example:
 
 **OnError**
 
-{"Message": "ErrorReadConfig", "ErrorCode": "<Code>", "ErrorDescription": "<Description>", "ClientCookie": "<Cookie>"}
+{"Message": "ErrorReadConfig", "ErrorCode": "&lt;Code&gt;", "ErrorDescription": "&lt;Description&gt;", "ClientCookie": "&lt;Cookie&gt;"}
 
 For example:
 
@@ -1157,7 +1157,7 @@ The "WriteConfig" command sets configurable settings for the general browse beha
 
 **Request**
 
-{"Message": "WriteConfig", "Params": ["<Parameter>":<Value>, "<Parameter>":<Value>], "ClientCookie": '<Cookie>'}
+{"Message": "WriteConfig", "Params": ["&lt;Parameter&gt;":&lt;Value&gt;, "&lt;Parameter&gt;":&lt;Value&gt;], "ClientCookie": '&lt;Cookie&gt;'}
 
 - `Params`:
 
@@ -1185,7 +1185,7 @@ For example:
 
 **OnSuccess**
 
-{"Message":"NotifyWriteConfig", "Params": {"<Parameter>":<Value>, "<Parameter>":<Value>}, "ClientCookie": '<Cookie>'}
+{"Message":"NotifyWriteConfig", "Params": {"&lt;Parameter&gt;":&lt;Value&gt;, "&lt;Parameter&gt;":&lt;Value&gt;}, "ClientCookie": '&lt;Cookie&gt;'}
 
 For example:
 
@@ -1193,7 +1193,7 @@ For example:
 
 **OnError**
 
-{"Message": "ErrorWriteConfig", "ErrorCode": "<Code>", "ErrorDescription": "<Description>" "ClientCookie": "<Cookie>"}
+{"Message": "ErrorWriteConfig", "ErrorCode": "&lt;Code&gt;", "ErrorDescription": "&lt;Description&gt;" "ClientCookie": "&lt;Cookie&gt;"}
 
 For example:
 
@@ -1216,7 +1216,7 @@ If the number of hits exceeds the page size of the response, the command consist
 
 ##### Initial request
 
-{"Message": "BrowseTags", "Params": {"LanguageId": <Value>, "Filter": "<String>", "Attributes": ["<Attribute name>", ..., "<Attribute name>"], "PageSize": <Value>, "SystemNames": ["<Name>", ..., "<Name>"]}, "ClientCookie": "<Cookie>"}
+{"Message": "BrowseTags", "Params": {"LanguageId": &lt;Value&gt;, "Filter": "&lt;String&gt;", "Attributes": ["&lt;Attribute name&gt;", ..., "&lt;Attribute name&gt;"], "PageSize": &lt;Value&gt;, "SystemNames": ["&lt;Name&gt;", ..., "&lt;Name&gt;"]}, "ClientCookie": "&lt;Cookie&gt;"}
 
 - `LanguageId`: Optional
 
@@ -1273,7 +1273,7 @@ For example:
 
 ##### Next request
 
-{"Message": "BrowseTags", "Params": "Next", "ClientCookie": "<Cookie>"}
+{"Message": "BrowseTags", "Params": "Next", "ClientCookie": "&lt;Cookie&gt;"}
 
 For example:
 
@@ -1283,15 +1283,15 @@ For example:
 
 **OnSuccess**
 
-{"ClientCookie": "<Cookie>", "Message": "NotifyBrowseTags", "Params": {"Tags": [{"<Attribute name":<Value>, "<Attribute name>":<Value>, "DataType":<Value>, "DisplayName": "<Value>", "Name":"<Value>"}],}}
+{"ClientCookie": "&lt;Cookie&gt;", "Message": "NotifyBrowseTags", "Params": {"Tags": [{"&lt;Attribute name":&lt;Value&gt;, "&lt;Attribute name&gt;":&lt;Value&gt;, "DataType":&lt;Value&gt;, "DisplayName": "&lt;Value&gt;", "Name":"&lt;Value&gt;"}],}}
 
 For example:
 
-{"ClientCookie": "<myBrowseTagRequest1>", "Message": "NotifyBrowseTags", "Params": {"Tags": [{"AcquisitionMode":0, "MaxValue":1000, "DataType":1, "DisplayName": "HMI_RT_1::InternalTag_Bool_1", "Name":"HMI_RT_1::InternalTag_Bool_1"}],}}
+{"ClientCookie": "&lt;myBrowseTagRequest1&gt;", "Message": "NotifyBrowseTags", "Params": {"Tags": [{"AcquisitionMode":0, "MaxValue":1000, "DataType":1, "DisplayName": "HMI_RT_1::InternalTag_Bool_1", "Name":"HMI_RT_1::InternalTag_Bool_1"}],}}
 
 **OnError**
 
-{"Message": "ErrorBrowseTags", "ErrorCode": "<Code>", "ErrorDescription": "<Description>", "ClientCookie": "Cookie>"}
+{"Message": "ErrorBrowseTags", "ErrorCode": "&lt;Code&gt;", "ErrorDescription": "&lt;Description&gt;", "ClientCookie": "Cookie&gt;"}
 
 For example:
 
@@ -1314,7 +1314,7 @@ If the number of hits exceeds the page size of the response, the command consist
 
 ##### Initial request
 
-{"Message": "BrowseConfiguredAlarms", "Params": {"LanguageId": <Value>, "Filter": "<String>", "Attributes": ["<Attribute name>", ..., "<Attribute name>"], "PageSize": <Value>, "SystemNames": ["<Name>", ..., "<Name>"]}, "ClientCookie": "<Cookie>"}
+{"Message": "BrowseConfiguredAlarms", "Params": {"LanguageId": &lt;Value&gt;, "Filter": "&lt;String&gt;", "Attributes": ["&lt;Attribute name&gt;", ..., "&lt;Attribute name&gt;"], "PageSize": &lt;Value&gt;, "SystemNames": ["&lt;Name&gt;", ..., "&lt;Name&gt;"]}, "ClientCookie": "&lt;Cookie&gt;"}
 
 - `LanguageId`: Optional
 
@@ -1371,7 +1371,7 @@ For example:
 
 ##### Next request
 
-{"Message": "BrowseConfiguredAlarms", "Params": "Next", "ClientCookie": "<Cookie>"}
+{"Message": "BrowseConfiguredAlarms", "Params": "Next", "ClientCookie": "&lt;Cookie&gt;"}
 
 For example:
 
@@ -1381,7 +1381,7 @@ For example:
 
 **OnSuccess**
 
-{"ClientCookie": "<Cookie>", "Message": "NotifyBrowseConfiguredAlarms", "Params": {"AlarmClasses":[{"AlarmClassName":"<Value>", "Alarms":[{"AlarmClassName":"<Value>", "Area":<Value>, "Name":<Value>, "Name":<Value>, "Priority":<Value>}, {"AlarmClassName":"<Value>", "Area":<Value>, ...}], {"AlarmClassName":"<Value>", "Alarms":[{"AlarmClassName": "<Value>, ...}]}
+{"ClientCookie": "&lt;Cookie&gt;", "Message": "NotifyBrowseConfiguredAlarms", "Params": {"AlarmClasses":[{"AlarmClassName":"&lt;Value&gt;", "Alarms":[{"AlarmClassName":"&lt;Value&gt;", "Area":&lt;Value&gt;, "Name":&lt;Value&gt;, "Name":&lt;Value&gt;, "Priority":&lt;Value&gt;}, {"AlarmClassName":"&lt;Value&gt;", "Area":&lt;Value&gt;, ...}], {"AlarmClassName":"&lt;Value&gt;", "Alarms":[{"AlarmClassName": "&lt;Value&gt;, ...}]}
 
 For example:
 
@@ -1393,7 +1393,7 @@ For example:
 
 **OnError**
 
-{"Message": "ErrorBrowseConfiguredAlarms", "ErrorCode": "<Code>", "ErrorDescription": "<Description>", "ClientCookie": "Cookie>"}
+{"Message": "ErrorBrowseConfiguredAlarms", "ErrorCode": "&lt;Code&gt;", "ErrorDescription": "&lt;Description&gt;", "ClientCookie": "Cookie&gt;"}
 
 For example:
 
@@ -1409,7 +1409,7 @@ Information on the general browse behavior of the command can be found in sectio
 
 **Request**
 
-{"Message": "BrowseAlarmClasses", "Params": {"Filter": <String>, "Attributes"["<Attribute name>", ..., "<Attribute name>"], "SystemNames": ["<Name>", ..., "<Name>"]}, "ClientCookie": "<Cookie>"}
+{"Message": "BrowseAlarmClasses", "Params": {"Filter": &lt;String&gt;, "Attributes"["&lt;Attribute name&gt;", ..., "&lt;Attribute name&gt;"], "SystemNames": ["&lt;Name&gt;", ..., "&lt;Name&gt;"]}, "ClientCookie": "&lt;Cookie&gt;"}
 
 - `Filter`: Optional
 
@@ -1455,7 +1455,7 @@ For example:
 
 OnSuccess
 
-NotifyBrowseAlarmClasses <System>::<Alarm class> ... <System>::<Alarm class>
+NotifyBrowseAlarmClasses &lt;System&gt;::&lt;Alarm class&gt; ... &lt;System&gt;::&lt;Alarm class&gt;
 
 For example:
 
@@ -1463,7 +1463,7 @@ NotifyBrowseAlarmClasses HMI_RT_1::Alarm HMI_RT_1::SystemNotification HMI_RT_1::
 
 OnError
 
-ErrorBrowseAlarmClasses <Error description>
+ErrorBrowseAlarmClasses &lt;Error description&gt;
 
 For example:
 
@@ -1759,9 +1759,9 @@ Precedence of the operators:
 
 | Rank | Operators |
 | --- | --- |
-| 1 | - Relational operators:   =, <>, >, <, >=, <= - LIKE - IN - BETWEEN |
+| 1 | - Relational operators:   =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;= - LIKE - IN - BETWEEN |
 | 2 | NOT |
-| 3 | AND, && |
+| 3 | AND, &amp;&amp; |
 | 4 | OR, || |
 
 Permitted wildcards:

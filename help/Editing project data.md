@@ -77,7 +77,7 @@ To compile project data, follow these steps:
 1. In the project tree, select the devices whose project data you want to compile.
 2. Select the option you require in "Compile" submenu of the shortcut menu.
 
-   The project data is compiled. You can check whether or not the compilation was successful in the Inspector window with "Info > Compile".
+   The project data is compiled. You can check whether or not the compilation was successful in the Inspector window with "Info &gt; Compile".
 
 **Note**
 
@@ -249,8 +249,8 @@ To download project data to a memory card, follow these steps:
 Or:
 
 1. In the project tree, select the project data that you want to download.
-2. To do this, right-click the selection and select the "Copy" command from the shortcut menu. You can also use the key combination <Ctrl+C>.
-3. Right-click the memory card and select the "Paste" command from the shortcut menu. You can also use the key combination <Ctrl+V>.
+2. To do this, right-click the selection and select the "Copy" command from the shortcut menu. You can also use the key combination &lt;Ctrl+C&gt;.
+3. Right-click the memory card and select the "Paste" command from the shortcut menu. You can also use the key combination &lt;Ctrl+V&gt;.
 
    If necessary, the project data is compiled. The "Load preview" dialog then opens. This dialog displays alarms and recommends actions needed for the loading operation.
 4. Check the alarms and select the actions in the "Action" column, if necessary.
@@ -263,7 +263,7 @@ Or:
 Or:
 
 1. In the project tree, select the project data that you want to download.
-2. Select the "Card Reader/USB memory > Write to memory card" command in the "Project" menu.
+2. Select the "Card Reader/USB memory &gt; Write to memory card" command in the "Project" menu.
 
    The "Select memory card" dialog opens.
 3. Select a memory card that is compatible with the CPU.
@@ -561,7 +561,7 @@ The project tree is open.
 To perform an offline/online comparison, follow these steps:
 
 1. Select a device in the project tree that allows offline/online comparison.
-2. Select the "Compare > Offline/online" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/online" command in the shortcut menu.
 3. If you have not already established an online connection to this device, the "Go online" dialog opens. In this case, set all the necessary parameters for the connection and click "Connect".
 
    The online connection is established and compare editor opens.
@@ -602,7 +602,7 @@ The project tree is open.
 To perform an offline/offline comparison for software, follow these steps:
 
 1. Select a device in the project tree that allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Drag-and-drop an additional device to the drop area of the right pane.
@@ -619,7 +619,7 @@ To perform an offline/offline comparison for software, follow these steps:
 To perform an offline/offline comparison for hardware, follow these steps:
 
 1. Select a device in the project tree that allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Drag-and-drop an additional device to the drop area of the right pane.
@@ -1314,7 +1314,7 @@ Always pass on the protected project data as project archive or library archive.
 | Symbol | Meaning |
 | --- | --- |
 |  | **Warning** |
-| **Handling know-how-protected project data**  If you remove the know-how protection of an object and the TIA Portal is unexpectedly terminated before the next saving, the corresponding project data is stored unprotected in the "CrashDumpReport" and could be accessible to unauthorized persons.  To prevent access to data that is actually protected, proceed as follows:  1. Open the directory ..\Users\<user_name>\AppData\Roaming\Siemens\Automation\<tia_version>\UserDataDumps\<project_name> 2. Delete all files with the name extension "*.UDD". |  |
+| **Handling know-how-protected project data**  If you remove the know-how protection of an object and the TIA Portal is unexpectedly terminated before the next saving, the corresponding project data is stored unprotected in the "CrashDumpReport" and could be accessible to unauthorized persons.  To prevent access to data that is actually protected, proceed as follows:  1. Open the directory ..\Users\&lt;user_name&gt;\AppData\Roaming\Siemens\Automation\&lt;tia_version&gt;\UserDataDumps\&lt;project_name&gt; 2. Delete all files with the name extension "*.UDD". |  |
 
 ---
 
@@ -1526,7 +1526,7 @@ Your designs for the cover page and your templates for the page layout can be fo
 
 The cover page can be customized. You can insert a background graphic and provide placeholders for text on the page. The placeholders are automatically filled with data from a documentation information during printing.
 
-Cover pages are located in the project tree under the "Documentation information > Cover pages" group.
+Cover pages are located in the project tree under the "Documentation information &gt; Cover pages" group.
 
 ##### Designing the content page
 
@@ -1543,7 +1543,7 @@ The regular pages of a printout can contain the following elements:
 
   You can specify an area where the printed content is to be embedded.
 
-The design of the content pages is saved in Frames. The individual frames are located in the project tree under the "Documentation information > Frames" group.
+The design of the content pages is saved in Frames. The individual frames are located in the project tree under the "Documentation information &gt; Frames" group.
 
 #### Entering document information
 
@@ -1557,7 +1557,7 @@ The various document information are therefore part of the printing function and
 
 To add metadata, follow these steps:
 
-1. To create new document information, double-click "Add new document information" under "Documentation information > Document information" in the project tree.
+1. To create new document information, double-click "Add new document information" under "Documentation information &gt; Document information" in the project tree.
 
    The new document information is created and opened immediately.
 2. Enter a name for the set in the "Name" field.
@@ -1623,13 +1623,13 @@ Cover pages and templates can be moved from the project tree to a global library
 
 ##### Creating frames
 
-You can create any number of frames for each project. The frames are stored in the project tree below the "Documentation information > Frames" group. You can assign a frame to all document information. When you select document information for printing, its associated frame is used.
+You can create any number of frames for each project. The frames are stored in the project tree below the "Documentation information &gt; Frames" group. You can assign a frame to all document information. When you select document information for printing, its associated frame is used.
 
 ###### Procedure
 
 To create a new frame, follow these steps:
 
-1. Double-click the entry "Add new frame" below the "Documentation information > Frames" group in the project tree.
+1. Double-click the entry "Add new frame" below the "Documentation information &gt; Frames" group in the project tree.
 
    The "Creating frames" dialog opens.
 2. Enter a name for the frame in the "Name" field.
@@ -1652,13 +1652,13 @@ A new frame is created. The frame is then opened automatically in the documentat
 
 ##### Creating a cover page
 
-You can create any number of cover pages for the printout for each project. The cover pages are stored in the project tree below the the "Documentation information > Cover pages" group. You can assign a cover page to all document information. When you select specific document information for printing, its associated cover page is used.
+You can create any number of cover pages for the printout for each project. The cover pages are stored in the project tree below the the "Documentation information &gt; Cover pages" group. You can assign a cover page to all document information. When you select specific document information for printing, its associated cover page is used.
 
 ###### Procedure
 
 To create a new cover page, follow these steps:
 
-1. Double-click the entry "Add new cover page" below the "Documentation information > Cover pages" group in the project tree.
+1. Double-click the entry "Add new cover page" below the "Documentation information &gt; Cover pages" group in the project tree.
 
    The "Add new cover page" dialog box opens.
 2. Enter a name for the cover page in the "Name" field.
@@ -1691,8 +1691,8 @@ To create and edit the ready-made frames and cover pages, follow these steps:
 2. In the "Templates" folder, open the "Cover Pages" or "Frames" folder.
 3. Drag a cover page or a frame from one of the folders into the project tree and drop it into one of the following folders:
 
-   - For frames: "Document information > Frames"
-   - For cover pages: "Document information > Cover pages".
+   - For frames: "Document information &gt; Frames"
+   - For cover pages: "Document information &gt; Cover pages".
 
    The ready-made frame or cover page can now be used in the project.
 4. Double-click on the new entry in the project tree click to edit the frame or the cover page.
@@ -1722,7 +1722,7 @@ The documentation editor is a graphical editor which allows you to design frames
 
 To edit a cover page or a frame in the documentation editor, follow these steps:
 
-1. In the project tree, double-click on the entry for an existing cover page or frame under the "Documentation information > Frames " or "Documentation information > Cover pages" group.
+1. In the project tree, double-click on the entry for an existing cover page or frame under the "Documentation information &gt; Frames " or "Documentation information &gt; Cover pages" group.
 
    The documentation editor opens.
 2. Design the cover page or frame as desired.
@@ -1793,7 +1793,7 @@ You have various aids at your disposal to help you position elements on the page
 
   A grid is placed underneath the page in the work area.
 
-You can display, hide or adapt the positioning aids in the Inspector window under "Properties > Rulers and grid". You can make the following settings:
+You can display, hide or adapt the positioning aids in the Inspector window under "Properties &gt; Rulers and grid". You can make the following settings:
 
 - Units:
 
@@ -1883,12 +1883,12 @@ An cover page or frame is open in the documentation editor.
 
 To insert placeholders for metadata on the cover sheet or in a frame, follow these steps:
 
-1. Drag a field from the "Toolbox > Elements" task card to the work area of the documentation editor.
+1. Drag a field from the "Toolbox &gt; Elements" task card to the work area of the documentation editor.
 
    The placeholder is inserted. The placeholder properties are shown in the Inspector window and can be edited there.
-2. Select the metadata to be inserted during printing from the "Text" drop-down list in the Inspector window under "Properties > General > Text box". Alternatively, you have the option of entering free text or selecting an image depending on the type of placeholder.
-3. In the Inspector window under "Properties > General > Position and size", specify the position of the placeholder on the X and Y axis and enter the width and height of the text box in cm. You specify the sequence of the objects in the "Z-Order" field, if these overlap. The smaller the value, the further down an object is located.
-4. In the Inspector window, go to "Properties > View" and select the font formatting and the orientation of the text as well as the alignment of the text. You cannot make this setting for images.
+2. Select the metadata to be inserted during printing from the "Text" drop-down list in the Inspector window under "Properties &gt; General &gt; Text box". Alternatively, you have the option of entering free text or selecting an image depending on the type of placeholder.
+3. In the Inspector window under "Properties &gt; General &gt; Position and size", specify the position of the placeholder on the X and Y axis and enter the width and height of the text box in cm. You specify the sequence of the objects in the "Z-Order" field, if these overlap. The smaller the value, the further down an object is located.
+4. In the Inspector window, go to "Properties &gt; View" and select the font formatting and the orientation of the text as well as the alignment of the text. You cannot make this setting for images.
 
 ---
 
@@ -2011,7 +2011,7 @@ You have two options for printing out project data:
 - Print immediately using default settings by means of the "Print" button in the toolbar.
 
   The button is only active if a printable object is selected.
-- Printout with additional setting options with the "Project > Print" menu command.
+- Printout with additional setting options with the "Project &gt; Print" menu command.
 
   For example, you can choose a different printer or specific documentation information or you can specify whether a cover page and table of contents are to be printed. In addition, you can specify the print scope or display a print preview prior to printing.
 
@@ -2216,7 +2216,7 @@ To export labeling data for hardware modules as XML, follow these steps:
 4. In the "Path" field, select the path where the XML file will be stored.
 5. Click the "Export" button to start the export to an XML file.
 
-   The XML file is created with the name "<Project name>_IO_Channels.xml".
+   The XML file is created with the name "&lt;Project name&gt;_IO_Channels.xml".
 
 ---
 
@@ -2234,259 +2234,259 @@ To export labeling data for hardware modules as XML, follow these steps:
 
 The XML file for module labeling strips is structured according to the following schema:
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd" elementFormDefault="qualified" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+&lt;xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd" elementFormDefault="qualified" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
 
-<xs:element name="Stations">
+&lt;xs:element name="Stations"&gt;
 
-  <xs:complexType>
+  &lt;xs:complexType&gt;
 
-   <xs:sequence>
+   &lt;xs:sequence&gt;
 
-    <xs:element name="Station" maxOccurs="unbounded">
+    &lt;xs:element name="Station" maxOccurs="unbounded"&gt;
 
-    <xs:complexType>
+    &lt;xs:complexType&gt;
 
-      <xs:sequence>
+      &lt;xs:sequence&gt;
 
-        <xs:element name="Rack" maxOccurs="unbounded">
+        &lt;xs:element name="Rack" maxOccurs="unbounded"&gt;
 
-        <xs:complexType>
+        &lt;xs:complexType&gt;
 
-         <xs:sequence>
+         &lt;xs:sequence&gt;
 
-          <xs:element name="Module" maxOccurs="unbounded">
+          &lt;xs:element name="Module" maxOccurs="unbounded"&gt;
 
-          <xs:complexType>
+          &lt;xs:complexType&gt;
 
-          <xs:sequence>
+          &lt;xs:sequence&gt;
 
-           <xs:element name="IOChannel" maxOccurs="unbounded">
+           &lt;xs:element name="IOChannel" maxOccurs="unbounded"&gt;
 
-           <xs:complexType>
+           &lt;xs:complexType&gt;
 
-           <xs:sequence>
+           &lt;xs:sequence&gt;
 
-            <xs:element name="Address" type="xs:string"></xs:element>
+            &lt;xs:element name="Address" type="xs:string"&gt;&lt;/xs:element&gt;
 
-            <xs:element name ="Tag" type="xs:string"></xs:element>
+            &lt;xs:element name ="Tag" type="xs:string"&gt;&lt;/xs:element&gt;
 
-           </xs:sequence>
+           &lt;/xs:sequence&gt;
 
-          <xs:attribute name="Number" type="xs:int"></xs:attribute>
+          &lt;xs:attribute name="Number" type="xs:int"&gt;&lt;/xs:attribute&gt;
 
-          </xs:complexType>
+          &lt;/xs:complexType&gt;
 
-          </xs:element>
+          &lt;/xs:element&gt;
 
-         </xs:sequence>
+         &lt;/xs:sequence&gt;
 
-         <xs:attribute name="Name"></xs:attribute>
+         &lt;xs:attribute name="Name"&gt;&lt;/xs:attribute&gt;
 
-        </xs:complexType>
+        &lt;/xs:complexType&gt;
 
-         </xs:element>
+         &lt;/xs:element&gt;
 
-        </xs:sequence>
+        &lt;/xs:sequence&gt;
 
-       <xs:attribute name="Name" type="xs:string"></xs:attribute>
+       &lt;xs:attribute name="Name" type="xs:string"&gt;&lt;/xs:attribute&gt;
 
-       </xs:complexType>
+       &lt;/xs:complexType&gt;
 
-      </xs:element>
+      &lt;/xs:element&gt;
 
-      </xs:sequence>
+      &lt;/xs:sequence&gt;
 
-       <xs:attribute name="Name" type="xs:string"></xs:attribute>
+       &lt;xs:attribute name="Name" type="xs:string"&gt;&lt;/xs:attribute&gt;
 
-    </xs:complexType>
+    &lt;/xs:complexType&gt;
 
-  </xs:element>
+  &lt;/xs:element&gt;
 
-  </xs:sequence>
+  &lt;/xs:sequence&gt;
 
-  </xs:complexType>
+  &lt;/xs:complexType&gt;
 
-  </xs:element>
+  &lt;/xs:element&gt;
 
-</xs:schema>
+&lt;/xs:schema&gt;
 
 ##### Example of an XML file
 
 The following example shows an XML file that contains the labeling data for an S7-1500 CPU with a digital input module and an analog input module:
 
-<?xml version="1.0" encoding="UTF-8"?>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 
-<Stations>
+&lt;Stations&gt;
 
-<!-- The CPU is specified first -->
+&lt;!-- The CPU is specified first --&gt;
 
-  <Station Name="S71500/ET200MP-Station_1">
+  &lt;Station Name="S71500/ET200MP-Station_1"&gt;
 
-    <Rack Name="Rack_0"> <!-- Name of the rack -->
+    &lt;Rack Name="Rack_0"&gt; &lt;!-- Name of the rack --&gt;
 
-      <Module Name="Sample S7-1500" /> <!-- Name of the CPU -->
+      &lt;Module Name="Sample S7-1500" /&gt; &lt;!-- Name of the CPU --&gt;
 
-      <Module Name="DI 16x24VDC BA_1"> <!-- Name of the digital input module -->
+      &lt;Module Name="DI 16x24VDC BA_1"&gt; &lt;!-- Name of the digital input module --&gt;
 
-<!-- The individual channels of the digital input module are specified -->
+&lt;!-- The individual channels of the digital input module are specified --&gt;
 
-        <IOChannel Number="0">
+        &lt;IOChannel Number="0"&gt;
 
-          <Address>%I0.0</Address>
+          &lt;Address&gt;%I0.0&lt;/Address&gt;
 
-          <Tag>Input Value 1</Tag> <!-- Symbolic address of input 0 -->
+          &lt;Tag&gt;Input Value 1&lt;/Tag&gt; &lt;!-- Symbolic address of input 0 --&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="1">
+        &lt;IOChannel Number="1"&gt;
 
-          <Address>%I0.1</Address>
+          &lt;Address&gt;%I0.1&lt;/Address&gt;
 
-          <Tag>Input Value 2</Tag>
+          &lt;Tag&gt;Input Value 2&lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="2">
+        &lt;IOChannel Number="2"&gt;
 
-          <Address>%I0.2</Address>
+          &lt;Address&gt;%I0.2&lt;/Address&gt;
 
-          <Tag>Input Value 3</Tag>
+          &lt;Tag&gt;Input Value 3&lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <!-- All other channels follow -->
+        &lt;!-- All other channels follow --&gt;
 
-      </Module>
+      &lt;/Module&gt;
 
-      <Module Name="AI 4xU/I/RTD/TC ST_1"> <!-- Name of the analog input module -->
+      &lt;Module Name="AI 4xU/I/RTD/TC ST_1"&gt; &lt;!-- Name of the analog input module --&gt;
 
-<!-- The individual channels of the analog input module are specified -->
+&lt;!-- The individual channels of the analog input module are specified --&gt;
 
-        <IOChannel Number="0">
+        &lt;IOChannel Number="0"&gt;
 
-          <Address>%IW2</Address>
+          &lt;Address&gt;%IW2&lt;/Address&gt;
 
-          <Tag> <!-- Symbolic addresses are not specified for the analog input module. -->
+          &lt;Tag&gt; &lt;!-- Symbolic addresses are not specified for the analog input module. --&gt;
 
-          </Tag>
+          &lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="1">
+        &lt;IOChannel Number="1"&gt;
 
-          <Address>%IW4</Address>
+          &lt;Address&gt;%IW4&lt;/Address&gt;
 
-          <Tag>
+          &lt;Tag&gt;
 
-          </Tag>
+          &lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="2">
+        &lt;IOChannel Number="2"&gt;
 
-          <Address>%IW6</Address>
+          &lt;Address&gt;%IW6&lt;/Address&gt;
 
-          <Tag>
+          &lt;Tag&gt;
 
-          </Tag>
+          &lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="3">
+        &lt;IOChannel Number="3"&gt;
 
-          <Address>%IW8</Address>
+          &lt;Address&gt;%IW8&lt;/Address&gt;
 
-          <Tag>
+          &lt;Tag&gt;
 
-          </Tag>
+          &lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-      </Module>
+      &lt;/Module&gt;
 
-      <Module Name="Sample S7-1500" />
+      &lt;Module Name="Sample S7-1500" /&gt;
 
-      <Module Name="DI 16x24VDC BA_1">
+      &lt;Module Name="DI 16x24VDC BA_1"&gt;
 
-        <IOChannel Number="0">
+        &lt;IOChannel Number="0"&gt;
 
-          <Address>%I0.0</Address>
+          &lt;Address&gt;%I0.0&lt;/Address&gt;
 
-          <Tag>Input Value 1</Tag>
+          &lt;Tag&gt;Input Value 1&lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="1">
+        &lt;IOChannel Number="1"&gt;
 
-          <Address>%I0.1</Address>
+          &lt;Address&gt;%I0.1&lt;/Address&gt;
 
-          <Tag>Input Value 2</Tag>
+          &lt;Tag&gt;Input Value 2&lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="2">
+        &lt;IOChannel Number="2"&gt;
 
-          <Address>%I0.2</Address>
+          &lt;Address&gt;%I0.2&lt;/Address&gt;
 
-          <Tag>Input Value 3</Tag>
+          &lt;Tag&gt;Input Value 3&lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <!-- All other channels follow -->
+        &lt;!-- All other channels follow --&gt;
 
-      </Module>
+      &lt;/Module&gt;
 
-      <Module Name="AI 4xU/I/RTD/TC ST_1">
+      &lt;Module Name="AI 4xU/I/RTD/TC ST_1"&gt;
 
-        <IOChannel Number="0">
+        &lt;IOChannel Number="0"&gt;
 
-          <Address>%IW2</Address>
+          &lt;Address&gt;%IW2&lt;/Address&gt;
 
-          <Tag>
+          &lt;Tag&gt;
 
-          </Tag>
+          &lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="1">
+        &lt;IOChannel Number="1"&gt;
 
-          <Address>%IW4</Address>
+          &lt;Address&gt;%IW4&lt;/Address&gt;
 
-          <Tag>
+          &lt;Tag&gt;
 
-          </Tag>
+          &lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="2">
+        &lt;IOChannel Number="2"&gt;
 
-          <Address>%IW6</Address>
+          &lt;Address&gt;%IW6&lt;/Address&gt;
 
-          <Tag>
+          &lt;Tag&gt;
 
-          </Tag>
+          &lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-        <IOChannel Number="3">
+        &lt;IOChannel Number="3"&gt;
 
-          <Address>%IW8</Address>
+          &lt;Address&gt;%IW8&lt;/Address&gt;
 
-          <Tag>
+          &lt;Tag&gt;
 
-          </Tag>
+          &lt;/Tag&gt;
 
-        </IOChannel>
+        &lt;/IOChannel&gt;
 
-      </Module>
+      &lt;/Module&gt;
 
-    </Rack>
+    &lt;/Rack&gt;
 
-  </Station>
+  &lt;/Station&gt;
 
-</Stations>
+&lt;/Stations&gt;
 
 ---
 
@@ -2541,7 +2541,7 @@ When you enter texts while working on a project, you would normally do this in y
 
 #### Project language
 
-Project languages are all languages in which a project will later be used. Based on the editing language, all the texts can be translated to the various project languages. You specify the languages that will be available in the project tree under "Languages & Resources > Project languages".
+Project languages are all languages in which a project will later be used. Based on the editing language, all the texts can be translated to the various project languages. You specify the languages that will be available in the project tree under "Languages &amp; Resources &gt; Project languages".
 
 #### Editing language
 
@@ -2549,13 +2549,13 @@ Every project has an editing language. When you enter texts, these are always cr
 
 The editing language does not depend on the language of the user interface. You could, for example, set English as the user interface language, but use Italian as the editing language. If you enter texts, these will be created in the project language "Italian" in this case, although the user interface of the TIA Portal is displayed in English.
 
-You set the editing language in the project tree under "Languages & Resources > Project languages > Editing language".
+You set the editing language in the project tree under "Languages &amp; Resources &gt; Project languages &gt; Editing language".
 
 #### Reference language
 
-The reference language is used as a template for translation. The text is displayed in the reference language for each text box in the "Tasks > Languages and resources" task card. You therefore know which text that belongs in a text box, even when no text is entered in the currently selected editing language.
+The reference language is used as a template for translation. The text is displayed in the reference language for each text box in the "Tasks &gt; Languages and resources" task card. You therefore know which text that belongs in a text box, even when no text is entered in the currently selected editing language.
 
-You set the reference language in the project tree under "Languages & Resources > Project languages > Reference language".
+You set the reference language in the project tree under "Languages &amp; Resources &gt; Project languages &gt; Reference language".
 
 #### User texts and system texts
 
@@ -2564,7 +2564,7 @@ For clarification purposes, a distinction is made between user texts and system 
 - User texts are texts that the user created.
 - System texts are texts that are created automatically according to the configuration in the project.
 
-You manage the project texts in the project tree under "Languages & Resources > Project texts".
+You manage the project texts in the project tree under "Languages &amp; Resources &gt; Project texts".
 
 #### Examples of multilingual project texts
 
@@ -2585,13 +2585,13 @@ The following procedures are available to translate texts.
 
 - Translate all texts used in the project in tabular form
 
-  You can enter the translations for the individual project languages directly in the "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts".
+  You can enter the translations for the individual project languages directly in the "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts".
 - Specify text assigned to individual objects in the Inspector window
 
   In the Inspector window, you can translate the texts that are assigned to the currently selected objects. Columns are displayed in a table for all available project languages. You can enter the translations for each text in the columns.
 - Translating texts using reference texts
 
-  You can change the editing language for shorter texts. All the text cells are filled again with the default values and can be filled in the current language. As orientation, you can display what you last entered in the box in the reference language. To do this, select the "Tasks" task card and open the "Languages & resources" pane.
+  You can change the editing language for shorter texts. All the text cells are filled again with the default values and can be filled in the current language. As orientation, you can display what you last entered in the box in the reference language. To do this, select the "Tasks" task card and open the "Languages &amp; resources" pane.
 - Exporting texts and translating them externally
 
   With larger volumes of text, you can export the texts to an Office Open XML file and translate them in a conventional table calculation program. You then import the translated list again into the TIA Portal.
@@ -2645,7 +2645,7 @@ All the texts can be displayed within a project in the same language that you se
 
 To select the project languages, follow these steps:
 
-1. Click on the arrow symbol to the left of "Languages & Resources" in the project tree.
+1. Click on the arrow symbol to the left of "Languages &amp; Resources" in the project tree.
 
    The elements below this are displayed.
 2. Double-click on "Project languages".
@@ -2665,13 +2665,13 @@ All the texts in the project are created in the editing language when they are e
 
 To change the editing language, follow these steps:
 
-1. Click on the arrow symbol to the left of "Languages & Resources" in the project tree.
+1. Click on the arrow symbol to the left of "Languages &amp; Resources" in the project tree.
 
    The lower-level elements are displayed.
 2. Double-click on "Project languages".
 
    The possible settings for the project languages are displayed in the work area.
-3. Select the editing language in "General > Editing language".
+3. Select the editing language in "General &gt; Editing language".
 
 ### Translating all project texts in tabular form
 
@@ -2685,7 +2685,7 @@ You have selected at least one further project language.
 
 To translate text in the project-wide list, follow these steps:
 
-1. Click on the arrow symbol to the left of "Languages & Resources" in the project tree.
+1. Click on the arrow symbol to the left of "Languages &amp; Resources" in the project tree.
 
    The elements below this are displayed.
 2. Double-click "Project texts".
@@ -2748,12 +2748,12 @@ There is at least one translation into a different project language for an input
 
 To display the translation of an input cell in a reference language, follow these steps:
 
-1. In the "Tasks" task card, select the "Languages & Resources" pane.
+1. In the "Tasks" task card, select the "Languages &amp; Resources" pane.
 2. Select a reference language from the "Reference language" drop-down list.
 
 #### Result
 
-The reference language is preset. If you click in a text box, translations that already exist in other project languages are shown in the "Tasks > Languages & Resources" task card.
+The reference language is preset. If you click in a text box, translations that already exist in other project languages are shown in the "Tasks &gt; Languages &amp; Resources" task card.
 
 ### Exporting project texts
 
@@ -2766,7 +2766,7 @@ The following export options are available:
   You can select individual texts in the project texts editor and then export the selected texts.
 - Exporting project texts of a device
 
-  When you have selected a device, the "Properties > Texts" tab of the Inspector window includes all texts that are part of the respective device. Here you can export all texts that are part of the respective device.
+  When you have selected a device, the "Properties &gt; Texts" tab of the Inspector window includes all texts that are part of the respective device. Here you can export all texts that are part of the respective device.
 - Exporting all user texts or system texts at once
 
   You can either export all texts in the project or further limit the export by categories.
@@ -2781,7 +2781,7 @@ The following export options are available:
 
 To export individual project texts, follow these steps:
 
-1. Open the "Languages & Resources" folder in the project tree.
+1. Open the "Languages &amp; Resources" folder in the project tree.
 
    The lower-level elements are displayed.
 2. Double-click "Project texts".
@@ -2860,7 +2860,7 @@ After external compilation in a table calculation program, you import the projec
 - In the toolbar of the project texts editor
 - In the properties of a device
 
-  When you have selected a device, the "Properties > Texts" tab of the Inspector window includes all texts that are part of the respective device. You can also import the texts of the device at this location.
+  When you have selected a device, the "Properties &gt; Texts" tab of the Inspector window includes all texts that are part of the respective device. You can also import the texts of the device at this location.
 
 > **Note**
 >
@@ -2878,7 +2878,7 @@ After external compilation in a table calculation program, you import the projec
 >
 > **Importing project texts after saving under a new project name**
 >
-> If you have saved a project under a different project name using the menu command "Project > Save as...", previously exported project texts can no longer be imported into this project.
+> If you have saved a project under a different project name using the menu command "Project &gt; Save as...", previously exported project texts can no longer be imported into this project.
 
 #### Importing project texts
 
@@ -2931,10 +2931,10 @@ To enter the comments in German and to have them translated into English later, 
 To translate an individual comment field to French, follow these steps:
 
 1. Open the comment box for the device on which the French-speaking colleague will be working.
-2. Open the "Languages & resources" pane in the "Tasks" task card.
-3. Set "French" as the editing language in the "Languages & Resources" pane. As the reference language, set, for example, "English".
+2. Open the "Languages &amp; resources" pane in the "Tasks" task card.
+3. Set "French" as the editing language in the "Languages &amp; Resources" pane. As the reference language, set, for example, "English".
 
-   Since no translation has yet been installed in French, the comment box is empty. In the "Languages & Resources" pane, the English translation "Our new device" is displayed as a reference.
+   Since no translation has yet been installed in French, the comment box is empty. In the "Languages &amp; Resources" pane, the English translation "Our new device" is displayed as a reference.
 4. Orientating yourself on the English reference text enter "Notre nouvel appareil" in the comment box.
 
    The comment for this device is now available in the languages German, English and French.
@@ -2969,7 +2969,7 @@ You can centrally manage texts to be referenced in alarms. All the texts are sto
 
 All the texts can be translated to all project languages. Here, you have two options available:
 
-- You can enter the translation of the texts in a list. You will find the list in the project tree under "Languages & Resources > Project texts".
+- You can enter the translation of the texts in a list. You will find the list in the project tree under "Languages &amp; Resources &gt; Project texts".
 - You can export all texts to a file in Office Open XML format and enter the translation in a spreadsheet program. The translations can then be imported again. Only export the data to areas that are protected with appropriate access mechanisms. Only import files that originate from trusted sources.
 
 Each device in a project can have its own text lists. Device-specific text lists relate to only one device in the project and are therefore only valid for this device. For this reason, they are arranged under a device in the project tree. Device-specific text lists can be user-defined or created by the system.
@@ -3129,10 +3129,10 @@ To copy text lists, follow these steps:
 4. Position the cursor at the location where you want to insert the text list.
 5. Select the "Paste" command in the shortcut menu.
 
-   - If you paste the text list into the same CPU, the copy is pasted with the name extension "_<consecutive number>".
+   - If you paste the text list into the same CPU, the copy is pasted with the name extension "_&lt;consecutive number&gt;".
    - If you paste the text list into a different CPU where a text list of the same name already exists, the "Paste" dialog box opens. Select the desired option and confirm your selection with "OK".
 
-Alternatively, you can also copy the text list via drag-and-drop while holding down the <Ctrl> key.
+Alternatively, you can also copy the text list via drag-and-drop while holding down the &lt;Ctrl&gt; key.
 
 #### Moving text lists
 
@@ -3279,7 +3279,7 @@ The project view is open.
 To add a card reader, follow these steps:
 
 1. Open the project tree.
-2. Select the "Card Reader / USB memory > Add user-defined Card Reader" command in the "Project" menu.
+2. Select the "Card Reader / USB memory &gt; Add user-defined Card Reader" command in the "Project" menu.
 
    The "Add user-defined Card Reader" dialog opens.
 3. In the drop-down list box, select the path for the card reader.
@@ -3311,7 +3311,7 @@ To add a card reader, follow these steps:
 To access memory cards, follow these steps:
 
 1. Open the project tree.
-2. Select the "Card Reader / USB memory > Card Reader / Show USB memory" command in the "Project" menu.
+2. Select the "Card Reader / USB memory &gt; Card Reader / Show USB memory" command in the "Project" menu.
 
    The "Card reader / USB memory" folder is displayed in the project tree.
 3. Open the "Card Reader / USB memory" folder.
@@ -3348,7 +3348,7 @@ To display the properties of a memory card, follow these steps:
 1. Right-click on the memory card for which you want to display the properties.
 2. Select the "Properties" command in the shortcut menu.
 
-   The "Memory Card <name of the memory card>" dialog opens. The properties are displayed in this dialog.
+   The "Memory Card &lt;name of the memory card&gt;" dialog opens. The properties are displayed in this dialog.
 
 ---
 
@@ -3460,9 +3460,9 @@ You can create a separate homepage for each language version of the user-defined
 
 #### Calling the user-defined documentation
 
-If user-defined documentation is available for an object, you call it with the keyboard shortcut <Shift+F1>. The user-defined documentation is always opened with the standard program specified for the respective file format in Microsoft Windows.
+If user-defined documentation is available for an object, you call it with the keyboard shortcut &lt;Shift+F1&gt;. The user-defined documentation is always opened with the standard program specified for the respective file format in Microsoft Windows.
 
-Once you have pressed <Shift+F1>, certain directories are searched in a fixed order for user-defined documentation. The search order is given below:
+Once you have pressed &lt;Shift+F1&gt;, certain directories are searched in a fixed order for user-defined documentation. The search order is given below:
 
 |  |  |  |
 | --- | --- | --- |
@@ -3481,7 +3481,7 @@ As soon as user-defined documentation is found in one location, the user-defined
 
 You can display a call log for the user-defined documentation for easier connection of the user-defined documentation. The alarms within the log indicate the directories in which documentation is searched for and whether the call of the user-defined documentation is successful. In addition, the file name that is expected for the file is indicated. This allows you to identify how you must name your documentation and the directories in which you must save the user-defined documentation. The call log has the same sequence as the one used to search for user-defined documentation or a homepage.
 
-The log is displayed in the Inspector window in the "Info" tab. Before you can display the call log, you must first enable the call log in the settings of the TIA Portal. To do this, select the "Display call log for user-defined documentation" check box under "Settings > General > User documentation". Alternatively, activate the display of the call log using an XML file.
+The log is displayed in the Inspector window in the "Info" tab. Before you can display the call log, you must first enable the call log in the settings of the TIA Portal. To do this, select the "Display call log for user-defined documentation" check box under "Settings &gt; General &gt; User documentation". Alternatively, activate the display of the call log using an XML file.
 
 ---
 
@@ -3505,7 +3505,7 @@ You specify the following settings for user-defined documentation in the setting
 
 - Displaying the call log in the Inspector window
 
-  A log of the call of user-defined documentation is displayed on the 'Info > General' tab of the Inspector window. The log helps you to adhere to the conventions for calling user-defined documentation.
+  A log of the call of user-defined documentation is displayed on the 'Info &gt; General' tab of the Inspector window. The log helps you to adhere to the conventions for calling user-defined documentation.
 - Search for user-defined documentation in a central file directory
 
   You can save user-defined documentation in a directory outside the current project directory in order, for example, to make documentation available across projects.
@@ -3524,7 +3524,7 @@ You specify the following settings for user-defined documentation in the setting
 To specify a central storage location for user help, follow these steps:
 
 1. Select the "Settings" command in the "Options" menu.
-2. Open the "General > General" area.
+2. Open the "General &gt; General" area.
 3. Navigate to the "User documentation" section.
 4. Select the "Display call log for user-defined documentation" check box in order to display a log of the call of the user-defined documentation in the Inspector window.
 5. Select the "Search for user-defined documentation in a central directory" check box in order to store user-defined documentation in a cross-project directory.
@@ -3546,7 +3546,7 @@ You can set the following options in the XML configuration file:
 
 - Displaying the call log in the Inspector window
 
-  A log of the call of user-defined documentation is displayed on the 'Info > General' tab of the Inspector window. The log helps you to adhere to the conventions for calling user-defined documentation.
+  A log of the call of user-defined documentation is displayed on the 'Info &gt; General' tab of the Inspector window. The log helps you to adhere to the conventions for calling user-defined documentation.
 - Search for user-defined documentation in a central file directory
 
   You can save user-defined documentation in a directory outside the current project directory in order, for example, to make documentation available across projects.
@@ -3573,87 +3573,87 @@ The XML configuration file must have the following content:
 
 XML
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<Document>
+&lt;Document&gt;
 
-<Settings.Settings ID="0">
+&lt;Settings.Settings ID="0"&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<Settings.General ID="1" AggregationName="General">
+&lt;Settings.General ID="1" AggregationName="General"&gt;
 
-<!-- Here you find the settings for global company libraries, if available. -->
+&lt;!-- Here you find the settings for global company libraries, if available. --&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<!-- Section Corporate libraries -->
+&lt;!-- Section Corporate libraries --&gt;
 
-<Settings.General ID="1" AggregationName="General">
+&lt;Settings.General ID="1" AggregationName="General"&gt;
 
-    <AttributeList>
+    &lt;AttributeList&gt;
 
-     <CorporateLibraryPaths>
+     &lt;CorporateLibraryPaths&gt;
 
-     <!-- Example for two entries -->
+     &lt;!-- Example for two entries --&gt;
 
-     <Item>F:\CorporateLibraries\Corporate_Library_1\Corporate_Library_1.al19</Item>     <Item>F:\CorporateLibraries\Corporate_Library_2\CorporateLibraries.al19</Item>
+     &lt;Item&gt;F:\CorporateLibraries\Corporate_Library_1\Corporate_Library_1.al19&lt;/Item&gt;     &lt;Item&gt;F:\CorporateLibraries\Corporate_Library_2\CorporateLibraries.al19&lt;/Item&gt;
 
-     <!-- Here you enter additional global libraries, if any. -->     </CorporateLibraryPaths>
+     &lt;!-- Here you enter additional global libraries, if any. --&gt;     &lt;/CorporateLibraryPaths&gt;
 
-    </AttributeList>
+    &lt;/AttributeList&gt;
 
-   </Settings.General>
+   &lt;/Settings.General&gt;
 
-<!-- Section Corporate libraries end -->
+&lt;!-- Section Corporate libraries end --&gt;
 
-<!-- Section User-defined documentation -->
+&lt;!-- Section User-defined documentation --&gt;
 
-     <Settings.UserDocumentation ID="2" AggregationeName="UserDocumentation">
+     &lt;Settings.UserDocumentation ID="2" AggregationeName="UserDocumentation"&gt;
 
-      <!-- In the following section, you specify the values for display of the user-defined documentation. -->
+      &lt;!-- In the following section, you specify the values for display of the user-defined documentation. --&gt;
 
-      <AttributeList>
+      &lt;AttributeList&gt;
 
-       <!-- Activates or deactivates the display of the access log. -->
+       &lt;!-- Activates or deactivates the display of the access log. --&gt;
 
-       <DisplayLogInformation>
+       &lt;DisplayLogInformation&gt;
 
-        <Value>true</Value>
+        &lt;Value&gt;true&lt;/Value&gt;
 
-       </DisplayLogInformation>
+       &lt;/DisplayLogInformation&gt;
 
-       <!-- Activates or deactivates the search for user-defined documentation in a central directory. -->
+       &lt;!-- Activates or deactivates the search for user-defined documentation in a central directory. --&gt;
 
-       <EnableLookupFromCentralStorageLocation>
+       &lt;EnableLookupFromCentralStorageLocation&gt;
 
-        <Value>true</Value>
+        &lt;Value&gt;true&lt;/Value&gt;
 
-       </EnableLookupFromCentralStorageLocation>
+       &lt;/EnableLookupFromCentralStorageLocation&gt;
 
-       <!-- Specifies the central directory for user-defined documentation. -->
+       &lt;!-- Specifies the central directory for user-defined documentation. --&gt;
 
-       <CentralStorageLocation>
+       &lt;CentralStorageLocation&gt;
 
-        <Value>D:\CorporateDocumentation\UserDocumentation\</Value>
+        &lt;Value&gt;D:\CorporateDocumentation\UserDocumentation\&lt;/Value&gt;
 
-       </CentralStorageLocation>
+       &lt;/CentralStorageLocation&gt;
 
-      </AttributeList>
+      &lt;/AttributeList&gt;
 
-     </Settings.UserDocumentation>
+     &lt;/Settings.UserDocumentation&gt;
 
-<!-- Section User-defined documentation end -->
+&lt;!-- Section User-defined documentation end --&gt;
 
-    </ObjectList>
+    &lt;/ObjectList&gt;
 
-</Settings.General>
+&lt;/Settings.General&gt;
 
-</ObjectList>
+&lt;/ObjectList&gt;
 
-</Settings.Settings>
+&lt;/Settings.Settings&gt;
 
-</Document>
+&lt;/Document&gt;
 
 ---
 
@@ -3681,7 +3681,7 @@ To create a homepage, follow these steps:
 2. Name the file "Home".
 3. Copy the file to the central directory for user-defined documentation on the hard disk or on a network drive:
 
-   <Central directory for user-defined documentation>\<Folder for the respective language>
+   &lt;Central directory for user-defined documentation&gt;\&lt;Folder for the respective language&gt;
 4. If the respective language folder does not exist yet, create the folder now.
 
    Alternative: If you are creating the homepage for a CHM file, place the homepage in the main directory of the CHM file.
@@ -3695,7 +3695,7 @@ Below you see the correct path for the following conditions:
 
 The path for these conditions is as follows:
 
-<Central directory for user-defined documentation>\es-ES\Home.html
+&lt;Central directory for user-defined documentation&gt;\es-ES\Home.html
 
 ---
 
@@ -3749,13 +3749,13 @@ Save the user-defined documentation in one of the following directories:
 
 - Project folder:
 
-  UserFiles\UserDocumentation\<Folder for the respective language>\<Object category>
+  UserFiles\UserDocumentation\&lt;Folder for the respective language&gt;\&lt;Object category&gt;
 - Directory of a global library:
 
-  UserFiles\UserDocumentation\<Folder for the respective language>\<Object category>
+  UserFiles\UserDocumentation\&lt;Folder for the respective language&gt;\&lt;Object category&gt;
 - Central directory on the hard drive or a network drive:
 
-  <Central directory for user-defined documentation>\<Folder for the respective language>\<Object category>\
+  &lt;Central directory for user-defined documentation&gt;\&lt;Folder for the respective language&gt;\&lt;Object category&gt;\
 
 The user-defined documentation must be located in the suitable subfolder for the respective language. The table below shows the respective language folders for the user languages installed as default:
 
@@ -3784,7 +3784,7 @@ The language folder must contain a separate subfolder for each object category. 
 | All types of links in the project tree, for example, "Add new block", "Add new device", etc. | ShortCut |
 | Libraries in the "Libraries" task card | Libraries |
 
-If you are not sure of the English designation for an object category, change the user interface language of the TIA Portal to English. Alternatively, open the user-defined documentation for an object with <Shift+F1> and check in the call log which designation is expected for the object category.
+If you are not sure of the English designation for an object category, change the user interface language of the TIA Portal to English. Alternatively, open the user-defined documentation for an object with &lt;Shift+F1&gt; and check in the call log which designation is expected for the object category.
 
 #### Permitted file names
 
@@ -3829,7 +3829,7 @@ You have already saved user-defined documentation or a homepage according to the
 To open the user-defined documentation, follow these steps:
 
 1. Select the object for which you want to display the user-defined documentation.
-2. Press <Shift+F1>.
+2. Press &lt;Shift+F1&gt;.
 
    The suitable user-defined documentation or the homepage opens.
 
@@ -3862,7 +3862,7 @@ To display the call log, follow these steps:
 1. Open the "Info" tab in the Inspector window.
 2. Open the "General" tab.
 3. Select the object for which you want to call the help.
-4. Press <Shift+F1>.
+4. Press &lt;Shift+F1&gt;.
 
    If possible, the matching user-defined documentation or the homepage of the user-defined documentation is opened. In any case, you will be informed in the Inspector window about which user-defined documentation is opened. You may be shown the directories in which no user-defined documentation was found.
 
@@ -3892,11 +3892,11 @@ To create user-defined documentation as a single file, follow these steps:
    If you are offering help for a library type, for example, name the help file identical to the type.
 3. Depending on whether you are creating the user-defined documentation for project contents or for contents of a global library, copy the file to one of the following storage locations:
 
-   - project folder under "UserFiles\UserDocumentation\<Folder for the respective language>\<Object category>"
-   - Directory of a global library under "UserFiles\UserDocumentation\<Folder for the respective language>\<Object category>"
+   - project folder under "UserFiles\UserDocumentation\&lt;Folder for the respective language&gt;\&lt;Object category&gt;"
+   - Directory of a global library under "UserFiles\UserDocumentation\&lt;Folder for the respective language&gt;\&lt;Object category&gt;"
    - Central directory on the hard drive or a network drive:
 
-     <Central directory for user-defined documentation>\<Folder for the respective language>\<Object category>\
+     &lt;Central directory for user-defined documentation&gt;\&lt;Folder for the respective language&gt;\&lt;Object category&gt;\
 
    If the respective language folder or the folder for the object category does not exist yet, create the required folders before copying the file.
 
@@ -3912,7 +3912,7 @@ Below you see the correct path for the following conditions:
 
 The path for these conditions is as follows:
 
-<Folder of the global library>\UserFiles\UserDocumentation\fr-FR\Library Types\commande de moteur.pptx
+&lt;Folder of the global library&gt;\UserFiles\UserDocumentation\fr-FR\Library Types\commande de moteur.pptx
 
 #### Creating user-defined documentation as CHM file
 
@@ -3924,11 +3924,11 @@ To provide user-defined documentation in CHM format, follow these steps:
 4. Use the Microsoft HTML Help Workshop to create the CHM file. Use the prepared folder structure with the HTML files.
 5. Copy the CHM file to one of the following storage locations:
 
-   - Project folder under "UserFiles\UserDocumentation\<Folder for the respective language>"
-   - Directory of a global library under "UserFiles\UserDocumentation\<Folder for the respective language>"
+   - Project folder under "UserFiles\UserDocumentation\&lt;Folder for the respective language&gt;"
+   - Directory of a global library under "UserFiles\UserDocumentation\&lt;Folder for the respective language&gt;"
    - Central directory on the hard drive or a network drive:
 
-     <Central directory for user-defined documentation>\<Folder for the respective language>
+     &lt;Central directory for user-defined documentation&gt;\&lt;Folder for the respective language&gt;
 
    If the respective language folder does not exist yet, create the language folder before you copy the CHM file.
 

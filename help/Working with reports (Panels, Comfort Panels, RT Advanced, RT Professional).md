@@ -402,19 +402,19 @@ To create a report, proceed as follows:
 
    A new blank report is displayed in the "Reports" editor.
 2. Select the "Report properties" command in the shortcut menu of the report.
-3. In the "Properties > Properties > General" area of the Inspector window, specify whether you want to configure the "Title page", "Back page", "Header" and "Footer" in the report.
+3. In the "Properties &gt; Properties &gt; General" area of the Inspector window, specify whether you want to configure the "Title page", "Back page", "Header" and "Footer" in the report.
 
    The report sections are updated accordingly.
 
    ![Procedure](images/111909488779_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111909488779_DV_resource.Stream@PNG-en-US.png)
-4. Configure the format, the page layout, and the page margins of the report under "Properties > Properties > Layout."
+4. Configure the format, the page layout, and the page margins of the report under "Properties &gt; Properties &gt; Layout."
 
    ![Procedure](images/111909493259_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111909493259_DV_resource.Stream@PNG-en-US.png)
-5. Enter a meaningful report name under "Properties > Properties > Miscellaneous."
+5. Enter a meaningful report name under "Properties &gt; Properties &gt; Miscellaneous."
 6. Design the report sections as required.
 
    Drag and drop the necessary basic objects, elements, graphic images and controls from the "Tools" task card to the required position.
@@ -617,13 +617,13 @@ The output of the pre-configured alarm sequence report is configured in the "Ala
 
 To automatically run the system print job at the start of Runtime:
 
-- In the Runtime settings of the HMI device activate "Services > Start sequence of WinCC Runtime  > Alarm sequence report".
+- In the Runtime settings of the HMI device activate "Services &gt; Start sequence of WinCC Runtime  &gt; Alarm sequence report".
 
 The alarm sequence report is output in the default line layout to a line printer.
 
 To output the alarm report in the page layout:
 
-- Open the "Alarm sequence report" system print job and deactivate the "Use line report" option under "Properties > Properties > General".
+- Open the "Alarm sequence report" system print job and deactivate the "Use line report" option under "Properties &gt; Properties &gt; General".
 
 WinCC assigns the appropriate system report to the system print job.
 
@@ -862,22 +862,22 @@ Example:
 
 ##### Control characters for formatting values
 
-The control characters are used to specify value attributes such as the color, font style, or the alignment. The control characters always lead the value. You can combine several control characters: "<B><U>output text", for example, returns the words "output text" in bold and underscored format. No distinction is made between upper and lower case text.
+The control characters are used to specify value attributes such as the color, font style, or the alignment. The control characters always lead the value. You can combine several control characters: "&lt;B&gt;&lt;U&gt;output text", for example, returns the words "output text" in bold and underscored format. No distinction is made between upper and lower case text.
 
 The following table provides an overview of the control characters:
 
 | Symbol | Meaning |
 | --- | --- |
-| <END> | Ends a sequence of control characters. The remaining text is applied as specified. |
-| <COLOR=#rrggbb> | Font color; notation as six-digit Hex number with the following byte sequence: #rrggbb   (red red green green blue blue) |
-| <BGCOLOR=#rrggbb> | Background color on hexadecimal notation |
-| <B> | Bold font style |
-| <U> | Underlined font style |
-| <I> | Italic font style |
-| <STRIKE> | Strikethrough font style |
-| <ALIGN=left> | Text aligned left |
-| <ALIGN=center> | Text centered |
-| <ALIGN=right> | Text aligned right |
+| &lt;END&gt; | Ends a sequence of control characters. The remaining text is applied as specified. |
+| &lt;COLOR=#rrggbb&gt; | Font color; notation as six-digit Hex number with the following byte sequence: #rrggbb   (red red green green blue blue) |
+| &lt;BGCOLOR=#rrggbb&gt; | Background color on hexadecimal notation |
+| &lt;B&gt; | Bold font style |
+| &lt;U&gt; | Underlined font style |
+| &lt;I&gt; | Italic font style |
+| &lt;STRIKE&gt; | Strikethrough font style |
+| &lt;ALIGN=left&gt; | Text aligned left |
+| &lt;ALIGN=center&gt; | Text centered |
+| &lt;ALIGN=right&gt; | Text aligned right |
 
 > **Note**
 >
@@ -889,7 +889,7 @@ The following table provides an overview of the control characters:
 >
 > 0xbbggrr (blue blue green green red red).
 >
-> To format a single value, the colors in the control character <Color> are defined by an inverted sequence:
+> To format a single value, the colors in the control character &lt;Color&gt; are defined by an inverted sequence:
 >
 > #rrggbb (red red green green blue blue).
 
@@ -908,21 +908,21 @@ The following table provides an overview of the control characters:
 ##### Adding a detail page
 
 1. Open the shortcut menu of a detail page.
-2. Select the command "Pages > Insert page before" or "Pages > Insert page after."
+2. Select the command "Pages &gt; Insert page before" or "Pages &gt; Insert page after."
 
    Depending on the selected command, the new detail page is inserted either before or after the existing detail page.
 
 ##### Deleting a detail page
 
 1. Open the shortcut menu of the detail page that you want to remove.
-2. Select the command "Pages > Delete detail page".
+2. Select the command "Pages &gt; Delete detail page".
 
    The detail page is deleted.
 
 ##### Sorting detail pages
 
 1. Open the shortcut menu of the detail page that you want to move.
-2. Select the "Pages > Move one page up" or "Pages > Move one page down" command.
+2. Select the "Pages &gt; Move one page up" or "Pages &gt; Move one page down" command.
 
    Depending on the selected command, the detail page is moved either upward or downward.
 
@@ -1086,7 +1086,7 @@ The report is written as follows depending on the configuration:
 
 - On the printer that is specified as the default printer in the control panel of the HMI device.
 
-  The default printer enabled for a HMI device can be found in the "Printer list". For additional information about the "Printer list", refer to the Internet page of Siemens Service & Support and the Article ID "11376409".
+  The default printer enabled for a HMI device can be found in the "Printer list". For additional information about the "Printer list", refer to the Internet page of Siemens Service &amp; Support and the Article ID "11376409".
 - On a network printer that is available for the HMI device.
 - In a file in EMF format.
 
@@ -1133,30 +1133,30 @@ The "Print jobs" editor is open.
 
 Proceed as follows to create a new print job:
 
-1. In the "Name" column, double-click in the "<Add>" cell.
+1. In the "Name" column, double-click in the "&lt;Add&gt;" cell.
 
    A new print job is inserted.
 
    ![Procedure](images/25759633419_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/25759633419_DV_resource.Stream@PNG-en-US.png)
-2. In the "Properties > Properties > General" dialog of the Inspector window, enter a "Name" for the print job and select the "Report".
+2. In the "Properties &gt; Properties &gt; General" dialog of the Inspector window, enter a "Name" for the print job and select the "Report".
 3. Under "Dialog type", specify whether the operator is allowed to modify the report settings prior to output.
 
    ![Procedure](images/25759624715_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/25759624715_DV_resource.Stream@PNG-en-US.png)
-4. Under "Properties > Properties > Page range", specify whether the print job outputs all or only specific pages.
+4. Under "Properties &gt; Properties &gt; Page range", specify whether the print job outputs all or only specific pages.
 
    ![Procedure](images/25759616011_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/25759616011_DV_resource.Stream@PNG-en-US.png)
-5. Under "Properties > Properties > Time range", specify the time period for the output of report entries.
+5. Under "Properties &gt; Properties &gt; Time range", specify the time period for the output of report entries.
 
    ![Procedure](images/25759543307_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/25759543307_DV_resource.Stream@PNG-en-US.png)
-6. If you want to print the report, enable the "Printer" option under "Properties > Properties > Output > Print output".
+6. If you want to print the report, enable the "Printer" option under "Properties &gt; Properties &gt; Output &gt; Print output".
 
    The report is output to the default printer of the HMI device.
 7. You can select up to three printers if you want to output the report to a different printer.
@@ -1164,7 +1164,7 @@ Proceed as follows to create a new print job:
    ![Procedure](images/25759534603_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/25759534603_DV_resource.Stream@PNG-en-US.png)
-8. If the report should be exported to a file, select "Properties > Properties > Target file > Print to file > Print to file (*.emf)".   
+8. If the report should be exported to a file, select "Properties &gt; Properties &gt; Target file &gt; Print to file &gt; Print to file (*.emf)".   
    A folder name is created using the information in "Target directory prefix" and the time stamp at the time of printing. The reports are created in the runtime project directory under "PRT_OUT" in a folder of this name.
 
    ![Procedure](images/72494833803_DV_resource.Stream@PNG-en-US.png)
@@ -1202,9 +1202,9 @@ A task of the "print job" type specifies the time and frequency of automatic rep
 
 To create a task for automatic start of a print job, follow these steps:
 
-1. In the "Runtime settings" of the HMI device activate "Services > Start sequence of WinCC Runtime > Scheduled print jobs in Runtime".
+1. In the "Runtime settings" of the HMI device activate "Services &gt; Start sequence of WinCC Runtime &gt; Scheduled print jobs in Runtime".
 2. Create a new task in the scheduled tasks.
-3. Enter a "Name" for the task under "Properties > Properties > General".
+3. Enter a "Name" for the task under "Properties &gt; Properties &gt; General".
 4. Select the "Print job" setting in the "Type" field.
 5. Select the required "print job".
 6. Under "Start time", specify the time and frequency of report output, for example, daily at 5 PM:
@@ -1269,7 +1269,7 @@ Usually, there is no need to configure the report output. Customize the system p
 
 ###### System print reports and system print job for alarm sequence reports
 
-The output of an alarm sequence report is configured in a system print job. If you have activated "Properties > Properties > General > Use line report", WinCC uses the alarm sequence report with line layout. If you have not activated this option, WinCC uses the alarm sequence report with page layout.
+The output of an alarm sequence report is configured in a system print job. If you have activated "Properties &gt; Properties &gt; General &gt; Use line report", WinCC uses the alarm sequence report with line layout. If you have not activated this option, WinCC uses the alarm sequence report with page layout.
 
 | Layout | System print job | System report |
 | --- | --- | --- |
@@ -1355,7 +1355,7 @@ If you do not want to use the default system print job (including the system rep
 Proceed as follows to assign a different system print job to the screen object:
 
 1. Select the screen object.
-2. Select the system print job under "Properties > Properties > General > Print".
+2. Select the system print job under "Properties &gt; Properties &gt; General &gt; Print".
 
 ###### Using a report with individual layout
 
@@ -1368,7 +1368,7 @@ Proceed as follows to use a report with individual layout:
    - To output all report data in table form that are currently contained in the screen object, insert the "Control Data" report object.
    - To include the data source in the report, e.g. window title, name of the object or screen, insert the "Control Screen" report object.
 3. Create a print job and assign it to the report.
-4. Select the screen object and then select the print job under "Properties > Properties > General > Print".
+4. Select the screen object and then select the print job under "Properties &gt; Properties &gt; General &gt; Print".
 
 ### Working with objects (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -1394,8 +1394,8 @@ In the "Screens" or "Reports" editor, insert the objects to the "Toolbox" task c
 
 In addition, you can copy or move objects via the clipboard from one editor to another, for example to transfer a screen object to a report. Alternatively, you can also use the mouse instead of the clipboard for copying and moving:
 
-- Copy: <Ctrl + Drag&Drop>
-- Moving: Drag&drop
+- Copy: &lt;Ctrl + Drag&amp;Drop&gt;
+- Moving: Drag&amp;drop
 
   > **Note**
   >
@@ -1489,7 +1489,7 @@ You have opened the work area containing at least one object.
 
 1. Select the object that you want to delete.
 
-   To delete multiple objects, keep the <Shift> key pressed and select the objects to be deleted one after the other. Alternatively, drag and maximize an area around the desired objects with the mouse.
+   To delete multiple objects, keep the &lt;Shift&gt; key pressed and select the objects to be deleted one after the other. Alternatively, drag and maximize an area around the desired objects with the mouse.
 2. Select "Delete" from the shortcut menu.
 
 ##### Result
@@ -1530,12 +1530,12 @@ The "Tools" task card is open.
 
 **Note**
 
-You can copy existing objects using the drag-and-drop +<CTRL> function. The existing object is not moved in this case. You paste a copy of this object into the new position instead.
+You can copy existing objects using the drag-and-drop +&lt;CTRL&gt; function. The existing object is not moved in this case. You paste a copy of this object into the new position instead.
 
 ##### Inserting and multiplying an object
 
 1. Insert the desired object from the "Tools" task card.
-2. Press the <Ctrl> key and position the cursor on one of the handles displayed in the figure shown below.
+2. Press the &lt;Ctrl&gt; key and position the cursor on one of the handles displayed in the figure shown below.
 
    ![Inserting and multiplying an object](images/6340346507_DV_resource.Stream@PNG-en-US.png)
 
@@ -1573,14 +1573,14 @@ When you select an object, it is enclosed by a rectangle with resizing handles. 
 
 You have the possibility of having a grid displayed in the work area. You have three options for easier positioning of objects:
 
-- "Snap to grid" When you resposition objects, they are automatically snapped and pasted to the grid. If you hold down the <Alt> key, the object is no longer snapped to the grid.
+- "Snap to grid" When you resposition objects, they are automatically snapped and pasted to the grid. If you hold down the &lt;Alt&gt; key, the object is no longer snapped to the grid.
 - "Snap to objects" When you reposition objects, they are displayed with help lines. You can use other objects for orientation during positioning.
 - "None": You position the objects in any position.
 
 You activate and deactivate the grid and options as follows:
 
-- In the "Options > Settings > Visualization > Screens" menu
-- In the "Layout > Grid" task card
+- In the "Options &gt; Settings &gt; Visualization &gt; Screens" menu
+- In the "Layout &gt; Grid" task card
 
 ##### Requirement
 
@@ -1611,8 +1611,8 @@ You have opened the work area containing at least one object.
 
 ##### Alternative procedure
 
-1. In the Inspector window, select "Properties > Properties > Layout".
-2. Enter the X and Y values for the position under "Position & Size".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
+2. Enter the X and Y values for the position under "Position &amp; Size".
 
 ##### Result
 
@@ -1688,14 +1688,14 @@ You have opened the work area containing at least one object.
    The size of the object changes.
 
    - The size of the object is aligned to the grid pattern, provided the "Snap to grid" function is set.
-   - Press <ALT> to disable this function while you drag the object.
+   - Press &lt;ALT&gt; to disable this function while you drag the object.
 
-     In order to scale the object proportionally, keep the <Shift> key pressed while changing the size with the mouse.
+     In order to scale the object proportionally, keep the &lt;Shift&gt; key pressed while changing the size with the mouse.
 
 ##### Alternative procedure
 
-1. In the Inspector window, select "Properties > Properties > Layout".
-2. Enter the size of the object under "Position & Size".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
+2. Enter the size of the object under "Position &amp; Size".
 
 ##### Harmonizing the object size
 
@@ -1737,7 +1737,7 @@ The Inspector window shows all the properties of the selected objects.
 You now have several options of selecting multiple objects:
 
 - Draw a selection frame around the objects.
-- Hold down the <Shift> key, and click the required objects.
+- Hold down the &lt;Shift&gt; key, and click the required objects.
 
 ##### Selection frame of a multiple selection
 
@@ -1770,7 +1770,7 @@ You have opened the work area containing at least two objects.
 
 Or:
 
-1. Hold down the <Shift> key.
+1. Hold down the &lt;Shift&gt; key.
 2. Click the relevant objects, working in succession.
 
    All the selected objects are identified by frames.
@@ -1779,7 +1779,7 @@ Or:
 
 **Note**
 
-To remove an object from the multiple selection, press <SHIFT>, hold it down and then click the relevant object once again.
+To remove an object from the multiple selection, press &lt;SHIFT&gt;, hold it down and then click the relevant object once again.
 
 ##### Result
 
@@ -2119,22 +2119,22 @@ Customize the frame and color settings in the Inspector window. You can adapt th
 
 - Control type whose content is output
 - Control objects of the screen object to be included in the visualization
-- Position & size
+- Position &amp; size
 
 #### Control type
 
-Specify in the Inspector window under "Properties > Properties > General > Control type", if the value at the ruler position, the content of the object or the object is output.
+Specify in the Inspector window under "Properties &gt; Properties &gt; General &gt; Control type", if the value at the ruler position, the content of the object or the object is output.
 
 - In the "f(x) trend view" and the "f(t) trend view" select either the "Ruler" or "Other control" option.
 - For all other screen objects select "Other control".
 
 #### Control objects of the screen object
 
-In the Inspector window, select "Properties > Properties > General > Content" to specify whether to include the toolbar, the status bar and the scroll bar in the screen object.
+In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Content" to specify whether to include the toolbar, the status bar and the scroll bar in the screen object.
 
-#### Size & position
+#### Size &amp; position
 
-In the Inspector window, select "Properties > Properties > Layout" to specify the size and position of the report object.
+In the Inspector window, select "Properties &gt; Properties &gt; Layout" to specify the size and position of the report object.
 
 The table is output in the report in accordance with the width of the report object. Therefore, configure a report object with suitable width.
 
@@ -2164,22 +2164,22 @@ You can adapt the following properties in particular:
 
 - Control type whose content is output
 - Specifies the control objects of the screen objects to include in the visualization.
-- Size & position
+- Size &amp; position
 
 #### Control type
 
-Specify in the Inspector window under "Properties > Properties > General > Control type", if the value at the ruler position, the content of the object or the object is output.
+Specify in the Inspector window under "Properties &gt; Properties &gt; General &gt; Control type", if the value at the ruler position, the content of the object or the object is output.
 
 - In the "f(x) trend view" and the "f(t) trend view" select either the "Ruler" or "Other control" option.
 - For all other screen objects select "Other control".
 
 #### Control objects of the screen object
 
-In the Inspector window, select "Properties > Properties > Content" to specify whether to include the toolbar, the status bar and the scroll bar in the screen object.
+In the Inspector window, select "Properties &gt; Properties &gt; Content" to specify whether to include the toolbar, the status bar and the scroll bar in the screen object.
 
-#### Size & position
+#### Size &amp; position
 
-In the Inspector window, select "Properties > Properties > Layout" to specify the size and position of the report object.
+In the Inspector window, select "Properties &gt; Properties &gt; Layout" to specify the size and position of the report object.
 
 In the report, the screen object is resized to fit the frame of the report object. Therefore, configure a report object of a suitable size.
 
@@ -2210,14 +2210,14 @@ Customize the frame, color, font, and font size settings in the Inspector window
 
 #### Control type
 
-Specify in the Inspector window under "Properties > Properties > General > Control type", if the value at the ruler position, the content of the object or the object is output.
+Specify in the Inspector window under "Properties &gt; Properties &gt; General &gt; Control type", if the value at the ruler position, the content of the object or the object is output.
 
 - In the "f(x) trend view" and the "f(t) trend view" select either the "Ruler" or "Other control" option.
 - For all other screen objects select "Other control".
 
 #### Content
 
-In the Inspector window, select "Properties > Properties > General > Content" to specify the information to output with the report object:
+In the Inspector window, select "Properties &gt; Properties &gt; General &gt; Content" to specify the information to output with the report object:
 
 - Window title
 - Object name
@@ -2249,7 +2249,7 @@ In the Inspector window, you customize the position, shape, style, color, and fo
 
 #### Data source
 
-Specify the data source under "Properties > Properties > General > Provider". You can select a CSV file, or configure an internal tag for dynamic selection of the CSV file. This means that the data output is changed directly at the HMI device. The tag must be of data type "String" or "WString".
+Specify the data source under "Properties &gt; Properties &gt; General &gt; Provider". You can select a CSV file, or configure an internal tag for dynamic selection of the CSV file. This means that the data output is changed directly at the HMI device. The tag must be of data type "String" or "WString".
 
 > **Note**
 >
@@ -2282,7 +2282,7 @@ In the Inspector window, you customize the position, shape, style, color, and fo
 
 #### Data source
 
-Specify the data source under "Properties > Properties > General > Provider". You can select a CSV file, or configure an internal tag for dynamic selection of the CSV file. This means that the data output is changed directly at the HMI device. The tag must be of data type "String" or "WString".
+Specify the data source under "Properties &gt; Properties &gt; General &gt; Provider". You can select a CSV file, or configure an internal tag for dynamic selection of the CSV file. This means that the data output is changed directly at the HMI device. The tag must be of data type "String" or "WString".
 
 > **Note**
 >
@@ -2290,9 +2290,9 @@ Specify the data source under "Properties > Properties > General > Provider". Yo
 
 #### Applying fonts from the data source
 
-Under "Properties > Properties > General > Font", specify whether to apply the font and font size from the CSV file for the report output.
+Under "Properties &gt; Properties &gt; General &gt; Font", specify whether to apply the font and font size from the CSV file for the report output.
 
-If you deactivate the "Font from data source" and "Font size from data source" options, the settings you specified under "Format Text > Style" are used.
+If you deactivate the "Font from data source" and "Font size from data source" options, the settings you specified under "Format Text &gt; Style" are used.
 
 ---
 
@@ -2316,7 +2316,7 @@ The "Date/time field" object shows the system time of the HMI device or the date
 
 #### Layout
 
-In the Inspector window, you customize the position, shape, style, color, and font types of the object. In the "Properties > Properties > General" dialog, you can adapt the following properties in particular:
+In the Inspector window, you customize the position, shape, style, color, and font types of the object. In the "Properties &gt; Properties &gt; General" dialog, you can adapt the following properties in particular:
 
 - Long date/time format: This setting defines the format displayed for the data and / or time.
 - System time: Specifies whether to use the system time of the HMI device, or the data and / or time of a connected tag.
@@ -2359,7 +2359,7 @@ In the Inspector window, you customize the position, shape, style, color, and fo
 
 #### Display format of date and time
 
-Specify the date and / or time format under "Properties > Properties > General > Format". You can combine wildcards and any text.
+Specify the date and / or time format under "Properties &gt; Properties &gt; General &gt; Format". You can combine wildcards and any text.
 
 The following table shows which wildcards you can use:
 
@@ -2423,7 +2423,7 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 #### Display format
 
-The "display format" for the output of values is specified in "Properties > Properties > General > Format", in the Inspector window.
+The "display format" for the output of values is specified in "Properties &gt; Properties &gt; General &gt; Format", in the Inspector window.
 
 | Layout |  |
 | --- | --- |
@@ -2438,7 +2438,7 @@ The "display format" for the output of values is specified in "Properties > Prop
 
 #### Avoid overlaps with output fields
 
-If several I/O fields are configured as output fields with a transparent background in a report, these I/O fields may overlap. The transparent part of the one field covers the digits of the other field. This may cause display problems in the report. In order to avoid such overlaps, set the margins of the I/O fields to zero in the object properties under "Properties > Properties > Appearance". Activate "Properties > Properties > Layout > Fit object to contents."
+If several I/O fields are configured as output fields with a transparent background in a report, these I/O fields may overlap. The transparent part of the one field covers the digits of the other field. This may cause display problems in the report. In order to avoid such overlaps, set the margins of the I/O fields to zero in the object properties under "Properties &gt; Properties &gt; Appearance". Activate "Properties &gt; Properties &gt; Layout &gt; Fit object to contents."
 
 ---
 
@@ -2525,7 +2525,7 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 Use the following graphic formats in the "Graphic view" object: *.bmp, *.tif, *.png, *.ico, *.emf, *.wmf, *.gif, *.svg, *.jpg or *.jpeg. You may also use graphics as OLE objects in the Graphic view .
 
-1. Click "Properties > Properties > General" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; General" in the Inspector window.
 2. Select the graphic that you wish to insert.
 
    The graphic preview is shown in the right pane.
@@ -2535,7 +2535,7 @@ Use the following graphic formats in the "Graphic view" object: *.bmp, *.tif, *.
 
 Whether a graphic displayed in a Graphic view is stretched to the size of the Graphic view in runtime is specified in the Inspector window.
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 2. Select one of the following options from the "Fit to size" area:
 
    - Do not adapt automatically
@@ -2547,7 +2547,7 @@ Whether a graphic displayed in a Graphic view is stretched to the size of the Gr
 
 #### Application
 
-With the "Graphic I/O field" object, the graphics of a graphics list are displayed, depending on the tag value. In the Inspector window, the tag and graphics list are configured, under "Properties > Properties > General":
+With the "Graphic I/O field" object, the graphics of a graphics list are displayed, depending on the tag value. In the Inspector window, the tag and graphics list are configured, under "Properties &gt; Properties &gt; General":
 
 ![Application](images/23678812811_DV_resource.Stream@PNG-de-DE.png)
 
@@ -2581,7 +2581,7 @@ In the Inspector window, you customize the position, shape, style, color, and fo
 
 #### Specifying the range
 
-Under "Properties > Properties > Range", specify the screen content to output in the report:
+Under "Properties &gt; Properties &gt; Range", specify the screen content to output in the report:
 
 - "Current window (1)": Active window
 - "Selected section (2)": Selected section
@@ -2686,7 +2686,7 @@ In the Inspector window, you customize the position, shape, style, color, and fo
 
 #### Specifying the source
 
-Under "Properties > Properties > General > Settings > Source", specify whether to display alarms from the alarm buffer, or from the alarm log. Select the alarm log in the "Alarm log" dialog.
+Under "Properties &gt; Properties &gt; General &gt; Settings &gt; Source", specify whether to display alarms from the alarm buffer, or from the alarm log. Select the alarm log in the "Alarm log" dialog.
 
 > **Note**
 >
@@ -2694,15 +2694,15 @@ Under "Properties > Properties > General > Settings > Source", specify whether t
 
 #### Specifying alarm classes
 
-Under "Properties > Properties > General > Alarm classes, enable the alarm classes for the alarms output to the report.
+Under "Properties &gt; Properties &gt; General &gt; Alarm classes, enable the alarm classes for the alarms output to the report.
 
 #### Specifying the time range
 
-If you want to restrict alarm output to a specific time range, select the start and end tags for the time range in the "Properties > Properties > General > Time range" dialog. The tag must be of the "DateTime" type.
+If you want to restrict alarm output to a specific time range, select the start and end tags for the time range in the "Properties &gt; Properties &gt; General &gt; Time range" dialog. The tag must be of the "DateTime" type.
 
 #### Additional settings for the display
 
-Under "Properties > Properties > General > Settings, specify the following settings for the display in the alarm report:
+Under "Properties &gt; Properties &gt; General &gt; Settings, specify the following settings for the display in the alarm report:
 
 - Under "Sorting", specify whether to start the display with the oldest or most recent alarm.
 - Under "Lines per entry", specify the number of lines to be available for each alarm. The required number of lines depends on the following factors:
@@ -2715,7 +2715,7 @@ Under "Properties > Properties > General > Settings, specify the following setti
 
 #### Visible columns
 
-Under ""Properties > Properties > Layout > Visible columns", enable the columns to be displayed in the alarm report.
+Under ""Properties &gt; Properties &gt; Layout &gt; Visible columns", enable the columns to be displayed in the alarm report.
 
 ---
 
@@ -2750,19 +2750,19 @@ In the Inspector window, you customize the position, shape, style, colors, and f
 
 #### Text format
 
-Specify the data source under "Properties > Properties > Text format > Alignment". You have the options of displaying the text as horizontal text on the left or right or centered.
+Specify the data source under "Properties &gt; Properties &gt; Text format &gt; Alignment". You have the options of displaying the text as horizontal text on the left or right or centered.
 
 > **Note**
 >
-> The "Alignment > Vertical" setting has no effect in Runtime.
+> The "Alignment &gt; Vertical" setting has no effect in Runtime.
 
 #### Connection settings
 
-Under "Properties > Properties > SQL connection", specify the data source, user name, and password for the SQL connection. You can assign dynamic tag to all settings. This means that the data output is changed directly at the HMI device.
+Under "Properties &gt; Properties &gt; SQL connection", specify the data source, user name, and password for the SQL connection. You can assign dynamic tag to all settings. This means that the data output is changed directly at the HMI device.
 
 #### Data selection
 
-Under "Properties > Properties > SQL statement", specify the data area to visualize in the report. Enter "Select-Statement".
+Under "Properties &gt; Properties &gt; SQL statement", specify the data area to visualize in the report. Enter "Select-Statement".
 
 Enter the required "Select-Statement" in the text field of the same name or select the "Tag" that supplies the Select-Statement. The tag must be of the "String" or "WString" type.
 
@@ -2806,11 +2806,11 @@ In the Inspector window, you customize the position, shape, style, colors, and f
 
 #### Connection settings
 
-Under "Properties > Properties > SQL connection", specify the data source, user name, and password for the SQL connection. You can assign dynamic tag to all settings. This means that the data output is changed directly at the HMI device.
+Under "Properties &gt; Properties &gt; SQL connection", specify the data source, user name, and password for the SQL connection. You can assign dynamic tag to all settings. This means that the data output is changed directly at the HMI device.
 
 #### Data selection
 
-Under "Properties > Properties > SQL statement", specify the data area to visualize in the report.
+Under "Properties &gt; Properties &gt; SQL statement", specify the data area to visualize in the report.
 
 Enter the required "Select-Statement" in the text field of the same name or select the "Tag" that supplies the Select-Statement. The tag must be of the "String" or "WString" type.
 
@@ -2822,7 +2822,7 @@ You can dynamize the Select-Statement in the input field of the same name with t
 
 #### Circular list
 
-In the Inspector window, use the "Circular list" option under "Properties > Properties > Table" to specify the way the data is distributed to the table columns.
+In the Inspector window, use the "Circular list" option under "Properties &gt; Properties &gt; Table" to specify the way the data is distributed to the table columns.
 
 - "Circular list" disabled
 
@@ -2886,7 +2886,7 @@ In the Inspector window, you customize the position, shape, style, color, and fo
 
 #### Format of the project name
 
-In the "Format" field under "Properties > Text format > Style", specify the output format for the project name. You can use a placeholder for the project name and enter any text, if necessary.
+In the "Format" field under "Properties &gt; Text format &gt; Style", specify the output format for the project name. You can use a placeholder for the project name and enter any text, if necessary.
 
 The following table shows which wildcards you can use:
 
@@ -2928,7 +2928,7 @@ In the Inspector window, you customize the position, shape, style, color, and fo
 
 #### Format of the report name
 
-In the "Format" field under "Properties > Text format > Style", specify the output format for the report name. You can use a placeholder for the report name and enter any text, if necessary.
+In the "Format" field under "Properties &gt; Text format &gt; Style", specify the output format for the report name. You can use a placeholder for the report name and enter any text, if necessary.
 
 The following table shows which wildcards you can use:
 
@@ -2997,25 +2997,25 @@ In the Inspector window, you customize the position, shape, style, color, and fo
 
 #### Selecting a recipe
 
-Specify the recipes to be output in the recipe report under "Properties > Properties > General > Recipe". You can define the recipes based on their recipe name, or on a range of recipe numbers. Under "First recipe" and "Last recipe", enter a value or select a tag.
+Specify the recipes to be output in the recipe report under "Properties &gt; Properties &gt; General &gt; Recipe". You can define the recipes based on their recipe name, or on a range of recipe numbers. Under "First recipe" and "Last recipe", enter a value or select a tag.
 
 You can also choose to display all recipes.
 
 #### Selecting a data record
 
-Under "Properties > Properties > General > Data record", specify which data records of the selected recipes are to be output in the recipe report. You can define the data records based on the data record name, or on a range of data record numbers. Under "First recipe" and "Last recipe", enter a value or select a tag.
+Under "Properties &gt; Properties &gt; General &gt; Data record", specify which data records of the selected recipes are to be output in the recipe report. You can define the data records based on the data record name, or on a range of data record numbers. Under "First recipe" and "Last recipe", enter a value or select a tag.
 
 You can also choose to display all data records of the selected recipes.
 
 #### Format
 
-In the "Format" field of the "Properties > Properties > Layout > Settings" dialog, specify whether to output the data records as a table in column format or line report format.
+In the "Format" field of the "Properties &gt; Properties &gt; Layout &gt; Settings" dialog, specify whether to output the data records as a table in column format or line report format.
 
 WinCC updates the preview in the detail page accordingly.
 
 #### Visible entries
 
-Under ""Properties > Properties > Layout > Visible entries", enable the columns to be displayed in the recipe report. Select "Show headings" to enable the display of column headers.
+Under ""Properties &gt; Properties &gt; Layout &gt; Visible entries", enable the columns to be displayed in the recipe report. Select "Show headings" to enable the display of column headers.
 
 ---
 
@@ -3039,11 +3039,11 @@ In the inspector window, change the settings for color, font, position and objec
 
 #### Fit to size
 
-Under "Properties > Properties > Layout > Fit to size", the "Fit object to content" option is used to specify whether WinCC adjusts to the object size of the field content:
+Under "Properties &gt; Properties &gt; Layout &gt; Fit to size", the "Fit object to content" option is used to specify whether WinCC adjusts to the object size of the field content:
 
 - Enabled "Fit object to contents" option:
 
-  WinCC automatically adjusts the size of the object to the configured format. The font size and field length are defined under "Properties > Properties > General > Text".
+  WinCC automatically adjusts the size of the object to the configured format. The font size and field length are defined under "Properties &gt; Properties &gt; General &gt; Text".
 
   The object can be moved in the working area, however, the size cannot be changed. During report output, the entire field content is output at the time of report output.
 - Disabled "Fit object to contents" option:
@@ -3070,7 +3070,7 @@ In the Inspector window, change the settings for color, font, frame, alignment a
 
 #### Format
 
-Under "Properties > General > Text > Format", specify the format of the page numbers to be displayed. You can use a wildcard for the page numbers and enter a user-specific text.
+Under "Properties &gt; General &gt; Text &gt; Format", specify the format of the page numbers to be displayed. You can use a wildcard for the page numbers and enter a user-specific text.
 
 The following table shows which wildcards you can use:
 
@@ -3100,7 +3100,7 @@ The following table shows a few examples of the combination of wildcards and tex
 
 #### application
 
-With the "Symbolic I/O field" object, the content of a text list in reports is displayed, depending on the tag value. In the inspector window, the tag and text list is configured under "Properties > Properties > General":
+With the "Symbolic I/O field" object, the content of a text list in reports is displayed, depending on the tag value. In the inspector window, the tag and text list is configured under "Properties &gt; Properties &gt; General":
 
 ![application](images/23690496907_DV_resource.Stream@PNG-de-DE.png)
 
@@ -3167,14 +3167,14 @@ In the Inspector window, you customize the position, shape, style, color and fon
 
 Specify the text for the text field in the Inspector window.
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Enter a text.
 
-   For texts over several lines you can set a line break by pressing the key combination <Shift + Enter>.
+   For texts over several lines you can set a line break by pressing the key combination &lt;Shift + Enter&gt;.
 
 #### Size of text field
 
 In the Inspector window, you can define whether the size of the object is adapted to the space required by the largest list entry.
 
-1. In the Inspector window, select "Properties > Properties > Layout".
-2. Activate "Resize > Fit to contents".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Layout".
+2. Activate "Resize &gt; Fit to contents".

@@ -172,8 +172,8 @@ Interconnect the tags for querying the other interrupt statuses in the same way.
 
 Make the following settings in the CPU properties:
 
-- Activate web server access under "... > PROFINET interface > Access to the web server".
-- In “CPU properties > Web server enable the Web server for the module,
+- Activate web server access under "... &gt; PROFINET interface &gt; Access to the web server".
+- In “CPU properties &gt; Web server enable the Web server for the module,
 - In the section “User administration“ create a new user with read and write rights.
 - Make the following settings in the section "User pages":
 
@@ -196,7 +196,7 @@ The output parameter RET_VAL ("returnValueWWW") indicates that the processing is
 
 #### Result for the Web server
 
-You call the Web server via the “Internet browser > IP of the Web server”. You log in with your user name user name and -password.
+You call the Web server via the “Internet browser &gt; IP of the Web server”. You log in with your user name user name and -password.
 
 In the Web server in “User pages” a link to the website defined by the user is displayed.
 
@@ -212,10 +212,10 @@ Below you will see excerpts of the functions used in the program example with wh
 
 | Function | To call in the HTML document | To output in the HTML element |
 | --- | --- | --- |
-| Data output: | <!-- AWP_In_Variable Name='"SLI_gDB_www".tankLevel' --> | :="SLI_gDB_www".tankLevel: |
-| Enumeration (value replacement): | <!-- AWP_Enum_Def Name="OpValvValue" Values='0:"Closed", 1:"Opened"' --> | <!-- AWP_Enum_Ref Name='"SLI_gDB_www".valveOutput' Enum="OpValvValue" -->:="SLI_gDB_www".valveOutput: |
-| Value change (from INT): | <!-- AWP_In_Variable Name='"SLI_gDB_www".flowrate' --> | <form method="post" action="" onsubmit="return check();">   <input type="text" name='"SLI_gDB_www".flowrate' size="10px"/>   <input class="button1" type="submit" value="Set flowrate"/>  </form> |
-| Value change (from BOOL): | <!-- AWP_Enum_Def Name="ResetValue" Values='0:"Off", 1:"On"' --> | <form method="post" action="">  <input class="button1" type="submit" value="Reset"/>  <input type="hidden" name='"SLI_gDB_www".reset' size="34px" value="1"/>  </form> |
+| Data output: | &lt;!-- AWP_In_Variable Name='"SLI_gDB_www".tankLevel' --&gt; | :="SLI_gDB_www".tankLevel: |
+| Enumeration (value replacement): | &lt;!-- AWP_Enum_Def Name="OpValvValue" Values='0:"Closed", 1:"Opened"' --&gt; | &lt;!-- AWP_Enum_Ref Name='"SLI_gDB_www".valveOutput' Enum="OpValvValue" --&gt;:="SLI_gDB_www".valveOutput: |
+| Value change (from INT): | &lt;!-- AWP_In_Variable Name='"SLI_gDB_www".flowrate' --&gt; | &lt;form method="post" action="" onsubmit="return check();"&gt;   &lt;input type="text" name='"SLI_gDB_www".flowrate' size="10px"/&gt;   &lt;input class="button1" type="submit" value="Set flowrate"/&gt;  &lt;/form&gt; |
+| Value change (from BOOL): | &lt;!-- AWP_Enum_Def Name="ResetValue" Values='0:"Off", 1:"On"' --&gt; | &lt;form method="post" action=""&gt;  &lt;input class="button1" type="submit" value="Reset"/&gt;  &lt;input type="hidden" name='"SLI_gDB_www".reset' size="34px" value="1"/&gt;  &lt;/form&gt; |
 
 #### Program code
 

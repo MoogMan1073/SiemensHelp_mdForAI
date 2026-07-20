@@ -362,7 +362,7 @@ private static void CompileSingleTechnologicalObject(TechnologicalInstanceDB tec
 
 {
 
-    ICompilable singleCompile = technologicalObject.GetService<ICompilable>();
+    ICompilable singleCompile = technologicalObject.GetService&lt;ICompilable&gt;();
 
     CompilerResult compileResult = singleCompile.Compile();
 
@@ -380,7 +380,7 @@ private static void CompileTechnologicalObjectGroup(PlcSoftware plcSoftware)
 
     TechnologicalInstanceDBGroup technologicalObjectGroup = plcSoftware.TechnologicalObjectGroup;
 
-    ICompilable groupCompile = technologicalObjectGroup.GetService<ICompilable>();
+    ICompilable groupCompile = technologicalObjectGroup.GetService&lt;ICompilable&gt;();
 
     CompilerResult compileResult = groupCompile.Compile();
 
@@ -1173,7 +1173,7 @@ private static void CreateFind_OutputcamCamtrackMeasuringinput(TechnologicalInst
 
     OutputCamMeasuringInputContainer container =
 
-    technologyObject.GetService<OutputCamMeasuringInputContainer>();
+    technologyObject.GetService&lt;OutputCamMeasuringInputContainer&gt;();
 
     //Get access to TO_OutputCam / TO_CamTrack container
 
@@ -1229,7 +1229,7 @@ private static void CreateFind_OutputcamCamtrackMeasuringinput(TechnologicalInst
 
     //Retrieve service OutputCamMeasuringInputContainer
 
-    OutputCamMeasuringInputContainer container = technologyObject.GetService<OutputCamMeasuringInputContainer>();
+    OutputCamMeasuringInputContainer container = technologyObject.GetService&lt;OutputCamMeasuringInputContainer&gt;();
 
     TechnologicalInstanceDB result = container.OutputCams.CreateFrom(sourceMasterCopy);
 
@@ -1318,7 +1318,7 @@ private static void ReadWriteAdditionalParameter(TechnologicalInstanceDB technol
 
 You can find additional information in SIMATIC S7-1500 Motion Control function manuals:
 
-<https://support.industry.siemens.com/cs/ww/en/view/109751049>
+[https://support.industry.siemens.com/cs/ww/en/view/109751049](https://support.industry.siemens.com/cs/ww/en/view/109751049)
 
 #### Axis and Encoder
 
@@ -1445,10 +1445,10 @@ For kinematics technology object, the following additional parameters are availa
 | Name in Openness | Name in function view | Possible value | Data type |
 | --- | --- | --- | --- |
 | _KinematicsAxis[n]<sup>1)</sup> | Kinematics axis A1 .. A6 | Axis that can be connected to TO_Kinematics objects | SW.TechnologicalObjects.TechnologicalInstanceDB |
-| _Units.LengthUnit | Units of measurement > Position | See tag Units.LengthUnit<sup>2)</sup> | uint |
-| _Units.LengthVelocityUnit | Units of measurement > Velocity | See tag Units.LengthVelocityUnit<sup>2)</sup> | uint |
-| _Units.AngleUnit | Units of measurement > Angle | See tag UnitsAngleUnit<sup>2)</sup> | uint |
-| _Units.AngleVelocityUnit | Units of measurement > Angle velocity | See tag Units.AngleVelocityUnit<sup>2)</sup> | uint |
+| _Units.LengthUnit | Units of measurement &gt; Position | See tag Units.LengthUnit<sup>2)</sup> | uint |
+| _Units.LengthVelocityUnit | Units of measurement &gt; Velocity | See tag Units.LengthVelocityUnit<sup>2)</sup> | uint |
+| _Units.AngleUnit | Units of measurement &gt; Angle | See tag UnitsAngleUnit<sup>2)</sup> | uint |
+| _Units.AngleVelocityUnit | Units of measurement &gt; Angle velocity | See tag Units.AngleVelocityUnit<sup>2)</sup> | uint |
 | _Properties.UseHighResolutionPositionValues<sup>1)</sup> | Use position values with higher resolution | True, False | bool |
 | _X_Minimum<sup>3)</sup> | x minimum | -1.00E+12 .. +1.00E+12 | double |
 | _X_Maximum<sup>3)</sup> | x maximum | -1.00E+12 .. +1.00E+12 | double |
@@ -1457,7 +1457,7 @@ For kinematics technology object, the following additional parameters are availa
 | _Z_Minimum<sup>3)</sup> | z minimum | -1.00E+12 .. +1.00E+12 | double |
 | _Z_Maximum<sup>3)</sup> | z maximum | -1.00E+12 .. +1.00E+12 | double |
 | _A3_Maximum<sup>3)</sup> | A3 maximum | -1.00E+12 .. +1.00E+12 | double |
-| <sup>1)</sup> <V7.0 n=1≤n≤4; ≥V7.0 1≤n≤6; Kinematics axes A5 and A6 can only be used with "S7-1500T Motion Control KinPlus".   <sup>2)</sup> Possible values are described in the version specific function manual S7-1500T Kinematics functions on chapter "Units tags".   <sup>3)</sup> ≥V5.0 |  |  |  |
+| <sup>1)</sup> &lt;V7.0 n=1≤n≤4; ≥V7.0 1≤n≤6; Kinematics axes A5 and A6 can only be used with "S7-1500T Motion Control KinPlus".   <sup>2)</sup> Possible values are described in the version specific function manual S7-1500T Kinematics functions on chapter "Units tags".   <sup>3)</sup> ≥V5.0 |  |  |  |
 
 #### Interpreter
 
@@ -1505,7 +1505,7 @@ The public API type AxisEncoderHardwareConnectionInterface provides the followin
 | void Connect(HW.Channel channel) | Connects to a channel  To connect technology modules use this method. |
 | void Connect(MC.Drives.Telegram telegram) | Connects to a telegram provided by StartDrive drive object  To connect drives that are configured by Startdrive as of V19 use this method. |
 | void Connect(MC.Drives.Telegram telegram, ConnectOption connectOption) | Connects to a telegram provided by StartDrive drive object, specifying an additional ConnectOption.  To connect drives that are configured by Startdrive as of V19 use this method. |
-| void Connect(int addressIn, int addressOut, ConnectOption connectOption) | Connects specifying bit addresses directly  You can use this method in any cases.  If the drive is configured with Startdrive < V19, you must use this method.  Read the Byte address of the telegram from the hardware configuration and use the corresponding Bit address.  Bit address = Byte address * 8 |
+| void Connect(int addressIn, int addressOut, ConnectOption connectOption) | Connects specifying bit addresses directly  You can use this method in any cases.  If the drive is configured with Startdrive &lt; V19, you must use this method.  Read the Byte address of the telegram from the hardware configuration and use the corresponding Bit address.  Bit address = Byte address * 8 |
 | void Connect(string pathToDBMember) | Connects to a data block tag  To connect an axis to a drive via data block use this method. The data block for the connection must exist. |
 | void Connect(SW.Tags.PlcTag outputTag) | Connects to a PLC tag  To connect a drive with analog setpoint interface to tags use this method. You can connect tags for "analog output", "enable output", and "ready input". |
 | void Disconnect() | Disconnects an existing connection |
@@ -1548,13 +1548,13 @@ public void Connect_ModuleInOut()
 
 {
 
-   var deviceItem = GsdmlDevice.DeviceItems.First(x => x.Name == "SIEMENS telegram 105, PZD-10/10");
+   var deviceItem = GsdmlDevice.DeviceItems.First(x =&gt; x.Name == "SIEMENS telegram 105, PZD-10/10");
 
    var syncAxis = plcSoftware.TechnologicalObjectGroup.TechnologicalObjects.Find("SynchronousAxis_1");
 
    syncAxis
 
-    .GetService<AxisHardwareConnectionProvider>()
+    .GetService&lt;AxisHardwareConnectionProvider&gt;()
 
     .ActorInterface
 
@@ -1572,15 +1572,15 @@ public void Connect_ModuleIn_ModuleOut()
 
 {
 
-    var deviceItemOut = Plc.DeviceItems.First(di => di.Name == "Input module").DeviceItems[0];
+    var deviceItemOut = Plc.DeviceItems.First(di =&gt; di.Name == "Input module").DeviceItems[0];
 
-    var deviceItemIn = Plc.DeviceItems.First(di => di.Name == "Output module").DeviceItems[0];
+    var deviceItemIn = Plc.DeviceItems.First(di =&gt; di.Name == "Output module").DeviceItems[0];
 
     var syncAxis = plcSoftware.TechnologicalObjectGroup.TechnologicalObjects.Find("SynchronousAxis_1");
 
     syncAxis
 
-    .GetService<AxisHardwareConnectionProvider>()
+    .GetService&lt;AxisHardwareConnectionProvider&gt;()
 
     .ActorInterface
 
@@ -1598,15 +1598,15 @@ public void Connect_Channel()
 
 {
 
-   var tmTimer = Plc.DeviceItems.First(di => di.Name== "TM Timer DIDQ 16x24V_1").DeviceItems[0];
+   var tmTimer = Plc.DeviceItems.First(di =&gt; di.Name== "TM Timer DIDQ 16x24V_1").DeviceItems[0];
 
    var syncAxis = plcSoftware.TechnologicalObjectGroup.TechnologicalObjects.Find("SynchronousAxis_1");
 
-    syncAxis.GetService<OutputCamMeasuringInputContainer>()
+    syncAxis.GetService&lt;OutputCamMeasuringInputContainer&gt;()
 
     .OutputCams.Find("OutputCam_1")
 
-    .GetService<OutputCamHardwareConnectionProvider>()
+    .GetService&lt;OutputCamHardwareConnectionProvider&gt;()
 
     .Connect(tmTimer.Channels[0]);
 
@@ -1622,15 +1622,15 @@ public void Connect_To_Startdrive(PlcSoftware plcsoftware)
 
 {
 
-var mainTelegram = StartdriveDevice.DeviceItems.First(di => di.PositionNumber == 0)  
- .GetService<DriveObjectContainer>().DriveObjects[0].Telegrams.Find(TelegramType.MainTelegram);
+var mainTelegram = StartdriveDevice.DeviceItems.First(di =&gt; di.PositionNumber == 0)  
+ .GetService&lt;DriveObjectContainer&gt;().DriveObjects[0].Telegrams.Find(TelegramType.MainTelegram);
 
 var syncAxis = plcSoftware.TechnologicalObjectGroup.TechnologicalObjects.Find("SynchronousAxis_1");  
- syncAxis.GetService<AxisHardwareConnectionProvider>().ActorInterface.Connect(mainTelegram);
+ syncAxis.GetService&lt;AxisHardwareConnectionProvider&gt;().ActorInterface.Connect(mainTelegram);
 
 }
 
-#### Program code to connect drives configured via Startdrive < V19
+#### Program code to connect drives configured via Startdrive &lt; V19
 
 Startdrive must be installed.
 
@@ -1640,19 +1640,19 @@ public void Connect_To_Startdrive()
 
 {
 
-  var mainTelegram = StartdriveDevice.DeviceItems.First(di => di.PositionNumber == 0)
+  var mainTelegram = StartdriveDevice.DeviceItems.First(di =&gt; di.PositionNumber == 0)
 
-.GetService<DriveObjectContainer>().DriveObjects[0].Telegrams.Find(TelegramType.MainTelegram);
+.GetService&lt;DriveObjectContainer&gt;().DriveObjects[0].Telegrams.Find(TelegramType.MainTelegram);
 
   var syncAxis = plcSoftware.TechnologicalObjectGroup.TechnologicalObjects.Find("SynchronousAxis_1");
 
-  var inputAddress = mainTelegram.Addresses.First(x => x.IoType == AddressIoType.Input).StartAddress;
+  var inputAddress = mainTelegram.Addresses.First(x =&gt; x.IoType == AddressIoType.Input).StartAddress;
 
-  var outputAddress = mainTelegram.Addresses.First(x => x.IoType == AddressIoType.Output).StartAddress;
+  var outputAddress = mainTelegram.Addresses.First(x =&gt; x.IoType == AddressIoType.Output).StartAddress;
 
   syncAxis
 
-   .GetService<AxisHardwareConnectionProvider>()
+   .GetService&lt;AxisHardwareConnectionProvider&gt;()
 
    .ActorInterface
 
@@ -1676,7 +1676,7 @@ public void Connect_PathToDBMember()
 
    extEnc
 
-    GetService<EncoderHardwareConnectionProvider>()
+    GetService&lt;EncoderHardwareConnectionProvider&gt;()
 
     .SensorInterface
 
@@ -1738,7 +1738,7 @@ private static void ConnectTorqueInterface(TechnologicalInstanceDB technologyObj
 
     AxisHardwareConnectionProvider connectionProvider =
 
-    technologyObject.GetService<AxisHardwareConnectionProvider>();
+    technologyObject.GetService&lt;AxisHardwareConnectionProvider&gt;();
 
     //Connect TorqueInterface with DeviceItem
 
@@ -1805,7 +1805,7 @@ private static void UseServiceEncoderHardwareConnectionProvider(TechnologicalIns
 
     EncoderHardwareConnectionProvider connectionProvider =
 
-    technologyObject.GetService<EncoderHardwareConnectionProvider>();
+    technologyObject.GetService&lt;EncoderHardwareConnectionProvider&gt;();
 
     //Connect SensorInterface with DeviceItem
 
@@ -1865,7 +1865,7 @@ private static void UseServiceOutputCamHardwareConnectionProvider(TechnologicalI
 
     OutputCamHardwareConnectionProvider connectionProvider =
 
-    technologyObject.GetService<OutputCamHardwareConnectionProvider>();
+    technologyObject.GetService&lt;OutputCamHardwareConnectionProvider&gt;();
 
     //Connect technology object with Channel
 
@@ -1889,11 +1889,11 @@ public void Connect_PlcTag(PlcSoftware plcSoftware)
 
    var syncAxis = plcSoftware.TechnologicalObjectGroup.TechnologicalObjects.Find("SynchronousAxis_1");
 
-   syncAxis.GetService<OutputCamMeasuringInputContainer>()
+   syncAxis.GetService&lt;OutputCamMeasuringInputContainer&gt;()
 
     .OutputCams.Find("OutputCam_1")
 
-    .GetService<OutputCamHardwareConnectionProvider>()
+    .GetService&lt;OutputCamHardwareConnectionProvider&gt;()
 
     .Connect(outputCamTag);
 
@@ -1948,7 +1948,7 @@ private static void UseServiceMeasuringInputHardwareConnectionProvider(Technolog
 
     MeasuringInputHardwareConnectionProvider connectionProvider =
 
-    technologyObject.GetService<MeasuringInputHardwareConnectionProvider>();
+    technologyObject.GetService&lt;MeasuringInputHardwareConnectionProvider&gt;();
 
     //Connect technology object with Channel
 
@@ -1982,7 +1982,7 @@ To connect a synchronous axis technology object with leading values, it is neces
 | --- | --- |
 | int IndexOf (TechnologicalInstanceDB element) | Returns the corresponding index of a leading value |
 | bool Contains (TechnologicalInstanceDB element) | TRUE: The container contains the leading value   FALSE: The container does not contain the leading value |
-| IEnumerator GetEnumerator <TechnologicalInstanceDB>() | Used to support each iteration |
+| IEnumerator GetEnumerator &lt;TechnologicalInstanceDB&gt;() | Used to support each iteration |
 | void Add (TechnologicalInstanceDB element) | Connects following axis to leading value |
 | bool Remove (TechnologicalInstanceDB element) | Disconnects following axis from leading value  TRUE: Disconnection was succesfully  FALSE: Disconnection was not succesfully |
 
@@ -2017,7 +2017,7 @@ private static void UseServiceSynchronousAxisMasterValues(TechnologicalInstanceD
 
     SynchronousAxisMasterValues masterValues =
 
-    synchronousTechnologyObject.GetService<SynchronousAxisMasterValues>();
+    synchronousTechnologyObject.GetService&lt;SynchronousAxisMasterValues&gt;();
 
     //Connect following axis and leading axis with setpoint coupling
 
@@ -2071,7 +2071,7 @@ To configure leading values for conveyor tracking, use the service SW.Technologi
 | --- | --- |
 | int IndexOf (TechnologicalInstanceDB element) | Returns the corresponding index of a leading value |
 | bool Contains (TechnologicalInstanceDB element) | TRUE: The container contains the leading value   FALSE: The container does not contain the leading value |
-| IEnumerator GetEnumerator <TechnologicalInstanceDB>() | Used to support each iteration |
+| IEnumerator GetEnumerator &lt;TechnologicalInstanceDB&gt;() | Used to support each iteration |
 | void Add (TechnologicalInstanceDB element) | Connects following axis to leading value |
 | bool Remove (TechnologicalInstanceDB element) | Disconnects following axis from leading value  TRUE: Disconnection was succesfully  FALSE: Disconnection was not succesfully |
 
@@ -2145,7 +2145,7 @@ private static void ExportCamData(TechnologicalInstanceDB technologyObject, Syst
 
     //Retrieve service CamDataSupport
 
-    CamDataSupport camData = technologyObject.GetService<CamDataSupport>();
+    CamDataSupport camData = technologyObject.GetService&lt;CamDataSupport&gt;();
 
     //Save cam data in MCD format, using the separator Tab
 
@@ -2165,7 +2165,7 @@ private static void ImportCamData(TechnologicalInstanceDB technologyObject, Syst
 
     //Retrieve service CamDataSupport
 
-    CamDataSupport camData = technologyObject.GetService<CamDataSupport>();
+    CamDataSupport camData = technologyObject.GetService&lt;CamDataSupport&gt;();
 
     //Load cam data from source file, using the separator Tab
 
@@ -2211,7 +2211,7 @@ private static void ExportIprProgramSourceCode(TechnologicalInstanceDB technolog
 
 //Retrieve service InterpreterProgramSupport
 
-InterpreterProgramSupport iprProgramSourceCode = technologyObject.GetService<InterpreterProgramSupport>();
+InterpreterProgramSupport iprProgramSourceCode = technologyObject.GetService&lt;InterpreterProgramSupport&gt;();
 
 //Save source code in the destination file
 
@@ -2231,7 +2231,7 @@ private static void ImportIprProgramSourceCode(TechnologicalInstanceDB technolog
 
 //Retrieve service InterpreterProgramSupport
 
-InterpreterProgramSupport iprProgramSourceCode = technologyObject.GetService<InterpreterProgramSupport>();
+InterpreterProgramSupport iprProgramSourceCode = technologyObject.GetService&lt;InterpreterProgramSupport&gt;();
 
 //Load source code from source file
 

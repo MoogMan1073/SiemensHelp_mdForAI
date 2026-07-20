@@ -40,7 +40,7 @@ The project is downloaded as follows:
 >
 > **The "Load preview" dialog is skipped by default when simulating.**
 >
-> If necessary, activate the dialog under "Options > Settings > Simulation".
+> If necessary, activate the dialog under "Options &gt; Settings &gt; Simulation".
 
 You recognize a simulation in the SIMATIC Runtime Manager by the "Simulation" type. A runtime project can be downloaded to the PC as a real project and as a simulation at the same time.
 
@@ -87,7 +87,7 @@ In the "Load preview" dialog, make the settings for loading into the simulation.
 
 To permanently select the "Load preview" dialog when simulating projects, follow these steps:
 
-1. Open the settings under "Options > Settings".
+1. Open the settings under "Options &gt; Settings".
 2. Select "Simulation".
 3. In the "HMI Simulation" area, select the check box "Show 'Load preview' dialog during download to simulation".
 
@@ -121,9 +121,9 @@ After loading, the selected settings are applied to the simulation for future lo
 >
 > **Skipping the "Load preview" dialog**
 >
-> If you have not yet made any settings, the default selection is used. The settings used and the alarms that appear are displayed in the Inspector window in the "Info > Download" tab.
+> If you have not yet made any settings, the default selection is used. The settings used and the alarms that appear are displayed in the Inspector window in the "Info &gt; Download" tab.
 >
-> If other settings are required, open the "Load preview" dialog using the "Online > Download to device" command without permanently activating the dialog.
+> If other settings are required, open the "Load preview" dialog using the "Online &gt; Download to device" command without permanently activating the dialog.
 
 #### Result
 
@@ -156,7 +156,7 @@ To start the simulation with enabled "Load preview" dialog, follow these steps:
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Select one of the following buttons:    - From the shortcut menu of the HMI device: "Start simulation"    - In the toolbar: "Start simulation"    - Menu command "Online > Simulation > Start"    - Under "Visualization > Simulate device" in the portal view.The compilation result is displayed in the Inspector window under "Info > Compile".      | Symbol | Meaning |    | --- | --- |    |  | **Notice** |    | **Running runtime is stopped during complete download of a simulation** A project running in runtime is stopped when a simulation is completely loaded. |  |     | Symbol | Meaning |    | --- | --- |    | **Note**  **The "Load preview" dialog is skipped by default when simulating.** If necessary, activate the dialog under "Options > Settings > Simulation". |  | 2. Open the browser. 3. Call the URL "https://localhost" in the browser.    Instead of the name "localhost", you can use the PC name. 4. Select "WinCC Unified RT". 5. Enter the user name and password.    The configured screen is displayed as start screen in the browser. 6. Test, for example:    - Screen change and screen navigation    - Layout    - Internal tags 7. To stop the simulation, you have these options:    - Select "Online > Stop runtime/simulation" in the menu bar.    - Select "Stop runtime/simulation" in the shortcut menu of the HMI device.While the simulation is running, the project is always loaded in simulation mode. |  |
+| 1. Select one of the following buttons:    - From the shortcut menu of the HMI device: "Start simulation"    - In the toolbar: "Start simulation"    - Menu command "Online &gt; Simulation &gt; Start"    - Under "Visualization &gt; Simulate device" in the portal view.The compilation result is displayed in the Inspector window under "Info &gt; Compile".      | Symbol | Meaning |    | --- | --- |    |  | **Notice** |    | **Running runtime is stopped during complete download of a simulation** A project running in runtime is stopped when a simulation is completely loaded. |  |     | Symbol | Meaning |    | --- | --- |    | **Note**  **The "Load preview" dialog is skipped by default when simulating.** If necessary, activate the dialog under "Options &gt; Settings &gt; Simulation". |  | 2. Open the browser. 3. Call the URL "https://localhost" in the browser.    Instead of the name "localhost", you can use the PC name. 4. Select "WinCC Unified RT". 5. Enter the user name and password.    The configured screen is displayed as start screen in the browser. 6. Test, for example:    - Screen change and screen navigation    - Layout    - Internal tags 7. To stop the simulation, you have these options:    - Select "Online &gt; Stop runtime/simulation" in the menu bar.    - Select "Stop runtime/simulation" in the shortcut menu of the HMI device.While the simulation is running, the project is always loaded in simulation mode. |  |
 
 > **Note**
 >
@@ -232,7 +232,7 @@ The project is downloaded as follows:
 >
 > **The "Load preview" dialog is skipped by default when simulating.**
 >
-> If necessary, activate the dialog under "Options > Settings > Simulation".
+> If necessary, activate the dialog under "Options &gt; Settings &gt; Simulation".
 
 You recognize a simulation in the SIMATIC Runtime Manager by the "Simulation" type. A runtime project can be downloaded to the PC as a real project and as a simulation at the same time. You cannot run the real project and the simulation at the same time in runtime.
 
@@ -267,7 +267,7 @@ In the "Load preview" dialog, make the settings for loading into the simulation.
 
 To permanently select the "Load preview" dialog when simulating projects, follow these steps:
 
-1. Open the settings under "Options > Settings".
+1. Open the settings under "Options &gt; Settings".
 2. Select "Simulation".
 3. In the "HMI Simulation" area, select the check box "Show 'Load preview' dialog during download to simulation".
 
@@ -301,9 +301,9 @@ After loading, the selected settings are applied to the simulation for future lo
 >
 > **Skipping the "Load preview" dialog**
 >
-> If you have not yet made any settings, the default selection is used. The settings used and the alarms that appear are displayed in the Inspector window in the "Info > Download" tab.
+> If you have not yet made any settings, the default selection is used. The settings used and the alarms that appear are displayed in the Inspector window in the "Info &gt; Download" tab.
 >
-> If other settings are required, open the "Load preview" dialog using the "Online > Download to device" command without permanently activating the dialog.
+> If other settings are required, open the "Load preview" dialog using the "Online &gt; Download to device" command without permanently activating the dialog.
 
 #### Result
 
@@ -334,7 +334,7 @@ To start the simulation, follow these steps:
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Select one of the following buttons:    - From the shortcut menu of the HMI device: "Start simulation"    - In the toolbar: "Start simulation"    - Menu command "Online > Simulation > Start"    - Under "Visualization > Simulate device" in the portal view.The compilation result is displayed in the Inspector window under "Info > Compile".      | Symbol | Meaning |    | --- | --- |    |  | **Notice** |    | **Running runtime is stopped during complete download of a simulation** A project running in runtime is stopped when a simulation is completely loaded. |  |     | Symbol | Meaning |    | --- | --- |    | **Note**  **The "Load preview" dialog is skipped by default when simulating.** If necessary, activate the dialog under "Options > Settings > Simulation". |  | 2. Open the browser. 3. Call the URL "https://localhost" in the browser.    Instead of the name "localhost", you can use the PC name. 4. Select "WinCC Unified RT". 5. Enter the user name and password.    The configured screen is displayed as start screen in the browser. 6. Test, for example:    - Screen change and screen navigation    - Layout    - Internal tags 7. You have several options for stopping the simulation:    - Select "Online > Stop runtime/simulation" in the menu bar.    - Select "Stop runtime/simulation" in the shortcut menu of the HMI device.As long as the simulation is running, the project is always loaded in simulation mode. |  |
+| 1. Select one of the following buttons:    - From the shortcut menu of the HMI device: "Start simulation"    - In the toolbar: "Start simulation"    - Menu command "Online &gt; Simulation &gt; Start"    - Under "Visualization &gt; Simulate device" in the portal view.The compilation result is displayed in the Inspector window under "Info &gt; Compile".      | Symbol | Meaning |    | --- | --- |    |  | **Notice** |    | **Running runtime is stopped during complete download of a simulation** A project running in runtime is stopped when a simulation is completely loaded. |  |     | Symbol | Meaning |    | --- | --- |    | **Note**  **The "Load preview" dialog is skipped by default when simulating.** If necessary, activate the dialog under "Options &gt; Settings &gt; Simulation". |  | 2. Open the browser. 3. Call the URL "https://localhost" in the browser.    Instead of the name "localhost", you can use the PC name. 4. Select "WinCC Unified RT". 5. Enter the user name and password.    The configured screen is displayed as start screen in the browser. 6. Test, for example:    - Screen change and screen navigation    - Layout    - Internal tags 7. You have several options for stopping the simulation:    - Select "Online &gt; Stop runtime/simulation" in the menu bar.    - Select "Stop runtime/simulation" in the shortcut menu of the HMI device.As long as the simulation is running, the project is always loaded in simulation mode. |  |
 
 > **Note**
 >

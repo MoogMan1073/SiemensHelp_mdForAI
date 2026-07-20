@@ -90,9 +90,9 @@ The instruction operates in accordance with the function:
 
 |  |  |  |
 | --- | --- | --- |
-| OUTV = INV + DB_WIDTH | for | INV < -DB_WIDTH |
+| OUTV = INV + DB_WIDTH | for | INV &lt; -DB_WIDTH |
 | OUTV = 0.0 | for | -DB_WIDTH ≤ INV ≤ +DB_WIDTH |
-| OUTV = INV - DB_WIDTH | for | INV > +DB_WIDTH |
+| OUTV = INV - DB_WIDTH | for | INV &gt; +DB_WIDTH |
 
 ![Operating principle](images/18026471947_DV_resource.Stream@PNG-de-DE.png)
 
@@ -117,7 +117,7 @@ To ensure stability, the effective deadband width DB_WIDTH is subject to a low l
 
 ![Adaptation on](images/18026494731_DV_resource.Stream@PNG-de-DE.png)
 
-The procedure is started if the limit is exceeded positively or negatively. Whenever the opposing deadband width is exceeded again (3 -> 4) within half the cycle duration, it is increased again by 0.1. This procedure is repeated until the deadband width agrees with the amplitude of the measurement noise. In order not to indiscriminately suppress input signals of any size, the effective deadband width is subject to a high limit, which is represented by input DB_WH_LM. If, on the other hand, the deadband width is not exceeded within time RET_FAC * 1/CRIT_FRQ, it is reduced by the amount 0.1.
+The procedure is started if the limit is exceeded positively or negatively. Whenever the opposing deadband width is exceeded again (3 -&gt; 4) within half the cycle duration, it is increased again by 0.1. This procedure is repeated until the deadband width agrees with the amplitude of the measurement noise. In order not to indiscriminately suppress input signals of any size, the effective deadband width is subject to a high limit, which is represented by input DB_WH_LM. If, on the other hand, the deadband width is not exceeded within time RET_FAC * 1/CRIT_FRQ, it is reduced by the amount 0.1.
 
 CRIT_FRQ specifies the limit frequency from which a signal component is regarded as a disturbance. It is subject to a high limit and low limit as follows:
 
@@ -148,8 +148,8 @@ The values of the input parameters are not limited in the instruction. There is 
 | Parameter | Data type | Preassigned value | Description |
 | --- | --- | --- | --- |
 | INV | REAL | 0.0 | Input variable  Engineering value range |
-| DB_WH_LM | REAL | 5.0 | High limit of the deadband width  Engineering value range  DB_WH_LM > DB_WL_LM |
-| DB_WL_LM | REAL | 1.0 | Low limit of the deadband width   Engineering value range  DB_WL_LM < DB_WH_LM |
+| DB_WH_LM | REAL | 5.0 | High limit of the deadband width  Engineering value range  DB_WH_LM &gt; DB_WL_LM |
+| DB_WL_LM | REAL | 1.0 | Low limit of the deadband width   Engineering value range  DB_WL_LM &lt; DB_WH_LM |
 | CRIT_FRQ | REAL | 0.1 | Limit frequency  CRIT_FRQ ≥ 0.01 and  CRIT_FRQ ≤ 1/(3 * CYCLE) |
 | RET_FAC | INT | 1 | Return factor  RET_FAC ≥ 1 |
 | ADAPT_ON | BOOL | FALSE | Activate adaptation algorithm |
@@ -435,10 +435,10 @@ The DEADBAND instruction suppresses minor fluctuations of input variable INV aro
 
 |  |  |  |
 | --- | --- | --- |
-| OUTV = INV + DEADB_W - DEADB_O | for | INV < DEADB_O - DEADB_W |
+| OUTV = INV + DEADB_W - DEADB_O | for | INV &lt; DEADB_O - DEADB_W |
 | OUTV = 0.0 | for | DEADB_O - DEADB_W ≤ INV |
 | and | INV ≤ DEADB_O + DEADB_W |  |
-| OUTV = INV - DEADB_W - DEADB_O | for | INV > DEADB_O + DEADB_W |
+| OUTV = INV - DEADB_W - DEADB_O | for | INV &gt; DEADB_O + DEADB_W |
 
 The signal corruption corresponds to the value DEADB_W. The center of the deadband is defined with DEADB_O.
 
@@ -518,8 +518,8 @@ The derivative-action time is subject to a low limit equal to the sampling time.
 
 |  |  |  |
 | --- | --- | --- |
-| TD<sub>intern</sub> = CYCLE | for | TD < CYCLE |
-| TM_LAG<sub>intern</sub> = CYCLE/2 | for | TM_LAG < CYCLE/2 |
+| TD<sub>intern</sub> = CYCLE | for | TD &lt; CYCLE |
+| TM_LAG<sub>intern</sub> = CYCLE/2 | for | TM_LAG &lt; CYCLE/2 |
 
 The other values of the input parameters are not limited in the instruction. There is no parameter check.
 
@@ -563,7 +563,7 @@ This instruction is used for control deviation generation and monitoring.
 
 #### Operating principle
 
-The instruction calculates control deviation ER = SP - PV and monitors it for assignable limits. As a result of a setpoint change |ΔSP| > SP_DIFF, the response of limit value signal ER_LM is suppressed for an assignable delay time (TM_DELAY+TM_RAMP). During this time, ER is monitored for the higher limit value ER_LMTD. If ER_LMTD is exceeded, QER_LMTD=TRUE is output. After the delay time has expired, ER_LMTD is transformed into ER_LM along a ramp. The slope of the ramp can be assigned in the TM_RAMP parameter.
+The instruction calculates control deviation ER = SP - PV and monitors it for assignable limits. As a result of a setpoint change |ΔSP| &gt; SP_DIFF, the response of limit value signal ER_LM is suppressed for an assignable delay time (TM_DELAY+TM_RAMP). During this time, ER is monitored for the higher limit value ER_LMTD. If ER_LMTD is exceeded, QER_LMTD=TRUE is output. After the delay time has expired, ER_LMTD is transformed into ER_LM along a ramp. The slope of the ramp can be assigned in the TM_RAMP parameter.
 
 ![Operating principle](images/18026652299_DV_resource.Stream@PNG-de-DE.png)
 
@@ -594,11 +594,11 @@ The values of the input parameters are not limited in the instruction. There is 
 
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
-| ER_LM | 0.0 | REAL | 10.0 | Limit value of the control deviation  Engineering value range and > 0.0 and < ER_LMTD |
-| ER_LMTD | 4.0 | REAL | 100.0 | Limit value of the control deviation during On delay  Engineering value range and > ER_LM |
+| ER_LM | 0.0 | REAL | 10.0 | Limit value of the control deviation  Engineering value range and &gt; 0.0 and &lt; ER_LMTD |
+| ER_LMTD | 4.0 | REAL | 100.0 | Limit value of the control deviation during On delay  Engineering value range and &gt; ER_LM |
 | SP | 8.0 | REAL | 0.0 | Setpoint  Engineering value range |
 | PV | 12.0 | REAL | 0.0 | Controlled variable  Engineering value range |
-| SP_DIFF | 16.0 | REAL | 10.0 | Setpoint change  Engineering value range and > 0.0 |
+| SP_DIFF | 16.0 | REAL | 10.0 | Setpoint change  Engineering value range and &gt; 0.0 |
 | TM_DELAY | 20.0 | TIME | T#60s | On delay of the monitoring signal |
 | TM_RAMP | 24.0 | TIME | T#60s | Ramp time constant |
 | COM_RST | 28.0 | BOOL | FALSE | Complete restart |
@@ -681,7 +681,7 @@ The integral-action time is subject to a low limit equal to the sampling time.
 
 |  |  |  |
 | --- | --- | --- |
-| TI<sub>intern</sub> = CYCLE | for | TI < CYCLE |
+| TI<sub>intern</sub> = CYCLE | for | TI &lt; CYCLE |
 
 The other values of the input parameters are not limited in the instruction. There is no parameter check.
 
@@ -690,8 +690,8 @@ The other values of the input parameters are not limited in the instruction. The
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
 | INV | 0.0 | REAL | 0.0 | Input variable  Engineering value range |
-| H_LM | 4.0 | REAL | 100.0 | High limit  Engineering value range  H_LM > L_LM |
-| L_LM | 8.0 | REAL | 0.0 | Low limit  Engineering value range  L_HM < H_LM |
+| H_LM | 4.0 | REAL | 100.0 | High limit  Engineering value range  H_LM &gt; L_LM |
+| L_LM | 8.0 | REAL | 0.0 | Low limit  Engineering value range  L_HM &lt; H_LM |
 | TI | 12.0 | TIME | T#25s | Integral-action time  TI ≥ CYCLE |
 | DF_OUTV | 16.0 | REAL | 0.0 | Default setting of output variable  Engineering value range |
 | HOLD | 20.0 | BOOL | FALSE | Freeze integral component |
@@ -766,7 +766,7 @@ The time delay is subject to a low limit equal to half the sampling time.
 
 |  |  |  |
 | --- | --- | --- |
-| TM_LAG<sub>intern </sub>= CYCLE/**2** | for | TM_LAG < CYCLE/**2** |
+| TM_LAG<sub>intern </sub>= CYCLE/**2** | for | TM_LAG &lt; CYCLE/**2** |
 
 The other values of the input parameters are not limited in the instruction. There is no parameter check.
 
@@ -826,7 +826,7 @@ The instruction implements an oscillating second-order delay element and contain
 
   OUTV(s) / INV(s) = TRANCOEF / (1 + 2*DAM_COEF*TM_CONST*s + TM_CONST<sup>2</sup>*s2)
 
-  If DAM_COEF >= 1 (aperiodic case), the transfer element can be represented in a series connection of two first-order delay elements.
+  If DAM_COEF &gt;= 1 (aperiodic case), the transfer element can be represented in a series connection of two first-order delay elements.
 
   OUTV(s) / INV(s) = TRANCOEF / (1 + T1*s) * 1 / (1 + T2 * s)
 
@@ -866,7 +866,7 @@ The time constant TM_CONST is subject to a low limit equal to half the sampling 
 
 |  |  |  |
 | --- | --- | --- |
-| TM_CONST<sub>intern</sub>= CYCLE/2 | for | TM_CONST < CYCLE/2 |
+| TM_CONST<sub>intern</sub>= CYCLE/2 | for | TM_CONST &lt; CYCLE/2 |
 
 The other values of the input parameters are not limited in the instruction. There is no parameter check.
 
@@ -914,18 +914,18 @@ The figure below shows how the LIMALARM instruction functions:
 
 |  |  |  |  |  |
 | --- | --- | --- | --- | --- |
-| QH_LMALM = TRUE | If | INV rises | and | INV >= H_LM_ALM |
-| or | INV falls | and | INV >= H_LM_ALM - HYS |  |
-| QH_LMWRN = TRUE | If | INV rises | and | INV >= H_LM_WRN |
-| or | INV falls | and | INV >= H_LM_WRN - HYS |  |
-| QL_LMWRN = TRUE | If | INV falls | and | INV <= L_LM_WRN |
-| or | INV rises | and | INV <= L_LM_WRN + HYS |  |
-| QL_LMALM = TRUE | If | INV falls | and | INV <= L_LM_ALM |
-| or | INV rises | and | INV <= L_LM_ALM + HYS |  |
+| QH_LMALM = TRUE | If | INV rises | and | INV &gt;= H_LM_ALM |
+| or | INV falls | and | INV &gt;= H_LM_ALM - HYS |  |
+| QH_LMWRN = TRUE | If | INV rises | and | INV &gt;= H_LM_WRN |
+| or | INV falls | and | INV &gt;= H_LM_WRN - HYS |  |
+| QL_LMWRN = TRUE | If | INV falls | and | INV &lt;= L_LM_WRN |
+| or | INV rises | and | INV &lt;= L_LM_WRN + HYS |  |
+| QL_LMALM = TRUE | If | INV falls | and | INV &lt;= L_LM_ALM |
+| or | INV rises | and | INV &lt;= L_LM_ALM + HYS |  |
 
 In order for the instruction to function in a useful way, the following must apply:
 
-L_LM_ALM < L_LM_WRN < H_LM_WRN < H_LM_ALM
+L_LM_ALM &lt; L_LM_WRN &lt; H_LM_WRN &lt; H_LM_ALM
 
 #### Complete restart
 
@@ -945,10 +945,10 @@ The values of the input parameters are not limited in the instruction. There is 
 
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
-| H_LM_ALM | 0.0 | REAL | 100.0 | High limit alarm  Engineering value range  > H_LM_WRN |
-| H_LM_WRN | 4.0 | REAL | 90.0 | High limit warning  Engineering value range  > L_LM_WRN |
-| L_LM_WRN | 8.0 | REAL | 10.0 | Low limit warning  Engineering value range  > L_LM_ALM |
-| L_LM_ALM | 12.0 | REAL | 0.0 | Low limit alarm  Engineering value range  < L_LM_WRN |
+| H_LM_ALM | 0.0 | REAL | 100.0 | High limit alarm  Engineering value range  &gt; H_LM_WRN |
+| H_LM_WRN | 4.0 | REAL | 90.0 | High limit warning  Engineering value range  &gt; L_LM_WRN |
+| L_LM_WRN | 8.0 | REAL | 10.0 | Low limit warning  Engineering value range  &gt; L_LM_ALM |
+| L_LM_ALM | 12.0 | REAL | 0.0 | Low limit alarm  Engineering value range  &lt; L_LM_WRN |
 | INV | 16.0 | REAL | 0.0 | Input variable  Engineering value range |
 | HYS | 20.0 | REAL | 1.0 | Hysteresis  Engineering value range |
 | COM_RST | 24.0 | BOOL | FALSE | Complete restart |
@@ -991,7 +991,7 @@ The figure below shows how the LIMITER instruction functions:
 
 In order for the instruction to function in a useful way, the following must apply:
 
-L_LM < H_LM
+L_LM &lt; H_LM
 
 #### Complete restart
 
@@ -1014,8 +1014,8 @@ The values of the input parameters are not limited in the instruction. There is 
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
 | INV | 0.0 | REAL | 0.0 | Input variable  Engineering value range |
-| H_LM | 4.0 | REAL | 100.0 | High limit  Engineering value range  > L_LM |
-| L_LM | 8.0 | REAL | 0.0 | Low limit  Engineering value range  < H_LM |
+| H_LM | 4.0 | REAL | 100.0 | High limit  Engineering value range  &gt; L_LM |
+| L_LM | 8.0 | REAL | 0.0 | Low limit  Engineering value range  &lt; H_LM |
 | COM_RST | 12.0 | BOOL | FALSE | Complete restart |
 
 ### Output parameters LIMITER (S7-300, S7-400)
@@ -1130,10 +1130,10 @@ When a static variable is changed, the change takes effect in the process only a
 
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
-| LMN_HLM | 0.0 | REAL | 100.0 | High limit of manipulated variable  Engineering value range  > LMN_LLM |
-| LMN_LLM | 4.0 | REAL | 0.0 | Low limit of manipulated variable  Engineering value range  < LMN_HLM |
-| LMN_URLM | 8.0 | REAL | 10.0 | Manipulated variable up rate limit [1/s]  > 0.0 |
-| LMN_DRLM | 12.0 | REAL | 10.0 | Manipulated variable down rate limit [1/s]  > 0.0 |
+| LMN_HLM | 0.0 | REAL | 100.0 | High limit of manipulated variable  Engineering value range  &gt; LMN_LLM |
+| LMN_LLM | 4.0 | REAL | 0.0 | Low limit of manipulated variable  Engineering value range  &lt; LMN_HLM |
+| LMN_URLM | 8.0 | REAL | 10.0 | Manipulated variable up rate limit [1/s]  &gt; 0.0 |
+| LMN_DRLM | 12.0 | REAL | 10.0 | Manipulated variable down rate limit [1/s]  &gt; 0.0 |
 | DF_OUTV | 16.0 | REAL | 0.0 | Default setting of output variable  Engineering value range |
 | MAN_ON | 20.0 | BOOL | TRUE | Manual mode ON |
 | MANGN_ON | 20.1 | BOOL | FALSE | Activate manual value operation |
@@ -1309,8 +1309,8 @@ When a static variable is changed, the change takes effect in the process only a
 
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
-| LMN_HLM | 0.0 | REAL | 100.0 | High limit of manipulated variable  Engineering value range  > LMN_LLM |
-| LMN_LLM | 4.0 | REAL | 0.0 | Low limit of manipulated variable  Engineering value range  < LMN_HLM |
+| LMN_HLM | 0.0 | REAL | 100.0 | High limit of manipulated variable  Engineering value range  &gt; LMN_LLM |
+| LMN_LLM | 4.0 | REAL | 0.0 | Low limit of manipulated variable  Engineering value range  &lt; LMN_HLM |
 | LMNR_IN | 8.0 | REAL | 0.0 | Position feedback  Engineering value range |
 | MTR_TM | 12.0 | TIME | T#30s | Motor actuating time  ≥ CYCLE |
 | PULSE_TM | 16.0 | TIME | T#3s | Minimum pulse time  ≥ CYCLE |
@@ -1552,10 +1552,10 @@ The values of the input parameters are not limited in the instruction. There is 
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
 | INV | 0.0 | REAL | 0.0 | Input variable  Engineering value range |
-| IN_HVAL | 4.0 | REAL | 100.0 | Physical input value below   Engineering value range  > IN_LVAL |
-| OUT_HVAL | 8.0 | REAL | 100.0 | Physical output value below  Engineering value range  > OUT_LVAL |
-| IN_LVAL | 12.0 | REAL | 0.0 | Physical input value above   Engineering value range  < IN_HVAL |
-| OUT_LVAL | 16.0 | REAL | 0.0 | Physical output value above  Engineering value range  < OUT_HVAL |
+| IN_HVAL | 4.0 | REAL | 100.0 | Physical input value below   Engineering value range  &gt; IN_LVAL |
+| OUT_HVAL | 8.0 | REAL | 100.0 | Physical output value below  Engineering value range  &gt; OUT_LVAL |
+| IN_LVAL | 12.0 | REAL | 0.0 | Physical input value above   Engineering value range  &lt; IN_HVAL |
+| OUT_LVAL | 16.0 | REAL | 0.0 | Physical output value above  Engineering value range  &lt; OUT_HVAL |
 
 ### Output parameters NORM (S7-300, S7-400)
 
@@ -1749,9 +1749,9 @@ The time lag is subject to a low limit equal to half the sampling time.
 
 |  |  |  |
 | --- | --- | --- |
-| TI<sub>intern</sub> = CYCLE/2 | for | TI < CYCLE/2 |
-| TD<sub>intern</sub> = CYCLE | for | TD < CYCLE |
-| TM_LAG<sub>intern</sub> = CYCLE/2 | for | TM_LAG < CYCLE/2 |
+| TI<sub>intern</sub> = CYCLE/2 | for | TI &lt; CYCLE/2 |
+| TD<sub>intern</sub> = CYCLE | for | TD &lt; CYCLE |
+| TM_LAG<sub>intern</sub> = CYCLE/2 | for | TM_LAG &lt; CYCLE/2 |
 
 The other values of the input parameters are not limited in the instruction. There is no parameter check.
 
@@ -1995,7 +1995,7 @@ The following figure shows a symmetrical curve of the three-step controller (rat
 
 Using the ratio factor RATIOFAC, the ratio of the duration of positive to negative pulses can be changed. In a thermal process, for example, this would allow different system time constants for heating and cooling.
 
-**Ratio factor < 1**
+**Ratio factor &lt; 1**
 
 The pulse duration at the negative pulse output calculated from the input variable multiplied by the period duration is reduced by the ratio factor.
 
@@ -2011,7 +2011,7 @@ The following figure shows the asymmetric curve of the three-step controller (ra
 
 The ratio factor RATIOFAC also influences the minimum pulse or minimum break time. The threshold value for negative pulses is multiplied by the ratio factor.
 
-**Ratio factor > 1**
+**Ratio factor &gt; 1**
 
 The pulse duration at the positive pulse output calculated from the input variable multiplied by the period duration is reduced by the ratio factor.
 
@@ -2077,8 +2077,8 @@ The negated output signal is available at QNEG_P if the connection of the two-st
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
 | INV | 0.0 | REAL | 0.0 | Input variable  -100.0..100.0 (%) |
-| PER_TM | 4.0 | TIME | T#1s | Period  PER_TM >= 20*CYCLE |
-| P_B_TM | 8.0 | TIME | T#50ms | Minimum pulse or minimum break time  P_B_TM >= CYCLE |
+| PER_TM | 4.0 | TIME | T#1s | Period  PER_TM &gt;= 20*CYCLE |
+| P_B_TM | 8.0 | TIME | T#50ms | Minimum pulse or minimum break time  P_B_TM &gt;= CYCLE |
 | RATIOFAC | 12.0 | REAL | 1.0 | Ratio factor  0.1..10.0  (dimensionless) |
 | STEP3_ON | 16.0 | BOOL | TRUE | Three-step control ON |
 | ST2BI_ON | 16.1 | BOOL | FALSE | Activate two-step control for bipolar manipulated variable range |
@@ -2087,7 +2087,7 @@ The negated output signal is available at QNEG_P if the connection of the two-st
 | NEG_P_ON | 16.4 | BOOL | FALSE | Activate negative pulse |
 | SYN_ON | 16.5 | BOOL | TRUE | Activate synchronization |
 | COM_RST | 16.6 | BOOL | FALSE | Complete restart |
-| CYCLE | 18.0 | TIME | T#10ms | Sampling time  CYCLE >= 1ms |
+| CYCLE | 18.0 | TIME | T#10ms | Sampling time  CYCLE &gt;= 1ms |
 
 ### Output parameters PULSEGEN_M (S7-300, S7-400)
 
@@ -2129,7 +2129,7 @@ The method of counting of the time slice values and times is illustrated in the 
 
 ![Operating principle](images/18027539723_DV_resource.Stream@PNG-en-US.png)
 
-Between the time slices, the ramp/soak function interpolates with 0 ≤ n < (NBR_PTS - 1) according to the following function:
+Between the time slices, the ramp/soak function interpolates with 0 ≤ n &lt; (NBR_PTS - 1) according to the following function:
 
 ![Operating principle](images/18027558795_DV_resource.Stream@PNG-en-US.png)
 
@@ -2361,16 +2361,16 @@ A total of four ramps can be assigned for the positive and negative value range 
 
 - UPRLM_P: Rising values in the positive range
 
-  OUTV > 0 and |OUTV| rising
+  OUTV &gt; 0 and |OUTV| rising
 - DNRLM_P: Falling values in the positive range
 
-  OUTV > 0 and |OUTV| falling
+  OUTV &gt; 0 and |OUTV| falling
 - UPRLM_N: Rising values in the negative range
 
-  OUTV < 0 and |OUTV| rising
+  OUTV &lt; 0 and |OUTV| rising
 - DNRLM_N: Falling values in the negative range
 
-  OUTV < 0 and |OUTV| falling
+  OUTV &lt; 0 and |OUTV| falling
 
   ![Operating principle](images/18027648011_DV_resource.Stream@PNG-de-DE.png)
 
@@ -2447,12 +2447,12 @@ The values of the input parameters are not limited in the instruction. There is 
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
 | INV | 0.0 | REAL | 0.0 | Input variable  Engineering value range |
-| UPRLM_P | 4.0 | REAL | 10.0 | Rise limiter in the positive range  Increment per second [1/s]  > 0.0 |
-| DNRLM_P | 8.0 | REAL | 10.0 | Fall limiter in the positive range  Increment per second [1/s]  > 0.0 |
-| UPRLM_N | 12.0 | REAL | 10.0 | Rise limiter in the negative range  Increment per second [1/s]  > 0.0 |
-| DNRLM_N | 16.0 | REAL | 10.0 | Fall limiter in the negative range  Increment per second [1/s]  > 0.0 |
-| H_LM | 20.0 | REAL | 100.0 | High limit  Engineering value range  > L_LM |
-| L_LM | 24.0 | REAL | 0.0 | Low limit  Engineering value range  < H_LM |
+| UPRLM_P | 4.0 | REAL | 10.0 | Rise limiter in the positive range  Increment per second [1/s]  &gt; 0.0 |
+| DNRLM_P | 8.0 | REAL | 10.0 | Fall limiter in the positive range  Increment per second [1/s]  &gt; 0.0 |
+| UPRLM_N | 12.0 | REAL | 10.0 | Rise limiter in the negative range  Increment per second [1/s]  &gt; 0.0 |
+| DNRLM_N | 16.0 | REAL | 10.0 | Fall limiter in the negative range  Increment per second [1/s]  &gt; 0.0 |
+| H_LM | 20.0 | REAL | 100.0 | High limit  Engineering value range  &gt; L_LM |
+| L_LM | 24.0 | REAL | 0.0 | Low limit  Engineering value range  &lt; H_LM |
 | PV | 28.0 | REAL | 0.0 | Controlled variable  Engineering value range |
 | DF_OUTV | 32.0 | REAL | 0.0 | Default setting of output variable  Engineering value range |
 | DFOUT_ON | 36.0 | BOOL | FALSE | Default setting of output variable On |
@@ -2593,8 +2593,8 @@ No values are limited block-internally. The parameters are not checked.
 | Parameter | Offset | Data type | Preassigned value | Description |
 | --- | --- | --- | --- | --- |
 | DF_OUTV | 0.0 | REAL | 0.0 | Default setting of output variable  Engineering value range |
-| H_LM | 4.0 | REAL | 100.0 | High limit  Engineering value range   > L_LM |
-| L_LM | 8.0 | REAL | 0.0 | Low limit  Engineering value range   < H_LM |
+| H_LM | 4.0 | REAL | 100.0 | High limit  Engineering value range   &gt; L_LM |
+| L_LM | 8.0 | REAL | 0.0 | Low limit  Engineering value range   &lt; H_LM |
 | OUTVUP | 12.0 | BOOL | FALSE | OUTV up |
 | OUTVDN | 12.1 | BOOL | FALSE | OUTV down |
 | DFOUT_ON | 12.2 | BOOL | FALSE | Default setting of output variable On |
@@ -2627,7 +2627,7 @@ The manipulated variable of a PID controller is spilt into several ranges. The i
 
 ![Operating principle](images/35190495115_DV_resource.Stream@PNG-de-DE.png)
 
-If input value INV is within the range STR_INV and EDR_INV, output value SPL_LMNG.PID_OUTV is output within the range STR_OUTV and EDR_OUTV. If INV < STR_INV,, then STR_OUTV is output. If INV > STR_INV,, then EDR_OUTV is output.
+If input value INV is within the range STR_INV and EDR_INV, output value SPL_LMNG.PID_OUTV is output within the range STR_OUTV and EDR_OUTV. If INV &lt; STR_INV,, then STR_OUTV is output. If INV &gt; STR_INV,, then EDR_OUTV is output.
 
 ![Operating principle](images/18027822219_DV_resource.Stream@PNG-de-DE.png)
 
@@ -2842,7 +2842,7 @@ The values of the input parameters are not limited in the instruction. There is 
 
 | Parameter | Data type | Description |
 | --- | --- | --- |
-| TM_BASE | TIME | Time base  >= 1ms |
+| TM_BASE | TIME | Time base  &gt;= 1ms |
 | COM_RST | BOOL | Complete restart |
 | DB_NBR | BLOCK_DB | Data block number |
 
@@ -2855,13 +2855,13 @@ The data for the call distribution with LP_SCHED is specified in a global data b
 | GLP_NBR | INT | 2 | Maximum number of controllers  1 - 256 |
 | ALP_NBR | INT | 0 | Number of the current controller  0 - 256 |
 | LOOP_DAT | Array [1...GLP_NBR] of Struct |  | Individual controller data structure. The array must be declared by 1...GLP_NBR. |
-| LOOP_DAT[1].MAN_CYC | TIME | T#1s | Controller 1 data: Manual sampling time  >= 1ms |
+| LOOP_DAT[1].MAN_CYC | TIME | T#1s | Controller 1 data: Manual sampling time  &gt;= 1ms |
 | LOOP_DAT[1].MAN_DIS | BOOL | FALSE | Controller 1 data: Disable manual controller call |
 | LOOP_DAT[1].MAN_CRST | BOOL | FALSE | Controller 1 data: Set manual restart |
 | LOOP_DAT[1].ENABLE | BOOL | FALSE | Controller 1 data: Controller enable |
 | LOOP_DAT[1].COM_RST | BOOL | FALSE | Controller 1 data: Restart |
 | LOOP_DAT[1].ILP_COU | INT | 0 | Controller 1 data: Internal counter |
-| LOOP_DAT[1].CYCLE | TIME | T#1s | Controller 1 data: Sampling time  >= 1ms |
+| LOOP_DAT[1].CYCLE | TIME | T#1s | Controller 1 data: Sampling time  &gt;= 1ms |
 | LOOP_DAT[2].MAN_CYC |  |  | Controller 2 data: Manual sampling time |
 | ... |  |  |  |
 

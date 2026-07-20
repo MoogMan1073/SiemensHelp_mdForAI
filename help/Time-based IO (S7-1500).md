@@ -69,7 +69,7 @@ The table below shows the parameters of the TIO_SYNC instruction.
 
 | Parameter | Declaration in library version |  | Data type | Default | Description |
 | --- | --- | --- | --- | --- | --- |
-| < V2.0 | ≥ V2.0 | S7-1500 |  |  |  |
+| &lt; V2.0 | ≥ V2.0 | S7-1500 |  |  |  |
 | HWID_1 ... HWID_8* | Input |  | HW_IO | 65535 | Hardware identifier for TIO module from hardware configuration |
 | PIP_Mode* | Input |  | PIP | 0 | Mode for the data update**:   - 0: OIP model with internal update of the process image by SYNC_PO and SYNC_PI. - 1: OIP model without internal update of the process image - 2: IPO model without internal update of the process image |
 | PIP_PART* | Input |  | USInt | 1 | Only relevant if PIP_Mode = 0  Number of the process image partition which is to be updated isochronously. |
@@ -78,7 +78,7 @@ The table below shows the parameters of the TIO_SYNC instruction.
 | Error | Output |  | Bool | False | Error = True: An error has occurred. For detailed information see Status parameter.  Error is reset as soon as the error is corrected. |
 | OperatingState |  | Static | Int | 0 | Internal operating state of the instruction:  - 0: Input parameters are checked - 1: Optional parameters are read out - 2: Read-out parameters are checked - 3: Normal operation (all parameters OK, TIO modules synchronized)   As soon as operating state 3 is reached, time stamps can be read in and edges can be output. If you want to repeat the synchronization of the TIO modules and the readout of the optional parameters, you can set the operating state to 0. |
 | SendClock | Input | Static | LTime | LT#0ns | Send clock of the sync domain.  Apply the send clock from the PROFINET configuration.   Note: If you use the parameter value AppCycleFactor = 0, SendClock can be left as the default (automatic reading of the parameters). |
-| AppCycleFactor |  | Static | UInt | 0 | Application cycle factor:  - Range of values: 0 <= AppCycleFactor <= 85 - 0: SendClock, AppCycleFactor and ToTimes are read in automatically   The application cycle T<sub>APP</sub> is calculated as follows:  T<sub>APP</sub> = AppCycleFactor × SendClock |
+| AppCycleFactor |  | Static | UInt | 0 | Application cycle factor:  - Range of values: 0 &lt;= AppCycleFactor &lt;= 85 - 0: SendClock, AppCycleFactor and ToTimes are read in automatically   The application cycle T<sub>APP</sub> is calculated as follows:  T<sub>APP</sub> = AppCycleFactor × SendClock |
 | ToTimes |  | Static | LTime array [1...8] | LT#0ns | T<sub>o</sub> for each TIO module: Time for output of isochronous output data.  Note: If you use the parameter value AppCycleFactor = 0, ToTimes can be left as the default (automatic reading of the parameters). |
 | * Checked once at startup of the CPU  ** The IPO model (PIP_Mode = 2) provides the shortest response times, but it also places the highest demands on system performance. Processing of all TIO instructions and other program sections must be completed within one send clock. Select the OIP model (PIP_Mode = 0) only if you use only one instance of the TIO_SYNC instruction per process image partition so that the SYNC_PI and SYNC_PO instructions are not called more than once in the isochronous OB. In addition, do not call SYNC_PI and SYNC_PO in the other program sections in the OIP model. |  |  |  |  |  |
 
@@ -112,7 +112,7 @@ The double word is divided as follows:
 | 10020000 | The read cycle time of the isochronous OB is invalid (LT#0ms or negative).  The instruction can only be used without errors in an isochronous OB. | - Correct the value of the cycle time. - Make sure that TIO_SYNC is called in a "Synchronous Cycle" or "MC-PostServo" OB. |
 | 10030000 | The TIO_SYNC instruction is not called in an isochronous OB. The instruction can only be used without errors in an isochronous OB. | Make sure that TIO_SYNC is called in a "Synchronous Cycle" or "MC-PostServo" OB. |
 | 10040000 | The assigned value at the PIP_Mode input parameter is outside the valid range of 0 to 2. | Correct the value at the PIP_Mode input parameter. |
-| 10050000 | The configured send clock is outside the permitted range of 0 < SendClock <= 4 ms. | Correct the value of the send clock. |
+| 10050000 | The configured send clock is outside the permitted range of 0 &lt; SendClock &lt;= 4 ms. | Correct the value of the send clock. |
 | 0006xxxx* | An error has occurred during execution of the SYNC_PI system function. The low word xxxx displays the error information of the RET_VAL return value from SYNC_PI. | Read the description of the SYNC_PI in the STEP 7 (TIA Portal) information system. |
 | 0007xxxx* | An error has occurred during execution of the SYNC_PO system function. The low word xxxx displays the error information of the return value RET_VAL from SYNC_PO. | Read the description of the SYNC_PO in the STEP 7 (TIA Portal) information system. |
 | 10080000 | At least one of the hardware identifiers does not belong to a TIO module. | Check the values of input parameters HWID_1 to HWID_8. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. |
@@ -125,7 +125,7 @@ The double word is divided as follows:
 | 100F0000 | HWID_7 is not a valid hardware identifier.  Possible cause: No module with this hardware identifier available. |  |
 | 10100000 | HWID_8 is not a valid hardware identifier.  Possible cause: No module with this hardware identifier available. |  |
 | 10110000 | The value at input parameter PIP_PART is outside the valid range of 1 ... 31. | Correct the value at the PIP_PART input parameter. |
-| 10120000 | The value "2" is configured at the input parameter PIP_Mode, while the value > 1 (reduction ratio) is configured at the static parameter AppCycleFactor. | Correct the value at the PIP_Mode input parameter. PIP_Mode with the value "2" does not allow a reduction ratio. |
+| 10120000 | The value "2" is configured at the input parameter PIP_Mode, while the value &gt; 1 (reduction ratio) is configured at the static parameter AppCycleFactor. | Correct the value at the PIP_Mode input parameter. PIP_Mode with the value "2" does not allow a reduction ratio. |
 | x0130000 | MC-Servo (OB91) is not isochronous to the bus cycle time. | Correct the value of the cycle time of the MC-Servo to the value of the bus cycle time.  Note:  Calling TIO instructions in an OB of the type "MC-PostServo" with reduction ratio "MC-Servo" can result in incorrect calculation of time stamps. |
 | x014xxxx | An error has occurred when reading the data record. The low word xxxx indicates the error information of the instruction RDREC. | Read the description of the instruction RDREC in the STEP 7 (TIA Portal) information system. |
 | x0FF0000 | General internal error. | — |
@@ -210,8 +210,8 @@ The double word is divided as follows:
 | 10060000 | Unable to find IO-Link Device.  Possible cause: The module configured using the hardware identifier is not an IO‑Link Master for Time‑based IO. | - Make sure that the configured module is an IO‑Link Master for Time‑based IO. - Check the value at the HWID input parameter. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. |
 | 10070000 | An internal error occurred during the address calculation. | Check the value at the HWID input parameter. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. An internal system constant of data type Hw_SubModule is available for the symbolic addressing. |
 | 00080000 | TIO module is not synchronized using the TIO_SYNC instruction. | Check the instruction TIO_SYNC. |
-| 10090000 | The read cycle time of the isochronous OB is outside the permitted range of 0 < T<sub>APP</sub> <= 16 ms and is therefore invalid.  The instruction can only be used without errors in an isochronous OB. | - Correct the cycle time. - Make sure that TIO_IOLink_IN is called in a "Synchronous Cycle" OB. |
-| 100A0000 | The assigned time at the TO input parameter is outside the permitted range of 0 < T<sub>o</sub> <= 4 ms. | Correct the value at the TO input parameter. |
+| 10090000 | The read cycle time of the isochronous OB is outside the permitted range of 0 &lt; T<sub>APP</sub> &lt;= 16 ms and is therefore invalid.  The instruction can only be used without errors in an isochronous OB. | - Correct the cycle time. - Make sure that TIO_IOLink_IN is called in a "Synchronous Cycle" OB. |
+| 100A0000 | The assigned time at the TO input parameter is outside the permitted range of 0 &lt; T<sub>o</sub> &lt;= 4 ms. | Correct the value at the TO input parameter. |
 | 100Bxxxx | An error has occurred during execution of the RD_ADDR system function. The low word xxxx displays the error information of the RET_VAL return value from RD_ADDR. | Read the description of the RD_ADDR in the TIA Portal information system. |
 | 000C0000 | The converted time stamp is invalid. | Check the connected sensor and the interaction between IO‑Link Master and sensor (e.g., configuration). |
 | 000D0000 | The value status PortQualifier of the IO-Link indicates that the process data is invalid. | Check the connected sensor and its configuration. |
@@ -264,7 +264,7 @@ The table below shows the parameters of the TIO_DI instruction.
 
 | Parameter | Declaration in library version |  | Data type | Default | Description |
 | --- | --- | --- | --- | --- | --- |
-| < V2.0 | ≥ V2.0 | S7-1500 |  |  |  |
+| &lt; V2.0 | ≥ V2.0 | S7-1500 |  |  |  |
 | HWID* | Input |  | HW_IO | 0 | Hardware identifier for TIO module from hardware configuration |
 | Channel* | Input |  | UInt | 0 | Number (0 ... m) of the digital input of the connected TIO module |
 | EdgeSel | Input |  | UInt | 3 | Specify the edges for which time stamps are detected:  0<sub>D</sub>: Invalid  1: Two rising edges  2: Two falling edges  3: Rising and falling edge (order depending on occurrence)  4: First rising, then falling edge  5: First falling, then rising edge  6 to 255: Invalid  EdgeSel can be changed during normal operation. |
@@ -305,14 +305,14 @@ The double word is divided as follows:
 | 10060000 | No TIO module found.  Possible cause: The module configured using the hardware identifier is not a TIO module. | - Make sure that the configured module is a TIO module. - Check the value at the HWID input parameter. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. |
 | 10070000 | An internal error occurred during the address calculation. | Check the value at the HWID input parameter. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. An internal system constant of data type Hw_SubModule is available for the symbolic addressing. |
 | 00080000 | TIO module is not synchronized using the TIO_SYNC instruction.  The error code can also indicate that:  - A job was already present before the first run of the instruction. - The assigned number at the Channel input parameter is not a digital input. | Check the instruction TIO_SYNC. |
-| 10090000 | The read cycle time of the isochronous OB is outside the permitted range of 0 < T<sub>APP</sub> <= 16 ms and is therefore invalid.  The instruction can only be used without errors in an isochronous OB. | - Correct the cycle time. - Make sure that TIO_DI is called in a "Synchronous Cycle" or "MC-PostServo" OB. |
-| 100A0000 | The time T<sub>O</sub> of the TIO model stored in TIO_SYNC_Data is outside the permissible range of 0 < T<sub>o</sub> <= 4 ms. | Check the instruction TIO_SYNC. |
+| 10090000 | The read cycle time of the isochronous OB is outside the permitted range of 0 &lt; T<sub>APP</sub> &lt;= 16 ms and is therefore invalid.  The instruction can only be used without errors in an isochronous OB. | - Correct the cycle time. - Make sure that TIO_DI is called in a "Synchronous Cycle" or "MC-PostServo" OB. |
+| 100A0000 | The time T<sub>O</sub> of the TIO model stored in TIO_SYNC_Data is outside the permissible range of 0 &lt; T<sub>o</sub> &lt;= 4 ms. | Check the instruction TIO_SYNC. |
 | 100Bxxxx | An error has occurred during execution of the RD_ADDR system function. The low word xxxx displays the error information of the RET_VAL return value from RD_ADDR. | Read the description of the RD_ADDR in the STEP 7 (TIA Portal) information system. |
 | 000C0000 | The converted time stamp is invalid.  Possible cause: Communication error | Check the communication with the TIO module. |
 | 000D0000 | The Quality Information of the digital input indicates that an error has occurred at the digital input. | Check the supply voltage L+/1L+/2L+. |
 | 000E0000 | The assigned number at the Channel input parameter is not a digital input configured as Timer DI. | - Check the channel configuration (only for TM Timer DIDQ 16x24V). - Check the operating mode of the digital input. |
 | 000F0000 | The assigned value at the EdgeSel input parameter is outside the valid range of 1 to 5. | Correct the value at the EdgeSel input parameter. |
-| 10100000 | The send clock is outside the permitted range of 0 < SendClock <= 4 ms and is therefore invalid.  The error code can also indicate that   - The data in TIO_SYNC_Data is invalid or does not exist. - The TIO_DI instruction is not called in an isochronous OB. | Correct the send clock. |
+| 10100000 | The send clock is outside the permitted range of 0 &lt; SendClock &lt;= 4 ms and is therefore invalid.  The error code can also indicate that   - The data in TIO_SYNC_Data is invalid or does not exist. - The TIO_DI instruction is not called in an isochronous OB. | Correct the send clock. |
 | x0130000 | MC-Servo (OB91) is not isochronous to the bus cycle time. | Correct the value of the cycle time of the MC-Servo to the value of the bus cycle time.  Note:  Calling TIO instructions in an OB of the type "MC-PostServo" with reduction ratio "MC-Servo" can result in incorrect calculation of time stamps. |
 | 10140000 | The configured value at the HWID input parameter is not present in the structure at the TIO_SYNC_Data parameter. The HWID and TIO_SYNC_Data parameters are not consistent. | Correct the value at the HWID input parameter or the structure at the TIO_SYNC_Data parameter. |
 | x0FF0000 | General internal error. | — |
@@ -428,14 +428,14 @@ The double word is divided as follows:
 | 10060000 | No TIO module found.  Possible cause: The module configured using the hardware identifier is not a TIO module. | - Make sure that the configured module is a TIO module. - Check the value at the HWID input parameter. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. |
 | 10070000 | An internal error occurred during the address calculation. | Check the value at the HWID input parameter. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. An internal system constant of data type Hw_SubModule is available for the symbolic addressing. |
 | 00080000 | TIO module is not synchronized using the TIO_SYNC instruction.  The error code can also indicate that:  - A job was already present before the first run of the instruction. - The assigned number at the Channel input parameter is not a digital input. | Check the instruction TIO_SYNC. |
-| 10090000 | The read cycle time of the isochronous OB is outside the permitted range of 0 < T<sub>APP</sub> <= 16 ms and is therefore invalid.  The instruction can only be used without errors in an isochronous OB. | - Correct the cycle time. - Make sure that TIO_DI_ONCE is called in a "Synchronous Cycle" or "MC-PostServo" OB. |
-| 100A0000 | The time T<sub>O</sub> of the TIO model stored in TIO_SYNC_Data is outside the permissible range of 0 < T<sub>o</sub> <= 4 ms. | Check the instruction TIO_SYNC. |
+| 10090000 | The read cycle time of the isochronous OB is outside the permitted range of 0 &lt; T<sub>APP</sub> &lt;= 16 ms and is therefore invalid.  The instruction can only be used without errors in an isochronous OB. | - Correct the cycle time. - Make sure that TIO_DI_ONCE is called in a "Synchronous Cycle" or "MC-PostServo" OB. |
+| 100A0000 | The time T<sub>O</sub> of the TIO model stored in TIO_SYNC_Data is outside the permissible range of 0 &lt; T<sub>o</sub> &lt;= 4 ms. | Check the instruction TIO_SYNC. |
 | 100Bxxxx | An error has occurred during execution of the RD_ADDR system function. The low word xxxx displays the error information of the RET_VAL return value from RD_ADDR. | Read the description of the RD_ADDR in the STEP 7 (TIA Portal) information system. |
 | 000C0000 | The converted time stamp is invalid.  Possible cause: Communication error | Check the communication with the TIO module. |
 | 000D0000 | The Quality Information of the digital input indicates that an error has occurred at the digital input. | Check the supply voltage L+/1L+/2L+. |
 | 000E0000 | The assigned number at the Channel input parameter is not a digital input configured as Timer DI. | - Check the channel configuration (only for TM Timer DIDQ 16x24V). - Check the operating mode of the digital input. |
 | 000F0000 | The assigned value at the EdgeSel input parameter is outside the valid range of 1 to 5. | Correct the value at the EdgeSel input parameter. |
-| 10100000 | The send clock is outside the permitted range of 0 < SendClock <= 4 ms and is therefore invalid.  The error code can also indicate that   - The data in TIO_SYNC_Data is invalid or does not exist. - The TIO_DI instruction is not called in an isochronous OB. | Correct the send clock. |
+| 10100000 | The send clock is outside the permitted range of 0 &lt; SendClock &lt;= 4 ms and is therefore invalid.  The error code can also indicate that   - The data in TIO_SYNC_Data is invalid or does not exist. - The TIO_DI instruction is not called in an isochronous OB. | Correct the send clock. |
 | x0130000 | MC-Servo (OB91) is not isochronous to the bus cycle time. | Correct the value of the cycle time of the MC-Servo to the value of the bus cycle time.  Note:  Calling TIO instructions in an OB of the type "MC-PostServo" with reduction ratio "MC-Servo" can result in incorrect calculation of time stamps. |
 | 10140000 | The configured value at the HWID input parameter is not present in the structure at the TIO_SYNC_Data parameter. The HWID and TIO_SYNC_Data parameters are not consistent. | Correct the value at the HWID input parameter or the structure at the TIO_SYNC_Data parameter. |
 | x0FF0000 | General internal error. | — |
@@ -477,7 +477,7 @@ You start an output job with a positive edge at the "REQ" parameter. You can onl
 >
 > Constraint:
 >
-> If the adapted time stamp is less than 16 ms before the output time (TimeStamp - TIO_Time < 16), the last valid time stamp is used.
+> If the adapted time stamp is less than 16 ms before the output time (TimeStamp - TIO_Time &lt; 16), the last valid time stamp is used.
 
 If you specify the value 0 as TimeStamp, the output is written directly with the data specified at the input AA_Data. This gives you the option to implement a direct control from the TIO module without time stamp in manual mode. You can use the direct control to interrupt an ongoing job.
 
@@ -531,13 +531,13 @@ The double word is divided as follows:
 | 10060000 | Unable to find IO-Link Device.  Possible cause:  The module configured using the hardware identifier is not an IO‑Link Master for Time‑based IO. | - Make sure that the configured module is an IO‑Link Master for Time‑based IO. - Check the value at the HWID input parameter. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. |
 | 10070000 | An internal error occurred during the address calculation. | Check the value at the HWID input parameter. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. An internal system constant of data type Hw_SubModule is available for the symbolic addressing. |
 | 00080000 | TIO module is not synchronized using the TIO_SYNC instruction. | Check the instruction TIO_SYNC. |
-| 10090000 | The read cycle time of the isochronous OB is outside the permitted range of 0 < T<sub>APP</sub> <= 16 ms and is therefore invalid.  The instruction can only be used without errors in an isochronous OB. | - Correct the cycle time. - Make sure that TIO_IOLink_OUT is called in a "Synchronous Cycle" OB. |
-| 100A0000 | The assigned time at the TO input parameter is outside the permitted range of 0 < T<sub>o</sub> <= 4 ms. | Correct the value at the TO input parameter. |
+| 10090000 | The read cycle time of the isochronous OB is outside the permitted range of 0 &lt; T<sub>APP</sub> &lt;= 16 ms and is therefore invalid.  The instruction can only be used without errors in an isochronous OB. | - Correct the cycle time. - Make sure that TIO_IOLink_OUT is called in a "Synchronous Cycle" OB. |
+| 100A0000 | The assigned time at the TO input parameter is outside the permitted range of 0 &lt; T<sub>o</sub> &lt;= 4 ms. | Correct the value at the TO input parameter. |
 | 100Bxxxx | An error has occurred during execution of the RD_ADDR system function. The low word xxxx displays the error information of the RET_VAL return value from RD_ADDR. | Read the description of the RD_ADDR in the TIA Portal information system. |
 | 000C0000 | The time stamp at the TimeStamp input parameter is invalid. | Check the TimeStamp input parameter. |
 | 000D0000 | The value status PortQualifier of the IO-Link indicates that the process data is invalid. | Check the connected sensor and its configuration. |
 | 100E0000 | The configured port mode of the IO-Link is incorrect. | Check the configuration of the connected sensor with S7‑PCT. |
-| 100F0000 | The read cycle time of the OB of type "Synchronous Cycle" is too long: T<sub>APP</sub> > 16 ms. | Configure a smaller multiple of the send clock as the cycle time. |
+| 100F0000 | The read cycle time of the OB of type "Synchronous Cycle" is too long: T<sub>APP</sub> &gt; 16 ms. | Configure a smaller multiple of the send clock as the cycle time. |
 | x0FF0000 | General internal error. | — |
 
 ## TIO_DQ: Output edges time-controlled at the digital output (S7-1500)
@@ -567,7 +567,7 @@ The instruction outputs edges time-controlled at a digital output during normal 
 
 Depending on the program execution model, a time stamp must exceed the following value:
 
-| Program execution model | TimeStampRE> ...  TimeStampFE > ... |
+| Program execution model | TimeStampRE&gt; ...  TimeStampFE &gt; ... |
 | --- | --- |
 | IPO model | TIO_Time + T<sub>APP</sub> + T<sub>O</sub> |
 | OIP model | TIO_Time + T<sub>APP</sub> + SendClock + T<sub>O</sub> |
@@ -604,7 +604,7 @@ The figure below shows an example for the reaction of the bits DONE and BUSY at 
 >
 > Constraint:
 >
-> If a changed time stamp is less than two application cycles before the output time (TimeStampRE - TIO_Time < 2*T<sub>APP</sub> or TimeStampFE - TIO_Time < 2*T<sub>APP</sub>), it is not taken into consideration. In this case, the last valid time stamp is used because it was already transferred to the TIO module.
+> If a changed time stamp is less than two application cycles before the output time (TimeStampRE - TIO_Time &lt; 2*T<sub>APP</sub> or TimeStampFE - TIO_Time &lt; 2*T<sub>APP</sub>), it is not taken into consideration. In this case, the last valid time stamp is used because it was already transferred to the TIO module.
 
 > **Note**
 >
@@ -622,7 +622,7 @@ The table below shows the parameters of the TIO_DQ instruction.
 
 | Parameter | Declaration in library version |  | Data type | Default | Description |
 | --- | --- | --- | --- | --- | --- |
-| < V2.0 | ≥ V2.0 | S7-1500 |  |  |  |
+| &lt; V2.0 | ≥ V2.0 | S7-1500 |  |  |  |
 | REQ | Input |  | Bool | False | Starts the job at a positive edge. |
 | HWID* | Input |  | HW_IO | 0 | Hardware identifier for TIO module from hardware configuration |
 | Channel* | Input |  | UInt | 0 | Number (0 ... m) of the digital output of the connected TIO module |
@@ -664,13 +664,13 @@ The double word is divided as follows:
 | 10070000 | An internal error occurred during the address calculation. | Check the value at the HWID input parameter. Specify the hardware identifier of the TIO module from its module properties in the hardware configuration. An internal system constant of data type Hw_SubModule is available for the symbolic addressing. |
 | x0080000 | TIO module is not synchronized using the TIO_SYNC instruction.  The error code can also indicate that:   - A job was already present before the first run of the instruction. - The assigned number at the Channel input parameter is not a digital output. | Check the instruction TIO_SYNC. |
 | 10090000 | The read cycle time of the isochronous OB is LT#0ms or has as negative value and is therefore invalid. Correct the value.   The instruction can only be used without errors in an isochronous OB. | - Correct the cycle time. - Make sure that TIO_DQ is called in a "Synchronous Cycle" or "MC-PostServo" OB. |
-| 100A0000 | The time T<sub>O</sub> of the TIO model stored in TIO_SYNC_Data is outside the permissible range of 0 < T<sub>o</sub> <= 4 ms. | Check the instruction TIO_SYNC. |
+| 100A0000 | The time T<sub>O</sub> of the TIO model stored in TIO_SYNC_Data is outside the permissible range of 0 &lt; T<sub>o</sub> &lt;= 4 ms. | Check the instruction TIO_SYNC. |
 | 100Bxxxx | An error has occurred during execution of the RD_ADDR system function. The low word xxxx displays the error information of the RET_VAL return value from RD_ADDR. | Read the description of the RD_ADDR in the STEP 7 (TIA Portal) information system. |
 | 000C0000 | One or both time stamps at the TimeStampRE and TimeStampFE input parameters are invalid. The error is only signaled for the duration of one application cycle. | Check the TimeStampRE and TimeStampFE input parameters. |
 | 000D0000 | The Quality Information of the digital output indicates that an error has occurred at the digital output. | - Check the parameter assignment of the digital output. - Check the supply voltage L+/1L+/2L+. - Check the wiring of the digital output for short-circuit, overload, and overtemperature. |
 | 000E0000 | The number configured at the Channel input parameter is not a digital output configured as Timer DQ. | - Check the channel configuration (only for TM Timer DIDQ 16x24V). - Check the operating mode of the digital output. |
-| 100F0000 | The read cycle time of the OB of type "Synchronous Cycle" is too long: T<sub>APP</sub> > 16 ms. | Configure a smaller multiple of the send clock as the cycle time. |
-| 10100000 | The send clock is outside the permitted range of 0 < SEND_CLOCK <= 4 ms and is therefore invalid.  The error code can also indicate that   - The data in TIO_SYNC_Data is invalid or does not exist. - The TIO_DQ instruction is not called in an isochronous OB. | Correct the send clock. |
+| 100F0000 | The read cycle time of the OB of type "Synchronous Cycle" is too long: T<sub>APP</sub> &gt; 16 ms. | Configure a smaller multiple of the send clock as the cycle time. |
+| 10100000 | The send clock is outside the permitted range of 0 &lt; SEND_CLOCK &lt;= 4 ms and is therefore invalid.  The error code can also indicate that   - The data in TIO_SYNC_Data is invalid or does not exist. - The TIO_DQ instruction is not called in an isochronous OB. | Correct the send clock. |
 | 00110000 | The assigned value at the Out_Mode input parameter is outside the valid range of 0 to 3. | Correct the value at the Out_Mode input parameter. |
 | x0130000 | MC-Servo (OB91) is not isochronous to the bus cycle time. | Correct the value of the cycle time of the MC-Servo to the value of the bus cycle time.  Note:  Calling TIO instructions in an OB of the type "MC-PostServo" with reduction ratio "MC-Servo" can result in incorrect calculation of time stamps. |
 | 10140000 | The configured value at the HWID input parameter is not present in the structure at the TIO_SYNC_Data parameter. The HWID and TIO_SYNC_Data parameters are not consistent. | Correct the value at the HWID input parameter or the structure at the TIO_SYNC_Data parameter. |

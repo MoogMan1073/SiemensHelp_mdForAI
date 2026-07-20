@@ -122,7 +122,7 @@ See also: [Comparing PLC programs based on checksums](#comparison-of-plc-program
 
 #### Access authorizations for the display of the comparison status (S7-1200/1500)
 
-- CPU 1500 < V2.0 (as well as ET200 SP and software controller), CPU 1200 V4.0 and V4.1**:**
+- CPU 1500 &lt; V2.0 (as well as ET200 SP and software controller), CPU 1200 V4.0 and V4.1**:**
 
   As of TIA Portal V14, the required access rights for displaying the comparison status of blocks have changed for the specified CPUs from the S7-1200/1500 series.
 
@@ -135,7 +135,7 @@ See also: [Comparing PLC programs based on checksums](#comparison-of-plc-program
   In this case, click "Cancel" in the password prompt for read access and enter the password for "HMI access" in the subsequent dialog. The online connection is then established with the available "HMI access rights", but no comparison status of the blocks is displayed.
 
   Only questions marks are displayed in place of the icons for the comparison status.
-- CPU 1200 <=V3.x.**:**
+- CPU 1200 &lt;=V3.x.**:**
 
   As of TIA Portal V14, there is a password prompt for the above specified CPUs when you go online for displaying the comparison status of blocks, provided that these CPUs are configured with write protection and/or read protection.
 
@@ -177,7 +177,7 @@ The comparison of software units is basically the same as the comparison of othe
 
 You can also run a more comprehensive offline/online and offline/offline comparison in the compare editor.
 
-When you start an offline/online or offline/offline comparison on a device, the software units are integrated into the comparison. In the compare editor, the software units are shown in both the left and the right comparison table. In the "Property Comparison" section of the comparison editor under "Source Data > Software unit" you can see the checksums of the compared objects.
+When you start an offline/online or offline/offline comparison on a device, the software units are integrated into the comparison. In the compare editor, the software units are shown in both the left and the right comparison table. In the "Property Comparison" section of the comparison editor under "Source Data &gt; Software unit" you can see the checksums of the compared objects.
 
 During the comparison, the software units are assigned to each other based on their name and their objects are compared with each other. Objects with the same name in different software units are not compared with each other. This means, for example, that when the block "Block_1" is contained in the software unit "Unit1" in the offline project and online in the software unit "Unit2" in the device, they are considered as different objects. In an offline/offline comparison, you can also perform a manual comparison. You can select the objects to be compared.
 
@@ -261,7 +261,7 @@ PLC programs are automatically given a unique checksum during compilation. If th
 
 The checksum also remains unchanged when you make changes and undo them.
 
-The check takes place every time the PLC program is compiled, for example, when you select a CPU or a block folder and use the menu command "Compile > Software".
+The check takes place every time the PLC program is compiled, for example, when you select a CPU or a block folder and use the menu command "Compile &gt; Software".
 
 Two checksums are generated:
 
@@ -279,7 +279,7 @@ The checksum is loaded to the CPU together with the PLC program and is available
 
 #### Evaluating the checksum
 
-The checksum is displayed in the CPU properties (Properties > General > Checksums). From there, you can apply it manually to your documents. The "GetChecksum" extended instruction is available to read out the checksum while the program is running.
+The checksum is displayed in the CPU properties (Properties &gt; General &gt; Checksums). From there, you can apply it manually to your documents. The "GetChecksum" extended instruction is available to read out the checksum while the program is running.
 
 ---
 
@@ -317,7 +317,7 @@ You have the following options for comparing blocks in the compare editor:
 To perform an offline/online comparison, follow these steps:
 
 1. In the project tree, select a device that allows offline/online comparison.
-2. Select the "Compare > Offline/online" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/online" command in the shortcut menu.
 3. If you have not already established an online connection to this device, the "Go online" dialog opens. In this case, set all the necessary parameters for the connection and click "Connect".
 
    The online connection is established and the compare editor opens.
@@ -330,7 +330,7 @@ To perform an offline/online comparison, follow these steps:
 To perform an automatic offline/offline comparison of blocks, follow these steps:
 
 1. Select a device in the project tree that allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Drag-and-drop an additional device to the drop area of the right pane. The device to be compared can originate from the same project, a reference project or the library.
@@ -345,7 +345,7 @@ You can drag any other device to the drop area at any time to perform further co
 To perform a manual offline/offline comparison of blocks, follow these steps:
 
 1. Select a device in the project tree that allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Drag-and-drop an additional device to the drop area of the right pane. The device to be compared can originate from the same project, a reference project or the library.
@@ -425,24 +425,24 @@ To start a detailed comparison for a block using the compare editor, follow thes
 To start an offline/offline detailed comparison for a block directly in the project tree, follow these steps:
 
 1. Right-click the block that you want to compare. This can also be a block from a reference project.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. Right-click the block that you want to compare with the block that you previously selected as left object. This can be a block from the current project, a reference project or a library.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
 To start an offline/online detailed comparison for a block directly in the project tree, follow these steps:
 
 1. Establish an online connection to the device where the block is located.
 2. Right-click the block that you want to compare with its online object.
-3. Select the command "Quick compare > Compare with the online object" in the shortcut menu.
+3. Select the command "Quick compare &gt; Compare with the online object" in the shortcut menu.
 
 ##### Starting detailed comparison in a library
 
 To start a detailed comparison for a block directly in a library, follow these steps:
 
 1. In the project library or a global library, right-click the block that you want to compare.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. Right-click the block that you want to compare with the block that you previously selected as left object. This can be a block from the current project, a reference project or a library.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
 ##### Starting detailed comparisons in the program editor
 
@@ -540,9 +540,9 @@ The manual comparison is also available for an offline/offline comparison. It le
 To start an offline/offline detailed comparison for a GRAPH block directly in the project tree, follow these steps:
 
 1. Right-click the block that you want to compare. This can also be a block from a reference project.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. Right-click the block that you want to compare with the block that you previously selected as left object. This can be a block from the current project, a reference project or a library.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
    One instance of the program editor is opened for each version of the GRAPH blocks compared and the two instances are displayed side by side. Any differences will be highlighted. The comparison takes place in the "Compare sequence" mode.
 
@@ -550,7 +550,7 @@ To start an online/offline detailed comparison for a GRAPH block directly in the
 
 1. Establish an online connection to the device where the block is located.
 2. Right-click the block that you want to compare with its online object.
-3. Select the command "Quick compare > Compare with the online object" in the shortcut menu.
+3. Select the command "Quick compare &gt; Compare with the online object" in the shortcut menu.
 
    One instance of the program editor is opened for each version of the GRAPH blocks compared and the two instances are displayed side by side. Any differences will be highlighted. The comparison takes place in the "Compare sequence" mode.
 
@@ -559,9 +559,9 @@ To start an online/offline detailed comparison for a GRAPH block directly in the
 To start a detailed comparison for a block directly in a library, follow these steps:
 
 1. In the project library or a global library, right-click the block that you want to compare.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. Right-click the block that you want to compare with the block that you previously selected as left object. This can be a block from the current project, a reference project or a library.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
 ##### Starting detailed comparisons in the program editor
 
@@ -649,24 +649,24 @@ To start a detailed comparison for a data block using the compare editor, follow
 To start an offline/offline detailed comparison for a data block directly in the project tree, follow these steps:
 
 1. Right-click the data block that you want to compare. This can also be a data block from a reference project.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. Right-click the data block that you want to compare with the data block that you previously selected as left object. This can be a data block from the current project, a reference project or a library.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
 To start an offline/online detailed comparison for a data block directly in the project tree, follow these steps:
 
 1. Establish an online connection to the device where the data block is located.
 2. Right-click the data block that you want to compare with its online object.
-3. Select the command "Quick compare > Compare with the online object" in the shortcut menu.
+3. Select the command "Quick compare &gt; Compare with the online object" in the shortcut menu.
 
 ##### Starting detailed comparison in a library
 
 To start a detailed comparison for a data block directly in a library, follow these steps:
 
 1. In the project library or a global library, right-click the data block that you want to compare.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. Right-click the data block that you want to compare with the data block that you previously selected as left object. This can be a data block from the current project, a reference project or a library.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
 #### Visualization of the comparison result
 
@@ -759,7 +759,7 @@ The compared block is displayed in the right window. In an offline/online compar
 
 ###### Comparison result in the Inspector window
 
-The differences are displayed in the form of a table in the "Info > Comparison result" tab of the Inspector window. Double-click on a row to navigate to the corresponding difference in the block.
+The differences are displayed in the form of a table in the "Info &gt; Comparison result" tab of the Inspector window. Double-click on a row to navigate to the corresponding difference in the block.
 
 ---
 
@@ -840,7 +840,7 @@ The compared block is displayed in the right window. In an online/offline compar
 
 ###### Comparison result in the Inspector window
 
-The differences are displayed in the form of a table in the "Info > Comparison result" tab of the Inspector window. Double-click on a row to navigate to the corresponding difference in the block.
+The differences are displayed in the form of a table in the "Info &gt; Comparison result" tab of the Inspector window. Double-click on a row to navigate to the corresponding difference in the block.
 
 ---
 
@@ -920,7 +920,7 @@ The compared block is displayed in the right window. In an offline/online compar
 
 ###### Comparison result in the Inspector window
 
-The differences are displayed in the form of a table in the "Info > Comparison result" tab of the Inspector window. Double-click on a row to navigate to the corresponding difference in the block.
+The differences are displayed in the form of a table in the "Info &gt; Comparison result" tab of the Inspector window. Double-click on a row to navigate to the corresponding difference in the block.
 
 ---
 
@@ -1086,7 +1086,7 @@ You can click the dividers to toggle quickly between the navigation and the curr
 
 ###### Comparison result in the Inspector window
 
-The differences are displayed in the form of a table in the "Info > Comparison result" tab of the Inspector window. Double-click on a row to navigate to the corresponding difference in the block.
+The differences are displayed in the form of a table in the "Info &gt; Comparison result" tab of the Inspector window. Double-click on a row to navigate to the corresponding difference in the block.
 
 ---
 
@@ -1120,7 +1120,7 @@ You have run a detailed comparison.
 
 To navigate to a difference between the two blocks, follow these steps:
 
-1. Open the list of results for the detailed comparison under "Info > Comparison result" in the Inspector window.
+1. Open the list of results for the detailed comparison under "Info &gt; Comparison result" in the Inspector window.
 2. Double-click a difference.
 
    The difference is selected in both editors.
@@ -1317,7 +1317,7 @@ You have the following options for comparing PLC tags:
 To perform an automatic offline/offline comparison of PLC tag tables, follow these steps:
 
 1. Select a device in the project tree that allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Drag-and-drop an additional device to the drop area of the right pane. The device to be compared can originate from the same project, a reference project or the library.
@@ -1332,7 +1332,7 @@ You can drag any other device to the drop area at any time to perform further co
 To perform a manual offline/offline comparison of PLC tag tables, follow these steps:
 
 1. Select a device in the project tree that allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Drag-and-drop an additional device to the drop area of the right pane. The device to be compared can originate from the same project, a reference project or the library.
@@ -1348,7 +1348,7 @@ You can drag any other device to the drop area at any time to perform further co
 To perform an offline/offline comparison of PLC tag tables, follow these steps:
 
 1. In the project tree, select a device that allows offline/online comparison.
-2. Select the "Compare > Offline/online" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/online" command in the shortcut menu.
 3. If you have not already established an online connection to this device, the "Go online" dialog opens. In this case, set all the necessary parameters for the connection and click "Connect".
 
    The online connection is established and the compare editor opens.
@@ -1373,9 +1373,9 @@ To start a detailed comparison for a PLC tag table using the compare editor, fol
 To start an offline/offline detailed comparison for a PLC tag table in the project tree, follow these steps:
 
 1. Right-click the PLC tag table that you want to compare. This can also be a PLC tag table from a reference project.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. Right-click the PLC tag table that you want to compare with the PLC tag table that you previously selected as left object.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
    A separate compare editor opens. All existing PLC tags and user constants of the selected PLC tag tables are displayed depending on the settings of the compare editor. However, system constants are not shown. You can identify the status of the PLC tags based on the symbols. You can define certain actions depending on the status of the PLC tags.
 
@@ -1383,7 +1383,7 @@ To start an offline/online detailed comparison for a PLC tag table directly in t
 
 1. Establish an online connection to the device where the PLC tag table is located.
 2. Right-click the PLC tag table that you want to compare with your online object.
-3. Select the command "Quick compare > Compare with the online object" in the shortcut menu.
+3. Select the command "Quick compare &gt; Compare with the online object" in the shortcut menu.
 
    A separate compare editor opens. All existing PLC tags and user constants of the selected PLC tag tables are displayed depending on the settings of the compare editor. However, system constants are not shown. You can identify the status of the PLC tags based on the symbols.
 
@@ -1434,7 +1434,7 @@ You have the following options for comparing PLC data types:
 To perform an offline/online comparison, follow these steps:
 
 1. In the project tree, select a device that allows offline/online comparison.
-2. Select the "Compare > Offline/online" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/online" command in the shortcut menu.
 
    If you have not already established an online connection to this device, the "Go online" dialog opens. In this case, set all the necessary parameters for the connection and click "Connect".
 
@@ -1448,7 +1448,7 @@ To perform an offline/online comparison, follow these steps:
 To perform an automatic offline/offline comparison of PLC data types, follow these steps:
 
 1. Select a device in the project tree that allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Drag-and-drop an additional device to the drop area of the right pane. The device to be compared can originate from the same project, a reference project or the library.
@@ -1461,7 +1461,7 @@ To perform an automatic offline/offline comparison of PLC data types, follow the
 To perform a manual offline/offline comparison of PLC data types, follow these steps:
 
 1. Select a device in the project tree that allows offline/offline comparison.
-2. Select the "Compare > Offline/offline" command in the shortcut menu.
+2. Select the "Compare &gt; Offline/offline" command in the shortcut menu.
 
    The compare editor opens and the selected device is displayed in the left area.
 3. Drag-and-drop an additional device to the drop area of the right pane. The device to be compared can originate from the same project, a reference project or the library.
@@ -1478,35 +1478,35 @@ To start a detailed comparison for a PLC data type using the compare editor, fol
 2. For an automatic offline/offline comparison in the compare editor, select the PLC data type for which you want to run a detailed comparison. Note that two PLC data types must be selected for comparison with a manual offline/offline comparison.
 3. Click the "Start detailed comparison" button in the toolbar.
 
-   The "PLC data type comparison" window opens and all tags of the compared PLC data types are displayed. You can view the differences under "Info > Result of comparison" in the inspector window.
+   The "PLC data type comparison" window opens and all tags of the compared PLC data types are displayed. You can view the differences under "Info &gt; Result of comparison" in the inspector window.
 
 ### Starting detailed comparison in the project tree
 
 To start a offline/offline detailed comparison for a PLC data type directly in the project tree, follow these steps:
 
 1. Right-click the PLC data type that you want to compare. This can also be a PLC data type from a reference project.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. Right-click the PLC data type that you want to compare with the PLC data type that you previously selected as left object.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
-   The "PLC data type comparison" window opens and all tags of the compared PLC data types are displayed. You can view the differences under "Info > Result of comparison" in the inspector window.
+   The "PLC data type comparison" window opens and all tags of the compared PLC data types are displayed. You can view the differences under "Info &gt; Result of comparison" in the inspector window.
 
 To start an offline/online detailed comparison for a PLC data type for a CPU of the S7-1200/1500 series directly in the project tree, follow these steps:
 
 1. Establish an online connection to the device where the block is located.
 2. Right-click the PLC data type that you want to compare with its online object.
-3. Select the command "Quick compare > Compare with the online object" in the shortcut menu.
+3. Select the command "Quick compare &gt; Compare with the online object" in the shortcut menu.
 
-   The "PLC data type comparison" window opens and all tags of the compared PLC data types are displayed. You can view the differences under "Info > Result of comparison" in the inspector window.
+   The "PLC data type comparison" window opens and all tags of the compared PLC data types are displayed. You can view the differences under "Info &gt; Result of comparison" in the inspector window.
 
 ### Starting detailed comparison in a library
 
 To start a detailed comparison for a PLC data type directly in a library, follow these steps:
 
 1. In the project library or a global library, right-click the PLC data type that you want to compare.
-2. Select the command "Quick compare > Select as left object" in the shortcut menu.
+2. Select the command "Quick compare &gt; Select as left object" in the shortcut menu.
 3. Right-click the PLC data type that you want to compare with the block that you previously selected as left object. This can be a PLC data type from the current project, a reference project or a library.
-4. Select the command "Quick compare > Compare with <selected object>" in the shortcut menu. "<selected object>" stands for the left comparison object.
+4. Select the command "Quick compare &gt; Compare with &lt;selected object&gt;" in the shortcut menu. "&lt;selected object&gt;" stands for the left comparison object.
 
 ---
 

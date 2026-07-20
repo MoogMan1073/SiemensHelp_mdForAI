@@ -109,7 +109,7 @@ To set the size of the reserved memory for all newly created blocks in the proje
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "PLC programming > General" group in the area navigation.
+2. Select the "PLC programming &gt; General" group in the area navigation.
 3. In the "Reserved memory for download without reinitialization" group, enter in the "Memory reserve" input box the desired number of bytes to be allocated for a later extension of the block interface.
 
    Newly created function blocks and global data blocks now get a reserved memory in the specified size. Blocks that already exist are not affected by this change.
@@ -221,10 +221,10 @@ To declare additional tags, follow these steps:
 
 1. Select a declaration section, for example "Input", "Output", "InOut" or "Static".
 2. In the selected section, declare as usual one or more tags and enter their properties in the columns. In the "Retain" column of an FB, you can select only between the "Retain" and "Non-retain" settings. The "Set in IDB" setting is not available in the reserved memory.
-3. Compile the changed blocks, for example by selecting them in the project tree and selecting the command "Compile> Software (only changes)" in the shortcut menu.
+3. Compile the changed blocks, for example by selecting them in the project tree and selecting the command "Compile&gt; Software (only changes)" in the shortcut menu.
 
    During compiling, the newly declared tags are inserted into the reserved memory. If the reserved memory is too small, the compiling is terminated and an error message notifies you about this.
-4. Load the changed blocks, for example by selecting them in the project tree and selecting the command "Load > Software (only changes)" in the shortcut menu.
+4. Load the changed blocks, for example by selecting them in the project tree and selecting the command "Load &gt; Software (only changes)" in the shortcut menu.
 
    When you load block extensions, only the newly added tags with defined start values are initialized. The existing online tags are not reinitialized.
 
@@ -256,7 +256,7 @@ If you decide to revise your program at a later time while the plant is not in o
 To reset the reserved memory of one or more blocks, follow these steps:
 
 1. Select the "Program blocks" folder, or specific blocks in this folder.
-2. Select the "Compile > Software (Reset memory reserve)" command from the shortcut menu.
+2. Select the "Compile &gt; Software (Reset memory reserve)" command from the shortcut menu.
 
 ### Result
 

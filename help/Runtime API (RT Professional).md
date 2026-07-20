@@ -492,7 +492,7 @@ If the tag status reports a limit violation with the code 0x0010, for example, t
 | DM_NOTIFY_QUEUE_80_PERCENT | 0x00000004 | Class Warning : Fill level of application queue 80% |
 | DM_NOTIFY_QUEUE_90_PERCENT | 0x00000005 | Class Warning : Fill level of application queue 90% |
 | DM_NOTIFY_QUEUE_OVERFLOW | 0x00000006 | Class Warning : Application queue overflow |
-| DM_NOTIFY_CYCLES_CHANGED | 0x00000010 | Class Warning => Read in cycles again |
+| DM_NOTIFY_CYCLES_CHANGED | 0x00000010 | Class Warning =&gt; Read in cycles again |
 | DM_NOTIFY_MACHINES_CHANGED | 0x00000011 | Class Warning : Computer list |
 | DM_NOTIFY_PROJECT_OPENED | 0x00000012 | Class Warning: Project is being loaded |
 | DM_NOTIFY_PROJECT_CLOSED | 0x00000013 | Class Warning: Project is being closed |
@@ -621,7 +621,7 @@ The following error messages can be returned by the API functions in the CMN_ERR
 | 27 | CharToSignedExcessByte |
 | 28 | CharToSignedExcessWord |
 | 29 | CharToSignedExcessDword |
-| > 29 | (CharToSignedByte) |
+| &gt; 29 | (CharToSignedByte) |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -641,7 +641,7 @@ The following error messages can be returned by the API functions in the CMN_ERR
 | 12 | ByteToExcessByte |
 | 13 | ByteToExcessWord |
 | 14 | ByteToExcessDword |
-| > 14 | (ByteToUnsignedByte) |
+| &gt; 14 | (ByteToUnsignedByte) |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -676,7 +676,7 @@ The following error messages can be returned by the API functions in the CMN_ERR
 | 27 | ShortToSignedExcessByte |
 | 28 | ShortToSignedExcessWord |
 | 29 | ShortToSignedExcessDword |
-| > 29 | (ShortToSignedWord) |
+| &gt; 29 | (ShortToSignedWord) |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -698,7 +698,7 @@ The following error messages can be returned by the API functions in the CMN_ERR
 | 14 | WordToExcessDword |
 | 15 | WordToSimaticBCDCounter |
 | 16 | WordToSimaticCounter |
-| > 16 | (WordToUnsignedWord) |
+| &gt; 16 | (WordToUnsignedWord) |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -738,7 +738,7 @@ The following error messages can be returned by the API functions in the CMN_ERR
 | 32 | (LongToSignedDword) |
 | 33 | (LongToSignedDword) |
 | 34 | LongToSimaticTimer |
-| > 34 | (LongToSignedDword) |
+| &gt; 34 | (LongToSignedDword) |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -763,7 +763,7 @@ The following error messages can be returned by the API functions in the CMN_ERR
 | 17 | (DwordToUnsignedDword) |
 | 18 | (DwordToUnsignedDword) |
 | 19 | DwordToSimaticTimer |
-| > 19 | (DwordToUnsignedDword) |
+| &gt; 19 | (DwordToUnsignedDword) |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -806,7 +806,7 @@ The following error messages can be returned by the API functions in the CMN_ERR
 | 35 | (FloatToFloat) |
 | 36 | FloatToS5Float |
 | 37 | FloatToSimaticTimer |
-| > 37 | (FloatToFloat) |
+| &gt; 37 | (FloatToFloat) |
 
 | Symbol | Meaning |
 | --- | --- |
@@ -849,7 +849,7 @@ The following error messages can be returned by the API functions in the CMN_ERR
 | 35 | (DoubleToDouble) |
 | 36 | DoubleToS5Float |
 | 37 | DoubleToSimaticTimer |
-| > 37 | (DoubleToDouble) |
+| &gt; 37 | (DoubleToDouble) |
 
 ---
 
@@ -1576,7 +1576,7 @@ The type of tag is specified in dwType:
 | DM_VARTYPE_RAW | Raw data type |
 | DM_VARTYPE_STRUCT | Structure tag |
 | DM_VARTYPE_TEXTREF | Text reference from text lib |
-| Values >=1024 | User-defined structure types  This type ID is needed in some calls, for example, for filters to identify a specific structure type. |
+| Values &gt;=1024 | User-defined structure types  This type ID is needed in some calls, for example, for filters to identify a specific structure type. |
 
 ****dwSize****
 
@@ -1642,12 +1642,12 @@ Tag value.
 
 > **Note**
 >
-> The dmValue VARIANT must be initialized with VariantInit(&dmValue) before its first use and then released with VariantClear(&dmValue) after its use.  
-> Only an array of several DM_VAR_UPDATE_STRUCT can be pre-initialized before its first use with ZeroMemory() or memset(). This affects the VARIANT dmValue contained here like a VariantInit(&dmValue), since 0 corresponds to a VT_EMPTY.
+> The dmValue VARIANT must be initialized with VariantInit(&amp;dmValue) before its first use and then released with VariantClear(&amp;dmValue) after its use.  
+> Only an array of several DM_VAR_UPDATE_STRUCT can be pre-initialized before its first use with ZeroMemory() or memset(). This affects the VARIANT dmValue contained here like a VariantInit(&amp;dmValue), since 0 corresponds to a VT_EMPTY.
 >
 > The DM_VAR_UPDATE_STRUCT structure may not be cleared with ZeroMemory() or memset() once it has been used. VARIANT then contains data that may be of the VT_BSTR type.
 >
-> If the tag type is VT_BSTR, problems can occur in memory management (memory leak), if no VariantClear(&dmValue) is made before allocated DM_VAR_UPDATE_STRUCT structures are deleted with delete[].
+> If the tag type is VT_BSTR, problems can occur in memory management (memory leak), if no VariantClear(&amp;dmValue) is made before allocated DM_VAR_UPDATE_STRUCT structures are deleted with delete[].
 
 |  |  |  |
 | --- | --- | --- |
@@ -1723,12 +1723,12 @@ Tag value.
 
 > **Note**
 >
-> The VARIANT dmValue must be initialized with VariantInit(&dmValue) before its first use and then released with VariantClear(&dmValue) after its use.  
-> Only an array of several DM_VAR_UPDATE_STRUCT can be pre-initialized before its first use with ZeroMemory() or memset(). This affects the VARIANT dmValue contained here like a VariantInit(&dmValue), since 0 corresponds to a VT_EMPTY.
+> The VARIANT dmValue must be initialized with VariantInit(&amp;dmValue) before its first use and then released with VariantClear(&amp;dmValue) after its use.  
+> Only an array of several DM_VAR_UPDATE_STRUCT can be pre-initialized before its first use with ZeroMemory() or memset(). This affects the VARIANT dmValue contained here like a VariantInit(&amp;dmValue), since 0 corresponds to a VT_EMPTY.
 >
 > The DM_VAR_UPDATE_STRUCTEX structure may not be cleared with ZeroMemory() or memset() once it has been used. VARIANT then contains data that may be of the VT_BSTR type.
 >
-> If the tag type is VT_BSTR, problems can occur in memory management (memory leak), if no VariantClear(&dmValue) is made before allocated DM_VAR_UPDATE_STRUCTEX structures are deleted with delete[].
+> If the tag type is VT_BSTR, problems can occur in memory management (memory leak), if no VariantClear(&amp;dmValue) is made before allocated DM_VAR_UPDATE_STRUCTEX structures are deleted with delete[].
 
 ****dwState****
 
@@ -2025,11 +2025,11 @@ The [DM_VARLIMIT](#dm_varlimit-rt-professional) structure contains information o
 
 ****dmStart****
 
-Start value of the tag. Must be release with VariantClear(&dmStart) after use.
+Start value of the tag. Must be release with VariantClear(&amp;dmStart) after use.
 
 ****dmDefault****
 
-Substitute value of tag. Must be release with VariantClear(&dmDefault) after use.
+Substitute value of tag. Must be release with VariantClear(&amp;dmDefault) after use.
 
 ****dwNotify****
 
@@ -2154,11 +2154,11 @@ The [DM_VARLIMIT](#dm_varlimit-rt-professional) structure contains information o
 
 ****dmStart****
 
-Start value of the tag. Must be release with VariantClear(&dmStart) after use.
+Start value of the tag. Must be release with VariantClear(&amp;dmStart) after use.
 
 ****dmDefault****
 
-Substitute value of tag. Must be release with VariantClear(&dmDefault) after use.
+Substitute value of tag. Must be release with VariantClear(&amp;dmDefault) after use.
 
 ****dwNotify****
 
@@ -2400,7 +2400,7 @@ Low limit of the tag.
 
 ##### Comments
 
-DM_VARLIMIT is part of the [DM_VARIABLE_DATA](#dm_variable_data-rt-professional) structure. All VARIANT must be release with VariantClear(&dmxxx) after use.
+DM_VARLIMIT is part of the [DM_VARIABLE_DATA](#dm_variable_data-rt-professional) structure. All VARIANT must be release with VariantClear(&amp;dmxxx) after use.
 
 ##### Required files
 
@@ -3767,7 +3767,7 @@ LPVOID lpvUser = NULL;
 
 CMN_ERRORA err;
 
-memset(&err, 0, sizeof(CMN_ERRORA));
+memset(&amp;err, 0, sizeof(CMN_ERRORA));
 
 dwNotifyCookie = GetTagDWord("DMdwNotifyCookie");
 
@@ -3779,7 +3779,7 @@ printf("\r\nremove first previous Notify Cookie=%08lx",
 
 dwNotifyCookie);
 
-bRet = DMRemoveNotifyA(dwNotifyCookie, &err);
+bRet = DMRemoveNotifyA(dwNotifyCookie, &amp;err);
 
 if (FALSE == bRet)
 
@@ -3807,7 +3807,7 @@ SetTagDWord("DMdwNotifyCookie",dwNotifyCookie);
 
 }
 
-memset(&err, 0, sizeof(CMN_ERRORA));
+memset(&amp;err, 0, sizeof(CMN_ERRORA));
 
 lpvUser = (LPVOID)dwNotifyCookie; //set only for show in notify
 
@@ -3815,9 +3815,9 @@ bRet = DMAddNotifyA(DM_NotifyProcA,
 
 lpvUser,
 
-&dwNotifyCookie,
+&amp;dwNotifyCookie,
 
-&err);
+&amp;err);
 
 if (bRet)
 
@@ -4568,7 +4568,7 @@ Error.
 
 ##### Comments
 
-If no connection to the data manager has been established with the DMConnect function, the return value is FALSE. The lpdmError->dwError error code contains the DM_E_NOT_CONNECTED, value, no connection to the data manager.
+If no connection to the data manager has been established with the DMConnect function, the return value is FALSE. The lpdmError-&gt;dwError error code contains the DM_E_NOT_CONNECTED, value, no connection to the data manager.
 
 > **Note**
 >
@@ -5100,7 +5100,7 @@ dwNotifyCookie = GetTagDWord("DMdwNotifyCookie");
 
 pszNotifyText = GetTagChar("DMNotifySendText");
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 bRet = FALSE;
 
@@ -5108,7 +5108,7 @@ bRet = DMFireNotifyData(dwNotifyCookie,
 
 strlen(pszNotifyText)*sizeof(CHAR)+1,
 
-(LPBYTE)pszNotifyText, &err);
+(LPBYTE)pszNotifyText, &amp;err);
 
 if (FALSE == bRet)
 
@@ -5507,7 +5507,7 @@ CMN_ERRORA err;
 
 BOOL bRet = FALSE;
 
-memset(&err, 0, sizeof(CMN_ERRORA));
+memset(&amp;err, 0, sizeof(CMN_ERRORA));
 
 dwNotifyCookie = GetTagDWord("DMdwNotifyCookie");
 
@@ -5515,7 +5515,7 @@ if (dwNotifyCookie)
 
 {
 
-bRet = DMRemoveNotify(dwNotifyCookie, &err);
+bRet = DMRemoveNotify(dwNotifyCookie, &amp;err);
 
 if (bRet)
 
@@ -6762,7 +6762,7 @@ Pointer to a [DM_VARKEY](#dm_varkey-rt-professional) type structure for specific
 
 Pointer to a [DM_VARIABLE_DATA](#dm_variable_data-rt-professional) type structure with information about a tag.
 
-When the structure completely filled with 0, an incorrect name or incorrect ID was given in DM_VARKEY.   Can be queried via lpdmVarData->dmTypeRef->dwType, for example.
+When the structure completely filled with 0, an incorrect name or incorrect ID was given in DM_VARKEY.   Can be queried via lpdmVarData-&gt;dmTypeRef-&gt;dwType, for example.
 
 ****lpvUser****
 
@@ -6934,7 +6934,7 @@ Pointer to a [DM_VARKEY](#dm_varkey-rt-professional) type structure for specific
 
 Pointer to a [DM_VARIABLE_DATA4](#dm_variable_data4-rt-professional) type structure with information about a tag.
 
-When the structure completely filled with 0, an incorrect name or incorrect ID was given in DM_VARKEY.   Can be queried via lpdmVarData->dmTypeRef->dwType, for example.
+When the structure completely filled with 0, an incorrect name or incorrect ID was given in DM_VARKEY.   Can be queried via lpdmVarData-&gt;dmTypeRef-&gt;dwType, for example.
 
 ****lpvUser****
 
@@ -7735,7 +7735,7 @@ DWORD* pdwVarState;
 
 DWORD dwTAID;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 memset(dmvus, 0, sizeof(dmvus));
 
@@ -7771,7 +7771,7 @@ dwTAID = 0L;
 
 printf("\r\n\r\n########## enter Test with DMGetValue(Wait)ExStr/DMSetValue(Wait)ExStr ##########");
 
-VariantInit(&vVarKey);
+VariantInit(&amp;vVarKey);
 
 parrayKeys = SafeArrayCreateVector(VT_VARIANT, 0L, 4);
 
@@ -7783,41 +7783,41 @@ SafeArrayLock(parrayKeys);
 
 lInx = 0L;
 
-hr = SafeArrayPtrOfIndex(parrayKeys, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayKeys, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = "dwVal_1";
+pvElem-&gt;u.pbVal = "dwVal_1";
 
 lInx = 1L;
 
-hr = SafeArrayPtrOfIndex(parrayKeys, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayKeys, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = "dwVal_2";
+pvElem-&gt;u.pbVal = "dwVal_2";
 
 lInx = 2L;
 
-hr = SafeArrayPtrOfIndex(parrayKeys, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayKeys, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = "dwVal_3";
+pvElem-&gt;u.pbVal = "dwVal_3";
 
 lInx = 3L;
 
-hr = SafeArrayPtrOfIndex(parrayKeys, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayKeys, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = "dwVal_4";
+pvElem-&gt;u.pbVal = "dwVal_4";
 
 SafeArrayUnlock(parrayKeys);
 
 printf("\r\ncall DMGetValueExStr:");
 
-bRet = DMGetValueExStr(dwFlags, &vVarKey, dmvus, 4L, &err);
+bRet = DMGetValueExStr(dwFlags, &amp;vVarKey, dmvus, 4L, &amp;err);
 
 if (bRet == FALSE)
 
@@ -7835,11 +7835,11 @@ else
 
 int i = 0;
 
-for (i = 0; i < 4; i++)
+for (i = 0; i &lt; 4; i++)
 
 {
 
-hr = VariantChangeType((VARIANTARG*)&(dmvus[i].vdmValue), (VARIANTARG*)&(dmvus[i].vdmValue), 0, VT_I4);
+hr = VariantChangeType((VARIANTARG*)&amp;(dmvus[i].vdmValue), (VARIANTARG*)&amp;(dmvus[i].vdmValue), 0, VT_I4);
 
 if (hr)
 
@@ -7885,7 +7885,7 @@ dmvus[i].vdmValue.vt == VT_I4);
 
 //only the dmVarkey of dmvus have to free here
 
-for (i = 0; i < 4; i++)
+for (i = 0; i &lt; 4; i++)
 
 {
 
@@ -7913,7 +7913,7 @@ dwVal[1] = dwVal[2];
 
 dwVal[2] = dwMerk;
 
-VariantInit(&vdmValue);
+VariantInit(&amp;vdmValue);
 
 parrayValues = SafeArrayCreateVector(VT_VARIANT, 0L, 4);
 
@@ -7925,43 +7925,43 @@ SafeArrayLock(parrayValues);
 
 lInx = 0L;
 
-hr = SafeArrayPtrOfIndex(parrayValues, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayValues, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_I4;
+pvElem-&gt;vt = VT_I4;
 
-pvElem->u.pbVal = dwVal[0];
+pvElem-&gt;u.pbVal = dwVal[0];
 
 lInx = 1L;
 
-hr = SafeArrayPtrOfIndex(parrayValues, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayValues, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_I4;
+pvElem-&gt;vt = VT_I4;
 
-pvElem->u.pbVal = dwVal[1];
+pvElem-&gt;u.pbVal = dwVal[1];
 
 lInx = 2L;
 
-hr = SafeArrayPtrOfIndex(parrayValues, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayValues, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_I4;
+pvElem-&gt;vt = VT_I4;
 
-pvElem->u.pbVal = dwVal[2];
+pvElem-&gt;u.pbVal = dwVal[2];
 
 lInx = 3L;
 
-hr = SafeArrayPtrOfIndex(parrayValues, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayValues, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_I4;
+pvElem-&gt;vt = VT_I4;
 
-pvElem->u.pbVal = dwVal[3];
+pvElem-&gt;u.pbVal = dwVal[3];
 
 SafeArrayUnlock(parrayValues);
 
 printf("\r\ncall DMSetValueExStr:");
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-bRet = DMSetValueExStr(&vVarKey, &vdmValue, pdwVarState, &err);
+bRet = DMSetValueExStr(&amp;vVarKey, &amp;vdmValue, pdwVarState, &amp;err);
 
 if (bRet == FALSE)
 
@@ -7979,7 +7979,7 @@ else
 
 int i = 0;
 
-for (i = 0; i < 4; i++)
+for (i = 0; i &lt; 4; i++)
 
 {
 
@@ -8001,9 +8001,9 @@ dwVal[3] = 0;
 
 printf("\r\ncall DMGetValueWaitExStr:");
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-bRet = DMGetValueWaitExStr(&dwTAID, dwFlags, &vVarKey, TRUE, 2000, DM_NotifyVariableProcExStr_GetValueWait, dwVal, &err);
+bRet = DMGetValueWaitExStr(&amp;dwTAID, dwFlags, &amp;vVarKey, TRUE, 2000, DM_NotifyVariableProcExStr_GetValueWait, dwVal, &amp;err);
 
 if (bRet == FALSE)
 
@@ -8021,7 +8021,7 @@ else
 
 int i = 0;
 
-for (i = 0; i < 4; i++)
+for (i = 0; i &lt; 4; i++)
 
 {
 
@@ -8035,7 +8035,7 @@ printf("\r\n dwValue[%d] = %ld", i, dwVal[i]);
 
 dwVal[0] = dwVal[0] + 1;
 
-if (dwVal[0] >= 100)
+if (dwVal[0] &gt;= 100)
 
 {
 
@@ -8045,7 +8045,7 @@ dwVal[0] = dwVal[0] - 100;
 
 dwVal[1] = dwVal[1] + 1;
 
-if (dwVal[1] >= 100)
+if (dwVal[1] &gt;= 100)
 
 {
 
@@ -8055,7 +8055,7 @@ dwVal[1] = dwVal[1] - 100;
 
 dwVal[2] = dwVal[2] + 1;
 
-if (dwVal[2] >= 100)
+if (dwVal[2] &gt;= 100)
 
 {
 
@@ -8065,7 +8065,7 @@ dwVal[2] = dwVal[2] - 100;
 
 dwVal[3] = dwVal[3] + 1;
 
-if (dwVal[3] >= 100)
+if (dwVal[3] &gt;= 100)
 
 {
 
@@ -8073,7 +8073,7 @@ dwVal[3] = dwVal[3] - 100;
 
 }
 
-VariantClear(&vdmValue);
+VariantClear(&amp;vdmValue);
 
 parrayValues = SafeArrayCreateVector(VT_VARIANT, 0L, 4);
 
@@ -8085,35 +8085,35 @@ SafeArrayLock(parrayValues);
 
 lInx = 0L;
 
-hr = SafeArrayPtrOfIndex(parrayValues, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayValues, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_I4;
+pvElem-&gt;vt = VT_I4;
 
-pvElem->u.pbVal = dwVal[0];
+pvElem-&gt;u.pbVal = dwVal[0];
 
 lInx = 1L;
 
-hr = SafeArrayPtrOfIndex(parrayValues, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayValues, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_I4;
+pvElem-&gt;vt = VT_I4;
 
-pvElem->u.pbVal = dwVal[1];
+pvElem-&gt;u.pbVal = dwVal[1];
 
 lInx = 2L;
 
-hr = SafeArrayPtrOfIndex(parrayValues, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayValues, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_I4;
+pvElem-&gt;vt = VT_I4;
 
-pvElem->u.pbVal = dwVal[2];
+pvElem-&gt;u.pbVal = dwVal[2];
 
 lInx = 3L;
 
-hr = SafeArrayPtrOfIndex(parrayValues, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayValues, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_I4;
+pvElem-&gt;vt = VT_I4;
 
-pvElem->u.pbVal = dwVal[3];
+pvElem-&gt;u.pbVal = dwVal[3];
 
 SafeArrayUnlock(parrayValues);
 
@@ -8121,7 +8121,7 @@ printf("\r\ncall DMSetValueWaitExStr:");
 
 memset(errArray, 0, sizeof(errArray));
 
-bRet = DMSetValueWaitExStr(&dwTAID, &vVarKey, 4, &vdmValue, pdwVarState, 2000, DM_CompletitionProc, NULL, errArray);
+bRet = DMSetValueWaitExStr(&amp;dwTAID, &amp;vVarKey, 4, &amp;vdmValue, pdwVarState, 2000, DM_CompletitionProc, NULL, errArray);
 
 if (bRet == FALSE)
 
@@ -8129,7 +8129,7 @@ if (bRet == FALSE)
 
 int i = 0;
 
-for(i=0; i < 4; i++)
+for(i=0; i &lt; 4; i++)
 
 {
 
@@ -8179,11 +8179,11 @@ pdwVal = (DWORD*)lpvUser;
 
 printf("\r\n*** DM_NotifyVariableProcExStr_GetValueWait entry ***");
 
-for (i = 0; i < dwItems; i++)
+for (i = 0; i &lt; dwItems; i++)
 
 {
 
-VariantChangeType((VARIANTARG*)&(lpdmvus[i].vdmValue), (VARIANTARG*)&(lpdmvus[i].vdmValue), 0, VT_I4);
+VariantChangeType((VARIANTARG*)&amp;(lpdmvus[i].vdmValue), (VARIANTARG*)&amp;(lpdmvus[i].vdmValue), 0, VT_I4);
 
 if (0 == strcmp((LPCSTR)lpdmvus[i].vdmVarKey.u.pbVal, "dwVal_1"))
 
@@ -8253,7 +8253,7 @@ int i = 0;
 
 printf("\r\n*** DM_CompletitionProc entry ***");
 
-for (i = 0; i < dwItems; i++)
+for (i = 0; i &lt; dwItems; i++)
 
 {
 
@@ -8867,7 +8867,7 @@ WCHAR wszBuffer[256];
 
 int nRet;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 bRet = FALSE;
 
@@ -8875,11 +8875,11 @@ szProjectName[0] = 0;
 
 dwFlags = 0;
 
-VariantInit(&vVarkeyIn);
+VariantInit(&amp;vVarkeyIn);
 
-VariantInit(&vVarkeyOut);
+VariantInit(&amp;vVarkeyOut);
 
-VariantInit(&vElem);
+VariantInit(&amp;vElem);
 
 parrayIN = NULL;
 
@@ -8891,13 +8891,13 @@ nRet = 0;
 
 printf("\r\n\r\n########## enter Test with DMGetVarInfoExStr ##########");
 
-bRet = DMGetRuntimeProject(szProjectName, 256, &err);
+bRet = DMGetRuntimeProject(szProjectName, 256, &amp;err);
 
 if (!bRet)
 
 {
 
-printf("\r\n error DMGetRuntimeProject =>[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
+printf("\r\n error DMGetRuntimeProject =&gt;[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
 
 err.dwError1, err.dwError2, err.dwError3, err.dwError4, err.dwError5, err.szErrorText);
 
@@ -8949,9 +8949,9 @@ vElem.u.bstrVal = SysAllocString(wszBuffer);
 
 lInx = 0;
 
-hr = SafeArrayPutElement(parrayIN, &lInx, &vElem);
+hr = SafeArrayPutElement(parrayIN, &amp;lInx, &amp;vElem);
 
-VariantClear(&vElem);
+VariantClear(&amp;vElem);
 
 // name2 als VT_LPSTR
 
@@ -8959,11 +8959,11 @@ SafeArrayLock(parrayIN);
 
 lInx = 1;
 
-hr = SafeArrayPtrOfIndex(parrayIN, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayIN, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = szVarNam2;
+pvElem-&gt;u.pbVal = szVarNam2;
 
 SafeArrayUnlock(parrayIN);
 
@@ -8975,7 +8975,7 @@ printf("\r\nerror SafeArrayPutElement: hr = %08lx", hr);
 
 }
 
-VariantClear(&vElem);
+VariantClear(&amp;vElem);
 
 vElem.vt = VT_I4;
 
@@ -8983,7 +8983,7 @@ vElem.u.lVal = dwVarID3;
 
 lInx = 2;
 
-hr = SafeArrayPutElement(parrayIN, &lInx, &vElem);
+hr = SafeArrayPutElement(parrayIN, &amp;lInx, &amp;vElem);
 
 vElem.vt = VT_I4;
 
@@ -8991,11 +8991,11 @@ vElem.u.lVal = dwVarID4;
 
 lInx = 3;
 
-hr = SafeArrayPutElement(parrayIN, &lInx, &vElem);
+hr = SafeArrayPutElement(parrayIN, &amp;lInx, &amp;vElem);
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-bRet = DMGetVarInfoExStr(szProjectName, dwFlags, &vVarkeyIn, &vVarkeyOut, &err);
+bRet = DMGetVarInfoExStr(szProjectName, dwFlags, &amp;vVarkeyIn, &amp;vVarkeyOut, &amp;err);
 
 if (!bRet)
 
@@ -9045,7 +9045,7 @@ parrayOUT = vVarkeyOut.u.parray;
 
 lInx = 0;
 
-SafeArrayGetElement(parrayOUT, &lInx, &vElem);
+SafeArrayGetElement(parrayOUT, &amp;lInx, &amp;vElem);
 
 if (vElem.vt != VT_I4)
 
@@ -9069,7 +9069,7 @@ SetTagDWord("dwVarKeyID_1",dwVarID1);
 
 lInx = 1;
 
-SafeArrayGetElement(parrayOUT, &lInx, &vElem);
+SafeArrayGetElement(parrayOUT, &amp;lInx, &amp;vElem);
 
 if (vElem.vt != VT_I4)
 
@@ -9093,7 +9093,7 @@ SetTagDWord("dwVarKeyID_2",dwVarID2);
 
 lInx = 2;
 
-SafeArrayGetElement(parrayOUT, &lInx, &vElem);
+SafeArrayGetElement(parrayOUT, &amp;lInx, &amp;vElem);
 
 if (vElem.vt != VT_BSTR)
 
@@ -9119,7 +9119,7 @@ SetTagChar("szVarKeyName_3",szVarNam3);
 
 lInx = 3;
 
-SafeArrayGetElement(parrayOUT, &lInx, &vElem);
+SafeArrayGetElement(parrayOUT, &amp;lInx, &amp;vElem);
 
 if (vElem.vt != VT_BSTR)
 
@@ -9161,9 +9161,9 @@ printf("\r\n set flag DM_FLAG_RETURN_PROPVARIANT_VT_LPSTR and repeat DMGetVarInf
 
 dwFlags = DM_FLAG_RETURN_PROPVARIANT_VT_LPSTR;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-hr = VariantClear(&vVarkeyOut);
+hr = VariantClear(&amp;vVarkeyOut);
 
 if (hr)
 
@@ -9173,7 +9173,7 @@ printf("\r\nerror VariantClear(vVarKeyOut: hr = %08lx", hr);
 
 }
 
-bRet = DMGetVarInfoExStr(szProjectName, dwFlags, &vVarkeyIn, &vVarkeyOut, &err);
+bRet = DMGetVarInfoExStr(szProjectName, dwFlags, &amp;vVarkeyIn, &amp;vVarkeyOut, &amp;err);
 
 if (!bRet)
 
@@ -9223,7 +9223,7 @@ parrayOUT = vVarkeyOut.u.parray;
 
 lInx = 0;
 
-SafeArrayGetElement(parrayOUT, &lInx, &vElem);
+SafeArrayGetElement(parrayOUT, &amp;lInx, &amp;vElem);
 
 if (vElem.vt != VT_I4)
 
@@ -9247,7 +9247,7 @@ SetTagDWord("dwVarKeyID_1",dwVarID1);
 
 lInx = 1;
 
-SafeArrayGetElement(parrayOUT, &lInx, &vElem);
+SafeArrayGetElement(parrayOUT, &amp;lInx, &amp;vElem);
 
 if (vElem.vt != VT_I4)
 
@@ -9273,13 +9273,13 @@ SafeArrayLock(parrayOUT);
 
 lInx = 2;
 
-SafeArrayPtrOfIndex(parrayOUT, &lInx, &pvElem);
+SafeArrayPtrOfIndex(parrayOUT, &amp;lInx, &amp;pvElem);
 
-if (pvElem->vt != VT_LPSTR)
+if (pvElem-&gt;vt != VT_LPSTR)
 
 {
 
-printf("\r\n vVarKeyOut[%ld].vt = [%ld] != VT_LPSTR", lInx, pvElem->vt);
+printf("\r\n vVarKeyOut[%ld].vt = [%ld] != VT_LPSTR", lInx, pvElem-&gt;vt);
 
 strcpy(szVarNam3, "error!!!");
 
@@ -9289,7 +9289,7 @@ else
 
 {
 
-strncpy(szVarNam3, (LPSTR)pvElem->u.pbVal, 255);
+strncpy(szVarNam3, (LPSTR)pvElem-&gt;u.pbVal, 255);
 
 szVarNam3[255] = 0;
 
@@ -9299,13 +9299,13 @@ SetTagChar("szVarKeyName_3",szVarNam3);
 
 lInx = 3;
 
-SafeArrayPtrOfIndex(parrayOUT, &lInx, &pvElem);
+SafeArrayPtrOfIndex(parrayOUT, &amp;lInx, &amp;pvElem);
 
-if (pvElem->vt != VT_LPSTR)
+if (pvElem-&gt;vt != VT_LPSTR)
 
 {
 
-printf("\r\n vVarKeyOut[%ld].vt = [%ld] != VT_LPSTR", lInx, pvElem->vt);
+printf("\r\n vVarKeyOut[%ld].vt = [%ld] != VT_LPSTR", lInx, pvElem-&gt;vt);
 
 strcpy(szVarNam4, "error!!!");
 
@@ -9315,7 +9315,7 @@ else
 
 {
 
-strncpy(szVarNam4, (LPSTR)pvElem->u.pbVal, 255);
+strncpy(szVarNam4, (LPSTR)pvElem-&gt;u.pbVal, 255);
 
 szVarNam4[255] = 0;
 
@@ -9343,9 +9343,9 @@ printf("\r\n only 1 Input (ID = VT_I4 and dwVarID1) without VT_ARRAY, set flag D
 
 dwFlags = DM_FLAG_RETURN_PROPVARIANT_VT_LPSTR;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-hr = VariantClear(&vVarkeyIn);
+hr = VariantClear(&amp;vVarkeyIn);
 
 if (hr)
 
@@ -9363,15 +9363,15 @@ SafeArrayLock(parrayIN);
 
 lInx = 1;
 
-hr = SafeArrayPtrOfIndex(parrayIN, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayIN, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_EMPTY;
+pvElem-&gt;vt = VT_EMPTY;
 
-pvElem->u.pbVal = NULL;
+pvElem-&gt;u.pbVal = NULL;
 
 SafeArrayUnlock(parrayIN);
 
-hr = VariantClear(&vVarkeyIn);
+hr = VariantClear(&amp;vVarkeyIn);
 
 if (hr)
 
@@ -9391,7 +9391,7 @@ printf("\r\n VariantClear(vVarkeyIn) OK after manualy reset the PROPVARIANT in 2
 
 }
 
-hr = VariantClear(&vVarkeyOut);
+hr = VariantClear(&amp;vVarkeyOut);
 
 if (hr)
 
@@ -9405,7 +9405,7 @@ vVarkeyIn.vt = VT_I4;
 
 vVarkeyIn.u.lVal = dwVarID1;
 
-bRet = DMGetVarInfoExStr(szProjectName, dwFlags, &vVarkeyIn, &vVarkeyOut, &err);
+bRet = DMGetVarInfoExStr(szProjectName, dwFlags, &amp;vVarkeyIn, &amp;vVarkeyOut, &amp;err);
 
 if (!bRet)
 
@@ -9703,15 +9703,15 @@ DM_VARLIMIT dmLimits[4];
 
 int i;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 bRet = FALSE;
 
 szProjectName[0] = 0;
 
-VariantInit(&vElem);
+VariantInit(&amp;vElem);
 
-VariantInit(&vdmVarkey);
+VariantInit(&amp;vdmVarkey);
 
 parray = NULL;
 
@@ -9721,13 +9721,13 @@ i = 0;
 
 printf("\r\n\r\n########## enter Test with DMGetVarLimitsExStr ##########");
 
-bRet = DMGetRuntimeProject(szProjectName, 256, &err);
+bRet = DMGetRuntimeProject(szProjectName, 256, &amp;err);
 
 if (!bRet)
 
 {
 
-printf("\r\n error DMGetRuntimeProject =>[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
+printf("\r\n error DMGetRuntimeProject =&gt;[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
 
 err.dwError1, err.dwError2, err.dwError3, err.dwError4, err.dwError5, err.szErrorText);
 
@@ -9753,43 +9753,43 @@ SafeArrayLock(parray);
 
 lInx = 0;
 
-hr = SafeArrayPtrOfIndex(parray, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parray, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = szVarNam1;
+pvElem-&gt;u.pbVal = szVarNam1;
 
 lInx = 1;
 
-hr = SafeArrayPtrOfIndex(parray, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parray, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = szVarNam2;
+pvElem-&gt;u.pbVal = szVarNam2;
 
 lInx = 2;
 
-hr = SafeArrayPtrOfIndex(parray, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parray, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = szVarNam3;
+pvElem-&gt;u.pbVal = szVarNam3;
 
 lInx = 3;
 
-hr = SafeArrayPtrOfIndex(parray, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parray, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = szVarNam4;
+pvElem-&gt;u.pbVal = szVarNam4;
 
 SafeArrayUnlock(parray);
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 memset(dmLimits, 0, sizeof(DM_VARLIMIT)*4);
 
-bRet = DMGetVarLimitsExStr(szProjectName, &vdmVarkey, dmLimits, &err);
+bRet = DMGetVarLimitsExStr(szProjectName, &amp;vdmVarkey, dmLimits, &amp;err);
 
 if (!bRet)
 
@@ -9815,17 +9815,17 @@ if (bRet)
 
 {
 
-for (i = 0; i < 4; i++)
+for (i = 0; i &lt; 4; i++)
 
 {
 
-VariantClear(&vElem);
+VariantClear(&amp;vElem);
 
 printf("\r\n dmLimits[%d]:{",i);
 
-hr = VariantChangeType((VARIANTARG*)&vElem, (VARIANTARG*)&dmLimits[i].dmMaxRange, 0, VT_R8);
+hr = VariantChangeType((VARIANTARG*)&amp;vElem, (VARIANTARG*)&amp;dmLimits[i].dmMaxRange, 0, VT_R8);
 
-if ((0L == hr) && (VT_R8 == vElem.vt) && (VT_EMPTY != dmLimits[i].dmMaxRange.vt))
+if ((0L == hr) &amp;&amp; (VT_R8 == vElem.vt) &amp;&amp; (VT_EMPTY != dmLimits[i].dmMaxRange.vt))
 
 {
 
@@ -9843,11 +9843,11 @@ hr, dmLimits[i].dmMaxRange.vt);
 
 }
 
-VariantClear(&vElem);
+VariantClear(&amp;vElem);
 
-hr = VariantChangeType((VARIANTARG*)&vElem, (VARIANTARG*)&dmLimits[i].dmMinRange, 0, VT_R8);
+hr = VariantChangeType((VARIANTARG*)&amp;vElem, (VARIANTARG*)&amp;dmLimits[i].dmMinRange, 0, VT_R8);
 
-if ((0L == hr) && (VT_R8 == vElem.vt) && (VT_EMPTY != dmLimits[i].dmMinRange.vt))
+if ((0L == hr) &amp;&amp; (VT_R8 == vElem.vt) &amp;&amp; (VT_EMPTY != dmLimits[i].dmMinRange.vt))
 
 {
 
@@ -9865,11 +9865,11 @@ hr, dmLimits[i].dmMinRange.vt);
 
 }
 
-VariantClear(&vElem);
+VariantClear(&amp;vElem);
 
-hr = VariantChangeType((VARIANTARG*)&vElem, (VARIANTARG*)&dmLimits[i].dmMaxLimit, 0, VT_R8);
+hr = VariantChangeType((VARIANTARG*)&amp;vElem, (VARIANTARG*)&amp;dmLimits[i].dmMaxLimit, 0, VT_R8);
 
-if ((0L == hr) && (VT_R8 == vElem.vt) && (VT_EMPTY != dmLimits[i].dmMaxLimit.vt))
+if ((0L == hr) &amp;&amp; (VT_R8 == vElem.vt) &amp;&amp; (VT_EMPTY != dmLimits[i].dmMaxLimit.vt))
 
 {
 
@@ -9887,11 +9887,11 @@ hr, dmLimits[i].dmMaxLimit.vt);
 
 }
 
-VariantClear(&vElem);
+VariantClear(&amp;vElem);
 
-hr = VariantChangeType((VARIANTARG*)&vElem, (VARIANTARG*)&dmLimits[i].dmMinLimit, 0, VT_R8);
+hr = VariantChangeType((VARIANTARG*)&amp;vElem, (VARIANTARG*)&amp;dmLimits[i].dmMinLimit, 0, VT_R8);
 
-if ((0L == hr) && (VT_R8 == vElem.vt) && (VT_EMPTY != dmLimits[i].dmMinLimit.vt))
+if ((0L == hr) &amp;&amp; (VT_R8 == vElem.vt) &amp;&amp; (VT_EMPTY != dmLimits[i].dmMinLimit.vt))
 
 {
 
@@ -10135,7 +10135,7 @@ CHAR szTypeName[4][256];
 
 int i;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 memset(dmTypeRef, 0, sizeof(DM_TYPEREF_EXSTR)*4);
 
@@ -10151,7 +10151,7 @@ bRet = FALSE;
 
 szProjectName[0] = 0;
 
-VariantInit(&vdmVarkey);
+VariantInit(&amp;vdmVarkey);
 
 parray = NULL;
 
@@ -10161,13 +10161,13 @@ i = 0;
 
 printf("\r\n\r\n########## enter Test with DMGetVarTypeExStr ##########");
 
-bRet = DMGetRuntimeProject(szProjectName, 256, &err);
+bRet = DMGetRuntimeProject(szProjectName, 256, &amp;err);
 
 if (!bRet)
 
 {
 
-printf("\r\n error DMGetRuntimeProject =>[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
+printf("\r\n error DMGetRuntimeProject =&gt;[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
 
 err.dwError1, err.dwError2, err.dwError3, err.dwError4, err.dwError5, err.szErrorText);
 
@@ -10193,43 +10193,43 @@ SafeArrayLock(parray);
 
 lInx = 0;
 
-hr = SafeArrayPtrOfIndex(parray, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parray, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = szVarNam1;
+pvElem-&gt;u.pbVal = szVarNam1;
 
 lInx = 1;
 
-hr = SafeArrayPtrOfIndex(parray, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parray, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = szVarNam2;
+pvElem-&gt;u.pbVal = szVarNam2;
 
 lInx = 2;
 
-hr = SafeArrayPtrOfIndex(parray, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parray, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = szVarNam3;
+pvElem-&gt;u.pbVal = szVarNam3;
 
 lInx = 3;
 
-hr = SafeArrayPtrOfIndex(parray, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parray, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = szVarNam4;
+pvElem-&gt;u.pbVal = szVarNam4;
 
 SafeArrayUnlock(parray);
 
 printf("\r\n call DMGetVarTypeExStr with NULL for names");
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-bRet = DMGetVarTypeExStr(szProjectName, &vdmVarkey, dmTypeRef, &err);
+bRet = DMGetVarTypeExStr(szProjectName, &amp;vdmVarkey, dmTypeRef, &amp;err);
 
 if (!bRet)
 
@@ -10253,7 +10253,7 @@ if (bRet)
 
 {
 
-for (i = 0; i < 4; i++)
+for (i = 0; i &lt; 4; i++)
 
 {
 
@@ -10295,9 +10295,9 @@ printf("}");
 
 printf("\r\n call DMGetVarTypeExStr with pointers and size for name storage");
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-bRet = DMGetVarTypeExStr(szProjectName, &vdmVarkey, dmTypeRef, &err);
+bRet = DMGetVarTypeExStr(szProjectName, &amp;vdmVarkey, dmTypeRef, &amp;err);
 
 if (!bRet)
 
@@ -10321,7 +10321,7 @@ if (bRet)
 
 {
 
-for (i = 0; i < 4; i++)
+for (i = 0; i &lt; 4; i++)
 
 {
 
@@ -10639,7 +10639,7 @@ LPCMN_ERROR    lpdmError);
 
 Pointer to the [DM_VARKEY](#dm_varkey-rt-professional) structure that identifies the tag to be changed.
 
-A server prefix (see project types and versions) may also specified in lpdmVarKey->szName for multiclient projects as of WinCC Version 5.0.
+A server prefix (see project types and versions) may also specified in lpdmVarKey-&gt;szName for multiclient projects as of WinCC Version 5.0.
 
 ****lpdmValue****
 
@@ -11525,31 +11525,31 @@ szVariableName[0] = 0;
 
 dwVariableID = 0L;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 hwndParent = NULL;
 
 printf("\r\n\r\n########## enter Test with DMShowVarDatabaseExStr ##########");
 
-bRet = DMGetRuntimeProject(szProjectName, 256, &err);
+bRet = DMGetRuntimeProject(szProjectName, 256, &amp;err);
 
 if (!bRet)
 
 {
 
-printf("\r\n error DMGetRuntimeProject =>[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
+printf("\r\n error DMGetRuntimeProject =&gt;[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
 
 err.dwError1, err.dwError2, err.dwError3, err.dwError4, err.dwError5, err.szErrorText);
 
 }
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 dwVariableID = GetTagDWord("dwVarKeyID_1");
 
 printf("\r\n call DMShowVarPropertiesExStr with ID");
 
-bRet = DMShowVarPropertiesExStr(szProjectName, hwndParent, NULL, dwVariableID, &err);
+bRet = DMShowVarPropertiesExStr(szProjectName, hwndParent, NULL, dwVariableID, &amp;err);
 
 if (!bRet)
 
@@ -11575,7 +11575,7 @@ szVariableName[255] = 0;
 
 printf("\r\n call DMShowVarPropertiesExStr with VarName");
 
-bRet = DMShowVarPropertiesExStr(szProjectName, hwndParent, szVariableName, 0L, &err);
+bRet = DMShowVarPropertiesExStr(szProjectName, hwndParent, szVariableName, 0L, &amp;err);
 
 if (!bRet)
 
@@ -11734,7 +11734,7 @@ Handle to the window that is used as the parent window for the dialog.
 
 **lpdmOptions**
 
-Pointer to the DM_DLGOPTIONS structure containing instructions for the dialog; if NULL => standard dialog.
+Pointer to the DM_DLGOPTIONS structure containing instructions for the dialog; if NULL =&gt; standard dialog.
 
 **lpdmFilter**
 
@@ -11837,17 +11837,17 @@ hwndParent = NULL;
 
 pszVariableName= szVariableName;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 printf("\r\n\r\n########## enter Test with DMShowVarDatabaseExStr ##########");
 
-bRet = DMGetRuntimeProject(szProjectName, 256, &err);
+bRet = DMGetRuntimeProject(szProjectName, 256, &amp;err);
 
 if (!bRet)
 
 {
 
-printf("\r\n error DMGetRuntimeProject =>[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
+printf("\r\n error DMGetRuntimeProject =&gt;[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
 
 err.dwError1, err.dwError2, err.dwError3, err.dwError4, err.dwError5, err.szErrorText);
 
@@ -11855,7 +11855,7 @@ err.dwError1, err.dwError2, err.dwError3, err.dwError4, err.dwError5, err.szErro
 
 bRet = DMShowVarDatabaseExStr(szProjectName, hwndParent, NULL, NULL,
 
-&pszVariableName, &dwVarNamCharCount, &dwVarID, &err);
+&amp;pszVariableName, &amp;dwVarNamCharCount, &amp;dwVarID, &amp;err);
 
 if (!bRet)
 
@@ -12031,7 +12031,7 @@ Handle to the window that is used as the parent window for the dialog.
 
 **lpdmOptions**
 
-Pointer to the DM_DLGOPTIONS structure containing instructions for the dialog; if NULL => standard dialog.
+Pointer to the DM_DLGOPTIONS structure containing instructions for the dialog; if NULL =&gt; standard dialog.
 
 **lpdmFilter**
 
@@ -12115,7 +12115,7 @@ szProjectName[0] = 0;
 
 hwndParent = NULL;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 dwItems = 0;
 
@@ -12123,13 +12123,13 @@ dwInxDecr = 4; /*for decrement index to save in DM tags from callback set to lpv
 
 printf("\r\n\r\n########## enter Test with DMShowVarDatabaseMultiExStr ##########");
 
-bRet = DMGetRuntimeProject(szProjectName, 256, &err);
+bRet = DMGetRuntimeProject(szProjectName, 256, &amp;err);
 
 if (!bRet)
 
 {
 
-printf("\r\n error DMGetRuntimeProject =>[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
+printf("\r\n error DMGetRuntimeProject =&gt;[%s], err=%ld,%ld,%ld,%ld,%ld,[%s]", szProjectName,
 
 err.dwError1, err.dwError2, err.dwError3, err.dwError4, err.dwError5, err.szErrorText);
 
@@ -12137,7 +12137,7 @@ err.dwError1, err.dwError2, err.dwError3, err.dwError4, err.dwError5, err.szErro
 
 bRet = DMShowVarDatabaseMultiExStr(szProjectName, hwndParent, NULL, NULL,
 
-&dwItems, DM_NotifySelectVarProcA, &dwInxDecr, &err);
+&amp;dwItems, DM_NotifySelectVarProcA, &amp;dwInxDecr, &amp;err);
 
 if (!bRet)
 
@@ -12235,7 +12235,7 @@ printf("\r\n save in szVarKeyName_1 and dwVarKeyID_1");
 
 }
 
-if (pdwInxDecr && (0L < *pdwInxDecr))
+if (pdwInxDecr &amp;&amp; (0L &lt; *pdwInxDecr))
 
 {
 
@@ -14577,7 +14577,7 @@ DWORD dwFlags;
 
 DWORD dwCycle;
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 bRet = FALSE;
 
@@ -14607,7 +14607,7 @@ return;
 
 }
 
-VariantInit(&vVarKey);
+VariantInit(&amp;vVarKey);
 
 parrayKeys = SafeArrayCreateVector(VT_VARIANT, 0L, 4);
 
@@ -14619,39 +14619,39 @@ SafeArrayLock(parrayKeys);
 
 lInx = 0L;
 
-hr = SafeArrayPtrOfIndex(parrayKeys, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayKeys, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = "dwVal_1";
+pvElem-&gt;u.pbVal = "dwVal_1";
 
 lInx = 1L;
 
-hr = SafeArrayPtrOfIndex(parrayKeys, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayKeys, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = "dwVal_2";
+pvElem-&gt;u.pbVal = "dwVal_2";
 
 lInx = 2L;
 
-hr = SafeArrayPtrOfIndex(parrayKeys, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayKeys, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = "dwVal_3";
+pvElem-&gt;u.pbVal = "dwVal_3";
 
 lInx = 3L;
 
-hr = SafeArrayPtrOfIndex(parrayKeys, &lInx, &pvElem);
+hr = SafeArrayPtrOfIndex(parrayKeys, &amp;lInx, &amp;pvElem);
 
-pvElem->vt = VT_LPSTR;
+pvElem-&gt;vt = VT_LPSTR;
 
-pvElem->u.pbVal = "dwVal_4";
+pvElem-&gt;u.pbVal = "dwVal_4";
 
 SafeArrayUnlock(parrayKeys);
 
-bRet = DMBeginStartVarUpdate(&dwTAID, &err);
+bRet = DMBeginStartVarUpdate(&amp;dwTAID, &amp;err);
 
 if (FALSE == bRet)
 
@@ -14679,11 +14679,11 @@ if (dwTAID)
 
 SetTagDWord("dwUpdTAID",dwTAID);
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-bRet = DMStartVarUpdateExStr(dwTAID, dwFlags, &vVarKey, dwCycle,
+bRet = DMStartVarUpdateExStr(dwTAID, dwFlags, &amp;vVarKey, dwCycle,
 
-DM_NotifyVariableProcExStr_VarUpdate, NULL, &err);
+DM_NotifyVariableProcExStr_VarUpdate, NULL, &amp;err);
 
 if (FALSE == bRet)
 
@@ -14705,9 +14705,9 @@ printf("\r\n DMStartVarUpdateExStr (dwTAID=%ld) OK.", dwTAID);
 
 }
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-bRet = DMEndStartVarUpdate(dwTAID, &err);
+bRet = DMEndStartVarUpdate(dwTAID, &amp;err);
 
 if (FALSE == bRet)
 
@@ -14773,13 +14773,13 @@ HRESULT hr = 0L;
 
 printf("\r\n*** DM_NotifyVariableProcExStr_VarUpdate entry (dwTAID=%ld) ***", dwTAID);
 
-for (i = 0; i < dwItems; i++)
+for (i = 0; i &lt; dwItems; i++)
 
 {
 
-hr = VariantChangeType((VARIANTARG*)&(lpdmvus[i].vdmValue),
+hr = VariantChangeType((VARIANTARG*)&amp;(lpdmvus[i].vdmValue),
 
-(VARIANTARG*)&(lpdmvus[i].vdmValue), 0, VT_R8);
+(VARIANTARG*)&amp;(lpdmvus[i].vdmValue), 0, VT_R8);
 
 if (VT_LPSTR == lpdmvus[i].vdmVarKey.vt)
 
@@ -14857,7 +14857,7 @@ BOOL bRet;
 
 dwTAID = GetTagDWord("dwUpdTAID");
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
 bRet = FALSE;
 
@@ -14865,7 +14865,7 @@ if (dwTAID)
 
 {
 
-bRet = DMStopVarUpdate(dwTAID, &err);
+bRet = DMStopVarUpdate(dwTAID, &amp;err);
 
 if (FALSE == bRet)
 
@@ -14877,9 +14877,9 @@ dwTAID, err.dwError1, err.dwError2, err.dwError3,
 
 err.dwError4, err.dwError5, err.szErrorText);
 
-memset(&err, 0, sizeof(err));
+memset(&amp;err, 0, sizeof(err));
 
-bRet = DMStopAllUpdates(&err);
+bRet = DMStopAllUpdates(&amp;err);
 
 if (FALSE == bRet)
 
@@ -15245,7 +15245,7 @@ This section contains information on the following topics:
 
 // #include "odkapi.h" // if console application
 
-#include <time.h>
+#include &lt;time.h&gt;
 
 TCHAR g_szProjectFile[255] = {0};
 
@@ -15287,17 +15287,17 @@ BOOL MyDMConnect(void)
 
     _tcsncpy_s(szAppName, _countof(szAppName), _T("MyODKApp_23"), _TRUNCATE);
 
-    memset(&Error, 0,sizeof(CMN_ERROR));
+    memset(&amp;Error, 0,sizeof(CMN_ERROR));
 
-    ret = DMGetConnectionState(&Error);
+    ret = DMGetConnectionState(&amp;Error);
 
     if(FALSE == ret) // not connected
 
     {
 
-        memset(&Error, 0,sizeof(CMN_ERROR));
+        memset(&amp;Error, 0,sizeof(CMN_ERROR));
 
-        ret = DMConnect(szAppName, MyDMNotifyCallback, pvUser, &Error);
+        ret = DMConnect(szAppName, MyDMNotifyCallback, pvUser, &amp;Error);
 
         if(FALSE == ret)
 
@@ -15367,17 +15367,17 @@ BOOL MyDMGetConnectionState(void)
 
     _tcsncpy_s(szAppName, _countof(szAppName), _T("MyODKApp_23"), _TRUNCATE);
 
-    memset(&Error, 0,sizeof(CMN_ERROR));
+    memset(&amp;Error, 0,sizeof(CMN_ERROR));
 
-    ret = DMGetConnectionState(&Error);
+    ret = DMGetConnectionState(&amp;Error);
 
     if(FALSE == ret) // not connected
 
     {
 
-        memset(&Error, 0,sizeof(CMN_ERROR));
+        memset(&amp;Error, 0,sizeof(CMN_ERROR));
 
-        ret = DMConnect(szAppName, MyDMNotifyCallback, pvUser, &Error);
+        ret = DMConnect(szAppName, MyDMNotifyCallback, pvUser, &amp;Error);
 
         if(FALSE == ret)
 
@@ -15433,9 +15433,9 @@ BOOL MyDMDisConnect(void)
 
     TCHAR szText[255];
 
-    memset(&Error, 0, sizeof(CMN_ERROR));
+    memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-    ret = DMDisConnect(&Error);
+    ret = DMDisConnect(&amp;Error);
 
     if(FALSE == ret)
 
@@ -15553,7 +15553,7 @@ lpvUser;
 
     ODKTrace(szText);
 
-    _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...szName=%s dwVarProperty=0x%04X"),lpdmVarKey->szName, lpdmVarData->dwVarProperty);
+    _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...szName=%s dwVarProperty=0x%04X"),lpdmVarKey-&gt;szName, lpdmVarData-&gt;dwVarProperty);
 
     ODKTrace(szText);
 
@@ -15577,9 +15577,9 @@ lpvUser;
 
     VOID* pUser = NULL;
 
-    memset(&Error,0,sizeof(CMN_ERROR));
+    memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-    memset(&dmVarKey, 0,2 * sizeof(DM_VARKEY));
+    memset(&amp;dmVarKey, 0,2 * sizeof(DM_VARKEY));
 
     dmVarKey[0].dwKeyType = DM_VARKEY_NAME;
 
@@ -15593,7 +15593,7 @@ _tcsncpy_s(dmVarKey[1].szName, _countof(dmVarKey[1].szName), _T("EXT_TEST_VAR"),
 
     ret = DMEnumVarData4 (/*PROJ_PATH*/g_szProjectFile,
 
-                &dmVarKey[0],
+                &amp;dmVarKey[0],
 
                 2,
 
@@ -15601,7 +15601,7 @@ _tcsncpy_s(dmVarKey[1].szName, _countof(dmVarKey[1].szName), _T("EXT_TEST_VAR"),
 
                 pUser,
 
-                &Error);
+                &amp;Error);
 
     if(FALSE == ret)
 
@@ -15669,19 +15669,19 @@ lpvUser;
 
     // many API-functions need this name to select the project database
 
-_tcsncpy_s(g_szProjectFile, _countof(g_szProjectFile), lpInfo->szProjectFile, _TRUNCATE);
+_tcsncpy_s(g_szProjectFile, _countof(g_szProjectFile), lpInfo-&gt;szProjectFile, _TRUNCATE);
 
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" ProjectFile = %s"),lpInfo->szProjectFile);
-
-    ODKTrace(szText);
-
-_tcsncpy_s(g_szDSNName, _countof(g_szDSNName), lpInfo->szDSNName, _TRUNCATE);
-
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" DSNName = %s"),lpInfo->szDSNName);
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" ProjectFile = %s"),lpInfo-&gt;szProjectFile);
 
     ODKTrace(szText);
 
-    _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" DataLocale = 0x%08X"),lpInfo->dwDataLocale);
+_tcsncpy_s(g_szDSNName, _countof(g_szDSNName), lpInfo-&gt;szDSNName, _TRUNCATE);
+
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" DSNName = %s"),lpInfo-&gt;szDSNName);
+
+    ODKTrace(szText);
+
+    _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" DataLocale = 0x%08X"),lpInfo-&gt;dwDataLocale);
 
     ODKTrace(szText);
 
@@ -15707,7 +15707,7 @@ BOOL MyDMEnumOpenedProjects(void)
 
     VOID* pvUser = AfxGetApp();
 
-    memset(&Error, 0, sizeof(CMN_ERROR));
+    memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
     ret = MyDMConnect();
 
@@ -15715,7 +15715,7 @@ BOOL MyDMEnumOpenedProjects(void)
 
     {
 
-        ret = DMEnumOpenedProjects(&dwItems, MyDMEnumOpenProjectsCallback, pvUser, &Error);
+        ret = DMEnumOpenedProjects(&amp;dwItems, MyDMEnumOpenProjectsCallback, pvUser, &amp;Error);
 
         if(FALSE == ret)
 
@@ -15821,7 +15821,7 @@ void MyGAPIEnumTypes()
 
     ret = FALSE;
 
-    memset(&Error,0,sizeof(CMN_ERROR));
+    memset(&amp;Error,0,sizeof(CMN_ERROR));
 
     ret = MyDMGetConnectionState(); //check the connection state to DM
 
@@ -15833,7 +15833,7 @@ void MyGAPIEnumTypes()
 
         _tcsncpy_s(szProjectFile, _countof(szProjectFile), /*PROJ_PATH*/g_szProjectFile, _TRUNCATE);
 
-        memset(&Error,0,sizeof(CMN_ERROR));
+        memset(&amp;Error,0,sizeof(CMN_ERROR));
 
         ret = GAPIEnumTypes(szProjectFile,
 
@@ -15841,7 +15841,7 @@ void MyGAPIEnumTypes()
 
                 pvUser,
 
-                &Error);
+                &amp;Error);
 
         if(FALSE == ret)
 
@@ -15909,23 +15909,23 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("DMEnumConnectionCallback")
 
 ODKTrace(szText);
 
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...Connection = %s"),lpdmConData->szConnection);
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...Connection = %s"),lpdmConData-&gt;szConnection);
 
 ODKTrace(szText);
 
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...UnitName = %s"),lpdmConData->szUnitName);
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...UnitName = %s"),lpdmConData-&gt;szUnitName);
 
 ODKTrace(szText);
 
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...Common=%s"),lpdmConData->szCommon);
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...Common=%s"),lpdmConData-&gt;szCommon);
 
 ODKTrace(szText);
 
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...Specific=%s"),lpdmConData->szSpecific);
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...Specific=%s"),lpdmConData-&gt;szSpecific);
 
 ODKTrace(szText);
 
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...VarNum=%d"),lpdmConData->dwVarNum);
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("...VarNum=%d"),lpdmConData-&gt;dwVarNum);
 
 ODKTrace(szText);
 
@@ -15951,9 +15951,9 @@ void MyDMEnumConnectionData()
 
     DM_CONNKEY ConnKey;
 
-    memset(&ConnKey,0,sizeof(ConnKey));
+    memset(&amp;ConnKey,0,sizeof(ConnKey));
 
-    memset(&Error,0,sizeof(Error));
+    memset(&amp;Error,0,sizeof(Error));
 
     ret = MyDMGetConnectionState();
 
@@ -15967,7 +15967,7 @@ void MyDMEnumConnectionData()
 
         ret = DMEnumConnectionData(szProjectFile,
 
-                &ConnKey,
+                &amp;ConnKey,
 
                 dwItems,
 
@@ -15975,7 +15975,7 @@ void MyDMEnumConnectionData()
 
                 NULL,
 
-                &Error);
+                &amp;Error);
 
         if(FALSE == ret)
 
@@ -16049,9 +16049,9 @@ void MyDMGetProjectInformation(void)
 
     DM_PROJECT_INFO Info;
 
-    memset(&Error, 0, sizeof(CMN_ERROR));
+    memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-    memset(&Info, 0, sizeof(DM_PROJECT_INFO));
+    memset(&amp;Info, 0, sizeof(DM_PROJECT_INFO));
 
     ret = MyDMGetConnectionState(); //check the connection state
 
@@ -16063,7 +16063,7 @@ void MyDMGetProjectInformation(void)
 
         _tcsncpy_s(szProjectFile, _countof(szProjectFile), /*PROJ_PATH*/g_szProjectFile, _TRUNCATE);
 
-        ret = DMGetProjectInformation(szProjectFile, &Info, &Error);
+        ret = DMGetProjectInformation(szProjectFile, &amp;Info, &amp;Error);
 
         if(FALSE == ret)
 
@@ -16199,7 +16199,7 @@ void CTestCliDoc::OnTestEnumVariables()
 
     DM_VARFILTER dmVarFilter;
 
-    memset( &dmVarFilter, 0, sizeof(DM_VARFILTER) );
+    memset( &amp;dmVarFilter, 0, sizeof(DM_VARFILTER) );
 
     //--------------------------------------------------
 
@@ -16235,9 +16235,9 @@ void CTestCliDoc::OnTestEnumVariables()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if(!DMEnumVariables((LPSTR)(LPCTSTR) m_strProject, NULL/*&dmVarFilter*/, EnumVariablesProc, this, &Error))
+    if(!DMEnumVariables((LPSTR)(LPCTSTR) m_strProject, NULL/*&amp;dmVarFilter*/, EnumVariablesProc, this, &amp;Error))
 
     {
 
@@ -16271,9 +16271,9 @@ void CTestCliDoc::OnTestEnumConnectionDataAll()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if( !::DMEnumConnectionData( m_strProject, NULL, 0, EnumConnectionDataProc, this, &Error))
+    if( !::DMEnumConnectionData( m_strProject, NULL, 0, EnumConnectionDataProc, this, &amp;Error))
 
     {
 
@@ -16307,13 +16307,13 @@ void CTestCliDoc::OnTestMachines()
 
     CMN_ERROR Error;
 
-    memset(&Error,0,sizeof(CMN_ERROR));
+    memset(&amp;Error,0,sizeof(CMN_ERROR));
 
     DM_MACHINE_TABLE dmMachineTable;
 
-    memset(&dmMachineTable, 0, sizeof(dmMachineTable));
+    memset(&amp;dmMachineTable, 0, sizeof(dmMachineTable));
 
-    if(!DMGetMachineTable(m_strProject, &dmMachineTable, &Error))
+    if(!DMGetMachineTable(m_strProject, &amp;dmMachineTable, &amp;Error))
 
     {
 
@@ -16327,7 +16327,7 @@ void CTestCliDoc::OnTestMachines()
 
     {
 
-        for( int i = 0; i < dmmachinetable.nNumMachines; i++ )
+        for( int i = 0; i &lt; dmmachinetable.nNumMachines; i++ )
 
         {
 
@@ -16375,9 +16375,9 @@ void CTestCliDoc::OnTestProjectInfo()
 
     DM_PROJECT_INFO ProjectInfo;
 
-    memset(&ProjectInfo, 0, sizeof(DM_PROJECT_INFO));
+    memset(&amp;ProjectInfo, 0, sizeof(DM_PROJECT_INFO));
 
-    if(!DMGetProjectInformation(m_strProject, &ProjectInfo, cmnError))
+    if(!DMGetProjectInformation(m_strProject, &amp;ProjectInfo, cmnError))
 
     {
 
@@ -16431,13 +16431,13 @@ void CTestCliDoc::OnTestProjectPaths()
 
     CCmnError Error;
 
-    memset(&dmDirInfo, 0, sizeof(DM_DIRECTORY_INFO));
+    memset(&amp;dmDirInfo, 0, sizeof(DM_DIRECTORY_INFO));
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
     if(!DMGetProjectDirectory(m_strAppName, m_strProject,
 
-                &dmDirInfo, &Error))
+                &amp;dmDirInfo, &amp;Error))
 
     {
 
@@ -16503,7 +16503,7 @@ void CTestCliDoc::OnTestOpenProject()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
     CTestCliView* pView = GetFirstView();
 
@@ -16513,9 +16513,9 @@ void CTestCliDoc::OnTestOpenProject()
 
     strcpy( szProject, _T(PROJ_PATH) );
 
-    if(!DMOpenProject(pView->GetSafeHwnd(),
+    if(!DMOpenProject(pView-&gt;GetSafeHwnd(),
 
-            szProject, NELEM(szProject), &Error))
+            szProject, NELEM(szProject), &amp;Error))
 
     {
 
@@ -16559,9 +16559,9 @@ void CTestCliDoc::OnTestOpenProjects()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if(!DMEnumOpenedProjects(NULL, OpenProjectsProc, this, &Error))
+    if(!DMEnumOpenedProjects(NULL, OpenProjectsProc, this, &amp;Error))
 
     {
 
@@ -16595,11 +16595,11 @@ void CTestCliDoc::OnTestRuntimeProject()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
     TCHAR szBuffer[_MAX_PATH + 1];
 
-    if(!DMGetRuntimeProject(szBuffer, NELEM(szBuffer), &Error))
+    if(!DMGetRuntimeProject(szBuffer, NELEM(szBuffer), &amp;Error))
 
     {
 
@@ -16641,11 +16641,11 @@ void CTestCliDoc::OnTestSystemLocale()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
     DWORD dwLocaleID = 0;
 
-    if(!DMGetSystemLocale(&dwLocaleID, &Error))
+    if(!DMGetSystemLocale(&amp;dwLocaleID, &amp;Error))
 
     {
 
@@ -16693,11 +16693,11 @@ void CTestCliDoc::OnTestUpdateCycles()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if( !DMEnumUpdateCycles(m_strProject, &dwNumCalls,
+    if( !DMEnumUpdateCycles(m_strProject, &amp;dwNumCalls,
 
-                EnumCyclesProc, this, &Error))
+                EnumCyclesProc, this, &amp;Error))
 
     {
 
@@ -16731,9 +16731,9 @@ void CTestCliDoc::OnTestVariablenBeginstartvarupdate()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if(!DMBeginStartVarUpdate(&m_dwTAID, &Error))
+    if(!DMBeginStartVarUpdate(&amp;m_dwTAID, &amp;Error))
 
     {
 
@@ -16777,9 +16777,9 @@ void CTestCliDoc::OnTestVariablenEndstartvarupdate()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if( !DMEndStartVarUpdate(m_dwTAID, &Error))
+    if( !DMEndStartVarUpdate(m_dwTAID, &amp;Error))
 
     {
 
@@ -16835,9 +16835,9 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
     CCmnError Error;
 
-    memset(&Error, 0, sizeof(CCmnError));
+    memset(&amp;Error, 0, sizeof(CCmnError));
 
-    if( !DMGetValue(lpdmVarKey, nNum, lpdmvus, &Error))
+    if( !DMGetValue(lpdmVarKey, nNum, lpdmvus, &amp;Error))
 
     {
 
@@ -16851,27 +16851,27 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
         CString strData;
 
-        for( int i=0; i < nmum; i++)
+        for( int i=0; i &lt; nmum; i++)
 
         {
 
-            LPDM_VAR_UPDATE_STRUCT lpdmvus2 = &lpdmvus[i];
+            LPDM_VAR_UPDATE_STRUCT lpdmvus2 = &amp;lpdmvus[i];
 
-            switch( lpdmvus2->dmTypeRef.dwType )
+            switch( lpdmvus2-&gt;dmTypeRef.dwType )
 
             {
 
             case DM_VARTYPE_BIT:
 
-                if (lpdmvus2->dmValue.boolVal)
+                if (lpdmvus2-&gt;dmValue.boolVal)
 
                 {
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = TRUE"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID);
+                lpdmvus2-&gt;dmVarKey.dwID);
 
                 }
 
@@ -16881,9 +16881,9 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = FALSE"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID);
+                lpdmvus2-&gt;dmVarKey.dwID);
 
                 }
 
@@ -16893,11 +16893,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %u"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.bVal);
+                lpdmvus2-&gt;dmValue.bVal);
 
                 break;
 
@@ -16905,11 +16905,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %d"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.bVal);
+                lpdmvus2-&gt;dmValue.bVal);
 
                 break;
 
@@ -16917,11 +16917,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %u"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.iVal);
+                lpdmvus2-&gt;dmValue.iVal);
 
                 break;
 
@@ -16929,11 +16929,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %d"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.iVal);
+                lpdmvus2-&gt;dmValue.iVal);
 
                 break;
 
@@ -16941,11 +16941,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %u"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.lVal);
+                lpdmvus2-&gt;dmValue.lVal);
 
                 break;
 
@@ -16953,11 +16953,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %d"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.lVal);
+                lpdmvus2-&gt;dmValue.lVal);
 
                 break;
 
@@ -16965,11 +16965,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %f"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.fltVal);
+                lpdmvus2-&gt;dmValue.fltVal);
 
                 break;
 
@@ -16977,11 +16977,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %f"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.dblVal);
+                lpdmvus2-&gt;dmValue.dblVal);
 
                 break;
 
@@ -16989,11 +16989,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %s"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.bstrVal);
+                lpdmvus2-&gt;dmValue.bstrVal);
 
                 break;
 
@@ -17003,11 +17003,11 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
                 strData.Format(_T("GetValue: Variable: %s\t( ID = %d ):\tWert = %s"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.bstrVal);
+                lpdmvus2-&gt;dmValue.bstrVal);
 
                 break;
 
@@ -17025,7 +17025,7 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
             // do not only delete the array later without clearing the Variants here because of memory leak's
 
-            VariantClear(&(lpdmvus2->dmValue));
+            VariantClear(&amp;(lpdmvus2-&gt;dmValue));
 
         }
 
@@ -17055,7 +17055,7 @@ void CTestCliDoc::OnTestVariablenGetvalue()
 
 //{{FUNCTION}(END)}
 
-//-----< Notification-Callback for GetValueWait >-----------------------------
+//-----&lt; Notification-Callback for GetValueWait &gt;-----------------------------
 
 BOOL GetValueWaitNotify(DWORD dwTAID,
 
@@ -17071,31 +17071,31 @@ dwTAID;
 
     CTestCliDoc* pDoc = (CTestCliDoc*)lpvUser;
 
-    for(DWORD i=0; i <dwitems; i++)
+    for(DWORD i=0; i &lt;dwitems; i++)
 
     {
 
-        LPDM_VAR_UPDATE_STRUCT lpdmvus2 = &lpdmvus[i];
+        LPDM_VAR_UPDATE_STRUCT lpdmvus2 = &amp;lpdmvus[i];
 
         CString strData;
 
-        switch(lpdmvus2->dmTypeRef.dwType)
+        switch(lpdmvus2-&gt;dmTypeRef.dwType)
 
         {
 
         case DM_VARTYPE_BIT:
 
-            if (lpdmvus2->dmValue.boolVal)
+            if (lpdmvus2-&gt;dmValue.boolVal)
 
             {
 
                 strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = TRUE, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             }
 
@@ -17105,11 +17105,11 @@ dwTAID;
 
                 strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = FALSE, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             }
 
@@ -17119,13 +17119,13 @@ dwTAID;
 
             strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = %u, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.bVal,
+                lpdmvus2-&gt;dmValue.bVal,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             break;
 
@@ -17133,13 +17133,13 @@ dwTAID;
 
             strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = %d, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.bVal,
+                lpdmvus2-&gt;dmValue.bVal,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             break;
 
@@ -17147,13 +17147,13 @@ dwTAID;
 
             strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = %u, Status=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.iVal,
+                lpdmvus2-&gt;dmValue.iVal,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             break;
 
@@ -17161,13 +17161,13 @@ dwTAID;
 
             strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = %d, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.iVal,
+                lpdmvus2-&gt;dmValue.iVal,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             break;
 
@@ -17175,13 +17175,13 @@ dwTAID;
 
             strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = %u, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.lVal,
+                lpdmvus2-&gt;dmValue.lVal,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             break;
 
@@ -17189,13 +17189,13 @@ dwTAID;
 
             strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = %d, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.lVal,
+                lpdmvus2-&gt;dmValue.lVal,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             break;
 
@@ -17203,13 +17203,13 @@ dwTAID;
 
             strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = %f, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.fltVal,
+                lpdmvus2-&gt;dmValue.fltVal,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             break;
 
@@ -17217,13 +17217,13 @@ dwTAID;
 
             strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = %f, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.dblVal,
+                lpdmvus2-&gt;dmValue.dblVal,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             break;
 
@@ -17231,13 +17231,13 @@ dwTAID;
 
             strData.Format(_T("GetValueWait: Tag: %s\t( ID = %d ):\tValue = %s, State=%04x"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
-                lpdmvus2->dmVarKey.dwID,
+                lpdmvus2-&gt;dmVarKey.dwID,
 
-                lpdmvus2->dmValue.bstrVal,
+                lpdmvus2-&gt;dmValue.bstrVal,
 
-                lpdmvus2->dwState);
+                lpdmvus2-&gt;dwState);
 
             break;
 
@@ -17249,7 +17249,7 @@ dwTAID;
 
                 HRESULT hr;
 
-                hr = SafeArrayAccessData(lpdmvus2->dmValue.parray, (VOID **) &pArray);
+                hr = SafeArrayAccessData(lpdmvus2-&gt;dmValue.parray, (VOID **) &amp;pArray);
 
                 if (! FAILED(hr))
 
@@ -17257,7 +17257,7 @@ dwTAID;
 
                 strData.Format(_T("Var:%s: Type:raw data\nValues:%02x %02x %02x %02x\n"),
 
-                lpdmvus2->dmVarKey.szName,
+                lpdmvus2-&gt;dmVarKey.szName,
 
                 pArray[0],
 
@@ -17267,7 +17267,7 @@ dwTAID;
 
                 pArray[3]);
 
-                SafeArrayUnaccessData(lpdmvus2->dmValue.parray);
+                SafeArrayUnaccessData(lpdmvus2-&gt;dmValue.parray);
 
                 }
 
@@ -17289,7 +17289,7 @@ dwTAID;
 
         }
 
-        pDoc->PutStr(strData);
+        pDoc-&gt;PutStr(strData);
 
     }
 
@@ -17297,7 +17297,7 @@ dwTAID;
 
 }
 
-//-----< OnTestVariablenGetvaluewait >------------------------------------------
+//-----&lt; OnTestVariablenGetvaluewait &gt;------------------------------------------
 
 void CTestCliDoc::OnTestVariablenGetvaluewait()
 
@@ -17317,9 +17317,9 @@ void CTestCliDoc::OnTestVariablenGetvaluewait()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if(!DMGetValueWait(&dwTAID,
+    if(!DMGetValueWait(&amp;dwTAID,
 
                 lpdmVarKey,
 
@@ -17333,7 +17333,7 @@ void CTestCliDoc::OnTestVariablenGetvaluewait()
 
                 this,
 
-                &Error))
+                &amp;Error))
 
     {
 
@@ -17347,7 +17347,7 @@ void CTestCliDoc::OnTestVariablenGetvaluewait()
 
 }
 
-//-----< OnTestVariablenGetvaluewait >------------------------------------------
+//-----&lt; OnTestVariablenGetvaluewait &gt;------------------------------------------
 
 void CTestCliDoc::OnTestVariablenGetvaluewaitTrue()
 
@@ -17367,9 +17367,9 @@ void CTestCliDoc::OnTestVariablenGetvaluewaitTrue()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if( !DMGetValueWait(&dwTAID,
+    if( !DMGetValueWait(&amp;dwTAID,
 
                 lpdmVarKey,
 
@@ -17383,7 +17383,7 @@ void CTestCliDoc::OnTestVariablenGetvaluewaitTrue()
 
                 this,
 
-                &Error))
+                &amp;Error))
 
     {
 
@@ -17425,9 +17425,9 @@ void CTestCliDoc::OnTestVariablenGetVarInfo()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if(!::DMGetVarInfo(m_strProject, lpdmVarKey, nNum, &Error))
+    if(!::DMGetVarInfo(m_strProject, lpdmVarKey, nNum, &amp;Error))
 
     {
 
@@ -17441,7 +17441,7 @@ void CTestCliDoc::OnTestVariablenGetVarInfo()
 
         CString strData;
 
-        for(int i=0; i<nnum; i++)
+        for(int i=0; i&lt;nnum; i++)
 
         {
 
@@ -17493,11 +17493,11 @@ void CTestCliDoc::OnTestVariablenGetvarlimits()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
     if(!::DMGetVarLimits(m_strProject, lpdmVarKey, nNum,
 
-                lpdmVarLimit, &Error))
+                lpdmVarLimit, &amp;Error))
 
     {
 
@@ -17511,7 +17511,7 @@ void CTestCliDoc::OnTestVariablenGetvarlimits()
 
         CString strData;
 
-        for(int i=0; i<nnum; i++)
+        for(int i=0; i&lt;nnum; i++)
 
         {
 
@@ -17571,11 +17571,11 @@ void CTestCliDoc::OnTestVariablenGetvartype()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
     if(!::DMGetVarType(m_strProject, lpdmVarKey, nNum,
 
-                lpdmTypeRef, &Error))
+                lpdmTypeRef, &amp;Error))
 
     {
 
@@ -17589,7 +17589,7 @@ void CTestCliDoc::OnTestVariablenGetvartype()
 
         CString strData;
 
-        for(int i=0; i<nnum; i++)
+        for(int i=0; i&lt;nnum; i++)
 
         {
 
@@ -17633,9 +17633,9 @@ void CTestCliDoc::OnTestVariablenResumevarupdate()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if(!DMResumeVarUpdate(m_dwTAID, &Error))
+    if(!DMResumeVarUpdate(m_dwTAID, &amp;Error))
 
     {
 
@@ -17689,7 +17689,7 @@ void CTestCliDoc::OnTestVariablenSetvalue()
 
     CCmnError cmnError;
 
-    for (i = 0; i < 1; i++)</p>
+    for (i = 0; i &lt; 1; i++)&lt;/p&gt;
 
     {
 
@@ -17751,7 +17751,7 @@ void CTestCliDoc::OnTestVariablenSetvaluewait()
 
     CCmnError cmnError;
 
-    if(!::DMSetValueWait(&m_dwTAID, lpdmVarKey,nNum, m_varValues,dwTimeOut,
+    if(!::DMSetValueWait(&amp;m_dwTAID, lpdmVarKey,nNum, m_varValues,dwTimeOut,
 
                 CompletionProc, this, cmnError))
 
@@ -17803,9 +17803,9 @@ void CTestCliDoc::OnTestVariablenStopallupdates()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if(!DMStopAllUpdates(&Error))
+    if(!DMStopAllUpdates(&amp;Error))
 
     {
 
@@ -17849,9 +17849,9 @@ void CTestCliDoc::OnTestVariablenStopvarupdate()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if( !DMStopVarUpdate(m_dwTAID, &Error))
+    if( !DMStopVarUpdate(m_dwTAID, &amp;Error))
 
     {
 
@@ -17895,9 +17895,9 @@ void CTestCliDoc::OnTestVariablenSuspendvarupdate()
 
     CCmnError Error;
 
-    memset(&Error,0,sizeof(CCmnError));
+    memset(&amp;Error,0,sizeof(CCmnError));
 
-    if(!DMSuspendVarUpdate(m_dwTAID, &Error))
+    if(!DMSuspendVarUpdate(m_dwTAID, &amp;Error))
 
     {
 
@@ -17989,7 +17989,7 @@ void MyDMOpenProject(void)
 
     _tcsncpy_s(szProjFile, _countof(szProjFile), _T("C:\\Siemens\\ODK\\Samples\\Projects\\Demo\\odk.mcp"), _TRUNCATE);
 
-    memset(&Error, 0,sizeof( CMN_ERROR ));
+    memset(&amp;Error, 0,sizeof( CMN_ERROR ));
 
     ret = MyDMConnect(); // check connection to DataManager
 
@@ -18007,9 +18007,9 @@ void MyDMOpenProject(void)
 
     {
 
-        memset(&Error, 0,sizeof( CMN_ERROR ));
+        memset(&amp;Error, 0,sizeof( CMN_ERROR ));
 
-        ret = DMOpenProject(handle, szProjFile, dwSize, &Error);
+        ret = DMOpenProject(handle, szProjFile, dwSize, &amp;Error);
 
         if(ret == FALSE)
 
@@ -18063,7 +18063,7 @@ void MyDMOpenProject(void)
 
 //#include "odkapi.h" // if console application
 
-#include <time.h>
+#include &lt;time.h&gt;
 
 #include "dm02.h"
 
@@ -18167,15 +18167,15 @@ void MyDMGetValue(void)
 
     DM_VAR_UPDATE_STRUCT VarUp[nNum];
 
-    memset(&VarUp, 0, sizeof(DM_VAR_UPDATE_STRUCT) * nNum);
+    memset(&amp;VarUp, 0, sizeof(DM_VAR_UPDATE_STRUCT) * nNum);
 
     // the included VARIANT's in the DM_VAR_UPDATE_STRUCT's then initialized to VT_EMPTY with the memset,
 
     // don't do this later again, because VT_BSTR's can be present after DMGetValue(...)!
 
-    memset(&VarKey,0, sizeof(DM_VARKEY) * nNum);
+    memset(&amp;VarKey,0, sizeof(DM_VARKEY) * nNum);
 
-    memset(&Error,0,sizeof(Error));
+    memset(&amp;Error,0,sizeof(Error));
 
     ret = MyDMGetConnectionState();
 
@@ -18183,11 +18183,11 @@ void MyDMGetValue(void)
 
     {
 
-        memset(&Error,0,sizeof(Error));
+        memset(&amp;Error,0,sizeof(Error));
 
         // RunTime project
 
-        ret = DMGetRuntimeProject(szProjFile, dwSize, &Error);
+        ret = DMGetRuntimeProject(szProjFile, dwSize, &amp;Error);
 
         if(FALSE != ret)
 
@@ -18195,7 +18195,7 @@ void MyDMGetValue(void)
 
             // fill out DM_VARKEY
 
-            for(int iRead = 0; iRead <nNum; iRead++)
+            for(int iRead = 0; iRead &lt;nNum; iRead++)
 
             {
 
@@ -18203,21 +18203,21 @@ void MyDMGetValue(void)
 
                 VarKey[iRead].dwID = 0;
 
-                strcpy( VarKey[iRead].szName, &TagNames[iRead][0]);
+                strcpy( VarKey[iRead].szName, &amp;TagNames[iRead][0]);
 
                 VarKey[iRead].lpvUserData = (VOID *) iRead;
 
             }
 
-            memset(&Error,0,sizeof(Error));
+            memset(&amp;Error,0,sizeof(Error));
 
-            ret = DMGetValue(VarKey, nNum, VarUp, &Error);
+            ret = DMGetValue(VarKey, nNum, VarUp, &amp;Error);
 
             if(FALSE != ret)
 
             {
 
-                for(int iOut=0; iOut <nNum; iOut++)
+                for(int iOut=0; iOut &lt;nNum; iOut++)
 
                 {
 
@@ -18357,7 +18357,7 @@ void MyDMGetValue(void)
 
                             ret = WideCharToMultiByte( CP_ACP,(DWORD)0,VarUp[iOut].dmValue.bstrVal,
 
-                                                       -1,(LPSTR)&BstrValue[0],128,NULL,NULL);
+                                                       -1,(LPSTR)&amp;BstrValue[0],128,NULL,NULL);
 
                             sprintf(szText, "Index=%d Name=%s ID=%d StrValue=%s",
 
@@ -18373,7 +18373,7 @@ void MyDMGetValue(void)
 
                             ret = WideCharToMultiByte( CP_ACP,(DWORD)0,VarUp[iOut].dmValue.bstrVal,
 
-                                                       -1,(LPSTR)&BstrValue[0],128,NULL,NULL);
+                                                       -1,(LPSTR)&amp;BstrValue[0],128,NULL,NULL);
 
                             sprintf(szText, "Index=%d Name=%s ID=%d StrValue=%s",
 
@@ -18393,7 +18393,7 @@ void MyDMGetValue(void)
 
                     //printf("%s\r\n",szText);
 
-                    VariantClear( &VarUp[iOut].dmValue );
+                    VariantClear( &amp;VarUp[iOut].dmValue );
 
                 }//end for
 
@@ -18539,11 +18539,11 @@ void MyDMSetValue(void)
 
     BSTR bstrText1, bstrText2;
 
-    memset(&Error, 0, sizeof(CMN_ERROR));
+    memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-    memset(&VarUp, 0, sizeof(DM_VAR_UPDATE_STRUCT) * nNum);
+    memset(&amp;VarUp, 0, sizeof(DM_VAR_UPDATE_STRUCT) * nNum);
 
-    memset(&VarKey,0, sizeof(DM_VARKEY) * nNum);
+    memset(&amp;VarKey,0, sizeof(DM_VARKEY) * nNum);
 
     ret = MyDMGetConnectionState();
 
@@ -18553,7 +18553,7 @@ void MyDMSetValue(void)
 
         // RunTime project
 
-        ret = DMGetRuntimeProject(szProjFile, dwSize, &Error);
+        ret = DMGetRuntimeProject(szProjFile, dwSize, &amp;Error);
 
         if(FALSE != ret)
 
@@ -18561,7 +18561,7 @@ void MyDMSetValue(void)
 
             // read tag
 
-            for(int i = 0; i < nNum; i++)
+            for(int i = 0; i &lt; nNum; i++)
 
             {
 
@@ -18569,7 +18569,7 @@ void MyDMSetValue(void)
 
                 VarKey[i].dwID = 0;
 
-                _tcsncpy_s(VarKey[i].szName, _countof(VarKey[i].szName), &TagNames[i][0], _TRUNCATE);
+                _tcsncpy_s(VarKey[i].szName, _countof(VarKey[i].szName), &amp;TagNames[i][0], _TRUNCATE);
 
                 VarKey[i].lpvUserData = (VOID *) i;
 
@@ -18635,11 +18635,11 @@ void MyDMSetValue(void)
 
             _tcsncpy_s(szTextValue, _countof(szTextValue), _T("VAR_A_TEXT8 Value"), _TRUNCATE);
 
-            ret = MultiByteToWideChar(CP_ACP,(DWORD)0, (LPCSTR) &szTextValue,-1,(LPWSTR)&Tmp[0],30);
+            ret = MultiByteToWideChar(CP_ACP,(DWORD)0, (LPCSTR) &amp;szTextValue,-1,(LPWSTR)&amp;Tmp[0],30);
 
             // SysFreeString(pBSTR);
 
-            bstrText1 = SysAllocString((OLECHAR FAR*)&Tmp[0]);
+            bstrText1 = SysAllocString((OLECHAR FAR*)&amp;Tmp[0]);
 
             VarVal[9].vt = VT_BSTR;
 
@@ -18649,11 +18649,11 @@ void MyDMSetValue(void)
 
             _tcsncpy_s(szTextValue, _countof(szTextValue), _T("VAR_B_TEXT16 Value"), _TRUNCATE);
 
-            ret = MultiByteToWideChar(CP_ACP,(DWORD)0, (LPCSTR)&szTextValue,-1,(LPWSTR)&Tmp[0],30);
+            ret = MultiByteToWideChar(CP_ACP,(DWORD)0, (LPCSTR)&amp;szTextValue,-1,(LPWSTR)&amp;Tmp[0],30);
 
             // SysFreeString(pB2);
 
-            bstrText2 = SysAllocString((OLECHAR FAR*)&Tmp[0]);
+            bstrText2 = SysAllocString((OLECHAR FAR*)&amp;Tmp[0]);
 
             VarVal[10].vt = VT_BSTR;
 
@@ -18661,9 +18661,9 @@ void MyDMSetValue(void)
 
             // set tag
 
-            memset(&Error,0,sizeof(CMN_ERROR));
+            memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-            ret = DMSetValue(&VarKey[0], nNum, &VarVal[0], &VarSta[0], &Error);
+            ret = DMSetValue(&amp;VarKey[0], nNum, &amp;VarVal[0], &amp;VarSta[0], &amp;Error);
 
             if (FALSE == ret)
 
@@ -21288,15 +21288,15 @@ int i;
 
 printf("Function ButtonRT() with text '%s'\r\n", text);
 
-bRet = DMGetRuntimeProject (&szProjectFile[0],sizeof(szProjectFile),&error);
+bRet = DMGetRuntimeProject (&amp;szProjectFile[0],sizeof(szProjectFile),&amp;error);
 
 printf("DMGetRuntimeProject: %s\r\n", szProjectFile);
 
-bRet = PDLRTOpenPicture(0,"Start.PDL",NULL,NULL,0,0,0,0,0,NULL,NULL, &error);
+bRet = PDLRTOpenPicture(0,"Start.PDL",NULL,NULL,0,0,0,0,0,NULL,NULL, &amp;error);
 
 printf("PDLRTOpenPicture: %s,%ld, %s\r\n", bRet?"TRUE":"FALSE", error.dwError1,error.szErrorText);
 
-bRet = PDLRTSetPropEx(0,"Start.PDL", "Button4", "Text",VT_LPSTR, &text,NULL,NULL,0, NULL, &error);
+bRet = PDLRTSetPropEx(0,"Start.PDL", "Button4", "Text",VT_LPSTR, &amp;text,NULL,NULL,0, NULL, &amp;error);
 
 printf("PDLRTSetPropEx: %s,%ld, %s\r\n", bRet?"TRUE":"FALSE", error.dwError1,error.szErrorText);
 
@@ -22621,11 +22621,11 @@ Bit2 = 0: Use local settings for Includes
 
 ****nErrors****
 
-Number of errors occurred. No P-code is returned for nErrors > 0.
+Number of errors occurred. No P-code is returned for nErrors &gt; 0.
 
 ****nWarnings****
 
-Number of warnings occurred. The P-code is also generated for nWarnings > 0.
+Number of warnings occurred. The P-code is also generated for nWarnings &gt; 0.
 
 ****lpvUser****
 
@@ -22782,11 +22782,11 @@ Bit2 = 0: Use local settings for Includes
 
 ****nErrors****
 
-Number of errors occurred. No P-code is returned for nErrors > 0.
+Number of errors occurred. No P-code is returned for nErrors &gt; 0.
 
 ****nWarnings****
 
-Number of warnings occurred. The P-code is also generated for nWarnings > 0.
+Number of warnings occurred. The P-code is also generated for nWarnings &gt; 0.
 
 ****lpvUser****
 
@@ -23532,9 +23532,9 @@ VOID* pUser = NULL;
 
 _tcsncpy_s(szApp, _countof(szApp), _T("MyODKApp_23"), _TRUNCATE); // must be the same AppName as by DMConnect
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = APConnect(szApp, MyAPRTCallback, &dwOrderID, pUser, &Error);
+ret = APConnect(szApp, MyAPRTCallback, &amp;dwOrderID, pUser, &amp;Error);
 
 if(FALSE == ret)
 
@@ -23570,9 +23570,9 @@ BOOL ret = FALSE;
 
 DWORD dwOrderID = 0;
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = APDisconnect(NULL, &dwOrderID, pUser, &Error);
+ret = APDisconnect(NULL, &amp;dwOrderID, pUser, &amp;Error);
 
 if(FALSE == ret)
 
@@ -25898,7 +25898,7 @@ bRet = PWRTCheckPermission( l_PermissionLevel.m_lNumber, 0L ); // 0 = show the m
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-bRet &= PWRTPermissionToString(l_PermissionLevel.m_lNumber, csPermLevName.GetBuffer(1024), 1024);
+bRet &amp;= PWRTPermissionToString(l_PermissionLevel.m_lNumber, csPermLevName.GetBuffer(1024), 1024);
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -25906,9 +25906,9 @@ if(!bRet)
 
 {
 
-m_pView->Print("ERROR: ", FSIZE_FUNCMARK);
+m_pView-&gt;Print("ERROR: ", FSIZE_FUNCMARK);
 
-m_pView->Print("PWRTCheckPermission.\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("PWRTCheckPermission.\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
 csOut.Format("Level = %ld (\"%s\") - Access denied.\n",
 
@@ -25916,9 +25916,9 @@ l_PermissionLevel.m_lNumber,
 
 csPermLevName);
 
-m_pView->Print(csOut, FSIZE_SUBMARK);
+m_pView-&gt;Print(csOut, FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 return;
 
@@ -25934,13 +25934,13 @@ l_PermissionLevel.m_lNumber,
 
 csPermLevName);
 
-m_pView->Print("PWRTCheckPermission\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTCheckPermission\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Access approved:\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Access approved:\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
-m_pView->Print(csOut, FSIZE_SUBMARK);
+m_pView-&gt;Print(csOut, FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -25998,7 +25998,7 @@ return;
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-bRet=PWRTCheckPermissionOnPicture(l_PermissionLevel.m_lNumber, l_PictureName.m_csText, 0, &err);
+bRet=PWRTCheckPermissionOnPicture(l_PermissionLevel.m_lNumber, l_PictureName.m_csText, 0, &amp;err);
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -26012,13 +26012,13 @@ l_PictureName.m_csText,
 
 l_PermissionLevel.m_lNumber);
 
-m_pView->Print("PWRTCheckPermissionOnPicture\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTCheckPermissionOnPicture\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Access approved:\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Access approved:\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
-m_pView->Print(csOut, FSIZE_SUBMARK);
+m_pView-&gt;Print(csOut, FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -26026,9 +26026,9 @@ else
 
 {
 
-m_pView->PrintError(&err, "PWRTCheckPermissionOnPicture");
+m_pView-&gt;PrintError(&amp;err, "PWRTCheckPermissionOnPicture");
 
-m_pView->PrintError("Access denied", "PWRTCheckPermissionOnPicture");
+m_pView-&gt;PrintError("Access denied", "PWRTCheckPermissionOnPicture");
 
 }
 
@@ -26078,11 +26078,11 @@ if(!bRet)
 
 {
 
-m_pView->Print("ERROR: ", FSIZE_FUNCMARK);
+m_pView-&gt;Print("ERROR: ", FSIZE_FUNCMARK);
 
-m_pView->Print("PWRTPermissionToString.\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("PWRTPermissionToString.\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 return;
 
@@ -26090,15 +26090,15 @@ return;
 
 csOut.Format("PWRTPermissionToString( %ld, buffer )\n", l_PermissionLevel.m_lNumber);
 
-m_pView->Print(csOut, FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print(csOut, FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Permission level name:\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Permission level name:\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
 csOut.Format("buffer = \"%s\"\n", csPermLevName);
 
-m_pView->Print(csOut, FSIZE_SUBMARK);
+m_pView-&gt;Print(csOut, FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -26128,23 +26128,23 @@ CString csOut;
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-lLevel=PWRTPermissionLevelDialogEx(*m_pView, &err);
+lLevel=PWRTPermissionLevelDialogEx(*m_pView, &amp;err);
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-if(m_pView->PrintError(&err, "PWRTPermissionLevelDialogEx"))
+if(m_pView-&gt;PrintError(&amp;err, "PWRTPermissionLevelDialogEx"))
 
 {
 
-m_pView->Print("lLevel = PWRTPermissionLevelDialogEx(...)\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("lLevel = PWRTPermissionLevelDialogEx(...)\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Permission level number chosen:\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Permission level number chosen:\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
 csOut.Format("lLevel = %ld\n", lLevel);
 
-m_pView->Print(csOut, FSIZE_SUBMARK);
+m_pView-&gt;Print(csOut, FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -26190,27 +26190,27 @@ if(!bRet)
 
 {
 
-m_pView->Print("ERROR: ", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("ERROR: ", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("PWRTGetCurrentUser.\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("PWRTGetCurrentUser.\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
-m_pView->Print("Failed to get current user's name.\n", FSIZE_SUBMARK);
+m_pView-&gt;Print("Failed to get current user's name.\n", FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 return;
 
 }
 
-m_pView->Print("PWRTGetCurrentUser\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTGetCurrentUser\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Current user's name:\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Current user's name:\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
 csOut.Format("Name = \"%s\"\n", csUsername);
 
-m_pView->Print(csOut, FSIZE_SUBMARK);
+m_pView-&gt;Print(csOut, FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -26234,7 +26234,7 @@ long lPriority;
 
 CString csOut;
 
-CMap<long, LONG, CString, CString> l_map(3);
+CMap&lt;long, LONG, CString, CString&gt; l_map(3);
 
 l_map[LOGIN_STANDARD]=CString("LOGIN_STANDARD");
 
@@ -26252,15 +26252,15 @@ if(lPriority!=-1)
 
 {
 
-m_pView->Print("PWRTGetLoginPriority\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTGetLoginPriority\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Priority returned:\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Priority returned:\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
 csOut.Format("Priority level = %s\n", l_map[lPriority]);
 
-m_pView->Print(csOut, FSIZE_SUBMARK);
+m_pView-&gt;Print(csOut, FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -26296,9 +26296,9 @@ if(bRet)
 
 {
 
-m_pView->Print("PWRTIsLoggedInByCard\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTIsLoggedInByCard\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("An user show-up logged in by card.\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("An user show-up logged in by card.\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
 }
 
@@ -26306,7 +26306,7 @@ else
 
 {
 
-m_pView->PrintError(_T("Either no user logged-on-by-card or no user logged on at all."),
+m_pView-&gt;PrintError(_T("Either no user logged-on-by-card or no user logged on at all."),
 
 _T("PWRTIsLoggedInByCard()"));
 
@@ -26342,23 +26342,23 @@ if(!bRet)
 
 {
 
-m_pView->Print("ERROR: ", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("ERROR: ", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("PWRTLogin.\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("PWRTLogin.\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
-m_pView->Print("General function failure.\n", FSIZE_SUBMARK);
+m_pView-&gt;Print("General function failure.\n", FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 return;
 
 }
 
-m_pView->Print("PWRTLogin\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTLogin\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Logging on...\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Logging on...\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -26390,23 +26390,23 @@ if(!bRet)
 
 {
 
-m_pView->Print("ERROR: ", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("ERROR: ", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("PWRTLogout.\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("PWRTLogout.\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
-m_pView->Print("General function failure.\n", FSIZE_SUBMARK);
+m_pView-&gt;Print("General function failure.\n", FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 return;
 
 }
 
-m_pView->Print("PWRTLogout\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTLogout\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Logging out...\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Logging out...\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -26450,7 +26450,7 @@ if(!bRet)
 
 {
 
-m_pView->PrintError( _T("Cannot logout."),
+m_pView-&gt;PrintError( _T("Cannot logout."),
 
 _T("PWRTLogoutEx"));
 
@@ -26460,15 +26460,15 @@ else
 
 {
 
-m_pView->Print("PWRTLogoutEx\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTLogoutEx\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Logging out...\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Logging out...\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
 csOut.Format("Priority level = %ld\n", l_PriorityLevel.m_lNumber);
 
-m_pView->Print(csOut, FSIZE_SUBMARK);
+m_pView-&gt;Print(csOut, FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -26514,7 +26514,7 @@ if(!bRet)
 
 {
 
-m_pView->PrintError( _T("Access denied or no Runtime project open."),
+m_pView-&gt;PrintError( _T("Access denied or no Runtime project open."),
 
 _T("PWRTSilentLogin"));
 
@@ -26524,9 +26524,9 @@ else
 
 {
 
-m_pView->Print("PWRTSilentLogin\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTSilentLogin\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Access approved:\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Access approved:\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
 }
 
@@ -26582,7 +26582,7 @@ if(!bRet)
 
 {
 
-m_pView->PrintError( _T("Access denied or no Runtime project open."),
+m_pView-&gt;PrintError( _T("Access denied or no Runtime project open."),
 
 _T("PWRTSilentLogin"));
 
@@ -26592,15 +26592,15 @@ else
 
 {
 
-m_pView->Print("PWRTSilentLogin\n", FSIZE_FUNCMARK, TRUE);
+m_pView-&gt;Print("PWRTSilentLogin\n", FSIZE_FUNCMARK, TRUE);
 
-m_pView->Print("Access approved:\n", FSIZE_PARAMMARK, FALSE, TRUE);
+m_pView-&gt;Print("Access approved:\n", FSIZE_PARAMMARK, FALSE, TRUE);
 
 csOut.Format("Priority level = %ld\n", l_PriorityLevel.m_lNumber);
 
-m_pView->Print(csOut, FSIZE_SUBMARK);
+m_pView-&gt;Print(csOut, FSIZE_SUBMARK);
 
-m_pView->Print("\n");
+m_pView-&gt;Print("\n");
 
 }
 
@@ -27909,9 +27909,9 @@ if(TRUE == ret)
 
 {
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TXTOpenProject(g_szProjectFile, g_szDSNName, FALSE, &Error);
+ret = TXTOpenProject(g_szProjectFile, g_szDSNName, FALSE, &amp;Error);
 
 if(FALSE == ret)
 
@@ -27939,9 +27939,9 @@ dwLocale = 0x0407; // german
 
 _tcsncpy_s(szText, _countof(szText), _T("NewInfoText_ODK"), _TRUNCATE);
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TXTGetInfoText(g_szProjectFile, dwTextID, dwLocale, szText, &dwSize, &Error);
+ret = TXTGetInfoText(g_szProjectFile, dwTextID, dwLocale, szText, &amp;dwSize, &amp;Error);
 
 if(FALSE == ret)
 
@@ -27969,9 +27969,9 @@ dwLocale=0x0409; // english
 
 _tcsncpy_s(szText, _countof(szText), _T("InfoText_ODK"), _TRUNCATE);
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TXTSetInfoText(g_szProjectFile, NULL, dwTextID, dwLocale, szText, &Error);
+ret = TXTSetInfoText(g_szProjectFile, NULL, dwTextID, dwLocale, szText, &amp;Error);
 
 if(FALSE == ret)
 
@@ -27993,9 +27993,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("TXTSetInfoText"));
 
 ODKTrace(szText);
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TXTCloseProject(g_szProjectFile, &Error);
+ret = TXTCloseProject(g_szProjectFile, &amp;Error);
 
 if(FALSE == ret)
 
@@ -28127,9 +28127,9 @@ if(TRUE == ret)
 
 {
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TXTOpenProject(g_szProjectFile, g_szDSNName, FALSE, &Error);
+ret = TXTOpenProject(g_szProjectFile, g_szDSNName, FALSE, &amp;Error);
 
 if(FALSE == ret)
 
@@ -28153,9 +28153,9 @@ ODKTrace(szText);
 
 dwItems = 0;
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TXTEnumLanguages(g_szProjectFile, &dwItems, MyTXTEnumLanguagesCallback, &dwUser, &Error);
+ret = TXTEnumLanguages(g_szProjectFile, &amp;dwItems, MyTXTEnumLanguagesCallback, &amp;dwUser, &amp;Error);
 
 if(FALSE == ret)
 
@@ -28171,9 +28171,9 @@ ODKTrace(szText);
 
 dwItems = 0;
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TXTEnumInfoText(g_szProjectFile, dwLocale, &dwItems, szFilter, MyTXTEnumInfotextsCallback, &dwUser, &Error);
+ret = TXTEnumInfoText(g_szProjectFile, dwLocale, &amp;dwItems, szFilter, MyTXTEnumInfotextsCallback, &amp;dwUser, &amp;Error);
 
 if(FALSE == ret)
 
@@ -28193,9 +28193,9 @@ dwItems, dwLocale, szFilter);
 
 ODKTrace(szText);
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TXTCloseProject(g_szProjectFile, &Error);
+ret = TXTCloseProject(g_szProjectFile, &amp;Error);
 
 if(FALSE == ret)
 
@@ -28780,19 +28780,19 @@ strcpy(method, "PREVIEW");
 
 strcpy(jobname, "Backdokumentation Control Center");
 
-ret = RPJAttach(&err);
+ret = RPJAttach(&amp;err);
 
 if (TRUE == ret)
 
 {
 
-hProp = RPJCreatePropertyHandle(szProjectName. &err);
+hProp = RPJCreatePropertyHandle(szProjectName. &amp;err);
 
 if (NULL == hProp)
 
 {
 
-ErrMsg("Error RPJCreatePropertyHandle", &err);
+ErrMsg("Error RPJCreatePropertyHandle", &amp;err);
 
 }
 
@@ -28800,13 +28800,13 @@ else
 
 {
 
-ret = RPJGetJobProps(hProp, jobname, &err);
+ret = RPJGetJobProps(hProp, jobname, &amp;err);
 
 if (FALSE == ret)
 
 {
 
-ErrMsg("Error RPJGetJobProbs", &err);
+ErrMsg("Error RPJGetJobProbs", &amp;err);
 
 }
 
@@ -28814,13 +28814,13 @@ else
 
 {
 
-ret = RPJCallJobMethod(hProp, method, &err);
+ret = RPJCallJobMethod(hProp, method, &amp;err);
 
 if (FALSE == ret)
 
 {
 
-ErrMsg("Error executing RPJCallJobMethod", &err);
+ErrMsg("Error executing RPJCallJobMethod", &amp;err);
 
 }
 
@@ -28834,11 +28834,11 @@ Msg("Print job started.");
 
 }
 
-RPJDeletePropertyHandle(hProp, &err);
+RPJDeletePropertyHandle(hProp, &amp;err);
 
 }
 
-RPJDetach(&err);
+RPJDetach(&amp;err);
 
 }
 
@@ -30675,9 +30675,9 @@ ODKTrace(szText);
 
 MyDMEnumOpenedProjects(); // open the DM and set the g_szProjectFile
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJAttach(&Error);
+ret = RPJAttach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -30705,9 +30705,9 @@ ODKTrace(szText);
 
 _tcsncpy_s(jobname, _countof(jobname), _T("ODK_PRINTJOB"), _TRUNCATE); // print job
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &Error);
+hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &amp;Error);
 
 if(NULL == hProp)
 
@@ -30719,7 +30719,7 @@ Error.dwError1, Error.dwError2, Error.szErrorText);
 
 ODKTrace(szText);
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -30755,9 +30755,9 @@ ODKTrace(szText);
 
 }
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJGetNumJobMethods(&d, &Error);
+ret = RPJGetNumJobMethods(&amp;d, &amp;Error);
 
 if(FALSE == ret)
 
@@ -30775,13 +30775,13 @@ else
 
 {
 
-for (i = 0; i < d; i++)
+for (i = 0; i &lt; d; i++)
 
 {
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJGetJobMethodAt(i, buf, dwBufsize, &Error);
+ret = RPJGetJobMethodAt(i, buf, dwBufsize, &amp;Error);
 
 if (ret == FALSE)
 
@@ -30807,9 +30807,9 @@ ODKTrace(szText);
 
 }
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJDeletePropertyHandle(hProp, &Error);
+ret = RPJDeletePropertyHandle(hProp, &amp;Error);
 
 if (FALSE == ret)
 
@@ -30831,9 +30831,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("RPJDeletePropertyHandle"))
 
 ODKTrace(szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -30919,9 +30919,9 @@ ODKTrace(szText);
 
 MyDMEnumOpenedProjects(); // open the DM and set the g_szProjectFile
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJAttach(&Error);
+ret = RPJAttach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -30949,9 +30949,9 @@ ODKTrace(szText);
 
 _tcsncpy_s(jobname, _countof(jobname), _T("ODK_PRINTJOB"), _TRUNCATE); // print job
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &Error);
+hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &amp;Error);
 
 if(NULL == hProp)
 
@@ -30963,7 +30963,7 @@ Error.dwError1, Error.dwError2, Error.szErrorText);
 
 ODKTrace(szText);
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -30999,9 +30999,9 @@ ODKTrace(szText);
 
 }
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJGetNumJobs(/*PROJ_PATH*/g_szProjectFile, &d, &Error);
+ret = RPJGetNumJobs(/*PROJ_PATH*/g_szProjectFile, &amp;d, &amp;Error);
 
 if(FALSE == ret)
 
@@ -31019,15 +31019,15 @@ else
 
 {
 
-for (i = 0; i < d; i++)
+for (i = 0; i &lt; d; i++)
 
 {
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
 ret = FALSE;
 
-ret = RPJGetJobNameAt(/*PROJ_PATH*/g_szProjectFile, i, buf, dwBufsize, &Error);
+ret = RPJGetJobNameAt(/*PROJ_PATH*/g_szProjectFile, i, buf, dwBufsize, &amp;Error);
 
 if (ret == FALSE)
 
@@ -31053,11 +31053,11 @@ ODKTrace(szText);
 
 }
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
 ret = FALSE;
 
-ret = RPJDeletePropertyHandle(hProp, &Error);
+ret = RPJDeletePropertyHandle(hProp, &amp;Error);
 
 if (ret == FALSE)
 
@@ -31079,9 +31079,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("RPJDeletePropertyHandle"))
 
 ODKTrace(szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -31169,9 +31169,9 @@ ODKTrace(szText);
 
 MyDMEnumOpenedProjects(); // open the DM and set the g_szProjectFile
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJAttach(&Error);
+ret = RPJAttach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -31199,9 +31199,9 @@ ODKTrace(szText);
 
 _tcsncpy_s(jobname, _countof(jobname), _T("ODK_PRINTJOB"), _TRUNCATE); // print job
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &Error);
+hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &amp;Error);
 
 if(NULL == hProp)
 
@@ -31213,7 +31213,7 @@ Error.dwError1, Error.dwError2, Error.szErrorText);
 
 ODKTrace(szText);
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -31249,9 +31249,9 @@ ODKTrace(szText);
 
 }
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJGetNumJobProperties(&d, &Error);
+ret = RPJGetNumJobProperties(&amp;d, &amp;Error);
 
 if(FALSE == ret)
 
@@ -31269,13 +31269,13 @@ else
 
 {
 
-for (i = 0; i < d; i++)
+for (i = 0; i &lt; d; i++)
 
 {
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJGetJobPropertyAt(i, buf, dwBufsize, &f, &Error);
+ret = RPJGetJobPropertyAt(i, buf, dwBufsize, &amp;f, &amp;Error);
 
 if (FALSE == ret)
 
@@ -31301,9 +31301,9 @@ ODKTrace(szText);
 
 }
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJDeletePropertyHandle(hProp, &Error);
+ret = RPJDeletePropertyHandle(hProp, &amp;Error);
 
 if (FALSE == ret)
 
@@ -31325,9 +31325,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("RPJDeletePropertyHandle"))
 
 ODKTrace(szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -31417,9 +31417,9 @@ ODKTrace(szText);
 
 MyDMEnumOpenedProjects(); // open the DM and set the g_szProjectFile
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJAttach(&Error);
+ret = RPJAttach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -31447,9 +31447,9 @@ ODKTrace(szText);
 
 // read properties
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &Error);
+hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &amp;Error);
 
 if(NULL == hProp)
 
@@ -31461,7 +31461,7 @@ Error.dwError1, Error.dwError2, Error.szErrorText);
 
 ODKTrace(szText);
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -31499,9 +31499,9 @@ ODKTrace(szText);
 
 _tcsncpy_s(jobname, _countof(jobname), _T("ODK_PRINTJOB"), _TRUNCATE);
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJGetJobProps (hProp, jobname, &Error);
+ret = RPJGetJobProps (hProp, jobname, &amp;Error);
 
 if(FALSE == ret)
 
@@ -31513,7 +31513,7 @@ Error.dwError1, Error.dwError2, Error.szErrorText);
 
 ODKTrace(szText);
 
-ret = RPJDeletePropertyHandle (hProp, &Error);
+ret = RPJDeletePropertyHandle (hProp, &amp;Error);
 
 if(ret == FALSE)
 
@@ -31535,7 +31535,7 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("RPJDeletePropertyHandle"))
 
 ODKTrace(szText);
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -31577,13 +31577,13 @@ _tcsncpy_s(jobname, _countof(jobname), _T("ODK_PRINTJOB"), _TRUNCATE);
 
 _tcsncpy_s(propname, _countof(propname), _T("STARTTIME"), _TRUNCATE);
 
-memset(&st, 0, sizeof(SYSTEMTIME));
+memset(&amp;st, 0, sizeof(SYSTEMTIME));
 
-ptr = (LPVOID)&st;
+ptr = (LPVOID)&amp;st;
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJGetProperty (hProp, propname, ptr, (VARTYPE)typ, 16, &Error);
+ret = RPJGetProperty (hProp, propname, ptr, (VARTYPE)typ, 16, &amp;Error);
 
 if(FALSE == ret)
 
@@ -31633,9 +31633,9 @@ st.wMinute = 12;
 
 st.wSecond = 13;
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJSetProperty (hProp, propname, ptr, (VARTYPE) typ, 16, &Error);
+ret = RPJSetProperty (hProp, propname, ptr, (VARTYPE) typ, 16, &amp;Error);
 
 if(FALSE == ret)
 
@@ -31677,9 +31677,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" %02d.%02d.%04d %02d:%02d:
 
 ODKTrace(szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJSetJobProps (hProp, jobname, &Error);
+ret = RPJSetJobProps (hProp, jobname, &amp;Error);
 
 if(FALSE == ret)
 
@@ -31701,9 +31701,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" RPJSetJobProps"));
 
 ODKTrace(szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJDeletePropertyHandle (hProp, &Error);
+ret = RPJDeletePropertyHandle (hProp, &amp;Error);
 
 if(FALSE == ret)
 
@@ -31725,9 +31725,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("RPJDeletePropertyHandle"))
 
 ODKTrace(szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -31763,7 +31763,7 @@ ODKTrace(szText);
 
 // *********************************************************************
 
-// Copyright (C) 1995-99 SIEMENS AG, A&D PT1 D2 All rights reserved
+// Copyright (C) 1995-99 SIEMENS AG, A&amp;D PT1 D2 All rights reserved
 
 // *********************************************************************
 
@@ -31825,9 +31825,9 @@ ODKTrace(szText);
 
 MyDMEnumOpenedProjects(); // open the DM and set the g_szProjectFile
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJAttach(&Error);
+ret = RPJAttach(&amp;Error);
 
 if (FALSE == ret)
 
@@ -31853,9 +31853,9 @@ ODKTrace(szText);
 
 }
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &Error);
+hProp = RPJCreatePropertyHandle (/*PROJ_PATH*/g_szProjectFile, &amp;Error);
 
 if(NULL == hProp)
 
@@ -31867,7 +31867,7 @@ Error.dwError1, Error.dwError2, Error.szErrorText);
 
 ODKTrace(szText);
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if(FALSE == ret)
 
@@ -31903,9 +31903,9 @@ ODKTrace(szText);
 
 }
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJGetJobProps (hProp, jobname, &Error);
+ret = RPJGetJobProps (hProp, jobname, &amp;Error);
 
 if(FALSE == ret)
 
@@ -31917,7 +31917,7 @@ Error.dwError1, Error.dwError2, Error.szErrorText);
 
 ODKTrace(szText);
 
-ret = RPJDeletePropertyHandle (hProp, &Error);
+ret = RPJDeletePropertyHandle (hProp, &amp;Error);
 
 if(FALSE == ret)
 
@@ -31939,7 +31939,7 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("RPJDeletePropertyHandle"))
 
 ODKTrace(szText);
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if(FALSE == ret)
 
@@ -31981,9 +31981,9 @@ _tcsncpy_s(methode, _countof(methode), _T("PREVIEW"), _TRUNCATE); // preview
 
 // _tcsncpy_s(methode, _countof(methode), _T("SETSELECTIONALLPAGES"), _TRUNCATE);
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJCallJobMethod (hProp, methode, &Error);
+ret = RPJCallJobMethod (hProp, methode, &amp;Error);
 
 if(FALSE == ret)
 
@@ -32005,9 +32005,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" RPJCallJobMethod"));
 
 ODKTrace(szText);
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJDeletePropertyHandle (hProp, &Error);
+ret = RPJDeletePropertyHandle (hProp, &amp;Error);
 
 if(FALSE == ret)
 
@@ -32029,9 +32029,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("RPJDeletePropertyHandle"))
 
 ODKTrace(szText);
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = RPJDetach(&Error);
+ret = RPJDetach(&amp;Error);
 
 if(FALSE == ret)
 
@@ -32458,8 +32458,8 @@ These functions are available starting with WinCC V6.2.
 
 | Definition in ENUM_TLG_TAG_FIELDINDEX | Field index | Associated type definition | Type | Comments/ limitations |
 | --- | --- | --- | --- | --- |
-| ENUM_TLG_TAG_ENUMTYPE | 0 | VT_TLG_TAG_ENUMTYPE | VT_I4 | Set internally (value >= 8), cannot be changed |
-| ENUM_TLG_TAG_VERSION | 1 | VT_TLG_TAG_VERSION | VT_I4 | Set internally (value >= 1), cannot be changed |
+| ENUM_TLG_TAG_ENUMTYPE | 0 | VT_TLG_TAG_ENUMTYPE | VT_I4 | Set internally (value &gt;= 8), cannot be changed |
+| ENUM_TLG_TAG_VERSION | 1 | VT_TLG_TAG_VERSION | VT_I4 | Set internally (value &gt;= 1), cannot be changed |
 | ENUM_TLG_TAG_CREATORID | 2 | VT_TLG_TAG_CREATORID | VT_I4 |  |
 | ENUM_TLG_TAG_NAME | 3 | VT_TLG_TAG_NAME | VT_BSTR | Required for Create |
 | ENUM_TLG_TAG_ARCHIVNAME | 4 | VT_TLG_TAG_ARCHIVNAME | VT_BSTR | Required for Create |
@@ -34505,8 +34505,8 @@ The parameter is relevant for the cyclic-selective, cyclic-continuous logging of
 |  |  |  |
 | --- | --- | --- |
 | TLG_TRIG_CHANGE | 1L | Logging for every signal change |
-| TLG_TRIG_CHANGE_01 | 2L | Logging for signal change 0 -> 1 |
-| TLG_TRIG_CHANGE_10 | 3L | Logging for signal change 1 -> 0 |
+| TLG_TRIG_CHANGE_01 | 2L | Logging for signal change 0 -&gt; 1 |
+| TLG_TRIG_CHANGE_10 | 3L | Logging for signal change 1 -&gt; 0 |
 | TLG_TRIG_ALLWAYS | 4L | The value is logged in every logging cycle even without a signal change. |
 |  | invalid value | Error message TLG_API_INVALID_PARAM |
 
@@ -38175,13 +38175,13 @@ This section contains information on the following topics:
 
 #include "TL02.h"
 
-#include <string.h>
+#include &lt;string.h&gt;
 
-#include <stdlib.h>
+#include &lt;stdlib.h&gt;
 
-#include <malloc.h>
+#include &lt;malloc.h&gt;
 
-#include <time.h>
+#include &lt;time.h&gt;
 
 // IMPLEMENTATION
 
@@ -38259,9 +38259,9 @@ HWND hwndParent = NULL;
 
 TLG_TEMPLATEITEM_INFO TemplateItem;
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGConnect(hwndParent, &Error);
+ret = TLGConnect(hwndParent, &amp;Error);
 
 if(FALSE == ret)
 
@@ -38279,7 +38279,7 @@ else
 
 {
 
-memset(&TemplateItem, 0, sizeof(TLG_TEMPLATEITEM_INFO));
+memset(&amp;TemplateItem, 0, sizeof(TLG_TEMPLATEITEM_INFO));
 
 _tcsncpy_s(TemplateItem.szArchivName, _countof(TemplateItem.szArchivName), _T("PLSMWA"), _TRUNCATE); // archive name
 
@@ -38319,9 +38319,9 @@ TemplateItem.tplInfo.tplCurve.csy.fAutoRange = TRUE;
 
 TemplateItem.tplInfo.tplCurve.csy.crColor = COLOR_RED;
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGInsertTemplateItem(TemplateItem.szTemplateName, &TemplateItem, &Error);
+ret = TLGInsertTemplateItem(TemplateItem.szTemplateName, &amp;TemplateItem, &amp;Error);
 
 if(FALSE == ret)
 
@@ -38345,9 +38345,9 @@ ODKTrace(szText);
 
 // Disconnect
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGDisconnect(&Error);
+ret = TLGDisconnect(&amp;Error);
 
 if(FALSE == ret)
 
@@ -38463,9 +38463,9 @@ ODKTrace(szText);
 
 MyDMEnumOpenedProjects(); // open the DM and set the g_szProjectFile
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCSConnect(NULL, &Error);
+ret = TLGCSConnect(NULL, &amp;Error);
 
 if (FALSE == ret)
 
@@ -38491,9 +38491,9 @@ ODKTrace(szText);
 
 //printf("%s\r\n",szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGOpenProject(&hProject, /*PROJ_PATH*/g_szProjectFile, NULL, &Error);
+ret = TLGOpenProject(&amp;hProject, /*PROJ_PATH*/g_szProjectFile, NULL, &amp;Error);
 
 if (FALSE == ret)
 
@@ -38521,9 +38521,9 @@ ODKTrace(szText);
 
 // read projected archiving times
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGEnumTime(hProject, MyTLGEnumTimeNameCallback, pUser, &Error);
+ret = TLGEnumTime(hProject, MyTLGEnumTimeNameCallback, pUser, &amp;Error);
 
 if (FALSE == ret)
 
@@ -38549,9 +38549,9 @@ ODKTrace(szText);
 
 //TLGCloseProject();
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCloseProject(hProject, &Error);
+ret = TLGCloseProject(hProject, &amp;Error);
 
 if(FALSE == ret)
 
@@ -38579,9 +38579,9 @@ ODKTrace(szText);
 
 // Disconnect
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCSDisConnect(&Error);
+ret = TLGCSDisConnect(&amp;Error);
 
 if (FALSE == ret)
 
@@ -38697,9 +38697,9 @@ MyDMEnumOpenedProjects(); // open the DM and set the g_szProjectFile
 
 //TLGConnect
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCSConnect(NULL, &Error);
+ret = TLGCSConnect(NULL, &amp;Error);
 
 if (FALSE == ret)
 
@@ -38719,9 +38719,9 @@ else
 
 //TLGOpenProject
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGOpenProject(&hProject, /*PROJ_PATH*/g_szProjectFile, NULL, &Error);
+ret = TLGOpenProject(&amp;hProject, /*PROJ_PATH*/g_szProjectFile, NULL, &amp;Error);
 
 if (FALSE == ret)
 
@@ -38741,9 +38741,9 @@ else
 
 // TLGEnumArchives
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGEnumArchives(hProject, MyTLGEnumArchivCallback, pUser, &Error);
+ret = TLGEnumArchives(hProject, MyTLGEnumArchivCallback, pUser, &amp;Error);
 
 if (FALSE == ret)
 
@@ -38769,9 +38769,9 @@ ODKTrace(szText);
 
 //CloseProject
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCloseProject(hProject,&Error);
+ret = TLGCloseProject(hProject,&amp;Error);
 
 if(FALSE == ret)
 
@@ -38797,9 +38797,9 @@ ODKTrace(szText);
 
 // Disconnect
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCSDisConnect(&Error);
+ret = TLGCSDisConnect(&amp;Error);
 
 if (FALSE == ret)
 
@@ -38875,7 +38875,7 @@ lpUser;
 
 TCHAR szText[255];
 
-_sntprintf_s(szText,_countof(szText), _TRUNCATE, _T("Enum Variables %d %s "), lpvi->dwVariableTyp, lpvi->szVariableName);
+_sntprintf_s(szText,_countof(szText), _TRUNCATE, _T("Enum Variables %d %s "), lpvi-&gt;dwVariableTyp, lpvi-&gt;szVariableName);
 
 ODKTrace(szText);
 
@@ -38903,9 +38903,9 @@ VOID* pUser = NULL;
 
 _tcsncpy_s(szArchivName, _countof(szArchivName), _T("PLSMWA"), _TRUNCATE);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGConnect(hwndParent, &Error);
+ret = TLGConnect(hwndParent, &amp;Error);
 
 if(FALSE == ret)
 
@@ -38929,11 +38929,11 @@ ODKTrace(szText);
 
 // Info
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
 ret = TLGEnumVariablesEx (szArchivName, MyTLGEnumVariablesExCallback,
 
-pUser, &Error );
+pUser, &amp;Error );
 
 if (FALSE == ret)
 
@@ -38955,9 +38955,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("TLGEnumVariablesEx: OK"));
 
 ODKTrace(szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGDisconnect(&Error);
+ret = TLGDisconnect(&amp;Error);
 
 if(FALSE == ret)
 
@@ -39025,15 +39025,15 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("TableName=%s"), lpTableNam
 
 ODKTrace(szText);
 
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" ...ArchivTyp=%d"), lpti->dwArchivTyp);
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" ...ArchivTyp=%d"), lpti-&gt;dwArchivTyp);
 
 ODKTrace(szText);
 
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" ...ArchivName=%s"),lpti->szArchivName);
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" ...ArchivName=%s"),lpti-&gt;szArchivName);
 
 ODKTrace(szText);
 
-_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" ...dwSaveTyp=%d"), lpti->dwSaveTyp);
+_sntprintf_s(szText, _countof(szText), _TRUNCATE, _T(" ...dwSaveTyp=%d"), lpti-&gt;dwSaveTyp);
 
 ODKTrace(szText);
 
@@ -39059,9 +39059,9 @@ TCHAR szText[255];
 
 HWND hwndParent = NULL;
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGConnect(hwndParent, &Error);
+ret = TLGConnect(hwndParent, &amp;Error);
 
 if(FALSE == ret)
 
@@ -39083,9 +39083,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("TLGConnect"));
 
 ODKTrace(szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGEnumArchivs(TLG_ARCTYP_PROCESS, MyTLGEnumTablesCallback, lpUser, &Error);
+ret = TLGEnumArchivs(TLG_ARCTYP_PROCESS, MyTLGEnumTablesCallback, lpUser, &amp;Error);
 
 if(FALSE == ret)
 
@@ -39107,9 +39107,9 @@ _sntprintf_s(szText, _countof(szText), _TRUNCATE, _T("TLGEnumArchivs: OK"));
 
 ODKTrace(szText);
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGDisconnect(&Error);
+ret = TLGDisconnect(&amp;Error);
 
 if(FALSE == ret)
 
@@ -39201,9 +39201,9 @@ _tcsncpy_s(szVarName, _countof(szVarName), _T("X"), _TRUNCATE);
 
 MyDMEnumOpenedProjects(); // open the DM and set the g_szProjectFile
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCSConnect(NULL, &Error);
+ret = TLGCSConnect(NULL, &amp;Error);
 
 if (FALSE == ret)
 
@@ -39221,9 +39221,9 @@ else
 
 {
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGOpenProject(&hProject, /*PROJ_PATH*/g_szProjectFile, NULL, &Error);
+ret = TLGOpenProject(&amp;hProject, /*PROJ_PATH*/g_szProjectFile, NULL, &amp;Error);
 
 if (FALSE == ret)
 
@@ -39243,11 +39243,11 @@ else
 
 // read
 
-memset(&TLGArchivStruct,0,sizeof(TLG_ARCHIV_STR));
+memset(&amp;TLGArchivStruct,0,sizeof(TLG_ARCHIV_STR));
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGReadArchiv(hProject, szArchivName, &TLGArchivStruct, &Error);
+ret = TLGReadArchiv(hProject, szArchivName, &amp;TLGArchivStruct, &amp;Error);
 
 if (FALSE == ret)
 
@@ -39283,11 +39283,11 @@ ODKTrace(szText);
 
 }
 
-memset(&TLGVarStruct, 0, sizeof(TLG_VAR_STR));
+memset(&amp;TLGVarStruct, 0, sizeof(TLG_VAR_STR));
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGReadVariable(hProject, szArchivName, szVarName, &TLGVarStruct, &Error);
+ret = TLGReadVariable(hProject, szArchivName, szVarName, &amp;TLGVarStruct, &amp;Error);
 
 if (FALSE == ret)
 
@@ -39371,9 +39371,9 @@ ODKTrace(szText);
 
 //CloseProject
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCloseProject(hProject,&Error);
+ret = TLGCloseProject(hProject,&amp;Error);
 
 if(FALSE == ret)
 
@@ -39399,9 +39399,9 @@ ODKTrace(szText);
 
 // Disconnect
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCSDisConnect(&Error);
+ret = TLGCSDisConnect(&amp;Error);
 
 if (FALSE == ret)
 
@@ -39497,9 +39497,9 @@ ODKTrace(szText);
 
 MyDMEnumOpenedProjects(); // open the DM and set the g_szProjectFile
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCSConnect(NULL, &Error);
+ret = TLGCSConnect(NULL, &amp;Error);
 
 if (FALSE == ret)
 
@@ -39517,9 +39517,9 @@ else
 
 {
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGOpenProject(&hProject, /*PROJ_PATH*/g_szProjectFile, NULL, &Error);
+ret = TLGOpenProject(&amp;hProject, /*PROJ_PATH*/g_szProjectFile, NULL, &amp;Error);
 
 if (FALSE == ret)
 
@@ -39539,13 +39539,13 @@ else
 
 // read properties of selected time
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-memset(&TLGTimeStruct, 0, sizeof(TLG_TIME_STR));
+memset(&amp;TLGTimeStruct, 0, sizeof(TLG_TIME_STR));
 
 _tcsncpy_s(szTime, _countof(szTime), _T("500 ms"), _TRUNCATE);
 
-ret = TLGReadTime(hProject, szTime, &TLGTimeStruct, &Error);
+ret = TLGReadTime(hProject, szTime, &amp;TLGTimeStruct, &amp;Error);
 
 if (FALSE == ret)
 
@@ -39579,9 +39579,9 @@ ODKTrace(szText);
 
 // save changes permanent
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TLGSaveProject(hProject , &Error);
+ret = TLGSaveProject(hProject , &amp;Error);
 
 if (FALSE == ret)
 
@@ -39605,9 +39605,9 @@ ODKTrace(szText);
 
 //TLGCloseProject();
 
-memset(&Error, 0, sizeof(CMN_ERROR));
+memset(&amp;Error, 0, sizeof(CMN_ERROR));
 
-ret = TLGCloseProject(hProject, &Error);
+ret = TLGCloseProject(hProject, &amp;Error);
 
 if(FALSE == ret)
 
@@ -39633,9 +39633,9 @@ ODKTrace(szText);
 
 // Disconnect
 
-memset(&Error,0,sizeof(CMN_ERROR));
+memset(&amp;Error,0,sizeof(CMN_ERROR));
 
-ret = TLGCSDisConnect(&Error);
+ret = TLGCSDisConnect(&amp;Error);
 
 if (FALSE == ret)
 
@@ -39822,15 +39822,15 @@ The UAQueryArchive and UAQueryArchiveByName functions create the UAHARCHIVE hand
 
 |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- |
-| UAConnect ---> | Handle UAHCONNECT |  |  |  |  |
+| UAConnect ---&gt; | Handle UAHCONNECT |  |  |  |  |
 | Required by | UAIsActive |  |  |  |  |
 |  | UAUsers |  |  |  |  |
 |  | UAOpenArchives |  |  |  |  |
 |  | UAOpenViews |  |  |  |  |
-|  | UAQueryArchive ---> | Handle UAHARCHIVE |  |  |  |
-|  | UAQueryArchiveByName ---> | Handle UAHARCHIVE |  |  |  |
+|  | UAQueryArchive ---&gt; | Handle UAHARCHIVE |  |  |  |
+|  | UAQueryArchiveByName ---&gt; | Handle UAHARCHIVE |  |  |  |
 |  | Required by: |  |  |  |  |
-|  |  | UAArchiveOpen ---> |  |  |  |
+|  |  | UAArchiveOpen ---&gt; |  |  |  |
 |  |  | Required for | UAArchiveDelete |  |  |
 |  |  |  | UAArchiveExport |  |  |
 |  |  |  | UAArchiveGetCount |  |  |
@@ -39866,9 +39866,9 @@ The UAQueryArchive and UAQueryArchiveByName functions create the UAHARCHIVE hand
 |  |  |  | UAArchiveUpdate |  |  |
 |  |  |  | UAArchiveWriteTagValues |  |  |
 |  |  |  | UAArchiveWriteTagValuesByName |  |  |
-|  |  |  | <--- UAArchiveClose |  |  |
-|  |  | <--- UAReleaseArchive |  |  |  |
-|  | <--- UADisconnect |  |  |  |  |
+|  |  |  | &lt;--- UAArchiveClose |  |  |
+|  |  | &lt;--- UAReleaseArchive |  |  |  |
+|  | &lt;--- UADisconnect |  |  |  |  |
 
 #### Error messages (RT Professional)
 
@@ -40236,7 +40236,7 @@ uaGetLastError always takes you back to the last error. If you know precisely wh
 
 ##### Example of functions with return values
 
-if ( uaArchiveGetFieldValueLong ( hArchive, Index, &IntValue ) == TRUE )
+if ( uaArchiveGetFieldValueLong ( hArchive, Index, &amp;IntValue ) == TRUE )
 
 printf( "Field Value = %u\n", IntValue );
 
@@ -41105,7 +41105,7 @@ Handle on recipe. This handle is generated using uaQueryArchive or uaQueryArchiv
 
 ****pszWhere****
 
-String with the SQL selection for the data entries to be deleted. This string corresponds to the SQL instruction DELETE FROM <archive> WHERE pszWhere.
+String with the SQL selection for the data entries to be deleted. This string corresponds to the SQL instruction DELETE FROM &lt;archive&gt; WHERE pszWhere.
 
 > **Note**
 >
@@ -44058,7 +44058,7 @@ The end time of the quick selection refers to the current system time of the loc
 | MSG_DB_FLAGS_OVERWRITE | (value: 1) | Overwrite existing data records |
 | MSG_DB_FLAGS_ADD | (value: 2) | Add only |
 | MSG_DB_FLAGS_DELETE | (value: 4) | Delete source data records |
-| MSG_DB_FLAGS_NOEXPORT | (value: 8) | Do not export data records --> Delete only (no longer available) |
+| MSG_DB_FLAGS_NOEXPORT | (value: 8) | Do not export data records --&gt; Delete only (no longer available) |
 
 ##### Flags for generic configuration
 
@@ -47355,19 +47355,19 @@ msgID.dwdw.dwLow  = 1;
 
 msgID.dwdw.dwHigh = 0;
 
-memset( &msgCSData, 0, sizeof( msgCSData ));
+memset( &amp;msgCSData, 0, sizeof( msgCSData ));
 
 // dwMsgNrU = 1;
 
 // dwMsgNrO = 0;
 
-ret = MSRTGetMsgCSDataPlus(0L, NULL, msgID.dwdw.dwLow, msgID.dwdw.dwHigh, &msgCSData, &Error );
+ret = MSRTGetMsgCSDataPlus(0L, NULL, msgID.dwdw.dwLow, msgID.dwdw.dwHigh, &amp;msgCSData, &amp;Error );
 
 if(TRUE==ret)
 
 {
 
-for (i = 0; i < (sizeof(msgCSData.dwTextID)/sizeof(DWORD)); i++){
+for (i = 0; i &lt; (sizeof(msgCSData.dwTextID)/sizeof(DWORD)); i++){
 
 printf("TextID[%d] = %d,\r\n",i, msgCSData.dwTextID[i]);
 
@@ -47523,19 +47523,19 @@ msgID.dwdw.dwLow  = 1;
 
 msgID.dwdw.dwHigh = 0;
 
-memset( &msgCSData, 0, sizeof( msgCSData ));
+memset( &amp;msgCSData, 0, sizeof( msgCSData ));
 
 // dwMsgNrU = 1;
 
 // dwMsgNrO = 0;
 
-ret = MSRTGetMsgCSDataPlus(0L, NULL, msgID.dwdw.dwLow, msgID.dwdw.dwHigh, &msgCSData, &Error );
+ret = MSRTGetMsgCSDataPlus(0L, NULL, msgID.dwdw.dwLow, msgID.dwdw.dwHigh, &amp;msgCSData, &amp;Error );
 
 if(TRUE==ret)
 
 {
 
-for (i = 0; i < (sizeof(msgCSData.dwTextID)/sizeof(DWORD)); i++){
+for (i = 0; i &lt; (sizeof(msgCSData.dwTextID)/sizeof(DWORD)); i++){
 
 printf("TextID[%d] = %d,\r\n",i, msgCSData.dwTextID[i]);
 
@@ -49622,7 +49622,7 @@ if(useTiaPortal)
 
 {
 
-result = OpenTIAPortalIECPLByAssignment(0, pTiaPortalProject, pStationName, pContainingBlock, pOperand, &error);
+result = OpenTIAPortalIECPLByAssignment(0, pTiaPortalProject, pStationName, pContainingBlock, pOperand, &amp;error);
 
 }
 
@@ -49634,13 +49634,13 @@ char *pServerPrefix = NULL, *pTagPrefix = NULL, *pWindowPrefix = NULL;
 
 // determine ServerPrefix of the current environment
 
-GetServerTagPrefix(&pServerPrefix, &pTagPrefix, &pWindowPrefix);
+GetServerTagPrefix(&amp;pServerPrefix, &amp;pTagPrefix, &amp;pWindowPrefix);
 
 // make the screen which contains the viewer control visible
 
 SetVisible("SYSTEM#Basic_Screen", "Screen_window_IECPLViewer", TRUE);
 
-result = OpenViewerIECPLByAssignment(0, pServerPrefix, "SYSTEM#IECPLViewer", "IECPLViewerObject", pStationName, pContainingBlock, pOperand, &error);
+result = OpenViewerIECPLByAssignment(0, pServerPrefix, "SYSTEM#IECPLViewer", "IECPLViewerObject", pStationName, pContainingBlock, pOperand, &amp;error);
 
 }
 
@@ -49796,7 +49796,7 @@ DWORD stepNumber = 0;
 
 result = OpenViewerS7GraphByBlock(dwFlags, serverPrefix, screenName, objectName,
 
-  cpuName, instanceDBName, stepNumber, &error);
+  cpuName, instanceDBName, stepNumber, &amp;error);
 
 if(!result)
 
@@ -49955,7 +49955,7 @@ if(matchSubstringPin)
 
 result = OpenViewerIECPLByCall(dwFlags, serverPrefix, screenName, objectName,
 
- cpuName, containingBlock, calledBlock, pinName, &error);
+ cpuName, containingBlock, calledBlock, pinName, &amp;error);
 
 if(!result)
 
@@ -50114,7 +50114,7 @@ if(matchSubstringPin)
 
  dwFlags |= KOPAPI_FLAG_TIAPORTAL_PIN_SUBSTRING_SEARCH;
 
-result = OpenViewerIECPLByFCCall(dwFlags, serverPrefix, screenName, objectName, cpuName, containingBlock, calledBlock, pinName, udtInstance, &error);
+result = OpenViewerIECPLByFCCall(dwFlags, serverPrefix, screenName, objectName, cpuName, containingBlock, calledBlock, pinName, udtInstance, &amp;error);
 
 if(!result)
 
@@ -50258,7 +50258,7 @@ char* serverPrefix = "";
 
 DWORD dwFlags = 0;
 
-result = OpenViewerIECPLByAssignment(dwFlags, serverPrefix, screenName, objectName, cpuName, containingBlock, operand, &error);
+result = OpenViewerIECPLByAssignment(dwFlags, serverPrefix, screenName, objectName, cpuName, containingBlock, operand, &amp;error);
 
 if(!result)
 
@@ -50355,7 +50355,7 @@ CMN_ERROR errorStruct;
 
 BOOL bResult;
 
-bResult = IsJumpableProDiagAlarm ( screenName, objectName, id, &errorStruct);
+bResult = IsJumpableProDiagAlarm ( screenName, objectName, id, &amp;errorStruct);
 
 SetPropBOOL ( screenname, "Button_Jump", "Enabled", bResult);
 
@@ -50905,95 +50905,95 @@ HRESULT Terminate();
 
 ##### Structure
 
-<PlcCodeViewerExternalClientModel Version="1.0.0.0">
+&lt;PlcCodeViewerExternalClientModel Version="1.0.0.0"&gt;
 
-<CommonHeaderInfo>
+&lt;CommonHeaderInfo&gt;
 
-</CommonHeaderInfo>
+&lt;/CommonHeaderInfo&gt;
 
-<Networks>
+&lt;Networks&gt;
 
-<Networks>
+&lt;Networks&gt;
 
-<NetworkHeaderInfo>
+&lt;NetworkHeaderInfo&gt;
 
-<NetworkHeaderInfo>
+&lt;NetworkHeaderInfo&gt;
 
-<FlgNet>
+&lt;FlgNet&gt;
 
-<Parts>
+&lt;Parts&gt;
 
-<Part>
+&lt;Part&gt;
 
-<Parameters>
+&lt;Parameters&gt;
 
-<Parameters>
+&lt;Parameters&gt;
 
-</Part>
+&lt;/Part&gt;
 
-</Parts>
+&lt;/Parts&gt;
 
-<Wires>
+&lt;Wires&gt;
 
-<Wire>
+&lt;Wire&gt;
 
-</Wire>
+&lt;/Wire&gt;
 
-</Wires>
+&lt;/Wires&gt;
 
-</FlgNet>
+&lt;/FlgNet&gt;
 
-<Networks>
+&lt;Networks&gt;
 
-</Networks>
+&lt;/Networks&gt;
 
-</PlcCodeViewerExternalClientModel>
+&lt;/PlcCodeViewerExternalClientModel&gt;
 
 The XSD file can be found by default in the following directory: C:\Users\Public\Documents\Siemens\WinCC.
 
-##### "<PlcCodeViewerExternalClientModel>" section
+##### "&lt;PlcCodeViewerExternalClientModel&gt;" section
 
 Contained: [1]
 
 Contains the sections "CommonHeaderInfo" and "Networks".
 
-!["<PlcCodeViewerExternalClientModel>" section](images/87295836939_DV_resource.Stream@PNG-de-DE.png)
+!["&lt;PlcCodeViewerExternalClientModel>" section](images/87295836939_DV_resource.Stream@PNG-de-DE.png)
 
-##### "<Networks>" section
+##### "&lt;Networks&gt;" section
 
 Contained: [0..n]
 
 Represents a network which is uniquely identified via the attribute "NetId". Contains the sections "NetworkHeaderInfo" and "FlgNet".
 
-!["<Networks>" section](images/87295115275_DV_resource.Stream@PNG-de-DE.png)
+!["&lt;Networks>" section](images/87295115275_DV_resource.Stream@PNG-de-DE.png)
 
-##### "<NetworkHeaderInfo>" section
+##### "&lt;NetworkHeaderInfo&gt;" section
 
 Contained: [1]
 
 Contains information about the network, e.g. the name of the instruction or the network title.
 
-##### "<FlgNet>" section
+##### "&lt;FlgNet&gt;" section
 
 Contained: [1]
 
 Represents the description of the network. Contains the sections "Parts" and "Wires".
 
-##### "<Part>" section
+##### "&lt;Part&gt;" section
 
 Contained: [0..n]
 
 Represents an instruction or an operand.
 
-!["<Part>" section](images/87292516363_DV_resource.Stream@PNG-de-DE.png)
+!["&lt;Part>" section](images/87292516363_DV_resource.Stream@PNG-de-DE.png)
 
-##### "<Wire>" section
+##### "&lt;Wire&gt;" section
 
 Contained: [0..n]
 
 Represents networking between instructions and operands.
 
-!["<Wire>" section](images/87292580619_DV_resource.Stream@PNG-de-DE.png)
+!["&lt;Wire>" section](images/87292580619_DV_resource.Stream@PNG-de-DE.png)
 
 ##### Relevant attributes
 

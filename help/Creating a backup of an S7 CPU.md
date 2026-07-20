@@ -154,7 +154,7 @@ To create a backup of the current configuration of a CPU, follow these steps:
 
 #### Result:
 
-A backup of the entire hardware configuration and software is created. The backup is stored in the project tree in the "Name of the CPU > Online backups" folder. The backup is assigned the name of the CPU with the time and date of the backup. You can rename the backup, but you cannot make any changes to the contents of the backup.
+A backup of the entire hardware configuration and software is created. The backup is stored in the project tree in the "Name of the CPU &gt; Online backups" folder. The backup is assigned the name of the CPU with the time and date of the backup. You can rename the backup, but you cannot make any changes to the contents of the backup.
 
 ## Backing up S7-1200 and S7-1500 CPUs (S7-1200, S7-1500, S7-1500T)
 
@@ -241,7 +241,7 @@ To create a backup of the current configuration of a CPU, follow these steps:
 
 #### Result:
 
-A backup of the entire hardware configuration and software is created. The backup is stored in the project tree in the "Name of the CPU > Online backups" folder. The backup is assigned the name of the CPU with the time and date of the backup. You can rename the backup, but you cannot make any changes to the contents of the backup.
+A backup of the entire hardware configuration and software is created. The backup is stored in the project tree in the "Name of the CPU &gt; Online backups" folder. The backup is assigned the name of the CPU with the time and date of the backup. You can rename the backup, but you cannot make any changes to the contents of the backup.
 
 An entry is created for each backup operation in the diagnostic buffer of the CPU.
 

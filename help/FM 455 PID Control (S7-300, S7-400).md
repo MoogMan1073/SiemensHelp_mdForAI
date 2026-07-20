@@ -180,7 +180,7 @@ During program controlled re-configuring (LOAD_PAR, LOAD_OP) of the controller m
 | QL_ALM | 38.3 | BOOL | FALSE | The process value or the controlled variable is monitored for four limits. Violation of the L_ALM limit is reported at output "Low limit alarm triggered". |
 | QLMN_HLM | 38.4 | BOOL | FALSE | The manipulated value is always limited to a high and a low limit. Violation of the high limit is reported at output "High limit of manipulated value triggered".  (Does not apply to step controllers without analog position feedback) |
 | QLMN_LLM | 38.5 | BOOL | FALSE | The manipulated value is always limited to a high and a low limit. Violation of the low limit is reported at output "Low limit of manipulated value triggered".  (Does not apply to step controllers without analog position feedback) |
-| QPARA_F | 38.6 | BOOL | FALSE | The module checks the validity of the parameters. A parameter assignment error is displayed at the "Parameter assignment error" output. These parameter assignment errors can also be read out in the module's "Online & Diagnostics" dialog. |
+| QPARA_F | 38.6 | BOOL | FALSE | The module checks the validity of the parameters. A parameter assignment error is displayed at the "Parameter assignment error" output. These parameter assignment errors can also be read out in the module's "Online &amp; Diagnostics" dialog. |
 | QCH_F | 38.7 | BOOL | FALSE | The "Channel error" output is set if the controller channel cannot provide valid results. A channel error (for example, wire break) is also set if QPARA_F = 1 or QMOD_F = 1. If QCH_F = TRUE, then the precise error information in the diagnostic data record DS1 of the module is read out. |
 | QUPRLM | 39.0 | BOOL | FALSE | The setpoint is limited to a positive and negative slew rate. If the output "Limit of positive setpoint slew rate triggered" is set, the positive setpoint slew rate is limited. |
 | QDNRLM | 39.1 | BOOL | FALSE | The setpoint is limited to a positive and negative slew rate. If the output "Limit of negative setpoint slew rate triggered" is set, the setpoint fall is limited. |
@@ -198,7 +198,7 @@ During program controlled re-configuring (LOAD_PAR, LOAD_OP) of the controller m
 | QLMNR_LS | 40.6 | BOOL | FALSE | The output "Low endstop signal of position feedback" indicates whether the control valve is at its low endstop. QLMNR_LS = TRUE means: The control valve is at its low endstop.  (For step controllers only) |
 | QLMNR_ON | 40.7 | BOOL | FALSE | Output "Position feedback enabled" indicates the set operating mode "Step controller with position feedback" or "Step controller without position feedback". |
 | QFUZZY | 41.0 | BOOL | FALSE | If the output parameter is QFUZZY = 1, the controller operates with the fuzzy algorithm. |
-| QSPLEPV | 41.1 | BOOL | FALSE | The output "Display of FUZZY controller: Setpoint < process value" is set when the fuzzy controller is switched on, if the setpoint is less than the effective process value. |
+| QSPLEPV | 41.1 | BOOL | FALSE | The output "Display of FUZZY controller: Setpoint &lt; process value" is set when the fuzzy controller is switched on, if the setpoint is less than the effective process value. |
 | QSPR | 41.2 | BOOL | FALSE | If the output "Split-range operation" is set, the continuous controller is operating in split-range mode. |
 | QMAN_FC | 41.4 | BOOL | FALSE | The output "QMAN_FC" is set in the following two cases:  - The slave controller is in manual mode and the master controller is followed up to the process value of the slave controller. - The I-action of the master controller is stopped because the setpoint or manipulated variable of the slave controller is limited or because the slave controller is in manual mode. |
 | QPARABUB | 41.7 | BOOL | FALSE | This parameter is set by the FM if the operating parameters are changed via the OP. If READ_VAR = TRUE and if this display is set by the FM, the instruction PID_FM_455 reads out the parameters SP_OP_ON, LMNOP_ON, SP_OP and LMN_OP from the FM and saves them in the instance DB. The instruction thus applies over the operating state of the FM. After the reading process the parameter is set to FALSE. |
@@ -251,12 +251,12 @@ During program controlled re-configuring (LOAD_PAR, LOAD_OP) of the controller m
 | MONERSEL | 72.2 | BOOL | FALSE<sup>1)</sup> | The controller has a limit indicator that can be applied either for the process value or the control deviation. If the input "Monitoring: Process value = 0, control deviation = 1" is set, the control deviation will be monitored. |
 | SDB_SEL | 72.4 | BOOL | FALSE | SDB_SEL=TRUE: After CPU STOP-RUN, the controller parameters of instruction PID_FM_455 are not overwritten by the SDB parameters in the FMx55. |
 | D_EL_SEL | 74.0 | INT | 0<sup>1)</sup> | The D-action element in the PID algorithm can be positioned at a separate input. This is selected via the input “D-action element input for the controller”.  - 0: Control deviation - 1 to 16: Analog input 1 to 16 - 17: Negative process value, D-action in the feedback |
-| SP_HLM | 76.0 | REAL | 100.0<sup>1)</sup> | The setpoint is always limited to a high and a low limit. The "Setpoint high limit" input specifies the high limit.  SP_HLM > SP_LLM |
-| SP_LLM | 80.0 | REAL | 0.0<sup>1)</sup> | The setpoint is always limited to a high and a low limit. The "Setpoint low limit" input specifies the low limit.  SP_LLM < SP_HLM |
-| H_ALM | 84.0 | REAL | 100.0<sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "High limit interrupt" input specifies the highest limit.  H_ALM > H_WRN |
+| SP_HLM | 76.0 | REAL | 100.0<sup>1)</sup> | The setpoint is always limited to a high and a low limit. The "Setpoint high limit" input specifies the high limit.  SP_HLM &gt; SP_LLM |
+| SP_LLM | 80.0 | REAL | 0.0<sup>1)</sup> | The setpoint is always limited to a high and a low limit. The "Setpoint low limit" input specifies the low limit.  SP_LLM &lt; SP_HLM |
+| H_ALM | 84.0 | REAL | 100.0<sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "High limit interrupt" input specifies the highest limit.  H_ALM &gt; H_WRN |
 | H_WRN | 88.0 | REAL | 90.0<sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "High limit warning" input specifies the second highest limit.  Values from H_ALM to L_WRN are permitted. |
 | L_WRN | 92.0 | REAL | 10.0<sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "Low limit warning" input specifies the second lowest limit.   Values from H_WRN to L_ALM are permitted. |
-| L_ALM | 96.0 | REAL | 0.0<sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "Low limit alarm" input specifies the lowest limit.  L_ALM < L_WRN |
+| L_ALM | 96.0 | REAL | 0.0<sup>1)</sup> | You can assign parameters for four limits for monitoring the process value or the control deviation. The "Low limit alarm" input specifies the lowest limit.  L_ALM &lt; L_WRN |
 | HYS | 100.0 | REAL | 1.0<sup>1)</sup> | To prevent flickering of the monitoring displays, a hysteresis can be configured at the "Hysteresis" input.  HYS ≥ 0.0 |
 | DEADB_W | 104.0 | REAL | 0.0<sup>1)</sup> | A deadband is applied to the control deviation. The "Deadband width" input determines the size of the deadband.  DEADB_W ≥ 0.0 |
 | GAIN | 108.0 | REAL | 1.0<sup>1)</sup> | The "Proportional gain" input specifies controller amplification. |
@@ -1508,7 +1508,7 @@ The following list contains the parameters of instruction PID_PAR_455, that are 
 | QCH_F | 434.4 |  | BOOL | FALSE | QCH_F = TRUE: A channel error of FM 455 has occurred during the calling of the local instance of the instruction PID_FM_455 (parameter cont_FM455.QCH_F). |
 | QTUN_ERR | 434.5 |  | BOOL | FALSE | QTUN_ERR = TRUE: Incorrect operator action occurred during controller optimization.  STATUS_H or STATUS_C = 3xxxx |
 | QTUN_WRN | 434.6 |  | BOOL | FALSE | QTUN_WRN = TRUE: : Warning message occurred during controller optimization.  STATUS_H or STATUS_C = 2xxxx |
-| QTUNSTCP | 434.7 |  | BOOL | FALSE | QTUNSTCP = TRUE: Tuning was initiated in cold process state and the controller is to be corrected to the operating point after optimization.   MAN_ON = FALSE; MAN = 0 (Heating off)   SP_IN > PV0 +10  (At the start of optimization, the operating point is greater than the process value by the amount of 10) |
+| QTUNSTCP | 434.7 |  | BOOL | FALSE | QTUNSTCP = TRUE: Tuning was initiated in cold process state and the controller is to be corrected to the operating point after optimization.   MAN_ON = FALSE; MAN = 0 (Heating off)   SP_IN &gt; PV0 +10  (At the start of optimization, the operating point is greater than the process value by the amount of 10) |
 | QCONTINU | 435.0 |  | BOOL | TRUE | Indicates whether the zone is ready for the next phase of controller optimization |
 | PHASE | 436.0 |  | INT | 0 | The currently active phase of controller optimization is indicated at the [Parameter PHASE](#parameter-phase-s7-300-s7-400) (0 to 7, 11 to13). |
 | STATUS_H | 438.0 |  | INT | 0 | [Parameter STATUS_H](#parameters-status_h-and-status_c-s7-300-s7-400) indicates a diagnostic value via the search for the point of inflection during the heating process. |
@@ -1545,7 +1545,7 @@ The following list contains the parameters of instruction PID_PAR_455, that are 
 | STAT_DPV | 510.0 |  | REAL | 1.0 | Process value delta for the steady state condition in controller optimization phase 1 or 11   See STAT_TM . |
 | STATDLMN | 514.0 |  | REAL | 4.0 | Manipulated value delta for the steady state condition in controller optimization phase 1 or 11   See STAT_TM. |
 | RATIOFAC | 518.0 |  | REAL | 1.0 | Ratio of heating gain/cooling gain of the process.   The low output limit and "Range start of the input signal of manipulated value B of the split-range function" are adapted automatically. |
-| CON_ZONE | 522.0 |  | REAL | 100.0 | Control zone  If ER >= CON_ZONE, then LMN = LMN_HLM.  If ER <= -CON_ZONE (or -CON_ZONE /RATIOFAC), then LMN = LMN_LLM. |
+| CON_ZONE | 522.0 |  | REAL | 100.0 | Control zone  If ER &gt;= CON_ZONE, then LMN = LMN_HLM.  If ER &lt;= -CON_ZONE (or -CON_ZONE /RATIOFAC), then LMN = LMN_LLM. |
 | MAN | 526.0 |  | REAL | 0.0 | Manual value   HEAT_OFF affects the parameter if  H_OFF_EN=TRUE . |
 | MAN_ON | 530.0 |  | BOOL | TRUE | Manual/automatic mode changeover  HEAT_OFF affects the parameter if H_OFF_EN=TRUE . |
 | CONZ_ON | 530.1 |  | BOOL | FALSE | TRUE = control zone enabled |
@@ -1587,14 +1587,14 @@ The following list contains the parameters of instruction PID_PAR_455, that are 
 | KIG | 552.0 | REAL | 0.0 | Maximum possible rate of rise of the process value during heating. |
 | KIG_C | 556.0 | REAL | 0.0 | Maximum decay rate of the process value during cooling. |
 | N_PTN | 560.0 | REAL | 0.0 | Order of the process. "Non-integer values" are also possible. |
-| TM_LAG_P | 564.0 | REAL | 0.0 | Time constant of a PTN model. (practical values for N_PTN>=2 only). |
+| TM_LAG_P | 564.0 | REAL | 0.0 | Time constant of a PTN model. (practical values for N_PTN&gt;=2 only). |
 | T_P_INF | 568.0 | REAL | 0.0 | Time from process excitation until the point of inflection. |
 | P_INF | 572.0 | REAL | 0.0 | Process value change from process excitation until the point of inflection. |
 | LMN0 | 576.0 | REAL | 0.0 | Manipulated value at the start of optimization  Calculated in phase 1 (mean value). |
 | PV0 | 580.0 | REAL | 0.0 | Process value at the start of optimization  Calculated in phase 1 (mean value). |
 | PVDT0 | 584.0 | REAL | 0.0 | Process value slew rate at the start of optimization |
 | PVDT | 588.0 | REAL | 0.0 | Current process value slew rate |
-| PVDT_MAX | 592.0 | REAL | 0.0 | Maximum derivative of the process value at the point of inflection (sign adapted, always > 0); is used to calculate TU and KIG. |
+| PVDT_MAX | 592.0 | REAL | 0.0 | Maximum derivative of the process value at the point of inflection (sign adapted, always &gt; 0); is used to calculate TU and KIG. |
 | NOI_PVDT | 596.0 | REAL | 0.0 | Noise action in PVDT_MAX in %   The higher the noise action, the less accurate (less aggressive) the control parameters. |
 | NOISE_PV | 600.0 | REAL | 0.0 | Absolute process value noise   Difference between maximum and minimum process value in phase 1. |
 | FIL_CYC | 604.0 | INT | 1 | Number of cycles of mean value filters 1 to 1024;   The process value is determined through FIL_CYC cycles. FIL_CYC is increased from 1 to a max. of 1024 if needed. |
@@ -1640,12 +1640,12 @@ If a diagnostic value 3xxxx is displayed, QTUN_ERR = TRUE
 | 10000 | Tuning completed + suitable controller parameters found |  |
 | 2xxxx | Tuning completed + controller parameters uncertain |  |
 | 2xx2x | Point of inflection not reached   (only when optimization from cold process state to the operating point QTUNSTCP =TRUE) | If the controller oscillates, weaken the controller parameters, or repeat the test with a smaller manipulated value difference TUN_LMN. |
-| 2x1xx | Estimation error TU too small  TU < 3*CYCLE | Reduce CYCLE and repeat the test.  Special case self-contained PT1 process:: Do not repeat the test; weaken the controller parameters if need be. |
-| 2x2xx | Estimation error T_P_INF too small T_P_INF < 72.8*CYCLE | see 2x1xx |
+| 2x1xx | Estimation error TU too small  TU &lt; 3*CYCLE | Reduce CYCLE and repeat the test.  Special case self-contained PT1 process:: Do not repeat the test; weaken the controller parameters if need be. |
+| 2x2xx | Estimation error T_P_INF too small T_P_INF &lt; 72.8*CYCLE | see 2x1xx |
 | 2x3xx | Estimation error TU too small and estimation error T_P_INF too small | see 2x1xx |
 | 3xxxx | Tuning canceled. No controller parameter found. |  |
-| 30002 | For heating optimization:  Effective manipulated variable difference < 5%   For cooling optimization:  TUN_CLMN > -5 % | Correct manipulated value difference TUN_LMN, TUN_DLMN or TUN_CLMN. |
-| 30003 | Incorrect manipulated variable low output limit for cooling optimization. cont_FM455.LMN_LLM > -5.0 | Set zone as heating/cooling zone COOLZONE =TRUE and check cont_FM455.LMN_LLM. |
+| 30002 | For heating optimization:  Effective manipulated variable difference &lt; 5%   For cooling optimization:  TUN_CLMN &gt; -5 % | Correct manipulated value difference TUN_LMN, TUN_DLMN or TUN_CLMN. |
+| 30003 | Incorrect manipulated variable low output limit for cooling optimization. cont_FM455.LMN_LLM &gt; -5.0 | Set zone as heating/cooling zone COOLZONE =TRUE and check cont_FM455.LMN_LLM. |
 | 30004 | Effective manipulated value difference is limited by split-range limits and not by manipulated value limits. | Check limits of the manipulated values and split-range.   Correct manipulated value difference TUN_LMN, TUN_DLMN or TUN_CLMN. |
 | 30005 | Sampling time CYCLE deviates by more than 5% from the measured value. | Compare CYCLE with the cycle time of the cyclic interrupt level and monitor possibly existing loop scheduler.   Check CPU load. Excessive load on CPU resources leads to extended sampling times that no longer match CYCLE. |
 | 30008 | An attempt is being made to initiate cooling optimization. However, no heating optimization was carried out beforehand (KIG=0.0). | Start with a heating optimization session. |
@@ -1681,11 +1681,11 @@ If a diagnostic value 3xxxx is displayed, QTUN_ERR = TRUE
 | STATUS_D | Description |
 | --- | --- |
 | 0 | No controller parameters were calculated. |
-| 110 | N_PTN <= 1.5 process type I fast |
-| 121 | N_PTN > 1.5 process type I |
-| 200 | N_PTN > 1.9 process type II (transition range) |
-| 310 | N_PTN >= 2.1 process type III fast |
-| 320 | N_PTN > 2.6 process type III |
+| 110 | N_PTN &lt;= 1.5 process type I fast |
+| 121 | N_PTN &gt; 1.5 process type I |
+| 200 | N_PTN &gt; 1.9 process type II (transition range) |
+| 310 | N_PTN &gt;= 2.1 process type III fast |
+| 320 | N_PTN &gt; 2.6 process type III |
 | 111, 122, 201, 311, 321 | Parameters have been corrected from phase 7. |
 
 > **Note**
@@ -1727,7 +1727,7 @@ If a diagnostic value 3xxxx is displayed, QTUN_ERR = TRUE
 | 4 (1 cycle per instruction ZONE) | Controller design |
 | 5 (1 cycle per instruction ZONE) | Following up the controller to the new manipulated variable |
 | 7 | Check of the process type (only for heating optimization) |
-| 10 | Cooling optimization Wait until all zones zones are in automatic mode (phase > 2). |
+| 10 | Cooling optimization Wait until all zones zones are in automatic mode (phase &gt; 2). |
 | 11 | Cooling optimization Steady state test; parameter check; feed forwarding of a constant cooling manipulated variable |
 | 12 | Cooling optimization: Searching for point of inflection with constant manipulated value |
 | 13 | Cooling optimization: Calculating the heating/cooling ratio |
@@ -1811,12 +1811,12 @@ The variable interface of the FM 455 contains 16 data blocks with the block numb
 | Parameters | Address | Data type | Default | Description |
 | --- | --- | --- | --- | --- |
 | <sup>1)</sup> Control parameters; <sup>2)</sup> Operating parameters |  |  |  |  |
-| SP_HLM<sup>1)</sup> | 0.0 | REAL | 100.0 | The setpoint is always limited to a high and a low limit. The input "Setpoint high limit" indicates the high limit.  SP_HLM > SP_LLM |
-| SP_LLM<sup>1)</sup> | 4.0 | REAL | 0.0 | The setpoint is always limited to a high and a low limit. The input "Setpoint low limit" specifies the low limit.  SP_LLM < SP_HLM |
-| H_ALM<sup>1)</sup> | 8.0 | REAL | 100.0 | You can assign parameters for four limits for monitoring the process value or the error signal. The input "High limit interrupt" indicates the highest limit.  H_ALM > H_WRN |
+| SP_HLM<sup>1)</sup> | 0.0 | REAL | 100.0 | The setpoint is always limited to a high and a low limit. The input "Setpoint high limit" indicates the high limit.  SP_HLM &gt; SP_LLM |
+| SP_LLM<sup>1)</sup> | 4.0 | REAL | 0.0 | The setpoint is always limited to a high and a low limit. The input "Setpoint low limit" specifies the low limit.  SP_LLM &lt; SP_HLM |
+| H_ALM<sup>1)</sup> | 8.0 | REAL | 100.0 | You can assign parameters for four limits for monitoring the process value or the error signal. The input "High limit interrupt" indicates the highest limit.  H_ALM &gt; H_WRN |
 | H_WRN<sup>1)</sup> | 12.0 | REAL | 90.0 | You can assign parameters for four limits for monitoring the process value or the error signal. The input “High limit warning” specifies the second to highest limit.  Values from H_ALM to L_WRN are permitted. |
 | L_WRN<sup>1)</sup> | 16.0 | REAL | 10.0 | You can assign parameters for four limits for monitoring the process value or the error signal. The input “Low limit warning” specifies the second to highest limit.  Values from H_WRN to L_ALM are permitted. |
-| L_ALM<sup>1)</sup> | 20.0 | REAL | 0.0 | You can assign parameters for four limits for monitoring the process value or the error signal. The input "Low limit alarm" specifies the lowest limit.  L_ALM < L_WRN |
+| L_ALM<sup>1)</sup> | 20.0 | REAL | 0.0 | You can assign parameters for four limits for monitoring the process value or the error signal. The input "Low limit alarm" specifies the lowest limit.  L_ALM &lt; L_WRN |
 | HYS<sup>1)</sup> | 24.0 | REAL | 1.0 | To prevent flickering of the monitoring displays, a hysteresis can be configured at the "Hysteresis" input.  HYS ≥ 0.0 |
 | DEADB_W<sup>1)</sup> | 28.0 | REAL | 0.0 | A dead band is applied to the error signal. The "Dead band width" input determines the size of the dead band.  DEADB_W ≥ 0.0 |
 | GAIN<sup>1)</sup> | 32.0 | REAL | 1.0 | The "Proportional gain" input specifies controller amplification. |
@@ -1874,7 +1874,7 @@ The variable interface of the FM 455 contains 16 data blocks with the block numb
 | QLMN_HLM | 122.4 | BOOL | FALSE | The manipulated value is always limited to a high and a low limit. Violation of the high limit is reported at output "High limit of manipulated value triggered".  (Does not apply to step controllers without analog position feedback) |
 | QLMN_LLM | 122.5 | BOOL | FALSE | The manipulated value is always limited to a high and a low limit. Violation of the low limit is reported at output "Low limit of manipulated value triggered".  (Does not apply to step controllers without analog position feedback) |
 | QSPINTON | 122.6 | BOOL | FALSE | The output "Internal setpoint on" indicates that SP_INT was transferred to the module. |
-| QPARA_F | 123.0 | BOOL | FALSE | The module checks the validity of the parameters. A parameter assignment error is displayed at the "Parameter assignment error" output. These parameter assignment errors can also be read out in the module's "Online & Diagnostics" dialog. |
+| QPARA_F | 123.0 | BOOL | FALSE | The module checks the validity of the parameters. A parameter assignment error is displayed at the "Parameter assignment error" output. These parameter assignment errors can also be read out in the module's "Online &amp; Diagnostics" dialog. |
 | QCH_F | 123.1 | BOOL | FALSE | The "Channel error" output is set if the controller channel cannot provide valid results. A channel error (for example, wire break) is also set if QPARA_F = 1 or QMOD_F = 1. If QCH_F = TRUE, then the precise error information in the diagnostic data record DS1 of the module is read out. |
 | QUPRLM | 123.2 | BOOL | FALSE | The setpoint is limited to a positive and negative slew rate. If the output "Limit of positive setpoint slew rate triggered" is set, the positive setpoint slew rate is limited. |
 | QDNRLM | 123.3 | BOOL | FALSE | The setpoint is limited to a positive and negative slew rate. If the output "Limit of negative setpoint slew rate triggered" is set, the setpoint fall is limited. |
@@ -1889,7 +1889,7 @@ The variable interface of the FM 455 contains 16 data blocks with the block numb
 | QLMNR_LS | 124.4 | BOOL | FALSE | The output "Low endstop signal of position feedback" indicates whether the control valve is at its low endstop. QLMNR_LS = TRUE means: The control valve is at its low endstop.  (For step controllers only) |
 | QLMNR_ON | 124.5 | BOOL | FALSE | Output "Position feedback enabled" indicates the set operating mode "Step controller with position feedback" or "Step controller without position feedback". |
 | QFUZZY | 124.6 | BOOL | FALSE | If the output "PID algorithm = 0; fuzzy = 1", the controller is working with the fuzzy algorithm. |
-| QSPLEPV | 124.7 | BOOL | FALSE | The output "Display of FUZZY controller: Setpoint < process value" is set when the fuzzy controller is switched on, if the setpoint is less than the effective process value. |
+| QSPLEPV | 124.7 | BOOL | FALSE | The output "Display of FUZZY controller: Setpoint &lt; process value" is set when the fuzzy controller is switched on, if the setpoint is less than the effective process value. |
 | QSPR | 125.0 | BOOL | FALSE | If the output "Split-range operation" is set, the continuous controller is operating in split-range mode. |
 | QLMNUP | 125.1 | BOOL | FALSE | This is the "Manipulated value signal up" output.  (Only in the case of step controllers or pulse controllers) |
 | QLMNDN | 125.2 | BOOL | FALSE | This is the "Manipulated value signal down" output.  (Only in the case of step controllers or pulse controllers) |

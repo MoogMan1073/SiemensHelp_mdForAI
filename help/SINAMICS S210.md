@@ -28,7 +28,7 @@ You can record the signal characteristic directly in the device with the trace f
 The drive parameters can be divided into the following categories:
 
 - "Normal" parameters; these parameters have a value
-- Enumeration parameters; these parameters have several values which can be used, for example, as an event query for the trace trigger ("="; "<>").
+- Enumeration parameters; these parameters have several values which can be used, for example, as an event query for the trace trigger ("="; "&lt;&gt;").
 - Index parameters; these parameters contain an index which can be used to display several properties.
 
   Example: r37[0] "Control Unit Temperature [current measurement value]" and r37[1] "Control Unit Temperature [maximum measurement value]"
@@ -762,7 +762,7 @@ If you want to superimpose several measuring functions, proceed as follows:
 3. To stop the measuring function, click either the ![Superimposing measuring functions](images/144054106507_DV_resource.Stream@PNG-de-DE.png) icon on the "Master control" screen form in the "Control" area or, alternatively, the ![Superimposing measuring functions](images/131804502539_DV_resource.Stream@PNG-de-DE.png) icon in the toolbar.
 
    The selected measuring function is stopped.
-4. Drag & drop the measurements to the system folder ![Superimposing measuring functions](images/84072764427_DV_resource.Stream@PNG-de-DE.png) (overlaid measurements).
+4. Drag &amp; drop the measurements to the system folder ![Superimposing measuring functions](images/84072764427_DV_resource.Stream@PNG-de-DE.png) (overlaid measurements).
 
 ##### Deactivating the master control
 

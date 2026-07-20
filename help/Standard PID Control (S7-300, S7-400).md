@@ -337,7 +337,7 @@ The following figure shows the principle of the controller interconnection in mu
 | MAN_ON | 0.3 | BOOL |  | TRUE | Manual mode on  (control loop interrupted, LMN set manually) |
 | CAS_ON | 0.4 | BOOL |  | FALSE | Cascade mode ON  (interconnected to QCAS of the lower-level controller) |
 | SELECT | 1.0 | BYTE | 0, 1, 2, 3 | 0 | If PULS_ON = TRUE:  0: PID and pulse generator  1: PID (block call in OB 1)  2: Pulse generator (block call in cyclic interrupt OB)  3: PID (block call in cyclic interrupt OB) |
-| CYCLE | 2.0 | TIME | > 20 ms (S7–300) | T#1s | Sampling time  (time between two block calls = constant)  Make sure to assign this parameter with the value of the cyclic interrupt cycle clock of the OB in which the PID_CP instruction runs. Otherwise, the time-dependent functions will not work correctly. (Exception: you are using time scaling, e.g., via the loop scheduler) |
+| CYCLE | 2.0 | TIME | &gt; 20 ms (S7–300) | T#1s | Sampling time  (time between two block calls = constant)  Make sure to assign this parameter with the value of the cyclic interrupt cycle clock of the OB in which the PID_CP instruction runs. Otherwise, the time-dependent functions will not work correctly. (Exception: you are using time scaling, e.g., via the loop scheduler) |
 | CYCLE_P | 6.0 | TIME |  | T#10 ms | Sampling time of the pulse generator  Make sure to assign this parameter with the value of the cyclic interrupt cycle clock of the OB in which the PID_CP instruction runs. Otherwise, the time-dependent functions will not work correctly. (Exception: you are using time scaling, e.g., via the loop scheduler) |
 | SP_INT | 10.0 | REAL | Engineering value range (physical quantity) | 0.0 | Internal setpoint  SP_INT can be changed via a HMI with SPUP and SPDN |
 | SP_EXT | 14.0 | REAL | Engineering value range (physical quantity) | 0.0 | External setpoint  SP_EXT is used for blending, ratio and cascade controllers and can be scaled. |
@@ -896,7 +896,7 @@ The following figure shows the principle of the controller interconnection in mu
 | MAN_ON | 0.3 | BOOL |  | TRUE | Manual mode on  (control loop interrupted, LMN set manually) |
 | LMNR_HS | 0.4 | BOOL |  | FALSE | High limit signal of position feedback |
 | LMNR_LS | 0.5 | BOOL |  | FALSE | Low limit signal of position feedback |
-| CYCLE | 2.0 | TIME | > 20 ms (S7–300) | T#1s | Sampling time  (time between block calls = constant)  Make sure to assign this parameter with the value of the cyclic interrupt cycle clock of the OB in which the PID_CP instruction runs. Otherwise, the time-dependent functions will not work correctly. (Exception: You are using time scaling, e.g., via the loop scheduler) |
+| CYCLE | 2.0 | TIME | &gt; 20 ms (S7–300) | T#1s | Sampling time  (time between block calls = constant)  Make sure to assign this parameter with the value of the cyclic interrupt cycle clock of the OB in which the PID_CP instruction runs. Otherwise, the time-dependent functions will not work correctly. (Exception: You are using time scaling, e.g., via the loop scheduler) |
 | SP_INT | 6.0 | REAL | Engineering value range (physical quantity) | 0.0 | Internal setpoint  SP_INT can be changed via a HMI with SPUP and SPDN |
 | SP_EXT | 10.0 | REAL | Engineering value range (physical quantity) | 0.0 | External setpoint  SP_EXT is used for blending, ratio and cascade controllers and can be scaled. |
 | PV_IN | 14.0 | REAL | Engineering value range (physical quantity) | 0.0 | Process value input  (PV in floating-point format) |
@@ -1372,13 +1372,13 @@ The data for the call distribution with LP_SCHED is specified in a global data b
 | GLP_NBR | INT | 2 | Maximum number of controllers 1 - 256 |
 | ALP_NBR | INT | 0 | Number of current controllers  0 - 256 |
 | LOOP_DAT | Array [1...GLP_NBR] of Struct |  | Structure for the data of the individual controllers. The array must be declared by 1...GLP_NBR. |
-| LOOP_DAT[1].MAN_CYC | TIME | T#1s | Data controller 1: Manual sampling time  >= 20 ms (S7-300)  >= 5 ms (S7-400) |
+| LOOP_DAT[1].MAN_CYC | TIME | T#1s | Data controller 1: Manual sampling time  &gt;= 20 ms (S7-300)  &gt;= 5 ms (S7-400) |
 | LOOP_DAT[1].MAN_DIS | BOOL | FALSE | Data controller 1: Disable manual controller call |
 | LOOP_DAT[1].MAN_CRST | BOOL | FALSE | Data controller 1: Set manual restart |
 | LOOP_DAT[1].ENABLE | BOOL | FALSE | Data controller 1: Controller enable |
 | LOOP_DAT[1].COM_RST | BOOL | FALSE | Data controller 1: Restart |
 | LOOP_DAT[1].ILP_COU | INT | 0 | Data controller 1: Internal counter |
-| LOOP_DAT[1].CYCLE | TIME | T#1s | Data controller 1: Sampling time  >= 20 ms (S7-300)  >= 5 ms (S7-400) |
+| LOOP_DAT[1].CYCLE | TIME | T#1s | Data controller 1: Sampling time  &gt;= 20 ms (S7-300)  &gt;= 5 ms (S7-400) |
 | LOOP_DAT[2].MAN_CYC |  |  | Data controller 2: Manual sampling time |
 | ... |  |  |  |
 

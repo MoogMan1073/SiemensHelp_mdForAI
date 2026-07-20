@@ -49,7 +49,7 @@ Hardware diagnostics can be performed as follows:
 
 - Using the Online and Diagnostics view
 - Using the "Online Tools" task card
-- Using the "Diagnostics > Device Info" area of the Inspector window
+- Using the "Diagnostics &gt; Device Info" area of the Inspector window
 - Using diagnostics icons, for example, in the device view and the project tree
 
 ##### Structure of the Online and Diagnostics view
@@ -111,9 +111,9 @@ The "Diagnostics" tab of the Inspector window itself consists of several tabs. O
 
 ##### Overview of the defective devices
 
-In the "Diagnostics > Device Info" area of the Inspector window you will obtain an overview of the defective devices that are or were connected online.
+In the "Diagnostics &gt; Device Info" area of the Inspector window you will obtain an overview of the defective devices that are or were connected online.
 
-The "Diagnostics> Device Info" area of the Inspector window consists of the following elements:
+The "Diagnostics&gt; Device Info" area of the Inspector window consists of the following elements:
 
 - Header line with the number of defective devices
 - Table with detailed information on each defective device
@@ -345,12 +345,12 @@ The project with the module to be diagnosed is open.
 To start the online and diagnostics view of a module, follow these steps:
 
 1. In the project tree, open the respective device folder.
-2. Double click on "Online & Diagnostics".
+2. Double click on "Online &amp; Diagnostics".
 
 Or:
 
 1. In the project tree, select the respective device folder.
-2. Select the "Online & Diagnostics" command in the shortcut menu or the "Online" main menu.
+2. Select the "Online &amp; Diagnostics" command in the shortcut menu or the "Online" main menu.
 
 Or:
 
@@ -358,19 +358,19 @@ Or:
 2. Open the folder for the interface with which you want to establish the online connection.
 3. Double click on "Show/Update accessible devices".
 4. Select the module to be diagnosed.
-5. Select the "Online & Diagnostics" command in the shortcut menu or the "Online" main menu.
+5. Select the "Online &amp; Diagnostics" command in the shortcut menu or the "Online" main menu.
 
 Or:
 
 1. In the project tree, open the "Local modules" folder.
 2. Select the respective device or the module that is to be diagnosed.
-3. Select the "Online & Diagnostics" command in the shortcut menu or the main menu.
+3. Select the "Online &amp; Diagnostics" command in the shortcut menu or the main menu.
 
 Or:
 
 1. Open the device view in the device configuration.
 2. Select the module to be diagnosed.
-3. Select the "Online & Diagnostics" command in the shortcut menu or the "Online" main menu.
+3. Select the "Online &amp; Diagnostics" command in the shortcut menu or the "Online" main menu.
 
 Or:
 
@@ -382,7 +382,7 @@ Or:
 
 1. Open the network view in the device configuration.
 2. Select the station with the module to be diagnosed.
-3. Select the "Online & Diagnostics" command in the shortcut menu or the "Online" main menu.
+3. Select the "Online &amp; Diagnostics" command in the shortcut menu or the "Online" main menu.
 
 Or:
 
@@ -1219,7 +1219,7 @@ Proceed as follows to create and save a file with special service data:
 
 ##### Result
 
-The data is stored in a .dmp file with the following naming convention: "<MLFB><Serial number><Time stamp>.dmp". You can change the file name later.
+The data is stored in a .dmp file with the following naming convention: "&lt;MLFB&gt;&lt;Serial number&gt;&lt;Time stamp&gt;.dmp". You can change the file name later.
 
 ---
 
@@ -1242,7 +1242,7 @@ This section contains information on the following topics:
 - [Assigning an IP address to a PROFINET IO device](#assigning-an-ip-address-to-a-profinet-io-device)
 - [Assigning a PROFINET device name](#assigning-a-profinet-device-name)
 - [Calibrating an S7-1500 analog module (S7-1500)](#calibrating-an-s7-1500-analog-module-s7-1500)
-- [Loading I&M data to PROFINET IO devices and your modules](#loading-im-data-to-profinet-io-devices-and-your-modules)
+- [Loading I&amp;M data to PROFINET IO devices and your modules](#loading-im-data-to-profinet-io-devices-and-your-modules)
 
 #### Changing the mode of a CPU
 
@@ -1365,7 +1365,7 @@ This section contains information on the following topics:
 ###### Requirement
 
 - There is an online connection to the CPU where you want to set the password to protect confidential PLC configuration data.
-- The protection of confidential PLC configuration data is enabled (check box under Properties>General>Protection & Security>Protection of PLC configuration data).
+- The protection of confidential PLC configuration data is enabled (check box under Properties&gt;General&gt;Protection &amp; Security&gt;Protection of PLC configuration data).
 - The password to protect confidential PLC configuration data was deleted or has not yet been set.
 - The CPU is in STOP mode.
 
@@ -1397,7 +1397,7 @@ The password to protect confidential PLC configuration data has been set.
 ###### Requirement
 
 - There is an online connection to the CPU where you want to delete the password to protect confidential PLC configuration data.
-- The protection of confidential PLC configuration data is enabled (check box under Properties>General>Protection & Security>Protection of PLC configuration data).
+- The protection of confidential PLC configuration data is enabled (check box under Properties&gt;General&gt;Protection &amp; Security&gt;Protection of PLC configuration data).
 - The password for protecting confidential PLC configuration data was set earlier.
 - The CPU is in STOP mode.
 
@@ -1429,7 +1429,7 @@ The password to protect confidential PLC configuration data has been deleted.
 ###### Requirement
 
 - There is an online connection to the CPU where you want to change the password to protect confidential PLC configuration data.
-- The protection of confidential PLC configuration data is enabled (check box under Properties>General>Protection & Security>Protection of PLC configuration data).
+- The protection of confidential PLC configuration data is enabled (check box under Properties&gt;General&gt;Protection &amp; Security&gt;Protection of PLC configuration data).
 - The password for protecting confidential PLC configuration data was set earlier.
 - The CPU is in STOP mode.
 
@@ -1533,7 +1533,7 @@ The module is switched to STOP mode if necessary and the settings are then reset
 - All parameters are reset to their default values.
 - The diagnostic buffer is cleared.
 - The time is reset.
-- The I&M data are deleted except for I&M0 data.
+- The I&amp;M data are deleted except for I&amp;M0 data.
 - The runtime meters are reset.
 - The IP address is retained or deleted, depending on the setting you have made.
 - The password for protecting confidential PLC configuration data is retained or deleted depending on the setting you have made.
@@ -1573,7 +1573,7 @@ The module is switched to STOP mode if necessary and the settings are then reset
 - All parameters are reset to their defaults.
 - The diagnostic buffer is cleared.
 - The time of day is reset.
-- The I&M data are deleted except for I&M0 data.
+- The I&amp;M data are deleted except for I&amp;M0 data.
 - The runtime meters are reset.
 - The IP address is kept or deleted depending on which setting you made.
 - If a memory card was inserted prior to the reset to factory settings, the configuration contained on the memory card (hardware and software) is downloaded to the CPU.
@@ -1632,7 +1632,7 @@ The module is switched to STOP mode if necessary and the settings are then reset
 - All parameters are reset to their default values.
 - The diagnostic buffer is cleared.
 - The time is reset.
-- The I&M data are deleted except for I&M0 data.
+- The I&amp;M data are deleted except for I&amp;M0 data.
 - The runtime meters are reset.
 - The IP address is retained or deleted, depending on the setting you have made.
 - The password for protecting confidential PLC configuration data is retained or deleted depending on the setting you have made. If it is deleted, the Memory Card is also deleted.
@@ -1818,7 +1818,7 @@ All PROFINET IO devices work with the TCP/IP protocol and therefore require an I
 ###### Requirement
 
 - The devices accessible via the associated interface of the PG/PC are displayed in the project tree (to display these, either double-click "Update accessible devices" in the project tree or select the "Accessible devices..." command in the "Online" menu.).
-- You have double-clicked "Online access" -> <Selected interface> -> <PROFINET IO device> -> "Online & Diagnostics" in the project tree to open the Online and Diagnostics view.
+- You have double-clicked "Online access" -&gt; &lt;Selected interface&gt; -&gt; &lt;PROFINET IO device&gt; -&gt; "Online &amp; Diagnostics" in the project tree to open the Online and Diagnostics view.
 
 ###### Procedure
 
@@ -2165,41 +2165,41 @@ All operator controls in the user interface are deactivated until the reset oper
 
 #### Loading I&M data to PROFINET IO devices and your modules
 
-##### Which I&M data can be loaded to PROFINET IO devices and your modules?
+##### Which I&amp;M data can be loaded to PROFINET IO devices and your modules?
 
-You can load I&M 1 data (plant designation and location identifier) and/or I&M 2 data (installation date) and/or I&M 3 data (additional information) to the actual hardware.
+You can load I&amp;M 1 data (plant designation and location identifier) and/or I&amp;M 2 data (installation date) and/or I&amp;M 3 data (additional information) to the actual hardware.
 
 ##### Requirements
 
-- In the project settings (Options > Settings, Hardware configuration > Compiling and downloading), the option "Download I&M data" must be enabled.
-- There is an online connection to the PROFINET IO devices and the modules to which you want to load I&M data.
-- You have entered the I&M data you want to download in the properties of the respective PROFINET IO devices and your modules (Inspector window: "Properties" tab > "General" tab, Settings > Identification & Maintenance).
+- In the project settings (Options &gt; Settings, Hardware configuration &gt; Compiling and downloading), the option "Download I&amp;M data" must be enabled.
+- There is an online connection to the PROFINET IO devices and the modules to which you want to load I&amp;M data.
+- You have entered the I&amp;M data you want to download in the properties of the respective PROFINET IO devices and your modules (Inspector window: "Properties" tab &gt; "General" tab, Settings &gt; Identification &amp; Maintenance).
 
-##### Where do I specify which I&M data is downloaded to which PROFINET IO devices?
+##### Where do I specify which I&amp;M data is downloaded to which PROFINET IO devices?
 
-You specify which I&M data you want to download to which PROFINET IO devices in the "Load preview" dialog. You will find the following alternatives in the drop-down list of the "Identification and maintenance data (I&M)" row:
+You specify which I&amp;M data you want to download to which PROFINET IO devices in the "Load preview" dialog. You will find the following alternatives in the drop-down list of the "Identification and maintenance data (I&amp;M)" row:
 
 - Load nothing
 
-  The check boxes for all PROFINET IO devices as well as the check boxes for the loadable I&M data are cleared.
+  The check boxes for all PROFINET IO devices as well as the check boxes for the loadable I&amp;M data are cleared.
 
-  No I&M data is transferred to the actual hardware during loading with this setting.
+  No I&amp;M data is transferred to the actual hardware during loading with this setting.
 - Load data
 
-  The check boxes for all PROFINET IO devices as well as the check boxes for the loadable I&M data are selected.
+  The check boxes for all PROFINET IO devices as well as the check boxes for the loadable I&amp;M data are selected.
 
-  The respective I&M 1, I&M 2 and I&M 3 data is transferred to all PROFINET IO devices during loading with this setting.
+  The respective I&amp;M 1, I&amp;M 2 and I&amp;M 3 data is transferred to all PROFINET IO devices during loading with this setting.
 - Load selected
 
-  You select the check boxes of those PROFINET IO devices to which you want to load I&M data. You also select the check boxes of the identification data you want to load.
+  You select the check boxes of those PROFINET IO devices to which you want to load I&amp;M data. You also select the check boxes of the identification data you want to load.
 
-  With this setting, you transfer the selected I&M data to the selected PROFINET IO devices during loading.
+  With this setting, you transfer the selected I&amp;M data to the selected PROFINET IO devices during loading.
 
 > **Note**
 >
-> **Language dependency of the I&M data to be loaded**
+> **Language dependency of the I&amp;M data to be loaded**
 >
-> The I&M data are loaded to the real hardware in the form that you specified in the properties of the relevant PROFINET IO devices and your modules. There is no language dependency.
+> The I&amp;M data are loaded to the real hardware in the form that you specified in the properties of the relevant PROFINET IO devices and your modules. There is no language dependency.
 
 ### Diagnostics in STOP mode
 
@@ -2354,7 +2354,7 @@ The "Online access" group exists only for CPUs and some CPs. If you have opened 
 
 The PG/PC interface is connected to an interface of a device.
 
-If you only want to access this device, select the setting "Directly at slot <interface name>" in the drop-down list.
+If you only want to access this device, select the setting "Directly at slot &lt;interface name&gt;" in the drop-down list.
 
 If, however, you want to access another device by means of routing, create a subnet at this interface in the device configuration and then select this subnet in the drop-down list.
 
@@ -2578,7 +2578,7 @@ Connection diagnostics can be performed as follows:
   This display is generated in the connection table.
 - Through detailed connection diagnostics
 
-  This step is available in the "Diagnostics > Connection information" area of the Inspector window.
+  This step is available in the "Diagnostics &gt; Connection information" area of the Inspector window.
 
 #### Requirement for the connection diagnostics described below
 
@@ -2641,9 +2641,9 @@ This section contains information on the following topics:
 
 ##### Where do I perform detailed connection diagnostics?
 
-To perform detailed connection diagnostics, go to the "Diagnostics > Connection" information of the Inspector window.
+To perform detailed connection diagnostics, go to the "Diagnostics &gt; Connection" information of the Inspector window.
 
-##### How do I open the "Diagnostics > Connection information" area of the Inspector window?
+##### How do I open the "Diagnostics &gt; Connection information" area of the Inspector window?
 
 The following options are available for opening the "Connection information" tab of the Inspector window.
 
@@ -2651,7 +2651,7 @@ The following options are available for opening the "Connection information" tab
 - Double-click the diagnostics icon of the relevant connection in the connection table.
 - This step takes you to the programming editor for a S7 communication instruction or open user communication instruction. Double-click the diagnostic icon of the instruction (stethoscope).
 
-##### Structure or the "Diagnostics > Connection information" area of the Inspector window
+##### Structure or the "Diagnostics &gt; Connection information" area of the Inspector window
 
 Requirements: the content of the "Connection information" tab has been filled, and an online connection to at least one end point of the relevant connection has been established.
 
@@ -2668,7 +2668,7 @@ If a connection has been selected (connection table), it will contain the follow
 
 ##### Where do you determine the online connection resources?
 
-The online connection resources are obtained in the "Connection resources" group. This group is located in the "Diagnostics > Connection information" area of the Inspector window. It is displayed only if you have selected a module in the network view to which an online connection exists.
+The online connection resources are obtained in the "Connection resources" group. This group is located in the "Diagnostics &gt; Connection information" area of the Inspector window. It is displayed only if you have selected a module in the network view to which an online connection exists.
 
 ##### Number of connection resources
 
@@ -2691,7 +2691,7 @@ For the communication types indicated below, the connection resources that are r
 
 ##### Where do you determine the online connection resources?
 
-The online connection resources are obtained in the "Connection resources" group. This group is located in the "Diagnostics > Connection information" area of the Inspector window. It is displayed only if you have selected a module in the network view to which an online connection exists.
+The online connection resources are obtained in the "Connection resources" group. This group is located in the "Diagnostics &gt; Connection information" area of the Inspector window. It is displayed only if you have selected a module in the network view to which an online connection exists.
 
 ##### Description of the detailed display of the connection resources
 
@@ -2707,7 +2707,7 @@ For a description of these, go to [here](Configuring%20devices%20and%20networks.
 
 ##### Where do I determine the connection details?
 
-The connection details are obtained in the "Connection details" group. This group is located in the "Diagnostics > Connection information" area of the Inspector window.
+The connection details are obtained in the "Connection details" group. This group is located in the "Diagnostics &gt; Connection information" area of the Inspector window.
 
 ##### When is the "Connection details" group filled in?
 
@@ -2731,7 +2731,7 @@ The "Connection details" group consists of the following elements:
 
 ##### Where do I determine the address details of a connection?
 
-The address details of a connection are obtained in the "Connection address details" group. This group is located in the "Diagnostics > Connection information" area of the Inspector window.
+The address details of a connection are obtained in the "Connection address details" group. This group is located in the "Diagnostics &gt; Connection information" area of the Inspector window.
 
 ##### For which CPUs is the "Connection address details" group available?
 
@@ -2756,7 +2756,7 @@ You can learn about the connection properties of the interface modules of an IO 
 
 #### Requirements
 
-- Firmware version of the S7-1500 H CPUs >= V3.0
+- Firmware version of the S7-1500 H CPUs &gt;= V3.0
 - There is a switched S1 device or an S2 device or an R1 device (for definitions of terms, see: [Creating IO devices for R/H systems](Principle%20of%20operation%20for%20S7-1500R-H%20CPUs%20%28S7-1500%29.md#creating-io-devices-for-rh-systems-s7-1500))
 
 #### "Redundant PLC connections" table
@@ -2817,9 +2817,9 @@ The "Status" area consists of the following items:
 
 The check box "Display CPU Time Stamps in PG/PC local time" affects the display of the following times:
 
-- Current time (OPC UA > Server > General, "Status" area)
-- Server start time (OPC UA > Server > General, "Status" area)
-- Last contact of the client (OPC UA > Server > Sessions, "Session/subscription diagnostics" area, last table column)
+- Current time (OPC UA &gt; Server &gt; General, "Status" area)
+- Server start time (OPC UA &gt; Server &gt; General, "Status" area)
+- Last contact of the client (OPC UA &gt; Server &gt; Sessions, "Session/subscription diagnostics" area, last table column)
 
 The check box "Display CPU Time Stamps in PG/PC local time" has the following meaning:
 

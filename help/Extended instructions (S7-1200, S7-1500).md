@@ -414,7 +414,7 @@ The "WR_SYS_T" instruction is not used to pass information about the local time 
 > The module time of the CPU clock is used as template for all time processes starting from the CPU. Examples of use:
 >
 > - Calculation of local time of CPU clock based on module time
-> - Representation of the module time in local time under "Online & Diagnostics"
+> - Representation of the module time in local time under "Online &amp; Diagnostics"
 > - Block properties
 > - Entries in the diagnostics buffer of the CPU
 
@@ -466,11 +466,11 @@ If the normally open contact ("execute") supplies the signal state "TRUE", the "
 
 You can establish whether the new module time ("inputTIME") has been correctly received by the CPU clock as follows:
 
-- Using the display of an S7-1500 CPU: Navigate on the CPU display to "Settings > Date & Time > General".
+- Using the display of an S7-1500 CPU: Navigate on the CPU display to "Settings &gt; Date &amp; Time &gt; General".
 - Using TIA Portal: Read out the module time of the CPU clock using the "[RD_SYS_T](#rd_sys_t-read-time-of-day-s7-1200-s7-1500)" instruction.
-- Using TIA Portal: Navigate to the "Online & Diagnostics" entry of the CPU, and open the "Functions > Set time of day" tab.
+- Using TIA Portal: Navigate to the "Online &amp; Diagnostics" entry of the CPU, and open the "Functions &gt; Set time of day" tab.
 
-  The Coordinated Universal Time (UTC) is set for the module time of the CPU clock. Central European Time is set as local time in the TIA Portal in this example. Accordingly, an hour is added to the time to be set ("inputTIME") in the "Online & Diagnostics" entry in the TIA Portal. Another hour is added when daylight saving time is used. The calculated local time is output in 12-hour clock format.
+  The Coordinated Universal Time (UTC) is set for the module time of the CPU clock. Central European Time is set as local time in the TIA Portal in this example. Accordingly, an hour is added to the time to be set ("inputTIME") in the "Online &amp; Diagnostics" entry in the TIA Portal. Another hour is added when daylight saving time is used. The calculated local time is output in 12-hour clock format.
 
   ![Example](images/69985899019_DV_resource.Stream@PNG-de-DE.png)
 
@@ -499,7 +499,7 @@ The read dates are output at the OUT output parameter of the instruction. The pr
 > The module time of the CPU clock is used as template for all time processes starting from the CPU. Examples of use:
 >
 > - Calculation of local time of CPU clock based on module time
-> - Representation of the module time in local time under "Online & Diagnostics"
+> - Representation of the module time in local time under "Online &amp; Diagnostics"
 > - Block properties
 > - Entries in the diagnostics buffer of the CPU
 
@@ -689,9 +689,9 @@ If the normally open contact ("execute") supplies the signal state "TRUE", the "
 
 You can establish whether the new local time ("inputLocTIME") has been correctly received by the CPU clock as follows:
 
-- Using the display of an S7-1500 CPU: Navigate on the CPU display to "Settings > Date & Time > General".
+- Using the display of an S7-1500 CPU: Navigate on the CPU display to "Settings &gt; Date &amp; Time &gt; General".
 - Using TIA Portal: Read out the local time of the CPU clock using the "[RD_LOC_T](#rd_loc_t-read-local-time-s7-1200-s7-1500)" instruction.
-- Using TIA Portal: Navigate to the "Online & Diagnostics" entry of the CPU, and open the "Functions > Set time of day" tab.
+- Using TIA Portal: Navigate to the "Online &amp; Diagnostics" entry of the CPU, and open the "Functions &gt; Set time of day" tab.
 
   The local time is output in a 12-hour clock format.
 
@@ -735,7 +735,7 @@ The following table shows the parameters of the "SET_TIMEZONE" instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| REQ | Input | BOOL | I, Q, M, D, L, P or constant | - S7-1200: The function is executed on a positive edge of REQ. - S7-1500 and version of SET_TIMEZONE < V2.0: When REQ=1, the function is executed. - S7-1500 and version of SET_TIMEZONE >= V2.0: The function is executed on a positive edge of REQ.  The execution of the function means that the transfer of the time zone and writing of the load memory are started. |
+| REQ | Input | BOOL | I, Q, M, D, L, P or constant | - S7-1200: The function is executed on a positive edge of REQ. - S7-1500 and version of SET_TIMEZONE &lt; V2.0: When REQ=1, the function is executed. - S7-1500 and version of SET_TIMEZONE &gt;= V2.0: The function is executed on a positive edge of REQ.  The execution of the function means that the transfer of the time zone and writing of the load memory are started. |
 | TimeZone | Input | TimeTransformationRule | D, L | You interconnect the TimeTransformationRule system data type (see below) at parameter TimeZone. |
 | DONE | Output | BOOL | I, Q, M, D, L, P | Status parameter:  - 0: Job not yet started or still in progress - 1: Job completed without error |
 | BUSY | Output | BOOL | I, Q, M, D, L, P | Status parameter:  - 0: Job not yet started or already completed - 1: Job not yet completed. A new job cannot be started. |
@@ -789,7 +789,7 @@ The structure of the TimeTransformationRule is as follows:
 >
 > **Validity of the example**
 >
-> The following example applies in this form only to S7-1500 with instruction version < V2.0.
+> The following example applies in this form only to S7-1500 with instruction version &lt; V2.0.
 
 In the following example, you set the parameters for the local time zone and the daylight saving/standard time changeover. You are advised to call the example in a startup OB.
 
@@ -843,7 +843,7 @@ After successful processing of SET_TIMEZONE ("modeDONE" is "TRUE"), the input pa
 
 You can establish whether the data to be set ("timezone") has been correctly received by the CPU clock as follows:
 
-- Using the display of an S7-1500 CPU: Navigate on the CPU display to "Settings > Date & Time > Daylight Saving Time".
+- Using the display of an S7-1500 CPU: Navigate on the CPU display to "Settings &gt; Date &amp; Time &gt; Daylight Saving Time".
 - Using TIA Portal: Read out the local time of the CPU clock using the "[RD_LOC_T](#rd_loc_t-read-local-time-s7-1200-s7-1500)" instruction.
 - Using TIA Portal: Read out the module time of the CPU clock using the "[RD_SYS_T](#rd_sys_t-read-time-of-day-s7-1200-s7-1500)" instruction.
 
@@ -981,7 +981,7 @@ Interconnect the parameters of the instruction as follows. At input parameter NR
 
 ![Example](images/70096259723_DV_resource.Stream@PNG-de-DE.png)
 
-If the normally open contact ("execute") supplies the signal state "TRUE", the "RTM" instruction is executed. The operating hours counter of the CPU is set to the value to be set ("in_processValue") and started. After the start of the operating hours counter, set the value of input parameter MODE ("comandMODE") to "0". (To do so, click the parameter and select "Modify operand > Set to 0".) As a result, the "RTM" instruction only reads the current value ("currentValue") of the operating hours counter without changing it. Output parameter CQ ("statusRTM") indicates after the start of the operating hours counter that the operating hours counter is running (value is "TRUE"). The output parameter RET_VAL ("returnValue") indicates that processing is running without errors.
+If the normally open contact ("execute") supplies the signal state "TRUE", the "RTM" instruction is executed. The operating hours counter of the CPU is set to the value to be set ("in_processValue") and started. After the start of the operating hours counter, set the value of input parameter MODE ("comandMODE") to "0". (To do so, click the parameter and select "Modify operand &gt; Set to 0".) As a result, the "RTM" instruction only reads the current value ("currentValue") of the operating hours counter without changing it. Output parameter CQ ("statusRTM") indicates after the start of the operating hours counter that the operating hours counter is running (value is "TRUE"). The output parameter RET_VAL ("returnValue") indicates that processing is running without errors.
 
 ![Example](images/70096268555_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1251,7 +1251,7 @@ The following table shows the parameters of the "STRG_VAL" instruction:
 | S7-1200 | S7-1500 |  |  |  |  |
 | IN | Input | STRING, WSTRING | STRING, WSTRING | D, L or constant | Number string to be converted |
 | FORMAT | Input | WORD | WORD | I, Q, M, D, L, P or constant | Input format of the characters |
-| P | Input | UINT | UINT | I, Q, M, D, L, P or constant | Reference to the first character to be converted (first character = 1, the value "0" or a value > length of the string is invalid) |
+| P | Input | UINT | UINT | I, Q, M, D, L, P or constant | Reference to the first character to be converted (first character = 1, the value "0" or a value &gt; length of the string is invalid) |
 | OUT | Output | USINT, SINT, UINT, INT, UDINT, DINT, REAL, LREAL | USINT, SINT, UINT, INT, UDINT, DINT, ULINT, LINT, REAL, LREAL | I, Q, M, D, L, P | Result of the conversion |
 
 You can find additional information on valid data types under "[Overview of the valid data types](Data%20types.md#overview-of-the-valid-data-types)".
@@ -1557,7 +1557,7 @@ The following table shows the parameters of the "Chars_TO_Strg" instruction:
 | CHARS | Input | VARIANT | D, L | Source of the copy operation  Array of (W)CHAR / BYTE / WORD from which the characters are copied. |
 | PCHARS | Input | DINT | I, Q, M, D, L, P or constant | Position in the Array of (W)CHAR / BYTE / WORD starting at which the characters are copied. |
 | CNT | Input | UINT | I, Q, M, D, L, P or constant | Number of characters to be copied. Use "0" to copy all characters. |
-| STRG | Output | STRING, WSTRING | D, L | Destination of the copy operation  Character string with the (W)STRING data type. Observe the maximum length of the data types:  - STRING: 254 characters - WSTRING: 254 characters (default) / 16382 characters (maximum)   When using WSTRING, note that you must define a length > 254 characters explicitly with square brackets (e.g., WSTRING[16382]). |
+| STRG | Output | STRING, WSTRING | D, L | Destination of the copy operation  Character string with the (W)STRING data type. Observe the maximum length of the data types:  - STRING: 254 characters - WSTRING: 254 characters (default) / 16382 characters (maximum)   When using WSTRING, note that you must define a length &gt; 254 characters explicitly with square brackets (e.g., WSTRING[16382]). |
 
 You can find additional information on valid data types under "[Overview of the valid data types](Data%20types.md#overview-of-the-valid-data-types)".
 
@@ -2980,7 +2980,7 @@ The following table shows the parameters of the "GetSymbolName" instruction:
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
 | VARIABLE | Input | PARAMETER | Parameter sections Input, Output, InOut | Selection of the local interface to which you want to read out the name of the input parameter supply. |
-| SIZE | Input | DINT | I, Q, M, D, L | Limits the number of characters output at the OUT parameter.  - SIZE > 0: GetSymbolName returns the first SIZE characters of the name. - SIZE = 0: GetSymbolName returns the entire name. - SIZE < 0: GetSymbolName returns the last SIZE characters of the name. |
+| SIZE | Input | DINT | I, Q, M, D, L | Limits the number of characters output at the OUT parameter.  - SIZE &gt; 0: GetSymbolName returns the first SIZE characters of the name. - SIZE = 0: GetSymbolName returns the entire name. - SIZE &lt; 0: GetSymbolName returns the last SIZE characters of the name. |
 | OUT | Return | WSTRING | D, L | Output of the tag name of the input parameters supply |
 
 You can find additional information on valid data types under "[Overview of the valid data types](Data%20types.md#overview-of-the-valid-data-types)".
@@ -3069,7 +3069,7 @@ The following table shows the parameters of the "GetSymbolPath" instruction:
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
 | VARIABLE | Input | PARAMETER | Parameter sections Input, Output, InOut | Selection of the formal parameter for which you want to read out the name of the corresponding actual parameter at the beginning of the call path. |
-| SIZE | Input | DINT | I, Q, M, D, L or constant | Limits the number of characters output at the OUT parameter.  - SIZE > 0: GetSymbolPath returns the first SIZE characters of the name. - SIZE = 0: GetSymbolPath returns the entire name. - SIZE < 0: GetSymbolPath returns the last SIZE characters of the name. |
+| SIZE | Input | DINT | I, Q, M, D, L or constant | Limits the number of characters output at the OUT parameter.  - SIZE &gt; 0: GetSymbolPath returns the first SIZE characters of the name. - SIZE = 0: GetSymbolPath returns the entire name. - SIZE &lt; 0: GetSymbolPath returns the last SIZE characters of the name. |
 | OUT | Output | WSTRING | D, L | Output of the tag name of the input parameters supply. |
 
 You can find additional information on valid data types under "[Overview of the valid data types](Data%20types.md#overview-of-the-valid-data-types)".
@@ -3139,7 +3139,7 @@ The following table shows the parameters of the "GetInstanceName" instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| SIZE | Input | DINT | I, Q, M, D, L or constant | Limits the number of characters output at the OUT parameter.  - SIZE > 0: GetInstanceName returns the first SIZE characters of the name. - SIZE = 0: GetInstanceName returns the entire name. - SIZE < 0: GetInstanceName returns the last SIZE characters of the name. |
+| SIZE | Input | DINT | I, Q, M, D, L or constant | Limits the number of characters output at the OUT parameter.  - SIZE &gt; 0: GetInstanceName returns the first SIZE characters of the name. - SIZE = 0: GetInstanceName returns the entire name. - SIZE &lt; 0: GetInstanceName returns the last SIZE characters of the name. |
 | OUT | Output | WSTRING | D, L | Read name of the instance data block |
 
 You can find additional information on valid data types under "[Overview of the valid data types](Data%20types.md#overview-of-the-valid-data-types)".
@@ -3226,7 +3226,7 @@ The following table shows the parameters of the "GetInstancePath" instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| SIZE | Input | DINT | I, Q, M, D, L or constant | Limits the number of characters output at the OUT parameter.  - SIZE > 0: GetInstancePath returns the first SIZE characters of the name. - SIZE = 0: GetInstancePath returns the entire name. - SIZE < 0: GetInstancePath returns the last SIZE characters of the name. |
+| SIZE | Input | DINT | I, Q, M, D, L or constant | Limits the number of characters output at the OUT parameter.  - SIZE &gt; 0: GetInstancePath returns the first SIZE characters of the name. - SIZE = 0: GetInstancePath returns the entire name. - SIZE &lt; 0: GetInstancePath returns the last SIZE characters of the name. |
 | OUT | Output | WSTRING | D, L | Read global name of the block instance.  If the global name of the block instance is longer than the maximum length of WSTRING (254 characters), the name is truncated. |
 
 You can find additional information on valid data types under "[Overview of the valid data types](Data%20types.md#overview-of-the-valid-data-types)".
@@ -3302,7 +3302,7 @@ The following table shows the parameters of the "GetBlockName" instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| SIZE | Input | DINT | I, Q, M, D, L or constant | Limits the number of characters output at the RET_VAL parameter.  - SIZE > 0: GetBlockName returns the first SIZE characters of the name. - SIZE = 0: GetBlockName returns the entire name. - SIZE < 0: GetBlockName returns the last SIZE characters of the name. |
+| SIZE | Input | DINT | I, Q, M, D, L or constant | Limits the number of characters output at the RET_VAL parameter.  - SIZE &gt; 0: GetBlockName returns the first SIZE characters of the name. - SIZE = 0: GetBlockName returns the entire name. - SIZE &lt; 0: GetBlockName returns the last SIZE characters of the name. |
 | RET_VAL | Output | WSTRING | D, L | Read name of the program block |
 
 You can find additional information on valid data types under "[Overview of the valid data types](Data%20types.md#overview-of-the-valid-data-types)".
@@ -3370,7 +3370,7 @@ The following table shows the relationship between busy, done and error. Using t
 | --- | --- | --- | --- |
 | execute | Input | Bool | Control parameter: The job is started on a rising edge. |
 | objectRef | Input | Reference | Reference to the object whose name is to be determined. |
-| size | Input | DInt | If the determined name is shorter than 'symbol', 'size' has no meaning.  If the determined name is longer than 'symbol', 'size' defines how the determined name is shortened:  - size > 0: GetSymbolForReference returns the first 'size' characters of the name, followed by the character "..." - size = 0: GetSymbolForReference returns as many characters of the name as fit in 'symbol' followed by "…" - size < 0: GetSymbolForReference returns the last (-1) * 'size' characters of the name, where the first output character is "...". |
+| size | Input | DInt | If the determined name is shorter than 'symbol', 'size' has no meaning.  If the determined name is longer than 'symbol', 'size' defines how the determined name is shortened:  - size &gt; 0: GetSymbolForReference returns the first 'size' characters of the name, followed by the character "..." - size = 0: GetSymbolForReference returns as many characters of the name as fit in 'symbol' followed by "…" - size &lt; 0: GetSymbolForReference returns the last (-1) * 'size' characters of the name, where the first output character is "...". |
 | done | Output | Bool | Status parameter:  - 0: Job not yet started or still being executed. - 1: Job executed without errors. This value is only displayed for one cycle. |
 | busy | Output | Bool | Status parameter:  - 1: The job is not yet complete. A new job cannot be initiated. - 0: The job is complete. |
 | error | Output | Bool | Status parameter:  - error = 1: An error occurred during processing. 'status' provides detailed information on the type of error. |
@@ -3423,7 +3423,7 @@ The following table shows the parameters of the "UPDAT_PI" instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| PART | Input | PIP | I, Q, M, D, L or constant | Number of the process image partition of the inputs to  be updated. Maximum value range (depending on the CPU):   1 <= n <= 31 (means process image partition n). |
+| PART | Input | PIP | I, Q, M, D, L or constant | Number of the process image partition of the inputs to  be updated. Maximum value range (depending on the CPU):   1 &lt;= n &lt;= 31 (means process image partition n). |
 | RET_VAL | Return | INT | I, Q, M, D, L, P | Error information |
 | FLADDR | Output | WORD | I, Q, M, D, L, P | Address of the first byte to cause an error  if an access error has occurred. |
 
@@ -3458,7 +3458,7 @@ Interconnect the parameters of the instruction as follows.
 
 ![Example](images/81278304011_DV_resource.Stream@PNG-de-DE.png)
 
-You create an input module (DI) for your CPU, and configure the process image partition "1" under "Properties > Input 0 - 15 > I/O addresses". You also do not assign the process image partition to any OB.
+You create an input module (DI) for your CPU, and configure the process image partition "1" under "Properties &gt; Input 0 - 15 &gt; I/O addresses". You also do not assign the process image partition to any OB.
 
 ![Example](images/81278269579_DV_resource.Stream@PNG-de-DE.png)
 
@@ -3497,7 +3497,7 @@ The following table shows the parameters of the "UPDAT_PO" instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| PART | Input | PIP | I, Q, M, D, L or constant | Number of the process image partition of the outputs to be transferred.   Maximum value range (depending on the CPU): 1 <= n <= 31  (means process image partition n) |
+| PART | Input | PIP | I, Q, M, D, L or constant | Number of the process image partition of the outputs to be transferred.   Maximum value range (depending on the CPU): 1 &lt;= n &lt;= 31  (means process image partition n) |
 | RET_VAL | Return | INT | I, Q, M, D, L, P | Error information |
 | FLADDR | Output | WORD | I, Q, M, D, L, P | Address of the first byte to cause an error  if an access error has occurred. |
 
@@ -3532,7 +3532,7 @@ Interconnect the parameters of the instruction as follows.
 
 ![Example](images/81279171339_DV_resource.Stream@PNG-de-DE.png)
 
-You create an output module (DQ) for your CPU, and configure the process image partition "1" under "Properties > Output 0 - 15 > I/O addresses". You also do not assign the process image partition to any OB.
+You create an output module (DQ) for your CPU, and configure the process image partition "1" under "Properties &gt; Output 0 - 15 &gt; I/O addresses". You also do not assign the process image partition to any OB.
 
 ![Example](images/81279111307_DV_resource.Stream@PNG-de-DE.png)
 
@@ -3663,10 +3663,10 @@ This section contains information on the following topics:
 - [WRREC: Write data record (S7-1200, S7-1500)](#wrrec-write-data-record-s7-1200-s7-1500)
 - [GETIO: Read all inputs of a submodule (S7-1200, S7-1500)](#getio-read-all-inputs-of-a-submodule-s7-1200-s7-1500)
 - [SETIO: Write all outputs of a submodule (S7-1200, S7-1500)](#setio-write-all-outputs-of-a-submodule-s7-1200-s7-1500)
-- [Program example for GETIO & SETIO (S7-1200, S7-1500)](#program-example-for-getio-setio-s7-1200-s7-1500)
+- [Program example for GETIO &amp; SETIO (S7-1200, S7-1500)](#program-example-for-getio-setio-s7-1200-s7-1500)
 - [GETIO_PART: Read inputs of a submodule (S7-1200, S7-1500)](#getio_part-read-inputs-of-a-submodule-s7-1200-s7-1500)
 - [SETIO_PART: Write outputs of a submodule (S7-1200, S7-1500)](#setio_part-write-outputs-of-a-submodule-s7-1200-s7-1500)
-- [Program example for GETIO_PART & SETIO_PART (S7-1200, S7-1500)](#program-example-for-getio_part-setio_part-s7-1200-s7-1500)
+- [Program example for GETIO_PART &amp; SETIO_PART (S7-1200, S7-1500)](#program-example-for-getio_part-setio_part-s7-1200-s7-1500)
 - [RALRM: Receive interrupt (S7-1200, S7-1500)](#ralrm-receive-interrupt-s7-1200-s7-1500)
 - [D_ACT_DP: Activate/deactivate DP slaves (S7-1200, S7-1500)](#d_act_dp-activatedeactivate-dp-slaves-s7-1200-s7-1500)
 - [ReconfigIOSystem: Reconfigure IO system (S7-1200, S7-1500)](#reconfigiosystem-reconfigure-io-system-s7-1200-s7-1500)
@@ -3693,7 +3693,7 @@ The following types of data records exist:
 | a) for output modules |  |  |
 | Control data records | a) to configure a central or distributed setup | The control data record contains the hardware configuration of the system or setup and allows reconfiguration of a module or an IO system via the user program. The control data record can be read and written. |
 | b) to reconfigure an IO system |  |  |
-| I&M data records | a) for central setup or distributed setup via PROFINET IO | The I&M data records contain the identification and maintenance data of a module (I&M = Identification & Maintenance). The data differs as follows:   - Identification data:   - depends on vendor data   - read-only   - You can, for example, read out the serial number. - Maintenance data   - depends on the system and the use of the device   - can be read and written.   - can be used to change the installation location of the module, for example. |
+| I&amp;M data records | a) for central setup or distributed setup via PROFINET IO | The I&amp;M data records contain the identification and maintenance data of a module (I&amp;M = Identification &amp; Maintenance). The data differs as follows:   - Identification data:   - depends on vendor data   - read-only   - You can, for example, read out the serial number. - Maintenance data   - depends on the system and the use of the device   - can be read and written.   - can be used to change the installation location of the module, for example. |
 | b) for central setup or distributed setup via PROFIBUS DP |  |  |
 | Diagnostics data records and configuration data records | a) for distributed setup via PROFINET IO | Diagnostics data records and configuration data records each have the same structure and vary only in content and size.  The data records can be distinguished as follows:  - Diagnostics data records:   - The diagnostics data records contain the diagnostics and monitoring data of a module.   - Channel diagnostics data records are generated if a channel is in an error state and / or has triggered an interrupt. A diagnostics data record of length 0 is returned if there is no fault/error.   - The structure and size of vendor-specific diagnostics data records depend on the vendor.   - Diagnostics data records are read-only. - Configuration data records:   - The configuration data records contain the data of the actual configuration or preset configuration of a module.   - Configuration data records are readable (actual configuration, preset configuration) and writable (preset configuration). |
 | b) for distributed setup via PROFIBUS DP |  |  |
@@ -3725,7 +3725,7 @@ Before you use a data record in your project, please read the relevant manual fo
 | **Instructions:** | RDREC, WRREC | RD_DPAR | RDREC, WRREC |  | RD_DPAR (not for S7-1200) |
 | **Data record (DR):** | DR 0.X (DR = channel; X = the last channel of the input module) | DR 128 | DR 128 | *For ET 200SP Namur: DR 0.X (DR = channel; X = the last channel of the input module) or DR 128 | DR 128 |
 | **HW ID:** | Use HW ID of the input module |  |  |  |  |
-| **Example:** | For example, S7-1500 DI16x24VDC HF --> channels 0..15; (e.g., use DR 13).   See also "[Use the program example of the parameter data record with WRREC & RDREC](#use-the-program-example-of-the-parameter-data-record-with-wrrec-rdrec-s7-1200-s7-1500)". | For example, S7-1500 DI16x24VDC HF --> DR 128.   See also "[Program example of RD_DPAR](#rd_dpar-read-module-data-record-s7-1500)". | 1st example: Use input module of an S7-1212C CPU --> HW ID of CPU, DR 128 and RDREC / WRREC.  2nd example: Use ET 200SP DI8x24VDC HF --> HW ID of DI module, DR 128 and RDREC / WRREC or RD_DPAR.   See also "[Program example of RD_DPAR](#rd_dpar-read-module-data-record-s7-1500)". |  |  |
+| **Example:** | For example, S7-1500 DI16x24VDC HF --&gt; channels 0..15; (e.g., use DR 13).   See also "[Use the program example of the parameter data record with WRREC &amp; RDREC](#use-the-program-example-of-the-parameter-data-record-with-wrrec-rdrec-s7-1200-s7-1500)". | For example, S7-1500 DI16x24VDC HF --&gt; DR 128.   See also "[Program example of RD_DPAR](#rd_dpar-read-module-data-record-s7-1500)". | 1st example: Use input module of an S7-1212C CPU --&gt; HW ID of CPU, DR 128 and RDREC / WRREC.  2nd example: Use ET 200SP DI8x24VDC HF --&gt; HW ID of DI module, DR 128 and RDREC / WRREC or RD_DPAR.   See also "[Program example of RD_DPAR](#rd_dpar-read-module-data-record-s7-1500)". |  |  |
 
 | Type: | Parameter data records (b) |  |  |
 | --- | --- | --- | --- |
@@ -3734,7 +3734,7 @@ Before you use a data record in your project, please read the relevant manual fo
 | **Instructions:** | RDREC, WRREC |  | RD_DPAR (not for S7-1200) |
 | **Data record (DR):** | DR 128 | Alternatively, for DI modules of S7-1500:   DR 0.X (DR = channel; X = the last channel of the input module) | DR 128 |
 | **HW ID:** | Use HW ID of the affected module / I/O module. |  |  |
-| **Example:** | 1) Example: CPU S7-1511 PN; high speed counter of the S7-1500 DI16x24VDC HF --> for example, DR 1; use HW ID of the DI module (HSC). Use WRREC/RDREC.  2) Example: TM Count 2x24V --> DR 128; use HW ID of the TM. Use WRREC / RDREC or RD_DPAR.  3) Example: High speed counter of an S7-1200 CPU --> DR 128; use HW ID of CPU and WRREC / RDREC. |  |  |
+| **Example:** | 1) Example: CPU S7-1511 PN; high speed counter of the S7-1500 DI16x24VDC HF --&gt; for example, DR 1; use HW ID of the DI module (HSC). Use WRREC/RDREC.  2) Example: TM Count 2x24V --&gt; DR 128; use HW ID of the TM. Use WRREC / RDREC or RD_DPAR.  3) Example: High speed counter of an S7-1200 CPU --&gt; DR 128; use HW ID of CPU and WRREC / RDREC. |  |  |
 
 | Type: | Parameter data records (c) |  |  |  |  |
 | --- | --- | --- | --- | --- | --- |
@@ -3743,7 +3743,7 @@ Before you use a data record in your project, please read the relevant manual fo
 | **Instructions:** | RDREC, WRREC | RD_DPAR | RDREC, WRREC |  | RD_DPAR (not for S7-1200) |
 | **Data record (DR):** | DR 64.64 + X (DR 64 = channel 0; X = the last channel of the output module) | DR 128 | DR 128 | *For ET 200SP Namur: DS 64..64 + X (DR 64 = channel 0; X = the last channel of the output module) or DR 128 | DR 128 |
 | **HW ID:** | Use HW ID of the output module. |  |  |  |  |
-| **Example:** | For example, DQ16x24VDC/0.5A ST --> channels 0..15; (e.g. for channel 13 use the DR 77). | For example, DQ16x24VDC/0.5A ST --> DR 128. | For example, ET 200SP DQ8x24VDC/0.5A ST --> DR 128. |  |  |
+| **Example:** | For example, DQ16x24VDC/0.5A ST --&gt; channels 0..15; (e.g. for channel 13 use the DR 77). | For example, DQ16x24VDC/0.5A ST --&gt; DR 128. | For example, ET 200SP DQ8x24VDC/0.5A ST --&gt; DR 128. |  |  |
 
 > **Note**
 >
@@ -3775,7 +3775,7 @@ You can find additional information on the parameter data record in the manual f
 | **Instructions:** | WRREC, RDREC | WRREC, RDREC | RDREC | ReconfigIOSystem |
 | **Data record (DR):** | DR 196 | DR 196 | DR 197 (feedback data record) | DR "CTRLREC" (parameter of ReconfigIOSystem) |
 | **HW ID:** | Use HW ID 33. | Use HW ID of the head [Head] of the IM of the distributed I/O. |  | Use HW ID of the PROFINET interface (IO controller).   Specify the corresponding HW IDs via CTRLREC according to the connections and IO devices that are to be set up. |
-| **Example:** | For example, for CPU S7-1511-1 PN with DI16x24VDC HF.   See also "[Use the program example of the control data record with WRREC & RDREC](#use-the-program-example-of-the-control-data-record-with-wrrec-rdrec-s7-1200-s7-1500)". | For example, DI16x24VDC HF, ET 200MP IM 155-5 PN ST --> use the ID of "<IO-device_V2.0[Head]>".  The real setup contains an additional DI16x24VDC HF, which is not to be considered during the configuration. |  | For example, connect and activate an S7-1500 CPU (IO controller) with an ET 200MP (IO device) and an ET 200SP (as optional IO device).  See also "[Program example for ReconfigIOSystem](#program-example-for-reconfigiosystem-s7-1200-s7-1500)". |
+| **Example:** | For example, for CPU S7-1511-1 PN with DI16x24VDC HF.   See also "[Use the program example of the control data record with WRREC &amp; RDREC](#use-the-program-example-of-the-control-data-record-with-wrrec-rdrec-s7-1200-s7-1500)". | For example, DI16x24VDC HF, ET 200MP IM 155-5 PN ST --&gt; use the ID of "&lt;IO-device_V2.0[Head]&gt;".  The real setup contains an additional DI16x24VDC HF, which is not to be considered during the configuration. |  | For example, connect and activate an S7-1500 CPU (IO controller) with an ET 200MP (IO device) and an ET 200SP (as optional IO device).  See also "[Program example for ReconfigIOSystem](#program-example-for-reconfigiosystem-s7-1200-s7-1500)". |
 
 **Additional information**
 
@@ -3785,32 +3785,32 @@ For more information on the feedback data record 197, refer to the system manual
 
 You can find more information on the control data record "CTRLREC" with the instruction "[ReconfigIOSystem: Reconfigure IO system](#reconfigiosystem-reconfigure-io-system-s7-1500)".
 
-#### I&M data records
+#### I&amp;M data records
 
-Note the following use of the I&M data records:
+Note the following use of the I&amp;M data records:
 
-- The data record "I&M0" ("16#AFF0") is used to transfer general information about the module or device.
-- The data record "I&M1" ("16#AFF1") is used to transfer the function and installation location of the module or device.
-- The data record "I&M2" ("16#AFF2") is used to transfer the installation date of the module or device.
-- The data record "I&M3" ("16#AFF3") is used to transfer individual additional information about the module or device.
-- The data record "I&M4" ("16#AFF4") is used to transfer a security code of the module or device to an IO controller.
+- The data record "I&amp;M0" ("16#AFF0") is used to transfer general information about the module or device.
+- The data record "I&amp;M1" ("16#AFF1") is used to transfer the function and installation location of the module or device.
+- The data record "I&amp;M2" ("16#AFF2") is used to transfer the installation date of the module or device.
+- The data record "I&amp;M3" ("16#AFF3") is used to transfer individual additional information about the module or device.
+- The data record "I&amp;M4" ("16#AFF4") is used to transfer a security code of the module or device to an IO controller.
 
 > **Note**
 >
-> The data record "I&M0" ("16#AFF0") is supported by every module. All other I&M data records are optional.
+> The data record "I&amp;M0" ("16#AFF0") is supported by every module. All other I&amp;M data records are optional.
 
-| Type: | I&M data records |  |  |  |  |  |
+| Type: | I&amp;M data records |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Relates to the module:** | Device / module |  |  |  |  |  |
 | **Location:** | Central setup or distributed setup via PROFINET IO   or PROFIBUS DP |  |  |  |  |  |
 | **Instructions:** | RDREC, WRREC |  |  |  |  |  |
 | **Data record (DR):** | DR 16#AFF0 | DR 16#AFF1 | DR 16#AFF2 | DR 16#AFF3 | DR 16#AFF4 | Alternatively, for distributed setup via PROFIBUS DP: DR 255 |
 | **HW ID:** | Use HW ID of the module. |  |  |  |  |  |
-| **Example:** | 1) Example: For CPU S7-1511-1 PN --> DR 16#AFF0; use the HW ID of the CPU.   See also "[Program example of I&M data record with read RDREC](#program-example-of-im-data-record-with-read-rdrec-s7-1200-s7-1500)". |  |  |  |  | 2) Example: For ET 200SP with IM 155-6 DP ST --> DR 255; use the HW ID of the IM. |
+| **Example:** | 1) Example: For CPU S7-1511-1 PN --&gt; DR 16#AFF0; use the HW ID of the CPU.   See also "[Program example of I&amp;M data record with read RDREC](#program-example-of-im-data-record-with-read-rdrec-s7-1200-s7-1500)". |  |  |  |  | 2) Example: For ET 200SP with IM 155-6 DP ST --&gt; DR 255; use the HW ID of the IM. |
 
 **Additional information**
 
-You can find additional information on the relevant I&M data record:
+You can find additional information on the relevant I&amp;M data record:
 
 - In the system manual of the relevant automation system (e.g. "[S7-1500, ET 200MP Automation system](https://support.industry.siemens.com/cs/ww/en/view/59191792)").
 - In the programming manual "[SIMATIC NET PROFINET IO-Base user programming interface](https://support.industry.siemens.com/cs/ww/en/view/26435491)".
@@ -3825,7 +3825,7 @@ You can find additional information on the relevant I&M data record:
 | **Data record (DR):** | Configuration (actual/preset): | Channel diagnostics: | Manufacturer-specific diagnostics via interface module: |  |
 | Use DR for the relevant module.   See also the addressing level and DR for "[PROFINET IO](https://support.industry.siemens.com/cs/ww/en/view/19289930)". |  | For PROFINET IO:   See Interface module | For PROFIBUS DP:   DR 0, 1 |  |
 | **HW ID:** | Use hardware ID of the relevant module (HW ID with "Hw_SubModule" data type). |  |  |  |
-| **Example:** | For example, IO controller S7-1513-1 PN; use HW ID of the module on the slot level for the IO device (ET 200MP IM 155-5 PN HF). Read out the preset configuration with DR 16#C001. | For example, IO device (ET 200MP IM 155-5 PN HF) with DQ module causes a wire break. Use the hardware ID of the header module of the IO device. IO controller is S7-1513-1 PN. Use DR 16#E00A for channel diagnostics.   See also "[Read program example for diagnostic data record with RDREC](#read-program-example-for-diagnostic-data-record-with-rdrec-s7-1200-s7-1500)". | For example, PROFIBUS DP: ET 200MP with IM 155-5 DP ST; Read DI module --> HW ID ("Hw_SubModule" data type) of the DI module and use DR 1 for diagnostics. |  |
+| **Example:** | For example, IO controller S7-1513-1 PN; use HW ID of the module on the slot level for the IO device (ET 200MP IM 155-5 PN HF). Read out the preset configuration with DR 16#C001. | For example, IO device (ET 200MP IM 155-5 PN HF) with DQ module causes a wire break. Use the hardware ID of the header module of the IO device. IO controller is S7-1513-1 PN. Use DR 16#E00A for channel diagnostics.   See also "[Read program example for diagnostic data record with RDREC](#read-program-example-for-diagnostic-data-record-with-rdrec-s7-1200-s7-1500)". | For example, PROFIBUS DP: ET 200MP with IM 155-5 DP ST; Read DI module --&gt; HW ID ("Hw_SubModule" data type) of the DI module and use DR 1 for diagnostics. |  |
 
 **Additional information**
 
@@ -3859,7 +3859,7 @@ You can find more information on manufacturer-specific diagnostics data records:
 This section contains information on the following topics:
 
 - [RDREC: Read data record (S7-1200, S7-1500)](#rdrec-read-data-record-s7-1200-s7-1500-1)
-- [Program example of I&M data record with read RDREC (S7-1200, S7-1500)](#program-example-of-im-data-record-with-read-rdrec-s7-1200-s7-1500)
+- [Program example of I&amp;M data record with read RDREC (S7-1200, S7-1500)](#program-example-of-im-data-record-with-read-rdrec-s7-1200-s7-1500)
 - [Read program example for diagnostic data record with RDREC (S7-1200, S7-1500)](#read-program-example-for-diagnostic-data-record-with-rdrec-s7-1200-s7-1500)
 
 #### RDREC: Read data record (S7-1200, S7-1500)
@@ -3868,7 +3868,7 @@ This section contains information on the following topics:
 
 You use the instruction "RDREC" to read the data record with the number INDEX from the module addressed using the ID. This can be a module in a central rack or a distributed module (PROFIBUS DP or PROFINET IO).
 
-- Use the parameter ID to select from which module (DP/PROFINET IO) a data record is to be read. Use only the hardware identifier (HW ID) of the module for the ID parameter. You can find the hardware identifier of the module in "PLC tags > System constants". For example, for an S7-1500 DI module: This is shown as <Name of DI module> with the data type "Hw_SubModule".
+- Use the parameter ID to select from which module (DP/PROFINET IO) a data record is to be read. Use only the hardware identifier (HW ID) of the module for the ID parameter. You can find the hardware identifier of the module in "PLC tags &gt; System constants". For example, for an S7-1500 DI module: This is shown as &lt;Name of DI module&gt; with the data type "Hw_SubModule".
 - Use the INDEX parameter to select which data record is read from the module. Which data records can be read with which data record number depends on the module. You will find additional information about this in the documentation for the respective module.
 - The data records readable via "RDREC" have a different length. Use MLEN to specify the maximum number of data record bytes you want to read. If length "0" is selected at the parameter MLEN, the complete data record is written at the parameter RECORD.
 - Select the target range RECORD at least MLEN bytes long. If you read out the full data record with MLEN=0, use the maximum length of the data record for RECORD. The structure (configuration, data types and length) that you use at the parameter RECORD, also depends on which data record is read out by which module.
@@ -3958,7 +3958,7 @@ The data record for the Windows status is output by the eighth byte and can have
 
 ##### Examples
 
-You can find an example here: [Program example of I&M data record with read RDREC](#program-example-of-im-data-record-with-read-rdrec-s7-1200-s7-1500).
+You can find an example here: [Program example of I&amp;M data record with read RDREC](#program-example-of-im-data-record-with-read-rdrec-s7-1200-s7-1500).
 
 You can find another example here: [Read program example for diagnostic data record with RDREC](#read-program-example-for-diagnostic-data-record-with-rdrec-s7-1200-s7-1500).
 
@@ -3978,7 +3978,7 @@ You can find additional information and the program code for the examples here: 
 
 ##### Introduction
 
-In the following example, you read out the I&M0 data record of a CPU S7-1500.
+In the following example, you read out the I&amp;M0 data record of a CPU S7-1500.
 
 You can find additional information on the data records in the [Overview of the types of data records](#overview-of-the-types-of-data-records-s7-1200-s7-1500).
 
@@ -3986,7 +3986,7 @@ You can find additional information on the data records in the [Overview of the 
 
 Create nine tags and a structure in a global data block for storing the data.
 
-You read the hardware identifier of the CPU in “PLC tags > System constants. The CPU should be displayed there as <Local> with the data type “Hw_SubModule“. You store the hardware identifier via the input parameter ID ("id").
+You read the hardware identifier of the CPU in “PLC tags &gt; System constants. The CPU should be displayed there as &lt;Local&gt; with the data type “Hw_SubModule“. You store the hardware identifier via the input parameter ID ("id").
 
 ![Requirement](images/84845718795_DV_resource.Stream@PNG-de-DE.png)
 
@@ -4006,16 +4006,16 @@ Create the following local tags in an FB.
 
 ##### Result
 
-When the input parameter REQ ("start") returns the signal state "TRUE", the "RDREC" instruction is started. Via the input parameter ID ("id") the instruction "RDREC" calls the module. With the input parameter INDEX ("dataRecNbr") the I&M0 data record of the CPU is called.
+When the input parameter REQ ("start") returns the signal state "TRUE", the "RDREC" instruction is started. Via the input parameter ID ("id") the instruction "RDREC" calls the module. With the input parameter INDEX ("dataRecNbr") the I&amp;M0 data record of the CPU is called.
 
-Over several calls the instruction "RDREC" reads out the I&M0 data record and saves the data record using the parameter RECORD ("recordIM0").
+Over several calls the instruction "RDREC" reads out the I&amp;M0 data record and saves the data record using the parameter RECORD ("recordIM0").
 
-Among other things the I&M0 data record contains the following information.
+Among other things the I&amp;M0 data record contains the following information.
 
 - The vendor name ("VendorID_HL")
-- The article (“OrderID“) & device number (“IM_SerialNbr“)
-- Hardware ("IM_HWrev") & software information ("IMSWrev")
-- IM version ("IM_Version") and the bandwidth supported I&Mdata records ("IM_Supported")
+- The article (“OrderID“) &amp; device number (“IM_SerialNbr“)
+- Hardware ("IM_HWrev") &amp; software information ("IMSWrev")
+- IM version ("IM_Version") and the bandwidth supported I&amp;Mdata records ("IM_Supported")
 
 ![Result](images/84845749259_DV_resource.Stream@PNG-de-DE.png)
 
@@ -4078,7 +4078,7 @@ The following hardware is required:
 >
 >
 > 1. Connect the CPU and IO device over PROFINET and assign the CPU to the IO device as an IO controller.
-> 2. Open the path "Properties > Output 0-x > Outputs > Channel 0-y" for the respective DQ module.
+> 2. Open the path "Properties &gt; Output 0-x &gt; Outputs &gt; Channel 0-y" for the respective DQ module.
 > 3. Select each channel to be configured and select the "Wire break" option in the ""Diagnostics" area.
 
 **PLC data types created**
@@ -4135,7 +4135,7 @@ Create the following tags and structures for storing data in a global data block
 
 ![Storage of data](images/89077684235_DV_resource.Stream@PNG-de-DE.png)
 
-You read the hardware identifier of the head of the IO device and store the hardware identifier using the "id" tag. You can find the hardware identifier for the header module with "PLC tags > System constants" and with an entry such as <Head~IO_Device>. The data type used is "HW_SubModule".
+You read the hardware identifier of the head of the IO device and store the hardware identifier using the "id" tag. You can find the hardware identifier for the header module with "PLC tags &gt; System constants" and with an entry such as &lt;Head~IO_Device&gt;. The data type used is "HW_SubModule".
 
 ##### FC "SLI_FC_start_RDiag": Interconnect parameters
 
@@ -4300,8 +4300,8 @@ You can find additional information and the program code for the above-named exa
 This section contains information on the following topics:
 
 - [WRREC: Write data record (S7-1200, S7-1500)](#wrrec-write-data-record-s7-1200-s7-1500-1)
-- [Use the program example of the parameter data record with WRREC & RDREC (S7-1200, S7-1500)](#use-the-program-example-of-the-parameter-data-record-with-wrrec-rdrec-s7-1200-s7-1500)
-- [Use the program example of the control data record with WRREC & RDREC (S7-1200, S7-1500)](#use-the-program-example-of-the-control-data-record-with-wrrec-rdrec-s7-1200-s7-1500)
+- [Use the program example of the parameter data record with WRREC &amp; RDREC (S7-1200, S7-1500)](#use-the-program-example-of-the-parameter-data-record-with-wrrec-rdrec-s7-1200-s7-1500)
+- [Use the program example of the control data record with WRREC &amp; RDREC (S7-1200, S7-1500)](#use-the-program-example-of-the-control-data-record-with-wrrec-rdrec-s7-1200-s7-1500)
 
 #### WRREC: Write data record (S7-1200, S7-1500)
 
@@ -4309,7 +4309,7 @@ This section contains information on the following topics:
 
 The instruction "WRREC" is used to transfer the RECORD data record to the component addressed using ID. This can be a module in a central rack or a distributed component (PROFIBUS DP or PROFINET IO).
 
-- Use the ID parameter to select the module for which a data record is to be written. Use only the hardware identifier (HW ID) of the module for the ID parameter. You can find the hardware identifier of the module in "PLC tags > System constants". For example, for an S7-1500 DI module: This is shown as <Name of DI module> with the data type "Hw_SubModule".
+- Use the ID parameter to select the module for which a data record is to be written. Use only the hardware identifier (HW ID) of the module for the ID parameter. You can find the hardware identifier of the module in "PLC tags &gt; System constants". For example, for an S7-1500 DI module: This is shown as &lt;Name of DI module&gt; with the data type "Hw_SubModule".
 - Use the INDEX parameter to select which data record is written. The module determines which data records can be written with which data record number. You can find additional information on this in the manual for the relevant module.
 - Use LEN to specify the length of the data record to be transmitted in bytes. Select the source area RECORD at least LEN bytes long.
 - The value TRUE at output parameter DONE indicates that the data record has been successfully transferred.
@@ -4369,7 +4369,7 @@ For SIEMENS modules, the values DW#16#DF80E0xy, DF80E1xy and DF80E200 have the m
 | Invalid data record structure | E0 | 00 | No detailed information available |
 | 01 | Version conflicts |  |  |
 | 02 | Incorrect length in the header |  |  |
-| 03 | Wrong block type in the header section (I&M block header section) |  |  |
+| 03 | Wrong block type in the header section (I&amp;M block header section) |  |  |
 | 04 - FF | Reserved |  |  |
 | Invalid user parameter | E1 | 00 | No detailed information available |
 | 01 - FF | Incorrect parameter 1 … 255 |  |  |
@@ -4379,9 +4379,9 @@ For the interpretation of all other values ​​of STATUS for SIEMENS modules a
 
 ##### Examples
 
-You can find an example here: [Use the program example of the parameter data record with WRREC & RDREC](#use-the-program-example-of-the-parameter-data-record-with-wrrec-rdrec-s7-1200-s7-1500).
+You can find an example here: [Use the program example of the parameter data record with WRREC &amp; RDREC](#use-the-program-example-of-the-parameter-data-record-with-wrrec-rdrec-s7-1200-s7-1500).
 
-You can find another example here: [Use the program example of the control data record with WRREC & RDREC](#use-the-program-example-of-the-control-data-record-with-wrrec-rdrec-s7-1200-s7-1500).
+You can find another example here: [Use the program example of the control data record with WRREC &amp; RDREC](#use-the-program-example-of-the-control-data-record-with-wrrec-rdrec-s7-1200-s7-1500).
 
 You can find additional information and the program code for the examples here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -4570,7 +4570,7 @@ You can find additional information on the data records in the [Overview of the 
 >
 > **Enabling configuration control**
 >
-> To be able to write the control data record, the configuration control (option handling) of the CPU must be enabled. You will find these in “CPU properties > Configuration control”.
+> To be able to write the control data record, the configuration control (option handling) of the CPU must be enabled. You will find these in “CPU properties &gt; Configuration control”.
 
 Create the following tags for storing the data in a global data block:
 
@@ -4769,7 +4769,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 #### Example
 
-You can find the example here: [Program example for GETIO & SETIO](#program-example-for-getio-setio-s7-1200-s7-1500).
+You can find the example here: [Program example for GETIO &amp; SETIO](#program-example-for-getio-setio-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -4819,7 +4819,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 #### Example
 
-You can find the example here: [Program example for GETIO & SETIO](#program-example-for-getio-setio-s7-1200-s7-1500).
+You can find the example here: [Program example for GETIO &amp; SETIO](#program-example-for-getio-setio-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -4854,7 +4854,7 @@ In the following example, you read out the channels of a digital input module vi
   >
   > **Find hardware identifier**
   >
-  > Use "PLC tags > System constants" to find the hardware identifier. For example, for the digital input module, search for "Local~<Name of the DI module>", with the data type "HW_Submodule". The associated cell "value" contains the hardware identifier.
+  > Use "PLC tags &gt; System constants" to find the hardware identifier. For example, for the digital input module, search for "Local~&lt;Name of the DI module&gt;", with the data type "HW_Submodule". The associated cell "value" contains the hardware identifier.
 
   ![Requirements](images/85825778443_DV_resource.Stream@PNG-de-DE.png)
 - To forward the data, create the following local tags in an "SLI_FB_GETIO_SETIO" FB.
@@ -5012,7 +5012,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 #### Example
 
-You can find the example here: [Program example for GETIO_PART & SETIO_PART](#program-example-for-getio_part-setio_part-s7-1200-s7-1500).
+You can find the example here: [Program example for GETIO_PART &amp; SETIO_PART](#program-example-for-getio_part-setio_part-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -5071,7 +5071,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 #### Example
 
-You can find the example here: [Program example for GETIO_PART & SETIO_PART](#program-example-for-getio_part-setio_part-s7-1200-s7-1500).
+You can find the example here: [Program example for GETIO_PART &amp; SETIO_PART](#program-example-for-getio_part-setio_part-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -5106,7 +5106,7 @@ In the following example, you read out the channels of a digital input module vi
   >
   > **Find hardware identifier**
   >
-  > Use "PLC tags > System constants" to find the hardware identifier. For example, for the digital input module, search for "Local~<Name of the DI module>", with the data type "HW_Submodule". The associated cell "value" contains the hardware identifier.
+  > Use "PLC tags &gt; System constants" to find the hardware identifier. For example, for the digital input module, search for "Local~&lt;Name of the DI module&gt;", with the data type "HW_Submodule". The associated cell "value" contains the hardware identifier.
 
   ![Requirements](images/86117802507_DV_resource.Stream@PNG-de-DE.png)
 - To change the channel states, (for BYTE 0 and BYTE 1) set the following bits to "TRUE" in the global data block:
@@ -5956,7 +5956,7 @@ In the following example, you generate a wire break via an input module and rece
 ##### Requirements
 
 - An input module is created and the hardware identifier is read out in the properties of the input module. You store the hardware identifier via the input parameter F_ID ("alarmCheckID").
-- To generate an interrupt, select the option "Wire break" for the input channels. This option is available under "Module parameters > Channel template > Inputs".
+- To generate an interrupt, select the option "Wire break" for the input channels. This option is available under "Module parameters &gt; Channel template &gt; Inputs".
 
   ![Requirements](images/86246340875_DV_resource.Stream@PNG-de-DE.png)
 - To store the data, create seven tags and the structures "TI_Diagnostic_Interrupt" and "Additional_Diag" in a global data block. Create the "TI_Diagnostic_Interrupt" structure with the "TI_DiagnosticInterrupt" data type.
@@ -6143,7 +6143,7 @@ You can find additional information on valid data types under "[Overview of the 
 | 7000 | First call with REQ= 0: The job specified with LADDR is not active; BUSY has the value "0". |
 | 7001 | First call with REQ= 1. The job specified with LADDRwas triggered. BUSY has the value "1". |
 | 7002 | Intermediate call (REQ  irrelevant). The activated job is still active; BUSY has the value "1". |
-| 8090 | - You have not configured a module with the address specified in LADDR. - For firmware versions < V2.9: You operate your CPU as I-slave / I-device and you have specified an address of this I-slave/I-device in LADDR.   Note: As of firmware version V2.9 of the S7-1500 CPU, it is possible to switch the I-device functionality on or off locally in the program of the I-device CPU with the "D_ACT_DP" instruction. |
+| 8090 | - You have not configured a module with the address specified in LADDR. - For firmware versions &lt; V2.9: You operate your CPU as I-slave / I-device and you have specified an address of this I-slave/I-device in LADDR.   Note: As of firmware version V2.9 of the S7-1500 CPU, it is possible to switch the I-device functionality on or off locally in the program of the I-device CPU with the "D_ACT_DP" instruction. |
 | 8092 | The deactivation of the currently addressed DP slave/PROFINET IO device (MODE=2) cannot be canceled by being activated (MODE=1). Activate the component at a later time. |
 | 8093 | The address specified in LADDR does not belong to any DP slave/PROFINET IO device that can be activated or deactivated or the MODE parameter is unknown. |
 | 8094 | You have attempted to activate a device which is potential partner for a tool change port. However, another device is already activated on this tool change port at this time. The activated device will remain activated. |
@@ -6240,7 +6240,7 @@ You can use the control data record ("CTRLREC" parameter) to inform the PROFINET
 
 This requires a configuration that allows IO system configuration to be adapted:
 
-- The IO devices listed in the control data record must be enabled as "Optional IO device" (IO device properties: PROFINET interface [X1] > Advanced options > Interface options).
+- The IO devices listed in the control data record must be enabled as "Optional IO device" (IO device properties: PROFINET interface [X1] &gt; Advanced options &gt; Interface options).
 - The port interconnections listed in the control data record are only possible when the partner port is set to "Partner is set by the user program" for the appropriate ports.
 
 The data type of parameter CTRLREC is "VARIANT". The "CTRLREC" control data record must have the following structure:
@@ -6344,12 +6344,12 @@ You can find additional information on the data records in the [Overview of the 
   >
   > 1. Connect the two ET 200 via PROFINET with the CPU.
   > 2. Assign the two ET 200 as IO controllers to the CPU. Then open the CPU properties.
-  > 3. Open the entry "PROFINET interface [X1] > Advanced options > Port X1 P1 > Port interconnection > Partner port". Select the option "Set Partner by user program". Do the same for "Port X1 P2".
-  > 4. Open the properties of ET 200MP (...> Port X1 P1) and select the option "Set Partner by user program" (see step 3).
-  > 5. Open the properties of ET 200SP (...> Port X1 P1) and perform the following settings:
+  > 3. Open the entry "PROFINET interface [X1] &gt; Advanced options &gt; Port X1 P1 &gt; Port interconnection &gt; Partner port". Select the option "Set Partner by user program". Do the same for "Port X1 P2".
+  > 4. Open the properties of ET 200MP (...&gt; Port X1 P1) and select the option "Set Partner by user program" (see step 3).
+  > 5. Open the properties of ET 200SP (...&gt; Port X1 P1) and perform the following settings:
   >
   >    - Select the option "Set Partner by user program" (see step 3).
-  >    - Open "PROFINET interface [X1] > Advanced options > Interface options" and select the option "Optional IO device".
+  >    - Open "PROFINET interface [X1] &gt; Advanced options &gt; Interface options" and select the option "Optional IO device".
 
 ##### Storage of data
 
@@ -6365,14 +6365,14 @@ The structure "ctrlRec" contains the control data record "CTRLREC".
 >
 > For example, determine the hardware identifier of the interface of the CPU ("laddr_interface") as follows:
 >
-> In the CPU, open the entry "PLC tags > Show all tags > System constants" and search for the name <Local~PROFINET-Interface_1> with the data type "Hw_Interface". The associated cell "value" contains the hardware identifier.
+> In the CPU, open the entry "PLC tags &gt; Show all tags &gt; System constants" and search for the name &lt;Local~PROFINET-Interface_1&gt; with the data type "Hw_Interface". The associated cell "value" contains the hardware identifier.
 
 > **Note**
 >
 > **Pay attention to the interfaces used.**
 >
-> - The Port X1 P1 of the IO device (ET 200MP/"<IO_device_1>") is connected with the port X1 P1 of the CPU ("<Local>").
-> - The Port X1 P1 of the optional IO device (ET 200SP/"<IO_device_2>") is connected with the port X1 P2 of the CPU ("<Local>"). You also require the hardware identifier of the device (data type "Hw_Device") from the optional IO device.
+> - The Port X1 P1 of the IO device (ET 200MP/"&lt;IO_device_1&gt;") is connected with the port X1 P1 of the CPU ("&lt;Local&gt;").
+> - The Port X1 P1 of the optional IO device (ET 200SP/"&lt;IO_device_2&gt;") is connected with the port X1 P2 of the CPU ("&lt;Local&gt;"). You also require the hardware identifier of the device (data type "Hw_Device") from the optional IO device.
 
 ![Storage of data](images/88082987403_DV_resource.Stream@PNG-de-DE.png)
 
@@ -6545,7 +6545,7 @@ See also: [Difference between synchronous and asynchronous instructions](Asynchr
 
 > **Note**
 >
-> When you read out a data record with a number greater than one from an FM or a CP you have purchased prior to February 1997 (below referred to as "old modules"), "RD_REC" responds differently than it does in new modules. This special situation is covered in the section "Using old S7-300 FMs and CPs with data record numbers >1" (see below).
+> When you read out a data record with a number greater than one from an FM or a CP you have purchased prior to February 1997 (below referred to as "old modules"), "RD_REC" responds differently than it does in new modules. This special situation is covered in the section "Using old S7-300 FMs and CPs with data record numbers &gt;1" (see below).
 >
 > If a DPV1 slave is configured via GSD file (GSD rev. 3 and higher) and the DP interface of the DP master is set to "S7 compatible", then you may not read any data records from the I/O modules in the user program with "RD_REC". In this case, the DP master addresses the wrong slot (configured slot + 3).
 >
@@ -6572,7 +6572,7 @@ You can find additional information on valid data types under "[Overview of the 
 >
 > If you want to ensure that the entire data record is always read, select a target range with a length of 241 bytes. If the data transfer is without error, RET_VAL contains the actual data record length.
 
-##### Using old S7-300 FMs and CPs with data record numbers > 1
+##### Using old S7-300 FMs and CPs with data record numbers &gt; 1
 
 If you want to use the instruction "RD_REC" to read out a data record with a number greater than one from an old S7-300 FM or old S7-300 CP, remember the following points:
 
@@ -6628,7 +6628,7 @@ When looking at the "real" error information (error codes W#16#8xyz) in the foll
 | 80A3 | DP protocol error with user interface/user | Distributed I/O |
 | 80A4 | Communication on PROFIBUS disrupted. | - |
 | 80B0 | - Instruction not possible for module type. - The module does not recognize the data record. - Data record number 241 not permitted. - With "[WR_REC](#wr_rec-write-data-record-to-io-s7-1500)", data records 0 and 1 are not  permitted. | - |
-| 80B1 | The length specified in parameter RECORD is incorrect. | - With "[WR_REC](#wr_rec-write-data-record-to-io-s7-1500)": Length incorrect - With "RD_REC"  (only when using old  S7-300 FMs and S7-300  CPs): specified length > data record length - With DPNRM_DG: specified length < data record length |
+| 80B1 | The length specified in parameter RECORD is incorrect. | - With "[WR_REC](#wr_rec-write-data-record-to-io-s7-1500)": Length incorrect - With "RD_REC"  (only when using old  S7-300 FMs and S7-300  CPs): specified length &gt; data record length - With DPNRM_DG: specified length &lt; data record length |
 | 80B2 | The configured slot is  not occupied. | - |
 | 80B3 | Actual module type  does not match  specified module type | - |
 | 80B5 | DP slave or module is not ready. | - |
@@ -6889,9 +6889,9 @@ In the following example, you write a data record from the IO controller into th
 
 ###### Requirements
 
-- Two CPU S7-1500 with a firmware version >=v1.8
-- One of the CPUs is configured as an I-Device. The other CPU is defined as the higher-level IO controller. (See CPU Properties > Operating Mode)
-- If not already available: Create two transfer areas. The first transfer area serves for input data, the other for output data. Each transfer area should be 1024 bytes long. (See CPU Properties > Operating Mode > Transfer Area)
+- Two CPU S7-1500 with a firmware version &gt;=v1.8
+- One of the CPUs is configured as an I-Device. The other CPU is defined as the higher-level IO controller. (See CPU Properties &gt; Operating Mode)
+- If not already available: Create two transfer areas. The first transfer area serves for input data, the other for output data. Each transfer area should be 1024 bytes long. (See CPU Properties &gt; Operating Mode &gt; Transfer Area)
 
 ###### CPU 1 (IO controller): Storage of data
 
@@ -7109,9 +7109,9 @@ In the following example, you provide a data record in an I-Device and read out 
 
 ###### Requirements
 
-- Two CPU S7-1500 with a firmware version >=v1.8
-- One of the CPUs is configured as an I-Device. The other CPU is defined as the higher-level IO controller. (See CPU Properties > Operating Mode)
-- If not already available: Create two transfer areas. The first transfer area serves for input data, the other for output data. Each transfer area should be 1024 bytes long. (See CPU Properties > Operating Mode > Transfer Area)
+- Two CPU S7-1500 with a firmware version &gt;=v1.8
+- One of the CPUs is configured as an I-Device. The other CPU is defined as the higher-level IO controller. (See CPU Properties &gt; Operating Mode)
+- If not already available: Create two transfer areas. The first transfer area serves for input data, the other for output data. Each transfer area should be 1024 bytes long. (See CPU Properties &gt; Operating Mode &gt; Transfer Area)
 
 ###### CPU 1 (IO controller): Storage of data
 
@@ -7478,7 +7478,7 @@ For the evaluation of the error information of the RET_VAL parameter, refer to t
 | 80A3 | DP protocol error with user interface/user | Distributed I/O |
 | 80A4 | Communication on PROFIBUS disrupted. | Distributed I/O |
 | 80B0 | - Instruction not possible for module type. - The module does not recognize the data record. - Data record number 241 not permitted. - With "[WR_REC](#wrrec-write-data-record-s7-1200-s7-1500-1)", data records 0 and 1 are not  permitted. | - |
-| 80B1 | The length specified in parameter RECORD is incorrect. | specified length < data record length |
+| 80B1 | The length specified in parameter RECORD is incorrect. | specified length &lt; data record length |
 | 80B2 | The configured slot is  not occupied. | - |
 | 80B3 | Actual module type  does not match  specified module type | - |
 | 80C0 | There are no diagnostic data available. | - |
@@ -8023,7 +8023,7 @@ The following table shows the parameters of the "PE_CMD" instruction:
 | CMD | Input | BYTE | I, Q, M, D, L, P or constant | Service-Request-ID of the PROFIenergy command in accordance with the PROFIenergy profile (see "CMD and CMD_MODIFIER parameters").  Further service request IDs are possible following extensions of the PROFIenergy profile. |
 | CMD_MODIFIER | Input | BYTE | I, Q, M, D, L, P or constant | PROFIenergy sub-command  (only when CMD=3 or CMD=16, see "CMD and CMD_MODIFIER parameters")  Further sub-commands are possible following extensions of the PROFIenergy profile. |
 | CMD_PARA | Input | VARIANT | I, Q, M, D, L | Parameters for the PE commands:  - Get mode: PE_mode_ID - Get measurement values: List of Measurement_Ids   The complete Service Data Request is entered. |
-| CMD_PARA_LEN | Input | INT | I, Q, M, D, L, P or constant | The actual length of the command parameters (<= length defined in CMD_PARA; is verified by the instruction). |
+| CMD_PARA_LEN | Input | INT | I, Q, M, D, L, P or constant | The actual length of the command parameters (&lt;= length defined in CMD_PARA; is verified by the instruction). |
 | CMD_DATA_STRUCTURE_IDENTIFIER_RQ | Input | BYTE | I, Q, M, D, L, P or constant | Value of the Data Structure Identifier from the standard  Note: The parameter CMD_DATA_STRUCTURE_IDENTIFIER_RQ exists as of instruction version V2.0. |
 | RESPONSE_DATA | InOut | VARIANT | I, Q, M, D, L | PROFIenergy information   May be complete response frame including block header, depending on the command.  Note: If the buffer is too small, only the number of bytes which is specified in the VARIANT pointer will be entered.  Note: You must delete the associated memory area before each call of PE_CMD. |
 | VALID | Output | BOOL | I, Q, M, D, L | Command successfully sent. |
@@ -8383,7 +8383,7 @@ Possible values for MESSAGE
 | 52 | The instruction could not determine any configured devices in the PROFINET I/O system. |
 | 53 | Determining the logical addresses of configured devices. |
 | 54 | Reading interface information out of the devices. |
-| 55 | Determining I&M data (data record 0 only) of the configured devices. |
+| 55 | Determining I&amp;M data (data record 0 only) of the configured devices. |
 | 56 | Configuring PROFINET interface for sending the "Wake on LAN" MagicPaket™ via UDP. |
 | 57 | Determining PROFIenergy capabilities of the connected devices. |
 | 62 | Invalid PROFINET I/O system ID detected. The causative number is displayed in the INFORMATION field. |
@@ -8420,7 +8420,7 @@ Possible values for INFORMATION
 | 8085 to 80CE | Error when configuring the connection. The error messages of the internally used TCON instruction are output.  The description of the error messages can be found in the table for the [STATUS](Open%20User%20Communication%20%28S7-1200%2C%20S7-1500%29.md#tcon-establish-communication-connection-s7-1200-s7-1500) parameter. |
 | 8100 | An attempt has been made to place more than the maximum of 256 possible jobs. This is a temporary error, which is resolved by completing a few jobs. The placed jobs are not accepted and must be placed again. |
 | 8200 | An attempt was made to send an invalid or an unsupported PROFIenergy command (PE_COMMAND). |
-| 8400 | Connection ID outside the permitted range. Initialization aborted.  Check the ID of the connection configuration for "Wake on LAN". See data block at parameter PENERGY > Header > Connection > ID. |
+| 8400 | Connection ID outside the permitted range. Initialization aborted.  Check the ID of the connection configuration for "Wake on LAN". See data block at parameter PENERGY &gt; Header &gt; Connection &gt; ID. |
 | 84xx | A communication error has occurred. The number of the device that generated the error is output to "xx". |
 | 85xx | An error has been returned from device xx. The number of the device that generated the error is output to "xx". |
 | 8600 | The requested wake-up method is currently not supported. |
@@ -8704,8 +8704,8 @@ Accuracy classes of the accuracy domains 1 and 2
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Meaning** | Reserved | 0.01% | 0.02% | 0.05% | 0.1% | 0.2% | 0.5% | 1% | 1.5% |
 |  |  |  |  |  |  |  |  |  |  |
-| **Accuracy class** | **9** | **10** | **11** | **12** | **13** | **14** | **15** | **>15** |  |
-| **Meaning** | 2% | 2.5% | 3% | 5% | 10% | 20% | >20% | Not defined |  |
+| **Accuracy class** | **9** | **10** | **11** | **12** | **13** | **14** | **15** | **&gt;15** |  |
+| **Meaning** | 2% | 2.5% | 3% | 5% | 10% | 20% | &gt;20% | Not defined |  |
 |  |  |  |  |  |  |  |  |  |  |
 
 Accuracy classes of accuracy domain 3
@@ -8714,13 +8714,13 @@ Accuracy classes of accuracy domain 3
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Meaning** | Reserved | 0,02 | 0,05 | 0,1 | 0,2 | 0,5 | 1 | 1,5 | 2 |
 |  |  |  |  |  |  |  |  |  |  |
-| **Accuracy class** | **9** | **10** | **11** | **12** | **13** | **14** | **>13** |  |  |
+| **Accuracy class** | **9** | **10** | **11** | **12** | **13** | **14** | **&gt;13** |  |  |
 | **Meaning** | 2,5 | 3 | 5 | 10 | 20 | 20% | Not defined |  |  |
 |  |  |  |  |  |  |  |  |  |  |
 
 Accuracy classes of accuracy domain 4
 
-| Accuracy class | 0 | 1 | 2 | 3 | 4 | 5 | 6 | >7 |
+| Accuracy class | 0 | 1 | 2 | 3 | 4 | 5 | 6 | &gt;7 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Meaning** | Reserved | 0,5 | 1,0 | 1,5 | 2,0 | 2,5 | 3,0 | Not defined |
 |  |  |  |  |  |  |  |  |  |
@@ -9489,7 +9489,7 @@ You can find additional information on valid data types under "[Overview of the 
 | 80C5 | Distributed I/O not available or deactivated. | Distributed I/O |
 | 80C6 | Data record transfer cancelled due to priority class abort (restart or background). | Distributed I/O |
 | 80D0 | There is no entry for the module. | - |
-| 80D1 | The data record number is not configured for the module (data record numbers >  241 are rejected). | - |
+| 80D1 | The data record number is not configured for the module (data record numbers &gt;  241 are rejected). | - |
 | 80D2 | The module cannot be assigned parameters according to its type identifier. | - |
 | 80D5 | The data record is static. | - |
 | General error information | See also: [GET_ERR_ID: Get error ID locally](LAD%20%28S7-1200%2C%20S7-1500%29.md#get_err_id-get-error-id-locally-s7-1200-s7-1500) | - |
@@ -9574,7 +9574,7 @@ In the following example, you assign a hardware interrupt OB (OB40) to a created
 
 **Requirements:**
 
-You create an input module (DI) and configure a hardware interrupt event for a positive edge under "Properties > Inputs 0-15 > ... > Channel 0".
+You create an input module (DI) and configure a hardware interrupt event for a positive edge under "Properties &gt; Inputs 0-15 &gt; ... &gt; Channel 0".
 
 ![Example](images/81289500427_DV_resource.Stream@PNG-de-DE.png)
 
@@ -9676,7 +9676,7 @@ In the following example, you assign a hardware interrupt event to a hardware in
 
 **Requirements:**
 
-A hardware interrupt OB (OB41 with the name "SLI_iOB_DETACH") has already been created. You create an input module (DI) and configure a hardware interrupt event for a positive edge under "Properties > Inputs 0-15 > ... > Channel 1".
+A hardware interrupt OB (OB41 with the name "SLI_iOB_DETACH") has already been created. You create an input module (DI) and configure a hardware interrupt event for a positive edge under "Properties &gt; Inputs 0-15 &gt; ... &gt; Channel 1".
 
 ![Example](images/82161689483_DV_resource.Stream@PNG-de-DE.png)
 
@@ -9794,7 +9794,7 @@ The following table shows the parameters of the "SET_CINT" instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| OB_NR | Input | OB_CYCLIC | I, Q, M, D, L or constant | OB number (<32768) |
+| OB_NR | Input | OB_CYCLIC | I, Q, M, D, L or constant | OB number (&lt;32768) |
 | CYCLE | Input | UDINT | I, Q, M, D, L or constant | Time interval in microseconds |
 | PHASE | Input | UDINT | I, Q, M, D, L or constant | Phase offset in microseconds |
 | RET_VAL | Return | INT | I, Q, M, D, L | Status of the instruction |
@@ -9844,7 +9844,7 @@ The following table shows the parameters of the "QRY_CINT" instruction:
 
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
-| OB_NR | Input | OB_CYCLIC (INT) | I, Q, M, D, L or constant | OB number (<32768) or symbolic addressing via the name of the OB (e.g. OB_MyOB) |
+| OB_NR | Input | OB_CYCLIC (INT) | I, Q, M, D, L or constant | OB number (&lt;32768) or symbolic addressing via the name of the OB (e.g. OB_MyOB) |
 | CYCLE | Output | UDINT | I, Q, M, D, L | Cycle time in microseconds |
 | PHASE | Output | UDINT | I, Q, M, D, L | Phase offset |
 | STATUS | Output | WORD | I, Q, M, D, L | Status of the cyclic interrupt:  - Bit 0 to bit 4: see parameter STATUS - Other bits: Always "0" |
@@ -10256,7 +10256,7 @@ You can find additional information on valid data types under "[Overview of the 
 | Error code*  (W#16#...) | Description |
 | --- | --- |
 | 0000 | No error occurred.  Exception: Status message "0" on bit 4 (no OB with this number created). |
-| 8090 | Error at the parameter OB_NR. Possible causes:  - The value at the parameter OB_NR is not an OB number (<1 or > 32767) supported by the CPU. - The OB number does not address a time-of-day interrupt OB. |
+| 8090 | Error at the parameter OB_NR. Possible causes:  - The value at the parameter OB_NR is not an OB number (&lt;1 or &gt; 32767) supported by the CPU. - The OB number does not address a time-of-day interrupt OB. |
 | General error information | See also: [GET_ERR_ID: Get error ID locally](LAD%20%28S7-1200%2C%20S7-1500%29.md#get_err_id-get-error-id-locally-s7-1200-s7-1500) |
 | * The error codes in the program editor are displayed as integer or hexadecimal values. For information on switching the display formats, refer to "See also". |  |
 
@@ -11282,10 +11282,10 @@ This section contains information on the following topics:
 
 - [DIS_IRT: Disable interrupt event (S7-1500)](#dis_irt-disable-interrupt-event-s7-1500)
 - [EN_IRT: Enable interrupt event (S7-1500)](#en_irt-enable-interrupt-event-s7-1500)
-- [Program example for DIS_IRT & EN_IRT (S7-1200, S7-1500)](#program-example-for-dis_irt-en_irt-s7-1200-s7-1500)
+- [Program example for DIS_IRT &amp; EN_IRT (S7-1200, S7-1500)](#program-example-for-dis_irt-en_irt-s7-1200-s7-1500)
 - [DIS_AIRT: Delay execution of higher priority interrupts and asynchronous error events (S7-1200, S7-1500)](#dis_airt-delay-execution-of-higher-priority-interrupts-and-asynchronous-error-events-s7-1200-s7-1500)
 - [EN_AIRT: Enable execution of higher priority interrupts and asynchronous error events (S7-1200, S7-1500)](#en_airt-enable-execution-of-higher-priority-interrupts-and-asynchronous-error-events-s7-1200-s7-1500)
-- [Program example for DIS_AIRT & EN_AIRT (S7-1200, S7-1500)](#program-example-for-dis_airt-en_airt-s7-1200-s7-1500)
+- [Program example for DIS_AIRT &amp; EN_AIRT (S7-1200, S7-1500)](#program-example-for-dis_airt-en_airt-s7-1200-s7-1500)
 
 #### DIS_IRT: Disable interrupt event (S7-1500)
 
@@ -11334,7 +11334,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 ##### Example
 
-You can find the example here: [Program example for DIS_IRT & EN_IRT](#program-example-for-dis_irt-en_irt-s7-1200-s7-1500).
+You can find the example here: [Program example for DIS_IRT &amp; EN_IRT](#program-example-for-dis_irt-en_irt-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -11381,7 +11381,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 ##### Example
 
-You can find the example here: [Program example for DIS_IRT & EN_IRT](#program-example-for-dis_irt-en_irt-s7-1200-s7-1500).
+You can find the example here: [Program example for DIS_IRT &amp; EN_IRT](#program-example-for-dis_irt-en_irt-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -11509,7 +11509,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 ##### Example
 
-You can find the example here: [Program example for DIS_AIRT & EN_AIRT](#program-example-for-dis_airt-en_airt-s7-1200-s7-1500).
+You can find the example here: [Program example for DIS_AIRT &amp; EN_AIRT](#program-example-for-dis_airt-en_airt-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -11544,7 +11544,7 @@ You can find additional information on valid data types under "[Overview of the 
 
 ##### Example
 
-You can find the example here: [Program example for DIS_AIRT & EN_AIRT](#program-example-for-dis_airt-en_airt-s7-1200-s7-1500).
+You can find the example here: [Program example for DIS_AIRT &amp; EN_AIRT](#program-example-for-dis_airt-en_airt-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -11576,7 +11576,7 @@ Create the following structures and tags for storing the data in a global data b
   >
   > **Find hardware identifier ("laddr")**
   >
-  > Use "PLC tags > System constants" to find the hardware identifier. For an S7-1500 CPU: Find the entry "Local~Common" with the data type "HW_Submodule". The associated cell "value" contains the hardware identifier.
+  > Use "PLC tags &gt; System constants" to find the hardware identifier. For an S7-1500 CPU: Find the entry "Local~Common" with the data type "HW_Submodule". The associated cell "value" contains the hardware identifier.
 
   ![Storage of data](images/96427546507_DV_resource.Stream@PNG-de-DE.png)
 - For the data memory:
@@ -11734,7 +11734,7 @@ This section contains information on the following topics:
 - [Gen_UsrMsg: Generate user diagnostic alarms (S7-1200, S7-1500)](#gen_usrmsg-generate-user-diagnostic-alarms-s7-1200-s7-1500)
 - [Get_Alarm: Read pending alarm (S7-1500)](#get_alarm-read-pending-alarm-s7-1500)
 - [Ack_Alarms: Acknowledge alarms (S7-1500)](#ack_alarms-acknowledge-alarms-s7-1500)
-- [Program example for Get_Alarm & Ack_Alarms (S7-1200, S7-1500)](#program-example-for-get_alarm-ack_alarms-s7-1200-s7-1500)
+- [Program example for Get_Alarm &amp; Ack_Alarms (S7-1200, S7-1500)](#program-example-for-get_alarm-ack_alarms-s7-1200-s7-1500)
 - [Get_AlarmResources: Determine the number of available alarm instances (S7-1500)](#get_alarmresources-determine-the-number-of-available-alarm-instances-s7-1500)
 
 ### Program_Alarm: Generate program alarm with associated values (S7-1500)
@@ -11761,7 +11761,7 @@ The alarm procedure of the S7-1500 CPU allows a maximum of 512 bytes for associa
 
 For internal information, ProDiag requires part of this associated value total. This means that the three possible associated values in the specific text field can use a maximum of 400 bytes.
 
-You will only see a warning regarding this number in the TIA Portal <= V14 during compilation. There is a stricter check as of TIA Portal V14 SP1. If this number is exceeded, an error is output during compilation to rule out error scenarios during runtime. This check from now on no longer refers to the actual size of the SD parameters at the time the instruction "Program_Alarm" is called, but to the maximum possible size of the SD parameters. This means you must decide beforehand with what length you declare the character string tags you are transferring, as these take up a large number of bytes.
+You will only see a warning regarding this number in the TIA Portal &lt;= V14 during compilation. There is a stricter check as of TIA Portal V14 SP1. If this number is exceeded, an error is output during compilation to rule out error scenarios during runtime. This check from now on no longer refers to the actual size of the SD parameters at the time the instruction "Program_Alarm" is called, but to the maximum possible size of the SD parameters. This means you must decide beforehand with what length you declare the character string tags you are transferring, as these take up a large number of bytes.
 
 #### Call of the instruction "Generate program alarm with associated values"
 
@@ -11775,7 +11775,7 @@ Finally, add the parameters of the instruction in line with your requirements (s
 
 The program alarm settings are displayed in the "Properties" window when you select the name of the program alarm in the "Static" section or in the network of the FB. Select the alarm class, priority, etc. and edit the alarm text.
 
-The settings that are made here can be edited in the project tree. To do this, open the "Alarms" tab under "PLC supervisions & alarms"; in it open the "Program alarms" tab. All existing program alarms are then displayed in the "Alarm types" table.
+The settings that are made here can be edited in the project tree. To do this, open the "Alarms" tab under "PLC supervisions &amp; alarms"; in it open the "Program alarms" tab. All existing program alarms are then displayed in the "Alarm types" table.
 
 #### Parameters
 
@@ -11833,7 +11833,7 @@ Call the function block in an OB.
 
 ![Example](images/70647973643_DV_resource.Stream@PNG-de-DE.png)
 
-A PLC alarm is generated automatically when the instruction is created. Open the PLC supervisions & alarms dialog and select the alarm to be edited in the Alarms > Program alarms tab. Create the alarm text, including two key words in the Properties > Basic settings of the alarm.
+A PLC alarm is generated automatically when the instruction is created. Open the PLC supervisions &amp; alarms dialog and select the alarm to be edited in the Alarms &gt; Program alarms tab. Create the alarm text, including two key words in the Properties &gt; Basic settings of the alarm.
 
 Note: If you right-click in the text box, you can insert a key word, tag, or text list.
 
@@ -11943,7 +11943,7 @@ Interconnect the parameters of the instructions as follows.
 
 Call the function block in an OB.
 
-A PLC alarm is generated automatically when the "Program_Alarm" instruction is created. Open the PLC supervisions & alarms dialog and select the alarm to be edited in the Alarms > Program alarms tab. Create the alarm text, including two key words.
+A PLC alarm is generated automatically when the "Program_Alarm" instruction is created. Open the PLC supervisions &amp; alarms dialog and select the alarm to be edited in the Alarms &gt; Program alarms tab. Create the alarm text, including two key words.
 
 Select the following settings for the alarm.
 
@@ -12007,7 +12007,7 @@ New associated values to be added to the alarm are defined in the text list entr
 
 - Associated values are defined by adding the following information in the text list entry:
 
-  @<No. of the associated value><Element type><Format specification>@
+  @&lt;No. of the associated value&gt;&lt;Element type&gt;&lt;Format specification&gt;@
 - Use the system data type AssocValues to specify which associated value is added when generating the alarm.
 - Additional information on the structure of associated values ​​can be found here: [Structure of associated values](Configuring%20alarms.md#structure-of-associated-values-s7-300-s7-400)
 
@@ -12083,7 +12083,7 @@ At output parameter Ret_Val ("returnValue"), it is indicated that the processing
 
 ![Example](images/71214945291_DV_resource.Stream@PNG-de-DE.png)
 
-For the output of the alarm, for a CPU of the S7-1500 series, open the entry "Online & Diagnostics > Diagnostic buffer".
+For the output of the alarm, for a CPU of the S7-1500 series, open the entry "Online &amp; Diagnostics &gt; Diagnostic buffer".
 
 ![Example](images/71214949003_DV_resource.Stream@PNG-de-DE.png)
 
@@ -12124,7 +12124,7 @@ With the instruction "Get_Alarm" in "OperateMode = 2" the following operating st
 | Operating modes |  |  | Description |
 | --- | --- | --- | --- |
 | Busy = TRUE | DataReady = FALSE | Error = FALSE | Alarms are pending, alarm processing is executed |
-| Busy = FALSE | DataReady = TRUE | Error = FALSE | New alarm is available in receive buffer > Retrieve data *) |
+| Busy = FALSE | DataReady = TRUE | Error = FALSE | New alarm is available in receive buffer &gt; Retrieve data *) |
 | Busy = FALSE | DataReady = FALSE | Error = FALSE | No new alarms |
 | Busy = FALSE | DataReady = FALSE | Error = TRUE | Error occurred (data is invalid) |
 
@@ -12141,7 +12141,7 @@ This results in the recommended call time of the "Get_Alarm [FB702]" between 20�
 In the following cases, you need to log on the instruction again using the input "OperateMode = 1":
 
 - After automatic logoff because the function block "Get_Alarm [FB702]" is called too rarely.
-- When the operating mode changes from "STOP" > "RUN".
+- When the operating mode changes from "STOP" &gt; "RUN".
 - As soon as you change existing alarm configurations, such as the Program_Alarm or ProDiag, the instruction automatically logs off.
 
 You can use the instruction for alarms from the following areas:
@@ -12189,7 +12189,7 @@ The following table shows the meaning of the values of the Status parameter:
 | 8001 | The value at parameter OperateMode is invalid. |
 | 8002 | The Data parameter has the wrong data type. |
 | 8003 | The Lcid parameter is invalid or a language selected with the Lcid parameter is not loaded. |
-| 8004 | You have already logged on via the OperateMode = 1 parameter in the user program to read the pending messages. You are only allowed and required to log on again if you log out using the OperateMode = 3, have re-configured alarm or performed a STOP > RUN transition. |
+| 8004 | You have already logged on via the OperateMode = 1 parameter in the user program to read the pending messages. You are only allowed and required to log on again if you log out using the OperateMode = 3, have re-configured alarm or performed a STOP &gt; RUN transition. |
 | 8005 | The value at parameter DataMode is invalid. |
 | 8085 | - You did not specify a display class when you logged on. - The instruction was logged off during the reconfiguration of supervisions (ProDiag). - Automatic logoff because the function block "Get_Alarm [FB702]" is called too rarely. - Automatic logoff due to system status SYNCUP (only for S7-1500-R/H-CPUs) |
 | 80C5 | You tried to log on during the SYNCUP system state. This is not possible. Try again later. (only with S7-1500 R/H CPUs) |
@@ -12214,7 +12214,7 @@ The PLC data type "AlarmData" reflects the structure of an alarm.
 
 #### Example
 
-You can find the example here: [Program example for Get_Alarm & Ack_Alarms - Part 1](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500).
+You can find the example here: [Program example for Get_Alarm &amp; Ack_Alarms - Part 1](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -12271,7 +12271,7 @@ The following table shows the meaning of the values of the STATUS parameter:
 
 #### Example
 
-You will find the example here: [Program example for Get_Alarm & Ack_Alarms - Part 1](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500).
+You will find the example here: [Program example for Get_Alarm &amp; Ack_Alarms - Part 1](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -12293,8 +12293,8 @@ You can find additional information and the program code for the example here: [
 
 This section contains information on the following topics:
 
-- [Program example for Get_Alarm & Ack_Alarms - Part 1 (S7-1200, S7-1500)](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500)
-- [Program example for Get_Alarm & Ack_Alarms - Part 2 (S7-1200, S7-1500)](#program-example-for-get_alarm-ack_alarms---part-2-s7-1200-s7-1500)
+- [Program example for Get_Alarm &amp; Ack_Alarms - Part 1 (S7-1200, S7-1500)](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500)
+- [Program example for Get_Alarm &amp; Ack_Alarms - Part 2 (S7-1200, S7-1500)](#program-example-for-get_alarm-ack_alarms---part-2-s7-1200-s7-1500)
 
 #### Program example for Get_Alarm & Ack_Alarms - Part 1 (S7-1200, S7-1500)
 
@@ -12304,7 +12304,7 @@ In the following example, you collect all alarms of the CPU 1 (S7-1500 as of fir
 
 In the first part of the programming example for Get_Alarm and Ack_Alarms, you deal with the requirements and interconnection of the parameters.
 
-The results and the procedure for the connection are described here: [Program example for Get_Alarm & Ack_Alarms - Part 2](#program-example-for-get_alarm-ack_alarms---part-2-s7-1200-s7-1500).
+The results and the procedure for the connection are described here: [Program example for Get_Alarm &amp; Ack_Alarms - Part 2](#program-example-for-get_alarm-ack_alarms---part-2-s7-1200-s7-1500).
 
 > **Note**
 >
@@ -12330,7 +12330,7 @@ You create two CPUs (S7-1500) and connect the CPUs with each other over PROFINET
 >
 > **Permitting read and write access**
 >
-> By setting a low protection level under Properties > Protection of the CPU, you ensure that read and write access is permitted.
+> By setting a low protection level under Properties &gt; Protection of the CPU, you ensure that read and write access is permitted.
 
 ##### CPU 1: Program requirements
 
@@ -12368,7 +12368,7 @@ Create three tags in a global data block ("SLI_gDB_testAlarm_GAA") for a test sc
 
 ![CPU 1: Program requirements](images/90216226699_DV_resource.Stream@PNG-de-DE.png)
 
-Create the following rule in the global data block ("SLI_gDB_testAlarm_GAA") to trigger a ProDiag alarm. To do so, open the global data block > the properties of the tag "startPump" > Supervisions > Add new supervision.
+Create the following rule in the global data block ("SLI_gDB_testAlarm_GAA") to trigger a ProDiag alarm. To do so, open the global data block &gt; the properties of the tag "startPump" &gt; Supervisions &gt; Add new supervision.
 
 ![CPU 1: Program requirements](images/90216299531_DV_resource.Stream@PNG-de-DE.png)
 
@@ -12405,7 +12405,7 @@ In the FB, you use:
   >
   > **Interconnection of the input parameter CONNECT of the "TSEND_C" instruction**
   >
-  > To interconnect the input parameter CONNECT, open the wizard of the "TSEND_C" instruction with "Properties > Configuration".
+  > To interconnect the input parameter CONNECT, open the wizard of the "TSEND_C" instruction with "Properties &gt; Configuration".
   >
   > Make the following settings for the connection of TSEND_C:
   >
@@ -12413,7 +12413,7 @@ In the FB, you use:
   > - Connection data: Use the drop-down list and the selection "New" to create one data block per CPU. This data block is required for storing the connection data. The name of the data block can be freely selected for each CPU (communication partner).
   > - Select the connection type "TCP" and the configuration type "Use program block". These settings set up an Ethernet connection with the "TCP" protocol and as programmed connection.
   > - You enter a freely selected connection ID. Use a connection ID that has not already been assigned.
-  > - You enter a value for the partner port. The value must be >=2000.
+  > - You enter a value for the partner port. The value must be &gt;=2000.
 
   Additional information on the configuration of [TSEND_C](Open%20User%20Communication%20%28S7-1200%2C%20S7-1500%29.md#tsend_c-establishing-a-connection-and-sending-data-s7-1200-s7-1500-1) is available here: [Program example for send functions](Open%20User%20Communication%20%28S7-1200%2C%20S7-1500%29.md#program-example-for-send-functions-s7-1200-s7-1500).
 
@@ -12565,7 +12565,7 @@ Additional information on the configuration of [TRCV_C](Open%20User%20Communicat
 
 ##### Results and procedure
 
-The results and the procedure for the communication connection are described here: [Program example for Get_Alarm & Ack_Alarms - Part 2](#program-example-for-get_alarm-ack_alarms---part-2-s7-1200-s7-1500).
+The results and the procedure for the communication connection are described here: [Program example for Get_Alarm &amp; Ack_Alarms - Part 2](#program-example-for-get_alarm-ack_alarms---part-2-s7-1200-s7-1500).
 
 ##### Program code
 
@@ -12583,7 +12583,7 @@ You can find additional information and the program code for the above-named exa
 
 In the second part of the program example for Get_Alarm and Ack_Alarms, you will become familiar with the results of the configuration and the ProDiag alarm.
 
-The requirements and the interconnection of the parameters are available here: [Program example for Get_Alarm & Ack_Alarms - Part 1](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500).
+The requirements and the interconnection of the parameters are available here: [Program example for Get_Alarm &amp; Ack_Alarms - Part 1](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500).
 
 ##### Procedure for connection setup between CPU 1 and CPU 2
 
@@ -12739,7 +12739,7 @@ At the end of processing of "SLI_FB_rcvdAlarms_GAA", the tag "TRCV_C.dataReceive
 
 ##### Part 1 of the program example
 
-The requirements and the interconnection of the parameters are available here: [Program example for Get_Alarm & Ack_Alarms - Part 1](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500).
+The requirements and the interconnection of the parameters are available here: [Program example for Get_Alarm &amp; Ack_Alarms - Part 1](#program-example-for-get_alarm-ack_alarms---part-1-s7-1200-s7-1500).
 
 ##### Program code
 
@@ -13293,10 +13293,10 @@ The table below shows which information is returned for the values at the MODE p
 | 11 | Mean value of the percentage of total runtime used by communication  The percentage of communication processes in the total runtime of the user program is output. | Mean value generation takes place over a time period of 1 s.  The returned communication percentage can be greater than you have specified in the CPU parameter "Cycle load due to communication". This can be the case if you have specified a minimum cycle time and this is not fully required by the user program. The remaining time that is available can then be used again for communication processes. | Not relevant | UINT | S7-1500 V1.5 |
 | 20 | Identical to MODE 10 except that the evaluation is based on the last program cycle executed. | - If the start time of the last cycle has been more than 2 s since the call of RT_INFO, the calculation is not performed. The instruction outputs the value 65535 (0xFFFF). - If the start time of the last cycle has been less than 1 ms since the RT_INFO call, the evaluation already starts 1 ms before the RT_INFO call. - If the duration of the last cycle was less than 1 ms, the evaluation takes place over a period of 1 ms. It can therefore extend over several cycles.   By assigning a minimum cycle time in the CPU properties, you can prevent cycle times from falling below 1 ms. - For MODE 21: The returned communication percentage can be greater than you have specified in the CPU parameter "Cycle load due to communication". This can be the case if you have specified a minimum cycle time and this is not fully required by the user program. The remaining time that is available can then be used again for communication processes. | Not relevant | UINT | S7-1500 V1.7 |
 | 21 | Identical to MODE 11 except that the evaluation is based on the last program cycle executed. | Not relevant | UINT | S7-1500 V1.7 |  |
-| 23 | Longest cycle time  Duration of the longest cycle since the last transition from STARTUP to RUN or since the last reset. | The times correspond to the "Cycle times measured" values in the "Cycle time" dialog of TIA Portal. You open the dialog using Online & Diagnostics > Diagnostics > Cycle time. | Not relevant | LTIME | S7-1500 V1.7 |
+| 23 | Longest cycle time  Duration of the longest cycle since the last transition from STARTUP to RUN or since the last reset. | The times correspond to the "Cycle times measured" values in the "Cycle time" dialog of TIA Portal. You open the dialog using Online &amp; Diagnostics &gt; Diagnostics &gt; Cycle time. | Not relevant | LTIME | S7-1500 V1.7 |
 | 24 | Shortest cycle time  Duration of the shortest cycle since the last transition from STARTUP to RUN or since the last reset. | Not relevant | LTIME | S7-1500 V1.7 |  |
 | 25 | Current/last cycle time  Duration of the last cycle. | Not relevant | LTIME | S7-1500 V1.7 |  |
-| 30 | Cycle monitoring time  Maximum permitted duration of the CPU program. If the cycle time exceeds the cycle monitoring time, the CPU goes to STOP or calls a time error OB. | The times correspond to the "Configured cycle time" values in the "Cycle time" dialog of TIA Portal. You open the dialog using Online & Diagnostics > Diagnostics > Cycle time. | Not relevant | LTIME | S7-1500 V1.5 |
+| 30 | Cycle monitoring time  Maximum permitted duration of the CPU program. If the cycle time exceeds the cycle monitoring time, the CPU goes to STOP or calls a time error OB. | The times correspond to the "Configured cycle time" values in the "Cycle time" dialog of TIA Portal. You open the dialog using Online &amp; Diagnostics &gt; Diagnostics &gt; Cycle time. | Not relevant | LTIME | S7-1500 V1.5 |
 | 31 | Output of the configured minimum cycle time for the user program. If a minimum cycle time has been assigned in the CPU properties, the operating system delays the start of the new cycle until the minimum cycle time has been reached. | Not relevant | LTIME | S7-1500 V1.5 |  |
 | 32 | Output of the configured maximum communication load as a percentage | The specification of the percentage of the cycle load allotted to communication is made in the CPU properties under "Communication load". | Not relevant | UINT | S7-1500 V1.5 |
 | 40 | Reset all OB statistics | "All OB statistics" is understood to mean the current, maximum and minimum runtime of an OB, see MODE 1 to 3. | Not relevant | Not relevant | S7-1500 V3.1 |
@@ -13429,30 +13429,30 @@ You can find additional information and the program code for the above-named exa
 
 #### Description
 
-The "Get_IM_Data" instruction reads the identification and maintenance data (I&M) data from a device. Use the LADDR parameter to select the device from which you want to read the I&M via the hardware identifier.
+The "Get_IM_Data" instruction reads the identification and maintenance data (I&amp;M) data from a device. Use the LADDR parameter to select the device from which you want to read the I&amp;M via the hardware identifier.
 
 The IM_TYPE parameter is used to select the data that is read out via the instruction:
 
-- IM_TYPE = 0: I&M 0 data
+- IM_TYPE = 0: I&amp;M 0 data
 
-  The I&M 0 data are the device-specific basic information of a device and contain information such as the manufacturer ID, order number, serial number and the hardware and firmware version. Only read access is possible to the I&M 0 data. The information is also displayed in the TIA Portal with the "Online & Diagnostics" view of a device.
-- IM_TYPE = 11: I&M 1 data from the parameter assignment data of the CPU
+  The I&amp;M 0 data are the device-specific basic information of a device and contain information such as the manufacturer ID, order number, serial number and the hardware and firmware version. Only read access is possible to the I&amp;M 0 data. The information is also displayed in the TIA Portal with the "Online &amp; Diagnostics" view of a device.
+- IM_TYPE = 11: I&amp;M 1 data from the parameter assignment data of the CPU
 
-  The I&M 1 data contain a functional description of the device and the location designation. i.e. the information about how the device is designated within the plant.
-- IM_TYPE = 12: I&M 2 data from the parameter assignment data of the CPU
+  The I&amp;M 1 data contain a functional description of the device and the location designation. i.e. the information about how the device is designated within the plant.
+- IM_TYPE = 12: I&amp;M 2 data from the parameter assignment data of the CPU
 
-  The I&M 2 data includes the date of installation, i.e. the information about when the device was installed in the plant.
-- IM_TYPE = 13: I&M 3 data from the parameter assignment data of the CPU
+  The I&amp;M 2 data includes the date of installation, i.e. the information about when the device was installed in the plant.
+- IM_TYPE = 13: I&amp;M 3 data from the parameter assignment data of the CPU
 
-  The I&M 3 data contains additional information about the installed device. The additional information is free text and is assigned as desired.
+  The I&amp;M 3 data contains additional information about the installed device. The additional information is free text and is assigned as desired.
 
-The I&M data read is written to the addressed area defined at the DATA parameter.
+The I&amp;M data read is written to the addressed area defined at the DATA parameter.
 
 The execution status of the read job is displayed via the BUSY, DONE, ERROR output parameters and the two middle bytes of the STATUS output parameter.
 
-#### Definition: Identification and maintenance data (I&M)
+#### Definition: Identification and maintenance data (I&amp;M)
 
-Identification and maintenance (I&M) data refers to information stored in a module, which assists you in checking the plant configuration, locating hardware changes in a plant and eliminating errors.
+Identification and maintenance (I&amp;M) data refers to information stored in a module, which assists you in checking the plant configuration, locating hardware changes in a plant and eliminating errors.
 
 - Identification data (I-data) is static information about a device that can only be read.
 - Maintenance data (M-data) refers to plant-dependent information, such as the installation location or date. Maintenance data are created during configuration and written to the module.
@@ -13464,21 +13464,21 @@ The following table shows the parameters of the "Get_IM_Data" instruction:
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
 | LADDR | Input | HW_IO | I, Q, M, D, L or constant | Hardware ID of the device The number is assigned automatically and is stored in the properties of the device or in the hardware configuration. |
-| IM_TYPE | Input | UINT | I, Q, M, D, L or constant | Identification and maintenance data number  Possible values:  - 0: I&M 0 data - 11: I&M 1 data from the parameter assignment data of the CPU - 12: I&M 2 data from the parameter assignment data of the CPU - 13: I&M 3 data from the parameter assignment data of the CPU |
+| IM_TYPE | Input | UINT | I, Q, M, D, L or constant | Identification and maintenance data number  Possible values:  - 0: I&amp;M 0 data - 11: I&amp;M 1 data from the parameter assignment data of the CPU - 12: I&amp;M 2 data from the parameter assignment data of the CPU - 13: I&amp;M 3 data from the parameter assignment data of the CPU |
 | DATA | InOut | VARIANT | I, Q, M, D, L | Area for storing the read identification and maintenance data (see below). |
-| DONE | Output | BOOL | I, Q, M, D, L | The instruction was executed successfully. The I&M data were transferred to the DATA parameter. |
+| DONE | Output | BOOL | I, Q, M, D, L | The instruction was executed successfully. The I&amp;M data were transferred to the DATA parameter. |
 | BUSY | Output | BOOL | I, Q, M, D, L | Status parameter  - 0: Execution of the instruction completed or not yet started. - 1: Execution of the instruction not yet complete. |
 | ERROR | Output | BOOL | I, Q, M, D, L | Status parameter  - 0: No error. - 1: An error occurred during execution of the instruction.   Detailed information is output via the STATUS parameter. |
 | STATUS | Output | WORD | I, Q, M, D, L | Status parameter  The parameter is only set for the duration of one call. To display it, therefore, copy STATUS to a free data area. |
 
 You can find more information on the data types in "[Overview of the valid data types](Data%20types.md#overview-of-the-valid-data-types)".
 
-#### Parameter DATA for I&M 0 data
+#### Parameter DATA for I&amp;M 0 data
 
-Use an array (ARRAY of BYTE) or a special data structure to store the I&M 0 data:
+Use an array (ARRAY of BYTE) or a special data structure to store the I&amp;M 0 data:
 
-- If you address an array (ARRAY of BYTE) at parameter DATA, the read I&M 0 data is copied as a byte sequence to DATA. If the addressed array is longer than the read data, the unneeded bytes are filled with zeros.
-- The following "IM0_Data" structure can also be used at the DATA parameter for I&M 0 data:
+- If you address an array (ARRAY of BYTE) at parameter DATA, the read I&amp;M 0 data is copied as a byte sequence to DATA. If the addressed array is longer than the read data, the unneeded bytes are filled with zeros.
+- The following "IM0_Data" structure can also be used at the DATA parameter for I&amp;M 0 data:
 
   | Parameter |  | Data type | Bytes | Description |
   | --- | --- | --- | --- | --- |
@@ -13494,25 +13494,25 @@ Use an array (ARRAY of BYTE) or a special data structure to store the I&M 0 data
   | Revision_Counter |  | UINT | 2 | Revision counter |
   | Profile_ID |  | UINT | 2 | Profile |
   | Profile_Specific_Type |  | UINT | 2 | Device class |
-  | IM_Version |  | WORD | 2 | I&M version |
-  | I&M_Supported |  | WORD | 2 | I&M data (I&M 0-I&M 4) supported at the device end |
+  | IM_Version |  | WORD | 2 | I&amp;M version |
+  | I&amp;M_Supported |  | WORD | 2 | I&amp;M data (I&amp;M 0-I&amp;M 4) supported at the device end |
 
 If a different data type is used at the DATA parameter, the STATUS parameter outputs error code 8093.
 
-#### DATA parameter for I&M 1, I&M 2, and I&M 3 data
+#### DATA parameter for I&amp;M 1, I&amp;M 2, and I&amp;M 3 data
 
-Use a string (STRING) or an array (ARRAY of CHAR/BYTE) to store the I&M data:
+Use a string (STRING) or an array (ARRAY of CHAR/BYTE) to store the I&amp;M data:
 
-- If you address a string (STRING data type) at the DATA parameter, the length of the string automatically adjusts the length of the read I&M data (up to 254 characters).
-- If you address an array (ARRAY of CHAR/BYTE) at the DATA parameter, the read I&M data is written to the individual components of the data type used. If the addressed array is longer than the read data, the remaining components are filled with zeros.
+- If you address a string (STRING data type) at the DATA parameter, the length of the string automatically adjusts the length of the read I&amp;M data (up to 254 characters).
+- If you address an array (ARRAY of CHAR/BYTE) at the DATA parameter, the read I&amp;M data is written to the individual components of the data type used. If the addressed array is longer than the read data, the remaining components are filled with zeros.
 
 If a data type other than STRING or ARRAY of BYTE/CHAR is used at the DATA parameter, the STATUS parameter generates error code 8093.
 
 > **Note**
 >
-> **Additional information about I&M data**
+> **Additional information about I&amp;M data**
 >
-> You can find more information about I&M data, for example, on the PROFIBUS & PROFINET International websites (link: <http://www.profibus.com>).
+> You can find more information about I&amp;M data, for example, on the PROFIBUS &amp; PROFINET International websites (link: [http://www.profibus.com](http://www.profibus.com)).
 
 #### Parameter STATUS
 
@@ -13523,13 +13523,13 @@ If a data type other than STRING or ARRAY of BYTE/CHAR is used at the DATA param
 | 7002 | Additional call of the asynchronous instruction "Get_IM_Data". Execution of the instruction not yet complete (BUSY = 1, DONE = 0). |
 | 8086 | The R/H system is not in the RUN-Redundant system state. Therefore, the data of the partner CPU is not available. |
 | 8091 | The device addressed at the LADDR parameter does not exist. |
-| 8092 | LADDR addresses a device that does not support the output of the I&M data. |
+| 8092 | LADDR addresses a device that does not support the output of the I&amp;M data. |
 | 8093 | Data type at the DATA parameter is not supported. |
-| 80A1 | LADDR addresses a device that does not support the output of I&M 1, I&M 2 or I&M 3 data. |
-| 80B1 | No valid data available. (Either the I&M data is not supported by the (sub)module or you have not configured I&M data for this device.) |
+| 80A1 | LADDR addresses a device that does not support the output of I&amp;M 1, I&amp;M 2 or I&amp;M 3 data. |
+| 80B1 | No valid data available. (Either the I&amp;M data is not supported by the (sub)module or you have not configured I&amp;M data for this device.) |
 | 80B2 | Invalid value at the IM_TYPE parameter or the selected IM_TYPE is not supported by the CPU or the addressed device. |
 | 80C3 | Maximum of 10 parallel executions of the instances exceeded:  - Avoid more than 10 parallel calls. - Repeat the call at a later time, as this is a temporary error. |
-| 8752 | The memory area specified at the DATA parameter is too small to store all the I&M data. The read I&M data are stored only up to the maximum length of the specified memory area. |
+| 8752 | The memory area specified at the DATA parameter is too small to store all the I&amp;M data. The read I&amp;M data are stored only up to the maximum length of the specified memory area. |
 | * The error codes in the program editor are displayed as integer or hexadecimal values. For information on switching the display formats, refer to "See also". |  |
 
 #### Example
@@ -13681,7 +13681,7 @@ The following description applies to these IO devices:
 
 Use the "GetStationInfo" instruction to read address information of a PROFINET IO device. The instruction also enables you to read the address information of an IO device located in a lower-level IO system (connected via CP/CM).
 
-The IO device is addressed via the hardware identifier of the station at the LADDR parameter. The hardware identifier is displayed in the "Devices & Networks" view in the station properties.
+The IO device is addressed via the hardware identifier of the station at the LADDR parameter. The hardware identifier is displayed in the "Devices &amp; Networks" view in the station properties.
 
 Use the MODE parameter to select the information to be read.
 
@@ -13964,9 +13964,9 @@ You can find additional information on valid data types under "[Overview of the 
 
 > **Note**
 >
-> **Determining the I&M 0 data**
+> **Determining the I&amp;M 0 data**
 >
-> The I&M 0 data of the SIMATIC memory card cannot be determined with the GetSMCinfo instruction. For this use the instruction "[Get_IM_Data](#get_im_data-reading-identification-and-maintenance-data-s7-1200-s7-1500)".
+> The I&amp;M 0 data of the SIMATIC memory card cannot be determined with the GetSMCinfo instruction. For this use the instruction "[Get_IM_Data](#get_im_data-reading-identification-and-maintenance-data-s7-1200-s7-1500)".
 
 #### Parameter Status
 
@@ -15056,8 +15056,8 @@ You can find additional information on valid data types under "[Overview of the 
 | 80B2 | Structure of the recipe data block and the CSV file do not match: The CSV file contains too few fields.  Note: The lines of the CSV file are read one after the other. If a line of the CSV file contains more characters than expected by the CPU, the error code W#16#80B2 is returned regardless of how many fields were detected. |
 | 80B6 | With (S7-1200 CPUs only) attribute "Save only in load memory", the recipe data block is not activated. |
 | 80C3 | Too few resources |
-| 80D0 +n | Structure of the recipe data block and the CSV file do not match: Data type in field n does not match (n<=46). |
-| 80FF | Structure of the recipe data block and the CSV file do not match: Data type in field n does not match (n>46). |
+| 80D0 +n | Structure of the recipe data block and the CSV file do not match: Data type in field n does not match (n&lt;=46). |
+| 80FF | Structure of the recipe data block and the CSV file do not match: Data type in field n does not match (n&gt;46). |
 | 8624 | RECIPE_DB points to an impermissible area, for example to local data. |
 | 8630 | Target range is write-protected, for example a write-protected DB. |
 | 8652 | The tag at RECIPE_DB is insufficient. The data block was not written. |
@@ -15459,7 +15459,7 @@ The following table shows the parameters of the "DataLogCreate" instruction:
 | RECORDS | Input | UDInt | I, Q, M, L, D or constant | Maximum number of data records in the data log  If the "[DataLogWrite](#datalogwrite-write-data-log-s7-1200-s7-1500)" instruction writes more records than specified in this parameter, the oldest record is overwritten. |
 | FORMAT | Input | UInt | I, Q, M, L, D or constant | Data format:  - 0: Internal (not supported) - 1: CSV (Comma separated values) |
 | TIMESTAMP | Input | UInt | I, Q, M, L, D or constant | Time-stamping; for details, see below  The extra columns in the header are automatically added if time-stamping is activated. |
-| NAME | Input | VARIANT | L, D | Name of the data log  The specified name is also used as a file name for the csv file.  With S7-1200 CPUs. the following restrictions apply to name of the data log:  - The name must not be longer than 35 characters. - All ASCII characters between 0x20 and 0x7E are permitted with the exception of \ ' / " : ; [ ] | = . * ? < >   With S7-1500 CPUs. the following restrictions apply to name of the data log:  - The name must not be longer than 55 characters. - The following characters are permitted: 0 ... 9, a ... z, A ... Z as well as - and _ |
+| NAME | Input | VARIANT | L, D | Name of the data log  The specified name is also used as a file name for the csv file.  With S7-1200 CPUs. the following restrictions apply to name of the data log:  - The name must not be longer than 35 characters. - All ASCII characters between 0x20 and 0x7E are permitted with the exception of \ ' / " : ; [ ] | = . * ? &lt; &gt;   With S7-1500 CPUs. the following restrictions apply to name of the data log:  - The name must not be longer than 55 characters. - The following characters are permitted: 0 ... 9, a ... z, A ... Z as well as - and _ |
 | ID | InOut | DWORD | I, Q, M, L, D | Object ID of the data log (only output)  The ID of the data log is required for further data logging instructions to address the created data log. |
 | HEADER | InOut | VARIANT | D | Header of the data log (optional)  The parameter is hidden after the instruction is added.  The header is written as the first line in the CSV file. |
 | DATA | InOut | VARIANT | D | Pointer to the data structure that is written as data record when executing the "[DataLogWrite](#datalogwrite-write-data-log-s7-1200-s7-1500)" instruction. |
@@ -16193,7 +16193,7 @@ For detailed information about individual instructions, open the corresponding h
 
 You carry out the following settings in the CPU properties:
 
-- In "PROFINET interface > Access to the web server" you activate the access to the web server.
+- In "PROFINET interface &gt; Access to the web server" you activate the access to the web server.
 - Activate the web server for the module under the "Web server" entry.
 - In the “User administration“ section create a new user with read, write and delete rights for files.
 
@@ -16543,7 +16543,7 @@ You can find additional information on valid data types under "[Overview of the 
 | 8092 | The "Create data block" function is currently unavailable because  - The maximum number of blocks on your CPU has already been reached. |
 | 8093 | No data block or a data block that is not in the work memory is specified for the SRCBLK parameter. |
 | 8094 | An invalid value was specified at parameter ATTRIB. |
-| 80A1 | DB number error:  - The numbers in the specified range (LOW_LIMIT to UP_LIMIT) are assigned or are not in the permissible range of the CPU - Low limit > high limit |
+| 80A1 | DB number error:  - The numbers in the specified range (LOW_LIMIT to UP_LIMIT) are assigned or are not in the permissible range of the CPU - Low limit &gt; high limit |
 | 80A2 | DB length error:  - The length is "0" - The length is an odd number - The length is greater than permitted by the CPU |
 | 80A3 | The data block at the SRCBLK parameter was not created with standard access. |
 | 80B1 | There is no DB number free. |
@@ -17117,7 +17117,7 @@ When CREATE_DB at the ENO parameter ("#tempCreate") supplies the signal state "T
 The following preconditions exist for executing READ_DBL:
 
 - CREATE_DB is inactive ("createRetVal" has the value "16#7000").
-- CREATE_DB has created a new DB whose number was stored ("memNbrNewDB" has a value > 0).
+- CREATE_DB has created a new DB whose number was stored ("memNbrNewDB" has a value &gt; 0).
 
 ![Result of network 5 - "READ_DBL" instruction](images/82131216651_DV_resource.Stream@PNG-de-DE.png)
 
@@ -17136,7 +17136,7 @@ When READ_DBL at the ENO parameter ("#tempRead") supplies the signal state "TRUE
 The following preconditions exist for executing DELETE_DB:
 
 - CREATE_DB is inactive ("createRetVal" has the value "16#7000").
-- CREATE_DB has created a new DB whose number was stored ("memNbrNewDB" has a value > 0).
+- CREATE_DB has created a new DB whose number was stored ("memNbrNewDB" has a value &gt; 0).
 
 ![Result of network 7 - "DELETE_DB" instruction](images/82131238283_DV_resource.Stream@PNG-de-DE.png)
 
@@ -17549,7 +17549,7 @@ The system data type GEOADDR has the following structure:
 |  | HWTYPE | UINT | Hardware type:  - 1: IO system (PROFINET/PROFIBUS) - 2: IO device/DP slave - 3: Rack - 4: Module - 5: Submodule   If a hardware type is not supported by the instruction, a HWTYPE "0" is output. |
 | AREA | UINT | Area ID:   - 0 = CPU - 1 = PROFINET IO - 2 = PROFIBUS DP - 3 = AS-i |  |
 | IOSYSTEM | UINT | PROFINET IO system (0=central unit in the rack) |  |
-| STATION | UINT | - AREA = 0 (CPU):   - Standard CPUs: Number of the rack   - R/H system: Redundancy ID (1 or 2) - AREA > 0: Station number |  |
+| STATION | UINT | - AREA = 0 (CPU):   - Standard CPUs: Number of the rack   - R/H system: Redundancy ID (1 or 2) - AREA &gt; 0: Station number |  |
 | SLOT | UINT | Slot number |  |
 | SUBSLOT | UINT | Number of the submodule. This parameter has the value "0" if no submodule is available or can be plugged. |  |
 
@@ -17576,7 +17576,7 @@ The following table shows the parameters of the "GEO_LOG" instruction:
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
 | MASTER | Input | INT | I, Q, M, D, L or constant | Area ID:  - 0, if the slot is located in a centralized configuration. - 1 to 32: DP master system ID of the associated field device if the slot is located in a field device on PROFIBUS - 100 to 115: PROFINET IO system ID of the associated field device if the slot is located in a field device on PROFINET |
-| STATION | Input | INT | I, Q, M, D, L or constant | - If MASTER = 0: Number of the rack - If MASTER > 0: Station number of the field device |
+| STATION | Input | INT | I, Q, M, D, L or constant | - If MASTER = 0: Number of the rack - If MASTER &gt; 0: Station number of the field device |
 | SLOT | Input | INT | I, Q, M, D, L or constant | Slot number |
 | SUBSLOT | Input | INT | I, Q, M, D, L or constant | Number of the submodule. If no submodule exists or can be inserted SUBSLOT must have the value "0". |
 | RET_VAL | Return | INT | I, Q, M, D, L | Error information |
@@ -17620,7 +17620,7 @@ The following table shows the parameters of the "LOG_GEO" instruction:
 | RET_VAL | Return | INT | I, Q, M, D, L | Error information |
 | AREA | Output | INT | I, Q, M, D, L | The area ID indicates how the remaining output parameters are to be interpreted:  - 0: central device - 2: PROFIBUS DP / PROFINET IO |
 | MASTER | Output | INT | I, Q, M, D, L | With AREA = 0:  - 0: If the slot is located in one of the racks (central device).   With AREA = 2:  - 1 to 32: DP master system ID of the associated field device if the slot is located in a field device on PROFIBUS - 100 to 115: PROFINET IO system ID of the associated field device if the slot is located in a field device on PROFINET |
-| STATION | Output | INT | I, Q, M, D, L | - With MASTER = 0: Number of the rack - With MASTER > 0: Station number of the field device |
+| STATION | Output | INT | I, Q, M, D, L | - With MASTER = 0: Number of the rack - With MASTER &gt; 0: Station number of the field device |
 | SLOT | Output | INT | I, Q, M, D, L | Slot number |
 | SUBSLOT | Output | INT | I, Q, M, D, L | Number of the submodule |
 | OFFSET | Output | INT | I, Q, M, D, L | The OFFSET parameter is not output by the instruction (always "0"). |
@@ -17731,7 +17731,7 @@ The following table shows the parameters of the "GADR_LGC" instruction:
 | Parameter | Declaration | Data type | Memory area | Description |
 | --- | --- | --- | --- | --- |
 | SUBNETID | Input | BYTE | I, Q, M, D, L or constant | Area ID:  - 0: If the slot is located in the central module - 1 to 32: DP master system ID of the corresponding distributed I/O system if the slot is in a  distributed I/O device. - 100 to 115: PROFINET IO system ID of the associated field device if the slot is located in a field device on PROFINET |
-| RACK | Input | WORD | I, Q, M, D, L or constant | - Number of the rack, if area identifier is 0 - Device number of the distributed I/O device if the area identifier > 0 |
+| RACK | Input | WORD | I, Q, M, D, L or constant | - Number of the rack, if area identifier is 0 - Device number of the distributed I/O device if the area identifier &gt; 0 |
 | SLOT | Input | WORD | I, Q, M, D, L or constant | Slot no. |
 | SUBSLOT | Input | BYTE | I, Q, M, D, L or constant | Irrelevant |
 | SUBADDR | Input | WORD | I, Q, M, D, L or constant | Offset in the user data address area of the  module |
@@ -17892,7 +17892,7 @@ You can find additional information on valid data types under [Overview of the v
 
 #### Example
 
-You will find the example here: [Program example for FileReadC & FileWriteC](#program-example-for-file-handling-s7-1500).
+You will find the example here: [Program example for FileReadC &amp; FileWriteC](#program-example-for-file-handling-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -17924,7 +17924,7 @@ You can write up to 16 MB (16,777,216 bytes) by executing "FileWriteC"; the dat
 
 The parameters "Offset" and "Length" specify the location in the file to which the data is to be written. The resource occupied is released again once the write process is complete.
 
-The "FileWriteC" instruction only starts the write operation if the following condition is fulfilled: "Offset" + "Length" <= 16 MB
+The "FileWriteC" instruction only starts the write operation if the following condition is fulfilled: "Offset" + "Length" &lt;= 16 MB
 
 #### Functional description
 
@@ -17980,7 +17980,7 @@ You can find additional information on valid data types under [Overview of the v
 
 #### Example
 
-You will find the example here: [Program example for FileReadC & FileWriteC](#program-example-for-file-handling-s7-1500).
+You will find the example here: [Program example for FileReadC &amp; FileWriteC](#program-example-for-file-handling-s7-1500).
 
 You can find additional information and the program code for the example here: [Sample Library for Instructions](Example%20libraries%20%28S7-1200%2C%20S7-1500%29.md#sample-library-for-instructions-s7-1200-s7-1500).
 
@@ -18047,7 +18047,7 @@ You can find additional information on valid data types under [Overview of the v
 | 8091 | Path does not exist or is invalid. |
 | 8092 | File does not exist in the path |
 | 80A2 | Write error |
-| 80A3 | The file is too large (>= 2147483648 bytes) and cannot be deleted using "FileDelete". |
+| 80A3 | The file is too large (&gt;= 2147483648 bytes) and cannot be deleted using "FileDelete". |
 | 80B4 | The memory card is write-protected |
 | 80C3 | The maximum number of simultaneously active FileDelete instructions has already been reached |
 | * The error codes in the program editor are displayed as integer or hexadecimal values. For information on switching the display formats, refer to "See also". |  |
@@ -18285,7 +18285,7 @@ You can find more information on valid data types under "[Overview of the valid 
 | 8951 | Incorrect data type for the "Hash" parameter. Only the "Array of BYTE" data type is permitted. |
 | 8252 | The variable at the "DATA" parameter is NULL or cannot be accessed because, for example, the DB is too small or does not exist. |
 | 8952 | The variable at the "Hash" parameter is NULL or cannot be accessed because, for example, the DB is too small or does not exist. |
-| xxyy, xx > 80 | For general error information, refer to [Evaluating errors with output parameter RET_VAL](Programming%20basics.md#evaluating-errors-with-output-parameter-ret_val) |
+| xxyy, xx &gt; 80 | For general error information, refer to [Evaluating errors with output parameter RET_VAL](Programming%20basics.md#evaluating-errors-with-output-parameter-ret_val) |
 
 ## R/H system (S7-1500)
 
@@ -18481,7 +18481,7 @@ END_VAR
 
 //so we also know the MRP-ring is closed.
 
-#RetVal := GET_DIAG(MODE := 2, LADDR := "Local1~RHSystem", CNT_DIAG => #CNT_DIAG_temp, DIAG := #DNN);
+#RetVal := GET_DIAG(MODE := 2, LADDR := "Local1~RHSystem", CNT_DIAG =&gt; #CNT_DIAG_temp, DIAG := #DNN);
 
 #subordinateState := #DNN.SubordinateState;
 
@@ -18491,23 +18491,23 @@ END_VAR
 
 //If #DIS.OperatingState = 37, R/H system is in RUN-Solo
 
-#RetVal := GET_DIAG(MODE := 1, LADDR := "Local1~RHSystem", CNT_DIAG => #CNT_DIAG_temp, DIAG := #DIS);
+#RetVal := GET_DIAG(MODE := 1, LADDR := "Local1~RHSystem", CNT_DIAG =&gt; #CNT_DIAG_temp, DIAG := #DIS);
 
 //If R/H system is in RUN-Redundant and no diagnostics is active
 
-// => Trigger STOP of primary CPU
+// =&gt; Trigger STOP of primary CPU
 
-//If R/H system is in RUN-Solo => Trigger syncup
+//If R/H system is in RUN-Solo =&gt; Trigger syncup
 
 //In any other state: Do nothing
 
 IF #DIS.OperatingState = 40 AND subordinateState = 0 THEN
 
-   #RetVal := RH_CTRL(REQ := 1, Mode := 8, Submode := 0, Busy => #busy);
+   #RetVal := RH_CTRL(REQ := 1, Mode := 8, Submode := 0, Busy =&gt; #busy);
 
 ELSEIF #DIS.OperatingState = 37 THEN
 
-   #RetVal := RH_CTRL(REQ := 1, Mode := 7, Submode := 0, Busy => #busy);
+   #RetVal := RH_CTRL(REQ := 1, Mode := 7, Submode := 0, Busy =&gt; #busy);
 
 END_IF
 
@@ -18534,7 +18534,7 @@ The operating system switches on the intended MRP check in system state "SYNCUP"
 - You call "RH_CTRL" with Mode = 3.
 - You call "RH_CTRL" with Mode = 4.
 
-The following applies in regard to replacement part compatibility: Mode 14 does not run in projects that were created on S7-1500-R/H CPUs with firmware version < V3.1. This also applies when you run such a project on an S7-1500-R/H CPU with firmware version >= V3.1.
+The following applies in regard to replacement part compatibility: Mode 14 does not run in projects that were created on S7-1500-R/H CPUs with firmware version &lt; V3.1. This also applies when you run such a project on an S7-1500-R/H CPU with firmware version &gt;= V3.1.
 
 ---
 

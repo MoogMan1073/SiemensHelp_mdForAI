@@ -111,10 +111,10 @@ When you use certificates issued by a certificate authority, the following tools
 | Creating the root certificate of the Unified OPC UA device (if not already done) | Unified PC that is used as certification authority for the Unified OPC UA device | WinCC Unified Certificate Manager |
 | Creating a Unified OPC UA certificate |  |  |
 | Installing the  - Unified root certificate (if not yet done) - Unified OPC UA certificate | Unified PC that is used as OPC UA device | WinCC Unified Certificate Manager |
-| Unified Comfort Panel that is used as OPC UA device | Control Panel > Security > Certificates |  |
+| Unified Comfort Panel that is used as OPC UA device | Control Panel &gt; Security &gt; Certificates |  |
 | Distribute Unified root certificate and its CRL file to the OPC UA communication partners | Unified PC that is used as certificate authority for the Unified OPC UA device<sup>1</sup> | WinCC Unified Certificate Manager |
 | Import the root certificate of the OPC UA communication partner and its CRL file | Unified PC that is used as OPC UA device | SIMATIC Runtime Manager |
-| Unified Comfort Panel that is used as OPC UA device | Control Panel > Security > Certificates |  |
+| Unified Comfort Panel that is used as OPC UA device | Control Panel &gt; Security &gt; Certificates |  |
 | <sup>1</sup> If the OPC UA device is a Unified PC, you can alternatively distribute the root certificate and CRL file directly on the device using SIMATIC Runtime Manager. |  |  |
 
 When you use self-signed OPC UA certificates, the following tools support you in providing the certificates:
@@ -122,7 +122,7 @@ When you use self-signed OPC UA certificates, the following tools support you in
 | Task | Device | Tool |
 | --- | --- | --- |
 | Importing or trusting the certificate of the communication partner | OPC UA Unified PC | SIMATIC Runtime Manager |
-| OPC UA Unified Comfort Panel | Control Panel > Security > Certificates |  |
+| OPC UA Unified Comfort Panel | Control Panel &gt; Security &gt; Certificates |  |
 
 > **Note**
 >
@@ -420,7 +420,7 @@ The following steps are included in providing the certificates:
 
    Delete the default certificate. Follow these steps:
 
-   - Select "Security > Certificates" in the Control Panel on the Panel.
+   - Select "Security &gt; Certificates" in the Control Panel on the Panel.
    - Select the "My Certificates" entry from the "Certificate store" list.
    - Select the OPC UA server default certificate.
    - Click "Delete".
@@ -429,7 +429,7 @@ The following steps are included in providing the certificates:
 
    For both certificates, follow these steps:
 
-   - Select "Security > Certificates" in the Control Panel on the Panel.
+   - Select "Security &gt; Certificates" in the Control Panel on the Panel.
    - Click the "Import" button.
    - In the "Import certifcates" dialog, select the certificate from the external storage medium.
    - Enter the password and the iteration specified during the export in the Certificate Manager.
@@ -444,7 +444,7 @@ The following certificates are installed:
 
 1. Save the root certificate of the OPC UA client and its CRL file (Certificate Revocation List) to an external data storage medium.
 2. Connect the Unified Comfort Panel to the external data storage medium.
-3. Select "Security > Certificates" in the Control Panel on the Panel.
+3. Select "Security &gt; Certificates" in the Control Panel on the Panel.
 4. Click the "Import" button.
 5. In the "Import certifcates" dialog, select the certificate from the external storage medium.
 6. Confirm your entries.
@@ -478,7 +478,7 @@ This section describes how you provide the certificates for the following case:
 
 After the first connection has been established between server and client, the self-signed OPC UA client certificate is available on the Unified Comfort Panel. The Panel does not yet trust the certificate. Follow these steps:
 
-1. Select "Security > Certificates" in the Control Panel on the Panel.
+1. Select "Security &gt; Certificates" in the Control Panel on the Panel.
 2. Select the "Other Certificates" entry from the "Certificate store" list.
 3. Select the OPC UA client certificate.
 
@@ -543,7 +543,7 @@ The following steps are included in providing the certificates:
 
    For both certificates, follow these steps:
 
-   - Select "Security > Certificates" in the Control Panel on the Panel.
+   - Select "Security &gt; Certificates" in the Control Panel on the Panel.
    - Click the "Import" button.
    - In the "Import certifcates" dialog, select the certificate from the external storage medium.
    - Enter the password and the iteration specified during the export in the Certificate Manager.
@@ -558,7 +558,7 @@ The following steps are included in providing the certificates:
 
 1. Save the root certificate of the OPC UA server and its CRL file (Certificate Revocation List) to an external data storage medium.
 2. Connect the Unified Comfort Panel that is used as Unified OPC UA client to the external data storage medium.
-3. Select "Security > Certificates" in the Control Panel on the Panel.
+3. Select "Security &gt; Certificates" in the Control Panel on the Panel.
 4. Click the "Import" button.
 5. In the "Import certificates" dialog, select the certificate from the external storage medium.
 6. Confirm your entries.
@@ -601,7 +601,7 @@ This section describes how you provide the certificates for the following case:
 
 After the first connection has been established between the server and client, the self-signed OPC UA server certificate is available on the Unified Comfort Panel. The Panel does not yet trust the certificate. Follow these steps:
 
-1. Select "Security > Certificates" in the Control Panel on the Panel.
+1. Select "Security &gt; Certificates" in the Control Panel on the Panel.
 2. Select the "Other Certificates" entry from the "Certificate store" list.
 3. Select the OPC UA server certificate.
 
@@ -688,7 +688,7 @@ If OPC UA clients access OPC UA servers in different subnets, you must adapt the
 
 In order to work with OPC UA in WinCC Unified, the OPC UA server must be enabled in the TIA Portal.
 
-To do to this, select the "Operate as OPC UA server" option in the runtime settings under "OPC UA server > General". As soon as the option is selected, you can make additional settings.
+To do to this, select the "Operate as OPC UA server" option in the runtime settings under "OPC UA server &gt; General". As soon as the option is selected, you can make additional settings.
 
 More information is available under [Configuring a Unified OPC UA server (Unified PC)](#configuring-a-unified-opc-ua-server-unified-pc-rt-unified) and [Using the Unified Comfort Panel as OPC UA server](#using-the-unified-comfort-panel-as-opc-ua-server-rt-unified).
 
@@ -841,15 +841,15 @@ The OPC UA server supports the following OPC UA profiles shown in the following 
 | 6.5.12 Enhanced DataChange Subscription Server Facet | Monitored Item Services | Monitor MinQueueSize_05 |
 | 6.5.2 Core Server Facet | Attribute Services | Attribute Write Index |
 | 6.5.14 Data Access Server Facet | Data Access | Data Access Analog  Data Access Multistate  Data Access PercentDeadBand  Data Access Semantic Changes  Data Access Two State |
-| 6.5.55 Standard UA Server Profile | Attribute Services | Attribute Write StatusCode & TimeStamp |
-| 6.5.55 Standard UA Server Profile | Attribute Services | Attribute Write StatusCode & Timestamp |
+| 6.5.55 Standard UA Server Profile | Attribute Services | Attribute Write StatusCode &amp; TimeStamp |
+| 6.5.55 Standard UA Server Profile | Attribute Services | Attribute Write StatusCode &amp; Timestamp |
 | 6.5.16 Standard Event Subscription Server Facet | Event Access | Base Info EventQueueOverflowEventType Base Info Progress Events  Base Info SemanticChange  Base Info System Status  Base Info System Status underlying system  Base Info Device Failure |
 | 6.5.17 Address Space Notifier Server Facet | Event Access |  |
-| 6.5.18 A & C Base Condition Server Facet | Alarms and Conditions |  |
-| 6.5.20 A & C Address Space Instance Server Facet | Alarms and Conditions |  |
-| 6.5.21 A & C Enable Server Facet | Alarms and Conditions |  |
-| 6.5.22 A & C Alarm Server Facet | Alarms and Conditions | A & C Comment  A & C Discrete  A & C OffNormal  A & C SystemOffNormal  A & C Trip |
-| 6.5.23 A & C Acknowledgeable Alarm Server Facet | Alarms and Conditions |  |
+| 6.5.18 A &amp; C Base Condition Server Facet | Alarms and Conditions |  |
+| 6.5.20 A &amp; C Address Space Instance Server Facet | Alarms and Conditions |  |
+| 6.5.21 A &amp; C Enable Server Facet | Alarms and Conditions |  |
+| 6.5.22 A &amp; C Alarm Server Facet | Alarms and Conditions | A &amp; C Comment  A &amp; C Discrete  A &amp; C OffNormal  A &amp; C SystemOffNormal  A &amp; C Trip |
+| 6.5.23 A &amp; C Acknowledgeable Alarm Server Facet | Alarms and Conditions |  |
 
 #### Address space of the OPC UA server (RT Unified)
 
@@ -860,7 +860,7 @@ A WinCC Unified device that is used as an OPC UA server makes the following runt
 - Process values (WinCC Unified tags)
 - Alarms (tag-based WinCC Unified alarms)
 
-The address space of the OPC UA server is added below "Root > Objects" and has the following hierarchical structure:
+The address space of the OPC UA server is added below "Root &gt; Objects" and has the following hierarchical structure:
 
 ![Introduction](images/136364070411_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1346,7 +1346,7 @@ Double-click in the "Add" cell and define the connection settings:
 
   - "UA server discovery URL": Enter the OPC UA server IP and port
 
-    Use the following notation: opc.tcp://<IP>:<Port>
+    Use the following notation: opc.tcp://&lt;IP&gt;:&lt;Port&gt;
 
     Alternatively, you can also determine the server via "Select OPC server".
   - Select the desired security settings.
@@ -1465,7 +1465,7 @@ Status changes to the alarm instances on the OPC UA server are reflected in Runt
 To import OPC UA server alarm instances into a WinCC project, follow these steps:
 
 1. Open the "HMI alarms" editor.
-2. Select the "OPC UA A&C" tab.
+2. Select the "OPC UA A&amp;C" tab.
 3. Under "Connection" in the right area, select the OPC UA connection.
 4. Click "Import" next to "Connection":
 
@@ -1497,7 +1497,7 @@ Then generate HMI alarms for the OPC UA server alarm instances.
 
 ##### Procedure
 
-1. Select the "OPC UA A&C" tab.
+1. Select the "OPC UA A&amp;C" tab.
 2. Expand the objects in the "OPC UA browser" area up to the node under which the OPC UA server alarm instances are located.
 3. Press and hold the left mouse button to drag the node to the "Node ID" cell of the "Add" row of the table in the "OPC UA types" area.
 

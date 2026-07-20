@@ -22,12 +22,12 @@ In order to protect plants, systems, machines and networks against cyber threats
 Customers are responsible for preventing unauthorized access to their plants, systems, machines and networks. Such systems, machines and components should only be connected to an enterprise network or the internet if and to the extent such a connection is necessary and only when appropriate security measures (e.g. firewalls and/or network segmentation) are in place.
 
 For additional information on industrial cybersecurity measures that may be implemented, please visit   
-<https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html>.
+[https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html).
 
 Siemens’ products and solutions undergo continuous development to make them more secure. Siemens strongly recommends that product updates are applied as soon as they are available and that the latest product versions are used. Use of product versions that are no longer supported, and failure to apply the latest updates may increase customer’s exposure to cyber threats.
 
 To stay informed about product updates, subscribe to the Siemens Industrial Cybersecurity RSS Feed under   
-<https://new.siemens.com/global/en/products/services/cert.html>.
+[https://new.siemens.com/global/en/products/services/cert.html](https://new.siemens.com/global/en/products/services/cert.html).
 
 ## Notes on use
 

@@ -87,7 +87,7 @@ Because the forcing function allows you to intervene permanently in the process,
 | Symbol | Meaning |
 | --- | --- |
 |  | **Caution** |
-| **Prevent personal injury and material damage!**  - Before you start the "Force" function, you should ensure that no one else is currently executing this function on the same CPU. - Forcing can only be stopped by clicking the "Stop forcing" icon or using the "Online > Force > Stop forcing" command. Closing the active force table does **not** stop the forcing! - Forcing can **not** be undone! - Review the differences between " [modifying tags"](Testing%20with%20the%20watch%20table.md#introduction-to-modifying-tags) and "[forcing tags"](#introduction-to-forcing-tags). - If a CPU does not support the "Force" function, the relevant icons cannot be selected. - If the function "Enable peripheral outputs" is active on your CPU, then forcing is **not** possible on this CPU. If desired, deactivate this function in the watch table. |  |
+| **Prevent personal injury and material damage!**  - Before you start the "Force" function, you should ensure that no one else is currently executing this function on the same CPU. - Forcing can only be stopped by clicking the "Stop forcing" icon or using the "Online &gt; Force &gt; Stop forcing" command. Closing the active force table does **not** stop the forcing! - Forcing can **not** be undone! - Review the differences between " [modifying tags"](Testing%20with%20the%20watch%20table.md#introduction-to-modifying-tags) and "[forcing tags"](#introduction-to-forcing-tags). - If a CPU does not support the "Force" function, the relevant icons cannot be selected. - If the function "Enable peripheral outputs" is active on your CPU, then forcing is **not** possible on this CPU. If desired, deactivate this function in the watch table. |  |
 
 ## Layout of the force table
 
@@ -435,8 +435,8 @@ For the S7-1200 CPU family, all 32-bit data types are permitted (see table above
 
 | Data type | Possible display formats |
 | --- | --- |
-| LREAL | In a project created with TIA Portal < V12:   Floating-point number   Note: The display of LREAL is limited to 13 digits plus exponent. |
-| LREAL | In a project created with TIA Portal >= V12:   Floating-point number, Hex, BCD, Octal, Bin, Character, Unicode_Character, Dec, Dec+/-, Dec_Sequence, Time of day, Time, Date and time  Note: The display of LREAL is limited to 13 digits plus exponent. |
+| LREAL | In a project created with TIA Portal &lt; V12:   Floating-point number   Note: The display of LREAL is limited to 13 digits plus exponent. |
+| LREAL | In a project created with TIA Portal &gt;= V12:   Floating-point number, Hex, BCD, Octal, Bin, Character, Unicode_Character, Dec, Dec+/-, Dec_Sequence, Time of day, Time, Date and time  Note: The display of LREAL is limited to 13 digits plus exponent. |
 
 For the S7-1500 CPU family, in addition to 32-bit data types, the 64-bit data types listed in the table are also permitted with the following possible display formats:
 
@@ -486,10 +486,10 @@ If the selected display format cannot be applied, then the last selected display
 
 In addition to the row-related comments in the comment column, you can now also create complete comment lines to enhance the structure of the force table.
 
-The contents of the comment line are stored in the "Languages & Resources" folder in the "Project texts" tab and can be compiled in other project languages.
+The contents of the comment line are stored in the "Languages &amp; Resources" folder in the "Project texts" tab and can be compiled in other project languages.
 
 - Using the corresponding icon in the toolbar of the force table.
-- Using the menu command "Insert > Insert comment line".
+- Using the menu command "Insert &gt; Insert comment line".
 - Using the shortcut menu command "Insert comment line".
 - By entering the string "//" in the "Name" column of the force table.
 
@@ -501,13 +501,13 @@ To insert comment lines, follow these steps:
 2. Insert a new comment line:
 
    - To do so, click the "Insert comment line" icon in the toolbar of the force table.
-   - Or click the menu command "Insert > Insert comment line".
+   - Or click the menu command "Insert &gt; Insert comment line".
    - Or click the shortcut menu command "Insert comment line".
 
      Result: A new comment line is inserted above the selected row in the force table.
 3. Enter the required comment in the comment line. The entered comment is shown in green.
-4. To show all comments you entered, double-click "Project texts" in the project tree under "Languages & Resources".
-5. If you are working in multi-lingual projects and want your comment to be translated into other languages, you can set the project languages required in addition to the editing language in the project tree under "Languages & Resources > Project languages".
+4. To show all comments you entered, double-click "Project texts" in the project tree under "Languages &amp; Resources".
+5. If you are working in multi-lingual projects and want your comment to be translated into other languages, you can set the project languages required in addition to the editing language in the project tree under "Languages &amp; Resources &gt; Project languages".
 
 #### Creating comment lines
 
@@ -518,8 +518,8 @@ To create comment lines, follow these steps:
 
    No comment lines can be created in the other columns.
 3. Enter the required comment in the comment line. The entered comment is shown in green.
-4. To show all comments you entered, double-click "Project texts" in the project tree under "Languages & Resources".
-5. If you are working in multi-lingual projects and want your comment to be translated into other languages, you can set the project languages required in addition to the editing language in the project tree under "Languages & Resources > Project languages".
+4. To show all comments you entered, double-click "Project texts" in the project tree under "Languages &amp; Resources".
+5. If you are working in multi-lingual projects and want your comment to be translated into other languages, you can set the project languages required in addition to the editing language in the project tree under "Languages &amp; Resources &gt; Project languages".
 
 #### Deleting comment lines
 
@@ -716,10 +716,10 @@ Note that forcing of tags will overwrite values in the CPU and will continue eve
 
 - **Stop forcing**
 
-  Terminating the online connection is not sufficient to stop the forcing operation! To stop forcing, you must select the "Online > Force > Stop forcing" command. Only then will the tags that are visible in the active force table no longer be forced.
+  Terminating the online connection is not sufficient to stop the forcing operation! To stop forcing, you must select the "Online &gt; Force &gt; Stop forcing" command. Only then will the tags that are visible in the active force table no longer be forced.
 - **Stop forcing of individual tags**
 
-  The "Online > Force > Stop forcing" command always applies to all tags displayed in the force table. To stop forcing individual tags, you must clear the check mark for forcing of these tags in the force table and restart forcing using the "Online > Force > Force all" command.
+  The "Online &gt; Force &gt; Stop forcing" command always applies to all tags displayed in the force table. To stop forcing individual tags, you must clear the check mark for forcing of these tags in the force table and restart forcing using the "Online &gt; Force &gt; Force all" command.
 
 ### Safety precautions when forcing tags
 
@@ -735,7 +735,7 @@ Because the forcing function allows you to intervene permanently in the process,
 | Symbol | Meaning |
 | --- | --- |
 |  | **Caution** |
-| **Prevent personal injury and material damage!**  - Before you start the "Force" function, you should ensure that no one else is currently executing this function on the same CPU. - Forcing can only be stopped by clicking the "Stop forcing" icon or using the "Online > Force > Stop forcing" command. Closing the active force table does **not** stop the forcing! - Forcing can **not** be undone! - Review the differences between " [modifying tags"](Testing%20with%20the%20watch%20table.md#introduction-to-modifying-tags) and "[forcing tags"](#introduction-to-forcing-tags). - If a CPU does not support the "Force" function, the relevant icons cannot be selected. - If the function "Enable peripheral outputs" is active on your CPU, then forcing is **not** possible on this CPU. If desired, deactivate this function in the watch table. |  |
+| **Prevent personal injury and material damage!**  - Before you start the "Force" function, you should ensure that no one else is currently executing this function on the same CPU. - Forcing can only be stopped by clicking the "Stop forcing" icon or using the "Online &gt; Force &gt; Stop forcing" command. Closing the active force table does **not** stop the forcing! - Forcing can **not** be undone! - Review the differences between " [modifying tags"](Testing%20with%20the%20watch%20table.md#introduction-to-modifying-tags) and "[forcing tags"](#introduction-to-forcing-tags). - If a CPU does not support the "Force" function, the relevant icons cannot be selected. - If the function "Enable peripheral outputs" is active on your CPU, then forcing is **not** possible on this CPU. If desired, deactivate this function in the watch table. |  |
 
 ### Updating forced operands
 
@@ -743,7 +743,7 @@ Because the forcing function allows you to intervene permanently in the process,
 
 If a force job is already running on a CPU, after opening the force table, you first need to make sure that the operands and values currently being forced on the CPU are displayed in the force table.
 
-The command "Online" > "Force" > "Update forced operands" updates all operands and values currently being forced on the CPU in the open force table.
+The command "Online" &gt; "Force" &gt; "Update forced operands" updates all operands and values currently being forced on the CPU in the open force table.
 
 "Force" or "Stop forcing" in the open force table is only possible following this command.
 
@@ -810,7 +810,7 @@ To force tags to "0", follow these steps:
 
 1. Open the force table.
 2. Enter the desired address in the force table.
-3. Select the "Online > Force> Force to 0" command in order to force the selected address with the specified value.
+3. Select the "Online &gt; Force&gt; Force to 0" command in order to force the selected address with the specified value.
 4. Confirm the next dialog with "Yes".
 
 #### Result
@@ -822,7 +822,7 @@ The selected address is forced to "0". The yellow triangle is no longer displaye
 To stop forcing, follow these steps:
 
 1. Open the force table.
-2. Select the "Online > Force > Stop forcing" command.
+2. Select the "Online &gt; Force &gt; Stop forcing" command.
 3. Confirm the next dialog with "Yes".
 
 #### Result
@@ -864,7 +864,7 @@ To force tags to "1", follow these steps:
 
 1. Open the force table.
 2. Enter the desired address in the force table.
-3. Select the "Online > Force> Force to 1" command in order to force the selected address with the specified value.
+3. Select the "Online &gt; Force&gt; Force to 1" command in order to force the selected address with the specified value.
 4. Confirm the next dialog with "Yes".
 
 #### Result
@@ -876,7 +876,7 @@ The selected address is forced to "1". The yellow triangle is no longer displaye
 To stop forcing, follow these steps:
 
 1. Open the force table.
-2. Select the "Online > Force > Stop forcing" command.
+2. Select the "Online &gt; Force &gt; Stop forcing" command.
 3. Confirm the next dialog with "Yes".
 
 #### Result
@@ -897,7 +897,7 @@ Forcing of the selected values is stopped. The red "F" in the first column is no
 
 You can use the force function to assign permanent values to individual tags of a user program.
 
-If forcing is already active, this forcing operation is replaced without interruption by the "Online > Force > Force all" command. Any forced addresses that are not selected will no longer be forced.
+If forcing is already active, this forcing operation is replaced without interruption by the "Online &gt; Force &gt; Force all" command. Any forced addresses that are not selected will no longer be forced.
 
 #### Caution when forcing tags
 
@@ -916,13 +916,13 @@ Before forcing, you must review the [safety precautions when forcing tags](#safe
 
 #### Procedure
 
-To force tags with the "Online > Force > Force all" command, follow these steps:
+To force tags with the "Online &gt; Force &gt; Force all" command, follow these steps:
 
 1. Open the force table.
 2. Enter the desired addresses and force values in the force table.
 3. Select the addresses to be forced by selecting the check boxes for forcing in the column after the "Force value".   
    A yellow triangle appears behind the selected check box, indicating that the address is selected for forcing but is not being forced at the moment.
-4. Select the "Online > Force> Force all" command in order to force the selected addresses with the specified values.
+4. Select the "Online &gt; Force&gt; Force all" command in order to force the selected addresses with the specified values.
 5. Confirm the next dialog with "Yes".
 
 #### Result
@@ -934,7 +934,7 @@ The selected addresses are forced to the specified values. The yellow triangle i
 To stop forcing, follow these steps:
 
 1. Open the force table.
-2. Select the "Online > Force > Stop forcing" command.
+2. Select the "Online &gt; Force &gt; Stop forcing" command.
 3. Confirm the next dialog with "Yes".
 
 #### Result
@@ -987,7 +987,7 @@ Before forcing, you must review the [safety precautions when forcing tags](#safe
 Proceed as follows to stop **forcing all tags** :
 
 1. Open the force table.
-2. Select the "Online > Force > Stop forcing" command in order to stop forcing the displayed addresses.
+2. Select the "Online &gt; Force &gt; Stop forcing" command in order to stop forcing the displayed addresses.
 3. Confirm the "Stop forcing" dialog with "Yes".
 
 #### Result
@@ -1026,7 +1026,7 @@ Proceed as follows to stop **forcing individual tags** :
 
 1. Open the force table.
 2. Deactivate the check boxes for the addresses that are no longer to be forced.
-3. Reselect the "Online > Force" command.
+3. Reselect the "Online &gt; Force" command.
 
 #### Result
 

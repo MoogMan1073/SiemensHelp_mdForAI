@@ -30,13 +30,13 @@ Customers are responsible for preventing unauthorized access to their plants, sy
 
 For additional information on industrial cybersecurity measures that may be implemented, please visit
 
-<https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html>
+[https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html)
 
 Siemens’ products and solutions undergo continuous development to make them more secure. Siemens strongly recommends that product updates are applied as soon as they are available and that the latest product versions are used. Use of product versions that are no longer supported, and failure to apply the latest updates may increase customer’s exposure to cyber threats.
 
 To stay informed about product updates, subscribe to the Siemens Industrial Cybersecurity RSS Feed under
 
-<https://new.siemens.com/global/en/products/services/cert.html>
+[https://new.siemens.com/global/en/products/services/cert.html](https://new.siemens.com/global/en/products/services/cert.html)
 
 ## What's new in TIA Portal Openness?
 
@@ -278,7 +278,7 @@ You add a user to the "Siemens TIA Openness" user group with applications from y
 
 In a Windows 7 operating system (English language setting), for example, you can add a user to the user group as follows:
 
-1. Select "Start" > "Control Panel".
+1. Select "Start" &gt; "Control Panel".
 2. Double-click "Administrative Tools" in the Control Panel.
 
    ![Procedure](images/75939233291_DV_resource.Stream@PNG-en-US.png)
@@ -289,13 +289,13 @@ In a Windows 7 operating system (English language setting), for example, you ca
    ![Procedure](images/75939236619_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/75939236619_DV_resource.Stream@PNG-en-US.png)
-4. Select "Local Users and Groups > Groups", in order to display all created user groups.
+4. Select "Local Users and Groups &gt; Groups", in order to display all created user groups.
 5. Select the "Siemens TIA Openness" entry from the list of user groups in the right pane.
 
    ![Procedure](images/75939239947_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/75939239947_DV_resource.Stream@PNG-en-US.png)
-6. Select the "Action > Add to Group..." menu command.
+6. Select the "Action &gt; Add to Group..." menu command.
 
    ![Procedure](images/75939253259_DV_resource.Stream@PNG-en-US.png)
 
@@ -868,7 +868,7 @@ TIA Portal Openness also supports all value ranges which are supported by the co
 
 **Connections**
 
-TIA Portal Openness supports non-integrated connections that are also supported by the respective HMI devices. You can find additional information in the online help for the TIA Portal under "Process visualization > Controller communication > Device-dependent".
+TIA Portal Openness supports non-integrated connections that are also supported by the respective HMI devices. You can find additional information in the online help for the TIA Portal under "Process visualization &gt; Controller communication &gt; Device-dependent".
 
 Lists
 
@@ -917,7 +917,7 @@ This section contains information on the following topics:
 - [Transaction handling](#transaction-handling)
 - [Creating a DirectoryInfo/FileInfo object](#creating-a-directoryinfofileinfo-object)
 - [Self-description support for attributes, navigators, actions, and services](#self-description-support-for-attributes-navigators-actions-and-services)
-- [Setting attributes of Blocks, DBs & UDTs](#setting-attributes-of-blocks-dbs-udts)
+- [Setting attributes of Blocks, DBs &amp; UDTs](#setting-attributes-of-blocks-dbs-udts)
 - [Notes on performance of TIA Portal Openness](#notes-on-performance-of-tia-portal-openness)
 
 #### Introduction
@@ -1152,7 +1152,7 @@ foreach (DeviceItem deviceItem in device.DeviceItems)
 
 DeviceItem deviceItemToGetService = deviceItem as DeviceItem;
 
-SoftwareContainer container = deviceItemToGetService.GetService<SoftwareContainer>();
+SoftwareContainer container = deviceItemToGetService.GetService&lt;SoftwareContainer&gt;();
 
 if (container != null)
 
@@ -1525,7 +1525,7 @@ You start the TIA Portal with TIA Portal Openness or connect to a TIA Portal alr
 
 > **Note**
 >
-> If you use TIA Portal Openness with the TIA Portal interface, you cannot use an HMI editor. You can open the "Devices & Networks" editors or the programming editor manually or with TIA Portal Openness API.
+> If you use TIA Portal Openness with the TIA Portal interface, you cannot use an HMI editor. You can open the "Devices &amp; Networks" editors or the programming editor manually or with TIA Portal Openness API.
 
 You have the following options to start the TIA Portal with a TIA Portal Openness application:
 
@@ -1545,39 +1545,39 @@ Store the application configuration file "app.config" in the same directory as t
 
 You can use the following code snippet for the application configuration file:
 
-<?xml version="1.0"?>
+&lt;?xml version="1.0"?&gt;
 
-<configuration>
+&lt;configuration&gt;
 
-<runtime>
+&lt;runtime&gt;
 
-<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+&lt;assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1"&gt;
 
-<dependentAssembly>
+&lt;dependentAssembly&gt;
 
-<assemblyIdentity name="Siemens.Engineering" culture="neutral" publicKeyToken="d29ec89bac048f84"/>
+&lt;assemblyIdentity name="Siemens.Engineering" culture="neutral" publicKeyToken="d29ec89bac048f84"/&gt;
 
-<!-- Edit the following path according to your installed version of TIA Portal -->
+&lt;!-- Edit the following path according to your installed version of TIA Portal --&gt;
 
-<codeBase version="xx.x.x.x" href="FILE://C:\Program Files\Siemens\Automation\Portal Vxx\PublicAPI\Vxx\Siemens.Engineering.dll"/>
+&lt;codeBase version="xx.x.x.x" href="FILE://C:\Program Files\Siemens\Automation\Portal Vxx\PublicAPI\Vxx\Siemens.Engineering.dll"/&gt;
 
-</dependentAssembly>
+&lt;/dependentAssembly&gt;
 
-<dependentAssembly>
+&lt;dependentAssembly&gt;
 
-<assemblyIdentity name="Siemens.Engineering.Hmi" culture="neutral" publicKeyToken="d29ec89bac048f84"/>
+&lt;assemblyIdentity name="Siemens.Engineering.Hmi" culture="neutral" publicKeyToken="d29ec89bac048f84"/&gt;
 
-<!-- Edit the following path according to your installed version of TIA Portal -->
+&lt;!-- Edit the following path according to your installed version of TIA Portal --&gt;
 
-<codeBase version="xx.x.x.x" href="FILE://C:\Program Files\Siemens\Automation\Portal Vxx\PublicAPI\Vxx\Siemens.Engineering.Hmi.dll"/>
+&lt;codeBase version="xx.x.x.x" href="FILE://C:\Program Files\Siemens\Automation\Portal Vxx\PublicAPI\Vxx\Siemens.Engineering.Hmi.dll"/&gt;
 
-</dependentAssembly>
+&lt;/dependentAssembly&gt;
 
-</assemblyBinding>
+&lt;/assemblyBinding&gt;
 
-</runtime>
+&lt;/runtime&gt;
 
-</configuration>
+&lt;/configuration&gt;
 
 clipboard
 
@@ -1781,9 +1781,9 @@ Once you have connected to the process, you can use the following attributes to 
 
 | Attribute | Information |
 | --- | --- |
-| InstalledSoftware as IList<TiaPortalProduct> | Returns information about the installed products. |
+| InstalledSoftware as IList&lt;TiaPortalProduct&gt; | Returns information about the installed products. |
 | Mode as TiaPortalMode | Returns the mode in which the TIA Portal was started (WithoutUserInterface/WithUserInterface). |
-| AttachedSessions as IList<TiaPortalSession> | Returns a list of applications connected to the TIA Portal. |
+| AttachedSessions as IList&lt;TiaPortalSession&gt; | Returns a list of applications connected to the TIA Portal. |
 | ProjectPath as FileInfo | Returns the file name of the project opened in the TIA Portal, including the folder, for example,   "D:\WinCCProjects\ColorMixing\ColorMixing.ap*"  If no project is open, a null string is returned. |
 | `ID as int` | Returns the process ID of the TIA Portal instance |
 | `Path as FileInfo` | Returns the path to the TIA Portal executable |
@@ -2333,11 +2333,11 @@ The diagnostic interface is not blocking, so you can retrieve the TiaPortalProce
 | --- | --- | --- |
 | AcquisitionTime | DateTime | The time when the TiaPortalProcess object was acquired. Since the TiaPortalProcess object represents a completely static snapshot of the state of the TIA Portal at a given point in time, the information it contains may become outdated. |
 | Attach | TiaPortal | Attaches to the given TiaPortalProcess, it returns a TiaPortal instance. |
-| AttachedSessions | IList<TiaPortalSession> | A collection of all other sessions currently attached to the same TIA Portal. This collection can be empty. Each session is represented by a TiaPortalSession object. |
-| Attaching | EventHandler<AttachingEventArgs> | This event enables an application to approve any attempts to attach to the TIA Portal. When another application attempts to attach to the TIA Portal, the subscribers of this event are notified and given 10 seconds to approve the attachment. If any subscriber ignores this event or does not respond in time, it is understood to be denying the other application permission to attach. Crashed applications, being unable to respond to this event and cannot cause an application to be denied permission to attach. |
+| AttachedSessions | IList&lt;TiaPortalSession&gt; | A collection of all other sessions currently attached to the same TIA Portal. This collection can be empty. Each session is represented by a TiaPortalSession object. |
+| Attaching | EventHandler&lt;AttachingEventArgs&gt; | This event enables an application to approve any attempts to attach to the TIA Portal. When another application attempts to attach to the TIA Portal, the subscribers of this event are notified and given 10 seconds to approve the attachment. If any subscriber ignores this event or does not respond in time, it is understood to be denying the other application permission to attach. Crashed applications, being unable to respond to this event and cannot cause an application to be denied permission to attach. |
 | Dispose | void | Closes the associated TIA Portal instance. |
 | Id | int | The Process ID of the TIA Portal. |
-| InstalledSoftware | IList<TiaPortalProduct> | A collection of all the products currently installed as part of the TIA Portal. Each product is represented by a TiaPortalProduct object, which is described below. |
+| InstalledSoftware | IList&lt;TiaPortalProduct&gt; | A collection of all the products currently installed as part of the TIA Portal. Each product is represented by a TiaPortalProduct object, which is described below. |
 | Mode | TiaPortalMode | The mode in which the TIA Portal was started. The current values are WithUserInterface and WithoutUserInterface. |
 | Path | FileInfo | The path to the executable of the TIA Portal. |
 | ProjectPath | FileInfo | The path to the project which is currently open in the TIA Portal. If no project is open, this attribute will be null. |
@@ -2382,7 +2382,7 @@ The diagnostic interface is not blocking, so you can retrieve the TiaPortalProce
 | Member | Type | Function |
 | --- | --- | --- |
 | Name | string | The name of the product (e.g. STEP 7 Professional). |
-| Options | IList<TiaPortalProduct> | A collection of all optional packages that belong to the connected TIA Portal, represented as TiaPortalProduct objects. If an option package itself has option packages, this nesting could continue. |
+| Options | IList&lt;TiaPortalProduct&gt; | A collection of all optional packages that belong to the connected TIA Portal, represented as TiaPortalProduct objects. If an option package itself has option packages, this nesting could continue. |
 | Version | string | The version string of the product. |
 
 The following code snippet provides an example of how to use the diagnostic Interface to query information and of how to use them in your application.
@@ -2391,7 +2391,7 @@ public void TiaPortalDiagnostics()
 
 {
 
-IList<TiaPortalProcess> tiaPortalProcesses = TiaPortal.GetProcesses();
+IList&lt;TiaPortalProcess&gt; tiaPortalProcesses = TiaPortal.GetProcesses();
 
 foreach (TiaPortalProcess tiaPortalProcess in tiaPortalProcesses)
 
@@ -2443,7 +2443,7 @@ Console.WriteLine("AccessLevel: {0}", session.AccessLevel);
 
 Console.WriteLine("TrustAuthority: {0}", session.TrustAuthority);
 
-if ((session.TrustAuthority & TiaPortalTrustAuthority.Certified) != TiaPortalTrustAuthority.Certified)
+if ((session.TrustAuthority &amp; TiaPortalTrustAuthority.Certified) != TiaPortalTrustAuthority.Certified)
 
 {
 
@@ -2459,7 +2459,7 @@ session.Dispose();
 
 }
 
-public void EnumerateInstalledProducts(IEnumerable<TiaPortalProduct> products)
+public void EnumerateInstalledProducts(IEnumerable&lt;TiaPortalProduct&gt; products)
 
 {
 
@@ -2493,13 +2493,13 @@ public void OnAttaching(object sender, AttachingEventArgs e)
 
 string name = Path.GetFileNameWithoutExtension(e.ProcessPath);
 
-TiaPortalAccessLevel requestedAccessLevel = e.AccessLevel & TiaPortalAccessLevel.Published;
+TiaPortalAccessLevel requestedAccessLevel = e.AccessLevel &amp; TiaPortalAccessLevel.Published;
 
-TiaPortalTrustAuthority certificateStatus = e.TrustAuthority &TiaPortalTrustAuthority.Certified;
+TiaPortalTrustAuthority certificateStatus = e.TrustAuthority &amp;TiaPortalTrustAuthority.Certified;
 
-if (requestedAccessLevel == TiaPortalAccessLevel.Published &&
+if (requestedAccessLevel == TiaPortalAccessLevel.Published &amp;&amp;
 
-certificateStatus == TiaPortalTrustAuthority.Certified &&
+certificateStatus == TiaPortalTrustAuthority.Certified &amp;&amp;
 
 name.StartsWith("SampleCustomerName"))
 
@@ -2638,24 +2638,24 @@ The interface is implemented by the majority of objects that are available for t
 
 **Methods**:
 
-- IList<EngineeringCreationInfo> GetCreationInfos(string compositionName) - Gets the list of composition infos available for the object.
-- IEngineeringObject Create(string compositionName, Type type, IEnumerable<KeyValuePair<string, object>> parameters) - Creates an IEngineeringObject of indicated type initialized with values as indicated compositionName within the parameters
+- IList&lt;EngineeringCreationInfo&gt; GetCreationInfos(string compositionName) - Gets the list of composition infos available for the object.
+- IEngineeringObject Create(string compositionName, Type type, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; parameters) - Creates an IEngineeringObject of indicated type initialized with values as indicated compositionName within the parameters
 - object GetAttribute(string name) - Gets an attribute with the given name.
-- IList<EngineeringAttributeInfo> GetAttributeInfos() - Returns a collection of EngineeringAttributeInfo objects describing the different attributes on this object.
-- IList<object> GetAttributes(IEnumerable<string> names) - Gets a list of attributes for the given names
+- IList&lt;EngineeringAttributeInfo&gt; GetAttributeInfos() - Returns a collection of EngineeringAttributeInfo objects describing the different attributes on this object.
+- IList&lt;object&gt; GetAttributes(IEnumerable&lt;string&gt; names) - Gets a list of attributes for the given names
 - IEngineeringCompositionOrObject GetComposition(string name) - Gets an IEngineeringCompositionOrObject with the given name.
-- IList<EngineeringInvocationInfo> GetInvocationInfos() - Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
-- object Invoke(string name, IEnumerable<KeyValuePair<Type, object>> parameters) - Invokes the method represented by the current instance, using the specified parameters.
+- IList&lt;EngineeringInvocationInfo&gt; GetInvocationInfos() - Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
+- object Invoke(string name, IEnumerable&lt;KeyValuePair&lt;Type, object&gt;&gt; parameters) - Invokes the method represented by the current instance, using the specified parameters.
 - void SetAttribute(string name, object value) - Sets an attribute with the given name to the given value
-- void SetAttributes(IEnumerable<KeyValuePair<string, object>> attributes) - Sets the attributes with the given names to the given values as indicated in attributes.
+- void SetAttributes(IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; attributes) - Sets the attributes with the given names to the given values as indicated in attributes.
 - EngineeringObjectHandle GetHandle() - Gets the object's unique handle.
-- void SetAttributes(IEnumerable<KeyValuePair<string, object>> attributes, AttributeDelegate errorHandler) - Sets the attributes with the given names to the given values as indicated in attribute key value pair. If any error occurs (such as, attribute name/value is invalid), a callback call will be triggered so that you can decide whether to ignore and continue with setting value to the next attribute or abort setting the values to the remaining attributes.
+- void SetAttributes(IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; attributes, AttributeDelegate errorHandler) - Sets the attributes with the given names to the given values as indicated in attribute key value pair. If any error occurs (such as, attribute name/value is invalid), a callback call will be triggered so that you can decide whether to ignore and continue with setting value to the next attribute or abort setting the values to the remaining attributes.
 
 > **Note**
 >
-> With TIA Portal Openness V18, the new method void SetAttributes(IEnumerable<KeyValuePair<string, object>> attributes, AttributeDelegate errorHandler) is addded to the IEngineeringObject.
+> With TIA Portal Openness V18, the new method void SetAttributes(IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; attributes, AttributeDelegate errorHandler) is addded to the IEngineeringObject.
 
-Currently the SetAttributes(IEnumerable<KeyValuePair<string, object>> attributes, AttributeDelegate errorHandler) is supported by the following Engineering objects:
+Currently the SetAttributes(IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; attributes, AttributeDelegate errorHandler) is supported by the following Engineering objects:
 
 - Siemens.Engineering.HW.Features.NetworkInterface
 - Siemens.Engineering.HW.Features.NetworkPort
@@ -2676,9 +2676,9 @@ Currently the SetAttributes(IEnumerable<KeyValuePair<string, object>> attributes
 - Siemens.Engineering.HW.SyncDomain
 - Siemens.Engineering.HW.TransferArea
 
-If any other Engineering object is used, the method behaves similar to the method void SetAttributes(IEnumerable<KeyValuePair<string, object>> attributes) which has no callback.
+If any other Engineering object is used, the method behaves similar to the method void SetAttributes(IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; attributes) which has no callback.
 
-##### Program code: SetAttributes(IEnumerable<KeyValuePair<string, object>>) method
+##### Program code: SetAttributes(IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;) method
 
 `...`
 
@@ -2760,10 +2760,10 @@ The interface is implemented by the majority of objects that are available for t
 
 **Methods**:
 
-- IEngineeringObject Create(Type type, IEnumerable<KeyValuePair<string, object>> parameters) - Creates an IEngineeringObject of indicated type initialized with values as indicated in parameters..
-- IList<EngineeringCreationInfo> GetCreationInfos() - Gets the collection of EngineeringCreateInfo objects describing the different CreateInfos on this object.
-- IList<EngineeringInvocationInfo> GetInvocationInfos() - Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
-- object Invoke(string name, IEnumerable<KeyValuePair<Type, object>> parameters) - Invokes the method represented by the current instance, using the specified parameters.
+- IEngineeringObject Create(Type type, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; parameters) - Creates an IEngineeringObject of indicated type initialized with values as indicated in parameters..
+- IList&lt;EngineeringCreationInfo&gt; GetCreationInfos() - Gets the collection of EngineeringCreateInfo objects describing the different CreateInfos on this object.
+- IList&lt;EngineeringInvocationInfo&gt; GetInvocationInfos() - Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
+- object Invoke(string name, IEnumerable&lt;KeyValuePair&lt;Type, object&gt;&gt; parameters) - Invokes the method represented by the current instance, using the specified parameters.
 
 ##### IEngineeringObjectAssociation
 
@@ -2775,8 +2775,8 @@ The interface is implemented by engineering objects that can provide service(s).
 
 **Methods**:
 
-- T GetService<T>() where T : class, IEngineeringService - Gets an instance of type T.
-- IList<EngineeringServiceInfo> GetServiceInfos() - Returns a collection of EngineeringServiceInfo objects describing the different services on this object.
+- T GetService&lt;T&gt;() where T : class, IEngineeringService - Gets an instance of type T.
+- IList&lt;EngineeringServiceInfo&gt; GetServiceInfos() - Returns a collection of EngineeringServiceInfo objects describing the different services on this object.
 
 ##### IEngineeringService
 
@@ -2954,9 +2954,9 @@ private static void DynamicTest(Project project)
 
 Device device = project.Devices[0];
 
-IList<string> attributeNames = new List<string>();
+IList&lt;string&gt; attributeNames = new List&lt;string&gt;();
 
-IList<EngineeringAttributeInfo> attributes = ((IEngineeringObject)device).GetAttributeInfos();
+IList&lt;EngineeringAttributeInfo&gt; attributes = ((IEngineeringObject)device).GetAttributeInfos();
 
 foreach (EngineeringAttributeInfo engineeringAttributeInfo in attributes)
 
@@ -2968,9 +2968,9 @@ attributeNames.Add(name);
 
 }
 
-IList<object> values = ((IEngineeringObject)device).GetAttributes(attributeNames);
+IList&lt;object&gt; values = ((IEngineeringObject)device).GetAttributes(attributeNames);
 
-for (int i = 0; i < attributes.Count; i++)
+for (int i = 0; i &lt; attributes.Count; i++)
 
 {
 
@@ -3554,7 +3554,7 @@ Modify the following program code to find all attributes of an IEngineeringObjec
 
 IEngineeringObject engineeringObject = ...;
 
-IList<EngineeringAttributeInfo> attributeInfos = engineeringObject.GetAttributeInfos();
+IList&lt;EngineeringAttributeInfo&gt; attributeInfos = engineeringObject.GetAttributeInfos();
 
 foreach(EngineeringAttributeInfo attributeInfo in attributeInfos)
 
@@ -3606,7 +3606,7 @@ string deviceGroupCreationParameterName = deviceGroupCreationParameterInfo.Name;
 
 string groupName = "Example";
 
-IDictionary<string, object> createParameters = new Dictionary<string, object>
+IDictionary&lt;string, object&gt; createParameters = new Dictionary&lt;string, object&gt;
 
 {
 
@@ -3975,15 +3975,15 @@ ProjectComposition projectComposition = tiaPortal.Projects;
 
 //allows the user to give optional create parameters like author, comment in addition to mandatory create parameters (targetdirectory, projectname)
 
-IEnumerable<KeyValuePair<string, object>> createParameters = new [] {
+IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; createParameters = new [] {
 
-new KeyValuePair<string, object>("TargetDirectory", new DirectoryInfo(@"D:\TiaProjects")), // Mandatory
+new KeyValuePair&lt;string, object&gt;("TargetDirectory", new DirectoryInfo(@"D:\TiaProjects")), // Mandatory
 
-new KeyValuePair<string, object>("Name", "MyProject"), // Mandatory
+new KeyValuePair&lt;string, object&gt;("Name", "MyProject"), // Mandatory
 
-new KeyValuePair<string, object>("Author", "Bob"), // Optional
+new KeyValuePair&lt;string, object&gt;("Author", "Bob"), // Optional
 
-new KeyValuePair<string, object>("Comment", "This project was created with Openness") // Optional };
+new KeyValuePair&lt;string, object&gt;("Comment", "This project was created with Openness") // Optional };
 
 // Create a project with both mandatory and optional parameters
 
@@ -4401,7 +4401,7 @@ public static void DisplayCompositionInfos(IEngineeringObject obj)
 
 {
 
-IList<EngineeringCompositionInfo> compositionInfos = obj.GetCompositionInfos();
+IList&lt;EngineeringCompositionInfo&gt; compositionInfos = obj.GetCompositionInfos();
 
 foreach (EngineeringCompositionInfo compositionInfo in compositionInfos)
 
@@ -4439,7 +4439,7 @@ public static void DisplayAttributenInfos(IEngineeringObject obj)
 
 {
 
-IList<EngineeringAttributeInfo> attributeInfos = obj.GetAttributeInfos();
+IList&lt;EngineeringAttributeInfo&gt; attributeInfos = obj.GetAttributeInfos();
 
 foreach (EngineeringAttributeInfo attributeInfo in attributeInfos)
 
@@ -4502,7 +4502,7 @@ public void AccessSoftwareTarget()
 
 {
 
-SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)deviceItem).GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)deviceItem).GetService&lt;SoftwareContainer&gt;();
 
 if (softwareContainer != null)
 
@@ -4518,7 +4518,7 @@ clipboard
 
 Modify the following programm code to access the software attributes:
 
-SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)deviceItem).GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)deviceItem).GetService&lt;SoftwareContainer&gt;();
 
 if (softwareContainer != null)
 
@@ -4896,7 +4896,7 @@ public static void CompileHmiTarget(HmiTarget hmiTarget)
 
 {
 
-ICompilable compileService = hmiTarget.GetService<ICompilable>();
+ICompilable compileService = hmiTarget.GetService&lt;ICompilable&gt;();
 
 CompilerResult result = compileService.Compile();
 
@@ -4910,7 +4910,7 @@ public static void CompilePlcSoftware(PlcSoftware plcSoftware)
 
 {
 
-ICompilable compileService = plcSoftware.GetService<ICompilable>();
+ICompilable compileService = plcSoftware.GetService&lt;ICompilable&gt;();
 
 CompilerResult result = compileService.Compile();
 
@@ -4930,7 +4930,7 @@ if (block != null)
 
 {
 
-ICompilable compileService = block.GetService<ICompilable>();
+ICompilable compileService = block.GetService&lt;ICompilable&gt;();
 
 CompilerResult result = compileService.Compile();
 
@@ -5150,7 +5150,7 @@ public static void ExportSystemDiagnosticSettings(project tiaProject)
 
 {
 
-Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsDataProvider settingsProvider = tiaProject.GetService<Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsDataProvider>();
+Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsDataProvider settingsProvider = tiaProject.GetService&lt;Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsDataProvider&gt;();
 
 Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsExportImportResult exportResult = settingsProvider.Export(new FileInfo(@"D:\Temp\SysDiagSettings.dat"));
 
@@ -5168,7 +5168,7 @@ public statc void ImportSystemDignosticSettings(project tiaProject)
 
 {
 
-Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsDataProvider settingsProvider = tiaProject.GetService<Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsDataProvider>();
+Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsDataProvider settingsProvider = tiaProject.GetService&lt;Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsDataProvider&gt;();
 
 Siemens.Engineering.HW.Systemdiagnostics.Settings.SystemdiagnosticsSettingsExportImportResult importResult = settingsProvider.Import(new FileInfo(@"D:\Temp\SysDiagSettings.dat"));
 
@@ -5246,7 +5246,7 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal TIAInstance = ...;
 
-TeamcenterConnectionProvider tcGatewayProvider = TIAInstance.GetService<TeamcenterConnectionProvider>();
+TeamcenterConnectionProvider tcGatewayProvider = TIAInstance.GetService&lt;TeamcenterConnectionProvider&gt;();
 
 String userName = ...; //User name
 
@@ -5305,7 +5305,7 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal TIAInstance = ...;
 
-TcGatewayConnectionProvider tcGatewayProvider = TIAInstance.GetService<TeamcenterConnectionProvider>();
+TcGatewayConnectionProvider tcGatewayProvider = TIAInstance.GetService&lt;TeamcenterConnectionProvider&gt;();
 
 String userName = ...;//User name
 
@@ -5375,7 +5375,7 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal TIAInstance = ...;
 
-TeamcenterConnectionProvider tcGatewayProvider = TIAInstance.GetService<TeamcenterConnectionProvider>();
+TeamcenterConnectionProvider tcGatewayProvider = TIAInstance.GetService&lt;TeamcenterConnectionProvider&gt;();
 
 String hostUrl = ...;//Fully qualified Teamcenter server host with port number
 
@@ -5436,9 +5436,9 @@ using Siemens.Engineering.TeamcenterGateway;
 {
 
 TiaPortal tiaPortal = ...;  
-var tcGatewayConnectionProvider= tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider= tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -5470,7 +5470,7 @@ tcgProject.DeviceGroups.Create("Group_1");
 
 tcgProject.Save(); //This is used to save project locally in TC cache. (optional)
 
-TcGatewayWorkflowProvider tcgWorkflowProvider = tcgProject.GetService<TcGatewayWorkflowProvider>();
+TcGatewayWorkflowProvider tcgWorkflowProvider = tcgProject.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 ItemInfo response = tcgWorkflowProvider.Save(connectionInfo , LocalCacheOption.Overwrite);
 
@@ -5532,9 +5532,9 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal tiaPortal = ...;
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -5562,7 +5562,7 @@ String projectPath = string.Empty; // Project path for the checkout dataset in a
 
 Project tcgProject = projectComposition.Open(new FileInfo(projectPath));
 
-TcGatewayWorkflowProvider tcgWorkflowProvider = tcgProject.GetService<TcGatewayWorkflowProvider>();
+TcGatewayWorkflowProvider tcgWorkflowProvider = tcgProject.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 ItemInfo response = tcgWorkflowProvider.SaveWithProxyObject(connectionInfo, LocalCacheOption.Overwrite);
 
@@ -5626,9 +5626,9 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal tiaPortal = ...;
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -5656,7 +5656,7 @@ String projectPath = string.Empty; // Project path for the checkout dataset in a
 
 Project tcgProject = projectComposition.Open(new FileInfo(projectPath));
 
-TcGatewayWorkflowProvider tcgWorkflowProvider = tcgProject.GetService<TcGatewayWorkflowProvider>();
+TcGatewayWorkflowProvider tcgWorkflowProvider = tcgProject.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 ItemInfo response = tcgWorkflowProvider.SaveToItem(connectionInfo, "000495", "A", LocalCacheOption.Overwrite);
 
@@ -5704,7 +5704,7 @@ After successful execution, the API returns collection of custom attributes if a
 
 | Data type | Description |
 | --- | --- |
-| IList<Siemens.Engineering.TeamcenterGateway.TeamcenterProperty> | Specifies the list of Teamcenter custom property for item or revision.  - Name [System.String] - MappingLevel [System.int] - ListOfValueInfo [Siemens.Engineering.TeamcenterGateway.TcPropertyListOfValueInfo]   - LowerLimit [System.String]   - UpperLimit [System.String]   - Values [System.Collections.Generic.IEnumerable<System.String>] - DataType [Siemens.Engineering.TeamcenterGateway.MappedCustomAttributeType(Enum)] |
+| IList&lt;Siemens.Engineering.TeamcenterGateway.TeamcenterProperty&gt; | Specifies the list of Teamcenter custom property for item or revision.  - Name [System.String] - MappingLevel [System.int] - ListOfValueInfo [Siemens.Engineering.TeamcenterGateway.TcPropertyListOfValueInfo]   - LowerLimit [System.String]   - UpperLimit [System.String]   - Values [System.Collections.Generic.IEnumerable&lt;System.String&gt;] - DataType [Siemens.Engineering.TeamcenterGateway.MappedCustomAttributeType(Enum)] |
 
 The Call SetValue API to set value on custom attributes fetched using GetTeamcenterCustomAttributes API along with pass error callback delegate.
 
@@ -5727,9 +5727,9 @@ using (TiaPortal tiaPortal = new TiaPortal(TiaPortalMode.WithUserInterface))
 
 {
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -5753,13 +5753,13 @@ TcGatewayConnectionInfo connectionInfo = tcGatewayConnectionProvider.Connect(use
 
 var project = tiaPortal.Projects.Open(new FileInfo("D:\\UserData\\Documents\\Automation\\Project30\\Project30.ap18"));
 
-var tcGatewayWorkflowProvider = project.GetService<TcGatewayWorkflowProvider>();
+var tcGatewayWorkflowProvider = project.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 //OR
 
 var library = tiaPortal.GlobalLibraries.Open(new FileInfo(@"~\Documents\Automation\Library7\Library7.al18"), OpenMode.ReadWrite);
 
-var tcGatewayWorkflowProvider = library.GetService<TcGatewayWorkflowProvider>();
+var tcGatewayWorkflowProvider = library.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 //Get custom attributes.
 
@@ -5852,7 +5852,7 @@ You can use the TIA Portal Openness to save a TIA Portal project in Teamcenter a
 | --- | --- | --- | --- |
 | tcGatewayConnectionInfo | Siemens.Engineering.TeamcenterGateway.TcGatewayConnectionInfo | Yes | Returns the tcGatewayConnectionInfo during connection to Teamcenter. The tcGatewayConnectionInfo has to match with the active connection's tcGatewayConnectionInfo . |
 | itemDetailsDelegate | delegate | Yes | This delegate is defined by caller of API which contains information about the item to be created in Teamcenter:  - ItemId [System.String] - RevisionId [System.String] - ItemName [System.String](Required) - Comments [System.String] - TeamcenterFolder [System.String] - TeamcenterProject [System.String[]] - TeamcenterItemType [System.String](Required) |
-| customAttributes | IEnumerable<Siemens.Engineering.TeamcenterGateway.TeamcenterProperty> | No | Specifies the Item/Revision custom attributes which are saved along with Project / Global Library. |
+| customAttributes | IEnumerable&lt;Siemens.Engineering.TeamcenterGateway.TeamcenterProperty&gt; | No | Specifies the Item/Revision custom attributes which are saved along with Project / Global Library. |
 
 ##### Program code
 
@@ -5900,9 +5900,9 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal tiaPortal = ...;
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -5926,13 +5926,13 @@ TcGatewayConnectionInfo connectionInfo = tcGatewayConnectionProvider.Connect(use
 
 var project = tiaPortal.Projects.Open(new FileInfo("D:\\UserData\\Documents\\Automation\\Project30\\Project30.ap18"));
 
-var tcGatewayWorkflowProvider = project.GetService<TcGatewayWorkflowProvider>();
+var tcGatewayWorkflowProvider = project.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 //OR
 
 var library = tiaPortal.GlobalLibraries.Open(new FileInfo(@"~\Documents\Automation\Library7\Library7.al18"), OpenMode.ReadWrite);
 
-var tcGatewayWorkflowProvider = library.GetService<TcGatewayWorkflowProvider>();
+var tcGatewayWorkflowProvider = library.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 //Save item in Teamcenter with custom attributes.
 
@@ -5996,7 +5996,7 @@ var createdItem = tcGatewayWorkflowProvider.SaveAsNewItem(connectionInfo, itemDe
 
 //OR
 
-var createdItem = tcGatewayWorkflowProvider.SaveAsNewItem(connectionInfo, itemDetailsDelegate, null);//< --optional
+var createdItem = tcGatewayWorkflowProvider.SaveAsNewItem(connectionInfo, itemDetailsDelegate, null);//&lt; --optional
 
 var itemId = createdItem.ItemId;
 
@@ -6051,7 +6051,7 @@ You can use the TIA Portal Openness to save the TIA Portal project and Global li
 | --- | --- | --- | --- |
 | tcGatewayConnectionInfo | Siemens.Engineering.TeamcenterGateway.TcGatewayConnectionInfo | Yes | Returns the tcGatewayConnectionInfo during connection to Teamcenter. The tcGatewayConnectionInfo is passed and should match with the active connection's tcGatewayConnectionInfo . |
 | itemDetailsDelegate | delegate | Yes | This delegate is defined by caller of API which has information about item to be created in Teamcenter:  - ItemId [System.String] - RevisionId [System.String] - ItemName [System.String](Required) - Comments [System.String] - TeamcenterFolder [System.String] - TeamcenterProject [System.String[]] - TeamcenterItemType [System.String](Required) |
-| customAttributes | IEnumerable<Siemens.Engineering.TeamcenterGateway.TeamcenterProperty> | No | Specifies the Item/Revision custom attributes saved along with Project / Global Library. |
+| customAttributes | IEnumerable&lt;Siemens.Engineering.TeamcenterGateway.TeamcenterProperty&gt; | No | Specifies the Item/Revision custom attributes saved along with Project / Global Library. |
 
 ##### Program code
 
@@ -6099,9 +6099,9 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal tiaPortal = ...;
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -6125,13 +6125,13 @@ TcGatewayConnectionInfo connectionInfo = tcGatewayConnectionProvider.Connect(use
 
 var project = tiaPortal.Projects.Open(new FileInfo("D:\\UserData\\Documents\\Automation\\Project30\\Project30.ap18"));
 
-var tcGatewayWorkflowProvider = project.GetService<TcGatewayWorkflowProvider>();
+var tcGatewayWorkflowProvider = project.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 //OR
 
 var library = tiaPortal.GlobalLibraries.Open(new FileInfo(@"~\Documents\Automation\Library7\Library7.al18"), OpenMode.ReadWrite);
 
-var tcGatewayWorkflowProvider = library.GetService<TcGatewayWorkflowProvider>();
+var tcGatewayWorkflowProvider = library.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 //Save item in Teamcenter with custom attributes.
 
@@ -6191,7 +6191,7 @@ var createdItem = tcGatewayWorkflowProvider.SaveAsNewItemWithProxyObject(connect
 
 //OR
 
-var createdItem = tcGatewayWorkflowProvider.SaveAsNewItem(connectionInfo, itemDetailsDelegate, null); //< --optional
+var createdItem = tcGatewayWorkflowProvider.SaveAsNewItem(connectionInfo, itemDetailsDelegate, null); //&lt; --optional
 
 var itemId = createdItem.ItemId;
 
@@ -6246,7 +6246,7 @@ You can use the TIA Portal Openness to save the TIA Portal project and Global li
 | --- | --- | --- | --- |
 | tcGatewayConnectionInfo | Siemens.Engineering.TeamcenterGateway.TcGatewayConnectionInfo | Yes | Returns the tcGatewayConnectionInfo during connection to Teamcenter. The tcGatewayConnectionInfo has passed to match with the active connection's tcGatewayConnectionInfo |
 | revisionDetailsDelegate | RevisionDetailsDelegate | No | This delegate is defined by caller of API which has information about revision to be created in Teamcenter |
-| customAttributes | IEnumerable<Siemens.Engineering.TeamcenterGateway.TeamcenterProperty> | No | Specifies the Item/Revision custom attributes saved along with Project / Global Library. |
+| customAttributes | IEnumerable&lt;Siemens.Engineering.TeamcenterGateway.TeamcenterProperty&gt; | No | Specifies the Item/Revision custom attributes saved along with Project / Global Library. |
 
 ##### Program code
 
@@ -6274,9 +6274,9 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal tiaPortal = ...;
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -6300,7 +6300,7 @@ TcGatewayConnectionInfo connectionInfo = tcGatewayConnectionProvider.Connect(use
 
 var project = tiaPortal.Projects.Open(new FileInfo("D:\\UserData\\Documents\\Automation\\Project30\\Project30.ap18"));
 
-var tcGatewayWorkflowProvider = project.GetService<TcGatewayWorkflowProvider>();
+var tcGatewayWorkflowProvider = project.GetService&lt;TcGatewayWorkflowProvider&gt;();
 
 ItemDetailsDelegate itemDetailsDelegate = ItemDetailsForCreation;
 
@@ -6397,9 +6397,9 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal tiaPortal = ...;
 
-var tcGatewayConnectionProvider= tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider= tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 String userName = ...;//User name
 
@@ -6421,7 +6421,7 @@ TcGatewayConnectionInfo connectionInfo = tcGatewayConnectionProvider.Connect(use
 
 tcGatewayLockProvider.CheckoutDataset(connectionInfo ,"000495","A",DatasetType.T4TiaProjectDataset,"Project30");
 
-TcGatewaySearchAndDownloadProvider downloadFromTcProvider = tiaPortal.GetService<TcGatewaySearchAndDownloadProvider>();
+TcGatewaySearchAndDownloadProvider downloadFromTcProvider = tiaPortal.GetService&lt;TcGatewaySearchAndDownloadProvider&gt;();
 
 FileInfo TIAObjectStarterFilePath = downloadFromTcProvider.Download(connectionInfo,"000495", "A", ItemType.Project, LocalCacheOption.Overwrite);
 
@@ -6495,7 +6495,7 @@ using (TiaPortal tiaPortal = new TiaPortal(TiaPortalMode.WithUserInterface))
 
 {
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
 String userName = ...;//User name
 
@@ -6515,7 +6515,7 @@ try
 
 TcGatewayConnectionInfo connectionInfo = tcGatewayConnectionProvider.Connect(userName, password, userGroup, userRole, serverURL, teamcenterInstance);
 
-TcGatewaySearchAndDownloadProvider searchAndLoadProvider = tiaPortal.GetService<TcGatewaySearchAndDownloadProvider>();
+TcGatewaySearchAndDownloadProvider searchAndLoadProvider = tiaPortal.GetService&lt;TcGatewaySearchAndDownloadProvider&gt;();
 
 var items = searchAndLoadProvider.Search(connectionInfo, ItemType.Project, "P*", "", "", "");
 
@@ -6593,9 +6593,9 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal tiaPortal = ...;
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -6674,9 +6674,9 @@ using (TiaPortal tiaPortal = new TiaPortal(TiaPortalMode.WithUserInterface))
 
 {
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -6759,9 +6759,9 @@ using Siemens.Engineering.TeamcenterGateway;
 
 TiaPortal tiaPortal = ...;
 
-var tcGatewayConnectionProvider = tiaPortal.GetService<TeamcenterConnectionProvider>();
+var tcGatewayConnectionProvider = tiaPortal.GetService&lt;TeamcenterConnectionProvider&gt;();
 
-var tcGatewayLockProvider = tiaPortal.GetService<TcGatewayLockProvider>();
+var tcGatewayLockProvider = tiaPortal.GetService&lt;TcGatewayLockProvider&gt;();
 
 try
 
@@ -7234,7 +7234,7 @@ Modify the following program code:
 
 TiaPortal tia = ...
 
-IList<GlobalLibraryInfo> libraryInfos = tia.GlobalLibraries.GetGlobalLibraryInfos();
+IList&lt;GlobalLibraryInfo&gt; libraryInfos = tia.GlobalLibraries.GetGlobalLibraryInfos();
 
 GlobalLibraryInfo libInfo = ...; //check for the info you need from the list, e.g.
 
@@ -7755,7 +7755,7 @@ TiaPortal tia= ...;
 
 DirectoryInfo targetDirectory = new DirectoryInfo(@"D:\GlobalLibraries");
 
-UserGlobalLibrary globalLibrary = tia.GlobalLibraries.Create<UserGlobalLibrary>(targetDirectory, "Library1")
+UserGlobalLibrary globalLibrary = tia.GlobalLibraries.Create&lt;UserGlobalLibrary&gt;(targetDirectory, "Library1")
 
 clipboard
 
@@ -7937,7 +7937,7 @@ clipboard
 
 var typeUserFolder = ProjectLibrary.TypeFolder.Folders.Find("SampleTypeUserFolderName");
 
-typeUserFolder.SetAttributes(new[] {new KeyValuePair<string,object>("Name", "NewTypeUserFolderName")});
+typeUserFolder.SetAttributes(new[] {new KeyValuePair&lt;string,object&gt;("Name", "NewTypeUserFolderName")});
 
 clipboard
 
@@ -7951,7 +7951,7 @@ clipboard
 
 var masterCopyUserFolder = ProjectLibrary.MasterCopyFolder.Folders.Find("SampleMasterCopyUserFolderName");
 
-masterCopyUserFolder.SetAttributes(new[] {new KeyValuePair<string,object>("Name", "NewMasterCopyUserFolderName")});
+masterCopyUserFolder.SetAttributes(new[] {new KeyValuePair&lt;string,object&gt;("Name", "NewMasterCopyUserFolderName")});
 
 clipboard
 
@@ -8114,7 +8114,7 @@ type.Name = "NewTypeName";
 
 var type = project.ProjectLibrary.TypeFolder.Types.Find("SampleTypeName");
 
-type.SetAttributes(new[] {new KeyValuePair<string,object>("Name", "NewTypeName")});
+type.SetAttributes(new[] {new KeyValuePair&lt;string,object&gt;("Name", "NewTypeName")});
 
 clipboard
 
@@ -8296,9 +8296,9 @@ public static void GetDependenciesAndDependentsOfAVersion(LibraryTypeVersion lib
 
 {
 
-IList<LibraryTypeVersion> versionDependents = libTypeVersion.Dependents();
+IList&lt;LibraryTypeVersion&gt; versionDependents = libTypeVersion.Dependents();
 
-IList<LibraryTypeVersion> versionDependencies = libTypeVersion.Dependencies();
+IList&lt;LibraryTypeVersion&gt; versionDependencies = libTypeVersion.Dependencies();
 
 }
 
@@ -8485,9 +8485,9 @@ if(searchScope==null)
 
 }
 
-IList<LibraryTypeInstanceInfo> instanceInfos = version.FindInstances(searchScope);
+IList&lt;LibraryTypeInstanceInfo&gt; instanceInfos = version.FindInstances(searchScope);
 
-IEnumerable<IEngineeringObject> instances = instanceInfos.Select(instanceInfo => instanceInfo.LibraryTypeInstance);
+IEnumerable&lt;IEngineeringObject&gt; instances = instanceInfos.Select(instanceInfo =&gt; instanceInfo.LibraryTypeInstance);
 
 clipboard
 
@@ -8509,7 +8509,7 @@ FC fc = ...;
 
 //Using LibraryTypeInstanceInfo service
 
-LibraryTypeInstanceInfo instanceInfo = fc.GetService<LibraryTypeInstanceInfo>();
+LibraryTypeInstanceInfo instanceInfo = fc.GetService&lt;LibraryTypeInstanceInfo&gt;();
 
 if(instanceInfo != null)
 
@@ -8647,7 +8647,7 @@ masterCopy.Name = "NewMasterCopyName";
 
 var masterCopy = projectLibrary.MasterCopyFolder.MasterCopies.Find("SampleMasterCopyName");
 
-masterCopy.SetAttributes(new[] {new KeyValuePair<string,object>("Name", "NewMasterCopyName")});
+masterCopy.SetAttributes(new[] {new KeyValuePair&lt;string,object&gt;("Name", "NewMasterCopyName")});
 
 clipboard
 
@@ -9023,7 +9023,7 @@ indent += "\t";
 
         Console.WriteLine(indent + "Full description: " + message.Description);
 
-        foreach (KeyValuePair<string, string> messagePart in message.MessageParts)
+        foreach (KeyValuePair&lt;string, string&gt; messagePart in message.MessageParts)
 
         {
 
@@ -9412,7 +9412,7 @@ versions from target library.
 
 The UpdateLibrary() is defined with the following signature on Project Library and Global Library:
 
-public void UpdateLibrary(IEnumerable<ILibraryTypeOrFolderSelection> sourceTypesAndFolders, ILibrary targetLibrary, ForceUpdateMode forceUpdateMode, DeleteUnusedVersionsMode updateMode, StructureConflictResolutionMode structureConflictResolutionMode);
+public void UpdateLibrary(IEnumerable&lt;ILibraryTypeOrFolderSelection&gt; sourceTypesAndFolders, ILibrary targetLibrary, ForceUpdateMode forceUpdateMode, DeleteUnusedVersionsMode updateMode, StructureConflictResolutionMode structureConflictResolutionMode);
 
 The UpdateLibrary() is overloaded with another definition on Single Types with the following signature :
 
@@ -10017,7 +10017,7 @@ ILibrary myLibrary = ...;
 
 LibraryType typeA = ...// from myLibrary
 
-var typeADefaultVersion = typeA.Versions.First((version) => version.IsDefault);
+var typeADefaultVersion = typeA.Versions.First((version) =&gt; version.IsDefault);
 
 //from default version , user can get details related to version like Author, Guid, etc.
 
@@ -10066,7 +10066,7 @@ To allow TIA Portal Openness user to check the consistency status of type/folder
 
 Using this, you can prepare the list of inconsistent types to perform special operations on them:
 
-var listOfInconsistentTypes = Folder.Types.Where(x => x.Status == ConsistencyStatus.DefaultVersionInconsistent);
+var listOfInconsistentTypes = Folder.Types.Where(x =&gt; x.Status == ConsistencyStatus.DefaultVersionInconsistent);
 
 clipboard
 
@@ -10099,7 +10099,7 @@ if(systemTypeFolderConsistencyStatus == ConsistencyStatus.DefaultVersionInConsis
 
 // List of InConsistentType
 
-var listOfInCosistentTypes = typeFolder.Types.Where(x => x.Status == ConsistencyStatus.InConsistent);
+var listOfInCosistentTypes = typeFolder.Types.Where(x =&gt; x.Status == ConsistencyStatus.InConsistent);
 
 foreach(var type in listOfInCosistentTypes)
 
@@ -10248,7 +10248,7 @@ The following properties are supported in PLC alarm text lists:
 
 ##### Program code
 
-TiaPortal tia = TiaPortal.GetProcesses().Select(x => x.Attach()).First();
+TiaPortal tia = TiaPortal.GetProcesses().Select(x =&gt; x.Attach()).First();
 
 Project project = tia.Projects.First();
 
@@ -10256,7 +10256,7 @@ Device device = project.Devices.First();
 
 DeviceItem deviceItem = (DeviceItem)(from x in device.DeviceItems where x.Name.Equals("PLC_1") select x).First();
 
-SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)deviceItem).GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)deviceItem).GetService&lt;SoftwareContainer&gt;();
 
 PlcSoftware plc = softwareContainer.Software as PlcSoftware;
 
@@ -10288,7 +10288,7 @@ userTextlist.Comment.Items.Find(project.LanguageSettings.ActiveLanguages.Find(ne
 
 userTextlist.Delete();
 
-MasterCopy masterCopy = project.ProjectLibrary.MasterCopyFolder.MasterCopies.First<MasterCopy>(x => x.Name == "textlist_in_library");
+MasterCopy masterCopy = project.ProjectLibrary.MasterCopyFolder.MasterCopies.First&lt;MasterCopy&gt;(x =&gt; x.Name == "textlist_in_library");
 
 PlcAlarmUserTextlists.CreateFrom(masterCopy);
 
@@ -10302,7 +10302,7 @@ clipboard
 
 This section contains information on the following topics:
 
-- [Open the "Devices & networks" editor](#open-the-devices-networks-editor)
+- [Open the "Devices &amp; networks" editor](#open-the-devices-networks-editor)
 - [Querying PLC and HMI targets](#querying-plc-and-hmi-targets)
 - [Accessing attributes of an address object](#accessing-attributes-of-an-address-object)
 - [Accessing the channels of a module](#accessing-the-channels-of-a-module)
@@ -10320,10 +10320,10 @@ This section contains information on the following topics:
 
 ##### Application
 
-You can open the "Devices & networks" editor via the API interface by using one of two methods:
+You can open the "Devices &amp; networks" editor via the API interface by using one of two methods:
 
-- `ShowHwEditor(View.Topology` or`View.Network`or`View.Device``)`: Open the "Devices & networks" editor from the project.
-- `ShowInEditor(View.Topology` or`View.Network`or`View.Device``)` : Displays the specified device in the "Devices & networks" editor.
+- `ShowHwEditor(View.Topology` or`View.Network`or`View.Device``)`: Open the "Devices &amp; networks" editor from the project.
+- `ShowInEditor(View.Topology` or`View.Network`or`View.Device``)` : Displays the specified device in the "Devices &amp; networks" editor.
 
 Use the `View` parameter to define the view that is displayed when you open the editor:
 
@@ -10333,7 +10333,7 @@ Use the `View` parameter to define the view that is displayed when you open the 
 
 ##### Program code
 
-Modify the following program code to open the "Devices & networks" editor:
+Modify the following program code to open the "Devices &amp; networks" editor:
 
 // Open topology view from project
 
@@ -10347,7 +10347,7 @@ project.ShowHwEditor(Siemens.Engineering.HW.View.Topology);
 
 clipboard
 
-Modify the following program code to open the "Devices & networks" editor for a device:
+Modify the following program code to open the "Devices &amp; networks" editor for a device:
 
 // Open topology view for given device
 
@@ -10396,7 +10396,7 @@ foreach (DeviceItem deviceItem in deviceItemComposition)
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 if (softwareContainer != null)
 
@@ -10434,7 +10434,7 @@ foreach (DeviceItem deviceItem in deviceItemComposition)
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 if (softwareContainer != null)
 
@@ -10872,7 +10872,7 @@ If a device item is able to compose a subnet, it provides the additional functio
 
 Modify the following program code to get the subnet owner role:
 
-SubnetOwner subnetOwner = ((IEngineeringServiceProvider)deviceItem).GetService<SubnetOwner>();
+SubnetOwner subnetOwner = ((IEngineeringServiceProvider)deviceItem).GetService&lt;SubnetOwner&gt;();
 
 if (subnetOwner != null)
 
@@ -11085,7 +11085,7 @@ The *SourceCycleTime supports the following Enums value:
 
 Modify the following program code to get or set the attributes of a subnet:
 
-SubnetOwner subnetOwner = ((IEngineeringServiceProvider)deviceItem).GetService<SubnetOwner>();
+SubnetOwner subnetOwner = ((IEngineeringServiceProvider)deviceItem).GetService&lt;SubnetOwner&gt;();
 
 Subnet subnet = subnetOwner.Subnets[0];
 
@@ -11521,7 +11521,7 @@ IoSystem ioSystem = ...;
 
 // Interface is configured as io controller
 
-if((interface12.InterfaceOperatingMode & InterfaceOperatingModes.IoController) != 0)
+if((interface12.InterfaceOperatingMode &amp; InterfaceOperatingModes.IoController) != 0)
 
 {
 
@@ -12029,7 +12029,7 @@ IoSystem dpMasterSystem = ...;
 
 // Interface is configured as master or as master and slave
 
-if((interface12.InterfaceOperatingMode & InterfaceOperatingModes.IoController) != 0)
+if((interface12.InterfaceOperatingMode &amp; InterfaceOperatingModes.IoController) != 0)
 
 {
 
@@ -12250,7 +12250,7 @@ To access this additional functionality, the NetworkPort feature, a specific ser
 
 Modify the following program code to access attributes of a channel:
 
-NetworkPort port = ((IEngineeringServiceProvider)deviceItem).GetService<NetworkPort>();
+NetworkPort port = ((IEngineeringServiceProvider)deviceItem).GetService&lt;NetworkPort&gt;();
 
 if (port != null)
 
@@ -12490,7 +12490,7 @@ The following dynamic attributes are supported at the device item DP interface.
 
 Modify the following program code to create a transfer area at the DP interface:
 
-NetworkInterface cpuItf = CpuInterface.GetService<NetworkInterface>();
+NetworkInterface cpuItf = CpuInterface.GetService&lt;NetworkInterface&gt;();
 
 // Create TransferAreas
 
@@ -12666,7 +12666,7 @@ You can use the TIA Portal Openness application to configure transfer areas and 
 
 To create a "CD" type transfer area for a CP 1604 modify the following program code:
 
-NetworkInterface cpItf = CP 1604Interface.GetService<NetworkInterface>();
+NetworkInterface cpItf = CP 1604Interface.GetService&lt;NetworkInterface&gt;();
 
 //Create Transfer Areas
 
@@ -12836,7 +12836,7 @@ You can use the TIA Portal Openness to add module and submodule, delete and sear
 
 For example, to create module on the next free position, use the following program code:
 
-NetworkInterface coupler_Itf = deviceItem.GetService<NetworkInterface>();
+NetworkInterface coupler_Itf = deviceItem.GetService&lt;NetworkInterface&gt;();
 
 TransferAreaComposition transferAreas = coupler_Itf.TransferAreas;
 
@@ -13238,7 +13238,7 @@ Device S2device = ...;
 
 string s_S2DeviceInterface1Name = "";
 
-NetworkInterface networkInterface1 = S2device.DeviceItems.First(f => f.Name == s_S2DeviceInterface1Name).GetService<NetworkInterface>();
+NetworkInterface networkInterface1 = S2device.DeviceItems.First(f =&gt; f.Name == s_S2DeviceInterface1Name).GetService&lt;NetworkInterface&gt;();
 
 string s_RedundancyMode = "...";
 
@@ -13250,7 +13250,7 @@ Assert.AreEqual(RedundancyMode.SwitchedS1, networkInterface1.GetAttribute(s_Redu
 
 //Act
 
-var systemBlockGroups = plc1?.GetService<ICompilable>();
+var systemBlockGroups = plc1?.GetService&lt;ICompilable&gt;();
 
 CompilerResult compilerResult = systemBlockGroups?.Compile();
 
@@ -13354,7 +13354,7 @@ The Delete() behaves differently when deleting a receiver. There is always only 
 | Sender | Receiver | Behaviour |
 | --- | --- | --- |
 | 1 | c = 1 | Both the sender and the receiver will be deleted |
-| 1 | c>1 | Only the receiver will be deleted |
+| 1 | c&gt;1 | Only the receiver will be deleted |
 
 The following behavior expected when deleting the sender:
 
@@ -13376,7 +13376,7 @@ NetworkInterface networkInterface = ...;
 
 string transferAreaName = "Example_CCDX_TA";
 
-networkInterface.MulticastableTransferAreas.FirstOrDefault(item => item.Name == transferAreaName).Delete();
+networkInterface.MulticastableTransferAreas.FirstOrDefault(item =&gt; item.Name == transferAreaName).Delete();
 
 }
 
@@ -13435,7 +13435,7 @@ NetworkInterface networkInterface = ...;
 
 string transferAreaName = "Example_CCDX_TA";
 
-MulticastableTransferArea transferArea = networkInterface.MulticastableTransferAreas.FirstOrDefault(item => item.Name ==
+MulticastableTransferArea transferArea = networkInterface.MulticastableTransferAreas.FirstOrDefault(item =&gt; item.Name ==
 
 transferAreaName);
 
@@ -13623,8 +13623,8 @@ clipboard
 
 If you need to know a type identifier you inquire it in TIA Portal as follows:
 
-1. Enable the setting "Enable display of the type identifier for devices and modules" in "Options > Settings > Hardware configuration > Display of the type identifier".
-2. Open the editor "Devices & networks".
+1. Enable the setting "Enable display of the type identifier for devices and modules" in "Options &gt; Settings &gt; Hardware configuration &gt; Display of the type identifier".
+2. Open the editor "Devices &amp; networks".
 3. Select a device in the Catalog.  
    The type identifier is displayed in the viewlet "Information"
 
@@ -13661,7 +13661,7 @@ Device device = ...;
 
 // Ask for Service CustomIdentityProvider on the device/device item
 
-var customIdentityProviderService = device.GetService<CustomIdentityProvider>();
+var customIdentityProviderService = device.GetService&lt;CustomIdentityProvider&gt;();
 
 //Set the Application ID (Key-Value) pair
 
@@ -13692,7 +13692,7 @@ Device device = ...;
 
 // Ask for Service CustomIdentityProvider on the device/device item
 
-var customIdentityProviderService = device.GetService<CustomIdentityProvider>();
+var customIdentityProviderService = device.GetService&lt;CustomIdentityProvider&gt;();
 
 customIdentityProviderService.Set("Application_Key", "Application_Value");
 
@@ -13731,7 +13731,7 @@ Device device = ...;
 
 // Ask for Service CustomIdentityProvider on the device/device item
 
-var customIdentityProviderService = device.GetService<CustomIdentityProvider>();
+var customIdentityProviderService = device.GetService&lt;CustomIdentityProvider&gt;();
 
 //Remove the CustomIdentity corresponding to Application ID
 
@@ -13939,7 +13939,7 @@ Modify the following program code to find a specific device by name:
 
 Project project = ...
 
-Device plc1 = project.Devices.First(d => d.Name == "Mydevice");
+Device plc1 = project.Devices.First(d =&gt; d.Name == "Mydevice");
 
 ... // Work with the device
 
@@ -13985,7 +13985,7 @@ Project project = ...
 
 DeviceUserGroup sortingGroup = project.DeviceGroups.Find ("Sorting");
 
-Device plc1 = sortingGroup.Devices.First(d => d.Name == "MyStationName");
+Device plc1 = sortingGroup.Devices.First(d =&gt; d.Name == "MyStationName");
 
 ... // Work with the device
 
@@ -14003,7 +14003,7 @@ Project project = ...
 
 DeviceSystemGroup group = project.UngroupedDevicesGroup;
 
-Device plc1 = group.Devices.First(d => d.Name == "MyStationName");
+Device plc1 = group.Devices.First(d =&gt; d.Name == "MyStationName");
 
 ... // Work with the device
 
@@ -14087,7 +14087,7 @@ clipboard
 
 If a device is a GSD device, it provides additional functionality. To get the GsdDevice feature, the GetService method is used.
 
-GsdDevice gsdDevice = ((IEngineeringServiceProvider)deviceItem).GetService<GsdDevice>();
+GsdDevice gsdDevice = ((IEngineeringServiceProvider)deviceItem).GetService&lt;GsdDevice&gt;();
 
 if (gsdDevice != null) {
 
@@ -14292,11 +14292,11 @@ The API also removes the concern about the order and dependencies of the attribu
 
 **Signature**
 
-SetAttributes(IEnumerable<KeyValuePair<string, object>> attributes, AttributeDelegate errorHandler);
+SetAttributes(IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; attributes, AttributeDelegate errorHandler);
 
 > **Note**
 >
-> This is an overload of the SetAttributes(IEnumerable<KeyValuePair<string, object>> attributes) API.  
+> This is an overload of the SetAttributes(IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; attributes) API.  
 > From TIA Portal V19 on bulk changing hardware parameters with ordering works the same way with all overloaded “SetAttributes” methods.
 
 ##### Program code
@@ -14311,13 +14311,13 @@ TiaPortal portal = new TiaPortal(TiaPortalMode.WithUserInterface);
 
 var project = tiaPortal.Projects.Open(new FileInfo(project));
 
-IList<KeyValuePair<string, object>> attributesToSet = new List<KeyValuePair<string, object>>
+IList&lt;KeyValuePair&lt;string, object&gt;&gt; attributesToSet = new List&lt;KeyValuePair&lt;string, object&gt;&gt;
 
 {
 
-new KeyValuePair<string, object>("IsochronousTi", (double)0.1), new KeyValuePair<string, object>("IsochronousTo", (double)0.3),  
-new KeyValuePair<string, object>("IsochronousTiToCalculationMode", Siemens.Engineering.HW.IsochronousTiToCalculationMode.Manual),  
-new KeyValuePair<string, object>("IsochronousMode", true),  
+new KeyValuePair&lt;string, object&gt;("IsochronousTi", (double)0.1), new KeyValuePair&lt;string, object&gt;("IsochronousTo", (double)0.3),  
+new KeyValuePair&lt;string, object&gt;("IsochronousTiToCalculationMode", Siemens.Engineering.HW.IsochronousTiToCalculationMode.Manual),  
+new KeyValuePair&lt;string, object&gt;("IsochronousMode", true),  
 };
 
 project.DeviceItems[0].SetAttributes(attributesToSet, MyErrorHandler));
@@ -14588,7 +14588,7 @@ The class PlugLocation has the following peroperites.
 
 HardwareObject hardwareObject = ...;
 
-IList<PlugLocation> result = hardwareObject.GetPlugLocations();
+IList&lt;PlugLocation&gt; result = hardwareObject.GetPlugLocations();
 
 foreach (PlugLocation item in result)
 
@@ -14732,7 +14732,7 @@ private void UserDefinedLogoSettings()
 
 {
 
-FrontPanelDisplay frontPanelDisplay = plcDisplay.GetService<FrontPanelDisplay>();
+FrontPanelDisplay frontPanelDisplay = plcDisplay.GetService&lt;FrontPanelDisplay&gt;();
 
 //Enabling the user defined logo in the display
 
@@ -14967,7 +14967,7 @@ Modify the following program code to get the attributes:
 
 DeviceItem deviceItem = ...;
 
-GsdDeviceItem gsdDeviceItem = ((IEngineeringServiceProvider)deviceItem).GetService<GsdDeviceItem>();
+GsdDeviceItem gsdDeviceItem = ((IEngineeringServiceProvider)deviceItem).GetService&lt;GsdDeviceItem&gt;();
 
 string gsdName = gsdDeviceItem.GsdName;
 
@@ -14987,7 +14987,7 @@ Modify the following program code to get the attributes:
 
 DeviceItem deviceItem = ...;
 
-GsdDeviceItem gsdDeviceItem = ((IEngineeringServiceProvider)deviceItem).GetService<GsdDeviceItem>();
+GsdDeviceItem gsdDeviceItem = ((IEngineeringServiceProvider)deviceItem).GetService&lt;GsdDeviceItem&gt;();
 
 var attributeNames = new[] {
 
@@ -15017,7 +15017,7 @@ clipboard
 
 DeviceItem deviceItem = ...;
 
-GsdDeviceItem gsdDeviceItem = ((IEngineeringServiceProvider)deviceItem).GetService<GsdDeviceItem>();
+GsdDeviceItem gsdDeviceItem = ((IEngineeringServiceProvider)deviceItem).GetService&lt;GsdDeviceItem&gt;();
 
 int dsNumber = 0;       // For Profibus GSDs, dataset number zero must be used!
 
@@ -15045,7 +15045,7 @@ Modify the following program code to get the prm data:
 
 DeviceItem deviceItem = ...;
 
-GsdDeviceItem gsdDeviceItem = ((IEngineeringServiceProvider)deviceItem).GetService<GsdDeviceItem>();
+GsdDeviceItem gsdDeviceItem = ((IEngineeringServiceProvider)deviceItem).GetService&lt;GsdDeviceItem&gt;();
 
 // The parameters byteOffset and the length of the byte array prmData define the range within the
 
@@ -15101,7 +15101,7 @@ Modify the following program code to get the network interface feature
 
 Device deviceItem = ...;
 
-NetworkInterface itf = ((IEngineeringServiceProvider)deviceItem).GetService<NetworkInterface>();
+NetworkInterface itf = ((IEngineeringServiceProvider)deviceItem).GetService&lt;NetworkInterface&gt;();
 
 if (itf != null)
 
@@ -15308,7 +15308,7 @@ private void GetSubnetDeviceItem()
 
 DeviceItem itfDeviceItem = ...;
 
-NetworkInterface itf = itfDeviceItem.GetService<NetworkInterface>();
+NetworkInterface itf = itfDeviceItem.GetService&lt;NetworkInterface&gt;();
 
 foreach (Node node in itf.Nodes)
 
@@ -15480,7 +15480,7 @@ If a device item is an address controller, it provides additional functionality.
 
 Modify the following program code to get the address controller role:
 
-AddressController addressController = ((IEngineeringServiceProvider)deviceItem).GetService<AddressController>();
+AddressController addressController = ((IEngineeringServiceProvider)deviceItem).GetService&lt;AddressController&gt;();
 
 if (addressController != null)
 
@@ -15683,7 +15683,7 @@ If a device item is an hardware identifier controller, it is possible to access 
 
 To get the HwIdentifierController modify the following program code:
 
-HwIdentifierController hwIdentifierController = ((IEngineeringServiceProvider)deviceItem).GetService<HwIdentifierController>();
+HwIdentifierController hwIdentifierController = ((IEngineeringServiceProvider)deviceItem).GetService&lt;HwIdentifierController&gt;();
 
 if (hwIdentifierController != null)
 
@@ -16004,9 +16004,9 @@ Download of F-Activated PLCs is not currently supported for SW-CPU as well; as i
 
 You are able to download software and hardware components to a device via DownloadProvider service that can be acquired from a given DeviceItem. If a DeviceItem represents a downloadable target an instance of DownloadProvider will be returned on GetService call. Otherwise it will be null.
 
-DeviceItem stationManager = dev.DeviceItems.First(p => p.PositionNumber == 0).DeviceItems.First(a => a.PositionNumber == 125);
+DeviceItem stationManager = dev.DeviceItems.First(p =&gt; p.PositionNumber == 0).DeviceItems.First(a =&gt; a.PositionNumber == 125);
 
-DownloadProvider downloadProviderStationManager = stationManager.GetService<DownloadProvider>();
+DownloadProvider downloadProviderStationManager = stationManager.GetService&lt;DownloadProvider&gt;();
 
 if (downloadProviderStationManager == null)
 
@@ -16016,9 +16016,9 @@ if (downloadProviderStationManager == null)
 
 }
 
-DeviceItem swCpu = dev.DeviceItems.First(p => p.Name == "Software PLC_1");
+DeviceItem swCpu = dev.DeviceItems.First(p =&gt; p.Name == "Software PLC_1");
 
-DownloadProvider downloadProviderSwCpu = swCpu.GetService<DownloadProvider>();
+DownloadProvider downloadProviderSwCpu = swCpu.GetService&lt;DownloadProvider&gt;();
 
 clipboard
 
@@ -16048,7 +16048,7 @@ In case you do not want to wait for the reboot, you can use a post download opti
 
 //Post Download Configuration Delegate
 
-DownloadConfigurationDelegate postDownloadForPcStation = downloadConfiguration =>
+DownloadConfigurationDelegate postDownloadForPcStation = downloadConfiguration =&gt;
 
 {
 
@@ -16140,9 +16140,9 @@ Downloading SW-CPU is similar to downloading a regular plc. For downloading SW-C
 
 A download method also triggers compilation. It is also possible to compile a device item stand alone, with the following code snippet:
 
-ICompilable compileServiceSwCpu = swCpu.GetService<ICompilable>();
+ICompilable compileServiceSwCpu = swCpu.GetService&lt;ICompilable&gt;();
 
-ICompilable compileServiceStationManager = stationManager.GetService<ICompilable>();
+ICompilable compileServiceStationManager = stationManager.GetService&lt;ICompilable&gt;();
 
 CompilerResult compileResultStationManager = compileServiceStationManager.Compile();
 
@@ -16177,7 +16177,7 @@ You can use the TIA Portal Openness to download software and hardware components
 
 DeviceItem deviceItem = ...;
 
-DownloadProvider downloadProvider = deviceItem.GetService<DownloadProvider>();
+DownloadProvider downloadProvider = deviceItem.GetService&lt;DownloadProvider&gt;();
 
 if (downloadProvider != null)
 
@@ -16300,7 +16300,7 @@ The possible download configuration types are listed below.
 | --- | --- |
 | DownloadConfiguration | - Base class for all the configurations. It will contain information only if it cannot be cast to a specific configuration. IConfiguration has a single property: - DownloadConfiguration.Message : string (read only property contains the configuration message) |
 | DownloadSelectionConfiguration | - Base class for all configuration that can be selected. Properties of DownloadSelectionConfiguration - Does not contain additional properties. A selection must be provided in all child classes derived from it. |
-| DownloadCheckConfiguration | - Base class for all configuration that can be checked and unchecked. - Contains single property DownloadCheckConfiguration.Checked: bool<string> (read/write property identifies whether the configuration is checked or unchecked) |
+| DownloadCheckConfiguration | - Base class for all configuration that can be checked and unchecked. - Contains single property DownloadCheckConfiguration.Checked: bool&lt;string&gt; (read/write property identifies whether the configuration is checked or unchecked) |
 | DownloadPasswordConfiguration | - Base class for all configuration that required a password to proceed with download (PLC protection passwords and block binding passwords). Methods of DownloadPasswordConfiguration: - Conains a single method to set password. DownloadPasswordConfiguration.SetPassword (password: SecureString) : void - Sets password. SecureString |
 
 The datatype of the configurations are given below.
@@ -16627,13 +16627,13 @@ You can use the TIA Portal Openness to download a PLC to a Windows Folder on the
 
 The feature is valid for the following products / devices:
 
-- S7-1500 CPU including Safety (FW >= 2.1)
+- S7-1500 CPU including Safety (FW &gt;= 2.1)
 - S7-1500R/H CPU including Safety (HF)
 - ET 200SP CPU including Safety
 - ET 200pro CPU including Safety
 - S7-1500 Software Controller including Safety
 - ET 200SP Open Controller including Safety
-- S7-1200 CPU including Safety (FW >= V4.2)
+- S7-1200 CPU including Safety (FW &gt;= V4.2)
 
 ###### Parameter
 
@@ -16664,7 +16664,7 @@ Modify the following program code to access DownloadProvider for standard Plc:
 
 DeviceItem deviceItem = ...;
 
-DownloadProvider downloadProvider = deviceItem.GetService<DownloadProvider>();
+DownloadProvider downloadProvider = deviceItem.GetService&lt;DownloadProvider&gt;();
 
 downloadProvider.Download(new DirectoryInfo(@"c:\tmp\card1"), DownloadConfigurationDelegate);
 
@@ -16677,7 +16677,7 @@ Modify the following program code to access RHDownloadProvider for R/H system:
 
 Device device = ...;
 
-RHDownloadProvider rhDownloadProvider = device.GetService<RHDownloadProvider>();
+RHDownloadProvider rhDownloadProvider = device.GetService&lt;RHDownloadProvider&gt;();
 
 rhDownloadProvider.Download(new DirectoryInfo(@"c:\tmp\card1"), DownloadConfigurationDelegate);
 
@@ -16971,7 +16971,7 @@ clipboard
 
 Configuring PLC master secret key is implemented as SecureString for security reasons. It is only possible to set / change the passwords . Reading the passwords is not supported.
 
-PlcMasterSecretConfigurator plcMasterSecretConfigurator = plcCpu.GetService<PlcMasterSecretConfigurator>();  
+PlcMasterSecretConfigurator plcMasterSecretConfigurator = plcCpu.GetService&lt;PlcMasterSecretConfigurator&gt;();  
 plcMasterSecretConfigurator.Protect(StringToSecureString(“TiaPassword123”));  
 plcMasterSecretConfigurator.ChangePassword(StringToSecureString(“TiaPassword123”), StringToSecureString(“TiaPassword1234”));  
 public SecureString StringToSecureString(string value)  
@@ -16979,7 +16979,7 @@ public SecureString StringToSecureString(string value)
 SecureString secureStr = new SecureString();  
 if (!string.IsNullOrEmpty(value))  
 {  
-for(int i = 0; i < value.Length; i++)  
+for(int i = 0; i &lt; value.Length; i++)  
 {  
 secureStr.AppendChar(value[i]);  
 }
@@ -17076,7 +17076,7 @@ Modify the following program code to reset the PlcMasterSecret:
 clipboard
 > **Note**
 >
-> Reset the Plc Master Secret is the same functionality like Delete in the "Online & diagnostics"-Dialog.
+> Reset the Plc Master Secret is the same functionality like Delete in the "Online &amp; diagnostics"-Dialog.
 
 ---
 
@@ -17311,7 +17311,7 @@ public void ConfigurePreDownload(DownloadConfiguration downloadConfiguration)
 
 DownloadPasswordConfiguration downloadPasswordConfiguration = downloadConfiguration as DownloadPasswordConfiguration;
 
-    if(downloadPasswordConfiguration != null && downloadPasswordConfiguration.Message.Contains("block_1"))
+    if(downloadPasswordConfiguration != null &amp;&amp; downloadPasswordConfiguration.Message.Contains("block_1"))
 
     {
 
@@ -17344,7 +17344,7 @@ The upload station is not supported for device group.
 
 Project myProject = ...;
 
-StationUploadProvider uploadProviderForProject = myProject.GetService<StationUploadProvider>();
+StationUploadProvider uploadProviderForProject = myProject.GetService&lt;StationUploadProvider&gt;();
 
 if (uploadProviderForProject != null)
 
@@ -17656,7 +17656,7 @@ string messageOut = message.Message.PadLeft(message.Message.Length + level, '\t'
 
 Console.WriteLine(messageOut);
 
-if ((message.Messages != null) && (message.Messages.Count > 0))
+if ((message.Messages != null) &amp;&amp; (message.Messages.Count &gt; 0))
 
 PrintAllMessages(message.Messages, level+1);
 
@@ -17706,7 +17706,7 @@ private static void WriteResult(CompareResultElement compareResultElement, strin
 
 {
 
-    Console.WriteLine("{0} <{1}> <{2}> <{3}> <{4}> ",
+    Console.WriteLine("{0} &lt;{1}&gt; &lt;{2}&gt; &lt;{3}&gt; &lt;{4}&gt; ",
 
     indent,
 
@@ -17722,7 +17722,7 @@ private static void WriteResult(CompareResultElement compareResultElement, strin
 
 }
 
-private static void WriteResult (IEnumerable<CompareResultElement> compareResultElements, string indent)
+private static void WriteResult (IEnumerable&lt;CompareResultElement&gt; compareResultElements, string indent)
 
 {
 
@@ -17746,7 +17746,7 @@ private static void CompareTwoOfflinePlcs(PlcSoftware plcSoftware0, PlcSoftware 
 
 {
 
-if (plcSoftware0 != null && plcSoftware1 != null)
+if (plcSoftware0 != null &amp;&amp; plcSoftware1 != null)
 
 {
 
@@ -17766,7 +17766,7 @@ private static void ComparePlcToProjectLibrary(Project project, PlcSoftware plcS
 
 {
 
-if (project != null && plcSoftware != null)
+if (project != null &amp;&amp; plcSoftware != null)
 
 {
 
@@ -17786,7 +17786,7 @@ private static void ComparePlcToGlobalLibrary(PlcSoftware plcSoftware, GlobalLib
 
 {
 
-if (plcSoftware != null && globalLibrary != null)
+if (plcSoftware != null &amp;&amp; globalLibrary != null)
 
 {
 
@@ -17806,7 +17806,7 @@ private static void ComparePlcToMasterCopy(Project project, PlcSoftware plcSoftw
 
 {
 
-if (project != null && plcSoftware != null)
+if (project != null &amp;&amp; plcSoftware != null)
 
 {
 
@@ -18004,7 +18004,7 @@ public void LegacyPlc_SecuritySettingPasswordPolicy_SetAttributes()
 
 {
 
-LegacyPlcPasswordPolicyService m_LegacyPlcPasswordPolicyService = m_project.GetService<LegacyPlcPasswordPolicyService>();
+LegacyPlcPasswordPolicyService m_LegacyPlcPasswordPolicyService = m_project.GetService&lt;LegacyPlcPasswordPolicyService&gt;();
 
 m_LegacyPlcPasswordPolicyService.PasswordPolicyEnabled= true;
 
@@ -18026,7 +18026,7 @@ public void PlusPlc_SecuritySettingPasswordPolicy_SetAttributes()
 
 {
 
-PlcPasswordPolicyService m_PlcPasswordPolicyService = m_project.GetService<PlcPasswordPolicyService>();
+PlcPasswordPolicyService m_PlcPasswordPolicyService = m_project.GetService&lt;PlcPasswordPolicyService&gt;();
 
 m_PlusPlcPasswordPolicyService.PasswordPolicyEnabled= true;
 
@@ -18076,7 +18076,7 @@ The CertificateSupportedService() represents the supported services of the Certi
 
 // for getting the service
 
-CertificateManagementConfiguration certifcateConfigurationService = plc.GetService<CertificateManagementConfiguration>();
+CertificateManagementConfiguration certifcateConfigurationService = plc.GetService&lt;CertificateManagementConfiguration&gt;();
 
 // To setup the usage
 
@@ -18137,7 +18137,7 @@ This section contains information on the following topics:
 - [Downloading PLCs of R/H System](#downloading-plcs-of-rh-system)
 - [Establishing or disconnecting the online connection to the PLC](#establishing-or-disconnecting-the-online-connection-to-the-plc)
 - [Assigning project language to PLC](#assigning-project-language-to-plc)
-- [Assigning watch & force tables for web server and PLC display](#assigning-watch-force-tables-for-web-server-and-plc-display)
+- [Assigning watch &amp; force tables for web server and PLC display](#assigning-watch-force-tables-for-web-server-and-plc-display)
 - [Managing certificate](#managing-certificate)
 - [Managing Webserver user of SIWAREX modules](#managing-webserver-user-of-siwarex-modules)
 - [Managing Syslog configuration](#managing-syslog-configuration)
@@ -18282,7 +18282,7 @@ The Software attribute is read only and it returns null when the program is not 
 
 For the interface assignment, you have to get a PcInterfaceAssignment service from Siemens.HW.Features on the device item interface.
 
-If the PC-Station version is <= 2.0, the methods of this service will return null and interface assignment will not be possible for the interfaces that are assigned to PC-Station or Windows only or none. For the interfaces that are assigned to SW-CPU, this is again possible.
+If the PC-Station version is &lt;= 2.0, the methods of this service will return null and interface assignment will not be possible for the interfaces that are assigned to PC-Station or Windows only or none. For the interfaces that are assigned to SW-CPU, this is again possible.
 
 > **Note**
 >
@@ -18296,7 +18296,7 @@ DeviceItem swCpu = ...;
 
 DeviceItem myInterface = ...;
 
-PcInterfaceAssignment provider = myInterface.GetService<PcInterfaceAssignment>();
+PcInterfaceAssignment provider = myInterface.GetService&lt;PcInterfaceAssignment&gt;();
 
 //user has to give device item sw cpu in case he/she wants to assign to it. (in the future, there could be multi sw-cpu cases) provider.AssignInterface(PcInterfaceAssignmentMode.SoftwarePlc, swCpu);
 
@@ -18314,7 +18314,7 @@ clipboard
 
 Modify and use the following program code to get information about the current assignment mode of an interface:
 
-PcInterfaceAssignment provider = myInterface.GetService<PcInterfaceAssignment>();
+PcInterfaceAssignment provider = myInterface.GetService&lt;PcInterfaceAssignment&gt;();
 
 PcInterfaceAssignmentMode mode = provider.PcInterfaceAssignmentMode;
 
@@ -18344,9 +18344,9 @@ You can also select correct IPC Expansion and HardwareResource property via PcIn
 
 DeviceItem myInterface = ...;
 
-PcInterfaceAssignment provider = myInterface.GetService<PcInterfaceAssignment>();
+PcInterfaceAssignment provider = myInterface.GetService&lt;PcInterfaceAssignment&gt;();
 
-//this method returns a subset of IpcExpansion values which are available for the IPC that the interface is plugged in. IEnumerable<string> ipcExpansionChoices = provider.GetAvailableIPCExpansions();
+//this method returns a subset of IpcExpansion values which are available for the IPC that the interface is plugged in. IEnumerable&lt;string&gt; ipcExpansionChoices = provider.GetAvailableIPCExpansions();
 
 string myChoice;
 
@@ -18421,7 +18421,7 @@ public static OnlineState GetOnlineState(DeviceItem deviceItem)
 
 {
 
-OnlineProvider onlineProvider = deviceItem.GetService<OnlineProvider>();
+OnlineProvider onlineProvider = deviceItem.GetService&lt;OnlineProvider&gt;();
 
 return onlineProvider.State;
 
@@ -18443,7 +18443,7 @@ foreach (DeviceItem deviceItem in device.DeviceItems)
 
 {
 
-OnlineProvider onlineProvider = deviceItem.GetService<OnlineProvider>();
+OnlineProvider onlineProvider = deviceItem.GetService&lt;OnlineProvider&gt;();
 
 if (onlineProvider != null)
 
@@ -18491,7 +18491,7 @@ public static void EnumerateConnectionModesOfPLC(DeviceItem deviceItem)
 
 {
 
-OnlineProvider onlineProvider = deviceItem.GetService<OnlineProvider>();
+OnlineProvider onlineProvider = deviceItem.GetService&lt;OnlineProvider&gt;();
 
 if (onlineProvider == null)
 
@@ -19493,7 +19493,7 @@ Modify the following code to access RHOnlineProvider:
 
 Device device = project.Devices.Find("S7-1500R/H-System_1");
 
-RHOnlineProvider rhOnlineProvider = device.GetService<RHOnlineProvider>();
+RHOnlineProvider rhOnlineProvider = device.GetService&lt;RHOnlineProvider&gt;();
 
 clipboard
 
@@ -19643,7 +19643,7 @@ Modify the following program code to retrieve RHDownloadProvider:
 
 Device device = project.Devices.Find("S7-1500R/H-System_1");
 
-RHDownloadProvider rhDownloadProvider = device.GetService<RHDownloadProvider>();
+RHDownloadProvider rhDownloadProvider = device.GetService&lt;RHDownloadProvider&gt;();
 
 ...
 
@@ -19660,7 +19660,7 @@ Modify the following program code to retrieve IConfiguration object from Connect
 
 ...
 
-RHDownloadProvider rhDownloadProvider = device.GetService<RHDownloadProvider>();
+RHDownloadProvider rhDownloadProvider = device.GetService&lt;RHDownloadProvider&gt;();
 
 ConnectionConfiguration connectionConfiguration = rhDownloadProvider.Configuration;
 
@@ -19728,7 +19728,7 @@ Project project = tiaPortal.Projects[0];
 
 Device device = project.Devices.Find("S7-1500R/H-System_1");
 
-RHDownloadProvider rhDownloadProvider = device.GetService<RHDownloadProvider>();
+RHDownloadProvider rhDownloadProvider = device.GetService&lt;RHDownloadProvider&gt;();
 
 ConnectionConfiguration connectionConfiguration = rhDownloadProvider.Configuration;
 
@@ -19929,7 +19929,7 @@ public static void SetOnlineConnection(DeviceItem deviceItem)
 
 {
 
-OnlineProvider onlineProvider = deviceItem.GetService<OnlineProvider>();
+OnlineProvider onlineProvider = deviceItem.GetService&lt;OnlineProvider&gt;();
 
 if (onlineProvider == null) { return; }
 
@@ -19965,7 +19965,7 @@ foreach (DeviceItem deviceItem in device.DeviceItems)
 
 {
 
-OnlineProvider onlineProvider = deviceItem.GetService<OnlineProvider>();
+OnlineProvider onlineProvider = deviceItem.GetService&lt;OnlineProvider&gt;();
 
 if (onlineProvider != null)
 
@@ -20053,7 +20053,7 @@ clipboard
 
 ###### Application
 
-You can use the TIA Portal Openness to assign already created watch and force tables to the web server. The watch table and force table are software that can be found, created, and deleted in the software container. You can use the TIA Portal Openness to export/ import Watch and Force tables. For export/import Watch/Force tables, please see [Export/Import Watch & Force Table](#exportimport-watch-force-table)
+You can use the TIA Portal Openness to assign already created watch and force tables to the web server. The watch table and force table are software that can be found, created, and deleted in the software container. You can use the TIA Portal Openness to export/ import Watch and Force tables. For export/import Watch/Force tables, please see [Export/Import Watch &amp; Force Table](#exportimport-watch-force-table)
 
 To assign the watch and force tables to the web server, the WatchAndForceTableAccessManager service is used at the PLC DeviceItem.
 
@@ -20064,7 +20064,7 @@ The service contains two navigators for watch and force tables.
 
 The navigator WatchTableAccessRules provides the WatchTableAccessRuleComposition which contains objects of type WatchTableAccessRule. The composition is empty by default. For the WatchTableAccessRule objects, the actions Find and Create are defined.
 
-###### WatchTable Access Rule & ForceTable AccessRule
+###### WatchTable Access Rule &amp; ForceTable AccessRule
 
 - **PlcWatchTable** watchtable {get;} returns the software object watchtable. In order to exchange an assigned watch table, the user has to remove the assignment of the current one (using WatchTableAccessRule.Delete()) and add a new one (using WatchTableAccessRule.Create()).
 - **WatchAndForceTableAccess** access {get; set;} returns / sets the web server access level whether it is read or read/write
@@ -20080,7 +20080,7 @@ Error will be thrown in the following cases:
 - If the web server has not been activated (WebserverActivate == FALSE), a EngineeringTargetInvocationException is thrown with error details stating that a WatchTableAccessRule can be added only if the web server is enabled.
 - If the user tries to add a watch table with WatchAndForceTableAccess.None a ConfigOpenessUserException with error details stating that WatchAndForceTableAccess.None is not allowed as a access level
 
-###### Program code: Assigning & unassigning watch table
+###### Program code: Assigning &amp; unassigning watch table
 
 Modify the following program code to search watch table in the web server:
 
@@ -20147,7 +20147,7 @@ You can use the same Openness service WatchAndForceTableAccessManager available 
 
 **See also**
 
-[Export/Import Watch & Force Table](#exportimport-watch-force-table)
+[Export/Import Watch &amp; Force Table](#exportimport-watch-force-table)
   
 [Connecting to the TIA Portal](#connecting-to-the-tia-portal)
 
@@ -20177,7 +20177,7 @@ DeviceItem Plc= ...;
 
 // Get local certificate manager
 
-var localCertificateManager = Plc.GetService<LocalCertificateManager>();
+var localCertificateManager = Plc.GetService&lt;LocalCertificateManager&gt;();
 
 // Disable global certificate manager
 
@@ -20322,7 +20322,7 @@ certTemplate.Signature = SignatureAlgorithm.Sha1RSA;
 
 clipboard
 
-- SubjectAlternativeNames: Is a composition which contains objects of type SubjectAlternativeName (IList of type <SubjectAlternativeName>). With the action Create(SubjectAlternativeNameType, string) a new SAN can be created. The handed over parameters are the Type (of type SubjectAlternativeNameType) and the Value (of type string).
+- SubjectAlternativeNames: Is a composition which contains objects of type SubjectAlternativeName (IList of type &lt;SubjectAlternativeName&gt;). With the action Create(SubjectAlternativeNameType, string) a new SAN can be created. The handed over parameters are the Type (of type SubjectAlternativeNameType) and the Value (of type string).
 - SubjectAlternativeNameType
 
   - None (not supported)
@@ -20427,7 +20427,7 @@ private void SettingWebserverUser()
 
 //To get the list of webserver users
 
-SimpleWebserverUserManagement feature = subModule.GetService<SimpleWebserverUserManagement>();
+SimpleWebserverUserManagement feature = subModule.GetService&lt;SimpleWebserverUserManagement&gt;();
 
 // To get the specific user from the list of webserver users
 
@@ -20505,7 +20505,7 @@ Modify the following program code to enable or disable the system logging settin
 
 // To access EnableSysLog Property
 
-var service = plc.GetService<SysLogConfigurationManager>();
+var service = plc.GetService&lt;SysLogConfigurationManager&gt;();
 
 service.EnableSystemLogging = true;
 
@@ -20513,7 +20513,7 @@ clipboard
 
 Modify the following program code to get or set the Transport Protocol of the system logging configuration:
 
-var service = plc.GetService<SysLogConfigurationManager>();
+var service = plc.GetService&lt;SysLogConfigurationManager&gt;();
 
 service.EnableSystemLogging = true;
 
@@ -20523,7 +20523,7 @@ clipboard
 
 Modify the following program code to get or set all the server details of the system logging configuration:
 
-var service = plc.GetService<SysLogConfigurationManager>();
+var service = plc.GetService&lt;SysLogConfigurationManager&gt;();
 
 service.EnableSystemLogging = true;
 
@@ -20533,7 +20533,7 @@ clipboard
 
 Modify the following program code to enable or disable accept certificate at runtime setting:
 
-var service = plc.GetService<SysLogConfigurationManager>();
+var service = plc.GetService&lt;SysLogConfigurationManager&gt;();
 
 service.TransportProtocol = SysLogTransportProtocolType.TLSOnlyServerAuthentication;
 
@@ -20543,7 +20543,7 @@ clipboard
 
 Modify the following program code to represent trusted certificate Id for the system logging configuration:
 
-var service = plc.GetService<SysLogConfigurationManager>();
+var service = plc.GetService&lt;SysLogConfigurationManager&gt;();
 
 service.EnableSystemLogging = true;
 
@@ -20555,7 +20555,7 @@ clipboard
 
 Modify the following program code to represent client certificate Id for the system logging configuration:
 
-var service = plc.GetService<SysLogConfigurationManager>();
+var service = plc.GetService&lt;SysLogConfigurationManager&gt;();
 
 service.EnableSystemLogging = true;
 
@@ -20582,7 +20582,7 @@ These online connections are set up on the ConnectionConfiguration object that c
 
 DeviceItem deviceItem = ...;
 
-OnlineProvider onlineProvider = deviceItem.GetService<OnlineProvider>();
+OnlineProvider onlineProvider = deviceItem.GetService&lt;OnlineProvider&gt;();
 
 ConnectionConfiguration configuration = onlineProvider.Configuration;
 
@@ -20706,11 +20706,11 @@ Communication without Tls can be used by the EnableLegacyCommunication.
 | EnableLegacyCommunication | Description |
 | --- | --- |
 | true | Communication via Tls is enabled |
-| false | false Communication via Tls is disabled. This type of communication is the same as in TIA-Portal Versions < V17. |
+| false | false Communication via Tls is disabled. This type of communication is the same as in TIA-Portal Versions &lt; V17. |
 
 DeviceItem deviceItem = ...;
 
-OnlineProvider onlineProvider = deviceItem.GetService<OnlineProvider>();
+OnlineProvider onlineProvider = deviceItem.GetService&lt;OnlineProvider&gt;();
 
 ConnectionConfiguration configuration = onlineProvider.Configuration;
 
@@ -20719,7 +20719,7 @@ configuration.EnableLegacyCommunication = true;
 clipboard
 > **Note**
 >
-> The security extension is only supported with PLC firmware >=V2.9 (Hardware configuration) from PLC side.
+> The security extension is only supported with PLC firmware &gt;=V2.9 (Hardware configuration) from PLC side.
 
 ###### Connection parameters for communicate over Tls
 
@@ -20893,7 +20893,7 @@ To access the configuration object modify the following program code:
 
 DeviceItem deviceItem = ...;
 
-DownloadProvider downloadProvider = deviceItem.GetService<DownloadProvider>();
+DownloadProvider downloadProvider = deviceItem.GetService&lt;DownloadProvider&gt;();
 
 ConnectionConfiguration onlineConfiguration = downloadProvider.Configuration;
 
@@ -20951,7 +20951,7 @@ The OnlineAuthenticationConfiguration has the following properties and methods:
 | OnlineAuthenticationConfiguration | Description |
 | --- | --- |
 | bool IsSecureCommunication { get; } | The property provides 'true' in the case of a "Secure communication" (TLS handshake) connection to the PLC. In all other cases the attribute delivers 'false'.  For more information, see [Downloading to PLC devices](#downloading-to-plc-devices) |
-| IList<AuthenticationType> GetSupportedAuthenticationTypes() | Get all supported AuthenticationTypes via GetSupportedAuthenticationTypes() from the PLC. |
+| IList&lt;AuthenticationType&gt; GetSupportedAuthenticationTypes() | Get all supported AuthenticationTypes via GetSupportedAuthenticationTypes() from the PLC. |
 | OnlineCredentials OnlineCredentials { get; } | Property to configure the credential details. |
 
 ###### IsSecureCommunication
@@ -20990,7 +20990,7 @@ if (onlineAuthenticationConfiguration != null)
 
 {
 
-IList<AuthenticationType> supportedTypes = onlineAuthenticationConfiguration.GetSupportedAuthenticationTypes();
+IList&lt;AuthenticationType&gt; supportedTypes = onlineAuthenticationConfiguration.GetSupportedAuthenticationTypes();
 
 foreach (AuthenticationType supportedType in supportedTypes)
 
@@ -21015,7 +21015,7 @@ To get the type of authentication, you can get the UserType value of the UserTyp
 
 ...
 
-IList<AuthenticationType> supportedTypes = onlineAuthenticationConfiguration.GetSupportedAuthenticationTypes();
+IList&lt;AuthenticationType&gt; supportedTypes = onlineAuthenticationConfiguration.GetSupportedAuthenticationTypes();
 
 foreach (AuthenticationType supportedType in supportedTypes)
 
@@ -21170,7 +21170,7 @@ The PlcAccessControlConfiguration provides the following Enum values and its des
 
 // Example to use 'GetAttribute'
 
-PlcAccessControlConfigurationProvider provider = plc.GetService<PlcAccessControlConfigurationProvider>();
+PlcAccessControlConfigurationProvider provider = plc.GetService&lt;PlcAccessControlConfigurationProvider&gt;();
 
 var configuration = provider.GetAttribute("PlcAccessControlConfiguration");
 
@@ -21180,7 +21180,7 @@ clipboard
 
 // Example to use 'SetAttribute'
 
-PlcAccessControlConfigurationProvider provider = plc.GetService<PlcAccessControlConfigurationProvider>();
+PlcAccessControlConfigurationProvider provider = plc.GetService&lt;PlcAccessControlConfigurationProvider&gt;();
 
 provider.SetAttribute("PlcAccessControlConfiguration", PlcAccessControlConfiguration.EnabledWithAccessControlViaAccessLevel);
 
@@ -21449,7 +21449,7 @@ This section contains information on the following topics:
 - [Accessing attributes of all blocks](#accessing-attributes-of-all-blocks)
 - [Creating a ProDiag-FB](#creating-a-prodiag-fb)
 - [Accessing supervisions and properties of ProDiag-FB](#accessing-supervisions-and-properties-of-prodiag-fb)
-- [Assigning ProDiag FB for DBs & Tag Table](#assigning-prodiag-fb-for-dbs-tag-table)
+- [Assigning ProDiag FB for DBs &amp; Tag Table](#assigning-prodiag-fb-for-dbs-tag-table)
 - [Reading ProDiag-FB blocks and attributes](#reading-prodiag-fb-blocks-and-attributes)
 - [Exporting ProDiag alarm message](#exporting-prodiag-alarm-message)
 - [Adding an external file](#adding-an-external-file)
@@ -21870,7 +21870,7 @@ Errors will occur in the following cases:
 
 PlcBlock block = ...;
 
-PlcBlockProtectionProvider protectionProvider = block.GetService<PlcBlockProtectionProvider>();
+PlcBlockProtectionProvider protectionProvider = block.GetService&lt;PlcBlockProtectionProvider&gt;();
 
 if (protectionProvider != null)
 
@@ -21888,11 +21888,11 @@ clipboard
 
 You can use any characters including backspace, tab etc. to protect a block with the Protect() method. The password submitted to protect a block the password is a SecureString. You can use the GetInvalidPasswordCharacters() to check if the provided password has invalid characters.
 
-SecureString CreatePasswordString(ProtectionProvider protectionProvider, IEnumerable<char> contentCharacters)
+SecureString CreatePasswordString(ProtectionProvider protectionProvider, IEnumerable&lt;char&gt; contentCharacters)
 
 {
 
-IList<char> invalidCharacters = protectionProvider.GetInvalidPasswordCharacters();
+IList&lt;char&gt; invalidCharacters = protectionProvider.GetInvalidPasswordCharacters();
 
 SecureString password = new SecureString();
 
@@ -21958,7 +21958,7 @@ private static void DeleteBlocks(PlcSoftware plcsoftware)
 
     //  or BlockUserGroup group = ...;
 
-    for (int i = group.Blocks.Count - 1; i >= 0; i--)
+    for (int i = group.Blocks.Count - 1; i &gt;= 0; i--)
 
     {
 
@@ -22119,11 +22119,11 @@ if (block != null)
 
 {
 
-IList<KeyValuePair<string, object>> list = new List<KeyValuePair<string, object>>()
+IList&lt;KeyValuePair&lt;string, object&gt;&gt; list = new List&lt;KeyValuePair&lt;string, object&gt;&gt;()
 
 {
 
-new KeyValuePair<string, object>("DataExchangeMode", OBDataExchangeMode.Synchronous),new KeyValuePair<string, object>("SynchronousApplicationCycleTime", (float)69)
+new KeyValuePair&lt;string, object&gt;("DataExchangeMode", OBDataExchangeMode.Synchronous),new KeyValuePair&lt;string, object&gt;("SynchronousApplicationCycleTime", (float)69)
 
 };
 
@@ -22239,7 +22239,7 @@ string fbName = iDB.GetAttribute("InstanceOfName").ToString();
 
 FB fb = (FB)plc.BlockGroup.Blocks.Find(fbName);
 
-if (fb.Supervisions.Count > 0)Console.WriteLine("Contains supervisions");
+if (fb.Supervisions.Count &gt; 0)Console.WriteLine("Contains supervisions");
 
 else
 
@@ -22293,7 +22293,7 @@ The Siemens.Engineering.SW.Blocks.Interface.Member type name provides the follow
 | Name | String | Read |
 | AssignedProDiagFB | String | Read/Write |
 
-###### Program code: Getting proDiagFB Value from DB member & Tag member
+###### Program code: Getting proDiagFB Value from DB member &amp; Tag member
 
 Modify the following program code to get prodiagFB in different instances of UDT irrespective of whether the UDT has supervision or not:
 
@@ -22339,7 +22339,7 @@ Modify the following program code to get prodiagFB in tagTable:
 
 clipboard
 
-###### Program code: Setting proDiagFB Value to DB & Tag member
+###### Program code: Setting proDiagFB Value to DB &amp; Tag member
 
 Modify the following program code to set assigned ProdiagFB attribute to a member in DB:
 
@@ -22462,7 +22462,7 @@ private static void ExportProDiagBlock(PlcBlock plcBlock)
 
 FB functionBlock = plcBlock as FB;
 
-if (functionBlock != null && functionBlock.ProgrammingLanguage == ProgrammingLanguage.ProDiag && functionBlock.IsConsistent)
+if (functionBlock != null &amp;&amp; functionBlock.ProgrammingLanguage == ProgrammingLanguage.ProDiag &amp;&amp; functionBlock.IsConsistent)
 
 {
 
@@ -22566,7 +22566,7 @@ Only the "*.udt" file extension is supported for user data types. Exceptions are
 
 Modify the following program code to generate source files from blocks and types:
 
-PlcExternalSourceSystemGroup.GenerateSource(IEnumerable<IGenerateSource> plcBlocks, FileInfo sourceFile, GenerateOptions generateOptions);
+PlcExternalSourceSystemGroup.GenerateSource(IEnumerable&lt;IGenerateSource&gt; plcBlocks, FileInfo sourceFile, GenerateOptions generateOptions);
 
 // ...
 
@@ -22574,7 +22574,7 @@ PlcExternalSourceSystemGroup.GenerateSource(IEnumerable<IGenerateSource> plcBloc
 
 // ...
 
-var blocks = new List<PlcBlock>(){block1};
+var blocks = new List&lt;PlcBlock&gt;(){block1};
 
 var fileInfo = new FileInfo(@"C:\temp\SomePathHere.scl");
 
@@ -22592,7 +22592,7 @@ systemGroup.GenerateSource(blocks, fileInfo, GenerateOptions.WithDependencies);
 
 // ...
 
-var types = new List<PlcType>(){udt1};
+var types = new List&lt;PlcType&gt;(){udt1};
 
 var fileInfo = new FileInfo(@"C:\temp\SomePathHere.udt");
 
@@ -22706,7 +22706,7 @@ try
 
 {
 
-IList<IEngineeringObject> generatedObjects = externalSource.GenerateBlocksFromSource(GenerateBlockOptions.KeepOnError);
+IList&lt;IEngineeringObject&gt; generatedObjects = externalSource.GenerateBlocksFromSource(GenerateBlockOptions.KeepOnError);
 
 foreach (IEngineeringObject engineeringObject in generatedObjects)
 
@@ -23012,9 +23012,9 @@ var blocks = plcSoftware.BlockGroup.Blocks;
 
 var block1 = blocks.Find("FBDBlock") as CodeBlock;
 
-FingerprintProvider provider = block1.GetService<FingerprintProvider>();
+FingerprintProvider provider = block1.GetService&lt;FingerprintProvider&gt;();
 
-IList<Fingerprint> fingerprints = provider.GetFingerprints();
+IList&lt;Fingerprint&gt; fingerprints = provider.GetFingerprints();
 
 foreach(var fingerprint in fingerprints)
 
@@ -23051,12 +23051,12 @@ clipboard
 
 You can use the TIA Portal Openness to create user defined web pages within the web server of PLCs. The data for these user defined pages are stored in specific system generated data blocks of the PLC. You can also edit and delete these blocks manually. But if you modify any data or properties in these data blocks the web server will not function correctly.
 
-In TIA Portal Openness, the new service WebserverUserDefinedPages is added at the DeviceItem PLC. You can use this service to generate the DBs for user defined pages: List<PLCBlock> GenerateBlocks(Arguments). When this function is called the corresponding DBs are generated and a list of generated DBs is returned to user.
+In TIA Portal Openness, the new service WebserverUserDefinedPages is added at the DeviceItem PLC. You can use this service to generate the DBs for user defined pages: List&lt;PLCBlock&gt; GenerateBlocks(Arguments). When this function is called the corresponding DBs are generated and a list of generated DBs is returned to user.
 
 There are two possible overloads for this function:
 
-- IList<PlcBlock> WebserverUserDefinedPages.GenerateBlocks(WebDBGenerateOptions GenerateOptions);
-- IList<PlcBlock> WebserverUserDefinedPages.GenerateBlocks(System.IO.DirectoryInfo htmlDirectory, System.IO.FileInfo defaultHTMLPage, string applicationName, WebDBGenerateOptionsGenerateOptions);
+- IList&lt;PlcBlock&gt; WebserverUserDefinedPages.GenerateBlocks(WebDBGenerateOptions GenerateOptions);
+- IList&lt;PlcBlock&gt; WebserverUserDefinedPages.GenerateBlocks(System.IO.DirectoryInfo htmlDirectory, System.IO.FileInfo defaultHTMLPage, string applicationName, WebDBGenerateOptionsGenerateOptions);
 
 The parameter values for HTML directory, HTML page and application name are not stored in the project data. So the values of the corresponding dynamic attributes are not changed.
 
@@ -23093,11 +23093,11 @@ string applicationName = ...;
 
 DeviceItem deviceItem = ...;
 
-var WebserverUserDefinedPagesService = deviceItem.GetService<WebserverUserDefinedPages>();
+var WebserverUserDefinedPagesService = deviceItem.GetService&lt;WebserverUserDefinedPages&gt;();
 
-IList<PlcBlock> block = WebserverUserDefinedPagesService.GenerateBlocks(WebDBGenerateOptions.None);
+IList&lt;PlcBlock&gt; block = WebserverUserDefinedPagesService.GenerateBlocks(WebDBGenerateOptions.None);
 
-IList<PlcBlock> blocks = WebserverUserDefinedPagesService.GenerateBlocks(htmlDirectory, defaultHTMLPage, applicationName, WebDBGenerateOptions.Override);
+IList&lt;PlcBlock&gt; blocks = WebserverUserDefinedPagesService.GenerateBlocks(htmlDirectory, defaultHTMLPage, applicationName, WebDBGenerateOptions.Override);
 
 clipboard
 
@@ -23163,8 +23163,8 @@ You can use the TIA Portal Openness to generate blocks/ udts under user specific
 
 Method name with signature
 
-- Public IList<IEngineeringObject> PlcExternalSource.GenerateBlocksFromSource(PlcBlockUserGroup blockuserGroup, GenerateBlockOption generateBlockOption)
-- Public IList<IEngineeringObject> PlcExternalSource.GenerateBlocksFromSource(PlcBlockUserGroup blockuserGroup, GenerateBlockOption generateBlockOption)
+- Public IList&lt;IEngineeringObject&gt; PlcExternalSource.GenerateBlocksFromSource(PlcBlockUserGroup blockuserGroup, GenerateBlockOption generateBlockOption)
+- Public IList&lt;IEngineeringObject&gt; PlcExternalSource.GenerateBlocksFromSource(PlcBlockUserGroup blockuserGroup, GenerateBlockOption generateBlockOption)
 
 ###### Program code:Generation of blocks from source under specific user groups
 
@@ -23248,7 +23248,7 @@ The GenerateLoadable() accepts the following parameters to generate a loadable f
 | Parameter name | Data type | Description | Note |
 | --- | --- | --- | --- |
 | path | FileInfo | Specifies the name and the storage location for the loadable file | Already existing loadable files cannot be replaced and the containing directory cannot be created. |
-| blocks | System.Collections.Generic.IEnumerable<Siemens.Engineering.SW.Blocks.PlcBlock> | Specifies the list of program blocks outside of software units to generate the loadable file from |  |
+| blocks | System.Collections.Generic.IEnumerable&lt;Siemens.Engineering.SW.Blocks.PlcBlock&gt; | Specifies the list of program blocks outside of software units to generate the loadable file from |  |
 | targetOption | Siemens.Engineering.SW.Loader.TargetOption | Specifies whether the loadable file is to be created for a real PLC or for a simulated PLC | If TargetOption.PlcSim is passed, all blocks must have been compiled with simulation support |
 
 The TargetOption parameter uses the following enum values to generate a loadable file:
@@ -23273,7 +23273,7 @@ PlcSoftware plc = GetPlc();
 
 // The GetService() will return null if the PLC is not supported.
 
-var loadableProviderService = plc.GetService<LoadableProvider>();
+var loadableProviderService = plc.GetService&lt;LoadableProvider&gt;();
 
 // Create a variable file with name "file" to access the loadable path
 
@@ -23283,7 +23283,7 @@ var file = new FileInfo(loadablePath);
 
 // from the non-software unit program.
 
-var blocks = new List<PlcBlock>
+var blocks = new List&lt;PlcBlock&gt;
 
 {
 
@@ -24083,7 +24083,7 @@ This section contains information on the following topics:
 - [Publishing software unit object](#publishing-software-unit-object)
 - [Adding external sources in units](#adding-external-sources-in-units)
 - [Units as mastercopies](#units-as-mastercopies)
-- [Updating existing relations & create/delete relations](#updating-existing-relations-createdelete-relations)
+- [Updating existing relations &amp; create/delete relations](#updating-existing-relations-createdelete-relations)
 - [Accessing namespaces for software units](#accessing-namespaces-for-software-units)
 - [Accessing namespaces for program blocks](#accessing-namespaces-for-program-blocks)
 - [Accessing namespaces for UDT](#accessing-namespaces-for-udt)
@@ -24117,7 +24117,7 @@ You can access the below attribute and method for Openness unit properties:
 | --- | --- |
 | Export | void |
 | Delete | void |
-| GetAttributes | IList<object> |
+| GetAttributes | IList&lt;object&gt; |
 | SetAttributes | void |
 
 On the PlcUnit, You can iterate through the following objects:
@@ -24209,13 +24209,13 @@ else
 
 {
 
-SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)deviceItem).GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)deviceItem).GetService&lt;SoftwareContainer&gt;();
 
 PlcSoftware software = softwareContainer.Software as PlcSoftware;
 
 //Find the SoftwareUnit
 
-PlcUnitProvider plcUnitProvider = software.GetService<PlcUnitProvider>();
+PlcUnitProvider plcUnitProvider = software.GetService&lt;PlcUnitProvider&gt;();
 
 plcUnit = plcUnitProvider.UnitGroup.Units.Find(plcUnitName);
 
@@ -24227,7 +24227,7 @@ if (plcUnit != null)
 
 UnitAccessType att = readBlockAttribute(plcUnit);
 
-IList<object> atts = readBlockAttributeList(plcUnit);
+IList&lt;object&gt; atts = readBlockAttributeList(plcUnit);
 
 }
 
@@ -24404,11 +24404,11 @@ unit1.Name = "Unit1_new";
 
 //Using SetAttributes():
 
-var attrList = new List<KeyValuePair<string, object>>()
+var attrList = new List&lt;KeyValuePair&lt;string, object&gt;&gt;()
 
 {
 
-new KeyValuePair<string, object>("Name", "Unit2_new")
+new KeyValuePair&lt;string, object&gt;("Name", "Unit2_new")
 
 };
 
@@ -24826,11 +24826,11 @@ unit1.Author = newAuthor;
 
 //Using SetAttributes()
 
-var attrList = new List<KeyValuePair<string,　object>>()
+var attrList = new List&lt;KeyValuePair&lt;string,　object&gt;&gt;()
 
 {
 
-new KeyValuePair<string, object>("Author", newAuthor)
+new KeyValuePair&lt;string, object&gt;("Author", newAuthor)
 
 };
 
@@ -25001,7 +25001,7 @@ UnitAccessType currentAccessValue = (UnitAccessType)block.GetAttribute("Access")
 
 PlcBlock block = plcUnit.BlockGroup.Block.Find(blockName);
 
-List<string> attrList = new List<string>();
+List&lt;string&gt; attrList = new List&lt;string&gt;();
 
 {
 
@@ -25009,7 +25009,7 @@ List<string> attrList = new List<string>();
 
 };
 
-IList<object> getAttributeValues = block.GetAttributes(attrList));
+IList&lt;object&gt; getAttributeValues = block.GetAttributes(attrList));
 
 …
 
@@ -25033,11 +25033,11 @@ PlcBlock block = plcUnit.BlockGroup.Blocks.Find(blockName);
 
 UnitAccessType newAccessValue = UnitAccessType.Published;
 
-IList attrList = new List<KeyValuePair<string, object>>()
+IList attrList = new List&lt;KeyValuePair&lt;string, object&gt;&gt;()
 
 {
 
-new KeyValuePair<string, object>("Access", newAccessValue),
+new KeyValuePair&lt;string, object&gt;("Access", newAccessValue),
 
 };
 
@@ -25065,7 +25065,7 @@ UnitAccessType currentAccessValue = (UnitAccessType)type.GetAttribute("Access");
 
 PlcType type = m_PlcUnit.TypeGroup.Types.Find(typeName);
 
-List<string> attrList = new　List<string>()
+List&lt;string&gt; attrList = new　List&lt;string&gt;()
 
 {
 
@@ -25073,7 +25073,7 @@ List<string> attrList = new　List<string>()
 
 };
 
-IList<object> getAttributeValues = type.GetAttributes(attrList));
+IList&lt;object&gt; getAttributeValues = type.GetAttributes(attrList));
 
 //Setting attribute value with SetAttribute
 
@@ -25089,11 +25089,11 @@ PlcType type = m_PlcUnit.TypeGroup.Types.Find(typeName);
 
 UnitAccessType newAccessValue = UnitAccessType.Published;
 
-IList attrList = new List<KeyValuePair<string, object>>()
+IList attrList = new List&lt;KeyValuePair&lt;string, object&gt;&gt;()
 
 {
 
-new KeyValuePair<string, object>("Access", newAccessValue),
+new KeyValuePair&lt;string, object&gt;("Access", newAccessValue),
 
 };
 
@@ -25162,17 +25162,17 @@ clipboard
 
 Modify the following program code to generate blocks / UDT with collection of blocks get generated from an external source under a software unit:
 
-private static IList<IEngineeringObject> GenerateBlocksFromSource(PlcExternalSource unitExternalSource)
+private static IList&lt;IEngineeringObject&gt; GenerateBlocksFromSource(PlcExternalSource unitExternalSource)
 
 {
 
 // Blocks/UDTs gets generated only if there are no compilation errors
 
-IList<IEngineeringObject> generatedBlocksUnderUnitList = unitExternalSource.GenerateBlocksFromSource(GenerateBlockOption.None);
+IList&lt;IEngineeringObject&gt; generatedBlocksUnderUnitList = unitExternalSource.GenerateBlocksFromSource(GenerateBlockOption.None);
 
 // Blocks/UDTs will be generated regardless of any compilation errors
 
-IList<IEngineeringObject> generatedBlocksUnderUnitList = unitExternalSource.GenerateBlocksFromSource(GenerateBlockOption.KeepOnError);
+IList&lt;IEngineeringObject&gt; generatedBlocksUnderUnitList = unitExternalSource.GenerateBlocksFromSource(GenerateBlockOption.KeepOnError);
 
 }
 
@@ -25274,7 +25274,7 @@ private void IMasterCopySource CreateUnitAsMastercopyInProjectLibrary(PlcUnitPro
 
 {
 
-PlcUnitProvider m_UnitProvider = plc.GetService<PlcUnitProvider>();
+PlcUnitProvider m_UnitProvider = plc.GetService&lt;PlcUnitProvider&gt;();
 
 PlcUnitComposition m_UnitComposition = m_UnitProvider.UnitGroup.Units;
 
@@ -25352,7 +25352,7 @@ private void RecreateUnitFromProjectLibrary(Project project, PlcSoftware softwar
 
 ProjectLibrary m_ProjectLibrary = project.ProjectLibrary;
 
-PlcUnitProvider m_UnitProvider = software.GetService<PlcUnitProvider>();
+PlcUnitProvider m_UnitProvider = software.GetService&lt;PlcUnitProvider&gt;();
 
 PlcUnitComposition m_UnitComposition = m_UnitProvider.UnitGroup.Units;
 
@@ -25421,7 +25421,7 @@ private PlcUnitRelation m_TODBRelation;
 
 //...
 
-PlcUnitProvider plcUnitProvider = plcTarget.GetService<PlcUnitProvider>();
+PlcUnitProvider plcUnitProvider = plcTarget.GetService&lt;PlcUnitProvider&gt;();
 
 m_PlcUnit = plcUnitProvider.UnitGroup.Units[0]; //assuming existing units
 
@@ -25693,11 +25693,11 @@ private void ModifyingUnitRelation(PlcUnitRelation　m_Relation)
 
 // ...
 
-IList attrList = new List<KeyValuePair<string, object>>();
+IList attrList = new List&lt;KeyValuePair&lt;string, object&gt;&gt;();
 
 {
 
-new KeyValuePair<string, object("RelatedObject", "Unit_4")
+new KeyValuePair&lt;string, object("RelatedObject", "Unit_4")
 
 };
 
@@ -25882,45 +25882,45 @@ clipboard
 
 ###### Namespace attribute in SimaticML
 
-</Sections></Interface>
+&lt;/Sections&gt;&lt;/Interface&gt;
 
-<IsIECCheckEnabled>false</IsIECCheckEnabled>
+&lt;IsIECCheckEnabled&gt;false&lt;/IsIECCheckEnabled&gt;
 
-<Name>Block_l</Name>
+&lt;Name&gt;Block_l&lt;/Name&gt;
 
-<Namespace>Siemens.Simatic</Namespace>
+&lt;Namespace&gt;Siemens.Simatic&lt;/Namespace&gt;
 
-<Number>l</Number>
+&lt;Number&gt;l&lt;/Number&gt;
 
-<ProgrammingLanguage>LAD</ProgrammingLanguage>
+&lt;ProgrammingLanguage&gt;LAD&lt;/ProgrammingLanguage&gt;
 
-<SetENOAutomatically>false</SetENOAutomatically>
+&lt;SetENOAutomatically&gt;false&lt;/SetENOAutomatically&gt;
 
-<UDABlockProperties/>
+&lt;UDABlockProperties/&gt;
 
-<UDAEnableTagReadback>false</UDAEnableTagReadback>
+&lt;UDAEnableTagReadback&gt;false&lt;/UDAEnableTagReadback&gt;
 
-</AttributeList>
+&lt;/AttributeList&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<MultilingualText ID="l" CompositionName="Comment">
+&lt;MultilingualText ID="l" CompositionName="Comment"&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<MultilingualTextitem ID="2" CompositionName=":Items">
+&lt;MultilingualTextitem ID="2" CompositionName=":Items"&gt;
 
-<AttributeList>
+&lt;AttributeList&gt;
 
-<Culture>en-US</Culture>
+&lt;Culture&gt;en-US&lt;/Culture&gt;
 
-<Text/>
+&lt;Text/&gt;
 
-</AttributeList>
+&lt;/AttributeList&gt;
 
-</MultilingualTextItem>
+&lt;/MultilingualTextItem&gt;
 
-</ObjectList>
+&lt;/ObjectList&gt;
 
 clipboard
 
@@ -25973,137 +25973,137 @@ clipboard
 
 ###### Namespace attribute in SimaticML
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<Document>
+&lt;Document&gt;
 
-<Engineering version="V18" />
+&lt;Engineering version="V18" /&gt;
 
-<DocumentInfo>
+&lt;DocumentInfo&gt;
 
-<Created>2022-08-03T05:28:40.722228Z</Created>
+&lt;Created&gt;2022-08-03T05:28:40.722228Z&lt;/Created&gt;
 
-<ExportSetting>None</ExportSetting>
+&lt;ExportSetting&gt;None&lt;/ExportSetting&gt;
 
-<InstalledProducts>
+&lt;InstalledProducts&gt;
 
-<Product>
+&lt;Product&gt;
 
-<DisplayName>Totally Integrated Automation Portal</DisplayName>
+&lt;DisplayName&gt;Totally Integrated Automation Portal&lt;/DisplayName&gt;
 
-<DisplayVersion>V18</DisplayVersion>
+&lt;DisplayVersion&gt;V18&lt;/DisplayVersion&gt;
 
-</Product>
+&lt;/Product&gt;
 
-<OptionPackage>
+&lt;OptionPackage&gt;
 
-<DisplayName>TIA Portal Version Control Interface</DisplayName>
+&lt;DisplayName&gt;TIA Portal Version Control Interface&lt;/DisplayName&gt;
 
-<DisplayVersion>V18</DisplayVersion>
+&lt;DisplayVersion&gt;V18&lt;/DisplayVersion&gt;
 
-</OptionPackage>
+&lt;/OptionPackage&gt;
 
-<Product>
+&lt;Product&gt;
 
-<DisplayName>Feature Cycle 2 TIA Portal</DisplayName>
+&lt;DisplayName&gt;Feature Cycle 2 TIA Portal&lt;/DisplayName&gt;
 
-<DisplayVersion>V18</DisplayVersion></Product>
+&lt;DisplayVersion&gt;V18&lt;/DisplayVersion&gt;&lt;/Product&gt;
 
-<Product>
+&lt;Product&gt;
 
-<DisplayName>Feature Cycle 5 TIA Portal</DisplayName>
+&lt;DisplayName&gt;Feature Cycle 5 TIA Portal&lt;/DisplayName&gt;
 
-<DisplayVersion>V18</DisplayVersion>
+&lt;DisplayVersion&gt;V18&lt;/DisplayVersion&gt;
 
-</Product>
+&lt;/Product&gt;
 
-<Product>
+&lt;Product&gt;
 
-<DisplayName>STEP 7 Professional</DisplayName>
+&lt;DisplayName&gt;STEP 7 Professional&lt;/DisplayName&gt;
 
-<DisplayVersion>V18</DisplayVersion>
+&lt;DisplayVersion&gt;V18&lt;/DisplayVersion&gt;
 
-</Product>
+&lt;/Product&gt;
 
-<OptionPackage>
+&lt;OptionPackage&gt;
 
-<DisplayName>STEP 7 Safety</DisplayName>
+&lt;DisplayName&gt;STEP 7 Safety&lt;/DisplayName&gt;
 
-<DisplayVersion>V18</DisplayVersion>
+&lt;DisplayVersion&gt;V18&lt;/DisplayVersion&gt;
 
-</OptionPackage>
+&lt;/OptionPackage&gt;
 
-</InstalledProducts>
+&lt;/InstalledProducts&gt;
 
-</DocumentInfo>
+&lt;/DocumentInfo&gt;
 
-<SW.Types.PlcStruct ID="0">
+&lt;SW.Types.PlcStruct ID="0"&gt;
 
-<AttributeList>
+&lt;AttributeList&gt;
 
-<Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+&lt;Interface&gt;&lt;Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5"&gt;
 
-<Section Name="None">
+&lt;Section Name="None"&gt;
 
-<Member Name="Element_1" Datatype="Bool" />
+&lt;Member Name="Element_1" Datatype="Bool" /&gt;
 
-</Section>
+&lt;/Section&gt;
 
-</Sections></Interface>
+&lt;/Sections&gt;&lt;/Interface&gt;
 
-<Name>UDT_1</Name>
+&lt;Name&gt;UDT_1&lt;/Name&gt;
 
-<Namespace>Siemens</Namespace>
+&lt;Namespace&gt;Siemens&lt;/Namespace&gt;
 
-</AttributeList>
+&lt;/AttributeList&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<MultilingualText ID="1" CompositionName="Comment">
+&lt;MultilingualText ID="1" CompositionName="Comment"&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<MultilingualTextItem ID="2" CompositionName="Items">
+&lt;MultilingualTextItem ID="2" CompositionName="Items"&gt;
 
-<AttributeList>
+&lt;AttributeList&gt;
 
-<Culture>en-US</Culture>
+&lt;Culture&gt;en-US&lt;/Culture&gt;
 
-<Text />
+&lt;Text /&gt;
 
-</AttributeList>
+&lt;/AttributeList&gt;
 
-</MultilingualTextItem>
+&lt;/MultilingualTextItem&gt;
 
-</ObjectList>
+&lt;/ObjectList&gt;
 
-</MultilingualText>
+&lt;/MultilingualText&gt;
 
-<MultilingualText ID="3" CompositionName="Title">
+&lt;MultilingualText ID="3" CompositionName="Title"&gt;
 
-<ObjectList>
+&lt;ObjectList&gt;
 
-<MultilingualTextItem ID="4" CompositionName="Items">
+&lt;MultilingualTextItem ID="4" CompositionName="Items"&gt;
 
-<AttributeList>
+&lt;AttributeList&gt;
 
-<Culture>en-US</Culture>
+&lt;Culture&gt;en-US&lt;/Culture&gt;
 
-<Text />
+&lt;Text /&gt;
 
-</AttributeList>
+&lt;/AttributeList&gt;
 
-</MultilingualTextItem>
+&lt;/MultilingualTextItem&gt;
 
-</ObjectList>
+&lt;/ObjectList&gt;
 
-</MultilingualText>
+&lt;/MultilingualText&gt;
 
-</ObjectList>
+&lt;/ObjectList&gt;
 
-</SW.Types.PlcStruct>
+&lt;/SW.Types.PlcStruct&gt;
 
-</Document>
+&lt;/Document&gt;
 
 clipboard
 
@@ -26152,7 +26152,7 @@ The GenerateLoadable() accepts the following parameters to generate a loadable f
 | Parameter name | Data type | Description | Note |
 | --- | --- | --- | --- |
 | path | FileInfo | Specifies the name  and the storage location for the loadable file | Already existing loadable files cannot be replaced and the containing directory cannot be created. |
-| units | System.Collections.Generic.IEnumerable<Siemens.Engineering.SW.Units.PlcUnit> | Specifies the software units that are to be included in the loadable file | The PlcProgramLoader V1.0 supports the download of a single software unit only. |
+| units | System.Collections.Generic.IEnumerable&lt;Siemens.Engineering.SW.Units.PlcUnit&gt; | Specifies the software units that are to be included in the loadable file | The PlcProgramLoader V1.0 supports the download of a single software unit only. |
 | targetOption | Siemens.Engineering.SW.Loader.TargetOption | Specifies whether the loadable file is to be created for a real PLC or for a simulated PLC | If TargetOption.PlcSim is passed, all blocks must have been compiled with simulation support |
 
 The TargetOption parameter uses the following enum values to generate a loadable file:
@@ -26173,7 +26173,7 @@ private void GenerateLoadableFileSoftwareUnit(string loadablePath)
 
 PlcSoftware plc = GetPlc();
 
-var loadableProviderService = plc.GetService<LoadableProvider>();
+var loadableProviderService = plc.GetService&lt;LoadableProvider&gt;();
 
 // Create a variable with name "file" to access the loadable path
 
@@ -26183,11 +26183,11 @@ var file = new FileInfo(loadablePath);
 
 // the GetService() with the PlcUnitProvider type.
 
-var unitProvider = plc.GetService<PlcUnitProvider>();
+var unitProvider = plc.GetService&lt;PlcUnitProvider&gt;();
 
 // Create a variable with name "units" for a list of software units.
 
-var units = new List<PlcUnit>
+var units = new List&lt;PlcUnit&gt;
 
 {
 
@@ -26370,7 +26370,7 @@ private static void Main(string[] args)
 
 // Generate default fail-safe program under PLC:
 
-GlobalSettings globalSettingsService = myTiaPortal.GetService<GlobalSettings>();
+GlobalSettings globalSettingsService = myTiaPortal.GetService&lt;GlobalSettings&gt;();
 
 // Get the value
 
@@ -26382,7 +26382,7 @@ globalSettingsService.GenerationOfDefaultFailsafeProgram(true);
 
 // Generate fail-safe program under SafetyUnit environment
 
-GlobalSettings globalSettingsService = myTiaPortal.GetService<GlobalSettings>();
+GlobalSettings globalSettingsService = myTiaPortal.GetService&lt;GlobalSettings&gt;();
 
 // Get the value
 
@@ -26493,7 +26493,7 @@ private static void Main(string[] args)
 
 {
 
-var plcUnitProvider = plcSoftware.GetService<PlcUnitProvider>();
+var plcUnitProvider = plcSoftware.GetService&lt;PlcUnitProvider&gt;();
 
 PlcSafetyUnit safetyUnit = plcUnitProvider.UnitGroup.SafetyUnits.Find("SafetyUnit");
 
@@ -26596,7 +26596,7 @@ private static void Main(string[] args)
 
 PlcSoftware plcSoftware = ...;
 
-var plcUnitProvider = plcSoftware.GetService<PlcUnitProvider>();
+var plcUnitProvider = plcSoftware.GetService&lt;PlcUnitProvider&gt;();
 
 var safetyUnit = plcUnitProvider.UnitGroup.SafetyUnits.Find("SafetyUnit");
 
@@ -26637,7 +26637,7 @@ You can use the TIA Portal Openness to create, delete, access, update, and publi
 
 Modify the following program code to create and access safety unit tags:
 
-PlcUnitProvider plcUnitProvider = sw.GetService<PlcUnitProvider>();
+PlcUnitProvider plcUnitProvider = sw.GetService&lt;PlcUnitProvider&gt;();
 
 PlcSafetyUnit safetyUnit = plcUnitProvider.UnitGroup.SafetyUnits.Find("SafetyUnit");
 
@@ -26741,7 +26741,7 @@ private static void Main(string[] args)
 
 // To create and access safety unit tags
 
-PlcUnitProvider plcUnitProvider = sw.GetService<PlcUnitProvider>();
+PlcUnitProvider plcUnitProvider = sw.GetService&lt;PlcUnitProvider&gt;();
 
 PlcSafetyUnit safetyUnit = plcUnitProvider.UnitGroup.SafetyUnits.Find("SafetyUnit");
 
@@ -26880,7 +26880,7 @@ PlcSafetyUnit safetyUnit = ...;
 
 var proDiagBlock = safetyUnit.BlockGroup.Blocks.CreateFB("Block_1", true, 1, ProgrammingLanguage.ProDiag);
 
-var proDiagSupervisionProvider = proDiagBlock.GetService<SupervisionProvider>();
+var proDiagSupervisionProvider = proDiagBlock.GetService&lt;SupervisionProvider&gt;();
 
 var superVisionResult = proDiagSupervisionProvider.ExportSupervisionsToXlsx(new FileInfo(filePath));
 
@@ -26892,7 +26892,7 @@ var superVisionResult = proDiagSupervisionProvider.ImportSupervisionsFromXlsx(ne
 
 // Export from global supervision provider.
 
-var globalSupervisionProvider = safetyUnit.GetService<SupervisionProvider>();
+var globalSupervisionProvider = safetyUnit.GetService&lt;SupervisionProvider&gt;();
 
 var superVisionResult = globalSupervisionProvider.ExportSupervisionsToXlsx(new FileInfo(filePath));
 
@@ -27177,7 +27177,7 @@ ScreenUserFolder folder = hmitarget.ScreenFolder.Folders.Find("myScreenFolder");
 
 ScreenComposition screens = folder.Screens;
 
-List<Screen> list = new List<Screen>();
+List&lt;Screen&gt; list = new List&lt;Screen&gt;();
 
 foreach(Screen screen in screens)
 
@@ -27631,7 +27631,7 @@ public void function01()
 
 Siemens.Engineering.Project project = tiaPortal.Projects[0];
 
-Siemens.Engineering.VersionControl.VersionControlInterface versionControlInterface = project.GetService<VersionControlInterface>();
+Siemens.Engineering.VersionControl.VersionControlInterface versionControlInterface = project.GetService&lt;VersionControlInterface&gt;();
 
 Siemens.Engineering.VersionControl.WorkspaceSystemGroup workspaceSystemGroup = versionControlInterface.WorkspaceGroup;
 
@@ -27703,7 +27703,7 @@ Project project = ...;
 
 //Creating VCI user group in VCI group
 
-VersionControlInterface versionControlInterface = project.GetService<VersionControlInterface>();
+VersionControlInterface versionControlInterface = project.GetService&lt;VersionControlInterface&gt;();
 
 WorkspaceSystemGroup workspaceGroupComposition = versionControlInterface.WorkspaceGroup;
 
@@ -27840,7 +27840,7 @@ WorkspaceUserGroup workspaceUserGroup = ...;
 
 //Creating VCI workspace in VCI group
 
-VersionControlInterface versionControlInterface = project.GetService<VersionControlInterface>();
+VersionControlInterface versionControlInterface = project.GetService&lt;VersionControlInterface&gt;();
 
 WorkspaceComposition workspaceComposition = versionControlInterface.WorkspaceGroup.Workspaces;
 
@@ -28088,7 +28088,7 @@ You can view status, update status and synchronize status of individual objects 
 
 It is recommended to perform a null check before invoking the actions on individual object synchronization service as that mapping may or may not support individual object synchronization.
 
-var individualObjectSynchronizationStatus = workpaceMapping.GetService<IndividualObjectSynchronizationStatus>();
+var individualObjectSynchronizationStatus = workpaceMapping.GetService&lt;IndividualObjectSynchronizationStatus&gt;();
 
 **if**(individualObjectSynchronizationStatus != **null**);
 
@@ -28164,7 +28164,7 @@ Modify the following program code to get the status of a workspace mapping:
 
 var workspaceMapping = ...;
 
-var individualObjectSynchronizationStatus = workpaceMapping.GetService<IndividualObjectSynchronizationStatus>();
+var individualObjectSynchronizationStatus = workpaceMapping.GetService&lt;IndividualObjectSynchronizationStatus&gt;();
 
 if(individualObjectSynchronizationStatus != null)
 
@@ -28212,7 +28212,7 @@ Modify the following program code to update the status of a workspace mapping:
 
 var workspaceMapping = ...;
 
-var individualObjectSynchronizationStatus = workpaceMapping.GetService<IndividualObjectSynchronizationStatus>();
+var individualObjectSynchronizationStatus = workpaceMapping.GetService&lt;IndividualObjectSynchronizationStatus&gt;();
 
 if(individualObjectSynchronizationStatus != Null)
 
@@ -28248,7 +28248,7 @@ Modify the following program code to synchronize a workspace:
 
 var workspaceMapping = ...;
 
-var individualObjectSynchronizationStatus = workpaceMapping.GetService<IndividualObjectSynchronizationStatus>();
+var individualObjectSynchronizationStatus = workpaceMapping.GetService&lt;IndividualObjectSynchronizationStatus&gt;();
 
 if(individualObjectSynchronizationStatus != null)
 
@@ -28277,7 +28277,7 @@ You can use the TIA Portal Openness to get the synchronization status of the chi
 
 | Method Name | Description |
 | --- | --- |
-| GetService<ChildObjectsStateProvider>() | Returns the ChildObjectsStateProvider service object from workspace mapping on the object which has one or more VCI enabled child objects. |
+| GetService&lt;ChildObjectsStateProvider&gt;() | Returns the ChildObjectsStateProvider service object from workspace mapping on the object which has one or more VCI enabled child objects. |
 
 The ChildObjectStateProvider object provides the following method to view the synchronization status of child objects.
 
@@ -28300,7 +28300,7 @@ var workspaceMapping = ...;
 
 //To get the ChildObjectStateProvider object from the worksspace mapping that contains the child of hierarchial objects.
 
-var childObjectsStateProvider = workpaceMapping.GetService<ChildObjectsStateProvider>();
+var childObjectsStateProvider = workpaceMapping.GetService&lt;ChildObjectsStateProvider&gt;();
 
 //To perform null check before invoking the actions on child object synchronization service as the mapping may or may not support child objects synchronization.
 
@@ -28446,7 +28446,7 @@ The EngineeringTargetInvocationException exception will be thrown when the VCI s
 
 var workspaceMapping=...;
 
-var individualObjectSynchronizationStatus = workpaceMapping.GetService<IndividualObjectSynchronizationStatus>();
+var individualObjectSynchronizationStatus = workpaceMapping.GetService&lt;IndividualObjectSynchronizationStatus&gt;();
 
 if (individualObjectSynchronizationStatus != null)
 
@@ -28605,7 +28605,7 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
 projectServer.SetProtocol(Protocol.Http);
 
@@ -28640,7 +28640,7 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
 projectServer.DeleteConnection();
 
@@ -28679,7 +28679,7 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
 // The project server has ServerName property, referred to the "alias" assigned as the name for the project server is used as an
 
@@ -28730,7 +28730,7 @@ string aliasName = "ProjectServer1";
 
 FileInfo projectFileInfo = new FileInfo("C:\\Projects\\Project1\\Project1.ap17");
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
 projectServer.AddProjectToServer(projectFileInfo);
 
@@ -28747,7 +28747,7 @@ clipboard
 
 ##### Application
 
-You can use the GetServerProjects() to get a list of available server projects info on the project server. The GetServerProjects() returns IEnumerable<ServerProjectInfo>.
+You can use the GetServerProjects() to get a list of available server projects info on the project server. The GetServerProjects() returns IEnumerable&lt;ServerProjectInfo&gt;.
 
 You can use this information to perform operations such as:
 
@@ -28820,9 +28820,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects()
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects()
 
 }
 
@@ -28855,7 +28855,7 @@ You can use the GetLocalSessions() to get a list of available session informatio
 
 You can use the information to perform further operations such as opening or deleting the local session.
 
-The GetLocalSessions() returns IEnumerable<ServerProjectInfo> and has serverProjectInfo parameter, whose data type is ServerProjectInfo.
+The GetLocalSessions() returns IEnumerable&lt;ServerProjectInfo&gt; and has serverProjectInfo parameter, whose data type is ServerProjectInfo.
 
 ##### Program code
 
@@ -28863,11 +28863,11 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
-IEnumerable<LocalSessionInfo> localSessionsInfo = projectServer.GetLocalSessions(serverProjectInfo[0]);
+IEnumerable&lt;LocalSessionInfo&gt; localSessionsInfo = projectServer.GetLocalSessions(serverProjectInfo[0]);
 
 clipboard
 
@@ -28905,9 +28905,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 stringaliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 stringlocalSessionName = "testLocalSessionName";
 
@@ -28944,9 +28944,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -28994,9 +28994,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -29041,9 +29041,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -29065,9 +29065,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -29106,9 +29106,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -29195,7 +29195,7 @@ if(markStateInfo.MarkState.HasFlag(MarkState.IsMarkedByOthers))
 
 //Example for Checkin without conflicts
 
-if(markStateInfo.MarkState.HasFlag(MarkState.IsUptoDate) && markStateInfo.MarkState.HasFlag(MarkState.IsMarkedByMe) && !markStateInfo.MarkState.HasFlag(MarkState.IsMarkedByOthers))
+if(markStateInfo.MarkState.HasFlag(MarkState.IsUptoDate) &amp;&amp; markStateInfo.MarkState.HasFlag(MarkState.IsMarkedByMe) &amp;&amp; !markStateInfo.MarkState.HasFlag(MarkState.IsMarkedByOthers))
 
 {
 
@@ -29244,9 +29244,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -29266,9 +29266,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "serverAliasName";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "ProjectServer1";
 
@@ -29288,9 +29288,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -29327,9 +29327,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -29353,9 +29353,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -29390,9 +29390,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 LockStateProvider lockStateProvider = projectServer.GetLockStateProvider(serverProjectInfo[0]);
 
@@ -29417,9 +29417,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a => a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a =&gt; a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 LockStateProvider lockStateProvider = projectServer.GetLockStateProvider(serverProjectInfo[0]);
 
@@ -29446,9 +29446,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a=>a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a=&gt;a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 LockStateProvider lockStateProvider = projectServer.GetLockStateProvider(serverProjectInfo[0]);
 
@@ -29481,9 +29481,9 @@ TiaPortal tiaPortal = new TiaPortal();
 
 string aliasName = "ProjectServer1";
 
-ProjectServer projectServer = tiaPortal.ProjectServers.First(a => a.ServerName.Equals(aliasName));
+ProjectServer projectServer = tiaPortal.ProjectServers.First(a =&gt; a.ServerName.Equals(aliasName));
 
-IEnumerable<ServerProjectInfo> serverProjectInfo = projectServer.GetServerProjects();
+IEnumerable&lt;ServerProjectInfo&gt; serverProjectInfo = projectServer.GetServerProjects();
 
 string localSessionName = "testLocalSessionName";
 
@@ -29615,7 +29615,7 @@ if (!string.IsNullOrEmpty(value))
 
 {
 
-for (int i = 0; i < value.Length; i++)
+for (int i = 0; i &lt; value.Length; i++)
 
 {
 
@@ -29683,7 +29683,7 @@ if (!string.IsNullOrEmpty(value))
 
 {
 
-for (int i = 0; i < value.Length; i++)
+for (int i = 0; i &lt; value.Length; i++)
 
 {
 
@@ -29703,7 +29703,7 @@ Project tiaProject = ...;
 
 tiaProject.protectProject("Admin123", ToSecureSting("Admin123"));// see fucntion GetSecureString
 
-UmacConfigurator UmacConfiguratorService = tiaProject.GetService<UmacConfigurator>();
+UmacConfigurator UmacConfiguratorService = tiaProject.GetService&lt;UmacConfigurator&gt;();
 
 //Retrieving Engineering function Rights. Returned list will be empty if called in non-protected mode
 
@@ -29781,7 +29781,7 @@ Device device = ...;
 
 Project project = ...;
 
-var umacDevice = device.GetService<UmacDevice>();
+var umacDevice = device.GetService&lt;UmacDevice&gt;();
 
 // Get available system and custom device function rights in the project
 
@@ -29805,7 +29805,7 @@ identifier = deviceFunctionRight.Identifier;
 
 // Retrieve the UmacConfiguratorService from project
 
-UmacConfigurator umacConfiguratorService = project.GetService<UmacConfigurator>();
+UmacConfigurator umacConfiguratorService = project.GetService&lt;UmacConfigurator&gt;();
 
 // Get all custom device function rights in the project
 
@@ -29871,9 +29871,9 @@ Project project = ...;
 
 Device device = ...;
 
-UmacConfigurator umacConfiguratorService = project.GetService<UmacConfigurator>();
+UmacConfigurator umacConfiguratorService = project.GetService&lt;UmacConfigurator&gt;();
 
-var umacDevice = device.GetService<UmacDevice>();
+var umacDevice = device.GetService&lt;UmacDevice&gt;();
 
 //Retrieve all system role
 
@@ -29895,7 +29895,7 @@ SystemRole systemRole = systemRoles.Find("SystemRole_01");
 
 //Retrieve assigned System Device Function Rights from system role
 
-IList<SystemDeviceFunctionRight> assignedSystemDeviceFunctionRights =(IList<SystemDeviceFunctionRight>)systemRole.
+IList&lt;SystemDeviceFunctionRight&gt; assignedSystemDeviceFunctionRights =(IList&lt;SystemDeviceFunctionRight&gt;)systemRole.
 
 GetAssignedSystemDeviceFunctionRights(umacDevice);
 
@@ -29944,7 +29944,7 @@ TiaPortal tiaPortal = new TiaPortal();
 
 Project tiaProject = tiaPortal.Projects[0];
 
-UmacConfigurator UmacConfiguratorService = tiaProject.GetService<UmacConfigurator>();
+UmacConfigurator UmacConfiguratorService = tiaProject.GetService&lt;UmacConfigurator&gt;();
 
 // Retrieve custom roles in project
 
@@ -29954,7 +29954,7 @@ var customRoles = UmacConfiguratorService.CustomRoles;
 
 CustomRole newCustomRole = customRoles.Create("Role_1", "some comment");
 
-// Iterate through custom roles & edit it
+// Iterate through custom roles &amp; edit it
 
 foreach (CustomRole customRole in customRoles)
 
@@ -30004,7 +30004,7 @@ customRole.AssignedEngineeringRights.Remove(engineeringFunctionRight);
 
 Device device = ...;
 
-var umacDevice = device.GetService<UmacDevice>();
+var umacDevice = device.GetService&lt;UmacDevice&gt;();
 
 var deviceFunctionRightsAssociation = umacDevice.AvailableDeviceFunctionRights;
 
@@ -30081,7 +30081,7 @@ if (!string.IsNullOrEmpty(value))
 
 {
 
-for (int i = 0; i < value.Length; i++)
+for (int i = 0; i &lt; value.Length; i++)
 
 {
 
@@ -30113,7 +30113,7 @@ private static void projectUser()
 
 Project project = ...;
 
-UmacConfigurator UmacConfiguratorService = project.GetService<UmacConfigurator>();
+UmacConfigurator UmacConfiguratorService = project.GetService&lt;UmacConfigurator&gt;();
 
 //Retrieve custom roles in project
 
@@ -30259,7 +30259,7 @@ if (!string.IsNullOrEmpty(value))
 
 {
 
-for (int i = 0; i < value.Length; i++)
+for (int i = 0; i &lt; value.Length; i++)
 
 {
 
@@ -30277,7 +30277,7 @@ clipboard
 
 Project project = ...;
 
-var umcServerConfigurator = project.GetService<UmcServerConfigurator>();
+var umcServerConfigurator = project.GetService&lt;UmcServerConfigurator&gt;();
 
 UmcServer umcServer = umcServerConfigurator.UmcServer;
 
@@ -30322,7 +30322,7 @@ When the GetUserGroupByName ( ) method is triggered, the event call back trigger
 
 Project project = ...;
 
-var umcServerConfigurator = project.GetService<UmcServerConfigurator>();
+var umcServerConfigurator = project.GetService&lt;UmcServerConfigurator&gt;();
 
 UmcServer umcServer = umcServerConfigurator.UmcServer;
 
@@ -30353,7 +30353,7 @@ When the GetUserByName( ) method is triggered, the event call back triggers for 
 
 Project project = ...;
 
-var umcServerConfigurator = project.GetService<UmcServerConfigurator>();
+var umcServerConfigurator = project.GetService&lt;UmcServerConfigurator&gt;();
 
 UmcServer umcServer = umcServerConfigurator.UmcServer;
 
@@ -30385,9 +30385,9 @@ You can use the TIA Portal Openness to add an UMC user group to TIA Portal proje
 
 Project project = ...;
 
-var umcServerConfigurator = project.GetService<UmcServerConfigurator>();
+var umcServerConfigurator = project.GetService&lt;UmcServerConfigurator&gt;();
 
-var umacConfigurator = project.GetService<UmacConfigurator>();
+var umacConfigurator = project.GetService&lt;UmacConfigurator&gt;();
 
 UmcServer umcServer = umcServerConfigurator.UmcServer;
 
@@ -30455,9 +30455,9 @@ You can use the TIA Portal Openness to add an UMC user to the TIA Portal project
 
 Project project = ...;
 
-var umcServerConfigurator = project.GetService<UmcServerConfigurator>();
+var umcServerConfigurator = project.GetService&lt;UmcServerConfigurator&gt;();
 
-var umacConfigurator = project.GetService<UmacConfigurator>();
+var umacConfigurator = project.GetService&lt;UmacConfigurator&gt;();
 
 UmcServer umcServer = umcServerConfigurator.UmcServer;
 
@@ -30885,7 +30885,7 @@ private void SynchronizeUMCUser()
 
 {
 
-m_UmcServerConfigurator = project.GetService<UmcServerConfigurator>();
+m_UmcServerConfigurator = project.GetService&lt;UmcServerConfigurator&gt;();
 
 //Synchronize UMC Data
 
@@ -30915,7 +30915,7 @@ private void CheckUMCData()
 
 {
 
-m_UmcServerConfigurator = project.GetService<UmcServerConfigurator>();
+m_UmcServerConfigurator = project.GetService&lt;UmcServerConfigurator&gt;();
 
 //Check consistency of UMC Data
 
@@ -30955,7 +30955,7 @@ private void SettingRuntimeSession()
 
 {
 
-var umacConfigurator = Project.GetService<UmacConfigurator>();
+var umacConfigurator = Project.GetService&lt;UmacConfigurator&gt;();
 
 var projectUsers = umacConfigurator.ProjectUsers;
 
@@ -31013,7 +31013,7 @@ private void PasswordPolicySetting()
 
 {
 
-var passwordPolicyConfigurator = tiaProject.GetService<PasswordPolicyConfigurator>();
+var passwordPolicyConfigurator = tiaProject.GetService&lt;PasswordPolicyConfigurator&gt;();
 
 //Sets the value of includesLowerCaseAndUpperCaseCharacters
 
@@ -31245,7 +31245,7 @@ private void ManagingAnonymousUser()
 
 {
 
-UmacConfigurator umacConfiguratorService = project.GetService<UmacConfigurator>();
+UmacConfigurator umacConfiguratorService = project.GetService&lt;UmacConfigurator&gt;();
 
 //Retrieve anonymous user. If not activated user will be nullvar anonymousUser = umacConfiguratorService.AnonymousUser;
 
@@ -31356,7 +31356,7 @@ tiaPortal.Authentication += TiaPortal_Authentication;
 
 Project umacProject = tiaPortal.Projects.Open(new FileInfo("ProtectedProject_Path"));
 
-var umcServerConfigurator = umacProject.GetService<UmcServerConfigurator>();
+var umcServerConfigurator = umacProject.GetService&lt;UmcServerConfigurator&gt;();
 
 // Getting UMC servers.
 
@@ -31366,9 +31366,9 @@ UmcServer umcServer = umcServerConfigurator.UmcServer;
 
 umcServer.Authentication += UmcServer_Authentication;
 
-var umacConfigurator = umacProject.GetService<UmacConfigurator>();
+var umacConfigurator = umacProject.GetService&lt;UmacConfigurator&gt;();
 
-// Use case :Import User Group, Add User Group to Tia portal project , Assign & Unassign Role to UserGroup
+// Use case :Import User Group, Add User Group to Tia portal project , Assign &amp; Unassign Role to UserGroup
 
 // Delete the User group from Tia portal project.
 
@@ -31414,7 +31414,7 @@ UmcUserGroup umcUserGroupToDelete = umacConfigurator.UmcUserGroups.Find(UmcUserG
 
 umcUserGroupToDelete.Delete();
 
-// Use case :Import UMC User , Add UMC User to Tia portal project , Assign & Unassign Roles to UMC User,
+// Use case :Import UMC User , Add UMC User to Tia portal project , Assign &amp; Unassign Roles to UMC User,
 
 // Delete the UMC User from Tia portal project.
 
@@ -31430,7 +31430,7 @@ UmcUserComposition umcUserComposition = umacConfigurator.UmcUsers;
 
 UmcUser umcUser = umcUserComposition.Create(umcUserInfo);
 
-// Assign & Unassign Roles to UMC User
+// Assign &amp; Unassign Roles to UMC User
 
 //Assign the System Role.
 
@@ -31543,7 +31543,7 @@ You can use the TIA Portal Openness application to configure OPC UA server with 
 
 The defaults are Enabled, Sign, and Sign and Encrypt.
 
-In the XML file <Project>\OPC\uaserver\OPCUaServerWinCCPro.xml, you need to set the security policy and security policies according to ES device configuration.
+In the XML file &lt;Project&gt;\OPC\uaserver\OPCUaServerWinCCPro.xml, you need to set the security policy and security policies according to ES device configuration.
 
 ![Introduction](images/114784871435_DV_resource.Stream@PNG-en-US.png)
 
@@ -31578,15 +31578,15 @@ The below table shows the possible values can be found for security policies:
 | - | NoneSelected | 0 | Is equivalent to TIA UI when no checkbox is selected. |
 | No security | OpcUaSecurityPoliciesNone | 1 |  |
 | Basic128Rsa15 - Sign | OpcUaSecurityPolicies128RSAS | 2 |  |
-| Basic128Rsa15 - Sign & Encrypt | OpcUaSecurityPolicies128RSASE | 4 |  |
+| Basic128Rsa15 - Sign &amp; Encrypt | OpcUaSecurityPolicies128RSASE | 4 |  |
 | Basic256 - Sign | OpcUaSecurityPolicies256S | 8 |  |
-| Basic256 - Sign & Encrypt | OpcUaSecurityPolicies256SE | 16 |  |
+| Basic256 - Sign &amp; Encrypt | OpcUaSecurityPolicies256SE | 16 |  |
 | Basic256Sha256 - Sign | OpcUaSecurityPolicies256SHAS | 32 |  |
-| Basic256Sha256 - Sign & Encrypt | OpcUaSecurityPolicies256SHASE | 64 |  |
+| Basic256Sha256 - Sign &amp; Encrypt | OpcUaSecurityPolicies256SHASE | 64 |  |
 | Aes128 - Sha256 - RsaOaep - Sign | OpcUaSecurityPolicies256RSAOAEPS | 128 |  |
-| Aes128Sha256 - RsaOaep - Sign & Encrypt | OpcUaSecurityPolicies256RSAOAEPSE | 256 |  |
+| Aes128Sha256 - RsaOaep - Sign &amp; Encrypt | OpcUaSecurityPolicies256RSAOAEPSE | 256 |  |
 | Aes256Sha256RsaPss - Sign | OpcUaSecurityPolicies256RSAPSSS | 512 |  |
-| Aes256Sha256RsaPss - Sign & Encrypt | OpcUaSecurityPolicies256RSAPSSSE | 1024 |  |
+| Aes256Sha256RsaPss - Sign &amp; Encrypt | OpcUaSecurityPolicies256RSAPSSSE | 1024 |  |
 
 ##### Program code
 
@@ -31681,7 +31681,7 @@ The Reference Namespace class provides the following properties:
 
 PlcSoftware software = ....;
 
-OpcUaProvider provider = software.GetService<OpcUaProvider>();
+OpcUaProvider provider = software.GetService&lt;OpcUaProvider&gt;();
 
 if (provider != null)
 
@@ -31849,7 +31849,7 @@ The SIMATIC Interface class supports the following properties in TIA Portal Open
 
 PlcSoftware software = ....;
 
-OpcUaProvider provider = software.GetService<OpcUaProvider>();
+OpcUaProvider provider = software.GetService&lt;OpcUaProvider&gt;();
 
 if (provider != null)
 
@@ -31957,7 +31957,7 @@ You can interact with OPC UA server interfaces via an OpcProvider service that c
 
 PlcSoftware software = ....;
 
-OpcUaProvider provider = software.GetService<OpcUaProvider>();
+OpcUaProvider provider = software.GetService&lt;OpcUaProvider&gt;();
 
 if (provider != null)
 
@@ -31973,7 +31973,7 @@ Modify the following program code to allow navigation to the OPC UA server inter
 
 PlcSoftware software = ....;
 
-OpcUaProvider provider = software.GetService<OpcUaProvider>();
+OpcUaProvider provider = software.GetService&lt;OpcUaProvider&gt;();
 
 if (provider != null)
 
@@ -32185,7 +32185,7 @@ var driveController = MyTiaPortal.Projects.First().Devices.CreateWithItem("Order
 
 // To get channels of DI/DQ 8x24VDC_1
 
-DeviceItem di_dq = driveController.DeviceItems.First(x => x.Classification == Classification.CPU).DeviceItems[7];
+DeviceItem di_dq = driveController.DeviceItems.First(x =&gt; x.Classification == Classification.CPU).DeviceItems[7];
 
 ChannelComposition channels = di_dq.Channels;
 
@@ -32262,7 +32262,7 @@ Subnet profiDriveSubnet = subnetComposition.Create("System:Subnet.ProfidriveInte
 
 //Couple PROFIdrive Integrated to X150 (PROFINET)
 
-var profinetX150 = driveController.DeviceItems.First(x => x.Classification == Classification.CPU).DeviceItems[4].GetService<NetworkInterface>().Nodes.First();
+var profinetX150 = driveController.DeviceItems.First(x =&gt; x.Classification == Classification.CPU).DeviceItems[4].GetService&lt;NetworkInterface&gt;().Nodes.First();
 
 profinetX150.ConnectToSubnet(profiDriveSubnet);
 
@@ -32310,7 +32310,7 @@ DeviceItem plcHeadModule = group.Devices[0].DeviceItems[1];
 
 //Getting address of central module (X142)
 
-Address x142address = plcHeadModule.DeviceItems.First(x => x.PositionNumber == 8).Addresses[0];
+Address x142address = plcHeadModule.DeviceItems.First(x =&gt; x.PositionNumber == 8).Addresses[0];
 
 //Turn on isochronous mode
 
@@ -32339,7 +32339,7 @@ DeviceItem s120HeadModule = group.Devices[1].DeviceItems[0];
 
 //Getting address of drive controller telegram
 
-DriveObjectContainer driveObjectService = S120DeviceItem.GetService<DriveObjectContainer>();
+DriveObjectContainer driveObjectService = S120DeviceItem.GetService&lt;DriveObjectContainer&gt;();
 
 Telegram telegram = driveObjectService.DriveObjects.First().Telegrams.First();
 
@@ -32385,7 +32385,7 @@ A distinction is made between two types of exceptions:
   - `ExceptionMessageData messageData`
     <sup>: </sup>Contains the reason for which the exception was thrown.
   - `ExceptionMessageData detailMessageData`
-    <sup>: </sup> Contains additional information about the reason. The result is returned as a <IList> .
+    <sup>: </sup> Contains additional information about the reason. The result is returned as a &lt;IList&gt; .
   - `String message`: Returns the result from `MessageData` and `DetailMessageData`.
 
   `ExceptionMessageData` returns the following information:
@@ -32527,7 +32527,7 @@ The Openness interface (Siemens.Engineering.dll) is extended by the service `Saf
 
 Get the `Safety.GlobalSettings` service from the `TiaPortal` instance:
 
-Engineering.Safety.GlobalSettings globalSettings = TiaPortal.GetService<Engineering.Safety.GlobalSettings>();
+Engineering.Safety.GlobalSettings globalSettings = TiaPortal.GetService&lt;Engineering.Safety.GlobalSettings&gt;();
 
 #### SafetyModificationsPossible
 
@@ -32589,7 +32589,7 @@ If the F-signature does not exist or is no longer valid due to a recent change, 
 
 Get the `SafetySignatureProvider` service from the `PlcBlock` instance.
 
-SafetySignatureProvider signatureProvider = block.GetService<SafetySignatureProvider>()
+SafetySignatureProvider signatureProvider = block.GetService&lt;SafetySignatureProvider&gt;()
 
 If the block is not an F-block or not a block of an F-CPU S7-1200/1500, the returned `signatureProvider` equals to null.
 
@@ -32623,7 +32623,7 @@ A valid Safety license must be installed for actions and setting values. A missi
 
 Obtain the `SafetyAdministration` service from the PLC `DeviceItem` instance at hand.
 
-SafetyAdministration safetyAdministration = deviceItem.GetService<SafetyAdministration>();
+SafetyAdministration safetyAdministration = deviceItem.GetService&lt;SafetyAdministration&gt;();
 
 // check if the service is not null
 
@@ -33078,11 +33078,11 @@ Gets or sets the block numbers generated by the safety system. If a number is se
 
 SafetySystemVersion version = settings.SafetySystemVersion;
 
-IList<SafetySystemVersion> versions = settings.GetApplicableSafetySystemVersions();
+IList&lt;SafetySystemVersion&gt; versions = settings.GetApplicableSafetySystemVersions();
 
 settings.SafetySystemVersion = versions.Last();
 
-SafetySystemVersion version1_6 = versions.SingleOrDefault(v => v.Value == "V1.6");
+SafetySystemVersion version1_6 = versions.SingleOrDefault(v =&gt; v.Value == "V1.6");
 
 if (version1_6 != null) {
 
@@ -33178,7 +33178,7 @@ This feature is available for S7-1200/1500 F-CPUs.
 
 Obtain the `SafetyPrintout` service from a `DeviceItem` instance at hand. Then call the `Print()` function on this service. This function returns true on success.
 
-SafetyPrintout printoutService = deviceItem.GetService<SafetyPrintout>();
+SafetyPrintout printoutService = deviceItem.GetService&lt;SafetyPrintout&gt;();
 
 if (printoutService != null) {
 
@@ -33655,7 +33655,7 @@ This section contains information on the following topics:
 
 ###### Application
 
-In TIA Portal you can find project texts below the "Languages & resources" node of a project. These texts are exported to a "*.xlsx" file which is used for example for translations. The limitations of exporting and importing project texts are the same as in the UI. These limitations include:
+In TIA Portal you can find project texts below the "Languages &amp; resources" node of a project. These texts are exported to a "*.xlsx" file which is used for example for translations. The limitations of exporting and importing project texts are the same as in the UI. These limitations include:
 
 - Exported texts can only be imported into the project from where they were exported.
 - You can only translate texts to languages that are available in in the project. If necessary you can add project languages via TIA Portal Openness.
@@ -33673,7 +33673,7 @@ You have to define the following parameters:
 >
 > Multilingual texts will be exported together with the parent object to which they belong. Multilingual texts can not be exported explicitly.
 
-###### Program code: Export from "Languages & resources" node
+###### Program code: Export from "Languages &amp; resources" node
 
 The use of the example parameters leads to the following program code to export `p`roject texts:
 
@@ -33698,7 +33698,7 @@ clipboard
 
 ###### Application
 
-In TIA Portal you can find project texts below the "Languages & resources" node of a project. You can import project texts from a ".xlsx" file which is used for example for translations. The limitations of exporting and importing project texts are the same as in the UI. These limitations include:
+In TIA Portal you can find project texts below the "Languages &amp; resources" node of a project. You can import project texts from a ".xlsx" file which is used for example for translations. The limitations of exporting and importing project texts are the same as in the UI. These limitations include:
 
 - Exported texts can only be imported into the project from where they were exported.
 - After a project was saved under a new name using "Save as …", the import of texts is not possible anymore.
@@ -34130,10 +34130,10 @@ In the import file, exclude the names of tags or referenced tags using quotation
 Example
 
 - Tag name with symbol:  
-  <name>Siemens.Simatic.Hmi.Utah.Tag.HmiTag:41000_Options_Time_Date\DB_SFX0908_HMI1.Actual_Date_Time.Hour</name>
+  &lt;name&gt;Siemens.Simatic.Hmi.Utah.Tag.HmiTag:41000_Options_Time_Date\DB_SFX0908_HMI1.Actual_Date_Time.Hour&lt;/name&gt;
 - Tag name with symbol excluded in quotation marks:
 
-  <name>"Siemens.Simatic.Hmi.Utah.Tag.HmiTag:41000_Options_Time_Date\DB_SFX0908_HMI1.Actual_Date_Time.Hour"</name>
+  &lt;name&gt;"Siemens.Simatic.Hmi.Utah.Tag.HmiTag:41000_Options_Time_Date\DB_SFX0908_HMI1.Actual_Date_Time.Hour"&lt;/name&gt;
 
 ##### Exporting an individual tag from an HMI tag table
 
@@ -34266,42 +34266,42 @@ Names of external HMI tags must be unique across all tag tables of a project. If
 
 Use the following XML structure to import an external HMI tag with integrated connection:
 
-<Hmi.Tag.Tag ID="1" CompositionName="Tags">
+&lt;Hmi.Tag.Tag ID="1" CompositionName="Tags"&gt;
 
-<AttributeList>
+&lt;AttributeList&gt;
 
-<Name>MyIntegratedHmiTag_1</Name>
+&lt;Name&gt;MyIntegratedHmiTag_1&lt;/Name&gt;
 
-</AttributeList>
+&lt;/AttributeList&gt;
 
-<LinkList>
+&lt;LinkList&gt;
 
-<AcquisitionCycle TargetID="@OpenLink">
+&lt;AcquisitionCycle TargetID="@OpenLink"&gt;
 
-<Name>1 s</Name>
+&lt;Name&gt;1 s&lt;/Name&gt;
 
-</AcquisitionCycle>
+&lt;/AcquisitionCycle&gt;
 
-<Connection TargetID="@OpenLink">
+&lt;Connection TargetID="@OpenLink"&gt;
 
-<Name>HMI_Connection_MP277_300400</Name> <- Must exist in the project
+&lt;Name&gt;HMI_Connection_MP277_300400&lt;/Name&gt; &lt;- Must exist in the project
 
-</Connection>
+&lt;/Connection&gt;
 
-<ControllerTag TargetID="@OpenLink">
+&lt;ControllerTag TargetID="@OpenLink"&gt;
 
-<Name>Datablock_1.DBElement1</Name> <- Must exist in the project
+&lt;Name&gt;Datablock_1.DBElement1&lt;/Name&gt; &lt;- Must exist in the project
 
-</ControllerTag>
+&lt;/ControllerTag&gt;
 
-</LinkList>
+&lt;/LinkList&gt;
 
-</Hmi.Tag.Tag>
+&lt;/Hmi.Tag.Tag&gt;
 
 clipboard
 > **Note**
 >
-> The assignment of Structure Tags in the Upper & Lower Limit properties of the 'Elements of structure tags' is not supported in Comfort / Advanced devices. These structure tags can be assigned to the limit properties of Simple tags but is not supported to the limit properties of Structure tag Elements.
+> The assignment of Structure Tags in the Upper &amp; Lower Limit properties of the 'Elements of structure tags' is not supported in Comfort / Advanced devices. These structure tags can be assigned to the limit properties of Simple tags but is not supported to the limit properties of Structure tag Elements.
 
 ###### Special considerations for the export/import of an HMI tag of the "UDT" data type
 
@@ -34326,25 +34326,25 @@ The following rules apply to the import:
 
 Use the following XML structure to import an HMI tag of the "UDT" data type:
 
-<Hmi.Tag.Tag ID="1" CompositionName="Tags">
+&lt;Hmi.Tag.Tag ID="1" CompositionName="Tags"&gt;
 
 ...
 
-<LinkList>
+&lt;LinkList&gt;
 
-<DataType TargetID="@OpenLink">
+&lt;DataType TargetID="@OpenLink"&gt;
 
-<Name>HmiUdt_1 V 1.0.0</Name> <- Must exist in the project library
+&lt;Name&gt;HmiUdt_1 V 1.0.0&lt;/Name&gt; &lt;- Must exist in the project library
 
-</DataType>
-
-...
-
-</LinkList>
+&lt;/DataType&gt;
 
 ...
 
-</Hmi.Tag.Tag>
+&lt;/LinkList&gt;
+
+...
+
+&lt;/Hmi.Tag.Tag&gt;
 
 clipboard
 
@@ -34709,7 +34709,7 @@ private static void ImportSingleTextList(HmiTarget hmitarget)
 
 TextListComposition textListComposition = hmitarget.TextLists;
 
-IList<TextList> importedTextLists = textListComposition.Import(new FileInfo(@"D:\SamplesImport\myTextList.xml"), ImportOptions.Override);
+IList&lt;TextList&gt; importedTextLists = textListComposition.Import(new FileInfo(@"D:\SamplesImport\myTextList.xml"), ImportOptions.Override);
 
 }
 
@@ -34816,7 +34816,7 @@ private static void ImportSingleGraphicList(HmiTarget hmitarget)
 
 GraphicListComposition graphicListComposition = hmitarget.GraphicLists;
 
-IList<GraphicList> importedGraphicLists = graphicListComposition.Import(new FileInfo(@"D:\Samples\Import\myGraphicList.xml"), ImportOptions.Override);
+IList&lt;GraphicList&gt; importedGraphicLists = graphicListComposition.Import(new FileInfo(@"D:\Samples\Import\myGraphicList.xml"), ImportOptions.Override);
 
 }
 
@@ -34905,7 +34905,7 @@ private static void ImportConnectionsToHMITarget(HmiTarget hmitarget)
 
 ConnectionComposition connections = hmitarget.Connections;
 
-IList<Connection> importedConnectionLists = connections.Import(new FileInfo(@"D:\Samples\Import\myConnectionImport.xml"), ImportOptions.Override);
+IList&lt;Connection&gt; importedConnectionLists = connections.Import(new FileInfo(@"D:\Samples\Import\myConnectionImport.xml"), ImportOptions.Override);
 
 }
 
@@ -36392,12 +36392,12 @@ This section contains information on the following topics:
 - [Export/Import of global supervision for ProDiag-FB](#exportimport-of-global-supervision-for-prodiag-fb)
 - [Export/import of ProDiag supervisions from Global overview editor](#exportimport-of-prodiag-supervisions-from-global-overview-editor)
 - [Export/Import of settings for ProDiag supervisions](#exportimport-of-settings-for-prodiag-supervisions)
-- [Export/Import Watch & Force Table](#exportimport-watch-force-table)
+- [Export/Import Watch &amp; Force Table](#exportimport-watch-force-table)
 - [Exporting user data type](#exporting-user-data-type)
 - [Importing user data type](#importing-user-data-type)
 - [Export of data in OPC UA XML format](#export-of-data-in-opc-ua-xml-format)
-- [Export/Import of UDT & DB](#exportimport-of-udt-db)
-- [Export/Import of Array & Instance DB](#exportimport-of-array-instance-db)
+- [Export/Import of UDT &amp; DB](#exportimport-of-udt-db)
+- [Export/Import of Array &amp; Instance DB](#exportimport-of-array-instance-db)
 
 ##### XML structure of the block interface section
 
@@ -36417,7 +36417,7 @@ Depending on the TIA Portal Openness export settings, the export file includes a
 
 ###### Basic structure
 
-The interface section of an exported block is covered in the <`Interface`> element in the SimaticML of a block. The root object is the `<Sections>` element, which represents the interface section of an exported block. The sequence of the following description of elements represents the required sequence in the input file.
+The interface section of an exported block is covered in the &lt;`Interface`&gt; element in the SimaticML of a block. The root object is the `<Sections>` element, which represents the interface section of an exported block. The sequence of the following description of elements represents the required sequence in the input file.
 
 ![Basic structure](images/97028107915_DV_resource.Stream@PNG-en-US.png)
 
@@ -36477,7 +36477,7 @@ The interface section of an exported block is covered in the <`Interface`> eleme
   > The first imported member with "Set in IDB" attribute defines the expected remanence in the IDB for the following tags and constants with the remanence value "SetInIDB".
 - System defined member attributes
 
-  Systemdefined member attributes are listed in the element `<AttributeList>`. Systemdefined member attributes flagged with the <`Informative>` and are ignored during import.
+  Systemdefined member attributes are listed in the element `<AttributeList>`. Systemdefined member attributes flagged with the &lt;`Informative>` and are ignored during import.
 
   ![Attributes](images/97028116747_DV_resource.Stream@PNG-en-US.png)
 
@@ -36499,7 +36499,7 @@ The interface section of an exported block is covered in the <`Interface`> eleme
   | CodeReadOnly | bool | FALSE | TRUE | - |
 - User defined attributes
 
-  User defined attributes are flagged with <ReadOnly>. Members with this flag are ignored during import. If the flag is deleted or set to FALSE, an exception is thrown.
+  User defined attributes are flagged with &lt;ReadOnly&gt;. Members with this flag are ignored during import. If the flag is deleted or set to FALSE, an exception is thrown.
 
   Unedited user defined attributes are excluded from the export.
 
@@ -36589,7 +36589,7 @@ All attributes with `ReadOnly`="TRUE" and `Informative`="FALSE" are excluded. Th
 
   All other attributes are only written if their values differ from the default.
 
-  The `<StartValue`> element is only written to the XML if it has been explicitly set.
+  The `<StartValue`&gt; element is only written to the XML if it has been explicitly set.
 - `ExportOptions.ReadOnly`
 
   For block interfaces this setting will not lead to meaningful result. In combination with other settings it will have no influence on the result.
@@ -36686,7 +36686,7 @@ Modify the following program code to export Snapshot Values by using the Snapsho
 
 PlcBlock dataBlock = ...;
 
-InterfaceSnapshot interfaceSnapshot = dataBlock.GetService<InterfaceSnapshot>();
+InterfaceSnapshot interfaceSnapshot = dataBlock.GetService&lt;InterfaceSnapshot&gt;();
 
 interfaceSnapshot.Export(new FileInfo("C:\\temp\\MyInterfaceSnapshot.xml"), ExportOptions.WithReadOnly);
 
@@ -36697,71 +36697,71 @@ clipboard
 
 The snapshot values will be exported as following:
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<Document>
+&lt;Document&gt;
 
-<Engineering version="V15 SP1" />
+&lt;Engineering version="V15 SP1" /&gt;
 
-<DocumentInfo>
+&lt;DocumentInfo&gt;
 
 ...
 
-</DocumentInfo>
+&lt;/DocumentInfo&gt;
 
-<SW.Blocks.InterfaceSnapshot ID="0">
+&lt;SW.Blocks.InterfaceSnapshot ID="0"&gt;
 
-<AttributeList>
+&lt;AttributeList&gt;
 
-<Name>GlobalDB</Name>
+&lt;Name&gt;GlobalDB&lt;/Name&gt;
 
-<Snapshot ReadOnly="true">
+&lt;Snapshot ReadOnly="true"&gt;
 
-<SnapshotValues>
+&lt;SnapshotValues&gt;
 
-<Value Path="Static_1" Type="Bool">TRUE</Value>
+&lt;Value Path="Static_1" Type="Bool"&gt;TRUE&lt;/Value&gt;
 
-<Value Path="Static_2[0]" Type="Int">1</Value>
+&lt;Value Path="Static_2[0]" Type="Int"&gt;1&lt;/Value&gt;
 
-<Value Path="Static_2[1]" Type="Int">2</Value>
+&lt;Value Path="Static_2[1]" Type="Int"&gt;2&lt;/Value&gt;
 
-<Value Path="Static_2[2]" Type="Int">3</Value>
+&lt;Value Path="Static_2[2]" Type="Int"&gt;3&lt;/Value&gt;
 
-<Value Path="Static_3" Type="DTL">DTL#1973-01-01-00:00:00</Value>
+&lt;Value Path="Static_3" Type="DTL"&gt;DTL#1973-01-01-00:00:00&lt;/Value&gt;
 
-<Value Path="Static_4.Element_1" Type="Int">7</Value>
+&lt;Value Path="Static_4.Element_1" Type="Int"&gt;7&lt;/Value&gt;
 
-<Value Path="Static_4.Element_2[0]" Type="Bool">FALSE</Value>
+&lt;Value Path="Static_4.Element_2[0]" Type="Bool"&gt;FALSE&lt;/Value&gt;
 
-<Value Path="Static_4.Element_2[1]" Type="Bool">TRUE</Value>
+&lt;Value Path="Static_4.Element_2[1]" Type="Bool"&gt;TRUE&lt;/Value&gt;
 
-<Value Path="Static_4.Element_2[2]" Type="Bool">TRUE</Value>
+&lt;Value Path="Static_4.Element_2[2]" Type="Bool"&gt;TRUE&lt;/Value&gt;
 
-<Value Path="Static_4.Element_3.Element_1" Type="Int">5</Value>
+&lt;Value Path="Static_4.Element_3.Element_1" Type="Int"&gt;5&lt;/Value&gt;
 
-<Value Path="Static_4.Element_3.Element_2.Element_1" Type="Bool">TRUE</Value>
+&lt;Value Path="Static_4.Element_3.Element_2.Element_1" Type="Bool"&gt;TRUE&lt;/Value&gt;
 
-<Value Path="Static_4.Element_3.Element_2.Element_2[0]" Type="Int">100</Value>
+&lt;Value Path="Static_4.Element_3.Element_2.Element_2[0]" Type="Int"&gt;100&lt;/Value&gt;
 
-<Value Path="Static_4.Element_3.Element_2.Element_2[1]" Type="Int">200</Value>
+&lt;Value Path="Static_4.Element_3.Element_2.Element_2[1]" Type="Int"&gt;200&lt;/Value&gt;
 
-</SnapshotValues></Snapshot>
+&lt;/SnapshotValues&gt;&lt;/Snapshot&gt;
 
-<SnapshotDate ReadOnly="true">2017-12-06T08:04:11.4590585Z</SnapshotDate>
+&lt;SnapshotDate ReadOnly="true"&gt;2017-12-06T08:04:11.4590585Z&lt;/SnapshotDate&gt;
 
-<StructureModified ReadOnly="true">2017-12-06T08:22:13.3292585Z</StructureModified>
+&lt;StructureModified ReadOnly="true"&gt;2017-12-06T08:22:13.3292585Z&lt;/StructureModified&gt;
 
-</AttributeList>
+&lt;/AttributeList&gt;
 
-</SW.Blocks.InterfaceSnapshot>
+&lt;/SW.Blocks.InterfaceSnapshot&gt;
 
-</Document>
+&lt;/Document&gt;
 
 clipboard
 
 If a DB does not contain any snapshot values, the content of the exported file will look like as following:
 
-<SnapshotValues xlmns="http://www.siemens.com/automation/Openness/SW/Interface/Snapshot/v1"></SnapshotValues>
+&lt;SnapshotValues xlmns="http://www.siemens.com/automation/Openness/SW/Interface/Snapshot/v1"&gt;&lt;/SnapshotValues&gt;
 
 clipboard
 
@@ -36787,8 +36787,8 @@ The resulting XML file is similar to the export file of a block without know-how
 
 If the block is exported without unlocking, only the public block interface will be exported.
 
-- TIA Portal block -> Unlock -> Export file without protection
-- Import file without protection -> Lock -> TIA Portal block
+- TIA Portal block -&gt; Unlock -&gt; Export file without protection
+- Import file without protection -&gt; Lock -&gt; TIA Portal block
 
 The attribute list of the block indicates that the relevant block is know-how protected.
 
@@ -36824,7 +36824,7 @@ New lines in SCL blocks are represented as NewLine XML tag.
 
 | SCL block | XML tag |
 | --- | --- |
-|  | <NewLine Num="2" /> |
+|  | &lt;NewLine Num="2" /&gt; |
 
 ###### Blank
 
@@ -36837,7 +36837,7 @@ Blank spaces in SCL blocks are respresented as Blank XML tag.
 
 | SCL block | XML tag |
 | --- | --- |
-|  | <Blank Num="2"/> |
+|  | &lt;Blank Num="2"/&gt; |
 
 ###### Identation of SCL block statements
 
@@ -36864,10 +36864,10 @@ Single-line and multi-line comments in SCL blocks are represented as LineComment
 
 | SCL block | XML tag |
 | --- | --- |
-| // one line comment | <LineComment>   <Text>one line comment</Text>  </LineComment> |
-| (* one line comment  second line *) | <LineComment Inserted="true">   <Text>one linecomment secondline</Text>  </LineComment> |
-| (* first comment (* second comment *) end first comment *) | <LineComment Inserted=”true”>   <Text> first comment (* second comment *) end first comment</Text>  </LineComment >  The nested comment is part of outer comment text. |
-| (* comment without closing bracket | <LineComment Inserted="true" NoClosingBracket="true">    <Text> comment without closing bracket</Text>  </LineComment > |
+| // one line comment | &lt;LineComment&gt;   &lt;Text&gt;one line comment&lt;/Text&gt;  &lt;/LineComment&gt; |
+| (* one line comment  second line *) | &lt;LineComment Inserted="true"&gt;   &lt;Text&gt;one linecomment secondline&lt;/Text&gt;  &lt;/LineComment&gt; |
+| (* first comment (* second comment *) end first comment *) | &lt;LineComment Inserted=”true”&gt;   &lt;Text&gt; first comment (* second comment *) end first comment&lt;/Text&gt;  &lt;/LineComment &gt;  The nested comment is part of outer comment text. |
+| (* comment without closing bracket | &lt;LineComment Inserted="true" NoClosingBracket="true"&gt;    &lt;Text&gt; comment without closing bracket&lt;/Text&gt;  &lt;/LineComment &gt; |
 
 ###### Region
 
@@ -36880,9 +36880,9 @@ Regions in SCL blocks are represented as Token XML tag.
 
 | SCL block | XML tag |
 | --- | --- |
-| region myregion  ...  end_region here is the end of myregion | <Token Text="REGION" />  <Blank />  <Text>myregion</Text>  <NewLine />  ...  <Token Text="END_REGION" />  <Blank />  <Text>here is the end of myregion</Text>  <NewLine /> |
-| region   // here are no blanks  ...  end_region | <Token Text="REGION" />  <NewLine />  <LineComment .../>  <Token Text="END_REGION" />  <NewLine /> |
-| region  ...  end_region; | <Token Text="REGION" />  <NewLine />  ...  <Token Text="END_REGION" />  <Text>;</Text>  <NewLine /> |
+| region myregion  ...  end_region here is the end of myregion | &lt;Token Text="REGION" /&gt;  &lt;Blank /&gt;  &lt;Text&gt;myregion&lt;/Text&gt;  &lt;NewLine /&gt;  ...  &lt;Token Text="END_REGION" /&gt;  &lt;Blank /&gt;  &lt;Text&gt;here is the end of myregion&lt;/Text&gt;  &lt;NewLine /&gt; |
+| region   // here are no blanks  ...  end_region | &lt;Token Text="REGION" /&gt;  &lt;NewLine /&gt;  &lt;LineComment .../&gt;  &lt;Token Text="END_REGION" /&gt;  &lt;NewLine /&gt; |
+| region  ...  end_region; | &lt;Token Text="REGION" /&gt;  &lt;NewLine /&gt;  ...  &lt;Token Text="END_REGION" /&gt;  &lt;Text&gt;;&lt;/Text&gt;  &lt;NewLine /&gt; |
 
 ###### Pragma
 
@@ -36890,7 +36890,7 @@ Pragma in SCL blocks are represented as Token XML tag. The parameters are repres
 
 | SCL block | XML tag |
 | --- | --- |
-| {PRAGMA_BEGIN 'Param1', 'Param2' (*parm 2*)}   // something else   {PRAGMA_END} | <Token Text="{" />  <Token Text="PRAGMA_BEGIN" />  <Blank />  <Access Scope="LiteralConstant">   <Constant>   <ConstantValue>'Param1'</ConstantValue>   </Constant>  </Access>  <Token Text="," />  <Blank />  <Access Scope="LiteralConstant">   <Constant>   <ConstantValue>'Param2'</ConstantValue>   </Constant>  </Access>  <Blank />  <LineComment Inserted="True">   <Text>param 2</Text>  </LineComment>  <Token Text="," />  <Blank />  <Token Text="}" />  <NewLine />  <LineComment>   <Text> something else</Text>  </LineComment>  <NewLine />  <Token Text="{" />  <Token Text="PRAGMA_END" />  <Token Text="}" /> |
+| {PRAGMA_BEGIN 'Param1', 'Param2' (*parm 2*)}   // something else   {PRAGMA_END} | &lt;Token Text="{" /&gt;  &lt;Token Text="PRAGMA_BEGIN" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantValue&gt;'Param1'&lt;/ConstantValue&gt;   &lt;/Constant&gt;  &lt;/Access&gt;  &lt;Token Text="," /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantValue&gt;'Param2'&lt;/ConstantValue&gt;   &lt;/Constant&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;param 2&lt;/Text&gt;  &lt;/LineComment&gt;  &lt;Token Text="," /&gt;  &lt;Blank /&gt;  &lt;Token Text="}" /&gt;  &lt;NewLine /&gt;  &lt;LineComment&gt;   &lt;Text&gt; something else&lt;/Text&gt;  &lt;/LineComment&gt;  &lt;NewLine /&gt;  &lt;Token Text="{" /&gt;  &lt;Token Text="PRAGMA_END" /&gt;  &lt;Token Text="}" /&gt; |
 
 ###### Constants: Literal constants
 
@@ -36904,14 +36904,14 @@ The constants in SCL blocks are represented by Access XML tag.
 
 | Type of constant | SCL block | XML tag |
 | --- | --- | --- |
-| Literal constant: Integer | #Out := 10; | <Access Scope="LiteralConstant">   <Constant>   <ConstantValue>10</ConstantValue>   <ConstantTypeInformative="true">LINT</ConstantType>   </Constant>  </Access> |
-| Literal constant: String | #myString := 'Hello world'; | <Access Scope="LiteralConstant">   <Constant>   <ConstantValue>Hello world</ConstantValue>   <ConstantTypeInformative="true">STRING</ConstantType>   </Constant>  </Access> |
-| Literal constant: Typed | #Out := int#10; | <Access Scope="TypedConstant">   <Constant>   <ConstantValue>int#10</ConstantValue>   </Constant>  </Access> |
-| Format of XML exported in ExportOptions.ReadOnly setting.    <Access Scope="TypedConstant">   <Constant>   <ConstantValue>int#10</ConstantValue>   <StringAttribute Name="Format" Informative="true">Dec_signed</StringAttribute>   <StringAttribute Name="FormatFlags" Informative="true">TypeQualifier</StringAttribute>   </Constant>  </Access> |  |  |
-| Local constant | #Out := #mylocal; | <Access Scope="LocalConstant">   <Constant Name="mylocal" />  </Access> |
-| Format of XML exported in ExportOptions.ReadOnly setting.    <Access Scope="LocalConstant">   <Constant Name="mylocal">   <ConstantType Informative="true">Int</ConstantType>    <ConstantValue Informative="true">10</ConstantValue>   <StringAttribute Name="Format" Informative="true">Dec_signed</StringAttribute>    </Constant>  </Access> |  |  |
-| Global constant | #Out := "myglobal"; | <Access Scope="GlobalConstant">   <Constant Name="myglobal" />  </Access> |
-| Format of XML exported in ExportOptions.ReadOnly setting.    <Access Scope="GlobalConstant">   <Constant Name="myglobal">   <ConstantType Informative="true">Int</ConstantType>   <ConstantValue Informative="true">10</ConstantValue>   <StringAttribute Name="Format" Informative="true">Dec_signed</StringAttribute>   </Constant>  </Access> |  |  |
+| Literal constant: Integer | #Out := 10; | &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantValue&gt;10&lt;/ConstantValue&gt;   &lt;ConstantTypeInformative="true"&gt;LINT&lt;/ConstantType&gt;   &lt;/Constant&gt;  &lt;/Access&gt; |
+| Literal constant: String | #myString := 'Hello world'; | &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantValue&gt;Hello world&lt;/ConstantValue&gt;   &lt;ConstantTypeInformative="true"&gt;STRING&lt;/ConstantType&gt;   &lt;/Constant&gt;  &lt;/Access&gt; |
+| Literal constant: Typed | #Out := int#10; | &lt;Access Scope="TypedConstant"&gt;   &lt;Constant&gt;   &lt;ConstantValue&gt;int#10&lt;/ConstantValue&gt;   &lt;/Constant&gt;  &lt;/Access&gt; |
+| Format of XML exported in ExportOptions.ReadOnly setting.    &lt;Access Scope="TypedConstant"&gt;   &lt;Constant&gt;   &lt;ConstantValue&gt;int#10&lt;/ConstantValue&gt;   &lt;StringAttribute Name="Format" Informative="true"&gt;Dec_signed&lt;/StringAttribute&gt;   &lt;StringAttribute Name="FormatFlags" Informative="true"&gt;TypeQualifier&lt;/StringAttribute&gt;   &lt;/Constant&gt;  &lt;/Access&gt; |  |  |
+| Local constant | #Out := #mylocal; | &lt;Access Scope="LocalConstant"&gt;   &lt;Constant Name="mylocal" /&gt;  &lt;/Access&gt; |
+| Format of XML exported in ExportOptions.ReadOnly setting.    &lt;Access Scope="LocalConstant"&gt;   &lt;Constant Name="mylocal"&gt;   &lt;ConstantType Informative="true"&gt;Int&lt;/ConstantType&gt;    &lt;ConstantValue Informative="true"&gt;10&lt;/ConstantValue&gt;   &lt;StringAttribute Name="Format" Informative="true"&gt;Dec_signed&lt;/StringAttribute&gt;    &lt;/Constant&gt;  &lt;/Access&gt; |  |  |
+| Global constant | #Out := "myglobal"; | &lt;Access Scope="GlobalConstant"&gt;   &lt;Constant Name="myglobal" /&gt;  &lt;/Access&gt; |
+| Format of XML exported in ExportOptions.ReadOnly setting.    &lt;Access Scope="GlobalConstant"&gt;   &lt;Constant Name="myglobal"&gt;   &lt;ConstantType Informative="true"&gt;Int&lt;/ConstantType&gt;   &lt;ConstantValue Informative="true"&gt;10&lt;/ConstantValue&gt;   &lt;StringAttribute Name="Format" Informative="true"&gt;Dec_signed&lt;/StringAttribute&gt;   &lt;/Constant&gt;  &lt;/Access&gt; |  |  |
 
 The address constants are not supported in SCL blocks, and it is ignored in this table.
 
@@ -36924,9 +36924,9 @@ The local and global variables in SCL blocks are represented by Access XML tag.
 
 | Type of variable | SCL block | XML tag |
 | --- | --- | --- |
-| Local variable | #Out := 10; | <Access Scope="LocalVariable">   <Symbol>   <Component Name="Out" />   </Symbol>  </Access> |
-| Global variable | "Tag_3":= 10; | <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Tag_3" />   </Symbol>  </Access> |
-| Format of XML exported in ExportOptions.ReadOnly setting.    <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Tag_3" />   <Address Area="Memory" Type="Int" BitOffset="96" Informative="true" />   </Symbol>  </Access> |  |  |
+| Local variable | #Out := 10; | &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Out" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
+| Global variable | "Tag_3":= 10; | &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Tag_3" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
+| Format of XML exported in ExportOptions.ReadOnly setting.    &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Tag_3" /&gt;   &lt;Address Area="Memory" Type="Int" BitOffset="96" Informative="true" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |  |  |
 
 ###### Expressions
 
@@ -36934,24 +36934,24 @@ The simple expressions in SCL blocks are represented by Access XML tag. The Scop
 
 | SCL block | XML tag |
 | --- | --- |
-| #a := #b + #c; | <Access Scope="LocalVariable">   <Symbol>   <Component Name="a" />   </Symbol>  </Access>  <Blank />  <Token text=":=" />  <Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="b" />   </Symbol>  </Access>  <Blank />  <Token text="+" />  <Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="c" />   </Symbol>  </Access>  <Token text=";" /> |
+| #a := #b + #c; | &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token text=":=" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="b" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token text="+" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="c" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Token text=";" /&gt; |
 
 ###### Control structures in SCL blocks
 
 The control statements like IF, CASE, FOR, WHILE, REPEAT, GOTO, EXIT, CONTINE, and RETURN are represented by Token XML tag.
 
-- The conditional symbols used in SCL block such as >, <, & are represented as escape sequences (&lt; &gt; &amp) in XML.
+- The conditional symbols used in SCL block such as &gt;, &lt;, &amp; are represented as escape sequences (&amp;lt; &amp;gt; &amp;amp) in XML.
 - These combination of XML tags are applicable only for SCL blocks. An exception is thrown for other languages.
 
 | Name of the block | SCL block | XML tag |
 | --- | --- | --- |
-| IF | IF #a<#c THEN      ;  END_IF; | <Token Text="IF" />  <Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="a" />   </Symbol>  </Access>  <Token Text="&lt;" />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="c" />   </Symbol>  </Access>  <Blank />  <Token Text="THEN" />  <NewLine />  <Blank Num="4" />  <Token Text=";" />  <NewLine />  <Token Text="END_IF" />  <Token Text=";" /> |
-| CASE | CASE #a OF   1 (*test*): // Statement section case 1   ;    2..4: // Statement section case 2 to 4      ;   ELSE // Statement section ELSE      ;  END_CASE; | <Tok en Text="CASE" /><Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="a" />   </Symbol>  </Access>  <Blank />  <Token Text="OF" />  <NewLine />    <Blank Num="2"/>  <Access Scope="LiteralConstant">   <Constant>   <ConstantValue>1</ConstantValue>   <ConstantType Informative="true">LINT</ConstantType>   </Constant>  </Access>  <Blank />  <LineComment Inserted=”true”>   <Text>test</Text>  </LineComment >  <Token Text=":" />  <Blank />  <LineComment>   <Text> Statement section case 1</Text>  </LineComment >  <NewLine />    <Blank Num="4"/>  <Token Text=";" />  <NewLine />    <Blank Num="2"/>  <Access Scope="LiteralConstant">   <Constant>   <ConstantValue>2</ConstantValue>   <ConstantType Informative="true">LINT</ConstantType>   </Constant>  </Access>  <Token Text=".." />  <Blank Num="2"/>  <Access Scope="LiteralConstant">   <Constant>   <ConstantValue>4</ConstantValue>   <ConstantType Informative="true">LINT</ConstantType>   </Constant>  </Access>  <Blank />  <LineComment>   <Text> Statement section case 2 to 4</Text>  </LineComment >  <NewLine />    <Blank Num="4"/>  <Token Text=";" />  <NewLine />    <Blank Num="2"/>  <Token Text="ELSE" />  <NewLine />    <Blank Num="4"/>  <Token Text=";" />  <NewLine />    <Token Text="END_CASE" />  <Token Text=";" /> |
-| FOR | FOR #i := #a TO #b DO   // Statement section FOR   ;  END_FOR; | <Token Text="FOR" />  <Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="i" />   </Symbol>  </Access>  <Blank />  <Token Text=":=" />  <Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="a" />   </Symbol>  </Access>  <Blank />  <Token Text="TO" />  <Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="b" />   </Symbol>  </Access>  <Blank />  <Token Text="DO" />  <NewLine />    <Blank Num="2" />  <LineComment>   <Text> Statement section FOR</Text>  </LineComment >  <NewLine />    <Blank Num="2" />  <Token Text=";" />  <NewLine />    <Token Text="END_FOR" />  <Token Text=";" /> |
-| WHILE | WHILE #a<#b DO    // Statement section WHILE    ;  END_WHILE; | <Token Text="WHILE" />  <Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="a" />   </Symbol>  </Access>  <Token Text="&lt;" />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="b" />   </Symbol>  </Access>  <Blank />  <Token Text="DO" />  <NewLine />    <Blank Num="2" />  <LineComment>   <Text> Statement section WHILE</Text>  </LineComment >  <NewLine />    <Blank Num="2" />  <Token Text=";" />  <NewLine />    <Token Text="END_WHILE" />  <Token Text=";" /> |
-| REPEAT | REPEAT    // Statement section REPEAT   ;  UNTIL #a<#b END_REPEAT; | <Token Text="REPEAT" />  <NewLine />    <Blank Num="2" />  <LineComment>   <Text> Statement section REPEAT</Text>  </LineComment >  <NewLine />    <Blank Num="2" />  <Token Text=";" />  <NewLine />    <Token Text="UNTIL" />  <Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="a" />   </Symbol>  </Access>  <Token Text="&lt;" />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="b" />   </Symbol>  </Access>  <Blank />  <Token Text="END_REPEAT" />  <Token Text=";" /> |
-| GOTO | here    // well  : // this is goto statement | XML example for GOTO label definition    <Blank Num="3"/>  <Access Scope="Label">   <Label Name="here">   <NewLine />   <Blank Num="3"/>   <LineComment>   <Text> well</Text>   </LineComment>   <NewLine />   <Token Text=":" />   <Blank />    </Label>  </Access>  <LineComment>   <Text> this is goto statement</Text>  </LineComment> |
-| GOTO (*comment*) here; | XML example for GOTO label usage    <Token Text="GOTO" />  <Blank />  <LineComment inserted=”true”>   <Text>comment</Text>  </LineComment>  <Blank />  <Access Scope="Label">   <Label Name="here" />  </Access>  <Token Text=";" /> |  |
+| IF | IF #a&lt;#c THEN      ;  END_IF; | &lt;Token Text="IF" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Token Text="&amp;lt;" /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="c" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token Text="THEN" /&gt;  &lt;NewLine /&gt;  &lt;Blank Num="4" /&gt;  &lt;Token Text=";" /&gt;  &lt;NewLine /&gt;  &lt;Token Text="END_IF" /&gt;  &lt;Token Text=";" /&gt; |
+| CASE | CASE #a OF   1 (*test*): // Statement section case 1   ;    2..4: // Statement section case 2 to 4      ;   ELSE // Statement section ELSE      ;  END_CASE; | &lt;Tok en Text="CASE" /&gt;&lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token Text="OF" /&gt;  &lt;NewLine /&gt;    &lt;Blank Num="2"/&gt;  &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantValue&gt;1&lt;/ConstantValue&gt;   &lt;ConstantType Informative="true"&gt;LINT&lt;/ConstantType&gt;   &lt;/Constant&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;LineComment Inserted=”true”&gt;   &lt;Text&gt;test&lt;/Text&gt;  &lt;/LineComment &gt;  &lt;Token Text=":" /&gt;  &lt;Blank /&gt;  &lt;LineComment&gt;   &lt;Text&gt; Statement section case 1&lt;/Text&gt;  &lt;/LineComment &gt;  &lt;NewLine /&gt;    &lt;Blank Num="4"/&gt;  &lt;Token Text=";" /&gt;  &lt;NewLine /&gt;    &lt;Blank Num="2"/&gt;  &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantValue&gt;2&lt;/ConstantValue&gt;   &lt;ConstantType Informative="true"&gt;LINT&lt;/ConstantType&gt;   &lt;/Constant&gt;  &lt;/Access&gt;  &lt;Token Text=".." /&gt;  &lt;Blank Num="2"/&gt;  &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantValue&gt;4&lt;/ConstantValue&gt;   &lt;ConstantType Informative="true"&gt;LINT&lt;/ConstantType&gt;   &lt;/Constant&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;LineComment&gt;   &lt;Text&gt; Statement section case 2 to 4&lt;/Text&gt;  &lt;/LineComment &gt;  &lt;NewLine /&gt;    &lt;Blank Num="4"/&gt;  &lt;Token Text=";" /&gt;  &lt;NewLine /&gt;    &lt;Blank Num="2"/&gt;  &lt;Token Text="ELSE" /&gt;  &lt;NewLine /&gt;    &lt;Blank Num="4"/&gt;  &lt;Token Text=";" /&gt;  &lt;NewLine /&gt;    &lt;Token Text="END_CASE" /&gt;  &lt;Token Text=";" /&gt; |
+| FOR | FOR #i := #a TO #b DO   // Statement section FOR   ;  END_FOR; | &lt;Token Text="FOR" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="i" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token Text=":=" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token Text="TO" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="b" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token Text="DO" /&gt;  &lt;NewLine /&gt;    &lt;Blank Num="2" /&gt;  &lt;LineComment&gt;   &lt;Text&gt; Statement section FOR&lt;/Text&gt;  &lt;/LineComment &gt;  &lt;NewLine /&gt;    &lt;Blank Num="2" /&gt;  &lt;Token Text=";" /&gt;  &lt;NewLine /&gt;    &lt;Token Text="END_FOR" /&gt;  &lt;Token Text=";" /&gt; |
+| WHILE | WHILE #a&lt;#b DO    // Statement section WHILE    ;  END_WHILE; | &lt;Token Text="WHILE" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Token Text="&amp;lt;" /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="b" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token Text="DO" /&gt;  &lt;NewLine /&gt;    &lt;Blank Num="2" /&gt;  &lt;LineComment&gt;   &lt;Text&gt; Statement section WHILE&lt;/Text&gt;  &lt;/LineComment &gt;  &lt;NewLine /&gt;    &lt;Blank Num="2" /&gt;  &lt;Token Text=";" /&gt;  &lt;NewLine /&gt;    &lt;Token Text="END_WHILE" /&gt;  &lt;Token Text=";" /&gt; |
+| REPEAT | REPEAT    // Statement section REPEAT   ;  UNTIL #a&lt;#b END_REPEAT; | &lt;Token Text="REPEAT" /&gt;  &lt;NewLine /&gt;    &lt;Blank Num="2" /&gt;  &lt;LineComment&gt;   &lt;Text&gt; Statement section REPEAT&lt;/Text&gt;  &lt;/LineComment &gt;  &lt;NewLine /&gt;    &lt;Blank Num="2" /&gt;  &lt;Token Text=";" /&gt;  &lt;NewLine /&gt;    &lt;Token Text="UNTIL" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Token Text="&amp;lt;" /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="b" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token Text="END_REPEAT" /&gt;  &lt;Token Text=";" /&gt; |
+| GOTO | here    // well  : // this is goto statement | XML example for GOTO label definition    &lt;Blank Num="3"/&gt;  &lt;Access Scope="Label"&gt;   &lt;Label Name="here"&gt;   &lt;NewLine /&gt;   &lt;Blank Num="3"/&gt;   &lt;LineComment&gt;   &lt;Text&gt; well&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;NewLine /&gt;   &lt;Token Text=":" /&gt;   &lt;Blank /&gt;    &lt;/Label&gt;  &lt;/Access&gt;  &lt;LineComment&gt;   &lt;Text&gt; this is goto statement&lt;/Text&gt;  &lt;/LineComment&gt; |
+| GOTO (*comment*) here; | XML example for GOTO label usage    &lt;Token Text="GOTO" /&gt;  &lt;Blank /&gt;  &lt;LineComment inserted=”true”&gt;   &lt;Text&gt;comment&lt;/Text&gt;  &lt;/LineComment&gt;  &lt;Blank /&gt;  &lt;Access Scope="Label"&gt;   &lt;Label Name="here" /&gt;  &lt;/Access&gt;  &lt;Token Text=";" /&gt; |  |
 
 ###### Referencing attributes
 
@@ -36962,8 +36962,8 @@ The SCL block referencing attributes are represented by AccessModifier attribute
 
 | SCL block | XML tag |
 | --- | --- |
-| RefToUDT^(*RefToUDT*).element | <Symbol>   <Component Name="RefToUDT" AccessModifier="Reference" />   <Token Text="^" />   <LineComment Inserted="True">   <Text>RefToUDT</Text>   </LineComment>   <Token Text="." />   <Component Name="element" />  </Symbol> |
-| RefToArrayOfUDT^(*RefToArrayOfUDT*)[#i].element | <Symbol>   <Component Name="RefToArrayOfUDT" AccessModifier="ReferenceToArray" />   <Token Text="^" />   <LineComment Inserted="True">   <Text>RefToArrayOfUDT</Text>   </LineComment>   <Token Text="[" />   <Access Scope=LocalVariable>   <Symbol>   <Component Name="i" />   </Symbol>   </Access>   <Token Text="]" />  </Component>   <Token Text="." />   <Component Name="element" />  </Symbol> |
+| RefToUDT^(*RefToUDT*).element | &lt;Symbol&gt;   &lt;Component Name="RefToUDT" AccessModifier="Reference" /&gt;   &lt;Token Text="^" /&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;RefToUDT&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="element" /&gt;  &lt;/Symbol&gt; |
+| RefToArrayOfUDT^(*RefToArrayOfUDT*)[#i].element | &lt;Symbol&gt;   &lt;Component Name="RefToArrayOfUDT" AccessModifier="ReferenceToArray" /&gt;   &lt;Token Text="^" /&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;RefToArrayOfUDT&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Token Text="[" /&gt;   &lt;Access Scope=LocalVariable&gt;   &lt;Symbol&gt;   &lt;Component Name="i" /&gt;   &lt;/Symbol&gt;   &lt;/Access&gt;   &lt;Token Text="]" /&gt;  &lt;/Component&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="element" /&gt;  &lt;/Symbol&gt; |
 
 ##### Export/Import of structured types of SCL blocks
 
@@ -36977,9 +36977,9 @@ In SCL statements, the global access variables and constants are represented in 
 
 | SCL block | XML tag |
 | --- | --- |
-| "Data_block_1".(*comment 1*)Static_1(*comment 2*).Static_2 | <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Data_block_1" />   <Token Text="." />   <LineComment Inserted="True">   <Text>comment 1</Text>   </LineComment>   <Component Name="Static_1" />   <LineComment Inserted="True">   <Text>comment 2</Text>   </LineComment>   <Token Text="." />   <Component Name="Static_2" />   </Symbol>  </Access> |
-| "Data_block_1".Static_1 := 10 | Format of XML exported in ExportOptions.None setting.    <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Data_block_1" />   <Token Text="." />   <Component Name="Static_1" />   </Symbol>  </Access> |
-| Format of XML exported in ExportOptions.ReadOnly setting.    <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Data_block_1" />   <Token Text="." />   <Component Name="Static_1" />   <Address Area="DB" Type="Word" BlockNumber="1" BitOffset="0" Informative="true" />   </Symbol>  </Access> |  |
+| "Data_block_1".(*comment 1*)Static_1(*comment 2*).Static_2 | &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Data_block_1" /&gt;   &lt;Token Text="." /&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;comment 1&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Component Name="Static_1" /&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;comment 2&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="Static_2" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
+| "Data_block_1".Static_1 := 10 | Format of XML exported in ExportOptions.None setting.    &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Data_block_1" /&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="Static_1" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
+| Format of XML exported in ExportOptions.ReadOnly setting.    &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Data_block_1" /&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="Static_1" /&gt;   &lt;Address Area="DB" Type="Word" BlockNumber="1" BitOffset="0" Informative="true" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |  |
 
 ###### Usage of Quotes and #
 
@@ -36992,7 +36992,7 @@ The quotes used in the first level describes the type of variable, and used to e
 
 | SCL block | XML tag |
 | --- | --- |
-| "a".#b."c".#"d" | <Access Scope="GlobalVariable">   <Symbol>   <Component Name="a" />   <Token Text="." />   <Component Name="b">   <BooleanAttribute Name=”HasHash”>TRUE</BooleanAttribute>   </Component>   <Token Text="." />   <Component Name="c">   <BooleanAttribute Name=”HasQuotes”>TRUE</BooleanAttribute>   </Component>   <Token Text="." />   <Component Name="d">   <BooleanAttribute Name=”HasQuotes”>TRUE</BooleanAttribute>   <BooleanAttribute Name=”HasHash”>TRUE</BooleanAttribute>   </Component>   </Symbol>  <Access /> |
+| "a".#b."c".#"d" | &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="b"&gt;   &lt;BooleanAttribute Name=”HasHash”&gt;TRUE&lt;/BooleanAttribute&gt;   &lt;/Component&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="c"&gt;   &lt;BooleanAttribute Name=”HasQuotes”&gt;TRUE&lt;/BooleanAttribute&gt;   &lt;/Component&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="d"&gt;   &lt;BooleanAttribute Name=”HasQuotes”&gt;TRUE&lt;/BooleanAttribute&gt;   &lt;BooleanAttribute Name=”HasHash”&gt;TRUE&lt;/BooleanAttribute&gt;   &lt;/Component&gt;   &lt;/Symbol&gt;  &lt;Access /&gt; |
 
 ###### Array
 
@@ -37003,7 +37003,7 @@ SCL allows to add comment within the array indexes around "[" and "]". To mark t
 
 | SCL block | XML tag |
 | --- | --- |
-| #a.b[#i+#j,#k+#l].c | <Access Scope="LocalVariable">   <Symbol>   <Component Name="a" />   <Token Text="." />   <Component Name="b" AccessModifier="Array" />   <Token Text="[" />   <Access Scope=LocalVariable>   <Symbol>   <Component Name="i" />   </Symbol>   </Access>         <Token Text="+" />   <Access Scope=LocalVariable>   <Symbol>   <Component Name="j" />  </Symbol>   </Access>   <Token Text="," />   <Access Scope=LocalVariable>   <Symbol>   <Component Name="k" />   </Symbol>   </Access>       <Token Text="+" />   <Access Scope=LocalVariable>   <Symbol>   <Component Name="l" />   </Symbol>   </Access>  <Token Text="]" />   </Component>   <Token Text="." />   <Component Name="c" />   </Symbol>  </Access> |
+| #a.b[#i+#j,#k+#l].c | &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="b" AccessModifier="Array" /&gt;   &lt;Token Text="[" /&gt;   &lt;Access Scope=LocalVariable&gt;   &lt;Symbol&gt;   &lt;Component Name="i" /&gt;   &lt;/Symbol&gt;   &lt;/Access&gt;         &lt;Token Text="+" /&gt;   &lt;Access Scope=LocalVariable&gt;   &lt;Symbol&gt;   &lt;Component Name="j" /&gt;  &lt;/Symbol&gt;   &lt;/Access&gt;   &lt;Token Text="," /&gt;   &lt;Access Scope=LocalVariable&gt;   &lt;Symbol&gt;   &lt;Component Name="k" /&gt;   &lt;/Symbol&gt;   &lt;/Access&gt;       &lt;Token Text="+" /&gt;   &lt;Access Scope=LocalVariable&gt;   &lt;Symbol&gt;   &lt;Component Name="l" /&gt;   &lt;/Symbol&gt;   &lt;/Access&gt;  &lt;Token Text="]" /&gt;   &lt;/Component&gt;   &lt;Token Text="." /&gt;   &lt;Component Name="c" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
 
 ###### Absolute Access
 
@@ -37014,8 +37014,8 @@ SCL allows different types of access such as absolute, absolute offset, mixed (d
 
 | SCL Block | XML Tag |
 | --- | --- |
-| %DB20 . DBW10 | <Access Scope="Address">   <Symbol>   <Address Area="DB" BlockNumber="20" />   <Blank />   <Token Text="." />   <Blank />   <Address Area="DB" BitOffset="80" Type="Word"/>   </Symbol>  </Access> |
-| %DB20.DBX10.3 := true; | The following XML is valid for all langages except SCL.    <Access Scope="Address">  <Address Area="DB" BlockNumber="20" BitOffset="83" Type="Bool" />  </Access>    The following XML is valid for SCL.    <Access Scope="Address">   <Symbol>   <Address Area="DB" BlockNumber="20" />   <Token Text="." />   <Address Area="DB" BitOffset="83" Type="Bool"/>   </Symbol>  </Access> |
+| %DB20 . DBW10 | &lt;Access Scope="Address"&gt;   &lt;Symbol&gt;   &lt;Address Area="DB" BlockNumber="20" /&gt;   &lt;Blank /&gt;   &lt;Token Text="." /&gt;   &lt;Blank /&gt;   &lt;Address Area="DB" BitOffset="80" Type="Word"/&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
+| %DB20.DBX10.3 := true; | The following XML is valid for all langages except SCL.    &lt;Access Scope="Address"&gt;  &lt;Address Area="DB" BlockNumber="20" BitOffset="83" Type="Bool" /&gt;  &lt;/Access&gt;    The following XML is valid for SCL.    &lt;Access Scope="Address"&gt;   &lt;Symbol&gt;   &lt;Address Area="DB" BlockNumber="20" /&gt;   &lt;Token Text="." /&gt;   &lt;Address Area="DB" BitOffset="83" Type="Bool"/&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
 
 ###### Absolute offset
 
@@ -37023,7 +37023,7 @@ In STL, AbsoluteOffset tag represents the absolute offset access. In SCL, Addres
 
 | SCL Block | XML Tag |
 | --- | --- |
-| #Input_DB_ANY.%DBX2.3 := TRUE; | <Access Scope="LocalVariable">   <Symbol>   <Component Name="Input_DB_ANY" />   <Token Name="." />   <Address BitOffset="19" Type="Bool" />   </Symbol>  </Access> |
+| #Input_DB_ANY.%DBX2.3 := TRUE; | &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Input_DB_ANY" /&gt;   &lt;Token Name="." /&gt;   &lt;Address BitOffset="19" Type="Bool" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
 
 ###### Slicing
 
@@ -37031,7 +37031,7 @@ In SCL, the SliceAccessModifier attribute is not supported and the slicing is re
 
 | SCL Block | XML Tag |
 | --- | --- |
-| "tag_1"(*1*).(*2*)member(*3*).(*4*)%x1 | <Access Scope="GlobalVariable">   <Symbol>   <Component Name="tag_1" />   <LineComment Inserted="True">   <Text>1</Text>   </LineComment>   <Token Text="." />   <LineComment Inserted="True">   <Text>2</Text>   </LineComment>   <Component Name="member"/>   <LineComment Inserted="True">   <Text>3</Text>   </LineComment>   <Token Text="." />   <LineComment Inserted="True">   <Text>4</Text>   </LineComment>   <Token Text="%x1" />   </Symbol>  </Access> |
+| "tag_1"(*1*).(*2*)member(*3*).(*4*)%x1 | &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="tag_1" /&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;1&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Token Text="." /&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;2&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Component Name="member"/&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;3&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Token Text="." /&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;4&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Token Text="%x1" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
 
 ###### Peripheral access
 
@@ -37039,7 +37039,7 @@ The peripheral access is represented by Token tag.
 
 | SCL Block | XML Tag |
 | --- | --- |
-| "tag_1"(*1*).(*2*)member:P | <Access Scope="GlobalVariable">   <Symbol>   <Component Name="tag_1" />   <LineComment Inserted="True">   <Text>1</Text>   </LineComment>   <Token Text="." />   <LineComment Inserted="True">   <Text>2</Text>   </LineComment>   <Component Name="member"/>   <Token Text=":P" />   </Symbol>  </Access> |
+| "tag_1"(*1*).(*2*)member:P | &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="tag_1" /&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;1&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Token Text="." /&gt;   &lt;LineComment Inserted="True"&gt;   &lt;Text&gt;2&lt;/Text&gt;   &lt;/LineComment&gt;   &lt;Component Name="member"/&gt;   &lt;Token Text=":P" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt; |
 
 ###### Direct type access
 
@@ -37047,8 +37047,8 @@ The TypeOf and TypeOfDB instructions are handled either with system type or user
 
 | SCL Block | XML Tag |
 | --- | --- |
-| Example for system type  if TypeOf( #inVariant ) = TO_SpeedAxis then … end_if | <Token text="=" />  </Blank>  <Access Scope="SystemType">   <DataType>TO_SpeedAxis</DataType>  </Access> |
-| Example for user defined type  if TypeOf( #inVariant ) = "aUserDefinedType" then … end_if | <Token text="=" />  </Blank>  <Access Scope="UserType">   <DataType>aUserDefinedType</DataType>  </Access> |
+| Example for system type  if TypeOf( #inVariant ) = TO_SpeedAxis then … end_if | &lt;Token text="=" /&gt;  &lt;/Blank&gt;  &lt;Access Scope="SystemType"&gt;   &lt;DataType&gt;TO_SpeedAxis&lt;/DataType&gt;  &lt;/Access&gt; |
+| Example for user defined type  if TypeOf( #inVariant ) = "aUserDefinedType" then … end_if | &lt;Token text="=" /&gt;  &lt;/Blank&gt;  &lt;Access Scope="UserType"&gt;   &lt;DataType&gt;aUserDefinedType&lt;/DataType&gt;  &lt;/Access&gt; |
 
 ##### Export/Import of SCL call blocks
 
@@ -37060,8 +37060,8 @@ An example for block call is given below.
 
 | SCL block | XML tag |
 | --- | --- |
-| #Callee_Instance(Input_1 := 5); | Format of XML exported in ExportOptions.None setting    <Access Scope="Call">   <CallInfo BlockType="FB">   <Instance Scope="LocalVariable">   <Component Name="Callee_Instance" />   </Instance>   <Token text="(" />   <Parameter Name="Input_1">   <Blank />   <Token text=":=" />   <Blank />   <Access Scope="LiteralConstant">   <Constant>   <ConstantType>Int</ConstantType>   <ConstantValue>5</ConstantValue>   </Constant>   </Access>   </Parameter>   <Token text=")" />   </CallInfo>  </Access>   <Token text=";" /> |
-| Format of XML exported in ExportOptions.ReadOnly setting    <Access Scope="Call">   <CallInfo BlockType="FB">   <IntegerAttribute Name="BlockNumber" Informative="true">1</IntegerAttribute>      <DateAttribute Name="ParameterModifiedTS" Informative="true">2016-10-24T08:27:34</DateAttribute>   <Instance Scope="LocalVariable">   <Component Name="Callee_Instance" />   </Instance>   <Token text="(" />   <Parameter Name="Input_1">  <StringAttribute Name="InterfaceFlags" Informative="true">S7_Visible</StringAttribute>   <Blank />   <Token text=":=" />   <Blank />   <Access Scope="LiteralConstant">   <Constant>   <ConstantType>Int</ConstantType>   <ConstantValue>5</ConstantValue>   </Constant>   </Access>   </Parameter>   <Token text=")" />   </CallInfo>  </Access>   <Token text=";" /> |  |
+| #Callee_Instance(Input_1 := 5); | Format of XML exported in ExportOptions.None setting    &lt;Access Scope="Call"&gt;   &lt;CallInfo BlockType="FB"&gt;   &lt;Instance Scope="LocalVariable"&gt;   &lt;Component Name="Callee_Instance" /&gt;   &lt;/Instance&gt;   &lt;Token text="(" /&gt;   &lt;Parameter Name="Input_1"&gt;   &lt;Blank /&gt;   &lt;Token text=":=" /&gt;   &lt;Blank /&gt;   &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;Int&lt;/ConstantType&gt;   &lt;ConstantValue&gt;5&lt;/ConstantValue&gt;   &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;   &lt;Token text=")" /&gt;   &lt;/CallInfo&gt;  &lt;/Access&gt;   &lt;Token text=";" /&gt; |
+| Format of XML exported in ExportOptions.ReadOnly setting    &lt;Access Scope="Call"&gt;   &lt;CallInfo BlockType="FB"&gt;   &lt;IntegerAttribute Name="BlockNumber" Informative="true"&gt;1&lt;/IntegerAttribute&gt;      &lt;DateAttribute Name="ParameterModifiedTS" Informative="true"&gt;2016-10-24T08:27:34&lt;/DateAttribute&gt;   &lt;Instance Scope="LocalVariable"&gt;   &lt;Component Name="Callee_Instance" /&gt;   &lt;/Instance&gt;   &lt;Token text="(" /&gt;   &lt;Parameter Name="Input_1"&gt;  &lt;StringAttribute Name="InterfaceFlags" Informative="true"&gt;S7_Visible&lt;/StringAttribute&gt;   &lt;Blank /&gt;   &lt;Token text=":=" /&gt;   &lt;Blank /&gt;   &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;Int&lt;/ConstantType&gt;   &lt;ConstantValue&gt;5&lt;/ConstantValue&gt;   &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;   &lt;Token text=")" /&gt;   &lt;/CallInfo&gt;  &lt;/Access&gt;   &lt;Token text=";" /&gt; |  |
 
 ###### Unconnected parameters example
 
@@ -37069,7 +37069,7 @@ The FB has 4 paramters where a, b, c, and d. b and d are not connected.
 
 | SCL block | XML tag |
 | --- | --- |
-| "Block_4_DB"(a:=TRUE,c:=TRUE); | <Access Scope="Call">   **<CallInfo Name="Block_4" BlockType="FB">**    <Instance Scope="GlobalVariable">   **<Component Name="Block_4_DB" />**    </Instance>   <Token text="(" />   **<Parameter Name="a">**     **<Token text=":=" />**    <Access Scope="LiteralConstant">   <Constant>   <ConstantType>Bool</ConstantType>   **<ConstantValue>TRUE</ConstantValue>**    </Constant>   </Access>   </Parameter>   <Token text="," />   <Parameter Name="b" Informative="true"/>   **<Parameter Name="c" >**     **<Token text=":=" />**    <Access Scope="LiteralConstant">   <Constant>   <ConstantType>Bool</ConstantType>   **<ConstantValue>True</ConstantValue>**    </Constant>   </Access>   </Parameter>   <Parameter Name="d" Informative="true"/>   <Token text=")" />   </CallInfo>  </Access> |
+| "Block_4_DB"(a:=TRUE,c:=TRUE); | &lt;Access Scope="Call"&gt;   **&lt;CallInfo Name="Block_4" BlockType="FB"&gt;**    &lt;Instance Scope="GlobalVariable"&gt;   **&lt;Component Name="Block_4_DB" /&gt;**    &lt;/Instance&gt;   &lt;Token text="(" /&gt;   **&lt;Parameter Name="a"&gt;**     **&lt;Token text=":=" /&gt;**    &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;Bool&lt;/ConstantType&gt;   **&lt;ConstantValue&gt;TRUE&lt;/ConstantValue&gt;**    &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;   &lt;Token text="," /&gt;   &lt;Parameter Name="b" Informative="true"/&gt;   **&lt;Parameter Name="c" &gt;**     **&lt;Token text=":=" /&gt;**    &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;Bool&lt;/ConstantType&gt;   **&lt;ConstantValue&gt;True&lt;/ConstantValue&gt;**    &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;   &lt;Parameter Name="d" Informative="true"/&gt;   &lt;Token text=")" /&gt;   &lt;/CallInfo&gt;  &lt;/Access&gt; |
 
 ###### One parameter example
 
@@ -37077,25 +37077,25 @@ SCL block allows you to omit the parameter name. This parameter is represented a
 
 | SCL block | XML tag |
 | --- | --- |
-| "Block_4_DB"(TRUE); | <Access Scope="Call">   <CallInfo Name="Block_4" BlockType="FB">   <Instance Scope="GlobalVariable">   <Component Name="Block_4_DB" />   </Instance>   <Token text="(" />   <NamelessParameter>   <Access Scope="LiteralConstant">   <Constant>   <ConstantType>Bool</ConstantType>   <ConstantValue>TRUE</ConstantValue>   </Constant>   </Access>   </NamelessParameter>   <Token text=")" />   </CallInfo>  </Access> |
+| "Block_4_DB"(TRUE); | &lt;Access Scope="Call"&gt;   &lt;CallInfo Name="Block_4" BlockType="FB"&gt;   &lt;Instance Scope="GlobalVariable"&gt;   &lt;Component Name="Block_4_DB" /&gt;   &lt;/Instance&gt;   &lt;Token text="(" /&gt;   &lt;NamelessParameter&gt;   &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;Bool&lt;/ConstantType&gt;   &lt;ConstantValue&gt;TRUE&lt;/ConstantValue&gt;   &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/NamelessParameter&gt;   &lt;Token text=")" /&gt;   &lt;/CallInfo&gt;  &lt;/Access&gt; |
 
 ###### Expression as actual parameter
 
 | SCL block | XML tag |
 | --- | --- |
-| #Callee_Instance(Input_1 := #a+3); | <Access Scope="Call">   <CallInfo BlockType="FB">   <Instance Scope="LocalVariable">   <Component Name="Callee_Instance" />   </Instance>   <Token text="(" />   <Parameter Name="Input_1">   <Blank />   <Token text=":=" />   <Blank />   <Access Scope="LocalVariable">   <Symbol>   <Component Name="a" />   </Symbol >   </Access>   <Token text="+" />   <Access Scope="LiteralConstant">   <Constant>   <ConstantType>Int</ConstantType>   <ConstantValue>3</ConstantValue>   </Constant>   </Access>   </Parameter>   <Token text=")" />   </CallInfo>  </Access>  <Token text=";" /> |
+| #Callee_Instance(Input_1 := #a+3); | &lt;Access Scope="Call"&gt;   &lt;CallInfo BlockType="FB"&gt;   &lt;Instance Scope="LocalVariable"&gt;   &lt;Component Name="Callee_Instance" /&gt;   &lt;/Instance&gt;   &lt;Token text="(" /&gt;   &lt;Parameter Name="Input_1"&gt;   &lt;Blank /&gt;   &lt;Token text=":=" /&gt;   &lt;Blank /&gt;   &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;/Symbol &gt;   &lt;/Access&gt;   &lt;Token text="+" /&gt;   &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;Int&lt;/ConstantType&gt;   &lt;ConstantValue&gt;3&lt;/ConstantValue&gt;   &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;   &lt;Token text=")" /&gt;   &lt;/CallInfo&gt;  &lt;/Access&gt;  &lt;Token text=";" /&gt; |
 
 ###### Expression as actual parameter without formal paramter
 
 | SCL block | XML tag |
 | --- | --- |
-| #Callee_Instance(#a+3); | <Access Scope="Call">   <CallInfo BlockType="FB">   <Instance Scope="LocalVariable">   <Component Name="Callee_Instance" />   </Instance>   <Token text="(" />   <NamelessParameter>   <Access Scope="LocalVariable">   <Symbol>   <Component Name="a" />   </Symbol >   </Access>   <Token text="+" />   <Access Scope="LiteralConstant">   <Constant>   <ConstantType>Int</ConstantType>   <ConstantValue>3</ConstantValue>   </Constant>   </Access>   </NamelessParameter>   <Token text=")" />   </CallInfo>  </Access>  <Token text=";" /> |
+| #Callee_Instance(#a+3); | &lt;Access Scope="Call"&gt;   &lt;CallInfo BlockType="FB"&gt;   &lt;Instance Scope="LocalVariable"&gt;   &lt;Component Name="Callee_Instance" /&gt;   &lt;/Instance&gt;   &lt;Token text="(" /&gt;   &lt;NamelessParameter&gt;   &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="a" /&gt;   &lt;/Symbol &gt;   &lt;/Access&gt;   &lt;Token text="+" /&gt;   &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;Int&lt;/ConstantType&gt;   &lt;ConstantValue&gt;3&lt;/ConstantValue&gt;   &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/NamelessParameter&gt;   &lt;Token text=")" /&gt;   &lt;/CallInfo&gt;  &lt;/Access&gt;  &lt;Token text=";" /&gt; |
 
 ###### Function call
 
 | SCL block | XML tag |
 | --- | --- |
-| #myInt := "MyFunction"(Param_1 := 1, Param_2 := 15, Param_3 := TRUE); | <Access Scope="LocalVariable">   <Symbol>   <Component Name="myInt" />   </Symbol>  </Access>  <Blank />  <Token text=":=" />  <Blank />  <Access Scope="Call">   <CallInfo Name="MyFunction" BlockType="FC">   <Token text="(" />   <Parameter Name="Param_1">   ... |
+| #myInt := "MyFunction"(Param_1 := 1, Param_2 := 15, Param_3 := TRUE); | &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="myInt" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token text=":=" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="Call"&gt;   &lt;CallInfo Name="MyFunction" BlockType="FC"&gt;   &lt;Token text="(" /&gt;   &lt;Parameter Name="Param_1"&gt;   ... |
 
 ###### Absolute call
 
@@ -37108,7 +37108,7 @@ A recoverable exception is thrown by the import of
 
 | SCL block | XML tag |
 | --- | --- |
-| %DB20(...); | <Access Scope="Call">   <CallInfo Name="" BlockType="FB">   <Instance Scope="GlobalVariable">   <Address Area="DB" BlockNumber="20" />   </Instance>     <Token text="(" />      <Parameter>      …      </Parameter>       <Token text=")" />    </CallInfo>  </Access> |
+| %DB20(...); | &lt;Access Scope="Call"&gt;   &lt;CallInfo Name="" BlockType="FB"&gt;   &lt;Instance Scope="GlobalVariable"&gt;   &lt;Address Area="DB" BlockNumber="20" /&gt;   &lt;/Instance&gt;     &lt;Token text="(" /&gt;      &lt;Parameter&gt;      …      &lt;/Parameter&gt;       &lt;Token text=")" /&gt;    &lt;/CallInfo&gt;  &lt;/Access&gt; |
 
 ###### Instruction
 
@@ -37118,7 +37118,7 @@ The general instruction type is given below.
 
 | SCL block | XML tag |
 | --- | --- |
-| #myInt := ATTACH(OB_NR := 1, EVENT := 15, ADD := TRUE); | Format of XML exported in ExportOptions.ReadOnly setting    <Access Scope="LocalVariable">   <Symbol>   <Component Name="myInt" />   </Symbol>  </Access>  <Blank />  <Token text=":=" />  <Blank />  <Access Scope="Call">   <Instruction Name="ATTACH">   <Token text="(" />   <Parameter Name="OB_NR">   <Blank />   <Token text=":=" />   <Blank />   <Access Scope="LiteralConstant">   <Constant>   <ConstantType>OB_ATT</ConstantType>   <ConstantValue>1</ConstantValue>   </Constant>   </Access>   </Parameter>   <Token text="," />   <Blank />   <Parameter Name="EVENT">   <Blank />   <Token text=":=" />   <Blank />   <Access Scope="LiteralConstant">   <Constant>   <ConstantType>EVENT_ATT</ConstantType>   <ConstantValue>15</ConstantValue>   </Constant>   </Access>   </Parameter>   <Token text="," />   <Blank />  <Parameter Name="ADD">   <Blank />   <Token text=":=" />   <Blank />   <Access Scope="LiteralConstant">   <Constant>   <ConstantType>Bool</ConstantType>   <ConstantValue>TRUE</ConstantValue>   </Constant>   </Access>   </Parameter>   <Parameter Name="RET_VAL" Informative="true" />   <Token text=")" />   </Instruction>   </Access>  <Token text=";" /> |
+| #myInt := ATTACH(OB_NR := 1, EVENT := 15, ADD := TRUE); | Format of XML exported in ExportOptions.ReadOnly setting    &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="myInt" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token text=":=" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="Call"&gt;   &lt;Instruction Name="ATTACH"&gt;   &lt;Token text="(" /&gt;   &lt;Parameter Name="OB_NR"&gt;   &lt;Blank /&gt;   &lt;Token text=":=" /&gt;   &lt;Blank /&gt;   &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;OB_ATT&lt;/ConstantType&gt;   &lt;ConstantValue&gt;1&lt;/ConstantValue&gt;   &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;   &lt;Token text="," /&gt;   &lt;Blank /&gt;   &lt;Parameter Name="EVENT"&gt;   &lt;Blank /&gt;   &lt;Token text=":=" /&gt;   &lt;Blank /&gt;   &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;EVENT_ATT&lt;/ConstantType&gt;   &lt;ConstantValue&gt;15&lt;/ConstantValue&gt;   &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;   &lt;Token text="," /&gt;   &lt;Blank /&gt;  &lt;Parameter Name="ADD"&gt;   &lt;Blank /&gt;   &lt;Token text=":=" /&gt;   &lt;Blank /&gt;   &lt;Access Scope="LiteralConstant"&gt;   &lt;Constant&gt;   &lt;ConstantType&gt;Bool&lt;/ConstantType&gt;   &lt;ConstantValue&gt;TRUE&lt;/ConstantValue&gt;   &lt;/Constant&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;   &lt;Parameter Name="RET_VAL" Informative="true" /&gt;   &lt;Token text=")" /&gt;   &lt;/Instruction&gt;   &lt;/Access&gt;  &lt;Token text=";" /&gt; |
 
 ###### Instruction with template
 
@@ -37126,7 +37126,7 @@ When the template parameter is complements the instruction name, the export of t
 
 | SCL block | XML tag |
 | --- | --- |
-| "tag_4" := MIN_DINT( IN1:="Tag_1", IN2:="Tag_2", IN3:="Tag_3" ); | <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Tag_4" />   </Symbol>  </Access>  ...  <Access Scope="Call">   <Instruction Name="MIN">   <TemplateValue Name="value_type" Type="Type">DInt</TemplateValue>   ...   <Parameter Name="IN1">   ...   <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Tag_1" />   </Symbol>   </Access>   </Parameter>  ...   <Parameter Name="IN2">...   <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Tag_2" />   </Symbol>   </Access>   </Parameter>  ...   <Parameter Name="IN3">  ...   <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Tag_3" />   </Symbol>   </Access>   </Parameter>  ...   </Instruction>  </Access>  ... |
+| "tag_4" := MIN_DINT( IN1:="Tag_1", IN2:="Tag_2", IN3:="Tag_3" ); | &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Tag_4" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  ...  &lt;Access Scope="Call"&gt;   &lt;Instruction Name="MIN"&gt;   &lt;TemplateValue Name="value_type" Type="Type"&gt;DInt&lt;/TemplateValue&gt;   ...   &lt;Parameter Name="IN1"&gt;   ...   &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Tag_1" /&gt;   &lt;/Symbol&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;  ...   &lt;Parameter Name="IN2"&gt;...   &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Tag_2" /&gt;   &lt;/Symbol&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;  ...   &lt;Parameter Name="IN3"&gt;  ...   &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Tag_3" /&gt;   &lt;/Symbol&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;  ...   &lt;/Instruction&gt;  &lt;/Access&gt;  ... |
 
 ###### Conversion
 
@@ -37134,7 +37134,7 @@ For conversion functions, the real instruction name and its template values are 
 
 | SCL block | XML tag |
 | --- | --- |
-| #output_1 := TIME_TO_S5TIME(#input_1); | <Access Scope="LocalVariable">   <Symbol>   <Component Name="output_1" />   </Symbol>  </Access>  ...  <Access Scope="Call">   <Instruction Name="TIME_TO_S5TIME">   <Token text="(" />   <NamelessParameter>   <Access Scope="LocalVariable">   <Symbol>   <Component Name="input_1" />   </Symbol>   </Access>   </NamelessParameter>   <Token text=")" />   </Instruction>   </Access>  ... |
+| #output_1 := TIME_TO_S5TIME(#input_1); | &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="output_1" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  ...  &lt;Access Scope="Call"&gt;   &lt;Instruction Name="TIME_TO_S5TIME"&gt;   &lt;Token text="(" /&gt;   &lt;NamelessParameter&gt;   &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="input_1" /&gt;   &lt;/Symbol&gt;   &lt;/Access&gt;   &lt;/NamelessParameter&gt;   &lt;Token text=")" /&gt;   &lt;/Instruction&gt;   &lt;/Access&gt;  ... |
 
 ###### Instruction with instance
 
@@ -37142,7 +37142,7 @@ The instance and instruction are separated by blanks. Blanks are optional, and t
 
 | SCL block | XML tag |
 | --- | --- |
-| IEC_Timer_0_DB . TON (IN:="Tag_1", PT:="Tag_2"); | <Access Scope="GlobalAccess">   <Symbol>   <Component Name="IEC_Timer_0_DB" />   </Symbol >  </Access>  <Blank />  <Token text="." />  <Blank />  <Access Scope="Call">   <Instruction Name="TON">   <Blank />   <Token text="(" />   <Parameter Name="IN">   <Access Scope="GlobalVariable">   <Symbol>   <Component Name="Tag_1" />   </Symbol>   </Access>   </Parameter>  ...   <Token text=")" />   </Instruction>  </Access>  <Token text=";" /> |
+| IEC_Timer_0_DB . TON (IN:="Tag_1", PT:="Tag_2"); | &lt;Access Scope="GlobalAccess"&gt;   &lt;Symbol&gt;   &lt;Component Name="IEC_Timer_0_DB" /&gt;   &lt;/Symbol &gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token text="." /&gt;  &lt;Blank /&gt;  &lt;Access Scope="Call"&gt;   &lt;Instruction Name="TON"&gt;   &lt;Blank /&gt;   &lt;Token text="(" /&gt;   &lt;Parameter Name="IN"&gt;   &lt;Access Scope="GlobalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="Tag_1" /&gt;   &lt;/Symbol&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;  ...   &lt;Token text=")" /&gt;   &lt;/Instruction&gt;  &lt;/Access&gt;  &lt;Token text=";" /&gt; |
 
 ###### Alarm constant
 
@@ -37150,8 +37150,8 @@ The alarm constants are only used in S7 400 PLCs, and the exported XML is simila
 
 | SCL block | XML tag |
 | --- | --- |
-| "Block_1_DB"(16#0000_0001); | Format of XML exported in ExportOptions.None setting    <Access Scope="Call">    <CallInfo Name="Block_1" BlockType="FB">      <Instance Scope="GlobalVariable">        <Component Name="Block_1_DB" />      </Instance>      <NamelessParameter>        <Access Scope="AlarmConstant">          <Constant>            <ConstantType>C_Alarm_8</ConstantType>            <ConstantValue>16#0000_0001</ConstantValue>          </Constant>        </Access>      </NamelessParameter >    </CallInfo>  </Access> |
-| Format of XML exported in ExportOptions.ReadOnly setting    <Access Scope="Call">    <CallInfo Name="Block_1" BlockType="FB">      <Instance Scope="GlobalVariable">        <Component Name="Block_1_DB" />      </Instance>      <NamelessParameter>        <Access Scope="AlarmConstant" >          <Constant>           <ConstantValue>16#00000001</ConstantValue>           <ConstantType>C_Alarm</ConstantType>          <StringAttribute Name="Format" Informative="true">Hex</StringAttribute>          </Constant>        </Access>      </NamelessParameter>    </CallInfo>  </Access> |  |
+| "Block_1_DB"(16#0000_0001); | Format of XML exported in ExportOptions.None setting    &lt;Access Scope="Call"&gt;    &lt;CallInfo Name="Block_1" BlockType="FB"&gt;      &lt;Instance Scope="GlobalVariable"&gt;        &lt;Component Name="Block_1_DB" /&gt;      &lt;/Instance&gt;      &lt;NamelessParameter&gt;        &lt;Access Scope="AlarmConstant"&gt;          &lt;Constant&gt;            &lt;ConstantType&gt;C_Alarm_8&lt;/ConstantType&gt;            &lt;ConstantValue&gt;16#0000_0001&lt;/ConstantValue&gt;          &lt;/Constant&gt;        &lt;/Access&gt;      &lt;/NamelessParameter &gt;    &lt;/CallInfo&gt;  &lt;/Access&gt; |
+| Format of XML exported in ExportOptions.ReadOnly setting    &lt;Access Scope="Call"&gt;    &lt;CallInfo Name="Block_1" BlockType="FB"&gt;      &lt;Instance Scope="GlobalVariable"&gt;        &lt;Component Name="Block_1_DB" /&gt;      &lt;/Instance&gt;      &lt;NamelessParameter&gt;        &lt;Access Scope="AlarmConstant" &gt;          &lt;Constant&gt;           &lt;ConstantValue&gt;16#00000001&lt;/ConstantValue&gt;           &lt;ConstantType&gt;C_Alarm&lt;/ConstantType&gt;          &lt;StringAttribute Name="Format" Informative="true"&gt;Hex&lt;/StringAttribute&gt;          &lt;/Constant&gt;        &lt;/Access&gt;      &lt;/NamelessParameter&gt;    &lt;/CallInfo&gt;  &lt;/Access&gt; |  |
 
 ###### ENO (Enable Output)
 
@@ -37162,8 +37162,8 @@ To support the ENO construct in SCL block, an attribute named "Scope" with value
 
 | SCL block | XML tag |
 | --- | --- |
-| Call(…, ENO => ENO); | <Access Scope="Call">  <CallInfo BlockType="FC">   <Token text="(" />  …   <Token text="," />   <Blank />   <Parameter Name="ENO">   <Blank />   <Token text="=>" />   <Blank />   <Access Scope="PredefinedVariable">   <PredefinedVariable Name="ENO" />   </Access>   </Parameter>   <Token text=")" />  </CallInfo>  </Access>  <Token text=";" /> |
-| IF ENO = #c THEN … | <Token text="IF" />  <Blank />  <Access Scope="PredefinedVariable">   <PredefinedVariable Name="ENO" />  </Access>  <Blank />  <Token Text="=" />  <Blank />  <Access Scope="LocalVariable">   <Symbol>   <Component Name="c" />   </Symbol>  </Access>  <Blank />  <Token Text="THEN" /> |
+| Call(…, ENO =&gt; ENO); | &lt;Access Scope="Call"&gt;  &lt;CallInfo BlockType="FC"&gt;   &lt;Token text="(" /&gt;  …   &lt;Token text="," /&gt;   &lt;Blank /&gt;   &lt;Parameter Name="ENO"&gt;   &lt;Blank /&gt;   &lt;Token text="=&gt;" /&gt;   &lt;Blank /&gt;   &lt;Access Scope="PredefinedVariable"&gt;   &lt;PredefinedVariable Name="ENO" /&gt;   &lt;/Access&gt;   &lt;/Parameter&gt;   &lt;Token text=")" /&gt;  &lt;/CallInfo&gt;  &lt;/Access&gt;  &lt;Token text=";" /&gt; |
+| IF ENO = #c THEN … | &lt;Token text="IF" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="PredefinedVariable"&gt;   &lt;PredefinedVariable Name="ENO" /&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token Text="=" /&gt;  &lt;Blank /&gt;  &lt;Access Scope="LocalVariable"&gt;   &lt;Symbol&gt;   &lt;Component Name="c" /&gt;   &lt;/Symbol&gt;  &lt;/Access&gt;  &lt;Blank /&gt;  &lt;Token Text="THEN" /&gt; |
 
 ##### Export/Import multilingual comments in SCL
 
@@ -37272,57 +37272,57 @@ clipboard
 
 ###### XML structure of GRAPH blocks with multi-language text
 
-The export XML for GRAPH blocks contains the translated step names and transition names of the GRAPH. These translated multi-language text are represented as StepName and TransitionName elements under the parent element Step and Transition respectivelty. These elements contain one MultiLanguageText element for each supported language. The texts for the languages which are not set explicitly are not exported. If no translation is made, the StepName and TransitionName elements are not exported. The StepName and TransitionName elements are optional. The TIA Portal Openness XML import operation throws a recoverable exception for the graph versions < V5.0.
+The export XML for GRAPH blocks contains the translated step names and transition names of the GRAPH. These translated multi-language text are represented as StepName and TransitionName elements under the parent element Step and Transition respectivelty. These elements contain one MultiLanguageText element for each supported language. The texts for the languages which are not set explicitly are not exported. If no translation is made, the StepName and TransitionName elements are not exported. The StepName and TransitionName elements are optional. The TIA Portal Openness XML import operation throws a recoverable exception for the graph versions &lt; V5.0.
 
 ###### Example for StepName element
 
-<Steps>
+&lt;Steps&gt;
 
- <Step Number="1" Init="true" Name="Step1" MaximumStepTime="T#10S" WarningTime="T#7S">
+ &lt;Step Number="1" Init="true" Name="Step1" MaximumStepTime="T#10S" WarningTime="T#7S"&gt;
 
-   <StepName>
+   &lt;StepName&gt;
 
-      <MultiLanguageText Lang="de-DE">stepDE</MultiLanguageText>
+      &lt;MultiLanguageText Lang="de-DE"&gt;stepDE&lt;/MultiLanguageText&gt;
 
-      <MultiLanguageText Lang="en-US">stepEN</MultiLanguageText>
+      &lt;MultiLanguageText Lang="en-US"&gt;stepEN&lt;/MultiLanguageText&gt;
 
-      <MultiLanguageText Lang="it-CH">stepIT</MultiLanguageText>
+      &lt;MultiLanguageText Lang="it-CH"&gt;stepIT&lt;/MultiLanguageText&gt;
 
-   </StepName>
+   &lt;/StepName&gt;
 
       ..
 
- </Step>
+ &lt;/Step&gt;
 
 ..
 
-</Steps>
+&lt;/Steps&gt;
 
 clipboard
 
 ###### Example for TransitionName element
 
-<Transitions>
+&lt;Transitions&gt;
 
-<Transition IsMissing="false" Name="Trans1" Number="1" ProgrammingLanguage="LAD">
+&lt;Transition IsMissing="false" Name="Trans1" Number="1" ProgrammingLanguage="LAD"&gt;
 
-   <TransitionName>
+   &lt;TransitionName&gt;
 
-      <MultiLanguageText Lang="de-DE">transDE</MultiLanguageText>
+      &lt;MultiLanguageText Lang="de-DE"&gt;transDE&lt;/MultiLanguageText&gt;
 
-      <MultiLanguageText Lang="en-US">transEN</MultiLanguageText>
+      &lt;MultiLanguageText Lang="en-US"&gt;transEN&lt;/MultiLanguageText&gt;
 
-      <MultiLanguageText Lang="it-CH">transIT</MultiLanguageText>
+      &lt;MultiLanguageText Lang="it-CH"&gt;transIT&lt;/MultiLanguageText&gt;
 
-   </TransitionName>
+   &lt;/TransitionName&gt;
 
       ..
 
- </Transition>
+ &lt;/Transition&gt;
 
 ..
 
-</Transitions>
+&lt;/Transitions&gt;
 
 clipboard
 
@@ -37377,7 +37377,7 @@ private static void ImportBlocks(PlcSoftware plcSoftware)
 
 PlcBlockGroup blockGroup = plcSoftware.BlockGroup;
 
-IList<PlcBlock> blocks = blockGroup.Blocks.Import(new FileInfo(@"D:\Blocks\myBlock.xml"), ImportOptions.Override);
+IList&lt;PlcBlock&gt; blocks = blockGroup.Blocks.Import(new FileInfo(@"D:\Blocks\myBlock.xml"), ImportOptions.Override);
 
 }
 
@@ -37393,7 +37393,7 @@ private static void ImportSystemBlocks(PlcSoftware plcSoftware)
 
 PlcBlockSystemGroup systemblockGroup = plcSoftware.BlockGroup.SystemBlockGroups[0].Groups[0];
 
-IList<PlcBlock> blocks = systemblockGroup.Blocks.Import(new FileInfo(@"D:\Blocks\myBlock.xml"), ImportOptions.Override);
+IList&lt;PlcBlock&gt; blocks = systemblockGroup.Blocks.Import(new FileInfo(@"D:\Blocks\myBlock.xml"), ImportOptions.Override);
 
 }
 
@@ -37874,9 +37874,9 @@ If the exported XML does not contain the Access attribute and it is imported int
 
 PlcSoftware plcTarget = GetControllerTargetByPLCName(Session.OpnsProject.Devices, PLCName);
 
-PlcUnitProvider plcUnitProvider = plcTarget.GetService<PlcUnitProvider>();
+PlcUnitProvider plcUnitProvider = plcTarget.GetService&lt;PlcUnitProvider&gt;();
 
-PlcSoftware plcSoftware = plcTarget.GetService<SoftwareContainer>() as PlcSoftware;
+PlcSoftware plcSoftware = plcTarget.GetService&lt;SoftwareContainer&gt;() as PlcSoftware;
 
 PlcUnit plcUnit1 = plcUnitProvider.UnitGroup.Units[0];
 
@@ -38038,7 +38038,7 @@ The exported XML doesn't contain the 'Access' Openness attribute and when import
 
 You can use the TIA Portal Openness to create instance DB for programming languages such as SCL, LAD, FBD, STL, Graph, and CEM.
 
-###### Program code: Creating Instance DB for SCL, LAD, FBD, STL, Graph, & CEM block
+###### Program code: Creating Instance DB for SCL, LAD, FBD, STL, Graph, &amp; CEM block
 
 PlcSoftware plc = ...;
 
@@ -38211,7 +38211,7 @@ clipboard
 
 Modify the following program code to set the start value of a tag to 'myTest':
 
-PlcSoftware myPlcSoftware = tiaProject.Devices[0].DeviceItems[1].GetService<SoftwareContainer>().Software as PlcSoftware;
+PlcSoftware myPlcSoftware = tiaProject.Devices[0].DeviceItems[1].GetService&lt;SoftwareContainer&gt;().Software as PlcSoftware;
 
 DataBlock myDatablock = myPlcSoftware.BlockGroup.Blocks[1] as DataBlock;
 
@@ -38290,13 +38290,13 @@ LanguageSettings languageSettings = Project.LanguageSettings;
 
 LanguageComposition supportedLanguages = languageSettings.Languages;
 
-IEnumerable<Language> cultureInfos = null;
+IEnumerable&lt;Language&gt; cultureInfos = null;
 
 if (cultureCodes != null)
 
 {
 
-cultureInfos = cultureCodes.Select(i => supportedLanguages.Find(CultureInfo.GetCultureInfo(i)));
+cultureInfos = cultureCodes.Select(i =&gt; supportedLanguages.Find(CultureInfo.GetCultureInfo(i)));
 
 }
 
@@ -38336,7 +38336,7 @@ private PlcAlarmTextListProvider GetTextListProvider(string stationName, string 
 
 DeviceComposition devices = Project.Devices;
 
-Device device = devices.Where(station => station.Name == stationName).FirstOrDefault();
+Device device = devices.Where(station =&gt; station.Name == stationName).FirstOrDefault();
 
 if (device == null)
 
@@ -38360,9 +38360,9 @@ if (unitName != null)
 
 {
 
-PlcUnitProvider unitProvider = plcTarget.GetService<PlcUnitProvider>();
+PlcUnitProvider unitProvider = plcTarget.GetService&lt;PlcUnitProvider&gt;();
 
-PlcUnit unit = unitProvider.UnitGroup.Units.Where(unit => unit.Name == unitName).FirstOrDefault();
+PlcUnit unit = unitProvider.UnitGroup.Units.Where(unit =&gt; unit.Name == unitName).FirstOrDefault();
 
 if (unit == null)
 
@@ -38372,11 +38372,11 @@ throw new InvalidOperationException($"The requested '{unitName}' unit is not fou
 
 }
 
-return unit.GetService<PlcAlarmTextListProvider>();
+return unit.GetService&lt;PlcAlarmTextListProvider&gt;();
 
 }
 
-return plcTarget.GetService<PlcAlarmTextListProvider>();
+return plcTarget.GetService&lt;PlcAlarmTextListProvider&gt;();
 
 }
 
@@ -38385,7 +38385,7 @@ clipboard
 **Error Handling:**
 
 - If the given language is not activated as a project language then the UserException will be thrown. For example, "Required language 'Konkani (India)' cannot be exported, because it is not used culture in the project. The valid languages are 'German (Germany)', 'English (United States)'"
-- If there is no user text list exist then the UserException will be thrown (TextListNotFoundException) with the following message: "There is no text list on the following item: <PLCName>."
+- If there is no user text list exist then the UserException will be thrown (TextListNotFoundException) with the following message: "There is no text list on the following item: &lt;PLCName&gt;."
 - If a given text list name does not exist, or exists but not a user text list, a UserException will be thrown. Such as "Text list User_1 is not found at PLC_1."  
   "Text list SYSTEM_SDiag_CmpCpuName cannot be exported, because it is not user text list."
 
@@ -38417,33 +38417,33 @@ path to the log file (that contains the messages that are generated during the i
 
 If the error is critical a UserException will be thrown that contains the details about the error. If the error is fatal, a NonRecoverableException will be thrown.
 
-<?xml version="1.0" standalone="no"?>
+&lt;?xml version="1.0" standalone="no"?&gt;
 
-<?xml-stylesheet type='text/xsl' href='MassDataHandlerLogFile.xsl'?>
+&lt;?xml-stylesheet type='text/xsl' href='MassDataHandlerLogFile.xsl'?&gt;
 
-<LogFile titleName="PLCAlarmTextLists_InvalidLanguage.xlsx__2019.06.07_13.46.45.070__Import_Log.xml" projectName="D:\TIA\dev\WM5_WinCC_HW_Work\binaries\Debug\x64\Tests\Siemens.Simatic.AlarmServices.Integration.Test.Openness\TextListXlsxFiles\PLCAlarmTextLists_InvalidLanguage.xlsx" typeText="Type" messageText="Message" timeText="Time">
+&lt;LogFile titleName="PLCAlarmTextLists_InvalidLanguage.xlsx__2019.06.07_13.46.45.070__Import_Log.xml" projectName="D:\TIA\dev\WM5_WinCC_HW_Work\binaries\Debug\x64\Tests\Siemens.Simatic.AlarmServices.Integration.Test.Openness\TextListXlsxFiles\PLCAlarmTextLists_InvalidLanguage.xlsx" typeText="Type" messageText="Message" timeText="Time"&gt;
 
-<LogEntry type="Warning" dateTime="3:46:45 PM">
+&lt;LogEntry type="Warning" dateTime="3:46:45 PM"&gt;
 
-<Message>The language ID in column 'Comment [abcd-EF]' is missing or is invalid (sheet 'TextList'). The texts in this language are not imported.</Message>
+&lt;Message&gt;The language ID in column 'Comment [abcd-EF]' is missing or is invalid (sheet 'TextList'). The texts in this language are not imported.&lt;/Message&gt;
 
-</LogEntry>
+&lt;/LogEntry&gt;
 
-<LogEntry type="Warning" dateTime="3:46:45 PM">
+&lt;LogEntry type="Warning" dateTime="3:46:45 PM"&gt;
 
-<Message>The language ID in column 'Text [abcd-EF]' is missing or is invalid (sheet 'TextListEntry'). The texts in this language are not imported.
+&lt;Message&gt;The language ID in column 'Text [abcd-EF]' is missing or is invalid (sheet 'TextListEntry'). The texts in this language are not imported.
 
-</Message>
+&lt;/Message&gt;
 
-</LogEntry>
+&lt;/LogEntry&gt;
 
-<LogEntry type="Information" dateTime="3:46:45 PM">
+&lt;LogEntry type="Information" dateTime="3:46:45 PM"&gt;
 
-<Message>Import completed: 2 text lists with 9 entries.</Message>
+&lt;Message&gt;Import completed: 2 text lists with 9 entries.&lt;/Message&gt;
 
-</LogEntry>
+&lt;/LogEntry&gt;
 
-</LogFile>
+&lt;/LogFile&gt;
 
 clipboard
 > **Note**
@@ -38583,11 +38583,11 @@ The import can be a PLC or a Software Unit. Path parameter is mandatory, Languag
 
 FileInfo fileInfo = new FileInfo(Path.Combine(s_XlsxFilesFolderName, $"{xlsxName}.xlsx"));
 
-List<Language> cultureInfos = new List<Language>();
+List&lt;Language&gt; cultureInfos = new List&lt;Language&gt;();
 
 PlcSoftware plcTarget = ...;
 
-PlcAlarmTextProvider alarmTextsProvider = plcTarget.GetService<PlcAlarmTextProvider>();
+PlcAlarmTextProvider alarmTextsProvider = plcTarget.GetService&lt;PlcAlarmTextProvider&gt;();
 
 PlcAlarmTextXlsxResult result = alarmTextsProvider.ExportInstanceTextsToXlsx(fileInfo, cultureInfos, PlcAlarmTextXlsxExportOption.All);
 
@@ -38599,7 +38599,7 @@ LanguageComposition supportedLanguages = languageSettings.Languages;
 
 cultureInfo = cultureInfos.Add(supportedLanguages.Find(CultureInfo.GetCultureInfo("en-US")));
 
-PlcAlarmTextProvider alarmTextsProvider = plcTarget.GetService<PlcAlarmTextProvider>();
+PlcAlarmTextProvider alarmTextsProvider = plcTarget.GetService&lt;PlcAlarmTextProvider&gt;();
 
 result = alarmTextsProvider.ImportInstanceTextsFromXlsx(fileInfo, cultureInfo);
 
@@ -38671,7 +38671,7 @@ A sample usage of the Export action:
 
 FileInfo fileInfo = new FileInfo(@"D:\AlarmClasses.DAT");
 
-AlarmClassDataProvider provider = Project.GetService<AlarmClassDataProvider>();
+AlarmClassDataProvider provider = Project.GetService&lt;AlarmClassDataProvider&gt;();
 
 if (fileInfo.Exists)
 
@@ -38723,7 +38723,7 @@ A sample of usage of the Import action:
 
 FileInfo fileInfo = new FileInfo(@"D:\AlarmClasses.DAT");
 
-AlarmClassDataProvider provider = Project.GetService<AlarmClassDataProvider>();
+AlarmClassDataProvider provider = Project.GetService&lt;AlarmClassDataProvider&gt;();
 
 AlarmClassExportImportResult result;
 
@@ -38824,7 +38824,7 @@ Filelnfo fileInfo = new FileInfo(@"C:\Users\z003jwfc\Desktop\Supervisions_Openne
 
 var proDiagBlock = (FB)SW.BlockGroup.Blocks.Find("Blockl");
 
-SupervisionProvider supervisionProvider = proDiagBlock.GetService<SupervisionProvider>();
+SupervisionProvider supervisionProvider = proDiagBlock.GetService&lt;SupervisionProvider&gt;();
 
 SupervisionXlsxResult result = supervisionProvider.ExportSupervisionsToXlsx(fileInfo);
 
@@ -38840,7 +38840,7 @@ Filelnfo fileInfo = new FileInfo(@"C:\Users\z003jwfc\Desktop\SupervisionsOpennes
 
 var proDiagBlock = (FB)SW.BlockGroup.Blocks.Find("Blockl");
 
-SupervisionProvider supervisionProvider = proDiagBlock.GetService<SupervisionProvider>();
+SupervisionProvider supervisionProvider = proDiagBlock.GetService&lt;SupervisionProvider&gt;();
 
 //import supervisions
 
@@ -38901,7 +38901,7 @@ FileInfo fileInfo = new FileInfo(@"C:\Users\z003jwfc\Desktop\Supervisions_Openne
 
 //SW is nothing but PlcSoftware / PlcUnit.
 
-SupervisionProvider supervisionProvider = SW.GetService<SupervisionProvider>();
+SupervisionProvider supervisionProvider = SW.GetService&lt;SupervisionProvider&gt;();
 
 SupervisionXlsxResult result = supervisionProvider.ExportSupervisionsToXlsx(fileInfo);
 
@@ -38915,7 +38915,7 @@ FileInfo fileInfo = new FileInfo(@"C:\Users\z003jwfc\Desktop\Supervisions_Openne
 
 //SW is nothing but PlcSoftware / PlcUnit.
 
-Supervision Provider supervisionProvider = SW.GetService<SupervisionProvider>();
+Supervision Provider supervisionProvider = SW.GetService&lt;SupervisionProvider&gt;();
 
 //import supervisions
 
@@ -39075,7 +39075,7 @@ If you use the None option instead of Override and a (non-empty) ForceTable alre
 
 Modify the following program code to export Watch Table:
 
-SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)item).GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)item).GetService&lt;SoftwareContainer&gt;();
 
 PlcSoftware plcSoftware = softwareContainer.Software as PlcSoftware;
 
@@ -39098,7 +39098,7 @@ clipboard
 
 Modify the following program code to export Force Table:
 
-SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)item).GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)item).GetService&lt;SoftwareContainer&gt;();
 
 PlcSoftware plcSoftware = softwareContainer.Software as PlcSoftware;
 
@@ -39117,13 +39117,13 @@ clipboard
 
 Modify the following program code to import Watch Table:
 
-SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)item).GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = ((IEngineeringServiceProvider)item).GetService&lt;SoftwareContainer&gt;();
 
 PlcSoftware plcSoftware = softwareContainer.Software as PlcSoftware;
 
 PlcWatchTableComposition importWatchTables = plcSoftware.PlcWatchAndForceTableGroup.WatchTables;
 
-IList<PlcWatchTable> WatchTables = importWatchTables.Import((FileInfo)fileInfo, ImportOptions.None);
+IList&lt;PlcWatchTable&gt; WatchTables = importWatchTables.Import((FileInfo)fileInfo, ImportOptions.None);
 
 clipboard
 > **Note**
@@ -39184,19 +39184,19 @@ The API interface supports the importing of user data types from an XML file.
 
 The following code example shows an excerpt from an import file of a user-defined data type:
 
-<Section Name="Input">
+&lt;Section Name="Input"&gt;
 
-<Member Name="Input1" Datatype=quot;myudt1&quot;>
+&lt;Member Name="Input1" Datatype=quot;myudt1&amp;quot;&gt;
 
-<Sections>
+&lt;Sections&gt;
 
-<Section Name="None">
+&lt;Section Name="None"&gt;
 
-<Member Name="MyUDT1Member1" Datatype="bool"/>
+&lt;Member Name="MyUDT1Member1" Datatype="bool"/&gt;
 
-<Member Name="MyUDT1Member2" Datatype=&quot;myudt1&quot;>
+&lt;Member Name="MyUDT1Member2" Datatype=&amp;quot;myudt1&amp;quot;&gt;
 
-<Sections...
+&lt;Sections...
 
 clipboard
 > **Note**
@@ -39221,7 +39221,7 @@ FileInfo fullFilePath = new FileInfo(@"C:\OpennessSamples\Import\ExportedPlcType
 
 PlcTypeComposition types = plcSoftware.TypeGroup.Types;
 
-IList<PlcType> importedTypes = types.Import(fullFilePath, ImportOptions.Override);
+IList&lt;PlcType&gt; importedTypes = types.Import(fullFilePath, ImportOptions.Override);
 
 }
 
@@ -40342,47 +40342,47 @@ The export file comprises the following two sections:
 
   The section includes information about the writer tool, referenced document versions (documents which defines the content of the AML file) etc.
 
-Below XML depicts the AML file with latest AR APC recommendation corresponding to TIA Portal V19 exported file information which is showing <AddtionalInformation> section.
+Below XML depicts the AML file with latest AR APC recommendation corresponding to TIA Portal V19 exported file information which is showing &lt;AddtionalInformation&gt; section.
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" FileName="Project82.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd">
+&lt;CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" FileName="Project82.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd"&gt;
 
-<AdditionalInformation>
+&lt;AdditionalInformation&gt;
 
-<WriterHeader>
+&lt;WriterHeader&gt;
 
-<WriterName>Totally Integrated Automation Portal</WriterName>
+&lt;WriterName&gt;Totally Integrated Automation Portal&lt;/WriterName&gt;
 
-<WriterID>1d4fcebb-1ad6-4881-b01d-bca335d94a46:V1.0</WriterID>
+&lt;WriterID&gt;1d4fcebb-1ad6-4881-b01d-bca335d94a46:V1.0&lt;/WriterID&gt;
 
-<WriterVendor>Siemens AG</WriterVendor>
+&lt;WriterVendor&gt;Siemens AG&lt;/WriterVendor&gt;
 
-<WriterVendorURL>www.siemens.com</WriterVendorURL>
+&lt;WriterVendorURL&gt;www.siemens.com&lt;/WriterVendorURL&gt;
 
-<WriterVersion>19</WriterVersion>
+&lt;WriterVersion&gt;19&lt;/WriterVersion&gt;
 
-<WriterRelease>1900.0000.0.0</WriterRelease>
+&lt;WriterRelease&gt;1900.0000.0.0&lt;/WriterRelease&gt;
 
-<LastWritingDateTime>2023-07-19T04:21:32.9174411Z</LastWritingDateTime>
+&lt;LastWritingDateTime&gt;2023-07-19T04:21:32.9174411Z&lt;/LastWritingDateTime&gt;
 
-</WriterHeader>
+&lt;/WriterHeader&gt;
 
-</AdditionalInformation>
+&lt;/AdditionalInformation&gt;
 
-<AdditionalInformation AutomationMLVersion="2.0" />
+&lt;AdditionalInformation AutomationMLVersion="2.0" /&gt;
 
-<AdditionalInformation DocumentVersions="Recommendations">
+&lt;AdditionalInformation DocumentVersions="Recommendations"&gt;
 
-<Document DocumentIdentifier="AR APC" Version="1.4.0" />
+&lt;Document DocumentIdentifier="AR APC" Version="1.4.0" /&gt;
 
-</AdditionalInformation>
-
-...
+&lt;/AdditionalInformation&gt;
 
 ...
 
-</CAEXFile>
+...
+
+&lt;/CAEXFile&gt;
 
 clipboard
 > **Note**
@@ -40558,8 +40558,8 @@ The following formats for the type identifier are supported of the CAx import/ex
 
 If you need to know a type identifier you inquire it in TIA Portal as follows:
 
-1. Enable the setting "Enable display of the type identifier for devices and modules" in "Options > Settings > Hardware configuration > Display of the type identifier".
-2. Open the editor "Devices & networks".
+1. Enable the setting "Enable display of the type identifier for devices and modules" in "Options &gt; Settings &gt; Hardware configuration &gt; Display of the type identifier".
+2. Open the editor "Devices &amp; networks".
 3. Select a device in the Catalog.  
    The type identifier is displayed in the viewlet "Information"
 
@@ -40923,7 +40923,7 @@ The XML representation of extension rack connections between multiple racks shal
 
 **ExternalInterface-**
 
-<ExternalInterface> internal element shall be added under <CommunicationPort> internal element which participates in the connection
+&lt;ExternalInterface&gt; internal element shall be added under &lt;CommunicationPort&gt; internal element which participates in the connection
 
 `<InternalElement ID="[IM Module Unique ID]" Name="[IM Module Name]">`
 
@@ -40971,7 +40971,7 @@ clipboard
 
 **Internal link**
 
-Extension racks connections are represented using <InternalLink> tags. The <InternalLink> tags shall be added under common parent of multiple racks (i.e., Device). Internal link name shall be unique across the common parent.
+Extension racks connections are represented using &lt;InternalLink&gt; tags. The &lt;InternalLink&gt; tags shall be added under common parent of multiple racks (i.e., Device). Internal link name shall be unique across the common parent.
 
 `<InternalLink Name="Link To [Internal link Name]" RefPartnerSideA="[Communication Port UniqueID]:[Communication Port External Interface Name]" RefPartnerSideB="[Communication Port UniqueID]:[Communication Port External Interface Name]" />`
 
@@ -40996,23 +40996,23 @@ For information on non-GSD/GSDML custom attributes, see [Export/Import AML file 
 
 The AML structure is given here:"
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute　Name="AttributeName1" AttributeDataType="xs:string">
+&lt;Attribute　Name="AttributeName1" AttributeDataType="xs:string"&gt;
 
-<Value>AttributeValue1</Value>
+&lt;Value&gt;AttributeValue1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute　Name="AttributeName2" AttributeDataType="xs:string">
+&lt;Attribute　Name="AttributeName2" AttributeDataType="xs:string"&gt;
 
-<Value>AttributeValue2</Value>
+&lt;Value&gt;AttributeValue2&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
 clipboard
 > **Note**
@@ -41021,11 +41021,11 @@ clipboard
 
 To allow a correct identification of a custom attribute in the TIA Portal, the name of the custom attribute must conform to the following definitions:
 
-A custom attribute named consists of three parts <name>, <attribute_location>, <value_location>.
+A custom attribute named consists of three parts &lt;name&gt;, &lt;attribute_location&gt;, &lt;value_location&gt;.
 
-- **<name>** is a string containing only alphanumeric letters, numbers , "_" and ".". Usually the ‘name’ is the attribute name found in GSD/GSDML file. It is an optional part for attributes in parameter dataset otherwise mandatory.
-- **<attribute_location>** defines the device item where the attribute is located. This is required to identify the location of the attribute if it is not located directly at the module. It has the form #<subslotnumber>#<subsubslotnumber>. That means, if the attribute is located at the module the <attribute_location> is empty, if it is located at a Sub Module it is "#<subslotnumber>" and in case of a location at a sub sub module the value is "#<subslotnumber>#<subsubslotnumber>".
-- **<value location>** defines how to access an attribute at its device item. In case the value is part of a parameter data set, it is identified by the following quintuple:
+- **&lt;name&gt;** is a string containing only alphanumeric letters, numbers , "_" and ".". Usually the ‘name’ is the attribute name found in GSD/GSDML file. It is an optional part for attributes in parameter dataset otherwise mandatory.
+- **&lt;attribute_location&gt;** defines the device item where the attribute is located. This is required to identify the location of the attribute if it is not located directly at the module. It has the form #&lt;subslotnumber&gt;#&lt;subsubslotnumber&gt;. That means, if the attribute is located at the module the &lt;attribute_location&gt; is empty, if it is located at a Sub Module it is "#&lt;subslotnumber&gt;" and in case of a location at a sub sub module the value is "#&lt;subslotnumber&gt;#&lt;subsubslotnumber&gt;".
+- **&lt;value location&gt;** defines how to access an attribute at its device item. In case the value is part of a parameter data set, it is identified by the following quintuple:
 
   - **DatasetNumber**: The number of the data set at the device item.
   - **ByteOffset**: The position in bytes (starting with 0) where the value begins within the parameter data set.
@@ -41035,27 +41035,27 @@ A custom attribute named consists of three parts <name>, <attribute_location>, <
 
 Overall example for custom attributes:
 
-<Attribute name = "CustomAttribute">
+&lt;Attribute name = "CustomAttribute"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType"/>
+&lt;RefSemantic CorrespondingAttributePath="ListType"/&gt;
 
-<Attribute Name="IDTP_No_Unit_DIAG#0-1-0-2-7-1" AttributeDataType="xs:string">
+&lt;Attribute Name="IDTP_No_Unit_DIAG#0-1-0-2-7-1" AttributeDataType="xs:string"&gt;
 
-<Value>1<Value>
+&lt;Value&gt;1&lt;Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="IDTP_LANG#0-1-1-2-0-4" AttributeDataType="xs:string">
+&lt;Attribute Name="IDTP_LANG#0-1-1-2-0-4" AttributeDataType="xs:string"&gt;
 
-<Value>89<Value>
+&lt;Value&gt;89&lt;Value&gt;
 
-<Attribute Name="IDTP_D_FREEZE#0-1-1-2-7-1" AttributeDataType="xs:string">
+&lt;Attribute Name="IDTP_D_FREEZE#0-1-1-2-7-1" AttributeDataType="xs:string"&gt;
 
-<Value>1<Value>
+&lt;Value&gt;1&lt;Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
 clipboard
 
@@ -41065,17 +41065,17 @@ In some (rare) cases the attribute is explicitly modelled (not part of parameter
 >
 > On export TIA Portal always exports the complete data sets to allow partner applications full access of the contained data
 
-<Attribute name = "CustomAttribute">
+&lt;Attribute name = "CustomAttribute"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType"/>
+&lt;RefSemantic CorrespondingAttributePath="ListType"/&gt;
 
-<Attribute Name="PrmData#0-1-0-2-0-16" AttributeDataType="xs:string">
+&lt;Attribute Name="PrmData#0-1-0-2-0-16" AttributeDataType="xs:string"&gt;
 
-<Value>128, 0<Value>
+&lt;Value&gt;128, 0&lt;Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
 clipboard
 
@@ -41089,75 +41089,75 @@ Below snippet shows the format in which PrmData shall be expected in the AML fil
 
 ...
 
-<InternalElement ID="049f1260-7c97-458e-84bd-12682f943f19" Name="Slave_1">
+&lt;InternalElement ID="049f1260-7c97-458e-84bd-12682f943f19" Name="Slave_1"&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>false</Value>
+&lt;Value&gt;false&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string"> <Value>GSD:SI018098.GSD/DAP</Value>
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt; &lt;Value&gt;GSD:SI018098.GSD/DAP&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="PrmData-0-0-39-0-312" AttributeDataType="xs:string">
+&lt;Attribute Name="PrmData-0-0-39-0-312" AttributeDataType="xs:string"&gt;
 
-<Value>39,129,0,0,28,0,128,15,255,255,255,255,255,255,255,255,255, 255,255,255,255,255,255,15,255,255,255,255, 255,255,255,255,255,255,255,255,255,255,255</Value>
+&lt;Value&gt;39,129,0,0,28,0,128,15,255,255,255,255,255,255,255,255,255, 255,255,255,255,255,255,15,255,255,255,255, 255,255,255,255,255,255,255,255,255,255,255&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
 Below snippet shows the format in which PrmData in case where it is available over a built-in submodule in tia portal, but in the AML file it is given at the pluggable parent.
 
-<InternalElement ID="8fb83cae-ae30-45d2-9d4c-6db1154af02d" Name="IE-AS-i-LINK">
+&lt;InternalElement ID="8fb83cae-ae30-45d2-9d4c-6db1154af02d" Name="IE-AS-i-LINK"&gt;
 
 ...
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="PrmData#0-130-0-4-0-32" AttributeDataType="xs:string">
+&lt;Attribute Name="PrmData#0-130-0-4-0-32" AttributeDataType="xs:string"&gt;
 
-<Value>0,0,131,0</Value>
+&lt;Value&gt;0,0,131,0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<InternalElement ID="574a55bb-1209-4672-86bd-01ee9085eaf6" Name="DAP 1">
+&lt;InternalElement ID="574a55bb-1209-4672-86bd-01ee9085eaf6" Name="DAP 1"&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>0</Value>
+&lt;Value&gt;0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 ...
 
@@ -41187,79 +41187,79 @@ Custom attributes provided as individual attributes and not as full PrmDataset s
 
 Below snippet shows such a sample.
 
-<InternalElement ID="1cf85c26-cc2a-4413-b91b-e4b55e183762" Name="Slave_1">
+&lt;InternalElement ID="1cf85c26-cc2a-4413-b91b-e4b55e183762" Name="Slave_1"&gt;
 
 ...
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="PSR-0-4-26-0-1" AttributeDataType="xs:string">
+&lt;Attribute Name="PSR-0-4-26-0-1" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="C4F-0-4-26-1-1" AttributeDataType="xs:string">
+&lt;Attribute Name="C4F-0-4-26-1-1" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="GPC-0-4-26-2-1" AttributeDataType="xs:string">
+&lt;Attribute Name="GPC-0-4-26-2-1" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="SFC-0-4-26-3-1" AttributeDataType="xs:string">
+&lt;Attribute Name="SFC-0-4-26-3-1" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="ACC-0-4-26-4-1" AttributeDataType="xs:string">
+&lt;Attribute Name="ACC-0-4-26-4-1" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CMV3.1-0-4-26-5-1" AttributeDataType="xs:string">
+&lt;Attribute Name="CMV3.1-0-4-26-5-1" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="MUPR-0-5-26-0-32" AttributeDataType="xs:string">
+&lt;Attribute Name="MUPR-0-5-26-0-32" AttributeDataType="xs:string"&gt;
 
-<Value>0,0,31,64</Value>
+&lt;Value&gt;0,0,31,64&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="TMR-0-9-26-0-32" AttributeDataType="xs:string">
+&lt;Attribute Name="TMR-0-9-26-0-32" AttributeDataType="xs:string"&gt;
 
-<Value>7,255,225,236</Value>
+&lt;Value&gt;7,255,225,236&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="TSOLF-0-13-26-0-8" AttributeDataType="xs:string">
+&lt;Attribute Name="TSOLF-0-13-26-0-8" AttributeDataType="xs:string"&gt;
 
-<Value>100</Value>
+&lt;Value&gt;100&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PP-0-25-26-0-8" AttributeDataType="xs:string">
+&lt;Attribute Name="PP-0-25-26-0-8" AttributeDataType="xs:string"&gt;
 
-<Value>2</Value>
+&lt;Value&gt;2&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 ...
 
@@ -41281,29 +41281,29 @@ Below snippet shows the format in which custom attributes shall be expected in t
 
 ...
 
-<InternalElement ID="806532c8-109a-42c6-82e9-84e8ba308aad" Name="cp1604">
+&lt;InternalElement ID="806532c8-109a-42c6-82e9-84e8ba308aad" Name="cp1604"&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>false</Value>
+&lt;Value&gt;false&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="Author" AttributeDataType="xs:string">
+&lt;Attribute Name="Author" AttributeDataType="xs:string"&gt;
 
-<Value>AuthorValue</Value>
+&lt;Value&gt;AuthorValue&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
@@ -41311,49 +41311,49 @@ Below snippet shows the format in which custom attribute shall be exported in ca
 
 ...
 
-<InternalElement ID="806532c8-109a-42c6-82e9-84e8ba308aad" Name="cp1604">
+&lt;InternalElement ID="806532c8-109a-42c6-82e9-84e8ba308aad" Name="cp1604"&gt;
 
 ...
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="Failsafe_FIODBNumber#0" AttributeDataType="xs:string">
+&lt;Attribute Name="Failsafe_FIODBNumber#0" AttributeDataType="xs:string"&gt;
 
-<Value>0</Value>
+&lt;Value&gt;0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Failsafe_FParameterSignatureIndividualParameters#0" AttributeDataType="xs:string">
+&lt;Attribute Name="Failsafe_FParameterSignatureIndividualParameters#0" AttributeDataType="xs:string"&gt;
 
-<Value>5</Value>
+&lt;Value&gt;5&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<InternalElement ID="6b94abcd-3fe4-4800-9e18-ea7810d7afed" Name="PS_8Byte">
+&lt;InternalElement ID="6b94abcd-3fe4-4800-9e18-ea7810d7afed" Name="PS_8Byte"&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>0</Value>
+&lt;Value&gt;0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
@@ -41421,43 +41421,43 @@ Following is the identifying name format for custom attribute in the AML file:
 
 Below snippet shows the format in which custom attributes shall be expected in the AML file if it is found over a pluggable module.
 
-<InternalElement ID="298d6b6a-fe70-4edd-9230-39b0ae2238a5" Name="PLC_1">
+&lt;InternalElement ID="298d6b6a-fe70-4edd-9230-39b0ae2238a5" Name="PLC_1"&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.Author" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.Author" AttributeDataType="xs:string"&gt;
 
-<Value>cvdfff</Value>
+&lt;Value&gt;cvdfff&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.CentralAlarmManagement" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.CentralAlarmManagement" AttributeDataType="xs:string"&gt;
 
-<Value>True</Value>
+&lt;Value&gt;True&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.ClockMemoryByte" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.ClockMemoryByte" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.CommunicationMode" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.CommunicationMode" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.ConfigurationControl" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.ConfigurationControl" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
@@ -41465,37 +41465,37 @@ Below snippet shows the format in which custom attribute shall be exported in ca
 
 ...
 
-<InternalElement ID="298d6b6a-fe70-4edd-9230-39b0ae2238a5" Name="PLC_1">
+&lt;InternalElement ID="298d6b6a-fe70-4edd-9230-39b0ae2238a5" Name="PLC_1"&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.DisplayDefaultLanguage#3" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.DisplayDefaultLanguage#3" AttributeDataType="xs:string"&gt;
 
-<Value>0</Value>
+&lt;Value&gt;0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.DisplayProtection#3" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.DisplayProtection#3" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.DisplayTimeToEnergySavingMode#3" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.DisplayTimeToEnergySavingMode#3" AttributeDataType="xs:string"&gt;
 
-<Value>900</Value>
+&lt;Value&gt;900&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.DisplayTimeToStandbyMode#3" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.DisplayTimeToStandbyMode#3" AttributeDataType="xs:string"&gt;
 
-<Value>1800</Value>
+&lt;Value&gt;1800&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
@@ -41526,25 +41526,25 @@ Below snippet shows different name formats accepted during CAx import.
 
 ...
 
-<InternalElement ID="298d6b6a-fe70-4edd-9230-39b0ae2238a5" Name="PLC_1">
+&lt;InternalElement ID="298d6b6a-fe70-4edd-9230-39b0ae2238a5" Name="PLC_1"&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="6ES7516_3AN03_0AB0_V2_9.CentralAlarmManagement" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7516_3AN03_0AB0_V2_9.CentralAlarmManagement" AttributeDataType="xs:string"&gt;
 
-<Value>True</Value>
+&lt;Value&gt;True&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CentralAlarmManagement" AttributeDataType="xs:string">
+&lt;Attribute Name="CentralAlarmManagement" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
@@ -41556,7 +41556,7 @@ CAx export shall consider only attributes under channel which are read-writable 
 
 Following is the identifying name format for channel custom attribute in the AML file.
 
-- <TypeIdentifier>.Channels.<Type><IoType>_<ChannelNumber>.<AttributeName>#<PositionNumber> where
+- &lt;TypeIdentifier&gt;.Channels.&lt;Type&gt;&lt;IoType&gt;_&lt;ChannelNumber&gt;.&lt;AttributeName&gt;#&lt;PositionNumber&gt; where
 
 | Custom Attribute | Description |
 | --- | --- |
@@ -41571,170 +41571,170 @@ Below snippet shows the format in which custom attributes shall be expected in t
 
 ...
 
-<InternalElement ID="928ac5b5-2625-4f40-a624-d731ed673522" Name="DO 8x24VDC/0.5A_1"><Attribute Name="TypeName" AttributeDataType="xs:string">
+&lt;InternalElement ID="928ac5b5-2625-4f40-a624-d731ed673522" Name="DO 8x24VDC/0.5A_1"&gt;&lt;Attribute Name="TypeName" AttributeDataType="xs:string"&gt;
 
-<Value>DO8 x 24VDC / 0.5A</Value>
+&lt;Value&gt;DO8 x 24VDC / 0.5A&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>5</Value>
+&lt;Value&gt;5&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>false</Value>
+&lt;Value&gt;false&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;
 
-<Value>OrderNumber:6ES7 322-8BF00-0AB0</Value>
+&lt;Value&gt;OrderNumber:6ES7 322-8BF00-0AB0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="6ES7322_8BF00_0AB0.Author" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7322_8BF00_0AB0.Author" AttributeDataType="xs:string"&gt;
 
-<Value>Z003NH6D</Value>
+&lt;Value&gt;Z003NH6D&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<ExternalInterface ID="143cf656-2a27-4673-9a6a-55bc570068f6" Name="Channel_DO_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel">  
-<Attribute Name="Type" AttributeDataType="xs:string">
+&lt;ExternalInterface ID="143cf656-2a27-4673-9a6a-55bc570068f6" Name="Channel_DO_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel"&gt;  
+&lt;Attribute Name="Type" AttributeDataType="xs:string"&gt;
 
-<Value>Digital</Value>
+&lt;Value&gt;Digital&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="IoType" AttributeDataType="xs:string">
+&lt;Attribute Name="IoType" AttributeDataType="xs:string"&gt;
 
-<Value>Output</Value>
+&lt;Value&gt;Output&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Number" AttributeDataType="xs:int">
+&lt;Attribute Name="Number" AttributeDataType="xs:int"&gt;
 
-<Value>0</Value>
+&lt;Value&gt;0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Length" AttributeDataType="xs:int">
+&lt;Attribute Name="Length" AttributeDataType="xs:int"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.DiagnosticsNoSupplyVoltage" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.DiagnosticsNoSupplyVoltage" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.DiagnosticsShortCircuitToGround" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.DiagnosticsShortCircuitToGround" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.DiagnosticsShortCircuitToLplus" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.DiagnosticsShortCircuitToLplus" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.DiagnosticsWireBreak" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.DiagnosticsWireBreak" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.SubstituteValue" AttributeDataType="xs:string"><Value>False</Value>
+&lt;Attribute Name="6ES7322_8BF00_0AB0.Channels.DO_0.SubstituteValue" AttributeDataType="xs:string"&gt;&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
 clipboard
 
 Below snippet shows the format in which custom attribute shall be exported if it is found over Built-in submodule
 
 ...  
-<InternalElementID="5bda81fa-8c31-4e1a-b41a-f5100eb2ff2f"Name="AI5/AQ2_1">  
-<AttributeName="PositionNumber"AttributeDataType="xs:int">  
-<Value>8</Value>  
-</Attribute>  
-<AttributeName="BuiltIn"AttributeDataType="xs:boolean">  
-<Value>true</Value>  
-</Attribute>  
-<AttributeName="Address">  
-<RefSemanticCorrespondingAttributePath="OrderedListType"/>  
-<AttributeName="1">  
-<AttributeName="StartAddress"AttributeDataType="xs:int">  
-<Value>0</Value>  
-</Attribute>  
-<AttributeName="Length"AttributeDataType="xs:int">  
-<Value>80</Value>  
-</Attribute>  
-<AttributeName="IoType"AttributeDataType="xs:string">  
-<Value>Input</Value>  
-</Attribute>  
-</Attribute>  
-<AttributeName="2">  
-<AttributeName="StartAddress"AttributeDataType="xs:int">  
-<Value>0</Value>  
-</Attribute>  
-<AttributeName="Length"AttributeDataType="xs:int">  
-<Value>32</Value>  
-</Attribute>  
-<AttributeName="IoType"AttributeDataType="xs:string">  
-<Value>Output</Value>  
-</Attribute>  
-</Attribute>  
-</Attribute>  
-<ExternalInterfaceID="76a8ea3f-1da6-4622-b806-912e1da53980"Name="Channel_AI_0"RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel">  
-<AttributeName="Type"AttributeDataType="xs:string">  
-<Value>Analog</Value>  
-</Attribute>  
-<AttributeName="IoType"AttributeDataType="xs:string">  
-<Value>Input</Value>  
-</Attribute>  
-<AttributeName="Number"AttributeDataType="xs:int">  
-<Value>0</Value>  
-</Attribute>  
-<AttributeName="Length"AttributeDataType="xs:int">  
-<Value>16</Value>  
-</Attribute>  
-<AttributeName="CustomAttributes">  
-<RefSemanticCorrespondingAttributePath="ListType"/>  
-<AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.HardwareInterruptLowLimit2Active#8"AttributeDataType="xs:string">  
-<Value>False</Value>  
-</Attribute>  
-<AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.OperatingRange#8"AttributeDataType="xs:string">  
-<Value>OperatingRange.PlusMinus10V</Value>  
-</Attribute>  
-<AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.OperatingType#8"AttributeDataType="xs:string">  
-<Value>OperatingType.Voltage</Value>  
-</Attribute>  
-<AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.ParameterSettings#8"AttributeDataType="xs:string">  
-<Value>ParameterSettings.Manual</Value>  
-</Attribute>  
-<AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.Smoothing#8"AttributeDataType="xs:string">  
-<Value>Smoothing.None</Value>  
-</Attribute>  
-</Attribute>  
-</ExternalInterface>
+&lt;InternalElementID="5bda81fa-8c31-4e1a-b41a-f5100eb2ff2f"Name="AI5/AQ2_1"&gt;  
+&lt;AttributeName="PositionNumber"AttributeDataType="xs:int"&gt;  
+&lt;Value&gt;8&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="BuiltIn"AttributeDataType="xs:boolean"&gt;  
+&lt;Value&gt;true&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="Address"&gt;  
+&lt;RefSemanticCorrespondingAttributePath="OrderedListType"/&gt;  
+&lt;AttributeName="1"&gt;  
+&lt;AttributeName="StartAddress"AttributeDataType="xs:int"&gt;  
+&lt;Value&gt;0&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="Length"AttributeDataType="xs:int"&gt;  
+&lt;Value&gt;80&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="IoType"AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;Input&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="2"&gt;  
+&lt;AttributeName="StartAddress"AttributeDataType="xs:int"&gt;  
+&lt;Value&gt;0&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="Length"AttributeDataType="xs:int"&gt;  
+&lt;Value&gt;32&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="IoType"AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;Output&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;/Attribute&gt;  
+&lt;/Attribute&gt;  
+&lt;ExternalInterfaceID="76a8ea3f-1da6-4622-b806-912e1da53980"Name="Channel_AI_0"RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel"&gt;  
+&lt;AttributeName="Type"AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;Analog&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="IoType"AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;Input&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="Number"AttributeDataType="xs:int"&gt;  
+&lt;Value&gt;0&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="Length"AttributeDataType="xs:int"&gt;  
+&lt;Value&gt;16&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="CustomAttributes"&gt;  
+&lt;RefSemanticCorrespondingAttributePath="ListType"/&gt;  
+&lt;AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.HardwareInterruptLowLimit2Active#8"AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;False&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.OperatingRange#8"AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;OperatingRange.PlusMinus10V&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.OperatingType#8"AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;OperatingType.Voltage&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.ParameterSettings#8"AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;ParameterSettings.Manual&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;AttributeName="6ES7511_1CK00_0AB0_V2_9.Channels.AI_0.Smoothing#8"AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;Smoothing.None&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;/Attribute&gt;  
+&lt;/ExternalInterface&gt;
 
 clipboard
 
@@ -41754,57 +41754,57 @@ All custom attributes supporting set of enum values shall be exported with fully
 
 Below are snippet shows channel custom attributes.
 
-<InternalElement ID="0d5e860b-6581-467a-be7a-fcfa37e0ee6b" Name="DI 32x24VDC HF_1">  
+&lt;InternalElement ID="0d5e860b-6581-467a-be7a-fcfa37e0ee6b" Name="DI 32x24VDC HF_1"&gt;  
 ...  
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">  
-<Value>false</Value>  
-</Attribute>  
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">  
-<Value>OrderNumber:6ES7 521-1BL00-0AB0</Value>  
-</Attribute>  
-<InternalElement ID="198bf5e3-ac19-4465-8e3e-8c2faf6ab217" Name="DI 32x24VDC HF_1">  
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;  
+&lt;Value&gt;false&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;OrderNumber:6ES7 521-1BL00-0AB0&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;InternalElement ID="198bf5e3-ac19-4465-8e3e-8c2faf6ab217" Name="DI 32x24VDC HF_1"&gt;  
 ...   
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">  
-<Value>true</Value>  
-</Attribute>  
-<ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel">  
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;  
+&lt;Value&gt;true&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel"&gt;  
 ...  
-<Attribute Name="CustomAttributes">  
-<RefSemantic CorrespondingAttributePath="ListType" />  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string">  
-<Value>True</Value>  
-</Attribute>  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string">  
-<Value>True</Value>  
-</Attribute>  
+&lt;Attribute Name="CustomAttributes"&gt;  
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;True&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;True&lt;/Value&gt;  
+&lt;/Attribute&gt;  
 ...  
-</Attribute>  
-</ExternalInterface>  
+&lt;/Attribute&gt;  
+&lt;/ExternalInterface&gt;  
 ...
 
 clipboard
 
-<InternalElement ID="0d5e860b-6581-467a-be7a-fcfa37e0ee6b" Name="DI 32x24VDC HF_1">  
+&lt;InternalElement ID="0d5e860b-6581-467a-be7a-fcfa37e0ee6b" Name="DI 32x24VDC HF_1"&gt;  
 ...  
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">  
-<Value>false</Value>  
-</Attribute>  
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">  
-<Value>OrderNumber:6ES7 521-1BL00-0AB0</Value>  
-</Attribute>   
-<ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel">  
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;  
+&lt;Value&gt;false&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;OrderNumber:6ES7 521-1BL00-0AB0&lt;/Value&gt;  
+&lt;/Attribute&gt;   
+&lt;ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel"&gt;  
 ...  
-<Attribute Name="CustomAttributes">  
-<RefSemantic CorrespondingAttributePath="ListType" />  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string">  
-<Value>True</Value>  
-</Attribute>  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string">  
-<Value>True</Value>  
-</Attribute>  
+&lt;Attribute Name="CustomAttributes"&gt;  
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;True&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;True&lt;/Value&gt;  
+&lt;/Attribute&gt;  
 ...  
-</Attribute>  
-</ExternalInterface>  
+&lt;/Attribute&gt;  
+&lt;/ExternalInterface&gt;  
 ...
 
 clipboard
@@ -41819,25 +41819,25 @@ Channel custom attribute is available on the channel:
 - CAx import accepts AML file with custom attributes having partial IdentifyingName - only attribute name and suffixes (like #positionnumber) but no TypeIdentifier and channel info.
 - Below are the supported formats:
 
-  - <TypeIdentifier>.Channels.<Type><IoType>_<ChannelNumber>.<AttributeName>#<PositionNumber>
-  - <AttributeName>#<PositionNumber>
+  - &lt;TypeIdentifier&gt;.Channels.&lt;Type&gt;&lt;IoType&gt;_&lt;ChannelNumber&gt;.&lt;AttributeName&gt;#&lt;PositionNumber&gt;
+  - &lt;AttributeName&gt;#&lt;PositionNumber&gt;
 
 Below snippet shows different name formats accepted during CAx import.
 
 ...  
-<ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel">  
+&lt;ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel"&gt;  
 ...  
-<Attribute Name="CustomAttributes">  
-<RefSemantic CorrespondingAttributePath="ListType" />  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string">  
-<Value>True</Value>  
-</Attribute>  
-<Attribute Name="Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string">  
-<Value>True</Value>  
-</Attribute>  
+&lt;Attribute Name="CustomAttributes"&gt;  
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;True&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;True&lt;/Value&gt;  
+&lt;/Attribute&gt;  
 ...  
-</Attribute>  
-</ExternalInterface>  
+&lt;/Attribute&gt;  
+&lt;/ExternalInterface&gt;  
 ...
 
 clipboard
@@ -41845,43 +41845,43 @@ clipboard
 Channel custom attribute is available on the pluggable device item:
 
 - CAx import accepts AML file with custom attributes having complete IdentifyingName (format: TypeIdentifier.Channels.TypeIoType_ChannelNumber.AttributeName#PositionNumber)
-- CAx import accepts AML file with custom attributes having partial IdentifyingName - only attribute name with channel info (Channels.<Type><IoType>_<ChannelNumber>) and suffixes (like #positionnumber) but no TypeIdentifier.
+- CAx import accepts AML file with custom attributes having partial IdentifyingName - only attribute name with channel info (Channels.&lt;Type&gt;&lt;IoType&gt;_&lt;ChannelNumber&gt;) and suffixes (like #positionnumber) but no TypeIdentifier.
 - Below are the supported formats:
 
-  - <TypeIdentifier>.Channels.<Type><IoType>_<ChannelNumber>.<AttributeName>#<PositionNumber>
-  - Channels.<Type><IoType>_<ChannelNumber>.<AttributeName>#<PositionNumber>
+  - &lt;TypeIdentifier&gt;.Channels.&lt;Type&gt;&lt;IoType&gt;_&lt;ChannelNumber&gt;.&lt;AttributeName&gt;#&lt;PositionNumber&gt;
+  - Channels.&lt;Type&gt;&lt;IoType&gt;_&lt;ChannelNumber&gt;.&lt;AttributeName&gt;#&lt;PositionNumber&gt;
 
 Below snippet shows different name formats accepted during CAx import.
 
 ...
 
-<ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0"
+&lt;ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0"
 
-RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel">
-
-...
-
-<Attribute Name="CustomAttributes">
-
-<RefSemantic CorrespondingAttributePath="ListType" />
-
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string
-
-<Value>True</Value>
-
-</Attribute>
-
-<Attribute Name="Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string">
-
-<Value>True</Value>
-
-</Attribute>
+RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel"&gt;
 
 ...
 
-</Attribute>
+&lt;Attribute Name="CustomAttributes"&gt;
 
-</ExternalInterface>
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
+
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string
+
+&lt;Value&gt;True&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+&lt;Attribute Name="Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;True&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+...
+
+&lt;/Attribute&gt;
+
+&lt;/ExternalInterface&gt;
 
 ...
 
@@ -41895,44 +41895,44 @@ CAx shall not support import of channel's custom attributes in the following cas
 
 Below snippet shows channel custom attributes distributed under device item and channels.
 
-<InternalElement ID="0d5e860b-6581-467a-be7a-fcfa37e0ee6b" Name="DI 32x24VDC HF_1">  
+&lt;InternalElement ID="0d5e860b-6581-467a-be7a-fcfa37e0ee6b" Name="DI 32x24VDC HF_1"&gt;  
 ..   
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">  
-<Value>false</Value>  
-</Attribute>  
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">  
-<Value>OrderNumber:6ES7 521-1BL00-0AB0</Value>  
-</Attribute>   
-<Attribute Name="CustomAttributes">  
-<RefSemantic CorrespondingAttributePath="ListType" />  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Author" AttributeDataType="xs:string">  
-<Value>z003tyvt</Value>  
-</Attribute>  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.EnableValueStatus" AttributeDataType="xs:string">  
-<Value>False</Value>  
-</Attribute>  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.StartupComparisonPresetToActualModule" AttributeDataType="xs:string">  
-<Value>0</Value>  
-</Attribute>  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string">  
-<Value>True</Value>  
-</Attribute>  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string">  
-<Value>True</Value>  
-</Attribute>  
-</Attribute>  
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;  
+&lt;Value&gt;false&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;OrderNumber:6ES7 521-1BL00-0AB0&lt;/Value&gt;  
+&lt;/Attribute&gt;   
+&lt;Attribute Name="CustomAttributes"&gt;  
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Author" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;z003tyvt&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.EnableValueStatus" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;False&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.StartupComparisonPresetToActualModule" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;0&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsNoSupplyVoltage#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;True&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.DiagnosticsWireBreak#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;True&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;/Attribute&gt;  
 ...  
-<ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel">  
+&lt;ExternalInterface ID="ff89bfc5-ee51-4525-a388-a9b02213515e" Name="Channel_DI_0" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/Channel"&gt;  
 ...  
-<Attribute Name="CustomAttributes">  
-<RefSemantic CorrespondingAttributePath="ListType" />  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.HardwareInterruptFallingEdgeActive#1" AttributeDataType="xs:string">  
-<Value>True</Value>  
-</Attribute>  
-<Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.HardwareInterruptFallingEdgeEventName#1" AttributeDataType="xs:string">  
-<Value>Falling edge0</Value>  
-</Attribute>  
-</ExternalInterface>  
+&lt;Attribute Name="CustomAttributes"&gt;  
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.HardwareInterruptFallingEdgeActive#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;True&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;Attribute Name="6ES7521_1BL00_0AB0_V2_2.Channels.DI_0.HardwareInterruptFallingEdgeEventName#1" AttributeDataType="xs:string"&gt;  
+&lt;Value&gt;Falling edge0&lt;/Value&gt;  
+&lt;/Attribute&gt;  
+&lt;/ExternalInterface&gt;  
 ...
 
 clipboard
@@ -41948,7 +41948,7 @@ CAx shall export/import read-write custom attributes on various network objects 
 
 Following is the identifying name format for Interface custom attribute in the AML file.
 
-- <TypeIdentifier>.Interface.<Label>.<AttributeName> where
+- &lt;TypeIdentifier&gt;.Interface.&lt;Label&gt;.&lt;AttributeName&gt; where
 
 | Custom attribute | Description |
 | --- | --- |
@@ -41959,65 +41959,65 @@ Below snippet shows the format in which custom attributes shall be expected in t
 
 ...
 
-<InternalElement ID="d539b22a-9ff4-4cf7-b0f4-2f46c652f82a" Name="PROFINET interface_1">
+&lt;InternalElement ID="d539b22a-9ff4-4cf7-b0f4-2f46c652f82a" Name="PROFINET interface_1"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>X1</Value>
+&lt;Value&gt;X1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>32768</Value>
+&lt;Value&gt;32768&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.DeviceReplacementWithoutExchangeableMedium" AttributeDataType="xs:string">
+&lt;Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.DeviceReplacementWithoutExchangeableMedium" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.DiagnosticsCommunicationError" AttributeDataType="xs:string">
+&lt;Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.DiagnosticsCommunicationError" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.DisplayUpdateInterval" AttributeDataType="xs:string>
+&lt;Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.DisplayUpdateInterval" AttributeDataType="xs:string&gt;
 
-<Value>DisplayUpdateInterval.Value10Seconds</Value>
+&lt;Value&gt;DisplayUpdateInterval.Value10Seconds&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.IECV22LLDPMode" AttributeDataType="xs:string"<Value>True</Value>
+&lt;Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.IECV22LLDPMode" AttributeDataType="xs:string"&lt;Value&gt;True&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.KeepAlivesInterval" AttributeDataType="xs:string"<Value>30</Value>
+&lt;Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.KeepAlivesInterval" AttributeDataType="xs:string"&lt;Value&gt;30&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.PnSendClock" AttributeDataType="xs:string"><Value>1000000</Value>
+&lt;Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.PnSendClock" AttributeDataType="xs:string"&gt;&lt;Value&gt;1000000&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.TimeSynchronizationNtp" AttributeDataType="xs:string
+&lt;Attribute Name="6DL4158_3FH04_3XX0_V4_1_S74100.Interfaces.X1.TimeSynchronizationNtp" AttributeDataType="xs:string
 
-<Value>True</Value>
+&lt;Value&gt;True&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
 clipboard
 
@@ -42025,7 +42025,7 @@ clipboard
 
 Following is the identifying name format for Port custom attribute in the AML file.
 
-- <TypeIdentifier>.Interfaces.<InterfaceLabel>.Ports.<PortLabel>.<AttributeName> where
+- &lt;TypeIdentifier&gt;.Interfaces.&lt;InterfaceLabel&gt;.Ports.&lt;PortLabel&gt;.&lt;AttributeName&gt; where
 
 | Custom attribute | Description |
 | --- | --- |
@@ -42036,67 +42036,67 @@ Below snippet shows the format in which custom attributes shall be expected in t
 
 ...
 
-<InternalElement ID="fc31e87d-2162-43f6-ae4c-211fb5e21dec" Name="Port_1">
+&lt;InternalElement ID="fc31e87d-2162-43f6-ae4c-211fb5e21dec" Name="Port_1"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>P1R</Value>
+&lt;Value&gt;P1R&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>32769</Value>
+&lt;Value&gt;32769&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.AlternativePartnerPorts" AttributeDataType="xs:string"><Value>False</Value>
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.AlternativePartnerPorts" AttributeDataType="xs:string"&gt;&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.EndOfDetectionOfAccessibleDevices" AttributeDataType="xs:string"<Value>False</Value>
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.EndOfDetectionOfAccessibleDevices" AttributeDataType="xs:string"&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.EndOfSyncDomain" AttributeDataType="xs:string"
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.EndOfSyncDomain" AttributeDataType="xs:string"
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.EndOfTopologyDiscovery" AttributeDataType="xs:string>
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.EndOfTopologyDiscovery" AttributeDataType="xs:string&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.PortActivation" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.PortActivation" AttributeDataType="xs:string"&gt;
 
-<Value>True</Value>
+&lt;Value&gt;True&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.PortMonitoring" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.PortMonitoring" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.TransmissionRateAndDuplex" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Ports.P1R.TransmissionRateAndDuplex" AttributeDataType="xs:string"&gt;
 
-<Value>TransmissionRateAndDuplex.Automatic</Value>
+&lt;Value&gt;TransmissionRateAndDuplex.Automatic&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
 clipboard
 
@@ -42104,7 +42104,7 @@ clipboard
 
 Following is the identifying name format for Node custom attribute in the AML file.
 
-- <TypeIdentifier>.Interfaces.<InterfaceLabel>.Nodes.<NodeLabel>.<AttributeName> where
+- &lt;TypeIdentifier&gt;.Interfaces.&lt;InterfaceLabel&gt;.Nodes.&lt;NodeLabel&gt;.&lt;AttributeName&gt; where
 
 | Custom attribute | Description |
 | --- | --- |
@@ -42115,61 +42115,61 @@ Below snippet shows the format in which custom attributes shall be expected in t
 
 ...
 
-<InternalElement ID="609cefa0-208f-4c51-bee5-60002332ef84" Name="E1">
+&lt;InternalElement ID="609cefa0-208f-4c51-bee5-60002332ef84" Name="E1"&gt;
 
-<Attribute Name="SubnetMask" AttributeDataType="xs:string">
+&lt;Attribute Name="SubnetMask" AttributeDataType="xs:string"&gt;
 
-<Value>255.255.255.0</Value>
+&lt;Value&gt;255.255.255.0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="IpProtocolSelection" AttributeDataType="xs:string">
+&lt;Attribute Name="IpProtocolSelection" AttributeDataType="xs:string"&gt;
 
-<Value>Project</Value>
+&lt;Value&gt;Project&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Type" AttributeDataType="xs:string">
+&lt;Attribute Name="Type" AttributeDataType="xs:string"&gt;
 
-<Value>Ethernet</Value>
+&lt;Value&gt;Ethernet&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="NetworkAddress" AttributeDataType="xs:string">
+&lt;Attribute Name="NetworkAddress" AttributeDataType="xs:string"&gt;
 
-<Value>192.168.0.1</Value>
+&lt;Value&gt;192.168.0.1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Nodes.Ethernet.PnDeviceNameAutoGeneration" AttributeDataType="xs:string"><Value>True</Value>
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Nodes.Ethernet.PnDeviceNameAutoGeneration" AttributeDataType="xs:string"&gt;&lt;Value&gt;True&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Nodes.Ethernet.PnDeviceNameSetDirectly" AttributeDataType="xs:string"<Value>False</Value>
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Nodes.Ethernet.PnDeviceNameSetDirectly" AttributeDataType="xs:string"&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Nodes.Ethernet.UseIsoProtocol" AttributeDataType="xs:string"><Value>False</Value>
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Nodes.Ethernet.UseIsoProtocol" AttributeDataType="xs:string"&gt;&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Nodes.Ethernet.UseRouter" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7511_1AK00_0AB0_V1_8.Interfaces.X1.Nodes.Ethernet.UseRouter" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" /&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationEthernetRoleClassLib/NodeEthernet" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationEthernetRoleClassLib/NodeEthernet" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
@@ -42177,7 +42177,7 @@ clipboard
 
 Following is the identifying name format for Subnet custom attribute in the AML file.
 
-- <TypeIdentifier>.<AttributeName> where
+- &lt;TypeIdentifier&gt;.&lt;AttributeName&gt; where
 
 | Custom attribute | Description |
 | --- | --- |
@@ -42188,53 +42188,53 @@ Below snippet shows the format in which custom attributes shall be expected in t
 
 ...
 
-<InternalElement ID="cb471149-05a1-4063-b591-25a00d84c288" Name="PROFIBUS_1">
+&lt;InternalElement ID="cb471149-05a1-4063-b591-25a00d84c288" Name="PROFIBUS_1"&gt;
 
-<Attribute Name="Type" AttributeDataType="xs:string">
+&lt;Attribute Name="Type" AttributeDataType="xs:string"&gt;
 
-<Value>Profibus</Value>
+&lt;Value&gt;Profibus&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="System_Subnet_Profibus.BusProfile" AttributeDataType="xs:string">
+&lt;Attribute Name="System_Subnet_Profibus.BusProfile" AttributeDataType="xs:string"&gt;
 
-<Value>BusProfile.Dp</Value>
+&lt;Value&gt;BusProfile.Dp&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="System_Subnet_Profibus.HighestAddress" AttributeDataType="xs:string">
+&lt;Attribute Name="System_Subnet_Profibus.HighestAddress" AttributeDataType="xs:string"&gt;
 
-<Value>126</Value>
+&lt;Value&gt;126&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="System_Subnet_Profibus.PbCableConfiguration" AttributeDataType="xs:string">
+&lt;Attribute Name="System_Subnet_Profibus.PbCableConfiguration" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="System_Subnet_Profibus.PbCyclicDistribution" AttributeDataType="xs:string">
+&lt;Attribute Name="System_Subnet_Profibus.PbCyclicDistribution" AttributeDataType="xs:string"&gt;
 
-<Value>True</Value>
+&lt;Value&gt;True&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="System_Subnet_Profibus.SubnetId" AttributeDataType="xs:string">
+&lt;Attribute Name="System_Subnet_Profibus.SubnetId" AttributeDataType="xs:string"&gt;
 
-<Value>A5B5-1</Value>
+&lt;Value&gt;A5B5-1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="System_Subnet_Profibus.TransmissionSpeed" AttributeDataType="xs:string"><Value>BaudRate.Baud1500000</Value>
+&lt;Attribute Name="System_Subnet_Profibus.TransmissionSpeed" AttributeDataType="xs:string"&gt;&lt;Value&gt;BaudRate.Baud1500000&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
 clipboard
 
@@ -42242,7 +42242,7 @@ clipboard
 
 Following is the identifying name format for IO Sysstem custom attribute in the AML file.
 
-- <TypeIdentifier>.Interfaces.<InterfaceLabel>.IOSystem.<AttributeName> where
+- &lt;TypeIdentifier&gt;.Interfaces.&lt;InterfaceLabel&gt;.IOSystem.&lt;AttributeName&gt; where
 
 | Custom attribute | Description |
 | --- | --- |
@@ -42253,31 +42253,31 @@ Below snippet shows the format in which custom attributes shall be expected in t
 
 ...
 
-<InternalElement ID="f6edc86b-f995-4459-9429-b30c36b0b475" Name="PROFINET IO-System">
+&lt;InternalElement ID="f6edc86b-f995-4459-9429-b30c36b0b475" Name="PROFINET IO-System"&gt;
 
-<Attribute Name="Number" AttributeDataType="xs:int">
+&lt;Attribute Name="Number" AttributeDataType="xs:int"&gt;
 
-<Value>100</Value>
+&lt;Value&gt;100&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="CustomAttributes">
+&lt;Attribute Name="CustomAttributes"&gt;
 
-<RefSemantic CorrespondingAttributePath="ListType" />
+&lt;RefSemantic CorrespondingAttributePath="ListType" /&gt;
 
-<Attribute Name="6ES7515_2AM00_0AB0_V1_8.Interfaces.X1.IoSystem.MultipleUseIoSystem" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7515_2AM00_0AB0_V1_8.Interfaces.X1.IoSystem.MultipleUseIoSystem" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="6ES7515_2AM00_0AB0_V1_8.Interfaces.X1.IoSystem.UseIoSystemNameAsDeviceNameExtension" AttributeDataType="xs:string">
+&lt;Attribute Name="6ES7515_2AM00_0AB0_V1_8.Interfaces.X1.IoSystem.UseIoSystemNameAsDeviceNameExtension" AttributeDataType="xs:string"&gt;
 
-<Value>False</Value>
+&lt;Value&gt;False&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
 clipboard
 
@@ -42321,121 +42321,121 @@ The custom attributes will remain accessible under the pluggable DeviceItem afte
 
 The AML file that will be generated during export for the above configuration is shown below.
 
-<?xmlversion="1.0"encoding="utf-8"?>
+&lt;?xmlversion="1.0"encoding="utf-8"?&gt;
 
-<CAEXFilexmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"FileName="PluggablePortTransformations.aml"SchemaVersion="2.15"xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd">.
+&lt;CAEXFilexmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"FileName="PluggablePortTransformations.aml"SchemaVersion="2.15"xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd"&gt;.
 
 /..
 
-<InstanceHierarchyName="APCSampleInstanceHierarchy"><InternalElementID="7b00480c-5708-4ffa-ac2d-d571b57be6af"Name="GSDdevice_1">
+&lt;InstanceHierarchyName="APCSampleInstanceHierarchy"&gt;&lt;InternalElementID="7b00480c-5708-4ffa-ac2d-d571b57be6af"Name="GSDdevice_1"&gt;
 
-<AttributeName="TypeIdentifier"AttributeDataType="xs:string">
+&lt;AttributeName="TypeIdentifier"AttributeDataType="xs:string"&gt;
 
-<Value>GSD:GSDML-V2.33-SIEMENS-ET200SP-20180406.XML/D</Value>
+&lt;Value&gt;GSD:GSDML-V2.33-SIEMENS-ET200SP-20180406.XML/D&lt;/Value&gt;
 
-</Attribute></InternalElement>
+&lt;/Attribute&gt;&lt;/InternalElement&gt;
 
-<InternalElementID="63dbb1a0-3b53-47b9-a38e-333b15a93f59"Name="Port1(SCRJ/RJ45)">
+&lt;InternalElementID="63dbb1a0-3b53-47b9-a38e-333b15a93f59"Name="Port1(SCRJ/RJ45)"&gt;
 
-<AttributeName="Label"AttributeDataType="xs:string"><Value>P1R</Value>
+&lt;AttributeName="Label"AttributeDataType="xs:string"&gt;&lt;Value&gt;P1R&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<AttributeName="PositionNumber"AttributeDataType="xs:int">
+&lt;AttributeName="PositionNumber"AttributeDataType="xs:int"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<AttributeName="BuiltIn"AttributeDataType="xs:boolean">
+&lt;AttributeName="BuiltIn"AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<ExternalInterfaceID="c3041983-aad3-41b6-a378-c8c2f5dc2608"Name="CommunicationPortInterface"RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortInterface"/>
+&lt;ExternalInterfaceID="c3041983-aad3-41b6-a378-c8c2f5dc2608"Name="CommunicationPortInterface"RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortInterface"/&gt;
 
-<ExternalInterfaceID="c738690b-a613-4bcb-bba7-ed1c35c0f5a9"Name="CommunicationPortProxyInterface"RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortProxyInterface"/><SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort"/>
+&lt;ExternalInterfaceID="c738690b-a613-4bcb-bba7-ed1c35c0f5a9"Name="CommunicationPortProxyInterface"RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortProxyInterface"/&gt;&lt;SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort"/&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElementID="63ac85bc-b31f-4176-b9dd-894366458d72"Name="Port1(SCRJ/RJ45)">
+&lt;InternalElementID="63ac85bc-b31f-4176-b9dd-894366458d72"Name="Port1(SCRJ/RJ45)"&gt;
 
-<AttributeName="TypeName"AttributeDataType="xs:string">
+&lt;AttributeName="TypeName"AttributeDataType="xs:string"&gt;
 
-<Value>Port1(SCRJ/RJ45)</Value>
+&lt;Value&gt;Port1(SCRJ/RJ45)&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<AttributeName="PositionNumber"AttributeDataType="xs:int">
+&lt;AttributeName="PositionNumber"AttributeDataType="xs:int"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<AttributeName="BuiltIn"AttributeDataType="xs:boolean">
+&lt;AttributeName="BuiltIn"AttributeDataType="xs:boolean"&gt;
 
-<Value>false</Value>
+&lt;Value&gt;false&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<AttributeName="TypeIdentifier"AttributeDataType="xs:string">
+&lt;AttributeName="TypeIdentifier"AttributeDataType="xs:string"&gt;
 
-<Value>GSD:GSDML-V2.33-SIEMENS-ET200SP-20180406.XML/SM/IDS_1P1HFFO_RJ45V4.3</Value>
+&lt;Value&gt;GSD:GSDML-V2.33-SIEMENS-ET200SP-20180406.XML/SM/IDS_1P1HFFO_RJ45V4.3&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<AttributeName="InstallationDate"AttributeDataType="xs:dateTime">
+&lt;AttributeName="InstallationDate"AttributeDataType="xs:dateTime"&gt;
 
-<Value>2023-07-25T11:10:49.3048765Z</Value>
+&lt;Value&gt;2023-07-25T11:10:49.3048765Z&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<AttributeName="CustomAttributes">
+&lt;AttributeName="CustomAttributes"&gt;
 
-<RefSemanticCorrespondingAttributePath="ListType"/><AttributeName="GSD_GSDML_V2_33_SIEMENS_ET200SP_20180406_XML_SM_IDS_1P1_HF_FO_RJ45_V4_3.AlternativePartnerPorts"AttributeDataType="xs:string">
+&lt;RefSemanticCorrespondingAttributePath="ListType"/&gt;&lt;AttributeName="GSD_GSDML_V2_33_SIEMENS_ET200SP_20180406_XML_SM_IDS_1P1_HF_FO_RJ45_V4_3.AlternativePartnerPorts"AttributeDataType="xs:string"&gt;
 
-<Value>False</Value></Attribute>
+&lt;Value&gt;False&lt;/Value&gt;&lt;/Attribute&gt;
 
 ...
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<ExternalInterfaceID="0655ee61-7a4b-4ece-99a9cb626893f996"Name="CommunicationPortProxyInterface"RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortProxyInterface"/><SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem"/>
+&lt;ExternalInterfaceID="0655ee61-7a4b-4ece-99a9cb626893f996"Name="CommunicationPortProxyInterface"RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortProxyInterface"/&gt;&lt;SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem"/&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem"/>
+&lt;SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem"/&gt;
 
-<InternalLinkName="LinkToProxyPort_1"RefPartnerSideA="63ac85bc-b31f-4176-b9dd-894366458d72:CommunicationPortProxyInterface"RefPartnerSideB="63dbb1a0-3b53-47b9-a38e-333b15a93f59:CommunicationPortProxyInterface"/>
+&lt;InternalLinkName="LinkToProxyPort_1"RefPartnerSideA="63ac85bc-b31f-4176-b9dd-894366458d72:CommunicationPortProxyInterface"RefPartnerSideB="63dbb1a0-3b53-47b9-a38e-333b15a93f59:CommunicationPortProxyInterface"/&gt;
 
-<InternalLinkName="LinkToProxyPort_2"RefPartnerSideA="156250d0-f6f6-4bc7-97c6-e910455c78ae:CommunicationPortProxyInterface"RefPartnerSideB="79183be2-9768-4f32-a2ff-9ece9f65a64e:CommunicationPortProxyInterface"/>
+&lt;InternalLinkName="LinkToProxyPort_2"RefPartnerSideA="156250d0-f6f6-4bc7-97c6-e910455c78ae:CommunicationPortProxyInterface"RefPartnerSideB="79183be2-9768-4f32-a2ff-9ece9f65a64e:CommunicationPortProxyInterface"/&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem"/>
+&lt;SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem"/&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/>
+&lt;SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceUserFolder"/>
+&lt;SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceUserFolder"/&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/AutomationProject"/>
+&lt;SupportedRoleClassRefRoleClassPath="AutomationProjectConfigurationRoleClassLib/AutomationProject"/&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-</InstanceHierarchy>
+&lt;/InstanceHierarchy&gt;
 
-</CAEXFile>
+&lt;/CAEXFile&gt;
 
 clipboard
 
@@ -42443,71 +42443,71 @@ clipboard
 
 The XML representation of Port-DeviceItem connections between multiple ports and DeviceItems will be done using format shown below.
 
-- ExternalInterface-<ExternalInterface> of type "CommunicationPortProxyInterface" will be added under <CommunicationPort> and <DeviceItem> internal element which participates in the connection.
+- ExternalInterface-&lt;ExternalInterface&gt; of type "CommunicationPortProxyInterface" will be added under &lt;CommunicationPort&gt; and &lt;DeviceItem&gt; internal element which participates in the connection.
 
-<InternalElement ID="[Port Unique ID]" Name="[Port Name]">
+&lt;InternalElement ID="[Port Unique ID]" Name="[Port Name]"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>P1R</Value>
+&lt;Value&gt;P1R&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<ExternalInterface ID="[External Interface Unique ID]" Name="CommunicationPortProxyInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortProxyInterface" />
+&lt;ExternalInterface ID="[External Interface Unique ID]" Name="CommunicationPortProxyInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortProxyInterface" /&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElement ID="[DeviceItem Unique ID]" Name="[DeviceItem Name]">
+&lt;InternalElement ID="[DeviceItem Unique ID]" Name="[DeviceItem Name]"&gt;
 
-<Attribute Name="TypeName" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeName" AttributeDataType="xs:string"&gt;
 
-<Value>Port 2 (LC/FC)</Value>
+&lt;Value&gt;Port 2 (LC/FC)&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>2</Value>
+&lt;Value&gt;2&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>false</Value>
+&lt;Value&gt;false&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;
 
-<Value>GSD:GSDML-V2.33-SIEMENS-ET200SP-20180406.XML/SM/IDS_1P2 HF LC_FC V4.3</Value>
+&lt;Value&gt;GSD:GSDML-V2.33-SIEMENS-ET200SP-20180406.XML/SM/IDS_1P2 HF LC_FC V4.3&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<ExternalInterface ID="c7066655-8895-4969-ae44-4533ad5319d7" Name="CommunicationPortProxyInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortProxyInterface" />
+&lt;ExternalInterface ID="c7066655-8895-4969-ae44-4533ad5319d7" Name="CommunicationPortProxyInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortProxyInterface" /&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
-- Internal link- Port-DeviceItem connections are represented using <InternalLink> tags. <InternalLink> tags shall be added under common parent of multiple port and deviceItems(i.e., Rack). Internal link name shall be unique across the common parent.
+- Internal link- Port-DeviceItem connections are represented using &lt;InternalLink&gt; tags. &lt;InternalLink&gt; tags shall be added under common parent of multiple port and deviceItems(i.e., Rack). Internal link name shall be unique across the common parent.
 
-<InternalLink Name="Link To [Internal link Name]" RefPartnerSideA="[Communication Port UniqueID]:CommunicationPortProxyInterface" RefPartnerSideB="[DeviceItem UniqueID]:CommunicationPortProxyInterface" />
+&lt;InternalLink Name="Link To [Internal link Name]" RefPartnerSideA="[Communication Port UniqueID]:CommunicationPortProxyInterface" RefPartnerSideB="[DeviceItem UniqueID]:CommunicationPortProxyInterface" /&gt;
 
 clipboard
 
@@ -42560,7 +42560,7 @@ You can use the TIA Portal to export project configuration containing IO Link ma
 
 If there are any issues with exporting PCT relevant configuration, issue details should be logged as appropriate error/warning in PCT.log file. Either PCT export is successful or not, a general appropriate message shall be shown in TIAP UI Info tab.
 
-PCT log file location : PCT log file created in same location as of CAX log file <CAX log location>\<guid>\PCT.log".
+PCT log file location : PCT log file created in same location as of CAX log file &lt;CAX log location&gt;\&lt;guid&gt;\PCT.log".
 
 - If IO Link master is configured without S7 PCT (For example: ports are having Configuration without S7-PCT = true in TIA Portal) because you have decided to configure IO Link Ports via TIA Portal, ports are still exported from TIA Portal but with minimum attributes like ConfigurationWithPDCT, Label and Name in AML file and same shall be imported back during AML file.
 - There are some configuration (like HW parameters/attributes) in TIA Portal which can influence IO Link port configuration on PCT side. For example: In module 6ES7 148-6JG00-0BB0, every port can be configured with "port type" in TIA Portal which influences on type of the IO Link devices can be plugged to that port on PCT side. This parameter controls required address space allocation for every port on PCT side to plug required IO Link device. During AML exchange, you should ensure to include such 'influencing' configuration in AML file so that AML exchange round trips are successful. When such 'influencing' configuration is missing in the AML file, AML round trip shall not be successful. For the example mentioned above, user can include custom attributes export (via CAx settings in TIA Portal), so that 'port type' parameter shall be part of AML during export from TIA Portal.
@@ -42569,175 +42569,175 @@ PCT log file location : PCT log file created in same location as of CAX log file
 
 Below is the snippet of AML created after exporting the configuration via CAx export:
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" FileName="Project2_.aml" SchemaVersion="2.15">
-
-..
-
-</AdditionalInformation>
-
-<InstanceHierarchy Name="APC Sample Instance Hierarchy">
-
-<InternalElement ID="02afa376-7fbd-46d8-9659-b82959617326" Name="Project24">
+&lt;CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" FileName="Project2_.aml" SchemaVersion="2.15"&gt;
 
 ..
 
-<InternalElement ID="41fec27b-a0fa-4df6-a604-d60008e34d81" Name="Ungrouped devices">
+&lt;/AdditionalInformation&gt;
 
-<InternalElement ID="968336bc-bda8-4da6-b3fa-2cc8e8493806" Name="ET 200eco station_1">
+&lt;InstanceHierarchy Name="APC Sample Instance Hierarchy"&gt;
 
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">
+&lt;InternalElement ID="02afa376-7fbd-46d8-9659-b82959617326" Name="Project24"&gt;
 
-<Value>System:Device.ET200eco</Value>
+..
 
-</Attribute>
+&lt;InternalElement ID="41fec27b-a0fa-4df6-a604-d60008e34d81" Name="Ungrouped devices"&gt;
 
-<InternalElement ID="41196a85-aaae-42e0-994f-4a46e773af0f" Name="Rack_0">
+&lt;InternalElement ID="968336bc-bda8-4da6-b3fa-2cc8e8493806" Name="ET 200eco station_1"&gt;
+
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;System:Device.ET200eco&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+&lt;InternalElement ID="41196a85-aaae-42e0-994f-4a46e773af0f" Name="Rack_0"&gt;
 
 ...
 
-<InternalElement ID="165b1850-bba5-4509-af92-acafd8f4f1d1" Name="IO device_1">
+&lt;InternalElement ID="165b1850-bba5-4509-af92-acafd8f4f1d1" Name="IO device_1"&gt;
 
 ...
 
-<InternalElement ID="555d1dd7-ec4d-40e6-b34d-06443a255741" Name="IOLink">
+&lt;InternalElement ID="555d1dd7-ec4d-40e6-b34d-06443a255741" Name="IOLink"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>IO-Link</Value>
+&lt;Value&gt;IO-Link&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Type" AttributeDataType="xs:string">
+&lt;Attribute Name="Type" AttributeDataType="xs:string"&gt;
 
-<Value>IO-Link</Value>
+&lt;Value&gt;IO-Link&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<InternalElement ID="4670a2aa-f441-458d-8dcc-e31b7712e325" Name="IOLink Port 1">
+&lt;InternalElement ID="4670a2aa-f441-458d-8dcc-e31b7712e325" Name="IOLink Port 1"&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>Port 1</Value>
+&lt;Value&gt;Port 1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute><Attribute Name="ConfigurationWithPDCT" AttributeDataType="xs:boolean">  
-<Value>true</Value>
+&lt;/Attribute&gt;&lt;Attribute Name="ConfigurationWithPDCT" AttributeDataType="xs:boolean"&gt;  
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>  
+&lt;/Attribute&gt;  
 ..
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /><SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationIOLinkRoleClassLib/CommunicationPortIOLink" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /&gt;&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationIOLinkRoleClassLib/CommunicationPortIOLink" /&gt;
 
-</InternalElement>
-
-..
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" </InternalElement>
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem">
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationIOLinkRoleClassLib/DeviceItemIOLinkMaster" />
-
-</InternalElement>
+&lt;/InternalElement&gt;
 
 ..
 
-</InternalElement>
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" &lt;/InternalElement&gt;
 
-<InternalElement ID="73292b01-7f22-44c8-98b1-2a007580cea0" Name="SIRIUS 3RR2441 3ph Current Monitoring Relay for IO-Link">
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem"&gt;
 
-..
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationIOLinkRoleClassLib/DeviceItemIOLinkMaster" /&gt;
 
-<InternalElement ID="d55d0b10-0d2f-44e6-9b96-72725a88ca41" Name="SIRIUS 3RR2441 3ph Current Monitoring Relay for IO-Link">
-
-..
-
-<InternalElement ID="ab97d538-5e44-4a97-bab1-d228c1af8c0b" Name="IOLink">
-
-<Attribute Name="Label" AttributeDataType="xs:string">
-
-<Value>IO-Link</Value>
-
-</Attribute>
-
-<Attribute Name="Type" AttributeDataType="xs:string">
-
-<Value>IO-Link</Value>
-
-</Attribute>
-
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
-
-<Value>true</Value>
-
-</Attribute>
-
-<InternalElement ID="f6ff4404-58fb-43ce-bf5d-e365e55c17b5" Name="IOLink Port 1">
-
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
-
-<Value>1</Value>
-
-</Attribute>
-
-<Attribute Name="Label" AttributeDataType="xs:string">
-
-<Value>Port 1</Value>
-
-</Attribute>
-
-<ExternalInterface ID="065e309d-01cc-410e-951d-0fa7cac979d0" Name="CommunicationPortInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortInterface" />
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationIOLinkRoleClassLib/CommunicationPortIOLink" />
-
-</InternalElement>
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" />
-
-</InternalElement>
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationIOLinkRoleClassLib/DeviceItemIOLinkDevice" />
-
-</InternalElement>
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device" />
-
-</InternalElement>
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/AutomationProject" />
+&lt;/InternalElement&gt;
 
 ..
 
-<InternalLink Name="IOLink Port 1" RefPartnerSideA="f6ff4404-58fb-43ce-bf5d-e365e55c17b5:CommunicationPortInterface" RefPartnerSideB="4670a2aa-f441-458d-8dcc-e31b7712e325:CommunicationPortInterface" />
+&lt;/InternalElement&gt;
 
-</InternalElement>
+&lt;InternalElement ID="73292b01-7f22-44c8-98b1-2a007580cea0" Name="SIRIUS 3RR2441 3ph Current Monitoring Relay for IO-Link"&gt;
 
-</InstanceHierarchy>
+..
 
-</CAEXFile>
+&lt;InternalElement ID="d55d0b10-0d2f-44e6-9b96-72725a88ca41" Name="SIRIUS 3RR2441 3ph Current Monitoring Relay for IO-Link"&gt;
+
+..
+
+&lt;InternalElement ID="ab97d538-5e44-4a97-bab1-d228c1af8c0b" Name="IOLink"&gt;
+
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;IO-Link&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+&lt;Attribute Name="Type" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;IO-Link&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
+
+&lt;Value&gt;true&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+&lt;InternalElement ID="f6ff4404-58fb-43ce-bf5d-e365e55c17b5" Name="IOLink Port 1"&gt;
+
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
+
+&lt;Value&gt;1&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;Port 1&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+&lt;ExternalInterface ID="065e309d-01cc-410e-951d-0fa7cac979d0" Name="CommunicationPortInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortInterface" /&gt;
+
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /
+
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationIOLinkRoleClassLib/CommunicationPortIOLink" /&gt;
+
+&lt;/InternalElement&gt;
+
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" /&gt;
+
+&lt;/InternalElement&gt;
+
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /
+
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationIOLinkRoleClassLib/DeviceItemIOLinkDevice" /&gt;
+
+&lt;/InternalElement&gt;
+
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device" /&gt;
+
+&lt;/InternalElement&gt;
+
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/AutomationProject" /&gt;
+
+..
+
+&lt;InternalLink Name="IOLink Port 1" RefPartnerSideA="f6ff4404-58fb-43ce-bf5d-e365e55c17b5:CommunicationPortInterface" RefPartnerSideB="4670a2aa-f441-458d-8dcc-e31b7712e325:CommunicationPortInterface" /&gt;
+
+&lt;/InternalElement&gt;
+
+&lt;/InstanceHierarchy&gt;
+
+&lt;/CAEXFile&gt;
 
 clipboard
 
@@ -43044,7 +43044,7 @@ If there are any issue with any of the sub tags like their logical address is mi
 
 ##### Introduction
 
-In TIA Portal you can export your configuration in the device&networks editor to an AML file. This function is based on TIA Portal Openness and enables you to export hardware data from project or device level.
+In TIA Portal you can export your configuration in the device&amp;networks editor to an AML file. This function is based on TIA Portal Openness and enables you to export hardware data from project or device level.
 
 You can use the Export function in TIA Portal Openness to export CAx data: The export function can be accessed via CaxProvider. You can invoke the GetService method at Project object to get the CaxProvider service.
 
@@ -43128,7 +43128,7 @@ Or
 
 Project project = tiaPortal.Projects.Open(...);
 
-CaxProvider caxProvider = project.GetService<CaxProvider>();
+CaxProvider caxProvider = project.GetService&lt;CaxProvider&gt;();
 
 if(caxProvider != null)
 
@@ -43397,7 +43397,7 @@ clipboard
 
 ##### Application
 
-In TIA Portal you can import your configuration in the device&networks editor from an AML file. This function enables you to import hardware data from project or device level.
+In TIA Portal you can import your configuration in the device&amp;networks editor from an AML file. This function enables you to import hardware data from project or device level.
 
 You can use the import function to import CAx data. The import function is accessed via `CaxProvider` service. You can invoke the GetService method at Project object to get the CaxProvider service.
 
@@ -43411,7 +43411,7 @@ Modify the following program code:
 
 Project project = tiaPortal.Projects.Open(...);
 
-CaxProvider caxProvider = project.GetService<CaxProvider>();
+CaxProvider caxProvider = project.GetService&lt;CaxProvider&gt;();
 
 if(caxProvider != null)
 
@@ -43572,199 +43572,199 @@ You can export sub modules data from TIA Portal hierarchy to AML file hierarchy.
 
 The following example depicts the partial AML file structure that shall be generated during the export of Bus Adapter as sub module from TIA Portal .
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<CAEXFile FileName="Project4.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd">
+&lt;CAEXFile FileName="Project4.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd"&gt;
 
-<AdditionalInformation>
+&lt;AdditionalInformation&gt;
 
-<WriterHeader>
+&lt;WriterHeader&gt;
 
-<WriterName>Totally Integrated Automation Portal</WriterName>
+&lt;WriterName&gt;Totally Integrated Automation Portal&lt;/WriterName&gt;
 
-<WriterID>1d4fcebb-1ad6-4881-b01d-bca335d94a46:V1.0</WriterID>
+&lt;WriterID&gt;1d4fcebb-1ad6-4881-b01d-bca335d94a46:V1.0&lt;/WriterID&gt;
 
-<WriterVendor>Siemens AG</WriterVendor>
+&lt;WriterVendor&gt;Siemens AG&lt;/WriterVendor&gt;
 
-<WriterVendorURL>www.siemens.com</WriterVendorURL>
+&lt;WriterVendorURL&gt;www.siemens.com&lt;/WriterVendorURL&gt;
 
-<WriterVersion>15</WriterVersion>
+&lt;WriterVersion&gt;15&lt;/WriterVersion&gt;
 
-<WriterRelease>1500.0100.0.0</WriterRelease>
+&lt;WriterRelease&gt;1500.0100.0.0&lt;/WriterRelease&gt;
 
-<LastWritingDateTime>2018-05-03T11:23:10.3011329Z</LastWritingDateTime>
+&lt;LastWritingDateTime&gt;2018-05-03T11:23:10.3011329Z&lt;/LastWritingDateTime&gt;
 
-</WriterHeader>
+&lt;/WriterHeader&gt;
 
-</AdditionalInformation>
+&lt;/AdditionalInformation&gt;
 
-<AdditionalInformation AutomationMLVersion="2.0" />
+&lt;AdditionalInformation AutomationMLVersion="2.0" /&gt;
 
-<AdditionalInformation DocumentVersions="Recommendations">
+&lt;AdditionalInformation DocumentVersions="Recommendations"&gt;
 
-<Document DocumentIdentifier="AR APC" Version="1.1.0" />
+&lt;Document DocumentIdentifier="AR APC" Version="1.1.0" /&gt;
 
-</AdditionalInformation>
+&lt;/AdditionalInformation&gt;
 
-<InstanceHierarchy Name="APC Sample Instance Hierarchy">
+&lt;InstanceHierarchy Name="APC Sample Instance Hierarchy"&gt;
 
-<InternalElement ID="6cd7f80f-e049-4958-ba67-630481805bf0" Name="Project4">
+&lt;InternalElement ID="6cd7f80f-e049-4958-ba67-630481805bf0" Name="Project4"&gt;
 
-<Attribute Name="ProjectManufacturer" AttributeDataType="xs:string" />
+&lt;Attribute Name="ProjectManufacturer" AttributeDataType="xs:string" /&gt;
 
-<Attribute Name="ProjectSign" AttributeDataType="xs:string" />
+&lt;Attribute Name="ProjectSign" AttributeDataType="xs:string" /&gt;
 
-<Attribute Name="ProjectRevision" AttributeDataType="xs:string" />
+&lt;Attribute Name="ProjectRevision" AttributeDataType="xs:string" /&gt;
 
-<Attribute Name="ProjectInformation" AttributeDataType="xs:string" />
+&lt;Attribute Name="ProjectInformation" AttributeDataType="xs:string" /&gt;
 
-<InternalElement ID="b27045c4-9cb3-4b8d-916b-85f8100d1602" Name="Ungrouped devices">
+&lt;InternalElement ID="b27045c4-9cb3-4b8d-916b-85f8100d1602" Name="Ungrouped devices"&gt;
 
-<InternalElement ID="3f770698-940d-49c2-9f77-06fc458e1340" Name="ET 200SP station_1">
+&lt;InternalElement ID="3f770698-940d-49c2-9f77-06fc458e1340" Name="ET 200SP station_1"&gt;
 
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;
 
-<Value>System:Device.ET200SP</Value>
+&lt;Value&gt;System:Device.ET200SP&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<InternalElement ID="6f52fbab-a221-4d54-9368-84c392ca7fec" Name="Rack_0">
+&lt;InternalElement ID="6f52fbab-a221-4d54-9368-84c392ca7fec" Name="Rack_0"&gt;
 
-<Attribute Name="TypeName" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeName" AttributeDataType="xs:string"&gt;
 
-<Value>Rack</Value>
+&lt;Value&gt;Rack&lt;/Value&gt;
 
 ...
 
-<InternalElement ID="f7445c0b-1c52-4a84-915f-2c8bee13af70" Name="BA 2xRJ45">
+&lt;InternalElement ID="f7445c0b-1c52-4a84-915f-2c8bee13af70" Name="BA 2xRJ45"&gt;
 
-<Attribute Name="TypeName" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeName" AttributeDataType="xs:string"&gt;
 
-<Value>BA 2xRJ45</Value>
+&lt;Value&gt;BA 2xRJ45&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>127</Value>
+&lt;Value&gt;127&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>false</Value>
+&lt;Value&gt;false&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;
 
-<Value>OrderNumber:6ES7 193-6AR00-0AA0</Value>
+&lt;Value&gt;OrderNumber:6ES7 193-6AR00-0AA0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="FirmwareVersion" AttributeDataType="xs:string">
+&lt;Attribute Name="FirmwareVersion" AttributeDataType="xs:string"&gt;
 
-<Value>V0.0</Value>
+&lt;Value&gt;V0.0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<InternalElement ID="40f8bbce-35d3-4d65-907a-bece3e0144e0" Name="PROFINET interface">
+&lt;InternalElement ID="40f8bbce-35d3-4d65-907a-bece3e0144e0" Name="PROFINET interface"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>X1</Value>
+&lt;Value&gt;X1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<InternalElement ID="8fb775eb-96c6-48d6-af8a-96ba72418830" Name="IE1">
+&lt;InternalElement ID="8fb775eb-96c6-48d6-af8a-96ba72418830" Name="IE1"&gt;
 
-<Attribute Name="Type" AttributeDataType="xs:string">
+&lt;Attribute Name="Type" AttributeDataType="xs:string"&gt;
 
-<Value>Ethernet</Value>
+&lt;Value&gt;Ethernet&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="NetworkAddress" AttributeDataType="xs:string">
+&lt;Attribute Name="NetworkAddress" AttributeDataType="xs:string"&gt;
 
-<Value>192.168.0.1</Value>
+&lt;Value&gt;192.168.0.1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="SubnetMask" AttributeDataType="xs:string">
+&lt;Attribute Name="SubnetMask" AttributeDataType="xs:string"&gt;
 
-<Value>255.255.255.0</Value>
+&lt;Value&gt;255.255.255.0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="IpProtocolSelection" AttributeDataType="xs:string">
+&lt;Attribute Name="IpProtocolSelection" AttributeDataType="xs:string"&gt;
 
-<Value>Project</Value>
+&lt;Value&gt;Project&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElement ID="f28a3d93-d821-4556-9df1-a45f0e4ff6a6" Name="Port_1">
+&lt;InternalElement ID="f28a3d93-d821-4556-9df1-a45f0e4ff6a6" Name="Port_1"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>P1R</Value>
+&lt;Value&gt;P1R&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElement ID="ad6a0faa-3b70-4528-8c54-8183018b6714" Name="Port_2">
+&lt;InternalElement ID="ad6a0faa-3b70-4528-8c54-8183018b6714" Name="Port_2"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>P2R</Value>
+&lt;Value&gt;P2R&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>2</Value>
+&lt;Value&gt;2&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 ...
 
@@ -43959,129 +43959,129 @@ The following configuration shows modules with master-slave and topology connect
 
 The AML file that shall be generated during export for the above configuration is depicted below:
 
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-<CAEXFile FileName="Project_BusAdapter_Demo.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd">
-
-...
-
-<AdditionalInformation AutomationMLVersion="2.0" />
-
-<AdditionalInformation DocumentVersions="Recommendations">
-
-<Document DocumentIdentifier="AR APC" Version="1.2.0" />
-
-</AdditionalInformation>
-
-<InternalElement ID="12b43940-cea6-476a-886c-11ebaa518256" Name="BA 2xRJ45">
+&lt;CAEXFile FileName="Project_BusAdapter_Demo.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd"&gt;
 
 ...
 
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">
+&lt;AdditionalInformation AutomationMLVersion="2.0" /&gt;
 
-<Value>OrderNumber:6ES7 193-6AR00-0AA0</Value>
+&lt;AdditionalInformation DocumentVersions="Recommendations"&gt;
 
-</Attribute>
+&lt;Document DocumentIdentifier="AR APC" Version="1.2.0" /&gt;
 
-<Attribute Name="FirmwareVersion" AttributeDataType="xs:string">
+&lt;/AdditionalInformation&gt;
 
-<Value>V0.0</Value>
-
-</Attribute>
-
-<InternalElement ID="8f8a4cdb-8f4b-4e72-8c92-b8fa1cc3bf70" Name="PROFINET interface_1">
+&lt;InternalElement ID="12b43940-cea6-476a-886c-11ebaa518256" Name="BA 2xRJ45"&gt;
 
 ...
 
-<InternalElement ID="7a9938c3-ccc0-4d28-be35-333a343f3613" Name="E1">
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;OrderNumber:6ES7 193-6AR00-0AA0&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+&lt;Attribute Name="FirmwareVersion" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;V0.0&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+&lt;InternalElement ID="8f8a4cdb-8f4b-4e72-8c92-b8fa1cc3bf70" Name="PROFINET interface_1"&gt;
 
 ...
 
-<ExternalInterface ID="3d9f7f55-723f-4c5d-a2e7-ffe1ec3b9167" Name="LogicalEndPoint_Node" RefBaseClassPath="CommunicationInterfaceClassLib/LogicalEndPoint" />
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" />
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationEthernetRoleClassLib/NodeEthernet" /</InternalElement>
-
-<InternalElement ID="3c4085cb-7565-4673-8de1-c5624c4c08dc" Name="PROFINET IO-System">
-
-<Attribute Name="Number" AttributeDataType="xs:int">
-
-<Value>100</Value>
-
-</Attribute>
-
-<ExternalInterface ID="7fb6129f-95c4-4d2c-aab5-702937198e80" Name="LogicalEndPoint_IoSystem" RefBaseClassPath="CommunicationInterfaceClassLib/LogicalEndPoint" />
-
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/IoSystem" />
-
-</InternalElement>
-
-<InternalElement ID="1f1d3e8d-55da-4355-b87e-7feb58d86143" Name="Port_1">
-
-<Attribute Name="Label" AttributeDataType="xs:string">
-
-<Value>P1R</Value>
-
-</Attribute>
+&lt;InternalElement ID="7a9938c3-ccc0-4d28-be35-333a343f3613" Name="E1"&gt;
 
 ...
 
-<ExternalInterface ID="850e3f32-985f-4432-b627-26e2775a69cc" Name="CommunicationPortInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortInterface" />
+&lt;ExternalInterface ID="3d9f7f55-723f-4c5d-a2e7-ffe1ec3b9167" Name="LogicalEndPoint_Node" RefBaseClassPath="CommunicationInterfaceClassLib/LogicalEndPoint" /&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" /&gt;
 
-</InternalElement>
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationEthernetRoleClassLib/NodeEthernet" /&lt;/InternalElement&gt;
 
-<InternalElement ID="11731ed5-7922-41c9-b179-a5ae029cc10d" Name="Port_2">
+&lt;InternalElement ID="3c4085cb-7565-4673-8de1-c5624c4c08dc" Name="PROFINET IO-System"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Number" AttributeDataType="xs:int"&gt;
 
-<Value>P2R</Value>
+&lt;Value&gt;100&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-...
+&lt;ExternalInterface ID="7fb6129f-95c4-4d2c-aab5-702937198e80" Name="LogicalEndPoint_IoSystem" RefBaseClassPath="CommunicationInterfaceClassLib/LogicalEndPoint" /&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /> </InternalElement>
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/IoSystem" /&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" />
+&lt;/InternalElement&gt;
 
-</InternalElement>
+&lt;InternalElement ID="1f1d3e8d-55da-4355-b87e-7feb58d86143" Name="Port_1"&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-</InternalElement>
+&lt;Value&gt;P1R&lt;/Value&gt;
 
-<InternalElement ID="7be36254-5ed6-4a6f-9e7b-90be8b35e595" Name="PROFINET interface_1">
-
-<Attribute Name="Type" AttributeDataType="xs:string">
-
-<Value>Ethernet</Value>
-
-</Attribute>
+&lt;/Attribute&gt;
 
 ...
 
-<InternalElement ID="61ac6187-8a5d-4f98-ae91-b809c0a3a15d" Name="Port_3">
+&lt;ExternalInterface ID="850e3f32-985f-4432-b627-26e2775a69cc" Name="CommunicationPortInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortInterface" /&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /&gt;
 
-<Value>P3</Value>
+&lt;/InternalElement&gt;
 
-</Attribute>
+&lt;InternalElement ID="11731ed5-7922-41c9-b179-a5ae029cc10d" Name="Port_2"&gt;
+
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;P2R&lt;/Value&gt;
+
+&lt;/Attribute&gt;
 
 ...
 
-<ExternalInterface ID="425f5a5d-84e2-40c6-928f-e1aab73a8b86" Name="CommunicationPortInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortInterface" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /&gt; &lt;/InternalElement&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
+
+&lt;InternalElement ID="7be36254-5ed6-4a6f-9e7b-90be8b35e595" Name="PROFINET interface_1"&gt;
+
+&lt;Attribute Name="Type" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;Ethernet&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+...
+
+&lt;InternalElement ID="61ac6187-8a5d-4f98-ae91-b809c0a3a15d" Name="Port_3"&gt;
+
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
+
+&lt;Value&gt;P3&lt;/Value&gt;
+
+&lt;/Attribute&gt;
+
+...
+
+&lt;ExternalInterface ID="425f5a5d-84e2-40c6-928f-e1aab73a8b86" Name="CommunicationPortInterface" RefBaseClassPath="AutomationProjectConfigurationInterfaceClassLib/CommunicationPortInterface" /&gt;
+
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /&gt;
+
+&lt;/InternalElement&gt;
+
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" /&gt;
+
+&lt;/InternalElement&gt;
 
 clipboard
 
@@ -44536,7 +44536,7 @@ During the first export from the TIA Portal, the AML GUID for a device or a no b
 
 ![Application](images/100035346187_DV_resource.Stream@PNG-en-US.png)
 
-If you export a device from an engineering tool into an empty TIA Portal project, the AML GUID is added to the comment of the hardware object. If in the TIA Portal at "Tools > Settings > CAx > Import settings" the correspondig setting is enabled the AML GUID is added in the current editing language. The round trip process supports only one editing language to store the AML GUIDs. When importing or exporting data, always use the editing language with which you started the round trip.
+If you export a device from an engineering tool into an empty TIA Portal project, the AML GUID is added to the comment of the hardware object. If in the TIA Portal at "Tools &gt; Settings &gt; CAx &gt; Import settings" the correspondig setting is enabled the AML GUID is added in the current editing language. The round trip process supports only one editing language to store the AML GUIDs. When importing or exporting data, always use the editing language with which you started the round trip.
 
 For all following imports or exports, the AML GUID stays the same for this hardware object. Changes to the hardware object are resumed.
 
@@ -44562,10 +44562,10 @@ If the comment contains multiple [AR_APC:ID:*] section then the first GUID which
 
 ##### Import settings
 
-1. Define the parking lot folder name under "Options > Settings > CAx > Settings for conflict resolution".
+1. Define the parking lot folder name under "Options &gt; Settings &gt; CAx &gt; Settings for conflict resolution".
 
    The parking lot folder is used to store objects with naming conflicts.
-2. Activate "Options > Settings > CAx > Import settings > Save GUIDs during import".
+2. Activate "Options &gt; Settings &gt; CAx &gt; Import settings &gt; Save GUIDs during import".
 
 During Import:
 
@@ -44614,7 +44614,7 @@ The generated ID is exported to AML file as depicted in the following code snipp
 
 In TIA Portal, you can export the devices with its topology information to an AML file. While importing to an empty TIA Portal project, the imported device items retains the topology information.
 
-<InteralLink> element gives link details of port to port interconnection between the device items. It appears under the common parent of the connected devices, and contains unique tag names.
+&lt;InteralLink&gt; element gives link details of port to port interconnection between the device items. It appears under the common parent of the connected devices, and contains unique tag names.
 
 ##### Attributes of a "InternalLink" element
 
@@ -44638,7 +44638,7 @@ The following figures shows a partial element structure of the exported AML file
 
 ![AML structure](images/100559861003_DV_resource.Stream@PNG-en-US.PNG)
 
-The <InteralLink> element contains three mandatory attributes.
+The &lt;InteralLink&gt; element contains three mandatory attributes.
 
 ![AML structure](images/100558917003_DV_resource.Stream@PNG-en-US.PNG)
 
@@ -44868,54 +44868,54 @@ For Generic device or device having no type identifier and Generic Rack, type id
 
 The following XML structure shows a device configuration with non generic type identifier:
 
-<InternalElement ID="04f5d5f08-316a-4a1d-9290-9bfd75b2b2ca" Name="S7-400 station_1">  
-    <Attribute Name="TypeIdentifier" AttributeDataType="xs:string">  
-      <Value>System:Device.S7400</Value>  
-    </Attribute>  
-    <Attribute Name="Comment" AttributeDataType="xs:string">  
-      <Value>S7400 station</Value>  
-    </Attribute>  
-    <SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/>  
-  </InternalElement>
+&lt;InternalElement ID="04f5d5f08-316a-4a1d-9290-9bfd75b2b2ca" Name="S7-400 station_1"&gt;  
+    &lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;  
+      &lt;Value&gt;System:Device.S7400&lt;/Value&gt;  
+    &lt;/Attribute&gt;  
+    &lt;Attribute Name="Comment" AttributeDataType="xs:string"&gt;  
+      &lt;Value&gt;S7400 station&lt;/Value&gt;  
+    &lt;/Attribute&gt;  
+    &lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/&gt;  
+  &lt;/InternalElement&gt;
 
 clipboard
 
 The following XML structure shows a device configuraton with generic type identifier:
 
-<InternalElement ID="04f5d5f08-316a-4a1d-9290-9bfd75b2b2ca" Name="S7-400 station_1">  
-    <Attribute Name="TypeIdentifier" AttributeDataType="xs:string">  
-      <Value>System:Device.Generic</Value>  
-    </Attribute>  
-    <Attribute Name="Comment" AttributeDataType="xs:string">  
-      <Value>S7400 Device</Value>  
-    </Attribute>  
-    <SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/>  
-  </InternalElement>
+&lt;InternalElement ID="04f5d5f08-316a-4a1d-9290-9bfd75b2b2ca" Name="S7-400 station_1"&gt;  
+    &lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;  
+      &lt;Value&gt;System:Device.Generic&lt;/Value&gt;  
+    &lt;/Attribute&gt;  
+    &lt;Attribute Name="Comment" AttributeDataType="xs:string"&gt;  
+      &lt;Value&gt;S7400 Device&lt;/Value&gt;  
+    &lt;/Attribute&gt;  
+    &lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/&gt;  
+  &lt;/InternalElement&gt;
 
 clipboard
 
 The following XML structure shows a device configuration with type identifier available for device.
 
-<InternalElement ID="a887601f-3ced-4f50-88ff-a9ec6eabb682" Name="S7-400 station_1">  
-    <Attribute Name="TypeIdentifier" AttributeDataType="xs:string">  
-      <Value>System:Device.S7400</Value>  
-    </Attribute>  
-    <Attribute Name="Comment" AttributeDataType="xs:string">  
-      <Value>S7400 Device</Value>  
-    </Attribute>  
-    <SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/>  
-  </InternalElement>
+&lt;InternalElement ID="a887601f-3ced-4f50-88ff-a9ec6eabb682" Name="S7-400 station_1"&gt;  
+    &lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;  
+      &lt;Value&gt;System:Device.S7400&lt;/Value&gt;  
+    &lt;/Attribute&gt;  
+    &lt;Attribute Name="Comment" AttributeDataType="xs:string"&gt;  
+      &lt;Value&gt;S7400 Device&lt;/Value&gt;  
+    &lt;/Attribute&gt;  
+    &lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/&gt;  
+  &lt;/InternalElement&gt;
 
 clipboard
 
 The following XML structure shows a device configuration with No Type Identifier available for device.
 
-<InternalElement ID="a887601f-3ced-4f50-88ff-a9ec6eabb682" Name="S7-400 station_1">  
-    <Attribute Name="Comment" AttributeDataType="xs:string">  
-      <Value>S7400 Device</Value>  
-    </Attribute>  
-    <SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/>  
-  </InternalElement>
+&lt;InternalElement ID="a887601f-3ced-4f50-88ff-a9ec6eabb682" Name="S7-400 station_1"&gt;  
+    &lt;Attribute Name="Comment" AttributeDataType="xs:string"&gt;  
+      &lt;Value&gt;S7400 Device&lt;/Value&gt;  
+    &lt;/Attribute&gt;  
+    &lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Device"/&gt;  
+  &lt;/InternalElement&gt;
 
 clipboard
 
@@ -45120,7 +45120,7 @@ The following figure shows a partial element structure of the exported AML file 
 
 clipboard
 
-In the pruned AML file, the sub module information like <InternalElement> element is removed and its corresponding address objects are retained.
+In the pruned AML file, the sub module information like &lt;InternalElement&gt; element is removed and its corresponding address objects are retained.
 
 `<Attribute Name="Address">`
 
@@ -45174,7 +45174,7 @@ clipboard
 
 In TIA Portal, you can export the channel objects of IO device items to an AML file. While importing to an empty TIA Portal project, the imported device items retains the channel objects in its respective IO device items.
 
-<ExternalInterface> element represents in node and subnet internal elements, and indicates that nodes and subnets are connected.
+&lt;ExternalInterface&gt; element represents in node and subnet internal elements, and indicates that nodes and subnets are connected.
 
 ##### Attributes of a "ExternalInterface" element
 
@@ -45417,7 +45417,7 @@ The following figure shows the structure of the exported AML file.
 
 ![AML structure of the export file](images/95625984011_DV_resource.Stream@PNG-en-US.png)
 
-##### Generic & Non generic rack with & without TypeIdentifier
+##### Generic &amp; Non generic rack with &amp; without TypeIdentifier
 
 The CAx import shall be able to handle devices with no type identifier information or generic type identifiers i.e.'System:Device.Generic' and racks with generic type identifiers i.e. 'System:Rack.Generic'.
 
@@ -45620,7 +45620,7 @@ CAx shall use an imaginary interface referred to Virtual interface to export and
 
 The below example shows an AML file having virtual interface:
 
-<Int`ernalElement ID="822622a0-056a-494c-a802-2463c5e1b47d" Name="SCALANCE interface_1">`
+&lt;Int`ernalElement ID="822622a0-056a-494c-a802-2463c5e1b47d" Name="SCALANCE interface_1">`
 
 `<Attribute Name="PositionNumber" AttributeDataType="xs:int">`
 
@@ -45885,45 +45885,45 @@ The Profinet/Ethernet node shall be exported with additional role in case it sup
 
 Below XML snippet depicts the AML file with Node "Ethernet" with extended role.
 
-<InternalElement ID="9c4393a9-44d5-49b4-9314-02eb0f94b6c0" Name="IE1">
+&lt;InternalElement ID="9c4393a9-44d5-49b4-9314-02eb0f94b6c0" Name="IE1"&gt;
 
-<Attribute Name="SubnetMask" AttributeDataType="xs:string">
+&lt;Attribute Name="SubnetMask" AttributeDataType="xs:string"&gt;
 
-<Value>255.255.255.0</Value>
+&lt;Value&gt;255.255.255.0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="RouterAddress" AttributeDataType="xs:string">
+&lt;Attribute Name="RouterAddress" AttributeDataType="xs:string"&gt;
 
-<Value>192.168.0.1</Value>
+&lt;Value&gt;192.168.0.1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="IpProtocolSelection" AttributeDataType="xs:string">
+&lt;Attribute Name="IpProtocolSelection" AttributeDataType="xs:string"&gt;
 
-<Value>Project</Value>
+&lt;Value&gt;Project&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Type" AttributeDataType="xs:string">
+&lt;Attribute Name="Type" AttributeDataType="xs:string"&gt;
 
-<Value>Ethernet</Value>
+&lt;Value&gt;Ethernet&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="NetworkAddress" AttributeDataType="xs:string">
+&lt;Attribute Name="NetworkAddress" AttributeDataType="xs:string"&gt;
 
-<Value>192.168.0.1</Value>
+&lt;Value&gt;192.168.0.1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<ExternalInterface ID="eea59d3c-3bc4-4d0d-9815-46b4b347369d" Name="LogicalEndPoint_Node" RefBaseClassPath="CommunicationInterfaceClassLib/LogicalEndPoint" />
+&lt;ExternalInterface ID="eea59d3c-3bc4-4d0d-9815-46b4b347369d" Name="LogicalEndPoint_Node" RefBaseClassPath="CommunicationInterfaceClassLib/LogicalEndPoint" /&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" /&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationEthernetRoleClassLib/NodeEthernet" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationEthernetRoleClassLib/NodeEthernet" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
@@ -46201,7 +46201,7 @@ clipboard
 
 The XML representation of extension rack connections between multiple racks shall be done using format shown below.
 
-- **ExternalInterface**-<ExternalInterface> internal element shall be added under <CommunicationPort> internal element which participates in the connection
+- **ExternalInterface**-&lt;ExternalInterface&gt; internal element shall be added under &lt;CommunicationPort&gt; internal element which participates in the connection
 
 `<InternalElement ID="[IM Module Unique ID]" Name="[IM Module Name]">`
 
@@ -46245,7 +46245,7 @@ The XML representation of extension rack connections between multiple racks shal
 
 clipboard
 
-**Internal link**- Extension racks connections are represented using <InternalLink> tags. <InternalLink> tags shall be added under common parent of multiple racks (i.e., Device). Internal link name shall be unique across the common parent.
+**Internal link**- Extension racks connections are represented using &lt;InternalLink&gt; tags. &lt;InternalLink&gt; tags shall be added under common parent of multiple racks (i.e., Device). Internal link name shall be unique across the common parent.
 
 `<InternalLink Name="Link To [Internal link Name]" RefPartnerSideA="[Communication Port UniqueID]:[Communication Port External Interface Name]" RefPartnerSideB="[Communication Port UniqueID]:[Communication Port External Interface Name]" />`
 
@@ -46907,285 +46907,285 @@ The following configuration shows a device item where the attributes are configu
 
 The following figures show the structure of the exported AML file.
 
-<InternalElement ID="9c944d2c-e0ae-4f39-b35a-a63faaf35be7" Name="PLC_1">
+&lt;InternalElement ID="9c944d2c-e0ae-4f39-b35a-a63faaf35be7" Name="PLC_1"&gt;
 
-<Attribute Name="TypeName" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeName" AttributeDataType="xs:string"&gt;
 
-<Value>CPU 1511TF-1 PN</Value>
+&lt;Value&gt;CPU 1511TF-1 PN&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="DeviceItemType" AttributeDataType="xs:string">
+&lt;Attribute Name="DeviceItemType" AttributeDataType="xs:string"&gt;
 
-<Value>CPU</Value>
+&lt;Value&gt;CPU&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>false</Value>
+&lt;Value&gt;false&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;
 
-<Value>OrderNumber:6ES7 511-1UK01-0AB0</Value>
+&lt;Value&gt;OrderNumber:6ES7 511-1UK01-0AB0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="InstallationDate" AttributeDataType="xs:dateTime">
+&lt;Attribute Name="InstallationDate" AttributeDataType="xs:dateTime"&gt;
 
-<Value>2019-02-28T08:12:12.987Z</Value>
+&lt;Value&gt;2019-02-28T08:12:12.987Z&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Failsafe_FSourceAddress" AttributeDataType="xs:string">
+&lt;Attribute Name="Failsafe_FSourceAddress" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Failsafe_LowerBoundForFDestinationAddresses" AttributeDataType="xs:string">
+&lt;Attribute Name="Failsafe_LowerBoundForFDestinationAddresses" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Failsafe_UpperBoundForFDestinationAddresses" AttributeDataType="xs:string">
+&lt;Attribute Name="Failsafe_UpperBoundForFDestinationAddresses" AttributeDataType="xs:string"&gt;
 
-<Value>99</Value>
+&lt;Value&gt;99&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="FirmwareVersion" AttributeDataType="xs:string">
+&lt;Attribute Name="FirmwareVersion" AttributeDataType="xs:string"&gt;
 
-<Value>V2.8</Value>
+&lt;Value&gt;V2.8&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<InternalElement ID="4f718e93-b541-4983-8f13-1f5b21c3e70c" Name="Default tag table">
+&lt;InternalElement ID="4f718e93-b541-4983-8f13-1f5b21c3e70c" Name="Default tag table"&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/TagTable"/>
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/TagTable"/&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElement ID="20e19f5b-8ace-4e0c-af0b-c710ae4817da" Name="CPU display_1">
+&lt;InternalElement ID="20e19f5b-8ace-4e0c-af0b-c710ae4817da" Name="CPU display_1"&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>3</Value>
+&lt;Value&gt;3&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElement ID="5a24516f-17d6-4b2a-a4ac-efc1b577875d" Name="Card reader/writer_1">
+&lt;InternalElement ID="5a24516f-17d6-4b2a-a4ac-efc1b577875d" Name="Card reader/writer_1"&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>4</Value>
+&lt;Value&gt;4&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement> <InternalElement ID="0f746d71-035e-4e64-b0d7-51d0449cfd88" Name="OPC UA_1">
+&lt;/InternalElement&gt; &lt;InternalElement ID="0f746d71-035e-4e64-b0d7-51d0449cfd88" Name="OPC UA_1"&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>254</Value>
+&lt;Value&gt;254&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value> </Attribute>
+&lt;Value&gt;true&lt;/Value&gt; &lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElement ID="a0633104-a2ac-4680-bb99-81df50f5ec40" Name="PROFINET interface_1">
+&lt;InternalElement ID="a0633104-a2ac-4680-bb99-81df50f5ec40" Name="PROFINET interface_1"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>X1</Value>
+&lt;Value&gt;X1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>32768</Value>
+&lt;Value&gt;32768&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<InternalElement ID="e3497176-dbba-4fec-9d3a-772ae13987c4" Name="E1">
+&lt;InternalElement ID="e3497176-dbba-4fec-9d3a-772ae13987c4" Name="E1"&gt;
 
-<Attribute Name="Type" AttributeDataType="xs:string">
+&lt;Attribute Name="Type" AttributeDataType="xs:string"&gt;
 
-<Value>Ethernet</Value> </Attribute>
+&lt;Value&gt;Ethernet&lt;/Value&gt; &lt;/Attribute&gt;
 
-<Attribute Name="NetworkAddress" AttributeDataType="xs:string">
+&lt;Attribute Name="NetworkAddress" AttributeDataType="xs:string"&gt;
 
-<Value>192.168.0.1</Value>
+&lt;Value&gt;192.168.0.1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="SubnetMask" AttributeDataType="xs:string">
+&lt;Attribute Name="SubnetMask" AttributeDataType="xs:string"&gt;
 
-<Value>255.255.255.0</Value>
+&lt;Value&gt;255.255.255.0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="IpProtocolSelection" AttributeDataType="xs:string">
+&lt;Attribute Name="IpProtocolSelection" AttributeDataType="xs:string"&gt;
 
-<Value>Project</Value>
+&lt;Value&gt;Project&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/Node" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElement ID="3208384f-d5ba-4ccb-b8da-f08ec38ec681" Name="Port_1">
+&lt;InternalElement ID="3208384f-d5ba-4ccb-b8da-f08ec38ec681" Name="Port_1"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>P1R</Value>
+&lt;Value&gt;P1R&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>32769</Value>
+&lt;Value&gt;32769&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElement ID="4a47c05e-9656-4e02-9b51-23b065b6fe47" Name="Port_2">
+&lt;InternalElement ID="4a47c05e-9656-4e02-9b51-23b065b6fe47" Name="Port_2"&gt;
 
-<Attribute Name="Label" AttributeDataType="xs:string">
+&lt;Attribute Name="Label" AttributeDataType="xs:string"&gt;
 
-<Value>P2R</Value>
+&lt;Value&gt;P2R&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>32770</Value>
+&lt;Value&gt;32770&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationPort" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/CommunicationInterface" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" />
+&lt;SupportedRoleClass RefRoleClassPath="AutomationProjectConfigurationRoleClassLib/DeviceItem" /&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-<InternalElement ID="e3fdb611-4b68-4682-b154-ae43c74a24d3" Name="F-DI 16x24V DC_1">
+&lt;InternalElement ID="e3fdb611-4b68-4682-b154-ae43c74a24d3" Name="F-DI 16x24V DC_1"&gt;
 
-<Attribute Name="TypeName" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeName" AttributeDataType="xs:string"&gt;
 
-<Value>F-DI 16x24V DC</Value>
+&lt;Value&gt;F-DI 16x24V DC&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>2</Value>
+&lt;Value&gt;2&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>false</Value> </Attribute>
+&lt;Value&gt;false&lt;/Value&gt; &lt;/Attribute&gt;
 
-<Attribute Name="TypeIdentifier" AttributeDataType="xs:string">
+&lt;Attribute Name="TypeIdentifier" AttributeDataType="xs:string"&gt;
 
-<Value>OrderNumber:6ES7 526-1BH00-0AB0</Value>
+&lt;Value&gt;OrderNumber:6ES7 526-1BH00-0AB0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="FirmwareVersion" AttributeDataType="xs:string">
+&lt;Attribute Name="FirmwareVersion" AttributeDataType="xs:string"&gt;
 
-<Value>V1.0</Value>
+&lt;Value&gt;V1.0&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<InternalElement ID="77c4fea0-baba-44e6-80f2-72b7b830a88a" Name="F-DI 16x24V DC_1">​
+&lt;InternalElement ID="77c4fea0-baba-44e6-80f2-72b7b830a88a" Name="F-DI 16x24V DC_1"&gt;​
 
-<Attribute Name="PositionNumber" AttributeDataType="xs:int">
+&lt;Attribute Name="PositionNumber" AttributeDataType="xs:int"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute> <Attribute Name="BuiltIn" AttributeDataType="xs:boolean">
+&lt;/Attribute&gt; &lt;Attribute Name="BuiltIn" AttributeDataType="xs:boolean"&gt;
 
-<Value>true</Value>
+&lt;Value&gt;true&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Failsafe_FSourceAddress" AttributeDataType="xs:string">
+&lt;Attribute Name="Failsafe_FSourceAddress" AttributeDataType="xs:string"&gt;
 
-<Value>1</Value>
+&lt;Value&gt;1&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-<Attribute Name="Failsafe_FDestinationAddress" AttributeDataType="xs:string">
+&lt;Attribute Name="Failsafe_FDestinationAddress" AttributeDataType="xs:string"&gt;
 
-<Value>655</Value>
+&lt;Value&gt;655&lt;/Value&gt;
 
-</Attribute>
+&lt;/Attribute&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
-</InternalElement>
+&lt;/InternalElement&gt;
 
 clipboard
 
@@ -47396,8 +47396,8 @@ Attribute names of device items
 | AML file | TIA Portal Openness |
 | --- | --- |
 | Name | Name |
-| TypeIdentifier | Mapped to substring of <`TypeIdentifier`> (i.e., value before first "/" operator) ignoring firmware version part in it.   Mapping substring is applicable only when TypeIdentifier starts with <`OrderNumber:>` prefix and it has firmware version part otherwise mapped to complete <`TypeIdentifier>`. |
-| FirmwareVersion | `<FirmwareVersion>` mapped to substring of <`TypeIdentifier`> (i.e., value after first "/" operator). Mapping substring is applicable only when <`TypeIdentifier>` starts with `<OrderNumber:>` prefix and it has firmware version part. |
+| TypeIdentifier | Mapped to substring of &lt;`TypeIdentifier`&gt; (i.e., value before first "/" operator) ignoring firmware version part in it.   Mapping substring is applicable only when TypeIdentifier starts with &lt;`OrderNumber:>` prefix and it has firmware version part otherwise mapped to complete &lt;`TypeIdentifier>`. |
+| FirmwareVersion | `<FirmwareVersion>` mapped to substring of &lt;`TypeIdentifier`&gt; (i.e., value after first "/" operator). Mapping substring is applicable only when &lt;`TypeIdentifier>` starts with `<OrderNumber:>` prefix and it has firmware version part. |
 | TypeName | TypeName |
 | DeviceItemType (for CPU and HeadModule) | **Classification** |
 | PositionNumber | PositionNumber |
@@ -47511,7 +47511,7 @@ With TIA Portal V19 onwards, Label value for Profinet / Ethernet interface ports
 
 **Change in behavior of IO Link port handling**
 
-With the TIA Portal V18 Update 2 onwards, IO Link port shall be exchanged with Label value as 'C/Q<n>' where n is the port number. for example: C/Q1, C/Q2 etc.,   
+With the TIA Portal V18 Update 2 onwards, IO Link port shall be exchanged with Label value as 'C/Q&lt;n&gt;' where n is the port number. for example: C/Q1, C/Q2 etc.,   
 For AML exchange of IO Link configuration in TIA Portal V18 Update 2 (via S7-PCT), use "S7-PCT 3.5 SP3 Update 3" version or higher.
 
 #### WebServerUserManagement
@@ -47526,9 +47526,9 @@ However, until TIA Portal V18, the WebServerUserManagement will be operational, 
 
 **Changes in behaviour of online legitimation call via UMAC on PLC**
 
-If the Openness application is running with a TIA Portal Openness API <= 18, the online legitimation via Openness is still possible via the download and upload configurations. But only if the used PLC is protected by a legacy ProtectionLevel legitimation.
+If the Openness application is running with a TIA Portal Openness API &lt;= 18, the online legitimation via Openness is still possible via the download and upload configurations. But only if the used PLC is protected by a legacy ProtectionLevel legitimation.
 
-With TIA Portal Openness API >= V19, all legitimation calls, especially the new UMAC on PLC, will be delivered to the event handler of the online legitimation event of the ConnectionConfiguration class. In case the OnlineAuthenticationConfiguration type is not handled there by the user code, there will be a second call to the callback method of the particular feature (e.g., download or upload). But there only the old protection mechanisms (until V18) can be handled.
+With TIA Portal Openness API &gt;= V19, all legitimation calls, especially the new UMAC on PLC, will be delivered to the event handler of the online legitimation event of the ConnectionConfiguration class. In case the OnlineAuthenticationConfiguration type is not handled there by the user code, there will be a second call to the callback method of the particular feature (e.g., download or upload). But there only the old protection mechanisms (until V18) can be handled.
 
 #### Enforcement of strict password policies
 
@@ -47549,7 +47549,7 @@ MultilingualText multilingualToolTipText1 = ((HmiButton)screenItem1).ToolTipText
 
 MultilingualTextItem multilingualTextItem1 = multilingualToolTipText1.Items.Find(language);
 
-multilingualTextItem1.Text = "<body><p>Modified button text from Openness</p></body>";
+multilingualTextItem1.Text = "&lt;body&gt;&lt;p&gt;Modified button text from Openness&lt;/p&gt;&lt;/body&gt;";
 
 clipboard
 
@@ -47561,15 +47561,15 @@ In TIA Portal V19, the support for Named Value Types has been introduced (only f
 In Openness, a new scope "NamedValueConstant" is introduced in the SimaticML schema from V19 to support the usage of a Named Value Type in Program Blocks or PLC Data Types.  
 The Named Value Types which are used in PLC programming artifacts (Program Blocks, PLC Data Types) are visible in the new scope "NamedValueConstant" during import/export via SimaticML.
 
-<Access Scope="NamedValueConstant" UId="27">
+&lt;Access Scope="NamedValueConstant" UId="27"&gt;
 
-<Constant Name="_.siemens.simatic.Named_value_type_1#UNDEFs" UId="28"/>
+&lt;Constant Name="_.siemens.simatic.Named_value_type_1#UNDEFs" UId="28"/&gt;
 
-</Access>
+&lt;/Access&gt;
 
-<Token Text=";" UId="31"/>
+&lt;Token Text=";" UId="31"/&gt;
 
-<NewLine Num="2" UId="32"/>
+&lt;NewLine Num="2" UId="32"/&gt;
 
 clipboard
 
@@ -47591,15 +47591,15 @@ var projectAttributeInfos = ((IEngineeringObject) project).GetAttributeInfos();
 
 clipboard
 
-With TIA Portal Openness V17, all methods of IEngineeringObject is implicitly implemented on all types that implement IEngineeringObject so that the explicit cast is not required, all methods will be visible to you. The change will be available in all previous version engineering dll's i.e V15, V15.1 & V16 supported in V17.
+With TIA Portal Openness V17, all methods of IEngineeringObject is implicitly implemented on all types that implement IEngineeringObject so that the explicit cast is not required, all methods will be visible to you. The change will be available in all previous version engineering dll's i.e V15, V15.1 &amp; V16 supported in V17.
 
 For following methods, typecast is not required:
 
 - **object GetAttribute(string name) -** Gets an attribute with the given name.
-- **IList<EngineeringAttributeInfo> GetAttributeInfos()** - Returns a collection of EngineeringAttributeInfo objects describing the different attributes on this object.
-- **IList<object> GetAttributes(IEnumerable<string> names)** - Gets a list of attributes for the given names.
+- **IList&lt;EngineeringAttributeInfo&gt; GetAttributeInfos()** - Returns a collection of EngineeringAttributeInfo objects describing the different attributes on this object.
+- **IList&lt;object&gt; GetAttributes(IEnumerable&lt;string&gt; names)** - Gets a list of attributes for the given names.
 - **void SetAttribute(string name, object value)** - Sets an attribute with the given name to the given value.
-- **void SetAttributes(IEnumerable<KeyValuePair<string, object>> attributes)** - Sets the attributes with the given names to the given values as indicated in attribute
+- **void SetAttributes(IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; attributes)** - Sets the attributes with the given names to the given values as indicated in attribute
 
 By introducing this change, there will be a slight change-in behavior if you recompile the code used under extension method. For example when you have used extension method and when the code is compiled into the V17 engineering dll, call from the extension method doesn’t get executed. In this case you would have to change code to stay with the behavior compatible. There would also be no compiler error.
 
@@ -47717,7 +47717,7 @@ With TIA Portal Openness V17, following changes are done for CAx export/import:
 
 #### Support of blocks of new programming language CEM
 
-With TIA Portal Openness V17, the new programming language CEM (Cause Effect Matrix) was introduced. If you encounter an instance of such a block accessing the attribute Programming Language in any Siemens.Engineering.dll < V17 will throw an exception. In Engineering.dll V17, the correct programming language is returned. Blocks of programming language CEM do not support the Export-method in any Siemens.Engineering.dll.
+With TIA Portal Openness V17, the new programming language CEM (Cause Effect Matrix) was introduced. If you encounter an instance of such a block accessing the attribute Programming Language in any Siemens.Engineering.dll &lt; V17 will throw an exception. In Engineering.dll V17, the correct programming language is returned. Blocks of programming language CEM do not support the Export-method in any Siemens.Engineering.dll.
 
 #### Support of new library types "Unified Faceplate" and "Unified Graphic"
 
@@ -47735,9 +47735,9 @@ If you upgrade your project to V16 it is necessary to recompile your application
 
 As of TIA Portal Openness V16 members of a datablock which are read only will be exported as informative items. It is not longer possible to change these attributes in the exported xml.
 
-#### I&M and Profisafe address attributes of pushbutton panel and key panel
+#### I&amp;M and Profisafe address attributes of pushbutton panel and key panel
 
-As of TIA Portal Openness V16 I&M and Profisafe address attributes of pushbutton panel and key panel will be accessible at module level.
+As of TIA Portal Openness V16 I&amp;M and Profisafe address attributes of pushbutton panel and key panel will be accessible at module level.
 
 #### Export DB attributes of memory layout property
 
@@ -47813,13 +47813,13 @@ The type identifier for racks and devices of "PC with ports" and "Ethernet devic
 | --- | --- | --- |
 | Device | System:DesktopPC.Device | System:Device.DesktopPC |
 | Rack | System:DesktopPC.Rack | System:Rack.DesktopPC |
-| Device item | System:DesktopPC.Port<X> <X> denotes the number of ports | System:DeviceItem.EthernetDevice.Port<X> <X> denotes the number of ports |
+| Device item | System:DesktopPC.Port&lt;X&gt; &lt;X&gt; denotes the number of ports | System:DeviceItem.EthernetDevice.Port&lt;X&gt; &lt;X&gt; denotes the number of ports |
 
 | Ethernet devices with ports |  |  |
 | --- | --- | --- |
 | Device | System:DummyPC.Device | System:Device.EthernetDevice |
 | Rack | System:Rack.DummyPC | System:Rack.EthernetDevice |
-| Device item | System:DummyPC.Port<X> <X> denotes the number of ports |  |
+| Device item | System:DummyPC.Port&lt;X&gt; &lt;X&gt; denotes the number of ports |  |
 
 #### Failures when trying to connect to TIA Portal
 
@@ -47952,7 +47952,7 @@ If during an upgrade an object is changed the timestamp for the last modificatio
 
 #### Export XML for GRAPH blocks
 
-The export XML for GRAPH blocks contains an additional empty action: <Actions />
+The export XML for GRAPH blocks contains an additional empty action: &lt;Actions /&gt;
 
 #### Importing tag tables
 
@@ -48073,7 +48073,7 @@ The figure below shows the relationship between the object model and a project i
 | ① | The object "Project" corresponds to an open project in the TIA Portal. |
 | ② | The "PlcSoftware" object is of type "SoftwareBase"④, and corresponds to a PLC. The object's contents correspond to a PLC in the project navigation with access to objects such as blocks or PLC tags. |
 | ③ | The "HmiTarget" object is of type "SoftwareBase"④, and corresponds to an HMI device. The object's contents correspond to an HMI device in the project navigation with access to objects such as screens or HMI tags. |
-| ④ | The object "DeviceItem" corresponds to an object in the "Devices & Networks" editor. An object of the type "DeviceItem" can be a rack or an inserted module. |
+| ④ | The object "DeviceItem" corresponds to an object in the "Devices &amp; Networks" editor. An object of the type "DeviceItem" can be a rack or an inserted module. |
 
 #### Changes on pilot functionality
 
@@ -48299,7 +48299,7 @@ This section contains information on the following topics:
 
 The export and import via TIA Portal Openness API was extended in V14 SP1 in order to handle comments at array elements. This required a new schema. Block interface import and export will handle from now on two schema versions:
 
-- For import: The decision about used schema version is made based on namespace: <Sections xmlns=http://www.siemens.com/automation/Openness/SW/Interface/v2>
+- For import: The decision about used schema version is made based on namespace: &lt;Sections xmlns=http://www.siemens.com/automation/Openness/SW/Interface/v2&gt;
 - For export: The decision about used schema version is made based on the project version. Projects V14 SP1 lead to version 2, projects V14 lead to version v1
 
 ##### Changes in API
@@ -48377,9 +48377,9 @@ private static void Main(string[] args)
 
 // generate source for V14
 
-var blocks = new List<PlcBlock>() { block1 };
+var blocks = new List&lt;PlcBlock&gt;() { block1 };
 
-var types = new List<PlcBlock>() { udt1 };
+var types = new List&lt;PlcBlock&gt;() { udt1 };
 
 var fileInfoBlock = new FileInfo(@"D:\Export\Block.scl");
 
@@ -48395,9 +48395,9 @@ plcDataTypesGroup.GenerateSourceFromTypes(types, fileInfo);
 
 //generate source as of V14 SP1
 
-var blocks = new List<PlcBlock>(){ block1 };
+var blocks = new List&lt;PlcBlock&gt;(){ block1 };
 
-var types = new List<PlcBlock>() { udt1 };
+var types = new List&lt;PlcBlock&gt;() { udt1 };
 
 var fileInfoBlock = new FileInfo(@"D:\Export\Blocks.scl");
 
@@ -48799,9 +48799,9 @@ As of V14 SP1 the statusword can only be imported at statements where they are s
 
 ###### Empty statements
 
-The import is aborted if a statement does not have a node <StlStatement/>. In case of an empty statement, add the <StlToken Text="Empty_Line" /> node.
+The import is aborted if a statement does not have a node &lt;StlStatement/&gt;. In case of an empty statement, add the &lt;StlToken Text="Empty_Line" /&gt; node.
 
-The import is aborted if an empty statement has comments. For a statement with only comments use the <StlToken Text="COMMENT" />.
+The import is aborted if an empty statement has comments. For a statement with only comments use the &lt;StlToken Text="COMMENT" /&gt;.
 
 ![Empty statements](images/99006709771_DV_resource.Stream@PNG-en-US.png)
 
@@ -48932,7 +48932,7 @@ The following changes were made in TIA Portal Openness V14, which may impact you
 
 ##### Application
 
-When you try to import files which were generated with TIA Portal Openness V13 SP1 or previous an exeption will be thrown because of incompatibility. This is caused by changes on HMI tags and HMI screen items. The following tables are showing the main attribute changes, for more detailed information refer to the chapter "Creating screens Working with objects and object groups > Working with objects > Configuring ranges" of the TIA Portal online help:
+When you try to import files which were generated with TIA Portal Openness V13 SP1 or previous an exeption will be thrown because of incompatibility. This is caused by changes on HMI tags and HMI screen items. The following tables are showing the main attribute changes, for more detailed information refer to the chapter "Creating screens Working with objects and object groups &gt; Working with objects &gt; Configuring ranges" of the TIA Portal online help:
 
 ##### Changes of HMI tags
 

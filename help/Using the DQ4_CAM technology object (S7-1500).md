@@ -26,7 +26,7 @@ During the configuration, commissioning and diagnosis of the cam control functio
 - In STEP 7 (TIA Portal) you configure the DQ4_CAM technology object by entering the encoder parameters.
 - The corresponding DQ4_CAM instruction is programmed in the user program. This instruction takes over the supply of the control and feedback interface of the output module. The encoder data are hereby transferred to the output module and processed there.
 
-The DQ4_CAM technology object corresponds to the instance DB of the instruction DQ4_CAM. The configuration of the cam control functions is saved in the technology object. The technology object is located in the folder "PLC > Technology objects".
+The DQ4_CAM technology object corresponds to the instance DB of the instruction DQ4_CAM. The configuration of the cam control functions is saved in the technology object. The technology object is located in the folder "PLC &gt; Technology objects".
 
 ### Operating mode
 
@@ -225,8 +225,8 @@ With the parameterization of the [hysteresis](Cam%20control%20basics%20%28S7-150
 
 The hysteresis setting must satisfy the following conditions:
 
-- Hysteresis < (Maximum encoder value – Minimum encoder value) / 4
-- Hysteresis < End position – Start position
+- Hysteresis &lt; (Maximum encoder value – Minimum encoder value) / 4
+- Hysteresis &lt; End position – Start position
 
 If you enter "0", the hysteresis is switched off. You can enter a value between 0 and 65535. The default setting is "0".
 
@@ -244,7 +244,7 @@ With this parameter you specify the upper value of the valid encoder range.
 
 If you have activated the "Modulo" parameter, the following applies:
 
-- Maximum encoder value – Minimum encoder value <= 2147483646
+- Maximum encoder value – Minimum encoder value &lt;= 2147483646
 - Maximum encoder value forms the upper limit of the modulo range.
 
 You can enter a value between –2147483646 and 2147483647. The default setting is "2147483646".
@@ -257,7 +257,7 @@ With this parameter you specify the lower value of the valid encoder range.
 
 If you have activated the "Modulo" parameter, the following applies:
 
-- Maximum encoder value – Minimum encoder value <= 2147483646
+- Maximum encoder value – Minimum encoder value &lt;= 2147483646
 - Minimum encoder value forms the lower limit of the modulo range.
 
 You can enter a value between –2147483648 and 2147483645. The default setting is "0".
@@ -278,12 +278,12 @@ With the parameter assignment of the two position values, you define the lower a
 
 If the modulo is disabled:
 
-- Minimum encoder value <= Cam start position < Cam end position <= Maximum encoder value
+- Minimum encoder value &lt;= Cam start position &lt; Cam end position &lt;= Maximum encoder value
 
 When modulo is enabled, the following applies:
 
-- Minimum encoder value <= Cam start position <= Maximum encoder value
-- Minimum encoder value <= Cam end position <= Maximum encoder value
+- Minimum encoder value &lt;= Cam start position &lt;= Maximum encoder value
+- Minimum encoder value &lt;= Cam end position &lt;= Maximum encoder value
 
 The default setting is "0" in each case.
 

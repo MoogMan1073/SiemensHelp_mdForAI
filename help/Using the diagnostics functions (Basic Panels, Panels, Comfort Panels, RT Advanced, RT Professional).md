@@ -124,7 +124,7 @@ You can use a supervision to view the status of a Boolean tag. If an event occur
 
 You can define categories and subcategories for each supervision instance. You can use eight categories to classify occurring events according to their urgency. Subcategories are used to further subdivide information. You can combine categories and subcategories in a supervision instance.
 
-You can find categories, subcategories and alarm texts for the supervision in the project tree under "Common data > Supervision settings". You can find more information about supervisions and categories in the chapter "Programming PLC > Supervising machinery and plants with ProDiag".
+You can find categories, subcategories and alarm texts for the supervision in the project tree under "Common data &gt; Supervision settings". You can find more information about supervisions and categories in the chapter "Programming PLC &gt; Supervising machinery and plants with ProDiag".
 
 #### Tracking a supervision in HMI
 
@@ -196,7 +196,7 @@ The objects for the supervision and diagnostics of plants are available for the 
 
 The number of ProDiag supervisions that you configure using STEP 7 Professional is licensed. You do not need a license for the first 25 supervisions, licenses must be used for additional supervisions.
 
-| Number of supervisions | <= 25 | <= 250 | <= 500 | <= 750 | <= 1000 | > 1000 |
+| Number of supervisions | &lt;= 25 | &lt;= 250 | &lt;= 500 | &lt;= 750 | &lt;= 1000 | &gt; 1000 |
 | --- | --- | --- | --- | --- | --- | --- |
 | Number of licenses | None | 1 | 2 | 3 | 4 | 5 |
 
@@ -297,7 +297,7 @@ The visualization of the ProDiag functionality on the HMI device is comprised of
    >
    > **Display of alarms of "Acknowledgement" and "No Acknowledgement" alarm classes**
    >
-   > To display the supervision alarms of the system alarm classes or self-defined alarm classes in your alarm view or in your alarm window, enable the display of the these alarm classes in the Inspector window under "Properties > Properties > General".
+   > To display the supervision alarms of the system alarm classes or self-defined alarm classes in your alarm view or in your alarm window, enable the display of the these alarm classes in the Inspector window under "Properties &gt; Properties &gt; General".
    >
    > In the alarm view/alarm window the alarm classes of the supervision alarms can only be enabled after the supervisions have been configured and the PLC compiled.
 
@@ -317,7 +317,7 @@ The visualization of the ProDiag functionality on the HMI device is comprised of
 
 In the TIA Portal, the texts for the ProDiag functionality, for example, symbol names and comments in a PLC code view as well as the texts of the supervision alarms, are automatically loaded from the user program of the controller to the HMI device. In multi-lingual projects, make sure that the languages that are available in the PLC match the Runtime languages of the HMI device. The alarm texts on the HMI device can only be displayed in the desired languages if the languages match.
 
-For more information on multilingual projects, refer to "Configuring devices and networks > Additional information on configurations > Functional description of S7-1500 CPUs > Setting the operating behavior > CPU properties > Multilingual capability".
+For more information on multilingual projects, refer to "Configuring devices and networks &gt; Additional information on configurations &gt; Functional description of S7-1500 CPUs &gt; Setting the operating behavior &gt; CPU properties &gt; Multilingual capability".
 
 #### Interaction of the objects for the supervision and diagnostics (RT Professional)
 
@@ -365,7 +365,7 @@ The visualization of the ProDiag functionality on the HMI device is comprised of
    >
    > **Display of alarms of "Acknowledgement" and "No Acknowledgement" alarm classes**
    >
-   > To display the supervision alarms of the system alarm classes or self-defined alarm classes in your alarm view or in your alarm window, enable the display of the these alarm classes in the Inspector window under "Properties > Properties > General".
+   > To display the supervision alarms of the system alarm classes or self-defined alarm classes in your alarm view or in your alarm window, enable the display of the these alarm classes in the Inspector window under "Properties &gt; Properties &gt; General".
    >
    > In the alarm view/alarm window the alarm classes of the supervision alarms can only be enabled after the supervisions have been configured and the PLC compiled.
 
@@ -385,7 +385,7 @@ The visualization of the ProDiag functionality on the HMI device is comprised of
 
 In TIA Portal V14, the texts for the ProDiag functionality, such as symbol names and comments in a PLC code view and supervision alarm texts, are automatically loaded from the PLC's user program to the HMI device. In multi-lingual projects, make sure that the languages that are available in the PLC match the Runtime languages of the HMI device. The alarm texts on the HMI device can only be displayed in the desired languages if the languages match.
 
-For more information on multilingual projects, refer to "Configuring devices and networks > Additional information on configurations > Functional description of S7-1500 CPUs > Setting the operating behavior > CPU properties > Multilingual capability".
+For more information on multilingual projects, refer to "Configuring devices and networks &gt; Additional information on configurations &gt; Functional description of S7-1500 CPUs &gt; Setting the operating behavior &gt; CPU properties &gt; Multilingual capability".
 
 #### Configuring the ProDiag overview (Panels, Comfort Panels, RT Advanced, RT Professional)
 
@@ -492,7 +492,7 @@ In WinCC, you configure the display and the representation of categories and sup
 
 ###### Procedure
 
-1. In the Inspector window, select "Properties > Properties > General".
+1. In the Inspector window, select "Properties &gt; Properties &gt; General".
 2. Open the selection button under the "Tag" property.
 3. Select the status tag of ProDiag FB.
 
@@ -501,11 +501,11 @@ In WinCC, you configure the display and the representation of categories and sup
    ![Procedure](images/111975499659_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111975499659_DV_resource.Stream@PNG-en-US.png)
-4. Under "Output > Categories", define the names and colors for the supervision categories.
-5. Under "Output > Monitoring types", define the names and colors for the supervision categories.
+4. Under "Output &gt; Categories", define the names and colors for the supervision categories.
+5. Under "Output &gt; Monitoring types", define the names and colors for the supervision categories.
 6. Under "Layout", specify which icons and buttons are to be displayed in the object.
-7. Select an authorization for operation under "Properties > Properties > Security".
-8. You can configure a system function to the event "Alarm view button click" under "Properties > Events" to jump from the ProDiag overview to the alarm view in Runtime.
+7. Select an authorization for operation under "Properties &gt; Properties &gt; Security".
+8. You can configure a system function to the event "Alarm view button click" under "Properties &gt; Events" to jump from the ProDiag overview to the alarm view in Runtime.
 
 ###### Result
 
@@ -526,9 +526,9 @@ After an error has occurred, you have the option of jumping directly from the Pr
 
 ###### Configuring the jump to the alarm view
 
-1. Click "Properties > Events" in the Inspector window.
+1. Click "Properties &gt; Events" in the Inspector window.
 2. Click on the event "Click alarm view button".
-3. Select the "ShowAlarmWindow" system function under "<Add function".
+3. Select the "ShowAlarmWindow" system function under "&lt;Add function".
 4. Specify the object name of the alarm window.
 5. Alternatively, open the screen with the configured alarm view using the "ActivateScreen" function.
 
@@ -649,13 +649,13 @@ The GRAPH sequencer is evaluated from left to right. The step numbers in the GRA
 
 ###### Displaying previous and next steps
 
-To display the previous and next steps in the GRAPH overview, select the "Previous and next step" option under "Properties > Appearance > Options".
+To display the previous and next steps in the GRAPH overview, select the "Previous and next step" option under "Properties &gt; Appearance &gt; Options".
 
 ###### Displaying the result of the criteria analysis
 
 You have the option of displaying the result of the criteria analysis in the GRAPH overview when an error is present. The symbol name, the absolute address, the value of the first operand with error and the comment are displayed.
 
-To display the first operand with error of the criteria analysis, select the "Criteria analysis" option under "Properties > Appearance > Options".
+To display the first operand with error of the criteria analysis, select the "Criteria analysis" option under "Properties &gt; Appearance &gt; Options".
 
 > **Note**
 >
@@ -680,7 +680,7 @@ You can use the GRAPH overview to view the current program status for the execut
   >
   > The process tag you are using for the GRAPH overview must be visible in HMI and accessible from HMI.
   >
-  > To identify the tags of the GRAPH data block as visible and accessible for HMI, open the GRAPH function block, select the block in the work area, and select "Edit > Internal parameters visible/accessible from HMI" in the menu bar. Then compile the program blocks.
+  > To identify the tags of the GRAPH data block as visible and accessible for HMI, open the GRAPH function block, select the block in the work area, and select "Edit &gt; Internal parameters visible/accessible from HMI" in the menu bar. Then compile the program blocks.
 - An HMI device has been created.
 - You have created a screen.
 - The Inspector window is open.
@@ -688,24 +688,24 @@ You can use the GRAPH overview to view the current program status for the execut
 ###### Procedure
 
 1. Drag the GRAPH overview from the toolbox view into the configured screen.
-2. In the Inspector window, select "Properties > Properties > General".
-3. Open the selection button under "Process > Tag".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General".
+3. Open the selection button under "Process &gt; Tag".
 
    The "Add new object" dialog opens.
 4. Select the corresponding PLC in the "Program blocks" folder.
 5. Select the corresponding PLC tag of the GRAPH instance data block.
-6. Under "Properties > Properties > Layout > Options", specify the symbols that are displayed in the GRAPH overview .
+6. Under "Properties &gt; Properties &gt; Layout &gt; Options", specify the symbols that are displayed in the GRAPH overview .
 
    To represent the GRAPH overview in compatibility mode without toolbar buttons and operating mode display, enable the "Single-line mode" property.
 
    ![Procedure](images/102982480779_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/102982480779_DV_resource.Stream@PNG-en-US.png)
-7. Under "Properties > Properties > Toolbar > General", specify the buttons that will be displayed in the object.
+7. Under "Properties &gt; Properties &gt; Toolbar &gt; General", specify the buttons that will be displayed in the object.
 8. You can dynamize the properties in the "GRAPH overview" object using tags and color-code the states.
 
    You can find a detailed description of dynamizing a property in the section [Dynamizing screens](Creating%20screens%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#dynamizing-screens-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)
-9. Under "Properties > Events", you can assign system functions to the buttons in the GRAPH overview to jump to the alarm view and the PLC code view in Runtime.
+9. Under "Properties &gt; Events", you can assign system functions to the buttons in the GRAPH overview to jump to the alarm view and the PLC code view in Runtime.
 
 **Note**
 
@@ -756,8 +756,8 @@ In WinCC Runtime Professional you have the option of renaming the operating mode
 
 A screen with the configured GRAPH overview is open.
 
-1. In the Inspector window, select "Properties > Properties > Output".
-2. Configure the labels for the four operating modes under "Output > Labeling".
+1. In the Inspector window, select "Properties &gt; Properties &gt; Output".
+2. Configure the labels for the four operating modes under "Output &gt; Labeling".
 
 #### Configuring the PLC code view (Panels, Comfort Panels, RT Advanced)
 
@@ -781,7 +781,7 @@ To display the PLC program networks in the LAD, FBD and GRAPH programming langua
 - At least one PLC has been created.
 - An HMI device has been created.
 - An HMI connection has been established between the controller and HMI device.
-- "System diagnostics" has been enabled for the connection on all devices under "Runtime settings > Alarms".
+- "System diagnostics" has been enabled for the connection on all devices under "Runtime settings &gt; Alarms".
 
   ![Requirement](images/159374355467_DV_resource.Stream@PNG-en-US.png)
 - You have created a screen.
@@ -789,16 +789,16 @@ To display the PLC program networks in the LAD, FBD and GRAPH programming langua
 ###### Procedure
 
 1. Drag-and-drop the PLC code view from the toolbox view.
-2. Click "Properties > Properties > Toolbar" in the Inspector window.
+2. Click "Properties &gt; Properties &gt; Toolbar" in the Inspector window.
 3. Select the buttons that you require in Runtime, for example: Next network, Previous network, Step mode.
 
    ![Procedure](images/111976014731_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111976014731_DV_resource.Stream@PNG-en-US.png)
 4. If required, configure the button display, e.g. background color and fill pattern.
-5. In the Inspector window, select "Properties > Properties > Columns".
+5. In the Inspector window, select "Properties &gt; Properties &gt; Columns".
 6. Adapt the column headers or change the order if necessary.
-7. Select an authorization for operation in "Properties > Properties > Security".
+7. Select an authorization for operation in "Properties &gt; Properties &gt; Security".
 
 ###### Result
 
@@ -886,7 +886,7 @@ In WinCC, you can define the size ratio between the information area and the det
 
 ###### Define width of detail view
 
-1. Click "Properties > Properties > Layout" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
 2. Specify the width of the detail view in relation to the information area using the option "GRAPH detail view width (%)".
 
 ###### Result
@@ -925,24 +925,24 @@ The following instructions are supported in the PLC code view:
 | OR | Is implemented by the corresponding interconnection of normally closed contacts or normally open contacts. | ![Bit logic operations](images/84673159051_DV_resource.Stream@PNG-de-DE.png) |
 | EXCLUSIVE OR | Is implemented by the corresponding interconnection of normally closed contacts or normally open contacts. | ![Bit logic operations](images/84673274507_DV_resource.Stream@PNG-de-DE.png) |
 
-You can find additional information on this in the section "Programming PLC > Instructions".
+You can find additional information on this in the section "Programming PLC &gt; Instructions".
 
 ###### Comparator operations
 
 | Instruction | LAD | FBD |
 | --- | --- | --- |
 | CMP ==: Equal | ![Comparator operations](images/84696480779_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698221835_DV_resource.Stream@PNG-de-DE.png) |
-| CMP <>: Not equal | ![Comparator operations](images/84698273291_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698388747_DV_resource.Stream@PNG-de-DE.png) |
-| CMP >=: Greater or equal | ![Comparator operations](images/84698414603_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698478859_DV_resource.Stream@PNG-de-DE.png) |
-| CMP <=: Less or equal | ![Comparator operations](images/84698517515_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698556171_DV_resource.Stream@PNG-de-DE.png) |
-| CMP >: Greater than | ![Comparator operations](images/84698594827_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698659083_DV_resource.Stream@PNG-de-DE.png) |
-| CMP <: Less than | ![Comparator operations](images/84698684939_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698710795_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &lt;&gt;: Not equal | ![Comparator operations](images/84698273291_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698388747_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &gt;=: Greater or equal | ![Comparator operations](images/84698414603_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698478859_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &lt;=: Less or equal | ![Comparator operations](images/84698517515_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698556171_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &gt;: Greater than | ![Comparator operations](images/84698594827_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698659083_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &lt;: Less than | ![Comparator operations](images/84698684939_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698710795_DV_resource.Stream@PNG-de-DE.png) |
 
 > **Note**
 >
 > PLC code view supports the following data types for displaying the comparator: Binary numbers, integers, floating-point numbers and timers with exception of S5TIME.
 
-You can find additional information on this in the section "Programming PLC > Instructions".
+You can find additional information on this in the section "Programming PLC &gt; Instructions".
 
 ###### Timers
 
@@ -953,7 +953,7 @@ You can find additional information on this in the section "Programming PLC > In
 | TOF: Generate off-delay | ![Timers](images/84704226827_DV_resource.Stream@PNG-de-DE.png) | ![Timers](images/84699199243_DV_resource.Stream@PNG-de-DE.png) |
 | TONR: Time accumulator | ![Timers](images/84704252683_DV_resource.Stream@PNG-de-DE.png) | ![Timers](images/84699263755_DV_resource.Stream@PNG-de-DE.png) |
 
-You can find additional information on this in the section "Programming PLC > Instructions".
+You can find additional information on this in the section "Programming PLC &gt; Instructions".
 
 ###### Counters*
 
@@ -965,7 +965,7 @@ You can find additional information on this in the section "Programming PLC > In
 | CTD: Count down | ![Counters*](images/84699777803_DV_resource.Stream@PNG-de-DE.png) | ![Counters*](images/84700085259_DV_resource.Stream@PNG-de-DE.png) |
 | CTUD: Count up and down | ![Counters*](images/84700251915_DV_resource.Stream@PNG-de-DE.png) | ![Counters*](images/84700316171_DV_resource.Stream@PNG-de-DE.png) |
 
-You can find additional information on this in the section "Programming PLC > Instructions".
+You can find additional information on this in the section "Programming PLC &gt; Instructions".
 
 ##### Supported data types (Panels, Comfort Panels, RT Advanced)
 
@@ -1002,7 +1002,7 @@ The following table shows data types supported in the "PLC code view" object and
 
 > **Note**
 >
-> You can find more information on the data types under "PLC Programming > Data Types".
+> You can find more information on the data types under "PLC Programming &gt; Data Types".
 
 > **Note**
 >
@@ -1036,7 +1036,7 @@ Please note the following restrictions when addressing tags:
 
 ###### Jump to the PLC code view
 
-For the jump from a supervision alarm to the PLC code view, the instance name must conform to the following naming convention when using supported local operands in a function block: <FB-Name>_DB.
+For the jump from a supervision alarm to the PLC code view, the instance name must conform to the following naming convention when using supported local operands in a function block: &lt;FB-Name&gt;_DB.
 
 The jump to a function or an organization block is only possible if only global operands are used.
 
@@ -1062,7 +1062,7 @@ To display the PLC program networks in the LAD, FBD and GRAPH programming langua
 - At least one PLC has been created.
 - A PC station has been created.
 - An HMI connection has been established between the controller and HMI device.
-- "System diagnostics" has been enabled for the connection under "Runtime settings > Alarms".
+- "System diagnostics" has been enabled for the connection under "Runtime settings &gt; Alarms".
 
   ![Requirement](images/159374355467_DV_resource.Stream@PNG-en-US.png)
 - You have created a screen.
@@ -1071,15 +1071,15 @@ To display the PLC program networks in the LAD, FBD and GRAPH programming langua
 ###### Procedure
 
 1. Drag-and-drop the PLC code view from the toolbox view.
-2. Click "Properties > Properties > Layout" in the Inspector window.
-3. Under "Layout > Symbol table lines", you adjust the number of lines that are displayed in the symbol table.
-4. Click "Properties > Properties > Toolbar" in the Inspector window.
+2. Click "Properties &gt; Properties &gt; Layout" in the Inspector window.
+3. Under "Layout &gt; Symbol table lines", you adjust the number of lines that are displayed in the symbol table.
+4. Click "Properties &gt; Properties &gt; Toolbar" in the Inspector window.
 5. Assign a hotkey to the buttons that you need in runtime, e.g. Step mode.
 
    ![Procedure](images/110880907147_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/110880907147_DV_resource.Stream@PNG-en-US.png)
-6. To display or handle errors when configuring the display of a network in runtime, configure a corresponding script under "Properties > Events > Errors".
+6. To display or handle errors when configuring the display of a network in runtime, configure a corresponding script under "Properties &gt; Events &gt; Errors".
 
 ###### Result
 
@@ -1179,24 +1179,24 @@ The following instructions are supported in the PLC code view:
 | OR | Is implemented by the corresponding interconnection of normally closed contacts or normally open contacts. | ![Bit logic operations](images/84673159051_DV_resource.Stream@PNG-de-DE.png) |
 | EXCLUSIVE OR | Is implemented by the corresponding interconnection of normally closed contacts or normally open contacts. | ![Bit logic operations](images/84673274507_DV_resource.Stream@PNG-de-DE.png) |
 
-You can find additional information on this in the section "Programming PLC > Instructions".
+You can find additional information on this in the section "Programming PLC &gt; Instructions".
 
 ###### Comparator operations
 
 | Instruction | LAD | FBD |
 | --- | --- | --- |
 | CMP ==: Equal | ![Comparator operations](images/84696480779_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698221835_DV_resource.Stream@PNG-de-DE.png) |
-| CMP <>: Not equal | ![Comparator operations](images/84698273291_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698388747_DV_resource.Stream@PNG-de-DE.png) |
-| CMP >=: Greater or equal | ![Comparator operations](images/84698414603_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698478859_DV_resource.Stream@PNG-de-DE.png) |
-| CMP <=: Less or equal | ![Comparator operations](images/84698517515_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698556171_DV_resource.Stream@PNG-de-DE.png) |
-| CMP >: Greater than | ![Comparator operations](images/84698594827_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698659083_DV_resource.Stream@PNG-de-DE.png) |
-| CMP <: Less than | ![Comparator operations](images/84698684939_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698710795_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &lt;&gt;: Not equal | ![Comparator operations](images/84698273291_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698388747_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &gt;=: Greater or equal | ![Comparator operations](images/84698414603_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698478859_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &lt;=: Less or equal | ![Comparator operations](images/84698517515_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698556171_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &gt;: Greater than | ![Comparator operations](images/84698594827_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698659083_DV_resource.Stream@PNG-de-DE.png) |
+| CMP &lt;: Less than | ![Comparator operations](images/84698684939_DV_resource.Stream@PNG-de-DE.png) | ![Comparator operations](images/84698710795_DV_resource.Stream@PNG-de-DE.png) |
 
 > **Note**
 >
 > PLC code view supports the following data types for displaying the comparator: Binary numbers, integers, floating-point numbers and timers with exception of S5TIME.
 
-You can find additional information on this in the section "Programming PLC > Instructions".
+You can find additional information on this in the section "Programming PLC &gt; Instructions".
 
 ###### Timers
 
@@ -1207,7 +1207,7 @@ You can find additional information on this in the section "Programming PLC > In
 | TOF: Generate off-delay | ![Timers](images/84704226827_DV_resource.Stream@PNG-de-DE.png) | ![Timers](images/84699199243_DV_resource.Stream@PNG-de-DE.png) |
 | TONR: Time accumulator | ![Timers](images/84704252683_DV_resource.Stream@PNG-de-DE.png) | ![Timers](images/84699263755_DV_resource.Stream@PNG-de-DE.png) |
 
-You can find additional information on this in the section "Programming PLC > Instructions".
+You can find additional information on this in the section "Programming PLC &gt; Instructions".
 
 ###### Counters*
 
@@ -1219,7 +1219,7 @@ You can find additional information on this in the section "Programming PLC > In
 | CTD: Count down | ![Counters*](images/84699777803_DV_resource.Stream@PNG-de-DE.png) | ![Counters*](images/84700085259_DV_resource.Stream@PNG-de-DE.png) |
 | CTUD: Count up and down | ![Counters*](images/84700251915_DV_resource.Stream@PNG-de-DE.png) | ![Counters*](images/84700316171_DV_resource.Stream@PNG-de-DE.png) |
 
-You can find additional information on this in the section "Programming PLC > Instructions".
+You can find additional information on this in the section "Programming PLC &gt; Instructions".
 
 ##### Supported data types (RT Professional)
 
@@ -1257,7 +1257,7 @@ The following table shows data types supported in the "PLC Code View" object and
 
 > **Note**
 >
-> You can find more information on the data types under "PLC Programming > Data Types".
+> You can find more information on the data types under "PLC Programming &gt; Data Types".
 
 > **Note**
 >
@@ -1309,7 +1309,7 @@ Please note the following restrictions when addressing tags:
 
 ###### Jump to the PLC code view
 
-For the jump from a supervision alarm to the PLC code view, the instance name must conform to the following naming convention when using supported local operands in a function block: <FB-Name>_DB.
+For the jump from a supervision alarm to the PLC code view, the instance name must conform to the following naming convention when using supported local operands in a function block: &lt;FB-Name&gt;_DB.
 
 The jump to a function or an organization block is only possible if only global operands are used.
 
@@ -1333,8 +1333,8 @@ In this example you configure the jump to the PLC code view from the correspondi
 ###### Configuring the button for the jump
 
 1. Drag-and-drop a button from the "Tools" task card into the open "Alarm" screen.
-2. Assign a name, for example, "Jump to PLC Code" under "Miscellaneous > Object > Name".
-3. Switch to "Events > Click".
+2. Assign a name, for example, "Jump to PLC Code" under "Miscellaneous &gt; Object &gt; Name".
+3. Switch to "Events &gt; Click".
 4. Click "Add function".
 5. Select the function "ShowPLCCodeViewFromAlarm" from the selection list.
 6. Specify the name of the screen in which the alarm view is configured under "Alarm screen name", "Alarm".
@@ -1487,7 +1487,7 @@ The example is divided into several steps:
 - The user program contains a GRAPH function block with the motion sequence of the conveyor belt.
 - The user program contains a ProDiag function block with the configured operand monitoring.
 
-  You can find more information about creating ProDiag supervisions in the section "Programming PLC > Supervising machinery and plants with ProDiag".
+  You can find more information about creating ProDiag supervisions in the section "Programming PLC &gt; Supervising machinery and plants with ProDiag".
 - The HMI device TP1200 Comfort has been created.
 - A connection has been established between the controller and your HMI device.
 
@@ -1540,17 +1540,17 @@ ProDiag overview shows you whether a fault has occurred and a ProDiag supervisio
 
 1. Open the screen "Program code".
 2. Drag-and-drop a "PLC code view" from the "Tools" task card into the screen.
-3. Enter the object name "PLC code view" under "Properties > Properties > Miscellaneous > Name" in the Inspector window.
+3. Enter the object name "PLC code view" under "Properties &gt; Properties &gt; Miscellaneous &gt; Name" in the Inspector window.
 4. Open the screen "Overview".
 5. Drag-and-drop the "ProDiag overview" object from the "Tools" task card into the screen.
 
    If you want to supervise multiple ProDiag blocks from your program, create a ProDiag overview for each block.
-6. Enter a meaningful object name, such as "Overview_Conveyor", under "Properties > Properties > Miscellaneous > Name" in the Inspector window.
+6. Enter a meaningful object name, such as "Overview_Conveyor", under "Properties &gt; Properties &gt; Miscellaneous &gt; Name" in the Inspector window.
 7. Drag-and-drop a "GRAPH overview" from the "Tools" task card into the screen.
-8. Enter the name "GRAPH_Sequence" under "Properties > Properties > Miscellaneous > Name" in the Inspector window.
+8. Enter the name "GRAPH_Sequence" under "Properties &gt; Properties &gt; Miscellaneous &gt; Name" in the Inspector window.
 9. Open the screen "Alarm".
 10. Drag-and-drop an alarm view from the "Tools" task card into the screen.
-11. Enter the name "ProDiag_Alarm" under "Properties > Properties > Miscellaneous > Name" in the Inspector window.
+11. Enter the name "ProDiag_Alarm" under "Properties &gt; Properties &gt; Miscellaneous &gt; Name" in the Inspector window.
 
 ##### Result
 
@@ -1577,7 +1577,7 @@ In this example, you connect the objects for visualization of program code and s
 ##### Procedure
 
 1. Select the GRAPH overview.
-2. Click on the selection button under "Properties> General> Process > Tag" in the Inspector window.
+2. Click on the selection button under "Properties&gt; General&gt; Process &gt; Tag" in the Inspector window.
 
    A dialog opens.
 3. Click on the GRAPH instance data block "Conv_Seq_DB" in the "Program blocks" folder.
@@ -1589,7 +1589,7 @@ In this example, you connect the objects for visualization of program code and s
 
    The GRAPH instance data block and the "GRAPH overview" object are connected.
 5. Select the ProDiag overview "Overview_Conveyor".
-6. Click on the selection button under "Properties> General> Process > Tag" in the Inspector window.
+6. Click on the selection button under "Properties&gt; General&gt; Process &gt; Tag" in the Inspector window.
 
    A dialog opens.
 7. Click on the data block "Coveyor_DB" in the "Program blocks" folder.
@@ -1605,7 +1605,7 @@ In this example, you connect the objects for visualization of program code and s
 
 The process tag you are using for the GRAPH overview must be visible in HMI and accessible from HMI.
 
-To identify the tags of the GRAPH data block as visible and accessible for HMI, open the GRAPH function block, select the block in the work area, and select "Edit > Internal parameters visible/accessible from HMI" in the menu bar. Then compile the program blocks.
+To identify the tags of the GRAPH data block as visible and accessible for HMI, open the GRAPH function block, select the block in the work area, and select "Edit &gt; Internal parameters visible/accessible from HMI" in the menu bar. Then compile the program blocks.
 
 ##### Result
 
@@ -1626,7 +1626,7 @@ In this example you configure the alarm view for display of the monitoring alarm
 ##### Procedure
 
 1. Open the "Alarm" screen and select the alarm view.
-2. In the Inspector window, select "Properties > General".
+2. In the Inspector window, select "Properties &gt; General".
 3. Select the alarm classes of alarms that are displayed in the alarm view, for example, the system-internal alarm classes "Acknowledgement" and "No Acknowledgement".
 
    You have the option to also display alarms of alarm classes that you have defined previously in STEP 7.
@@ -1634,7 +1634,7 @@ In this example you configure the alarm view for display of the monitoring alarm
    ![Procedure](images/111978467595_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111978467595_DV_resource.Stream@PNG-en-US.png)
-4. Specify a Boolean tag under "Properties > Display > Control tag for PLC code view" that will control the jump from the last active ProDiag alarm to the PLC code view.
+4. Specify a Boolean tag under "Properties &gt; Display &gt; Control tag for PLC code view" that will control the jump from the last active ProDiag alarm to the PLC code view.
 
    This tag is used to evaluate whether the jump from the selected alarm to the PLC code view is possible.
 
@@ -1643,11 +1643,11 @@ In this example you configure the alarm view for display of the monitoring alarm
    ![Procedure](images/111978472075_DV_resource.Stream@PNG-en-US.png)
 5. Drag-and-drop a button from the "Tools" task card into the "Alarm" screen.
 
-   Enter the name "Program code" under "Properties > Properties > Miscellaneous > Name" in the Inspector window.
-6. Select "Events > Click" in the Inspector window.
+   Enter the name "Program code" under "Properties &gt; Properties &gt; Miscellaneous &gt; Name" in the Inspector window.
+6. Select "Events &gt; Click" in the Inspector window.
 7. Select the "ActivatePLCCodeView" system function under "Add function".
 8. Enter the screen name "Program code" and the object name "PLC code view" as parameters.
-9. Under "Properties > Animations > Visibility > Tag", select the previously specified Boolean control tag for PLC code view.
+9. Under "Properties &gt; Animations &gt; Visibility &gt; Tag", select the previously specified Boolean control tag for PLC code view.
 
    ![Procedure](images/87491816203_DV_resource.Stream@PNG-en-US.png)
 
@@ -1670,10 +1670,10 @@ In this step you configure the basic navigation between the GRAPH overview, the 
 ##### Configuring the jump from the GRAPH overview
 
 1. Select the GRAPH overview "GRAPH_Sequence".
-2. Select "Events > Alarm view button click" in the Inspector window.
+2. Select "Events &gt; Alarm view button click" in the Inspector window.
 3. Select the "ActivateScreen" system function under "Add function".
 4. Specify the name of the "Alarm" screen that contains the alarm view.
-5. Select "Events > PLC code view button click" in the Inspector window.
+5. Select "Events &gt; PLC code view button click" in the Inspector window.
 6. Select the "ActivatePLCCodeView" system function under "Add function".
 7. Enter the name of the "Program code" screen and of the PLC code view "PLC code view".
 
@@ -1702,7 +1702,7 @@ In this step you configure the basic navigation between the ProDiag overview, th
 ##### Configuring the jump from the ProDiag overview
 
 1. Select the ProDiag overview "Overview_Conveyor".
-2. Select "Events > Alarm view button click" in the Inspector window.
+2. Select "Events &gt; Alarm view button click" in the Inspector window.
 3. Select the "ActivateScreen" system function under "Add function".
 4. Specify the name of the "Alarm" screen that contains the alarm view.
 
@@ -1909,11 +1909,11 @@ You have the option of connecting multiple alarm views to a criteria analysis vi
 ##### Procedure
 
 1. Move the criteria analysis view from the toolbox window using drag-and-drop.
-2. Select "Properties > Properties > General" in the Inspector window.
+2. Select "Properties &gt; Properties &gt; General" in the Inspector window.
 3. Open the selection button under the "Tag" property.
-4. Select the status tag of the corresponding alarm view under "Process > Tag".
+4. Select the status tag of the corresponding alarm view under "Process &gt; Tag".
 5. Click on the alarm view.
-6. Select "Properties > Properties > View" in the Inspector window.
+6. Select "Properties &gt; Properties &gt; View" in the Inspector window.
 7. Select the status tag of the criteria analysis view under "Control tag for criteria analysis".
 
 **Note**
@@ -1946,7 +1946,7 @@ You configure the criteria analysis view and its linked alarm view in the same s
 ##### Procedure
 
 1. Move the criteria analysis view from the toolbox window using drag-and-drop.
-2. Select "Properties > Properties > General" in the Inspector window.
+2. Select "Properties &gt; Properties &gt; General" in the Inspector window.
 3. Open the selection button under the "Data source" property.
 4. Select the configured alarm view.
 
@@ -1975,7 +1975,7 @@ The additional information is displayed in the message after the alarm text, sep
 
 Alternatively, you can specify that the additional information is displayed in the Info text.
 
-In WinCC Runtime Professional you also have the option of expanding the additional alarm texts of the supervision alarms. For this, select the appropriate additional alarm text under "Runtime settings > Alarms > Criteria analysis > Expand text".
+In WinCC Runtime Professional you also have the option of expanding the additional alarm texts of the supervision alarms. For this, select the appropriate additional alarm text under "Runtime settings &gt; Alarms &gt; Criteria analysis &gt; Expand text".
 
 > **Note**
 >
@@ -1983,7 +1983,7 @@ In WinCC Runtime Professional you also have the option of expanding the addition
 
 > **Note**
 >
-> To completely display the alarms from the controller on the HMI device, the "Automatic update" option must be selected under "Runtime Settings > Alarms > Controller alarms" for the relevant connection. You can find additional information on complete alarms under "[Sending a complete alarm from the controller to the HMI device](Working%20with%20alarms%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#sending-a-complete-alarm-from-the-controller-to-the-hmi-device-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)".
+> To completely display the alarms from the controller on the HMI device, the "Automatic update" option must be selected under "Runtime Settings &gt; Alarms &gt; Controller alarms" for the relevant connection. You can find additional information on complete alarms under "[Sending a complete alarm from the controller to the HMI device](Working%20with%20alarms%20%28Basic%20Panels%2C%20Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#sending-a-complete-alarm-from-the-controller-to-the-hmi-device-basic-panels-panels-comfort-panels-rt-advanced-rt-professional)".
 
 ##### Criteria analysis in the alarm system
 
@@ -1996,8 +1996,8 @@ You visualize the alarms for the criteria analysis in the following steps:
 ##### Expanding alarms
 
 1. Open the "Runtime settings" editor of the HMI device.
-2. Select "Runtime settings > Alarms > Criteria analysis".
-3. Select which alarms you want to expand under "Criteria analysis > Expand text".
+2. Select "Runtime settings &gt; Alarms &gt; Criteria analysis".
+3. Select which alarms you want to expand under "Criteria analysis &gt; Expand text".
 4. Select the additional information to be added to the alarm text in the alarm, e.g. symbol name and address of the first operand with error.
 
 ##### Result

@@ -79,7 +79,7 @@ Follow these steps to fill out the property values of one or more tasks automati
 2. Use the mouse to drag the bottom right-hand corner downwards. The values are transferred to the destination cells.
 
    ![Filling out property values of one or more tasks automatically](images/148921740171_DV_resource.Stream@PNG-en-US.png)
-3. To change the attributes, use the text boxes in the editor or the text boxes under "Properties > Properties > General". In the latter, you can also define the time specifications, for example, time, day, month and year.
+3. To change the attributes, use the text boxes in the editor or the text boxes under "Properties &gt; Properties &gt; General". In the latter, you can also define the time specifications, for example, time, day, month and year.
 
    ![Filling out property values of one or more tasks automatically](images/148906128651_DV_resource.Stream@PNG-en-US.png)
 
@@ -146,7 +146,7 @@ Follow these steps to create a task with the trigger "Tags":
 
 1. Create a new task with "Add".
 2. Select the option "Tags" as the "Trigger."
-3. Select "Properties > Properties > General" in the Inspector window to select the tag.
+3. Select "Properties &gt; Properties &gt; General" in the Inspector window to select the tag.
 
 ### Result
 
@@ -174,7 +174,7 @@ Follow these steps to create a task with the trigger "Alarms":
 
 1. Create a new task with "Add".
 2. Select the option "Alarms" as the "Trigger".
-3. Configure the trigger under "Properties > Properties > General" in the Inspector window.
+3. Configure the trigger under "Properties &gt; Properties &gt; General" in the Inspector window.
 
    - Select the "Criterion", for example "Alarm class".
    - Select the "Condition", for example "Not equal".

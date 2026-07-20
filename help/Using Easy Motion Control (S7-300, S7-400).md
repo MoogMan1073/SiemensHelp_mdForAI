@@ -178,7 +178,7 @@ The **encoder range** is:
 
 With linear axes, the **work range** (= travel range) is limited as follows:
 
-Working range < physical axis length < numerical range of Easy Motion Control < encoder range
+Working range &lt; physical axis length &lt; numerical range of Easy Motion Control &lt; encoder range
 
 The following figure shows the various ranges of a linear axis.
 
@@ -200,7 +200,7 @@ The **encoder range** is:
   where:
 
   - n = 1 with single-turn encoders
-  - n > 1 and integer with multi-turn encoders
+  - n &gt; 1 and integer with multi-turn encoders
 
 The actual value of a rotary axis is reset to the start of the rotary axis after every revolution. Rotary axes therefore have an infinite traversing range that extends beyond the start or end of the rotary axis. The axis position is always displayed as a value between the start and end of the rotary axis.
 
@@ -731,7 +731,7 @@ This parameter is irrelevant for incremental encoders.
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 72.0 | NumberRevs | INT | 1 | **Number of revolutions** of an absolute encoder  Valid range of values:   - > 0 | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 72.0 | NumberRevs | INT | 1 | **Number of revolutions** of an absolute encoder  Valid range of values:   - &gt; 0 | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ###### Specifying the axis distance per encoder revolution (S7-300, S7-400)
 
@@ -749,7 +749,7 @@ For a **linear scale**, enter the length of your linear scale for "Axis travel p
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 68.0 | DisplacementPerRev | REAL | 1.0 | **Axis distance per encoder revolution**   Valid range of values:  - > 0.0 [length unit/encoder revolution] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 68.0 | DisplacementPerRev | REAL | 1.0 | **Axis distance per encoder revolution**   Valid range of values:  - &gt; 0.0 [length unit/encoder revolution] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ###### Special features with rotary axes
 
@@ -767,13 +767,13 @@ To ensure the reproducibility of all positions, the axis traversing distance cov
 
 24-bit absolute encoder
 
-=> Number of encoder revolutions = 4096
+=&gt; Number of encoder revolutions = 4096
 
 Rotary axis start = 0.0°
 
 Rotary axis end = 360.0°
 
-=> Rotary axis end - rotary axis start = 360.0°
+=&gt; Rotary axis end - rotary axis start = 360.0°
 
 Axis distance per encoder revolution = 45°
 
@@ -817,7 +817,7 @@ Enter the corresponding value in the text box.
 
 | Address | Name | Type | Initial value | Comment |
 | --- | --- | --- | --- | --- |
-| 44.0 | FactorP | REAL | 1.0 | **Controller gain**   Valid range of values:   - > 0.0 [1/s] |
+| 44.0 | FactorP | REAL | 1.0 | **Controller gain**   Valid range of values:   - &gt; 0.0 [1/s] |
 
 ###### Specifying the velocity setpoint in manual mode (S7-300, S7-400)
 
@@ -862,7 +862,7 @@ When you use the OutputMM4_DP output driver (bus-controlled MICROMASTER DP modu
 - Rated speed (100 %) of the motor: = 1380 rpm
 - Motor is synchronized to: = 1380 rpm at 50 Hz
 
-=> Enter "Reference value for 100% speed = 50 Hz
+=&gt; Enter "Reference value for 100% speed = 50 Hz
 
 ###### Specifying the reference value for maximum axis velocity (S7-300, S7-400)
 
@@ -876,7 +876,7 @@ Example:
 - Motor is synchronized to: = 9 V at 3000 rpm
 - Maximum speed to reach: = 1500 rpm
 
-=> Enter the following value for "Reference value for maximum axis speed": = 4.5 V
+=&gt; Enter the following value for "Reference value for maximum axis speed": = 4.5 V
 
 If using the **OutputMM4_DP** output driver, enter the voltage value at which the drive reaches "Maximum speed" in the text box (see [Axis DB address 14.0](#specifying-the-maximum-axis-velocity-s7-300-s7-400)).
 
@@ -886,7 +886,7 @@ Example:
 - Motor is synchronized to: = 1380 rpm at 50 Hz
 - Maximum speed to reach: = 690 rpm
 
-=> Enter the following value for "Reference value for maximum axis speed": = 25 Hz
+=&gt; Enter the following value for "Reference value for maximum axis speed": = 25 Hz
 
 ###### Data used in the axis DB
 
@@ -994,8 +994,8 @@ Pay attention to the "[Axis distance per encoder revolution](#specifying-the-axi
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 6.0 | AxisLimitMax | REAL | 1.0e<sup>+6</sup> | Linear axis: **Software limit switch end**  Rotary axis: **Rotary axis end**  Valid range of values:   - -2<sup>24</sup>+6 ≤ AxisLimitMin < AxisLimitMax ≤ +2<sup>24</sup>-6 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
-| 10.0 | AxisLimitMin | REAL | -1.0e<sup>+6</sup> | Linear axis: **Software limit switch start**  Rotary axis: **Rotary axis start**  Valid range of values:   - -2<sup>24</sup>+6 ≤ AxisLimitMin < AxisLimitMax ≤ +2<sup>24</sup>-6 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 6.0 | AxisLimitMax | REAL | 1.0e<sup>+6</sup> | Linear axis: **Software limit switch end**  Rotary axis: **Rotary axis end**  Valid range of values:   - -2<sup>24</sup>+6 ≤ AxisLimitMin &lt; AxisLimitMax ≤ +2<sup>24</sup>-6 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 10.0 | AxisLimitMin | REAL | -1.0e<sup>+6</sup> | Linear axis: **Software limit switch start**  Rotary axis: **Rotary axis start**  Valid range of values:   - -2<sup>24</sup>+6 ≤ AxisLimitMin &lt; AxisLimitMax ≤ +2<sup>24</sup>-6 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ##### Dynamic response (S7-300, S7-400)
 
@@ -1030,7 +1030,7 @@ To enable the recording of all the rotary axis rotations, the maximum axis veloc
 
 **Example for single-turn encoders:**
 
-Condition => one axis rotation is equivalent to one encoder rotation.
+Condition =&gt; one axis rotation is equivalent to one encoder rotation.
 
 Traversing distance / encoder range = 360.0°
 
@@ -1040,13 +1040,13 @@ Scan time = 0.01 s
 
 ![Special features for rotary axes with absolute encoders](images/30264144779_DV_resource.Stream@PNG-en-US.png)
 
-=> "Maximum velocity" < 180.0° / 0.01s = 18000°/s is equivalent to 50 axis rev/s
+=&gt; "Maximum velocity" &lt; 180.0° / 0.01s = 18000°/s is equivalent to 50 axis rev/s
 
 ###### Data used in the axis DB
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 14.0 | MaxVelocity | REAL | 0.1 | **Maximum axis velocity**   Valid range of values:   - > 0.0 [unit of length/s] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 14.0 | MaxVelocity | REAL | 0.1 | **Maximum axis velocity**   Valid range of values:   - &gt; 0.0 [unit of length/s] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ###### Specifying velocity override (S7-300, S7-400)
 
@@ -1081,7 +1081,7 @@ It should only be high enough so that, when accelerating to maximum velocity (un
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 18.0 | MaxAcceleration | REAL | 0.1 | **Maximum axis acceleration**   Valid range of values:   - > 0.0 [length unit/s<sup>2</sup>] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 18.0 | MaxAcceleration | REAL | 0.1 | **Maximum axis acceleration**   Valid range of values:   - &gt; 0.0 [length unit/s<sup>2</sup>] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ###### Specifying maximum axis deceleration (S7-300, S7-400)
 
@@ -1097,7 +1097,7 @@ It should only be high enough so that, when slowing down from maximum velocity (
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 22.0 | MaxDeceleration | REAL | 0.1 | **Maximum axis deceleration**   Valid range of values:   - > 0.0 [length unit/s<sup>2</sup>] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 22.0 | MaxDeceleration | REAL | 0.1 | **Maximum axis deceleration**   Valid range of values:   - &gt; 0.0 [length unit/s<sup>2</sup>] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ###### Specifying the scan time (S7-300, S7-400)
 
@@ -1164,7 +1164,7 @@ At this parameter you define the slope of the time-controlled deceleration ramp 
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 54.0 | EmergencyDec | REAL | 1.0 | **Emergency stop deceleration**   Valid range of values:   - > 0.0 [length unit/s<sup>2</sup>] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 54.0 | EmergencyDec | REAL | 1.0 | **Emergency stop deceleration**   Valid range of values:   - &gt; 0.0 [length unit/s<sup>2</sup>] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ###### Displaying the ramp-down time (S7-300, S7-400)
 
@@ -1200,7 +1200,7 @@ The "target range" lies to the left and right of the target (see [Concept Defini
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 30.0 | TargetRange | REAL | 1.0 | **Target range**   Valid range of values:   - > 0.0 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 30.0 | TargetRange | REAL | 1.0 | **Target range**   Valid range of values:   - &gt; 0.0 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ###### Specifying the standstill range (S7-300, S7-400)
 
@@ -1214,7 +1214,7 @@ Recommended: The "standstill range" should be greater than the "target range" ([
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 34.0 | StandstillRange | REAL | 1.5 | **Standstill range**   Valid range of values:   - > 0.0 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 34.0 | StandstillRange | REAL | 1.5 | **Standstill range**   Valid range of values:   - &gt; 0.0 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ###### Target approach monitoring (S7-300, S7-400)
 
@@ -1240,7 +1240,7 @@ The "Monitoring time for target approach" starts as soon as the traversing axis 
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 26.0 | MonTimeTargetAppr | REAL | 1.0 | **Monitoring time for target approach**   Valid range of values:   - > 2 × Sample_T [s] ([scan time](#specifying-the-scan-time-s7-300-s7-400)) | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 26.0 | MonTimeTargetAppr | REAL | 1.0 | **Monitoring time for target approach**   Valid range of values:   - &gt; 2 × Sample_T [s] ([scan time](#specifying-the-scan-time-s7-300-s7-400)) | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ###### Specifying the valid maximum following error (S7-300, S7-400)
 
@@ -1254,7 +1254,7 @@ Recommended setting: ("maximum velocity" / "controller gain") × 1.1 (see axis
 
 | Address | Name | Type | Initial value | Comment |  |
 | --- | --- | --- | --- | --- | --- |
-| 38.0 | MaxFollowingDist | REAL | 5.0 | **Maximum permitted following distance**   Valid range of values:   - > 0.0 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
+| 38.0 | MaxFollowingDist | REAL | 5.0 | **Maximum permitted following distance**   Valid range of values:   - &gt; 0.0 [length unit] | ![Data used in the axis DB](images/29245571339_DV_resource.Stream@PNG-de-DE.png) |
 
 ## Download to CPU (S7-300, S7-400)
 
@@ -1265,7 +1265,7 @@ New or modified project data must be downloaded to the CPU.
 Proceed as follows for downloading:
 
 1. Select the "Program blocks" object, or the "Technology objects" object in the project navigator.
-2. Select the "Online > Download to device" command.
+2. Select the "Online &gt; Download to device" command.
 
 > **Note**
 >
@@ -1280,14 +1280,14 @@ Proceed as follows for downloading:
 Proceed as follows when downloading the hardware configuration:
 
 1. Select the CPU object in the project navigator.
-2. Select the "Download > Hardware configuration" command from the shortcut menu.
+2. Select the "Download &gt; Hardware configuration" command from the shortcut menu.
 
 ### Downloading the program blocks and the TO configuration to the CPU
 
 Proceed as follows for downloading:
 
 1. Select the CPU object in the project navigator.
-2. Select the "Online > Download to device" command.
+2. Select the "Online &gt; Download to device" command.
 
 ## Programming Easy Motion Control (S7-300, S7-400)
 
@@ -1836,7 +1836,7 @@ If the axis is not moving irrespective of a pending travel command, check the fo
 | Wiring of the drive is faulty | - Check whether the "DriveEnabled" output of the MC_Control instruction is continuously interconnected with the enable input of the power unit. - Check whether the "DriveEnabled" output of the MC_Control instruction is interconnected with the "EnableDrive" input of the output driver. |
 | I/O addresses or channel numbers are incorrect | Set the correct I/O addresses and channel numbers:  In the axis DB, the **start** addresses of the modules are expected. From the start address and channel number (counting method: from channel 0), the driver blocks calculate the module-specific I/O addresses for setpoint and actual values. |
 | Simulation mode switched on | Switch off simulation mode ("Sim" = FALSE).  If the simulation mode is switched on ("Sim" = TRUE), **no** I/O values are read or written. |
-| Manual mode switched on with missing setpoint velocity | If manual mode is switched on ("ManEnable" = TRUE), specify a "manual setpoint velocity" ("ManVelocity" <> 0.0 [length unit/s]). |
+| Manual mode switched on with missing setpoint velocity | If manual mode is switched on ("ManEnable" = TRUE), specify a "manual setpoint velocity" ("ManVelocity" &lt;&gt; 0.0 [length unit/s]). |
 | Drive enable not set | Set the "EnableDrive" input of the MC_Control instruction to TRUE. |
 | Axis error pending | If the "group error" bit ("Error") is set in the axis DB, the type of axis error is visible in the bit arrays for the error display:  - After the MC_Init instruction is called, the "Stop status requiring acknowledgment" error is always set ("Err.StoppedMotion"). Acknowledge the error by setting the "Group acknowledgment" "ErrorAck" = TRUE. - After you have rectified incorrect values in the case of a parameter assignment error, you need to restart MC_Init. - In the case of an encoder error, check whether the position input module is fully configured (with the help of the module configuration software, if necessary). - Other errors: Remedy and acknowledge the error by setting the "Group acknowledgment" "ErrorAck" = TRUE. |
 | "Group acknowledgment" is not reset | If a "Group acknowledgment" ("ErrorAck") you have set is not detected and reset by Easy Motion Control , then:  - Prevent the Easy Motion Control instructions from remaining in their initialization branch due to the constant call of the MC_Init instruction. - Check whether the position decoder module responds to the error acknowledgment. |
@@ -2037,7 +2037,7 @@ The following table lists all errors with soft stop.
 | Cause: | - The actual position value is outside the working range. - Replacement of the absolute encoder. |  |  |  |
 | Remedy: | - Move the axis out of the range of the limit switch. - Deactivate the software limit switch  ("SWLimitEnable" = FALSE), synchronize the axis and the reactivate the software limit switch. |  |  |  |
 | 128.2 | TargetErr | **Target outside of travel range** |  | ![Description](images/29705308043_DV_resource.Stream@PNG-de-DE.png) |
-| Cause: | - **MC_MoveAbsolute**:   - The target is in the range of a software limit switch.   - The target is < "Rotary axis start", or ≥ "Rotary axis end".   - The calculated traversing distance is greater than the distance that is equivalent to 2<sup>24</sup> steps of your encoder.   - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called. - **MC_MoveRelative**:   - The travel distance entered leads to a target on a software limit switch.   - The specified travel distance is greater than the distance that is equivalent to 2<sup>24</sup> steps of your encoder.   - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called. - **MC_Home**:   - The reference point coordinate is in the range of a software limit switch.   - The reference point coordinate is < "Rotary axis start", or ≥ "Rotary axis end".   - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called. |  |  |  |
+| Cause: | - **MC_MoveAbsolute**:   - The target is in the range of a software limit switch.   - The target is &lt; "Rotary axis start", or ≥ "Rotary axis end".   - The calculated traversing distance is greater than the distance that is equivalent to 2<sup>24</sup> steps of your encoder.   - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called. - **MC_MoveRelative**:   - The travel distance entered leads to a target on a software limit switch.   - The specified travel distance is greater than the distance that is equivalent to 2<sup>24</sup> steps of your encoder.   - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called. - **MC_Home**:   - The reference point coordinate is in the range of a software limit switch.   - The reference point coordinate is &lt; "Rotary axis start", or ≥ "Rotary axis end".   - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called. |  |  |  |
 | Remedy: | - Correct the parameters. - Call the MC_Init instruction. |  |  |  |
 | 128.3 | NoSync | **Axis not synchronized** |  | ![Description](images/29705308043_DV_resource.Stream@PNG-de-DE.png) |
 | Cause: | instruction MC_MoveAbsolute was started with unsynchronized axis. |  |  |  |
@@ -2046,7 +2046,7 @@ The following table lists all errors with soft stop.
 | Cause: | Further movement into the range of a software limit switch is not allowed. |  |  |  |
 | Remedy: | Start a travel order that moves the axis out of the range of the software limit switch. |  |  |  |
 | 128.5 | DataErr | **Invalid parameter in travel instruction** |  | ![Description](images/29705308043_DV_resource.Stream@PNG-de-DE.png) |
-| Cause: | **MC_MoveHome**:  - "Velocity" < 0 - "Velocity" > 0 and "Acceleration" ≤ 0 - "Velocity" > 0 and "Deceleration" ≤ 0 - "Velocity" > 0 with absolute encoder - "Position" lies outside the numerical range on a linear axis. - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called.      **MC_MoveAbsolute**, **MC_MoveRelative** and **MC_MoveJog**:  - "Velocity" ≤ 0 - "Acceleration" ≤ 0 - "Deceleration" ≤ 0 - The entered or calculated target coordinate is outside the numerical range (for MC_MoveAbsolute and MC_MoveRelative). - Gear ratio denominator (RatioDenominator") ≤ 0 (MC_GearIn) - Gear ratio numerator ("RatioNumerator") = 0 (MC_GearIn) - A travel instruction was canceled and "Deceleration" of the overriding instruction is inconsistent with the deceleration configured at the canceled instruction (see [Overriding a movement](#overriding-travel-s7-300-s7-400)). - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called. |  |  |  |
+| Cause: | **MC_MoveHome**:  - "Velocity" &lt; 0 - "Velocity" &gt; 0 and "Acceleration" ≤ 0 - "Velocity" &gt; 0 and "Deceleration" ≤ 0 - "Velocity" &gt; 0 with absolute encoder - "Position" lies outside the numerical range on a linear axis. - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called.      **MC_MoveAbsolute**, **MC_MoveRelative** and **MC_MoveJog**:  - "Velocity" ≤ 0 - "Acceleration" ≤ 0 - "Deceleration" ≤ 0 - The entered or calculated target coordinate is outside the numerical range (for MC_MoveAbsolute and MC_MoveRelative). - Gear ratio denominator (RatioDenominator") ≤ 0 (MC_GearIn) - Gear ratio numerator ("RatioNumerator") = 0 (MC_GearIn) - A travel instruction was canceled and "Deceleration" of the overriding instruction is inconsistent with the deceleration configured at the canceled instruction (see [Overriding a movement](#overriding-travel-s7-300-s7-400)). - Auxiliary variables were not calculated in the axis DB, because instruction MC_Init was not called. |  |  |  |
 | Remedy: | - Specify admissible values. - Initialize the instructions. - Call the MC_Init instruction. |  |  |  |
 | 128.6 | StartErr | **Start from current axis status not possible** |  | ![Description](images/29705308043_DV_resource.Stream@PNG-de-DE.png) |
 | Cause: | - In a travel order, or at MC_StopMotion, the Execute input was set while the axis was in error state or manual mode ("ManEnable" = TRUE), or while a MC_StopMotion instruction was active. - instruction MC_Home was not started while the axis was at a standstill. - Both directions are set in instruction MC_MoveJog. - Invalid status at the leading axis for instruction MC_GearIn:   - Error with hard stop   - MC_Home is active   - Manual mode ("ManEnable" = TRUE) |  |  |  |
@@ -2110,7 +2110,7 @@ The "Address" column contains the address of the error display in the axis DB. T
 
 | Address | Name Config.xxx | Parameter error | Parameter address |
 | --- | --- | --- | --- |
-| 132.0 | Err_AxisLimit | "Software limit switch start" < -2<sup>24 </sup>+6 [length unit]  "Software limit switch end" > +2<sup>24</sup>-6 [length unit]  "Software limit switch end" ≤ "Software limit switch start" | [6.0](#specifying-software-limit-switches-s7-300-s7-400) , [10.0](#specifying-software-limit-switches-s7-300-s7-400) |
+| 132.0 | Err_AxisLimit | "Software limit switch start" &lt; -2<sup>24 </sup>+6 [length unit]  "Software limit switch end" &gt; +2<sup>24</sup>-6 [length unit]  "Software limit switch end" ≤ "Software limit switch start" | [6.0](#specifying-software-limit-switches-s7-300-s7-400) , [10.0](#specifying-software-limit-switches-s7-300-s7-400) |
 | 132.1 | Err_MaxVelocity | "Maximum axis velocity" ≤ 0.0 [length unit/s] | [14.0](#specifying-the-maximum-axis-velocity-s7-300-s7-400) |
 | 132.2 | Err_MaxAcceleration | "Maximum acceleration" ≤ 0.0 [length unit/s<sup>2</sup>] | [18.0](#specifying-the-maximum-axis-velocity-s7-300-s7-400-1) |
 | 132.3 | Err_MaxDeceleration | "Maximum deceleration" ≤ 0.0 [length unit/s<sup>2</sup>] | [22.0](#specifying-maximum-axis-deceleration-s7-300-s7-400) |
@@ -2119,13 +2119,13 @@ The "Address" column contains the address of the error display in the axis DB. T
 | 132.6 | Err_StandstillRange | "Standstill range" ≤ 0.0 [length unit] | [34.0](#specifying-the-standstill-range-s7-300-s7-400) |
 | 132.7 | Err_MaxFollowingDist | "Maximum permitted following distance" ≤ 0.0 [length unit] | [38.0](#specifying-the-valid-maximum-following-error-s7-300-s7-400) |
 | 133.0 | Err_EmergencyDec | "Deceleration for hard stop" ≤ 0.0 [length unit/s<sup>2</sup>] | [54.0](#specifying-emergency-stop-deceleration-s7-300-s7-400) |
-| 133.1 | Err_StepsPerRev | "Steps per encoder revolution" < 1 | [64.0](#specifying-the-steps-per-encoder-revolution-s7-300-s7-400) |
+| 133.1 | Err_StepsPerRev | "Steps per encoder revolution" &lt; 1 | [64.0](#specifying-the-steps-per-encoder-revolution-s7-300-s7-400) |
 | 133.2 | Err_DisplacementPerRev | "Axis distance per encoder revolution" ≤ 0.0 [length unit] | [68.0](#specifying-the-axis-distance-per-encoder-revolution-s7-300-s7-400) |
-| 133.3 | Err_NumberRevs | "Number of encoder revolutions" < 1 for absolute encoder | [72.0](#specifying-the-number-of-encoder-revolutions-s7-300-s7-400) |
+| 133.3 | Err_NumberRevs | "Number of encoder revolutions" &lt; 1 for absolute encoder | [72.0](#specifying-the-number-of-encoder-revolutions-s7-300-s7-400) |
 | 133.4 | Err_PolarityEncoder | "Encoder polarity" not equal to ±1 | [74.0](#selecting-the-encoder-polarity-s7-300-s7-400) |
 | 133.5 | Err_PolarityDrive | "Drive polarity" not equal to ±1 | [86.0](#selecting-the-drive-polarity-s7-300-s7-400) |
-| 133.6 | Err_DriveInputAtMaxVel | "Reference value for maximum axis velocity" ≤ 0.0, or > "DriveInputAt100" | [88.0](#specifying-the-reference-value-for-maximum-axis-velocity-s7-300-s7-400) , [96.0](#reference-value-for-100-speed-s7-300-s7-400) |
-| 133.7 | Err_AxisLength | Axis length > 2<sup>24</sup> [length unit], or  axis length > (2<sup>31 </sup>-1) [steps] | [6.0](#specifying-software-limit-switches-s7-300-s7-400) , [10.0](#specifying-software-limit-switches-s7-300-s7-400) |
+| 133.6 | Err_DriveInputAtMaxVel | "Reference value for maximum axis velocity" ≤ 0.0, or &gt; "DriveInputAt100" | [88.0](#specifying-the-reference-value-for-maximum-axis-velocity-s7-300-s7-400) , [96.0](#reference-value-for-100-speed-s7-300-s7-400) |
+| 133.7 | Err_AxisLength | Axis length &gt; 2<sup>24</sup> [length unit], or  axis length &gt; (2<sup>31 </sup>-1) [steps] | [6.0](#specifying-software-limit-switches-s7-300-s7-400) , [10.0](#specifying-software-limit-switches-s7-300-s7-400) |
 | 134.0 | Err_EncoderRange | Encoder range does not match axis length  (see "Axis Distance per Encoder Revolution", [Axis DB address 68.0](#specifying-the-axis-distance-per-encoder-revolution-s7-300-s7-400)) | [6.0](#specifying-software-limit-switches-s7-300-s7-400) , [10.0](#specifying-software-limit-switches-s7-300-s7-400) ,  [68.0](#specifying-the-axis-distance-per-encoder-revolution-s7-300-s7-400) , [72.0](#specifying-the-number-of-encoder-revolutions-s7-300-s7-400) |
 | 134.1 | Err_MaxVelRotaryAxis | Maximum velocity and scan time do not match rotary axis length  (see "Maximum axis velocity" [Axis DB address 14.0](#specifying-the-maximum-axis-velocity-s7-300-s7-400)) | [14.0](#specifying-the-maximum-axis-velocity-s7-300-s7-400) , [0.0](#specifying-the-scan-time-s7-300-s7-400) ,  [68.0](#specifying-the-axis-distance-per-encoder-revolution-s7-300-s7-400) , [72.0](#specifying-the-number-of-encoder-revolutions-s7-300-s7-400) |
 | 134.2 | Err_DriveInputAt100 | "Reference value for 100 % speed" ≤ 0 | [96.0](#reference-value-for-100-speed-s7-300-s7-400) |
@@ -2155,10 +2155,10 @@ The "Address" column contains the address of the error display in the axis DB. T
 | 8522 | 34082 | -31454 | Channel DB or parameter DB too short. Data cannot be read from the DB (write order). |
 | 8532 | 34098 | -31438 | DB number of parameter DB too high (write order) |
 | 853A | 34106 | -31430 | Parameter DB not available (write order). |
-| 8544 | 34116 | -31420 | Error at nth (n > 1) read access to a DB after an error has occurred (write order). |
+| 8544 | 34116 | -31420 | Error at nth (n &gt; 1) read access to a DB after an error has occurred (write order). |
 | 8723 | 34595 | -30941 | Channel DB or parameter DB too short. Data cannot be written to the DB (read order). |
 | 8730 | 34608 | -30928 | Parameter DB in CPU is write-protected. Data cannot be written to the DB (read order). |
 | 8732 | 34610 | -30926 | DB number of parameter DB too high (read order). |
 | 873A | 34618 | -30918 | Parameter DB not available (read order). |
-| 8745 | 34629 | -30907 | Error at nth (n > 1) write access to a DB after an error has occurred (read order). |
+| 8745 | 34629 | -30907 | Error at nth (n &gt; 1) write access to a DB after an error has occurred (read order). |
 | 1) Errors 80A2 to 80A4 and 80Cx are temporary, i.e., they can be rectified automatically after a waiting time. |  |  |  |

@@ -124,10 +124,10 @@ If the "Unipolar" option is **not** selected, an analog voltage in the range of 
 
 If the "Unipolar" option **selected**, an analog voltage in the range of **0V** to **+10 V** will be output as the setpoint. The direction of rotation is then output from the IM 174, depending on the current speed setpoint via a digital output of the IM 174:
 
-- Direction of rotation signal for Axis 1 -> Digital output X11, Pin 13
-- Direction of rotation signal for Axis 2 -> Digital output X11, Pin 15
-- Direction of rotation signal for Axis 3 -> Digital output X11, Pin 17
-- Direction of rotation signal for Axis 4 -> Digital output X11, Pin 19
+- Direction of rotation signal for Axis 1 -&gt; Digital output X11, Pin 13
+- Direction of rotation signal for Axis 2 -&gt; Digital output X11, Pin 15
+- Direction of rotation signal for Axis 3 -&gt; Digital output X11, Pin 17
+- Direction of rotation signal for Axis 4 -&gt; Digital output X11, Pin 19
 
 #### Alt.DrvRdy
 
@@ -488,9 +488,9 @@ Track A and Track B as well as Track Z of the encoder have to be on the high lev
 
 Encoder configuration: TTL 2048 pulses
 
-Counted encoder increments 2049 -> encoder error
+Counted encoder increments 2049 -&gt; encoder error
 
-Counted encoder increments 1024 -> no encoder error
+Counted encoder increments 1024 -&gt; no encoder error
 
 ### Programming the IM 174 (S7-300, S7-400)
 

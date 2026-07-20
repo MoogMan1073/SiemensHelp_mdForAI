@@ -161,14 +161,14 @@ For PLCs with CPUs configured with firmware version ≤ V3.0, configure static u
 To configure the static user management, follow these steps:
 
 1. Double-click "Device configuration" of the PLC.
-2. In the Inspector window, under "Properties > General > Web server > General", select the option "Activate web server on this module"
+2. In the Inspector window, under "Properties &gt; General &gt; Web server &gt; General", select the option "Activate web server on this module"
 
    The "Permit access only with HTTPS" option has no effect on the connection to the VoT application.
 
    ![Configuring static user management](images/172492096267_DV_resource.Stream@PNG-en-US.png)
 
    ![Configuring static user management](images/172492096267_DV_resource.Stream@PNG-en-US.png)
-3. Activate the required web server access rights in the "Access level" column under "Properties > General > Web server > User management".
+3. Activate the required web server access rights in the "Access level" column under "Properties &gt; General &gt; Web server &gt; User management".
 
    The following access rights are required:
 
@@ -190,7 +190,7 @@ The function level "Write tags" is required if the user is to change the values.
 
 ###### Managing the user list
 
-You can manage the user list under "Web server > User management":
+You can manage the user list under "Web server &gt; User management":
 
 - Create users
 - Specify access rights
@@ -210,7 +210,7 @@ Depending on the PLC and firmware used, you can assign different user rights.
 
 ##### Local user administration for PLCs configured with firmware version = V3.1 (RT Unified)
 
-For PLCs with CPUs configured with firmware version ≥ V3.1, configure local user management under "Security settings > Users and roles".
+For PLCs with CPUs configured with firmware version ≥ V3.1, configure local user management under "Security settings &gt; Users and roles".
 
 You can disable access control in the properties of the PLC. To configure user management, configure access control.
 
@@ -220,14 +220,14 @@ You can configure access control in the following ways:
 
 - Disable access control
 
-  - Under "General > Protection & Security > Access control configuration", select the option "Disable access control".
+  - Under "General &gt; Protection &amp; Security &gt; Access control configuration", select the option "Disable access control".
 
   When access control is disabled, there is no user management in the project. Users who are defined under "Users and roles" are not taken into account, and authentication is not possible. The PLC itself creates an "Anonymous" user that has full access rights to the functions of the web server and the PLC.
 - Enable access control
 
-  - Under "General > Protection & Security > Access control configuration", select the option "Enable access control".
+  - Under "General &gt; Protection &amp; Security &gt; Access control configuration", select the option "Enable access control".
 
-  When access control is enabled, you can manage all users in the "Security settings > Users and roles" editor.
+  When access control is enabled, you can manage all users in the "Security settings &gt; Users and roles" editor.
 
   Access control is enabled by default.
 
@@ -237,7 +237,7 @@ You can configure access control in the following ways:
 
 To configure local user management, follow these steps:
 
-1. Click on the "Security settings > Users and roles" editor in the project tree.
+1. Click on the "Security settings &gt; Users and roles" editor in the project tree.
 2. Add users in the "Users" tab.
 
    ![Configuring local user management](images/172581008139_DV_resource.Stream@PNG-en-US.png)
@@ -556,7 +556,7 @@ When the PLC is compiled, the VoT application is not included automatically in t
 To compile the VoT application, follow these steps:
 
 1. Select the VoT application or its subnode.
-2. In the popup menu of the VoT application select the command "Compile > Software (only changes)" or "Compile > Software (compile all)" from the shortcut menu.
+2. In the popup menu of the VoT application select the command "Compile &gt; Software (only changes)" or "Compile &gt; Software (compile all)" from the shortcut menu.
 
    Alternatively, click the icon for compilation in the toolbar.
 
@@ -657,7 +657,7 @@ You can also save a project with VoT application offline to a SIMATIC Memory Car
 To open the VoT application in the web browser, follow these steps:
 
 1. Start a web browser.
-2. The URL results from the IP address of the PLC, the name of the VoT application and the name of the default page, e.g. "https://<PLC IP address>/~<VoT application name>/index.html".  
+2. The URL results from the IP address of the PLC, the name of the VoT application and the name of the default page, e.g. "https://&lt;PLC IP address&gt;/~&lt;VoT application name&gt;/index.html".  
    Example: "https://192.168.0.1/~ViewOfThings/index.html".
 3. Log in to the VoT application. After logging on, the start screen is displayed.
 
@@ -679,7 +679,7 @@ To open the VoT application via the standard web pages of the PLC in the web bro
 
 > **Note**
 >
-> The "User pages" selection is visible to you if you have activated the access right "Open user-defined web pages" in the "Access level" column under "Properties > General > Web server > User management" in the Inspector window of the device configuration of the PLC.
+> The "User pages" selection is visible to you if you have activated the access right "Open user-defined web pages" in the "Access level" column under "Properties &gt; General &gt; Web server &gt; User management" in the Inspector window of the device configuration of the PLC.
 
 ---
 
@@ -696,7 +696,7 @@ For the VoT application, no error diagnostics is possible with the WinCC Unified
 Select one of the following options to perform error diagnostics:
 
 - Use the development console of the web browser which is used as the Unified web client.
-- In the web client, press <Shift + F12>.
+- In the web client, press &lt;Shift + F12&gt;.
 
   The internal WinCC Unified diagnostics opens. The right side of the web browser lists the "HMIRuntime.Traces", warnings and errors.
 

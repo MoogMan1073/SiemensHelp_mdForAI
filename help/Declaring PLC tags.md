@@ -158,7 +158,7 @@ The names of the PLC tag tables must also be unique throughout the CPU. A unique
 > When should identifiers and operands be used in "quotation marks" in STEP 7 (TIA Portal)?
 >
 > ![Unique table names](images/84907645963_DV_resource.Stream@PNG-de-DE.png)
-> <https://support.industry.siemens.com/cs/ww/en/view/109477857>
+> [https://support.industry.siemens.com/cs/ww/en/view/109477857](https://support.industry.siemens.com/cs/ww/en/view/109477857)
 
 ---
 
@@ -320,10 +320,10 @@ To copy PLC tag tables, follow these steps:
    You can insert the PLC tag table into the same software unit or into a different software unit or outside a software unit into the "PLC tags" folder of a CPU.
 4. Select the "Paste" command in the shortcut menu.
 
-   - If you paste the PLC tag table into the same CPU, the copy is pasted with the name extension "_<consecutive number>".
+   - If you paste the PLC tag table into the same CPU, the copy is pasted with the name extension "_&lt;consecutive number&gt;".
    - If you paste the PLC tag table into a different CPU where a PLC tag table of the same name already exists, the "Paste" dialog box opens. Select the desired option and confirm your selection with "OK".
 
-Alternatively, you can also copy the PLC tag table via drag-and-drop while holding down the <Ctrl> key.
+Alternatively, you can also copy the PLC tag table via drag-and-drop while holding down the &lt;Ctrl&gt; key.
 
 #### Moving PLC tag tables
 
@@ -345,7 +345,7 @@ Multiple user-defined tag tables are contained in the "PLC tags" folder of the C
 To gather multiple PLC tag tables into a group, follow these steps:
 
 1. Select the "PLC tags" folder under the CPU in the project tree.
-2. Select the "Insert > Group" menu command.
+2. Select the "Insert &gt; Group" menu command.
 
    A new group with the standard name "Group_x" is inserted.
 3. Select the newly inserted group in the project tree.
@@ -439,7 +439,7 @@ To declare operands as global PLC tags, follow these steps:
 
 1. Insert an instruction in your program.
 
-   The "<???>", "<??.?>" or "..." strings represent operand placeholders.
+   The "&lt;???&gt;", "&lt;??.?&gt;" or "..." strings represent operand placeholders.
 2. Replace an operand placeholder with the name of the PLC tag to be created.
 3. Select the tag name.
 
@@ -489,7 +489,7 @@ To declare operands as global PLC tags, follow these steps:
 
 1. Insert an instruction in your program.
 
-   The "<???>", "<??.?>" or "..." strings represent operand placeholders.
+   The "&lt;???&gt;", "&lt;??.?&gt;" or "..." strings represent operand placeholders.
 2. Replace an operand placeholder with the name of the PLC tag to be created.
 3. Select the tag name.
 
@@ -715,7 +715,7 @@ To create a structured PLC tag, follow these steps:
 
    A new declaration table for creating a PLC data type will be created and opened.
 2. Declare all the necessary components in the PLC type. All data types except for "STRING" and "WSTRING" are permitted.
-3. Select the PLC data type in the project tree and select the "Compile > Software (only changes)" command from the shortcut menu.
+3. Select the PLC data type in the project tree and select the "Compile &gt; Software (only changes)" command from the shortcut menu.
 
    The PLC data type is compiled and can then be used in the PLC tag table.
 
@@ -1070,7 +1070,7 @@ To edit a comment in all project languages, follow these steps:
 >
 > **Editing all project texts in the global "Project texts" table**
 >
-> You can also edit the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts". It contains all translatable texts of the entire project.
+> You can also edit the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts". It contains all translatable texts of the entire project.
 >
 > You can find additional information on translation of texts under [Project text basics](Editing%20project%20data.md#project-text-basics).​
 
@@ -1167,7 +1167,7 @@ To copy a tag, follow these steps:
 
 1. Select the tags you want to copy.
 
-   You can also select several tags by clicking on them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking on the first and last tag.
+   You can also select several tags by clicking on them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking on the first and last tag.
 2. Select "Copy" in the shortcut menu.
 3. Position the insertion pointer at the location where you want to insert the tags.
 4. Select "Paste" in the shortcut menu.
@@ -1176,7 +1176,7 @@ Or
 
 1. Select the tag.
 2. Hold down the left mouse button.
-3. At the same time, press <Ctrl>.
+3. At the same time, press &lt;Ctrl&gt;.
 4. Drag the tag to the destination.
 
 #### Result
@@ -1197,7 +1197,7 @@ Or
 
 To delete a tag, follow these steps:
 
-1. Select the row with the tag to be deleted. You can also select several rows by clicking on them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking on the first and last row.
+1. Select the row with the tag to be deleted. You can also select several rows by clicking on them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking on the first and last row.
 2. Select the "Delete" command in the shortcut menu.
 
 ---
@@ -1460,7 +1460,7 @@ When you create an *.xlsx file with an external editor, it must contain all or a
 
 The column titles are predefined and are always expected to be in English.
 
-The following table specifies the values expected for the individual columns. During import, missing values will be identified by a <no value> entry.
+The following table specifies the values expected for the individual columns. During import, missing values will be identified by a &lt;no value&gt; entry.
 
 | Element | Description |
 | --- | --- |

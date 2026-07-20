@@ -611,14 +611,14 @@ You can avoid process value overshoot or excessive manipulated variable amplitud
 
 There are two ways of limiting the rate of setpoint change in the FM355-2:
 
-- Activate ramp (> 0.0s)
-- Setpoint change factor < 1.0
+- Activate ramp (&gt; 0.0s)
+- Setpoint change factor &lt; 1.0
 
 Use only one of the two limits. If both limits are activated at the same time, a setpoint jump will produce a change in the manipulated variable in the opposite direction to the setpoint change (step response).
 
 #### Specific features of the step controller
 
-A value of PFAC_SP < 1.0 can reduce overshoot if the motor transition time MTR_TM is small compared to the recovery time TA and if the ratio TU/TA < 0.2. Should MTR_TM reach 20 % of TA, only a slight improvement can be achieved.
+A value of PFAC_SP &lt; 1.0 can reduce overshoot if the motor transition time MTR_TM is small compared to the recovery time TA and if the ratio TU/TA &lt; 0.2. Should MTR_TM reach 20 % of TA, only a slight improvement can be achieved.
 
 #### Inversion of the controller effect
 
@@ -677,9 +677,9 @@ The following temperature controller settings are possible:
 
 | Possible aggressivity values: |  |
 | --- | --- |
-| -1 ≤ Aggressivity < 0 : | Slower transient response than determined by identification |
+| -1 ≤ Aggressivity &lt; 0 : | Slower transient response than determined by identification |
 | Aggressivity = 0 | Transient response as determined via identification |
-| 0 < Aggressivity ≤ 1 | Faster transient response than determined by identification |
+| 0 &lt; Aggressivity ≤ 1 | Faster transient response than determined by identification |
 
 ## Controller output (S7-300, S7-400)
 
@@ -926,9 +926,9 @@ In a step controller without analog position feedback, the external output value
 
 If a value between 40.0% and 60.0% is specified, no binary output is set and the actuating device remains unchanged.
 
-If a value > 60.0% is specified, "Actuating signal high" is output until the feedback "Actuating device at high limit" is triggered.
+If a value &gt; 60.0% is specified, "Actuating signal high" is output until the feedback "Actuating device at high limit" is triggered.
 
-If a value < 40.0% is specified, "Actuating signal low" is output until the feedback "Actuating device at low limit" is triggered.
+If a value &lt; 40.0% is specified, "Actuating signal low" is output until the feedback "Actuating device at low limit" is triggered.
 
 #### Safety manipulated value (S7-300, S7-400)
 
@@ -1048,9 +1048,9 @@ In a step controller without analog position feedback, the external output value
 
 If a value between 40.0% and 60.0% is specified, no binary output is set and the actuating device remains unchanged.
 
-If a value > 60.0% is specified, "Actuating signal high" is output until the feedback "Actuating device at high limit" is triggered.
+If a value &gt; 60.0% is specified, "Actuating signal high" is output until the feedback "Actuating device at high limit" is triggered.
 
-If a value < 40.0% is specified, "Actuating signal low" is output until the feedback "Actuating device at low limit" is triggered.
+If a value &lt; 40.0% is specified, "Actuating signal low" is output until the feedback "Actuating device at low limit" is triggered.
 
 ## Shared Device support (S7-300, S7-400)
 

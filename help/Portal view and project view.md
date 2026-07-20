@@ -121,7 +121,7 @@ Here, you can obtain information about which project is currently open.
 
 To add a drive unit to the hardware configuration in the portal view, proceed as follows:
 
-1. Open the "Devices & Networks" portal in the left overview.
+1. Open the "Devices &amp; Networks" portal in the left overview.
 2. Click the "Add new device" button in the "Add new device" action overview.
 
    The "Add new device" screen form is displayed.

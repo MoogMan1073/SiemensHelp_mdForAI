@@ -139,7 +139,7 @@ Sets the frequency bandwidth of the damped natural vibration of the mechanical s
 These frequencies can be determined by making the appropriate measurements.  
 Value CI: p31610 = 0.0 (factory setting):  
 The lower frequency applies (p31585[0]).  
-0.0 <value CI: p31610 < 1.0:  
+0.0 &lt;value CI: p31610 &lt; 1.0:  
 Linear interpolation is carried out between the lower and upper frequency.  
 Value CI: p31610 = 1.0:  
 The upper frequency applies (p31585[1]).
@@ -694,9 +694,9 @@ p31585, r31600, p31611, r31613
 
 **Note:**
   
-For value <= 0.0, frequency p31585[0] is active.  
-For value >= 1.0, frequency p31585[1] is active.  
-For 0.0 < value < 1.0, a linear interpolation is made between frequencies p31585[0]
+For value &lt;= 0.0, frequency p31585[0] is active.  
+For value &gt;= 1.0, frequency p31585[1] is active.  
+For 0.0 &lt; value &lt; 1.0, a linear interpolation is made between frequencies p31585[0]
 and p31585[1].
 
 ### p31611 VIBX frequency fd maximum rate of change

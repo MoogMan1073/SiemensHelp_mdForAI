@@ -171,7 +171,7 @@ p31234, p31236, p31244
   
 LU: Length Unit  
 The following should be observed:  
-p31235 / p31236 < p31244
+p31235 / p31236 &lt; p31244
 
 ### p31236 POLYGON master value scaling denominator
 
@@ -212,7 +212,7 @@ p31234, p31235, p31244
   
 LU: Length Unit  
 The following should be observed:  
-p31235 / p31236 < p31244
+p31235 / p31236 &lt; p31244
 
 ### p31238 CI: POLYGON master value setting value
 
@@ -434,7 +434,7 @@ p31235, p31236
 **Note:**
   
 The following should be observed:  
-p31235 / p31236 < p31244
+p31235 / p31236 &lt; p31244
 
 ### p31245 POLYGON characteristic number of interpolation points
 

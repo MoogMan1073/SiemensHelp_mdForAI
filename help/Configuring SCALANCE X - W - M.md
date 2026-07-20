@@ -981,7 +981,7 @@ PROFINET is an open standard (IEC 61158/61784) for industrial automation based o
   - Isochronous Real-Time (IRT) communication
 - Seamless integration of fieldbus systems
 
-You configure PROFINET in "[System > PROFINET](#profinet-1)".
+You configure PROFINET in "[System &gt; PROFINET](#profinet-1)".
 
 ##### PROFINET IO
 
@@ -993,7 +993,7 @@ Within the framework of PROFINET, PROFINET IO is a communications concept for im
 
 EtherNet/IP (Ethernet/Industrial Protocol) is an open industry standard for industrial real-time Ethernet based on TCP/IP and UDP/IP. With EtherNet/IP, Ethernet is expanded by the Common Industrial Protocol (CIP) at the application layer. In EtherNet/IP, the lower layers of the OSI reference model are adopted by Ethernet with the physical, network and transport functions.
 
-You configure EtherNet/IP in "[System > EtherNet/IP](#ethernetip-2)".
+You configure EtherNet/IP in "[System &gt; EtherNet/IP](#ethernetip-2)".
 
 ##### Common Industrial Protocol
 
@@ -1003,7 +1003,7 @@ The Common Industrial Protocol (CIP) is an application protocol for automation t
 
 Electronic Data Sheet (EDS) is an electronic datasheet for describing devices.
 
-The EDS required for EtherNet/IP operation can be found in "[System > Load&Save](#load-save)".
+The EDS required for EtherNet/IP operation can be found in "[System &gt; Load&amp;Save](#load-save)".
 
 #### SNMP
 
@@ -1130,7 +1130,7 @@ There are various options for the assignment to VLANs:
 
 - Port-based VLAN
 
-  Each port of a device is assigned a VLAN ID. You configure port-based VLAN in "[Layer 2 > VLAN > Port-based VLAN](#port-based-vlan)".
+  Each port of a device is assigned a VLAN ID. You configure port-based VLAN in "[Layer 2 &gt; VLAN &gt; Port-based VLAN](#port-based-vlan)".
 - Protocol-based VLAN  
   Each port of a device is assigned a protocol group.
 - Subnet-based VLAN  
@@ -1172,8 +1172,8 @@ The tagged frame has 3 bits for the priority that is also known as Class of Serv
 | 001 | 1 | Best Effort |
 | 010 | 2 | Excellent Effort |
 | 011 | 3 | Critical Applications |
-| 100 | 4 | Video, < 100 ms delay (latency and jitter) |
-| 101 | 5 | Voice (language), < 10 ms delay (latency and jitter) |
+| 100 | 4 | Video, &lt; 100 ms delay (latency and jitter) |
+| 101 | 5 | Voice (language), &lt; 10 ms delay (latency and jitter) |
 | 110 | 6 | Internetwork Control |
 | 111 | 7 (highest) | Network Control |
 
@@ -1905,7 +1905,7 @@ When the devices receive back the frames they sent from the connection partner, 
 
 **Behavior with a disturbance**
 
-When connection monitoring is enabled, you can see the number of sent and received Link Check test frames on the “Information > Redundancy >Link Check” page. Based on these statistics you can recognize smaller disturbances for which the disturbance does not yet cause the transmission line to be closed down by Link Check.
+When connection monitoring is enabled, you can see the number of sent and received Link Check test frames on the “Information &gt; Redundancy &gt;Link Check” page. Based on these statistics you can recognize smaller disturbances for which the disturbance does not yet cause the transmission line to be closed down by Link Check.
 
 Link Check recognizes a connection as being disturbed and closes it down when too many test frames are lost within a given period. Link Check uses several intervals to be able to recognize sudden occurrences of errors as well as a continuous low error rate.
 
@@ -2075,7 +2075,7 @@ If the virtual master router fails, a backup router takes over the role of the m
 
 The new virtual master router adopts the virtual MAC and IP address. This means that no routing tables or ARP tables need to be updated. The consequences of a device failure are therefore minimized.
 
-You configure VRRP in "[Layer 3 (IPv4) > VRRP](#vrrp-1)".
+You configure VRRP in "[Layer 3 (IPv4) &gt; VRRP](#vrrp-1)".
 
 ###### VRRP3
 
@@ -2090,9 +2090,9 @@ Version 3 of VRRP is based on version 2.
 
 You configure VRRPv3 in:
 
-IPv4: [Layer 3 (IPv4 )> VRRPv3](#vrrpv3)
+IPv4: [Layer 3 (IPv4 )&gt; VRRPv3](#vrrpv3)
 
-IPv6: [Layer 3 (IPv6 )> VRRPv3](#vrrpv3-1)
+IPv6: [Layer 3 (IPv6 )&gt; VRRPv3](#vrrpv3-1)
 
 ##### OSPF
 
@@ -2107,7 +2107,7 @@ This section contains information on the following topics:
 
 OSPF (Open Shortest Path First) is a cost-based routing protocol. To calculate the shortest and most cost-effective route, the Short Path First algorithm by Dijkstra is used. OSPF was developed by the IETF (Internet Engineering Task Force).
 
-You configure OSPFv2 in "[Layer 3 (IPv4) > OSPFv2](#ospfv2-1)".
+You configure OSPFv2 in "[Layer 3 (IPv4) &gt; OSPFv2](#ospfv2-1)".
 
 OSPFv2 divides an autonomous system (AS) into different areas.
 
@@ -2199,7 +2199,7 @@ This section contains information on the following topics:
 
 Version 3 of OSPF is based on version 2 and is only used with IPv6. A large part of the routing mechanisms was adopted. OSPFv3 is defined in the RFCs 2740 and 5340.
 
-You configure OSPFv3 under "[Layer 3 (IPv6) > OSPFv3](#ospfv3-2)".
+You configure OSPFv3 under "[Layer 3 (IPv6) &gt; OSPFv3](#ospfv3-2)".
 
 ###### OSPFv3
 
@@ -2275,7 +2275,7 @@ The Routing Information Protocol (RIPv2) is used to create routing tables automa
 
 RIPv2 was developed by the IETF (Internet Engineering Task Force) and is described in RFC 2453.
 
-You configure RIPv2 in "[Layer 3 (IPv4) > RIPv2](#ripv2-1)".
+You configure RIPv2 in "[Layer 3 (IPv4) &gt; RIPv2](#ripv2-1)".
 
 ###### Setting up a routing table
 
@@ -2303,7 +2303,7 @@ In contrast to RIPv2, RIPng is activated directly at the interface (VLAN interfa
 
 RIPng uses the UDP port 521 and RIP the UDP port 520.
 
-You configure RIPng in "[Layer 3 (IPv6) > RIPng](#ripng-1)".
+You configure RIPng in "[Layer 3 (IPv6) &gt; RIPng](#ripng-1)".
 
 ##### PIM
 
@@ -2417,7 +2417,7 @@ With source NAT, the inside local source address of an IP packet from a device i
 
 With destination NAT, the inside global source address of an IP packet from a device in the external network is rewritten by a NAT device to an inside local address at the gateway.
 
-To translate the internal into the external IP address and back, the NAT device maintains a translation list. The address assignment can be dynamic or static. You configure NAT in "[Layer 3 (IPv4) > NAT](#nat)".
+To translate the internal into the external IP address and back, the NAT device maintains a translation list. The address assignment can be dynamic or static. You configure NAT in "[Layer 3 (IPv4) &gt; NAT](#nat)".
 
 ##### NAPT
 
@@ -2425,7 +2425,7 @@ In "Network Address Port Translation" (NAPT), several internal source IP address
 
 If several internal devices send a query to the same external destination IP address via the NAT device, the NAT device enters its own external source IP address in the header of these forwarded frames. Since the forwarded frames have the same external source IP address, the NAT device assigns the frames to the devices using a different port number.
 
-If a device from the external network wants to use a service in the internal network, the translation list for the static address assignment needs to be configured. You configure NAPT in "[Layer 3 (IPv4) > NAT > NAPT](#napt)".
+If a device from the external network wants to use a service in the internal network, the translation list for the static address assignment needs to be configured. You configure NAPT in "[Layer 3 (IPv4) &gt; NAT &gt; NAPT](#napt)".
 
 ##### NAT/NAPT and IP routing
 
@@ -2499,7 +2499,7 @@ The different QoS methods influence each other and are therefore taken into acco
 
 Access to the device is managed by configurable user settings. Set up users with a password for authentication. Assign a role with suitable rights to the users.
 
-The authentication of users can either be performed locally by the device or by an external RADIUS server. You configure how the authentication is handled on the "Security > AAA > General" page.
+The authentication of users can either be performed locally by the device or by an external RADIUS server. You configure how the authentication is handled on the "Security &gt; AAA &gt; General" page.
 
 When you transfer the configuration of a device to TIA, the configured users, roles and groups are not transferred.
 
@@ -2522,7 +2522,7 @@ The local logging in of users by the device runs as follows:
 
 RADIUS(Remote Authentication Dial-In User Service) is a protocol for authenticating and authorizing users by servers on which user data can be stored centrally.
 
-Depending on the RADIUS authorization mode you have selected on the "Security > AAA > RADIUS Client" page, the device evaluates different information of the RADIUS server.
+Depending on the RADIUS authorization mode you have selected on the "Security &gt; AAA &gt; RADIUS Client" page, the device evaluates different information of the RADIUS server.
 
 **RADIUS authorization mode "conventional"**
 
@@ -2689,7 +2689,7 @@ As an example, an entry will be created and deleted on the Syslog client. The pr
 
 1. Select the device in the network or device view.
 2. Open the properties of the device in the Inspector window.
-3. In the Inspector window go to System > Syslog client.
+3. In the Inspector window go to System &gt; Syslog client.
 4. Enter the IP address for the Syslog server.
 5. Click in the table.
 6. Select the entry "New entry" in the shortcut menu.
@@ -2724,7 +2724,7 @@ The following options are available to assign an IP address to the device:
   SINEC PNI is capable of assigning such an address to unconfigured devices that do not yet have an IP address. You can find SINEC PNI on the Internet pages of Siemens Industry Online Support under the following entry ID: [109776941](http://support.automation.siemens.com/WW/view/en/19440762)
 - STEP 7
 - CLI via the serial interface  
-  For further information, refer to the configuration manual "SCALANCE XM-400/XR-500 Command Line Interface". You will find the configuration manual on the Internet pages of [Siemens Industry Automation and Drives Service & Support](http://support.automation.siemens.com/WW/view/en/48805144/133300).
+  For further information, refer to the configuration manual "SCALANCE XM-400/XR-500 Command Line Interface". You will find the configuration manual on the Internet pages of [Siemens Industry Automation and Drives Service &amp; Support](http://support.automation.siemens.com/WW/view/en/48805144/133300).
 
 #### Requirement
 
@@ -2748,12 +2748,12 @@ Follow the steps below to load the entire configuration of a SCALANCE device:
 1. Download the PROFINET IO device configuration via the PROFINET IO controller:
 
    - Select the PROFINET IO controller in the project tree.
-   - Select the command "Online" > "Load device as new station (hardware and software)" in the toolbar.
+   - Select the command "Online" &gt; "Load device as new station (hardware and software)" in the toolbar.
    - See also the section "Loading project data from a device"
 2. Load the SCALANCE configuration as a local upload via the device:
 
    - Select the SCALANCE device in the network view.
-   - In the shortcut menu of the selected device select the command "SCALANCE configuration > Upload to PG/PC".
+   - In the shortcut menu of the selected device select the command "SCALANCE configuration &gt; Upload to PG/PC".
    - See also section "Configuring devices".
 
 ### Show information
@@ -2761,7 +2761,7 @@ Follow the steps below to load the entire configuration of a SCALANCE device:
 This section contains information on the following topics:
 
 - [Versions](#versions)
-- [I&M](#im)
+- [I&amp;M](#im)
 - [ARP / neighbor table](#arp-neighbor-table)
 - [Log table](#log-table)
 - [Fault](#fault)
@@ -2955,7 +2955,7 @@ The table has the following columns:
 >
 > The page is only available if there is an online connection to the device.
 
-The device allows you to log events that occur, some of which you can specify in " System > Events". This, for example, allows you to record when an authentication attempt failed or when the connection status of a port has changed. The content of the events log table is retained even when the device is turned off.
+The device allows you to log events that occur, some of which you can specify in " System &gt; Events". This, for example, allows you to record when an authentication attempt failed or when the connection status of a port has changed. The content of the events log table is retained even when the device is turned off.
 
 ##### Description of the displayed values
 
@@ -3018,8 +3018,8 @@ if an error occurs, it is shown on this page. On the device, errors are indicate
 
 Internal errors of the device and errors that you configure on the following pages are indicated:
 
-- "System > Events"
-- "System > Fault Monitoring"
+- "System &gt; Events"
+- "System &gt; Fault Monitoring"
 
 Errors of the "Cold/Warm Start" event can be deleted by a confirmation.
 
@@ -3069,7 +3069,7 @@ The page shows the current information about the Spanning Tree and the settings 
 
 - **Spanning Tree Mode**
 
-  Shows the set mode. You specify the mode in "Layer 2 > Spanning Tree > General".  
+  Shows the set mode. You specify the mode in "Layer 2 &gt; Spanning Tree &gt; General".  
   The following values are possible:
 
   - '-'
@@ -3169,7 +3169,7 @@ The table has the following columns:
   - 100 Mbps = 200,000
   - 10 Mbps = 2,000,000.
 
-  You configure the "Cost Calc." on the pages "Layer 2 > Spanning Tree > CIST Port" and "Layer 2 > Spanning Tree > MST Port".
+  You configure the "Cost Calc." on the pages "Layer 2 &gt; Spanning Tree &gt; CIST Port" and "Layer 2 &gt; Spanning Tree &gt; MST Port".
 - **Edge type**
     
   Shows the type of the connection. The following values are possible:
@@ -3740,7 +3740,7 @@ The table has the following columns:
 
 The page shows samples from each port with information from the statistics.
 
-On the page "Layer 2 > RMON > History", you can set the ports for which samples will be taken.
+On the page "Layer 2 &gt; RMON &gt; History", you can set the ports for which samples will be taken.
 
 > **Note**
 >
@@ -3930,7 +3930,7 @@ This table contains the following columns:
 
 ##### Status of the neighborhood table
 
-This page shows the current content of the neighborhood table. This table stores the information that the LLDP agent has received from connected devices. You set the interfaces via which the LLDP agent receives or sends information in the following section: "Layer 2 > LLDP".
+This page shows the current content of the neighborhood table. This table stores the information that the LLDP agent has received from connected devices. You set the interfaces via which the LLDP agent receives or sends information in the following section: "Layer 2 &gt; LLDP".
 
 ##### Description
 
@@ -4024,7 +4024,7 @@ The table contains the following columns:
 
 With Fiber Monitoring, you can monitor optical links. The table shows the current status of the ports.
 
-You set the values to be monitored on the following page: "Layer 2 > FMP".
+You set the values to be monitored on the following page: "Layer 2 &gt; FMP".
 
 > **Note**
 >
@@ -4977,7 +4977,7 @@ This page shows whether IPv4 addresses were assigned to the devices by the DHCP 
   Shows the MAC address or he client ID of the DHCP client.
 - **Assignment method**
 
-  Shows whether the IPv4 address was assigned statically or dynamically. You configure the static entries in "System > DHCP > Static Leases".
+  Shows whether the IPv4 address was assigned statically or dynamically. You configure the static entries in "System &gt; DHCP &gt; Static Leases".
 - **Assignment status**
     
   Shows the status of the assignment.
@@ -5004,7 +5004,7 @@ This page shows the diagnostics values of internal and external modules of the d
 
 If the diagnostic value falls below or exceeds the displayed threshold values, the status changes accordingly.
 
-On the "System > Events > Configuration" page, you can specify how the device signals the status change.
+On the "System &gt; Events &gt; Configuration" page, you can specify how the device signals the status change.
 
 ##### Description of the displayed values
 
@@ -5094,7 +5094,7 @@ The Temperature Table contains the following columns:
 >
 > The page is only available if there is an online connection to the device.
 
-This page displays the created SNMPv3 groups. You configure the SNMPv3 groups in "System" > SNMP"..
+This page displays the created SNMPv3 groups. You configure the SNMPv3 groups in "System" &gt; SNMP"..
 
 ##### Description
 
@@ -5136,13 +5136,13 @@ The "Services" list shows the security settings.
 
 - **Telnet Server**
 
-  You configure the setting in "System > Configuration"
+  You configure the setting in "System &gt; Configuration"
 
   - Enabled: Encrypted access to the CLI
   - Disabled: No encrypted access to the CLI
 - **SSH server**
 
-  You configure the setting in "System > Configuration".
+  You configure the setting in "System &gt; Configuration".
 
   - Enabled: Encrypted access to the CLI
   - Disabled: No encrypted access to the CLI
@@ -5151,14 +5151,14 @@ The "Services" list shows the security settings.
   This field shows the SSH fingerprint.
 - **Web Server**
 
-  You configure the setting in "System > Configuration"
+  You configure the setting in "System &gt; Configuration"
 
   - HTTP/HTTPS: Access to the WBM is possible with HTTP and HTTPS.
   - HTTPS: Access to the WBM is now only possible with HTTPS.
   - HTTP: Access to the WBM is now only possible with HTTP.
 - **SNMP**
 
-  You configure the setting in "System > SNMP > General".
+  You configure the setting in "System &gt; SNMP &gt; General".
 
   - "-" (SNMP disabled)  
     Access to device parameters via SNMP is not possible.
@@ -5168,13 +5168,13 @@ The "Services" list shows the security settings.
     Access to device parameters is possible only with SNMP version 3.
 - **Management ACL**
 
-  You configure the setting under "Security > Management ACL"
+  You configure the setting under "Security &gt; Management ACL"
 
   - Enabled: Restricted access only: Access is restricted using an Access Control List (ACL).
   - Disabled: No access restriction: Management ACL is not enabled.
 - **Login Authentication**
 
-  You configure the setting in "Security > AAA > General".
+  You configure the setting in "Security &gt; AAA &gt; General".
 
   - Local
 
@@ -5198,7 +5198,7 @@ The "Services" list shows the security settings.
 
 **Local and external user accounts**
 
-You configure local user accounts and roles in "Security > User Accounts".
+You configure local user accounts and roles in "Security &gt; User Accounts".
 
 When you create a local user account, an external user account is generated automatically. Local user accounts involve users each with a password for logging in on the device.
 
@@ -5217,7 +5217,7 @@ The "Local User Accounts" and "External User Accounts" tables have the following
   Shows the name of the local user.
 - **Role**
 
-  Shows the role of the user. You can obtain more information on the function rights of the role in "Information > Security > Roles".
+  Shows the role of the user. You can obtain more information on the function rights of the role in "Information &gt; Security &gt; Roles".
 
 ##### Supported Function Rights
 
@@ -5340,7 +5340,7 @@ The table has the following columns:
 
     MAC authentication is configured for the port.
 
-    If a new MAC address requests on a port and the number of currently authenticated MAC addresses on the port is < the number of maximum permitted MAC addresses, the request is automatically successful.
+    If a new MAC address requests on a port and the number of currently authenticated MAC addresses on the port is &lt; the number of maximum permitted MAC addresses, the request is automatically successful.
 
     If a new MAC address requests on a port and the number of currently authenticated MAC addresses on the port is ≥ the number of maximum permitted MAC addresses, the request automatically fails.
 - **MAC Auth. Actual Allowed Addresses**
@@ -5446,7 +5446,7 @@ This section contains information on the following topics:
 - [Agent IP](#agent-ip)
 - [DNS](#dns)
 - [Restart](#restart)
-- [Load & save](#load-save)
+- [Load &amp; save](#load-save)
 - [Events](#events)
 - [SMTP Client](#smtp-client)
 - [DHCPv4](#dhcpv4)
@@ -5545,13 +5545,13 @@ The page contains the following boxes:
   Select the minimum TLS version to be used for the encryption from the drop-down list. Communication is not possible with devices that do not support the required TLS version.
 - **DNS Client**
 
-  Enable or disable depending on whether the IE switch should operate as a DNS client. You can configure other settings in "System > DNS".
+  Enable or disable depending on whether the IE switch should operate as a DNS client. You can configure other settings in "System &gt; DNS".
 - **SMTP Client**
 
-  Enable or disable the SMTP client. You can configure other settings in "System > SMTP Client".
+  Enable or disable the SMTP client. You can configure other settings in "System &gt; SMTP Client".
 - **Syslog Client**
 
-  Enable or disable the Syslog client. You can configure other settings in "System > Syslog Client".
+  Enable or disable the Syslog client. You can configure other settings in "System &gt; Syslog Client".
 - **DCP Server**
 
   Specify whether the device can be accessed with DCP (Discovery and Configuration Protocol):
@@ -5573,19 +5573,19 @@ The page contains the following boxes:
 
   - Manual
 
-    The system time is set manually. You can configure other settings in "System > System Time > Manual Setting".
+    The system time is set manually. You can configure other settings in "System &gt; System Time &gt; Manual Setting".
   - SIMATIC Time
 
-    The system time is set using a SIMATIC time transmitter. You can configure other settings in "System > System Time > SIMATIC Time Client".
+    The system time is set using a SIMATIC time transmitter. You can configure other settings in "System &gt; System Time &gt; SIMATIC Time Client".
   - SNTP Client
 
-    The system time is set via an SNTP server. You can configure other settings in "System > System time > SNTP client".
+    The system time is set via an SNTP server. You can configure other settings in "System &gt; System time &gt; SNTP client".
   - NTP Client
 
-    The system time is set via an NTP server. You can configure other settings in "System > System Time > NTP client".
+    The system time is set via an NTP server. You can configure other settings in "System &gt; System Time &gt; NTP client".
   - PTP Client
 
-    The system time is set via a PTP server. You can configure other settings in "System > System Time > PTP Client".
+    The system time is set via a PTP server. You can configure other settings in "System &gt; System Time &gt; PTP Client".
 - **SNMP**
 
   Select the required protocol. The following settings are possible:
@@ -5595,10 +5595,10 @@ The page contains the following boxes:
     Access to device parameters using SNMP is not possible.
   - SNMPv1/v2c/v3
 
-    Access to device parameters is possible with SNMP versions 1, 2c or 3. You can configure other settings in "System > SNMP > General".
+    Access to device parameters is possible with SNMP versions 1, 2c or 3. You can configure other settings in "System &gt; SNMP &gt; General".
   - SNMPv3
 
-    Access to device parameters is possible with SNMP version 3. You can configure other settings in "System > SNMP > General".
+    Access to device parameters is possible with SNMP version 3. You can configure other settings in "System &gt; SNMP &gt; General".
 - **SNMPv1/v2 Read-Only**
 
   Enable or disable write access to SNMP variables with SNMPv1/v2c.
@@ -5737,7 +5737,7 @@ The page contains the following input boxes with a maximum length of 32 characte
 
 On this page, you specify the IP configuration for the device.
 
-With devices with more than one IP interface, this call references the "Subnets > Configuration" menu item in the "Layer 3 (IPv4)" menu and the configuration of the TIA interface there.
+With devices with more than one IP interface, this call references the "Subnets &gt; Configuration" menu item in the "Layer 3 (IPv4)" menu and the configuration of the TIA interface there.
 
 ##### Description
 
@@ -5761,7 +5761,7 @@ The page contains the following boxes:
 
   - DHCP client is disabled.
 
-    You enable the DHCP client on the page "System > DHCP > DHCP Client".
+    You enable the DHCP client on the page "System &gt; DHCP &gt; DHCP Client".
   - The IP address is also displayed in the address bar of the Internet browser. If this does not take place automatically, you will need to enter the IP address in the address bar of the Internet browser manually.
 - **Subnet Mask**
 
@@ -5779,7 +5779,7 @@ The page contains the following boxes:
   >
   > You need to configure the Agent VLAN ID for the ring ports.
 
-  In the mode "802.1D Transparent Bridge", this drop-down list is grayed out, see also "Layer 2 > VLAN > General".
+  In the mode "802.1D Transparent Bridge", this drop-down list is grayed out, see also "Layer 2 &gt; VLAN &gt; General".
 
   > **Note**
   >
@@ -5940,7 +5940,7 @@ To restart the device, the buttons on this page provide you with the following o
   In any case, the device restarts after the specified time.
 - **Backup**
 
-  The configuration backups under "System **>** Configuration Backup" can be selected. Before the scheduled restart, the device applies the configurations of the selected backup and continues working with them after the restart.
+  The configuration backups under "System **&gt;** Configuration Backup" can be selected. Before the scheduled restart, the device applies the configurations of the selected backup and continues working with them after the restart.
 
   All configurations made up to this point that have not been saved in a backup are lost.
 
@@ -5957,7 +5957,7 @@ To restart the device, the buttons on this page provide you with the following o
   >
   > The scheduled restart is performed after the time has elapsed without any further message. Unsaved configuration changes are lost.
   >
-  > Save the current configuration via "System > Configuration Backup" before setting the timer for the restart.
+  > Save the current configuration via "System &gt; Configuration Backup" before setting the timer for the restart.
 - **Cancel scheduled restart**
 
   With this button, you disable the timer for the scheduled restart.
@@ -5998,15 +5998,15 @@ The table of data types contains the following areas.
 | ConfigPackBackup | This ZIP file stores all the configuration backups you have created. | X | X | X |  |
 | LoginWelcomeMessage | The txt file contains the desired text or the ASCII type. Only pure text files in ASCII format are supported. | X | X | X |  |
 | RunningCLI | Text file with CLI commands  This file contains an overview of the current configuration in the form of CLI commands. Passwords are masked in this file as follows: [PASSWORD]  You can download the text file. The file is not intended to be uploaded again unchanged. | -- | X | -- |  |
-| RunningSINEMAConfig | You save the current device configuration in this file type for transfer to STEP 7 Basic/Professional. The file can be imported in STEP 7 Basic/Professional and installed on a device with the same article number and firmware version.  Before you can save a file, you must assign a password for the "RunningSINEMAConfig" in the WBM under "System > Load&Save > Passwords". You also need this password to import the file into STEP 7 Basic/Professional.  See also "SINEMAConfig" | -- | X | -- |  |
+| RunningSINEMAConfig | You save the current device configuration in this file type for transfer to STEP 7 Basic/Professional. The file can be imported in STEP 7 Basic/Professional and installed on a device with the same article number and firmware version.  Before you can save a file, you must assign a password for the "RunningSINEMAConfig" in the WBM under "System &gt; Load&amp;Save &gt; Passwords". You also need this password to import the file into STEP 7 Basic/Professional.  See also "SINEMAConfig" | -- | X | -- |  |
 | Script | Text file with CLI commands   You can upload a script file in a device. The CLI commands it contains are executed appropriately.  CLI commands for saving and loading files cannot be executed with the CLI script file. | X | -- | -- |  |
-| SINEMAConfig | You load configuration data that was exported via STEP 7 Basic/Professional for transfer to the WBM with this file type.  To load a file, you must assign a password for the "SINEMAConfig" under "System > Load&Save > Passwords". You also need this password to export the file from STEP 7 Basic/Professional.  See also "RunningSINEMAConfig" | X | -- | -- |  |
+| SINEMAConfig | You load configuration data that was exported via STEP 7 Basic/Professional for transfer to the WBM with this file type.  To load a file, you must assign a password for the "SINEMAConfig" under "System &gt; Load&amp;Save &gt; Passwords". You also need this password to export the file from STEP 7 Basic/Professional.  See also "RunningSINEMAConfig" | X | -- | -- |  |
 | Users | File with user names and passwords | X | X | -- |  |
 | WBMFav | WBM favorite pages  This file contains the favorites that you created in the WBM.. You can download this file and upload it in other devices. | X | X | X |  |
-| **Certificates & keys** | HTTPSCert | Default HTTPS certificates including key  The preset and automatically created HTTPS certificates are self-signed.  We strongly recommend that you create your own HTTPS certificates and make them available. We recommend that you use HTTPS certificates signed either by a reliable external or by an internal certification authority. The HTTPS certificate checks the identity of the device and controls the encrypted data exchange.  The following file types can be loaded into the device.   - .pem   To successfully load an HTTPS certificate with this data type into the device, the certificate must include the unencrypted private key. - .p12   For HTTPS certificates with this file type, the private key is encrypted and secured with a password.   To load the certificate successfully into the device, enter the password specified for the file on the WBM page "Passwords".   P12 certificates that are encrypted with RC2-40-CBC are not supported.    **It is recommended that you use password-protected certificates in the PKCS#12 format.**   The following certificates are supported:  - ECDSA certificates created with secp521r1 (NIST P-521) - RSA certificates with a maximum key length of 4096 bits | X | X | X |
+| **Certificates &amp; keys** | HTTPSCert | Default HTTPS certificates including key  The preset and automatically created HTTPS certificates are self-signed.  We strongly recommend that you create your own HTTPS certificates and make them available. We recommend that you use HTTPS certificates signed either by a reliable external or by an internal certification authority. The HTTPS certificate checks the identity of the device and controls the encrypted data exchange.  The following file types can be loaded into the device.   - .pem   To successfully load an HTTPS certificate with this data type into the device, the certificate must include the unencrypted private key. - .p12   For HTTPS certificates with this file type, the private key is encrypted and secured with a password.   To load the certificate successfully into the device, enter the password specified for the file on the WBM page "Passwords".   P12 certificates that are encrypted with RC2-40-CBC are not supported.    **It is recommended that you use password-protected certificates in the PKCS#12 format.**   The following certificates are supported:  - ECDSA certificates created with secp521r1 (NIST P-521) - RSA certificates with a maximum key length of 4096 bits | X | X | X |
 | SSHPrivateKeyECDSA | SSH private key (ECDSA)  The SSH key ecdsa-sha2-nistp521 is supported.  There are files to which access is password-protected. To successfully load the file into the device, enter the password specified for the file on the WBM page "Passwords". | X | X | X |  |
 | SSHPrivateKeyRSA | SSH private key (RSA) with and without password  The following SSH keys are supported:  - rsa-sha2-512 - rsa-sha2-256   There are files to which access is password-protected. To successfully load the file into the device, enter the password specified for the file on the WBM page "Passwords". | X | X | X |  |
-| **Service & Log** | Debug | This file contains information for Siemens Support.  It is encrypted and can be sent by e-mail to Siemens Support without any security risk. | -- | X | X |
+| **Service &amp; Log** | Debug | This file contains information for Siemens Support.  It is encrypted and can be sent by e-mail to Siemens Support without any security risk. | -- | X | X |
 | DebugExt | This file contains more detailed information for Siemens Support. It is encrypted and can be sent by e-mail to Siemens Support without any security risk. Saving the file may take some time. | -- | X | -- |  |
 | LogFile | File with entries from the event log table | -- | X | -- |  |
 | StartupInfo | Startup log file  This file contains the messages that were entered in the log file during the last startup. | -- | X | -- |  |
@@ -6037,7 +6037,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed.
 >
-> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System > PLUG".
+> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System &gt; PLUG".
 
 **Configuration files**
 
@@ -6046,7 +6046,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 > **Configuration files and Trial/Automatic Save mode**
 >
 > In "Automatic Save" mode, the data is saved automatically before the configuration files (ConfigPack and Config) are transferred.  
-> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System > Configuration" WBM page to save changes in the configuration file.
+> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System &gt; Configuration" WBM page to save changes in the configuration file.
 
 **CLI script file**
 
@@ -6066,7 +6066,7 @@ Requirements:
 - Same firmware version
 - Password
 
-  You assign the password in the WBM under "System > Load&Save > Passwords".
+  You assign the password in the WBM under "System &gt; Load&amp;Save &gt; Passwords".
 
 You can use the file types as follows:
 
@@ -6113,7 +6113,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed.
 >
-> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System > PLUG".
+> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System &gt; PLUG".
 
 **Configuration files**
 
@@ -6122,7 +6122,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 > **Configuration files and Trial/Automatic Save mode**
 >
 > In "Automatic Save" mode, the data is saved automatically before the configuration files (ConfigPack and Config) are transferred.  
-> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System > Configuration" WBM page to save changes in the configuration file.
+> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System &gt; Configuration" WBM page to save changes in the configuration file.
 
 **CLI script file**
 
@@ -6144,7 +6144,7 @@ Requirements:
 - Same firmware version
 - Password
 
-  You assign the password in the WBM under "System > Load&Save > Passwords".
+  You assign the password in the WBM under "System &gt; Load&amp;Save &gt; Passwords".
 
 You can use the file types as follows:
 
@@ -6223,7 +6223,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 > **Configuration files and Trial mode/Automatic Save**
 >
 > In "Automatic Save" mode, the data is saved automatically before the configuration files (ConfigPack and Config) are transferred.  
-> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System > Configuration" WBM page to save changes in the configuration files.
+> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System &gt; Configuration" WBM page to save changes in the configuration files.
 
 **CLI script file**
 
@@ -6245,7 +6245,7 @@ Requirements:
 - Same firmware version
 - Password
 
-  You assign the password in the WBM under "System > Load&Save > Passwords".
+  You assign the password in the WBM under "System &gt; Load&amp;Save &gt; Passwords".
 
 You can use the file types as follows:
 
@@ -6404,7 +6404,7 @@ Table 2 has the following columns:
     The device was turned on or restarted by the user.
   - Link Change
 
-    This event occurs only when the port status is monitored and has changed, see "System > Fault Monitoring > Link Change".
+    This event occurs only when the port status is monitored and has changed, see "System &gt; Fault Monitoring &gt; Link Change".
   - Authentication Failure
 
     This event occurs when attempting access with a bad password.
@@ -6413,7 +6413,7 @@ Table 2 has the following columns:
     An alarm or event has occurred relating to the remote monitoring of the system.
   - Power Change
 
-    This event occurs only when power supply lines 1 and 2 are monitored. It indicates that there was a change to line 1 or line 2, see "System > Fault Monitoring > Power Supply".
+    This event occurs only when power supply lines 1 and 2 are monitored. It indicates that there was a change to line 1 or line 2, see "System &gt; Fault Monitoring &gt; Power Supply".
   - RM status change
 
     The redundancy manager has recognized an interruption or restoration of the ring and has switched the line over or back.
@@ -6471,10 +6471,10 @@ Table 2 has the following columns:
   The device sends an e-mail. This is only possible if the SMTP server is set up and the "SMTP Client" function is enabled.
 - **Trap**
 
-  The device sends an SNMP trap. This is only possible if "SNMPv1 Traps" is enabled in "System > Configuration".
+  The device sends an SNMP trap. This is only possible if "SNMPv1 Traps" is enabled in "System &gt; Configuration".
 - **Log table**
 
-  The device writes an entry in the event log table, see "Information > Log Table"
+  The device writes an entry in the event log table, see "Information &gt; Log Table"
 - **Syslog**
 
   The device writes an entry to the system log server. This is only possible if the system log server is set up and the "Syslog Client" function is enabled.
@@ -6534,9 +6534,9 @@ The setting "E-mail" must be enabled in the events for e-mails to be sent. The m
 
 ###### Requirements for sending e-mails
 
-- "E-mail" is activated for the relevant event in "System > Events > Configuration".
-- The desired severity is configured under "System > Events > Severity level".
-- At least one entry exists under "System > SMTP Client > Recipient" and the setting "Send" is activated.
+- "E-mail" is activated for the relevant event in "System &gt; Events &gt; Configuration".
+- The desired severity is configured under "System &gt; Events &gt; Severity level".
+- At least one entry exists under "System &gt; SMTP Client &gt; Recipient" and the setting "Send" is activated.
 
 ###### Description
 
@@ -6792,14 +6792,14 @@ You can operate the device as a DHCP server. This allows IP addresses to be assi
 >
 > **Deleting DHCP server bindings**
 >
-> If you deactivate or delete an IPv4 address band or turn the DHCP server off and on again, the DHCP server bindings are deleted, see "Information > DHCP Server".
+> If you deactivate or delete an IPv4 address band or turn the DHCP server off and on again, the DHCP server bindings are deleted, see "Information &gt; DHCP Server".
 
 The structure of this page depends on how many VLAN IP interfaces the device has.
 
 ###### Requirements
 
 - The connected devices are configured so that they obtain the IP address from a DHCP server.
-- The Base Bridge Mode 802.1Q VLAN Bridge is enabled. For more information, see "Layer 2 > VLAN > General".
+- The Base Bridge Mode 802.1Q VLAN Bridge is enabled. For more information, see "Layer 2 &gt; VLAN &gt; General".
 
 ###### Assignment via ports
 
@@ -6872,7 +6872,7 @@ On this page, specify the address band from which the connected device receives 
   >
   > To avoid conflicts with IPv4 addresses, only one device may be configured as a DHCP server in the network.
 
-  If you want to operate a DHCP server on the devices of a VRRP group, note the information in the section "Layer 3 (IPv4/IPv6) > VRRP/VRRPv3 > Router".
+  If you want to operate a DHCP server on the devices of a VRRP group, note the information in the section "Layer 3 (IPv4/IPv6) &gt; VRRP/VRRPv3 &gt; Router".
 - **Probe address with ICMP Echo before offer**
 
   When selected, the DHCP server checks whether or not the IP address has already been assigned. To do this the DHCP server sends ICMP echo messages (ping) to the IPv4 address. If no reply is received, the IPv4 address is assigned.
@@ -7253,7 +7253,7 @@ On this page, you specify whether the DHCPv6 client receives not only the config
 
 The DHCPv6 server delegates the distribution of the IPv6 prefix to the DHCPv6 client. To do this an IPv6 interface must be configured on the DHCPv6 client as a PD client. Via the PD client, the DHCPv6 client obtains an IPv6 prefix from the DHCPv6 server and stores it under a prefix name. The IPv6 interfaces of the DHCPv6 client the should adopt the prefix are configured as so-called PD sub clients.
 
-You configure the PD sub-clients under "System" > "DHCPv6" > "DHCPv6 PD Sub-Client".
+You configure the PD sub-clients under "System" &gt; "DHCPv6" &gt; "DHCPv6 PD Sub-Client".
 
 ###### Description of the displayed boxes
 
@@ -8286,7 +8286,7 @@ You will find a detailed description of the individual functions available with 
   | Symbol | Meaning |
   | --- | --- |
   |  | **Caution** |
-  | **Resetting with WBM and CLI**  If you have disabled the "Restore Factory Defaults" function in your configuration, the disabling does not apply to the CLI command "restart" or to the WBM page "System > Restart". This means that the device can inadvertently be reset to the factory defaults. This may cause unwanted disruption in network operation since the device then needs to be reconfigured. An inserted PLUG is also deleted and returned to the status as shipped. |  |
+  | **Resetting with WBM and CLI**  If you have disabled the "Restore Factory Defaults" function in your configuration, the disabling does not apply to the CLI command "restart" or to the WBM page "System &gt; Restart". This means that the device can inadvertently be reset to the factory defaults. This may cause unwanted disruption in network operation since the device then needs to be reconfigured. An inserted PLUG is also deleted and returned to the status as shipped. |  |
 - **Set Fault Mask**
 
   Enable or disable the function "Define fault mask via the LED display" with the SELECT/SET button.
@@ -8299,7 +8299,7 @@ to the Syslog server.
 ##### Requirements for sending Syslog entries
 
 - The Syslog client is enabled.
-- In "System > Events > Configuration", "Syslog" is activated for the relevant event.
+- In "System &gt; Events &gt; Configuration", "Syslog" is activated for the relevant event.
 - There is a Syslog server in your network that receives the Syslog messages.
 - The IP address or the FQDN (Fully Qualified Domain Name) of the Syslog server is entered on the device.
 
@@ -8452,13 +8452,13 @@ The table has the following columns:
     The port is part of a link aggregation. The link aggregation was switched to the status "Discarding" by the Spanning Tree.
   - Admin down
 
-    The status "disabled" is configured for the port, see "System > Ports > Configuration".
+    The status "disabled" is configured for the port, see "System &gt; Ports &gt; Configuration".
   - Link down
 
-    The status "enabled" is configured for the port but there is no connection, see "System > Ports > Configuration".
+    The status "enabled" is configured for the port but there is no connection, see "System &gt; Ports &gt; Configuration".
   - Power down
 
-    The status "Link down" is configured for the port, see "System > Ports > Configuration".
+    The status "Link down" is configured for the port, see "System &gt; Ports &gt; Configuration".
   - Standby
 
     Standby redundancy is enabled on the device. The port is a standby port with the status "Passive".
@@ -8703,13 +8703,13 @@ The table has the following rows:
     The port is part of a link aggregation. The link aggregation was switched to the status "Discarding" by the Spanning Tree.
   - Admin down
 
-    The status "disabled" is configured for the port, see "System > Ports > Configuration".
+    The status "disabled" is configured for the port, see "System &gt; Ports &gt; Configuration".
   - Link Down
 
-    The status "enabled" is configured for the port but there is no connection, see "System > Ports > Configuration".
+    The status "enabled" is configured for the port but there is no connection, see "System &gt; Ports &gt; Configuration".
   - Power down
 
-    The status "Link down" is configured for the port, see "System > Ports > Configuration".
+    The status "Link down" is configured for the port, see "System &gt; Ports &gt; Configuration".
   - Standby
 
     Standby redundancy is enabled on the device. The port is a standby port with the status "Passive".
@@ -8720,7 +8720,7 @@ The table has the following rows:
 
   > **Note**
   >
-  > You can only configure this function if the device is operating in Transparent Bridge mode (Layer 2 > VLAN > "General" tab > "Base Bridge Mode" drop-down list: 802.1D Transparent Bridge). In the "802.1Q VLAN Bridge" mode in a NOA configuration, an error message is displayed.
+  > You can only configure this function if the device is operating in Transparent Bridge mode (Layer 2 &gt; VLAN &gt; "General" tab &gt; "Base Bridge Mode" drop-down list: 802.1D Transparent Bridge). In the "802.1Q VLAN Bridge" mode in a NOA configuration, an error message is displayed.
 
   NOA (NAMUR Open Architecture) is a concept for data exchange in the process industry with the purpose of transferring data from the field level to a cloud. A SCALANCE XC-200 can take on the function of a NOA IT/OT switch and separate pure IT networks from pure OT networks. Communication to both networks is also possible. The switch separates the networks based on ports, i.e. a port either belongs to the IT network or to the OT network or to both networks. Select which network the port belongs to in the drop-down list. To export the IT data or the OT data, one port must be configured accordingly in each case. Select one of the following options:
 
@@ -8818,9 +8818,9 @@ The page contains the following boxes:
 
     A log entry is created and the port is switched off.
 
-  Acknowledge the error message manually under "Information > Error".
+  Acknowledge the error message manually under "Information &gt; Error".
 
-  Activate the port manually under "System > Ports > Configuration".
+  Activate the port manually under "System &gt; Ports &gt; Configuration".
 - **Flap Time [s]**
 
   Configure the time interval in which the maximum number of allowed changeovers between "Link up" and "Link down" is monitored.
@@ -8888,7 +8888,7 @@ On this page, you can configure thresholds for internal and external modules of 
 
 If the diagnostic value falls below or exceeds the configured thresholds, the status changes accordingly.
 
-On the "System > Events > Configuration" page, you can specify how the device signals the status change.
+On the "System &gt; Events &gt; Configuration" page, you can specify how the device signals the status change.
 
 ##### Description
 
@@ -9123,7 +9123,7 @@ This page provides detailed information about the configuration stored on the C-
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, reset the device to factory settings after the firmware has been installed. In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" since the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data.
 >
-> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System > PLUG".
+> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System &gt; PLUG".
 
 ###### Settings
 
@@ -9208,7 +9208,7 @@ The table has the following rows:
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed. In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" since the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data.
 >
-> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System > PLUG".
+> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System &gt; PLUG".
 
 ###### Information about the license of the KEY-PLUG
 
@@ -9307,13 +9307,13 @@ On this page, you can select an interface and search for devices that are reacha
 >
 > **DCP Discovery**
 >
-> The function is only available in the VLAN associated with the TIA interface. You can configure the TIA interface under "Layer 3 > Subnets > Configuration".
+> The function is only available in the VLAN associated with the TIA interface. You can configure the TIA interface under "Layer 3 &gt; Subnets &gt; Configuration".
 
 **Requirement**:
 
 To adapt network parameters, DCP requires write access to the device. If access is write-protected, the network parameters cannot be configured.
 
-On the SCALANCE devices, you configure the access in "System > Configuration".
+On the SCALANCE devices, you configure the access in "System &gt; Configuration".
 
 ##### Description
 
@@ -9792,7 +9792,7 @@ The following table shows the values of the SFP transceiver used in this port:
 
 On this page, you can save backups of your configuration. Depending on the available memory and the file size of the backup, you can create multiple backups.
 
-The created backups are saved under the "ConfigPackBackup" file type. On the "System > Load&Save > HTTP/TFTP" page you can save configuration backups as ZIP file on your client PC or load them from there.
+The created backups are saved under the "ConfigPackBackup" file type. On the "System &gt; Load&amp;Save &gt; HTTP/TFTP" page you can save configuration backups as ZIP file on your client PC or load them from there.
 
 ##### Description
 
@@ -9852,13 +9852,13 @@ On this page, you create a basic configuration for the functions of layer 2. On 
 
 - **Protocol Based VLAN**
 
-  Enable or disable protocol-based VLAN. You can configure other settings in "Layer 2 > VLAN".
+  Enable or disable protocol-based VLAN. You can configure other settings in "Layer 2 &gt; VLAN".
 - **Subnet Based VLAN**
 
-  Enable or disable subnet-based VLAN. You can configure other settings in "Layer 2 > VLAN".
+  Enable or disable subnet-based VLAN. You can configure other settings in "Layer 2 &gt; VLAN".
 - **Dynamic MAC Aging**
 
-  Enable or disable the "Aging" mechanism. You can configure other settings in "Layer 2 > Dynamic MAC Aging".
+  Enable or disable the "Aging" mechanism. You can configure other settings in "Layer 2 &gt; Dynamic MAC Aging".
 - **Redundancy Type**
 
   The following settings are available:
@@ -9871,7 +9871,7 @@ On this page, you create a basic configuration for the functions of layer 2. On 
     If you select this option, you specify the required redundancy mode in "Redundancy Mode".
   - **Ring**
 
-    Enables ring redundancy. You can configure other settings in "Layer 2 > Ring Redundancy > Ring".
+    Enables ring redundancy. You can configure other settings in "Layer 2 &gt; Ring Redundancy &gt; Ring".
   - **Ring with RSTP**
 
     If you select this option, the compatibility mode for spanning tree is set permanently to RSTP. In the "Redundancy Mode" drop-down list, you specify the redundancy mode of the ring redundancy. You can change the current setting in the "Ring Redundancy" and "Spanning Tree" menus.
@@ -9923,23 +9923,23 @@ On this page, you create a basic configuration for the functions of layer 2. On 
 
   - **STP**
 
-    Enables the Spanning Tree Protocol (STP). Typical reconfiguration times with spanning tree are between 20 and 30 seconds. You can configure other settings in "Layer 2 > Spanning Tree".
+    Enables the Spanning Tree Protocol (STP). Typical reconfiguration times with spanning tree are between 20 and 30 seconds. You can configure other settings in "Layer 2 &gt; Spanning Tree".
   - **RSTP**
 
-    Enables the Rapid Spanning Tree Protocol (RSTP). If a spanning tree frame is detected at a port, this port reverts from RSTP to spanning tree. You can configure other settings in "Layer 2 > Spanning Tree".
+    Enables the Rapid Spanning Tree Protocol (RSTP). If a spanning tree frame is detected at a port, this port reverts from RSTP to spanning tree. You can configure other settings in "Layer 2 &gt; Spanning Tree".
 
     > **Note**
     >
     > When using RSTP (Rapid Spanning Tree Protocol), loops involving duplication of frames or frames being overtaken may occur briefly. If this is not acceptable in your particular application, use the slower standard spanning tree mechanism.
   - **MSTP**
 
-    Enables the Multiple Spanning Tree Protocol (MSTP). You can configure other settings in "Layer 2 > Spanning Tree".
+    Enables the Multiple Spanning Tree Protocol (MSTP). You can configure other settings in "Layer 2 &gt; Spanning Tree".
 - **Standby**
 
-  Enable or disable the "Standby redundancy" function. You can configure other settings in "Layer 2 > Ring Redundancy > Standby".
+  Enable or disable the "Standby redundancy" function. You can configure other settings in "Layer 2 &gt; Ring Redundancy &gt; Standby".
 - **MRP Interconnection**
 
-  Enable or disable the MRP Interconnection function. You can find other settings in "Layer 2 > Ring Redundancy > MRP Interconnection".
+  Enable or disable the MRP Interconnection function. You can find other settings in "Layer 2 &gt; Ring Redundancy &gt; MRP Interconnection".
 
   You can only enable MRP Interconnection when the following conditions are met:
 
@@ -9958,32 +9958,32 @@ On this page, you create a basic configuration for the functions of layer 2. On 
 
   If you select this check box, Remote Monitoring (RMON) allows diagnostics data to be collected on the device, prepared and read out using SNMP by a network management station that also supports RMON. This diagnostic data, for example port-related load trends, allow problems in the network to be detected early and eliminated.
 
-  Some of the "Ethernet Statistics Counters" are part of the RMON function. If you disable RMON, the "Ethernet Statistics Counter" in "Information > Ethernet statistics" is no longer updated.
+  Some of the "Ethernet Statistics Counters" are part of the RMON function. If you disable RMON, the "Ethernet Statistics Counter" in "Information &gt; Ethernet statistics" is no longer updated.
 - **Dynamic Multicast**
 
   The following settings are possible:
 
   - **"-" (disabled)**
-  - **IGMP Snooping**Enables IGMP (Internet Group Management Protocol). You can configure other settings in "Layer 2 > Multicast > IGMP".
-  - **MLD Snooping**Enables MLD. You can configure other settings in "Layer 2 > Multicast > MLD".
+  - **IGMP Snooping**Enables IGMP (Internet Group Management Protocol). You can configure other settings in "Layer 2 &gt; Multicast &gt; IGMP".
+  - **MLD Snooping**Enables MLD. You can configure other settings in "Layer 2 &gt; Multicast &gt; MLD".
   - **IGMP and MLD Snooping**Enables IGMP and MDL.
-  - **GMRP**Enables GMRP (GARP Multicast Registration Protocol). You can configure other settings in "Layer 2 > Multicast > GMRP".
+  - **GMRP**Enables GMRP (GARP Multicast Registration Protocol). You can configure other settings in "Layer 2 &gt; Multicast &gt; GMRP".
 
     > **Note**
     >
     > GMRP and IGMP cannot operate at the same time.
 - **GVRP**
 
-  Enable or disable "GVRP" (GARP VLAN Registration Protocol). You can configure other settings in "Layer 2 > VLAN > GVRP".
+  Enable or disable "GVRP" (GARP VLAN Registration Protocol). You can configure other settings in "Layer 2 &gt; VLAN &gt; GVRP".
 - **Mirroring**
 
-  Enable or disable port mirroring. You can configure other settings in "Layer 2 > Mirroring > Port".
+  Enable or disable port mirroring. You can configure other settings in "Layer 2 &gt; Mirroring &gt; Port".
 - **Loop Detection**
 
-  Enable or disable loop detection. You can configure other settings in "Layer 2 > Loop Detection".
+  Enable or disable loop detection. You can configure other settings in "Layer 2 &gt; Loop Detection".
 - **PTP**
 
-  Specify how the device will process PTP messages. You can configure other settings in "Layer 2 > PTP".
+  Specify how the device will process PTP messages. You can configure other settings in "Layer 2 &gt; PTP".
 
   - off
 
@@ -10014,10 +10014,10 @@ The page contains the following boxes:
 
 - **Broadcast Priority**
 
-  Specify the priority of broadcast frames. The switch sorts the frame into a queue according to this prioritization . You configure the assignment of the priority to a queue on the page "Layer 2 > QoS > CoS Map".
+  Specify the priority of broadcast frames. The switch sorts the frame into a queue according to this prioritization . You configure the assignment of the priority to a queue on the page "Layer 2 &gt; QoS &gt; CoS Map".
 - **Agent Priority**
 
-  Specify the priority of agent frames. The switch sorts the frame into a queue according to this prioritization . You configure the assignment of the priority to a queue on the page "Layer 2 > QoS > CoS Map".
+  Specify the priority of agent frames. The switch sorts the frame into a queue according to this prioritization . You configure the assignment of the priority to a queue on the page "Layer 2 &gt; QoS &gt; CoS Map".
 - **Scheduling Mode**
 
   Select the order in which the frames are processed in the queues.  
@@ -10129,15 +10129,15 @@ Table 2 has the following columns:
 
   > **Note**
   >
-  > You configure the prioritization of the receiving port on the page "Layer 2 > VLAN > Port Based VLAN".
+  > You configure the prioritization of the receiving port on the page "Layer 2 &gt; VLAN &gt; Port Based VLAN".
   >
-  > You configure the assignment of the following priorities to a queue on the page "Layer 2 > QoS > CoS Map":
+  > You configure the assignment of the following priorities to a queue on the page "Layer 2 &gt; QoS &gt; CoS Map":
   >
   > - Receiving port
   > - VLAN tag
   > - Broadcast and agent frame
   >
-  > You configure the assignment of the DSCP prioritization to a queue on the page "Layer 2 > QoS > DSCP Map".
+  > You configure the assignment of the DSCP prioritization to a queue on the page "Layer 2 &gt; QoS &gt; DSCP Map".
 
   - No Trust
 
@@ -10433,7 +10433,7 @@ The table has the following columns:
     The port is an untagged member of the VLAN, but the VLAN is not configured as a port VLAN. Frames sent in this VLAN are forwarded without the VLAN tag.
   - F
 
-    The port is not a member of the specified VLAN and it is not possible for the VLAN to be registered dynamically at this port using GVRP. If a port in a VLAN has this option, it cannot become a member of this VLAN even if it is configured as a trunk port. You can configure other settings in "Layer 2 > VLAN > Port-based VLAN".
+    The port is not a member of the specified VLAN and it is not possible for the VLAN to be registered dynamically at this port using GVRP. If a port in a VLAN has this option, it cannot become a member of this VLAN even if it is configured as a trunk port. You can configure other settings in "Layer 2 &gt; VLAN &gt; Port-based VLAN".
   - T
 
     This option is only displayed and cannot be selected in the WBM. This port is a trunk port making it a member in all VLANs. You configure this function in the CLI (Command Line Interface) using the "`switchport mode trunk`" command.
@@ -10461,7 +10461,7 @@ If you change the Base Bridge Mode from VLAN-aware to VLAN-unaware, this has the
 - You cannot use guest VLAN.
 - The VLAN assignment cannot be adopted from the RADIUS server.
 - You cannot configure the port type.
-- Defined access rules must be valid for all VLANs. On the "Security > Management ACL" page, the value "1-4094" must be defined for the parameter "VLANs Allowed".
+- Defined access rules must be valid for all VLANs. On the "Security &gt; Management ACL" page, the value "1-4094" must be defined for the parameter "VLANs Allowed".
 
 ##### Port Assignment
 
@@ -10496,7 +10496,7 @@ The table has the following columns:
   - F
 
     The port is not a member of the specified VLAN and it is not possible for the VLAN to be registered dynamically at this port using GVRP. If a port in a VLAN has this option, it cannot become a member of this VLAN even if it is configured as a trunk port.  
-    You can configure further settings in "Layer 2 > VLAN > Port-based VLAN".
+    You can configure further settings in "Layer 2 &gt; VLAN &gt; Port-based VLAN".
   - T
 
     This option is only displayed and cannot be selected in the WBM.   
@@ -10601,7 +10601,7 @@ Table 2 has the following columns:
   There are a total of eight priorities with values 0 to 7, where 7 represents the highest priority (IEEE 802.1p Port Priority).
 - **Port VID**
 
-  Select the VLAN ID from the drop-down list. Only VLAN IDs defined on the "VLAN > General" page can be selected.  
+  Select the VLAN ID from the drop-down list. Only VLAN IDs defined on the "VLAN &gt; General" page can be selected.  
   If a received frame does not have a VLAN tag, it has a tag with the VLAN ID specified here added to it and is sent according to the rules at the port.
 - **Acceptable Frames**
 
@@ -10672,7 +10672,7 @@ On this page, you specify which protocol and which VLAN is assigned to the indiv
   Select the required port. All available ports and the link aggregations can be selected.
 - **Group ID**
 
-  Select the group ID from the drop-down list. Specify the ID on the WBM page "Layer 2 > VLAN > Protocol Based VLAN Group".
+  Select the group ID from the drop-down list. Specify the ID on the WBM page "Layer 2 &gt; VLAN &gt; Protocol Based VLAN Group".
 
 The table has the following columns:
 
@@ -11088,7 +11088,7 @@ The table has the following columns:
 
 - **ACL Filter Number**
 
-  Shows the number of the ACL filter. You configure the MAC ACL filter in "Security > MAC ACL".
+  Shows the number of the ACL filter. You configure the MAC ACL filter in "Security &gt; MAC ACL".
 - **Ingress Mirroring**
 
   Shows whether incoming packets are mirrored.
@@ -11097,7 +11097,7 @@ The table has the following columns:
   >
   > **Rules**
   >
-  > The selected rule only becomes active when you specify with which ACL rules the incoming packets will be filtered for at least one interface. You configure the settings in "Security > MAC ACL > Ingress Rules.
+  > The selected rule only becomes active when you specify with which ACL rules the incoming packets will be filtered for at least one interface. You configure the settings in "Security &gt; MAC ACL &gt; Ingress Rules.
 - **Source MAC**
 
   Shows the MAC address of the sender.
@@ -11138,7 +11138,7 @@ The table has the following columns:
   >
   > **Rules**
   >
-  > The selected rule only becomes active when you specify with which ACL rules the incoming packets will be filtered for at least one interface. You configure the settings in "Security > IP ACL > Ingress Rules".
+  > The selected rule only becomes active when you specify with which ACL rules the incoming packets will be filtered for at least one interface. You configure the settings in "Security &gt; IP ACL &gt; Ingress Rules".
 - **Source IP Address**
 
   Shows the IPv4 address of the sender.
@@ -11265,7 +11265,7 @@ You can enable ring redundancy as follows:
   > - Input port and output port must belong to the same port group.
   > - The "Learning" function must be disabled for the input port.
   >
-  >   In WBM: System > Ports > Configuration > Unicast MAC Learning
+  >   In WBM: System &gt; Ports &gt; Configuration &gt; Unicast MAC Learning
   >
   >   In CLI: no unicast mac learning
 
@@ -11368,12 +11368,12 @@ If you configure a redundancy manager, set the status of the ring ports. The fir
 
 You can change the ring ports without needing to open the ring. To change the ring ports, follow the steps below:
 
-- Change to the page "Layer 2 > Spanning Tree > CIST Port".
+- Change to the page "Layer 2 &gt; Spanning Tree &gt; CIST Port".
 - In the Spanning Tree, disable the ports that you want to configure as ring ports.
-- Change to the page "Layer 2 > Ring Redundancy > Ring".
+- Change to the page "Layer 2 &gt; Ring Redundancy &gt; Ring".
 - Select the new ring ports.
 - Change the cable connections.
-- Change to the page "Layer 2 > Spanning Tree > CIST Port".
+- Change to the page "Layer 2 &gt; Spanning Tree &gt; CIST Port".
 - Enable the ports in the Spanning Tree that are no longer ring ports.
 
 ##### Standby
@@ -11442,7 +11442,7 @@ Standby redundancy allows the redundant linking of HRP rings. To establish a sta
   >
   > Before you enable the port as the standby port, you need to disable the port in the spanning tree.
   >
-  > 1. Change to the page "Layer 2 > Spanning Tree > CIST Port".
+  > 1. Change to the page "Layer 2 &gt; Spanning Tree &gt; CIST Port".
   >
   > 2. Disable the ports in the spanning tree you want to configure as standby ports.
 
@@ -11508,7 +11508,7 @@ The table contains the following columns:
 
   With this check box, you enable or disable the Link Check function for a port.
 
-  When connection monitoring is enabled, you can see the number of sent and received Link Check test frames on the "Information > Redundancy > Link Check" page.
+  When connection monitoring is enabled, you can see the number of sent and received Link Check test frames on the "Information &gt; Redundancy &gt; Link Check" page.
 - **Reset**
 
   After resetting Link Check, the function is restarted on the port and the statistics are reset.
@@ -11614,7 +11614,7 @@ The page contains the following boxes:
 
   Select the protocol compatibility.
 
-  Ports with an activated ring protocol cannot participate in RSTP. Therefore, on the "Layer 2 > Ring Redundancy" pages, disable all ring protocols and MRP Interconnection connections with the "Status" check box.
+  Ports with an activated ring protocol cannot participate in RSTP. Therefore, on the "Layer 2 &gt; Ring Redundancy" pages, disable all ring protocols and MRP Interconnection connections with the "Status" check box.
 
   The following settings are available:
 
@@ -11693,7 +11693,7 @@ The page consists of the following parts.
 
   > **Note**
   >
-  > The setting of the "Bridge Hello Time" is only possible with the protocol compatibility RSTP. If the protocol compatibility MSTP is set, the "Hello Time" parameter on the "Layer 2 > Spanning Tree > CIST Port" page is used.
+  > The setting of the "Bridge Hello Time" is only possible with the protocol compatibility RSTP. If the protocol compatibility MSTP is set, the "Hello Time" parameter on the "Layer 2 &gt; Spanning Tree &gt; CIST Port" page is used.
 - **Bridge Forward Delay [s] / Root Forward Delay [s]**
 
   New configuration information is not used immediately by a bridge but only after the period specified in the "Forward Delay" parameter. This ensures that operation is only started with the new topology after all the bridges have the required information.  
@@ -11835,7 +11835,7 @@ Table 2 has the following columns:
 
   > **Note**
   >
-  > The port-specific setting of the Hello time is only possible with protocol compatibility MSTP. If the protocol compatibility RSTP is set, the "Bridge Hello Time" parameter on the page "Layer 2 > Spanning Tree > CIST General" page is used.
+  > The port-specific setting of the Hello time is only possible with protocol compatibility MSTP. If the protocol compatibility RSTP is set, the "Bridge Hello Time" parameter on the page "Layer 2 &gt; Spanning Tree &gt; CIST General" page is used.
 - **Restr. Role**
     
   If this check box is selected, the corresponding port is not selected as root port, regardless of the priority value. If the check box is selected, the port with lowest priority also does not become the root port. Only activate this option if you wish to restrict the impact of bridges outside of the administered range on the Spanning Tree topology.
@@ -12177,13 +12177,13 @@ This page displays all the configured link aggregations. The table has the follo
 
   Set the type of distribution of packets to the individual links of an aggregation.
 
-  - Destination&Source MAC
+  - Destination&amp;Source MAC
 
     The distribution is based on a combination of the destination and source MAC address.
-  - Destination&Source IP
+  - Destination&amp;Source IP
 
     The distribution is based on a combination of the destination and source IP address.
-  - Destination&Source IP-MAC
+  - Destination&amp;Source IP-MAC
 
     The distribution is based on a combination of the destination and source IP address and MAC address.
 - **VLAN Mode**
@@ -12346,7 +12346,7 @@ Table 2 has the following columns:
     This port can only receive LLDP frames.
   - Tx  
     This port can only send LLDP frames.
-  - Rx & Tx  
+  - Rx &amp; Tx  
     This port can receive and send LLDP frames.
   - "-" (disabled)  
     This port can neither receive nor send LLDP frames.
@@ -12370,7 +12370,7 @@ If fiber monitoring is enabled on the connection partner, the connection partner
 
 If the value of the received power or the power loss falls below or exceeds the set limit values, an event is triggered. You can set limit values in two stages for messages with the severity levels "Warning" and "Critical".
 
-In "System > Events > Configuration", you can specify how the IE switch indicates the event.
+In "System &gt; Events &gt; Configuration", you can specify how the IE switch indicates the event.
 
 > **Note**
 >
@@ -12451,7 +12451,7 @@ On this page, you can block individual ports for unknown nodes.
 If the Port Lock function is enabled, packets arriving at this port from unknown MAC addresses are discarded immediately. Packets from known nodes are accepted by the port.   
 Since ports with the port lock function enabled cannot learn any MAC addresses, learned addresses on these ports are automatically deleted after the port lock function is enabled. The port accepts only static MAC addresses that were created previously either manually or with the "Start learning" function and the "Stop learning" function.
 
-To enter all connected nodes automatically, there is a function for automatic learning (see "Layer 2 > Unicast > Learning").
+To enter all connected nodes automatically, there is a function for automatic learning (see "Layer 2 &gt; Unicast &gt; Learning").
 
 ###### Description of the displayed boxes
 
@@ -12500,14 +12500,14 @@ By subsequently enabling the "Locked Ports" function, only packets from the node
 1. Click the "Start learning" button to start the learning process. After starting the learning phase, the "Start learning" button is replaced by the "Stop learning" button. The device now enters the addresses of connected devices until you stop the function.
 2. Click the "Stop learning" button to stop the learning process. The button is once again replaced by the "Start learning" button. The learned entries are stored.
 
-   The learned entries are stored and are listed under "Layer 2 > Unicast > Filtering".
+   The learned entries are stored and are listed under "Layer 2 &gt; Unicast &gt; Filtering".
 
 With a very high data rate, it may occur that statically entered unicast addresses are shown in the unicast table as learned addresses. In this case, the following procedure is recommended:
 
 1. Click the "Start learning" button to start the learning process.
 2. Start data traffic.
-3. Wait until the unicast table shows all MAC addresses as "Learnt" (menu "Information" > "Unicast").
-4. Lock the ports (menu "Layer 2" > "Unicast" > "Locked Ports").
+3. Wait until the unicast table shows all MAC addresses as "Learnt" (menu "Information" &gt; "Unicast").
+4. Lock the ports (menu "Layer 2" &gt; "Unicast" &gt; "Locked Ports").
 5. Click the "Stop learning" button to stop the learning process.
 
 **Deleting all static unicast addresses**
@@ -13009,7 +13009,7 @@ The page contains the following boxes:
 
     > **Note**
     >
-    > With end-to-end synchronization with more than 2 slaves, freak values > 100 ns can occur in the offset.
+    > With end-to-end synchronization with more than 2 slaves, freak values &gt; 100 ns can occur in the offset.
   - peer to peer
 
     The peer delay mechanism will be used.
@@ -13018,7 +13018,7 @@ The page contains the following boxes:
   Enter the domain number for the device here. A SCALANCE device can only be assigned to one synchronization domain. The device ignores PTP messages with a different domain number.
 - **VLAN ID**
 
-  The setting option depends on the configured Base Bridge Mode ("Layer 2 Menu > VLAN > General"):
+  The setting option depends on the configured Base Bridge Mode ("Layer 2 Menu &gt; VLAN &gt; General"):
 
   - 802.1D Transparent Bridge
 
@@ -13098,7 +13098,7 @@ This section contains information on the following topics:
 
 ###### Statistics
 
-On this page you can specify the ports for which RMON statistics are displayed. The RMON statistics are shown on the page "Information > Ethernet Statistics" in "Packet Size", "Packet Type" and "Packet Error".
+On this page you can specify the ports for which RMON statistics are displayed. The RMON statistics are shown on the page "Information &gt; Ethernet Statistics" in "Packet Size", "Packet Type" and "Packet Error".
 
 ###### Settings
 
@@ -13241,23 +13241,23 @@ The page contains the following boxes:
     IPv4 routing is disabled. If IPv6 routing is enabled on the device, this is also disabled.
 - **DHCP Relay Agent**
 
-  Enable or disable the DHCP relay agent. You can configure other settings in "Layer 3 (IPv4)> DHCP Relay Agent".
+  Enable or disable the DHCP relay agent. You can configure other settings in "Layer 3 (IPv4)&gt; DHCP Relay Agent".
 - **VRRP**
   (only available with devices with a layer 3 license)
 
-  Enable or disable routing using VRRP. To use VRRP, first enable the routing function. You can configure other settings in "Layer 3 (IPv4) > VRRP".
+  Enable or disable routing using VRRP. To use VRRP, first enable the routing function. You can configure other settings in "Layer 3 (IPv4) &gt; VRRP".
 - **OSPF**
   (only available with devices with a layer 3 license)
 
-  Enable or disable routing using OSPF. To use OSPF, first enable the Routing function. You can configure other settings in "Layer 3 (IPv4) > OSPF".
+  Enable or disable routing using OSPF. To use OSPF, first enable the Routing function. You can configure other settings in "Layer 3 (IPv4) &gt; OSPF".
 - **RIP**
   (only available with devices with a layer 3 license)
 
-  Enable or disable routing using RIP. To use RIP, first enable the routing function. You can configure other settings in "Layer 3 (IPv4) > RIP".
+  Enable or disable routing using RIP. To use RIP, first enable the routing function. You can configure other settings in "Layer 3 (IPv4) &gt; RIP".
 - **PIM Routing**
   (only available with devices with a layer 3 license)
 
-  Enable or disable PIM routing. You can configure other settings in "Layer 3 (IPv4) > PIM".
+  Enable or disable PIM routing. You can configure other settings in "Layer 3 (IPv4) &gt; PIM".
 - **ARP Keep Alive Status**
 
   Enable or disable ARP Keep Alive. When ARP Keep Alive is enabled, the device checks all entries in the routing table to determine whether there is an entry for the specified gateway (Next Hop) in the ARP table. If there is no entry in the ARP table, the device sends an ARP query. If you clear this check box, the value in the ARP Keep Alive Interval input field is automatically set to the default value.
@@ -13510,7 +13510,7 @@ The page contains the following boxes:
 
 ###### TIA interface and PROFINET interface
 
-The IP address of the TIA interface is linked to the IP address located in the parameter group "Properties > General > PROFINET interface > Ethernet addresses".
+The IP address of the TIA interface is linked to the IP address located in the parameter group "Properties &gt; General &gt; PROFINET interface &gt; Ethernet addresses".
 
 Both IP addresses always have the same value. If you change the value of one IP address, the other IP address changes accordingly.
 
@@ -13900,7 +13900,7 @@ The table contains the following columns:
 This section contains information on the following topics:
 
 - [General (IPv4)](#general-ipv4)
-- [Interface & Value Match (IPv4)](#interface-value-match-ipv4)
+- [Interface &amp; Value Match (IPv4)](#interface-value-match-ipv4)
 - [Source Match (IPv4)](#source-match-ipv4)
 - [Destination Match (IPv4)](#destination-match-ipv4)
 - [Next Hop Match (IPv4)](#next-hop-match-ipv4)
@@ -14297,7 +14297,7 @@ The table has the following columns:
   Shows the virtual MAC address of the virtual router.
 - **Primary IP Address**
 
-  Shows the numerically lowest IPv4 address in this VLAN. The entry 0.0.0.0 means that the "Primary" address on this VLAN is used. Otherwise all IPv4 addresses configured in this VLAN in "Layer 3 (IPv4) > Subnet" are valid values.
+  Shows the numerically lowest IPv4 address in this VLAN. The entry 0.0.0.0 means that the "Primary" address on this VLAN is used. Otherwise all IPv4 addresses configured in this VLAN in "Layer 3 (IPv4) &gt; Subnet" are valid values.
 - **Router Status**
     
   Shows the current status of the virtual router. Possible values are:
@@ -14438,7 +14438,7 @@ The table has the following columns:
 
 On this page, you configure the monitoring of interfaces.
 
-When the link of a monitored interface changes from "up" to "down", the priority of the assigned VRRP interface is reduced. You configure the value by which the priority is reduced on the page "Layer 3 > VRRP/VRRPv3 > Configuration".
+When the link of a monitored interface changes from "up" to "down", the priority of the assigned VRRP interface is reduced. You configure the value by which the priority is reduced on the page "Layer 3 &gt; VRRP/VRRPv3 &gt; Configuration".
 
 When the link of the interface changes back from "down" to "up", the original priority of the VRRP interface is restored.
 
@@ -14526,7 +14526,7 @@ This section contains information on the following topics:
 
 ###### Introduction
 
-On this page, you create new virtual routers. You can configure other parameters in "Layer 3 (IPv4) > VRRPv3 > Configuration".
+On this page, you create new virtual routers. You can configure other parameters in "Layer 3 (IPv4) &gt; VRRPv3 &gt; Configuration".
 
 > **Note**
 >
@@ -14541,7 +14541,7 @@ The page contains the following:
 
 - **VRRPv3**
 
-  Enable or disable routing using VRRPv3. Can only be enabled when "IPv6 Routing" is enabled under "Layer 3 (IPv6) > Configuration".
+  Enable or disable routing using VRRPv3. Can only be enabled when "IPv6 Routing" is enabled under "Layer 3 (IPv6) &gt; Configuration".
 - **Reply to pings on virtual interfaces**
 
   When enabled, the virtual IPv4 addresses also reply to the ping.
@@ -14575,7 +14575,7 @@ The table has the following columns:
   Shows the virtual MAC address of the virtual router.
 - **Primary IP Address**
 
-  Shows the numerically lowest IPv4 address in this VLAN. The entry 0.0.0.0 means that the "Primary" address on this VLAN is used. Otherwise, all IPv4 addresses configured on this VLAN in the "Layer 3 (IPv4) > Subnets" menu are valid values.
+  Shows the numerically lowest IPv4 address in this VLAN. The entry 0.0.0.0 means that the "Primary" address on this VLAN is used. Otherwise, all IPv4 addresses configured on this VLAN in the "Layer 3 (IPv4) &gt; Subnets" menu are valid values.
 - **Router State**
 
   Shows the current status of the virtual router. Possible values are:
@@ -14728,7 +14728,7 @@ The table has the following columns:
 
 On this page, you configure the monitoring of interfaces.
 
-When the link of a monitored interface changes from "up" to "down", the priority of the assigned VRRP interface is reduced. You configure the value by which the priority is reduced on the page "Layer 3 > VRRP/VRRPv3 > Configuration".
+When the link of a monitored interface changes from "up" to "down", the priority of the assigned VRRP interface is reduced. You configure the value by which the priority is reduced on the page "Layer 3 &gt; VRRP/VRRPv3 &gt; Configuration".
 
 When the link of the interface changes back from "down" to "up", the original priority of the VRRP interface is restored.
 
@@ -15099,7 +15099,7 @@ The page contains the following boxes:
 
 - **Area ID**
 
-  Select the area ID of the area. You configure the ID in "Layer 3 > OSPFv2 > Areas".
+  Select the area ID of the area. You configure the ID in "Layer 3 &gt; OSPFv2 &gt; Areas".
 - **Subnet Address**
 
   Enter the IPv4 address of the network that will be grouped.
@@ -15146,7 +15146,7 @@ The page contains the following boxes:
   > **Note**
   >
   > For the secondary interface select the same Area ID as for the corresponding primary interface.   
-  > The information on whether a primary or secondary interface is involved can be found in the "Address Type" column on the "Layer 3 (IPv4) > Subnets > Overview" page.
+  > The information on whether a primary or secondary interface is involved can be found in the "Address Type" column on the "Layer 3 (IPv4) &gt; Subnets &gt; Overview" page.
 
 The table contains the following columns:
 
@@ -15559,7 +15559,7 @@ The table has the following columns:
   Enable or disable IGMP on the interface.
 - **Operating Status**
 
-  Shows the operating status of the interface, see also "System > Ports > Overview".
+  Shows the operating status of the interface, see also "System &gt; Ports &gt; Overview".
 
   - Up
   - Down
@@ -15963,10 +15963,10 @@ The functions "IPv6 Routing", "VRRPv3" and "OSPFv3" are only available with Laye
     IPv6 routing is disabled.
 - **VRRPv3** (only available with devices with a layer 3 license)
 
-  Enable or disable routing using VRRPv3. To use VRRPv3 , first enable the IPv6 routing function. You can configure other settings in "Layer 3 (IPv6) > VRRPv3".
+  Enable or disable routing using VRRPv3. To use VRRPv3 , first enable the IPv6 routing function. You can configure other settings in "Layer 3 (IPv6) &gt; VRRPv3".
 - **OSPFv3** (only available with devices with a layer 3 license)
 
-  Enable or disable routing using OSPFv3. You can configure other settings in "Layer 3 (IPv6) > OSPFv3".
+  Enable or disable routing using OSPFv3. You can configure other settings in "Layer 3 (IPv6) &gt; OSPFv3".
 
 #### Subnets
 
@@ -16042,7 +16042,7 @@ The table has the following columns:
   - Link Local
 - **Loopback**
 
-  Shows whether or not the "Loopback" property is enabled. You configure the "Loopback" property on the page "Layer 3 (IPv4) > Subnets > Overview".
+  Shows whether or not the "Loopback" property is enabled. You configure the "Loopback" property on the page "Layer 3 (IPv4) &gt; Subnets &gt; Overview".
 - **Duplicate Address Detection Status**
 
   In Address Autoconfiguration (SLAAC), the "Duplicate Address Detection Status" function prevents IPv6 addresses from being assigned twice. The device can only use free IPv6 addresses during autoconfiguration.
@@ -16143,7 +16143,7 @@ This table contains the following columns:
 This section contains information on the following topics:
 
 - [General (IPv6)](#general-ipv6)
-- [Interface & Value Match (IPv6)](#interface-value-match-ipv6)
+- [Interface &amp; Value Match (IPv6)](#interface-value-match-ipv6)
 - [Source Match (IPv6)](#source-match-ipv6)
 - [Destination Match (IPv6)](#destination-match-ipv6)
 - [Next Hop Match (IPv6)](#next-hop-match-ipv6)
@@ -16433,7 +16433,7 @@ On this page you enable the DHCPv6 relay agent on the interface. You also specif
   Select the interface on which the DHCPv6 relay agent accepts DHCPv6 requests.
 - **Server IP Address**
 
-  Enter the IPv6 address of the DHCPv6 server to which the DHCPv6 requests will be forwarded. The address can be either the unicast or the link local multicast address. With the link local multicast address you need to specify an interface, via which the DHCPv6 server can be reached. You configure the interface in "Layer 3 (IPv6) > DHCPv6 Relay Agent > Outgoing Interfaces".
+  Enter the IPv6 address of the DHCPv6 server to which the DHCPv6 requests will be forwarded. The address can be either the unicast or the link local multicast address. With the link local multicast address you need to specify an interface, via which the DHCPv6 server can be reached. You configure the interface in "Layer 3 (IPv6) &gt; DHCPv6 Relay Agent &gt; Outgoing Interfaces".
 
 The table has the following columns:
 
@@ -16483,7 +16483,7 @@ This section contains information on the following topics:
 
 ###### Introduction
 
-On this page, you create new virtual routers. A maximum of 52 virtual routers can be configured. You can configure other parameters in "Layer 3 (IPv6) > VRRPv3 > Configuration".
+On this page, you create new virtual routers. A maximum of 52 virtual routers can be configured. You can configure other parameters in "Layer 3 (IPv6) &gt; VRRPv3 &gt; Configuration".
 
 > **Note**
 >
@@ -16496,7 +16496,7 @@ On this page, you create new virtual routers. A maximum of 52 virtual routers ca
 
 - **VRRPv3**
 
-  Enable or disable routing using VRRPv3. Can only be enabled when "IPv6 Routing" is enabled under "Layer 3 (IPv6) > Configuration".
+  Enable or disable routing using VRRPv3. Can only be enabled when "IPv6 Routing" is enabled under "Layer 3 (IPv6) &gt; Configuration".
 - **Track**
 
   Enable or disable VRID tracking.
@@ -16524,7 +16524,7 @@ The table has the following columns:
   Shows the virtual MAC address of the virtual router.
 - **Primary IP Address**
 
-  Shows the numerically lowest IPv6 address in this VLAN. The entry "::" means that the "Primary" address is used on this VLAN. Otherwise, all IPv6 addresses configured on this VLAN in the "Layer 3 (IPv6) > Subnets" menu are valid values.
+  Shows the numerically lowest IPv6 address in this VLAN. The entry "::" means that the "Primary" address is used on this VLAN. Otherwise, all IPv6 addresses configured on this VLAN in the "Layer 3 (IPv6) &gt; Subnets" menu are valid values.
 - **Router State**
   (only available online)
 
@@ -16680,7 +16680,7 @@ The table has the following columns:
 
 On this page, you configure the monitoring of interfaces.
 
-When the link of a monitored interface changes from "up" to "down", the priority of the assigned VRRP interface is reduced. You configure the value by which the priority is reduced on the page "Layer 3 > VRRP/VRRPv3 > Configuration".
+When the link of a monitored interface changes from "up" to "down", the priority of the assigned VRRP interface is reduced. You configure the value by which the priority is reduced on the page "Layer 3 &gt; VRRP/VRRPv3 &gt; Configuration".
 
 When the link of the interface changes back from "down" to "up", the original priority of the VRRP interface is restored.
 
@@ -16942,7 +16942,7 @@ On this page, you can configure OSPFv3 interfaces.
   > **Note**
   >
   > For the secondary interface select the same Area ID as for the corresponding primary interface.   
-  > The information on whether a primary or secondary interface is involved can be found in "Layer 3 (IPv6) > Subnets".
+  > The information on whether a primary or secondary interface is involved can be found in "Layer 3 (IPv6) &gt; Subnets".
 
 The table contains the following columns:
 
@@ -17152,7 +17152,7 @@ This section contains information on the following topics:
 
 Access to the device is managed by configurable user settings. Set up users with a password for authentication. Assign a role with suitable rights to the users.
 
-The authentication of users can either be performed locally by the device or by an external RADIUS server. You configure how the authentication is handled on the "Security > AAA > General" page.
+The authentication of users can either be performed locally by the device or by an external RADIUS server. You configure how the authentication is handled on the "Security &gt; AAA &gt; General" page.
 
 > **Note**
 >
@@ -17179,7 +17179,7 @@ RADIUS(Remote Authentication Dial-In User Service) is a protocol for authenticat
 
 SINEC INS can be used as RADIUS server, for example. For more information, refer to "[SINEC INS](https://support.industry.siemens.com/cs/de/en/ps/man)".
 
-Depending on the RADIUS authorization mode you have selected on the "Security > AAA > RADIUS Client" page, the device evaluates different information of the RADIUS server.
+Depending on the RADIUS authorization mode you have selected on the "Security &gt; AAA &gt; RADIUS Client" page, the device evaluates different information of the RADIUS server.
 
 **RADIUS authorization mode "Standard"**
 
@@ -17350,7 +17350,7 @@ When you create or delete a local user, this change is also made automatically i
 
     Custom password policy
 
-  You configure the password policy on the page "Security > Passwords > Options".
+  You configure the password policy on the page "Security &gt; Passwords &gt; Options".
 - **Password**
 
   Enter the password for the user. The strength of the password depends on the set password policy.
@@ -17361,7 +17361,7 @@ When you create or delete a local user, this change is also made automatically i
 
   Select a role.
 
-  You can choose between system-defined and self-defined roles, refer to the page "Security > Users > Roles".
+  You can choose between system-defined and self-defined roles, refer to the page "Security &gt; Users &gt; Roles".
 
 The table contains the following columns:
 
@@ -17502,7 +17502,7 @@ The table contains the following columns:
   Shows the name of the group.
 - **Role**
 
-  Select a role. Users who are authenticated with the linked group on the RADIUS server receive the rights of this role locally on the device. You can choose between system-defined and self-defined roles, refer to the page "Security > Users > Roles".
+  Select a role. Users who are authenticated with the linked group on the RADIUS server receive the rights of this role locally on the device. You can choose between system-defined and self-defined roles, refer to the page "Security &gt; Users &gt; Roles".
 - **Description**
 
   Enter a description for the link of the group.to a role. The description text can be up to 100 characters long.
@@ -17573,7 +17573,7 @@ On this page, you can change passwords. If you are logged on with read/write rig
 
     Custom Password Policy
 
-  You configure the password policy on the page "Security > Passwords > Options".
+  You configure the password policy on the page "Security &gt; Passwords &gt; Options".
 - **New name for the Admin user account**
 
   You can change the name the default user "admin" once. Afterwards, renaming "admin" is no longer possible.
@@ -17721,7 +17721,7 @@ The table has the following columns:
   - 802.1X
 
     The server is used only for the 802.1X authentication.
-  - Login & 802.1X
+  - Login &amp; 802.1X
 
     The server is used for both authentication procedures.
 - **RADIUS Server Address**
@@ -17927,7 +17927,7 @@ Table 2 has the following columns:
 
     If this parameter is configured, new MAC addresses are automatically authenticated or rejected depending on the number of currently authenticated MAC addresses on a port (MAC Auth. Max Allowed Addresses).
 
-    If a new MAC address requests on a port and the number of currently authenticated MAC addresses on the port is < the number of maximum permitted MAC addresses, the request is automatically successful.
+    If a new MAC address requests on a port and the number of currently authenticated MAC addresses on the port is &lt; the number of maximum permitted MAC addresses, the request is automatically successful.
 
     If a new MAC address requests on a port and the number of currently authenticated MAC addresses on the port is ≥ the number of maximum permitted MAC addresses, the request automatically fails.
 
@@ -17949,7 +17949,7 @@ Table 2 has the following columns:
     > If the parameter is configured, the following applies to the corresponding port:
     >
     > - Only values ≤ 5 can be configured for "MAC Auth. Max Allowed Addresses".
-    > - New static MAC addresses can only be configured on the port as long as their number is < the number of maximum permitted MAC addresses ("MAC Auth. Max Allowed Addresses").
+    > - New static MAC addresses can only be configured on the port as long as their number is &lt; the number of maximum permitted MAC addresses ("MAC Auth. Max Allowed Addresses").
 - **MAC Auth. only on Timeout**
 
   If this check box is selected, MAC authentication is only possible after a 802.1X timeout, but not after a failed 802.1X authentication. When the check box is not selected, MAC authentication is possible both after a 802.1X timeout and after a failed 802.1X authentication.
@@ -17987,7 +17987,7 @@ Table 2 has the following columns:
   In all cases, a changed PVID is reset to the originally configured value after the device logs out. Any "Port membership" that has been set up is deleted again. This applies to both 802.1X authentication and MAC authentication.
 - **MAC Auth. Max Permitted Addresses**
 
-  - > 1
+  - &gt; 1
 
     Specify how many MAC addresses can communicate on the port at the same time.
 
@@ -18006,7 +18006,7 @@ Table 2 has the following columns:
 
     The device and firmware version determine whether the value 0 can be configured.
 
-    In firmware versions <6.0.2, the value "0" is not a valid entry. If you configure the value "0" with a firmware version ≥ 6.0.2 and copy a firmware version <6.0.2 to the device, the function MAC authentication is deactivated on the relevant ports. Reconfigure the MAC authentication on these ports:
+    In firmware versions &lt;6.0.2, the value "0" is not a valid entry. If you configure the value "0" with a firmware version ≥ 6.0.2 and copy a firmware version &lt;6.0.2 to the device, the function MAC authentication is deactivated on the relevant ports. Reconfigure the MAC authentication on these ports:
 - **Guest VLAN**
 
   Enable this option if you want the end device to be permitted in the guest VLAN if authentication fails.
@@ -18364,9 +18364,9 @@ The table has the following columns:
 > - Dest. Port Min.
 > - Dest. Port Max.
 >
-> Values with the specification "Min." correspond to the function ">", i.e. "Greater than" (gt).
+> Values with the specification "Min." correspond to the function "&gt;", i.e. "Greater than" (gt).
 >
-> Values with the specification "Max." correspond to the function "<", i.e. "Smaller than" (lt).
+> Values with the specification "Max." correspond to the function "&lt;", i.e. "Smaller than" (lt).
 >
 > You can use 8 comparators per protocol (TCP/UDP) and transmission direction (ingress/egress).
 >
@@ -18647,7 +18647,7 @@ The page contains the following boxes:
 
   Shows whether the user-specific Brute Force Prevention is enabled.
 
-  You configure login authentication in the menu "Security > AAA > > General" in the "Login Authentication" drop-down list. The login authentication determines whether you can enable user-specific Brute Force Prevention.
+  You configure login authentication in the menu "Security &gt; AAA &gt; &gt; General" in the "Login Authentication" drop-down list. The login authentication determines whether you can enable user-specific Brute Force Prevention.
 
   - Enabled:
 
@@ -18819,7 +18819,7 @@ SCALANCE W760/W720
 | Client | Access Point | Client | Access Point | Client | Access Point |  |  |  |
 | Information | Start Page |  | **+** | **+** | **+** | **+** | **+** | **+** |
 | Versions |  | **+** | **+** | **+** | **+** | **+** | **+** |  |
-| I&M |  | **+** | **+** | **+** | **+** | **+** | **+** |  |
+| I&amp;M |  | **+** | **+** | **+** | **+** | **+** | **+** |  |
 | ARP / Neighbors | ARP Table | **+** | **+** | **+** | **+** | **+** | **+** |  |
 | IPv6 Neighbor Table | **+** | **+** | **+** | **+** | **+** | **+** |  |  |
 | Log Tables | Event Log | **+** | **+** | **+** | **+** | **+** | **+** |  |
@@ -18866,7 +18866,7 @@ SCALANCE W760/W720
 | Restart | Restart | **+** | **+** | **+** | **+** | **+** | **+** |  |
 | Sleep Mode | **-** | **-** | **-** | **-** | **+** | **+** |  |  |
 | Commit Control |  | **+** | **+** | **+** | **+** | **+** | **+** |  |
-| Load&Save | HTTP | **+** | **+** | **+** | **+** | **+** | **+** |  |
+| Load&amp;Save | HTTP | **+** | **+** | **+** | **+** | **+** | **+** |  |
 | TFTP | **+** | **+** | **+** | **+** | **+** | **+** |  |  |
 | SFTP | **+** | **+** | **+** | **+** | **+** | **+** |  |  |
 | Passwords | **+** | **+** | **+** | **+** | **+** | **+** |  |  |
@@ -18908,7 +18908,7 @@ SCALANCE W760/W720
 | Configuration | **+** | **+** | **+** | **+** | **+** | **+** |  |  |
 | WLAN | Basic | **+** | **+** | **+** | **+** | **+** | **+** |  |
 | Advanced | **+** | **+** | **+** | **+** | **+** | **+** |  |  |
-| Antennas&Power | **-** | **-** | **-** | **-** | **+** | **+** |  |  |
+| Antennas&amp;Power | **-** | **-** | **-** | **-** | **+** | **+** |  |  |
 | Antennas | **+** | **+** | **+** | **+** | **-** | **-** |  |  |
 | Channels Allowed | **+** | **+** | **+** | **+** | **+** | **+** |  |  |
 | 802.11n | **+** | **+** | **-** | **-** | **-** | **-** |  |  |
@@ -19467,7 +19467,7 @@ There are various options for the assignment to VLANs:
 
 - Port-based VLAN
 
-  Each port of a device is assigned a VLAN ID. You configure port-based VLAN in "[Layer 2 > VLAN > Port-based VLAN](#port-based-vlan-1)".
+  Each port of a device is assigned a VLAN ID. You configure port-based VLAN in "[Layer 2 &gt; VLAN &gt; Port-based VLAN](#port-based-vlan-1)".
 - Protocol-based VLAN  
   Each port of a device is assigned a protocol group.
 - Subnet-based VLAN  
@@ -19509,8 +19509,8 @@ The tagged frame has 3 bits for the priority that is also known as Class of Serv
 | 001 | 1 | Best Effort |
 | 010 | 2 | Excellent Effort |
 | 011 | 3 | Critical Applications |
-| 100 | 4 | Video, < 100 ms delay (latency and jitter) |
-| 101 | 5 | Voice (language), < 10 ms delay (latency and jitter) |
+| 100 | 4 | Video, &lt; 100 ms delay (latency and jitter) |
+| 101 | 5 | Voice (language), &lt; 10 ms delay (latency and jitter) |
 | 110 | 6 | Internetwork Control |
 | 111 | 7 (highest) | Network Control |
 
@@ -19652,7 +19652,7 @@ PROFINET is an open standard (IEC 61158/61784) for industrial automation based o
   - Isochronous Real-Time (IRT) communication
 - Seamless integration of fieldbus systems
 
-You configure PROFINET in "[System > PROFINET](#profinet-3)".
+You configure PROFINET in "[System &gt; PROFINET](#profinet-3)".
 
 ##### PROFINET IO
 
@@ -19664,7 +19664,7 @@ Within the framework of PROFINET, PROFINET IO is a communications concept for im
 
 EtherNet/IP (Ethernet/Industrial Protocol) is an open industry standard for industrial real-time Ethernet based on TCP/IP and UDP/IP. With EtherNet/IP, Ethernet is expanded by the Common Industrial Protocol (CIP) at the application layer. In EtherNet/IP, the lower layers of the OSI reference model are adopted by Ethernet with the physical, network and transport functions.
 
-You configure EtherNet/IP in "[System > EtherNet/IP](#ethernetip-4)".
+You configure EtherNet/IP in "[System &gt; EtherNet/IP](#ethernetip-4)".
 
 ##### Common Industrial Protocol
 
@@ -19674,7 +19674,7 @@ The Common Industrial Protocol (CIP) is an application protocol for automation t
 
 Electronic Data Sheet (EDS) is an electronic datasheet for describing devices.
 
-The EDS required for EtherNet/IP operation can be found in "[System > Load&Save](#load-save-1)".
+The EDS required for EtherNet/IP operation can be found in "[System &gt; Load&amp;Save](#load-save-1)".
 
 #### NAT/NAPT
 
@@ -19682,7 +19682,7 @@ The EDS required for EtherNet/IP operation can be found in "[System > Load&Save]
 
 With Network Address Translation (NAT), the IPv4 address in a data packet is replaced by another. NAT is normally used on a gateway between a private LAN and an external network with globally valid IPv4 addresses. A local IPv4 address of the internal LAN is changed to an external global IPv4 address by a NAT device at the gateway.
 
-To translate the internal into the global IPv4 address, the NAT device maintains a translation list. The address assignment is automatic. You configure the address assignment in "[Layer 3 > NAT > Basic](#basic-w700)".
+To translate the internal into the global IPv4 address, the NAT device maintains a translation list. The address assignment is automatic. You configure the address assignment in "[Layer 3 &gt; NAT &gt; Basic](#basic-w700)".
 
 ##### What is NAPT?
 
@@ -19696,7 +19696,7 @@ If several local clients send a query to the same external destination IPv4 addr
 >
 > When using the ISO protocol that operates at layer 2, it is not possible to use NAT.
 
-If a client from the global network wants to use a service in the internal network, the translation list for the static address assignment needs to be configured. You configure the translation list for NAPT in "[Layer 3 > NAT > NAPT](#napt-w700)".
+If a client from the global network wants to use a service in the internal network, the translation list for the static address assignment needs to be configured. You configure the translation list for NAPT in "[Layer 3 &gt; NAT &gt; NAPT](#napt-w700)".
 
 #### iPCF / iPCF-HT / iPCF-MC
 
@@ -19718,15 +19718,15 @@ In iPCF mode, both the search for a new access point and the registration with t
 
 Stable PROFINET communication is only possible when a WLAN client is in a wireless cell with more than 60 % or -65 dBm signal strength at all times. This can be checked by activating and deactivating the various wireless cells.
 
-This does not mean that the client needs to change when there is a signal strength < 60 % (< -65 dBm). Make sure that access points are available with adequate signal strength.
+This does not mean that the client needs to change when there is a signal strength &lt; 60 % (&lt; -65 dBm). Make sure that access points are available with adequate signal strength.
 
-You configure iPCF in "[iFeatures > iPCF > iPCF](#ipcf)".
+You configure iPCF in "[iFeatures &gt; iPCF &gt; iPCF](#ipcf)".
 
 **iPCF-HT**
 
 If a higher data throughput is required for iPCF, iPCF-HT is used. With this you can, for example, alongside PROFINET also transfer video data. This is achieved by more effective transfer of data packets using frame-bursting (A-MPDU). The individual data packets are grouped together that are intended for the same receiver station (client) and that have the same prioritization.
 
-You configure iPCF-HT in "[iFeatures > iPCF > iPCF-HT](#ipcf-ht)".
+You configure iPCF-HT in "[iFeatures &gt; iPCF &gt; iPCF-HT](#ipcf-ht)".
 
 **iPCF-MC**
 
@@ -19734,7 +19734,7 @@ For freely moving nodes that communicate independently of a RCoax cable or direc
 
 It is necessary to use an access point with two wireless interfaces a so-called dual access point. The one interface operates as management channel and sends short frames (beacons) with administrative information (e.g. channel setting of the data channel and SSID). The other interface (data channel) exclusively transfers the user data.
 
-You configure iPCF-MC in "[iFeatures > iPCF > iPCF-MC](#ipcf-mc)".
+You configure iPCF-MC in "[iFeatures &gt; iPCF &gt; iPCF-MC](#ipcf-mc)".
 
 The following graphic shows a configuration example for iPCF-MC.
 
@@ -19786,7 +19786,7 @@ During this time the other antennas are inactive and the legally permitted trans
 
 In particular in applications in which MIMO cannot be used or brings no advantage, this allows data to be transmitted at the highest possible data transmission rate.
 
-You configure iREF in "[iFeatures > iREF](#iref-1)"
+You configure iREF in "[iFeatures &gt; iREF](#iref-1)"
 
 ![How it works](images/126343548811_DV_resource.Stream@PNG-en-US.png)
 
@@ -19832,7 +19832,7 @@ With iPRP the redundant partners (here: AP1 and AP3 or client A and client B) co
 
 If for example the communication between AP1 and client A is very slow, the slower frame is discarded at the receiving end.
 
-You configure iPRP in "[iFeatures > iPRP](#iprp-1)".
+You configure iPRP in "[iFeatures &gt; iPRP](#iprp-1)".
 
 **Requirement**
 
@@ -20063,7 +20063,7 @@ The following options are available to assign an IP address to the device:
 - CLI via the serial interface  
   For further information, refer to the configuration manuals for the Command Line Interface".
 
-  You will find the configuration manuals at Siemens Industry Automation and Drives Service & Support on the Internet under the following entry IDs.
+  You will find the configuration manuals at Siemens Industry Automation and Drives Service &amp; Support on the Internet under the following entry IDs.
 
   - SCALANCE W780/W740 Command Line Interface - entry ID [62515451](http://support.automation.siemens.com/WW/view/en/62515451)
   - SCALANCE W770/W730 Command Line Interface - entry ID [89534887](http://support.automation.siemens.com/WW/view/en/89534887)
@@ -20158,7 +20158,7 @@ As an example, an entry will be created and deleted on the Syslog client. The pr
 
 1. Select the device in the network or device view.
 2. Open the properties of the device in the Inspector window.
-3. In the Inspector window go to System > Syslog client.
+3. In the Inspector window go to System &gt; Syslog client.
 4. Enter the IP address for the Syslog server.
 5. Click in the table. Select the entry "New entry" in the shortcut menu. A new entry is created in the table.
 
@@ -20206,7 +20206,7 @@ The following error message can occur during downloading when no connection can 
 This section contains information on the following topics:
 
 - [Versions](#versions-1)
-- [I&M](#im-1)
+- [I&amp;M](#im-1)
 - [ARP / neighbor table](#arp-neighbor-table-1)
 - [Log tables](#log-tables)
 - [Fault](#fault-1)
@@ -20398,7 +20398,7 @@ This section contains information on the following topics:
 >
 > The page is only available if there is an online connection to the device.
 
-The device allows you to log events that occur, some of which you can specify in " System > Events". This, for example, allows you to record when an authentication attempt failed or when the connection status of a port has changed. The content of the events log table is retained even when the device is turned off.
+The device allows you to log events that occur, some of which you can specify in " System &gt; Events". This, for example, allows you to record when an authentication attempt failed or when the connection status of a port has changed. The content of the events log table is retained even when the device is turned off.
 
 ###### Description of the displayed values
 
@@ -20525,8 +20525,8 @@ If a fault occurs, it is shown on this page. On the device, faults are indicated
 
 Internal errors of the device and the errors that you configure on the following pages are indicated:
 
-- "System > Events"
-- "System" > Fault Monitoring"
+- "System &gt; Events"
+- "System" &gt; Fault Monitoring"
 
 The calculation of the time of an error always begins after the last system start.
 
@@ -20576,7 +20576,7 @@ The page contains the following boxes:
 
 - **Spanning Tree Mode**
 
-  Shows the set mode. You specify the mode in "Layer 2 > Configuration" and in "Layer 2 > MSTP > General".  
+  Shows the set mode. You specify the mode in "Layer 2 &gt; Configuration" and in "Layer 2 &gt; MSTP &gt; General".  
   The following values are possible:
 
   - '-'
@@ -20966,7 +20966,7 @@ This page shows whether IPv4 addresses were assigned to the devices by the DHCP 
   Shows the MAC address or he client ID of the DHCP client.
 - **Assignment method**
 
-  Shows whether the IPv4 address was assigned statically or dynamically. You configure the static entries in "System > DHCP > Static Leases".
+  Shows whether the IPv4 address was assigned statically or dynamically. You configure the static entries in "System &gt; DHCP &gt; Static Leases".
 - **Assignment status**
     
   Shows the status of the assignment.
@@ -20995,7 +20995,7 @@ This page shows whether IPv4 addresses were assigned to the devices by the DHCP 
 
 ##### Status of the neighborhood table
 
-This page shows the current content of the neighborhood table. This table stores the information that the LLDP agent has received from connected devices. You set the interfaces via which the LLDP agent receives or sends information in the following section: "Layer 2 > LLDP".
+This page shows the current content of the neighborhood table. This table stores the information that the LLDP agent has received from connected devices. You set the interfaces via which the LLDP agent receives or sends information in the following section: "Layer 2 &gt; LLDP".
 
 ##### Description
 
@@ -21037,7 +21037,7 @@ The table contains the following columns:
 >
 > The page is only available if there is an online connection to the device.
 
-This page displays the created SNMPv3 groups. You configure the SNMPv3 groups in "System" > SNMP"..
+This page displays the created SNMPv3 groups. You configure the SNMPv3 groups in "System" &gt; SNMP"..
 
 ##### Description
 
@@ -21078,13 +21078,13 @@ The "Services" list shows the security settings.
 
 - **Telnet Server**
 
-  You configure the setting in "System > Configuration"
+  You configure the setting in "System &gt; Configuration"
 
   - Enabled: Encrypted access to the CLI
   - Disabled: No encrypted access to the CLI
 - **SSH Server**
 
-  You configure the setting in "System > Configuration".
+  You configure the setting in "System &gt; Configuration".
 
   - Enabled: Encrypted access to the CLI
   - Disabled: No encrypted access to the CLI
@@ -21093,13 +21093,13 @@ The "Services" list shows the security settings.
   This field shows the SSH fingerprint.
 - **Web Server**
 
-  You configure the setting in "System > Configuration"
+  You configure the setting in "System &gt; Configuration"
 
   - HTTP/HTTPS: Access to the WBM is possible with HTTP and HTTPS.
   - HTTPS: Access to the WBM is now only possible with HTTPS.
 - **SNMP**
 
-  You configure the setting in "System > SNMP > General".
+  You configure the setting in "System &gt; SNMP &gt; General".
 
   - "-" (SNMP disabled)  
     Access to device parameters via SNMP is not possible.
@@ -21109,7 +21109,7 @@ The "Services" list shows the security settings.
     Access to device parameters is possible only with SNMP version 3.
 - **Management ACL** (not with WxM76x)
 
-  You configure the setting in "Security > Management ACL".
+  You configure the setting in "Security &gt; Management ACL".
 
   - Disabled: no access restriction
 
@@ -21122,7 +21122,7 @@ The "Services" list shows the security settings.
     The access control is enabled and access rules have been defined.
 - **Login Authentication**
 
-  You configure the setting in "Security > AAA > General".
+  You configure the setting in "Security &gt; AAA &gt; General".
 
   - Local
 
@@ -21146,7 +21146,7 @@ The "Services" list shows the security settings.
 
 **Local and external user accounts**
 
-You configure local user accounts and roles in "Security > User Accounts".
+You configure local user accounts and roles in "Security &gt; User Accounts".
 
 When you create a local user account, an external user account is generated automatically. Local user accounts involve users each with a password for logging in on the device.
 
@@ -21165,7 +21165,7 @@ The table "Local User Accounts" has the following columns:
   Shows the name of the local user.
 - **Role**
 
-  Shows the role of the user. You can obtain more information on the function rights of the role in "Information > Security > Roles".
+  Shows the role of the user. You can obtain more information on the function rights of the role in "Information &gt; Security &gt; Roles".
 
 ##### Supported Function Rights
 
@@ -21761,7 +21761,7 @@ The table has the following columns:
   Shows the available VAP interfaces.
 - **Destination Address / State**
 
-  Shows which destination address is monitored and the status of the connection. You configure the destination address in "Interfaces > WLAN > Force Roaming".
+  Shows which destination address is monitored and the status of the connection. You configure the destination address in "Interfaces &gt; WLAN &gt; Force Roaming".
 
   - not configured  
     No destination address is configured.
@@ -22206,7 +22206,7 @@ The table has the following columns:
   > With a suitable configuration, the SCALANCE W device forwards AeroScout frames but does not process or evaluate them itself. This is done only in the "AeroScout System Manager" program.
 - **AeroScout Status**
     
-  Shows whether or not AeroScout is enabled. You can set this for each WLAN interface of the device in "iFeatures > AeroScout". If you have enabled forwarding, "Active" is displayed here, otherwise "Inactive".
+  Shows whether or not AeroScout is enabled. You can set this for each WLAN interface of the device in "iFeatures &gt; AeroScout". If you have enabled forwarding, "Active" is displayed here, otherwise "Inactive".
 - **Engine Port**
     
   Shows the port at which the device expects UDP datagrams from the AeroScout Engine.
@@ -22286,7 +22286,7 @@ This section contains information on the following topics:
 - [DNS](#dns-1)
 - [Restart](#restart-1)
 - [Commit Control](#commit-control)
-- [Load & save](#load-save-1)
+- [Load &amp; save](#load-save-1)
 - [Events](#events-1)
 - [SMTP Client](#smtp-client-1)
 - [DHCPv4](#dhcpv4-1)
@@ -22413,10 +22413,10 @@ The page contains the following boxes:
   Select the minimum TLS version to be used for the encryption from the drop-down list. Communication is not possible with devices that do not support the required TLS version.
 - **SMTP Client**
 
-  Enable or disable the SMTP client. You can configure other settings in "System > SMTP Client".
+  Enable or disable the SMTP client. You can configure other settings in "System &gt; SMTP Client".
 - **Syslog Client**
 
-  Enable or disable the Syslog client. You can configure other settings in "System > Syslog Client".
+  Enable or disable the Syslog client. You can configure other settings in "System &gt; Syslog Client".
 - **DCP Server**
 
   Specify whether or not the device can be accessed with DCP (Discovery and Configuration Protocol):
@@ -22432,13 +22432,13 @@ The page contains the following boxes:
   Select the setting from the drop-down list. The following settings are possible:
 
   - Manual  
-    The system time is set manually. You can configure other settings in "System > System Time > Manual Setting".
+    The system time is set manually. You can configure other settings in "System &gt; System Time &gt; Manual Setting".
   - SIMATIC Time  
-    The system time is set using a SIMATIC time transmitter. You can configure other settings in "System > System Time > SIMATIC Time Client".
+    The system time is set using a SIMATIC time transmitter. You can configure other settings in "System &gt; System Time &gt; SIMATIC Time Client".
   - SNTP Client  
-    The system time is set via an SNTP server. You can configure other settings in "System > System Time > SNTP Client".
+    The system time is set via an SNTP server. You can configure other settings in "System &gt; System Time &gt; SNTP Client".
   - NTP Client  
-    The system time is set via an NTP server. You can configure other settings in "System > System Time > NTP Client".
+    The system time is set via an NTP server. You can configure other settings in "System &gt; System Time &gt; NTP Client".
 - **SNMP**
 
   Select the protocol from the drop-down list. The following settings are possible:
@@ -22446,9 +22446,9 @@ The page contains the following boxes:
   - "-" (SNMP disabled)  
     Access to device parameters via SNMP is not possible.
   - SNMPv1/v2c/v3  
-    Access to device parameters is possible with SNMP versions 1, 2c or 3. You can configure other settings in "System > SNMP > General".
+    Access to device parameters is possible with SNMP versions 1, 2c or 3. You can configure other settings in "System &gt; SNMP &gt; General".
   - SNMPv3  
-    Access to device parameters is possible only with SNMP version 3. You can configure other settings in "System > SNMP > General".
+    Access to device parameters is possible only with SNMP version 3. You can configure other settings in "System &gt; SNMP &gt; General".
 - **SNMPv1/v2 Read-Only**
 
   Enable or disable write access to SNMP variables with SNMPv1/v2c.
@@ -22562,7 +22562,7 @@ On this page, you configure the IPv4 address for the device.
 - **Default gateway**Enter the IPv4 address of the default gateway to be able to communicate with devices in another subnet, for example diagnostics stations, e-mail server.
 - **Agent VLAN ID**
 
-  Select the VLAN ID from the drop-down list. The drop-down list is only available if "802.1 Q VLAN Bridge" is set for the "Base Bridge Mode" parameter. You configure the parameter in "Layer 2 > VLAN > General". You can only select VLANs that have already been configured.
+  Select the VLAN ID from the drop-down list. The drop-down list is only available if "802.1 Q VLAN Bridge" is set for the "Base Bridge Mode" parameter. You configure the parameter in "Layer 2 &gt; VLAN &gt; General". You can only select VLANs that have already been configured.
 
   > **Note**
   >
@@ -22855,7 +22855,7 @@ To restart the device, the buttons on this page provide you with the following o
   Value range 300 ... 86400 seconds
 - **Backup**
 
-  The configuration backups under "System **>** Configuration Backup" are available for selection. Before the scheduled restart, the device applies the configurations of the selected backup and continues working with them after the restart.
+  The configuration backups under "System **&gt;** Configuration Backup" are available for selection. Before the scheduled restart, the device applies the configurations of the selected backup and continues working with them after the restart.
 
   All configurations made up to this point that have not been saved in a backup are lost.
 - **Schedule restart**
@@ -22870,7 +22870,7 @@ To restart the device, the buttons on this page provide you with the following o
   >
   > The scheduled restart is performed after the time has elapsed without any further message. Unsaved configuration changes are lost.
   >
-  > Save the current configuration via "System > Backup of configuration" before setting the timer for the restart.
+  > Save the current configuration via "System &gt; Backup of configuration" before setting the timer for the restart.
 - **Cancel scheduled restart**
 
   With this button, you disable the timer for the scheduled restart.
@@ -22952,7 +22952,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed.
 >
-> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System > PLUG".
+> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System &gt; PLUG".
 
 **Configuration files**
 
@@ -22961,7 +22961,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 > **Configuration files and Trial/Automatic Save mode**
 >
 > In "Automatic Save" mode, the data is saved automatically before the configuration files (ConfigPack and Config) are transferred.  
-> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System > Configuration" WBM page to save changes in the configuration file.
+> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System &gt; Configuration" WBM page to save changes in the configuration file.
 
 **CLI script file**
 
@@ -22981,7 +22981,7 @@ Requirements:
 - Same firmware version
 - Password
 
-  You assign the password in the WBM under "System > Load&Save > Passwords".
+  You assign the password in the WBM under "System &gt; Load&amp;Save &gt; Passwords".
 
 You can use the file types as follows:
 
@@ -23028,7 +23028,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed.
 >
-> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System > PLUG".
+> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System &gt; PLUG".
 
 **Configuration files**
 
@@ -23037,7 +23037,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 > **Configuration files and Trial/Automatic Save mode**
 >
 > In "Automatic Save" mode, the data is saved automatically before the configuration files (ConfigPack and Config) are transferred.  
-> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System > Configuration" WBM page to save changes in the configuration file.
+> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System &gt; Configuration" WBM page to save changes in the configuration file.
 
 **CLI script file**
 
@@ -23059,7 +23059,7 @@ Requirements:
 - Same firmware version
 - Password
 
-  You assign the password in the WBM under "System > Load&Save > Passwords".
+  You assign the password in the WBM under "System &gt; Load&amp;Save &gt; Passwords".
 
 You can use the file types as follows:
 
@@ -23138,7 +23138,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 > **Configuration files and Trial/Automatic Save mode**
 >
 > In "Automatic Save" mode, the data is saved automatically before the configuration files (ConfigPack and Config) are transferred.  
-> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System > Configuration" WBM page to save changes in the configuration file.
+> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System &gt; Configuration" WBM page to save changes in the configuration file.
 
 **CLI script file**
 
@@ -23160,7 +23160,7 @@ Requirements:
 - Same firmware version
 - Password
 
-  You assign the password in the WBM under "System > Load&Save > Passwords".
+  You assign the password in the WBM under "System &gt; Load&amp;Save &gt; Passwords".
 
 You can use the file types as follows:
 
@@ -23293,9 +23293,9 @@ Table 2 has the following columns:
   The column contains the following values:
 
   - **Cold/Warm Restart**The device was turned on or restarted by the user.
-  - Link ChangeThis event occurs only when the port status is monitored and has changed, see "System > Fault Monitoring > Link Change".
+  - Link ChangeThis event occurs only when the port status is monitored and has changed, see "System &gt; Fault Monitoring &gt; Link Change".
   - **Authentication Failure**This event occurs when attempting access with a bad password.
-  - Power ChangeThis event occurs only when power supply lines 1 and 2 are monitored. It indicates that there was a change to line 1 or line 2. The event occurs when the PoE power supply has failed, see "System > Fault Monitoring > Power Supply".
+  - Power ChangeThis event occurs only when power supply lines 1 and 2 are monitored. It indicates that there was a change to line 1 or line 2. The event occurs when the PoE power supply has failed, see "System &gt; Fault Monitoring &gt; Power Supply".
   - Spanning Tree ChangeThe STP or RSTP or MSTP topology has changed.
   - Fault State ChangeThe fault status has changed. The fault state can relate to the activated port monitoring, the response of the signaling contact or the power supply monitoring.
 
@@ -23322,13 +23322,13 @@ Table 2 has the following columns:
   - E-mail  
     The device sends an e-mail. This is only possible if the SMTP server is set up and the "SMTP Client" function is enabled.
   - Trap  
-    The device sends an SNMP trap. This is only possible if "SNMPv1 Traps" is enabled in "System > Configuration".
+    The device sends an SNMP trap. This is only possible if "SNMPv1 Traps" is enabled in "System &gt; Configuration".
   - Log Table  
-    The device writes an entry to the event log table. The content of the event log table is displayed in "Information > Log Tables > Event Log".
+    The device writes an entry to the event log table. The content of the event log table is displayed in "Information &gt; Log Tables &gt; Event Log".
   - Syslog  
     The device writes an entry to the system log server. This is only possible if the system log server is set up and the "Syslog Client" function is enabled.
   - Fault  
-    The device triggers a fault. The error LED lights up and the currently pending error is displayed under "Information > Faults".
+    The device triggers a fault. The error LED lights up and the currently pending error is displayed under "Information &gt; Faults".
 
 ##### Severity filter
 
@@ -23385,9 +23385,9 @@ The setting "E-mail" must be enabled in the events for e-mails to be sent. The m
 
 ###### Requirements for sending e-mails
 
-- "E-mail" is activated for the relevant event in "System > Events > Configuration".
-- The desired severity is configured under "System > Events > Severity level".
-- At least one entry exists under "System > SMTP Client > Recipient" and the setting "Send" is activated.
+- "E-mail" is activated for the relevant event in "System &gt; Events &gt; Configuration".
+- The desired severity is configured under "System &gt; Events &gt; Severity level".
+- At least one entry exists under "System &gt; SMTP Client &gt; Recipient" and the setting "Send" is activated.
 
 ###### Description
 
@@ -23543,7 +23543,7 @@ On this page, specify the IPv4 address band from which the device receives any I
 - In client mode
 
   - The connected devices are configured so that they obtain the IPv4 address from a DHCP server.
-  - NAT is enabled. You enable NAT under "Layer 3 > NAT".
+  - NAT is enabled. You enable NAT under "Layer 3 &gt; NAT".
 
 ###### Settings
 
@@ -23781,7 +23781,7 @@ If an alarm event occurs, a device can send SNMP traps (alarm frames) to up to t
 
 > **Note**
 >
-> SNMP traps are sent only when the "SNMPv1 Traps" setting was selected in "SNMP > General" or in "System > Configuration".
+> SNMP traps are sent only when the "SNMPv1 Traps" setting was selected in "SNMP &gt; General" or in "System &gt; Configuration".
 
 ###### Description
 
@@ -24738,7 +24738,7 @@ to the Syslog server.
 ##### Requirements for sending Syslog entries
 
 - The Syslog client is enabled.
-- In "System > Events > Configuration", "Syslog" is activated for the relevant event.
+- In "System &gt; Events &gt; Configuration", "Syslog" is activated for the relevant event.
 - There is a Syslog server in your network that receives the Syslog messages.
 - The IP address or the FQDN (Fully Qualified Domain Name) of the Syslog server is entered on the device.
 
@@ -24790,9 +24790,9 @@ A fault is then signaled by the message system when there is no power on a monit
 >
 > You will find the permitted operating voltage limits in the operating instructions of the device.
 
-If a fault occurs, the error LED lights up on the device. The currently pending error is displayed under "Information > Errors".
+If a fault occurs, the error LED lights up on the device. The currently pending error is displayed under "Information &gt; Errors".
 
-In addition, the corresponding error message is entered in the result log table. The content of the event log table is displayed in "Information > Log Tables > Event Log".
+In addition, the corresponding error message is entered in the result log table. The content of the event log table is displayed in "Information &gt; Log Tables &gt; Event Log".
 
 ###### Settings for monitoring the power supply
 
@@ -24841,9 +24841,9 @@ The page contains the following boxes:
 
     A log entry is created and the port is switched off.
 
-  Acknowledge the error message manually under "Information > Error".
+  Acknowledge the error message manually under "Information &gt; Error".
 
-  Activate the port manually under "System > Ports > Configuration".
+  Activate the port manually under "System &gt; Ports &gt; Configuration".
 - **Flap Time [s]**
 
   Configure the time interval in which the maximum number of allowed changeovers between "Link up" and "Link down" is monitored.
@@ -24995,7 +24995,7 @@ This section contains information on the following topics:
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed. In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" since the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data.
 >
-> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System > PLUG".
+> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System &gt; PLUG".
 
 ###### Information about the PLUG configuration
 
@@ -25073,7 +25073,7 @@ The table has the following rows:
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed. In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" since the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data.
 >
-> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System > PLUG".
+> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System &gt; PLUG".
 
 ###### Information about the license of the PLUG
 
@@ -25179,13 +25179,13 @@ On this page, you can select an interface and search for devices that are reacha
 >
 > **DCP Discovery**
 >
-> The function is only available in the VLAN associated with the TIA interface. You can configure the TIA interface under "Layer 3 > Subnets > Configuration".
+> The function is only available in the VLAN associated with the TIA interface. You can configure the TIA interface under "Layer 3 &gt; Subnets &gt; Configuration".
 
 **Requirement**:
 
 To adapt network parameters, DCP requires write access to the device. If access is write-protected, the network parameters cannot be configured.
 
-On the SCALANCE devices, you configure the access in "System > Configuration".
+On the SCALANCE devices, you configure the access in "System &gt; Configuration".
 
 ##### Description
 
@@ -25260,7 +25260,7 @@ The table has the following columns:
 
 On this page, you can save backups of your configuration. Depending on the available memory and the file size of the backup, you can create multiple backups.
 
-The created backups are saved under the "ConfigPackBackup" file type. On the "System > Load&Save > HTTP/TFTP" page you can save configuration backups as ZIP file on your client PC or load them from there.
+The created backups are saved under the "ConfigPackBackup" file type. On the "System &gt; Load&amp;Save &gt; HTTP/TFTP" page you can save configuration backups as ZIP file on your client PC or load them from there.
 
 ##### Description
 
@@ -25318,7 +25318,7 @@ The command is sent in a TCP packet that conforms to the following format:
 > Additionally allowed in the password:
 >
 > - Space
-> - ! " % & / ( ) = ? * + < > ' ,
+> - ! " % &amp; / ( ) = ? * + &lt; &gt; ' ,
 
 ##### Description
 
@@ -25326,7 +25326,7 @@ The page contains the following:
 
 - **Enable**
 
-  Enable or disable reception of the TCP packets. To log this, activate the "TCP Event Log" event under "System > Event".
+  Enable or disable reception of the TCP packets. To log this, activate the "TCP Event Log" event under "System &gt; Event".
 - **User Name**
 
   Enter the user name to check the reception of the TCP packet. The user name and password are entered in the TCP packet.
@@ -25644,7 +25644,7 @@ This section contains information on the following topics:
   >
   > **Fragmentation length**
   >
-  > If you select the transmission standard "802.11n", "802.11n only" or "Auto" (only in client mode), you cannot set the threshold value of the fragmentation length; see "Fragmentation Length Threshold" in "Interfaces > WLAN > Advanced".
+  > If you select the transmission standard "802.11n", "802.11n only" or "Auto" (only in client mode), you cannot set the threshold value of the fragmentation length; see "Fragmentation Length Threshold" in "Interfaces &gt; WLAN &gt; Advanced".
 - **DFS (802.11h)**
     
   Enables or disables the "Dynamic Frequency Selection (DFS)" function.
@@ -25761,7 +25761,7 @@ The table has the following columns:
   - 2.4 GHz + 5 GHz
 
     Dual operation in access point mode. The prerequisite is that CLP 2GB W700 AP iFeatures is plugged in and accepted.  
-    In dual operation, all settings for antennas on the "Antennas&Line" page are set to "Not defined". After restarting the device without the CLP plugged in, the frequency band is changed to the default setting of 5 GHz and the WLAN interface is disabled.  
+    In dual operation, all settings for antennas on the "Antennas&amp;Line" page are set to "Not defined". After restarting the device without the CLP plugged in, the frequency band is changed to the default setting of 5 GHz and the WLAN interface is disabled.  
     After changing the WLAN configuration, e.g. the country code or outdoor mode, the configured antennas are set to "Not defined" if they are not available for the changed configuration, and the frequency band automatically changes to the default setting of 5 GHz.  
     Note that the features iPRP and iPCF-2 cannot be enabled on both interfaces at the same time. They cannot be enabled on both WLAN interfaces during active dual operation.
 
@@ -25874,7 +25874,7 @@ You only need to adapt the settings on this page if the device cannot be used as
 
   > **Note**
   >
-  > You can only edit this value if the you have set the transmission standard "802.11g" (2.4 GHz) or "802.11 a" (5 GHz), see "WLAN Mode" in "Interfaces > WLAN > Basic".
+  > You can only edit this value if the you have set the transmission standard "802.11g" (2.4 GHz) or "802.11 a" (5 GHz), see "WLAN Mode" in "Interfaces &gt; WLAN &gt; Basic".
 - **HW Retries**
     
   Specify the number of hardware retries. The hardware retry is performed by the WLAN chip itself when it tries to repeat an unacknowledged packet immediately.
@@ -25889,7 +25889,7 @@ You only need to adapt the settings on this page if the device cannot be used as
 
   - Enabled
 
-    This function is only available if you have enabled the "DFS" function on the "Basic" page. This function is suitable for systems with several access points connected via an Ethernet network and that send on the same channel. When an access point detects a radar signal it distributes this information to all connected access points. If at least one further access point verifies the radar signal within 40 ms, all connected access points are informed. All the devices sending on this channel change to a different channel. The channel is blocked for 30 minutes for the access points in the network. If you have configured "Auto" for the channel on the "Interfaces > WLAN > AP" page, the function cannot be used reliably. In this case the verification of the radar signals is only possible when at least two connected access points happen to transmit on the same channel. If only one access point detects a signal on a channel, it treats this as a valid radar signal.
+    This function is only available if you have enabled the "DFS" function on the "Basic" page. This function is suitable for systems with several access points connected via an Ethernet network and that send on the same channel. When an access point detects a radar signal it distributes this information to all connected access points. If at least one further access point verifies the radar signal within 40 ms, all connected access points are informed. All the devices sending on this channel change to a different channel. The channel is blocked for 30 minutes for the access points in the network. If you have configured "Auto" for the channel on the "Interfaces &gt; WLAN &gt; AP" page, the function cannot be used reliably. In this case the verification of the radar signals is only possible when at least two connected access points happen to transmit on the same channel. If only one access point detects a signal on a channel, it treats this as a valid radar signal.
   - Disabled
 
     The function is not used. When an access point detects a radar signal it changes to another channel.. The configured channel is no longer taken into account.
@@ -25897,7 +25897,7 @@ You only need to adapt the settings on this page if the device cannot be used as
 
   - Enabled
 
-    This function is only available if you have enabled the "DFS" function on the "Basic" page. If the configured channel of a WLAN interface was blocked due to radar detection and is released again after 30 minutes the access point changes automatically to the configured channel. Before the access point starts the communication on the configured channel it searches 60 seconds for primary users on the channel. During this time the access point does not send beacons. If signals are found on the channel, the access point changes channel and repeats the check. Only when no signals from primary users are detected after 60 seconds does the access point send on the channel. If you have configured "Auto" for the channel on the "Interfaces > WLAN > AP" page, the device does not have a configured channel to which it can return.
+    This function is only available if you have enabled the "DFS" function on the "Basic" page. If the configured channel of a WLAN interface was blocked due to radar detection and is released again after 30 minutes the access point changes automatically to the configured channel. Before the access point starts the communication on the configured channel it searches 60 seconds for primary users on the channel. During this time the access point does not send beacons. If signals are found on the channel, the access point changes channel and repeats the check. Only when no signals from primary users are detected after 60 seconds does the access point send on the channel. If you have configured "Auto" for the channel on the "Interfaces &gt; WLAN &gt; AP" page, the device does not have a configured channel to which it can return.
   - Disabled
 
     The function is not used.
@@ -25930,7 +25930,7 @@ The table has the following columns:
 
   Specify the number of hardware retries.
 
-  Hardware retries >30 are not recommended.
+  Hardware retries &gt;30 are not recommended.
 
   The hardware retry is performed by the WLAN chip itself when it tries to repeat an unacknowledged packet immediately.
 
@@ -25952,7 +25952,7 @@ This section contains information on the following topics:
 
 - [Overview](#overview-4)
 - [Antennas (W700/W1700)](#antennas-w700w1700)
-- [Antennas&Power (WxM700)](#antennaspower-wxm700)
+- [Antennas&amp;Power (WxM700)](#antennaspower-wxm700)
 
 ###### Overview
 
@@ -26050,18 +26050,18 @@ Only the antenna mode can be configured for internal antennas.
 
   When enabled, the antenna that offers the better signal to the access point is automatically selected for the transmission.
 
-  The signal strengths of the two antennas are displayed under "Information > WLAN > Radio interfaces information".
+  The signal strengths of the two antennas are displayed under "Information &gt; WLAN &gt; Radio interfaces information".
 
   Requirements for DTAS:
 
-  - MCS < = 7 is set at the access point.
+  - MCS &lt; = 7 is set at the access point.
   - Two antennas configured with the antenna mode "RX/TX".
   - If three antennas are available, the "Antenna Type" "Not used (Connect 50 Ohm Termination)" must be set for the third antenna.
 - **Antenna Configuration for Channel Width 160 MH**(not with SCALANCE W1788-2IA M12)
 
   - Access point mode (not configurable)
 
-    If the channel bandwidth of WLAN 1 or WLAN 2 is set to 160 MHz, the setting is displayed. The channel bandwidth is configured under "Interfaces > WLAN > AP".
+    If the channel bandwidth of WLAN 1 or WLAN 2 is set to 160 MHz, the setting is displayed. The channel bandwidth is configured under "Interfaces &gt; WLAN &gt; AP".
   - Client mode (configurable)
 
     If enabled, the channel bandwidth on the WLAN interface is set to 160 MHz. The prerequisite is that DFS and IEEE 802.11ac are enabled. There are only enough channels available for operation at 160 MHz if DFS is enabled.
@@ -26554,7 +26554,7 @@ In normal operation, the access point is used as an interface to a network and c
   >
   > - All access points that will communicate with each other must use the same channel, the same transmission procedure and the same data rate.
   > - You can select either WEP or WPA(2)-PSK as the encryption method.   
-  >   You configure the security settings in the assigned VAP interface: "Security > WLAN > Basic settings"  
+  >   You configure the security settings in the assigned VAP interface: "Security &gt; WLAN &gt; Basic settings"  
   >   You cannot use authentication via RADIUS server for a WDS connection.
   > - In the IEEE 802.11h transmission mode, it is not practical to select the WDS mode. In WDS mode, all access points must use the same channel. If a signal from a primary user is detected by an access point, the channel is changed automatically and the existing connection is then terminated.
 
@@ -26670,13 +26670,13 @@ Table 3 (MCS Index) consists of the following columns:
   Specifies the WLAN interface to which the information relates.
 - **MCS Index**
     
-  Shows the supported MCS indexes. The displayed MCS indexes depend on the settings "Antenna Type" and "Antenna Mode". You will find the settings in "Interfaces > WLAN > Antennas". If, for example, you only use one antenna, only the MCS 0 to 7 are displayed.
+  Shows the supported MCS indexes. The displayed MCS indexes depend on the settings "Antenna Type" and "Antenna Mode". You will find the settings in "Interfaces &gt; WLAN &gt; Antennas". If, for example, you only use one antenna, only the MCS 0 to 7 are displayed.
 - **Streams**
     
   Shows the maximum possible number of parallel data streams that can be transmitted with the selected MCS index.
 - **Data Rate [Mbps]**
     
-  Shows the supported data transmission speeds in megabits per second. The displayed data transmission speeds depend on the settings "Guard Interval" and "HT Channel Width". The "HT Channel Width" setting can be found in "Interfaces > WLAN > Access Point". The "Guard Interval" setting can be found in "Interfaces > WLAN > 802.11n"
+  Shows the supported data transmission speeds in megabits per second. The displayed data transmission speeds depend on the settings "Guard Interval" and "HT Channel Width". The "HT Channel Width" setting can be found in "Interfaces &gt; WLAN &gt; Access Point". The "Guard Interval" setting can be found in "Interfaces &gt; WLAN &gt; 802.11n"
 - **Enabled**
     
   Enable the setting to assign the required data transmission speed to the WLAN interface.
@@ -26809,7 +26809,7 @@ Table 3 has the following columns:
   For the SSID, ASCII code 0x20 to 0x7e is used.
 - **Security**
 
-  Select a security context. You create and configure a security context in "Security > WLAN > Basic".
+  Select a security context. You create and configure a security context in "Security &gt; WLAN &gt; Basic".
 
   Default setting: Context 1
 
@@ -26892,7 +26892,7 @@ Table 3 has the following columns:
 
   Enter the SSID of the access point with which the client will connect.   
   For the SSID, ASCII code 0x20 to 0x7e is used.
-- **Security**Select a security context. You create and configure a security context in "Security > WLAN > Basic".
+- **Security**Select a security context. You create and configure a security context in "Security &gt; WLAN &gt; Basic".
 
   Default setting: Context 1
 
@@ -26957,13 +26957,13 @@ The table "Force Roaming on IP down"has the following columns:
   >
   > If the destination address is not in the agent IPv4 subnet, a gateway must be entered:
   >
-  > W700: System > Agent IPv4
+  > W700: System &gt; Agent IPv4
   >
-  > W1700: Layer 3 (IPv4) > Subnets
+  > W1700: Layer 3 (IPv4) &gt; Subnets
   >
   > **The Base Bridge mode "802.1Q VLAN Bridge"**
   >
-  > If you have configured the "Base Bridge Mode" "802.1Q VLAN Bridge" in "Layer 2 > VLAN", echo messages (ping packets) are sent into the management VLAN.
+  > If you have configured the "Base Bridge Mode" "802.1Q VLAN Bridge" in "Layer 2 &gt; VLAN", echo messages (ping packets) are sent into the management VLAN.
 - **Interval [ms]**
 
   Specify the interval at which echo messages (pings) are sent.
@@ -27006,13 +27006,13 @@ The first graphic contains the following elements:
 
 - Scroll bar
 
-  With the scroll bar, you can look through the entire measurement. To do this you can use the "<<" and ">>" buttons or the arrow keys on the keyboard.
+  With the scroll bar, you can look through the entire measurement. To do this you can use the "&lt;&lt;" and "&gt;&gt;" buttons or the arrow keys on the keyboard.
 - Bar (left)
 
   In the bar on the left, the wanted signal from the client / access point is displayed in real time according to the color scheme shown.
 - Color scheme
 
-  The range > -35 dBm (blue) is the overmodulation range, in other words the WLAN signal is too strong and is received overmodulated. As of approximately -60 dBm (yellow) the WLAN signal is weaker.
+  The range &gt; -35 dBm (blue) is the overmodulation range, in other words the WLAN signal is too strong and is received overmodulated. As of approximately -60 dBm (yellow) the WLAN signal is weaker.
 - x axis
 
   The x axis shows the course of the measurement in random samples and seconds.
@@ -27127,7 +27127,7 @@ The table below the graphic contains the following columns:
 
   If you enable the setting the values of the access point are recorded as of a time interval of ≥ 10 milliseconds.
 
-  The setting is supported by access points with the following versions: SCALANCE W700 11n > V6.1, SCALANCE W1700 11ac > V1.0 and SCALANCE W700 11ax as of V1.1.
+  The setting is supported by access points with the following versions: SCALANCE W700 11n &gt; V6.1, SCALANCE W1700 11ac &gt; V1.0 and SCALANCE W700 11ax as of V1.1.
 - **Start**
 
   Click the button in this column to start recording the wanted signal.
@@ -27162,10 +27162,10 @@ Note the following tips that will help you to obtain useful measurements with th
 
 Change to one of the following menu items to call up the result of the recording:
 
-- System > Load & Save > HTTP
+- System &gt; Load &amp; Save &gt; HTTP
 
   Click the "Save" button in the "WLANSigRec" table row to save the file "signal_recorder_SCALANCE_W700.zip" in the file system of the connected PC.
-- System > Load & Save > TFTP / SFTP
+- System &gt; Load &amp; Save &gt; TFTP / SFTP
 
   If necessary, change the file name "signal_recorder_SCALANCE_W700.zip" in the "WLANSigRec" table row. In the table row "WLANSigRec", select the "Save file" entry from the drop-down list of the last column and click the "Save Values" button.
 
@@ -27288,7 +27288,7 @@ This table contains the following columns:
 - Center Frequency  
   Select the center frequency.
 
-  How many channels are displayed depends on the setting for the "HT Channel Width", refer to the page "Interfaces > WLAN > AP".
+  How many channels are displayed depends on the setting for the "HT Channel Width", refer to the page "Interfaces &gt; WLAN &gt; AP".
 - Start  
   Click the button in this column to start the measurement.
 
@@ -27298,7 +27298,7 @@ This table contains the following columns:
 - Stop  
   Click the button in this column to end the measurement.
 
-You can save the measurement result as a CSV file with the menu “System > Load&Save > WLANSpectrumAnalyzer”.
+You can save the measurement result as a CSV file with the menu “System &gt; Load&amp;Save &gt; WLANSpectrumAnalyzer”.
 
 ###### Measurement results
 
@@ -27486,7 +27486,7 @@ The table has the following columns:
   - u (lowercase)  
     The port is an untagged member of the VLAN, but the VLAN is not configured as a port VLAN. Frames sent in this VLAN are forwarded without the VLAN tag.
   - F  
-    The port is not a member of the specified VLAN. You can configure other settings in "Layer 2 > VLAN > Port-based VLAN".
+    The port is not a member of the specified VLAN. You can configure other settings in "Layer 2 &gt; VLAN &gt; Port-based VLAN".
   - T  
     This option is only displayed and cannot be selected in the WBM.   
     This port is a trunk port, making it a member in all VLANs.  
@@ -27559,7 +27559,7 @@ Table 2 has the following columns:
   There are a total of eight priorities with values 0 to 7, where 7 represents the highest priority (IEEE 802.1p Port Priority).
 - **Port VID**
 
-  Select the VLAN ID from the drop-down list. Only VLAN IDs defined on the "VLAN > General" page can be selected.  
+  Select the VLAN ID from the drop-down list. Only VLAN IDs defined on the "VLAN &gt; General" page can be selected.  
   If a received frame does not have a VLAN tag, it has a tag with the VLAN ID specified here added to it and is sent according to the rules at the port.
 - **Acceptable Frames**
 
@@ -27837,7 +27837,7 @@ Table 2 has the following columns:
 
   > **Note**
   >
-  > The port-specific setting of the Hello time is only possible with protocol compatibility MSTP. If the protocol compatibility RSTP is set, the "Bridge Hello Time" parameter on the page "Layer 2 > Spanning Tree > CIST General" page is used.
+  > The port-specific setting of the Hello time is only possible with protocol compatibility MSTP. If the protocol compatibility RSTP is set, the "Bridge Hello Time" parameter on the page "Layer 2 &gt; Spanning Tree &gt; CIST General" page is used.
 - **Restr. Role**
     
   If this check box is selected, the corresponding port is not selected as root port, regardless of the priority value. If the check box is selected, the port with lowest priority also does not become the root port. Only activate this option if you wish to restrict the impact of bridges outside of the administered range on the Spanning Tree topology.
@@ -28010,7 +28010,7 @@ The table has the following columns:
     This port can only send LLDP frames.
   - Rx  
     This port can only receive LLDP frames.
-  - Rx & Tx  
+  - Rx &amp; Tx  
     This port can receive and send LLDP frames.
   - "-" (disabled)  
     This port can neither receive nor send LLDP frames.
@@ -28413,7 +28413,7 @@ The following port translations are possible:
 ###### Requirement
 
 - IP masquerading is enabled.
-- Under "Layer 2 > VLAN > Basic", "802.1Q VLAN Bridge" is set for "Base Bridge Mode".
+- Under "Layer 2 &gt; VLAN &gt; Basic", "802.1Q VLAN Bridge" is set for "Base Bridge Mode".
 
 ###### Description
 
@@ -28708,7 +28708,7 @@ On this page, you can change passwords. If you are logged in with the right to c
     Password length: at least 6 characters, maximum 128 characters
   - Custom
 
-    You configure the password policy on the page "Security > Passwords > Options".
+    You configure the password policy on the page "Security &gt; Passwords &gt; Options".
 - **New Password**
 
   Enter the new password for the selected user.
@@ -28850,7 +28850,7 @@ The page contains the following:
 
     Custom password policy
 
-  You configure the password policy on the page "Security > Passwords > Options".
+  You configure the password policy on the page "Security &gt; Passwords &gt; Options".
 - **Password**
 
   Specify the password. The strength of the password depends on its length and complexity.
@@ -28864,7 +28864,7 @@ The page contains the following:
 
   Select a role.
 
-  You can choose between system-defined and self-defined roles, refer to the page "Security > Users > Roles".
+  You can choose between system-defined and self-defined roles, refer to the page "Security &gt; Users &gt; Roles".
 
 The table contains the following columns:
 
@@ -28989,7 +28989,7 @@ The table contains the following columns:
 
   Select a role. Users who are authenticated with the linked group on the RADIUS server receive the rights of this role locally on the device.
 
-  You can choose between system-defined and self-defined roles, refer to the page "Security > Users > Roles".
+  You can choose between system-defined and self-defined roles, refer to the page "Security &gt; Users &gt; Roles".
 - **Description**
 
   Enter a description for the link of the group.to a role. The description text can be up to 100 characters long.
@@ -29008,7 +29008,7 @@ This section contains information on the following topics:
 
 Access to the device is managed by configurable user settings. Set up users with a password for authentication. Assign a role with suitable rights to the users.
 
-The authentication of users can either be performed locally by the device or by an external RADIUS server. You configure how the authentication is handled on the "Security > AAA > General" page.
+The authentication of users can either be performed locally by the device or by an external RADIUS server. You configure how the authentication is handled on the "Security &gt; AAA &gt; General" page.
 
 ###### Local logon
 
@@ -29025,7 +29025,7 @@ The local logging on of users by the device runs as follows:
 
 RADIUS (Remote Authentication Dial-In User Service) is a protocol for authenticating and authorizing users by servers on which user data can be stored centrally.
 
-Depending on the RADIUS authorization mode you have selected on the "Security > AAA > RADIUS Client" page, the device evaluates different information of the RADIUS server.
+Depending on the RADIUS authorization mode you have selected on the "Security &gt; AAA &gt; RADIUS Client" page, the device evaluates different information of the RADIUS server.
 
 **RADIUS authorization mode "Standard"**
 
@@ -29163,7 +29163,7 @@ The table has the following columns:
   - 802.1X
 
     The server is used only for the 802.1X authentication.
-  - Login & 802.1X
+  - Login &amp; 802.1X
 
     The server is used for both authentication procedures.
 - **RADIUS Server Address**
@@ -29351,7 +29351,7 @@ The table has the following columns:
 
     > **Note**
     >
-    > Make the relevant RADIUS settings initially on the page "Security > WLAN > Client Radius Supplicant".
+    > Make the relevant RADIUS settings initially on the page "Security &gt; WLAN &gt; Client Radius Supplicant".
   - **WPA-PSK**
       
     WPA Pre Shared Key (WPA-PSK) is a weakened form of WPA. In this method, authentication is not established by a server but is based on a password. This password is configured manually on the client and server.
@@ -29359,7 +29359,7 @@ The table has the following columns:
 
     > **Note**
     >
-    > Make the relevant RADIUS settings initially on the page "Security > WLAN > Client Radius Supplicant".
+    > Make the relevant RADIUS settings initially on the page "Security &gt; WLAN &gt; Client Radius Supplicant".
   - **WPA2-PSK** 
       
     WPA2-PSK is based on the 802.11i standard. WPA authentication works, however, without a RADIUS server. Instead of this, a WPA(2) key (WPA(2) pass phrase) is stored on each client and access point. The WPA(2) pass phrase is used for authentication and further encryption.
@@ -29630,7 +29630,7 @@ On this WBM page, you configure the setting for Fast BSS Transition.
 >
 > This WBM page is only available in access point mode.
 
-You can find additional information under "Description > IEEE 802.11r".
+You can find additional information under "Description &gt; IEEE 802.11r".
 
 ###### Requirement
 
@@ -30175,7 +30175,7 @@ The page contains the following boxes:
 
   Shows whether the user-specific Brute Force Prevention is enabled.
 
-  You configure login authentication in the menu "Security > AAA > > General" in the "Login Authentication" drop-down list. The login authentication determines whether you can enable user-specific Brute Force Prevention.
+  You configure login authentication in the menu "Security &gt; AAA &gt; &gt; General" in the "Login Authentication" drop-down list. The login authentication determines whether you can enable user-specific Brute Force Prevention.
 
   - Enabled:
 
@@ -30369,7 +30369,7 @@ The table has the following columns:
   Specifies the SSID to which the settings relate.
 - **Enabled**
     
-  When enabled, the access restriction is used. You configure the devices that are accessible for the clients under "Security > Inter AP Blocking > Allow IP Addresses".
+  When enabled, the access restriction is used. You configure the devices that are accessible for the clients under "Security &gt; Inter AP Blocking &gt; Allow IP Addresses".
 - **Block Gratuitous ARP Requests**
     
   When enabled, gratuitous ARP packets are not forwarded.
@@ -30501,8 +30501,8 @@ In access point mode, the table has the following additional columns:
   Select the required cycle time from the drop-down list.   
   The following points need to be taken into account when setting the cycle time. Otherwise it may not be possible to establish stable communication.
 
-  - There is only one access point in the system; in other words, the clients move only in one wireless cell. In this case, update times >= 16 ms are supported.
-  - There are several access points in the system that communicate over different channels. The clients roam between the access points. In this case, select update times >= 32 ms.
+  - There is only one access point in the system; in other words, the clients move only in one wireless cell. In this case, update times &gt;= 16 ms are supported.
+  - There are several access points in the system that communicate over different channels. The clients roam between the access points. In this case, select update times &gt;= 32 ms.
 
   In addition to the guide values shown above, remember that the shortest cycle time to be set is calculated according to the formula "2 ms * max. number of nodes".
 - **Scanning Mode**
@@ -30596,8 +30596,8 @@ In access point mode, the table has the following additional columns:
   The following points need to be taken into account when setting the cycle time. Otherwise it may not be possible to establish stable communication.
 
   - The range of values is 16 - 512. The set value should correspond the cycle time of PROFINET or EtherNet/IP.
-  - There is only one access point in the system; in other words, the clients move only in one wireless cell. In this case, update times >= 16 ms are supported.
-  - There are several access points in the system that communicate over different channels. The clients roam between the access points. In this case, select update times >= 32 ms.
+  - There is only one access point in the system; in other words, the clients move only in one wireless cell. In this case, update times &gt;= 16 ms are supported.
+  - There are several access points in the system that communicate over different channels. The clients roam between the access points. In this case, select update times &gt;= 32 ms.
 
   In addition to the guide values shown above, remember that the shortest cycle time to be set is calculated according to the formula "4 ms * max. number of nodes".
 - **Scanning Mode**
@@ -30639,7 +30639,7 @@ In access point mode, the table has the following additional columns:
 - Transmission based on IEEE801.11h (DFS) cannot be used for the management interface. 801.11h (DFS) is possible for the data interface.
 - The client cannot be operated with "Use Allowed Channels only".
 - "Force Roaming on link down" is automatically mirrored on the second interface.
-- The following applies to clients: All configured and active SSIDs must be assigned to security context 1. An SSID is active when the corresponding check box "Enabled" is selected on the page "Interfaces > WLAN > Client".
+- The following applies to clients: All configured and active SSIDs must be assigned to security context 1. An SSID is active when the corresponding check box "Enabled" is selected on the page "Interfaces &gt; WLAN &gt; Client".
 - In Japan, iPCF-MC cannot be enabled if the data or management interface uses a frequency of the 4920 MHz - 5080 MH frequency band.
 
 ##### When should iPCF-MC be used?
@@ -30798,7 +30798,7 @@ The table contains the following columns:
     Prevents the two clients of a client pair connecting on the same WLAN interface of the access point.
   - Disabled
 
-    When the best access point for a client is the same access point (same WLAN interface) as that of the partner client, a check is made as to whether there is another access point whose signal strength is < 10 dB worse than that of the best access point. In this case the client connects to this access point, otherwise it connects to the same, best access point as the partner client.
+    When the best access point for a client is the same access point (same WLAN interface) as that of the partner client, a check is made as to whether there is another access point whose signal strength is &lt; 10 dB worse than that of the best access point. In this case the client connects to this access point, otherwise it connects to the same, best access point as the partner client.
 
 #### iREF
 
@@ -30829,7 +30829,7 @@ The table has the following columns:
   Specifies the WLAN interface to which the settings relate.
 - **Enable iREF**
     
-  Enable or disable iREF for the required WLAN interface. The result is shown in "Information > WLAN >iFeatures".
+  Enable or disable iREF for the required WLAN interface. The result is shown in "Information &gt; WLAN &gt;iFeatures".
 
   > **Note**
   >
@@ -30866,7 +30866,7 @@ The table has the following columns:
   Specifies the WLAN interface to which the settings relate.
 - **Enable AeroScout**
     
-  Enable or disable AeroScout support for the required WLAN interface. The result is shown in "Information > WLAN iFeatures". This page is only available in the WBM.
+  Enable or disable AeroScout support for the required WLAN interface. The result is shown in "Information &gt; WLAN iFeatures". This page is only available in the WBM.
 
 ## Configuring SCALANCE M
 
@@ -31150,7 +31150,7 @@ As an example, an entry will be created and deleted on the Syslog client. The pr
 
 1. Select the device in the network or device view.
 2. Open the properties of the device in the Inspector window.
-3. In the Inspector window, go to System > Syslog Client.
+3. In the Inspector window, go to System &gt; Syslog Client.
 4. Enter the IP address for the Syslog server.
 5. Click in the table. Select the entry "New entry" in the shortcut menu.
 
@@ -31449,7 +31449,7 @@ There are various options for the assignment to VLANs:
 
 - Port-based VLAN
 
-  Each port of a device is assigned a VLAN ID. You configure port-based VLAN in "[Layer 2 > VLAN > Port-based VLAN](#port-based-vlan-2)".
+  Each port of a device is assigned a VLAN ID. You configure port-based VLAN in "[Layer 2 &gt; VLAN &gt; Port-based VLAN](#port-based-vlan-2)".
 - Protocol-based VLAN  
   Each port of a device is assigned a protocol group.
 - Subnet-based VLAN  
@@ -31468,7 +31468,7 @@ There are various options for the assignment to VLANs:
 
 The VLANs are in different IP subnets. To allow these to communicate with each other, the corresponding route and firewall rule must be configured on the device.
 
-You can change the assignment in "Layer 2 > VLAN > General".
+You can change the assignment in "Layer 2 &gt; VLAN &gt; General".
 
 ---
 
@@ -31512,8 +31512,8 @@ The tagged frame has 3 bits for the priority that is also known as Class of Serv
 | 001 | 1 | Best Effort |
 | 010 | 2 | Excellent Effort |
 | 011 | 3 | Critical Applications |
-| 100 | 4 | Video, < 100 ms delay (latency and jitter) |
-| 101 | 5 | Voice (language), < 10 ms delay (latency and jitter) |
+| 100 | 4 | Video, &lt; 100 ms delay (latency and jitter) |
+| 101 | 5 | Voice (language), &lt; 10 ms delay (latency and jitter) |
 | 110 | 6 | Internetwork Control |
 | 111 | 7 (highest) | Network Control |
 
@@ -31771,7 +31771,7 @@ Avoid this by adapting the MTU format on the terminal device, which means reduci
 
 Access to the device is managed by configurable user settings. Set up users with a password for authentication. Assign a role with suitable rights to the users.
 
-The authentication of users can either be performed locally by the device or by an external RADIUS server. You configure how the authentication is handled on the "Security > AAA > General" page.
+The authentication of users can either be performed locally by the device or by an external RADIUS server. You configure how the authentication is handled on the "Security &gt; AAA &gt; General" page.
 
 ###### Local logon
 
@@ -31788,7 +31788,7 @@ The local logging on of users by the device runs as follows:
 
 RADIUS (Remote Authentication Dial-In User Service) is a protocol for authenticating and authorizing users by servers on which user data can be stored centrally.
 
-Depending on the RADIUS authorization mode you have selected on the "Security > AAA > RADIUS Client" page, the device evaluates different information of the RADIUS server.
+Depending on the RADIUS authorization mode you have selected on the "Security &gt; AAA &gt; RADIUS Client" page, the device evaluates different information of the RADIUS server.
 
 **RADIUS authorization mode "Standard"**
 
@@ -31882,7 +31882,7 @@ Simple packet filter techniques require two firewall rules per connection.
 
 You only need to specify one firewall rule for the query direction from the source to the destination. The second rule is added implicitly. The packet filter recognizes when, for example, computer "A" is communicating with computer "B" and only then does it allow replies. A query by computer "B" is therefore not possible without a prior request by computer "A".
 
-You configure the firewall in "[Security > Firewall](#firewall-2)".
+You configure the firewall in "[Security &gt; Firewall](#firewall-2)".
 
 > **Note**
 >
@@ -31898,23 +31898,23 @@ You configure the firewall in "[Security > Firewall](#firewall-2)".
 | ppp0/usb | Access from the IP subnet to the mobile wireless interface of the device. |  |
 | Device | Access from the IP subnet to the device. |  |
 | SINEMA RC | Access from the IP subnet and the device to the SINEMA RC connection. |  |
-| IPsec (all)   IPsec <Connection Name>  OpenVPN (all)   OpenVPN <Connection Name> | Access from the IP subnet to the tunnel partners that can be reached via all VPN connections (all) or via a certain VPN connection (<Connection Name>). |  |
+| IPsec (all)   IPsec &lt;Connection Name&gt;  OpenVPN (all)   OpenVPN &lt;Connection Name&gt; | Access from the IP subnet to the tunnel partners that can be reached via all VPN connections (all) or via a certain VPN connection (&lt;Connection Name&gt;). |  |
 | Device | `vlan (1-x)`    `nve x` | Access from the device to the IP subnet. |
 | ppp0/usb | Access from the device to the mobile wireless interface of the device. |  |
 | SINEMA RC | Access from the device to the SINEMA RC connection |  |
-| IPsec (all)   IPsec <Connection Name>  OpenVPN (all)   OpenVPN <Connection Name> | Access from the device to the tunnel partners that can be reached via all VPN connections (all) or via a certain VPN connection (<Connection Name>). |  |
+| IPsec (all)   IPsec &lt;Connection Name&gt;  OpenVPN (all)   OpenVPN &lt;Connection Name&gt; | Access from the device to the tunnel partners that can be reached via all VPN connections (all) or via a certain VPN connection (&lt;Connection Name&gt;). |  |
 | SINEMA RC | vlan x | Access from the SINEMA RC server to the V(X)LAN segment. |
 | ppp0/usb | Access from the SINEMA RC server to the mobile wireless interface of the device. |  |
 | Device | Access from the SINEMA RC server to the device. |  |
-| IPsec (all)   IPsec <Connection Name>  OpenVPN (all)   OpenVPN <Connection Name> | Access from the SINEMA RC Server to the tunnel partners that can be reached via all VPN connections (all) or via a certain VPN connection <Connection Name>. |  |
-| IPsec (all)   IPsec <Connection Name>  OpenVPN (all)   OpenVPN <Connection Name> | `vlan (1-x)`    `nve x` | Access via tunnel partners to the V(X)LAN segment. |
+| IPsec (all)   IPsec &lt;Connection Name&gt;  OpenVPN (all)   OpenVPN &lt;Connection Name&gt; | Access from the SINEMA RC Server to the tunnel partners that can be reached via all VPN connections (all) or via a certain VPN connection &lt;Connection Name&gt;. |  |
+| IPsec (all)   IPsec &lt;Connection Name&gt;  OpenVPN (all)   OpenVPN &lt;Connection Name&gt; | `vlan (1-x)`    `nve x` | Access via tunnel partners to the V(X)LAN segment. |
 | ppp0/usb | Access via tunnel partners to the mobile wireless interface of the device. |  |
 | Device | Access via tunnel partners to the device. |  |
 | SINEMA RC | Access via tunnel partners to the SINEMA RC connection. |  |
 | ppp0/usb | `vlan (1-x)`    `nve x` | Access from the mobile wireless interface to the V(X)LAN segment. |
 | Device | Access from the mobile wireless interface to the device. |  |
 | SINEMA RC | Access from the mobile wireless interface to the SINEMA RC connection. |  |
-| IPsec (all)   IPsec <Connection Name>  OpenVPN (all)  OpenVPN <Connection Name> | Access from the mobile wireless interface to the tunnel partners that can be reached via all VPN connections (all) or via a certain VPN connection (<Connection Name>). |  |
+| IPsec (all)   IPsec &lt;Connection Name&gt;  OpenVPN (all)  OpenVPN &lt;Connection Name&gt; | Access from the mobile wireless interface to the tunnel partners that can be reached via all VPN connections (all) or via a certain VPN connection (&lt;Connection Name&gt;). |  |
 
 ###### Firewall rules
 
@@ -31924,9 +31924,9 @@ Firewall rules are automatically created, predefined or specially configured IP 
 
 The "Auto firewall rules" setting is available for the following functions:
 
-- System > [SINEMA RC](#sinema-rc-1)
-- Security > IPsec VPN> [Phase 2](#phase-2)
-- Security > OpenVPN Client > [Connections](#connections-1)
+- System &gt; [SINEMA RC](#sinema-rc-1)
+- Security &gt; IPsec VPN&gt; [Phase 2](#phase-2)
+- Security &gt; OpenVPN Client &gt; [Connections](#connections-1)
 
 The automatically created firewall rules allow packets in the following direction:
 
@@ -31942,7 +31942,7 @@ The automatically created firewall rules allow packets in the following directio
 
 The firewall contains predefined IPv4 rules that enable specific IPv4 services on the device.
 
-Specify the interface via which access takes place under "Security > Firewall > [Predefined IPv4](#predefined-ip-rules)".
+Specify the interface via which access takes place under "Security &gt; Firewall &gt; [Predefined IPv4](#predefined-ip-rules)".
 
 The following options are available:
 
@@ -31987,7 +31987,7 @@ IP masquerading is a simplified source NAT. With each outgoing data packet sent 
 
 IP masquerading can be used if the internal IP addresses cannot or should not be forwarded externally, for example because the internal network structure should remain hidden.
 
-You configure masquerading in "Layer 3" > "NAT" > "[IP Masquerading](#ipv4-masquerading)".
+You configure masquerading in "Layer 3" &gt; "NAT" &gt; "[IP Masquerading](#ipv4-masquerading)".
 
 ###### NAPT
 
@@ -32008,7 +32008,7 @@ The options are available for port translation:
 
 Port forwarding can be used to allow external nodes access to certain services of the internal network e.g. FTP, HTTP.
 
-You configure NAPT in "Layer 3" > "NAT" > "[NAPT](#napt-1)".
+You configure NAPT in "Layer 3" &gt; "NAT" &gt; "[NAPT](#napt-1)".
 
 ###### Source NAT
 
@@ -32016,13 +32016,13 @@ As with masquerading, in source NAT the source address is translated. In additio
 
 Source NAT can be used if the internal IP addresses cannot or should not be forwarded externally, for example because a private address range such as 192.168.x.x is used.
 
-You configure source NAT in "Layer 3" > "NAT" > "[Source NAT](#source-nat)".
+You configure source NAT in "Layer 3" &gt; "NAT" &gt; "[Source NAT](#source-nat)".
 
 ###### NETMAP
 
 With NETMAP it is possible to translate complex subnets to a different subnet. In this translation, the subnet part of the IP address is changed and the host part remains. For translation with NETMAP only one rule is required. NETMAP can translate both the source IP address and the destination IP address. To perform the translation with destination NAT and source NAT, numerous rules would be necessary. NETMAP can also be applied to VPN connections.
 
-You configure NETMAP in "Layer 3" > "NAT" > "[NETMAP](#netmap)".
+You configure NETMAP in "Layer 3" &gt; "NAT" &gt; "[NETMAP](#netmap)".
 
 ##### NAT and firewall
 
@@ -32112,7 +32112,7 @@ The device supports the following VPN systems
 
 ###### IPsec VPN
 
-You configure the IPsec connections in "Security" > " [IPsec VPN](#ipsec-vpn-2)".
+You configure the IPsec connections in "Security" &gt; " [IPsec VPN](#ipsec-vpn-2)".
 
 With IPsec VPN, the frames are transferred in tunnel mode. To allow the device to establish a VPN tunnel, the remote network must have a VPN gateway as the partner.
 
@@ -32222,7 +32222,7 @@ This is only possible when the VPN partner supports DPD. DPD checks whether the 
 
 With OpenVPN, virtual private networks (VPN) can be established. As an OpenVPN client, the device can establish a VPN connection to a remote network.
 
-You configure the OpenVPN client in "Security" > "[OpenVPN Client](#openvpn-2)".
+You configure the OpenVPN client in "Security" &gt; "[OpenVPN Client](#openvpn-2)".
 
 The VPN connection is established via virtual device drivers, the TAP and TUN device. During this, virtual network interfaces are created that act like a physical interface of the device and represent the endpoint of the VPN tunnel.
 
@@ -32260,9 +32260,9 @@ The device also supports the following methods:
 
 The device supports the following options for establishing a VPN connection.
 
-- OpenVPN: Security > OpenVPN > [Connections](#connections)
-- IPsec VPN: Security > IPsec VPN > [Connections](#connections-1)
-- SINEMA RC: System > [SINEMA RC](#sinema-rc-1)
+- OpenVPN: Security &gt; OpenVPN &gt; [Connections](#connections)
+- IPsec VPN: Security &gt; IPsec VPN &gt; [Connections](#connections-1)
+- SINEMA RC: System &gt; [SINEMA RC](#sinema-rc-1)
 
 | Options | Use |  |  | Description |
 | --- | --- | --- | --- | --- |
@@ -32272,11 +32272,11 @@ The device supports the following options for establishing a VPN connection.
 | on demand | - | x | - | The device attempts to establish a connection to a partner when necessary. The receipt of requests for VPN connection establishment is also possible.  For the configured local and remote subnets, an entry is created in the routing table. If a node attempts to send data packets via the VPN tunnel from one of the networks, the VPN connection is established. The settable timeout has the effect that after this time without any further data packets the VPN tunnel is terminated again. |
 | Start on DI | x | x | x | Connection establishment is controlled via the digital input (DI). |
 | Wait on DI | - | x | - |  |
-| Digital Input & Wake-up SMS | - | - | x | Connection establishment is controlled via the digital input (DI) or SMS. |
+| Digital Input &amp; Wake-up SMS | - | - | x | Connection establishment is controlled via the digital input (DI) or SMS. |
 | Wake-up SMS | - | - | x | Connection establishment is controlled via SMS. |
 | start on SMS | x | x | - |  |
 | wait on SMS | - | x | - |  |
-| Auto | - | - | x | The device adopts the settings of the SINEMA RC server. You configure the settings on the SINEMA IRC server in "Remote connections > Devices". You will find further information on this topic in the operating instructions "SINEMA RC Server". |
+| Auto | - | - | x | The device adopts the settings of the SINEMA RC server. You configure the settings on the SINEMA IRC server in "Remote connections &gt; Devices". You will find further information on this topic in the operating instructions "SINEMA RC Server". |
 | Permanent | - | - | x | The device establishes a VPN connection to the SINEMA RC Server. The VPN tunnel is established permanently |
 | <sup>1)</sup> KEY-PLUG SINEMA REMOTE CONNECT required |  |  |  |  |
 
@@ -32288,7 +32288,7 @@ The establishment of the VPN tunnel can also be controlled via the digital input
 
 **Requirement**
 
-- In "[System > Events > Configuration](#configuration-18)" for the "Digital Input" event "VPN Tunnel" is activated.
+- In "[System &gt; Events &gt; Configuration](#configuration-18)" for the "Digital Input" event "VPN Tunnel" is activated.
 
   If this setting is not activated, the event is not passed on to the VPN connection.
 
@@ -32302,7 +32302,7 @@ The device supports the following options for controlling the VPN tunnel via the
 - Wait on DI
 
   If the event "Digital Input" occurs, the device becomes "passive". The device waits until the connection establishment is initiated by the remote station (OpenVPN, IPsec).
-- Digital Input & Wake-up SMS (only with M87x / MUM856)
+- Digital Input &amp; Wake-up SMS (only with M87x / MUM856)
 
   If the event "Digital In" occurs or the device receives a wake-up SMS message, the device becomes "active". The device attempts to establish a VPN connection to the SINEMA RC server.
 
@@ -32310,8 +32310,8 @@ The device supports the following options for controlling the VPN tunnel via the
 
 **Requirement**
 
-- In "System > SMS > [SMS Command](#command-sms-message)" you specify who a command SMS of the class "System" will be accepted from.
-- In "System > SMS > Event SMS", the function is enabled and the telephone number of a receiver is configured.
+- In "System &gt; SMS &gt; [SMS Command](#command-sms-message)" you specify who a command SMS of the class "System" will be accepted from.
+- In "System &gt; SMS &gt; Event SMS", the function is enabled and the telephone number of a receiver is configured.
 - If this setting is not activated, the event is not passed on to the VPN connection.
 
 **Options**
@@ -32326,47 +32326,47 @@ The device supports the following options for controlling the VPN tunnel via an 
 
   Establishment of the VPN connection:
 
-  - OpenVPN: SYS OVPN UP <name of the OpenVPN connection>, see [Command SMS message](#command-sms-message).
+  - OpenVPN: SYS OVPN UP &lt;name of the OpenVPN connection&gt;, see [Command SMS message](#command-sms-message).
 
-    If you enter a "*" for <name of the OpenVPN connection>, the OpenVPN connections are established that are set in "Operation" "start on SMS".
-  - IPsec VPN: SYS IPSEC UP<name of the IPsec VPN connection>, see [Command SMS message](#command-sms-message).
+    If you enter a "*" for &lt;name of the OpenVPN connection&gt;, the OpenVPN connections are established that are set in "Operation" "start on SMS".
+  - IPsec VPN: SYS IPSEC UP&lt;name of the IPsec VPN connection&gt;, see [Command SMS message](#command-sms-message).
 
-    If you enter a "*" for <name of the IPsec VPN connection>, the IPsec VPN connections are established that are set in "Operation" "start on SMS".
+    If you enter a "*" for &lt;name of the IPsec VPN connection&gt;, the IPsec VPN connections are established that are set in "Operation" "start on SMS".
 
   Termination of the VPN connection:
 
-  - OpenVPN: SYS OVPN DOWN <name of the OpenVPN connection>, see [Command SMS message](#command-sms-message).
+  - OpenVPN: SYS OVPN DOWN &lt;name of the OpenVPN connection&gt;, see [Command SMS message](#command-sms-message).
 
-    If you enter a "*" for <name of the OpenVPN connection>, the OpenVPN connections are terminated that are set in "Operation" "start on SMS".
-  - IPsec VPN: SYS IPSEC DOWN<name of the IPsec VPN connection>, see [Command SMS message](#command-sms-message).
+    If you enter a "*" for &lt;name of the OpenVPN connection&gt;, the OpenVPN connections are terminated that are set in "Operation" "start on SMS".
+  - IPsec VPN: SYS IPSEC DOWN&lt;name of the IPsec VPN connection&gt;, see [Command SMS message](#command-sms-message).
 
-    If you enter a "*" for <name of the IPsec VPN connection>, the IPsec VPN connections are terminated that are set in "Operation" "start on SMS".
+    If you enter a "*" for &lt;name of the IPsec VPN connection&gt;, the IPsec VPN connections are terminated that are set in "Operation" "start on SMS".
 - wait on SMS
 
   When the device receives an SMS command, the device is "passive". The command SMS message contains the name of the IPsec VPN connection. The device waits for the partner specified in the VPN connection to initiate the connection.
 
   Format of the SMS message:
 
-  If you enter a "*" for <name of the IPsec VPN connection>, the IPsec VPN connections are established that are set in "Operation" "start on SMS".
+  If you enter a "*" for &lt;name of the IPsec VPN connection&gt;, the IPsec VPN connections are established that are set in "Operation" "start on SMS".
 
-  - IPsec VPN: SYS IPSEC UP<name of the IPsec VPN connection>, see [Command SMS message](#command-sms-message).
+  - IPsec VPN: SYS IPSEC UP&lt;name of the IPsec VPN connection&gt;, see [Command SMS message](#command-sms-message).
 
-    If you enter a "*" for <name of the IPsec VPN connection>, the IPsec VPN connections are established that are set in "Operation" "start on SMS".
-  - IPsec VPN: SYS IPSEC DOWN<name of the IPsec VPN connection>, see [Command SMS message](#command-sms-message).
+    If you enter a "*" for &lt;name of the IPsec VPN connection&gt;, the IPsec VPN connections are established that are set in "Operation" "start on SMS".
+  - IPsec VPN: SYS IPSEC DOWN&lt;name of the IPsec VPN connection&gt;, see [Command SMS message](#command-sms-message).
 
-    If you enter a "*" for <name of the IPsecVPN connection>, the IPsec VPN connections are terminated that are set in "Operation" "wait on SMS".
-- Digital Input & Wake-up SMS
+    If you enter a "*" for &lt;name of the IPsecVPN connection&gt;, the IPsec VPN connections are terminated that are set in "Operation" "wait on SMS".
+- Digital Input &amp; Wake-up SMS
 
   The settings of the SINEMA RC server are ignored. If the event "Digital In" occurs or the device receives a wake-up SMS message. The device attempts to establish a VPN connection to the SINEMA RC Server.
 
-  Format of the SMS message: SYS SRC UP <address of the SINEMA RC Server>, see [Command SMS message](#command-sms-message).
+  Format of the SMS message: SYS SRC UP &lt;address of the SINEMA RC Server&gt;, see [Command SMS message](#command-sms-message).
 - Wake-up SMS
 
   The settings of the SINEMA RC server are ignored. When the device receives a wake-up SMS message, it attempts to establish a VPN connection to the SINEMA RC Server.
 
   Format of the SMS message:
 
-  - SYS SRC UP <address of the SINEMA RC Server>, see [Command SMS message](#command-sms-message).
+  - SYS SRC UP &lt;address of the SINEMA RC Server&gt;, see [Command SMS message](#command-sms-message).
 
 ###### Notification options
 
@@ -32374,14 +32374,14 @@ If the status of the digital input or a VPN tunnel (IPsec, OpenVPN, SINEMA RC) c
 
 | Type of notification | Digital input | VPN tunnel | Behavior if there is a status change |
 | --- | --- | --- | --- |
-| E-mail | x | x | The device sends an e-mail. The e-mail contains the identification of the sending device, a description of the cause of the alarm in plain language, and a time stamp.  Requirement:  - An SMTP server is set up. - In "System > SMTP Client", the function is enabled, a receiver and the IP address of the SMTP server are configured. |
-| Trap | x | x | The device sends an SNMP trap.   Requirement:  - "SNMPv1 traps" is enabled in "System > Configuration". - In "System > Configuration > Traps", a receiver is configured to which the device sends the SNMP traps. |
-| Log table | x | x | The device writes an entry in the event log table. The content of the event log table is displayed in "Information > Log Table". |
-| Syslog | x | x | The device writes an entry to the Syslog server.  Requirement:  - A Syslog server has been set up. - In "System > Syslog Client", the function is enabled and the IP address of the Syslog server is configured. |
+| E-mail | x | x | The device sends an e-mail. The e-mail contains the identification of the sending device, a description of the cause of the alarm in plain language, and a time stamp.  Requirement:  - An SMTP server is set up. - In "System &gt; SMTP Client", the function is enabled, a receiver and the IP address of the SMTP server are configured. |
+| Trap | x | x | The device sends an SNMP trap.   Requirement:  - "SNMPv1 traps" is enabled in "System &gt; Configuration". - In "System &gt; Configuration &gt; Traps", a receiver is configured to which the device sends the SNMP traps. |
+| Log table | x | x | The device writes an entry in the event log table. The content of the event log table is displayed in "Information &gt; Log Table". |
+| Syslog | x | x | The device writes an entry to the Syslog server.  Requirement:  - A Syslog server has been set up. - In "System &gt; Syslog Client", the function is enabled and the IP address of the Syslog server is configured. |
 | Fault LED | x | - | The fault LED lights up on the device. |
 | Digital input | x | x | Controls the digital output or signals the status change with the "DO" LED.  A consumer can be connected to the digital output. You will find information on connecting in the operating instructions of the devices. The consumer signals a status change.     ![Notification options](images/126348393099_DV_resource.Stream@PNG-de-DE.png)    **Note**   You can control the digital output directly via CLI or SNMP. In WBM and CLI, you can configure the use of the digital output in "Events". Do not control the digital output directly when you use this in the WBM and CLI. |
-| SMS (only with M87x): | x | x | The device sends an SMS message with a standard text.  Requirement:  - In "System > SMS > Event SMS", the function is enabled and the telephone number of a receiver is configured. |
-| x | - | The device sends an SMS message with a user-defined text. You configure the text in "System > SMS > Event SMS".   Requirement:  - In "System > SMS > Event SMS", the function is enabled, the telephone number of a receiver and the text are configured. - In "System > Events > Configuration", "SMS" is enabled for the "Digital In" event. |  |
+| SMS (only with M87x): | x | x | The device sends an SMS message with a standard text.  Requirement:  - In "System &gt; SMS &gt; Event SMS", the function is enabled and the telephone number of a receiver is configured. |
+| x | - | The device sends an SMS message with a user-defined text. You configure the text in "System &gt; SMS &gt; Event SMS".   Requirement:  - In "System &gt; SMS &gt; Event SMS", the function is enabled, the telephone number of a receiver and the text are configured. - In "System &gt; Events &gt; Configuration", "SMS" is enabled for the "Digital In" event. |  |
 | Read out the status of the MIB variable | x | - | Using the private MIB variable snMspsDigitalInputLevel, you can read out the status of the digital input.  - OID of the private MIB variable snMspsDigitalInputLevel:    `iso(1).org(3).dod(6).internet(1).private(4).enterprises(1).siemens(4329).industrialComProducts(20).iComPlatforms(1).simaticNet(1).snMsps(1).snMspsCommon(1).snMspsDigitalIO(39).snMspsDigitalIOObjects(1).snMspsDigitalInputTable(2).snMspsDigitalInputEntry(1).snMspsDigitalInputLevel(6)` - values of the MIB variable   - 1: Signal 0 at the digital input (DI)   - 2: Signal 1 at the digital input (DI) |
 
 #### Redundancy
@@ -32459,14 +32459,14 @@ If the virtual master router fails, a backup router takes over the role of the m
 
 The new virtual master router adopts the virtual MAC and IP address. This means that no routing tables or ARP tables need to be updated. The consequences of a device failure are therefore minimized.
 
-You configure VRRP in "Layer 3 > VRRPv3".
+You configure VRRP in "Layer 3 &gt; VRRPv3".
 
 ### Showing information
 
 This section contains information on the following topics:
 
 - [Versions](#versions-2)
-- [I&M](#im-2)
+- [I&amp;M](#im-2)
 - [ARP / Neighbors](#arp-neighbors)
 - [Log tables](#log-tables-1)
 - [Fault](#fault-2)
@@ -32655,7 +32655,7 @@ This section contains information on the following topics:
 >
 > The page is only available if there is an online connection to the device.
 
-The device allows you to log events that occur, some of which you can specify in " System > Events". This, for example, allows you to record when an authentication attempt failed or when the connection status of a port has changed. The content of the events log table is retained even when the device is turned off.
+The device allows you to log events that occur, some of which you can specify in " System &gt; Events". This, for example, allows you to record when an authentication attempt failed or when the connection status of a port has changed. The content of the events log table is retained even when the device is turned off.
 
 ###### Description of the displayed values
 
@@ -32806,8 +32806,8 @@ If a fault occurs, it is shown on this page. On the device, faults are indicated
 
 Internal errors of the device and the errors that you configure on the following pages are indicated:
 
-- "System > Events"
-- "System" > Fault Monitoring"
+- "System &gt; Events"
+- "System" &gt; Fault Monitoring"
 
 The calculation of the time of an error always begins after the last system start.
 
@@ -32876,7 +32876,7 @@ This page shows whether IPv4 addresses were assigned to the devices by the DHCP 
   Shows the value that is assigned to the identification method.
 - **Assignment method**
 
-  Shows whether the IPv4 address was assigned statically or dynamically. You configure the static entries in "System > DHCP > Static Leases".
+  Shows whether the IPv4 address was assigned statically or dynamically. You configure the static entries in "System &gt; DHCP &gt; Static Leases".
 - **Assignment status**
     
   Shows the status of the assignment.
@@ -32899,7 +32899,7 @@ This page shows whether IPv4 addresses were assigned to the devices by the DHCP 
 >
 > The page is only available if there is an online connection to the device.
 
-This page displays the created SNMPv3 groups. You configure the SNMPv3 groups in "System" > SNMP"..
+This page displays the created SNMPv3 groups. You configure the SNMPv3 groups in "System" &gt; SNMP"..
 
 ##### Description
 
@@ -32920,7 +32920,7 @@ The table has the following columns:
 
 ##### Status of the neighborhood table
 
-This page shows the current content of the neighborhood table. This table stores the information that the LLDP agent has received from connected devices. You set the interfaces via which the LLDP agent receives or sends information in the following section: "Layer 2 > LLDP".
+This page shows the current content of the neighborhood table. This table stores the information that the LLDP agent has received from connected devices. You set the interfaces via which the LLDP agent receives or sends information in the following section: "Layer 2 &gt; LLDP".
 
 ##### Description
 
@@ -33097,10 +33097,10 @@ The page contains the following:
 
     | dBm | Signal strength |
     | --- | --- |
-    | < -109 | No connection |
+    | &lt; -109 | No connection |
     | -109 ... -89 | Bad signal strength |
     | -89 …-73 | Medium signal strength |
-    | > -73 | Good signal strength |
+    | &gt; -73 | Good signal strength |
   - Signal strength with SCALANCE MUM856-1:
 
     No reception / Very bad / Bad / Medium / Good / Very good
@@ -33135,7 +33135,7 @@ The graphic contains the following elements:
 
 - Scroll bar
 
-  With the scroll bar, you can look through the entire measurement. To do this you can use the "<<" and ">>" buttons or the arrow keys on the keyboard.
+  With the scroll bar, you can look through the entire measurement. To do this you can use the "&lt;&lt;" and "&gt;&gt;" buttons or the arrow keys on the keyboard.
 - Bar (left)
 
   In the bar on the left-hand side the signal strength is displayed in real time according to the color scheme.
@@ -33165,7 +33165,7 @@ The consumed data volume of 3 months is stored in the non-volatile FLASH memory 
 
 ###### Requirement
 
-- "Mobile data usage" is activated under "Interfaces > Mobile > General".
+- "Mobile data usage" is activated under "Interfaces &gt; Mobile &gt; General".
 
 ###### Description of the displayed values
 
@@ -33179,7 +33179,7 @@ The graphic contains the following elements:
   Classification of the defined data volume.
 - Lines
 
-  - Red: The specified data volume. You configure the setting under "Interfaces > Mobile > General".
+  - Red: The specified data volume. You configure the setting under "Interfaces &gt; Mobile &gt; General".
   - Yellow: Corresponds to 75 % of the specified data volume.
   - Black: The volume of data consumed.
 
@@ -33581,7 +33581,7 @@ The following fields are displayed:
 
 - **Spanning Tree Mode**
     
-  Shows the set mode. You specify the mode in "Layer 2 > Configuration" and in "Layer 2 > Spanning Tree > General".  
+  Shows the set mode. You specify the mode in "Layer 2 &gt; Configuration" and in "Layer 2 &gt; Spanning Tree &gt; General".  
   The following values are possible:
 
   - '-'
@@ -33753,13 +33753,13 @@ The "Services" list shows the security settings.
 
 - **Telnet Server**
 
-  You configure the setting in "System > Configuration".
+  You configure the setting in "System &gt; Configuration".
 
   - Enabled: Unencrypted access to the CLI.
   - Disabled: No unencrypted access to the CLI.
 - **SSH Server**
 
-  You configure the setting in "System > Configuration".
+  You configure the setting in "System &gt; Configuration".
 
   - Enabled: Encrypted access to the CLI.
   - Disabled: No encrypted access to the CLI.
@@ -33771,13 +33771,13 @@ The "Services" list shows the security settings.
   - SHA256
 - **Web Server**
 
-  You configure the setting in "System > Configuration".
+  You configure the setting in "System &gt; Configuration".
 
   - HTTP/HTTPS: Access to the WBM is possible with HTTP and HTTPS.
   - HTTPS: Access to the WBM is now only possible with HTTPS.
 - **SNMP**
 
-  You can configure setting in "System > SNMP > General".
+  You can configure setting in "System &gt; SNMP &gt; General".
 
   - "-" (SNMP disabled)  
     Access to device parameters via SNMP is not possible.
@@ -33787,7 +33787,7 @@ The "Services" list shows the security settings.
     Access to device parameters is possible only with SNMP version 3.
 - **Login Authentication**
 
-  You configure the setting in "Security > AAA > General".
+  You configure the setting in "Security &gt; AAA &gt; General".
 
   - Local
 
@@ -33816,11 +33816,11 @@ The "Local User Accounts" and "External User Accounts" tables have the following
   Shows the name of the local user.
 - **Role**
 
-  Shows the role of the user. You can obtain more information on the function rights of the role in "Information > Security > Roles".
+  Shows the role of the user. You can obtain more information on the function rights of the role in "Information &gt; Security &gt; Roles".
 
 **Local and external user accounts**
 
-You configure local user accounts and roles in "Security > User Accounts"
+You configure local user accounts and roles in "Security &gt; User Accounts"
 
 When you create a local user account an external user account is generated automatically. Local user accounts involve users each with a password for logging in on the device.
 
@@ -33942,7 +33942,7 @@ The table contains the following columns:
 
   - Static:
 
-    The MAC and IP addresses were configured under "Layer 2 > VXLAN > Static MAC Addresses". The static addresses are stored permanently; in other words, they are not deleted when the aging time expires or when the device is restarted.
+    The MAC and IP addresses were configured under "Layer 2 &gt; VXLAN &gt; Static MAC Addresses". The static addresses are stored permanently; in other words, they are not deleted when the aging time expires or when the device is restarted.
   - Dynamic:
 
     The VTEP of the device obtains the MAC address from the received frame.
@@ -33957,7 +33957,7 @@ This section contains information on the following topics:
 - [Configuration](#configuration-17)
 - [General](#general-18)
 - [Restart](#restart-3)
-- [Load & save](#load-save-2)
+- [Load &amp; save](#load-save-2)
 - [Events](#events-2)
 - [SMTP Client](#smtp-client-2)
 - [SNMP](#snmp-9)
@@ -34081,10 +34081,10 @@ The page contains the configuration overview of the access options of the device
     Logging into the WBM.
 - **SMTP Client**
     
-  Enable or disable the SMTP client. You can configure other settings in "System > SMTP Client".
+  Enable or disable the SMTP client. You can configure other settings in "System &gt; SMTP Client".
 - **Syslog Client**
     
-  Enable or disable the Syslog client. You can configure other settings in "System > Syslog Client".
+  Enable or disable the Syslog client. You can configure other settings in "System &gt; Syslog Client".
 - **DCP Server**
     
   Specify whether or not the device can be accessed with DCP (Discovery and Configuration Protocol):
@@ -34100,13 +34100,13 @@ The page contains the configuration overview of the access options of the device
   Select the setting from the drop-down list. The following settings are possible:
 
   - Manual  
-    The system time is set manually. You can configure other settings in "System > System Time > Manual Setting".
+    The system time is set manually. You can configure other settings in "System &gt; System Time &gt; Manual Setting".
   - SIMATIC Time  
-    The system time is set using a SIMATIC time transmitter. You can configure other settings in "System > System Time > SIMATIC Time Client".
+    The system time is set using a SIMATIC time transmitter. You can configure other settings in "System &gt; System Time &gt; SIMATIC Time Client".
   - SNTP Client  
-    The system time is set via an SNTP server. You can configure other settings in "System > System Time > SNTP Client".
+    The system time is set via an SNTP server. You can configure other settings in "System &gt; System Time &gt; SNTP Client".
   - NTP Client  
-    The system time is set via an NTP server. You can configure other settings in "System > System Time > NTP Client".
+    The system time is set via an NTP server. You can configure other settings in "System &gt; System Time &gt; NTP Client".
 - **SNMP**
     
   Select the protocol from the drop-down list. The following settings are possible:
@@ -34114,21 +34114,21 @@ The page contains the configuration overview of the access options of the device
   - "-" (SNMP disabled)  
     Access to device parameters via SNMP is not possible.
   - SNMPv1/v2c/v3  
-    Access to device parameters is possible with SNMP versions 1, 2c or 3. You can configure other settings in "System > SNMP > General".
+    Access to device parameters is possible with SNMP versions 1, 2c or 3. You can configure other settings in "System &gt; SNMP &gt; General".
   - SNMPv3  
-    Access to device parameters is possible only with SNMP version 3. You can configure other settings in "System > SNMP > General".
+    Access to device parameters is possible only with SNMP version 3. You can configure other settings in "System &gt; SNMP &gt; General".
 - **SNMPv1/v2 Read Only**
     
   Enable or disable write access to SNMP variables with SNMPv1/v2c.
 - **SNMPv1 Traps**
     
-  Enable or disable the sending of SNMPv1 traps (alarm frames). You can configure other settings in "System > SNMP > Traps".
+  Enable or disable the sending of SNMPv1 traps (alarm frames). You can configure other settings in "System &gt; SNMP &gt; Traps".
 - **SINEMA Configuration Interface**
     
   If the SINEMA configuration interface is enabled, you can download configurations to the device using STEP 7 Basic / Professional.
 - **DHCP Client**
 
-  Enable or disable the DHCP client. You can configure other settings in "System > DHCP".
+  Enable or disable the DHCP client. You can configure other settings in "System &gt; DHCP".
 - **DUID-Type**
 
   Specify which DUID type is used. The DUID types are defined in RFC 3315.
@@ -34214,7 +34214,7 @@ The page contains the following boxes:
   >
   > - 0123456789
   > - A...Z a...z
-  > - !"#$%&'()*+,-./:;<=>?@ [\]_{|}~^`
+  > - !"#$%&amp;'()*+,-./:;&lt;=&gt;?@ [\]_{|}~^`
 - **Cyclic WBM status update** (only available online)
 
   When this is disabled, automatic update of the WBM is switched off. This is suitable for slow 2G connections or contracts with very limited data volume.
@@ -34318,7 +34318,7 @@ To restart the device, the buttons on this page provide you with the following o
     Specify the time after which the device restarts.
   - **Backup**
 
-    The configuration backups under "System **>** Configuration Backup" can be selected. Before the scheduled restart, the device applies the configurations of the selected backup and continues working with them after the restart.
+    The configuration backups under "System **&gt;** Configuration Backup" can be selected. Before the scheduled restart, the device applies the configurations of the selected backup and continues working with them after the restart.
 
     All configurations made up to this point that have not been saved in a backup are lost.
 
@@ -34335,7 +34335,7 @@ To restart the device, the buttons on this page provide you with the following o
     >
     > The scheduled restart is performed after the time has elapsed without any further message. Unsaved configuration changes are lost.
     >
-    > Save the current configuration via "System > Backup of configuration" before setting the timer for the restart.
+    > Save the current configuration via "System &gt; Backup of configuration" before setting the timer for the restart.
   - **Cancel scheduled restart**
 
     With this button you disable the timer for the scheduled restart.
@@ -34387,7 +34387,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed.
 >
-> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System > PLUG".
+> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System &gt; PLUG".
 
 **Configuration files**
 
@@ -34396,7 +34396,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 > **Configuration files and Trial/Automatic Save mode**
 >
 > In "Automatic Save" mode, the data is saved automatically before the configuration files (ConfigPack and Config) are transferred.  
-> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System > Configuration" WBM page to save changes in the configuration file.
+> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System &gt; Configuration" WBM page to save changes in the configuration file.
 
 **CLI script file**
 
@@ -34416,7 +34416,7 @@ Requirements:
 - Same firmware version
 - Password
 
-  You assign the password in the WBM under "System > Load&Save > Passwords".
+  You assign the password in the WBM under "System &gt; Load&amp;Save &gt; Passwords".
 
 You can use the file types as follows:
 
@@ -34463,7 +34463,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed.
 >
-> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System > PLUG".
+> In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" because the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data. If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using the WBM page "System &gt; PLUG".
 
 **Configuration files**
 
@@ -34472,7 +34472,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 > **Configuration files and Trial/Automatic Save mode**
 >
 > In "Automatic Save" mode, the data is saved automatically before the configuration files (ConfigPack and Config) are transferred.  
-> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System > Configuration" WBM page to save changes in the configuration file.
+> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System &gt; Configuration" WBM page to save changes in the configuration file.
 
 **CLI script file**
 
@@ -34494,7 +34494,7 @@ Requirements:
 - Same firmware version
 - Password
 
-  You assign the password in the WBM under "System > Load&Save > Passwords".
+  You assign the password in the WBM under "System &gt; Load&amp;Save &gt; Passwords".
 
 You can use the file types as follows:
 
@@ -34573,7 +34573,7 @@ The firmware is signed and encrypted. This ensures that only firmware created by
 > **Configuration files and Trial/Automatic Save mode**
 >
 > In "Automatic Save" mode, the data is saved automatically before the configuration files (ConfigPack and Config) are transferred.  
-> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System > Configuration" WBM page to save changes in the configuration file.
+> In "Trial" mode, although the changes are adopted, they are not saved in the configuration files (ConfigPack and Config). Use the "Write Startup Config" button on the "System &gt; Configuration" WBM page to save changes in the configuration file.
 
 **CLI script file**
 
@@ -34595,7 +34595,7 @@ Requirements:
 - Same firmware version
 - Password
 
-  You assign the password in the WBM under "System > Load&Save > Passwords".
+  You assign the password in the WBM under "System &gt; Load&amp;Save &gt; Passwords".
 
 You can use the file types as follows:
 
@@ -34755,7 +34755,7 @@ Table 2 has the following columns:
 
   - Cold/Warm Start   
     The device was turned on or restarted by the user. In the error memory of the device a new entry is generated with the type of restart performed.
-  - Link Change This event occurs only when the port status is monitored and has changed, see "System > Fault Monitoring > Link Change".
+  - Link Change This event occurs only when the port status is monitored and has changed, see "System &gt; Fault Monitoring &gt; Link Change".
   - Authentication FailureThis event occurs when access is attempted with an incorrect password.
   - Fault State ChangeThe fault status has changed. The fault status can relate to the activated port monitoring, the response of the digital output or the power supply monitoring.
 
@@ -34785,10 +34785,10 @@ Table 2 has the following columns:
     For certain events, entries are made in the log table even without configuration. For these events, you can configure additional subsequent actions here (e-mail, trap, syslog).
   - Mobile Data Usage(only with M87x/MUM85x)
 
-    This event occurs when 75% or 100% of the defined data volume has been reached, see "Interfaces > Mobile > General".
+    This event occurs when 75% or 100% of the defined data volume has been reached, see "Interfaces &gt; Mobile &gt; General".
   - Connection Check
 
-    This event occurs when connections are being monitored, see "System > Connection Check".
+    This event occurs when connections are being monitored, see "System &gt; Connection Check".
   - DHCP Server Log
 
     DHCP events are logged. The prerequisite is that the DHCP server is enabled on the device.
@@ -34797,15 +34797,15 @@ Table 2 has the following columns:
     The device has received a TCP packet. The prerequisite is that the "TCP Event" function is enabled.
 - **E-mail**The device sends an e-mail. This is only possible if the SMTP server is set up and the "SMTP Client" function is enabled.
 - **Trap**
-  The device sends an SNMP trap. This is only possible if "SNMPv1 Traps" is enabled in "System > Configuration".
-- **Log Table**The device writes an entry in the event log table, see "Information > Log Table".
+  The device sends an SNMP trap. This is only possible if "SNMPv1 Traps" is enabled in "System &gt; Configuration".
+- **Log Table**The device writes an entry in the event log table, see "Information &gt; Log Table".
 - **Syslog**
   The device writes an entry to the system log server. This is only possible if the system log server is set up and the "Syslog Client" function is enabled.
 - **Fault**
     
-  The device triggers a fault. The error LED lights up and the currently pending error is displayed under "Information > Faults".
+  The device triggers a fault. The error LED lights up and the currently pending error is displayed under "Information &gt; Faults".
 - **SMS** (only with M87x/MUM85x)   
-  The device sends an SMS. This is only possible if "System > SMS > Event SMS" is enabled and the telephone number of the receiver is configured.
+  The device sends an SMS. This is only possible if "System &gt; SMS &gt; Event SMS" is enabled and the telephone number of the receiver is configured.
 - **Digital Out**
 
   Controls the digital output or signals the status change with the "DO" LED.
@@ -34816,7 +34816,7 @@ Table 2 has the following columns:
   Controls the forwarding of an event to a VPN connection (IPsec, OpenVPN, SINEMA RC). As long as the event is present, the VPN connection is switched to active.
 - **Firewall**
     
-  Controls application of the user-defined rule set. The prerequisite is that a rule set is assigned to the digital input under "Security > Firewall > Dynamic rules".
+  Controls application of the user-defined rule set. The prerequisite is that a rule set is assigned to the digital input under "Security &gt; Firewall &gt; Dynamic rules".
 - **Cloud Connector** 
     
   Controls the forwarding of an event to the TIA Portal Cloud Connector communication. The communication connection is active as long as the event is present.
@@ -34875,9 +34875,9 @@ The setting "E-mail" must be enabled in the events for e-mails to be sent. The m
 
 ###### Requirements for sending e-mails
 
-- "E-mail" is activated for the relevant event in "System > Events > Configuration".
-- The desired severity is configured under "System > Events > Severity level".
-- At least one entry exists under "System > SMTP Client > Recipient" and the setting "Send" is activated.
+- "E-mail" is activated for the relevant event in "System &gt; Events &gt; Configuration".
+- The desired severity is configured under "System &gt; Events &gt; Severity level".
+- At least one entry exists under "System &gt; SMTP Client &gt; Recipient" and the setting "Send" is activated.
 
 ###### Description
 
@@ -35546,7 +35546,7 @@ SNTP (Simple Network Time Protocol) is used for synchronizing the time in the ne
 
 ###### Requirement
 
-To receive the SNTP frames, enable the entry "System Time" under "Security > Firewall > Predefined IPv4 rules".
+To receive the SNTP frames, enable the entry "System Time" under "Security &gt; Firewall &gt; Predefined IPv4 rules".
 
 ###### Description
 
@@ -35630,7 +35630,7 @@ If you require time-of-day synchronization using NTP, you can make the relevant 
 
 ###### Requirement
 
-To receive the NTP frames, enable the entry "System Time" under "Security > Firewall > Predefined IPv4 rules".
+To receive the NTP frames, enable the entry "System Time" under "Security &gt; Firewall &gt; Predefined IPv4 rules".
 
 ###### Description
 
@@ -35751,7 +35751,7 @@ On this WBM page, you configure the device as an NTP server or as an NTP server 
 
 ###### Requirement
 
-To receive the NTP frames, enable the entry "System Time" under "Security > Firewall > Predefined IPv4 rules".
+To receive the NTP frames, enable the entry "System Time" under "Security &gt; Firewall &gt; Predefined IPv4 rules".
 
 ###### Description
 
@@ -35863,7 +35863,7 @@ to the Syslog server.
 ##### Requirements for sending Syslog entries
 
 - The Syslog client is enabled.
-- In "System > Events > Configuration", "Syslog" is activated for the relevant event.
+- In "System &gt; Events &gt; Configuration", "Syslog" is activated for the relevant event.
 - There is a Syslog server in your network that receives the Syslog messages.
 - The IP address or the FQDN (Fully Qualified Domain Name) of the Syslog server is entered on the device.
 
@@ -35916,9 +35916,9 @@ A fault is then signaled by the message system when there is no power on a monit
 >
 > You will find the permitted operating voltage limits in the operating instructions of the device.
 
-If a fault occurs, the error LED lights up on the device. The currently pending error is displayed under "Information > Errors".
+If a fault occurs, the error LED lights up on the device. The currently pending error is displayed under "Information &gt; Errors".
 
-In addition, the corresponding error message is entered in the result log table. The content of the event log table is displayed in "Information > Log Tables > Event Log".
+In addition, the corresponding error message is entered in the result log table. The content of the event log table is displayed in "Information &gt; Log Tables &gt; Event Log".
 
 ###### Settings for monitoring the power supply
 
@@ -35964,9 +35964,9 @@ The page contains the following boxes:
 
     A log entry is created and the port is switched off.
 
-  Acknowledge the error message manually under "Information > Error".
+  Acknowledge the error message manually under "Information &gt; Error".
 
-  Activate the port manually under "System > Ports > Configuration".
+  Activate the port manually under "System &gt; Ports &gt; Configuration".
 - **Flap Time [s]**
 
   Configure the time interval in which the maximum number of allowed changeovers between "Link up" and "Link down" is monitored.
@@ -36073,7 +36073,7 @@ This page provides detailed information about the configuration stored on the PL
 > During the installation of an older firmware version, the configuration data can be lost. In this case, reset the device to the factory settings after the firmware has been installed.  
 > In this situation, when a PLUG is inserted in the device, this has the status "NOT ACCEPTED" following the restart because the PLUG still has the configuration data of the previous, more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data.
 >
-> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually via "System > PLUG".
+> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually via "System &gt; PLUG".
 
 ###### Description
 
@@ -36146,7 +36146,7 @@ The table has the following rows:
 >
 > During the installation of a previous version, the configuration data can be lost. In this case, the device starts up with the factory settings after the firmware has been installed. In this situation, if a PLUG is inserted in the device, following the restart, this has the status "NOT ACCEPTED" since the PLUG still has the configuration data of the previous more up-to-date firmware. This allows you to return to the previous, more up-to-date firmware without any loss of configuration data.
 >
-> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System > PLUG".
+> If the original configuration on the PLUG is no longer required, the PLUG can be deleted or rewritten manually using "System &gt; PLUG".
 
 ###### Information about the license of the KEY-PLUG
 
@@ -36249,13 +36249,13 @@ On this page, you can select an interface and search for devices that are reacha
 >
 > **DCP Discovery**
 >
-> The function is only available in the VLAN associated with the TIA interface. You can configure the TIA interface under "Layer 3 > Subnets > Configuration".
+> The function is only available in the VLAN associated with the TIA interface. You can configure the TIA interface under "Layer 3 &gt; Subnets &gt; Configuration".
 
 **Requirement**:
 
 To adapt network parameters, DCP requires write access to the device. If access is write-protected, the network parameters cannot be configured.
 
-On the SCALANCE devices, you configure the access in "System > Configuration".
+On the SCALANCE devices, you configure the access in "System &gt; Configuration".
 
 ##### Description
 
@@ -36358,7 +36358,7 @@ If events occur, the device can automatically send an SMS message.
 
 **Requirement**:
 
-- In "System > Events > Configuration", "SMS" is enabled for the relevant event.
+- In "System &gt; Events &gt; Configuration", "SMS" is enabled for the relevant event.
 
 ###### Description
 
@@ -36389,7 +36389,7 @@ In the area "Customize SMS messages for Digital Input" you specify the SMS text 
 > - 0123456789
 > - A...Z a...z
 > - Space
-> - ! % & / ( ) = * + < > ' , . -
+> - ! % &amp; / ( ) = * + &lt; &gt; ' , . -
 
 - **Sending Option**
 
@@ -36510,7 +36510,7 @@ Username#Password#CommandCode#Seq-Num;Callnumber;Message:
   > - 0123456789
   > - A...Z a...z
   > - Space
-  > - ! " % & / ( ) = ? * + < > ' , . -
+  > - ! " % &amp; / ( ) = ? * + &lt; &gt; ' , . -
 
 ###### Description
 
@@ -36570,7 +36570,7 @@ Example: `user#password#105#01;0049xxxxxxxxx;my SMS text:`
   > - 0123456789
   > - A...Z a...z
   > - Space
-  > - ! " % & / ( ) = ? * + < > ' , . -
+  > - ! " % &amp; / ( ) = ? * + &lt; &gt; ' , . -
 
 ###### Description
 
@@ -36630,7 +36630,7 @@ The page contains the following:
   > - 0123456789
   > - A...Z a...z
   > - Space
-  > - ! " % & / ( ) = ? * + < > ' , . -
+  > - ! " % &amp; / ( ) = ? * + &lt; &gt; ' , . -
 - **Send SMS messages**
 
   The device sends the SMS to the recipient.
@@ -36792,7 +36792,7 @@ The page contains the following boxes:
   >
   > **Configuration file and firmware version**
   >
-  > The configuration file is used to store and read in configuration data within a firmware version, e.g. 4.3. Configuration files created with a firmware version <4.2 cannot be read in to a device with a firmware version 4.3.
+  > The configuration file is used to store and read in configuration data within a firmware version, e.g. 4.3. Configuration files created with a firmware version &lt;4.2 cannot be read in to a device with a firmware version 4.3.
 
   > **Note**
   >
@@ -36839,7 +36839,7 @@ On this page, specify the address band from which the device receives any IP add
 >
 > **Deleting DHCP server bindings**
 >
-> If you deactivate or delete an IPv4 address band or turn the DHCP server off and on again, the DHCP server bindings are deleted see "Information > DHCP Server".
+> If you deactivate or delete an IPv4 address band or turn the DHCP server off and on again, the DHCP server bindings are deleted see "Information &gt; DHCP Server".
 
 ###### Requirement
 
@@ -36857,7 +36857,7 @@ The page contains the following boxes:
   >
   > To avoid conflicts with IPv4 addresses, only one device may be configured as a DHCP server in the network.
 
-  If you want to operate a DHCP server on the devices of a VRRP group, note the information in the section "Layer 3 (IPv4/IPv6) > VRRP/VRRPv3 > Router".
+  If you want to operate a DHCP server on the devices of a VRRP group, note the information in the section "Layer 3 (IPv4/IPv6) &gt; VRRP/VRRPv3 &gt; Router".
 - **Probe address with ICMP Echo before offer**
 
   When selected, the DHCP server checks whether or not the IP address has already been assigned. To do this the DHCP server sends ICMP echo messages (ping) to the IPv4 address. If no reply is received, the IPv4 address is assigned.
@@ -37191,7 +37191,7 @@ The page contains the following:
 
     The firewall and NAT rules are created automatically for the VPN connection. The connections between the configured exported subnets and the subnets that can be reached via the SINEMA RC Server are allowed. The NAT settings are implemented as configured in the SINEMA RC Server.
 
-    You can enable SINEMA RC to access specific services of the device under "Security > Firewall > Predefined IPv4".
+    You can enable SINEMA RC to access specific services of the device under "Security &gt; Firewall &gt; Predefined IPv4".
   - Disabled
 
     You will need to create the firewall and NAT rules yourself.
@@ -37201,22 +37201,22 @@ The page contains the following:
 
   - Auto
 
-    The device adopts the settings of the SINEMA RC Server. You configure the settings on the SINEMA RC Server in "Remote connections > Devices". You will find further information on this topic in the operating instructions "SINEMA RC Server".
+    The device adopts the settings of the SINEMA RC Server. You configure the settings on the SINEMA RC Server in "Remote connections &gt; Devices". You will find further information on this topic in the operating instructions "SINEMA RC Server".
   - Permanent
 
     The settings of the SINEMA RC Server are ignored. The device establishes a VPN connection to the SINEMA RC Server. The VPN tunnel is established permanently
   - Wake-up SMS (only with M87x/MUM85x)
 
-    The settings of the SINEMA RC Server are ignored. When the device receives a command SMS message (wake-up SMS message), it attempts to establish a connection to the SINEMA RC Server. On condition that in "System > SMS > SMS Command" it is specified who a command SMS of the class "System" will be accepted from.
+    The settings of the SINEMA RC Server are ignored. When the device receives a command SMS message (wake-up SMS message), it attempts to establish a connection to the SINEMA RC Server. On condition that in "System &gt; SMS &gt; SMS Command" it is specified who a command SMS of the class "System" will be accepted from.
   - Digital Input
 
-    The settings of the SINEMA RC Server are ignored. If the "Digital In" event occurs, the device attempts to establish a VPN connection to the SINEMA RC Server. This is on condition that the event "Digital Input" is forwarded to the VPN connection. To do this in "System > Events> Configuration" activate "VPN Tunnel" for the "Digital In" event.
-  - Digital Input& Wake-up SMS (only with M87x/MUM85x)
+    The settings of the SINEMA RC Server are ignored. If the "Digital In" event occurs, the device attempts to establish a VPN connection to the SINEMA RC Server. This is on condition that the event "Digital Input" is forwarded to the VPN connection. To do this in "System &gt; Events&gt; Configuration" activate "VPN Tunnel" for the "Digital In" event.
+  - Digital Input&amp; Wake-up SMS (only with M87x/MUM85x)
 
     The settings of the SINEMA RC Server are ignored. If the "Digital In" event occurs or when the device receives an SMS command, it attempts to establish a VPN connection to the SINEMA RC Server.
 - **Use Proxy**
 
-  Specify whether a connection to the defined SINEMA RC Server is established via a proxy server. Only the proxy servers can be selected that you configured in "System > Proxy Server".
+  Specify whether a connection to the defined SINEMA RC Server is established via a proxy server. Only the proxy servers can be selected that you configured in "System &gt; Proxy Server".
 - **Autoconfiguration Interval [min]**
 
   Specify the period of time in minutes after which queries are sent to the SINEMA RC Server. With this query, the device checks whether there is a newer firmware file on the SINEMA RC server or whether the connection settings have changed.
@@ -37233,7 +37233,7 @@ On this page, you configure the parameters for communication with the TIA Portal
 > **Note**
 >
 > - Use the "TIA Portal Cloud Connector" integrated in the product via a VPN solution (e.g. SINEMA RC).
-> - To prevent unauthorized access by network nodes to the "TIA Portal Cloud Connector Server", enable the item "Cloud Connector" under "Security > Firewall > Pre-defined IPv4 Rules".
+> - To prevent unauthorized access by network nodes to the "TIA Portal Cloud Connector Server", enable the item "Cloud Connector" under "Security &gt; Firewall &gt; Pre-defined IPv4 Rules".
 
 ##### Requirement
 
@@ -37253,7 +37253,7 @@ The page contains the following:
     Disables the integrated TIA Cloud Connector.
   - Start on DI
 
-    Enabling is controlled via the digital input (DI) if the "Cloud Connector" is enabled for the event "Digital input" under "System > Events > Configuration". If this setting is not enabled, the event is not passed on to the TIA Portal Cloud Connector.
+    Enabling is controlled via the digital input (DI) if the "Cloud Connector" is enabled for the event "Digital input" under "System &gt; Events &gt; Configuration". If this setting is not enabled, the event is not passed on to the TIA Portal Cloud Connector.
 - **Port**
 
   Communication with the TIA Portal Cloud Connector is established via this port.
@@ -37292,7 +37292,7 @@ The following table is only required for PROFINET:
 
 On this page, you can save backups of your configuration.
 
-The created backups are saved in the file type "ConfigPackBackup". On the "System > Load&Save > HTTP/TFTP > " page you can save configuration backups on your client PC or load them from there.
+The created backups are saved in the file type "ConfigPackBackup". On the "System &gt; Load&amp;Save &gt; HTTP/TFTP &gt; " page you can save configuration backups on your client PC or load them from there.
 
 ##### Description
 
@@ -37447,7 +37447,7 @@ The command is sent in a TCP packet that conforms to the following format:
 > Additionally allowed in the password:
 >
 > - Space
-> - ! " % & / ( ) = ? * + < > ' ,
+> - ! " % &amp; / ( ) = ? * + &lt; &gt; ' ,
 
 ##### Description
 
@@ -37455,7 +37455,7 @@ The page contains the following:
 
 - **Enable**
 
-  Enable or disable reception of the TCP packets. To log this, activate the "TCP Event Log" event under "System > Event".
+  Enable or disable reception of the TCP packets. To log this, activate the "TCP Event Log" event under "System &gt; Event".
 - **User Name**
 
   Enter the user name to check the reception of the TCP packet. The user name and password are entered in the TCP packet.
@@ -37710,9 +37710,9 @@ The page contains the following:
   >
   > Make sure that you enter the PIN correctly. If you enter the PIN incorrectly more than three times, the SIM card is locked.
   >
-  > In "Information > Mobile", you can check the status of the SIM card. If "SIM Status" displays "PUK required", the SIM card is blocked.
+  > In "Information &gt; Mobile", you can check the status of the SIM card. If "SIM Status" displays "PUK required", the SIM card is blocked.
   >
-  > You can release the SIM card again under "Interfaces > Mobile > SIM".
+  > You can release the SIM card again under "Interfaces &gt; Mobile &gt; SIM".
 - **Radio Mode**
 
   Select the required mobile network. The following options are available:
@@ -37776,7 +37776,7 @@ The page contains the following:
 
   When enabled, you monitor when the defined limit is reached. The limit that you define defines the maximum data volume per month.
 
-  The consumption of the data volume is displayed under "Information > Mobile > Data Usage".
+  The consumption of the data volume is displayed under "Information &gt; Mobile &gt; Data Usage".
 - **Reset on the day of the month**
 
   The invoicing period does not always start on the first day of a month, but on the day on which the contract was concluded.
@@ -37786,7 +37786,7 @@ The page contains the following:
 
   Enter the limit of the monthly data volume.
 
-  In addition, you can receive data warnings when 75% and 100% of the specified data volume is reached. Provided that the desired type of notification is enabled for the "Data limit exceeded" event under "System > Events > Configuration".
+  In addition, you can receive data warnings when 75% and 100% of the specified data volume is reached. Provided that the desired type of notification is enabled for the "Data limit exceeded" event under "System &gt; Events &gt; Configuration".
 - **Reset mobile data usage** (only available online)
 
   Deletes the stored values.
@@ -38131,7 +38131,7 @@ The page contains the following:
     The value for noise is assumed that could occur over several cables of a cable bundle.
 - **Target SNR**
 
-  Specify the transmission mode for the signal-to-noise ratio. The current signal-to-noise ratio is displayed under "Information > SHDSL".
+  Specify the transmission mode for the signal-to-noise ratio. The current signal-to-noise ratio is displayed under "Information &gt; SHDSL".
 
   - Reliability (10 dB)  
     Reliable transfer
@@ -38309,7 +38309,7 @@ The table has the following columns:
   - T  
     This option is only displayed and cannot be selected in the WBM.   
     This port is a trunk port, making it a member in all VLANs.  
-    You configure this function in the CLI (Command Line Interface) using the "`switchport mode trunk`" command or in the WBM under "Interfaces > Ethernet > Configuration".
+    You configure this function in the CLI (Command Line Interface) using the "`switchport mode trunk`" command or in the WBM under "Interfaces &gt; Ethernet &gt; Configuration".
 
 ###### Changing Base bridge mode
 
@@ -38378,7 +38378,7 @@ Table 2 has the following columns:
   There are a total of eight priorities with values 0 to 7, where 7 represents the highest priority (IEEE 802.1p Port Priority).
 - **Port VID**
 
-  Select the VLAN ID from the drop-down list. Only VLAN IDs defined on the "VLAN > General" page can be selected.  
+  Select the VLAN ID from the drop-down list. Only VLAN IDs defined on the "VLAN &gt; General" page can be selected.  
   If a received frame does not have a VLAN tag, it has a tag with the VLAN ID specified here added to it and is sent according to the rules at the port.
 - **Acceptable Frames**
 
@@ -38461,7 +38461,7 @@ The page contains the following boxes:
   The source VTEP can have multiple NVE interfaces.
 - **VTEP Source IP Address**
 
-  Enter the IPv4 address of the source VTEP. The requirement is that the IPv4 address is created on the device. You configure the IPv4 address under "Layer3 > Subnets".
+  Enter the IPv4 address of the source VTEP. The requirement is that the IPv4 address is created on the device. You configure the IPv4 address under "Layer3 &gt; Subnets".
 
 The table has the following columns:
 
@@ -38543,7 +38543,7 @@ The table has the following columns:
 
 ##### Static MAC
 
-On this page, you specify the NVE interface via which remote VTEPs can be reached. The entry is displayed under "Information > VXLAN".
+On this page, you specify the NVE interface via which remote VTEPs can be reached. The entry is displayed under "Information &gt; VXLAN".
 
 ###### Description
 
@@ -38823,7 +38823,7 @@ Table 2 has the following columns:
     This port can only receive LLDP frames.
   - Tx  
     This port can only send LLDP frames.
-  - Rx & Tx  
+  - Rx &amp; Tx  
     This port can receive and send LLDP frames.
   - "-" (disabled)  
     This port can neither receive nor send LLDP frames.
@@ -39156,7 +39156,7 @@ On this page, you configure the rules for source NAT.
 >
 > Address translation with source NAT was only performed after the firewall; the non-translated addresses are therefore used.
 >
-> Security > Firewall > IP rules
+> Security &gt; Firewall &gt; IP rules
 >
 > - Source (Range): Input from "Source IP Addresses"
 > - Destination (Range): Input from "Destination IP Addresses"
@@ -39234,7 +39234,7 @@ On this page, you specify the rules for NETMAP. NETMAP is static 1:1 mapping of 
 >
 > Address translation with source NAT was only performed after the firewall; the non-translated addresses are therefore used.
 >
-> Security > Firewall > IP rules
+> Security &gt; Firewall &gt; IP rules
 >
 > - Source (Range): Input from "Source IP Subnet"
 > - Destination (Range): Input from "Destination IP Subnet"
@@ -39243,7 +39243,7 @@ On this page, you specify the rules for NETMAP. NETMAP is static 1:1 mapping of 
 >
 > Address translation with NAT was already performed before the firewall; the translated addresses are therefore used in the firewall.
 >
-> Security > Firewall > IP rules
+> Security &gt; Firewall &gt; IP rules
 >
 > - Source (Range): Input from "Source IP Subnet"
 > - Destination (Range): Input from "Translated Destination IP Subnet"
@@ -39297,7 +39297,7 @@ On this page, you specify the rules for NETMAP. NETMAP is static 1:1 mapping of 
   The NETMAP rules are not connected to one another after creation. This means that no synchronization takes place between the NETMAP rules when they are changed or deleted.
 - **Auto Firewall Rule**
 
-  When this is enabled, the corresponding firewall rule is automatically created when the NETMAP rule is created. These firewall rules are displayed under "Security > Firewall > IP rules". If you change or delete the NETMAP rules, the corresponding firewall rules are adjusted or deleted.
+  When this is enabled, the corresponding firewall rule is automatically created when the NETMAP rule is created. These firewall rules are displayed under "Security &gt; Firewall &gt; IP rules". If you change or delete the NETMAP rules, the corresponding firewall rules are adjusted or deleted.
 
 The table has the following columns:
 
@@ -39344,7 +39344,7 @@ This section contains information on the following topics:
 
 ###### Introduction
 
-On this page, you create new virtual routers. A maximum of two virtual routers can be configured. You can configure other parameters in "Layer 3 (IPv4) > VRRPv3 > Configuration".
+On this page, you create new virtual routers. A maximum of two virtual routers can be configured. You can configure other parameters in "Layer 3 (IPv4) &gt; VRRPv3 &gt; Configuration".
 
 > **Note**
 >
@@ -39393,7 +39393,7 @@ The table has the following columns:
   Shows the virtual MAC address of the virtual router.
 - **Primary IP Address**
 
-  Shows the numerically lowest IPv4 address in this VLAN. The entry 0.0.0.0 means that the "Primary" address on this VLAN is used. Otherwise, all IPv4 addresses configured on this VLAN in the "Layer 3 > Subnets" menu are valid values.
+  Shows the numerically lowest IPv4 address in this VLAN. The entry 0.0.0.0 means that the "Primary" address on this VLAN is used. Otherwise, all IPv4 addresses configured on this VLAN in the "Layer 3 &gt; Subnets" menu are valid values.
 - **Router State**
   (only available online)
 
@@ -39531,7 +39531,7 @@ The table has the following columns:
 
 On this page, you configure the monitoring of interfaces.
 
-When the link of a monitored interface changes from "up" to "down", the priority of the assigned VRRP interface is reduced. You configure the value by which the priority is reduced on the page "Layer 3 > VRRP/VRRPv3 > Configuration".
+When the link of a monitored interface changes from "up" to "down", the priority of the assigned VRRP interface is reduced. You configure the value by which the priority is reduced on the page "Layer 3 &gt; VRRP/VRRPv3 &gt; Configuration".
 
 When the link of the interface changes back from "down" to "up", the original priority of the VRRP interface is restored.
 
@@ -39783,7 +39783,7 @@ On this page, you can change passwords. If you are logged on with read/write rig
 
     Custom Password Policy
 
-  You configure the password policy on the page "Security > Passwords > Options".
+  You configure the password policy on the page "Security &gt; Passwords &gt; Options".
 - **New name for the Admin user account**
 
   You can change the name the default user "admin" once. Afterwards, renaming "admin" is no longer possible.
@@ -39908,7 +39908,7 @@ The table contains the following columns:
     The rule set is enabled through a local user account.
   - Digital Input
 
-    The rule set is executed by controlling the digital input. The prerequisite for this is that the entry "Digital In" is enabled for the "Firewall" event under "System > Events > Configuration".
+    The rule set is executed by controlling the digital input. The prerequisite for this is that the entry "Digital In" is enabled for the "Firewall" event under "System &gt; Events &gt; Configuration".
   - RADIUS role
 
     The rule set is enabled through a RADIUS role.
@@ -40096,7 +40096,7 @@ The page contains the following:
     At least 1 number
   - User-defined
 
-    The password must meet the configured requirements. You configure the requirements under "Security > Passwords > Options".
+    The password must meet the configured requirements. You configure the requirements under "Security &gt; Passwords &gt; Options".
 - **Password**
 
   Enter the password. The strength of the password depends on the set password policy.
@@ -40109,7 +40109,7 @@ The page contains the following:
 
   Select a role.
 
-  You can choose between system-defined and self-defined roles, refer to the page "Security > Users > Roles.".
+  You can choose between system-defined and self-defined roles, refer to the page "Security &gt; Users &gt; Roles.".
 
 The table contains the following columns:
 
@@ -40261,7 +40261,7 @@ The table contains the following columns:
   Shows the name of the group.
 - **Role**
 
-  Select a role. Users who are authenticated with the linked group on the RADIUS server receive the rights of this role locally on the device. You can choose between system-defined and self-defined roles, refer to the page "Security > Users > Roles".
+  Select a role. Users who are authenticated with the linked group on the RADIUS server receive the rights of this role locally on the device. You can choose between system-defined and self-defined roles, refer to the page "Security &gt; Users &gt; Roles".
 - **Description**
 
   Enter a description for the link of the group.to a role. The description text can be up to 100 characters long.
@@ -40345,7 +40345,7 @@ The table has the following columns:
   - 802.1X
 
     The server is used only for the 802.1X authentication.
-  - Login & 802.1X
+  - Login &amp; 802.1X
 
     The server is used for both authentication procedures.
 - **RADIUS Server Address**
@@ -40398,9 +40398,9 @@ This section contains information on the following topics:
 
 All loaded files (certificates and keys) are shown on this page. You have the following options for loading files on the device:
 
-- System > Load & Save > HTTP
-- System > Load&Save > TFTP
-- System > Load&Save > SFTP
+- System &gt; Load &amp; Save &gt; HTTP
+- System &gt; Load&amp;Save &gt; TFTP
+- System &gt; Load&amp;Save &gt; SFTP
 
 ###### Description
 
@@ -40607,7 +40607,7 @@ Specify which IPv4 services of the device should be reachable from which interfa
     >
     > **HTTPS disabled**
     >
-    > When you disable HTTPS, you can only access the WBM using HTTP. This assumes that "HTTP & HTTPS" is set in "System > Configuration > HTTP Services". If "Redirect HTTP to HTTPS" is set, for example, access via HTTP cannot be redirected to HTTPS. This means that the WBM of the device can no longer be reached.
+    > When you disable HTTPS, you can only access the WBM using HTTP. This assumes that "HTTP &amp; HTTPS" is set in "System &gt; Configuration &gt; HTTP Services". If "Redirect HTTP to HTTPS" is set, for example, access via HTTP cannot be redirected to HTTPS. This means that the WBM of the device can no longer be reached.
   - DNS  
     DNS queries to the device. Necessary only if the "DNS-Relay" function is enabled on the device.
   - SNMP  
@@ -40685,7 +40685,7 @@ The table contains the following columns:
     The rule set is enabled through a local user account.
   - Digital Input
 
-    The rule set is executed by controlling the digital input. The prerequisite for this is that the entry "Digital In" is enabled for the "Firewall" event under "System > Events > Configuration".
+    The rule set is executed by controlling the digital input. The prerequisite for this is that the entry "Digital In" is enabled for the "Firewall" event under "System &gt; Events &gt; Configuration".
   - RADIUS role
 
     The rule set is enabled through a RADIUS role.
@@ -40994,7 +40994,7 @@ The table contains the following columns:
     >
     > **Digital input and DYNAMIC placeholder**
     >
-    > If the rule set is executed by controlling the digital input, the placeholder DYNAMIC is replaced by the setting for "Dynamic Source (Range)". You configure the setting in "Security > Firewall > Dynamic Rules".
+    > If the rule set is executed by controlling the digital input, the placeholder DYNAMIC is replaced by the setting for "Dynamic Source (Range)". You configure the setting in "Security &gt; Firewall &gt; Dynamic Rules".
 - **Destination (Range)**
 
   Enter the IP address or an IP range that is allowed to receive IP packets.
@@ -41024,7 +41024,7 @@ The table contains the following columns:
   - none  
     The rule coming into effect is not logged.
   - info / warning / critical  
-    The rule coming into effect is logged with the selected event severity. The log file is displayed in "Information > Log Tables > Firewall Log".
+    The rule coming into effect is logged with the selected event severity. The log file is displayed in "Information &gt; Log Tables &gt; Firewall Log".
 - **Precedence**
     
   Specify the precedence of the rule.
@@ -41230,7 +41230,7 @@ The table contains the following columns:
     
   Shows the name of the VPN connection.
 - **Operation**
-  Specify who establishes the VPN connection. You will find more detailed information in "Technical basics > [VPN connection establishment](#vpn-connection-establishment)".
+  Specify who establishes the VPN connection. You will find more detailed information in "Technical basics &gt; [VPN connection establishment](#vpn-connection-establishment)".
 
   - Disabled
 
@@ -41247,16 +41247,16 @@ The table contains the following columns:
 
     If the event "Digital In" occurs, the device attempts to establish a VPN connection to the partner.
 
-    This is on condition that the event "Digital In" is forwarded to the VPN connection. To do this, enable "VPN Tunnel" for the "Digital In" event under "System > Events > [Configuration](#configuration-18)".
+    This is on condition that the event "Digital In" is forwarded to the VPN connection. To do this, enable "VPN Tunnel" for the "Digital In" event under "System &gt; Events &gt; [Configuration](#configuration-18)".
   - wait on DI
 
     If the event "Digital In" occurs, the device waits for the partner to initiate connection establishment.
 
-    This is on condition that the event "Digital In" is forwarded to the VPN connection. To do this, enable "VPN Tunnel" for the "Digital In" event under "[System](#configuration-18) > Events > Configuration".
+    This is on condition that the event "Digital In" is forwarded to the VPN connection. To do this, enable "VPN Tunnel" for the "Digital In" event under "[System](#configuration-18) &gt; Events &gt; Configuration".
   - With start on SMS(M87x and MUM85x only)  
-    If the device receives a command SMS, the device attempts to establish a VPN connection to the remote station. This assumes that the device accepts a command SMS of the class "System" from certain senders. You configure the senders in "System > SMS > [SMS Command](#command-sms-message)".
+    If the device receives a command SMS, the device attempts to establish a VPN connection to the remote station. This assumes that the device accepts a command SMS of the class "System" from certain senders. You configure the senders in "System &gt; SMS &gt; [SMS Command](#command-sms-message)".
   - Wait on SMS (M87x and MUM85x only)  
-    When the device receives an SMS command, the device waits until the connection establishment is initiated by the remote station. This assumes that the device accepts a command SMS of the class "System" from certain senders. You configure the senders in "System > SMS > [SMS Command](#command-sms-message)".
+    When the device receives an SMS command, the device waits until the connection establishment is initiated by the remote station. This assumes that the device accepts a command SMS of the class "System" from certain senders. You configure the senders in "System &gt; SMS &gt; [SMS Command](#command-sms-message)".
 - **Interface**
 
   Specify the interface via which the VPN connection is established.
@@ -41320,7 +41320,7 @@ The table contains the following columns:
     
   Select the machine certificate. Only the device certificates generated by the TIA Portal can be selected.
 
-  You load the certificates onto the device with "System > Load&Save". The loaded certificates and key files are shown on the WBM page "Security > Certificates".
+  You load the certificates onto the device with "System &gt; Load&amp;Save". The loaded certificates and key files are shown on the WBM page "Security &gt; Certificates".
 - **Local ID**
     
   Enter the local ID from the partner certificate. Only when you use the partner certificate can you leave the box empty. The box is automatically filled with the value from the partner certificate.
@@ -41328,7 +41328,7 @@ The table contains the following columns:
     
   Select the remote station certificate. Only the partner certificates generated by the TIA Portal can be selected.
 
-  You load the certificates onto the device with "System > Load&Save". The loaded certificates and key files are shown on the WBM page "Security > Certificates".
+  You load the certificates onto the device with "System &gt; Load&amp;Save". The loaded certificates and key files are shown on the WBM page "Security &gt; Certificates".
 - **Remote ID**
     
   Enter the "Distinguished Name" or "Alternate Name" from the partner certificate. Only when you use the partner certificate can you leave the box empty. The box is automatically filled with the value from the partner certificate.
@@ -41427,7 +41427,7 @@ The table contains the following columns:
   Enter the period after which DPD requests are sent. These queries test whether or not the remote station is still available
 - **DPD Timeout [sec]**
 
-  Only adjustable for IKEv1. For IKEv2, configure the setting under "Security > IPsec > General".
+  Only adjustable for IKEv1. For IKEv2, configure the setting under "Security &gt; IPsec &gt; General".
 
   Enter a period. If there is no response to the DPD queries, the connection to the remote station is declared to be invalid after this time has elapsed.
 
@@ -41517,7 +41517,7 @@ The table contains the following columns:
 - **Auto Firewall Rules**
 
   - Enabled  
-    For the VPN connection, the firewall rules for access from "External" to "Internal" and vice versa are created automatically. You can enable access to specific services of the device under "Security > Firewall > Predefined IPv4". Ping is enabled by default.
+    For the VPN connection, the firewall rules for access from "External" to "Internal" and vice versa are created automatically. You can enable access to specific services of the device under "Security &gt; Firewall &gt; Predefined IPv4". Ping is enabled by default.
   - Disabled  
     You need to create the firewall rules yourself.
 
@@ -41562,7 +41562,7 @@ The table contains the following columns:
   Shows the name of the OpenVPN connection.
 - **Operation**
 
-  Specify how the VPN connection is estalished. You will find more detailed information in "Technical basics > VPN connection establishment".
+  Specify how the VPN connection is estalished. You will find more detailed information in "Technical basics &gt; VPN connection establishment".
 
   - start
 
@@ -41571,10 +41571,10 @@ The table contains the following columns:
 
     If the event "Digital In" occurs, the device attempts to establish a VPN connection to the partner.
 
-    This is on condition that the event "Digital In" is forwarded to the VPN connection. To do this, enable "VPN Tunnel" for the "Digital In" event under "System > Events > Configuration".
+    This is on condition that the event "Digital In" is forwarded to the VPN connection. To do this, enable "VPN Tunnel" for the "Digital In" event under "System &gt; Events &gt; Configuration".
   - Start on SMS (only with M87x)
 
-    If the device receives a command SMS, the device attempts to establish a VPN connection to the partner. This assumes that the device accepts a command SMS of the class "System" from certain senders. You configure the senders in "System > SMS > SMS Command".
+    If the device receives a command SMS, the device attempts to establish a VPN connection to the partner. This assumes that the device accepts a command SMS of the class "System" from certain senders. You configure the senders in "System &gt; SMS &gt; SMS Command".
   - Disabled
 
     The VPN connection is disabled.
@@ -41615,13 +41615,13 @@ The table contains the following columns:
 
   - Enabled
 
-    For the VPN connection, the firewall rules for access from "External" to "Internal" and vice versa are created automatically. In addition to this, access from the device to the outside is allowed. You can enable access to specific services of the device under "Security > Firewall > Predefined IPv4". Ping is enabled by default.
+    For the VPN connection, the firewall rules for access from "External" to "Internal" and vice versa are created automatically. In addition to this, access from the device to the outside is allowed. You can enable access to specific services of the device under "Security &gt; Firewall &gt; Predefined IPv4". Ping is enabled by default.
   - Disabled
 
     You will need to create the suitable firewall rules yourself.
 - **Enable NAT**
 
-  With this setting, you enable automatic IP masquerading for this interface. The local devices are not directly reachable from the outside, but only via the IP address of the interface. The local devices can, however, connect to the devices downstream from the OpenVPN server. You will find more information on NAT in "[Technical basics > NAT](#nat-3)"
+  With this setting, you enable automatic IP masquerading for this interface. The local devices are not directly reachable from the outside, but only via the IP address of the interface. The local devices can, however, connect to the devices downstream from the OpenVPN server. You will find more information on NAT in "[Technical basics &gt; NAT](#nat-3)"
 - **Timeout [min]**
 
   Specify the period of time in minutes. If no data exchange takes place, when this time has elapsed the VPN tunnel is automatically terminated.
@@ -41660,7 +41660,7 @@ The table contains the following columns:
   Specify the protocol for which the OpenVPN connection will be used.
 - **Proxy**
 
-  Specify whether the OpenVPN tunnel to the defined OpenVPN partner is established via a proxy server. Only the proxy servers can be selected that you configured in "System > Proxy Server".
+  Specify whether the OpenVPN tunnel to the defined OpenVPN partner is established via a proxy server. Only the proxy servers can be selected that you configured in "System &gt; Proxy Server".
 
 ##### Authentication
 
@@ -41700,12 +41700,12 @@ The table contains the following columns:
 
   Select the CA certificate via the WBM and load it onto the device.
 
-  You load the certificates onto the device with "System > Load&Save". The loaded certificates and key files are shown on the WBM page "Security > Certificates".
+  You load the certificates onto the device with "System &gt; Load&amp;Save". The loaded certificates and key files are shown on the WBM page "Security &gt; Certificates".
 - **Machine Certificate**
 
   Select the machine certificate. Only loaded certificates can be selected.
 
-  You load the certificates onto the device with "System > Load&Save". The loaded certificates and key files are shown on the WBM page "Security > Certificates".
+  You load the certificates onto the device with "System &gt; Load&amp;Save". The loaded certificates and key files are shown on the WBM page "Security &gt; Certificates".
 - **User Name**
 
   Specify the user name.
@@ -41730,7 +41730,7 @@ The page contains the following boxes:
 
   Shows whether the user-specific Brute Force Prevention is enabled.
 
-  You configure login authentication in the menu "Security > AAA > > General" in the "Login Authentication" drop-down list. The login authentication determines whether you can enable user-specific Brute Force Prevention.
+  You configure login authentication in the menu "Security &gt; AAA &gt; &gt; General" in the "Login Authentication" drop-down list. The login authentication determines whether you can enable user-specific Brute Force Prevention.
 
   - Enabled:
 

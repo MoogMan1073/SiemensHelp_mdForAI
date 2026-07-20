@@ -211,7 +211,7 @@ To create a data log, proceed as follows:
 2. Open the "Data logs" tab and double-click "Add" in the "Name" column of the "Data logs" editor.
 
    A new data log is created.
-3. In the Inspector window select "Properties > Properties > General."
+3. In the Inspector window select "Properties &gt; Properties &gt; General."
 4. Enter a unique name for the log in the "Name" field.
 5. Define the number of data records to be logged in each log in the "Number of data records per log" field.
 
@@ -261,7 +261,7 @@ You define the restart characteristics separately for each log.
 To configure the restart characteristics of a data log, proceed as follows:
 
 1. Select the log for which you want to define the restart characteristics in the "Historical Data" editor.
-2. In the Inspector window select "Properties > Properties > Restart behavior".
+2. In the Inspector window select "Properties &gt; Properties &gt; Restart behavior".
 3. If you want logging to start when Runtime starts, enable the "Enable logging at runtime start" option in the "Logging" area.  
    You can also start logging in Runtime using the "StartLogging" system function, for example.
 4. Select the restart behavior of the log in the "Log handling at restart" area.
@@ -315,7 +315,7 @@ The following logging methods are available:
 ##### Procedure
 
 1. Select the log for which you want to define the logging method in the "Historical Data" editor.
-2. Select "Properties > Properties > Logging method" in the Inspector window and select the required logging method.
+2. Select "Properties &gt; Properties &gt; Logging method" in the Inspector window and select the required logging method.
 3. If you have selected the "Segmented circular log" type, enter the number of log segments. The system creates an additional log segment for the main log. This results in the total number of log files created from the number of configured segments as well as the automatically created log.
 
    If you selected a log with the "Display system alarm on" setting, specify the level as a percentage at which a system alarm is to be triggered.
@@ -374,14 +374,14 @@ To log process values in a tag, proceed as follows:
 1. Select a tag in the tag table.
 2. Double-click "Add" in the "Name" field in the "Logging tags" table.  
    A new logging tag is created; it is given the same name as the associated HMI tag.
-3. Select the data log in which the values of the tags are to be logged under "Properties > Properties > General" in the Inspector window.
-4. Select "Properties > Properties > Logging type" in the Inspector window and select the log type for logging.
+3. Select the data log in which the values of the tags are to be logged under "Properties &gt; Properties &gt; General" in the Inspector window.
+4. Select "Properties &gt; Properties &gt; Logging type" in the Inspector window and select the log type for logging.
 
    - "Cyclic": The tag values are logged in accordance with the set logging cycle.
    - "On change": The tag values are logged, as soon as the operator device detects a change in value.
    - "On demand": The tag values are logged by calling the "LogTag" system function.
 5. If you want to log tag values cyclically, select a cycle time in the "Logging cycle" area. Alternatively, you can define your own cycle using the object list. The smallest value that can be set is 1 s. All other values are integer multiples of this value.
-6. If you only want to log tag values outside or inside a defined value range, select "Properties > Properties > Deadband for logging" in the Inspector window. Define the values for the high and low limits.
+6. If you only want to log tag values outside or inside a defined value range, select "Properties &gt; Properties &gt; Deadband for logging" in the Inspector window. Define the values for the high and low limits.
 
    If you want to configure a dynamic limit, select "HMI tag" using the selection button. In the second field, select the tag that contains the limit.
 
@@ -429,7 +429,7 @@ You can use system functions, for example, to swap the data from a full log file
 To configure a system function for the "Overflow" event, proceed as follows:
 
 1. Select the required log in the table in the "Data Log" editor.
-2. In the Inspector window select "Properties > Events > Overflow."
+2. In the Inspector window select "Properties &gt; Events &gt; Overflow."
 
    The function list will open.
 3. Double-click "Add function" and select the desired system function.
@@ -496,7 +496,7 @@ Proceed as follows to configure a data log or alarm log for the use of a checksu
    ![Procedure](images/70806916747_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/70806916747_DV_resource.Stream@PNG-en-US.png)
-3. Under "Properties > Properties > Logging method" in the Inspector window, select the option "Display system event at" or "Trigger event".
+3. Under "Properties &gt; Properties &gt; Logging method" in the Inspector window, select the option "Display system event at" or "Trigger event".
 
    ![Procedure](images/70807230603_DV_resource.Stream@PNG-en-US.png)
 
@@ -547,7 +547,7 @@ The "HmiCheckLogIntegrity" program supports verification of the following files:
 - Recipe data records in CSV format
 - Recipe data records in TXT format
 
-You can find the "HmiCheckLogIntegrity.exe" program in the installation directory of WinCC under the folder "WinCC Runtime Advanced", for example <C:\Program Files\Siemens\Automation WinCC Runtime Advanced>.
+You can find the "HmiCheckLogIntegrity.exe" program in the installation directory of WinCC under the folder "WinCC Runtime Advanced", for example &lt;C:\Program Files\Siemens\Automation WinCC Runtime Advanced&gt;.
 
 > **Note**
 >
@@ -560,9 +560,9 @@ You can find the "HmiCheckLogIntegrity.exe" program in the installation director
 ##### Procedure
 
 1. Copy the file to be checked from the HMI device to your configuration computer.
-2. Open a command line prompt with "Start > Programs > Accessories > Command Prompt".
+2. Open a command line prompt with "Start &gt; Programs &gt; Accessories &gt; Command Prompt".
 3. Enter the path to "HmiCheckLogIntegrity.exe" followed by a space in the command line prompt. After the space, enter the storage location of the file to be checked within quotation marks.
-4. Press <Enter>.
+4. Press &lt;Enter&gt;.
 5. The check is performed.
 
    When the checked data are consistent, the "Consistency check succeeded" message appears.
@@ -609,7 +609,7 @@ In the Runtime settings of your HMI device, select the language to be used for w
 
 To determine the startup language, follow these steps:
 
-1. Select "Runtime settings > Language and fonts" in the project navigation.
+1. Select "Runtime settings &gt; Language and fonts" in the project navigation.
 2. Activate the runtime language, for example, "German (Germany)" and "English (USA)".
 3. Set the "Language switch order". Use 0 to determine the startup language, for example:
 
@@ -617,8 +617,8 @@ To determine the startup language, follow these steps:
    - English 1
 
      With "0", German is specified as the "Startup language".
-4. Select "Runtime settings > General" in the project navigation.
-5. Select the "Logs > Logging language > Startup language".
+4. Select "Runtime settings &gt; General" in the project navigation.
+5. Select the "Logs &gt; Logging language &gt; Startup language".
 
 ##### Result
 
@@ -850,7 +850,7 @@ If you want the acquired process values belonging to a raw data tag to be archiv
 
 A format DLL for the SIMATIC S7 is included as standard in the scope of delivery of WinCC.
 
-If you want to log a raw data tag, you have to activate the "Archive data link" option in the properties of the raw data tag. In the Inspector window, activate the option under "Properties > Properties > Raw data". When the option "Archive data link" is activated, you can select and connect the raw data tag at the logging tag under "Properties > General" in the "Process tag" field.
+If you want to log a raw data tag, you have to activate the "Archive data link" option in the properties of the raw data tag. In the Inspector window, activate the option under "Properties &gt; Properties &gt; Raw data". When the option "Archive data link" is activated, you can select and connect the raw data tag at the logging tag under "Properties &gt; General" in the "Process tag" field.
 
 ---
 
@@ -1411,13 +1411,13 @@ To create a data log, proceed as follows:
    The editor for data logs and compressed logs opens.
 2. Open the "Data logs" tab and double-click "Add" in the "Name" column of the "Data logs" editor.  
    A new data log is created.
-3. In the Inspector window select "Properties > Properties > General".
+3. In the Inspector window select "Properties &gt; Properties &gt; General".
 4. Enter a unique name for the log in the "Name" field.
 5. In the "Storage location" field, decide whether the process values should be saved in the main memory or in a database.
 6. If you select "Memory" as the storage location, set the number of data records to be logged per logging tag in the "Number of data records" field.
 7. In the "Status" area, use the "Locked" option to determine whether the logging process is locked at the start of Runtime.  
    If you want to start logging in Runtime, you will need to deactivate the option again.
-8. If the status of the logging lock changes, you can be informed of this via a C function or configure subsequent steps. To do this, select an available C function under "Properties > Properties > Events" in the Inspector window. The C function is called in Runtime from the log server when the "Locked" status changes. You must first write the C function in the "Scripts" editor. See "[Function for status check of the log lock](#function-for-status-check-of-the-log-lock-rt-professional)" for additional information. Only one C function can be run by the "Changed lock" event.
+8. If the status of the logging lock changes, you can be informed of this via a C function or configure subsequent steps. To do this, select an available C function under "Properties &gt; Properties &gt; Events" in the Inspector window. The C function is called in Runtime from the log server when the "Locked" status changes. You must first write the C function in the "Scripts" editor. See "[Function for status check of the log lock](#function-for-status-check-of-the-log-lock-rt-professional)" for additional information. Only one C function can be run by the "Changed lock" event.
 9. If necessary, enter a descriptive text under "Comment" to document your project.
 
 Alternatively you can configure log properties directly in the "Data log" editor. To view hidden columns, activate the column titles using the shortcut menu.
@@ -1433,7 +1433,7 @@ See "[Specifying log settings](#specifying-log-settings-rt-professional)" for ad
 >
 > The log name can be up to 32 characters long.
 >
-> Do not use the following characters: '\\','\'', '.', ',', ';', ':', '!', '?', '"', '´', '`', '^', '~', '-', '+', '=', '/', '*', '#', '%', '&', '§', '°', '(', ')', '[', ']','{', '}', '<', '>', '|', ' ', 'ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'
+> Do not use the following characters: '\\','\'', '.', ',', ';', ':', '!', '?', '"', '´', '`', '^', '~', '-', '+', '=', '/', '*', '#', '%', '&amp;', '§', '°', '(', ')', '[', ']','{', '}', '&lt;', '&gt;', '|', ' ', 'ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'
 >
 > Capitalization is ignored.
 >
@@ -1477,14 +1477,14 @@ To create a compressed log, proceed as follows:
    The editor for data logs and compressed logs opens.
 2. Open the "Compressed logs" tab and double-click "Add" in the "Name" column of the "Compressed logs" editor.  
    A new compressed log will be created.
-3. In the Inspector window select "Properties > Properties > General".
+3. In the Inspector window select "Properties &gt; Properties &gt; General".
 4. Enter a unique name for the log in the "Name" field.
 5. Select the processing method and compression period in the "Compression" area.
 
-   All times created in the "Cycles" editor that are >= 1 minute are available as the compression time period. If the compression cycle you want is unavailable, configure a new cycle time. Then select the new cycle as the compression time period.
+   All times created in the "Cycles" editor that are &gt;= 1 minute are available as the compression time period. If the compression cycle you want is unavailable, configure a new cycle time. Then select the new cycle as the compression time period.
 6. Use the "Locked" option to determine whether the logging process is locked at the start of Runtime.  
    If you want to start logging in Runtime, you will need to deactivate the option again.
-7. If the status of the logging lock changes, you can be informed of this via a C function or configure subsequent steps. To do this, select an available C function under "Properties > Properties > Events" in the Inspector window. The C function is called in Runtime from the log server when the "Locked" status changes. You must first write the C function in the "Scripts" editor. See "[Function for status check of the log lock](#function-for-status-check-of-the-log-lock-rt-professional)" for additional information.
+7. If the status of the logging lock changes, you can be informed of this via a C function or configure subsequent steps. To do this, select an available C function under "Properties &gt; Properties &gt; Events" in the Inspector window. The C function is called in Runtime from the log server when the "Locked" status changes. You must first write the C function in the "Scripts" editor. See "[Function for status check of the log lock](#function-for-status-check-of-the-log-lock-rt-professional)" for additional information.
 8. If necessary, enter a descriptive text under "Comment" to document your project.
 
 Alternatively you can configure log properties directly in the "Compressed log" editor. To view hidden columns, activate the column titles using the shortcut menu.
@@ -1497,7 +1497,7 @@ The compressed log is created.
 >
 > The log name can be up to 32 characters long.
 >
-> Do not use the following characters: '\\','\'', '.', ',', ';', ':', '!', '?', '"', '´', '`', '^', '~', '-', '+', '=', '/', '*', '#', '%', '&', '§', '°', '(', ')', '[', ']','{', '}', '<', '>', '|', ' ', 'ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'
+> Do not use the following characters: '\\','\'', '.', ',', ';', ':', '!', '?', '"', '´', '`', '^', '~', '-', '+', '=', '/', '*', '#', '%', '&amp;', '§', '°', '(', ')', '[', ']','{', '}', '&lt;', '&gt;', '|', ' ', 'ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'
 >
 > Capitalization is ignored.
 >
@@ -1583,13 +1583,13 @@ To create a binary logging tag, proceed as follows:
 2. In the "Name" column of the "Logging tags" table, double-click "Add".
 
    An logging tag is created.
-3. Select "Properties > Properties > General" in the Inspector window and enter a unique name for the logging tag in the "Name" field.
+3. Select "Properties &gt; Properties &gt; General" in the Inspector window and enter a unique name for the logging tag in the "Name" field.
 4. In the "Process tags" field, select the binary tags to be linked to the logging tag.  
    Use the "Locked" option to define whether logging should be enabled or disabled when Runtime starts. You will have to deactivate the option once again if you want to start the logging in Runtime.
 5. To reuse the logged values for other purposes, you can also write the value of the logging tag to an internal tag. The update process is determined by the cycle settings for the logging tag. Select the required tag from the "Copy logged value to tag" field.
-6. Select "Properties > Properties > Logging type" in the Inspector window and select the required log type.  
+6. Select "Properties &gt; Properties &gt; Logging type" in the Inspector window and select the required log type.  
    See "[Trigger mode](#trigger-mode-rt-professional)" for additional information.
-7. Select "Properties > Properties > Processing method" in the Inspector window and select the required processing method.  
+7. Select "Properties &gt; Properties &gt; Processing method" in the Inspector window and select the required processing method.  
    You can find more detailed information on this in the section "[Cycles and Events](#cycles-and-events-rt-professional)".
 8. If necessary, enter a descriptive text under "Comment" to document your project.
 
@@ -1634,14 +1634,14 @@ To create an analog logging tag, proceed as follows:
 2. In the "Name" column of the "Logging tags" table, double-click "Add".
 
    An logging tag is created.
-3. Select "Properties > Properties > General" in the Inspector window and enter a unique name for the logging tag in the "Name" field.
+3. Select "Properties &gt; Properties &gt; General" in the Inspector window and enter a unique name for the logging tag in the "Name" field.
 4. In the "Process tags" field, select the analog tags to be linked to the logging tag.  
    Use the "Locked" option to define whether logging should be enabled or disabled when Runtime starts. You will have to deactivate the option once again if you want to start the logging in Runtime.
 5. To reuse the logged values for other purposes, you can also write the value of the logging tag to an internal tag. The update process is determined by the cycle settings for the logging tag. Select the required tag from the "Copy logged value to tag" field.
-6. Select "Properties > Properties > Logging type" in the Inspector window and select the required log type.  
+6. Select "Properties &gt; Properties &gt; Logging type" in the Inspector window and select the required log type.  
    See "[Trigger mode](#trigger-mode-rt-professional)" for additional information.
-7. Select "Properties > Properties > Deadband for logging" in the Inspector window and enter the required limits. Open the selection box and select the "Constant" entry to enable the input. Then enter the required limit value. Process values outside the limits will not be logged.
-8. Select "Properties > Properties > Processing method" in the Inspector window and select the required processing method.  
+7. Select "Properties &gt; Properties &gt; Deadband for logging" in the Inspector window and enter the required limits. Open the selection box and select the "Constant" entry to enable the input. Then enter the required limit value. Process values outside the limits will not be logged.
+8. Select "Properties &gt; Properties &gt; Processing method" in the Inspector window and select the required processing method.  
    For additional information see "[Cycles and Events](#cycles-and-events-rt-professional)".  
    You can specify a C function for converting tag values if you use the "Calculation" processing method. You must first write the C function in the "Scripts" editor. For additional information see "[Converting values from logging tags](#converting-values-from-logging-tags-rt-professional)".
 9. If necessary, enter a descriptive text under "Comment" to document your project.
@@ -1743,21 +1743,21 @@ This section contains information on the following topics:
 
 ###### Introduction
 
-You configure the logical organization of data logs and compressed logs in the "Historical Data" editor. You can configure the basic properties of logs in Runtime Professional, such as the segment size, in the "Runtime settings > Logging" dialog.
+You configure the logical organization of data logs and compressed logs in the "Historical Data" editor. You can configure the basic properties of logs in Runtime Professional, such as the segment size, in the "Runtime settings &gt; Logging" dialog.
 
 You make the settings for data logs separately in the dialog for the "Fast data log" and "Slow data log" types.
 
 The following conditions apply if you are using the default settings:
 
-The Fast data log is used to store all values with a logging cycle <= 1 minute.
+The Fast data log is used to store all values with a logging cycle &lt;= 1 minute.
 
-The Slow data log is used to store all values with a logging cycle > 1 minute.
+The Slow data log is used to store all values with a logging cycle &gt; 1 minute.
 
-You can change the cycle limit for allocation to the log type in the "Cycle" field in the "Runtime settings > Logging" dialog.
+You can change the cycle limit for allocation to the log type in the "Cycle" field in the "Runtime settings &gt; Logging" dialog.
 
 ###### Overview of procedure
 
-You configure the higher-level log configuration in the "Runtime settings > Logging" dialog. The following instructions contain a description of the configuration procedure:
+You configure the higher-level log configuration in the "Runtime settings &gt; Logging" dialog. The following instructions contain a description of the configuration procedure:
 
 | Step | Description |
 | --- | --- |
@@ -1789,7 +1789,7 @@ You configure the higher-level log configuration in the "Runtime settings > Logg
 
 ###### Introduction
 
-In the "Runtime settings > Logging" dialog, you define the sizes of the "Fast data log" and "Slow data log" types in the database. You can also subdivide the two types of log into segments. The size of the individual segments thus also defines the number of individual segments.
+In the "Runtime settings &gt; Logging" dialog, you define the sizes of the "Fast data log" and "Slow data log" types in the database. You can also subdivide the two types of log into segments. The size of the individual segments thus also defines the number of individual segments.
 
 The individual segments are filled one after the other in Runtime. Once a segment is totally full, it switches to the next segment. You can also configure the segment change at specific times. If you define a time for the segment change, the next log segment is filled when the time is reached.
 
@@ -1846,7 +1846,7 @@ With the configuration shown in the table, the started segment will be changed f
 
 ###### Changing the log type
 
-If the user does not change the relevant settings, the logging tags will be logged with a cycle time of <= 1 min in the "Fast data log". Logging tags with a cycle time > 1 min will be logged in the"Slow data log". The cycle time of a logging tag must not be changed in Runtime beyond the above limits. It is not possible to change of a logging tag from "Fast" to "Slow" log type and vice-versa in Runtime.
+If the user does not change the relevant settings, the logging tags will be logged with a cycle time of &lt;= 1 min in the "Fast data log". Logging tags with a cycle time &gt; 1 min will be logged in the"Slow data log". The cycle time of a logging tag must not be changed in Runtime beyond the above limits. It is not possible to change of a logging tag from "Fast" to "Slow" log type and vice-versa in Runtime.
 
 After a cycle change or reconfiguration, if tags are to be stored in a different log type, these tags will be read from the currently valid log. Previous log values of this tag are not accessible in Runtime.
 
@@ -1858,7 +1858,7 @@ If you reconfigure the logging tags so that their values are stored in a log oth
 
 ###### Resetting the log database
 
-Use the "Extended loading" dialog to reset the log database settings. Select the HMI device in the project tree for this purpose and use the menu command "Online > Extended download to device". Select the interface for your HMI device. Click on "Download". The "Load preview" dialog opens. Make the settings for the reset in the "Load preview" dialog.
+Use the "Extended loading" dialog to reset the log database settings. Select the HMI device in the project tree for this purpose and use the menu command "Online &gt; Extended download to device". Select the interface for your HMI device. Click on "Download". The "Load preview" dialog opens. Make the settings for the reset in the "Load preview" dialog.
 
 ![Resetting the log database](images/111884750987_DV_resource.Stream@PNG-en-US.PNG)
 
@@ -1889,7 +1889,7 @@ Make regular backups of your log data to ensure complete documentation of your p
 ###### Requirement
 
 - Step 1 of the procedural overview is complete - [Defining the Log Size and Segmentation](#defining-the-log-size-and-segmentation-rt-professional)
-- The "Runtime settings > Logging" dialog is open.
+- The "Runtime settings &gt; Logging" dialog is open.
 
 ###### Procedure
 
@@ -1909,7 +1909,7 @@ Proceed as follows to create a log backup:
 
 ###### Structure of the Log Backup File
 
-A log backup consists of two files with the extensions "*.LDF" and "*.MDF". To transfer a log backup to another computer, for example, copy the corresponding LDF and MDF files. The file name is composed as follows: "<Computer name>_<Project name>_<Type>_<Period_from>_<Period_until>". The type is defined by the log type:
+A log backup consists of two files with the extensions "*.LDF" and "*.MDF". To transfer a log backup to another computer, for example, copy the corresponding LDF and MDF files. The file name is composed as follows: "&lt;Computer name&gt;_&lt;Project name&gt;_&lt;Type&gt;_&lt;Period_from&gt;_&lt;Period_until&gt;". The type is defined by the log type:
 
 - TLG_F: Data log with a logging cycle of one minute or less.
 - TLG_S: Data log with a logging cycle of more than one minute.
@@ -1981,7 +1981,7 @@ In Runtime, a changed assignment will only be accepted when the project has been
 ###### Requirement
 
 - Step 2 of the procedural overview is complete - [Configuring the log backup](#configuring-the-log-backup-rt-professional)
-- The "Runtime settings > Logging" dialog is open.
+- The "Runtime settings &gt; Logging" dialog is open.
 
 ###### Procedure
 
@@ -2026,7 +2026,7 @@ Proceed as follows to connect a log backup using a VB function:
 1. Configure a button in a process screen and label the button "Connect log backup", for example.
 2. Write a VB function using the "Restore" method based on this example:
 
-   HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.Restore("D:\Backup","","2010-11-14",-1) & vbNewLine
+   HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.Restore("D:\Backup","","2010-11-14",-1) &amp; vbNewLine
 
    You can find more detailed information about this in "[Restore](VBS%20object%20model%20%28Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#restore-panels-comfort-panels-rt-advanced-rt-professional)".
 3. Configure a list of functions for the "Click" event for the configured button.
@@ -2080,7 +2080,7 @@ Proceed as follows to disconnect a log backup using a VB function:
 1. Configure a button in a process screen and label the button "Disconnect log backup", for example.
 2. Write a VB function using the "Remove" VBS method based on this example:
 
-   HMIRuntime.Trace "Ret: " & HMIRuntime.Logging.Remove("","2010-11-14",-1) & vbNewLine
+   HMIRuntime.Trace "Ret: " &amp; HMIRuntime.Logging.Remove("","2010-11-14",-1) &amp; vbNewLine
 
    You can find more detailed information about this in "[Remove](VBS%20object%20model%20%28Panels%2C%20Comfort%20Panels%2C%20RT%20Advanced%2C%20RT%20Professional%29.md#remove-panels-comfort-panels-rt-advanced-rt-professional)".
 3. Configure a list of functions for the "Click" event for the configured button.
@@ -2202,7 +2202,7 @@ You can use this function to receive information about the lock status of a log,
 
 ###### Description
 
-You can use this C function to convert tag values before logging them. This C function is assigned in the "Logging tags" editor in the properties of the logging tag under "Properties > Processing method". The C function is then only offered for selection in the "Analog processing method" field when the syntax below is correctly written in the function.
+You can use this C function to convert tag values before logging them. This C function is assigned in the "Logging tags" editor in the properties of the logging tag under "Properties &gt; Processing method". The C function is then only offered for selection in the "Analog processing method" field when the syntax below is correctly written in the function.
 
 ###### Syntax
 

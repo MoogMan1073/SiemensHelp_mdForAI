@@ -98,7 +98,7 @@ This section contains information on the following topics:
 
 ###### Reference
 
-Settings for the OPC server / "Properties > General" parameter group; a protocol-specific node is selected.
+Settings for the OPC server / "Properties &gt; General" parameter group; a protocol-specific node is selected.
 
 ###### Meaning of access permissions for OPC variables
 
@@ -130,11 +130,11 @@ The default rights defined for the other OPC items are not affected.
 
 ###### The syntax for OPC item-specific access rights is defined as follows:
 
-<OPCItem>=<rights>
+&lt;OPCItem&gt;=&lt;rights&gt;
 
 where:
 
-- <OPCItem>
+- &lt;OPCItem&gt;
 
   You specify one or more OPC Items according to the syntax defined in the OPC documentation. It is also possible to use aliases.
 
@@ -143,7 +143,7 @@ where:
   * Any number of irrelevant characters
 
   ? exactly one character is irrelevant
-- <rights>
+- &lt;rights&gt;
 
 | Symbol | Meaning |
 | --- | --- |
@@ -259,7 +259,7 @@ This section contains information on the following topics:
 
 ###### Reference
 
-Settings for OPC server / "Properties > S7 > OPC symbols" parameter group.
+Settings for OPC server / "Properties &gt; S7 &gt; OPC symbols" parameter group.
 
 ###### Using symbols (as of OPC server V6.1)
 
@@ -284,7 +284,7 @@ The available alternatives have the following meaning:
 
   Here, you can decide whether you want the elements of arrays to be visible on the OPC server during runtime. This relates to the arrays configured as symbols.
 
-  As default, the option is disabled because making array elements visible causes a high load on the OPC server. With older OPC server versions (< V8.0), array elements are always visible and this setting cannot be disabled.
+  As default, the option is disabled because making array elements visible causes a high load on the OPC server. With older OPC server versions (&lt; V8.0), array elements are always visible and this setting cannot be disabled.
 
   > **Note**
   >
@@ -313,7 +313,7 @@ The available alternatives have the following meaning:
 
 ###### Reference
 
-Settings for OPC server / "Properties > S7 > OPC symbols" parameter group.
+Settings for OPC server / "Properties &gt; S7 &gt; OPC symbols" parameter group.
 
 Calling the symbol configuration with the "Configure symbols" button.
 
@@ -427,7 +427,7 @@ Note: As separator use the "." character instead of the "," character.
 
   High limit
 
-the following must apply: EU Lo <= EU Hi
+the following must apply: EU Lo &lt;= EU Hi
 
 If an input box is left empty it is automatically completed with "0".
 
@@ -515,11 +515,11 @@ The default rights defined for the other OPC items are not affected.
 
 ###### The syntax for OPC item-specific access rights is defined as follows:
 
-<OPCItem>=<rights>
+&lt;OPCItem&gt;=&lt;rights&gt;
 
 where:
 
-- <OPCItem>
+- &lt;OPCItem&gt;
 
   You specify one or more OPC Items according to the syntax defined in the OPC documentation. It is also possible to use aliases.
 
@@ -528,7 +528,7 @@ where:
   * Any number of irrelevant characters
 
   ? exactly one character is irrelevant
-- <rights>
+- &lt;rights&gt;
 
 | Symbol | Meaning |
 | --- | --- |
@@ -597,7 +597,7 @@ This section contains information on the following topics:
 
 ###### Reference
 
-Settings for OPC server / "Properties > S7 > OPC alarms" parameter group.
+Settings for OPC server / "Properties &gt; S7 &gt; OPC alarms" parameter group.
 
 ###### Language / message text language setting
 
@@ -639,11 +639,11 @@ This section contains information on the following topics:
 
 ###### Reference
 
-Settings for OPC server / "Properties > S7 > Assignment table OPC alarms" parameter group.
+Settings for OPC server / "Properties &gt; S7 &gt; Assignment table OPC alarms" parameter group.
 
 ###### Meaning
 
-The alarm classes configured in the project in "Common data > Alarm classes" are displayed in a table. The OPC alarm category "OffNormal" is assigned to the message classes as default. If necessary, assign a different OPC alarm category.
+The alarm classes configured in the project in "Common data &gt; Alarm classes" are displayed in a table. The OPC alarm category "OffNormal" is assigned to the message classes as default. If necessary, assign a different OPC alarm category.
 
 #### S7 connections for access to optimized data blocks with S7-1200/S7-1500
 
@@ -667,11 +667,11 @@ In the table network view in the "Connections" tab, the connections you have cre
 
 ##### Parameters of special connection properties
 
-In the Inspector window of the selected S7 connection configured at one end (one-way), go to "Properties > Configuration > Special connection properties", the "One-way" and "Active connection establishment" check boxes are selected. You cannot make any changes in the "Special connection properties" parameter group.
+In the Inspector window of the selected S7 connection configured at one end (one-way), go to "Properties &gt; Configuration &gt; Special connection properties", the "One-way" and "Active connection establishment" check boxes are selected. You cannot make any changes in the "Special connection properties" parameter group.
 
 ##### Address details
 
-In the Inspector window of the selected S7 connection configured at one end in "Properties > Configuration > Address details" you will see the TSAPs of the communications partners in the connection resources. The local TSAP is structured as follows:
+In the Inspector window of the selected S7 connection configured at one end in "Properties &gt; Configuration &gt; Address details" you will see the TSAPs of the communications partners in the connection resources. The local TSAP is structured as follows:
 
 SNOPCCxxxxyyyyyy
 
@@ -685,7 +685,7 @@ You cannot make any changes in the "Address details" parameter group.
 
 ##### OPC parameters
 
-In the Inspector window of the selected S7 connection configured at one end in "Properties > Configuration > OPC" you have the following configuration options:
+In the Inspector window of the selected S7 connection configured at one end in "Properties &gt; Configuration &gt; OPC" you have the following configuration options:
 
 - Enabling optimized access
 - Configuration of the buffer size for optimized access to tags
@@ -699,13 +699,13 @@ To ensure that S7OPT data can be read or written within one CPU cycle, you need 
 
 ##### Connection resources
 
-With configured S7 connections for an OPC server V12 or higher, to allow data access to optimized data blocks on a PLC S7-1500 or S7-1200 V4.0 or higher, the connection resources required for this are displayed on the PLC page. You will find the display of the required connection resources in the properties of the relevant CPU in the Inspector window in "Properties > General > Connection resources".
+With configured S7 connections for an OPC server V12 or higher, to allow data access to optimized data blocks on a PLC S7-1500 or S7-1200 V4.0 or higher, the connection resources required for this are displayed on the PLC page. You will find the display of the required connection resources in the properties of the relevant CPU in the Inspector window in "Properties &gt; General &gt; Connection resources".
 
 For S7 connections for data access to optimized data blocks of an OPC server V12 or higher, the resources of such an S7 connection are not assigned to the "S7 communication" row on the PLC but to the rows "Other communication" (S7-1500) or "Free available connections" (S7-1200 V4.0 or higher). For a configured S7 connection for an OPC server V12 to an S7-1500 or S7-1200 V4.0 or higher, more than one connection resource is required.
 
 ##### Replacing a OPC server
 
-With the "Change device" shortcut menu of a selected OPC server you have the option of replacing an OPC server V12 which allows access to optimized data blocks on S7-1500 or S7-1200 V4.0 with an OPC server < V12 and vice versa.
+With the "Change device" shortcut menu of a selected OPC server you have the option of replacing an OPC server V12 which allows access to optimized data blocks on S7-1500 or S7-1200 V4.0 with an OPC server &lt; V12 and vice versa.
 
 If S7 connections had already been configured for the OPC server you are replacing, during the replacement of the OPC server you will receive a message that the existing S7 connections will be deleted. Following replacement, these need to be recreated.
 
@@ -741,7 +741,7 @@ The following figure shows how the OPC UA servers are embedded in a redundancy g
 
 You can achieve transparent redundancy to be used by the higher-level OPC UA client by following the steps outlined below during configuration:
 
-1. To operate PC stations with redundant SIMATIC NET OPC UA servers, create a component of the type OPC server >= V8.1 for each station. Enable S7 UA redundancy for these OPC servers.
+1. To operate PC stations with redundant SIMATIC NET OPC UA servers, create a component of the type OPC server &gt;= V8.1 for each station. Enable S7 UA redundancy for these OPC servers.
 2. They adopt the virtual IP address. You specified this virtual IP address previously in the network load balancing manager (NLB) for both PC stations. The virtual IP address is mapped to the real IP addresses of the OPC UA server.
 3. You specify a port via which the two OPC UA servers can communicate so that they can synchronize their data;
 4. You configure identical S7 connections for both OPC UA servers for communication with the connected automation systems;
@@ -779,7 +779,7 @@ By using the STEP 7 options for copying, you reduce the risk of inconsistent inf
 
 ###### Reference
 
-Setting a redundant OPC UA server in the "Properties > General > S7 UA Redundancy" parameter group
+Setting a redundant OPC UA server in the "Properties &gt; General &gt; S7 UA Redundancy" parameter group
 
 ###### Transparent OPC UA redundancy
 
@@ -868,7 +868,7 @@ Display of the other members of the redundancy group. A redundancy group is made
 
 ###### Reference
 
-Setting a redundant OPC UA server in the "Properties > General > S7 UA Redundancy > S7 UA Redundancy Master" parameter group
+Setting a redundant OPC UA server in the "Properties &gt; General &gt; S7 UA Redundancy &gt; S7 UA Redundancy Master" parameter group
 
 ###### Assigning an existing S7-UA redundancy group
 
@@ -876,7 +876,7 @@ The table shows the redundancy groups available and selectable in the STEP 7 pro
 
 If you have assigned a new IP address to the current OPC server, the following entry appears instead of this assignment:
 
-- "(own redundancy group <IP address>)"
+- "(own redundancy group &lt;IP address&gt;)"
 
 ###### Follow the steps outlined below:
 
@@ -911,7 +911,7 @@ The editor for OPC program alarms is available as of OPC server V14. This helps 
 
 The available OPC program alarms are displayed in the default view. With a high number of OPC program alarms, coordination between the PLC configuration and OPC configuration is advisable to make management clearer.
 
-The requirement is an S7 connection in whose OPC properties the check boxes "Maintain connection permanently" and "Receive program alarms" are enabled (select "Network view" > "Connections" tab > "S7 connection" > "General" tab > "OPC" > "Connection establishment" or "Alarms").
+The requirement is an S7 connection in whose OPC properties the check boxes "Maintain connection permanently" and "Receive program alarms" are enabled (select "Network view" &gt; "Connections" tab &gt; "S7 connection" &gt; "General" tab &gt; "OPC" &gt; "Connection establishment" or "Alarms").
 
 > **Note**
 >
@@ -972,9 +972,9 @@ Conditions are dragged from the default view to the required source within the u
 
 The "General" tab displays the properties "Condition", "OPC severity" and "OPC event type" of the selected OPC program alarm. The input box "Condition" can be edited.
 
-##### "General" > "OPC alarm instances" tab
+##### "General" &gt; "OPC alarm instances" tab
 
-In the "General" > "OPC alarm instances" tab, you obtain an overview of various properties of the OPC program alarm. These properties are read-only at this point and cannot be changed.
+In the "General" &gt; "OPC alarm instances" tab, you obtain an overview of various properties of the OPC program alarm. These properties are read-only at this point and cannot be changed.
 
 The following properties of the OPC program alarms:
 
@@ -993,13 +993,13 @@ The following properties of the OPC program alarms:
 - Area  
   Specifies the name of the area of the OPC program alarm
 
-##### "Languages & Resources" dialog box
+##### "Languages &amp; Resources" dialog box
 
-In the "Languages & Resources" dialog box you can set the editing language and the reference language in all languages supported by "STEP 7 Professional (TIA portal)". This gives you the option, for example, of editing and saving in German and when you then later switch over to the English language, you can rename and store the names of the OPC alarms in English. Depending on which language you now set the names of the OPC program alarms will always be displayed to you in the "correct" language. New names of the OPC program alarms that have not yet been translated are enclosed in the characters "<" and ">" in the user-specific view.. In the default view the same names are used for all languages as was defined in the configuration in the PLC.
+In the "Languages &amp; Resources" dialog box you can set the editing language and the reference language in all languages supported by "STEP 7 Professional (TIA portal)". This gives you the option, for example, of editing and saving in German and when you then later switch over to the English language, you can rename and store the names of the OPC alarms in English. Depending on which language you now set the names of the OPC program alarms will always be displayed to you in the "correct" language. New names of the OPC program alarms that have not yet been translated are enclosed in the characters "&lt;" and "&gt;" in the user-specific view.. In the default view the same names are used for all languages as was defined in the configuration in the PLC.
 
-You can add further project languages with "Project tree" > "Languages & resources" > "Project languages".
+You can add further project languages with "Project tree" &gt; "Languages &amp; resources" &gt; "Project languages".
 
-In e.g. "Project tree" > "Languages & resources" > "Project texts" all project texts including the alarm texts of the conditions can be displayed and edited. In the same Inspector window, project texts can also be imported or selected project texts, here conditions, can be exported.
+In e.g. "Project tree" &gt; "Languages &amp; resources" &gt; "Project texts" all project texts including the alarm texts of the conditions can be displayed and edited. In the same Inspector window, project texts can also be imported or selected project texts, here conditions, can be exported.
 
 > **Note**
 >
@@ -1017,7 +1017,7 @@ Proceed as follows:
 6. Assign the source any name (forbidden characters: control characters).
 7. Drag the conditions from the default view to the required position in the user-specific view.
 8. Assign the condition any name (forbidden characters: control characters).
-9. If necessary, specify the editing and reference language in the "Languages & Resources" dialog box. Note that the untranslated names in pointed brackets (<>) will be translated.
+9. If necessary, specify the editing and reference language in the "Languages &amp; Resources" dialog box. Note that the untranslated names in pointed brackets (&lt;&gt;) will be translated.
 10. Save and compile or load the new configuration in the PC station and in the PLC..
 11. Open an OPC UA client that has a browsing interface.
 12. Enable and monitor the configured OPC program alarms.
@@ -1266,7 +1266,7 @@ Depending on the use of the OPC UA server, the application URI is used in the co
 - Use as SKS server: The application URI is entered in the endpoint description of the SKS server. The endpoint description is necessary for an SKS client to connect to the OPC UA server as SKS server.
 - Use as SKS client: To register the SKS client in the SecurityGroup of SKS server, the application URI of the SKS client is entered in the Identity of the security group role for the SKS server.
 
-The application URI of the OPC UA server of the SIMATIC NET PC software is contained in the respective server certificate of the OPC UA server and can be read out from the detailed information of the certificate. It can be found there under "Subject Alternative Name" in the form "URL=<Application URI>". Copy this URI and use it for your secure OPC UA PubSub configuration.
+The application URI of the OPC UA server of the SIMATIC NET PC software is contained in the respective server certificate of the OPC UA server and can be read out from the detailed information of the certificate. It can be found there under "Subject Alternative Name" in the form "URL=&lt;Application URI&gt;". Copy this URI and use it for your secure OPC UA PubSub configuration.
 
 Example of an ApplicationURI of the SIMATIC NET S7OPT OPC UA server: `urn:Siemens.Automation.SimaticNET.S7OPT:(12345678-9ABC-DEF0-1234-567890ABCDEF)`
 
@@ -1309,22 +1309,22 @@ To publish data via the PC station, follow these steps:
 
 1. Open the STEP 7 project.
 2. Open the "Device configuration" for the OPC UA server, and select the "All" option for "OPC symbols" for the S7 connection, or the "Configured" option if only a subset of the OPC symbols will be used.
-3. Navigate in the project tree to the PC station via which the data will be published, "PC station > OPC server > OPC UA PubSub", to open the editor.
-4. For the S7 / S7OPT OPC UA server, click "Published data sets > Add data set" and select the newly created data set.
+3. Navigate in the project tree to the PC station via which the data will be published, "PC station &gt; OPC server &gt; OPC UA PubSub", to open the editor.
+4. For the S7 / S7OPT OPC UA server, click "Published data sets &gt; Add data set" and select the newly created data set.
 5. Click the button with the three dots in the "Tag" column. In the dialog box that opens, navigate to the data block you created previously.
 6. Select the tags from the data block that will be published using this data set.
 7. In "Configure local SKS", click "Add new SecurityGroup".
 8. Select the newly created SecurityGroup and navigate in its properties to "Settings for role rights" and import the ApplicationURI for each Subscriber using the "Import ApplicationURI from certificate" button.
-9. Click "Connections > Add new connection" to create a new connection.
-10. Select the newly created connection and navigate in its properties to "General > Port". The ports for Publisher and Subscriber must be identical.
-11. Go to "General > Advanced > Network interface" and enter the network address of the PC station via which the data will be published in the input box.
-12. Click "WriterGroups > Add new WriterGroup" for the newly created connection.
-13. Select "WriterGroup > Default SecurityKeyService" to make the security settings.
-14. For "Endpoint description", click "Add new" and assign the certificate with the ApplicationURI of the Security Key Service for "Server > Application URI" using the "Select" button. Alternatively, you can also enter the ApplicationURI directly or paste a copied ApplicationURI.
+9. Click "Connections &gt; Add new connection" to create a new connection.
+10. Select the newly created connection and navigate in its properties to "General &gt; Port". The ports for Publisher and Subscriber must be identical.
+11. Go to "General &gt; Advanced &gt; Network interface" and enter the network address of the PC station via which the data will be published in the input box.
+12. Click "WriterGroups &gt; Add new WriterGroup" for the newly created connection.
+13. Select "WriterGroup &gt; Default SecurityKeyService" to make the security settings.
+14. For "Endpoint description", click "Add new" and assign the certificate with the ApplicationURI of the Security Key Service for "Server &gt; Application URI" using the "Select" button. Alternatively, you can also enter the ApplicationURI directly or paste a copied ApplicationURI.
 15. For "Discovery URL", click "Add new". There, specify the IP address and the port of the OPC UA server that was configured as the Security Key Service server.
-16. Select the WriterGroup and navigate in its properties to "General > Security".
+16. Select the WriterGroup and navigate in its properties to "General &gt; Security".
 17. Assign the value "Sign and encrypt" (default setting) from the "Security profile" drop-down list and enter the ID of the security group for "Security Group ID". You obtain this ID from the properties of the default SecurityKeyService.
-18. For the newly created WriterGroup, click "Add new DataSetWriter" and select the newly created DataSetWriter. Navigate in the properties of the DataSetWriter to "General > PublishedDataSet" and select the data set to be published from the drop-down list.
+18. For the newly created WriterGroup, click "Add new DataSetWriter" and select the newly created DataSetWriter. Navigate in the properties of the DataSetWriter to "General &gt; PublishedDataSet" and select the data set to be published from the drop-down list.
 19. Compile the STEP 7 project and download it to the devices.
 
 ##### Configuring an OPC UA Subscriber
@@ -1335,11 +1335,11 @@ To subscribe to data via the PC station, follow these steps:
 
 1. Open the STEP 7 project.
 2. Open the "Device configuration" for the OPC UA server, and select the "All" option for "OPC symbols" for the S7 connection, or the "Configured" option if only a subset of the OPC symbols will be used.
-3. Navigate in the project tree to the PC station via which the data will be subscribed, "PC station > OPC server > OPC UA PubSub", to open the editor.
-4. Click "Connections > Add new connection" to create a new connection.
-5. Select the newly created connection and navigate in its properties to "General > Port". The ports for Publisher and Subscriber must be identical.
-6. Go to "General > Advanced > Network interface" and enter the network address of the PC station via which the data will be subscribed in the input box.
-7. Click "ReaderGroups > Add new ReaderGroup" for the newly created connection.
+3. Navigate in the project tree to the PC station via which the data will be subscribed, "PC station &gt; OPC server &gt; OPC UA PubSub", to open the editor.
+4. Click "Connections &gt; Add new connection" to create a new connection.
+5. Select the newly created connection and navigate in its properties to "General &gt; Port". The ports for Publisher and Subscriber must be identical.
+6. Go to "General &gt; Advanced &gt; Network interface" and enter the network address of the PC station via which the data will be subscribed in the input box.
+7. Click "ReaderGroups &gt; Add new ReaderGroup" for the newly created connection.
 8. For the newly created ReaderGroup, click "Add new DataSetReader" and select the newly created DataSetReader.
 9. Import the DataSetWriter of the Publisher from the current STEP 7 project using the "Import from project" button. Alternatively, you can also import from a file or from devices accessible online.
 10. Click the button with the three dots in the "Tag" column. In the dialog box that opens, navigate to the tag to which the selected subscribed data will be written and confirm this with the green check mark.
@@ -1352,7 +1352,7 @@ Requirement: A PC station with OPC UA server V19 or higher is configured in your
 To configure the local SKS via a PC station, follow these steps:
 
 1. Open the STEP 7 project.
-2. Navigate in the project tree to the local PC station, "PC station > OPC server > OPC UA PubSub", to open the editor.
+2. Navigate in the project tree to the local PC station, "PC station &gt; OPC server &gt; OPC UA PubSub", to open the editor.
 3. For "Configure local SKS", click "Add new ".
 4. Select the newly created security group, navigate in its properties to "Settings for role rights" and import the application URI for each Subscriber using the "Import application URI from certificate" button.
 5. Compile the STEP 7 project and download it to the devices.

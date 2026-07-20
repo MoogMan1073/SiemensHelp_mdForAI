@@ -68,7 +68,7 @@ With the tag [StartMode](#initializing-output-values-s7-1500), you can define t
 
 ### Responses in the event of an error
 
-If the output value cannot be correctly calculated, the Filter_Universalinstruction instead outputs a substitute output value and an error with an error message ErrorBits >= 16#0002_0000. You can use the [tag ErrorMode](#errorbits-parameter-s7-1500) to define the substitute output value as follows:
+If the output value cannot be correctly calculated, the Filter_Universalinstruction instead outputs a substitute output value and an error with an error message ErrorBits &gt;= 16#0002_0000. You can use the [tag ErrorMode](#errorbits-parameter-s7-1500) to define the substitute output value as follows:
 
 | ErrorMode | Output |
 | --- | --- |
@@ -140,9 +140,9 @@ The following figure shows the amplitude response of a bandpass filter with Freq
 
 ![Frequency and bandwidth](images/167556885003_DV_resource.Stream@PNG-de-DE.png)
 
-The maximum cutoff or center frequency that can be used depends on the cycle time. The permitted range of values is Frequency < 0.5 / CycleTime.Value.
+The maximum cutoff or center frequency that can be used depends on the cycle time. The permitted range of values is Frequency &lt; 0.5 / CycleTime.Value.
 
-The maximum bandwidth that can be used depends on the cycle time and the center frequency. The permitted range of values is Bandwidth < 0.5 / CycleTime.Value - Frequency.
+The maximum bandwidth that can be used depends on the cycle time and the center frequency. The permitted range of values is Bandwidth &lt; 0.5 / CycleTime.Value - Frequency.
 
 > **Note**
 >
@@ -198,8 +198,8 @@ Before the filter algorithm calculates the output value, Filter_Universal needs 
 
 The following conditions for the filter parameters are checked in this process:
 
-- 0.0 < Frequency < 0.5 / CycleTime.Value
-- 0.0 ≤ Bandwidth < 0.5 / CycleTime.Value - Frequency
+- 0.0 &lt; Frequency &lt; 0.5 / CycleTime.Value
+- 0.0 ≤ Bandwidth &lt; 0.5 / CycleTime.Value - Frequency
 - 0 ≤ Type ≤ 3
 - 0 ≤ Characteristic ≤ 2
 - 0 ≤ Order ≤ 10
@@ -350,8 +350,8 @@ Otherwise, the enable output ENO is set to TRUE.
 | --- | --- | --- | --- |
 | Input | REAL | 0.0 | Input value |
 | SubstituteOutput | REAL | 0.0 | SubstituteOutput is used as a substitute output value when Reset = TRUE or one of the following modes is currently in effect:  - ErrorMode = 1 - StartMode = 1 |
-| ErrorAck | BOOL | FALSE | Deletes the error messages.  - Edge FALSE -> TRUE ErrorBits is reset. |
-| Reset | BOOL | FALSE | Resets the instruction  - Edge FALSE -> TRUE   ErrorBits is reset. - As long as Reset is set to TRUE, the substitute output value SubstituteOutput is output. - As long as Reset is set to FALSE, the calculation of the output value is performed. - Edge TRUE -> FALSE   - For high-pass and bandpass filters (Type 1 or 2), the filter algorithm is set up as if it were in a steady state with Output = 0.0.   - For low-pass and bandstop filters (Type 0 or 3), the filter algorithm is set up as if it were in a steady state with Output = SubstituteOutput. |
+| ErrorAck | BOOL | FALSE | Deletes the error messages.  - Edge FALSE -&gt; TRUE ErrorBits is reset. |
+| Reset | BOOL | FALSE | Resets the instruction  - Edge FALSE -&gt; TRUE   ErrorBits is reset. - As long as Reset is set to TRUE, the substitute output value SubstituteOutput is output. - As long as Reset is set to FALSE, the calculation of the output value is performed. - Edge TRUE -&gt; FALSE   - For high-pass and bandpass filters (Type 1 or 2), the filter algorithm is set up as if it were in a steady state with Output = 0.0.   - For low-pass and bandstop filters (Type 0 or 3), the filter algorithm is set up as if it were in a steady state with Output = SubstituteOutput. |
 
 ## Output parameter Filter_Universal (S7-1500)
 
@@ -365,8 +365,8 @@ Otherwise, the enable output ENO is set to TRUE.
 
 | Tag | Data type | Default | Description |
 | --- | --- | --- | --- |
-| Frequency | REAL | 50.0 | Cutoff frequency of low-pass and high-pass or center frequency of bandpass and bandstop in Hz  Permissible value range: 0.5/CycleTime.Value > Frequency > 0.0 |
-| Bandwidth | REAL | 0.0 | Bandwidth of bandpass and bandstop in Hz  Permissible value range: 0.5/CycleTime.Value - Frequency > Bandwidth ≥ 0.0 |
+| Frequency | REAL | 50.0 | Cutoff frequency of low-pass and high-pass or center frequency of bandpass and bandstop in Hz  Permissible value range: 0.5/CycleTime.Value &gt; Frequency &gt; 0.0 |
+| Bandwidth | REAL | 0.0 | Bandwidth of bandpass and bandstop in Hz  Permissible value range: 0.5/CycleTime.Value - Frequency &gt; Bandwidth ≥ 0.0 |
 | Type | INT | 0 | Filter type  - 0 = Low-pass filter - 1 = High-pass filter - 2 = Bandpass filter - 3 = Bandstop filter   Permissible value range: 0 to 3 |
 | Characteristic | INT | 0 | Filter characteristic   - 0 = Bessel - 1 = Butterworth - 2 = Chebyshev with 0.5 dB ripple in the passband   Permissible value range: 0 to 2 |
 | Order | INT | 2 | Filter order (at Order = 0, Output = Input)  Permissible value range: 0 to 10 |
@@ -374,7 +374,7 @@ Otherwise, the enable output ENO is set to TRUE.
 | StartMode | INT | 2 | Selection of the first output value for low-pass and bandstop filter   - 0 = Input - 1 = SubstituteOutput - 2 = Last output value - 3 = 0.0   Permissible value range: 0 to 3  If the value of StartMode does not correspond to the permissible range of values, then StartMode = 2. |
 | FinalValueMode | INT | 1 | Selection of the behavior in steady state   - 0 = Deviations between output value and final value possible - 1 = Output value reaches final value exactly   Permissible value range: 0 to 1  If the value of FinalValueMode does not correspond to the permissible range of values, then FinalValueMode = 1. |
 | CycleTime | AuxFct_CycleTimeDetection | - | Cycle time data |
-| CycleTime.Value | REAL | 0.001 | Cycle time in seconds (interval between two calls)  Permissible value range: CycleTime.Value > 0.0 |
+| CycleTime.Value | REAL | 0.001 | Cycle time in seconds (interval between two calls)  Permissible value range: CycleTime.Value &gt; 0.0 |
 | CycleTime.EnableDetection | BOOL | TRUE | Automatic detection of the cycle time  - FALSE = Deactivated - TRUE = Activated |
 
 ## ErrorBits parameter (S7-1500)
@@ -383,14 +383,14 @@ If several errors are pending simultaneously, the values of the ErrorBits are di
 
 With Filter_Universal, the errors output at the ErrorBits parameter are divided into two categories:
 
-- Errors with error messages ErrorBits < 16#0001_0000  
+- Errors with error messages ErrorBits &lt; 16#0001_0000  
   The output value can be calculated despite the error.
 - Errors with error messages ErrorBits ≥ 16#0001_0000  
   The error prevents calculation of the output value. A substitute output value is output.
 
-### Errors with error messages ErrorBits < 16#0001_0000
+### Errors with error messages ErrorBits &lt; 16#0001_0000
 
-If one or more errors with error messages ErrorBits < 16#0001_0000 is/are pending, Filter_Universal reacts as follows:
+If one or more errors with error messages ErrorBits &lt; 16#0001_0000 is/are pending, Filter_Universal reacts as follows:
 
 - The output value is determined as follows despite this error:
 
@@ -404,7 +404,7 @@ The output parameter Error is deleted as soon as there are no longer any errors.
 | ErrorBits  (DW#16#...) | Description |
 | --- | --- |
 | 0000_0000 | No error is pending. |
-| 0000_0001 | **Cause of error and response to error:**   The Output parameter was limited to -3.402823e+38 or +3.402823e+38.   **Solution:**   If the value determined by the filter function is output at the output (Reset = FALSE and ErrorBits < 16#0001_0000), check the Input parameter.  When ErrorBits ≥ 16#0001_0000 and Reset = FALSE, the substitute output value is limited on its output. In this case, check the following parameters depending on the set value at the tag ErrorMode:  - Input - SubstituteOutput   When Reset = TRUE, check the SubstituteOutput parameter. |
+| 0000_0001 | **Cause of error and response to error:**   The Output parameter was limited to -3.402823e+38 or +3.402823e+38.   **Solution:**   If the value determined by the filter function is output at the output (Reset = FALSE and ErrorBits &lt; 16#0001_0000), check the Input parameter.  When ErrorBits ≥ 16#0001_0000 and Reset = FALSE, the substitute output value is limited on its output. In this case, check the following parameters depending on the set value at the tag ErrorMode:  - Input - SubstituteOutput   When Reset = TRUE, check the SubstituteOutput parameter. |
 
 ### Errors with error messages ErrorBits ≥ 16#0001_0000
 
@@ -433,8 +433,8 @@ The output parameter Error is deleted as soon as there are no longer any errors.
 | TRUE | - | SubstituteOutput |  |
 | 0002_0000 | **Cause of error:**   The Input parameter has no valid REAL value while the calculation of the output value is being performed (Reset = FALSE).   **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.  When ErrorMode = 0, 0.0 is used as output value.   **Solution:**   Make sure that the parameter Input is a valid REAL value (≠NaN e.g. 16#7FFF_FFFF). |  |  |
 | 0004_0000 | **Cause of error:**   The calculation of the output value yields an invalid REAL value for the Output parameter.   **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.   **Solution:**   Check all tags involved in the calculation of the output value:  - Input - Frequency - Bandwidth - Type - Characteristic - Order - CycleTime.Value   These tags have valid values. The calculation of the output value fails in this combination of tags. |  |  |
-| 0008_0000 | **Cause of error:**   One or more filter parameters have an invalid value while the calculation of the output value is being performed (Reset = FALSE).   **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.   **Solution:**   Ensure that the following conditions for the values of the filter parameters are met:  - 0.0 < Frequency < 0.5 / CycleTime.Value - 0.0 ≤ Bandwidth < 0.5 / CycleTime.Value - Frequency - 0 ≤ Type ≤ 3 - 0 ≤ Characteristic ≤ 2 - 0 ≤ Order ≤ 10 |  |  |
+| 0008_0000 | **Cause of error:**   One or more filter parameters have an invalid value while the calculation of the output value is being performed (Reset = FALSE).   **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.   **Solution:**   Ensure that the following conditions for the values of the filter parameters are met:  - 0.0 &lt; Frequency &lt; 0.5 / CycleTime.Value - 0.0 ≤ Bandwidth &lt; 0.5 / CycleTime.Value - Frequency - 0 ≤ Type ≤ 3 - 0 ≤ Characteristic ≤ 2 - 0 ≤ Order ≤ 10 |  |  |
 | 0010_0000 | **Cause of error:**   Automatic detection of the cycle time failed because Filter_Universal is not called in a cyclic interrupt OB.   **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.   **Solution:**   Make sure that Filter_Universal is called in a cyclic interrupt OB.   **Additional information:**   Automatic detection of the cycle time can be disabled by setting the tag CycleTime.EnableDetection = FALSE. You then need to specify the cycle time manually at the Variable CycleTime.Value. Calling of Filter_Universal outside of a cyclic interrupt OB can have a negative effect on the filter behavior, because the actual cycle time fluctuates in this case. |  |  |
 | 0020_0000 | **Cause of error:**   The tag (configured with StartMode) for the initialization of the Output parameter at the first call of the instruction does not have a valid REAL value.   **Response to error:**   The substitute output value is output with the first call of the instruction at the Output parameter that is configured at the ErrorMode tag. For subsequent calls, Filter_Universal calculates the output value starting from this substitute output value.   **Solution:**   Make sure that the tag for initializing the parameter Output is a valid REAL value (≠ NaN e.g. 16#7FFF_FFFF). When Reset = FALSE is set, the initialization takes effect with the first call of the instruction after the operating state transition of the CPU from STOP to RUN. The tag that is used for the initialization of the Output parameter depends on StartMode:  - StartMode = 1: SubstituteOutput - StartMode = 2: Output |  |  |
-| 0040_0000 | **Cause of error:**   The CycleTime.Value tag has an invalid value, while the calculation of the output value is being performed (Reset = FALSE).   **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.   **Solution:**   Ensure that the following conditions are met:  - 0.0 < CycleTime.Value ≤ 3.402823e+38 - CycleTime.Value is a valid REAL value (≠ NaN e.g. 16#7FFF_FFFF)    **Additional information:**   To automatically calculate the value of the CycleTime.Value tag, set the CycleTime.EnableDetection tag to TRUE. |  |  |
+| 0040_0000 | **Cause of error:**   The CycleTime.Value tag has an invalid value, while the calculation of the output value is being performed (Reset = FALSE).   **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.   **Solution:**   Ensure that the following conditions are met:  - 0.0 &lt; CycleTime.Value ≤ 3.402823e+38 - CycleTime.Value is a valid REAL value (≠ NaN e.g. 16#7FFF_FFFF)    **Additional information:**   To automatically calculate the value of the CycleTime.Value tag, set the CycleTime.EnableDetection tag to TRUE. |  |  |
 | 0080_0000 | **Cause of error:**   An internal error occurred during automatic detection of the cycle time.   **Response to error:**   The substitute output value that is configured at the ErrorMode tag is output at the Output parameter.   **Solution:**   Make sure that Filter_Universal is called in a cyclic interrupt OB. If the error continues to occur, contact SIMATIC Customer Support.   **Additional information:**   Automatic detection of the cycle time can be disabled by setting the tag CycleTime.EnableDetection = FALSE. You then need to specify the cycle time manually at the CycleTime.Value tag. |  |  |

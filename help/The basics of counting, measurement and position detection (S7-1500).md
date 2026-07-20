@@ -751,7 +751,7 @@ You can make switching for a digital output dependent on one of the following co
 
 The digital output is set to 1 if:
 
-Comparison value <= counter value <= high counting limit
+Comparison value &lt;= counter value &lt;= high counting limit
 
 ![Setting between comparison value and high counting limit](images/43580449163_DV_resource.Stream@PNG-en-US.png)
 
@@ -761,7 +761,7 @@ The comparison event is independent of the count direction.
 
 The digital output is set to 1 if:
 
-Low counting limit <= counter value <= comparison value
+Low counting limit &lt;= counter value &lt;= comparison value
 
 ![Setting between comparison value and low limit](images/43580524427_DV_resource.Stream@PNG-en-US.png)
 
@@ -773,7 +773,7 @@ The comparison event can be configured for the digital output DQ1 if "Use by use
 
 DQ1 is set to 1 if:
 
-Comparison value 0 <= counter value <= comparison value 1
+Comparison value 0 &lt;= counter value &lt;= comparison value 1
 
 The figure below shows an example of the comparison event when counting in an upwards direction:
 
@@ -837,7 +837,7 @@ The high limit corresponds to the maximum position value.
 
 The digital output is set to 1 if:
 
-Comparison value <= position value <= maximum position value
+Comparison value &lt;= position value &lt;= maximum position value
 
 ![Setting between comparison value and high limit](images/54106804491_DV_resource.Stream@PNG-en-US.png)
 
@@ -849,7 +849,7 @@ The low limit corresponds to the position value "0".
 
 The digital output is set to 1 if:
 
-0 <= position value <= comparison value
+0 &lt;= position value &lt;= comparison value
 
 ![Setting between comparison value and low limit](images/54106808203_DV_resource.Stream@PNG-en-US.png)
 
@@ -861,7 +861,7 @@ The comparison event can be configured for the digital output DQ1 if "Use by use
 
 DQ1 is set to 1 if:
 
-Comparison value 0 <= position value <= comparison value 1
+Comparison value 0 &lt;= position value &lt;= comparison value 1
 
 The figure below shows an example of the comparison event when counting up:
 
@@ -911,7 +911,7 @@ You can make switching for a digital output dependent on one of the following co
 
 The digital output is set to 1 if:
 
-Measured value >= comparison value
+Measured value &gt;= comparison value
 
 ![Setting above the comparison value](images/44516724491_DV_resource.Stream@PNG-en-US.png)
 
@@ -919,7 +919,7 @@ Measured value >= comparison value
 
 The digital output is set to 1 if:
 
-Measured value <= comparison value
+Measured value &lt;= comparison value
 
 ![Setting below the comparison value](images/44520694027_DV_resource.Stream@PNG-en-US.png)
 
@@ -929,7 +929,7 @@ The comparison event can be configured for the digital output DQ1 if "Use by use
 
 DQ1 is set to 1 if:
 
-Comparison value 0 <= measured value <= comparison value 1
+Comparison value 0 &lt;= measured value &lt;= comparison value 1
 
 ![Setting between comparison value 0 and comparison value 1](images/44520424971_DV_resource.Stream@PNG-en-US.png)
 
@@ -939,7 +939,7 @@ The comparison event can be configured for the digital output DQ1 if "Use by use
 
 DQ1 is set to 1 if:
 
-Comparison value 1 <= measured value <= comparison value 0
+Comparison value 1 &lt;= measured value &lt;= comparison value 0
 
 ![Not setting between comparison value 0 and comparison value 1](images/44521321483_DV_resource.Stream@PNG-en-US.png)
 
@@ -1788,7 +1788,7 @@ You can use the respective feedback bit in order to switch a digital output modu
 
 The respective STS_DQ feedback bit is set to 1 when:
 
-Comparison value <= counter value <= high counter limit
+Comparison value &lt;= counter value &lt;= high counter limit
 
 ![Setting between comparison value and high counter limit](images/74664531083_DV_resource.Stream@PNG-en-US.png)
 
@@ -1796,7 +1796,7 @@ Comparison value <= counter value <= high counter limit
 
 The respective STS_DQ feedback bit is set to 1 when:
 
-Low counter limit <= counter value <= comparison value
+Low counter limit &lt;= counter value &lt;= comparison value
 
 ![Setting between comparison value and low counter limit](images/74664546955_DV_resource.Stream@PNG-en-US.png)
 
@@ -1804,7 +1804,7 @@ Low counter limit <= counter value <= comparison value
 
 The respective STS_DQ feedback bit is set to 1 when:
 
-Comparison value 0 <= counter value <= comparison value 1
+Comparison value 0 &lt;= counter value &lt;= comparison value 1
 
 ![Setting between comparison value 0 and comparison value 1](images/74663811211_DV_resource.Stream@PNG-en-US.png)
 
@@ -1812,7 +1812,7 @@ Comparison value 0 <= counter value <= comparison value 1
 
 The respective STS_DQ feedback bit is set to 1 when:
 
-Comparison value 0 <= counter value <= comparison value 1
+Comparison value 0 &lt;= counter value &lt;= comparison value 1
 
 ![Not setting between comparison value 0 and comparison value 1](images/74664562827_DV_resource.Stream@PNG-en-US.png)
 

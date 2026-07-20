@@ -72,7 +72,7 @@ If these are supplied blocks and you do not know the password, ask your supplier
 >
 > You can find the latest FAQs about migrating to S7-1200 V4 in Siemens Industry Online Support:
 >
-> <http://support.automation.siemens.com/WW/view/en/82140966>
+> [http://support.automation.siemens.com/WW/view/en/82140966](http://support.automation.siemens.com/WW/view/en/82140966)
 >
 > If you need further assistance with migrating to S7-1200 V4, please contact SIMATIC Customer Support.
 
@@ -103,11 +103,11 @@ Proceed as follows to replace a CPU:
 4. Click "OK".
 
    The existing CPU is replaced by the new one.
-5. Select the new CPU and select the "Compile > Hardware and software (only changes)" command in the shortcut menu.
+5. Select the new CPU and select the "Compile &gt; Hardware and software (only changes)" command in the shortcut menu.
 
    The device configuration and the user program are compiled again.
 6. Optional: If necessary, apply know-how protection or copy protection to individual blocks in the program.
-7. Select the new CPU and select the "Download to device > Hardware and software (only changes)" command in the shortcut menu.
+7. Select the new CPU and select the "Download to device &gt; Hardware and software (only changes)" command in the shortcut menu.
 
    The device configuration and the user program are loaded into the new CPU.
 
@@ -124,7 +124,7 @@ Proceed as follows to replace a CPU:
 >
 > You can find the latest FAQs about migrating to S7-1200 V4 in Siemens Industry Online Support:
 >
-> <http://support.automation.siemens.com/WW/view/en/82140966>
+> [http://support.automation.siemens.com/WW/view/en/82140966](http://support.automation.siemens.com/WW/view/en/82140966)
 >
 > If you need further assistance with migrating to S7-1200 V4, please contact SIMATIC Customer Support.
 
@@ -198,7 +198,7 @@ If you want to operate the V4 CPU via a web server, you need to set up user acco
 >
 > You can find the latest FAQs about migrating to S7-1200 V4 in Siemens Industry Online Support:
 >
-> <http://support.automation.siemens.com/WW/view/en/82140966>
+> [http://support.automation.siemens.com/WW/view/en/82140966](http://support.automation.siemens.com/WW/view/en/82140966)
 >
 > If you need further assistance with migrating to S7-1200 V4, please contact SIMATIC Customer Support.
 

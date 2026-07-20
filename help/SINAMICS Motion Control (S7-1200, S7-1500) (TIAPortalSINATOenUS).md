@@ -126,7 +126,7 @@ The table below shows the parameters of the BasicPosControl instruction
 | DiagID | OUTPUT | WORD | 0 | Expanded communication error → SFB call error |
 | UserReceivePZD | OUTPUT | WORD | 0 | The PZD12 value received from the drive |
 
-For more information, refer "Using technology object" -> "SINAMICS" chapter in TIA Portal online help.
+For more information, refer "Using technology object" -&gt; "SINAMICS" chapter in TIA Portal online help.
 
 ## BasicPosControl (former TO_BasicPos) V2
 
@@ -187,7 +187,7 @@ The table below shows the parameters of the BasicPosControl instruction.
 | Status | OUTPUT | INT | 0 | 16#7002: No fault – block is working   16#8401: Drive fault   16#8402: Switching on inhibited   16#8403: Flying homing could not start  16#8600: Error DPRD_DAT   16#8601: Error DPWR_DAT   16#8202: Incorrect operating mode selected   16#8203: Incorrect setpoints parameterized   16#8204: Incorrect traversing block number selected |
 | DiagID | OUTPUT | WORD | 0 | Expanded communication error → SFB call error |
 
-For more information, refer "Using technology object" -> "SINAMICS" chapter in TIA Portal online help.
+For more information, refer "Using technology object" -&gt; "SINAMICS" chapter in TIA Portal online help.
 
 ## TO_BasicPos V1
 
@@ -247,4 +247,4 @@ The table below shows the parameters of the TO_BasicPos instruction.
 | Status | OUTPUT | INT | 0 | 16#7002: No fault – block is working   16#8401: Drive fault   16#8402: Switching on inhibited   16#8403: Flying homing could not start  16#8600: Error DPRD_DAT   16#8601: Error DPWR_DAT   16#8202: Incorrect operating mode selected   16#8203: Incorrect setpoints parameterized   16#8204: Incorrect traversing block number selected |
 | DiagID | OUTPUT | WORD | 0 | Expanded communication error → SFB call error |
 
-For more information, refer "Using technology object" -> "SINAMICS" chapter in TIA Portal online help.
+For more information, refer "Using technology object" -&gt; "SINAMICS" chapter in TIA Portal online help.

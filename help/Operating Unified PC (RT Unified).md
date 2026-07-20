@@ -361,7 +361,7 @@ When using a local web client, you can also enter the "`localhost`" command.
 
 Example: "`https://localhost/WebRH`"
 
-Regardless of whether the web server certificate is already installed in the browser, you will first see a security warning. Bypass this warning by clicking "Advanced" and "Continue to <link> (unsecure)".
+Regardless of whether the web server certificate is already installed in the browser, you will first see a security warning. Bypass this warning by clicking "Advanced" and "Continue to &lt;link&gt; (unsecure)".
 
 **Note**
 
@@ -432,7 +432,7 @@ Chrome and Microsoft Edge use the Windows system certificate store.
 
 To install manually, follow these steps (for example, Microsoft Edge):
 
-1. Open the WinCC Unified home page via the URL https://<host name>
+1. Open the WinCC Unified home page via the URL https://&lt;host name&gt;
 
    At first, an error message appears:
 
@@ -457,7 +457,7 @@ To install manually, follow these steps (for example, Microsoft Edge):
 
 Firefox uses its own certificate store and must therefore be configured manually on each device once:
 
-1. Open the WinCC Unified home page via the URL https://<host name>
+1. Open the WinCC Unified home page via the URL https://&lt;host name&gt;
 
    At first, an error message appears.
 2. Open the field "Advanced" and confirm the field "Accept the Risk and Continue".
@@ -468,7 +468,7 @@ Firefox uses its own certificate store and must therefore be configured manually
 5. Store the certificate in the Firefox certificate store. Proceed as follows:
 
    - Open the "Settings" page of Firefox.
-   - Select "Privacy & Security". There you will find the "Certificates" area further down. Open "Show certificates...".
+   - Select "Privacy &amp; Security". There you will find the "Certificates" area further down. Open "Show certificates...".
    - In the "Certificate Management" window, select the "Certification authorities" tab:
 
      ![Installing the root certificate for Firefox](images/142189917195_DV_resource.Stream@PNG-en-US.png)
@@ -506,7 +506,7 @@ iOS uses its own certificate store and must therefore be configured manually on 
    ![Installing the root certificate on iOS devices](images/129772977419_DV_resource.Stream@PNG-de-DE.png)
 
    ![Installing the root certificate on iOS devices](images/129772977419_DV_resource.Stream@PNG-de-DE.png)
-5. Select "General > Info > Certificate Trust Settings".
+5. Select "General &gt; Info &gt; Certificate Trust Settings".
 
    ![Installing the root certificate on iOS devices](images/129773293963_DV_resource.Stream@PNG-de-DE.png)
 
@@ -556,7 +556,7 @@ To remedy the error in "Firefox", follow these steps:
 1. Open a new tab.
 2. Enter the URL address of the identity provider of the UMC server (ring server) in the address line of the browser, for example, "https://uadtbf-01.asrd-lab.net/umc-sso".
 3. A blank page opens. Close the page.
-4. Refresh the home page with the function key <F5>. The home page with the "User login" dialog is displayed.
+4. Refresh the home page with the function key &lt;F5&gt;. The home page with the "User login" dialog is displayed.
 
 ---
 
@@ -656,7 +656,7 @@ If the card requires PIN entry and an incorrect PIN is entered, the previously l
 > - To the card readers supported by PM-LOGON
 > - To the teach-in of the RFID cards.
 >
-> You can find the PM-LOGON user help at <https://support.industry.siemens.com/cs/document/109810587/pm-logon-manual?dti=0&lc=en-DE>.
+> You can find the PM-LOGON user help at [https://support.industry.siemens.com/cs/document/109810587/pm-logon-manual?dti=0&amp;lc=en-DE](https://support.industry.siemens.com/cs/document/109810587/pm-logon-manual?dti=0&lc=en-DE).
 
 ### Starting and stopping a project (RT Unified)
 
@@ -873,7 +873,7 @@ Double tap to switch from the magnified trend control back to the normal view.
 
 The zooming function is limited to the time axis in the "Trend control" object.
 
-If you have enabled the option "Range > Auto-size" during configuration of the value axes in function trend control, the axes are constantly calculated during zooming.
+If you have enabled the option "Range &gt; Auto-size" during configuration of the value axes in function trend control, the axes are constantly calculated during zooming.
 
 Horizontal scrolling is not supported in the "Trend control" object.
 
@@ -920,17 +920,17 @@ Possible starting points for zooming or moving in process screens and screen win
 
 Your procedure depends on how zooming in engineering was configured in the runtime settings:
 
-|  | Zooming with <Ctrl> configured  (default) | Zooming without <Ctrl> configured |
+|  | Zooming with &lt;Ctrl&gt; configured  (default) | Zooming without &lt;Ctrl&gt; configured |
 | --- | --- | --- |
-| Zoom in | Hold down <Ctrl> and move the mouse wheel upwards. | Move the mouse wheel upwards. |
-| Zoom out | Hold down <Ctrl> and move the mouse wheel downwards. | Move the mouse wheel downwards. |
+| Zoom in | Hold down &lt;Ctrl&gt; and move the mouse wheel upwards. | Move the mouse wheel upwards. |
+| Zoom out | Hold down &lt;Ctrl&gt; and move the mouse wheel downwards. | Move the mouse wheel downwards. |
 
 Scroll center is the mouse pointer.
 
 **Using a keyboard**
 
-- To zoom in, press <Ctrl + Plus>.
-- To zoom out, press <Ctrl + Minus>.
+- To zoom in, press &lt;Ctrl + Plus&gt;.
+- To zoom out, press &lt;Ctrl + Minus&gt;.
 
 Scroll center is the upper left corner.
 
@@ -947,10 +947,10 @@ The entire content of the process screen or screen window is zoomed. Open pop-up
 
   Your procedure depends on how zooming in engineering was configured in the runtime settings:
 
-  |  | Zooming with <Ctrl> configured  (default) | Zooming without <Ctrl> configured |
+  |  | Zooming with &lt;Ctrl&gt; configured  (default) | Zooming without &lt;Ctrl&gt; configured |
   | --- | --- | --- |
-  | Moving up | Move the mouse wheel upwards. | Hold down <Ctrl> and move the mouse wheel upwards. |
-  | Moving down | Move the mouse wheel downwards. | Hold down <Ctrl> and move the mouse wheel downwards. |
+  | Moving up | Move the mouse wheel upwards. | Hold down &lt;Ctrl&gt; and move the mouse wheel upwards. |
+  | Moving down | Move the mouse wheel downwards. | Hold down &lt;Ctrl&gt; and move the mouse wheel downwards. |
 
 **Using a keyboard**
 
@@ -958,8 +958,8 @@ Use the following keys:
 
 - Arrow keys: Move left/right and up/down
 - Screen keys: Move up/down
-- <Home>: Show upper left corner
-- <End>: Show lower right corner
+- &lt;Home&gt;: Show upper left corner
+- &lt;End&gt;: Show lower right corner
 
 **Result**
 
@@ -1011,8 +1011,8 @@ Depending on the input format, you enter numerical or alphanumerical values in a
 #### Entering a value
 
 1. Enter the desired value.
-2. To confirm the value, press the <Enter> key or click on a blank area of the screen.
-3. To discard the value, press the <Esc> key.
+2. To confirm the value, press the &lt;Enter&gt; key or click on a blank area of the screen.
+3. To discard the value, press the &lt;Esc&gt; key.
 
 #### Result
 
@@ -1049,7 +1049,7 @@ You have the following options:
   > **Giving focus to objects with a transparent background**
   >
   > If an object has a transparent background, click on a visible area of the object.
-- Press <Tab> until the object has the focus.
+- Press &lt;Tab&gt; until the object has the focus.
 
 ---
 
@@ -1648,7 +1648,7 @@ The column for the alarm state can contain the following icons:
 | Symbol | Meaning |
 | --- | --- |
 | Number of controller alarms | 160000 |
-| Number of OPC UA A&C alarms | 20000 |
+| Number of OPC UA A&amp;C alarms | 20000 |
 | Number of alarms per second (continuous load) | 20 |
 | Number of pending alarm events | Unlimited |
 | Number of alarms per 10 seconds (alarm burst) | 8000 |
@@ -1735,23 +1735,23 @@ You can sort the alarms by column. See section [Sorting alarms](#sorting-alarms-
 
 ##### Operation using the keyboard
 
-Press <Shift + Enter> until the focus is on the alarm control. Then select the alarm to be edited and operate it using the toolbar.
+Press &lt;Shift + Enter&gt; until the focus is on the alarm control. Then select the alarm to be edited and operate it using the toolbar.
 
 Use the following buttons for this:
 
 | Buttons | Description |
 | --- | --- |
-| <PgUp> | Selects the previous alarm. |
-| <PgDn> | Selects the next alarm. |
-| <Ctrl + Up>  or   <Home> | If multiple rows were selected, the first row of the selection is selected. |
-| <Ctrl + Down>  or   <End> | If multiple rows were selected, the last row of the selection is selected. |
-| <Ctrl + Left> | If multiple columns were selected, the first column of the selection is selected. |
-| <Ctrl + Right> | If multiple columns were selected, the last column of the selection is selected. |
-| <Tab> | Selects the next button in the toolbar. |
-| <Shift + Tab> | Selects the previous button in the toolbar. |
-| <Enter> | Executes the currently selected button. |
-| <Shift + Page Up> | Scrolls to the left column-by-column. |
-| <Shift + Page Down> | Scrolls to the right column-by-column. |
+| &lt;PgUp&gt; | Selects the previous alarm. |
+| &lt;PgDn&gt; | Selects the next alarm. |
+| &lt;Ctrl + Up&gt;  or   &lt;Home&gt; | If multiple rows were selected, the first row of the selection is selected. |
+| &lt;Ctrl + Down&gt;  or   &lt;End&gt; | If multiple rows were selected, the last row of the selection is selected. |
+| &lt;Ctrl + Left&gt; | If multiple columns were selected, the first column of the selection is selected. |
+| &lt;Ctrl + Right&gt; | If multiple columns were selected, the last column of the selection is selected. |
+| &lt;Tab&gt; | Selects the next button in the toolbar. |
+| &lt;Shift + Tab&gt; | Selects the previous button in the toolbar. |
+| &lt;Enter&gt; | Executes the currently selected button. |
+| &lt;Shift + Page Up&gt; | Scrolls to the left column-by-column. |
+| &lt;Shift + Page Down&gt; | Scrolls to the right column-by-column. |
 
 ##### Alternative operation
 
@@ -1764,7 +1764,7 @@ Use the following buttons for this:
 
 Configuration of the alarm control in the engineering system:
 
-- Under "Properties > Miscellaneous > Alarm control > Selection - Mode", the "Multiple" entry is set for "Static value".
+- Under "Properties &gt; Miscellaneous &gt; Alarm control &gt; Selection - Mode", the "Multiple" entry is set for "Static value".
 - The "Previous line" and "Next line" buttons are configured.
 
 **Operator control in Runtime**
@@ -2899,10 +2899,10 @@ The toolbar contains buttons for executing specific functions. Depending on the 
 | Icon | Name | Function |
 | --- | --- | --- |
 | ![Button of the function trend control](images/100727802635_DV_resource.Stream@PNG-de-DE.png) | Start/Stop | Stops and starts the trend update.  Started: The trend is continuously updated. It always shows the latest values.  Stopped: New values are buffered and updated as soon as you start the trend update again. |
-| ![Button of the function trend control](images/105772677899_DV_resource.Stream@PNG-de-DE.png) | Zoom X axis +/- | Zooms into or out of the time axis in the trend control.  Left-click: Zoom in  <Shift + Left-click>: Zoom out  Use the "Original view" button to return to the original view. |
+| ![Button of the function trend control](images/105772677899_DV_resource.Stream@PNG-de-DE.png) | Zoom X axis +/- | Zooms into or out of the time axis in the trend control.  Left-click: Zoom in  &lt;Shift + Left-click&gt;: Zoom out  Use the "Original view" button to return to the original view. |
 | ![Button of the function trend control](images/105772670603_DV_resource.Stream@PNG-de-DE.png) | Zoom area | Zooms in on the section of the trend control. You define the section by dragging with the mouse.   Use the "Original view" button to return to the original view. |
-| ![Button of the function trend control](images/105772677899_DV_resource.Stream@PNG-de-DE.png) | Zoom X axis plus minus | Zooms into or out of the time axis in the trend control.  Left-click: Zoom in  <Shift + Left-click>: Zoom out  Use the "Original view" button to return to the original view. |
-| ![Button of the function trend control](images/105773338763_DV_resource.Stream@PNG-de-DE.png) | Zoom Y axis plus minus | Zooms in or out of the value axis in the trend control.  Left-click: Zoom in  <Shift + Left-click>: Zoom out  Use the "Original view" button to return to the original view. |
+| ![Button of the function trend control](images/105772677899_DV_resource.Stream@PNG-de-DE.png) | Zoom X axis plus minus | Zooms into or out of the time axis in the trend control.  Left-click: Zoom in  &lt;Shift + Left-click&gt;: Zoom out  Use the "Original view" button to return to the original view. |
+| ![Button of the function trend control](images/105773338763_DV_resource.Stream@PNG-de-DE.png) | Zoom Y axis plus minus | Zooms in or out of the value axis in the trend control.  Left-click: Zoom in  &lt;Shift + Left-click&gt;: Zoom out  Use the "Original view" button to return to the original view. |
 | ![Button of the function trend control](images/105772685195_DV_resource.Stream@PNG-de-DE.png) | Original view | Returns to the original view from the zoomed display. |
 | ![Button of the function trend control](images/111976860427_DV_resource.Stream@PNG-de-DE.png) | Previous trend | Displays the previous trend in the foreground. |
 | ![Button of the function trend control](images/111977701259_DV_resource.Stream@PNG-de-DE.png) | Next trend | Displays the next trend in the foreground. |
@@ -3018,7 +3018,7 @@ Changing the screen and refreshing the page removes the trend from the trend are
 > When the trend control is zoomed in, you can scroll using the mouse wheel:
 >
 > - Move the mouse wheel to scroll up or down.
-> - Press <Shift> and move the mouse wheel to scroll to the left or right.
+> - Press &lt;Shift&gt; and move the mouse wheel to scroll to the left or right.
 
 ###### Introduction
 
@@ -3062,7 +3062,7 @@ The default values are used for the axis.
 Requirement: No zoom button was clicked in the toolbar.
 
 1. Pause the update of the trend control.
-2. Press <Ctrl> and move the mouse wheel.
+2. Press &lt;Ctrl&gt; and move the mouse wheel.
 
 ###### Zooming in or out on trends
 
@@ -3074,7 +3074,7 @@ Proceed as follows to zoom in or out on a trend:
 
    The updated display is stopped.
 2. To zoom in on a trend, click on the trend with the left mouse button.
-3. To zoom out on a trend, hold down the <Shift> key and click on the trend with the left mouse button.
+3. To zoom out on a trend, hold down the &lt;Shift&gt; key and click on the trend with the left mouse button.
 4. To return to the original view of the trend, click "Original view".
 5. To restart the update, click "Start/Stop".
 
@@ -3097,7 +3097,7 @@ Proceed as follows to zoom the time axis or value axis:
 
    The updated display is stopped.
 3. To zoom in on an axis, click on the trend control with the left mouse button.
-4. To zoom out on an axis, hold down the <Shift> key and click on the trend control with the left mouse button.
+4. To zoom out on an axis, hold down the &lt;Shift&gt; key and click on the trend control with the left mouse button.
 5. To return to the original view of the trend, click "Original view".
 6. To restart the update, click "Start/Stop".
 
@@ -3564,7 +3564,7 @@ Remember the following notes when using the control:
 - As compared to a standard browser, the "Browser" control has limited functionality:
 
   - Navigation from the "Browser" control is not supported (top-level navigation).
-  - Calls of queries and dialogs (pop-ups and modal dialogs) are only supported if they were activated in the file <Path for the WinCC Unified installation directory>WinCCUnified\WebRH\public\content\custom\CustomSettings.json:
+  - Calls of queries and dialogs (pop-ups and modal dialogs) are only supported if they were activated in the file &lt;Path for the WinCC Unified installation directory&gt;WinCCUnified\WebRH\public\content\custom\CustomSettings.json:
 
     `{"CustomSettings": {"HmiWebControl" : {"AllowPopups" : true,"AllowModals" : true}}}`
 
@@ -3613,7 +3613,7 @@ The media player supports all formats that support the HTML5 video tag.
 >   You can find an overview of the video formats supported by popular browsers [here](https://www.w3schools.com/html/html5_video.asp).
 >
 >   You can find a detailed overview of the browser version used or between browsers [here](https://html5test.com/compare/browser/index.html).
-> - iOS guidelines for the <video autoplay> element are available [here](https://webkit.org/blog/6784/new-video-policies-for-ios/).
+> - iOS guidelines for the &lt;video autoplay&gt; element are available [here](https://webkit.org/blog/6784/new-video-policies-for-ios/).
 
 > **Note**
 >
@@ -3637,7 +3637,7 @@ You can use the "System diagnostics control" object to display the diagnostic st
 
 #### Defining the properties of the system diagnostics control
 
-You define the properties of the system diagnostics control in the Inspector window under "Properties > Properties".
+You define the properties of the system diagnostics control in the Inspector window under "Properties &gt; Properties".
 
 ![Defining the properties of the system diagnostics control](images/160544793227_DV_resource.Stream@PNG-en-US.png)
 
@@ -3645,7 +3645,7 @@ You define the properties of the system diagnostics control in the Inspector win
 
 You select the view type in the following way:
 
-1. Click "Properties > Properties > General > View type" in the Inspector window.
+1. Click "Properties &gt; Properties &gt; General &gt; View type" in the Inspector window.
 2. Select between the "Matrix view", "Diagnostic view" and the "Distributed I/O view".
 
 Selection of the matrix view as start view is recommended. From the matrix view, you can switch to the diagnostic view using the corresponding button in the toolbar.
@@ -3656,7 +3656,7 @@ With the matrix view, you have the possibility to check the status of your PLCs 
 
 All hardware components are displayed as tiles. You can configure the display as well as the content of the tiles:
 
-Make the settings for hardware details and tiles under "Properties > Properties > General > Matrix view".
+Make the settings for hardware details and tiles under "Properties &gt; Properties &gt; General &gt; Matrix view".
 
 ![Selecting the view type](images/160598299403_DV_resource.Stream@PNG-en-US.png)
 
@@ -3666,7 +3666,7 @@ The diagnostic view shows the diagnostic buffer of the PLC with the diagnostic e
 
 It is not possible to switch between different PLCs in Runtime. Navigating to the diagnostic view via the selected PLC in the matrix view is recommended.
 
-Under "Properties > Properties > General > Diagnostic view", you make the settings for the rows, header, grid lines, scroll bar, cells and columns.
+Under "Properties &gt; Properties &gt; General &gt; Diagnostic view", you make the settings for the rows, header, grid lines, scroll bar, cells and columns.
 
 ![Selecting the view type](images/160598250123_DV_resource.Stream@PNG-en-US.png)
 
@@ -3686,7 +3686,7 @@ If you change the device version from 18.00.01.01 to 18.00.01.00, the matrix vie
 
 To set up the column sorting in the diagnostic view, follow these steps:
 
-1. In the Inspector window, click "Properties > Properties > General > Diagnostic view > Columns > [0] Column".
+1. In the Inspector window, click "Properties &gt; Properties &gt; General &gt; Diagnostic view &gt; Columns &gt; [0] Column".
 2. Select the sorting direction and sorting order for the individual columns.
 
 #### Dynamization of graphic properties with tags or scripts
@@ -3698,7 +3698,7 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 #### Access protection in Runtime
 
-Configure access protection with the property "Operator control - allow" in the Inspector window under "Properties > Properties > Security". A logged-in user having the required authorization can acknowledge and edit the system diagnostics control using the buttons in the system diagnostics control.
+Configure access protection with the property "Operator control - allow" in the Inspector window under "Properties &gt; Properties &gt; Security". A logged-in user having the required authorization can acknowledge and edit the system diagnostics control using the buttons in the system diagnostics control.
 
 #### Configuring the information bar
 
@@ -3708,12 +3708,12 @@ The connection status is not displayed while the PLC is starting.
 
 To configure the information bar, follow these steps:
 
-1. Configure the general properties of the information bar, such as the font and background color, under "Properties > Properties > Miscellaneous > Information bar".
-2. Configure the display of the information bar elements under "Properties > Properties > Miscellaneous > Information bar > Elements".
+1. Configure the general properties of the information bar, such as the font and background color, under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar".
+2. Configure the display of the information bar elements under "Properties &gt; Properties &gt; Miscellaneous &gt; Information bar &gt; Elements".
 
 #### Toolbar
 
-You can define the buttons of the system diagnostics control in Runtime and their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Toolbar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the system diagnostics control in Runtime and their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the system diagnostics control:
 
@@ -3731,7 +3731,7 @@ The following buttons are available for the system diagnostics control:
 
 #### Setting the time zone
 
-Under Properties > Properties > Miscellaneous > Time zone, you set the desired time zone by entering a decimal value for the time zone.
+Under Properties &gt; Properties &gt; Miscellaneous &gt; Time zone, you set the desired time zone by entering a decimal value for the time zone.
 
 - "0" and positive numerical values: The values correspond to the index values of the Microsoft time zones.
 - "-1": The local time zone of the device.
@@ -4524,7 +4524,7 @@ The following requirements and restrictions apply to configuring report jobs and
 
 The reporting functionality must be enabled for the Runtime project that is running or being simulated on the HMI device.
 
-You activate the reporting functionality of a Runtime project before loading it into the device in TIA Portal: "Runtime settings" of the HMI device > "Reporting" > "Enable Reporting" option
+You activate the reporting functionality of a Runtime project before loading it into the device in TIA Portal: "Runtime settings" of the HMI device &gt; "Reporting" &gt; "Enable Reporting" option
 
 > **Note**
 >
@@ -4702,9 +4702,9 @@ The following buttons are available in the toolbars of the tab:
 | Icon | Button |  |
 | --- | --- | --- |
 | ![Toolbar](images/129288141323_DV_resource.Stream@PNG-de-DE.png) | Delete | Deletes the elements whose option is enabled in the work area. |
-| ![Toolbar](images/129286967947_DV_resource.Stream@PNG-de-DE.png) | - Add new - Import | - Creates a new element. - "Job parameters > Templates" tab: To import a report template into Runtime |
+| ![Toolbar](images/129286967947_DV_resource.Stream@PNG-de-DE.png) | - Add new - Import | - Creates a new element. - "Job parameters &gt; Templates" tab: To import a report template into Runtime |
 | ![Toolbar](images/129288760331_DV_resource.Stream@PNG-de-DE.png) | Run | In the "Report jobs" tab.  Manually creates a report for the report job whose option is enabled in the work area. |
-| ![Toolbar](images/129288150155_DV_resource.Stream@PNG-de-DE.png) | Export | - In the "Job parameters > Templates" tab: To export report templates - In the "Reports" tab:  To download reports to the client |
+| ![Toolbar](images/129288150155_DV_resource.Stream@PNG-de-DE.png) | Export | - In the "Job parameters &gt; Templates" tab: To export report templates - In the "Reports" tab:  To download reports to the client |
 
 ##### Information bar
 
@@ -4739,7 +4739,7 @@ Store the certificates of the SMTP servers that require authentication via certi
 
 ###### Procedure
 
-1. In the "Reports" control, click on the "Global settings > Certificates" tab.
+1. In the "Reports" control, click on the "Global settings &gt; Certificates" tab.
 2. Click "Add new" in the toolbar.
 
    Alternative: In the work area, click "Add new".
@@ -4759,7 +4759,7 @@ Store the data of the e-mail senders and email recipients.
 
 To create a new contact, follow these steps:
 
-1. In the "Reports" control, click on the "Global settings > Contacts" tab.
+1. In the "Reports" control, click on the "Global settings &gt; Contacts" tab.
 2. Click "Add new".
 3. Enter the name of the contact.
 4. Enter the e-mail address of the contact.
@@ -4782,13 +4782,13 @@ Store the data of the SMTP servers via which the e-mails are sent.
 
 ###### Requirement
 
-Contacts that are suitable as senders have been entered in the "Global Settings > Contacts" tab.
+Contacts that are suitable as senders have been entered in the "Global Settings &gt; Contacts" tab.
 
 ###### Procedure
 
 To create a new SMTP server configuration, follow these steps:
 
-| 1. In the "Reports" control, click on the "Global settings > SMTP" tab. 2. Click "Add new". 3. Specify the following:       | Field | Description |    | --- | --- |    | "Name" | Enter the name of the SMTP server configuration. |    | "Address" | Enter the URL of the SMTP server. Servers without authentication (e.g. company-internal mail servers) and with authentication are permitted. Example: URL of a company mail server: `mail.<``Company name``>.com` |    | "Port" | Enter the port number of the SMTP server. Default setting: 25 |    | "Sender" | In the list, select the contact that is used as the sender for this SMTP server configuration.  All contacts maintained under "Contacts" are offered to you for selection. Select a sender that meets the respective requirements of the server. |    | "Comment" | (Optional) Enter a comment relating to the SMTP server configuration. | |  |
+| 1. In the "Reports" control, click on the "Global settings &gt; SMTP" tab. 2. Click "Add new". 3. Specify the following:       | Field | Description |    | --- | --- |    | "Name" | Enter the name of the SMTP server configuration. |    | "Address" | Enter the URL of the SMTP server. Servers without authentication (e.g. company-internal mail servers) and with authentication are permitted. Example: URL of a company mail server: `mail.<``Company name``>.com` |    | "Port" | Enter the port number of the SMTP server. Default setting: 25 |    | "Sender" | In the list, select the contact that is used as the sender for this SMTP server configuration.  All contacts maintained under "Contacts" are offered to you for selection. Select a sender that meets the respective requirements of the server. |    | "Comment" | (Optional) Enter a comment relating to the SMTP server configuration. | |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ###### Result
@@ -4848,7 +4848,7 @@ You define the remaining job parameters while configuring a report job in the "R
 ###### Requirement
 
 - The "Reports" control is placed on a screen of the project.
-- The "Job parameters > Templates" tab is visible in the control.
+- The "Job parameters &gt; Templates" tab is visible in the control.
 - Import: You have access to the storage location of the report template.
 - Export: Report templates have been imported into the control.
 
@@ -4879,7 +4879,7 @@ The report templates are downloaded to the download folder or a user-defined dir
 ###### Requirement
 
 - The "Reports" control is placed on a screen of the project.
-- The "Job parameters > Templates" tab is visible in the control.
+- The "Job parameters &gt; Templates" tab is visible in the control.
 - Templates have been imported into the control.
 
 ###### Procedure
@@ -4897,14 +4897,14 @@ If you delete a template that is used by a report job, the report job is marked 
 
 ###### Introduction
 
-In the "Job Parameters > Triggers" tab you configure which automatic triggers are available for selection when configuring report jobs.
+In the "Job Parameters &gt; Triggers" tab you configure which automatic triggers are available for selection when configuring report jobs.
 
 Report jobs with automatic triggers are executed if the report jobs on the "Report jobs" tab are set to active and their trigger event occurs. Users can also start the execution manually.
 
 ###### Requirement
 
 - The "Reports" control is placed on a screen of the project.
-- The "Job parameters > Trigger" tab is visible in the control.
+- The "Job parameters &gt; Trigger" tab is visible in the control.
 - To use the trigger type "Context trigger": Contexts are available in the project.
 
 ###### Add trigger
@@ -4916,13 +4916,13 @@ Report jobs with automatic triggers are executed if the report jobs on the "Repo
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Click "Select tag". 2. Click "Load". 3. Select the required tag and click "OK". 4. Set the condition and the condition value.    Example:        | Symbol | Meaning |    | --- | --- |    | Set tag | <tag name> |    | Condition | > |    | Condition value | 100 |     The trigger will be initiated when the tag receives a value greater than 100. |  |
+| 1. Click "Select tag". 2. Click "Load". 3. Select the required tag and click "OK". 4. Set the condition and the condition value.    Example:        | Symbol | Meaning |    | --- | --- |    | Set tag | &lt;tag name&gt; |    | Condition | &gt; |    | Condition value | 100 |     The trigger will be initiated when the tag receives a value greater than 100. |  |
 
 ###### Settings for serial triggers
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Select the serial pattern.    The series pattern defines the occurrence and time at which the trigger is initiated.    Example: Weekly > Every 2 weeks > Fridays 2. Select the series area.    The series range defines the period in which the trigger is initiated.       | Symbol | Meaning |    | --- | --- |    | "Start" | Specify the start date |    | "Time" | Specify the time at which the trigger is initiated. |    | "End on" | Specify the end date. The trigger will be executed for the last time on this day. |    | "End after" | Determine the number of dates after which the series ends. |    | "No end date" | The series runs indefinitely. | |  |
+| 1. Select the serial pattern.    The series pattern defines the occurrence and time at which the trigger is initiated.    Example: Weekly &gt; Every 2 weeks &gt; Fridays 2. Select the series area.    The series range defines the period in which the trigger is initiated.       | Symbol | Meaning |    | --- | --- |    | "Start" | Specify the start date |    | "Time" | Specify the time at which the trigger is initiated. |    | "End on" | Specify the end date. The trigger will be executed for the last time on this day. |    | "End after" | Determine the number of dates after which the series ends. |    | "No end date" | The series runs indefinitely. | |  |
 
 ###### Settings for context triggers
 
@@ -4932,7 +4932,7 @@ Report jobs with automatic triggers are executed if the report jobs on the "Repo
 
 ###### Delete trigger
 
-Select the option of the desired trigger in the work area of the "Job Parameters > Triggers" tab and click "Delete" in the toolbar.
+Select the option of the desired trigger in the work area of the "Job Parameters &gt; Triggers" tab and click "Delete" in the toolbar.
 
 ###### Edit trigger
 
@@ -4950,12 +4950,12 @@ The trigger type can only be set when adding the trigger.
 ###### Requirement
 
 - The "Reports" control is placed on a screen of the project.
-- The receivers of the e-mails are maintained as contacts in the "Global settings > Contacts" tab.
-- An SMTP server, with which the e-mail is to be sent, has been configured in the "Global settings > SMTP" tab.
+- The receivers of the e-mails are maintained as contacts in the "Global settings &gt; Contacts" tab.
+- An SMTP server, with which the e-mail is to be sent, has been configured in the "Global settings &gt; SMTP" tab.
 
 ###### Procedure
 
-1. In the "Reports" control, click on the "Job parameters > Targets" tab.
+1. In the "Reports" control, click on the "Job parameters &gt; Targets" tab.
 2. In the work area of the tab, click "Add new".
 3. Select "E-mail" as target type.
 
@@ -5005,7 +5005,7 @@ The following targets with "File system" target type are pre-configured:
 | Local project storage location | The reports are stored in the following folder: `<Project folder of the Runtime project>\``Reports` |
 | Local main storage location | The reports are stored in the local main storage location for reports. The local main storage location is configured in TIA Portal in the Runtime settings of the HMI device.  If this setting has not been set in TIA Portal, the reports are stored in the folder configured during the installation of Runtime or later in the "WinCC Unified Configuration" tool: |
 
-You can select these targets in the "Report jobs" tab. You cannot edit or delete these targets in the "Job parameters > Targets" tab.
+You can select these targets in the "Report jobs" tab. You cannot edit or delete these targets in the "Job parameters &gt; Targets" tab.
 
 **User-defined targets**
 
@@ -5019,7 +5019,7 @@ In the "Reports" control, you can create user-defined targets of the "File syste
 
 To add user-defined targets of the "File system" target type, follow these steps:
 
-1. In the "Reports" control, click on the "Job parameters > Targets" tab.
+1. In the "Reports" control, click on the "Job parameters &gt; Targets" tab.
 2. In the work area of the tab, click "Add new".
 3. Select "File system" as target type.
 
@@ -5029,7 +5029,7 @@ To add user-defined targets of the "File system" target type, follow these steps
 4. Assign a unique name to the target.
 5. Under "Subfolder", enter the path to the subfolder in which the report is to be saved.
 
-   Use the following notation: <folder name> or <folder name>\<folder name>\...
+   Use the following notation: &lt;folder name&gt; or &lt;folder name&gt;\&lt;folder name&gt;\...
 6. (Optional) Enter a comment.
 
 **Note**
@@ -5071,12 +5071,12 @@ A report job is a job for generating reports in Runtime. The configuration of a 
 - The following job parameters were configured in the control:
 
   - At least one template has been imported.
-  - To automatically execute a report job: Triggers are configured in the "Job parameters > Trigger" tab.
+  - To automatically execute a report job: Triggers are configured in the "Job parameters &gt; Trigger" tab.
 - For sending an email after execution of the report job:
 
   - Email contacts were configured in the global settings.
   - An SMTP server was configured in the global settings.
-  - A target of the target type "E-mail" was configured in the "Job parameters > Targets" tab.
+  - A target of the target type "E-mail" was configured in the "Job parameters &gt; Targets" tab.
 - For a report job with the target format PDF:
 
   - Microsoft Office Excel or LibreOffice is installed on the runtime server.
@@ -5095,7 +5095,7 @@ A report job is a job for generating reports in Runtime. The configuration of a 
 
    - Click "Add target".
 
-     You see the targets configured in the tab "Job parameters > Targets".
+     You see the targets configured in the tab "Job parameters &gt; Targets".
    - Select a target.
    - Add the target by clicking "+".
 
@@ -5344,7 +5344,7 @@ An offline configuration file is required to configure reporting templates in th
 
 ##### Procedure
 
-1. In the "Reports" control, click on the "Global settings > Configuration" tab.
+1. In the "Reports" control, click on the "Global settings &gt; Configuration" tab.
 2. Enter the name of the offline configuration file under "Offline-configuration".
 3. Click "Export offline configuration".
 
@@ -5376,15 +5376,15 @@ Reports are not transferred.
 
 ##### Export configuration
 
-1. In the "Reports" control, select the "Global settings > Configuration" tab.
-2. Enter the name of the export file under "Export/import configuration > Export".
+1. In the "Reports" control, select the "Global settings &gt; Configuration" tab.
+2. Enter the name of the export file under "Export/import configuration &gt; Export".
 3. Click "Export configuration".
 
 The configuration is exported to a ZIP file and downloaded to the default download directory of the device.
 
 ##### Import configuration
 
-1. In the "Reports" control, select the "Global settings > Configuration" tab.
+1. In the "Reports" control, select the "Global settings &gt; Configuration" tab.
 2. Click "Select import file" under "Export/import configuration".
 3. Select the ZIP file in File Explorer and confirm your selection.
 4. Runtime checks whether the control already contains configurations:
@@ -5400,7 +5400,7 @@ The configuration is exported to a ZIP file and downloaded to the default downlo
 
 To set how many entries the lists in the work area of the "Reports" control display per page, follow these steps:
 
-1. In the "Reports" control, click on the "Global settings > Configuration" tab.
+1. In the "Reports" control, click on the "Global settings &gt; Configuration" tab.
 2. Under "List Settings", select the number of entries.
 
 If a list has more entries, these are split over several pages. Use the buttons below the list to switch pages.
@@ -5486,7 +5486,7 @@ Use a dynamic placeholder for tags to integrate process values in the report nam
 | Tag placeholder | Description | Example |  | Area |
 | --- | --- | --- | --- | --- |
 | Configuration | Result |  |  |  |
-| {@<Full  Tag name>} | Process value of an online tag | Rep_{@PC1_LineA::MyTag1} | Rep_On | Process value of the online tags  If the value contains a character that is not permitted in file names, it is replaced by an underscore.  If there is an error resolving the name, e.g. because the tag is not found in runtime, the tag placeholder in the name is replaced by `ERR`. The process is logged in the generation status of the report. |
+| {@&lt;Full  Tag name&gt;} | Process value of an online tag | Rep_{@PC1_LineA::MyTag1} | Rep_On | Process value of the online tags  If the value contains a character that is not permitted in file names, it is replaced by an underscore.  If there is an error resolving the name, e.g. because the tag is not found in runtime, the tag placeholder in the name is replaced by `ERR`. The process is logged in the generation status of the report. |
 
 Examples:
 
@@ -5525,7 +5525,7 @@ The following is the list of the most important system alarms.
 | 538640387 | The report cannot be started for the job [name]. | The Report Creator for report jobs cannot be started. | Check the report job settings.  If you use the "ExecuteReport" system function, check the name of the report job and the parameters passed when calling the function. |
 | 538640388 | An error occurred during communication with the database server | The reporting database cannot be found or access is not possible for other reasons. | Check whether the reporting database is available at the storage location configured in the Runtime settings in engineering.  Examples:   - Does the folder specified as storage location in the Runtime settings exist? - Has the folder been specified in the correct notation? - On a panel: Is the SD card plugged in? |
 | 538640389 | The creation of the report job [name] failed | The Report Creator is missing information about the report job.   A possible reason for this are problems with processing the report template. | Check the report job settings and the report template. |
-| 538640390 | Report failed | Report Creator reports an error while generating the report. | Check the detailed error message for the report:   Control "Reports" > "Reports" tab > "Status" column. |
+| 538640390 | Report failed | Report Creator reports an error while generating the report. | Check the detailed error message for the report:   Control "Reports" &gt; "Reports" tab &gt; "Status" column. |
 
 #### Configuring report templates in the add-in (RT Unified)
 
@@ -5580,7 +5580,7 @@ You can find additional information in the "SIMATIC Unified PC Installation" use
 
 The Runtime project that is the data source of a report template must have reporting functionality enabled.
 
-You activate the reporting functionality of a Runtime project before loading it into the device in TIA Portal: "Runtime settings" of the HMI device > "Reporting" > "Enable Reporting" option
+You activate the reporting functionality of a Runtime project before loading it into the device in TIA Portal: "Runtime settings" of the HMI device &gt; "Reporting" &gt; "Enable Reporting" option
 
 > **Note**
 >
@@ -5638,7 +5638,7 @@ Contexts are not supported for Unified Comfort Panel. This option is not availab
 
 ###### Procedure
 
-1. In the installation package of WinCC Unified on "DVD_2", double-click the file "Support\Reporting\SIMATIC_WinCC_Unified_Reporting_<Version number>.exe".
+1. In the installation package of WinCC Unified on "DVD_2", double-click the file "Support\Reporting\SIMATIC_WinCC_Unified_Reporting_&lt;Version number&gt;.exe".
 2. Select the target directory to which the underlying ZIP file is extracted and confirm your input.
 
    The ZIP file is extracted and setup starts automatically.
@@ -5668,7 +5668,7 @@ The Excel manifest is installed.
 
 ###### Procedure
 
-Give the users that create templates with the Excel add-in read access to the installation path of the Excel manifest: <target directory>\WinCCUnifiedReporting\Excelmanifest
+Give the users that create templates with the Excel add-in read access to the installation path of the Excel manifest: &lt;target directory&gt;\WinCCUnifiedReporting\Excelmanifest
 
 > **Note**
 >
@@ -5714,10 +5714,10 @@ Give the users that create templates with the Excel add-in read access to the in
 ###### Procedure
 
 1. Open Microsoft Excel.
-2. Open the "Trust Center" under "File" > "Options".
+2. Open the "Trust Center" under "File" &gt; "Options".
 3. Click "Trust Center Settings".
 4. Click "Catalogs of trusted add-ins".
-5. Add the catalog using the URL "\\<Computer name>\Excelmanifest".
+5. Add the catalog using the URL "\\&lt;Computer name&gt;\Excelmanifest".
 
    ![Procedure](images/142754073355_DV_resource.Stream@PNG-en-US.png)
 
@@ -6223,9 +6223,9 @@ The standard column provides the standard property of the data source item and d
 | --- | --- | --- |
 | Logging alarm | "Alarm ID" | Alarm IDs of the displayed alarms |
 | Alarm statistics | "Alarm statistics [ID]" | Alarm IDs of the alarms displayed in the alarm statistics |
-| Tag or logging tag | "<Name of the tags or logging tags>" | Value of the tag or logging tag |
-| Context | "<Name of the context object>" | Context name |
-| Audit | "Audit [<object name>]" | The name of the object monitored by the Audit Trail |
+| Tag or logging tag | "&lt;Name of the tags or logging tags&gt;" | Value of the tag or logging tag |
+| Context | "&lt;Name of the context object&gt;" | Context name |
+| Audit | "Audit [&lt;object name&gt;]" | The name of the object monitored by the Audit Trail |
 | User-defined column | Name entered when creating the data source item | As set in the configuration of the data source item:  - A fixed string.  Or - A dynamically calculated string |
 
 ###### Changing the column title
@@ -6626,7 +6626,7 @@ In segments that combine contexts with logging tags or logging alarms:
 - All logged values with the same time stamp are displayed per row.
 - "Time stamp" column: The logging event
 - "Start time" column: The time at which the context was started
-- "Context " <Context name>"" column: The value passed to the context at start
+- "Context " &lt;Context name&gt;"" column: The value passed to the context at start
 - If no context was started at the time of logging, the context cells remain empty.
 
 **Example**
@@ -6699,7 +6699,7 @@ The configuration of the user-defined column controls which string or formula it
 3. Click "+".
 4. Select the option "User-defined column".
 5. Enter the name of the column under "name".
-6. Click "Select" or press <ENTER>.
+6. Click "Select" or press &lt;ENTER&gt;.
 
    The column is included in the list "Selected data source items".
 7. Select a configuration for the user-defined column.
@@ -6855,7 +6855,7 @@ You have the following options:
    ![Creating a configuration](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
 
    ![Creating a configuration](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
-3. Click "New Configuration > Logging alarm configuration".
+3. Click "New Configuration &gt; Logging alarm configuration".
 4. Enter the name of the configuration under "Configuration name".
 5. (Optional) Enter texts or graphics from a text list or graphic list in the standard column instead of the alarm IDs.
 
@@ -6905,7 +6905,7 @@ The changes are applied the next time you read in the Runtime data.
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
 
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
-3. Click "New Configuration > Alarm statistics configuration".
+3. Click "New Configuration &gt; Alarm statistics configuration".
 4. Enter the name of the configuration under "Configuration name".
 5. (Optional) Enter texts or graphics from a text list or graphic list in the standard column instead of the alarm IDs.
 
@@ -6994,7 +6994,7 @@ In time series segments, the following additional settings are available for log
 | Setting | Description |
 | --- | --- |
 | "Interval" | Only for the "Stepped" and "Interpolated" calculation modes. |
-| "Columns" > "Quality Code" | (Optional) Change the default settings of the optional "Quality Code" column.  See [Configuring optional columns](#configuring-optional-columns-rt-unified). |
+| "Columns" &gt; "Quality Code" | (Optional) Change the default settings of the optional "Quality Code" column.  See [Configuring optional columns](#configuring-optional-columns-rt-unified). |
 
 ###### Additional settings for single value segments
 
@@ -7033,7 +7033,7 @@ To set the "Time stamp", select one of the following options:
 
 1. Click on "Segments" in the "Configuration" group.
 2. Click "Data source item configuration": ![Creating a configuration](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
-3. Click "New Configuration> Tag single value configuration".
+3. Click "New Configuration&gt; Tag single value configuration".
 4. Enter the name of the configuration under "Name".
 5. (Optional) If the configuration is for tags with the numeric data type, you can output texts or graphics from a text list or graphic list in the standard column instead of the tag value.
 
@@ -7116,7 +7116,7 @@ The changes are applied the next time you read in the Runtime data.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| 1. Click on "Segments" in the "Configuration" group. 2. Click "Data source item configuration":               ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)         ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png) 3. Click "New Configuration > User-defined column configuration". 4. Enter the name of the configuration under "Configuration name". 5. Under "Formula", select one of the following options:    - Enter a fixed string.      The string is transferred into each cell of the column.    - Enter an Excel formula.      The formula is copied into each cell of the user-defined column and adapted to the respective row.       To prevent a part of the formula from being adjusted, place the character "$" in front of it.      Example         |  |  |  |  |      | --- | --- | --- | --- |      | Formula in configuration |  | =B2+C2 | =B$2+C2 |      | Adapting the formula in the report | in line 2 | =B2+C2 | =B2+C2 |      | in line 3 | =B3+C3 | =B2+C3 |  |      | in line 4 | =B4+C4 | =B2+C4 |  |         |  |  |  |  |      | --- | --- | --- | --- |      | **Note**  **No validity check**  The formula is not tested for correctness during either input or dynamic adaptation. |  |  |  | 6. Confirm your entries with "OK". |  |  |  |
+| 1. Click on "Segments" in the "Configuration" group. 2. Click "Data source item configuration":               ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)         ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png) 3. Click "New Configuration &gt; User-defined column configuration". 4. Enter the name of the configuration under "Configuration name". 5. Under "Formula", select one of the following options:    - Enter a fixed string.      The string is transferred into each cell of the column.    - Enter an Excel formula.      The formula is copied into each cell of the user-defined column and adapted to the respective row.       To prevent a part of the formula from being adjusted, place the character "$" in front of it.      Example         |  |  |  |  |      | --- | --- | --- | --- |      | Formula in configuration |  | =B2+C2 | =B$2+C2 |      | Adapting the formula in the report | in line 2 | =B2+C2 | =B2+C2 |      | in line 3 | =B3+C3 | =B2+C3 |  |      | in line 4 | =B4+C4 | =B2+C4 |  |         |  |  |  |  |      | --- | --- | --- | --- |      | **Note**  **No validity check**  The formula is not tested for correctness during either input or dynamic adaptation. |  |  |  | 6. Confirm your entries with "OK". |  |  |  |
 
 ###### Adding or editing configurations for audit (RT Unified)
 
@@ -7171,7 +7171,7 @@ Possible filter types:
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
 
    ![Procedure](images/142024796299_DV_resource.Stream@PNG-de-DE.png)
-3. Click "New Configuration > Audit configuration".
+3. Click "New Configuration &gt; Audit configuration".
 4. Enter the name of the configuration under "Name".
 5. Select a check mode:
 6. Specify a filter type.
@@ -7179,7 +7179,7 @@ Possible filter types:
    Preset value: "Show data and conformity errors"
 7. (Optional) Change the default settings of the optional columns. The optional columns are used to display the audit attributes.
 
-   You can find more information on configuring the optional columns in the WinCC Unified object model > Creating production logs > Configuring optional columns.
+   You can find more information on configuring the optional columns in the WinCC Unified object model &gt; Creating production logs &gt; Configuring optional columns.
 8. (Optional) To further filter the inserted content, define a filter query.
 
    The filter query can consist of up to two conditions. Proceed as follows:
@@ -7191,7 +7191,7 @@ Possible filter types:
 
 > **Note**
 >
-> To not use the default column title for the standard column, set a display name in the local configuration of the data source item. You can find more information on setting the display name in the WinCC Unified object model > Creating production logs > Setting the display name for the standard column.
+> To not use the default column title for the standard column, set a display name in the local configuration of the data source item. You can find more information on setting the display name in the WinCC Unified object model &gt; Creating production logs &gt; Setting the display name for the standard column.
 
 ###### Editing a configuration
 
@@ -7643,7 +7643,7 @@ An online connection is established.
 
 ###### Reading in all segments
 
-1. Select "WinCC Unified > Segments".
+1. Select "WinCC Unified &gt; Segments".
 2. Click "Update all":
 
    ![Reading in all segments](images/142023530251_DV_resource.Stream@PNG-de-DE.png)
@@ -7652,7 +7652,7 @@ An online connection is established.
 
 ###### Reading in individual segments
 
-1. Select "WinCC Unified > Segments".
+1. Select "WinCC Unified &gt; Segments".
 2. Next to a segment in the list of segments click, "Update":
 
    ![Reading in individual segments](images/142023530251_DV_resource.Stream@PNG-de-DE.png)
@@ -7750,7 +7750,7 @@ You can select the language for the contents of the report independently of the 
 
 ###### Selecting the language for the report
 
-1. Select "WinCC Unified > Segments".
+1. Select "WinCC Unified &gt; Segments".
 2. Click "Basic settings":
 
    ![Selecting the language for the report](images/142024587787_DV_resource.Stream@PNG-de-DE.png)
@@ -7763,7 +7763,7 @@ You can select the language for the contents of the report independently of the 
 
 ###### Procedure
 
-To zoom in or out of the display in the add-in, press <CTRL> and move the mouse wheel.
+To zoom in or out of the display in the add-in, press &lt;CTRL&gt; and move the mouse wheel.
 
 ##### Undo and redo (RT Unified)
 
@@ -7829,7 +7829,7 @@ Add diagrams, pivot tables or formulas that graphically visualize, structure or 
 
 ###### Set up page
 
-Use "File > Print > Set up page" to define details for printing the report, for example:
+Use "File &gt; Print &gt; Set up page" to define details for printing the report, for example:
 
 - Alignment of the report (portrait format or landscape format)
 - Scaling, for example, to print all columns on one page
@@ -7992,10 +7992,10 @@ The objects for the supervision and diagnostics of plants are available for the 
 
 The number of ProDiag monitors that you configure with STEP 7 is licensed. You do not need a license for the first 25 supervisions, licenses must be used for additional supervisions.
 
-| Number of supervisions | <= 25 | <= 250 | <= 500 | <= 750 | <= 1000 | > 1000 *) |
+| Number of supervisions | &lt;= 25 | &lt;= 250 | &lt;= 500 | &lt;= 750 | &lt;= 1000 | &gt; 1000 *) |
 | --- | --- | --- | --- | --- | --- | --- |
 | Number of licenses | None | 1 | 2 | 3 | 4 | 5 |
-| *) If it is clear from the beginning that > 1000 supervisions are required in the project, a license to use supervisions can be ordered without limitation. |  |  |  |  |  |  |
+| *) If it is clear from the beginning that &gt; 1000 supervisions are required in the project, a license to use supervisions can be ordered without limitation. |  |  |  |  |  |  |
 
 ##### Licensing of ProjDiag objects
 
@@ -8064,7 +8064,7 @@ WinCC supports the display of step names for the GRAPH blocks in multiple langua
 
 In the Inspector window, you can change the settings for the position, geometry, style, and color of the object. You can adapt the following properties in particular:
 
-- "Process > Tag": Assign the tag.
+- "Process &gt; Tag": Assign the tag.
 - "Function bar": Specifies the buttons of the GRAPH overview.
 
 ##### Operating mode
@@ -8100,7 +8100,7 @@ The symbols displayed in the GRAPH overview are pre-defined:
 
 ##### Function bar
 
-You can define the buttons of the GRAPH overview in runtime along with their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Function bar > Elements". By default, only the "Next Step" button is available. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the GRAPH overview in runtime along with their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Function bar &gt; Elements". By default, only the "Next Step" button is available. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the GRAPH overview:
 
@@ -8126,7 +8126,7 @@ You can use the GRAPH overview to view the current program status for the execut
   >
   > The process tag you are using for the GRAPH overview must be visible in HMI and accessible from HMI.
   >
-  > To identify the tags of the GRAPH data block as visible and accessible for HMI, open the GRAPH function block, select the block in the work area, and select "Edit > Internal parameters visible/accessible from HMI" in the menu bar. Then compile the program blocks.
+  > To identify the tags of the GRAPH data block as visible and accessible for HMI, open the GRAPH function block, select the block in the work area, and select "Edit &gt; Internal parameters visible/accessible from HMI" in the menu bar. Then compile the program blocks.
 - An HMI device has been created.
 - You have created a screen.
 - The Inspector window is open.
@@ -8134,19 +8134,19 @@ You can use the GRAPH overview to view the current program status for the execut
 ##### Procedure
 
 1. Drag-and-drop the GRAPH overview from the toolbox view into the configured screen.
-2. In the Inspector window, click "Properties > Properties > Miscellaneous".
-3. Open the selection button under "PLC Source > Tag".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Miscellaneous".
+3. Open the selection button under "PLC Source &gt; Tag".
 
    The "Add new object" dialog opens.
 4. Select the corresponding PLC in the "Program blocks" folder.
 5. Select the corresponding PLC tag of the GRAPH instance data block.
 6. To display the GRAPH overview in compatibility mode without function bar buttons and operating mode display, drag the object to the desired size, whereby multiple basic views are possible.
-7. Under "Properties > Properties > Miscellaneous > Function bar > Elements", specify the buttons to be displayed in the object.
+7. Under "Properties &gt; Properties &gt; Miscellaneous &gt; Function bar &gt; Elements", specify the buttons to be displayed in the object.
 
    ![Procedure](images/159222117899_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/159222117899_DV_resource.Stream@PNG-en-US.png)
-8. Under "Properties > Events", you can assign system functions or scripts to the buttons in the GRAPH overview in order, for example, to jump to the alarm control or the PLC code view in Runtime and to open the TIA Portal.
+8. Under "Properties &gt; Events", you can assign system functions or scripts to the buttons in the GRAPH overview in order, for example, to jump to the alarm control or the PLC code view in Runtime and to open the TIA Portal.
 
 **Note**
 
@@ -8195,7 +8195,7 @@ In the information area of the PLC code view, you are shown:
 
 ##### Buttons of the function bar
 
-You can define the buttons of the PLC code view control in runtime along with their operator authorizations in the Inspector window under "Properties > Properties > Miscellaneous > Function bar > Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the PLC code view control in runtime along with their operator authorizations in the Inspector window under "Properties &gt; Properties &gt; Miscellaneous &gt; Function bar &gt; Elements". Some buttons are enabled by default. To display additional buttons in the object, activate the "Visibility" property in the settings of the corresponding button.
 
 The following buttons are available for the PLC code view:
 
@@ -8226,7 +8226,7 @@ To display the PLC program networks in the graphic programming languages LAD, FB
 ##### Procedure
 
 1. Drag-and-drop the PLC code view control from the toolbox view.
-2. In the Inspector window, click "Properties > Properties > Function bar".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Function bar".
 3. Select the buttons that you require in Runtime, for example: Back, Next, Zoom in.
 
    ![Procedure](images/164407799563_DV_resource.Stream@PNG-en-US.png)
@@ -8343,7 +8343,7 @@ In WinCC, you configure the display and the representation of categories and sup
 ##### Procedure
 
 1. Drag-and-drop the ProDiag overview from the toolbox view.
-2. In the Inspector window, select "Properties > Properties > General".
+2. In the Inspector window, select "Properties &gt; Properties &gt; General".
 3. Open the selection button under the "Tag" property.
 4. Select the status tag of ProDiag FB.
 
@@ -8352,9 +8352,9 @@ In WinCC, you configure the display and the representation of categories and sup
    ![Procedure](images/164610422411_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/164610422411_DV_resource.Stream@PNG-en-US.png)
-5. Under "Properties > Properties > Miscellaneous > P Diag Categories", define the names and colors for the supervision categories.
-6. Under "Properties > Properties > Miscellaneous > P Diag Supervision types", define the names and colors for the supervision types.
-7. Under "Properties > Events", you can configure a system function for the "Alarm view - Button tapped" event to jump from the ProDiag overview to the alarm view in Runtime.
+5. Under "Properties &gt; Properties &gt; Miscellaneous &gt; P Diag Categories", define the names and colors for the supervision categories.
+6. Under "Properties &gt; Properties &gt; Miscellaneous &gt; P Diag Supervision types", define the names and colors for the supervision types.
+7. Under "Properties &gt; Events", you can configure a system function for the "Alarm view - Button tapped" event to jump from the ProDiag overview to the alarm view in Runtime.
 
 ##### Result
 
@@ -8534,14 +8534,14 @@ You configure the criteria analysis view and its linked alarm control in the sam
 
 - The HMI device is connected to the controller.
 - A ProDiag program version 2.0 or a GRAPH program Version 6.0 or higher is installed on the controller.
-- Process diagnostics is enabled in the "Runtime settings > Process diagnostics > General" of the Unified Runtime device.
+- Process diagnostics is enabled in the "Runtime settings &gt; Process diagnostics &gt; General" of the Unified Runtime device.
 - Initial value acquisition is enabled for the function blocks.
 - An alarm control has been configured.
 
 ###### Procedure
 
 1. Move the criteria analysis view from the toolbox window using drag-and-drop.
-2. Click on "Properties > Properties" in the Inspector window.
+2. Click on "Properties &gt; Properties" in the Inspector window.
 3. Open the selection button under the "Data source" property.
 4. Select the configured alarm control.
 
@@ -8563,7 +8563,7 @@ You have the option to add additional information about faulty operands to the G
 
 ![Introduction](images/110359669003_DV_resource.Stream@PNG-en-US.png)
 
-In WinCC Unified Runtime, you have the option to add additional information to the alarms. For this, select the appropriate text that you want to extend under "Runtime settings > Process diagnostics > Criteria analysis > Extend text", i.e. alarm text, info text or additional text 1 - 9. You can extend the texts with the first faulty operand or with all faulty operands.
+In WinCC Unified Runtime, you have the option to add additional information to the alarms. For this, select the appropriate text that you want to extend under "Runtime settings &gt; Process diagnostics &gt; Criteria analysis &gt; Extend text", i.e. alarm text, info text or additional text 1 - 9. You can extend the texts with the first faulty operand or with all faulty operands.
 
 The following information can be added to the operands:
 
@@ -8580,7 +8580,7 @@ The additional information is separated in the alarm by semicolons and spaces.
 
 > **Note**
 >
-> To completely display the alarms from the controller on the HMI device, the "Automatic update" option must be selected under "Runtime settings > Alarms > Controller alarms" for the relevant connection. You can find additional information on complete alarms under "[Sending a complete alarm from the controller to the HMI device](Configuring%20alarms%20%28RT%20Unified%29.md#sending-complete-alarms-from-the-controller-to-the-hmi-device-and-automatically-updating-them-rt-unified)".
+> To completely display the alarms from the controller on the HMI device, the "Automatic update" option must be selected under "Runtime settings &gt; Alarms &gt; Controller alarms" for the relevant connection. You can find additional information on complete alarms under "[Sending a complete alarm from the controller to the HMI device](Configuring%20alarms%20%28RT%20Unified%29.md#sending-complete-alarms-from-the-controller-to-the-hmi-device-and-automatically-updating-them-rt-unified)".
 
 ###### Criteria analysis in the alarm system
 
@@ -8592,8 +8592,8 @@ You visualize the alarms for the criteria analysis in the following steps:
 ###### Extend alarms
 
 1. Open the "Runtime settings" editor of the HMI device.
-2. Click "Process diagnostics > Criteria analysis".
-3. Under "Criteria analysis > Extend text", select which texts you want to extend.
+2. Click "Process diagnostics &gt; Criteria analysis".
+3. Under "Criteria analysis &gt; Extend text", select which texts you want to extend.
 4. Select the additional information to be added to the alarm text in the alarm, such as symbol name, address and value of the first faulty operand and comment.
 
    ![Extend alarms](images/169740348171_DV_resource.Stream@PNG-en-US.png)
@@ -8614,7 +8614,7 @@ If an error occurs, you see not only the alarm text in the alarm control but als
 
 ###### Extension of the "GRAPH overview" object with the criteria analysis
 
-To display the criteria analysis in the "GRAPH overview" object, the criteria analysis must be enabled in the Inspector window under "Properties > Properties > Information bar > Elements".
+To display the criteria analysis in the "GRAPH overview" object, the criteria analysis must be enabled in the Inspector window under "Properties &gt; Properties &gt; Information bar &gt; Elements".
 
 ![Extension of the "GRAPH overview" object with the criteria analysis](images/171168840459_DV_resource.Stream@PNG-en-US.png)
 
@@ -9315,7 +9315,7 @@ To enable the debugger, follow these steps:
      `<Port number>`
 
    Use the port entered for the Script Debugger in SIMATIC Runtime Manager.
-7. Press <Enter>.
+7. Press &lt;Enter&gt;.
 8. Click "Done".
 9. Under "Remote Target", click "inspect" for the desired target.
 
@@ -9331,7 +9331,7 @@ To enable the debugger, follow these steps:
 The debugger must be updated:
 
 - After starting a new project
-- After restarting a running project, for example, because you have reloaded the project in engineering with "Download to device > Software (all)".
+- After restarting a running project, for example, because you have reloaded the project in engineering with "Download to device &gt; Software (all)".
 - After a screen change in Runtime
 
 The connection to the debugger is lost in each case. Google Chrome therefore shows an error message and asks whether you want to restore the connection.
@@ -9430,7 +9430,7 @@ You have several options to enable or disable all breakpoints:
 
 - Click on the ![Enabling and disabling breakpoints](images/153087832971_DV_resource.Stream@PNG-de-DE.png) "Deactivate breaktpoints" button in the debugging area.
 - Open the shortcut menu of a breakpoint in the debugging area and select "Activate breakpoints" or "Deactivate breakpoints".
-- Press <Ctrl + F8>.
+- Press &lt;Ctrl + F8&gt;.
 
 ##### Deleting breakpoints
 
@@ -9470,7 +9470,7 @@ The following options are available to execute your script step-by-step:
 To pause the continuation of a script, you have several options:
 
 - Click on the ![Execute script to the next breakpoint](images/153085429387_DV_resource.Stream@PNG-de-DE.png) "Resume script execution" button in the debugging area.
-- Press the <F8> key.
+- Press the &lt;F8&gt; key.
 
   The script is executed to the next breakpoint. If there is no other breakpoint, the script is executed completely.
 
@@ -9491,7 +9491,7 @@ To ignore the following breakpoints when resuming execution of a paused script, 
 If a line with a breakpoint contains a function that you are not interested in, you can suppress the debugging of this function:
 
 - Click on the ![Execute script to the next function call](images/153077472907_DV_resource.Stream@PNG-de-DE.png) "Step over next function call" button in the debugging area.
-- Press the <F10> key.
+- Press the &lt;F10&gt; key.
 
   The function is executed without the script pausing within the function.
 
@@ -9500,7 +9500,7 @@ If a line with a breakpoint contains a function that you are not interested in, 
 If the script pauses in a line containing a function that interests you, you can pause the script in that function:
 
 - Click on the ![Jumping into a function](images/153087792523_DV_resource.Stream@PNG-de-DE.png) "Step into next function call" button in the debugging area.
-- Press the <F11> key.
+- Press the &lt;F11&gt; key.
 
   The script pauses in the first line of the function.
 
@@ -9513,7 +9513,7 @@ If the script pauses in a line containing a function that interests you, you can
 If the script pauses within a function that you are not interested in, you can suppress further debugging of this function:
 
 - Click on the ![Jump out of a function](images/153087796491_DV_resource.Stream@PNG-de-DE.png) "Step out of current function" button in the debugging area.
-- Press the key combination <Shift + F11>.
+- Press the key combination &lt;Shift + F11&gt;.
 
 > **Note**
 >
@@ -9581,9 +9581,9 @@ The following buttons are available to you:
 
 The values available at the current time can be called in the console.
 
-- You show or hide the console with <Esc>.
+- You show or hide the console with &lt;Esc&gt;.
 
 Call the current values in the console as follows:
 
 1. Enter the name of a local or global value in the console.
-2. Press <Enter>.
+2. Press &lt;Enter&gt;.

@@ -265,7 +265,7 @@ To implicitly update all block calls and uses of PLC data types as well as the i
 
 1. Open the project tree.
 2. Select the "Program blocks" folder.
-3. Select the command "Compile > Software (rebuild all blocks)" in the shortcut menu.
+3. Select the command "Compile &gt; Software (rebuild all blocks)" in the shortcut menu.
 
 ---
 
@@ -438,8 +438,8 @@ To enable the expanded mode, follow these steps:
 >
 > Depending on the amount of RAM available on your computer, the following maximum limits apply to expanded mode:
 >
-> - RAM < 8 GB: A maximum of 10,000 rows are displayed.
-> - RAM >= 8 GB: A maximum of 40,000 rows are displayed.
+> - RAM &lt; 8 GB: A maximum of 10,000 rows are displayed.
+> - RAM &gt;= 8 GB: A maximum of 40,000 rows are displayed.
 
 ---
 
@@ -873,7 +873,7 @@ To change one of these properties for several elements, follow these steps:
 1. Open the data block.
 2. Hold down the CTRL key.
 3. In the required column, select each of the table cells whose value you want to change.
-4. Select the "Set <property>" or "Reset <property>" command in the shortcut menu.
+4. Select the "Set &lt;property&gt;" or "Reset &lt;property&gt;" command in the shortcut menu.
 
 #### Editing properties in the properties window
 
@@ -935,7 +935,7 @@ To change one of these properties for several elements, follow these steps:
 1. Open the data block.
 2. Hold down the CTRL key.
 3. In the required column, select each of the table cells whose value you want to change.
-4. Select the "Set <property>" or "Reset <property>" command in the shortcut menu.
+4. Select the "Set &lt;property&gt;" or "Reset &lt;property&gt;" command in the shortcut menu.
 
 #### Editing properties in the properties window
 
@@ -997,7 +997,7 @@ To edit a comment in all project languages, follow these steps:
 >
 > **Editing all project texts in the global "Project texts" table**
 >
-> You can also edit the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts". It contains all translatable texts of the entire project.
+> You can also edit the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts". It contains all translatable texts of the entire project.
 >
 > You can find additional information on translation of texts under [Project text basics](Editing%20project%20data.md#project-text-basics).​
 
@@ -1061,7 +1061,7 @@ A global data block is open.
 
 To delete a tag, follow these steps:
 
-1. Select the row with the tag to be deleted. You can also select several rows by clicking on them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking on the first and last row.
+1. Select the row with the tag to be deleted. You can also select several rows by clicking on them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking on the first and last row.
 2. Select the "Delete" command in the shortcut menu.
 
 > **Note**
@@ -1152,8 +1152,8 @@ To edit individual tags in external table editors, such as Excel, you can export
 >
 > Depending on the amount of work memory available on your computer, the following maximum limits apply when displaying and copying ARRAYs from the data block editor in an Excel table:
 >
-> - RAM < 8 GB: A maximum of 10,000 elements are displayed and copied.
-> - RAM >= 8 GB: A maximum of 40,000 elements are displayed and copied.
+> - RAM &lt; 8 GB: A maximum of 10,000 elements are displayed and copied.
+> - RAM &gt;= 8 GB: A maximum of 40,000 elements are displayed and copied.
 
 #### Requirement
 
@@ -1221,7 +1221,7 @@ When you make changes to a data block after initial loading, you are editing the
   - The start values of non-retentive tags are placed in the load memory of the CPU. The program runs with the new start values at the next transition from "STOP" to "RUN".
   - Retentive tags are not reinitialized. Your actual values are retained after loading in "STOP".
 
-    To also reinitialize the retentive tags when loading in "STOP", select the blocks you want to load in the project tree and select the command "Compile > Software (rebuild all blocks)" in the shortcut menu. In the "Online" menu, select the command "Download and reset PLC program". The online blocks are deleted and overwritten by the new blocks. This reinitializes all tags, including the retentive tags.
+    To also reinitialize the retentive tags when loading in "STOP", select the blocks you want to load in the project tree and select the command "Compile &gt; Software (rebuild all blocks)" in the shortcut menu. In the "Online" menu, select the command "Download and reset PLC program". The online blocks are deleted and overwritten by the new blocks. This reinitializes all tags, including the retentive tags.
 
 #### Editing actual values with online and diagnostic functions
 
@@ -1384,12 +1384,12 @@ You can execute this function in "RUN" mode as well as "STOP" mode.
 To reinitialize all actual values or only the setpoints of a block with start values, follow these steps:
 
 1. Open the data block.
-2. Click the "Load start values as actual values > All values" button.
+2. Click the "Load start values as actual values &gt; All values" button.
 
 Or:
 
 1. Open the data block.
-2. Click the "Load start values as actual values > Only setpoints" button.
+2. Click the "Load start values as actual values &gt; Only setpoints" button.
 
 #### Reinitializing actual values of multiple blocks
 
@@ -1444,7 +1444,7 @@ To create a snapshot of several selected data blocks, follow these steps:
 
 1. Select the blocks in the project tree.   
    You can select the blocks individually or select devices, groups or folders in the project tree which include the data blocks.
-2. In the shortcut menu, select "Snapshot of the current values" or select the menu command "Online > Snapshot of the current values".
+2. In the shortcut menu, select "Snapshot of the current values" or select the menu command "Online &gt; Snapshot of the current values".
 
 #### Result
 
@@ -1556,21 +1556,21 @@ A snapshot has been created for the data block.
 To apply the snapshots as start values in a data block, follow these steps:
 
 1. Open a data block.
-2. In the toolbar, click "Copy snapshots to start values > All values".
+2. In the toolbar, click "Copy snapshots to start values &gt; All values".
 
 Or:
 
 1. Open a data block.
-2. In the toolbar, click "Copy snapshots to start values > Only setpoints".
+2. In the toolbar, click "Copy snapshots to start values &gt; Only setpoints".
 
 To apply the monitored values of multiple data blocks in the project tree, follow these steps:
 
 1. Select the blocks in the project tree.
 2. Then select one of the following commands in the shortcut menu:
 
-   - "Copy snapshots to start values > All values"
-   - "Copy snapshots to start values > Only setpoints"
-   - "Copy snapshots to start values > Only retain values"
+   - "Copy snapshots to start values &gt; All values"
+   - "Copy snapshots to start values &gt; Only setpoints"
+   - "Copy snapshots to start values &gt; Only retain values"
 
 #### Result
 
@@ -1699,7 +1699,7 @@ To initialize all setpoints of the data block, follow these steps:
 
 1. Open a global data block or an instance data block.
 2. Enter the required values in the "Start value" column. The start values must correspond to the indicated data type.
-3. Click the "Load start values as actual values > Only setpoints" button.
+3. Click the "Load start values as actual values &gt; Only setpoints" button.
 
 ##### Result
 
@@ -1738,7 +1738,7 @@ To apply all setpoints as start values in a data block, follow these steps:
 3. In the toolbar, click "Snapshot".
 
    The actual values are applied in the "Snapshot" column.
-4. In the toolbar, click "Copy snapshots to start values > Only setpoints".
+4. In the toolbar, click "Copy snapshots to start values &gt; Only setpoints".
 
 The values from the "Snapshot" column are applied to the "Start values" column.
 
@@ -1750,7 +1750,7 @@ To apply the monitored values of multiple data blocks in the project tree, follo
    The actual values of all selected blocks are applied in the "Snapshot" column.
 
    An alarm is shown in the Inspector window after the operation is complete.
-3. Next, select the command "Copy snapshot values as start values > Only setpoints" in the shortcut menu.
+3. Next, select the command "Copy snapshot values as start values &gt; Only setpoints" in the shortcut menu.
 
 The values from the "Snapshot" column are applied to the "Start value" column.
 

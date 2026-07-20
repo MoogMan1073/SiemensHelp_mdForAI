@@ -47,7 +47,7 @@ The configuration of supervisions is completely integrated in STEP 7 Professiona
 
 The table below shows you how many licenses you need:
 
-| Number of supervisions in use | <= 25 | <= 250 | <= 500 | <= 750 | <= 1000 | > 1000 |
+| Number of supervisions in use | &lt;= 25 | &lt;= 250 | &lt;= 500 | &lt;= 750 | &lt;= 1000 | &gt; 1000 |
 | --- | --- | --- | --- | --- | --- | --- |
 | Number of licenses required | None | 1 | 2 | 3 | 4 | 5 |
 
@@ -68,7 +68,7 @@ There are two places in the TIA Portal where you can display the number of super
 
   Additional information is available here: [Setting ProDiag licenses](#setting-prodiag-licenses-s7-1500)
 
-For additional information on general allocation of licenses is available at: "Installation > System requirements for installation > Notes on licenses".
+For additional information on general allocation of licenses is available at: "Installation &gt; System requirements for installation &gt; Notes on licenses".
 
 ### Setting ProDiag licenses (S7-1500)
 
@@ -107,7 +107,7 @@ The table below shows the minimum software and hardware requirements that have t
 | Software/Hardware | Requirement |
 | --- | --- |
 | TIA Portal | STEP 7 Professional |
-| CPU of the S7-1500 series | >= Firmware V2.0 |
+| CPU of the S7-1500 series | &gt;= Firmware V2.0 |
 
 ## Technical specifications for ProDiag (S7-1500)
 
@@ -179,7 +179,7 @@ If no ProDiag supervisions are available, this may be for various reasons:
 - The selected parameter or the tag are not of the data type BOOL.
 - The selected block is not a function block.
 - The CPU does not support ProDiag. Use an S7-1500.
-- The CPU version is <2.0.
+- The CPU version is &lt;2.0.
 
 > **Note**
 >
@@ -217,7 +217,7 @@ The example below provides you with a brief overview of how to create a supervis
    ![Description](images/87464405131_DV_resource.Stream@PNG-en-US.png)
 
    ![Description](images/87464405131_DV_resource.Stream@PNG-en-US.png)
-5. In the Inspector window define the properties of the operand supervision in "Properties > Supervisions":
+5. In the Inspector window define the properties of the operand supervision in "Properties &gt; Supervisions":
 
    ![Description](images/89883305995_DV_resource.Stream@PNG-en-US.png)
 
@@ -311,7 +311,7 @@ The triggering of an operand supervision sets the error flag in the assigned Pro
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> For additional information, refer to the information system of the TIA Portal. "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> For additional information, refer to the information system of the TIA Portal. "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 ##### Configuration
 
@@ -352,7 +352,7 @@ The triggering of an interlock supervision sets the error flag in the assigned P
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> For additional information, refer to the information system of the TIA Portal. "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> For additional information, refer to the information system of the TIA Portal. "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 ##### Configuration
 
@@ -393,7 +393,7 @@ The triggering of an action supervision sets the error flag in the assigned ProD
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> For additional information, refer to the information system of the TIA Portal. "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> For additional information, refer to the information system of the TIA Portal. "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 ##### Configuration
 
@@ -434,7 +434,7 @@ The triggering of a reaction supervision sets the error flag in the assigned Pro
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> For additional information, refer to the information system of the TIA Portal. "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> For additional information, refer to the information system of the TIA Portal. "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 ##### Configuration
 
@@ -475,7 +475,7 @@ The triggering of a position supervision sets the error flag in the assigned Pro
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> For additional information, refer to the information system of the TIA Portal. "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> For additional information, refer to the information system of the TIA Portal. "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 ##### Configuration
 
@@ -547,7 +547,7 @@ The triggering of an error message sets the error flag in the assigned ProDiag f
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> For additional information, refer to the information system of the TIA Portal. "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> For additional information, refer to the information system of the TIA Portal. "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 ##### Configuration
 
@@ -667,7 +667,7 @@ You have created two supervisions for the "Conv_Actor_Forward" operand and have 
 - Supervision_ID_1 (Default_SupervisionFB)
 - Supervision_ID_2 (Default_SupervisionFB)
 
-You can implement OR operations in this way. For example, you can define "Automatic mode" as a condition for <Supervision_ID_1> and "Manual mode" as a condition for <Supervision_ID_2>.
+You can implement OR operations in this way. For example, you can define "Automatic mode" as a condition for &lt;Supervision_ID_1&gt; and "Manual mode" as a condition for &lt;Supervision_ID_2&gt;.
 
 > **Note**
 >
@@ -1265,7 +1265,7 @@ To create a ProDiag function block using the "Add new block" dialog, follow thes
    The "Add new block" dialog opens.
 2. Click the "Function block" button.
 3. Enter a name for the new ProDiag function block.
-4. Select in the "Language > PRODIAG (incl. IDB)" section.
+4. Select in the "Language &gt; PRODIAG (incl. IDB)" section.
 5. To enter additional properties for the new ProDiag function block, click "Additional information".
 
    An area with additional entry fields is displayed.
@@ -1357,7 +1357,7 @@ The ProDiag function block has version 2.0.
 To use a central time stamp, follow these steps:
 
 1. Ensure that the block has version 2.0 in the block properties of the ProDiag function block.
-2. In the project tree under "Common data" > "Supervision settings" > "General", open the "Central time stamp" area.
+2. In the project tree under "Common data" &gt; "Supervision settings" &gt; "General", open the "Central time stamp" area.
 3. Define a time stamp tag by entering a free text into the text field.
 
    ![Procedure](images/102602503563_DV_resource.Stream@PNG-en-US.png)
@@ -1434,24 +1434,24 @@ The following elements are available in the "Static" section:
 | --- | --- | --- | --- |
 | State |  | SV_FB_State | System-internal, know-how-protected PLC data type |
 |  | Total_Number | UINT | Total number of all supervisions to which this ProDiag function block was assigned. |
-| All | BOOL | Group error bit for all contained types of supervision, except text message:  - TRUE => At least one supervision has been triggered in the current program cycle. - FALSE => No supervision has been triggered.   Accessible from HMI and visible in HMI. |  |
-| O (Operand) | BOOL | Group error bit for all operand supervisions:  - TRUE => At least one operand supervision has been triggered in the current program cycle. - FALSE => No operand supervision has been triggered. |  |
-| I (Interlock) | BOOL | Group error bit for all interlock supervisions:  - TRUE => At least one interlock supervision has been triggered in the current program cycle. - FALSE => No interlock supervision has been triggered. |  |
-| R (Reaction) | BOOL | Group error bit for all reaction supervisions:  - TRUE => At least one reaction supervision has been triggered in the current program cycle. - FALSE => No reaction supervision has been triggered. |  |
-| A (Action) | BOOL | Group error bit for all action supervisions:  - TRUE => At least one action supervision has been triggered in the current program cycle. - FALSE => No action supervision has been triggered. |  |
-| P (Position) | BOOL | Group error bit for all position supervisions:  - TRUE => At least one position supervision has been triggered in the current program cycle. - FALSE => No position supervision has been triggered. |  |
-| Merr (Message error) | BOOL | Group error bit for all error messages:  - TRUE => At least one error message has been triggered in the current program cycle. - FALSE => No error message has been triggered. |  |
-| Mtxt (Message text) | BOOL | Group error bit for all text messages:  - TRUE => At least one text message was triggered in the current program cycle. - FALSE => No text message was triggered. |  |
-| SV_Types (Types of supervision) | BYTE | Byte for all group error bits of the types of supervision  A type of supervision is assigned to each individual bit. As a result, you can use this byte, for example, in the "ProDiag overview" object on the HMI device to create a display that shows at first glance when a supervision of a certain type of supervision has been triggered.  - Bit 1 => Operand - Bit 2 => Interlock - etc.   Accessible from HMI and visible in HMI. |  |
-| C1 (Category) | BOOL | First category (The first category = Error by default. This cannot be changed.)  - TRUE => At least one supervision alarm of category C1 has been triggered in the current program cycle. - FALSE => No error has occurred. |  |
-| C2 (Category) | BOOL | Second category (The second category = Warning by default. You can change the setting at any time.)  - TRUE => At least one supervision alarm of category C2 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C3 (Category) | BOOL | Third category (The third category = Info by default. You can change the setting at any time.)  - TRUE => At least one supervision alarm of category C3 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C4 (Category) | BOOL | Fourth category  - TRUE => At least one supervision alarm of category C4 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C5 (Category) | BOOL | Fifth category  - TRUE => At least one supervision alarm of category C5 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C6 (Category) | BOOL | Sixth category  - TRUE => At least one supervision alarm of category C6 has been triggered in the current program cycle. - FALSE =>There are no faults. |  |
-| C7 (Category) | BOOL | Seventh category  - TRUE => At least one supervision alarm of category C7 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C8 (Category) | BOOL | Eighth category  - TRUE => At least one supervision alarm of category C8 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| Categories | BYTE | Group error byte for all categories  A category is assigned to each individual bit. As a result, you can use this byte, for example, in the ProDiag overview object on the HMI device to create a display that shows at first glance when a supervision of a certain category has been triggered.  - Bit 1 => Category 1 (C1) - Bit 2 => Category 2 (C2) - etc.   Accessible from HMI and visible in HMI. |  |
+| All | BOOL | Group error bit for all contained types of supervision, except text message:  - TRUE =&gt; At least one supervision has been triggered in the current program cycle. - FALSE =&gt; No supervision has been triggered.   Accessible from HMI and visible in HMI. |  |
+| O (Operand) | BOOL | Group error bit for all operand supervisions:  - TRUE =&gt; At least one operand supervision has been triggered in the current program cycle. - FALSE =&gt; No operand supervision has been triggered. |  |
+| I (Interlock) | BOOL | Group error bit for all interlock supervisions:  - TRUE =&gt; At least one interlock supervision has been triggered in the current program cycle. - FALSE =&gt; No interlock supervision has been triggered. |  |
+| R (Reaction) | BOOL | Group error bit for all reaction supervisions:  - TRUE =&gt; At least one reaction supervision has been triggered in the current program cycle. - FALSE =&gt; No reaction supervision has been triggered. |  |
+| A (Action) | BOOL | Group error bit for all action supervisions:  - TRUE =&gt; At least one action supervision has been triggered in the current program cycle. - FALSE =&gt; No action supervision has been triggered. |  |
+| P (Position) | BOOL | Group error bit for all position supervisions:  - TRUE =&gt; At least one position supervision has been triggered in the current program cycle. - FALSE =&gt; No position supervision has been triggered. |  |
+| Merr (Message error) | BOOL | Group error bit for all error messages:  - TRUE =&gt; At least one error message has been triggered in the current program cycle. - FALSE =&gt; No error message has been triggered. |  |
+| Mtxt (Message text) | BOOL | Group error bit for all text messages:  - TRUE =&gt; At least one text message was triggered in the current program cycle. - FALSE =&gt; No text message was triggered. |  |
+| SV_Types (Types of supervision) | BYTE | Byte for all group error bits of the types of supervision  A type of supervision is assigned to each individual bit. As a result, you can use this byte, for example, in the "ProDiag overview" object on the HMI device to create a display that shows at first glance when a supervision of a certain type of supervision has been triggered.  - Bit 1 =&gt; Operand - Bit 2 =&gt; Interlock - etc.   Accessible from HMI and visible in HMI. |  |
+| C1 (Category) | BOOL | First category (The first category = Error by default. This cannot be changed.)  - TRUE =&gt; At least one supervision alarm of category C1 has been triggered in the current program cycle. - FALSE =&gt; No error has occurred. |  |
+| C2 (Category) | BOOL | Second category (The second category = Warning by default. You can change the setting at any time.)  - TRUE =&gt; At least one supervision alarm of category C2 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C3 (Category) | BOOL | Third category (The third category = Info by default. You can change the setting at any time.)  - TRUE =&gt; At least one supervision alarm of category C3 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C4 (Category) | BOOL | Fourth category  - TRUE =&gt; At least one supervision alarm of category C4 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C5 (Category) | BOOL | Fifth category  - TRUE =&gt; At least one supervision alarm of category C5 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C6 (Category) | BOOL | Sixth category  - TRUE =&gt; At least one supervision alarm of category C6 has been triggered in the current program cycle. - FALSE =&gt;There are no faults. |  |
+| C7 (Category) | BOOL | Seventh category  - TRUE =&gt; At least one supervision alarm of category C7 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C8 (Category) | BOOL | Eighth category  - TRUE =&gt; At least one supervision alarm of category C8 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| Categories | BYTE | Group error byte for all categories  A category is assigned to each individual bit. As a result, you can use this byte, for example, in the ProDiag overview object on the HMI device to create a display that shows at first glance when a supervision of a certain category has been triggered.  - Bit 1 =&gt; Category 1 (C1) - Bit 2 =&gt; Category 2 (C2) - etc.   Accessible from HMI and visible in HMI. |  |
 | Sub_Cat_1 (Subcategory 1) | DWORD | Group error bits for subcategories 1 (Bit 1 to 16) |  |
 | Sub_Cat_2 (Subcategory 2) | DWORD | Group error bits for subcategories 2 (Bit 1 to 16) |  |
 | Reserved | BYTE | Reserve byte |  |
@@ -1460,7 +1460,7 @@ The following elements are available in the "Static" section:
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> For additional information, refer to the information system of the TIA Portal. "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> For additional information, refer to the information system of the TIA Portal. "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 #### Optional status tag as soon as a supervision has been created
 
@@ -1516,24 +1516,24 @@ The following elements are available in the "Static" section:
 |  | Crit_On | BOOL | Indicates whether the initial value acquisition is enabled. |
 | State |  | SV_FB_State_V2 | System-internal, know-how-protected PLC data type |
 |  | Total_Number | UINT | Total number of all supervisions to which this ProDiag function block was assigned. |
-| All | BOOL | Group error bit for all contained types of supervision, except text message:  - TRUE => At least one supervision has been triggered in the current program cycle. - FALSE => No supervision has been triggered.   Accessible from HMI and visible in HMI. |  |
-| O (Operand) | BOOL | Group error bit for all operand supervisions:  - TRUE => At least one operand supervision has been triggered in the current program cycle. - FALSE => No operand supervision has been triggered. |  |
-| I (Interlock) | BOOL | Group error bit for all interlock supervisions:  - TRUE => At least one interlock supervision has been triggered in the current program cycle. - FALSE => No interlock supervision has been triggered. |  |
-| R (Reaction) | BOOL | Group error bit for all reaction supervisions:  - TRUE => At least one reaction supervision has been triggered in the current program cycle. - FALSE => No reaction supervision has been triggered. |  |
-| A (Action) | BOOL | Group error bit for all action supervisions:  - TRUE => At least one action supervision has been triggered in the current program cycle. - FALSE => No action supervision has been triggered. |  |
-| P (Position) | BOOL | Group error bit for all position supervisions:  - TRUE => At least one position supervision has been triggered in the current program cycle. - FALSE => No position supervision has been triggered. |  |
-| Merr (Message error) | BOOL | Group error bit for all error messages:  - TRUE => At least one error message has been triggered in the current program cycle. - FALSE => No error message has been triggered. |  |
-| Mtxt (Message text) | BOOL | Group error bit for all text messages:  - TRUE => At least one text message was triggered in the current program cycle. - FALSE => No text message was triggered. |  |
-| SV_Types (Types of supervision) | BYTE | Byte for all group error bits of the types of supervision  A type of supervision is assigned to each individual bit. As a result, you can use this byte, for example, in the "ProDiag overview" object on the HMI device to create a display that shows at first glance when a supervision of a certain type of supervision has been triggered.  - Bit 1 => Operand - Bit 2 => Interlock - etc.   Accessible from HMI and visible in HMI. |  |
-| C1 (Category) | BOOL | First category (The first category = Error by default. This cannot be changed.)  - TRUE => At least one supervision alarm of category C1 has been triggered in the current program cycle. - FALSE => No error has occurred. |  |
-| C2 (Category) | BOOL | Second category (The second category = Warning by default. You can change the setting at any time.)  - TRUE => At least one supervision alarm of category C2 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C3 (Category) | BOOL | Third category (The third category = Info by default. You can change the setting at any time.)  - TRUE => At least one supervision alarm of category C3 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C4 (Category) | BOOL | Fourth category  - TRUE => At least one supervision alarm of category C4 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C5 (Category) | BOOL | Fifth category  - TRUE => At least one supervision alarm of category C5 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C6 (Category) | BOOL | Sixth category  - TRUE => At least one supervision alarm of category C6 has been triggered in the current program cycle. - FALSE =>There are no faults. |  |
-| C7 (Category) | BOOL | Seventh category  - TRUE => At least one supervision alarm of category C7 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| C8 (Category) | BOOL | Eighth category  - TRUE => At least one supervision alarm of category C8 has been triggered in the current program cycle. - FALSE => There are no faults. |  |
-| Categories | BYTE | Group error byte for all categories  A category is assigned to each individual bit. As a result, you can use this byte, for example, in the ProDiag overview object on the HMI device to create a display that shows at first glance when a supervision of a certain category has been triggered.  - Bit 1 => Category 1 (C1) - Bit 2 => Category 2 (C2) - etc.   Accessible from HMI and visible in HMI. |  |
+| All | BOOL | Group error bit for all contained types of supervision, except text message:  - TRUE =&gt; At least one supervision has been triggered in the current program cycle. - FALSE =&gt; No supervision has been triggered.   Accessible from HMI and visible in HMI. |  |
+| O (Operand) | BOOL | Group error bit for all operand supervisions:  - TRUE =&gt; At least one operand supervision has been triggered in the current program cycle. - FALSE =&gt; No operand supervision has been triggered. |  |
+| I (Interlock) | BOOL | Group error bit for all interlock supervisions:  - TRUE =&gt; At least one interlock supervision has been triggered in the current program cycle. - FALSE =&gt; No interlock supervision has been triggered. |  |
+| R (Reaction) | BOOL | Group error bit for all reaction supervisions:  - TRUE =&gt; At least one reaction supervision has been triggered in the current program cycle. - FALSE =&gt; No reaction supervision has been triggered. |  |
+| A (Action) | BOOL | Group error bit for all action supervisions:  - TRUE =&gt; At least one action supervision has been triggered in the current program cycle. - FALSE =&gt; No action supervision has been triggered. |  |
+| P (Position) | BOOL | Group error bit for all position supervisions:  - TRUE =&gt; At least one position supervision has been triggered in the current program cycle. - FALSE =&gt; No position supervision has been triggered. |  |
+| Merr (Message error) | BOOL | Group error bit for all error messages:  - TRUE =&gt; At least one error message has been triggered in the current program cycle. - FALSE =&gt; No error message has been triggered. |  |
+| Mtxt (Message text) | BOOL | Group error bit for all text messages:  - TRUE =&gt; At least one text message was triggered in the current program cycle. - FALSE =&gt; No text message was triggered. |  |
+| SV_Types (Types of supervision) | BYTE | Byte for all group error bits of the types of supervision  A type of supervision is assigned to each individual bit. As a result, you can use this byte, for example, in the "ProDiag overview" object on the HMI device to create a display that shows at first glance when a supervision of a certain type of supervision has been triggered.  - Bit 1 =&gt; Operand - Bit 2 =&gt; Interlock - etc.   Accessible from HMI and visible in HMI. |  |
+| C1 (Category) | BOOL | First category (The first category = Error by default. This cannot be changed.)  - TRUE =&gt; At least one supervision alarm of category C1 has been triggered in the current program cycle. - FALSE =&gt; No error has occurred. |  |
+| C2 (Category) | BOOL | Second category (The second category = Warning by default. You can change the setting at any time.)  - TRUE =&gt; At least one supervision alarm of category C2 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C3 (Category) | BOOL | Third category (The third category = Info by default. You can change the setting at any time.)  - TRUE =&gt; At least one supervision alarm of category C3 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C4 (Category) | BOOL | Fourth category  - TRUE =&gt; At least one supervision alarm of category C4 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C5 (Category) | BOOL | Fifth category  - TRUE =&gt; At least one supervision alarm of category C5 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C6 (Category) | BOOL | Sixth category  - TRUE =&gt; At least one supervision alarm of category C6 has been triggered in the current program cycle. - FALSE =&gt;There are no faults. |  |
+| C7 (Category) | BOOL | Seventh category  - TRUE =&gt; At least one supervision alarm of category C7 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| C8 (Category) | BOOL | Eighth category  - TRUE =&gt; At least one supervision alarm of category C8 has been triggered in the current program cycle. - FALSE =&gt; There are no faults. |  |
+| Categories | BYTE | Group error byte for all categories  A category is assigned to each individual bit. As a result, you can use this byte, for example, in the ProDiag overview object on the HMI device to create a display that shows at first glance when a supervision of a certain category has been triggered.  - Bit 1 =&gt; Category 1 (C1) - Bit 2 =&gt; Category 2 (C2) - etc.   Accessible from HMI and visible in HMI. |  |
 | Sub_Cat_1 (Subcategory 1) | DWORD | Group error bits for subcategories 1 (Bit 1 to 16) |  |
 | Sub_Cat_2 (Subcategory 2) | DWORD | Group error bits for subcategories 2 (Bit 1 to 16) |  |
 | Reserved | BYTE | Reserve byte |  |
@@ -1542,7 +1542,7 @@ The following elements are available in the "Static" section:
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> For additional information, refer to the information system of the TIA Portal. "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> For additional information, refer to the information system of the TIA Portal. "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 #### Optional status tag as soon as a supervision has been created
 
@@ -1779,7 +1779,7 @@ To read out the number of assigned ProDiag supervisions, follow these steps:
 1. Open the properties of the ProDiag function block with a right-click on the ProDiag FB and selecting "Properties ..." in the shortcut menu.
 
    The properties dialog box of the ProDiag function block opens.
-2. Click the "General > Information" tab.
+2. Click the "General &gt; Information" tab.
 
 #### Result
 
@@ -1861,7 +1861,7 @@ The figure below shows the "Categories" section in the ProDiag supervision setti
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> More information is available here in the information system of the TIA Portal: "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> More information is available here in the information system of the TIA Portal: "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 ###### Alarm class
 
@@ -1932,7 +1932,7 @@ To display the name of a category in all project languages, follow these steps:
    If you want to display the translations of multiple categories simultaneously, select the corresponding lines.
 4. Open the "Properties" tab in the Inspector window.
 
-   If the names of the categories appear only in the current user interface language, either you have not yet selected any project languages or translations are not yet available. You can enter the translations directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts".
+   If the names of the categories appear only in the current user interface language, either you have not yet selected any project languages or translations are not yet available. You can enter the translations directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts".
 
 You can find additional information on translation of texts under [Project text basics](Editing%20project%20data.md#project-text-basics).​
 
@@ -1968,7 +1968,7 @@ The figure below shows the "Subcategories 1" section in the ProDiag supervision 
 >
 > **Additional information on the HMI object "ProDiag overview"**
 >
-> More information is available here in the information system of the TIA Portal: "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag > Visualizing supervisions > Configuring the ProDiag overview"
+> More information is available here in the information system of the TIA Portal: "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag &gt; Visualizing supervisions &gt; Configuring the ProDiag overview"
 
 ##### Defining subcategories (S7-1500)
 
@@ -2024,7 +2024,7 @@ To display the name of a subcategory in all project languages, follow these step
    If you want to display the translations of multiple subcategories simultaneously, select the corresponding lines.
 4. Open the "Properties" tab in the Inspector window.
 
-   If the names of the subcategories appear only in the current user interface language, either you have not yet selected any project languages or translations are not yet available. You can enter the translations directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts".
+   If the names of the subcategories appear only in the current user interface language, either you have not yet selected any project languages or translations are not yet available. You can enter the translations directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts".
 
 You can find additional information on translation of texts under [Project text basics](Editing%20project%20data.md#project-text-basics).​
 
@@ -2057,7 +2057,7 @@ When you create a GRAPH function block or a supervision, all options, except for
 
 ##### Displaying translations of the type of supervision names (S7-1500)
 
-You can display the names of all types of supervision in all project languages that have been activated in the setting options for the project languages and for which translations already exist. You can find additional information on activating project languages under "Editing project data > Working with multi-language projects > Select project languages".
+You can display the names of all types of supervision in all project languages that have been activated in the setting options for the project languages and for which translations already exist. You can find additional information on activating project languages under "Editing project data &gt; Working with multi-language projects &gt; Select project languages".
 
 ###### Requirement
 
@@ -2076,9 +2076,9 @@ To display the name of a type of supervision in all project languages, follow th
    If you want to display the translations of multiple types of supervision simultaneously, select the corresponding lines.
 4. Open the "Properties" tab in the Inspector window.
 
-   If you have not yet translated the names of the types of supervision in all selected project languages, you will see the texts in the current user interface language by default. If the translations are not yet available, you can enter them directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts".
+   If you have not yet translated the names of the types of supervision in all selected project languages, you will see the texts in the current user interface language by default. If the translations are not yet available, you can enter them directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts".
 
-You can find additional information on translating texts under "Editing project data > Working with multi-language projects > Project text basics".​
+You can find additional information on translating texts under "Editing project data &gt; Working with multi-language projects &gt; Project text basics".​
 
 ###### Result
 
@@ -2121,7 +2121,7 @@ A preset text field structure which you can change at any time is provided for t
 
 From the "Supported alarm text fields" area, you can drag or copy available alarm text fields into one of the text frames. Each alarm text field can be used only once within a text frame. The alarm text fields that are available depend on the area you clicked on below "Alarm texts" in the tree. You can change the order of the alarm text fields within a text frame using drag-and-drop.
 
-When you use the "<Specific text field>" alarm text box, you can have a specific text displayed for this supervision in the supervision alarm. For the alarm text field to display the requested information, you must configure specific information for this supervision in the settings of the individual supervisions in the lower-level "Specific text field" tab.
+When you use the "&lt;Specific text field&gt;" alarm text box, you can have a specific text displayed for this supervision in the supervision alarm. For the alarm text field to display the requested information, you must configure specific information for this supervision in the settings of the individual supervisions in the lower-level "Specific text field" tab.
 
 ---
 
@@ -2143,18 +2143,18 @@ The table below shows you all components that can be included in a GRAPH supervi
 
 | Components of a GRAPH supervision alarm | Description | Specified by default | Translation-related |
 | --- | --- | --- | --- |
-| <Category> | Name of the category | x | Yes |
-| <Subcategory 1> | Name of the subcategory 1 | - |  |
-| <Subcategory 2> | Name of the subcategory 2 | - |  |
-| <Type of supervision> | Name of the type of supervision | x |  |
-| <PLC name> | Name of the PLC | x | No |
-| <FB name> | Name of the function block | x |  |
-| <FB number> | Number of the function block | - |  |
-| <Step name> | Step name | x |  |
-| <Step number> | Step number | x |  |
-| <Instance DB name> | Name of the instance data block | - |  |
-| <Instance DB number> | Number of the instance data block | - |  |
-| <Step specific field> | Specific interlock or supervision information that you have defined at each step. | x |  |
+| &lt;Category&gt; | Name of the category | x | Yes |
+| &lt;Subcategory 1&gt; | Name of the subcategory 1 | - |  |
+| &lt;Subcategory 2&gt; | Name of the subcategory 2 | - |  |
+| &lt;Type of supervision&gt; | Name of the type of supervision | x |  |
+| &lt;PLC name&gt; | Name of the PLC | x | No |
+| &lt;FB name&gt; | Name of the function block | x |  |
+| &lt;FB number&gt; | Number of the function block | - |  |
+| &lt;Step name&gt; | Step name | x |  |
+| &lt;Step number&gt; | Step number | x |  |
+| &lt;Instance DB name&gt; | Name of the instance data block | - |  |
+| &lt;Instance DB number&gt; | Number of the instance data block | - |  |
+| &lt;Step specific field&gt; | Specific interlock or supervision information that you have defined at each step. | x |  |
 
 You can change the number of supervision alarms at any time by adding new components or removing those already included. All components can be used optionally.
 
@@ -2178,19 +2178,19 @@ The table below shows you all components that can be included in a global superv
 
 | Components of a global supervision alarm | Description | Specified by default | Translation-related |
 | --- | --- | --- | --- |
-| <Category> | Name of the category | x | Yes |
-| <Subcategory 1> | Name of the subcategory 1 | - |  |
-| <Subcategory 2> | Name of the subcategory 2 | - | No |
-| <Type of supervision> | Name of the type of supervision | x | Yes |
-| <PLC name> | Name of the PLC | - | No |
-| <ProDiag FB name> | Name of the ProDiag function block | x |  |
-| <ProDiag FB number> | Number of the ProDiag function block | - |  |
-| <Supervision ID> | ID of the supervision | x |  |
-| <Tag address> | - Tag address from the tag table - An address is not output for Boolean elements from a data block. | x |  |
-| <Tag name> | Name of the supervised tag  If this is a structure element (PLC data type, ARRAY or STRUCT), all higher-level structure levels are displayed, e.g. "Motors".Motor_1.Element_BOOL | x |  |
-| <Tag comment> | - Comment of the tag from the tag table - Comment of the element from the data block | x | Yes |
-| <Tag comment path> | Comments of the tags of all levels of a structured tag, separated by dots | - |  |
-| <Specific text field> | Specific information for a supervision (text with 3 tags)  - <Associated value SD_5> - <Associated value SD_6> - <Associated value SD_7> | - |  |
+| &lt;Category&gt; | Name of the category | x | Yes |
+| &lt;Subcategory 1&gt; | Name of the subcategory 1 | - |  |
+| &lt;Subcategory 2&gt; | Name of the subcategory 2 | - | No |
+| &lt;Type of supervision&gt; | Name of the type of supervision | x | Yes |
+| &lt;PLC name&gt; | Name of the PLC | - | No |
+| &lt;ProDiag FB name&gt; | Name of the ProDiag function block | x |  |
+| &lt;ProDiag FB number&gt; | Number of the ProDiag function block | - |  |
+| &lt;Supervision ID&gt; | ID of the supervision | x |  |
+| &lt;Tag address&gt; | - Tag address from the tag table - An address is not output for Boolean elements from a data block. | x |  |
+| &lt;Tag name&gt; | Name of the supervised tag  If this is a structure element (PLC data type, ARRAY or STRUCT), all higher-level structure levels are displayed, e.g. "Motors".Motor_1.Element_BOOL | x |  |
+| &lt;Tag comment&gt; | - Comment of the tag from the tag table - Comment of the element from the data block | x | Yes |
+| &lt;Tag comment path&gt; | Comments of the tags of all levels of a structured tag, separated by dots | - |  |
+| &lt;Specific text field&gt; | Specific information for a supervision (text with 3 tags)  - &lt;Associated value SD_5&gt; - &lt;Associated value SD_6&gt; - &lt;Associated value SD_7&gt; | - |  |
 
 You can change the number of supervision alarms at any time by adding new components or removing those already included. All components can be used optionally.
 
@@ -2216,26 +2216,26 @@ The table below shows you all components that can be included in a local supervi
 
 | Components of a local supervision alarm | Description | Specified by default | Translation-related |
 | --- | --- | --- | --- |
-| <Category> | Name of the category | x | Yes |
-| <Subcategory 1> | Name of the subcategory 1 | - |  |
-| <Subcategory 2> | Name of the subcategory 2 | - | No |
-| <Type of supervision> | Name of the type of supervision | x | Yes |
-| <PLC name> | Name of the CPU | - | No |
-| <ProDiag FB name> | Name of the ProDiag function block | x |  |
-| <ProDiag FB number> | Number of the ProDiag function block | - |  |
-| <Supervision ID> | ID of the supervision | x |  |
-| <Type name> | Name of the function block or the PLC data type | - |  |
-| <Instance path> | Name and path of the instance data block | - |  |
-| <Instance name> | Name of the instance data block (for example Block_9_DB) | x |  |
-| <Instance number> | Number of the instance data block | - |  |
-| <Instance comment> | - At a single instance:   The title of the instance DB is output. - At a multiple instance:   The comment of the multiple instance from the block interface is output. | - | Yes |
-| <Parameter name> | Name of the supervised parameter | x | No |
-| <Parameter comment> | Parameter comment | - | Yes |
-| <Tag address> | - Tag address from the tag table - An address is not output for Boolean elements from a data block. | x | No |
-| <Tag name> | In this case, the parameter (<Parameter name>) is supervised and the tag (<Tag name>) is the preceding tag, if one exists. | x |  |
-| <Tag comment> | - Comment of the tag from the tag table - Comment of the element from the data block | x | Yes |
-| <Tag comment path> | Comments of the tags of all levels of a structured tag, separated by dots | - |  |
-| <Specific text field> | Specific information for a supervision (text with 3 tags)  - <Associated value SD_5> - <Associated value SD_6> - <Associated value SD_7> | - |  |
+| &lt;Category&gt; | Name of the category | x | Yes |
+| &lt;Subcategory 1&gt; | Name of the subcategory 1 | - |  |
+| &lt;Subcategory 2&gt; | Name of the subcategory 2 | - | No |
+| &lt;Type of supervision&gt; | Name of the type of supervision | x | Yes |
+| &lt;PLC name&gt; | Name of the CPU | - | No |
+| &lt;ProDiag FB name&gt; | Name of the ProDiag function block | x |  |
+| &lt;ProDiag FB number&gt; | Number of the ProDiag function block | - |  |
+| &lt;Supervision ID&gt; | ID of the supervision | x |  |
+| &lt;Type name&gt; | Name of the function block or the PLC data type | - |  |
+| &lt;Instance path&gt; | Name and path of the instance data block | - |  |
+| &lt;Instance name&gt; | Name of the instance data block (for example Block_9_DB) | x |  |
+| &lt;Instance number&gt; | Number of the instance data block | - |  |
+| &lt;Instance comment&gt; | - At a single instance:   The title of the instance DB is output. - At a multiple instance:   The comment of the multiple instance from the block interface is output. | - | Yes |
+| &lt;Parameter name&gt; | Name of the supervised parameter | x | No |
+| &lt;Parameter comment&gt; | Parameter comment | - | Yes |
+| &lt;Tag address&gt; | - Tag address from the tag table - An address is not output for Boolean elements from a data block. | x | No |
+| &lt;Tag name&gt; | In this case, the parameter (&lt;Parameter name&gt;) is supervised and the tag (&lt;Tag name&gt;) is the preceding tag, if one exists. | x |  |
+| &lt;Tag comment&gt; | - Comment of the tag from the tag table - Comment of the element from the data block | x | Yes |
+| &lt;Tag comment path&gt; | Comments of the tags of all levels of a structured tag, separated by dots | - |  |
+| &lt;Specific text field&gt; | Specific information for a supervision (text with 3 tags)  - &lt;Associated value SD_5&gt; - &lt;Associated value SD_6&gt; - &lt;Associated value SD_7&gt; | - |  |
 
 You can change the number of supervision alarms at any time by adding new components or removing those already included. All components can be used optionally.
 
@@ -2258,7 +2258,7 @@ To create an alarm text, follow these steps:
 1. Double-click the "Supervision settings" entry in the project tree.
 
    The ProDiag supervision settings are opened.
-2. In the "Alarm texts" tab, select the area for which you want to create an alarm text, e.g. Basic supervisions > Tags.
+2. In the "Alarm texts" tab, select the area for which you want to create an alarm text, e.g. Basic supervisions &gt; Tags.
 3. Use drag-and-drop to move the desired alarm text fields from the "Supported alarm text fields" field to the "Alarm text" text frame.
 
    You can change the order of the individual text fields at any time.
@@ -2370,7 +2370,7 @@ All ProDiag supervision settings entered in the .dat file are transferred to the
 >
 > **Importing of FB or PLC data type names**
 >
-> Although only the "Type name" component is exported when exporting from TIA Portal Version 17, you can still specify the "FB name" component when importing the supervision settings. The two components "FB name" and "Type name" are treated in the same way during import. This ensures compatibility with TIA Portal versions <17.
+> Although only the "Type name" component is exported when exporting from TIA Portal Version 17, you can still specify the "FB name" component when importing the supervision settings. The two components "FB name" and "Type name" are treated in the same way during import. This ensures compatibility with TIA Portal versions &lt;17.
 
 ## Creating and instantiating ProDiag supervisions (S7-1500)
 
@@ -2394,7 +2394,7 @@ This section contains information on the following topics:
 
 In addition to global supervisions, you can also create supervisions at the FB and at PLC data types (local supervisions) in a tag table, for example. You can create more than one supervision for each operand.
 
-For each supervision you create, a new entry is created in the "Supervisions" tab of the "Properties" Inspector window. You can define the settings of each individual supervision in the "Supervisions" tab. If you create multiple supervisions for an operand, these are then numbered in ascending order by adding the suffix "ID_<consecutive supervision ID> (assigned ProDiag FB)" (only applies to global and instantiated supervisions).
+For each supervision you create, a new entry is created in the "Supervisions" tab of the "Properties" Inspector window. You can define the settings of each individual supervision in the "Supervisions" tab. If you create multiple supervisions for an operand, these are then numbered in ascending order by adding the suffix "ID_&lt;consecutive supervision ID&gt; (assigned ProDiag FB)" (only applies to global and instantiated supervisions).
 
 > **Note**
 >
@@ -2631,7 +2631,7 @@ Proceed as follows to create global supervision:
 
 1. Select one or more tags with the right mouse button and select "Add new supervision" from the shortcut menu. The shortcut menu entry is only available when all selected tags (Boolean tags) can be supervised.
 
-   The "Supervisions" tab opens in the "Properties" Inspector window and a supervision for the tag is created. The supervisions are numbered in ascending order (Supervision_<consecutive supervision ID>(assigned ProDiag FB)):
+   The "Supervisions" tab opens in the "Properties" Inspector window and a supervision for the tag is created. The supervisions are numbered in ascending order (Supervision_&lt;consecutive supervision ID&gt;(assigned ProDiag FB)):
 
    ![Procedure for creating global supervisions](images/139773775755_DV_resource.Stream@PNG-en-US.png)
 
@@ -2657,7 +2657,7 @@ Or:
 1. Click the desired tag.
 2. Double-click the entry "Add new supervision" in the "Supervisions" in the "Properties" Inspector window.
 
-   A new supervision is created. The supervisions are numbered in ascending order (Supervision_ID_<consecutive supervision ID>(assigned ProDiag FB)).
+   A new supervision is created. The supervisions are numbered in ascending order (Supervision_ID_&lt;consecutive supervision ID&gt;(assigned ProDiag FB)).
 3. From this point, the procedure described above from item 2 applies.
 
 #### Result
@@ -2708,7 +2708,7 @@ To create a supervision in the block interface of a function block, follow these
 
 1. Right-click the parameter and select "Add new supervision" from the shortcut menu.
 
-   The "Supervisions" tab opens in the "Properties" Inspector window and a supervision for the parameter is created. The supervisions are numbered in ascending order (Supervision_<consecutive supervision ID>).
+   The "Supervisions" tab opens in the "Properties" Inspector window and a supervision for the parameter is created. The supervisions are numbered in ascending order (Supervision_&lt;consecutive supervision ID&gt;).
 2. The "Operand" type of supervision is selected by default. Select a different type of supervision, if necessary.
 
    The type of supervision you have selected determines which settings must be filled out.
@@ -2729,7 +2729,7 @@ Or:
 1. Click the desired parameter.
 2. Double-click the entry "Add new supervision" in the "Supervisions" in the "Properties" Inspector window.
 
-   A new supervision is created. The supervisions are numbered in ascending order (Supervision_<consecutive supervision ID>).
+   A new supervision is created. The supervisions are numbered in ascending order (Supervision_&lt;consecutive supervision ID&gt;).
 3. From this point, the procedure described above from item 2 applies.
 
 #### Result
@@ -2801,7 +2801,7 @@ To create a supervision at an element of a PLC data type, follow these steps:
 1. Select one or more tags and right-click the selected tags.
 2. Select "Add new supervision" from the shortcut menu. The shortcut menu entry is only available when all selected tags (Boolean tags) can be supervised.
 
-   The "Supervisions" tab opens in the "Properties" Inspector window and a supervision for the tag is created. The supervisions are numbered in ascending order (Supervision_<consecutive supervision ID>).
+   The "Supervisions" tab opens in the "Properties" Inspector window and a supervision for the tag is created. The supervisions are numbered in ascending order (Supervision_&lt;consecutive supervision ID&gt;).
 3. The "Operand" type of supervision is selected by default.
 
    The type of supervision you have selected determines which settings must be filled out.
@@ -2828,10 +2828,10 @@ Or:
 1. Click the desired tag.
 2. Double-click the entry "Add new supervision" in the "Supervisions" in the "Properties" Inspector window.
 
-   A new supervision is created. The supervisions are numbered in ascending order (Supervision_<consecutive supervision ID>).
+   A new supervision is created. The supervisions are numbered in ascending order (Supervision_&lt;consecutive supervision ID&gt;).
 3. From this point, the procedure described above from item 2 applies.
 
-The supervision is displayed in the "Supervisions" tab in the "Properties" Inspector window. PLC_data_type_supervision_<continuous supervision ID> [lower-level PLC data type].
+The supervision is displayed in the "Supervisions" tab in the "Properties" Inspector window. PLC_data_type_supervision_&lt;continuous supervision ID&gt; [lower-level PLC data type].
 
 > **Note**
 >
@@ -2922,11 +2922,11 @@ To create the specific text field for a supervision, follow these steps:
 >
 > **Display of the specific text field**
 >
-> This information is only output in the supervision alarm when you have used the text field "<Specific text field>" when configuring the alarm texts in the ProDiag supervision settings. You can find additional information on the alarm texts in the ProDiag supervision settings here: [Specifying central ProDiag alarm texts](#specifying-central-prodiag-alarm-texts-s7-1500)
+> This information is only output in the supervision alarm when you have used the text field "&lt;Specific text field&gt;" when configuring the alarm texts in the ProDiag supervision settings. You can find additional information on the alarm texts in the ProDiag supervision settings here: [Specifying central ProDiag alarm texts](#specifying-central-prodiag-alarm-texts-s7-1500)
 
 ##### Result
 
-When a supervision alarm is triggered by a fault/error, the information from the specific text field is displayed if you have used the alarm text field "<Specific text field>" in the alarm text structure.
+When a supervision alarm is triggered by a fault/error, the information from the specific text field is displayed if you have used the alarm text field "&lt;Specific text field&gt;" in the alarm text structure.
 
 ![Result](images/87459313803_DV_resource.Stream@PNG-en-US.png)
 
@@ -2934,7 +2934,7 @@ When a supervision alarm is triggered by a fault/error, the information from the
 
 The associated values SD_4, SD_5 and SD_6 can be referenced as follows:
 
-@<Number of the associated value><Format><Text library (name or number>@
+@&lt;Number of the associated value&gt;&lt;Format&gt;&lt;Text library (name or number&gt;@
 
 The character "@" initiates the use of an associated value and also closes it.
 
@@ -2966,8 +2966,8 @@ Determine the output format for the associated value on the display device. The 
 | %[i]b | Binary number with i digits |
 | %[i][.y]f | Floating-point number with sign with y digits after the decimal point and total number of digits i |
 | %[i]s | String (ANSI string) with i digits  Characters are printed up to the first 0 Byte (00Hex). |
-| %t#<Name of text library> | Access to text library |
-| %t#<Associated value that references the number of the text library> | Access to text library |
+| %t#&lt;Name of text library&gt; | Access to text library |
+| %t#&lt;Associated value that references the number of the text library&gt; | Access to text library |
 
 If the number of digits [i] is too small, the value is nevertheless output in full.
 
@@ -2989,7 +2989,7 @@ The table below shows some examples:
 | 1234.567 | @4%8.3f@ | The value of associated value SD_4 is shown as a floating-point number with sign with 3 digits after the decimal point and a total number of 8 digits.   A fill character is not added because the decimal point represents the eighth character. | 1234.567 |
 | 5.4* | @5%6f@ | The value of associated value SD_5 is shown as an integer with a total number of 6 digits.  The number of places after the decimal point has not been defined. | 0005.4 |
 | 5.4 | @5%2f@ | The value of associated value SD_5 is shown as an integer with a total number of 3 digits.  The value is not shortened. | 5.4 |
-| Contents of the text library <TextLib1> | @6%t#TextLib1@ | The associated value SD_6 of the data type WORD is the index which references the text library used "TextLib1". | 90° |
+| Contents of the text library &lt;TextLib1&gt; | @6%t#TextLib1@ | The associated value SD_6 of the data type WORD is the index which references the text library used "TextLib1". | 90° |
 | Content of the text library that is reference during runtime using the associated value SD_5 | @4%t#5@ | The associated value SD_4 of the data type WORD is the index. The associated value SD_5 references the text list number. | The text list entry is read out during runtime and displayed in the alarm text:  - the tag of the associated value SD_4 points to the desired text list entry  - the tag of the associated value SD_5 specifies the desired text list number |
 
 > **Note**
@@ -3004,7 +3004,7 @@ The type of the fill character (for example, zeros or blanks) depends on the out
 
 ##### Description
 
-In addition to manual notation with the syntax @<number of the accompanying value>%<Format>@ you also have the option to create the accompanying values using the shortcut menu.
+In addition to manual notation with the syntax @&lt;number of the accompanying value&gt;%&lt;Format&gt;@ you also have the option to create the accompanying values using the shortcut menu.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -3042,19 +3042,19 @@ If there is a syntax error, the text is displayed with a red background and must
 
 **Tag:**
 
-<Tag: #Temperature>
+&lt;Tag: #Temperature&gt;
 
 The value of the "#Temperature" tag is displayed at this point in the alarm text.
 
 **Text list name:**
 
-<Text list: USER_1: "tag_1">
+&lt;Text list: USER_1: "tag_1"&gt;
 
 The content of the "tag_1" tag is used as index for the "USER_1" text list. The entry from the text list is displayed at this point in the alarm text.
 
 **Text list ID:**
 
-<Text list: "Tag 1(SD_4)": "Tag 2(SD_5)">
+&lt;Text list: "Tag 1(SD_4)": "Tag 2(SD_5)"&gt;
 
 The "Tag 1"(SD_4) tag reads out the text list ID during runtime, and the content of the "Tag 2"(SD_5) tag is used as index for the reference text list. The entry from the text list is displayed at this point in the alarm text.
 
@@ -3090,7 +3090,7 @@ You have several options for displaying the translations of the specific text fi
 
 To display the translations in the ProDiag overview editor, follow these steps:
 
-1. Double-click the "PLC supervisions & alarms" entry in the project tree below the CPU.
+1. Double-click the "PLC supervisions &amp; alarms" entry in the project tree below the CPU.
 
    The alarm and supervision editor opens.
 2. Click either the "Global supervisions" tab or the "Supervision definitions" tab.
@@ -3116,7 +3116,7 @@ To display translations in the ProDiag function block, follow these steps:
 
    The texts of the specific text fields are displayed.
 
-If the names of the categories appear only in the current user interface language, either you have not yet selected any project languages or translations are not yet available. You can enter the translations directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages & Resources > Project texts".
+If the names of the categories appear only in the current user interface language, either you have not yet selected any project languages or translations are not yet available. You can enter the translations directly in the table on the "Texts" tab or you can enter the translations for the individual project languages in the global "Project texts" table. You can find the table in the project tree under "Languages &amp; Resources &gt; Project texts".
 
 You can find additional information on translation of texts under [Project text basics](Editing%20project%20data.md#project-text-basics).
 
@@ -3220,7 +3220,7 @@ To paste a copied ProDiag function block and its global supervisions, follow the
 1. Open the desired location to which you want to paste the copied block.
 2. Right-click and select the "Paste" command from the shortcut menu.
 
-   - If you are pasting the ProDiag function block into the same S7-1500 CPU as the original block, the copy is pasted with the extension "_<consecutive number>".
+   - If you are pasting the ProDiag function block into the same S7-1500 CPU as the original block, the copy is pasted with the extension "_&lt;consecutive number&gt;".
    - If you are pasting the ProDiag function block into a different S7-1500 CPU where a ProDiag function block of the same name already exists, the "Paste" dialog box opens. Select the required option and confirm with "OK".
 
 #### Result
@@ -3249,11 +3249,11 @@ The following assignment options are available:
 
 | Location of assignment | Global supervisions | Supervisions of parameters of a function block | Supervisions at elements of a PLC data type |
 | --- | --- | --- | --- |
-| Tag table | The supervisions are automatically assigned to a ProDiag function block (for example, Default_SupervisionFB). You can change this assignment:  - Inspector window "Properties > Supervisions" | - | The supervisions are automatically assigned to a ProDiag function block (for example, Default_SupervisionFB). You can change this assignment:  - Inspector window "Properties > Supervisions" |
-| Global data block | The supervisions are automatically assigned to a ProDiag function block (for example, Default_SupervisionFB). You can change this assignment:  - Inspector window "Properties > Supervisions" | - | 1. For a tag of data type "PLC data type" in the Global DB, the supervisions are assigned automatically to a ProDiag function block (for example Default_SupervisionFB):    - Inspector window "Properties > Supervisions" 2. For a global data block of the type "PLC data type":    - In the "Add new block" dialog 3. For a global data block of the type "ARRAY-DB" with the data type "PLC data type"    - In the "Add new block" dialog |
-| ProDiag overview table | You can also change the assignments here:  - ProDiag overview table > "Global supervisions" tab | You can also change the assignments here:  - ProDiag overview table > "Instantiated supervisions" tab | For supervisions that were created directly at the instance, the assignments can also be changed here:  - ProDiag overview table > "Global supervisions" tab   For supervisions that were created at the definition (type) of the PLC data type, the assignments can also be changed here:  - ProDiag overview table > "Instantiated supervisions" tab |
+| Tag table | The supervisions are automatically assigned to a ProDiag function block (for example, Default_SupervisionFB). You can change this assignment:  - Inspector window "Properties &gt; Supervisions" | - | The supervisions are automatically assigned to a ProDiag function block (for example, Default_SupervisionFB). You can change this assignment:  - Inspector window "Properties &gt; Supervisions" |
+| Global data block | The supervisions are automatically assigned to a ProDiag function block (for example, Default_SupervisionFB). You can change this assignment:  - Inspector window "Properties &gt; Supervisions" | - | 1. For a tag of data type "PLC data type" in the Global DB, the supervisions are assigned automatically to a ProDiag function block (for example Default_SupervisionFB):    - Inspector window "Properties &gt; Supervisions" 2. For a global data block of the type "PLC data type":    - In the "Add new block" dialog 3. For a global data block of the type "ARRAY-DB" with the data type "PLC data type"    - In the "Add new block" dialog |
+| ProDiag overview table | You can also change the assignments here:  - ProDiag overview table &gt; "Global supervisions" tab | You can also change the assignments here:  - ProDiag overview table &gt; "Instantiated supervisions" tab | For supervisions that were created directly at the instance, the assignments can also be changed here:  - ProDiag overview table &gt; "Global supervisions" tab   For supervisions that were created at the definition (type) of the PLC data type, the assignments can also be changed here:  - ProDiag overview table &gt; "Instantiated supervisions" tab |
 | Call options for FB block call | - | When calling the user-defined function block in the program code, you can specify the assignment directly in the call options for all supervisions of the function block.  You can change the assignment by clicking "...".   **Note:**   When you use PLC data types with created supervisions in a function block, the supervisions are automatically instantiated when the block is called. |  |
-| Instance data block of the user-defined function block | - | You can also change the assignments here:  - "Properties > General > Attributes" |  |
+| Instance data block of the user-defined function block | - | You can also change the assignments here:  - "Properties &gt; General &gt; Attributes" |  |
 |  | You can find additional information here:   [Assigning global supervisions to a ProDiag FB](#assigning-global-supervisions-to-a-prodiag-fb-s7-1500) | You can find additional information here:   [Assigning supervisions at the FB to a ProDiag function block](#assigning-supervisions-at-the-fb-to-a-prodiag-function-block-s7-1500) | You can find additional information here:   [Assigning supervisions of PLC data types to a ProDiag FB](#assigning-supervisions-of-plc-data-types-to-a-prodiag-fb-s7-1500) |
 
 If you do not select a user-defined ProDiag function block, the supervisions are assigned by default either to the ProDiag function block "Default_SupervisionFB" or the first user-defined ProDiag function block found.
@@ -3292,13 +3292,13 @@ You have several options to assign global supervisions to a ProDiag function blo
 
 **In the ProDiag overview table, follow these steps:**
 
-1. Double-click the "PLC supervisions & alarms" folder in the project tree.
+1. Double-click the "PLC supervisions &amp; alarms" folder in the project tree.
 
    The alarm and supervision editor opens.
-2. Click on the "Supervisions > Global supervisions" tab.
+2. Click on the "Supervisions &gt; Global supervisions" tab.
 
    All global supervisions are displayed.
-3. Click the "..." selection box either in the "ProDiag FB" column of the editor or in the Inspector window "Properties > Supervisions".
+3. Click the "..." selection box either in the "ProDiag FB" column of the editor or in the Inspector window "Properties &gt; Supervisions".
 
    A selection dialog opens.
 4. Select the corresponding ProDiag function block.
@@ -3368,13 +3368,13 @@ Or:
 Or:
 
 **To assign local supervisions to a ProDiag function block in the ProDiag overview editor "**
-**PLC supervisions & alarms**
+**PLC supervisions &amp; alarms**
 **", follow these steps:**
 
-1. Double-click the "PLC supervisions & alarms" folder in the project tree.
+1. Double-click the "PLC supervisions &amp; alarms" folder in the project tree.
 
    The alarm and supervision editor opens.
-2. Click the tab "Supervisions > Instantiated supervisions".
+2. Click the tab "Supervisions &gt; Instantiated supervisions".
 
    All the local supervisions are displayed.
 3. Click the desired instance.
@@ -3427,7 +3427,7 @@ You have created at least one supervision for an element of a PLC data type.
 
    The included supervisions are automatically assigned, for example, to "Default_SupervisionFB":
 6. If you want to change this assignment, click on the element in the global data block.
-7. In the "Properties > Supervisions" tab of the Inspector window, you can change the assignment in the "ProDiag FB" column by clicking "...".
+7. In the "Properties &gt; Supervisions" tab of the Inspector window, you can change the assignment in the "ProDiag FB" column by clicking "...".
 8. You can also create a new ProDiag FB directly in the open dialog by clicking "Add".
 
 or:
@@ -3484,7 +3484,7 @@ If you create an element of the data type "PLC data type" in a tag table and thi
 If you want to change this assignment, follow these steps:
 
 1. Click the element in the tag table.
-2. In the "Properties > Supervisions" tab, you can change the assignment in the "ProDiag FB" column by clicking "...".
+2. In the "Properties &gt; Supervisions" tab, you can change the assignment in the "ProDiag FB" column by clicking "...".
 3. You can also create a new ProDiag FB directly in the open dialog by clicking "Add".
 
 ### Assigning an instance data block to a ProDiag FB (local supervisions) (S7-1500)
@@ -3528,7 +3528,7 @@ You have the following options to change the existing assignments of global supe
 
 | Location of the assignment options | Procedure |
 | --- | --- |
-| In the "PLC supervisions & alarms" folder in the project tree | | Symbol | Meaning | | --- | --- | | 1. Double-click the "PLC supervisions & alarms" folder in the project tree.    The alarm and supervision editor opens. 2. Click on the "Supervisions > Global supervisions" tab.    All global supervisions are displayed. 3. Assign a different ProDiag function block to the corresponding supervisions in the "ProDiag FB" column. |  | |
+| In the "PLC supervisions &amp; alarms" folder in the project tree | | Symbol | Meaning | | --- | --- | | 1. Double-click the "PLC supervisions &amp; alarms" folder in the project tree.    The alarm and supervision editor opens. 2. Click on the "Supervisions &gt; Global supervisions" tab.    All global supervisions are displayed. 3. Assign a different ProDiag function block to the corresponding supervisions in the "ProDiag FB" column. |  | |
 | In a tag table or in a global data block with individual elements | | Symbol | Meaning | | --- | --- | | 1. Click the supervised tag, for example, in the default tag table.    The "Supervisions" tab opens in the "Properties" Inspector window and the properties of the supervision are displayed. 2. Click the "…" selection field at ProDiag FB.    A selection dialog opens. 3. Click the "Program blocks" folder in the left-hand column.    All existing ProDiag function blocks are displayed in the right-hand column. 4. Select the corresponding ProDiag function block. |  | |
 | In the global data block of the type "PLC data type" | | Symbol | Meaning | | --- | --- | | 1. Right-click the global data block in the project tree. 2. Select the "Properties" command from the shortcut menu.    The properties dialog of the global data block opens. 3. Click the "Attributes" section. 4. Click the "…" selection field at "Assigned ProDiag FB" to select a different ProDiag function block.    A selection dialog opens. 5. Click the "Program blocks" folder in the left-hand column.    All existing ProDiag function blocks are displayed in the right-hand column. 6. Select the corresponding ProDiag function block. |  | |
 | In the global data block of the type "ARRAY-DB" with the data type "PLC data type" | | Symbol | Meaning | | --- | --- | | 1. Click one of the array elements with a PLC data type.    The "Supervisions" tab opens in the "Properties" Inspector window and the properties of the supervisions are displayed. 2. Click the "…" selection field at ProDiag FB.    A selection dialog opens. 3. Click the "Program blocks" folder in the left-hand column.    All existing ProDiag function blocks are displayed in the right-hand column. 4. Select the corresponding ProDiag function block. |  | |
@@ -3553,10 +3553,10 @@ Proceed as follows to assign an instance data block of a user-defined function b
 
 Or:
 
-1. Double-click the "PLC supervisions & alarms" folder in the project tree.
+1. Double-click the "PLC supervisions &amp; alarms" folder in the project tree.
 
    The alarm and supervision editor opens.
-2. Click the "Supervisions > FB supervision instances" tab.
+2. Click the "Supervisions &gt; FB supervision instances" tab.
 
    All the local supervisions are displayed.
 3. Click the "…" selection field in the "ProDiag FB" column to select a ProDiag function block.
@@ -3589,10 +3589,10 @@ You have already created local supervisions and have assigned a ProDiag function
 
 To change the existing assignment of an instance data block to a ProDiag function block, follow these steps:
 
-1. Double-click the "PLC supervisions & alarms" folder in the project tree.
+1. Double-click the "PLC supervisions &amp; alarms" folder in the project tree.
 
    The alarm and supervision editor opens.
-2. Click the "Supervisions > FB supervision instances" tab.
+2. Click the "Supervisions &gt; FB supervision instances" tab.
 
    All the local supervisions are displayed.
 3. Click the "…" selection field in the "ProDiag FB" column.
@@ -3679,7 +3679,7 @@ Proceed as follows to copy the complete line of a supervision:
 
 1. Select the line you want to copy.
 
-   You can also select several lines by clicking them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking the first and last row.
+   You can also select several lines by clicking them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking the first and last row.
 2. Select the "Copy" command from the shortcut menu.
 3. Position the cursor at the end of the table.
 4. Select "Paste" in the shortcut menu.
@@ -3712,7 +3712,7 @@ Proceed as follows to delete the complete line of a supervision:
 
 1. Select the line with the supervision to be deleted.
 
-   You can also select several lines by clicking them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking the first and last row.
+   You can also select several lines by clicking them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking the first and last row.
 2. Select the "Delete" command in the shortcut menu.
 
 #### Result
@@ -3884,10 +3884,10 @@ At least one supervision was created in a global data block, a tag table or at a
 
 To display all global supervisions of a CPU, for example, follow these steps:
 
-1. Double-click the "PLC supervisions & alarms" folder in the project tree.
+1. Double-click the "PLC supervisions &amp; alarms" folder in the project tree.
 
    The alarm and supervision editor opens.
-2. Click on the "Supervisions > Global supervisions" tab.
+2. Click on the "Supervisions &gt; Global supervisions" tab.
 3. Select the filter option "All global supervisions".
 
    All global supervisions of the CPU are displayed.
@@ -3931,10 +3931,10 @@ At least one supervision was created in the block interface of the function bloc
 
 To display all supervision definitions, for example, follow these steps:
 
-1. Double-click the "PLC supervisions & alarms" folder in the project tree.
+1. Double-click the "PLC supervisions &amp; alarms" folder in the project tree.
 
    The alarm and supervision editor opens.
-2. Click on the "Supervisions > Supervision definitions" tab.
+2. Click on the "Supervisions &gt; Supervision definitions" tab.
 3. Select the filter option "All supervision definitions".
 
    All supervision definitions of the CPU are displayed.
@@ -3981,10 +3981,10 @@ At least one supervision definition was instantiated.
 
 To display all supervision instances, for example, follow these steps:
 
-1. Double-click the "PLC supervisions & alarms" folder in the project tree.
+1. Double-click the "PLC supervisions &amp; alarms" folder in the project tree.
 
    The alarm and supervision editor opens.
-2. Click the tab "Supervisions > Supervision instances".
+2. Click the tab "Supervisions &gt; Supervision instances".
 3. Select the filter option "All supervision instances".
 
    All supervision instances are displayed.
@@ -4062,7 +4062,7 @@ Proceed as follows to copy the complete line of a supervision:
 
 1. Select the line you want to copy.
 
-   You can also select several lines by clicking them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking the first and last row.
+   You can also select several lines by clicking them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking the first and last row.
 2. Select the "Copy" command from the shortcut menu.
 3. Position the cursor at the end of the table.
 4. Select "Paste" in the shortcut menu.
@@ -4095,7 +4095,7 @@ Proceed as follows to delete the complete line of a supervision:
 
 1. Select the line with the supervision to be deleted.
 
-   You can also select several lines by clicking them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking the first and last row.
+   You can also select several lines by clicking them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking the first and last row.
 2. Select the "Delete" command in the shortcut menu.
 
 ##### Result
@@ -4178,7 +4178,7 @@ To delete a complete supervision definition, proceed as follows:
 
 1. Select the row with the supervision definition to be deleted.
 
-   You can also select several lines by clicking them one after the other while holding down the <Ctrl> key or by pressing and holding down <Shift> and clicking the first and last row.
+   You can also select several lines by clicking them one after the other while holding down the &lt;Ctrl&gt; key or by pressing and holding down &lt;Shift&gt; and clicking the first and last row.
 2. In the shortcut menu, select the "Delete" command   
    or  
     press the "Del" key.
@@ -4470,7 +4470,7 @@ The supervision settings and the following settings are exported from the block 
 
 To export the supervisions and properties of one or more ProDiag function blocks, follow these steps:
 
-1. Open the "PLC supervisions & alarms" folder in the project tree.
+1. Open the "PLC supervisions &amp; alarms" folder in the project tree.
 2. Click on the "Supervisions" tab.
 3. In the "Global supervisions" tab, click "Exports global supervisions" in the toolbar.
 
@@ -4514,7 +4514,7 @@ You have exported the supervisions and properties of a ProDiag function block to
 
 To import the supervisions and properties of one or more ProDiag function blocks, follow these steps:
 
-1. Open the "PLC supervisions & alarms" folder in the project tree.
+1. Open the "PLC supervisions &amp; alarms" folder in the project tree.
 2. Click on the "Supervisions" tab.
 3. In the "Global supervisions" tab, click "Imports global supervisions" in the toolbar.
 
@@ -4611,7 +4611,7 @@ You have created local supervisions.
 
 To export the supervision definitions file, proceed as follows:
 
-1. Open the "PLC supervisions & alarms" folder in the project tree.
+1. Open the "PLC supervisions &amp; alarms" folder in the project tree.
 2. Click "Supervision definitions" in the "Supervisions" tab.
 3. If necessary, select a filter to limit the number of supervision definitions.
 4. Click "Exports supervision definitions" in the toolbar.
@@ -4637,7 +4637,7 @@ You have exported supervision definitions to an .xlsx file.
 
 To import the supervision definitions file, proceed as follows:
 
-1. Open the "PLC supervisions & alarms" folder in the project tree.
+1. Open the "PLC supervisions &amp; alarms" folder in the project tree.
 2. Click "Supervision definitions" in the "Supervisions" tab.
 3. Click "Imports supervision definitions" in the toolbar.
 
@@ -4715,7 +4715,7 @@ You have created local supervisions and called the function block in the program
 
 Proceed as follows to export the assignment:
 
-1. Open the "PLC supervisions & alarms" folder in the project tree.
+1. Open the "PLC supervisions &amp; alarms" folder in the project tree.
 2. Click "FB supervision instances" in the "Supervisions" tab.
 3. Click "Exports assignments of ProDiag FBs to instance DBs and PLC data type instances" in the toolbar.
 
@@ -4740,7 +4740,7 @@ You have exported assignments into an .xlsx file.
 
 Proceed as follows to import the assignments:
 
-1. Open the "PLC supervisions & alarms" folder in the project tree.
+1. Open the "PLC supervisions &amp; alarms" folder in the project tree.
 2. Click "FB supervision instances" in the "Supervisions" tab.
 3. Click "Imports assignments of ProDiag FBs to instance DBs and PLC data type instances" in the toolbar.
 
@@ -4788,7 +4788,7 @@ You can find additional information displaying cross-references here: [General i
 
 #### Description
 
-The cross-reference information for a selected supervised tag (global supervisions) is displayed in the Inspector window in the tab "About > Cross reference list in the programming window. For each selected supervised tag, it shows which ProDiag function block it is assigned to and at which points it is used. If the supervised tag is not only supervised but is for example used as a condition in another ProDiag supervision this use is also listed. You can recognize a supervised tag because the identifier "PRODIAG Supervision" is entered in the "Access" column. If the tag is used as a condition, this is indicated in the "Access" column by the identifier "Read-only"
+The cross-reference information for a selected supervised tag (global supervisions) is displayed in the Inspector window in the tab "About &gt; Cross reference list in the programming window. For each selected supervised tag, it shows which ProDiag function block it is assigned to and at which points it is used. If the supervised tag is not only supervised but is for example used as a condition in another ProDiag supervision this use is also listed. You can recognize a supervised tag because the identifier "PRODIAG Supervision" is entered in the "Access" column. If the tag is used as a condition, this is indicated in the "Access" column by the identifier "Read-only"
 
 You can display the cross-references at the following locations in the TIA Portal:
 
@@ -4806,7 +4806,7 @@ To display the cross references in the Inspector window , follow these steps:
 
 1. Click the supervised tag, for example, in the default tag table.
 
-   In the Inspector window in the tab "About > Cross reference list" you will see the supervised tag and the assigned ProDiag function block.
+   In the Inspector window in the tab "About &gt; Cross reference list" you will see the supervised tag and the assigned ProDiag function block.
 2. Click the arrow to the left of the ProDiag function block.
 
    All points of use of this tag are displayed (supervision IDs).
@@ -4876,7 +4876,7 @@ You can display the actual values with the help of the PLC code view. As soon as
 
 For criteria analysis on the HMI device, the operands are always read starting from the right at the coil against the circuit to the left.
 
-You can find additional information on visualization on the HMI device here: "Visualize processes > Using diagnostics functions > Supervising machinery and plants with ProDiag"
+You can find additional information on visualization on the HMI device here: "Visualize processes &gt; Using diagnostics functions &gt; Supervising machinery and plants with ProDiag"
 
 #### Supported instructions
 
@@ -4948,7 +4948,7 @@ Proceed as follows to activate initial value acquisition:
 1. Right-click the ProDiag function block and select "Properties..." from the shortcut menu.
 
    The properties dialog box of the ProDiag function block opens.
-2. Select version V2.0 in the "General > Block" tab.
+2. Select version V2.0 in the "General &gt; Block" tab.
 3. Click on the "Attributes" tab.
 4. Activate the "Initial value acquisition (for criteria analysis on HMI devices)" option.
 5. Click "OK".

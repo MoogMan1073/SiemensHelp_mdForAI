@@ -156,16 +156,16 @@ The names of the following parameters apply both to the data block and to access
 | INT_HOLD | BOOL | FALSE | The output of the integral action can be frozen. For this the input "I-action hold" must be set. |
 | I_ITL_ON | BOOL | FALSE | The output of the integral action can be set at the I_ITLVAL input. For this the input "Set I-action" must be set. |
 | D_SEL | BOOL | FALSE | The PID actions can be switched on and off individually in the PID algorithm. D-action is on when the  input "Enable D-action" is set. |
-| CYCLE | TIME | T#1s | The time between block calls must be constant. The "Sampling time" input specifies the  time between block calls.  CYCLE >= 1ms |
+| CYCLE | TIME | T#1s | The time between block calls must be constant. The "Sampling time" input specifies the  time between block calls.  CYCLE &gt;= 1ms |
 | SP_INT | REAL | 0.0 | The input "Internal setpoint" is used to specify a setpoint.  Permissible are values from -100 to 100 % or a physical variable 1). |
 | PV_IN | REAL | 0.0 | At the "Process value input" you can assign parameters to a commissioning value or you can interconnect an external process value in floating-point format.   Permissible are values from -100 to 100 % or a physical variable 1). |
 | PV_PER | WORD | W#16#0000 | The process value in I/O format is interconnected with the controller at the "Process value I/0" input. |
 | MAN | REAL | 0.0 | The "Manual value" input is used to set a  manual value using the operator interface  functions.  Permissible are values from -100 to 100 % or a physical variable 2). |
 | GAIN | REAL | 2.0 | The "Proportional gain" input specifies controller amplification. |
-| TI | TIME | T#20s | The "Integration time" input determines the time  response of the integral action.  TI >= CYCLE |
-| TD | TIME | T#10s | The "Derivative action time" input determines the time  response of the derivative action.  TD >= CYCLE |
-| TM_LAG | TIME | T#2s | Time lag of the D-action  The algorithm of the D-action contains a delay for which parameters can be assigned at the input "Time lag of the D-action".  TM_LAG >= CYCLE/2 |
-| DEADB_W | REAL | 0.0 | A dead band is applied to the system deviation. The "Dead band width" input determines the size of the dead band.  DEADB_W >= 0.0 (%) or a physical variable 1) |
+| TI | TIME | T#20s | The "Integration time" input determines the time  response of the integral action.  TI &gt;= CYCLE |
+| TD | TIME | T#10s | The "Derivative action time" input determines the time  response of the derivative action.  TD &gt;= CYCLE |
+| TM_LAG | TIME | T#2s | Time lag of the D-action  The algorithm of the D-action contains a delay for which parameters can be assigned at the input "Time lag of the D-action".  TM_LAG &gt;= CYCLE/2 |
+| DEADB_W | REAL | 0.0 | A dead band is applied to the system deviation. The "Dead band width" input determines the size of the dead band.  DEADB_W &gt;= 0.0 (%) or a physical variable 1) |
 | LMN_HLM | REAL | 100.0 | The manipulated value is always restricted to a high limit and low limit. The "High limit of manipulated value" input specifies the high limit.   Permissible are real values starting at LMN_LLM (%) or a physical variable 2). |
 | LMN_LLM | REAL | 0.0 | The manipulated value is always restricted to a high limit and low limit. The "Low limit of manipulated value" input specifies the low limit.  Permissible are real values up to LMN_HLM (%) or a physical variable 2). |
 | PV_FAC | REAL | 1.0 | The "Process value factor" input is multiplied by the process value. The input is used to scale the process value range. |
@@ -340,18 +340,18 @@ The names of the following parameters apply both to the data block and to access
 | LMNUP | BOOL | FALSE | The output signal QLMNUP is operated in manual mode of the manipulated value signals at the input "Manipulated value signal up". |
 | LMNDN | BOOL | FALSE | The output signal QLMNDN is operated in manual mode of the manipulated value signals at the input "Manipulated value signal down" |
 | PVPER_ON | BOOL | FALSE | If the process value is to be read from the I/O then the input PV_PER must be interconnected with the I/O and the input "Enable process value I/O" must be set. |
-| CYCLE | TIME | T#1s | The time between block calls must be constant. The "Sampling time" input specifies the  time between block calls.   CYCLE >= 1ms |
+| CYCLE | TIME | T#1s | The time between block calls must be constant. The "Sampling time" input specifies the  time between block calls.   CYCLE &gt;= 1ms |
 | SP_INT | REAL | 0.0 | The input "Internal setpoint" is used to specify a setpoint.  Permissible are values from -100 to 100 % or a physical variable <sup>1)</sup>. |
 | PV_IN | REAL | 0.0 | At the "Process value input" you can assign parameters to a commissioning value or you can interconnect an external process value in floating-point format.   Permissible are values from -100 to 100 % or a physical variable <sup>1)</sup>. |
 | PV_PER | WORD | W#16#0000 | The process value in I/O format is interconnected with the controller at the "Process value I/O" input. |
 | GAIN | REAL | 2.0 | The "Proportional gain" input specifies controller amplification. |
-| TI | TIME | T#20s | The "Integration time" input determines the time  response of the integral action.  TI >= CYCLE |
+| TI | TIME | T#20s | The "Integration time" input determines the time  response of the integral action.  TI &gt;= CYCLE |
 | DEADB_W | REAL | 1.0 | A dead band is applied to the system deviation. The "Dead band width" input determines the size of the dead band.   Permissible are values from 0 to 100 % or a physical variable <sup>1)</sup>. |
 | PV_FAC | REAL | 1.0 | The "Process value factor" input is multiplied by the process value. The input is used to scale the process value range. |
 | PV_OFF | REAL | 0.0 | The input "Process value offset" is added to the process value. The input is used to scale the process value range. |
-| PULSE_TM | TIME | T#3s | You can assign a minimum pulse time at the parameter "Minimum pulse time".  PULSE_TM >= CYCLE |
-| BREAK_TM | TIME | T#3s | You can assign a minimum break time at the parameter "Minimum break time".  BREAK_TM >= CYCLE |
-| MTR_TM | TIME | T#30s | The time required by the actuator to move from  limit stop to limit stop is entered at the "Motor  actuating time" parameter.  MTR_TM >= CYCLE |
+| PULSE_TM | TIME | T#3s | You can assign a minimum pulse time at the parameter "Minimum pulse time".  PULSE_TM &gt;= CYCLE |
+| BREAK_TM | TIME | T#3s | You can assign a minimum break time at the parameter "Minimum break time".  BREAK_TM &gt;= CYCLE |
+| MTR_TM | TIME | T#30s | The time required by the actuator to move from  limit stop to limit stop is entered at the "Motor  actuating time" parameter.  MTR_TM &gt;= CYCLE |
 | DISV | REAL | 0.0 | For feedforward control, the disturbance variable is interconnected to the "Disturbance variable" input.  Permissible are values from -100 to 100 % or a physical variable <sup>2)</sup>. |
 
 <sup>1)</sup> Parameters in setpoint and process value branches with identical unit
@@ -589,7 +589,7 @@ The following figure shows a symmetrical characteristic curve of the three-step 
 
 Using the ratio factor RATIOFAC, the ratio of the duration of positive to negative pulses can be changed. In a thermal process, for example, this would allow different system time constants for heating and cooling.
 
-**Ratio factor < 1**
+**Ratio factor &lt; 1**
 
 The pulse duration at the negative pulse output, calculated by multiplying the input variable by the period duration, is multiplied by the ratio factor.
 
@@ -601,7 +601,7 @@ The following figure shows the asymmetrical characteristic curve of the three-st
 
 ![Asymmetrical three-step control](images/166087230731_DV_resource.Stream@PNG-en-US.png)
 
-**Ratio factor > 1**
+**Ratio factor &gt; 1**
 
 The pulse duration at the positive pulse output, calculated by multiplying the input variable by the period duration, is divided by the ratio factor.
 
@@ -671,8 +671,8 @@ The values of the input parameters are not limited in the block. There is no par
 | Parameters | Data type | Default | Description |
 | --- | --- | --- | --- |
 | INV | REAL | 0.0 | At the input parameter "Input variable" an analog manipulated variable is connected.  Values from -100 to 100 % are permitted. |
-| PER_TM | TIME | T#1s | At the parameter "Period duration" the constant period duration of the pulse width modulation is entered. This corresponds to the  sampling time of the controller. The ratio  between the sampling time of the pulse  shaper and the sampling time of the  controller determines the accuracy of the  pulse width modulation.  PER_TM >=20*CYCLE |
-| P_B_TM | TIME | T#50 ms | You can assign a minimum pulse/break time at the parameter "Minimum pulse/break time".  P_B_TM >= CYCLE |
+| PER_TM | TIME | T#1s | At the parameter "Period duration" the constant period duration of the pulse width modulation is entered. This corresponds to the  sampling time of the controller. The ratio  between the sampling time of the pulse  shaper and the sampling time of the  controller determines the accuracy of the  pulse width modulation.  PER_TM &gt;=20*CYCLE |
+| P_B_TM | TIME | T#50 ms | You can assign a minimum pulse/break time at the parameter "Minimum pulse/break time".  P_B_TM &gt;= CYCLE |
 | RATIOFAC | REAL | 1.0 | Using the "Ratio factor" input parameter the ratio of the duration of positive to negative pulses can be changed. In a thermal  process, this would, for example, allow  different time constants for heating and  cooling to be compensated (for example, in  a process with electrical heating and water  cooling).  Values from 0.1 to 10.0 are permitted. |
 | STEP3_ON | BOOL | TRUE | At the input parameter "Enable three-step control" the appropriate mode is activated. In three-step control  both output signals are active. |
 | ST2BI_ON | BOOL | FALSE | At the input parameter "Enable two-step control for bipolar manipulated value range" you can select from the modes "Two-step control for bipolar manipulated value range" and "Two-step control for unipolar manipulated value range". STEP3_ON = FALSE is required. |
@@ -681,7 +681,7 @@ The values of the input parameters are not limited in the block. There is no par
 | NEG_P_ON | BOOL | FALSE | For manual mode three-step control, the output signal QNEG_P can be operated on the input parameter "Negative pulse on". In  manual mode with two-step control, QNEG_P is always set inversely to  QPOS_P. |
 | SYN_ON | BOOL | TRUE | By setting the input parameter  "Enable synchronization", it is possible to  synchronize the pulse output automatically with the block  that updates the input variable INV. This ensures that a change in the input variable is output as quickly as possible as a pulse. |
 | COM_RST | BOOL | FALSE | The block has an initialization routine that is  processed when the input "Restart" is set. |
-| CYCLE | TIME | T#10ms | The time between block calls must be constant. The "Sampling time" input specifies the  time between block calls.  CYCLE >= 1ms |
+| CYCLE | TIME | T#10ms | The time between block calls must be constant. The "Sampling time" input specifies the  time between block calls.  CYCLE &gt;= 1ms |
 
 ---
 
@@ -1027,7 +1027,7 @@ Following tuning, the PI and PID parameters are stored in the PI_CON and PID_CON
 >
 > The controller parameters are only written back to the controller with UNDO_PAR or LOAD_PID, if the controller gain is not equal to 0:
 >
-> With LOAD_PID, the parameters are only copied if the corresponding GAIN <> 0 is (either the PI or PID parameters). This strategy takes into account the situation that no tuning has yet been made or that PID parameters are missing. If PID_ON = TRUE and PID.GAIN = FALSE, PID_ON is set to FALSE and the PI parameter is copied.
+> With LOAD_PID, the parameters are only copied if the corresponding GAIN &lt;&gt; 0 is (either the PI or PID parameters). This strategy takes into account the situation that no tuning has yet been made or that PID parameters are missing. If PID_ON = TRUE and PID.GAIN = FALSE, PID_ON is set to FALSE and the PI parameter is copied.
 >
 > - D_F, PFAC_SP are preset by the tuning. These can then be modified by the user. LOAD_PID does not change these parameters.
 > - With LOAD_PID, the control zone is always recalculated
@@ -1246,8 +1246,8 @@ The names of the following parameters apply both to the data block and to access
 
 | Parameters | Address | Data type | Default | Description |
 | --- | --- | --- | --- | --- |
-| CYCLE | 26.0 | REAL | 0.1 s | Sets the sampling time for the PID algorithm. In phase 1, the tuner calculates  the sampling time and enters it in CYCLE.  CYCLE > 0.001 s |
-| CYCLE_P | 30.0 | REAL | 0.02 s | At this input, you set the sampling time for the pulse shaper action. In phase 1, the TCONT_CP instruction calculates the sampling time and enters it in CYCLE_P.   CYCLE_P > 0.001 s |
+| CYCLE | 26.0 | REAL | 0.1 s | Sets the sampling time for the PID algorithm. In phase 1, the tuner calculates  the sampling time and enters it in CYCLE.  CYCLE &gt; 0.001 s |
+| CYCLE_P | 30.0 | REAL | 0.02 s | At this input, you set the sampling time for the pulse shaper action. In phase 1, the TCONT_CP instruction calculates the sampling time and enters it in CYCLE_P.   CYCLE_P &gt; 0.001 s |
 | SP_INT | 34.0 | REAL | 0.0 | The input "Internal setpoint" is used to specify a setpoint.  The valid values depend on the sensors used. |
 | MAN | 38.0 | REAL | 0.0 | The "Manual value" input is used to set a manual value. In automatic mode, it tracks the manipulated value. |
 | COM_RST | 42.0 | BOOL | FALSE | The block has an initialization routine that is processed when the COM_RST input is set. |
@@ -1285,14 +1285,14 @@ The names of the following variables apply both to the data block and to access 
 | --- | --- | --- | --- | --- | --- |
 | DEADB_W | 44.0 |  | REAL | 0.0 | A deadband is applied to the control deviation. The "Deadband width" input determines the size of the deadband.  The valid values depend on the sensors used. |
 | I_ITLVAL | 48.0 |  | REAL | 0.0 | The output of the integrator can be set at the I_ITL_ON input. The initialization value is applied to the "Initialization value of the I-action" input. During a restart COM_RST = TRUE, the I-action is set to the initialization value.  Values from -100 to 100 % are permitted. |
-| LMN_HLM | 52.0 |  | REAL | 100.0 | The output value is always restricted to a high limit and low limit. The "Manipulated value high limit" input specifies the high limit.  LMN_HLM > LMN_LLM |
-| LMN_LLM | 56.0 |  | REAL | 0.0 | The output value is always restricted to a high limit and low limit. The "Manipulated value low limit" input specifies the low limit.  LMN_LLM < LMN_HLM |
+| LMN_HLM | 52.0 |  | REAL | 100.0 | The output value is always restricted to a high limit and low limit. The "Manipulated value high limit" input specifies the high limit.  LMN_HLM &gt; LMN_LLM |
+| LMN_LLM | 56.0 |  | REAL | 0.0 | The output value is always restricted to a high limit and low limit. The "Manipulated value low limit" input specifies the low limit.  LMN_LLM &lt; LMN_HLM |
 | PV_FAC | 60.0 |  | REAL | 1.0 | The "Process value factor" input is multiplied by the "Process value I/O". The input is used to scale the process value range. |
 | PV_OFFS | 64.0 |  | REAL | 0.0 | The "Process value offset" input is added to the "Process value I/O". The input is used to scale the process value range. |
 | LMN_FAC | 68.0 |  | REAL | 1.0 | The "Output value factor" input is multiplied with the output value. The input is used to scale the output value range. |
 | LMN_OFFS | 72.0 |  | REAL | 0.0 | The "Output value offset" input is added to the output value. The input is used to scale the output value range. |
 | PER_TM | 76.0 |  | REAL | 1.0 s | The period duration of the pulse width modulation is entered at the PER_TM parameter. The relationship of the period duration to the sampling time of the pulse shaper determines the accuracy of the pulse width modulation.   PER_TM ≥ CYCLE |
-| P_B_TM | 80.0 |  | REAL | 0.02 s | You can assign a minimum pulse or break time at the parameter "Minimum pulse/break time". P_B_TM is internally limited to > CYCLE_P. |
+| P_B_TM | 80.0 |  | REAL | 0.02 s | You can assign a minimum pulse or break time at the parameter "Minimum pulse/break time". P_B_TM is internally limited to &gt; CYCLE_P. |
 | TUN_DLMN | 84.0 |  | REAL | 20.0 | Process excitation for controller tuning results from a output value step change at TUN_DLMN.  Values from -100 to 100 % are permitted. |
 | PER_MODE | 88.0 |  | INT | 0 | You can use this switch to enter the type of I/O module. The process value at input PV_PER is then scaled as follows at the PV output.  - PER_MODE = 0: Thermocouples; PT100/NI100; standard   PV_PER * 0.1   Unit: C, °F - PER_MODE = 1: PT100/NI100; climate   PV_PER * 0.01   Unit: C, °F - PER_MODE = 2: Current/voltage    PV_PER * 100/27648   Unit: % |
 | PVPER_ON | 90.0 |  | BOOL | FALSE | If the process value is to be read in from the I/Os, the PV_PER input must be interconnected with the I/Os and the "Enable process value I/Os" input must be set. |
@@ -1340,14 +1340,14 @@ The names of the following variables apply both to the data block and to access 
 | TA | 196.0 |  | REAL | 0.0 | Identified recovery time of the process. In the case of process type I, TA tends to be estimated too low. |
 | KIG | 200.0 |  | REAL | 0.0 | Maximum process value rise at manipulated tag excitation from 0 to 100 % [1/s]  GAIN_P = 0.01 * KIG * TA |
 | N_PTN | 204.0 |  | REAL | 0.0 | The parameter specifies the order of the process. "Non-integer values" are also possible.  Values from 1.01 to 10.0 are permitted. |
-| TM_LAG_P | 208.0 |  | REAL | 0.0 | Time constants of a PTN model (practical values only for N_PTN >= 2). |
+| TM_LAG_P | 208.0 |  | REAL | 0.0 | Time constants of a PTN model (practical values only for N_PTN &gt;= 2). |
 | T_P_INF | 212.0 |  | REAL | 0.0 | Time from process excitation until the point of inflection. |
 | P_INF | 216.0 |  | REAL | 0.0 | Process value change from process excitation until the point of inflection.  The valid values depend on the sensors used. |
 | LMN0 | 220.0 |  | REAL | 0.0 | Output value at the start of tuning  Detected in phase 1 (mean value).  Values from 0 to 100 % are permitted. |
 | PV0 | 224.0 |  | REAL | 0.0 | Process value at the start of tuning |
 | PVDT0 | 228.0 |  | REAL | 0.0 | Process value slew rate at start of tuning [1/s]  Sign adapted. |
 | PVDT | 232.0 |  | REAL | 0.0 | Current process value slew rate [1/s]  Sign adapted. |
-| PVDT_MAX | 236.0 |  | REAL | 0.0 | Max. change in the process value per second [1/s]  Maximum derivative of the process value at the point of inflection (sign adapted, always > 0); is used to calculate TU and KIG. |
+| PVDT_MAX | 236.0 |  | REAL | 0.0 | Max. change in the process value per second [1/s]  Maximum derivative of the process value at the point of inflection (sign adapted, always &gt; 0); is used to calculate TU and KIG. |
 | NOI_PVDT | 240.0 |  | REAL | 0.0 | Noise action in PVDT_MAX in %  The higher the noise action, the less accurate (less aggressive) the control parameters. |
 | NOISE_PV | 244.0 |  | REAL | 0.0 | Absolute noise in process value  Difference between maximum and minimum process value in phase 1. |
 | FIL_CYC | 248.0 |  | INT | 1 | Number of cycles of the mean value filter  The process value is determined through FIL_CYC cycles. FIL_CYC is increased from 1 to a max. of 1024 if needed. |
@@ -1386,12 +1386,12 @@ The names of the following variables apply both to the data block and to access 
 | 10000 | Tuning completed + suitable controller parameters found |  |
 | 2xxxx | Tuning completed + controller parameters uncertain |  |
 | 2xx2x | Point of inflection not reached (only if excited via setpoint step-change) | If the controller oscillates, weaken the controller parameters, or repeat the test with a smaller manipulated value difference TUN_DLMN. |
-| 2x1xx | Estimation error (TU < 3*CYCLE) | Reduce CYCLE and repeat attempt. Special case for PT1-only process: Do not repeat test, if necessary reduce controller parameters. |
+| 2x1xx | Estimation error (TU &lt; 3*CYCLE) | Reduce CYCLE and repeat attempt. Special case for PT1-only process: Do not repeat test, if necessary reduce controller parameters. |
 | 2x3xx | Estimation error TU too high | Repeat test under better conditions. |
-| 21xxx | Estimation error N_PTN < 1 | Repeat test under better conditions. |
-| 22xxx | Estimation error N_PTN > 10 | Repeat test under better conditions. |
+| 21xxx | Estimation error N_PTN &lt; 1 | Repeat test under better conditions. |
+| 22xxx | Estimation error N_PTN &gt; 10 | Repeat test under better conditions. |
 | 3xxxx | Tuning canceled in phase 1 owing to faulty parameter assignment: |  |
-| 30002 | Effective manipulated value differential < 5% | Correct manipulated value differential TUN_DLMN. |
+| 30002 | Effective manipulated value differential &lt; 5% | Correct manipulated value differential TUN_DLMN. |
 | 30005 | The sampling times CYCLE and CYCLE_P differ by more than 5% of the measured values. | Compare CYCLE and CYCLE_P with the cycle time of the cyclic interrupt priority class and note any loop scheduler.  Check CPU load. An excessively loaded CPU can result in prolonged sampling times that are inconsistent with CYCLE or CYCLE_P. |
 
 > **Note**
@@ -1429,11 +1429,11 @@ The names of the following variables apply both to the data block and to access 
 | STATUS_D | Description |
 | --- | --- |
 | 0 | No controller parameters were calculated. |
-| 110 | N_PTN <= 1.5 Process type I fast |
-| 121 | N_PTN > 1.5 Process type I |
-| 200 | N_PTN > 1.9 Process type II (transition range) |
-| 310 | N_PTN >= 2.1 Process type III fast |
-| 320 | N_PTN > 2.6 Process type III |
+| 110 | N_PTN &lt;= 1.5 Process type I fast |
+| 121 | N_PTN &gt; 1.5 Process type I |
+| 200 | N_PTN &gt; 1.9 Process type II (transition range) |
+| 310 | N_PTN &gt;= 2.1 Process type III fast |
+| 320 | N_PTN &gt; 2.6 Process type III |
 | 111, 122, 201, 311, 321 | Parameters have been corrected from phase 7. |
 
 > **Note**
@@ -1601,7 +1601,7 @@ To prevent overshoot, you can weaken the proportional action using the "Proporti
 - PFAC_SP = 1.0: Proportional action for setpoint change is fully effective
 - PFAC_SP = 0.0: Proportional action has no effect in the setpoint change
 
-As in the case of the continuous controller, a value of PFAC_SP < 1.0 can reduce the overshoot if the motor run time MTR_TM is small compared with the recovery time TA and the ratio is TU/TA < 0.2. If MTR_TM reaches 20% of TA, only a slight improvement can still be achieved.
+As in the case of the continuous controller, a value of PFAC_SP &lt; 1.0 can reduce the overshoot if the motor run time MTR_TM is small compared with the recovery time TA and the ratio is TU/TA &lt; 0.2. If MTR_TM reaches 20% of TA, only a slight improvement can still be achieved.
 
 #### Feedforward control
 

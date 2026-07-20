@@ -77,13 +77,13 @@ HmiSoftware hmiSoftware = null;
 
 Project project = null;
 
-IList<TiaPortalProcess> tiaProcessList = TiaPortal.GetProcesses();
+IList&lt;TiaPortalProcess&gt; tiaProcessList = TiaPortal.GetProcesses();
 
 //If no TIA Application instance is running, then following using statement will start it or
 
 //If TIA application is already running then will attach to it.
 
-TiaPortal tiaApp = tiaProcessList.Count > 0? tiaProcessList[0].Attach(): new TiaPortal(TiaPortalMode.WithUserInterface);
+TiaPortal tiaApp = tiaProcessList.Count &gt; 0? tiaProcessList[0].Attach(): new TiaPortal(TiaPortalMode.WithUserInterface);
 
 // tiaApp.Projects[X] defines the project which has to be opened
 
@@ -91,7 +91,7 @@ TiaPortal tiaApp = tiaProcessList.Count > 0? tiaProcessList[0].Attach(): new Tia
 
 // given TIA instance.
 
-if (tiaApp.Projects.Count > 0)
+if (tiaApp.Projects.Count &gt; 0)
 
 project = tiaApp.Projects[0];
 
@@ -137,7 +137,7 @@ foreach (DeviceItem deviceItem in deviceItems)
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 hmiSoftware = softwareContainer?.Software as HmiSoftware;
 
@@ -398,7 +398,7 @@ private void getCrossReferenceServiceforTag()
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 HmiSoftware hmiSoftware = softwareContainer.Software as HmiSoftware;
 
@@ -418,7 +418,7 @@ try
 
 {
 
-CrossReferenceService crossReferenceService = alarmClass.GetService<CrossReferenceService>();
+CrossReferenceService crossReferenceService = alarmClass.GetService&lt;CrossReferenceService&gt;();
 
 ......
 
@@ -880,7 +880,7 @@ The following properties are supported in analog alarm:
 | ConditionValue | Object supported type: Double, Int16, UInt16, Int32, UInt32, Int64, UInt64, Byte | Specifies the limit value for analog alarm which can be specified as constant value | R/W |
 | Condition | HmiAlarmCondition | Specifies the limit mode for an analog alarm | R/W |
 | InfoText | MultilingualText | Specifies the info text of an analog alarm | R/W |
-| AlarmParameterTags | Object SupportedType: IList<string> | An array of in maximum 10 elements specifies the alarm parameters in an alarm text. Each element of the array contains a tag name as string. | R/W |
+| AlarmParameterTags | Object SupportedType: IList&lt;string&gt; | An array of in maximum 10 elements specifies the alarm parameters in an alarm text. Each element of the array contains a tag name as string. | R/W |
 | EventText1 | MultilingualText | Specifies the additional text 1 of an analog alarm | R/W |
 | EventText2 | MultilingualText | Specifies the additional text 2 of an analog alarm | R/W |
 | EventText3 | MultilingualText | Specifies the additional text 3 of an analog alarm | R/W |
@@ -954,7 +954,7 @@ private void getCrossReferenceServiceforAnalogAlarm()
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 HmiSoftware hmiSoftware = softwareContainer.Software as HmiSoftware;
 
@@ -974,7 +974,7 @@ try
 
 {
 
-CrossReferenceService crossReferenceService = analogAlarm.GetService<CrossReferenceService>();
+CrossReferenceService crossReferenceService = analogAlarm.GetService&lt;CrossReferenceService&gt;();
 
 ......
 
@@ -1424,7 +1424,7 @@ private void getCrossReferenceServiceforConnection()
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 HmiSoftware hmiSoftware = softwareContainer.Software as HmiSoftware;  //Accessing lower levels
 
@@ -1442,7 +1442,7 @@ try
 
 {
 
-CrossReferenceService crossReferenceService = hmiConnection.GetService<CrossReferenceService>();
+CrossReferenceService crossReferenceService = hmiConnection.GetService&lt;CrossReferenceService&gt;();
 
 ......
 
@@ -1964,7 +1964,7 @@ private void getCrossReferenceServiceforDiscreteAlarm()
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 HmiSoftware hmiSoftware = softwareContainer.Software as HmiSoftware;  //Accessing lower levels until we reach the HmiTagComposition.
 
@@ -1980,7 +1980,7 @@ try
 
 {
 
-CrossReferenceService crossReferenceService = discreteAlarm.GetService<CrossReferenceService>();
+CrossReferenceService crossReferenceService = discreteAlarm.GetService&lt;CrossReferenceService&gt;();
 
 ......
 
@@ -2825,7 +2825,7 @@ HmiScreenComposition objScreens = hmisoftware.Screens;
 
 HmiScreen objHmiScreen = objScreens.Find("TestScreen");
 
-List<string> getlststring = new List<string>();
+List&lt;string&gt; getlststring = new List&lt;string&gt;();
 
 getlststring.Add("AlternateBackColor");
 
@@ -2901,7 +2901,7 @@ HmiScreenComposition objScreens = hmisoftware.Screens;
 
 HmiScreen objHmiScreen = objScreens.Find("Screen_1");
 
-Dictionary<string, object> setPropertyName = new Dictionary<string, object>();
+Dictionary&lt;string, object&gt; setPropertyName = new Dictionary&lt;string, object&gt;();
 
 setPropertyName.Add("AlternateBackColor", Color.Aqua);
 
@@ -3007,7 +3007,7 @@ HmiSoftware hmiSoftware = GetHmiSoftware ();
 
 HmiScreen objHmiScreen = hmiSoftware.Screens.Create("HmiScreen_1");
 
-IList<IValidator> objectsToValidate = new List<IValidator>();
+IList&lt;IValidator&gt; objectsToValidate = new List&lt;IValidator&gt;();
 
 foreach (var item in hmiSoftware.Screens)
 
@@ -3021,9 +3021,9 @@ foreach (IValidator validator in objectsToValidate)
 
 {
 
-IList<HmiValidationResult> errors = validator.Validate();
+IList&lt;HmiValidationResult&gt; errors = validator.Validate();
 
-if (errors != null && errors.Count > 0)
+if (errors != null &amp;&amp; errors.Count &gt; 0)
 
 {
 
@@ -3079,7 +3079,7 @@ private void AccessCrossReferenceServiceforScreen()
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 HmiSoftware hmiSoftware = softwareContainer.Software as HmiSoftware; //Accessing lower levels until we reach the ScreenComposition.
 
@@ -3095,7 +3095,7 @@ try
 
 {
 
-CrossReferenceService crossReferenceService = screen.GetService<CrossReferenceService>();
+CrossReferenceService crossReferenceService = screen.GetService&lt;CrossReferenceService&gt;();
 
 // ......
 
@@ -3337,7 +3337,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Create("Screen_21");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiLine hmiLine = screenitems.Create<HmiLine>("ScreenItems_1");
+HmiLine hmiLine = screenitems.Create&lt;HmiLine&gt;("ScreenItems_1");
 
 bool isexists = screenitems.Contains(hmiLine);
 
@@ -3408,7 +3408,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Create("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiSoftware.Screens[0].ScreenItems;
 
-HmiLine hmiLine = screenitems.Create<HmiLine>("ScreenItem_1");
+HmiLine hmiLine = screenitems.Create&lt;HmiLine&gt;("ScreenItem_1");
 
 }
 
@@ -3428,7 +3428,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiIOField hmiIOField = screenitems.Create<HmiIOField>("ScreenItem_1");
+HmiIOField hmiIOField = screenitems.Create&lt;HmiIOField&gt;("ScreenItem_1");
 
 }
 
@@ -3448,7 +3448,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiAlarmControl hmiAlarmControl = screenitems.Create<HmiAlarmControl>("ScreenItem_12");
+HmiAlarmControl hmiAlarmControl = screenitems.Create&lt;HmiAlarmControl&gt;("ScreenItem_12");
 
 }
 
@@ -3466,7 +3466,7 @@ HmiScreen hmiScreen= hmiSoftware.Screens.Find(screenName);
 
 HmiScreenItemBaseComposition screenItems = hmiSoftware.ScreenItems;
 
-HmiFaceplateContainer faceplate = screenItems.Create<HmiFaceplateContainer>(faceplatecontainerName);
+HmiFaceplateContainer faceplate = screenItems.Create&lt;HmiFaceplateContainer&gt;(faceplatecontainerName);
 
 }
 
@@ -3499,7 +3499,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiLine hmiLine = screenitems.Create<HmiLine>("ScreenItem_1");
+HmiLine hmiLine = screenitems.Create&lt;HmiLine&gt;("ScreenItem_1");
 
 if (hmiLine != null)
 
@@ -3685,7 +3685,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiCircle circle = screenitems.Create<HmiCircle>("Default Value55647");
+HmiCircle circle = screenitems.Create&lt;HmiCircle&gt;("Default Value55647");
 
 //Name
 
@@ -3711,7 +3711,7 @@ var tooltip = circle.ToolTipText;
 
 var tooltiptext = circle.ToolTipText.Items[0].Text;
 
-circle.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+circle.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //DashType
 
@@ -3783,7 +3783,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiCircularArc circulararc = screenitems.Create<HmiCircularArc>("Default Value57");
+HmiCircularArc circulararc = screenitems.Create&lt;HmiCircularArc&gt;("Default Value57");
 
 //Name
 
@@ -3809,7 +3809,7 @@ var tooltip = circulararc.ToolTipText;
 
 var tooltiptext = circulararc.ToolTipText.Items[0].Text;
 
-circulararc.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+circulararc.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //CapType
 
@@ -3886,7 +3886,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiCircleSegment circlesegment = screenitems.Create<HmiCircleSegment>("Default Value5987");
+HmiCircleSegment circlesegment = screenitems.Create&lt;HmiCircleSegment&gt;("Default Value5987");
 
 //Name
 
@@ -3912,7 +3912,7 @@ var tooltip = circlesegment.ToolTipText;
 
 var tooltiptext = circlesegment.ToolTipText.Items[0].Text;
 
-circlesegment.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+circlesegment.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 }
 
@@ -3980,7 +3980,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiEllipse ellipse = screenitems.Create<HmiEllipse>("Default Value5");
+HmiEllipse ellipse = screenitems.Create&lt;HmiEllipse&gt;("Default Value5");
 
 //Name
 
@@ -4006,7 +4006,7 @@ var tooltip = ellipse.ToolTipText;
 
 var tooltiptext = ellipse.ToolTipText.Items[0].Text;
 
-ellipse.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+ellipse.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //BackFillPattern
 
@@ -4079,7 +4079,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiEllipticalArc ellipticalarc = screenitems.Create<HmiEllipticalArc>("Default Value53987");
+HmiEllipticalArc ellipticalarc = screenitems.Create&lt;HmiEllipticalArc&gt;("Default Value53987");
 
 //Name
 
@@ -4105,7 +4105,7 @@ var tooltip = ellipticalarc.ToolTipText;
 
 var tooltiptext = ellipticalarc.ToolTipText.Items[0].Text;
 
-ellipticalarc.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+ellipticalarc.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //CapType
 
@@ -4181,7 +4181,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiEllipseSegment ellipsesegment = screenitems.Create<HmiEllipseSegment>("Default Value5");
+HmiEllipseSegment ellipsesegment = screenitems.Create&lt;HmiEllipseSegment&gt;("Default Value5");
 
 //Name
 
@@ -4207,7 +4207,7 @@ var tooltip = ellipse segmentsegment.ToolTipText;
 
 var tooltiptext = ellipse segmentsegment.ToolTipText.Items[0].Text;
 
-ellipse segmentsegment.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+ellipse segmentsegment.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //BackFillPattern
 
@@ -4273,7 +4273,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiGraphicView graphicview = screenitems.Create<HmiGraphicView>("Default Value35487");
+HmiGraphicView graphicview = screenitems.Create&lt;HmiGraphicView&gt;("Default Value35487");
 
 //Name
 
@@ -4299,7 +4299,7 @@ var tooltip = graphicview.ToolTipText;
 
 var tooltiptext = graphicview.ToolTipText.Items[0].Text;
 
-graphicview.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+graphicview.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //Padding
 
@@ -4414,7 +4414,7 @@ var tooltip = hmiline.ToolTipText;
 
 var tooltiptext = hmiline.ToolTipText.Items[0].Text;
 
-hmiline.ToolTipText.Items[0].Text = "<body><p>TestforMultilinugualProperty</p></body>";
+hmiline.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilinugualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //DashType
 
@@ -4512,7 +4512,7 @@ var tooltip = polyline.ToolTipText;
 
 var tooltiptext = polyline.ToolTipText.Items[0].Text;
 
-polyline.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+polyline.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //Joint Type
 
@@ -4630,7 +4630,7 @@ var tooltip = polygon.ToolTipText;
 
 var tooltiptext = polygon.ToolTipText.Items[0].Text;
 
-polygon.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+polygon.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //BackFillPattern
 
@@ -4721,7 +4721,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiRectangle rectangle = screenitems.Create<HmiRectangle>("Default Value3587");
+HmiRectangle rectangle = screenitems.Create&lt;HmiRectangle&gt;("Default Value3587");
 
 //Name
 
@@ -4747,7 +4747,7 @@ var tooltip = rectangle.ToolTipText;
 
 var tooltiptext = rectangle.ToolTipText.Items[0].Text;
 
-rectangle.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+rectangle.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //Corners
 
@@ -4840,7 +4840,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiTextBox textbox = screenitems.Create<HmiTextBox>("Default Value334554");
+HmiTextBox textbox = screenitems.Create&lt;HmiTextBox&gt;("Default Value334554");
 
 // To access basic property of textbox
 
@@ -4870,7 +4870,7 @@ var tooltip = textbox.ToolTipText;
 
 var tooltiptext = textbox.ToolTipText.Items[0].Text;
 
-textbox.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+textbox.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //To access other typical property of textbox
 
@@ -4991,7 +4991,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiBar bar = screenitems.Create<HmiBar>("Default Value334554");
+HmiBar bar = screenitems.Create&lt;HmiBar&gt;("Default Value334554");
 
 //Name
 
@@ -5017,7 +5017,7 @@ var tooltip = bar.ToolTipText;
 
 var tooltiptext = bar.ToolTipText.Items[0].Text;
 
-bar.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+bar.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //Font
 
@@ -5115,7 +5115,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiButton button = screenitems.Create<HmiButton>("Default Value354");
+HmiButton button = screenitems.Create&lt;HmiButton&gt;("Default Value354");
 
 //Name
 
@@ -5147,7 +5147,7 @@ MultilingualTextItemComposition textItemComp = mltprop.Items;
 
 MultilingualTextItem mlttextitem = textItemComp.Find(lang);
 
-mlttextitem.Text = <body><p>"TestforMultilingualProperty"</p></body>;
+mlttextitem.Text = &lt;body&gt;&lt;p&gt;"TestforMultilingualProperty"&lt;/p&gt;&lt;/body&gt;;
 
 //Padding
 
@@ -5227,7 +5227,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiCheckbox chkbox = screenitems.Create<HmiCheckbox>("Default Value1354");
+HmiCheckbox chkbox = screenitems.Create&lt;HmiCheckbox&gt;("Default Value1354");
 
 //Name
 
@@ -5347,7 +5347,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiClock clock = screenitems.Create<HmiClock>("Default Value334554");
+HmiClock clock = screenitems.Create&lt;HmiClock&gt;("Default Value334554");
 
 // To access basic properties of clock
 
@@ -5377,7 +5377,7 @@ var tooltip = clock.ToolTipText;
 
 var tooltiptext = clock.ToolTipText.Items[0].Text;
 
-clock.ToolTipText.Items[0].Text = <body><p>"TestforMultilingualProperty"</p></body>;
+clock.ToolTipText.Items[0].Text = &lt;body&gt;&lt;p&gt;"TestforMultilingualProperty"&lt;/p&gt;&lt;/body&gt;;
 
 // To access other typical properties
 
@@ -5484,7 +5484,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiGauge gauge = screenitems.Create<HmiGauge>("Default Value334554");
+HmiGauge gauge = screenitems.Create&lt;HmiGauge&gt;("Default Value334554");
 
 //Name
 
@@ -5510,13 +5510,13 @@ var tooltip = gauge.ToolTipText;
 
 var tooltiptext = gauge.ToolTipText.Items[0].Text;
 
-gauge.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+gauge.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //Font
 
 var title = gauge.Title;
 
-title.Text.items[0].Text = "<body><p>teststing</p></body>";
+title.Text.items[0].Text = "&lt;body&gt;&lt;p&gt;teststing&lt;/p&gt;&lt;/body&gt;";
 
 title.Visible = false;
 
@@ -5612,7 +5612,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiIOField iofield = screenitems.Create<HmiIOField>("Default Value354");
+HmiIOField iofield = screenitems.Create&lt;HmiIOField&gt;("Default Value354");
 
 //Name
 
@@ -5692,7 +5692,7 @@ The following properties are supported in listbox screen items:
 | RotationCenterX | float | Specifies the X pivot point of listbox | R/W |
 | RotationCenterY | float | Specifies the Y pivot point of listbox | R/W |
 | SelectionItemHeight | uint16 | Specifies the selected item height of listbox | R/W |
-| SelectionItems | IList<IHmiSelectionItemPart> | Specifies the selected items of listbox | R |
+| SelectionItems | IList&lt;IHmiSelectionItemPart&gt; | Specifies the selected items of listbox | R |
 | SelectionMode | HmiSelectionMode | Specifies the selected mode of listbox | R/W |
 | SelectorPosition | HmiHorizontalAlignment | Specifies the selected position of listbox | R/W |
 | Opacity | float | Specifies the opacity of listbox  The value of Opacity should lie between 0 - 1 | R/W |
@@ -5724,7 +5724,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiListBox listbox = screenitems.Create<HmiListBox>("Default Value334554");
+HmiListBox listbox = screenitems.Create&lt;HmiListBox&gt;("Default Value334554");
 
 //Name
 
@@ -5823,7 +5823,7 @@ The following properties are supported in radio button screen items:
 | RotationCenterX | float | Specifies the X pivot point of radio button | R/W |
 | RotationCenterY | float | Specifies the Y pivot point of radio button | R/W |
 | SelectionItemHeight | uint16 | Specifies the selection item height of radio button | R/W |
-| SelectionItems | IList<IHmiSelectionItemPart> | Specifies the selection items of radio button | R |
+| SelectionItems | IList&lt;IHmiSelectionItemPart&gt; | Specifies the selection items of radio button | R |
 | SelectorPosition | HmiHorizontalAlignment | Specifies the selector position of radio button | R |
 | Opacity | float | Specifies the opacity of radio button  The value of Opacity should lie between 0 - 1 | R/W |
 | RotationCenterPlacement | HmiRotationCenterPlacement | Specifies the pivot of radio button | R/W |
@@ -5854,7 +5854,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiRadioButtonGroup radio = screenitems.Create<HmiRadioButtonGroup>("Default Value334554");
+HmiRadioButtonGroup radio = screenitems.Create&lt;HmiRadioButtonGroup&gt;("Default Value334554");
 
 // To access basic properties
 
@@ -6005,7 +6005,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiSlider slider = screenitems.Create<HmiSlider>("Default Value334554");
+HmiSlider slider = screenitems.Create&lt;HmiSlider&gt;("Default Value334554");
 
 // To access basic properties of slider
 
@@ -6139,7 +6139,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiScreen.ScreenItems;
 
-HmiToggleSwitch toggleswitch = screenitems.Create<HmiToggleSwitch>("Default Value354");
+HmiToggleSwitch toggleswitch = screenitems.Create&lt;HmiToggleSwitch&gt;("Default Value354");
 
 //Name
 
@@ -6256,7 +6256,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenItems = hmiScreen.ScreenItems
 
-HmiSymbolicIOField objSymbField = screenItems.Create<HmiSymbolicIOField>("Screen_object_1");
+HmiSymbolicIOField objSymbField = screenItems.Create&lt;HmiSymbolicIOField&gt;("Screen_object_1");
 
 //Left
 
@@ -6264,7 +6264,7 @@ objSymbField.Left = 1;
 
 //ToolTipText
 
-objSymbField.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+objSymbField.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 }
 
@@ -6314,7 +6314,7 @@ HmiScreen screen = hmiSoftware.Screens.Find("Screen_1");
 
 HmiScreenItemBaseComposition screenItems = hmiScreen.ScreenItems;
 
-HmiTouchArea objTouchArea = screenItems.Create<HmiTouchArea>("Screen_object_1");
+HmiTouchArea objTouchArea = screenItems.Create&lt;HmiTouchArea&gt;("Screen_object_1");
 
 //Left
 
@@ -6404,7 +6404,7 @@ var screen = hmiSoftware.Screens;
 
 var createdscreen = screen.Create("TestScreen_1");
 
-var hmialarmcontrol= Createdscreen.ScreenItems.Create<HmiAlarmControl>("HmiAlarmControl_1");
+var hmialarmcontrol= Createdscreen.ScreenItems.Create&lt;HmiAlarmControl&gt;("HmiAlarmControl_1");
 
 // Basic properties Access
 
@@ -6432,7 +6432,7 @@ hmialarmcontrol.Name = "DefaultName";
 
 var caption = hmialarmcontrol.Caption;
 
-IHmiWindowFeature.Caption.Text.Items[0].Text = "<body><p>TestforMultilingualProperty</body></p>";
+IHmiWindowFeature.Caption.Text.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/body&gt;&lt;/p&gt;";
 
 // Access other typical properties
 
@@ -6508,7 +6508,7 @@ HmiSoftware hmiSoftware = GetHmiSoftware();
 
 HmiScreen screen = hmiSoftware.Screens.Create("Screen_164");
 
-HmiFunctionTrendControl hmifunctiontrendcontrol = screen.ScreenItems.Create<HmiFunctionTrendControl>("CTrendControl");
+HmiFunctionTrendControl hmifunctiontrendcontrol = screen.ScreenItems.Create&lt;HmiFunctionTrendControl&gt;("CTrendControl");
 
 // To access basic properties of function function trend control
 
@@ -6536,7 +6536,7 @@ hmifunctiontrendcontrol.Name = "DefaultName";
 
 var caption = hmifunctiontrendcontrol.Caption.Items[0].Text;
 
-hmifunctiontrendcontrol.Caption.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+hmifunctiontrendcontrol.Caption.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 // To access other typical properties
 
@@ -6574,7 +6574,7 @@ var screen = hmiSoftware.Screens;
 
 var createdscreen = screen.Create("TestScreen_1");
 
-HmiFunctionTrendControl hmifunctiontrendcontrol = hmiSoftware.Screens[0].ScreenItems.Create<HmiFunctionTrendControl>("CTrendControl_1");
+HmiFunctionTrendControl hmifunctiontrendcontrol = hmiSoftware.Screens[0].ScreenItems.Create&lt;HmiFunctionTrendControl&gt;("CTrendControl_1");
 
 HmiFunctionTrendAreaPart part = hmifunctiontrendcontrol.FunctionTrendAreas.Create("part1");
 
@@ -6655,7 +6655,7 @@ var screen = hmiSoftware.Screens;
 
 var createdscreen = screen.Create("TestScreen_156");
 
-var hmimediacontrol = createdscreen.ScreenItems.Create<HmiMediaControl>("HmiMediaControl_1");
+var hmimediacontrol = createdscreen.ScreenItems.Create&lt;HmiMediaControl&gt;("HmiMediaControl_1");
 
 // To access basic properties
 
@@ -6683,7 +6683,7 @@ hmimediacontrol.Name = "DefaultName";
 
 var caption = hmimediacontrol.Caption.Items[0].Text;
 
-hmimediacontrol.Caption.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+hmimediacontrol.Caption.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 // To access other typical propeties
 
@@ -6777,7 +6777,7 @@ hmiprocesscontrol.Name = "DefaultName";
 
 var caption = hmiprocesscontrol.Caption.Items[0].Text;
 
-hmiprocesscontrol.Caption.Items[0].Text= "<body><p>TestforMultilingualProperty</p></body>";
+hmiprocesscontrol.Caption.Items[0].Text= "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 // To access other typical properties
 
@@ -6854,7 +6854,7 @@ HmiSoftware hmiSoftware = GetHmiSoftware();
 
 HmiScreen screen = hmiSoftware.Screens.Create("TestScreen");
 
-HmiDetailedParameterControl hmidetailedparametercontrol = screen.ScreenItems.Create<HmiDetailedParameterControl>("ParameterControl_1");
+HmiDetailedParameterControl hmidetailedparametercontrol = screen.ScreenItems.Create&lt;HmiDetailedParameterControl&gt;("ParameterControl_1");
 
 // To access basic properties
 
@@ -6882,7 +6882,7 @@ hmidetailedparametercontrol.Name = "Default";
 
 var caption = hmidetailedparametercontrol.Caption.Items[0].Text;
 
-hmidetailedparametercontrol.Caption.Items[0].Text= "<body><p>TestforMultilingualProperty</p></body>";
+hmidetailedparametercontrol.Caption.Items[0].Text= "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 // To access other typical property
 
@@ -6961,7 +6961,7 @@ var screen = hmiSoftware.Screens;
 
 var createdscreen = screen.Create("TestScreen_15666");
 
-var hmiscreenwindow = createdscreen.ScreenItems.Create<HmiScreenWindow>("HmiScreenWindow_1")
+var hmiscreenwindow = createdscreen.ScreenItems.Create&lt;HmiScreenWindow&gt;("HmiScreenWindow_1")
 
 // To access basis property of screen window
 
@@ -6987,7 +6987,7 @@ hmiscreenwindow.Name = "DefaultName";
 
 // Caption
 
-hmiscreenwindow.Caption.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+hmiscreenwindow.Caption.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 }
 
@@ -7035,7 +7035,7 @@ HmiSoftware hmiSoftware = GetHmiSoftware();
 
 HmiScreen screen = hmiSoftware.Screens.Create("Screen_1");
 
-HmiSystemDiagnosisControl syscontrol = screen.ScreenItems.Create<HmiSystemDiagnosisControl>("SysDiag_1");
+HmiSystemDiagnosisControl syscontrol = screen.ScreenItems.Create&lt;HmiSystemDiagnosisControl&gt;("SysDiag_1");
 
 syscontrol.SystemDiagnosisView.RowHeight = 50;
 
@@ -7105,7 +7105,7 @@ HmiSoftware hmiSoftware = GetHmiSoftware();
 
 HmiScreen screen = hmiSoftware.Screens.Create("Screen_164");
 
-HmiFunctionTrendControl hmitrendcontrol = screen.ScreenItems.Create<HmiFunctionTrendControl>("CTrendControl");
+HmiFunctionTrendControl hmitrendcontrol = screen.ScreenItems.Create&lt;HmiFunctionTrendControl&gt;("CTrendControl");
 
 // To access basic properties
 
@@ -7133,7 +7133,7 @@ hmitrendcontrol.Name = "DefaultName";
 
 var caption = hmitrendcontrol.Caption.Items[0].Text;
 
-hmitrendcontrol.Caption.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+hmitrendcontrol.Caption.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 //To access other typical properties
 
@@ -7213,7 +7213,7 @@ var screen = hmiSoftware.Screens;
 
 var createdscreen = screen.Create("TestScreen_1566");
 
-var hmitrendcompanion = createdscreen.ScreenItems.Create<HmiTrendCompanion>("HmiTrendCompanion_1");  
+var hmitrendcompanion = createdscreen.ScreenItems.Create&lt;HmiTrendCompanion&gt;("HmiTrendCompanion_1");  
 // To access basic properties
 
 //Width
@@ -7240,7 +7240,7 @@ hmitrendcompanion.Name = "DefaultName";
 
 var caption = hmitrendcompanion.Caption.Items[0].Text;
 
-hmitrendcompanion.Caption.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+hmitrendcompanion.Caption.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 // To access other typical properties
 
@@ -7311,7 +7311,7 @@ var screen = hmiSoftware.Screens;
 
 var createdscreen = screen.Create("TestScreen_1566");
 
-var hmiwebcontrol = createdscreen.ScreenItems.Create<HmiWebControl>("HmiWebControl_1")
+var hmiwebcontrol = createdscreen.ScreenItems.Create&lt;HmiWebControl&gt;("HmiWebControl_1")
 
 // To access basic property
 
@@ -7339,7 +7339,7 @@ hmiwebcontrol.Name = "DefaultName";
 
 var caption = hmiwebcontrol.Caption.Items[0].Text;
 
-hmiwebcontrol.Caption.Items[0].Text= "<body><p>TestforMultilingualProperty</p></body>";
+hmiwebcontrol.Caption.Items[0].Text= "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 // To access other typical properties
 
@@ -7439,7 +7439,7 @@ private void IsFaceplateContainerExist(HmiSoftware hmiSoftware)
 
 HmiScreenItemBaseComposition screenitems = hmiSoftware.Screens[0].ScreenItems;
 
-HmiFaceplateContainer faceplate = screenitems.Create<HmiFaceplateContainer>("Faceplate_1");
+HmiFaceplateContainer faceplate = screenitems.Create&lt;HmiFaceplateContainer&gt;("Faceplate_1");
 
 bool isexists = screenitems.Contains(faceplate);
 
@@ -7476,7 +7476,7 @@ HmiScreen hmiScreen= hmiSoftware.Screens.Create(screenName);
 
 HmiScreenItemBaseComposition screenitems = hmiSoftware.Screens[0].ScreenItems;
 
-HmiFaceplateContainer faceplate = hmiScreen.ScreenItems.Create<HmiFaceplateContainer>(FacePlateContainerName);
+HmiFaceplateContainer faceplate = hmiScreen.ScreenItems.Create&lt;HmiFaceplateContainer&gt;(FacePlateContainerName);
 
 }
 
@@ -7501,7 +7501,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Create("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiSoftware.Screens[0].ScreenItems;
 
-HmiFaceplateContainer faceplate = hmiScreen.ScreenItems.Create<HmiFaceplateContainerName>(FaceplateContainerName);
+HmiFaceplateContainer faceplate = hmiScreen.ScreenItems.Create&lt;HmiFaceplateContainerName&gt;(FaceplateContainerName);
 
 If (faceplate! = null)
 
@@ -7525,7 +7525,7 @@ HmiScreen hmiScreen = hmiSoftware.Screens.Create ("Screen_1");
 
 HmiScreenItemBaseComposition screenitems = hmiSoftware.Screens[0].ScreenItems;
 
-HmiFaceplateContainer faceplate = hmiScreen.ScreenItems.Create<HmiFaceplateContainer>(FacePlateContainerName);
+HmiFaceplateContainer faceplate = hmiScreen.ScreenItems.Create&lt;HmiFaceplateContainer&gt;(FacePlateContainerName);
 
 IEngineeringObject ObjhmiLineEnggObj = faceplate;
 
@@ -7852,9 +7852,9 @@ HmiScreenComposition screens = hmiSoftware.Screens;
 
 HmiScreen screen = screens.Create("Screen_1");
 
-HmiCustomWebControlContainer plantOverview = screen.ScreenItems.Create<HmiCustomWebControlContainer>("DefaultName", "Siemens.CPM");
+HmiCustomWebControlContainer plantOverview = screen.ScreenItems.Create&lt;HmiCustomWebControlContainer&gt;("DefaultName", "Siemens.CPM");
 
-HmiCustomWebControlContainer reports = screen.ScreenItems.Create<HmiCustomWebControlContainer>("DefaultName_1", "Siemens.REP");
+HmiCustomWebControlContainer reports = screen.ScreenItems.Create&lt;HmiCustomWebControlContainer&gt;("DefaultName_1", "Siemens.REP");
 
 // Access basic properties of plant overview control of type HmiCustom Web Control Container
 
@@ -7872,7 +7872,7 @@ HmiCustomControlInterfaceComposition customControlInterfaceComposition = plantOv
 
 var count = customControlInterfaceComposition.Count;
 
-if (count > 0)
+if (count &gt; 0)
 
 {
 
@@ -7896,7 +7896,7 @@ customControlInterface.Value = Color.Blue;
 
 ///*--------------------Alternative　Way-------------------------*/
 
-HmiCustomControlInterface selectionBackColorProperty　= customControlInterfaceComposition.FirstOrDefault(x => x.PropertyName == "SelectionBackColor");
+HmiCustomControlInterface selectionBackColorProperty　= customControlInterfaceComposition.FirstOrDefault(x =&gt; x.PropertyName == "SelectionBackColor");
 
 if (selectionBackColorProperty != null)
 
@@ -7973,7 +7973,7 @@ HmiScreenComposition screens = hmiSoftware.Screens;
 
 HmiScreen screen = hmiSoftware.Screens.Create("Screen_1");
 
-HmiCustomWidgetContainer flame = screen.ScreenItems.Create<HmiCustomWidgetContainer>("Flame_1", "extended.Flame");
+HmiCustomWidgetContainer flame = screen.ScreenItems.Create&lt;HmiCustomWidgetContainer&gt;("Flame_1", "extended.Flame");
 
 //Left
 
@@ -7981,7 +7981,7 @@ flame.Left = 1;
 
 //ToolTipText
 
-flame.ToolTipText.Items[0].Text = "<body><p>TestforMultilingualProperty</p></body>";
+flame.ToolTipText.Items[0].Text = "&lt;body&gt;&lt;p&gt;TestforMultilingualProperty&lt;/p&gt;&lt;/body&gt;";
 
 }
 
@@ -7990,7 +7990,7 @@ clipboard
 >
 > Correct value corresponding to parameter ‘containedTypeValue’ is must, in-order to create custom control.
 >
-> The keyword "extended.<Widgetname>" should be used for creating any custom widget container using TIA Portal Openness as we use Original name mentioned in the Manifest instead of using a Displayname.
+> The keyword "extended.&lt;Widgetname&gt;" should be used for creating any custom widget container using TIA Portal Openness as we use Original name mentioned in the Manifest instead of using a Displayname.
 
 ##### PropertyEventHandlers (RT Unified)
 
@@ -8018,7 +8018,7 @@ private void AccessPropertyEvent(HmiSoftware hmiSoftware)
 
 HmiScreen screen = ((HmiSoftware)targetSW).Screens.Create("MyScreen");
 
-HmiCircle hmiCircle = screen.ScreenItems.Create<HmiCircle>("MYCircle");
+HmiCircle hmiCircle = screen.ScreenItems.Create&lt;HmiCircle&gt;("MYCircle");
 
 var hmiScreenPropeventDyn = screen.PropertyEventHandlers.Create(“Enabled”, PropertyEventType.Change);
 
@@ -8057,7 +8057,7 @@ private void CreatePropertyEventHandler(HmiSoftware hmiSoftware)
 
 HmiScreen screen = ((HmiSoftware)targetSW).Screens.Create("MyScreen");
 
-HmiCircle hmiCircle = screen.ScreenItems.Create<HmiCircle>("MYCircle");
+HmiCircle hmiCircle = screen.ScreenItems.Create&lt;HmiCircle&gt;("MYCircle");
 
 //Event Creation
 
@@ -8146,7 +8146,7 @@ private void AccessCrossReferenceService()
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 HmiSoftware hmiSoftware = softwareContainer.Software as HmiSoftware;  //Accessing lower levels until we reach the ScreenComposition.
 
@@ -8164,7 +8164,7 @@ try
 
 {
 
-CrossReferenceService crossReferenceService = hmiScreenControl.GetService<CrossReferenceService>();
+CrossReferenceService crossReferenceService = hmiScreenControl.GetService&lt;CrossReferenceService&gt;();
 
 // ......
 
@@ -8596,7 +8596,7 @@ The following properties are supported in tag, which are also applicable to tag 
 | PlcStartValue | Object | Specifies the start value range on the PLC tag to map linearly to the start value range on the Hmi tag | R/W |
 | PlcEndValue | Object | Specifies the end value range on the PLC tag to map linearly to the end value range on the Hmi tag | R/W |
 | GmpRelevant | Boolean | Specifies the changes to the tag value logged in an audit trail | R/W |
-| TagType | Enum->TagType | Specifies the type of tag for example if tag type is simple, user defined datatype, and array |  |
+| TagType | Enum-&gt;TagType | Specifies the type of tag for example if tag type is simple, user defined datatype, and array |  |
 | Members | HmiTagComposition  (HmiTag which is of UDT data type consists of member which itself are Tags.) | Specifies collection of member tags of user defined data type or element tags of array respectively.   You can access properties of member tags of user defined dataype, please refer the instruction mentioned in [Accessing tag member properties of user defined type](#accessing-tag-member-properties-of-user-defined-type-rt-unified) |  |
 
 The following properties are available in LowerRange/UpperRange:
@@ -8939,7 +8939,7 @@ private void getCrossReferenceServiceforTag()
 
 {
 
-SoftwareContainer softwareContainer = deviceItem.GetService<SoftwareContainer>();
+SoftwareContainer softwareContainer = deviceItem.GetService&lt;SoftwareContainer&gt;();
 
 HmiSoftware hmiSoftware = softwareContainer.Software as HmiSoftware;  //Accessing lower levels until we reach the HmiTagComposition.
 
@@ -8955,7 +8955,7 @@ try
 
 {
 
-CrossReferenceService crossReferenceService = hmiTag.GetService<CrossReferenceService>();
+CrossReferenceService crossReferenceService = hmiTag.GetService&lt;CrossReferenceService&gt;();
 
 ......
 
@@ -9247,9 +9247,9 @@ When a tag table is exported to a particular folder location, the following cont
 
 ##### YAML File structure
 
-The structure of the YAML file will be as seen below. It can be opened & edited in any simple text editor like Notepad, Microsoft word, Notepad++, etc. :
+The structure of the YAML file will be as seen below. It can be opened &amp; edited in any simple text editor like Notepad, Microsoft word, Notepad++, etc. :
 
-The overall configuration will be seen in property name & property value format which makes it easy to read and modify the configuration.
+The overall configuration will be seen in property name &amp; property value format which makes it easy to read and modify the configuration.
 
 #Version: 2.0
 
@@ -9396,7 +9396,7 @@ HmiTagTable tagTable = tables.Find(tagTableName.Text);
 
 \\Create a file name "ExportedTable" in specific directory by using Export() that includes the details of tag table.
 
-IList<FileInfo> Exportresult = tagTable.Tags.Export(directoryInfo,"ExportedTable").ToList();
+IList&lt;FileInfo&gt; Exportresult = tagTable.Tags.Export(directoryInfo,"ExportedTable").ToList();
 
 clipboard
 
@@ -9583,7 +9583,7 @@ This section contains information on the following topics:
 - [Accessing properties for interface/logging tags of plant object instances (RT Unified)](#accessing-properties-for-interfacelogging-tags-of-plant-object-instances-rt-unified)
 - [Checking license for access Unified device (RT Unified)](#checking-license-for-access-unified-device-rt-unified)
 - [Getting Cross References for WinCC Unified (RT Unified)](#getting-cross-references-for-wincc-unified-rt-unified)
-- [Working with dynamization & events for screen/screen items using scripts (RT Unified)](#working-with-dynamization-events-for-screenscreen-items-using-scripts-rt-unified)
+- [Working with dynamization &amp; events for screen/screen items using scripts (RT Unified)](#working-with-dynamization-events-for-screenscreen-items-using-scripts-rt-unified)
 - [Working with dynamization for screens/screen items (RT Unified)](#working-with-dynamization-for-screensscreen-items-rt-unified)
 
 ### Rename properties and data types (RT Unified)
@@ -9604,7 +9604,7 @@ Following table shows required changes to have consistent name and data type for
 | --- | --- | --- | --- | --- |
 | Analog Alarm | AnalogAlarms | - | AnalogAlarmComposition | HmiAnalogAlarmComposition |
 | Discrete Alarm | DiscreteAlarms | - | DiscreteAlarmComposition | HmiDiscreteAlarmComposition |
-| OPC UA Alarm & Condition types | OpcUaAlarmTypes | - | OpcUaAlarmTypeComposition | HmiOpcUaAlarmTypeComposition |
+| OPC UA Alarm &amp; Condition types | OpcUaAlarmTypes | - | OpcUaAlarmTypeComposition | HmiOpcUaAlarmTypeComposition |
 | Alarm Class | AlarmClasses | - | AlarmClassComposition | HmiAlarmClassComposition |
 | Tag Table | HmiTagTables | TagTables | HmiTagTableComposition | - |
 | Tag | HmiTags | Tags | HmiTagComposition | - |
@@ -9628,7 +9628,7 @@ Following table shows required changes to have consistent name for classes for H
 | --- | --- | --- |
 | Analog Alarm | AnalogAlarm | HmiAnalogAlarm |
 | Discrete Alarm | DiscreteAlarm | HmiDiscreteAlarm |
-| OPC UA Alarm & Condition types | HmiOpcUaAlarmType | HmiOpcUaAlarmType |
+| OPC UA Alarm &amp; Condition types | HmiOpcUaAlarmType | HmiOpcUaAlarmType |
 | Alarm Class | AlarmClass | HmiAlarmClass |
 | Tag Table | HmiTagTable | - |
 | Tag | HmiTag | - |
@@ -9884,7 +9884,7 @@ clipboard
 
 #### Introduction
 
-You can use the TIA Portal Openness to have complete access to the dynamization by simple dynamics. The Screen & its Screen items can be dynamized using one of the following simple dynamization options :
+You can use the TIA Portal Openness to have complete access to the dynamization by simple dynamics. The Screen &amp; its Screen items can be dynamized using one of the following simple dynamization options :
 
 - Range
 - Multiple bits
@@ -10712,7 +10712,7 @@ The following properties can be accessed on interface tags of CPM plant object i
 
 > **Note**
 >
-> PLCTag & Connection property can only be configured after assigning Hmi device to the plant view.
+> PLCTag &amp; Connection property can only be configured after assigning Hmi device to the plant view.
 
 ##### Requirement
 
@@ -11187,7 +11187,7 @@ Public void GetCrossReferences()
 
 {
 
-CrossReferenceService crossReferenceService = HmiScreen.GetService<CrossReferenceService>();
+CrossReferenceService crossReferenceService = HmiScreen.GetService&lt;CrossReferenceService&gt;();
 
 CrossReferenceResult rootResultObject = crossReferenceService.GetCrossReferences(CrossReferenceFilter.AllObjects);
 
@@ -11217,7 +11217,7 @@ foreach (ReferenceObject referenceObject in referenceObjects)
 
 // Needs similar casting for each type as seen in source object example snippet
 
-if (source.UnderlyingObject != null && source.UnderlyingObject is HmiScreenItemBase)
+if (source.UnderlyingObject != null &amp;&amp; source.UnderlyingObject is HmiScreenItemBase)
 
 {
 

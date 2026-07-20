@@ -1619,7 +1619,7 @@ PROFIBUS DP is a PROFIBUS (Process Field Bus) with DP protocol (Decentralized Pe
 
 ### PROFIdrive
 
-PROFIdrive is the modular, cross-vendor device profile for drive units from "Profibus & Profinet International (PI)". PROFIdrive was developed jointly by automation technology vendors and users in the 1990s and, in conjunction with the PROFIBUS field bus and PROFINET industrial Ethernet, covers the entire range from very simple to extremely complex drive solutions.
+PROFIdrive is the modular, cross-vendor device profile for drive units from "Profibus &amp; Profinet International (PI)". PROFIdrive was developed jointly by automation technology vendors and users in the 1990s and, in conjunction with the PROFIBUS field bus and PROFINET industrial Ethernet, covers the entire range from very simple to extremely complex drive solutions.
 
  
 
@@ -1757,7 +1757,7 @@ Link that allows data access from a software unit to an object outside the softw
 
 ### Reluctance motor (REL)
 
-A synchronous motor with three-phase stator winding, without rotor winding and without permanent magnets in the rotor. The rotor, which is normally laminated, is designed in such a way that small and large air gaps (pole and pole gap, so to speak) occur alternately. This results in a simple construction but a much lower power density than with a comparable permanent-magnet "synchronous motor". Use only with small outputs < approx. 1 kW.
+A synchronous motor with three-phase stator winding, without rotor winding and without permanent magnets in the rotor. The rotor, which is normally laminated, is designed in such a way that small and large air gaps (pole and pole gap, so to speak) occur alternately. This results in a simple construction but a much lower power density than with a comparable permanent-magnet "synchronous motor". Use only with small outputs &lt; approx. 1 kW.
 
  
 
@@ -2166,7 +2166,7 @@ The trigger condition determines whether or not selected tags are to be monitore
 
 ### Trigger point
 
-The trigger point is a defined point during the user program, for example, at the beginning of the cycle, at the end of the cycle, at a RUN --> STOP transition. The trigger point determines when selected tags are to be monitored or modified during the user program.
+The trigger point is a defined point during the user program, for example, at the beginning of the cycle, at the end of the cycle, at a RUN --&gt; STOP transition. The trigger point determines when selected tags are to be monitored or modified during the user program.
 
  
 

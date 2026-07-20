@@ -100,7 +100,7 @@ Below you will find an overview of the general mode of operation with Multiuser 
 
 You can find an application example for working with Multiuser Engineering at:
 
-<https://support.industry.siemens.com/cs/ww/en/view/109740141>
+[https://support.industry.siemens.com/cs/ww/en/view/109740141](https://support.industry.siemens.com/cs/ww/en/view/109740141)
 
 ### Requirements for working with Multiuser Engineering
 
@@ -273,7 +273,7 @@ The following rules apply:
 
 The same hardware and software requirements as for working with TIA Portal apply to working with Multiuser Engineering .
 
-For information about the regulations in place for the products you have installed, go to "Installation > [System requirements for installation](Installation.md#system-requirements-for-installation)".
+For information about the regulations in place for the products you have installed, go to "Installation &gt; [System requirements for installation](Installation.md#system-requirements-for-installation)".
 
 > **Note**
 >
@@ -312,7 +312,7 @@ A detailed description of the procedure is available under "[Installing the proj
 
 You have the option of setting the required performance capability for the network profile you are using in the settings for the TIA Portal.
 
-To do so, select the required profile from the drop-down list in TIA Portal under "Options > Settings > Project server > Server network profiles".
+To do so, select the required profile from the drop-down list in TIA Portal under "Options &gt; Settings &gt; Project server &gt; Server network profiles".
 
 You will find a detailed description of the network profiles under: "[Set network profiles for project server](#set-network-profiles-for-project-server)"
 
@@ -361,7 +361,7 @@ The following restrictions apply to archiving and retrieving multiuser projects:
 
 When working with Multiuser Engineering, you can open a locally stored session as a reference project.
 
-You can find additional information on working with reference projects here: "Edit projects > [Use reference projects](Editing%20projects.md#using-reference-projects)"
+You can find additional information on working with reference projects here: "Edit projects &gt; [Use reference projects](Editing%20projects.md#using-reference-projects)"
 
 ### Length of the path and file names in Multiuser Engineering
 
@@ -495,7 +495,7 @@ To edit STEP 7 CFC charts via Multiuser Engineering, use "Multiuser Commission
 
 More information:
 
-- "Programming PLC > Creating and technologically configuring CFC charts > Working with CFC charts for S7 > Multiuser engineering in CFC."
+- "Programming PLC &gt; Creating and technologically configuring CFC charts &gt; Working with CFC charts for S7 &gt; Multiuser engineering in CFC."
 
 **Online mode**
 
@@ -521,7 +521,7 @@ The following objects are supported in CFC charts:
 
 ### Introduction
 
-To work with Multiuser Engineering , you can make the following settings under "Extras > Settings" in the "Multiuser" tab in TIA Portal:
+To work with Multiuser Engineering , you can make the following settings under "Extras &gt; Settings" in the "Multiuser" tab in TIA Portal:
 
 - General
 - Searching in the project
@@ -705,7 +705,7 @@ More information:
 
 - "[Managing global libraries as server libraries](#managing-global-libraries-as-server-libraries)"
 - "[Creating a local session of a server library](#creating-a-local-session-of-a-server-library)"
-- "Using libraries > Using global libraries > [Using Multiuser Engineering for global libraries](Using%20libraries.md#managing-global-libraries-in-the-project-server)"
+- "Using libraries &gt; Using global libraries &gt; [Using Multiuser Engineering for global libraries](Using%20libraries.md#managing-global-libraries-in-the-project-server)"
 
 ### Multiuser Engineering: Exclusive Multiuser mode
 
@@ -793,7 +793,7 @@ The following application cases may occur when working without server connection
   - When you click "Discard", the changes you have made in the server project view are discarded and the local session opens.
   - Because there is no server connection when the local session opens, a dialog with a corresponding message is displayed.
   - When you click "Restore", you can continue working offline.
-- **You have decided to "work offline" from the very beginning and have selected this option in the TIA Portal under "Project > Multiuser > Work offline".**
+- **You have decided to "work offline" from the very beginning and have selected this option in the TIA Portal under "Project &gt; Multiuser &gt; Work offline".**
 
 ### Restrictions for "Work offline"
 
@@ -807,7 +807,7 @@ The following restrictions apply for working in offline mode:
 
 ### Switching between "Working online and offline"
 
-You can use the command "Project > Multiuser > Work offline" to switch between online and offline mode when working with Multiuser Engineering .
+You can use the command "Project &gt; Multiuser &gt; Work offline" to switch between online and offline mode when working with Multiuser Engineering .
 
 The default is "Work online". If you click on the check box in front of the "Work offline" command, the system switches to offline mode. In the local session, the symbol for the active server connection changes from a green circle to a light-gray circle. When you clear the "Work offline" check box, the server connection is established once again. Once the server connection has been successfully established, the server status is again indicated with a green circle.
 
@@ -852,7 +852,7 @@ The Multiuser Engineering user interface shows the following icons in the toolba
 | ![Multiuser icons in the toolbar](images/125655281931_DV_resource.Stream@PNG-de-DE.png) | **Server status "locked for other users"**   This icon indicates that the associated project server is "locked" for other users because you are currently using it. |
 | ![Multiuser icons in the toolbar](images/88369531915_DV_resource.Stream@PNG-de-DE.png) | **Server status "locked"**   This icon indicates that the associated project server is currently being used by a user and is therefore locked.  The server is then also displayed as locked when a user is working in the server project view.  If you place the mouse pointer on this icon, you will receive additional information about the lock. |
 | ![Multiuser icons in the toolbar](images/88369535627_DV_resource.Stream@PNG-de-DE.png) | **Server status "not connected"**   This icon indicates that the associated project server is not connected. |
-| ![Multiuser icons in the toolbar](images/103395513995_DV_resource.Stream@PNG-de-DE.png) | **"Work offline" server status**   This symbol indicates that no connection is established to the project server, since you have enabled the "Work offline" function.  To re-establish a connection to the project server deactivate the check box under "Project > Multiuser > Work offline". |
+| ![Multiuser icons in the toolbar](images/103395513995_DV_resource.Stream@PNG-de-DE.png) | **"Work offline" server status**   This symbol indicates that no connection is established to the project server, since you have enabled the "Work offline" function.  To re-establish a connection to the project server deactivate the check box under "Project &gt; Multiuser &gt; Work offline". |
 | ![Multiuser icons in the toolbar](images/84859545739_DV_resource.Stream@PNG-de-DE.png) | This overlay icon shows that a newer version of the server project is available on the project server. |
 
 #### "Libraries" task card
@@ -1240,7 +1240,7 @@ The project server has the following properties:
 - The project server can be started and administered outside the TIA Portal.
 - You configure and manage the connections from the project server to TIA Portal via the settings in the TIA Portal.
 
-  In the TIA Portal, call the settings for the project server via the command "Options > Settings > Project server".
+  In the TIA Portal, call the settings for the project server via the command "Options &gt; Settings &gt; Project server".
 - The "alias" assigned as the name for the project server is used as an identifier and may not be changed at a later point in time.
 
 #### Microsoft system account for project server
@@ -1330,7 +1330,7 @@ No compression is used for the network profile "Fast".
 
 To set the network profiles for the project server in TIA Portal, follow these steps:
 
-1. In TIA Portal, select the command "Options > Settings > Project server".
+1. In TIA Portal, select the command "Options &gt; Settings &gt; Project server".
 
    The settings displayed below contain the available options for the network profiles.
 2. From the drop-down list for "Network profiles", select the desired profile.
@@ -1360,13 +1360,13 @@ The project server must be configured and started with the help of the Configura
 
 More information:
 
-- "Working with the TIA Project Server > Configuring and managing the project server > Using graphical tools > [Configuring the project server with the Configuration Tool](Working%20with%20the%20TIA%20Project-Server.md#configuring-the-project-server-with-the-configuration-tool)"
+- "Working with the TIA Project Server &gt; Configuring and managing the project server &gt; Using graphical tools &gt; [Configuring the project server with the Configuration Tool](Working%20with%20the%20TIA%20Project-Server.md#configuring-the-project-server-with-the-configuration-tool)"
 
 #### Adding a new server connection to the project server
 
 To add a new server connection, follow these steps:
 
-1. In the TIA Portal, select the command "Options > Settings > Project server".
+1. In the TIA Portal, select the command "Options &gt; Settings &gt; Project server".
 
    The "Project server" tab is opened.
 
@@ -1382,7 +1382,7 @@ To add a new server connection, follow these steps:
    If the maximum number of 100 server connections has already been reached, you receive a message informing you that you first have to delete one of the existing server connections before you can add a new one.
 3. Enter the path to the host and the port number in the "URL" field, for example:
 
-   - https://<computer name>:<port number>/
+   - https://&lt;computer name&gt;:&lt;port number&gt;/
 
    If possible, select "https" as the transmission protocol to ensure secure data exchange with encryption and certificate.
 4. Enter the name for the server connection in the "Server name" field.
@@ -1396,7 +1396,7 @@ To add a new server connection, follow these steps:
 
 #### Result
 
-The new server connection is added and displayed under "Options > Settings > Project server".
+The new server connection is added and displayed under "Options &gt; Settings &gt; Project server".
 
 ### Display server connection
 
@@ -1414,14 +1414,14 @@ The project server must be configured and started with the help of the Power Too
 
 To display the existing server connections, follow these steps:
 
-1. In the TIA Portal, select the command "Options > Settings > Project server".
+1. In the TIA Portal, select the command "Options &gt; Settings &gt; Project server".
 
    All existing server connections are listed under "Connection".
 2. Click the "Server name" or "Host" column headers to sort the contents and search for a specific server connection.
 
 #### Result
 
-The existing servers are displayed in the editor under "Options > Settings > Project server"
+The existing servers are displayed in the editor under "Options &gt; Settings &gt; Project server"
 
 ### Edit server connection
 
@@ -1443,7 +1443,7 @@ The project server must be configured and started with the help of the Power Too
 
 #### Editing the multiuser server connection
 
-1. In the TIA Portal, select the command "Options > Settings > Project server".
+1. In the TIA Portal, select the command "Options &gt; Settings &gt; Project server".
 
    All existing server connections are listed under "Connection".
 2. Click the "Server name" or "Host" column headers to sort the contents.
@@ -1461,7 +1461,7 @@ The project server must be configured and started with the help of the Power Too
 
 #### Result
 
-Your changes for the selected server connection are applied and displayed under "Options > Settings > Project server".
+Your changes for the selected server connection are applied and displayed under "Options &gt; Settings &gt; Project server".
 
 ### Restore server connection
 
@@ -1531,7 +1531,7 @@ The multiuser server must be configured and started with the help of the multius
 
 To delete an existing multiuser server connection, follow these steps:
 
-1. In the TIA Portal, select the command "Options > Settings > Multiuser".
+1. In the TIA Portal, select the command "Options &gt; Settings &gt; Multiuser".
 
    All existing server connections are listed under "Connection".
 2. Click the "Server name" or "Host" column headers to sort the contents.
@@ -1542,7 +1542,7 @@ To delete an existing multiuser server connection, follow these steps:
 
 #### Result
 
-The selected multiuser server connection is deleted and is no longer displayed under "Options > Settings > Multiuser".
+The selected multiuser server connection is deleted and is no longer displayed under "Options &gt; Settings &gt; Multiuser".
 
 ## Working with the local project server
 
@@ -1562,7 +1562,7 @@ To work with Multiuser Engineering , you need a project server that manages your
 
 A local project server is always installed automatically together with the installation of TIA Portal and cannot be deleted. It does not require a separate software installation.
 
-The local project server is displayed as the first entry in the list of server connections in all languages under the name "Local Project Server", which cannot be changed. You open the list of server connections via the command "Options > Settings > Project server".
+The local project server is displayed as the first entry in the list of server connections in all languages under the name "Local Project Server", which cannot be changed. You open the list of server connections via the command "Options &gt; Settings &gt; Project server".
 
 #### Advantages of the local project server
 
@@ -1607,7 +1607,7 @@ The local project server has the following properties:
 
 A local project server is installed by default during installation of the TIA Portal by default.
 
-It is displayed in the list of the servers as the first entry. To display the server list in the "Connections" field, select the command "Options > Settings > Project server".
+It is displayed in the list of the servers as the first entry. To display the server list in the "Connections" field, select the command "Options &gt; Settings &gt; Project server".
 
 > **Note**
 >
@@ -1625,7 +1625,7 @@ You have installed the TIA Portal.
 
 To configure the local project server, follow these steps:
 
-1. In the TIA Portal, select the command "Options > Settings > Project server".
+1. In the TIA Portal, select the command "Options &gt; Settings &gt; Project server".
 
    All existing servers are displayed under "Connections".
 2. Click the "Server name" or "Host" column headers to sort the contents.
@@ -1636,12 +1636,12 @@ To configure the local project server, follow these steps:
 
      Add the desired port to the URL:
 
-     <computer name>:<port number>.
+     &lt;computer name&gt;:&lt;port number&gt;.
 4. Click "OK" for the changes to become effective.
 
 **Result**
 
-Your changes to the local project server are applied and displayed under "Options > Settings > Project server" under "Connections".
+Your changes to the local project server are applied and displayed under "Options &gt; Settings &gt; Project server" under "Connections".
 
 > **Note**
 >
@@ -1671,7 +1671,7 @@ You have installed the TIA Portal.
 
 To display the local project server, follow these steps:
 
-1. In the TIA Portal, select the command "Options > Settings > Project server".
+1. In the TIA Portal, select the command "Options &gt; Settings &gt; Project server".
 
    The local project server is displayed first under "Connection".
 
@@ -1693,13 +1693,13 @@ To display the local project server, follow these steps:
 
 A local project server is installed by default during the installation of the TIA Portal.
 
-The local project server is displayed as the first entry in the list of server connections. You open the list of server connections via the command "Options > Settings > Project server".
+The local project server is displayed as the first entry in the list of server connections. You open the list of server connections via the command "Options &gt; Settings &gt; Project server".
 
 #### Starting the local project server
 
 To start the local project server, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Project server > Manage server projects".
+1. In the TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 
    The "Server projects" dialog box opens.
 
@@ -1854,7 +1854,7 @@ Once the project server has been installed and then configured and started with 
 
 #### Managing server projects and server libraries
 
-When you execute the command "Project > Project server > Manage server projects", all server projects and local sessions for the existing server connections are displayed.
+When you execute the command "Project &gt; Project server &gt; Manage server projects", all server projects and local sessions for the existing server connections are displayed.
 
 To display the server libraries open the "Managing server libraries" editor. On the "Libraries" task card, click the "Manage server global libraries" icon in the toolbar of the "Global libraries" pane: ![Managing server projects and server libraries](images/159368230923_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1869,8 +1869,8 @@ You can perform the following actions:
 | "Select server": | Drop-down list | Contains the list of the created server connections. |
 | "Update" | Icon | Updates the display in the dialog. |
 | "Manage server" | Button | Opens the "Project server" view in the project settings.  Alternatively, in the shortcut menu of the table window select the entry "Manage project server". |
-| "Add project to server" | Table window:  "Projects" column | Opens the "Add project to the project server <Name of the server connection>" dialog box.  Alternatively, in the shortcut menu of the table window select the entry "Add project to project server".  You have the following options:  - Adding a TIA Portal project as a new server project to the server connection - Add an existing server project - "Server project name" field: Enter new names for the server project - "Comment" field: Add information to the server project |
-| "Add the global library to the server" | Table window:  "Global libraries" columns | Opens the "Add global library to project server <Name of the server connection>" dialog box.  Alternatively, in the shortcut menu of the table window select the entry "Add global library to project server".  You have the following options:  - Adding a "Global library" as a new server library to the server connection - Adding an existing server library - "Server library name" field: Entering new names for the server library - "Comment" field: Adding information about the server library |
+| "Add project to server" | Table window:  "Projects" column | Opens the "Add project to the project server &lt;Name of the server connection&gt;" dialog box.  Alternatively, in the shortcut menu of the table window select the entry "Add project to project server".  You have the following options:  - Adding a TIA Portal project as a new server project to the server connection - Add an existing server project - "Server project name" field: Enter new names for the server project - "Comment" field: Add information to the server project |
+| "Add the global library to the server" | Table window:  "Global libraries" columns | Opens the "Add global library to project server &lt;Name of the server connection&gt;" dialog box.  Alternatively, in the shortcut menu of the table window select the entry "Add global library to project server".  You have the following options:  - Adding a "Global library" as a new server library to the server connection - Adding an existing server library - "Server library name" field: Entering new names for the server library - "Comment" field: Adding information about the server library |
 | "Create local session" | Add dialog:  Check box | Creates a new local session when adding the server project or the server library. |
 | "Add" | Add dialog:  Button | Add the new server project or the new server library. |
 | "Cancel" | Add dialog:  Button | Cancels the action and closes the dialog. |
@@ -1939,14 +1939,14 @@ You have created a server connection for the project server.
 
 To create a Server project, follow these steps:
 
-1. In TIA Portal, click the menu command "Project > Project server > Manage server projects".
+1. In TIA Portal, click the menu command "Project &gt; Project server &gt; Manage server projects".
 
    The "Manage server projects" dialog box opens.
 2. Double-click in the "Projects" column in a field with the entry "Add project to the server".
 
    Alternatively, in the shortcut menu of the table window select the entry "Add project to project server".
 
-   The dialog "Add project to project server <Name of the server connection>" opens.
+   The dialog "Add project to project server &lt;Name of the server connection&gt;" opens.
 3. Navigate via the button "..." to the source path of the single-user project which you want to add as a server project.
 
    Select the project file.
@@ -1961,7 +1961,7 @@ To create a Server project, follow these steps:
 
 #### Result
 
-The selected single-user project is added as new Server project and displayed under "Project > Project server > Manage server projects".
+The selected single-user project is added as new Server project and displayed under "Project &gt; Project server &gt; Manage server projects".
 
 If the option "Create local session" was selected, a new local session is created and opened.
 
@@ -2012,7 +2012,7 @@ To create a server library, follow these steps:
 
    Alternatively, in the shortcut menu of the table window select the entry "Add global library to project server".
 
-   The "Add global library to project server <Name of the server connection>" dialog opens.
+   The "Add global library to project server &lt;Name of the server connection&gt;" dialog opens.
 6. Navigate via the button "..." to the source path of the global library which you want to add as a server library.
 
    Select the library file.
@@ -2045,7 +2045,7 @@ Once the project server has been installed and then configured and started with 
 
 Server projects and server libraries can only be deleted via the Power Tools.
 
-You delete a server connection in the TIA Portal under "Tools > Settings > Project Server" using the "Delete" command.
+You delete a server connection in the TIA Portal under "Tools &gt; Settings &gt; Project Server" using the "Delete" command.
 
 For more details, see: [Adding and deleting a new server connection](Working%20with%20the%20TIA%20Project-Server.md#adding-and-deleting-a-new-server-connection)
 
@@ -2099,7 +2099,7 @@ See also: [Commands for managing the project server](Working%20with%20the%20TIA%
 
 To export a server project or a server library, follow these steps.
 
-1. To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+1. To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
 2. To open the Administration Tool, click the entry "TIA Project Server - Administration".
 3. In the navigation area on the left, select the server project or the server library that you want to export.
 4. At the top right, click the "Export" button.
@@ -2136,7 +2136,7 @@ See also: [Commands for managing the project server](Working%20with%20the%20TIA%
 
 To import a server project or a server library, follow these steps.
 
-1. To open the start menu, click the command "Start" > "All Programs" > "Siemens Automation".
+1. To open the start menu, click the command "Start" &gt; "All Programs" &gt; "Siemens Automation".
 2. To open the Administration Tool, click the entry "TIA Project Server - Administration".
 3. In the navigation area on the left, select the project server into which you want to import a server project or server library.
 4. At the top right, click the "Import" button.
@@ -2223,7 +2223,7 @@ You have created an executable Server project.
 
 To create a local session, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Project server > Manage server projects".
+1. In the TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 
    The "Manage server projects" dialog box opens.
 
@@ -2302,7 +2302,7 @@ You have created at least one valid local session.
 
 To display all local sessions belonging to a server project or to a server library, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Project server > Manage server projects".
+1. In the TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 
    The "Manage server projects" dialog box opens and displays all available server connections for the project server.
 
@@ -2312,7 +2312,7 @@ To display all local sessions belonging to a server project or to a server libra
    All server projects or server libraries associated with this server connection are listed.
 3. Select the required server project or the required server library.
 4. Expand the entry to display all associated local sessions.
-5. To also display local sessions which were created on another computer, open the multiuser settings via "Options > Settings > Multiuser".
+5. To also display local sessions which were created on another computer, open the multiuser settings via "Options &gt; Settings &gt; Multiuser".
 
    Activate the option "Show local session created on other systems".
 
@@ -2349,7 +2349,7 @@ To open a local session, double-click the local session or select "Open local se
 You have different options for opening a local session:
 
 - In TIA Portal with "Recently used projects"
-- In the TIA Portal, select the command "Project > Project server > Manage server projects".
+- In the TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 - When creating a local session via the dialog "Create local session".
 - When TIA Portal is closed with the Microsoft Windows Explorer project.
 
@@ -2380,7 +2380,7 @@ You have created an executable Server project and a valid local session.
 
 To open a recently used local session, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Open".
+1. In the TIA Portal, select the command "Project &gt; Open".
 
    The "Open project" dialog box opens with a list of recently used projects and sessions.
 2. Select the preferred local session and click "Open".
@@ -2403,12 +2403,12 @@ The selected local session is opened.
 
 To open a local session via the associated server project, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Project server > Manage server projects".
+1. In the TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 
    The "Manage server projects" dialog box opens.
 2. Select the required project server in the drop-down list.
 3. Select the server project required and the local session from the list.
-4. To also display local sessions which were created on another computer, open the multiuser settings via "Options > Settings > Multiuser".
+4. To also display local sessions which were created on another computer, open the multiuser settings via "Options &gt; Settings &gt; Multiuser".
 
    Activate the option "Show local session created on other systems".
 
@@ -2427,7 +2427,7 @@ All opened dialog boxes are closed and the selected local session is opened.
 To open a local session with the Microsoft Windows Explorer, follow these steps:
 
 1. While TIA Portal is closed, navigate to the directory in which your local sessions are stored in Microsoft Windows Explorer.
-2. Select the desired local session with the file extension ".als<version>" and double-click to open it.
+2. Select the desired local session with the file extension ".als&lt;version&gt;" and double-click to open it.
 
 ##### Result
 
@@ -2435,13 +2435,13 @@ The TIA Portal is started and the selected local session is opened.
 
 > **Note**
 >
-> You close a local session as you would a single-user project with the command "Project > Close".
+> You close a local session as you would a single-user project with the command "Project &gt; Close".
 
 ##### Opening a local session from a different storage location
 
 To open a local session that has been moved to another storage location in the meantime, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Open".
+1. In the TIA Portal, select the command "Project &gt; Open".
 
    The "Open project" dialog box opens with a list of recently used projects and sessions.
 2. Select the preferred local session and click "Open".
@@ -2492,8 +2492,8 @@ If you confirm this message with "OK", you can continue working in your local se
 
 You have different options for saving a local session:
 
-- As a "local session" with the file identifier ".als<version>", if you are working with Multiuser Engineering
-- After an export as "Single-user project" with the file extension ".ap<version>".
+- As a "local session" with the file identifier ".als&lt;version&gt;", if you are working with Multiuser Engineering
+- After an export as "Single-user project" with the file extension ".ap&lt;version&gt;".
 
 When you export and save a local session as single-user project, you can continue to edit this project in the familiar way without multiuser functionality.
 
@@ -2511,11 +2511,11 @@ To save a local session, follow these steps:
 
 1. Open the local session:
 2. Make your required changes.
-3. In the TIA Portal, select the command "Project > Save".
+3. In the TIA Portal, select the command "Project &gt; Save".
 
 ##### Result
 
-The local session is stored in the associated project server with the file identifier ".als<version number of TIA Portal>".
+The local session is stored in the associated project server with the file identifier ".als&lt;version number of TIA Portal&gt;".
 
 ---
 
@@ -2539,7 +2539,7 @@ The local session is stored in the associated project server with the file ident
 
 ##### Introduction
 
-You close a local session as you would a single-user project with the command "Project > Close".
+You close a local session as you would a single-user project with the command "Project &gt; Close".
 
 Information on working with local sessions of server libraries:
 
@@ -2555,7 +2555,7 @@ You have created an executable Server project and a valid local session that is 
 
 To close a local session, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Close".
+1. In the TIA Portal, select the command "Project &gt; Close".
 2. Confirm the next prompt with "Yes" if you want to save your changes.
 
 ##### Result
@@ -2582,7 +2582,7 @@ The local session is closed.
 
 ##### Introduction
 
-To avoid inconsistencies in Server projects, you **cannot** delete a local session in the usual way with the command "Project > Delete project...".
+To avoid inconsistencies in Server projects, you **cannot** delete a local session in the usual way with the command "Project &gt; Delete project...".
 
 Local sessions can only be deleted in the context of the project server and depending on the associated server project.
 
@@ -2598,7 +2598,7 @@ Information on working with local sessions of server libraries:
 
 Local sessions that exist in the Multiuser server can also be deleted using the Power Tools in the server management.
 
-More information: "Working with the TIA Project Server > Configuring and managing project server > Using command line tools > [Commands for managing the project server](Working%20with%20the%20TIA%20Project-Server.md#commands-for-managing-the-project-server)"
+More information: "Working with the TIA Project Server &gt; Configuring and managing project server &gt; Using command line tools &gt; [Commands for managing the project server](Working%20with%20the%20TIA%20Project-Server.md#commands-for-managing-the-project-server)"
 
 ##### Requirement
 
@@ -2612,7 +2612,7 @@ The local session you wish to delete must not be open.
 
 To delete a local session in the TIA Portal, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Project server > Manage server projects".
+1. In the TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 
    The "Manage server projects" dialog box opens with a list of sessions available for the selected server.
 2. Select the required server.
@@ -2768,7 +2768,7 @@ You have different options for opening a local session.
 5. Expand the required library in the list of the server libraries.
 
    The associated local sessions are displayed.
-6. To also display local sessions which were created on another computer, open the multiuser settings via "Options > Settings > Multiuser".
+6. To also display local sessions which were created on another computer, open the multiuser settings via "Options &gt; Settings &gt; Multiuser".
 
    Activate the option "Show local session created on other systems".
 
@@ -2822,7 +2822,7 @@ You always delete local sessions in the context of the project server and depend
 
 Local sessions that exist in the Multiuser server can also be deleted using the Power Tools in the server management.
 
-More information: "Working with the TIA Project Server > Configuring and managing project server > Using command line tools > [Commands for managing the project server](Working%20with%20the%20TIA%20Project-Server.md#commands-for-managing-the-project-server)"
+More information: "Working with the TIA Project Server &gt; Configuring and managing project server &gt; Using command line tools &gt; [Commands for managing the project server](Working%20with%20the%20TIA%20Project-Server.md#commands-for-managing-the-project-server)"
 
 > **Note**
 >
@@ -2899,13 +2899,13 @@ You can apply the changes from the exported local session into your server proje
 
 You also have the option of exporting a local session with the Project Server Power Tools.
 
-More information: "Working with the TIA Project Server > Configuring and managing the project server > Using command line tools > [Commands for managing the project server](Working%20with%20the%20TIA%20Project-Server.md#commands-for-managing-the-project-server)"
+More information: "Working with the TIA Project Server &gt; Configuring and managing the project server &gt; Using command line tools &gt; [Commands for managing the project server](Working%20with%20the%20TIA%20Project-Server.md#commands-for-managing-the-project-server)"
 
 ##### Exporting a local session as a single-user
 
 To export a local session as a single-user project or a single-user library, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Project server > Manage server projects".
+1. In the TIA Portal, select the command "Project &gt; Project server &gt; Manage server projects".
 
    The "Manage server projects" dialog box opens and displays all available server connections for the project server.
 
@@ -2959,7 +2959,7 @@ Archiving is independent of whether or not you have already transferred the chan
 
 When archiving an open local session, the most recently saved state of the local session is used for archiving.
 
-The local session archived as a single-user project has the file identifier ".zap<version number of TIA Portal>".
+The local session archived as a single-user project has the file identifier ".zap&lt;version number of TIA Portal&gt;".
 
 Archiving the local session offers the following advantages:
 
@@ -2980,7 +2980,7 @@ To archive a local session as a single-user project, follow these steps:
 1. Select the "Archive ..." command from the "Project" menu.
 
    The "Archive" dialog opens.
-2. In the "Source path" field, the open local session is displayed with the extension ".als<version>" by default.
+2. In the "Source path" field, the open local session is displayed with the extension ".als&lt;version&gt;" by default.
 
    You can also use the selection box to select a different local session for archiving.
 3. To create a compressed archive file, select the "Archive as compressed file" option.
@@ -2990,14 +2990,14 @@ To archive a local session as a single-user project, follow these steps:
 5. To add a date and time automatically, select the "Add date and time to the target name".
 6. In the "Target path" field select the directory where you want to save the archive file or the new directory of the project.
 
-   You can set the default directory under "Options > Settings > General > Archive settings > Storage location for project archives".
+   You can set the default directory under "Options &gt; Settings &gt; General &gt; Archive settings &gt; Storage location for project archives".
 7. Click "Archive".
 
 ##### Result
 
 The local session is archived as a single-user project.
 
-An archive file of the local sessions with the file extension ".zap<version>" is created.
+An archive file of the local sessions with the file extension ".zap&lt;version&gt;" is created.
 
 The archive file contains the complete project directory. The individual files of compressed archives are additionally reduced to the essential components to save space.
 
@@ -3051,9 +3051,9 @@ The following rules apply to working in local sessions:
 
 - A local session is always assigned to a defined project server and a defined server project or a defined server library.
 - Each local session includes different tasks for different editors who are assigned to a multiuser server projects.
-- A local session has the file identifier ".als<version number of TIA Portal>" when saved.
+- A local session has the file identifier ".als&lt;version number of TIA Portal&gt;" when saved.
 
-  In the "Source path" field, the open local session is displayed with the extension ".als<version>" by default.
+  In the "Source path" field, the open local session is displayed with the extension ".als&lt;version&gt;" by default.
 
   The file may not be renamed in Windows Explorer.
 - While a local session is open, the associated server connection and the associated server project or server library must not be renamed, moved or deleted.
@@ -3165,7 +3165,7 @@ You have created at least one valid local session.
 
 To open a local session, follow these steps:
 
-1. In the TIA Portal, select the command "Project > Open".
+1. In the TIA Portal, select the command "Project &gt; Open".
 
    The "Open project" dialog box opens with a list of recently used projects and sessions.
 
@@ -3262,7 +3262,7 @@ When working in the different editors of the TIA Portal and changes have been ma
 
   - If a new entry is created in a text list, the associated text list is selected automatically.
   - If an existing text is edited in a text list, the associated text list is selected automatically.
-- When editing PLC supervisions & alarms all changes are selected automatically.
+- When editing PLC supervisions &amp; alarms all changes are selected automatically.
 
   - If a new entry is added or if existing entries are changed, the changed entry as well as the associated block are selected automatically.
 - When editing HMI text and graphic lists all changes are selected automatically. However, the selections are only shown in the higher-level editor.
@@ -3347,7 +3347,7 @@ To mark objects in a local session, follow these steps:
 >
 > **Multiple selections**
 >
-> Once > = 50 objects are selected in the local session, both shortcut menu commands are active simultaneously: the command for marking the objects as well as the command for unmarking.
+> Once &gt; = 50 objects are selected in the local session, both shortcut menu commands are active simultaneously: the command for marking the objects as well as the command for unmarking.
 
 ##### Result
 
@@ -3661,7 +3661,7 @@ You have the option to compile the changes made in the local session before chec
 >
 > **Options displayed for the compilation during check-in**
 >
-> The options displayed for the compilation during the check-in depend on the settings made in the TIA Portal under "Options > Settings > Multiuser" for "Compilation settings" .
+> The options displayed for the compilation during the check-in depend on the settings made in the TIA Portal under "Options &gt; Settings &gt; Multiuser" for "Compilation settings" .
 >
 > The compiling options may be deactivated in the multiuser editor based on these settings.
 
@@ -3928,7 +3928,7 @@ If the option "Compile" is selected during check-in, a compilation process takes
 >
 > **Options displayed for the compilation during check-in**
 >
-> The options for compiling that are displayed during check-in are dependent on the settings made in the TIA Portal under "Options > Settings > Multiuser" in "Compilation settings" .
+> The options for compiling that are displayed during check-in are dependent on the settings made in the TIA Portal under "Options &gt; Settings &gt; Multiuser" in "Compilation settings" .
 >
 > The compiling options may be deactivated in the multiuser editor due to these settings.
 

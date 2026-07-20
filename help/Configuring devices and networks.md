@@ -68,7 +68,7 @@ The inspector window contains information on the object currently marked. Here y
 
 ### Overview of settings for hardware configuration
 
-In "Options > Settings > Hardware configuration", you can make various settings relating to the hardware configuration.
+In "Options &gt; Settings &gt; Hardware configuration", you can make various settings relating to the hardware configuration.
 
 #### Overview
 
@@ -81,7 +81,7 @@ The following table provides an overview of the settings for the hardware config
 | Topology overview | Temporarily assigning an IP address | Assigns a temporary IP address for topology discovery if a device does not have a valid IP address. Topology information (LLDP) cannot be read from a device without valid IP address. |
 | Show a warning if the option is activated | Shows a warning when a temporary IP address is assigned to a device during topology discovery. |  |
 | Compiling and downloading | Download module comment | Transfers any existing comments in addition to the hardware configuration when loading the hardware configuration to the device. The comment is available after the device is loaded to a programming device. |
-| Download I&M data | This option must be enabled if you want to be able to also download I&M data to the actual hardware when downloading the hardware configuration, the software or both to a device. |  |
+| Download I&amp;M data | This option must be enabled if you want to be able to also download I&amp;M data to the actual hardware when downloading the hardware configuration, the software or both to a device. |  |
 
 ---
 
@@ -312,7 +312,7 @@ The figure below shows the input channels of the digital input module with the t
 You can select the individual I/O channels and have the following options for channels with PLC tags:
 
 - You see the general properties of the selected PLC tag in the inspector window under "Properties".
-- In the inspector window under "Info > Cross-references" you find the cross-reference information on the selected PLC tag. If you have selected the PLC tag, you can also open the cross-reference information using the shortcut menu.
+- In the inspector window under "Info &gt; Cross-references" you find the cross-reference information on the selected PLC tag. If you have selected the PLC tag, you can also open the cross-reference information using the shortcut menu.
 
 ---
 
@@ -558,7 +558,7 @@ Display the reference language and specify the text source for the project texts
 
 ### Inspector window: Displaying UDTs
 
-Under "Properties > IO tags", the Inspector window displays self-defined data structures comprising multiple elements. These UDT (User Defined Data Types) PLC data types are displayed differently from simple IO tags.
+Under "Properties &gt; IO tags", the Inspector window displays self-defined data structures comprising multiple elements. These UDT (User Defined Data Types) PLC data types are displayed differently from simple IO tags.
 
 #### Display of UDTs in the I/O tag table
 
@@ -656,7 +656,7 @@ The "Information" pane contains detailed information on the object selected from
 >
 > **Type Identifier**
 >
-> You can activate the display of the "Type Identifier" attribute in the "Options > Settings > Hardware configuration" menu. If the Type Identifier is activated, hardware objects for use in external development environments can be uniquely identified. The Type Identifier is displayed in the "Information" pane in the hardware catalog.
+> You can activate the display of the "Type Identifier" attribute in the "Options &gt; Settings &gt; Hardware configuration" menu. If the Type Identifier is activated, hardware objects for use in external development environments can be uniquely identified. The Type Identifier is displayed in the "Information" pane in the hardware catalog.
 
 ---
 
@@ -916,24 +916,24 @@ You can use shortcut keys in the network and device view to navigate between the
 
 | Function | Shortcut keys |
 | --- | --- |
-| Switch to the next lower selection level  You can use <Return>, for example, to switch from a selected rack to the lower selection level of the devices and modules that are snapped onto it. If a device is selected, you can use <Return> to switch to the lower selection level of the interfaces that are displayed on the device. | <Return> |
-| Switch to the next higher selection level  You can use <Esc>, for example, to switch from a selected interface to the higher selection level of the devices and modules. If a device is selected, you can use <Esc> to switch to the higher selection level of the rack. | <Esc> |
-| Navigation between objects in the current selection level  You can use the arrow keys to switch between the objects within a current selection level. To change the selection level, use the <Return> or <Esc> keys. | <Up arrow>  <Down arrow>  <Right arrow>  <Left arrow> |
-| Switches to the device view | <Ctrl+Shift+D> |
-| Switches to the network view | <Ctrl+Shift+N> |
-| Switches to the topology view | <Ctrl+Shift+T> |
-| Switch between editor elements  Use the <Tab> key to switch from one editor element to the next element. Use <Shift+Tab> to switch to the previous element. You can switch, for example, between the graphical view, Speedy Splitter, table view or underlying tabs. | <Tab>  <Shift+Tab> |
-| Switch between tabs  Use the <Ctrl+Tab> keys to switch from one tab to the next tab on the right. Use <Ctrl+Shift+Tab> to switch to the next tab to the left. You can use these keys, for example, to switch between the device view, the network view and the topology view. | <Ctrl+Tab>  <Ctrl+Shift+Tab> |
+| Switch to the next lower selection level  You can use &lt;Return&gt;, for example, to switch from a selected rack to the lower selection level of the devices and modules that are snapped onto it. If a device is selected, you can use &lt;Return&gt; to switch to the lower selection level of the interfaces that are displayed on the device. | &lt;Return&gt; |
+| Switch to the next higher selection level  You can use &lt;Esc&gt;, for example, to switch from a selected interface to the higher selection level of the devices and modules. If a device is selected, you can use &lt;Esc&gt; to switch to the higher selection level of the rack. | &lt;Esc&gt; |
+| Navigation between objects in the current selection level  You can use the arrow keys to switch between the objects within a current selection level. To change the selection level, use the &lt;Return&gt; or &lt;Esc&gt; keys. | &lt;Up arrow&gt;  &lt;Down arrow&gt;  &lt;Right arrow&gt;  &lt;Left arrow&gt; |
+| Switches to the device view | &lt;Ctrl+Shift+D&gt; |
+| Switches to the network view | &lt;Ctrl+Shift+N&gt; |
+| Switches to the topology view | &lt;Ctrl+Shift+T&gt; |
+| Switch between editor elements  Use the &lt;Tab&gt; key to switch from one editor element to the next element. Use &lt;Shift+Tab&gt; to switch to the previous element. You can switch, for example, between the graphical view, Speedy Splitter, table view or underlying tabs. | &lt;Tab&gt;  &lt;Shift+Tab&gt; |
+| Switch between tabs  Use the &lt;Ctrl+Tab&gt; keys to switch from one tab to the next tab on the right. Use &lt;Ctrl+Shift+Tab&gt; to switch to the next tab to the left. You can use these keys, for example, to switch between the device view, the network view and the topology view. | &lt;Ctrl+Tab&gt;  &lt;Ctrl+Shift+Tab&gt; |
 
 #### Opening elements and functions
 
 | Function | Shortcut keys |
 | --- | --- |
-| Opening the online and diagnostics view  When a device is selected, <Ctrl+D> opens the online and diagnostics view for the selected device. | <Ctrl+D> |
-| Opening the download to device dialog  When a device is selected, <Ctrl+L> opens the advanced download dialog. | <Ctrl+L> |
-| Add new device  <Ctrl+N> opens the dialog for adding a new device. | <Ctrl+N> |
-| Opens the "Hardware catalog" task card | <Ctrl+Shift+C> |
-| Opens "Online Tools" task card | <Ctrl+Shift+O> |
+| Opening the online and diagnostics view  When a device is selected, &lt;Ctrl+D&gt; opens the online and diagnostics view for the selected device. | &lt;Ctrl+D&gt; |
+| Opening the download to device dialog  When a device is selected, &lt;Ctrl+L&gt; opens the advanced download dialog. | &lt;Ctrl+L&gt; |
+| Add new device  &lt;Ctrl+N&gt; opens the dialog for adding a new device. | &lt;Ctrl+N&gt; |
+| Opens the "Hardware catalog" task card | &lt;Ctrl+Shift+C&gt; |
+| Opens "Online Tools" task card | &lt;Ctrl+Shift+O&gt; |
 
 ---
 
@@ -949,25 +949,25 @@ You can execute some of the functions of the network and device view directly wi
 
 | Function | Shortcut keys |
 | --- | --- |
-| Zoom in on view in frame  Drag a frame in the graphical view in order to correspondingly change the size of the view. | <Ctrl+Space> + pressed mouse button |
-| Move view  Move the mouse pointer in order to move the view. | <Space> + pressed mouse button |
-| Cancel current operation | <Esc> |
-| Separate connection  Use <Esc> or a double-click to exit connection mode when dragging a connection. | <Esc> or double-click |
-| Zoom in graphic view  The enlargement or reduction depends on the direction of rotation. | <Ctrl> + turn mouse wheel |
+| Zoom in on view in frame  Drag a frame in the graphical view in order to correspondingly change the size of the view. | &lt;Ctrl+Space&gt; + pressed mouse button |
+| Move view  Move the mouse pointer in order to move the view. | &lt;Space&gt; + pressed mouse button |
+| Cancel current operation | &lt;Esc&gt; |
+| Separate connection  Use &lt;Esc&gt; or a double-click to exit connection mode when dragging a connection. | &lt;Esc&gt; or double-click |
+| Zoom in graphic view  The enlargement or reduction depends on the direction of rotation. | &lt;Ctrl&gt; + turn mouse wheel |
 
 #### Selected objects
 
 | Function | Shortcut keys |
 | --- | --- |
 | Select object | Mouse click |
-| Cut an object  The selected object is copied to the clipboard and deleted from the graphical view. | <Ctrl+X> |
-| Copy object  The selected object is copied to the clipboard. | <Ctrl+C> |
-| Paste object  The object from the clipboard is inserted into the selection. | <Ctrl+V> |
-| Delete selected object | <Del> |
-| Select several objects 1  You can add several objects to the selected objects by clicking on them individually. Alternatively, you can use <Shift> + pressed mouse key to drag a frame around the objects that are to be selected. | <Shift> + click |
-| Select several objects 2  You can add several objects to the selected objects by clicking on them individually. Alternatively, you can use <Shift> + pressed mouse key to drag a frame around the objects that are to be selected. When holding down the <Ctrl> key, you can use a mouse click to deselect selected objects. | <Ctrl> + click |
+| Cut an object  The selected object is copied to the clipboard and deleted from the graphical view. | &lt;Ctrl+X&gt; |
+| Copy object  The selected object is copied to the clipboard. | &lt;Ctrl+C&gt; |
+| Paste object  The object from the clipboard is inserted into the selection. | &lt;Ctrl+V&gt; |
+| Delete selected object | &lt;Del&gt; |
+| Select several objects 1  You can add several objects to the selected objects by clicking on them individually. Alternatively, you can use &lt;Shift&gt; + pressed mouse key to drag a frame around the objects that are to be selected. | &lt;Shift&gt; + click |
+| Select several objects 2  You can add several objects to the selected objects by clicking on them individually. Alternatively, you can use &lt;Shift&gt; + pressed mouse key to drag a frame around the objects that are to be selected. When holding down the &lt;Ctrl&gt; key, you can use a mouse click to deselect selected objects. | &lt;Ctrl&gt; + click |
 | Move selection  When the mouse button is pressed, you can drag devices or modules to allowed slots on a rack. | Mouse button pressed |
-| Copy selection  Using <Ctrl> + pressed mouse button you can drag devices and modules to allowed slots on a rack. This copies the devices or modules. | <Ctrl> + pressed mouse button |
+| Copy selection  Using &lt;Ctrl&gt; + pressed mouse button you can drag devices and modules to allowed slots on a rack. This copies the devices or modules. | &lt;Ctrl&gt; + pressed mouse button |
 
 ## Configuring devices
 
@@ -1043,7 +1043,7 @@ There are various ways of adding a connectable device from the hardware configur
 
   - Text entry from the "Catalog" pane
   - Preview graphic from the "Information" pane
-- "Add > Device" command from menu bar in network view or topology view
+- "Add &gt; Device" command from menu bar in network view or topology view
 - Shortcut menu of a device in the hardware catalog for copying and pasting
 
 A suitable rack is created along with the new device. The selected device is inserted at the first permitted slot of the rack.
@@ -1111,8 +1111,8 @@ To add an unspecified CPU in the portal view, follow these steps:
 
 1. Now, click one of the following options:
 
-   - "Devices & networks > Add new device"
-   - "PLC programming" > "Device" button
+   - "Devices &amp; networks &gt; Add new device"
+   - "PLC programming" &gt; "Device" button
 2. For a device family, select an unspecified CPU from the tree structure of the "Add new device" dialog.
 3. Click on "Add".
 
@@ -1132,7 +1132,7 @@ You can also use these methods to add multiple unspecified CPUs.
 You have two options for specifying unspecified CPUs:
 
 - Use drag-and-drop to assign an existing CPU from the hardware catalog to an unspecified CPU by means of [module replacement](#replacing-a-hardware-component).
-- Select a selected, unspecified CPU and then the menu command "Online > Hardware detection" and assign a CPU identified online. For this purpose, you assign an IP address using the "Add address for PG/PC" button.
+- Select a selected, unspecified CPU and then the menu command "Online &gt; Hardware detection" and assign a CPU identified online. For this purpose, you assign an IP address using the "Add address for PG/PC" button.
 
   > **Note**
   >
@@ -1181,7 +1181,7 @@ To select a CPU from the hardware catalog, proceed as follows:
 4. Set up the CPU and a rack. You have the following options:
 
    - Use drag-and-drop to drag the CPU from the hardware catalog into network view.
-   - Use Copy & Paste to copy the CPU to the network view.
+   - Use Copy &amp; Paste to copy the CPU to the network view.
    - Double-click the CPU entry in the hardware catalog.
 
 ---
@@ -1323,7 +1323,7 @@ Also note the information on [Replacing hardware components](#replacing-a-hardwa
 
 There are various ways of selecting several modules or slots:
 
-- By pressing <Shift> or <Ctrl>, you can select several modules or slots at the same time.
+- By pressing &lt;Shift&gt; or &lt;Ctrl&gt;, you can select several modules or slots at the same time.
 - Click outside the rack and then hold the mouse button and drag a frame to include the modules or slots you want to select.
 
 ---
@@ -1413,7 +1413,7 @@ If you activate the filter function of the hardware catalog, only those modules 
 
 You have now inserted the digital signal module in a slot in the rack. Repeat these steps with the other modules.
 
-The name of the module is displayed above the inserted modules. You can activate or deactivate module labeling in the menu bar with "View > Show module labels".
+The name of the module is displayed above the inserted modules. You can activate or deactivate module labeling in the menu bar with "View &gt; Show module labels".
 
 #### Inserting module
 
@@ -1439,7 +1439,7 @@ A mouse pointer appears. When you release the mouse button, all modules plugged 
 
 ### Select hardware component
 
-You can select hardware components and additional objects of the graphic views by clicking the left mouse button. You can also select multiple objects by dragging the mouse while keeping the left mouse button pressed or with the combination of left-click and the <Shift> or <Ctrl> keys.
+You can select hardware components and additional objects of the graphic views by clicking the left mouse button. You can also select multiple objects by dragging the mouse while keeping the left mouse button pressed or with the combination of left-click and the &lt;Shift&gt; or &lt;Ctrl&gt; keys.
 
 You can select the following objects in the graphic views: Devices (with CPU, rack, modules), CPUs, CPs, modules, subnets, connections and nodes.
 
@@ -1448,8 +1448,8 @@ You can select the following objects in the graphic views: Devices (with CPU, ra
 You can select objects in the graphic views as follows:
 
 - Left-click on object: The object is selected.
-- Left-click and <Ctrl> on an object: The object is added to the current selection.
-- Left-click and <Shift> on an object: All objects between the currently selected object and the previously selected objects are added to the selection.
+- Left-click and &lt;Ctrl&gt; on an object: The object is added to the current selection.
+- Left-click and &lt;Shift&gt; on an object: All objects between the currently selected object and the previously selected objects are added to the selection.
 - Drag selection frame around multiple objects while pressing left mouse button: All objects completely enclosed by the frame are added to the selection.
 
 Multiple selection is only possible for objects of the same category:
@@ -1461,7 +1461,7 @@ Multiple selection is only possible for objects of the same category:
 Behavior for multiple selection with objects from different category:
 
 - Selection frame: Only objects of the respective highest category will become part of the multiple selection
-- Left-click with <Shift> or <Ctrl>: The object of a new category that was selected last remains selected; the previously selected objects are dropped from the selection.
+- Left-click with &lt;Shift&gt; or &lt;Ctrl&gt;: The object of a new category that was selected last remains selected; the previously selected objects are dropped from the selection.
 
 > **Note**
 >
@@ -1486,51 +1486,51 @@ To select multiple devices in the network view by dragging a selection frame, fo
 
 In the example above, the selection frame was drawn around entire devices. If you draw the frame so that it does not enclose entire devices but only the CPUs contained therein, only the CPUs and not the entire device is included in the multiple selection. If you draw the selection frame so that it partially encloses entire devices and partly only CPUs, the highest category of the selected objects is decisive and only the entire devices are added to the multiple selection.
 
-#### Multiple selection of CPUs with the help of the <Shift> key
+#### Multiple selection of CPUs with the help of the &lt;Shift&gt; key
 
-Instead of the multiple selection with a selection frame, you can also make the multiple selection with the <Shift> key. You select two objects with this key and all objects in between are included in the multiple selection.
+Instead of the multiple selection with a selection frame, you can also make the multiple selection with the &lt;Shift&gt; key. You select two objects with this key and all objects in between are included in the multiple selection.
 
-To select multiple CPUs in the topology view with the <Shift> key, follow these steps:
+To select multiple CPUs in the topology view with the &lt;Shift&gt; key, follow these steps:
 
 1. Select the first CPU of your multiple selection with the left mouse button:
 
-   ![Multiple selection of CPUs with the help of the <Shift> key](images/95026701835_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of CPUs with the help of the &lt;Shift> key](images/95026701835_DV_resource.Stream@PNG-de-DE.png)
 
-   ![Multiple selection of CPUs with the help of the <Shift> key](images/95026701835_DV_resource.Stream@PNG-de-DE.png)
-2. Select the last CPU of your multiple selection with the left mouse button while pressing the <Shift> key. The two selected CPUs behave like the margins of a selection frame indicated here by the orange line:
+   ![Multiple selection of CPUs with the help of the &lt;Shift> key](images/95026701835_DV_resource.Stream@PNG-de-DE.png)
+2. Select the last CPU of your multiple selection with the left mouse button while pressing the &lt;Shift&gt; key. The two selected CPUs behave like the margins of a selection frame indicated here by the orange line:
 
-   ![Multiple selection of CPUs with the help of the <Shift> key](images/95018737931_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of CPUs with the help of the &lt;Shift> key](images/95018737931_DV_resource.Stream@PNG-de-DE.png)
 
-   ![Multiple selection of CPUs with the help of the <Shift> key](images/95018737931_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of CPUs with the help of the &lt;Shift> key](images/95018737931_DV_resource.Stream@PNG-de-DE.png)
 3. All CPUs between the first and the last CPU selected are included in the multiple selection:
 
-   ![Multiple selection of CPUs with the help of the <Shift> key](images/95026490763_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of CPUs with the help of the &lt;Shift> key](images/95026490763_DV_resource.Stream@PNG-de-DE.png)
 
-   ![Multiple selection of CPUs with the help of the <Shift> key](images/95026490763_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of CPUs with the help of the &lt;Shift> key](images/95026490763_DV_resource.Stream@PNG-de-DE.png)
 
 In the example above, only CPUs were selected. If you select entire devices instead, the devices between the first and the second device selected are included in the multiple selection. If you select an entire device as well as a CPU, the category of the object selected last is decisive for the category of all selected objects.
 
-#### Multiple selection of devices with the help of the <Ctrl> and <Shift> keys
+#### Multiple selection of devices with the help of the &lt;Ctrl&gt; and &lt;Shift&gt; keys
 
-You can also make a multiple selection with the two keys <Ctrl> and <Shift>. You select multiple objects with a left mouse click and the <Ctrl> key. If you then select an object with a left mouse click and the <Shift> key, all objects between the previously selected objects and the last selected object are included in the multiple selection.
+You can also make a multiple selection with the two keys &lt;Ctrl&gt; and &lt;Shift&gt;. You select multiple objects with a left mouse click and the &lt;Ctrl&gt; key. If you then select an object with a left mouse click and the &lt;Shift&gt; key, all objects between the previously selected objects and the last selected object are included in the multiple selection.
 
-To select multiple devices in the device view with the <Shift> and <Ctrl> keys, follow these steps:
+To select multiple devices in the device view with the &lt;Shift&gt; and &lt;Ctrl&gt; keys, follow these steps:
 
-1. Use the left mouse button and press the <Ctrl> key to select multiple individual devices:
+1. Use the left mouse button and press the &lt;Ctrl&gt; key to select multiple individual devices:
 
-   ![Multiple selection of devices with the help of the <Ctrl> and <Shift> keys](images/95026499595_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of devices with the help of the &lt;Ctrl> and &lt;Shift> keys](images/95026499595_DV_resource.Stream@PNG-de-DE.png)
 
-   ![Multiple selection of devices with the help of the <Ctrl> and <Shift> keys](images/95026499595_DV_resource.Stream@PNG-de-DE.png)
-2. Select the last device of your multiple selection with the left mouse button while pressing the <Shift> key. The already selected devices behave like the margins of a selection frame indicated here by the orange line:
+   ![Multiple selection of devices with the help of the &lt;Ctrl> and &lt;Shift> keys](images/95026499595_DV_resource.Stream@PNG-de-DE.png)
+2. Select the last device of your multiple selection with the left mouse button while pressing the &lt;Shift&gt; key. The already selected devices behave like the margins of a selection frame indicated here by the orange line:
 
-   ![Multiple selection of devices with the help of the <Ctrl> and <Shift> keys](images/95183533323_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of devices with the help of the &lt;Ctrl> and &lt;Shift> keys](images/95183533323_DV_resource.Stream@PNG-de-DE.png)
 
-   ![Multiple selection of devices with the help of the <Ctrl> and <Shift> keys](images/95183533323_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of devices with the help of the &lt;Ctrl> and &lt;Shift> keys](images/95183533323_DV_resource.Stream@PNG-de-DE.png)
 3. All devices of the virtual selection frame and the subnets in the selection frame are now included in the multiple selection.
 
-   ![Multiple selection of devices with the help of the <Ctrl> and <Shift> keys](images/95026546827_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of devices with the help of the &lt;Ctrl> and &lt;Shift> keys](images/95026546827_DV_resource.Stream@PNG-de-DE.png)
 
-   ![Multiple selection of devices with the help of the <Ctrl> and <Shift> keys](images/95026546827_DV_resource.Stream@PNG-de-DE.png)
+   ![Multiple selection of devices with the help of the &lt;Ctrl> and &lt;Shift> keys](images/95026546827_DV_resource.Stream@PNG-de-DE.png)
 
 Only the same object categories are selected. In the example above this includes the subnets in addition to the corresponding devices because they were located within the virtual selection frame and belong to the same category as the devices. The subnets PN/IE_4 and PN/IE_5 were not located in the virtual selection frame and therefore are not part of the multiple selection.
 
@@ -1554,16 +1554,16 @@ Proceed as follows to copy a hardware component:
    - Device view: Select the module in a rack or put it in the area of unplugged modules.
    - Network or topology view: Select the station or the relevant hardware component from the network view.
    - Project tree: Select the station or module.
-2. Select "Copy" from the shortcut menu or press <Ctrl+C>.
+2. Select "Copy" from the shortcut menu or press &lt;Ctrl+C&gt;.
 
    If the "Copy" menu item is unavailable, your selection contains at least one component that cannot be copied.
 3. Select the location at which the content of the clipboard is to be pasted.
 
    - In the device view select a free slot in the rack or area of unplugged modules.
    - In the network or topology view select a station where you want to insert devices or modules.
-4. Select "Paste" from the shortcut menu or press <Ctrl+V>.
+4. Select "Paste" from the shortcut menu or press &lt;Ctrl+V&gt;.
 
-   - If you paste the copied object without selection in the network or topology view with <Ctrl+V>, the copied object is pasted to the right of the original object.
+   - If you paste the copied object without selection in the network or topology view with &lt;Ctrl+V&gt;, the copied object is pasted to the right of the original object.
    - If you paste the copied object without selection in the network or topology view using the shortcut menu, it is placed at the location of the mouse pointer.
 
    If the "Paste" menu item is unavailable, the clipboard is empty or contains at least one component that cannot be pasted at this point.
@@ -1584,7 +1584,7 @@ If you have selected a station in the network or topology view to paste a module
 
 > **Note**
 >
-> You can use <Ctrl> and drag-and-drop to directly copy a selected hardware component.
+> You can use &lt;Ctrl&gt; and drag-and-drop to directly copy a selected hardware component.
 
 ---
 
@@ -1614,14 +1614,14 @@ Proceed as follows to move a hardware component:
 
    - Device view: Select the module in a rack or put it in the area of unplugged modules.
    - Network view: Select the hardware component of relevance to the network view.
-2. Select "Cut" from the shortcut menu or press <Ctrl+X>.
+2. Select "Cut" from the shortcut menu or press &lt;Ctrl+X&gt;.
 
    If the "Cut" menu item is unavailable, your selection contains at least one component that cannot be cut.
 3. Select the location to which the cut object is to be moved.
 
    - Device view: Select a free slot in the rack or area of unplugged modules.
    - Network view: Select a station where you want to insert devices or modules.
-4. Select "Paste" from the shortcut menu or press <Ctrl+V>.
+4. Select "Paste" from the shortcut menu or press &lt;Ctrl+V&gt;.
 
    If the "Paste" menu item is unavailable, the clipboard is empty or contains at least one component that cannot be pasted at this point.
 
@@ -1679,7 +1679,7 @@ You can rename the hardware components as follows:
 
 - In the graphic view after selection of the displayed name.
 - In the table view in the table cell with the name that is to be changed.
-- In the Inspector window under "Properties > General" for the selected hardware component.
+- In the Inspector window under "Properties &gt; General" for the selected hardware component.
 
 #### Procedure
 
@@ -1691,7 +1691,7 @@ For the device view:
 2. Select the hardware component or its name.
 3. You have two options:
 
-   - Press <F2>.
+   - Press &lt;F2&gt;.
    - Click on the previously selected name.
 4. Edit the name.
 
@@ -1702,7 +1702,7 @@ For the network and topology view:
 1. Select the hardware component or its name.
 2. You have three options:
 
-   - Press <F2>.
+   - Press &lt;F2&gt;.
    - Click on the previously selected name.
    - Select "Rename" from the shortcut menu.
 
@@ -1712,7 +1712,7 @@ For the network and topology view:
 
 For editing names in the table area, select the cell with the name you want to edit in the table. Then click on the name once again so that you can edit the names directly in the cell.
 
-For editing names in the Inspector window, select the hardware component whose name you want to edit in the graphic area. The relevant parameters are then displayed in the Inspector window. Now you can edit the names under "Properties > General".
+For editing names in the Inspector window, select the hardware component whose name you want to edit in the graphic area. The relevant parameters are then displayed in the Inspector window. Now you can edit the names under "Properties &gt; General".
 
 ---
 
@@ -1745,7 +1745,7 @@ Proceed as follows to delete a hardware component:
    - Device view: In the graphic view or device overview, select racks or modules in racks or in the area of unplugged components.
    - Topology view: Select devices or hardware components with Ethernet interfaces in the graphic view or in the topology view.
    - Project tree: Select devices or individual hardware components from the tree structure.
-2. Select "Delete" from the shortcut menu or press <Del>.
+2. Select "Delete" from the shortcut menu or press &lt;Del&gt;.
 
    If the "Delete" menu item is unavailable, your selection contains at least one component that cannot be deleted.
 
@@ -1787,7 +1787,7 @@ The terms "Module description" and "Firmware version" are explained in more deta
 Perform the following step for each affected module type.
 
 1. Select the affected module in the device view.
-2. In the Inspector window, go to "Properties > General > Catalog Information". Click the "Update module description" button there.
+2. In the Inspector window, go to "Properties &gt; General &gt; Catalog Information". Click the "Update module description" button there.
 3. In the query that then appears, specify whether you want to update the module description only for the selected module or for all modules of this type in the current project.
 
 #### Result
@@ -1862,7 +1862,7 @@ The following information is typically shown in the address overview:
 
 | Table header | Meaning |
 | --- | --- |
-| Type | Type of the address range. Indicates whether the area is an input address area or an output address area.  - I = input address of module with input I/O address space (with length > 0) - I* = input or diagnostics address of modules without input I/O address space (with length = 0) No data (signal statuses or measured values) is exchanged via these addresses in the user program. Used for reporting diagnostics events of the operating system (e.g. in the start information of error OBs). - Q = output address |
+| Type | Type of the address range. Indicates whether the area is an input address area or an output address area.  - I = input address of module with input I/O address space (with length &gt; 0) - I* = input or diagnostics address of modules without input I/O address space (with length = 0) No data (signal statuses or measured values) is exchanged via these addresses in the user program. Used for reporting diagnostics events of the operating system (e.g. in the start information of error OBs). - Q = output address |
 | Addr. from | Start address of the address range. Indicates the first assigned address of the input or output. |
 | Addr. to | End address in the address range. Indicates the last assigned address of the input or output. |
 | Size | Address length of the address range occupied by the module for the input or output.   Examples:  - With a start address of 0 and an end address of 1, the address length is 2 bytes. - With a start address of 0 and an end address of 3, the address length is 4 bytes. - With a start address of 0.1 and an end address of 0.2, the address length is 2 bits. - If the start address and end address are identical, 0 bytes is displayed. |
@@ -1938,9 +1938,9 @@ By double-clicking on the link, you go to the device view and can configure the 
 
 #### "Distributed I/O" folder under a device
 
-If you assign an IO device to a PROFINET IO system, this is displayed as a link below the node "Distributed I/O > PROFINET IO system".
+If you assign an IO device to a PROFINET IO system, this is displayed as a link below the node "Distributed I/O &gt; PROFINET IO system".
 
-Accordingly, a DP slave that is assigned to a DP master system is shown as a link below the node "Distributed I/O > DP master system".
+Accordingly, a DP slave that is assigned to a DP master system is shown as a link below the node "Distributed I/O &gt; DP master system".
 
 The link references the corresponding IO device or the DP slave in the project tree.
 
@@ -2071,7 +2071,7 @@ The following schematic shows an interface with outgoing line connecting to a su
 
 To create several subnets at one time, proceed as follows:
 
-1. Select several interfaces by clicking on them while pressing the <Ctrl> button.
+1. Select several interfaces by clicking on them while pressing the &lt;Ctrl&gt; button.
 2. Select the "Create subnet" command in the shortcut menu of the interface.
 
 Each selected interface is connected to a new subnet. The inconsistencies possibly resulting from the modified configuration are clarified automatically or per query. In the case of consistency problems, the next free address is preferably used.
@@ -2098,7 +2098,7 @@ To connect an interface with another device via a subnet that does not yet exist
 
 > **Note**
 >
-> If you want to exit networking mode beforehand, press <Esc>, right-click or double-click in the background of the network view.
+> If you want to exit networking mode beforehand, press &lt;Esc&gt;, right-click or double-click in the background of the network view.
 
 A new subnet is created. The interfaces are now connected via the new subnet. The inconsistencies possibly resulting from the modified configuration are clarified automatically or per query. In the case of consistency problems, the next free address is preferably used.
 
@@ -2121,7 +2121,7 @@ To connect an interface to an existing subnet, proceed as follows:
 
    ![Procedure - Connecting devices to existing subnet](images/12958290827_DV_resource.Stream@PNG-de-DE.png)
 5. Now release the left mouse button or press it again.  
-   If you want to exit networking mode beforehand, press <Esc> or right-click.
+   If you want to exit networking mode beforehand, press &lt;Esc&gt; or right-click.
 
 Result:
 
@@ -2586,7 +2586,7 @@ The following figure shows a sample configuration along with the required IP add
 
 - A PC on the IP subnet 192.168.4.0 communicates with an HMI device on the IP subnet 192.168.2.0.
 - The IP address of a router ("Standard Gateway") is configured at the CPU, Ethernet interface X3; in the figure below it is the device that is designated as "IP Router".  
-  In STEP 7, you configure a router in the interface properties under "Ethernet Addresses" > "IP Protocol".
+  In STEP 7, you configure a router in the interface properties under "Ethernet Addresses" &gt; "IP Protocol".
 - For the PC, the IP router, the IO device and the HMI device, the IP addresses of a standard gateway or the corresponding routes are also entered.
 
   ![Configuring the router](images/127431674763_DV_resource.Stream@PNG-en-US.png)
@@ -2610,7 +2610,7 @@ IP route table of the CPU
 
 For IP communication between the PG/PC and the HMI device, you need to set up additional IP routes to the IP subnet of the HMI device both in the PC and in the IP router. In the HMI device, you configure the IP address of the CPU interface X1 as the standard gateway.
 
-In a Windows computer, for example, you set up an additional IP route from the command prompt using the command "route add <destination IP subnet> mask <subnet mask> <gateway>". However, you need certain access rights for this. For this example, enter the following prompt:
+In a Windows computer, for example, you set up an additional IP route from the command prompt using the command "route add &lt;destination IP subnet&gt; mask &lt;subnet mask&gt; &lt;gateway&gt;". However, you need certain access rights for this. For this example, enter the following prompt:
 
 - "route add 192.168.2.0 mask 255.255.255.0 192.168.4.20"
 
@@ -2645,7 +2645,7 @@ Constraints:
 - IP forwarding is activated for the CPU 1518 4 PN/DP MFP.
 - The IP address of Linux and the IP address of interface X3 are located in the same IP subnet.
 - The routes to the IP subnets at X1 and X2 are entered in Linux.  
-  In Linux, enter a route with the following command: "Route add-net <Destination IP subnet> mask <Subnet mask> gw <Gateway>
+  In Linux, enter a route with the following command: "Route add-net &lt;Destination IP subnet&gt; mask &lt;Subnet mask&gt; gw &lt;Gateway&gt;
 
 The following figure shows a configuration in which a PC accesses Linux of the CPU 1518-4 PN/DP MFP via interface X2.
 
@@ -2679,7 +2679,7 @@ This [application example](https://support.industry.siemens.com/cs/ww/en/view/22
 To enable IP forwarding, proceed as follows:
 
 1. Select the CPU in the network view of STEP 7 (TIA Portal).
-2. In the properties of the CPU of the Inspector window, navigate to "General" > "Advanced Configuration" > "IP forwarding".
+2. In the properties of the CPU of the Inspector window, navigate to "General" &gt; "Advanced Configuration" &gt; "IP forwarding".
 3. In the "Configuration IPv4 Forwarding" area, select the check box "Activate IPv4 for interfaces of this PLC".
 
    ![Enabling IP forwarding](images/127431449739_DV_resource.Stream@PNG-en-US.png)
@@ -2743,7 +2743,7 @@ For a CPU service to be accessible via the Ethernet interface of a CP, the follo
 
 ###### Configuration of the virtual interface W1
 
-In the properties of an S7-1500 CPU as of firmware V2.8, you can assign a plugged communications module to the virtual interface W1 under "Advanced Configuration > Access to PLC via communications module". You can then use this for external access to the CPU. If no CPs are plugged in or the plugged CPs do not support access to the CPU, the selection is empty.
+In the properties of an S7-1500 CPU as of firmware V2.8, you can assign a plugged communications module to the virtual interface W1 under "Advanced Configuration &gt; Access to PLC via communications module". You can then use this for external access to the CPU. If no CPs are plugged in or the plugged CPs do not support access to the CPU, the selection is empty.
 
 ![Configuration of the virtual interface W1](images/126537120139_DV_resource.Stream@PNG-en-US.png)
 
@@ -2776,14 +2776,14 @@ A change of the assigned communications module may have an effect on the configu
 
 ###### Display in the diagnostics and the system constants
 
-The virtual interface W1 is displayed in the diagnostics view under "Online & Diagnostics". The hardware ID of the virtual interface is displayed in the system constants of the CPU properties.
+The virtual interface W1 is displayed in the diagnostics view under "Online &amp; Diagnostics". The hardware ID of the virtual interface is displayed in the system constants of the CPU properties.
 
 ###### Settings in the communications module (CP 1543-1 as of firmware V3.0)
 
 As of firmware V3.0, you can use the CP's internal firewall to protect data traffic via the virtual interface. To activate the firewall in the communications module, proceed as follows in the protected project:
 
 1. Select the communications module in the STEP 7 work area.
-2. In the Inspector window, go to "Properties > Security".
+2. In the Inspector window, go to "Properties &gt; Security".
 3. Activate the "Enable security functions" option.  
    The configurable security functions now appear in the Inspector window.
 4. Enable the option "Activate firewall".   
@@ -2797,7 +2797,7 @@ You can only secure data traffic via the virtual interface W1 of the CPU for the
 >
 > If the firewall is activated, you need to manually check whether the desired services are allowed by the firewall. Only enable those services for the IP and MAC filters that you also want to access via the CP interface. See the notes on security settings and firewall rules of the S7-1500 CPs in the info system of the TIA Portal.
 
-###### Settings in the communications module (CP 1543-1, firmware V2.2, < V3.0)
+###### Settings in the communications module (CP 1543-1, firmware V2.2, &lt; V3.0)
 
 The security functions of the CP 1543-1 with a firmware version lower than V3.0 cannot secure data traffic via the virtual interface. Although you can activate the security functions in TIA Portal, such a configuration cannot be compiled.
 
@@ -2892,20 +2892,20 @@ You should deactivate this function:
 
 | Bus parameter | Adjustable? | Limit values |
 | --- | --- | --- |
-| Tslot_Init | Yes | Max. Tsdr + 15 <= Tslot_init <= 16.383 t_bit |
-| Max. Tsdr | Yes | 35 + 2*Tset + Tqui <= Max. Tsdr <= 1.023 t_bit |
-| Min. Tsdr | Yes | 11 t_bit <= Min. Tsdr <= MIN(255 t_bit, ...  ... Max. Tsdr - 1, 34 + 2*Tset + Tqui) |
-| Tset | Yes | 1 t_bit <= Tset <= 494 t_bit |
-| Tqui | Yes | 0 t_bit <= Tqui <= MIN(31 t_bit, Min. Tsdr - 1) |
-| GAP factor | Yes | 1 <= GAP factor <= 100 |
-| Retry limit | Yes | 1 <= Retry limit <= 15 |
+| Tslot_Init | Yes | Max. Tsdr + 15 &lt;= Tslot_init &lt;= 16.383 t_bit |
+| Max. Tsdr | Yes | 35 + 2*Tset + Tqui &lt;= Max. Tsdr &lt;= 1.023 t_bit |
+| Min. Tsdr | Yes | 11 t_bit &lt;= Min. Tsdr &lt;= MIN(255 t_bit, ...  ... Max. Tsdr - 1, 34 + 2*Tset + Tqui) |
+| Tset | Yes | 1 t_bit &lt;= Tset &lt;= 494 t_bit |
+| Tqui | Yes | 0 t_bit &lt;= Tqui &lt;= MIN(31 t_bit, Min. Tsdr - 1) |
+| GAP factor | Yes | 1 &lt;= GAP factor &lt;= 100 |
+| Retry limit | Yes | 1 &lt;= Retry limit &lt;= 15 |
 | Tslot | No | --- |
 | Tid2 | No | Tid2 = Max. Tsdr |
 | Trdy | No | Trdy = Min. Tsdr |
 | Tid1 | No | Tid1 = 35 + 2*Tset + Tqui |
-| Ttr | Yes | 256 t_bit <= Ttr <= 16.777.960 t_bit |
+| Ttr | Yes | 256 t_bit &lt;= Ttr &lt;= 16.777.960 t_bit |
 | Ttr typical | No | This time is provided for information only and is not transferred to the nodes. |
-| Response monitoring |  | 10 ms <= response monitoring (watchdog) <= 650 s |
+| Response monitoring |  | 10 ms &lt;= response monitoring (watchdog) &lt;= 650 s |
 
 If you want to create a customized bus profile, we recommend the following settings:
 
@@ -3218,7 +3218,7 @@ How you set the DNS configuration for your CPU depends on how you assign the hos
 To activate the host name and domain configuration in STEP 7, follow these steps:
 
 1. Select the S7-1500 CPU in STEP 7.
-2. In the properties of the CPU, navigate to "Advanced configuration" > "Host and domain name" > "Host and domain name configuration".
+2. In the properties of the CPU, navigate to "Advanced configuration" &gt; "Host and domain name" &gt; "Host and domain name configuration".
 3. Select the "Enable host name and domain" check box.
 
 ###### Configuring the host name in STEP 7
@@ -3226,7 +3226,7 @@ To activate the host name and domain configuration in STEP 7, follow these steps
 To configure the host name in STEP 7, follow these steps:
 
 1. Select the S7-1500 CPU in STEP 7.
-2. In the properties of the CPU, navigate to "Advanced configuration" > "Host and domain name"> "Host and domain name configuration"> "Host name".
+2. In the properties of the CPU, navigate to "Advanced configuration" &gt; "Host and domain name"&gt; "Host and domain name configuration"&gt; "Host name".
 3. For "Host name configuration" select "Set host name in the project" from the drop-down list.
 4. Enter the host name for "Host name:".
 
@@ -3240,7 +3240,7 @@ Only if you have configured the host and domain name in STEP 7, the full name is
 To assign the host name in the user program, follow these steps:
 
 1. Select the S7-1500 CPU in STEP 7.
-2. In the properties of the CPU, navigate to "Advanced configuration" > "Host and domain name" > "Host and domain name configuration" > "Host name".
+2. In the properties of the CPU, navigate to "Advanced configuration" &gt; "Host and domain name" &gt; "Host and domain name configuration" &gt; "Host name".
 3. Under "Host name configuration” select "Set hostname directly on the device (e.g. PLC program, display)" in the drop-down list.
 4. Call the instruction "CommConfig" in the user program. The DATA parameter must point to a UDT "Conf_Hostname" where the host name is defined.
 
@@ -3253,7 +3253,7 @@ To assign the host name in the user program, follow these steps:
 To configure the domain in STEP 7, follow these steps:
 
 1. Select the S7-1500 CPU in STEP 7.
-2. In the properties of the CPU, navigate to "Advanced configuration" > "Host and domain name" > "Host and domain name configuration" > "Domain".
+2. In the properties of the CPU, navigate to "Advanced configuration" &gt; "Host and domain name" &gt; "Host and domain name configuration" &gt; "Domain".
 3. For "Domain configuration" select "Set domain in the project" from the drop-down list.
 4. Enter your desired domain under "Domain:".
 
@@ -3264,7 +3264,7 @@ Only if you have configured the host name and domain in STEP 7 is the full name 
 To assign the domain in the user program, follow these steps:
 
 1. Select the S7-1500 CPU in STEP 7.
-2. In the properties of the CPU, navigate to "Advanced configuration" > "Host and domain name" > "Host and domain name configuration" > "Domain".
+2. In the properties of the CPU, navigate to "Advanced configuration" &gt; "Host and domain name" &gt; "Host and domain name configuration" &gt; "Domain".
 3. Under "Domain configuration" select "Set domain directly on the device (for example PLC program, display)" in the drop-down list.
 4. Call the instruction "CommConfig" in the user program. The DATA parameter must point to a UDT "Conf_Domainname" where the domain name is specified.
 
@@ -3293,7 +3293,7 @@ Note the following maximum lengths in bytes. One byte corresponds to one charact
 To activate DHCP for the PROFINET interface of an S7‑1500 CPU, follow these steps:
 
 1. Select the PROFINET interface of the S7‑1500 CPU in STEP 7.
-2. In the properties of the interface, navigate to "Ethernet addresses" > "Internet Protocol Version 4 (IPv4)".
+2. In the properties of the interface, navigate to "Ethernet addresses" &gt; "Internet Protocol Version 4 (IPv4)".
 3. Select the option "IP address of DHCP server".
 
 ###### Result
@@ -3323,7 +3323,7 @@ The S7-1500 CPU supports the following two operating modes with regard to the cl
 To configure the client ID in STEP 7, follow these steps:
 
 1. Select the PROFINET interface of the S7‑1500 CPU in STEP 7.
-2. In the properties of the interface, navigate to "Ethernet addresses" > "Internet Protocol Version 4 (IPv4)"> "IP address of DHCP server".
+2. In the properties of the interface, navigate to "Ethernet addresses" &gt; "Internet Protocol Version 4 (IPv4)"&gt; "IP address of DHCP server".
 3. For "Operating mode" select the required operating mode from the drop-down list:
 
    - Use MAC address as client ID (default setting)
@@ -3385,7 +3385,7 @@ See also: [Resetting an S7 CPU to the factory settings](Device%20and%20network%2
 To obtain the addresses of up to 4 DNS servers via DHCP, follow these steps:
 
 1. Select the S7-1500 CPU in STEP 7.
-2. In the properties of the CPU, navigate to "Advanced configuration" > "DNS configuration" > "Server list".
+2. In the properties of the CPU, navigate to "Advanced configuration" &gt; "DNS configuration" &gt; "Server list".
 3. For "Name resolution via DNS" select "Set DNS server remotely (e.g. DHCP)" in the drop-down list.
 
 Result: If the DHCP server supplies addresses from DNS servers as option, the CPU uses up to 4 addresses.
@@ -3401,7 +3401,7 @@ Result: If the DHCP server supplies addresses from DNS servers as option, the CP
 To obtain the addresses of up to four NTP servers via DHCP, follow these steps:
 
 1. Select the S7-1500 CPU in STEP 7.
-2. In the properties of the CPU, navigate to "Time of day" > "Time synchronization"> "NTP mode".
+2. In the properties of the CPU, navigate to "Time of day" &gt; "Time synchronization"&gt; "NTP mode".
 3. For "Time synchronization" select "Set NTP server remotely (e.g. DHCP)" in the drop-down list.
 
 Result: If the DHCP server supplies addresses from NTP servers as option , the CPU uses up to 4 addresses.
@@ -3418,7 +3418,7 @@ Result: If the DHCP server supplies addresses from NTP servers as option , the C
 To obtain the host name via DHCP, follow these steps:
 
 1. Select the S7-1500 CPU in STEP 7.
-2. In the properties of the CPU, navigate to "Advanced configuration" > "Host and domain name"> "Host and domain name configuration"> "Host name".
+2. In the properties of the CPU, navigate to "Advanced configuration" &gt; "Host and domain name"&gt; "Host and domain name configuration"&gt; "Host name".
 3. For "Host name configuration" select "Set host name remotely (e.g. DHCP)" in the drop-down list.
 
 Result: If the DHCP server supplies a host name as option, the CPU uses this host name.
@@ -3428,7 +3428,7 @@ Result: If the DHCP server supplies a host name as option, the CPU uses this hos
 To obtain the domain via DHCP, follow these steps:
 
 1. Select the S7-1500 CPU in STEP 7.
-2. In the properties of the CPU, navigate to "Advanced configuration" > "Host and domain name" > "Host and domain name configuration" > "Domain".
+2. In the properties of the CPU, navigate to "Advanced configuration" &gt; "Host and domain name" &gt; "Host and domain name configuration" &gt; "Domain".
 3. For "Domain configuration:" select "Set domain remotely (e.g. DHCP)" in the drop-down list.
 
 Result: If the DHCP server delivers a domain as option, the CPU uses this domain.
@@ -3524,7 +3524,7 @@ For CPUs with an integrated PN/IE interface, the TCP, UDP, and ISO-on-TCP connec
 
 ###### Instructions for Open User Communication
 
-To create the connections, you have various instructions available after opening in the program editor in the "Instructions > Communication > Open User Communication" task card:
+To create the connections, you have various instructions available after opening in the program editor in the "Instructions &gt; Communication &gt; Open User Communication" task card:
 
 - Compact instructions for sending or receiving data via the integrated functions for establishing and terminating the connection (S7-1200/1500 only):
 
@@ -3679,7 +3679,7 @@ The following table shows the general connection parameters:
 >
 > Additional connections for a TSEND_C or TRCV_C instruction can be created in the inspector window for the connection parameters using the appropriate button next to the connection data.
 >
-> The connections configured using TSEND_C and TRCV_C are displayed in a connection table in the inspector window under "Properties > Configuration > Overview of configured connections" when the TSEND_C or TRCV_C block is selected.
+> The connections configured using TSEND_C and TRCV_C are displayed in a connection table in the inspector window under "Properties &gt; Configuration &gt; Overview of configured connections" when the TSEND_C or TRCV_C block is selected.
 
 ---
 
@@ -3721,7 +3721,7 @@ The connection configuration for Open User Communication is enabled as soon as a
 
 To insert the extended instructions for Open User Communication, proceed as follows:
 
-1. Open the task card, pane and folder "Instructions > Communication > Open User Communication".
+1. Open the task card, pane and folder "Instructions &gt; Communication &gt; Open User Communication".
 2. Drag one of the following instructions to a network:
 
    - TSEND_C
@@ -3779,7 +3779,7 @@ A CPU exists with a TCON, TSEND_C or TRCV_C communication instruction.
 To create a connection for Open User Communication, follow these steps:
 
 1. Select a TCON, TSEND_C or TRCV_C block of Open User Communication in the program editor.
-2. Open the "Properties > Configuration" tab in the inspector window.
+2. Open the "Properties &gt; Configuration" tab in the inspector window.
 3. Select the "Connection parameters" group. Until you select a connection partner, only the drop-down lists for the partner end point and the local connection data are enabled. All other input options are disabled.
 
    The connection parameters already known are displayed:
@@ -3901,7 +3901,7 @@ You have created an Open User Communication connection.
 To delete a connection, follow these steps:
 
 1. Select a communication partner for Open User Communication in the project tree.
-2. Open the "Program blocks > System blocks > Program resources" folder below the selected communication partner.
+2. Open the "Program blocks &gt; System blocks &gt; Program resources" folder below the selected communication partner.
 3. Select the "Delete" command from the shortcut menu of the data block with the connection parameter assignment.
 
 > **Note**
@@ -4046,10 +4046,10 @@ The CONNECT connection parameter of the instance DBs for TSEND_C, TRCV_C or TCON
 | 9 | rem_staddr_len | USINT | 4 | Length of address of partner end point, in bytes:   - 0: unspecified, in other words, parameter rem_staddr is irrelevant. - 4: valid IP address in the parameter rem_staddr  (TCP and ISO-on-TCP only) |
 | 10 | rem_tsap_id_len | USINT | 2 | Length of parameter rem_tsap_id used, in bytes; possible values:   - 0 or 2, if connection type = 17 (TCP)   Only the value 0 is permissible for the passive side. - 2 to 16, if connection type = 18 (ISO-on-TCP) - 0, if connection type = 19 (UDP) |
 | 11 | next_staddr_len | USINT | 0 | This parameter is not used. |
-| 12 … 27 | local_tsap_id | ARRAY [1..16] of BYTE | - | Local address component of connection:   - TCP and UDP: local port no. (possible values: 1 to 49151 for S7-1200 and S7-1500 with firmware version < V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0);   local_tsap_id[1] = high byte of port no. in hexadecimal notation;   local_tsap_id[2] = low byte of port no. in hexadecimal notation;   local_tsap_id[3-16] = irrelevant - ISO-on-TCP: local TSAP-ID:   local_tsap_id[1] = B#16#E0;   local_tsap_id[2] = rack and slot of local end points (bits 0 to 4: Slot number, bits 5 to 7: rack number);    local_tsap_id[3-16] = TSAP extension, optional   Note: Make sure that every value of local_tsap_id is unique within the CPU. |
+| 12 … 27 | local_tsap_id | ARRAY [1..16] of BYTE | - | Local address component of connection:   - TCP and UDP: local port no. (possible values: 1 to 49151 for S7-1200 and S7-1500 with firmware version &lt; V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0);   local_tsap_id[1] = high byte of port no. in hexadecimal notation;   local_tsap_id[2] = low byte of port no. in hexadecimal notation;   local_tsap_id[3-16] = irrelevant - ISO-on-TCP: local TSAP-ID:   local_tsap_id[1] = B#16#E0;   local_tsap_id[2] = rack and slot of local end points (bits 0 to 4: Slot number, bits 5 to 7: rack number);    local_tsap_id[3-16] = TSAP extension, optional   Note: Make sure that every value of local_tsap_id is unique within the CPU. |
 | 28 … 33 | rem_subnet_id | ARRAY [1..6] of USINT | - | This parameter is not used. |
 | 34 … 39 | rem_staddr | ARRAY [1..6] of USINT | - | TCP and ISO-on-TCP only: IP address of the partner end point, for example, for 192.168.002.003:   - rem_staddr[1] = 192 - rem_staddr[2] = 168 - rem_staddr[3] = 002 - rem_staddr[4] = 003 - rem_staddr[5-6]= irrelevant |
-| 40 … 55 | rem_tsap_id | ARRAY [1..16] of BYTE | - | Partner address component of connection  - TCP: partner port no. (possible values: 1 to 49151 for S7-1200 and S7-1500 with firmware version < V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0);   rem_tsap_id[1] = high byte of port no. in hexadecimal notation;   rem_tsap_id[2] = low byte of port no. in hexadecimal notation;   rem_tsap_id[3-16] = irrelevant - ISO-on-TCP: partner TSAP-ID:   rem_tsap_id[1] = B#16#E0;    rem_tsap_id[2] = rack and slot of partner end point (bits 0 to 4: Slot number, bits 5 to 7: rack number);   rem_tsap_id[3-16] = TSAP extension, optional - UDP: This parameter is not used. |
+| 40 … 55 | rem_tsap_id | ARRAY [1..16] of BYTE | - | Partner address component of connection  - TCP: partner port no. (possible values: 1 to 49151 for S7-1200 and S7-1500 with firmware version &lt; V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0);   rem_tsap_id[1] = high byte of port no. in hexadecimal notation;   rem_tsap_id[2] = low byte of port no. in hexadecimal notation;   rem_tsap_id[3-16] = irrelevant - ISO-on-TCP: partner TSAP-ID:   rem_tsap_id[1] = B#16#E0;    rem_tsap_id[2] = rack and slot of partner end point (bits 0 to 4: Slot number, bits 5 to 7: rack number);   rem_tsap_id[3-16] = TSAP extension, optional - UDP: This parameter is not used. |
 | 56 … 61 | next_staddr | ARRAY [1..6] of BYTE | - | This parameter is not used. |
 | 62 … 63 | spare | WORD | W#16#0000 | Reserved. |
 
@@ -4102,8 +4102,8 @@ The CONNECT connection parameter of the instance DBs for TSEND_C, TRCV_C or TCON
 | 4 | ConnectionType | BYTE | 11 | Connection type:   - 11: TCP (11 dec = 0x0B hex) - 17: TCP (17 dec = 0x11 hex) - 19: UDP (19 dec = 0x13 hex)   In this case, only passive connection establishment is permitted on both sides. This means that the parameter "ActiveEstablished" must have the value FALSE on both sides. |
 | 5 | ActiveEstablished | BOOL | TRUE | Identifier for the type of connection establishment:  - FALSE: Passive connection establishment - TRUE: Active connection establishment |
 | 6 … 9 | RemoteAddress | ARRAY [1..4] of BYTE | - | - IP address of the partner end point, for example, for 192.168.0.1:    - addr[1] = 192   - addr[2] = 168   - addr[3] = 0   - addr[4] = 1 - Multicast address of an IPv4 multicast group (for S7-1500-CPUs as of firmware version V2.0 or V2.1 and higher when using TSEND_C/TRCV_C) |
-| 10 … 11 | RemotePort | UINT | 2000 | Port number of the remote connection partner (range of values: 1 to 49151 for S7-1200 and S7-1500 with firmware version < V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0. 0 is also permitted in the passive connection establishment). |
-| 12 … 13 | LocalPort | UINT | 2000 | Port number of the local connection partner (value range: 1 to 49151 for S7-1200 and S7-1500 with firmware version < V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0. 0 is also permitted in the active connection establishment). |
+| 10 … 11 | RemotePort | UINT | 2000 | Port number of the remote connection partner (range of values: 1 to 49151 for S7-1200 and S7-1500 with firmware version &lt; V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0. 0 is also permitted in the passive connection establishment). |
+| 12 … 13 | LocalPort | UINT | 2000 | Port number of the local connection partner (value range: 1 to 49151 for S7-1200 and S7-1500 with firmware version &lt; V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0. 0 is also permitted in the active connection establishment). |
 
 ---
 
@@ -4194,8 +4194,8 @@ The connection parameter CONNECT of the instance DBs for TCON contains a referen
 | 4 | connection_type | BYTE | 11 | Connection type:   - 11: TCP (11 dec = 0x0B hex) - 19: UDP (19 dec = 0x13 hex)   For compatibility and migration reasons, the CPU S7-1500 also allows the values of the connection description DB with a structure according to TCON_Param. For the connection type TCP, the entry 17 is therefore also valid (17 dec = 0x11 hex). |
 | 5 | active_established | BOOL | TRUE | Identifier for the type of connection establishment:  - FALSE: Passive connection establishment - TRUE: Active connection establishment |
 | 6 … 261 | remote_qdn | STRING | - | Fully qualified domain name of the partner end point, which must finish with "."  Please note that in a SIMATIC network, the name including the concluding dot must not exceed 254 characters. |
-| 262 … 263 | remote_port | UINT | 2000 | Port number of the remote connection partner (range of values: 1 to 49151 for S7-1200 and S7-1500 with firmware version < V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0. 0 is also permitted in the passive connection establishment). |
-| 264 … 265 | local_port | UINT | 2000 | Port number of the local connection partner (value range: 1 to 49151 for S7-1200 and S7-1500 with firmware version < V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0. 0 is also permitted in the active connection establishment). |
+| 262 … 263 | remote_port | UINT | 2000 | Port number of the remote connection partner (range of values: 1 to 49151 for S7-1200 and S7-1500 with firmware version &lt; V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0. 0 is also permitted in the passive connection establishment). |
+| 264 … 265 | local_port | UINT | 2000 | Port number of the local connection partner (value range: 1 to 49151 for S7-1200 and S7-1500 with firmware version &lt; V3.0, 1 to 65535 for S7-1500 as of firmware version V3.0. 0 is also permitted in the active connection establishment). |
 
 ###### Connection parameters in accordance with TCON_QDN_SEC (S7-1500)
 
@@ -4320,7 +4320,7 @@ Parameters of TCON_Phone
 
 | Byte | Parameter | Data type | Initial value | Description |
 | --- | --- | --- | --- | --- |
-| 0 ... 1 | InterfaceId | HW_ANY |  | Reference to the local interface (telecontrol interface or Ethernet interface of the CP > "Hardware identifier") |
+| 0 ... 1 | InterfaceId | HW_ANY |  | Reference to the local interface (telecontrol interface or Ethernet interface of the CP &gt; "Hardware identifier") |
 | 2 ... 3 | ID | CONN_OUC | 1...07FF<sub>h</sub> | Reference to the local mobile wireless connection. The ID is assigned and must be unique within the CPU.  Note on telecontrol connections of the CP 1242-7: The same value as that of the parameter ID of the TC_CON instruction must be used here. |
 | 4 | ConnectionType | Byte | W#16#0E | Protocol variant 14 (E<sub>h</sub>): SMS connection |
 | 5 | ActiveEstablished | Bool |  | Identifier for the type of connection establishment (not relevant for the CP 1242-7):  - 0: Passive connection establishment (not relevant here) - 1: Active connection establishment |
@@ -4408,7 +4408,7 @@ The table below describes the connection parameters for the following programmed
 
 TCP and UDP communication uses ports as part of the network address. Each connection has two ports, one on the client side and one on the server side. Possible port numbers are 0 to 65535.
 
-For the port numbers of programmable connections, for S7-1200 and S7-1500 with firmware version < V3.0, values from 1 to 49151 are allowed, for S7-1500, from firmware version V3.0, 65535. You can assign any port number within this range. When an Open User Communication is created, the value 2000 is automatically assigned as the port number. The value 0 continues to be permitted for the passive connection establishment in the remote port and in the active connection establishment in the local port.
+For the port numbers of programmable connections, for S7-1200 and S7-1500 with firmware version &lt; V3.0, values from 1 to 49151 are allowed, for S7-1500, from firmware version V3.0, 65535. You can assign any port number within this range. When an Open User Communication is created, the value 2000 is automatically assigned as the port number. The value 0 continues to be permitted for the passive connection establishment in the remote port and in the active connection establishment in the local port.
 
 > **Note**
 >
@@ -4436,7 +4436,7 @@ Possible local port range of the CPU that can be addressed by the remote partner
 
 - Programmed connection using the TCON instruction:
 
-  - 1 to 49151 for S7-1200 and S7-1500 with firmware version < V3.0
+  - 1 to 49151 for S7-1200 and S7-1500 with firmware version &lt; V3.0
   - 1...65535 for S7-1500 from firmware version V3.0 or higher
 - Configured connections via TIA Portal: 1 to 65535
 
@@ -4448,7 +4448,7 @@ Possible local port range of the CPU:
 
 - Programmed connection via TCON instruction defined by the user:
 
-  - 1 to 49151 for S7-1200 and S7-1500 with firmware version < V3.0
+  - 1 to 49151 for S7-1200 and S7-1500 with firmware version &lt; V3.0
   - 1...65535 for S7-1500 from firmware version V3.0 or higher
 - Programmed connection using the TCON instruction dynamically managed by the CPU: 49152 to 65535
 - Configured connections via TIA Portal defined by the user: 1 to 65535:
@@ -4467,7 +4467,7 @@ Possible local port range of the CPU:
 
 The connection description for exactly one connection of the Open User Communication is entered from the connection configuration in the connection description DB.
 
-You can change the parameter values of the connection description DB outside of the connection configuration in the user program. Connection description DBs containing values you changed subsequently can be read back from the connection configuration. Under "Properties > Configuration > Connection parameters", the inspector window displays only the connection parameters stored in the connection description DB.
+You can change the parameter values of the connection description DB outside of the connection configuration in the user program. Connection description DBs containing values you changed subsequently can be read back from the connection configuration. Under "Properties &gt; Configuration &gt; Connection parameters", the inspector window displays only the connection parameters stored in the connection description DB.
 
 > **Note**
 >
@@ -4608,8 +4608,8 @@ When entering ASCII TSAPs with the hexadecimal values from 20 to 7E, only the fo
 
 | Code | ..0 | ..1 | ..2 | ..3 | ..4 | ..5 | ..6 | ..7 | ..8 | ..9 | ..A | ..B | ..C | ..D | ..E | ..F |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **2..** |  | ! | " | # | $ | % | & | ’ | ( | ) | * | + | , | - | . | / |
-| **3..** | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | = | > | ? |
+| **2..** |  | ! | " | # | $ | % | &amp; | ’ | ( | ) | * | + | , | - | . | / |
+| **3..** | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | &lt; | = | &gt; | ? |
 | **4..** | @ | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |
 | **5..** | P | Q | R | S | T | U | V | W | X | Y | Z | [ | \ | ] | ^ | _ |
 | **6..** | ` | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
@@ -5009,7 +5009,7 @@ In the connection table inconsistent connections are marked in red.
 - Errors when backing up data due to insufficient memory
 - Connections to an unspecified connection partner without partner address information.
 
-Detailed information regarding the reasons for the inconsistency can be found in the "Compile" tab following compilation (Edit > Compile).
+Detailed information regarding the reasons for the inconsistency can be found in the "Compile" tab following compilation (Edit &gt; Compile).
 
 ###### Remedies
 
@@ -5093,7 +5093,7 @@ If all the connection resources of a communication partner are assigned, no new 
 
 In the case of S7 connections via the PN interface, one connection resource per S7 connection is assigned for the endpoint for the S7-1200 CPU. One connection resource is also required for the connection partner.
 
-You can find an overview of available and assigned connection resources for selected S7-1200 CPU in the Inspector window at "Properties > Connection Resources"
+You can find an overview of available and assigned connection resources for selected S7-1200 CPU in the Inspector window at "Properties &gt; Connection Resources"
 
 ###### Views containing information about the configured connections (S7-1200)
 
@@ -5342,11 +5342,11 @@ In the connection table inconsistent connections are marked in red.
 - Connection resources are exceeded
 - Connections to an unspecified connection partner without partner address information.
 
-Detailed information regarding the reasons for the inconsistency can be found in the "Compile" tab following compilation (Edit > Compile).
+Detailed information regarding the reasons for the inconsistency can be found in the "Compile" tab following compilation (Edit &gt; Compile).
 
 ###### Remedies
 
-To assign a closed connection path to an existing open connection path, expand the device configuration in such a way that the interfaces required for the connection type are available for both partners. At "Properties > General > Interface" in the Inspector window, you can use the "Find connection path" button to create a connection to an existing partner.
+To assign a closed connection path to an existing open connection path, expand the device configuration in such a way that the interfaces required for the connection type are available for both partners. At "Properties &gt; General &gt; Interface" in the Inspector window, you can use the "Find connection path" button to create a connection to an existing partner.
 
 ###### S7 connection - general settings (S7-1200)
 
@@ -5390,14 +5390,14 @@ When a connection is established, the connection-specific resources of a module 
 
 - For S7-1200 CPU (firmare V2.0 or higher):
 
-  "SIMATIC-ACC"<nnn><mm>
+  "SIMATIC-ACC"&lt;nnn&gt;&lt;mm&gt;
 
   nnn = Local ID
 
   mm = any value
 - For S7-1200 CPU (firmare V1.0):
 
-  <xx>.<yz>
+  &lt;xx&gt;.&lt;yz&gt;
 
   xx = Number of the connection resource
 
@@ -5450,7 +5450,7 @@ If several CM/CPs are fitted in a device, an automatic switch is made to the nex
 
 > **Note**
 >
-> Data transfer > 240 byte transfer is supported by the current CPs.
+> Data transfer &gt; 240 byte transfer is supported by the current CPs.
 >
 > CPs with an older product version support the transfer of data with a data length of up to 240 bytes.
 >
@@ -5581,7 +5581,7 @@ You can assign the connection parameters for PUT and GET in the inspector window
 
 To insert PUT/GET instructions, follow these steps:
 
-1. Open the "Instructions" task card in the "Communication > S7 Communication" folder.
+1. Open the "Instructions" task card in the "Communication &gt; S7 Communication" folder.
 2. Drag a PUT or GET instruction to a network.
 
    The "Call options" dialog opens.
@@ -5618,7 +5618,7 @@ A CPU exists with a PUT or GET communication instruction.
 To configure an S7 connection using PUT/GET instructions, follow these steps:
 
 1. In the program editor, select the call of the PUT or GET instruction.
-2. Open the "Properties > Configuration" tab in the inspector window.
+2. Open the "Properties &gt; Configuration" tab in the inspector window.
 3. Select the "Connection parameters" group. Until you select a connection partner, only the empty drop-down list for the partner end point is enabled. All other input options are disabled.
 
    The connection parameters already known are displayed:
@@ -5716,13 +5716,13 @@ To specify the read and the memory area for the instruction, follow these steps:
 1. Select the PUT instruction in the program editor.
 2. Open the "Configuration" tab in the inspector window.
 3. Select the "Block parameter assignment" entry in the area navigation.
-4. In the "In/Outputs > Write area (ADDR_1) > Start" field, select a "REMOTE" data type pointer to the area of the partner CPU which is to be written.
+4. In the "In/Outputs &gt; Write area (ADDR_1) &gt; Start" field, select a "REMOTE" data type pointer to the area of the partner CPU which is to be written.
 
    Only absolute addressing is permitted.
 
    Example: P#DB10.DBX5.0 Byte 10
 5. In the "Length" field, enter the length of the write area and select the data type of the memory area from the drop-down list.
-6. In the "In/Outputs > Send area (SD_1) > Start" field, select a pointer to the area in the local CPU which contains the data to be sent.
+6. In the "In/Outputs &gt; Send area (SD_1) &gt; Start" field, select a pointer to the area in the local CPU which contains the data to be sent.
 7. In the Length field, enter the length of the memory area to be read and select the data type from the drop-down list.
 
    Only the data types BOOL (for a bit array, "0" must be used as address and an integer multiple of byte must be used as length), BYTE, CHAR, WORD, INT, DWORD, DINT, REAL, COUNTER, TIMER are permitted.
@@ -5752,13 +5752,13 @@ To specify the read and the memory area for the instruction, follow these steps:
 1. Select the GET instruction in the program editor.
 2. Open the "Configuration" tab in the inspector window.
 3. Select the "Block parameter assignment" entry in the area navigation.
-4. In the "In/Outputs > Read area (ADDR_1) > Start" field, select a "REMOTE" data type pointer to the area of the partner CPU which is to be read.
+4. In the "In/Outputs &gt; Read area (ADDR_1) &gt; Start" field, select a "REMOTE" data type pointer to the area of the partner CPU which is to be read.
 
    Only absolute addressing is permitted.
 
    Example: P#DB10.DBX5.0 Byte 10
 5. In the "Length" field, enter the length of the read area and select the data type of the memory area from the drop-down list.
-6. In the "In/Outputs > Memory area (RD_1) > Start" field, select a pointer to the area in the local CPU in which the read data is to be stored.
+6. In the "In/Outputs &gt; Memory area (RD_1) &gt; Start" field, select a pointer to the area in the local CPU in which the read data is to be stored.
 7. In the Length field, enter the length of the memory area and select the data type from the drop-down list.
 
    Only the data types BOOL (for a bit array, "0" must be used as address and an integer multiple of byte must be used as length), BYTE, CHAR, WORD, INT, DWORD, DINT, REAL, COUNTER, TIMER are permitted.
@@ -6116,7 +6116,7 @@ This is only an example. The actual number of connections can differ depending o
 | --- | --- | --- | --- | --- | --- | --- |
 | Used connection resources | 2 | 2 | 2 | 3 | 3 | 12 |
 
-Information regarding the availability and assignment of connection resources for HMI connections is available in the offline view in the HMI device context (under "Properties > General > Connection resources" in the Inspector window):
+Information regarding the availability and assignment of connection resources for HMI connections is available in the offline view in the HMI device context (under "Properties &gt; General &gt; Connection resources" in the Inspector window):
 
 ![Resource requirements of the connections](images/128427731723_DV_resource.Stream@PNG-en-US.png)
 
@@ -6372,7 +6372,7 @@ Boundary conditions:
 - Reserved resources for certain connection types (programming device and HMI) reduce the number of freely available resources.
 - For OPC UA client/server connections, there is a "separate" high limit for each CPU performance class similar to other connection types: Example: maximum 64 for the OPC UA server and maximum 40 for the OPC UA client with CPU 1518).
 
-  You have the possibility to reduce the limit of possible connections to the server using the CPU parameter "Max. number of OPC UA sessions" in the "OPC UA > Server > Settings" area. For example, the CPU 1518 is preset to a value of 20.
+  You have the possibility to reduce the limit of possible connections to the server using the CPU parameter "Max. number of OPC UA sessions" in the "OPC UA &gt; Server &gt; Settings" area. For example, the CPU 1518 is preset to a value of 20.
 - Example for custom high limits for specific other connection types, which prevent unrestricted use of the connection pool:
 
   Web communication with a maximum of 80 connections.
@@ -6460,7 +6460,7 @@ The table is updated automatically. If there are inconsistencies between the con
 
 For HMI communication, connection resources in the CPU are assigned according to the HMI device used and the applications in which the HMI device is used. For example, a Basic Panel requires up to two connection resources in the CPU for an HMI connection, while a Comfort Panel requires up to three connection resources in the CPU.
 
-Information regarding the availability and allocation of connection resources for HMI connections is available in the offline view in the HMI device context (under "Properties > General > Connection resources" in the Inspector window).
+Information regarding the availability and allocation of connection resources for HMI connections is available in the offline view in the HMI device context (under "Properties &gt; General &gt; Connection resources" in the Inspector window).
 
 ![Display of the connection resources for HMI](images/128427731723_DV_resource.Stream@PNG-en-US.png)
 
@@ -7326,14 +7326,14 @@ To adopt one more port interconnections identified online in the project manuall
 
 1. Select the row belonging to the port interconnection.
 2. If applicable, select further roles using multi-selection.
-3. Select "Apply" > "Use selected" in the shortcut menu.
+3. Select "Apply" &gt; "Use selected" in the shortcut menu.
 
    The content of the corresponding table cells in the "Action" column changes to "Apply".
 4. If you have mistakenly prepared too many port interconnections to be included in the project:
 
    Select the rows that belong to the port interconnections you have mistakenly prepared for inclusion in the project using multi-selection.
 
-   Select "Reset" > "Reset selected" in the shortcut menu.
+   Select "Reset" &gt; "Reset selected" in the shortcut menu.
 
    The content of the corresponding table cells in the "Action" column change to "No action".
 5. Click the "Synchronize" button.
@@ -7552,7 +7552,7 @@ The following table shows the TLS versions that are basically supported in a giv
 
 To generate the public key for a new certificate, in the TIA Portal, set the encryption method and encryption parameters. These certificate parameters are device-dependent and dependent on the application used
 
-One possibility: In the CPU properties, go to "Protection & Security > Certificate manager" and generate a new device certificate. You can find settings for the encryption method and the encryption parameters under "Certificate Parameters" in the "Generate Certificates" dialog.
+One possibility: In the CPU properties, go to "Protection &amp; Security &gt; Certificate manager" and generate a new device certificate. You can find settings for the encryption method and the encryption parameters under "Certificate Parameters" in the "Generate Certificates" dialog.
 
 Example: RSA 2048 stands for asymmetric RSA encryption method with cryptographic key length 2048 bits.
 
@@ -7594,8 +7594,8 @@ There is a wide range of mathematical processes (algorithms) for encrypting mess
 
 All algorithms process a "key" parameter to encrypt and decrypt messages.
 
-- Algorithm + key + message => encrypted message
-- Encrypted message + key + algorithm => (decrypted) message
+- Algorithm + key + message =&gt; encrypted message
+- Encrypted message + key + algorithm =&gt; (decrypted) message
 
 ###### Symmetric encryption
 
@@ -7799,14 +7799,14 @@ For devices with security properties, such as an S7-1500 CPU as of firmware V2.0
 
 The following areas in the Inspector window of the CPU allow the creation of new certificates or the selection of existing ones:
 
-- "Web server > Security" - for the generation and assignment of Web server certificates.
-- "Protection & Security > Connection mechanisms" - for the generation or assignment of PLC communication certificates (Secure PG/HMI communication, as of TIA Portal V17).
-- "Protection & Security > Certificate manager" - for the generation or assignment of all types of certificates. The default setting for the creation of certificates is TLS certificates for Secure Open User Communication.
-- "OPC UA > Server > Security" - for the generation or assignment of OPC UA server certificates.
+- "Web server &gt; Security" - for the generation and assignment of Web server certificates.
+- "Protection &amp; Security &gt; Connection mechanisms" - for the generation or assignment of PLC communication certificates (Secure PG/HMI communication, as of TIA Portal V17).
+- "Protection &amp; Security &gt; Certificate manager" - for the generation or assignment of all types of certificates. The default setting for the creation of certificates is TLS certificates for Secure Open User Communication.
+- "OPC UA &gt; Server &gt; Security" - for the generation or assignment of OPC UA server certificates.
 
 ![Creating or assigning certificates in the TIA Portal](images/142880184971_DV_resource.Stream@PNG-en-US.png)
 
-###### Special feature of the area "Protection & security > Certificate manager"
+###### Special feature of the area "Protection &amp; security &gt; Certificate manager"
 
 Only in this area of the Inspector window do you switch between the global, meaning the project-wide, certificate manager and the local, meaning the device-specific, certificate manager (option "Use global security settings for certificate manager"). The option decides whether you have access to all the certificates in the project or not.
 
@@ -7873,9 +7873,9 @@ The certificates are to be referenced by their certificate ID in the user progra
 
 STEP 7 automatically downloads the required CA certificates together with the hardware configuration to the participating CPUs so that the requirements for certificate verification exist for both CPUs. You therefore only have to generate the device certificates for the respective CPU - everything else is done by STEP 7 for you.
 
-1. Select PLC_1 and activate the "Use global security settings for certificate manager" option in the "Protection & Security" area.
+1. Select PLC_1 and activate the "Use global security settings for certificate manager" option in the "Protection &amp; Security" area.
 2. Log in as a user in the project tree in the "Global security settings" area. The "Administrator" role is the default for the first login to a new project.
-3. Return to the PLC 1 in the "Protection & Security" section. Click in an empty line in the "Certificate holder" column in the "Device certificates" table to add a new certificate.
+3. Return to the PLC 1 in the "Protection &amp; Security" section. Click in an empty line in the "Certificate holder" column in the "Device certificates" table to add a new certificate.
 4. Click the "Add" button in the drop-down list to select a certificate.
 
    The "Generate new certificate" dialog opens.
@@ -7901,7 +7901,7 @@ A verification with the CA certificates of the STEP 7 project is not possible wi
 
 Proceed as follows to add the self-signed certificate of the communication partner of the CPU:
 
-1. Select PLC_1 and navigate to the table "Certificates of partner devices" in the "Protection & Security" area.
+1. Select PLC_1 and navigate to the table "Certificates of partner devices" in the "Protection &amp; Security" area.
 2. Click in an empty line of the "Certificate holder" column to open the drop-down list for adding or selecting certificates.
 3. From the drop-down list select the self-signed certificate of the communication partner and confirm the selection.
 
@@ -7934,7 +7934,7 @@ Proceed as follows to import certificates of the communication partner:
 3. Right-click in the table to open the shortcut menu. Click "Import" and import the required certificate or the required CA certificates.
 
    Through the import the certificate receives a certificate ID and can be assigned to a module in the next step.
-4. Select PLC_1 and navigate to the table "Certificates of partner devices" in the "Protection & Security" area.
+4. Select PLC_1 and navigate to the table "Certificates of partner devices" in the "Protection &amp; Security" area.
 5. Click in an empty line of the "Certificate holder" column to add the imported certificates.
 6. From the drop-down list select the required CA certificates of the communication partner and confirm the selection.
 
@@ -8017,7 +8017,7 @@ For S7-1500 CPUs with a firmware version before V2.0, you were able to set "Perm
 
 You did not have anything to do with the handling of certificates for these CPUs; the CPU automatically generates the certificates required for the Web server.
 
-For S7-1500 CPUs as of firmware V2.0, STEP 7 generates the server certificate (end-entity certificate) for the CPU. You assign a server certificate to the Web server in the properties of the CPU (Web server > Server security).
+For S7-1500 CPUs as of firmware V2.0, STEP 7 generates the server certificate (end-entity certificate) for the CPU. You assign a server certificate to the Web server in the properties of the CPU (Web server &gt; Server security).
 
 Since a server certificate name is always preset, nothing changes in the simple configuration of the Web server: You activate the Web server and activate the option "Permit access only with HTTPS" - STEP 7 generates a server certificate with the preset name during compiling.
 
@@ -8131,7 +8131,7 @@ The wizard also starts, for example, when you replace a module in the network vi
 
 All settings in the wizard are applied in the Inspector window (CPU properties).
 
-You can start the wizard at any time using a Start button in the "Protection & Security" area of the CPU properties.
+You can start the wizard at any time using a Start button in the "Protection &amp; Security" area of the CPU properties.
 
 ###### Requirement
 
@@ -8142,7 +8142,7 @@ You can start the wizard at any time using a Start button in the "Protection & S
 ###### Procedure
 
 1. Open the CPU properties in the network view or in the device view.
-2. Navigate to the area "Protection & Security > Protection of the PLC configuration data".
+2. Navigate to the area "Protection &amp; Security &gt; Protection of the PLC configuration data".
 
    **Result:** The "Protect confidential PLC configuration data" option is enabled first and the empty field for password entry is highlighted in red.
 3. Configure the password (recommended) via the "Set" button or disable the "Protect confidential PLC configuration data" option.
@@ -8160,7 +8160,7 @@ Because, as of TIA Portal version V17 and CPU firmware version V2.9 (S7-1500) or
 - Manage your passwords in a password manager.
 - Use TIA Portal's password policy verification settings to check newly entered passwords for compliance and prevent trivial passwords, for example:
 
-  - In the project tree, navigate to the area "<Project name> > Security settings > Settings" area and select the "Password policies" area.
+  - In the project tree, navigate to the area "&lt;Project name&gt; &gt; Security settings &gt; Settings" area and select the "Password policies" area.
   - Specify, for example, the minimum number of characters the password must have or the minimum number of special characters.
 - You do not have to assign different passwords for each CPU in a system or machine. If the requirements are met, you can also define the same password for a group of CPUs. This strategy also has advantages in the replacement parts scenario: If the group password is also assigned to the replacement CPU, the workload of replacing the CPU is reduced.
 
@@ -8228,7 +8228,7 @@ As long as you have not yet loaded a configuration into the CPU, you can change 
 **Procedure**
 
 1. Open the CPU properties in the network view or in the device view.
-2. Navigate to the area "Protection & Security > Protection of the PLC configuration data".
+2. Navigate to the area "Protection &amp; Security &gt; Protection of the PLC configuration data".
 3. Click the "Change" button or deactivate the option "Protect confidential PLC configuration data".
 4. Enter the previously valid password in the dialog. In case of a password change, also enter the new password and confirm the new password.
 
@@ -8246,7 +8246,7 @@ If the CPU has already been loaded with a configuration and the configuration is
 **Procedure**
 
 1. Select the CPU in the network view.
-2. Select the "Online & Diagnostics" command from the shortcut menu.
+2. Select the "Online &amp; Diagnostics" command from the shortcut menu.
 3. If you also change the project on the memory card, i.e. then want to reload the configuration:
 
    - Select the "Reset to factory settings" area in the opened online and diagnostics view.
@@ -8291,7 +8291,7 @@ Since you have to enter the password when loading the CPU via TIA Portal for the
 **Procedure**
 
 1. Open the CPU properties in the network view or in the device view.
-2. Navigate to the area "Protection & Security > Protection of the PLC configuration data".
+2. Navigate to the area "Protection &amp; Security &gt; Protection of the PLC configuration data".
 3. Click "Reset".
 
    Please note that the certificates of the CPU (e.g. certificates for web server, for OPC UA server, for PG/PC communication and HMI communication) may no longer be used after the reset and may have to be created again and reassigned.
@@ -8314,7 +8314,7 @@ If the CPU has already been loaded with a configuration and the configuration is
 **Procedure**
 
 1. Select the CPU in the network view.
-2. Select the "Online & Diagnostics" command from the shortcut menu.
+2. Select the "Online &amp; Diagnostics" command from the shortcut menu.
 3. In the area "Password to protect confidential PLC configuration data", click the "delete" button.   
    If the "Delete" button is not available, no password has been set in the CPU yet.
 
@@ -8510,7 +8510,7 @@ The global security settings are not visible until they have been activated in t
 
 ![Activation of the global security settings](images/113745265931_DV_resource.Stream@PNG-en-US.png)
 
-The check box is located in the Inspector window in the general settings of a device with security functions under "Protection & Security > Certificate manager".
+The check box is located in the Inspector window in the general settings of a device with security functions under "Protection &amp; Security &gt; Certificate manager".
 
 ###### Principle
 
@@ -8562,7 +8562,7 @@ After you have activated the global security settings for the certificate manage
 
 ###### Roles and rights
 
-You can configure the security settings if the predefined roles "Administrator" or "Standard" are assigned to you or if a different defined role with the associated authorization is assigned. You can view the roles in the project tree under "Global security settings > User administration > Roles" or, if you have corresponding rights, edit them.
+You can configure the security settings if the predefined roles "Administrator" or "Standard" are assigned to you or if a different defined role with the associated authorization is assigned. You can view the roles in the project tree under "Global security settings &gt; User administration &gt; Roles" or, if you have corresponding rights, edit them.
 
 | Assigned role | Diagnosing | Configuring | Managing users and roles |
 | --- | --- | --- | --- |
@@ -8969,11 +8969,11 @@ The fundamental procedure and the concept for using secure communication via a C
 
 The following applies in general: You have to be logged on at the certificate manager in the global security settings. The generation of self-signed certificates also requires logon for the global security settings. You have to have sufficient rights as a user (administrator or user with the "Standard" role with the right to "Configure security").
 
-The starting point for the generation or assignment of certificates at the CP is the section "Security > Security properties". In this section, you log on for the global security settings.
+The starting point for the generation or assignment of certificates at the CP is the section "Security &gt; Security properties". In this section, you log on for the global security settings.
 
 Procedure:
 
-1. In the network view of STEP 7, mark the CP and select the section "Security > Security properties" in the Inspector window.
+1. In the network view of STEP 7, mark the CP and select the section "Security &gt; Security properties" in the Inspector window.
 2. Click on the "User logon" button.
 3. Log on using your user name and password.
 4. Enable the "Activate security functions" option.
@@ -9057,7 +9057,7 @@ You have to perform configuration of certificates again after the upload. Otherw
   No differences between OUC and secure OUC connection diagnostics.
 - Loading of projects with secure OUC connections into the CPU:   
   Only possible in STOP of the CPU, if certificates are loaded as well.  
-  Recommendation: Load to device > Hardware and software. Reason: Ensuring the consistency between the program with secure OUC, hardware configuration and certificates.  
+  Recommendation: Load to device &gt; Hardware and software. Reason: Ensuring the consistency between the program with secure OUC, hardware configuration and certificates.  
   Certificates are loaded with the hardware configuration - therefore loading requires a stop of the CPU. The reloading of blocks that utilize further secure OUC connections is only possible in RUN if the certificates required for this purpose are already located on the module.
 
 ---
@@ -9206,12 +9206,12 @@ You can set how the CPU can communicate with programming devices and HMI devices
 
 **Procedure**
 
-1. In the CPU properties, navigate to the area "Protection & Security > Connection mechanisms".
+1. In the CPU properties, navigate to the area "Protection &amp; Security &gt; Connection mechanisms".
 2. Select the option you want to use.
 
 ###### Select certificate or generate a new certificate
 
-If you select the connection mechanism for PG/HMI communication, you can select a PLC communication certificate for the protection of the connection in the same context or have it generated by the TIA Portal. If you have assigned a password or if you have deactivated the option to protect confidential PLC configuration data (i.e. no password has been set), then a certificate with suitable settings and a valid default name is already preset in the "Protection & Security> Connection mechanisms" area.
+If you select the connection mechanism for PG/HMI communication, you can select a PLC communication certificate for the protection of the connection in the same context or have it generated by the TIA Portal. If you have assigned a password or if you have deactivated the option to protect confidential PLC configuration data (i.e. no password has been set), then a certificate with suitable settings and a valid default name is already preset in the "Protection &amp; Security&gt; Connection mechanisms" area.
 
 **Procedure**
 
@@ -9379,7 +9379,7 @@ Depending on the type of your HMI device, follow these steps.
 
 **Basic Panels 2nd Generation**
 
-1. In the Start Center, select "Settings > Internet Settings > Certificate store".
+1. In the Start Center, select "Settings &gt; Internet Settings &gt; Certificate store".
 2. In the "Available certificates in Device" list, select the PLC communication certificate of the CPU.
 3. Press "Trust".
 4. Restart the HMI runtime software.
@@ -9387,7 +9387,7 @@ Depending on the type of your HMI device, follow these steps.
 **Unified Comfort Panels**
 
 1. Open the Control Panel.
-2. Select "Security > Certificates".
+2. Select "Security &gt; Certificates".
 3. In the "Certifcate store" selection list, select the entry "Other Certificates".
 4. In the "Other certificates" list, select the PLC communication certificate of the CPU.
 5. Press "Trust".
@@ -9421,7 +9421,7 @@ There may be some cases in which the higher security is not desirable because it
 1. In the "Online" menu, select the command "Use only Legacy PG/PC communication".
 2. Select the check box in front of the menu command.
 
-**Result**: All online connections are set up as for TIA Portal versions < V17.
+**Result**: All online connections are set up as for TIA Portal versions &lt; V17.
 
 The setting remains active for the duration of the session. When you open a project, the option "Use only·Legacy PG/PC communication" is not set.
 
@@ -9434,11 +9434,11 @@ The setting remains active for the duration of the session. When you open a proj
 
 The following description provides information about the interaction between different TIA Portal versions with different CPU firmware versions and the effects on the type of PG/HMI connection.
 
-###### Projects created with TIA Portal < V17
+###### Projects created with TIA Portal &lt; V17
 
 For example, if you have created a project with TIA Portal version V16 for an S7-1500 CPU (e.g. version V2.8), then the corresponding configuration with TIA Portal V17 can also be loaded into an S7-1500 CPU V2.9, e.g. in a spare part scenario - with the same behavior as a configuration on an S7-1500 CPU V2.8.
 
-Even projects created with TIA Portal < V17 and transferred to a memory card work without problems in an S7-1500 CPU V2.9.
+Even projects created with TIA Portal &lt; V17 and transferred to a memory card work without problems in an S7-1500 CPU V2.9.
 
 However, the concept of protecting confidential PLC configuration data applies as soon as you open the project with TIA Portal ≥ V17, update the firmware version of the CPU via a device replacement and thus save it as a CPU with a firmware version ≥ V2.9 (see [Useful information for the protection of confidential PLC configuration data](#useful-information-for-the-protection-of-confidential-plc-configuration-data-s7-1200-s7-1500-s7-1500t)). The project can no longer be edited with previous versions of TIA Portal V17.
 
@@ -9451,7 +9451,7 @@ You have the option of connecting a V2.9 CPU to a current programming device wit
 In summary ("PG" here stands for a programming device with TIA Portal):
 
 - PG/HMI and CPU come with the V17 (or subsequent version): TLS procedure is used.
-- PG/HMI comes from a predecessor version (< V17): Legacy procedure is used - provided that you have deactivated the option "Only allow secure PG/PC and HMI communication" in the CPU properties.
+- PG/HMI comes from a predecessor version (&lt; V17): Legacy procedure is used - provided that you have deactivated the option "Only allow secure PG/PC and HMI communication" in the CPU properties.
 - CPU comes with V17 (or higher), several PGs/HMIs are connected and come from both V17 (or higher) and previous versions: TLS + legacy procedures are used - provided that you have deactivated the option "Only allow secure PG/PC and HMI communication" in the CPU properties.
 
 **When the CPU state changes**
@@ -9536,7 +9536,7 @@ The available DP master and the desired functionality will determine which DP sl
 The CM 1242-5 is, for example, an DP slave that can be configured as intelligent DP slave. You can find it in the hardware catalog at:
 
 - CM 1242‑5  
-  "PLC > SIMATIC S7 1200 > Communication module > PROFIBUS"
+  "PLC &gt; SIMATIC S7 1200 &gt; Communication module &gt; PROFIBUS"
 
 #### DP/DP coupler in the hardware catalog  (S7-1200)
 
@@ -9548,7 +9548,7 @@ The maximum amount of data that can be transferred is 244 bytes input data and 2
 
 ##### DP/DP coupler in the hardware catalog
 
-Details of a DP/DP coupler as gateway between two DM master systems are contained in the hardware catalog in the folder "Other field devices > PROFIBUS-DP > Gateways".
+Details of a DP/DP coupler as gateway between two DM master systems are contained in the hardware catalog in the folder "Other field devices &gt; PROFIBUS-DP &gt; Gateways".
 
 ##### Configuring the DP/DP coupler
 
@@ -9583,7 +9583,7 @@ DP slaves that feature their own preprocessing program are referred to as intell
 
 CM 1242-5 is an intelligent DP slave.
 
-###### I-slave <> DP master data exchange
+###### I-slave &lt;&gt; DP master data exchange
 
 A higher-level automation system processes the automation task, which is broken down into sub-tasks. The sub-tasks are processed in the lower-level automation systems. The necessary control tasks are processed separately and efficiently in the CPUs as preprocessing programs.
 
@@ -9591,7 +9591,7 @@ In the case of configurations involving intelligent DP slaves, the DP master onl
 
 The addresses of the data to be exchanged between the master and slave are configured in the transfer area of the I-slave.
 
-![I-slave <> DP master data exchange](images/41008052491_DV_resource.Stream@PNG-en-US.png)
+![I-slave &lt;> DP master data exchange](images/41008052491_DV_resource.Stream@PNG-en-US.png)
 
 #### Configuring distributed I/O systems (S7-1200)
 
@@ -9721,7 +9721,7 @@ To edit the properties of a DP master system, proceed as follows:
 1. Move the mouse pointer over a subnet with a DP master system.
 2. A message will appear displaying the available DP master systems. Click the one you want to edit. The DP master system will now be color-highlighted.
 3. Click on the highlighted DP master system.
-4. In the inspector window, edit the DP master system attributes under "Properties > General".
+4. In the inspector window, edit the DP master system attributes under "Properties &gt; General".
 
 **Note**
 
@@ -9880,7 +9880,7 @@ In the case of an intelligent DP slave, the DP master actually accesses a transf
 
 ###### Applications
 
-Configurations involving intelligent DP slaves: I-slave <> DP master data exchange
+Configurations involving intelligent DP slaves: I-slave &lt;&gt; DP master data exchange
 
 ###### Procedure
 
@@ -9903,7 +9903,7 @@ The following applies to the CP 1242-5 in its function as I-slave: The addresse
 
 ###### Configuration of the transfer area for the CM 1242-5 (transfer area)
 
-With CM 1242‑5, the transfer area for the cyclic PROFIBUS data exchange is configured as transfer area in the parameter group "PROFIBUS interface > Mode > I Slave Communication".
+With CM 1242‑5, the transfer area for the cyclic PROFIBUS data exchange is configured as transfer area in the parameter group "PROFIBUS interface &gt; Mode &gt; I Slave Communication".
 
 ###### Direct data access from CPU to CPU
 
@@ -9958,9 +9958,9 @@ To assign parameters for the reference junction, follow these steps:
 
 1. In the ET 200S device view, insert an analog electronics module, for example a 2AI RTD HF.
 2. Select the module on the rack.
-3. Under "Properties > Inputs" in the inspector window, set a channel for the reference junctions function to the "RTD-4L Pt 100 climatic range" measuring range.
+3. Under "Properties &gt; Inputs" in the inspector window, set a channel for the reference junctions function to the "RTD-4L Pt 100 climatic range" measuring range.
 4. Select the ET 200S.
-5. Under "Properties > Module parameters > Reference junctions" in the inspector window, select the "Reference junction" check box and specify the slot and channel number of the relevant RTD module.
+5. Under "Properties &gt; Module parameters &gt; Reference junctions" in the inspector window, select the "Reference junction" check box and specify the slot and channel number of the relevant RTD module.
 6. Insert the analog electronics module for measuring the temperature using a thermocouple (TC module) and parameterize it with the reference junction number of the RTD module.
 
 ###### Additional information
@@ -9995,7 +9995,7 @@ To pack addressed, follow these steps:
 
 1. Select the electronics modules whose addresses are to be packed. The following options are available for selecting multiple electronics modules:
 
-   - Press and hold down <Shift> or <Ctrl> while clicking the relevant electronics modules.
+   - Press and hold down &lt;Shift&gt; or &lt;Ctrl&gt; while clicking the relevant electronics modules.
    - Click off the rack and select the required electronics modules by drawing round them with the mouse.
 2. Click "Pack addresses" in the shortcut menu for the selected electronics modules.
 
@@ -10058,9 +10058,9 @@ You do this by assembling, wiring, configuring, and programming the maximum conf
 
 To activate option handling, follow these steps:
 
-1. Select the IM 151-1 in the device view and enable it in "Option handling" check box under "Properties > General > Option handling" in the inspector window.
+1. Select the IM 151-1 in the device view and enable it in "Option handling" check box under "Properties &gt; General &gt; Option handling" in the inspector window.
 2. Select the numbered check boxes for the slots that are initially to accommodate the standby modules prior to the future electronics modules.
-3. Select the power module in the device view and enable it in the "Option handling" check box under "Properties > Addresses" in the inspector window. Reserve the necessary address space for the control and check-back interface in the process image output (PIQ) and process image input (PII).
+3. Select the power module in the device view and enable it in the "Option handling" check box under "Properties &gt; Addresses" in the inspector window. Reserve the necessary address space for the control and check-back interface in the process image output (PIQ) and process image input (PII).
 
 The assembled standby modules can be replaced with the configured modules at a later date without having to modify the configuration.
 
@@ -10139,8 +10139,8 @@ You can use the option handling function to prepare the ET 200S for future expa
 
 To activate option handling, follow these steps:
 
-1. Select the IM 151-1 in the device view and enable it in "Option handling" check box under "Properties > General > Option handling" in the inspector window.
-2. Select the power module in the device view and enable it in the "Option handling" check box under "Properties > Addresses" in the inspector window. Reserve the necessary address space for the control and check-back interface in the process image output (PIQ) and process image input (PII).
+1. Select the IM 151-1 in the device view and enable it in "Option handling" check box under "Properties &gt; General &gt; Option handling" in the inspector window.
+2. Select the power module in the device view and enable it in the "Option handling" check box under "Properties &gt; Addresses" in the inspector window. Reserve the necessary address space for the control and check-back interface in the process image output (PIQ) and process image input (PII).
 3. Configure the slave's maximum configuration. The selection/clearing of options is controlled via the user program.
 
 **Note**
@@ -10190,13 +10190,13 @@ PROFIBUS DPV1 enables you to access extended PROFIBUS functions.
 To switch the DP slave over to DPV1, follow these steps:
 
 1. Select the DP slave.
-2. Under "Properties > Module parameters" in the Inspector window, select "DPV1" mode from the "DP interrupt mode" drop-down list.
+2. Under "Properties &gt; Module parameters" in the Inspector window, select "DPV1" mode from the "DP interrupt mode" drop-down list.
 
 or
 
 1. Select the DP master.
 2. In the I/O communications table, select the row with the connection between the DP master and the desired DP slave.
-3. Under "Properties > Module parameters" in the Inspector window, select "DPV1" mode from the "DP interrupt mode" drop-down list.
+3. Under "Properties &gt; Module parameters" in the Inspector window, select "DPV1" mode from the "DP interrupt mode" drop-down list.
 
 ###### Special characteristics
 
@@ -10274,7 +10274,7 @@ By installing a GSD file, you have added the DP slave or the potential equalizat
 
 ###### Result
 
-You will find the new DP slaves installed by means of GSD files in the hardware catalog under "Additional field devices > PROFIBUS DP". New potential equalization components installed via GSD files can be found there under "Other field devices > PROFIBUS PA".
+You will find the new DP slaves installed by means of GSD files in the hardware catalog under "Additional field devices &gt; PROFIBUS DP". New potential equalization components installed via GSD files can be found there under "Other field devices &gt; PROFIBUS PA".
 
 GSD files are always saved together with the project, which means all information relevant for display of the device (including symbols) is also available in the saved project.
 
@@ -10336,7 +10336,7 @@ GSD files that are no longer needed are deleted from the project data. The GSD-b
 
 > **Note**
 >
-> If you delete a GSD-based hardware component with "Options > Manage general station description files (GSD) > Installed GSDs", it is deleted from the hardware catalog. However, unused GSD files of this hardware component can still be a part of the project data and can be deleted with the function for finding the unused GSD files.
+> If you delete a GSD-based hardware component with "Options &gt; Manage general station description files (GSD) &gt; Installed GSDs", it is deleted from the hardware catalog. However, unused GSD files of this hardware component can still be a part of the project data and can be deleted with the function for finding the unused GSD files.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -10379,7 +10379,7 @@ You have now inserted the module in a free slot of the GSD-based DP slave and ca
 
 ###### Preset configuration
 
-For modules with an adjustable preset configuration, you can change this configuration in the inspector window under "Properties > Preset configuration".
+For modules with an adjustable preset configuration, you can change this configuration in the inspector window under "Properties &gt; Preset configuration".
 
 ### Configuring PROFINET IO
 
@@ -10508,7 +10508,7 @@ In the properties of the IE/PB LINK, the PROFIBUS addresses of the connected DP
 
 During placement, the same number is assigned for the PROFINET device number and the PROFIBUS address.
 
-In the Inspector window under "General Properties > PROFINET device number", you can find an overview of the device numbers used and the PROFIBUS addresses of an IE/PB LINK. The device number can also be changed here. You can also set that the device number and the PROFIBUS address should or should not always be identical. If the "PROFINET device number=PROFIBUS address" option is activated, you do not have to update the device number when the PROFIBUS address changes.
+In the Inspector window under "General Properties &gt; PROFINET device number", you can find an overview of the device numbers used and the PROFIBUS addresses of an IE/PB LINK. The device number can also be changed here. You can also set that the device number and the PROFIBUS address should or should not always be identical. If the "PROFINET device number=PROFIBUS address" option is activated, you do not have to update the device number when the PROFIBUS address changes.
 
 The PROFIBUS address can be changed in the properties of the PROFIBUS device.
 
@@ -10615,7 +10615,7 @@ Both the IO controller as well as IO devices have a device name. When the "Gener
 
 - The PROFINET device name is made up of the name of the device (for example, the CPU), the name of the interface (only with multiple PROFINET interfaces) and optionally the name of the IO system:
 
-  <CPU name>.<Name of the interface>.<IO system name>
+  &lt;CPU name&gt;.&lt;Name of the interface&gt;.&lt;IO system name&gt;
 
   You cannot change this name directly. You change the PROFINET device name indirectly, by changing the name of the affected CPU, CP or IM in the general properties of the module. This PROFINET device name is also displayed, for example, in the list of accessible devices. If you want to set the PROFINET device name independently of the module name, you have to deactivate the "Generate PROFINET device name automatically" option.
 - A "converted name" is generated from the PROFINET device name. This is the device name that is actually loaded into the device.
@@ -10680,7 +10680,7 @@ Further details of how to commission a PROFINET interface can also be found in t
 
 For IO controllers with the "Support device replacement without exchangeable medium" option selected, you do not have to assign device names to the IO devices locally, for example in the event of device replacement. Another application is automatic commissioning, in which the CPU automatically assigns the device name and IP address parameters to the IO devices during startup.
 
-Requirement: The ports of the devices are interconnected, and the devices involved support LLDP. The devices have been put into the delivery state or – for S7-1500 CPUs version V1.5 and higher – the "Permit overwriting of device names of all assigned IO devices" option is selected for the IO controller ("Advanced options > Interface options" area of the properties of the PROFINET interface).
+Requirement: The ports of the devices are interconnected, and the devices involved support LLDP. The devices have been put into the delivery state or – for S7-1500 CPUs version V1.5 and higher – the "Permit overwriting of device names of all assigned IO devices" option is selected for the IO controller ("Advanced options &gt; Interface options" area of the properties of the PROFINET interface).
 
 ###### Assignment of device name and address for an IO device
 
@@ -10701,7 +10701,7 @@ You can change the name and IP address manually. The device name must first be c
 
 Offline with memory card:
 
-1. Place the configured data (device name: for example, turbo-3) for the IO device on the MMC in the PG/PC. Use the command "SIMATIC Card Reader > Save Device Name to Memory Card" in the "Project" menu for this.
+1. Place the configured data (device name: for example, turbo-3) for the IO device on the MMC in the PG/PC. Use the command "SIMATIC Card Reader &gt; Save Device Name to Memory Card" in the "Project" menu for this.
 2. Then insert the MMC into the IO device. The IO device automatically adopts the configured device name.
 
 Online with programming device/PC:
@@ -10728,7 +10728,7 @@ Another special case is the option "IP address is set directly at the device" in
 If the IO device, as described above, should not obtain the IP address or device name from the IO controller, proceed as follows:
 
 1. Select device or network view.
-2. Open the properties of the respective PROFINET device and select the area "PROFINET interface [X1]" > "Ethernet addresses".
+2. Open the properties of the respective PROFINET device and select the area "PROFINET interface [X1]" &gt; "Ethernet addresses".
 3. Select the option "IP address is set directly at the device" under "IP protocol" or the option "PROFINET device name is set directly at the device" under "PROFINET".
 
 ###### Rules
@@ -10911,7 +10911,7 @@ To store a device name on a memory card, follow these steps:
 
 1. Insert the memory card into the card reader.
 2. Select the IO device whose device name is to be assigned by the memory card.
-3. Select the "Card reader > Save Device Name to Memory Card" command in the "Project" menu.
+3. Select the "Card reader &gt; Save Device Name to Memory Card" command in the "Project" menu.
 
    If the memory card is not empty, a message will be issued informing you of this and you will have the option to delete the card.
 
@@ -11045,7 +11045,7 @@ Requirements: You use the "Set IP address in the project" option for the PROFINE
 Follow these steps to configure a router for the IO controller in STEP 7:
 
 1. In the network view of STEP 7, select the PROFINET interface of the IO controller.
-2. In the Inspector window, navigate to "Properties" > "General" > "Ethernet addresses".
+2. In the Inspector window, navigate to "Properties" &gt; "General" &gt; "Ethernet addresses".
 3. Select the "Use router" check box in the "IP protocol" field.
 4. Enter the IP address of the router at "Router address".
 
@@ -11060,7 +11060,7 @@ Requirements:
 Follow these steps to configure a router for the IO device in STEP 7:
 
 1. In the network view of STEP 7, select the PROFINET interface of the IO device.
-2. In the Inspector window, navigate to "Properties" > "General" > "Ethernet addresses".
+2. In the Inspector window, navigate to "Properties" &gt; "General" &gt; "Ethernet addresses".
 3. Clear the "Synchronize router settings with IO controller" check box.
 4. Select the "Use router" check box.
 5. Enter the IP address of the router at "Router address".
@@ -11262,7 +11262,7 @@ Affected are: 6GK5 204-2AA00-2BD2 (with firmware V5.3, V5.4, V5.5).
 
 To detect one or more existing IO devices in STEP 7 and add them to the project, follow these steps:
 
-1. In STEP 7, navigate to "Online" > "Hardware detection".
+1. In STEP 7, navigate to "Online" &gt; "Hardware detection".
 2. Click "PROFINET devices from network...".  
    STEP 7 opens the "Hardware detection of PROFINET devices" window.
 3. Select the interface of your programming device at "PG/PC interface".
@@ -11295,7 +11295,7 @@ An IO device configured via hardware detection responds as follows:
 >
 > **Hardware detection followed by online connection**
 >
-> When the "Online > Hardware detection" command is performed for an unspecified CPU, the online configuration is not loaded from the CPU. If you do not load the configuration resulting from the hardware detection to the CPU, the device and network views will always show a difference between the offline and online configurations. It will appear that there are different configurations in the online and diagnostic views, although the article numbers are identical in the actual CPU and the offline CPU.
+> When the "Online &gt; Hardware detection" command is performed for an unspecified CPU, the online configuration is not loaded from the CPU. If you do not load the configuration resulting from the hardware detection to the CPU, the device and network views will always show a difference between the offline and online configurations. It will appear that there are different configurations in the online and diagnostic views, although the article numbers are identical in the actual CPU and the offline CPU.
 
 ---
 
@@ -11349,7 +11349,7 @@ To interconnect ports, follow these steps:
 1. Select the Ethernet/PROFINET device or the Ethernet/PROFINET interface.
 2. Navigate to the port property "Port interconnection".
 
-   When the Ethernet/PROFINET interface is selected, you can find this setting in the Inspector window as follows: Properties > General > Advanced Options > Port [...] > Port Interconnection.
+   When the Ethernet/PROFINET interface is selected, you can find this setting in the Inspector window as follows: Properties &gt; General &gt; Advanced Options &gt; Port [...] &gt; Port Interconnection.
 3. In the "Local port" section, you can find the settings at the local port. In the case of fiber-optic cable you can, for example, set the cable names here.
 
    In the "Partner port" section, click on the black triangle in the "Partner port" box to display and select the available partner ports.
@@ -11403,12 +11403,12 @@ When IRT is configured with an IO controller as sync master, the send clock can 
 To set the send clock on the PROFINET device, follow these steps:
 
 1. Select the PROFINET IO controller in the device or network view.
-2. Change the value for the shortest possible update interval in the properties of the PROFINET interface under "PROFINET Interface > Advanced options > Real-time settings > IO communication > Send clock".
+2. Change the value for the shortest possible update interval in the properties of the PROFINET interface under "PROFINET Interface &gt; Advanced options &gt; Real-time settings &gt; IO communication &gt; Send clock".
 
 The send clock is valid for all PROFINET devices at the IO system. If the synchronization role is set to a value other than "Unsynchronized", you can also set the send clock in the sync domain, in other words, centrally at the PROFINET IO system.
 
 1. Select the IO system using the PROFINET subnet.
-2. Change the value for the send clock in the properties of the sync domain under "Domain management > Sync domains > Sync_domain_1 > Send clock".
+2. Change the value for the send clock in the properties of the sync domain under "Domain management &gt; Sync domains &gt; Sync_domain_1 &gt; Send clock".
 
 ##### Setting the update time
 
@@ -11425,7 +11425,7 @@ If you do not want to have the update time calculated automatically, you can cha
 To change the update time in the Inspector window, proceed as follows:
 
 1. Select the PROFINET interface of the IO device in the network or device view.
-2. Specify the update time in the interface properties under "Advanced options > Real time settings > IO cycle". You can specify the update time in two ways:
+2. Specify the update time in the interface properties under "Advanced options &gt; Real time settings &gt; IO cycle". You can specify the update time in two ways:
 
    - Automatic calculation of the optimal update time.
    - Update time you can set yourself by selecting different values from a drop-down list.
@@ -11500,7 +11500,7 @@ The resulting watchdog time is automatically calculated from the "Accepted numbe
 To specify the watchdog time, follow these steps:
 
 1. Select the PROFINET interface of the IO device in the network or device view.
-2. In the properties of the interface, navigate to "Advanced options > Realtime settings > IO cycle".
+2. In the properties of the interface, navigate to "Advanced options &gt; Realtime settings &gt; IO cycle".
 3. Select the required number of cycles from the drop-down list "Trigger watchdog after # cycles with missing IO data".
 
 The watchdog time is subsequently calculated automatically based on the preset factor. It must not be more than 1.92 seconds.
@@ -11536,7 +11536,7 @@ The following table shows how the maximum available bandwidth for cyclic IO data
 
 | Send clock cycle | Maximum bandwidth for cyclic IO data |
 | --- | --- |
-| 250 µs – 468.75 µs | << 125 µs |
+| 250 µs – 468.75 µs | &lt;&lt; 125 µs |
 | 500 µs – 968.75 µs | = send clock / 2 |
 | 1 – 4 ms | = 500 µs* |
 
@@ -11735,14 +11735,14 @@ Subject to certain conditions, IO devices can also receive their device names wi
 >
 > Use only new IO devices as replacement devices, or restore IO devices already configured to the delivery state prior to commissioning.
 >
-> For S7-1500 CPUs with firmware version V1.5 or higher, it is not necessary to reset IO devices with an existing parameter assignment to delivery state. Requirement: The "Permit overwriting of device names of all assigned IO devices" option is selected for the IO controller ("Advanced option > Interface options" area of the properties of the PROFINET interface).
+> For S7-1500 CPUs with firmware version V1.5 or higher, it is not necessary to reset IO devices with an existing parameter assignment to delivery state. Requirement: The "Permit overwriting of device names of all assigned IO devices" option is selected for the IO controller ("Advanced option &gt; Interface options" area of the properties of the PROFINET interface).
 
 ###### Procedure
 
 In order to enable the replacement of an IO device without exchangeable medium, proceed as follows:
 
 1. In the device or network view, select the PROFINET interface of the corresponding IO controller.
-2. In the interface properties under "Advanced settings > Interface options", select the "Support device replacement without exchangeable medium" check box.
+2. In the interface properties under "Advanced settings &gt; Interface options", select the "Support device replacement without exchangeable medium" check box.
 
 The option "Support device replacement without exchangeable medium" also permits automatic commissioning, which means you can commission the IO system with the IO devices without assigning their device names in advance.
 
@@ -11784,7 +11784,7 @@ When you configure the environment of the IO device so that the conditions descr
 To connect a DP slave to a PROFINET IO system via an IE/PB Link in STEP 7, follow these steps:
 
 1. Drag a PROFINET CPU, e.g. 1513-1 PN, from the hardware catalog to the network view of STEP 7.
-2. Drag an IE/PB Link PN IO from the hardware catalog into the network view of STEP 7. The IE/PB Link PN IO is located under Network components > Gateways > IE/PB Link PN IO.
+2. Drag an IE/PB Link PN IO from the hardware catalog into the network view of STEP 7. The IE/PB Link PN IO is located under Network components &gt; Gateways &gt; IE/PB Link PN IO.
 3. Assign the IE/PB Link PN IO to the CPU.
 4. Drag a PROFIBUS interface module, e.g. IM155-6 DP HF, from the hardware catalog to the network view.
 5. Assign the interface module to the IE/PB Link.
@@ -11910,7 +11910,7 @@ Depending on the interface, you can activate or deactivate the "Limit data infee
 To set the limitation of the data infeed into the network ("infeed load limitation"), follow these steps:
 
 1. In the network view of STEP 7, select the interface of the CPU.
-2. In the Inspector window, go to "Properties" > "General" > "Advanced options" > "Interface options".
+2. In the Inspector window, go to "Properties" &gt; "General" &gt; "Advanced options" &gt; "Interface options".
 3. Select or clear the "Limit data infeed into the network" check box.
 
    ![Setting limitation of the data infeed into the network for a CPU](images/90826252043_DV_resource.Stream@PNG-en-US.png)
@@ -11980,7 +11980,7 @@ The following procedure shows an example of how to enable maintaining the commun
 1. Switch to the network view of STEP 7.
 2. Configure a S7‑1500 CPU, for example, CPU 1516-3 PN/DP, with the required IO devices.
 3. Select a PROFINET interface of the S7‑1500 CPU, for example X1.
-4. In the Inspector window, go to "General > Advanced options > Interface options".
+4. In the Inspector window, go to "General &gt; Advanced options &gt; Interface options".
 5. In the "Interface options" section activate the option" Maintain PROFINET IO communication on data record communication timeout".
 
    ![Procedure](images/168543871499_DV_resource.Stream@PNG-en-US.png)
@@ -11999,7 +11999,7 @@ The option "Maintain PROFINET IO communication on data record communication tim
 
 - S7‑1500 CPU with FW version V3.1 → S7‑1500 CPU with FW version V3.1:  
   STEP 7 applies the settings of the previous S7‑1500 CPU to the new S7‑1500 CPU.
-- S7‑1500 CPU with FW version V3.1 → S7‑1500 CPU with FW version < V3.1:  
+- S7‑1500 CPU with FW version V3.1 → S7‑1500 CPU with FW version &lt; V3.1:  
   STEP 7 shows an alarm message. The option is deactivated and cannot be selected any more.
 - S7‑1500 CPU with FW version V3.0 → S7‑1500 CPU with FW version V3.1:  
   STEP 7 shows an information message. The option can be selected and deactivated in the default settings.
@@ -12092,7 +12092,7 @@ By installing a GSD file you have added the IO device described in the file to t
 
 ###### Result
 
-You will find the new IO devices installed by means of GSD files in the hardware catalog under "Additional field devices > PROFINET IO".
+You will find the new IO devices installed by means of GSD files in the hardware catalog under "Additional field devices &gt; PROFINET IO".
 
 GSD files are always saved together with the project, which means all information relevant for display of the device (including symbols) is also available in the saved project.
 
@@ -12113,7 +12113,7 @@ You can delete installed DP slaves using GSD files. These DP slaves are then no 
 ###### Requirement
 
 - The hardware and network editor is closed.
-- You will find the new IO devices installed by means of GSD files in the hardware catalog under "Additional field devices > PROFINET".
+- You will find the new IO devices installed by means of GSD files in the hardware catalog under "Additional field devices &gt; PROFINET".
 
 ###### Procedure
 
@@ -12156,7 +12156,7 @@ GSD files that are no longer needed are deleted from the project data. The GSD-b
 
 > **Note**
 >
-> If you delete a GSD-based hardware component with "Options > Manage general station description files (GSD) > Installed GSDs", it is deleted from the hardware catalog. However, unused GSD files of this hardware component can still be a part of the project data and can be deleted with the function for finding the unused GSD files.
+> If you delete a GSD-based hardware component with "Options &gt; Manage general station description files (GSD) &gt; Installed GSDs", it is deleted from the hardware catalog. However, unused GSD files of this hardware component can still be a part of the project data and can be deleted with the function for finding the unused GSD files.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -12194,7 +12194,7 @@ First, all existing GSD files for the current IO device are shown. The only diff
 To change the revision of one or more IO devices, proceed as follows:
 
 1. Select the IO device whose GSD file revision is to be changed.
-2. Click on the "Change revision" button under "General> Catalog information" in the properties of the IO device.
+2. Click on the "Change revision" button under "General&gt; Catalog information" in the properties of the IO device.
 
    The "Change revision" dialog box opens.
 3. Select the GSD revision you want to use in the "Available revisions" table.
@@ -12228,7 +12228,7 @@ Coupling two PROFINET IO subnets with one PN/PN coupler
 
 ##### Additional information
 
-For additional information on "PN/PN couplers", refer to Service & Support [on the Internet](http://support.automation.siemens.com/WW/view/en/44319532).
+For additional information on "PN/PN couplers", refer to Service &amp; Support [on the Internet](http://support.automation.siemens.com/WW/view/en/44319532).
 
 #### Linking Ethernet subnets
 
@@ -12369,7 +12369,7 @@ In order to commission a device, identical configurations must be stored on the 
 
 ##### Loading the hardware configuration
 
-After you have inserted a new device in the project and configured it or if you have modified an existing hardware configuration, the next step is to load the current configuration to the device. This ensures that the same configuration is set on the programming device/PC and on the module that is physically present. Use the "Online > [Download to device](Editing%20project%20data.md#downloading-project-data-to-a-device)" menu command for this.
+After you have inserted a new device in the project and configured it or if you have modified an existing hardware configuration, the next step is to load the current configuration to the device. This ensures that the same configuration is set on the programming device/PC and on the module that is physically present. Use the "Online &gt; [Download to device](Editing%20project%20data.md#downloading-project-data-to-a-device)" menu command for this.
 
 In the first download, the complete hardware configuration is downloaded. In subsequent downloads, only changes to the hardware configuration are downloaded.
 
@@ -12416,7 +12416,7 @@ This section contains information on the following topics:
 
 ###### Introduction
 
-If you bring your PG/PC to a plant and the STEP 7 project used to create the configuration of this plant is not available, load the configuration to a new project on your PG/PC, for example. Use the "Online > [Loading the device as new station (hardware and software)](Editing%20project%20data.md#uploading-project-data-from-a-device)" menu command for this.
+If you bring your PG/PC to a plant and the STEP 7 project used to create the configuration of this plant is not available, load the configuration to a new project on your PG/PC, for example. Use the "Online &gt; [Loading the device as new station (hardware and software)](Editing%20project%20data.md#uploading-project-data-from-a-device)" menu command for this.
 
 The list of accessible devices in the project tree is always used when loading a device to your programming device.
 
@@ -12589,8 +12589,8 @@ In order to edit the I-slave in the project, you must load the I-device from the
 
 You have the following options for replacing the I-slave proxy with the corresponding I-slave:
 
-- In the menu bar with the command "Online >Upload device as new station (hardware and software)
-- With selected I-slave proxy using the shortcut menu command "Upload from device > Hardware and software".
+- In the menu bar with the command "Online &gt;Upload device as new station (hardware and software)
+- With selected I-slave proxy using the shortcut menu command "Upload from device &gt; Hardware and software".
 - In the toolbar with the button "Upload from device".
 
 > **Note**
@@ -12662,8 +12662,8 @@ In order to edit the I-device in the project, you must load the I-device from th
 
 You have the following options for replacing the I-device proxy with the corresponding I-device:
 
-- In the menu bar with the command "Online >Upload device as new station (hardware and software)
-- With selected I-device proxy using the shortcut menu command "Upload from device > Hardware and software".
+- In the menu bar with the command "Online &gt;Upload device as new station (hardware and software)
+- With selected I-device proxy using the shortcut menu command "Upload from device &gt; Hardware and software".
 - In the toolbar with the button "Upload from device".
 
 > **Note**
@@ -12724,7 +12724,7 @@ The hardware configuration loaded from the device to the PG/PC has been compiled
 
 > **Note**
 >
-> If you go online before compiling, the diagnostics icon “?” is displayed (diagnostics not possible). A corresponding alarm is displayed under "Info > General" in the Inspector window.
+> If you go online before compiling, the diagnostics icon “?” is displayed (diagnostics not possible). A corresponding alarm is displayed under "Info &gt; General" in the Inspector window.
 
 ###### Dependencies
 
@@ -12734,7 +12734,7 @@ Depending on how completely the hardware configuration was loaded to the PG, res
   Going online and diagnostics are possible.
 - Loaded device with connected I-devices/I-slaves:
 
-  - I device/I slave is not loaded: Going online for the device and its modules is possible. For the dependent components of the configuration that are not loaded, device proxies are handled with only minimum diagnostics support. The online status is represented as an icon. The standard diagnostics is shown in the online and diagnostics view. I&M data are not loaded.
+  - I device/I slave is not loaded: Going online for the device and its modules is possible. For the dependent components of the configuration that are not loaded, device proxies are handled with only minimum diagnostics support. The online status is represented as an icon. The standard diagnostics is shown in the online and diagnostics view. I&amp;M data are not loaded.
   - I device/I slave is also loaded: Going online is possible for all devices; diagnostics is fully supported.
 
 ---
@@ -13100,7 +13100,7 @@ The principle of operation is identical to that of the 16-bit down counter. Chan
 ###### Procedure
 
 1. Using the mouse, pull module 8 DI Namur from the hardware catalog into distributed I/O station ET 200iSP.
-2. Select the required configuration (channel 0..1: "Counter", channel 2..7: "DI" or "Control"). In the module properties (inspector window), you can find this setting under "Parameters > Inputs > Configuration".
+2. Select the required configuration (channel 0..1: "Counter", channel 2..7: "DI" or "Control"). In the module properties (inspector window), you can find this setting under "Parameters &gt; Inputs &gt; Configuration".
 
 ###### Configuration channel 0..1: "Counter", channel 2..7: "DI"
 
@@ -13236,7 +13236,7 @@ If the input frequency exceeds 5kHz, 7FFF<sub>H</sub> is reported as actual valu
 ###### Procedure
 
 1. Using the mouse, pull module 8 DI Namur from the hardware catalog into distributed I/O station ET 200iSP.
-2. Select the required configuration (channel 0..1: "Trace", channel 2..7: "DI"). In the module properties (inspector window), you can find this setting under "Parameters > Inputs > Configuration".
+2. Select the required configuration (channel 0..1: "Trace", channel 2..7: "DI"). In the module properties (inspector window), you can find this setting under "Parameters &gt; Inputs &gt; Configuration".
 
 ###### Configuration 0..1: "Trace", channel 2..7: "DI"
 
@@ -13276,7 +13276,7 @@ Parameters for the frequency meters
 | Parameter | Setting | Description |
 | --- | --- | --- |
 | Sensor type frequency inputs | - Channel disabled - NAMUR sensor - Single contact, no load resistance | Select the sensor for the relevant frequency meter for channel 0 or 1. |
-| Measuring window (GATE) | - 50 ms - 200 ms - 1 s | Select the required measuring window for channel 0 or 1.   To achieve the highest possible accuracy when metering frequencies, remember the following rules:  - High frequencies (> 4 kHz): Set a low measuring window (50 ms) - Variable/medium frequencies: set medium measuring window (200 ms) - Low frequencies (< 1 kHz): Set a high measuring window (1 s) |
+| Measuring window (GATE) | - 50 ms - 200 ms - 1 s | Select the required measuring window for channel 0 or 1.   To achieve the highest possible accuracy when metering frequencies, remember the following rules:  - High frequencies (&gt; 4 kHz): Set a low measuring window (50 ms) - Variable/medium frequencies: set medium measuring window (200 ms) - Low frequencies (&lt; 1 kHz): Set a high measuring window (1 s) |
 
 ---
 
@@ -13595,7 +13595,7 @@ The CPU startup parameter "Compare preset to actual configuration" is set to Sta
 
 ###### Enabling configuration control
 
-In the properties of the interface module under Module parameters > General > Configuration control, select "Enable reconfiguration of device via user program". This activates configuration control.
+In the properties of the interface module under Module parameters &gt; General &gt; Configuration control, select "Enable reconfiguration of device via user program". This activates configuration control.
 
 ###### Control data record 196 for ET 200SP
 
@@ -14351,7 +14351,7 @@ PTCs are suitable for temperature monitoring of or as thermal protective equipme
 - Select "2-wire resistor" and "PTC" in the parameter assignment.
 - Connect the PTC using 2-wire technology.
 - Use type A PTC resistors (PTC thermistors) in accordance with DIN/VDE 0660, Part 302.
-- If the "Over-/underflow" diagnostics is enabled, a "low limit violation" diagnostics which shows a short circuit is generated for resistance values < 18 Ω.
+- If the "Over-/underflow" diagnostics is enabled, a "low limit violation" diagnostics which shows a short circuit is generated for resistance values &lt; 18 Ω.
 - Sensor data on PTC resistance:
 
 Use of PTC resistors
@@ -14359,13 +14359,13 @@ Use of PTC resistors
 | Property | Technical specifications | Note |
 | --- | --- | --- |
 | Switching points | **Reaction to rising temperature** |  |
-| < 550 Ω | **Normal range:**   - SIMATIC S7: bit 0 = "0", bit 2 = "0" (in the PII) |  |
+| &lt; 550 Ω | **Normal range:**   - SIMATIC S7: bit 0 = "0", bit 2 = "0" (in the PII) |  |
 | 550 Ω to 1650 Ω | **Prewarning range:**   - SIMATIC S7: bit 0 = "0", bit 2 = "1" (in the PII) |  |
-| < 1650 Ω | **Response range:**   - SIMATIC S7: bit 0 = "1", bit 2 = "0" (in the PII) |  |
+| &lt; 1650 Ω | **Response range:**   - SIMATIC S7: bit 0 = "1", bit 2 = "0" (in the PII) |  |
 | **Reaction to falling temperature** |  |  |
-| < 750 Ω | **Response range:**   - SIMATIC S7: bit 0 = "1", bit 2 = "0" (in the PII) |  |
+| &lt; 750 Ω | **Response range:**   - SIMATIC S7: bit 0 = "1", bit 2 = "0" (in the PII) |  |
 | 750 Ω to 540 Ω | **Prewarning range:**   - SIMATIC S7: bit 0 = "0", bit 2 = "1" (in the PII) |  |
-| < 540 Ω | **Normal range:**   - SIMATIC S7: bit 0 = "0", bit 2 = "0" (in the PII) |  |
+| &lt; 540 Ω | **Normal range:**   - SIMATIC S7: bit 0 = "0", bit 2 = "0" (in the PII) |  |
 | (TNF-5) °C  (TNF+5) °C  (TNF+15) °C  Measuring voltage   Voltage on the PTC | max. 550 Ω  min. 1330 Ω  min. 4000 Ω  max. 7.5 V | RRT= rated response temperature |
 
 - Assignment in the process image inputs (PII) with SIMATIC S7
@@ -14438,7 +14438,7 @@ The position and resolution of the scalable measuring range can be set (scaled):
 
 The following figure shows a parameter assignment for the ET 200SP module "AI 8xRTD/TC 2-,3-,4-wire HF".
 
-In STEP 7, you can find parameters in the properties box via General > AI 4 > Inputs > Channel 0 to channel 3.
+In STEP 7, you can find parameters in the properties box via General &gt; AI 4 &gt; Inputs &gt; Channel 0 to channel 3.
 
 ![Position and resolution of the scalable measuring range](images/71757406731_DV_resource.Stream@PNG-en-US.png)
 
@@ -14486,11 +14486,11 @@ The following table shows the standard measuring range for thermal resistors of 
 
 | Pt 100 standard in °C  (1 digit = 0.1 °C) | Decimal values | Hexadecimal values | Ranges |
 | --- | --- | --- | --- |
-| > 1000.0 | 32767 | 7FFF | Overflow |
+| &gt; 1000.0 | 32767 | 7FFF | Overflow |
 | 1000.0  :  850.1 | 10000  :  8501 | 2710  :  2135 | Over  range |
 | 850.0  :  -200.0 | 8500  :  -2000 | 2134  :  F830 | Nominal range |
 | -200.1  :  -243.0 | -2001  :  -2430 | F82F  :  F682 | Under range |
-| < -243.0 | -32768 | 8000 | Underflow |
+| &lt; -243.0 | -32768 | 8000 | Underflow |
 
 The standard measuring range is the basis for the scalable measuring range.
 
@@ -14507,11 +14507,11 @@ The scalable measuring range is identified by the following value ranges:
 | Scalable measuring range | Measuring range resolution   **(values in °C)** |  | Hexadecimal values |
 | --- | --- | --- | --- |
 | **2 decimal places** | **3 decimal places** |  |  |
-| Overflow | > 325.11 | > 32.511 | 7FFF |
+| Overflow | &gt; 325.11 | &gt; 32.511 | 7FFF |
 | High limit | 325.11 | 32.511 | 7EFF |
 | Measuring range center | 0 | 0 | 0 |
 | Low limit | 325.11 | -32.511 | 8100 |
-| Underflow | < -325.11 | < -32.511 | 8000 |
+| Underflow | &lt; -325.11 | &lt; -32.511 | 8000 |
 
 The maximum and minimum of the scalable measuring range depend on the selected resolution:
 
@@ -14727,7 +14727,7 @@ The CPU startup parameter "Compare preset to actual configuration" is set to Sta
 
 ###### Enabling configuration control
 
-In the properties of the interface module under Module parameters > General > Configuration control, select "Enable reconfiguration of device via user program". This activates configuration control.
+In the properties of the interface module under Module parameters &gt; General &gt; Configuration control, select "Enable reconfiguration of device via user program". This activates configuration control.
 
 ![Enabling configuration control](images/105174298251_DV_resource.Stream@PNG-en-US.PNG)
 
@@ -15013,7 +15013,7 @@ The CPU startup parameter "Compare preset to actual configuration" is set to Sta
 
 ###### Enabling configuration control
 
-In the properties of the interface module under Module parameters > General > Configuration control, select "Enable reconfiguration of device via user program". This activates configuration control.
+In the properties of the interface module under Module parameters &gt; General &gt; Configuration control, select "Enable reconfiguration of device via user program". This activates configuration control.
 
 ###### Control data record 196 for ET 200MP
 

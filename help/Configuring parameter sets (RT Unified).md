@@ -201,13 +201,13 @@ You can change the settings for the position, geometry, style, color, and font o
 
 #### Using a parameter set type
 
-If you only want to use a particular parameter set type with its parameter sets in runtime, select the desired parameter set type under "Properties > General > Fixed parameter set type".
+If you only want to use a particular parameter set type with its parameter sets in runtime, select the desired parameter set type under "Properties &gt; General &gt; Fixed parameter set type".
 
 #### Configuring the time zone
 
 To configure the time zone, follow these steps:
 
-Under "Properties > Miscellaneous > Time zone", set the desired time zone by entering a numerical value.
+Under "Properties &gt; Miscellaneous &gt; Time zone", set the desired time zone by entering a numerical value.
 
 The numerical value stands for a time zone, for example:
 
@@ -219,7 +219,7 @@ The numerical value stands for a time zone, for example:
 
 To specify the editing mode and to enable or disable the buttons, follow these steps:
 
-Under "Properties > Miscellaneous > Editing mode", configure the activation status of the toolbar buttons "Create", "Save", "Save as", "Rename" and "Delete". These toolbar buttons are used to edit parameter sets.
+Under "Properties &gt; Miscellaneous &gt; Editing mode", configure the activation status of the toolbar buttons "Create", "Save", "Save as", "Rename" and "Delete". These toolbar buttons are used to edit parameter sets.
 
 You can select between the following settings:
 
@@ -243,14 +243,14 @@ You can dynamize the following properties containing a graphic with a tag or wit
 
 To configure the information bar, follow these steps:
 
-1. Configure the general properties of the information bar, such as the font and background color, under "Properties > Miscellaneous > Information bar".
-2. To adjust the height of the "Status text" element, specify the height under "Properties > Miscellaneous > Information bar > Elements > [0] Element".
+1. Configure the general properties of the information bar, such as the font and background color, under "Properties &gt; Miscellaneous &gt; Information bar".
+2. To adjust the height of the "Status text" element, specify the height under "Properties &gt; Miscellaneous &gt; Information bar &gt; Elements &gt; [0] Element".
 
 The "Status Text" element is the only status line element of the parameter set control. Status messages are displayed in this element in runtime.
 
 #### Toolbar
 
-You can define the buttons of the parameter set control in runtime and their operator authorizations in the Inspector window under "Properties > Miscellaneous > Toolbar > Elements". By default, all buttons are displayed in the toolbar. To hide specific buttons, deactivate the "Visibility" property in the settings of the corresponding button.
+You can define the buttons of the parameter set control in runtime and their operator authorizations in the Inspector window under "Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements". By default, all buttons are displayed in the toolbar. To hide specific buttons, deactivate the "Visibility" property in the settings of the corresponding button.
 
 "Toolbar": Defines the buttons of the parameter set control.
 
@@ -861,7 +861,7 @@ ps1.ReadAndSave(HMIRuntime.ParameterSetTypes.Enums.hmiOverwrite.Disabled, true);
 | Symbol | Meaning |
 | --- | --- |
 | ![Code examples for transferring parameter sets](images/145494195723_DV_resource.Stream@PNG-de-DE.png) | **Tip for an efficient procedure** |
-| You can find the code examples in the shortcut menu of the "Scripts" editor under "Snippets > HMI Runtime > Parameter Set". |  |
+| You can find the code examples in the shortcut menu of the "Scripts" editor under "Snippets &gt; HMI Runtime &gt; Parameter Set". |  |
 
 ---
 
@@ -898,15 +898,15 @@ To configure a parameter set control, proceed as follows:
    ![Procedure](images/130507702795_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/130507702795_DV_resource.Stream@PNG-en-US.png)
-2. Set the desired height, width and position for the parameter set control in the Inspector window under "Properties > Size and Position".
-3. If you only want to use a particular parameter set type with its parameter sets in runtime, select the desired parameter set type under "Properties > General > Fixed parameter set type".
+2. Set the desired height, width and position for the parameter set control in the Inspector window under "Properties &gt; Size and Position".
+3. If you only want to use a particular parameter set type with its parameter sets in runtime, select the desired parameter set type under "Properties &gt; General &gt; Fixed parameter set type".
 4. Change the labels of the fields, if required.
-5. If required, change the display of the parameter table under "Properties > Miscellaneous > Parameter view".
-6. In "Properties > Miscellaneous > Editing mode", configure the activation status of the toolbar buttons "Create", "Save", "Save as", "Rename" and "Delete" as required.
+5. If required, change the display of the parameter table under "Properties &gt; Miscellaneous &gt; Parameter view".
+6. In "Properties &gt; Miscellaneous &gt; Editing mode", configure the activation status of the toolbar buttons "Create", "Save", "Save as", "Rename" and "Delete" as required.
 
    These toolbar buttons are used to edit parameter sets.
-7. If you want to hide specific buttons in the toolbar, deactivate the "Visibility" property under "Properties > Miscellaneous > Toolbar > Elements" in the settings of the corresponding button.
-8. Under "Properties > Miscellaneous > Time zone", change the time zone as required by entering a different numerical value.
+7. If you want to hide specific buttons in the toolbar, deactivate the "Visibility" property under "Properties &gt; Miscellaneous &gt; Toolbar &gt; Elements" in the settings of the corresponding button.
+8. Under "Properties &gt; Miscellaneous &gt; Time zone", change the time zone as required by entering a different numerical value.
 
    The numerical value stands for a time zone, for example:
 
@@ -916,7 +916,7 @@ To configure a parameter set control, proceed as follows:
 
 **Note**
 
-The parameter set type is only visible in the parameter set control in runtime when the extended style is used in the runtime settings under "General > Screen".
+The parameter set type is only visible in the parameter set control in runtime when the extended style is used in the runtime settings under "General &gt; Screen".
 
 **Note**
 
@@ -924,7 +924,7 @@ A tag that you use as a dynamization tag of the fixed parameter set type in the 
 
 **Note**
 
-To change the visibility of columns, click on "Columns" under "Properties > Miscellaneous > Parameter view". In the extended parameter control display, you can enable or disable the visibility of individual columns under "Visibility". Changing the visibility via the preset value in the "Blocks" property is not supported.
+To change the visibility of columns, click on "Columns" under "Properties &gt; Miscellaneous &gt; Parameter view". In the extended parameter control display, you can enable or disable the visibility of individual columns under "Visibility". Changing the visibility via the preset value in the "Blocks" property is not supported.
 
 ---
 
@@ -1014,7 +1014,7 @@ To configure a screen with which you can display and manage parameter sets, foll
 
    Operator controls are configured buttons in the screen or function keys on the HMI device.
 
-   In the "Scripts" editor, you will find snippets with the system functions under "HMI Runtime > Parameter set".
+   In the "Scripts" editor, you will find snippets with the system functions under "HMI Runtime &gt; Parameter set".
 
 #### Alternative procedure
 

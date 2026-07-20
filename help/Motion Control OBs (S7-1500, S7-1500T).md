@@ -186,7 +186,7 @@ The MC_Interpolator is called at the end of processing of the MC_Servo OBs. The 
 
 ### Improving system performance (S7-1500T FW V3.0 and higher)
 
-To improve the system performance for interpolating the cam technology object, select the "Improve system performance" check box in the properties of MC_Interpolator under "General > Multi-core processor".
+To improve the system performance for interpolating the cam technology object, select the "Improve system performance" check box in the properties of MC_Interpolator under "General &gt; Multi-core processor".
 
 The check box "Improve system performance" is selected by default. If the "Improve system performance" check box is grayed out, the setting is not supported by the CPU used.
 
@@ -230,7 +230,7 @@ Optimized start information:
 
 You program the user [transformation](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#transformation-for-user-defined-kinematics-systems-s7-1500t) of the Cartesian coordinates and the axis-specific setpoints for the user-defined kinematics in the organization block MC_Transformation [OB98]. This programming includes the transformation of the positions and the dynamic values (velocity, acceleration, jerk).
 
-When you add the MC_Transformation in the TIA Portal, the data block "TransformationParameter" is automatically created under "Program blocks > System blocks > Program resources". In the properties of the organization block, the MC_Transformation indicates the number of the data block "TransformationParameter" under "General > Transformation".
+When you add the MC_Transformation in the TIA Portal, the data block "TransformationParameter" is automatically created under "Program blocks &gt; System blocks &gt; Program resources". In the properties of the organization block, the MC_Transformation indicates the number of the data block "TransformationParameter" under "General &gt; Transformation".
 
 In the user program, supply the input parameters of the MC_Transformation with the required start information. You write the axis-specific parameters or the Cartesian parameters in the "TransformationParameter" data block. The MC_Transformation is called with this start information in the execution system of the CPU.
 
@@ -244,7 +244,7 @@ In the user program, supply the input parameters of the MC_Transformation with t
 
 The MC_Transformation is called according to the configured priority in the execution system of the CPU.
 
-You configure the priority of the MC_Transformation in the properties of the organization block under "General > Attributes > Priority". For the priority you can set values from 17 to 25 (default setting 25):
+You configure the priority of the MC_Transformation in the properties of the organization block under "General &gt; Attributes &gt; Priority". For the priority you can set values from 17 to 25 (default setting 25):
 
 - The priority of MC_Transformation must be at least one level lower than the priority of [MC_Servo](#mc_servo-ob-s7-1500-s7-1500t).
 - The priority of MC_Transformation must be at least one level higher than the priority of [MC_Interpolator](#mc_interpolator-ob-s7-1500-s7-1500t).
@@ -265,7 +265,7 @@ The following table shows the parameters of the MC_Transformation:
 | TransformationParameters | InOut | VARIANT | - | Pointer to the data block "TransformationParameter" |  |
 | FunctionResult | OUTPUT | DINT | - | Return value of the MC_Transformation to the kinematics technology object |  |
 | 0 | Calculation performed and parameters output |  |  |  |  |
-| < 0 | Error during calculation  If an error occurs during the calculation, the kinematics technology object stops the motion. The kinematics technology object outputs a technology alarm with the error ID as an accompany value and deletes the job sequence. |  |  |  |  |
+| &lt; 0 | Error during calculation  If an error occurs during the calculation, the kinematics technology object stops the motion. The kinematics technology object outputs a technology alarm with the error ID as an accompany value and deletes the job sequence. |  |  |  |  |
 | If an error occurs during the calculation, the kinematics technology object stops the motion. The kinematics technology object outputs a technology alarm with the error ID as an accompany value and deletes the job sequence. |  |  |  |  |  |
 
 ---
@@ -296,11 +296,11 @@ A download in RUN mode increases the CPU time required to prepare the motion job
 
 The MC_LookAhead is triggered by the MC_Interpolator. The MC_LookAhead is not called cyclically according to the configured priority and cycle load in the execution system of the CPU.
 
-You configure the priority of the MC_LookAhead in the properties of the organization block under "General > Attributes > Priority". You can set values from 15 to 16 (default setting 15) for the priority. The priority of MC_LookAhead must be lower than the priority of MC_Interpolator.
+You configure the priority of the MC_LookAhead in the properties of the organization block under "General &gt; Attributes &gt; Priority". You can set values from 15 to 16 (default setting 15) for the priority. The priority of MC_LookAhead must be lower than the priority of MC_Interpolator.
 
 ### Improving system performance (S7-1500T FW V3.0 and higher)
 
-To improve the system performance for motion preparation of the kinematics technology object, select the "Improve system performance" check box in the properties of MC_LookAhead under "General > Multi-core processor".
+To improve the system performance for motion preparation of the kinematics technology object, select the "Improve system performance" check box in the properties of MC_LookAhead under "General &gt; Multi-core processor".
 
 The check box "Improve system performance" is selected by default. If the "Improve system performance" check box is grayed out, the setting is not supported by the CPU used.
 
@@ -312,7 +312,7 @@ The check box "Improve system performance" is selected by default. If the "Impro
 
 ### Cycle load
 
-You can configure the maximum cycle load of the MC_LookAhead in the properties of the organization block under "General > Multi-core processor". You can set values from 1% to 40% (default setting 20%) for the maximum cycle load.
+You can configure the maximum cycle load of the MC_LookAhead in the properties of the organization block under "General &gt; Multi-core processor". You can set values from 1% to 40% (default setting 20%) for the maximum cycle load.
 
 Select the cycle load of the MC_LookAhead in such a way that the CPU can process all technology objects for Motion Control in one application cycle.
 

@@ -59,7 +59,7 @@ drive object.
 p31746.  
 7: The rule p0115[0] = p0115[1] has been violated on at least one of the drive objects
 involved.  
-8: On the master drive object, p1460[D] is set to > 0.0 or p1462[D] is set to > 0.0.  
+8: On the master drive object, p1460[D] is set to &gt; 0.0 or p1462[D] is set to &gt; 0.0.  
 9: Parameter p0115[0] or p0115[1] is different on the master drive object and follower
 drive object.  
 10: Number of data sets (p0180) is different on the master drive object and follower

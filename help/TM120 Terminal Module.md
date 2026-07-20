@@ -86,7 +86,7 @@ Parameter settings for selecting alarms and faults
 | Alarm only | ≤ 250° C | ≥ 251° C (= Off) | 0 |
 | Fault only | ≥ 251° C (= Off) | ≤ 250° C | Any |
 | Fault and alarm | ≤ 250° C | ≤ 250° C | 0 |
-| Alarm with delayed fault | ≤ 250° C | ≤ 250° C | > 0 ms |
+| Alarm with delayed fault | ≤ 250° C | ≤ 250° C | &gt; 0 ms |
 | No messages | ≥ 251° C (= Off) | ≥ 251° C (= Off) | Any |
 
 ##### Parameterizing temperature sensors

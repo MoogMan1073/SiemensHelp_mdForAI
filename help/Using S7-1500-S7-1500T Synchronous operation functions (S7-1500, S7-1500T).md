@@ -222,7 +222,7 @@ The following configurations are available in the leading axis proxy technology 
 
 ### Motion Control instructions for synchronous operation (S7-1500, S7-1500T)
 
-You execute the functions of the synchronous axis, cam and leading axis proxy technology objects using Motion Control instructions in your user program or using the TIA Portal (under "Technology object > Commissioning").
+You execute the functions of the synchronous axis, cam and leading axis proxy technology objects using Motion Control instructions in your user program or using the TIA Portal (under "Technology object &gt; Commissioning").
 
 The following table shows the additional Motion Control instructions for synchronous operation that are supported by the technology objects in addition to the axis functions:
 
@@ -257,10 +257,10 @@ The following graphic shows the general influence of the Motion Control instruct
 
 | Symbol | Meaning |
 | --- | --- |
-| ① | Effective leading value  (<TO>.StatusSynchronizedMotion.EffectiveLeadingValue) |
-| ② | Leading value of the synchronous operation function  (<TO>.StatusSynchronizedMotion.FunctionLeadingValue) |
-| ③ | Following value of the synchronous operation function  (<TO>.StatusSynchronizedMotion.FunctionFollowingValue) |
-| ④ | Following value after following value offset  (<TO>.StatusSynchronizedMotion.FunctionFollowingValue.Position + <TO>.StatusSynchronizedMotion.Offset) |
+| ① | Effective leading value  (&lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue) |
+| ② | Leading value of the synchronous operation function  (&lt;TO&gt;.StatusSynchronizedMotion.FunctionLeadingValue) |
+| ③ | Following value of the synchronous operation function  (&lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue) |
+| ④ | Following value after following value offset  (&lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Position + &lt;TO&gt;.StatusSynchronizedMotion.Offset) |
 
 #### Additive leading value
 
@@ -364,7 +364,7 @@ The following rules apply to the master value coupling:
 
 To interconnect the required leading values of a following axis, follow these steps:
 
-1. Open the "Technology object > Configuration > Leading value interconnections" configuration window of the synchronous axis.
+1. Open the "Technology object &gt; Configuration &gt; Leading value interconnections" configuration window of the synchronous axis.
 2. In the "Possible leading values" table column, add all leading value-capable technology objects that you need during operation as leading values for the following axis.
 
    You can use the technology objects added to the table with the corresponding Motion Control instruction as leading values for the following axis. All configured leading value interconnections for the technology object are displayed in the cross-reference list of the technology object.
@@ -411,13 +411,13 @@ The effective extrapolation time consists of a leading axis-dependent part, a co
 
 - **Leading axis-dependent part**
 
-  The leading axis-dependent part is calculated automatically and displayed at the leading axis in the "<TO>.Extrapolation.LeadingAxisDependentTime" tag of the technology object. You can disable the leading axis-dependent part using the tag "<TO>.Extrapolation.Settings.SystemDefinedExtrapolation" = 0.
+  The leading axis-dependent part is calculated automatically and displayed at the leading axis in the "&lt;TO&gt;.Extrapolation.LeadingAxisDependentTime" tag of the technology object. You can disable the leading axis-dependent part using the tag "&lt;TO&gt;.Extrapolation.Settings.SystemDefinedExtrapolation" = 0.
 - **Following axis-dependent part**
 
-  The following axis-dependent part is calculated automatically and displayed at the following axis in the "<TO>.StatusPositioning.SetpointExecutionTime" tag of the technology object. You configure the value under "Technology object > Configuration > Extended parameters > Actual value extrapolation" (<TO>.Extrapolation.FollowingAxisDependentTime).
+  The following axis-dependent part is calculated automatically and displayed at the following axis in the "&lt;TO&gt;.StatusPositioning.SetpointExecutionTime" tag of the technology object. You configure the value under "Technology object &gt; Configuration &gt; Extended parameters &gt; Actual value extrapolation" (&lt;TO&gt;.Extrapolation.FollowingAxisDependentTime).
 - **Time from the cross-PLC synchronous operation**
 
-  For cross-PLC synchronous operation, the output delay of the leading value at the locally coupled following axes is automatically taken into account. The displayed value is equal to the leading value delay and corresponds to the delay time entered at the leading axis or at the external encoder. You configure the delay time under "Technology object > Configuration > Leading value settings" (<TO>.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime).
+  For cross-PLC synchronous operation, the output delay of the leading value at the locally coupled following axes is automatically taken into account. The displayed value is equal to the leading value delay and corresponds to the delay time entered at the leading axis or at the external encoder. You configure the delay time under "Technology object &gt; Configuration &gt; Leading value settings" (&lt;TO&gt;.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime).
 
 The extrapolated actual value is evaluated with a configurable hysteresis before it is output as the leading value. The hysteresis evaluation prevents an inversion of the leading value, which may result from extrapolation of a noisy value.
 
@@ -434,15 +434,15 @@ The following diagram shows the sequence of the actual value extrapolation.
 | --- | --- |
 | ① | Actual position value |
 | ② | Actual velocity value |
-| ③ | Position filter T1 (<TO>.Extrapolation.PositionFilter.T1) and T2 (<TO>.Extrapolation.PositionFilter.T2) |
-| ④ | Velocity filters T1 (<TO>.Extrapolation.VelocityFilter.T1) and T2 (<TO>.Extrapolation.VelocityFilter.T2) |
-| ⑤ | Tolerance band width for velocity (<TO>.Extrapolation.VelocityTolerance.Range) |
-| ⑥ | Hysteresis value in the configured unit of length (<TO>.Extrapolation.Hysteresis.Value) |
-| ⑦ | Extrapolation time component caused by the leading axis (<TO>.Extrapolation.LeadingAxisDependentTime) |
-| ⑧ | Extrapolation time component caused by the following axis (<TO>.Extrapolation.FollowingAxisDependentTime) |
-| ⑨ | Portion of the extrapolation time from the cross-PLC synchronous operation (<TO>.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime) |
+| ③ | Position filter T1 (&lt;TO&gt;.Extrapolation.PositionFilter.T1) and T2 (&lt;TO&gt;.Extrapolation.PositionFilter.T2) |
+| ④ | Velocity filters T1 (&lt;TO&gt;.Extrapolation.VelocityFilter.T1) and T2 (&lt;TO&gt;.Extrapolation.VelocityFilter.T2) |
+| ⑤ | Tolerance band width for velocity (&lt;TO&gt;.Extrapolation.VelocityTolerance.Range) |
+| ⑥ | Hysteresis value in the configured unit of length (&lt;TO&gt;.Extrapolation.Hysteresis.Value) |
+| ⑦ | Extrapolation time component caused by the leading axis (&lt;TO&gt;.Extrapolation.LeadingAxisDependentTime) |
+| ⑧ | Extrapolation time component caused by the following axis (&lt;TO&gt;.Extrapolation.FollowingAxisDependentTime) |
+| ⑨ | Portion of the extrapolation time from the cross-PLC synchronous operation (&lt;TO&gt;.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime) |
 | ⑩ | Extrapolated leading value position |
-| ⑪ | Extrapolated leading value velocity, depending on the switch position:  - Leading value velocity from the extrapolation with hysteresis ("<TO>.Extrapolation.Settings.ExtrapolatedVelocityMode" = 1) - Leading value velocity from the filtered actual velocity value ("<TO>.Extrapolation.Settings.ExtrapolatedVelocityMode" = 0) |
+| ⑪ | Extrapolated leading value velocity, depending on the switch position:  - Leading value velocity from the extrapolation with hysteresis ("&lt;TO&gt;.Extrapolation.Settings.ExtrapolatedVelocityMode" = 1) - Leading value velocity from the filtered actual velocity value ("&lt;TO&gt;.Extrapolation.Settings.ExtrapolatedVelocityMode" = 0) |
 
 ##### Filtering the actual values
 
@@ -450,7 +450,7 @@ Noisy encoder signals lead to high velocity step changes, which also affect the 
 
 The actual position value is blended by the actual position filter. The actual velocity value is blended by the velocity filter and further "stabilized" by the tolerance band. The filtered position value is then extrapolated taking into account the filtered velocity value.
 
-The leading value velocity results from the extrapolated leading value position or from the filtered velocity value without extrapolation ("<TO>.Extrapolation.Settings.ExtrapolatedVelocityMode" = 0).
+The leading value velocity results from the extrapolated leading value position or from the filtered velocity value without extrapolation ("&lt;TO&gt;.Extrapolation.Settings.ExtrapolatedVelocityMode" = 0).
 
 Recommended settings.
 
@@ -486,18 +486,18 @@ The hysteresis acts on the filtered extrapolated position value in the interpola
 
 To configure the actual value extrapolation of the leading value, follow these steps:
 
-1. Open the "Technology object > Configuration > Extended parameters > Actual value extrapolation" configuration window of the leading axis.
+1. Open the "Technology object &gt; Configuration &gt; Extended parameters &gt; Actual value extrapolation" configuration window of the leading axis.
 2. In the "Position filter T1" and "Position filter T2" input fields, enter the time constants of the PT2 filter for smoothing the position. To activate the position filter, select the "Consider leading axis" check box.
 3. In the "Hysteresis value" input field, enter a value for applying the hysteresis function to the extrapolated actual value of the position. The specification is made in the configured length unit.
 4. In the "Velocity filter T1" and "Velocity filter T2" input fields, enter the time constants of the PT2 filter for smoothing the actual velocity.
 5. In the "Tolerance band width" input field, enter the tolerance band width of the smoothed actual velocity. For optimized application of the tolerance band, enter the same bandwidth for the tolerance band as the width of the noise signal.
-6. In the "Following axis" input field, specify the following axis proportion for the extrapolation of the leading value. The value (unchanged or offset against user-specific runtimes) from the "<TO>.StatusPositioning.SetpointExecutionTime" tag of the following axis is used as the basis.
+6. In the "Following axis" input field, specify the following axis proportion for the extrapolation of the leading value. The value (unchanged or offset against user-specific runtimes) from the "&lt;TO&gt;.StatusPositioning.SetpointExecutionTime" tag of the following axis is used as the basis.
 
    The leading axis-dependent extrapolation is displayed in the "Leading axis" field. The leading axis-dependent extrapolation time is calculated from the sum of the actual value acquisition time at the leading axis, (T<sub>i</sub>), the interpolator time (T<sub>Ipo</sub>) and the sum of position filters T1 and T2:
 
    Leading axis-dependent extrapolation time = T<sub>i</sub> + T<sub>Ipo</sub> + T1 + T2
 
-   The time from a cross-PLC synchronous operation is displayed in the "cross-PLC" field. The time from the cross-PLC synchronous operation corresponds to the set delay time in the configuration window "Technology object > Configuration > Leading value settings".
+   The time from a cross-PLC synchronous operation is displayed in the "cross-PLC" field. The time from the cross-PLC synchronous operation corresponds to the set delay time in the configuration window "Technology object &gt; Configuration &gt; Leading value settings".
 7. To apply the leading value velocity from the differentiation of the extrapolated leading value position, select the "Activate differentiation" check box. Otherwise, the filtered actual value velocity is applied.
 8. To take the leading axis-dependent extrapolation into account when calculating the effective extrapolation time, select the "Consider leading axis" check box. Otherwise, the leading axis-dependent extrapolation is not taken into account when calculating the effective extrapolation time and the position filters are deactivated.
 
@@ -512,25 +512,25 @@ The following technology object tags are relevant for the actual value extrapola
 | Configuration |  |  |
 | --- | --- | --- |
 | Tag | Description |  |
-| <TO>.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime | For cross-PLC synchronous operation:  The delay time of leading value output to the local following axes |  |
-| <TO>.Extrapolation.LeadingAxisDependentTime | On the leading axis:  Leading axis-dependent portion of the extrapolation time, which results from T<sub>i</sub>, T<sub>Ipo</sub>, and T<sub>Filter</sub>. |  |
-| <TO>.Extrapolation.FollowingAxisDependentTime | On the leading axis:  Following-axis dependent portion of the extrapolation time  Enter the value from the "<TO>.StatusPositioning.SetpointExecutionTime" tag of the following axis (unchanged or compensated with user-specific times). |  |
-| <TO>.Extrapolation.Settings.SystemDefinedExtrapolation | Effectiveness of the leading axis-dependent portion of the extrapolation time (<TO>.Extrapolation.LeadingAxisDependentTime) |  |
+| &lt;TO&gt;.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime | For cross-PLC synchronous operation:  The delay time of leading value output to the local following axes |  |
+| &lt;TO&gt;.Extrapolation.LeadingAxisDependentTime | On the leading axis:  Leading axis-dependent portion of the extrapolation time, which results from T<sub>i</sub>, T<sub>Ipo</sub>, and T<sub>Filter</sub>. |  |
+| &lt;TO&gt;.Extrapolation.FollowingAxisDependentTime | On the leading axis:  Following-axis dependent portion of the extrapolation time  Enter the value from the "&lt;TO&gt;.StatusPositioning.SetpointExecutionTime" tag of the following axis (unchanged or compensated with user-specific times). |  |
+| &lt;TO&gt;.Extrapolation.Settings.SystemDefinedExtrapolation | Effectiveness of the leading axis-dependent portion of the extrapolation time (&lt;TO&gt;.Extrapolation.LeadingAxisDependentTime) |  |
 | 0 | Not effective |  |
 | 1 | Effective |  |
-| <TO>.Extrapolation.Settings.ExtrapolatedVelocityMode | 0 | "FilteredVelocity"  Leading value velocity from filtered actual velocity |
+| &lt;TO&gt;.Extrapolation.Settings.ExtrapolatedVelocityMode | 0 | "FilteredVelocity"  Leading value velocity from filtered actual velocity |
 | 1 | "VelocityByDifferentiation"  Leading value velocity from differentiation of the extrapolated leading value position |  |
-| <TO>.Extrapolation.PositionFilter.T1 | Position filter time constant T1 |  |
-| <TO>.Extrapolation.PositionFilter.T2 | Position filter time constant T2 |  |
-| <TO>.Extrapolation.VelocityFilter.T1 | Velocity filter time constant T1 |  |
-| <TO>.Extrapolation.VelocityFilter.T2 | Velocity filter time constant T2 |  |
-| <TO>.Extrapolation.VelocityTolerance.Range | Tolerance band width for velocity |  |
-| <TO>.Extrapolation.Hysteresis.Value | Hysteresis value (in the configured unit of length) |  |
+| &lt;TO&gt;.Extrapolation.PositionFilter.T1 | Position filter time constant T1 |  |
+| &lt;TO&gt;.Extrapolation.PositionFilter.T2 | Position filter time constant T2 |  |
+| &lt;TO&gt;.Extrapolation.VelocityFilter.T1 | Velocity filter time constant T1 |  |
+| &lt;TO&gt;.Extrapolation.VelocityFilter.T2 | Velocity filter time constant T2 |  |
+| &lt;TO&gt;.Extrapolation.VelocityTolerance.Range | Tolerance band width for velocity |  |
+| &lt;TO&gt;.Extrapolation.Hysteresis.Value | Hysteresis value (in the configured unit of length) |  |
 
 | Status indicators |  |
 | --- | --- |
 | Tag | Description |
-| <TO>.StatusPositioning.SetpointExecutionTime | Setpoint execution time of the axis  Results from T<sub>Ipo</sub>, T<sub>vtc</sub> or 1/kv, T<sub>Send</sub> and T<sub>O</sub> of the axis. |
+| &lt;TO&gt;.StatusPositioning.SetpointExecutionTime | Setpoint execution time of the axis  Results from T<sub>Ipo</sub>, T<sub>vtc</sub> or 1/kv, T<sub>Send</sub> and T<sub>O</sub> of the axis. |
 
 ### Position control in synchronous operation (S7-1500, S7-1500T)
 
@@ -654,10 +654,10 @@ If a synchronous axis is operated as a following axis in the gearing with the Mo
 
 During the synchronizing phase, dynamic limits configured for the technology object apply to the following axis.
 
-- <TO>.DynamicLimits.MaxVelocity
-- <TO>.DynamicLimits.MaxAcceleration
-- <TO>.DynamicLimits.MaxDeceleration
-- <TO>.DynamicLimits.MaxJerk
+- &lt;TO&gt;.DynamicLimits.MaxVelocity
+- &lt;TO&gt;.DynamicLimits.MaxAcceleration
+- &lt;TO&gt;.DynamicLimits.MaxDeceleration
+- &lt;TO&gt;.DynamicLimits.MaxJerk
 
 The SW limit switches also continue to be monitored with the configured dynamic limits of the following axis.
 
@@ -665,9 +665,9 @@ If the programmed dynamics of the synchronization function are greater than the 
 
 ##### Synchronous travel
 
-During synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
+During synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
 
-If the dynamic limits configured for the following axis are exceeded, this is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
+If the dynamic limits configured for the following axis are exceeded, this is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
 
 If the following axis cannot follow the leading value, this results in a following error, which is monitored by the following error monitoring.
 
@@ -707,7 +707,7 @@ The synchronization duration and distance are dependent on the following paramet
 - Dynamic settings for synchronization
 - Dynamics of the leading axis
 
-The synchronization is indicated in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
+The synchronization is indicated in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
 
 ![During synchronization](images/165343153675_DV_resource.Stream@PNG-en-US.png)
 
@@ -715,7 +715,7 @@ The synchronization is indicated in the "<TO>.StatusWord.X21 (Synchronizing)" ta
 | --- | --- |
 | ① | Time when synchronization starts |
 
-If the programmed dynamic response of the synchronous operation function is greater than the maximum dynamic response of the following axis, the corresponding technology alarms 502 or 503 are output at the following axis. The speed of the following axis is also limited; however, no Technology Alarm 501 is generated. The synchronization process is only completed when the resulting final velocity is lower than the maximum velocity of the following axis (<TO>.DynamicLimits.MaxVelocity).
+If the programmed dynamic response of the synchronous operation function is greater than the maximum dynamic response of the following axis, the corresponding technology alarms 502 or 503 are output at the following axis. The speed of the following axis is also limited; however, no Technology Alarm 501 is generated. The synchronization process is only completed when the resulting final velocity is lower than the maximum velocity of the following axis (&lt;TO&gt;.DynamicLimits.MaxVelocity).
 
 ##### After synchronization
 
@@ -729,7 +729,7 @@ The following value is calculated as follows:
 
 Position of following axis (following value) = Synchronous position of following axis + gear ratio × (Position of leading axis - Synchronous position of leading axis)
 
-The "Synchronous" status is indicated in the Motion Control instruction "[MC_GearIn](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearin-start-gearing-v8-s7-1500-s7-1500t)" with the parameter "InGear" = TRUE and in the "<TO>.StatusWord.X22 (Synchronous)" tag of the technology object.
+The "Synchronous" status is indicated in the Motion Control instruction "[MC_GearIn](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearin-start-gearing-v8-s7-1500-s7-1500t)" with the parameter "InGear" = TRUE and in the "&lt;TO&gt;.StatusWord.X22 (Synchronous)" tag of the technology object.
 
 > **Note**
 >
@@ -841,18 +841,18 @@ If synchronous operation is not active, the configured dynamic limits of the fol
 
 During synchronization using dynamic parameters, the dynamic limits configured at the technology object apply to the following axis:
 
-- <TO>.DynamicLimits.MaxVelocity
-- <TO>.DynamicLimits.MaxAcceleration
-- <TO>.DynamicLimits.MaxDeceleration
-- <TO>.DynamicLimits.MaxJerk
+- &lt;TO&gt;.DynamicLimits.MaxVelocity
+- &lt;TO&gt;.DynamicLimits.MaxAcceleration
+- &lt;TO&gt;.DynamicLimits.MaxDeceleration
+- &lt;TO&gt;.DynamicLimits.MaxJerk
 
 The SW limit switches also continue to be monitored with the configured dynamic limits of the following axis.
 
 ##### Synchronization using leading value distance/synchronous travel
 
-During synchronization via the leading value distance and during synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
+During synchronization via the leading value distance and during synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
 
-If the dynamic limits configured for the following axis are exceeded, this is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
+If the dynamic limits configured for the following axis are exceeded, this is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
 
 If the following axis cannot follow the leading value, this results in a following error, which is monitored by the following error monitoring.
 
@@ -955,13 +955,13 @@ The start position of the leading axis is derived in the following way:
 
 Start position = Synchronous position of leading axis - Synchronization length
 
-The status "Waiting" is displayed at the following axis until the leading value has reached the start position (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 2).
+The status "Waiting" is displayed at the following axis until the leading value has reached the start position (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 2).
 
 If the leading axis is already in its synchronous position before synchronization, the following axis must also be moved to its synchronous position, for example, with a "MC_MoveAbsolute" job. If the leading and following axes are already at their synchronous positions when the "MC_GearInPos" job is started, synchronous operation immediately has "Synchronous" status.
 
 ###### During synchronization
 
-The following axis begins to synchronize as soon as the leading value has reached the start position. The synchronization is indicated in the Motion Control instruction "MC_GearInPos" with the parameter "StartSync" = TRUE and in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
+The following axis begins to synchronize as soon as the leading value has reached the start position. The synchronization is indicated in the Motion Control instruction "MC_GearInPos" with the parameter "StartSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
 
 ![During synchronization](images/165343494411_DV_resource.Stream@PNG-en-US.png)
 
@@ -972,7 +972,7 @@ The following axis begins to synchronize as soon as the leading value has reache
 
 The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function.
 
-If the programmed dynamic response of the synchronous operation function is greater than the maximum dynamic response of the following axis, the corresponding technology alarms 501, 502, or 503 are output at the following axis. The synchronization process is only completed when the resulting final velocity is lower than the maximum velocity of the following axis (<TO>.DynamicLimits.MaxVelocity).
+If the programmed dynamic response of the synchronous operation function is greater than the maximum dynamic response of the following axis, the corresponding technology alarms 501, 502, or 503 are output at the following axis. The synchronization process is only completed when the resulting final velocity is lower than the maximum velocity of the following axis (&lt;TO&gt;.DynamicLimits.MaxVelocity).
 
 ###### After synchronization
 
@@ -998,7 +998,7 @@ The start position of the leading axis is derived in the following way:
 
 Start position = Synchronous position of leading axis - Synchronization length
 
-The leading axis must be at least the leading value distance away from the synchronous position. The status "Waiting" is displayed at the following axis until the leading value has reached the start position (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 2).
+The leading axis must be at least the leading value distance away from the synchronous position. The status "Waiting" is displayed at the following axis until the leading value has reached the start position (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 2).
 
 > **Note**
 >
@@ -1010,7 +1010,7 @@ If the leading and following axes are already at their synchronous positions whe
 
 ###### During synchronization
 
-The following axis begins to synchronize as soon as the leading value has reached the start position. The synchronization is indicated in the Motion Control instruction "MC_GearInPos" with the parameter "StartSync" = TRUE and in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
+The following axis begins to synchronize as soon as the leading value has reached the start position. The synchronization is indicated in the Motion Control instruction "MC_GearInPos" with the parameter "StartSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
 
 ![During synchronization](images/165343500299_DV_resource.Stream@PNG-en-US.png)
 
@@ -1019,7 +1019,7 @@ The following axis begins to synchronize as soon as the leading value has reache
 | ① | Time when synchronization starts |
 | ② | Time when synchronization is complete |
 
-The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" variables of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" variables of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
 ###### After synchronization
 
@@ -1041,7 +1041,7 @@ You can define the behavior of the following axis for synchronization with the f
 
 After starting the "MC_GearInPos" job, a motion profile for the slave axis is calculated depending on the start position and the synchronous position of the following axis as well as on the specified leading value distance. The calculation determines the required dynamic response and the position of the leading axis as of which the leading axis and the following axis travel synchronously.
 
-The status "Waiting" is displayed at the following axis until the leading value has reached the synchronous position of the leading axis (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 2).
+The status "Waiting" is displayed at the following axis until the leading value has reached the synchronous position of the leading axis (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 2).
 
 > **Note**
 >
@@ -1053,7 +1053,7 @@ If the leading and following axes are already at their synchronous positions whe
 
 ###### During synchronization
 
-The following axis begins to synchronize as soon as the leading value has reached the synchronous position. The synchronization is indicated in the Motion Control instruction "MC_GearInPos" with the parameter "StartSync" = TRUE and in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
+The following axis begins to synchronize as soon as the leading value has reached the synchronous position. The synchronization is indicated in the Motion Control instruction "MC_GearInPos" with the parameter "StartSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
 
 ![During synchronization](images/165343506187_DV_resource.Stream@PNG-en-US.png)
 
@@ -1062,7 +1062,7 @@ The following axis begins to synchronize as soon as the leading value has reache
 | ① | Time when synchronization starts |
 | ② | Time when synchronization is complete |
 
-The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" variables of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" variables of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
 ###### After synchronization
 
@@ -1080,7 +1080,7 @@ The following value is calculated as follows:
 
 Position of following axis (following value) = Synchronous position of following axis + gear ratio × (Position of leading axis - Synchronous position of leading axis)
 
-The "Synchronous" status is indicated in the Motion Control instruction "[MC_GearInPos](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinpos-start-gearing-with-specified-synchronous-positions-v8-s7-1500t)" with the parameter "InSync" = TRUE and in the "<TO>.StatusWord.X22 (Synchronous)" tag of the technology object.
+The "Synchronous" status is indicated in the Motion Control instruction "[MC_GearInPos](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinpos-start-gearing-with-specified-synchronous-positions-v8-s7-1500t)" with the parameter "InSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X22 (Synchronous)" tag of the technology object.
 
 > **Note**
 >
@@ -1119,19 +1119,19 @@ You define the behavior of the following axis during leading value offset with t
 
 The leading value offset via dynamic parameters is effective immediately, regardless of the leading value position. The leading value is offset on the following axis. The dynamic values are added to the values of the synchronous operation motion. The required travel distance of the following axis to offset the leading value is calculated by the system.
 
-During leading value offset, the speed of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed). The configured velocity limit may be exceeded (<TO>.DynamicLimits.MaxVelocity).
+During leading value offset, the speed of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed). The configured velocity limit may be exceeded (&lt;TO&gt;.DynamicLimits.MaxVelocity).
 
 Acceleration, deceleration, and jerk of the following axis are limited to the dynamic limits configured on the technology object:
 
-- <TO>.DynamicLimits.MaxAcceleration
-- <TO>.DynamicLimits.MaxDeceleration
-- <TO>.DynamicLimits.MaxJerk
+- &lt;TO&gt;.DynamicLimits.MaxAcceleration
+- &lt;TO&gt;.DynamicLimits.MaxDeceleration
+- &lt;TO&gt;.DynamicLimits.MaxJerk
 
-The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "<TO>.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
+The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "&lt;TO&gt;.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
 
 ###### After the leading value offset
 
-As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 The leading value offset only has an effect in the "Synchronous" status of the gearing. When the gearing is overridden, the leading value offset is reset to zero.
 
@@ -1152,15 +1152,15 @@ You define the behavior of the following axis during leading value offset with t
 
 ###### During the leading value offset
 
-After starting the jobs, the following axis begins with the leading value offset starting from the current position. Within the traversing distance of the leading axis, the following axis offsets the leading value at continuous velocity and acceleration. The required dynamics of the following axis to offset the leading value is calculated by the system. During leading value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+After starting the jobs, the following axis begins with the leading value offset starting from the current position. Within the traversing distance of the leading axis, the following axis offsets the leading value at continuous velocity and acceleration. The required dynamics of the following axis to offset the leading value is calculated by the system. During leading value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "<TO>.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
+The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "&lt;TO&gt;.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
 
 The leading value must not reverse during the leading value offset on the following axis. When the leading value reverses, the "MC_PhasingAbsolute" job or "MC_PhasingRelative" job is canceled with "ErrorID" = 16#808C.
 
 ###### After the leading value offset
 
-As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 The leading value offset only has an effect in the "Synchronous" status of the gearing. When the gearing is overridden, the leading value offset is reset to zero.
 
@@ -1182,19 +1182,19 @@ You define the behavior of the following axis during leading value offset with t
 
 ###### Until the leading value offset
 
-After starting the job, the status "Waiting" is displayed at the following axis when the leading value is at standstill and until the leading value has reached the leading value position (<TO>.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
+After starting the job, the status "Waiting" is displayed at the following axis when the leading value is at standstill and until the leading value has reached the leading value position (&lt;TO&gt;.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
 
 ###### During the leading value offset
 
-As soon as the leading value has reached the leading value position, the following axis begins to offset the leading value. Within the traversing distance of the leading axis, the following axis offsets the leading value at continuous velocity and acceleration. The required dynamics of the following axis to offset the leading value is calculated by the system. During leading value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+As soon as the leading value has reached the leading value position, the following axis begins to offset the leading value. Within the traversing distance of the leading axis, the following axis offsets the leading value at continuous velocity and acceleration. The required dynamics of the following axis to offset the leading value is calculated by the system. During leading value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "<TO>.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
+The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "&lt;TO&gt;.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
 
 The leading value must not reverse during the leading value offset on the following axis. When the leading value reverses, the "MC_PhasingAbsolute" job or "MC_PhasingRelative" job is canceled with "ErrorID" = 16#808C. The waiting job is not canceled.
 
 ###### After the leading value offset
 
-As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 The leading value offset only has an effect in the "Synchronous" status of the gearing. When the gearing is overridden, the leading value offset is reset to zero.
 
@@ -1248,15 +1248,15 @@ You define the behavior of the following axis during following value offset with
 
 ###### During the following value offset
 
-After starting the job, the following axis begins with the following value offset starting from the current position. Within the traversing distance of the leading axis, the following axis offsets the following value at continuous velocity and acceleration. The required dynamics of the following axis for the following value offset is calculated by the system. During following value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+After starting the job, the following axis begins with the following value offset starting from the current position. Within the traversing distance of the leading axis, the following axis offsets the following value at continuous velocity and acceleration. The required dynamics of the following axis for the following value offset is calculated by the system. During following value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-The following value offset is indicated in the Motion Control instruction with the parameter "StartOffset" = TRUE and in the "<TO>.StatusWort2.X4 (OffsetCommand)" tag of the technology object. The "AbsoluteOffset" or "CoveredOffset" parameter shows the absolute following value portion already shifted.
+The following value offset is indicated in the Motion Control instruction with the parameter "StartOffset" = TRUE and in the "&lt;TO&gt;.StatusWort2.X4 (OffsetCommand)" tag of the technology object. The "AbsoluteOffset" or "CoveredOffset" parameter shows the absolute following value portion already shifted.
 
 The leading value must not reverse during the following value offset on the following axis. When the leading value reverses, the "MC_OffsetAbsolute" job or "MC_OffsetRelative" job is canceled with "ErrorID" = 16#808C.
 
 ###### After the following value offset
 
-As soon as the following axis has offset the following value, the following value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+As soon as the following axis has offset the following value, the following value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 The following value offset only has an effect in the "Synchronous" status of the gearing. When the gearing is overridden, the following value offset is reset to zero.
 
@@ -1278,19 +1278,19 @@ You define the behavior of the following axis during following value offset with
 
 ###### Until the following value offset
 
-After starting the job, the status "Waiting" is displayed at the following axis when the leading value is at standstill and until the leading value has reached the leading value position (<TO>.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
+After starting the job, the status "Waiting" is displayed at the following axis when the leading value is at standstill and until the leading value has reached the leading value position (&lt;TO&gt;.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
 
 ###### During the following value offset
 
-As soon as the leading value has reached the leading value position, the following axis begins to offset the following value. Within the traversing distance of the leading axis, the following axis offsets the following value at continuous velocity and acceleration. The required dynamics of the following axis for the following value offset is calculated by the system. During following value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+As soon as the leading value has reached the leading value position, the following axis begins to offset the following value. Within the traversing distance of the leading axis, the following axis offsets the following value at continuous velocity and acceleration. The required dynamics of the following axis for the following value offset is calculated by the system. During following value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-The following value offset is indicated in the Motion Control instruction with the parameter "StartOffset" = TRUE and in the "<TO>.StatusWort2.X4 (OffsetCommand)" tag of the technology object. The "AbsoluteOffset" or "CoveredOffset" parameter shows the absolute following value portion already shifted.
+The following value offset is indicated in the Motion Control instruction with the parameter "StartOffset" = TRUE and in the "&lt;TO&gt;.StatusWort2.X4 (OffsetCommand)" tag of the technology object. The "AbsoluteOffset" or "CoveredOffset" parameter shows the absolute following value portion already shifted.
 
 The leading value must not reverse during the following value offset on the following axis. When the leading value reverses, the "MC_OffsetAbsolute" job or "MC_OffsetRelative" job is canceled with "ErrorID" = 16#808C. The waiting job is not canceled.
 
 ###### After the following value offset
 
-As soon as the following axis has offset the following value, the following value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+As soon as the following axis has offset the following value, the following value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 The following value offset only has an effect in the "Synchronous" status of the gearing. When the gearing is overridden, the following value offset is reset to zero.
 
@@ -1361,24 +1361,24 @@ The start position of the following axis is derived in the following way:
 
 Start position = stop position of the following axis - travel distance of the following axis
 
-The status "Waiting" is displayed at the following axis until the following value has reached the start position (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 4).
+The status "Waiting" is displayed at the following axis until the following value has reached the start position (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 4).
 
 ##### During desynchronization
 
-The following axis begins to desynchronize as soon as the following value has reached the start position. Desynchronization is indicated in the Motion Control instruction "MC_GearOut" with the parameter "StartSyncOut" = TRUE and in the "<TO>.StatusWord2.X1 (DesynchronizingCommand)" tag of the technology object. The synchronous operation is no longer in the "Synchronous" status. Superimposed jobs of the following axis are canceled.
+The following axis begins to desynchronize as soon as the following value has reached the start position. Desynchronization is indicated in the Motion Control instruction "MC_GearOut" with the parameter "StartSyncOut" = TRUE and in the "&lt;TO&gt;.StatusWord2.X1 (DesynchronizingCommand)" tag of the technology object. The synchronous operation is no longer in the "Synchronous" status. Superimposed jobs of the following axis are canceled.
 
 The following axis moves to the stop position with the specified dynamics, independent of the leading value. The dynamic response of the following axis is limited to the dynamic limits configured on the technology object.
 
-- <TO>.DynamicLimits.MaxVelocity
-- <TO>.DynamicLimits.MaxAcceleration
-- <TO>.DynamicLimits.MaxDeceleration
-- <TO>.DynamicLimits.MaxJerk
+- &lt;TO&gt;.DynamicLimits.MaxVelocity
+- &lt;TO&gt;.DynamicLimits.MaxAcceleration
+- &lt;TO&gt;.DynamicLimits.MaxDeceleration
+- &lt;TO&gt;.DynamicLimits.MaxJerk
 
 During desynchronization, several modulo revolutions of both axes are generally possible.
 
 ##### After desynchronization
 
-As soon as the following axis reaches the stop position, the following axis is desynchronized. The following axis is at a standstill. The status is indicated in the Motion Control instruction "MC_GearOut" with the parameter "Done" = TRUE and in the "<TO>.StatusWord.X7 (Standstill)" tag of the technology object.
+As soon as the following axis reaches the stop position, the following axis is desynchronized. The following axis is at a standstill. The status is indicated in the Motion Control instruction "MC_GearOut" with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusWord.X7 (Standstill)" tag of the technology object.
 
 #### Desynchronizing following axis using leading value distance with "MC_GearOut" (S7-1500T)
 
@@ -1403,15 +1403,15 @@ The start position of the leading axis is derived in the following way:
 
 Start position = leading value position when the stop position of the following axis is reached - leading value distance
 
-The status "Waiting" is displayed at the following axis until the leading value has reached the start position (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 4).
+The status "Waiting" is displayed at the following axis until the leading value has reached the start position (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 4).
 
 ##### During desynchronization
 
-The following axis begins to desynchronize as soon as the leading value has reached the start position. Desynchronization is indicated in the Motion Control instruction "MC_GearOut" with the parameter "StartSyncOut" = TRUE and in the "<TO>.StatusWord2.X1 (DesynchronizingCommand)" tag of the technology object. The synchronous operation is no longer in the "Synchronous" status. Superimposed jobs of the following axis are canceled.
+The following axis begins to desynchronize as soon as the leading value has reached the start position. Desynchronization is indicated in the Motion Control instruction "MC_GearOut" with the parameter "StartSyncOut" = TRUE and in the "&lt;TO&gt;.StatusWord2.X1 (DesynchronizingCommand)" tag of the technology object. The synchronous operation is no longer in the "Synchronous" status. Superimposed jobs of the following axis are canceled.
 
-The following axis travels to the stop position depending on the leading value distance The dynamics of the following axis during desynchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. The dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+The following axis travels to the stop position depending on the leading value distance The dynamics of the following axis during desynchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. The dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-Changes in the dynamics of the leading axis during desynchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object.
+Changes in the dynamics of the leading axis during desynchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object.
 
 The leading value must not reverse during desynchronization. During desynchronization, several modulo revolutions of both axes are generally possible.
 
@@ -1426,7 +1426,7 @@ If the leading axis stops during desynchronization, high dynamic values can occu
 
 ##### After desynchronization
 
-As soon as the following axis reaches the stop position, the following axis is desynchronized. The following axis is at a standstill. The status is indicated in the Motion Control instruction "MC_GearOut" with the parameter "Done" = TRUE and in the "<TO>.StatusWord.X7 (Standstill)" tag of the technology object.
+As soon as the following axis reaches the stop position, the following axis is desynchronized. The following axis is at a standstill. The status is indicated in the Motion Control instruction "MC_GearOut" with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusWord.X7 (Standstill)" tag of the technology object.
 
 #### Defining direction of desynchronization with "MC_GearOut" (S7-1500T)
 
@@ -1456,18 +1456,18 @@ If a synchronous axis is desynchronized as a following axis in the gearing with 
 
 During synchronization using dynamic parameters, the dynamic limits configured at the technology object apply to the following axis.
 
-- <TO>.DynamicLimits.MaxVelocity
-- <TO>.DynamicLimits.MaxAcceleration
-- <TO>.DynamicLimits.MaxDeceleration
-- <TO>.DynamicLimits.MaxJerk
+- &lt;TO&gt;.DynamicLimits.MaxVelocity
+- &lt;TO&gt;.DynamicLimits.MaxAcceleration
+- &lt;TO&gt;.DynamicLimits.MaxDeceleration
+- &lt;TO&gt;.DynamicLimits.MaxJerk
 
 The SW limit switches also continue to be monitored with the configured dynamic limits of the following axis.
 
 ##### Desynchronization using leading value distance
 
-When desynchronizing via the leading value distance, the dynamic response of the following axis are only limited to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
+When desynchronizing via the leading value distance, the dynamic response of the following axis are only limited to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
 
-If the dynamic limits configured for the following axis are exceeded, this is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
+If the dynamic limits configured for the following axis are exceeded, this is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
 
 If the following axis cannot follow the leading value, this results in a following error, which is monitored by the following error monitoring.
 
@@ -1490,7 +1490,7 @@ The following technology object tags are relevant for gearing:
 | Status indicators |  |  |
 | --- | --- | --- |
 | Tag | Description |  |
-| <TO>.StatusSynchronizedMotion.FunctionState | Indication of which synchronous operation function is active |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionState | Indication of which synchronous operation function is active |  |
 | 0 | No synchronous operation active |  |
 | 1 | Gearing ("[MC_GearIn](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearin-start-gearing-v8-s7-1500-s7-1500t)") |  |
 | 2 | Gearing with specified synchronous positions ("[MC_GearInPos](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinpos-start-gearing-with-specified-synchronous-positions-v8-s7-1500t)") |  |
@@ -1498,38 +1498,38 @@ The following technology object tags are relevant for gearing:
 | 4 | Desynchronization of gearing ("[MC_GearOut](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearout-desynchronize-gearing-v8-s7-1500t)") |  |
 | 5 | Desynchronization of camming ("[MC_CamOut](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_camout-desynchronize-camming-v8-s7-1500t)") |  |
 | 6 | Velocity gearing ("[MC_GearInVelocity](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinvelocity-start-velocity-synchronous-operation-v8-s7-1500t)") |  |
-| <TO>.StatusSynchronizedMotion.WaitingFunctionState | Indication of which synchronous operation function is waiting |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState | Indication of which synchronous operation function is waiting |  |
 | 0 | No synchronous operation waiting |  |
 | 1 | Reserved |  |
 | 2 | Gearing with specified synchronous positions waiting ("MC_GearInPos") |  |
 | 3 | Camming waiting ("MC_CamIn") |  |
 | 4 | Desynchronization of gearing waiting ("MC_GearOut") |  |
 | 5 | Desynchronization of camming waiting ("MC_CamOut") |  |
-| <TO>.StatusSynchronizedMotion.ActualMaster | When a synchronous operation job is started, the number of the technology data block of the currently used leading axis is displayed. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.ActualMaster | When a synchronous operation job is started, the number of the technology data block of the currently used leading axis is displayed. |  |
 | 0 | Synchronous operation inactive |  |
-| <TO>.Position | Setpoints of the axis |  |
-| <TO>.Velocity |  |  |
-| <TO>.Acceleration |  |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Position | Effective leading value including an additive leading value with an "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)" job |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Velocity |  |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Acceleration |  |  |
-| <TO>.StatusSynchronizedMotion.PhaseShift | Current absolute leading value offset with an "[MC_PhasingAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_phasingabsolute-absolute-shift-of-leading-value-on-the-following-axis-v8-s7-1500t)" or "[MC_PhasingRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_phasingrelative-relative-shift-of-leading-value-on-the-following-axis-v8-s7-1500t)" job |  |
-| <TO>.StatusSynchronizedMotion.FunctionLeadingValue.Position | Leading value of the synchronous operation function after a leading value offset with an "MC_PhasingAbsolute" job or "MC_PhasingRelative" job including an additive leading value with a "MC_LeadingValueAdditive" job |  |
-| <TO>.StatusSynchronizedMotion.FunctionFollowingValue.Position | Following value of the synchronous operation function before a following value offset with an "MC_OffsetAbsolute" job or "MC_OffsetRelative" job |  |
-| <TO>.StatusSynchronizedMotion.FunctionFollowingValue.Velocity |  |  |
-| <TO>.StatusSynchronizedMotion.FunctionFollowingValue.Acceleration |  |  |
-| <TO>.StatusSynchronizedMotion.Offset | Current absolute following value offset with an "[MC_OffsetAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_offsetabsolute-absolute-shift-of-following-value-on-the-following-axis-v8-s7-1500t)" or "[MC_OffsetRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_offsetrelative-relative-shift-of-following-value-on-the-following-axis-v8-s7-1500t)" job |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X0 (MaxVelocityExceeded) | Set to the value "TRUE" when the maximum velocity configured for the following axis is exceeded during synchronous operation. |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X1 (MaxAccelerationExceeded) | Set to the value "TRUE" when the maximum acceleration configured for the following axis is exceeded during synchronous operation. |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X2 (MaxDecelerationExceeded) | Set to the value "TRUE" when the maximum deceleration configured for the following axis is exceeded during synchronous operation. |  |
-| <TO>.StatusWord.X21 (Synchronizing) | Set to the value "TRUE" when the synchronous axis synchronizes to a leading value. |  |
-| <TO>.StatusWord.X22 (Synchronous) | Set to the value "TRUE" when the synchronous axis is synchronized and moves synchronously to the leading axis. |  |
-| <TO>.StatusWord2.X1 (DesynchronizingCommand) | Set to the value "TRUE" when the synchronous axis desynchronizes. |  |
-| <TO>.StatusWord.X24 (PhasingCommand) | Is set to the value "TRUE" if a job for leading value offset is active ("MC_PhasingAbsolute", "MC_PhasingRelative"). |  |
-| <TO>.StatusWord2.X3 (PhasingCommandWaiting) | Is set to the value "TRUE" if a job for leading value offset is pending ("MC_PhasingAbsolute", "MC_PhasingRelative"). |  |
-| <TO>.StatusWord2.X4 (OffsetCommand) | Is set to the value "TRUE" if a job for following value offset is active ("MC_OffsetAbsolute", "MC_OffsetRelative"). |  |
-| <TO>.StatusWord2.X5 (OffsetCommandWaiting) | Is set to the value "TRUE" if a job for following value offset is waiting ("MC_OffsetAbsolute", "MC_OffsetRelative"). |  |
-| <TO>.ErrorWord.X14 (SynchronousError) | Error during synchronous operation  The leading axis specified in the motion control instruction was not configured as a possible leading axis. |  |
+| &lt;TO&gt;.Position | Setpoints of the axis |  |
+| &lt;TO&gt;.Velocity |  |  |
+| &lt;TO&gt;.Acceleration |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Position | Effective leading value including an additive leading value with an "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Velocity |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Acceleration |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift | Current absolute leading value offset with an "[MC_PhasingAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_phasingabsolute-absolute-shift-of-leading-value-on-the-following-axis-v8-s7-1500t)" or "[MC_PhasingRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_phasingrelative-relative-shift-of-leading-value-on-the-following-axis-v8-s7-1500t)" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionLeadingValue.Position | Leading value of the synchronous operation function after a leading value offset with an "MC_PhasingAbsolute" job or "MC_PhasingRelative" job including an additive leading value with a "MC_LeadingValueAdditive" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Position | Following value of the synchronous operation function before a following value offset with an "MC_OffsetAbsolute" job or "MC_OffsetRelative" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Velocity |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Acceleration |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.Offset | Current absolute following value offset with an "[MC_OffsetAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_offsetabsolute-absolute-shift-of-following-value-on-the-following-axis-v8-s7-1500t)" or "[MC_OffsetRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_offsetrelative-relative-shift-of-following-value-on-the-following-axis-v8-s7-1500t)" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 (MaxVelocityExceeded) | Set to the value "TRUE" when the maximum velocity configured for the following axis is exceeded during synchronous operation. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X1 (MaxAccelerationExceeded) | Set to the value "TRUE" when the maximum acceleration configured for the following axis is exceeded during synchronous operation. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X2 (MaxDecelerationExceeded) | Set to the value "TRUE" when the maximum deceleration configured for the following axis is exceeded during synchronous operation. |  |
+| &lt;TO&gt;.StatusWord.X21 (Synchronizing) | Set to the value "TRUE" when the synchronous axis synchronizes to a leading value. |  |
+| &lt;TO&gt;.StatusWord.X22 (Synchronous) | Set to the value "TRUE" when the synchronous axis is synchronized and moves synchronously to the leading axis. |  |
+| &lt;TO&gt;.StatusWord2.X1 (DesynchronizingCommand) | Set to the value "TRUE" when the synchronous axis desynchronizes. |  |
+| &lt;TO&gt;.StatusWord.X24 (PhasingCommand) | Is set to the value "TRUE" if a job for leading value offset is active ("MC_PhasingAbsolute", "MC_PhasingRelative"). |  |
+| &lt;TO&gt;.StatusWord2.X3 (PhasingCommandWaiting) | Is set to the value "TRUE" if a job for leading value offset is pending ("MC_PhasingAbsolute", "MC_PhasingRelative"). |  |
+| &lt;TO&gt;.StatusWord2.X4 (OffsetCommand) | Is set to the value "TRUE" if a job for following value offset is active ("MC_OffsetAbsolute", "MC_OffsetRelative"). |  |
+| &lt;TO&gt;.StatusWord2.X5 (OffsetCommandWaiting) | Is set to the value "TRUE" if a job for following value offset is waiting ("MC_OffsetAbsolute", "MC_OffsetRelative"). |  |
+| &lt;TO&gt;.ErrorWord.X14 (SynchronousError) | Error during synchronous operation  The leading axis specified in the motion control instruction was not configured as a possible leading axis. |  |
 
 ## Velocity synchronous operation (S7-1500T)
 
@@ -1683,7 +1683,7 @@ Superimposed motion, e.g. with a "MC_MoveSuperimposed" job, and travel to a fixe
 
 As soon as the "MC_GearInVelocity" job with "PositionControlled" = FALSE becomes effective, the following axis is switched to non-position-controlled operation. The configured position monitorings of the following axis are deactivated.
 
-The position setpoint of the following axis is irrelevant in non-position-controlled operation. The zero position setpoint is displayed in "<TO>.Position" tag of the technology object.
+The position setpoint of the following axis is irrelevant in non-position-controlled operation. The zero position setpoint is displayed in "&lt;TO&gt;.Position" tag of the technology object.
 
 ### Dynamic limits of the following axis in velocity synchronous operation (S7-1500T)
 
@@ -1691,21 +1691,21 @@ If a synchronous axis is operated as a following axis in velocity synchronous op
 
 #### Synchronization
 
-During synchronization, the velocity of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed). The configured velocity limit may be exceeded (<TO>.DynamicLimits.MaxVelocity).
+During synchronization, the velocity of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed). The configured velocity limit may be exceeded (&lt;TO&gt;.DynamicLimits.MaxVelocity).
 
 For acceleration, deceleration, and jerk of the following axis, the dynamic limits configured on the technology object apply:
 
-- <TO>.DynamicLimits.MaxAcceleration
-- <TO>.DynamicLimits.MaxDeceleration
-- <TO>.DynamicLimits.MaxJerk
+- &lt;TO&gt;.DynamicLimits.MaxAcceleration
+- &lt;TO&gt;.DynamicLimits.MaxDeceleration
+- &lt;TO&gt;.DynamicLimits.MaxJerk
 
 The SW limit switches also continue to be monitored with the configured dynamic limits of the following axis.
 
 #### Synchronous travel
 
-During synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
+During synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
 
-If the dynamic limits configured for the following axis are exceeded, this is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
+If the dynamic limits configured for the following axis are exceeded, this is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
 
 #### Synchronous operation override
 
@@ -1740,7 +1740,7 @@ The synchronization duration and distance are dependent on the following paramet
 - Preset gear ratio at the start time of the "MC_GearInVelocity" job
 - Dynamics of the leading axis
 
-The synchronization is indicated in the Motion Control instruction "MC_GearInVelocity" with the parameter "StartSync" = TRUE and in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis.
+The synchronization is indicated in the Motion Control instruction "MC_GearInVelocity" with the parameter "StartSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis.
 
 ![During synchronization](images/165344322571_DV_resource.Stream@PNG-en-US.png)
 
@@ -1763,7 +1763,7 @@ The following value velocity is obtained as follows:
 
 Following value velocity = leading value velocity × gear ratio
 
-The "Synchronous" status is indicated in the Motion Control instruction "[MC_GearInVelocity](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinvelocity-start-velocity-synchronous-operation-v8-s7-1500t)" with the parameter "InSync" = TRUE and in the "<TO>.StatusWord.X22 (Synchronous)" tag of the technology object.
+The "Synchronous" status is indicated in the Motion Control instruction "[MC_GearInVelocity](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinvelocity-start-velocity-synchronous-operation-v8-s7-1500t)" with the parameter "InSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X22 (Synchronous)" tag of the technology object.
 
 If the gear ratio changes when "ContinuousUpdateActive" = TRUE, the "Synchronous" status is retained.
 
@@ -1774,7 +1774,7 @@ The following tags of the technology object are relevant for the velocity synchr
 | Status indicators |  |  |
 | --- | --- | --- |
 | Tag | Description |  |
-| <TO>.StatusSynchronizedMotion.FunctionState | Indication of which synchronous operation function is active |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionState | Indication of which synchronous operation function is active |  |
 | 0 | No synchronous operation active |  |
 | 1 | Gearing ("[MC_GearIn](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearin-start-gearing-v8-s7-1500-s7-1500t)") |  |
 | 2 | Gearing with specified synchronous positions ("[MC_GearInPos](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinpos-start-gearing-with-specified-synchronous-positions-v8-s7-1500t)") |  |
@@ -1782,23 +1782,23 @@ The following tags of the technology object are relevant for the velocity synchr
 | 4 | Desynchronization of gearing ("[MC_GearOut](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearout-desynchronize-gearing-v8-s7-1500t)") |  |
 | 5 | Desynchronization of camming ("[MC_CamOut](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_camout-desynchronize-camming-v8-s7-1500t)") |  |
 | 6 | Velocity synchronous operation ("[MC_GearInVelocity](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinvelocity-start-velocity-synchronous-operation-v8-s7-1500t)") |  |
-| <TO>.StatusSynchronizedMotion.ActualMaster | When a synchronous operation job is started, the number of the technology data block of the currently used leading axis is displayed. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.ActualMaster | When a synchronous operation job is started, the number of the technology data block of the currently used leading axis is displayed. |  |
 | 0 | Synchronous operation inactive |  |
-| <TO>.Position | Setpoints of the axis |  |
-| <TO>.Velocity |  |  |
-| <TO>.Acceleration |  |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Position | Effective leading value including an additive leading value with an "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)" job |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Velocity |  |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Acceleration |  |  |
-| <TO>.StatusSynchronizedMotion.FunctionFollowingValue.Position | Following value of the synchronous operation function |  |
-| <TO>.StatusSynchronizedMotion.FunctionFollowingValue.Velocity |  |  |
-| <TO>.StatusSynchronizedMotion.FunctionFollowingValue.Acceleration |  |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X0 (MaxVelocityExceeded) | Set to the value "TRUE" when the maximum velocity configured for the following axis is exceeded during synchronous operation. |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X1 (MaxAccelerationExceeded) | Set to the value "TRUE" when the maximum acceleration configured for the following axis is exceeded during synchronous operation. |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X2 (MaxDecelerationExceeded) | Set to the value "TRUE" when the maximum deceleration configured for the following axis is exceeded during synchronous operation. |  |
-| <TO>.StatusWord.X21 (Synchronizing) | Set to the value "TRUE" when the synchronous axis synchronizes to a leading value. |  |
-| <TO>.StatusWord.X22 (Synchronous) | Set to the value "TRUE" when the synchronous axis is synchronized and moves synchronously to the leading axis. |  |
-| <TO>.ErrorWord.X14 (SynchronousError) | Error during synchronous operation  The leading axis specified in the Motion Control instruction was not configured as a possible leading axis. |  |
+| &lt;TO&gt;.Position | Setpoints of the axis |  |
+| &lt;TO&gt;.Velocity |  |  |
+| &lt;TO&gt;.Acceleration |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Position | Effective leading value including an additive leading value with an "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Velocity |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Acceleration |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Position | Following value of the synchronous operation function |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Velocity |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Acceleration |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 (MaxVelocityExceeded) | Set to the value "TRUE" when the maximum velocity configured for the following axis is exceeded during synchronous operation. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X1 (MaxAccelerationExceeded) | Set to the value "TRUE" when the maximum acceleration configured for the following axis is exceeded during synchronous operation. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X2 (MaxDecelerationExceeded) | Set to the value "TRUE" when the maximum deceleration configured for the following axis is exceeded during synchronous operation. |  |
+| &lt;TO&gt;.StatusWord.X21 (Synchronizing) | Set to the value "TRUE" when the synchronous axis synchronizes to a leading value. |  |
+| &lt;TO&gt;.StatusWord.X22 (Synchronous) | Set to the value "TRUE" when the synchronous axis is synchronized and moves synchronously to the leading axis. |  |
+| &lt;TO&gt;.ErrorWord.X14 (SynchronousError) | Error during synchronous operation  The leading axis specified in the Motion Control instruction was not configured as a possible leading axis. |  |
 
 ## Camming (S7-1500T)
 
@@ -1973,12 +1973,12 @@ The toolbar at the top of the graphical editor provides you with icons for the f
 | --- | --- | --- |
 | ![Toolbar](images/165344866187_DV_resource.Stream@PNG-de-DE.png) | Importing cam from file | See section "[Importing/exporting cam](#importingexporting-cam-s7-1500t)" |
 | ![Toolbar](images/165344870155_DV_resource.Stream@PNG-de-DE.png) | Exporting cam to file | See section "[Importing/exporting cam](#importingexporting-cam-s7-1500t)" |
-| ![Toolbar](images/165344566027_DV_resource.Stream@PNG-de-DE.png) | Edit elements/Move view | - Selecting and moving of individual elements - Moving the view using the drag-and-drop feature  To switch from any tool to the "Edit elements/Move view" tool, press the <Esc> key. |
+| ![Toolbar](images/165344566027_DV_resource.Stream@PNG-de-DE.png) | Edit elements/Move view | - Selecting and moving of individual elements - Moving the view using the drag-and-drop feature  To switch from any tool to the "Edit elements/Move view" tool, press the &lt;Esc&gt; key. |
 | ![Toolbar](images/165344684811_DV_resource.Stream@PNG-de-DE.png) | Activate zoom selection | Zoom into selected area |
-| ![Toolbar](images/165344688395_DV_resource.Stream@PNG-de-DE.png) | Activate vertical zoom | Vertical zoom into selected area without horizontal scaling  Alternative: <Ctrl> +drag to ordinate keeping mouse button pressed |
-| ![Toolbar](images/165344691979_DV_resource.Stream@PNG-de-DE.png) | Activate horizontal zoom | Horizontal zoom into selected area without vertical scaling  Alternative: <Ctrl> +drag to abscissa keeping mouse button pressed |
-| ![Toolbar](images/165344699147_DV_resource.Stream@PNG-de-DE.png) | Zoom in | Enlargement of the display  Alternative: <Ctrl> + mouse wheel up in curve diagram |
-| ![Toolbar](images/165344703115_DV_resource.Stream@PNG-de-DE.png) | Zoom out | Reduction of the display  Alternative: <Ctrl> + mouse wheel down in curve diagram |
+| ![Toolbar](images/165344688395_DV_resource.Stream@PNG-de-DE.png) | Activate vertical zoom | Vertical zoom into selected area without horizontal scaling  Alternative: &lt;Ctrl&gt; +drag to ordinate keeping mouse button pressed |
+| ![Toolbar](images/165344691979_DV_resource.Stream@PNG-de-DE.png) | Activate horizontal zoom | Horizontal zoom into selected area without vertical scaling  Alternative: &lt;Ctrl&gt; +drag to abscissa keeping mouse button pressed |
+| ![Toolbar](images/165344699147_DV_resource.Stream@PNG-de-DE.png) | Zoom in | Enlargement of the display  Alternative: &lt;Ctrl&gt; + mouse wheel up in curve diagram |
+| ![Toolbar](images/165344703115_DV_resource.Stream@PNG-de-DE.png) | Zoom out | Reduction of the display  Alternative: &lt;Ctrl&gt; + mouse wheel down in curve diagram |
 | ![Toolbar](images/165344695563_DV_resource.Stream@PNG-de-DE.png) | Show all | Display of entire definition and value range |
 | ![Toolbar](images/165345196299_DV_resource.Stream@PNG-de-DE.png) | Zoom into curve | Zoom to the following value range of the curve that you selected in the legend of the chart |
 | ![Toolbar](images/165345188363_DV_resource.Stream@PNG-de-DE.png) | Activate snap grid | Alignment of inputs and element end points to the configurable snap grid and to other element end points |
@@ -2000,11 +2000,11 @@ The toolbar at the top of the graphical editor provides you with icons for the f
 
 In the curve diagram, you enter the elements of the curve and adjust the curve by selecting and moving elements.
 
-Chart areas outside of the leading value/following value range configured in "[Profile > General](#configuration-of-profile---general-s7-1500t)" are grayed out. Elements outside the leading value/following value range are displayed with a warning ("Element is outside the definition range").
+Chart areas outside of the leading value/following value range configured in "[Profile &gt; General](#configuration-of-profile---general-s7-1500t)" are grayed out. Elements outside the leading value/following value range are displayed with a warning ("Element is outside the definition range").
 
 You can display various curves (position, velocity, acceleration and jerk) one above the other in up to four charts by configuring the graphical view accordingly. When multiple charts are displayed, you can adapt the graphs to match the separator lines.
 
-The view can be zoomed in the manual mode by pressing <Ctrl > + Mouse wheel and <Ctrl > + while pressing the mouse button on the abscissa/ordinate.
+The view can be zoomed in the manual mode by pressing &lt;Ctrl &gt; + Mouse wheel and &lt;Ctrl &gt; + while pressing the mouse button on the abscissa/ordinate.
 
 The editor shows messages for checking the entered curve via warning triangles ![Curve diagram](images/165345192331_DV_resource.Stream@PNG-de-DE.png). The tooltip of the waring triangle shows the message text. Configure the checking of the curve in the "[Check](#configuration-of-profile---check-s7-1500t)" configuration window.
 
@@ -2067,7 +2067,7 @@ The following properties are displayed in the corresponding column for each elem
 | Acceleration<sup>1)</sup> | Calculated effective acceleration at end point of the element |  |
 | Jerk<sup>1)</sup> | Calculated effective jerk at end point of the element |  |
 | Comment |  | Optional comment for element. |
-| <sup>1)</sup> Displayed according to the configuration in "Properties (Inspector window) > Graphical view > Charts and curves". |  |  |
+| <sup>1)</sup> Displayed according to the configuration in "Properties (Inspector window) &gt; Graphical view &gt; Charts and curves". |  |  |
 
 ##### Shortcut menu in the tabular editor (S7-1500T)
 
@@ -2101,7 +2101,7 @@ The basic operation can include the follow tasks:
 
 To adjust the leading and following value range of the cam profile as well as the graphical view, follow these steps:
 
-1. In the properties (Inspector window), open the "[Profile > General](#configuration-of-profile---general-s7-1500t)" configuration window.
+1. In the properties (Inspector window), open the "[Profile &gt; General](#configuration-of-profile---general-s7-1500t)" configuration window.
 2. Configure the leading value range and the following value range of the curve definition.
 
    The graphical view is automatically adapted to the inputs.
@@ -2119,20 +2119,20 @@ To create and adapt the curve, follow these steps:
 1. Use the graphical editor and/or the tabular editor to add the elements of the cam:
 
    - On the toolbar, click the icon for inserting the corresponding element. Place the element at the required position in the graphical editor.
-   - Use <Add> to insert the corresponding elements in the "Element type" column of the tabular editor. Adjust the position of the elements using the start and end values.
+   - Use &lt;Add&gt; to insert the corresponding elements in the "Element type" column of the tabular editor. Adjust the position of the elements using the start and end values.
 
    Transitions between the elements are added automatically.
 2. To edit an element, select it in the graphical or tabular editor.
 
-   The element is highlighted in the graphical and in the tabular editor. The "Element > Parameter" configuration window is displayed in the properties (Inspector window), or in case of a transition, "Element > Characteristic".
+   The element is highlighted in the graphical and in the tabular editor. The "Element &gt; Parameter" configuration window is displayed in the properties (Inspector window), or in case of a transition, "Element &gt; Characteristic".
 3. The elements can be adjusted as follows:
 
    - Move the element or the drag handles of the element in the graphical editor.
    - Adjust the start and end values in the tabular editor.
-   - Configure additional element-specific parameters in the properties (Inspector window) in the "Element > Parameter" configuration window.
+   - Configure additional element-specific parameters in the properties (Inspector window) in the "Element &gt; Parameter" configuration window.
    - Set the interpolation of the transitions with the properties (Inspector window).
 
-The number of elements used is displayed in the properties (Inspector window) in the "[Profile > Statistics](#show-elements-used-s7-1500t)" properties window.
+The number of elements used is displayed in the properties (Inspector window) in the "[Profile &gt; Statistics](#show-elements-used-s7-1500t)" properties window.
 
 ---
 
@@ -2174,8 +2174,8 @@ Configure the display range of the graphical editor in the "General" configurati
 
 The inputs of the leading value range and following value range only effect the display in the graphical editor. The cam is interpolated in the definition range between the following values:
 
-- First defined interpolation point/start of the first segment of the cam (<TO>.StatusCam.StartLeadingValue)
-- Last defined interpolation point/end of the last segment of the cam (<TO>.StatusCam.EndLeadingValue)
+- First defined interpolation point/start of the first segment of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue)
+- Last defined interpolation point/end of the last segment of the cam (&lt;TO&gt;.StatusCam.EndLeadingValue)
 
 ###### Leading value display range
 
@@ -2355,7 +2355,7 @@ To move a point in the graphical editor, follow these steps:
 
 ###### Adapting parameters
 
-The parameters of the point can be adjusted in the tabular editor as well as in the inspector window under "Properties > Element > Parameter".
+The parameters of the point can be adjusted in the tabular editor as well as in the inspector window under "Properties &gt; Element &gt; Parameter".
 
 Configure the parameters of the selected point in this area:
 
@@ -2410,7 +2410,7 @@ To adapt a point group in the graphical editor, proceed as follows:
 
 ###### Adapting parameters
 
-You can adjust the parameters of the point group in the graphical editor, in the tabular editor as well as in the inspector window under "Properties > Element > Parameter".
+You can adjust the parameters of the point group in the graphical editor, in the tabular editor as well as in the inspector window under "Properties &gt; Element &gt; Parameter".
 
 Configure the parameters of the selected point group in this area:
 
@@ -2425,7 +2425,7 @@ Configure the parameters of the selected point group in this area:
 | Minimum following value |  | In this field, configure the minimum following value for the point group in the following value range. |  |
 | Maximum following value |  | In this field, configure the maximum following value of the point group in the following value range (value range). |  |
 | ![Adapting parameters](images/165345284235_DV_resource.Stream@PNG-de-DE.png) |  | Use this "Insert interpolation point" icon to add an interpolation point to the point group. |  |
-| Interpolation points |  | This table shows the configured interpolation points sorted by increasing leading value.   Add interpolation points using the ![Adapting parameters](images/165345284235_DV_resource.Stream@PNG-de-DE.png) icon. Delete interpolation points by marking a row and pressing the <Delete> key. If you delete all points except one, the element type is changed from "Point group" to "Point". |  |
+| Interpolation points |  | This table shows the configured interpolation points sorted by increasing leading value.   Add interpolation points using the ![Adapting parameters](images/165345284235_DV_resource.Stream@PNG-de-DE.png) icon. Delete interpolation points by marking a row and pressing the &lt;Delete&gt; key. If you delete all points except one, the element type is changed from "Point group" to "Point". |  |
 |  | Leading value | In this field, configure the leading value of the interpolation point (value in the definition area). |  |
 | Following value | In this field, configure the following value of the interpolation point (value in the value range). |  |  |
 | Interpolation |  |  |  |
@@ -2462,7 +2462,7 @@ To move a line in the graphical editor, follow these steps:
 
 ###### Adapting parameters
 
-The parameters of the line can be adjusted in the graphical editor, in the tabular editor as well as in the inspector window under "Properties > Element > Parameter".
+The parameters of the line can be adjusted in the graphical editor, in the tabular editor as well as in the inspector window under "Properties &gt; Element &gt; Parameter".
 
 Configure the parameters of the selected line in this area:
 
@@ -2509,7 +2509,7 @@ To adjust a sine in the graphical editor, follow these steps:
 
 ###### Adapting parameters
 
-The parameters of the sine can be adjusted in the graphical editor, in the tabular editor as well as in the inspector window under "Properties > Element > Parameter".
+The parameters of the sine can be adjusted in the graphical editor, in the tabular editor as well as in the inspector window under "Properties &gt; Element &gt; Parameter".
 
 Configure the parameters of the selected sine element in this area:
 
@@ -2561,7 +2561,7 @@ To adjust a polynomial in the graphical editor, follow these steps:
 
 ###### Adapting parameters
 
-You can adjust the parameters of the polynomial in the graphical editor, in the tabular editor as well as in the inspector window under "Properties > Element > Parameter".
+You can adjust the parameters of the polynomial in the graphical editor, in the tabular editor as well as in the inspector window under "Properties &gt; Element &gt; Parameter".
 
 Configure the parameters of the selected polynomial in this area:
 
@@ -2625,7 +2625,7 @@ To adjust an inverse sine in the graphical editor, follow these steps:
 
 ###### Adapting parameters
 
-The parameters of the inverse sine can be adjusted in the graphical editor, in the tabular editor as well as in the inspector window under "Properties > Element > Parameter".
+The parameters of the inverse sine can be adjusted in the graphical editor, in the tabular editor as well as in the inspector window under "Properties &gt; Element &gt; Parameter".
 
 Configure the parameters of the selected inverse sine in this area:
 
@@ -2717,7 +2717,7 @@ To scale an element, follow these steps:
 To delete an element in the graphical editor, follow these steps:
 
 1. Select the element that is to be deleted.
-2. Press the <Del> key.
+2. Press the &lt;Del&gt; key.
 
    The element is deleted. The graphical editor and the view of the properties (Inspector window) are updated. A transition to any element present is also deleted.
 
@@ -2758,14 +2758,14 @@ The following table shows the use of points and segments per element:
 | --- | --- | --- | --- | --- | --- | --- |
 | Point |  |  |  |  | 1 | 0 |
 | Point at a transition with VDI-based optimization |  |  |  |  | 0 | 0 |
-| Point group with point approximation mapping method |  |  |  |  | Number of interpolation points configured.  ("Properties (Inspector window) > Element > Parameter > Approximation > Number of interpolation points")  Default setting: 32 | 0 |
+| Point group with point approximation mapping method |  |  |  |  | Number of interpolation points configured.  ("Properties (Inspector window) &gt; Element &gt; Parameter &gt; Approximation &gt; Number of interpolation points")  Default setting: 32 | 0 |
 | Point group with segment approximation mapping method |  |  |  |  | 0 | Number of interpolation points configured - 1 |
 | Line |  |  |  |  | 0 | 1 |
 | Sine |  |  |  |  | 0 | 1 |
 | Polynomial |  |  |  |  |  |  |
-|  | < of the 7th degree |  |  |  | 0 | 1 |
+|  | &lt; of the 7th degree |  |  |  | 0 | 1 |
 | of the 7th degree |  |  |  | 0 | 2 |  |
-| Inverse sine |  |  |  |  | Number of interpolation points configured.  ("Properties (Inspector window) > Element > Parameter > Approximation > Number of interpolation points")  Default setting: 32 | 0 |
+| Inverse sine |  |  |  |  | Number of interpolation points configured.  ("Properties (Inspector window) &gt; Element &gt; Parameter &gt; Approximation &gt; Number of interpolation points")  Default setting: 32 | 0 |
 | Inverse sine to the right of a transition with VDI-based optimization |  |  |  |  | Number of interpolation points configured - 1 | 0 |
 | Transition with system interpolation |  |  |  |  | 0 | 0 |
 | Transition with VDI-based optimization |  |  |  |  |  |  |
@@ -2789,7 +2789,7 @@ The following table shows the use of points and segments per element:
 | Dwell-in-constant velocity | 0 | 4 |  |  |  |  |
 | Sine line combination |  |  | 0 | 3 |  |  |
 | Harmonic combination |  |  | 0 | 3 |  |  |
-| Double-harmonic transition |  |  | Number of interpolation points configured.  ("Properties (Inspector window) > Element > Parameter > Approximation > Number of interpolation points")  Default setting: 32 | 0 |  |  |
+| Double-harmonic transition |  |  | Number of interpolation points configured.  ("Properties (Inspector window) &gt; Element &gt; Parameter &gt; Approximation &gt; Number of interpolation points")  Default setting: 32 | 0 |  |  |
 | Quadratic parabola |  |  | 0 | 2 |  |  |
 | Lambda = turning point of the curve |  |  |  |  |  |  |
 
@@ -2827,7 +2827,7 @@ After you have configured the synchronous operation function of the cam in the c
 To transfer the synchronous operation function of the cam to the technology object data block, follow the steps below:
 
 1. Select the can technology object in the project tree.
-2. Select the "Compile > Software (only changes)" entry in the shortcut menu.
+2. Select the "Compile &gt; Software (only changes)" entry in the shortcut menu.
 
 ##### Result
 
@@ -2938,13 +2938,13 @@ Then, you can transfer the [synchronous operation function of the cam defined on
 
 The following [tags of the technology object data block](#tags-of-the-cam-technology-object-s7-1500t) of the cam are relevant for defining the synchronous operation function of a cam manually in runtime:
 
-- <TO>.Point[i]
-- <TO>.ValidPoint[i]
-- <TO>.Segment[i]
-- <TO>.ValidSegment[i]
-- <TO>.InterpolationSettings
+- &lt;TO&gt;.Point[i]
+- &lt;TO&gt;.ValidPoint[i]
+- &lt;TO&gt;.Segment[i]
+- &lt;TO&gt;.ValidSegment[i]
+- &lt;TO&gt;.InterpolationSettings
 
-You can adapt the tags in runtime via the user program. You can use the "<TO>.ValidPoint[i]" and "<TO>.ValidSegment[i]" tags to determine which cam elements included for the interpolation. If the value is "TRUE", the element "<TO>.Point[i]" or "<TO>.Segment[i]" with the corresponding index "i" is included in the interpolation. You can determine the [interpolation type](#interpolate-cam-with-mc_interpolatecam-s7-1500t) using the "<TO>.InterpolationSettings" tag.
+You can adapt the tags in runtime via the user program. You can use the "&lt;TO&gt;.ValidPoint[i]" and "&lt;TO&gt;.ValidSegment[i]" tags to determine which cam elements included for the interpolation. If the value is "TRUE", the element "&lt;TO&gt;.Point[i]" or "&lt;TO&gt;.Segment[i]" with the corresponding index "i" is included in the interpolation. You can determine the [interpolation type](#interpolate-cam-with-mc_interpolatecam-s7-1500t) using the "&lt;TO&gt;.InterpolationSettings" tag.
 
 ##### Requirement
 
@@ -3014,9 +3014,9 @@ Use copy mode "Mode" = 1 to specify that all defined elements already present 
 
 Copying of cam elements is possible during active cam synchronization.
 
-An active copy operation is indicated by the "MC_CopyCamData.Busy" = TRUE parameter, in the "<TO>.StatusWord.X7 (CopyCamDataActive)" tag as well as in the status and error bits of the diagnostics of the technology object. Only one active "MC_CopyCamData" job is possible at a given time on a cam.
+An active copy operation is indicated by the "MC_CopyCamData.Busy" = TRUE parameter, in the "&lt;TO&gt;.StatusWord.X7 (CopyCamDataActive)" tag as well as in the status and error bits of the diagnostics of the technology object. Only one active "MC_CopyCamData" job is possible at a given time on a cam.
 
-As soon as the cam elements have been copied and set to valid, the copy operation is complete. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE. The "<TO>.StatusWord.X4 (CamDataChanged)" tag of the technology object is set to "TRUE".
+As soon as the cam elements have been copied and set to valid, the copy operation is complete. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE. The "&lt;TO&gt;.StatusWord.X4 (CamDataChanged)" tag of the technology object is set to "TRUE".
 
 Before you can use the cam with the inserted elements, the cam must be interpolated. To do this, start an "MC_InterpolateCam" job.
 
@@ -3080,10 +3080,10 @@ You specify the interpolation type in the configuration of the technology object
 
 - [System interpolation](#system-interpolation-s7-1500t):
 
-  The system interpolation is the default for interpolation of the transitions. You configure the system interpolation for all transitions in the properties (Inspector window) in the "Profile > System interpolation" configuration window.
+  The system interpolation is the default for interpolation of the transitions. You configure the system interpolation for all transitions in the properties (Inspector window) in the "Profile &gt; System interpolation" configuration window.
 - [Interpolation according to VDI Guideline 2143](#interpolation-according-to-vdi-guideline-2143-s7-1500t):
 
-  You can adapt each transition separately according to the VDI Guideline 2143. The settings in the properties (Inspector window) in the "Profile > Default optimization settings" configuration window are hereby taken into consideration.
+  You can adapt each transition separately according to the VDI Guideline 2143. The settings in the properties (Inspector window) in the "Profile &gt; Default optimization settings" configuration window are hereby taken into consideration.
 
 ##### "Characteristic" configuration window
 
@@ -3094,8 +3094,8 @@ In the "Characteristic" configuration window, you configure the parameters for o
 | Interpolation settings of the transition |  |  |  |
 |  | Optimization method |  | Select the optimization method in the drop-down list:  - [System interpolation](#system-interpolation-s7-1500t)    The CPU defines the optimization parameters automatically according to the settings of the system interpolation. - [VDI-based optimization](#interpolation-according-to-vdi-guideline-2143-s7-1500t)    Adjust the optimization manually. The inputs are applied automatically according to the VDI Guideline 2143. |
 | Motion task |  | The transition type is determined from the properties of the adjacent elements of the transition and displayed in this field. |  |
-| Continuity at start/end |  | In the drop-down lists, select which parameter is continuous in the boundary points and is to be included for optimization:  - Default optimization setting (setting under "Profile > Default optimization settings") - Position - Velocity (bumpless) - Acceleration (jerkless) - Jerk (jerk continuity permitted on one side only) |  |
-| Optimization target |  | In the drop-down list, select the optimization target:  - Default optimization setting (setting under "Profile > Default optimization settings") - Not specified - Velocity (Cv) - Acceleration (Ca) - Jerk (Cj) - Dynamic torque (Cmdyn) |  |
+| Continuity at start/end |  | In the drop-down lists, select which parameter is continuous in the boundary points and is to be included for optimization:  - Default optimization setting (setting under "Profile &gt; Default optimization settings") - Position - Velocity (bumpless) - Acceleration (jerkless) - Jerk (jerk continuity permitted on one side only) |  |
+| Optimization target |  | In the drop-down list, select the optimization target:  - Default optimization setting (setting under "Profile &gt; Default optimization settings") - Not specified - Velocity (Cv) - Acceleration (Ca) - Jerk (Cj) - Dynamic torque (Cmdyn) |  |
 | Selection of motion rule |  |  |  |
 |  | Motion rule |  | In the drop-down list, select the motion rule according to which optimization is to occur:  - Line - Quadratic parabola - Sine - Polynomial - Inclined sine - Modified acceleration trapezoid - Modified sine - Harmonic combination - Double-harmonic transition - Sine line combination   The selection is automatically limited to the motion rules that can be applied according to the motion task and the selected boundary conditions. Additional parameters are displayed depending on the selected motion rule.  If you have changed the motion task in such a way that the motion rule can no longer be applied, a notice is displayed. In this case, you need to select a motion rule that can be applied. |
 | Parameter used |  | In the drop-down list, select the parameters to be included in the optimization:  - Lambda - Maximum acceleration (Ca) - Maximum deceleration (Ca*)   The selection is automatically limited to the parameters that can be applied according to the motion rule. |  |
@@ -3212,7 +3212,7 @@ The following graphic shows the possible combinations of motion jobs:
 To adapt the optimization of a transition according to the VDI Guideline 2143, follow these steps:
 
 1. Select the transition in the graphical or tabular editor.
-2. In the properties (Inspector window), open the "[Element > Characteristic](#configuring-transitions-s7-1500t)" configuration window.
+2. In the properties (Inspector window), open the "[Element &gt; Characteristic](#configuring-transitions-s7-1500t)" configuration window.
 3. Select the optimization method "VDI-based optimization" in the "Optimization method" drop-down list.
 4. If necessary, change the default settings.
 
@@ -3222,7 +3222,7 @@ You interpolate the cam with the Motion Control instruction "[MC_InterpolateCam]
 
 ##### "Default optimization settings" configuration window
 
-You configure the default values for optimization of transitions according to VDI Guideline 2143 in the "Profile > Default optimization settings" configuration window in the properties (Inspector window). The default values are used when the "VDI-based optimization" optimization method is selected for a [transition](#configuring-transitions-s7-1500t) and when the setting "Default optimization setting" is selected for the continuity or the optimization target.
+You configure the default values for optimization of transitions according to VDI Guideline 2143 in the "Profile &gt; Default optimization settings" configuration window in the properties (Inspector window). The default values are used when the "VDI-based optimization" optimization method is selected for a [transition](#configuring-transitions-s7-1500t) and when the setting "Default optimization setting" is selected for the continuity or the optimization target.
 
 Configure the default settings for continuity requirement and optimization target in this area:
 
@@ -3239,14 +3239,14 @@ To use a cam in the user program, you must interpolate the cam after downloading
 >
 > **Improving system performance**
 >
-> To improve the system performance for interpolating the cam technology object, select the "Improve system performance" check box in the properties of MC_Interpolator under "General > Multi-core processor".
+> To improve the system performance for interpolating the cam technology object, select the "Improve system performance" check box in the properties of MC_Interpolator under "General &gt; Multi-core processor".
 
 After you have configured the [interpolation type](#configuring-transitions-s7-1500t), you interpolate a cam in the user program with the Motion Control instruction "[MC_InterpolateCam](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_interpolatecam-interpolate-cam-v8-s7-1500t)". After starting the "MC_InterpolateCam" job, the cam is interpolated in the definition range from the minimum to the maximum value in the leading value range:
 
-- The minimum value in the leading value range is the first defined interpolation point or start of the first segment of the cam (<TO>.StatusCam.StartLeadingValue).
-- The maximum value in the leading value range is the last defined interpolation point or end of the last segment of the cam (<TO>.StatusCam.EndLeadingValue).
+- The minimum value in the leading value range is the first defined interpolation point or start of the first segment of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue).
+- The maximum value in the leading value range is the last defined interpolation point or end of the last segment of the cam (&lt;TO&gt;.StatusCam.EndLeadingValue).
 
-As soon as the cam has been interpolated, this is indicated on Motion Control instruction "MC_InterpolateCam" with parameter "Done" = TRUE and in tag "<TO>.StatusWord.X5 (Interpolated)" = 1 of the technology object. After interpolation, an explicit value in the value range is assigned to each value in the definition range.
+As soon as the cam has been interpolated, this is indicated on Motion Control instruction "MC_InterpolateCam" with parameter "Done" = TRUE and in tag "&lt;TO&gt;.StatusWord.X5 (Interpolated)" = 1 of the technology object. After interpolation, an explicit value in the value range is assigned to each value in the definition range.
 
 ### Scaling and shifting cam (S7-1500T)
 
@@ -3282,20 +3282,20 @@ The figure below shows the basic effect of scaling the cam with the parameters "
 
 The following figure shows the basic effect of the leading value and following value offset as well as the position of the cam with the following parameter values:
 
-- "MasterOffset" > 0
-- "SlaveOffset" > 0
-- Start position of the cam > 0
-- "MasterSyncPosition" > 0
+- "MasterOffset" &gt; 0
+- "SlaveOffset" &gt; 0
+- Start position of the cam &gt; 0
+- "MasterSyncPosition" &gt; 0
 
 ![Shifting of the cam](images/165345658763_DV_resource.Stream@PNG-en-US.png)
 
 | Symbol | Meaning |
 | --- | --- |
-| ① | Start position of the cam  First defined interpolation point/start of the first segment of the cam (<TO>.StatusCam.StartLeadingValue) |
+| ① | Start position of the cam  First defined interpolation point/start of the first segment of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue) |
 | ② | Leading value distance with synchronization in advance ("MasterStartDistance") |
 | ③ | Synchronous position of the leading axis relative to the starting position of the cam ("MasterSyncPosition") |
 | ④ | Leading value distance with subsequent synchronization ("MasterStartDistance") |
-| ⑤ | End position of the cam   Last defined interpolation point/end of the last segment of the cam (<TO>.StatusCam.EndLeadingValue) |
+| ⑤ | End position of the cam   Last defined interpolation point/end of the last segment of the cam (&lt;TO&gt;.StatusCam.EndLeadingValue) |
 
 ### Defining application mode of the cam (S7-1500T)
 
@@ -3305,7 +3305,7 @@ For [camming](#camming-with-mc_camin-s7-1500t), you can define the application m
 - Cyclical
 - Cyclic appending
 
-A cam is defined between the start position (<TO>.StatusCam.StartLeadingValue) and end position (<TO>.StatusCam.EndLeadingValue) after the [interpolation](#interpolating-a-cam-s7-1500t).
+A cam is defined between the start position (&lt;TO&gt;.StatusCam.StartLeadingValue) and end position (&lt;TO&gt;.StatusCam.EndLeadingValue) after the [interpolation](#interpolating-a-cam-s7-1500t).
 
 #### Parameter inputs
 
@@ -3329,7 +3329,7 @@ With the "ApplicationMode" = 1 parameter, you define the application mode of t
 
 The cam is run cyclically. When the cam is run through in the positive direction, the cam is repeated from the start position when the end position of the cam is reached. When the cam is run through in the negative direction, the cam is repeated from the end position when the start position of the cam is reached.
 
-To prevent step changes in the dynamic values, the start and end positions of the cam must be match, and the velocity at the start and end position must be identical. For a velocity continuous transition, use the setting "First derivative continuous (velocity continuous)" under "Properties (Inspector window) > System interpolation > Behavior at boundary" (<TO>.InterpolationSettings.BoundaryConditions = 1) for interpolation of the cam.
+To prevent step changes in the dynamic values, the start and end positions of the cam must be match, and the velocity at the start and end position must be identical. For a velocity continuous transition, use the setting "First derivative continuous (velocity continuous)" under "Properties (Inspector window) &gt; System interpolation &gt; Behavior at boundary" (&lt;TO&gt;.InterpolationSettings.BoundaryConditions = 1) for interpolation of the cam.
 
 ![Cyclical](images/165346157067_DV_resource.Stream@PNG-en-US.png)
 
@@ -3339,7 +3339,7 @@ With the "ApplicationMode" = 2 parameter, you define the application mode of t
 
 The cam is run cyclically. When the cam is run through in the positive direction, the end position of the cam is used as the start position for the next run. When the cam is run through in the negative direction, the start position of the cam is used as the start position for the next run. The position difference between the start and end position on the following value side is added up.
 
-To prevent step changes in the dynamic values, the velocity at the start and end position must be identical. For a velocity continuous transition, use the setting "First derivative continuous (velocity continuous)" under "Properties (Inspector window) > System interpolation > Behavior at boundary" (<TO>.InterpolationSettings.BoundaryConditions = 1) for interpolation of the cam.
+To prevent step changes in the dynamic values, the velocity at the start and end position must be identical. For a velocity continuous transition, use the setting "First derivative continuous (velocity continuous)" under "Properties (Inspector window) &gt; System interpolation &gt; Behavior at boundary" (&lt;TO&gt;.InterpolationSettings.BoundaryConditions = 1) for interpolation of the cam.
 
 ![Cyclic appending](images/165346163083_DV_resource.Stream@PNG-en-US.png)
 
@@ -3355,18 +3355,18 @@ If synchronous operation is not active, the configured dynamic limits of the fol
 
 During synchronization and desynchronization using dynamic parameters with "[MC_CamOut](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_camout-desynchronize-camming-v8-s7-1500t)", the dynamic limits configured at the technology object apply to the following axis.
 
-- <TO>.DynamicLimits.MaxVelocity
-- <TO>.DynamicLimits.MaxAcceleration
-- <TO>.DynamicLimits.MaxDeceleration
-- <TO>.DynamicLimits.MaxJerk
+- &lt;TO&gt;.DynamicLimits.MaxVelocity
+- &lt;TO&gt;.DynamicLimits.MaxAcceleration
+- &lt;TO&gt;.DynamicLimits.MaxDeceleration
+- &lt;TO&gt;.DynamicLimits.MaxJerk
 
 The SW limit switches also continue to be monitored with the configured dynamic limits of the following axis.
 
 #### Synchronization/desynchronization using leading value distance/synchronous travel
 
-During synchronization and desynchronization using leading value distance with "[MC_CamOut](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_camout-desynchronize-camming-v8-s7-1500t)" and during synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
+During synchronization and desynchronization using leading value distance with "[MC_CamOut](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_camout-desynchronize-camming-v8-s7-1500t)" and during synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
 
-If the dynamic limits configured for the following axis are exceeded, this is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
+If the dynamic limits configured for the following axis are exceeded, this is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
 
 If the following axis cannot follow the leading value, this results in a following error, which is monitored by the following error monitoring.
 
@@ -3475,17 +3475,17 @@ The start position of the leading axis is derived in the following way:
 
 Start position = Synchronous position of leading axis - Synchronization length
 
-The status "Waiting" is displayed at the following axis until the leading value has reached the start position (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 3).
+The status "Waiting" is displayed at the following axis until the leading value has reached the start position (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 3).
 
 If the leading axis is already in its synchronous position when the "MC_CamIn" job is started, the leading axis must first cross the start position to start synchronization. If the leading and following axes are already at their synchronous positions when the "MC_CamIn" job is started, synchronous operation immediately has "Synchronous" status.
 
 ##### During synchronization
 
-The following axis begins to synchronize as soon as the leading value has reached the start position. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
+The following axis begins to synchronize as soon as the leading value has reached the start position. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
 
 The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function.
 
-If the programmed dynamic response of the synchronous operation function is greater than the maximum dynamic response of the following axis, the corresponding technology alarms 501, 502, or 503 are output at the following axis. The synchronization process is only completed when the resulting final velocity is lower than the maximum velocity of the following axis (<TO>.DynamicLimits.MaxVelocity).
+If the programmed dynamic response of the synchronous operation function is greater than the maximum dynamic response of the following axis, the corresponding technology alarms 501, 502, or 503 are output at the following axis. The synchronization process is only completed when the resulting final velocity is lower than the maximum velocity of the following axis (&lt;TO&gt;.DynamicLimits.MaxVelocity).
 
 ##### After synchronization
 
@@ -3511,7 +3511,7 @@ The start position of the leading axis is derived in the following way:
 
 Start position = Synchronous position of leading axis - Synchronization length
 
-The leading axis must be at least the leading value distance away from the synchronous position. The status "Waiting" is displayed at the following axis until the leading value has reached the start position (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 3).
+The leading axis must be at least the leading value distance away from the synchronous position. The status "Waiting" is displayed at the following axis until the leading value has reached the start position (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 3).
 
 > **Note**
 >
@@ -3523,7 +3523,7 @@ If the leading and following axes are already at their synchronous positions whe
 
 ##### During synchronization
 
-The following axis begins to synchronize as soon as the leading value has reached the start position. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
+The following axis begins to synchronize as soon as the leading value has reached the start position. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
 
 ![During synchronization](images/165346638347_DV_resource.Stream@PNG-en-US.png)
 
@@ -3532,7 +3532,7 @@ The following axis begins to synchronize as soon as the leading value has reache
 | ① | Time when synchronization starts |
 | ② | Time when synchronization is complete |
 
-The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
 ##### After synchronization
 
@@ -3555,7 +3555,7 @@ You define the behavior of the following axis for synchronization with the follo
 
 After the start of the "MC_CamIn" job, a motion profile is calculated for the following axis depending on the specified leading value distance. The calculation results in the required dynamics and the offset of the cam in the leading value range.
 
-If the leading axis is at a standstill when the job starts, the status "Waiting" is displayed on the following axis (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 3) until the leading axis is set in motion.
+If the leading axis is at a standstill when the job starts, the status "Waiting" is displayed on the following axis (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 3) until the leading axis is set in motion.
 
 > **Note**
 >
@@ -3567,7 +3567,7 @@ If the leading and following axes are already at their synchronous positions whe
 
 ##### During synchronization
 
-The following axis begins to synchronize as soon as the "MC_CamIn" job takes effect and the leading axis is moving. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
+The following axis begins to synchronize as soon as the "MC_CamIn" job takes effect and the leading axis is moving. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
 
 ![During synchronization](images/165346638347_DV_resource.Stream@PNG-en-US.png)
 
@@ -3576,11 +3576,11 @@ The following axis begins to synchronize as soon as the "MC_CamIn" job takes eff
 | ① | Time at which the job becomes effective and the synchronization begins. |
 | ② | Time when synchronization is complete |
 
-The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
 ##### After synchronization
 
-The cam is offset accordingly in the master value range. The offset results from the current leading value position and the default values of the parameters "MasterSyncPosition", "MasterStartDistance" and "SlaveOffset". The offset in the leading value range is displayed in the "<TO>.StatusSynchronizedMotion.MasterOffset" tag of the technology object.
+The cam is offset accordingly in the master value range. The offset results from the current leading value position and the default values of the parameters "MasterSyncPosition", "MasterStartDistance" and "SlaveOffset". The offset in the leading value range is displayed in the "&lt;TO&gt;.StatusSynchronizedMotion.MasterOffset" tag of the technology object.
 
 ![After synchronization](images/165347309835_DV_resource.Stream@PNG-en-US.png)
 
@@ -3607,7 +3607,7 @@ You define the behavior of the following axis for synchronization with the follo
 
 After the start of the "MC_CamIn" job, a motion profile is calculated for the following axis depending on the specified leading value distance. The calculation determines the required dynamic response and the position of the leading axis as of which the leading axis and the following axis travel synchronously.
 
-The status "Waiting" is displayed at the following axis until the leading value has reached the synchronous position of the leading axis (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 3).
+The status "Waiting" is displayed at the following axis until the leading value has reached the synchronous position of the leading axis (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 3).
 
 > **Note**
 >
@@ -3619,7 +3619,7 @@ If the leading and following axes are already at their synchronous positions whe
 
 ##### During synchronization
 
-The following axis begins to synchronize as soon as the leading value has reached the synchronous position. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
+The following axis begins to synchronize as soon as the leading value has reached the synchronous position. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
 
 ![During synchronization](images/165347315723_DV_resource.Stream@PNG-en-US.png)
 
@@ -3628,7 +3628,7 @@ The following axis begins to synchronize as soon as the leading value has reache
 | ① | Time when synchronization starts |
 | ② | Time when synchronization is complete |
 
-The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
 ##### After synchronization
 
@@ -3653,7 +3653,7 @@ You define the behavior of the following axis for synchronization with the follo
 
 After the start of the "MC_CamIn" job, a motion profile is calculated for the following axis depending on the specified leading value distance. The calculation determines the required dynamic response and the position of the leading axis as of which the leading axis and the following axis travel synchronously.
 
-If the leading axis is at a standstill when the job starts, the status "Waiting" is displayed on the following axis (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 3) until the leading axis is set in motion.
+If the leading axis is at a standstill when the job starts, the status "Waiting" is displayed on the following axis (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 3) until the leading axis is set in motion.
 
 > **Note**
 >
@@ -3665,7 +3665,7 @@ If the leading and following axes are already at their synchronous positions whe
 
 ##### During synchronization
 
-The following axis begins to synchronize as soon as the "MC_CamIn" job takes effect and the leading axis is moving. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "<TO>.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
+The following axis begins to synchronize as soon as the "MC_CamIn" job takes effect and the leading axis is moving. The synchronization is indicated in the Motion Control instruction "MC_CamIn" with the parameter "StartSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X21 (Synchronizing)" tag of the following axis. The leading value must not reverse during synchronization.
 
 ![During synchronization](images/165348320011_DV_resource.Stream@PNG-en-US.png)
 
@@ -3674,7 +3674,7 @@ The following axis begins to synchronize as soon as the "MC_CamIn" job takes eff
 | ① | Time at which the job becomes effective and the synchronization begins. |
 | ② | Time when synchronization is complete |
 
-The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+The dynamics of the following axis during synchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. Changes in the dynamics of the leading axis during synchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The dynamic response of the following axis is limited to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
 ##### After synchronization
 
@@ -3701,7 +3701,7 @@ You define the behavior of the following axis for synchronization with the follo
 
 After the "MC_CamIn" job has started, the status "Synchronous" is set directly at the current leading value position and at the current following value position.
 
-The synchronous position specified in the cam is assigned to the position setpoint of the leading axis in the leading value range and to the position setpoint of the following axis in the following value range. The cam is offset accordingly. The current offset results from the cam and is displayed at the "<TO>.StatusSynchronizedMotion.MasterOffset" and "<TO>.StatusSynchronizedMotion.SlaveOffset" tags of the technology object.
+The synchronous position specified in the cam is assigned to the position setpoint of the leading axis in the leading value range and to the position setpoint of the following axis in the following value range. The cam is offset accordingly. The current offset results from the cam and is displayed at the "&lt;TO&gt;.StatusSynchronizedMotion.MasterOffset" and "&lt;TO&gt;.StatusSynchronizedMotion.SlaveOffset" tags of the technology object.
 
 [The following axis travels synchronously with the leading axis in accordance with the cam profile](#synchronous-travel-in-camming-with-mc_camin-s7-1500t).
 
@@ -3730,20 +3730,20 @@ You define the behavior of the following axis for synchronization with the follo
 
 To determine dynamic jumps on the following axis, use the "[MC_GetCamFollowingValue](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_getcamfollowingvalue-read-out-following-value-of-a-cam-v8-s7-1500t)" instruction, for example, to check the following values for velocity and acceleration in the following positions:
 
-- End position of the active cam (<TO>.StatusCam.EndLeadingValue)
+- End position of the active cam (&lt;TO&gt;.StatusCam.EndLeadingValue)
 - Synchronous position of the ("MasterSyncPosition") cam to be changed
 
 If the parameter values "MC_GetCamFollowingValue.FirstDerivative" of both jobs match, the transition between the cams is constant in velocity. If the parameter values "MC_GetCamFollowingValue.SecondDerivative" of both jobs match, the transition between the cams is constant in acceleration.
 
-To avoid dynamic jumps on the following axis when changing the active cam with new scaling with the start position as synchronous position, use the setting "<TO>.InterpolationSettings.BoundaryConditions" = 1 for the[interpolation of the cam](#interpolating-a-cam-s7-1500t). This gives you a steady velocity transition.
+To avoid dynamic jumps on the following axis when changing the active cam with new scaling with the start position as synchronous position, use the setting "&lt;TO&gt;.InterpolationSettings.BoundaryConditions" = 1 for the[interpolation of the cam](#interpolating-a-cam-s7-1500t). This gives you a steady velocity transition.
 
 ##### After the "MC_CamIn" job has started
 
-The status "Waiting" is displayed at the following axis until the leading value has reached the end of the active cam or the active cam cycle ("<TO>.StatusSynchronizedMotion.WaitingFunctionState" = 3).
+The status "Waiting" is displayed at the following axis until the leading value has reached the end of the active cam or the active cam cycle ("&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState" = 3).
 
 ##### When reaching the end of the cam
 
-When the end of the cam is reached ("EndOfProfile" = TRUE), the replaced cam becomes active directly at the current leading value position and at the current following value position starting from the specified synchronous position. The cam is offset accordingly. The offset is displayed in the "<TO>.StatusSynchronizedMotion.MasterOffset" and "<TO>.StatusSynchronizedMotion.SlaveOffset" tags of the technology object.
+When the end of the cam is reached ("EndOfProfile" = TRUE), the replaced cam becomes active directly at the current leading value position and at the current following value position starting from the specified synchronous position. The cam is offset accordingly. The offset is displayed in the "&lt;TO&gt;.StatusSynchronizedMotion.MasterOffset" and "&lt;TO&gt;.StatusSynchronizedMotion.SlaveOffset" tags of the technology object.
 
 The synchronous operation remains in "synchronous" status. [The following axis travels synchronously with the leading axis in accordance with the cam profile](#synchronous-travel-in-camming-with-mc_camin-s7-1500t).
 
@@ -3751,7 +3751,7 @@ The synchronous operation remains in "synchronous" status. [The following axis t
 
 As soon as the following axis is synchronized to a leading value, the following axis follows the position of the leading axis according to the cam profile. The transmission behavior during camming is expressed by the cam curve.
 
-The "Synchronous" status is indicated in the Motion Control instruction "[MC_CamIn](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_camin-start-camming-v8-s7-1500t)" with the parameter "InSync" = TRUE and in the "<TO>.StatusWord.X22 (Synchronous)" tag of the technology object.
+The "Synchronous" status is indicated in the Motion Control instruction "[MC_CamIn](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_camin-start-camming-v8-s7-1500t)" with the parameter "InSync" = TRUE and in the "&lt;TO&gt;.StatusWord.X22 (Synchronous)" tag of the technology object.
 
 > **Note**
 >
@@ -3887,15 +3887,15 @@ You define the behavior of the following axis during leading value offset with t
 
 ##### During the leading value offset
 
-After starting the jobs, the following axis begins with the leading value offset starting from the current position. Within the traversing distance of the leading axis, the following axis offsets the leading value at continuous velocity and acceleration. The required dynamics of the following axis to offset the leading value is calculated by the system. During leading value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+After starting the jobs, the following axis begins with the leading value offset starting from the current position. Within the traversing distance of the leading axis, the following axis offsets the leading value at continuous velocity and acceleration. The required dynamics of the following axis to offset the leading value is calculated by the system. During leading value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "<TO>.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
+The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "&lt;TO&gt;.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
 
 The leading value must not reverse during the leading value offset on the following axis. When the leading value reverses, the "MC_PhasingAbsolute" job or "MC_PhasingRelative" job is canceled with "ErrorID" = 16#808C.
 
 ##### After the leading value offset
 
-As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 The leading value offset only has an effect in the "Synchronous" status of the camming. When the camming is overridden, the leading value offset is reset to zero.
 
@@ -3917,19 +3917,19 @@ You define the behavior of the following axis during leading value offset with t
 
 ##### Until the leading value offset
 
-After starting the job, the status "Waiting" is displayed at the following axis when the leading value is at standstill and until the leading value has reached the leading value position (<TO>.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
+After starting the job, the status "Waiting" is displayed at the following axis when the leading value is at standstill and until the leading value has reached the leading value position (&lt;TO&gt;.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
 
 ##### During the leading value offset
 
-As soon as the leading value has reached the leading value position, the following axis begins to offset the leading value. Within the traversing distance of the leading axis, the following axis offsets the leading value at continuous velocity and acceleration. The required dynamics of the following axis to offset the leading value is calculated by the system. During leading value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+As soon as the leading value has reached the leading value position, the following axis begins to offset the leading value. Within the traversing distance of the leading axis, the following axis offsets the leading value at continuous velocity and acceleration. The required dynamics of the following axis to offset the leading value is calculated by the system. During leading value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "<TO>.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
+The leading value offset is indicated in the Motion Control instruction with the parameter "StartPhasing" = TRUE and in the "&lt;TO&gt;.StatusWort.X24 (PhasingCommand)" tag of the technology object. The "AbsolutePhaseShift" or "CoveredPhaseShift" parameter shows the absolute leading value portion already shifted.
 
 The leading value must not reverse during the leading value offset on the following axis. When the leading value reverses, the "MC_PhasingAbsolute" job or "MC_PhasingRelative" job is canceled with "ErrorID" = 16#808C. The waiting job is not canceled.
 
 ##### After the leading value offset
 
-As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+As soon as the following axis has offset the leading value, the leading value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 The leading value offset only has an effect in the "Synchronous" status of the camming. When the camming is overridden, the leading value offset is reset to zero.
 
@@ -3974,7 +3974,7 @@ With a following value offset, you offset the following value on the following a
 
 The following value offset always refers to the effective leading value. The effective leading value is made up of the leading value of the leading value source and the additive leading value. If you do not use an additive leading value via "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)", the effective leading value corresponds to the leading value of the leading value source. You can find an overview in the "[Mode of operation of the instructions in synchronous operation](#mode-of-operation-of-the-instructions-in-synchronous-operation-s7-1500-s7-1500t)" section. In the following, "leading value" refers to the effective leading value.
 
-For camming, the offset of the following value with an "MC_OffsetAbsolute" or "MC_OffsetRelative" job (<TO>.StatusSynchronizedMotion.Offset) starts at the start value "<TO>.StatusSynchronizedMotion.SlaveOffset".
+For camming, the offset of the following value with an "MC_OffsetAbsolute" or "MC_OffsetRelative" job (&lt;TO&gt;.StatusSynchronizedMotion.Offset) starts at the start value "&lt;TO&gt;.StatusSynchronizedMotion.SlaveOffset".
 
 ##### Parameter inputs
 
@@ -3987,15 +3987,15 @@ You define the behavior of the following axis during following value offset with
 
 ##### During the following value offset
 
-After starting the job, the following axis begins with the following value offset starting from the current position. Within the traversing distance of the leading axis, the following axis offsets the following value at continuous velocity and acceleration. The required dynamics of the following axis for the following value offset is calculated by the system. During following value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+After starting the job, the following axis begins with the following value offset starting from the current position. Within the traversing distance of the leading axis, the following axis offsets the following value at continuous velocity and acceleration. The required dynamics of the following axis for the following value offset is calculated by the system. During following value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-The following value offset is indicated in the Motion Control instruction with the parameter "StartOffset" = TRUE and in the "<TO>.StatusWort2.X4 (OffsetCommand)" tag of the technology object. The "AbsoluteOffset" or "CoveredOffset" parameter shows the absolute following value portion already shifted.
+The following value offset is indicated in the Motion Control instruction with the parameter "StartOffset" = TRUE and in the "&lt;TO&gt;.StatusWort2.X4 (OffsetCommand)" tag of the technology object. The "AbsoluteOffset" or "CoveredOffset" parameter shows the absolute following value portion already shifted.
 
 The leading value must not reverse during the following value offset on the following axis. When the leading value reverses, the "MC_OffsetAbsolute" job or "MC_OffsetRelative" job is canceled with "ErrorID" = 16#808C.
 
 ##### After the following value offset
 
-As soon as the following axis has offset the following value, the following value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+As soon as the following axis has offset the following value, the following value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 The following value offset only has an effect in the "Synchronous" status of the camming. When the camming is overridden, the following value offset is reset to zero.
 
@@ -4005,7 +4005,7 @@ With a following value offset, you offset the following value on the following a
 
 The following value offset always refers to the effective leading value. The effective leading value is made up of the leading value of the leading value source and the additive leading value. If you do not use an additive leading value via "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)", the effective leading value corresponds to the leading value of the leading value source. You can find an overview in the "[Mode of operation of the instructions in synchronous operation](#mode-of-operation-of-the-instructions-in-synchronous-operation-s7-1500-s7-1500t)" section. In the following, "leading value" refers to the effective leading value.
 
-For camming, the offset of the following value with an "MC_OffsetAbsolute" or "MC_OffsetRelative" job (<TO>.StatusSynchronizedMotion.Offset) starts at the start value "<TO>.StatusSynchronizedMotion.SlaveOffset".
+For camming, the offset of the following value with an "MC_OffsetAbsolute" or "MC_OffsetRelative" job (&lt;TO&gt;.StatusSynchronizedMotion.Offset) starts at the start value "&lt;TO&gt;.StatusSynchronizedMotion.SlaveOffset".
 
 ##### Parameter inputs
 
@@ -4019,19 +4019,19 @@ You define the behavior of the following axis during following value offset with
 
 ##### Until the following value offset
 
-After starting the job, the status "Waiting" is displayed at the following axis when the leading value is at standstill and until the leading value has reached the leading value position (<TO>.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
+After starting the job, the status "Waiting" is displayed at the following axis when the leading value is at standstill and until the leading value has reached the leading value position (&lt;TO&gt;.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
 
 ##### During the following value offset
 
-As soon as the leading value has reached the leading value position, the following axis begins to offset the following value. Within the traversing distance of the leading axis, the following axis offsets the following value at continuous velocity and acceleration. The required dynamics of the following axis for the following value offset is calculated by the system. During following value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+As soon as the leading value has reached the leading value position, the following axis begins to offset the following value. Within the traversing distance of the leading axis, the following axis offsets the following value at continuous velocity and acceleration. The required dynamics of the following axis for the following value offset is calculated by the system. During following value offset, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-The following value offset is indicated in the Motion Control instruction with the parameter "StartOffset" = TRUE and in the "<TO>.StatusWort2.X4 (OffsetCommand)" tag of the technology object. The "AbsoluteOffset" or "CoveredOffset" parameter shows the absolute following value portion already shifted.
+The following value offset is indicated in the Motion Control instruction with the parameter "StartOffset" = TRUE and in the "&lt;TO&gt;.StatusWort2.X4 (OffsetCommand)" tag of the technology object. The "AbsoluteOffset" or "CoveredOffset" parameter shows the absolute following value portion already shifted.
 
 The leading value must not reverse during the following value offset on the following axis. When the leading value reverses, the "MC_OffsetAbsolute" job or "MC_OffsetRelative" job is canceled with "ErrorID" = 16#808C. The waiting job is not canceled.
 
 ##### After the following value offset
 
-As soon as the following axis has offset the following value, the following value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+As soon as the following axis has offset the following value, the following value offset is active on the following axis. The status is indicated in the Motion Control instruction with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 The following value offset only has an effect in the "Synchronous" status of the camming. When the camming is overridden, the following value offset is reset to zero.
 
@@ -4104,24 +4104,24 @@ The start position of the following axis is derived in the following way:
 
 Start position = stop position of the following axis - travel distance of the following axis
 
-The status "Waiting" is displayed at the following axis until the following value has reached the start position (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 5).
+The status "Waiting" is displayed at the following axis until the following value has reached the start position (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 5).
 
 ##### During desynchronization
 
-The following axis begins to desynchronize as soon as the following value has reached the start position. Desynchronization is indicated in the Motion Control instruction "MC_CamOut" with the parameter "StartSyncOut" = TRUE and in the "<TO>.StatusWord2.X1 (DesynchronizingCommand)" tag of the technology object. The synchronous operation is no longer in the "Synchronous" status. Superimposed jobs of the following axis are canceled.
+The following axis begins to desynchronize as soon as the following value has reached the start position. Desynchronization is indicated in the Motion Control instruction "MC_CamOut" with the parameter "StartSyncOut" = TRUE and in the "&lt;TO&gt;.StatusWord2.X1 (DesynchronizingCommand)" tag of the technology object. The synchronous operation is no longer in the "Synchronous" status. Superimposed jobs of the following axis are canceled.
 
 The following axis moves to the stop position with the specified dynamics, independent of the leading value. The dynamic response of the following axis is limited to the dynamic limits configured on the technology object.
 
-- <TO>.DynamicLimits.MaxVelocity
-- <TO>.DynamicLimits.MaxAcceleration
-- <TO>.DynamicLimits.MaxDeceleration
-- <TO>.DynamicLimits.MaxJerk
+- &lt;TO&gt;.DynamicLimits.MaxVelocity
+- &lt;TO&gt;.DynamicLimits.MaxAcceleration
+- &lt;TO&gt;.DynamicLimits.MaxDeceleration
+- &lt;TO&gt;.DynamicLimits.MaxJerk
 
 During desynchronization, several modulo revolutions of both axes are generally possible.
 
 ##### After desynchronization
 
-As soon as the following axis reaches the stop position, the following axis is desynchronized. The following axis is at a standstill. The status is indicated in the Motion Control instruction "MC_CamOut" with the parameter "Done" = TRUE and in the "<TO>.StatusWord.X7 (Standstill)" tag of the technology object.
+As soon as the following axis reaches the stop position, the following axis is desynchronized. The following axis is at a standstill. The status is indicated in the Motion Control instruction "MC_CamOut" with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusWord.X7 (Standstill)" tag of the technology object.
 
 #### Desynchronizing following axis using leading value distance with "MC_CamOut" (S7-1500T)
 
@@ -4146,15 +4146,15 @@ The start position of the leading axis is derived in the following way:
 
 Start position = leading value position when the stop position of the following axis is reached - leading value distance
 
-The status "Waiting" is displayed at the following axis until the leading value has reached the start position (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 5).
+The status "Waiting" is displayed at the following axis until the leading value has reached the start position (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 5).
 
 ##### During desynchronization
 
-The following axis begins to desynchronize as soon as the leading value has reached the start position. Desynchronization is indicated in the Motion Control instruction "MC_CamOut" with the parameter "StartSyncOut" = TRUE and in the "<TO>.StatusWord2.X1 (DesynchronizingCommand)" tag of the technology object. The synchronous operation is no longer in the "Synchronous" status. Superimposed jobs of the following axis are canceled.
+The following axis begins to desynchronize as soon as the leading value has reached the start position. Desynchronization is indicated in the Motion Control instruction "MC_CamOut" with the parameter "StartSyncOut" = TRUE and in the "&lt;TO&gt;.StatusWord2.X1 (DesynchronizingCommand)" tag of the technology object. The synchronous operation is no longer in the "Synchronous" status. Superimposed jobs of the following axis are canceled.
 
-The following axis travels to the stop position depending on the leading value distance. The dynamics of the following axis during desynchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. The dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed).
+The following axis travels to the stop position depending on the leading value distance. The dynamics of the following axis during desynchronization is obtained from the calculated motion profile and the current dynamics of the leading axis. The dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed).
 
-Changes in the dynamics of the leading axis during desynchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object.
+Changes in the dynamics of the leading axis during desynchronization are superimposed with the calculated motion profile in accordance with the synchronous operation function. This can have the result that the configured dynamic limits at the following axis are violated. This scenario is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object.
 
 The leading value must not reverse during desynchronization. During desynchronization, several modulo revolutions of both axes are generally possible.
 
@@ -4169,7 +4169,7 @@ If the leading axis stops during desynchronization, high dynamic values can occu
 
 ##### After desynchronization
 
-As soon as the following axis reaches the stop position, the following axis is desynchronized. The following axis is at a standstill. The status is indicated in the Motion Control instruction "MC_CamOut" with the parameter "Done" = TRUE and in the "<TO>.StatusWord.X7 (Standstill)" tag of the technology object.
+As soon as the following axis reaches the stop position, the following axis is desynchronized. The following axis is at a standstill. The status is indicated in the Motion Control instruction "MC_CamOut" with the parameter "Done" = TRUE and in the "&lt;TO&gt;.StatusWord.X7 (Standstill)" tag of the technology object.
 
 #### Defining direction of desynchronization with "MC_CamOut" (S7-1500T)
 
@@ -4201,18 +4201,18 @@ If a synchronous axis is desynchronized as a following axis in the camming with 
 
 During synchronization using dynamic parameters, the dynamic limits configured at the technology object apply to the following axis.
 
-- <TO>.DynamicLimits.MaxVelocity
-- <TO>.DynamicLimits.MaxAcceleration
-- <TO>.DynamicLimits.MaxDeceleration
-- <TO>.DynamicLimits.MaxJerk
+- &lt;TO&gt;.DynamicLimits.MaxVelocity
+- &lt;TO&gt;.DynamicLimits.MaxAcceleration
+- &lt;TO&gt;.DynamicLimits.MaxDeceleration
+- &lt;TO&gt;.DynamicLimits.MaxJerk
 
 The SW limit switches also continue to be monitored with the configured dynamic limits of the following axis.
 
 ##### Desynchronization using leading value distance
 
-During desynchronization via the leading value distance and during synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (<TO>.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
+During desynchronization via the leading value distance and during synchronous travel, the dynamics of the following axis is limited only to the maximum speed of the drive (&lt;TO&gt;.Actor.DriveParameter.MaxSpeed). The dynamics of the following axis results from the synchronous operation function.
 
-If the dynamic limits configured for the following axis are exceeded, this is indicated in the "<TO>.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
+If the dynamic limits configured for the following axis are exceeded, this is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 … X2" tags of the technology object. The SW limit switches continue to be monitored with the configured dynamic limits of the following axis.
 
 If the following axis cannot follow the leading value, this results in a following error, which is monitored by the following error monitoring.
 
@@ -4233,7 +4233,7 @@ The following technology object tags are relevant for camming:
 | Status indicators |  |  |
 | --- | --- | --- |
 | Tag | Description |  |
-| <TO>.StatusSynchronizedMotion.FunctionState | Indication of which synchronous operation function is active |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionState | Indication of which synchronous operation function is active |  |
 | 0 | No synchronous operation active |  |
 | 1 | Gearing ("[MC_GearIn](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearin-start-gearing-v8-s7-1500-s7-1500t)") |  |
 | 2 | Gearing with specified synchronous positions ("[MC_GearInPos](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinpos-start-gearing-with-specified-synchronous-positions-v8-s7-1500t)") |  |
@@ -4241,43 +4241,43 @@ The following technology object tags are relevant for camming:
 | 4 | Desynchronization of gearing ("[MC_GearOut](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearout-desynchronize-gearing-v8-s7-1500t)") |  |
 | 5 | Desynchronization of camming ("[MC_CamOut](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_camout-desynchronize-camming-v8-s7-1500t)") |  |
 | 6 | Velocity gearing ("[MC_GearInVelocity](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_gearinvelocity-start-velocity-synchronous-operation-v8-s7-1500t)") |  |
-| <TO>.StatusSynchronizedMotion.WaitingFunctionState | Indication of which synchronous operation function is waiting |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState | Indication of which synchronous operation function is waiting |  |
 | 0 | No synchronous operation waiting |  |
 | 1 | Reserved |  |
 | 2 | Gearing with specified synchronous positions waiting ("MC_GearInPos") |  |
 | 3 | Camming waiting ("MC_CamIn") |  |
 | 4 | Desynchronization of gearing waiting ("MC_GearOut") |  |
 | 5 | Desynchronization of camming waiting ("MC_CamOut") |  |
-| <TO>.StatusSynchronizedMotion.ActualMaster | When a synchronous operation job is started, the number of the technology data block of the currently used leading axis is displayed. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.ActualMaster | When a synchronous operation job is started, the number of the technology data block of the currently used leading axis is displayed. |  |
 | 0 | Synchronous operation inactive |  |
-| <TO>.StatusSynchronizedMotion.ActualCam | Currently used for cyclic cam for camming |  |
-| <TO>.StatusSynchronizedMotion.MasterOffset | Current offset of the leading value range of the cyclic cam |  |
-| <TO>.StatusSynchronizedMotion.MasterScaling | Current scaling of the leading value range of the cyclic cam |  |
-| <TO>.StatusSynchronizedMotion.SlaveOffset | Current offset of the following value range of the cyclic cam |  |
-| <TO>.StatusSynchronizedMotion.SlaveScaling | Current scaling of the following value range of the cyclic cam |  |
-| <TO>.Position | Setpoints of the axis |  |
-| <TO>.Velocity |  |  |
-| <TO>.Acceleration |  |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Position | Effective leading value including an additive leading value with an "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)" job |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Velocity |  |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Acceleration |  |  |
-| <TO>.StatusSynchronizedMotion.PhaseShift | Current absolute leading value offset with an "[MC_PhasingAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_phasingabsolute-absolute-shift-of-leading-value-on-the-following-axis-v8-s7-1500t)" or "[MC_PhasingRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_phasingrelative-relative-shift-of-leading-value-on-the-following-axis-v8-s7-1500t)" job |  |
-| <TO>.StatusSynchronizedMotion.FunctionLeadingValue.Position | Leading value of the synchronous operation function after a leading value offset with an "MC_PhasingAbsolute" job or "MC_PhasingRelative" job including an additive leading value with a "MC_LeadingValueAdditive" job |  |
-| <TO>.StatusSynchronizedMotion.FunctionFollowingValue.Position | Following value of the synchronous operation function before a following value offset with an "MC_OffsetAbsolute" job or "MC_OffsetRelative" job |  |
-| <TO>.StatusSynchronizedMotion.FunctionFollowingValue.Velocity |  |  |
-| <TO>.StatusSynchronizedMotion.FunctionFollowingValue.Acceleration |  |  |
-| <TO>.StatusSynchronizedMotion.Offset | Current absolute following value offset with an "[MC_OffsetAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_offsetabsolute-absolute-shift-of-following-value-on-the-following-axis-v8-s7-1500t)" or "[MC_OffsetRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_offsetrelative-relative-shift-of-following-value-on-the-following-axis-v8-s7-1500t)" job |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X0 (MaxVelocityExceeded) | Set to the value "TRUE" when the maximum velocity configured for the following axis is exceeded during synchronous operation. |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X1 (MaxAccelerationExceeded) | Set to the value "TRUE" when the maximum acceleration configured for the following axis is exceeded during synchronous operation. |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X2 (MaxDecelerationExceeded) | Set to the value "TRUE" when the maximum deceleration configured for the following axis is exceeded during synchronous operation. |  |
-| <TO>.StatusWord.X21 (Synchronizing) | Set to the value "TRUE" when the synchronous axis synchronizes to a leading value. |  |
-| <TO>.StatusWord.X22 (Synchronous) | Set to the value "TRUE" when the synchronous axis is synchronized and moves synchronously to the leading axis. |  |
-| <TO>.StatusWord2.X1 (DesynchronizingCommand) | Set to the value "TRUE" when the synchronous axis desynchronizes. |  |
-| <TO>.StatusWord.X24 (PhasingCommand) | Is set to the value "TRUE" if a job for leading value offset is active ("MC_PhasingAbsolute", "MC_PhasingRelative"). |  |
-| <TO>.StatusWord2.X3 (PhasingCommandWaiting) | Is set to the value "TRUE" if a job for leading value offset is pending ("MC_PhasingAbsolute", "MC_PhasingRelative"). |  |
-| <TO>.StatusWord2.X4 (OffsetCommand) | Is set to the value "TRUE" if a job for following value offset is active ("MC_OffsetAbsolute", "MC_OffsetRelative"). |  |
-| <TO>.StatusWord2.X5 (OffsetCommandWaiting) | Is set to the value "TRUE" if a job for following value offset is waiting ("MC_OffsetAbsolute", "MC_OffsetRelative"). |  |
-| <TO>.ErrorWord.X14 (SynchronousError) | Error during synchronous operation  The leading axis specified in the motion control instruction was not configured as a possible leading axis. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.ActualCam | Currently used for cyclic cam for camming |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.MasterOffset | Current offset of the leading value range of the cyclic cam |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.MasterScaling | Current scaling of the leading value range of the cyclic cam |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.SlaveOffset | Current offset of the following value range of the cyclic cam |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.SlaveScaling | Current scaling of the following value range of the cyclic cam |  |
+| &lt;TO&gt;.Position | Setpoints of the axis |  |
+| &lt;TO&gt;.Velocity |  |  |
+| &lt;TO&gt;.Acceleration |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Position | Effective leading value including an additive leading value with an "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Velocity |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Acceleration |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift | Current absolute leading value offset with an "[MC_PhasingAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_phasingabsolute-absolute-shift-of-leading-value-on-the-following-axis-v8-s7-1500t)" or "[MC_PhasingRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_phasingrelative-relative-shift-of-leading-value-on-the-following-axis-v8-s7-1500t)" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionLeadingValue.Position | Leading value of the synchronous operation function after a leading value offset with an "MC_PhasingAbsolute" job or "MC_PhasingRelative" job including an additive leading value with a "MC_LeadingValueAdditive" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Position | Following value of the synchronous operation function before a following value offset with an "MC_OffsetAbsolute" job or "MC_OffsetRelative" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Velocity |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.FunctionFollowingValue.Acceleration |  |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.Offset | Current absolute following value offset with an "[MC_OffsetAbsolute](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_offsetabsolute-absolute-shift-of-following-value-on-the-following-axis-v8-s7-1500t)" or "[MC_OffsetRelative](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_offsetrelative-relative-shift-of-following-value-on-the-following-axis-v8-s7-1500t)" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X0 (MaxVelocityExceeded) | Set to the value "TRUE" when the maximum velocity configured for the following axis is exceeded during synchronous operation. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X1 (MaxAccelerationExceeded) | Set to the value "TRUE" when the maximum acceleration configured for the following axis is exceeded during synchronous operation. |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X2 (MaxDecelerationExceeded) | Set to the value "TRUE" when the maximum deceleration configured for the following axis is exceeded during synchronous operation. |  |
+| &lt;TO&gt;.StatusWord.X21 (Synchronizing) | Set to the value "TRUE" when the synchronous axis synchronizes to a leading value. |  |
+| &lt;TO&gt;.StatusWord.X22 (Synchronous) | Set to the value "TRUE" when the synchronous axis is synchronized and moves synchronously to the leading axis. |  |
+| &lt;TO&gt;.StatusWord2.X1 (DesynchronizingCommand) | Set to the value "TRUE" when the synchronous axis desynchronizes. |  |
+| &lt;TO&gt;.StatusWord.X24 (PhasingCommand) | Is set to the value "TRUE" if a job for leading value offset is active ("MC_PhasingAbsolute", "MC_PhasingRelative"). |  |
+| &lt;TO&gt;.StatusWord2.X3 (PhasingCommandWaiting) | Is set to the value "TRUE" if a job for leading value offset is pending ("MC_PhasingAbsolute", "MC_PhasingRelative"). |  |
+| &lt;TO&gt;.StatusWord2.X4 (OffsetCommand) | Is set to the value "TRUE" if a job for following value offset is active ("MC_OffsetAbsolute", "MC_OffsetRelative"). |  |
+| &lt;TO&gt;.StatusWord2.X5 (OffsetCommandWaiting) | Is set to the value "TRUE" if a job for following value offset is waiting ("MC_OffsetAbsolute", "MC_OffsetRelative"). |  |
+| &lt;TO&gt;.ErrorWord.X14 (SynchronousError) | Error during synchronous operation  The leading axis specified in the motion control instruction was not configured as a possible leading axis. |  |
 
 ## Other synchronous operation functions (S7-1500T)
 
@@ -4313,7 +4313,7 @@ The synchronous operation only acts on the following axis. Setpoint changes from
 
 - The technology object has been configured correctly.
 - The following axis is a synchronous axis.
-- Synchronous operation is active on the technology object in status "Synchronous" (<TO>.StatusWord.X22 = TRUE).
+- Synchronous operation is active on the technology object in status "Synchronous" (&lt;TO&gt;.StatusWord.X22 = TRUE).
 
 **Procedure**
 
@@ -4323,9 +4323,9 @@ To set a synchronous operation on a following axis in simulation mode, follow th
 2. Bring the leading axis to a standstill, e.g. with an "MC_Halt" job.
 3. Start the simulation of the synchronous operation on the following axis with "Enable" = TRUE parameter. The leading axis must be stopped at this time.
 
-   As soon as the synchronous operation is active, this is indicated in the motion control instruction by the parameter "InSimulation" = TRUE and in the "<TO>.StatusSynchronizedMotion.StatusWord.X3 (In­Simulation)" tag of the technology object.
+   As soon as the synchronous operation is active, this is indicated in the motion control instruction by the parameter "InSimulation" = TRUE and in the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X3 (In­Simulation)" tag of the technology object.
 
-   The synchronous operation remains active during the simulation, including the motions through single axis jobs or with disabling the leading axis and/or following axis with "MC_Power.Enable" = FALSE or a "MC_Stop" job, for example by opening a protective door. The synchronous operation in "synchronous" status ("MC_GearIn.InGear" = TRUE, "MC_GearInPos.InSync" = TRUE or "MC_CamIn.InSync" = TRUE, but "<TO>.StatusWord.X22" = FALSE).
+   The synchronous operation remains active during the simulation, including the motions through single axis jobs or with disabling the leading axis and/or following axis with "MC_Power.Enable" = FALSE or a "MC_Stop" job, for example by opening a protective door. The synchronous operation in "synchronous" status ("MC_GearIn.InGear" = TRUE, "MC_GearInPos.InSync" = TRUE or "MC_CamIn.InSync" = TRUE, but "&lt;TO&gt;.StatusWord.X22" = FALSE).
 
 ##### End simulation
 
@@ -4354,7 +4354,7 @@ The following tags of the technology object are relevant for simulation:
 | Status indicators |  |  |
 | --- | --- | --- |
 | Tag | Description |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X3 (In­Simulation) | [Simulation of synchronous operation on a following axis with a "MC_SynchronizedMotionSimulation" job](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_synchronizedmotionsimulation-simulate-synchronous-operation-v8-s7-1500t) |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X3 (In­Simulation) | [Simulation of synchronous operation on a following axis with a "MC_SynchronizedMotionSimulation" job](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_synchronizedmotionsimulation-simulate-synchronous-operation-v8-s7-1500t) |  |
 | FALSE | Not simulated |  |
 | TRUE | Simulated |  |
 
@@ -4388,7 +4388,7 @@ You can start an "MC_LeadingValueAdditive" job independently of the synchronous 
 
 ##### During the additive leading value specification
 
-The default values for position, velocity and acceleration are valid as long as the "Busy" parameter = TRUE. Changes in the specified values are directly effective without consideration of the dynamic limits. The active additive leading value specification is displayed in of the "<TO>.StatusSynchronizedMotion.StatusWord.X4 (LeadingValueAdditiveCommand)" tag of the technology object.
+The default values for position, velocity and acceleration are valid as long as the "Busy" parameter = TRUE. Changes in the specified values are directly effective without consideration of the dynamic limits. The active additive leading value specification is displayed in of the "&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X4 (LeadingValueAdditiveCommand)" tag of the technology object.
 
 The effect of a "MC_LeadingValueAdditive" job depends on the status of the synchronous operation:
 
@@ -4412,12 +4412,12 @@ The following technology object tags are relevant for the additive leading value
 | Status indicators |  |  |
 | --- | --- | --- |
 | Tag | Description |  |
-| <TO>.StatusSynchronizedMotion.StatusWord.X4 (LeadingValueAdditiveCommand) | Additive leading value with a "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)" job |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X4 (LeadingValueAdditiveCommand) | Additive leading value with a "[MC_LeadingValueAdditive](S7-1500%20Motion%20Control%20%28S7-1500%2C%20S7-1500T%29.md#mc_leadingvalueadditive-specify-additive-leading-value-v8-s7-1500t)" job |  |
 | FALSE | Additive leading value not active |  |
 | TRUE | Additive leading value active |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Position | Effective leading value position of the synchronous operation function |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Velocity | Effective leading value velocity of the synchronous operation function |  |
-| <TO>.StatusSynchronizedMotion.EffectiveLeadingValue.Acceleration | Effective leading value acceleration of the synchronous operation function |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Position | Effective leading value position of the synchronous operation function |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Velocity | Effective leading value velocity of the synchronous operation function |  |
+| &lt;TO&gt;.StatusSynchronizedMotion.EffectiveLeadingValue.Acceleration | Effective leading value acceleration of the synchronous operation function |  |
 
 ## Cross-PLC synchronous operation (S7-1500T)
 
@@ -4572,7 +4572,7 @@ Hereafter, the sender CPU is the CPU on which a leading axis provides a leading 
   > **"MC_Servo" organization block**
   >
   > When you create a technology object, an MC_Servo OB is created automatically.
-- You have configured the property "Synchronous to the bus" with "PROFINET IO-System (100)" as the source of the send clock on all CPUs for the "MC_Servo" under "General > Cycle time".
+- You have configured the property "Synchronous to the bus" with "PROFINET IO-System (100)" as the source of the send clock on all CPUs for the "MC_Servo" under "General &gt; Cycle time".
 
 #### Adding communication directions
 
@@ -4596,9 +4596,9 @@ If necessary, also set up a communication direction from the receiver CPU to the
 To configure the transfer areas, follow these steps:
 
 1. In the "I/O communication" tab in the network view, select a communication direction of a selected CPU.
-2. Add a transfer area in the Inspector window under "Properties > General > Direct data exchange" by entering a name.
+2. Add a transfer area in the Inspector window under "Properties &gt; General &gt; Direct data exchange" by entering a name.
 3. Repeat steps 1 and 2 for all created configuration directions.
-4. Configure the created transfer area in the Inspector window "Properties > General > Direct data exchange > <Name of transfer area>":
+4. Configure the created transfer area in the Inspector window "Properties &gt; General &gt; Direct data exchange &gt; &lt;Name of transfer area&gt;":
 
    - In the "Start address" fields, define the start address of the assigned logical address area of the sender and of the receiver.
    - In the "Organization block" fields, select the MC_Servo OB of the respective CPU.
@@ -4607,19 +4607,19 @@ To configure the transfer areas, follow these steps:
 6. If you use a SIMATIC Drive Controller, set the clock system of the SINAMICS Integrated:
 
    - Select PROFIdrive Integrated in the network view.
-   - In the Inspector window, select the entry "Send clock of the PROFINET interface [X150]" under "Properties > General > Constant bus cycle time" in the "Cycle time" drop-down list.
+   - In the Inspector window, select the entry "Send clock of the PROFINET interface [X150]" under "Properties &gt; General &gt; Constant bus cycle time" in the "Cycle time" drop-down list.
 
 **Note**
 
 **Multiple receiver CPUs in the same cascade (1:n relationship)**
 
-If multiple receiver CPUs receive the same leading value of the sender CPU, select in each case for the receiver CPU the same address area for the transfer area between the sender CPU and the receiver CPU n that you defined between the sender CPU and the receiver CPU 1 under "Properties > General > Direct data exchange" in the "Partner address" table column.
+If multiple receiver CPUs receive the same leading value of the sender CPU, select in each case for the receiver CPU the same address area for the transfer area between the sender CPU and the receiver CPU n that you defined between the sender CPU and the receiver CPU 1 under "Properties &gt; General &gt; Direct data exchange" in the "Partner address" table column.
 
 #### Creating tags
 
 To create the output tag of a sender CPU and the input tag of a receiver CPU, proceed as follows:
 
-1. Open the PLC tags of a CPU via the project tree "<Name of CPU> > PLC tags > Show all tags".
+1. Open the PLC tags of a CPU via the project tree "&lt;Name of CPU&gt; &gt; PLC tags &gt; Show all tags".
 
    The "PLC tags" table opens.
 2. Enter the name of the new tag in the "Name" column.
@@ -4640,7 +4640,7 @@ To restore the "DX_TEL_SyncOp" data type, add a ≥ V5.0 technology object. Aft
 
 #### Result
 
-You have set up communication via direct data exchange. During the configuration of the leading axis and the leading axis proxy, you can now select the configured tags for the transfer areas in the table column or in the "Transfer area" drop-down list under "Technology object > Configuration > Leading value settings".
+You have set up communication via direct data exchange. During the configuration of the leading axis and the leading axis proxy, you can now select the configured tags for the transfer areas in the table column or in the "Transfer area" drop-down list under "Technology object &gt; Configuration &gt; Leading value settings".
 
 If no technology object is created on a CPU, the MC_Servo OB is deleted when the software is compiled. To be able to check the set communication in this case, compile the hardware only.
 
@@ -4672,7 +4672,7 @@ The following describes how to connect the leading value and the axes involved f
 
 To make the leading value of the leading axis available cross-PLC, proceed as follows:
 
-1. Open the configuration window "Technology object > Configuration > Leading value settings" of the leading axis.
+1. Open the configuration window "Technology object &gt; Configuration &gt; Leading value settings" of the leading axis.
 2. To show rows 2 to 8 in the table in the "Provision of leading value" area, select the "Show all transfer areas" check box.
 3. In the "Provide leading value" table column, select the check box of the corresponding transfer area.
 4. In the "Transfer area" table column, select in the drop-down list the CPU output tag created for the direct data exchange.
@@ -4681,7 +4681,7 @@ To make the leading value of the leading axis available cross-PLC, proceed as fo
 
 To interconnect the local following axes on the CPU of the leading axis, follow these steps:
 
-1. Open the configuration window "Technology object > Configuration > Leading value interconnections" of a local following axis.
+1. Open the configuration window "Technology object &gt; Configuration &gt; Leading value interconnections" of a local following axis.
 2. In the "Possible leading values" table column, select the leading axis.
 3. In the "Type of coupling" table column, select the entry "Delayed".
 4. Repeat steps 1 to 3 for all local following axes.
@@ -4690,7 +4690,7 @@ To interconnect the local following axes on the CPU of the leading axis, follow 
 
 To interconnect the leading axis proxies to other CPUs, follow these steps:
 
-1. Open the configuration window "Technology object > Configuration > Leading value settings" of a leading axis proxy.
+1. Open the configuration window "Technology object &gt; Configuration &gt; Leading value settings" of a leading axis proxy.
 2. In the "Provision of leading value" area in the "Transfer area" drop-down list, select the input tag of the CPU created for the direct data exchange.
 3. Repeat steps 1 and 2 for all leading axis proxies of the same cascade.
 
@@ -4698,10 +4698,10 @@ To interconnect the leading axis proxies to other CPUs, follow these steps:
 
 To interconnect the following axes that are not configured on the CPU of the leading axis, proceed as follows:
 
-1. Open the configuration window "Technology object > Configuration > Leading value interconnections" of a following axis.
+1. Open the configuration window "Technology object &gt; Configuration &gt; Leading value interconnections" of a following axis.
 2. In the "Possible leading values" table column, select the alternate leading axis of the CPU.
 
-   In the table column "Leading value source", the leading axis is displayed which provides the leading value (<Name of the CPU>.<Name of the technology object>). The "Setpoint" entry is preset in the "Type of coupling" table column.
+   In the table column "Leading value source", the leading axis is displayed which provides the leading value (&lt;Name of the CPU&gt;.&lt;Name of the technology object&gt;). The "Setpoint" entry is preset in the "Type of coupling" table column.
 3. In the table column with the icon ![Interconnecting following axes of the other CPUs](images/165349329163_DV_resource.Stream@PNG-de-DE.png), select whether this leading value interconnection should be taken into consideration when calculating the delay time in the [interconnection overview](#working-with-the-interconnection-overview-table-s7-1500t).
 4. Repeat steps 1 to 3 for all following axes of the same cascade.
 
@@ -4709,12 +4709,12 @@ To interconnect the following axes that are not configured on the CPU of the lea
 
 To interconnect a virtual following axis that is used as leading axis for the next cascade, proceed as follows:
 
-1. Open the configuration window "Technology object > Configuration > Leading value interconnections" of the virtual following axis.
+1. Open the configuration window "Technology object &gt; Configuration &gt; Leading value interconnections" of the virtual following axis.
 2. In the "Possible leading values" table column, select the alternate leading axis of the CPU.
 
-   In the table column "Leading value source", the leading axis is displayed which provides the leading value (<Name of the CPU>.<Name of the technology object>). The "Setpoint" entry is preset in the "Type of coupling" table column.
+   In the table column "Leading value source", the leading axis is displayed which provides the leading value (&lt;Name of the CPU&gt;.&lt;Name of the technology object&gt;). The "Setpoint" entry is preset in the "Type of coupling" table column.
 3. In the table column with the icon ![Interconnecting virtual following axis as leading axis for the next cascade](images/165349329163_DV_resource.Stream@PNG-de-DE.png), select whether this leading value interconnection should be taken into consideration when calculating the delay time in the interconnection overview.
-4. Switch to the configuration window "Technology object > Configuration > Leading value settings" of the virtual following axis.
+4. Switch to the configuration window "Technology object &gt; Configuration &gt; Leading value settings" of the virtual following axis.
 5. To show rows 2 to 8 in the table in the "Provision of leading value" area, select the "Show all transfer areas" check box.
 6. In the "Provide leading value" table column, select the check box of the corresponding transfer area.
 7. In the "Transfer area" table column, select in the drop-down list the CPU output tag created for the direct data exchange.
@@ -4730,7 +4730,7 @@ If an external leading value becomes invalid during a cross-PLC synchronous oper
 
 To configure the tolerance time, follow these steps:
 
-1. Open the configuration window "Technology object > Configuration > Leading value settings" of a leading axis proxy.
+1. Open the configuration window "Technology object &gt; Configuration &gt; Leading value settings" of a leading axis proxy.
 2. In the "Leading value monitoring" area, enter the tolerance time within which a valid leading value is expected in the "Tolerance time invalid leading value" input field.
 
    > **Note**
@@ -4863,35 +4863,35 @@ You can calculate and view the delay times in the interconnection overview. Alte
 
 To calculate the delay times, follow these steps:
 
-1. Open the configuration window "Technology object > Configuration > Leading value settings" of the leading axis.
+1. Open the configuration window "Technology object &gt; Configuration &gt; Leading value settings" of the leading axis.
 2. In the "Delay time of local leading value" area, select the "Allow system calculation" check box.
 3. Repeat steps 1 and 2 for all leading axis proxies and for all virtual following axes that are used as leading axis for additional cascades.
-4. Open the configuration window "Technology object > Configuration > Leading value interconnections" of a non-local following axis.
+4. Open the configuration window "Technology object &gt; Configuration &gt; Leading value interconnections" of a non-local following axis.
 5. For a leading axis proxy technology object of the table column with the symbol ![Calculating delay times](images/165349329163_DV_resource.Stream@PNG-de-DE.png), select whether this leading value interconnection should be taken into account when calculating the delay time.
 6. Repeat steps 4 and 5 for all other non-local following axes.
 7. To open the interconnection overview, click on the link "Interconnection overview".
 8. To calculate the delay times, click the "Calculate delay times" button in the interconnection overview.
 9. Check the calculated delay times in the columns "DT" of the interconnection overview.
-10. In the [routes](#showing-routes-s7-1500t), check whether a leading value is interpolated or extrapolated at the leading axis proxy (<TO>.StatusExternalLeadingValue.AdjustmentTime).
+10. In the [routes](#showing-routes-s7-1500t), check whether a leading value is interpolated or extrapolated at the leading axis proxy (&lt;TO&gt;.StatusExternalLeadingValue.AdjustmentTime).
 
 ##### Configuring delay times
 
 To adjust the delay time and, for example, take into account additional requirements from your special application, follow these steps:
 
-1. Open the configuration window "Technology object > Configuration > Leading value settings" of the leading axis.
+1. Open the configuration window "Technology object &gt; Configuration &gt; Leading value settings" of the leading axis.
 2. Clear the "Allow system calculation" check box in the "Delay time of local leading value" area.
 3. Enter the corresponding value in the "Delay time" input field.
 
-   The entered delay time determines the output delay of the leading value for the local following axes (<TO>.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime).
+   The entered delay time determines the output delay of the leading value for the local following axes (&lt;TO&gt;.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime).
 4. Repeat steps 1 to 3 for all virtual following axes that are used as the leading axis for additional cascades.
-5. Open the configuration window "Technology object > Configuration > Leading value settings" of a leading axis proxy.
+5. Open the configuration window "Technology object &gt; Configuration &gt; Leading value settings" of a leading axis proxy.
 6. Clear the "Allow system calculation" check box in the "Delay time of local leading value" area.
-7. In the "Delay time" (<TO>.Parameter.LocalLeadingValueDelayTime) input field, enter the same delay time that is set on the local virtual following axis that is used as the leading axis for an additional cascade.
+7. In the "Delay time" (&lt;TO&gt;.Parameter.LocalLeadingValueDelayTime) input field, enter the same delay time that is set on the local virtual following axis that is used as the leading axis for an additional cascade.
 
-   The entered delay time determines the output delay of the leading value for the local following axes (<TO>.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime).
+   The entered delay time determines the output delay of the leading value for the local following axes (&lt;TO&gt;.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime).
 8. To open the interconnection overview, click on the link "Interconnection overview".
 9. Check the delay times in the "DT" columns of the interconnection overview.
-10. In the [routes](#showing-routes-s7-1500t), check whether a leading value is interpolated or extrapolated at the leading axis proxy (<TO>.StatusExternalLeadingValue.AdjustmentTime).
+10. In the [routes](#showing-routes-s7-1500t), check whether a leading value is interpolated or extrapolated at the leading axis proxy (&lt;TO&gt;.StatusExternalLeadingValue.AdjustmentTime).
 
 ### Tags: Cross-PLC synchronous operation (S7-1500T)
 
@@ -4901,14 +4901,14 @@ The following tags of the positioning axis, synchronous axis and external encode
 
 | Tag | Description |  |
 | --- | --- | --- |
-| <TO>.CrossPlcSynchronousOperation.Interface[1..8].EnableLeadingValueOutput | Provide cross-PLC leading value |  |
+| &lt;TO&gt;.CrossPlcSynchronousOperation.Interface[1..8].EnableLeadingValueOutput | Provide cross-PLC leading value |  |
 | FALSE | No |  |
 | TRUE | Yes |  |
-| <TO>.CrossPlcSynchronousOperation.Interface[1..8].AddressOut | Output address for the telegram of cross-PLC synchronous operation |  |
-| <TO>.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime | Delay time for setpoint coupling with delayed leading value |  |
-| <TO>.StatusProvidedLeadingValue.DelayedLeadingValue.Position | Position of the provided leading value |  |
-| <TO>.StatusProvidedLeadingValue.DelayedLeadingValue.Velocity | Velocity of the provided leading value |  |
-| <TO>.StatusProvidedLeadingValue.DelayedLeadingValue.Acceleration | Acceleration of the provided leading value |  |
+| &lt;TO&gt;.CrossPlcSynchronousOperation.Interface[1..8].AddressOut | Output address for the telegram of cross-PLC synchronous operation |  |
+| &lt;TO&gt;.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime | Delay time for setpoint coupling with delayed leading value |  |
+| &lt;TO&gt;.StatusProvidedLeadingValue.DelayedLeadingValue.Position | Position of the provided leading value |  |
+| &lt;TO&gt;.StatusProvidedLeadingValue.DelayedLeadingValue.Velocity | Velocity of the provided leading value |  |
+| &lt;TO&gt;.StatusProvidedLeadingValue.DelayedLeadingValue.Acceleration | Acceleration of the provided leading value |  |
 
 #### Leading axis proxy
 
@@ -4916,24 +4916,24 @@ The following leading axis proxy technology object tags are relevant for cross-P
 
 | Tag | Description |  |
 | --- | --- | --- |
-| <TO>.Position | Position of the leading value for local synchronous operation |  |
-| <TO>.Velocity | Velocity of the leading value for local synchronous operation |  |
-| <TO>.Acceleration | Acceleration of the leading value for local synchronous operation |  |
-| <TO>.Interface.AddressIn | Input address for the telegram of the external leading value |  |
-| <TO>.Parameter.LocalLeadingValueDelayTime | Delay time of leading value output on the local following axis which, in turn, provides a leading value |  |
-| <TO>.Parameter.ToleranceTimeExternalLeadingValueInvalid | Tolerance time until a technology alarm is triggered when the external leading value becomes invalid |  |
-| <TO>.StatusExternalLeadingValue.ModuloLength | Modulo length of the external leading value |  |
-| <TO>.StatusExternalLeadingValue.ModuloStartValue | Modulo start value of the external leading value |  |
-| <TO>.StatusExternalLeadingValue.AdjustmentTime | Time by which the external leading value is adjusted |  |
-| < 0 | The external leading value is interpolated by this time. |  |
-| > 0 | The external leading value is extrapolated by this time. |  |
-| <TO>.StatusWord.X4 (LeadingValueValid) | Validity of the external leading value |  |
+| &lt;TO&gt;.Position | Position of the leading value for local synchronous operation |  |
+| &lt;TO&gt;.Velocity | Velocity of the leading value for local synchronous operation |  |
+| &lt;TO&gt;.Acceleration | Acceleration of the leading value for local synchronous operation |  |
+| &lt;TO&gt;.Interface.AddressIn | Input address for the telegram of the external leading value |  |
+| &lt;TO&gt;.Parameter.LocalLeadingValueDelayTime | Delay time of leading value output on the local following axis which, in turn, provides a leading value |  |
+| &lt;TO&gt;.Parameter.ToleranceTimeExternalLeadingValueInvalid | Tolerance time until a technology alarm is triggered when the external leading value becomes invalid |  |
+| &lt;TO&gt;.StatusExternalLeadingValue.ModuloLength | Modulo length of the external leading value |  |
+| &lt;TO&gt;.StatusExternalLeadingValue.ModuloStartValue | Modulo start value of the external leading value |  |
+| &lt;TO&gt;.StatusExternalLeadingValue.AdjustmentTime | Time by which the external leading value is adjusted |  |
+| &lt; 0 | The external leading value is interpolated by this time. |  |
+| &gt; 0 | The external leading value is extrapolated by this time. |  |
+| &lt;TO&gt;.StatusWord.X4 (LeadingValueValid) | Validity of the external leading value |  |
 | 0 | Leading value does not exist or is not valid |  |
 | 1 | Leading value exists and is valid |  |
-| <TO>.StatusWord.X5 (LeadingValueModulo) | Modulo functionality |  |
+| &lt;TO&gt;.StatusWord.X5 (LeadingValueModulo) | Modulo functionality |  |
 | 0 | Leading value without modulo functionality |  |
 | 1 | Leading value with modulo functionality |  |
-| <TO>.StatusWord.X6 (LeadingAxisControl) | Follow-up mode |  |
+| &lt;TO&gt;.StatusWord.X6 (LeadingAxisControl) | Follow-up mode |  |
 | 0 | Leading axis in follow-up mode |  |
 | 1 | Leading axis not in follow-up mode |  |
 
@@ -4968,7 +4968,7 @@ This section contains information on the following topics:
 
 #### Status and error bits (S7-1500, S7-1500T)
 
-You use the "Technology object > Diagnostics > Status and error bits" diagnostic function in the TIA Portal to monitor the status and error messages for the technology object. The diagnostics function is available in online operation.
+You use the "Technology object &gt; Diagnostics &gt; Status and error bits" diagnostic function in the TIA Portal to monitor the status and error messages for the technology object. The diagnostics function is available in online operation.
 
 The meaning of the status and error messages is described in the following tables. The associated technology object tag is given in parentheses.
 
@@ -4978,20 +4978,20 @@ The following table shows the possible axis status values:
 
 | Status | Description |
 | --- | --- |
-| Simulation active | The axis is simulated in the CPU or used as the virtual axis. Setpoints are not output to the drive.  (<TO>.StatusWord.X25 (AxisSimulation)) |
-| Enabled | The technology object has been enabled. You can move the axis with motion jobs.  (<TO>.StatusWord.X0 (Enable)) |
-| Position-controlled mode | The axis is in position-controlled mode.  (Inversion of <TO>.StatusWord.X28 (NonPositionControlled)) |
-| Homed | The technology object is homed. The relationship between the position in the technology object and the mechanical position was successfully created.  (<TO>.StatusWord.X5 (HomingDone)) |
-| Error | An error occurred at the technology object. Detailed information about the error is available in the "Error" area and in the "<TO>.ErrorDetail.Number" and "<TO>.ErrorDetail.Reaction" tags of the technology object.   (<TO>.StatusWord.X1 (Error)) |
-| Restart active | The technology object is reinitialized.  (<TO>.StatusWord.X2 (RestartActive)) |
-| Axis control panel enabled | The axis control panel is active. The axis control panel has master control over the technology object. You cannot control the axis from the user program.  (<TO>.StatusWord.X4 (ControlPanelActive)) |
-| Drive ready | Drive is ready to execute setpoints.  (<TO>.StatusDrive.InOperation) |
-| Encoder values valid | The actual encoder values are valid.  (<TO>.StatusSensor[1].State) |
-| Encoder values valid (S7‑1500T) | The actual encoder values of encoder 1, encoder 2, encoder 3 or encoder 4 are valid.  (<TO>.StatusSensor[1..4].State) |
-| Active encoder (S7‑1500T) | The encoder in effect operationally is encoder 1, encoder 2, encoder 3 or encoder 4.  (<TO>.OperativeSensor) |
-| Encoder values homed | Encoder is homed with one of the following homing types:  - Active homing - Passive homing - Absolute encoder adjustment - Incremental encoder adjustment   (<TO>.StatusSensor[1].Adjusted) |
-| Encoder homed (S7-1500T) | Encoder 1, encoder 2, encoder 3 or encoder 4 is homed with one of the following homing types:  - Active homing - Passive homing - Absolute encoder adjustment - Incremental encoder adjustment   (<TO>.StatusSensor[1..4].Adjusted) |
-| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (<TO>.StatusWord.X3 (OnlineStartValuesChanged)) |
+| Simulation active | The axis is simulated in the CPU or used as the virtual axis. Setpoints are not output to the drive.  (&lt;TO&gt;.StatusWord.X25 (AxisSimulation)) |
+| Enabled | The technology object has been enabled. You can move the axis with motion jobs.  (&lt;TO&gt;.StatusWord.X0 (Enable)) |
+| Position-controlled mode | The axis is in position-controlled mode.  (Inversion of &lt;TO&gt;.StatusWord.X28 (NonPositionControlled)) |
+| Homed | The technology object is homed. The relationship between the position in the technology object and the mechanical position was successfully created.  (&lt;TO&gt;.StatusWord.X5 (HomingDone)) |
+| Error | An error occurred at the technology object. Detailed information about the error is available in the "Error" area and in the "&lt;TO&gt;.ErrorDetail.Number" and "&lt;TO&gt;.ErrorDetail.Reaction" tags of the technology object.   (&lt;TO&gt;.StatusWord.X1 (Error)) |
+| Restart active | The technology object is reinitialized.  (&lt;TO&gt;.StatusWord.X2 (RestartActive)) |
+| Axis control panel enabled | The axis control panel is active. The axis control panel has master control over the technology object. You cannot control the axis from the user program.  (&lt;TO&gt;.StatusWord.X4 (ControlPanelActive)) |
+| Drive ready | Drive is ready to execute setpoints.  (&lt;TO&gt;.StatusDrive.InOperation) |
+| Encoder values valid | The actual encoder values are valid.  (&lt;TO&gt;.StatusSensor[1].State) |
+| Encoder values valid (S7‑1500T) | The actual encoder values of encoder 1, encoder 2, encoder 3 or encoder 4 are valid.  (&lt;TO&gt;.StatusSensor[1..4].State) |
+| Active encoder (S7‑1500T) | The encoder in effect operationally is encoder 1, encoder 2, encoder 3 or encoder 4.  (&lt;TO&gt;.OperativeSensor) |
+| Encoder values homed | Encoder is homed with one of the following homing types:  - Active homing - Passive homing - Absolute encoder adjustment - Incremental encoder adjustment   (&lt;TO&gt;.StatusSensor[1].Adjusted) |
+| Encoder homed (S7-1500T) | Encoder 1, encoder 2, encoder 3 or encoder 4 is homed with one of the following homing types:  - Active homing - Passive homing - Absolute encoder adjustment - Incremental encoder adjustment   (&lt;TO&gt;.StatusSensor[1..4].Adjusted) |
+| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (&lt;TO&gt;.StatusWord.X3 (OnlineStartValuesChanged)) |
 
 ##### Status limit switch
 
@@ -4999,10 +4999,10 @@ The following table shows the possibilities for enabling the software and hardwa
 
 | Status | Description |
 | --- | --- |
-| Negative SW limit switch approached | The negative software limit switch has been approached.  (<TO>.StatusWord.X15 (SWLimitMinActive)) |
-| Positive SW limit switch approached | The positive software limit switch has been approached.  (<TO>.StatusWord.X16 (SWLimitMaxActive)) |
-| Negative HW limit switch approached | The negative hardware limit switch has been approached or overtraveled.  (<TO>.StatusWord.X17 (HWLimitMinActive)) |
-| Positive HW limit switch approached | The positive hardware limit switch has been approached or overtraveled.  (<TO>.StatusWord.X18 (HWLimitMaxActive)) |
+| Negative SW limit switch approached | The negative software limit switch has been approached.  (&lt;TO&gt;.StatusWord.X15 (SWLimitMinActive)) |
+| Positive SW limit switch approached | The positive software limit switch has been approached.  (&lt;TO&gt;.StatusWord.X16 (SWLimitMaxActive)) |
+| Negative HW limit switch approached | The negative hardware limit switch has been approached or overtraveled.  (&lt;TO&gt;.StatusWord.X17 (HWLimitMinActive)) |
+| Positive HW limit switch approached | The positive hardware limit switch has been approached or overtraveled.  (&lt;TO&gt;.StatusWord.X18 (HWLimitMaxActive)) |
 
 ##### Motion status
 
@@ -5010,33 +5010,33 @@ The following table shows the possible axis motion status values:
 
 | Status | Description |
 | --- | --- |
-| Done (no job running) | No job active at technology object.  (<TO>.StatusWord.X6 (Done)) |
-| Homing job | The technology object executes a homing job of the Motion Control instruction "MC_Home" or from the axis control panel.  (<TO>.StatusWord.X11 (HomingCommand)) |
-| Jog | The axis is being moved with a job for jog mode of Motion Control instruction "MC_MoveJog".  (<TO>.StatusWord.X9 (JogCommand)) |
-| Velocity specification | The axis is traversed with a job with velocity specification of the Motion Control instruction "MC_MoveVelocity" or from the axis control panel.  (<TO>.StatusWord.X10 (VelocityCommand)) |
-| Positioning job | The axis is traversed with a positioning job of Motion Control instruction "MC_MoveAbsolute" or "MC_MoveRelative" or from the axis control panel.  (<TO>.StatusWord.X8 (PositioningCommand)) |
-| Constant velocity | The axis is moved with constant velocity or is stationary.  (<TO>.StatusWord.X12 (ConstantVelocity)) |
-| Standstill | The axis is at a standstill.  (<TO>.StatusWord.X7 (StandStill)) |
-| Accelerating | Axis is being accelerated.  (<TO>.StatusWord.X13 (Accelerating)) |
-| Decelerating | The axis is being decelerated.  (<TO>.StatusWord.X14 (Decelerating)) |
-| Torque limit active | At least the threshold value (default 90%) of the preset force/torque limitation acts on the axis.  (<TO>.StatusWord.X27 (InLimitation)) |
-| Stop job active | The axis is stopped and disabled by Motion Control instruction "MC_Stop".  (<TO>.StatusWord2.X0 (StopCommand)) |
-| Superimposed motion | The motion of the axis is superimposed by at least one overlapping Motion Control instruction (OR logic operation).  (<TO>.StatusWord.X23 (MoveSuperimposedCommand);  <TO>.StatusWord2.X6 (MotionInSuperimposedCommand);  <TO>.StatusWord2.X7 (HaltSuperimposedCommand)) |
+| Done (no job running) | No job active at technology object.  (&lt;TO&gt;.StatusWord.X6 (Done)) |
+| Homing job | The technology object executes a homing job of the Motion Control instruction "MC_Home" or from the axis control panel.  (&lt;TO&gt;.StatusWord.X11 (HomingCommand)) |
+| Jog | The axis is being moved with a job for jog mode of Motion Control instruction "MC_MoveJog".  (&lt;TO&gt;.StatusWord.X9 (JogCommand)) |
+| Velocity specification | The axis is traversed with a job with velocity specification of the Motion Control instruction "MC_MoveVelocity" or from the axis control panel.  (&lt;TO&gt;.StatusWord.X10 (VelocityCommand)) |
+| Positioning job | The axis is traversed with a positioning job of Motion Control instruction "MC_MoveAbsolute" or "MC_MoveRelative" or from the axis control panel.  (&lt;TO&gt;.StatusWord.X8 (PositioningCommand)) |
+| Constant velocity | The axis is moved with constant velocity or is stationary.  (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity)) |
+| Standstill | The axis is at a standstill.  (&lt;TO&gt;.StatusWord.X7 (StandStill)) |
+| Accelerating | Axis is being accelerated.  (&lt;TO&gt;.StatusWord.X13 (Accelerating)) |
+| Decelerating | The axis is being decelerated.  (&lt;TO&gt;.StatusWord.X14 (Decelerating)) |
+| Torque limit active | At least the threshold value (default 90%) of the preset force/torque limitation acts on the axis.  (&lt;TO&gt;.StatusWord.X27 (InLimitation)) |
+| Stop job active | The axis is stopped and disabled by Motion Control instruction "MC_Stop".  (&lt;TO&gt;.StatusWord2.X0 (StopCommand)) |
+| Superimposed motion | The motion of the axis is superimposed by at least one overlapping Motion Control instruction (OR logic operation).  (&lt;TO&gt;.StatusWord.X23 (MoveSuperimposedCommand);  &lt;TO&gt;.StatusWord2.X6 (MotionInSuperimposedCommand);  &lt;TO&gt;.StatusWord2.X7 (HaltSuperimposedCommand)) |
 
 ##### Synchronous operation status
 
 | Status | Description |
 | --- | --- |
-| Synchronization | The axis is synchronized to the leading value of a leading axis.  (<TO>.StatusWord.X21 (Synchronizing)) |
-| Synchronous | The axis is synchronized and moves synchronously to the leading axis.  (<TO>.StatusWord.X22 (Synchronous)) |
-| Desynchronization (S7‑1500T) | The axis is desynchronized from the leading value of a leading axis.  (<TO>.StatusWord2.X1 (DesynchronizingCommand)) |
-| Synchronization pending (S7‑1500T) | A synchronous operation is pending until the leading value reaches the start position for synchronization.  (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 2 or 3) |
-| Desynchronization pending (S7‑1500T) | A desynchronization job is pending until the leading value reaches the start position for desynchronization.  (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 4 or 5) |
-| Additive leading value active (S7‑1500T) | The axis receives an additive leading value with the Motion Control instruction "MC_LeadingValueAdditive".  (<TO>.StatusSynchronizedMotion.StatusWord.X4 (LeadingValueAdditiveCommand)) |
-| Leading value offset (S7-1500T) | The leading value is shifted with the Motion Control instruction "MC_PhasingAbsolute" or "MC_PhasingRelative".  (<TO>.StatusWord.X24 (PhasingCommand)) |
-| Leading value offset pending (S7‑1500T) | A job for leading value offset is waiting.  (<TO>.StatusWord2.X3 (PhasingCommandWaiting)) |
-| Following value offset (S7-1500T) | The following value is shifted with the Motion Control instruction "MC_OffsetAbsolute" or "MC_OffsetRelative".  (<TO>.StatusWord2.X4 (OffsetCommand)) |
-| Following value offset is pending (S7‑1500T) | A job for following value offset is waiting.  (<TO>.StatusWord2.X5 (OffsetCommandWaiting)) |
+| Synchronization | The axis is synchronized to the leading value of a leading axis.  (&lt;TO&gt;.StatusWord.X21 (Synchronizing)) |
+| Synchronous | The axis is synchronized and moves synchronously to the leading axis.  (&lt;TO&gt;.StatusWord.X22 (Synchronous)) |
+| Desynchronization (S7‑1500T) | The axis is desynchronized from the leading value of a leading axis.  (&lt;TO&gt;.StatusWord2.X1 (DesynchronizingCommand)) |
+| Synchronization pending (S7‑1500T) | A synchronous operation is pending until the leading value reaches the start position for synchronization.  (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 2 or 3) |
+| Desynchronization pending (S7‑1500T) | A desynchronization job is pending until the leading value reaches the start position for desynchronization.  (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 4 or 5) |
+| Additive leading value active (S7‑1500T) | The axis receives an additive leading value with the Motion Control instruction "MC_LeadingValueAdditive".  (&lt;TO&gt;.StatusSynchronizedMotion.StatusWord.X4 (LeadingValueAdditiveCommand)) |
+| Leading value offset (S7-1500T) | The leading value is shifted with the Motion Control instruction "MC_PhasingAbsolute" or "MC_PhasingRelative".  (&lt;TO&gt;.StatusWord.X24 (PhasingCommand)) |
+| Leading value offset pending (S7‑1500T) | A job for leading value offset is waiting.  (&lt;TO&gt;.StatusWord2.X3 (PhasingCommandWaiting)) |
+| Following value offset (S7-1500T) | The following value is shifted with the Motion Control instruction "MC_OffsetAbsolute" or "MC_OffsetRelative".  (&lt;TO&gt;.StatusWord2.X4 (OffsetCommand)) |
+| Following value offset is pending (S7‑1500T) | A job for following value offset is waiting.  (&lt;TO&gt;.StatusWord2.X5 (OffsetCommandWaiting)) |
 
 ##### Error
 
@@ -5044,23 +5044,23 @@ The following table shows the possible errors:
 
 | Error | Description |
 | --- | --- |
-| System | A system-internal error has occurred.  (<TO>.ErrorWord.X0 (SystemFault)) |
-| Configuration | A configuration error has occurred.  One or more configuration parameters are inconsistent or invalid.  The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (<TO>.ErrorWord.X1 (ConfigFault)) |
-| User program | An error occurred in the user program with a Motion Control instruction or its use.  (<TO>.ErrorWord.X2 (UserFault)) |
-| Drive | An error occurred in the drive.  (<TO>.ErrorWord.X4 (DriveFault)) |
-| Encoder | An error occurred in the encoder system.  (<TO>.StatusSensor[1].Error) |
-| Encoder (S7‑1500T) | An error has occurred in the encoder system of encoder 1, encoder 2, encoder 3 or encoder 4.  (<TO>.StatusSensor[1..4].Error) |
-| Data exchange | Communication with a connected device is faulty.  (<TO>.ErrorWord.X7 (CommunicationFault)) |
-| I/O | An error occurred accessing a logical address.  (<TO>.ErrorWord.X13 (PeripheralError)) |
-| Job rejected | A job cannot be executed.  You cannot execute a Motion Control instruction because necessary requirements are not fulfilled (for example, technology object not homed).  (<TO>.ErrorWord.X3 (CommandNotAccepted)) |
-| Homing | An error occurred during a homing process.  (<TO>.ErrorWord.X10 (HomingFault)) |
-| Positioning | The positioning axis was not positioned correctly at the end of a positioning motion.  (<TO>.ErrorWord.X12 (PositioningFault)) |
-| Dynamic limitation | The dynamic values are limited to the dynamic limits.  (<TO>.ErrorWord.X6 (DynamicError)) |
-| Following error | The maximum permitted following error has been exceeded.  (<TO>.ErrorWord.X11 (FollowingErrorFault)) |
-| SW limit switch | A software limit switch has been reached.  (<TO>.ErrorWord.X8 (SWLimit)) |
-| HW limit switch | A hardware limit switch has been reached or overtraveled.  (<TO>.ErrorWord.X9 (HWLimit)) |
-| Adapt | An error occurred during data adaption.  (<TO>.ErrorWord.X15 (AdaptionError)) |
-| Synchronization | An error occurred during synchronization. The leading axis specified for the corresponding Motion Control instruction was not configured as a possible leading axis.  (<TO>.ErrorWord.X14 (SynchronousError)) |
+| System | A system-internal error has occurred.  (&lt;TO&gt;.ErrorWord.X0 (SystemFault)) |
+| Configuration | A configuration error has occurred.  One or more configuration parameters are inconsistent or invalid.  The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (&lt;TO&gt;.ErrorWord.X1 (ConfigFault)) |
+| User program | An error occurred in the user program with a Motion Control instruction or its use.  (&lt;TO&gt;.ErrorWord.X2 (UserFault)) |
+| Drive | An error occurred in the drive.  (&lt;TO&gt;.ErrorWord.X4 (DriveFault)) |
+| Encoder | An error occurred in the encoder system.  (&lt;TO&gt;.StatusSensor[1].Error) |
+| Encoder (S7‑1500T) | An error has occurred in the encoder system of encoder 1, encoder 2, encoder 3 or encoder 4.  (&lt;TO&gt;.StatusSensor[1..4].Error) |
+| Data exchange | Communication with a connected device is faulty.  (&lt;TO&gt;.ErrorWord.X7 (CommunicationFault)) |
+| I/O | An error occurred accessing a logical address.  (&lt;TO&gt;.ErrorWord.X13 (PeripheralError)) |
+| Job rejected | A job cannot be executed.  You cannot execute a Motion Control instruction because necessary requirements are not fulfilled (for example, technology object not homed).  (&lt;TO&gt;.ErrorWord.X3 (CommandNotAccepted)) |
+| Homing | An error occurred during a homing process.  (&lt;TO&gt;.ErrorWord.X10 (HomingFault)) |
+| Positioning | The positioning axis was not positioned correctly at the end of a positioning motion.  (&lt;TO&gt;.ErrorWord.X12 (PositioningFault)) |
+| Dynamic limitation | The dynamic values are limited to the dynamic limits.  (&lt;TO&gt;.ErrorWord.X6 (DynamicError)) |
+| Following error | The maximum permitted following error has been exceeded.  (&lt;TO&gt;.ErrorWord.X11 (FollowingErrorFault)) |
+| SW limit switch | A software limit switch has been reached.  (&lt;TO&gt;.ErrorWord.X8 (SWLimit)) |
+| HW limit switch | A hardware limit switch has been reached or overtraveled.  (&lt;TO&gt;.ErrorWord.X9 (HWLimit)) |
+| Adapt | An error occurred during data adaption.  (&lt;TO&gt;.ErrorWord.X15 (AdaptionError)) |
+| Synchronization | An error occurred during synchronization. The leading axis specified for the corresponding Motion Control instruction was not configured as a possible leading axis.  (&lt;TO&gt;.ErrorWord.X14 (SynchronousError)) |
 
 ##### Warnings
 
@@ -5068,10 +5068,10 @@ The following table shows the possible warnings:
 
 | Warning | Description |
 | --- | --- |
-| Configuration | One or several configuration parameters are adjusted internally at a certain time.  (<TO>.WarningWord.X1 (ConfigWarning)) |
-| Job rejected | Job cannot be executed.  You cannot execute a Motion Control instruction because necessary requirements are not fulfilled.  (<TO>.WarningWord.X3 (CommandNotAccepted)) |
-| Dynamic limitation | The dynamic values are limited to the dynamic limits.  (<TO>.WarningWord.X6 (DynamicWarning)) |
-| Synchronization | An error occurred during synchronization. The leading axis specified for the corresponding Motion Control instruction was not configured as a possible leading axis.  (<TO>.WarningWord.X14 (SynchronousWarning)) |
+| Configuration | One or several configuration parameters are adjusted internally at a certain time.  (&lt;TO&gt;.WarningWord.X1 (ConfigWarning)) |
+| Job rejected | Job cannot be executed.  You cannot execute a Motion Control instruction because necessary requirements are not fulfilled.  (&lt;TO&gt;.WarningWord.X3 (CommandNotAccepted)) |
+| Dynamic limitation | The dynamic values are limited to the dynamic limits.  (&lt;TO&gt;.WarningWord.X6 (DynamicWarning)) |
+| Synchronization | An error occurred during synchronization. The leading axis specified for the corresponding Motion Control instruction was not configured as a possible leading axis.  (&lt;TO&gt;.WarningWord.X14 (SynchronousWarning)) |
 
 ##### Alarm display
 
@@ -5083,7 +5083,7 @@ An option for evaluating the individual status bits can be found in the section 
 
 #### Motion status (S7-1500, S7-1500T)
 
-You use the "Technology object > Diagnostics > Motion status" diagnostic function in the TIA Portal to monitor the motion status of the axis. The diagnostics function is available in online operation.
+You use the "Technology object &gt; Diagnostics &gt; Motion status" diagnostic function in the TIA Portal to monitor the motion status of the axis. The diagnostics function is available in online operation.
 
 ##### "Setpoints" area
 
@@ -5091,10 +5091,10 @@ The following table shows the meaning of the status data:
 
 | Status | Description |
 | --- | --- |
-| Target position | Current target position of an active positioning job  The target position value is only valid during execution of a positioning job.  (<TO>.StatusPositioning.TargetPosition) |
-| Position setpoint | Setpoint position of the axis  (<TO>.Position) |
-| Velocity setpoint | Velocity setpoint of the axis  (<TO>.Velocity) |
-| Velocity override | Percentage correction of the velocity specification  The velocity setpoint specified in Motion Control instructions or set by the axis control panel is superimposed with an override signal and corrected as a percentage. Valid velocity correction values range from 0.0 % to 200.0 %.  (<TO>.Override.Velocity) |
+| Target position | Current target position of an active positioning job  The target position value is only valid during execution of a positioning job.  (&lt;TO&gt;.StatusPositioning.TargetPosition) |
+| Position setpoint | Setpoint position of the axis  (&lt;TO&gt;.Position) |
+| Velocity setpoint | Velocity setpoint of the axis  (&lt;TO&gt;.Velocity) |
+| Velocity override | Percentage correction of the velocity specification  The velocity setpoint specified in Motion Control instructions or set by the axis control panel is superimposed with an override signal and corrected as a percentage. Valid velocity correction values range from 0.0 % to 200.0 %.  (&lt;TO&gt;.Override.Velocity) |
 
 ##### "Current values" area
 
@@ -5102,10 +5102,10 @@ The following table shows the meaning of the status data:
 
 | Status | Description |
 | --- | --- |
-| Operative encoder | Operative encoder of the axis  (<TO>.OperativeSensor) |
-| Actual position | Actual position of the axis  If the technology object is not homed, then the value is displayed relative to the position that existed when the technology object was enabled.   (<TO>.ActualPosition) |
-| Actual velocity | Actual velocity of the axis  (<TO>.ActualVelocity) |
-| Following error | Following error of the axis  (<TO>.StatusPositioning.FollowingError) |
+| Operative encoder | Operative encoder of the axis  (&lt;TO&gt;.OperativeSensor) |
+| Actual position | Actual position of the axis  If the technology object is not homed, then the value is displayed relative to the position that existed when the technology object was enabled.   (&lt;TO&gt;.ActualPosition) |
+| Actual velocity | Actual velocity of the axis  (&lt;TO&gt;.ActualVelocity) |
+| Following error | Following error of the axis  (&lt;TO&gt;.StatusPositioning.FollowingError) |
 
 ##### "Dynamic limits" area
 
@@ -5115,14 +5115,14 @@ The following table shows the meaning of the status data:
 
 | Status | Description |
 | --- | --- |
-| Velocity | Configured maximum velocity  (<TO>.DynamicLimits.MaxVelocity) |
-| Acceleration | Configured maximum acceleration  (<TO>.DynamicLimits.MaxAcceleration) |
-| Deceleration | Configured maximum deceleration  (<TO>.DynamicLimits.MaxDeceleration) |
-| Jerk | Configured maximum jerk  (<TO>.DynamicLimits.MaxJerk) |
+| Velocity | Configured maximum velocity  (&lt;TO&gt;.DynamicLimits.MaxVelocity) |
+| Acceleration | Configured maximum acceleration  (&lt;TO&gt;.DynamicLimits.MaxAcceleration) |
+| Deceleration | Configured maximum deceleration  (&lt;TO&gt;.DynamicLimits.MaxDeceleration) |
+| Jerk | Configured maximum jerk  (&lt;TO&gt;.DynamicLimits.MaxJerk) |
 
 #### PROFIdrive telegram (S7-1500, S7-1500T)
 
-The "Technology object > Diagnostics > PROFIdrive telegram" diagnostics function is used in the TIA Portal to monitor the PROFIdrive telegrams returned by the drive and encoder. The display of the Diagnostics function is available in online operation.
+The "Technology object &gt; Diagnostics &gt; PROFIdrive telegram" diagnostics function is used in the TIA Portal to monitor the PROFIdrive telegrams returned by the drive and encoder. The display of the Diagnostics function is available in online operation.
 
 ##### "Drive" area
 
@@ -5171,11 +5171,11 @@ The cam diagnostics in TIA Portal interpolates the current technology object dat
 
 The following parameters are taken into account during interpolation.
 
-- <TO>.Point[i]
-- <TO>.Segment[i]
-- <TO>.VaildPoint[i]
-- <TO>.ValidSegment[i]
-- <TO>.InterpolationSettings
+- &lt;TO&gt;.Point[i]
+- &lt;TO&gt;.Segment[i]
+- &lt;TO&gt;.VaildPoint[i]
+- &lt;TO&gt;.ValidSegment[i]
+- &lt;TO&gt;.InterpolationSettings
 
 > **Note**
 >
@@ -5185,7 +5185,7 @@ The following parameters are taken into account during interpolation.
 
 You can call the diagnostics as follows:
 
-- Project tree > Project> Technology objects > Cam > Diagnostics
+- Project tree &gt; Project&gt; Technology objects &gt; Cam &gt; Diagnostics
 
 ##### Possible offline applications
 
@@ -5276,12 +5276,12 @@ The toolbar at the top of the curve diagram provides the following functions via
 
 | Symbol | Function | Description |
 | --- | --- | --- |
-| ![Curve diagram](images/165344566027_DV_resource.Stream@PNG-de-DE.png) | Move view | Moving the view using the drag-and-drop feature   To switch from any tool to the "Move view" tool, press the <Esc> key. |
+| ![Curve diagram](images/165344566027_DV_resource.Stream@PNG-de-DE.png) | Move view | Moving the view using the drag-and-drop feature   To switch from any tool to the "Move view" tool, press the &lt;Esc&gt; key. |
 | ![Curve diagram](images/165344684811_DV_resource.Stream@PNG-de-DE.png) | Activate zoom selection | Zoom into selected area |
-| ![Curve diagram](images/165344688395_DV_resource.Stream@PNG-de-DE.png) | Activate vertical zoom | Vertical zoom into selected area without horizontal scaling  Alternative: <Ctrl> +drag to ordinate keeping mouse button pressed |
-| ![Curve diagram](images/165344691979_DV_resource.Stream@PNG-de-DE.png) | Activate horizontal zoom | Horizontal zoom into selected area without vertical scaling  Alternative: <Ctrl> +drag to abscissa keeping mouse button pressed |
-| ![Curve diagram](images/165344699147_DV_resource.Stream@PNG-de-DE.png) | Zoom in | Enlargement of the display  Alternative: <Ctrl> + mouse wheel up in curve diagram |
-| ![Curve diagram](images/165344703115_DV_resource.Stream@PNG-de-DE.png) | Zoom out | Reduction of the display  Alternative: <Ctrl> + mouse wheel down in curve diagram |
+| ![Curve diagram](images/165344688395_DV_resource.Stream@PNG-de-DE.png) | Activate vertical zoom | Vertical zoom into selected area without horizontal scaling  Alternative: &lt;Ctrl&gt; +drag to ordinate keeping mouse button pressed |
+| ![Curve diagram](images/165344691979_DV_resource.Stream@PNG-de-DE.png) | Activate horizontal zoom | Horizontal zoom into selected area without vertical scaling  Alternative: &lt;Ctrl&gt; +drag to abscissa keeping mouse button pressed |
+| ![Curve diagram](images/165344699147_DV_resource.Stream@PNG-de-DE.png) | Zoom in | Enlargement of the display  Alternative: &lt;Ctrl&gt; + mouse wheel up in curve diagram |
+| ![Curve diagram](images/165344703115_DV_resource.Stream@PNG-de-DE.png) | Zoom out | Reduction of the display  Alternative: &lt;Ctrl&gt; + mouse wheel down in curve diagram |
 | ![Curve diagram](images/165344695563_DV_resource.Stream@PNG-de-DE.png) | Show all | Display of entire definition and value range |
 | ![Curve diagram](images/165345196299_DV_resource.Stream@PNG-de-DE.png) | Zoom into curve | Zoom to the following value range of the curve that you selected in the legend of the chart |
 | ![Curve diagram](images/165345276683_DV_resource.Stream@PNG-de-DE.png) | View: A chart with positions | Display of one chart with the following curves of the cam opened in the diagnostics:   - Position specification - Effective position |
@@ -5331,14 +5331,14 @@ The following table shows the possible statuses of the cam:
 
 | Status | Description |
 | --- | --- |
-| In use | The cam is used.  (<TO>.StatusWord.X0 (Control)) |
-| Error | An error occurred at the technology object.  Detailed information about the error is available in the "Error" area and in the "<TO>.ErrorDetail.Number" and "<TO>.ErrorDetail.Reaction" tags of the technology object.  (<TO>.StatusWord.X1 (Error)) |
-| Restart active | The technology object is being reinitialized.  (<TO>.StatusWord.X2 (RestartActive)) |
-| Copy operation active | A copy operation of an "MC_CopyCamData" job is active.  (<TO>.StatusWord.X7 (CopyCamDataActive)) |
-| Definition changed | The definition range of the cam has changed in the technology data block.  (<TO>.StatusWord.X4 (CamDataChanged)) |
-| Interpolated | The cam is interpolated.  (<TO>.StatusWord.X5 (Interpolated)) |
-| In interpolation | The cam is interpolated.  (<TO>.StatusWord.X6 (InInterpolation)) |
-| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (<TO>.StatusWord.X3 (OnlineStartValuesChanged)) |
+| In use | The cam is used.  (&lt;TO&gt;.StatusWord.X0 (Control)) |
+| Error | An error occurred at the technology object.  Detailed information about the error is available in the "Error" area and in the "&lt;TO&gt;.ErrorDetail.Number" and "&lt;TO&gt;.ErrorDetail.Reaction" tags of the technology object.  (&lt;TO&gt;.StatusWord.X1 (Error)) |
+| Restart active | The technology object is being reinitialized.  (&lt;TO&gt;.StatusWord.X2 (RestartActive)) |
+| Copy operation active | A copy operation of an "MC_CopyCamData" job is active.  (&lt;TO&gt;.StatusWord.X7 (CopyCamDataActive)) |
+| Definition changed | The definition range of the cam has changed in the technology data block.  (&lt;TO&gt;.StatusWord.X4 (CamDataChanged)) |
+| Interpolated | The cam is interpolated.  (&lt;TO&gt;.StatusWord.X5 (Interpolated)) |
+| In interpolation | The cam is interpolated.  (&lt;TO&gt;.StatusWord.X6 (InInterpolation)) |
+| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (&lt;TO&gt;.StatusWord.X3 (OnlineStartValuesChanged)) |
 
 ##### Error
 
@@ -5346,10 +5346,10 @@ The following table shows the possible errors:
 
 | Error | Description |
 | --- | --- |
-| System | A system-internal error has occurred.  (<TO>.ErrorWord.X0 (SystemFault)) |
-| Configuration | A configuration error has occurred. One or more configuration parameters are inconsistent or invalid. The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (<TO>.ErrorWord.X1 (ConfigFault)) |
-| User program | An error in a Motion Control instruction or during its use has occurred in the user program.  (<TO>.ErrorWord.X2 (UserFault)) |
-| Job rejected | A job cannot be executed. You cannot execute a Motion Control instruction because necessary requirements are not fulfilled.  (<TO>.ErrorWord.X3 (CommandNotAccepted)) |
+| System | A system-internal error has occurred.  (&lt;TO&gt;.ErrorWord.X0 (SystemFault)) |
+| Configuration | A configuration error has occurred. One or more configuration parameters are inconsistent or invalid. The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (&lt;TO&gt;.ErrorWord.X1 (ConfigFault)) |
+| User program | An error in a Motion Control instruction or during its use has occurred in the user program.  (&lt;TO&gt;.ErrorWord.X2 (UserFault)) |
+| Job rejected | A job cannot be executed. You cannot execute a Motion Control instruction because necessary requirements are not fulfilled.  (&lt;TO&gt;.ErrorWord.X3 (CommandNotAccepted)) |
 
 You can access the alarm display via the ![Error](images/165349574539_DV_resource.Stream@PNG-de-DE.png) icon.
 
@@ -5359,10 +5359,10 @@ The following table shows the possible warnings:
 
 | Warning | Description |
 | --- | --- |
-| System | A system-internal error has occurred.  (<TO>.WarningWord.X0 (SystemWarning)) |
-| Configuration | One or more configuration parameters will be temporarily adjusted internally.  (<TO>.WarningWord.X1 (ConfigWarning)) |
-| User program | An error in a Motion Control instruction or during its use has occurred in the user program.  (<TO>.WarningWord.X2 (UserWarning)) |
-| Job rejected | Job cannot be executed. You cannot execute a Motion Control instruction because necessary requirements are not fulfilled.  (<TO>.WarningWord.X3 (CommandNotAccepted)) |
+| System | A system-internal error has occurred.  (&lt;TO&gt;.WarningWord.X0 (SystemWarning)) |
+| Configuration | One or more configuration parameters will be temporarily adjusted internally.  (&lt;TO&gt;.WarningWord.X1 (ConfigWarning)) |
+| User program | An error in a Motion Control instruction or during its use has occurred in the user program.  (&lt;TO&gt;.WarningWord.X2 (UserWarning)) |
+| Job rejected | Job cannot be executed. You cannot execute a Motion Control instruction because necessary requirements are not fulfilled.  (&lt;TO&gt;.WarningWord.X3 (CommandNotAccepted)) |
 
 You can access the alarm display via the ![Warnings](images/165349574539_DV_resource.Stream@PNG-de-DE.png) icon.
 
@@ -5546,7 +5546,7 @@ Each window contains three expandable areas:
 
 #### Managing snapshots (S7-1500T)
 
-You can manage the displayed curves and snapshots in the inspector window under "Properties > General> Snapshots and curves". In the "Current snapshot" area you can see snapshots that contain valid points and segments from the technology object data block in the following order:
+You can manage the displayed curves and snapshots in the inspector window under "Properties &gt; General&gt; Snapshots and curves". In the "Current snapshot" area you can see snapshots that contain valid points and segments from the technology object data block in the following order:
 
 1. Offline configuration
 2. Online configuration
@@ -5573,7 +5573,7 @@ You can change the name of saved snapshots.
 
 You can export and import snapshots.
 
-A list with all snapshots and the "Import snapshot" button can be found in the Inspector window > General tab > Snapshots and curves.
+A list with all snapshots and the "Import snapshot" button can be found in the Inspector window &gt; General tab &gt; Snapshots and curves.
 
 The following formats are supported:
 
@@ -5645,7 +5645,7 @@ This section contains information on the following topics:
 
 #### Status and error bits (S7-1500T)
 
-You use the "Technology object > Diagnostics > Status and error bits" diagnostic function in the TIA Portal to monitor the status and error messages for the technology object. The diagnostics function is available in online operation.
+You use the "Technology object &gt; Diagnostics &gt; Status and error bits" diagnostic function in the TIA Portal to monitor the status and error messages for the technology object. The diagnostics function is available in online operation.
 
 The meaning of the status and error messages is described in the following tables. The associated technology object tag is given in parentheses.
 
@@ -5655,13 +5655,13 @@ The following table shows the possible states of the leading axis proxy:
 
 | Status | Description |
 | --- | --- |
-| In operation | The technology object is in operation.  (<TO>.StatusWord.X0 (Control)) |
-| Error | An error occurred at the technology object. Detailed information about the error is available in the "Error" area and in the "<TO>.ErrorDetail.Number" and "<TO>.ErrorDetail.Reaction" tags of the technology object.  (<TO>.StatusWord.X1 (Error)) |
-| Restart active | The technology object is being reinitialized.  (<TO>.StatusWord.X2 (RestartActive)) |
-| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (<TO.>StatusWord.X3 (OnlineStartValuesChanged)) |
-| External leading value valid | The external leading value exists and is valid.  (<TO>.StatusWord.X4 (LeadingValueValid)) |
-| External leading value with modulo | The external leading value has modulo functionality.  (<TO>.StatusWord.X5 (LeadingValueModulo)) |
-| Leading axis in setpoint operation | The leading axis is in setpoint operation.  (<TO>.StatusWord.X6 (LeadingAxisControl)) |
+| In operation | The technology object is in operation.  (&lt;TO&gt;.StatusWord.X0 (Control)) |
+| Error | An error occurred at the technology object. Detailed information about the error is available in the "Error" area and in the "&lt;TO&gt;.ErrorDetail.Number" and "&lt;TO&gt;.ErrorDetail.Reaction" tags of the technology object.  (&lt;TO&gt;.StatusWord.X1 (Error)) |
+| Restart active | The technology object is being reinitialized.  (&lt;TO&gt;.StatusWord.X2 (RestartActive)) |
+| Restart required | Data relevant for the restart has been changed. The changes are applied only after a restart of the technology object.  (&lt;TO.&gt;StatusWord.X3 (OnlineStartValuesChanged)) |
+| External leading value valid | The external leading value exists and is valid.  (&lt;TO&gt;.StatusWord.X4 (LeadingValueValid)) |
+| External leading value with modulo | The external leading value has modulo functionality.  (&lt;TO&gt;.StatusWord.X5 (LeadingValueModulo)) |
+| Leading axis in setpoint operation | The leading axis is in setpoint operation.  (&lt;TO&gt;.StatusWord.X6 (LeadingAxisControl)) |
 
 ##### Warnings
 
@@ -5669,11 +5669,11 @@ The following table shows the possible warnings:
 
 | Warning | Description |
 | --- | --- |
-| System | A system-internal error has occurred.  (<TO>.WarningWord.X0 (SystemWarning)) |
-| Configuration | One or more configuration parameters are being internally adapted temporarily.  (<TO>.WarningWord.X1 (ConfigWarning)) |
-| User program | An error has occurred in the user program.  (<TO>.WarningWord.X2 (UserWarning)) |
-| Job rejected | Job cannot be executed.  You cannot execute a Motion Control instruction because necessary requirements are not fulfilled.  (<TO>.WarningWord.X3 (CommandNotAccepted)) |
-| Data exchange | An error in the communication has occurred.  (<TO>.WarningWord.X7 (CommunicationWarning)) |
+| System | A system-internal error has occurred.  (&lt;TO&gt;.WarningWord.X0 (SystemWarning)) |
+| Configuration | One or more configuration parameters are being internally adapted temporarily.  (&lt;TO&gt;.WarningWord.X1 (ConfigWarning)) |
+| User program | An error has occurred in the user program.  (&lt;TO&gt;.WarningWord.X2 (UserWarning)) |
+| Job rejected | Job cannot be executed.  You cannot execute a Motion Control instruction because necessary requirements are not fulfilled.  (&lt;TO&gt;.WarningWord.X3 (CommandNotAccepted)) |
+| Data exchange | An error in the communication has occurred.  (&lt;TO&gt;.WarningWord.X7 (CommunicationWarning)) |
 
 ##### Error
 
@@ -5681,11 +5681,11 @@ The following table shows the possible errors:
 
 | Error | Description |
 | --- | --- |
-| System | A system-internal error has occurred.  (<TO>.ErrorWord.X0 (SystemFault)) |
-| Configuration | A configuration error has occurred.  One or more configuration parameters are inconsistent or invalid.  The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (<TO>.ErrorWord.X1 (ConfigFault)) |
-| User program | An error occurred in the user program at a Motion Control instruction or its use.  (<TO>.ErrorWord.X2 (UserFault)) |
-| Job rejected | A job cannot be executed.  You cannot execute a Motion Control instruction because necessary requirements are not fulfilled (for example, technology object not homed).  (<TO>.ErrorWord.X3 (CommandNotAccepted)) |
-| Data exchange | Communication with a connected device is faulty.   (<TO>.ErrorWord.X7 (CommunicationFault)) |
+| System | A system-internal error has occurred.  (&lt;TO&gt;.ErrorWord.X0 (SystemFault)) |
+| Configuration | A configuration error has occurred.  One or more configuration parameters are inconsistent or invalid.  The technology object was incorrectly configured, or editable configuration data was incorrectly modified during runtime of the user program.  (&lt;TO&gt;.ErrorWord.X1 (ConfigFault)) |
+| User program | An error occurred in the user program at a Motion Control instruction or its use.  (&lt;TO&gt;.ErrorWord.X2 (UserFault)) |
+| Job rejected | A job cannot be executed.  You cannot execute a Motion Control instruction because necessary requirements are not fulfilled (for example, technology object not homed).  (&lt;TO&gt;.ErrorWord.X3 (CommandNotAccepted)) |
+| Data exchange | Communication with a connected device is faulty.   (&lt;TO&gt;.ErrorWord.X7 (CommunicationFault)) |
 
 ##### Alarm display
 
@@ -5693,7 +5693,7 @@ For additional information and to acknowledge the error, go to the Inspector win
 
 #### Motion status (S7-1500T)
 
-You use the "Technology object > Diagnostics > Motion status" diagnostic function in the TIA Portal to monitor the leading value of the leading axis proxy. The diagnostics function is available in online operation.
+You use the "Technology object &gt; Diagnostics &gt; Motion status" diagnostic function in the TIA Portal to monitor the leading value of the leading axis proxy. The diagnostics function is available in online operation.
 
 ##### Leading value for local synchronous operation
 
@@ -5701,9 +5701,9 @@ The following table shows the meaning of the status data:
 
 | Status | Description |
 | --- | --- |
-| Position | Adapted leading value for local synchronous operation  (<TO>.Position) |
-| Velocity | Leading value velocity for local synchronous operation  (<TO>.Velocity) |
-| Acceleration | Leading value acceleration for local synchronous operation  (<TO>.Acceleration) |
+| Position | Adapted leading value for local synchronous operation  (&lt;TO&gt;.Position) |
+| Velocity | Leading value velocity for local synchronous operation  (&lt;TO&gt;.Velocity) |
+| Acceleration | Leading value acceleration for local synchronous operation  (&lt;TO&gt;.Acceleration) |
 
 ##### External leading value
 
@@ -5711,9 +5711,9 @@ The following table shows the meaning of the status data:
 
 | Status | Description |
 | --- | --- |
-| Modulo length | Modulo length of the external leading value  (<TO>.StatusExternalLeadingValue.ModuloLength) |
-| Modulo start value | Modulo start value of the external leading value  (<TO>.StatusExternalLeadingValue.ModuloStartValue) |
-| Adjustment time | Time by which the external leading value is adapted  (<TO>.StatusExternalLeadingValue.AdjustmentTime) |
+| Modulo length | Modulo length of the external leading value  (&lt;TO&gt;.StatusExternalLeadingValue.ModuloLength) |
+| Modulo start value | Modulo start value of the external leading value  (&lt;TO&gt;.StatusExternalLeadingValue.ModuloStartValue) |
+| Adjustment time | Time by which the external leading value is adapted  (&lt;TO&gt;.StatusExternalLeadingValue.AdjustmentTime) |
 
 ## Tags of the technology object data blocks (S7-1500, S7-1500T)
 
@@ -5788,7 +5788,7 @@ This section contains information on the following topics:
 | RON | Read only:  The tag cannot and must not be changed during runtime of the user program. |  |
 | Description | Description of the tag |  |
 
-Access to the tags is with "<TO>.<tag name>". The placeholder <TO> represents the name of the technology object.
+Access to the tags is with "&lt;TO&gt;.&lt;tag name&gt;". The placeholder &lt;TO&gt; represents the name of the technology object.
 
 #### Actual values and setpoints (synchronous axis) (S7-1500, S7-1500T)
 
@@ -5816,7 +5816,7 @@ The following tags indicate the setpoint and actual values of the technology obj
 
 #### "Simulation" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Simulation.<tag name>" contains the configuration of the simulation mode. In simulation mode, you can simulate axes without a real drive in the CPU.
+The tag structure "&lt;TO&gt;.Simulation.&lt;tag name&gt;" contains the configuration of the simulation mode. In simulation mode, you can simulate axes without a real drive in the CPU.
 
 ##### Tags
 
@@ -5832,7 +5832,7 @@ The tag structure "<TO>.Simulation.<tag name>" contains the configuration of the
 
 #### "VirtualAxis" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.VirtualAxis.<tag name>" contains the configuration of the virtual operation of the axis. A virtual axis is often used as a virtual leading axis in order to generate the setpoints for several real following axes in synchronous operation.
+The tag structure "&lt;TO&gt;.VirtualAxis.&lt;tag name&gt;" contains the configuration of the virtual operation of the axis. A virtual axis is often used as a virtual leading axis in order to generate the setpoints for several real following axes in synchronous operation.
 
 ##### Tags
 
@@ -5843,11 +5843,11 @@ The tag structure "<TO>.VirtualAxis.<tag name>" contains the configuration of th
 | VirtualAxis. |  | TO_Struct_VirtualAxis |  |  |  |  |
 |  | Mode | UDINT | 0, 1 | RON | Virtual axis |  |
 | 0 | No virtual axis |  |  |  |  |  |
-| 1 | Technology version ≥ V7.0:  The behavior of a virtual axis is identical to the behavior of an axis in simulation. The actual values are generated via the control loop and a simplified drive model.  Technology version ≥ V8.0:  In technology version V8.0, the behavior of the virtual axis has been changed. The behavior of a virtual axis is no longer identical to the behavior of an axis in simulation.  The position and velocity setpoints are directly adopted as actual values with an application cycle delay. The feedback loop and the drive model are not simulated. The dynamic filter is effective.  To maintain compatibility with virtual axes of technology versions ≤ V7.0 for an axis:  1. Interconnect the axis in simulation (<TO>.Simulation.Mode" = 1). 2. Disable the virtual axis (<TO>.VirtualAxisMode = 0) |  |  |  |  |  |
+| 1 | Technology version ≥ V7.0:  The behavior of a virtual axis is identical to the behavior of an axis in simulation. The actual values are generated via the control loop and a simplified drive model.  Technology version ≥ V8.0:  In technology version V8.0, the behavior of the virtual axis has been changed. The behavior of a virtual axis is no longer identical to the behavior of an axis in simulation.  The position and velocity setpoints are directly adopted as actual values with an application cycle delay. The feedback loop and the drive model are not simulated. The dynamic filter is effective.  To maintain compatibility with virtual axes of technology versions ≤ V7.0 for an axis:  1. Interconnect the axis in simulation (&lt;TO&gt;.Simulation.Mode" = 1). 2. Disable the virtual axis (&lt;TO&gt;.VirtualAxisMode = 0) |  |  |  |  |  |
 
 #### "Actor" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Actor.<tag name>" contains the controller-side configuration of the drive.
+The tag structure "&lt;TO&gt;.Actor.&lt;tag name&gt;" contains the controller-side configuration of the drive.
 
 ##### Tags
 
@@ -5892,12 +5892,12 @@ The tag structure "<TO>.Actor.<tag name>" contains the controller-side configura
 | TRUE | Enabled |  |  |  |  |  |  |
 | TorqueDataAddressIn | VREF | 0 to 65535 | RON | Input address of the supplemental telegram |  |  |  |
 | TorqueDataAddressOut | VREF | 0 to 65535 | RON | Output address of additional telegram |  |  |  |
-| DriveParameter. |  | TO_Struct_ActorDriveParameter |  |  | Valid when "<TO>.Actor.MotorType" = 0 |  |  |
+| DriveParameter. |  | TO_Struct_ActorDriveParameter |  |  | Valid when "&lt;TO&gt;.Actor.MotorType" = 0 |  |  |
 |  | ReferenceSpeed | LREAL | 0.0 to 1.0E12 | RES | Reference value (100%) for the speed setpoint (N-set) of the drive  The speed setpoint is transferred in the PROFIdrive telegram as a normalized value from -200% to 200% of the "ReferenceSpeed".  For setpoint specification via an analog output, the analog output can be operated in the range from -117% to 117%, provided the drive permits this. |  |  |
 | MaxSpeed | LREAL | 0.0 to 1.0E12 | RES | Maximum value for the speed setpoint of the drive (N-set)  (PROFIdrive: MaxSpeed ≤ 2 × ReferenceSpeed  Analog setpoint: MaxSpeed ≤ 1.17 × ReferenceSpeed) |  |  |  |
 | ReferenceTorque | LREAL | 0.0 to 1.0E12 | RES | Reference value (100%) for the drive torque |  |  |  |
 | MotorInertia | LREAL | 0.0 to 1.0E12 | DIR | Moment of inertia of the motor |  |  |  |
-| LinearMotorDriveParameter. |  | TO_Struct_LinearMotorActorDriveParameter |  |  | Valid when "<TO>.Actor.MotorType" = 1 |  |  |
+| LinearMotorDriveParameter. |  | TO_Struct_LinearMotorActorDriveParameter |  |  | Valid when "&lt;TO&gt;.Actor.MotorType" = 1 |  |  |
 |  | ReferenceVelocity | LREAL | 0.0 to 1.0E12 | RES | Reference value (100%) for the velocity setpoint (N-set) of the drive  The speed setpoint is transferred in the PROFIdrive telegram as a normalized value from -200% to 200% of the "ReferenceVelocity".  For setpoint specification via an analog value, the analog output can be operated in the range from -117% to 117%, provided the drive permits this. |  |  |
 | MaxVelocity | LREAL | 0.0 to 1.0E12 | RES | Maximum value for the velocity setpoint of the drive (N-set)  (PROFIdrive: MaxVelocity ≤ 2 × ReferenceVelocity  Analog setpoint: MaxVelocity ≤ 1.17 × ReferenceVelocity) |  |  |  |
 | ReferenceForce | LREAL | 0.0 to 1.0E12 | RES | Reference value (100%) for the force of the drive |  |  |  |
@@ -5905,7 +5905,7 @@ The tag structure "<TO>.Actor.<tag name>" contains the controller-side configura
 
 #### "TorqueLimiting" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.TorqueLimiting.<tag name>" contains the configuration of the torque limiting.
+The tag structure "&lt;TO&gt;.TorqueLimiting.&lt;tag name&gt;" contains the configuration of the torque limiting.
 
 ##### Tags
 
@@ -5926,7 +5926,7 @@ The tag structure "<TO>.TorqueLimiting.<tag name>" contains the configuration of
 
 #### "Clamping" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Clamping.<tag name>" contains the configuration of the fixed stop detection.
+The tag structure "&lt;TO&gt;.Clamping.&lt;tag name&gt;" contains the configuration of the fixed stop detection.
 
 ##### Tags
 
@@ -5940,7 +5940,7 @@ The tag structure "<TO>.Clamping.<tag name>" contains the configuration of the f
 
 #### "Sensor[1..4]" tags (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Sensor[1..4].<tag name>" contains the controller-end configuration of the encoder and the configuration of active and passive homing.
+The tag structure "&lt;TO&gt;.Sensor[1..4].&lt;tag name&gt;" contains the controller-end configuration of the encoder and the configuration of active and passive homing.
 
 ##### Tags
 
@@ -5980,7 +5980,7 @@ The tag structure "<TO>.Sensor[1..4].<tag name>" contains the controller-end con
 | FineResolutionXist1 | UDINT | 0 to 31 | RES | Number of bits for fine resolution "Gx_XIST1" (cyclic actual encoder value) |  |  |  |
 | FineResolutionXist2 | UDINT | 0 to 31 | RES | Number of bits for fine resolution "Gx_XIST2" (absolute value of the encoder) |  |  |  |
 | DeterminableRevolutions | UDINT | 0 to 8388608 | RES | Number of differentiable encoder revolutions for a multi-turn absolute encoder   (For a single-turn absolute encoder = 1; for an incremental encoder = 0) |  |  |  |
-| DistancePerRevolution | LREAL | 0.0 to 1.0E12 | RES | For technology objects < V8.0:  Load distance per revolution of an externally mounted encoder  For technology objects ≥ V8.0:  Load travel per measuring wheel revolution of an externally mounted encoder |  |  |  |
+| DistancePerRevolution | LREAL | 0.0 to 1.0E12 | RES | For technology objects &lt; V8.0:  Load distance per revolution of an externally mounted encoder  For technology objects ≥ V8.0:  Load travel per measuring wheel revolution of an externally mounted encoder |  |  |  |
 | BehaviorGx_XIST1 | DINT | - | RES | Evaluation of "Gx_XIST1" bits. |  |  |  |
 | 0 | Based on the bits of the encoder resolution.  The incremental actual value "Gx_XIST1" is transmitted with less than 32 bits in the PROFIdrive telegram. For example: At 16 bits, the value ranges from 0 to 65,535. |  |  |  |  |  |  |
 | 1 | 32-bit value of the encoder value  The "Gx_XIST1" incremental actual value is transferred with 32 bits of 0 to 4,294,967,295 in the PROFIdrive telegram. |  |  |  |  |  |  |
@@ -5995,7 +5995,7 @@ The tag structure "<TO>.Sensor[1..4].<tag name>" contains the controller-end con
 | If you change the size of backlashes during runtime, you have to home the axis again. |  |  |  |  |  |  |  |
 | Velocity | LREAL | 0.0 to 1.0E12 | DIR | Velocity for traversing of backlashes |  |  |  |
 | 0.0 | Motor traverses backlashes within one servo cycle. |  |  |  |  |  |  |
-| > 0.0 | Motor traverses backlash with the specified velocity. |  |  |  |  |  |  |
+| &gt; 0.0 | Motor traverses backlash with the specified velocity. |  |  |  |  |  |  |
 | DirectionAbsoluteHoming | DINT | 0, 1 | DIR | Direction of movement during or before absolute encoder adjustment |  |  |  |
 | 0 | Positive |  |  |  |  |  |  |
 | 1 | Negative |  |  |  |  |  |  |
@@ -6037,7 +6037,7 @@ The tag structure "<TO>.Sensor[1..4].<tag name>" contains the controller-end con
 
 #### "CrossPlcSynchronousOperation" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.CrossPlcSynchronousOperation.<tag name>" contains the configuration of the cross-PLC synchronous operation.
+The tag structure "&lt;TO&gt;.CrossPlcSynchronousOperation.&lt;tag name&gt;" contains the configuration of the cross-PLC synchronous operation.
 
 ##### Tags
 
@@ -6055,7 +6055,7 @@ The tag structure "<TO>.CrossPlcSynchronousOperation.<tag name>" contains the co
 
 #### "Extrapolation" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Extrapolation.<tag name>" contains the configuration of the actual value extrapolation.
+The tag structure "&lt;TO&gt;.Extrapolation.&lt;tag name&gt;" contains the configuration of the actual value extrapolation.
 
 ##### Tags
 
@@ -6065,7 +6065,7 @@ The tag structure "<TO>.Extrapolation.<tag name>" contains the configuration of 
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Extrapolation. |  |  | TO_Struct_Extrapolation |  |  |  |  |
 |  | LeadingAxisDependentTime |  | LREAL | - | RON | Extrapolation time component (caused by leading axis)  Results from the following times:  - Time of actual value acquisition for the leading axis - Interpolator cycle clock - Time of position filter of actual value extrapolation (T1 + T2) |  |
-| FollowingAxisDependentTime |  | LREAL | 0.0 … 1.0E12 | DIR | Extrapolation time component (caused by following axis)  Results from the following times:  - For a following axis with set velocity precontrol:   - Communication cycle   - Interpolator cycle clock   - Speed control loop substitute time for the following axis   - Output delay time of the setpoint at the following axis - For a following axis without velocity precontrol:   - Communication cycle   - Interpolator cycle clock   - Position control loop equivalent time (1/Kv from "<TO>.PositionControl.Kv")   - Output delay time of the setpoint at the following axis |  |  |
+| FollowingAxisDependentTime |  | LREAL | 0.0 … 1.0E12 | DIR | Extrapolation time component (caused by following axis)  Results from the following times:  - For a following axis with set velocity precontrol:   - Communication cycle   - Interpolator cycle clock   - Speed control loop substitute time for the following axis   - Output delay time of the setpoint at the following axis - For a following axis without velocity precontrol:   - Communication cycle   - Interpolator cycle clock   - Position control loop equivalent time (1/Kv from "&lt;TO&gt;.PositionControl.Kv")   - Output delay time of the setpoint at the following axis |  |  |
 | Settings. |  | TO_Struct_ExtrapolationSettings |  |  |  |  |  |
 |  | SystemDefinedExtrapolation | DINT | 0, 1 | RES | Leading axis dependent time |  |  |
 | 0 | Not effective |  |  |  |  |  |  |
@@ -6086,7 +6086,7 @@ The tag structure "<TO>.Extrapolation.<tag name>" contains the configuration of 
 
 #### "LoadGear" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.LoadGear.<tag name>" contains the configuration of the load gear.
+The tag structure "&lt;TO&gt;.LoadGear.&lt;tag name&gt;" contains the configuration of the load gear.
 
 ##### Tags
 
@@ -6100,7 +6100,7 @@ The tag structure "<TO>.LoadGear.<tag name>" contains the configuration of the l
 
 #### "Properties" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Properties.<tag name>" contains the configuration of the type of axis or motion.
+The tag structure "&lt;TO&gt;.Properties.&lt;tag name&gt;" contains the configuration of the type of axis or motion.
 
 ##### Tags
 
@@ -6115,7 +6115,7 @@ The tag structure "<TO>.Properties.<tag name>" contains the configuration of the
 
 #### "Units" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Units.<tag name>" shows the set technological units.
+The tag structure "&lt;TO&gt;.Units.&lt;tag name&gt;" shows the set technological units.
 
 ##### Tags
 
@@ -6187,7 +6187,7 @@ The tag structure "<TO>.Units.<tag name>" shows the set technological units.
 
 #### "Mechanics" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Mechanics.<tag name>" contains the configuration of the mechanics.
+The tag structure "&lt;TO&gt;.Mechanics.&lt;tag name&gt;" contains the configuration of the mechanics.
 
 ##### Tags
 
@@ -6200,7 +6200,7 @@ The tag structure "<TO>.Mechanics.<tag name>" contains the configuration of the 
 
 #### "Modulo" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Modulo.<tag name>" contains the configuration of the modulo function.
+The tag structure "&lt;TO&gt;.Modulo.&lt;tag name&gt;" contains the configuration of the modulo function.
 
 ##### Tags
 
@@ -6211,13 +6211,13 @@ The tag structure "<TO>.Modulo.<tag name>" contains the configuration of the mod
 | Modulo. |  | TO_Struct_Modulo |  |  |  |  |
 |  | Enable | BOOL | - | RES | FALSE | Modulo conversion disabled |
 | TRUE | Modulo conversion enabled |  |  |  |  |  |
-| When modulo conversion is enabled, a check is made for modulo length > 0.0 |  |  |  |  |  |  |
+| When modulo conversion is enabled, a check is made for modulo length &gt; 0.0 |  |  |  |  |  |  |
 | Length | LREAL | 0.001 … 1.0E12 | RES | Modulo length |  |  |
 | StartValue | LREAL | -1.0E12 … 1.0E12 | RES | Modulo start value |  |  |
 
 #### "DynamicLimits" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.DynamicLimits.<tag name>" contains the configuration of the dynamic limits. During Motion Control, no dynamic values greater than the dynamic limits are permitted. If you specify greater values in a Motion Control instruction, then motion is performed using the dynamic limits, and a warning is indicated (alarms 501 to 503 - dynamic values are limited).
+The tag structure "&lt;TO&gt;.DynamicLimits.&lt;tag name&gt;" contains the configuration of the dynamic limits. During Motion Control, no dynamic values greater than the dynamic limits are permitted. If you specify greater values in a Motion Control instruction, then motion is performed using the dynamic limits, and a warning is indicated (alarms 501 to 503 - dynamic values are limited).
 
 ##### Tags
 
@@ -6234,7 +6234,7 @@ The tag structure "<TO>.DynamicLimits.<tag name>" contains the configuration of 
 
 #### "DynamicDefaults" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.DynamicDefaults.<tag name>" contains the configuration of the dynamic defaults. These settings will be used when you specify a dynamic value less than 0.0 in a Motion Control instruction (exceptions: "MC_MoveJog.Velocity", "MC_MoveVelocity.Velocity"). Changes to the default dynamic values will be applied at the next positive edge at the "Execute" parameter of a Motion Control instruction.
+The tag structure "&lt;TO&gt;.DynamicDefaults.&lt;tag name&gt;" contains the configuration of the dynamic defaults. These settings will be used when you specify a dynamic value less than 0.0 in a Motion Control instruction (exceptions: "MC_MoveJog.Velocity", "MC_MoveVelocity.Velocity"). Changes to the default dynamic values will be applied at the next positive edge at the "Execute" parameter of a Motion Control instruction.
 
 ##### Tags
 
@@ -6251,7 +6251,7 @@ The tag structure "<TO>.DynamicDefaults.<tag name>" contains the configuration o
 
 #### "PositionLimits_SW" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.PositionLimits_SW.<tag name>" contains the configuration of position monitoring with software limit switches. Software limit switches are used to limit the operating range of a synchronous axis.
+The tag structure "&lt;TO&gt;.PositionLimits_SW.&lt;tag name&gt;" contains the configuration of position monitoring with software limit switches. Software limit switches are used to limit the operating range of a synchronous axis.
 
 ##### Tags
 
@@ -6263,7 +6263,7 @@ The tag structure "<TO>.PositionLimits_SW.<tag name>" contains the configuration
 |  | Active | BOOL | - | DIR | FALSE | Monitoring deactivated |
 | TRUE | Monitoring activated |  |  |  |  |  |
 | MinPosition | LREAL | -1.0E12 … 1.0E12 | DIR | Position of negative software limit switches |  |  |
-| MaxPosition | LREAL | -1.0E12 … 1.0E12 | DIR | Position of positive software limit switches ("MaxPosition" > "MinPosition") |  |  |
+| MaxPosition | LREAL | -1.0E12 … 1.0E12 | DIR | Position of positive software limit switches ("MaxPosition" &gt; "MinPosition") |  |  |
 | LimitReachedBehavior | DINT | 0 … 1 | RES | Alarm response when a software limit switch is approached with a single axis job |  |  |
 | 0 | Stop with maximum dynamic values |  |  |  |  |  |
 | 1 | Stop with current dynamic values |  |  |  |  |  |
@@ -6273,7 +6273,7 @@ The tag structure "<TO>.PositionLimits_SW.<tag name>" contains the configuration
 
 #### "PositionLimits_HW" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.PositionLimits_HW.<tag name>" contains the configuration of position monitoring with hardware limit switches. Hardware limit switches are used to limit the traversing range of a synchronous axis.
+The tag structure "&lt;TO&gt;.PositionLimits_HW.&lt;tag name&gt;" contains the configuration of position monitoring with hardware limit switches. Hardware limit switches are used to limit the traversing range of a synchronous axis.
 
 ##### Tags
 
@@ -6302,7 +6302,7 @@ The tag structure "<TO>.PositionLimits_HW.<tag name>" contains the configuration
 
 #### "Homing" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Homing.<tag name>" contains the configuration for homing the TO.
+The tag structure "&lt;TO&gt;.Homing.&lt;tag name&gt;" contains the configuration for homing the TO.
 
 ##### Tags
 
@@ -6325,7 +6325,7 @@ The tag structure "<TO>.Homing.<tag name>" contains the configuration for homing
 
 #### "Override" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.Override.<tag name>" contains the configuration of override parameters. The override parameters are used to apply a correction percentage to default values. An override change takes effect immediately, and is performed with the dynamic settings in effect in the Motion Control instruction.
+The tag structure "&lt;TO&gt;.Override.&lt;tag name&gt;" contains the configuration of override parameters. The override parameters are used to apply a correction percentage to default values. An override change takes effect immediately, and is performed with the dynamic settings in effect in the Motion Control instruction.
 
 ##### Tags
 
@@ -6338,7 +6338,7 @@ The tag structure "<TO>.Override.<tag name>" contains the configuration of overr
 
 #### "PositionControl" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.PositionControl.<tag name>" contains the settings of position control.
+The tag structure "&lt;TO&gt;.PositionControl.&lt;tag name&gt;" contains the settings of position control.
 
 ##### Tags
 
@@ -6347,7 +6347,7 @@ The tag structure "<TO>.PositionControl.<tag name>" contains the settings of pos
 | Tag |  |  | Data type | Values | W | Description |  |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | PositionControl. |  |  | TO_Struct_PositionControl |  |  |  |  |
-|  | Kv |  | LREAL | 0.0 … 2147480.0 | DIR | Proportional gain of the closed loop position control ("Kv" > 0.0) |  |
+|  | Kv |  | LREAL | 0.0 … 2147480.0 | DIR | Proportional gain of the closed loop position control ("Kv" &gt; 0.0) |  |
 | Kpc |  | LREAL | 0.0 … 150.0% | DIR | Velocity precontrol of the position control   Recommended setting:  - Isochronous drive connection via PROFIdrive:   100.0% - Non-isochronous drive connection via PROFIdrive:    0.0 to 100.0% - Analog drive connection:    0.0 to 100.0% |  |  |
 | EnableDSC |  | BOOL | - | RES | Dynamic Servo Control (DSC) |  |  |
 | FALSE | DSC disabled |  |  |  |  |  |  |
@@ -6361,14 +6361,14 @@ The tag structure "<TO>.PositionControl.<tag name>" contains the settings of pos
 | 1 | Quantization corresponding to encoder resolution |  |  |  |  |  |  |
 | 2 | Quantization to a direct value |  |  |  |  |  |  |
 | (configuration is performed using the parameter view (data structure)) |  |  |  |  |  |  |  |
-| Value | LREAL | 0.001 … 1.0E12 | RES | Value of quantification  Configuration of a value for quantization to a direct value ("<TO>.PositionControl.ControlDifferenceQuantization.Mode" = 2)  (configuration is performed using the parameter view (data structure)) |  |  |  |
+| Value | LREAL | 0.001 … 1.0E12 | RES | Value of quantification  Configuration of a value for quantization to a direct value ("&lt;TO&gt;.PositionControl.ControlDifferenceQuantization.Mode" = 2)  (configuration is performed using the parameter view (data structure)) |  |  |  |
 | VelocityModePowerOn |  | DINT | 0 ... 1 | RES | Behavior of the velocity setpoint when the axis is enabled |  |  |
 | 0 | Velocity is set to "0" with maximum dynamic values of the axis (ramp). |  |  |  |  |  |  |
 | 1 | Velocity is immediately set to "0" without ramp. |  |  |  |  |  |  |
 
 #### "TorquePreControl" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.TorquePreControl.<tag name>" contains the settings of the torque precontrol.
+The tag structure "&lt;TO&gt;.TorquePreControl.&lt;tag name&gt;" contains the settings of the torque precontrol.
 
 ##### Tags
 
@@ -6384,7 +6384,7 @@ The tag structure "<TO>.TorquePreControl.<tag name>" contains the settings of th
 
 #### "SetpointFilter" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.SetpointFilter.<tag name>" contains the settings of the setpoint filter.
+The tag structure "&lt;TO&gt;.SetpointFilter.&lt;tag name&gt;" contains the settings of the setpoint filter.
 
 ##### Tags
 
@@ -6405,7 +6405,7 @@ The tag structure "<TO>.SetpointFilter.<tag name>" contains the settings of the 
 
 #### "DynamicAxisModel" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.DynamicAxisModel.<tag name>" contains the balancing filter settings.
+The tag structure "&lt;TO&gt;.DynamicAxisModel.&lt;tag name&gt;" contains the balancing filter settings.
 
 ##### Tags
 
@@ -6420,7 +6420,7 @@ The tag structure "<TO>.DynamicAxisModel.<tag name>" contains the balancing filt
 
 #### "FollowingError" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.FollowingError.<tag name>" contains the configuration of the dynamic following error monitoring.
+The tag structure "&lt;TO&gt;.FollowingError.&lt;tag name&gt;" contains the configuration of the dynamic following error monitoring.
 
 If the permissible following error is exceeded, then technology alarm 521 is output, and the technology object is disabled (alarm reaction: remove enable).
 
@@ -6445,9 +6445,9 @@ When the warning level is reached, a warning is output (technology alarm 522).
 
 #### "PositioningMonitoring" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.PositioningMonitoring.<tag name>" contains the configuration of position monitoring at the end of a positioning motion.
+The tag structure "&lt;TO&gt;.PositioningMonitoring.&lt;tag name&gt;" contains the configuration of position monitoring at the end of a positioning motion.
 
-If the actual position value at the end of a positioning motion is reached within the tolerance time and remains in the positioning window for the minimum dwell time, then "<TO>.StatusWord.X6 (Done)" is set in the technology data block. This completes a Motion Control job.
+If the actual position value at the end of a positioning motion is reached within the tolerance time and remains in the positioning window for the minimum dwell time, then "&lt;TO&gt;.StatusWord.X6 (Done)" is set in the technology data block. This completes a Motion Control job.
 
 If the tolerance time is exceeded, then technology alarm 541 "Positioning monitoring" with supplemental value 1: "Target range not reached" is displayed.
 
@@ -6466,9 +6466,9 @@ If the minimum dwell time is not met, then technology alarm 541 "Positioning mon
 
 #### "StandstillSignal" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StandstillSignal.<tag name>" contains the configuration of the standstill signal.
+The tag structure "&lt;TO&gt;.StandstillSignal.&lt;tag name&gt;" contains the configuration of the standstill signal.
 
-If the actual velocity value is below the velocity threshold, and does not exceed it during the minimum dwell time, then the standstill signal "<TO>.StatusWord.X7 (Standstill)" is set.
+If the actual velocity value is below the velocity threshold, and does not exceed it during the minimum dwell time, then the standstill signal "&lt;TO&gt;.StatusWord.X7 (Standstill)" is set.
 
 ##### Tags
 
@@ -6482,7 +6482,7 @@ If the actual velocity value is below the velocity threshold, and does not excee
 
 #### "StatusPositioning" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusPositioning.<tag name>" indicates the status of a positioning motion.
+The tag structure "&lt;TO&gt;.StatusPositioning.&lt;tag name&gt;" indicates the status of a positioning motion.
 
 ##### Tags
 
@@ -6500,7 +6500,7 @@ The tag structure "<TO>.StatusPositioning.<tag name>" indicates the status of a 
 
 #### "StatusDrive" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusDrive.<tag name>" indicates the status of the drive.
+The tag structure "&lt;TO&gt;.StatusDrive.&lt;tag name&gt;" indicates the status of the drive.
 
 ##### Tags
 
@@ -6526,7 +6526,7 @@ The tag structure "<TO>.StatusDrive.<tag name>" indicates the status of the driv
 
 #### "StatusServo" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusServo.<tag name>" indicates the status for the balancing filter.
+The tag structure "&lt;TO&gt;.StatusServo.&lt;tag name&gt;" indicates the status for the balancing filter.
 
 ##### Tags
 
@@ -6541,7 +6541,7 @@ The tag structure "<TO>.StatusServo.<tag name>" indicates the status for the bal
 
 #### "StatusProvidedLeadingValue" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusProvidedLeadingValue.<tag name>" contains the provided leading value with leading value delay of the cross-PLC synchronous operation.
+The tag structure "&lt;TO&gt;.StatusProvidedLeadingValue.&lt;tag name&gt;" contains the provided leading value with leading value delay of the cross-PLC synchronous operation.
 
 ##### Tags
 
@@ -6557,7 +6557,7 @@ The tag structure "<TO>.StatusProvidedLeadingValue.<tag name>" contains the prov
 
 #### "StatusSensor[1..4]" tags (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusSensor[1..4].<tag name>" indicates the status of the measuring system.
+The tag structure "&lt;TO&gt;.StatusSensor[1..4].&lt;tag name&gt;" indicates the status of the measuring system.
 
 ##### Tags
 
@@ -6593,7 +6593,7 @@ The tag structure "<TO>.StatusSensor[1..4].<tag name>" indicates the status of t
 
 #### "StatusExtrapolation" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusExtrapolation.<tag name>" indicates the actual value extrapolation status.
+The tag structure "&lt;TO&gt;.StatusExtrapolation.&lt;tag name&gt;" indicates the actual value extrapolation status.
 
 ##### Tags
 
@@ -6609,7 +6609,7 @@ The tag structure "<TO>.StatusExtrapolation.<tag name>" indicates the actual val
 
 #### "StatusSynchronizedMotion" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusSynchronizedMotion.<tag name>" indicates the status of synchronous operation.
+The tag structure "&lt;TO&gt;.StatusSynchronizedMotion.&lt;tag name&gt;" indicates the status of synchronous operation.
 
 ##### Tags
 
@@ -6641,7 +6641,7 @@ The tag structure "<TO>.StatusSynchronizedMotion.<tag name>" indicates the statu
 | MasterScaling |  | LREAL | -1.0E12 … 1.0E12 | RON | Current scaling of the leading value range of the cam with an "MC_CamIn" job |  |  |
 | SlaveOffset |  | LREAL | -1.0E12 … 1.0E12 | RON | Current offset of the following value range of the cam with an "MC_CamIn" job |  |  |
 | SlaveScaling |  | LREAL | -1.0E12 … 1.0E12 | RON | Current scaling of the following value range of the cam with an "MC_CamIn" job |  |  |
-| Offset |  | LREAL | -1.0E12 … 1.0E12 | RON | Current absolute following value offset with an "MC_OffsetAbsolute" or "MC_OffsetRelative" job, including the following value offset of an "MC_CamIn" job (<TO>.StatusSynchronizedMotion.SlaveOffset) |  |  |
+| Offset |  | LREAL | -1.0E12 … 1.0E12 | RON | Current absolute following value offset with an "MC_OffsetAbsolute" or "MC_OffsetRelative" job, including the following value offset of an "MC_CamIn" job (&lt;TO&gt;.StatusSynchronizedMotion.SlaveOffset) |  |  |
 | EffectiveLeadingValue. |  | TO_Struct_EffectiveLeadingValue |  |  | Effective leading value of the synchronous operation function |  |  |
 |  | Position | LREAL | -1.0E12 … 1.0E12 | RON | Position |  |  |
 | Velocity | LREAL | -1.0E12 … 1.0E12 | RON | Velocity |  |  |  |
@@ -6666,7 +6666,7 @@ The tag structure "<TO>.StatusSynchronizedMotion.<tag name>" indicates the statu
 
 #### "StatusKinematicsMotion" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The "<TO>.StatusKinematicsMotion" tag contains the status information of the technology object.
+The "&lt;TO&gt;.StatusKinematicsMotion" tag contains the status information of the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 2 "MaxDecelerationExceeded") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -6689,7 +6689,7 @@ Information on the evaluation of the individual bits (e.g. bit 2 "MaxDeceleratio
 
 #### "StatusTorqueData" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusTorqueData.<tag name>" indicates the status of the torque data.
+The tag structure "&lt;TO&gt;.StatusTorqueData.&lt;tag name&gt;" indicates the status of the torque data.
 
 ##### Tags
 
@@ -6711,7 +6711,7 @@ The tag structure "<TO>.StatusTorqueData.<tag name>" indicates the status of the
 
 #### "StatusMotionIn" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusMotionIn.<tag name>" indicates the status of the "MotionIn" function.
+The tag structure "&lt;TO&gt;.StatusMotionIn.&lt;tag name&gt;" indicates the status of the "MotionIn" function.
 
 ##### Tags
 
@@ -6729,7 +6729,7 @@ The tag structure "<TO>.StatusMotionIn.<tag name>" indicates the status of the "
 
 #### "StatusInterpreterMotion" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.StatusInterpreterMotion.<tag name>" contains status information on motion jobs controlled by a technology object Interpreter.
+The tag structure "&lt;TO&gt;.StatusInterpreterMotion.&lt;tag name&gt;" contains status information on motion jobs controlled by a technology object Interpreter.
 
 ##### Tags
 
@@ -6746,7 +6746,7 @@ The tag structure "<TO>.StatusInterpreterMotion.<tag name>" contains status info
 
 #### "StatusWord" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The "<TO>.StatusWord" tag contains the status information of the technology object.
+The "&lt;TO&gt;.StatusWord" tag contains the status information of the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 5 "HomingDone") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -6789,11 +6789,11 @@ Information on the evaluation of the individual bits (e.g. bit 5 "HomingDone") c
 | Bit 29 | - | - | - | "KinematicsMotionCommand"  The axis is used for a kinematics job. |  |
 | Bit 30 | - | - | - | "InClamping"  The axis is clamped at a fixed stop. |  |
 | Bit 31 | - | - | - | "MotionInCommand"  A "MotionIn" job is running. |  |
-| <sup>1</sup> The bit is correctly displayed only when using SIEMENS telegram 10x. When using MC_TorqueRange without SIEMENS telegram 10x, compare the values from telegram 750: <InLimit> = ActualTorque (M_ACT) * 0.9 > UpperTorqueLimit (M_LIMIT_POS) OR ActualTorque (M_ACT) * 0.9 < LowerTorqueLimit (M_LIMIT_NEG) |  |  |  |  |  |
+| <sup>1</sup> The bit is correctly displayed only when using SIEMENS telegram 10x. When using MC_TorqueRange without SIEMENS telegram 10x, compare the values from telegram 750: &lt;InLimit&gt; = ActualTorque (M_ACT) * 0.9 &gt; UpperTorqueLimit (M_LIMIT_POS) OR ActualTorque (M_ACT) * 0.9 &lt; LowerTorqueLimit (M_LIMIT_NEG) |  |  |  |  |  |
 
 #### "StatusWord2" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The "<TO>.StatusWord2" tag contains the status information of the technology object.
+The "&lt;TO&gt;.StatusWord2" tag contains the status information of the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 0 "StopCommand") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -6806,7 +6806,7 @@ Information on the evaluation of the individual bits (e.g. bit 0 "StopCommand") 
 | StatusWord2 |  | DWORD | - | RON | Status information of the technology object |
 |  | Bit 0 | BOOL | - | RON | "StopCommand"  An "MC_Stop" job is running. The technology object is disabled. |
 | Bit 1 | BOOL | - | RON | "DesynchronizingCommand"  An "MC_GearOut" job or "MC_CamOut" job is active. The following axis is desynchronized. |  |
-| Bit 2 | BOOL | - | RON | "PassingBacklash"  The backlash is traversed. "<TO>.ActualPosition" does not hereby change. |  |
+| Bit 2 | BOOL | - | RON | "PassingBacklash"  The backlash is traversed. "&lt;TO&gt;.ActualPosition" does not hereby change. |  |
 | Bit 3 | BOOL | - | RON | "PhasingCommandWaiting"  An "MC_PhasingAbsolute" or "MC_PhasingRelative" job for leading value offset is waiting. |  |
 | Bit 4 | BOOL | - | RON | "OffsetCommand"  An "MC_OffsetAbsolute" or "MC_OffsetRelative" job for following value offset is active. |  |
 | Bit 5 | BOOL | - | RON | "OffsetCommandWaiting"  An "MC_OffsetAbsolute" or "MC_OffsetRelative" job for following value offset is waiting. |  |
@@ -6816,7 +6816,7 @@ Information on the evaluation of the individual bits (e.g. bit 0 "StopCommand") 
 
 #### "ErrorWord" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The "<TO>.ErrorWord" tag indicates technology object errors (technology alarms).
+The "&lt;TO&gt;.ErrorWord" tag indicates technology object errors (technology alarms).
 
 Information on the evaluation of the individual bits (e.g. bit 3 "CommandNotAccepted") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -6847,7 +6847,7 @@ Information on the evaluation of the individual bits (e.g. bit 3 "CommandNotAcce
 
 #### "ErrorDetail" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.ErrorDetail.<tag name>" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
+The tag structure "&lt;TO&gt;.ErrorDetail.&lt;tag name&gt;" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
 
 You can find a list of the technology alarms and alarm responses in the "[Overview of the technology alarms](S7-1500-S7-1500T%20Motion%20Control%20alarms%20and%20error%20IDs%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-the-technology-alarms-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control alarms and error IDs" documentation.
 
@@ -6869,7 +6869,7 @@ You can find a list of the technology alarms and alarm responses in the "[Overvi
 
 #### "WarningWord" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The "<TO>.WarningWord" tag indicates pending warnings at the technology object.
+The "&lt;TO&gt;.WarningWord" tag indicates pending warnings at the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 13 "PeripheralWarning") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -6900,11 +6900,11 @@ Information on the evaluation of the individual bits (e.g. bit 13 "PeripheralWar
 
 #### "ControlPanel" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.ControlPanel.<tag name>" contains no relevant data for you. This tag structure is internally used.
+The tag structure "&lt;TO&gt;.ControlPanel.&lt;tag name&gt;" contains no relevant data for you. This tag structure is internally used.
 
 #### "InternalToTrace" tag (synchronous axis) (S7-1500, S7-1500T)
 
-The tag structure "<TO>.InternalToTrace.<tag name>" contains no relevant data for you. This tag structure is internally used.
+The tag structure "&lt;TO&gt;.InternalToTrace.&lt;tag name&gt;" contains no relevant data for you. This tag structure is internally used.
 
 ### Tags of the cam technology object (S7-1500T)
 
@@ -6939,11 +6939,11 @@ This section contains information on the following topics:
 | RON | Read only:  The tag cannot and must not be changed during runtime of the user program. |  |
 | Description | Description of the tag |  |
 
-Access to the tags is with "<TO>.<tag name>". The placeholder <TO> represents the name of the technology object.
+Access to the tags is with "&lt;TO&gt;.&lt;tag name&gt;". The placeholder &lt;TO&gt; represents the name of the technology object.
 
 #### "Point[1..1000]" tag (cam of type "TO_Cam") (S7-1500T)
 
-The tag structure "<TO>.Point[1..1000].<tag name>" contains the defined points of the cam of type "TO_Cam".
+The tag structure "&lt;TO&gt;.Point[1..1000].&lt;tag name&gt;" contains the defined points of the cam of type "TO_Cam".
 
 ##### Tags
 
@@ -6957,7 +6957,7 @@ The tag structure "<TO>.Point[1..1000].<tag name>" contains the defined points o
 
 #### "Point[1..10000]" tag (cam of type "TO_Cam_10k") (S7-1500T)
 
-The tag structure "<TO>.Point[1..10000].<tag name>" contains the defined points of the cam of type "TO_Cam_10k".
+The tag structure "&lt;TO&gt;.Point[1..10000].&lt;tag name&gt;" contains the defined points of the cam of type "TO_Cam_10k".
 
 ##### Tags
 
@@ -6971,7 +6971,7 @@ The tag structure "<TO>.Point[1..10000].<tag name>" contains the defined points 
 
 #### "ValidPoint[1..1000]" tag (cam of the "TO_Cam" type) (S7-1500T)
 
-The tag structure "<TO>.ValidPoint[1..1000]" shows the validity of the defined points of the cam of type "TO_Cam".
+The tag structure "&lt;TO&gt;.ValidPoint[1..1000]" shows the validity of the defined points of the cam of type "TO_Cam".
 
 ##### Tags
 
@@ -6985,7 +6985,7 @@ The tag structure "<TO>.ValidPoint[1..1000]" shows the validity of the defined p
 
 #### "ValidPoint[1..10000]" tag (cam of the "TO_Cam_10k" type) (S7-1500T)
 
-The tag structure "<TO>.ValidPoint[1..10000]" shows the validity of the defined points of the cam of type "TO_Cam_10k".
+The tag structure "&lt;TO&gt;.ValidPoint[1..10000]" shows the validity of the defined points of the cam of type "TO_Cam_10k".
 
 ##### Tags
 
@@ -6999,7 +6999,7 @@ The tag structure "<TO>.ValidPoint[1..10000]" shows the validity of the defined 
 
 #### "Segment[1..50]" tag (cam) (S7-1500T)
 
-The tag structure "<TO>.Segment[1..50].<tag name>" contains the defined segments of the cam.
+The tag structure "&lt;TO&gt;.Segment[1..50].&lt;tag name&gt;" contains the defined segments of the cam.
 
 ##### Tags
 
@@ -7023,7 +7023,7 @@ The tag structure "<TO>.Segment[1..50].<tag name>" contains the defined segments
 
 #### "ValidSegment[1..50]" tag (cam) (S7-1500T)
 
-The "<TO>.ValidSegment[1..50]" tag structure indicates the validity of the defined segments of the cam.
+The "&lt;TO&gt;.ValidSegment[1..50]" tag structure indicates the validity of the defined segments of the cam.
 
 ##### Tags
 
@@ -7037,7 +7037,7 @@ The "<TO>.ValidSegment[1..50]" tag structure indicates the validity of the defin
 
 #### "InterpolationSettings" tag (cam) (S7-1500T)
 
-The tag structure "<TO>.InterpolationSettings.<tag name>" contains the configuration for the interpolation of the cam.
+The tag structure "&lt;TO&gt;.InterpolationSettings.&lt;tag name&gt;" contains the configuration for the interpolation of the cam.
 
 ##### Tags
 
@@ -7056,7 +7056,7 @@ The tag structure "<TO>.InterpolationSettings.<tag name>" contains the configura
 
 #### "StatusCam" tag (cam of the "TO_Cam" type) (S7-1500T)
 
-The tag structure "<TO>.StatusCam.<tag name>" indicates the status of the cam.
+The tag structure "&lt;TO&gt;.StatusCam.&lt;tag name&gt;" indicates the status of the cam.
 
 ##### Tags
 
@@ -7072,7 +7072,7 @@ The tag structure "<TO>.StatusCam.<tag name>" indicates the status of the cam.
 
 #### "StatusCam" tag (cam of the "TO_Cam_10k" type) (S7-1500T)
 
-The tag structure "<TO>.StatusCam.<tag name>" indicates the status of the cam.
+The tag structure "&lt;TO&gt;.StatusCam.&lt;tag name&gt;" indicates the status of the cam.
 
 ##### Tags
 
@@ -7088,7 +7088,7 @@ The tag structure "<TO>.StatusCam.<tag name>" indicates the status of the cam.
 
 #### "StatusWord" tag (cam) (S7-1500T)
 
-The "<TO>.StatusWord" tag contains the status information of the technology object.
+The "&lt;TO&gt;.StatusWord" tag contains the status information of the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 4 "CamDataChanged") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -7111,7 +7111,7 @@ Information on the evaluation of the individual bits (e.g. bit 4 "CamDataChanged
 
 #### "ErrorWord" tag (cam) (S7-1500T)
 
-The "<TO>.ErrorWord" tag indicates technology object errors (technology alarms).
+The "&lt;TO&gt;.ErrorWord" tag indicates technology object errors (technology alarms).
 
 Information on the evaluation of the individual bits (e.g. bit 3 "CommandNotAccepted") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -7130,7 +7130,7 @@ Information on the evaluation of the individual bits (e.g. bit 3 "CommandNotAcce
 
 #### "ErrorDetail" tag (cam) (S7-1500T)
 
-The tag structure "<TO>.ErrorDetail.<tag name>" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
+The tag structure "&lt;TO&gt;.ErrorDetail.&lt;tag name&gt;" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
 
 You can find a list of the technology alarms and alarm responses in the "[Overview of the technology alarms](S7-1500-S7-1500T%20Motion%20Control%20alarms%20and%20error%20IDs%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-the-technology-alarms-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control alarms and error IDs" documentation.
 
@@ -7148,7 +7148,7 @@ You can find a list of the technology alarms and alarm responses in the "[Overvi
 
 #### "WarningWord" tag (cam) (S7-1500T)
 
-The "<TO>.WarningWord" tag indicates pending warnings at the technology object.
+The "&lt;TO&gt;.WarningWord" tag indicates pending warnings at the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 3 "CommandNotAccepted") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -7193,7 +7193,7 @@ This section contains information on the following topics:
 | RON | Read only:  The tag cannot and must not be changed during runtime of the user program. |  |
 | Description | Description of the tag |  |
 
-Access to the tags is with "<TO>.<tag name>". The placeholder <TO> represents the name of the technology object.
+Access to the tags is with "&lt;TO&gt;.&lt;tag name&gt;". The placeholder &lt;TO&gt; represents the name of the technology object.
 
 #### Leading value (leading axis proxy) (S7-1500T)
 
@@ -7211,7 +7211,7 @@ The following tags indicate the leading value parameters of the technology objec
 
 #### "Interface" tag (leading axis proxy) (S7-1500T)
 
-The tag structure "<TO>.Interface.<Tag name>" contains the input address of the telegram.
+The tag structure "&lt;TO&gt;.Interface.&lt;Tag name&gt;" contains the input address of the telegram.
 
 ##### Tags
 
@@ -7224,7 +7224,7 @@ The tag structure "<TO>.Interface.<Tag name>" contains the input address of the 
 
 #### "Parameter" tag (leading axis proxy) (S7-1500T)
 
-The tag structure "<TO>.Parameter.<tag name>" contains parameters for leading value adaptation.
+The tag structure "&lt;TO&gt;.Parameter.&lt;tag name&gt;" contains parameters for leading value adaptation.
 
 ##### Tags
 
@@ -7233,12 +7233,12 @@ The tag structure "<TO>.Parameter.<tag name>" contains parameters for leading va
 | Tag |  | Data type | Values | W | Description |
 | --- | --- | --- | --- | --- | --- |
 | Parameter. |  | TO_Struct_LeadingAxisProxy_Parameter |  |  |  |
-|  | LocalLeadingValueDelayTime | LREAL | 0.0 … 1.0E9 | DIR | Delay time of virtual local following axis which, in turn, provides a cross-PLC leading value with a cascade (<TO>.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime) |
+|  | LocalLeadingValueDelayTime | LREAL | 0.0 … 1.0E9 | DIR | Delay time of virtual local following axis which, in turn, provides a cross-PLC leading value with a cascade (&lt;TO&gt;.CrossPlcSynchronousOperation.LocalLeadingValueDelayTime) |
 | ToleranceTimeExternalLeadingValueInvalid | LREAL | 0.0 … 1.0E12 | DIR | Tolerance time until a technology alarm is triggered when the external leading value becomes invalid |  |
 
 #### "StatusExternalLeadingValue" tag (leading axis proxy) (S7-1500T)
 
-The tag structure "<TO>.StatusExternalLeadingValue.<Tag name>" contains the parameter values of the external leading value.
+The tag structure "&lt;TO&gt;.StatusExternalLeadingValue.&lt;Tag name&gt;" contains the parameter values of the external leading value.
 
 ##### Tags
 
@@ -7250,12 +7250,12 @@ The tag structure "<TO>.StatusExternalLeadingValue.<Tag name>" contains the para
 |  | ModuloLength | LREAL | 0.0 … 1.0E12 | RON | Modulo length of the external leading value |  |
 | ModuloStartValue | LREAL | -1.0E12 … 1.0E12 | RON | Modulo start value of the external leading value |  |  |
 | AdjustmentTime | LREAL | -1.0E12 … 1.0E12 | RON | Time by which the external leading value is adjusted |  |  |
-| < 0 | The external leading value is interpolated by this time. |  |  |  |  |  |
-| > 0 | The external leading value is extrapolated by this time. |  |  |  |  |  |
+| &lt; 0 | The external leading value is interpolated by this time. |  |  |  |  |  |
+| &gt; 0 | The external leading value is extrapolated by this time. |  |  |  |  |  |
 
 #### "StatusWord" tag (leading axis proxy) (S7-1500T)
 
-The "<TO>.StatusWord" tag contains the status information of the technology object.
+The "&lt;TO&gt;.StatusWord" tag contains the status information of the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 4 "LeadingValueValid") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -7277,7 +7277,7 @@ Information on the evaluation of the individual bits (e.g. bit 4 "LeadingValueVa
 
 #### "'ErrorWord" tag (leading axis proxy) (S7-1500T)
 
-The "<TO>.ErrorWord" tag indicates technology object errors (technology alarms).
+The "&lt;TO&gt;.ErrorWord" tag indicates technology object errors (technology alarms).
 
 Information on the evaluation of the individual bits (e.g. bit 3 "CommandNotAccepted") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 
@@ -7298,7 +7298,7 @@ Information on the evaluation of the individual bits (e.g. bit 3 "CommandNotAcce
 
 #### "ErrorDetail" tag (leading axis proxy) (S7-1500T)
 
-The tag structure "<TO>.ErrorDetail.<tag name>" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
+The tag structure "&lt;TO&gt;.ErrorDetail.&lt;tag name&gt;" contains the alarm number and the effective local alarm response for the technology alarm that is currently pending on the technology object.
 
 You can find a list of the technology alarms and alarm responses in the "[Overview of the technology alarms](S7-1500-S7-1500T%20Motion%20Control%20alarms%20and%20error%20IDs%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-the-technology-alarms-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control alarms and error IDs" documentation.
 
@@ -7316,7 +7316,7 @@ You can find a list of the technology alarms and alarm responses in the "[Overvi
 
 #### "WarningWord" tag (leading axis proxy) (S7-1500T)
 
-The "<TO>.WarningWord" tag indicates pending warnings at the technology object.
+The "&lt;TO&gt;.WarningWord" tag indicates pending warnings at the technology object.
 
 Information on the evaluation of the individual bits (e.g. bit 1 "ConfigWarning") can be found in the "[Evaluating StatusWord, ErrorWord and WarningWord](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#evaluate-statusword-errorword-and-warningword-s7-1500-s7-1500t)" section of the "S7-1500/S7-1500T Motion Control Overview" documentation.
 

@@ -228,7 +228,7 @@ Note the following rules when forming relational expressions:
 
 When floating-point numbers are compared, the operands to be compared must have the same data type regardless of the setting for the IEC Check.
 
-The special bit patterns of invalid floating-point numbers (NaN) that are the outcome of undefined results (e.g. root of -1) are not comparable. This means if one of the operands has the value NaN, the comparison expression "==: Equal" as well as "<>: Not equal" has the result FALSE.
+The special bit patterns of invalid floating-point numbers (NaN) that are the outcome of undefined results (e.g. root of -1) are not comparable. This means if one of the operands has the value NaN, the comparison expression "==: Equal" as well as "&lt;&gt;: Not equal" has the result FALSE.
 
 #### Comparison of character strings
 
@@ -236,16 +236,16 @@ The individual characters are compared by means of their code (for example, 'a' 
 
 The following table shows examples of "==" comparison of strings:
 
-| <Operand1> | <Operand2> | RLO of the instruction |
+| &lt;Operand1&gt; | &lt;Operand2&gt; | RLO of the instruction |
 | --- | --- | --- |
 | 'AA' | 'AA' | 1 |
 | 'Hello World' | 'HelloWorld' | 0 |
 | 'AA' | 'aa' | 0 |
 | 'aa' | 'aaa' | 0 |
 
-The following table shows examples of "<>" comparison of strings:
+The following table shows examples of "&lt;&gt;" comparison of strings:
 
-| <Operand1> | <Operand2> | RLO of the instruction |
+| &lt;Operand1&gt; | &lt;Operand2&gt; | RLO of the instruction |
 | --- | --- | --- |
 | 'AA' | 'aa' | 1 |
 | 'Hello World' | 'HelloWorld' | 1 |
@@ -259,7 +259,7 @@ You can also compare individual characters of a string. The number of the charac
 Bit patterns of invalid timers, date and times, e.g. DT#2015-13-33-25:62:99.999_999_999, cannot be compared. This means that if one of the two operands has an invalid value, the instructions return the following results:
 
 - "==: Equal" has the result FALSE.
-- "<>: Not equal" has the result TRUE.
+- "&lt;&gt;: Not equal" has the result TRUE.
 
 Not all times can be compared directly with each other, such as S5TIME. In this case they are implicitly converted into another time so that they can be compared, for example to TIME.
 
@@ -277,7 +277,7 @@ Both tags are converted to the TIME data type when comparing a tag of WORD data 
 >
 > **Availability of comparison of structures**
 >
-> The option to compare structures is available for a CPU of the S7-1200 series as of firmware version >= 4.2, and for a CPU of the S7-1500 series as of firmware version >= 2.0.
+> The option to compare structures is available for a CPU of the S7-1200 series as of firmware version &gt;= 4.2, and for a CPU of the S7-1500 series as of firmware version &gt;= 2.0.
 
 You can compare the values of two structured operands with each other when both tags are of the same structure data type. When structures are compared, the operands to be compared must have the same data type regardless of the setting for the IEC Check. An exception are the comparisons in which one of the operands is a VARIANT or an ANY. If the data type is not yet known at the time when the program is created, you can use the VARIANT data type. In this case you can also compare the operands with a structured tag of any data type. You can also compare two tags of the data type VARIANT or ANY with each other.
 
@@ -303,41 +303,41 @@ The following requirements must be met so that the two tags of the data type ARR
 
 The table below shows an example of a comparison of structures for "==: Equal":
 
-| <Operand1> |  |  | <Operand2> |  |  | RLO of the instruction |
+| &lt;Operand1&gt; |  |  | &lt;Operand2&gt; |  |  | RLO of the instruction |
 | --- | --- | --- | --- | --- | --- | --- |
-| Tag of data type A <PLC data type> |  | Tag value | Tag of data type A <PLC data type> |  | Tag value | 1 |
+| Tag of data type A &lt;PLC data type&gt; |  | Tag value | Tag of data type A &lt;PLC data type&gt; |  | Tag value | 1 |
 |  | BOOL | FALSE |  | BOOL | FALSE |  |
 | INT | 2 | INT | 2 |  |  |  |
 
-| <Operand1> |  |  | <Operand2> |  |  | RLO of the instruction |
+| &lt;Operand1&gt; |  |  | &lt;Operand2&gt; |  |  | RLO of the instruction |
 | --- | --- | --- | --- | --- | --- | --- |
-| Tag of data type A <PLC data type> |  | Tag value | Tag of data type B <PLC data type> |  | Tag value | 0 |
+| Tag of data type A &lt;PLC data type&gt; |  | Tag value | Tag of data type B &lt;PLC data type&gt; |  | Tag value | 0 |
 |  | BOOL | FALSE |  | BOOL | TRUE |  |
 | INT | 2 | INT | 3 |  |  |  |
 
-| <Operand1> |  |  | <Operand2> |  |  | RLO of the instruction |
+| &lt;Operand1&gt; |  |  | &lt;Operand2&gt; |  |  | RLO of the instruction |
 | --- | --- | --- | --- | --- | --- | --- |
-| Tag of data type A <PLC data type> |  | Tag value | VARIANT (supplied with tag of data type A) |  | Tag value | 1 |
+| Tag of data type A &lt;PLC data type&gt; |  | Tag value | VARIANT (supplied with tag of data type A) |  | Tag value | 1 |
 |  | BOOL | FALSE |  | BOOL | FALSE |  |
 | INT | 2 | INT | 2 |  |  |  |
 
-The table below shows an example of a comparison of structures for "<>: Not equal":
+The table below shows an example of a comparison of structures for "&lt;&gt;: Not equal":
 
-| <Operand1> |  |  | <Operand2> |  |  | RLO of the instruction |
+| &lt;Operand1&gt; |  |  | &lt;Operand2&gt; |  |  | RLO of the instruction |
 | --- | --- | --- | --- | --- | --- | --- |
-| Tag of data type A <PLC data type> |  | Tag value | Tag of data type A <PLC data type> |  | Tag value | 0 |
+| Tag of data type A &lt;PLC data type&gt; |  | Tag value | Tag of data type A &lt;PLC data type&gt; |  | Tag value | 0 |
 |  | BOOL | FALSE |  | BOOL | FALSE |  |
 | INT | 2 | INT | 2 |  |  |  |
 
-| <Operand1> |  |  | <Operand2> |  |  | RLO of the instruction |
+| &lt;Operand1&gt; |  |  | &lt;Operand2&gt; |  |  | RLO of the instruction |
 | --- | --- | --- | --- | --- | --- | --- |
-| Tag of data type A <PLC data type> |  | Tag value | Tag of data type B <PLC data type> |  | Tag value | 1 |
+| Tag of data type A &lt;PLC data type&gt; |  | Tag value | Tag of data type B &lt;PLC data type&gt; |  | Tag value | 1 |
 |  | BOOL | FALSE |  | BOOL | TRUE |  |
 | INT | 2 | INT | 3 |  |  |  |
 
-| <Operand1> |  |  | <Operand2> |  |  | RLO of the instruction |
+| &lt;Operand1&gt; |  |  | &lt;Operand2&gt; |  |  | RLO of the instruction |
 | --- | --- | --- | --- | --- | --- | --- |
-| Tag of data type A <PLC data type> |  | Tag value | VARIANT (supplied with tag of data type A) |  | Tag value | 0 |
+| Tag of data type A &lt;PLC data type&gt; |  | Tag value | VARIANT (supplied with tag of data type A) |  | Tag value | 0 |
 |  | BOOL | FALSE |  | BOOL | FALSE |  |
 | INT | 2 | INT | 2 |  |  |  |
 
@@ -347,7 +347,7 @@ The following table shows the data types/data type groups you can use in relatio
 
 | Operation | Operator | 1st operand | 2nd operand | Result |
 | --- | --- | --- | --- | --- |
-| Compare for equal, not equal | =, <> | Integer/floating-point number | Integer/floating-point number | BOOL |
+| Compare for equal, not equal | =, &lt;&gt; | Integer/floating-point number | Integer/floating-point number | BOOL |
 | Bit strings | Bit strings | BOOL |  |  |
 | String | String | BOOL |  |  |
 | TIME, LTIME | TIME, LTIME | BOOL |  |  |
@@ -356,9 +356,9 @@ The following table shows the data types/data type groups you can use in relatio
 | Any data type (but must correspond to the data type with which the VARIANT is supplied) | VARIANT/ANY | BOOL |  |  |
 | VARIANT/ANY | Any data type | BOOL |  |  |
 | PLC data type | PLC data type | BOOL |  |  |
-| ARRAY of <data type> with fixed and variable ARRAY limits | ARRAY of <data type> with fixed and variable ARRAY limits | BOOL |  |  |
+| ARRAY of &lt;data type&gt; with fixed and variable ARRAY limits | ARRAY of &lt;data type&gt; with fixed and variable ARRAY limits | BOOL |  |  |
 | STRUCT | STRUCT | BOOL |  |  |
-| Compare for less than, less than-equal to, greater than, greater than or equal to | <, <=, >, >= | Integer/floating-point number | Integer/floating-point number | BOOL |
+| Compare for less than, less than-equal to, greater than, greater than or equal to | &lt;, &lt;=, &gt;, &gt;= | Integer/floating-point number | Integer/floating-point number | BOOL |
 | Bit strings   (S7-1200/1500 only) | Bit strings  (S7-1200/1500 only) | BOOL |  |  |
 | String | String | BOOL |  |  |
 | TIME, LTIME | TIME, LTIME | BOOL |  |  |
@@ -370,9 +370,9 @@ The following example shows a relational expression:
 
 | SCL |  |
 | --- | --- |
-| IF a > b THEN c:= a; |  |
-| IF A > 20 AND B < 20 THEN C:= TRUE; |  |
-| IF A<>(B AND C) THEN C:= FALSE; |  |
+| IF a &gt; b THEN c:= a; |  |
+| IF A &gt; 20 AND B &lt; 20 THEN C:= TRUE; |  |
+| IF A&lt;&gt;(B AND C) THEN C:= FALSE; |  |
 
 > **Note**
 >
@@ -415,7 +415,7 @@ The following table shows the data types you can use in logical expressions:
 | --- | --- | --- | --- | --- |
 | Negation (generate one's complement) | NOT | BOOL | - | BOOL |
 | Bit string | - | Bit string |  |  |
-| AND logic operation | AND or & | BOOL | BOOL | BOOL |
+| AND logic operation | AND or &amp; | BOOL | BOOL | BOOL |
 | Bit string | Bit string | Bit string |  |  |
 | OR logic operation | OR | BOOL | BOOL | BOOL |
 | Bit string | Bit string | Bit string |  |  |
@@ -472,15 +472,15 @@ The following table provides an overview of the operators and their precedence:
 | [-](#arithmetic-expressions) | Subtraction | 5 |
 | [+=](#arithmetic-expressions), [-=](#arithmetic-expressions), [*=](#arithmetic-expressions), [/=](#arithmetic-expressions) | Combined value assignments | 11 |
 | **Relational expressions** |  |  |
-| [<](#relational-expressions) | Less than | 6 |
-| [>](#relational-expressions) | Greater than | 6 |
-| [<=](#relational-expressions) | Less than or equal | 6 |
-| [>=](#relational-expressions) | Greater than or equal | 6 |
+| [&lt;](#relational-expressions) | Less than | 6 |
+| [&gt;](#relational-expressions) | Greater than | 6 |
+| [&lt;=](#relational-expressions) | Less than or equal | 6 |
+| [&gt;=](#relational-expressions) | Greater than or equal | 6 |
 | [=](#relational-expressions) | Equal | 7 |
-| [<>](#relational-expressions) | Not equal | 7 |
+| [&lt;&gt;](#relational-expressions) | Not equal | 7 |
 | **Logical expressions** |  |  |
 | [NOT](#logical-expressions) | Negation | 3 |
-| [AND](#logical-expressions) or [&](#logical-expressions) | Boolean AND | 8 |
+| [AND](#logical-expressions) or [&amp;](#logical-expressions) | Boolean AND | 8 |
 | [XOR](#logical-expressions) | Exclusive OR | 9 |
 | [OR](#logical-expressions) | Boolean OR | 10 |
 | **Reference expressions** |  |  |
@@ -789,8 +789,8 @@ In the following programming example, you see a calculation operation with a typ
 
 To see the result, go online.
 
-1. Compile the SCL function block "FB_MathsFunctions" by right-clicking the command "Compile > Software (only changes)" to execute it.
-2. Download the block with the command "Download to device > Software (only changes)".
+1. Compile the SCL function block "FB_MathsFunctions" by right-clicking the command "Compile &gt; Software (only changes)" to execute it.
+2. Download the block with the command "Download to device &gt; Software (only changes)".
 3. Go online and monitor your block.
 
    ![Programming example](images/68912128139_DV_resource.Stream@PNG-de-DE.png)
@@ -813,8 +813,8 @@ One option for avoiding this undesired result is to type both constants. If you 
 
 To see the result, go online.
 
-1. Compile the SCL function block "FB_MathsFunctions" by right-clicking the command "Compile > Software (only changes)" to execute it.
-2. Download the block with the command "Download to device > Software (only changes)".
+1. Compile the SCL function block "FB_MathsFunctions" by right-clicking the command "Compile &gt; Software (only changes)" to execute it.
+2. Download the block with the command "Download to device &gt; Software (only changes)".
 3. Go online and monitor your block.
 
    ![1. Possible solution](images/68917777803_DV_resource.Stream@PNG-de-DE.png)
@@ -837,8 +837,8 @@ Another option for avoiding this undesired result is not to type both constants.
 
 To see the result, go online.
 
-1. Compile the SCL function block "FB_MathsFunctions" by right-clicking the command "Compile > Software (only changes)" to execute it.
-2. Download the block with the command "Download to device > Software (only changes)".
+1. Compile the SCL function block "FB_MathsFunctions" by right-clicking the command "Compile &gt; Software (only changes)" to execute it.
+2. Download the block with the command "Download to device &gt; Software (only changes)".
 3. Go online and monitor your block.
 
    ![2. Possible solution](images/68917777803_DV_resource.Stream@PNG-de-DE.png)
@@ -875,7 +875,7 @@ The following tables show the settings you can make for SCL:
 | View | Operand representation | Representation of the operand in the program editor. You can select between the following options:   - Symbolic and absolute - Symbolic |
 | Tag information | Additional information for the tags used is displayed in the program editor. When you select the option "Tag information with hierarchical comments", the comments of the higher structure levels are also displayed for structured tags. |  |
 | Keyword highlighting | Notation used to represent the keywords of the programming language. You can choose between uppercase and lowercase letters or a notation corresponding to the conventions of the Pascal programming language. |  |
-| Left-align actual parameters | Left-aligns the actual parameters for a block call. Only has this effect when the "Smart" option is selected in the settings under "General > Script/text editors > Indent". |  |
+| Left-align actual parameters | Left-aligns the actual parameters for a block call. Only has this effect when the "Smart" option is selected in the settings under "General &gt; Script/text editors &gt; Indent". |  |
 
 #### Default settings for new blocks
 
@@ -982,7 +982,7 @@ To set the font, size and color, follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "General > Script/text editors" group.
+2. Select the "General &gt; Script/text editors" group.
 3. Select the desired font and font size or choose a font color for the individual language elements.
 
 #### Setting the tab spacing
@@ -994,7 +994,7 @@ To set the tab spacing, follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "General > Script/text editors" group.
+2. Select the "General &gt; Script/text editors" group.
 3. Set the tab spacing.
 
 #### Show line numbers
@@ -1004,7 +1004,7 @@ To display the line numbers, follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "General > Script/text editors" group.
+2. Select the "General &gt; Script/text editors" group.
 3. Select the "Show line numbers" option.
 
 #### Show or hide the absolute operands
@@ -1055,7 +1055,7 @@ To indent or outdent individual lines, follow these steps:
 
 > **Note**
 >
-> You can set the width of the indent in "Options > Settings".
+> You can set the width of the indent in "Options &gt; Settings".
 
 #### Formatting code sections
 
@@ -1071,9 +1071,9 @@ To left-align the actual parameters of block calls, follow these steps:
 1. Select the "Settings" command in the "Options" menu.
 
    The "Settings" window is displayed in the work area.
-2. Select the "General > Script/text editors" group in the area navigation.
+2. Select the "General &gt; Script/text editors" group in the area navigation.
 3. Under "Indent", select the "Smart" option.
-4. Select the "PLC programming > SCL (Structured Control Language)" group in the area navigation.
+4. Select the "PLC programming &gt; SCL (Structured Control Language)" group in the area navigation.
 5. Select the "Left-align actual parameters" check box under "View".
 
    The actual parameters are left-aligned for newly inserted block. To left-align the actual parameters of existing block calls, you can select the block calls and click the "Automatically format selected text" button in the toolbar of the program editor.
@@ -1141,13 +1141,13 @@ You can use elements in your program code that were defined in other editors, fo
 To navigate to the definition of a code element, follow these steps:
 
 1. Right-click on the code element.
-2. Select the "Go to > Definition" command in the shortcut menu.
+2. Select the "Go to &gt; Definition" command in the shortcut menu.
 
    The editor in which the code element was defined opens and the definition instance is displayed.
 
 Or:
 
-1. Press and hold down the <Ctrl> key.
+1. Press and hold down the &lt;Ctrl&gt; key.
 2. Move the mouse pointer over your program code.
 
    If the mouse pointer moves across a code element whose definition can be displayed, it is shown as underlined and the name of the element turns into a link.
@@ -1209,7 +1209,7 @@ The SCL block is open.
 To set a bookmark, follow these steps:
 
 1. Right-click on the desired line in the sidebar.
-2. Select the "Bookmarks > Set" command in the shortcut menu.
+2. Select the "Bookmarks &gt; Set" command in the shortcut menu.
 
 Or:
 
@@ -1218,7 +1218,7 @@ Or:
 
 Or:
 
-1. Hold down the <Ctrl> key.
+1. Hold down the &lt;Ctrl&gt; key.
 2. Click on the line in the sidebar in which you want to place the bookmark.
 
 ##### Result
@@ -1246,7 +1246,7 @@ Several bookmarks are set in a block.
 To navigate between bookmarks, follow these steps:
 
 1. Set the insertion cursor in the program code.
-2. In the "Edit" menu, select the "Go to > Next bookmark" or "Go to > Previous bookmark" command.
+2. In the "Edit" menu, select the "Go to &gt; Next bookmark" or "Go to &gt; Previous bookmark" command.
 
 Or:
 
@@ -1256,7 +1256,7 @@ Or:
 Or:
 
 1. Click in the sidebar.
-2. Select the "Bookmarks > Next" or "Bookmarks > Previous" command in the shortcut menu.
+2. Select the "Bookmarks &gt; Next" or "Bookmarks &gt; Previous" command in the shortcut menu.
 
 ##### Result
 
@@ -1281,12 +1281,12 @@ You can delete individual bookmarks or all bookmarks from the block or the CPU.
 To delete an individual bookmark, follow these steps:
 
 1. Right-click in the sidebar on the line in which you want to delete the bookmark.
-2. Select the "Bookmarks > Remove" command in the shortcut menu.
+2. Select the "Bookmarks &gt; Remove" command in the shortcut menu.
 
 Or:
 
 1. Click on the line in which you want to delete the bookmark.
-2. In the "Edit" menu, select the "Bookmarks > Remove" command.
+2. In the "Edit" menu, select the "Bookmarks &gt; Remove" command.
 
 Or:
 
@@ -1298,11 +1298,11 @@ Or:
 To delete all bookmarks from the block, follow these steps:
 
 1. Right-click in the sidebar.
-2. Select the "Bookmarks > Delete all from block" command in the shortcut menu.
+2. Select the "Bookmarks &gt; Delete all from block" command in the shortcut menu.
 
 Or:
 
-1. In the "Edit" menu, select the "Bookmarks > Delete all from block" command.
+1. In the "Edit" menu, select the "Bookmarks &gt; Delete all from block" command.
 
 ---
 
@@ -1375,7 +1375,7 @@ SCL
 
 // Example of a program control instruction
 
-WHILE "Counter" < 10 DO
+WHILE "Counter" &lt; 10 DO
 
 "MyTAG" := "MyTag" + 2;
 
@@ -1404,7 +1404,7 @@ To enter SCL instructions, follow these steps:
 
    If you select an instruction that requires specification of operands, placeholders for the operands are inserted into the program. The placeholders for the operands are highlighted in yellow. The first placeholder is selected.
 3. Replace this placeholder with an operand.
-4. Use the <TAB> key to navigate to all other placeholders and replace them with operands.
+4. Use the &lt;TAB&gt; key to navigate to all other placeholders and replace them with operands.
 
 > **Note**
 >
@@ -1448,7 +1448,7 @@ To insert SCL instructions into a program using the "Instructions" task card, fo
 
    The instruction is inserted in the program. The placeholders for the operands are highlighted in yellow. A light yellow indicates the optional parameters that you do not necessarily have to interconnect. A darker yellow indicates the mandatory parameters that you must interconnect. The first placeholder is selected.
 3. Replace this placeholder with an operand. You can also drag a tag from the interface or the PLC tag table with drag-and-drop to the placeholder.
-4. Use the <TAB> key to navigate to all other placeholders and replace them with operands.
+4. Use the &lt;TAB&gt; key to navigate to all other placeholders and replace them with operands.
 
 #### Result
 
@@ -1492,7 +1492,7 @@ To surround your program code with a structure element, proceed as follows:
 1. Select the program code that you want to surround with a structure element.
 2. Right-click the selected program code.
 3. Select the required structure element under "Surround with" in the shortcut menu.
-4. Alternatively, you can also select the structure element in the favorites or in the "Instructions" task card in the "Simple instruction > Program control" pane.
+4. Alternatively, you can also select the structure element in the favorites or in the "Instructions" task card in the "Simple instruction &gt; Program control" pane.
 
 ---
 
@@ -1546,9 +1546,9 @@ Specifying a name is optional.
 
 Use the following syntax to combine the program parts into regions:
 
-REGION <Name> or (/*<Name as a multilingual comment>*/)
+REGION &lt;Name&gt; or (/*&lt;Name as a multilingual comment&gt;*/)
 
-<Instructions>
+&lt;Instructions&gt;
 
 END_REGION
 
@@ -1573,23 +1573,23 @@ Note the following information when using regions:
 
   The following example shows non-permitted uses of regions within CASE statements:
 
-  CASE <Expression> OF
+  CASE &lt;Expression&gt; OF
 
-  REGION <Constant1> : <Instructions1> END_REGION
+  REGION &lt;Constant1&gt; : &lt;Instructions1&gt; END_REGION
 
-  <Constant2> : REGION <Instructions2> END_REGION
+  &lt;Constant2&gt; : REGION &lt;Instructions2&gt; END_REGION
 
-  ELSE <Instructions0>
+  ELSE &lt;Instructions0&gt;
 
   END_CASE
 
-  CASE <Expression> OF
+  CASE &lt;Expression&gt; OF
 
-  <Constant1> : <Instructions1> REGION
+  &lt;Constant1&gt; : &lt;Instructions1&gt; REGION
 
-  <Constant2> : END_REGION <Instructions2>
+  &lt;Constant2&gt; : END_REGION &lt;Instructions2&gt;
 
-  ELSE <Instructions0>
+  ELSE &lt;Instructions0&gt;
 
   END_CASE
 
@@ -1597,29 +1597,29 @@ Note the following information when using regions:
 
 You also have the option to nest regions. However, make sure that regions within other regions are successfully completed:
 
-REGION <Name>
+REGION &lt;Name&gt;
 
-<Instructions>
+&lt;Instructions&gt;
 
-REGION <Name>
+REGION &lt;Name&gt;
 
-<Instructions>
+&lt;Instructions&gt;
 
 END_REGION
 
-<Instructions>
+&lt;Instructions&gt;
 
-REGION <Name>
+REGION &lt;Name&gt;
 
 REGION
 
-<Instructions>
+&lt;Instructions&gt;
 
 END_REGION
 
-REGION <Name>
+REGION &lt;Name&gt;
 
-<Instructions>
+&lt;Instructions&gt;
 
 END_REGION
 
@@ -1669,7 +1669,7 @@ To insert a region in your program code via the "Instructions" task card, procee
 
 1. Place the cursor at the position where you want to insert an empty region or select the program code which you want to surround with a region.
 2. Open the "Instructions" task card.
-3. Navigate to "Control Panel > REGION".
+3. Navigate to "Control Panel &gt; REGION".
 4. Drag the instruction REGION to the position in your program code at which you want to insert a region, or insert the instructionREGION by double-clicking.
 
    Either an empty region is inserted or the selected program code is surrounded with a region. The new region is visible in the region overview and the placeholder "_name_" is used as name.
@@ -1708,7 +1708,7 @@ To copy regions and their contents, follow these steps:
 1. Open the region overview.
 2. Right-click the region you want to copy and select the "Copy" command from the shortcut menu.
 3. Place the cursor at the position in your program code at which you want to insert the region.
-4. Insert the region either via the "Insert" shortcut menu command or via the key combination <Ctrl+V> in your program code.
+4. Insert the region either via the "Insert" shortcut menu command or via the key combination &lt;Ctrl+V&gt; in your program code.
 
    The copied region is inserted expanded together with its contents into your program code. In addition, the region is inserted in the region overview.
 5. If necessary, assign a new name for the inserted region.
@@ -1716,9 +1716,9 @@ To copy regions and their contents, follow these steps:
 Or:
 
 1. Select the region in the program window. The region can be expanded or collapsed.
-2. Copy the region either via the shortcut menu "Copy" or the key combination <Ctrl+C>.
+2. Copy the region either via the shortcut menu "Copy" or the key combination &lt;Ctrl+C&gt;.
 3. Place the cursor at the position in your program code at which you want to insert the region.
-4. Insert the region either via the "Insert" shortcut menu command or via the key combination <Ctrl+V> in your program code.
+4. Insert the region either via the "Insert" shortcut menu command or via the key combination &lt;Ctrl+V&gt; in your program code.
 
    The copied region is inserted expanded together with its contents into your program code. In addition, the region is inserted in the region overview.
 5. If necessary, assign a new name for the inserted region.
@@ -1773,12 +1773,12 @@ Or:
 
 1. Open the region overview.
 2. In the region overview, select the region that you want to expand or collapse.
-3. Press the shortcut <Ctrl+Shift+Num+> to expand or <Ctrl+Shift+Num-> to collapse.
+3. Press the shortcut &lt;Ctrl+Shift+Num+&gt; to expand or &lt;Ctrl+Shift+Num-&gt; to collapse.
 
 Or:
 
 1. In the programming window, place the cursor in the region that you want to expand or collapse.
-2. Press the shortcut <Ctrl+Shift+Num+> to expand or <Ctrl+Shift+Num-> to collapse.
+2. Press the shortcut &lt;Ctrl+Shift+Num+&gt; to expand or &lt;Ctrl+Shift+Num-&gt; to collapse.
 
 Depending on the synchronization settings, the region is either expanded or collapsed in the region overview or in the programming window or in both windows.
 
@@ -1794,14 +1794,14 @@ Or:
 
 1. Open the region overview.
 2. Select any region in the region overview.
-3. To expand all regions, press the shortcut <Ctrl+Shift+Num*>.
-4. To collapse all regions, press the shortcut <Ctrl+Shift+Num/>.
+3. To expand all regions, press the shortcut &lt;Ctrl+Shift+Num*&gt;.
+4. To collapse all regions, press the shortcut &lt;Ctrl+Shift+Num/&gt;.
 
 Or:
 
 1. Place the cursor in the programming window.
-2. To expand all regions, press the shortcut <Ctrl+Shift+Num*>.
-3. To collapse all regions, press the shortcut <Ctrl+Shift+Num/>.
+2. To expand all regions, press the shortcut &lt;Ctrl+Shift+Num*&gt;.
+3. To collapse all regions, press the shortcut &lt;Ctrl+Shift+Num/&gt;.
 
 Depending on the synchronization settings, all regions are either expanded or collapsed in the region overview or in the programming window or in both windows.
 
@@ -1866,7 +1866,7 @@ The SCL instructions that you employ for block programming use specific data typ
 
 You will have to change the default data type if this is incompatible with the data type of the input parameter used. You can always change the data type based on the following syntax:
 
-_<data type>
+_&lt;data type&gt;
 
 ##### SCL instructions with default data type
 
@@ -1902,9 +1902,9 @@ Proceed as follows to insert an SCL instruction and change its data type:
 2. Specify the operands for the instruction.
 
    The data type of the function value is specified based on the input parameters, or the default data type of the instruction is used.
-3. Append the "_<data type>" string to the instruction name.
+3. Append the "_&lt;data type&gt;" string to the instruction name.
 
-   "<data type>" represents the data type you need for the instruction.
+   "&lt;data type&gt;" represents the data type you need for the instruction.
 
 ---
 
@@ -2146,7 +2146,7 @@ If you call another code block from a SCL block, you can supply the formal param
 
 The specification of the parameters has the form of a value assignment. This value assignment enables you to assign values (actual parameters) to the parameters you have defined in the called block.
 
-The formal parameters of the called code block are listed in brackets directly after the call. Input and in-out parameters have the assignment identifier ":=", output parameters have the assignment identifier "=>". A placeholder placed after the parameter shows the required data type and the type of the parameter.
+The formal parameters of the called code block are listed in brackets directly after the call. Input and in-out parameters have the assignment identifier ":=", output parameters have the assignment identifier "=&gt;". A placeholder placed after the parameter shows the required data type and the type of the parameter.
 
 ###### Rules for supplying parameters
 
@@ -2178,9 +2178,9 @@ The following rules apply to supplying parameters:
 
 The following syntax is used to call a function:
 
-<Function name> (Parameter list); //Standard call
+&lt;Function name&gt; (Parameter list); //Standard call
 
-<Operand>:=<Function name> (Parameter list); // Call in an expression
+&lt;Operand&gt;:=&lt;Function name&gt; (Parameter list); // Call in an expression
 
 ###### Function value
 
@@ -2217,7 +2217,7 @@ If you call another code block from a SCL block, you need to supply the formal p
 
 The specification of the parameters has the form of a value assignment. This value assignment enables you to assign values (actual parameters) to the parameters you have defined in the called block.
 
-The formal parameters of the called code block are listed in brackets directly after the call. Input and in-out parameters have the assignment identifier ":=", output parameters have the assignment identifier "=>". A gray placeholder placed after the parameter shows the required data type and the type of the parameter.
+The formal parameters of the called code block are listed in brackets directly after the call. Input and in-out parameters have the assignment identifier ":=", output parameters have the assignment identifier "=&gt;". A gray placeholder placed after the parameter shows the required data type and the type of the parameter.
 
 ###### Rules for supplying parameters
 
@@ -2355,11 +2355,11 @@ Proceed as follows to insert a function call:
 
 1. Enter the function name.
 2. Confirm your entry with the Enter key.
-3. Select the "Show all parameters" command from the context menu or press the key combination <Ctrl+Shift+space bar>. Alternatively, you can click "Expands/collapses the parameter list of block calls" in the function bar.
+3. Select the "Show all parameters" command from the context menu or press the key combination &lt;Ctrl+Shift+space bar&gt;. Alternatively, you can click "Expands/collapses the parameter list of block calls" in the function bar.
 
    The syntax for the function call including the parameter list is added to the SCL program. The placeholders for the actual parameters are highlighted in yellow. The first placeholder is selected.
 4. Replace this placeholder with an actual parameter. You can also drag a tag from the interface or the PLC tag table with drag-and-drop to the placeholder.
-5. Use the <TAB> key to navigate to all other placeholders and replace them with actual parameters. You can navigate to the previous placeholder with <Shift + TAB>.
+5. Use the &lt;TAB&gt; key to navigate to all other placeholders and replace them with actual parameters. You can navigate to the previous placeholder with &lt;Shift + TAB&gt;.
 
 ##### Inserting a call for a function block (FB)
 
@@ -2380,7 +2380,7 @@ To insert a call for a function block (FB), follow these steps:
    - If you click the "Multi-instance" button, in the "Name in the interface" field, enter the name of the tag with which the called function block will be entered as a static tag in the interface of the calling block.
    - If you click on the "Parameter instance" button, enter the name of the in/out (InOut) parameter to which the instance should be passed during runtime in the "Name in the interface" text box.
 5. Replace this placeholder with an actual parameter. You can also drag a tag from the interface or the PLC tag table with drag-and-drop to the placeholder.
-6. Use the <TAB> key to navigate to all other placeholders and replace them with actual parameters. You can navigate to the previous placeholder with <Shift + TAB>.
+6. Use the &lt;TAB&gt; key to navigate to all other placeholders and replace them with actual parameters. You can navigate to the previous placeholder with &lt;Shift + TAB&gt;.
 
 ##### Result
 
@@ -2422,7 +2422,7 @@ To insert a function call using drag-and-drop, follow these steps:
 
    The syntax for the function call including the parameter list is added to the SCL program. The placeholders for the actual parameters are highlighted in yellow. The first placeholder is selected.
 2. Replace this placeholder with an actual parameter. You can also drag a tag from the interface or the PLC tag table with drag-and-drop to the placeholder.
-3. Use the <TAB> key to navigate to all other placeholders and replace them with actual parameters. You can navigate to the previous placeholder with <Shift + TAB>.
+3. Use the &lt;TAB&gt; key to navigate to all other placeholders and replace them with actual parameters. You can navigate to the previous placeholder with &lt;Shift + TAB&gt;.
 
 ##### Inserting a call for a function block (FB)
 
@@ -2442,7 +2442,7 @@ To insert a call for a function block (FB) using drag-and-drop, follow these ste
 
    The syntax for the function block call including the parameter list is added to the SCL program. The placeholders for the actual parameters are highlighted in yellow. The first placeholder is selected.
 4. Replace this placeholder with an actual parameter. You can also drag a tag from the interface or the PLC tag table with drag-and-drop to the placeholder.
-5. Use the <TAB> key to navigate to all other placeholders and replace them with actual parameters. You can navigate to the previous placeholder with <Shift + TAB>.
+5. Use the &lt;TAB&gt; key to navigate to all other placeholders and replace them with actual parameters. You can navigate to the previous placeholder with &lt;Shift + TAB&gt;.
 
 ##### Result
 
@@ -2519,7 +2519,7 @@ To implicitly update all block calls and uses of PLC data types during compilati
 
 1. Open the project tree.
 2. Select the "Program blocks" folder.
-3. Select the "Compile > Software (rebuild all blocks)" command in the shortcut menu.
+3. Select the "Compile &gt; Software (rebuild all blocks)" command in the shortcut menu.
 
 ---
 
@@ -2540,7 +2540,7 @@ In SCL, if you call blocks or insert instructions that are system-internal funct
 To expand the parameter list, follow these steps:
 
 1. Right-click in the block call or the instruction.
-2. Select the "Expand parameter list" command from the shortcut menu or press the key combination <Ctrl+Shift+Space bar>.
+2. Select the "Expand parameter list" command from the shortcut menu or press the key combination &lt;Ctrl+Shift+Space bar&gt;.
 
    The parameter list is displayed in full again.
 
@@ -2549,7 +2549,7 @@ To expand the parameter list, follow these steps:
 To reduce the parameter list, follow these steps:
 
 1. Right-click in the block call or the instruction.
-2. Select the "Reduce parameter list" command from the shortcut menu or press the key combination <Ctrl+Shift+Space bar>.
+2. Select the "Reduce parameter list" command from the shortcut menu or press the key combination &lt;Ctrl+Shift+Space bar&gt;.
 
    All unused optional parameters are hidden.
 
@@ -2639,7 +2639,7 @@ Alternatively, you can also convert existing program code into a comment section
 
 1. Select the program code that you want to convert into a comment section.
 2. Right-click the selected program code.
-3. In the shortcut menu, select the entry "(* *)" under "Surround with". Or select the instruction "(* *)" in the "Instructions" task card in the "Simple instructions > Program control" pane.
+3. In the shortcut menu, select the entry "(* *)" under "Surround with". Or select the instruction "(* *)" in the "Instructions" task card in the "Simple instructions &gt; Program control" pane.
 
 #### Inserting multilingual comment
 
@@ -2678,7 +2678,7 @@ A description of the instructions that follow can be placed here
 
 **************************************************************************************)
 
-IF "MyVal1" > 0 THEN //No division by 0
+IF "MyVal1" &gt; 0 THEN //No division by 0
 
 "MyReal" := "MyVal2" (* input value *) / "MyVal1" (* measured value *);
 
@@ -2731,7 +2731,7 @@ To select individual instructions, follow these steps:
 
 To select all instructions, follow these steps:
 
-1. In the "Edit" menu, select the "Select All" command or use the keyboard shortcut <Ctrl+A>.
+1. In the "Edit" menu, select the "Select All" command or use the keyboard shortcut &lt;Ctrl+A&gt;.
 
 > **Note**
 >
@@ -3010,11 +3010,11 @@ LD := "LOAD",
 
 PV := "MAX STORAGE AREA FILL AMOUNT",
 
-QU => "STOCK_PACKAGES",
+QU =&gt; "STOCK_PACKAGES",
 
-QD => "STOR_EMPTY",
+QD =&gt; "STOR_EMPTY",
 
-CV => "PACKAGECOUNT");
+CV =&gt; "PACKAGECOUNT");
 
 As long as the storage area contains packages, the "Storage area not empty" lamp is switched on.
 
@@ -3026,7 +3026,7 @@ If the number of packages in the storage area is lower than 50%, the lamps for t
 
 SCL
 
-IF "PACKAGECOUNT" < "VOLUME_50" THEN
+IF "PACKAGECOUNT" &lt; "VOLUME_50" THEN
 
 "STOR_50%_FULL" := 0;
 
@@ -3040,7 +3040,7 @@ If the number of packages in the storage area is greater than or equal to 50 %, 
 
 SCL
 
-IF "PACKAGECOUNT" >= "VOLUME_50" AND "PACKAGECOUNT <= "VOLUME_90" THEN
+IF "PACKAGECOUNT" &gt;= "VOLUME_50" AND "PACKAGECOUNT &lt;= "VOLUME_90" THEN
 
 "STOR_50%_FULL" := 1;
 
@@ -3054,7 +3054,7 @@ If the number of packages in the storage area is greater than or equal to 90 %, 
 
 SCL
 
-IF "PACKAGECOUNT" >= "VOLUME_90" AND "PACKAGECOUNT < "VOLUME_100" THEN
+IF "PACKAGECOUNT" &gt;= "VOLUME_90" AND "PACKAGECOUNT &lt; "VOLUME_100" THEN
 
 "STOR_50%_FULL" := 1;
 
@@ -3068,7 +3068,7 @@ If the number of packages in the storage area reaches 100 %, the lamp for the "S
 
 SCL
 
-IF "PACKAGECOUNT" >= "VOLUME_100" THEN
+IF "PACKAGECOUNT" &gt;= "VOLUME_100" THEN
 
 "STOR_50%_FULL" := 1;
 

@@ -61,9 +61,9 @@ When you set up project protection in the engineering system, you will become th
 
 To protect the project, follow these steps:
 
-1. Click "Security settings > Settings > Password policies" in the project tree.
+1. Click "Security settings &gt; Settings &gt; Password policies" in the project tree.
 2. You can define your own password policies.
-3. Click on "Project protection > Protect this project".
+3. Click on "Project protection &gt; Protect this project".
 4. Specify the login information for the project administrator.
 5. The project administrator with the system-defined role "Engineering administrator" is created. The project is protected.
 
@@ -281,7 +281,7 @@ In the Engineering System, you specify whether you are using local or central us
 
 To set the password settings for the runtime and engineering, follow these steps:
 
-1. Open "Security settings > Settings" in the project tree.
+1. Open "Security settings &gt; Settings" in the project tree.
 2. In the "Settings" editor, select the "Password policies" menu command.
 3. Specify the password settings.
 
@@ -290,11 +290,11 @@ To set the password settings for the runtime and engineering, follow these steps
 To define the user management, follow these steps:
 
 1. Open the "Runtime settings" of the device in the project tree of the project.
-2. Under "Security > Access control", select:
+2. Under "Security &gt; Access control", select:
 
    - Local user management: User data is stored on the device.
    - Central user management: User data is loaded from the UMC.
-3. Under "Security > Account deactivation in Runtime", you can specify whether and after how many failed login attempts a user is logged out.
+3. Under "Security &gt; Account deactivation in Runtime", you can specify whether and after how many failed login attempts a user is logged out.
 
    ![Specifying the user management](images/171009014027_DV_resource.Stream@PNG-en-US.png)
 
@@ -410,7 +410,7 @@ You have specified in the Engineering System that you are using local user manag
 ##### Requirement
 
 - A project is open.
-- The "Security Settings > Users and Roles" editor is open.
+- The "Security Settings &gt; Users and Roles" editor is open.
 - The "Users" tab is open.
 
 ##### Restrictions
@@ -430,7 +430,7 @@ Please note the following restrictions:
 >
 > - 0123456789
 > - A...Z a...z
-> - !#$%&()*+,-./:;<=>?@\[]^_`{}~|
+> - !#$%&amp;()*+,-./:;&lt;=&gt;?@\[]^_`{}~|
 > - Spaces within the user name or password
 
 ##### Displaying columns for user data
@@ -498,7 +498,7 @@ The user data has been changed.
 To delete a project user, proceed as follows:
 
 1. Select the user in the "Users" tab that is open.
-2. In the shortcut menu, select the "Delete" command or press the <Del> key.
+2. In the shortcut menu, select the "Delete" command or press the &lt;Del&gt; key.
 
 The user has been deleted.
 
@@ -523,8 +523,8 @@ You can configure the display of the login dialog in the Engineering System. A p
 To configure the "ShowLoginDialog" system function, follow these steps:
 
 1. Configure a button in the screen.
-2. Enter the "ShowLoginDialog" name in the "Static value" column under "Properties > General > Content > Text".
-3. Under "Events > Click left mouse button" in the "Name" column under "Screen > Account management", select the system function "ShowLoginDialog".
+2. Enter the "ShowLoginDialog" name in the "Static value" column under "Properties &gt; General &gt; Content &gt; Text".
+3. Under "Events &gt; Click left mouse button" in the "Name" column under "Screen &gt; Account management", select the system function "ShowLoginDialog".
 
    ![Configuring "ShowLoginDialog" system function](images/172364936971_DV_resource.Stream@PNG-en-US.png)
 
@@ -562,7 +562,7 @@ After automatic logoff you are by default shown the "User login" dialog. This pa
 
 To configure the automatic logoff, "Runtime timeout" for a user, proceed as follows:
 
-1. Open the editor "Security settings > Users and roles".
+1. Open the editor "Security settings &gt; Users and roles".
 2. Open the "Users" tab.
 3. Select the check box in the "Runtime timeout" column of the selected user.
 4. Enter the inactivity time in the text box. The user is automatically logged off after the specified time.
@@ -575,7 +575,7 @@ To configure the automatic logoff, "Runtime timeout" for a user, proceed as foll
 
 To configure the automatic logoff, "Runtime timeout", for a role proceed as follows:
 
-1. Open the editor "Security settings > Users and roles".
+1. Open the editor "Security settings &gt; Users and roles".
 2. Open the "Roles" tab.
 3. Click in the text box in the "Runtime timeout" column of the selected role.
 4. Enter the inactivity time in the text box. The role is automatically logged off after the specified time.
@@ -604,7 +604,7 @@ In the runtime settings in the Engineering System you can configure a URL addres
 
 To configure the display of the website after an automatic logoff, proceed as follows:
 
-1. Under "Runtime settings > General > Automatic logoff", select the option "Activate URL for automatic logoff".
+1. Under "Runtime settings &gt; General &gt; Automatic logoff", select the option "Activate URL for automatic logoff".
 
    The option is disabled by default and the text box is empty.
 
@@ -647,9 +647,9 @@ All system-defined roles are included in each runtime project.
 To load the local user management for the first time, follow these steps:
 
 1. Select the device in the project tree.
-2. Select "Download to device > Software (all)" from the shortcut menu.
+2. Select "Download to device &gt; Software (all)" from the shortcut menu.
 
-   The compilation of the project is checked and content that has not been compiled is compiled. The compilation result is displayed in the Inspector window under "Info > Compile".
+   The compilation of the project is checked and content that has not been compiled is compiled. The compilation result is displayed in the Inspector window under "Info &gt; Compile".
 3. The "Load Preview" dialog is displayed.
 4. Check the displayed defaults and change the settings if necessary:
 
@@ -733,7 +733,7 @@ The main advantage of the central user management is the management of the user 
 - A project is open.
 - The connection to the central user management is configured.
 - You have a user account with the corresponding rights in the central user management.
-- The "Security Settings > Users and Roles" editor is open.
+- The "Security Settings &gt; Users and Roles" editor is open.
 - The "User groups" tab is open.
 
 ##### Restrictions
@@ -772,7 +772,7 @@ To delete a user group from the TIA Portal project, follow these steps:
 
 1. Open the "User groups" tab.
 2. Select one or more user groups.
-3. In the shortcut menu, select the "Delete" command or press the <Del> key.
+3. In the shortcut menu, select the "Delete" command or press the &lt;Del&gt; key.
 
 ##### Adding central users
 
@@ -804,7 +804,7 @@ To delete a central user from the TIA Portal project, follow these steps:
 
 1. Open the "Users" tab.
 2. Select one or more central users.
-3. In the shortcut menu, select the "Delete" command or press the <Del> key.
+3. In the shortcut menu, select the "Delete" command or press the &lt;Del&gt; key.
 
 ---
 
@@ -834,9 +834,9 @@ All system-defined roles are included in each runtime project.
 To load the central user management for the first time, follow these steps:
 
 1. Select the device in the project tree.
-2. Select "Download to device > Software (all)" from the shortcut menu.
+2. Select "Download to device &gt; Software (all)" from the shortcut menu.
 
-   The compilation of the project is checked and content that has not been compiled is compiled. The compilation result is displayed in the Inspector window under "Info > Compile".
+   The compilation of the project is checked and content that has not been compiled is compiled. The compilation result is displayed in the Inspector window under "Info &gt; Compile".
 3. The "Load Preview" dialog is displayed.
 4. Check the displayed defaults and change the settings if necessary:
 
@@ -971,7 +971,7 @@ You can perform the following actions to manage the user-defined HMI roles in yo
 
 - A project is open.
 - A device has been created.
-- The "Security Settings > Users and Roles" editor is open.
+- The "Security Settings &gt; Users and Roles" editor is open.
 - The "Roles" tab is open.
 
 ##### Adding a user-defined HMI role
@@ -1000,7 +1000,7 @@ To change the data of a user-defined role, follow these steps:
 To delete a user-defined role, follow these steps:
 
 1. Select the user-defined role.
-2. In the shortcut menu, select the "Delete" command or press the <Del> key.
+2. In the shortcut menu, select the "Delete" command or press the &lt;Del&gt; key.
 
 #### Assigning HMI roles (RT Unified)
 
@@ -1011,7 +1011,7 @@ You can assign HMI roles with different function rights to local users and globa
 - A project is open.
 - A device has been created.
 - Users and user groups have been created.
-- The "Security Settings > Users and Roles" editor is open.
+- The "Security Settings &gt; Users and Roles" editor is open.
 
 ##### Assigning HMI roles to local users
 
@@ -1186,14 +1186,14 @@ Please note the following restrictions:
 >
 > - 0123456789
 > - A...Z a...z
-> - !#$%&()*+,-./:;<=>?@\\[]^_`{}~|
+> - !#$%&amp;()*+,-./:;&lt;=&gt;?@\\[]^_`{}~|
 > - Spaces within the user name or password
 
 ##### Requirement
 
 - A project is open.
 - A device has been created.
-- The "Security Settings > Users and Roles" editor is open.
+- The "Security Settings &gt; Users and Roles" editor is open.
 - The "Roles" tab is open.
 
 ##### Adding a user-defined Runtime right
@@ -1227,7 +1227,7 @@ To change the data of a user-defined runtime right, follow these steps:
 To delete a user-defined runtime right, follow these steps:
 
 1. Select the user-defined runtime right.
-2. In the shortcut menu, select the "Delete" command or press the <Del> key.
+2. In the shortcut menu, select the "Delete" command or press the &lt;Del&gt; key.
 
 #### Assigning function rights to an HMI role (RT Unified)
 
@@ -1392,7 +1392,7 @@ In the following example, you create the roles and assign the function rights to
 
 1. Open the "Roles" work area.
 2. Double-click "Add new role" in the "Roles" table and enter a name for the role.
-3. In the "Runtime rights" table, click on "Runtime rights > WinCC Unified devices > HMI_RT_1" in the "Categories of function rights" column.
+3. In the "Runtime rights" table, click on "Runtime rights &gt; WinCC Unified devices &gt; HMI_RT_1" in the "Categories of function rights" column.
 4. In the "Function rights" column, assign the desired function rights to the role.
 
 ##### Result
@@ -1414,14 +1414,14 @@ In the following example, you use a system function to create a button for a scr
 
 ##### Procedure
 
-1. In the Inspector window, click "Properties > Properties > General > Text".
+1. In the Inspector window, click "Properties &gt; Properties &gt; General &gt; Text".
 2. Enter "To Recipe view" as the text.
-3. Click "Properties > Events > Click left mouse button" in the Inspector window.
+3. Click "Properties &gt; Events &gt; Click left mouse button" in the Inspector window.
 4. Click the "Add function" entry in the first line of the "Function list" table.
 5. Select the system function "ChangeScreen" from the "Screen" group.
 6. Click on the ![Procedure](images/30890839819_DV_resource.Stream@PNG-de-DE.png) button in the "Screen name" row of the "Value" column. A dialog box for selecting the screen opens.
 7. Select the "Recipes" screen and use the ![Procedure](images/84603740299_DV_resource.Stream@PNG-de-DE.png) button to close the dialog box.
-8. Click "Properties > Properties > Security" in the Inspector window.
+8. Click "Properties &gt; Properties &gt; Security" in the Inspector window.
 9. Select "Change parameter sets" as function right.
 
 ##### Result
@@ -1512,7 +1512,7 @@ In addition, activate the access control in the Control Panel:
 
 1. Start the Panel.
 2. Open the Control Panel.
-3. Under "Security > Control Panel Access", activate the access control for the Control Panel.
+3. Under "Security &gt; Control Panel Access", activate the access control for the Control Panel.
 
 > **Note**
 >
@@ -1566,7 +1566,7 @@ To use the user management on the Unified Panel, follow these steps:
 
 > **Note**
 >
-> If you have made changes to the Runtime settings in the "Security" area in the Engineering System, you must ensure before loading that the page "Security > User management settings" is closed in the Control Panel of the Unified Panel. Otherwise, the changes may not be applied after loading.
+> If you have made changes to the Runtime settings in the "Security" area in the Engineering System, you must ensure before loading that the page "Security &gt; User management settings" is closed in the Control Panel of the Unified Panel. Otherwise, the changes may not be applied after loading.
 
 #### Opening local user management in the "Browser" screen object (RT Unified)
 
@@ -1621,7 +1621,7 @@ The detailed description of the individual steps in Runtime can be found in the 
 
 If you want to manage local users in the Internet browser, follow these steps:
 
-1. In the address line of the browser, enter the IP address of the Unified Panel "https://<UCP-IP>/umc". The "User login" dialog is displayed.
+1. In the address line of the browser, enter the IP address of the Unified Panel "https://&lt;UCP-IP&gt;/umc". The "User login" dialog is displayed.
 2. Log in to the user management. The home page of the user management opens.
 
    ![Managing local users in the web browser](images/159514733451_DV_resource.Stream@PNG-en-US.png)
@@ -2107,7 +2107,7 @@ To manage the local users on a Unified PC, you require the "User management" fun
 
 To log on to the user management in Runtime, follow these steps:
 
-1. In the browser, enter the IP address of the Runtime PC "https://<PC-IP>/umc". If runtime is installed on the same PC as the browser, enter the address "https://localhost/umc".
+1. In the browser, enter the IP address of the Runtime PC "https://&lt;PC-IP&gt;/umc". If runtime is installed on the same PC as the browser, enter the address "https://localhost/umc".
 
    The start page of Runtime is displayed.
 
@@ -2516,4 +2516,4 @@ To remedy the error in "Firefox", follow these steps:
 1. Open a new tab.
 2. Enter the URL address of the identity provider of the UMC server (ring server) in the address line of the browser, for example, "https://uadtbf-01.asrd-lab.net/umc-sso".
 3. A blank page opens. Close the page.
-4. Refresh the home page with the function key <F5>. The home page with the "User login" dialog is displayed.
+4. Refresh the home page with the function key &lt;F5&gt;. The home page with the "User login" dialog is displayed.

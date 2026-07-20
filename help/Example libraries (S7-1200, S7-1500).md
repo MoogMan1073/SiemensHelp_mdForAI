@@ -22,7 +22,7 @@ The "Sample Library for Instructions" is the global library for the program exam
 
 ### Programming examples in the TIA Portal information system
 
-Programming examples in the "Sample Library for Instructions" match the instructions used in the programming examples in the TIA Portal information system. This means that you can call the respective programming example documentation via the help (<F1>) in the TIA Portal.
+Programming examples in the "Sample Library for Instructions" match the instructions used in the programming examples in the TIA Portal information system. This means that you can call the respective programming example documentation via the help (&lt;F1&gt;) in the TIA Portal.
 
 ![Programming examples in the TIA Portal information system](images/104856707851_DV_resource.Stream@PNG-en-US.png)
 

@@ -123,7 +123,7 @@ The following information of the data type "String" is required:
   > Special characters must not be used, e.g. #,$,*,%,.,/,;,?;[,],~,'".
 - "icon" (optional)
 
-  Includes the path for the logo that is displayed in the "Toolbox > My Controls" task card in the TIA Portal.
+  Includes the path for the logo that is displayed in the "Toolbox &gt; My Controls" task card in the TIA Portal.
 
   The path can be specified as follows:
 
@@ -150,8 +150,8 @@ The following information of the data type "String" is required:
   >
   > For example, a GUID can be created as follows:
   >
-  > - In Visual Studio under "Tools > Create GUID"
-  > - Under <https://www.guidgenerator.com/>
+  > - In Visual Studio under "Tools &gt; Create GUID"
+  > - Under [https://www.guidgenerator.com/](https://www.guidgenerator.com/)
 - "start" (optional): The start directory must be specified to set the starting point of the Custom Web Control for the browser.
 
   If this value is not defined, "./control/index.html" is used.
@@ -337,7 +337,7 @@ The following optional elements can be assigned to a method:
 
 "events" contain a list of events used by the Custom Web Control.
 
-Events are triggered by the Custom Web Control itself at any time. Events can be used in Unified Scripting to transfer information from the client to the server. They can be found in the engineering system under "Properties > Events".
+Events are triggered by the Custom Web Control itself at any time. Events can be used in Unified Scripting to transfer information from the client to the server. They can be found in the engineering system under "Properties &gt; Events".
 
 An event can be assigned the following optional elements:
 
@@ -370,7 +370,7 @@ An event can be assigned the following optional elements:
 
 "properties" contain a list of properties used by the Custom Web Control.
 
-Properties can be found in the engineering system under "Properties > Properties > Interfaces".
+Properties can be found in the engineering system under "Properties &gt; Properties &gt; Interfaces".
 
 The following elements can be assigned to a property:
 
@@ -633,17 +633,17 @@ After the connection setup, you can access the data that is defined in the "mani
 
 ### Example: Integrating the "WebCC" object
 
-<!doctype html>
+&lt;!doctype html&gt;
 
-<head>
+&lt;head&gt;
 
-  <script>…</script>
+  &lt;script&gt;…&lt;/script&gt;
 
-  <!-- Web Custom Control Facade -->
+  &lt;!-- Web Custom Control Facade --&gt;
 
-  <script type= text/JavaScript src='webcc.min.js'>
+  &lt;script type= text/JavaScript src='webcc.min.js'&gt;
 
-</head>
+&lt;/head&gt;
 
 ### Initialization of the "WebCC" object
 
@@ -1082,15 +1082,15 @@ To use a web page as a Custom Web Control, the encoding must be converted.
 
 function toColor(num) {
 
-  num >>>= 0;
+  num &gt;&gt;&gt;= 0;
 
-  var b = num & 0xFF,
+  var b = num &amp; 0xFF,
 
-      g = (num & 0xFF00) >>> 8,
+      g = (num &amp; 0xFF00) &gt;&gt;&gt; 8,
 
-      r = (num & 0xFF0000) >>> 16,
+      r = (num &amp; 0xFF0000) &gt;&gt;&gt; 16,
 
-      a = ((num & 0xFF000000) >>> 24) / 255;
+      a = ((num &amp; 0xFF000000) &gt;&gt;&gt; 24) / 255;
 
   return 'rgba(' + [r, g, b, a].join(',') + ')';
 
@@ -1244,7 +1244,7 @@ const newZoneIndex = gauge.options.staticZones.indexOf(
 
 gauge.options.staticZones.
 
-filter(zone => zone.min <= gauge.value && gauge.value <= zone.max).pop()
+filter(zone =&gt; zone.min &lt;= gauge.value &amp;&amp; gauge.value &lt;= zone.max).pop()
 
 );
 
@@ -1308,7 +1308,7 @@ function updateLabels() {
 
   const labels = new Array(.Properties.DivisionCount).fill(0).map(
 
-    (x, i) => (i + 1) * (WebCC.Properties.MaxValue - WebCC.Properties.MinValue/WebCC.Properties.DivisionCount + WebCC.Properties.MinValue
+    (x, i) =&gt; (i + 1) * (WebCC.Properties.MaxValue - WebCC.Properties.MinValue/WebCC.Properties.DivisionCount + WebCC.Properties.MinValue
 
   );
 
@@ -1338,7 +1338,7 @@ function updateZones(zones) {
 
   gauge.setOptions({
 
-    staticZones: zones.map(item => {
+    staticZones: zones.map(item =&gt; {
 
       return { strokeStyle: toColor(item.StrokeColor), min: item.Min, max: item.Max };
 
@@ -1440,7 +1440,7 @@ let state = 0; // 0: falling, 1: raising, 2: falling again
 
 let currentRound = 0;
 
-const timerId = setInterval(() => {
+const timerId = setInterval(() =&gt; {
 
 switch (state) {
 
@@ -1448,7 +1448,7 @@ case 0:
 
 currentRgba -= 0.2;
 
-if (currentRgba <= 0) {
+if (currentRgba &lt;= 0) {
 
 currentRgba = 0;
 
@@ -1462,7 +1462,7 @@ case 1:
 
 currentRgba += 0.2;
 
-if (currentRgba >= 1) {
+if (currentRgba &gt;= 1) {
 
 currentRgba = 1;
 
@@ -1476,11 +1476,11 @@ case 2:
 
 currentRgba -= 0.2;
 
-if (currentRgba < originalRgba) {
+if (currentRgba &lt; originalRgba) {
 
 currentRound++;
 
-if (currentRound >= 2) {
+if (currentRound &gt;= 2) {
 
 clearInterval(timerId);
 
@@ -1520,8 +1520,8 @@ The name of the ZIP file must match the GUID, for example, "{551BF148-2F0D-4293-
 >
 > For example, a GUID can be created as follows:
 >
-> - In Visual Studio under "Tools > Create GUID"
-> - Under <https://www.guidgenerator.com/>
+> - In Visual Studio under "Tools &gt; Create GUID"
+> - Under [https://www.guidgenerator.com/](https://www.guidgenerator.com/)
 
 ## Restrictions (RT Unified)
 
@@ -1572,17 +1572,17 @@ To install Custom Web Controls for a TIA Portal project, follow these steps:
 2. Open the "UserFiles" subfolder.
 3. Create a folder with the name "CustomControls".
 4. Store the created program as *.zip file in the "CustomControls" folder.
-5. In the TIA Portal, click on the ![Installing Custom Web Control](images/137628691979_DV_resource.Stream@PNG-de-DE.png) "Update" button in the "Toolbox" > "My Controls" task card.
+5. In the TIA Portal, click on the ![Installing Custom Web Control](images/137628691979_DV_resource.Stream@PNG-de-DE.png) "Update" button in the "Toolbox" &gt; "My Controls" task card.
 
    The Custom Web Control is displayed in the "Toolbox" task card of the "Screens" editor.
 
 ### Using Custom Web Control
 
-1. Drag the Custom Web Control from the "Toolbox" > "My Controls" task card onto the screen.
+1. Drag the Custom Web Control from the "Toolbox" &gt; "My Controls" task card onto the screen.
 2. Select the Control.
-3. In the Inspector window, go to "Properties > Events".
+3. In the Inspector window, go to "Properties &gt; Events".
 4. Configure system functions or scripts for the events used in the Control.
-5. In the Inspector window, go to "Properties > Properties > Interface".
+5. In the Inspector window, go to "Properties &gt; Properties &gt; Interface".
 6. Assign static values for the interface properties or dynamize the interface properties according your requirements.
 
    When dynamizing with tags, note that the Control's access to the tags is "Read only" by default.

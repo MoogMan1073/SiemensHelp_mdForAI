@@ -66,7 +66,7 @@ Displaying address details of the S7 connection. With an unspecified partner, th
 
 #### Meaning
 
-A connection resource such as shown under "Properties > Address details" is part of the TSAP (Transport Service Access Point) of the local module or partner.
+A connection resource such as shown under "Properties &gt; Address details" is part of the TSAP (Transport Service Access Point) of the local module or partner.
 
 When a connection is established, the connection-specific resources of a module are assigned permanently to this connection. This assignment requires that the connection resource can be addressed. The TSAP (Transport Service Access Point) is, as it were, the address of the resource that is formed with the help of the connection resource or, in the case of S7-1500 CPUs, with SIMATIC-ACC (SIMATIC Application Controlled Communication).
 
@@ -76,14 +76,14 @@ The ability to use connection resources is subject to rules and restrictions. Fo
 
 - For S7-1500 CPU:
 
-  "SIMATIC-ACC"<nnn><mm>
+  "SIMATIC-ACC"&lt;nnn&gt;&lt;mm&gt;
 
   nnn = Local ID
 
   mm = any value
 - For S7-300/400 CPU:
 
-  <xx>.<yz>
+  &lt;xx&gt;.&lt;yz&gt;
 
   xx = Number of the connection resource
 
@@ -161,7 +161,7 @@ This section contains information on the following topics:
 
 #### Relevance
 
-You can specify additional properties of the local connection endpoint in the "Properties > General > Special connection properties" parameter group.
+You can specify additional properties of the local connection endpoint in the "Properties &gt; General &gt; Special connection properties" parameter group.
 
 #### Establishing an active connection
 
@@ -195,7 +195,7 @@ Use this field to identify the partner on unspecified connections.
 
 #### Relevance
 
-Connection configuration for OPC in the parameter group "Properties > General > Establishment details".
+Connection configuration for OPC in the parameter group "Properties &gt; General &gt; Establishment details".
 
 #### Options for connection establishment
 
@@ -230,7 +230,7 @@ Choose from the two following alternatives:
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Address details".
+Connection configuration in the parameter group "Properties &gt; General &gt; Address details".
 
 #### Address parameter
 
@@ -271,7 +271,7 @@ Default values (changeable) are recommended for configuring local and remote TSA
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Options".
+Connection configuration in the parameter group "Properties &gt; General &gt; Options".
 
 #### Operating modes
 
@@ -302,7 +302,7 @@ Connection configuration in the parameter group "Properties > General > Options"
 
 #### FETCH/WRITE requirements: Mode of connection establishment
 
-Please select one of the following options in the parameter group "Properties > General > Special connection properties" in line with the station type for connection establishment.
+Please select one of the following options in the parameter group "Properties &gt; General &gt; Special connection properties" in line with the station type for connection establishment.
 
 - SIMATIC S7 station: PASSIVE connection establishment
 - PC station: Active connection establishment
@@ -330,7 +330,7 @@ The addressing mode for accessing SIMATIC S7 (option selected) is set by default
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Dynamics".
+Connection configuration in the parameter group "Properties &gt; General &gt; Dynamics".
 
 The relevant timers and counters for this connection are displayed. You can accept these default values.
 
@@ -340,7 +340,7 @@ Where necessary (for example when linking to third-party systems), you can also 
 
 #### Relevance
 
-Connection configuration for OPC in the parameter group "Properties > General > OPC".
+Connection configuration for OPC in the parameter group "Properties &gt; General &gt; OPC".
 
 Here, you set connection-specific properties for an ISO transport connection used by the OPC server.
 
@@ -401,7 +401,7 @@ This section contains information on the following topics:
 
 #### Relevance
 
-You can specify additional properties of the local connection endpoint in the "Properties > General > Special connection properties" parameter group.
+You can specify additional properties of the local connection endpoint in the "Properties &gt; General &gt; Special connection properties" parameter group.
 
 #### Active connection establishment
 
@@ -435,7 +435,7 @@ Use this field to identify the partner on unspecified connections.
 
 #### Relevance
 
-Connection configuration for OPC in the parameter group "Properties > General > Establishment details".
+Connection configuration for OPC in the parameter group "Properties &gt; General &gt; Establishment details".
 
 #### Options for connection establishment
 
@@ -470,7 +470,7 @@ Default: 15000 ms
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Address details".
+Connection configuration in the parameter group "Properties &gt; General &gt; Address details".
 
 #### Address parameter
 
@@ -515,7 +515,7 @@ For configuration of local and remote TSAPs there is a default value "TCP-1" for
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Options".
+Connection configuration in the parameter group "Properties &gt; General &gt; Options".
 
 #### Operating modes
 
@@ -546,7 +546,7 @@ Connection configuration in the parameter group "Properties > General > Options"
 
 #### FETCH/WRITE requirements: Mode of connection establishment
 
-Please select one of the following options in the parameter group "Properties > General > Special connection properties" in line with the station type for connection establishment.
+Please select one of the following options in the parameter group "Properties &gt; General &gt; Special connection properties" in line with the station type for connection establishment.
 
 - SIMATIC S7 station: PASSIVE connection establishment
 - PC station: Active connection setup
@@ -574,7 +574,7 @@ The addressing mode for accessing SIMATIC S7 (option selected) is set by default
 
 #### Relevance
 
-Connection configuration for OPC in the parameter group "Properties > General > OPC".
+Connection configuration for OPC in the parameter group "Properties &gt; General &gt; OPC".
 
 Here, you set connection-specific properties for an ISO-on_TCP connection used by the OPC server.
 
@@ -636,7 +636,7 @@ This section contains information on the following topics:
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Special connection properties".
+Connection configuration in the parameter group "Properties &gt; General &gt; Special connection properties".
 
 Connection parameters specify additional properties for the local connection endpoint.
 
@@ -678,7 +678,7 @@ Requirement: This option can only be selected for certain CPs with S7-300 / S7-4
 
 #### Relevance
 
-Connection configuration for OPC in the parameter group "Properties > General > Establishment details".
+Connection configuration for OPC in the parameter group "Properties &gt; General &gt; Establishment details".
 
 #### Options for connection establishment
 
@@ -713,7 +713,7 @@ Choose from the two following alternatives:
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Address details".
+Connection configuration in the parameter group "Properties &gt; General &gt; Address details".
 
 #### Address parameters and connection types
 
@@ -750,7 +750,7 @@ The ports define the access point to the user program within the station/CPU. Th
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Options".
+Connection configuration in the parameter group "Properties &gt; General &gt; Options".
 
 #### Operating mode
 
@@ -775,7 +775,7 @@ Connection configuration in the parameter group "Properties > General > Options"
     Selecting this operating mode enables direct write access to data areas in the SIMATIC S7. Access can, for example, be from a SIMATIC S5 station or a third-party station.
 - **FTP**
 
-  If you have selected the "Use for FTP protocol" option in "Properties > General > Special connection properties", "FTP" will be displayed here and the TCP connection is then used as an "FTP connection"; no other options can be selected.
+  If you have selected the "Use for FTP protocol" option in "Properties &gt; General &gt; Special connection properties", "FTP" will be displayed here and the TCP connection is then used as an "FTP connection"; no other options can be selected.
 
   Requirement: The option can only be selected for an unspecified TCP connection.
 - **SPEED SEND/RECV**
@@ -814,7 +814,7 @@ The addressing mode for accessing SIMATIC S7 (option selected) is set by default
 
 #### Relevance
 
-Connection configuration for OPC in the parameter group "Properties > General > OPC".
+Connection configuration for OPC in the parameter group "Properties &gt; General &gt; OPC".
 
 Here, you set connection-specific properties for a TCP connection used by the OPC server.
 
@@ -910,7 +910,7 @@ This section contains information on the following topics:
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Address details".
+Connection configuration in the parameter group "Properties &gt; General &gt; Address details".
 
 #### Address parameters and connection types
 
@@ -1098,7 +1098,7 @@ Each job buffer can transfer up to 2042 bytes of user data. The job header reser
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Options".
+Connection configuration in the parameter group "Properties &gt; General &gt; Options".
 
 #### Operating mode
 
@@ -1233,12 +1233,12 @@ The following operating modes can be configured for the communication endpoint, 
 
   The connection can then only be used for this mode. It is then not possible to send or receive using the AG_SEND/AG_LSEND or AG_RECV/AG_LRECV FCs.
 
-  The connection is established passively, which means that only the partner station (SIMATIC S5 station, a PC station, or a non-SIMATIC station) can establish the connection. You make the necessary settings under "Properties > Options". Once you have selected the operating mode, you will not be able to change the connection setup type.
+  The connection is established passively, which means that only the partner station (SIMATIC S5 station, a PC station, or a non-SIMATIC station) can establish the connection. You make the necessary settings under "Properties &gt; Options". Once you have selected the operating mode, you will not be able to change the connection setup type.
 - SIMATIC PC station: FETCH ACTIVE/WRITE ACTIVE
 
   If you select either FETCH ACTIVE or WRITE ACTIVE mode, the system memory areas in the SIMATIC S7 or SIMATIC S5 station can be accessed directly from the PC station.
 
-  The connection is established actively, which means that the partner station must await the connection to be established (passive connection setup for the partner). You make the necessary settings under "Properties > Options". Once you have selected the operating mode, you will not be able to change the connection setup type.
+  The connection is established actively, which means that the partner station must await the connection to be established (passive connection setup for the partner). You make the necessary settings under "Properties &gt; Options". Once you have selected the operating mode, you will not be able to change the connection setup type.
 
 #### "S7 addressing mode" option
 
@@ -1307,7 +1307,7 @@ There is a distinction between
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Address details".
+Connection configuration in the parameter group "Properties &gt; General &gt; Address details".
 
 #### Address parameters for FDL connections
 
@@ -1351,7 +1351,7 @@ The local address parameters are entered in the job header of the message for se
 | Symbol | Meaning |
 | --- | --- |
 |  | **Caution** |
-| **"Activate cyclic distribution of bus parameters" function**  If you select this option for the subnet in "General > Bus parameters", the bus parameters will be sent cyclically during operation as broadcast frames. To avoid frame handling conflicts in the user program that receives broadcast frames, you should take the following action:  - ignore all frames that are sent with an LSAP >56    **or** - disable the option under "General > Bus parameters". |  |
+| **"Activate cyclic distribution of bus parameters" function**  If you select this option for the subnet in "General &gt; Bus parameters", the bus parameters will be sent cyclically during operation as broadcast frames. To avoid frame handling conflicts in the user program that receives broadcast frames, you should take the following action:  - ignore all frames that are sent with an LSAP &gt;56    **or** - disable the option under "General &gt; Bus parameters". |  |
 
 #### FDL connection with multicast
 
@@ -1363,7 +1363,7 @@ The local address parameters are entered in the job header of the message for se
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Options".
+Connection configuration in the parameter group "Properties &gt; General &gt; Options".
 
 #### Operating mode
 
@@ -1375,7 +1375,7 @@ Connection configuration in the parameter group "Properties > General > Options"
 
 #### Relevance
 
-Connection configuration for OPC in the parameter group "Properties > General > OPC".
+Connection configuration for OPC in the parameter group "Properties &gt; General &gt; OPC".
 
 Here, you set connection-specific properties for an FDL connection used by the OPC server.
 
@@ -1522,7 +1522,7 @@ Each job buffer can transfer up to 236 bytes of user data. The job header reserv
 Proceed as follows to set up a configured FDL connection in STEP 7:
 
 1. Create a TSEND_C instruction in the program editor.
-2. Select the TSEND_C instruction and go to "Properties" > "General" > "Connection parameters" in the Inspector window.
+2. Select the TSEND_C instruction and go to "Properties" &gt; "General" &gt; "Connection parameters" in the Inspector window.
 3. Under End point, select the partner end point. Use one of the two partner end points below:
 
    - CPU S7‑1500 with CM 1542‑5
@@ -1533,7 +1533,7 @@ Proceed as follows to set up a configured FDL connection in STEP 7:
 
    - Local: PROFIBUS interface of CM 1542‑5
    - Specified partner: PROFIBUS interface of CM 1542‑5
-7. Select the setting <new> under Connection data.
+7. Select the setting &lt;new&gt; under Connection data.
 
 The figure below shows a fully configured FDL connection in STEP 7.
 
@@ -1599,7 +1599,7 @@ This step activates the connection mode: The CPUs available for the selected con
 1. Click on the CPU from which a connection will be set up.
 2. Move the cursor within the CPU and confirm the connection endpoint with another click of the mouse.  
    An unspecified connection will be created.
-3. In "Properties > Address details" in the Inspector window, enter the address parameters according to the information in the address details:
+3. In "Properties &gt; Address details" in the Inspector window, enter the address parameters according to the information in the address details:
 
    [E-mail address details](#e-mail-address-details-s7-300-s7-400-s7-1500)
 
@@ -1625,7 +1625,7 @@ Instead of an unspecified connection, you can select an OPC server as an SMTP se
 
 #### Relevance
 
-Connection configuration in the parameter group "Properties > General > Address details".
+Connection configuration in the parameter group "Properties &gt; General &gt; Address details".
 
 #### Parameter
 
@@ -1701,7 +1701,7 @@ The following table contains information about email data blocks in STL notation
 
 #### Sending an email with AG_SEND/AG_LSEND <sup>1)</sup>
 
-Use the FC AG_SEND instruction to send an e-mail or with data lengths >240 bytes, use AG_LSEND. A detailed description of call parameters is available in the online help for the instructions.
+Use the FC AG_SEND instruction to send an e-mail or with data lengths &gt;240 bytes, use AG_LSEND. A detailed description of call parameters is available in the online help for the instructions.
 
 See also [AG_SEND / AG_LSEND / AG_SSEND (Ind. Ethernet)](SIMATIC%20NET%20CPs%20%28S7-300%2C%20S7-400%29.md#ag_send-ag_lsend-ag_ssend-ind-ethernet-s7-300-s7-400)
 
@@ -1815,13 +1815,13 @@ You can enter a maximum of 8 connections in the connection table for the local p
 Example: Settings for the local partner:
 
 - 3964(R) protocol
-- Communication direction 1: Local --> partner
+- Communication direction 1: Local --&gt; partner
 - max. 8 connections, local IDs: 1000; 1001, ..., 1007
 
 Settings for the connection partner:
 
 - 3964(R) protocol
-- Communication direction 2: Partner --> local
+- Communication direction 2: Partner --&gt; local
 - max. 1 connection, local ID: 1000
 
 #### Number of connections
@@ -1852,7 +1852,7 @@ For PtP connections, you can specify different communications directions. To do 
 
 #### Setting the connection path
 
-In "General > Connection path". you can set the path taken by the connection from the local endpoint to the connection partner in the settings relating to the communications direction. You can select the path depending on the configured PtP CPs. Example: The local partner contains two PtP CPs. In this case, you can select the CP via which the connection will run.
+In "General &gt; Connection path". you can set the path taken by the connection from the local endpoint to the connection partner in the settings relating to the communications direction. You can select the path depending on the configured PtP CPs. Example: The local partner contains two PtP CPs. In this case, you can select the CP via which the connection will run.
 
 Special feature: In contrast to the S7 connections, when configuring PtP connections to an unspecified partner, networking of the local partner is not essential. The communications partners only need to be networked in your real system before you put the connection into operation.
 
@@ -1872,7 +1872,7 @@ Special feature: In contrast to the S7 connections, when configuring PtP connect
 
 Automation systems capable of multicomputing (for example SIMATIC S7-400) can contain several CPUs. For this reason, you need to specify a CPU number with which the partner can access the connection.
 
-If you have selected **Partner -> Local** or **Local <-> Partner** as the communications direction and want to receive frames from the partner using an SFB, enter the number of the CPU (1 to 4) of the **local partner** here.
+If you have selected **Partner -&gt; Local** or **Local &lt;-&gt; Partner** as the communications direction and want to receive frames from the partner using an SFB, enter the number of the CPU (1 to 4) of the **local partner** here.
 
 The CPU number specified here must match the CPU number entered in the command frame header of the CP (for the structure of the command frame, refer to the documentation of the CP you are using). If they match, the partner accesses the connection using this CPU number.
 
@@ -1884,7 +1884,7 @@ The CPU number specified here must match the CPU number entered in the command f
 
 Automation systems capable of multicomputing (for example SIMATIC S7-400) can contain several CPUs. For this reason, you need to specify a CPU number to which the connection will go.
 
-If you have selected **Local -> Partner** or **Local <-> Partner** as the communications direction and want to send frames to the partner using an SFB, enter the number of the CPU (1 to 4) of the **connection partner** here.
+If you have selected **Local -&gt; Partner** or **Local &lt;-&gt; Partner** as the communications direction and want to send frames to the partner using an SFB, enter the number of the CPU (1 to 4) of the **connection partner** here.
 
 The CP enters the CPU no. you have specified in the command frame header of the frame to be sent. Using this CPU number, one of the 4 CPUs of the connection partner will be accessed.
 
@@ -1898,7 +1898,7 @@ When transferring to third-party devices, it is also possible to specify "0" as 
 
 #### Relevance
 
-You can specify additional properties of the local connection endpoint in the "Properties > General > Special connection properties" parameter group.
+You can specify additional properties of the local connection endpoint in the "Properties &gt; General &gt; Special connection properties" parameter group.
 
 #### Configured at one end
 

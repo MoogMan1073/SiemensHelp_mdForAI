@@ -113,7 +113,7 @@ You set the most important parameters for the operation of an infeed in the func
 | Device supply voltage | ‑ | x | x | x | x | x | x | ‑<sup>1)</sup> |
 | DC-link voltage setpoint default setting | The value in this field ([p3510](SINAMICS%20Parameter%20ACTIVE%20INFEED%20CONTROL.md#p3510-infeed-dc-link-voltage-setpoint)) is determined automatically from the defined operating voltage. | x | x | ‑ | x | x | ‑ | ‑<sup>1)</sup> |
 | Line supply / DC-link identification | If the line supply / DC-link identification has already been performed once, then the value is preset to "OFF". | x | x | ‑ | x | x | ‑ | ‑<sup>1)</sup> |
-| Operating mode for ALM | The default of the operating mode depends on the operating voltage of the ALM:   > 415 V<sub>eff</sub> = Unregulated Udc (Active Mode) active  ≤ 415 V<sub>eff</sub> = Regulated Udc (Active Mode) active | x | ‑ | ‑ | x | x | ‑ | ‑<sup>1)</sup> |
+| Operating mode for ALM | The default of the operating mode depends on the operating voltage of the ALM:   &gt; 415 V<sub>eff</sub> = Unregulated Udc (Active Mode) active  ≤ 415 V<sub>eff</sub> = Regulated Udc (Active Mode) active | x | ‑ | ‑ | x | x | ‑ | ‑<sup>1)</sup> |
 | <sup>1)</sup> G130 does not use an infeed. |  |  |  |  |  |  |  |  |
 
 ##### Setting the line data and operating mode

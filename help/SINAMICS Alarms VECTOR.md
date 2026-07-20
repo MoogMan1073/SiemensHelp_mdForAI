@@ -1194,7 +1194,7 @@ The master control was returned to the active BICO interconnection.
 Set the monitoring time higher at the PC or, if required, completely disable the monitoring
 function.  
 The monitoring time is set as follows using the commissioning tool:  
-<Drive> -> Commissioning -> Control panel -> Button "Fetch master control" -> A window
+&lt;Drive&gt; -&gt; Commissioning -&gt; Control panel -&gt; Button "Fetch master control" -&gt; A window
 is displayed to set the monitoring time in milliseconds.  
 Notice:  
 The monitoring time should be set as short as possible. A long monitoring time means
@@ -1512,9 +1512,9 @@ When downloading the device parameterization, a parameter back-up file PSxxxyyy.
 associated with a drive object cannot be found.  
 Fault value (r0949, interpret hexadecimal):  
 Byte 1: yyy in the file name PSxxxyyy.ACX  
-yyy = 000 --> consistency back-up file  
-yyy = 001 ... 062 --> drive object number  
-yyy = 099 --> PROFIBUS parameter back-up file  
+yyy = 000 --&gt; consistency back-up file  
+yyy = 001 ... 062 --&gt; drive object number  
+yyy = 099 --&gt; PROFIBUS parameter back-up file  
 Byte 2, 3, 4:  
 Only for internal Siemens troubleshooting.
 
@@ -1575,12 +1575,12 @@ An error has occurred when downloading PSxxxyyy.ACX or PTxxxyyy.ACX files from t
 non-volatile memory.  
 Fault value (r0949, interpret hexadecimal):  
 Byte 1: yyy in the file name PSxxxyyy.ACX  
-yyy = 000 --> consistency back-up file  
-yyy = 001 ... 062 --> drive object number  
-yyy = 099 --> PROFIBUS parameter back-up file  
+yyy = 000 --&gt; consistency back-up file  
+yyy = 001 ... 062 --&gt; drive object number  
+yyy = 099 --&gt; PROFIBUS parameter back-up file  
 Byte 2:  
 255: Incorrect drive object type.  
-254: Topology comparison unsuccessful -> drive object type was not able to be identified.  
+254: Topology comparison unsuccessful -&gt; drive object type was not able to be identified.  
 Reasons could be:  
 - incorrect component type in the actual topology  
 - Component does not exist in the actual topology.  
@@ -1651,16 +1651,16 @@ has the "read only" file attribute and cannot be overwritten.
 Fault value (r0949, interpret hexadecimal):  
 dcba hex  
 a = yyy in the file names PSxxxyyy.***  
-a = 000 --> consistency back-up file  
-a = 001 ... 062 --> drive object number  
-a = 070 --> FEPROM.BIN  
-a = 080 --> DEL4BOOT.TXT  
-a = 099 --> PROFIBUS parameter back-up file  
+a = 000 --&gt; consistency back-up file  
+a = 001 ... 062 --&gt; drive object number  
+a = 070 --&gt; FEPROM.BIN  
+a = 080 --&gt; DEL4BOOT.TXT  
+a = 099 --&gt; PROFIBUS parameter back-up file  
 b = xxx in the file names PSxxxyyy.***  
-b = 000 --> data save started with p0977 = 1 or p0971 = 1  
-b = 010 --> data save started with p0977 = 10  
-b = 011 --> data save started with p0977 = 11  
-b = 012 --> data save started with p0977 = 12  
+b = 000 --&gt; data save started with p0977 = 1 or p0971 = 1  
+b = 010 --&gt; data save started with p0977 = 10  
+b = 011 --&gt; data save started with p0977 = 11  
+b = 012 --&gt; data save started with p0977 = 12  
 d, c:  
 Only for internal Siemens troubleshooting.
 
@@ -4115,7 +4115,7 @@ General note:
 The topology rules should be noted when connecting up DRIVE-CLiQ (refer to the appropriate
 product documentation).  
 The parameters of the sampling times can also be changed with automatic calculations.  
-Example for highest common denominator: 125 s, 125 µs, 62.5 µs --> 62.5 µs
+Example for highest common denominator: 125 s, 125 µs, 62.5 µs --&gt; 62.5 µs
 
 **Remedy:**
   
@@ -4256,10 +4256,10 @@ Only for internal Siemens troubleshooting.
 
 **Remedy:**
   
-For alarm value r2124 < 256, the following applies:  
+For alarm value r2124 &lt; 256, the following applies:  
 - carry out a POWER ON (switch-off/switch-on).  
 - replace the Control Unit.  
-For alarm value r2124 >= 256, the following applies:  
+For alarm value r2124 &gt;= 256, the following applies:  
 - for the drive object with this alarm, clear the fault memory (p0952 = 0).  
 - as an alternative, clear the fault memory of all drive objects (p2147 = 1).  
 - replace the Control Unit.
@@ -4442,7 +4442,7 @@ POWER ON
   
 An error has occurred while accessing the hardware description file on the CompactFlash
 card.  
-Directory and file name: ADDON/SINAMICS/DATA/HW_DESC/<DOType>/DESC0000  
+Directory and file name: ADDON/SINAMICS/DATA/HW_DESC/&lt;DOType&gt;/DESC0000  
 Fault value (r0949, interpret decimal):  
 22: File not found.  
 24: File read access error.  
@@ -4890,7 +4890,7 @@ Component class and connection number are described in F01375.
 - remove the corresponding component.  
 - change the setting "deactivate and not present".  
 Note:  
-Under "Topology --> Topology view", the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view", the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).  
 See also: p0105, p0125, p0145, p0155, p0165
 
@@ -5586,7 +5586,7 @@ a 3 at the last position of the Article No.)).
 system should be connected to a free DRIVE-CLiQ socket of the NX.  
 - for BSR Motor Modules, the following applies: If Safety Extended Functions is enabled,
 and 6 axes are operated on the DRIVE-CLiQ line, then the clock cycle for the actual
-value sensing must be set as follows: p9511 >= 8 * current controller sampling time
+value sensing must be set as follows: p9511 &gt;= 8 * current controller sampling time
 (p0115[0]).  
 For fault value = 8yy in addition:  
 - check the clock cycles settings (p0112, p0115, p4099). Clock cycles on a DRIVE-CLiQ
@@ -6306,7 +6306,7 @@ Connection number:
   
 Output the fault value and remove the specified connection.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### F01380 Topology: Actual topology EEPROM defective
@@ -6478,7 +6478,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01382 Topology: Sensor Module incorrectly inserted
@@ -6604,7 +6604,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01383 Topology: Terminal Module incorrectly inserted
@@ -6730,7 +6730,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01384 Topology: DRIVE-CLiQ Hub Module incorrectly inserted
@@ -6856,7 +6856,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01385 Topology: Controller Extension incorrectly inserted
@@ -6982,7 +6982,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01386 Topology: DRIVE-CLiQ component incorrectly inserted
@@ -7108,7 +7108,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01387 Topology: Option slot component incorrectly inserted
@@ -7234,7 +7234,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01388 Topology: EnDat encoder incorrectly inserted
@@ -7360,7 +7360,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01389 Topology: Motor with DRIVE-CLiQ incorrectly inserted
@@ -7486,7 +7486,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01416 Topology: Component additionally inserted
@@ -7605,7 +7605,7 @@ Adapting topologies:
 - remove the additional component (correct the actual topology).  
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01420 Topology: Component different
@@ -7714,7 +7714,7 @@ Topology comparison - if required, adapt the comparison level:
 - parameterize the topology comparison of all components (p9906).  
 - parameterize the topology comparison of one components (p9907, p9908).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01421 Topology: Comparison different components
@@ -7815,7 +7815,7 @@ cannot be enabled.
 Check the component wiring against the hardware configuration of the drive unit in
 the commissioning tool and correct any differences.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01425 Topology: Serial number different
@@ -7897,10 +7897,10 @@ Adapting topologies:
 - change over the actual topology to match the target topology.  
 - load the target topology that matches the actual topology (commissioning tool).  
 For byte cc:  
-cc = 1 --> can be acknowledged using p9904 or p9905.  
-cc > 1 --> can be acknowledged using p9905 and can be deactivated using p9906 or p9907/p9908.  
+cc = 1 --&gt; can be acknowledged using p9904 or p9905.  
+cc &gt; 1 --&gt; can be acknowledged using p9905 and can be deactivated using p9906 or p9907/p9908.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).  
 See also: p9904 (Topology comparison acknowledge differences), p9905 (Device specialization),
 p9906 (Topology comparison all components comparison level), p9907 (Topology comparison
@@ -8024,7 +8024,7 @@ Adapting topologies:
 - adapt the project/parameterizing in the commissioning tool (correct the target topology).  
 - automatically remove the topology error (p9904).  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).  
 See also: p9904 (Topology comparison acknowledge differences)
 
@@ -8148,7 +8148,7 @@ Note:
 In the software, a Double Motor Module behaves just like two separate DRIVE-CLiQ nodes.
 If a Double Motor Module is re-inserted, this can result in several differences in
 the actual topology.  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### F01451 Topology: Target topology is invalid
@@ -8311,7 +8311,7 @@ Connection number is described in F01375.
 Read out the fault value and remove one of the specified connections.  
 Then download the target topology again using the commissioning tool.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### F01475 Topology: Target topology duplicate connection between two components
@@ -8427,7 +8427,7 @@ Connection number is described in F01375.
 Read out the fault value and remove one of the two specified connections.  
 Then download the target topology again using the commissioning tool.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01481 (N) Topology: Motor Module not connected
@@ -8551,7 +8551,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 Reaction upon N:  
@@ -8679,7 +8679,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01483 Topology: Terminal Module not connected
@@ -8801,7 +8801,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01484 Topology: DRIVE-CLiQ Hub Module not connected
@@ -8923,7 +8923,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01485 Topology: Controller Extension not connected
@@ -9045,7 +9045,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01486 Topology: DRIVE-CLiQ component not connected
@@ -9167,7 +9167,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01487 Topology: Option slot component not inserted
@@ -9289,7 +9289,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01488 Topology: EnDat encoder not connected
@@ -9411,7 +9411,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01489 Topology: motor with DRIVE-CLiQ not connected
@@ -9533,7 +9533,7 @@ Check the hardware:
 - check DRIVE-CLiQ cables for interruption and contact problems.  
 - check that the component is working properly.  
 Note:  
-Under "Topology --> Topology view" the commissioning tool where relevant offers improved
+Under "Topology --&gt; Topology view" the commissioning tool where relevant offers improved
 diagnostics capability (e.g. setpoint/actual value comparison).
 
 ### A01507 (F, N) BICO: Interconnections to inactive objects present
@@ -11358,7 +11358,7 @@ For motion monitoring functions that are not enabled (p9601.2 = p9801.2 = 0, p95
 = 0), the following applies:  
 - Minimum setting for the monitoring clock cycle (in µs).  
 For motion monitoring functions that are enabled (p9601.2 = p9801.2 = 1 and/or p9501
-> 0), the following applies:  
+&gt; 0), the following applies:  
 100:  
 - no matching monitoring clock cycle was able to be found.  
 - an illegal actual value sensing clock cycle was set for S120M (p9511).  
@@ -11412,9 +11412,9 @@ required in the system.
 
 **Remedy:**
   
-For enabled SI monitoring integrated in the drive (p9601/p9801 > 0):  
+For enabled SI monitoring integrated in the drive (p9601/p9801 &gt; 0):  
 - upgrade the firmware of the Control Unit to a later version.  
-For enabled motion monitoring function (p9501 > 0):  
+For enabled motion monitoring function (p9501 &gt; 0):  
 - correct the monitoring clock cycle (p9500) and carry out POWER ON.  
 For fault value = 100:  
 - for S120M, set the actual value sensing clock cycle to p9511 = 0.  
@@ -11440,7 +11440,7 @@ For fault value = 106:
 - set the parameters for the monitoring clock cycles the same (p10000 and p9500/p9300).  
 For fault value = 107:  
 - set an actual value sensing clock cycle that matches the current controller clock
-cycle (p9511 >= 4 * p0115[0], 8 * p0115[0]) is recommended.  
+cycle (p9511 &gt;= 4 * p0115[0], 8 * p0115[0]) is recommended.  
 Note:  
 An actual value sensing clock cycle (p9511) that is set too low, can sporadically
 mean that safety messages C01711/C30711 are output with message value 1020 or 1021.  
@@ -11449,7 +11449,7 @@ For fault value = 108:
 - if the DP clock cycle is used as the actual value sensing clock cycle for operation
 with isochronous PROFIBUS (p9511 = 0), then a suitable DP clock cycle must be configured.
 This must be set to less than 8 ms. If this is not possible, then p9511 must be set
-to the required actual value sensing clock cycle (< 8 ms).  
+to the required actual value sensing clock cycle (&lt; 8 ms).  
 - For SIMOTION D410-2, a suitable multiple of the DP clock cycle (e.g. 1, 2, 3, 4,
 5, 6, 8, 10) must be parameterized. Otherwise, the clock cycle must be set to less
 than 8 ms.  
@@ -11833,7 +11833,7 @@ The PROFIsafe telegram number is set differently in p9611 and p60022.
 For p9611 not equal to 998, the following applies:  
 The telegram number must be identically set in both parameters.  
 The following applies for p9611 = 998:  
-As a result of the compatibility to firmware versions < 4.5, then only the values
+As a result of the compatibility to firmware versions &lt; 4.5, then only the values
 0 and 30 are permitted in p60022.  
 Note:  
 This fault does not result in a safety stop response.  
@@ -12124,7 +12124,7 @@ was rejected for safety reasons.
 As a consequence, inconsistent parameterization can occur in both monitoring channels,
 which in turn results in additional error messages.  
 Especially for inconsistent enabling of the safety functions on both monitoring channels
-(p9601 = 0, p9801 <> 0), fault F30625 is output.  
+(p9601 = 0, p9801 &lt;&gt; 0), fault F30625 is output.  
 Note:  
 This fault does not result in a safety stop response.  
 SI: Safety Integrated  
@@ -12190,7 +12190,7 @@ See also: p7826 (Firmware update automatic)
 
 **Remedy:**
   
-When safety functions are enabled (p9501 <> 0 and/or p9601 <> 0):  
+When safety functions are enabled (p9501 &lt;&gt; 0 and/or p9601 &lt;&gt; 0):  
 1. Activate the "Firmware update automatic" function (p7826 = 1).  
 2. Backup the parameters (p0977 = 1) and carry out a POWER ON.  
 When deactivating the safety functions (p9501 = 0, p9601 = 0), the fault can be acknowledged
@@ -12465,7 +12465,7 @@ For fault value = 11:
 - use and parameterize a linear DRIVE-CLiQ encoder, where the zero point setting is
 equal to 0.  
 For fault value = 12:  
-- parameterize an encoder for the second channel (p9526 > 1).  
+- parameterize an encoder for the second channel (p9526 &gt; 1).  
 For fault value = 13:  
 - parameterize a second encoder or use a DRIVE-CLiQ encoder.  
 For fault value = 14:  
@@ -12978,7 +12978,7 @@ and the monitoring clock cycle p9500 is set differently for these axes.
 It is possible that the maximum permissible number of axes for the "Synchronous safe
 position via PROFIsafe" has been exceeded.  
 xxxx = 9501:  
-It is not permissible to enable the function "n < nx hysteresis and filtering" (p9501.16)
+It is not permissible to enable the function "n &lt; nx hysteresis and filtering" (p9501.16)
 in conjunction with the function "Extended functions without selection" (p9601.5).  
 xxxx = 9501 and yyyy = 8:  
 Referencing via SCC (p9501.27 = 1) is enabled without enabling an absolute motion
@@ -13117,10 +13117,10 @@ For xxxx = 9544:
 Correct parameter (for linear axes, the maximum value is limited to 1 mm).  
 For xxxx = 9547:  
 With hysteresis/filtering enabled (p9501.16 = 1), the following applies:  
-- set parameters p9546 and p9547 according to the following rule: p9547 <= 0.75 x
+- set parameters p9546 and p9547 according to the following rule: p9547 &lt;= 0.75 x
 p9546  
 - if the actual value synchronization is enabled (p9501.3 = 1), then this rule must
-be complied with: p9547 >= p9549  
+be complied with: p9547 &gt;= p9549  
 For xxxx = 9576:  
 - update the firmware on the Motor Module  
 - deselect function with value 0.  
@@ -13472,7 +13472,7 @@ to the tolerance range around the modulo position: the minus position value of a
 must be greater than the lower modulo limit + cam tolerance (p9540) + position tolerance
 (p9542); the plus position value of a cam must be less than the modulo limit - cam
 tolerance (p9540) - position tolerance (p9542). For a parameterized modulo position
-(p9505>0), the lower modulo limit = 0, the upper modulo limit = p9505.  
+(p9505&gt;0), the lower modulo limit = 0, the upper modulo limit = p9505.  
 - the cam length of cam x = p9536[x]-p9537[x] is less than the cam tolerance + the
 position tolerance (= p9540 + p9542).  
 This also means that cams of the minus position value must be less than the plus position
@@ -13781,7 +13781,7 @@ If this alarm is not observed, then message C01711 or C30711 – with the value 
   
 Configure Ti and To low so that they are suitable for the DP cycle or increase the
 DP cycle time.  
-Alternative when SI monitoring integrated in the drive is enabled (p9601/p9801 > 0):  
+Alternative when SI monitoring integrated in the drive is enabled (p9601/p9801 &gt; 0):  
 Use the actual value acquisition cycle p9511/p9311 and, in turn, set independently
 from DP cycle. The actual values sensing clock cycle must be at least 4x the current
 controller clock cycle. A clock cycle ratio of at least 8:1 is recommended.  
@@ -14014,7 +14014,7 @@ tool:
 Then carry out an acceptance test (refer to the Safety Integrated Function Manual).  
 For SINUMERIK, the following applies:  
 HMI supports the replacement of components with Safety functions (operating area "Diagnostics"
---> Softkey "Alarm list" --> Softkey "Confirm SI HW" etc.).  
+--&gt; Softkey "Alarm list" --&gt; Softkey "Confirm SI HW" etc.).  
 The precise procedure is given in the following document:  
 SINUMERIK Function Manual Safety Integrated  
 See also: p9700 (SI Motion copy function), p9701 (Acknowledge SI motion data change)
@@ -14774,7 +14774,7 @@ Message values that are not subsequently listed are only for internal Siemens tr
 0: Stop request from another monitoring channel.  
 1: Status image of monitoring functions SOS, SLS, SAM/SBR, SDI, SLA or SLP (result
 list 1) (r9710[0], r9710[1]).  
-2: Status image of monitoring function SCA or n < nx (result list 2) (r9711[0], r9711[1]).  
+2: Status image of monitoring function SCA or n &lt; nx (result list 2) (r9711[0], r9711[1]).  
 3: The position actual value differential (r9713[0/1]) between the two monitoring
 channels is greater than the tolerance in p9542/p9342. When actual value synchronization
 is enabled (p9501.3/p9301.3), the velocity differential (based on the position actual
@@ -14846,7 +14846,7 @@ clock cycle (p9500/p9300).
 clock cycle (p9500/p9300) - tolerance (p9542/p9342).  
 58: Actual stop request.  
 75: Velocity limit nx (p9546, p9346).  
-When the function "n < nx: hysteresis and filtering" (p9501.16 = 1) is enabled, this
+When the function "n &lt; nx: hysteresis and filtering" (p9501.16 = 1) is enabled, this
 message value is also output for a different hysteresis tolerance (p9547/p9347).  
 76: Stop response for SLS1 (p9563[0]/p9363[0]).  
 77: Stop response for SLS2 (p9563[1]/p9363[1]).  
@@ -14869,14 +14869,14 @@ message value is also output for a different hysteresis tolerance (p9547/p9347).
 94...224: limit value SCA, cams 6 to 30. See above, fault values 90 to 93 for cam
 5.  
 225...229: Status screens of the monitoring function SCA (result lists 3...7).  
-230: Filter time constant for n < nx.  
-231: Hysteresis tolerance for n < nx.  
+230: Filter time constant for n &lt; nx.  
+231: Hysteresis tolerance for n &lt; nx.  
 232: Smoothed velocity actual value.  
 233: Limit value nx / safety monitoring clock cycle + hysteresis tolerance.  
 234: Limit value nx / Safety monitoring clock cycle.  
 235: -Limit value nx / Safety monitoring clock cycle.  
 236: -Limit value nx / safety monitoring clock cycle - hysteresis tolerance.  
-237: SGA n < nx.  
+237: SGA n &lt; nx.  
 238: speed limit value for SAM (p9568/p9368 or p9346/p9346).  
 239: Acceleration for SBR (p9581/p9381 and p9583/p9383).  
 240: Inverse value of acceleration for SBR (p9581/p9381 and p9583/p9383).  
@@ -15056,9 +15056,9 @@ which the message value refers.
 faults (V belts, travel to a mechanical endstop, wear and window setting that is too
 narrow, encoder fault, ...).  
 Note:  
-For SINAMICS firmware version >= 4.7, the KDV list is increased when setting p9567
-> 0. For a non-compatible version of SINUMERIK this can lead to an error for the data
-cross-check (is indicated with message value >= 237). If necessary, p9567 must be
+For SINAMICS firmware version &gt;= 4.7, the KDV list is increased when setting p9567
+&gt; 0. For a non-compatible version of SINUMERIK this can lead to an error for the data
+cross-check (is indicated with message value &gt;= 237). If necessary, p9567 must be
 set = 0, or the firmware version of SINUMERIK upgraded.  
 For message value = 1000:  
 - investigate the signal associated with the safety-relevant input (contact problems).  
@@ -15129,7 +15129,7 @@ For message value = 1035, if one of the safety encoders was replaced:
 For message value = 1039:  
 - check the conversion factors such as spindle pitch or gearbox ratios.  
 For message value = 1041:  
-- check whether the motor has sufficient current (>r9785[0]).  
+- check whether the motor has sufficient current (&gt;r9785[0]).  
 - reduce the minimum current (p9588).  
 - for synchronous motors increase the absolute value of p9783.  
 - check whether the function "Closed-loop controlled operation with HF signal injection"
@@ -15876,7 +15876,7 @@ time (if necessary, round down).
 time (if necessary, round up).  
 - the discrepancy time must be at least p9500 (it must always be rounded-down or rounded-up
 to an integer multiple of the SI sampling time p9500).  
-If a debounce time has been parameterized (p10017 > 0), then the shortest possible
+If a debounce time has been parameterized (p10017 &gt; 0), then the shortest possible
 discrepancy time is directly specified using the debounce time.  
 - the period of a cyclic switching pulse must be less than half of the discrepancy
 time p10017 (if necessary, round down).  
@@ -15887,8 +15887,8 @@ less than the discrepancy time.
 Example:  
 If the SI sampling cycle is 12 ms and the switching frequency is 110 ms (p10017 =
 0), the maximum discrepancy time which can be set is as follows:  
-p10002 <= 110/2 ms - 12 ms = 43 ms --> rounded-off, the following is obtained p10002
-<= 36 ms  
+p10002 &lt;= 110/2 ms - 12 ms = 43 ms --&gt; rounded-off, the following is obtained p10002
+&lt;= 36 ms  
 Since the discrepancy time can only be accepted as a whole SI sampling time, the value
 will need to be rounded up or down to a whole SI sampling time value if it is not
 an exact integer multiple of an SI sampling time.  
@@ -17356,7 +17356,7 @@ the process data exchange.
 For alarm value = 2:  
 - check the number of data words for output and input to a drive object.  
 For alarm value = 211:  
-- Ensure offline version <= online version.  
+- Ensure offline version &lt;= online version.  
 For alarm value = 223, 500:  
 - check the setting in p8839 and p8815.  
 - check for inserted but not configured CBE20.  
@@ -17421,24 +17421,24 @@ NONE
   
 Parameterization for isochronous operation is not permissible.  
 Alarm value (r2124, interpret decimal):  
-0: Bus cycle time Tdp < 0.5 ms.  
-1: Bus cycle time Tdp > 32 ms.  
+0: Bus cycle time Tdp &lt; 0.5 ms.  
+1: Bus cycle time Tdp &gt; 32 ms.  
 2: Bus cycle time Tdp is not an integer multiple of the current controller sampling
 time.  
-3: Instant of the actual value sensing Ti > Bus cycle time Tdp or Ti = 0.  
+3: Instant of the actual value sensing Ti &gt; Bus cycle time Tdp or Ti = 0.  
 4: Instant of the actual value sensing Ti is not an integer multiple of the current
 controller sampling time.  
-5: Instant of the setpoint acceptance To >= Bus cycle time Tdp or To = 0.  
+5: Instant of the setpoint acceptance To &gt;= Bus cycle time Tdp or To = 0.  
 6: Instant of the setpoint acceptance To is not an integer multiple of the current
 controller sampling time.  
 7: Master application cycle time Tmapc is not an integer multiple of the speed controller
 sampling time.  
 8: Bus reserve bus cycle time Tdp - data exchange time Tdx less than two current controller
 sampling times.  
-10: Instant of the setpoint acceptance To <= data exchange time Tdx + current controller
+10: Instant of the setpoint acceptance To &lt;= data exchange time Tdx + current controller
 sampling time  
-11: Master application cycle time Tmapc > 14 x Tdp or Tmapc = 0.  
-12: PLL tolerance window Tpll_w > Tpll_w_max.  
+11: Master application cycle time Tmapc &gt; 14 x Tdp or Tmapc = 0.  
+12: PLL tolerance window Tpll_w &gt; Tpll_w_max.  
 13: Bus cycle time Tdp is not a multiple of all basic clock cycles p0110[x].  
 16: For COMM BOARD, the instant in time for the actual value sensing Ti is less than
 two current controller sampling times.
@@ -18081,7 +18081,7 @@ within the PROFIBUS clock cycle.
 **Remedy:**
   
 - check bus configuration.  
-- check parameters for clock cycle synchronization (ensure To > Tdx).  
+- check parameters for clock cycle synchronization (ensure To &gt; Tdx).  
 Note:  
 To: Time of setpoint acceptance  
 Tdx: Data exchange time
@@ -19062,7 +19062,7 @@ The alarm is automatically withdrawn after approx. 30 seconds.
 Alarm value (r2124, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = info. 1, xxxx = info. 2  
 Info 1 = 0: number of RT connections exceeded  
-Info 1 > 0: number of IRT connections exceeded  
+Info 1 &gt; 0: number of IRT connections exceeded  
 Info 2: permitted number of connections
 
 **Remedy:**
@@ -19384,7 +19384,7 @@ The alarm is automatically withdrawn after approx. 30 seconds.
 Alarm value (r2124, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = info. 1, xxxx = info. 2  
 Info 1 = 0: number of RT connections exceeded  
-Info 1 > 0: number of IRT connections exceeded  
+Info 1 &gt; 0: number of IRT connections exceeded  
 Info 2: permitted number of connections
 
 **Remedy:**
@@ -20334,8 +20334,8 @@ Bandwidth_max = 1 / (2 x time slice clock cycle)
 Bandwidth_min = Bandwidth_max / 100000  
 Example:  
 Assumption: p4830 = 125 µs  
---> Bandwidth_max = 1 / (2 x 125 µs) = 4000 Hz  
---> Bandwidth_min = 4000 Hz / 100000 = 0.04 Hz  
+--&gt; Bandwidth_max = 1 / (2 x 125 µs) = 4000 Hz  
+--&gt; Bandwidth_min = 4000 Hz / 100000 = 0.04 Hz  
 Note:  
 p4823: Function generator bandwidth  
 p4830: Function generator time slice clock cycle  
@@ -20661,8 +20661,8 @@ See also: p4723 (Trace time slice cycle)
 
 **Remedy:**
   
-Enter the clock cycle of an existing time slice with a cycle time >= 2 ms for up to
-4 recording channels or >= 4 ms from 5 recording channels per trace.  
+Enter the clock cycle of an existing time slice with a cycle time &gt;= 2 ms for up to
+4 recording channels or &gt;= 4 ms from 5 recording channels per trace.  
 The existing time slices can be read out via p7901.  
 See also: r7901 (Sampling times)
 
@@ -20705,7 +20705,7 @@ See also: p4723 (Trace time slice cycle)
 
 **Remedy:**
   
-Enter the clock cycle of an existing time slice with a cycle time >= 4 ms or reduce
+Enter the clock cycle of an existing time slice with a cycle time &gt;= 4 ms or reduce
 the number of recording channels to 4 per trace.  
 The existing time slices can be read out via p7901.  
 See also: r7901 (Sampling times)
@@ -23399,7 +23399,7 @@ IMMEDIATELY (POWER ON)
   
 For AC/AC drive units, the measured DC voltage lies outside the tolerance range after
 precharging has been completed.  
-The following applies for the tolerance range: 1.16 * p0210 < r0070 < 1.6 * p0210  
+The following applies for the tolerance range: 1.16 * p0210 &lt; r0070 &lt; 1.6 * p0210  
 Note:  
 The fault can only be acknowledged when the drive is switched off.  
 See also: p0210 (Drive unit line supply voltage)
@@ -23787,8 +23787,8 @@ With the fault, the time in p0607 is started. If the fault is still present afte
 this time has expired, then fault F07016 is output; however, at the earliest, 50 ms
 after alarm A07015.  
 Possible causes:  
-- wire breakage or sensor not connected (KTY: R > 1630 Ohm, PT1000: R > 1720 Ohm).  
-- measured resistance too low (PTC: R < 20 Ohm, KTY: R < 50 Ohm, PT1000: R < 603 Ohm).  
+- wire breakage or sensor not connected (KTY: R &gt; 1630 Ohm, PT1000: R &gt; 1720 Ohm).  
+- measured resistance too low (PTC: R &lt; 20 Ohm, KTY: R &lt; 50 Ohm, PT1000: R &lt; 603 Ohm).  
 Alarm value (r2124, interpret decimal):  
 - if SME/TM120 is selected (p0601 = 10, 11),  
 this is the number of the temperature channel leading to the message.
@@ -23837,8 +23837,8 @@ IMMEDIATELY
   
 An error was detected when evaluating the temperature sensor set in p0600 and p0601.  
 Possible causes:  
-- wire breakage or sensor not connected (KTY: R > 1630 Ohm, PT1000: R > 1720 Ohm).  
-- measured resistance too low (PTC: R < 20 Ohm, KTY: R < 50 Ohm, PT1000: R < 603 Ohm).  
+- wire breakage or sensor not connected (KTY: R &gt; 1630 Ohm, PT1000: R &gt; 1720 Ohm).  
+- measured resistance too low (PTC: R &lt; 20 Ohm, KTY: R &lt; 50 Ohm, PT1000: R &lt; 603 Ohm).  
 Note:  
 If alarm A07015 is present, the time in p0607 is started. If the fault is still present
 after this time has expired, then fault F07016 is output; however, at the earliest,
@@ -24256,7 +24256,7 @@ p0408, p0640, p1082, p1300
 **Remedy:**
   
 Modify the parameter indicated in the fault value (r0949) (e.g. p0640 = current limit
-> 0).  
+&gt; 0).  
 See also: p0311, p0341, p0344, p0350, p0354, p0356, p0358, p0360, p0400, p0404, p0408, p0640,
 p1082
 
@@ -24717,8 +24717,8 @@ NONE
   
 As a result of the violation of a parameter limit, the parameter value was automatically
 corrected.  
-Minimum limit violated --> parameter is set to the minimum value.  
-Maximum limit violated --> parameter is set to the maximum value.  
+Minimum limit violated --&gt; parameter is set to the minimum value.  
+Maximum limit violated --&gt; parameter is set to the maximum value.  
 Alarm value (r2124, interpret decimal):  
 Parameter number, whose value had to be adapted.
 
@@ -25373,7 +25373,7 @@ IMMEDIATELY
 A closed-loop control function that is not supported was activated.  
 Fault value (r0949, interpret decimal):  
 0:  
-Open-loop controlled operation (open-loop mode for speeds < p1755) is not supported
+Open-loop controlled operation (open-loop mode for speeds &lt; p1755) is not supported
 in the "encoderless torque" control mode (see p1300, p1501).
 
 **Remedy:**
@@ -26128,12 +26128,12 @@ only becomes effective above the changeover speed.
 Fault value (r0949, interpret decimal):  
 SERVO:  
 0: The comparison of the pole position angle from the encoder and motor model resulted
-in an excessively high value (p1778[1] > 80 ° electrical).  
+in an excessively high value (p1778[1] &gt; 80 ° electrical).  
 1: -  
 VECTOR:  
 0: The comparison of the pole position angle from the encoder and motor model resulted
-in an excessively high value (> 45 ° electrical).  
-1: The change in the speed signal from the motor encoder has changed by > p0492 within
+in an excessively high value (&gt; 45 ° electrical).  
+1: The change in the speed signal from the motor encoder has changed by &gt; p0492 within
 a current controller clock cycle.
 
 **Remedy:**
@@ -26150,10 +26150,10 @@ and stator resistance using the motor data sheet, measure the stator resistance,
 using a multimeter - and if required, again identify the values using the stationary
 motor data identification (p1910).  
 - increase the changeover speed for the motor model (p1752). The monitoring is completely
-deactivated for p1752 > p1082 (maximum speed).  
+deactivated for p1752 &gt; p1082 (maximum speed).  
 - with pole position identification activated (p1982 = 1) check the procedure for
 pole position identification (p1980) and force a new pole position identification
-procedure by means of deselection followed by selection (p1982 = 0 -> 1).  
+procedure by means of deselection followed by selection (p1982 = 0 -&gt; 1).  
 Note:  
 For High Dynamic Motors (1FK7xxx-7xxx), for applications with a higher current, if
 necessary, the monitoring should be disabled.
@@ -26196,9 +26196,9 @@ IMMEDIATELY
 An incorrect commutation angle was detected that can result in a positive coupling
 in the speed controller.  
 Within the pole position identification routine (p1982 = 2):  
-- a difference of > 45 ° electrical to the encoder angle was determined.  
+- a difference of &gt; 45 ° electrical to the encoder angle was determined.  
 For VECTOR, within the encoder adjustment (p1990 = 2):  
-- a difference of > 6 ° electrical to the encoder angle was determined.
+- a difference of &gt; 6 ° electrical to the encoder angle was determined.
 
 **Remedy:**
   
@@ -26328,9 +26328,9 @@ Possible causes:
 For fault value = 0:  
 Once the pulse technique has been deselected automatically (p1750.5 = 0), there are
 two possible options:  
-- acknowledge the fault and save parameter p1750.5 = 0 -> field-oriented control mode
+- acknowledge the fault and save parameter p1750.5 = 0 -&gt; field-oriented control mode
 to standstill is not used and replaced by transition to open-loop control at low speeds.  
-- upgrade the power unit firmware (at least V4.3) -> field-oriented control mode to
+- upgrade the power unit firmware (at least V4.3) -&gt; field-oriented control mode to
 standstill is available.  
 For fault value = 10:  
 With active selection of the pulse technique (p1750.5 = 1):  
@@ -26659,11 +26659,11 @@ The function "DC link voltage compensation in the power unit" is selected (p1810
   
 For fault value = 1:  
 - if necessary, upgrade the firmware of the booksize power unit to a later version
-(version >= 4.4).  
+(version &gt;= 4.4).  
 Note:  
 If the firmware has already been automatically upgraded, then only a POWER ON (switch-off/switch-on)
 is required.  
-- Use a booksize power unit (version >= 4.4).  
+- Use a booksize power unit (version &gt;= 4.4).  
 For fault value = 2:  
 - if an encoder with Safety position actual values sensing is available (r0458[0...2].19
 = 1), reparameterize the encoderless safety technology (p9506 = 1, 3) to safety technology
@@ -26674,7 +26674,7 @@ required, set the current, speed and position controller again or calculate (p03
 = 4).  
 For fault value = 3:  
 - if necessary, upgrade the firmware of the blocksize power unit to a later version
-(version >= 4.6).  
+(version &gt;= 4.6).  
 - deselect the "DC link voltage compensation in the power unit" function (p1810.1
 = 0).  
 See also: r0192, p1810, p9506
@@ -29159,8 +29159,8 @@ and/or r2723) from increments to length units (LU) has exceeded the value range 
 displaying the position actual value.  
 Note:  
 For a linear encoder, the following must be maintained:  
-- p0407 * p2503 / (2^p0418*10^7) < 1  
-- p0407 * p2503 / (2^p0419*10^7) < 1
+- p0407 * p2503 / (2^p0418*10^7) &lt; 1  
+- p0407 * p2503 / (2^p0419*10^7) &lt; 1
 
 **Remedy:**
   
@@ -29431,7 +29431,7 @@ The input terminal for the measuring probe is not set.
 Error when initializing the measuring probe.  
 4100:  
 The measuring pulse frequency is too high.  
-> 50000:  
+&gt; 50000:  
 The measuring clock cycle is not a multiple integer of the position controller clock
 cycle.
 
@@ -29444,7 +29444,7 @@ For alarm value = 4098:
 Check the Control Unit hardware.  
 For alarm value = 4100:  
 Reduce the frequency of the measuring pulses at the measuring probe.  
-For alarm value > 50000:  
+For alarm value &gt; 50000:  
 Set the clock cycle ratio of the measuring clock cycle to the position controller
 clock cycle to an integer multiple.  
 To do this, the currently effective measuring clock cycle can be determined from the
@@ -30468,7 +30468,7 @@ Alarm value (r2124, interpret decimal):
 1:  
 The contactor for the motor that is presently active cannot be opened, because for
 a synchronous motor, the speed (r0063) is greater than the speed at the start of field
-weakening (p0348). As long as r0063 > p0348, the current in the motor does not decay
+weakening (p0348). As long as r0063 &gt; p0348, the current in the motor does not decay
 in spite of the pulses being suppressed.  
 2:  
 The "contactor opened" feedback signal was not detected within 1 s.  
@@ -30478,7 +30478,7 @@ The "contactor closed" feedback signal was not detected within 1 s.
 **Remedy:**
   
 For alarm value = 1:  
-Set the speed lower than the speed at the start of field weakening (r0063 < p0348).  
+Set the speed lower than the speed at the start of field weakening (r0063 &lt; p0348).  
 For alarm value = 2, 3:  
 Check the feedback signals of the contactor involved.
 
@@ -30519,7 +30519,7 @@ NONE
 
 **Cause:**
   
-The selected drive data set is not available (p0837 > p0180). The drive data set was
+The selected drive data set is not available (p0837 &gt; p0180). The drive data set was
 not changed over.  
 See also: p0180, p0820, p0821, p0822, p0823, p0824, r0837
 
@@ -30562,7 +30562,7 @@ NONE
 
 **Cause:**
   
-The selected command data set is not available (p0836 > p0170). The command data set
+The selected command data set is not available (p0836 &gt; p0170). The command data set
 was not changed over.  
 See also: p0810, p0811, r0836
 
@@ -30611,12 +30611,12 @@ NONE
 The selected drive data set changeover and the assigned motor changeover are not possible
 and are not carried out.  
 For synchronous motors, the motor contactor may only be switched for actual speeds
-less than the speed at the start of field weakening (r0063 < p0348).  
+less than the speed at the start of field weakening (r0063 &lt; p0348).  
 See also: r0063, p0348
 
 **Remedy:**
   
-Reduce the speed to below the speed at the start of field weakening (r0063 < p0348).
+Reduce the speed to below the speed at the start of field weakening (r0063 &lt; p0348).
 
 ### F07545 Drive: Pulse encoder interface parameterized incorrectly
 
@@ -30669,7 +30669,7 @@ p0400[1] = 2001: A value of 2001 (sin/cos encoder) is set in encoder data set 1.
 The setting in p0400 is not compatible with the telegram selection made in p0922 and
 p2079.  
 3:  
-A second encoder interface can only be used for pulse encoders (p0184 > 0).
+A second encoder interface can only be used for pulse encoders (p0184 &gt; 0).
 
 **Remedy:**
   
@@ -30917,7 +30917,7 @@ The Sensor Module does not support the requested configuration.
 For incorrect p0430 (cc = 0), the following applies:  
 - in p0430 (requested functions), at least 1 bit was set that is not set in r0458
 (supported functions) (exception: Bit 19, 28, 29, 30, 31).  
-- p1982 > 0 (pole position identification requested), but r0458.16 = 0 (pole position
+- p1982 &gt; 0 (pole position identification requested), but r0458.16 = 0 (pole position
 identification not supported).  
 For incorrect p0437 (cc = 1), the following applies:  
 - in p0437 (requested functions), at least 1 bit was set that is not set in r0459
@@ -33083,7 +33083,7 @@ p2506 * p0433 * p0421 / p0432 for multiturn encoders
 6. Direct encoder with position tracking for measuring gear:  
 p2506 * p0412  
 For a linear encoder, the following must be maintained:  
-- p0407 * p2503 / (2^p0419 * 10^7) <= 1.0
+- p0407 * p2503 / (2^p0419 * 10^7) &lt;= 1.0
 
 Reaction upon A:  
  NONE
@@ -33150,7 +33150,7 @@ p2506 * p0433 * p0421 / p0432 for multiturn encoders
 6. Direct encoder with position tracking for measuring gear:  
 p2506 * p0412  
 For a linear encoder, the following must be maintained:  
-- p0407 * p2503 / (2^p0419 * 10^7) <= 1.0
+- p0407 * p2503 / (2^p0419 * 10^7) &lt;= 1.0
 
 Reaction upon A:  
  NONE
@@ -33217,7 +33217,7 @@ p2506 * p0433 * p0421 / p0432 for multiturn encoders
 6. Direct encoder with position tracking for measuring gear:  
 p2506 * p0412  
 For a linear encoder, the following must be maintained:  
-- p0407 * p2503 / (2^p0419 * 10^7) <= 1.0
+- p0407 * p2503 / (2^p0419 * 10^7) &lt;= 1.0
 
 Reaction upon A:  
  NONE
@@ -33266,10 +33266,10 @@ Fault value (r0949, interpret decimal):
 Enable Safety Integrated (p9601/p9801), but p0218.0 = 0 (shutoff valve not available).  
 101:  
 The manipulated variable inhibit time is set less than the wait time to evaluate the
-feedback signal contacts when switching on the shutoff valve (p0230 < p9625[0]/p9825[0]).  
+feedback signal contacts when switching on the shutoff valve (p0230 &lt; p9625[0]/p9825[0]).  
 102:  
 The manipulated variable inhibit time is set less than the wait time to evaluate the
-feedback signal contacts when switching off the shutoff valve (p0230 < p9625[1]/p9825[1]).
+feedback signal contacts when switching off the shutoff valve (p0230 &lt; p9625[1]/p9825[1]).
 
 **Remedy:**
   
@@ -33277,10 +33277,10 @@ For fault value = 100:
 Check the enable of Safety Integrated and the shutoff valve (p9601/p9801, p0218.0).  
 For fault value = 101:  
 Set the manipulated variable inhibit time higher than the wait time to evaluate the
-feedback signal contacts when switching on the shutoff valve (p0230 > p9625[0]/p9825[0]).  
+feedback signal contacts when switching on the shutoff valve (p0230 &gt; p9625[0]/p9825[0]).  
 For fault value = 102:  
 Set the manipulated variable inhibit time higher than the wait time to evaluate the
-feedback signal contacts when switching off the shutoff valve (p0230 > p9625[1]/p9825[1]).  
+feedback signal contacts when switching off the shutoff valve (p0230 &gt; p9625[1]/p9825[1]).  
 See also: p0230, p9625 (SI HLA shutoff valve wait time (CU)), p9825 (SI HLA shutoff valve wait
 time (MM))
 
@@ -33381,7 +33381,7 @@ The permissible motor limit current was exceeded.
 - U/f operation: Motor current does not match current of power unit.  
 - Switch to rotating motor without flying restart function (p1200).  
 Note:  
-Limit current = 2 x minimum (p0640, 4 x p0305 x p0306) >= 2 x p0305 x p0306
+Limit current = 2 x minimum (p0640, 4 x p0305 x p0306) &gt;= 2 x p0305 x p0306
 
 **Remedy:**
   
@@ -33758,7 +33758,7 @@ Alarm value (r2124, interpret decimal):
 2: p0600 = 10 (BICO), but the signal source (p0603) is not interconnected.  
 3: p0601 = 11 (BICO), but in p0600 - not evaluated via BICO interconnection is selected
 (20 or 21).  
-4: p0601 = 11 (BICO) and p4610-p4613 > 0, but the associated signal source (p0608,
+4: p0601 = 11 (BICO) and p4610-p4613 &gt; 0, but the associated signal source (p0608,
 p0609) is not interconnected.  
 5: Component with sensor evaluation not present or has been removed in the meantime.  
 6: Evaluation via Motor Module not possible (r0192.21).
@@ -34917,7 +34917,7 @@ Stall monitoring is not possible, because a change was made into the open-loop s
 controlled mode before the wait time p2177 had expired.  
 This situation can only occur, if the following conditions apply:  
 p1300 = 20  
-p2177 > p1758  
+p2177 &gt; p1758  
 p1750.2 = 0  
 p1750.6 = 0
 
@@ -34928,7 +34928,7 @@ at the torque limit (p1750.6 = 0).
 Condition:  
 No slow reversing through the open-loop speed controlled operating range p1755 within
 the time p1758 when operating at the torque limit.  
-- shorten the stall detection wait time (p2177 < p1758).  
+- shorten the stall detection wait time (p2177 &lt; p1758).  
 - Activate closed-loop controlled operation from standstill and higher (p1750.2 =
 1).  
 Condition:  
@@ -35125,7 +35125,7 @@ If the stalled motor should take place in the range of the monitor model and for
 of less than 30 % of the rated motor speed, then a change can be made directly from
 the current model into the flux impression (p1401.5 = 1). We therefore recommend that
 the time-controlled model change is switched in (p1750.4 = 1) or the model changeover
-limits are significantly increased (p1752 > 0.35 x p0311; p1753 = 5 %).  
+limits are significantly increased (p1752 &gt; 0.35 x p0311; p1753 = 5 %).  
 - check the speed encoder, if another speed encoder was selected using the data set
 changeover. This must be connected to the motor that is controlled for the data set
 changeover.  
@@ -35493,7 +35493,7 @@ The following must be observed:
 - when the internal voltage protection is active, after pulse suppression, all of
 the motor terminals are at half of the DC link voltage (without an internal voltage
 protection, the motor terminals are at zero potential)!  
-- it is only permissible to use motors that are short-circuit proof (p0320 < p0323).  
+- it is only permissible to use motors that are short-circuit proof (p0320 &lt; p0323).  
 - the Motor Module must be able to continually conduct 180% short-circuit current
 (r0331) of the motor (r0289).  
 - the internal voltage protection cannot be interrupted due to a fault response. If
@@ -35703,8 +35703,8 @@ IMMEDIATELY
   
 The difference between the excitation current actual value and setpoint has exceeded
 the tolerance:  
-abs(r1641 - r1626) > p3201 + p3202  
-The cause of this fault is again reset for abs(r1641 - r1626) < p3201.
+abs(r1641 - r1626) &gt; p3201 + p3202  
+The cause of this fault is again reset for abs(r1641 - r1626) &lt; p3201.
 
 **Remedy:**
   
@@ -35748,8 +35748,8 @@ IMMEDIATELY
 **Cause:**
   
 The difference between the flux actual value and setpoint has exceeded the tolerance:  
-abs(r0084 - r1598) > p3204 + p3205  
-The cause of this fault is again reset for abs(r0084 - r1598) < p3204.  
+abs(r0084 - r1598) &gt; p3204 + p3205  
+The cause of this fault is again reset for abs(r0084 - r1598) &lt; p3204.  
 The fault is only issued after the delay time in p3206 has expired.
 
 **Remedy:**
@@ -36106,11 +36106,11 @@ NONE
 Invalid parameter values were entered for the envelope characteristic of the load
 monitoring.  
 The following rules apply for the speed thresholds:  
-p2182 < p2183 < p2184  
+p2182 &lt; p2183 &lt; p2184  
 The following rules apply for the torque thresholds:  
-p2185 > p2186  
-p2187 > p2188  
-p2189 > p2190  
+p2185 &gt; p2186  
+p2187 &gt; p2188  
+p2189 &gt; p2190  
 Load monitoring configuration and response must match.  
 It is not permissible that the individual load torque monitoring areas overlap.  
 Alarm value (r2124, interpret decimal):  
@@ -36222,7 +36222,7 @@ short-circuit is withdrawn.
 If the motor is still in a critical speed range, the armature short-circuit is re-activated
 once the DC link voltage exceeds the threshold of 800 V.  
 If the autonomous (independent) internal voltage protection is active (r1239.5 = 1)
-and the line supply returns (450 V < DC link voltage < 800 V), the armature short-circuit
+and the line supply returns (450 V &lt; DC link voltage &lt; 800 V), the armature short-circuit
 is withdrawn after 3 minutes.
 
 ### F07930 Drive: Brake control error
@@ -36763,8 +36763,8 @@ NONE
   
 The target frequency is outside the permissible value range.  
 Alarm value (r2124, interpret decimal):  
-1084: Target frequency greater than the positive speed limit, f_sync > f_max (r1084).  
-1087: Target frequency less than the negative speed limit, f_sync < f_min (r1087).
+1084: Target frequency greater than the positive speed limit, f_sync &gt; f_max (r1084).  
+1087: Target frequency less than the negative speed limit, f_sync &lt; f_min (r1087).
 
 **Remedy:**
   
@@ -36806,7 +36806,7 @@ NONE
 **Cause:**
   
 There is a considerable difference between the setpoint frequency and the target frequency
-(f_set <> f_target). The deviation that can be tolerated is set in p3806.
+(f_set &lt;&gt; f_target). The deviation that can be tolerated is set in p3806.
 
 **Remedy:**
   
@@ -36986,7 +36986,7 @@ commissioning with p0010 = 0.
 Or: set p0300 = 10100, without recommissioning (only if the motor data have not changed)  
 Or: set p0300 = 10000 (load the parameters from the motor with DRIVE-CLiQ) and re-commission.
 The data for bearings, gearbox and brake are reloaded.  
-Quick commissioning (p0010 = 1) is automatically exited with p3900 > 0.  
+Quick commissioning (p0010 = 1) is automatically exited with p3900 &gt; 0.  
 If quick commissioning was exited with p0010 = 0, then an automatic controller calculation
 (p0340 = 1) is not carried out.
 
@@ -37093,12 +37093,12 @@ The friction torque is less than the minimum from the lower effective torque lim
 3820 ... 3829:  
 Incorrect parameter number. The speeds entered in the parameters for the friction
 characteristic do not correspond to the following condition:  
-0.0 < p3820 < p3821 < ... < p3829 <= p0322 or p1082, if p0322 = 0  
+0.0 &lt; p3820 &lt; p3821 &lt; ... &lt; p3829 &lt;= p0322 or p1082, if p0322 = 0  
 Therefore the output of the friction characteristic (r3841) is set to zero.  
 3830 ... 3839:  
 Incorrect parameter number. The torques entered in the parameters for the friction
 characteristic do not correspond to the following condition:  
-0 <= p3830, p3831 ... p3839 <= p0333  
+0 &lt;= p3830, p3831 ... p3839 &lt;= p0333  
 Therefore the output of the friction characteristic (r3841) is set to zero.  
 See also: r3840 (Friction characteristic status word)
 
@@ -37209,7 +37209,7 @@ speed (r1087, p1086, p1088).
 direction inhibited (p1110).  
 1111: Friction characteristic record, positive direction selected (p3845) and positive
 direction inhibited (p1111).  
-1198: Friction characteristic record selected (p3845 > 0) and negative (p1110) and
+1198: Friction characteristic record selected (p3845 &gt; 0) and negative (p1110) and
 positive directions (p1111) inhibited (r1198).  
 1300: The control mode (p1300) has not been set to closed-loop speed control.  
 1755: For encoderless closed-loop control (p1300 = 20), the lowest speed value to
@@ -37687,7 +37687,7 @@ NONE
 The alarm indicates the phases of the fine encoder calibration using the alarm value.  
 Alarm value (interpret decimal):  
 1: Fine encoder calibration active.  
-2: Rotating measurement started (set the setpoint speed > 40 % rated motor speed).  
+2: Rotating measurement started (set the setpoint speed &gt; 40 % rated motor speed).  
 3: Rotating measurement lies within the speed and torque range.  
 4: Rotating measurement successful: pulse inhibit can be initiated to accept the values.  
 5: Fine encoder calibration is calculated.  
@@ -37900,7 +37900,7 @@ is active.
 For fault value = 1:  
 - check the motor parameters.  
 - carry out a motor data identification routine (p1910).  
-- if required, reduce the dynamic factor (p1967 < 25 %).  
+- if required, reduce the dynamic factor (p1967 &lt; 25 %).  
 For fault value = 2:  
 - adapt the speed setpoint (p1965) or adapt the minimum limit (p1080).  
 For fault value = 3:  
@@ -37987,7 +37987,7 @@ For fault value = 1 ... 4:
 - check the moment of inertia (p0341, p0342). After the change: Calculate p0340 =
 3.  
 - carry out a motor data identification routine (p1910).  
-- if required, reduce the dynamic factor (p1967 < 25 %).  
+- if required, reduce the dynamic factor (p1967 &lt; 25 %).  
 For fault value = 5:  
 - the speed setpoint (p1961) is too high. Reduce the speed.  
 For fault value = 6:  
@@ -38068,7 +38068,7 @@ For fault value = 1:
 - check the moment of inertia (p0341, p0342). After the change: Calculate p0340 =
 3.  
 - carry out a motor data identification routine (p1910).  
-- if required, reduce the dynamic factor (p1967 < 25 %).  
+- if required, reduce the dynamic factor (p1967 &lt; 25 %).  
 For fault value = 2, 5:  
 - adapt the speed setpoint (p1965) or adapt the minimum limit (p1080).  
 For fault value = 3, 6:  
@@ -38145,7 +38145,7 @@ For fault value = 1:
 - check the moment of inertia (p0341, p0342). After the change: Calculate p0340 =
 3.  
 - carry out a motor data identification routine (p1910).  
-- if required, reduce the dynamic factor (p1967 < 25 %).  
+- if required, reduce the dynamic factor (p1967 &lt; 25 %).  
 For fault value = 2:  
 - adapt the speed setpoint (p1965) or adapt the minimum limit (p1080).  
 For fault value = 3:  
@@ -38334,7 +38334,7 @@ is active.
 For fault value = 1:  
 - check the motor parameters.  
 - carry out a motor data identification routine (p1910).  
-- if required, reduce the dynamic factor (p1967 < 25 %).  
+- if required, reduce the dynamic factor (p1967 &lt; 25 %).  
 For fault value = 2:  
 - adapt the speed setpoint (p1965) or adapt the minimum limit (p1080).  
 For fault value = 3:  
@@ -38556,7 +38556,7 @@ The "vector control" mode has been selected and a motor data identification has 
 not been performed.  
 The alarm is initiated when changing the drive data set (see r0051) in the following
 cases:  
-- vector control is parameterized in the actual drive data set (p1300 >= 20).  
+- vector control is parameterized in the actual drive data set (p1300 &gt;= 20).  
 and  
 - motor data identification has still not been performed in the actual drive data
 set (see r3925).  
@@ -38567,7 +38567,7 @@ the system runs up.
 **Remedy:**
   
 - Perform motor data identification (see p1900).  
-- if required, parameterize "U/f control" (p1300 < 20).  
+- if required, parameterize "U/f control" (p1300 &lt; 20).  
 - switch over to a drive data set, in which the conditions do not apply.
 
 Reaction upon F:  
@@ -40137,7 +40137,7 @@ NONE
 The CAN controller has lost a receive message.  
 Alarm value (r2124, interpret decimal):  
 Hardware channel in the CAN controller.  
-0: Firmware version < 5.2 (no reference to the original hardware channel).  
+0: Firmware version &lt; 5.2 (no reference to the original hardware channel).  
 1: NMT command message  
 2: SYNC message  
 3: NMT error control message  
@@ -40448,9 +40448,9 @@ NONE
 For online operation, the appropriate COB-ID must be set invalid before mapping.  
 Example:  
 Mapping for RPDO 1 should be changed (p8710[0]).  
---> set p8700[0] = C00006E0 hex (invalid COB-ID)  
---> set p8710[0] as required.  
---> p8700[0] enter a valid COB-ID
+--&gt; set p8700[0] = C00006E0 hex (invalid COB-ID)  
+--&gt; set p8710[0] as required.  
+--&gt; p8700[0] enter a valid COB-ID
 
 **Remedy:**
   
@@ -41933,7 +41933,7 @@ The Thyristor Control Board (TCB) of the Basic Line Module signals a fault.
 - the motor either has a short-circuit or insulation fault (from an inverter connected
 to the DC link).  
 - voltage supply for the Thyristor Control Board outside the nominal range (5 ...
-18 V) and line voltage >30 V.  
+18 V) and line voltage &gt;30 V.  
 - there is an internal fault in the Thyristor Control Board.
 
 **Remedy:**
@@ -42548,7 +42548,7 @@ Fault value (r0949, interpret decimal):
 0:  
 - the hardware DC current monitoring has responded.  
 - short-circuit at the braking resistor.  
-> 0:  
+&gt; 0:  
 Absolute value, total current amplitude [20479 = r0209 * 1.4142].
 
 **Remedy:**
@@ -42845,10 +42845,10 @@ yyyyxxxx hex:
 yyyy = power unit state  
 0: Fault status (wait for OFF and fault acknowledgment).  
 1: Restart inhibit (wait for OFF).  
-2: Overvoltage condition detected -> change into the fault state.  
-3: Undervoltage condition detected -> change into the fault state.  
-4: Wait for bridging contactor to open -> change into the fault state.  
-5: Wait for bridging contactor to open -> change into restart inhibit.  
+2: Overvoltage condition detected -&gt; change into the fault state.  
+3: Undervoltage condition detected -&gt; change into the fault state.  
+4: Wait for bridging contactor to open -&gt; change into the fault state.  
+5: Wait for bridging contactor to open -&gt; change into restart inhibit.  
 6: Wait for bypass contactor to open  
 7: Commissioning.  
 8: Ready for precharging.  
@@ -42858,7 +42858,7 @@ yyyy = power unit state
 has been completed.  
 12: Precharging completed, ready for pulse enable.  
 13: It was detected that the STO terminal was energized at the power unit  
-xxxx = Missing internal enable signals, power unit (inverted bit-coded, FFFF hex ->
+xxxx = Missing internal enable signals, power unit (inverted bit-coded, FFFF hex -&gt;
 all internal enable signals available)  
 Bit 0: Power supply of the IGBT gating shut down.  
 Bit 1: Ground fault detected.  
@@ -43806,7 +43806,7 @@ Alarm value (r2124, interpret binary):
 Bit 0 = 1: heat sink fan  
 Bit 1 = 1: fan inside the device  
 Note:  
-- for firmware version < 5.1 of the power unit, the alarm value is always 0. The alarm
+- for firmware version &lt; 5.1 of the power unit, the alarm value is always 0. The alarm
 then refers to the heat sink fan.  
 - for r0193.13 = 1, fault F30058 is output instead of this alarm for heat sink fans,
 if the pulses are inhibited or the fault occurs within 10 s after the fan runs up
@@ -44104,7 +44104,7 @@ than 21.4 V
 Alarm value (r2124, interpret decimal):  
 Supply voltage fault [0.1 V].  
 Example:  
-Alarm value = 195 --> voltage = 19.5 V
+Alarm value = 195 --&gt; voltage = 19.5 V
 
 **Remedy:**
   
@@ -45893,7 +45893,7 @@ and initiated a STOP A.
 - there is either a DRIVE-CLiQ communication error or communication has failed.  
 - a time slice overflow of the safety software has occurred.  
 - the enable of the safety functions in both monitoring channels is inconsistent (p9601
-= 0, p9801 <> 0).  
+= 0, p9801 &lt;&gt; 0).  
 Fault value (r0949, interpret decimal):  
 Only for internal Siemens troubleshooting.
 
@@ -47074,7 +47074,7 @@ yyyyxxxx dec: yyyy = supplementary information, xxxx = parameter
 yyyy = 0:  
 No additional information available.  
 xxxx = 9301:  
-It is not permissible to enable the function "n < nx hysteresis and filtering" (p9301.16)
+It is not permissible to enable the function "n &lt; nx hysteresis and filtering" (p9301.16)
 in conjunction with the function "Extended functions without selection" (p9801.5).  
 xxxx = 9301 and yyyy = 8:  
 Referencing via SCC (p9301.27 = 1) is enabled without enabling absolute motion monitoring
@@ -47158,10 +47158,10 @@ If xxxx = 9334 or 9335:
 Reduce the limit values (absolute values) of SLP.  
 For xxxx = 9347:  
 With hysteresis/filtering enabled (p9301.16 = 1), the following applies:  
-- set parameters p9346 and p9347 according to the following rule: p9347 <= 0.75 x
+- set parameters p9346 and p9347 according to the following rule: p9347 &lt;= 0.75 x
 p9346;  
 - the following rule must also be adhered to when actual value synchronization (p9301.3
-= 1) is enabled: p9347 >= p9349;  
+= 1) is enabled: p9347 &gt;= p9349;  
 For xxxx = 9378:  
 - observe the information in r9790.  
 For xxxx = 9801:  
@@ -47469,7 +47469,7 @@ to the tolerance range around the modulo position.
 cam tolerance (p9340) + position tolerance (p9342).  
 - the plus position value of a cam must be less than the upper modulo limit - cam
 tolerance (p9340) - position tolerance (p9342).  
-- when the modulo position is parameterized (p9305 > 0), the lower modulo limit =
+- when the modulo position is parameterized (p9305 &gt; 0), the lower modulo limit =
 0, the upper modulo limit = p9305.  
 - the cam length of cam x = p9336[x] - p9337[x] is less than the cam tolerance + position
 tolerance (= p9340 + p9342).  
@@ -48691,10 +48691,10 @@ For cyclic switching operations at the F-DI, it may be necessary to adapt the di
 time to the switching frequency.  
 If the period of a cyclic switching pulse corresponds to twice the value of p10102,
 then the following formulas should be checked:  
-- p10102 < (tp / 2) - td (discrepancy time must be less than half the period minus
+- p10102 &lt; (tp / 2) - td (discrepancy time must be less than half the period minus
 the actual discrepancy time)  
-- p10102 >= p9300 (discrepancy time must be at least p9300)  
-- p10102 > td (discrepancy time must be greater than the switch discrepancy time that
+- p10102 &gt;= p9300 (discrepancy time must be at least p9300)  
+- p10102 &gt; td (discrepancy time must be greater than the switch discrepancy time that
 may actually occur)  
 td = possible actual discrepancy time (in ms) that can occur with a switching operation.
 This must correspond to at least 1 SI monitoring cycle (see p9300).  
@@ -48703,14 +48703,14 @@ When debounce p10017 is active, the discrepancy time is directly specified by th
 debounce time.  
 If the period of a cyclic switching pulse corresponds to twice the debounce time,
 then the following formulas should be checked.  
-- p11002 < p10117 + 1 ms - td  
-- p10102 > td  
-- p10102 >= p9300  
+- p11002 &lt; p10117 + 1 ms - td  
+- p10102 &gt; td  
+- p10102 &gt;= p9300  
 Example:  
 For a 12 ms SI monitoring cycle and a switching frequency of 110 ms (p10117 = 0),
 the maximum discrepancy time which can be set is as follows:  
-p10102 <= (110/2 ms) - 12 ms = 43 ms  
-Rounded-off, p10102 <= 36 ms is obtained (since the discrepancy time can only be accepted
+p10102 &lt;= (110/2 ms) - 12 ms = 43 ms  
+Rounded-off, p10102 &lt;= 36 ms is obtained (since the discrepancy time can only be accepted
 as a whole SI monitoring cycle, the value will need to be rounded up or down to a
 whole SI monitoring cycle if the result is not an exact multiple of an SI monitoring
 cycle).  
@@ -50626,9 +50626,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY: R > 1630 Ohm, PT100: R > 375 Ohm, PT1000: R > 1720 Ohm  
+KTY: R &gt; 1630 Ohm, PT100: R &gt; 375 Ohm, PT1000: R &gt; 1720 Ohm  
 2: Measured resistance too low.  
-PTC: R < 20 Ohm, KTY: R < 50 Ohm, PT100: R < 30 Ohm, PT1000: R < 603 Ohm  
+PTC: R &lt; 20 Ohm, KTY: R &lt; 50 Ohm, PT100: R &lt; 30 Ohm, PT1000: R &lt; 603 Ohm  
 Note:  
 A temperature sensor is connected to the following terminals:  
 - "Booksize" format: X21.1/.2 or X22.1/.2  
@@ -51003,9 +51003,9 @@ The fault can be initiated when the unipolar voltage level is exceeded (RP/RN) o
 if the differential amplitude is undershot.  
 Fault value (r0949, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = 0, xxxx = Signal level, track R (16 bits with sign)  
-The response thresholds of the unipolar signal levels of the encoder are between <
-1400 mV and > 3500 mV.  
-The response threshold for the differential signal level of the encoder is < -1600
+The response thresholds of the unipolar signal levels of the encoder are between &lt;
+1400 mV and &gt; 3500 mV.  
+The response threshold for the differential signal level of the encoder is &lt; -1600
 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
@@ -51097,7 +51097,7 @@ or cannot execute it.
 Bit 5: Internal error in the serial driver: An illegal mode command was requested.  
 Bit 6: Timeout when cyclically reading.  
 Bit 7: Timeout for the register communication.  
-Bit 8: Protocol is too long (e.g. > 64 bits).  
+Bit 8: Protocol is too long (e.g. &gt; 64 bits).  
 Bit 9: Receive buffer overflow.  
 Bit 10: Frame error when reading twice.  
 Bit 11: Parity error.  
@@ -51364,12 +51364,12 @@ yyyy = Signal level, track B (16 bits with sign).
 xxxx = Signal level, track A (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is < 170 mV (input frequency <= 256 kHz) or < 120 mV (input
-frequency > 256 kHz).  
+The response threshold is &lt; 170 mV (input frequency &lt;= 256 kHz) or &lt; 120 mV (input
+frequency &gt; 256 kHz).  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note for Sensor Modules for resolvers (e.g. SMC10):  
-The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is < 1070
+The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is &lt; 1070
 mV.  
 A signal level of 2900 mV peak value corresponds to the numerical value 6666 hex =
 26214 dec.  
@@ -51449,7 +51449,7 @@ yyyy = Signal level, track B (16 bits with sign).
 xxxx = Signal level, track A (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is < 130 mV.  
+The response threshold is &lt; 130 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note:  
@@ -51541,8 +51541,8 @@ applies:
 at X520).  
 For a square-wave encoder without track R, the following jumpers must be set for the
 connection at X520 (SMC30), X220 (CUA32) or X23 (CU310-2):  
-- pin 10 (reference signal R) <--> pin 7 (encoder power supply, ground)  
-- pin 11 (reference signal R inverted) <--> pin 4 (encoder power supply)
+- pin 10 (reference signal R) &lt;--&gt; pin 7 (encoder power supply, ground)  
+- pin 11 (reference signal R inverted) &lt;--&gt; pin 4 (encoder power supply)
 
 Reaction upon N:  
  NONE
@@ -51870,7 +51870,7 @@ Bit 0 = 1: Either AP or AN outside the tolerance.
 Bit 16 = 1: Either BP or BN outside the tolerance.  
 The unipolar nominal signal level of the encoder must lie in the range 2500 mV +/-
 500 mV.  
-The response thresholds are < 1700 mV and > 3300 mV.  
+The response thresholds are &lt; 1700 mV and &gt; 3300 mV.  
 Note:  
 The signal level is not evaluated unless the following conditions are satisfied:  
 - Sensor Module properties available (r0459.31 = 1).  
@@ -51945,12 +51945,12 @@ yyyy = Signal level, track B (16 bits with sign).
 xxxx = Signal level, track A (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is > 750 mV.  
+The response threshold is &gt; 750 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note for Sensor Modules for resolvers (e.g. SMC10):  
 The nominal signal level is at 2900 mV (2.0 Vrms).  
-The response threshold is > 3582 mV.  
+The response threshold is &gt; 3582 mV.  
 A signal level of 2900 mV peak value corresponds to the numerical value 6666 hex =
 26214 dec.  
 Note:  
@@ -52022,7 +52022,7 @@ yyyy = Angle
 xxxx = amplitude, i.e. root of A^2 + B^2 (16 bits without sign)  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold for (|A| + |B|) is > 1120 mV or the root of (A^2 + B^2) > 955
+The response threshold for (|A| + |B|) is &gt; 1120 mV or the root of (A^2 + B^2) &gt; 955
 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value of 299A hex
 = 10650 dec.  
@@ -52249,7 +52249,7 @@ When cyclically reading the absolute position, an excessively high difference to
 incremental position was detected. The absolute position that was read is rejected.  
 Limit value for the deviation:  
 - EnDat encoder: Is supplied from the encoder and is a minimum of 2 quadrants (e.g.
-EQI 1325 > 2 quadrants, EQN 1325 > 50 quadrants).  
+EQI 1325 &gt; 2 quadrants, EQN 1325 &gt; 50 quadrants).  
 - other encoders: 15 pulses = 60 quadrants.  
 Incremental encoder:  
 When the zero pulse is passed, a deviation in the incremental position was detected.  
@@ -52337,32 +52337,32 @@ Bit 2: Reserved (lighting).
 Bit 3: Reserved (signal amplitude).  
 Bit 4: Reserved (position value).  
 Bit 5: Reserved (overvoltage).  
-Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--> F3x110, x = 1, 2,
+Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--&gt; F3x110, x = 1, 2,
 3).  
 Bit 7: Reserved (overcurrent)/EnDat encoder withdrawn when not in the parked state
-(--> F3x110, x = 1, 2, 3).  
-Bit 8: Reserved (battery)/overcurrent EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 9: Reserved/overvoltage EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 11: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 12: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 13: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 14: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 15: Internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 16: Lighting (--> F3x135, x = 1, 2, 3).  
-Bit 17: Signal amplitude (--> F3x135, x = 1, 2, 3).  
-Bit 18: Singleturn position 1 (--> F3x135, x = 1, 2, 3).  
-Bit 19: Overvoltage (--> F3x135, x = 1, 2, 3).  
-Bit 20: Undervoltage (--> F3x135, x = 1, 2, 3).  
-Bit 21: Overcurrent (--> F3x135, x = 1, 2, 3).  
-Bit 22: Temperature exceeded (--> F3x405, x = 1, 2, 3).  
+(--&gt; F3x110, x = 1, 2, 3).  
+Bit 8: Reserved (battery)/overcurrent EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 9: Reserved/overvoltage EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 11: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 12: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 13: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 14: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 15: Internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 16: Lighting (--&gt; F3x135, x = 1, 2, 3).  
+Bit 17: Signal amplitude (--&gt; F3x135, x = 1, 2, 3).  
+Bit 18: Singleturn position 1 (--&gt; F3x135, x = 1, 2, 3).  
+Bit 19: Overvoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 20: Undervoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 21: Overcurrent (--&gt; F3x135, x = 1, 2, 3).  
+Bit 22: Temperature exceeded (--&gt; F3x405, x = 1, 2, 3).  
 Bit 23: Singleturn position 2 (safety status display).  
-Bit 24: Singleturn system (--> F3x135, x = 1, 2, 3).  
-Bit 25: Singleturn power down (--> F3x135, x = 1, 2, 3)  
-Bit 26: Multiturn position 1 (--> F3x136, x = 1, 2, 3).  
-Bit 27: Multiturn position 2 (--> F3x136, x = 1, 2, 3).  
-Bit 28: Multiturn system (--> F3x136, x = 1, 2, 3).  
-Bit 29: Multiturn power down (--> F3x136, x = 1, 2, 3).  
-Bit 30: Multiturn overflow/underflow (--> F3x136, x = 1, 2, 3).  
+Bit 24: Singleturn system (--&gt; F3x135, x = 1, 2, 3).  
+Bit 25: Singleturn power down (--&gt; F3x135, x = 1, 2, 3)  
+Bit 26: Multiturn position 1 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 27: Multiturn position 2 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 28: Multiturn system (--&gt; F3x136, x = 1, 2, 3).  
+Bit 29: Multiturn power down (--&gt; F3x136, x = 1, 2, 3).  
+Bit 30: Multiturn overflow/underflow (--&gt; F3x136, x = 1, 2, 3).  
 Bit 31: Multiturn battery (reserved).
 
 **Remedy:**
@@ -52427,32 +52427,32 @@ Bit 2: Reserved (lighting).
 Bit 3: Reserved (signal amplitude).  
 Bit 4: Reserved (position value).  
 Bit 5: Reserved (overvoltage).  
-Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--> F3x110, x = 1, 2,
+Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--&gt; F3x110, x = 1, 2,
 3).  
 Bit 7: Reserved (overcurrent)/EnDat encoder withdrawn when not in the parked state
-(--> F3x110, x = 1, 2, 3).  
-Bit 8: Reserved (battery)/overcurrent EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 9: Reserved/overvoltage EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 11: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 12: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 13: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 14: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 15: Internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 16: Lighting (--> F3x135, x = 1, 2, 3).  
-Bit 17: Signal amplitude (--> F3x135, x = 1, 2, 3).  
-Bit 18: Singleturn position 1 (--> F3x135, x = 1, 2, 3).  
-Bit 19: Overvoltage (--> F3x135, x = 1, 2, 3).  
-Bit 20: Undervoltage (--> F3x135, x = 1, 2, 3).  
-Bit 21: Overcurrent (--> F3x135, x = 1, 2, 3).  
-Bit 22: Temperature exceeded (--> F3x405, x = 1, 2, 3).  
+(--&gt; F3x110, x = 1, 2, 3).  
+Bit 8: Reserved (battery)/overcurrent EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 9: Reserved/overvoltage EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 11: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 12: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 13: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 14: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 15: Internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 16: Lighting (--&gt; F3x135, x = 1, 2, 3).  
+Bit 17: Signal amplitude (--&gt; F3x135, x = 1, 2, 3).  
+Bit 18: Singleturn position 1 (--&gt; F3x135, x = 1, 2, 3).  
+Bit 19: Overvoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 20: Undervoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 21: Overcurrent (--&gt; F3x135, x = 1, 2, 3).  
+Bit 22: Temperature exceeded (--&gt; F3x405, x = 1, 2, 3).  
 Bit 23: Singleturn position 2 (safety status display).  
-Bit 24: Singleturn system (--> F3x135, x = 1, 2, 3).  
-Bit 25: Singleturn power down (--> F3x135, x = 1, 2, 3)  
-Bit 26: Multiturn position 1 (--> F3x136, x = 1, 2, 3).  
-Bit 27: Multiturn position 2 (--> F3x136, x = 1, 2, 3).  
-Bit 28: Multiturn system (--> F3x136, x = 1, 2, 3).  
-Bit 29: Multiturn power down (--> F3x136, x = 1, 2, 3).  
-Bit 30: Multiturn overflow/underflow (--> F3x136, x = 1, 2, 3).  
+Bit 24: Singleturn system (--&gt; F3x135, x = 1, 2, 3).  
+Bit 25: Singleturn power down (--&gt; F3x135, x = 1, 2, 3)  
+Bit 26: Multiturn position 1 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 27: Multiturn position 2 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 28: Multiturn system (--&gt; F3x136, x = 1, 2, 3).  
+Bit 29: Multiturn power down (--&gt; F3x136, x = 1, 2, 3).  
+Bit 30: Multiturn overflow/underflow (--&gt; F3x136, x = 1, 2, 3).  
 Bit 31: Multiturn battery (reserved).
 
 **Remedy:**
@@ -53499,7 +53499,7 @@ Bit 4: Encoder acknowledgment error: The encoder incorrectly understood the task
 or cannot execute it.  
 Bit 5: Internal error in the serial driver: An illegal mode command was requested.  
 Bit 6: Timeout when cyclically reading.  
-Bit 8: Protocol is too long (e.g. > 64 bits).  
+Bit 8: Protocol is too long (e.g. &gt; 64 bits).  
 Bit 9: Receive buffer overflow.  
 Bit 10: Frame error when reading twice.  
 Bit 11: Parity error.  
@@ -53711,8 +53711,8 @@ yyyy = Signal level, track D (16 bits with sign).
 xxxx = Signal level, track C (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response thresholds are < 230 mV (observe the frequency response of the encoder)
-and > 750 mV.  
+The response thresholds are &lt; 230 mV (observe the frequency response of the encoder)
+and &gt; 750 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note:  
@@ -53786,13 +53786,13 @@ yyyy = Angle
 xxxx = amplitude, i.e. root of A^2 + B^2 (16 bits without sign)  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is < 230 mV (observe the frequency response of the encoder).  
+The response threshold is &lt; 230 mV (observe the frequency response of the encoder).  
 A signal level of 500 mV peak value corresponds to the numerical value 299A hex =
 10650 dec.  
 The angle 0 ... FFFF hex corresponds to 0 ... 360 degrees of the fine position. Zero
 degrees is present at the negative zero crossover of track B.  
 Note for Sensor Modules for resolvers (e.g. SMC10):  
-The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is < 1414
+The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is &lt; 1414
 mV (1.0 Vrms).  
 A signal level of 2900 mV peak value corresponds to the numerical value 3333 hex =
 13107 dec.  
@@ -53931,7 +53931,7 @@ NONE
   
 The amplitude/phase/offset correction for track A or B is at the limit.  
 Amplitude error correction: Amplitude B / Amplitude A = 0.78 ... 1.27  
-Phase: <84 degrees or >96 degrees  
+Phase: &lt;84 degrees or &gt;96 degrees  
 SMC20: Offset correction: +/-140 mV  
 SMC10: Offset correction: +/-650 mV  
 Alarm value (r2124, interpret hexadecimal):  
@@ -54422,7 +54422,7 @@ Bit 0 = 1: Either CP or CN outside the tolerance.
 Bit 16 = 1: Either DP or DN outside the tolerance.  
 The unipolar nominal signal level of the encoder must lie in the range 2500 mV +/-
 500 mV.  
-The response thresholds are < 1700 mV and > 3300 mV.  
+The response thresholds are &lt; 1700 mV and &gt; 3300 mV.  
 Note:  
 The signal level is not evaluated unless the following conditions are satisfied:  
 - Sensor Module properties available (r0459.31 = 1).  
@@ -55295,7 +55295,7 @@ See also: p0491 (Motor encoder fault response ENCODER)
 **Remedy:**
   
 - carry out a POWER ON (switch-off/switch-on).  
-- upgrade firmware to later version (>= V2.6 HF3, >= V4.3 SP2, >= V4.4).  
+- upgrade firmware to later version (&gt;= V2.6 HF3, &gt;= V4.3 SP2, &gt;= V4.4).  
 - check whether the permissible ambient temperature for the component is maintained.  
 - replace the Sensor Module.
 
@@ -55425,15 +55425,15 @@ Bit 6: Mid-voltage matching for track safety B unsuccessful.
 Bit 7: Mid-voltage matching for track C unsuccessful.  
 Bit 8: Mid-voltage matching for track D unsuccessful.  
 Bit 9: Mid-voltage matching for track R unsuccessful.  
-Bit 10: The difference in mid-voltages between A and B is too great (> 0.5 V)  
-Bit 11: The difference in mid-voltages between C and D is too great (> 0.5 V)  
+Bit 10: The difference in mid-voltages between A and B is too great (&gt; 0.5 V)  
+Bit 11: The difference in mid-voltages between C and D is too great (&gt; 0.5 V)  
 Bit 12: The difference in mid-voltages between safety A and safety B is too great
-(> 0.5 V)  
-Bit 13: The difference in mid-voltages between A and safety B is too great (> 0.5
+(&gt; 0.5 V)  
+Bit 13: The difference in mid-voltages between A and safety B is too great (&gt; 0.5
 V)  
-Bit 14: The difference in mid-voltages between B and safety A is too great (> 0.5
+Bit 14: The difference in mid-voltages between B and safety A is too great (&gt; 0.5
 V)  
-Bit 15: The standard deviation of the calculated mid-voltages is too great (> 0.3
+Bit 15: The standard deviation of the calculated mid-voltages is too great (&gt; 0.3
 V)  
 Bit 16: Internal fault - fault when reading a register (CAFE)  
 Bit 17: Internal fault - fault when writing a register (CAFE)  
@@ -57093,13 +57093,13 @@ yyyy = 0:
 No additional information available.  
 yyyy = 1:  
 The component does not support HTL level (p0405.1 = 0) combined with track monitoring
-A/B <> -A/B (p0405.2 = 1).  
+A/B &lt;&gt; -A/B (p0405.2 = 1).  
 yyyy = 2:  
 A code number for an identified encoder has been entered into p0400, however, no identification
 was carried out. Please start a new encoder identification.  
 yyyy = 3:  
 A code number for an identified encoder has been entered into p0400, however, no identification
-was carried out. Please select a listed encoder in p0400 with a code number < 10000.  
+was carried out. Please select a listed encoder in p0400 with a code number &lt; 10000.  
 yyyy = 4:  
 This component does not support SSI encoders (p0404.9 = 1) without track A/B.  
 yyyy = 5:  
@@ -57126,7 +57126,7 @@ See also: p0491 (Motor encoder fault response ENCODER)
 - re parameter number = 314:  
 - check the pole pair number and measuring gear ratio. The quotient of the "pole pair
 number" divided by the "measuring gear ratio" must be less than or equal to 1000 ((r0313
-* p0433) / p0432 <= 1000).
+* p0433) / p0432 &lt;= 1000).
 
 Reaction upon N:  
  NONE
@@ -57386,10 +57386,10 @@ The motor detected a fault when evaluating the temperature sensor.
 Fault cause:  
 1 (= 01 hex):  
 Wire breakage or sensor not connected.  
-KTY: R > 1630 Ohm, PT1000: R > 1720 Ohm  
+KTY: R &gt; 1630 Ohm, PT1000: R &gt; 1720 Ohm  
 2 (= 02 hex):  
 Measured resistance too low.  
-PTC: R < 20 Ohm, KTY: R < 50 Ohm, PT1000: R < 603 Ohm  
+PTC: R &lt; 20 Ohm, KTY: R &lt; 50 Ohm, PT1000: R &lt; 603 Ohm  
 Additional values:  
 Only for internal Siemens troubleshooting.  
 Note regarding the message value:  
@@ -57844,9 +57844,9 @@ The fault can be initiated when the unipolar voltage level is exceeded (RP/RN) o
 if the differential amplitude is undershot.  
 Fault value (r0949, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = 0, xxxx = Signal level, track R (16 bits with sign)  
-The response thresholds of the unipolar signal levels of the encoder are between <
-1400 mV and > 3500 mV.  
-The response threshold for the differential signal level of the encoder is < -1600
+The response thresholds of the unipolar signal levels of the encoder are between &lt;
+1400 mV and &gt; 3500 mV.  
+The response threshold for the differential signal level of the encoder is &lt; -1600
 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
@@ -57935,7 +57935,7 @@ or cannot execute it.
 Bit 5: Internal error in the serial driver: An illegal mode command was requested.  
 Bit 6: Timeout when cyclically reading.  
 Bit 7: Timeout for the register communication.  
-Bit 8: Protocol is too long (e.g. > 64 bits).  
+Bit 8: Protocol is too long (e.g. &gt; 64 bits).  
 Bit 9: Receive buffer overflow.  
 Bit 10: Frame error when reading twice.  
 Bit 11: Parity error.  
@@ -58195,12 +58195,12 @@ yyyy = Signal level, track B (16 bits with sign).
 xxxx = Signal level, track A (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is < 170 mV (input frequency <= 256 kHz) or < 120 mV (input
-frequency > 256 kHz).  
+The response threshold is &lt; 170 mV (input frequency &lt;= 256 kHz) or &lt; 120 mV (input
+frequency &gt; 256 kHz).  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note for Sensor Modules for resolvers (e.g. SMC10):  
-The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is < 1070
+The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is &lt; 1070
 mV.  
 A signal level of 2900 mV peak value corresponds to the numerical value 6666 hex =
 26214 dec.  
@@ -58277,7 +58277,7 @@ yyyy = Signal level, track B (16 bits with sign).
 xxxx = Signal level, track A (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is < 130 mV.  
+The response threshold is &lt; 130 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note:  
@@ -58365,8 +58365,8 @@ applies:
 at X520).  
 For a square-wave encoder without track R, the following jumpers must be set for the
 connection at X520 (SMC30), X220 (CUA32) or X23 (CU310-2):  
-- pin 10 (reference signal R) <--> pin 7 (encoder power supply, ground)  
-- pin 11 (reference signal R inverted) <--> pin 4 (encoder power supply)
+- pin 10 (reference signal R) &lt;--&gt; pin 7 (encoder power supply, ground)  
+- pin 11 (reference signal R inverted) &lt;--&gt; pin 4 (encoder power supply)
 
 Reaction upon N:  
  NONE
@@ -58676,7 +58676,7 @@ Bit 0 = 1: Either AP or AN outside the tolerance.
 Bit 16 = 1: Either BP or BN outside the tolerance.  
 The unipolar nominal signal level of the encoder must lie in the range 2500 mV +/-
 500 mV.  
-The response thresholds are < 1700 mV and > 3300 mV.  
+The response thresholds are &lt; 1700 mV and &gt; 3300 mV.  
 Note:  
 The signal level is not evaluated unless the following conditions are satisfied:  
 - Sensor Module properties available (r0459.31 = 1).  
@@ -58748,12 +58748,12 @@ yyyy = Signal level, track B (16 bits with sign).
 xxxx = Signal level, track A (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is > 750 mV.  
+The response threshold is &gt; 750 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note for Sensor Modules for resolvers (e.g. SMC10):  
 The nominal signal level is at 2900 mV (2.0 Vrms).  
-The response threshold is > 3582 mV.  
+The response threshold is &gt; 3582 mV.  
 A signal level of 2900 mV peak value corresponds to the numerical value 6666 hex =
 26214 dec.  
 Note:  
@@ -58822,7 +58822,7 @@ yyyy = Angle
 xxxx = amplitude, i.e. root of A^2 + B^2 (16 bits without sign)  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold for (|A| + |B|) is > 1120 mV or the root of (A^2 + B^2) > 955
+The response threshold for (|A| + |B|) is &gt; 1120 mV or the root of (A^2 + B^2) &gt; 955
 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value of 299A hex
 = 10650 dec.  
@@ -59039,7 +59039,7 @@ When cyclically reading the absolute position, an excessively high difference to
 incremental position was detected. The absolute position that was read is rejected.  
 Limit value for the deviation:  
 - EnDat encoder: Is supplied from the encoder and is a minimum of 2 quadrants (e.g.
-EQI 1325 > 2 quadrants, EQN 1325 > 50 quadrants).  
+EQI 1325 &gt; 2 quadrants, EQN 1325 &gt; 50 quadrants).  
 - other encoders: 15 pulses = 60 quadrants.  
 Incremental encoder:  
 When the zero pulse is passed, a deviation in the incremental position was detected.  
@@ -59124,32 +59124,32 @@ Bit 2: Reserved (lighting).
 Bit 3: Reserved (signal amplitude).  
 Bit 4: Reserved (position value).  
 Bit 5: Reserved (overvoltage).  
-Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--> F3x110, x = 1, 2,
+Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--&gt; F3x110, x = 1, 2,
 3).  
 Bit 7: Reserved (overcurrent)/EnDat encoder withdrawn when not in the parked state
-(--> F3x110, x = 1, 2, 3).  
-Bit 8: Reserved (battery)/overcurrent EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 9: Reserved/overvoltage EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 11: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 12: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 13: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 14: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 15: Internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 16: Lighting (--> F3x135, x = 1, 2, 3).  
-Bit 17: Signal amplitude (--> F3x135, x = 1, 2, 3).  
-Bit 18: Singleturn position 1 (--> F3x135, x = 1, 2, 3).  
-Bit 19: Overvoltage (--> F3x135, x = 1, 2, 3).  
-Bit 20: Undervoltage (--> F3x135, x = 1, 2, 3).  
-Bit 21: Overcurrent (--> F3x135, x = 1, 2, 3).  
-Bit 22: Temperature exceeded (--> F3x405, x = 1, 2, 3).  
+(--&gt; F3x110, x = 1, 2, 3).  
+Bit 8: Reserved (battery)/overcurrent EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 9: Reserved/overvoltage EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 11: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 12: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 13: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 14: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 15: Internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 16: Lighting (--&gt; F3x135, x = 1, 2, 3).  
+Bit 17: Signal amplitude (--&gt; F3x135, x = 1, 2, 3).  
+Bit 18: Singleturn position 1 (--&gt; F3x135, x = 1, 2, 3).  
+Bit 19: Overvoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 20: Undervoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 21: Overcurrent (--&gt; F3x135, x = 1, 2, 3).  
+Bit 22: Temperature exceeded (--&gt; F3x405, x = 1, 2, 3).  
 Bit 23: Singleturn position 2 (safety status display).  
-Bit 24: Singleturn system (--> F3x135, x = 1, 2, 3).  
-Bit 25: Singleturn power down (--> F3x135, x = 1, 2, 3)  
-Bit 26: Multiturn position 1 (--> F3x136, x = 1, 2, 3).  
-Bit 27: Multiturn position 2 (--> F3x136, x = 1, 2, 3).  
-Bit 28: Multiturn system (--> F3x136, x = 1, 2, 3).  
-Bit 29: Multiturn power down (--> F3x136, x = 1, 2, 3).  
-Bit 30: Multiturn overflow/underflow (--> F3x136, x = 1, 2, 3).  
+Bit 24: Singleturn system (--&gt; F3x135, x = 1, 2, 3).  
+Bit 25: Singleturn power down (--&gt; F3x135, x = 1, 2, 3)  
+Bit 26: Multiturn position 1 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 27: Multiturn position 2 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 28: Multiturn system (--&gt; F3x136, x = 1, 2, 3).  
+Bit 29: Multiturn power down (--&gt; F3x136, x = 1, 2, 3).  
+Bit 30: Multiturn overflow/underflow (--&gt; F3x136, x = 1, 2, 3).  
 Bit 31: Multiturn battery (reserved).
 
 **Remedy:**
@@ -59212,32 +59212,32 @@ Bit 2: Reserved (lighting).
 Bit 3: Reserved (signal amplitude).  
 Bit 4: Reserved (position value).  
 Bit 5: Reserved (overvoltage).  
-Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--> F3x110, x = 1, 2,
+Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--&gt; F3x110, x = 1, 2,
 3).  
 Bit 7: Reserved (overcurrent)/EnDat encoder withdrawn when not in the parked state
-(--> F3x110, x = 1, 2, 3).  
-Bit 8: Reserved (battery)/overcurrent EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 9: Reserved/overvoltage EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 11: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 12: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 13: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 14: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 15: Internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 16: Lighting (--> F3x135, x = 1, 2, 3).  
-Bit 17: Signal amplitude (--> F3x135, x = 1, 2, 3).  
-Bit 18: Singleturn position 1 (--> F3x135, x = 1, 2, 3).  
-Bit 19: Overvoltage (--> F3x135, x = 1, 2, 3).  
-Bit 20: Undervoltage (--> F3x135, x = 1, 2, 3).  
-Bit 21: Overcurrent (--> F3x135, x = 1, 2, 3).  
-Bit 22: Temperature exceeded (--> F3x405, x = 1, 2, 3).  
+(--&gt; F3x110, x = 1, 2, 3).  
+Bit 8: Reserved (battery)/overcurrent EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 9: Reserved/overvoltage EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 11: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 12: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 13: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 14: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 15: Internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 16: Lighting (--&gt; F3x135, x = 1, 2, 3).  
+Bit 17: Signal amplitude (--&gt; F3x135, x = 1, 2, 3).  
+Bit 18: Singleturn position 1 (--&gt; F3x135, x = 1, 2, 3).  
+Bit 19: Overvoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 20: Undervoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 21: Overcurrent (--&gt; F3x135, x = 1, 2, 3).  
+Bit 22: Temperature exceeded (--&gt; F3x405, x = 1, 2, 3).  
 Bit 23: Singleturn position 2 (safety status display).  
-Bit 24: Singleturn system (--> F3x135, x = 1, 2, 3).  
-Bit 25: Singleturn power down (--> F3x135, x = 1, 2, 3)  
-Bit 26: Multiturn position 1 (--> F3x136, x = 1, 2, 3).  
-Bit 27: Multiturn position 2 (--> F3x136, x = 1, 2, 3).  
-Bit 28: Multiturn system (--> F3x136, x = 1, 2, 3).  
-Bit 29: Multiturn power down (--> F3x136, x = 1, 2, 3).  
-Bit 30: Multiturn overflow/underflow (--> F3x136, x = 1, 2, 3).  
+Bit 24: Singleturn system (--&gt; F3x135, x = 1, 2, 3).  
+Bit 25: Singleturn power down (--&gt; F3x135, x = 1, 2, 3)  
+Bit 26: Multiturn position 1 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 27: Multiturn position 2 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 28: Multiturn system (--&gt; F3x136, x = 1, 2, 3).  
+Bit 29: Multiturn power down (--&gt; F3x136, x = 1, 2, 3).  
+Bit 30: Multiturn overflow/underflow (--&gt; F3x136, x = 1, 2, 3).  
 Bit 31: Multiturn battery (reserved).
 
 **Remedy:**
@@ -60255,7 +60255,7 @@ Bit 4: Encoder acknowledgment error: The encoder incorrectly understood the task
 or cannot execute it.  
 Bit 5: Internal error in the serial driver: An illegal mode command was requested.  
 Bit 6: Timeout when cyclically reading.  
-Bit 8: Protocol is too long (e.g. > 64 bits).  
+Bit 8: Protocol is too long (e.g. &gt; 64 bits).  
 Bit 9: Receive buffer overflow.  
 Bit 10: Frame error when reading twice.  
 Bit 11: Parity error.  
@@ -60460,8 +60460,8 @@ yyyy = Signal level, track D (16 bits with sign).
 xxxx = Signal level, track C (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response thresholds are < 230 mV (observe the frequency response of the encoder)
-and > 750 mV.  
+The response thresholds are &lt; 230 mV (observe the frequency response of the encoder)
+and &gt; 750 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note:  
@@ -60533,13 +60533,13 @@ yyyy = Angle
 xxxx = amplitude, i.e. root of A^2 + B^2 (16 bits without sign)  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is < 230 mV (observe the frequency response of the encoder).  
+The response threshold is &lt; 230 mV (observe the frequency response of the encoder).  
 A signal level of 500 mV peak value corresponds to the numerical value 299A hex =
 10650 dec.  
 The angle 0 ... FFFF hex corresponds to 0 ... 360 degrees of the fine position. Zero
 degrees is present at the negative zero crossover of track B.  
 Note for Sensor Modules for resolvers (e.g. SMC10):  
-The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is < 1414
+The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is &lt; 1414
 mV (1.0 Vrms).  
 A signal level of 2900 mV peak value corresponds to the numerical value 3333 hex =
 13107 dec.  
@@ -60673,7 +60673,7 @@ NONE
   
 The amplitude/phase/offset correction for track A or B is at the limit.  
 Amplitude error correction: Amplitude B / Amplitude A = 0.78 ... 1.27  
-Phase: <84 degrees or >96 degrees  
+Phase: &lt;84 degrees or &gt;96 degrees  
 SMC20: Offset correction: +/-140 mV  
 SMC10: Offset correction: +/-650 mV  
 Alarm value (r2124, interpret hexadecimal):  
@@ -61146,7 +61146,7 @@ Bit 0 = 1: Either CP or CN outside the tolerance.
 Bit 16 = 1: Either DP or DN outside the tolerance.  
 The unipolar nominal signal level of the encoder must lie in the range 2500 mV +/-
 500 mV.  
-The response thresholds are < 1700 mV and > 3300 mV.  
+The response thresholds are &lt; 1700 mV and &gt; 3300 mV.  
 Note:  
 The signal level is not evaluated unless the following conditions are satisfied:  
 - Sensor Module properties available (r0459.31 = 1).  
@@ -61980,7 +61980,7 @@ xxxx: Difference between the checksum at POWER ON and the actual checksum.
 **Remedy:**
   
 - carry out a POWER ON (switch-off/switch-on).  
-- upgrade firmware to later version (>= V2.6 HF3, >= V4.3 SP2, >= V4.4).  
+- upgrade firmware to later version (&gt;= V2.6 HF3, &gt;= V4.3 SP2, &gt;= V4.4).  
 - check whether the permissible ambient temperature for the component is maintained.  
 - replace the Sensor Module.
 
@@ -62105,15 +62105,15 @@ Bit 6: Mid-voltage matching for track safety B unsuccessful.
 Bit 7: Mid-voltage matching for track C unsuccessful.  
 Bit 8: Mid-voltage matching for track D unsuccessful.  
 Bit 9: Mid-voltage matching for track R unsuccessful.  
-Bit 10: The difference in mid-voltages between A and B is too great (> 0.5 V)  
-Bit 11: The difference in mid-voltages between C and D is too great (> 0.5 V)  
+Bit 10: The difference in mid-voltages between A and B is too great (&gt; 0.5 V)  
+Bit 11: The difference in mid-voltages between C and D is too great (&gt; 0.5 V)  
 Bit 12: The difference in mid-voltages between safety A and safety B is too great
-(> 0.5 V)  
-Bit 13: The difference in mid-voltages between A and safety B is too great (> 0.5
+(&gt; 0.5 V)  
+Bit 13: The difference in mid-voltages between A and safety B is too great (&gt; 0.5
 V)  
-Bit 14: The difference in mid-voltages between B and safety A is too great (> 0.5
+Bit 14: The difference in mid-voltages between B and safety A is too great (&gt; 0.5
 V)  
-Bit 15: The standard deviation of the calculated mid-voltages is too great (> 0.3
+Bit 15: The standard deviation of the calculated mid-voltages is too great (&gt; 0.3
 V)  
 Bit 16: Internal fault - fault when reading a register (CAFE)  
 Bit 17: Internal fault - fault when writing a register (CAFE)  
@@ -63694,13 +63694,13 @@ yyyy = 0:
 No additional information available.  
 yyyy = 1:  
 The component does not support HTL level (p0405.1 = 0) combined with track monitoring
-A/B <> -A/B (p0405.2 = 1).  
+A/B &lt;&gt; -A/B (p0405.2 = 1).  
 yyyy = 2:  
 A code number for an identified encoder has been entered into p0400, however, no identification
 was carried out. Please start a new encoder identification.  
 yyyy = 3:  
 A code number for an identified encoder has been entered into p0400, however, no identification
-was carried out. Please select a listed encoder in p0400 with a code number < 10000.  
+was carried out. Please select a listed encoder in p0400 with a code number &lt; 10000.  
 yyyy = 4:  
 This component does not support SSI encoders (p0404.9 = 1) without track A/B.  
 yyyy = 5:  
@@ -63726,7 +63726,7 @@ The hardware does not support track monitoring.
 - re parameter number = 314:  
 - check the pole pair number and measuring gear ratio. The quotient of the "pole pair
 number" divided by the "measuring gear ratio" must be less than or equal to 1000 ((r0313
-* p0433) / p0432 <= 1000).
+* p0433) / p0432 &lt;= 1000).
 
 Reaction upon N:  
  NONE
@@ -63978,10 +63978,10 @@ The motor detected a fault when evaluating the temperature sensor.
 Fault cause:  
 1 (= 01 hex):  
 Wire breakage or sensor not connected.  
-KTY: R > 1630 Ohm, PT1000: R > 1720 Ohm  
+KTY: R &gt; 1630 Ohm, PT1000: R &gt; 1720 Ohm  
 2 (= 02 hex):  
 Measured resistance too low.  
-PTC: R < 20 Ohm, KTY: R < 50 Ohm, PT1000: R < 603 Ohm  
+PTC: R &lt; 20 Ohm, KTY: R &lt; 50 Ohm, PT1000: R &lt; 603 Ohm  
 Additional values:  
 Only for internal Siemens troubleshooting.  
 Note regarding the message value:  
@@ -64427,9 +64427,9 @@ The fault can be initiated when the unipolar voltage level is exceeded (RP/RN) o
 if the differential amplitude is undershot.  
 Fault value (r0949, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = 0, xxxx = Signal level, track R (16 bits with sign)  
-The response thresholds of the unipolar signal levels of the encoder are between <
-1400 mV and > 3500 mV.  
-The response threshold for the differential signal level of the encoder is < -1600
+The response thresholds of the unipolar signal levels of the encoder are between &lt;
+1400 mV and &gt; 3500 mV.  
+The response threshold for the differential signal level of the encoder is &lt; -1600
 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
@@ -64518,7 +64518,7 @@ or cannot execute it.
 Bit 5: Internal error in the serial driver: An illegal mode command was requested.  
 Bit 6: Timeout when cyclically reading.  
 Bit 7: Timeout for the register communication.  
-Bit 8: Protocol is too long (e.g. > 64 bits).  
+Bit 8: Protocol is too long (e.g. &gt; 64 bits).  
 Bit 9: Receive buffer overflow.  
 Bit 10: Frame error when reading twice.  
 Bit 11: Parity error.  
@@ -64778,12 +64778,12 @@ yyyy = Signal level, track B (16 bits with sign).
 xxxx = Signal level, track A (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is < 170 mV (input frequency <= 256 kHz) or < 120 mV (input
-frequency > 256 kHz).  
+The response threshold is &lt; 170 mV (input frequency &lt;= 256 kHz) or &lt; 120 mV (input
+frequency &gt; 256 kHz).  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note for Sensor Modules for resolvers (e.g. SMC10):  
-The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is < 1070
+The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is &lt; 1070
 mV.  
 A signal level of 2900 mV peak value corresponds to the numerical value 6666 hex =
 26214 dec.  
@@ -64860,7 +64860,7 @@ yyyy = Signal level, track B (16 bits with sign).
 xxxx = Signal level, track A (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is < 130 mV.  
+The response threshold is &lt; 130 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note:  
@@ -64948,8 +64948,8 @@ applies:
 at X520).  
 For a square-wave encoder without track R, the following jumpers must be set for the
 connection at X520 (SMC30), X220 (CUA32) or X23 (CU310-2):  
-- pin 10 (reference signal R) <--> pin 7 (encoder power supply, ground)  
-- pin 11 (reference signal R inverted) <--> pin 4 (encoder power supply)
+- pin 10 (reference signal R) &lt;--&gt; pin 7 (encoder power supply, ground)  
+- pin 11 (reference signal R inverted) &lt;--&gt; pin 4 (encoder power supply)
 
 Reaction upon N:  
  NONE
@@ -65259,7 +65259,7 @@ Bit 0 = 1: Either AP or AN outside the tolerance.
 Bit 16 = 1: Either BP or BN outside the tolerance.  
 The unipolar nominal signal level of the encoder must lie in the range 2500 mV +/-
 500 mV.  
-The response thresholds are < 1700 mV and > 3300 mV.  
+The response thresholds are &lt; 1700 mV and &gt; 3300 mV.  
 Note:  
 The signal level is not evaluated unless the following conditions are satisfied:  
 - Sensor Module properties available (r0459.31 = 1).  
@@ -65331,12 +65331,12 @@ yyyy = Signal level, track B (16 bits with sign).
 xxxx = Signal level, track A (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is > 750 mV.  
+The response threshold is &gt; 750 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note for Sensor Modules for resolvers (e.g. SMC10):  
 The nominal signal level is at 2900 mV (2.0 Vrms).  
-The response threshold is > 3582 mV.  
+The response threshold is &gt; 3582 mV.  
 A signal level of 2900 mV peak value corresponds to the numerical value 6666 hex =
 26214 dec.  
 Note:  
@@ -65405,7 +65405,7 @@ yyyy = Angle
 xxxx = amplitude, i.e. root of A^2 + B^2 (16 bits without sign)  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold for (|A| + |B|) is > 1120 mV or the root of (A^2 + B^2) > 955
+The response threshold for (|A| + |B|) is &gt; 1120 mV or the root of (A^2 + B^2) &gt; 955
 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value of 299A hex
 = 10650 dec.  
@@ -65622,7 +65622,7 @@ When cyclically reading the absolute position, an excessively high difference to
 incremental position was detected. The absolute position that was read is rejected.  
 Limit value for the deviation:  
 - EnDat encoder: Is supplied from the encoder and is a minimum of 2 quadrants (e.g.
-EQI 1325 > 2 quadrants, EQN 1325 > 50 quadrants).  
+EQI 1325 &gt; 2 quadrants, EQN 1325 &gt; 50 quadrants).  
 - other encoders: 15 pulses = 60 quadrants.  
 Incremental encoder:  
 When the zero pulse is passed, a deviation in the incremental position was detected.  
@@ -65707,32 +65707,32 @@ Bit 2: Reserved (lighting).
 Bit 3: Reserved (signal amplitude).  
 Bit 4: Reserved (position value).  
 Bit 5: Reserved (overvoltage).  
-Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--> F3x110, x = 1, 2,
+Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--&gt; F3x110, x = 1, 2,
 3).  
 Bit 7: Reserved (overcurrent)/EnDat encoder withdrawn when not in the parked state
-(--> F3x110, x = 1, 2, 3).  
-Bit 8: Reserved (battery)/overcurrent EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 9: Reserved/overvoltage EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 11: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 12: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 13: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 14: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 15: Internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 16: Lighting (--> F3x135, x = 1, 2, 3).  
-Bit 17: Signal amplitude (--> F3x135, x = 1, 2, 3).  
-Bit 18: Singleturn position 1 (--> F3x135, x = 1, 2, 3).  
-Bit 19: Overvoltage (--> F3x135, x = 1, 2, 3).  
-Bit 20: Undervoltage (--> F3x135, x = 1, 2, 3).  
-Bit 21: Overcurrent (--> F3x135, x = 1, 2, 3).  
-Bit 22: Temperature exceeded (--> F3x405, x = 1, 2, 3).  
+(--&gt; F3x110, x = 1, 2, 3).  
+Bit 8: Reserved (battery)/overcurrent EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 9: Reserved/overvoltage EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 11: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 12: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 13: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 14: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 15: Internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 16: Lighting (--&gt; F3x135, x = 1, 2, 3).  
+Bit 17: Signal amplitude (--&gt; F3x135, x = 1, 2, 3).  
+Bit 18: Singleturn position 1 (--&gt; F3x135, x = 1, 2, 3).  
+Bit 19: Overvoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 20: Undervoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 21: Overcurrent (--&gt; F3x135, x = 1, 2, 3).  
+Bit 22: Temperature exceeded (--&gt; F3x405, x = 1, 2, 3).  
 Bit 23: Singleturn position 2 (safety status display).  
-Bit 24: Singleturn system (--> F3x135, x = 1, 2, 3).  
-Bit 25: Singleturn power down (--> F3x135, x = 1, 2, 3)  
-Bit 26: Multiturn position 1 (--> F3x136, x = 1, 2, 3).  
-Bit 27: Multiturn position 2 (--> F3x136, x = 1, 2, 3).  
-Bit 28: Multiturn system (--> F3x136, x = 1, 2, 3).  
-Bit 29: Multiturn power down (--> F3x136, x = 1, 2, 3).  
-Bit 30: Multiturn overflow/underflow (--> F3x136, x = 1, 2, 3).  
+Bit 24: Singleturn system (--&gt; F3x135, x = 1, 2, 3).  
+Bit 25: Singleturn power down (--&gt; F3x135, x = 1, 2, 3)  
+Bit 26: Multiturn position 1 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 27: Multiturn position 2 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 28: Multiturn system (--&gt; F3x136, x = 1, 2, 3).  
+Bit 29: Multiturn power down (--&gt; F3x136, x = 1, 2, 3).  
+Bit 30: Multiturn overflow/underflow (--&gt; F3x136, x = 1, 2, 3).  
 Bit 31: Multiturn battery (reserved).
 
 **Remedy:**
@@ -65795,32 +65795,32 @@ Bit 2: Reserved (lighting).
 Bit 3: Reserved (signal amplitude).  
 Bit 4: Reserved (position value).  
 Bit 5: Reserved (overvoltage).  
-Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--> F3x110, x = 1, 2,
+Bit 6: Reserved (undervoltage)/hardware fault EnDat supply (--&gt; F3x110, x = 1, 2,
 3).  
 Bit 7: Reserved (overcurrent)/EnDat encoder withdrawn when not in the parked state
-(--> F3x110, x = 1, 2, 3).  
-Bit 8: Reserved (battery)/overcurrent EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 9: Reserved/overvoltage EnDat supply (--> F3x110, x = 1, 2, 3).  
-Bit 11: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 12: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 13: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 14: Reserved/internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 15: Internal communication error (--> F3x110, x = 1, 2, 3).  
-Bit 16: Lighting (--> F3x135, x = 1, 2, 3).  
-Bit 17: Signal amplitude (--> F3x135, x = 1, 2, 3).  
-Bit 18: Singleturn position 1 (--> F3x135, x = 1, 2, 3).  
-Bit 19: Overvoltage (--> F3x135, x = 1, 2, 3).  
-Bit 20: Undervoltage (--> F3x135, x = 1, 2, 3).  
-Bit 21: Overcurrent (--> F3x135, x = 1, 2, 3).  
-Bit 22: Temperature exceeded (--> F3x405, x = 1, 2, 3).  
+(--&gt; F3x110, x = 1, 2, 3).  
+Bit 8: Reserved (battery)/overcurrent EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 9: Reserved/overvoltage EnDat supply (--&gt; F3x110, x = 1, 2, 3).  
+Bit 11: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 12: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 13: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 14: Reserved/internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 15: Internal communication error (--&gt; F3x110, x = 1, 2, 3).  
+Bit 16: Lighting (--&gt; F3x135, x = 1, 2, 3).  
+Bit 17: Signal amplitude (--&gt; F3x135, x = 1, 2, 3).  
+Bit 18: Singleturn position 1 (--&gt; F3x135, x = 1, 2, 3).  
+Bit 19: Overvoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 20: Undervoltage (--&gt; F3x135, x = 1, 2, 3).  
+Bit 21: Overcurrent (--&gt; F3x135, x = 1, 2, 3).  
+Bit 22: Temperature exceeded (--&gt; F3x405, x = 1, 2, 3).  
 Bit 23: Singleturn position 2 (safety status display).  
-Bit 24: Singleturn system (--> F3x135, x = 1, 2, 3).  
-Bit 25: Singleturn power down (--> F3x135, x = 1, 2, 3)  
-Bit 26: Multiturn position 1 (--> F3x136, x = 1, 2, 3).  
-Bit 27: Multiturn position 2 (--> F3x136, x = 1, 2, 3).  
-Bit 28: Multiturn system (--> F3x136, x = 1, 2, 3).  
-Bit 29: Multiturn power down (--> F3x136, x = 1, 2, 3).  
-Bit 30: Multiturn overflow/underflow (--> F3x136, x = 1, 2, 3).  
+Bit 24: Singleturn system (--&gt; F3x135, x = 1, 2, 3).  
+Bit 25: Singleturn power down (--&gt; F3x135, x = 1, 2, 3)  
+Bit 26: Multiturn position 1 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 27: Multiturn position 2 (--&gt; F3x136, x = 1, 2, 3).  
+Bit 28: Multiturn system (--&gt; F3x136, x = 1, 2, 3).  
+Bit 29: Multiturn power down (--&gt; F3x136, x = 1, 2, 3).  
+Bit 30: Multiturn overflow/underflow (--&gt; F3x136, x = 1, 2, 3).  
 Bit 31: Multiturn battery (reserved).
 
 **Remedy:**
@@ -66838,7 +66838,7 @@ Bit 4: Encoder acknowledgment error: The encoder incorrectly understood the task
 or cannot execute it.  
 Bit 5: Internal error in the serial driver: An illegal mode command was requested.  
 Bit 6: Timeout when cyclically reading.  
-Bit 8: Protocol is too long (e.g. > 64 bits).  
+Bit 8: Protocol is too long (e.g. &gt; 64 bits).  
 Bit 9: Receive buffer overflow.  
 Bit 10: Frame error when reading twice.  
 Bit 11: Parity error.  
@@ -67043,8 +67043,8 @@ yyyy = Signal level, track D (16 bits with sign).
 xxxx = Signal level, track C (16 bits with sign).  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response thresholds are < 230 mV (observe the frequency response of the encoder)
-and > 750 mV.  
+The response thresholds are &lt; 230 mV (observe the frequency response of the encoder)
+and &gt; 750 mV.  
 A signal level of 500 mV peak value corresponds to the numerical value 5333 hex =
 21299 dec.  
 Note:  
@@ -67116,13 +67116,13 @@ yyyy = Angle
 xxxx = amplitude, i.e. root of A^2 + B^2 (16 bits without sign)  
 The nominal signal level of the encoder must lie in the range 375 mV to 600 mV (500
 mV -25/+20 %).  
-The response threshold is < 230 mV (observe the frequency response of the encoder).  
+The response threshold is &lt; 230 mV (observe the frequency response of the encoder).  
 A signal level of 500 mV peak value corresponds to the numerical value 299A hex =
 10650 dec.  
 The angle 0 ... FFFF hex corresponds to 0 ... 360 degrees of the fine position. Zero
 degrees is present at the negative zero crossover of track B.  
 Note for Sensor Modules for resolvers (e.g. SMC10):  
-The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is < 1414
+The nominal signal level is at 2900 mV (2.0 Vrms). The response threshold is &lt; 1414
 mV (1.0 Vrms).  
 A signal level of 2900 mV peak value corresponds to the numerical value 3333 hex =
 13107 dec.  
@@ -67256,7 +67256,7 @@ NONE
   
 The amplitude/phase/offset correction for track A or B is at the limit.  
 Amplitude error correction: Amplitude B / Amplitude A = 0.78 ... 1.27  
-Phase: <84 degrees or >96 degrees  
+Phase: &lt;84 degrees or &gt;96 degrees  
 SMC20: Offset correction: +/-140 mV  
 SMC10: Offset correction: +/-650 mV  
 Alarm value (r2124, interpret hexadecimal):  
@@ -67729,7 +67729,7 @@ Bit 0 = 1: Either CP or CN outside the tolerance.
 Bit 16 = 1: Either DP or DN outside the tolerance.  
 The unipolar nominal signal level of the encoder must lie in the range 2500 mV +/-
 500 mV.  
-The response thresholds are < 1700 mV and > 3300 mV.  
+The response thresholds are &lt; 1700 mV and &gt; 3300 mV.  
 Note:  
 The signal level is not evaluated unless the following conditions are satisfied:  
 - Sensor Module properties available (r0459.31 = 1).  
@@ -68563,7 +68563,7 @@ xxxx: Difference between the checksum at POWER ON and the actual checksum.
 **Remedy:**
   
 - carry out a POWER ON (switch-off/switch-on).  
-- upgrade firmware to later version (>= V2.6 HF3, >= V4.3 SP2, >= V4.4).  
+- upgrade firmware to later version (&gt;= V2.6 HF3, &gt;= V4.3 SP2, &gt;= V4.4).  
 - check whether the permissible ambient temperature for the component is maintained.  
 - replace the Sensor Module.
 
@@ -68688,15 +68688,15 @@ Bit 6: Mid-voltage matching for track safety B unsuccessful.
 Bit 7: Mid-voltage matching for track C unsuccessful.  
 Bit 8: Mid-voltage matching for track D unsuccessful.  
 Bit 9: Mid-voltage matching for track R unsuccessful.  
-Bit 10: The difference in mid-voltages between A and B is too great (> 0.5 V)  
-Bit 11: The difference in mid-voltages between C and D is too great (> 0.5 V)  
+Bit 10: The difference in mid-voltages between A and B is too great (&gt; 0.5 V)  
+Bit 11: The difference in mid-voltages between C and D is too great (&gt; 0.5 V)  
 Bit 12: The difference in mid-voltages between safety A and safety B is too great
-(> 0.5 V)  
-Bit 13: The difference in mid-voltages between A and safety B is too great (> 0.5
+(&gt; 0.5 V)  
+Bit 13: The difference in mid-voltages between A and safety B is too great (&gt; 0.5
 V)  
-Bit 14: The difference in mid-voltages between B and safety A is too great (> 0.5
+Bit 14: The difference in mid-voltages between B and safety A is too great (&gt; 0.5
 V)  
-Bit 15: The standard deviation of the calculated mid-voltages is too great (> 0.3
+Bit 15: The standard deviation of the calculated mid-voltages is too great (&gt; 0.3
 V)  
 Bit 16: Internal fault - fault when reading a register (CAFE)  
 Bit 17: Internal fault - fault when writing a register (CAFE)  
@@ -70277,13 +70277,13 @@ yyyy = 0:
 No additional information available.  
 yyyy = 1:  
 The component does not support HTL level (p0405.1 = 0) combined with track monitoring
-A/B <> -A/B (p0405.2 = 1).  
+A/B &lt;&gt; -A/B (p0405.2 = 1).  
 yyyy = 2:  
 A code number for an identified encoder has been entered into p0400, however, no identification
 was carried out. Please start a new encoder identification.  
 yyyy = 3:  
 A code number for an identified encoder has been entered into p0400, however, no identification
-was carried out. Please select a listed encoder in p0400 with a code number < 10000.  
+was carried out. Please select a listed encoder in p0400 with a code number &lt; 10000.  
 yyyy = 4:  
 This component does not support SSI encoders (p0404.9 = 1) without track A/B.  
 yyyy = 5:  
@@ -70309,7 +70309,7 @@ The hardware does not support track monitoring.
 - re parameter number = 314:  
 - check the pole pair number and measuring gear ratio. The quotient of the "pole pair
 number" divided by the "measuring gear ratio" must be less than or equal to 1000 ((r0313
-* p0433) / p0432 <= 1000).
+* p0433) / p0432 &lt;= 1000).
 
 Reaction upon N:  
  NONE
@@ -70561,10 +70561,10 @@ The motor detected a fault when evaluating the temperature sensor.
 Fault cause:  
 1 (= 01 hex):  
 Wire breakage or sensor not connected.  
-KTY: R > 1630 Ohm, PT1000: R > 1720 Ohm  
+KTY: R &gt; 1630 Ohm, PT1000: R &gt; 1720 Ohm  
 2 (= 02 hex):  
 Measured resistance too low.  
-PTC: R < 20 Ohm, KTY: R < 50 Ohm, PT1000: R < 603 Ohm  
+PTC: R &lt; 20 Ohm, KTY: R &lt; 50 Ohm, PT1000: R &lt; 603 Ohm  
 Additional values:  
 Only for internal Siemens troubleshooting.  
 Note regarding the message value:  
@@ -70866,7 +70866,7 @@ IMMEDIATELY (POWER ON)
 The temperature (r3666) measured using the Voltage Sensing Module (VSM) has exceeded
 the threshold value (p3668).  
 Note:  
-This fault can only be output if the temperature evaluation was activated (p3665 >
+This fault can only be output if the temperature evaluation was activated (p3665 &gt;
 0).  
 Fault value (r0949, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].  
@@ -72591,9 +72591,9 @@ When evaluating the temperature sensor, a resistance value outside the permissib
 range was detected.  
 Fault value (r0949, interpret decimal):  
 1: overtemperature, wire breakage or sensor not connected.  
-KTY: R > 1630 Ohm, PT1000: R > 1720 Ohm  
+KTY: R &gt; 1630 Ohm, PT1000: R &gt; 1720 Ohm  
 2: Measured resistance too low.  
-PTC: R < 20 Ohm, KTY: R < 50 Ohm, PT1000: R < 723 Ohm
+PTC: R &lt; 20 Ohm, KTY: R &lt; 50 Ohm, PT1000: R &lt; 723 Ohm
 
 **Remedy:**
   
@@ -73362,8 +73362,8 @@ If an error with fault causes bb = 02 hex or 04 hex occurs in a test stop step, 
 test action for the fault took place in the previous test stop step. The expected
 states are tested in the next step.  
 Master signals fault value 0001_04AF and slave signals fault value 0001_04A4.  
-aaaa = 1 --> F-DO 0 is involved.  
-bb = 04 hex --> the test of the Diag-DO was unsuccessful.  
+aaaa = 1 --&gt; F-DO 0 is involved.  
+bb = 04 hex --&gt; the test of the Diag-DO was unsuccessful.  
 cc = The expected states were tested in test stop step AF on the master and A4 on
 the slave.  
 The expected state Diag-DO = 0 V was checked in the table, i.e. Diag-DO was at 0 V
@@ -73531,7 +73531,7 @@ When replacing a Motor Module/Hydraulic Module, carry out the following steps:
 - carry out a POWER ON (switch-off/switch-on) for all components.  
 For SINUMERIK, the following applies:  
 HMI supports the replacement of components with Safety functions (operating area "Diagnostics"
---> Softkey "Alarm list" --> Softkey "Confirm SI HW" etc.).  
+--&gt; Softkey "Alarm list" --&gt; Softkey "Confirm SI HW" etc.).  
 The precise procedure is given in the following document:  
 SINUMERIK Function Manual Safety Integrated
 
@@ -73810,7 +73810,7 @@ Carry out the following steps on the TM54F:
 - exit the safety commissioning mode (p0010 = 0).  
 - save all parameters (p0977 = 1).  
 - carry out safe acknowledgment (p10006).  
-For an internal software error (aaaa > 0):  
+For an internal software error (aaaa &gt; 0):  
 - For TM54F, upgrade the firmware to a later version.  
 - contact Technical Support.  
 - replace the TM54F.
@@ -74272,7 +74272,7 @@ time (if necessary, round down).
 (if necessary, round up).  
 - the discrepancy time must be at least r10003 (it must always be rounded-down or
 rounded-up to an integer multiple of the SI sampling time r10003). If a debounce time
-has been parameterized (p10017 > 0), then the shortest possible discrepancy time is
+has been parameterized (p10017 &gt; 0), then the shortest possible discrepancy time is
 directly specified using the debounce time.  
 - the period of a cyclic switching pulse must be less than half of the discrepancy
 time p10017 (if necessary, round down).  
@@ -74283,8 +74283,8 @@ The debounce time must always be set less than the discrepancy time.
 Example:  
 If the SI sampling cycle is 12 ms and the switching frequency is 110 ms (p10017 =
 0), the maximum discrepancy time which can be set is as follows:  
-p10002 <= 110/2 ms - 12 ms = 43 ms --> rounded-off, the following is obtained p10002
-<= 36 ms  
+p10002 &lt;= 110/2 ms - 12 ms = 43 ms --&gt; rounded-off, the following is obtained p10002
+&lt;= 36 ms  
 Since the discrepancy time can only be accepted as a whole SI sampling time, the value
 will need to be rounded up or down to a whole SI sampling time value if it is not
 an exact integer multiple of an SI sampling time.  
@@ -74393,7 +74393,7 @@ ddcbaa dec: dd = component number, c = AI/AO, b = fault type, aa = number
 c = 0: analog input (AI)  
 c = 1: analog output (AO)  
 b = 0: No calibration data available.  
-b = 1: Offset too high (> 100 mV).
+b = 1: Offset too high (&gt; 100 mV).
 
 **Remedy:**
   
@@ -74460,8 +74460,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[0] = 1, 4), the
 following applies:  
-- if r4101[0] > 1650 ohms, the temperature r4105[0] = 250 °C  
-- if r4101[0] <= 1650 ohms, the temperature r4105[0] = -50 °C  
+- if r4101[0] &gt; 1650 ohms, the temperature r4105[0] = 250 °C  
+- if r4101[0] &lt;= 1650 ohms, the temperature r4105[0] = -50 °C  
 The temperature actual value is displayed via connector output r4105[0] and can be
 interconnected.  
 Notice:  
@@ -74537,8 +74537,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[1] = 1, 4), the
 following applies:  
-- if r4101[1] > 1650 ohms, the temperature r4105[1] = 250 °C  
-- if r4101[1] <= 1650 ohms, the temperature r4105[1] = -50 °C  
+- if r4101[1] &gt; 1650 ohms, the temperature r4105[1] = 250 °C  
+- if r4101[1] &lt;= 1650 ohms, the temperature r4105[1] = -50 °C  
 The temperature actual value is displayed via connector output r4105[1] and can be
 interconnected.  
 Notice:  
@@ -74614,8 +74614,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[2] = 1, 4), the
 following applies:  
-- if r4101[2] > 1650 ohms, the temperature r4105[2] = 250 °C  
-- if r4101[2] <= 1650 ohms, the temperature r4105[2] = -50 °C  
+- if r4101[2] &gt; 1650 ohms, the temperature r4105[2] = 250 °C  
+- if r4101[2] &lt;= 1650 ohms, the temperature r4105[2] = -50 °C  
 The temperature actual value is displayed via connector output r4105[2] and can be
 interconnected.  
 Notice:  
@@ -74691,8 +74691,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[3] = 1, 4), the
 following applies:  
-- if r4101[3] > 1650 ohms, the temperature r4105[3] = 250 °C  
-- if r4101[3] <= 1650 ohms, the temperature r4105[3] = -50 °C  
+- if r4101[3] &gt; 1650 ohms, the temperature r4105[3] = 250 °C  
+- if r4101[3] &lt;= 1650 ohms, the temperature r4105[3] = -50 °C  
 The temperature actual value is displayed via connector output r4105[3] and can be
 interconnected.  
 Notice:  
@@ -74762,8 +74762,8 @@ The temperature measured using the temperature sensing of the Terminal Module (T
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[0] = 1, 4), the
 following applies:  
-- if r4101[0] > 1650 ohms, the temperature r4105[0] = 250 °C  
-- if r4101[0] <= 1650 ohms, the temperature r4105[0] = -50 °C  
+- if r4101[0] &gt; 1650 ohms, the temperature r4105[0] = 250 °C  
+- if r4101[0] &lt;= 1650 ohms, the temperature r4105[0] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -74827,8 +74827,8 @@ The temperature measured using the temperature sensing of the Terminal Module (T
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[1] = 1, 4), the
 following applies:  
-- if r4101[1] > 1650 ohms, the temperature r4105[1] = 250 °C  
-- if r4101[1] <= 1650 ohms, the temperature r4105[1] = -50 °C  
+- if r4101[1] &gt; 1650 ohms, the temperature r4105[1] = 250 °C  
+- if r4101[1] &lt;= 1650 ohms, the temperature r4105[1] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -74892,8 +74892,8 @@ The temperature measured using the temperature sensing of the Terminal Module (T
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[2] = 1, 4), the
 following applies:  
-- if r4101[2] > 1650 ohms, the temperature r4105[2] = 250 °C  
-- if r4101[2] <= 1650 ohms, the temperature r4105[2] = -50 °C  
+- if r4101[2] &gt; 1650 ohms, the temperature r4105[2] = 250 °C  
+- if r4101[2] &lt;= 1650 ohms, the temperature r4105[2] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -74961,8 +74961,8 @@ The temperature measured using the temperature sensing of the Terminal Module (T
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[3] = 1, 4), the
 following applies:  
-- if r4101[3] > 1650 ohms, the temperature r4105[3] = 250 °C  
-- if r4101[3] <= 1650 ohms, the temperature r4105[3] = -50 °C  
+- if r4101[3] &gt; 1650 ohms, the temperature r4105[3] = 250 °C  
+- if r4101[3] &lt;= 1650 ohms, the temperature r4105[3] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -75105,7 +75105,7 @@ IMMEDIATELY (POWER ON)
   
 The deviation between the setpoint and the output signals (track A/B) exceeds the
 tolerance of +/-3 %. The deviation between the internal and external measured value
-is too high (> 1000 pulses).
+is too high (&gt; 1000 pulses).
 
 **Remedy:**
   
@@ -75412,7 +75412,7 @@ Possible causes:
 - the leading encoder is not in the "ready" state (parking encoder or encoder data
 set not parameterized).  
 - TM41 has a fault.  
-- the TM41 is in the commissioning mode (p0010 > 0).  
+- the TM41 is in the commissioning mode (p0010 &gt; 0).  
 - the TM41 component is not connected to DRIVE-CLiQ.
 
 **Remedy:**
@@ -75512,7 +75512,7 @@ The sampling time set in p4099[3] for incremental encoder emulation in Terminal 
 the setting of p4099[3]. The system automatically performs a warm restart/sub-boot.  
 Alarm value (r2124, interpret decimal):  
 1:  
-A sampling time p4099[3] < 125 µs was set.  
+A sampling time p4099[3] &lt; 125 µs was set.  
 2:  
 An integer multiple of the DRIVE-CLiQ clock cycle was not entered in p4099[3].  
 3:  
@@ -75792,7 +75792,7 @@ IMMEDIATELY
 A function requested by the Control Unit is not supported by a DRIVE-CLiQ component.  
 Fault value (r0949, interpret decimal):  
 1: Terminal Module 31 does not support the function "Timer for temperature evaluation"
-(X522.7/8, p4103 > 0.000).  
+(X522.7/8, p4103 &gt; 0.000).  
 4: The improved actual value resolution is not supported (p4401.4).  
 5: The improved setpoint resolution is not supported (p4401.5).  
 6: The residual value handling in the setpoint channel cannot be deactivated (p4401.6).  
@@ -75855,8 +75855,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[4] = 1, 4), the
 following applies:  
-- if r4101[4] > 1650 ohms, the temperature r4105[4] = 250 °C  
-- if r4101[4] <= 1650 ohms, the temperature r4105[4] = -50 °C  
+- if r4101[4] &gt; 1650 ohms, the temperature r4105[4] = 250 °C  
+- if r4101[4] &lt;= 1650 ohms, the temperature r4105[4] = -50 °C  
 The temperature actual value is displayed via connector output r4105[4] and can be
 interconnected.  
 Notice:  
@@ -75932,8 +75932,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[5] = 1, 4), the
 following applies:  
-- if r4101[5] > 1650 ohms, the temperature r4105[5] = 250 °C  
-- if r4101[5] <= 1650 ohms, the temperature r4105[5] = -50 °C  
+- if r4101[5] &gt; 1650 ohms, the temperature r4105[5] = 250 °C  
+- if r4101[5] &lt;= 1650 ohms, the temperature r4105[5] = -50 °C  
 The temperature actual value is displayed via connector output r4105[5] and can be
 interconnected.  
 Notice:  
@@ -76009,8 +76009,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[6] = 1, 4), the
 following applies:  
-- if r4101[6] > 1650 ohms, the temperature r4105[6] = 250 °C  
-- if r4101[6] <= 1650 ohms, the temperature r4105[6] = -50 °C  
+- if r4101[6] &gt; 1650 ohms, the temperature r4105[6] = 250 °C  
+- if r4101[6] &lt;= 1650 ohms, the temperature r4105[6] = -50 °C  
 The temperature actual value is displayed via connector output r4105[6] and can be
 interconnected.  
 Notice:  
@@ -76086,8 +76086,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[7] = 1, 4), the
 following applies:  
-- if r4101[7] > 1650 ohms, the temperature r4105[7] = 250 °C  
-- if r4101[7] <= 1650 ohms, the temperature r4105[7] = -50 °C  
+- if r4101[7] &gt; 1650 ohms, the temperature r4105[7] = 250 °C  
+- if r4101[7] &lt;= 1650 ohms, the temperature r4105[7] = -50 °C  
 The temperature actual value is displayed via connector output r4105[7] and can be
 interconnected.  
 Notice:  
@@ -76163,8 +76163,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[8] = 1, 4), the
 following applies:  
-- if r4101[8] > 1650 ohms, the temperature r4105[8] = 250 °C  
-- if r4101[8] <= 1650 ohms, the temperature r4105[8] = -50 °C  
+- if r4101[8] &gt; 1650 ohms, the temperature r4105[8] = 250 °C  
+- if r4101[8] &lt;= 1650 ohms, the temperature r4105[8] = -50 °C  
 The temperature actual value is displayed via connector output r4105[8] and can be
 interconnected.  
 Notice:  
@@ -76240,8 +76240,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[9] = 1, 4), the
 following applies:  
-- if r4101[9] > 1650 ohms, the temperature r4105[9] = 250 °C  
-- if r4101[9] <= 1650 ohms, the temperature r4105[9] = -50 °C  
+- if r4101[9] &gt; 1650 ohms, the temperature r4105[9] = 250 °C  
+- if r4101[9] &lt;= 1650 ohms, the temperature r4105[9] = -50 °C  
 The temperature actual value is displayed via connector output r4105[9] and can be
 interconnected.  
 Notice:  
@@ -76317,8 +76317,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[10] = 1, 4), the
 following applies:  
-- if r4101[10] > 1650 ohms, the temperature r4105[10] = 250 °C  
-- if r4101[10] <= 1650 ohms, the temperature r4105[10] = -50 °C  
+- if r4101[10] &gt; 1650 ohms, the temperature r4105[10] = 250 °C  
+- if r4101[10] &lt;= 1650 ohms, the temperature r4105[10] = -50 °C  
 The temperature actual value is displayed via connector output r4105[10] and can be
 interconnected.  
 Notice:  
@@ -76394,8 +76394,8 @@ or
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[11] = 1, 4), the
 following applies:  
-- if r4101[11] > 1650 ohms, the temperature r4105[11] = 250 °C  
-- if r4101[11] <= 1650 ohms, the temperature r4105[11] = -50 °C  
+- if r4101[11] &gt; 1650 ohms, the temperature r4105[11] = 250 °C  
+- if r4101[11] &lt;= 1650 ohms, the temperature r4105[11] = -50 °C  
 The temperature actual value is displayed via connector output r4105[11] and can be
 interconnected.  
 Notice:  
@@ -76464,8 +76464,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[4] = 1, 4), the
 following applies:  
-- if r4101[4] > 1650 ohms, the temperature r4105[4] = 250 °C  
-- if r4101[4] <= 1650 ohms, the temperature r4105[4] = -50 °C  
+- if r4101[4] &gt; 1650 ohms, the temperature r4105[4] = 250 °C  
+- if r4101[4] &lt;= 1650 ohms, the temperature r4105[4] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -76528,8 +76528,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[5] = 1, 4), the
 following applies:  
-- if r4101[5] > 1650 ohms, the temperature r4105[5] = 250 °C  
-- if r4101[5] <= 1650 ohms, the temperature r4105[5] = -50 °C  
+- if r4101[5] &gt; 1650 ohms, the temperature r4105[5] = 250 °C  
+- if r4101[5] &lt;= 1650 ohms, the temperature r4105[5] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -76592,8 +76592,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[6] = 1, 4), the
 following applies:  
-- if r4101[6] > 1650 ohms, the temperature r4105[6] = 250 °C  
-- if r4101[6] <= 1650 ohms, the temperature r4105[6] = -50 °C  
+- if r4101[6] &gt; 1650 ohms, the temperature r4105[6] = 250 °C  
+- if r4101[6] &lt;= 1650 ohms, the temperature r4105[6] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -76656,8 +76656,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[7] = 1, 4), the
 following applies:  
-- if r4101[7] > 1650 ohms, the temperature r4105[7] = 250 °C  
-- if r4101[7] <= 1650 ohms, the temperature r4105[7] = -50 °C  
+- if r4101[7] &gt; 1650 ohms, the temperature r4105[7] = 250 °C  
+- if r4101[7] &lt;= 1650 ohms, the temperature r4105[7] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -76720,8 +76720,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[8] = 1, 4), the
 following applies:  
-- if r4101[8] > 1650 ohms, the temperature r4105[8] = 250 °C  
-- if r4101[8] <= 1650 ohms, the temperature r4105[8] = -50 °C  
+- if r4101[8] &gt; 1650 ohms, the temperature r4105[8] = 250 °C  
+- if r4101[8] &lt;= 1650 ohms, the temperature r4105[8] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -76784,8 +76784,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[9] = 1, 4), the
 following applies:  
-- if r4101[9] > 1650 ohms, the temperature r4105[9] = 250 °C  
-- if r4101[9] <= 1650 ohms, the temperature r4105[9] = -50 °C  
+- if r4101[9] &gt; 1650 ohms, the temperature r4105[9] = 250 °C  
+- if r4101[9] &lt;= 1650 ohms, the temperature r4105[9] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -76848,8 +76848,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[10] = 1, 4), the
 following applies:  
-- if r4101[10] > 1650 ohms, the temperature r4105[10] = 250 °C  
-- if r4101[10] <= 1650 ohms, the temperature r4105[10] = -50 °C  
+- if r4101[10] &gt; 1650 ohms, the temperature r4105[10] = 250 °C  
+- if r4101[10] &lt;= 1650 ohms, the temperature r4105[10] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -76912,8 +76912,8 @@ Module 150 (TM150) has exceeded the threshold value to initiate this alarm (p410
 Note:  
 For sensor type "PTC thermistor" and "Bimetallic NC contact" (p4100[11] = 1, 4), the
 following applies:  
-- if r4101[11] > 1650 ohms, the temperature r4105[11] = 250 °C  
-- if r4101[11] <= 1650 ohms, the temperature r4105[11] = -50 °C  
+- if r4101[11] &gt; 1650 ohms, the temperature r4105[11] = 250 °C  
+- if r4101[11] &lt;= 1650 ohms, the temperature r4105[11] = -50 °C  
 Alarm value (r2124, interpret decimal):  
 Temperature actual value at the time of initiation [0.1 °C].
 
@@ -78821,11 +78821,11 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 1630 Ohm (TM150: R > 2170 Ohm), PT100: R > 194 Ohm, PT1000: R > 1720 Ohm
-(TM150: R > 1944 Ohm)  
+KTY84: R &gt; 1630 Ohm (TM150: R &gt; 2170 Ohm), PT100: R &gt; 194 Ohm, PT1000: R &gt; 1720 Ohm
+(TM150: R &gt; 1944 Ohm)  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 50 Ohm (TM150: R < 180 Ohm), PT100: R < 60
-Ohm, PT1000: R < 603 Ohm
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 50 Ohm (TM150: R &lt; 180 Ohm), PT100: R &lt; 60
+Ohm, PT1000: R &lt; 603 Ohm
 
 **Remedy:**
   
@@ -78884,11 +78884,11 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 1630 Ohm (TM150: R > 2170 Ohm), PT100: R > 194 Ohm, PT1000: R > 1720 Ohm
-(TM150: R > 1944 Ohm)  
+KTY84: R &gt; 1630 Ohm (TM150: R &gt; 2170 Ohm), PT100: R &gt; 194 Ohm, PT1000: R &gt; 1720 Ohm
+(TM150: R &gt; 1944 Ohm)  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 50 Ohm (TM150: R < 180 Ohm), PT100: R < 60
-Ohm, PT1000: R < 603 Ohm
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 50 Ohm (TM150: R &lt; 180 Ohm), PT100: R &lt; 60
+Ohm, PT1000: R &lt; 603 Ohm
 
 **Remedy:**
   
@@ -78947,11 +78947,11 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 1630 Ohm (TM150: R > 2170 Ohm), PT100: R > 194 Ohm, PT1000: R > 1720 Ohm
-(TM150: R > 1944 Ohm)  
+KTY84: R &gt; 1630 Ohm (TM150: R &gt; 2170 Ohm), PT100: R &gt; 194 Ohm, PT1000: R &gt; 1720 Ohm
+(TM150: R &gt; 1944 Ohm)  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 50 Ohm (TM150: R < 180 Ohm), PT100: R < 60
-Ohm, PT1000: R < 603 Ohm
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 50 Ohm (TM150: R &lt; 180 Ohm), PT100: R &lt; 60
+Ohm, PT1000: R &lt; 603 Ohm
 
 **Remedy:**
   
@@ -79010,11 +79010,11 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 1630 Ohm (TM150: R > 2170 Ohm), PT100: R > 194 Ohm, PT1000: R > 1720 Ohm
-(TM150: R > 1944 Ohm)  
+KTY84: R &gt; 1630 Ohm (TM150: R &gt; 2170 Ohm), PT100: R &gt; 194 Ohm, PT1000: R &gt; 1720 Ohm
+(TM150: R &gt; 1944 Ohm)  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 50 Ohm (TM150: R < 180 Ohm), PT100: R < 60
-Ohm, PT1000: R < 603 Ohm
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 50 Ohm (TM150: R &lt; 180 Ohm), PT100: R &lt; 60
+Ohm, PT1000: R &lt; 603 Ohm
 
 **Remedy:**
   
@@ -79073,9 +79073,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -79135,9 +79135,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -79197,9 +79197,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -79259,9 +79259,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -79321,9 +79321,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -79383,9 +79383,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -79445,9 +79445,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -79507,9 +79507,9 @@ NONE
 When evaluating the temperature sensor, an error occurred.  
 Alarm value (r2124, interpret decimal):  
 1: Wire breakage or sensor not connected.  
-KTY84: R > 2170 Ohm, PT100: R > 194 Ohm, PT1000: R > 1944 Ohm  
+KTY84: R &gt; 2170 Ohm, PT100: R &gt; 194 Ohm, PT1000: R &gt; 1944 Ohm  
 2: Measured resistance too low.  
-PTC thermistor: R < 20 Ohm, KTY84: R < 180 Ohm, PT100: R < 60 Ohm, PT1000: R < 603
+PTC thermistor: R &lt; 20 Ohm, KTY84: R &lt; 180 Ohm, PT100: R &lt; 60 Ohm, PT1000: R &lt; 603
 Ohm
 
 **Remedy:**
@@ -83313,7 +83313,7 @@ See also: p0699 (Excitation configuration)
 
 **Remedy:**
   
-Set a value <> 0 for the parameter that is displayed.  
+Set a value &lt;&gt; 0 for the parameter that is displayed.  
 See also: p0690, p0691, p0692, p0693, p0694, p0696, p0697, p0698
 
 ### A49920 (F) Protective breaker main circuit tripped
@@ -84562,7 +84562,7 @@ NONE
 CBE20 SINAMICS Link:  
 - telegram word (receive) and address of sender inconsistent. Both values have to
 be either equal to zero or not equal to zero.  
-- address of the sender > maximum project address.  
+- address of the sender &gt; maximum project address.  
 Alarm value (r2124, interpret hexadecimal):  
 yyyyxxxx hex: yyyy = info. 1, xxxx = info. 2  
 Info. 1 (decimal) = Drive object number from p8870, p8872  
@@ -86305,13 +86305,13 @@ See also: r20008 (Hardware sampling times available)
   
 - check number of different hardware sampling times (r20008, r7903).  
 - hardware sampling times are those sampling times that are formed as a multiple of
-the basis hardware sampling times r20002 and are always < r20003.  
+the basis hardware sampling times r20002 and are always &lt; r20003.  
 - For internal purposes, the drive unit always requires at least two (or several,
 depending on the parameterization of p0115 of the drive objects) free hardware sampling
 times. Therefore, the current number of hardware sampling times that are still free
 can be read out in r7903. If r7903=0, no additional sampling time that differs from
 r20008[0...12] can be provided from the Control Unit. If, when selecting in this state,
-a runtime group with a sampling time < r20003 (p20000 <= 255) is to be set in p20000,
+a runtime group with a sampling time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000,
 only runtime groups whose sampling time is already provided in r20008[0...12] can
 be selected.
 
@@ -86359,13 +86359,13 @@ See also: r20008 (Hardware sampling times available)
   
 - check number of different hardware sampling times (r20008, r7903).  
 - hardware sampling times are those sampling times that are formed as a multiple of
-the basis hardware sampling times r20002 and are always < r20003.  
+the basis hardware sampling times r20002 and are always &lt; r20003.  
 - For internal purposes, the drive unit always requires at least two (or several,
 depending on the parameterization of p0115 of the drive objects) free hardware sampling
 times. Therefore, the current number of hardware sampling times that are still free
 can be read out in r7903. If r7903=0, no additional sampling time that differs from
 r20008[0...12] can be provided from the Control Unit. If, when selecting in this state,
-a runtime group with a sampling time < r20003 (p20000 <= 255) is to be set in p20000,
+a runtime group with a sampling time &lt; r20003 (p20000 &lt;= 255) is to be set in p20000,
 only runtime groups whose sampling time is already provided in r20008[0...12] can
 be selected.
 
@@ -86955,13 +86955,13 @@ IMMEDIATELY
 **Cause:**
   
 In the STARTER/SCOUT project that was downloaded, the hardware sampling time of a
-free runtime group (1 <= p20000[i] <= 256) was set to a value that was either too
+free runtime group (1 &lt;= p20000[i] &lt;= 256) was set to a value that was either too
 low or too high.  
 The sampling time must be between 1 ms and the value r20003 - r20002.  
-If the sampling time of the selected free runtime group is < 1 ms, the equivalent
+If the sampling time of the selected free runtime group is &lt; 1 ms, the equivalent
 value of 1 ms is used.  
-If the value >= r20003, then the sampling time is set to the next higher or the same
-software sampling time >= r21003.  
+If the value &gt;= r20003, then the sampling time is set to the next higher or the same
+software sampling time &gt;= r21003.  
 Fault value (r0949, interpret decimal):  
 Number of the p20000 index of the runtime group where the sampling time is incorrectly
 set.  
@@ -87016,13 +87016,13 @@ IMMEDIATELY
 **Cause:**
   
 In the STARTER/SCOUT project that was downloaded, the hardware sampling time of a
-free runtime group (1 <= p20000[i] <= 256) was set to a value that was either too
+free runtime group (1 &lt;= p20000[i] &lt;= 256) was set to a value that was either too
 low or too high.  
 The sampling time must be between 1 ms and the value r20003 - r20002.  
-If the sampling time of the selected free runtime group is < 1 ms, the equivalent
+If the sampling time of the selected free runtime group is &lt; 1 ms, the equivalent
 value of 1 ms is used.  
-If the value >= r20003, then the sampling time is set to the next higher or the same
-software sampling time >= r21003.  
+If the value &gt;= r20003, then the sampling time is set to the next higher or the same
+software sampling time &gt;= r21003.  
 Fault value (r0949, interpret decimal):  
 Number of the p20000 index of the runtime group where the sampling time is incorrectly
 set.  
@@ -87187,16 +87187,16 @@ IMMEDIATELY
 **Cause:**
   
 In the STARTER/SCOUT project that was downloaded, the hardware sampling time of a
-free runtime group (1 <= p21000[i] or p21100+5*(n-1) with Startdrive <= 256) was set
+free runtime group (1 &lt;= p21000[i] or p21100+5*(n-1) with Startdrive &lt;= 256) was set
 to a value that was either too low or too high. n= position of the chart in the chart
 sequence (first chart has position 1). The sampling time must lie between 1 ms and
 the value (r21003 - r21002).  
-If the sampling time of the selected free runtime group is < 1 ms, then the equivalent
+If the sampling time of the selected free runtime group is &lt; 1 ms, then the equivalent
 value of 1 ms is used.  
-If the value >= r21003, then the sampling time is set to the next higher or the same
-software sampling time >= r21003. To prevent the fault, the determined software sampling
-time can be set in the runtime group (1001 <= p21000[i] <= 1096 with STARTER or 1001
-<= p21100+5*(n-1) <= 1096 with Startdrive).  
+If the value &gt;= r21003, then the sampling time is set to the next higher or the same
+software sampling time &gt;= r21003. To prevent the fault, the determined software sampling
+time can be set in the runtime group (1001 &lt;= p21000[i] &lt;= 1096 with STARTER or 1001
+&lt;= p21100+5*(n-1) &lt;= 1096 with Startdrive).  
 At least one block is assigned to the free runtime group involved.  
 After correcting the selection in p21000[i] (p21100+5*(n-1) with Startdrive) in the
 project, if this fault still occurs during download, please check which runtime group
@@ -87388,7 +87388,7 @@ For fault value = 1:
 - For modules D425 or D435, use hardware version D or higher.  
 Note:  
 You can read out the hardware version using SCOUT in online mode under Target system
---> Device diagnostics --> tab "General" in the lower window, 3rd column in the line
+--&gt; Device diagnostics --&gt; tab "General" in the lower window, 3rd column in the line
 of the CPU.
 
 ### F51009 DCC: Project data and block library are incompatible

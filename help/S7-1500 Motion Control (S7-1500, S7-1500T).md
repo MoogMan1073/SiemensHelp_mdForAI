@@ -81,10 +81,10 @@ With the Motion Control instruction "MC_Power", a technology object is enabled o
 
 - The technology object has been configured correctly.
 - The readiness of the drive is assumed for enabling the technology object. When using the SIEMENS telegram 10x, you can evaluate the bit "DriveReady" from the signal word "MELDW" of the receiving telegram "PD_TEL10x_IN".
-- Cyclic bus communication is established between controller and encoder ("<TO>.StatusSensor[1..4].CommunicationOK" = TRUE).
-- Cyclic bus communication is established between controller and drive ("<TO>.StatusDrive.CommunicationOK" = TRUE).
-- The status of the active encoder is valid ("<TO>.StatusSensor[1..4].State" = 2).
-- The optional [data adaption](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#transferring-drive-and-encoder-parameters-automatically-s7-1500-s7-1500t) has been completed ("<TO>.StatusDrive.AdaptionState" = 2 and "<TO>.StatusSensor[1..4].AdaptionState" = 2).
+- Cyclic bus communication is established between controller and encoder ("&lt;TO&gt;.StatusSensor[1..4].CommunicationOK" = TRUE).
+- Cyclic bus communication is established between controller and drive ("&lt;TO&gt;.StatusDrive.CommunicationOK" = TRUE).
+- The status of the active encoder is valid ("&lt;TO&gt;.StatusSensor[1..4].State" = 2).
+- The optional [data adaption](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#transferring-drive-and-encoder-parameters-automatically-s7-1500-s7-1500t) has been completed ("&lt;TO&gt;.StatusDrive.AdaptionState" = 2 and "&lt;TO&gt;.StatusSensor[1..4].AdaptionState" = 2).
 
 The requirements that must be met before a technology object can be released via "MC_Power" can be found in the Siemens Industry Online Support in the FAQ entry [109750297](https://support.industry.siemens.com/cs/ww/en/view/109750297).
 
@@ -107,9 +107,9 @@ The following table shows the parameters of the Motion Control instruction "MC_P
 | 1 | Enable positioning axis/synchronous axis position-controlled |  |  |  |  |
 | The parameter initially takes effect when the positioning axis is enabled ("Enable" changes from "FALSE" to "TRUE") and when the axis is enabled after acknowledgment of an interrupt that caused the axis to be disabled.  This parameter is ignored when a speed axis or an external encoder is used. |  |  |  |  |  |
 | StopMode | INPUT | INT | 0 | Not applicable to the technology object external encoder  If you disable a technology object with a negative edge at parameter "Enable", the axis decelerates in accordance with the selected "StopMode". |  |
-| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop". The drive is then switched off and the technology object is disabled.  (<TO>.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop". The drive is then switched off and the technology object is disabled.  (&lt;TO&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
 | 1 | Quick stop  When a technology object is disabled, the speed setpoint zero is output. The axis is decelerated to a standstill dependent on parameter "p1135" ("OFF3- ramp-down time") in the drive. The drive is then switched off and the technology object is disabled.  OFF1 and OFF2 are reset |  |  |  |  |
-| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is disabled.  (<TO>.DynamicLimits.MaxDeceleration; <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is disabled.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration; &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | 3 | Coast-down<sup>1</sup>  When the technology object is disabled, the drive is de-energized (pulse inhibit) and goes into the closing lockout state. The drive then coasts to a stop.  If you are using a drive with an analog setpoint interface, the enable output is disabled and the analog output signal is set to 0.0.   **Note**   Using drives with motor holding brake  With pulse suppression, the drive gives the command to close the motor holding brake immediately and independently of the motor speed. If you do not want the brake to close, make sure to keep the brake open with the FB "LAxisCtrl_BrakeControl".   ["LAxisCtrl" library](https://support.industry.siemens.com/cs/ww/en/view/109749348) |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Technology object enable status |  |
 | FALSE | Disabled  - The technology object does not accept any Motion Control jobs. - Speed control and positioning control are not active. - The actual values of the technology object are not checked for validity. |  |  |  |  |
@@ -134,7 +134,7 @@ Depending on the "StartMode" parameter, the position is held ("StartMode" = 1)
 
 **Enable in motion of axis**
 
-If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object > Configuration > Extended parameters > Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm responses.
+If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm responses.
 
 If "StartMode" = 0, the axis is braked as much as possible by the specification of the velocity setpoint zero. Monitoring operations and dynamic limits are not active in this case.
 
@@ -152,7 +152,7 @@ When the "Enable" input is set, the extrapolated actual position is applied as t
 
 Noisy encoder signals cause the detection of an actual velocity despite standstill of the axis. For encoders with low resolution, this detected actual velocity is greater than for encoders with high resolution. High actual velocities result in significant jumps of the position setpoint when enabling the axis.
 
-To output the velocity setpoint zero when enabling the axis in "StartMode" = 1 and prevent jumps of the position setpoint and braking of the axis with maximum deceleration, set <TO>.PositionControl.VelocityModePowerOn = 1. Monitoring operations and dynamic limits are not active in this case.
+To output the velocity setpoint zero when enabling the axis in "StartMode" = 1 and prevent jumps of the position setpoint and braking of the axis with maximum deceleration, set &lt;TO&gt;.PositionControl.VelocityModePowerOn = 1. Monitoring operations and dynamic limits are not active in this case.
 
 ##### Disabling technology objects
 
@@ -170,20 +170,20 @@ When a drive is connected using PROFIdrive, the setpoint, enable and drive statu
 
   With "Enable" = TRUE parameter, the technology object is enabled. The drive is enabled according to the PROFIdrive standard.
 
-  When the "<TO>.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
+  When the "&lt;TO&gt;.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". The drive is disabled according to the PROFIdrive standard.
 
 ##### Analog drive connection
 
-The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (<TO>.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (<TO>.Actor.Interface.DriveReadyInput).
+The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (&lt;TO&gt;.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (&lt;TO&gt;.Actor.Interface.DriveReadyInput).
 
 - **Enable technology object and activate drive**
 
   With "Enable" = TRUE parameter, the enable output ("Enable drive output") is set.
 
-  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "<TO>.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
+  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "&lt;TO&gt;.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". When the setpoint zero is reached, the enable output is set to "FALSE".
@@ -239,8 +239,8 @@ With "Restart" = TRUE, you start reinitialization (restart) of technology object
   For a restart, the technology object must be disabled.
 
   ("MC_Power.Status" = FALSE and "MC_Power.Busy" = FALSE)
-- Cyclic BUS communication is established between controller and encoder ("<TO>.StatusSensor[1..4].CommunicationOK" = TRUE).
-- Cyclic BUS communication is established between controller and drive ("<TO>.StatusDrive.CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and encoder ("&lt;TO&gt;.StatusSensor[1..4].CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and drive ("&lt;TO&gt;.StatusDrive.CommunicationOK" = TRUE).
 
 ##### Override response
 
@@ -311,7 +311,7 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_Home", you create the relationship between the position in the technology object and the mechanical position. The actual position value in the technology object is assigned to a homing mark at the same time. This homing mark represents a known mechanical position.
 
-With active homing, the default values under "Technology object > Configuration > Extended parameters > Dynamic default values" are used for the dynamic values acceleration, deceleration and jerk.
+With active homing, the default values under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" are used for the dynamic values acceleration, deceleration and jerk.
 
 ##### Applies to
 
@@ -325,7 +325,7 @@ With active homing, the default values under "Technology object > Configuration 
 - "Mode" = 2, 3, 5, 8, 10  
   The technology object is enabled.
 - "Mode" = 6, 7, 8, 11, 12, 13  
-  The encoder actual values are valid (<TO>.StatusSensor[1..4].State = 2).
+  The encoder actual values are valid (&lt;TO&gt;.StatusSensor[1..4].State = 2).
 - "Mode" = 0, 1, 6, 7
 
   The axis is in position-controlled mode.
@@ -368,16 +368,16 @@ An option for evaluating the individual status bits can be found in the section 
 | 2 | [Passive homing (without reset)<sup>1</sup>](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#passive-homing-s7-1500-s7-1500t)   Function same as "Mode" = 8 with the difference that the "homed" status is **not** reset when the function is enabled. |
 | 3 | [Active homing](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#active-homing-s7-1500-s7-1500t) <sup>1</sup>   The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After the completion of the motion, the axis is positioned at the value of the "Position" parameter. |
 | 4 | Reserved |
-| 5 | [Active homing ("Position" parameter has no effect)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#active-homing-s7-1500-s7-1500t) <sup>1</sup>   The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object > Configuration > Extended parameters > Homing > Active homing".  (<TO>.Homing.HomePosition) |
-| 6 | [Absolute encoder adjustment (relative)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#absolute-value-adjustment-s7-1500-s7-1500t)   The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[1..4].AbsEncoderOffset) |
-| 7 | [Absolute encoder adjustment (absolute)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#absolute-value-adjustment-s7-1500-s7-1500t)   The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[1..4].AbsEncoderOffset) |
+| 5 | [Active homing ("Position" parameter has no effect)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#active-homing-s7-1500-s7-1500t) <sup>1</sup>   The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Active homing".  (&lt;TO&gt;.Homing.HomePosition) |
+| 6 | [Absolute encoder adjustment (relative)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#absolute-value-adjustment-s7-1500-s7-1500t)   The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) |
+| 7 | [Absolute encoder adjustment (absolute)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#absolute-value-adjustment-s7-1500-s7-1500t)   The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) |
 | 8 | [Passive homing](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#passive-homing-s7-1500-s7-1500t) <sup>1</sup>   When the homing mark is detected, the actual value is set to the value of the "Position" parameter. |
 | 9 | [Abort passive homing](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#passive-homing-s7-1500-s7-1500t)   An active job for passive homing is aborted. |
-| 10 | [Passive homing ("Position" parameter has no effect)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#passive-homing-s7-1500-s7-1500t) <sup>1</sup>   When the homing mark is detected, the actual value is set to the home position configured under "Technology object > Configuration > Extended parameters > Homing > Passive homing".  (<TO>.Homing.HomePosition) |
+| 10 | [Passive homing ("Position" parameter has no effect)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#passive-homing-s7-1500-s7-1500t) <sup>1</sup>   When the homing mark is detected, the actual value is set to the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Passive homing".  (&lt;TO&gt;.Homing.HomePosition) |
 | 11 | [Setting of position setpoint (absolute)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#set-position-setpoint-s7-1500-s7-1500t)   The set position of the technology object is set to the value of the "Position" parameter. The following error remains. |
 | 12 | [Shift the setpoint position (relative)](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#set-position-setpoint-s7-1500-s7-1500t)   The set position of the technology object is shifted by the value of the "Position" parameter. The following error remains. |
 | 13 | [Incremental encoder adjustment](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#incremental-encoder-adjustment-s7-1500-s7-1500t)   The current position is set to the value of parameter "Position". |
-| <sup>1</sup> If a valid absolute value offset has not yet been saved (<TO>.Sensor[1..4].Adjusted = FALSE), then an absolute value offset is saved during active/passive homing with absolute encoder and retained beyond the switching on/off of the controller. If an absolute value offset has already been saved in the CPU (<TO>.Sensor[1..4].Adjusted = TRUE), it is retained after active/passive homing. To update the absolute encoder offset, perform an absolute encoder adjustment to the current position after the active/passive homing. |  |
+| <sup>1</sup> If a valid absolute value offset has not yet been saved (&lt;TO&gt;.Sensor[1..4].Adjusted = FALSE), then an absolute value offset is saved during active/passive homing with absolute encoder and retained beyond the switching on/off of the controller. If an absolute value offset has already been saved in the CPU (&lt;TO&gt;.Sensor[1..4].Adjusted = TRUE), it is retained after active/passive homing. To update the absolute encoder offset, perform an absolute encoder adjustment to the current position after the active/passive homing. |  |
 
 ---
 
@@ -426,13 +426,13 @@ The following table shows the parameters of the Motion Control instruction "MC_H
 | Axis | INPUT | TO_SpeedAxis  TO_Positioning­Axis  TO_Synchronous­Axis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
+| &gt; 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | FALSE | The current acceleration at the start of the job is reduced using the configured jerk. Afterwards, the deceleration builds up. |
 | TRUE | The acceleration is set to 0.0 at the start of the job, and the deceleration immediately builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Velocity zero has been reached. |
@@ -449,7 +449,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Set the necessary values for the parameters "Deceleration", "Jerk" and "AbortAcceleration".
 3. Start the "MC_Halt" job with a positive edge at parameter "Execute".
 
-   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Braking an axis with active force/torque limit
 
@@ -521,26 +521,26 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Position | INPUT | LREAL | 0.0 | Absolute target position |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
-| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object > Configuration > Basic parameters > Enable modulo" |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
+| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object &gt; Configuration &gt; Basic parameters &gt; Enable modulo" |  |
 | 1 | Positive direction |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |
 | 3 | Shortest distance |  |  |  |  |
-| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (<TO>.PositioningMonitoring.MinDwellTime). |
+| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (&lt;TO&gt;.PositioningMonitoring.MinDwellTime). |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred while processing the job. The job is rejected. The cause of the error can be found in the "ErrorID" parameter. |
@@ -617,22 +617,22 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Distance for the positioning process<sup>1)</sup> (negative or positive) |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
-| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (<TO>.PositioningMonitoring.MinDwellTime). |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
+| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (&lt;TO&gt;.PositioningMonitoring.MinDwellTime). |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred while processing the job. The job is rejected. The cause of the error can be found in the "ErrorID" parameter. |
@@ -718,17 +718,17 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint/speed setpoint for the motion  ("Velocity" = 0.0 is permitted) |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Direction | INPUT | INT | 0 | Direction of rotation of the axis |  |
 | 0 | The sign of the velocity specified at the "Velocity" parameter defines the direction of rotation. |  |  |  |  |
 | 1 | Positive direction of rotation   The value of "Velocity" is used. |  |  |  |  |
@@ -749,7 +749,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 
 An "MC_MoveVelocity" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 The parameters "InVelocity" and "Busy" show the value "TRUE", until the "MC_MoveVelocity" job is overridden by another Motion Control job.
 
@@ -769,7 +769,7 @@ Proceed as follows to move an axis with constant velocity/speed:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### More information
 
@@ -843,19 +843,19 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | JogBackward | INPUT | BOOL | FALSE | TRUE | As long as the parameter is "TRUE", the axis moves in the negative direction at the velocity specified in parameter "Velocity". |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint/speed setpoint for the motion |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |
-| < 0.0 | The absolute value of the specified value is used. |  |  |  |  |
+| &lt; 0.0 | The absolute value of the specified value is used. |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | PositionControlled | INPUT | BOOL | TRUE | FALSE | Non-position-controlled operation |
 | TRUE | Position-controlled mode |  |  |  |  |
 | The parameter applies as long as the "MC_MoveJog" job is being executed. After this, the setting of the following job applies.  This parameter is ignored when a speed axis is used. |  |  |  |  |  |
@@ -869,7 +869,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 
 An "MC_MoveJog" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Moving an axis in jog mode
 
@@ -886,7 +886,7 @@ Proceed as follows to move an axis in jog mode:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### More information
 
@@ -953,21 +953,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Additional distance for the overlapping positioning operation (negative or positive) |  |
 | VelocityDiff | INPUT | LREAL | -1.0 | Maximum velocity deviation compared to the active motion |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Superimposed positioning complete |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -1030,13 +1030,13 @@ The following table shows the parameters of the Motion Control instruction "MC_H
 | Axis | INPUT | TO_Positioning­Axis  TO_Synchronous­Axis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the superimposed motion |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the superimposed motion |  |
-| > 0.0 | Constant-acceleration velocity profile of the superimposed motion; the specified jerk is used |  |  |  |  |
+| &gt; 0.0 | Constant-acceleration velocity profile of the superimposed motion; the specified jerk is used |  |  |  |  |
 | = 0.0 | Trapezoidal velocity profile of the superimposed motion |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | FALSE | The current acceleration of the superimposed motion at the start of the job is reduced using the configured jerk. Afterwards, the deceleration builds up. |
 | TRUE | The acceleration of the superimposed motion is set to 0.0 at the start of the job; the deceleration builds up immediately. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | The execution of the job is completed.  The superimposed motion is stopped. |
@@ -1065,13 +1065,13 @@ The following table shows the parameters of the Motion Control instruction "MC_H
 
 The axis is moved with an "MC_MoveRelative" job (A1) as the basic motion.
 
-Via "Exe_2", a "MC_MoveSuperimposed" job (A2) is triggered as a superimposed motion. The <TO>.StatusWord.X23 bit is set. At time ①, the "MC_MoveSuperimposed" job is overridden by an "MC_HaltSuperimposed" job (A3). The job abort is signaled via "Abort_2". The <TO>.StatusWord2.X7 bit is set and the <TO>.StatusWord.X23 bit is reset. With "AbortAcc_3" = FALSE, the current acceleration is reduced with the specified jerk. After that, the deceleration is built up and the superimposed motion is decelerated to velocity = 0. The completion of the "MC_HaltSuperimposed" job is reported via "Done_3". The <TO>.StatusWord2.X7 bit is reset.
+Via "Exe_2", a "MC_MoveSuperimposed" job (A2) is triggered as a superimposed motion. The &lt;TO&gt;.StatusWord.X23 bit is set. At time ①, the "MC_MoveSuperimposed" job is overridden by an "MC_HaltSuperimposed" job (A3). The job abort is signaled via "Abort_2". The &lt;TO&gt;.StatusWord2.X7 bit is set and the &lt;TO&gt;.StatusWord.X23 bit is reset. With "AbortAcc_3" = FALSE, the current acceleration is reduced with the specified jerk. After that, the deceleration is built up and the superimposed motion is decelerated to velocity = 0. The completion of the "MC_HaltSuperimposed" job is reported via "Done_3". The &lt;TO&gt;.StatusWord2.X7 bit is reset.
 
 **Section B**
 
 The axis is moved with an "MC_MoveRelative" job (A1) as the basic motion.
 
-Via "Exe_2", a "MC_MoveSuperimposed" job (A2) is triggered as a superimposed motion. The <TO>.StatusWord.X23 bit is set. At time ②, the "MC_MoveSuperimposed" job is overridden by an "MC_HaltSuperimposed" job (A3). The job abort is signaled via "Abort_2". The <TO>.StatusWord2.X7 bit is set and the <TO>.StatusWord.X23 bit is reset. With "AbortAcc_3" = TRUE, the current acceleration is set to zero immediately and the deceleration builds up. The superimposed motion is decelerated to velocity = 0. The completion of the "MC_HaltSuperimposed" job is reported via "Done_3". The <TO>.StatusWord2.X7 bit is reset.
+Via "Exe_2", a "MC_MoveSuperimposed" job (A2) is triggered as a superimposed motion. The &lt;TO&gt;.StatusWord.X23 bit is set. At time ②, the "MC_MoveSuperimposed" job is overridden by an "MC_HaltSuperimposed" job (A3). The job abort is signaled via "Abort_2". The &lt;TO&gt;.StatusWord2.X7 bit is set and the &lt;TO&gt;.StatusWord.X23 bit is reset. With "AbortAcc_3" = TRUE, the current acceleration is set to zero immediately and the deceleration builds up. The superimposed motion is decelerated to velocity = 0. The completion of the "MC_HaltSuperimposed" job is reported via "Done_3". The &lt;TO&gt;.StatusWord2.X7 bit is reset.
 
 ### MC_SetSensor V8 (S7-1500T)
 
@@ -1125,7 +1125,7 @@ The following table shows the parameters of the Motion Control instruction "MC_S
 
 ##### Changing to absolute encoder
 
-When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (<TO>.StatusSensor[1..4].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
+When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
 
 ### MC_Stop V8 (S7-1500, S7-1500T)
 
@@ -1164,7 +1164,7 @@ The standstill position is derived from the stop ramp. Three modes, which you de
 - An "MC_Stop" job does not abort any synchronous operation function in simulation.
 - An "MC_Stop" job is aborted by another "MC_Stop" job with a stop response that is the same or higher.
 
-  Significance of stop responses (descending): "Mode" = 0 > "Mode" = 2 > "Mode" = 3
+  Significance of stop responses (descending): "Mode" = 0 &gt; "Mode" = 2 &gt; "Mode" = 3
 
 You can find more detailed information on the override response of an "MC_Stop" job in the section "[Override response of Motion Control jobs V8](#override-response-of-motion-control-jobs-v8-s7-1500-s7-1500t)".
 
@@ -1178,7 +1178,7 @@ Alarm responses with stop can by overridden by "MC_Stop" jobs with higher signif
 
 The following table represents the significance of Stop mode at "MC_Stop" job and the alarm responses:
 
-| Stop mode | MC_Stop.Mode | <TO>.ErrorDetail.Reaction | Significance |
+| Stop mode | MC_Stop.Mode | &lt;TO&gt;.ErrorDetail.Reaction | Significance |
 | --- | --- | --- | --- |
 | Remove enable | - | 4 | 4 |
 | Emergency stop | 0 | 3 | 3 |
@@ -1187,13 +1187,13 @@ The following table represents the significance of Stop mode at "MC_Stop" job an
 
 **Example 1**
 
-An alarm with "<TO>.ErrorDetail.Reaction" = 2 occurs. While the alarm is active, an "MC_Stop" job with "Mode" = 0 is sent.
+An alarm with "&lt;TO&gt;.ErrorDetail.Reaction" = 2 occurs. While the alarm is active, an "MC_Stop" job with "Mode" = 0 is sent.
 
 Result: The stop with maximum dynamic values that was caused by the alarm is overridden by the emergency stop of the "MC_Stop" job. After the axis has been braked to a velocity of 0 by an emergency stop, the "MC_Stop" order outputs "Done" = TRUE.
 
 **Example 2**
 
-An MC_Stop job with Mode = 3 is active. During the active job, an alarm occurs with the alarm response "<TO>.ErrorDetail.Reaction" = 2.
+An MC_Stop job with Mode = 3 is active. During the active job, an alarm occurs with the alarm response "&lt;TO&gt;.ErrorDetail.Reaction" = 2.
 
 Result: The stop of the "MC_Stop" job with specified dynamics is overridden by the alarm response with a stop with maximum dynamics. The "MC_Stop" job displays "CommandAborted" = TRUE.
 
@@ -1211,18 +1211,18 @@ The following table shows the parameters of the Motion Control instruction "MC_S
 | Execute | INPUT | BOOL | FALSE | TRUE | The motion is stopped and new motion jobs are prevented. |
 | FALSE | Motion jobs can be executed again. |  |  |  |  |
 | Mode | INPUT | DINT | 0 | Mode for dynamic behavior |  |
-| 0 | Emergency stop  The technology object is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop".  (<TO>.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  The technology object is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop".  (&lt;TO&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
 | 1 | Not permitted |  |  |  |  |
-| 2 | Stop with maximum dynamic values  The technology object is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamics limits". The configured maximum jerk is hereby taken into account.  (<TO>.DynamicLimits.MaxDeceleration, <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  The technology object is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics limits". The configured maximum jerk is hereby taken into account.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration, &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | 3 | Stop with specified dynamic response  The technology object is stopped with the specified values at the parameters "Deceleration" and "Jerk". |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "Mode" = 3:  Deceleration for the braking ramp |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "Mode" = 3:  Jerk for the braking ramp |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | TRUE | Acceleration is set to 0.0. The configured deceleration is built up immediately. |
 | FALSE | The acceleration is reduced using the configured jerk. The configured deceleration then builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Standstill is reached. |
@@ -1239,7 +1239,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Set the necessary values for the parameters "Mode", "Deceleration", "Jerk" and "AbortAcceleration".
 3. Start the "MC_Stop" job with a positive edge at parameter "Execute".
 
-   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
    As long as "Execute" = TRUE, the technology object cannot execute motion jobs.
 
@@ -1478,8 +1478,8 @@ Another measuring job must be started again using "MC_MeasuringInput.Execute" = 
 ###### Requirement
 
 - The technology object has been configured correctly.
-- The encoder of the axis must have "valid" status ("<TO>.StatusSensor[1..4].State" = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
-- The communication between the measuring probe and measurement input is established ("<TO>.StatusWord.CommunicationOK" = TRUE).
+- The encoder of the axis must have "valid" status ("&lt;TO&gt;.StatusSensor[1..4].State" = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
+- The communication between the measuring probe and measurement input is established ("&lt;TO&gt;.StatusWord.CommunicationOK" = TRUE).
 - Measurement using PROFIdrive is not possible during active or passive homing.
 - The measuring input is not configured as a monitoring probe.
 
@@ -1551,8 +1551,8 @@ With cyclic measuring, up to two measuring events are detected by the system and
 
 - The technology object has been configured correctly.
 - Cyclic measuring is possible when measuring using Timer DI and when measuring via SINAMICS.
-- The communication between the measuring probe and measurement input is established ("<TO>.StatusWord.CommunicationOK" = TRUE).
-- The encoder of the axis operationally in effect must have "valid" status "valid" ("<TO>.StatusSensor[1..4].State" = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
+- The communication between the measuring probe and measurement input is established ("&lt;TO&gt;.StatusWord.CommunicationOK" = TRUE).
+- The encoder of the axis operationally in effect must have "valid" status "valid" ("&lt;TO&gt;.StatusSensor[1..4].State" = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
 - The measuring input is not configured as a monitoring probe.
 
 ###### Override response
@@ -1695,7 +1695,7 @@ When a technological alarm occurs, the output cam is processed again after error
 
 - The technology object has been configured correctly.
 - The higher-level technology object must have a valid position.
-- The communication between output cam and output module is established ("<TO>.StatusWord.CommunicationOK" = TRUE).
+- The communication between output cam and output module is established ("&lt;TO&gt;.StatusWord.CommunicationOK" = TRUE).
 - Setpoint output cams are not output for an axis in non-position-controlled operation.
 
 ###### Override response
@@ -1775,7 +1775,7 @@ With the Motion Control instruction "MC_CamTrack", the processing of a cam track
 
 - The technology object has been configured correctly.
 - The higher-level technology object must have a valid position.
-- The communication between output cam and output module is established ("<TO>.StatusWord.CommunicationOK" = TRUE).
+- The communication between output cam and output module is established ("&lt;TO&gt;.StatusWord.CommunicationOK" = TRUE).
 - Setpoint output cams are not output for an axis in non-position-controlled operation.
 
 ###### Override response
@@ -1823,7 +1823,7 @@ A cam track is activated with "Enable" = TRUE. The cam track is output in accord
 
 | Tag |  | Value | Description |
 | --- | --- | --- | --- |
-| <TO>Parameter. |  |  |  |
+| &lt;TO&gt;Parameter. |  |  |  |
 |  | CamTrackType | 0 | Specified output cam type for the cam track is distance output cam |
 | ReferencePosition | 20.0 | Specified axis reference position for the cam track |  |
 | CamTrackLength | 100.0 | Specified length of the cam track |  |
@@ -1882,7 +1882,7 @@ The Motion Control instruction offers you the following:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 
 ###### Override response
@@ -1907,17 +1907,17 @@ The following table shows the parameters of the Motion Control instruction "MC_G
 | RatioNumerator | INPUT | DINT | 1 | [Gear ratio numerator](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-gear-ratio-s7-1500-s7-1500t)   Permitted integer values:  -2147483648 to 2147483647  (value 0 not permitted) |  |
 | RatioDenominator | INPUT | DINT | 1 | [Gear ratio denominator](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-gear-ratio-s7-1500-s7-1500t)   Permitted integer values: 1 to 2147483647 |  |
 | Acceleration | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearin-s7-1500-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearin-s7-1500-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearin-s7-1500-s7-1500t) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | InGear | OUTPUT | BOOL | FALSE | TRUE | Synchronous operation reached  The following axis is synchronized and moves synchronously to the leading axis. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -1969,7 +1969,7 @@ Different parameters are relevant depending on the synchronization profile. You 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The following axis is homed.
 - With synchronization in advance using leading value distance, the leading axis must be at least the specified distance ("MasterStartDistance") from the synchronization position ("MasterSyncPosition") when starting the job.
@@ -2010,24 +2010,24 @@ The following table shows the parameters of the Motion Control instruction "MC_G
 | MasterStartDistance | INPUT | LREAL | 1.0 | When "SyncProfileReference" = 1, 3:  Leading value distance |  |
 | When "SyncProfileReference" = 0:  Not relevant |  |  |  |  |  |
 | Velocity | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | SyncDirection | INPUT | DINT | 3 | [Direction of synchronization](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-direction-of-synchronization-with-mc_gearinpos-s7-1500t)   (in effect for following axes with activated Modulo setting) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during synchronization. |  |  |  |  |
@@ -2096,7 +2096,7 @@ The Motion Control instruction offers you the following:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The leading value is valid.
 
@@ -2127,17 +2127,17 @@ The following table shows the parameters of the Motion Control instruction "MC_G
 | RatioNumerator | INPUT | DINT | 1 | [Gear ratio numerator](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-gear-ratio-s7-1500t-1)   Permitted integer values:  -2147483648 to 2147483647  (value 0 not permitted) |  |
 | RatioDenominator | INPUT | DINT | 1 | [Gear ratio denominator](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-gear-ratio-s7-1500t-1)   Permitted integer values: 1 to 2147483647 |  |
 | Acceleration | INPUT | LREAL | -1.0 | [Acceleration for the synchronization](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearinvelocity-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | [Deceleration for the synchronization](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearinvelocity-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | [Jerk for the synchronization](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearinvelocity-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | PositionControlled | INPUT | BOOL | FALSE | [Position control of the following axis](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-position-control-of-the-following-axis-s7-1500t) |  |
 | TRUE | Position-controlled mode |  |  |  |  |
 | FALSE | Non-position-controlled operation |  |  |  |  |
@@ -2211,7 +2211,7 @@ The Motion Control instruction offers you the following in camming:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - By means of the Motion Control instruction "MC_GearIn", "MC_GearInPos" or "MC_CamIn", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE, "MC_GearInPos.InSync" = TRUE or "MC_CamIn.InSync" = TRUE).
 - No "MC_OffsetAbsolute" or "MC_OffsetRelative" job is active or waiting.
@@ -2233,21 +2233,21 @@ The following table shows the parameters of the Motion Control instruction "MC_P
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Relative leading value offset |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | ProfileReference | INPUT | DINT | 0 | Type of the leading value offset |  |
 | 0 | Only with gearing:  Leading value offset using dynamic parameters |  |  |  |  |
 | 1 | Leading value offset using leading value distance as of current leading value position |  |  |  |  |
@@ -2278,7 +2278,7 @@ At time ①, an "MC_PhasingRelative" job (A2) is initiated with "ProfileReferenc
 
 At time ② the "MC_PhasingRelative" job (A2) is initiated again via "Exe". The leading value offset via dynamic parameters is moved out again with the dynamics specified in addition to the synchronous movement. The absolute leading value offset traversed via the job is indicated in "CoveredPhaseShift". "Done" indicates that the leading value was successfully shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 ###### Function chart: Relative shift of the leading value in camming
 
@@ -2288,11 +2288,11 @@ The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMo
 
 At time ①, an "MC_PhasingRelative" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartPhasing" parameter shows that the leading value offset traverses from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "CoveredPhaseShift". "Done" indicates that the leading value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_PhasingRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
+At time ② the "MC_PhasingRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartPhasing" parameter shows that the following axis traverses the leading value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "CoveredPhaseShift". "Done" indicates that the leading value was successfully shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 #### MC_PhasingAbsolute V8 (S7-1500T)
 
@@ -2339,7 +2339,7 @@ The Motion Control instruction offers you the following in camming:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - By means of the Motion Control instruction "MC_GearIn", "MC_GearInPos" or "MC_CamIn", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE, "MC_GearInPos.InSync" = TRUE or "MC_CamIn.InSync" = TRUE).
 - No "MC_OffsetAbsolute" or "MC_OffsetRelative" job is active or waiting.
@@ -2361,21 +2361,21 @@ The following table shows the parameters of the Motion Control instruction "MC_P
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Absolute leading value offset |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | ProfileReference | INPUT | DINT | 0 | Type of the leading value offset |  |
 | 0 | Only with gearing:  Leading value offset using dynamic parameters |  |  |  |  |
 | 1 | Leading value offset using leading value distance as of current leading value position |  |  |  |  |
@@ -2404,9 +2404,9 @@ The following table shows the parameters of the Motion Control instruction "MC_P
 
 At time ①, an "MC_PhasingAbsolute" job (A2) is initiated with "ProfileReference" = 0 via "Exe" during an active gearing with "MC_GearInPos" (A1). The "StartPhasing" parameter shows that the following axis traverses the leading value offset with the dynamics specified additively to the synchronous operation motion. The absolute leading value offset traversed via the job is indicated in "AbsolutePhaseShift". "Done" indicates that the leading value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe". Because the absolute leading value offset (<TO>.StatusSynchronizedMotion.PhaseShift) is already 90.0, the leading value is not shifted.
+At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe". Because the absolute leading value offset (&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift) is already 90.0, the leading value is not shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 ###### Function chart: Absolute shift of the leading value in camming
 
@@ -2416,11 +2416,11 @@ The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMo
 
 At time ①, an "MC_PhasingAbsolute" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartPhasing" parameter shows that the leading value offset traverses from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "AbsolutePhaseShift". "Done" indicates that the leading value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
+At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartPhasing" parameter shows that the following axis traverses the leading value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "AbsolutePhaseShift". "Done" indicates that the leading value was successfully shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 #### MC_OffsetRelative V8 (S7-1500T)
 
@@ -2514,7 +2514,7 @@ At time ①, an "MC_OffsetRelative" job (A2) is initiated with "ProfileReference
 
 At time ② the "MC_OffsetRelative" job (A2) is initiated again via "Exe". The "StartOffset" parameter shows that the following axis traverses the following value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated In "CoveredOffset". "Done" indicates that the following value was successfully shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 ###### Function chart: Relative shift of the following value in camming
 
@@ -2524,11 +2524,11 @@ The absolute following value offset is indicated in the "<TO>.StatusSynchronized
 
 At time ①, an "MC_OffsetRelative" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartOffset" parameter shows that the following axis traverses the following value offset from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated In "CoveredOffset". "Done" indicates that the following value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_OffsetRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
+At time ② the "MC_OffsetRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartOffset" parameter shows that the following axis traverses the following value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated In "CoveredOffset". "Done" indicates that the leading value was successfully shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 #### MC_OffsetAbsolute V8 (S7-1500T)
 
@@ -2620,9 +2620,9 @@ The following table shows the parameters of the Motion Control instruction "MC_O
 
 At time ①, an "MC_OffsetAbsolute" job (A2) is initiated with "ProfileReference" = 1 via "Exe" during an active gearing with "MC_GearInPos" (A1). The "StartOffset" parameter shows that the following axis traverses the following value offset from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated in "AbsoluteOffset". "Done" indicates that the following value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe". Because the absolute following value offset (<TO>.StatusSynchronizedMotion.Offset) is already 90.0, the following value is not shifted.
+At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe". Because the absolute following value offset (&lt;TO&gt;.StatusSynchronizedMotion.Offset) is already 90.0, the following value is not shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 ###### Function chart: Absolute shift of the following value in camming
 
@@ -2632,11 +2632,11 @@ The absolute following value offset is indicated in the "<TO>.StatusSynchronized
 
 At time ①, an "MC_OffsetAbsolute" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartOffset" parameter shows that the following axis traverses the following value offset from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated in "AbsoluteOffset". "Done" indicates that the following value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
+At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartOffset" parameter shows that the following axis traverses the following value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated in "AbsoluteOffset". "Done" indicates that the following value was successfully shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 #### MC_CamIn V8 (S7-1500T)
 
@@ -2653,7 +2653,7 @@ With the Motion Control instruction "MC_CamIn", you start a [camming](Using%20S7
 
 The synchronous position of the leading axis and the corresponding position of the following axis from the cam represent the relationship of the two axes to one another. The synchronous position of the leading axis is determined by the following parameters:
 
-- Start position of the cam (<TO_Cam>.StatusCam.StartLeadingValue)
+- Start position of the cam (&lt;TO_Cam&gt;.StatusCam.StartLeadingValue)
 - Scaling the leading values of the cam ("MasterScaling")
 - Offset/position of the cam ("MasterOffset")
 - Start point within the cam ("MasterSyncPosition")
@@ -2692,7 +2692,7 @@ Different parameters are relevant depending on the synchronization profile. You 
 - The technology objects of the leading axis, following axis, and cam have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The following axis is homed.
 - The cam is interpolated with "MC_InterpolateCam".
@@ -2740,28 +2740,28 @@ The following table shows the parameters of the Motion Control instruction "MC_C
 | 5 | [Direct synchronous setting at the end of the cam](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#directly-set-following-axis-synchronously-at-end-of-the-cam-with-mc_camin-s7-1500t) |  |  |  |  |
 | 6 | [Synchronization in advance using leading value distance starting from current leading value position](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-in-advance-via-the-leading-value-path-from-the-current-leading-value-position-with-mc_camin-s7-1500t) |  |  |  |  |
 | MasterStartDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1, 3, 4, 6:  Leading value distance  Distance of the leading axis during the synchronization |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | When "SyncProfileReference" = 0, 2, 5:  Not relevant |  |  |  |  |  |
 | Velocity | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5, 6:  Not relevant |  |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5, 6:  Not relevant |  |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5, 6:  Not relevant |  |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5, 6:  Not relevant |  |  |  |  |  |
 | ApplicationMode | INPUT | DINT | 0 | [Application of the cam](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-application-mode-of-the-cam-s7-1500t) |  |
 | 0 | Once/not cyclic |  |  |  |  |
@@ -2818,7 +2818,7 @@ At time ②, "InSync" signals at the leading value position 90° that the follow
 
 At time ③, the "MC_CamIn" job (A1) with "SyncProfileReference" = 6 is initiated via "Exe". The start of the synchronization is displayed with "StartSync". The following axis (TO_FollowingAxis) is synchronized in advance as of the current leading value position 270° to the cam (Cam_1) by means of the specified leading value distance "MasterStartDistance" = 180°. The dynamic response required for synchronization is calculated by the system.
 
-At time ④, the following axis reaches the following value of the specified reference position "MasterSyncPosition" = 180° at the leading value position 90° in relation to the start of the cam. The cam is automatically offset by -90° in the leading value area (<TO>.StatusSynchronizedMotion.MasterOffset). "InSync" signals that the following axis is synchronized and moving synchronously to the leading axis.
+At time ④, the following axis reaches the following value of the specified reference position "MasterSyncPosition" = 180° at the leading value position 90° in relation to the start of the cam. The cam is automatically offset by -90° in the leading value area (&lt;TO&gt;.StatusSynchronizedMotion.MasterOffset). "InSync" signals that the following axis is synchronized and moving synchronously to the leading axis.
 
 ###### Function chart: Togging and direct synchronous setting at the end of the cam
 
@@ -2828,7 +2828,7 @@ At time ④, the following axis reaches the following value of the specified ref
 
 An "MC_CamIn" job (A1) is active.
 
-At time ① another "MC_CamIn" job (A2) is initiated via "Exe_2". The status "Waiting" is displayed at the following axis until the end of the active cam "Cam_1" has been reached (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 3).
+At time ① another "MC_CamIn" job (A2) is initiated via "Exe_2". The status "Waiting" is displayed at the following axis until the end of the active cam "Cam_1" has been reached (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 3).
 
 At time ② the end of the cam is reached ("Eop_1"). The cam is switched over. Since no synchronization takes place, the "Synchronous" status is retained.
 
@@ -2861,7 +2861,7 @@ The Motion Control instruction offers you the following:
 
 - The technology object has been configured correctly.
 - The following axis is a synchronous axis.
-- Synchronous operation is active on the technology object in status "Synchronous" (<TO>.StatusWord.X22 = TRUE).
+- Synchronous operation is active on the technology object in status "Synchronous" (&lt;TO&gt;.StatusWord.X22 = TRUE).
 
 ###### Override response
 
@@ -2939,13 +2939,13 @@ The following table shows the parameters of the Motion Control instruction "MC_G
 | 5 | [Only cancel a pending gearing](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#only-cancel-a-pending-gearing-with-mc_gearout-s7-1500t) |  |  |  |  |
 | MasterStopDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1:   [Leading value distance](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-leading-value-distance-with-mc_gearout-s7-1500t) |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:   [Deceleration](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-dynamic-parameters-with-mc_gearout-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:   [Jerk](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-dynamic-parameters-with-mc_gearout-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | SyncOutDirection | INPUT | DINT | 3 | [Desynchronization direction](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-direction-of-desynchronization-with-mc_gearout-s7-1500t) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during desynchronization. |  |  |  |  |
 | 2 | Negative direction  The following axis may only travel in negative direction during desynchronization. |  |  |  |  |
@@ -3031,13 +3031,13 @@ The following table shows the parameters of the Motion Control instruction "MC_C
 | 5 | [Only cancel a pending camming](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#only-cancel-a-pending-camming-with-mc_camout-s7-1500t) |  |  |  |  |
 | MasterStopDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1:   [Leading value distance](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-leading-value-distance-with-mc_camout-s7-1500t) |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:   [Deceleration](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-dynamic-parameters-with-mc_camout-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:   [Jerk](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-dynamic-parameters-with-mc_camout-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | SyncOutDirection | INPUT | DINT | 3 | [Desynchronization direction](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-direction-of-desynchronization-with-mc_camout-s7-1500t) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during desynchronization. |  |  |  |  |
 | 2 | Negative direction  The following axis may only travel in negative direction during desynchronization. |  |  |  |  |
@@ -3401,7 +3401,7 @@ The Motion Control instruction offers you the following:
 
   - For points: ARRAY[*] OF TO_Cam­_Struct­_Point­Data
   - For segments: ARRAY[*] OF TO_Cam­_Struct­_Segment­Data
-- The "Optimized block access" option is activated in the properties of the data block under "General > Attributes".
+- The "Optimized block access" option is activated in the properties of the data block under "General &gt; Attributes".
 
 ###### Override response
 
@@ -3801,7 +3801,7 @@ If the high and low torque limits are active, the following monitors and limits 
 
 In case of alarms on the technology object and "Enable" = TRUE, the force/torque limits remain in effect.
 
-Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object > Configuration > Extended parameters > Limits > Torque limit".
+Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object &gt; Configuration &gt; Extended parameters &gt; Limits &gt; Torque limit".
 
 ###### Applies to
 
@@ -3891,7 +3891,7 @@ In case of alarms on the technology object and "Enable" = TRUE, the force/torque
   - P1522 to a fixed value of 100%
   - P1523 to a fixed value of -100% (e.g. through interconnection to fixed value parameter P2902[i])
   - P1544 Torque/force reduction analysis during travel to fixed stop to 100% (default)
-  - P2194 Threshold value for the parameter "InLimitation" of < 100% (default 90%)
+  - P2194 Threshold value for the parameter "InLimitation" of &lt; 100% (default 90%)
 
 ###### Fixed stop detection applies to
 
@@ -3921,7 +3921,7 @@ The following table shows the parameters of the Motion Control instruction "MC_T
 | Enable | INPUT | BOOL | FALSE | TRUE | Activate function corresponding to input parameter "Mode" |
 | Limit | INPUT | LREAL | -1.0 | Value of force/torque limiting (in the configured unit)<sup>1)</sup>  If the drive and telegram do not support force/torque limiting, the specified value is irrelevant. |  |
 | ≥ 0.0 | The value specified at the parameter is used. |  |  |  |  |
-| < 0.0 | The value configured in the "Torque limiting" configuration window is used.  Tag Torque Limit:   <TO>.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   <TO>.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
+| &lt; 0.0 | The value configured in the "Torque limiting" configuration window is used.  Tag Torque Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
 | Mode | INPUT | DINT | 0 | 0 | Force/torque limiting<sup>1)</sup> |
 | 1 | Fixed stop detection<sup>1)</sup>  If drive and telegram support force/torque limiting, this is applied. |  |  |  |  |
 | InClamping | OUTPUT | BOOL | FALSE | TRUE | "Mode" = 1:  The drive is kept at the fixed stop (clamping<sup>2)</sup>). The axis position is within the positioning tolerance. |
@@ -4212,21 +4212,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Position[5] | INPUT | LREAL | 0.0 | B coordinates<sup>1)</sup> |  |  |
 | Position[6] | INPUT | LREAL | 0.0 | C coordinates<sup>1)</sup> |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | [Velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | [Direction of movement of the Cartesian orientation A](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-target-position-of-the-linear-motion-s7-1500t) |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -4244,10 +4244,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-transition-of-linear-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | [Dynamic adaptation](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -4326,21 +4326,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Distance[5] | INPUT | LREAL | 0.0 | B coordinate<sup>1)</sup> |  |  |
 | Distance[6] | INPUT | LREAL | 0.0 | C coordinate<sup>1)</sup> |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | [Velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | [Reference coordinate system](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-target-position-of-the-linear-motion-s7-1500t) |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -4353,10 +4353,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-transition-of-linear-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | [Dynamic adaptation](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaptation |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -4468,21 +4468,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:   [Angle of the circular movement](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-circular-path-via-center-point-and-angle-s7-1500t)   The absolute value of the specified value is used. |  |
 | When "CircMode" = 0 and 2:  Not relevant |  |  |  |  |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | [Velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | Direction of movement of the Cartesian orientation A |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -4500,10 +4500,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-transition-of-circular-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | [Dynamic adaptation](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaptation |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -4621,21 +4621,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:   [Angle of the circular movement](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-circular-path-via-center-point-and-angle-s7-1500t)   The absolute value of the specified value is used. |  |
 | When "CircMode" = 0 and 2:  Not relevant |  |  |  |  |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | [Velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference coordinate system |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -4648,10 +4648,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-transition-of-circular-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | [Dynamic adaptation](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -4757,22 +4757,22 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | When "CoordSystem" = 101<sup>1)</sup>:  Position of joint J6 |  |  |  |  |  |  |
 | When "CoordSystem" = 0, 1, 2 or 3<sup>1)</sup>:  C coordinate |  |  |  |  |  |  |
 | With up to four interpolating kinematics axes:  Not relevant |  |  |  |  |  |  |
-| VelocityFactor |  | INPUT | LREAL | -1.0 | [Factor for the velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum velocity of the axes (<TO>.DynamicLimits.MaxVelocity)  Permitted range of values: Factor < 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
-| < 0.0 | The velocity factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
+| VelocityFactor |  | INPUT | LREAL | -1.0 | [Factor for the velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum velocity of the axes (&lt;TO&gt;.DynamicLimits.MaxVelocity)  Permitted range of values: Factor &lt; 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
+| &lt; 0.0 | The velocity factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
 | ≥ 0.01 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum velocity of the axes is used. |  |  |  |  |  |
-| AccelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum acceleration of the axis (<TO>.DynamicLimits.MaxAcceleration)  Permitted range of values: Factor ≤ 1.0 |  |
-| < 0.0 | The acceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
+| AccelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum acceleration of the axis (&lt;TO&gt;.DynamicLimits.MaxAcceleration)  Permitted range of values: Factor ≤ 1.0 |  |
+| &lt; 0.0 | The acceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum acceleration of the axes is used. |  |  |  |  |  |
-| DecelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum deceleration of the axis (<TO>.DynamicLimits.MaxDeceleration)  Permitted range of values: Factor ≤ 1.0 |  |
-| < 0.0 | The deceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
+| DecelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum deceleration of the axis (&lt;TO&gt;.DynamicLimits.MaxDeceleration)  Permitted range of values: Factor ≤ 1.0 |  |
+| &lt; 0.0 | The deceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum deceleration of the axes is used. |  |  |  |  |  |
-| JerkFactor |  | INPUT | LREAL | -1.0 | [Factor for the jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum jerk of the axis (<TO>.DynamicLimits.MaxJerk)  Permitted range of values: Factor < 0.0 and 0.1 < Factor ≤ 0.9 |  |
-| < 0.0 | The jerk factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
+| JerkFactor |  | INPUT | LREAL | -1.0 | [Factor for the jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum jerk of the axis (&lt;TO&gt;.DynamicLimits.MaxJerk)  Permitted range of values: Factor &lt; 0.0 and 0.1 &lt; Factor ≤ 0.9 |  |
+| &lt; 0.0 | The jerk factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
 | 0.0 | No jerk limitation |  |  |  |  |  |
 | ≥ 0.1 | The specified factor is used. |  |  |  |  |  |
 | LinkConstellation |  | INPUT | DWORD | 16#FFFF FFFF | When "CoordSystem" = 0, 1, 2 or 3:   [Target joint position space](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t)   The joint position space is specified depending on the respective [kinematics type](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#kinematics-types-s7-1500t). |  |
@@ -4792,7 +4792,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-transition-of-the-sptp-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | PositionMode |  | INPUT | DINT | 1 | When "CoordSystem" = 0, 1, 2 or 3, kinematics types with orientation A and enabled Modulo functionality:   [Use of the "Position" parameter](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t) |  |
 | 1 | Absolute Cartesian position and absolute Cartesian orientation A |  |  |  |  |  |
@@ -4805,14 +4805,14 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | With more than four interpolating kinematics axes:  Not relevant |  |  |  |  |  |  |
 | TurnJoint |  | INPUT | ARRAY [1..6] OF DINT | - | With up to four interpolating kinematics axes:  Not relevant |  |
 | When "CoordSystem" = 0, 1, 2 or 3<sup>1)</sup>:   [Target joint position range of the joint J[1..6]](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t) |  |  |  |  |  |  |
-|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m < 0) | -180° + m · 360° ≤ Position < 180° + m · 360° |
-| -2 | -900 ≤ position < -540 |  |  |  |  |  |
-| -1 | -540 ≤ position < -180 |  |  |  |  |  |
+|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m &lt; 0) | -180° + m · 360° ≤ Position &lt; 180° + m · 360° |
+| -2 | -900 ≤ position &lt; -540 |  |  |  |  |  |
+| -1 | -540 ≤ position &lt; -180 |  |  |  |  |  |
 | 0 | Shortest distance |  |  |  |  |  |
-| 1 | -180 ≤ position < 180 |  |  |  |  |  |
-| 2 | 180 ≤ position < 540 |  |  |  |  |  |
-| 3 | 540 ≤ position < 900 |  |  |  |  |  |
-| n (n > 0) | -180° + (n - 1) · 360° ≤ Position < 180° + (n - 1) · 360° |  |  |  |  |  |
+| 1 | -180 ≤ position &lt; 180 |  |  |  |  |  |
+| 2 | 180 ≤ position &lt; 540 |  |  |  |  |  |
+| 3 | 540 ≤ position &lt; 900 |  |  |  |  |  |
+| n (n &gt; 0) | -180° + (n - 1) · 360° ≤ Position &lt; 180° + (n - 1) · 360° |  |  |  |  |  |
 | ExecutionTimeStatus |  | OUTPUT | LREAL | 0.0 | [Display of execution progress](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#starting-the-sptp-motion-job-s7-1500t)   Value range: 0.0 … 1.0   The job is completed with "ExecutionTimeStatus" = 1.0. |  |
 | Done |  | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
 | Busy |  | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
@@ -4910,22 +4910,22 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | When "CoordSystem" = 101<sup>1)</sup>:  Relative position of joint J6 |  |  |  |  |  |  |
 | When "CoordSystem" = 0, 1, 2 or 3<sup>1)</sup>:  C coordinate |  |  |  |  |  |  |
 | With up to four interpolating kinematics axes:  Not relevant |  |  |  |  |  |  |
-| VelocityFactor |  | INPUT | LREAL | -1.0 | [Factor for the velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum velocity of the axes (<TO>.DynamicLimits.MaxVelocity)  Permitted range of values: Factor < 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
-| < 0.0 | The velocity factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
+| VelocityFactor |  | INPUT | LREAL | -1.0 | [Factor for the velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum velocity of the axes (&lt;TO&gt;.DynamicLimits.MaxVelocity)  Permitted range of values: Factor &lt; 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
+| &lt; 0.0 | The velocity factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
 | ≥ 0.01 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum velocity of the axes is used. |  |  |  |  |  |
-| AccelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum acceleration of the axis (<TO>.DynamicLimits.MaxAcceleration)  Permitted range of values: Factor ≤ 1.0 |  |
-| < 0.0 | The acceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
+| AccelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum acceleration of the axis (&lt;TO&gt;.DynamicLimits.MaxAcceleration)  Permitted range of values: Factor ≤ 1.0 |  |
+| &lt; 0.0 | The acceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum acceleration of the axes is used. |  |  |  |  |  |
-| DecelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum deceleration of the axis (<TO>.DynamicLimits.MaxDeceleration)  Permitted range of values: Factor ≤ 1.0 |  |
-| < 0.0 | The deceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
+| DecelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum deceleration of the axis (&lt;TO&gt;.DynamicLimits.MaxDeceleration)  Permitted range of values: Factor ≤ 1.0 |  |
+| &lt; 0.0 | The deceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum deceleration of the axes is used. |  |  |  |  |  |
-| JerkFactor |  | INPUT | LREAL | -1.0 | [Factor for the jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum jerk of the axis (<TO>.DynamicLimits.MaxJerk)  Permitted range of values: Factor < 0.0 and 0.1 < Factor ≤ 0.9 |  |
-| < 0.0 | The jerk factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
+| JerkFactor |  | INPUT | LREAL | -1.0 | [Factor for the jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum jerk of the axis (&lt;TO&gt;.DynamicLimits.MaxJerk)  Permitted range of values: Factor &lt; 0.0 and 0.1 &lt; Factor ≤ 0.9 |  |
+| &lt; 0.0 | The jerk factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
 | 0.0 | No jerk limitation |  |  |  |  |  |
 | ≥ 0.1 | The specified factor is used. |  |  |  |  |  |
 | LinkConstellation |  | INPUT | DWORD | 16#FFFF FFFF | When "CoordSystem" = 0, 1, 2 or 3:   [Target joint position space](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t)   The joint position space is specified depending on the respective [kinematics type](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#kinematics-types-s7-1500t). |  |
@@ -4945,21 +4945,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-transition-of-the-sptp-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | TurnJoint |  | INPUT | ARRAY [1..6] OF DINT | - | With up to four interpolating kinematics axes:  Not relevant |  |
 | When "CoordSystem" = 0, 1, 2 or 3<sup>1)</sup>:   [Target joint position range of the joint J[1..6]](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t) |  |  |  |  |  |  |
-|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m < 0) | -180° + m · 360° ≤ Position < 180° + m · 360° |
-| -2 | -900 ≤ position < -540 |  |  |  |  |  |
-| -1 | -540 ≤ position < -180 |  |  |  |  |  |
+|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m &lt; 0) | -180° + m · 360° ≤ Position &lt; 180° + m · 360° |
+| -2 | -900 ≤ position &lt; -540 |  |  |  |  |  |
+| -1 | -540 ≤ position &lt; -180 |  |  |  |  |  |
 | 0 | Shortest distance |  |  |  |  |  |
-| 1 | -180 ≤ position < 180 |  |  |  |  |  |
-| 2 | 180 ≤ position < 540 |  |  |  |  |  |
-| 3 | 540 ≤ position < 900 |  |  |  |  |  |
-| n (n > 0) | -180° + (n - 1) · 360° ≤ Position < 180° + (n - 1) · 360° |  |  |  |  |  |
+| 1 | -180 ≤ position &lt; 180 |  |  |  |  |  |
+| 2 | 180 ≤ position &lt; 540 |  |  |  |  |  |
+| 3 | 540 ≤ position &lt; 900 |  |  |  |  |  |
+| n (n &gt; 0) | -180° + (n - 1) · 360° ≤ Position &lt; 180° + (n - 1) · 360° |  |  |  |  |  |
 | ExecutionTimeStatus |  | OUTPUT | LREAL | 0.0 | [Display of execution progress](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#starting-the-sptp-motion-job-s7-1500t)   Value range: 0.0 … 1.0   The job is completed with "ExecutionTimeStatus" = 1.0. |  |
 | 0.0 | The job has not yet been executed. |  |  |  |  |  |
-| > 0.0 | The job is being executed. |  |  |  |  |  |
+| &gt; 0.0 | The job is being executed. |  |  |  |  |  |
 | 1.0 | The job was executed. |  |  |  |  |  |
 | Done |  | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
 | Busy |  | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
@@ -5027,7 +5027,7 @@ The following table shows the parameters of the Motion Control instruction "MC_T
 | ConveyorBelt | INPUT | TO_Positioning­Axis  TO_Synchronous­Axis  TO_ExternalEncoder  TO_LeadingAxisProxy | - | Leading value capable technology object to which the OCS is coupled:  Leading-value-capable technology objects are:  - Positioning axis - Synchronous axis - External encoder - Leading axis proxy |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | ConveyorBeltOrigin | INPUT | TO_Struct_Kinematics_Frame | - | Frame for the OCS reference position on the conveyor |  |
-| InitialObjectPosition | INPUT | TO_Struct_Kinematics_Frame | 0.0 | "InitialObjectPosition.x" contains the differential value on the belt position to determine the tracked position of the OCS in relation to the OCS reference position  Permitted values:  - "InitialObjectPosition.x" <=> 0.0 - "InitialObjectPosition.y" = 0.0 - "InitialObjectPosition.z" = 0.0 - "InitialObjectPosition.a" = 0.0 - "InitialObjectPosition.b" = 0.0 - "InitialObjectPosition.c" = 0.0 |  |
+| InitialObjectPosition | INPUT | TO_Struct_Kinematics_Frame | 0.0 | "InitialObjectPosition.x" contains the differential value on the belt position to determine the tracked position of the OCS in relation to the OCS reference position  Permitted values:  - "InitialObjectPosition.x" &lt;=&gt; 0.0 - "InitialObjectPosition.y" = 0.0 - "InitialObjectPosition.z" = 0.0 - "InitialObjectPosition.a" = 0.0 - "InitialObjectPosition.b" = 0.0 - "InitialObjectPosition.c" = 0.0 |  |
 | CoordSystem | INPUT | DINT | 1 | Number of the tracked OCS |  |
 | 1 | OCS1 |  |  |  |  |
 | 2 | OCS2 |  |  |  |  |
@@ -5086,7 +5086,7 @@ When the simulation is started with "Execute" = TRUE and "Mode" = 1, the positio
 
 In simulation mode, the individual kinematics axes can move independently using single-axis jobs, be disabled and enabled again without the motion processing being canceled at the kinematics technology object.
 
-To exit simulation mode, each of the kinematics axes must be at position "<TO>.AxesData.A[1..6].Position". Before you exit the simulation, move each of the kinematics axes using single-axis jobs to position "<TO>.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
+To exit simulation mode, each of the kinematics axes must be at position "&lt;TO&gt;.AxesData.A[1..6].Position". Before you exit the simulation, move each of the kinematics axes using single-axis jobs to position "&lt;TO&gt;.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
 
 When simulation is exited with "Execute" = TRUE and "Mode" = 0, the simulation is exited and the kinematics motion is continued. The setpoints take effect directly on the kinematics axes.
 
@@ -5099,7 +5099,7 @@ When simulation is exited with "Execute" = TRUE and "Mode" = 0, the simulation i
 - The technology object has been configured correctly.
 - The interconnected axes are enabled.
 - When switching on and off, a single-axis job (e.g. "MC_MoveAbsolute") is not active on any of the interconnected axes.
-- To exit the simulation with "Execute" = TRUE and "Mode" = 0, the kinematics axes must be at position "<TO>.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
+- To exit the simulation with "Execute" = TRUE and "Mode" = 0, the kinematics axes must be at position "&lt;TO&gt;.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
 
 ###### Override response
 
@@ -5158,7 +5158,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (<TO>.WorkspaceZone[1..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
+With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (&lt;TO&gt;.WorkspaceZone[1..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
 
 The "MC_DefineWorkspaceZone" job interjects itself in the job sequence on the Kinematics technology object and therefore effective for the following motion jobs.
 
@@ -5231,7 +5231,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (<TO>.KinematicsZone[2..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
+With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (&lt;TO&gt;.KinematicsZone[2..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
 
 The "MC_DefineKinematicsZone" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
@@ -5298,14 +5298,14 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the [zone monitoring](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#zone-monitoring-s7-1500t) for a workspace zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
+The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the [zone monitoring](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#zone-monitoring-s7-1500t) for a workspace zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
 
 The "MC_SetWorkspaceZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs. When an "MC_SetWorkspaceZoneActive" job becomes part of the job sequence, the zone must already be defined. Otherwise, the job is rejected with "ErrorID" = 16#80C7. You can ensure this as follows:
 
 - Do not submit the "MC_SetWorkspaceZoneActive" job until the "MC_DefineWorkspaceZone" job is completed ("Done" = TRUE).
 - Check whether the tag "StatusWorkspaceZone[1..10].Valid" = TRUE before you submit the "MC_SetWorkspaceZoneActive" job.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
 
 ###### Applies to
 
@@ -5359,7 +5359,7 @@ You use Motion Control instruction "MC_SetWorkspaceZoneInactive" to deactivate a
 
 The "MC_SetWorkspaceZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
 
 ###### Applies to
 
@@ -5415,14 +5415,14 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the [zone monitoring](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#zone-monitoring-s7-1500t) for a kinematics zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
+The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the [zone monitoring](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#zone-monitoring-s7-1500t) for a kinematics zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
 
 The "MC_SetKinematicsZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs. When an "MC_SetKinematicsZoneActive" job becomes part of the job sequence, the zone must already be defined. Otherwise, the job is rejected with "ErrorID" = 16#80C7. You can ensure this as follows:
 
 - Do not submit the "MC_SetKinematicsZoneActive" job until the "MC_DefineKinematicsZone" job is completed ("Done" = TRUE).
 - Check whether the tag "StatusKinematicsZone[2..10].Valid" = TRUE before you submit the "MC_SetWorkspaceZoneActive" job.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -5476,7 +5476,7 @@ You use Motion Control instruction "MC_SetKinematicsZoneInactive" to deactivate 
 
 The "MC_SetKinematicsZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -5554,12 +5554,12 @@ The configurable coordinates depend on the kinematics type used:
 
 The following tags of the technology object data block contain the current coordinates of the tool frame 1:
 
-- <TO>.StatusTool.Frame[1].x
-- <TO>.StatusTool.Frame[1].y
-- <TO>.StatusTool.Frame[1].z
-- <TO>.StatusTool.Frame[1].a
-- <TO>.StatusTool.Frame[1].b
-- <TO>.StatusTool.Frame[1].c
+- &lt;TO&gt;.StatusTool.Frame[1].x
+- &lt;TO&gt;.StatusTool.Frame[1].y
+- &lt;TO&gt;.StatusTool.Frame[1].z
+- &lt;TO&gt;.StatusTool.Frame[1].a
+- &lt;TO&gt;.StatusTool.Frame[1].b
+- &lt;TO&gt;.StatusTool.Frame[1].c
 
 ###### Applies to
 
@@ -5605,7 +5605,7 @@ This section contains information on the following topics:
 
 With the "MC_SetTool" Motion Control instruction, you activate a tool. With the "ToolNumber" parameter, you specify the tool number. The "MC_SetTool" job can be executed only if the kinematics is in standstill. Tool 1 is active by default.
 
-The "<TO>.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
+The "&lt;TO&gt;.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
 
 > **Note**
 >
@@ -5672,12 +5672,12 @@ The "MC_SetOcsFrame" job is added to the queue of the job sequence and is theref
 
 The following tags of the technology object data block contain the current coordinates of the object coordinate systems:
 
-- <TO>.StatusOcsFrame[1..3].x
-- <TO>.StatusOcsFrame[1..3].y
-- <TO>.StatusOcsFrame[1..3].z
-- <TO>.StatusOcsFrame[1..3].a
-- <TO>.StatusOcsFrame[1..3].b
-- <TO>.StatusOcsFrame[1..3].c
+- &lt;TO&gt;.StatusOcsFrame[1..3].x
+- &lt;TO&gt;.StatusOcsFrame[1..3].y
+- &lt;TO&gt;.StatusOcsFrame[1..3].z
+- &lt;TO&gt;.StatusOcsFrame[1..3].a
+- &lt;TO&gt;.StatusOcsFrame[1..3].b
+- &lt;TO&gt;.StatusOcsFrame[1..3].c
 
 ###### Applies to
 
@@ -5876,14 +5876,14 @@ The following table shows the parameters of the Motion Control instruction "MC_I
 | 100 | Machine coordinate system (MCS) |  |  |  |  |  |
 | 101 | Joint coordinate system (JCS)<sup>1) 2)</sup> |  |  |  |  |  |
 | TurnJoint |  | INPUT | ARRAY [1..6] OF DINT | - | Target joint position range of the joint J[1..6]<sup>1)</sup> |  |
-|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m < 0) | -180° + m · 360° ≤ Position < 180° + m · 360° |
-| -2 | -900 ≤ position < -540 |  |  |  |  |  |
-| -1 | -540 ≤ position < -180 |  |  |  |  |  |
-| 0 | Basic joint position area:  -180 ≤ position < 180 |  |  |  |  |  |
-| 1 | -180 ≤ position < 180 |  |  |  |  |  |
-| 2 | 180 ≤ position < 540 |  |  |  |  |  |
-| 3 | 540 ≤ position < 900 |  |  |  |  |  |
-| n (n > 0) | -180° + (n - 1) · 360° ≤ Position < 180° + (n - 1) · 360° |  |  |  |  |  |
+|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m &lt; 0) | -180° + m · 360° ≤ Position &lt; 180° + m · 360° |
+| -2 | -900 ≤ position &lt; -540 |  |  |  |  |  |
+| -1 | -540 ≤ position &lt; -180 |  |  |  |  |  |
+| 0 | Basic joint position area:  -180 ≤ position &lt; 180 |  |  |  |  |  |
+| 1 | -180 ≤ position &lt; 180 |  |  |  |  |  |
+| 2 | 180 ≤ position &lt; 540 |  |  |  |  |  |
+| 3 | 540 ≤ position &lt; 900 |  |  |  |  |  |
+| n (n &gt; 0) | -180° + (n - 1) · 360° ≤ Position &lt; 180° + (n - 1) · 360° |  |  |  |  |  |
 | Valid |  | OUTPUT | BOOL | FALSE | TRUE | The output parameters are valid. |
 | Busy |  | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | Error |  | OUTPUT | BOOL | FALSE | TRUE | An error occurred while processing the job. The job is rejected. The cause of the error can be found in the "ErrorID" parameter. |
@@ -5936,7 +5936,7 @@ The Motion Control instruction offers you the following:
 ###### Requirements
 
 - The Interpreter technology object has been configured correctly.
-- No Motion Control job is active at the Interpreter technology object ("<TO>.StatusWord.X0" = FALSE (Control)).
+- No Motion Control job is active at the Interpreter technology object ("&lt;TO&gt;.StatusWord.X0" = FALSE (Control)).
 
 ###### Override response
 
@@ -5999,7 +5999,7 @@ The Motion Control instruction offers you the following:
 ###### Requirement
 
 - The Interpreter technology object has been configured correctly.
-- The Interpreter program to be executed is loaded or has been loaded in the Interpreter technology object ("<TO>.StatusWord.X9" = TRUE (Loading) or "<TO>.StatusWord.X10" = TRUE (Loaded)).
+- The Interpreter program to be executed is loaded or has been loaded in the Interpreter technology object ("&lt;TO&gt;.StatusWord.X9" = TRUE (Loading) or "&lt;TO&gt;.StatusWord.X10" = TRUE (Loaded)).
 - No other "MC_RunProgram" job is active on the Interpreter technology object.
 - No "MC_Stop" job is active on the Interpreter technology object.
 
@@ -6036,13 +6036,13 @@ This section contains information on the following topics:
 
 ###### Description
 
-Use the "MC_StopProgram" Motion Control instruction to stop the execution of the Interpreter program in the Interpreter technology object. A single axis/kinematics controlled by the interpreter program is stopped depending on the specified mode ("<TO>.StatusInterpreterMotion.StatusWord.X0" = TRUE (ControlledByInterpreter) ). The corresponding technology object of the single axis/kinematics is then no longer controlled by the Interpreter technology object.
+Use the "MC_StopProgram" Motion Control instruction to stop the execution of the Interpreter program in the Interpreter technology object. A single axis/kinematics controlled by the interpreter program is stopped depending on the specified mode ("&lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0" = TRUE (ControlledByInterpreter) ). The corresponding technology object of the single axis/kinematics is then no longer controlled by the Interpreter technology object.
 
 > **Note**
 >
 > **Never-ending motion jobs**
 >
-> Note that for motion jobs that do not end automatically, such as "move()", the "<TO>.StatusInterpreterMotion.StatusWord.X0" tag (ControlledByInterpreter) of the corresponding technology object is set to "FALSE" as soon as the technology object has reached the specified state.
+> Note that for motion jobs that do not end automatically, such as "move()", the "&lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0" tag (ControlledByInterpreter) of the corresponding technology object is set to "FALSE" as soon as the technology object has reached the specified state.
 >
 > To also cancel these motion jobs with a "MC_StopProgram" job, use the MCL instruction "[setControlledByInterpreter()](Using%20S7-1500T%20Interpreter%20functions%20%28S7-1500T%29.md#setcontrolledbyinterpreter-set-controlledbyinterpreter-bit-for-a-technology-object-s7-1500t)".
 
@@ -6194,7 +6194,7 @@ The following table shows how a new Motion Control job affects running interpret
 
 ##### Override response for technology objects controlled by the Interpreter
 
-The following table shows how a new Motion Control job acts in relation to a technology object controlled by the Interpreter during the execution of an Interpreter program ("<TO>.StatusInterpreterMotion.StatusWord.X0" = TRUE (ControlledByInterpreter)):
+The following table shows how a new Motion Control job acts in relation to a technology object controlled by the Interpreter during the execution of an Interpreter program ("&lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0" = TRUE (ControlledByInterpreter)):
 
 | ⇓ New job | The new job will be executed. | The new job aborts the execution of the Interpreter program. |
 | --- | --- | --- |
@@ -6241,7 +6241,7 @@ The following table shows how a new Motion Control job acts in relation to a tec
 >
 > Note that when starting a kinematics motion controlled by the Interpreter, no "MC_GroupStop" job may be active, otherwise the motion job will be aborted.
 >
-> A "MC_GroupStop" job only affects active kinematics motions or if the kinematics technology object is controlled by the Interpreter ("<TO>.StatusInterpreterMotion.StatusWord.X0" = TRUE (ControlledByInterpreter)).
+> A "MC_GroupStop" job only affects active kinematics motions or if the kinematics technology object is controlled by the Interpreter ("&lt;TO&gt;.StatusInterpreterMotion.StatusWord.X0" = TRUE (ControlledByInterpreter)).
 
 ---
 
@@ -6313,10 +6313,10 @@ With the Motion Control instruction "MC_Power", a technology object is enabled o
 
 - The technology object has been configured correctly.
 - The readiness of the drive is assumed for enabling the technology object. When using the SIEMENS telegram 10x, you can evaluate the bit "DriveReady" from the signal word "MELDW" of the receiving telegram "PD_TEL10x_IN".
-- Cyclic bus communication is established between controller and encoder ("<TO>.StatusSensor[1..4].CommunicationOK" = TRUE).
-- Cyclic bus communication is established between controller and drive ("<TO>.StatusDrive.CommunicationOK" = TRUE).
-- The status of the active encoder is valid ("<TO>.StatusSensor[1..4].State" = 2).
-- The optional [data adaption](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#transferring-drive-and-encoder-parameters-automatically-s7-1500-s7-1500t) has been completed ("<TO>.StatusDrive.AdaptionState" = 2 and "<TO>.StatusSensor[1..4].AdaptionState" = 2).
+- Cyclic bus communication is established between controller and encoder ("&lt;TO&gt;.StatusSensor[1..4].CommunicationOK" = TRUE).
+- Cyclic bus communication is established between controller and drive ("&lt;TO&gt;.StatusDrive.CommunicationOK" = TRUE).
+- The status of the active encoder is valid ("&lt;TO&gt;.StatusSensor[1..4].State" = 2).
+- The optional [data adaption](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#transferring-drive-and-encoder-parameters-automatically-s7-1500-s7-1500t) has been completed ("&lt;TO&gt;.StatusDrive.AdaptionState" = 2 and "&lt;TO&gt;.StatusSensor[1..4].AdaptionState" = 2).
 
 The requirements that must be met before a technology object can be released via "MC_Power" can be found in the Siemens Industry Online Support in the FAQ entry [109750297](https://support.industry.siemens.com/cs/ww/en/view/109750297).
 
@@ -6339,9 +6339,9 @@ The following table shows the parameters of the Motion Control instruction "MC_P
 | 1 | Enable positioning axis/synchronous axis position-controlled |  |  |  |  |
 | The parameter initially takes effect when the positioning axis is enabled ("Enable" changes from "FALSE" to "TRUE") and when the axis is enabled after acknowledgment of an interrupt that caused the axis to be disabled.  This parameter is ignored when a speed axis or an external encoder is used. |  |  |  |  |  |
 | StopMode | INPUT | INT | 0 | Not applicable to the technology object external encoder  If you disable a technology object with a negative edge at parameter "Enable", the axis decelerates in accordance with the selected "StopMode". |  |
-| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop". The drive is then switched off and the technology object is locked.  (<TO>.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop". The drive is then switched off and the technology object is locked.  (&lt;TO&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
 | 1 | Immediate stop  When a technology object is disabled, the setpoint zero is output. The axis is braked to a standstill according to the configuration in the drive. The drive is then switched off and the technology object is locked. |  |  |  |  |
-| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is locked.  (<TO>.DynamicLimits.MaxDeceleration; <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is locked.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration; &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | 3 | Coasting down  When the technology object is disabled, the drive is de-energized (pulse suppression) and switches to the closing lockout state. The drive then coasts to a stop.  If you are using a drive with an analog setpoint interface, the enable output is disabled and the analog output signal is set to 0.0.   **Note**   Using drives with motor holding brake  With pulse suppression, the drive gives the command to close the motor holding brake immediately and independently of the motor speed. If you do not want the brake to close, make sure to keep the brake open with the FB "LAxisCtrl_BrakeControl".   ["LAxisCtrl" library](https://support.industry.siemens.com/cs/ww/en/view/109749348) |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Technology object enable status |  |
 | FALSE | Disabled  - The technology object does not accept any Motion Control jobs. - Speed control and positioning control are not active. - The actual values of the technology object are not checked for validity. |  |  |  |  |
@@ -6365,7 +6365,7 @@ Depending on the "StartMode" parameter, the position is held ("StartMode" = 1)
 
 **Enable in motion of axis**
 
-If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object > Configuration > Extended parameters > Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm responses.
+If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm responses.
 
 If "StartMode" = 0, the axis is braked as much as possible by the specification of the velocity setpoint zero. Monitoring operations and dynamic limits are not active in this case.
 
@@ -6383,7 +6383,7 @@ When the "Enable" input is set, the extrapolated actual position is applied as t
 
 Noisy encoder signals cause the detection of an actual velocity despite standstill of the axis. For encoders with low resolution, this detected actual velocity is greater than for encoders with high resolution. High actual velocities result in significant jumps of the position setpoint when enabling the axis.
 
-To output the velocity setpoint zero when enabling the axis in "StartMode" = 1 and prevent jumps of the position setpoint and braking of the axis with maximum deceleration, set <TO>.PositionControl.VelocityModePowerOn = 1. Monitoring operations and dynamic limits are not active in this case.
+To output the velocity setpoint zero when enabling the axis in "StartMode" = 1 and prevent jumps of the position setpoint and braking of the axis with maximum deceleration, set &lt;TO&gt;.PositionControl.VelocityModePowerOn = 1. Monitoring operations and dynamic limits are not active in this case.
 
 ##### Disabling technology objects
 
@@ -6401,20 +6401,20 @@ When a drive is connected using PROFIdrive, the setpoint, enable and drive statu
 
   With "Enable" = TRUE parameter, the technology object is enabled. The drive is enabled according to the PROFIdrive standard.
 
-  When the "<TO>.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
+  When the "&lt;TO&gt;.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". The drive is disabled according to the PROFIdrive standard.
 
 ##### Analog drive connection
 
-The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (<TO>.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (<TO>.Actor.Interface.DriveReadyInput).
+The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (&lt;TO&gt;.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (&lt;TO&gt;.Actor.Interface.DriveReadyInput).
 
 - **Enable technology object and activate drive**
 
   With "Enable" = TRUE parameter, the enable output ("Enable drive output") is set.
 
-  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "<TO>.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
+  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "&lt;TO&gt;.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". When the setpoint zero is reached, the enable output is set to "FALSE".
@@ -6470,8 +6470,8 @@ With "Restart" = TRUE, you start reinitialization (restart) of technology object
   For a restart, the technology object must be disabled.
 
   ("MC_Power.Status" = FALSE and "MC_Power.Busy" = FALSE)
-- Cyclic BUS communication is established between controller and encoder ("<TO>.StatusSensor[1..4].CommunicationOK" = TRUE).
-- Cyclic BUS communication is established between controller and drive ("<TO>.StatusDrive.CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and encoder ("&lt;TO&gt;.StatusSensor[1..4].CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and drive ("&lt;TO&gt;.StatusDrive.CommunicationOK" = TRUE).
 
 ##### Override response
 
@@ -6542,7 +6542,7 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_Home", you create the relationship between the position in the technology object and the mechanical position. The actual position value in the technology object is assigned to a homing mark at the same time. This homing mark represents a known mechanical position.
 
-With active homing, the default values under "Technology object > Configuration > Extended parameters > Dynamic default values" are used for the dynamic values acceleration, deceleration and jerk.
+With active homing, the default values under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" are used for the dynamic values acceleration, deceleration and jerk.
 
 ##### Applies to
 
@@ -6556,7 +6556,7 @@ With active homing, the default values under "Technology object > Configuration 
 - "Mode" = 2, 3, 5, 8, 10  
   The technology object is enabled.
 - "Mode" = 6, 7, 8, 11, 12, 13  
-  The encoder actual values are valid (<TO>.StatusSensor[1..4].State = 2).
+  The encoder actual values are valid (&lt;TO&gt;.StatusSensor[1..4].State = 2).
 - "Mode" = 0, 1, 6, 7
 
   The axis is in position-controlled mode.
@@ -6599,12 +6599,12 @@ An option for evaluating the individual status bits can be found in the section 
 | 2 | Passive homing (without reset)  Function same as "Mode" = 8 with the difference that the "homed" status is **not** reset when the function is enabled. |
 | 3 | Active homing   The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After the completion of the motion, the axis is positioned at the value of the "Position" parameter. |
 | 4 | Reserved |
-| 5 | Active homing ("Position" parameter has no effect)  The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object > Configuration > Extended parameters > Homing > Active homing".  (<TO>.Homing.HomePosition) |
-| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[1..4].AbsEncoderOffset) |
-| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[1..4].AbsEncoderOffset) |
+| 5 | Active homing ("Position" parameter has no effect)  The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Active homing".  (&lt;TO&gt;.Homing.HomePosition) |
+| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) |
+| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) |
 | 8 | Passive homing  When the homing mark is detected, the actual value is set to the value of the "Position" parameter. |
 | 9 | Abort passive homing  An active job for passive homing is aborted. |
-| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object > Configuration > Extended parameters > Homing > Passive homing".  (<TO>.Homing.HomePosition) |
+| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Passive homing".  (&lt;TO&gt;.Homing.HomePosition) |
 | 11 | Set setpoint position (absolute)  The set position of the technology object is set to the value of the "Position" parameter. The following error remains. |
 | 12 | Shift the setpoint position (relative)  The set position of the technology object is shifted by the value of the "Position" parameter. The following error remains. |
 | 13 | Incremental encoder adjustment  The current position is set to the value of parameter "Position". |
@@ -6656,13 +6656,13 @@ The following table shows the parameters of the Motion Control instruction "MC_H
 | Axis | INPUT | TO_SpeedAxis  TO_Positioning­Axis  TO_Synchronous­Axis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
+| &gt; 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | FALSE | The current acceleration at the start of the job is reduced using the configured jerk. Afterwards, the deceleration builds up. |
 | TRUE | The acceleration is set to 0.0 at the start of the job, and the deceleration immediately builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Velocity zero has been reached. |
@@ -6679,7 +6679,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Set the necessary values for the parameters "Deceleration", "Jerk" and "AbortAcceleration".
 3. Start the "MC_Halt" job with a positive edge at parameter "Execute".
 
-   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Braking an axis with active force/torque limit
 
@@ -6751,26 +6751,26 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Position | INPUT | LREAL | 0.0 | Absolute target position |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
-| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object > Configuration > Basic parameters > Enable modulo" |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
+| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object &gt; Configuration &gt; Basic parameters &gt; Enable modulo" |  |
 | 1 | Positive direction |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |
 | 3 | Shortest distance |  |  |  |  |
-| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (<TO>.PositioningMonitoring.MinDwellTime). |
+| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (&lt;TO&gt;.PositioningMonitoring.MinDwellTime). |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred while processing the job. The job is rejected. The cause of the error can be found in the "ErrorID" parameter. |
@@ -6847,22 +6847,22 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Distance for the positioning process<sup>1)</sup> (negative or positive) |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
-| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (<TO>.PositioningMonitoring.MinDwellTime). |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
+| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (&lt;TO&gt;.PositioningMonitoring.MinDwellTime). |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred while processing the job. The job is rejected. The cause of the error can be found in the "ErrorID" parameter. |
@@ -6948,17 +6948,17 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint/speed setpoint for the motion  ("Velocity" = 0.0 is permitted) |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Direction | INPUT | INT | 0 | Direction of rotation of the axis |  |
 | 0 | The sign of the velocity specified at the "Velocity" parameter defines the direction of rotation. |  |  |  |  |
 | 1 | Positive direction of rotation   The value of "Velocity" is used. |  |  |  |  |
@@ -6979,7 +6979,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 
 An "MC_MoveVelocity" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 The parameters "InVelocity" and "Busy" show the value "TRUE", until the "MC_MoveVelocity" job is overridden by another Motion Control job.
 
@@ -6999,7 +6999,7 @@ Proceed as follows to move an axis with constant velocity/speed:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### More information
 
@@ -7073,19 +7073,19 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | JogBackward | INPUT | BOOL | FALSE | TRUE | As long as the parameter is "TRUE", the axis moves in the negative direction at the velocity specified in parameter "Velocity". |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint/speed setpoint for the motion |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |
-| < 0.0 | The absolute value of the specified value is used. |  |  |  |  |
+| &lt; 0.0 | The absolute value of the specified value is used. |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | PositionControlled | INPUT | BOOL | TRUE | FALSE | Non-position-controlled operation |
 | TRUE | Position-controlled mode |  |  |  |  |
 | The parameter applies as long as the "MC_MoveJog" job is being executed. After this, the setting of the following job applies.  This parameter is ignored when a speed axis is used. |  |  |  |  |  |
@@ -7099,7 +7099,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 
 An "MC_MoveJog" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Moving an axis in jog mode
 
@@ -7116,7 +7116,7 @@ Proceed as follows to move an axis in jog mode:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### More information
 
@@ -7183,21 +7183,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Additional distance for the overlapping positioning operation (negative or positive) |  |
 | VelocityDiff | INPUT | LREAL | -1.0 | Maximum velocity deviation compared to the active motion |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Superimposed positioning complete |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -7260,13 +7260,13 @@ The following table shows the parameters of the Motion Control instruction "MC_H
 | Axis | INPUT | TO_Positioning­Axis  TO_Synchronous­Axis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the superimposed motion |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the superimposed motion |  |
-| > 0.0 | Constant-acceleration velocity profile of the superimposed motion; the specified jerk is used |  |  |  |  |
+| &gt; 0.0 | Constant-acceleration velocity profile of the superimposed motion; the specified jerk is used |  |  |  |  |
 | = 0.0 | Trapezoidal velocity profile of the superimposed motion |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | FALSE | The current acceleration of the superimposed motion at the start of the job is reduced using the configured jerk. Afterwards, the deceleration builds up. |
 | TRUE | The acceleration of the superimposed motion is set to 0.0 at the start of the job; the deceleration builds up immediately. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | The execution of the job is completed.  The superimposed motion is stopped. |
@@ -7295,13 +7295,13 @@ The following table shows the parameters of the Motion Control instruction "MC_H
 
 The axis is moved with an "MC_MoveRelative" job (A1) as the basic motion.
 
-Via "Exe_2", a "MC_MoveSuperimposed" job (A2) is triggered as a superimposed motion. The <TO>.StatusWord.X23 bit is set. At time ①, the "MC_MoveSuperimposed" job is overridden by an "MC_HaltSuperimposed" job (A3). The job abort is signaled via "Abort_2". The <TO>.StatusWord2.X7 bit is set and the <TO>.StatusWord.X23 bit is reset. With "AbortAcc_3" = FALSE, the current acceleration is reduced with the specified jerk. After that, the deceleration is built up and the superimposed motion is decelerated to velocity = 0. The completion of the "MC_HaltSuperimposed" job is reported via "Done_3". The <TO>.StatusWord2.X7 bit is reset.
+Via "Exe_2", a "MC_MoveSuperimposed" job (A2) is triggered as a superimposed motion. The &lt;TO&gt;.StatusWord.X23 bit is set. At time ①, the "MC_MoveSuperimposed" job is overridden by an "MC_HaltSuperimposed" job (A3). The job abort is signaled via "Abort_2". The &lt;TO&gt;.StatusWord2.X7 bit is set and the &lt;TO&gt;.StatusWord.X23 bit is reset. With "AbortAcc_3" = FALSE, the current acceleration is reduced with the specified jerk. After that, the deceleration is built up and the superimposed motion is decelerated to velocity = 0. The completion of the "MC_HaltSuperimposed" job is reported via "Done_3". The &lt;TO&gt;.StatusWord2.X7 bit is reset.
 
 **Section B**
 
 The axis is moved with an "MC_MoveRelative" job (A1) as the basic motion.
 
-Via "Exe_2", a "MC_MoveSuperimposed" job (A2) is triggered as a superimposed motion. The <TO>.StatusWord.X23 bit is set. At time ②, the "MC_MoveSuperimposed" job is overridden by an "MC_HaltSuperimposed" job (A3). The job abort is signaled via "Abort_2". The <TO>.StatusWord2.X7 bit is set and the <TO>.StatusWord.X23 bit is reset. With "AbortAcc_3" = TRUE, the current acceleration is set to zero immediately and the deceleration builds up. The superimposed motion is decelerated to velocity = 0. The completion of the "MC_HaltSuperimposed" job is reported via "Done_3". The <TO>.StatusWord2.X7 bit is reset.
+Via "Exe_2", a "MC_MoveSuperimposed" job (A2) is triggered as a superimposed motion. The &lt;TO&gt;.StatusWord.X23 bit is set. At time ②, the "MC_MoveSuperimposed" job is overridden by an "MC_HaltSuperimposed" job (A3). The job abort is signaled via "Abort_2". The &lt;TO&gt;.StatusWord2.X7 bit is set and the &lt;TO&gt;.StatusWord.X23 bit is reset. With "AbortAcc_3" = TRUE, the current acceleration is set to zero immediately and the deceleration builds up. The superimposed motion is decelerated to velocity = 0. The completion of the "MC_HaltSuperimposed" job is reported via "Done_3". The &lt;TO&gt;.StatusWord2.X7 bit is reset.
 
 ### MC_SetSensor V7 (S7-1500T)
 
@@ -7355,7 +7355,7 @@ The following table shows the parameters of the Motion Control instruction "MC_S
 
 ##### Changing to absolute encoder
 
-When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (<TO>.StatusSensor[1..4].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
+When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
 
 ### MC_Stop V7 (S7-1500, S7-1500T)
 
@@ -7394,7 +7394,7 @@ The standstill position is derived from the stop ramp. Three modes, which you de
 - An "MC_Stop" job does not abort any synchronous operation function in simulation.
 - An "MC_Stop" job is aborted by another "MC_Stop" job with a stop response that is the same or higher.
 
-  Significance of stop responses (descending): "Mode" = 0 > "Mode" = 2 > "Mode" = 3
+  Significance of stop responses (descending): "Mode" = 0 &gt; "Mode" = 2 &gt; "Mode" = 3
 
 You can find more detailed information on the override response of an "MC_Stop" job in the section "[Override response of Motion Control jobs V7](#override-response-of-motion-control-jobs-v7-s7-1500-s7-1500t)".
 
@@ -7408,7 +7408,7 @@ Alarm responses with stop can by overridden by "MC_Stop" jobs with higher signif
 
 The following table represents the significance of Stop mode at "MC_Stop" job and the alarm responses:
 
-| Stop mode | MC_Stop.Mode | <TO>.ErrorDetail.Reaction | Significance |
+| Stop mode | MC_Stop.Mode | &lt;TO&gt;.ErrorDetail.Reaction | Significance |
 | --- | --- | --- | --- |
 | Remove enable | - | 4 | 4 |
 | Emergency stop | 0 | 3 | 3 |
@@ -7417,13 +7417,13 @@ The following table represents the significance of Stop mode at "MC_Stop" job an
 
 **Example 1**
 
-An alarm with "<TO>.ErrorDetail.Reaction" = 2 occurs. While the alarm is active, an "MC_Stop" job with "Mode" = 0 is sent.
+An alarm with "&lt;TO&gt;.ErrorDetail.Reaction" = 2 occurs. While the alarm is active, an "MC_Stop" job with "Mode" = 0 is sent.
 
 Result: The stop with maximum dynamic values that was caused by the alarm is overridden by the emergency stop of the "MC_Stop" job. After the axis has been braked to a velocity of 0 by an emergency stop, the "MC_Stop" order outputs "Done" = TRUE.
 
 **Example 2**
 
-An MC_Stop job with Mode = 3 is active. During the active job, an alarm occurs with the alarm response "<TO>.ErrorDetail.Reaction" = 2.
+An MC_Stop job with Mode = 3 is active. During the active job, an alarm occurs with the alarm response "&lt;TO&gt;.ErrorDetail.Reaction" = 2.
 
 Result: The stop of the "MC_Stop" job with specified dynamics is overridden by the alarm response with a stop with maximum dynamics. The "MC_Stop" job displays "CommandAborted" = TRUE.
 
@@ -7441,18 +7441,18 @@ The following table shows the parameters of the Motion Control instruction "MC_S
 | Execute | INPUT | BOOL | FALSE | TRUE | The motion is stopped and new motion jobs are prevented. |
 | FALSE | Motion jobs can be executed again. |  |  |  |  |
 | Mode | INPUT | DINT | 0 | Mode for dynamic behavior |  |
-| 0 | Emergency stop  The technology object is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop".  (<TO>.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  The technology object is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop".  (&lt;TO&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
 | 1 | Not permitted |  |  |  |  |
-| 2 | Stop with maximum dynamic values  The technology object is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamics limits". The configured maximum jerk is hereby taken into account.  (<TO>.DynamicLimits.MaxDeceleration, <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  The technology object is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics limits". The configured maximum jerk is hereby taken into account.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration, &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | 3 | Stop with specified dynamic response  The technology object is stopped with the specified values at the parameters "Deceleration" and "Jerk". |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "Mode" = 3:  Deceleration for the braking ramp |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "Mode" = 3:  Jerk for the braking ramp |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | TRUE | Acceleration is set to 0.0. The configured deceleration is built up immediately. |
 | FALSE | The acceleration is reduced using the configured jerk. The configured deceleration then builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Standstill is reached. |
@@ -7469,7 +7469,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Set the necessary values for the parameters "Mode", "Deceleration", "Jerk" and "AbortAcceleration".
 3. Start the "MC_Stop" job with a positive edge at parameter "Execute".
 
-   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
    As long as "Execute" = TRUE, the technology object cannot execute motion jobs.
 
@@ -7708,8 +7708,8 @@ Another measuring job must be started again using "MC_MeasuringInput.Execute" = 
 ###### Requirement
 
 - The technology object has been configured correctly.
-- The encoder of the axis must have "valid" status ("<TO>.StatusSensor[1..4].State" = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
-- The communication between measuring input and measuring module is established ("<TO>.StatusWord.CommunicationOK" = TRUE).
+- The encoder of the axis must have "valid" status ("&lt;TO&gt;.StatusSensor[1..4].State" = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
+- The communication between measuring input and measuring module is established ("&lt;TO&gt;.StatusWord.CommunicationOK" = TRUE).
 - Measurement using PROFIdrive is not possible during active or passive homing.
 
 ###### Override response
@@ -7780,8 +7780,8 @@ With cyclic measuring, up to two measuring events are detected by the system and
 
 - The technology object has been configured correctly.
 - Cyclic measuring is only possible when measuring using Timer DI.
-- The communication between measuring input and measuring module is established ("<TO>.StatusWord.CommunicationOK" = TRUE).
-- The encoder of the axis operationally in effect must have "valid" status "valid" ("<TO>.StatusSensor[1..4].State" = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
+- The communication between measuring input and measuring module is established ("&lt;TO&gt;.StatusWord.CommunicationOK" = TRUE).
+- The encoder of the axis operationally in effect must have "valid" status "valid" ("&lt;TO&gt;.StatusSensor[1..4].State" = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
 
 ###### Override response
 
@@ -7923,7 +7923,7 @@ When a technological alarm occurs, the output cam is processed again after error
 
 - The technology object has been configured correctly.
 - The higher-level technology object must have a valid position.
-- The communication between output cam and output module is established ("<TO>.StatusWord.CommunicationOK" = TRUE).
+- The communication between output cam and output module is established ("&lt;TO&gt;.StatusWord.CommunicationOK" = TRUE).
 - Setpoint output cams are not output for an axis in non-position-controlled operation.
 
 ###### Override response
@@ -8003,7 +8003,7 @@ With the Motion Control instruction "MC_CamTrack", the processing of a cam track
 
 - The technology object has been configured correctly.
 - The higher-level technology object must have a valid position.
-- The communication between output cam and output module is established ("<TO>.StatusWord.CommunicationOK" = TRUE).
+- The communication between output cam and output module is established ("&lt;TO&gt;.StatusWord.CommunicationOK" = TRUE).
 - Setpoint output cams are not output for an axis in non-position-controlled operation.
 
 ###### Override response
@@ -8051,7 +8051,7 @@ A cam track is activated with "Enable" = TRUE. The cam track is output in accord
 
 | Tag |  | Value | Description |
 | --- | --- | --- | --- |
-| <TO>Parameter. |  |  |  |
+| &lt;TO&gt;Parameter. |  |  |  |
 |  | CamTrackType | 0 | Specified output cam type for the cam track is distance output cam |
 | ReferencePosition | 20.0 | Specified axis reference position for the cam track |  |
 | CamTrackLength | 100.0 | Specified length of the cam track |  |
@@ -8110,7 +8110,7 @@ The Motion Control instruction offers you the following:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 
 ###### Override response
@@ -8135,17 +8135,17 @@ The following table shows the parameters of the Motion Control instruction "MC_G
 | RatioNumerator | INPUT | DINT | 1 | [Gear ratio numerator](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-gear-ratio-s7-1500-s7-1500t)   Permitted integer values:  -2147483648 to 2147483647  (value 0 not permitted) |  |
 | RatioDenominator | INPUT | DINT | 1 | [Gear ratio denominator](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-gear-ratio-s7-1500-s7-1500t)   Permitted integer values: 1 to 2147483647 |  |
 | Acceleration | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearin-s7-1500-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearin-s7-1500-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearin-s7-1500-s7-1500t) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | InGear | OUTPUT | BOOL | FALSE | TRUE | Synchronous operation reached  The following axis is synchronized and moves synchronously to the leading axis. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -8197,7 +8197,7 @@ Different parameters are relevant depending on the synchronization profile. You 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The following axis is homed.
 - With synchronization in advance using leading value distance, the leading axis must be at least the specified distance ("MasterStartDistance") from the synchronization position ("MasterSyncPosition") when starting the job.
@@ -8238,24 +8238,24 @@ The following table shows the parameters of the Motion Control instruction "MC_G
 | MasterStartDistance | INPUT | LREAL | 1.0 | When "SyncProfileReference" = 1, 3:  Leading value distance |  |
 | When "SyncProfileReference" = 0:  Not relevant |  |  |  |  |  |
 | Velocity | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | SyncDirection | INPUT | DINT | 3 | [Direction of synchronization](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-direction-of-synchronization-with-mc_gearinpos-s7-1500t)   (in effect for following axes with activated Modulo setting) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during synchronization. |  |  |  |  |
@@ -8324,7 +8324,7 @@ The Motion Control instruction offers you the following:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The leading value is valid.
 
@@ -8355,17 +8355,17 @@ The following table shows the parameters of the Motion Control instruction "MC_G
 | RatioNumerator | INPUT | DINT | 1 | [Gear ratio numerator](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-gear-ratio-s7-1500t-1)   Permitted integer values:  -2147483648 to 2147483647  (value 0 not permitted) |  |
 | RatioDenominator | INPUT | DINT | 1 | [Gear ratio denominator](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-gear-ratio-s7-1500t-1)   Permitted integer values: 1 to 2147483647 |  |
 | Acceleration | INPUT | LREAL | -1.0 | [Acceleration for the synchronization](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearinvelocity-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | [Deceleration for the synchronization](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearinvelocity-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | [Jerk for the synchronization](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-using-dynamic-parameters-with-mc_gearinvelocity-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | PositionControlled | INPUT | BOOL | FALSE | [Position control of the following axis](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-position-control-of-the-following-axis-s7-1500t) |  |
 | TRUE | Position-controlled mode |  |  |  |  |
 | FALSE | Non-position-controlled operation |  |  |  |  |
@@ -8439,7 +8439,7 @@ The Motion Control instruction offers you the following in camming:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - By means of the Motion Control instruction "MC_GearIn", "MC_GearInPos" or "MC_CamIn", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE, "MC_GearInPos.InSync" = TRUE or "MC_CamIn.InSync" = TRUE).
 - No "MC_OffsetAbsolute" or "MC_OffsetRelative" job is active or waiting.
@@ -8461,21 +8461,21 @@ The following table shows the parameters of the Motion Control instruction "MC_P
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Relative leading value offset |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | ProfileReference | INPUT | DINT | 0 | Type of the leading value offset |  |
 | 0 | Only with gearing:  Leading value offset using dynamic parameters |  |  |  |  |
 | 1 | Leading value offset using leading value distance as of current leading value position |  |  |  |  |
@@ -8506,7 +8506,7 @@ At time ①, an "MC_PhasingRelative" job (A2) is initiated with "ProfileReferenc
 
 At time ② the "MC_PhasingRelative" job (A2) is initiated again via "Exe". The leading value offset via dynamic parameters is moved out again with the dynamics specified in addition to the synchronous movement. The absolute leading value offset traversed via the job is indicated in "CoveredPhaseShift". "Done" indicates that the leading value was successfully shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 ###### Function chart: Relative shift of the leading value in camming
 
@@ -8516,11 +8516,11 @@ The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMo
 
 At time ①, an "MC_PhasingRelative" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartPhasing" parameter shows that the leading value offset traverses from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "CoveredPhaseShift". "Done" indicates that the leading value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_PhasingRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
+At time ② the "MC_PhasingRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartPhasing" parameter shows that the following axis traverses the leading value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "CoveredPhaseShift". "Done" indicates that the leading value was successfully shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 #### MC_PhasingAbsolute V7 (S7-1500T)
 
@@ -8567,7 +8567,7 @@ The Motion Control instruction offers you the following in camming:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - By means of the Motion Control instruction "MC_GearIn", "MC_GearInPos" or "MC_CamIn", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE, "MC_GearInPos.InSync" = TRUE or "MC_CamIn.InSync" = TRUE).
 - No "MC_OffsetAbsolute" or "MC_OffsetRelative" job is active or waiting.
@@ -8589,21 +8589,21 @@ The following table shows the parameters of the Motion Control instruction "MC_P
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Absolute leading value offset |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis during leading value offset (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | ProfileReference | INPUT | DINT | 0 | Type of the leading value offset |  |
 | 0 | Only with gearing:  Leading value offset using dynamic parameters |  |  |  |  |
 | 1 | Leading value offset using leading value distance as of current leading value position |  |  |  |  |
@@ -8632,9 +8632,9 @@ The following table shows the parameters of the Motion Control instruction "MC_P
 
 At time ①, an "MC_PhasingAbsolute" job (A2) is initiated with "ProfileReference" = 0 via "Exe" during an active gearing with "MC_GearInPos" (A1). The "StartPhasing" parameter shows that the following axis traverses the leading value offset with the dynamics specified additively to the synchronous operation motion. The absolute leading value offset traversed via the job is indicated in "AbsolutePhaseShift". "Done" indicates that the leading value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe". Because the absolute leading value offset (<TO>.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
+At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe". Because the absolute leading value offset (&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 ###### Function chart: Absolute shift of the leading value in camming
 
@@ -8644,11 +8644,11 @@ The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMo
 
 At time ①, an "MC_PhasingAbsolute" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartPhasing" parameter shows that the leading value offset traverses from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "AbsolutePhaseShift". "Done" indicates that the leading value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
+At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartPhasing" parameter shows that the following axis traverses the leading value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "AbsolutePhaseShift". "Done" indicates that the leading value was successfully shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 #### MC_OffsetRelative V7 (S7-1500T)
 
@@ -8742,7 +8742,7 @@ At time ①, an "MC_OffsetRelative" job (A2) is initiated with "ProfileReference
 
 At time ② the "MC_OffsetRelative" job (A2) is initiated again via "Exe". The "StartOffset" parameter shows that the following axis traverses the following value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated In "CoveredOffset". "Done" indicates that the following value was successfully shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 ###### Function chart: Relative shift of the following value in camming
 
@@ -8752,11 +8752,11 @@ The absolute following value offset is indicated in the "<TO>.StatusSynchronized
 
 At time ①, an "MC_OffsetRelative" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartOffset" parameter shows that the following axis traverses the following value offset from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated In "CoveredOffset". "Done" indicates that the following value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_OffsetRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
+At time ② the "MC_OffsetRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartOffset" parameter shows that the following axis traverses the following value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated In "CoveredOffset". "Done" indicates that the leading value was successfully shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 #### MC_OffsetAbsolute V7 (S7-1500T)
 
@@ -8848,9 +8848,9 @@ The following table shows the parameters of the Motion Control instruction "MC_O
 
 At time ①, an "MC_OffsetAbsolute" job (A2) is initiated with "ProfileReference" = 1 via "Exe" during an active gearing with "MC_GearInPos" (A1). The "StartOffset" parameter shows that the following axis traverses the following value offset from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated in "AbsoluteOffset". "Done" indicates that the following value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe". Because the absolute following value offset (<TO>.StatusSynchronizedMotion.Offset) is already 90.0, the following value is not shifted.
+At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe". Because the absolute following value offset (&lt;TO&gt;.StatusSynchronizedMotion.Offset) is already 90.0, the following value is not shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 ###### Function chart: Absolute shift of the following value in camming
 
@@ -8860,11 +8860,11 @@ The absolute following value offset is indicated in the "<TO>.StatusSynchronized
 
 At time ①, an "MC_OffsetAbsolute" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartOffset" parameter shows that the following axis traverses the following value offset from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated in "AbsoluteOffset". "Done" indicates that the following value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
+At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartOffset" parameter shows that the following axis traverses the following value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated in "AbsoluteOffset". "Done" indicates that the following value was successfully shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 #### MC_CamIn V7 (S7-1500T)
 
@@ -8881,7 +8881,7 @@ With the Motion Control instruction "MC_CamIn", you start a [camming](Using%20S7
 
 The synchronous position of the leading axis and the corresponding position of the following axis from the cam represent the relationship of the two axes to one another. The synchronous position of the leading axis is determined by the following parameters:
 
-- Start position of the cam (<TO_Cam>.StatusCam.StartLeadingValue)
+- Start position of the cam (&lt;TO_Cam&gt;.StatusCam.StartLeadingValue)
 - Scaling the leading values of the cam ("MasterScaling")
 - Offset/position of the cam ("MasterOffset")
 - Start point within the cam ("MasterSyncPosition")
@@ -8920,7 +8920,7 @@ Different parameters are relevant depending on the synchronization profile. You 
 - The technology objects of the leading axis, following axis, and cam have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The following axis is homed.
 - The cam is interpolated with "MC_InterpolateCam".
@@ -8967,28 +8967,28 @@ The following table shows the parameters of the Motion Control instruction "MC_C
 | 5 | [Direct synchronous setting at the end of the cam](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#directly-set-following-axis-synchronously-at-end-of-the-cam-with-mc_camin-s7-1500t) |  |  |  |  |
 | 6 | [Synchronization in advance using leading value distance starting from current leading value position](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#synchronizing-following-axis-in-advance-via-the-leading-value-path-from-the-current-leading-value-position-with-mc_camin-s7-1500t) |  |  |  |  |
 | MasterStartDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1, 3, 4, 6:  Leading value distance  Distance of the leading axis during the synchronization |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | ≤ 0.0 | Not permitted |  |  |  |  |
 | When "SyncProfileReference" = 0, 2, 5:  Not relevant |  |  |  |  |  |
 | Velocity | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5, 6:  Not relevant |  |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5, 6:  Not relevant |  |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5, 6:  Not relevant |  |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5, 6:  Not relevant |  |  |  |  |  |
 | ApplicationMode | INPUT | DINT | 0 | [Application of the cam](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-application-mode-of-the-cam-s7-1500t) |  |
 | 0 | Once/not cyclic |  |  |  |  |
@@ -9045,7 +9045,7 @@ At time ②, "InSync" signals at the leading value position 90° that the follow
 
 At time ③, the "MC_CamIn" job (A1) with "SyncProfileReference" = 6 is initiated via "Exe". The start of the synchronization is displayed with "StartSync". The following axis (TO_Slave) is synchronized in advance as of the current leading value position 270° to the cam (Cam_1) by means of the specified leading value distance "MasterStartDistance" = 180°. The dynamic response required for synchronization is calculated by the system.
 
-At time ④, the following axis reaches the following value of the specified reference position "MasterSyncPosition" = 180° at the leading value position 90° in relation to the start of the cam. The cam disc is automatically offset by -90° in the leading value area (<TO>.StatusSynchronizedMotion.MasterOffset). "InSync" signals that the following axis is synchronized and moving synchronously to the leading axis.
+At time ④, the following axis reaches the following value of the specified reference position "MasterSyncPosition" = 180° at the leading value position 90° in relation to the start of the cam. The cam disc is automatically offset by -90° in the leading value area (&lt;TO&gt;.StatusSynchronizedMotion.MasterOffset). "InSync" signals that the following axis is synchronized and moving synchronously to the leading axis.
 
 ###### Function chart: Togging and direct synchronous setting at the end of the cam
 
@@ -9055,7 +9055,7 @@ At time ④, the following axis reaches the following value of the specified ref
 
 An "MC_CamIn" job (A1) is active.
 
-At time ① another "MC_CamIn" job (A2) is initiated via "Exe_2". The status "Waiting" is displayed at the following axis until the end of the active cam "Cam_1" has been reached (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 3).
+At time ① another "MC_CamIn" job (A2) is initiated via "Exe_2". The status "Waiting" is displayed at the following axis until the end of the active cam "Cam_1" has been reached (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 3).
 
 At time ② the end of the cam is reached ("Eop_1"). The cam is switched over. Since no synchronization takes place, the "Synchronous" status is retained.
 
@@ -9088,7 +9088,7 @@ The Motion Control instruction offers you the following:
 
 - The technology object has been configured correctly.
 - The following axis is a synchronous axis.
-- Synchronous operation is active on the technology object in status "Synchronous" (<TO>.StatusWord.X22 = TRUE).
+- Synchronous operation is active on the technology object in status "Synchronous" (&lt;TO&gt;.StatusWord.X22 = TRUE).
 
 ###### Override response
 
@@ -9166,13 +9166,13 @@ The following table shows the parameters of the Motion Control instruction "MC_G
 | 5 | [Only cancel a pending gearing](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#only-cancel-a-pending-gearing-with-mc_gearout-s7-1500t) |  |  |  |  |
 | MasterStopDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1:   [Leading value distance](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-leading-value-distance-with-mc_gearout-s7-1500t) |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:   [Deceleration](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-dynamic-parameters-with-mc_gearout-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:   [Jerk](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-dynamic-parameters-with-mc_gearout-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | SyncOutDirection | INPUT | DINT | 3 | [Desynchronization direction](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-direction-of-desynchronization-with-mc_gearout-s7-1500t) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during desynchronization. |  |  |  |  |
 | 2 | Negative direction  The following axis may only travel in negative direction during desynchronization. |  |  |  |  |
@@ -9258,13 +9258,13 @@ The following table shows the parameters of the Motion Control instruction "MC_C
 | 5 | [Only cancel a pending camming](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#only-cancel-a-pending-camming-with-mc_camout-s7-1500t) |  |  |  |  |
 | MasterStopDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1:   [Leading value distance](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-leading-value-distance-with-mc_camout-s7-1500t) |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:   [Deceleration](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-dynamic-parameters-with-mc_camout-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:   [Jerk](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#desynchronizing-following-axis-using-dynamic-parameters-with-mc_camout-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | SyncOutDirection | INPUT | DINT | 3 | [Desynchronization direction](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#defining-direction-of-desynchronization-with-mc_camout-s7-1500t) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during desynchronization. |  |  |  |  |
 | 2 | Negative direction  The following axis may only travel in negative direction during desynchronization. |  |  |  |  |
@@ -9577,7 +9577,7 @@ The Motion Control instruction offers you the following:
 
   - For points: ARRAY[*] OF TO_Cam­_Struct­_Point­Data
   - For segments: ARRAY[*] OF TO_Cam­_Struct­_Segment­Data
-- The "Optimized block access" option is activated in the properties of the data block under "General > Attributes".
+- The "Optimized block access" option is activated in the properties of the data block under "General &gt; Attributes".
 
 ###### Override response
 
@@ -9975,7 +9975,7 @@ If the high and low torque limits are active, the following monitors and limits 
 - Following error monitoring
 - Time limitations for positioning and standstill monitoring
 
-Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object > Configuration > Extended parameters > Limits > Torque limit".
+Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object &gt; Configuration &gt; Extended parameters &gt; Limits &gt; Torque limit".
 
 ###### Applies to
 
@@ -10063,7 +10063,7 @@ The functions of the Motion Control instruction "MC_TorqueLimiting" can be activ
   - P1522 to a fixed value of 100 %
   - P1523 to a fixed value of -100% (e.g. through interconnection to fixed value parameter P2902[i]).
   - P1544 Torque/force reduction analysis during travel to fixed stop to 100% (default)
-  - P2194 Threshold value for the parameter "InLimitation" of < 100% (default 90%)
+  - P2194 Threshold value for the parameter "InLimitation" of &lt; 100% (default 90%)
 
 ###### Fixed stop detection applies to
 
@@ -10093,7 +10093,7 @@ The following table shows the parameters of the Motion Control instruction "MC_T
 | Enable | INPUT | BOOL | FALSE | TRUE | Activate function corresponding to input parameter "Mode" |
 | Limit | INPUT | LREAL | -1.0 | Value of force/torque limiting (in the configured unit of measurement)<sup>1)</sup>  If the drive and telegram do not support force/torque limiting, the specified value is irrelevant. |  |
 | ≥ 0.0 | The value specified at the parameter is used. |  |  |  |  |
-| < 0.0 | The value configured in the "Torque limiting" configuration window is used.  Tag Torque Limit:   <TO>.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   <TO>.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
+| &lt; 0.0 | The value configured in the "Torque limiting" configuration window is used.  Tag Torque Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
 | Mode | INPUT | DINT | 0 | 0 | Force/torque limiting<sup>1)</sup> |
 | 1 | Fixed stop detection<sup>1)</sup>  If drive and telegram support force/torque limiting, this is applied. |  |  |  |  |
 | InClamping | OUTPUT | BOOL | FALSE | TRUE | "Mode" = 1:  The drive is kept at the fixed stop (clamping<sup>2)</sup>). The axis position is within the positioning tolerance. |
@@ -10384,21 +10384,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Position[5] | INPUT | LREAL | 0.0 | B coordinates<sup>1)</sup> |  |  |
 | Position[6] | INPUT | LREAL | 0.0 | C coordinates<sup>1)</sup> |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | [Velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | [Direction of movement of the Cartesian orientation A](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-target-position-of-the-linear-motion-s7-1500t) |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -10416,10 +10416,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-transition-of-linear-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | [Dynamic adaptation](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -10498,21 +10498,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Distance[5] | INPUT | LREAL | 0.0 | B coordinate<sup>1)</sup> |  |  |
 | Distance[6] | INPUT | LREAL | 0.0 | C coordinate<sup>1)</sup> |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | [Velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | [Reference coordinate system](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-target-position-of-the-linear-motion-s7-1500t) |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -10525,10 +10525,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-transition-of-linear-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | [Dynamic adaptation](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamic-response-of-the-linear-motion-s7-1500t) |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaptation |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -10640,21 +10640,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:   [Angle of the circular movement](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-circular-path-via-center-point-and-angle-s7-1500t)   The absolute value of the specified value is used. |  |
 | When "CircMode" = 0 and 2:  Not relevant |  |  |  |  |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | [Velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limit |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | Direction of movement of the Cartesian orientation A |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -10672,10 +10672,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-transition-of-circular-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | [Dynamic adaptation](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaptation |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -10793,21 +10793,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:   [Angle of the circular movement](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-circular-path-via-center-point-and-angle-s7-1500t)   The absolute value of the specified value is used. |  |
 | When "CircMode" = 0 and 2:  Not relevant |  |  |  |  |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | [Velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | [Acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | [Deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | [Jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic default values" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference coordinate system |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -10820,10 +10820,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-transition-of-circular-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | [Dynamic adaptation](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#define-the-dynamic-response-of-the-circular-motion-s7-1500t) |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -10929,22 +10929,22 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | When "CoordSystem" = 101<sup>1)</sup>:  Position of joint J6 |  |  |  |  |  |  |
 | When "CoordSystem" = 0, 1, 2 or 3<sup>1)</sup>:  C coordinate |  |  |  |  |  |  |
 | With up to four interpolating kinematics axes:  Not relevant |  |  |  |  |  |  |
-| VelocityFactor |  | INPUT | LREAL | -1.0 | [Factor for the velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum velocity of the axes (<TO>.DynamicLimits.MaxVelocity)  Permitted range of values: Factor < 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
-| < 0.0 | The velocity factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
+| VelocityFactor |  | INPUT | LREAL | -1.0 | [Factor for the velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum velocity of the axes (&lt;TO&gt;.DynamicLimits.MaxVelocity)  Permitted range of values: Factor &lt; 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
+| &lt; 0.0 | The velocity factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
 | ≥ 0.01 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum velocity of the axes is used. |  |  |  |  |  |
-| AccelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum acceleration of the axis (<TO>.DynamicLimits.MaxAcceleration)  Permitted range of values: Factor ≤ 1.0 |  |
-| < 0.0 | The acceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
+| AccelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum acceleration of the axis (&lt;TO&gt;.DynamicLimits.MaxAcceleration)  Permitted range of values: Factor ≤ 1.0 |  |
+| &lt; 0.0 | The acceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum acceleration of the axes is used. |  |  |  |  |  |
-| DecelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum deceleration of the axis (<TO>.DynamicLimits.MaxDeceleration)  Permitted range of values: Factor ≤ 1.0 |  |
-| < 0.0 | The deceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
+| DecelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum deceleration of the axis (&lt;TO&gt;.DynamicLimits.MaxDeceleration)  Permitted range of values: Factor ≤ 1.0 |  |
+| &lt; 0.0 | The deceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum deceleration of the axes is used. |  |  |  |  |  |
-| JerkFactor |  | INPUT | LREAL | -1.0 | [Factor for the jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum jerk of the axis (<TO>.DynamicLimits.MaxJerk)  Permitted range of values: Factor < 0.0 and 0.1 < Factor ≤ 0.9 |  |
-| < 0.0 | The jerk factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
+| JerkFactor |  | INPUT | LREAL | -1.0 | [Factor for the jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum jerk of the axis (&lt;TO&gt;.DynamicLimits.MaxJerk)  Permitted range of values: Factor &lt; 0.0 and 0.1 &lt; Factor ≤ 0.9 |  |
+| &lt; 0.0 | The jerk factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
 | 0.0 | No jerk limitation |  |  |  |  |  |
 | ≥ 0.1 | The specified factor is used. |  |  |  |  |  |
 | LinkConstellation |  | INPUT | DWORD | 16#FFFF FFFF | When "CoordSystem" = 0, 1, 2 or 3:   [Target joint position space](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t)   The joint position space is specified depending on the respective [kinematics type](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#kinematics-types-s7-1500t). |  |
@@ -10964,7 +10964,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-transition-of-the-sptp-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | PositionMode |  | INPUT | DINT | 1 | When "CoordSystem" = 0, 1, 2 or 3, kinematics types with orientation A and enabled Modulo functionality:   [Use of the "Position" parameter](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t) |  |
 | 1 | Absolute Cartesian position and absolute Cartesian orientation A |  |  |  |  |  |
@@ -10977,14 +10977,14 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | With more than four interpolating kinematics axes:  Not relevant |  |  |  |  |  |  |
 | TurnJoint |  | INPUT | ARRAY [1..6] OF DINT | - | With up to four interpolating kinematics axes:  Not relevant |  |
 | When "CoordSystem" = 0, 1, 2 or 3<sup>1)</sup>:   [Target joint position range of the joint J[1..6]](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t) |  |  |  |  |  |  |
-|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m < 0) | (m · 360) - 180 ≤ position < ((m + 1) · 360) - 180 |
-| -2 | -900 ≤ position < -540 |  |  |  |  |  |
-| -1 | -540 ≤ position < -180 |  |  |  |  |  |
+|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m &lt; 0) | (m · 360) - 180 ≤ position &lt; ((m + 1) · 360) - 180 |
+| -2 | -900 ≤ position &lt; -540 |  |  |  |  |  |
+| -1 | -540 ≤ position &lt; -180 |  |  |  |  |  |
 | 0 | Shortest distance |  |  |  |  |  |
-| 1 | -180 ≤ position < 180 |  |  |  |  |  |
-| 2 | 180 ≤ position < 540 |  |  |  |  |  |
-| 3 | 540 ≤ position < 900 |  |  |  |  |  |
-| n (n > 0) | ((n - 2) · 360) + 180 ≤ position < ((n -1) · 360) + 180 |  |  |  |  |  |
+| 1 | -180 ≤ position &lt; 180 |  |  |  |  |  |
+| 2 | 180 ≤ position &lt; 540 |  |  |  |  |  |
+| 3 | 540 ≤ position &lt; 900 |  |  |  |  |  |
+| n (n &gt; 0) | ((n - 2) · 360) + 180 ≤ position &lt; ((n -1) · 360) + 180 |  |  |  |  |  |
 | ExecutionTimeStatus |  | OUTPUT | LREAL | 0.0 | [Display of execution progress](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#starting-the-sptp-motion-job-s7-1500t)   Value range: 0.0 … 1.0   The job is completed with "ExecutionTimeStatus" = 1.0. |  |
 | Done |  | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
 | Busy |  | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
@@ -11082,22 +11082,22 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | When "CoordSystem" = 101<sup>1)</sup>:  Relative position of joint J6 |  |  |  |  |  |  |
 | When "CoordSystem" = 0, 1, 2 or 3<sup>1)</sup>:  C coordinate |  |  |  |  |  |  |
 | With up to four interpolating kinematics axes:  Not relevant |  |  |  |  |  |  |
-| VelocityFactor |  | INPUT | LREAL | -1.0 | [Factor for the velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum velocity of the axes (<TO>.DynamicLimits.MaxVelocity)  Permitted range of values: Factor < 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
-| < 0.0 | The velocity factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
+| VelocityFactor |  | INPUT | LREAL | -1.0 | [Factor for the velocity](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum velocity of the axes (&lt;TO&gt;.DynamicLimits.MaxVelocity)  Permitted range of values: Factor &lt; 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
+| &lt; 0.0 | The velocity factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
 | ≥ 0.01 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum velocity of the axes is used. |  |  |  |  |  |
-| AccelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum acceleration of the axis (<TO>.DynamicLimits.MaxAcceleration)  Permitted range of values: Factor ≤ 1.0 |  |
-| < 0.0 | The acceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
+| AccelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the acceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum acceleration of the axis (&lt;TO&gt;.DynamicLimits.MaxAcceleration)  Permitted range of values: Factor ≤ 1.0 |  |
+| &lt; 0.0 | The acceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum acceleration of the axes is used. |  |  |  |  |  |
-| DecelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum deceleration of the axis (<TO>.DynamicLimits.MaxDeceleration)  Permitted range of values: Factor ≤ 1.0 |  |
-| < 0.0 | The deceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
+| DecelerationFactor |  | INPUT | LREAL | -1.0 | [Factor for the deceleration](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum deceleration of the axis (&lt;TO&gt;.DynamicLimits.MaxDeceleration)  Permitted range of values: Factor ≤ 1.0 |  |
+| &lt; 0.0 | The deceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum deceleration of the axes is used. |  |  |  |  |  |
-| JerkFactor |  | INPUT | LREAL | -1.0 | [Factor for the jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum jerk of the axis (<TO>.DynamicLimits.MaxJerk)  Permitted range of values: Factor < 0.0 and 0.1 < Factor ≤ 0.9 |  |
-| < 0.0 | The jerk factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
+| JerkFactor |  | INPUT | LREAL | -1.0 | [Factor for the jerk](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-dynamics-factors-of-the-sptp-motion-s7-1500t) of axis motions in relation to the respective maximum jerk of the axis (&lt;TO&gt;.DynamicLimits.MaxJerk)  Permitted range of values: Factor &lt; 0.0 and 0.1 &lt; Factor ≤ 0.9 |  |
+| &lt; 0.0 | The jerk factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
 | 0.0 | No jerk limitation |  |  |  |  |  |
 | ≥ 0.1 | The specified factor is used. |  |  |  |  |  |
 | LinkConstellation |  | INPUT | DWORD | 16#FFFF FFFF | When "CoordSystem" = 0, 1, 2 or 3:   [Target joint position space](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t)   The joint position space is specified depending on the respective [kinematics type](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#kinematics-types-s7-1500t). |  |
@@ -11117,21 +11117,21 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | [Rounding clearance](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-transition-of-the-sptp-motion-s7-1500t) |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2..5] | INPUT | LREAL | - | Reserved |  |  |
 | TurnJoint |  | INPUT | ARRAY [1..6] OF DINT | - | With up to four interpolating kinematics axes:  Not relevant |  |
 | When "CoordSystem" = 0, 1, 2 or 3<sup>1)</sup>:   [Target joint position range of the joint J[1..6]](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#defining-the-cartesian-target-coordinates-of-the-sptp-motion-s7-1500t) |  |  |  |  |  |  |
-|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m < 0) | (m · 360) - 180 ≤ position < ((m + 1) · 360) - 180 |
-| -2 | -900 ≤ position < -540 |  |  |  |  |  |
-| -1 | -540 ≤ position < -180 |  |  |  |  |  |
+|  | TurnJoint[1..6] | INPUT | DINT | 0 | m (m &lt; 0) | (m · 360) - 180 ≤ position &lt; ((m + 1) · 360) - 180 |
+| -2 | -900 ≤ position &lt; -540 |  |  |  |  |  |
+| -1 | -540 ≤ position &lt; -180 |  |  |  |  |  |
 | 0 | Shortest distance |  |  |  |  |  |
-| 1 | -180 ≤ position < 180 |  |  |  |  |  |
-| 2 | 180 ≤ position < 540 |  |  |  |  |  |
-| 3 | 540 ≤ position < 900 |  |  |  |  |  |
-| n (n > 0) | ((n - 2) · 360) + 180 ≤ position < ((n -1) · 360) + 180 |  |  |  |  |  |
+| 1 | -180 ≤ position &lt; 180 |  |  |  |  |  |
+| 2 | 180 ≤ position &lt; 540 |  |  |  |  |  |
+| 3 | 540 ≤ position &lt; 900 |  |  |  |  |  |
+| n (n &gt; 0) | ((n - 2) · 360) + 180 ≤ position &lt; ((n -1) · 360) + 180 |  |  |  |  |  |
 | ExecutionTimeStatus |  | OUTPUT | LREAL | 0.0 | [Display of execution progress](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#starting-the-sptp-motion-job-s7-1500t)   Value range: 0.0 … 1.0   The job is completed with "ExecutionTimeStatus" = 1.0. |  |
 | 0.0 | The job has not yet been executed. |  |  |  |  |  |
-| > 0.0 | The job is being executed. |  |  |  |  |  |
+| &gt; 0.0 | The job is being executed. |  |  |  |  |  |
 | 1.0 | The job was executed. |  |  |  |  |  |
 | Done |  | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
 | Busy |  | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
@@ -11199,7 +11199,7 @@ The following table shows the parameters of the Motion Control instruction "MC_T
 | ConveyorBelt | INPUT | TO_Positioning­Axis  TO_Synchronous­Axis  TO_ExternalEncoder  TO_LeadingAxisProxy | - | Leading value capable technology object to which the OCS is coupled:  Leading-value-capable technology objects are:  - Positioning axis - Synchronous axis - External encoder - Leading axis proxy |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | ConveyorBeltOrigin | INPUT | TO_Struct_Kinematics_Frame | - | Frame for the OCS reference position on the conveyor |  |
-| InitialObjectPosition | INPUT | TO_Struct_Kinematics_Frame | 0.0 | "InitialObjectPosition.x" contains the differential value on the belt position to determine the tracked position of the OCS in relation to the OCS reference position  Permitted values:  - "InitialObjectPosition.x" <=> 0.0 - "InitialObjectPosition.y" = 0.0 - "InitialObjectPosition.z" = 0.0 - "InitialObjectPosition.a" = 0.0 - "InitialObjectPosition.b" = 0.0 - "InitialObjectPosition.c" = 0.0 |  |
+| InitialObjectPosition | INPUT | TO_Struct_Kinematics_Frame | 0.0 | "InitialObjectPosition.x" contains the differential value on the belt position to determine the tracked position of the OCS in relation to the OCS reference position  Permitted values:  - "InitialObjectPosition.x" &lt;=&gt; 0.0 - "InitialObjectPosition.y" = 0.0 - "InitialObjectPosition.z" = 0.0 - "InitialObjectPosition.a" = 0.0 - "InitialObjectPosition.b" = 0.0 - "InitialObjectPosition.c" = 0.0 |  |
 | CoordSystem | INPUT | DINT | 1 | Number of the tracked OCS |  |
 | 1 | OCS1 |  |  |  |  |
 | 2 | OCS2 |  |  |  |  |
@@ -11258,7 +11258,7 @@ When the simulation is started with "Execute" = TRUE and "Mode" = 1, the positio
 
 In simulation mode, the individual kinematics axes can move independently using single-axis jobs, be disabled and enabled again without the motion processing being canceled at the kinematics technology object.
 
-To exit simulation mode, each of the kinematics axes must be at position "<TO>.AxesData.A[1..6].Position". Before you exit the simulation, move each of the kinematics axes using single-axis jobs to position "<TO>.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
+To exit simulation mode, each of the kinematics axes must be at position "&lt;TO&gt;.AxesData.A[1..6].Position". Before you exit the simulation, move each of the kinematics axes using single-axis jobs to position "&lt;TO&gt;.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
 
 When simulation is exited with "Execute" = TRUE and "Mode" = 0, the simulation is exited and the kinematics motion is continued. The setpoints take effect directly on the kinematics axes.
 
@@ -11271,7 +11271,7 @@ When simulation is exited with "Execute" = TRUE and "Mode" = 0, the simulation i
 - The technology object has been configured correctly.
 - The interconnected axes are enabled.
 - When switching on and off, a single-axis job (e.g. "MC_MoveAbsolute") is not active on any of the interconnected axes.
-- To exit the simulation with "Execute" = TRUE and "Mode" = 0, the kinematics axes must be at position "<TO>.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
+- To exit the simulation with "Execute" = TRUE and "Mode" = 0, the kinematics axes must be at position "&lt;TO&gt;.AxesData.A[1..6].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
 
 ###### Override response
 
@@ -11330,7 +11330,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (<TO>.WorkspaceZone[1..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
+With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (&lt;TO&gt;.WorkspaceZone[1..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
 
 The "MC_DefineWorkspaceZone" job interjects itself in the job sequence on the Kinematics technology object and therefore effective for the following motion jobs.
 
@@ -11403,7 +11403,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (<TO>.KinematicsZone[2..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
+With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (&lt;TO&gt;.KinematicsZone[2..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
 
 The "MC_DefineKinematicsZone" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
@@ -11470,14 +11470,14 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the [zone monitoring](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#zone-monitoring-s7-1500t) for a workspace zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
+The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the [zone monitoring](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#zone-monitoring-s7-1500t) for a workspace zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
 
 The "MC_SetWorkspaceZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs. When an "MC_SetWorkspaceZoneActive" job becomes part of the job sequence, the zone must already be defined. Otherwise, the job is rejected with "ErrorID" = 16#80C7. You can ensure this as follows:
 
 - Do not submit the "MC_SetWorkspaceZoneActive" job until the "MC_DefineWorkspaceZone" job is completed ("Done" = TRUE).
 - Check whether the tag "StatusWorkspaceZone[1..10].Valid" = TRUE before you submit the "MC_SetWorkspaceZoneActive" job.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
 
 ###### Applies to
 
@@ -11531,7 +11531,7 @@ You use Motion Control instruction "MC_SetWorkspaceZoneInactive" to deactivate a
 
 The "MC_SetWorkspaceZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
 
 ###### Applies to
 
@@ -11587,14 +11587,14 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the [zone monitoring](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#zone-monitoring-s7-1500t) for a kinematics zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
+The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the [zone monitoring](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#zone-monitoring-s7-1500t) for a kinematics zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
 
 The "MC_SetKinematicsZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs. When an "MC_SetKinematicsZoneActive" job becomes part of the job sequence, the zone must already be defined. Otherwise, the job is rejected with "ErrorID" = 16#80C7. You can ensure this as follows:
 
 - Do not submit the "MC_SetKinematicsZoneActive" job until the "MC_DefineKinematicsZone" job is completed ("Done" = TRUE).
 - Check whether the tag "StatusKinematicsZone[2..10].Valid" = TRUE before you submit the "MC_SetWorkspaceZoneActive" job.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -11648,7 +11648,7 @@ You use Motion Control instruction "MC_SetKinematicsZoneInactive" to deactivate 
 
 The "MC_SetKinematicsZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -11726,12 +11726,12 @@ The configurable coordinates depend on the kinematics type used:
 
 The following tags of the technology object data block contain the current coordinates of the tool frame 1:
 
-- <TO>.StatusTool.Frame[1].x
-- <TO>.StatusTool.Frame[1].y
-- <TO>.StatusTool.Frame[1].z
-- <TO>.StatusTool.Frame[1].a
-- <TO>.StatusTool.Frame[1].b
-- <TO>.StatusTool.Frame[1].c
+- &lt;TO&gt;.StatusTool.Frame[1].x
+- &lt;TO&gt;.StatusTool.Frame[1].y
+- &lt;TO&gt;.StatusTool.Frame[1].z
+- &lt;TO&gt;.StatusTool.Frame[1].a
+- &lt;TO&gt;.StatusTool.Frame[1].b
+- &lt;TO&gt;.StatusTool.Frame[1].c
 
 ###### Applies to
 
@@ -11777,7 +11777,7 @@ This section contains information on the following topics:
 
 With the "MC_SetTool" Motion Control instruction, you activate a tool. With the "ToolNumber" parameter, you specify the tool number. The "MC_SetTool" job can be executed only if the kinematics is in standstill. Tool 1 is active by default.
 
-The "<TO>.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
+The "&lt;TO&gt;.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
 
 > **Note**
 >
@@ -11844,12 +11844,12 @@ The "MC_SetOcsFrame" job is added to the queue of the job sequence and is theref
 
 The following tags of the technology object data block contain the current coordinates of the object coordinate systems:
 
-- <TO>.StatusOcsFrame[1..3].x
-- <TO>.StatusOcsFrame[1..3].y
-- <TO>.StatusOcsFrame[1..3].z
-- <TO>.StatusOcsFrame[1..3].a
-- <TO>.StatusOcsFrame[1..3].b
-- <TO>.StatusOcsFrame[1..3].c
+- &lt;TO&gt;.StatusOcsFrame[1..3].x
+- &lt;TO&gt;.StatusOcsFrame[1..3].y
+- &lt;TO&gt;.StatusOcsFrame[1..3].z
+- &lt;TO&gt;.StatusOcsFrame[1..3].a
+- &lt;TO&gt;.StatusOcsFrame[1..3].b
+- &lt;TO&gt;.StatusOcsFrame[1..3].c
 
 ###### Applies to
 
@@ -12196,10 +12196,10 @@ With the Motion Control instruction "MC_Power", a technology object is enabled o
 
 - The technology object has been configured correctly.
 - The readiness of the drive is assumed for enabling the technology object. When using the SIEMENS telegram 10x, you can evaluate the bit "DriveReady" from the signal word "MELDW" of the receiving telegram "PD_TEL10x_IN".
-- Cyclic BUS communication is established between controller and encoder ("<TO>.StatusSensor[1..4].CommunicationOK" = TRUE).
-- Cyclic BUS communication is established between controller and drive ("<TO>.StatusDrive.CommunicationOK" = TRUE).
-- The status of the active encoder is valid ("<TO>.StatusSensor[1..4].State" = 2).
-- The optional [data adaption](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#transferring-drive-and-encoder-parameters-automatically-s7-1500-s7-1500t) has been completed ("<TO>.StatusDrive.AdaptionState" = 2 and "<TO>.StatusSensor[1..4].AdaptionState" = 2).
+- Cyclic BUS communication is established between controller and encoder ("&lt;TO&gt;.StatusSensor[1..4].CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and drive ("&lt;TO&gt;.StatusDrive.CommunicationOK" = TRUE).
+- The status of the active encoder is valid ("&lt;TO&gt;.StatusSensor[1..4].State" = 2).
+- The optional [data adaption](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#transferring-drive-and-encoder-parameters-automatically-s7-1500-s7-1500t) has been completed ("&lt;TO&gt;.StatusDrive.AdaptionState" = 2 and "&lt;TO&gt;.StatusSensor[1..4].AdaptionState" = 2).
 
 The requirements that must be met before a technology object can be released via "MC_Power" can be found in the Siemens Industry Online Support in the FAQ entry [109750297](https://support.industry.siemens.com/cs/ww/en/view/109750297).
 
@@ -12222,9 +12222,9 @@ The following table shows the parameters of the Motion Control instruction "MC_P
 | 1 | Enable positioning axis/synchronous axis position-controlled |  |  |  |  |
 | The parameter initially takes effect when the positioning axis is enabled ("Enable" changes from "FALSE" to "TRUE") and when the axis is enabled after acknowledgment of an interrupt that caused the axis to be disabled.  This parameter is ignored when a speed axis or an external encoder is used. |  |  |  |  |  |
 | StopMode | INPUT | INT | 0 | Not applicable to the technology object external encoder  If you disable a technology object with a negative edge at parameter "Enable", the axis decelerates in accordance with the selected "StopMode". |  |
-| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop". The drive is then switched off and the technology object is locked.  (<TO>.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop". The drive is then switched off and the technology object is locked.  (&lt;TO&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
 | 1 | Immediate stop  When a technology object is disabled, the setpoint zero is output. The axis is braked to a standstill according to the configuration in the drive. The drive is then switched off and the technology object is locked. |  |  |  |  |
-| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is locked.  (<TO>.DynamicLimits.MaxDeceleration; <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is locked.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration; &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Technology object enable status |  |
 | FALSE | Disabled  - The technology object does not accept any Motion Control jobs. - Speed control and positioning control are not active. - The actual values of the technology object are not checked for validity. |  |  |  |  |
 | TRUE | Enabled  - The enabled technology object accepts Motion Control jobs. - Speed control and positioning control are active. - The actual values of the technology object are valid. |  |  |  |  |
@@ -12247,7 +12247,7 @@ Depending on the "StartMode" parameter, the position is held ("StartMode" = 1)
 
 **Enable in motion of axis**
 
-If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object > Configuration > Extended parameters > Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm reactions.
+If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm reactions.
 
 If "StartMode" = 0, the axis is braked as much as possible by the specification of the velocity setpoint zero. Monitoring operations and dynamic limits are not active in this case.
 
@@ -12275,20 +12275,20 @@ When a drive is connected using PROFIdrive, the setpoint, enable and drive statu
 
   With "Enable" = TRUE parameter, the technology object is enabled. The drive is enabled according to the PROFIdrive standard.
 
-  When the "<TO>.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
+  When the "&lt;TO&gt;.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". The drive is disabled according to the PROFIdrive standard.
 
 ##### Analog drive connection
 
-The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (<TO>.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (<TO>.Actor.Interface.DriveReadyInput).
+The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (&lt;TO&gt;.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (&lt;TO&gt;.Actor.Interface.DriveReadyInput).
 
 - **Enable technology object and activate drive**
 
   With "Enable" = TRUE parameter, the enable output ("Enable drive output") is set.
 
-  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "<TO>.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
+  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "&lt;TO&gt;.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". When the setpoint zero is reached, the enable output is set to "FALSE".
@@ -12346,8 +12346,8 @@ With "Restart" = TRUE, you start reinitialization (restart) of technology object
   For a restart, the technology object must be disabled.
 
   ("MC_Power.Status" = FALSE and "MC_Power.Busy" = FALSE)
-- Cyclic BUS communication is established between controller and encoder ("<TO>.StatusSensor[1..4].CommunicationOK" = TRUE).
-- Cyclic BUS communication is established between controller and drive ("<TO>.StatusDrive.CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and encoder ("&lt;TO&gt;.StatusSensor[1..4].CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and drive ("&lt;TO&gt;.StatusDrive.CommunicationOK" = TRUE).
 
 ##### Override response
 
@@ -12412,11 +12412,11 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_Home", you create the relationship between the position in the technology object and the mechanical position. The actual position value in the technology object is assigned to a homing mark at the same time. This homing mark represents a known mechanical position.
 
-Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object > Configuration > Extended parameters > Homing".
+Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing".
 
 The "MC_Home.Mode" parameter for S7-1200 Motion Control and S7-1500 Motion Control has been standardized within the framework of technology version V2.0. This results in a new assignment of the parameter values for the "MC_Home.Mode" parameter. A comparison of the "MC_Home.Mode" parameter for technology versions V1.0 and ≥ V2.0 is available in the section "[Version overview](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-versions-s7-1500-s7-1500t)" of the "S7-1500/S7-1500T Motion Control overview" documentation.
 
-The preset values under "Technology object > Configuration > Extended parameters > Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
+The preset values under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
 
 ##### Applies to
 
@@ -12441,7 +12441,7 @@ The following table shows which modes are possible with each of the technology o
 - "Mode" = 2, 3, 5, 8, 10  
   The technology object is enabled.
 - "Mode" = 6, 7, 8, 11, 12  
-  The encoder values are valid (<TO>.StatusSensor[1..4].State = 2).
+  The encoder values are valid (&lt;TO&gt;.StatusSensor[1..4].State = 2).
 - "Mode" = 0, 1, 6, 7
 
   The axis is in position-controlled mode.
@@ -12465,12 +12465,12 @@ The following table shows the parameters of Motion Control instruction "MC_Home"
 | 2 | Passive homing (without reset)  Functions like "Mode" 8, with the difference that the "homed" status is **not** reset when the function is enabled. |  |  |  |  |
 | 3 | Active homing   The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After the completion of the motion, the axis is positioned at the value of the "Position" parameter. |  |  |  |  |
 | 4 | Reserved |  |  |  |  |
-| 5 | Active homing ("Position" parameter has no effect)  The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object > Configuration > Extended parameters > Homing > Active homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
-| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |  |
-| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |  |
+| 5 | Active homing ("Position" parameter has no effect)  The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Active homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
+| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |  |
+| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |  |
 | 8 | Passive homing  When the homing mark is detected, the actual value is set to the value of the "Position" parameter. |  |  |  |  |
 | 9 | Cancel passive homing  An active job for passive homing is canceled. |  |  |  |  |
-| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object > Configuration > Extended parameters > Homing > Passive homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
+| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Passive homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
 | 11 | Set setpoint position (absolute)  The setpoint position of the technology object is set to the value of the "Position" parameter. The following error remains. |  |  |  |  |
 | 12 | Shift the setpoint position (relative)  The setpoint position of the technology object is shifted by the value of the "Position" parameter. The following error remains. |  |  |  |  |
 | ReferenceMark­Position | OUTPUT | LREAL | 0.0 | Display of the position at which the technology object was homed  (valid when "Done" = TRUE) |  |
@@ -12494,7 +12494,7 @@ To home a technology object, follow these steps:
 
    When the "Done" parameter shows the value "TRUE", the "MC_Home" job has been completed according to the selected "Mode".
 
-   The "Homed" status of the technology object is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Homed" (<TO>.StatusWord.X5 (HomingDone)).
+   The "Homed" status of the technology object is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Homed" (&lt;TO&gt;.StatusWord.X5 (HomingDone)).
 
    Please note that during active homing ("Mode" = 3, 5) the "Homed" status is set to "TRUE" as soon as the homing mark is approached. The parameter "Done" is only set to "TRUE" after moving to the homing position.
 
@@ -12555,13 +12555,13 @@ The following table shows the parameters of Motion Control instruction "MC_Halt"
 | Axis | INPUT | TO_SpeedAxis  TO_Positioning­Axis  TO_Synchronous­Axis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
+| &gt; 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | FALSE | The current acceleration at the start of the job is reduced using the configured jerk. Afterwards, the deceleration builds up |
 | TRUE | The acceleration is set to 0.0 at the start of the job, and the deceleration immediately builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Velocity zero has been reached. |
@@ -12578,7 +12578,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Set the necessary values for the parameters "Deceleration", "Jerk" and "AbortAcceleration".
 3. Start the "MC_Halt" job with a positive edge at parameter "Execute".
 
-   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Braking an axis with active force/torque limit
 
@@ -12653,26 +12653,26 @@ The following table shows the parameters of Motion Control instruction "MC_MoveA
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Position | INPUT | LREAL | 0.0 | Absolute target position |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
-| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object > Configuration > Basic parameters > Enable modulo" |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
+| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object &gt; Configuration &gt; Basic parameters &gt; Enable modulo" |  |
 | 1 | Positive direction |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |
 | 3 | Shortest distance |  |  |  |  |
-| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (<TO>.PositioningMonitoring.MinDwellTime). |
+| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (&lt;TO&gt;.PositioningMonitoring.MinDwellTime). |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred while processing the job. The job is rejected. The cause of the error can be found in the "ErrorID" parameter. |
@@ -12752,22 +12752,22 @@ The following table shows the parameters of Motion Control instruction "MC_MoveR
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Distance for the positioning process (negative or positive) |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
-| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (<TO>.PositioningMonitoring.MinDwellTime). |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
+| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (&lt;TO&gt;.PositioningMonitoring.MinDwellTime). |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred while processing the job. The job is rejected. The cause of the error can be found in the "ErrorID" parameter. |
@@ -12855,17 +12855,17 @@ The following table shows the parameters of Motion Control instruction "MC_MoveV
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint/speed setpoint for the motion  ("Velocity" = 0.0 is permitted) |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Direction | INPUT | INT | 0 | Direction of rotation of the axis |  |
 | 0 | The sign of the velocity specified at the "Velocity" parameter defines the direction of rotation. |  |  |  |  |
 | 1 | Positive direction of rotation   The value of "Velocity" is used. |  |  |  |  |
@@ -12886,7 +12886,7 @@ The following table shows the parameters of Motion Control instruction "MC_MoveV
 
 An "MC_MoveVelocity" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 The parameters "InVelocity" and "Busy" show the value "TRUE", until the "MC_MoveVelocity" job is overridden by another Motion Control job.
 
@@ -12906,7 +12906,7 @@ Proceed as follows to move an axis with constant velocity/speed:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### Additional information
 
@@ -12986,19 +12986,19 @@ The following table shows the parameters of Motion Control instruction "MC_MoveJ
 | JogBackward | INPUT | BOOL | FALSE | TRUE | As long as the parameter is "TRUE", the axis moves in the negative direction at the velocity specified in parameter "Velocity". |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint/speed setpoint for the motion |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |
-| < 0.0 | The absolute value of the specified value is used. |  |  |  |  |
+| &lt; 0.0 | The absolute value of the specified value is used. |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | PositionControlled | INPUT | BOOL | TRUE | FALSE | Non position-controlled operation |
 | TRUE | Position-controlled mode |  |  |  |  |
 | The parameter applies as long as the "MC_MoveJog" job is being executed. After this, the setting of the following job applies.  This parameter is ignored when a speed axis is used. |  |  |  |  |  |
@@ -13012,7 +13012,7 @@ The following table shows the parameters of Motion Control instruction "MC_MoveJ
 
 An "MC_MoveJog" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Moving an axis in jog mode
 
@@ -13029,7 +13029,7 @@ Proceed as follows to move an axis in jog mode:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### Additional information
 
@@ -13121,21 +13121,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveS
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Additional distance for the overlapping positioning process (negative or positive) |  |
 | VelocityDiff | INPUT | LREAL | -1.0 | Maximum velocity deviation compared to the active motion |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Superimposed positioning complete |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -13223,7 +13223,7 @@ The following table shows the parameters of Motion Control instruction "MC_SetSe
 
 ##### Changing to absolute encoder
 
-When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (<TO>.StatusSensor[1..4].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
+When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
 
 ### MC_Stop V6 (S7-1500, S7-1500T)
 
@@ -13262,7 +13262,7 @@ The standstill position is derived from the stop ramp. Three modes, which you de
 - An "MC_Stop" job does not abort any synchronous operation function in simulation.
 - An "MC_Stop" job is aborted by another "MC_Stop" job with a stop response that is the same or higher.
 
-  Significance of stop responses (descending): "Mode" = 0 > "Mode" = 2 > "Mode" = 3
+  Significance of stop responses (descending): "Mode" = 0 &gt; "Mode" = 2 &gt; "Mode" = 3
 
 You can find more information on the override response of an "MC_Stop" job in the section "[Override response of Motion Control jobs V6](#override-response-of-motion-control-jobs-v6-s7-1500-s7-1500t)".
 
@@ -13276,18 +13276,18 @@ The following table shows the parameters of Motion Control instruction "MC_Stop"
 | Execute | INPUT | BOOL | FALSE | TRUE | The motion is stopped and new motion jobs are prevented. |
 | FALSE | Motion jobs can be executed again. |  |  |  |  |
 | Mode | INPUT | DINT | 0 | Mode for dynamic behavior |  |
-| 0 | Emergency stop  The technology object is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop".  (<TO>.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  The technology object is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop".  (&lt;TO&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
 | 1 | Not permitted |  |  |  |  |
-| 2 | Stop with maximum dynamic values  The technology object is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamics limits". The configured maximum jerk is hereby taken into account.  (<TO>.DynamicLimits.MaxDeceleration, <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  The technology object is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics limits". The configured maximum jerk is hereby taken into account.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration, &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | 3 | Stop with specified dynamic response  The technology object is stopped with the specified values at the parameters "Deceleration" and "Jerk". |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "Mode" = 3:  Deceleration for the braking ramp |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "Mode" = 3:  Jerk for the braking ramp |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | TRUE | Acceleration is set to 0.0. The configured deceleration is built up immediately. |
 | FALSE | The acceleration is reduced using the configured jerk. The configured deceleration then builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Standstill is reached. |
@@ -13304,7 +13304,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Set the necessary values for the parameters "Mode", "Deceleration", "Jerk" and "AbortAcceleration".
 3. Start the "MC_Stop" job with a positive edge at parameter "Execute".
 
-   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
    As long as "Execute" = TRUE, the technology object cannot execute motion jobs.
 
@@ -13498,7 +13498,7 @@ Another measuring job must be started again using "MC_MeasuringInput.Execute" = 
 
 - The technology object has been configured correctly.
 - The encoder of the axis must have "valid" status (StatusSensor[1..4].State = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
-- The communication between measuring input and measuring module is established ("<TO>.StatusWord.CommunicationOK“ = TRUE)
+- The communication between measuring input and measuring module is established ("&lt;TO&gt;.StatusWord.CommunicationOK“ = TRUE)
 - Measurement using PROFIdrive is not possible during active or passive homing.
 
 ###### Override response
@@ -13573,7 +13573,7 @@ With cyclic measuring, up to two measuring events are detected by the system and
 
 - The technology object has been configured correctly.
 - Cyclic measuring is only possible when measuring using Timer DI.
-- The communication between measuring input and measuring module is established ("<TO>.StatusWord.CommunicationOK“ = TRUE)
+- The communication between measuring input and measuring module is established ("&lt;TO&gt;.StatusWord.CommunicationOK“ = TRUE)
 - The encoder of the axis operationally in effect must have "valid" status "valid" ("StatusSensor[1..4].State" = valid). Otherwise, the measuring job is rejected in the function block with an error indication.
 
 ###### Override response
@@ -13728,7 +13728,7 @@ When a technological alarm occurs, the output cam is processed again after error
 
 - The technology object has been configured correctly.
 - The higher-level technology object must have a valid position.
-- The communication between output cam and output module is established ("<TO>.StatusWord.CommunicationOK“ = TRUE).
+- The communication between output cam and output module is established ("&lt;TO&gt;.StatusWord.CommunicationOK“ = TRUE).
 - Setpoint output cams are not output for an axis in non-position-controlled operation.
 
 ###### Override response
@@ -13814,7 +13814,7 @@ With the Motion Control instruction "MC_CamTrack", the processing of a cam track
 
 - The technology object has been configured correctly.
 - The higher-level technology object must have a valid position.
-- The communication between output cam and output module is established ("<TO>.StatusWord.CommunicationOK“ = TRUE).
+- The communication between output cam and output module is established ("&lt;TO&gt;.StatusWord.CommunicationOK“ = TRUE).
 - Setpoint output cams are not output for an axis in non-position-controlled operation.
 
 ###### Override response
@@ -13868,7 +13868,7 @@ A cam track is activated with "Enable" = TRUE. The cam track is output in accord
 
 | Tag |  | Value | Description |
 | --- | --- | --- | --- |
-| <TO>Parameter. |  |  |  |
+| &lt;TO&gt;Parameter. |  |  |  |
 |  | CamTrackType | 0 | Specified output cam type for the cam track is distance output cam |
 | ReferencePosition | 20.0 | Specified axis reference position for the cam track |  |
 | CamTrackLength | 100.0 | Specified length of the cam track |  |
@@ -13942,7 +13942,7 @@ You can start synchronous operation when the leading axis is at a standstill or 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 
 ###### Override response
@@ -13965,17 +13965,17 @@ The following table shows the parameters of Motion Control instruction "MC_GearI
 | RatioNumerator | INPUT | DINT | 1 | Gear ratio numerator  Permitted integer values:  -2147483648 to 2147483647  (value 0 not permitted) |  |
 | RatioDenominator | INPUT | DINT | 1 | Gear ratio denominator  Permitted integer values: 1 to 2147483647 |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | InGear | OUTPUT | BOOL | FALSE | TRUE | Synchronous operation reached  The following axis is synchronized and moves synchronously to the leading axis. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -14055,7 +14055,7 @@ You can start synchronous operation when the leading axis is at a standstill or 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The following axis is homed.
 - With synchronization in advance using leading value distance, the leading axis must be at least the specified distance ("MasterStartDistance") from the synchronization position ("MasterSyncPosition") when starting the job.
@@ -14096,24 +14096,24 @@ The following table shows the parameters of Motion Control instruction "MC_GearI
 | MasterStartDistance | INPUT | LREAL | 1.0 | When "SyncProfileReference" = 1, 3:  Leading value distance |  |
 | When "SyncProfileReference" = 0:  Not relevant |  |  |  |  |  |
 | Velocity | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | SyncDirection | INPUT | DINT | 3 | Direction of synchronization  (in effect for axes with activated Modulo setting) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during synchronization. |  |  |  |  |
@@ -14203,7 +14203,7 @@ The following types can be used for traversing the leading value offset:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - By means of the Motion Control instruction "MC_GearIn", "MC_GearInPos" or "MC_CamIn", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE, "MC_GearInPos.InSync" = TRUE or "MC_CamIn.InSync" = TRUE).
 - No "MC_OffsetAbsolute" or "MC_OffsetRelative" job is active or waiting.
@@ -14225,21 +14225,21 @@ The following table shows the parameters of Motion Control instruction "MC_Phasi
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Relative leading value shift |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | ProfileReference | INPUT | DINT | 0 | Type of traversing of the leading value offset |  |
 | 0 | Only with gearing:  Traverse leading value offset using dynamics parameters |  |  |  |  |
 | 1 | Traverse leading value offset via leading value distance starting from current leading value position |  |  |  |  |
@@ -14280,7 +14280,7 @@ At time ①, an "MC_PhasingRelative" job (A2) is initiated with "ProfileReferenc
 
 At time ② the "MC_PhasingRelative" job (A2) is initiated again via "Exe". The leading value offset via dynamic parameters is moved out again with the dynamics specified in addition to the synchronous movement. The absolute leading value offset traversed via the job is indicated in "CoveredPhaseShift". "Done" indicates that the leading value was successfully shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 ###### Function chart: Relative shift of the leading value in camming
 
@@ -14290,11 +14290,11 @@ The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMo
 
 At time ①, an "MC_PhasingRelative" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartPhasing" parameter shows that the leading value offset traverses from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "CoveredPhaseShift". "Done" indicates that the leading value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_PhasingRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
+At time ② the "MC_PhasingRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartPhasing" parameter shows that the following axis traverses the leading value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "CoveredPhaseShift". "Done" indicates that the leading value was successfully shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 #### MC_PhasingAbsolute V6 (S7-1500T)
 
@@ -14331,7 +14331,7 @@ The following types can be used for traversing the leading value offset:
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - By means of the Motion Control instruction "MC_GearIn", "MC_GearInPos" or "MC_CamIn", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE, "MC_GearInPos.InSync" = TRUE or "MC_CamIn.InSync" = TRUE).
 - No "MC_OffsetAbsolute" or "MC_OffsetRelative" job is active or waiting.
@@ -14353,21 +14353,21 @@ The following table shows the parameters of Motion Control instruction "MC_Phasi
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Absolute leading value shift |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | ProfileReference | INPUT | DINT | 0 | Type of traversing of the leading value offset |  |
 | 0 | Only with gearing:  Traverse leading value offset using dynamics parameters |  |  |  |  |
 | 1 | Traverse leading value offset via leading value distance starting from current leading value position |  |  |  |  |
@@ -14404,9 +14404,9 @@ The following table shows the parameters of Motion Control instruction "MC_Phasi
 
 At time ①, an "MC_PhasingAbsolute" job (A2) is initiated with "ProfileReference" = 0 via "Exe" during an active gearing with "MC_GearInPos" (A1) . The "StartPhasing" parameter shows that the following axis traverses the leading value offset with the dynamics specified additively to the synchronous operation motion. The absolute leading value offset traversed via the job is indicated in "AbsolutePhaseShift". "Done" indicates that the leading value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe". Because the absolute leading value offset (<TO>.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
+At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe". Because the absolute leading value offset (&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 ###### Function chart: Absolute shift of the leading value in camming
 
@@ -14416,11 +14416,11 @@ The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMo
 
 At time ①, an "MC_PhasingAbsolute" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartPhasing" parameter shows that the leading value offset traverses from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "AbsolutePhaseShift". "Done" indicates that the leading value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
+At time ② the "MC_PhasingAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X3 = TRUE (PhasingCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartPhasing" parameter shows that the following axis traverses the leading value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute leading value offset traversed via the job is indicated in "AbsolutePhaseShift". "Done" indicates that the leading value was successfully shifted.
 
-The absolute leading value offset is indicated in the "<TO>.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
+The absolute leading value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift" tag of the technology object.
 
 #### MC_OffsetRelative V6 (S7-1500T)
 
@@ -14512,7 +14512,7 @@ At time ①, an "MC_OffsetRelative" job (A2) is initiated with "ProfileReference
 
 At time ② the "MC_OffsetRelative" job (A2) is initiated again via "Exe". The "StartOffset" parameter shows that the following axis traverses the following value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated In "CoveredOffset". "Done" indicates that the following value was successfully shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 ###### Function chart: Relative shift of the following value in camming
 
@@ -14522,11 +14522,11 @@ The absolute following value offset is indicated in the "<TO>.StatusSynchronized
 
 At time ①, an "MC_OffsetRelative" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartOffset" parameter shows that the following axis traverses the following value offset from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated In "CoveredOffset". "Done" indicates that the following value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_OffsetRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
+At time ② the "MC_OffsetRelative" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartOffset" parameter shows that the following axis traverses the following value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated In "CoveredOffset". "Done" indicates that the leading value was successfully shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 #### MC_OffsetAbsolute V6 (S7-1500T)
 
@@ -14616,9 +14616,9 @@ The following table shows the parameters of Motion Control instruction "MC_Offse
 
 At time ①, an "MC_OffsetAbsolute" job (A2) is initiated with "ProfileReference" = 1 via "Exe" during an active gearing with "MC_GearInPos" (A1) . The "StartOffset" parameter shows that the following axis traverses the following value offset from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated in "AbsoluteOffset". "Done" indicates that the following value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe". Because the absolute following value offset (<TO>.StatusSynchronizedMotion.Offset) is already 90.0, the following value is not shifted.
+At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe". Because the absolute following value offset (&lt;TO&gt;.StatusSynchronizedMotion.Offset) is already 90.0, the following value is not shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 ###### Function chart: Absolute shift of the following value in camming
 
@@ -14628,11 +14628,11 @@ The absolute following value offset is indicated in the "<TO>.StatusSynchronized
 
 At time ①, an "MC_OffsetAbsolute" job (A2) is triggered with "ProfileReference" = 1 via "Exe" during an active camming with "MC_CamIn" (A1) . The "StartOffset" parameter shows that the following axis traverses the following value offset from the current position via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated in "AbsoluteOffset". "Done" indicates that the following value was successfully shifted. The motion of the leading axis is not affected.
 
-At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (<TO>.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
+At time ② the "MC_OffsetAbsolute" job (A2) is initiated again via "Exe" with "ProfileReference" = 2. The status "Waiting" is displayed at the following axis until the leading value reaches the start position (&lt;TO&gt;.StatusWord2.X5 = TRUE (OffsetCommandWaiting)).
 
 At time ③ the leading value reaches the specified start position. The "StartOffset" parameter shows that the following axis traverses the following value offset via the specified leading value distance. The required dynamic response is calculated by the system. The absolute following value offset traversed via the job is indicated in "AbsoluteOffset". "Done" indicates that the following value was successfully shifted.
 
-The absolute following value offset is indicated in the "<TO>.StatusSynchronizedMotion.Offset" tag of the technology object.
+The absolute following value offset is indicated in the "&lt;TO&gt;.StatusSynchronizedMotion.Offset" tag of the technology object.
 
 #### MC_CamIn V6 (S7-1500T)
 
@@ -14647,7 +14647,7 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_CamIn", you start a [camming](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#camming-with-mc_camin-s7-1500t) operation between a leading axis and a following axis. The synchronous operation is synchronized depending on the specified synchronous position of the leading axis.
 
-A cam is defined between the start position (<TO>.StatusCam.StartLeadingValue) and end position (<TO>.StatusCam.EndLeadingValue) after the interpolation. The specification for leading and following value range in the [configuration of the technology object](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#configuring-the-synchronous-operation-function-of-the-cam-s7-1500t) only effect the display in the graphical editor.
+A cam is defined between the start position (&lt;TO&gt;.StatusCam.StartLeadingValue) and end position (&lt;TO&gt;.StatusCam.EndLeadingValue) after the interpolation. The specification for leading and following value range in the [configuration of the technology object](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#configuring-the-synchronous-operation-function-of-the-cam-s7-1500t) only effect the display in the graphical editor.
 
 With the "MasterSyncPosition" parameter, you specify the synchronization position in the cam relative to the starting position of the cam. The synchronous position establishes the relationship between leading value and following value, independent of the type of synchronization. With "MasterSyncPosition" ≠ 0.0, you move the synchronous position within the cam without changing the position of the cam.
 
@@ -14657,19 +14657,19 @@ With the "MasterOffset" parameter, you offset the leading values of the cam (wit
 
 The following figure shows the basic effect of the leading value and following value offset as well as the position of the cam with the following parameter values:
 
-- "MasterOffset" > 0
-- Start position of the cam > 0
-- "MasterSyncPosition" > 0
+- "MasterOffset" &gt; 0
+- Start position of the cam &gt; 0
+- "MasterSyncPosition" &gt; 0
 
 ![Description](images/145284451723_DV_resource.Stream@PNG-en-US.png)
 
 | Symbol | Meaning |
 | --- | --- |
-| ① | Start position of the cam  First defined interpolation point/start of the first segment of the cam (<TO>.StatusCam.StartLeadingValue) |
+| ① | Start position of the cam  First defined interpolation point/start of the first segment of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue) |
 | ② | Leading value distance with synchronization in advance ("MasterStartDistance") |
 | ③ | Synchronous position of the leading axis relative to the starting position of the cam ("MasterSyncPosition") |
 | ④ | Leading value distance with subsequent synchronization ("MasterStartDistance") |
-| ⑤ | End position of the cam   Last defined interpolation point/end of the last segment of the cam (<TO>.StatusCam.EndLeadingValue) |
+| ⑤ | End position of the cam   Last defined interpolation point/end of the last segment of the cam (&lt;TO&gt;.StatusCam.EndLeadingValue) |
 
 The figure below shows the basic effect of scaling the cam with the parameters "MasterScaling" and "SlaveScaling":
 
@@ -14712,7 +14712,7 @@ You can start synchronization when the leading axis or following axis is at a st
 - The technology objects of the leading axis, following axis, and cam have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The following axis is homed.
 - The cam is interpolated with "MC_InterpolateCam".
@@ -14760,24 +14760,24 @@ The following table shows the parameters of Motion Control instruction "MC_CamIn
 | MasterStartDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1, 3, 4:  Leading value distance  Distance of the leading axis during the synchronization |  |
 | When "SyncProfileReference" = 0, 2, 5:  Not relevant |  |  |  |  |  |
 | Velocity | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5:  Not relevant |  |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5:  Not relevant |  |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5:  Not relevant |  |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4, 5:  Not relevant |  |  |  |  |  |
 | ApplicationMode | INPUT | DINT | 0 | Application of the cam |  |
 | 0 | Once/not cyclic |  |  |  |  |
@@ -14852,7 +14852,7 @@ The synchronous operation is overridden by another "MC_CamIn" job (A2). The abor
 
 An "MC_CamIn" job (A1) is active.
 
-At time ① another "MC_CamIn" job (A2) is initiated via "Exe_2". The status "Waiting" is displayed at the following axis until the end of the active cam "Cam_1" has been reached (<TO>.StatusSynchronizedMotion.WaitingFunctionState = 3).
+At time ① another "MC_CamIn" job (A2) is initiated via "Exe_2". The status "Waiting" is displayed at the following axis until the end of the active cam "Cam_1" has been reached (&lt;TO&gt;.StatusSynchronizedMotion.WaitingFunctionState = 3).
 
 At time ② the end of the cam is reached ("Eop_1 "). The cam is switched over. Since no synchronization takes place, the "Synchronous" status is retained.
 
@@ -14882,7 +14882,7 @@ If the position of the following axis at the end of the simulation differs from 
 
 - The technology object has been configured correctly.
 - The following axis is a synchronous axis.
-- Synchronous operation is active on the technology object in status "Synchronous" (<TO>.StatusWord.X22 = TRUE).
+- Synchronous operation is active on the technology object in status "Synchronous" (&lt;TO&gt;.StatusWord.X22 = TRUE).
 
 ###### Override response
 
@@ -14972,13 +14972,13 @@ The following table shows the parameters of Motion Control instruction "MC_GearO
 | 5 | Only cancel a pending gearing |  |  |  |  |
 | MasterStopDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1:  Leading value distance |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamics defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamics defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | SyncOutDirection | INPUT | DINT | 3 | Desynchronization direction |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during desynchronization. |  |  |  |  |
 | 2 | Negative direction  The following axis may only travel in negative direction during desynchronization. |  |  |  |  |
@@ -15064,13 +15064,13 @@ The following table shows the parameters of Motion Control instruction "MC_CamOu
 | 5 | Cancel only a pending camming |  |  |  |  |
 | MasterStopDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1:  Leading value distance |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamics defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamics defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | SyncOutDirection | INPUT | DINT | 3 | Desynchronization direction |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during desynchronization. |  |  |  |  |
 | 2 | Negative direction  The following axis may only travel in negative direction during desynchronization. |  |  |  |  |
@@ -15202,8 +15202,8 @@ With the Motion Control instruction "MC_InterpolateCam", you interpolate a cam.
 
 The interpolation closes the gaps between the defined interpolation points and segments of the cam. The cam is interpolated between the following values in the definition range:
 
-- First defined interpolation point/start of the first segment of the cam (<TO>.StatusCam.StartLeadingValue)
-- Last defined interpolation point/end of the last segment of the cam (<TO>.StatusCam.EndLeadingValue)
+- First defined interpolation point/start of the first segment of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue)
+- Last defined interpolation point/end of the last segment of the cam (&lt;TO&gt;.StatusCam.EndLeadingValue)
 
 After interpolation, an explicit value in the value range is assigned to each value in the definition range.
 
@@ -15380,7 +15380,7 @@ You use the instruction "MC_CopyCamData" to copy calculated cam elements from on
 
   - For points: ARRAY[*] OF TO_Cam­_Struct­_Point­Data
   - For segments: ARRAY[*] OF TO_Cam­_Struct­_Segment­Data
-- The "Optimized block access" option is activated in the properties of the data block under "General > Attributes".
+- The "Optimized block access" option is activated in the properties of the data block under "General &gt; Attributes".
 
 ###### Override response
 
@@ -15401,19 +15401,19 @@ The following table shows the parameters of motion control instruction "MC_CopyC
 | 0 | All existing defined cam elements are set as invalid before the copying procedure.  ("ValidPoint" = FALSE, "ValidSegment" = FALSE) |  |  |  |  |
 | 1 | All existing defined cam elements remain valid.  ("ValidPoint" = TRUE, "ValidSegment" = TRUE) |  |  |  |  |
 | StartPointCam | INPUT | DINT | 1 | Index of the start point of the points to be copied in the cam |  |
-| Permitted values for "TO_Cam":  1 <= "StartPointCam" <= 1 000 |  |  |  |  |  |
-| Permitted values for "TO_Cam_10k":  1 <= "StartPointCam" <= 10 000 |  |  |  |  |  |
+| Permitted values for "TO_Cam":  1 &lt;= "StartPointCam" &lt;= 1 000 |  |  |  |  |  |
+| Permitted values for "TO_Cam_10k":  1 &lt;= "StartPointCam" &lt;= 10 000 |  |  |  |  |  |
 | StartSegmentCam | INPUT | DINT | 1 | Index of the start segment of the segments to be copied in the cam |  |
-| Permitted values:  1 <= "StartSegmentCam" <= 50 |  |  |  |  |  |
+| Permitted values:  1 &lt;= "StartSegmentCam" &lt;= 50 |  |  |  |  |  |
 | StartPointArray | INPUT | DINT | 1 | Index of the start point of the points to be copied from "ArrayOfPoints" |  |
-| Permitted values:  Low limit of "ArrayOfPoints" <= "StartPointArray" <= high limit of "ArrayOfPoints" |  |  |  |  |  |
+| Permitted values:  Low limit of "ArrayOfPoints" &lt;= "StartPointArray" &lt;= high limit of "ArrayOfPoints" |  |  |  |  |  |
 | StartSegmentArray | INPUT | DINT | 1 | Index of the start segment of the segments to be copied from "ArrayOfSegments" |  |
-| Permitted values:  Low limit of "ArrayOfSegments" <= "StartSegmentArray" <= high limit of "ArrayOfSegments" |  |  |  |  |  |
+| Permitted values:  Low limit of "ArrayOfSegments" &lt;= "StartSegmentArray" &lt;= high limit of "ArrayOfSegments" |  |  |  |  |  |
 | NumberOfPoints | INPUT | DINT | 0 | Number of points to be copied |  |
-| Permitted values for "TO_Cam":  "NumberOfPoints" <= number of points from "ArrayOfPoints"  and  0 <= "NumberOfPoints" <= 1 001 - "StartPointCam" |  |  |  |  |  |
-| Permitted values for "TO_Cam_10k":  "NumberOfPoints" <= number of points from "ArrayOfPoints"  and  0 <= "NumberOfPoints" <= 10 001 - "StartPointCam" |  |  |  |  |  |
+| Permitted values for "TO_Cam":  "NumberOfPoints" &lt;= number of points from "ArrayOfPoints"  and  0 &lt;= "NumberOfPoints" &lt;= 1 001 - "StartPointCam" |  |  |  |  |  |
+| Permitted values for "TO_Cam_10k":  "NumberOfPoints" &lt;= number of points from "ArrayOfPoints"  and  0 &lt;= "NumberOfPoints" &lt;= 10 001 - "StartPointCam" |  |  |  |  |  |
 | NumberOfSegments | INPUT | DINT | 0 | Number of segments to be copied |  |
-| Permitted values:  "NumberOfSegments" <= number of segments in the "ArrayOfSegments"  and  0 <= "NumberOfSegments" <= 51 - "StartSegmentCam" |  |  |  |  |  |
+| Permitted values:  "NumberOfSegments" &lt;= number of segments in the "ArrayOfSegments"  and  0 &lt;= "NumberOfSegments" &lt;= 51 - "StartSegmentCam" |  |  |  |  |  |
 | ArrayOfPoints | INOUT | ARRAY[*] OF TO_Cam­_Struct­_Point­Data<sup>1)</sup> | - | Array that contains the points to be copied |  |
 | ArrayOfSegments | INOUT | ARRAY[*] OF TO_Cam­_Struct­_Segment­Data<sup>1)</sup> | - | Array that contains the segments to be copied |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
@@ -15691,7 +15691,7 @@ If the high and low torque limits are active, the following monitors and limits 
 - Following error monitoring
 - Time limitations for positioning and standstill monitoring
 
-Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object > Configuration > Extended parameters > Limits > Torque limit".
+Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object &gt; Configuration &gt; Extended parameters &gt; Limits &gt; Torque limit".
 
 ###### Applies to
 
@@ -15773,7 +15773,7 @@ The functions of the Motion Control instruction "MC_TorqueLimiting" can be activ
   - P1522 to a fixed value of 100 %
   - P1523 to a fixed value of -100% (e.g. through interconnection to fixed value parameter P2902[i]).
   - P1544 Torque/force reduction analysis during travel to fixed stop to 100% (default)
-  - P2194 Threshold value for the parameter "InLimitation" of < 100% (default 90%)
+  - P2194 Threshold value for the parameter "InLimitation" of &lt; 100% (default 90%)
 
 ###### Fixed stop detection applies to
 
@@ -15803,7 +15803,7 @@ The following table shows the parameters of the motion control instruction "MC_T
 | Enable | INPUT | BOOL | FALSE | TRUE | Activate function corresponding to input parameter "Mode" |
 | Limit | INPUT | LREAL | -1.0 | Value of force/torque limiting (in the configured unit of measurement)<sup>1)</sup>  If the drive and telegram do not support force/torque limiting, the specified value is irrelevant. |  |
 | ≥ 0.0 | The value specified at the parameter is used. |  |  |  |  |
-| < 0.0 | The value configured in the "Torque limiting" configuration window is used.  Tag Torque Limit:   <TO>.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   <TO>.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
+| &lt; 0.0 | The value configured in the "Torque limiting" configuration window is used.  Tag Torque Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
 | Mode | INPUT | DINT | 0 | 0 | Force/torque limiting<sup>1)</sup> |
 | 1 | Fixed stop detection<sup>1)</sup>  If drive and telegram support force/torque limiting, this is applied. |  |  |  |  |
 | InClamping | OUTPUT | BOOL | FALSE | TRUE | "Mode" = 1:  The drive is kept at the fixed stop (clamping<sup>2)</sup>). The axis position is within the positioning tolerance. |
@@ -16052,12 +16052,12 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_MoveLinearAbsolute", you move a kinematics with a linear motion to an absolute position. Cartesian orientation is also used absolute.
 
-Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -16089,21 +16089,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | Position[3] | INPUT | LREAL | 0.0 | z-coordinate |  |  |
 | Position[4] | INPUT | LREAL | 0.0 | A-coordinate |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | Motion direction of the Cartesian orientation |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -16120,13 +16120,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -16170,12 +16170,12 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_MoveLinearRelative", you can move a kinematics with a linear path relative to the position which was present at the start of the job processing. Cartesian orientation is also used relative.
 
-Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -16207,21 +16207,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | Distance[3] | INPUT | LREAL | 0.0 | z-coordinate |  |  |
 | Distance[4] | INPUT | LREAL | 0.0 | A-coordinate |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system of the specified target position and target orientation |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -16234,13 +16234,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1.0 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -16296,12 +16296,12 @@ With the "CircMode" parameter, you specify the definition of the circular path:
 
   With the "EndPoint" parameter, you specify the end point and with "Radius" the radius of the circular path. Depending on the radius, up to four possible circular paths can occur in the plane defined with the "CirclePlane" parameter. With the "PathChoice" parameter, you specify which of these circular paths is to be moved.
 
-Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -16360,21 +16360,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | Radius |  | INPUT | LREAL | 0.0 | When "CircMode" = 2:  Radius of the circular movement |  |
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:  Angle of the circular movement |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | Motion direction of the Cartesian orientation |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -16391,13 +16391,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1.0 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -16459,12 +16459,12 @@ With the "CircMode" parameter, you specify the definition of the circular path:
 
   With the "EndPoint" parameter, you specify the end point and with "Radius" the radius of the circular path. Depending on the radius, up to four possible circular paths can occur in the plane defined with the "CirclePlane" parameter. With the "PathChoice" parameter, you specify which of these circular paths is to be moved.
 
-Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -16523,21 +16523,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | Radius |  | INPUT | LREAL | 0.0 | When "CircMode" = 2:  Radius of the circular movement |  |
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:  Angle of the circular movement |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -16550,13 +16550,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -16610,7 +16610,7 @@ The movement path of the tool center point (TCP) results from the dynamic values
 
 You can also move the orientation of the kinematics to an absolute position. You specify this with the "PositionMode" parameter.
 
-Dynamic behavior during movement is defined by means of factors with the parameters "VelocityFactor", "AccelerationFactor", "DecelerationFactor" and "JerkFactor". The factors relate as percentages to the maximum dynamic values of the corresponding axis configured in "Technology object > Configuration > Extended parameters > Dynamic limits".
+Dynamic behavior during movement is defined by means of factors with the parameters "VelocityFactor", "AccelerationFactor", "DecelerationFactor" and "JerkFactor". The factors relate as percentages to the maximum dynamic values of the corresponding axis configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits".
 
 ###### Applies to
 
@@ -16647,24 +16647,24 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | When "CoordSystem" = 0, 1, 2 or 3 and "PositionMode" = 1 or 2:  z coordinate |  |  |  |  |  |  |
 | Position[4] | INPUT | LREAL | 0.0 | When "CoordSystem" = 100 (MCS):  Position of kinematics axis A4 |  |  |
 | When "CoordSystem" = 0, 1, 2 or 3 and "PositionMode" = 1 or 2:  A coordinate |  |  |  |  |  |  |
-| VelocityFactor |  | INPUT | LREAL | -1.0 | Factor for the velocity of axis motions in relation to the respective maximum velocity of the axes ("DynamicLimits.MaxVelocity")  Permitted value range: -1.0 < Factor < 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
-| < 0.0 | The velocity factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
+| VelocityFactor |  | INPUT | LREAL | -1.0 | Factor for the velocity of axis motions in relation to the respective maximum velocity of the axes ("DynamicLimits.MaxVelocity")  Permitted value range: -1.0 &lt; Factor &lt; 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
+| &lt; 0.0 | The velocity factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
 | ≥ 0.01 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum velocity of the axes is used. |  |  |  |  |  |
-| AccelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the acceleration of axis motions in relation to the respective maximum acceleration of the axis ("DynamicLimits.MaxAcceleration")  Permitted value range: -1.0 < Factor ≤ 1.0 |  |
-| < 0.0 | The acceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
+| AccelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the acceleration of axis motions in relation to the respective maximum acceleration of the axis ("DynamicLimits.MaxAcceleration")  Permitted value range: -1.0 &lt; Factor ≤ 1.0 |  |
+| &lt; 0.0 | The acceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum acceleration of the axes is used. |  |  |  |  |  |
-| DecelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axis ("DynamicLimits.MaxDeceleration")  Permitted value range: -1.0 < Factor ≤ 1.0 |  |
-| < 0.0 | The deceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
+| DecelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axis ("DynamicLimits.MaxDeceleration")  Permitted value range: -1.0 &lt; Factor ≤ 1.0 |  |
+| &lt; 0.0 | The deceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum deceleration of the axes is used. |  |  |  |  |  |
-| JerkFactor |  | INPUT | LREAL | -1.0 | Factor for the jerk of axis motions in relation to the respective maximum jerk of the axis ("DynamicLimits.MaxJerk")  Permitted value range: -1.0 <Factor ≤ 0.0 and 0.1 < Factor ≤ 0.9 |  |
-| < 0.0 | The jerk factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
+| JerkFactor |  | INPUT | LREAL | -1.0 | Factor for the jerk of axis motions in relation to the respective maximum jerk of the axis ("DynamicLimits.MaxJerk")  Permitted value range: -1.0 &lt;Factor ≤ 0.0 and 0.1 &lt; Factor ≤ 0.9 |  |
+| &lt; 0.0 | The jerk factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
 | 0.0 | The maximum jerk of the axes is used. |  |  |  |  |  |
-| > 0.1 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.1 | The specified factor is used. |  |  |  |  |  |
 | LinkConstellation |  | INPUT | DWORD | 16#FFFF FFFF | Target joint position space  The joint position space is specified depending on the respective [kinematics type](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#kinematics-types-s7-1500t). |  |
 | #FFFF FFFF | Keep current joint position space |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system |  |
@@ -16680,7 +16680,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Rounding clearance |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
@@ -16738,7 +16738,7 @@ The movement path of the tool center point (TCP) results from the dynamic values
 
 You can also move the orientation of the kinematics to a relative position.
 
-Dynamic behavior during movement is defined by means of factors with the parameters "VelocityFactor", "AccelerationFactor", "DecelerationFactor" and "JerkFactor". The factors relate as percentages to the maximum dynamic values of the corresponding axis configured in "Technology object > Configuration > Extended parameters > Dynamic limits".
+Dynamic behavior during movement is defined by means of factors with the parameters "VelocityFactor", "AccelerationFactor", "DecelerationFactor" and "JerkFactor". The factors relate as percentages to the maximum dynamic values of the corresponding axis configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits".
 
 ###### Applies to
 
@@ -16774,24 +16774,24 @@ The following table shows the parameters of Motion Control instruction:
 | When "CoordSystem" = 0, 1, 2 or 3:  z coordinate |  |  |  |  |  |  |
 | Distance[4] | INPUT | LREAL | 0.0 | When "CoordSystem" = 100:  Relative position of the axis A4 |  |  |
 | When "CoordSystem" = 0, 1, 2 or 3:  A coordinate |  |  |  |  |  |  |
-| VelocityFactor |  | INPUT | LREAL | -1.0 | Factor for the velocity of axis motions in relation to the respective maximum velocity of the axes ("DynamicLimits.MaxVelocity")  Permitted value range: -1.0 < Factor < 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
-| < 0.0 | The velocity factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
+| VelocityFactor |  | INPUT | LREAL | -1.0 | Factor for the velocity of axis motions in relation to the respective maximum velocity of the axes ("DynamicLimits.MaxVelocity")  Permitted value range: -1.0 &lt; Factor &lt; 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
+| &lt; 0.0 | The velocity factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
 | ≥ 0.01 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum velocity of the axes is used. |  |  |  |  |  |
-| AccelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the acceleration of axis motions in relation to the respective maximum acceleration of the axis ("DynamicLimits.MaxAcceleration")  Permitted value range: -1.0 < Factor ≤ 1.0 |  |
-| < 0.0 | The acceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
+| AccelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the acceleration of axis motions in relation to the respective maximum acceleration of the axis ("DynamicLimits.MaxAcceleration")  Permitted value range: -1.0 &lt; Factor ≤ 1.0 |  |
+| &lt; 0.0 | The acceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum acceleration of the axes is used. |  |  |  |  |  |
-| DecelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axis ("DynamicLimits.MaxDeceleration")  Permitted value range: -1.0 < Factor ≤ 1.0 |  |
-| < 0.0 | The deceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
+| DecelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axis ("DynamicLimits.MaxDeceleration")  Permitted value range: -1.0 &lt; Factor ≤ 1.0 |  |
+| &lt; 0.0 | The deceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum deceleration of the axes is used. |  |  |  |  |  |
-| JerkFactor |  | INPUT | LREAL | -1.0 | Factor for the jerk of axis motions in relation to the respective maximum jerk of the axis ("DynamicLimits.MaxJerk")  Permitted value range: -1.0 <Factor ≤ 0.0 and 0.1 < Factor ≤ 0.9 |  |
-| < 0.0 | The jerk factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
+| JerkFactor |  | INPUT | LREAL | -1.0 | Factor for the jerk of axis motions in relation to the respective maximum jerk of the axis ("DynamicLimits.MaxJerk")  Permitted value range: -1.0 &lt;Factor ≤ 0.0 and 0.1 &lt; Factor ≤ 0.9 |  |
+| &lt; 0.0 | The jerk factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
 | 0.0 | The maximum jerk of the axes is used. |  |  |  |  |  |
-| > 0.1 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.1 | The specified factor is used. |  |  |  |  |  |
 | LinkConstellation |  | INPUT | DWORD | 16#FFFF FFFF | Target joint position space  The joint position space is specified depending on the respective [kinematics type](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#kinematics-types-s7-1500t). |  |
 | #FFFF FFFF | Keep current joint position space |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system |  |
@@ -16807,14 +16807,14 @@ The following table shows the parameters of Motion Control instruction:
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Rounding clearance |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | ExecutionTimeStatus |  | OUTPUT | LREAL | 0.0 | Display of execution progress  Value range: 0.0 … 1.0   The job is completed with "ExecutionTimeStatus" = 1.0. |  |
 | 0.0 | The job has not yet been executed. |  |  |  |  |  |
-| > 0.0 | The job is being executed. |  |  |  |  |  |
+| &gt; 0.0 | The job is being executed. |  |  |  |  |  |
 | 1.0 | The job was executed. |  |  |  |  |  |
 | Done |  | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
 | Busy |  | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
@@ -16887,7 +16887,7 @@ The following table shows the parameters of Motion Control instruction "MC_Track
 | ConveyorBelt | INPUT | TO_Positioning­Axis  TO_Synchronous­Axis  TO_ExternalEncoder  TO_LeadingAxisProxy | - | Leading value capable technology object to which the OCS is coupled:  Leading-value-capable technology objects are:  - Positioning axis - Synchronous axis - External encoder - Leading axis proxy |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | ConveyorBeltOrigin | INPUT | TO_Struct_Kinematics_Frame | - | Frame for the OCS reference position on the conveyor |  |
-| InitialObjectPosition | INPUT | TO_Struct_Kinematics_Frame | 0.0 | "InitialObjectPosition.x" contains the differential value on the belt position to determine the tracked position of the OCS in relation to the OCS reference position  Permitted values:  - "InitialObjectPosition.x" <=> 0.0 - "InitialObjectPosition.y" = 0.0 - "InitialObjectPosition.z" = 0.0 - "InitialObjectPosition.a" = 0.0 - "InitialObjectPosition.b" = 0.0 - "InitialObjectPosition.c" = 0.0 |  |
+| InitialObjectPosition | INPUT | TO_Struct_Kinematics_Frame | 0.0 | "InitialObjectPosition.x" contains the differential value on the belt position to determine the tracked position of the OCS in relation to the OCS reference position  Permitted values:  - "InitialObjectPosition.x" &lt;=&gt; 0.0 - "InitialObjectPosition.y" = 0.0 - "InitialObjectPosition.z" = 0.0 - "InitialObjectPosition.a" = 0.0 - "InitialObjectPosition.b" = 0.0 - "InitialObjectPosition.c" = 0.0 |  |
 | CoordSystem | INPUT | DINT | 1 | Number of the tracked OCS |  |
 | 1 | OCS1 |  |  |  |  |
 | 2 | OCS2 |  |  |  |  |
@@ -16948,7 +16948,7 @@ When the simulation is started with "Execute" = TRUE and "Mode" = 1, the positio
 
 In simulation mode, the individual kinematics axes can move independently using single-axis jobs, be disabled and enabled again without the motion processing being canceled at the kinematics technology object.
 
-To exit simulation mode, each of the kinematics axes must be at the position "<TO>.AxesData.A[1..4].Position". Before you exit the simulation, move each of the kinematics axes using single-axis jobs to the position "<TO>.AxesData.A[1..4].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
+To exit simulation mode, each of the kinematics axes must be at the position "&lt;TO&gt;.AxesData.A[1..4].Position". Before you exit the simulation, move each of the kinematics axes using single-axis jobs to the position "&lt;TO&gt;.AxesData.A[1..4].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
 
 When simulation is exited with "Execute" = TRUE and "Mode" = 0, the simulation is exited and the kinematics motion is continued. The setpoints take effect directly on the kinematics axes.
 
@@ -16961,7 +16961,7 @@ When simulation is exited with "Execute" = TRUE and "Mode" = 0, the simulation i
 - The technology object has been configured correctly.
 - The interconnected axes are enabled.
 - When switching on and off, a single-axis job (e.g. "MC_MoveAbsolute") is not active on any of the interconnected axes.
-- To exit the simulation with "Execute" = TRUE and "Mode" = 0, the kinematics axes must be at the position "<TO>.AxesData.A[1..4].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
+- To exit the simulation with "Execute" = TRUE and "Mode" = 0, the kinematics axes must be at the position "&lt;TO&gt;.AxesData.A[1..4].Position". A modulo axis must also be in the same modulo cycle as at the start time of the simulation.
 
 ###### Override response
 
@@ -17020,7 +17020,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (<TO>.WorkspaceZone[1..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
+With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (&lt;TO&gt;.WorkspaceZone[1..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
 
 The "MC_DefineWorkspaceZone" job interjects itself in the job sequence on the Kinematics technology object and therefore effective for the following motion jobs.
 
@@ -17104,7 +17104,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (<TO>.KinematicsZone[2..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
+With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (&lt;TO&gt;.KinematicsZone[2..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
 
 The "MC_DefineKinematicsZone" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
@@ -17181,11 +17181,11 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the workspace zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
+The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the workspace zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
 
 The "MC_SetWorkspaceZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
 
 ###### Applies to
 
@@ -17250,7 +17250,7 @@ You use Motion Control instruction "MC_SetWorkspaceZoneInactive" to deactivate a
 
 The "MC_SetWorkspaceZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
 
 ###### Applies to
 
@@ -17317,11 +17317,11 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the zone monitoring for a kinematics zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
+The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the zone monitoring for a kinematics zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
 
 The "MC_SetKinematicsZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -17385,7 +17385,7 @@ You use Motion Control instruction "MC_SetKinematicsZoneInactive" to deactivate 
 
 The "MC_SetKinematicsZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -17471,10 +17471,10 @@ The configurable coordinates depend on the kinematics type used:
 
 The following tags of the technology object data block contain the current coordinates of the tool frame 1:
 
-- <TO>.StatusTool.Frame[1].x
-- <TO>.StatusTool.Frame[1].y
-- <TO>.StatusTool.Frame[1].z
-- <TO>.StatusTool.Frame[1].a
+- &lt;TO&gt;.StatusTool.Frame[1].x
+- &lt;TO&gt;.StatusTool.Frame[1].y
+- &lt;TO&gt;.StatusTool.Frame[1].z
+- &lt;TO&gt;.StatusTool.Frame[1].a
 
 ###### Applies to
 
@@ -17520,7 +17520,7 @@ This section contains information on the following topics:
 
 With the "MC_SetTool" Motion Control instruction, you activate a tool. With the "ToolNumber" parameter, you specify the tool number. The "MC_SetTool" job can be executed only if the kinematics is in standstill. Tool 1 is active by default.
 
-The "<TO>.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
+The "&lt;TO&gt;.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
 
 ###### Applies to
 
@@ -17587,12 +17587,12 @@ The "MC_SetOcsFrame" job is added to the queue of the job sequence and is theref
 
 The following tags of the technology object data block contain the current coordinates of the object coordinate systems:
 
-- <TO>.StatusOcsFrame[1..3].x
-- <TO>.StatusOcsFrame[1..3].y
-- <TO>.StatusOcsFrame[1..3].z
-- <TO>.StatusOcsFrame[1..3].a
-- <TO>.StatusOcsFrame[1..3].b
-- <TO>.StatusOcsFrame[1..3].c
+- &lt;TO&gt;.StatusOcsFrame[1..3].x
+- &lt;TO&gt;.StatusOcsFrame[1..3].y
+- &lt;TO&gt;.StatusOcsFrame[1..3].z
+- &lt;TO&gt;.StatusOcsFrame[1..3].a
+- &lt;TO&gt;.StatusOcsFrame[1..3].b
+- &lt;TO&gt;.StatusOcsFrame[1..3].c
 
 ###### Applies to
 
@@ -17934,10 +17934,10 @@ With the Motion Control instruction "MC_Power", a technology object is enabled o
 ##### Requirement
 
 - The technology object has been configured correctly.
-- Cyclic BUS communication is established between controller and encoder ("<TO>.StatusSensor[1..4].CommunicationOK" = TRUE).
-- Cyclic BUS communication is established between controller and drive ("<TO>.StatusDrive.CommunicationOK" = TRUE).
-- The status of the active encoder is valid ("<TO>.StatusSensor[1..4].State" = 2).
-- The optional [data adaption](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#transferring-drive-and-encoder-parameters-automatically-s7-1500-s7-1500t) has been completed ("<TO>.StatusDrive.AdaptionState" = 2 and "<TO>.StatusSensor[1..4].AdaptionState" = 2).
+- Cyclic BUS communication is established between controller and encoder ("&lt;TO&gt;.StatusSensor[1..4].CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and drive ("&lt;TO&gt;.StatusDrive.CommunicationOK" = TRUE).
+- The status of the active encoder is valid ("&lt;TO&gt;.StatusSensor[1..4].State" = 2).
+- The optional [data adaption](Using%20S7-1500-S7-1500T%20Axis%20functions%20%28S7-1500%2C%20S7-1500T%29.md#transferring-drive-and-encoder-parameters-automatically-s7-1500-s7-1500t) has been completed ("&lt;TO&gt;.StatusDrive.AdaptionState" = 2 and "&lt;TO&gt;.StatusSensor[1..4].AdaptionState" = 2).
 
 ##### Override response
 
@@ -17958,9 +17958,9 @@ The following table shows the parameters of Motion Control instruction "MC_Power
 | 1 | Enable positioning axis/synchronous axis position-controlled |  |  |  |  |
 | The parameter initially takes effect when the positioning axis is enabled ("Enable" changes from "FALSE" to "TRUE") and when the axis is enabled after acknowledgment of an interrupt that caused the axis to be disabled.  This parameter is ignored when a speed axis or an external encoder is used. |  |  |  |  |  |
 | StopMode | INPUT | INT | 0 | Not applicable to the technology object external encoder  If you disable a technology object with a negative edge at parameter "Enable", the axis decelerates in accordance with the selected "StopMode". |  |
-| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop". The drive is then switched off and the technology object is locked.  (<TO>.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  When the technology object is disabled, the axis is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop". The drive is then switched off and the technology object is locked.  (&lt;TO&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
 | 1 | Immediate stop  When a technology object is disabled, the setpoint zero is output. The axis is braked to a standstill according to the configuration in the drive. The drive is then switched off and the technology object is locked. |  |  |  |  |
-| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is locked.  (<TO>.DynamicLimits.MaxDeceleration; <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". The configured maximum jerk is hereby taken into account. The drive is then switched off and the technology object is locked.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration; &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Technology object enable status |  |
 | FALSE | Disabled  - The technology object does not accept any Motion Control jobs. - Speed control and positioning control are not active. - The actual values of the technology object are not checked for validity. |  |  |  |  |
 | TRUE | Enabled  - The enabled technology object accepts Motion Control jobs. - Speed control and positioning control are active. - The actual values of the technology object are valid. |  |  |  |  |
@@ -17983,7 +17983,7 @@ Depending on the "StartMode" parameter, the position is held ("StartMode" = 1)
 
 **Enable in motion of axis**
 
-If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object > Configuration > Extended parameters > Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm reactions.
+If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm reactions.
 
 If "StartMode" = 0, the axis is braked as much as possible by the specification of the velocity setpoint zero. Monitoring operations and dynamic limits are not active in this case.
 
@@ -18011,20 +18011,20 @@ When a drive is connected using PROFIdrive, the setpoint, enable and drive statu
 
   With "Enable" = TRUE parameter, the technology object is enabled. The drive is enabled according to the PROFIdrive standard.
 
-  When the "<TO>.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
+  When the "&lt;TO&gt;.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". The drive is disabled according to the PROFIdrive standard.
 
 ##### Analog drive connection
 
-The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (<TO>.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (<TO>.Actor.Interface.DriveReadyInput).
+The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (&lt;TO&gt;.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (&lt;TO&gt;.Actor.Interface.DriveReadyInput).
 
 - **Enable technology object and activate drive**
 
   With "Enable" = TRUE parameter, the enable output ("Enable drive output") is set.
 
-  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "<TO>.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
+  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "&lt;TO&gt;.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". When the setpoint zero is reached, the enable output is set to "FALSE".
@@ -18080,8 +18080,8 @@ With "Restart" = TRUE, you start reinitialization (restart) of technology object
   For a restart, the technology object must be disabled.
 
   ("MC_Power.Status" = FALSE and "MC_Power.Busy" = FALSE)
-- Cyclic BUS communication is established between controller and encoder ("<TO>.StatusSensor[1..4].CommunicationOK" = TRUE).
-- Cyclic BUS communication is established between controller and drive ("<TO>.StatusDrive.CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and encoder ("&lt;TO&gt;.StatusSensor[1..4].CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and drive ("&lt;TO&gt;.StatusDrive.CommunicationOK" = TRUE).
 
 ##### Override response
 
@@ -18152,11 +18152,11 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_Home", you create the relationship between the position in the technology object and the mechanical position. The actual position value in the technology object is assigned to a homing mark at the same time. This homing mark represents a known mechanical position.
 
-Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object > Configuration > Extended parameters > Homing".
+Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing".
 
 The "MC_Home.Mode" parameter for S7-1200 Motion Control and S7-1500 Motion Control has been standardized within the framework of technology version V2.0. This results in a new assignment of the parameter values for the "MC_Home.Mode" parameter. A comparison of the "MC_Home.Mode" parameter for technology versions V1.0 and ≥ V2.0 is available in the section "[Version overview](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-versions-s7-1500-s7-1500t)" of the "S7-1500/S7-1500T Motion Control overview" documentation.
 
-The preset values under "Technology object > Configuration > Extended parameters > Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
+The preset values under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
 
 ##### Applies to
 
@@ -18181,7 +18181,7 @@ The following table shows which modes are possible with each of the technology o
 - "Mode" = 2, 3, 5, 8, 10  
   The technology object is enabled.
 - "Mode" = 6, 7, 8, 11, 12  
-  The encoder values are valid (<TO>.StatusSensor[1..4].State = 2).
+  The encoder values are valid (&lt;TO&gt;.StatusSensor[1..4].State = 2).
 - "Mode" = 0, 1, 6, 7
 
   The axis is in position-controlled mode.
@@ -18205,12 +18205,12 @@ The following table shows the parameters of Motion Control instruction "MC_Home"
 | 2 | Passive homing (without reset)  Functions like "Mode" 8, with the difference that the "homed" status is **not** reset when the function is enabled. |  |  |  |  |
 | 3 | Active homing   The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After the completion of the motion, the axis is positioned at the value of the "Position" parameter. |  |  |  |  |
 | 4 | Reserved |  |  |  |  |
-| 5 | Active homing ("Position" parameter has no effect)  The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object > Configuration > Extended parameters > Homing > Active homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
-| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |  |
-| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |  |
+| 5 | Active homing ("Position" parameter has no effect)  The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Active homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
+| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |  |
+| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) |  |  |  |  |
 | 8 | Passive homing  When the homing mark is detected, the actual value is set to the value of the "Position" parameter. |  |  |  |  |
 | 9 | Cancel passive homing  An active job for passive homing is canceled. |  |  |  |  |
-| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object > Configuration > Extended parameters > Homing > Passive homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
+| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Passive homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
 | 11 | Set setpoint position (absolute)  The setpoint position of the technology object is set to the value of the "Position" parameter. The following error remains. |  |  |  |  |
 | 12 | Shift the setpoint position (relative)  The setpoint position of the technology object is shifted by the value of the "Position" parameter. The following error remains. |  |  |  |  |
 | ReferenceMark­Position | OUTPUT | LREAL | 0.0 | Display of the position at which the technology object was homed  (valid when "Done" = TRUE) |  |
@@ -18232,7 +18232,7 @@ To home a technology object, follow these steps:
 2. Specify the desired homing function in the "Mode" parameter.
 3. Initialize the necessary parameters with values, and start the homing operation with a positive edge at the "Execute" parameter.
 
-   When the "Done" parameter shows the value "TRUE", the "MC_Home" job has been completed according to the selected "Mode". The "Homed" status of the technology object is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Homed" (<TO>.StatusWord.X5 (HomingDone)).
+   When the "Done" parameter shows the value "TRUE", the "MC_Home" job has been completed according to the selected "Mode". The "Homed" status of the technology object is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Homed" (&lt;TO&gt;.StatusWord.X5 (HomingDone)).
 
 ##### Cancelation of a passive homing process with "Mode" = 9
 
@@ -18289,13 +18289,13 @@ The following table shows the parameters of Motion Control instruction "MC_Halt"
 | Axis | INPUT | TO_SpeedAxis  TO_Positioning­Axis  TO_Synchronous­Axis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
+| &gt; 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | FALSE | The current acceleration at the start of the job is reduced using the configured jerk. Afterwards, the deceleration builds up |
 | TRUE | The acceleration is set to 0.0 at the start of the job, and the deceleration immediately builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Velocity zero has been reached. |
@@ -18312,7 +18312,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Set the necessary values for the parameters "Deceleration", "Jerk" and "AbortAcceleration".
 3. Start the "MC_Halt" job with a positive edge at parameter "Execute".
 
-   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Braking an axis with active force/torque limit
 
@@ -18379,26 +18379,26 @@ The following table shows the parameters of Motion Control instruction "MC_MoveA
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Position | INPUT | LREAL | 0.0 | Absolute target position |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
-| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object > Configuration > Basic parameters > Enable modulo" |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
+| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object &gt; Configuration &gt; Basic parameters &gt; Enable modulo" |  |
 | 1 | Positive direction |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |
 | 3 | Shortest distance |  |  |  |  |
-| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (<TO>.PositioningMonitoring.MinDwellTime). |
+| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (&lt;TO&gt;.PositioningMonitoring.MinDwellTime). |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred while processing the job. The job is rejected. The cause of the error can be found in the "ErrorID" parameter. |
@@ -18470,22 +18470,22 @@ The following table shows the parameters of Motion Control instruction "MC_MoveR
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Distance for the positioning process (negative or positive) |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
-| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (<TO>.PositioningMonitoring.MinDwellTime). |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
+| Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached.  The minimum dwell time has expired (&lt;TO&gt;.PositioningMonitoring.MinDwellTime). |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
 | Error | OUTPUT | BOOL | FALSE | TRUE | An error occurred while processing the job. The job is rejected. The cause of the error can be found in the "ErrorID" parameter. |
@@ -18565,17 +18565,17 @@ The following table shows the parameters of Motion Control instruction "MC_MoveV
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint/speed setpoint for the motion  ("Velocity" = 0.0 is permitted) |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Direction | INPUT | INT | 0 | Direction of rotation of the axis |  |
 | 0 | The sign of the velocity specified at the "Velocity" parameter defines the direction of rotation. |  |  |  |  |
 | 1 | Positive direction of rotation   The value of "Velocity" is used. |  |  |  |  |
@@ -18596,7 +18596,7 @@ The following table shows the parameters of Motion Control instruction "MC_MoveV
 
 An "MC_MoveVelocity" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 The parameters "InVelocity" and "Busy" show the value "TRUE", until the "MC_MoveVelocity" job is overridden by another Motion Control job.
 
@@ -18616,7 +18616,7 @@ Proceed as follows to move an axis with constant velocity/speed:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### Additional information
 
@@ -18688,19 +18688,19 @@ The following table shows the parameters of Motion Control instruction "MC_MoveJ
 | JogBackward | INPUT | BOOL | FALSE | TRUE | As long as the parameter is "TRUE", the axis moves in the negative direction at the velocity specified in parameter "Velocity". |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint/speed setpoint for the motion |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |
-| < 0.0 | The absolute value of the specified value is used. |  |  |  |  |
+| &lt; 0.0 | The absolute value of the specified value is used. |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | PositionControlled | INPUT | BOOL | TRUE | FALSE | Non position-controlled operation |
 | TRUE | Position-controlled mode |  |  |  |  |
 | The parameter applies as long as the "MC_MoveJog" job is being executed. After this, the setting of the following job applies.  This parameter is ignored when a speed axis is used. |  |  |  |  |  |
@@ -18714,7 +18714,7 @@ The following table shows the parameters of Motion Control instruction "MC_MoveJ
 
 An "MC_MoveJog" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Moving an axis in jog mode
 
@@ -18731,7 +18731,7 @@ Proceed as follows to move an axis in jog mode:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### Additional information
 
@@ -18815,21 +18815,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveS
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Additional distance for the overlapping positioning process (negative or positive) |  |
 | VelocityDiff | INPUT | LREAL | -1.0 | Maximum velocity deviation compared to the active motion |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Superimposed positioning complete |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -18915,7 +18915,7 @@ The following table shows the parameters of Motion Control instruction "MC_SetSe
 
 ##### Changing to absolute encoder
 
-When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (<TO>.StatusSensor[1..4].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
+When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (&lt;TO&gt;.StatusSensor[1..4].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
 
 ### MC_Stop V5 (S7-1500, S7-1500T)
 
@@ -18954,7 +18954,7 @@ The standstill position is derived from the stop ramp. Three modes, which you de
 - An "MC_Stop" job does not abort any synchronous operation function in simulation.
 - An "MC_Stop" job is aborted by another "MC_Stop" job with a stop response that is the same or higher.
 
-  Significance of stop responses (descending): "Mode" = 0 > "Mode" = 2 > "Mode" = 3
+  Significance of stop responses (descending): "Mode" = 0 &gt; "Mode" = 2 &gt; "Mode" = 3
 
 You can find more information on the override response of an "MC_Stop" job in the section "[Override response of Motion Control jobs V5](#override-response-of-motion-control-jobs-v5-s7-1500-s7-1500t)".
 
@@ -18968,18 +18968,18 @@ The following table shows the parameters of Motion Control instruction "MC_Stop"
 | Execute | INPUT | BOOL | FALSE | TRUE | The motion is stopped and new motion jobs are prevented. |
 | FALSE | Motion jobs can be executed again. |  |  |  |  |
 | Mode | INPUT | DINT | 0 | Mode for dynamic behavior |  |
-| 0 | Emergency stop  The technology object is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop".  (<TO>.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  The technology object is braked to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop".  (&lt;TO&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
 | 1 | Not permitted |  |  |  |  |
-| 2 | Stop with maximum dynamic values  The technology object is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamics limits". The configured maximum jerk is hereby taken into account.  (<TO>.DynamicLimits.MaxDeceleration, <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  The technology object is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics limits". The configured maximum jerk is hereby taken into account.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration, &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | 3 | Stop with specified dynamic response  The technology object is stopped with the specified values at the parameters "Deceleration" and "Jerk". |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "Mode" = 3:  Deceleration for the braking ramp |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "Mode" = 3:  Jerk for the braking ramp |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | TRUE | Acceleration is set to 0.0. The configured deceleration is built up immediately. |
 | FALSE | The acceleration is reduced using the configured jerk. The configured deceleration then builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Standstill is reached. |
@@ -18996,7 +18996,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Set the necessary values for the parameters "Mode", "Deceleration", "Jerk" and "AbortAcceleration".
 3. Start the "MC_Stop" job with a positive edge at parameter "Execute".
 
-   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+   The current motion state is indicated in parameters "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
    As long as "Execute" = TRUE, the technology object cannot execute motion jobs.
 
@@ -19555,7 +19555,7 @@ A cam track is activated with "Enable" = TRUE. The cam track is output in accord
 
 | Tag |  | Value | Description |
 | --- | --- | --- | --- |
-| <TO>Parameter. |  |  |  |
+| &lt;TO&gt;Parameter. |  |  |  |
 |  | CamTrackType | 0 | Specified output cam type for the cam track is distance output cam |
 | ReferencePosition | 20.0 | Specified axis reference position for the cam track |  |
 | CamTrackLength | 100.0 | Specified length of the cam track |  |
@@ -19625,7 +19625,7 @@ You can start synchronous operation when the leading axis is at a standstill or 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, a synchronous axis, an external encoder or a leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 
 ###### Override response
@@ -19648,17 +19648,17 @@ The following table shows the parameters of Motion Control instruction "MC_GearI
 | RatioNumerator | INPUT | DINT | 1 | Gear ratio numerator  Permitted integer values:  -2147483648 to 2147483647  (value 0 not permitted) |  |
 | RatioDenominator | INPUT | DINT | 1 | Gear ratio denominator  Permitted integer values: 1 to 2147483647 |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | InGear | OUTPUT | BOOL | FALSE | TRUE | Synchronous operation reached  The following axis is synchronized and moves synchronously to the leading axis. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -19736,7 +19736,7 @@ You can start synchronous operation when the leading axis is at a standstill or 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, external encoder or leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - With synchronization in advance using leading value distance, the leading axis must be at least the specified distance ("MasterStartDistance") from the synchronization position ("MasterSyncPosition") when starting the job.
 
@@ -19774,24 +19774,24 @@ The following table shows the parameters of Motion Control instruction "MC_GearI
 | MasterStartDistance | INPUT | LREAL | 1.0 | When "SyncProfileReference" = 1, 3:  Leading value distance |  |
 | When "SyncProfileReference" = 0:  Not relevant |  |  |  |  |  |
 | Velocity | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | When "SyncProfileReference" = 1, 3:  Not relevant |  |  |  |  |  |
 | SyncDirection | INPUT | DINT | 3 | Direction of synchronization  (in effect for axes with activated Modulo setting) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during synchronization. |  |  |  |  |
@@ -19868,7 +19868,7 @@ You define the dynamic response of the motion of the following axis with the par
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, external encoder or leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - By means of the Motion Control instruction "MC_GearIn" or "MC_GearInPos", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE or "MC_GearInPos.InSync" = TRUE).
 - The following axis is enabled.
 
@@ -19889,21 +19889,21 @@ The following table shows the parameters of Motion Control instruction "MC_Phasi
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Relative leading value shift |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Leading value shift is finished. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -19937,9 +19937,9 @@ To start a relative leading value shift with the Motion Control instruction "MC_
 
 ![Function chart: Relative shift of leading value](images/130676335499_DV_resource.Stream@PNG-de-DE.png)
 
-During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingRelative" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object <TO>.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
+During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingRelative" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
 
-After the leading value shift, the "MC_PhasingRelative" job (A2) is initiated again using "Exe". The leading value shift is performed again with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 100.0 is indicated in the tag of the technology object <TO>.StatusSynchronizedMotion.PhaseShift.
+After the leading value shift, the "MC_PhasingRelative" job (A2) is initiated again using "Exe". The leading value shift is performed again with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 100.0 is indicated in the tag of the technology object &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift.
 
 #### MC_PhasingAbsolute V5 (S7-1500T)
 
@@ -19965,7 +19965,7 @@ You define the dynamic response of the motion of the following axis with the par
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, external encoder or leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - By means of the Motion Control instruction "MC_GearIn" or "MC_GearInPos", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE or "MC_GearInPos.InSync" = TRUE).
 - The following axis is enabled.
 
@@ -19986,21 +19986,21 @@ The following table shows the parameters of Motion Control instruction "MC_Phasi
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Absolute leading value shift |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Leading value shift is finished. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -20034,9 +20034,9 @@ To start an absolute leading value shift with the Motion Control instruction "MC
 
 ![Function chart: Absolute shift of leading value](images/130676392075_DV_resource.Stream@PNG-de-DE.png)
 
-During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingAbsolute" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "AbsolutePhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object <TO>.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
+During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingAbsolute" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "AbsolutePhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
 
-After the leading value shift, the "MC_PhasingAbsolute" job (A2) is initiated again using "Exe". Because the leading value shift (<TO>.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
+After the leading value shift, the "MC_PhasingAbsolute" job (A2) is initiated again using "Exe". Because the leading value shift (&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
 
 #### MC_CamIn V5 (S7-1500T)
 
@@ -20051,7 +20051,7 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_CamIn", you start a [camming](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#camming-with-mc_camin-s7-1500t) operation between a leading axis and a following axis. The synchronous operation is synchronized depending on the specified synchronous position of the leading axis.
 
-A cam is defined between the start position (<TO>.StatusCam.StartLeadingValue) and end position (<TO>.StatusCam.EndLeadingValue) after the interpolation. The specification for leading and following value range in the [configuration of the technology object](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#configuring-the-synchronous-operation-function-of-the-cam-s7-1500t) only effect the display in the graphical editor.
+A cam is defined between the start position (&lt;TO&gt;.StatusCam.StartLeadingValue) and end position (&lt;TO&gt;.StatusCam.EndLeadingValue) after the interpolation. The specification for leading and following value range in the [configuration of the technology object](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#configuring-the-synchronous-operation-function-of-the-cam-s7-1500t) only effect the display in the graphical editor.
 
 With the "MasterSyncPosition" parameter, you specify the synchronization position in the cam relative to the starting position of the cam. The synchronous position establishes the relationship between leading value and following value, independent of the type of synchronization. With "MasterSyncPosition" ≠ 0.0, you move the synchronous position within the cam without changing the position of the cam.
 
@@ -20061,19 +20061,19 @@ With the "MasterOffset" parameter, you offset the leading values of the cam (wit
 
 The following figure shows the basic effect of the leading value and following value offset as well as the position of the cam with the following parameter values:
 
-- "MasterOffset" > 0
-- Start position of the cam > 0
-- "MasterSyncPosition" > 0
+- "MasterOffset" &gt; 0
+- Start position of the cam &gt; 0
+- "MasterSyncPosition" &gt; 0
 
 ![Description](images/130676443019_DV_resource.Stream@PNG-en-US.png)
 
 | Symbol | Meaning |
 | --- | --- |
-| ① | Start position of the cam  First defined interpolation point/start of the first segment of the cam (<TO>.StatusCam.StartLeadingValue) |
+| ① | Start position of the cam  First defined interpolation point/start of the first segment of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue) |
 | ② | Leading value distance with synchronization in advance ("MasterStartDistance") |
 | ③ | Synchronous position of the leading axis relative to the starting position of the cam ("MasterSyncPosition") |
 | ④ | Leading value distance with subsequent synchronization ("MasterStartDistance") |
-| ⑤ | End position of the cam   Last defined interpolation point/end of the last segment of the cam (<TO>.StatusCam.EndLeadingValue) |
+| ⑤ | End position of the cam   Last defined interpolation point/end of the last segment of the cam (&lt;TO&gt;.StatusCam.EndLeadingValue) |
 
 The figure below shows the basic effect of scaling the cam with the parameters "MasterScaling" and "SlaveScaling":
 
@@ -20113,7 +20113,7 @@ You can start synchronization when the leading axis or following axis is at a st
 - The technology objects of the leading axis, following axis, and cam have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, external encoder or leading axis proxy.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis under "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The cam is interpolated with "MC_InterpolateCam".
 - With synchronization in advance using leading value distance, the leading axis must be at least the specified distance ("MasterStartDistance") from the synchronization position ("MasterSyncPosition") when starting the job.
@@ -20155,24 +20155,24 @@ The following table shows the parameters of Motion Control instruction "MC_CamIn
 | MasterStartDistance | INPUT | LREAL | 0.0 | When "SyncProfileReference" = 1, 3, 4:  Leading value distance  Distance of the leading axis during the synchronization |  |
 | When "SyncProfileReference" = 0, 2:  Not relevant |  |  |  |  |  |
 | Velocity | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4:  Not relevant |  |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4:  Not relevant |  |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4:  Not relevant |  |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | When "SyncProfileReference" = 0:  Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | When "SyncProfileReference" = 1, 2, 3, 4:  Not relevant |  |  |  |  |  |
 | ApplicationMode | INPUT | DINT | 0 | Application of the cam |  |
 | 0 | Once/not cyclic |  |  |  |  |
@@ -20258,7 +20258,7 @@ If the position of the following axis at the end of the simulation differs from 
 
 - The technology object has been configured correctly.
 - The following axis is a synchronous axis.
-- Synchronous operation is active on the technology object in status "Synchronous" (<TO>.StatusWord.X22 = TRUE).
+- Synchronous operation is active on the technology object in status "Synchronous" (&lt;TO&gt;.StatusWord.X22 = TRUE).
 
 ###### Override response
 
@@ -20392,8 +20392,8 @@ With the Motion Control instruction "MC_InterpolateCam", you interpolate a cam.
 
 The interpolation closes the gaps between the defined interpolation points and segments of the cam. The cam is interpolated between the following values in the definition range:
 
-- First defined interpolation point/start of the first segment of the cam (<TO>.StatusCam.StartLeadingValue)
-- Last defined interpolation point/end of the last segment of the cam (<TO>.StatusCam.EndLeadingValue)
+- First defined interpolation point/start of the first segment of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue)
+- Last defined interpolation point/end of the last segment of the cam (&lt;TO&gt;.StatusCam.EndLeadingValue)
 
 After interpolation, an explicit value in the value range is assigned to each value in the definition range.
 
@@ -20802,7 +20802,7 @@ If the high and low torque limits are active, the following monitors and limits 
 - Following error monitoring
 - Time limitations for positioning and standstill monitoring
 
-Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object > Configuration > Extended parameters > Limits > Torque limit".
+Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object &gt; Configuration &gt; Extended parameters &gt; Limits &gt; Torque limit".
 
 ###### Applies to
 
@@ -20884,7 +20884,7 @@ The functions of the Motion Control instruction "MC_TorqueLimiting" can be activ
   - P1522 to a fixed value of 100 %
   - P1523 to a fixed value of -100% (e.g. through interconnection to fixed value parameter P2902[i]).
   - P1544 Torque/force reduction analysis during travel to fixed stop to 100% (default)
-  - P2194 Threshold value for the parameter "InLimitation" must be < 100% (default 90%)
+  - P2194 Threshold value for the parameter "InLimitation" must be &lt; 100% (default 90%)
 
 ###### Fixed stop detection applies to
 
@@ -20914,7 +20914,7 @@ The following table shows the parameters of the motion control instruction "MC_T
 | Enable | INPUT | BOOL | FALSE | TRUE | Activate function corresponding to input parameter "Mode" |
 | Limit | INPUT | LREAL | -1.0 | Value of force/torque limiting (in the configured unit of measurement)<sup>1)</sup>  If the drive and telegram do not support force/torque limiting, the specified value is irrelevant. |  |
 | ≥ 0.0 | The value specified at the parameter is used. |  |  |  |  |
-| < 0.0 | The value configured in the "Torque limiting" configuration window is used.  Tag Torque Limit:   <TO>.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   <TO>.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
+| &lt; 0.0 | The value configured in the "Torque limiting" configuration window is used.  Tag Torque Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
 | Mode | INPUT | DINT | 0 | 0 | Force/torque limiting<sup>1)</sup> |
 | 1 | Fixed stop detection<sup>1)</sup>  If drive and telegram support force/torque limiting, this is applied. |  |  |  |  |
 | InClamping | OUTPUT | BOOL | FALSE | TRUE | "Mode" = 1:  The drive is kept at the fixed stop (clamping<sup>2)</sup>). The axis position is within the positioning tolerance. |
@@ -21162,12 +21162,12 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_MoveLinearAbsolute", you move a kinematics with a circular motion to an absolute position. Cartesian orientation is also used absolute.
 
-Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -21199,21 +21199,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | Position[3] | INPUT | LREAL | 0.0 | z-coordinate |  |  |
 | Position[4] | INPUT | LREAL | 0.0 | A-coordinate |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | Motion direction of the Cartesian orientation |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -21230,13 +21230,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -21282,12 +21282,12 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_MoveLinearRelative", you can move a kinematics with a linear path relative to the position which was present at the start of the job processing. Cartesian orientation is also used relative.
 
-Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -21319,21 +21319,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | Distance[3] | INPUT | LREAL | 0.0 | z-coordinate |  |  |
 | Distance[4] | INPUT | LREAL | 0.0 | A-coordinate |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system of the specified target position and target orientation |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -21346,13 +21346,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1.0 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -21410,12 +21410,12 @@ With the "CircMode" parameter, you specify the definition of the circular path:
 
   With the "EndPoint" parameter, you specify the end point and with "Radius" the radius of the circular path. Depending on the radius, up to four possible circular paths can occur in the plane defined with the "CirclePlane" parameter. With the "PathChoice" parameter, you specify which of these circular paths is to be moved.
 
-Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -21474,21 +21474,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | Radius |  | INPUT | LREAL | 0.0 | When "CircMode" = 2:  Radius of the circular movement |  |
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:  Angle of the circular movement |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | Motion direction of the Cartesian orientation |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -21505,13 +21505,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1.0 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -21575,12 +21575,12 @@ With the "CircMode" parameter, you specify the definition of the circular path:
 
   With the "EndPoint" parameter, you specify the end point and with "Radius" the radius of the circular path. Depending on the radius, up to four possible circular paths can occur in the plane defined with the "CirclePlane" parameter. With the "PathChoice" parameter, you specify which of these circular paths is to be moved.
 
-Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -21639,21 +21639,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | Radius |  | INPUT | LREAL | 0.0 | When "CircMode" = 2:  Radius of the circular movement |  |
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:  Angle of the circular movement |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -21666,13 +21666,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -21728,7 +21728,7 @@ The movement path of the tool center point (TCP) results from the dynamic values
 
 You can also move the orientation of the kinematics to an absolute position. You specify this with the "PositionMode" parameter.
 
-Dynamic behavior during movement is defined by means of factors with the parameters "VelocityFactor", "AccelerationFactor", "DecelerationFactor" and "JerkFactor". The factors relate as percentages to the maximum dynamic values of the corresponding axis configured in "Technology object > Configuration > Extended parameters > Dynamic limits".
+Dynamic behavior during movement is defined by means of factors with the parameters "VelocityFactor", "AccelerationFactor", "DecelerationFactor" and "JerkFactor". The factors relate as percentages to the maximum dynamic values of the corresponding axis configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits".
 
 ###### Applies to
 
@@ -21765,24 +21765,24 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | When "CoordSystem" = 0, 1, 2 or 3 and "PositionMode" = 1 or 2:  z coordinate |  |  |  |  |  |  |
 | Position[4] | INPUT | LREAL | 0.0 | When "CoordSystem" = 100 (MCS):  Position of kinematics axis A4 |  |  |
 | When "CoordSystem" = 0, 1, 2 or 3 and "PositionMode" = 1 or 2:  A coordinate |  |  |  |  |  |  |
-| VelocityFactor |  | INPUT | LREAL | -1.0 | Factor for the velocity of axis motions in relation to the respective maximum velocity of the axes ("DynamicLimits.MaxVelocity")  Permitted value range: -1.0 < Factor < 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
-| < 0.0 | The velocity factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
+| VelocityFactor |  | INPUT | LREAL | -1.0 | Factor for the velocity of axis motions in relation to the respective maximum velocity of the axes ("DynamicLimits.MaxVelocity")  Permitted value range: -1.0 &lt; Factor &lt; 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
+| &lt; 0.0 | The velocity factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
 | ≥ 0.01 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum velocity of the axes is used. |  |  |  |  |  |
-| AccelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the acceleration of axis motions in relation to the respective maximum acceleration of the axis ("DynamicLimits.MaxAcceleration")  Permitted value range: -1.0 < Factor ≤ 1.0 |  |
-| < 0.0 | The acceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
+| AccelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the acceleration of axis motions in relation to the respective maximum acceleration of the axis ("DynamicLimits.MaxAcceleration")  Permitted value range: -1.0 &lt; Factor ≤ 1.0 |  |
+| &lt; 0.0 | The acceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum acceleration of the axes is used. |  |  |  |  |  |
-| DecelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axis ("DynamicLimits.MaxDeceleration")  Permitted value range: -1.0 < Factor ≤ 1.0 |  |
-| < 0.0 | The deceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
+| DecelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axis ("DynamicLimits.MaxDeceleration")  Permitted value range: -1.0 &lt; Factor ≤ 1.0 |  |
+| &lt; 0.0 | The deceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum deceleration of the axes is used. |  |  |  |  |  |
-| JerkFactor |  | INPUT | LREAL | -1.0 | Factor for the jerk of axis motions in relation to the respective maximum jerk of the axis ("DynamicLimits.MaxJerk")  Permitted value range: -1.0 <Factor ≤ 0.0 and 0.1 < Factor ≤ 0.9 |  |
-| < 0.0 | The jerk factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
+| JerkFactor |  | INPUT | LREAL | -1.0 | Factor for the jerk of axis motions in relation to the respective maximum jerk of the axis ("DynamicLimits.MaxJerk")  Permitted value range: -1.0 &lt;Factor ≤ 0.0 and 0.1 &lt; Factor ≤ 0.9 |  |
+| &lt; 0.0 | The jerk factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
 | 0.0 | The maximum jerk of the axes is used. |  |  |  |  |  |
-| > 0.1 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.1 | The specified factor is used. |  |  |  |  |  |
 | LinkConstellation |  | INPUT | DWORD | 16#FFFF FFFF | The joint position space depends on the respective [kinematics types](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#kinematics-types-s7-1500t) |  |
 | #FFFF FFFF | Keep current joint position space |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system |  |
@@ -21798,7 +21798,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Rounding clearance |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
@@ -21856,7 +21856,7 @@ The movement path of the tool center point (TCP) results from the dynamic values
 
 You can also move the orientation of the kinematics to a relative position.
 
-Dynamic behavior during movement is defined by means of factors with the parameters "VelocityFactor", "AccelerationFactor", "DecelerationFactor" and "JerkFactor". The factors relate as percentages to the maximum dynamic values of the corresponding axis configured in "Technology object > Configuration > Extended parameters > Dynamic limits".
+Dynamic behavior during movement is defined by means of factors with the parameters "VelocityFactor", "AccelerationFactor", "DecelerationFactor" and "JerkFactor". The factors relate as percentages to the maximum dynamic values of the corresponding axis configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits".
 
 ###### Applies to
 
@@ -21892,24 +21892,24 @@ The following table shows the parameters of Motion Control instruction:
 | When "CoordSystem" = 0, 1, 2 or 3:  z coordinate |  |  |  |  |  |  |
 | Distance[4] | INPUT | LREAL | 0.0 | When "CoordSystem" = 100:  Relative position of the axis A4 |  |  |
 | When "CoordSystem" = 0, 1, 2 or 3:  A coordinate |  |  |  |  |  |  |
-| VelocityFactor |  | INPUT | LREAL | -1.0 | Factor for the velocity of axis motions in relation to the respective maximum velocity of the axes ("DynamicLimits.MaxVelocity")  Permitted value range: -1.0 < Factor < 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
-| < 0.0 | The velocity factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
+| VelocityFactor |  | INPUT | LREAL | -1.0 | Factor for the velocity of axis motions in relation to the respective maximum velocity of the axes ("DynamicLimits.MaxVelocity")  Permitted value range: -1.0 &lt; Factor &lt; 0.0 and 0.01 ≤ Factor ≤ 1.0 |  |
+| &lt; 0.0 | The velocity factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.VelocityFactor) |  |  |  |  |  |
 | ≥ 0.01 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum velocity of the axes is used. |  |  |  |  |  |
-| AccelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the acceleration of axis motions in relation to the respective maximum acceleration of the axis ("DynamicLimits.MaxAcceleration")  Permitted value range: -1.0 < Factor ≤ 1.0 |  |
-| < 0.0 | The acceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
+| AccelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the acceleration of axis motions in relation to the respective maximum acceleration of the axis ("DynamicLimits.MaxAcceleration")  Permitted value range: -1.0 &lt; Factor ≤ 1.0 |  |
+| &lt; 0.0 | The acceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.AccelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum acceleration of the axes is used. |  |  |  |  |  |
-| DecelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axis ("DynamicLimits.MaxDeceleration")  Permitted value range: -1.0 < Factor ≤ 1.0 |  |
-| < 0.0 | The deceleration factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
+| DecelerationFactor |  | INPUT | LREAL | -1.0 | Factor for the deceleration of the axis motions in relation to the respective maximum deceleration of the axis ("DynamicLimits.MaxDeceleration")  Permitted value range: -1.0 &lt; Factor ≤ 1.0 |  |
+| &lt; 0.0 | The deceleration factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.DecelerationFactor) |  |  |  |  |  |
 | 0.0 | Not permissible |  |  |  |  |  |
-| > 0.0 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified factor is used. |  |  |  |  |  |
 | 1.0 | The maximum deceleration of the axes is used. |  |  |  |  |  |
-| JerkFactor |  | INPUT | LREAL | -1.0 | Factor for the jerk of axis motions in relation to the respective maximum jerk of the axis ("DynamicLimits.MaxJerk")  Permitted value range: -1.0 <Factor ≤ 0.0 and 0.1 < Factor ≤ 0.9 |  |
-| < 0.0 | The jerk factor configured under "Technology object > Configuration > Extended parameters > Dynamics > Settings for sPTP motion" is used. (<TO>.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
+| JerkFactor |  | INPUT | LREAL | -1.0 | Factor for the jerk of axis motions in relation to the respective maximum jerk of the axis ("DynamicLimits.MaxJerk")  Permitted value range: -1.0 &lt;Factor ≤ 0.0 and 0.1 &lt; Factor ≤ 0.9 |  |
+| &lt; 0.0 | The jerk factor configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamics &gt; Settings for sPTP motion" is used. (&lt;TO&gt;.DynamicDefaults.MoveDirect.JerkFactor) |  |  |  |  |  |
 | 0.0 | The maximum jerk of the axes is used. |  |  |  |  |  |
-| > 0.1 | The specified factor is used. |  |  |  |  |  |
+| &gt; 0.1 | The specified factor is used. |  |  |  |  |  |
 | LinkConstellation |  | INPUT | DWORD | 16#FFFF FFFF | The joint position space depends on the respective [kinematics types](Using%20S7-1500T%20Kinematics%20functions%20%28S7-1500T%29.md#kinematics-types-s7-1500t) |  |
 | #FFFF FFFF | Keep current joint position space |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system |  |
@@ -21925,14 +21925,14 @@ The following table shows the parameters of Motion Control instruction:
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Rounding clearance |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | ExecutionTimeStatus |  | OUTPUT | LREAL | 0.0 | Display of execution progress  Value range: 0.0 … 1.0   The job is completed with "ExecutionTimeStatus" = 1.0. |  |
 | 0.0 | The job has not yet been executed. |  |  |  |  |  |
-| > 0.0 | The job is being executed. |  |  |  |  |  |
+| &gt; 0.0 | The job is being executed. |  |  |  |  |  |
 | 1.0 | The job was executed. |  |  |  |  |  |
 | Done |  | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
 | Busy |  | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
@@ -22035,7 +22035,7 @@ A "MC_MeasuringInput" job (A1) is used to record the position of a product at th
 
 With a "MC_TrackConveyorBelt" job (A2), an OCS is assigned via the parameter "ConveyorBelt" to a leading value capable technology object, which represents the conveyor belt. The OCS is assigned to a known conveyor position. The OCS is assigned with the OCS frame ("ConveyorBeltOrigin") and the product position ("InitialObjectPosition") to a product on the conveyor. The OCS is then coupled with the product in the x direction.
 
-The status of conveyor tracking ("<TO_Kin_1>.StatusConveyor[1].TrackingState") changes from 0 to 1. When the kinematics moves to the product position, the conveyor tracking status changes from 1 to 2. When the kinematics follows the product position, the status of the conveyor tracking changes from 2 to 3.
+The status of conveyor tracking ("&lt;TO_Kin_1&gt;.StatusConveyor[1].TrackingState") changes from 0 to 1. When the kinematics moves to the product position, the conveyor tracking status changes from 1 to 2. When the kinematics follows the product position, the status of the conveyor tracking changes from 2 to 3.
 
 At the times ② and ③, additional products are recorded on the conveyor and the OCS is reassigned with additional "MC_TrackConveyorBelt" jobs.
 
@@ -22060,7 +22060,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (<TO>.WorkspaceZone[1..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
+With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (&lt;TO&gt;.WorkspaceZone[1..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
 
 The "MC_DefineWorkspaceZone" job interjects itself in the job sequence on the Kinematics technology object and therefore effective for the following motion jobs.
 
@@ -22144,7 +22144,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (<TO>.KinematicsZone[2..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
+With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (&lt;TO&gt;.KinematicsZone[2..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
 
 The "MC_DefineKinematicsZone" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
@@ -22221,11 +22221,11 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the workspace zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
+The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the workspace zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
 
 The "MC_SetWorkspaceZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
 
 ###### Applies to
 
@@ -22290,7 +22290,7 @@ You use Motion Control instruction "MC_SetWorkspaceZoneInactive" to deactivate a
 
 The "MC_SetWorkspaceZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
 
 ###### Applies to
 
@@ -22357,11 +22357,11 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the zone monitoring for a kinematics zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
+The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the zone monitoring for a kinematics zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
 
 The "MC_SetKinematicsZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -22425,7 +22425,7 @@ You use Motion Control instruction "MC_SetKinematicsZoneInactive" to deactivate 
 
 The "MC_SetKinematicsZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -22511,10 +22511,10 @@ The configurable coordinates depend on the kinematics type used:
 
 The following tags of the technology object data block contain the current coordinates of the tool frame 1:
 
-- <TO>.StatusTool.Frame[1].x
-- <TO>.StatusTool.Frame[1].y
-- <TO>.StatusTool.Frame[1].z
-- <TO>.StatusTool.Frame[1].a
+- &lt;TO&gt;.StatusTool.Frame[1].x
+- &lt;TO&gt;.StatusTool.Frame[1].y
+- &lt;TO&gt;.StatusTool.Frame[1].z
+- &lt;TO&gt;.StatusTool.Frame[1].a
 
 ###### Applies to
 
@@ -22560,7 +22560,7 @@ This section contains information on the following topics:
 
 With the "MC_SetTool" Motion Control instruction, you activate a tool. With the "ToolNumber" parameter, you specify the tool number. The "MC_SetTool" job can be executed only if the kinematics is in standstill. Tool 1 is active by default.
 
-The "<TO>.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
+The "&lt;TO&gt;.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
 
 ###### Applies to
 
@@ -22627,12 +22627,12 @@ The "MC_SetOcsFrame" job is added to the queue of the job sequence and is theref
 
 The following tags of the technology object data block contain the current coordinates of the object coordinate systems:
 
-- <TO>.StatusOcsFrame[1..3].x
-- <TO>.StatusOcsFrame[1..3].y
-- <TO>.StatusOcsFrame[1..3].z
-- <TO>.StatusOcsFrame[1..3].a
-- <TO>.StatusOcsFrame[1..3].b
-- <TO>.StatusOcsFrame[1..3].c
+- &lt;TO&gt;.StatusOcsFrame[1..3].x
+- &lt;TO&gt;.StatusOcsFrame[1..3].y
+- &lt;TO&gt;.StatusOcsFrame[1..3].z
+- &lt;TO&gt;.StatusOcsFrame[1..3].a
+- &lt;TO&gt;.StatusOcsFrame[1..3].b
+- &lt;TO&gt;.StatusOcsFrame[1..3].c
 
 ###### Applies to
 
@@ -22966,8 +22966,8 @@ With the Motion Control instruction "MC_Power", a technology object is enabled o
 ##### Requirement
 
 - The technology object has been configured correctly.
-- Cyclic BUS communication is established between controller and encoder ("<TO>.StatusSensor[n].CommunicationOK" = TRUE).
-- Cyclic BUS communication is established between controller and drive ("<TO>.StatusDrive.CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and encoder ("&lt;TO&gt;.StatusSensor[n].CommunicationOK" = TRUE).
+- Cyclic BUS communication is established between controller and drive ("&lt;TO&gt;.StatusDrive.CommunicationOK" = TRUE).
 
 ##### Override response
 
@@ -22988,9 +22988,9 @@ The following table shows the parameters of Motion Control instruction "MC_Power
 | 1 | Enable positioning axis/synchronous axis position-controlled |  |  |  |  |
 | The parameter initially takes effect when the positioning axis is enabled ("Enable" changes from "FALSE" to "TRUE") and when the axis is enabled after acknowledgment of an interrupt that caused the axis to be disabled.  This parameter is ignored when a speed axis or an external encoder is used. |  |  |  |  |  |
 | StopMode | INPUT | INT | 0 | Not applicable to the technology object external encoder  If you disable a technology object with a negative edge at parameter "Enable", the axis decelerates in accordance with the selected "StopMode". |  |
-| 0 | Emergency stop  When the technology object is disabled, the axis brakes to a standstill without jerk limit, using the emergency deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop ramp". The enable is then canceled.  (<TO>.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  When the technology object is disabled, the axis brakes to a standstill without jerk limit, using the emergency deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop ramp". The enable is then canceled.  (&lt;TO&gt;.DynamicDefaults.EmergencyDeceleration) |  |  |  |  |
 | 1 | Immediate stop  When a technology object is disabled, the setpoint zero is output, and the enable is canceled. The axis is braked to a standstill according to the configuration in the drive. |  |  |  |  |
-| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits". The configured maximum jerk is hereby taken into account. The enable is then canceled.  (<TO>.DynamicLimits.MaxDeceleration; <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". The configured maximum jerk is hereby taken into account. The enable is then canceled.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration; &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Technology object enable status |  |
 | FALSE | Disabled  - The technology object does not accept any Motion Control jobs. - Speed control and positioning control are not active. - The actual values of the technology object are not checked for validity. |  |  |  |  |
 | TRUE | Enabled  - The enabled technology object accepts Motion Control jobs. - Speed control and positioning control are active. - The actual values of the technology object are valid. |  |  |  |  |
@@ -23013,7 +23013,7 @@ Depending on the "StartMode" parameter, the position is held ("StartMode" = 1)
 
 **Enable in motion of axis**
 
-If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object > Configuration > Extended parameters > Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm reactions.
+If "StartMode" = 1, the position at the time of the setting of the "Enable" input takes effect as the position setpoint for the position controller. The axis is braked to a standstill and adjusted to the set position depending on the maximum deceleration configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". If monitoring operation or dynamic limits are hereby exceeded, this leads to corresponding alarm reactions.
 
 If "StartMode" = 0, the axis is braked as much as possible by the specification of the velocity setpoint zero. Monitoring operations and dynamic limits are not active in this case.
 
@@ -23041,20 +23041,20 @@ When a drive is connected using PROFIdrive, the setpoint, enable and drive statu
 
   With "Enable" = TRUE parameter, the technology object is enabled. The drive is enabled according to the PROFIdrive standard.
 
-  When the "<TO>.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
+  When the "&lt;TO&gt;.StatusDrive.InOperation" tag shows the value "TRUE", the drive is ready to execute setpoints. The "Status" parameter is set to the value "TRUE".
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". The drive is disabled according to the PROFIdrive standard.
 
 ##### Analog drive connection
 
-The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (<TO>.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (<TO>.Actor.Interface.DriveReadyInput).
+The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (&lt;TO&gt;.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (&lt;TO&gt;.Actor.Interface.DriveReadyInput).
 
 - **Enable technology object and activate drive**
 
   With "Enable" = TRUE parameter, the enable output ("Enable drive output") is set.
 
-  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "<TO>.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
+  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's "&lt;TO&gt;.StatusDrive.InOperation" tag are set to "TRUE", and the setpoint is switched to the analog output.
 - **Disable technology object and deactivate drive**
 
   With the "Enable" = FALSE parameter, the "Status" parameter is set to the value "FALSE", and the axis is braked according to the selected "StopMode". When the setpoint zero is reached, the enable output is set to "FALSE".
@@ -23166,11 +23166,11 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_Home", you create the relationship between the position in the technology object and the mechanical position. The actual position value in the technology object is assigned to a homing mark at the same time. This homing mark represents a known mechanical position.
 
-Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object > Configuration > Extended parameters > Homing".
+Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing".
 
 The "MC_Home.Mode" parameter for S7-1200 Motion Control and S7-1500 Motion Control has been standardized within the framework of technology version V2.0. This results in a new assignment of the parameter values for the "MC_Home.Mode" parameter. A comparison of the "MC_Home.Mode" parameter for technology versions V1.0 and ≥ V2.0 is available in section [Version overview](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-versions-s7-1500-s7-1500t).
 
-The preset values under "Technology object > Configuration > Extended parameters > Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
+The preset values under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
 
 ##### Applies to
 
@@ -23194,7 +23194,7 @@ The following table shows which modes are possible with each of the technology o
 - "Mode" = 2, 3, 5, 8, 10  
   The technology object is enabled.
 - "Mode" = 0, 1, 6, 7, 8  
-  The encoder values are valid (<TO>.StatusSensor[n].State = 2).
+  The encoder values are valid (&lt;TO&gt;.StatusSensor[n].State = 2).
 - "Mode" = 6, 7
 
   The axis is in position-controlled mode.
@@ -23218,12 +23218,12 @@ The following table shows the parameters of Motion Control instruction "MC_Home"
 | 2 | Passive homing (without reset)  Functions like "Mode" 8, with the difference that the "homed" status is **not** reset when the function is enabled. |  |  |  |  |
 | 3 | Active homing   The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After the completion of the motion, the axis is positioned at the value of the "Position" parameter. |  |  |  |  |
 | 4 | Reserved |  |  |  |  |
-| 5 | Active homing ("Position" parameter has no effect)  The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object > Configuration > Extended parameters > Homing > Active homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
-| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[n].AbsEncoderOffset) |  |  |  |  |
-| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[n].AbsEncoderOffset) |  |  |  |  |
+| 5 | Active homing ("Position" parameter has no effect)  The positioning axis/synchronous axis technology object performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Active homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
+| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[n].AbsEncoderOffset) |  |  |  |  |
+| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[n].AbsEncoderOffset) |  |  |  |  |
 | 8 | Passive homing  When the homing mark is detected, the actual value is set to the value of the "Position" parameter. |  |  |  |  |
 | 9 | Cancel passive homing  An active job for passive homing is canceled. |  |  |  |  |
-| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object > Configuration > Extended parameters > Homing > Passive homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
+| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Passive homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
 | ReferenceMarkPosition | OUTPUT | LREAL | 0.0 | Display of the position at which the technology object was homed  (valid when "Done" = TRUE) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
@@ -23243,7 +23243,7 @@ To home a technology object, follow these steps:
 2. Specify the desired homing function in the "Mode" parameter.
 3. Initialize the necessary parameters with values, and start the homing operation with a positive edge at the "Execute" parameter.
 
-   When the "Done" parameter shows the value "TRUE", the "MC_Home" job has been completed according to the selected "Mode". The "Homed" status of the technology object is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Homed" (<TO>.StatusWord.X5 (HomingDone)).
+   When the "Done" parameter shows the value "TRUE", the "MC_Home" job has been completed according to the selected "Mode". The "Homed" status of the technology object is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Homed" (&lt;TO&gt;.StatusWord.X5 (HomingDone)).
 
 ##### Cancelation of a passive homing process with "Mode" = 9
 
@@ -23298,13 +23298,13 @@ The following table shows the parameters of Motion Control instruction "MC_Halt"
 | Axis | INPUT | TO_SpeedAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
+| &gt; 0.0 | Constant-acceleration velocity profile; the specified jerk is used |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | FALSE | The current acceleration at the start of the job is reduced using the configured jerk. Afterwards, the deceleration builds up |
 | TRUE | The acceleration is set to 0.0 at the start of the job, and the deceleration immediately builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Velocity zero has been reached. |
@@ -23321,7 +23321,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Supply the parameters "Deceleration", "Jerk" and "AbortAcceleration" with the desired values.
 3. Start the "MC_Halt" job with a positive edge at parameter "Execute".
 
-   The current motion state is indicated in "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+   The current motion state is indicated in "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Braking an axis with active force/torque limit
 
@@ -23392,22 +23392,22 @@ The following table shows the parameters of Motion Control instruction "MC_MoveA
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Position | INPUT | LREAL | 0.0 | Absolute target position |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
-| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object > Configuration > Basic parameters > Enable modulo |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
+| Direction | INPUT | INT | 1 | Motion direction of the axis  This parameter is only evaluated when the modulo function is enabled.   "Technology object &gt; Configuration &gt; Basic parameters &gt; Enable modulo |  |
 | 1 | Positive direction |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |
 | 3 | Shortest distance |  |  |  |  |
@@ -23483,21 +23483,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveR
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Distance for the positioning process (negative or positive) |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | The target position has been reached. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -23578,17 +23578,17 @@ The following table shows the parameters of Motion Control instruction "MC_MoveV
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint / speed setpoint for the motion  ("Velocity" = 0.0 is permitted) |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Direction | INPUT | INT | 0 | Direction of rotation of the axis |  |
 | 0 | The sign of the velocity specified at the "Velocity" parameter defines the direction of rotation. |  |  |  |  |
 | 1 | Positive direction of rotation   The value of "Velocity" is used. |  |  |  |  |
@@ -23609,7 +23609,7 @@ The following table shows the parameters of Motion Control instruction "MC_MoveV
 
 An "MC_MoveVelocity" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 The parameters "InVelocity" and "Busy" show the value "TRUE", until the "MC_MoveVelocity" job is overridden by another Motion Control job.
 
@@ -23629,7 +23629,7 @@ Proceed as follows to move an axis with constant velocity/speed:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity/speed is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### Additional information
 
@@ -23701,19 +23701,19 @@ The following table shows the parameters of Motion Control instruction "MC_MoveJ
 | JogBackward | INPUT | BOOL | FALSE | TRUE | As long as the parameter is "TRUE", the axis moves in the negative direction at the velocity specified in parameter "Velocity". |
 | Velocity | INPUT | LREAL | 100.0 | Velocity setpoint / speed setpoint for the motion |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |
-| < 0.0 | The absolute value of the specified value is used. |  |  |  |  |
+| &lt; 0.0 | The absolute value of the specified value is used. |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | PositionControlled | INPUT | BOOL | TRUE | FALSE | Non position-controlled operation |
 | TRUE | Position-controlled mode |  |  |  |  |
 | The parameter applies as long as the "MC_MoveJog" job is being executed. After this, the setting of the following job applies.  This parameter is ignored when a speed axis is used. |  |  |  |  |  |
@@ -23727,7 +23727,7 @@ The following table shows the parameters of Motion Control instruction "MC_MoveJ
 
 An "MC_MoveJog" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint/speed setpoint zero is reached, the parameter "InVelocity" will indicate the value "TRUE".
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Moving an axis in jog mode
 
@@ -23744,7 +23744,7 @@ Proceed as follows to move an axis in jog mode:
 >
 > **Response to a change in the override**
 >
-> If the velocity/speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity/speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### Additional information
 
@@ -23828,21 +23828,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveS
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | Distance | INPUT | LREAL | 0.0 | Additional distance for the overlapping positioning process (negative or positive) |  |
 | VelocityDiff | INPUT | LREAL | -1.0 | Maximum velocity deviation compared to the active motion |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Superimposed positioning complete |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -23928,7 +23928,7 @@ The following table shows the parameters of Motion Control instruction "MC_SetSe
 
 ##### Changing to absolute encoder
 
-When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (<TO>.StatusSensor[n].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
+When you switch the encoder to an absolute encoder and transfer the actual value ("Mode" = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (&lt;TO&gt;.StatusSensor[n].AbsEncoderOffset) without calculation by the "MC_SetSensor" job.
 
 ### Measuring input, output cam, cam track (S7-1500, S7-1500T)
 
@@ -24322,7 +24322,7 @@ A cam track is activated with "Enable" = TRUE. The cam track is output in accord
 
 | Tag |  | Value | Description |
 | --- | --- | --- | --- |
-| <TO>Parameter. |  |  |  |
+| &lt;TO&gt;Parameter. |  |  |  |
 |  | CamTrackType | 0 | Specified output cam type for the cam track is distance output cam |
 | ReferencePosition | 20.0 | Specified axis reference position for the cam track |  |
 | CamTrackLength | 100.0 | Specified length of the cam track |  |
@@ -24391,7 +24391,7 @@ You can start synchronous operation when the leading axis is at a standstill or 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 
 ###### Override response
@@ -24414,17 +24414,17 @@ The following table shows the parameters of Motion Control instruction "MC_GearI
 | RatioNumerator | INPUT | DINT | 1 | Gear ratio numerator  Permitted integer values:  -2147483648 to 2147483647  (value 0 not permitted) |  |
 | RatioDenominator | INPUT | DINT | 1 | Gear ratio denominator  Permitted integer values: 1 to 2147483647 |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | InGear | OUTPUT | BOOL | FALSE | TRUE | Synchronous operation reached  The following axis is synchronized and moves synchronously to the leading axis. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -24497,7 +24497,7 @@ You can start synchronous operation when the leading axis is at a standstill or 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - When using the "MasterStartDistance", the leading axis must be at least the specified distance from the "MasterSyncPosition" when starting the job.
 
@@ -24527,21 +24527,21 @@ The following table shows the parameters of Motion Control instruction "MC_GearI
 | 1 | Synchronization using leading value distance |  |  |  |  |
 | MasterStartDistance | INPUT | LREAL | 1.0 | Leading value distance  (when "SyncProfileReference" = 1) |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity  (with "SyncProfileReference" = 0) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration  (with "SyncProfileReference" = 0) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration  (with "SyncProfileReference" = 0) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk  (with "SyncProfileReference" = 0) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | SyncDirection | INPUT | DINT | 3 | Direction of synchronization  (in effect for axes with activated Modulo setting) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during synchronization. |  |  |  |  |
 | 2 | Negative direction  The following axis may only travel in negative direction during synchronization. |  |  |  |  |
@@ -24604,7 +24604,7 @@ You define the dynamic response of the motion of the following axis with the par
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - By means of the Motion Control instruction "MC_GearIn" or "MC_GearInPos", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE or "MC_GearInPos.InSync" = TRUE).
 - The following axis is enabled.
 
@@ -24625,21 +24625,21 @@ The following table shows the parameters of Motion Control instruction "MC_Phasi
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Absolute leading value shift |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Leading value shift is finished. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -24673,9 +24673,9 @@ To start an absolute leading value shift with the Motion Control instruction "MC
 
 ![Function chart: Absolute shift of leading value](images/108250313867_DV_resource.Stream@PNG-de-DE.png)
 
-During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingAbsolute" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "AbsolutePhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object <TO>.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
+During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingAbsolute" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "AbsolutePhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
 
-After the leading value shift, the "MC_PhasingAbsolute" job (A2) is initiated again using "Exe". Because the leading value shift (<TO>.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
+After the leading value shift, the "MC_PhasingAbsolute" job (A2) is initiated again using "Exe". Because the leading value shift (&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
 
 #### MC_PhasingRelative V4 (S7-1500T)
 
@@ -24701,7 +24701,7 @@ You define the dynamic response of the motion of the following axis with the par
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - By means of the Motion Control instruction "MC_GearIn" or "MC_GearInPos", the following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE or "MC_GearInPos.InSync" = TRUE).
 - The following axis is enabled.
 
@@ -24722,21 +24722,21 @@ The following table shows the parameters of Motion Control instruction "MC_Phasi
 | Execute | INPUT | BOOL | FALSE | TRUE | Start job with a positive edge |
 | PhaseShift | INPUT | LREAL | 0.0 | Relative leading value shift |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Leading value shift is finished. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | The job is being processed. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -24770,9 +24770,9 @@ To start a relative leading value shift with the Motion Control instruction "MC_
 
 ![Function chart: Relative shift of leading value](images/108341716747_DV_resource.Stream@PNG-de-DE.png)
 
-During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingRelative" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object <TO>.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
+During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingRelative" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
 
-After the leading value shift, the "MC_PhasingRelative" job (A2) is initiated again using "Exe". The leading value shift is performed again with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 100.0 is indicated in the tag of the technology object <TO>.StatusSynchronizedMotion.PhaseShift.
+After the leading value shift, the "MC_PhasingRelative" job (A2) is initiated again using "Exe". The leading value shift is performed again with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 100.0 is indicated in the tag of the technology object &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift.
 
 #### MC_CamIn V4 (S7-1500T)
 
@@ -24804,22 +24804,22 @@ With the "SyncProfileReference" parameter, you specify the synchronization profi
 
   Synchronous operation is immediately set to synchronous. You use the "MasterSyncPosition" parameter to set the exact synchronous position in the cam. This setting is mainly suitable for synchronizing at a standstill.
 
-A cam is defined between the start position (<TO>.StatusCam.StartLeadingValue) and end position (<TO>.StatusCam.EndLeadingValue) after the interpolation. The specification for leading and following value range in the [configuration of the technology object](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#configuring-the-synchronous-operation-function-of-the-cam-s7-1500t) only effect the display in the graphical editor.
+A cam is defined between the start position (&lt;TO&gt;.StatusCam.StartLeadingValue) and end position (&lt;TO&gt;.StatusCam.EndLeadingValue) after the interpolation. The specification for leading and following value range in the [configuration of the technology object](Using%20S7-1500-S7-1500T%20Synchronous%20operation%20functions%20%28S7-1500%2C%20S7-1500T%29.md#configuring-the-synchronous-operation-function-of-the-cam-s7-1500t) only effect the display in the graphical editor.
 
 With the "MasterSyncPosition" parameter, you specify the synchronization position in the cam relative to the starting position of the cam. Synchronization is completed upon reaching the synchronous position. To run through the entire cam, specify the value 0.0 (default value) in "MasterSyncPosition". With "MasterSyncPosition" ≠ 0.0, you move the synchronous position within the cam without changing the position of the cam.
 
 The figure below shows the basic effect of the leading value and following value offset as well as the definition of the cam with the following parameter values:
 
-- Start position of the cam > 0
-- "MasterSyncPosition" > 0
+- Start position of the cam &gt; 0
+- "MasterSyncPosition" &gt; 0
 
 ![Description](images/112225480587_DV_resource.Stream@PNG-en-US.png)
 
 | Symbol | Meaning |
 | --- | --- |
-| ① | Start position of the cam  First defined interpolation point/start of the first segment of the cam (<TO>.StatusCam.StartLeadingValue) |
+| ① | Start position of the cam  First defined interpolation point/start of the first segment of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue) |
 | ② | Completion of synchronization ("MasterSyncPosition") |
-| ③ | End position of the cam   Last defined interpolation point/end of the last segment of the cam (<TO>.StatusCam.EndLeadingValue) |
+| ③ | End position of the cam   Last defined interpolation point/end of the last segment of the cam (&lt;TO&gt;.StatusCam.EndLeadingValue) |
 
 The figure below shows the basic effect of scaling the cam with the parameters "MasterScaling" and "SlaveScaling":
 
@@ -24847,7 +24847,7 @@ You can start synchronous operation when the leading axis or following axis is a
 - The technology objects of the leading axis, following axis, and cam have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The cam is interpolated with "MC_InterpolateCam".
 - When using the "MasterStartDistance", the leading axis must be at least the specified distance from the "MasterSyncPosition" when starting the job.
@@ -24874,28 +24874,28 @@ The following table shows the parameters of Motion Control instruction "MC_CamIn
 | SlaveOffset | INPUT | LREAL | 0.0 | Offset of the following values of cam  (with "SyncProfileReference" =0 or 1)  The cam technology object is not changed. |  |
 | MasterScaling | INPUT | LREAL | 1.0 | Scaling the leading values of the cam  The cam technology object is not changed. |  |
 | SlaveScaling | INPUT | LREAL | 1.0 | Scaling the following values of the cam  The cam technology object is not changed. |  |
-| MasterSyncPosition | INPUT | LREAL | 0.0 | Synchronous position  End position of the synchronization on the leading value side in relation to the start position of the cam (<TO>.StatusCam.StartLeadingValue)  The value must be within the definition of the cam. |  |
+| MasterSyncPosition | INPUT | LREAL | 0.0 | Synchronous position  End position of the synchronization on the leading value side in relation to the start position of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue)  The value must be within the definition of the cam. |  |
 | SyncProfileReference | INPUT | DINT | 1 | Synchronization profile |  |
 | 0 | Synchronization using dynamic parameters |  |  |  |  |
 | 1 | Synchronization using leading value distance |  |  |  |  |
 | 2 | Direct synchronous setting |  |  |  |  |
 | MasterStartDistance | INPUT | LREAL | 0.0 | Leading value distance (distance of the leading axis during the synchronization)  (when "SyncProfileReference" = 1) |  |
 | Velocity | INPUT | LREAL | -1.0 | Velocity  (with "SyncProfileReference" = 0) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |  |  |
 | Acceleration | INPUT | LREAL | -1.0 | Acceleration  (with "SyncProfileReference" = 0) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |
-| < 0.0 | The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |  |  |
+| &lt; 0.0 | The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |  |  |
 | Deceleration | INPUT | LREAL | -1.0 | Deceleration  (with "SyncProfileReference" = 0) |  |
-| > 0.0 | The specified value is used. |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |
-| < 0.0 | The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |  |  |
+| &lt; 0.0 | The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |  |  |
 | Jerk | INPUT | LREAL | -1.0 | Jerk  (with "SyncProfileReference" = 0) |  |
-| > 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
+| &gt; 0.0 | Constant acceleration velocity profile  The specified value is used. |  |  |  |  |
 | = 0.0 | Trapezoid velocity profile |  |  |  |  |
-| < 0.0 | The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |  |  |
+| &lt; 0.0 | The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |  |  |
 | ApplicationMode | INPUT | DINT | 0 | Application of the cam |  |
 | 0 | Once/not cyclic |  |  |  |  |
 | 1 | Cyclic (absolute application on the following value side) |  |  |  |  |
@@ -24966,7 +24966,7 @@ If the position of the following axis at the end of the simulation differs from 
 
 - The technology object has been configured correctly.
 - The following axis is a synchronous axis.
-- Synchronous operation is active on the technology object in status "Synchronous" (<TO>.StatusWord.X22 = TRUE).
+- Synchronous operation is active on the technology object in status "Synchronous" (&lt;TO&gt;.StatusWord.X22 = TRUE).
 
 ###### Override response
 
@@ -25025,8 +25025,8 @@ With the Motion Control instruction "MC_InterpolateCam", you interpolate a cam.
 
 The interpolation closes the gaps between the defined interpolation points and segments of the cam. The cam is interpolated between the following values in the definition range:
 
-- First defined interpolation point/start of the first segment of the cam (<TO>.StatusCam.StartLeadingValue)
-- Last defined interpolation point/end of the last segment of the cam (<TO>.StatusCam.EndLeadingValue)
+- First defined interpolation point/start of the first segment of the cam (&lt;TO&gt;.StatusCam.StartLeadingValue)
+- Last defined interpolation point/end of the last segment of the cam (&lt;TO&gt;.StatusCam.EndLeadingValue)
 
 After interpolation, an explicit value in the value range is assigned to each value in the definition range.
 
@@ -25408,7 +25408,7 @@ The following table shows the parameters of Motion Control instruction "MC_Torqu
 | Enable | INPUT | BOOL | FALSE | TRUE | Activate function corresponding to input parameter "Mode" |
 | Limit | INPUT | LREAL | -1.0 | Value of force/torque limiting (in the configured unit of measurement)  If drive and telegram do not support force/torque limiting, the specified value is irrelevant. |  |
 | ≥ 0.0 | Use the value specified in the parameter |  |  |  |  |
-| < 0.0 | Use the value configured in the "Torque limiting" configuration window.  Tag Torque Limit:   <TO>.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   <TO>.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
+| &lt; 0.0 | Use the value configured in the "Torque limiting" configuration window.  Tag Torque Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
 | Mode | INPUT | DINT | 0 | 0 | Force/torque limiting |
 | 1 | Fixed stop detection   If drive and telegram support force/torque limiting, this is applied. |  |  |  |  |
 | InClamping | OUTPUT | BOOL | FALSE | TRUE | "Mode" = 1:  The drive is kept at the fixed stop (clamping), the axis position is within the positioning tolerance. |
@@ -25531,7 +25531,7 @@ If the high and low torque limits are active, the following monitors and limits 
 - Following error monitoring
 - Time limitations for positioning and standstill monitoring
 
-Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object > Configuration > Extended parameters > Limits > Torque limit".
+Monitoring remains in effect if you have selected the option "Leave position-related monitoring enabled" under "Technology object &gt; Configuration &gt; Extended parameters &gt; Limits &gt; Torque limit".
 
 ###### Applies to
 
@@ -25793,12 +25793,12 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_MoveLinearAbsolute", you move a kinematics with a circular motion to an absolute position. Cartesian orientation is also used absolute.
 
-Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -25830,21 +25830,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | Position[3] | INPUT | LREAL | 0.0 | z-coordinate |  |  |
 | Position[4] | INPUT | LREAL | 0.0 | A-coordinate |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | Motion direction of the Cartesian orientation |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -25861,13 +25861,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -25913,12 +25913,12 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_MoveLinearRelative", you can move a kinematics with a linear path relative to the position which was present at the start of the job processing. Cartesian orientation is also used relative.
 
-Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during movement is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -25950,21 +25950,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | Distance[3] | INPUT | LREAL | 0.0 | z-coordinate |  |  |
 | Distance[4] | INPUT | LREAL | 0.0 | A-coordinate |  |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permitted |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system of the specified target position and target orientation |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -25977,13 +25977,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveL
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL | - | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1.0 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -26041,12 +26041,12 @@ With the "CircMode" parameter, you specify the definition of the circular path:
 
   With the "EndPoint" parameter, you specify the end point and with "Radius" the radius of the circular path. Depending on the radius, up to four possible circular paths can occur in the plane defined with the "CirclePlane" parameter. With the "PathChoice" parameter, you specify which of these circular paths is to be moved.
 
-Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -26105,21 +26105,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | Radius |  | INPUT | LREAL | 0.0 | When "CircMode" = 2:  Radius of the circular movement |  |
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:  Angle of the circular movement |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The value configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The value configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | DirectionA |  | INPUT | DINT | 3 | Motion direction of the Cartesian orientation |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
@@ -26136,13 +26136,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1.0 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -26206,12 +26206,12 @@ With the "CircMode" parameter, you specify the definition of the circular path:
 
   With the "EndPoint" parameter, you specify the end point and with "Radius" the radius of the circular path. Depending on the radius, up to four possible circular paths can occur in the plane defined with the "CirclePlane" parameter. With the "PathChoice" parameter, you specify which of these circular paths is to be moved.
 
-Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object > Configuration > Extended parameters > Dynamic defaults".
+Dynamic behavior during Kinematics motion is defined with the parameters "Velocity", "Acceleration", "Deceleration" and "Jerk". For the dynamics of the orientation motion, the default values are configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults".
 
-- <TO>.DynamicDefaults.Orientation.Velocity
-- <TO>.DynamicDefaults.Orientation.Acceleration
-- <TO>.DynamicDefaults.Orientation.Deceleration
-- <TO>.DynamicDefaults.Orientation.Jerk
+- &lt;TO&gt;.DynamicDefaults.Orientation.Velocity
+- &lt;TO&gt;.DynamicDefaults.Orientation.Acceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Deceleration
+- &lt;TO&gt;.DynamicDefaults.Orientation.Jerk
 
 ###### Applies to
 
@@ -26270,21 +26270,21 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | Radius |  | INPUT | LREAL | 0.0 | When "CircMode" = 2:  Radius of the circular movement |  |
 | Arc |  | INPUT | LREAL | 0.0 | When "CircMode" = 1:  Angle of the circular movement |  |
 | Velocity |  | INPUT | LREAL | -1.0 | Velocity |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Velocity) |  |  |  |  |  |
 | Acceleration |  | INPUT | LREAL | -1.0 | Acceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Acceleration) |  |  |  |  |  |
 | Deceleration |  | INPUT | LREAL | -1.0 | Deceleration |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | Not permissible |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Deceleration) |  |  |  |  |  |
 | Jerk |  | INPUT | LREAL | -1.0 | Jerk |  |
-| > 0.0 | The specified value is used. |  |  |  |  |  |
+| &gt; 0.0 | The specified value is used. |  |  |  |  |  |
 | = 0.0 | No jerk limitation |  |  |  |  |  |
-| < 0.0 | The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
+| &lt; 0.0 | The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Path.Jerk) |  |  |  |  |  |
 | CoordSystem |  | INPUT | DINT | 0 | Reference system |  |
 | 0 | World coordinate system (WCS) |  |  |  |  |  |
 | 1 | Object coordinate system 1 (OCS1) |  |  |  |  |  |
@@ -26297,13 +26297,13 @@ The following table shows the parameters of Motion Control instruction "MC_MoveC
 | TransitionParameter |  | INPUT | ARRAY [1..5] OF LREAL |  | Transition parameter |  |
 |  | TransitionParameter[1] | INPUT | LREAL | -1.0 | Rounding clearance |  |
 | ≥ 0.0 | The specified value is used. |  |  |  |  |  |
-| < 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
+| &lt; 0.0 | The maximum possible rounding clearance is used. |  |  |  |  |  |
 | TransitionParameter[2] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[3] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[4] | INPUT | LREAL | - | Reserved |  |  |
 | TransitionParameter[5] | INPUT | LREAL | - | Reserved |  |  |
 | DynamicAdaption |  | INPUT | DINT | -1 | Dynamic adaptation |  |
-| < 0 | The configured setting in "Technology object > Configuration > Extended parameters > Dynamic" is used.  (<TO>.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
+| &lt; 0 | The configured setting in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic" is used.  (&lt;TO&gt;.DynamicDefaults.DynamicAdaption) |  |  |  |  |  |
 | 0 | Without dynamic adaption |  |  |  |  |  |
 | 1 | Dynamic adaptation with segmentation of the path |  |  |  |  |  |
 | 2 | Dynamic adaptation without segmentation of the path |  |  |  |  |  |
@@ -26363,7 +26363,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (<TO>.WorkspaceZone[1..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
+With the Motion Control instruction "MC_DefineWorkspaceZone", you define a workspace zone in relation to the world coordinates system or an object coordinates system. The zones (&lt;TO&gt;.WorkspaceZone[1..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusWorkspaceZone" tag of the technology object data block contains the currently effective workspace zones.
 
 The "MC_DefineWorkspaceZone" job interjects itself in the job sequence on the Kinematics technology object and therefore effective for the following motion jobs.
 
@@ -26446,7 +26446,7 @@ This section contains information on the following topics:
 
 ###### Description
 
-With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (<TO>.KinematicsZone[2..10]) defined under "Technology object > Configuration > Extended parameters > Zones" are not hereby changed are available again after a restart of the technology object. The "<TO>.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
+With the Motion Control instruction "MC_DefineKinematicsZone", you define a kinematics zone in relation to the tool and flange coordinate system. The zones (&lt;TO&gt;.KinematicsZone[2..10]) defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" are not hereby changed are available again after a restart of the technology object. The "&lt;TO&gt;.StatusKinematicsZone" tag of the technology object data block contains the currently effective kinematics zones.
 
 The "MC_DefineKinematicsZone" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
@@ -26522,11 +26522,11 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the workspace zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
+The "MC_SetWorkspaceZoneActive" Motion Control instruction is used to activate the workspace zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineWorkspaceZone" job. With the "ZoneNumber" parameter, you enter the number of the zone to be activated.
 
 The "MC_SetWorkspaceZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones. While several of the defined blocked zones and signal zones can be active simultaneously, only one area of the defined work zones can be active.
 
 ###### Applies to
 
@@ -26590,7 +26590,7 @@ You use Motion Control instruction "MC_SetWorkspaceZoneInactive" to deactivate a
 
 The "MC_SetWorkspaceZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
+The "&lt;TO&gt;.StatusWorkspaceZone[1..10].Active" tags of the technology object data block contain the current activation status of the zones.
 
 ###### Applies to
 
@@ -26656,11 +26656,11 @@ This section contains information on the following topics:
 
 ###### Description
 
-The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the zone monitoring for a kinematics zone which you have defined under "Technology object > Configuration > Extended parameters > Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
+The "MC_SetKinematicsZoneActive" Motion Control instruction is used to activate the zone monitoring for a kinematics zone which you have defined under "Technology object &gt; Configuration &gt; Extended parameters &gt; Zones" or via a "MC_DefineKinematicsZone" job. With the "ZoneNumber" parameter, you enter the number of the kinematics zone to be activated.
 
 The "MC_SetKinematicsZoneActive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -26723,7 +26723,7 @@ You use Motion Control instruction "MC_SetKinematicsZoneInactive" to deactivate 
 
 The "MC_SetKinematicsZoneInactive" job is added to the queue of the job sequence and is therefore effective for subsequent motion jobs.
 
-The "<TO>.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
+The "&lt;TO&gt;.StatusKinematicsZone[2..10].Active" tags of the technology object data block contain the current activation status of the kinematics zones.
 
 ###### Applies to
 
@@ -26808,10 +26808,10 @@ The configurable coordinates depend on the kinematics type used:
 
 The following tags of the technology object data block contain the current coordinates of the tool frame 1:
 
-- <TO>.StatusTool.Frame[1].x
-- <TO>.StatusTool.Frame[1].y
-- <TO>.StatusTool.Frame[1].z
-- <TO>.StatusTool.Frame[1].a
+- &lt;TO&gt;.StatusTool.Frame[1].x
+- &lt;TO&gt;.StatusTool.Frame[1].y
+- &lt;TO&gt;.StatusTool.Frame[1].z
+- &lt;TO&gt;.StatusTool.Frame[1].a
 
 ###### Applies to
 
@@ -26857,7 +26857,7 @@ This section contains information on the following topics:
 
 With the "MC_SetTool" Motion Control instruction, you activate a tool. With the "ToolNumber" parameter, you specify the tool number. The "MC_SetTool" job can be executed only if the kinematics is in standstill. Tool 1 is active by default.
 
-The "<TO>.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
+The "&lt;TO&gt;.StatusTool.ActiveTool" tag of the technology object data block contains the tool number of the currently active tool.
 
 ###### Applies to
 
@@ -26916,12 +26916,12 @@ The "MC_SetOcsFrame" job is added to the queue of the job sequence and is theref
 
 The following tags of the technology object data block contain the current coordinates of the object coordinate systems:
 
-- <TO>.StatusOcsFrame[1..3].x
-- <TO>.StatusOcsFrame[1..3].y
-- <TO>.StatusOcsFrame[1..3].z
-- <TO>.StatusOcsFrame[1..3].a
-- <TO>.StatusOcsFrame[1..3].b
-- <TO>.StatusOcsFrame[1..3].c
+- &lt;TO&gt;.StatusOcsFrame[1..3].x
+- &lt;TO&gt;.StatusOcsFrame[1..3].y
+- &lt;TO&gt;.StatusOcsFrame[1..3].z
+- &lt;TO&gt;.StatusOcsFrame[1..3].a
+- &lt;TO&gt;.StatusOcsFrame[1..3].b
+- &lt;TO&gt;.StatusOcsFrame[1..3].c
 
 ###### Applies to
 
@@ -27098,9 +27098,9 @@ The following table shows the parameters of the "MC_Power" Motion Control instru
 | 1 | Enable positioning axis/synchronous axis position-controlled |  |  |  |  |
 | The parameter acts initially when the positioning axis is enabled (Enable changes from FALSE to TRUE) and when the axis is enabled after successful acknowledgment of an alarm that caused the axis to be disabled.  This parameter is ignored when a speed axis or external encoder is used. |  |  |  |  |  |
 | StopMode | INPUT | INT | 0 | Not applicable to the technology object external encoder  If you disable a technology object with a negative edge at parameter "Enable", the axis decelerates in accordance with the selected "StopMode". |  |
-| 0 | Emergency stop  When the technology object is disabled, the axis brakes to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop ramp". The enable is then canceled.   (<TO>.DynamicDefaults. EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  When the technology object is disabled, the axis brakes to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop ramp". The enable is then canceled.   (&lt;TO&gt;.DynamicDefaults. EmergencyDeceleration) |  |  |  |  |
 | 1 | Immediate stop  When a technology object is disabled, the setpoint zero is output, and the enable is canceled. The axis is braked to a standstill according to the configuration in the drive. |  |  |  |  |
-| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits". The configured maximum jerk is hereby taken into account. The enable is then canceled.  (<TO>.DynamicLimits.MaxDeceleration; <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". The configured maximum jerk is hereby taken into account. The enable is then canceled.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration; &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Technology object enable status |  |
 | FALSE | Disabled  ‑ A positioning axis, synchronous axis or speed axis does not accept any Motion Control jobs.  ‑ Speed control and position control are not active.  ‑ The actual values of the technology object are not checked for validity. |  |  |  |  |
 | TRUE | Enabled  ‑ An enabled positioning axis, synchronous axis or speed axis accepts Motion Control jobs.  ‑ Speed control and position control are active.  - The actual values of the technology object are valid. |  |  |  |  |
@@ -27114,7 +27114,7 @@ To enable a technology object, set the "Enable" parameter to TRUE.
 
 When the Status parameter shows the value TRUE , the technology object is enabled.
 
-If an axis is in motion when the technology object is enabled (actual velocity is present), the axis brakes to the setpoint zero, using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits" (<TO>.DynamicLimits.MaxDeceleration). This braking ramp can be overridden by Motion Control jobs.
+If an axis is in motion when the technology object is enabled (actual velocity is present), the axis brakes to the setpoint zero, using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits" (&lt;TO&gt;.DynamicLimits.MaxDeceleration). This braking ramp can be overridden by Motion Control jobs.
 
 > **Note**
 >
@@ -27138,20 +27138,20 @@ When a drive is connected using PROFIdrive, the setpoint, enable and drive statu
 
   With parameter "Enable" = TRUE, the technology object is enabled. The drive is enabled according to the PROFIdrive standard.
 
-  When the tag <TO>.StatusDrive.InOperation shows the value TRUE , the drive is ready to execute setpoints. The "Status" parameter is set to the value TRUE .
+  When the tag &lt;TO&gt;.StatusDrive.InOperation shows the value TRUE , the drive is ready to execute setpoints. The "Status" parameter is set to the value TRUE .
 - **Disable technology object and deactivate drive**
 
   With parameter "Enable" = FALSE, the "Status" parameter is set to the value FALSE, and the axis is braked according to the selected "StopMode". The drive is disabled according to the PROFIdrive standard.
 
 ##### Analog drive connection
 
-The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (<TO>.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (<TO>.Actor.Interface.DriveReadyInput).
+The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (&lt;TO&gt;.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (&lt;TO&gt;.Actor.Interface.DriveReadyInput).
 
 - **Enable technology object and activate drive**
 
   With parameter "Enable" = TRUE, the enable output ("Enable drive output") is set.
 
-  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's <TO>.StatusDrive.InOperation tag are set to TRUE, and the setpoint is switched to the analog output.
+  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's &lt;TO&gt;.StatusDrive.InOperation tag are set to TRUE, and the setpoint is switched to the analog output.
 - **Disable technology object and deactivate drive**
 
   With parameter "Enable" = FALSE, the "Status" parameter is set to the value FALSE, and the axis is braked according to the selected "StopMode". When the setpoint zero is reached, the enable output is set to FALSE.
@@ -27264,11 +27264,11 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_Home", you create the relationship between the position in the technology object and the mechanical position. The actual position value in the technology object is assigned to a homing mark at the same time. This homing mark represents a known mechanical position.
 
-Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object > Configuration > Extended parameters > Homing".
+Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing".
 
 The "MC_Home.Mode" parameter for S7-1200 Motion Control and S7-1500 Motion Control has been standardized within the framework of technology version V2.0. This results in a new assignment of the parameter values for the "MC_Home.Mode" parameter. A comparison of the "MC_Home.Mode" parameter for technology versions V1.0 and ≥ V2.0 is available in section [Version overview](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-versions-s7-1500-s7-1500t).
 
-The preset values under "Technology object > Configuration > Extended parameters > Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
+The preset values under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
 
 ##### Applies to
 
@@ -27293,7 +27293,7 @@ The following table shows which modes are possible with each of the technology o
 - "Mode" = 2, 3, 5, 8, 10  
   The technology object is enabled.
 - "Mode" = 0, 1, 6, 7, 8  
-  The actual encoder values are valid (<TO>.StatusSensor[n].State = 2).
+  The actual encoder values are valid (&lt;TO&gt;.StatusSensor[n].State = 2).
 - "Mode" = 6, 7
 
   The axis is in position-controlled mode.
@@ -27317,12 +27317,12 @@ The following table shows the parameters of the "MC_Home" Motion Control instruc
 | 2 | Passive homing (without reset)  Functions like "Mode" 8, with the difference that the "homed" status is **not** reset when the function is enabled. |  |  |  |  |
 | 3 | Active homing   The TO positioning axis/synchronous axis performs a homing movement according to the configuration.  After the completion of the motion, the axis is positioned at the value of the "Position" parameter. |  |  |  |  |
 | 4 | Reserved |  |  |  |  |
-| 5 | Active homing ("Position" parameter has no effect)  The TO positioning axis/synchronous axis performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object > Configuration > Extended parameters > Homing > Active homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
-| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
-| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
+| 5 | Active homing ("Position" parameter has no effect)  The TO positioning axis/synchronous axis performs a homing movement according to the configuration.  After completion of the motion, the axis is positioned at the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Active homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
+| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
+| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
 | 8 | Passive homing   When the homing mark is detected, the actual value is set to the value of the "Position" parameter. |  |  |  |  |
 | 9 | Cancel passive homing  An active job for passive homing is canceled. |  |  |  |  |
-| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object > Configuration > Extended parameters > Homing > Passive homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
+| 10 | Passive homing ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Passive homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
 | ReferenceMarkPosition | OUTPUT | LREAL | 0.0 | Display of the position at which the technology object was homed  (valid when "Done" = TRUE) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
@@ -27342,7 +27342,7 @@ To home a technology object, follow these steps:
 2. Specify the desired homing function in the "Mode" parameter.
 3. Initialize the necessary parameters with values, and start the homing operation with a positive edge at the "Execute" parameter.
 
-When the "Done" parameter shows the value TRUE, the "MC_Home" job has been completed according to the selected "Mode". The "Homed" status of the technology object is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Homed" (<TO>.StatusWord.X5 (HomingDone)).
+When the "Done" parameter shows the value TRUE, the "MC_Home" job has been completed according to the selected "Mode". The "Homed" status of the technology object is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Homed" (&lt;TO&gt;.StatusWord.X5 (HomingDone)).
 
 ##### Cancelation of a passive homing process with "Mode" = 9
 
@@ -27396,8 +27396,8 @@ The following table shows the parameters of the "MC_Halt" Motion Control instruc
 | --- | --- | --- | --- | --- | --- |
 | Axis | INPUT | TO_SpeedAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | AbortAcceleration | INPUT | BOOL | FALSE | FALSE | The current acceleration at the start of the job is reduced using the configured jerk. Afterwards, the deceleration builds up |
 | TRUE | The acceleration is set to 0.0 at the start of the job, and the deceleration immediately builds up. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Zero velocity reached |
@@ -27414,7 +27414,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Supply the parameters "Deceleration", "Jerk" and "AbortAcceleration" with the desired values.
 3. Start the "MC_Halt" job with a positive edge at parameter "Execute".
 
-The current motion state is indicated in "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+The current motion state is indicated in "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Braking an axis with active force/torque limit
 
@@ -27484,11 +27484,11 @@ The following table shows the parameters of the "MC_MoveAbsolute" Motion Control
 | Axis | INPUT | TO_PositioningAxis | - | Technology object |  |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |  |
 | Position | INPUT | LREAL | 0.0 | Absolute target position |  |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |
-| Direction | INPUT | INT | 1 | Motion direction of the axis  Is only evaluated with "modulo" enabled.   "Technology object > Configuration > Basic parameters > Enable modulo |  |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |
+| Direction | INPUT | INT | 1 | Motion direction of the axis  Is only evaluated with "modulo" enabled.   "Technology object &gt; Configuration &gt; Basic parameters &gt; Enable modulo |  |  |
 | 1 | Positive direction |  |  |  |  |  |
 | 2 | Negative direction |  |  |  |  |  |
 | 3 | Shortest distance |  |  |  |  |  |
@@ -27563,10 +27563,10 @@ The following table shows the parameters of the "MC_MoveRelative" Motion Control
 | Axis | INPUT | TO_PositioningAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | Distance | INPUT | LREAL | 0.0 | Distance for the positioning process (negative or positive) |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Target position reached |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -27646,9 +27646,9 @@ The following table shows the parameters of the "MC_MoveVelocity" Motion Control
 | Axis | INPUT | TO_SpeedAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | Velocity | INPUT | LREAL | 100.0 | Velocity/speed setpoint for the motion process  ("Velocity" = 0.0 is permitted) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Direction | INPUT | INT | 0 | Direction of rotation of the axis |  |
 | 0 | The sign of the velocity specified at the "Velocity" parameter defines the direction of rotation. |  |  |  |  |
 | 1 | Positive direction of rotation   Value of "Velocity" is used. |  |  |  |  |
@@ -27669,7 +27669,7 @@ The following table shows the parameters of the "MC_MoveVelocity" Motion Control
 
 An "MC_MoveVelocity" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint / speed setpoint zero is reached, the parameter "InVelocity" will indicate the value TRUE.
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 The parameters "InVelocity" and "Busy" show the value TRUE until the "MC_MoveVelocity" job is overridden by another Motion Control job.
 
@@ -27689,7 +27689,7 @@ If the "InVelocity" parameter shows the value TRUE, then the velocity setpoint /
 >
 > **Response to a change in the override**
 >
-> If the velocity / speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity / speed is reached ("Velocity" × "Override" %), then "InVelocity" is reset.
+> If the velocity / speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity / speed is reached ("Velocity" × "Override" %), then "InVelocity" is reset.
 
 ##### Additional information
 
@@ -27759,10 +27759,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Axis | INPUT | TO_SpeedAxis | - | Technology object |  |
 | JogForward | INPUT | BOOL | FALSE | As long as the parameter is TRUE, the axis moves in the positive direction at the velocity specified in parameter "Velocity". |  |
 | JogBackward | INPUT | BOOL | FALSE | As long as the parameter is TRUE, the axis moves in the negative direction at the velocity specified in parameter "Velocity". |  |
-| Velocity | INPUT | LREAL | 100.0 | Velocity setpoint / speed setpoint for the motion  Value > 0.0: The specified value is used.  Value < 0.0: The absolute value of the specified value is used.   ("Velocity" = 0.0 is permitted) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | 100.0 | Velocity setpoint / speed setpoint for the motion  Value &gt; 0.0: The specified value is used.  Value &lt; 0.0: The absolute value of the specified value is used.   ("Velocity" = 0.0 is permitted) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | PositionControlled | INPUT | BOOL | TRUE | FALSE | Non position-controlled operation |
 | TRUE | Position-controlled mode |  |  |  |  |
 | The parameter applies as long as the "MC_MoveJog" job is being executed. After this, the setting of the following job applies.  This parameter is ignored when a speed axis is used. |  |  |  |  |  |
@@ -27776,7 +27776,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 
 An "MC_MoveJog" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint / speed setpoint zero is reached, the parameter "InVelocity" will indicate the value TRUE.
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Moving an axis in jog mode
 
@@ -27791,7 +27791,7 @@ The current motion state is indicated in "Busy", "InVelocity" and "Error".
 >
 > **Response to a change in the override**
 >
-> If the velocity / speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity / speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### Additional information
 
@@ -27874,10 +27874,10 @@ The following table shows the parameters of Motion Control instruction "MC_MoveS
 | Axis | INPUT | TO_PositioningAxis | - | Axis technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | Distance | INPUT | LREAL | 0.0 | Additional travel distance for the superimposing positioning operation  (negative or positive) |  |
-| VelocityDiff | INPUT | LREAL | -1.0 | Maximum velocity deviation compared to the active motion   Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| VelocityDiff | INPUT | LREAL | -1.0 | Maximum velocity deviation compared to the active motion   Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Superimposed positioning complete |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -27963,7 +27963,7 @@ The following table shows the parameters of Motion Control instruction "MC_SetSe
 
 ##### Changing to absolute encoder
 
-When you switch the encoder to an absolute encoder and transfer the actual value (Mode = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (<TO>.StatusSensor[n].AbsEncoderOffset) without calculation by the MC_SetSensor.
+When you switch the encoder to an absolute encoder and transfer the actual value (Mode = 2, 3), the actual value is calculated with the value of the absolute encoder and the absolute value offset. When switching to a different encoder, calculation of the actual value is canceled. The absolute encoder once again returns the absolute value + absolute value offset (&lt;TO&gt;.StatusSensor[n].AbsEncoderOffset) without calculation by the MC_SetSensor.
 
 ### Measuring input, output cam, cam track (S7-1500, S7-1500T)
 
@@ -28349,7 +28349,7 @@ A cam track is activated with "Enable" = TRUE. The cam track is output in accord
 
 | Tag |  | Value | Description |
 | --- | --- | --- | --- |
-| <TO>Parameter. |  |  |  |
+| &lt;TO&gt;Parameter. |  |  |  |
 |  | CamTrackType | 0 | Specified cam type for the cam track is distance output cam |
 |  | ReferencePosition | 20.0 | Specified axis reference position for the cam track |
 |  | CamTrackLength | 100.0 | Specified length of the cam track |
@@ -28418,7 +28418,7 @@ You can start synchronous operation when the leading axis is at a standstill or 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 
 ###### Override response
@@ -28438,9 +28438,9 @@ The following table shows the parameters of Motion Control instruction "MC_GearI
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | RatioNumerator | INPUT | DINT | 1 | Gear ratio numerator  Permitted integer values:  -2147483648 to 2147483647  (value 0 not permitted) |  |
 | RatioDenominator | INPUT | DINT | 1 | Gear ratio denominator  Permitted integer values: 1 to 2147483647 |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | InGear | OUTPUT | BOOL | FALSE | TRUE | Synchronous operation reached The following axis is synchronized and moves synchronously to the leading axis. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -28517,7 +28517,7 @@ You can start synchronous operation when the leading axis is at a standstill or 
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 
 ###### Override response
@@ -28543,10 +28543,10 @@ The following table shows the parameters of Motion Control instruction "MC_GearI
 | 0 | Synchronization using dynamic parameters |  |  |  |  |
 | 1 | Synchronization using leading value distance |  |  |  |  |
 | MasterStartDistance | INPUT | LREAL | 1.0 | Leading value distance  (when "SyncProfileReference" = 1) |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity  (when "SyncProfileReference" = 0)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  (when "SyncProfileReference" = 0)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  (when "SyncProfileReference" = 0)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  (when "SyncProfileReference" = 0)  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity  (when "SyncProfileReference" = 0)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  (when "SyncProfileReference" = 0)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  (when "SyncProfileReference" = 0)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  (when "SyncProfileReference" = 0)  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | SyncDirection | INPUT | DINT | 3 | Direction of synchronization  (in effect for axes with activated Modulo setting) |  |
 | 1 | Positive direction  The following axis may only travel in positive direction during synchronization. |  |  |  |  |
 | 2 | Negative direction  The following axis may only travel in negative direction during synchronization. |  |  |  |  |
@@ -28609,7 +28609,7 @@ You define the dynamic response of the motion of the following axis with the par
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE or "MC_GearInPos.InSync" = TRUE) by means of the Motion Control instruction "MC_GearIn" or "MC_GearInPos".
 - The following axis is enabled.
 
@@ -28629,10 +28629,10 @@ The following table shows the parameters of Motion Control instruction "MC_Phasi
 | Slave | INPUT | TO_SynchronousAxis | - | Following axis technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | PhaseShift | INPUT | LREAL | 0.0 | Absolute leading value shift |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion)   Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion)  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion)   Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion)  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Leading value shift is finished. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -28666,9 +28666,9 @@ The current motion state is indicated in parameters "Busy", "AbsolutePhaseShift"
 
 ![Function chart: Absolute shift of leading value](images/87604642827_DV_resource.Stream@PNG-de-DE.png)
 
-During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingAbsolute" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "AbsolutePhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object <TO>.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
+During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingAbsolute" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "AbsolutePhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
 
-After the leading value shift, the "MC_PhasingAbsolute" job (A2) is initiated again using "Exe". Because the leading value shift (<TO>.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
+After the leading value shift, the "MC_PhasingAbsolute" job (A2) is initiated again using "Exe". Because the leading value shift (&lt;TO&gt;.StatusSynchronizedMotion.PhaseShift) is already 50.0, the leading value is not shifted.
 
 #### MC_PhasingRelative V3 (S7-1500T)
 
@@ -28694,7 +28694,7 @@ You define the dynamic response of the motion of the following axis with the par
 - The technology objects of the leading axis and the following axis have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is synchronized to the leading axis ("MC_GearIn.InGear" = TRUE or "MC_GearInPos.InSync" = TRUE) by means of the Motion Control instruction "MC_GearIn" or "MC_GearInPos".
 - The following axis is enabled.
 
@@ -28714,10 +28714,10 @@ The following table shows the parameters of Motion Control instruction "MC_Phasi
 | Slave | INPUT | TO_SynchronousAxis | - | Following axis technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | PhaseShift | INPUT | LREAL | 0.0 | Relative leading value shift |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion)  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity of the following axis for leading value shift (added to synchronous operation motion)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration of the following axis for leading value shift (added to synchronous operation motion)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration of the following axis for leading value shift (added to synchronous operation motion)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk of the following axis for leading value shift (added to synchronous operation motion)  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Leading value shift is finished. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -28751,9 +28751,9 @@ The current motion state is indicated in parameters "Busy", "CoveredPhaseShift",
 
 ![Function chart: Relative shift of leading value](images/80711861131_DV_resource.Stream@PNG-de-DE.png)
 
-During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingRelative" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object <TO>.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
+During an active gearing operation with "MC_GearInPos" (A1), a "MC_PhasingRelative" job (A2) is initiated using "Exe". The leading value shift is performed with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 50.0 is indicated in the tag of the technology object &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift. The motion of the leading axis is not affected.
 
-After the leading value shift, the "MC_PhasingRelative" job (A2) is initiated again using "Exe". The leading value shift is performed again with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 100.0 is indicated in the tag of the technology object <TO>.StatusSynchronizedMotion.PhaseShift.
+After the leading value shift, the "MC_PhasingRelative" job (A2) is initiated again using "Exe". The leading value shift is performed again with the dynamics specified additively to the synchronous operation motion. "Done" indicates that the leading value was successfully shifted. The leading value shift 50.0 resulting from the job is indicated in "CoveredPhaseShift". The absolute leading value shift 100.0 is indicated in the tag of the technology object &lt;TO&gt;.StatusSynchronizedMotion.PhaseShift.
 
 #### MC_CamIn V3 (S7-1500T)
 
@@ -28807,7 +28807,7 @@ You can start synchronous operation when the leading axis or following axis is a
 - The technology objects of the leading axis, following axis, and cam have been configured correctly.
 - The leading axis is a positioning axis, synchronous axis, or external encoder.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 - The cam is interpolated with "MC_InterpolateCam".
 
@@ -28836,10 +28836,10 @@ The following table shows the parameters of Motion Control instruction "MC_CamIn
 | 0 | Synchronization using dynamic parameters |  |  |  |  |
 | 1 | Synchronization using leading value distance |  |  |  |  |
 | MasterStartDistance | INPUT | LREAL | 0.0 | Leading value distance  (when "SyncProfileReference" = 1) |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity  (when "SyncProfileReference" = 0)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Velocity) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  (when "SyncProfileReference" = 0)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  (when "SyncProfileReference" = 0)  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  (when "SyncProfileReference" = 0)  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity  (when "SyncProfileReference" = 0)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Velocity) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  (when "SyncProfileReference" = 0)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  (when "SyncProfileReference" = 0)  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  (when "SyncProfileReference" = 0)  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | ApplicationMode | INPUT | DINT | 0 | Application of the cam |  |
 | 0 | Once/not cyclic |  |  |  |  |
 | 1 | Cyclic (absolute application on the following value side) |  |  |  |  |
@@ -28910,7 +28910,7 @@ If the position of the following axis at the end of the simulation differs from 
 
 - The technology object has been configured correctly.
 - The following axis is a synchronous axis.
-- A synchronous operation is active on the technology object in status "Synchronous" (<TO>.StatusWord.X22 = TRUE).
+- A synchronous operation is active on the technology object in status "Synchronous" (&lt;TO&gt;.StatusWord.X22 = TRUE).
 
 ###### Override response
 
@@ -29186,7 +29186,7 @@ The following table shows the parameters of Motion Control instruction "MC_Torqu
 | Enable | INPUT | BOOL | FALSE | TRUE | Activate function corresponding to input parameter Mode |
 | Limit | INPUT | LREAL | -1.0 | Value of force/torque limiting (in the configured unit of measurement)  If drive and telegram do not support force/torque limiting, the specified value is irrelevant. |  |
 | ≥ 0 | Use the value specified in the parameter ("0" value is permissible) |  |  |  |  |
-| < 0 | Use the value configured in the "Torque limiting" configuration window.  Tag Torque Limit:   <TO>.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   <TO>.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
+| &lt; 0 | Use the value configured in the "Torque limiting" configuration window.  Tag Torque Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Torque   Tag Force Limit:   &lt;TO&gt;.TorqueLimiting.LimitDefaults.Force |  |  |  |  |
 | Mode | INPUT | DINT | 0 | 0 | Force/torque limiting |
 | 1 | Fixed stop detection   If drive and telegram support force/torque limiting, this is applied. |  |  |  |  |
 | InClamping | OUTPUT | BOOL | FALSE | TRUE | Mode = 1: The drive is kept at the fixed stop (clamping), the axis position is within the positioning tolerance. |
@@ -29352,9 +29352,9 @@ The following table shows the parameters of the "MC_Power" Motion Control instru
 | Enable | INPUT | BOOL | FALSE | TRUE | The technology object is enabled. |
 | FALSE | The technology object is disabled.  All current jobs at the technology object are aborted in accordance with the configured "StopMode". |  |  |  |  |
 | StopMode | INPUT | INT | 0 | Not applicable to the technology object external encoder  If you disable a technology object with a negative edge at parameter "Enable", the axis decelerates in accordance with the selected "StopMode". |  |
-| 0 | Emergency stop  When the technology object is disabled, the axis brakes to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop ramp". The enable is then canceled.   (<TO>.DynamicDefaults. EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  When the technology object is disabled, the axis brakes to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop ramp". The enable is then canceled.   (&lt;TO&gt;.DynamicDefaults. EmergencyDeceleration) |  |  |  |  |
 | 1 | Immediate stop  When a technology object is disabled, the setpoint zero is output, and the enable is canceled. The axis is braked to a standstill according to the configuration in the drive. |  |  |  |  |
-| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits". The configured maximum jerk is hereby taken into account. The enable is then canceled.  (<TO>.DynamicLimits.MaxDeceleration; <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". The configured maximum jerk is hereby taken into account. The enable is then canceled.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration; &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Technology object enable status |  |
 | FALSE | Disabled  ‑ A positioning axis or speed axis does not accept any Motion Control jobs.  ‑ Speed control and position control are not active.  ‑ The actual values of the technology object are not checked for validity. |  |  |  |  |
 | TRUE | Enabled  ‑ An enabled positioning axis or speed axis accepts Motion Control jobs.  ‑ Speed control and position control are active.  - The actual values of the technology object are valid. |  |  |  |  |
@@ -29368,7 +29368,7 @@ To enable a technology object, set the "Enable" parameter to TRUE.
 
 When the Status parameter shows the value TRUE , the technology object is enabled.
 
-If an axis is in motion when the technology object is enabled (actual velocity is present), the axis brakes to the setpoint zero, using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits" (<TO>.DynamicLimits.MaxDeceleration). This braking ramp can be overridden by Motion Control jobs.
+If an axis is in motion when the technology object is enabled (actual velocity is present), the axis brakes to the setpoint zero, using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits" (&lt;TO&gt;.DynamicLimits.MaxDeceleration). This braking ramp can be overridden by Motion Control jobs.
 
 > **Note**
 >
@@ -29392,20 +29392,20 @@ When a drive is connected using PROFIdrive, the setpoint, enable and drive statu
 
   With parameter "Enable" = TRUE, the technology object is enabled. The drive is enabled according to the PROFIdrive standard.
 
-  When the tag <TO>.StatusDrive.InOperation shows the value TRUE , the drive is ready to execute setpoints. The "Status" parameter is set to the value TRUE .
+  When the tag &lt;TO&gt;.StatusDrive.InOperation shows the value TRUE , the drive is ready to execute setpoints. The "Status" parameter is set to the value TRUE .
 - **Disable technology object and deactivate drive**
 
   With parameter "Enable" = FALSE, the "Status" parameter is set to the value FALSE, and the axis is braked according to the selected "StopMode". The drive is disabled according to the PROFIdrive standard.
 
 ##### Analog drive connection
 
-The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (<TO>.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (<TO>.Actor.Interface.DriveReadyInput).
+The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (&lt;TO&gt;.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (&lt;TO&gt;.Actor.Interface.DriveReadyInput).
 
 - **Enable technology object and activate drive**
 
   With parameter "Enable" = TRUE, the enable output ("Enable drive output") is set.
 
-  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's <TO>.StatusDrive.InOperation tag are set to TRUE, and the setpoint is switched to the analog output.
+  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's &lt;TO&gt;.StatusDrive.InOperation tag are set to TRUE, and the setpoint is switched to the analog output.
 - **Disable technology object and deactivate drive**
 
   With parameter "Enable" = FALSE, the "Status" parameter is set to the value FALSE, and the axis is braked according to the selected "StopMode". When the setpoint zero is reached, the enable output is set to FALSE.
@@ -29519,11 +29519,11 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_Home", you create the relationship between the position in the technology object and the mechanical position. The actual position value in the technology object is assigned to a homing mark at the same time. This homing mark represents a known mechanical position.
 
-Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object > Configuration > Extended parameters > Homing".
+Homing is performed according to the mode selected with the "Mode" parameter and the configuration under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing".
 
 The "MC_Home.Mode" parameter for S7-1200 Motion Control and S7-1500 Motion Control has been standardized within the framework of technology version V2.0. This results in a new assignment of the parameter values for the "MC_Home.Mode" parameter. A comparison of the "MC_Home.Mode" parameter for technology versions V1.0 and V2.0 is available in the section [Version overview](S7-1500-S7-1500T%20Motion%20Control%20Overview%20%28S7-1500%2C%20S7-1500T%29.md#overview-of-versions-s7-1500-s7-1500t).
 
-The preset values under "Technology object > Configuration > Extended parameters > Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
+The preset values under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
 
 ##### Applies to
 
@@ -29548,7 +29548,7 @@ The following table shows which modes are possible with each of the technology o
 - "Mode" = 2, 3, 5, 8, 10  
   The technology object must be enabled.
 - Mode" = 0, 1, 6, 7, 8  
-  The encoder values must be valid. (<TO>.StatusSensor[n].State = 2)
+  The encoder values must be valid. (&lt;TO&gt;.StatusSensor[n].State = 2)
 
 ##### Override response
 
@@ -29593,12 +29593,12 @@ The following table shows the parameters of the "MC_Home" Motion Control instruc
 | 2 | Passive homing  (without reset)  Functions like "Mode" 8, with the difference that the "homed" status is **not** reset when the function is enabled. |  |  |  |  |
 | 3 | Active homing   The TO positioning axis/synchronous axis performs a homing movement according to the configuration.  After the completion of the movement, the axis is positioned at the value of the "Position" parameter. |  |  |  |  |
 | 4 | Reserved |  |  |  |  |
-| 5 | Active homing  ("Position" parameter has no effect)  The TO positioning axis/synchronous axis performs a homing movement according to the configuration.  After completion of the movement, the axis is positioned at the home position configured under "Technology object > Configuration > Extended parameters > Homing > Active homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
-| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
-| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
+| 5 | Active homing  ("Position" parameter has no effect)  The TO positioning axis/synchronous axis performs a homing movement according to the configuration.  After completion of the movement, the axis is positioned at the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Active homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
+| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
+| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
 | 8 | Passive homing   When the homing mark is detected, the actual value is set to the value of the "Position" parameter. |  |  |  |  |
 | 9 | Cancel passive homing  An active job for passive homing is canceled. |  |  |  |  |
-| 10 | Passive homing  ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object > Configuration > Extended parameters > Homing > Passive homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
+| 10 | Passive homing  ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Passive homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was canceled by another job during execution. |
@@ -29617,7 +29617,7 @@ To home a technology object, follow these steps:
 2. Specify the desired homing function in the "Mode" parameter.
 3. Initialize the necessary parameters with values, and start the homing operation with a positive edge at the "Execute" parameter.
 
-When the "Done" parameter shows the value TRUE, the "MC_Home" job has been completed according to the selected "Mode". The "Homed" status of the technology object is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Homed" (<TO>.StatusWord.X5 (HomingDone)).
+When the "Done" parameter shows the value TRUE, the "MC_Home" job has been completed according to the selected "Mode". The "Homed" status of the technology object is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Homed" (&lt;TO&gt;.StatusWord.X5 (HomingDone)).
 
 ##### Cancelation of a passive homing process with "Mode" = 9
 
@@ -29685,8 +29685,8 @@ The following table shows the parameters of the "MC_Halt" Motion Control instruc
 | --- | --- | --- | --- | --- | --- |
 | Axis | InOut | TO_SpeedAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Zero velocity reached |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -29701,7 +29701,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Supply the parameters "Deceleration" and "Jerk" with the desired values.
 3. Start the "MC_Halt" job with a positive edge at parameter "Execute".
 
-The current motion state is indicated in "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+The current motion state is indicated in "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Additional information
 
@@ -29777,11 +29777,11 @@ The following table shows the parameters of the "MC_MoveAbsolute" Motion Control
 | Axis | InOut | TO_PositioningAxis | - | Technology object |  |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |  |
 | Position | INPUT | REAL | 0.0 | Absolute target position |  |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |
-| Direction | INPUT | INT | 1 | Direction of rotation of the axis  Is only evaluated with "modulo" enabled.   "Technology object > Configuration > Basic parameters > Enable modulo |  |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |
+| Direction | INPUT | INT | 1 | Direction of rotation of the axis  Is only evaluated with "modulo" enabled.   "Technology object &gt; Configuration &gt; Basic parameters &gt; Enable modulo |  |  |
 | 1 | Positive direction of rotation |  |  |  |  |  |
 | 2 | Negative direction of rotation |  |  |  |  |  |
 | 3 | Shortest path |  |  |  |  |  |
@@ -29870,10 +29870,10 @@ The following table shows the parameters of the "MC_MoveRelative" Motion Control
 | Axis | InOut | TO_PositioningAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | Distance | INPUT | LREAL | 0.0 | Distance for the positioning process (negative or positive) |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Target position reached |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -29967,9 +29967,9 @@ The following table shows the parameters of the "MC_MoveVelocity" Motion Control
 | Axis | InOut | TO_SpeedAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | Velocity | INPUT | LREAL | 100.0 | Velocity/speed setpoint for the motion process  ("Velocity" = 0.0 is permitted) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Direction | INPUT | INT | 0 | Direction of rotation of the axis |  |
 | 0 | The sign of the velocity specified at the "Velocity" parameter defines the direction of rotation. |  |  |  |  |
 | 1 | Positive direction of rotation   Value of "Velocity" is used. |  |  |  |  |
@@ -29987,7 +29987,7 @@ The following table shows the parameters of the "MC_MoveVelocity" Motion Control
 
 An "MC_MoveVelocity" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint / speed setpoint zero is reached, the parameter "InVelocity" will indicate the value TRUE.
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 The parameters "InVelocity" and "Busy" show the value TRUE until the "MC_MoveVelocity" job is overridden by another Motion Control job.
 
@@ -30007,7 +30007,7 @@ If the "InVelocity" parameter shows the value TRUE, then the velocity setpoint /
 >
 > **Response to a change in the override**
 >
-> If the velocity / speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity / speed is reached ("Velocity" × "Override" %), then "InVelocity" is reset.
+> If the velocity / speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity / speed is reached ("Velocity" × "Override" %), then "InVelocity" is reset.
 
 ##### Additional information
 
@@ -30091,10 +30091,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Axis | InOut | TO_SpeedAxis | - | Technology object |  |
 | JogForward | INPUT | BOOL | FALSE | As long as the parameter is TRUE, the axis moves in the positive direction at the velocity specified in parameter "Velocity". |  |
 | JogBackward | INPUT | BOOL | FALSE | As long as the parameter is TRUE, the axis moves in the negative direction at the velocity specified in parameter "Velocity". |  |
-| Velocity | INPUT | LREAL | 100.0 | Velocity setpoint / speed setpoint for the motion  Value > 0.0: The specified value is used.  Value < 0.0: The absolute value of the specified value is used.   ("Velocity" = 0.0 is permitted) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | 100.0 | Velocity setpoint / speed setpoint for the motion  Value &gt; 0.0: The specified value is used.  Value &lt; 0.0: The absolute value of the specified value is used.   ("Velocity" = 0.0 is permitted) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | InVelocity | OUTPUT | BOOL | FALSE | TRUE | The velocity setpoint / speed setpoint was reached and will be maintained. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -30105,7 +30105,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 
 An "MC_MoveJog" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint / speed setpoint zero is reached, the parameter "InVelocity" will indicate the value TRUE.
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Moving an axis in jog mode
 
@@ -30120,7 +30120,7 @@ The current motion state is indicated in "Busy", "InVelocity" and "Error".
 >
 > **Response to a change in the override**
 >
-> If the velocity / speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity / speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### Additional information
 
@@ -30209,10 +30209,10 @@ The following table shows the parameters of Motion Control instruction "MC_MoveS
 | Axis | InOut | TO_PositioningAxis | - | Axis technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | Distance | INPUT | LREAL | 0.0 | Additional travel distance for the superimposing positioning operation  (negative or positive) |  |
-| VelocityDiff | INPUT | LREAL | -1.0 | Maximum velocity deviation compared to the active motion   Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| VelocityDiff | INPUT | LREAL | -1.0 | Maximum velocity deviation compared to the active motion   Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Superimposed positioning complete |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -30285,7 +30285,7 @@ A position offset can occur between leading axis and following axis during synch
 - The technology object has been configured correctly.
 - The leading axis is a positioning axis or synchronous axis.
 - The following axis is a synchronous axis.
-- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object > Configuration > Leading value interconnections".
+- The leading axis is specified as possible leading axis in the configuration of the following axis in "Technology object &gt; Configuration &gt; Leading value interconnections".
 - The following axis is enabled.
 
 ###### Override response
@@ -30325,9 +30325,9 @@ The following table shows the parameters of Motion Control instruction "MC_GearI
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | RatioNumerator | INPUT | DINT | 1 | Gear ratio numerator  Permitted integer values:  -2147483648 to 2147483648  (value 0 not permitted) |  |
 | RatioDenominator | INPUT | DINT | 1 | Gear ratio denominator  Permitted integer values: 1 to 2147483648 |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | InGear | OUTPUT | BOOL | FALSE | TRUE | Synchronous operation reached The following axis is synchronized and moves synchronously to the leading axis. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -30406,9 +30406,9 @@ The following table shows the parameters of the "MC_POWER" Motion Control instru
 | Enable | INPUT | BOOL | FALSE | TRUE | The technology object is enabled. |
 | FALSE | The technology object is disabled.  All current jobs at the technology object are aborted in accordance with the configured "StopMode". |  |  |  |  |
 | StopMode | INPUT | INT | 0 | Not applicable to the technology object external encoder  If you disable a technology object with a negative edge at parameter "Enable", the axis decelerates in accordance with the selected "StopMode". |  |
-| 0 | Emergency stop  When the technology object is disabled, the axis brakes to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object > Configuration > Extended parameters > Emergency stop ramp". The enable is then canceled.   (<TO>.DynamicDefaults. EmergencyDeceleration) |  |  |  |  |
+| 0 | Emergency stop  When the technology object is disabled, the axis brakes to a standstill without jerk limit, using the emergency stop deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Emergency stop ramp". The enable is then canceled.   (&lt;TO&gt;.DynamicDefaults. EmergencyDeceleration) |  |  |  |  |
 | 1 | Immediate stop  When a technology object is disabled, the setpoint zero is output, and the enable is canceled. The axis is braked to a standstill according to the configuration in the drive. |  |  |  |  |
-| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits". The configured maximum jerk is hereby taken into account. The enable is then canceled.  (<TO>.DynamicLimits.MaxDeceleration; <TO>.DynamicLimits.MaxJerk) |  |  |  |  |
+| 2 | Stop with maximum dynamic values  When the technology object is disabled, the axis is braked to a standstill using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits". The configured maximum jerk is hereby taken into account. The enable is then canceled.  (&lt;TO&gt;.DynamicLimits.MaxDeceleration; &lt;TO&gt;.DynamicLimits.MaxJerk) |  |  |  |  |
 | Status | OUTPUT | BOOL | FALSE | Technology object enable status |  |
 | FALSE | Disabled  ‑ A positioning axis or speed axis does not accept any Motion Control jobs.  ‑ Speed control and position control are not active.  ‑ The actual values of the technology object are not checked for validity. |  |  |  |  |
 | TRUE | Enabled  ‑ An enabled positioning axis or speed axis accepts Motion Control jobs.  ‑ Speed control and position control are active.  - The actual values of the technology object are valid. |  |  |  |  |
@@ -30422,7 +30422,7 @@ To enable a technology object, set the "Enable" parameter to TRUE.
 
 When the Status parameter shows the value TRUE , the technology object is enabled.
 
-If an axis is in motion when the technology object is enabled (actual velocity is present), the axis brakes to the setpoint zero, using the maximum deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic limits" (<TO>.DynamicLimits.MaxDeceleration). This braking ramp can be overridden by Motion Control jobs.
+If an axis is in motion when the technology object is enabled (actual velocity is present), the axis brakes to the setpoint zero, using the maximum deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic limits" (&lt;TO&gt;.DynamicLimits.MaxDeceleration). This braking ramp can be overridden by Motion Control jobs.
 
 > **Note**
 >
@@ -30446,20 +30446,20 @@ When a drive is connected using PROFIdrive, the setpoint, enable and drive statu
 
   With parameter "Enable" = TRUE, the technology object is enabled. The drive is enabled according to the PROFIdrive standard.
 
-  When the tag <TO>.StatusDrive.InOperation shows the value TRUE , the drive is ready to execute setpoints. The "Status" parameter is set to the value TRUE .
+  When the tag &lt;TO&gt;.StatusDrive.InOperation shows the value TRUE , the drive is ready to execute setpoints. The "Status" parameter is set to the value TRUE .
 - **Disable technology object and deactivate drive**
 
   With parameter "Enable" = FALSE, the "Status" parameter is set to the value FALSE, and the axis is braked according to the selected "StopMode". The drive is disabled according to the PROFIdrive standard.
 
 ##### Analog drive connection
 
-The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (<TO>.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (<TO>.Actor.Interface.DriveReadyInput).
+The setpoint is output via an analog output. Optionally, you can configure an enabling signal via digital output (&lt;TO&gt;.Actor.Interface.EnableDriveOutput), and a readiness signal via digital input (&lt;TO&gt;.Actor.Interface.DriveReadyInput).
 
 - **Enable technology object and activate drive**
 
   With parameter "Enable" = TRUE, the enable output ("Enable drive output") is set.
 
-  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's <TO>.StatusDrive.InOperation tag are set to TRUE, and the setpoint is switched to the analog output.
+  When the drive returns the readiness signal via the ready input ("Drive ready input"), the "Status" parameter and the technology object's &lt;TO&gt;.StatusDrive.InOperation tag are set to TRUE, and the setpoint is switched to the analog output.
 - **Disable technology object and deactivate drive**
 
   With parameter "Enable" = FALSE, the "Status" parameter is set to the value FALSE, and the axis is braked according to the selected "StopMode". When the setpoint zero is reached, the enable output is set to FALSE.
@@ -30572,9 +30572,9 @@ This section contains information on the following topics:
 
 With the Motion Control instruction "MC_Home", you create the relationship between the position in the technology object and the mechanical position. The actual position value in the technology object is assigned to a homing mark at the same time. This homing mark represents a known mechanical position.
 
-Homing is performed according to the mode selected with the "HomingMode" parameter and the configuration under "Technology object > Configuration > Extended parameters > Homing".
+Homing is performed according to the mode selected with the "HomingMode" parameter and the configuration under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing".
 
-The preset values under "Technology object > Configuration > Extended parameters > Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
+The preset values under "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic default values" are used for the dynamic values Acceleration, Deceleration and Jerk.
 
 ##### Applies to
 
@@ -30598,7 +30598,7 @@ The following table shows which modes are possible with each of the technology o
 - HomingMode" = 2, 3, 4, 5, 8   
   The technology object must be enabled.
 - HomingMode" = 0, 1, 2, 6, 7  
-  The encoder values must be valid. (<TO>.StatusSensor[n].State = 2)
+  The encoder values must be valid. (&lt;TO&gt;.StatusSensor[n].State = 2)
 
 ##### Override response
 
@@ -30638,11 +30638,11 @@ The following table shows the parameters of the "MC_Home" Motion Control instruc
 | 0 | Direct homing (absolute)  The current position of the technology object is set to the value of parameter "Position". |  |  |  |  |
 | 1 | Direct homing (relative)  The current position of the technology object is shifted by the value of parameter "Position". |  |  |  |  |
 | 2 | Passive homing   When the homing mark is detected, the actual value is set to the value of the "Position" parameter. |  |  |  |  |
-| 3 | Passive homing  ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object > Configuration > Extended parameters > Homing > Passive homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
+| 3 | Passive homing  ("Position" parameter has no effect)  When the homing mark is detected, the actual value is set to the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Passive homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
 | 4 | Active homing   The TO positioning axis performs a homing movement according to the configuration.  After the completion of the movement, the axis is positioned at the value of the "Position" parameter. |  |  |  |  |
-| 5 | Active homing  ("Position" parameter has no effect)  The TO positioning axis performs a homing movement according to the configuration.  After completion of the movement, the axis is positioned at the home position configured under "Technology object > Configuration > Extended parameters > Homing > Active homing".  (<TO>.Homing.HomePosition) |  |  |  |  |
-| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".   The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
-| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (<TO>.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
+| 5 | Active homing  ("Position" parameter has no effect)  The TO positioning axis performs a homing movement according to the configuration.  After completion of the movement, the axis is positioned at the home position configured under "Technology object &gt; Configuration &gt; Extended parameters &gt; Homing &gt; Active homing".  (&lt;TO&gt;.Homing.HomePosition) |  |  |  |  |
+| 6 | Absolute encoder adjustment (relative)  The current position is shifted by the value of parameter "Position".   The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
+| 7 | Absolute encoder adjustment (absolute)  The current position is set to the value of parameter "Position".  The calculated absolute value offset is stored retentively in the CPU.  (&lt;TO&gt;.StatusSensor[n]. AbsEncoderOffset) |  |  |  |  |
 | 8 | Passive homing  (without reset)  Functions like "HomingMode" 2, with the difference that the "homed" status is **not** reset when the function is enabled. |  |  |  |  |
 | 9 | Abort passive homing  An active job for passive homing is aborted. |  |  |  |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Job is completed. |
@@ -30653,7 +30653,7 @@ The following table shows the parameters of the "MC_Home" Motion Control instruc
 
 ##### Resetting the "Homed" status
 
-The "Homed" status of a technology object is reset under the following conditions (<TO>.StatusWord.X5 (HomingDone)):
+The "Homed" status of a technology object is reset under the following conditions (&lt;TO&gt;.StatusWord.X5 (HomingDone)):
 
 - **Technology objects with incremental actual values:**
 
@@ -30662,7 +30662,7 @@ The "Homed" status of a technology object is reset under the following condition
     (After successful completion of the homing operation, the "Homed" status is reset.)
   - Error in the encoder system, or encoder failure
   - Restart of the technology object
-  - After POWER OFF -> POWER ON of the CPU
+  - After POWER OFF -&gt; POWER ON of the CPU
   - Memory reset
   - Modification of the encoder configuration
 - **Technology objects with absolute actual values:**
@@ -30679,7 +30679,7 @@ To home a technology object, follow these steps:
 2. Specify the desired homing function in the "HomingMode" parameter.
 3. Initialize the necessary parameters with values, and start the homing operation with a positive edge at the "Execute" parameter.
 
-When the "Done" parameter shows the value TRUE, the "MC_Home" job has been completed according to the selected "HomingMode". The "Homed" status of the technology object is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Homed" (<TO>.StatusWord.X5 (HomingDone)).
+When the "Done" parameter shows the value TRUE, the "MC_Home" job has been completed according to the selected "HomingMode". The "Homed" status of the technology object is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Homed" (&lt;TO&gt;.StatusWord.X5 (HomingDone)).
 
 ##### Termination of a passive homing process with "HomingMode" = 9
 
@@ -30743,8 +30743,8 @@ The following table shows the parameters of the "MC_Halt" Motion Control instruc
 | --- | --- | --- | --- | --- | --- |
 | Axis | InOut | TO_SpeedAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Zero velocity reached |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -30759,7 +30759,7 @@ Proceed as follows to decelerate an axis to a standstill:
 2. Supply the parameters "Deceleration" and "Jerk" with the desired values.
 3. Start the "MC_Halt" job with a positive edge at parameter "Execute".
 
-The current motion state is indicated in "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object > Diagnostics > Status and error bits > Motion status > Standstill" (<TO>.StatusWord.X7 (Standstill)).
+The current motion state is indicated in "Busy", "Done" and "Error". The standstill of the axis is indicated under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status &gt; Standstill" (&lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Additional information
 
@@ -30831,11 +30831,11 @@ The following table shows the parameters of the "MC_MoveAbsolute" Motion Control
 | Axis | InOut | TO_PositioningAxis | - | Technology object |  |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |  |
 | Position | INPUT | REAL | 0.0 | Absolute target position |  |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |  |
-| Direction | INPUT | INT | 1 | Direction of rotation of the axis  Is only evaluated with "modulo" enabled.   "Technology object > Configuration > Basic parameters > Enable modulo |  |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |  |
+| Direction | INPUT | INT | 1 | Direction of rotation of the axis  Is only evaluated with "modulo" enabled.   "Technology object &gt; Configuration &gt; Basic parameters &gt; Enable modulo |  |  |
 | 1 | Positive direction of rotation |  |  |  |  |  |
 | 2 | Negative direction of rotation |  |  |  |  |  |
 | 3 | Shortest path |  |  |  |  |  |
@@ -30920,10 +30920,10 @@ The following table shows the parameters of the "MC_MoveRelative" Motion Control
 | Axis | InOut | TO_PositioningAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | Distance | INPUT | LREAL | 0.0 | Distance for the positioning process (negative or positive) |  |
-| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value > 0.0: The specified value is used.  Value = 0.0: not permitted  Value < 0.0: The velocity configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.   (<TO>.DynamicDefaults.Velocity) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | -1.0 | Velocity setpoint for the positioning  Value &gt; 0.0: The specified value is used.  Value = 0.0: not permitted  Value &lt; 0.0: The velocity configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.   (&lt;TO&gt;.DynamicDefaults.Velocity) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Done | OUTPUT | BOOL | FALSE | TRUE | Target position reached |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -31013,9 +31013,9 @@ The following table shows the parameters of the "MC_MoveVelocity" Motion Control
 | Axis | InOut | TO_SpeedAxis | - | Technology object |  |
 | Execute | INPUT | BOOL | FALSE | Start job with a positive edge |  |
 | Velocity | INPUT | LREAL | 100.0 | Velocity/speed setpoint for the motion process  ("Velocity" = 0.0 is permitted) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | Direction | INPUT | INT | 0 | Direction of rotation of the axis |  |
 | 0 | The sign of the velocity specified at the "Velocity" parameter defines the direction of rotation. |  |  |  |  |
 | 1 | Positive direction of rotation   Value of "Velocity" is used. |  |  |  |  |
@@ -31033,7 +31033,7 @@ The following table shows the parameters of the "MC_MoveVelocity" Motion Control
 
 An "MC_MoveVelocity" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint / speed setpoint zero is reached, the parameter "InVelocity" will indicate the value TRUE.
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 The parameters "InVelocity" and "Busy" show the value TRUE until the "MC_MoveVelocity" job is overridden by another Motion Control job.
 
@@ -31053,7 +31053,7 @@ If the "InVelocity" parameter shows the value TRUE, then the velocity setpoint /
 >
 > **Response to a change in the override**
 >
-> If the velocity / speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity / speed is reached ("Velocity" × "Override" %), then "InVelocity" is reset.
+> If the velocity / speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity / speed is reached ("Velocity" × "Override" %), then "InVelocity" is reset.
 
 ##### Additional information
 
@@ -31133,10 +31133,10 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 | Axis | InOut | TO_SpeedAxis | - | Technology object |  |
 | JogForward | INPUT | BOOL | FALSE | As long as the parameter is TRUE, the axis moves in the positive direction at the velocity specified in parameter "Velocity". |  |
 | JogBackward | INPUT | BOOL | FALSE | As long as the parameter is TRUE, the axis moves in the negative direction at the velocity specified in parameter "Velocity". |  |
-| Velocity | INPUT | LREAL | 100.0 | Velocity setpoint / speed setpoint for the motion  Value > 0.0: The specified value is used.  Value < 0.0: The absolute value of the specified value is used.   ("Velocity" = 0.0 is permitted) |  |
-| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The acceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Acceleration) |  |
-| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value > 0.0: The specified value is used.  Value = 0.0: Not permitted  Value < 0.0: The deceleration configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Deceleration) |  |
-| Jerk | INPUT | LREAL | -1.0 | Jerk  Value > 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value < 0.0: The jerk configured in "Technology object > Configuration > Extended parameters > Dynamic defaults" is used.  (<TO>.DynamicDefaults.Jerk) |  |
+| Velocity | INPUT | LREAL | 100.0 | Velocity setpoint / speed setpoint for the motion  Value &gt; 0.0: The specified value is used.  Value &lt; 0.0: The absolute value of the specified value is used.   ("Velocity" = 0.0 is permitted) |  |
+| Acceleration | INPUT | LREAL | -1.0 | Acceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The acceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Acceleration) |  |
+| Deceleration | INPUT | LREAL | -1.0 | Deceleration  Value &gt; 0.0: The specified value is used.  Value = 0.0: Not permitted  Value &lt; 0.0: The deceleration configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Deceleration) |  |
+| Jerk | INPUT | LREAL | -1.0 | Jerk  Value &gt; 0.0: Constant-acceleration velocity profile; the specified jerk is used.  Value = 0.0: Trapezoid velocity profile  Value &lt; 0.0: The jerk configured in "Technology object &gt; Configuration &gt; Extended parameters &gt; Dynamic defaults" is used.  (&lt;TO&gt;.DynamicDefaults.Jerk) |  |
 | InVelocity | OUTPUT | BOOL | FALSE | TRUE | The velocity setpoint / speed setpoint was reached and will be maintained. |
 | Busy | OUTPUT | BOOL | FALSE | TRUE | Job is running. |
 | CommandAborted | OUTPUT | BOOL | FALSE | TRUE | The job was aborted by another job during execution. |
@@ -31147,7 +31147,7 @@ The following table shows the parameters of the Motion Control instruction "MC_M
 
 An "MC_MoveJog" job with "Velocity" = 0.0 stops the axis with the configured deceleration. When the velocity setpoint / speed setpoint zero is reached, the parameter "InVelocity" will indicate the value TRUE.
 
-Under "Technology object > Diagnostics > Status and error bits > Motion status", "constant velocity" and "standstill" will be displayed (<TO>.StatusWord.X12 (ConstantVelocity); <TO>.StatusWord.X7 (Standstill)).
+Under "Technology object &gt; Diagnostics &gt; Status and error bits &gt; Motion status", "constant velocity" and "standstill" will be displayed (&lt;TO&gt;.StatusWord.X12 (ConstantVelocity); &lt;TO&gt;.StatusWord.X7 (Standstill)).
 
 ##### Moving an axis in jog mode
 
@@ -31162,7 +31162,7 @@ The current motion state is indicated in "Busy", "InVelocity" and "Error".
 >
 > **Response to a change in the override**
 >
-> If the velocity / speed is influenced during constant motion by a change in the override (<TO>.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
+> If the velocity / speed is influenced during constant motion by a change in the override (&lt;TO&gt;.Override.Velocity), the "InVelocity" parameter is reset during the acceleration or deceleration. When the newly calculated velocity is reached ("Velocity" × "Override" %), then "InVelocity" is set again.
 
 ##### Additional information
 

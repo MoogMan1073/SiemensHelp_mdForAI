@@ -577,7 +577,7 @@ In that case, the root certificate has been installed in the certificate store o
 
 Microsoft Edge and Chrome use the Windows system certificate store.
 
-Use Windows > Search "Manage computer certificates" to check whether the root certificate has been installed under "Certificates - Local Computer" > "Trusted Root Certification Authorities" > "Certificates".
+Use Windows &gt; Search "Manage computer certificates" to check whether the root certificate has been installed under "Certificates - Local Computer" &gt; "Trusted Root Certification Authorities" &gt; "Certificates".
 
 ###### Procedure for Firefox
 
@@ -586,7 +586,7 @@ Firefox uses its own dedicated certificate store.
 To check the status of a certificate, follow these steps:
 
 1. Open the "Settings" page of Firefox.
-2. Select "Privacy & Security".
+2. Select "Privacy &amp; Security".
 3. Click "View Certificates" in the "Certificates" area.
 4. Select the "Authorities" tab in the "Certificate Manager" window.
 5. Check whether the root certificate is included in the list of trusted authorities.
@@ -813,7 +813,7 @@ This section describes how to install the root certificate of a Runtime web serv
 2. Install the root certificate in the certificate store of Firefox. To do this, follow these steps:
 
    - Open the "Settings" page of Firefox.
-   - Select "Privacy & Security".
+   - Select "Privacy &amp; Security".
    - Click "View Certificates" in the "Certificates" area.
    - Select the "Authorities" tab in the "Certificate Manager" window:
 
@@ -866,7 +866,7 @@ This section describes how to install the root certificate of a Runtime web serv
 7. Install the root certificate in the certificate store of Firefox. To do this, follow these steps:
 
    - Open the "Settings" page of Firefox.
-   - Select "Privacy & Security".
+   - Select "Privacy &amp; Security".
    - Click "View Certificates" in the "Certificates" area.
    - Select the "Authorities" tab in the "Certificate Manager" window:
 
@@ -943,7 +943,7 @@ This section describes how to install the root certificate of a Runtime web serv
 
    The configuration profile is loaded.
 3. Tap "Close".
-4. Select "Settings > General > Profile" on the device.
+4. Select "Settings &gt; General &gt; Profile" on the device.
 5. Tap the configuration profile you just loaded.
 6. Tap "Install" at the top right.
 
@@ -962,7 +962,7 @@ This section describes how to install the root certificate of a Runtime web serv
    ![Procedure](images/129772966027_DV_resource.Stream@PNG-de-DE.png)
 
    The certificate is installed.
-9. Select "Settings > General > About > Certificate Trust Settings" on the device:
+9. Select "Settings &gt; General &gt; About &gt; Certificate Trust Settings" on the device:
 
    ![Procedure](images/129773293963_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1023,7 +1023,7 @@ This section describes how to install the root certificate of a Runtime web serv
    - Tap "Close".
 5. Install the configuration profile on your device. Follow these steps:
 
-   - Select "Settings > General > Profile" on the device.
+   - Select "Settings &gt; General &gt; Profile" on the device.
    - Tap the configuration profile you just loaded.
    - Tap "Install" at the top right.
 
@@ -1048,7 +1048,7 @@ This section describes how to install the root certificate of a Runtime web serv
      ![Procedure](images/129772977419_DV_resource.Stream@PNG-de-DE.png)
 
      ![Procedure](images/129772977419_DV_resource.Stream@PNG-de-DE.png)
-   - Select "General > About > Certificate Trust Settings".
+   - Select "General &gt; About &gt; Certificate Trust Settings".
 
      ![Procedure](images/129773293963_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1344,15 +1344,15 @@ This section describes how to install the self-signed web server certificate of 
    - Click "More Information".
 
      A dialog with the page information opens.
-   - Click "Security > View Certificate".
+   - Click "Security &gt; View Certificate".
 
      A tab with the certificate information opens.
-   - Click "PEM (certificate)" under "Miscellaneous > Save".
+   - Click "PEM (certificate)" under "Miscellaneous &gt; Save".
    - Select a storage location and save the certificate.
 4. Install the certificate in the certificate store of Firefox. To do this, follow these steps:
 
    - Open the "Settings" page of Firefox.
-   - Select "Privacy & Security".
+   - Select "Privacy &amp; Security".
    - Click "View Certificates" in the "Certificates" area.
    - Click "Import" and select the certificate file.
 5. Reload the page.
@@ -1411,7 +1411,7 @@ The procedure is explained using Safari as an example. The procedure is the sam
    - Tap "Close".
 4. Install the configuration profile on your device. Follow these steps:
 
-   - Select "Settings > General > Profile" on the device.
+   - Select "Settings &gt; General &gt; Profile" on the device.
    - Tap the configuration profile you just loaded.
    - Tap "Install" at the top right.
 
@@ -1430,7 +1430,7 @@ The procedure is explained using Safari as an example. The procedure is the sam
      ![Procedure](images/129772966027_DV_resource.Stream@PNG-de-DE.png)
 
      The certificate is installed.
-   - Select "Settings > General > About > Certificate Trust Settings" on the device:
+   - Select "Settings &gt; General &gt; About &gt; Certificate Trust Settings" on the device:
 
      ![Procedure](images/129773293963_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1498,7 +1498,7 @@ This section describes how to install the self-signed web server certificate of 
 5. Download the certificate.
 
    The certificate is loaded into the certificate store of the Panel. The Panel does not yet trust the certificate.
-6. Trust the certificate with "Control Panel > Security > Certificates".
+6. Trust the certificate with "Control Panel &gt; Security &gt; Certificates".
 7. Reload the page in the web browser.
 
 **Note**
@@ -1994,7 +1994,7 @@ If you are using a Unified Panel as a Smart Server, you can protect the communi
 
 With corresponding configuration of the Panel in the Engineering System, the certificate is automatically created and installed on the Panel when the Panel is loaded. When the connection between the server and client is established, the certificate is automatically transferred to the client. The client must trust the certificate.
 
-You can find more information in the TIA Portal help system under "Using distributed systems > WinCC Smart Server".
+You can find more information in the TIA Portal help system under "Using distributed systems &gt; WinCC Smart Server".
 
 ## Certificates for Unified PCs (RT Unified)
 
@@ -2445,7 +2445,7 @@ In that case, the root certificate has been installed in the certificate store o
 
 Microsoft Edge and Chrome use the Windows system certificate store.
 
-Use Windows > Search "Manage computer certificates" to check whether the root certificate has been installed under "Certificates - Local Computer" > "Trusted Root Certification Authorities" > "Certificates".
+Use Windows &gt; Search "Manage computer certificates" to check whether the root certificate has been installed under "Certificates - Local Computer" &gt; "Trusted Root Certification Authorities" &gt; "Certificates".
 
 ###### Procedure for Firefox
 
@@ -2454,7 +2454,7 @@ Firefox uses its own dedicated certificate store.
 To check the status of a certificate, follow these steps:
 
 1. Open the "Settings" page of Firefox.
-2. Select "Privacy & Security".
+2. Select "Privacy &amp; Security".
 3. Click "View Certificates" in the "Certificates" area.
 4. Select the "Authorities" tab in the "Certificate Manager" window.
 5. Check whether the root certificate is included in the list of trusted authorities.
@@ -2696,7 +2696,7 @@ This section describes how to install the root certificate of a Runtime web serv
 2. Install the root certificate in the certificate store of Firefox. To do this, follow these steps:
 
    - Open the "Settings" page of Firefox.
-   - Select "Privacy & Security".
+   - Select "Privacy &amp; Security".
    - Click "View Certificates" in the "Certificates" area.
    - Select the "Authorities" tab in the "Certificate Manager" window:
 
@@ -2749,7 +2749,7 @@ This section describes how to install the root certificate of a Runtime web serv
 7. Install the root certificate in the certificate store of Firefox. To do this, follow these steps:
 
    - Open the "Settings" page of Firefox.
-   - Select "Privacy & Security".
+   - Select "Privacy &amp; Security".
    - Click "View Certificates" in the "Certificates" area.
    - Select the "Authorities" tab in the "Certificate Manager" window:
 
@@ -2826,7 +2826,7 @@ This section describes how to install the root certificate of a Runtime web serv
 
    The configuration profile is loaded.
 3. Tap "Close".
-4. Select "Settings > General > Profile" on the device.
+4. Select "Settings &gt; General &gt; Profile" on the device.
 5. Tap the configuration profile you just loaded.
 6. Tap "Install" at the top right.
 
@@ -2845,7 +2845,7 @@ This section describes how to install the root certificate of a Runtime web serv
    ![Procedure](images/129772966027_DV_resource.Stream@PNG-de-DE.png)
 
    The certificate is installed.
-9. Select "Settings > General > About > Certificate Trust Settings" on the device:
+9. Select "Settings &gt; General &gt; About &gt; Certificate Trust Settings" on the device:
 
    ![Procedure](images/129773293963_DV_resource.Stream@PNG-de-DE.png)
 
@@ -2906,7 +2906,7 @@ This section describes how to install the root certificate of a Runtime web serv
    - Tap "Close".
 5. Install the configuration profile on your device. Follow these steps:
 
-   - Select "Settings > General > Profile" on the device.
+   - Select "Settings &gt; General &gt; Profile" on the device.
    - Tap the configuration profile you just loaded.
    - Tap "Install" at the top right.
 
@@ -2931,7 +2931,7 @@ This section describes how to install the root certificate of a Runtime web serv
      ![Procedure](images/129772977419_DV_resource.Stream@PNG-de-DE.png)
 
      ![Procedure](images/129772977419_DV_resource.Stream@PNG-de-DE.png)
-   - Select "General > About > Certificate Trust Settings".
+   - Select "General &gt; About &gt; Certificate Trust Settings".
 
      ![Procedure](images/129773293963_DV_resource.Stream@PNG-de-DE.png)
 
@@ -3277,15 +3277,15 @@ This section describes how to install the self-signed web server certificate of 
    - Click "More Information".
 
      A dialog with the page information opens.
-   - Click "Security > View Certificate".
+   - Click "Security &gt; View Certificate".
 
      A tab with the certificate information opens.
-   - Click "PEM (certificate)" under "Miscellaneous > Save".
+   - Click "PEM (certificate)" under "Miscellaneous &gt; Save".
    - Select a storage location and save the certificate.
 4. Install the certificate in the certificate store of Firefox. To do this, follow these steps:
 
    - Open the "Settings" page of Firefox.
-   - Select "Privacy & Security".
+   - Select "Privacy &amp; Security".
    - Click "View Certificates" in the "Certificates" area.
    - Click "Import" and select the certificate file.
 5. Reload the page.
@@ -3346,7 +3346,7 @@ The procedure is explained using Safari as an example. The procedure is the sam
    - Tap "Close".
 4. Install the configuration profile on your device. Follow these steps:
 
-   - Select "Settings > General > Profile" on the device.
+   - Select "Settings &gt; General &gt; Profile" on the device.
    - Tap the configuration profile you just loaded.
    - Tap "Install" at the top right.
 
@@ -3365,7 +3365,7 @@ The procedure is explained using Safari as an example. The procedure is the sam
      ![Procedure](images/129772966027_DV_resource.Stream@PNG-de-DE.png)
 
      The certificate is installed.
-   - Select "Settings > General > About > Certificate Trust Settings" on the device:
+   - Select "Settings &gt; General &gt; About &gt; Certificate Trust Settings" on the device:
 
      ![Procedure](images/129773293963_DV_resource.Stream@PNG-de-DE.png)
 
@@ -3433,7 +3433,7 @@ This section describes how to install the self-signed web server certificate of 
 5. Download the certificate.
 
    The certificate is loaded into the certificate store of the Panel. The Panel does not yet trust the certificate.
-6. Trust the certificate with "Control Panel > Security > Certificates".
+6. Trust the certificate with "Control Panel &gt; Security &gt; Certificates".
 7. Reload the page in the web browser.
 
 **Note**
@@ -4191,7 +4191,7 @@ With secure communication, the connection between Runtime and PLC is encrypted b
 
   > **Note**
   >
-  > It is recommended to enable the "Only allow secure PG/PC and HMI communication" option on the PLC under "Protection & Security > Connection mechanism". If this option is selected, the Engineering System automatically generates a self-signed PLC certificate. The PLC always uses secure communication. Disabling this option increases the security risk.
+  > It is recommended to enable the "Only allow secure PG/PC and HMI communication" option on the PLC under "Protection &amp; Security &gt; Connection mechanism". If this option is selected, the Engineering System automatically generates a self-signed PLC certificate. The PLC always uses secure communication. Disabling this option increases the security risk.
   >
   > You can replace this default certificate in the certificate manager of TIA Portal:
   >
@@ -4199,7 +4199,7 @@ With secure communication, the connection between Runtime and PLC is encrypted b
   > - Upload a self-signed one.
   > - Upload a CA-based certificate, the root certificate of the issuing certification authority and its CRL file.
   >
-  > More information on the certificate manager of TIA Portal is available in the TIA Portal online help under "Editing devices and networks > Configuring devices and networks > Configuring networks > Secure Communication > Secure PG/HMI Communication".
+  > More information on the certificate manager of TIA Portal is available in the TIA Portal online help under "Editing devices and networks &gt; Configuring devices and networks &gt; Configuring networks &gt; Secure Communication &gt; Secure PG/HMI Communication".
 - Communication between HMI device and PLC:
 
   - The HMI device has an integrated connection to the PLC.  
@@ -4487,7 +4487,7 @@ You can find additional information on the function "Certificates" of the Contro
 
 #### Display
 
-1. In the Control Panel, select "Security"" > "Certificates".
+1. In the Control Panel, select "Security"" &gt; "Certificates".
 2. In the "Certificate stores" list select one of the following entries:
 
    - To display own certificates, select the entry "My Certificates".
@@ -4505,7 +4505,7 @@ The certificate details are displayed.
 
 #### Trusting or rejecting
 
-1. In the Control Panel select "Security" > "Certificates".
+1. In the Control Panel select "Security" &gt; "Certificates".
 2. Select the "Other Certificates" entry from the "Certificate stores" list.
 
    You see both certificates with the status "Trusted" and "Untrusted".
@@ -4524,7 +4524,7 @@ The certificate details are displayed.
 >
 > Deleting uninstalls and removes a certificate from the certificate store.
 
-1. In the Control Panel select "Security" > "Certificates".
+1. In the Control Panel select "Security" &gt; "Certificates".
 2. Select the desired entry from the "Certificate stores" list.
 
    Depending on the selected entry you see a list of the certificates available on this device. After selection of "Other certificates" you see both certificates with the status "Trusted" and "Untrusted".
@@ -5380,7 +5380,7 @@ An HMI device has been added to the certificate authority in Certificate Manager
 
 1. On the certificate authority device, open Certificate Manager.
 2. Select the "CA configuration" tab.
-3. Right-click on the device and select "Add Certificate > <Certificate type> ... "
+3. Right-click on the device and select "Add Certificate &gt; &lt;Certificate type&gt; ... "
 4. Enter the properties of the certificate in the "New certificate" dialog.
 
    - "General" tab
@@ -5462,7 +5462,7 @@ The application certificate is deleted.
 >
 > The certificates installed on the device are not deleted.
 >
-> If necessary, delete the certificate from the device. On a Unified PC, you use Certificate Manager to do this. On a Unified Panel, you use the "Security > Certificates" function in the Control Panel.
+> If necessary, delete the certificate from the device. On a Unified PC, you use Certificate Manager to do this. On a Unified Panel, you use the "Security &gt; Certificates" function in the Control Panel.
 
 ---
 
@@ -5559,12 +5559,12 @@ The certificates of the Unified PC have been configured on the certificate auth
    To export the certificates of all devices:
 
    - Right-click on the root certificate.
-   - Select "Export > CA Container".
+   - Select "Export &gt; CA Container".
 
    To export only the certificates of the Unified PC:
 
    - Right-click on the Unified PC.
-   - Select "Export device > To PC".
+   - Select "Export device &gt; To PC".
 4. In the dialog that opens, enter and repeat a password to protect the export file.
 
    See also section [Password requirements](#password-requirements-rt-unified-1).
@@ -5608,7 +5608,7 @@ You export certificates in the following cases:
 
   > **Note**
   >
-  > Alternatively, you can also export the CRL file individually. See section [Exporting root certificate and CRL file](#exporting-root-certificate-and-crl-file-rt-unified). Then import it using the "Security > Certificates" function in the Control Panel of the Unified Panel.
+  > Alternatively, you can also export the CRL file individually. See section [Exporting root certificate and CRL file](#exporting-root-certificate-and-crl-file-rt-unified). Then import it using the "Security &gt; Certificates" function in the Control Panel of the Unified Panel.
 
 ##### Requirement
 
@@ -5619,7 +5619,7 @@ The certificates of the Panel have been configured on the certificate authority 
 1. Open WinCC Unified Certificate Manager on the certificate authority device.
 2. Select the "CA configuration" tab.
 3. Right-click on the desired Panel.
-4. Select "Export device > To Panel".
+4. Select "Export device &gt; To Panel".
 5. In the dialog that opens, enter and repeat a password to protect the export file.
 
    See also section [Password requirements](#password-requirements-rt-unified-1).
@@ -5676,7 +5676,7 @@ A certificate authority has been created on the certificate authority device in 
 
 1. On the certificate authority device, open Certificate Manager.
 2. In the "CA configuration" tab, click the root certificate on the right.
-3. Select "Export > CA Certificate ...".
+3. Select "Export &gt; CA Certificate ...".
 4. Select a file format.
 5. Confirm your entries.
 6. Select a target folder.
@@ -5703,7 +5703,7 @@ After the export, distribute the files to the target devices:
 
 - For distribution to communication partners, follow the procedure described in the user help of the device.
 - On a Unified PC you install the files with SIMATIC Runtime Manager.
-- On a Unified Panel you install the files in the Control Panel under "Security > Certificates" using the "Import" function.
+- On a Unified Panel you install the files in the Control Panel under "Security &gt; Certificates" using the "Import" function.
 
 ---
 
@@ -5796,7 +5796,7 @@ You recreate application certificates and general certificates in the following 
 2. Select the "CA configuration" tab.
 3. Right-click on the certificate of the desired device and select "Recreate ...".
 
-   The "New <description> certificate" dialog opens. The entries of the old certificate are downloaded into the dialog.
+   The "New &lt;description&gt; certificate" dialog opens. The entries of the old certificate are downloaded into the dialog.
 4. Change the desired properties.
 5. Click "OK".
 
@@ -5887,7 +5887,7 @@ A new CRL file with a lifetime of 24 months is created.
 Distribute and install the CRL file to the target devices:
 
 - On a Unified PC, you install the file with SIMATIC Runtime Manager. See section [Managing third-party certificates of a Unified PC](#managing-third-party-certificates-of-a-unified-pc-rt-unified).
-- On a Unified Panel, you install the file in the Control Panel under "Security > Security" using the "Import" function. See section [Managing third party certificates and own certificates of a Unified Panel](#managing-third-party-certificates-and-own-certificates-of-a-unified-panel-rt-unified).
+- On a Unified Panel, you install the file in the Control Panel under "Security &gt; Security" using the "Import" function. See section [Managing third party certificates and own certificates of a Unified Panel](#managing-third-party-certificates-and-own-certificates-of-a-unified-panel-rt-unified).
 - For distribution to the communication partners, follow the procedure described in the user help of the device.
 
 ---
@@ -5908,7 +5908,7 @@ To create a backup copy of all the data of the certificate authority, follow the
 
 1. Open Certificate Manager on the certificate authority device.
 2. Select the "CA configuration" tab.
-3. Right-click the root certificate and select "Export > Full backup".
+3. Right-click the root certificate and select "Export &gt; Full backup".
 4. To protect the backup file, enter a password and repeat it in the "Export" dialog.
 
    See also section [Password requirements](#password-requirements-rt-unified).
@@ -6086,7 +6086,7 @@ This section contains information on the following topics:
 
 ##### Requirement
 
-- The certificates of the Panel have been exported on the certificate authority device with "Export device > To Panel".
+- The certificates of the Panel have been exported on the certificate authority device with "Export device &gt; To Panel".
 
   See section [Exporting certificates of a Panel](#exporting-certificates-of-a-panel-rt-unified).
 - The export file was copied to an external storage medium.
@@ -6095,7 +6095,7 @@ This section contains information on the following topics:
 ##### Procedure
 
 1. Connect the panel to the external storage medium.
-2. In the Control Panel, select "Security > Certificates".
+2. In the Control Panel, select "Security &gt; Certificates".
 3. Click "Import".
 
    The "Import certificates" dialog opens.
@@ -6143,7 +6143,7 @@ You can also import and install the application certificates of a Unified Panel 
 
 ##### Requirement
 
-- The certificates of the Unified Panel have been exported with "Export device > To Panel".
+- The certificates of the Unified Panel have been exported with "Export device &gt; To Panel".
 
   See section [Exporting certificates of a Panel](#exporting-certificates-of-a-panel-rt-unified).
 - The export file was copied to an external storage medium.
@@ -6207,7 +6207,7 @@ You can find information on how to trust a root certificate or how to import and
 
 ##### Procedure on a Unified Panel
 
-1. In the Control Panel, select "Security" > "Certificates".
+1. In the Control Panel, select "Security" &gt; "Certificates".
 2. In the "Certificate stores" list, select the entry "Certificate Authorities".
 
    ![Procedure on a Unified Panel](images/162709734795_DV_resource.Stream@PNG-de-DE.png)
@@ -6243,7 +6243,7 @@ The import is required in the following cases:
 ##### Procedure
 
 1. Connect the Panel to the external storage medium.
-2. In the Control Panel, select "Security > Certificates".
+2. In the Control Panel, select "Security &gt; Certificates".
 3. Click "Import".
 
    The "Import certificates" dialog opens.
@@ -6376,13 +6376,13 @@ To use general certificates, follow these steps:
 
 | Symbol | Meaning |
 | --- | --- |
-| 1. Start Certificate Manager on the certificate authority device. 2. If the device for which you want to create the general certificate is not yet part of the CA infrastructure, add it. 3. Right-click the device and select "Add Certificate > General ...". 4. Enter the properties of the certificate in the "New certificate" dialog.    The following applies:    - You can use a template. To do this, select the "Use template" option and select the template from the list next to it.        | Symbol | Meaning |      | --- | --- |      | **Note**  Only one template is available in the current version. Alternatively, you can duplicate a general certificate that has already been added and change the desired properties on the duplicate. |  |    - "Security" tab, "Key usage" and "Enhanced key usage" fields: To add, delete or edit a usage, right-click in the field and select the desired command. 5. Set up the installation of the general certificate on the device. Follow these steps:    - Right-click on the general certificate and select "Export certificate ...".      The "Export certificate" dialog opens.    - Select the "Export with private key" option.    - To protect the usage of the private key, assign a password.         | Symbol | Meaning |      | --- | --- |      | **Note**  To be able to use the private key, the target application must also provide this password. |  |    - Specify the format for the export. Select one of the following options for this:         | Symbol | Meaning |      | --- | --- |      | "Export public certificate in DER format" | Public key and private key are exported to a common PFX file. |      | "Export public certificate in PEM format" | Public key and private key are each exported to a separate PEM file. |    - Click "Export".    - Select the storage location and confirm your entry. 6. Transfer the file or files to the device. 7. Install the private key and public key of the certificate in the own certificates of the device. Follow the procedure described in the user help of the respective device or the application.      | Symbol | Meaning |    | --- | --- |    | **Note**  If the device is a Unified Panel, install them in the certificate store of the Panel. Follow the procedure described below. If the device is a Unified PC, the certificate store depends on the implementation of the application. Use of the following certificate stores is possible: - Windows certificate store   Double-click the export file(s). Manually install the file(s) in the appropriate folder of the Windows certificate store. - WinCC Unified certificate store, other file-based certificate stores   Manually copy the file(s) in a file explorer to the appropriate folder of the certificate store.Installation with Certificate Manager is not possible. |  | 8. If necessary, establish the trust relationship between the device and its communication partner.       | Symbol | Meaning |    | --- | --- |    | **Note**  In the following cases, the communication partner already trusts the root certificate and, thus, also the general certificate of the device: - The communication partner is an HMI device. The HMI device has the same certificate authority as the device. The certificates of the HMI device are installed on the HMI device. - The device and its communication partner have different certificate authorities. The communication partner already communicates with another device that has the same Unified certificate authority as the device with the general certificate. |  |     Follow these steps:    - Export the root certificate and its CRL file on the certificate authority device in Certificate Manager.    - Transfer the file containing the root certificate and the CRL file to the device of the communication partner.    - Install the root certificate on the device of the communication partner in the folder containing the trusted root certificate authorities.      Follow the procedure described in the user help of the respective device.      If the communication partner is a Unified PC, use SIMATIC Runtime Manager for this.       If the communication partner is a Unified Panel, use "Control Panel > Security > Certificates". |  |
+| 1. Start Certificate Manager on the certificate authority device. 2. If the device for which you want to create the general certificate is not yet part of the CA infrastructure, add it. 3. Right-click the device and select "Add Certificate &gt; General ...". 4. Enter the properties of the certificate in the "New certificate" dialog.    The following applies:    - You can use a template. To do this, select the "Use template" option and select the template from the list next to it.        | Symbol | Meaning |      | --- | --- |      | **Note**  Only one template is available in the current version. Alternatively, you can duplicate a general certificate that has already been added and change the desired properties on the duplicate. |  |    - "Security" tab, "Key usage" and "Enhanced key usage" fields: To add, delete or edit a usage, right-click in the field and select the desired command. 5. Set up the installation of the general certificate on the device. Follow these steps:    - Right-click on the general certificate and select "Export certificate ...".      The "Export certificate" dialog opens.    - Select the "Export with private key" option.    - To protect the usage of the private key, assign a password.         | Symbol | Meaning |      | --- | --- |      | **Note**  To be able to use the private key, the target application must also provide this password. |  |    - Specify the format for the export. Select one of the following options for this:         | Symbol | Meaning |      | --- | --- |      | "Export public certificate in DER format" | Public key and private key are exported to a common PFX file. |      | "Export public certificate in PEM format" | Public key and private key are each exported to a separate PEM file. |    - Click "Export".    - Select the storage location and confirm your entry. 6. Transfer the file or files to the device. 7. Install the private key and public key of the certificate in the own certificates of the device. Follow the procedure described in the user help of the respective device or the application.      | Symbol | Meaning |    | --- | --- |    | **Note**  If the device is a Unified Panel, install them in the certificate store of the Panel. Follow the procedure described below. If the device is a Unified PC, the certificate store depends on the implementation of the application. Use of the following certificate stores is possible: - Windows certificate store   Double-click the export file(s). Manually install the file(s) in the appropriate folder of the Windows certificate store. - WinCC Unified certificate store, other file-based certificate stores   Manually copy the file(s) in a file explorer to the appropriate folder of the certificate store.Installation with Certificate Manager is not possible. |  | 8. If necessary, establish the trust relationship between the device and its communication partner.       | Symbol | Meaning |    | --- | --- |    | **Note**  In the following cases, the communication partner already trusts the root certificate and, thus, also the general certificate of the device: - The communication partner is an HMI device. The HMI device has the same certificate authority as the device. The certificates of the HMI device are installed on the HMI device. - The device and its communication partner have different certificate authorities. The communication partner already communicates with another device that has the same Unified certificate authority as the device with the general certificate. |  |     Follow these steps:    - Export the root certificate and its CRL file on the certificate authority device in Certificate Manager.    - Transfer the file containing the root certificate and the CRL file to the device of the communication partner.    - Install the root certificate on the device of the communication partner in the folder containing the trusted root certificate authorities.      Follow the procedure described in the user help of the respective device.      If the communication partner is a Unified PC, use SIMATIC Runtime Manager for this.       If the communication partner is a Unified Panel, use "Control Panel &gt; Security &gt; Certificates". |  |
 
 #### Installing the general certificate of a Unified Panel on the Panel
 
 1. Transfer the file(s) with the public key and private key of the general certificate to an external storage medium.
 2. Connect the storage medium to the Panel.
-3. In the Control Panel, select "Security > Certificates".
+3. In the Control Panel, select "Security &gt; Certificates".
 4. Click "Import".
 
    The "Import certificates" dialog opens.
@@ -6586,7 +6586,7 @@ You can customize the display of the interface to suit your needs. See also [Cus
 
 | Menu | Description |
 | --- | --- |
-| "File > Exit" | Closes Certificate Manager. |
+| "File &gt; Exit" | Closes Certificate Manager. |
 | "View" | Configure which Certificate Manager interface elements you see.  You can open or close the following interface elements:  - "Output" area - "Details" area - "CA configuration" tab - "Installed certificates" tab |
 | "Help" | "Certificate Manager Help"  Opens the user help in a browser. |
 | "Info Certificate Manager"  Opens a dialog with information about the installed software version. |  |

@@ -43,9 +43,9 @@ Note the following when using the S_SEND, S_RCV, S_USSI or S_MODB instructions o
   Data type of the parameter DB_NO: DB_ANY.  
   Only data from non-optimized memory areas can be exchanged. Keep in mind during parameter assignment of the DB_NO parameter and the data block with the Modbus data conversion table.
 
-### Instructions of the "Communication processor > ET200S serial interface" library
+### Instructions of the "Communication processor &gt; ET200S serial interface" library
 
-Note the following when using the instructions of the ET 200S 1SI distributed I/O on an S7‑1500 (library: "Communication processor > ET200S serial interface"):
+Note the following when using the instructions of the ET 200S 1SI distributed I/O on an S7‑1500 (library: "Communication processor &gt; ET200S serial interface"):
 
 - The hardware identifier of the communication module must be configured at the LADDR parameter.
 - The send buffer and the receive buffer must both be located outside the optimized memory area.

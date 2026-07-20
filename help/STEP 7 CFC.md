@@ -27,12 +27,12 @@ In order to protect plants, systems, machines and networks against cyber threats
 Customers are responsible for preventing unauthorized access to their plants, systems, machines and networks. Such systems, machines and components should only be connected to an enterprise network or the internet if and to the extent such a connection is necessary and only when appropriate security measures (e.g. firewalls and/or network segmentation) are in place.
 
 For additional information on industrial cybersecurity measures that may be implemented, please visit   
-<https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html>.
+[https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-cybersecurity.html).
 
 Siemens’ products and solutions undergo continuous development to make them more secure. Siemens strongly recommends that product updates are applied as soon as they are available and that the latest product versions are used. Use of product versions that are no longer supported, and failure to apply the latest updates may increase customer’s exposure to cyber threats.
 
 To stay informed about product updates, subscribe to the Siemens Industrial Cybersecurity RSS Feed under   
-<https://new.siemens.com/global/en/products/services/cert.html>.
+[https://new.siemens.com/global/en/products/services/cert.html](https://new.siemens.com/global/en/products/services/cert.html).
 
 ## Scope of delivery for SIMATIC STEP 7 CFC
 
@@ -55,7 +55,7 @@ Overview of important performance improvements:
 
 ### CFC tag interconnections
 
-The new list of CFC tag interconnections in the "Chart sequence & extras" editor supports you in searching for interconnected operands.
+The new list of CFC tag interconnections in the "Chart sequence &amp; extras" editor supports you in searching for interconnected operands.
 
 As in the cross-reference list, you can filter and sort the list of interconnected tags and global data blocks.
 
@@ -199,7 +199,7 @@ You can find information on the instance DBs in the "Chart sequence and extras" 
 
 More information in the TIA Portal Information System:
 
-- "Configuring technologically > Configuring CFC charts > Working with CFC charts for S7 > "Chart sequence & extras" editor for S7"
+- "Configuring technologically &gt; Configuring CFC charts &gt; Working with CFC charts for S7 &gt; "Chart sequence &amp; extras" editor for S7"
 
 **Trial license**
 
@@ -226,7 +226,7 @@ However, this Trial License is valid for a limited period only and expires after
 
 **TIA Portal Information System**
 
-- "Installation > [Licensing](Installation.md#notes-on-licenses)"
+- "Installation &gt; [Licensing](Installation.md#notes-on-licenses)"
 
 **Automation License Manager (ALM)**
 
@@ -353,7 +353,7 @@ The following data types of the S7-1500 are supported to a limited extent:
 
   More information in the TIA Portal Information System:
 
-  "Configuring CFC charts > Data types in CFC > Compound data types > [ARRAY](Configuring%20CFC%20charts.md#array)".
+  "Configuring CFC charts &gt; Data types in CFC &gt; Compound data types &gt; [ARRAY](Configuring%20CFC%20charts.md#array)".
 - VARIANT
 
   No blocks with output parameters of the VARIANT data type
@@ -390,7 +390,7 @@ To download CFC changes, switch the roles of the primary CPU and backup CPU.
 
 More information in the TIA Portal information system:
 
-- "Editing devices and networks > Configuring devices and networks > Creating configurations > Configuring automation systems > Principle of operation of S7-1500R/H CPUs > Loading an S7-1500R/H CPU > Downloading project data to the backup CPU"
+- "Editing devices and networks &gt; Configuring devices and networks &gt; Creating configurations &gt; Configuring automation systems &gt; Principle of operation of S7-1500R/H CPUs &gt; Loading an S7-1500R/H CPU &gt; Downloading project data to the backup CPU"
 
 ### Full compilation: Reinitialization of runtime values
 
@@ -428,7 +428,7 @@ The text size in the input box is not affected by the zoom factor. The larger in
 
 Alternatively, disable tooltips in the TIA Portal settings:
 
-- "General > General settings > Tooltips: Show truncated texts completely"
+- "General &gt; General settings &gt; Tooltips: Show truncated texts completely"
 
 ---
 

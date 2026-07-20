@@ -50,7 +50,7 @@ WinCC DataMonitor consists of a server component and a client component. The Dat
 - WebCenter
 
   Central information portal for access to WinCC data via user-specific views, clearly structured WebCenter pages through user groups with individual user rights for reading, writing and creating WebCenter pages.
-- Trends & Alarms
+- Trends &amp; Alarms
 
   Serves to display logged process values and alarms. The data is displayed in tables and diagrams on predefined WebCenter pages.
 
@@ -178,7 +178,7 @@ Up to 15 of the following Web objects can be combined into one screen view:
 
 #### Overview
 
-"Trends & Alarms" are used to display and analyze logged process values and messages in trends and tables and for evaluation with statistics functions.
+"Trends &amp; Alarms" are used to display and analyze logged process values and messages in trends and tables and for evaluation with statistics functions.
 
 Predefined Web pages contain the following:
 
@@ -188,7 +188,7 @@ Predefined Web pages contain the following:
 - [Alarm hit list](#displaying-the-hit-list-of-messages-rt-professional).
 - [Display of messages in a table](#displaying-messages-in-the-alarm-table-rt-professional).
 
-The functions of "Trends & Alarms" are configured with web parts. The same Web parts are used here as are used in the [WebCenter pages](#webcenter-rt-professional).
+The functions of "Trends &amp; Alarms" are configured with web parts. The same Web parts are used here as are used in the [WebCenter pages](#webcenter-rt-professional).
 
 ### Excel workbooks (RT Professional)
 
@@ -204,7 +204,7 @@ The created Excel workbooks can also be configured as templates for the function
 
 > **Note**
 >
-> You need the DataMonitor client to use the "Excel Workbooks" function. The installation file can be found on the DataMonitor start page under "Reports > Download area", on the installation medium, or at the download installations.
+> You need the DataMonitor client to use the "Excel Workbooks" function. The installation file can be found on the DataMonitor start page under "Reports &gt; Download area", on the installation medium, or at the download installations.
 
 > **Note**
 >
@@ -303,7 +303,7 @@ You must adjust settings in Internet Explorer before you work with the DataMonit
 1. Open the Internet Explorer.
 2. Open the "Internet Options" dialog under:
 
-   "Tools > Internet Options"
+   "Tools &gt; Internet Options"
 3. Select the "Advanced" tab.
 4. Deactivate the following option in the "Security" area:
 
@@ -432,18 +432,18 @@ Activate the following settings:
   - IIS management scripts and tools
   - Compatibility with IIS Metabasis and IIS 6 configuration
   - Compatibility with WMI for IIS 6
-- WWW services > General HTTP features:
+- WWW services &gt; General HTTP features:
 
   - Standard document
   - Static content
-- WWW services > Application development features:
+- WWW services &gt; Application development features:
 
   - .NET extension capability 3.5 and 4.5
   - ASP
   - ASP.NET 3.5 and 4.5
   - ISAPI extensions
   - ISAPI filters
-- WWW services > Security:
+- WWW services &gt; Security:
 
   - Requirement filtering
   - Standard authentication
@@ -472,7 +472,7 @@ Open the Control Panel. Click the "Programs and Features" entry.
 
 ##### Alternative procedure
 
-You can also use the command line "Start > Run > cmd" to install the IIS components located on the installation data carrier:
+You can also use the command line "Start &gt; Run &gt; cmd" to install the IIS components located on the installation data carrier:
 
 pkgmgr.exe /iu:IIS-WebServerRole;IIS-WebServer;IIS-CommonHttpFeatures;IIS-StaticContent;IIS-DefaultDocument;IIS-HttpErrors;IIS-ASPNET;IIS-NetFxExtensibility;IIS-ASP;IIS-ISAPIExtensions;IIS-ISAPIFilter;IIS-BasicAuthentication;IIS-WindowsAuthentication;IIS-ManagementConsole;IIS-ManagementService;IIS-IIS6ManagementCompatibility;IIS-Metabase;IIS-WMICompatibility;IIS-ManagementScriptingTools
 
@@ -548,7 +548,7 @@ To configure the security settings in Internet Explorer, follow these steps:
 
    ![Procedure](images/2992464267_DV_resource.Stream@PNG-en-US.png)
 4. Select the "Enable" option for "Script ActiveX controls marked safe for scripting" and "Download signed ActiveX controls".
-5. Select the "Enable" option under "Scripting > Active Scripting".
+5. Select the "Enable" option under "Scripting &gt; Active Scripting".
 6. Click the "OK" button. Carry out the modifications in the subsequent dialog.
 7. Select the "Trusted Sites" icon. Click the "Sites" button. The "Trusted sites" dialog opens.
 8. Enter the address of the web server in the field "Add this web site to the zone". Possible formats and placeholders include "*://157.54.100 - 200", "ftp://157.54.23.41", or "http://*.microsoft.com". Deactivate the "Require server verification (https:) for all sites in this zone" check box. Click "Add". Confirm your entries with "OK".
@@ -694,16 +694,16 @@ The settings given predefined in the table are used under the following conditio
 
 | Information | Parameter |
 | --- | --- |
-| Target directory for the DataMonitor client | INSTALLDIR=" <syspath1>\Siemens\WinCC" |
-| Target directory for common components | COMMONDIR=" <syspath2>\Siemens " |
+| Target directory for the DataMonitor client | INSTALLDIR=" &lt;syspath1&gt;\Siemens\WinCC" |
+| Target directory for common components | COMMONDIR=" &lt;syspath2&gt;\Siemens " |
 | User information / user name | USER |
 | User information / organization | COMPANYNAME |
 
-The "<syspath?>" parameters result from the settings in the registry under the key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion":
+The "&lt;syspath?&gt;" parameters result from the settings in the registry under the key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion":
 
-- "<syspath1>" corresponds to the key "ProgramFilesDir" e.g. "C:\\Program Files"
+- "&lt;syspath1&gt;" corresponds to the key "ProgramFilesDir" e.g. "C:\\Program Files"
 
-- "<syspath2>" corresponds to the key "CommonFilesDir", e.g. "C:\\Program Files\\Common Files"
+- "&lt;syspath2&gt;" corresponds to the key "CommonFilesDir", e.g. "C:\\Program Files\\Common Files"
 
 ##### Example of an "options.ini" configuration file
 
@@ -773,7 +773,7 @@ The following configuration steps are required to set up a DataMonitor system.
    - Configuring WinCC screens for Web access
    - For WinCCViewerRT and the "Excel Workbooks" function, define the users and access rights in the "User administration" dialog.
    - Configure Runtime settings
-2. Transfer your WinCC project to the server PC. If the configuration PC and the WebNavigator server are interconnected, transfer the WinCC project using the command "Download to device > Software (all)".
+2. Transfer your WinCC project to the server PC. If the configuration PC and the WebNavigator server are interconnected, transfer the WinCC project using the command "Download to device &gt; Software (all)".
 3. Configure the DataMonitor Server.
 
    - Setting up the Web folder
@@ -803,7 +803,7 @@ This section contains information on the following topics:
 ##### Configuring individual WinCC screens for Web access
 
 1. Double-click the desired screen in the project tree. The screen is opened and the screen properties are shown in the Inspector window.
-2. In the Inspector window, click "Properties > Properties > Web access".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Web access".
 3. Activate "Web access".
 
 or
@@ -853,10 +853,10 @@ The following operating systems support gadgets:
 To configure WinCC screens as a gadget, proceed as follows:
 
 1. Double-click the desired screen in the project tree. The screen is opened and the screen properties are shown in the Inspector window.
-2. In the Inspector window, click "Properties > Properties > Web access".
+2. In the Inspector window, click "Properties &gt; Properties &gt; Web access".
 3. Activate "Preview" and "Web access".
 4. Save the WinCC project.
-5. Select the "Compile > Software" command in the shortcut menu of the HMI device.
+5. Select the "Compile &gt; Software" command in the shortcut menu of the HMI device.
 
 ###### Result
 
@@ -909,7 +909,7 @@ You can configure the behavior in runtime in the "Runtime settings" editor.
 
 ##### Procedure
 
-1. Open the "Runtime Settings > Web Navigator" editor.
+1. Open the "Runtime Settings &gt; Web Navigator" editor.
 
    ![Procedure](images/96374677771_DV_resource.Stream@PNG-en-US.png)
 2. To use the "WinCC Classic" design, activate "Use "WinCC-classic" design".
@@ -970,7 +970,7 @@ A different start screen and the language can be set for each user group. This a
 8. Click the ![Procedure](images/70589889163_DV_resource.Stream@PNG-de-DE.png) button in the "Language" column. A dialog box for selecting the language opens.
 9. Select the language.
 
-As an alternative, select the user group in the work area; the properties of the user group are then displayed in the Inspector window. In the Inspector window, select "Properties > Properties > Web options". Select the start screen and the language.
+As an alternative, select the user group in the work area; the properties of the user group are then displayed in the Inspector window. In the Inspector window, select "Properties &gt; Properties &gt; Web options". Select the start screen and the language.
 
 > **Note**
 >
@@ -1002,7 +1002,7 @@ Create a corresponding user in user administration to enable the use of the "Win
 7. Select "Spanish" as the Runtime language.
 8. Activate the "DataMonitor operators" user group in the "Groups" table.
 
-As an alternative, select the user in the work area; the properties of the user are then displayed in the Inspector window. In the Inspector window, select "Properties > Properties > Web options". Select the start screen and the language.
+As an alternative, select the user in the work area; the properties of the user are then displayed in the Inspector window. In the Inspector window, select "Properties &gt; Properties &gt; Web options". Select the start screen and the language.
 
 > **Note**
 >
@@ -1018,7 +1018,7 @@ As an alternative, select the user in the work area; the properties of the user 
 
 #### Online transfer
 
-Transfer the WinCC project using the command "Load to device > Software (all)". The project is compiled prior to the download. The screens are adapted for access via Intranet/Internet during compilation.
+Transfer the WinCC project using the command "Load to device &gt; Software (all)". The project is compiled prior to the download. The screens are adapted for access via Intranet/Internet during compilation.
 
 During the download to the server PC, the configured WinCC project is transferred and the screens are published on the DataMonitor Server. For more information, refer to "Compiling and loading".
 
@@ -1041,7 +1041,7 @@ This section contains information on the following topics:
 
 Set up the DataMonitor Web page as follows:
 
-1. In the Start menu select the command "Start > All Programs > Siemens Automation > Option and Tools > HMI Tools" > WinCC Web Configurator". This starts the Web Configurator.
+1. In the Start menu select the command "Start &gt; All Programs &gt; Siemens Automation &gt; Option and Tools &gt; HMI Tools" &gt; WinCC Web Configurator". This starts the Web Configurator.
 2. The Web Configurator detects whether a configuration already exists.
 
    - No configuration available: Select "Create a new standard website (stand-alone)" and click "Next".
@@ -1147,14 +1147,14 @@ Proceed as follows to create a user under Windows:
 2. Double-click "Computer Management" in the "Administration" dialog.
 
    The "Computer Management" dialog opens.
-3. Navigate to the directory "System > Local Users and Groups / Groups". Select the "New User..." command in the shortcut menu.
+3. Navigate to the directory "System &gt; Local Users and Groups / Groups". Select the "New User..." command in the shortcut menu.
 4. Enter the name "DM_Demo" in the "User Name" field in the "New User" dialog. Enter the description "User for DataMonitor" in the "Complete Name" field. Type the desired password into the "Password" field and then repeat it in the "Repeat password" field. Create the user with "Create". Close the "New user" dialog.
 5. In the right part of the table window, click the newly created user. Open the shortcut menu and select the command "Properties". Go to the "Member of" tab. Click "Add".
-6. Click the "Advanced >" button in the dialog "Select Groups" and then "Find now".
+6. Click the "Advanced &gt;" button in the dialog "Select Groups" and then "Find now".
 7. In the dialog below, select the two entries "SIMATIC Report Administrators" and "SIMATIC HMI VIEWER" from the list. To close the dialog, click "OK" twice.
 8. The groups "SIMATIC Report Administrators" and "SIMATIC HMI VIEWER" are added to the membership list in the user properties. Click "OK."
-9. Close the dialog "Computer Management" with the menu command "File > Exit".
-10. Close the dialog "Management" with the menu command "File > Close".
+9. Close the dialog "Computer Management" with the menu command "File &gt; Exit".
+10. Close the dialog "Management" with the menu command "File &gt; Close".
 
 ###### Result
 
@@ -1180,7 +1180,7 @@ To have the full functionality available on the DataMonitor client, adapt the se
 
 To configure the security settings in Internet Explorer, proceed as follows:
 
-1. Click "Tools" > "Internet Options" in the Internet Explorer. The "Internet Options" dialog opens.
+1. Click "Tools" &gt; "Internet Options" in the Internet Explorer. The "Internet Options" dialog opens.
 2. Click the "Security" tab.
 3. Select the "Trusted Sites" icon and click the "Sites..." button. The "Trusted Sites" dialog opens.
 4. Enter the address of the DataMonitor Server in the "Add this Website to the zone" field.
@@ -1229,7 +1229,7 @@ You start the DataMonitor client on a standalone PC or on a DataMonitor server.
 To access the Web page of the DataMonitor Server, proceed as follows:
 
 1. Open the MS Internet Explorer on the DataMonitor client.
-2. Enter the name of the DataMonitor server in the format "http://<servername>" in the URL. Confirm the entry with "Enter".
+2. Enter the name of the DataMonitor server in the format "http://&lt;servername&gt;" in the URL. Confirm the entry with "Enter".
 3. The logon dialog opens. Enter the name of a Windows user in the "User name" field. Enter the respective password and confirm with "OK".
 
    The start page with the DataMonitor functions will be displayed.
@@ -1312,14 +1312,14 @@ This section contains information on the following topics:
 
 Set up WinCCViewerRT as follows:
 
-1. In the Start menu, select "Start > All Programs > Siemens Automation > Option and Tools > HMI Tools" > WinCCViewerRT".
+1. In the Start menu, select "Start &gt; All Programs &gt; Siemens Automation &gt; Option and Tools &gt; HMI Tools" &gt; WinCCViewerRT".
 2. Enter the logon data in the "General" tab:
 
    ![Procedure](images/25756275595_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/25756275595_DV_resource.Stream@PNG-en-US.png)
 
-   - Server address: http://<server name>, or http://<IP address>
+   - Server address: http://&lt;server name&gt;, or http://&lt;IP address&gt;
    - User name and password:
 3. In the "Parameters" tab, specify the Runtime language and whether to disable keystrokes that the operator uses to change to other programs.
 4. Define the WinCC Runtime Professional properties in the "Graphics Runtime" tab:
@@ -1332,17 +1332,17 @@ Set up WinCCViewerRT as follows:
 
    - Automatic logout
    - Enable screen keyboard.
-   - Use <Ctrl+Alt+Del> to switch to the Task Manager and to the operating system. This setting is only valid for the on-screen keyboard.
+   - Use &lt;Ctrl+Alt+Del&gt; to switch to the Task Manager and to the operating system. This setting is only valid for the on-screen keyboard.
    - Open the "WinCCRTViewer" dialog by means of keystroke.
 
-     You can change the default keystroke <Ctrl+Alt+P>.
+     You can change the default keystroke &lt;Ctrl+Alt+P&gt;.
 6. Close the dialog with "OK".
 
 #### Result
 
 The WinCCViewerRT is configured. When the dialog is closed, the connection to the DataMonitor server is established. The settings are saved to the configuration file "WinCCViewerRT.xml". The settings in the configuration file are used at the next start of WinCCViewerRT.
 
-The configuration file is stored in the directory "C:\Users\<User name>\Appdata\LocalLow\Siemens\SIMATIC.WinCC\WebNavigator\Client". Under <User name>, enter the name of the user logged-on when the file is created. This allows different configurations to be used, depending on the logged on user. WinCCViewerRT applies the interface language from WinCC.
+The configuration file is stored in the directory "C:\Users\&lt;User name&gt;\Appdata\LocalLow\Siemens\SIMATIC.WinCC\WebNavigator\Client". Under &lt;User name&gt;, enter the name of the user logged-on when the file is created. This allows different configurations to be used, depending on the logged on user. WinCCViewerRT applies the interface language from WinCC.
 
 **Renaming or removing WinCCViewerRT.xml**
 
@@ -1365,12 +1365,12 @@ When you rename or remove the file WinCCViewerRT.xml, the configuration dialog o
 
 To view screens, proceed as follows:
 
-1. In the Start menu, select "Start > All Programs > Siemens Automation > Option and Tools > HMI Tools > WinCCViewerRT".
+1. In the Start menu, select "Start &gt; All Programs &gt; Siemens Automation &gt; Option and Tools &gt; HMI Tools &gt; WinCCViewerRT".
 2. Log on to the WebNavigator server:
 
    - If the user and password are configured in the "WinCCViewerRT" dialog, no logon dialog displayed.
    - If no user and password was configured in the "WinCCViewerRT" dialog, the logon dialog displayed. Enter the user name and password of the WinCC user. Click "OK".
-3. Press the <Ctrl+Alt+P> keystroke to change the user. The "WinCCViewerRT" dialog opens.
+3. Press the &lt;Ctrl+Alt+P&gt; keystroke to change the user. The "WinCCViewerRT" dialog opens.
 
    Enter the user name and password in the "General" tab.
 
@@ -1477,7 +1477,7 @@ You store WebCenter pages in directories. The following directories exist as def
 
 ##### Procedure
 
-1. Click in the start page "Webcenter > Administration".
+1. Click in the start page "Webcenter &gt; Administration".
 2. Click the "Directory administration" tab.
 
    ![Procedure](images/23154831243_DV_resource.Stream@PNG-en-US.png)
@@ -1508,7 +1508,7 @@ The following access authorization is possible:
 
 ##### Procedure
 
-1. Click in the start page "Webcenter > Administration".
+1. Click in the start page "Webcenter &gt; Administration".
 2. Click the "User administration" tab.
 
    ![Procedure](images/60953194379_DV_resource.Stream@PNG-en-US.png)
@@ -1543,7 +1543,7 @@ The logged on user is a member of the Windows user group "SIMATIC Report Adminis
 
 ###### Procedure
 
-1. Click in the start page "Webcenter > Administration".
+1. Click in the start page "Webcenter &gt; Administration".
 2. Click the "Connection administration" tab.
 
    ![Procedure](images/23145031179_DV_resource.Stream@PNG-en-US.png)
@@ -1622,7 +1622,7 @@ You can connect all or individual log backup files of a directory to the SQL ser
 
 Proceed as follows to create a symbolic directory:
 
-1. Click in the start page "Webcenter > Administration".
+1. Click in the start page "Webcenter &gt; Administration".
 2. Click the "Archive administration" tab.
 
    ![Procedure](images/23162330123_DV_resource.Stream@PNG-en-US.png)
@@ -1669,7 +1669,7 @@ To remove a directory containing logs from the list of symbolic names, disconnec
 
 To connect or disconnect individual log backups, proceed as follows:
 
-1. Click in the start page "Webcenter > Administration".
+1. Click in the start page "Webcenter &gt; Administration".
 2. Click the "Connect/disconnect logs" tab.
 
    ![Procedure](images/23163029515_DV_resource.Stream@PNG-en-US.png)
@@ -1809,7 +1809,7 @@ To remove static process screens, select the check box at the relevant entry in 
 
 Use a filter to find screen names, or to limit the view to specific screen names.
 
-At the "Filter" entry, click ![Finding screen names or limiting the view](images/23239916043_DV_resource.Stream@PNG-de-DE.png) to show the filter above the table. Enter the search term in the text field and then click <Enter>.
+At the "Filter" entry, click ![Finding screen names or limiting the view](images/23239916043_DV_resource.Stream@PNG-de-DE.png) to show the filter above the table. Enter the search term in the text field and then click &lt;Enter&gt;.
 
 To hide the filter, click ![Finding screen names or limiting the view](images/23239908619_DV_resource.Stream@PNG-de-DE.png).
 
@@ -1834,7 +1834,7 @@ You require a layout template to create a WebCenter page. Many prefabricated lay
 
 Proceed as follows to create your own layout template:
 
-1. Click "WebCenter > Configuration" in the start page.
+1. Click "WebCenter &gt; Configuration" in the start page.
 2. Click the "Create layout" tab.
 
    ![Procedure](images/23195043211_DV_resource.Stream@PNG-en-US.png)
@@ -1878,7 +1878,7 @@ The layout template "mylayout_23" is created. You can use the layout template as
 
 #### Procedure
 
-1. Click "WebCenter > Configuration" in the start page.
+1. Click "WebCenter &gt; Configuration" in the start page.
 2. Click the "Create Page" tab.
 3. Click the desired layout template. The file name is displayed in the "Layout file" field.
 4. Enter a name in the "WebCenter page" field, for example "My_Webcenter".
@@ -1911,7 +1911,7 @@ You combine Web parts to create the contents of the WebCenter pages.
 
 Proceed as follows to insert Web parts in the WebCenter page:
 
-1. Click "WebCenter > Pages" in the start page.
+1. Click "WebCenter &gt; Pages" in the start page.
 2. Click the "myPart" tab.
 
    ![Procedure](images/23200556427_DV_resource.Stream@PNG-en-US.png)
@@ -1997,7 +1997,7 @@ The following operating options are available:
 
 #### Deleting layout templates
 
-1. Click "WebCenter > Configuration" in the start page.
+1. Click "WebCenter &gt; Configuration" in the start page.
 2. Click the "Delete layout" tab.
 
    ![Deleting layout templates](images/25184860939_DV_resource.Stream@PNG-en-US.png)
@@ -2017,7 +2017,7 @@ Existing WebCenter pages which use this layout template are retained. You cannot
 
 #### Deleting a WebCenter page
 
-1. Click "WebCenter > Configuration" in the start page.
+1. Click "WebCenter &gt; Configuration" in the start page.
 2. Click the "Delete page" tab.
 3. Activate the respective check box to mark the pages to be deleted.
 4. Click "Delete".
@@ -2040,7 +2040,7 @@ Existing WebCenter pages which use this layout template are retained. You cannot
 
 #### Importing a WebCenter page
 
-1. Click "WebCenter > Configuration" in the start page.
+1. Click "WebCenter &gt; Configuration" in the start page.
 2. Click the "Import page" tab.
 3. Enter a file name or click "Browse".
 4. To load the file, click "Upload".
@@ -2074,7 +2074,7 @@ This section contains information on the following topics:
 
 Proceed as follows to display process values in a table:
 
-1. Click "Trends & Alarms " in the start page. Click the "Process value table" tab. The Web part "Process Value Table" is displayed.
+1. Click "Trends &amp; Alarms " in the start page. Click the "Process value table" tab. The Web part "Process Value Table" is displayed.
 2. Click ![Procedure](images/23239774987_DV_resource.Stream@PNG-de-DE.png). The configuration dialog of the Web part opens.
 3. Change the title in the "Header" field. Enter a brief tip in the field "Tooltip".
 4. Select the desired connection in the "Connection" field. The logging tags available via this connection will be displayed. You can limit the number of tags using the "Archive selection" and "Tag filter" fields.
@@ -2110,7 +2110,7 @@ Use the arrow keys to skip backward and forward with multi-page tables. You can 
 
 Proceed as follows to display process values in a trend view:
 
-1. Click "Trends & Alarms " in the start page. Click the "Trend (process values)" tab. The Web part "Trend (process values)" is displayed.
+1. Click "Trends &amp; Alarms " in the start page. Click the "Trend (process values)" tab. The Web part "Trend (process values)" is displayed.
 2. Click ![Procedure](images/23239774987_DV_resource.Stream@PNG-de-DE.png). The configuration dialog of the Web part opens.
 3. Change the title in the "Header" field. Enter a brief tip in the field "Tooltip".
 4. Select the desired connection in the "Connection" field. The logging tags available via this connection will be displayed. You can limit the number of tags using the "Archive selection" and "Tag filter" fields.
@@ -2153,7 +2153,7 @@ Click the ![Result](images/23239774987_DV_resource.Stream@PNG-de-DE.png) symbol 
 
 To display alarms in the alarm table, proceed as follows:
 
-1. Click "Trends & Alarms " in the start page. Click the "Alarm table" tab. The Web part "Alarm Table" is displayed.
+1. Click "Trends &amp; Alarms " in the start page. Click the "Alarm table" tab. The Web part "Alarm Table" is displayed.
 
    Click ![Procedure](images/23239774987_DV_resource.Stream@PNG-de-DE.png). The configuration dialog of the Web part opens.
 2. Change the title in the "Header" field. Enter a brief tip in the field "Tooltip".
@@ -2258,7 +2258,7 @@ You can select the alarm log columns while displaying alarms in "Trends and Alar
 
 To display alarms in a hit list, proceed as follows:
 
-1. Click "Trends & Alarms " in the start page. Click the "Alarm hit list " tab. The web part "Hit list of the alarms" is displayed.
+1. Click "Trends &amp; Alarms " in the start page. Click the "Alarm hit list " tab. The web part "Hit list of the alarms" is displayed.
 
    Click ![Procedure](images/23239774987_DV_resource.Stream@PNG-de-DE.png). The configuration dialog of the Web part opens.
 2. Change the title in the "Header" field. Enter a brief tip in the field "Tooltip".
@@ -2305,7 +2305,7 @@ With the icon ![Result](images/23239782411_DV_resource.Stream@PNG-de-DE.png), th
 
 Proceed as follows to display statistics functions for process values:
 
-1. Click "Trends & Alarms " in the start page. Click the "Statistics functions for process values" tab. The Web part "Statistics functions for process values" is displayed.
+1. Click "Trends &amp; Alarms " in the start page. Click the "Statistics functions for process values" tab. The Web part "Statistics functions for process values" is displayed.
 2. Click ![Procedure](images/23239774987_DV_resource.Stream@PNG-de-DE.png). The configuration dialog of the Web part opens.
 3. Change the title in the "Header" field. Enter a brief tip in the field "Tooltip".
 4. Select the desired connection in the "Connection" field. The logging tags available via this connection will be displayed. You can limit the number of tags using the "Archive selection" and "Tag filter" fields.
@@ -2379,7 +2379,7 @@ Import this data from a local WinCC project for configuration in Excel Workbook 
 >
 > Due to safety settings, the automatic connection of an Excel workbook with the server does not work in Excel.
 >
-> To enable automatic connection, disable the "Enable protected view for files originating from the internet" and "Enable Protected View for files located in potential unsafe locations" settings in Excel under "Files > Options > Trust Center > ProtectedView".
+> To enable automatic connection, disable the "Enable protected view for files originating from the internet" and "Enable Protected View for files located in potential unsafe locations" settings in Excel under "Files &gt; Options &gt; Trust Center &gt; ProtectedView".
 
 ##### Procedure
 
@@ -2389,7 +2389,7 @@ To import data from a WinCC project, proceed as follows on the configuration PC:
 2. Activate the option "Establish connection with WinCC server".
 3. The "WinCC Server" field is shown. Enter the name of the server PC and then click "Connect". The log in dialog is displayed.
 4. Enter the name and password of a WinCC user.
-5. Click "Next >". The "Add / delete tags" dialog opens.
+5. Click "Next &gt;". The "Add / delete tags" dialog opens.
 
 ##### Result
 
@@ -2415,17 +2415,17 @@ You can create the Excel workbook on a PC if, for example, Excel is not installe
 
 ##### Creating an XML file on the server PC
 
-1. In the Start menu, select the command "Start > All Programs > Siemens Automation > Option and Tools > HMI Tools > WinCC DataMonitor Configurator Export".
+1. In the Start menu, select the command "Start &gt; All Programs &gt; Siemens Automation &gt; Option and Tools &gt; HMI Tools &gt; WinCC DataMonitor Configurator Export".
 
-   The function creates an XML file and stores it in subdirectory "Web Navigator\Reports" of the current project. The file name is automatically generated using the format "<projectname>.XML".
+   The function creates an XML file and stores it in subdirectory "Web Navigator\Reports" of the current project. The file name is automatically generated using the format "&lt;projectname&gt;.XML".
 2. If no Excel installation exists on the server PC, transfer the XML file to another PC on which MS Excel and the Excel Workbook Wizard are installed.
 
 ##### Configuring data access using an XML file
 
 1. Open an empty Excel workbook. Select the "Excel Workbook Wizard..." command in the "DataMonitor" menu.
-2. Activate the option "Load configuration data from file". Click "Next >".
+2. Activate the option "Load configuration data from file". Click "Next &gt;".
 3. Navigate to the required XML file.
-4. Click "Next >". The "Add / delete tags" dialog opens.
+4. Click "Next &gt;". The "Add / delete tags" dialog opens.
 
 ##### Result
 
@@ -2460,7 +2460,7 @@ Proceed as follows to display tag values in Excel:
 9. To apply the set update cycle to all tags, select "Save as default".
 
    Settings in the areas "Display in sheet" and "Additional Data" are not valid for all tags.
-10. Confirm your entries. Click the "Next >" button in the dialog "Add tag". The dialog "[Add/delete logging tags](#configuring-the-display-of-logging-tags-rt-professional)" is opened.
+10. Confirm your entries. Click the "Next &gt;" button in the dialog "Add tag". The dialog "[Add/delete logging tags](#configuring-the-display-of-logging-tags-rt-professional)" is opened.
 
 ##### Result
 
@@ -2470,14 +2470,14 @@ In the Excel workbook, each table cell is assigned a short text and a comment wh
 
 With tag values, the short text "OV" stands for online tags.
 
-In the comments, the source of the displayed values is shown in the format "WDWx_<number>_<tagname>".   
+In the comments, the source of the displayed values is shown in the format "WDWx_&lt;number&gt;_&lt;tagname&gt;".   
 The value for x means:
 
 - O = Online value
 
   > **Note**
   >
-  > After deleting/moving cells filled with configuration data or deleting/inserting new lines/columns in the Excel worksheet, the Excel Workbook Wizard must be executed again. The configuration data is checked and automatically adapted as a result. Confirm the data displayed simply by using the "Next >" button. Save the workbook and close Excel.
+  > After deleting/moving cells filled with configuration data or deleting/inserting new lines/columns in the Excel worksheet, the Excel Workbook Wizard must be executed again. The configuration data is checked and automatically adapted as a result. Confirm the data displayed simply by using the "Next &gt;" button. Save the workbook and close Excel.
 
 #### Configuring the display of logging tags (RT Professional)
 
@@ -2505,11 +2505,11 @@ Proceed as follows to display logging tags in Excel:
    ![Procedure](images/23229602443_DV_resource.Stream@PNG-en-US.png)
 5. Define properties for display in the table, e.g. the insert sequence, data resolution, display time window.
 6. To save the settings, select "Save as default". The settings in the "Additional data" area are not saved.
-7. Confirm your entries. Click the "Next >" button in the dialog "Add logging tag". The dialog "[Add/remove alarms](#configuring-the-display-of-alarms-rt-professional)" will open.
+7. Confirm your entries. Click the "Next &gt;" button in the dialog "Add logging tag". The dialog "[Add/remove alarms](#configuring-the-display-of-alarms-rt-professional)" will open.
 
 **Note**
 
-If you use the option "Number of data" for Data resolution > User-defined resolution", enter an even value in the input box. Even values ensure proper trend display.
+If you use the option "Number of data" for Data resolution &gt; User-defined resolution", enter an even value in the input box. Even values ensure proper trend display.
 
 ##### Result
 
@@ -2519,14 +2519,14 @@ In the Excel workbook, each table cell is assigned a short text and a comment wh
 
 With tag values, the short text "AV" stands for logging tags.
 
-In the comments, the source of the displayed values is shown in the format "WDWx_<number>_<tagname>".   
+In the comments, the source of the displayed values is shown in the format "WDWx_&lt;number&gt;_&lt;tagname&gt;".   
 The value for x means:
 
 - A = Log value
 
   > **Note**
   >
-  > After deleting/moving cells filled with configuration data or deleting/inserting new lines/columns in the Excel worksheet, the Excel Workbook Wizard must be executed again. The configuration data is checked and automatically adapted as a result. Confirm the data displayed simply by using the "Next >" button. Save the workbook and close Excel.
+  > After deleting/moving cells filled with configuration data or deleting/inserting new lines/columns in the Excel worksheet, the Excel Workbook Wizard must be executed again. The configuration data is checked and automatically adapted as a result. Confirm the data displayed simply by using the "Next &gt;" button. Save the workbook and close Excel.
 
 ---
 
@@ -2561,7 +2561,7 @@ Proceed as follows to display alarms in Excel:
 5. Use the "Maximum number of alarms" option to limit the number of most recent alarms displayed. You can display maximum 1,000 alarms.
 6. Activate the desired attributes in the list. For additional information, refer to "[Alarm Attributes](#alarm-attributes-rt-professional)".
 7. To save the setting, select "Save as default".
-8. Confirm your entries. Click the "Next >" button in the dialog "Add logging tag": The "Description" dialog box will open.
+8. Confirm your entries. Click the "Next &gt;" button in the dialog "Add logging tag": The "Description" dialog box will open.
 
 ##### Result
 
@@ -2569,11 +2569,11 @@ The display of alarms in an Excel sheet is configured.
 
 In the Excel workbook, each table cell is assigned a short text and a comment which was configured for displaying an alarm.
 
-With alarms, the short text "AL" and the comment are shown in the format "WDWL_<number>_<field name>".
+With alarms, the short text "AL" and the comment are shown in the format "WDWL_&lt;number&gt;_&lt;field name&gt;".
 
 > **Note**
 >
-> After deleting/moving cells filled with configuration data or deleting/inserting new lines/columns in the Excel worksheet, the Excel Workbook Wizard must be executed again. The configuration data is checked and automatically adapted as a result. Confirm the data displayed simply by using the "Next >" button. Save the workbook and close Excel.
+> After deleting/moving cells filled with configuration data or deleting/inserting new lines/columns in the Excel worksheet, the Excel Workbook Wizard must be executed again. The configuration data is checked and automatically adapted as a result. Confirm the data displayed simply by using the "Next &gt;" button. Save the workbook and close Excel.
 
 ---
 
@@ -2631,7 +2631,7 @@ The Excel workbook is made available on the DataMonitor Server. If required, the
 
 #### Procedure
 
-1. Click "WebCenter > Configuration" in the start page.
+1. Click "WebCenter &gt; Configuration" in the start page.
 2. Click the "Report tools" tab.
 
    The Excel workbooks that were published in the Excel Workbook Wizard, are shown in an overview.
@@ -2641,7 +2641,7 @@ The Excel workbook is made available on the DataMonitor Server. If required, the
    ![Procedure](images/25134131211_DV_resource.Stream@PNG-en-US.png)
 3. Select a workbook.
 4. Click the Excel workbook symbol in the "Open / Save" column.
-5. Click "Open >" in the next dialog. The Excel workbook opens.
+5. Click "Open &gt;" in the next dialog. The Excel workbook opens.
 6. Select the "Excel Workbook" command in the "DataMonitor" menu.
 7. The name of one of the servers, whose tags are configured in the Excel table, is displayed in the "WinCC Server" field.
 

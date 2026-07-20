@@ -461,11 +461,11 @@ PID_Temp will respond as follows:
 
 | Process value | InputWarning_H | InputWarning_L | ErrorBits |
 | --- | --- | --- | --- |
-| > 98 °C | TRUE | FALSE | 0001h |
-| ≤ 98° C and > 90° C | TRUE | FALSE | 0000h |
+| &gt; 98 °C | TRUE | FALSE | 0001h |
+| ≤ 98° C and &gt; 90° C | TRUE | FALSE | 0000h |
 | ≤ 90° C and ≥ 10° C | FALSE | FALSE | 0000h |
-| < 10° C and ≥ 0° C | FALSE | TRUE | 0000h |
-| < 0° C | FALSE | TRUE | 0001h |
+| &lt; 10° C and ≥ 0° C | FALSE | TRUE | 0000h |
+| &lt; 0° C | FALSE | TRUE | 0001h |
 
 You can configure the response of PID_Temp when the process value high limit or low limit is violated in the output settings.
 
@@ -608,7 +608,7 @@ Derivative delay = derivative action time × derivative delay coefficient
 
 - 0.0: Derivative action is effective for one cycle only and therefore almost not effective.
 - 0.5: This value has proved useful in practice for controlled systems with one dominant time constant.
-- > 1.0: The greater the coefficient, the longer the effect of the derivative action is delayed.
+- &gt; 1.0: The greater the coefficient, the longer the effect of the derivative action is delayed.
 
 ##### Proportional action weighting
 
@@ -809,7 +809,7 @@ If you want to tune the PID parameters for heating and cooling, you can expect a
 
 To perform pretuning, follow these steps:
 
-1. Double-click the "PID_Temp > Commissioning" entry in the project tree.
+1. Double-click the "PID_Temp &gt; Commissioning" entry in the project tree.
 2. Activate the "Monitor all" ![Procedure](images/166014421643_DV_resource.Stream@PNG-de-DE.png) button or start the trend view.
 
    An online connection will be established.
@@ -903,7 +903,7 @@ If PID_Temp exits the fine tuning mode, the tuning offset is reset.
 - Cool.EnableTuning = FALSE
 - If PID_Temp is configured as a heating-and-cooling controller (Config.ActivateCooling = TRUE), the heating output has to be active at the operating point where tuning is to be carried out.
 
-  PidOutputSum > 0.0 (see tuning offset)
+  PidOutputSum &gt; 0.0 (see tuning offset)
 
 #### Requirements for fine tuning cooling
 
@@ -913,7 +913,7 @@ If PID_Temp exits the fine tuning mode, the tuning offset is reset.
 - The PID parameter switching is activated (Config.AdvancedCooling = TRUE).
 - The cooling output has to be active at the operating point where tuning is to be carried out.
 
-  PidOutputSum < 0.0 (see tuning offset)
+  PidOutputSum &lt; 0.0 (see tuning offset)
 
 #### Process depends on initial situation
 
@@ -941,7 +941,7 @@ Fine tuning proceeds as follows when started from:
 
 To perform fine tuning, follow these steps:
 
-1. Double-click the "PID_Temp > Commissioning" entry in the project tree.
+1. Double-click the "PID_Temp &gt; Commissioning" entry in the project tree.
 2. Activate the "Monitor all" ![Procedure](images/166014421643_DV_resource.Stream@PNG-de-DE.png) button or start the trend view.
 
    An online connection will be established.
@@ -987,7 +987,7 @@ If you want to test the controlled system by specifying a manual value, use "Man
 
 To define a manual value, follow these steps:
 
-1. Double-click the "PID_Temp > Commissioning" entry in the project tree.
+1. Double-click the "PID_Temp &gt; Commissioning" entry in the project tree.
 2. Activate the "Monitor all" ![Procedure](images/166014421643_DV_resource.Stream@PNG-de-DE.png) button or start the trend view.
 
    An online connection will be established.
@@ -1026,7 +1026,7 @@ If you want to use a different value as the setpoint than that specified at the 
 
 Proceed as follows to specify a substitute setpoint:
 
-1. Double-click the "PID_Temp > Commissioning" entry in the project tree.
+1. Double-click the "PID_Temp &gt; Commissioning" entry in the project tree.
 2. Activate the "Monitor all" ![Procedure](images/166014421643_DV_resource.Stream@PNG-de-DE.png) button or start the trend view.
 
    An online connection will be established.
@@ -1343,7 +1343,7 @@ This procedure ensures that the calculation of the current PID output value and 
 
 ### Requirement
 
-- PIDCtrl.PIDInit is only effective if the integral action is activated (tags Retain.CtrlParams.Heat.Ti and Retain.CtrlParams.Cool.Ti > 0.0).
+- PIDCtrl.PIDInit is only effective if the integral action is activated (tags Retain.CtrlParams.Heat.Ti and Retain.CtrlParams.Cool.Ti &gt; 0.0).
 - You must assign PIDCtrl.PIDInit and OverwriteInitialOutputValue in your user program yourself (see example below). PID_Temp does not automatically change these tags.
 - PIDCtrl.PIDInit is only effective when PID_Temp is in automatic mode (parameter State = 3).
 - If possible, select the sampling time of the PID algorithm ( Retain.CtrlParams.Heat.Cycle and Retain.CtrlParams.Cool.Cycle tags) so that it is identical for all controllers, and call all controllers in the same cyclic interrupt OB. In this way, you ensure that the switchover does not take place within a controller cycle or a PWM period.

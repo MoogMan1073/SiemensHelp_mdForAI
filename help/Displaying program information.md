@@ -80,7 +80,7 @@ You can filter the display within the assignment list. You can use predefined fi
 
 You have the option of displaying cross-reference information for selected addresses in the assignment list.
 
-You can display the cross-references for a selected address in the Inspector window using the "Cross-reference information" shortcut menu command. The command "Tools > Cross-references" allows you to also open the cross-reference list for the selected object.
+You can display the cross-references for a selected address in the Inspector window using the "Cross-reference information" shortcut menu command. The command "Tools &gt; Cross-references" allows you to also open the cross-reference list for the selected object.
 
 #### Displaying the PLC tag table
 
@@ -854,7 +854,7 @@ The maximum size of available load memory can be selected from a drop-down list 
 >
 > Note that the sum of the allocated load memory cannot be precisely determined if not all blocks are compiled.
 >
-> In this case, a preceding ">" in front of the sum indicates that the amount of allocated space may be greater than that shown because uncompiled blocks are not taken into account in the total.
+> In this case, a preceding "&gt;" in front of the sum indicates that the amount of allocated space may be greater than that shown because uncompiled blocks are not taken into account in the total.
 
 #### Display of the maximum available work memory
 
@@ -929,7 +929,7 @@ The memory use shows you which space is allocated to specific objects in the CPU
 >
 > Note that the sum of the allocated load memory cannot be precisely determined if not all blocks are compiled.
 >
-> In this case, a preceding ">" in front of the sum indicates that the amount of allocated space may be greater than that shown because uncompiled blocks are not taken into account in the total.
+> In this case, a preceding "&gt;" in front of the sum indicates that the amount of allocated space may be greater than that shown because uncompiled blocks are not taken into account in the total.
 
 #### Requirement
 

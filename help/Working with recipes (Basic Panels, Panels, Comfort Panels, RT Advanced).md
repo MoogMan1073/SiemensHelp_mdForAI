@@ -335,7 +335,7 @@ The data in a data record is only displayed and can only be edited in the recipe
 
 > **Note**
 >
-> When "Synchronization" > "Synchronize recipe tags" is deactivated and "Display table" is deactivated in the recipe control under "Properties > Table", then recipe data records cannot be sent to or from the PLC in Runtime using the "Write to PLC" and "Read from PLC" buttons.
+> When "Synchronization" &gt; "Synchronize recipe tags" is deactivated and "Display table" is deactivated in the recipe control under "Properties &gt; Table", then recipe data records cannot be sent to or from the PLC in Runtime using the "Write to PLC" and "Read from PLC" buttons.
 
 #### "Synchronizing recipe view and recipe tags" activated
 
@@ -467,7 +467,7 @@ There are two ways to transfer recipe data records between the HMI device and PL
 
 The following requirements apply to coordinated transfer:
 
-- The "Data record" area pointer must be set up for the required connection in the "Communication > Connections" editor.
+- The "Data record" area pointer must be set up for the required connection in the "Communication &gt; Connections" editor.
 - In the properties of the recipe "Coordinated transfer of data records" is activated.
 - The connection to the PLC is specified in the properties of the recipe with which the HMI device coordinates the transfer.
 
@@ -625,7 +625,7 @@ Configuring a recipe screen allows you to customize the display. You can spread 
 
 ##### Synchronizing recipe values
 
-To enter recipe data record values outside the advanced recipe view in the configured I/O fields, activate "Synchronize recipe view and recipe tags" under "Properties > Synchronization" in the recipe properties.
+To enter recipe data record values outside the advanced recipe view in the configured I/O fields, activate "Synchronize recipe view and recipe tags" under "Properties &gt; Synchronization" in the recipe properties.
 
 The "Synchronize recipe view and recipe tags" option is not available for the simple recipe view.
 
@@ -635,7 +635,7 @@ Recipes_Synchronization_Advanced
 
 ##### Transferring recipe values automatically
 
-If the entered recipe values must be immediately transferred to the connected PLC in Runtime, deactivate "Manual transfer of individual modified values (teach-in mode)" under "Properties > Options".
+If the entered recipe values must be immediately transferred to the connected PLC in Runtime, deactivate "Manual transfer of individual modified values (teach-in mode)" under "Properties &gt; Options".
 
 Configure the "SetRecipeTags" system function if you want to enable and disable the immediate transfer of entered recipe values in Runtime.
 
@@ -777,25 +777,25 @@ Operation of the display area
 
 | Button | Key | Function |
 | --- | --- | --- |
-|  | <Enter> | The next lowest display area is opened, i.e. the data record list or the element list. |
-| ![Using the display area and shortcut menu](images/7603115915_DV_resource.Stream@PNG-de-DE.png) | <Esc> | The previous display area opens. |
-|  | <INS> | Creates a new data record for the selected recipe if the list of recipes or recipe data records is displayed. Then changes to the list of recipe element.  Requirement: "Properties >General > Processing mode" is activated.  The button can be simulated with the "Key SimulateSystemKey" function even on devices without keys. |
-|  | <DEL> | Deletes the selected recipe data record in the list of recipe data records.  Requirement: "Properties >General > Processing mode" is activated. |
-|  | <Up>/<Down> | Selects the previous/next entry. |
-|  | <Pg Up>/<Pg Down> | Moves the display up or down one page. |
-|  | <Home>/<End> | Selects the first/last entry. The first/last entry is selected. |
+|  | &lt;Enter&gt; | The next lowest display area is opened, i.e. the data record list or the element list. |
+| ![Using the display area and shortcut menu](images/7603115915_DV_resource.Stream@PNG-de-DE.png) | &lt;Esc&gt; | The previous display area opens. |
+|  | &lt;INS&gt; | Creates a new data record for the selected recipe if the list of recipes or recipe data records is displayed. Then changes to the list of recipe element.  Requirement: "Properties &gt;General &gt; Processing mode" is activated.  The button can be simulated with the "Key SimulateSystemKey" function even on devices without keys. |
+|  | &lt;DEL&gt; | Deletes the selected recipe data record in the list of recipe data records.  Requirement: "Properties &gt;General &gt; Processing mode" is activated. |
+|  | &lt;Up&gt;/&lt;Down&gt; | Selects the previous/next entry. |
+|  | &lt;Pg Up&gt;/&lt;Pg Down&gt; | Moves the display up or down one page. |
+|  | &lt;Home&gt;/&lt;End&gt; | Selects the first/last entry. The first/last entry is selected. |
 
 Operation of the shortcut menu
 
 | Button | Key | Function |
 | --- | --- | --- |
-| ![Using the display area and shortcut menu](images/7603316235_DV_resource.Stream@PNG-de-DE.png) | <Right> | The shortcut menu of the display area opens. |
-| ![Using the display area and shortcut menu](images/7603115915_DV_resource.Stream@PNG-de-DE.png) | <Esc> | The menu is closed.  The display area opens. |
+| ![Using the display area and shortcut menu](images/7603316235_DV_resource.Stream@PNG-de-DE.png) | &lt;Right&gt; | The shortcut menu of the display area opens. |
+| ![Using the display area and shortcut menu](images/7603115915_DV_resource.Stream@PNG-de-DE.png) | &lt;Esc&gt; | The menu is closed.  The display area opens. |
 |  | Input of the number of the menu command | The menu command is executed. |
 
 ##### Shortcut menus of the simple recipe view
 
-You can click the ![Shortcut menus of the simple recipe view](images/7603316235_DV_resource.Stream@PNG-de-DE.png) button in each display area to call up a selection of commands. The command selection lists those commands that are available in the current display area. A number is assigned to each command. The command is executed when you enter this number. Alternatively select the command and press the <Return> key.
+You can click the ![Shortcut menus of the simple recipe view](images/7603316235_DV_resource.Stream@PNG-de-DE.png) button in each display area to call up a selection of commands. The command selection lists those commands that are available in the current display area. A number is assigned to each command. The command is executed when you enter this number. Alternatively select the command and press the &lt;Return&gt; key.
 
 ##### Shortcut menus in the recipe list
 
@@ -877,8 +877,8 @@ The response of the simple recipe view can be defined in the recipe view inspect
 
 Please note the following for devices with a simple recipe view:
 
-1. In the Inspector window, under "Properties > Display > Mode", select "Simple view" as "View type".
-2. The "Properties > Simple view" area contains additional properties only applicable to the simple recipe view.
+1. In the Inspector window, under "Properties &gt; Display &gt; Mode", select "Simple view" as "View type".
+2. The "Properties &gt; Simple view" area contains additional properties only applicable to the simple recipe view.
 3. All other properties are also applicable to the advanced recipe view.
 
 ##### Displaying recipe data record values only
@@ -897,7 +897,7 @@ A tag to each recipe data record can be configured in the advanced recipe view. 
 
 Follow these steps:
 
-1. Enter a tag of the "Int" type in the field "Tag", under "Properties > General > Recipe data record".
+1. Enter a tag of the "Int" type in the field "Tag", under "Properties &gt; General &gt; Recipe data record".
 
 The number of the recipe data record is stored in a tag.
 
@@ -914,8 +914,8 @@ To configure an event on the recipe view, follow these steps:
 1. Select the recipe view that was added to the screen in the "Screens" editor.
 
    The properties of the recipe view are displayed in the Inspector window.
-2. Deactivate all buttons under "Properties > Toolbar" and "Properties > Simple view".
-3. In the Inspector window, under "Properties > Events", click the event to be configured, e.g. "Enable".
+2. Deactivate all buttons under "Properties &gt; Toolbar" and "Properties &gt; Simple view".
+3. In the Inspector window, under "Properties &gt; Events", click the event to be configured, e.g. "Enable".
 4. Configure a function list for the event.
 
 The function list is processed when the operator enables the recipe view.
@@ -927,7 +927,7 @@ To configure an animation of a recipe view, proceed as follows:
 1. Select the recipe view that was added to the screen in the "Screens" editor.
 
    The properties of the recipe view are displayed in the Inspector window.
-2. Click under "Properties > Animations" in the Inspector window.
+2. Click under "Properties &gt; Animations" in the Inspector window.
 
    ![Animation properties of the recipe view](images/72836830219_DV_resource.Stream@PNG-en-US.png)
 3. Link a tag to one or more of the following properties.
@@ -937,7 +937,7 @@ To configure an animation of a recipe view, proceed as follows:
    - Operability
    - Visibility
 
-     In the "Animations> Overview" area, all animations are summarized in tabular form. Under "Animations> Tag links > Tag linkage", as well as visibility and position a tag can also be linked to height and width.
+     In the "Animations&gt; Overview" area, all animations are summarized in tabular form. Under "Animations&gt; Tag links &gt; Tag linkage", as well as visibility and position a tag can also be linked to height and width.
 
      > **Note**
      >
@@ -986,13 +986,13 @@ To control the simple recipe view with mouse or touchpad, proceed as follows:
 
 To control the simple recipe view with the keyboard, proceed as follows:
 
-1. Press the <Tab> key until the simple recipe view is selected.
+1. Press the &lt;Tab&gt; key until the simple recipe view is selected.
 2. Select the desired recipe with the cursor keys.
-3. Press <Right>.
+3. Press &lt;Right&gt;.
 
    The shortcut menu is opened.
-4. Press the <Down> key until the desired menu command is selected.
-5. Press <Enter> to confirm the command.
+4. Press the &lt;Down&gt; key until the desired menu command is selected.
+5. Press &lt;Enter&gt; to confirm the command.
 
 ##### Key shortcuts for the simple recipe view
 
@@ -1000,8 +1000,8 @@ The following key shortcuts are activated for the simple recipe view in Runtime 
 
 | Key shortcut | Effect | Menu command |
 | --- | --- | --- |
-| <Insert> | Generates a new recipe data record | New |
-| <Del> | Deletes the recipe data record displayed. | Delete |
+| &lt;Insert&gt; | Generates a new recipe data record | New |
+| &lt;Del&gt; | Deletes the recipe data record displayed. | Delete |
 
 ##### Operating the recipe view with function keys
 
@@ -1228,13 +1228,13 @@ The following operating elements can be configured in the recipe view:
 | Operating object | Key combination | Function |
 | --- | --- | --- |
 | ![Operating elements](images/14829503371_DV_resource.Stream@PNG-de-DE.png) |  | The configured tooltip is displayed. |
-| ![Operating elements](images/72283805323_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Spacebar> | Creates a new recipe data record. If a start value is configured, it is shown in the input field. |
-| ![Operating elements](images/72283874187_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Enter> | Saves the displayed values of the recipe data record. The storage location is predefined by the project. |
-| ![Operating elements](images/72283908619_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+*> | The recipe data record is saved under a different name regardless of the recipe view. A dialog box opens where you can enter the name. |
-| ![Operating elements](images/72283591691_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Del> | Deletes the recipe data record displayed. |
-| ![Operating elements](images/72283981451_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+=> | The system always updates the current value of the recipe view with the up-to-date recipe tag value.  When the value shown in the recipe view is more recent than the current recipe tag value, the system writes this value to the recipe tag.  "Synchronize recipe view and recipe tags" must be activated in the recipe properties before this function can be used. |
-| ![Operating elements](images/72283582859_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Down Arrow> | The values of the set recipe data record displayed in the recipe view are transferred to the PLC. |
-| ![Operating elements](images/72283865355_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Up Arrow> | The recipe values from the PLC are displayed in the recipe view. |
+| ![Operating elements](images/72283805323_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Spacebar&gt; | Creates a new recipe data record. If a start value is configured, it is shown in the input field. |
+| ![Operating elements](images/72283874187_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Enter&gt; | Saves the displayed values of the recipe data record. The storage location is predefined by the project. |
+| ![Operating elements](images/72283908619_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+*&gt; | The recipe data record is saved under a different name regardless of the recipe view. A dialog box opens where you can enter the name. |
+| ![Operating elements](images/72283591691_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Del&gt; | Deletes the recipe data record displayed. |
+| ![Operating elements](images/72283981451_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+=&gt; | The system always updates the current value of the recipe view with the up-to-date recipe tag value.  When the value shown in the recipe view is more recent than the current recipe tag value, the system writes this value to the recipe tag.  "Synchronize recipe view and recipe tags" must be activated in the recipe properties before this function can be used. |
+| ![Operating elements](images/72283582859_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Down Arrow&gt; | The values of the set recipe data record displayed in the recipe view are transferred to the PLC. |
+| ![Operating elements](images/72283865355_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Up Arrow&gt; | The recipe values from the PLC are displayed in the recipe view. |
 
 ##### Updating and displaying values
 
@@ -1268,15 +1268,15 @@ The layout of the recipe views is dependent on the device and the device version
 
 Please note the following for devices with an advanced recipe view:
 
-1. In the Inspector window under "Properties > Display > Mode", select "Advanced view" as the "View type".
-2. The "Properties > Simple view" area contains properties only applicable to the simple recipe view.
+1. In the Inspector window under "Properties &gt; Display &gt; Mode", select "Advanced view" as the "View type".
+2. The "Properties &gt; Simple view" area contains properties only applicable to the simple recipe view.
 3. All other properties apply to the advanced recipe view.
 
 ##### Displaying a recipe
 
 To only allow access to the recipe data records of a specific recipe in a screen, follow these steps:
 
-1. Enter the required recipe or select an existing recipe in the "Recipe" field under "Properties > General".
+1. Enter the required recipe or select an existing recipe in the "Recipe" field under "Properties &gt; General".
 2. When a recipe is entered in the "Recipe" field, you will have to enable the "Selection list" if you want to display the recipe name in runtime.
 
    ![Displaying a recipe](images/88397431179_DV_resource.Stream@PNG-en-US.png)
@@ -1289,8 +1289,8 @@ Both the recipe and the recipe data record can each be configured to a tag in th
 
 Follow these steps:
 
-1. Enter a tag of the "String" type in the field "Recipe tag", under "Properties > General > Recipe".
-2. Enter a tag of the "Int" type in the field "Tag", under "Properties > General > Recipe data record".
+1. Enter a tag of the "String" type in the field "Recipe tag", under "Properties &gt; General &gt; Recipe".
+2. Enter a tag of the "Int" type in the field "Tag", under "Properties &gt; General &gt; Recipe data record".
 
 The name of the recipe and the number of the recipe data record are each stored in a tag.
 
@@ -1298,11 +1298,11 @@ The name of the recipe and the number of the recipe data record are each stored 
 
 To use the recipe view as a selection field for recipes and recipe data records in a recipe screen, follow these steps:
 
-1. Select the tag for the recipe name under "General > Recipe > Recipe tag".
-2. Select the tag for the recipe data record name under "General > Recipe data record >Tag".
+1. Select the tag for the recipe name under "General &gt; Recipe &gt; Recipe tag".
+2. Select the tag for the recipe data record name under "General &gt; Recipe data record &gt;Tag".
 3. Disable the "Editing mode". You cannot create, rename, edit or delete recipe data.
-4. In order to select recipes, enable "Display selection list" and make sure that no recipe is selected under "Properties > General > Recipe".
-5. Deactivate all buttons under "Properties > Toolbar".
+4. In order to select recipes, enable "Display selection list" and make sure that no recipe is selected under "Properties &gt; General &gt; Recipe".
+5. Deactivate all buttons under "Properties &gt; Toolbar".
 
    ![Using the recipe view as a drop-down list](images/88396456715_DV_resource.Stream@PNG-en-US.png)
 
@@ -1313,7 +1313,7 @@ To configure an event on the recipe view, follow these steps:
 1. Select the recipe view that was added to the screen in the "Screens" editor.
 
    The properties of the recipe view are displayed in the Inspector window.
-2. In the Inspector window, click the event you want to configure under "Properties > Events".
+2. In the Inspector window, click the event you want to configure under "Properties &gt; Events".
 3. Configure a function list for the selected event.   
    The function list is processed when the configured event occurs.
 
@@ -1351,13 +1351,13 @@ To control the recipe view with mouse or touchpad, proceed as follows:
 
 To control the recipe view with the keyboard, proceed as follows:
 
-1. Press the <Tab> key until the cursor reaches the field for selecting the recipe.
-2. Press <Enter>.
+1. Press the &lt;Tab&gt; key until the cursor reaches the field for selecting the recipe.
+2. Press &lt;Enter&gt;.
 
    The drop-down list box for the recipes opens.
-3. Select a recipe. You navigate between the next or previous entry in the list by using the cursor keys <Left>, <Right>, <Up> and <Down>.
+3. Select a recipe. You navigate between the next or previous entry in the list by using the cursor keys &lt;Left&gt;, &lt;Right&gt;, &lt;Up&gt; and &lt;Down&gt;.
 4. Select a data record.
-5. Press the <Tab> key until the operator control object you wish to use is selected.
+5. Press the &lt;Tab&gt; key until the operator control object you wish to use is selected.
 
 Alternatively you can control the recipe view using certain key combinations.
 
@@ -1371,14 +1371,14 @@ The following key shortcuts are activated for the advanced recipe view in Runtim
 
 | Keys  shortcut | Effect | Menu command | Button |
 | --- | --- | --- | --- |
-| <HELP> | Calls up the configured tooltip for the selected recipe. | Tooltip | ![Key shortcuts for the advanced recipe view](images/14829503371_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Spacebar> | Generates a new recipe data record. Any configured start value is displayed in the input field. | Add data record | ![Key shortcuts for the advanced recipe view](images/72283805323_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Enter> | Saves the modified record with its current name. | Save | ![Key shortcuts for the advanced recipe view](images/72283874187_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+*> | Saves the modified record with a new name. | Save as | ![Key shortcuts for the advanced recipe view](images/72283908619_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Del> | Deletes the recipe data record displayed. | Delete data record | ![Key shortcuts for the advanced recipe view](images/72283591691_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+=> | Compares the values of the selected data record with the values on the PLC.  Any value in the recipe view which is more recent compared to the current recipe tag value is written to the recipe tag. | Synchronize recipe tags | ![Key shortcuts for the advanced recipe view](images/72283981451_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Down Arrow> | Sends the current value to the PLC. | Write to PLC | ![Key shortcuts for the advanced recipe view](images/72283582859_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Up Arrow> | Reads the current value from the PLC. | Read from PLC | ![Key shortcuts for the advanced recipe view](images/72283865355_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;HELP&gt; | Calls up the configured tooltip for the selected recipe. | Tooltip | ![Key shortcuts for the advanced recipe view](images/14829503371_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Spacebar&gt; | Generates a new recipe data record. Any configured start value is displayed in the input field. | Add data record | ![Key shortcuts for the advanced recipe view](images/72283805323_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Enter&gt; | Saves the modified record with its current name. | Save | ![Key shortcuts for the advanced recipe view](images/72283874187_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+*&gt; | Saves the modified record with a new name. | Save as | ![Key shortcuts for the advanced recipe view](images/72283908619_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Del&gt; | Deletes the recipe data record displayed. | Delete data record | ![Key shortcuts for the advanced recipe view](images/72283591691_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+=&gt; | Compares the values of the selected data record with the values on the PLC.  Any value in the recipe view which is more recent compared to the current recipe tag value is written to the recipe tag. | Synchronize recipe tags | ![Key shortcuts for the advanced recipe view](images/72283981451_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Down Arrow&gt; | Sends the current value to the PLC. | Write to PLC | ![Key shortcuts for the advanced recipe view](images/72283582859_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Up Arrow&gt; | Reads the current value from the PLC. | Read from PLC | ![Key shortcuts for the advanced recipe view](images/72283865355_DV_resource.Stream@PNG-de-DE.png) |
 
 ##### Screen change
 
@@ -1408,7 +1408,7 @@ You have the following options for managing recipe data records, according to th
 To create a new recipe data record, proceed as follows:
 
 1. Select the recipe on the HMI device in which you want to create a new recipe data record.
-2. Click ![Creating new recipe data records](images/72283805323_DV_resource.Stream@PNG-de-DE.png) or press <Ctrl+Spacebar>.
+2. Click ![Creating new recipe data records](images/72283805323_DV_resource.Stream@PNG-de-DE.png) or press &lt;Ctrl+Spacebar&gt;.
 
    A new recipe data record with the next available number is created.
 
@@ -1416,7 +1416,7 @@ To create a new recipe data record, proceed as follows:
 3. Enter values for the elements of the data record.
 
    The elements of the recipe data record can be assigned default values depending on the configuration.
-4. Click ![Creating new recipe data records](images/72283908619_DV_resource.Stream@PNG-de-DE.png) or press <Ctrl+*>.
+4. Click ![Creating new recipe data records](images/72283908619_DV_resource.Stream@PNG-de-DE.png) or press &lt;Ctrl+*&gt;.
 
    The dialog "Save as" opens.
 5. Enter a name for the data record.
@@ -1432,7 +1432,7 @@ To copy a recipe data record, proceed as follows:
 
 1. Select the recipe on the HMI device in which you want to copy an existing recipe data record.
 2. Select the recipe data record that you want to copy on the HMI device.
-3. Click ![Copying a recipe data record](images/72283908619_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+*>.
+3. Click ![Copying a recipe data record](images/72283908619_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+*&gt;.
 
    The dialog "Save as" opens.
 4. Enter a name for the data record.
@@ -1445,7 +1445,7 @@ To change a recipe data record, proceed as follows:
 1. Select the recipe on the HMI device in which you want to edit an existing recipe data record.
 2. Select the recipe data record that you want to edit on the HMI device.
 3. Replace the old values with new ones.
-4. Click ![Modifying a recipe data record](images/72283874187_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+Enter>.
+4. Click ![Modifying a recipe data record](images/72283874187_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+Enter&gt;.
 
 ##### Deleting a recipe data record
 
@@ -1453,7 +1453,7 @@ To delete a recipe data record, proceed as follows:
 
 1. Select the recipe on the HMI device in which you want to delete an existing recipe data record.
 2. Select the recipe data record that you want to delete on the HMI device.
-3. Click ![Deleting a recipe data record](images/72283591691_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+Del>.
+3. Click ![Deleting a recipe data record](images/72283591691_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+Del&gt;.
 
 ---
 
@@ -1493,7 +1493,7 @@ Depending on the configuration, the values displayed in the recipe view are sync
 
 To synchronize a recipe data record, proceed as follows:
 
-- Click ![Procedure](images/72283981451_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+=>.
+- Click ![Procedure](images/72283981451_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+=&gt;.
 
 The system always updates the current value of the recipe view with the up-to-date recipe tag value.
 
@@ -1525,7 +1525,7 @@ Proceed as follows to read a recipe data record from the PLC:
 
 1. Select the recipe on the HMI device.
 2. On the HMI device, select the recipe data record whose values you want to read from the PLC.
-3. Click ![Procedure](images/72283865355_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+Up Arrow>.
+3. Click ![Procedure](images/72283865355_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+Up Arrow&gt;.
 
 ---
 
@@ -1549,7 +1549,7 @@ Proceed as follows to transfer a recipe data record to the PLC:
 
 1. Select the recipe on the HMI device.
 2. On the HMI device, select the recipe data record whose values you want to transfer to the PLC.
-3. Click ![Procedure](images/72283582859_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+Down Arrow>.
+3. Click ![Procedure](images/72283582859_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+Down Arrow&gt;.
 
 ---
 
@@ -1611,19 +1611,19 @@ The following operating elements can be configured in the recipe view:
 
 | Operator controls | Keyboard shortcut | Function |
 | --- | --- | --- |
-| ![Operator controls](images/72271575691_DV_resource.Stream@PNG-de-DE.png) | <HELP> | The configured tooltip is displayed. |
-| ![Operator controls](images/72273232139_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Spacebar> | Creates a new recipe data record. If a start value is configured, it is shown in the input field. |
-| ![Operator controls](images/72273238539_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Enter> | Saves the displayed values of the recipe data record. The storage location is predefined by the project. |
-| ![Operator controls](images/72273267979_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+*> | The recipe data record is saved under a different name regardless of the recipe view. A dialog box opens where you can enter the name. |
-| ![Operator controls](images/72273271819_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Del> | Deletes the recipe data record displayed. |
-| ![Operator controls](images/68659792523_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Shift+T> | The selected recipe data record is renamed. A dialog box opens where you can enter the name. |
-| ![Operator controls](images/72273275659_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+=> | If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is activated, the following applies:    - If the value of a tag has a more recent value than in the recipe view, this value is transferred to the recipe view. - If the value displayed in the recipe view is more recent than the value of the tag, this value is transferred to the tag. Synchronization only takes place within the HMI device.   In this case, the process tag named above as an example in the I/O field is not automatically read from the PLC. <sup>1)</sup>    If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is deactivated, the following applies:    - If the value of a tag has a more recent value than in the recipe view, this value is transferred to the recipe view. - If the value shown in the recipe view is more recent than the value of the tag, this value is transferred to the tag.   Synchronization with the PLC also takes place.<sup> 2)</sup> |
-| ![Operator controls](images/72273292299_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Down Arrow> | The values of the set recipe data record displayed in the recipe view are transferred to the PLC. |
-| ![Operator controls](images/72273296139_DV_resource.Stream@PNG-de-DE.png) | <Ctrl+Up Arrow> | The recipe values from the PLC are displayed in the recipe view. |
+| ![Operator controls](images/72271575691_DV_resource.Stream@PNG-de-DE.png) | &lt;HELP&gt; | The configured tooltip is displayed. |
+| ![Operator controls](images/72273232139_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Spacebar&gt; | Creates a new recipe data record. If a start value is configured, it is shown in the input field. |
+| ![Operator controls](images/72273238539_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Enter&gt; | Saves the displayed values of the recipe data record. The storage location is predefined by the project. |
+| ![Operator controls](images/72273267979_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+*&gt; | The recipe data record is saved under a different name regardless of the recipe view. A dialog box opens where you can enter the name. |
+| ![Operator controls](images/72273271819_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Del&gt; | Deletes the recipe data record displayed. |
+| ![Operator controls](images/68659792523_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Shift+T&gt; | The selected recipe data record is renamed. A dialog box opens where you can enter the name. |
+| ![Operator controls](images/72273275659_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+=&gt; | If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is activated, the following applies:    - If the value of a tag has a more recent value than in the recipe view, this value is transferred to the recipe view. - If the value displayed in the recipe view is more recent than the value of the tag, this value is transferred to the tag. Synchronization only takes place within the HMI device.   In this case, the process tag named above as an example in the I/O field is not automatically read from the PLC. <sup>1)</sup>    If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is deactivated, the following applies:    - If the value of a tag has a more recent value than in the recipe view, this value is transferred to the recipe view. - If the value shown in the recipe view is more recent than the value of the tag, this value is transferred to the tag.   Synchronization with the PLC also takes place.<sup> 2)</sup> |
+| ![Operator controls](images/72273292299_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Down Arrow&gt; | The values of the set recipe data record displayed in the recipe view are transferred to the PLC. |
+| ![Operator controls](images/72273296139_DV_resource.Stream@PNG-de-DE.png) | &lt;Ctrl+Up Arrow&gt; | The recipe values from the PLC are displayed in the recipe view. |
 
-1) For the recipe, the options "Synchronize recipe tags" and "Manual transfer of individually modified values (teach-in mode)" are activated under "General > Synchronization > Settings".
+1) For the recipe, the options "Synchronize recipe tags" and "Manual transfer of individually modified values (teach-in mode)" are activated under "General &gt; Synchronization &gt; Settings".
 
-2) For the recipe, the option "Synchronize recipe tags" is activated under "General > Synchronization > Settings" and the option "Manual transfer of individually modified values (teach-in mode)" is deactivated.
+2) For the recipe, the option "Synchronize recipe tags" is activated under "General &gt; Synchronization &gt; Settings" and the option "Manual transfer of individually modified values (teach-in mode)" is deactivated.
 
 ##### Updating and displaying values
 
@@ -1657,7 +1657,7 @@ You can specify the behavior of the advanced recipe view in the Inspector window
 
 To only allow access to the recipe data records of a specific recipe in a screen, follow these steps:
 
-1. Enter the required recipe or select an existing recipe in the "Recipe" field under "Properties > General".
+1. Enter the required recipe or select an existing recipe in the "Recipe" field under "Properties &gt; General".
 2. When a recipe is entered in the "Recipe" field, you will have to enable the "Selection list" if you want to display the recipe name in runtime.
 
 ![Displaying a recipe](images/69349913227_DV_resource.Stream@PNG-en-US.png)
@@ -1670,8 +1670,8 @@ Both the recipe and the recipe data record can each be configured to a tag in th
 
 Follow these steps:
 
-1. Enter a tag of the "String" type in the field "Recipe tag", under "Properties > General > Recipe".
-2. Enter a tag of the "Int" type in the field "Tag", under "Properties > General > Recipe data record".
+1. Enter a tag of the "String" type in the field "Recipe tag", under "Properties &gt; General &gt; Recipe".
+2. Enter a tag of the "Int" type in the field "Tag", under "Properties &gt; General &gt; Recipe data record".
 
 The name of the recipe and the number of the recipe data record are each stored in a tag.
 
@@ -1679,11 +1679,11 @@ The name of the recipe and the number of the recipe data record are each stored 
 
 To use the recipe view as a selection field for recipes and recipe data records in a recipe screen, follow these steps:
 
-1. Select the tag for the recipe name under "General > Recipe > Recipe tag".
-2. Select the tag for the recipe data record name under "General > Recipe data record >Tag".
+1. Select the tag for the recipe name under "General &gt; Recipe &gt; Recipe tag".
+2. Select the tag for the recipe data record name under "General &gt; Recipe data record &gt;Tag".
 3. Disable the "Editing mode". You cannot create, rename, edit or delete recipe data.
-4. In order to select recipes, enable "Display selection list" and make sure that no recipe is selected under "Properties > General > Recipe".
-5. Deactivate all buttons under "Properties > Toolbar".
+4. In order to select recipes, enable "Display selection list" and make sure that no recipe is selected under "Properties &gt; General &gt; Recipe".
+5. Deactivate all buttons under "Properties &gt; Toolbar".
 
 ![Using the recipe view as a drop-down list](images/88398124043_DV_resource.Stream@PNG-en-US.png)
 
@@ -1694,7 +1694,7 @@ To configure an event on the recipe view, follow these steps:
 1. Select the recipe view that was added to the screen in the "Screens" editor.
 
    The properties of the recipe view are displayed in the Inspector window.
-2. In the Inspector window, click the event you want to configure under "Properties > Events".
+2. In the Inspector window, click the event you want to configure under "Properties &gt; Events".
 3. Configure a function list for the selected event.   
    The function list is processed when the configured event occurs.
 
@@ -1730,13 +1730,13 @@ To control the recipe view with mouse or touchpad, proceed as follows:
 
 To control the recipe view with the keyboard, proceed as follows:
 
-1. Press the <Tab> key until the cursor reaches the field for selecting the recipe.
-2. Press <Enter>.
+1. Press the &lt;Tab&gt; key until the cursor reaches the field for selecting the recipe.
+2. Press &lt;Enter&gt;.
 
    The drop-down list box for the recipes opens.
-3. Select a recipe. You navigate between the next or previous entry in the list by using the cursor keys <Left>, <Right>, <Up> and <Down>.
+3. Select a recipe. You navigate between the next or previous entry in the list by using the cursor keys &lt;Left&gt;, &lt;Right&gt;, &lt;Up&gt; and &lt;Down&gt;.
 4. Select a data record.
-5. Press the <Tab> key until the operator control object you wish to use is selected.
+5. Press the &lt;Tab&gt; key until the operator control object you wish to use is selected.
 
 Alternatively you can control the recipe view using certain key combinations.
 
@@ -1750,19 +1750,19 @@ The following key shortcuts are activated for the advanced recipe view in Runtim
 
 | Keys  shortcut | Effect | Menu command | Button |
 | --- | --- | --- | --- |
-| <HELP> | Calls up the configured tooltip for the selected recipe. | Tooltip | ![Key shortcuts for the advanced recipe view](images/72271575691_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Spacebar> | Generates a new recipe data record. Any configured start value is displayed in the input field. | Add data record | ![Key shortcuts for the advanced recipe view](images/72274020747_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Enter> | Saves the modified record with its current name. | Save | ![Key shortcuts for the advanced recipe view](images/72274036363_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+*> | Saves the modified record with a new name. | Save as | ![Key shortcuts for the advanced recipe view](images/72274044427_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Del> | Deletes the recipe data record displayed. | Delete data record | ![Key shortcuts for the advanced recipe view](images/72274028555_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Shift+T> | Changes the name of selected data record. | Rename data record | ![Key shortcuts for the advanced recipe view](images/68659792523_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+=> | If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is activated, the following applies:    - If the value of a tag has a more recent value than in the recipe view, this value is transferred to the recipe view. - If the value displayed in the recipe view is more recent than the value of the tag, this value is transferred to the tag. Synchronization only takes place within the HMI device.   In this case, the process tag named above as an example in the I/O field is not automatically read from the PLC. <sup>1)</sup>    If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is deactivated, the following applies:    - If the value of a tag has a more recent value than in the recipe view, this value is transferred to the recipe view. - If the value shown in the recipe view is more recent than the value of the tag, this value is transferred to the tag.   Synchronization with the PLC also takes place.<sup> 2)</sup> | Synchronizing recipe view and recipe tags | ![Key shortcuts for the advanced recipe view](images/72274052235_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Down Arrow> | Sends the current value to the PLC. | Write to PLC | ![Key shortcuts for the advanced recipe view](images/72274111243_DV_resource.Stream@PNG-de-DE.png) |
-| <Ctrl+Up Arrow> | Reads the current value from the PLC. | Read from PLC | ![Key shortcuts for the advanced recipe view](images/72274119051_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;HELP&gt; | Calls up the configured tooltip for the selected recipe. | Tooltip | ![Key shortcuts for the advanced recipe view](images/72271575691_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Spacebar&gt; | Generates a new recipe data record. Any configured start value is displayed in the input field. | Add data record | ![Key shortcuts for the advanced recipe view](images/72274020747_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Enter&gt; | Saves the modified record with its current name. | Save | ![Key shortcuts for the advanced recipe view](images/72274036363_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+*&gt; | Saves the modified record with a new name. | Save as | ![Key shortcuts for the advanced recipe view](images/72274044427_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Del&gt; | Deletes the recipe data record displayed. | Delete data record | ![Key shortcuts for the advanced recipe view](images/72274028555_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Shift+T&gt; | Changes the name of selected data record. | Rename data record | ![Key shortcuts for the advanced recipe view](images/68659792523_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+=&gt; | If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is activated, the following applies:    - If the value of a tag has a more recent value than in the recipe view, this value is transferred to the recipe view. - If the value displayed in the recipe view is more recent than the value of the tag, this value is transferred to the tag. Synchronization only takes place within the HMI device.   In this case, the process tag named above as an example in the I/O field is not automatically read from the PLC. <sup>1)</sup>    If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is deactivated, the following applies:    - If the value of a tag has a more recent value than in the recipe view, this value is transferred to the recipe view. - If the value shown in the recipe view is more recent than the value of the tag, this value is transferred to the tag.   Synchronization with the PLC also takes place.<sup> 2)</sup> | Synchronizing recipe view and recipe tags | ![Key shortcuts for the advanced recipe view](images/72274052235_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Down Arrow&gt; | Sends the current value to the PLC. | Write to PLC | ![Key shortcuts for the advanced recipe view](images/72274111243_DV_resource.Stream@PNG-de-DE.png) |
+| &lt;Ctrl+Up Arrow&gt; | Reads the current value from the PLC. | Read from PLC | ![Key shortcuts for the advanced recipe view](images/72274119051_DV_resource.Stream@PNG-de-DE.png) |
 
-1) For the recipe, the options "Synchronize recipe tags" and "Manual transfer of individually modified values (teach-in mode)" are activated under "General > Synchronization > Settings".
+1) For the recipe, the options "Synchronize recipe tags" and "Manual transfer of individually modified values (teach-in mode)" are activated under "General &gt; Synchronization &gt; Settings".
 
-2) For the recipe, the option "Synchronize recipe tags" is activated under "General > Synchronization > Settings" and the option "Manual transfer of individually modified values (teach-in mode)" is deactivated.
+2) For the recipe, the option "Synchronize recipe tags" is activated under "General &gt; Synchronization &gt; Settings" and the option "Manual transfer of individually modified values (teach-in mode)" is deactivated.
 
 ##### Screen change
 
@@ -1793,7 +1793,7 @@ You have the following options for managing recipe data records, according to th
 To create a new recipe data record, proceed as follows:
 
 1. Select the recipe on the HMI device in which you want to create a new recipe data record.
-2. Click ![Creating new recipe data records](images/72274215307_DV_resource.Stream@PNG-de-DE.png) or press <Ctrl+Spacebar>.
+2. Click ![Creating new recipe data records](images/72274215307_DV_resource.Stream@PNG-de-DE.png) or press &lt;Ctrl+Spacebar&gt;.
 
    A new recipe data record with the next available number is created.
 
@@ -1802,9 +1802,9 @@ To create a new recipe data record, proceed as follows:
 
    The elements of the recipe data record can be assigned default values depending on the configuration.
 4. Enter a name for the data record.
-5. Click on the ![Creating new recipe data records](images/72274222987_DV_resource.Stream@PNG-de-DE.png) button or press the keyboard shortcut <Ctrl+Enter>.
+5. Click on the ![Creating new recipe data records](images/72274222987_DV_resource.Stream@PNG-de-DE.png) button or press the keyboard shortcut &lt;Ctrl+Enter&gt;.
 
-   Alternatively, click on the ![Creating new recipe data records](images/72274219147_DV_resource.Stream@PNG-de-DE.png) button or press the keyboard shortcut <Ctrl+*> to save the data record.
+   Alternatively, click on the ![Creating new recipe data records](images/72274219147_DV_resource.Stream@PNG-de-DE.png) button or press the keyboard shortcut &lt;Ctrl+*&gt; to save the data record.
 
    The dialog "Save as" opens. Enter the name for the data record and confirm your entries with "OK".
 6. The data record is saved under the new name.
@@ -1817,7 +1817,7 @@ To copy a recipe data record, proceed as follows:
 
 1. Select the recipe on the HMI device in which you want to copy an existing recipe data record.
 2. Select the recipe data record that you want to copy on the HMI device.
-3. Click ![Copying a recipe data record](images/72274219147_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+*>.
+3. Click ![Copying a recipe data record](images/72274219147_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+*&gt;.
 
    The dialog "Save as" opens.
 4. Enter a name for the data record.
@@ -1836,7 +1836,7 @@ To change a recipe data record, proceed as follows:
 1. Select the recipe on the HMI device in which you want to edit an existing recipe data record.
 2. Select the recipe data record that you want to edit on the HMI device.
 3. Replace the old values with new ones.
-4. Click ![Modifying a recipe data record](images/72274222987_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+Enter>.
+4. Click ![Modifying a recipe data record](images/72274222987_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+Enter&gt;.
 
 ##### Deleting a recipe data record
 
@@ -1844,7 +1844,7 @@ To delete a recipe data record, proceed as follows:
 
 1. Select the recipe on the HMI device in which you want to delete an existing recipe data record.
 2. Select the recipe data record that you want to delete on the HMI device.
-3. Click ![Deleting a recipe data record](images/72274226827_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+Del>.
+3. Click ![Deleting a recipe data record](images/72274226827_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+Del&gt;.
 
 ##### Renaming recipe data records
 
@@ -1852,7 +1852,7 @@ Proceed as follows to rename a recipe data record:
 
 1. Select the recipe on the HMI device in which you want to rename an existing recipe data record.
 2. Select the recipe data record that you want to rename on the HMI device.
-3. Click ![Renaming recipe data records](images/68659792523_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+Shift+T>.
+3. Click ![Renaming recipe data records](images/68659792523_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+Shift+T&gt;.
 4. Enter a new name in the dialog window.
 
 ---
@@ -1893,13 +1893,13 @@ Depending on the configuration, the values displayed in the recipe view are sync
 
 To synchronize a recipe data record, proceed as follows:
 
-- Click ![Procedure](images/72274320395_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+=>.
+- Click ![Procedure](images/72274320395_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+=&gt;.
 
 ##### Result
 
 The result depends on your settings:
 
-- For the recipe, the options "Synchronize recipe tags" and "Manual transfer of individually modified values (teach-in mode)" are activated under "General > Synchronization > Settings".
+- For the recipe, the options "Synchronize recipe tags" and "Manual transfer of individually modified values (teach-in mode)" are activated under "General &gt; Synchronization &gt; Settings".
 
   If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is activated, the following applies:
 
@@ -1907,7 +1907,7 @@ The result depends on your settings:
   - If the value displayed in the recipe view is more recent than the value of the tag, this value is transferred to the tag. Synchronization only takes place within the HMI device.
 
   In this case, the process tag named above as an example in the I/O field is not automatically read from the PLC.
-- For the recipe, the option "Synchronize recipe tags" is activated under "General > Synchronization > Settings" and the option "Manual transfer of individually modified values (teach-in mode)" is deactivated.
+- For the recipe, the option "Synchronize recipe tags" is activated under "General &gt; Synchronization &gt; Settings" and the option "Manual transfer of individually modified values (teach-in mode)" is deactivated.
 
   If tags on the HMI device are used in a recipe and at an additional point in the configuration (for example, as process tags in an I/O field) and the recipe-specific option "Manual transfer of individually modified values (teach-in mode)" is deactivated, the following applies:
 
@@ -1942,7 +1942,7 @@ Proceed as follows to read a recipe data record from the PLC:
 
 1. Select the recipe on the HMI device.
 2. On the HMI device, select the recipe data record whose values you want to read from the PLC.
-3. Click ![Procedure](images/72273296139_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+Up Arrow>.
+3. Click ![Procedure](images/72273296139_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+Up Arrow&gt;.
 
 ---
 
@@ -1966,7 +1966,7 @@ Proceed as follows to transfer a recipe data record to the PLC:
 
 1. Select the recipe on the HMI device.
 2. On the HMI device, select the recipe data record whose values you want to transfer to the PLC.
-3. Click ![Procedure](images/72274341643_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press <Ctrl+Down Arrow>.
+3. Click ![Procedure](images/72274341643_DV_resource.Stream@PNG-de-DE.png) in the recipe view or press &lt;Ctrl+Down Arrow&gt;.
 
 ---
 
@@ -2000,7 +2000,7 @@ Recipe export and import depends on the configuration of the device and the devi
 
 A list separator is used to separate the data records during importing and exporting. The list separator used as the default depends on the setting for formats and numbers in the operating system.
 
-Select "Start > Settings > Control Panel > Regional and Language Options".
+Select "Start &gt; Settings &gt; Control Panel &gt; Regional and Language Options".
 
 If you want to import or export recipe data records, do not use this list separator in the display name of the recipe data records.
 
@@ -2246,7 +2246,7 @@ Proceed as follows to create a recipe:
    The recipe is automatically assigned a version that indicates the date and time of the last change. As an alternative, you can enter specific information relating to the recipe.
 5. Specify the storage location for recipe data records in "Data medium". The options offered depend on the specific HMI device used.
 6. Enter a tooltip that is shown to the operator in runtime.
-7. To compare recipe tags which are configured in I/O fields with the recipe view in Runtime, activate "Synchronize recipe view and recipe tags" in the Inspector window under "Properties > Synchronization".
+7. To compare recipe tags which are configured in I/O fields with the recipe view in Runtime, activate "Synchronize recipe view and recipe tags" in the Inspector window under "Properties &gt; Synchronization".
 
    ![Creating a recipe](images/74805904651_DV_resource.Stream@PNG-en-US.png)
 
@@ -2265,7 +2265,7 @@ Recipe tags cannot be used outside a recipe, e.g. not in I/O fields, not in alar
 
 **Note**
 
-When "Synchronization" > "Synchronize recipe tags" is deactivated and "Display table" is deactivated in the recipe control under "Properties > Table", then recipe data records cannot be sent to or from the PLC in Runtime using the "Write to PLC" and "Read from PLC" buttons.
+When "Synchronization" &gt; "Synchronize recipe tags" is deactivated and "Display table" is deactivated in the recipe control under "Properties &gt; Table", then recipe data records cannot be sent to or from the PLC in Runtime using the "Write to PLC" and "Read from PLC" buttons.
 
 **Note**
 
@@ -2447,7 +2447,7 @@ To rename recipe elements, proceed as follows:
 
 **Note**
 
-The view names in the "Recipes" editor can also be renamed under "Languages & Resources > Project Texts". This possibility is useful when you have already configured in several languages for example.
+The view names in the "Recipes" editor can also be renamed under "Languages &amp; Resources &gt; Project Texts". This possibility is useful when you have already configured in several languages for example.
 
 ##### Copying and pasting recipes
 
@@ -2581,15 +2581,15 @@ This section contains information on the following topics:
 To configure a simple recipe view, proceed as follows:
 
 1. Paste the recipe view into the screen. You will find the recipe view under "Controls" in the "Tools" task card.
-2. Only in devices which also support the extended recipe view: Activate "Simple view" under "Properties > Display > Mode".
-3. If you want to display only the recipe data records of a specific recipe in the recipe view, select the specific recipe under "Properties > General > Recipe".
+2. Only in devices which also support the extended recipe view: Activate "Simple view" under "Properties &gt; Display &gt; Mode".
+3. If you want to display only the recipe data records of a specific recipe in the recipe view, select the specific recipe under "Properties &gt; General &gt; Recipe".
 
    ![Procedure](images/111894363147_DV_resource.Stream@PNG-en-US.png)
 
    ![Procedure](images/111894363147_DV_resource.Stream@PNG-en-US.png)
 4. If you only want to display the recipe data in the recipe view, deactivate "Processing mode" in the "Recipe data record" area.
-5. You can define additional options for the recipe view under "Properties > Appearance" and "Properties > Layout".
-6. Under "Properties > Toolbar" specify which menu commands are available in the recipe view in Runtime.
+5. You can define additional options for the recipe view under "Properties &gt; Appearance" and "Properties &gt; Layout".
+6. Under "Properties &gt; Toolbar" specify which menu commands are available in the recipe view in Runtime.
 
    ![Procedure](images/97444184203_DV_resource.Stream@PNG-en-US.png)
 
@@ -2599,7 +2599,7 @@ To configure a simple recipe view, proceed as follows:
 
 The simple recipe view is configured. You can use the recipe view to display and edit recipe data during runtime.
 
-Deactivation of the editing mode in "Properties > Properties > General" has no impact on the toolbar icons. The buttons activated under "Properties > Toolbar" can still be used even if editing mode is disabled.
+Deactivation of the editing mode in "Properties &gt; Properties &gt; General" has no impact on the toolbar icons. The buttons activated under "Properties &gt; Toolbar" can still be used even if editing mode is disabled.
 
 ---
 
@@ -2621,8 +2621,8 @@ Deactivation of the editing mode in "Properties > Properties > General" has no i
 
 To configure an advanced recipe view, proceed as follows:
 
-1. Paste the recipe view into the screen. The recipe view is found in the task card "Tools" > "Controls".
-2. Select "Properties > Display > Mode > Advanced view" in the Inspector window.
+1. Paste the recipe view into the screen. The recipe view is found in the task card "Tools" &gt; "Controls".
+2. Select "Properties &gt; Display &gt; Mode &gt; Advanced view" in the Inspector window.
 
    ![Procedure](images/88397431179_DV_resource.Stream@PNG-en-US.png)
 
@@ -2633,10 +2633,10 @@ To configure an advanced recipe view, proceed as follows:
    - If you want to save the recipe name or the recipe number in a tag, select the tag under "Recipe tag" in the "Recipe" area.
    - If you want to save the recipe data record name or number in a tag, select the tag under "Tag" in the "Recipe data record" area.
    - If you only want to display the recipe data in the recipe view, deselect "Edit mode".
-   - If you only want to use the recipe view to select recipes, disable "Display table" under "Properties > Table".
-4. You can define additional options for the recipe view under "Properties > Appearance" and "Properties > Layout".
-5. If you want to change the label in the recipe view, enter a suitable text under "Properties" > "Label".
-6. Under "Properties" > Toolbar" specify which buttons are available in the recipe view in Runtime.
+   - If you only want to use the recipe view to select recipes, disable "Display table" under "Properties &gt; Table".
+4. You can define additional options for the recipe view under "Properties &gt; Appearance" and "Properties &gt; Layout".
+5. If you want to change the label in the recipe view, enter a suitable text under "Properties" &gt; "Label".
+6. Under "Properties" &gt; Toolbar" specify which buttons are available in the recipe view in Runtime.
 
    ![Procedure](images/88396456715_DV_resource.Stream@PNG-en-US.png)
 
@@ -2652,7 +2652,7 @@ You can set the column width and the position of the "Entry name" and "Value" co
 
 The recipe view is configured. You can use the recipe view to display and edit recipe data during runtime.
 
-Deactivation of the editing mode in "Properties > Properties > General" has no impact on the toolbar icons. The buttons you activated in "Properties > Toolbar" can still be used even if editing mode is disabled.
+Deactivation of the editing mode in "Properties &gt; Properties &gt; General" has no impact on the toolbar icons. The buttons you activated in "Properties &gt; Toolbar" can still be used even if editing mode is disabled.
 
 ---
 
@@ -2795,7 +2795,7 @@ To create a recipe, proceed as follows:
 
    You will have to make the following settings in the Properties dialog for the recipe concerned:
 
-   Under "Properties > Options":
+   Under "Properties &gt; Options":
 
    - Activate the "Synchronize recipe view and recipe tags" option.
    - Activate the "Manual transfer of individual modified values (teach-in mode)" option.
@@ -2885,10 +2885,10 @@ To configure a recipe screen, proceed as follows:
    Make the following settings in the Inspector window for the recipe view:
 
    - Select the "Advanced view" display type under "General".
-   - Deselect "Edit mode" under "Properties > General" and "Display table" under "Properties > Table".
+   - Deselect "Edit mode" under "Properties &gt; General" and "Display table" under "Properties &gt; Table".
    - Connect the "Recipe tag" field to the "RecipeNumber" tag.
    - Connect the "Tag" field to the "DataRecordNumber" tag.
-   - Disable all the buttons under "Properties > Buttons".
+   - Disable all the buttons under "Properties &gt; Buttons".
 3. Assign the above settings to four buttons. Transfer each "Recipe number" and "Data record number" tag as a parameter for the recipe number and recipe data record number.
 
 #### Result

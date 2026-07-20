@@ -42,7 +42,7 @@ This section contains information on the following topics:
 
 TIA Portal V19 provides several new functions. You can find an overview of and detailed information about the new functions in this contribution:
 
-<https://support.industry.siemens.com/cs/ww/en/view/109821307>
+[https://support.industry.siemens.com/cs/ww/en/view/109821307](https://support.industry.siemens.com/cs/ww/en/view/109821307)
 
 ### SIMATIC STEP 7
 
@@ -193,7 +193,7 @@ Parallel installation with WinCC V7.x or WinCC V8.x is possible with V19.
 
 > **Note**
 >
-> If TIA Portal V19 is installed with WinCC Unified and/or WinCC Professional, take into account that only such older WinCC components < V19 which are released according to the compatibility tool are installed subsequently.  
+> If TIA Portal V19 is installed with WinCC Unified and/or WinCC Professional, take into account that only such older WinCC components &lt; V19 which are released according to the compatibility tool are installed subsequently.  
 > https://support.industry.siemens.com/cs/ww/de/view/64847781
 
 ##### Multiuser support for configuration of screens
@@ -293,7 +293,7 @@ See also [Managing properties](Configuring%20screens%20%28RT%20Unified%29.md#man
 
 ##### Moving objects in the Inspector window to other layers
 
-Objects can also be moved in the Inspector window to another layer with "Properties > Miscellaneous > Layer".
+Objects can also be moved in the Inspector window to another layer with "Properties &gt; Miscellaneous &gt; Layer".
 
 See also [Moving objects between layers](Configuring%20screens%20%28RT%20Unified%29.md#moving-objects-between-layers-rt-unified).
 
@@ -307,7 +307,7 @@ See also [Removing an object from the group](Configuring%20screens%20%28RT%20Uni
 
 ##### Event "Input finished" at the IO field.
 
-The "Input finished" event can be configured at the "IO field". The "Input finished" event is triggered when you press the <Return> key after inputting the value, or click another object. For example, you can script this event to check whether the value you entered is within the defined limits.
+The "Input finished" event can be configured at the "IO field". The "Input finished" event is triggered when you press the &lt;Return&gt; key after inputting the value, or click another object. For example, you can script this event to check whether the value you entered is within the defined limits.
 
 See also [Triggering the "Input finished" event](Configuring%20screens%20%28RT%20Unified%29.md#triggering-the-input-finished-event-rt-unified).
 
@@ -321,7 +321,7 @@ See also [Highlighting and resetting properties](Configuring%20screens%20%28RT%2
 
 ##### Zooming in Runtime without the Control key
 
-Zooming in Runtime without using the <Ctrl> key can be configured in the Runtime settings of the device by activating the option "Zooming without pressing the Control key".
+Zooming in Runtime without using the &lt;Ctrl&gt; key can be configured in the Runtime settings of the device by activating the option "Zooming without pressing the Control key".
 
 See also [Configuring zooming in runtime without Control key](Configuring%20screens%20%28RT%20Unified%29.md#configuring-zooming-in-runtime-without-control-key-rt-unified).
 
@@ -483,7 +483,7 @@ The error messages are automatically derived from the information stored in the 
 
 The user can vary their choice and sequence freely. This is generally needed only once. Subsequently, the system then adopts the created alarm structure for all the subsequent monitoring actions Since the information under question is available in the configured foreign language, no additional effort is required for a multilingual diagnostics.
 
-Configuration of the diagnostic objects takes place on the HMI side. This is limited to simple drag&drop of the desired object with a mouse from the toolbox view in TIA Portal into the screen, and adaptation of its size.
+Configuration of the diagnostic objects takes place on the HMI side. This is limited to simple drag&amp;drop of the desired object with a mouse from the toolbox view in TIA Portal into the screen, and adaptation of its size.
 
 **Synchronization of all HMI devices**
 
@@ -608,7 +608,7 @@ See also Assign a resource list to a parameter set item
 - The top 10 and top 5 downtimes for machine states, cause groups and causes can be output in the Excel report.
 - Changes to PFI coefficients and actions in Calendar Control are logged in the Audit Trail and displayed in the Audit Viewer.
 
-**Improvements for LCS & SES**
+**Improvements for LCS &amp; SES**
 
 - Existing recipes can be duplicated to configure new recipes faster.
 - By creating LCS data logs, production data can be stored.
@@ -739,7 +739,7 @@ See also section [Introduction](WinCC%20Unified%20GraphQL%20%28RT%20Unified%29.m
 
 ##### Trend control
 
-You can add new trends to the trend view in Runtime by drag&drop. To do so, drag an IO field that is connected to a tag through a numeric data type, from the screen to a trend area of the trend view.
+You can add new trends to the trend view in Runtime by drag&amp;drop. To do so, drag an IO field that is connected to a tag through a numeric data type, from the screen to a trend area of the trend view.
 
 The trend is visible up to the next screen change or till the screen is re-loaded.
 
@@ -867,7 +867,7 @@ The following functions are newly available with SIMATIC Visualization Architect
 
 **Improvement of usability**
 
-- Cut & Paste is supported in the rule editors.
+- Cut &amp; Paste is supported in the rule editors.
 - The SiVArc expression at the interface or event of a Unified faceplate is retained even after the interface or event is renamed.
 - Entries for the rules in a rule group can be specified in the row of the rule group. This reduces maintenance effort.
 - Deleted objects are listed by name in the log file.
@@ -951,7 +951,7 @@ In subsequent versions of TIA Portal, we will continue to improve the browser-ba
 
 Information on calling the information system in the browser and on current limitations can be found here: [Introduction to the information system in the web browser](Introduction%20to%20the%20TIA%20Portal.md#introduction-to-the-information-system-in-the-web-browser)
 
-#### User Management & Access Control (UMAC)
+#### User Management &amp; Access Control (UMAC)
 
 - New function right "View users and roles" for the "Users and roles" editor:
 
@@ -1105,7 +1105,7 @@ The configuration limits for operating UMC in larger infrastructures have been e
 
 The expansion of the configuration limits provides the advantage of greater flexibility in designing the UMC infrastructure, such as operating a UMC server per production cell.
 
-#### TIA Portal Multiuser Engineering & TIA Project Server
+#### TIA Portal Multiuser Engineering &amp; TIA Project Server
 
 The following functions are newly available with Multiuser Engineering V19.
 
@@ -1176,7 +1176,7 @@ The following new functions and innovations are available in TIA Portal Openness
 - Creating, reading, modifying and deleting transfer areas for direct PLC-PLC data exchange.
 - Managing the "PLC System Logging" configuration.
 - Managing the new PLC access level configuration for CPU firmware 3.1 (UMAC and protection levels).
-- Changing the standard language for OPC UA alarms & events in PLC multilingualism.
+- Changing the standard language for OPC UA alarms &amp; events in PLC multilingualism.
 - Mass change of the hardware parameters in the correct sequence in all overloaded "SetAttributes" methods.
 
 **Hardware modules**
@@ -1268,7 +1268,7 @@ This section contains information on the following topics:
 
 TIA Portal V18 provides several new functions. You can find an overview of and detailed information about the new functions in this contribution:
 
-<https://support.industry.siemens.com/cs/ww/en/view/109807106>
+[https://support.industry.siemens.com/cs/ww/en/view/109807106](https://support.industry.siemens.com/cs/ww/en/view/109807106)
 
 ### SIMATIC STEP 7
 
@@ -1429,7 +1429,7 @@ Example:
 
 You can define your own favorite properties for each screen object. Some properties are defined as favorites by the system.
 
-You can find the overview of the system-defined and user-defined favorites under "Options > Settings > Visualization > Favorites screens (WinCC Unified)" in the "Favorites properties" table.
+You can find the overview of the system-defined and user-defined favorites under "Options &gt; Settings &gt; Visualization &gt; Favorites screens (WinCC Unified)" in the "Favorites properties" table.
 
 You can locate the individual properties of an object by using the "Filter" function in the Inspector window.
 
@@ -1729,7 +1729,7 @@ Unified Comfort Panel:
 
   Default folder of the reporting database: The project folder
 
-  Default folder of the local main storage location for reports: "media/simatic/<storage medium>/Reports​"
+  Default folder of the local main storage location for reports: "media/simatic/&lt;storage medium&gt;/Reports​"
 
 **Support for text lists and graphic lists**
 
@@ -2129,7 +2129,7 @@ New functions with firmware V3.0 for S7-1500 and ET 200 CPUs (without R/H CPUs):
 - The web server certificate for HTTPS communication can now also be managed via the OPC UA GDS mechanism without separate download of the hardware configuration, see [Certificate management via Global Discovery Server (GDS)](Configuring%20automation%20systems.md#certificate-management-via-global-discovery-server-gds-s7-1500-s7-1500t).
 - New functions for general file handling and especially log file handling via WEB API (as support for workflow automation)
 
-  - Backup and restore (Backup & Restore, including Failsafe)
+  - Backup and restore (Backup &amp; Restore, including Failsafe)
   - Files on the memory card (user files, recipes, data logs)
 - Web API read time of day (read system time, read time settings)
 - Improved verification of HMI accesses (see Verified external access).
@@ -2168,7 +2168,7 @@ New hardware and configuration limits
     Middle: CPU 1514SP(F)-2 PN to CPU 1516(F)-3 PN/DP
   - Higher communication performance (2nd Core)
   - The display is integrated in the R-CPUs
-  - Completely revised display implementation => no separate FW necessary
+  - Completely revised display implementation =&gt; no separate FW necessary
 - 4 new ET 200SP CPUs 1514SP-2 PN, 1514SP F-2 PN, 1514SP T-2 PN and 1514SP TF-2 PN
 
   - Memory concept, performance, configuration limits and features of a SIMATIC S7-1500 CPU 1515 (F) - 2 PN CPU
@@ -2300,7 +2300,7 @@ The availability of the SINUMERIK STEP 7 Toolbox V18 is scheduled for 02/2023.
 
 All important new features are summarized here. You can find more details on the various topics in the product documentation sections.
 
-#### User Management & Access Control (UMAC)
+#### User Management &amp; Access Control (UMAC)
 
 V18 contains the following improvements for TIA Portal user management:
 
@@ -2465,7 +2465,7 @@ The functions for license management and the connection to Online Software Deliv
 
 ### Engineering options
 
-#### Multiuser Engineering & project server
+#### Multiuser Engineering &amp; project server
 
 - Grouped storage structures for projects
 
@@ -2577,7 +2577,7 @@ Application test:
 - Tags of WChar, String and WString data type can now also be used in the application test.
 - Application test - RUN with condition:  
   The RUN command can be used with an optional parameter for conditional execution of the test case. Once the optional parameter reaches the value specified by the user or the maximum number of cycles is reached, the execution is terminated.  
-  Syntax: RUN( Cycles := <value>, <optional_parameter> = <value>);
+  Syntax: RUN( Cycles := &lt;value&gt;, &lt;optional_parameter&gt; = &lt;value&gt;);
 
 System test:
 
@@ -2595,7 +2595,7 @@ This type of test is newly available as of Test Suite V18. The system test allow
   Functionality for Exclusive Engineering on the project server to work with Teamcenter Gateway.
 - Openness API for Teamcenter Gateway workflows
 
-  As of V18, there is an interface for Openness API of Teamcenter Gateway Workflows for integrating TIA Portal into your development environment and the automation of your tasks in the engineering workflow. Write your own applications with external development environments, for example to push & pull your engineering projects from TIA Portal into Teamcenter to manage projects and libraries in TIA Portal as a whole in Teamcenter - for consistent versions and consistent release workflows. Refer to the TIA Portal Openness Manual for details.
+  As of V18, there is an interface for Openness API of Teamcenter Gateway Workflows for integrating TIA Portal into your development environment and the automation of your tasks in the engineering workflow. Write your own applications with external development environments, for example to push &amp; pull your engineering projects from TIA Portal into Teamcenter to manage projects and libraries in TIA Portal as a whole in Teamcenter - for consistent versions and consistent release workflows. Refer to the TIA Portal Openness Manual for details.
 - Updating modified linked TIA proxy objects in Teamcenter
 
   As of V18, TIA Portal objects (FBs, FCs and PLC data types) can be exported as
@@ -2680,7 +2680,7 @@ The groups and group structures can be downloaded from the following system fold
 
 - Program blocks
 - PLC data types
-- PLC tags (only CPU S7-1500 firmware version >= V2.5 and higher)
+- PLC tags (only CPU S7-1500 firmware version &gt;= V2.5 and higher)
 
 This means the group structure is restored when downloading the CPU as a new station or when uploading from a device.
 
@@ -2692,22 +2692,22 @@ See also: [Introduction to downloading blocks](Compiling%20and%20downloading%20P
 - The display of overlapping input or output addresses in the cross-reference editor has been improved.
 - The "Open block" (F7) dialog now also allows for the partial search of names. This means you no longer have to enter the initial letters to search for blocks and PLC data types (UDT).
 - For blocks, PLC data types (UDT) and PLC tag tables within software units, the "Published" property is now displayed directly in the project tree.
-- For local Find & Replace, the total number of replacements is displayed.
-- In many STEP 7 editors, the selected text can be copied directly to the search box of the local search with <Ctrl + F>. A second <Ctrl + F> copies the search text to the global search.
+- For local Find &amp; Replace, the total number of replacements is displayed.
+- In many STEP 7 editors, the selected text can be copied directly to the search box of the local search with &lt;Ctrl + F&gt;. A second &lt;Ctrl + F&gt; copies the search text to the global search.
 - To make the code easier to read, there will be an automatic line break for tag names in LAD, FBD, GRAPH and CEM blocks using the camelCase syntax.
 - Keyboard operation to insert frequently used instructions has been simplified:
 
   | LAD instruction | Old keyboard operation | New keyboard operation |
   | --- | --- | --- |
-  | Empty box | <Shift+F5> | <F8> |
-  | Normally open contact | <Shift+F2> | <F9> |
-  | Normally closed contact | <Shift+F3> | <F10> |
+  | Empty box | &lt;Shift+F5&gt; | &lt;F8&gt; |
+  | Normally open contact | &lt;Shift+F2&gt; | &lt;F9&gt; |
+  | Normally closed contact | &lt;Shift+F3&gt; | &lt;F10&gt; |
 
   | FBD instruction | Old keyboard operation | New keyboard operation |
   | --- | --- | --- |
-  | Empty box | <Shift+F5> | <F8> |
-  | AND logic operation | <Shift+F2> | <F9> |
-  | OR logic operation | <Shift+F3> | <F10> |
+  | Empty box | &lt;Shift+F5&gt; | &lt;F8&gt; |
+  | AND logic operation | &lt;Shift+F2&gt; | &lt;F9&gt; |
+  | OR logic operation | &lt;Shift+F3&gt; | &lt;F10&gt; |
 
 #### Loading and monitoring changed data blocks (S7-1200/S7-1500)
 
@@ -2783,7 +2783,7 @@ The following functions can be executed via Openness:
 
 #### WinCC Unified (for PC and Unified Comfort Panel)
 
-To avoid error messages due to inconsistencies in the linking of data types, you need to include the user data types used in the PLC in the library before upgrading a project from V16 to V17. To do this, drag the PLC user data type to the library under "Project Library > Types".
+To avoid error messages due to inconsistencies in the linking of data types, you need to include the user data types used in the PLC in the library before upgrading a project from V16 to V17. To do this, drag the PLC user data type to the library under "Project Library &gt; Types".
 
 WinCC Unified as new generation of HMI development
 
@@ -2795,7 +2795,7 @@ WinCC Unified as new generation of HMI development
 - Use of customer-specific fonts
 - Two additional pre-defined styles for the WinCC Unified HMI (e.g. day and night mode)
 - Faceplates and graphics versioned in library
-- Faceplate – functional extensions (e.g. rotating faceplates, additional dynamic & static properties, etc.)
+- Faceplate – functional extensions (e.g. rotating faceplates, additional dynamic &amp; static properties, etc.)
 - Additional system functions, e.g. UpdateTag
 - Two-hand operation
 - Customer-specific fonts
@@ -2805,7 +2805,7 @@ WinCC Unified as new generation of HMI development
   - Indirect addressing of 1200/1500 (absolute multiplexing)
   - Support of S7-1500 Software Controller
   - OPC UA DA (server and client)
-  - OPC UA A&C (server)
+  - OPC UA A&amp;C (server)
   - Modbus TCP/IP
   - Omron
   - Ethernet/IP
@@ -2899,7 +2899,7 @@ All important new features of the CPU families are summarized here. You can find
 
     - via the diagnostics buffer
 
-    - via an OPC UA area in the Online & Diagnostics area in the TIA Portal
+    - via an OPC UA area in the Online &amp; Diagnostics area in the TIA Portal
 
     - via an improved connection resources display
   - Methods can be provided via the user program of an S7-1200 CPU (instructions "ServerMethodPre" and "ServerMethodPost"). These methods use OPC UA clients in order, for example, to process a manufacturing order via the method call by the S7-1200 CPU.
@@ -2932,9 +2932,9 @@ All important new features of the CPU families are summarized here. You can find
   - Support of MRP (Media Redundancy Protocol) Interconnection. This function is integrated into the firmware and allows for the coupling of multiple MRP rings (up to 11 rings) and thus opens up the possibility to operate more participants in total in MRP rings.
 - New functions with firmware V2.9 for S7-1500 and ET 200 CPUs (without R/H CPUs):
 
-  - OPC UA Alarms & Conditions:
+  - OPC UA Alarms &amp; Conditions:
 
-    The OPC UA Alarms & Conditions function allows you to transmit messages including their associated values to OPC UA clients. Alarms requiring acknowledgment can be acknowledged by the OPC UA client. This function is activated in TIA Portal via the settings in the CPU properties.
+    The OPC UA Alarms &amp; Conditions function allows you to transmit messages including their associated values to OPC UA clients. Alarms requiring acknowledgment can be acknowledged by the OPC UA client. This function is activated in TIA Portal via the settings in the CPU properties.
   - OPC UA server interface
 
     When modeling the OPC UA server interfaces for S7-1500 and ET 200 CPUs, objects and folders can now be created or added as OPC UA elements via drag-and-drop.
@@ -3257,7 +3257,7 @@ The following new functions and innovations are available in TIA Portal Openness
 
   Load software changes into all CPU families
 
-#### User Management & Access Control (UMAC)
+#### User Management &amp; Access Control (UMAC)
 
 - Project lock
 
@@ -3288,8 +3288,8 @@ See also: [Basics of user administration property in the TIA Portal](Managing%20
 
 Updates can be installed via TIA Administrator as of V17. The following functions in TIA Portal open the TIA Administrator:
 
-- "Check for updates" function under "Help > Installed software"
-- "Check for updates now" function under "Options > Settings > General > Software updates"
+- "Check for updates" function under "Help &gt; Installed software"
+- "Check for updates now" function under "Options &gt; Settings &gt; General &gt; Software updates"
 - "Check for updates" function in the navigation area of the Information System
 
 #### Secure PG/HMI communication
@@ -3309,7 +3309,7 @@ See also: [Secure PG/HMI communication](Configuring%20devices%20and%20networks.m
 - Application test
 
   - Manual ASCII import / export of application tests using the project tree
-- Openness support for Styleguide & Application test
+- Openness support for Styleguide &amp; Application test
 
   - Import and export of rule sets (XML file) / test cases (ASCII file) via Openness APIs
   - Import and export of rule sets / test cases from libraries (master copies) via Openness APIs
@@ -3565,7 +3565,7 @@ Blocks supervised with ProDiag, such as FBs or global DBs, Software Units, PLC d
 
 An S7-1500 CPU with firmware V2.9 or higher supports certificate management services that can be used, for example, by a Global Discovery Server (GDS). Via GDS push management functions, the OPC UA server certificate, trust lists and certificate revocation lists (CRLs) of an S7-1500 CPU can be updated automatically.
 
-OPC UA server of the S7-1500 CPU: Alarms & Conditions with OPC UA runtime license:
+OPC UA server of the S7-1500 CPU: Alarms &amp; Conditions with OPC UA runtime license:
 
 - After activation in the server: Program messages including associated values are taken over by the OPC UA server
 - Acknowledgment in OPC UA client possible (can be disabled)
@@ -3597,8 +3597,8 @@ As of TIA Portal Version 17, you can quickly and easily install additional inter
 
 You can find a detailed description of the installation of language packs here.
 
-- Help on the TIA Administrator > Help on software management > Installing language packs
-- Help on the TIA Updater Corporate Configuration Tool > Basic information on working with TIA Updater Corporate Configuration Tool
+- Help on the TIA Administrator &gt; Help on software management &gt; Installing language packs
+- Help on the TIA Updater Corporate Configuration Tool &gt; Basic information on working with TIA Updater Corporate Configuration Tool
 
 #### Customer benefits
 
@@ -3846,7 +3846,7 @@ Archiving
 
 Tags/communication
 
-- Improvements during autostart between server <> client communication
+- Improvements during autostart between server &lt;&gt; client communication
 - Remote communication via Simatic Shell can be switched off
 - New tag simulator
 
@@ -3854,7 +3854,7 @@ ProDiag
 
 - Hierarchical comments are displayed in the PLC Code Viewer
 - Operand values are displayed during slice access
-- Connection status server <> client is displayed in controls
+- Connection status server &lt;&gt; client is displayed in controls
 
 In addition
 
@@ -3865,7 +3865,7 @@ In addition
 
 **See also**
 
-<https://support.industry.siemens.com/cs/ww/en/view/109758056>
+[https://support.industry.siemens.com/cs/ww/en/view/109758056](https://support.industry.siemens.com/cs/ww/en/view/109758056)
 
 ### SINAMICS Startdrive
 
@@ -4051,7 +4051,7 @@ The following technology objects can be exported and imported as XML file:
 | ≥ V4.2 | PID_Compact | V2.3 |  |
 | PID_3Step |  |  |  |
 | PID_Temp | V1.1 |  |  |
-| S7-1500 | < V2.0 | High_Speed_Counter | ≥ V4.1 |
+| S7-1500 | &lt; V2.0 | High_Speed_Counter | ≥ V4.1 |
 | SSI_Absolute_Encoder | ≥ V3.1 |  |  |
 | ≥ V2.0 | TO_SpeedAxis | ≥ V5.0 |  |
 | TO_PositioningAxis |  |  |  |
@@ -4213,7 +4213,7 @@ Optimizations / Improvements:
 
 For S7-1500 CPUs as of firmware V2.8 and TIA Portal version 16, with a corresponding Runtime license you can benefit from the following expansions of the integrated OPC UA server:
 
-Improved diagnostics: The OPC UA user receives information on the status of the OPC UA server via messages in the diagnostic buffer, an OPC UA category in the Online & Diagnostics area of TIA Portal as well as an improved connection resources display.
+Improved diagnostics: The OPC UA user receives information on the status of the OPC UA server via messages in the diagnostic buffer, an OPC UA category in the Online &amp; Diagnostics area of TIA Portal as well as an improved connection resources display.
 
 Download behavior: In RUN mode, the OPC UA server only performs a restart during download from the TIA Portal when the newly downloaded data has an effect on the data management of the OPC UA server.
 
@@ -4254,9 +4254,9 @@ The additional language packs are available for the following products:
 
 You can find a detailed description of the installation of language packs here.
 
-Help on the TIA Administrator > Help on software management > Installing language packs
+Help on the TIA Administrator &gt; Help on software management &gt; Installing language packs
 
-Help on the TIA Updater Corporate Configuration Tool > Basic information on working with TIA Updater Corporate Configuration Tool
+Help on the TIA Updater Corporate Configuration Tool &gt; Basic information on working with TIA Updater Corporate Configuration Tool
 
 ## What's new in TIA Portal V15.1
 
@@ -4337,7 +4337,7 @@ Keyboard shortcuts are defined in the system for many functions of TIA Portal. A
 
 - Fast switching between I/O tag in the program editor and affected input/output in the device view
 
-  The shortcut menu "Go to > Device view" enables fast navigation from the programmed I/O address from the program editors to the configured input or output in the device view.
+  The shortcut menu "Go to &gt; Device view" enables fast navigation from the programmed I/O address from the program editors to the configured input or output in the device view.
 
 - Simplified configuration of series machine projects
 
@@ -4401,7 +4401,7 @@ Easier handling of chart configurations:
 
 - KTP Mobile V15 images and SmartServer option for F-devices
 
-  <https://support.industry.siemens.com/cs/ww/en/view/109758056>
+  [https://support.industry.siemens.com/cs/ww/en/view/109758056](https://support.industry.siemens.com/cs/ww/en/view/109758056)
 
 - Option+ V2 for Comfort and Mobile Panel
 
@@ -5099,7 +5099,7 @@ SIMATIC STEP 7 Safety Basic/Advanced V15, the high-performance option package fo
 - Other innovations
 
   - The monitoring of system-integrated F-IO-DBs and F-runtime group information DBs using ProDiag is supported.
-  - DINT -> INT converter (S7-1200, S7-1500)
+  - DINT -&gt; INT converter (S7-1200, S7-1500)
   - ABS: Form absolute value (S7-1200, S7-1500)
 
 ---
@@ -5226,7 +5226,7 @@ Hardware configuration:
 
 New instructions:
 
-- All instructions for SIMATIC Ident have been revised for the collaboration with the TO. You can find the instructions in the TIA Portal under "Optional packages" > "SIMATIC Ident".
+- All instructions for SIMATIC Ident have been revised for the collaboration with the TO. You can find the instructions in the TIA Portal under "Optional packages" &gt; "SIMATIC Ident".
 - The hardware addressing of a reader to the instructions has been changed so that the reader is selected through the "unique name" which was defined in the TO. There is no need, therefore, for the previous searching, noting and transferred of the HW identifier and logical address.
 - Optional inputs at the instructions are hidden. The user thus recognizes immediately the important parameters that are required for a function.
 - The programmer no longer has to assign parameters to the hardware. Only the RESET_READER instruction, which has no other input parameters, is needed for the PLC startup, regardless of the reader connected. The instruction acquires the required parameters from a data area which was configured with the TO.

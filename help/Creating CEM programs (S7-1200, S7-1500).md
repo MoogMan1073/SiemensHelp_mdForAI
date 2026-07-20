@@ -630,11 +630,11 @@ To define a data type, follow these steps:
 
 #### Interconnecting parameters
 
-When inserting a cause, the character string "<??.?>" is inserted at each parameter as placeholder for the operand to be connected. To display the available data types in a tooltip, move the cursor over the placeholder.
+When inserting a cause, the character string "&lt;??.?&gt;" is inserted at each parameter as placeholder for the operand to be connected. To display the available data types in a tooltip, move the cursor over the placeholder.
 
 To select an operand and interconnect it with the parameter, follow these steps:
 
-1. Click on the placeholder "<??.?>".
+1. Click on the placeholder "&lt;??.?&gt;".
 
    An input field is opened.
 2. Enter the corresponding operand, e.g. a PLC tag, a local tag or a constant.
@@ -645,12 +645,12 @@ Or drag it from the PLC tag table:
 
 1. Open the "PLC tags" folder in the project tree and select a PLC tag table.
 2. Open the detail view.
-3. Drag the desired tag from the detail view to the appropriate placeholder "<??.?>".
+3. Drag the desired tag from the detail view to the appropriate placeholder "&lt;??.?&gt;".
 
 Or drag it from the block interface:
 
 1. Open the block interface.
-2. Drag the desired operands from the block interface to the appropriate placeholder "<??.?>".
+2. Drag the desired operands from the block interface to the appropriate placeholder "&lt;??.?&gt;".
 
 ---
 
@@ -687,7 +687,7 @@ To do this, follow these steps:
 
    Or:
 
-   From the "Basic instructions > General" task card, drag the "Insert input/output" instruction to the desired position.
+   From the "Basic instructions &gt; General" task card, drag the "Insert input/output" instruction to the desired position.
 
    See also: [Add input/output](CEM%20%28S7-1200%2C%20S7-1500%29.md#add-inputoutput-s7-1200-s7-1500)
 
@@ -699,12 +699,12 @@ To do this, follow these steps:
 
 1. Right-click on an input or output.
 
-   Press the <CTRL> key to select several inputs within a cause.
+   Press the &lt;CTRL&gt; key to select several inputs within a cause.
 2. Select the "Invert pin" command in the shortcut menu.
 
    Or:
 
-   From the "Basic instructions > General" task card, drag the "Invert" instruction to the desired input or output.
+   From the "Basic instructions &gt; General" task card, drag the "Invert" instruction to the desired input or output.
 
    The inversion is represented by a small circle at the input or output.
 3. To reverse the inversion, select the "Invert" command again.
@@ -769,17 +769,17 @@ If you select a cause, you automatically select the entire cause line. The cause
 To select one or more causes, follow these steps:
 
 1. In the left area of the cause line, click on the gray number of the cause.
-2. To select additional causes, click on further cause numbers while holding down the <Ctrl> key.
+2. To select additional causes, click on further cause numbers while holding down the &lt;Ctrl&gt; key.
 
 To select multiple causes within an area, follow these steps:
 
 1. Click on the gray number of the first cause.
-2. Hold down the <Shift> key and click on the number of the last cause.
+2. Hold down the &lt;Shift&gt; key and click on the number of the last cause.
 
 To select all causes of a matrix, follow these steps:
 
 1. Click on a cause.
-2. Select the "Edit > Select all" menu command.
+2. Select the "Edit &gt; Select all" menu command.
 
 #### Add cause at last position
 
@@ -858,7 +858,7 @@ To move causes, follow these steps:
 
 1. Select one or more causes.
 2. Drag the causes to the desired position.
-3. To move causes into another CEM block, drag them while holding down the <Ctrl> key.
+3. To move causes into another CEM block, drag them while holding down the &lt;Ctrl&gt; key.
 
 Or
 
@@ -871,8 +871,8 @@ Or
 To copy causes, follow these steps:
 
 1. Select one or more causes.
-2. Hold down the <Ctrl> key and drag the causes to the desired position.
-3. To copy the causes into another CEM block, drag the causes without pressing the <Ctrl> key.
+2. Hold down the &lt;Ctrl&gt; key and drag the causes to the desired position.
+3. To copy the causes into another CEM block, drag the causes without pressing the &lt;Ctrl&gt; key.
 
 Or
 
@@ -1018,11 +1018,11 @@ To select an instruction for the effect, follow these steps:
 
 #### Interconnecting parameters
 
-When inserting an effect, the character string "<??.?>" is inserted at each parameter as a placeholder for the operand to be connected.
+When inserting an effect, the character string "&lt;??.?&gt;" is inserted at each parameter as a placeholder for the operand to be connected.
 
 To select an operand and interconnect it with the parameter, follow these steps:
 
-1. Click on the placeholder "<??.?>".
+1. Click on the placeholder "&lt;??.?&gt;".
 
    An input field is opened.
 2. Enter the corresponding operand, for example a PLC tag or a local tag.
@@ -1033,12 +1033,12 @@ Or drag it from the PLC tag table:
 
 1. Open the "PLC tags" folder in the project tree and select a PLC tag table.
 2. Open the detail view.
-3. Drag the desired tag from the detail view to the appropriate placeholder "<??.?>".
+3. Drag the desired tag from the detail view to the appropriate placeholder "&lt;??.?&gt;".
 
 Or drag it from the block interface:
 
 1. Open the block interface.
-2. Drag the desired operands from the block interface to the appropriate placeholder "<??.?>".
+2. Drag the desired operands from the block interface to the appropriate placeholder "&lt;??.?&gt;".
 
 ### Adding or inverting inputs and outputs at an effect (S7-1200, S7-1500)
 
@@ -1078,12 +1078,12 @@ To invert the signal state at an input or output, follow these steps:
 
 1. Right-click on an input or output.
 
-   Press the <CTRL> key to select multiple outputs within an effect.
+   Press the &lt;CTRL&gt; key to select multiple outputs within an effect.
 2. Select the "Invert pin" command in the shortcut menu.
 
    Or:
 
-   From the "Basic instructions > General" task card, drag the "Invert pin" instruction to the desired input or output.
+   From the "Basic instructions &gt; General" task card, drag the "Invert pin" instruction to the desired input or output.
 
    The inversion is represented by a small circle at the input or output.
 3. To reverse the inversion, select the "Invert pin" command again.
@@ -1107,17 +1107,17 @@ When you select an effect, you automatically also select the intersection column
 To select one or more effects, follow these steps:
 
 1. Click on the gray number of the effect in the upper part of the effect column.
-2. To select additional effects, click on more effect numbers while holding down the <Ctrl> key.
+2. To select additional effects, click on more effect numbers while holding down the &lt;Ctrl&gt; key.
 
 To select multiple effects within an area, follow these steps:
 
 1. Click on the gray number of the first effect.
-2. Hold down the <Shift> key and click on the number of the last effect.
+2. Hold down the &lt;Shift&gt; key and click on the number of the last effect.
 
 To select all effects of a matrix, follow these steps:
 
 1. Click on an effect.
-2. Select the "Edit > Select all" menu command.
+2. Select the "Edit &gt; Select all" menu command.
 
 To select a single intersection column, follow these steps:
 
@@ -1194,7 +1194,7 @@ To move effects, follow these steps:
 
 1. Select one or more effects.
 2. Drag the effects to the desired position.
-3. To move effects into another CEM block, drag them while holding down the <Ctrl> key.
+3. To move effects into another CEM block, drag them while holding down the &lt;Ctrl&gt; key.
 
 Or
 
@@ -1207,8 +1207,8 @@ Or
 To copy effects, follow these steps:
 
 1. Select one or more effects.
-2. Hold down the <Ctrl> key and drag the effects to the desired position.
-3. To copy the effects into another CEM block, drag the effects without pressing the <Ctrl> key.
+2. Hold down the &lt;Ctrl&gt; key and drag the effects to the desired position.
+3. To copy the effects into another CEM block, drag the effects without pressing the &lt;Ctrl&gt; key.
 
 Or
 
@@ -1416,17 +1416,17 @@ You can use the action dialog to support you when programming action groups. To 
 To select an intersection, follow these steps:
 
 1. Click on an intersection.
-2. To select additional intersections, click on additional intersections while holding down the <Ctrl> key or use the lasso function.
+2. To select additional intersections, click on additional intersections while holding down the &lt;Ctrl&gt; key or use the lasso function.
 
 To select multiple intersections within an area, follow these steps:
 
 1. Click on the first intersection.
-2. Hold down the <Shift> key and click on the last intersection.
+2. Hold down the &lt;Shift&gt; key and click on the last intersection.
 
 To select all intersections of a matrix, follow these steps:
 
 1. Click on an intersection.
-2. Select the "Edit > Select all" menu command.
+2. Select the "Edit &gt; Select all" menu command.
 
 #### Moving intersection
 
@@ -1446,7 +1446,7 @@ To copy intersections, follow these steps:
 
 1. Select one or more contiguous intersections.
 2. Click on an action in one of the selected intersections and hold down the mouse button.
-3. Hold down the <Ctrl> key and drag the intersections to the desired position.
+3. Hold down the &lt;Ctrl&gt; key and drag the intersections to the desired position.
 
    If you drag the intersections onto existing intersections, they will be overwritten.
 
@@ -1540,7 +1540,7 @@ To insert a new intersection column after a selected column, follow these steps:
 To select an intersection column, follow these steps:
 
 1. In the status bar of the effect, click the area above the relevant intersection column.
-2. To select additional intersection columns, click on the areas above other columns while holding down the <Ctrl> key.
+2. To select additional intersection columns, click on the areas above other columns while holding down the &lt;Ctrl&gt; key.
 
    ![Selecting intersection columns](images/135563977611_DV_resource.Stream@PNG-de-DE.png)
 
@@ -1560,7 +1560,7 @@ To move an intersection column within an effect or to another effect, follow the
 To copy an intersection column, follow these steps:
 
 1. Select the column.
-2. Hold down the <Ctrl> key and drag the column to the desired position.
+2. Hold down the &lt;Ctrl&gt; key and drag the column to the desired position.
 
    The column is inserted behind the column above which you drop it.
 

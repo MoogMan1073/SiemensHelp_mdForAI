@@ -115,7 +115,7 @@ The following options are available after selecting a PM330/PM330L. Select the o
 | L07 | dv/dt filter compact voltage peak limiters; limit the voltage peaks at the output of frequency converters as well as the rate of voltage rise. |
 | L08 | Motor reactor; motor reactors reduce the voltage load of the motor windings by reducing the voltage rise rates at the motor terminals caused by operating the converter. |
 | L10 | dv/dt filter plus voltage peak limiter; if you select this option, the parameter p0230 (dv/dt filter) is automatically set to 2 (p0230=2). |
-| L22 | Without line reactor; if the converter is supplied via a separate transformer or if the ratio of the line short-circuit output at the connection point to the converter's rated output is low, then the standard line reactors can be omitted for converters < 500 kW (see configuration information). If a line filter (option L00) is used, however, this line reactor is required. |
+| L22 | Without line reactor; if the converter is supplied via a separate transformer or if the ratio of the line short-circuit output at the connection point to the converter's rated output is low, then the standard line reactors can be omitted for converters &lt; 500 kW (see configuration information). If a line filter (option L00) is used, however, this line reactor is required. |
 | L45 | Emergency off pushbutton |
 | L57 | Emergency stop category 0; EMERGENCY OFF category 0 for uncontrolled shutdown according to EN 60 204. |
 | L59 | Emergency stop category 1; EMERGENCY OFF category 1 for controlled shutdown according to EN 60 204. |
