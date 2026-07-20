@@ -4,7 +4,7 @@ import pytest
 pytest.importorskip("bs4")
 pytest.importorskip("markdownify")
 
-from siemenshelp.html2md import to_markdown  # noqa: E402
+from siemenshelp.html2md import _escape_stray_angles, to_markdown  # noqa: E402
 
 
 def _md(body_html, **kw):
@@ -84,6 +84,24 @@ def test_angle_bracket_placeholders_escaped():
 def test_angle_brackets_inside_code_kept_literal():
     md = _md("<p>The <code>&lt;InternalElement&gt;</code> tag</p>")
     assert "`<InternalElement>`" in md
+
+
+def test_safety_net_escapes_stray_lt_but_keeps_markup():
+    out = _escape_stray_angles("Use <TimeStep>; T<sub>u</sub> <br> and\n> a quote")
+    assert "&lt;TimeStep>" in out and "<TimeStep>" not in out  # only '<' escaped
+    assert "<sub>u</sub>" in out and "<br>" in out             # our tags kept
+    assert "\n> a quote" in out                                 # blockquote marker kept
+
+
+def test_safety_net_leaves_code_untouched():
+    out = _escape_stray_angles("text <x> `code <y>` and\n```\n<pre> z\n```")
+    assert "&lt;x>" in out            # prose leak escaped
+    assert "`code <y>`" in out        # inline code untouched
+    assert "<pre> z" in out           # fenced code untouched
+
+
+def test_empty_blocktitle_produces_no_heading():
+    assert _md('<p class="Blocktitle">   </p><p>Body.</p>').strip() == "Body."
 
 
 def test_subscript_preserved_and_crosspack_link_flattened():

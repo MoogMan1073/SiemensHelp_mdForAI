@@ -32,6 +32,36 @@ _HEADING_RE = re.compile(r"^h[1-6]$")
 _QUERY_RE = re.compile(r"\?.*$")
 _BLANKS_RE = re.compile(r"\n{3,}")
 
+# A table separator row (`| --- | ... |`) divorced from its body by a blank line.
+_TABLE_SPLIT_RE = re.compile(r"(^\|[\s:|]*-[-\s:|]*\|[ \t]*)\n[ \t]*\n(\|)", re.M)
+
+# Segments that must be left byte-for-byte: fenced and inline code.
+_CODE_SEG_RE = re.compile(r"(```.*?```|`[^`]*`)", re.S)
+# The only raw HTML tags we intentionally emit into body text.
+_ALLOWED_TAG_RE = re.compile(r"</?(?:sub|sup|br)\s*/?>", re.I)
+
+
+def _escape_stray_angles(md: str) -> str:
+    """Safety net: entity-escape any raw ``<``/``>`` left in non-code text.
+
+    ``escape()`` handles the common text path, but a few markdownify code paths
+    (some inline elements, edge cases) can still emit a literal ``<placeholder>``
+    that a Markdown renderer would swallow. This pass escapes the ``<`` (which is
+    what starts an HTML tag — escaping it alone is enough; the trailing ``>`` then
+    renders literally), while leaving code spans/blocks, our own
+    ``<sub>``/``<sup>``/``<br>``, and line-start ``>`` blockquote markers intact."""
+    parts = _CODE_SEG_RE.split(md)
+    for i in range(0, len(parts), 2):  # even indices are non-code
+        seg = parts[i]
+        if "<" not in seg:
+            continue
+        kept: list = []
+        seg = _ALLOWED_TAG_RE.sub(lambda m: kept.append(m.group(0)) or f"\x00{len(kept)-1}\x00", seg)
+        seg = seg.replace("<", "&lt;")
+        seg = re.sub(r"\x00(\d+)\x00", lambda m: kept[int(m.group(1))], seg)
+        parts[i] = seg
+    return "".join(parts)
+
 
 class _SiemensConverter(MarkdownConverter):
     """markdownify tuned for technical reference text (keep sub/sup, no escaping)."""
@@ -169,8 +199,11 @@ def _preprocess(
     for p in container.find_all("p"):
         classes = " ".join(p.get("class", []) or [])
         if "Blocktitle" in classes:  # matches Blocktitle and BlocktitleFirst
-            p.name = f"h{sub_level}"
-            p.attrs = {}
+            if p.get_text(strip=True):
+                p.name = f"h{sub_level}"
+                p.attrs = {}
+            else:
+                p.decompose()  # empty block title -> no heading
         elif "subheading" in classes:
             strong = soup.new_tag("strong")
             for child in list(p.contents):
@@ -221,10 +254,10 @@ def _preprocess(
         for block in list(cell.find_all(["p", "div"])):
             block.unwrap()
 
-    # Remove now-empty paragraphs (avoids runs of blank lines).
-    for p in list(container.find_all("p")):
-        if not p.get_text(strip=True) and not p.find("img"):
-            p.decompose()
+    # Remove now-empty paragraphs and headings (avoids blank lines / empty '##').
+    for el in list(container.find_all(["p", "h1", "h2", "h3", "h4", "h5", "h6"])):
+        if not el.get_text(strip=True) and not el.find("img"):
+            el.decompose()
 
 
 def to_markdown(
@@ -259,9 +292,14 @@ def to_markdown(
         table_infer_header=True,
         newline_style="spaces",
         strip=["script", "style"],
+        # URLs as [text](url), never <url> autolinks (cleaner, lint-safe).
+        autolinks=False,
         # Keep content diagrams that sit inside cells/paragraphs/links, which
         # markdownify would otherwise reduce to bare alt text.
         keep_inline_images_in=["td", "th", "p", "div", "span", "li", "a", "figure"],
     )
     md = converter.convert_soup(container)
-    return _BLANKS_RE.sub("\n\n", md).strip()
+    md = _BLANKS_RE.sub("\n\n", md).strip()
+    md = _TABLE_SPLIT_RE.sub(r"\1\n\2", md)  # rejoin any split table header/body
+    md = _escape_stray_angles(md)  # escape residual raw <…> outside code
+    return md
